@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 April, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->13 November, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1044,17 +1044,8 @@ alveolar</th>
 
 
 
-  
-<section id="baselines">
-<h3>Baselines, line height, etc.</h3>
-<p>Font baselines should match the alphabetic baseline of Latin script text, and arabic and uighur fonts should have relative sizes that match. However, Uighur also needs to look right alongside Chinese text, which has a slightly lower baseline and generally larger characters than Latin.</p>
-</section>
-
-
-
-
 <section id="fontstyle">
-<h3>Font styles</h3>
+<h3>Font styling &amp; weight</h3>
 
 <p class="observation"><span class="leadin">Observation:</span> The image in <a class="figref">fig_italic_forward</a> show italicisation where the glyphs lean in the direction of text (ie. to the left).</p>
 
@@ -1071,8 +1062,8 @@ alveolar</th>
 
 
 
-<section id="segments">
-<h2>Text segmentation</h2>  
+<section id="graphemes">
+<h2>Graphemes</h2>  
 
 
 <p>Uighur principally uses word boundaries for <a href="#linebreak">line-breaking</a> and basic <a href="#justification">justification</a>, but uses grapheme boundaries for other operations that work at the sub-word level.</p>
@@ -1082,16 +1073,13 @@ alveolar</th>
 
 
   
-<section id="graphemes">
-<h3>Grapheme boundaries</h3>
+<section id="graphemeC">
+<h3>Grapheme clusters</h3>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 
-<section id="basicSeg">
-<h4>Typographic units</h4>
-
 <p><code>Base (Combining_mark)*</code></p>
-<p>In Uighur, a typographic unit  is almost always equivalent to a letter, since precomposed code points are available for all letter and diacritic combinations. However, in decomposed text a combining <span class="name">hamza</span> may be attached to the base letter. In that case, the typographic unit includes both the base letter and the combining mark.</p>
+<p>In Uighur,   segmentation can be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a>. A typographic unit  is almost always equivalent to a letter, since precomposed code points are available for all letter and diacritic combinations. However, in decomposed text a combining <span class="name">hamza</span> may be attached to the base letter. In that case, the typographic unit includes both the base letter and the combining mark.</p>
 <p> Examples, that apply to both precomposed and decomposed text: </p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
@@ -1100,24 +1088,6 @@ alveolar</th>
 </table>
 
 <p>This kind of typographic unit can be used for forwards deletion, cursor movement &amp; selection, character counts, text spacing, and text insertion.</p>
-</section>
-
-
-<section id="graphemeC">
-<h4>Grapheme clusters</h4>
-<p>This  kind of  segmentation can be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a>.</p>
-</section>
-</section>
-
-
-
-
-
-<section id="word">
-<h3>Word boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Words are  separated by spaces.</p>
-<p>Word-level segmentation is used for <a href="#linebreak">line-breaking</a> and basic <a href="#justification">justification</a>.</p>
 </section>
 </section>
   
@@ -1129,12 +1099,25 @@ alveolar</th>
 <section id="inline">
 <h2>Punctuation &amp; inline features</h2>	
 
+
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Words are  separated by spaces.</p>
+<p>Word-level segmentation is used for <a href="#linebreak">line-breaking</a> and basic <a href="#justification">justification</a>.</p>
+</section>
+
+
+
+
 	
 	
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
 <figure class="characterBox auto small"  data-cols="trans,transc">!␣،␣:␣؛␣.␣؟</figure>
+
+<p>Uighur uses a mixture of ASCII and Arabic punctuation.</p>
 
 <table class="character_list">
 <tbody>
@@ -1152,7 +1135,7 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-<p>Uighur uses a mixture of ASCII and Arabic punctuation.</p>
+
 <p class="observation"><span class="leadin">Observation:</span> The comma can be found immediately after the previous word, but as shown in fig_comma_gap, it may also be surrounded by space.</p>
 
 <figure id="fig_comma_gap">
@@ -1167,9 +1150,11 @@ alveolar</th>
 
 
 <section id="bracketing">
-<h3>Parentheses &amp; brackets</h3>
+<h3>Bracketed text</h3>
 
 <figure class="characterBox auto small"  data-cols="trans,transc">(␣)</figure>
+
+<p>Uighur commonly uses ASCII parentheses to insert parenthetical information into text.</p>
 
 <p class="observation"><span class="leadin">Observation:</span> <a class="figref">fig_bracketed_text</a> shows double angle brackets being used to a kind of quotation mark, for examples.</p>
 
@@ -1184,9 +1169,11 @@ alveolar</th>
 
   
 <section id="quotations">
-<h3>Quotations</h3>
+<h3>Quotations &amp; citations</h3>
 
 <figure class="characterBox auto small"  data-cols="trans,transc">«␣»</figure>
+
+<p>Uighur text uses guillemets around quotations. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks. Note, however, that the order of use is different from that in LTR text, because they are not automatically mirrored.</p>
 
 <p class="observation"><span class="leadin">Observation:</span> <a class="figref">fig_quotation</a> appears to show double angle brackets being used as a quotation mark.</p>
 
@@ -1202,24 +1189,6 @@ alveolar</th>
   
 <section id="emphasis">
 <h3>Emphasis</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Text spacing</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -1247,6 +1216,16 @@ alveolar</th>
 
 <section id="otherPunctuation">
 <h3>Other punctuation</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+<section id="otherinline">
+<h3>Other inline text decoration</h3>
 
 <p class="prompts">tbd</p>
 </section>
@@ -1294,6 +1273,27 @@ alveolar</th>
 
 <p><a class="figref">fig_hyphenation</a> not only shows hyphenation, but also shows kashida being used for justification. Kashida is an elongation of the baseline to make words wider.</p>
 </section>
+
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
+<section id="baselines">
+<h3>Baselines, line height, etc.</h3>
+<p>Font baselines should match the alphabetic baseline of Latin script text, and arabic and uighur fonts should have relative sizes that match. However, Uighur also needs to look right alongside Chinese text, which has a slightly lower baseline and generally larger characters than Latin.</p>
+</section>
+
+
+
 
 
 
