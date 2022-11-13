@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 April, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->13 November, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1460,7 +1460,7 @@ thead th { text-align: start; }
 <p class="instructions">You can experiment with examples using the <a href="../../pickers/cyrillic/">All Cyrillic character app</a> and the <a href="../../pickers/russian/">Russian character app</a>.</p>
 <p>The Cyrillic script is not cursive, and involves no significant context-based shaping or positioning. Nor are there significant issues around baselines or inline alignment.</p>
 <section id="fontstyle">
-<h3>Font styles</h3>
+<h3>Font styling &amp; weight</h3>
 <p>Cyrillic doesn't normally have any of the changeability of complex scripts. Characters are typically separate and self-contained. However, there can be a significant difference in shape between regular and italic/cursive font shapes for the same character. </p>
 
 <figure id="fig_italics">
@@ -1490,8 +1490,9 @@ thead th { text-align: start; }
 
 
 <section id="transforms">
-<h3>Transforming characters</h3>
-<p>Russian is bicameral, and applications may need to enable transforms to allow the user to switch between cases.</p>
+<h3>Case &amp; other character transforms</h3>
+
+<p>Cyrillic is bicameral, and applications may need to enable transforms to allow the user to switch between cases.</p>
 </section>
 </section>
 
@@ -1503,24 +1504,14 @@ thead th { text-align: start; }
 
 
 
-<section id="segments">
-<h2>Text segmentation</h2>  
-  
 <section id="graphemes">
-<h3>Grapheme boundaries</h3>
+<h2>Graphemes</h2>  
+  
+<section id="graphemeC">
+<h3>Grapheme clusters</h3>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 <p>No issues are expected for Mongolian using the Cyrillic orthography.  Combining marks appear only on the rare occasions when the text is decomposed, and then they should pose no issues as they will be treated as a unit with their base character by the grapheme cluster algorithm.</p>
-</section>
-
-
-
-
-  
-<section id="word">
-<h3>Word boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Words are separated by spaces.</p>
 </section>
 </section>
 
@@ -1535,11 +1526,24 @@ thead th { text-align: start; }
 <section id="inline">
 <h2>Punctuation &amp; inline features</h2>
 
+  
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Words are separated by spaces.</p>
+</section>
+
+
+
+
+
 
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
 <figure class="characterBox auto small" data-cols="">,␣;␣:␣.␣?␣!␣&#x2010;</figure>
+
+<p>The cyrillic orthography uses ASCII punctuation.</p>
 
 <table class="character_list">
 <tbody>
@@ -1557,7 +1561,6 @@ thead th { text-align: start; }
 </tr>
 </tbody>
 </table>
-<p>The Cyrillic orthography uses ASCII punctuation.</p>
 </section>
 
 
@@ -1565,9 +1568,11 @@ thead th { text-align: start; }
 
 
 <section id="bracketing">
-<h3>Parentheses &amp; brackets</h3>
+<h3>Bracketed text</h3>
 
 <figure class="characterBox auto small" data-cols="">(␣)</figure>
+
+<p>Mongolian commonly uses ASCII parentheses to insert parenthetical information into text.</p>
 
 <table class="character_list">
 <thead>
@@ -1592,9 +1597,11 @@ thead th { text-align: start; }
 
   
 <section id="quotations">
-<h3>Quotations</h3>
+<h3>Quotations &amp; citations</h3>
 
 <figure class="characterBox auto small" data-cols="">«␣»␣„␣“␣—</figure>
+
+<p>The standard approach is to use angle brackets by default, and the quotation marks for nested quotes. An alternative is to use the quotation marks at the top level.<tt>wq</tt></p>
 
 <table class="character_list">
 <thead>
@@ -1617,8 +1624,6 @@ thead th { text-align: start; }
 </tr>
 </tbody>
 </table>
-<p>The standard approach is to use angle brackets by default, and the quotation marks for nested quotes. An alternative is to use the quotation marks at the top level.<tt>wq</tt></p>
-
 <figure id="fig_quote_marks">
 <p class="large"><span class="ex" lang="mn">Үндсэн хүн амын нэрээс улсын оноосон нэрийг <span class="fig_highlight">«</span>Монгол<span class="fig_highlight">»</span>  хэмээжээ.</span></p>
 <figcaption>Mongolian quotation marks.</figcaption>
@@ -1639,24 +1644,6 @@ thead th { text-align: start; }
   
 <section id="emphasis">
 <h3>Emphasis</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-<section id="spacing">
-<h3>Text spacing</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -1687,6 +1674,16 @@ thead th { text-align: start; }
 
 <p class="prompts">tbd</p>
 </section>
+
+
+
+
+
+<section id="otherinline">
+<h3>Other inline text decoration</h3>
+
+<p class="prompts">tbd</p>
+</section>
 </section>
  
  
@@ -1710,6 +1707,41 @@ thead th { text-align: start; }
 <h3>Text alignment &amp; justification</h3>
 <p>Justification is done, principally, by adjusting the space between words.</p>
 </section>
+
+
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+
+<p>This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification.</p>
+</section>
+
+
+
+
+  
+<section id="baselines">
+<h3>Baselines, line height, etc.</h3>
+<p class="prompts">tbd</p>
+
+<p>Cyrillic uses the so-called 'alphabetic' baseline, which is the same as for Latin and many other scripts.</p>
+
+<!--p>fig_baselines shows glyphs from Noto Serif fonts. The basic height of Balinese letters is the same as the Latin x-height, however extenders and combining marks, extend well beyond the Latin ascenders and descenders, creating a need for larger line heights.</p>
+
+<p>The Lao characters are generally about the same size as the Latin x-height. <a class="figref">fig_baselines</a> shows glyphs from the Noto Serif fonts. The basic height of Lao letters is just slightly larger than the Latin x-height, however ascenders and vowel signs, especially when accompanied by tone marks, rise well above the Latin ascenders.  Below the baseline descenders and vowel-signs stay within the Latin descender depth.</p>
+
+<figure id="fig_baselines">
+<img src="images/fig_baselines.png" alt="qhxໂປງຽເກິ່ກຶ້ກູ" class="ex" lang="lo" data-notes="Noto Serif Lao & Noto Serif 130px" style="max-width: 40rem;">
+<figcaption>Font metrics for Latin text in the Noto Serif font compared with Balinese glyphs in the Noto Serif Balinese font.</figcaption>
+</figure-->
+</section>
+
+
+
 
 
 
