@@ -172,7 +172,7 @@ autoExpandExamples.am = `
 ሙት||
 ሙዝ||
 ሚስት|wife||mist
-ሚኒስትር||
+ሚኒስትር|minister||ministər
 ሚያዝያ||
 ሚጥሚጣ||
 ማልቀስ||
@@ -871,7 +871,7 @@ autoExpandExamples.am = `
 ጓያ||
 ጓደኛ||
 ጠረጴዛ||
-ጠቅላይ ሚኒስትር||
+ጠቅላይ ሚኒስትር|prime minister||ṭäḳlay ministər
 ጠበንጃ||
 ጠባብ|narrow||ṭäbab
 ጠጀ||

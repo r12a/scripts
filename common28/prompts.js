@@ -20,7 +20,7 @@ var contentPrompts = {
 
 "otherinline":"Any other form of highlighting or marking of text, such as underlining, numeric overbars, etc. What characters or methods (eg. text decoration) are used to convey information about a range of text?\n• If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself?\n• Is it important to skip characters when underlining, etc?\n• How do things change for vertically set text?\n• (See also the following sections which deal with specific purposes.)",
 
-"quotations":"What characters are used to indicate quotations?\n• Do quotations within quotations use different characters?\n• What characters are used to indicate dialogue?",
+"quotations":"What characters are used to indicate quotations?\n• Do quotations within quotations use different characters?\n• What characters are used to indicate dialogue?\n• Are the same mechanisms used to cite words, or for scare quotes, etc?\n• What about citing book or article names?",
 
 "abbrev":"What characters are used to indicate abbreviation, ellipsis & repetition?",
 
