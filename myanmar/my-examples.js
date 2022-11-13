@@ -296,7 +296,7 @@ autoExpandExamples.my = `
 ဆူ|||hcu
 ဆူး|||hcu:
 ဆောင်း|||hcaung:
-ဆောင်းဦး|Autumn|sʰáʊɴʔú|hcaung:u:
+ဆောင်းဦး|Autumn|sʰáʊ§ɴ§ʔú|hcaung:u:
 ဆောတလျင်|||hcau:ta.lyang
 ဆောလျင်စွာ|||hcau:lyangcwa
 ဆော့|to play|sʰɔ̰|hcau.
