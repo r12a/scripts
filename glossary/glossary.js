@@ -35,7 +35,7 @@ defList={
 
 "standalonevowel": 'Standalone vowels are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.',
 
-"orthographicsyllable": 'The term <a class="termref" target="_blank" href="../glossary/index.html#orthographicsyllable">orthographic syllable</a> is not clearly defined in the Unicode Standard. In the orthography notes on this site we define it to mean a typographic unit that includes more than one grapheme cluster. This is commonly the case for Brahmi-derived scripts, such as for Devanagari conjuncts, or Balinese stacks.',
+"orthographicsyllable": 'The term <a class="termref" target="_blank" href="../glossary/index.html#orthographicsyllable">orthographic syllable</a> is not clearly defined in the Unicode Standard. In the orthography notes on this site we define it to mean a typographic unit that includes more than one grapheme cluster. This is commonly the case for Brahmi-derived scripts, such as for Devanagari conjuncts, or Balinese stacks.  Orthographic syllables do not correspond to phonetic syllables.',
 
 "tashkil": 'A <a class="termref" target="_blank" href="../glossary/index.html#tashkil">tashkil</a> is a mark that indicates vocalization of text, as well as other types of phonetic guides to correct pronunciation. They are separately encoded as combining marks. A basic Arabic letter plus any of these types of marks is never encoded as a separate, precomposed character, but must always be represented as a sequence of letter plus combining mark. Compare with <a class="termref" target="_blank" href="../glossary/index.html#ijam">ijam</a>.',
 
