@@ -53,7 +53,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->13 November, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 November, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -2071,9 +2071,11 @@ however, this rule does not always hold.)</p>
 <h2>Graphemes</h2>  
 
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+<p id="def-orthographicsyllable" class="explanatoryintro definitionStub"></p>
 <p><strong>This section is still undergoing research and development.</strong></p>
 
-<p>Hindi needs to interpret the virama (<span class="name">halant</span>) in two different ways for segmentation: (1) as a simple vowel-killer, and (2) as a conjunct initiator.</p>
+<p>Grapheme clusters alone are not sufficient to represent typographic units in Hindi in all circumstances. Conjuncts are  common and must not be split apart by edit operations that visually change the text (such as letter-spacing, first-letter highlighting, and in-word line breaking). They need to be supplemented by orthographic syllables that string grapheme clusters together with <span class="codepoint" translate="no"><bdi lang="hi">&#x094D;</bdi> [<a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA​</span></a>]</span>. </p>
+<p>However, Hindi needs to interpret the virama (<span class="name">halant</span>) in two different ways for segmentation: (1) as a simple vowel-killer, and (2) as a conjunct initiator, depending on whether or not it is rendered visibly.</p>
 
 
 
@@ -2081,7 +2083,32 @@ however, this rule does not always hold.)</p>
 <section id="graphemeC">
 <h3>Grapheme clusters</h3>
 
-<p>A number of text operations work on the basis of graphemes, rather than code points, such as line-breaking, cursor movement, backspacing, vertical setting, justification, etc. Usually the minimal unit correlates with the Unicode concept of grapheme clusters, but not always.</p>
+<p><code>Base Combining_mark* Joiner?</code></p>
+
+<p>The base is usually  a consonant, but can also be an independent vowel.</p>
+
+<p>Combining marks may include zero or more of the following types of character:</p>
+
+<ol>
+<li><a href="../apps/listindic/index.html?chars=़">Nukta</a> (see <a class="secref">extendedC</a>)</li>
+<li><a href="../apps/listindic/index.html?chars=िीुूेोैौाृॅॉ">Dependent vowel</a>s (see <a class="secref">combiningvowels</a> and <a class="secref">vocalics</a>)</li>
+<li><a href="../apps/listindic/index.html?chars=ँंः">Final consonant</a> marks (see <a class="secref">finals</a> and <a class="secref">nasalisation</a>)</li>
+<li><a href="../apps/listindic/index.html?chars=्">Virama</a> (<span class="name">halant</span>) (see <a class="secref">clusters</a> and <a class="secref">novowel</a>)</li>
+</ol>
+<p>The following examples show a variety of grapheme clusters:</p>
+
+<p class="instructions">Click on the text version of these words to see the grapheme clusters.</p>
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/g_water.png" alt=""></td><td><span class="eg" lang="hi">पानी</span></td></tr>
+<tr><td><img src="images/g_hindi.png" alt=""></td><td><span class="eg" lang="hi">हिंदी</span></td></tr>
+<tr><td><img src="images/g_english.png" alt=""></td><td><span class="eg" lang="hi">अँगरेज़ी</span></td></tr>
+<tr><td><img src="images/g_suddenly.png" alt=""></td><td><span class="eg" lang="hi">अकस्मात्</span></td></tr>
+</table>
+
+<p>Note how grapheme clusters segment the parts of a conjunct after the virama. This is not always desirable (see <a class="secref">orthographicS</a> just below).</p>
+<p>On the very rare occasions when a <span class="name">virama</span> needs to be visible even though it is followed by another base, an invisible character must be added to prevent it joining with the following base. 
+<span class="codepoint" translate="no"><bdi lang="hi">&#x200C;</bdi> <a href="/scripts/devanagari/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> 
+can achieve that.</p>
 </section>
 
 
@@ -2092,20 +2119,80 @@ however, this rule does not always hold.)</p>
 <section id="orthographicS">
 <h3>Orthographic syllables</h3>
 
-<p>Conjuncts and any dependent combining characters should never be split.</p>
-<p>This creates a problem when dealing with Unicode grapheme clusters, because they stop after  reaching a virama. So conjuncts usually contain multiple grapheme clusters. This produces incorrect segmentation as seen on the left in <a class="figref">fig_grapheme_conjuncts</a>. Applications need to tailor the grapheme cluster rules to avoid splitting conjuncts.</p>
+<p style="text-align:start;"><code>Grapheme_cluster (Virama Grapheme_cluster)*</code></p>
+<p>Editorial operations that change the visual appearance of the text, such as letter-spacing, first-letter highlighting, in-word line-breaking, and justification, should never split conjunct forms apart.  For this reason, an alternative way of segmenting graphemes is needed. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>
+<p>A simplistic way to describe an orthographic syllable is to view it as a set of grapheme clusters separated by viramas. To be more precise, the conjunct formation usually occurs when a grapheme cluster ends in a virama and is immediately followed by a consonant. In this case the initial grapheme cluster will normally contain only a consonant, an optional nukta, and the virama.</p>
+<p>The following are examples. The first example was shown in the previous section: here the conjunct is treated as a single typographic unit.</p>
 
-    
-<figure id="fig_grapheme_conjuncts" data-notes="62px Devanagari MT">
-<div class="multiItemFigure">
-<img class="ex" src="images/grapheme_conjuncts1.png" alt="हि‍ ‍न्‍ ‍दी">
-<img class="ex" src="images/grapheme_conjuncts2.png" alt="हि‍ ‍न्दी">
-</div>
-<figcaption>Segmentation of the word <span class="charExample inline" translate="no"><span class="ex" lang="hi">हिन्दी़</span> <span class="trans">hin͓dị̄</span></span>:  using grapheme clusters (left), and how it should be (right).</figcaption>
+<p class="instructions">Click on the text version of these words to see the grapheme clusters.</p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/g_suddenly_ortho.png" alt=""></td><td><span class="eg" lang="hi">अकस्मात्</span></td></tr>
+<tr><td><img src="images/g_each.png" alt=""></td><td><span class="eg" lang="hi">प्रत्येक</span></td></tr>
+<tr><td><img src="images/g_person.png" alt=""></td><td><span class="eg" lang="hi">व्यक्ति</span></td></tr>
+<tr><td><img src="images/g_international.png" alt=""></td><td><span class="eg" lang="hi">अंतर्राष्ट्रीय</span></td></tr>
+</table>
+
+<p>Note that consonant clusters aren't always rendered as conjuncts, and in those cases the individual letters remain as separate graphemes. For example, consonants without an inherent vowel may be written using a consonant letter on its own at the end of a word or in other locations (see <a class="secref">novowel</a>), eg.</p>
+
+<p class="instructions">Click on the text version of these words to see the grapheme clusters.</p>
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/g_samaj.png" alt=""></td><td><span class="eg" lang="hi">समझ</span></td></tr>
+<tr><td><img src="images/g_entangled.png" alt=""></td><td><span class="eg" lang="hi">उलझा</span></td></tr>
+</table>
+
+
+
+<section id="fontFactors">
+<h4>Complicating factors</h4>
+
+<p>Behaviour is font-dependent. If a font doesn't have a conjunct form for a particular combination of characters it will make the virama visible. The following shows an example produced by the default font used for this page.</p>
+
+
+<p class="instructions">Click on the text version of these words to see the grapheme clusters.</p>
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/g_retweet.png" alt=""></td><td><span class="eg" lang="hi">रीट्वीट</span></td></tr>
+<tr><td><img src="images/g_retweet_conjunct.png" alt=""></td><td>Same word with a different font.</td></tr>
+</table>
+
+
+<p>What's important here is that it is possible to break a line after the virama when the virama is visible. This is currently difficult to manage because the decision as to whether the text is segmented into 2 graphemes or one  depends only on the capabilities of the font used (ie. the rendered result); the code point sequence is identical for both cases, and gives no clues to which approach to segmentation is applicable.</p>
+
+<p>Visible viramas can also affect vowel-sign positioning. For the purposes of illustration, let's take the previous example and replace the vowel-signs with ones that are displayed before the base.  Observe the placement of the pre-base vowel in <a class="figref">fig_prebase_position</a>. In the conjunct form on the left, the vowel-sign is rendered to the left of the whole conjunct. If the sequence is not rendered as a conjunct, as in the second example, the pre-base glyph precedes the <span class="uname">VA</span>, not the <span class="uname">TA</span>.</p>
+
+<figure id="fig_prebase_position">
+<img class="ex" lang="hi" src="images/fig_prebase_position2.png" alt="रिट्विट" data-notes="Noto Serif Devanagari 40px">
+<img src="images/fig_prebase_position1.png" alt="रिट्विट" data-notes="Noto Serif Devanagari 40px">
+<figcaption>Placement of pre-base vowel glyphs.</figcaption>
 </figure>
+</section>
 
-<p>Unfortunately, this is harder than it seems, because whether a conjunct is formed or not usually depends on the capabilities of the font – it cannot be determined solely by looking at the code points in memory. If a font doesn't contain the glyphs to create a conjunct it will render the consonant cluster with a visible virama. In that case, the grapheme cluster approach <em>is</em> appropriate.</p>
-<p class="observation"><i>Observation:</i> It may be that justification and letter-spacing place spacing between vowel-sign glyphs and the glyph of their base characters in some circumstances. This kind of unit requires manipulation of the glyphs in the text, rather than the code points</p>
+
+
+
+
+
+<section id="webSegmentation">
+<h3>Browser behaviour</h3>
+
+<div style="padding: 3rem; padding-block: 0;">
+<p><span class="leadin">Test in your browser.</span> <span class="instructions">The words  test units that equate to grapheme clusters only, and others that include conjuncts. First, the text is displayed in a contenteditable paragraph, then in a textarea. Results are reported for Gecko (Firefox), Blink (Chrome), and WebKit (Safari) on a Mac.</span></p>
+
+<p contenteditable class="graphemeTest"><span class="ex" lang="hi">अँगरेज़ी</span> <span class="ex" lang="hi">अकस्मात्</span> <span class="ex" lang="hi">अंतर्राष्ट्रीय</span> <span class="ex" lang="hi">उलझा</span></p>
+
+<div class="graphemeTextarea"><textarea class="ex" lang="hi">अँगरेज़ी अकस्मात् अंतर्राष्ट्रीय उलझा</textarea></div>
+</div>
+
+<p><span class="leadin">Cursor movement.</span> <span class="instructions">Move the cursor through the text.</span><br>
+Gecko steps through the whole text using grapheme clusters. It takes 2 or more steps (depending on the number of GCs) to get through the conjuncts, one grapheme cluster at a time. In some cases, especially with <span class="uname">RA</span>, the cursor may look as if it is in the wrong position. Blink and WebKit step through all words using the orthographic syllables described here (ie. they step over a stack and all associated combining characters in one jump).</p>
+
+<p><span class="leadin">Selection.</span> <span class="instructions">Place the cursor next to a character and hold down shift while pressing an arrow key.</span><br>
+The behaviour is the same as for cursor movement. </p>
+
+<p><span class="leadin">Deletion.</span> Forward deletion works in the same way as cursor movement.  The backspace key deletes code point by code point, for all browsers.</p>
+
+<p><span class="leadin">Line-break.</span> <span class="instructions">See <a href="https://w3c.github.io/i18n-tests/exploratory/line_breaking/int-line-break?lang=hi&fontSize=36&width=652&lineBreak=anywhere&wordBreak=normal&text=xxxxx%20%E0%A4%85%E0%A4%81%E0%A4%97%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A4%BC%E0%A5%80%20%E0%A4%85%E0%A4%95%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%A4%E0%A5%8D%20%E0%A4%85%E0%A4%82%E0%A4%A4%E0%A4%B0%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B7%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AF%20%E0%A4%89%E0%A4%B2%E0%A4%9D%E0%A4%BE&a=&i=Change%20the%20width%20of%20the%20box%20slowly%20to%20see%20how%20the%20text%20wraps." target="_blank">this test</a>. The CSS sets the value of the <code class="kw" translate="no">line-break</code> property to <code class="kw" translate="no">anywhere</code>. Change the size of the box to slowly move the line break point.</span><br>
+Gecko appears to segment on grapheme cluster boundaries, except for inside the 3rd word, where it wraps first a vowel-sign, then wraps the rest of the conjunct plus the previous grapheme cluster as a single unit. WebKit and Blink both wrap on orthographic syllable boundaries.</p>
 </section>
 </section>
 
