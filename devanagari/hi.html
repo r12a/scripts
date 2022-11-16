@@ -2106,9 +2106,6 @@ however, this rule does not always hold.)</p>
 </table>
 
 <p>Note how grapheme clusters segment the parts of a conjunct after the virama. This is not always desirable (see <a class="secref">orthographicS</a> just below).</p>
-<p>On the very rare occasions when a <span class="name">virama</span> needs to be visible even though it is followed by another base, an invisible character must be added to prevent it joining with the following base. 
-<span class="codepoint" translate="no"><bdi lang="hi">&#x200C;</bdi> <a href="/scripts/devanagari/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> 
-can achieve that.</p>
 </section>
 
 
@@ -2119,12 +2116,14 @@ can achieve that.</p>
 <section id="orthographicS">
 <h3>Orthographic syllables</h3>
 
-<p style="text-align:start;"><code>Grapheme_cluster (Virama Grapheme_cluster)*</code></p>
+<p style="text-align:start;"><code>(Consonant Nukta? Virama)* Grapheme_cluster</code></p>
+
 <p>Editorial operations that change the visual appearance of the text, such as letter-spacing, first-letter highlighting, in-word line-breaking, and justification, should never split conjunct forms apart.  For this reason, an alternative way of segmenting graphemes is needed. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>
-<p>A simplistic way to describe an orthographic syllable is to view it as a set of grapheme clusters separated by viramas. To be more precise, the conjunct formation usually occurs when a grapheme cluster ends in a virama and is immediately followed by a consonant. In this case the initial grapheme cluster will normally contain only a consonant, an optional nukta, and the virama.</p>
+<p>A simple way to describe an orthographic syllable is to view it as  zero or more grapheme clusters composed of a consonant (with optional <span class="name">nukta</span>) and a <span class="name">virama</span>, followed by another grapheme cluster. To be more precise, the conjunct formation only occurs when the final grapheme cluster begins with a consonant.</p>
+
 <p>The following are examples. The first example was shown in the previous section: here the conjunct is treated as a single typographic unit.</p>
 
-<p class="instructions">Click on the text version of these words to see the grapheme clusters.</p>
+<p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/g_suddenly_ortho.png" alt=""></td><td><span class="eg" lang="hi">अकस्मात्</span></td></tr>
@@ -2135,11 +2134,12 @@ can achieve that.</p>
 
 <p>Note that consonant clusters aren't always rendered as conjuncts, and in those cases the individual letters remain as separate graphemes. For example, consonants without an inherent vowel may be written using a consonant letter on its own at the end of a word or in other locations (see <a class="secref">novowel</a>), eg.</p>
 
-<p class="instructions">Click on the text version of these words to see the grapheme clusters.</p>
+<p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/g_samaj.png" alt=""></td><td><span class="eg" lang="hi">समझ</span></td></tr>
 <tr><td><img src="images/g_entangled.png" alt=""></td><td><span class="eg" lang="hi">उलझा</span></td></tr>
 </table>
+<p>On the very rare occasions when a <span class="name">virama</span> needs to be visible even though it is followed by another base, an invisible character must be added to prevent it joining with the following base. <span class="codepoint" translate="no"><bdi lang="hi">&#x200C;</bdi> <a href="/scripts/devanagari/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> can achieve that.</p>
 
 
 
@@ -2149,7 +2149,7 @@ can achieve that.</p>
 <p>Behaviour is font-dependent. If a font doesn't have a conjunct form for a particular combination of characters it will make the virama visible. The following shows an example produced by the default font used for this page.</p>
 
 
-<p class="instructions">Click on the text version of these words to see the grapheme clusters.</p>
+<p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/g_retweet.png" alt=""></td><td><span class="eg" lang="hi">रीट्वीट</span></td></tr>
 <tr><td><img src="images/g_retweet_conjunct.png" alt=""></td><td>Same word with a different font.</td></tr>
