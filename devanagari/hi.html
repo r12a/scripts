@@ -53,7 +53,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 November, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->17 November, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -2074,7 +2074,9 @@ however, this rule does not always hold.)</p>
 <p id="def-orthographicsyllable" class="explanatoryintro definitionStub"></p>
 <p><strong>This section is still undergoing research and development.</strong></p>
 
-<p>Grapheme clusters alone are not sufficient to represent typographic units in Hindi in all circumstances. Conjuncts are  common and must not be split apart by edit operations that visually change the text (such as letter-spacing, first-letter highlighting, and in-word line breaking). They need to be supplemented by orthographic syllables that string grapheme clusters together with <span class="codepoint" translate="no"><bdi lang="hi">&#x094D;</bdi> [<a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA​</span></a>]</span>. </p>
+<p>Grapheme clusters alone are not sufficient to represent typographic units in Hindi in all circumstances. Conjuncts are  common and must not be split apart by edit operations that visually change the text (such as letter-spacing, first-letter highlighting, and in-word line breaking). For those operations one needs to segment the text using <em>orthographic syllables</em>, which string grapheme clusters together with <span class="codepoint" translate="no"><bdi lang="hi">&#x094D;</bdi> [<a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA​</span></a>]</span>,
+which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</code>.</p>
+
 <p>However, Hindi needs to interpret the virama (<span class="name">halant</span>) in two different ways for segmentation: (1) as a simple vowel-killer, and (2) as a conjunct initiator, depending on whether or not it is rendered visibly.</p>
 
 
@@ -2084,9 +2086,6 @@ however, this rule does not always hold.)</p>
 <h3>Grapheme clusters</h3>
 
 <p><code>Base Combining_mark* Joiner?</code></p>
-
-<p>The base is usually  a consonant, but can also be an independent vowel.</p>
-
 <p>Combining marks may include zero or more of the following types of character:</p>
 
 <ol>
@@ -2095,6 +2094,7 @@ however, this rule does not always hold.)</p>
 <li><a href="../apps/listindic/index.html?chars=ँंः">Final consonant</a> marks (see <a class="secref">finals</a> and <a class="secref">nasalisation</a>)</li>
 <li><a href="../apps/listindic/index.html?chars=्">Virama</a> (<span class="name">halant</span>) (see <a class="secref">clusters</a> and <a class="secref">novowel</a>)</li>
 </ol>
+<p>Any of the above may occur after a consonant base. Independent vowel bases usually only have final consonant marks.</p>
 <p>The following examples show a variety of grapheme clusters:</p>
 
 <p class="instructions">Click on the text version of these words to see the grapheme clusters.</p>
@@ -2119,6 +2119,7 @@ however, this rule does not always hold.)</p>
 <p style="text-align:start;"><code>(Consonant Nukta? Virama)* Grapheme_cluster</code></p>
 
 <p>Editorial operations that change the visual appearance of the text, such as letter-spacing, first-letter highlighting, in-word line-breaking, and justification, should never split conjunct forms apart.  For this reason, an alternative way of segmenting graphemes is needed. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>
+
 <p>A simple way to describe an orthographic syllable is to view it as  zero or more grapheme clusters composed of a consonant (with optional <span class="name">nukta</span>) and a <span class="name">virama</span>, followed by another grapheme cluster. To be more precise, the conjunct formation only occurs when the final grapheme cluster begins with a consonant.</p>
 
 <p>The following are examples. The first example was shown in the previous section: here the conjunct is treated as a single typographic unit.</p>
