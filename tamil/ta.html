@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 November, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->17 November, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1659,6 +1659,24 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 </table>
 <p class="info">The precomposed character decomposes in NFD, and re-forms again in NFC. It is generally recommended to use the precomposed character.</p>
 </section>
+
+
+
+
+
+<section id="charorder">
+<h3>Code point sequences</h3>
+
+<p>The following indicates the  expected ordering of Unicode characters within a Tamil combining character sequence. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=பதசடகமநனணஞஙவரறழலளயஇஈஉஊஎஏஒஓஅஆஐஔிீுூெேொோாைௌ்ௗ“”‘’!().:;?௹₹ஜஸஶஷஹஃௐ।॥">Indic Syllabic Categories</a>. Follow the links to see what characters are represented by a given label.</p>
+
+<ol>
+<li><a href="../apps/listindic/index.html?chars=பதசடகமநனணஞஙவரறழலளயஜஸஶஷஹ" target="_blank">Consonant</a> (23) <bdi class="grammar">|</bdi> <a href="../apps/listindic/index.html?chars=இஈஉஊஎஏஒஓஅஆஐஔ" target="_blank">Vowel_Independent</a> (12)</li>
+
+<li><a href="../apps/listindic/index.html?chars=்" target="_blank">Virama</a>  <bdi class="grammar">|</bdi> <a href="../apps/listindic/index.html?chars=ிீுூெேொோாைௌௗ" target="_blank">Vowel_Dependent</a> (12)</li>
+</ol>
+
+<p class="info">When a base consonant is followed by 2 vowel-signs (ie. in decomposed text with circumgraphs) the code point for the glyph that appears to the left of the base when rendered should be the first after the base code point. Otherwise, the sequence will not recompose.</p>
+</section>
 </section>
 
   
@@ -1875,40 +1893,28 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 <p id="def-orthographicsyllable" class="explanatoryintro definitionStub"></p>
 
-<p>Modern Tamil needs to interpret the virama (pulli) in two different ways for segmentation: (1) as a simple vowel-killer, and (2) as a conjunct initiator. It also segments text in a third way for <a href="#justification">justification</a>.</p>
-<p>The base is generally a consonant, however independent vowels also constitute a base (though they are not followed by combining marks).</p>
-
-
-
-  
+<p>Grapheme clusters can be used most of the time to segment Tamil words. However, in modern Tamil, 3 character sequences form  conjuncts which should not be broken during edit operations such as letter-spacing, first-letter highlighting, and in-word line breaking.  For those operations one needs to segment the text using <em>orthographic syllables</em>, which string grapheme clusters together with <span class="codepoint" translate="no"><bdi lang="ta">&#x0BCD;</bdi> [<a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA​</span></a>]</span>,
+which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</code>.</p>
+<p>Since there is only one Tamil virama, modern Tamil needs to interpret the virama (pulli) in two different ways for segmentation: (1) as a simple vowel-killer, and (2) as a conjunct initiator. </p>
+<p>Tamil  also segments text in a third way for <a href="#justification">justification</a>.</p>
 <section id="graphemeC">
 <h3>Grapheme clusters</h3>
 
 <p><code>Base Combining_mark*</code></p>
+<p>Combining marks may include one of the following types of  character.</p>
 
+<ol>
+<li><a href="../apps/listindic/index.html?chars=िीुूेोैौाृॅॉ">Dependent vowel</a>s (see <a class="secref">combiningvowels</a>)</li>
 
-<p>Grapheme clusters can be used most of the time to segment Tamil words. </p>
-<p>Because a virama (with 2 exceptions) is a visible vowel-killer and doesn't create conjunct forms, it can be treated as just another combining mark and segmentation can break after it.</p>
-<p>Evidence for this approach can be seen when a consonant cluster is followed by a vowel-sign glyph that is displayed to the left of the base.  For example, observe the placement of the pre-base vowel in <a class="figref">fig_virama_seg</a>. In the conjunct form on the left, the vowel-sign surrounds the whole conjunct. If the sequence is not rendered as a conjunct, as in the second example, the pre-base glyph precedes the <span class="uname">SA</span>, not the <span class="uname">KA</span>.</p>
+<li><a href="../apps/listindic/index.html?chars=्">Virama</a> (<span class="name">pulli</span>) (see <a class="secref">clusters</a> and <a class="secref">novowel</a>)</li>
+</ol>
 
-
-<figure id="fig_virama_seg">
-<img src="images/fig_virama_seg.png" alt="க்ஷொ     க்ஸொ" class="ex" lang="ta" data-notes="40px Noto Serif Tamil" style="max-width: 40rem;">
-<figcaption>Placement of pre-base vowel glyphs.</figcaption>
-</figure>
-
-
-<p>In the case of Tamil,  <mark>sequences that include a syllable nucleus</mark> only include one type of combining mark: <a href="#vowelsigns">vowel-signs</a>. There is usually only one vowel-sign per base consonant, however in decomposed text circumgraphs are represented by 2 combining characters.</p>
-<p> Examples: </p>
-
+<p>Combining marks may occur after a consonant base. There is usually only one vowel-sign per base consonant, however in decomposed text circumgraphs are represented by 2 combining characters.</p>
+<p>The following examples show a variety of grapheme clusters:</p>
+<p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/s_road_street.png" alt=""></td><td><span class="eg" lang="ta">சாலை</span></td></tr>
 <tr><td><img src="images/s_cut.png" alt=""></td><td><span class="eg" lang="ta">அரி</span></td></tr>
-</table>
-
-<p><mark>Syllable codas and vowel-less consonants in clusters</mark> are written using a sequence of consonant letter followed by a visible <a href="#suppression">virama</a> (<span class="name">pulli</span>), eg.</p>
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/s_there.png" alt=""></td><td><span class="eg" lang="ta">அங்கே</span></td></tr>
 <tr><td><img src="images/s_fineness.png" alt=""></td><td><span class="eg" lang="ta">அஞ்ஞானம்</span></td></tr>
 <tr>
@@ -1928,50 +1934,29 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 <section id="orthographicS">
 <h3>Orthographic syllables</h3>
 
-<p><code>Base Virama Base Combining_mark*</code></p>
+<p><code>Grapheme_cluster (Pulli Grapheme_cluster)*</code></p>
 
-<p>The  kind of typographic unit that includes conjuncts <em>cannot</em> be realised using Unicode grapheme clusters because they create breaks after a <span class="name">pulli</span>, rather than including the following consonants.</p>
-
-<p>Modern Tamil uses conjunct forms for only <a href="#clusters">two sound sequences</a> (though this can be written using 3 code point sequences). The sequences are<span class="charExampleInline" translate="no"><span class="ex" lang="ta">க்ஷ</span> <span class="trans">k͓ʂ</span></span>, and <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஶ்ரீ</span> <span class="trans">ʃ͓ɾī</span></span> and <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஸ்ரீ</span> <span class="trans">s͓ɾī</span></span> (the latter two being alternate ways of writing the same sound). These sequences should not be broken during segmentation. Note, that the 'shri' sequence must include the <span class="trans">i</span> vowel to produce a conjunct. With a different vowel, the sequence of characters is displayed using a visual <span class="name">pulli</span>, eg. 
+<p>Because a virama (with the exceptions described below) is a visible vowel-killer and doesn't create conjunct forms, it can usually be treated as just another combining mark and segmentation can break after it.</p>
+<p>However, modern Tamil uses conjunct forms for  <a href="#clusters">two sound sequences</a> (though this can be written using 3 code point sequences). The sequences are<span class="charExampleInline" translate="no"><span class="ex" lang="ta">க்ஷ</span> <span class="trans">k͓ʂ</span></span>, and <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஶ்ரீ</span> <span class="trans">ʃ͓ɾī</span></span> and <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஸ்ரீ</span> <span class="trans">s͓ɾī</span></span> (the latter two being alternate ways of writing the same sound). These sequences should not be broken during segmentation. Note, that the 'shri' sequence must include the <span class="trans">i</span> vowel to produce a conjunct. With a different vowel, the sequence of characters is displayed using a visual <span class="name">pulli</span>, eg. 
 <span class="charExample" translate="no"><span class="ex" lang="ta">இஶ்ரேல்</span> <span class="trans">ịʃ͓ɾēl͓</span> <span class="meaning">Israel</span></span></p>
 
-<p>Because <mark> conjunct forms</mark> are never split apart visually, the whole conjunct form is incorporated into a typographic unit. The consonants that make up the cluster are all encoded with a following <span class="name">virama</span>, however in these cases the typographic unit doesn't stop there.</p>
-
+<p>Editorial operations that change the visual appearance of the text, such as letter-spacing, first-letter highlighting, in-word line-breaking, and justification, should never split conjunct forms apart.  For this reason, an alternative way of segmenting graphemes is needed. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>
+<p>A simple way to describe an orthographic syllable is to view it as  zero or more grapheme clusters composed of a consonant and a <span class="name">virama</span>, followed by another grapheme cluster. To be more precise, the conjunct formation only occurs when the final grapheme cluster begins with a consonant <em>and (for modern Tamil) is one of the 3 previously mentioned sequences</em>.</p>
+<p>This difference in segmentation arises from a reinterpretation of the effect of the virama – no special, alternative virama character is available. So this behaviour needs to be triggered by special rules.</p>
+<p>The following are examples.</p>
+<p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/s_lakh.png" alt=""></td><td><span class="eg" lang="ta">லக்ஷம்</span></td></tr>
 <tr><td><img src="images/s_weakness.png" alt=""></td><td><span class="eg" lang="ta">க்ஷீணம்</span></td></tr>
 <tr><td><img src="images/s_shri.png" alt=""></td><td><span class="eg" lang="ta" dir="ltr">ஶ்ரீ</span></td></tr>
 </table>
-
-<p>This difference in segmentation arises from a reinterpretation of the effect of the virama – no special, alternative virama character is available. So this behaviour needs to be triggered by special rules.</p>
-
+<p>Treatment as conjuncts rather than grapheme clusters can also affect vowel-sign positioning. An illustration of this  can be seen when a consonant cluster is followed by a vowel-sign glyph that is displayed to the left of the base.  For example, observe the placement of the pre-base vowel in <a class="figref">fig_virama_seg</a>. In the conjunct form on the left, the vowel-sign surrounds the whole conjunct. If the sequence is not rendered as a conjunct, as in the second example, the pre-base glyph precedes the <span class="uname">SA</span>, not the <span class="uname">KA</span>.</p>
 
 
-
-
-
-<section id="webSegmentation">
-<h4>Browser behaviour</h4>
-
-<div style="padding: 3rem; padding-block: 0;">
-<p><span class="leadin">Test in your browser.</span> <span class="instructions">The word on the left contains a conjunct form. On the right is a virama that doesn't form a conjunct. First, the text is displayed in a contenteditable paragraph, then in a textarea. Results are reported for Gecko (Firefox), Blink (Chrome), and WebKit (Safari) on a Mac.</span></p>
-
-<p class="ex" lang="ta" contenteditable style="margin-inline-start:7.5%; line-break:anywhere; border: 1px solid #ccc;">க்ஷீணம் தோசிக்கொக்கு</p>
-
-<textarea class="ex" lang="ta" style="margin-inline-start:7.5%; line-break:anywhere;">க்ஷீணம் தோசிக்கொக்கு</textarea>
-</div>
-
-<p><span class="leadin">Cursor movement.</span> <span class="instructions">Move the cursor through the text.</span><br>
-Gecko steps through the whole text using grapheme clusters. The cursor visually stops in the middle of the conjunct sequence. Blink does the same, however the cursor appears to skip to the end of the conjunct sequence and you have to hit the cursor key again (with no apparent movement) to actually clear it.  WebKit treats all sequences with a virama as a single unit, which is inappropriate for the second word.</p>
-
-<p><span class="leadin">Selection.</span> <span class="instructions">Place the cursor next to a character and hold down shift while pressing an arrow key.</span><br>
-The behaviour is the same as for cursor movement. This has the effect of sometimes appearing to highlight backwards in Blink.</p>
-
-<p><span class="leadin">Deletion.</span> Forward deletion works in the same way as cursor movement.  The backspace key deletes code point by code point.</p>
-
-<p><span class="leadin">Line-break.</span> <span class="instructions">The CSS sets the value of the <code class="kw" translate="no">line-break</code> property to <code class="kw" translate="no">anywhere</code>. Pad the start of the container with characters to slowly push the Sinhala text off the first line.</span><br>
-Gecko wraps at grapheme cluster boundaries but wraps the conjunct as a single unit. Blink and WebKit wrap everything at grapheme cluster boundaries, which has the effect of breaking the conjunct in half at the end of a line.</p>
-</section>
+<figure id="fig_virama_seg">
+<img src="images/fig_virama_seg.png" alt="க்ஷொ     க்ஸொ" class="ex" lang="ta" data-notes="40px Noto Serif Tamil" style="max-width: 40rem;">
+<figcaption>Placement of pre-base vowel glyphs.</figcaption>
+</figure>
 </section>
 
 
@@ -1983,6 +1968,12 @@ Gecko wraps at grapheme cluster boundaries but wraps the conjunct as a single un
 <h3>Glyph-based typographic units</h3>
 
 <p>When Tamil is justified, space is added around graphemes, but in many cases it is also added <em>within</em> grapheme clusters.  The code point sequences are not affected, though. See <a class="secref">justification</a>.</p>
+
+
+<figure id="fig_partridge_graphemes">
+<img alt="கௌதாரி" class="ex" lang="ta" src="images/partridge.png" data-source="">
+<figcaption>Tamil glyph separation. The vowel-signs are coloured, and on the top line the grapheme-cluster boundaries are shown with thin vertical lines. The first vowel-sign is a circumgraph (ie. a single code point that renders glyphs on more than one side of the base). The bottom line shows how this word would be expanded to fill a line.</figcaption>
+</figure>
 </section>
 
 
@@ -1990,18 +1981,27 @@ Gecko wraps at grapheme cluster boundaries but wraps the conjunct as a single un
 
 
 
-<section id="charorder">
-<h3>Code point sequences</h3>
+<section id="webSegmentation">
+<h3>Browser behaviour</h3>
 
-<p>The following indicates the  expected ordering of Unicode characters within a Tamil combining character sequence. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=பதசடகமநனணஞஙவரறழலளயஇஈஉஊஎஏஒஓஅஆஐஔிீுூெேொோாைௌ்ௗ“”‘’!().:;?௹₹ஜஸஶஷஹஃௐ।॥">Indic Syllabic Categories</a>. Follow the links to see what characters are represented by a given label.</p>
+<div style="padding: 3rem; padding-block: 0;">
+<p><span class="leadin">Test in your browser.</span> <span class="instructions">The word on the left contains a conjunct form. On the right is a virama that doesn't form a conjunct. First, the text is displayed in a contenteditable paragraph, then in a textarea. Results are reported for Gecko (Firefox), Blink (Chrome), and WebKit (Safari) on a Mac.</span></p>
 
-<ol>
-<li><a href="../apps/listindic/index.html?chars=பதசடகமநனணஞஙவரறழலளயஜஸஶஷஹ" target="_blank">Consonant</a> (23) <bdi class="grammar">|</bdi> <a href="../apps/listindic/index.html?chars=இஈஉஊஎஏஒஓஅஆஐஔ" target="_blank">Vowel_Independent</a> (12)</li>
+<p class="graphemeTest" contenteditable><span class="ex" lang="ta">க்ஷீணம்</span> <span class="ex" lang="ta">தோசிக்கொக்கு</span></p>
 
-<li><a href="../apps/listindic/index.html?chars=்" target="_blank">Virama</a>  <bdi class="grammar">|</bdi> <a href="../apps/listindic/index.html?chars=ிீுூெேொோாைௌௗ" target="_blank">Vowel_Dependent</a> (12)</li>
-</ol>
+<div class="graphemeTextarea"><textarea class="ex" lang="ta">க்ஷீணம் தோசிக்கொக்கு</textarea></div>
+</div>
 
-<p class="info">When a base consonant is followed by 2 vowel-signs (ie. in decomposed text with circumgraphs) the code point for the glyph that appears to the left of the base when rendered should be the first after the base code point. Otherwise, the sequence will not recompose.</p>
+<p><span class="leadin">Cursor movement.</span> <span class="instructions">Move the cursor through the text.</span><br>
+Gecko steps through the whole text using grapheme clusters. The cursor visually stops in the middle of the conjunct sequence. Blink does the same, however the cursor appears to skip to the end of the conjunct sequence and you have to hit the cursor key again (with no apparent movement) to actually clear it.  WebKit treats all sequences with a virama as a single unit, which is inappropriate for the second word.</p>
+
+<p><span class="leadin">Selection.</span> <span class="instructions">Place the cursor next to a character and hold down shift while pressing an arrow key.</span><br>
+The behaviour is the same as for cursor movement. This has the effect of sometimes appearing to highlight backwards in Blink.</p>
+
+<p><span class="leadin">Deletion.</span> Forward deletion works in the same way as cursor movement.  The backspace key deletes code point by code point.</p>
+
+<p><span class="leadin">Line-break.</span><span class="instructions">See <a href="https://w3c.github.io/i18n-tests/exploratory/line_breaking/int-line-break?lang=ta&fontSize=36&width=820&lineBreak=anywhere&wordBreak=normal&text=xxxxx%20%E0%AE%A4%E0%AF%8B%E0%AE%9A%E0%AE%BF%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%8A%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%20%E0%AE%95%E0%AF%8D%E0%AE%B7%E0%AF%80%E0%AE%A3%E0%AE%AE%E0%AF%8D&a=&i=Change%20the%20width%20of%20the%20box%20slowly%20to%20see%20how%20the%20text%20wraps." target="_blank">this test</a>. The CSS sets the value of the <code class="kw" translate="no">line-break</code> property to <code class="kw" translate="no">anywhere</code>. Change the size of the box to slowly move the line break point.</span><br>
+Gecko wraps at grapheme cluster boundaries but wraps the conjunct as a single unit. Blink and WebKit wrap everything at grapheme cluster boundaries, which has the effect of breaking the conjunct in half at the end of a line.</p>
 </section>
 </section>
 
