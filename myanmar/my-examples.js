@@ -18,7 +18,7 @@ autoExpandExamples.my = `
 ကင်|||kang
 ကင်ဆာရောဂါ|||kanghcarau:ga
 ကင်းစီး|kinzi|kɪ́§ɴ.§zí
-ကစား|to play|ɡəzá|ka.ca:
+ကစား|to play|ɡə§zá|ka.ca:
 ကစ်|||kac
 ကဏ္ဍ|section|kà§ɴ§da̰
 ကတ်|card|ka§ʔ|kat
