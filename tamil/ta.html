@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->17 November, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->18 November, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1895,7 +1895,9 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 
 <p>Grapheme clusters can be used most of the time to segment Tamil words. However, in modern Tamil, 3 character sequences form  conjuncts which should not be broken during edit operations such as letter-spacing, first-letter highlighting, and in-word line breaking.  For those operations one needs to segment the text using <em>orthographic syllables</em>, which string grapheme clusters together with <span class="codepoint" translate="no"><bdi lang="ta">&#x0BCD;</bdi> [<a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA​</span></a>]</span>,
 which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</code>.</p>
+
 <p>Since there is only one Tamil virama, modern Tamil needs to interpret the virama (pulli) in two different ways for segmentation: (1) as a simple vowel-killer, and (2) as a conjunct initiator. </p>
+
 <p>Tamil  also segments text in a third way for <a href="#justification">justification</a>.</p>
 <section id="graphemeC">
 <h3>Grapheme clusters</h3>
@@ -1941,7 +1943,7 @@ which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</
 <span class="charExample" translate="no"><span class="ex" lang="ta">இஶ்ரேல்</span> <span class="trans">ịʃ͓ɾēl͓</span> <span class="meaning">Israel</span></span></p>
 
 <p>Editorial operations that change the visual appearance of the text, such as letter-spacing, first-letter highlighting, in-word line-breaking, and justification, should never split conjunct forms apart.  For this reason, an alternative way of segmenting graphemes is needed. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>
-<p>A simple way to describe an orthographic syllable is to view it as  zero or more grapheme clusters composed of a consonant and a <span class="name">virama</span>, followed by another grapheme cluster. To be more precise, the conjunct formation only occurs when the final grapheme cluster begins with a consonant <em>and (for modern Tamil) is one of the 3 previously mentioned sequences</em>.</p>
+<p>Where conjuncts appear, a typographic unit contains multiple grapheme clusters. The non-final grapheme clusters  all end with <span class="codepoint" translate="no"><bdi lang="ta">&#x0BCD;</bdi> [<a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA​</span></a>]</span>, and the final grapheme cluster begins with a consonant. However, as mentioned, <em>this only applies for 3 character sequences in modern Tamil</em>.</p>
 <p>This difference in segmentation arises from a reinterpretation of the effect of the virama – no special, alternative virama character is available. So this behaviour needs to be triggered by special rules.</p>
 <p>The following are examples.</p>
 <p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
