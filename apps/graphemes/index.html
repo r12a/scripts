@@ -30,11 +30,13 @@
 <textarea id="in" placeholder="Drop text to be analysed here."></textarea>
 
 <div>
-<button id="analyseBCvButton" onclick="document.getElementById('out').innerHTML = makeBCvGraphemes(document.getElementById('in').value)">BCv Graphemes</button>
+<button id="analyseGCButton" onclick="document.getElementById('out').innerHTML = addMarkup(makeGraphemeClusters(document.getElementById('in').value))">Unicode grapheme clusters</button>
 <span style="margin-inline:2rem;">&nbsp;</span>
-<button id="analyseGButton" onclick="document.getElementById('out').innerHTML = makeGraphemes(document.getElementById('in').value)">BC Graphemes</button>
+
+<button id="analyseGButton" onclick="document.getElementById('out').innerHTML = makeGraphemes(document.getElementById('in').value)">CCS</button>
 <span style="margin-inline:2rem;">&nbsp;</span>
-<button id="analyseGCButton" onclick="document.getElementById('out').innerHTML = makeGraphemeClusters(document.getElementById('in').value)">Unicode grapheme clusters</button>
+
+<button id="analyseBCvButton" onclick="document.getElementById('out').innerHTML = addMarkup(makeOrthSyllables(document.getElementById('in').value))">Orthographic syllables</button>
 </div>
 </div>
 
@@ -79,9 +81,9 @@ Show character names on mouseover</label></p>
 
 <p>This app segments text in 3 different ways:</p>
 <ul>
-<li><strong>BCv graphemes</strong> start with a base character and add all following combining marks, unless the base character is preceded by a character with the virama or invisible stacker indic property, in which case it extends the previous grapheme. This may produce inaccurate results if a virama is meant to signal the end of a syllable with a visible marker.</li>
-<li><strong>BC graphemes</strong> start with a base character and add all following combining marks. They don't extend the grapheme where there are viramas or stackers. That means that conjunct graphemes are split into separate parts.</li>
-<li><strong>Unicode grapheme clusters</strong> are an approximation to user perceived graphemes where the boundaries are established by rules applied to code point sequences according to <a href="https://unicode.org/reports/tr29/">UAX #29</a>. The rules tend to be biased towards producing the units of text needed for cursor positioning. (There is a different set of rules for establishing break opportunities for line-breaking.) Grapheme clusters may also be tailored for particular languages.</li>
+<li><strong>Unicode grapheme clusters</strong> are an approximation to user perceived graphemes where the boundaries are established by rules applied to code point sequences according to <a href="https://unicode.org/reports/tr29/">UAX #29</a>. The rules tend to be biased towards producing the units of text needed for cursor positioning.</li>
+<li><strong>CCSs</strong> (combining character sequences) start with a base character and add all following combining marks. They don't extend the grapheme where there are viramas or stackers. That means that conjunct graphemes are split into separate parts. It also means that Myanmar right-rendered vowel-signs and tone marks don't create a new segment on their own.</li>
+<li><strong>Orthographic syllables</strong> string together grapheme clusters that should not be broken during edit operations such as line-breaking, letter-spacing, first-letter selection, etc. The app uses home-grown algorithms  to handle (so far) Hindi, Sinhala, Tamil, Balinese, Javanese, and Burmese.  It may handle other scripts reasonably well, especially non-Indic ones.</li>
 </ul>
 
 <p>To pass a string in the URL, use one of:</p>
@@ -97,7 +99,7 @@ Show character names on mouseover</label></p>
 </section>
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->4 April, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->18 November, 2022<!-- #EndDate -->
 </p>
 </details>
 </div>
