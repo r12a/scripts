@@ -394,15 +394,32 @@ function addUsageAdvice (script, iso, picker) {
     <div id="access" style="display: none;">
     <div id="access_contrast">
     <div id="contrastChoice">
-    <button id="contrastLow" class="access_selected" onClick="document.querySelector('body').classList.remove('contrast');
+    
+    <button id="contrastLow" class="access_selected" onClick="
+    document.querySelector('.access_selected').classList.remove('access_selected');
+	document.querySelector('body').classList.remove('contrast');
+	document.querySelector('body').classList.remove('dark');
+    document.querySelector('body').classList.add('low');
         access.contrast = 'low';
         this.classList.add('access_selected'); 
-        document.getElementById('contrastHigh').classList.remove('access_selected');
-        ">Low contrast</button><button id="contrastHigh"
-    onClick="document.querySelector('body').classList.add('contrast');
+        ">Low contrast</button>
+        
+    <button id="contrastDark" onClick="
+    document.querySelector('.access_selected').classList.remove('access_selected');
+	document.querySelector('body').classList.remove('low');
+	document.querySelector('body').classList.remove('contrast');
+    document.querySelector('body').classList.add('dark');
+        access.contrast = 'dark';
+        this.classList.add('access_selected'); 
+        ">Dark mode</button>
+        
+    <button id="contrastHigh" onClick="
+    document.querySelector('.access_selected').classList.remove('access_selected');
+	document.querySelector('body').classList.remove('low');
+	document.querySelector('body').classList.remove('dark');
+    document.querySelector('body').classList.add('contrast');
         access.contrast = 'high';
         this.classList.add('access_selected'); 
-        document.getElementById('contrastLow').classList.remove('access_selected');
         ">High contrast</button>
     </div>
     </div>

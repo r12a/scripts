@@ -43,7 +43,14 @@ function initialiseSummary (blockDirectory, lang, tableName, dir) {
     if (access.contrast === 'high') {
         document.querySelector('body').classList.add('contrast')
         document.getElementById('contrastLow').classList.remove('access_selected')
+        document.getElementById('contrastDark').classList.remove('access_selected')
         document.getElementById('contrastHigh').classList.add('access_selected')
+        }
+    else if (access.contrast === 'dark') {
+        document.querySelector('body').classList.add('dark')
+        document.getElementById('contrastLow').classList.remove('access_selected')
+        document.getElementById('contrastHigh').classList.remove('access_selected')
+        document.getElementById('contrastDark').classList.add('access_selected')
         }
     document.querySelector('html').style.fontSize = access.fontsize+'px'
     document.getElementById('accessFontsize').value = access.fontsize
