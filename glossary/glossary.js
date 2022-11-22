@@ -3,7 +3,7 @@ defList={
 
 "checked": '\'Checked\' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. \'Unchecked\' means ending in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</p>',
 
-"circumgraph": 'When a single vowel-sign code point produces glyphs on more than one side of the consonant base, it is referred to as a circumgraph.',
+"circumgraph": 'When a single vowel-sign code point produces glyphs on more than one side of the consonant base, it is referred to here as a circumgraph.',
 
 "compositevowel": 'A <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">composite vowel</a> is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel-signs, repurposed consonants, and diacritics available.',
 
