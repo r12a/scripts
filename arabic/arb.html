@@ -54,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->13 November, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->23 November, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -2300,14 +2300,25 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 
 <section id="graphemes">
 <h2>Graphemes</h2>  
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+<p id="def-orthographicsyllable" class="explanatoryintro definitionStub"></p>
+
 
 <section id="graphemeC">
 <h3>Grapheme clusters</h3>
-<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
-<p id="def-ccs" class="explanatoryintro definitionStub"></p>
-
 
 <p>In most cases Arabic text uses precomposed characters and omits vowels. Therefore grapheme boundaries are consistent with individual letters. Where this is not the case, the additions are combining marks, and the Unicode grapheme cluster is designed to span combinations of base character plus any number of following combining marks.</p>
+</section>
+
+
+
+
+
+
+
+<section id="orthographicS">
+<h3>Larger typographic units</h3>
+
 <p>One potential complication is that fonts often render sequences of characters as ligated forms. The ligated forms are a font-specific feature, whereas grapheme clusters are based on code point sequences: some fonts may display the same sequence of characters without a ligated form. Most applications tend to move character by character through the text, producing situations like the cursor position in <a class="figref">fig_gc_ligature_cursor</a>.</p>
 
 <figure id="fig_gc_ligature_cursor" class="sideCaption">
@@ -2316,6 +2327,38 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 </figure>
 
 <p>This approach  allows for easy deletion or insertion of any component of a ligated form.</p>
+<p>Many Brahmi-derived scripts are segmented by units that incorporate more than one grapheme cluster, for operations such as in-word line-breaking, justification, letter-spacing, and initial letter highlighting. It is not clear whether such typographic units are needed for Arabic language text, since there is usually no hyphenation, and no initial letter highlighting, and letter-spacing and justification follow quite different rules, extending the baseline. It may be worth looking at the very rare examples of vertically-set lines with upright Arabic letters to check whether ligatures like lam-alif or others are kept together. (My expectation is that lam-alif is not split, but the others may be.)</p>
+<p>Apart from lam-alif, where one can expect a rule to apply consistently, another issue is that an application that wants to keep ligatures together as a single unit would have to be aware of the rendering behaviour of the particular font in use, since some fonts have ligatures for a given code point sequence and others don't.  There is no way of deriving this information from the code point sequence itself, since that is always exactly the same.</p>
+</section>
+
+
+
+
+
+
+
+<section id="webSegmentation">
+<h3>Browser behaviour</h3>
+
+<div style="padding: 3rem; padding-block: 0;">
+<p><span class="leadin">Test in your browser.</span> <span class="instructions">The words  test units that equate to grapheme clusters only, and others that include conjuncts. First, the text is displayed in a contenteditable paragraph, then in a textarea. Results are reported for Gecko (Firefox), Blink (Chrome), and WebKit (Safari) on a Mac.</span></p>
+
+<p contenteditable class="graphemeTest" dir="rtl"><span class="ex" lang="ar">أنتن</span> <span class="ex" lang="ar">أَنْتُنَّ</span> <span class="ex" lang="ar">الإسلام</span> <span class="ex" lang="ar">ا&#x0654;سو</span></p>
+
+<div class="graphemeTextarea" dir="rtl"><textarea class="ex" lang="ar">أنتن أَنْتُنَّ الإسلام ا&#x0654;سو</textarea></div>
+</div>
+
+<p>The last word on each line (only) has a decomposed sequence for the lam+hamza.</p>
+<p><span class="leadin">Cursor movement.</span> <span class="instructions">Move the cursor through the text.</span><br>
+Gecko , Blink, and WebKit browsers steps through the  text using grapheme clusters.  This means that it takes 2 steps to get past the lam-alif ligature. The decomposed sequence in the last word is treated like any other grapheme cluster.</p>
+
+<p><span class="leadin">Selection.</span> <span class="instructions">Place the cursor next to a character and hold down shift while pressing an arrow key.</span><br>
+The behaviour is the same as for cursor movement. </p>
+
+<p><span class="leadin">Deletion.</span> Forward deletion works in the same way as cursor movement.  The backspace key deletes code point by code point, for all browsers.</p>
+
+<!--p><span class="leadin">Line-break.</span> <span class="instructions">See <a href="https://w3c.github.io/i18n-tests/exploratory/line_breaking/int-line-break?lang=bn&fontSize=36&width=770&lineBreak=anywhere&wordBreak=normal&text=xxxxx%20%E0%A6%87%E0%A6%82%E0%A6%B0%E0%A7%87%E0%A6%9C%20%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BE%E0%A6%B8%20%E0%A6%AB%E0%A7%8D%E2%80%8C%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9F%20%E0%A6%95%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BE&a=&i=Change%20the%20width%20of%20the%20box%20slowly%20to%20see%20how%20the%20text%20wraps." target="_blank">this test</a>. The CSS sets the value of the <code class="kw" translate="no">line-break</code> property to <code class="kw" translate="no">anywhere</code>. Change the size of the box to slowly move the line break point.</span><br>
+Gecko sets break opportunities in the same places as cursor stops. WebKit and Blink both wrap on orthographic syllable boundaries.</p-->
 </section>
 </section>
 
