@@ -48,7 +48,7 @@ autoExpandExamples.ml = `
 അഗജം||
 അഗിരം||
 അഗ്നി|fire|a§ɡ§n̪i|agni
-അങ്കക്കളരി||
+അങ്കക്കളരി|arena|a§ŋ§ɡa§k§ka§ɭa§ɾi|aṅkakkaḷari
 അങ്കച്ചേകവര്‍||
 അങ്ങേര്|he|aŋŋeːɾɨ̆
 അങ്ങ്|you s.|aŋŋɨ̆
@@ -112,7 +112,7 @@ autoExpandExamples.ml = `
 അപ്പച്ച||
 അപ്പച്ചി||
 അപ്പച്ചൻ||
-അപ്പസ്തോലൻ||
+അപ്പസ്തോലൻ|apostle||appastōlaṉ
 അപ്പുറത്ത്||
 അപ്പോൾ||
 അപ്പൻ|father|a§p§pa§n|appan
@@ -216,7 +216,7 @@ autoExpandExamples.ml = `
 ആല്||
 ആള്|man (human being)|aːɭɨ̆
 ആഴ്ച|week|äː§ɻ§t͡ʃɐ|āḻca
-ആഴ്ചപ്പതിപ്പ്||
+ആഴ്ചപ്പതിപ്പ്|weekly||āḻcappatippŭ
 ആവശ്യം||
 ആവശ്യകം||
 ആവശ്യകത||
@@ -289,7 +289,7 @@ autoExpandExamples.ml = `
 ഇലിയം||
 ഇല്ല|not|illa
 ഇല്ലാതാക്കുക||
-ഇല്ലായ്മ||
+ഇല്ലായ്മ|famine|i§l§laː§j§ma|illāyma
 ഇവന്മാർ|they|iʋanmaːr
 ഇവര്||
 ഇവറ്റകൾ|they|iʋarrakaɭ
@@ -301,7 +301,7 @@ autoExpandExamples.ml = `
 ഇവൾ||
 ഇവ​ൾ||
 ഇഷ്ടം||
-ഇസ്തിരിപ്പെട്ടി||
+ഇസ്തിരിപ്പെട്ടി|iron (clothes)||istirippeṭṭi
 ഇസ്ലാം||
 ഇസ്ലാംമതം||
 ഈ|this|iː
@@ -377,7 +377,7 @@ autoExpandExamples.ml = `
 ഉള്ള്|heart|uɭɭɨ̆
 ഉഷ്ണമണ്ഡലം||
 ഉഷ്ണമാനി||
-ഉഷ്ണമാപിനി||
+ഉഷ്ണമാപിനി|thermometer||uṣṇamāpini
 ഉഷ്ണമേഖല||
 ഉസ്സി||
 ഉർവ്വി||
@@ -487,7 +487,7 @@ autoExpandExamples.ml = `
 ഓന്ത്||
 ഓറഞ്ച്||
 ഓലഞ്ഞാലി||
-ഓസ്ട്രേലിയ||
+ഓസ്ട്രേലിയ|Australia|oː§s§ʈ§reː§li§jä|ōsṭrēliya
 ഓഹരി||
 ഔഷധം|medecine|ɐu§ʂɐ§d̪ʱɐm|auṣadhaṃ
 കക്കൂസ്||
@@ -512,7 +512,7 @@ autoExpandExamples.ml = `
 കടൽ|sea|ka§ɖa§l|kaṭal
 കണക്ക്|mathematics|kɐ§ɳɐ§k§kɨ|kaṇakkŭ
 കണ്ണട||
-കണ്ണടയ്ക്കുക||
+കണ്ണടയ്ക്കുക|to close ones eyes||kaṇṇaṭaykkuka
 കണ്ണാടി||
 കണ്ണിമാങ്ങ||
 കണ്ണുകടി||
@@ -629,7 +629,7 @@ autoExpandExamples.ml = `
 കാലൻ||
 കാള||
 കാളുക|to burn|kaːɭuka
-കാഴ്ച||
+കാഴ്ച|sight, vision|käː§ɻ§t͡ʃɐ|kāḻca
 കാശ്||
 കാഹളം||
 കാർ||
@@ -718,7 +718,7 @@ autoExpandExamples.ml = `
 കൃമി||
 കൃഷിക്കാരൻ||
 കൃഷ്ണന്‍||
-കൃഷ്ണമണി||
+കൃഷ്ണമണി|pupil||kr̥ṣṇamaṇi
 കെട്ടിടം||
 കെട്ടിയവൻ|husband|keʈʈijaʋan
 കെട്ടിയവൾ|wife|keʈʈijaʋaɭ
@@ -764,7 +764,7 @@ autoExpandExamples.ml = `
 കോട്ടം||
 കോട്ടയം||
 കോണകം||
-കോത്|to cut|koːt̪ɨ̆
+കോത്|to cut|koː§t̪ɨ̆
 കോപം||
 കോഴി||
 കോഴിക്കറി||
@@ -787,7 +787,7 @@ autoExpandExamples.ml = `
 ക്ഷ||
 ക്ഷാമം|scarcity, famine||kṣāmaṃ
 ക്ഷേത്രം||
-കൢപ്തം||
+കൢപ്തം|prepared|klpt̪ɐm|kl̥ptaṃ
 കർക്കടകം||
 കർണാടക||
 കർമ്മം||
@@ -813,7 +813,7 @@ autoExpandExamples.ml = `
 ഗുണം||
 ഗുണനം||
 ഗുരു||
-ഗുല്ഫം||
+ഗുല്ഫം|ankle|gu§l§fam|gulfaṃ
 ഗുളിക|ball|gu§ɭi§ka|guḷika
 ഗൂഢാലോചന|conspiracy|ɡuː§ɖʰäː§loː§dʒɐ§nɐ|gūḍhālōcana
 ഗൃഹം||
@@ -980,7 +980,7 @@ autoExpandExamples.ml = `
 ഞാഞ്ഞൂൽ|worm|ɲäː§ɲ§ɲuː§l|ñāññūl
 ഞാഞ്ഞൂൾ||
 ഞാന്||
-ഞായറാഴ്ച||
+ഞായറാഴ്ച|Sunday|ɲaː§ja§raː§ɻ§t͡ʃa|ñāyaṟāḻca
 ഞായർ|sun|ɲaːjaɾ
 ഞാവൽ||
 ഞാൻ|I|ñān
@@ -1083,7 +1083,7 @@ autoExpandExamples.ml = `
 തുങ്കം||
 തുട||
 തുടക്കം||
-തുടയ്ക്ക്|to wipe|t̪uʈajkkɨ̆
+തുടയ്ക്ക്|to wipe|t̪u§ʈa§j§k§kɨ̆
 തുണി||
 തുന്ന്|to sew|t̪unnɨ̆
 തുപ്പ്‌|to spit|t̪uppɨ̆
@@ -1109,7 +1109,7 @@ autoExpandExamples.ml = `
 തേനീച്ച||
 തേപ്പുപെട്ടി||
 തേയു||
-തേയ്ക്ക്|to rub|t̪eːjkkɨ̆
+തേയ്ക്ക്|rub|t̪eːjkkɨ̆
 തേരട്ട||
 തേൻ||
 തേൻകിളി||
@@ -1193,14 +1193,14 @@ autoExpandExamples.ml = `
 നനഞ്ഞ|wet|n̪a§na§ɲ§ɲa|nanañña
 നന്മ||
 നമസ്കാരം||
-നമസ്തേ||
-നമ്മൾ|we|n̪ammaɭ
+നമസ്തേ|hello|n̪a§ma§s§t̪eː|namastē
+നമ്മൾ|we|n̪a§m§ma§ɭ
 നയനം||
 നരകം||
 നരിച്ചീർ||
 നരൻ||
 നല്ല|good|n̪alla
-നല്ലത്||
+നല്ലത്|goodness|n̪ɐ§l§lɐ§d̪ɨ̆|nallatŭ
 നവംബർ||
 നശിപ്പിക്കുക||
 നസ്രാണി||
@@ -2073,7 +2073,7 @@ autoExpandExamples.ml = `
 സിദ്ധന്||
 സിദ്ധാന്തം||
 സിന്ദൂരം||
-സിമേഈ||
+സിമേഈ|Simei (place in Singapore)|simei|simēī
 സുഖം||
 സുഹൃത്ത്||
 സൂക്ഷ്മം||
