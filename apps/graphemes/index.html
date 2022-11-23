@@ -57,10 +57,10 @@
 <p>Apply a font: <input id="fontChanger" type="text" placeholder="Font name here" onChange="changeFont(this.value)"> <button onclick="changeFont(document.getElementById('fontChanger').value)">Apply</button></p>
 
 <p><label><input type="checkbox" id="mouseover"> 
-Show character names on mouseover</label></p>
+Don't show character names on mouseover</label></p>
 </aside>
 
-<p>This tool parses a string and shows extended grapheme cluster boundaries (except for Korean  jamo and emoji character sequences.)</p>
+<p>This tool parses a string and shows extended grapheme cluster boundaries (except for Korean  jamo and emoji character sequences.) Mouse over or click/tap on the segments to see their composition.</p>
 
 <p>Click on the segments to reveal the character names.</p>
 
@@ -82,15 +82,17 @@ Show character names on mouseover</label></p>
 <p>This app segments text in 3 different ways:</p>
 <ul>
 <li><strong>Unicode grapheme clusters</strong> are an approximation to user perceived graphemes where the boundaries are established by rules applied to code point sequences according to <a href="https://unicode.org/reports/tr29/">UAX #29</a>. The rules tend to be biased towards producing the units of text needed for cursor positioning.</li>
+
 <li><strong>CCSs</strong> (combining character sequences) start with a base character and add all following combining marks. They don't extend the grapheme where there are viramas or stackers. That means that conjunct graphemes are split into separate parts. It also means that Myanmar right-rendered vowel-signs and tone marks don't create a new segment on their own.</li>
-<li><strong>Orthographic syllables</strong> string together grapheme clusters that should not be broken during edit operations such as line-breaking, letter-spacing, first-letter selection, etc. The app uses home-grown algorithms  to handle (so far) Hindi, Sinhala, Tamil, Balinese, Javanese, and Burmese.  It may handle other scripts reasonably well, especially non-Indic ones.</li>
+
+<li><strong>Orthographic syllables</strong> string together grapheme clusters that should not be broken during edit operations such as hyphenation, letter-spacing, first-letter selection, etc. The app uses home-grown algorithms to handle (so far) Hindi, Bengali, Sinhala, Tamil, Malayalam, Balinese, Javanese, and Burmese.  It may handle other scripts reasonably well, especially non-Indic ones, but you should check the results.</li>
 </ul>
 
 <p>To pass a string in the URL, use one of:</p>
 <ul>
-<li><code style="white-space: nowrap">?bcv=&lt;string&gt;</code></li>
-<li><code style="white-space: nowrap">?bc=&lt;string&gt;</code></li>
 <li><code style="white-space: nowrap">?gc=&lt;string&gt;</code></li>
+<li><code style="white-space: nowrap">?ccs=&lt;string&gt;</code></li>
+<li><code style="white-space: nowrap">?os=&lt;string&gt;</code></li>
 </ul>
 
 <p>To indicate in the URL the font you want to use for the display, add <code style="white-space: nowrap">&amp;font=&lt;font_name&gt;</code>.</p>
@@ -99,7 +101,7 @@ Show character names on mouseover</label></p>
 </section>
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->18 November, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->20 November, 2022<!-- #EndDate -->
 </p>
 </details>
 </div>
@@ -117,21 +119,21 @@ parameters = location.search.split('&');
 parameters[0] = parameters[0].substring(1);
 for (var p=0;p<parameters.length;p++) {  
 	pair = parameters[p].split('=');
-	if (pair[0] == 'bcv' && pair[1]) { 
+	if (pair[0] == 'os' && pair[1]) { 
         document.getElementById('in').value = decodeURIComponent(pair[1])
-        document.getElementById('out').innerHTML = makeBCvGraphemes(decodeURIComponent(pair[1])) 
+        document.getElementById('out').innerHTML = addMarkup(makeOrthSyllables(decodeURIComponent(pair[1]))) 
         }
-	if (pair[0] == 'bc' && pair[1]) { 
+	if (pair[0] == 'ccs' && pair[1]) { 
         document.getElementById('in').value = decodeURIComponent(pair[1])
         document.getElementById('out').innerHTML = makeGraphemes(decodeURIComponent(pair[1])) 
         }
 	if (pair[0] == 'gc' && pair[1]) { 
         document.getElementById('in').value = decodeURIComponent(pair[1])
-        document.getElementById('out').innerHTML = makeGraphemeClusters(decodeURIComponent(pair[1])) 
+        document.getElementById('out').innerHTML = addMarkup(makeGraphemeClusters(decodeURIComponent(pair[1])))
         }
 	if (pair[0] == 'q' && pair[1]) { 
         document.getElementById('in').value = decodeURIComponent(pair[1])
-        document.getElementById('out').innerHTML = makeGraphemeClusters(decodeURIComponent(pair[1])) 
+        document.getElementById('out').innerHTML = addMarkup(makeGraphemeClusters(decodeURIComponent(pair[1])))
         }
 	if (pair[0] == 'font' && pair[1]) {
         document.getElementById('fontChanger').value = decodeURIComponent(pair[1])

@@ -27,6 +27,8 @@ var Consonants = new Set([
 'ꦧ', 'ꦕ', 'ꦢ', 'ꦝ', 'ꦒ', 'ꦲ', 'ꦗ', 'ꦏ', 'ꦭ', 'ꦩ', 'ꦤ', 'ꦚ', 'ꦔ', 'ꦥ', 'ꦫ', 'ꦱ', 'ꦠ', 'ꦛ', 'ꦮ', 'ꦪ', 'ꦨ', 'ꦖ', 'ꦓ', 'ꦑ', 'ꦟ', 'ꦘ', 'ꦦ', 'ꦬ', 'ꦯ', 'ꦡ', 'ꦣ', 'ꦞ', 'ꦙ', 'ꦰ', 'ꦜ', 'ꦐ', 'ꦉ', 'ꦊ', 'ꦋ',
 // Malayalam
 'ക', 'ഖ', 'ഗ', 'ഘ', 'ങ', 'ച', 'ഛ', 'ജ', 'ഝ', 'ഞ', 'ട', 'ഠ', 'ഡ', 'ഢ', 'ണ', 'ത', 'ഥ', 'ദ', 'ധ', 'ന', 'ഩ', 'പ', 'ഫ', 'ബ', 'ഭ', 'മ', 'യ', 'ര', 'റ', 'ല', 'ള', 'ഴ', 'വ', 'ശ', 'ഷ', 'സ', 'ഹ', 'ഺ', 'ൺ', 'ൻ', 'ർ', 'ൽ', 'ൾ', 'ൿ',
+// Bengali
+'প', 'ফ', 'ব', 'ভ', 'ত', 'থ', 'দ', 'ধ', 'ট', 'ঠ', 'ড', 'ঢ', 'ক', 'খ', 'গ', 'ঘ', 'চ', 'ছ', 'জ', 'য', 'ঝ', 'স', 'শ', 'ষ', 'হ', 'ম', 'ন', 'ঙ', 'ঞ', 'ণ', 'ৱ', 'র', 'ৰ', 'ল', 'ৎ',
 ])
 
 
@@ -191,10 +193,11 @@ function makeGraphemeClusters (str) {
 
 function addMarkup (str) {
     // add markup around segments output by makeGraphemeClusters
-    var out = str.replace(/\|/g, '</bdi><bdi class="divider">|</bdi>&#x200B;<bdi class="segment" onmouseover="if (document.getElementById(\'mouseover\').checked) showComponents(this.textContent)" onclick="showComponents(this.textContent)">')
+    var out = str.replace(/\|/g, '</bdi><bdi class="divider">|</bdi>&#x200B;<bdi class="segment" onmouseover="if (document.getElementById(\'mouseover\').checked === false) showComponents(this.textContent)" onmouseout="if (document.getElementById(\'mouseover\').checked === false) document.getElementById(\'panel\').style.display = \'none\'" onclick="showComponents(this.textContent)">')
     
-    return '<bdi class="segment" onmouseover="if (document.getElementById(\'mouseover\').checked) showComponents(this.textContent)" onclick="showComponents(this.textContent)">'+out+'</bdi>'
+    return '<bdi class="segment" onmouseover="if (document.getElementById(\'mouseover\').checked === false) showComponents(this.textContent)" onmouseout="if (document.getElementById(\'mouseover\').checked === false) document.getElementById(\'panel\').style.display = \'none\'" onclick="showComponents(this.textContent)">'+out+'</bdi>'
     }
+
 
 
 function makeGraphemes (str) {
