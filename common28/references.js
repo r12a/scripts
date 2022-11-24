@@ -63,7 +63,7 @@ function createReferences (lang) {
 
 
 
-function setFootnoteRefs () {
+function setFootnoteRefsOLD () {
 	// creates markup for the footnote references
 		
 	var fnrefs = document.querySelectorAll('tt')
@@ -90,6 +90,49 @@ function setFootnoteRefs () {
 		if (locn) out += ', §'+locn.replace(/#/,'')
 		out += '" href="'+url+locn+'">'+counter+pages+more+'</a>'
 		fnrefs[i].outerHTML = out
+		}
+	}
+
+
+
+
+
+function setFootnoteRefs () {
+	// creates markup for the footnote references
+		
+	var fnrefs = document.querySelectorAll('tt')
+    var out = ''
+	for (let i=0;i<fnrefs.length;i++) {
+		var more = ''
+		if (fnrefs[i].classList.contains('more')) more = '→'
+		var itemArray = fnrefs[i].textContent.split(',')
+		var locn = ''
+		var pages = ''
+		var id = itemArray[0]
+        var linktext = itemArray[0].replace(/@/,'')
+        
+        if (id.startsWith('@')) { // not linked to references section
+            if (fnrefs[i].classList.contains('more')) out = ` See <a target="_blank" title="${ itemArray[0] }" href="${ itemArray[1] }">${ linktext }</a>`
+            else out = `<a class="fn" target="_blank" title="${ itemArray[0] }" href="${ itemArray[1] }">§</a>`
+            }
+        else { // look up info in refs.js
+		if (typeof reflist[id] === 'undefined') console.log('reflist[id] ('+id+') is undefined.')
+            var counter = reflist[id].counter
+            var authors = reflist[id].authors
+            var title = reflist[id].title
+
+            if (itemArray.length > 1) {
+                if (itemArray[1][0] === '#') locn = itemArray[1]
+                else pages = '<sub>'+itemArray[1]+'</sub>'
+                }
+            var url = reflist[id].url
+
+            out = '<a class="fn" target="_blank" title="'+authors+', '+title
+            if (pages) out += ', p.'+pages.replace(/<sub>/,'').replace(/<\/sub>/,'')
+            if (locn) out += ', §'+locn.replace(/#/,'')
+            out += '" href="'+url+locn+'">'+counter+pages+more+'</a>'
+            }
+        fnrefs[i].outerHTML = out
 		}
 	}
 
