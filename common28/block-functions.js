@@ -467,6 +467,24 @@ function addBasics (lang, dir) {
 
 
 
+function statusExpander (status) {
+    // takes a single letter status value and expands to a word for display
+    
+    out = ''
+    switch (status) {
+        case 'i': out += 'infrequent '; break
+        case 'r': out += 'rare '; break
+        case 'a': out += 'archaic '; break
+        case 'd': out += 'deprecated '; break
+        case 'u': out += 'unused '; break
+        case 'o': out += 'obsolete '; break
+        case 'l': out += 'loan words or foreign sounds '; break
+        }
+    return out
+    }
+
+
+
 
 function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
     // for a given orthography, add notes to the notes block stub
@@ -530,7 +548,9 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 
 			if (spreadsheetRows[cchar][cols['typeLoc']]) out += '<span class="charType" title="Type of character.">'+spreadsheetRows[cchar][cols['typeLoc']]+'</span>'
 			
-			if (spreadsheetRows[cchar][cols['statusLoc']]) out += '<span class="charStatus" title="Usage information.">'+spreadsheetRows[cchar][cols['statusLoc']]+'</span>'
+			if (spreadsheetRows[cchar][cols['statusLoc']]) out += ' <span class="charType" title="Usage information.">('+spreadsheetRows[cchar][cols['statusLoc']]+')</span>'
+			
+			if (spreadsheetRows[cchar][cols['status']]) out += '<span class="charStatus" title="Status information.">'+statusExpander(spreadsheetRows[cchar][cols['status']])+'</span>'
 			
 			if (spreadsheetRows[cchar][cols['ipaLoc']]) out += '<span class="charIPA ipa" title="Typical IPA phonetic values.">'+spreadsheetRows[cchar][cols['ipaLoc']].toLowerCase()+'</span>'
 			
