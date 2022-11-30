@@ -1,4 +1,6 @@
-var lineList = contents.split('\n')
+var lineList = contents.split('\n')   // window.contents is set to autoExpandExamples.xx in source
+contents = ''
+
 lineList.push('|End of list reached.||')
 var metadata, value
 //debug = true		

@@ -264,6 +264,8 @@ function getFindStr (hex) {
 
 function makeCharacterLink (cp, lang, direction) {
 	// returns markup with information about cp
+    // example output:
+    // "<span class=\"codepoint\" translate=\"no\"><span lang=\"en\">&#x0078;</span> [<a href=\"#char0078\"><span class=\"uname\">U+0078 LATIN SMALL LETTER X</span></a>]</span>"
 	// cp: a unicode character, or sequence of unicode characters
 	// lang: the BCP47 language tag for the context
 	// direction: either rtl or ltr or ''
@@ -304,6 +306,56 @@ function makeCharacterLink (cp, lang, direction) {
 
        out +=  '<a href="#char'+hex+'">'
 		out +=  '<span class="uname">U+'+hex+' '+ufields[1]+'</span>'
+		out +=  '</a>'
+        if (i===chars.length-1) out += ']'
+		}
+    out += '</span> '
+	
+	return out.trim()
+	}
+
+
+
+
+function makeCharacterLink (cp, lang, direction) {
+	// returns markup with information about cp
+    // example output:
+    // "<span class=\"codepoint\" translate=\"no\"><span lang=\"en\">&#x0078;</span> [<a href=\"#char0078\"><span class=\"uname\">U+0078 LATIN SMALL LETTER X</span></a>]</span>"
+	// cp: a unicode character, or sequence of unicode characters
+	// lang: the BCP47 language tag for the context
+	// direction: either rtl or ltr or ''
+    // [global] U unicode db declared in u.js
+    // local chars out i hex directionMarkup charName
+    
+    var chars = [...cp]
+
+	var out = '<span class="codepoint" translate="no">'
+    
+    // create the U+XXXX part
+	for (var i=0;i<chars.length;i++) {
+        if (i>0) out += ' + '
+		
+        var hex = chars[i].codePointAt(0).toString(16).toUpperCase()
+        while (hex.length < 4) hex = '0'+hex 
+
+        if (direction === 'rtl') var directionMarkup = ' dir="rtl"'
+        else directionMarkup = ''
+		out += '<span lang="'+lang+'"'+directionMarkup+'>'+'&#x'+hex+';</span> '
+        }
+	
+    // list the names
+	for (let i=0;i<chars.length;i++) {
+        if (i===0) out += '['
+        if (i>0 && i<chars.length) out += ' + '
+        
+        hex = chars[i].codePointAt(0).toString(16).toUpperCase()
+		while (hex.length < 4) hex = '0'+hex
+        
+        if (charData[chars[i]]) var charName = charData[chars[i]]     
+		else console.log( 'Character',chars[i], 'not found in database.' )
+
+        out +=  '<a href="#char'+hex+'">'
+		out +=  '<span class="uname">U+'+hex+' '+charName+'</span>'
 		out +=  '</a>'
         if (i===chars.length-1) out += ']'
 		}
