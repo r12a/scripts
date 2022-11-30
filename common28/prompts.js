@@ -401,8 +401,7 @@ function addUsageAdvice (script, iso, picker) {
 	document.querySelector('body').classList.remove('dark');
     document.querySelector('body').classList.add('low');
         access.contrast = 'low';
-        this.classList.add('access_selected'); 
-        ">Low contrast</button>
+        this.classList.add('access_selected');">Low contrast</button>
         
     <button id="contrastDark" onClick="
     document.querySelector('.access_selected').classList.remove('access_selected');
@@ -410,8 +409,7 @@ function addUsageAdvice (script, iso, picker) {
 	document.querySelector('body').classList.remove('contrast');
     document.querySelector('body').classList.add('dark');
         access.contrast = 'dark';
-        this.classList.add('access_selected'); 
-        ">Dark mode</button>
+        this.classList.add('access_selected');">Dark mode</button>
         
     <button id="contrastHigh" onClick="
     document.querySelector('.access_selected').classList.remove('access_selected');
@@ -419,11 +417,10 @@ function addUsageAdvice (script, iso, picker) {
 	document.querySelector('body').classList.remove('dark');
     document.querySelector('body').classList.add('contrast');
         access.contrast = 'high';
-        this.classList.add('access_selected'); 
-        ">High contrast</button>
+        this.classList.add('access_selected');">High contrast</button>
     </div>
     </div>
-    
+
     <div id="access_fontsize">Set text size: <input id="accessFontsize" type="range" min="15" max="24" step="1" value="15" oninput="access.fontsize=this.value; document.querySelector('html').style.fontSize = this.value+'px'" style="width:12rem;"></div>
     <div style="color: white;">Font &amp; text size of the examples can be changed independently using the control that pulls out from the bottom right of the page.</div>
     
