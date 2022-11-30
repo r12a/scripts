@@ -89,7 +89,7 @@ for (var n=0;n<wordList.length;n++) {
     fields[TERM] = ' '+fields[TERM]+' '
     fields[IPA] = ' '+fields[IPA]+' '
     fields[IPA] = fields[IPA].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
-    console.log(fields[IPA].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,''))
+    //console.log(fields[IPA].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,''))
 	if (typeof fields[TRANS] === 'undefined' || fields[TRANS] === '') {
         fields[TRANS] = ''
         }
@@ -257,13 +257,37 @@ function findWords (reg) {
         	else out += `<td class="noteCol"> ${ itemArray[NOTES] }</td>`
         	}
 
-		out += `<td class="noteCol">&lt;span class="eg`
-        if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') out += ' transc'
-        out += `" lang="${ terms.language }"`
-        if (terms.direction !== '') out += ` dir="${ terms.direction }"`
-        out += `&gt;${ itemArray[TERM].trim() }&lt;/span&gt;</td>`
+        // add the markup column for server-based use
+        console.log(location.hostname)
+        if (location.hostname !== 'r12a.github.io') {
+            out += `<td class="markupCol">&lt;span class="charExample" translate="no"&gt;`
+            out += `&lt;bdi class="ex`
+            out += `" lang="${ terms.language }"`
+            if (terms.direction !== '') out += ` dir="${ terms.direction }"`
+            out += `&gt;${ itemArray[TERM].trim() }&lt;/bdi&gt;`
+            
+            if (itemArray[IPA].trim()) out += `&lt;bdi class="ipa"&gt;${ itemArray[IPA].trim() }&lt;/bdi&gt;`
+             
+            if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') out += `&lt;bdi class="transc"&gt;${ itemArray[IPA].trim() }&lt;/bdi&gt;`
+             
+            if (itemArray[MEANING].trim()) out += `&lt;bdi class="meaning"&gt;${ itemArray[MEANING].trim() }&lt;/bdi&gt;`
+           
+            out +=`&lt;/span&gt;</td>`
+            
+            }
         
-		//out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM].trim()+'&lt;/span&gt;</td>'
+        
+        
+        
+        else {
+            out += `<td class="noteCol">&lt;span class="eg`
+            if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') out += ' transc'
+            out += `" lang="${ terms.language }"`
+            if (terms.direction !== '') out += ` dir="${ terms.direction }"`
+            out += `&gt;${ itemArray[TERM].trim() }&lt;/span&gt;</td>`
+
+            //out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM].trim()+'&lt;/span&gt;</td>'
+            }
 
         out += '</tr>\n'
         }
