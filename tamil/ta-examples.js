@@ -1748,7 +1748,7 @@ autoExpandExamples.ta = `
 சாறு||
 சாலி||
 சாலியன்||
-சாலை|road, street|sɑː§l̪əɪ̯|cālai|t͡ɕ§aː§›§l̪aɪ̯§
+சாலை|road, street|sɑː§l̪əɪ̯|cālai|t͡ɕaːl̪aɪ̯
 சாளம்||
 சாளரம்||
 சாளை||
