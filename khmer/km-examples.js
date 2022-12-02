@@ -5115,7 +5115,7 @@ autoExpandExamples.km = `
 ស្ញែង||
 ស្ដាប់||
 ស្ដាប់បង្គាប់||
-ស្ដាប់ឮ||
+ស្ដាប់ឮ|to hear|s§ɗa§p§ ˈlɨː|sdap lɨɨ
 ស្ដាយ||
 ស្ដាំ|right|sɗam
 ស្ដើង|thin|sɗaəŋ
@@ -5625,7 +5625,7 @@ autoExpandExamples.km = `
 អព្យយៈ||
 អភិ||
 អភិបាល||
-អភិវឌ្ឍ||
+អភិវឌ្ឍ|to make progress|ʔaʔ.§pʰi.§ʋŏə§t§–|ʼaʼphivŏət
 អភិវឌ្ឍន៍||
 អម្បូរ||
 អម្បូរភាសា||
@@ -6066,7 +6066,7 @@ autoExpandExamples.km = `
 ឪពុកម្ដាយ||
 ឪម៉ាល់||
 ឪឡឹក||
-ឫទ្ធិ||
+ឫទ្ធិ|power, strength|rɨ§t|rɨt
 ឫស|root|rɨh
 ឫស្សី||
 ឬ|or|rɨː
