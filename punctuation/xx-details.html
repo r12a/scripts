@@ -52,44 +52,65 @@ var charDetails = {
 
 `,
 
-'\u{200B}': `
+'\u{200B}': ` // zwsp
 <p>An invisible character, used to signal line-break and word-break opportunities. It was originally provided for use with writing systems such as Thai, Myanmar, Khmer, Japanese, etc. that don't use spaces between words.</p>
-<p>Justification may visibly adjust the space between the characters on either side of this character, doing so as if the ZWSP wasn't there, eg. the Thai text <span class="charExample" translate="no"><span class="ex" lang="th">อักษร​ไทย</span></span> may look like this when justified or when letter-spacing is applied
-<span class="charExample" translate="no"><span lang="th">อั ก ษ ร ไ ท ย</span></span></p>
-<p>There is no extra space between the 2 words involved, even though they are separated by a ZWSP (click on the word to see the composition).<sup><a href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout" target="_blank">§,827</a></sup></p>
+<p>Justification visibly adjusts the space between the characters on either side of the ZWSP as if the ZWSP wasn't there<sup><a href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout" target="_blank">§,827</a></sup>, eg. the two lines below show Thai text containing a ZWSP after the 4th base character.  The first is rendered as per normal, the second is as it would appear with justification or letter-spacing. Note how the second line has no extra spacing where the ZWSP occurs.
+<span class="charExample" translate="no"><span lang="th">อักษร​ไทย</span></span> 
+<span class="charExample" translate="no"><span lang="th">อั ก ษ ร ไ ท ย</span></span>
+</p>
 `,
 
+// zwnj
 '\u{200C}': `
-    <p>Prevents two adjacent letters forming a cursive connection with each other when rendered.</p>
-  </div>
-  <div class="letter">
-    <p><span class="title">Persian</span></p>
-    <p>The ZWNJ is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the ZWNJ will result in text with a different meaning or meaningless text.<sup>1</sup> For example, <span class="ex" lang="ar" dir="rtl">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" lang="ar" dir="rtl">تنها</span> is the adjective <span class="meaning">alone</span>.<sup>2</sup> The only difference is the presence or absence of ZWNJ after <span class="name">noon</span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="https://github.com/w3c/charmod-norm/issues/44#issuecomment-172042270" target="_blank">g</a></p>
+<p>Prevents two adjacent letters forming a cursive connection with each other when rendered. Especially useful for educational illustrations, but also has some real-world applications.</p>
+<p>Also used with complex scripts to manage the visual representation of glyphs that normally interact, eg. to form conjuncts, position diacritics, etc.</p>
+<p>Examples:</p>
+<div class="letter">
+<p><span class="title">Persian</span></p>
+<p>The ZWNJ is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the ZWNJ will result in text with a different meaning or meaningless text. For example, <span class="ex" lang="ar" dir="rtl">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" lang="ar" dir="rtl">تنها</span> is the adjective <span class="meaning">alone</span>. The only difference is the presence or absence of ZWNJ after <span class="name">noon</span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="https://github.com/w3c/charmod-norm/issues/44#issuecomment-172042270" target="_blank">g</a></p>
 </div>
 <div class="letter">
 <p><span class="title">Khmer</span></p>
-  <p>Khmer register shifters (ie. <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17C9;</span> [<a href="/scripts/khmer/block#char17C9"><span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span></a>]</span> or <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17CA;</span> [<a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP​</span></a>]</span>) usually appear above a consonant. However, if a superscript vowel is also attached to the consonant, the shifter is normally displayed below the consonant, instead. If you want to force the shifter to remain above the consonant, as is occasionally the case, insert ZWNJ between the consonant and the shifter.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a>  For example, 
-  <span class="charExample" translate="no"><span class="ex" lang="km">ហ ហ៊ ហ៊ី ហ‌៊ី</span></span></p>
+<p>Khmer register shifters (ie. <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17C9;</span> [<a href="/scripts/khmer/block#char17C9"><span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span></a>]</span> or <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17CA;</span> [<a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP​</span></a>]</span>) usually appear above a consonant. However, if a superscript vowel is also attached to the consonant, the shifter is normally displayed below the consonant, instead. If you want to force the shifter to remain above the consonant, as is occasionally the case, insert ZWNJ between the consonant and the shifter.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a>
+<span class="charExample" translate="no"><span class="ex" lang="km">ហ ហ៊ ហ៊ី ហ‌៊ី</span></span></p>
 </div>
-
+<div class="letter">
+<p><span class="title">Hindi</span></p>
+<p>The ZWNJ can be used to prevent the formation of conjuncts, eg.
+<span class="charExample" translate="no"><span class="ex" lang="hi">क्क</span>   →   <span class="ex" lang="hi">क्‌क</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span>   →   <span class="ex" lang="hi">क्‌ष</span></span>
+</p>
+</div>
 `,
 
+// zwj
 '\u{200D}': `
-    <p>Permits a letter to form a cursive connection without a visible neighbour.</p>
-  </div>
-  <div class="letter arabic">
-    <p><span class="title">Arabic</span></p>
-    <p>The marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use a <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> immediately after the <span class="name">heh</span>, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 ه‍.</span>. </p>
-    <p>In some cases <span class="codepoint"><span lang="ar" dir="rtl">&#x0640;</span> <a href="#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span> is used to ensure that the shape looks right, because some applications or fonts don't produce the right effect when using the ZWJ, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 هـ.</span>.</p>
-  </div>
+<p>Permits a letter to form a cursive connection without a visible neighbour.  Especially useful for educational illustrations, but also has some real-world applications.</p>
+<p>Also used with complex scripts to manage the visual representation of glyphs that normally interact, eg. to form conjuncts, position diacritics, etc.</p>
+<p>Examples:</p>
+<div class="letter arabic">
+<p><span class="title">Arabic</span></p>
+<p>The marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use a <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> immediately after the <span class="name">heh</span>, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 ه‍.</span>. </p>
+<p>In some cases <span class="codepoint"><span lang="ar" dir="rtl">&#x0640;</span> [<span class="uname">U+0640 ARABIC TATWEEL</span>]</span> is used to ensure that the shape looks right, because some applications or fonts don't produce the right effect when using the ZWJ, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 هـ.</span>.</p>
+</div>
+<div class="letter">
+<p><span class="title">Hindi</span></p>
+<p>The ZWJ can be used to make a conjunct that usually forms a ligature use half-forms instead, eg.
+<span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span>   →   <span class="ex" lang="hi">क्‍ष</span></span>
+</p>
+</div>
 `,
 
+// LRM
 '\u{200E}': `
-
+<p>An invisible character with strong LTR directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
+<p>Generally referred to as LRM.</p>
 `,
 
+// RLM
 '\u{200F}': `
-
+<p>An invisible character with strong RTL directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
+<p>Generally referred to as RLM.</p>
 `,
 
 '\u{2010}': `
@@ -213,16 +234,22 @@ var charDetails = {
 
 `,
 
+// LRE
 '\u{202A}': `
-
+<p>Sets the start point for a range of inline text when applying a base direction of left-to-right. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> <a href="#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a></span> (PDF).</p>
+<p><strong>You should use <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2066.png" alt="LRI" style="vertical-align:middle"> <a href="#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a></span> (LRI) rather than this character.</strong></p>
 `,
 
+// RLE
 '\u{202B}': `
-
+<p>Sets the start point for a range of inline text when applying a base direction of right-to-left. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> <a href="#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a></span> (PDF).</p>
+<p><strong>You should use <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2067.png" alt="LRI" style="vertical-align:middle"> <a href="#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a></span> (RLI) rather than this character.</strong></p>
 `,
 
+// PDF
 '\u{202C}': `
-
+<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202A.png" alt="LRE" style="vertical-align:middle"> <a href="#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a></span> (LRE) or <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202B.png" alt="RLE" style="vertical-align:middle"> <a href="#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a></span> (RLE).</p>
+<p><strong>You should use <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI) and its associated range starters rather than this character.</strong></p>
 `,
 
 '\u{202D}': `
@@ -447,10 +474,10 @@ var charDetails = {
 `,
 
 '\u{2060}': `
-<p>An invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks, eg. it can be used around the + sign in base&#x2060;+delta&#x2060; to prevent a line break occuring in that sequence of characters. It has no effect on word segmentation.</p>
-<p>It can also be used to bracket other characters to turn them into non-breaking characters, such as <a href="/scripts/punctuation/block#char2009"><span class="uname">U+2009 THIN SPACE</span></a> or <span class="codepoint" translate="no"><span lang="km">&#x2015;</span> [<a href="/scripts/khmer/block#char2015"><span class="uname">U+2015 HORIZONTAL BAR</span></a>]</span>.</p>
-<p>Not to be confused with <a href="/scripts/khmer/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> or <a href="/scripts/khmer/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER​</span></a>, since it has no effect on shaping.</p>
-<p>This functionality is also provided by <span class="uname">U+FEFF ZERO WIDTH NO-BREAK SPACE</span>, but since that character also represents the byte-order mark, the use of this word joiner character (added in Unicode 3.2) is strongly preferred over the latter.</p>
+<p>An invisible character, equivalent to a zero-width <em>no-break</em> space, and used to prevent line-breaks. It has no effect on word segmentation.</p>
+<p>It can  also be used to bracket other characters to turn them into non-breaking characters, such as <span class="uname">U+2009 THIN SPACE</span> or <span class="codepoint" translate="no"><span lang="km">&#x2015;</span> [<span class="uname">U+2015 HORIZONTAL BAR</span>]</span>.</p>
+<p>Not to be confused with <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> or <a href="#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER</span></a>, since it has no effect on shaping.</p>
+<p>This functionality is also provided by <span class="uname">U+FEFF ZERO WIDTH NO-BREAK SPACE</span>, but since that character also represents the byte-order mark, the use of this word joiner character (added in Unicode 3.2) is strongly preferred.</p>
 
 `,
 
@@ -470,20 +497,27 @@ var charDetails = {
 
 `,
 
+// LRI
 '\u{2066}': `
-
+<p>Sets the start point for a range of inline text when applying a base direction of left-to-right, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI).</p>
+<p>This character should be used rather than <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202A.png" alt="LRE" style="vertical-align:middle"> <a href="#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a></span> (LRE).</p>
 `,
 
+// RLI
 '\u{2067}': `
-
+<p>Sets the start point for a range of inline text when applying a base direction of right-to-left, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI).</p>
+<p>This character should be used rather than <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202B.png" alt="RLE" style="vertical-align:middle"> <a href="#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a></span> (RLE).</p>
 `,
 
+// FSI
 '\u{2068}': `
-
+<p>Sets the start point for a range of inline text when applying a base direction, and isolates the text within that range from text outside it. The base direction set is determined by that of the first strong directional character in the range. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI).</p>
 `,
 
+// PDI
 '\u{2069}': `
-
+<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2066.png" alt="LRI" style="vertical-align:middle"> <a href="#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a></span> (LRI), <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2067.png" alt="RLI" style="vertical-align:middle"> <a href="#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a></span> (RLI) or <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2068.png" alt="FSI" style="vertical-align:middle"> <a href="#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a></span> (FSI).</p>
+<p>This character should be used rather than <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> <a href="#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a></span> (PDF).</p>
 `,
 
 '\u{206A}': `
