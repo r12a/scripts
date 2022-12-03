@@ -259,7 +259,7 @@ function findWords (reg) {
 
         // add the markup column for server-based use
         console.log(location.hostname)
-        if (location.hostname !== 'r12a.github.io') {
+        if (location.hostname === 'r12a.github.io') {
             out += `<td class="markupCol">&lt;span class="charExample" translate="no"&gt;`
             out += `&lt;bdi class="ex`
             out += `" lang="${ terms.language }"`
