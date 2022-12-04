@@ -1109,7 +1109,7 @@ function makeIndexLine (node) {
         out += '<div class="index_details">'
         if (window.spreadsheetRows[char]) var uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
         else uname = "NAME UNKNOWN"
-        out += '<span class="index_uname">'+uname+'</span>'
+        out += `<span class="index_uname"  onclick="makeFootnoteIndex('${ chars[i] }')">${uname}</span>`
         if (window.spreadsheetRows[char]) {
             out += `<span class="indexLineData" onclick="makeFootnoteIndex('${ chars[i] }')">`
             if (window.spreadsheetRows[char][cols.typeLoc]) out += `<span class="typeLoc">${ window.spreadsheetRows[char][cols.typeLoc] }</span> `
@@ -1649,7 +1649,13 @@ function makeFootnoteIndex (charVal) {
 		var out = counter+' matches found: &nbsp; '
 		for (let i=0;i<leanLinks.length;i++) {
             if (i>0) out += ' • '
-            out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
+            out += `<a href="#${ leanLinks[i] }"`
+            // open the index, if necessary
+            if (leanLinks[i].startsWith('index')) {
+                out += ` onclick = "var indexSections = document.getElementById('index').querySelectorAll('details'); for (i=0;i<indexSections.length;i++) indexSections[i].open = true"`
+                }
+            out += `>${ leanLinks[i] }</a> `
+            //out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
             }
 		document.getElementById('phoneLinks').style.display = 'block'
 		document.getElementById('phoneLinks').innerHTML = out+`<span style="cursor:pointer; margin-inline: 1em;" onclick="this.parentNode.style.display = 'none'; clearFootnoteIndexHighlights()">X</span>&nbsp;&nbsp;`
