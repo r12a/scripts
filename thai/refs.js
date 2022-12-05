@@ -42,6 +42,14 @@ reflist = {
 "reviewed":false
 },
 
+"pc": {
+"authors": "Peter Constable",
+"title":"Canonical Ordering of Marks in Thai Script",
+"retr": "Dec 2022",
+"url":"https://www.unicode.org/L2/L2018/18216-thai-order.pdf",
+"reviewed":false
+},
+
 "d": {
 "url":"#refs",
 "authors": "Peter T. Daniels and William Bright",

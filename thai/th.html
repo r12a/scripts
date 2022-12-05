@@ -54,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 November, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->5 December, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -2835,6 +2835,85 @@ alveolar</th>
 
 
 
+
+
+
+
+<section id="encoding_choices">
+<h2>Encoding choices</h2>
+
+<p class="instructions">This section offers advice about characters or character sequences to avoid, and what to use instead. It takes into account  the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC)..</p>
+
+<p>Although usage is recommended here, content authors may well be unaware of such recommendations. Therefore, applications should look out for the non-recommended approach and treat it the same as the recommended approach wherever possible.</p>
+
+
+
+
+<section id="encoding_sarah_ae">
+<h3>Sarah ae</h3>
+
+<p>In complex scripts, visually similar or identical glyph patterns can often be made from a sequence of code points rather than the single code point that Unicode provides. These are not made the same by normalisation, and they are not semantically equivalent. These inappropriate sequences should be avoided because they will cause the meaning of the text to change; searches, matching and other aspects of the text will fail to be understood by the application or the font. </p>
+<p>Only one such is listed in the table below, The single code point on the left should be used, and not the sequence on the right. In some cases, fonts will indicate that there is a problem by forcing the appearance of a dotted circle or otherwise failing to render the text correctly, but this may not always be the case. </p>
+
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Use</th>
+<th scope="col">Do not use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="th">&#x0E41;</bdi> [<a href="/scripts/thai/block#char0E41"><span class="uname">U+0E41 THAI CHARACTER SARA AE</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><bdi lang="th">&#x0E40;&#x0E40;</bdi> [<a href="/scripts/thai/block#char0E40"><span class="uname">U+0E40 THAI CHARACTER SARA E</span></a> + <a href="/scripts/thai/block#char0E40"><span class="uname">U+0E40 THAI CHARACTER SARA E</span></a>]</span>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+<section id="encoding_nikahit">
+<h3>Nikahit</h3>
+
+<p>The combination of nikahit and sara aa is normally written with the precomposed character in the Thai block. It is possible to use 2 code points to create something that may visually look identical (and is in fact used during justification), but the single character and the sequence are not converted to each other during normalisation; therefore, the text will be read as different by normalisation-based matching algorithms.</p>
+
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Recommended</th>
+<th scope="col">Not recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="th">&#x0E33;</bdi> [<a href="/scripts/thai/block#char0E33"><span class="uname">U+0E33 THAI CHARACTER SARA AM</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><bdi lang="th">&#x0E4D;&#x0E32;</bdi> [<a href="/scripts/thai/block#char0E4D"><span class="uname">U+0E4D THAI CHARACTER NIKHAHIT​</span></a> + <a href="/scripts/thai/block#char0E32"><span class="uname">U+0E32 THAI CHARACTER SARA AA</span></a>]</span>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+<section id="charorder">
+<h3>Code point sequences</h3>
+
+<p>As already mentioned, Thai is visually encoded so prebase glyphs are associated with ordinary spacing characters, and these need to be typed and stored in visual order relative to the base consonant(s) in a syllable. If the syllable begins with a consonant cluster such as <span class="ipa">pr</span>, the prebase code points must be typed before the <span class="ipa">p</span>, even though they are pronounced after the <span class="ipa">r</span>.</p>
+
+<p>Tone marks should be typed and stored after any combining vowel-sign. Fonts will typically indicate visually that the order is incorrect because the tone mark will appear below the vowel-sign if they are the wrong way around.</p>
+</section>
+</section>
+
+
+
+
+
   
   
   
@@ -2913,12 +2992,17 @@ alveolar</th>
 
 <section id="writing_styles">
 <h3>Font styles</h3>
+
 <p>Modern type styles often omit the loops found in more traditional typefaces. See <a href="http://www.fontpad.co.uk/loops-and-latinisation/#more-666">an article</a> that explores this in depth.</p>
+
 <p>Loopless is considered to be more contemporary and modern, and is mainly used for advertising and titling. The distinction doesn’t necessarily map to that of serif vs sans – Noto, for example, provides both serif and sans Thai font faces, but they both have loops.  On the other hand, Neue Frutiger Thai offers traditional (looped) and modern (loopless) alternatives as part of the same font family (each with both regular, italic and bold substyles).</p>
+
+
 <figure>
 <img src="images/looped_silom.png" alt="ทุกคนมีสิทธิที่จะออกจากประเทศใด ๆ ไป รวมทั้งประเทศของตนเองด้วย และที่จะกลับยังประเทศตน" data-notes="silom 36px">
 <figcaption>The Silom font uses the traditional looped glyphs.</figcaption>
 </figure>
+
 
 <figure>
 <img src="images/loopless_sukhumvitset.png" alt="ทุกคนมีสิทธิที่จะออกจากประเทศใด ๆ ไป รวมทั้งประเทศของตนเองด้วย และที่จะกลับยังประเทศตน" data-notes="sukhumvit set 36px">
@@ -2933,13 +3017,16 @@ alveolar</th>
 
 <section id="context">
 <h3>Context-based shaping &amp; positioning</h3>
+
 <p>Most of the combining characters in Thai are used for vowel-signs and tone marks.</p>
 <p>Combining characters need to be placed in different positions, according to the context. The  example below shows the same tone character displayed at different heights, according to what falls beneath it.</p>
+
 
 <figure id="fig_thai_position">
 <p class="large"><img src="images/thai_position.png" class="ex" alt="ให้มีขึ้น" data-notes="62px Noto Serif Thai"></p>
 <figcaption>The same tone mark displayed at different heights.</figcaption>
 </figure>
+
 
 <p>Thai regularly combines multiple combining characters above a base consonant. There are two examples in the text below, both of which show a base character with a vowel sign and then a tone mark on top.</p>
 
@@ -2961,6 +3048,9 @@ alveolar</th>
 <p class="observation"><span class="leadin">Observation:</span> Thai newspapers appear to use italic text for captions and by-lines. There is no evidence of the use of inline italicisation, but there is inline bolding.</p>
 </section>
 </section>
+
+
+
 
 
 
@@ -3350,15 +3440,37 @@ which is short for
 <p>Because Thai doesn't separate words,  applications typically look up   word boundaries in a dictionary, however, such lookup doesn't always produce the needed result, especially when dealing with compound words and proper names (see <a class="secref">#word</a>). For more details, see <a class="secref">wordBoundary</a>. </p>
 
 <p>To counteract these deficiencies, authors may use <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200B;</span><img src="../../c/General_Punctuation/200B.png" alt="ZWSP" style="vertical-align:middle"> [<a href="/scripts/thai/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a>]</span> and <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2060;</span><img src="../../c/General_Punctuation/2060.png" alt="ZWJ" style="vertical-align:middle"> [<a href="/scripts/thai/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a>]</span>  (see <a class="secref">zwsp</a>).</p>
+<p>Note that most browsers have heuristics for segmenting Thai text, but there is no guarantee that these rules will work equally well for <a href="index.html#languages">other languages that are written in the Thai script</a>.</p>
 
-<p>For the  various restrictions on how specific characters, especially punctuation, can wrap from one line to the next, see the following link.</p>
 
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the Thai language.</a></p>
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show  line-breaking properties for characters in the Thai language.</a></p>
+
+<p>The following list gives examples of typical behaviours for characters used in modern Thai. Context may affect the behaviour of some of these and other characters.</p>
+
+<p class="instructions">Click on the Thai characters to show what they are.</p>
+
+<ul>
+<li><span class="ex list" lang="th">“ ‘ (</span> &nbsp; should not be the last character on a line</li>
+<li><span class="ex list" lang="th">” ’ ) ? ! ๚ ๛ %</span> &nbsp; should not begin a new line</li>
+<li><span class="ex list" lang="th">฿</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li>
+</ul>
+
+<!--p>The following characters should <em>not</em> produce a line-break when they appear inside or alongside a word: <span class="charExample inline list" translate="no"><span class="ex" lang="hy">ʼ ՛ ՜ ՝ ՞ ՟</span></span>.</p-->
 
 <p>The repetition character, 
 <span class="codepoint" translate="no"><bdi lang="th">&#x0E46;</bdi> [<a href="/scripts/thai/block#char0E46"><span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span></a>]</span>
 is always preceded by space, however it should not wrap to the next line on its own.<tt class="more">@Github,https://github.com/w3c/sealreq/issues/45</tt></p>
 </section>
+</section>
+
 
 
 
@@ -3368,7 +3480,9 @@ is always preceded by space, however it should not wrap to the next line on its 
 <h3>Text alignment &amp; justification</h3>
 
 <p>Justification in Thai primarily adjusts the blank spaces between phrases, rather than expanding the text between words or syllables. The fact that lines break at word boundaries helps reduce the size of the gaps produced.</p>
+
 <p>Thai may also make certain adjustments to inter-character spacing. The character-based spacing is most common in narrow columns, such as newsprint, where there is no space except at the end of a line.</p>
+
 <p>Any <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200B;</span><img src="../../c/General_Punctuation/200B.png" alt="ZWSP" style="vertical-align:middle"> [<a href="/scripts/thai/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a>]</span> (ZWSP) is used to separate words is ignored during  justification. Justification proceeds as if it wasn't there.<tt>u,625</tt></p>
 
 
@@ -3417,8 +3531,6 @@ is always preceded by space, however it should not wrap to the next line on its 
 <section id="spacing">
 <h3>Text spacing</h3>
 <p class="prompts">tbd</p>
-
-<p>This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification. </p>
 </section>
 
 
@@ -3426,29 +3538,39 @@ is always preceded by space, however it should not wrap to the next line on its 
 
 
 
-
-  
 <section id="baselines">
 <h3>Baselines, line height, etc.</h3>
 
-<p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for English, or most Latin text. </p>
+<p>Thai uses the so-called 'alphabetic' baseline, which is the same as for Latin and many other scripts.</p>
 
-<p>The baseline of Thai text is the same as that of embedded Latin text, so there are no particular issues related to alignment of baselines between fonts. </p>
+<p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for English, or most Latin text.  In addition, Thai tends to adds more interline spacing than Latin text does.</p>
 
-<figure id="fig_metrics">
-<img src="images/metrics.png" alt="พรุ่งนี้" class="ex" data-notes="Hibizcus default settings">
-<figcaption>Metrics for the Noto Serif Thai and Noto Serif fonts, viewed in Hibizcus.</figcaption>
+<p>To give an approximate idea, <a class="figref">fig_baselines</a> compares Latin and Thai glyphs from Noto  fonts. The basic height of Thai letters is typically around the Latin x-height, however extenders and combining marks reach well beyond the Latin ascenders and descenders, creating a need for larger line spacing.</p>
+
+
+<figure id="fig_baselines">
+<div>
+<img src="images/fig_baselines_noto_serif.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" lang="km" data-notes="Noto Serif Thai 130px" style="max-width: 90%; margin-block-end:1rem;">
+
+<img src="images/fig_baselines_noto_sans.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" lang="km" data-notes="Noto Sans Thai 130px" style="max-width: 90%;">
+</div>
+<figcaption>Font metrics for Latin text  compared with Thai glyphs in the Noto Serif Thai (top) and Noto Sans Thai (bottom) fonts.</figcaption>
 </figure>
 
 
-<p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for, say, Latin text. In addition, Thai tends to adds more interline spacing than Latin text does.</p>
-<!--p>Here is an example of a word with combining characters above and below base characters:</p>
+<p><a class="figref">fig_baselines_other</a> shows similar comparisons for the Thonburi and Angsana New fonts.</p>
 
-<figure id="fig_line_height">
-<img src="images/line_height.png" alt="พรุ่งนี้" class="ex" data-notes="62px Noto Serif Thai">
-<figcaption>A word with multiple diacritics above and below the base, significantly increase the vertical height of lines.</figcaption>
-</figure-->
+
+<figure id="fig_baselines_other">
+<div>
+<img src="images/fig_baselines_thonburi.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Thonburi 130px" style="max-width: 90%; margin-block-end:2rem;" lang="km">
+
+<img src="images/fig_baselines_angsana.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Angsana New 130px" style="max-width: 90%;" lang="km">
+</div>
+<figcaption>Latin font metrics compared with Thai glyphs in the Thonburi (top) and Angasana New (bottom) fonts.</figcaption>
+</figure>
 </section>
+
 
 
 
