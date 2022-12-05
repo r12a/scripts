@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 November, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->5 December, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1649,7 +1649,10 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 
 <section id="standalone_encoding">
 <h3>Independent vowels</h3>
+
 <p>One of the independent vowels can also be written as a single character, or as two.</p>
+
+
 <table class="comparison">
 <thead>
 <tr>
@@ -1664,8 +1667,21 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 </tr>
 </tbody>
 </table>
+
+
 <p class="info">The precomposed character decomposes in NFD, and re-forms again in NFC. It is generally recommended to use the precomposed character.</p>
 </section>
+
+
+
+
+
+
+<!--section id="deprecated">
+<h3>Deprecated characters</h3>
+
+<p>The followin</p>
+</section-->
 
 
 
@@ -2191,6 +2207,15 @@ Gecko wraps at grapheme cluster boundaries but wraps the conjunct as a single un
 </tbody>
 </table>
 <p>The danda and double danda are sometimes used. They are punctuation marks in the Devanagari block that are also used for several other scripts.<tt>u</tt></p>
+
+
+<figure id="fig_punctuation">
+<div>
+<img src="images/fig_punctuation.png" alt="அவர் பதிலளித்தார்: “நான் இதைவிட ஒரு படி மேலான அழகான ஒன்றைத் தேர்ந்தெடுத்துள்ளேன்!” “யார்?” “லா பாவர்ட்டா (வறுமை)”: இதற்குப் பிறகு தன்னிடம் இருந்த அனைத்தையும் அவர் துறந்தார். நிலப்பகுதி வழியாக ஒரு யாசகனாகத் திரிந்தார்." class="ex" lang="ta" data-notes="Noto Serif Tamil 24px >72ppi">
+<details><summary>translation</summary><p>He replied: “I have chosen something one step more beautiful!” "Who?" “La Pavarta (Poverty)”: After this he gave up everything he had. Wandered through the land as a Yasaka.</p></details>
+</div>
+<figcaption>Various types of punctuation in Tamil.</figcaption>
+</figure>
 </section>
 
 
@@ -2320,31 +2345,52 @@ Gecko wraps at grapheme cluster boundaries but wraps the conjunct as a single un
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
 <p>The primary break points for Tamil are word boundaries, however Tamil is an agglutinative language and Tamil words can be long. This can lead to large gaps during justification, and sometimes words that are longer than the available column width, so it is desirable to also hyphenate words.</p>
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the modern Tamil orthography.</a></p>
+
+
+
+
 
 
 <section id="hyphenation">
 <h4>Hyphenation</h4>
 <p id="def-hyphenation" class="explanatoryintro definitionStub"></p>
+
 <p>Because of the length of Tamil words, hyphenation is useful during layout, but it isn't easy to do because of the  complexity of Tamil words.</p>
+
 <p>Hyphenation must take place at syllable boundaries. A hyphen is not usually added at the end of the line when a word is hyphenated.<tt>st</tt></p>
+
 
 <figure id="fig_hyphenation_ta">
 <p><img alt="Newspaper clipping" src="images/hyphenation_ta.png"  data-source="https://github.com/w3c/iip/issues/58"/></p>
-<figcaption>Text from the Tamil newpaper, Daily Thanthi, showing hyphenated words with yellow highlighting.</figcaption></figure>
+<figcaption>Text from the Tamil newpaper, Daily Thanthi, showing hyphenated words with yellow highlighting.</figcaption>
+</figure>
+
 
 <p>Prabhakar<tt>p</tt> proposes rules that single characters should be avoided at line start/end, especially characters with nukta at line start, and a word with 5 characters including 3 consecutive consonants can't be split. He says that due to the fact that Tamil is highly inflexional, morphological or pattern based approaches are needed, rather than simple dictionary lookup.</p>
 </section>
 
 
 
+
+
 <section id="linedge">
 <h4>Line-edge rules</h4>
-<p>According to <a href="http://w3c.github.io/ilreq/#h_hyphenation">ilreq</a>, a line should not start with any of the following characters.</p>
 
-<figure class="exampleBox auto noindex small" data-cols="">,␣.␣:␣;␣।␣॥␣)␣]␣}␣&gt;␣+␣*␣/␣=␣_␣|␣~␣%</figure>
-<p>Line breaking should also not move a danda or double danda to the beginning of a new line, even if they are preceded by a space character. These punctuation characters should behave in the same way as a full stop does in English text.</p>
-<p>Presumably, similar rules apply for the end of a line.</p>
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show  line-breaking properties for characters in the modern Tamil orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for some of the characters used in modern Tamil. Context may affect the behaviour of some of these and other characters.</p>
+
+<p class="instructions">Click/tap on the Tamil characters to show what they are.</p>
+
+<ul>
+<li><span class="ex list" lang="ta">“ ‘ (</span> &nbsp; should not be the last character on a line.</li>
+<li><span class="ex list" lang="ta">” ’ ) . , ; ! ? । ॥ %</span> &nbsp; should not begin a new line.</li>
+<li><span class="ex list" lang="ta">௹ ₹</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li>
+</ul>
+
+<p>Line breaking should not move a danda or double danda to the beginning of a new line even if they are preceded by a space character.</p>
 </section>
 </section>
 
