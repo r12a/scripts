@@ -57,7 +57,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->2 December, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->5 December, 2022<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -1546,7 +1546,7 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <p>tbd</p>
 </section>
 </section>
-</section>
+
  
  
  
@@ -1563,11 +1563,15 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-<section id="encoding">
+<section id="encoding_choices">
 <h2>Encoding choices</h2>
-<p>XXXX is a script where different sequences of Unicode characters may produce the same visual result. Here we look at those  related to vowels.</p>
 
-<p class="instructions">Visually, several of the Balinese letters look as if they could be composed of smaller parts. This section compares approaches and considers the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC) to give guidance on which approach is best.</p>
+<p class="instructions">This section offers advice about characters or character sequences to avoid, and what to use instead. It takes into account  the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC)..</p>
+
+<p>Although usage is recommended here, content authors may well be unaware of such recommendations. Therefore, applications should look out for the non-recommended approach and treat it the same as the recommended approach wherever possible.</p>
+
+
+
 
 
 <section id="vs_encoding">
@@ -1637,6 +1641,29 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 </tbody>
 </table>
 <p class="info">The precomposed characters decompose in NFD, and reform again in NFC. It is generally recommended to use the precomposed character.</p>
+</section>
+
+
+
+
+
+
+
+<section id="charorder">
+<h3>Codepoint sequences</h3>
+
+<p>Components of an orthographic syllable  should be composed in the following order:</p>
+<ol style="text-align: left;">
+<li>base consonant or independent vowel </li>
+<li><span class="name">rɔɓaːt </span></li>
+<li><span class="name">museʔkətoə̯n </span>or <span class="name">trəisaɓ </span> (register shifters)</li>
+<li>subscript (consonant or independent vowel)</li>
+<li>vowel sign</li>
+<li>zero-width joiner or non-joiner</li>
+<li>any other mark </li>
+</ol>
+
+<p>This fixed ordering makes it easier to search for and collate text. For more details, see <a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">this SIL document</a>.<tt>sil</tt></p>
 </section>
 </section>
 
