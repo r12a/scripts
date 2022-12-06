@@ -58,7 +58,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->17 November, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->6 December, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -3452,7 +3452,7 @@ which is always visible, and which doesn't create conjuncts.</p>
 
 
 <section id="orthographicS">
-<h3>Orthographic syllables</h3>
+<h3>Larger typographic units</h3>
 
 <p><code>(Base Invisible_Stacker)* Grapheme_cluster</code></p>
 
@@ -3762,14 +3762,47 @@ Gecko moves stacks to the next line as a single unit, except when the kinzi is i
 <section id="para">
 <h2>Line &amp; paragraph layout</h2>
 
+
+
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
+
 <p>If it is necessary to break text within a phrase, breaks can occur at syllable boundaries, but not within a word. The difficulty is that there is no visual information about which sequences of syllables consitute a word.</p>
+
 <p>One way of detecting line-break opportunities  is to use a dictionary to search for polysyllabic words, and then break at syllable boundaries outside the word. This approach may, however, run into problems when uncommon words or new words are used, especially those borrowed foreign terms.</p>
+
 <p>A common approach is to break lines at phrase boundaries and then use justification is to adjust inter-phrase spacing.<tt>h,12</tt></p>
-  <p>An alternative is  to indicate break points by inserting <span class="codepoint" translate="no"><span lang="my">&#x200B;</span> [<a href="/scripts/punctuation/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a>]</span> (ZWSP) between words when the content is developed. </p>
-  <p>Otherwise, you could tie the syllables in a polysyllabic word together using <span class="codepoint" translate="no"><span lang="my">&#x2060;</span> [<a href="/scripts/myanmar/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a>]</span> while authoring the content. This requires less intervention than adding ZWSP, since the number of polysyllabic words is smaller than the whole. Problems with that approach, currently, are that applications must be able to ignore the word joiner for searching, sorting, and the like. For this reason Hosken recommends against using it,	and	recommends instead the use of a dictionary with ZWSP backup for words that the dictionary doesn't handle well. However, it's not clear which words a dictionary will fail to recognise when the text is used across different platforms and applications, so this is not an ideal solution either – not to mention that it is difficult for an author to know in advance which words will cause problems and which won't .<tt>h,12</tt></p>
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the modern Burmese orthography.</a></p>
+
+<p>An alternative is  to indicate break points by inserting <span class="codepoint" translate="no"><span lang="my">&#x200B;</span> [<a href="/scripts/punctuation/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a>]</span> (ZWSP) between words when the content is developed. </p>
+
+<p>Otherwise, you could tie the syllables in a polysyllabic word together using <span class="codepoint" translate="no"><span lang="my">&#x2060;</span> [<a href="/scripts/myanmar/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a>]</span> while authoring the content. This requires less intervention than adding ZWSP, since the number of polysyllabic words is smaller than the whole. Problems with that approach, currently, are that applications must be able to ignore the word joiner for searching, sorting, and the like. For this reason Hosken recommends against using it,	and	recommends instead the use of a dictionary with ZWSP backup for words that the dictionary doesn't handle well. However, it's not clear which words a dictionary will fail to recognise when the text is used across different platforms and applications, so this is not an ideal solution either – not to mention that it is difficult for an author to know in advance which words will cause problems and which won't .<tt>h,12</tt></p>
+
+
+
+
+
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show  line-breaking properties for characters in the modern Burmese orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for some of the characters used in modern Burmese. Context may affect the behaviour of some of these and other characters.</p>
+
+<p class="instructions">Click/tap on the Burmese characters to show what they are.</p>
+
+<ul>
+<li><span class="ex list" lang="my">“  (</span> &nbsp; should not be the last character on a line.</li>
+<li><span class="ex list" lang="my">”  ) : ! ? । ॥ %</span> &nbsp; should not begin a new line.</li>
+<!--li><span class="ex list" lang="ta">৳</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li-->
+</ul>
+
+<!--p>Line breaking should not move a danda or double danda to the beginning of a new line even if they are preceded by a space character.</p-->
+</section>
 </section>
 
 
@@ -3788,9 +3821,9 @@ Gecko moves stacks to the next line as a single unit, except when the kinzi is i
 <section id="spacing">
 <h3>Text spacing</h3>
 <p class="prompts">tbd</p>
-
-<p>This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification.</p>
 </section>
+
+သည့်၂
 
 
 
@@ -3798,19 +3831,34 @@ Gecko moves stacks to the next line as a single unit, except when the kinzi is i
   
 <section id="baselines">
 <h3>Baselines, line height, etc.</h3>
-<p class="prompts">tbd</p>
 
 <p>Burmese uses the so-called 'alphabetic' baseline, which is the same as for Latin and many other scripts.</p>
-
-<!--p>fig_baselines shows glyphs from Noto Serif fonts. The basic height of Balinese letters is the same as the Latin x-height, however extenders and combining marks, extend well beyond the Latin ascenders and descenders, creating a need for larger line heights.</p>
-
-<p>The Lao characters are generally about the same size as the Latin x-height. <a class="figref">fig_baselines</a> shows glyphs from the Noto Serif fonts. The basic height of Lao letters is just slightly larger than the Latin x-height, however ascenders and vowel signs, especially when accompanied by tone marks, rise well above the Latin ascenders.  Below the baseline descenders and vowel-signs stay within the Latin descender depth.</p>
-
+<p>Burmese requires more vertical space than Latin text. To give an approximate idea, <a class="figref">fig_baselines</a> compares Latin and Burmese glyphs from Noto  fonts. The basic height of Burmese letters is typically around the Latin  x-height, however overall letter height and combining marks, extend beyond the Latin ascenders and descenders, creating a need for larger line spacing.</p>
 <figure id="fig_baselines">
-<img src="images/fig_baselines.png" alt="qhxໂປງຽເກິ່ກຶ້ກູ" class="ex" lang="lo" data-notes="Noto Serif Lao & Noto Serif 130px" style="max-width: 40rem;">
-<figcaption>Font metrics for Latin text in the Noto Serif font compared with Balinese glyphs in the Noto Serif Balinese font.</figcaption>
-</figure-->
+<div>
+<img src="images/fig_baselines_serif.png" alt="Xhqxလူတိုင်းပြည်ရှိသည့်၂၆" class="ex" lang="my" data-notes="Noto Serif Khmer 130px" style="max-width: 90%; margin-block-end:1rem;">
+
+<img src="images/fig_baselines_sans.png" alt="Xhqxလူတိုင်းပြည်ရှိသည့်၂၆" class="ex" lang="my" data-notes="Noto Sans Khmer 130px" style="max-width: 90%;">
+</div>
+<figcaption>Font metrics for Latin text  compared with Burmese glyphs in the Noto Serif Myanmar (top) and Noto Sans Myanmar (bottom) fonts.</figcaption>
+</figure>
+
+
+<p><a class="figref">fig_baselines_other</a> shows similar comparisons for the Tharlon and Myanmar Text fonts.</p>
+
+
+<figure id="fig_baselines_other">
+<div>
+<img src="images/fig_baselines_tharlon.png" alt="Xhqxလူတိုင်းပြည်ရှိသည့်၂၆" class="ex" data-notes="Tharlon 130px" style="max-width: 90%; margin-block-end:2rem;" lang="my">
+
+<img src="images/fig_baselines_myanmartext.png" alt="Xhqxလူတိုင်းပြည်ရှိသည့်၂၆" class="ex" data-notes="Myanmar Text 130px" style="max-width: 90%;" lang="my">
+</div>
+<figcaption>Latin font metrics compared with Burmese glyphs in the Tharlon (top) and Myanmar Text (bottom) fonts.</figcaption>
+</figure>
 </section>
+
+
+
 
 
 
