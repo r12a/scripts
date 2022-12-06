@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 November, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->6 December, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -2409,6 +2409,7 @@ although these may also be spelled with conjuncts, eg.
 
 <section id="encoding">
 <h2>Encoding choices</h2>
+
 <p class="instructions">This section looks at  alternative  strategies  for  typing and storing vowel-signs and independent vowels used by Bangla, taking into consideration the effects of normalising the text using <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and <span class="termref" href="../glossary/#nfc"> Normalisation Form C</span> (NFC).</p>
 
 
@@ -2770,7 +2771,7 @@ which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</
 
 
 <section id="orthographicS">
-<h3>Orthographic syllables</h3>
+<h3>Larger typographic units</h3>
 
 <p style="text-align:start;"><code>(Consonant Nukta? Virama)* Grapheme_cluster</code></p>
 
@@ -3041,7 +3042,6 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 <section id="linebreak">
 <h3 id="h_linebreak">Line breaking</h3>
 <p>Bengali is preferably wrapped at word boundaries.</p>
-</section>
 
 
 
@@ -3063,14 +3063,24 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 
 
 
-<section id="line_edge_rules">
+<section id="linedge">
 <h4>Line-edge rules</h4>
-<p>According to <a href="http://w3c.github.io/ilreq/#h_hyphenation">ilreq</a>, a line should not start with any of the following characters.</p>
 
-<figure class="exampleBox auto noindex" data-cols="">,␣.␣:␣;␣।␣॥␣)␣]␣}␣&gt;␣+␣*␣/␣=␣_␣|␣~␣%</figure>
-<p>Line breaking should also not move a danda or double danda to the beginning of a new line, even if they are preceded by a space character. These punctuation characters should behave in the same way as a full stop does in English text.</p>
-<p>Presumably, similar rules apply for the end of a line.</p>
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the modern Bangla orthography.</a></p>
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show  line-breaking properties for characters in the modern Bangla orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for some of the characters used in modern Bangla. Context may affect the behaviour of some of these and other characters.</p>
+
+<p class="instructions">Click/tap on the Bangla characters to show what they are.</p>
+
+<ul>
+<li><span class="ex list" lang="bn">“ ‘ (</span> &nbsp; should not be the last character on a line.</li>
+<li><span class="ex list" lang="bn">” ’ ) . , ; ! ? । ॥ %</span> &nbsp; should not begin a new line.</li>
+<li><span class="ex list" lang="bn">৳</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li>
+</ul>
+
+<p>Line breaking should not move a danda or double danda to the beginning of a new line even if they are preceded by a space character.</p>
 </section>
 </section>
 
@@ -3091,9 +3101,9 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 <section id="spacing">
 <h3>Text spacing</h3>
 <p class="prompts">tbd</p>
-
-<p>This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification.</p>
 </section>
+
+
 
 
 
@@ -3104,16 +3114,33 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 <p class="prompts">tbd</p>
 
 <p>Bangla uses the so-called 'alphabetic' baseline, which is the same as for Latin and many other scripts.</p>
+<p>It also has a 'hanging baseline', which may be used for text alignment in things such as initial letter highlighting. The hanging baseline is based on the top bar that joins the letters.</p>
 
-<!--p>fig_baselines shows glyphs from Noto Serif fonts. The basic height of Balinese letters is the same as the Latin x-height, however extenders and combining marks, extend well beyond the Latin ascenders and descenders, creating a need for larger line heights.</p>
-
-<p>The Lao characters are generally about the same size as the Latin x-height. <a class="figref">fig_baselines</a> shows glyphs from the Noto Serif fonts. The basic height of Lao letters is just slightly larger than the Latin x-height, however ascenders and vowel signs, especially when accompanied by tone marks, rise well above the Latin ascenders.  Below the baseline descenders and vowel-signs stay within the Latin descender depth.</p>
-
+<p>Bangla requires slightly more vertical space than Latin text. To give an approximate idea, <a class="figref">fig_baselines</a> compares Latin and Bangla glyphs from Noto  fonts. The basic height of Bangla letters is typically slightly higher than the Latin  x-height, including conjunct stacks, however certain letters and combining marks extend  beyond the Latin ascenders, creating a need for larger line spacing.</p>
 <figure id="fig_baselines">
-<img src="images/fig_baselines.png" alt="qhxໂປງຽເກິ່ກຶ້ກູ" class="ex" lang="lo" data-notes="Noto Serif Lao & Noto Serif 130px" style="max-width: 40rem;">
-<figcaption>Font metrics for Latin text in the Noto Serif font compared with Balinese glyphs in the Noto Serif Balinese font.</figcaption>
-</figure-->
+<div>
+<img src="images/fig_baselines_serif.png" alt="Xhqxঐল্লিম্ভস্ট্রর্তদ্‌ঢ়ীড়ৃঁকৣ" class="ex" lang="km" data-notes="Noto Serif Khmer 130px" style="max-width: 90%; margin-block-end:1rem;">
+
+<img src="images/fig_baselines_sans.png" alt="Xhqxঐল্লিম্ভস্ট্রর্তদ্‌ঢ়ীড়ৃঁকৣ" class="ex" lang="km" data-notes="Noto Sans Khmer 130px" style="max-width: 90%;">
+</div>
+<figcaption>Font metrics for Latin text  compared with Bangla glyphs in the Noto Serif Bengali (top) and Noto Sans Bengali (bottom) fonts.</figcaption>
+</figure>
+
+
+<p><a class="figref">fig_baselines_other</a> shows similar comparisons for the Bangla MN and Vrinda fonts.</p>
+
+
+<figure id="fig_baselines_other">
+<div>
+<img src="images/fig_baselines_mn.png" alt="Xhqxঐল্লিম্ভস্ট্রর্তদ্‌ঢ়ীড়ৃঁকৣ" class="ex" data-notes="Bangla MN 130px" style="max-width: 90%; margin-block-end:2rem;" lang="km">
+
+<img src="images/fig_baselines_vrinda.png" alt="Xhqxঐল্লিম্ভস্ট্রর্তদ্‌ঢ়ীড়ৃঁকৣ" class="ex" data-notes="Vrinda 130px" style="max-width: 90%;" lang="km">
+</div>
+<figcaption>Latin font metrics compared with Bangla glyphs in the Bangla MN (top) and Vrinda (bottom) fonts.</figcaption>
+</figure>
 </section>
+
+
 
 
 
