@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->18 November, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->6 December, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -2417,7 +2417,9 @@ The difference between these three is the height of the swash to the far left.</
   
 <section id="para">
 <h2>Line &amp; paragraph layout</h2>
-     
+
+
+
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
 
@@ -2428,7 +2430,7 @@ The difference between these three is the height of the swash to the far left.</
 <p>Because there are no spaces between words, and because the end of one word and the beginning of another often form conjuncts (see <a class="figref">fig_pangandika</a>), Javanese doesn't wrap at word boundaries. Instead, it wraps at syllable boundaries where no conjuncts are involved.</p>
 
 <p>Unfortunately, modern browsers are often unable to detect appropriate break points for Javanese. In the sample text at the beginning of this page <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200B;</span><img src="../../c/General_Punctuation/200B.png" alt="ZWSP" style="vertical-align:middle"> [<a href="/scripts/XXXXXX/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a>]</span> is used at places where the line could be broken. Otherwise, the line would continue, unbroken off the right side of the page.</p>
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the modern Javanese orthography.</a></p>
+
 <p>Hyphenation, per se, is not used. See an interesting discussion about Javanese &amp; Balinese line-breaking on <a class="more" href="https://github.com/w3c/sealreq/issues/2#issuecomment-388524506"> GitHub</a>.</p>
 
 
@@ -2446,10 +2448,39 @@ The difference between these three is the height of the swash to the far left.</
 
 <p class="info">In online use, an application would need to create the extra <span class="name">taling</span>, rather than the content author. As line-length is changed by stretching a window, or as content is added earlier in the same paragraph, the location of the word relative to the line edge will change. The insertion of an extra <span class="name">taling</span> is only appropriate at those instants when the <span class="name">taling</span> happens to appear at the line start.</p>
 </section>
+
+
+
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show  line-breaking properties for characters in the modern Javanese orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for some of the characters used in modern Javanese. Context may affect the behaviour of some of these and other characters.</p>
+
+<p class="instructions">Click/tap on the Javanese characters to show what they are.</p>
+
+<ul>
+<!--li><span class="ex list" lang="jv">“ ‘ (</span> &nbsp; should not be the last character on a line.</li-->
+<li><span class="ex list" lang="jv">꧈ ꧉ ꧇</span> &nbsp; should not begin a new line.</li>
+<li><span class="ex list" lang="jv">꧊ ꧋ ꧌ ꧍ ꧁ ꧂ ꧅ ꧄ ꧃</span> &nbsp; should not allow a linebreak unless next to whitespace or another character that allows line breaks.</li>
+</ul>
+
+<!--p>Line breaking should not move a danda or double danda to the beginning of a new line even if they are preceded by a space character.</p-->
+</section>
 </section>
 
-     
-     
+
+
+
+
+
+
      
 <section id="justification">
 <h3>Text alignment &amp; justification</h3>
@@ -2480,20 +2511,44 @@ The difference between these three is the height of the swash to the far left.</
 
 
 
-  
+
+
+
+
 <section id="baselines">
 <h3>Baselines, line height, etc.</h3>
 
 <p>Javanese uses the so-called 'alphabetic' baseline, which is the same as for Latin and many other scripts.</p>
 
-<p><a class="figref">fig_baselines</a> shows glyphs froms Noto Sans fonts. The basic height of Javanese letters is the same as the Latin x-height, however extenders (especially descenders) and combining marks, extend well beyond the Latin ascenders and descenders, creating a need for larger line heights.</p>
+<p>Javanese requires far more vertical space than Latin text. To give an approximate idea, <a class="figref">fig_baselines</a> compares Latin and Javanese glyphs from Noto  fonts. The basic height of Javanese letters is typically around the Latin x-height, but the overall height is 2 to 3 times that of the Latin letters, creating a need for much larger line spacing.</p>
+
 
 <figure id="fig_baselines">
-<img src="images/fig_baselines.png" alt="qhxꦈꦥꦾꦏꦃꦊꦂꦘꦼ꧌꧄꧂" class="ex" lang="jv" data-notes="Noto Sans Javanese & Noto Sans 130px" style="max-width: 40rem;">
-<figcaption>Font metrics for Latin text in the Noto Sans font compared with Javanese glyphs in the Noto Sans Javanese font.</figcaption>
+<div>
+<img src="images/fig_baselines_sans.png" alt="Xqhxꦈꦥꦾꦏꦃꦥꦺꦊꦂꦘꦼ꧌꧄꧂" class="ex" lang="jv" data-notes="Noto Sans Javanese 130px" style="max-width: 90%;">
+</div>
+<figcaption>Font metrics for Latin text compared with Javanese glyphs in the Noto Sans Javanese font.</figcaption>
+</figure>
+
+
+<p><a class="figref">fig_baselines_other</a> shows similar comparisons for the Tuladha Jejeg and Javanese Text fonts.</p>
+
+
+<figure id="fig_baselines_other">
+<div>
+<img src="images/fig_baselines_tuladha.png" alt="Xqhxꦈꦥꦾꦏꦃꦥꦺꦊꦂꦘꦼ꧌꧄꧂" class="ex" data-notes="Tuladha Jejeg 130px" style="max-width: 90%; margin-block-end:2rem;" lang="jv">
+
+<img src="images/fig_baselines_javanesetext.png" alt="Xqhxꦈꦥꦾꦏꦃꦥꦺꦊꦂꦘꦼ꧌꧄꧂" class="ex" data-notes="Javanese Text 130px" style="max-width: 90%;" lang="jv">
+</div>
+<figcaption>Latin font metrics compared with Khmer glyphs in the Tuladha Jejeg (top) and Javanese Text (bottom) fonts.</figcaption>
 </figure>
 </section>
 
+
+
+
+
+  
 
 
 
