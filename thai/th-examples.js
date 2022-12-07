@@ -7813,7 +7813,7 @@ autoExpandExamples.th = `
 ระรัว||
 ระลอก||
 ระลึก||
-ระฦก||
+ระฦก|obsolete spelling of ระลึก: to recall|rá.lɯ́k̚
 ระวัง||
 ระวาง||
 ระวิง||
@@ -8507,7 +8507,7 @@ autoExpandExamples.th = `
 ฦก||
 ฦกซึ้ง||
 ฦๅ||
-ฦๅชา|obsolete spelling of ลือชา|lɯ̄ː§‹.§t͡ɕʰ§‹āː
+ฦๅชา|obsolete spelling of ลือชา: to be made famous|lɯ̄ː§‹.§t͡ɕʰ§‹āː
 ว.||
 ว||
 วก||
