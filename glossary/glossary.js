@@ -33,7 +33,7 @@ defList={
 
 "materlectionis": 'In the spelling of Arabic, Hebrew, and other Semitic languages, mater lectionis refers to a consonant that is used to indicate the location of a vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a>',
 
-"standalonevowel": 'Standalone vowels are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.',
+"standalonevowel": 'Standalone vowels are vowel sounds that are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.',
 
 "orthographicsyllable": 'The term <a class="termref" target="_blank" href="../glossary/index.html#orthographicsyllable">orthographic syllable</a> is not clearly defined in the Unicode Standard. In the orthography notes on this site we define it to mean a typographic unit that includes more than one grapheme cluster. This is commonly the case for Brahmi-derived scripts, such as for Devanagari conjuncts, or Balinese stacks.  Orthographic syllables do not correspond to phonetic syllables.',
 
@@ -46,6 +46,8 @@ defList={
 "vocalic": 'Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.',
 
 "vowelsign": '<a class="termref" target="_blank" href="../glossary/index.html#vowelsign">Vowel-signs</a> are shapes that appear alongside a consonant to express a following (non-inherent) vowel sound.  These are known as <span class="name">\'matras\'</span> in Sanskrit. Sometimes multiple shapes are used, on various sides of the base consonant (circumgraphs). ',
+
+"vowelsign": 'A <a class="termref" target="_blank" href="../glossary/index.html#vowelsign">vowel sign</a> is attached to a consonant base to express a following vowel sound.   Sometimes vowel signs have multiple parts, which are displayed on different sides of the base consonant or cluster. They are known as <span class="name">\'matras\'</span> in Sanskrit.',
 
 "wordboundary": 'The concept of \'word\' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.',
 }
