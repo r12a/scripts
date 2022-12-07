@@ -156,7 +156,7 @@ q { font-style: italic;}
 <dt id="decomposed">decomposed text</dt>
 <dd>Decomposed text is usually the result of applying <a href="#nfd">Unicode normalization form D (NFD)</a>, which splits Unicode characters into component parts, typically a base character plus one or more diacritics. However, a decomposed sequence of code points may also be intentionally (or unintentionally) used by a content author where a <a href="#precomposed">precomposed</a> alternative exists. (<a href="../tutorial/part3#predecomposed">Example</a>)</dd>
 <dt id="dependentvowel">dependent vowel</dt>
-<dd><q cite="https://www.unicode.org/glossary/#inherent_vowel">A symbol or sign that represents a vowel and that is attached or combined with another symbol, usually one that represents a consonant..</q> <sup><a href="https://www.unicode.org/glossary/#dependent_vowel">u</a></sup> In Semitic and Indic writing systems, vowels are normally represented by dependent <a href="#vowelsign">vowel-signs</a>. Dependent vowels are usually combining characters, but may also be standalone (eg. in Thai, or New Tai Lue, which has no combining characters). (<a href="../tutorial/part3#vowel-signs">Example</a>)</dd>
+<dd><q cite="https://www.unicode.org/glossary/#inherent_vowel">A symbol or sign that represents a vowel and that is attached or combined with another symbol, usually one that represents a consonant.</q><sup><a href="https://www.unicode.org/glossary/#dependent_vowel">u</a></sup>  Dependent vowels are usually combining marks, but may also be letters (eg. in Thai, or New Tai Lue, which has no combining characters). Vowel_Dependent is one of the categories in the Indic_Syllabic_Category property set (<a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Indic_Syllabic_Category=Vowel_Dependent:]">see a list</a>).</dd>
 </dl>
 </section>
 
@@ -193,9 +193,9 @@ q { font-style: italic;}
 <dt id="ijam">ijam</dt>
 <dd>Arabic script diacritical marks considered to be part of a basic letter form. Unicode encodes letter+ijam combinations as separate, atomic characters, which are never given decompositions in the standard. Ijam generally take the form of one-, two-, three- or four-dot markings above or below the basic letter skeleton, although other diacritic forms occur in extensions of the Arabic script in Central and South Asia and in Africa. Compare with <a class="termref" target="_blank" href="../glossary/#tashkil">tashkil</a>.</dd>
 <dt id="independentvowel">independent vowel</dt>
-<dd><q cite="https://www.unicode.org/glossary/#independent_vowel">In Indic scripts, certain vowels are depicted using independent letter symbols that stand on their own. This is often true when a word starts with a vowel or a word consists of only a vowel.</q></dd>
+<dd><q cite="https://www.unicode.org/glossary/#independent_vowel">In Indic scripts, certain vowels are depicted using independent letter symbols that stand on their own. This is often true when a word starts with a vowel or a word consists of only a vowel.</q> Independent vowels tend to be used to represent <a href="#standalonevowel">standalone vowel sounds</a>.</dd>
 <dt id="inherentvowel">inherent vowel</dt>
-<dd>An inherent vowelis a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed. <q cite="https://www.unicode.org/glossary/#inherent_vowel">In writing systems based on a script in the Brahmi family of Indic scripts, a consonant letter symbol normally has an inherent vowel, unless otherwise indicated. The phonetic value of this vowel differs among the various languages written with these writing systems. An inherent vowel is overridden either by indicating another vowel with an explicit vowel sign or by using virama to create a dead consonant.</q> <sup><a href="https://www.unicode.org/glossary/#inherent_vowel">u</a></sup> (<a href="../tutorial/part3#vowel-signs">Example</a>)</dd>
+<dd>An inherent vowel is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed. <q cite="https://www.unicode.org/glossary/#inherent_vowel">In writing systems based on a script in the Brahmi family of Indic scripts, a consonant letter symbol normally has an inherent vowel, unless otherwise indicated. The phonetic value of this vowel differs among the various languages written with these writing systems. An inherent vowel is overridden either by indicating another vowel with an explicit vowel sign or by using virama to create a dead consonant.</q> <sup><a href="https://www.unicode.org/glossary/#inherent_vowel">u</a></sup> (<a href="../tutorial/part3#vowel-signs">Example</a>)</dd>
 </dl>
 </section>
 
@@ -280,7 +280,14 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 <h2 id="p">P</h2>
 <dl>
 <dt id="prebase">prebase</dt>
-<dd>The glyph of a pre-base (or prescript) vowel-sign is displayed to the left of the consonant or orthographic syllable after which it is pronounced. It is still typed and stored, however, in pronunciation order.</dd>
+<dd>The glyph of a pre-base (or prescript) vowel sign is displayed before the consonant or orthographic syllable after which it is pronounced. If the vowel character is a combining mark, it is still typed and stored in pronunciation order, and the application will render it in the correct location. In some scripts, such as Thai, a pre-base vowel sign is a normal letter, which is typed and stored in the correct position relative to the base.</dd>
+
+<dd style="text-align: center;"><figure id="fig_prebase" class="sideCaption">
+<img src="img/fig_prebase.png" alt="ഇദ്ദേഹം" class="ex" lang="ml" data-notes="Noto Serif Malayalam 20px">
+<figcaption>A prebase vowel sign, pronounced after a consonant cluster, but rendered to the left of the conjunct.</figcaption>
+</figure>
+</dd>
+
 <dt id="precomposed">precomposed text/characters</dt>
 <dd>A precomposed character is one that can also be broken down into separate code points representing its component parts (decomposition). Typically this will include base characters plus diacritics, such as accented Latin characters, or Indic characters with nuktas. <a href="#nfc">Normalisation Form C (NFC)</a> produces precomposed characters from many <a href="#decomposed">decomposed</a> sequences. (<a href="../tutorial/part3#predecomposed">example</a>)</dd>
 </dl>
@@ -308,11 +315,14 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 <section>
 <h2 id="s">S</h2>
 <dl>
+<dt id="shaping">shaping</dt>
+<dd>Making context-sensitive changes to glyph shapes. Shaping may or may not occur at the same time as context-sensitive positioning of glyphs (such as higher diacritics over tall base characters).</dd>
+
 <dt id="spacingmark">spacing mark</dt>
 <dd>Combining characters that  consume space along the baseline, either before or after the base character. (<a href="../tutorial/part3#vowel-signs">example</a>)</dd>
 
 <dt id="standalonevowel">standalone vowel</dt>
-<dd>Standalone vowels are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.</dd>
+<dd>Standalone vowels are vowel sounds that are not preceded by a consonant sound; they may appear at the beginning or in the middle of a word.</dd>
 
 <dt id="syllabary">syllabary</dt>
 <dd>A type of writing system in which each symbol typically represents both a consonant and a vowel, or in some instances more than one consonant and a vowel.</dd>
@@ -366,7 +376,7 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 <dt id="vocalic">vocalic</dt>
 <dd>Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent <span class="ipa">r</span> or <span class="ipa">l</span> followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</dd>
 <dt id="vowelsign">vowel sign</dt>
-<dd>One or more  glyphs which taken together represent a vowel. In Indic scripts a vowel sign overwrites the <a href="#inherentvowel">inherent vowel</a>. Sometimes vowel-signs have multiple parts, which may be displayed on different sides of the base consonant or cluster. Vowel signs are usually combining characters, but may sometimes be a combination of combining marks and free-standing letters (eg. Thai, Lao), or just free-standing letters (eg. New Tai Lue). Vowel signs are typically attached to the onset of an orthographic syllable, rather than to a particular consonant, even when the syllable begins with a consonant cluster. (<a href="../tutorial/part3#vowel-signs">example</a>)</dd>
+<dd>One or more  glyphs which taken together represent a vowel. Typically found in Brahmi-derived scripts, where a vowel sign overwrites the <a href="#inherentvowel">inherent vowel</a>. Sometimes vowel-signs have multiple parts, which may be displayed on different sides of the base consonant or cluster. Vowel signs are usually combining characters, but may sometimes be a combination of combining marks and free-standing letters (eg. Thai, Lao), or just free-standing letters (eg. New Tai Lue). Vowel signs are typically attached to the onset of an orthographic syllable, rather than to a particular consonant, even when the syllable begins with a consonant cluster. (<a href="../tutorial/part3#vowel-signs">example</a>)</dd>
 <!--dt>xxx</dt>
 <dd>ddd</dd>
 <dt>xxx</dt>
@@ -390,7 +400,7 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/glossary"><span id="version-info"><!-- #BeginDate format:IS1m -->2022-12-07  10:33<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bglossary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fglossary%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/glossary"><span id="version-info"><!-- #BeginDate format:IS1m -->2022-12-07  14:22<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bglossary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fglossary%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
