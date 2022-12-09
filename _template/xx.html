@@ -57,7 +57,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->6 December, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->9 December, 2022<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -136,14 +136,54 @@
 <section id="conventions">
 <h2>Conventions</h2>
 
+<section>
 <h3>Footnotes</h3>
+
 <p>To indicate a source link that is listed in the refs.js file, use &lt;tt&gt; with the short name for that resource.  After a comma you can add a number for a page, or '#fragid', eg. <tt>ul,22</tt></p>
 
 <p>To indicate a source link that is NOT listed in the refs.js file, use &lt;tt&gt; element containing '@shortname,url', eg. <tt>§,Github,https://github.com/w3c/sealreq/issues/45</tt></p>
+
 <p>If this is something the reader should also look at, rather than just a source link, add <code class="kw" translate="no">class=&quot;more&quot;</code> to the <code class="kw" translate="no">tt</code> element.</p>
+
 <p>On devices that don't have hover any page number will be shown alongside the reference number.</p>
+</section>
 
 
+
+
+
+<section>
+<h3>Figures</h3>
+
+<p>All figure elements should have an id that begins with &quot;fig_&quot;. It should match the image name, unless there are multiple images.</p>
+<p>Use SVG images where possible, because they provide cleaner lines, and will expand as text size is increased.</p>
+<p>Use .sideCaption whenever the figure is not wide.  The following example code should work the same for sideCaption or ordinary figures: just change the class.</p>
+
+<pre>&lt;figure id=&quot;fig_prebase&quot; class=&quot;sideCaption&quot;&gt;
+&lt;img src=&quot;images/fig_prebase.svg&quot; style=&quot;height:3rem&quot; alt=&quot;எங்கே&quot; class=&quot;ex&quot; lang=&quot;ta&quot; data-notes=&quot;Noto Serif Tamil 60px&quot;&gt;
+&lt;div&gt;
+&lt;figcaption&gt;In a consonant cluster, a pre-base vowel glyph immediately precedes the consonant it is pronounced after.&lt;/figcaption&gt;
+&lt;details&gt;&lt;summary&gt;details&lt;/summary&gt;&lt;p&gt;&lt;span class=&quot;eg&quot; lang=&quot;ta&quot;&gt;எங்கே&lt;/span&gt;&lt;/p&gt;&lt;/details&gt;
+&lt;/div&gt;
+&lt;/figure&gt;</pre>
+
+<p>The div around the figcaption and details is  needed when providing ipa, meaning, etc. for an example, in order to arrange them vertically.</p>
+
+<p>Bitmap images should have a data-notes attribute that indicates how to recreate the example: font and font-size, etc. There may also be a data-source attribute.</p>
+
+<p>An alternative to the 'details' is to provide a translation, especially for a passage such as you might find in the punctuation or line-wrap sections.  Translations usually come from Google Translate.</p>
+
+<pre>&lt;figure id=&quot;fig_punctuation&quot; class=&quot;sideCaption&quot;&gt;
+&lt;img src=&quot;images/fig_punctuation.png&quot; alt=&quot;அவர் பதிலளித்தார்: “நான் இதைவிட ஒரு படி மேலான அழகான ஒன்றைத் தேர்ந்தெடுத்துள்ளேன்!” “யார்?” “லா பாவர்ட்டா (வறுமை)”: இதற்குப் பிறகு தன்னிடம் இருந்த அனைத்தையும் அவர் துறந்தார். நிலப்பகுதி வழியாக ஒரு யாசகனாகத் திரிந்தார்.&quot; class=&quot;ex&quot; lang=&quot;ta&quot; data-notes=&quot;Noto Serif Tamil 24px &gt;72ppi&quot;&gt;
+&lt;div&gt;
+&lt;figcaption&gt;Various types of punctuation in Tamil.&lt;/figcaption&gt;
+&lt;details&gt;&lt;summary&gt;translation&lt;/summary&gt;&lt;p&gt;He replied: “I have chosen something one step more beautiful!” &quot;Who?&quot; “La Pavarta (Poverty)”: After this he gave up everything he had. Wandered through the land as a Yasaka.&lt;/p&gt;&lt;/details&gt;
+&lt;/div&gt;
+&lt;/figure&gt;
+</pre>
+
+<p>Keep passages narrow, so that they fit alongside the caption. 500px is the maximum advisable, but 400px or less is better.</p>
+</section>
 </section>
 
 
