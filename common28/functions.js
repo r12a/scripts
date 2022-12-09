@@ -1072,7 +1072,8 @@ function makeIndexLine (node) {
     out += '<div class="listArray">'
 
     // for each item ...
-    for (let i=0;i<chars.length;i++) { 
+    for (let i=0;i<chars.length;i++) {
+        console.log('makeIndexLine',chars[i])
         char = chars[i]
 
         // create an id attribute for the listPairs in the index
@@ -1107,7 +1108,7 @@ function makeIndexLine (node) {
 
         // add any links
         out += '<div class="index_details">'
-        if (window.spreadsheetRows[char]) var uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
+        if (window.spreadsheetRows[char][cols.ucsName]) var uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
         else uname = "NAME UNKNOWN"
         out += `<span class="index_uname"  onclick="makeFootnoteIndex('${ chars[i] }')">${uname}</span>`
         if (window.spreadsheetRows[char]) {
