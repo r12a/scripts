@@ -33,7 +33,7 @@ q { font-style: italic;}
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->7 December, 2022<!-- #EndDate --></p>
+  <!-- #BeginDate format:Sw1 -->8 December, 2022<!-- #EndDate --></p>
 
 
 
@@ -192,10 +192,15 @@ q { font-style: italic;}
 <dl>
 <dt id="ijam">ijam</dt>
 <dd>Arabic script diacritical marks considered to be part of a basic letter form. Unicode encodes letter+ijam combinations as separate, atomic characters, which are never given decompositions in the standard. Ijam generally take the form of one-, two-, three- or four-dot markings above or below the basic letter skeleton, although other diacritic forms occur in extensions of the Arabic script in Central and South Asia and in Africa. Compare with <a class="termref" target="_blank" href="../glossary/#tashkil">tashkil</a>.</dd>
+
 <dt id="independentvowel">independent vowel</dt>
 <dd><q cite="https://www.unicode.org/glossary/#independent_vowel">In Indic scripts, certain vowels are depicted using independent letter symbols that stand on their own. This is often true when a word starts with a vowel or a word consists of only a vowel.</q> Independent vowels tend to be used to represent <a href="#standalonevowel">standalone vowel sounds</a>.</dd>
+
 <dt id="inherentvowel">inherent vowel</dt>
 <dd>An inherent vowel is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed. <q cite="https://www.unicode.org/glossary/#inherent_vowel">In writing systems based on a script in the Brahmi family of Indic scripts, a consonant letter symbol normally has an inherent vowel, unless otherwise indicated. The phonetic value of this vowel differs among the various languages written with these writing systems. An inherent vowel is overridden either by indicating another vowel with an explicit vowel sign or by using virama to create a dead consonant.</q> <sup><a href="https://www.unicode.org/glossary/#inherent_vowel">u</a></sup> (<a href="../tutorial/part3#vowel-signs">Example</a>)</dd>
+
+<dt id="invisiblestacker">invisible stacker</dt>
+<dd>A character that is always invisible, and that is used between each consonant in a consonant cluster to create a stacked arrangement. <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Invisible_Stacker:]">Used for</a> scripts such as Myanmar, Khmer, Tai Tham, Sundanese, etc. See also <a href="#virama">virama</a>, and  <a href="#purekiller">pure killer</a>.</dd>
 </dl>
 </section>
 
@@ -290,6 +295,9 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 
 <dt id="precomposed">precomposed text/characters</dt>
 <dd>A precomposed character is one that can also be broken down into separate code points representing its component parts (decomposition). Typically this will include base characters plus diacritics, such as accented Latin characters, or Indic characters with nuktas. <a href="#nfc">Normalisation Form C (NFC)</a> produces precomposed characters from many <a href="#decomposed">decomposed</a> sequences. (<a href="../tutorial/part3#predecomposed">example</a>)</dd>
+
+<dt id="purekiller">pure killer</dt>
+<dd>A character that kills the inherent vowel. It is always visible, and doesn't produce stacking or other conjunct behaviours. <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Pure_Killer:]">Used for</a> scripts such as Myanmar, Tibetan, Sundanese, Batak, etc. See also <a href="#virama">virama</a>, and <a href="#invisiblestacker">invisible stacker</a>.</dd>
 </dl>
 </section>
 
@@ -373,8 +381,13 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 <section>
 <h2 id="v">V</h2>
 <dl>
+<dt id="virama">virama</dt>
+<dd>From the <a href="https://www.unicode.org/glossary/#virama">Unicode Standard</a>: <q>From Sanskrit. The name of a sign used in many Indic and other Brahmi-derived scripts to suppress the inherent vowel of the consonant to which it is applied, thereby generating a dead consonant. (See <a href="https://www.unicode.org/versions/latest/ch12.pdf#G12284">Section 12.1, Devanagari</a>.) The sign varies in shape from script to script, and may be known by other names in various languages.</q> It may also be visible or hidden in consonant clusters, depending on the language and context. <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5B%3AInSC%3DVirama%3A%5D&g=&i=">Used for</a> scripts such as Devanagari, Bengali, Tamil, Balinese, etc. See also  <a href="#invisiblestacker">invisible stacker</a>, and  <a href="#purekiller">pure killer</a>.
+</dd>
+
 <dt id="vocalic">vocalic</dt>
 <dd>Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent <span class="ipa">r</span> or <span class="ipa">l</span> followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</dd>
+
 <dt id="vowelsign">vowel sign</dt>
 <dd>One or more  glyphs which taken together represent a vowel. Typically found in Brahmi-derived scripts, where a vowel sign overwrites the <a href="#inherentvowel">inherent vowel</a>. Sometimes vowel-signs have multiple parts, which may be displayed on different sides of the base consonant or cluster. Vowel signs are usually combining characters, but may sometimes be a combination of combining marks and free-standing letters (eg. Thai, Lao), or just free-standing letters (eg. New Tai Lue). Vowel signs are typically attached to the onset of an orthographic syllable, rather than to a particular consonant, even when the syllable begins with a consonant cluster. (<a href="../tutorial/part3#vowel-signs">example</a>)</dd>
 <!--dt>xxx</dt>
@@ -400,7 +413,7 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/glossary"><span id="version-info"><!-- #BeginDate format:IS1m -->2022-12-07  14:22<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bglossary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fglossary%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/glossary"><span id="version-info"><!-- #BeginDate format:IS1m -->2022-12-08  9:35<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bglossary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fglossary%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
