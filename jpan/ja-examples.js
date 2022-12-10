@@ -31,4 +31,35 @@ autoExpandExamples.ja = `
 今日|today|kʲoː§‹
 東京|Tokyo|toː§kʲoː
 推理小説|detective novel|sui§ri§ʃʲoː§set͡su
+なっと|fermented soya beans|na§t§to
+インタネット|internet|i§n§ta§ne§t§to
+コーヒー|coffee|koːɸiː
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 `
