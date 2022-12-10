@@ -12,6 +12,8 @@
 <script src="../../shared/fontdb/managefonts.js"></script>
 
 <script src="../../shared/scriptdb/jpan.js"> </script>
+<script src="ja-details.html"> </script>
+
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
@@ -20,10 +22,13 @@
 <script src="../common28/transliterate.js"></script>
 <script src="../common28/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
+<script src="../common28/egcode.js"></script>
 <script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="ja-langdata.js"></script>
+<script src="ja-examples.js"></script>
+<script src="ja-translit.js">  </script>
 <script src="../../shared/manifests/jpan-ja.js"></script>
 </head>
 
@@ -47,7 +52,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->9 December, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->10 December, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -87,9 +92,13 @@
 
 <section id="history">
 <h2>Usage &amp; history</h2>
+
 <p>The 'Japanese orthography' described here is a mixture of 4 scripts which are all used together for any Japanese text: Han (kanji), Hiragana, Katakana, and Latin. Together they are what is used to write the Japanese language.</p>
-<p><span class="charExample" translate="no"><span class="ex" lang="ja">日本語</span> <span class="ipa">nihoŋgo</span> <span class="meaning">Japanese</span></span></p>
+
+<p><span class="eg" lang="ja">日本語</span></p>
+
 <p>&quot;Kanji characters were introduced to Japan around the 3rd century, it is thought from Korea. Until the 7th or 8th century, the Japanese language was written exclusively in these Chinese characters. Initially these were used phonetically to represent similar-sounding Japanese syllables, regardless of their meaning in written Chinese. However, the process of writing Japanese solely in kanji was laborious; each symbol consisted of a number of strokes and only represented one syllable. Two simplified forms of writing began to emerge around the 7th century. The modern hiragana script developed from a simplified cursive style originally developed by women, who were discouraged from learning kanji, and katakana was developed by Buddhist scholars who wrote only one element of each kanji symbol as a form of shorthand.&quot;<tt>s</tt></p>
+
 <p class="instructions">Sources: <a href="http://scriptsource.org/scr/Jpan">Scriptsource</a>, <a href="https://en.wikipedia.org/wiki/Japanese_writing_system#History_of_the_Japanese_script" class="more">Wikipedia</a></p>
 </section>
 
@@ -234,6 +243,25 @@
 </details>
 </section>
 </section>
+
+
+
+
+
+
+
+<div id="showTranscriptions">
+<details>
+<summary>Items to show in lists</summary>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Latin 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+</details>
+</div>
 
  
   
@@ -551,33 +579,60 @@ alveolar</th>
 <section id="kana">
 <h3>Kana syllabaries</h3>
 
-<p>Japanese uses two syllabaries: <span class="name">hiragana</span> and <span class="name">katakana</span>.</p>
+<p>Japanese uses two syllabaries: <span class="name">hiragana</span> and <span class="name">katakana</span>. The vowel sounds <span class="ipa">u</span> and <span class="ipa">i</span> are often elided between non-voiced consonants, or at the end of a word.</p>
 
-<p>Katakana characters are used for foreign loan words, such as the word 'text'.</p>
+<p>Katakana characters are used for foreign loan words, such as the word 'text'. </p>
 
 
 <figure id="fig_katakana" class="sideCaption">
-<div class="large"><span class="ex" lang="ja">テキスト</span></div>
-<figcaption>The word <span class="meaning">text</span> (<span class="trans">tekisuto</span>), written with katakana syllables.</figcaption>
+<img src="images/fig_katakana.svg" alt="テキスト" class="ex" lang="ja" data-notes="Hiragino Mincho ProN" style="height:4rem;">
+<div>
+<figcaption>The word <span class="meaning">text</span>, written with katakana syllables.</figcaption>
+<details><summary>details</summary><p><span class="eg" lang="ja">テキスト</span></p></details>
+</div>
 </figure>
+
+
+<!--figure id="fig_katakana" class="sideCaption">
+<div><span class="eg" lang="ja">テキスト</span></div>
+<figcaption>The word <span class="meaning">text</span> (<span class="trans">tekisuto</span>), written with katakana syllables.</figcaption>
+</figure-->
 
 
 <p>Hiragana is used for indigenous Japanese words, such as the verb 'to be'.</p>
 
 
 <figure id="fig_hiragana" class="sideCaption">
+<img src="images/fig_hiragana.svg" alt="です" class="ex" lang="ja" data-notes="Hiragino Mincho ProN" style="height:4rem;">
+<div>
+<figcaption>The word for <span class="meaning">to be</span> <span class="transc">desu</span>, written with hiragana syllables.</figcaption>
+<details><summary>details</summary><p><span class="eg" lang="ja">です</span></p></details>
+</div>
+</figure>
+
+
+<!--figure id="fig_hiragana" class="sideCaption">
 <div class="large"><span class="ex" lang="ja">です</span></div>
 <figcaption>The word for <span class="meaning">to be</span> (<span class="trans">desu</span>), written with hiragana syllables.</figcaption>
-</figure>
+</figure-->
 
 
 <p>It is also used for grammatical endings after a word root written using kanji characters.</p>
 
 
 <figure id="fig_grammatical_kana" class="sideCaption">
+<img src="images/fig_grammatical_kana.svg" alt="集まります" class="ex" lang="ja" data-notes="Hiragino Mincho ProN" style="height:4rem;">
+<div>
+<figcaption>The word for <span class="meaning">to collect</span> <span class="transc">atsumarimasu</span>, with the verb root <span class="transc">atsu</span> written using a kanji character, and the remainder in hiragana expresssing the grammatical present-tense.</figcaption>
+<details><summary>details</summary><p><span class="eg" lang="ja">集まります</span></p></details>
+</div>
+</figure>
+
+
+<!--figure id="fig_grammatical_kana" class="sideCaption">
 <p class="large"><span class="ex" lang="ja">集まります</span></p>
 <figcaption>The word for <span class="meaning">to collect</span> (<span class="trans">atsumarimasu</span>), with the verb root (<span class="trans">atsu</span>) written using a kanji character, and the remainder in hiragana expresssing the grammatical present-tense.</figcaption>
-</figure>
+</figure-->
 
 
 <p>The basic syllabary  includes 5 independent vowel sounds, one nasal sound, and the rest are consonant+vowel combinations. In these lists we show hiragana (first) and katakana (second) together.</p>
@@ -603,7 +658,12 @@ alveolar</th>
 
 <figure class="characterBox auto bicameral" data-cols="ipa">ぁァ␣ぃィ␣ぅゥ␣ぇェ␣ぉォ␣ゃャ␣ゅュ␣ょョ␣ゎヮ␣っッ␣ー</figure>
 
-<p>Small versions of や, ゆ, and よ are used to form syllables such as <span class="charExample" translate="no"><span class="ex" lang="en">きゃ</span> <span class="trans">kya</span> <span class="ipa">kja</span></span> <span class="charExample" translate="no"><span class="ex" lang="en">きゅ</span> <span class="trans">kya</span> <span class="ipa">kja</span></span>  <span class="charExample" translate="no"><span class="ex" lang="en">きょ</span> <span class="trans">kyo</span> <span class="ipa">kjo</span></span></p>
+<p>Small versions of や, ゆ, and よ are used to form syllables such as
+<span class="charExample" translate="no"><span class="ex" lang="en">きゃ</span> <span class="transc">kya</span> <span class="ipa">kʲa</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="en">きゅ</span> <span class="transc">kya</span> <span class="ipa">kʲu</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="en">きょ</span> <span class="transc">kyo</span> <span class="ipa">kʲo</span></span>
+</p>
+
 <p><span class="codepoint" translate="no"><span lang="ja">&#x30C3;</span> [<a href="/scripts/kana/block#char30C3"><span class="uname">U+30C3 KATAKANA LETTER SMALL TU</span></a>]</span> is  used to lengthen a consonant sound.</p>
 
 <p><span class="codepoint" translate="no"><span lang="ja">&#x30FC;</span> [<a href="/scripts/kana/block#char30FC"><span class="uname">U+30FC KATAKANA-HIRAGANA PROLONGED SOUND MARK</span></a>]</span> is used to elongate vowel sounds. This elongation is phonemically significant. It is used predominantly with katakana, but occasionally also with hiragana.<tt>uk,720</tt></p>
@@ -641,10 +701,14 @@ alveolar</th>
 <figcaption>Yotsugana pronunciation around Japan. (source <tt>wy</tt>.)</figcaption>
 </figure>
 
-<p>The orthographic reform shortly after World War 2 recommended the use of only <span class="codepoint" translate="no"><span lang="zh">&#x3058;</span> [<a href="/scripts/punctuation/block#char3058"><span class="uname">U+3058 HIRAGANA LETTER ZI</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#x305A;</span> [<a href="/scripts/punctuation/block#char305A"><span class="uname">U+305A HIRAGANA LETTER ZU</span></a>]</span>, except in circumstances where an unvoiced sound has become voiced because of:<tt>wy</tt></p>
+<p>The orthographic reform shortly after World War 2 recommended the use of only <span class="codepoint" translate="no"><span lang="ja">&#x3058;</span> [<a href="/scripts/punctuation/block#char3058"><span class="uname">U+3058 HIRAGANA LETTER ZI</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ja">&#x305A;</span> [<a href="/scripts/punctuation/block#char305A"><span class="uname">U+305A HIRAGANA LETTER ZU</span></a>]</span>, except in circumstances where an unvoiced sound has become voiced because of:<tt>wy</tt></p>
 <ol>
-<li> compounding (rendaku), eg. <span class="charExample" translate="no"><span class="ex" lang="zh">神無月</span> <span class="ipa">kannad͡zuki</span> <span class="meaning">October (lunar month)</span></span>which combines <span class="charExample inline" translate="no"><span class="ex" lang="zh">かん</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="zh">な</span></span>, and <span class="charExample inline" translate="no"><span class="ex" lang="zh">つき</span></span>, would be written in hiragana as <span class="charExample" translate="no"><span class="ex" lang="zh">かんなづき</span></span></li>
-<li>repetition, eg. <span class="charExample" translate="no"><span class="ex" lang="zh">続</span> <span class="ipa">t͡sud͡zuki</span> <span class="meaning">continuation</span></span>is written in hiragana as<span class="charExample" translate="no"><span class="ex" lang="zh">つづく</span></span></li>
+<li> compounding (rendaku), eg.
+<span class="eg" lang="ja">神無月</span>
+which combines <span class="charExample inline" translate="no"><span class="ex" lang="ja">かん</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="ja">な</span></span>, and <span class="charExample inline" translate="no"><span class="ex" lang="ja">つき</span></span>, would be written in hiragana as <span class="charExample" translate="no"><span class="ex" lang="ja">かんなづき</span></span></li>
+<li>repetition, eg.
+<span class="eg" lang="ja">続</span>
+is written in hiragana as<span class="charExample" translate="no"><span class="ex" lang="ja">つづく</span></span></li>
 </ol>
 </section>
 
@@ -714,10 +778,17 @@ alveolar</th>
 
 
 <figure id="fig_vertical_romaji" class="sideCaption">
+<img src="images/fig_vertical_romaji2.svg" alt="の editor は" style="margin:0 2em; width: 3rem;" class="ex" lang="ja">
+<img src="images/fig_vertical_romaji1.svg" alt="のＧＮＰは" style="margin:0 2em; width: 3rem;" class="ex" lang="ja">
+<figcaption>Romaji text with characters rotated (left), and an acronym with upright letters (right).</figcaption>
+</figure>
+
+
+<!--figure id="fig_vertical_romaji" class="sideCaption">
 <img src="images/romaji_sidewayss.png" alt="" style="margin:0 2em;">
 <img src="images/romaji_upright.png" alt="" style="margin:0 2em;">
 <figcaption>Romaji text with characters rotated (left), and an acronym with upright letters (right).</figcaption>
-</figure>
+</figure-->
 
 
 <p>Numbers, and sometimes text, may also run horizontally within a vertical line. This is most common with double-digit numbers, such as in dates. The width of the horizontal text should not normally exceed the width of the surrounding vertical text (ie. it should fit in the width of a character space). This is referred to as <span class="name">tate chu yoko</span>.</p>
@@ -964,52 +1035,52 @@ alveolar</th>
 <tbody>
 <tr>
 <th rowspan="4">phrase</th>
-<td><span class="codepoint" translate="no"><span lang="zh">&#xFF0C;</span> [<a href="/scripts/punctuation/block#charFF0C"><span class="uname">U+FF0C FULLWIDTH COMMA</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF0C;</span> [<a href="/scripts/punctuation/block#charFF0C"><span class="uname">U+FF0C FULLWIDTH COMMA</span></a>]</span>&nbsp;</td>
 <td class="vt"><img src="images/locations/BL.png" alt="Bottom left"></td>
 <td class="vt"><img src="images/locations/TR.png" alt="Bottom right"></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span></td>
 <td class="vt"><img src="images/locations/BL.png" alt="Bottom left"></td>
 <td class="vt"><img src="images/locations/TR.png" alt="Bottom right"></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#xFF1A;</span> [<a href="/scripts/punctuation/block#charFF1A"><span class="uname">U+FF1A FULLWIDTH COLON</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF1A;</span> [<a href="/scripts/punctuation/block#charFF1A"><span class="uname">U+FF1A FULLWIDTH COLON</span></a>]</span>&nbsp;</td>
 <td class="vt"><img src="images/locations/HC.png" alt="Bottom right"></td>
 <td class="vt"><img src="images/locations/VC.png" alt="Bottom right"></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#xFF1B;</span> [<a href="/scripts/punctuation/block#charFF1B"><span class="uname">U+FF1B FULLWIDTH SEMICOLON</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF1B;</span> [<a href="/scripts/punctuation/block#charFF1B"><span class="uname">U+FF1B FULLWIDTH SEMICOLON</span></a>]</span>&nbsp;</td>
 <td class="vt"><img src="images/locations/HC.png" alt="Bottom right"></td>
 <td class="vt"><img src="images/locations/VC.png" alt="Bottom right"></td>
 </tr>
 <tr>
 <th rowspan="2">sentence</th>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x3002;</span> [<a href="/scripts/punctuation/block#char3002"><span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x3002;</span> [<a href="/scripts/punctuation/block#char3002"><span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span></a>]</span></td>
 <td class="vt"><img src="images/locations/BL.png" alt="Bottom left"></td>
 <td class="vt"><img src="images/locations/TR.png" alt="Bottom right"></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span></td>
 <td class="vt"><img src="images/locations/BL.png" alt="Bottom left"></td>
 <td class="vt"><img src="images/locations/TR.png" alt="Bottom right"></td>
 </tr>
 <tr>
 <th>exclamation</th>
-<td><span class="codepoint" translate="no"><span lang="zh">&#xFF01;</span> [<a href="/scripts/punctuation/block#charFF01"><span class="uname">U+FF01 FULLWIDTH EXCLAMATION MARK</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF01;</span> [<a href="/scripts/punctuation/block#charFF01"><span class="uname">U+FF01 FULLWIDTH EXCLAMATION MARK</span></a>]</span>&nbsp;</td>
 <td class="vt"><img src="images/locations/L.png" alt="Bottom right"></td>
 <td class="vt"><img src="images/locations/R.png" alt="Right"></td>
 </tr>
 <tr>
 <th>question</th>
-<td><span class="codepoint" translate="no"><span lang="zh">&#xFF1F;</span> [<a href="/scripts/punctuation/block#charFF1F"><span class="uname">U+FF1F FULLWIDTH QUESTION MARK</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF1F;</span> [<a href="/scripts/punctuation/block#charFF1F"><span class="uname">U+FF1F FULLWIDTH QUESTION MARK</span></a>]</span>&nbsp;</td>
 <td class="vt"><img src="images/locations/L.png" alt="Bottom right"></td>
 <td class="vt"><img src="images/locations/R.png" alt="Right"></td>
 </tr>
 </tbody>
 </table>
 
-<p><span class="codepoint" translate="no"><span lang="zh">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#x3002;</span> [<a href="/scripts/punctuation/block#char3002"><span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span></a>]</span> are the norm for vertical text, however two alternative conventions as applied to horizontal text: especially in books that mix Japanese and western text, such as books on science and technology, the former may be replaced by <span class="codepoint" translate="no"><span lang="zh">&#xFF0C;</span> [<a href="/scripts/punctuation/block#charFF0C"><span class="uname">U+FF0C FULLWIDTH COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span>. Often, however, the ideographic full stop is retained, since it is more visible and looks better (this convention has been adopted for Japanese official publications).<tt>j,#differences_in_vertical_and_horizontal_composition_in_use_of_punctuation_marks</tt></p>
+<p><span class="codepoint" translate="no"><span lang="ja">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ja">&#x3002;</span> [<a href="/scripts/punctuation/block#char3002"><span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span></a>]</span> are the norm for vertical text, however two alternative conventions as applied to horizontal text: especially in books that mix Japanese and western text, such as books on science and technology, the former may be replaced by <span class="codepoint" translate="no"><span lang="ja">&#xFF0C;</span> [<a href="/scripts/punctuation/block#charFF0C"><span class="uname">U+FF0C FULLWIDTH COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ja">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span>. Often, however, the ideographic full stop is retained, since it is more visible and looks better (this convention has been adopted for Japanese official publications).<tt>j,#differences_in_vertical_and_horizontal_composition_in_use_of_punctuation_marks</tt></p>
 <p>As the table shows, these punctuation marks require dedicated glyphs in the font, and cannot be achieved by simply rotating the glyph.</p>
 <p>Japanese also uses the following doubled exclamation/question marks. They remain upright in vertical text.</p>
 <table class="punctuationTable">
@@ -1017,16 +1088,16 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x203C;</span> [<a href="/scripts/punctuation/block#char203C"><span class="uname">U+203C DOUBLE EXCLAMATION MARK</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x203C;</span> [<a href="/scripts/punctuation/block#char203C"><span class="uname">U+203C DOUBLE EXCLAMATION MARK</span></a>]</span></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x2047;</span> [<a href="/scripts/punctuation/block#char2047"><span class="uname">U+2047 DOUBLE QUESTION MARK</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x2047;</span> [<a href="/scripts/punctuation/block#char2047"><span class="uname">U+2047 DOUBLE QUESTION MARK</span></a>]</span></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x2048;</span> [<a href="/scripts/punctuation/block#char2048"><span class="uname">U+2048 QUESTION EXCLAMATION MARK</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x2048;</span> [<a href="/scripts/punctuation/block#char2048"><span class="uname">U+2048 QUESTION EXCLAMATION MARK</span></a>]</span>&nbsp;</td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x2049;</span> [<a href="/scripts/punctuation/block#char2049"><span class="uname">U+2049 EXCLAMATION QUESTION MARK</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x2049;</span> [<a href="/scripts/punctuation/block#char2049"><span class="uname">U+2049 EXCLAMATION QUESTION MARK</span></a>]</span>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -1041,12 +1112,12 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x2E3A;</span> [<a href="/scripts/punctuation/block#char2E3A"><span class="uname">U+2E3A TWO-EM DASH</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x2E3A;</span> [<a href="/scripts/punctuation/block#char2E3A"><span class="uname">U+2E3A TWO-EM DASH</span></a>]</span>&nbsp;</td>
 <td class="vt"><img src="images/locations/VC.png" alt="Bottom right"></td>
 <td class="vt"><img src="images/locations/HC.png" alt="Bottom right"></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x2014;&#x2014;</span> [<a href="/scripts/punctuation/block#char2014"><span class="uname">U+2014 EM DASH</span></a> + <a href="/scripts/punctuation/block#char2014"><span class="uname">U+2014 EM DASH</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x2014;&#x2014;</span> [<a href="/scripts/punctuation/block#char2014"><span class="uname">U+2014 EM DASH</span></a> + <a href="/scripts/punctuation/block#char2014"><span class="uname">U+2014 EM DASH</span></a>]</span></td>
 <td class="vt"><img src="images/locations/VC.png" alt="Bottom right"></td>
 <td class="vt"><img src="images/locations/HC.png" alt="Bottom right"></td>
 </tr>
@@ -1073,8 +1144,8 @@ alveolar</th>
 </tr>
 </thead>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#xFF08;</span> [<a href="/scripts/punctuation/block#charFF08"><span class="uname">U+FF08 FULLWIDTH LEFT PARENTHESIS</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="zh">&#xFF09;</span> [<a href="/scripts/punctuation/block#charFF09"><span class="uname">U+FF09 FULLWIDTH RIGHT PARENTHESIS</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF08;</span> [<a href="/scripts/punctuation/block#charFF08"><span class="uname">U+FF08 FULLWIDTH LEFT PARENTHESIS</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF09;</span> [<a href="/scripts/punctuation/block#charFF09"><span class="uname">U+FF09 FULLWIDTH RIGHT PARENTHESIS</span></a>]</span></td>
 <td class="vt"><img src="images/locations/R.png" alt="Right aligned"> <img src="images/locations/L.png" alt="Left aligned"></td>
 <td class="vt"><img src="images/locations/B.png" alt="Bottom aligned"><br>
 <img src="images/locations/T.png" alt="Top aligned"></td>
@@ -1097,7 +1168,7 @@ alveolar</th>
 <p><span class="codepoint" translate="no"><span lang="ja">&#x3014;</span> [<a href="/scripts/punctuation/block#char3014"><span class="uname">U+3014 LEFT TORTOISE SHELL BRACKET</span></a>]</span> and its closing partner are the vertical equivalent of<span class="codepoint" translate="no"><span lang="ja">&#xFF3B;</span> [<a href="/scripts/punctuation/block#charFF3B"><span class="uname">U+FF3B FULLWIDTH LEFT SQUARE BRACKET</span></a>]</span>, which is used in horizontal text.</p>
 <p>Although there are a number of other bracket characters (listed just below),  they are less commonly used.</p>
 
-<figure class="auto"  data-cols="">【␣】␣〖␣〗␣｛␣｝</figure>
+<figure class="characterBox auto"  data-cols="ipa">【␣】␣〖␣〗␣｛␣｝</figure>
 
 
 </section>
@@ -1120,11 +1191,11 @@ alveolar</th>
 </tr>
 </thead>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x201C;</span> [<a href="/scripts/punctuation/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x201D;</span> [<a href="/scripts/punctuation/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x201C;</span> [<a href="/scripts/punctuation/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="ja">&#x201D;</span> [<a href="/scripts/punctuation/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span></td>
 <td class="vt"><img src="images/locations/TR.png" alt="Top=right aligned"> <img src="images/locations/TL.png" alt="Top-left aligned"></td>
 <td class="vt">-</td>
 </tr>
-<tr><td><span class="codepoint" translate="no"><span lang="zh">&#x300C;</span> [<a href="/scripts/punctuation/block#char300C"><span class="uname">U+300C LEFT CORNER BRACKET</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x300D;</span> [<a href="/scripts/punctuation/block#char300D"><span class="uname">U+300D RIGHT CORNER BRACKET</span></a>]</span></td>
+<tr><td><span class="codepoint" translate="no"><span lang="ja">&#x300C;</span> [<a href="/scripts/punctuation/block#char300C"><span class="uname">U+300C LEFT CORNER BRACKET</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="ja">&#x300D;</span> [<a href="/scripts/punctuation/block#char300D"><span class="uname">U+300D RIGHT CORNER BRACKET</span></a>]</span></td>
 <td class="vt"><img src="images/locations/TR.png" alt="Top=right aligned"> <img src="images/locations/TL.png" alt="Top-left aligned"></td>
 <td class="vt"><img src="images/locations/BR.png" alt="Bottom-right aligned"><br>
 <img src="images/locations/TL.png" alt="Top-left aligned"></td>
@@ -1144,12 +1215,12 @@ alveolar</th>
 <th>V</th>
 </tr>
 </thead>
-<tr><td><span class="codepoint" translate="no"><span lang="zh">&#x2018;</span> [<a href="/scripts/punctuation/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x2019;</span> [<a href="/scripts/punctuation/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span></td>
+<tr><td><span class="codepoint" translate="no"><span lang="ja">&#x2018;</span> [<a href="/scripts/punctuation/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="ja">&#x2019;</span> [<a href="/scripts/punctuation/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span></td>
 <td class="vt"><img src="images/locations/TR.png" alt="Top-right aligned"> <img src="images/locations/BL.png" alt="Bottom-left aligned"></td>
 <td class="vt">-</td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="zh">&#x300E;</span> [<a href="/scripts/punctuation/block#char300E"><span class="uname">U+300E LEFT WHITE CORNER BRACKET</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x300F;</span> [<a href="/scripts/punctuation/block#char300F"><span class="uname">U+300F RIGHT WHITE CORNER BRACKET</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x300E;</span> [<a href="/scripts/punctuation/block#char300E"><span class="uname">U+300E LEFT WHITE CORNER BRACKET</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="ja">&#x300F;</span> [<a href="/scripts/punctuation/block#char300F"><span class="uname">U+300F RIGHT WHITE CORNER BRACKET</span></a>]</span></td>
 <td class="vt">-</td>
 <td class="vt"><img src="images/locations/BR.png" alt="Bottom-right aligned"><br>
 <img src="images/locations/TL.png" alt="Top-left aligned"></td>
@@ -1204,17 +1275,36 @@ alveolar</th>
 
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
+
 <p>Japanese has a few ways of representing inline notes and annotations.</p>
+
+
+
 
 
 <section id="annotation_ruby">
 <h4>Ruby</h4>
+
 <p>Various ways of arranging inter-linear annotations alongside text fall under the rubrique of <span class="name">ruby</span> (named from the British print size originally used for the annotations). These include mono-ruby, jukugo-ruby, and group-ruby, and they are described in detail below.</p>
-<p>Ruby is commonly used to indicate the pronunciation of ideographic characters used in Japanese, as it cannot usually be guessed and so can pose difficulties for those learning the language. For these cases, mono-ruby is most commonly used, however a variant, jukugo-ruby, is sometimes applied to compound nouns (which are called <span class="name">jukugo</span> in Japanese). Where sequences of kanji characters do not have the same pronunciation as the sum of their parts (called <span class="name">jukuji</span>), group ruby is used to represent the sound,<tt>j,#h-note-109</tt> eg. <span class="charExample" translate="no"><span class="ex" lang="ja">いなか</span> <span class="ipa">inaka</span></span><span class="charExample" translate="no"><span class="ex" lang="ja">田舎</span> <span class="meaning">countryside</span></span>or <span class="charExample" translate="no"><span class="ex" lang="ja">きょう</span> <span class="ipa">kyō</span></span><span class="charExample" translate="no"><span class="ex" lang="ja">今日</span> <span class="meaning">today</span></span></p>
+
+<p>Ruby is commonly used to indicate the pronunciation of ideographic characters used in Japanese, as it cannot usually be guessed and so can pose difficulties for those learning the language. For these cases, mono-ruby is most commonly used, however a variant, jukugo-ruby, is sometimes applied to compound nouns (which are called <span class="name">jukugo</span> in Japanese).</p>
+
+<p>Where sequences of kanji characters do not have the same pronunciation as the sum of their parts (called <span class="name">jukuji</span>), such as the following two words, group ruby is used to represent the sound.<tt>j,#h-note-109</tt></p>
+
+<p class="instructions">Click on the words to see their composition.</p>
+<p>
+<span class="eg" lang="ja">田舎</span>
+<span class="eg" lang="ja">今日</span>
+</p>
+
 <p>Ruby annotations are also used to provide brief indications of the meaning of words or characters. These annotations typically use the group-ruby approach. The most typical example of this is attaching ruby text to a kanji compound word to indicate a corresponding loan word in katakana (see <a class="figref">fig_group_ruby</a>).<tt>j,#id221</tt> Group ruby is also used to indicate the reading or the meaning of a Western word used in base text, or where a synonymous Western word in Latin characters is attached as a ruby annotation to a Japanese word (see Figure 112).</p>
+
 <p>The rest of this section describes features that are generally common to all forms of ruby, before we move on to examine the differences in following subsections.</p>
+
 <p>All annotations appear within the standard inter-line space for the page, and don't create extra line height if they only appear on a single line. The inter-line space is usually set at an appropriate size to accommodate annotations.</p>
+
 <p>Unlike Chinese, it is common to find annotations applied just to specific words, rather than annotating the whole text.</p>
+
 <p>Ruby annotations normally appear above horizontal lines of text, and to the right of vertical lines. Occasionally, both phonetic and semantic annotations are applied to the same base text, in which case the annotations appear on both sides of the base. A typical scenario in these cases would be to have mono-ruby above/right of the base, and group-ruby below/left.<tt>j,#choice_of_sides_for_ruby_with_respect_to_base_characters</tt></p>
 
 
@@ -1235,10 +1325,13 @@ alveolar</th>
 
 <!--p class="large" style="writing-mode:horizontal-tb;"><span class="ex" lang="ja"><ruby><rb>推</rb><rt>すい</rt><rb>理</rb><rt style="color:chocolate">り</rt><rb>小</rb><rt>しょう</rt><rb>説</rb><rt style="color:chocolate">せつ</rt></ruby></span></p-->
 
-<figure id="fig_mono_ruby">
-<img src="images/suirishousetsu.png" alt="推/すい/理/り/小/しょう/説/せつ (detective novel)" style="margin-right:3em; vertical-align: top;">
+<figure id="fig_mono_ruby" class="sideCaption">
+<img src="images/suirishousetsu.png" alt="推/すい/理/り/小/しょう/説/せつ (detective novel)" style="margin-inline:3em; vertical-align: top;">
 <img src="images/suirishousetsu_v.png" alt="推/すい/理/り/小/しょう/説/せつ (detective novel) vertical">
-<figcaption>Mono-ruby for <span class="charExample inline" translate="no"><span class="ex" lang="ja">推理小説</span> <span class="meaning">detective novel</span></span>, in horizontal and vertical text (colouring added for illustrative purposes). </figcaption>
+<div>
+<figcaption>Mono-ruby for <span class="meaning">detective novel</span>, in horizontal and vertical text (colouring added for illustrative purposes). </figcaption>
+<details><summary>details</summary><p><span class="eg" lang="ja">推理小説</span></p></details>
+</div>
 </figure>
 
 <p>Since the annotation characters are usually 1/2 the size of the base characters, 3-character annotations require more space that the underlying kanji. Internally to the sequence, this will produce a gap between the base characters, since annotations cannot overlap (see <a class="figref">fig_mono_ruby</a>).</p>
@@ -1334,7 +1427,13 @@ alveolar</th>
 <section id="annotation_inline">
 <h4>Inline ruby</h4>
 <p>Where text sizes are too small for ruby characters to be easily read, the ruby annotation is typically rendered after the base text, in parentheses. </p>
-<p>Inline annotations should normally correspond to full words, even if the sequence of base characters would otherwise be represented using mono-ruby. For example, the inline representation of the word <span class="charExample" translate="no"><span class="ex" lang="ja">東京</span> <span class="meaning">Tokyo</span></span>  should be displayed inline as <span class="charExample" translate="no"><span class="ex" lang="ja">東京（とうきょう）</span></span>and not <span class="charExample" translate="no"><span class="ex" lang="ja">東（とう）京（きょう）</span></span></p>
+<p>Inline annotations should normally correspond to full words, even if the sequence of base characters would otherwise be represented using mono-ruby. For example, the inline representation of the word
+<span class="eg" lang="ja">東京</span>
+should be displayed inline as 
+<span class="charExample" translate="no"><span class="ex" lang="ja">東京（とうきょう）</span></span>
+and not
+<span class="charExample" translate="no"><span class="ex" lang="ja">東（とう）京（きょう）</span></span>
+</p>
 </section>
 
 
@@ -1785,7 +1884,7 @@ data-cols="">九阡␣八阡␣七阡␣六阡␣伍阡␣四阡␣参阡␣弐�
 <h4>Prefixes and suffixes</h4>
 
 
-<p>The most common suffix is  <span class="codepoint" translate="no"><span lang="zh">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span>. The  fixed styles have no prefix/suffix.</p>
+<p>The most common suffix is  <span class="codepoint" translate="no"><span lang="ja">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span>. The  fixed styles have no prefix/suffix.</p>
 <p>Examples:</p>
 
 

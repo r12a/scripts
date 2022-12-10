@@ -20,5 +20,15 @@ autoExpandExamples.ja = `
 
 すべて|everything|su§be§te
 人間|human|nin§gen
+日本語|Japanese (lang)|ni§hoŋ§go
+テキスト|text|te§k§s§t
+です|to be (existential)|de§s
+集まります|to collect|atsu§ma§ri§ma§s
+静電気|static electricity|sei§den§ki
+神無月|October (lunar month)|kan§na§d͡zuki
+続|continuation|t͡sud͡zuki
+田舎|countryside|inaka§‹
+今日|today|kʲoː§‹
+東京|Tokyo|toː§kʲoː
+推理小説|detective novel|sui§ri§ʃʲoː§set͡su
 `
-
