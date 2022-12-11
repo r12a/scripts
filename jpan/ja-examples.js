@@ -34,7 +34,22 @@ autoExpandExamples.ja = `
 なっと|fermented soya beans|na§t§to
 インタネット|internet|i§n§ta§ne§t§to
 コーヒー|coffee|koːɸiː
-
+昔昔|once upon a time|mukaʃi§mukaʃi
+昔々|once upon a time|mukaʃi§mukaʃi
+昔〻|once upon a time|mukaʃi§mukaʃi
+島々|islands|ʃima§d͡ʒima
+島〻|islands|ʃima§d͡ʒima
+かゝし|scarecrow|ka§ka§ʃi
+たゞし|but, however|ta§da§ʃi
+人々|people|hito§bito
+バナヽ|banana|ba§na§na§
+まあ〱|so-so|maː§‹§maː
+いろ〱|various|i§ro§iro
+わざ〱|on purpose|wa§za§waza
+離れ〲|apart|hana§re§banare
+いろ〳〵|various|i§ro§iro§‹
+馬鹿々々しい|ridiculous|ba§ka§ba§ka§shi
+くれ〴〵|please|ku§re	§gure§‹
 
 
 
