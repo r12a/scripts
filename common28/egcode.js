@@ -65,7 +65,9 @@ function addExamples (langFilter) {
 			out += '" translate="no">'
 			
 			// term
-			out += `<span class="ex" lang="${ nodes[n].lang }"`
+			out += `<span class="ex`
+            if (nodes[n].classList.contains('vertical')) out += ' vertical'
+            out += `" lang="${ nodes[n].lang }"`
 			//out += nodes[n].lang
 			//out += '"'
 			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
