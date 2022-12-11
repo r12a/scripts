@@ -112,7 +112,7 @@ function setFootnoteRefs () {
         var linktext = itemArray[0].replace(/@/,'')
         
         if (id.startsWith('@')) { // not linked to references section
-            if (fnrefs[i].classList.contains('more')) out = ` See <a target="_blank" title="${ itemArray[0] }" href="${ itemArray[1] }">${ linktext }</a>`
+            if (fnrefs[i].classList.contains('more')) out = `<a target="_blank" title="${ itemArray[0] }" href="${ itemArray[1] }">${ linktext }</a>`
             else out = `<a class="fn" target="_blank" title="${ itemArray[0] }" href="${ itemArray[1] }">§</a>`
             }
         else { // look up info in refs.js
