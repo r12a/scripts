@@ -810,6 +810,22 @@ function makeTables (lang) {
 
 
 
+function getStatus (token) {
+    // returns expanded strings for the status column in spreadsheet
+    switch (token) {
+    case 'r': status = 'rare'; break;
+    case 'i': status = 'infreq.'; break;
+    case 'l': status = 'loan'; break;
+    case 'a': status = 'archaic'; break;
+    case 'u': status = 'unused'; break;
+    case 'o': status = 'obsolete'; break;
+    case 'd': status = 'deprecated'; break;
+    default: status = '&nbsp;'
+    }
+
+    return status
+    }
+
 
 function replaceStuff (node) {
 
@@ -910,6 +926,8 @@ function replaceStuff (node) {
         if (showStatus) {
             var status = '&nbsp;'
             if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.status]) {
+                status = getStatus(window.spreadsheetRows[char][cols.status])
+                /*
                 switch (window.spreadsheetRows[char][cols.status]) {
                 case 'r': status = 'rare'; break;
                 case 'i': status = 'infreq.'; break;
@@ -919,7 +937,9 @@ function replaceStuff (node) {
                 case 'o': status = 'obsolete'; break;
                 case 'd': status = 'deprecated'; break;
                 default: status = '&nbsp;'
-                }}
+                }
+                */
+                }
             out += `<span class="listItemType">${ status }</span>`
             }
 
@@ -1032,6 +1052,23 @@ function replaceStuff (node) {
 
 
 
+function getStatusForIndex (token) {
+    // returns expanded strings for the status column in spreadsheet
+    switch (token) {
+    case 'r': status = 'rare'; break;
+    case 'i': status = 'infrequent'; break;
+    case 'l': status = 'loan'; break;
+    case 'a': status = 'archaic'; break;
+    case 'u': status = 'unused'; break;
+    case 'o': status = 'obsolete'; break;
+    case 'd': status = 'deprecated'; break;
+    default: status = '&nbsp;'
+    }
+
+    return status
+    }
+
+
 
 
 
@@ -1108,9 +1145,18 @@ function makeIndexLine (node) {
 
         // add any links
         out += '<div class="index_details">'
-        if (window.spreadsheetRows[char][cols.ucsName]) var uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
+        if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ucsName]) {
+            var uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
+            if (window.spreadsheetRows[char][cols.status] && window.spreadsheetRows[char][cols.status] !== '0') {
+                status = getStatusForIndex(window.spreadsheetRows[char][cols.status]).replace(/\./,'')
+                //out += `<span class="index_uname index_${ status }" onclick="makeFootnoteIndex('${ chars[i] }')">${ uname } &nbsp;&nbsp; (${ status })</span>`
+                out += `<span class="index_uname index_${ status }" onclick="makeFootnoteIndex('${ chars[i] }')">(${ status }) &nbsp;&nbsp; ${ uname }</span>`
+                }
+            else out += `<span class="index_uname" onclick="makeFootnoteIndex('${ chars[i] }')">${uname}</span>`          
+            }
         else uname = "NAME UNKNOWN"
-        out += `<span class="index_uname"  onclick="makeFootnoteIndex('${ chars[i] }')">${uname}</span>`
+
+        //out += `<span class="index_uname" onclick="makeFootnoteIndex('${ chars[i] }')">${uname}</span>`
         if (window.spreadsheetRows[char]) {
             out += `<span class="indexLineData" onclick="makeFootnoteIndex('${ chars[i] }')">`
             if (window.spreadsheetRows[char][cols.typeLoc]) out += `<span class="typeLoc">${ window.spreadsheetRows[char][cols.typeLoc] }</span> `
