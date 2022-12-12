@@ -21,7 +21,7 @@ autoExpandExamples.ja = `
 すべて|everything|su§be§te
 人間|human|nin§gen
 日本語|Japanese (lang)|ni§hoŋ§go
-テキスト|text|te§k§s§t
+テキスト|text|te§kⁱ§s§t
 です|to be (existential)|de§s
 集まります|to collect|atsu§ma§ri§ma§s
 静電気|static electricity|sei§den§ki
@@ -50,6 +50,35 @@ autoExpandExamples.ja = `
 いろ〳〵|various|i§ro§iro§‹
 馬鹿々々しい|ridiculous|ba§ka§ba§ka§shi
 くれ〴〵|please|ku§re	§gure§‹
+閉める|to close|ʃi§me§ru
+〆切|deadline|ʃime§kiri
+締切|deadline|ʃime§kiri
+より|than, from|jo§ri
+事|thing|ko§to
+三ヶ月|3 months|san§ka§get͡su
+三ヶ国 |3 countries|san§ka§koku
+３ヶ|3 things|san§ko
+おかあさん|mother|o§kaː§‹§sa§n
+おにいさん|elder brother|o§niː§‹§sa§n
+ゆうがた|evening|yuː§‹§ga§ta
+すうがく|mathematics|suː§‹§ga§ku
+おねえさん|elder sister|o§neː§‹§sa§n
+きれい|pretty|ki§reː§‹
+ていねい|polite|teː§‹§neː§‹
+おはよう|good morning|o§ha§yoː§‹
+おおきい|big|oː§‹§kiː§‹
+ビール|beer|biː§‹§rᵚ
+ボール|ball|boː§‹§rᵚ
+エスカレーター|escalator|e§s§ka§reː§‹§taː§‹
+スペイン|Spain|s§peː§‹§n
+ちょっと|a little|t͡ɕo§‹§t§to
+あっ|oh!|a§ʔ
+ふぁん|fan|f§a§n
+シフォン|chiffon|ʃi§ɸ§o§ɴ
+ティー|tea, tee|t§iː§‹
+はぁぁ|sound of breathing|haː§‹§‹
+
+
 
 
 
