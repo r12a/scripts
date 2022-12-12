@@ -1094,8 +1094,24 @@ is written in hiragana as<span class="charExample" translate="no"><span class="e
 <section id="transforms">
 <h3>Transforming characters</h3>
 
-<p>Japanese kanji and kana is a monocameral orthography, and no transforms are needed to convert between different forms of a given letter.</p>
-<p>However, transforms may be applied to convert between half-width and full-width kana characters.</p>
+<p>Japanese kanji and kana is a monocameral orthography, and no transforms are needed to convert between different case forms for a given letter. However, romaji characters are cased.</p>
+
+<p>Other transforms may be applied to convert between half-width and full-width  characters. This can be useful for converting to and from fullwidth Latin and punctuation, and is sometimes useful for converting small kana characters to full-sized versions.</p>
+
+<p>The latter transformation is common for ruby text (see <a class="secref">inlinenotes</a>), where small kana are converted visually to full-sized to aid with readability of the text, given that ruby text is written in small character sizes.</p>
+
+<div class="html">
+<p>To achieve this in web pages use the <code class="kw" translate="no">text-transform</code> CSS property<tt>@CSS Text specification,https://www.w3.org/TR/css-text-3/#transforming</tt> in your style sheet with the following values.</p>
+
+<dl>
+<dt>full-width <span class="instructions">(Not yet supported by browsers.)</span><tt>@CSS Text specification,https://www.w3.org/TR/css-text-3/#transforming</tt></dt>
+<dd>Transforms all ASCII characters into fullwidth forms.</dd>
+<dt>full-size-kana <span class="instructions">(Not yet supported by browsers.)</span><tt>@CSS Text specification,https://www.w3.org/TR/css-text-3/#transforming</tt></dt>
+<dd>Converts all small Kana characters to the equivalent full-size Kana.</dd>
+</dl>
+<p>Eg. the following converts the visual appearance (only) of small kana in ruby text to fullwidth characters, except in headings (where the characters are larger):<br><code>rt { font-size: 50%; text-transform: full-size-kana; }<br>
+:is(h1, h2, h3, h4) rt { text-transform: none; /* unset for large text*/ }</code></p>
+</div>
 </section>
 </section>
 
