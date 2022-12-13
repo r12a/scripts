@@ -3,9 +3,9 @@ defList={
 
 "checked": '\'Checked\' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. \'Unchecked\' means ending in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</p>',
 
-"circumgraph": 'When a single vowel-sign code point produces glyphs on more than one side of the consonant base, it is referred to here as a circumgraph.',
+"circumgraph": 'When a single vowel sign code point produces glyphs on more than one side of the consonant base, it is referred to here as a circumgraph.',
 
-"compositevowel": 'A <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">composite vowel</a> is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel-signs, repurposed consonants, and diacritics available.',
+"compositevowel": 'A <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">composite vowel</a> is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel signs, repurposed consonants, and diacritics available.',
 
 "conjunct": 'A <a class="termref" target="_blank" href="../glossary/index.html#conjunct">conjunct</a> is a consonant cluster where the lack of intervening vowels is indicated by one or more of stacking, changing and merging the shapes of the constituent letter forms (usually in abugidas). Not all consonant clusters are displayed as conjuncts.',
 
@@ -29,7 +29,7 @@ defList={
 
 "letterspacing": 'Unlike justification, which fits text within a fixed space, letter-spacing adds regular amounts of space between letters, and the resulting length is a by-product of that.',
 
-"prebase": 'The glyph of a pre-base (or prescript) vowel-sign is displayed to the left of the consonant or orthographic syllable after which it is pronounced. It is still typed and stored, however, in pronunciation order.',
+"prebase": 'The glyph of a pre-base (or prescript) vowel sign is displayed to the left of the consonant or orthographic syllable after which it is pronounced. It is still typed and stored, however, in pronunciation order.',
 
 "materlectionis": 'In the spelling of Arabic, Hebrew, and other Semitic languages, mater lectionis refers to a consonant that is used to indicate the location of a vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a>',
 
@@ -43,7 +43,7 @@ defList={
 
 "unchecked": '\'Checked\' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. \'Unchecked\' means ending in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</p>',
 
-"vocalic": 'Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.',
+"vocalic": 'Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel signs and independent vowel letters.',
 
 "vowelsign": '<a class="termref" target="_blank" href="../glossary/index.html#vowelsign">Vowel-signs</a> are shapes that appear alongside a consonant to express a following (non-inherent) vowel sound.  These are known as <span class="name">\'matras\'</span> in Sanskrit. Sometimes multiple shapes are used, on various sides of the base consonant (circumgraphs). ',
 
