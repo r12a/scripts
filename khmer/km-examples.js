@@ -124,14 +124,14 @@ autoExpandExamples.km = `
 កម្ពុជ||
 កម្ពុជា||
 កម្ពោជិក||
-កម្ម|action, deed|kɑm
+កម្ម|action, deed|kɑ§m§–
 កម្មករ|worker|ka§m.§mĕə§ʔ.kɑː§–§~ka§m.§ma§ʔ.kɑː§–~ka§m.§ˈkɑː§–
 កម្មករនាវា||
 កម្មការិនី||
 កម្មន្ត||
 កម្មន្តសាល||
 កម្មបទ||
-កម្មផល|karma|kɑːmmɔːpʰɑːl|||x|
+កម្មផល|karma|kɑː§m§mɔː§pʰɑː§l|||x|
 កម្មវិធី||
 កម្មសិទ្ធិ||
 កម្មាធិការ||
@@ -1349,10 +1349,10 @@ autoExpandExamples.km = `
 ជាដរាប||
 ជាដើម||
 ជាតក||
-ជាតិ|national|ciət~ciə.ˈteʔ
+ជាតិ|national|ciə§t||ciə.ˈteʔ
 ជាតិនិយម||
 ជាតិលិង្គ||
-ជាតិសាសន៍|race|ciəteʔsaːsɑː|||x
+ជាតិសាសន៍|race|ciə§teʔ§saː§sɑː§–|||x
 ជាតូបនីយកម្ម||
 ជាថ្មី||
 ជាទី||
@@ -4472,7 +4472,7 @@ autoExpandExamples.km = `
 វិថី||
 វិទូ|expert|ʋi.ˈtuː
 វិទ្យា||
-វិទ្យាល័យ|highschool|ʋi.tʰjiə.laj
+វិទ្យាល័យ|highschool|ʋi.§tʰ§jiə.§la§j
 វិទ្យាសាស្ត្រ||
 វិទ្យាសាស្ត្រនយោបាយ||
 វិទ្យាស្ថាន||
@@ -4575,7 +4575,7 @@ autoExpandExamples.km = `
 សកម្មភាព||
 សកល||
 សកលលោក||
-សកលវិទ្យាល័យ|university|sɑːkɑːlɔːʋiʔtjiəlɨj*|||x
+សកលវិទ្យាល័យ|university|sɑː§kɑː§lɔː§ʋiʔ§t§jiə§lɨ§j|||*x
 សកុណាយន្ត||
 សក់|hair|sɑʔ
 សក់ទង់ដែង||
@@ -5610,7 +5610,7 @@ autoExpandExamples.km = `
 អនុស្សាវរីយ៍||
 អន្ត||
 អន្តរ||
-អន្តរជាតិ|international|ʔɑn.taʔ.raʔ.ciət
+អន្តរជាតិ|international|ʔɑ§n.§taʔ.§raʔ.§ciə§t
 អន្តរវាសក||
 អន្តរាគមន៍||
 អន្តរាយ||
@@ -6136,7 +6136,7 @@ autoExpandExamples.km = `
 ហ្វ៊ីល|film|fiːl||from French film
 ហ្សាស|jazz|ʒaːh||from French jazz
 ហ្ស៊ីប|jeep|ʒiːp||from French jeep
-
+មហវិទ្យាល័យ|highschool|mɔː§–§ʋi§t§jiə§la§j
 
 
 

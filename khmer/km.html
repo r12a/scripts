@@ -3525,24 +3525,87 @@ and separate phrases with a wider space such as
 <h2>Line &amp; paragraph layout</h2>
 
 
+
+
+
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
-<p>Although Khmer doesn't use spaces or dividers between words, the expectation is that line-breaks occur at word boundaries.</p>
-<p>There are three basic types of Khmer word:</p>
-<ol>
-<li>Single, indivisible words: eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជាតិ</span> <span class="trans">c̱āti</span> <span class="meaning">national</span></span><span class="charExample" translate="no"><span class="ex" lang="km">វិទ្យាល័យ</span> <span class="trans">v̱iṯ͓ȳāḻăȳ</span> <span class="meaning">highschool</span></span><span class="charExample" translate="no"><span class="ex" lang="km">កម្ម</span> <span class="trans">km̱͓m̱</span> <span class="meaning">mission</span></span></li>
-<li>Words with prefixes and suffixes: eg. <span class="charExample" translate="no"><span class="ex" lang="km">អន្តរជាតិ</span> <span class="trans">ʔṉ͓tṟc̱āti</span> <span class="meaning">international</span></span><span class="charExample" translate="no"><span class="ex" lang="km">មហវិទ្យាល័យ</span> <span class="trans">m̱hv̱iṯ͓ȳāḻăȳ</span> <span class="meaning">high school</span></span>      <span class="charExample" translate="no"><span class="ex" lang="km">កម្មករ</span> <span class="trans">km̱͓m̱kṟ</span> <span class="meaning">workers</span></span></li>
-<li>Compound words (combining 2, 3, or more single words): eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជាតិសាសន៍</span> <span class="trans">c̱ātisāsṉ˟</span> <span class="meaning">race</span></span><span class="charExample" translate="no"><span class="ex" lang="km">កម្មផល</span> <span class="trans">km̱͓m̱pʰḻ</span> <span class="meaning">karma</span></span><span class="charExample" translate="no"><span class="ex" lang="km">សកលវិទ្យាល័យ</span> <span class="trans">skḻv̱iṯ͓ȳāḻăȳ</span> <span class="meaning">university</span></span></li>
-</ol>
 
-<p>The first two types cannot be broken, but the third type can (<a href="https://github.com/w3c/sealreq/issues/4#issuecomment-384981313">Hong</a>). For example,
-<span class="charExample" translate="no"><span class="ex" lang="km">|ជាតិ|សាសន៍|</span></span>,
-<span class="charExample" translate="no"><span class="ex" lang="km">|កម្ម|ផល|</span></span>,
-<span class="charExample" translate="no"><span class="ex" lang="km">|សកល|វិទ្យាល័យ|</span></span>
-</p>
+<p>Although Khmer doesn't use spaces or dividers between words, the expectation is that line-breaks occur at word boundaries.</p>
+
+<p>There are three basic types of Khmer word, shown in the figures that follow. The first two types cannot be broken, but the third type can be broken where indicated by the vertical lines.<tt>@Hong (Github),https://github.com/w3c/sealreq/issues/4#issuecomment-384981313</tt></p>
+
+
+<figure id="fig_lb_unbreakable" class="sideCaption">
+<img src="images/fig_lb_unbreakable.svg" alt="កម្ម ជាតិ វិទ្យាល័យ" class="ex" lang="km" data-notes="Battambang 1710×2042" style="height: 15rem;">
+<div>
+<figcaption>Single, indivisible words.</figcaption>
+<details style="line-height: 1.6em; padding-inline-end:1rem;" open><summary>details</summary>
+<p><span class="eg inline" lang="km" dir="ltr">កម្ម</span></p>
+<p><span class="eg inline" lang="km" dir="ltr">ជាតិ</span></p>
+<p><span class="eg inline" lang="km" dir="ltr">វិទ្យាល័យ</span></p>
+</details>
+</div>
+</figure>
+
+
+<figure id="fig_lb_suffixes" class="sideCaption">
+<img src="images/fig_lb_suffixes.svg" alt="កម្មករ មហវិទ្យាល័យ អន្តរជាតិ" class="ex" lang="km" data-notes="Battambang 2456x2044" style="height: 15rem;">
+<div>
+<figcaption>Words with prefixes and suffixes.</figcaption>
+<details style="line-height: 1.6em; padding-inline-end:1rem;" open><summary>details</summary>
+<p><span class="eg inline" lang="km" dir="ltr">កម្មករ</span></p>
+<p><span class="eg inline" lang="km" dir="ltr">អន្តរជាតិ</span></p>
+<p><span class="eg inline" lang="km">មហវិទ្យាល័យ</span></p>
+</details>
+</div>
+</figure>
+
+
+<figure id="fig_lb_breakable" class="sideCaption">
+<img src="images/fig_lb_breakable.svg" alt="កម្មផល សកលវិទ្យាល័យ ជាតិសាសន៍" class="ex" lang="km" data-notes="Battambang 2978 × 2042" style="height: 15rem;">
+<div>
+<figcaption>Compound words (combining 2, 3, or more single words).</figcaption>
+<details style="line-height: 1.6em; padding-inline-end:1rem;" open><summary>details</summary>
+<p><span class="eg inline" lang="km" dir="ltr">កម្មផល</span></p>
+<p><span class="eg inline" lang="km" dir="ltr">សកលវិទ្យាល័យ</span></p>
+<p><span class="eg inline" lang="km" dir="ltr">ជាតិសាសន៍</span></p>
+</details>
+</div>
+</figure>
+
 
 <p>Text is not broken at sub-word syllable boundaries. In fact, this is particularly difficult to do algorithmically in Khmer, because syllable-final consonants are indistinguishable from consonants with an inherent vowel that constitute a new syllable. Some kind of morphological analysis is needed.</p>
+
+
+
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
 <p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the modern Khmer orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for characters used in modern Cambodian. Context may affect the behaviour of some of these and other characters.</p>
+
+<p class="instructions">Click on the Khmer characters to show what they are.</p>
+
+<ul>
+<li><span class="ex list" lang="km">“ ‘ (</span> &nbsp; should not be the last character on a line</li>
+<li><span class="ex list" lang="km">” ’ ) ? ! ។ ៕ ៚ %</span> &nbsp; should not begin a new line</li>
+<li><span class="ex list" lang="km">៛</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li>
+</ul>
+
+<p>The following character should <em>not</em> produce a line-break when they appear inside or alongside a word: <span class="charExample inline list" translate="no"><span class="ex" lang="hy">៙</span></span>.</p>
+
+<!--p>The repetition character, 
+<span class="codepoint" translate="no"><bdi lang="km">&#x0E46;</bdi> [<a href="/scripts/thai/block#char0E46"><span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span></a>]</span>
+is always preceded by space, however it should not wrap to the next line on its own.<tt class="more">@Github,https://github.com/w3c/sealreq/issues/45</tt></p-->
+</section>
+
 </section>
 
 
