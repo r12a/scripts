@@ -378,7 +378,7 @@ autoExpandExamples.km = `
 កេះ|to scratch|keh
 កែ|to repair|kae
 កែង||
-កែងដៃ||
+កែងដៃ|elbow|kae§ŋ§ˈɗaj|kaeng day
 កែច្នៃ||
 កែទំរង់||
 កែប||
@@ -619,7 +619,7 @@ autoExpandExamples.km = `
 ក្ស័ត្រ||
 ក្អក||
 ក្អម||
-ក្អាត់||
+ក្អាត់|tadpole|k§ʔa§t|kʼat
 ក្អុក||
 ក្អួត|to vomit|kʔuət
 ក្អេក||
@@ -1034,7 +1034,7 @@ autoExpandExamples.km = `
 ចង្ហុក||
 ចង្អុល|to confirm|cɑŋ.ˈʔol
 ចង្អូរ|channel, gutter|cɑ§ŋ.§ˈʔou§–
-ចង្អៀត|narrow|cɑŋ.ˈʔiət
+ចង្អៀត|narrow|cɑ§ŋ.§ˈʔiə§t
 ចចក||
 ចចាក់||
 ចចាមអារ៉ាម||
