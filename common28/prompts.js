@@ -319,7 +319,9 @@ function addUsageAdviceOLD (script, iso, picker) {
     <div style="color: white;">Font &amp; text size of the examples can be changed independently using the control that pulls out from the bottom right of the page.</div>
     
     <div style="display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-around;">
-    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="localStorage['docsAccess'] = JSON.stringify(access)">Save settings</div>
+    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="localStorage['docsAccess'] = JSON.stringify(access); ">Save settings</div>
+    
+    
     <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="this.parentNode.parentNode.style.display='none';">Close X</div>
     </div>
     </div>
@@ -388,7 +390,7 @@ function addUsageAdvice (script, iso, picker) {
         }
     
     out += `
-    <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
+    <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'; document.getElementById('settings_saved').style.visibility='hidden';"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
 
     <!-- ACCESSIBILITY PANEL  -->
     <div id="access" style="display: none;">
@@ -425,7 +427,8 @@ function addUsageAdvice (script, iso, picker) {
     <div style="color: white;">Font &amp; text size of the examples can be changed independently using the control that pulls out from the bottom right of the page.</div>
     
     <div style="display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-around;">
-    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="localStorage['docsAccess'] = JSON.stringify(access)">Save settings</div>
+    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="localStorage['docsAccess'] = JSON.stringify(access); document.getElementById('settings_saved').style.visibility = 'visible';">Save settings <span id="settings_saved" style="visibility:hidden">✓</span></div>
+    
     <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="this.parentNode.parentNode.style.display='none';">Close X</div>
     </div>
     </div>
