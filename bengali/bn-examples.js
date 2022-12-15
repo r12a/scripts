@@ -63,7 +63,7 @@ autoExpandExamples.bn = `
 অকাল বীর্যপাত||
 অকাল|hard times|ɔkal
 অকৃতকার্য||
-অক্টোবর||
+অক্টোবর|October|ɔ§k.§ʈo.§bɔ§ɾ
 অক্ষর||
 অক্ষি||
 অগ্নি||
@@ -723,7 +723,7 @@ autoExpandExamples.bn = `
 কচুয়া||
 কচ্ছপ||
 কঠিন|hard, difficult|kɔʈʰin
-কড়া|strict|kɔɽa/kɔɾa
+কড়া|strict|kɔ§ɽa§/kɔɾa
 কড়ে আঙ্গুল||
 কত|how much|ˈkɔt̪o
 কথা||
@@ -757,7 +757,7 @@ autoExpandExamples.bn = `
 করতাল|cymbal|kɔ§r§tɑ§l
 করবী|oleander|kɔɾɔbi
 করলা||
-করা|to do|kɔɾa/kɔɹa/kɔɽa
+করা|to do|kɔ§ɾa§/kɔɹa/kɔɽa
 করানো||
 করার||
 করে||
@@ -1079,7 +1079,7 @@ autoExpandExamples.bn = `
 গপ|gossip|ɡɔp
 গম||
 গর-||
-গরম|warm, hot|ɡɔɾom|ɡôrôm|ɡɔɽom
+গরম|warm, hot|ɡɔ§ɾo§m§/ɡɔɽom|ɡôrôm
 গরিলা|gorilla|ɡɔɾila||ɡɔɹila
 গরু||
 গরুর দুধ||
@@ -2374,7 +2374,7 @@ autoExpandExamples.bn = `
 বাইরে||
 বাইশ||
 বাউল||
-বাকি|left over|baki
+বাকি|left over|ba§ki
 বাকী||
 বাগ|garden, orchard|baɡ
 বাগধারা||
