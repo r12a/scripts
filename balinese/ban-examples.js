@@ -33,7 +33,7 @@ autoExpandExamples.ban = `
 ᬑᬱ᭄ᬞ᭄ᬬ|labial (ling.)||oṣthya
 ᬒᬁᬱᬦ᭄ᬢᬶ᭞ᬱᬦ᭄ᬢᬶ᭞ᬱᬦ᭄ᬢᬶ᭞ᬒᬁ|May peace be everywhere||omsanti,santi,santi,om
 ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ|God bless you||om swastiastu
-ᬓᬃᬡ|ear||karna
+ᬓᬃᬡ|ear|kar§na
 ᬓᬗᬶᬦ᭄||
 ᬓᬗᭂᬦ᭄|desirous, eager|ˈka.ŋən
 ᬓᬚ|towards the mountain|kaˈdʒə
@@ -147,7 +147,7 @@ autoExpandExamples.ban = `
 ᬤᬾᬯ|god|dewa
 ᬤᬾᬰ|village|desə|desa
 ᬤᬿᬢ᭄ᬬ|giant||daitya
-ᬤᭀᬦ᭄|leaf||don
+ᬤᭀᬦ᭄|leaf|do§n
 ᬥᬃᬫ|dharma, religion|darmə
 ᬥᬦ|wealth|danə|dana
 ᬥᬯᬸᬄ|time|dawuh
@@ -216,7 +216,7 @@ autoExpandExamples.ban = `
 ᬩᬾᬤ||
 ᬩᬾᬩᬾᬓ᭄||
 ᬩᭂᬘᬶᬓ᭄||
-ᬩᭂᬦ᭄ᬤᬾᬰ|village chief|bəndesə
+ᬩᭂᬦ᭄ᬤᬾᬰ|village chief|bə§n§de§sə
 ᬩᭂᬮᬸᬲ᭄||
 ᬩᭂᬮᭀᬕ᭄|stupid, ignorant||belog
 ᬩ᭄ᬭ᭄ᬬᬕ᭄|laughter||bryag
