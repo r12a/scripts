@@ -943,7 +943,7 @@ autoExpandExamples.my = `
 အမည်း|black|ʔa̰mɛ́
 အမရပူရ|||a.ma.ra.pura.
 အမိ|mother|ʔəmḭ|a.mi.13
-အမေ|mother|ʔəmè|a.me
+အမေ|mother|ʔə§mè|a.me
 အမေရိက|||a.meri.ka.
 အမေရိကန်ပြည်ထောင်စု|USA|ʔəmèɹḭkàɴpjìdàʊɴzṵ|a.meri.kanpranyhtaungcu.
 အမေရိကန်ပြည်ထောင်စုသမတနိုင်ငံ|||a.meri.kan pranyhtaungcu. sa.ma.ta.nuingngam
