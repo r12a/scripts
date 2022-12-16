@@ -132,7 +132,7 @@ autoExpandExamples.si = `
 කළු|black||kaḷu
 ක්‍ය්‍ර|Kyra|
 ක්‍රිමියාව|worm||krimiyāwa
-ක්‍රොඒෂියාව||
+ක්‍රොඒෂියාව|Croatia||kroēṣiyāwa
 කාමරංගා||
 කාමරය||
 කාර්‍ය්‍යාලය|the office|
@@ -288,7 +288,7 @@ autoExpandExamples.si = `
 පස|dust||pasa
 පස්ස|back||passa
 පහ|five||paha
-පළවෙනි||
+පළවෙනි|first||paḷaweni
 ප්‍රභාසංශ්ලේෂණය||
 පාන්||
 පාර|road||pāra
@@ -408,7 +408,7 @@ autoExpandExamples.si = `
 ලේ|blood||lē
 ලොකු මීයා||
 ලොකු|big||loku
-ලෝකය||
+ලෝකය|world||lōkaya
 වචනය||
 වටය|round||waṭaya
 වතුර|water||watura
