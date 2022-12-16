@@ -143,7 +143,7 @@ autoExpandExamples.ml = `
 അരണ||
 അരമന||
 അരി|to cut|aɾi
-അരികെ|near|aɾike
+അരികെ|near|a§ɾi§ke
 അരുണാചൽ പ്രദേശ്||
 അറിയുക||
 അറിയ്|to know (a fact)|arijɨ̆
@@ -735,7 +735,7 @@ autoExpandExamples.ml = `
 കൈപ്പ്||
 കൊച്ചി||
 കൊച്ചു|small|kot͡ʃt͡ʃu
-കൊച്ച്||
+കൊച്ച്|child|ko§t§t͡ʃɨ̆
 കൊടി||
 കൊടുക്കുക||
 കൊടുങ്കാറ്റ്||
