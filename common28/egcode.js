@@ -12,6 +12,12 @@ function addExamples (langFilter) {
 	example, meaning, transcription?, notes?, alt?
 	alt is generally a vowelled form for abjads or an alternative spelling
     
+    latest modifications have the following effect:
+    if .transc is set (and there's a transcription) only the transcription will be output (no IPA)
+    otherwise, if there's IPA that will be output
+    if there's no IPA and no .transc, then the transcription will be output
+    there is no longer any transliteration output
+    
     langFilter, class name used to select blocks to add examples to
     
     [GLOBALS]
@@ -34,8 +40,8 @@ function addExamples (langFilter) {
 
     if (typeof autoExpandExamples[langFilter] === 'undefined') console.log('autoExpandExamples[langFilter] fails for ',langFilter)
     var egArray = autoExpandExamples[langFilter].split("\n")
-	//var egList = {}
-	for (var i=0;i<egArray.length;i++) {
+
+    for (var i=0;i<egArray.length;i++) {
 		if (egArray[i] == '') continue
 		var temp = egArray[i].split('|')
 		egList[temp[0]] = egArray[i]
@@ -44,78 +50,69 @@ function addExamples (langFilter) {
     // find the nodes that correspond to the language in langFilter
 	var selector = '.eg[lang='+langFilter+']'
 	var nodes = document.querySelectorAll(selector)
-	//console.log(nodes.length,' example nodes to expand')
+	if (trace) console.log(nodes.length,' example nodes to expand')
 	
 	for (var n=0;n<nodes.length;n++) {
 		//console.log('Looking for ',nodes[n].textContent)
 		//console.log('Language is ',nodes[n].lang)
         
         // example of raw data: 
-        // τέσσερα|four|ˈtesera|téssera|notes|x|ˈte§se§ra
-        // term|meaning|ipa|transcription|notes|source|ipalist
+        // τέσσερα|four|ˈt§e§s§e§r§a|téssera|notes|x
+        // term|meaning|ipa|transcription|notes|source
 
 		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
 			temp = egList[nodes[n].textContent].split('|')
-			//var out = ''
-			//if (nodes[n].classList.contains('inline')) out += '<span class="charExample inline" translate="no">'
-			//else out += '<span class="charExample" translate="no">'
-			
+            
+            
+            console.log(egList[nodes[n].textContent])
+            // get the available data
+            var termdata = egList[nodes[n].textContent].split('|')
+            var term = termdata[0]
+            var meaning = termdata[1]
+            var ipa = termdata[2]
+            var transc = termdata[3]
+            var notes = termdata[4]
+            var source = termdata[5]
+            if (ipa) var cleanIPA = ipa.replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
+            else cleanIPA = ''
+            if (nodes[n].classList.contains('transc')) var forceTranscription = true
+            else forceTranscription = false
+            
+            // start the charExample element
 			var out = '<span class="charExample'
 			if (nodes[n].classList.contains('inline')) out += ' inline'
 			out += '" translate="no">'
 			
-			// term
-			out += `<span class="ex`
+			// add the .ex element, with onclick
+			out += `<bdi class="ex`
             if (nodes[n].classList.contains('vertical')) out += ' vertical'
             out += `" lang="${ nodes[n].lang }"`
-			//out += nodes[n].lang
-			//out += '"'
-			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-			//if (nodes[n].classList.contains('ipalist') && temp[6]) ipaBreakdown = temp[6]
-            
-            
-			if (temp[2]) ipaBreakdown = temp[2]
-            else ipaBreakdown = ''
-            out += `  onclick="showNameDetails('${ temp[0] }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipaBreakdown }')"`
-           
-            
-            
-            
-			/*if (temp[6]) ipaBreakdown = temp[6]
-            else ipaBreakdown = ''
-            out += `  onclick="showNameDetails('${ temp[0] }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipaBreakdown }')"`*/
+			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'            
+			//if (temp[2]) ipaBreakdown = temp[2]
+            //else ipaBreakdown = ''
+            out += `  onclick="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipa }')"`
 			out += '>'
-			out += temp[0]
-			out += '</span>'
+			out += term
+			out += '</bdi>'
 			
-			// transcription
-            if (temp[3]) {
-                // the transc class forces display of the transcription
-                if (nodes[n].classList.contains('transc')) {
+			// add a transcription, if the .transc attribute is set
+            if (forceTranscription) {
+                if (transc) {
                     out += ' <bdi class="transc"'
                     if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-                    out += `>${ temp[3] }</bdi>`
+                    out += `>${ transc }</bdi>`
                     }
-                // otherwise use the trans class to hide until requested
-                else out += ` <bdi class="trans">${ temp[3] }</bdi>`
                 }
-			//if (! nodes[n].classList.contains('latn')) out += ' <bdi class="trans">xxx</bdi>'
-            
-			var ipa = ''
-			if (temp[2]) ipa = temp[2].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
-			
-			// alt/transcription
-			//if (temp[3] && nodes[n].classList.contains('transc')) {
-//				out += ' (<bdi class="transc"'
-//				if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-//				out += '>'+temp[3]+'</bdi>)'
-//				}
-			
-			// ipa
-			if (ipa) out += ' <bdi class="ipa">'+ipa+'</bdi>'
-			
+            // ipa if available, otherwise look for transcription, unless .transc already set
+			else if (ipa) out += ' <bdi class="ipa">'+cleanIPA+'</bdi>'
+            else if (transc) {
+                out += ' <bdi class="transc"'
+                if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
+                out += `>${ transc }</bdi>`
+                }
+
 			// meaning
-			if (temp[1]) out += ' <bdi class="meaning">'+temp[1]+'</bdi>'
+			if (meaning) out += ' <bdi class="meaning">'+meaning+'</bdi>'
 			
 			out += '</span>'
 			
@@ -131,103 +128,6 @@ function addExamples (langFilter) {
 
 
 
-
-
-function addExamplesOLD (langFilter) {
-/*  read the data into egList, in which each record has
-	example, meaning, transcription?, notes?, alt?
-	alt is generally a vowelled form for abjads or an alternative spelling
-    
-    langFilter, class name used to select blocks to add examples to
-    
-    [GLOBALS]
-    autoExpandExamples, obj, set above, then populated under .<langFiler> in xx-examples.js; holds all vocab
-    
-    [LOCALS]
-    egArray, array, built from autoExpandExamples
-    egList, object, list of vocab filtered out by langFilter with native word as key
-    selector, a selector for searching for letter blocks
-    nodes, node array, example nodes to expand
-    out, str, the generated markup
-    ipa, str, an IPA value
-    transcription, str, a transcription value
-    i, n, counters
-    temp, temptemp
-    */
-    
-	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
-    
-	var egArray = autoExpandExamples[langFilter].split("\n")
-	var egList = {}
-	for (var i=0;i<egArray.length;i++) {
-		if (egArray[i] == '') continue
-		var temp = egArray[i].split('|')
-		egList[temp[0]] = egArray[i]
-		}
-	
-	// find the nodes that correspond to the language in langFilter
-	var selector = '.eg[lang='+langFilter+']'
-	var nodes = document.querySelectorAll(selector)
-	//console.log(nodes.length,' example nodes to expand')
-	
-	for (var n=0;n<nodes.length;n++) {
-		//console.log('Looking for ',nodes[n].textContent)
-		//console.log('Language is ',nodes[n].lang)
-        
-        // example of raw data: τέσσερα|four|ˈtesera|téssera|notes
-
-		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
-			temp = egList[nodes[n].textContent].split('|')
-			var out = ''
-			if (nodes[n].classList.contains('inline')) out += '<span class="charExample inline" translate="no">'
-			else out += '<span class="charExample" translate="no">'
-			
-			// term
-			out += '<span class="ex" lang="'
-			out += nodes[n].lang
-			out += '"'
-			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-			out += '>'
-			out += temp[0]
-			out += '</span>'
-			
-			// transcription
-			if (! nodes[n].classList.contains('latn')) out += ' <bdi class="trans">xxx</bdi>'
-			var ipa = ''
-			/*
-            var transcription = ''
-            this code separated out stuff in parens - too complicated!
-			if (temp[2] && temp[2].includes('(')) {
-				var temptemp = temp[2].split('(')
-				ipa = temptemp[0].trim()
-				transcription = temptemp[1].replace(/\)/,'')
-				}
-			else if (temp[2]) ipa = temp[2]
-			if (transcription) out += ' (<bdi class="transc">'+transcription+'</bdi>)'
-            */
-			if (temp[2]) ipa = temp[2]
-			
-			// alt/transcription
-			if (temp[3] && nodes[n].classList.contains('transc')) {
-				out += ' (<bdi class="transc"'
-				if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-				out += '>'+temp[3]+'</bdi>)'
-				}
-			
-			// ipa
-			if (ipa) out += ' <bdi class="ipa">'+ipa+'</bdi>'
-			
-			// meaning
-			if (temp[1]) out += ' <bdi class="meaning">'+temp[1]+'</bdi>'
-			
-			out += '</span>'
-			
-			nodes[n].outerHTML = out
-			}
-		}
-	egArray = []
-	egList = {}
-	}
 
 //<span class="charExample" translate="no"><span class="ex" lang="ta">கேடு</span> <span class="trans">kēʈu</span> <span class="ipa">keːɖʉ</span> <span class="meaning">destruction</span></span>
 
