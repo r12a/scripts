@@ -70,7 +70,7 @@ autoExpandExamples.bo = `
 ཁ་གདན||
 ཁ་ཆེ||
 ཁ་ཆེའི་ཆོས་ཁང||
-ཁ་ཎ་ཌ་|Canada|(kha-ṇa-ḍa)
+ཁ་ཎ་ཌ|Canada||kha ṇa ḍa
 ཁ་ཏར||
 ཁ་ཏོག||
 ཁ་ཐུག|straight||kha thug
@@ -424,7 +424,7 @@ autoExpandExamples.bo = `
 གོས་ཐུང||
 གྱང་རོ||
 གྱི||
-གྱུརད་|became|kjùr
+གྱུརད་|became|kjù§r§–
 གྱོན||
 གྱོན་པ||
 གྲང་གཞི||
@@ -435,7 +435,7 @@ autoExpandExamples.bo = `
 གྲི||
 གྲིང་ཟུར||
 གྲུ||
-གྲུ་གསུམ||
+གྲུ་གསུམ|triangle|ʈ͡ʂʰùˀ.§§–§su§m|gru gsum
 གྲུ་བཞི||
 གྲུ་མོ||
 གྲུ་ཤན||
@@ -447,7 +447,7 @@ autoExpandExamples.bo = `
 གྲོང་ཁྱེར||
 གྲོངས||
 གྲོད་ཁོག||
-གྲྭ་པ||
+གྲྭ་པ|monk|ʈ͡ʂʰà.§§pa|grwa pa
 གླ་བ||
 གླང||
 གླང་ཆེན||
@@ -632,8 +632,8 @@ autoExpandExamples.bo = `
 ཌོ་མི་ནི་ཀ||
 ཌོ་མི་ནི་ཀན་སྤྱི་མཐུན་རྒྱལ་ཁབ||
 ཏན་ཛ་ནི་ཡ||
-ཏཱ་བླ་མ་|grand lama|(tā-bla-ma)
-ཏཱ་ལའི་བླ་མ||
+ཏཱ་བླ་མ་|grand lama||tā-bla-ma
+ཏཱ་ལའི་བླ་མ|Dalai Lama|tá.§§l§ɛ́ː§§lá.§§má
 ཏི་ཚ||
 ཏིང་ངེ་འཛིན||
 ཏིལ||
@@ -702,8 +702,8 @@ autoExpandExamples.bo = `
 ཐོབ||
 ཐོར་པ||
 ད་རིང||
-ད་ལྟ་|now|dan-ta
-ད་ལྟ་བ||
+ད་ལྟ་|now|tʰàn.§§tá|dan ta
+ད་ལྟ་བ|present tense|tʰà.§§tá.§§wa|da lta ba
 དཀར||
 དཀར་ཆག||
 དཀར་པོ|white||dkar po
@@ -718,10 +718,10 @@ autoExpandExamples.bo = `
 དཀྲོག་གཏམ||
 དཀྲོལ||
 དཀྲོལ་བ||
-དག་|I|dàg
+དག་|I|dá§g
 དག་ཆ་བྲིས||
 དག་ཡིག||
-དགའ་|virtue|gà
+དགའ་|virtue|–§g§á
 དགའ་པོ་བྱེད་ཡག||
 དགའ་བ||
 དགའ་བཞི||
@@ -736,7 +736,7 @@ autoExpandExamples.bo = `
 དགེ་བ||
 དགེ་བཤེས||
 དགེ་འདུན||
-དགེ་འདུན་|buddhist community|(dge-'dun)
+དགེ་འདུན་|buddhist community|–§ɡe§ §n§y§n|dge-'dun
 དགེ་རྒན||
 དགེ་ལུགས་པ||
 དགེ་སློང||
@@ -782,7 +782,7 @@ autoExpandExamples.bo = `
 དཔྱད་གཞི||
 དཔྲལ་བ||
 དབང||
-དབང་ཆ་|power|wang-ʧa
+དབང་ཆ་|power|–§wa§ŋ§§t͡ʃa
 དབང་ཕྱུག||
 དབང་ལྡན||
 དབང་སྒྱུར||
@@ -1088,7 +1088,7 @@ autoExpandExamples.bo = `
 བདུག་སྤོས||
 བདུད||
 བདུན||
-བདུན་|seven|dỳn
+བདུན་|seven|–§tỹ̀§‹
 བདུན་ཅུ||
 བདུན་ཕྲག||
 བདེ||
@@ -1168,7 +1168,7 @@ autoExpandExamples.bo = `
 བཤལ་སྨན||
 བཤོས||
 བསད|to kill||bsad
-བསད་|killed|sɛ́
+བསད་|to turn off|–§sɛ́§–|bsad
 བསམ་གཏན||
 བསམ་པའི་སྟོབས||
 བསམ་བློ་གཏོང་བ|to think||bsam blo gtong ba
@@ -1181,7 +1181,7 @@ autoExpandExamples.bo = `
 བསོད་ནམས་དཔལ་འཛོམས||
 བསྐྲངས||
 བསྒྲུགས||
-བསྒྲུབས་|established|ɖɹúb
+བསྒྲུབས་|established|–§ɖɹú§b§–
 བསྟན་པ||
 བསྟན་འཛིན||
 བསྡད|to sit||bsdad
@@ -1212,7 +1212,7 @@ autoExpandExamples.bo = `
 བོད་ཡུལ||
 བོད་རང་སྐྱོང་ལྗོངས||
 བོད་ལྗོངས||
-བོད་སྐད||
+བོད་སྐད|Tibetan||böké
 བོད་སྐད་དུ||
 བོན||
 བོན་པོ||
@@ -1341,7 +1341,7 @@ autoExpandExamples.bo = `
 མཐའ་མ||
 མཐའ་སྐོར་གྲོང་ཚོ||
 མཐུག་པོ|thick||mthug po
-མཐུན་|agreement
+མཐུན་|agreement||mtʰun
 མཐུར་མགོ||
 མཐེ་པོ||
 མཐེ་བོང||
@@ -1362,7 +1362,7 @@ autoExpandExamples.bo = `
 མནའ་མ||
 མཚན|night||mtshan
 མཚན་མོ||
-མཚམས་|boundary
+མཚམས་|boundary||mtshams
 མཚོ|lake||mtsho
 མཚོ་གླང||
 མཚོ་གླིང||
@@ -1393,7 +1393,7 @@ autoExpandExamples.bo = `
 མར་ཤལ་གླིང་ཕྲན་རྒྱལ་ཁབ||
 མལ་ཏ||
 མལ་དི་ཝེསུ||
-མི|person|mi˩˧|mi
+མི་|person|mì|mi
 མི་གཟུགས་འཕྲུལ་བྱད||
 མི་གཡོ་བ||
 མི་ཅི་གྷན||
@@ -1450,10 +1450,10 @@ autoExpandExamples.bo = `
 མེག་སི་ཀོ་གསར་མ||
 མེག་སི་ཀོ་གྲོང||
 མེད|not||med
-མེའུ་|dwarf|(me'u)
+མེའུ་|dwarf||me'u
 མོ|woman||mo
-མོ་ཊ||
-མོ་ཊ་|car|mo-ta
+མོ་ཊ|car|mò.§§ʈ͡ʂa|mo ta
+མོ་ཊ་|car|mò.§§ʈ͡ʂa|mo ta
 མོ་ཊ་ཇིབ||
 མོ་ཊ་ཊག||
 མོ་ཊའི་ཨང་གྲངས་ལྕགས་ལེབ||
@@ -1617,8 +1617,8 @@ autoExpandExamples.bo = `
 འཁར་རྔ||
 འཁོར||
 འཁོར་བ||
-འཁོར་ལོ||
-འཁོར་ལོ་|wheel|kor-lo
+འཁོར་ལོ|wheel|–§kʰó.§–§§ló|'khor lo
+འཁོར་ལོ་|wheel|–§kʰó.§–§§ló|'khor lo
 འཁོར་ལོ་བཀག||
 འཁོར་ཤུར་ལྷམ་གོག||
 འཁྱག་པ|ice||་'khyag pa
@@ -1647,7 +1647,7 @@ autoExpandExamples.bo = `
 འགྲུལ་བཞུད་བྱེད་མཁན||
 འགྲེང་པོ||
 འགྲེང་བུ||
-འགྲེམས་སྟོན་|exhibition|ɖɹem-ton
+འགྲེམས་སྟོན་|exhibition|–§ɖɹe§m§–§§to§n
 འགྲེམས་སྟོན་ཁང||
 འགྲོ||
 འགྲོ་བ||
@@ -1852,7 +1852,7 @@ autoExpandExamples.bo = `
 རག||
 རག་ལས||
 རག་ཤི||
-རང||
+རང|you, self|ʐàŋ|rang
 རང་གཅེས་འཛིན||
 རང་དབང||
 རང་དབང་མེད་པ||
@@ -1902,8 +1902,8 @@ autoExpandExamples.bo = `
 རུས་པ||
 རུས་སྦལ||
 རེ||
-རེ་བ||
-རེ་བ་|hope|re-wa
+རེ་བ|hope|ʐè.§wá|re ba
+རེ་བ་|hope|ʐè.§wá|re ba
 རེད||
 རོ||
 རོ་མ་ནི་ཡ||
@@ -1917,7 +1917,7 @@ autoExpandExamples.bo = `
 རོལ་བ||
 རོལ་མོ||
 རྐང||
-རྐང་པ|foot, leg|kaŋ˥˥.pa˥˥|rkang pa
+རྐང་པ|foot, leg|ká§ŋ.§§pá|rkang pa
 རྐང་བ||
 རྐང་མཐིལ||
 རྐང་ཚིགས||
@@ -1993,8 +1993,8 @@ autoExpandExamples.bo = `
 རྒྱུག་པ||
 རྒྱུག་པོལ||
 རྒྱུག་ཧྲིལ||
-རྒྱུད||
-རྒྱུད་པ||
+རྒྱུད|string|cyː˩˧˨§–|rgyud
+རྒྱུད་པ|tendon||rgyud pa
 རྒྱུད་རྩ||
 རྒྱུད་སྨད||
 རྒྱུས||
@@ -2029,9 +2029,9 @@ autoExpandExamples.bo = `
 རྡ་རམ་ས་ལ||
 རྡུལ||
 རྡུལ་ཕྲན||
-རྡེའུ་|pebble|(rde'u)
-རྡོ|stone||rdo
-རྡོ་|stone|(rdo)
+རྡེའུ་|pebble||rde'u
+རྡོ|stone|to˩˧|rdo
+རྡོ་|stone|to˩˧|rdo
 རྡོ་རྒྱུད||
 རྡོ་རྗེ||
 རྡོ་རྗེ་དབྱིངས||
@@ -2342,7 +2342,7 @@ autoExpandExamples.bo = `
 ཤོག་ཧྲིལ||
 ཤོར||
 ཤོས||
-ཤྲཱི་|wealth|(shrī)
+ཤྲཱི་|wealth||shrī
 ས|earth||sa
 ས་ཁུལ||
 ས་གཡོས||
@@ -2642,7 +2642,7 @@ autoExpandExamples.bo = `
 སྤྱི་ལེ||
 སྤྱི་སྐད||
 སྤྱིའི་རྒྱ་མ||
-སྤྱིར་|general|ʧí
+སྤྱིར་|general|ʧí§–
 སྤྲ||
 སྤྲང་པོ||
 སྤྲད||
@@ -2833,6 +2833,7 @@ autoExpandExamples.bo = `
 ཨོཾ||
 ཨྰ་རི་ཟོ་ནྰ||
 ེའུ||
+ལྷ་སའི་སྐད་|Lhasa dialect||lhaséké
 
 
 
