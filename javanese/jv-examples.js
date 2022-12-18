@@ -62,7 +62,7 @@ autoExpandExamples.jv = `
 ꦏꦿꦩ||
 ꦏꦿꦩꦱ꧀||
 ꦏꦿꦶꦪ|skill, craft||kriya
-ꦏꦿꦸꦥꦸꦏ꧀|crackers||krupuk
+ꦏꦿꦸꦥꦸꦏ꧀|crackers|kru§pu§k|krupuk
 ꦏꦿꦺꦴꦠꦺꦴ|ant egg|ˈkro.§to|kroto
 ꦏ꧀ꦫꦩ|politeness|krɔmɔ
 ꦒꦗꦃ|elephant||gaja
@@ -79,7 +79,7 @@ autoExpandExamples.jv = `
 ꦒꦼꦣꦺ||
 ꦒꦼꦤꦶ||
 ꦒꦼꦭꦱ꧀ꦉꦱꦶꦏ꧀|clean glass||gelas resik
-ꦒꦿꦺꦗ||
+ꦒꦿꦺꦗ|church|gre§d͡ʒa|gréja
 ꦒꦿꦺꦴꦗꦺꦴꦒꦤ꧀||
 ꦔꦺꦭꦶꦁꦔꦶ|to consider||ngélingi
 ꦕꦕꦃꦗꦶꦮ||
@@ -160,7 +160,7 @@ autoExpandExamples.jv = `
 ꦥꦸꦗꦁꦒ||
 ꦥꦸꦠꦿꦶ||
 ꦥꦸꦤꦶꦏ||
-ꦥꦸꦭꦺꦴ|island|pulo
+ꦥꦸꦭꦺꦴ|island|pu§lo
 ꦥꦺ||
 ꦥꦼꦂꦏꦏꦱ꧀||
 ꦥꦼꦂꦠꦤꦶꦲꦤ꧀|agriculture||pertanian
@@ -271,7 +271,7 @@ autoExpandExamples.jv = `
 ꦮ꧀ꦭꦶꦫꦁ|sulfur||wlirang
 ꦱꦒꦫ||
 ꦱꦩꦶ||
-ꦱꦩ꧀ꦥꦸꦤ꧀|already||sampun
+ꦱꦩ꧀ꦥꦸꦤ꧀|already|sa§m§pu§n|sampun
 ꦱꦫꦶꦫ||
 ꦱꦫꦺ||
 ꦱꦭ꧀ꦗꦸ||
