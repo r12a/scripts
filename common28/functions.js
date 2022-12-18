@@ -816,6 +816,7 @@ function getStatus (token) {
     case 'r': status = 'rare'; break;
     case 'i': status = 'infreq.'; break;
     case 'l': status = 'loan'; break;
+    case 't': status = 'transc.'; break;
     case 'a': status = 'archaic'; break;
     case 'u': status = 'unused'; break;
     case 'o': status = 'obsolete'; break;
@@ -1187,7 +1188,8 @@ function getStatusForIndex (token) {
     switch (token) {
     case 'r': status = 'index_rare'; break;
     case 'i': status = 'index_infrequent'; break;
-    case 'l': status = 'index_loan'; break;
+    case 'l': status = 'index_loan'; break; // should migrate this to t
+    case 't': status = 'index_transcription'; break;
     case 'a': status = 'index_archaic'; break;
     case 'u': status = 'index_unused'; break;
     case 'o': status = 'index_obsolete'; break;
@@ -1240,7 +1242,7 @@ function makeIndexLine (node) {
 
     // for each item ...
     for (let i=0;i<chars.length;i++) {
-        console.log('makeIndexLine',chars[i])
+        //console.log('makeIndexLine',chars[i])
         char = chars[i]
 
         // create an id attribute for the listPairs in the index
@@ -1250,7 +1252,6 @@ function makeIndexLine (node) {
         // check for status
         if (window.spreadsheetRows[char][cols.status] && window.spreadsheetRows[char][cols.status] !== '0') status = getStatusForIndex(window.spreadsheetRows[char][cols.status]).replace(/\./,'')
         else status = ''
-console.log(char, status)
 
         if (node.dataset.lang) out += `<div class="listPair ${ status }"${ indexId }><span class="listItem" lang="${ node.dataset.lang }" onclick="makeFootnoteIndex(charVal)">${ chars[i] }</span>`
         else out += `<div class="listPair ${ status }"${ indexId }><span class="listItem" lang="${ lang }" onclick="makeFootnoteIndex('${ chars[i] }')">${ chars[i] }</span>`
