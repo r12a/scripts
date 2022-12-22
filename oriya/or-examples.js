@@ -65,7 +65,7 @@ autoExpandExamples.or = `
 ଆଳୁ||
 ଆସିବା|to come||asiba
 ଆୟୁ||
-ଇ-ମେଲ୍|e-mail|i-mel|i-mel
+ଇ-ମେଲ୍|e-mail|i§-§me§l|i-mel
 ଇଗଲ|eagle||igal
 ଇଟା|brick, block|iʈa|iṭa
 ଇଣ୍ଟରନେଟ||
@@ -132,7 +132,7 @@ autoExpandExamples.or = `
 କୁମ୍ଭାର||
 କୁମ୍ଭାରୁଣି||
 କୁହୁଡ଼ି|fog||kuhuṛi
-କୃମି|worm|krumi|krumi
+କୃମି|worm|kru§mi|krumi
 କୃଷ୍ଣ|Krishna|kɾusɳɔ|kruṣṇô
 କେଉଁଠି|where||keum̐ṭhi
 କେତେବେଲେ||
@@ -250,7 +250,7 @@ autoExpandExamples.or = `
 ଜୋଡା||
 ଜୋତା||
 ଜ୍ଞାନ|knowledge||jñanô
-ଜ୍ୱାଇଁ|son-in-law|d͡ʒwaĩ|jwaim̐
+ଜ୍ୱାଇଁ|son-in-law|d͡ʒ§wa§ĩ|jwaim̐
 ଝ଼||
 ଝାଡୁ|broom||jhaḍu
 ଝିଅ|daughter||jhiô
@@ -268,7 +268,7 @@ autoExpandExamples.or = `
 ଡାଳ|branch||ḍaḷô
 ଡାହାଣ|right||ḍahaṇô
 ଡେଣା|wing||ḍeṇa
-ଡ୍ରପ୍-ଡାଉନ୍|drop-down|ɖrɔp-ɖaun
+ଡ୍ରପ୍-ଡାଉନ୍|drop-down|ɖ§rɔ§p§-§ɖa§u§n
 ଢ଼||
 ତମାଖୁ||
 ତରବର||
@@ -299,7 +299,7 @@ autoExpandExamples.or = `
 ଦାନ୍ତ|tooth||dantô
 ଦିନ|day||dinô
 ଦୀର୍ଘ|long||dīrghô
-ଦୁଃଖ|sorrow|dukkʰɔ
+ଦୁଃଖ|sorrow|duk§kʰɔ
 ଦୁଇ|two|dui|dui
 ଦୁନିଆ|world||dunia
 ଦୂର|far||dūrô
@@ -389,7 +389,7 @@ autoExpandExamples.or = `
 ପୂଜା||
 ପୂର୍ଣ୍ଣ|full||pūrṇṇô
 ପୂର୍ବୀୟ|eastern||purbiya
-ପୃଥିବୀ|Earth|pɾutʰibi|pruthibi
+ପୃଥିବୀ|Earth|pɾu§tʰi§bi|pruthibi
 ପୃଥ୍ୱୀ|earth||pruthwī
 ପେଚା||
 ପେଟ|belly||peṭô
@@ -403,7 +403,7 @@ autoExpandExamples.or = `
 ପ୍ରଣୟ||
 ପ୍ରପୁତ୍ର||
 ପ୍ରଶ୍ନ|question|prɔsnɔ
-ପ୍ରସିଦ୍ଧି|fame|pɾɔsiddʱi|prôsiddhi
+ପ୍ରସିଦ୍ଧି|fame|p§ɾɔ§si§d§dʱi|prôsiddhi
 ପ୍ରହାର କରିବା|to stab||prôharô kôriba
 ପ୍ରାଚୀନ||
 ପ୍ରାଣ||
@@ -529,7 +529,7 @@ autoExpandExamples.or = `
 ମିତ||
 ମୀନ||
 ମୁଁ|I (1sg)||mum̐
-ମୁଁହ|mouth|mũhɔ|mum̐hô
+ମୁଁହ|mouth|mũ§hɔ|mum̐hô
 ମୁଖ||
 ମୁଛ||
 ମୁଣ୍ଡ|head||muṇḍô
@@ -633,7 +633,7 @@ autoExpandExamples.or = `
 ସିଧା|straight||sidha
 ସିଲାଇ କରିବା|to sew||silai kôriba
 ସୁନା||
-ସୂର୍ଯ୍ୟ|sun|suɾd͡ʒjɔ|sūrjyô
+ସୂର୍ଯ୍ୟ|sun|su§ɾ§d͡ʒ§jɔ|sūrjyô
 ସେ|he, she, it (3sg)||se
 ସେଓ|apple||seo
 ସେଠାରେ|there||seṭhare
@@ -643,7 +643,7 @@ autoExpandExamples.or = `
 ସୋମବାର||
 ସ୍ତନ|breast||stônô
 ସ୍ତ୍ରୀ|wife||strī
-ସ୍ତ୍ରୈଣ|feminine||straina
+ସ୍ତ୍ରୈଣ|feminine|s§t§ɾɔi̯§ɳɔ|straina
 ସ୍ୱପ୍ନ|dream|swɔpnɔ|swôpnô
 ସ୍ୱର୍ଗ|heaven|swɔɾɡɔ|swôrgô
 ସ୍ୱାମୀ|husband||swamī
@@ -672,7 +672,7 @@ autoExpandExamples.or = `
 ଊତ୍ତୋଳନ|flag-hoisting||
 ଋତୁ|season||ṛutu
 ଐରାଵତ|elephant||
-
+ଓଡ଼ିଆ ଅକ୍ଷର|Odia script|o§ɽi§a§ §ɔ§kʰ§jɔ§rɔ
 
 
 
