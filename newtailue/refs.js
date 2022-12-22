@@ -38,6 +38,12 @@ reflist = {
 "title":"New Tai Lue alphabet",
 },
 
+"l": {
+"url":"https://www.webonary.org/dailu/overview/introduction/?lang=en",
+"authors": "SIL International",
+"title":"Dai Lue Dictionary ᦈᦹᧈ ᦶᦑᧃ ᦺᦑ ᦟᦹᧉ 傣泐词典",
+},
+
 
 }
 
