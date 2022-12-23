@@ -4,31 +4,29 @@ autoExpandExamples.bug = `
 
 
 ᨀᨆᨗᨔᨗ|Thursday|kɑmɪːsɪ|kamisi
-ᨄᨉᨚᨕᨂᨛ|prayers||paddoangeng
-ᨄᨒᨚᨈᨑ|lontara expert|paʔlontaraʔ|pa'lontara
+ᨄᨒᨚᨈᨑ|lontara expert|paʔ§lon§ta§raʔ|pa'lontara
 ᨄᨗᨈᨘ|seven|
 ᨅᨔ ᨕᨘᨁᨗ|Buginese language||basa ugi|
 ᨅᨗᨌᨑ|language||bicara
 ᨆᨌ|clever, tiger||maca
 ᨆᨑᨙᨉᨀ|free||maradeka
-ᨉᨘᨓ|two|dʊa|dua
-ᨍᨘᨆ|Friday|juma
+ᨉᨘᨓ|two|dʊ§a|dua
+ᨍᨘᨆ|Friday|ju§ma
 ᨒᨄ|lava||lapa
-ᨒᨚᨈᨑ|lontara|lontaraʔ|lontara'
+ᨒᨚᨈᨑ|lontara|lon§ta§raʔ|lontara'
 ᨓᨕᨙ|water||wae
-ᨔᨈᨘ|Saturday|sɑtuŋ|satung
-ᨔᨒᨔ|Tuesday|sɑlɑːsɑ
-ᨕᨆᨑᨙᨉᨀᨂᨛ|democracy|amaradekaŋəŋ|amaradekangəng
-ᨕᨑᨅ|Wednesday|ɑrɑːbɑ|araba
+ᨔᨈᨘ|Saturday|sɑ§tuŋ|satung
+ᨔᨒᨔ|Tuesday|sɑ§lɑː§sɑ
+ᨕᨆᨑᨙᨉᨀᨂᨛ|democracy|a§ma§ra§de§kaŋə§ŋ|amaradekangəng
+ᨕᨑᨅ|Wednesday|ɑ§rɑː§bɑ|araba
 ᨕᨔᨘ|dog||asu
 ᨕᨔᨙ|rice plant||ase
-ᨕᨗᨊ|mother|ina|ina
-ᨕᨙᨔᨙᨊᨙ|Monday|eseneŋ|eseneng
+ᨕᨗᨊ|mother|i§na|ina
+ᨕᨙᨔᨙᨊᨙ|Monday|e§se§neŋ|eseneng
 ᨕᨛᨔᨚ ᨕᨖᨕᨗ|Sunday||əso ahai
-
-
-
-
+ᨕᨛᨊᨛ|six||ənəng
+ᨀᨓᨗ|Kawi||kawi
+ᨄᨉᨚᨕᨂᨛ|prayers|pa§do§a§ŋəŋ|paddoangeng
 
 
 
