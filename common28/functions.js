@@ -38,6 +38,7 @@ function addPageFeatures () {
 
 
 function initialiseSummary (blockDirectory, lang, tableName, dir) {
+    console.log('initialiseSummary(',blockDirectory, lang,tableName,dir,')')
     //set accessibility defaults
     if (localStorage['docsAccess']) access = JSON.parse(localStorage['docsAccess']) 
     if (access.contrast === 'high') {
@@ -105,7 +106,7 @@ function setCharOnclicks () {
 	// all links with target=c should open descriptions in the panel
     if (trace) console.log('setCharOnclicks(',') All links with target=c should open descriptions in the panel')
 
-	var links = document.querySelectorAll('.codepoint a')
+	var links = document.querySelectorAll('.codepoint a, .codepoint code')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
 	}
 
@@ -113,21 +114,11 @@ function setupBlockLinks () {
 	// set target attribute for links that point to characters in the block page
     if (trace) console.log('setupBlockLinks(',') Set target attribute for links that point to characters in the block page')
     
-	var links = document.querySelectorAll('.codepoint a')
+	var links = document.querySelectorAll('.codepoint a, .codepoint code')
 	for (var i=0;i<links.length;i++) if (links[i].target != null) links[i].target = 'c'
 	}
 
 
-
-function setFindIPA () {
-	// makes ipa characters in sounds charts indicate locations they are used
-    if (trace) console.log('setFindIPA(',') Make ipa characters in sounds charts indicate locations they are used')
-
-	var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
-	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
-	var listItems = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone')
-	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
-	}
 
 
 
@@ -136,13 +127,13 @@ function setFindIPA () { // test extension to map stuff
     if (trace) console.log('setFindIPA(',') Make ipa characters in sounds charts indicate locations they are used')
 
 	var listItems = document.querySelectorAll('.codepoint span, .codepoint bdi')
-	for (let i=0;i<listItems.length;i++) {
+	for (var i=0;i<listItems.length;i++) {
         if (listItems[i].parentNode.classList.contains('codepoint')) listItems[i].onclick = makeFootnoteIndex
         }
 	var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
-	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
+	for (i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
 	var listItems = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone')
-	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
+	for (i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
 	}
 
 
@@ -234,40 +225,6 @@ function pointToSummaryPages () {
 
 
 
-/*
-function runCategoryCharCount (location, row, raw=false) { 
-	if (document.getElementById(location) == null) return
-	var charlists
-	if (document.getElementById(location)) charlists = document.getElementById(location).querySelectorAll('.characterBox, .auxiliaryBox, .deprecated, .foreign, .archaic')
-    //console.log(document.getElementById(location).textContent)
-    //console.log('charlists',charlists[0].textContent)
-    
-
-    var out = ''
-	charlistArray = []
-	for (let i=0;i<charlists.length;i++) {
-		var charStr = charlists[i].textContent
-		charStr = charStr.replace(/␣/g,'')
-		var chars = [...charStr]
-		for (let c=0;c<chars.length;c++) charlistArray.push(chars[c])
-		}
-	const uniqueSet = new Set(charlistArray)
-	var uniqueArray = [...uniqueSet]
-	
-	if (raw) out += uniqueArray.toString().replace(/,/g,' ')
-    else {
-        out += '<tr><th>'+row+'</th>'
-        +'<td id="'+row+'CharList">'
-        +uniqueArray.toString().replace(/,/g,' ')
-        +'</td>'
-        +'<td id="'+row+'CharListTotal">'+uniqueArray.length+'</td></tr>'
-        }
-
-	return out
-	}*/
-
- //   <tr><th>Letter</th><td id="letterCharList"></td><td id="letterCharListTotal"></td></tr>
-
 
 
 
@@ -310,27 +267,6 @@ function doHeadersFooters (dir) {
 
 
 
-/*
-var featureName = { 
-	type:"Script type", 
-	chars:"Number of characters", 
-	cchars:"Combining characters", 
-	mcchars:"Multiple combining characters", 
-	matras:"Vowel-signs", 
-	gpos:"Context-based positioning", 
-	cs:"Case distinction", 
-	cursive:"Cursive script", 
-	gsub:"Contextual shaping", 
-	dir:"Text direction", 
-	baseline:"Baseline", 
-	wordsep:"Word separator", 
-	wrap:"Wraps at", 
-    hyphenation:"Hyphenation",
-	justify:"Justification", 
-	digits:"Native digits?", 
-	region:"Region" 
-	}
-*/
 
 
 function addDefinitions () {
@@ -566,208 +502,6 @@ function makeSidePanel (id, otherlinks) {
 
 
 
-function makeSidePanelOLD (id, otherlinks) {
-	if (typeof langs === 'undefined') return
-	if (typeof langs[id] === 'undefined') { console.log('Charuse data not found. ID sent to makeSidePanel was ',id); return }
-    
-    var letters, marks, punctuation, symbols, others, numbers, aux, total
-    var out, records, fields, values
-	
-    // get character counts in a way that works around surrogates
-	letters = marks = punctuation = symbols = others = numbers = aux = 0
-	langs[id].letter ? letters = [...langs[id].letter].length : 0
-	langs[id].mark ? marks = [...langs[id].mark].length : 0
-	langs[id].punctuation ? punctuation = [...langs[id].punctuation].length : 0
-	langs[id].symbol ? symbols = [...langs[id].symbol].length : 0
-	//langs[id].other ? others = [...langs[id].other].length : 0
-	langs[id].other ? others = langs[id].other.split(' ').length : 0
-	langs[id].number ? numbers = [...langs[id].number].length : 0
-	langs[id].aux ? aux = [...langs[id].aux].length : 0
-	
-	total = letters + marks + punctuation + symbols + others + numbers 
-	
-	out = '<table>'
-	out += '<tbody id="featureTableBody">'
-	out += '<tr><th>Script code</th><td>'+langs[id].script+'</td></tr>'
-	out += '<tr><th>Language code</th><td>'+id+'</td></tr>'
-	out += '<tr><th>Script type</th><td class="tableHighlight">'+langs[id].type+'</td></tr>'
-	out += '<tr><th>Total characters</th><td class="tableHighlight" style="font-size: 150%;">'+parseInt(total).toLocaleString()
-	if (aux>0) out += ' <span style="font-size: 70%">+ '+aux+'</span>'
-	out += '</td></tr>'
-	out += '<tr><th>Letters</th><td class="tableHighlight">'+letters+'</td></tr>'
-
-	
-	out += '<tr><th>Combining marks</th><td'
-	if (marks!==0) out += ' class="tableHighlight"'
-	out += '>'+marks+'</td></tr>'
-	
-	if (punctuation!==0) out += '<tr><th>Punctuation</th><td class="tableHighlight">'+punctuation+'</td></tr>'
-	
-	if (symbols!==0) out += '<tr><th>Symbols</th><td class="tableHighlight">'+symbols+'</td></tr>'
-
-	if (others!==0) out += '<tr><th>Format codes</th><td class="tableHighlight">'+others+'</td></tr>'
-
-	out += '<tr><th>Native digits</th><td'
-	if (numbers!==0) out += ' class="tableHighlight"'
-	out += '>'+numbers+'</td></tr>'
-
-	out += '<tr><th>Other infrequent</th><td>'+aux+'</td></tr>'
-	
-	out += '<tr><th colspan="2">Character counts exclude ASCII.</td></tr>'
-	
-	out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
-
-    if (langs[id].vowels) {
-        records = langs[id].vowels.split(' ')
-		out += '<tr><th>Vowels</th><td class="tableHighlight">'
-        for (i=0;i<records.length;i++) {
-            fields = records[i].split(':')
-            if (fields[1] !== 'y') out += fields[1]
-            switch (fields[0]) {
-                case 'let': out += ' letters'; break
-                case 'inh': out += ' inherent vowel'; break
-                case 'vs': out += ' vowel sign marks'; break
-                case 'vsl': out += ' vowel sign letters'; break
-                case 'venc': out += ' visually-encoded'; break
-                case 'ind': out += ' independent vowels'; break
-                case 'ml': out += ' matres lectionis'; break
-                case 'cm': out += ' combining marks'; break
-                case 'hcm': out += ' hidden diacritics'; break
-                case 'syl': out += ' syllables'; break
-
-                case 'base': out += ' base'; break
-                case 'pre': out += ' pre-base glyphs'; break
-                case 'circ': out += ' circumgraphs'; break
-                case 'comp': out += ' composite vowels'; break
-                case 'voc': out += ' vocalics'; break
-                }
-            if (i<records.length) out += '<br>'
-            }
-        out += '</td></tr>'
-		}
-
-    if (langs[id].medials) {
-        records = langs[id].medials.split(' ')
-		out += '<tr><th>Medials</th><td class="tableHighlight">'
-        for (i=0;i<records.length;i++) {
-            fields = records[i].split(':')
-            if (fields[1] !== 'y') out += fields[1]
-            switch (fields[0]) {
-                case 'cm': out += ' diacritics'; break
-                case 'sj': out += ' subjoined letters'; break
-                case 'vs': out += ' dedicated letters'; break
-                }
-            if (i<records.length) out += '<br>'
-            }
-        out += '</td></tr>'
-		}
-
-    if (langs[id].finals) {
-        records = langs[id].finals.split(' ')
-		out += '<tr><th>Finals</th><td class="tableHighlight">'
-        for (i=0;i<records.length;i++) {
-            fields = records[i].split(':')
-            if (fields[1] !== 'y') out += fields[1]
-            switch (fields[0]) {
-                case 'cm': out += ' diacritics'; break
-                case 'let': out += ' dedicated letters'; break
-                case 'ss': out += ' superscript letters'; break
-                case 'vk': out += ' vowel killer'; break
-                }
-            if (i<records.length) out += '<br>'
-            }
-        out += '</td></tr>'
-		}
-
-    if (langs[id].clusters) {
-        values = langs[id].clusters.split(' ')
-		out += '<tr><th>Consonant clusters</th><td class="tableHighlight">'
-        for (i=0;i<values.length;i++) {
-            switch (values[i]) {
-                case 'vir': out += 'visible virama'; break
-                case 'inv': out += 'hidden conjunct maker'; break
-                case 'stk': out += 'stacked glyphs'; break
-                case 'cnj': out += 'conjoined glyphs'; break
-                case 'lig': out += 'ligatures'; break
-                case 'tcg': out += 'touching glyphs'; break
-                case 'rax': out += 'special RA handling'; break
-                case 'mrk': out += 'vowel-killer diacritic'; break
-                case 'let': out += 'special letters'; break
-                case 'unm': out += 'unmarked'; break
-                }
-            if (i<values.length) out += '<br>'
-            }
-        out += '</td></tr>'
-		}
-
-	out += '<tr><th>Case distinction</th><td'
-	if (langs[id].cs!=='no') out += ' class="tableHighlight"'
-	out += '>'+langs[id].cs+'</td></tr>'
-	
-	out += '<tr><th>Cursive script</th><td'
-	if (langs[id].cursive!=='no') out += ' class="tableHighlight"'
-	out += '>'+langs[id].cursive+'</td></tr>'
-	
-	out += '<tr><th>Text direction</th><td'
-	if (langs[id].direction!=='ltr') out += ' class="tableHighlight"'
-	out += '>'+langs[id].direction+'</td></tr>'
-	
-	out += '<tr><th>Baseline</th><td'
-	if (langs[id].baseline!=='mid') out += ' class="tableHighlight"'
-	out += '>'+langs[id].baseline+'</td></tr>'
-	
-	out += '<tr><th>Word separator</th><td'
-	if (langs[id].wordsep!=='space') out += ' class="tableHighlight"'
-	out += '>'+langs[id].wordsep
-    if (langs[id].wordsepChar) out += ' '+langs[id].wordsepChar
-    out += '</td></tr>'
-	
-	out += '<tr><th>Wraps at</th><td'
-	if (langs[id].wrap!=='word') out += ' class="tableHighlight"'
-	out += '>'+langs[id].wrap+'</td></tr>'
-	
-	out += '<tr><th>Hyphenation</th><td'
-	if (langs[id].hyphenation!=='word') out += ' class="tableHighlight"'
-	out += '>'+langs[id].hyphenation
-    if (langs[id].hyphen) out += ' '+langs[id].hyphen
-    out += '</td></tr>'
-	
-    if (langs[id].justification) {
-        values = langs[id].justification.split(' ')
-		out += '<tr><th>Justification</th><td class="tableHighlight">'
-        for (i=0;i<values.length;i++) {
-            switch (values[i]) {
-                case 'sp': out += 'at spaces/wordbreaks'; break
-                case 'str': out += 'baseline stretching'; break
-                case 'sw': out += 'swashes'; break
-                case 'pad': out += 'character padding'; break
-                case 'ic': out += 'between characters'; break
-                case 'ig': out += 'between glyphs'; break
-                case 'none': out += 'none'; break
-                case '?': out += '?'; break
-                }
-            if (i<values.length) out += '<br>'
-            }
-        out += '</td></tr>'
-		}
-	
-	
-	out += '<tr><th>Native speakers</th><td>'+parseInt(langs[id].speakers.replace(/~/g,'')).toLocaleString()+'</td></tr>'
-	
-	out += '<tr><th>Region</th><td>'+langs[id].region+'</td></tr>'
-	
-	
-	
-	out += '</tbody>'
-	out += '</table>'
-
-	out += '<p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>'
-	out += '<p class="ctlink"><a href="../featurelist/#key">See the key</a></p>'
-	
-	langs = {}
-	
-	return out
-	}
 	
 
 
@@ -928,18 +662,6 @@ function replaceStuff (node) {
             var status = '&nbsp;'
             if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.status]) {
                 status = getStatus(window.spreadsheetRows[char][cols.status])
-                /*
-                switch (window.spreadsheetRows[char][cols.status]) {
-                case 'r': status = 'rare'; break;
-                case 'i': status = 'infreq.'; break;
-                case 'l': status = 'loan'; break;
-                case 'a': status = 'archaic'; break;
-                case 'u': status = 'unused'; break;
-                case 'o': status = 'obsolete'; break;
-                case 'd': status = 'deprecated'; break;
-                default: status = '&nbsp;'
-                }
-                */
                 }
             out += `<span class="listItemType">${ status }</span>`
             }
@@ -953,11 +675,6 @@ function replaceStuff (node) {
             else out += '<span class="listIPA">'+ch.replace(/ /g,' ')+'</span>'
             //else out += '<span class="listIPA">'+ch.replace(/ /g,'<i>~</i>')+'</span>'
             }
-
-        //if (ipa.length > 0) {
-        //    if (ipa[i]) out += '<span class="listItemType">infreq.</span>'
-        //    else out += ' '
-        //    }
 
         if (ipa.length > 0) {
             if (ipa[i]) out += '<span class="listIPA">'+ipa[i]+'</span>'
@@ -1046,137 +763,6 @@ function replaceStuff (node) {
     node.innerHTML = out
     }
 
-
-
-
-
-
-
-
-function makeIndexLineX (node) {
-
-
-    var bicameral = false
-    var showFirst = false
-    //console.log(node)
-
-    // populate the chars array with characters & gather additional info
-    //chars = node.dataset.chars.split('␣')
-    chars = node.textContent.split('␣')
-    
-    if (typeof node.dataset.cols === 'undefined') var info = ''
-    else info = node.dataset.cols
-   
-    if (node.dataset.notes) {
-        var notes = node.dataset.notes.split(',')
-        }
-    else notes = []
-
-
-    var out = ''
-
-    // make the summary count link
-    if (chars.length > 1) {
-        var length = chars.length
-        for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
-        out += '<div class="listAll" onClick="listAll(this, \''+lang+'\')">list '
-        if (length === 2) out += 'both'
-        else out += 'all '+length
-        out += '</div>'
-        }
-
-    // start building the listArray
-    out += '<div class="listArray">'
-
-    // for each item ...
-    for (let i=0;i<chars.length;i++) {
-        console.log('makeIndexLine',chars[i])
-        char = chars[i]
-
-        // create an id attribute for the listPairs in the index
-        if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
-        else indexId = ''
-
-        if (node.dataset.lang) out += `<div class="listPair"${ indexId }><span class="listItem" lang="${ node.dataset.lang }" onclick="makeFootnoteIndex(charVal)">${ chars[i] }</span>`
-        else out += `<div class="listPair"${ indexId }><span class="listItem" lang="${ lang }" onclick="makeFootnoteIndex('${ chars[i] }')">${ chars[i] }</span>`
-
-
-
-        if (notes.length > 0) {
-            if (notes[i]) ch = notes[i]
-            else ch = '&nbsp;'
-            out += '<span class="listMeaning">'+ch+'</span>'
-            }
-
-
-        // print the code point values
-        out += '<span class="listUnum">'
-        charList = [... chars[i]]
-        for (let z=0;z<charList.length;z++) {
-            var hex = charList[z].codePointAt(0)
-            hex = hex.toString(16).toUpperCase()
-            while (hex.length < 4) hex = '0'+hex
-
-            out += '<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">'+hex+'</span>'
-            if (charList.length>1 && z<charList.length-1) out += '<br/>'
-            }
-        out += '</span>'
-
-
-        // add any links
-        out += '<div class="index_details">'
-        if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ucsName]) {
-            var uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
-            if (window.spreadsheetRows[char][cols.status] && window.spreadsheetRows[char][cols.status] !== '0') {
-                status = getStatusForIndex(window.spreadsheetRows[char][cols.status]).replace(/\./,'')
-                //out += `<span class="index_uname index_${ status }" onclick="makeFootnoteIndex('${ chars[i] }')">${ uname } &nbsp;&nbsp; (${ status })</span>`
-                out += `<span class="index_uname index_${ status }" onclick="makeFootnoteIndex('${ chars[i] }')">(${ status }) &nbsp;&nbsp; ${ uname }</span>`
-                }
-            else out += `<span class="index_uname" onclick="makeFootnoteIndex('${ chars[i] }')">${uname}</span>`          
-            }
-        else uname = "NAME UNKNOWN"
-
-        //out += `<span class="index_uname" onclick="makeFootnoteIndex('${ chars[i] }')">${uname}</span>`
-        if (window.spreadsheetRows[char]) {
-            out += `<span class="indexLineData" onclick="makeFootnoteIndex('${ chars[i] }')">`
-            if (window.spreadsheetRows[char][cols.typeLoc]) out += `<span class="typeLoc">${ window.spreadsheetRows[char][cols.typeLoc] }</span> `
-            if (window.spreadsheetRows[char][cols.statusLoc]) out += `<span class="statusLoc">${ window.spreadsheetRows[char][cols.statusLoc] }</span> `
-            if (window.spreadsheetRows[char][cols.ipaLoc]) out += `<span class="ipa">${ window.spreadsheetRows[char][cols.ipaLoc].toLowerCase() }</span> `
-            if (window.spreadsheetRows[char][cols.transcription] && window.spreadsheetRows[char][cols.transcription] !== '0') out += `<span class="transc">${ window.spreadsheetRows[char][cols.transcription] }</span> `
-            out += '</span>'
-            }
-        out += '</span>'
-        out += '</div>'
-
-
-
-        out += '</div>'
-        }
-    out += '</div>'
-
-    node.innerHTML = out
-    }
-
-
-
-
-
-
-function getStatusForIndexX (token) {
-    // returns expanded strings for the status column in spreadsheet
-    switch (token) {
-    case 'r': status = 'rare'; break;
-    case 'i': status = 'infrequent'; break;
-    case 'l': status = 'loan'; break;
-    case 'a': status = 'archaic'; break;
-    case 'u': status = 'unused'; break;
-    case 'o': status = 'obsolete'; break;
-    case 'd': status = 'deprecated'; break;
-    default: status = ''
-    }
-
-    return status
-    }
 
 
 
@@ -1317,77 +903,6 @@ function makeIndexLine (node) {
 
 
 
-/*
-function clearExamples () {
-	examples = document.getElementById('freeText').getElementsByTagName('span');
-	for (var i=0; i<examples.length; i++) {
-		examples[i].style.color = 'black';
-		}
-	
-	var notes = document.getElementById('notes').getElementsByTagName('div');
-	for (var i=0; i<notes.length; i++) { notes[i].style.display = 'none'; }
-	}
-	
-function highlightExample (text) {
-	document.getElementById(text).style.color = 'red';
-	}
-
-
-isJustified = false;
-
-function toggleJustification (sample, justifyButton) { 
-	if (sample.style.textAlign === 'justify') { 
-		sample.style.textAlign = 'start'
-		justifyButton.textContent = ' Justify '
-		}
-	else {
-		sample.style.textAlign = 'justify'
-		justifyButton.textContent = ' Remove justification '
-		}
-	}
-
-
-function toggleDirection (sample, toggleButton) { 
-	if (sample.className === 'set_horizontal') { 
-		sample.className = 'set_vertical_rl'
-		justifyButton.textContent = ' Set horizontally '
-		}
-	else {
-		sample.className = 'set_horizontal'
-		justifyButton.textContent = ' Set vertically '
-		}
-	}
-
-
-var currDirection = 'horizontal';
-
-
-
-function showFeatureInfo (examples, featureInfoId) {
-	// causes the page to display the info for the feature you clicked on
-	// highlights, comma-separated string of example ids
-	// featureInfo, string, id of the feature description block to show
-	clearExamples()
-	if (examples != '') {
-		exampleIds = examples.split(',')
-		for (var i=0;i<exampleIds.length;i++) {
-			highlightExample(exampleIds[i])
-			}
-		}
-	if (featureInfoId != '') {
-		document.getElementById(featureInfoId).style.display = 'block'
-		document.location = '#'+featureInfoId
-		}
-	}
-
-function showAllFeatureInfo () {
-	// causes the page to display all the info in note form
-	var notes = document.querySelectorAll('.note')
-	for (var i=0;i<notes.length;i++) {
-		notes[i].style.display = 'block'
-		}
-	}
-*/
 
 
 function initialiseShowNames (node, base, target) {
@@ -1431,6 +946,8 @@ function initialiseShowNames (node, base, target) {
 
 
 function showCharDetailsEvent (evt) {
+    // opens a panel to display character notes details
+    
 	if (typeof charDetails === 'undefined') return
 
 	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
@@ -1460,7 +977,7 @@ function showCharDetailsEvent (evt) {
 	//autoTransliterate(evt.target.lang)
 	convertTranscriptionData(evt.target)
 	setFootnoteRefs()
-    var links = table.querySelectorAll('.codepoint a')
+    var links = table.querySelectorAll('.codepoint a, .codepoint code')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
     initialiseShowNames(table, window.blockDir, 'c')
     }
@@ -1501,30 +1018,6 @@ function getSelected() {
 	}
 
 
-/*
-function setFigureRefs () {
-    // looks for inline tags with class .figref, takes the textContent and replaces it with the number of the figure
-    // textConten should be the id of the figure
-    // only works for figures with figcaption (to screen out character lists)
-    
-    var figrefs = {}
-    var figures = document.querySelectorAll('figcaption')
-    for (let i=0;i<figures.length;i++) {
-        //console.log(figures[i].textContent)
-        if (figures[i] && figures[i].parentNode.id) {
-            if (figrefs[figures[i].parentNode.id]) {}
-            else figrefs[figures[i].parentNode.id] = i+1
-            //console.log(figures[i].textContent, i+1)
-            }
-        }
-
-    var figrefitems = document.querySelectorAll('.figref')
-    for (let i=0;i<figrefitems.length;i++) {
-        let id = figrefitems[i].textContent
-        if (figrefs[id]) figrefitems[i].textContent = 'Figure '+figrefs[id]
-        }
-    }
-*/
 
 
 function toggleTranscription (type, show) { 
@@ -1539,60 +1032,9 @@ function toggleTranscription (type, show) {
         if (show) trans[i].style.display = 'block'
         else trans[i].style.display = 'none'
         }
-}
-
-//<div class="listPair"><span class="listItem" lang="ber">ⵓ</span><span class="listTrans">u</span><span class="listIPA">ʊ</span></div>
-
-/*
-function setGeneralFont (fontname, size, language) {
-	if (language === '') return
-	var langtags = language.split(',')
-	var searchstr = ''
-	if (langtags.length === 1) searchstr = '*[lang ="'+language+'"]'
-	else {
-		searchstr = '*[lang ="'+langtags[0]+'"]'
-		for (var i=1;i<langtags.length;i++) searchstr += ',*[lang ="'+langtags[i]+'"]'
-		}
-	console.log(searchstr)
-	var examples = document.querySelectorAll(searchstr)
-	for (var e=0;e<examples.length;e++) {  
-		examples[e].style.fontFamily = fontname
-		examples[e].style.fontSize = size
-		}
-	}
-*/
+    }
 
 
-
-
-/*
-function runCharCount (type, location, raw=false) { 
-	//if (document.getElementById(location) == null) return
-	var charlists
-	if (document.getElementById('index')) charlists = document.getElementById('index').querySelectorAll(type)
-	else charlists = document.querySelectorAll(type)
-	var out = ''
-	charlistArray = []
-	for (let i=0;i<charlists.length;i++) {
-		var charStr = charlists[i].textContent
-		charStr = charStr.replace(/␣/g,'')
-		var chars = [...charStr]
-		for (let c=0;c<chars.length;c++) charlistArray.push(chars[c])
-		}
-	const uniqueSet = new Set(charlistArray)
-	var uniqueArray = [...uniqueSet]
-	
-	if (raw) out += uniqueArray.toString().replace(/,/g,' ')
-    else {
-        out += '<tr><th>'+location+'</th>'
-        +'<td id="'+location+'CharList">'
-        +uniqueArray.toString().replace(/,/g,' ')
-        +'</td>'
-        +'<td id="'+location+'CharListTotal">'+uniqueArray.length+'</td></tr>'
-        }
-
-	return out
-	}*/
 
 
 
@@ -1625,68 +1067,6 @@ function getOrthographyList (type, location, spaced=false) {
 
 
 
-
-function findIPAOLD () {
-	// when you click on a phone in an svg or table chart, this highlights occurrences of that phone in the doc
-	// this only locates a match if the phone is isolated (ie the only phone in the span or one of a set of 
-	// space-separated phones in the span.  It won't pick up usage in ipa spellings of examples.
-	// This is to avoid matching t with th, tʰ, t͡ʃʰ, etc.)
-
-	// create a set of the character(s) being looked up
-	const phoneSet = new Set(this.textContent.replace(/-/g,'').split(' '))
-	//console.log('search for:',phoneSet)
-
-	// identify locations in svg and tables that should not count
-	var svgArray = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone',)
-	var tableArray = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
-	var screenedItems = new Set([ ...svgArray, ...tableArray ])
-	//console.log('screenedItems',screenedItems)
-
-	// collect all the .ipa elements
-	var listItems = document.querySelectorAll('.ipa, .listIPA')
-	var counter = 0
-	var links = []
-	for (k=0;k<listItems.length;k++) listItems[k].style.backgroundColor = 'transparent'
-	
-	for (let i=0;i<listItems.length;i++) {
-		var listPhones = listItems[i].textContent.split(' ')
-		for (let p=0;p<listPhones.length;p++) {
-			//listItems[i].style.backgroundColor = 'transparent'
-			if ((! screenedItems.has(listItems[i])) && phoneSet.has(listPhones[p].replace(/-/g,''))) {
-				listItems[i].style.backgroundColor = '#ffa442ad'
-				listItems[i].style.borderRadius = '5px'
-				
-				// gather a list of links to the found items
-				var ptr = listItems[i]
-				//console.log(listItems[i])
-				while (ptr.parentNode.id == '') ptr = ptr.parentNode
-				links.push(ptr.parentNode.id)
-				
-				counter++
-				}
-			}
-		}
-	
-	// remove redundancy from the links array
-	const uniqueLinks = new Set(links)
-	leanLinks = [...uniqueLinks]
-	//console.log(leanLinks)
-	
-	// report the results
-	if (document.getElementById('phoneLinks')) {
-		var out = counter+' matches found: &nbsp; '
-		for (let i=0;i<leanLinks.length;i++) {
-            if (i>0) out += ' • '
-            out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
-            }
-		document.getElementById('phoneLinks').style.display = 'block'
-		document.getElementById('phoneLinks').innerHTML = out+' &nbsp;&nbsp;<span style="cursor:pointer" onclick="this.parentNode.style.display = \'none\'">X</span>&nbsp;&nbsp;'
-		}
-	else {
-		if (counter > 0) alert(counter+' matches found: &nbsp; '+leanLinks+'.')
-		else alert('No matches found.')
-		}
-	}
 
 
 //itemToFind.test(possibleMatches[i].textContent)
@@ -1793,6 +1173,10 @@ function makeFootnoteIndex (charVal) {
 
 	// create a regex of the character(s) being looked up
     var incomingValue, itemToFind
+    
+    // this creation of itemToFind regex seems unnecessary, and .test was failing 
+    // to locate all instances.  Replaced the latter with .includes
+    // seems to work: wait a while to ensure it's a good fix, then delete the following
     if (typeof charVal === 'string') incomingValue = charVal.replace(/◌/g,'')
     else incomingValue = this.textContent.replace(/◌/g,'')
     itemToFind = new RegExp(makeSafeRegex(incomingValue), 'g')
@@ -1802,26 +1186,30 @@ function makeFootnoteIndex (charVal) {
 	var possibleMatches = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
 	var counter = 0
 	var links = []
+    for (x=0;x<possibleMatches.length;x++) //console.log('possibleMatch:',possibleMatches[x].textContent)
     
     // clear any existing highlights
 	for (var k=0;k<possibleMatches.length;k++) possibleMatches[k].style.backgroundColor = 'transparent'
 	
     // check for matches and add highlights etc
 	for (var i=0;i<possibleMatches.length;i++) {
-        if (possibleMatches[i].parentNode.nodeName !== 'A' && itemToFind.test(possibleMatches[i].textContent)) {
+        if (possibleMatches[i].parentNode.nodeName !== 'A' && 
+       // itemToFind.test(possibleMatches[i].textContent)) {
+        possibleMatches[i].textContent.includes(incomingValue)) {
             possibleMatches[i].style.backgroundColor = '#ffa442ad'
             possibleMatches[i].style.borderRadius = '5px'
+            //console.log('FOUND',possibleMatches[i].textContent)
             
             // gather a list of links to the found items
             var ptr = possibleMatches[i]
-            //console.log(possibleMatches[i])
             while (ptr.parentNode.nodeName == 'FIGURE' || ptr.parentNode.id == '') ptr = ptr.parentNode
             links.push(ptr.parentNode.id)
-
             counter++
             }
 		}
-	
+
+    //console.log('links',links)
+
 	// remove redundancy from the links array
 	const uniqueLinks = new Set(links)
 	var leanLinks = [...uniqueLinks]
@@ -1854,71 +1242,6 @@ function makeFootnoteIndex (charVal) {
 
 
 
-function makeFootnoteIndexOLD (charVal) {
-	// when you click on a character in a .listItem or .codepoint this creates a set of links at the bottom
-    // of the page to other locations where that character is mentioned
-    // it also highlights those instances
-
-    var phoneSet
-	// create a set of the character(s) being looked up
-    if (typeof charVal === 'string') phoneSet = new Set(charVal.replace(/-/g,'').split(' '))
-	else phoneSet = new Set(this.textContent.replace(/-/g,'').split(' '))
-	//console.log('search for:',phoneSet)
-
-	// identify locations in svg and tables that should not count
-	var svgArray = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone',)
-	var tableArray = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
-	var screenedItems = new Set([ ...svgArray, ...tableArray ])
-	//console.log('screenedItems',screenedItems)
-
-	// collect all the .listItem & .codepoint elements
-	var listItems = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
-	var counter = 0
-	var links = []
-	for (var k=0;k<listItems.length;k++) listItems[k].style.backgroundColor = 'transparent'
-	
-	for (var i=0;i<listItems.length;i++) {
-		var listPhones = listItems[i].textContent.split(' ')
-		for (let p=0;p<listPhones.length;p++) {
-			//listItems[i].style.backgroundColor = 'transparent'
-			if ((! screenedItems.has(listItems[i])) && phoneSet.has(listPhones[p].replace(/-/g,''))) {
-				listItems[i].style.backgroundColor = '#ffa442ad'
-				listItems[i].style.borderRadius = '5px'
-				
-				// gather a list of links to the found items
-				var ptr = listItems[i]
-				//console.log(listItems[i])
-				//while (ptr.parentNode.id == '') ptr = ptr.parentNode
-				while (ptr.parentNode.nodeName == 'FIGURE' || ptr.parentNode.id == '') ptr = ptr.parentNode
-				links.push(ptr.parentNode.id)
-				
-				counter++
-				}
-			}
-		}
-	
-	// remove redundancy from the links array
-	const uniqueLinks = new Set(links)
-	var leanLinks = [...uniqueLinks]
-	//console.log(leanLinks)
-	
-	// report the results
-	if (document.getElementById('phoneLinks')) {
-		var out = counter+' matches found in: '
-		for (let i=0;i<leanLinks.length;i++) {
-            if (i>0) out += ' • '
-            out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
-            }
-		document.getElementById('phoneLinks').style.display = 'block'
-		document.getElementById('phoneLinks').innerHTML = out+` &nbsp;&nbsp;<span style="cursor:pointer" onclick="this.parentNode.style.display = 'none'; clearFootnoteIndexHighlights()">X</span>&nbsp;&nbsp;`
-		}
-	else {
-		if (counter > 0) alert(counter+' matches found in these sections: '+leanLinks+'.')
-		else alert('No matches found.')
-		}
-	}
-
-
 
 function clearFootnoteIndexHighlights () {
     // removes the highlighting associated with the footnote index links
@@ -1928,18 +1251,6 @@ function clearFootnoteIndexHighlights () {
     }
 
 
-/*
-function copyToClipboard (node) {
-	var oldContent = node.textContent
-	node.textContent=node.textContent.replace(/\u200B/g,'')
-	node.contentEditable=true
-	node.focus()
-	document.execCommand('selectAll')
-	document.execCommand('copy')
-	node.contentEditable=false
-	node.textContent=oldContent
-	}
-*/	
 
 
 function showTransliterations (yes) {
