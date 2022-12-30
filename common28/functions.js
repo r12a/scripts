@@ -1,4 +1,9 @@
-trace = false
+// provide values for trace variables in the debug.js file
+
+
+if (typeof traceSet === 'undefined') traceSet = new Set([])
+
+
 
 // set accessibility defaults
 access = {
@@ -38,7 +43,8 @@ function addPageFeatures () {
 
 
 function initialiseSummary (blockDirectory, lang, tableName, dir) {
-    console.log('initialiseSummary(',blockDirectory, lang,tableName,dir,')')
+    if (traceSet.has('initialiseSummary') || traceSet.has('all')) console.log('initialiseSummary(',blockDirectory, lang, tableName, dir,')')
+    
     //set accessibility defaults
     if (localStorage['docsAccess']) access = JSON.parse(localStorage['docsAccess']) 
     if (access.contrast === 'high') {
@@ -58,12 +64,11 @@ function initialiseSummary (blockDirectory, lang, tableName, dir) {
     console.log(access.fontsize,document.getElementById('accessFontsize').value)
 
 
-    if (trace) console.log('initialiseSummary(',blockDirectory, lang, tableName, dir,')')
 	doHeadersFooters(dir)
     makeIndexIntro(document.getElementById('index_intro'))
     makeTables(lang)
 	if (typeof addExamples !== 'undefined') addExamples(lang)
-    initialiseShowNames(document, blockDirectory, 'c')
+    initialiseShowNames(document, blockDirectory, '')
     if (document.getElementById('features')) document.getElementById('features').innerHTML = makeSidePanel(tableName,"")
     createtoc(3)
 	removeEditorNotes()
@@ -104,7 +109,7 @@ function setMarks () {
 
 function setCharOnclicks () {
 	// all links with target=c should open descriptions in the panel
-    if (trace) console.log('setCharOnclicks(',') All links with target=c should open descriptions in the panel')
+    if (traceSet.has('setCharOnclicks') || traceSet.has('all')) console.log('setCharOnclicks(',') All links with target=c should open descriptions in the panel')
 
 	var links = document.querySelectorAll('.codepoint a, .codepoint code')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
@@ -112,7 +117,7 @@ function setCharOnclicks () {
 
 function setupBlockLinks () {
 	// set target attribute for links that point to characters in the block page
-    if (trace) console.log('setupBlockLinks(',') Set target attribute for links that point to characters in the block page')
+    if (traceSet.has('setupBlockLinks') || traceSet.has('all')) console.log('setupBlockLinks(',') Set target attribute for links that point to characters in the block page')
     
 	var links = document.querySelectorAll('.codepoint a, .codepoint code')
 	for (var i=0;i<links.length;i++) if (links[i].target != null) links[i].target = 'c'
@@ -124,7 +129,7 @@ function setupBlockLinks () {
 
 function setFindIPA () { // test extension to map stuff
 	// makes ipa characters in sounds charts indicate locations they are used
-    if (trace) console.log('setFindIPA(',') Make ipa characters in sounds charts indicate locations they are used')
+    if (traceSet.has('setFindIPA') || traceSet.has('all')) console.log('setFindIPA(',') Make ipa characters in sounds charts indicate locations they are used')
 
 	var listItems = document.querySelectorAll('.codepoint span, .codepoint bdi')
 	for (var i=0;i<listItems.length;i++) {
@@ -230,7 +235,7 @@ function pointToSummaryPages () {
 
 
 function doHeadersFooters (dir) {
-    if (trace) console.log('doHeadersFooters(',dir,') Add links to top of document')
+    if (traceSet.has('doHeadersFooters') || traceSet.has('all')) console.log('doHeadersFooters(',dir,') Add links to top of document')
 	// adds links to top of document
 	// dir is of the form arabic/index or arabic/urdu
 
@@ -510,7 +515,7 @@ function makeSidePanel (id, otherlinks) {
 
 
 function makeTables (lang) {
-    if (trace) console.log('makeTables(',lang,') Create the lists of characters in yellow, etc. boxes')
+    if (traceSet.has('makeTables') || traceSet.has('all')) console.log('makeTables(',lang,') Create the lists of characters in yellow, etc. boxes')
 
     if (typeof window.spreadsheet == 'undefined') {
 		console.log("Spreadsheet undefined.")
@@ -905,8 +910,8 @@ function makeIndexLine (node) {
 
 
 
-function initialiseShowNames (node, base, target) {
-    if (trace) console.log('initialiseShowNames(',node, base, target,') Add onclick function to all .ex elements to display in panel')
+function initialiseShowNamesX (node, base, target) {
+    if (traceSet.has('setFindIPA') || traceSet.has('all')) console.log('initialiseShowNames(',node, base, target,') Add onclick function to all .ex elements to display in panel')
     // add function to all images with class ex
     // function will display character by character names for example in the panel
     // base (string), path for link to character detail
@@ -917,6 +922,46 @@ function initialiseShowNames (node, base, target) {
 	// check whether the calling page has set a base and target window
 	if(typeof base === 'undefined') { base = ''; }
 	if(typeof target === 'undefined') { target = ''; } 
+	
+    var e
+	var examples = node.querySelectorAll('.ex')
+	for (e=0;e<examples.length;e++) {
+		if (examples[e].nodeName.toLowerCase() == 'img') {
+			shownames_setImgOnclick(examples[e], base, target)
+			}
+		else { shownames_setOnclick(examples[e], base, target) }
+		}
+	
+    // this is the new stuff
+	var listItems = document.querySelectorAll(".listItem")
+	for (let i=0;i<listItems.length;i++) {
+		listItems[i].addEventListener('click', showCharDetailsEvent)
+		listItems[i].addEventListener('click', makeFootnoteIndex)
+		//listItems[i].addEventListener('click', showCharDetailsInPanel)
+		//listItems[i].addEventListener('mouseover', showCharDetailsInPanel)
+		listItems[i].addEventListener('mouseover', showCharDetailsEvent)
+		}
+	
+	var lists = document.querySelectorAll(".exlist")
+	for (let i=0;i<lists.length;i++) lists[i].addEventListener('click', showCharDetailsEvent)
+	}
+
+
+
+
+
+function initialiseShowNames (node, base, target) {
+    if (traceSet.has('initialiseShowNames') || traceSet.has('all')) console.log('initialiseShowNames(',node, base, target,') Add onclick function to all .ex elements to display in panel')
+    // add function to all images with class ex
+    // function will display character by character names for example in the panel
+    // base (string), path for link to character detail
+
+    // this extends the function in show_codepoints.js to add support for listItems
+
+
+	// check whether the calling page has set a base and target window
+	if(typeof base === 'undefined') base = ''
+	if(typeof target === 'undefined') target = ''
 	
     var e
 	var examples = node.querySelectorAll('.ex')
@@ -1268,7 +1313,7 @@ function showTransliterations (yes) {
 
 
 function setTranslitToggle () {
-    if (trace) console.log('setTranslitToggle(',') Add checkboxes and links to the fixed position selector')
+    if (traceSet.has('setTranslitToggle') || traceSet.has('all')) console.log('setTranslitToggle(',') Add checkboxes and links to the fixed position selector')
 	// adds checkboxes and links to the fixed position selector
 	
 	var checkboxList = document.getElementById('showTranscriptions')
@@ -1601,7 +1646,7 @@ function checkParameters () {
 
 
 function makeScriptLanguageList () {
-    if (trace) console.log('makeScriptLanguageList(',') Fill in the "Languages using the ... script" section, using an object defined in refs.js')
+    if (traceSet.has('makeScriptLanguageList') || traceSet.has('all')) console.log('makeScriptLanguageList(',') Fill in the "Languages using the ... script" section, using an object defined in refs.js')
     // fills in the "Languages using the ... script" section, using an object defined in refs.js
     
     if (document.getElementById('scriptLanguageList') === null) return
