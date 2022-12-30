@@ -1,6 +1,10 @@
 /* jshint strict: false */
 /* globals autoExpandExamples, egList */
 
+
+if (typeof traceSet === 'undefined') traceSet = new Set([])
+
+
 window.autoExpandExamples = {}
 // this will contain the vocab information stored in xxx-examples.js for all languages
 // it has to be declared before that page is loaded, so that the .langFilter item can be attached
@@ -8,6 +12,7 @@ var egList = {}
 
 
 function addExamples (langFilter) {
+    if (trace || traceSet.has('addExamples')) console.log('addExamples(',langFilter,') Convert all .eg items to full markup.')
 /*  read the data into egList, in which each record has
 	example, meaning, transcription?, notes?, alt?
 	alt is generally a vowelled form for abjads or an alternative spelling
@@ -34,7 +39,6 @@ function addExamples (langFilter) {
     i, n, counters
     temp, temptemp
     */
-    if (trace) console.log('addExamples(',langFilter,')')
     
 	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
 
@@ -63,8 +67,7 @@ function addExamples (langFilter) {
 		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
 			temp = egList[nodes[n].textContent].split('|')
             
-            
-            console.log(egList[nodes[n].textContent])
+            if (trace || traceSet.has('addExamples')) console.log('addExamples:',egList[nodes[n].textContent])
             // get the available data
             var termdata = egList[nodes[n].textContent].split('|')
             var term = termdata[0]
@@ -90,7 +93,8 @@ function addExamples (langFilter) {
 			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'            
 			//if (temp[2]) ipaBreakdown = temp[2]
             //else ipaBreakdown = ''
-            out += `  onclick="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipa }')"`
+            //out += `  onclick="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipa }')"`
+            out += `  onclick="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }')"`
 			out += '>'
 			out += term
 			out += '</bdi>'
