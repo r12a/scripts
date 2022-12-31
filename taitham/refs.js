@@ -56,6 +56,13 @@ reflist = {
 "reviewed":true
 },
 
+"t": {
+"authors": "Ed Trager",
+"title":"Hariphunchai Tai Tham Font Project โครงการฟอนต์อักษรธรรมล้านนา “หริภุญชัย”",
+"lang": new Set(['nod']),
+"reviewed":false
+},
+
 "w": {
 "authors": "Richard Wordingham",
 "title":"Tai Tham Renderer Tests",
