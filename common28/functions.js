@@ -1212,6 +1212,7 @@ function makeSafeRegex (str) {
 
 
 function makeFootnoteIndex (charVal) {
+    if (traceSet.has('makeFootnoteIndex')) console.log('makeFootnoteIndex(',charVal,')')
 	// when you click on a character in a .listItem or .codepoint this creates a set of links at the bottom
     // of the page to other locations where that character is mentioned
     // it also highlights those instances
@@ -1231,7 +1232,7 @@ function makeFootnoteIndex (charVal) {
 	var possibleMatches = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
 	var counter = 0
 	var links = []
-    for (x=0;x<possibleMatches.length;x++) //console.log('possibleMatch:',possibleMatches[x].textContent)
+    for (x=0;x<possibleMatches.length;x++) if (traceSet.has('makeFootnoteIndex')) //console.log('possibleMatch:',possibleMatches[x].textContent)
     
     // clear any existing highlights
 	for (var k=0;k<possibleMatches.length;k++) possibleMatches[k].style.backgroundColor = 'transparent'
@@ -1253,17 +1254,21 @@ function makeFootnoteIndex (charVal) {
             }
 		}
 
-    //console.log('links',links)
+    //if (traceSet.has('makeFootnoteIndex')) console.log('links',links)
 
 	// remove redundancy from the links array
 	const uniqueLinks = new Set(links)
 	var leanLinks = [...uniqueLinks]
-	//console.log(leanLinks)
+	//if (traceSet.has('makeFootnoteIndex')) console.log(leanLinks)
 	
 	// report the results
 	if (document.getElementById('phoneLinks')) {
 		var out = counter+' matches found: &nbsp; '
 		for (let i=0;i<leanLinks.length;i++) {
+            if (typeof leanLinks[i] === 'undefined') {
+                console.log('*** Undefined leanLinks in makeFootnoteIndex')
+                continue
+                }
             if (i>0) out += ' • '
             out += `<a href="#${ leanLinks[i] }"`
             // open the index, if necessary
