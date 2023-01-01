@@ -578,15 +578,6 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
                 out += '</p>'
                 }
            
-            
-            out += '</div>' // end of letterData
-
-            out += '<div class="letterDetails">'
-            
-            // if a character is in the spreadsheet, but not in the xx-details file, add it to the missingDetails list
-			if (typeof charDetails[cchar] === 'undefined') missingDetails += ' '+cchar
-			else if (charDetails[cchar].trim() !== '') out += charDetails[cchar]
-
 			// vowel correspondences
 			if (cols.ivowel>0 && spreadsheetRows[cchar][cols.ivowel]) {
 				out += '<p class="vowelPairing">The corresponding independent vowel is '+makeCharacterLink(spreadsheetRows[cchar][cols.ivowel], lang, dir)+'</p>'
@@ -618,12 +609,21 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 			if (cols.ltone>0 && spreadsheetRows[cchar][cols.ltone]) {
 				out += '<p class="tonePairing">Low class equivalent is '+makeCharacterLink(spreadsheetRows[cchar][cols.ltone], lang, dir)+'</p>'
 				}
+			
+            
+            out += '</div>' // end of letterData
+
+            out += '<div class="letterDetails">'
+            
+            // if a character is in the spreadsheet, but not in the xx-details file, add it to the missingDetails list
+			if (typeof charDetails[cchar] === 'undefined') missingDetails += ' '+cchar
+			else if (charDetails[cchar].trim() !== '') out += charDetails[cchar]
 
             out += '</div>' // end of letterDetails
 			out += '</div>' // end of letter div
 			
 			noteList[x].innerHTML = noteList[x].innerHTML + '\n\n' + out
-			}
+            }
 
 		else missing += ' '+cchar
 		}
