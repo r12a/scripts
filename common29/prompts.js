@@ -180,7 +180,7 @@ function makeIndexIntro (node) {
     var langName = window.languageName
     var lang = window.charUsageBCP
     var orthog = window.orthogName
-    var indic = window.indic
+    var indic = window.scriptIsIndic
     
     var out = ''
     

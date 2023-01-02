@@ -15,38 +15,9 @@ access = {
 
 
 function addPageFeatures () {
-    initialiseSummary(window.blockDir, window.langTag, window.scriptSummaryTableName, window.explainerDir)
-    //autoTransliterate(langTag)
-    checkParameters()
-    
-    // autogenerate the index
-    if (window.autoIndex) {
-        makeIndexObject()
-        makeMarkupForSection('index_letters')
-        makeMarkupForSection('index_cchars')
-        makeMarkupForSection('index_numbers')
-        makeMarkupForSection('index_punctuation')
-        makeMarkupForSection('index_symbols')
-        makeMarkupForSection('index_other')
-        window.index = {}
-        }
-    
-    makeCharDataObj()
-    pointToSummaryPages()
-    
-    marks = new Set()
-    setMarks()
-    
-    // empty large global variables
-    window.fontDB = []
-    defList = []
-    fontInfo = {}
-    }
+    if (traceSet.has('addPageFeatures') || traceSet.has('all')) console.log('Globals(',window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath,')')
 
 
-function initialiseSummary (blockDirectory, lang, tableName, notesDirectory) {
-    if (traceSet.has('initialiseSummary') || traceSet.has('all')) console.log('initialiseSummary(',blockDirectory, lang, tableName, notesDirectory,')')
-    
     //set accessibility defaults
     if (localStorage['docsAccess']) access = JSON.parse(localStorage['docsAccess']) 
     if (access.contrast === 'high') {
@@ -65,12 +36,49 @@ function initialiseSummary (blockDirectory, lang, tableName, notesDirectory) {
     document.getElementById('accessFontsize').value = access.fontsize
     console.log(access.fontsize,document.getElementById('accessFontsize').value)
 
-
-	doHeadersFooters(notesDirectory) // links at page top/bottom
-    makeIndexIntro(document.getElementById('index_intro')) // page intro
+	doHeadersFooters(window.orthogFilePath) // links at page top/bottom
+    
+    makeIndexIntro(document.getElementById('index_intro')) // write page intro
+    
     makeTables(lang)  // Create the lists of characters in yellow, etc. boxes
-	if (typeof addExamples !== 'undefined') addExamples(lang)  // Convert all .eg items to full markup. (egcode.js)
-    initialiseShowNames(document, blockDirectory, '') // Add onclick function to all .ex elements to display in panel
+
+    addExamples(lang)  // Convert all .eg items to full markup. (egcode.js)
+    
+    initialiseShowNames(document, blockDirectoryName, '') // Add onclick function to all .ex elements to display in panel
+
+
+
+
+initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath)
+    //autoTransliterate(langTag)
+    checkParameters()
+    
+    // autogenerate the index
+    makeIndexObject()
+    makeMarkupForSection('index_letters')
+    makeMarkupForSection('index_cchars')
+    makeMarkupForSection('index_numbers')
+    makeMarkupForSection('index_punctuation')
+    makeMarkupForSection('index_symbols')
+    makeMarkupForSection('index_other')
+    window.index = {}
+    
+    makeCharDataObj()
+    pointToSummaryPages()
+    
+    marks = new Set()
+    setMarks()
+    
+    // empty large global variables
+    window.fontDB = []
+    defList = []
+    fontInfo = {}
+    }
+
+
+function initialiseSummary (blockDirectory, lang, tableName, orthogNotesFile) {
+    if (traceSet.has('initialiseSummary') || traceSet.has('all')) console.log('initialiseSummary(',blockDirectory, lang, tableName, orthogNotesFile,')')
+    
     if (document.getElementById('features')) document.getElementById('features').innerHTML = makeSidePanel(tableName,"")
     createtoc(3)
 	removeEditorNotes()
@@ -231,18 +239,18 @@ function pointToSummaryPages () {
 
 
 
-function doHeadersFooters (notesDirectory) {
-    if (traceSet.has('doHeadersFooters') || traceSet.has('all')) console.log('doHeadersFooters(',notesDirectory,') Add links to top of document')
+function doHeadersFooters (orthogNotesFile) {
+    if (traceSet.has('doHeadersFooters') || traceSet.has('all')) console.log('doHeadersFooters(',orthogNotesFile,') Add links to top of document')
 	// adds links to top of document
-	// notesDirectory is of the form arabic/arb or arabic/ur
+	// orthogNotesFile is of the form arabic/arb or arabic/ur
 
 	if (document.getElementById('versionTop') === null) return
 	
 
-	//parse the notesDirectory
+	//parse the orthogNotesFile
 	var filename = ''
 	var directory = ''
-	var path = notesDirectory.split('/')
+	var path = orthogNotesFile.split('/')
 	directory = path[0]
 	if (path.length === 1) {
 		filename = path[0]
@@ -255,13 +263,13 @@ function doHeadersFooters (notesDirectory) {
 	var out = '&bull; recent changes <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'" title="Show commits for scripts/'+directory+'.">'+directory+'</a>'
 	if (path.length > 1) out += '/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'/'+filename+'.html" title="Show commits for scripts/'+filename+'.">'+filename+'</a>'
 	
-	out += ' &bull; leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=['+notesDirectory.replace(/index/,'')+']%20%20BRIEF_TITLE_GOES_HERE&body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2F'+notesDirectory+'%0A%0A" title="Leave a comment.">comment</a>'
+	out += ' &bull; leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=['+orthogNotesFile.replace(/index/,'')+']%20%20BRIEF_TITLE_GOES_HERE&body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2F'+orthogNotesFile+'%0A%0A" title="Leave a comment.">comment</a>'
 	
 	document.getElementById('versionTop').innerHTML = out
 	
 	
 	out = ''
-	out += 'See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'">recent changes</a>. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5B'+notesDirectory+'%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2F'+directory+'%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>'
+	out += 'See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'">recent changes</a>. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5B'+orthogNotesFile+'%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2F'+directory+'%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>'
 	
 	
 	document.getElementById('version').innerHTML = out
@@ -985,7 +993,7 @@ function showCharDetailsEvent (evt) {
 	setFootnoteRefs()
     var links = table.querySelectorAll('.codepoint a, .codepoint code')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table, window.blockDir, 'c')
+    initialiseShowNames(table, window.blockDirectoryName, 'c')
     }
 
 
@@ -1371,7 +1379,7 @@ function setTranslitToggle () {
 
     var a = document.createElement('a')
     a.appendChild(document.createTextNode('Open character app'))
-    a.href = '../../pickers/'+window.pickerDir
+    a.href = '../../pickers/'+window.pickerDir+'/index.html'
     a.title = 'Open a character app for this orthography.'
     a.target = '_blank'
     div.appendChild(a)
