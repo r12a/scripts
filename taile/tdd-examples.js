@@ -118,7 +118,7 @@ autoExpandExamples.tdd = `
 ᥢᥛᥱ||
 ᥢᥣᥒᥰ|lady, mistress||näang
 ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ|Tai Nüa|ta§j˥§t§aɯ§˧˩§x§o§ŋ§˥
-
+ᥖᥭᥰᥘᥫᥴ|Tai Le|ta§j§˦.§l§ə§˧˥
 
 
 
