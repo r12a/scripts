@@ -8,48 +8,50 @@ autoExpandExamples.tdd = `
 ᥐᥣ|crow||kaa
 ᥐᥣᥙ||
 ᥐᥣᥱ||
-ᥐᥤᥢ||
+ᥐᥤᥢ|to eat|k§i§n˧˧|kin
 ᥐᥥᥐ||
 ᥐᥧᥢᥰᥛᥤᥒᥴ||
-ᥐᥨᥢᥰ||
+ᥐᥨᥢᥰ|person, human||kön
 ᥐᥩᥒᥰᥛᥧᥰ||
 ᥑᥛᥰ||
-ᥑᥝᥲ||
-ᥑᥝᥲᥔᥥᥢᥲ||
+ᥑᥝᥲ|rice||xàw
+ᥑᥝᥲᥔᥥᥢᥲ|rice noodles||xàwsèn
 ᥑᥝᥴ||
-ᥑᥣᥛᥰ||
-ᥑᥣᥝᥱ||
+ᥑᥣᥛᥰ|language||xäam
+ᥑᥣᥝᥱ|news, message|x§aː§w§˩˩|xǎaw
+ᥑᥣᥝ̌|news, message|x§aː§w§˩˩|xǎaw
 ᥑᥣᥝᥴ||
-ᥑᥣᥭᥰ||
+ᥑᥣᥭᥰ|water buffalo||xäay
 ᥑᥣᥰ||
 ᥑᥣᥱ||
 ᥑᥣᥴ||
 ᥑᥧᥢᥴᥞᥨᥝᥴᥑᥛᥰ|king|xúnhówxäm
-ᥑᥭᥲ||
+ᥑᥭᥲ|to want, wish||xày
 ᥒᥝᥰ||
-ᥒᥧᥰ||
+ᥒᥧᥰ|snake|ŋ§u§˥˧|ngü
 ᥓᥣᥒᥳ||
-ᥓᥣᥭᥰ||
-ᥓᥪ||
+ᥓᥣᥭᥰ|man||tsäay
+ᥓᥪ|name|t͡s§ɯ|tsue
 ᥓᥬᥴ||
 ᥔᥒᥴ||
 ᥔᥣᥛᥴ||
 ᥔᥣᥝᥴ||
-ᥔᥤᥙᥴ||
+ᥔᥤᥙᥴ|ten||síp
 ᥔᥤᥱ||
-ᥔᥥᥒᥴ||
+ᥔᥥᥒᥴ|sound, voice||séng
 ᥔᥥᥢᥲ||
-ᥔᥧᥛᥳ||
+ᥔᥧᥛᥳ|room||s§u§̇m
 ᥔᥧᥴ||
-ᥔᥩᥒᥴ||
+ᥔᥩᥒᥴ|two||sóang
 ᥔᥩᥢᥴ||
 ᥕᥒ||
 ᥕᥝᥳ||
 ᥕᥤᥒᥰ||
-ᥕᥧᥱ||
-ᥕᥭᥰ||
-ᥖᥣᥢᥲ||
-ᥖᥦᥛᥲ||
+ᥕᥧᥱ|to be at|j§u§˩˩|yǔ
+ᥕᥧ̌|to be at|j§u§˩˩|yǔ
+ᥕᥭᥰ|cicada||yäy
+ᥖᥣᥢᥲ|to speak||tàan
+ᥖᥦᥛᥲ|to write||tàem
 ᥖᥧ||
 ᥖᥨᥙ||
 ᥖᥨᥝ||
@@ -59,28 +61,28 @@ autoExpandExamples.tdd = `
 ᥖᥩᥒᥲ||
 ᥖᥩᥒᥳ||
 ᥖᥩᥒᥴ||
-ᥗᥬᥴ||
+ᥗᥬᥴ|where||tháue
 ᥘᥛᥱ||
-ᥘᥛᥳ||
+ᥘᥛᥳ|water||lȧm
 ᥘᥢᥰ||
-ᥘᥣᥐᥴ|heavy|
+ᥘᥣᥐᥴ|heavy||lȧak
 ᥘᥣᥒᥰ|lady, mistress||läang
 ᥘᥣᥢᥰ||
-ᥘᥣᥭᥰ||
-ᥘᥤᥐ||
-ᥘᥥᥐᥱ||
-ᥘᥦ||
-ᥘᥦᥒ||
-ᥘᥦᥰ||
+ᥘᥣᥭᥰ|dew||läay
+ᥘᥤᥐ|book|l§i§k§˦˧|lik
+ᥘᥥᥐᥱ|iron||lěk
+ᥘᥦ|agreement particle||lae
+ᥘᥦᥒ|red||laeng
+ᥘᥦᥰ|imperative particle||läe
 ᥘᥧᥐ||
-ᥘᥩᥐᥳ|outside|
-ᥙᥣ||
+ᥘᥩᥐᥳ|outside||||x
+ᥙᥣ|fish||paa
 ᥙᥣᥐᥱ||
-ᥙᥤ||
+ᥙᥤ|year||pi
 ᥙᥤᥢᥱ||
 ᥙᥥᥢ||
-ᥚᥐᥴ||
-ᥚᥬᥴ||
+ᥚᥐᥴ|vegetable||phák
+ᥚᥬᥴ|who|pʰ§aɯ§˨˦|pháue
 ᥛᥢᥰ||
 ᥛᥣᥰ|to come||mäa
 ᥛᥣᥱ|shoulder||mǎa
@@ -89,33 +91,33 @@ autoExpandExamples.tdd = `
 ᥛᥣᥴ|dog||máa
 ᥛᥤᥰ||
 ᥛᥥ|mother|
-ᥛᥦᥒᥰ||
-ᥛᥦᥝᥴ||
+ᥛᥦᥒᥰ|insect||mäeng
+ᥛᥦᥝᥴ|cat||máew
 ᥛᥧᥴ||
 ᥛᥨᥝᥴ||
 ᥛᥨᥝᥴᥔᥩᥢᥴ||
 ᥛᥨᥢᥱ||
-ᥛᥫᥒᥰ||
-ᥛᥬᥰ||
-ᥛᥬᥱ||
+ᥛᥫᥒᥰ|city, country|m§ə§ŋ§²|möeng
+ᥛᥬᥰ|you (s)||mäue
+ᥛᥬᥱ|new||mǎue
 ᥜᥒᥰ||
 ᥜᥒᥱ||
-ᥜᥒᥴ||
-ᥜᥫᥐᥱ||
-ᥜᥭᥰ||
-ᥝᥢᥰ||
+ᥜᥒᥴ|to bury||fáng
+ᥜᥒ́|to bury||fáng
+ᥜᥫᥐᥱ|to study, learn||fǒek
+ᥜᥭᥰ|fire||fäy
+ᥝᥢᥰ|day||wän
 ᥞᥝᥰ||
-ᥞᥣᥲ||
-ᥞᥧᥴ||
+ᥞᥣᥲ|five||hàa
+ᥞᥧᥴ|ear||hú
 ᥞᥨᥐᥱ|six||hǒk
 ᥞᥪᥴ||
-ᥟᥛᥱ||
-ᥟᥝ||
-ᥟᥣᥒᥱ||
+ᥟᥛᥱ|not||ʼǎm
+ᥟᥝ|to read||ʼaw
+ᥟᥣᥒᥱ|basin, bowl||ʼǎang
 ᥢᥛᥱ||
 ᥢᥣᥒᥰ|lady, mistress||näang
-
-
+ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ|Tai Nüa|ta§j˥§t§aɯ§˧˩§x§o§ŋ§˥
 
 
 
