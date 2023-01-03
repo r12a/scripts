@@ -1,0 +1,9 @@
+window.version = 'v29'
+window.scriptName = 'Bengali'
+window.ghDirectory = 'bengali'
+window.blockDirectory = 'bengali'
+window.languageList = ['bn'] // lang tags for each orthography handled
+window.detailsfileList = ['bn'] // first part of xx-details for each orthography
+window.scriptISO = 'beng'
+window.webfonts = ["Noto Sans Bengali WF"]
+window.defaultSize = '24px'
