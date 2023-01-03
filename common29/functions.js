@@ -15,7 +15,7 @@ access = {
 
 
 function addPageFeatures () {
-    if (traceSet.has('addPageFeatures') || traceSet.has('all')) console.log('Globals(',window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath,')')
+    if (traceSet.has('addPageFeatures') || traceSet.has('all')) console.log('Globals(','blockDirectoryName:',window.blockDirectoryName, 'langTag:',window.langTag, 'scriptSummaryTableName:',window.scriptSummaryTableName, 'orthogFilePath:',window.orthogFilePath,')')
 
 
     //set accessibility defaults
@@ -40,9 +40,9 @@ function addPageFeatures () {
     
     makeIndexIntro(document.getElementById('index_intro')) // write page intro
     
-    makeTables(lang)  // Create the lists of characters in yellow, etc. boxes
+    makeTables(langTag)  // Create the lists of characters in yellow, etc. boxes
 
-    addExamples(lang)  // Convert all .eg items to full markup. (egcode.js)
+    addExamples(langTag)  // Convert all .eg items to full markup. (egcode.js)
     
     initialiseShowNames(document, blockDirectoryName, '') // Add onclick function to all .ex elements to display in panel
 
@@ -622,7 +622,7 @@ function replaceStuff (node) {
     if (chars.length > 1) {
         var length = chars.length
         for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
-        out += '<div class="listAll" onClick="listAll(this, \''+lang+'\')">list '
+        out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')">list '
         if (length === 2) out += 'both'
         else out += 'all '+length
         out += '</div>'
@@ -651,7 +651,7 @@ function replaceStuff (node) {
         else indexId = ''
 
         if (node.dataset.lang) out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
-        else out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
+        else out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+window.langTag+'">'+chars[i]+'</span>'
 
 
         // leave a blank where a space is used
@@ -827,7 +827,7 @@ function makeIndexLine (node) {
     if (chars.length > 1) {
         var length = chars.length
         for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
-        out += '<div class="listAll" onClick="listAll(this, \''+lang+'\')">list '
+        out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')">list '
         if (length === 2) out += 'both'
         else out += 'all '+length
         out += '</div>'
@@ -850,7 +850,7 @@ function makeIndexLine (node) {
         else status = ''
 
         if (node.dataset.lang) out += `<div class="listPair ${ status }"${ indexId }><span class="listItem" lang="${ node.dataset.lang }" onclick="makeFootnoteIndex(charVal)">${ chars[i] }</span>`
-        else out += `<div class="listPair ${ status }"${ indexId }><span class="listItem" lang="${ lang }" onclick="makeFootnoteIndex('${ chars[i] }')">${ chars[i] }</span>`
+        else out += `<div class="listPair ${ status }"${ indexId }><span class="listItem" lang="${ window.langTag }" onclick="makeFootnoteIndex('${ chars[i] }')">${ chars[i] }</span>`
 
 
 
@@ -1181,7 +1181,7 @@ function makeSafeRegex (str) {
 
 
 function makeFootnoteIndex (charVal) {
-    if (traceSet.has('makeFootnoteIndex')) console.log('makeFootnoteIndex(',charVal,')')
+    if (traceSet.has('makeFootnoteIndex')) console.log('makeFootnoteIndex(','charVal='+charVal,')')
 	// when you click on a character in a .listItem or .codepoint this creates a set of links at the bottom
     // of the page to other locations where that character is mentioned
     // it also highlights those instances
@@ -1201,7 +1201,7 @@ function makeFootnoteIndex (charVal) {
 	var possibleMatches = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
 	var counter = 0
 	var links = []
-    for (x=0;x<possibleMatches.length;x++) if (traceSet.has('makeFootnoteIndex')) //console.log('possibleMatch:',possibleMatches[x].textContent)
+    for (x=0;x<possibleMatches.length;x++) if (traceSet.has('makeFootnoteIndex')) console.log('possibleMatch:',possibleMatches[x].textContent)
     
     // clear any existing highlights
 	for (var k=0;k<possibleMatches.length;k++) possibleMatches[k].style.backgroundColor = 'transparent'

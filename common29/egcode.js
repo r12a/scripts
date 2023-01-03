@@ -12,7 +12,7 @@ var egList = {}
 
 
 function addExamples (langFilter) {
-    if (trace || traceSet.has('addExamples')) console.log('addExamples(',langFilter,') Convert all .eg items to full markup.')
+    if (traceSet.has('addExamples')) console.log('addExamples(',langFilter,') Convert all .eg items to full markup.')
 /*  read the data into egList, in which each record has
 	example, meaning, transcription?, notes?, alt?
 	alt is generally a vowelled form for abjads or an alternative spelling
@@ -67,7 +67,7 @@ function addExamples (langFilter) {
 		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
 			temp = egList[nodes[n].textContent].split('|')
             
-            if (trace || traceSet.has('addExamples')) console.log('addExamples:',egList[nodes[n].textContent])
+            if (traceSet.has('addExamples')) console.log('addExamples:',egList[nodes[n].textContent])
             // get the available data
             var termdata = egList[nodes[n].textContent].split('|')
             var term = termdata[0]
