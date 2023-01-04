@@ -1,2 +1,8 @@
 var trace = false // this is for backwards compat - use 'all' in traceSet
-var traceSet = new Set(['addPageFeatures'])
+
+var functionList = `
+addPageFeatures 
+`
+
+functionList = functionList.replace(/\s+/g,' ').trim()
+var traceSet = new Set(functionList.split(' '))
