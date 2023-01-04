@@ -101,7 +101,7 @@ autoExpandExamples.pa = `
 ਉਂਗਲ||
 ਉਚਾਰਨ||
 ਉਡਣਾ||
-ਉਤਸੁਕ|curious|utsuk
+ਉਤਸੁਕ|curious|u§t§su§k
 ਉਦਜਨ||
 ਉਦਾਹਰਨ||
 ਉਦੋਂ||
@@ -157,7 +157,7 @@ autoExpandExamples.pa = `
 ਕਰ੍ਹ||
 ਕਵਿਤਾ||
 ਕਹਾਣੀ||
-ਕਹਿਣਾ|to say|kǽɳɑ
+ਕਹਿਣਾ|to say|k§ǽ§ɳɑ
 ਕ਼||
 ਕ਼ਲਮ||
 ਕ਼ਿਸਮਤ||
@@ -187,7 +187,7 @@ autoExpandExamples.pa = `
 ਕਿਸ਼ਤੀ||
 ਕਿਸਾਨ||
 ਕਿਹੋ ਜਿਹਾ||
-ਕਿਹੜਾ|who|kéɽɑ
+ਕਿਹੜਾ|who|ké§–§ɽɑ
 ਕਿੰਨਾ||
 ਕਿੱਥੇ|where||kitthē
 ਕਿੱਦਾਂ||
@@ -195,12 +195,12 @@ autoExpandExamples.pa = `
 ਕੀ|what||kī
 ਕੀਡ਼ਾ||
 ਕੀੜਾ|worm||kīṛā
-ਕੁਝ|something|kúʤ
+ਕੁਝ|something|kú§ʤ
 ਕੁਰਸੀ||
 ਕੁਰਾਹ||
 ਕੁਲਚਾ||
 ਕੁਹੀਰ||
-ਕੁਹੜਾ|leper|kóɽɑ
+ਕੁਹੜਾ|leper|kó§–§ɽɑ
 ਕੁੜਮ||
 ਕੁੜੀ||
 ਕੁੰਜੀ||
@@ -305,7 +305,7 @@ autoExpandExamples.pa = `
 ਗੁਣਸੂਤਰ||
 ਗੁਰਦੁਆਰਾ||
 ਗੁਰਬਾਣੀ||
-ਗੁਰਮੁਖੀ||
+ਗੁਰਮੁਖੀ|Gurmukhi|ɡʊ§ɾ§mʊ§kʰi
 ਗੁਰਸਿੱਖ||
 ਗੁਰੂ||
 ਗੁੰਝਲ਼ਦਾਰ||
@@ -327,7 +327,7 @@ autoExpandExamples.pa = `
 ਘਾਹ|grass||ghāh
 ਘਿਉ||
 ਘੁੱਗੀ||
-ਘੋੜਾ|horse|kòɽɑ
+ਘੋੜਾ|horse|kò§ɽɑ
 ਘੋੜੀ||
 ਘੱਟ|few||ghaṭṭa
 ਘੱਲਣਾ||
@@ -363,7 +363,7 @@ autoExpandExamples.pa = `
 ਚੋਰ||
 ਚੌਦਾਂ||
 ਚੌੜਾ|wide||cauṛā
-ਚੜ੍ਹ|climb|ʧə́ɽ
+ਚੜ੍ਹ|climb|ʧə́§ɽ§–
 ਚੰਗਾ|good||caṅgā
 ਚੰਡੀਗੜ੍ਹ||
 ਚੰਦ|moon||cand
@@ -644,7 +644,7 @@ autoExpandExamples.pa = `
 ਨੱਚਣਾ||
 ਨੱਠਣਾ||
 ਪਗ||
-ਪਘਾਰਨਾ|to melt|pəɡɑ̀rnɑ
+ਪਘਾਰਨਾ|to melt|pə§ɡɑ̀§r§nɑ
 ਪਤਨੀ|wife||patnī
 ਪਤਲਾ|thin||patlā
 ਪਤਾ|leaf||patā
@@ -702,7 +702,7 @@ autoExpandExamples.pa = `
 ਪੈਰ|foot||pair
 ਪੈਸਾ||
 ਪ੍ਰਧਾਨ||
-ਪ੍ਰਬੰਧ|management, government|prəbə́nd̪
+ਪ੍ਰਬੰਧ|management, government|p§rə§bə́n§d̪
 ਪ੍ਰਭੂ||
 ਪ੍ਰਾਂਗਾਰ||
 ਪ੍ਰਾਣਵਾਯੂ||
@@ -716,7 +716,7 @@ autoExpandExamples.pa = `
 ਪੰਜਾਬੀ||
 ਪੰਤ|feather||pant
 ਪੰਦਰਾਂ||
-ਪੱਕੀ|ripe|pəkki
+ਪੱਕੀ|ripe|pək§ki
 ਪੱਖ|wing||pakkha
 ਪੱਟ||
 ਪੱਤਾ||
@@ -896,7 +896,7 @@ autoExpandExamples.pa = `
 ਮਿੱਤਰ||
 ਮੀਂਹ||
 ਮੀਆਂਮਾਰ||
-ਮੀਹ|rain|mí
+ਮੀਹ|rain|mí§–
 ਮੁਖ||
 ਮੁਖੀ||
 ਮੁਚੱਲਕਾ||
@@ -916,7 +916,7 @@ autoExpandExamples.pa = `
 ਮੁੱਲ||
 ਮੁੱਲਾਂ||
 ਮੂਤਰ||
-ਮੂੰਡਾ|boy|muɳɖɑ
+ਮੂੰਡਾ|boy|muɳ§ɖɑ
 ਮੂੰਹ|mouth||mū̃h
 ਮੇਮਣਾ||
 ਮੈਂ|I (1sg)||maĩ
@@ -1012,7 +1012,7 @@ autoExpandExamples.pa = `
 ਲੰਗਰ||
 ਲੰਬਾ||
 ਲੰਮਾ|long||lammā
-ਲੰਮੀ|long|ləmmi
+ਲੰਮੀ|long|ləm§mi
 ਲੱਖ||
 ਲੱਤ|leg||latta
 ਲੱਭਣਾ||
@@ -1029,7 +1029,7 @@ autoExpandExamples.pa = `
 ਵਰਤਣਾ||
 ਵਰਤੋਕਾਰ||
 ਵਸਤੂ||
-ਵਹੁਟੀ|bride|wɔ́ʈi
+ਵਹੁਟੀ|bride|w§ɔ§́ʈi
 ਵਾ||
 ਵਾਂਗ||
 ਵਾਪਸ|back||vāpas*
@@ -1113,7 +1113,7 @@ autoExpandExamples.pa = `
 ਸ਼ਹਿਦ||
 ਸ਼ਹਿਰ||
 ਸ਼ਹੀਦ||
-ਸ਼ਾਂਤ|peaceful|ʃɑ̃t
+ਸ਼ਾਂਤ|peaceful|ʃɑ§̃t
 ਸ਼ਾਂਤੀ||
 ਸ਼ਾਇਦ||
 ਸ਼ਾਖਾ||
@@ -1195,7 +1195,7 @@ autoExpandExamples.pa = `
 ਸੌਂਹ||
 ਸੌਡ਼ਾ|narrow||sauṛā
 ਸੌਣਾ|to sleep||sauṇā
-ਸ੍ਵਰਗ|heaven|svərəg
+ਸ੍ਵਰਗ|heaven|s§və§rə§g
 ਸੜਕ|road||saṛak
 ਸੜਿਆ|rotten||saṛiā
 ਸੰਭਵ||
@@ -1217,7 +1217,7 @@ autoExpandExamples.pa = `
 ਹਮੇਸ਼ਾਂ||
 ਹਰ||
 ਹਰਾ|green||harā
-ਹਰੀ|green|həri
+ਹਰੀ|green|hə§ri
 ਹਲਦੀ||
 ਹਵਾ|wind||havā
 ਹਵਾਈ ਅੱਡਾ||
