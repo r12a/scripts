@@ -18,7 +18,7 @@ autoExpandExamples.ks = `
 अखा||
 अछुर||
 अज़||
-अतलास|satin|atlaːs||** no virama for cluster!
+अतलास|satin|a§t§laː§s||** no virama for cluster!
 अथॖ|hand|atʰɨ
 अनुन||
 अपोर|other side|apoːr
@@ -46,7 +46,7 @@ autoExpandExamples.ks = `
 ऊतरॖ|day before yesterday|uːtrɨ
 ऊर्य् नॖ यूर्य्|not well|uːrʲ nɨ yuːrʲ
 ऋग्वेद|Rigveda|rigveːd
-ऋॆष्य्|rishi|reʂʲ
+ऋॆष्य्|rishi|re§ʂ§ʲ
 ऎहसान|favour|ehsaːn
 एतिराज़|objection|eːtiraːz
 ऐब|defect|əĭb
@@ -150,7 +150,7 @@ autoExpandExamples.ks = `
 ज़ाल|net|zaːl
 ज़ालुन||
 ज़ून|moon|zuːn|zūn
-ज़ॊंग|fire|zoŋg
+ज़ॊंग|fire|zoŋ§g
 ज़्यव||
 ज़्यूठ||
 ज़ॖ|two|zɨ|zụ
@@ -179,7 +179,7 @@ autoExpandExamples.ks = `
 तॊन||
 तोलुन|to weigh|toːlun|tōlun
 त्यम्बर|cataract|tʲəmbər
-त्यम्बॖर|spark|tʲəmbɨr
+त्यम्बॖर|spark|t§ʲə§m§bɨ§r
 त्रठ||
 त्राम|copper|traːm
 त्रावुन||
@@ -187,7 +187,7 @@ autoExpandExamples.ks = `
 त्रेश||
 तॖ||
 तॗर|cold|tɨːr
-थऺन्य्|butter|tʰənʲ
+थऺन्य्|butter|tʰə§n§ʲ
 थॊद||
 दन|wealth|dən
 दरवाज़ॖ||
@@ -228,7 +228,7 @@ autoExpandExamples.ks = `
 परुन||
 परुस||
 पश|roof|pəʃ
-पऻर्यज़ान|knowledge|pəːrʲzaːn
+पऻर्यज़ान|knowledge|pəː§r§ʲ§zaː§n
 पाचि|trotters|paːt͡ʃi
 पूथ|book, manuscript|puːt̪ʰ|pūth
 पूथ्य||
@@ -245,7 +245,7 @@ autoExpandExamples.ks = `
 प्रऻज|chopped straw|prəːʤ
 प्रागाश|moonshine|praːgaːʃ
 प्रावुन||
-पॖंच़ॗह|twenty-five|pɨnt͡sɨːh
+पॖंच़ॗह|twenty-five|pɨn§t͡sɨː§h
 फख||
 फिरन|turn upside down|pʰirən
 फिरुन|to translate, turn over||phirun
@@ -268,7 +268,7 @@ autoExpandExamples.ks = `
 बॊड||
 बोज़ुन|to listen, hear|boːzun|bōzun
 ब्यॊन||
-ब्रह्मांड|universe
+ब्रह्मांड|universe|
 ब्रॊंह लॊग||
 ब्व||
 बॖ|I, me|bɨ|bụ
@@ -282,7 +282,7 @@ autoExpandExamples.ks = `
 मऻश|buffalo|məːʃ|mạ̄ś
 मानुन||
 मियान|sheath|miyaːn
-मुँह|mouth|mʊ̃ɦ|mũh
+मुँह|mouth|mʊ§̃ɦ|mũh
 मूल||
 मॅशीद|mosque||mạśīd
 मॆ||
@@ -304,7 +304,7 @@ autoExpandExamples.ks = `
 युन||
 येर|wool|yeːr
 रनुन||
-रफतार|speed|rəpʰtaːr||** another without virama
+रफतार|speed|rə§pʰ§taː§r||** another without virama
 रबाब|rabab (musical instrument)|rəbaːb
 राज़ॖमाह||
 राथ|night, yesterday|raːtʰ
@@ -313,7 +313,7 @@ autoExpandExamples.ks = `
 रुकुन||
 रूद|rain|ruːd
 रॆह|flame|reh
-र्‌यथ|month|rʲətʰ
+र्‌यथ|month|r§§ʲə§tʰ
 रॗफ||
 लऻर|cucumber|ləːr
 लूर|stick|luːɾ|lūr
@@ -328,7 +328,7 @@ autoExpandExamples.ks = `
 वर्ताव||
 वसवास|perturbation|vəsvaːs
 वाँगुन|eggplant, brinjal|wãːɡun|wām̐gun
-वाँदुर|monkey|wãːdur|wām̐dur
+वाँदुर|monkey|wãː§du§r|wām̐dur
 वाठ|union|vaːʈʰ
 वार|day|vaːr
 वालुन||
@@ -376,11 +376,11 @@ autoExpandExamples.ks = `
 ॴर|plum|əːr
 ॴश|enjoyment|əːʃ
 ॴस|mouth|əːs|ạ̄s
-ॶंह-रारय|to groan|ɨnh-raːrəy
+ॶंह-रारय|to groan|ɨn§h§-§raː§rə§y
 ॷंच़ॖह-पॗंच़ॖह|make excuses|ɨːnt͡sɨh-pɨ̄nt͡sɨh
 ॷठिम|eighth|ɨːʈʰim
 ॷठ्य|eight times|ɨːʈʰʲ
-
+कऻशुर|Kashmiri|kəː§ʃu§r
 
 
 
