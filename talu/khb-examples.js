@@ -32,9 +32,9 @@ autoExpandExamples.khb = `
 ᦂᦎᦻᧈ||
 ᦂᦡᦱᧆ||
 ᦂᦰᦡᦱᧆ||
-ᦂᦱ|crow|kaː˥|
-ᦂᦱᧈ|to go|kaː˧˥|
-ᦂᦱᧉ|rice shoots|kaː˩˧|
+ᦂᦱ|crow|k§aː˥|
+ᦂᦱᧈ|to go|k§aː§˧˥|
+ᦂᦱᧉ|rice shoots|k§aː§˩˧|
 ᦂᦲᧃ||
 ᦂᦳᧂ||
 ᦂᦳᧂᧉ||
@@ -59,9 +59,9 @@ autoExpandExamples.khb = `
 ᦃᧁᧉᦺᦈ||
 ᦃᧅ||
 ᦃᧇ||
-ᦅᦱ|to be stuck|kaː˥˩|
-ᦅᦱᧈ|price|kaː|
-ᦅᦱᧉ|to do business|kaː˩|
+ᦅᦱ|to be stuck|k§aː˥˩|
+ᦅᦱᧈ|price|k§aː|
+ᦅᦱᧉ|to do business|k§aː§˩|
 ᦅᦳᧃ||
 ᦅᦸᧂᧉ||
 ᦅᦹᧆ||
@@ -84,7 +84,7 @@ autoExpandExamples.khb = `
 ᦇᦹᧃᦵᦙᧆ||
 ᦈᦱᧄ||
 ᦈᦱᧄᦔᦱ||
-ᦈᦲᧂ|hard|ʨiŋ|
+ᦈᦲᧂ|hard|t͡ɕ§i§ŋ|
 ᦈᦳ||
 ᦈᦸᧂᧈ||
 ᦈᦸᧂᧉ||
@@ -119,7 +119,7 @@ autoExpandExamples.khb = `
 ᦉᦲᧇᦵᦈᧆ||
 ᦉᦲᧇᦶᦔᧆᧈ||
 ᦉᦲᧇᦷᦠᧅ||
-ᦉᦲᧇᧈ|ten|ɕip˧˥|
+ᦉᦲᧇᧈ|ten|ɕ§i§p§˧˥|
 ᦉᦲᧈ||
 ᦉᦳᦎᦳ||
 ᦉᦳᧂ||
@@ -286,9 +286,9 @@ autoExpandExamples.khb = `
 ᦛᦱᧃᧈᦶᦂᧁᧉ||
 ᦛᦲ||
 ᦛᦲᧈ||
-ᦜᦱᧅ|differ from others|laːk˧˥|
+ᦜᦱᧅ|differ from others|laː§k˧˥|
 ᦜᧂ||
-ᦜᧅ|post|lak˧˥|
+ᦜᧅ|post|la§k˧˥|
 ᦝᦱᧃᧈᦍᦲᧉ||
 ᦝᦱᧉ||
 ᦝᦱᧉᦎᦳᧂᧈᦋᦲᧈ||
@@ -302,14 +302,14 @@ autoExpandExamples.khb = `
 ᦞᧆ||
 ᦟᦱᧁ||
 ᦟᦱᧃᧉᦋᦱᧂᧉ||
-ᦟᦱᧅ|drag, pull|laːk˧|
+ᦟᦱᧅ|drag, pull|laː§k˧|
 ᦟᦲᧃᧉ||
 ᦟᦳᧂ||
 ᦟᦳᧄ||
 ᦟᦴᧅᦋᦻ||
 ᦟᦴᧅᦍᦲᧂ||
 ᦟᦹᧉ||
-ᦟᧅ|steal|lak˧|
+ᦟᧅ|steal|la§k˧|
 ᦠᦱ||
 ᦠᦱᧂ||
 ᦠᦱᧂᧉᦗᦸᧇ||
