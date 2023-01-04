@@ -8,13 +8,15 @@
 <link rel="stylesheet" href="../common28/block-style.css" />
 <link rel="stylesheet" href="local.css" />
 
+<script src="../common29/debug.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
+
 <script src="../../shared/fontdb/db.js"> </script>
 <script src="../../shared/fontdb/managefonts.js"></script>
 
-<script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
-<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/show_codepoints29.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common28/block-functions.js"></script>
 <script src="../common28/transliterate.js"></script>
@@ -27,6 +29,7 @@
 <script src="syr-examples.js"></script>
 <script src="aii-examples.js"></script>
 <script src="tru-examples.js"></script>
+<script src="block-globals.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 
@@ -343,33 +346,33 @@ addBasics('syr','ltr')
 
 <script src="../../shared/scriptdb/syrc-syr.js">  </script>
 <script src="syr-details.html">  </script>
-<script src="../../shared/manifests/syrc-syr.js">/* global variables */</script>
+<script src="syr-globals.js">/* global variables */</script>
 <script>
-addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addDetails (languageName, letterClassName, blockLangtag, blockDirection, spreadsheet, cols)
 addExamples(letterClassName)
-convertTranscriptionData(lang)
+convertTranscriptionData(blockLangtag)
 setMarks()
 </script>
 
 
 <script src="../../shared/scriptdb/syrc-aii.js">  </script>
 <script src="aii-details.html">  </script>
-<script src="../../shared/manifests/syrc-aii.js">/* global variables */</script>
+<script src="aii-globals.js">/* global variables */</script>
 <script>
-addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addDetails (languageName, letterClassName, blockLangtag, blockDirection, spreadsheet, cols)
 addExamples(letterClassName)
-convertTranscriptionData(lang)
+convertTranscriptionData(blockLangtag)
 setMarks()
 </script>
 
 
 <script src="../../shared/scriptdb/syrc-tru.js">  </script>
 <script src="tru-details.html">  </script>
-<script src="../../shared/manifests/syrc-tru.js">/* global variables */</script>
+<script src="tru-globals.js">/* global variables */</script>
 <script>
-addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addDetails (languageName, letterClassName, blockLangtag, blockDirection, spreadsheet, cols)
 addExamples(letterClassName)
-convertTranscriptionData(lang)
+convertTranscriptionData(blockLangtag)
 setMarks()
 </script>
 
@@ -393,16 +396,6 @@ convertTranscriptionData()
 
 
 <script>
-window.version = 'v28'
-window.scriptName = 'Syriac'
-window.ghDirectory = 'syriac'
-window.blockDirectory = 'syriac'
-window.languageList = ['syr','syc','syr-syre','syr-syrn','syr-syrj','aii','tru'] // lang tags for each orthography handled
-window.detailsfileList = ['syr','aii','tru'] // first part of xx-details for each orthography
-window.scriptISO = 'syrc'
-window.webfonts = ["Estrangelo Edessa WF", "East Syriac Adiabene WF", "Serto Jerusalem WF", "Noto Sans Syriac Eastern", "Noto Sans Syriac Estrangela", "Noto Sans Syriac Western"]
-window.defaultSize = '24px'
-
 buildPage()
 </script>
 </body>
