@@ -11,8 +11,8 @@
 
 autoExpandExamples.ks = `
 
-अंग|limb, organ|əŋɡ|aṅg
-अंब|mango|amb|amb
+अंग|limb, organ|əŋ§ɡ|aṅg
+अंब|mango|am§b|amb
 अख|one|akʰ|akh
 अख़बार|newspaper|akʰbaːr|akhbār
 अखा||
@@ -23,52 +23,52 @@ autoExpandExamples.ks = `
 अनुन||
 अपोर|other side|apoːr
 अपॖज़||
-अबॊद|stupid, foolish|abod|abod
+अबॊद|stupid, foolish|a§bo§d|abod
 अम्ब्|bramble||amb
 अरतल|gold foil|artəl
 अरदाह|eighteen|ardaːh
 असुन||
-अहोक|central pivot of millstone|ahoːk
-आख|mark|aːkʰ
+अहोक|central pivot of millstone|a§hoː§k
+आख|mark|aː§kʰ
 आगुर|root, source|aːɡuɾ|āgur
 आप्रावुन||
-आब|water|aːb|āb
+आब|water|aː§b|āb
 आवुर|busy|aːvur
 आश|hope|aːʃ
 आसुन||
 इजाज़थ|permission|id͡ʒaːzətʰ
-इशटाम|stamp paper|iʃʈaːm
-ईमान|faith|iːmaːn|īmān
+इशटाम|stamp paper|i§ʃ§ʈaː§m
+ईमान|faith|iː§maː§n|īmān
 ईश्वर|God|iːʃvər
-उजरथ|wages|ud͡ʒrətʰ
+उजरथ|wages|u§d͡ʒ§rə§tʰ
 उफतादॖ|ignored|upʰtaːdɨ
 उलफथ|love|ulpʰətʰ
-ऊतरॖ|day before yesterday|uːtrɨ
+ऊतरॖ|day before yesterday|uː§t§rɨ
 ऊर्य् नॖ यूर्य्|not well|uːrʲ nɨ yuːrʲ
-ऋग्वेद|Rigveda|rigveːd
+ऋग्वेद|Rigveda|ri§g§veː§d
 ऋॆष्य्|rishi|re§ʂ§ʲ
-ऎहसान|favour|ehsaːn
-एतिराज़|objection|eːtiraːz
-ऐब|defect|əĭb
+ऎहसान|favour|e§h§saː§n
+एतिराज़|objection|eː§ti§raː§z
+ऐब|defect|əĭ§b
 ऑव्युल||
 ऒक-||
 ऒछ़|frail|ot͡sʰ
 ऒदुर||
-ऒन|blind|on
+ऒन|blind|o§n
 ऒर|good|or
 ऒश||
-ओट|flour|oːʈ
+ओट|flour|oː§ʈ
 ओत्रॖ||
-ओबरॏय|respect|oːbrɔy
+ओबरॏय|respect|oː§b§rɔ§y
 ओम|raw|oːm
 ओलुव|potato|oːluv
 ओस|was|oːs
 औज़ार|instrument|əŭzaːr
-औशद|medecine|əŭʃəd
+औशद|medecine|əŭ§ʃə§d
 कडुन||
 कथ||
 कन||
-कपुर|cloth|kəpur
+कपुर|cloth|kə§pu§r
 कर||
 करुन|to do|kərun
 कलुश|kalash|kəluʃ
@@ -78,29 +78,29 @@ autoExpandExamples.ks = `
 कुल|tree|kul
 कुस||
 कून|corner|kuːn
-केलॖ|banana|keːlɨ|kēlụ
-कॉशुर|Kashmiri|kəːʃur
+केलॖ|banana|keː§lɨ|kēlụ
+कॉशुर|Kashmiri|kəː§ʃu§r
 कोचॖ|lane|koːt͡ʃɨ
-कोम|tribe, race|koːm
+कोम|tribe, race|koː§m
 क्याज़ि|why||kyāzi
 क्रावुत||
 क्रुहुन||
 क्वस||
-कॗत्य्|how many?|kɨːtʲ
-खबर|news|kʰəbər
+कॗत्य्|how many?|kɨː§t§ʲ
+खबर|news|kʰə§bə§r
 खल|threshing floor|kʰəl
 खालुन||
 खॊर||
-ख्यावुन|to feed|kʰʲɑːʋun|khyāwun
+ख्यावुन|to feed|kʰ§ʲɑː§ʋu§n|khyāwun
 ख्यॊन||
 ख्यॊल|flock|kʰyol
 ख्वतॖ||
 ख्वर||
 खॏर|foot|kʰɔr
 खॖर|slip|kʰɨr
-गछ़ुन|to go, leave|ɡat͡sʰun|gaċhun
+गछ़ुन|to go, leave|ɡa§t͡sʰu§n|gaċhun
 गम|grief|gəm
-गरॖ|house, home|ɡarɨ|garụ
+गरॖ|house, home|ɡa§rɨ|garụ
 गलुन||
 गाज़ॖर||
 गाटुल|wise|gaːʈul
@@ -121,27 +121,27 @@ autoExpandExamples.ks = `
 गॖस|excrement|ɡɨs|gụs
 च़टुन||
 च़लुन||
-च़ऺर|sparrow|t͡sər
-च़ूंठ|apple|t͡sũːʈʰ|ċūṃṭh
+च़ऺर|sparrow|t͡sə§r
+च़ूंठ|apple|t͡sũː§ʈʰ|ċūṃṭh
 च़ॆ||
 च़ेनुन||
-च़ेर|apricot|t͡seːr|ċēr
+च़ेर|apricot|t͡seː§r|ċēr
 च़ोंग|earthen lamp|t͡soːng
 च़्यड|patience|t͡sʲəɖ
 च़ॖ|you|t͡sɨ
 च़ॗन||
 चावुन||
 चिठ्य|letter||ciṭhy
-चीर|wring|t͡ʃiːr
+चीर|wring|t͡ʃiː§r
 चॊन||
-चौंखॖरुन|to shrivel up|t͡ʃəŭnkʰɨrun
+चौंखॖरुन|to shrivel up|t͡ʃəŭn§kʰɨ§ru§n
 छलुन||
-छ़्यतॖ|extinguish|t͡sʰytɨ
-छान|carpenter|t͡ʃʰaːn
+छ़्यतॖ|extinguish|t͡sʰ§y§tɨ
+छान|carpenter|t͡ʃʰaː§n
 छॊत||
 जवान|young|d͡ʒəwaːn
 जहाज़||
-ज़ंग|leg|zəng|zaṃg
+ज़ंग|leg|zən§g|zaṃg
 ज़ंगॖ||
 ज़गथ||
 ज़मानॖ||
@@ -149,25 +149,25 @@ autoExpandExamples.ks = `
 ज़ान|knowledge|zaːn
 ज़ाल|net|zaːl
 ज़ालुन||
-ज़ून|moon|zuːn|zūn
+ज़ून|moon|zuː§n|zūn
 ज़ॊंग|fire|zoŋ§g
 ज़्यव||
 ज़्यूठ||
 ज़ॖ|two|zɨ|zụ
-जान|good|d͡ʒaːn
-टमाटर|tomato|ʈəmaːʈər
+जान|good|d͡ʒaː§n
+टमाटर|tomato|ʈə§maː§ʈə§r
 टर||
 टेंग|hillock|ʈeːng
 ठग|cheat|ʈʰəg
-ठानॖ|lid|ʈʰaːnɨ
-डख|support|ɖəkʰ
+ठानॖ|lid|ʈʰaː§nɨ
+डख|support|ɖə§kʰ
 डॊख||
 डॗस||
 तखसीर|fault|təkʰsiːr
 तगुन||
 तरुन||
 ताख|odd number|taːkʰ
-ताफ|sunny|taːpʰ
+ताफ|sunny|taː§pʰ
 ताम||
 तामथ||
 तीत्य्|so many|tiːtʲ
@@ -177,13 +177,13 @@ autoExpandExamples.ks = `
 तुलुन||
 तृष्ना|greed|triʂnaː
 तॊन||
-तोलुन|to weigh|toːlun|tōlun
+तोलुन|to weigh|toː§lu§n|tōlun
 त्यम्बर|cataract|tʲəmbər
 त्यम्बॖर|spark|t§ʲə§m§bɨ§r
 त्रठ||
-त्राम|copper|traːm
+त्राम|copper|t§raː§m
 त्रावुन||
-त्रॆ|three|tre|tre
+त्रॆ|three|t§re|tre
 त्रेश||
 तॖ||
 तॗर|cold|tɨːr
@@ -191,24 +191,24 @@ autoExpandExamples.ks = `
 थॊद||
 दन|wealth|dən
 दरवाज़ॖ||
-दर्शुन|sight, vision|darʃun|darśun
-दऺज़|burned|dəz
+दर्शुन|sight, vision|da§r§ʃu§n|darśun
+दऺज़|burned|də§z
 दऻर|window|dəːr
 दाग|stain|daːg
 दान|hearth|daːn
 दिवता|devta|divtaː
 दॆह|body|deh
 दॊर||
-दॊह|day, daytime|dɔh|doh
-दॊहय|daily, every day|d̪ohaj|dọhay
+दॊह|day, daytime|dɔ§h|doh
+दॊहय|daily, every day|d̪o§ha§j|dọhay
 दोरुन||
-द्रोंठ|hardened|droːnʈʰ
+द्रोंठ|hardened|d§roːn§ʈʰ
 द्वद|milk|dɔd|dwad
 द्वद्|milk|dɔd|dwad
 दॖह||
 नच़ुन||
 नवि सरॖ|again, anew||nawi sarụ
-नस|nose|nəs|nas
+नस|nose|nə§s|nas
 नऺर|arm||nạr
 नाबद|candy|naːbəd
 नार||
@@ -217,22 +217,22 @@ autoExpandExamples.ks = `
 नॆंन्दॖर|sleep||neṃndụr
 न्यूल||
 नॖ||
-पंजऻब्य|Punjabi|pand͡ʒəːbʲ|panjạ̄b'
+पंजऻब्य|Punjabi|pan§d͡ʒəː§b§ʲ|panjạ̄b'
 पकुन||
 पगाह||
 पज़र|truth|pəzər
 पतॖ||
 पथर|floor|pətʰər
 पनुन||
-पम्पोश|lotus|pampoːʃ|pampōś
+पम्पोश|lotus|pa§m§poː§ʃ|pampōś
 परुन||
 परुस||
 पश|roof|pəʃ
 पऻर्यज़ान|knowledge|pəː§r§ʲ§zaː§n
-पाचि|trotters|paːt͡ʃi
-पूथ|book, manuscript|puːt̪ʰ|pūth
+पाचि|trotters|paː§t͡ʃi
+पूथ|book, manuscript|puː§t̪ʰ|pūth
 पूथ्य||
-पृतख|divorce|pritəkʰ
+पृतख|divorce|pri§tə§kʰ
 पॆठ||
 पेर्युस||
 पॊंज़||
@@ -240,24 +240,24 @@ autoExpandExamples.ks = `
 पोग|destruction|poːg
 पोञु॒||
 पोन्य|water|poːnʲ|pōny
-पोश|flower|poːʃ|pōś
+पोश|flower|poː§ʃ|pōś
 प्यॊन||
 प्रऻज|chopped straw|prəːʤ
-प्रागाश|moonshine|praːgaːʃ
+प्रागाश|moonshine|p§raː§gaː§ʃ
 प्रावुन||
 पॖंच़ॗह|twenty-five|pɨn§t͡sɨː§h
 फख||
-फिरन|turn upside down|pʰirən
+फिरन|turn upside down|pʰi§rə§n
 फिरुन|to translate, turn over||phirun
 बतॖ||
 बब||
 बलुन||
-बाज़र|market|baːzər
+बाज़र|market|baː§zə§r
 बादम||
 बादाम||
 बापथ||
 बावुत||
-बिचोर|helpless|bit͡ʃoːr
+बिचोर|helpless|bi§t͡ʃoː§r
 बितुर|capacity|bitur
 बिसलाय|fishing rod|bislaːy
 बुथ||
@@ -273,49 +273,49 @@ autoExpandExamples.ks = `
 ब्व||
 बॖ|I, me|bɨ|bụ
 मंज़|in|mənz
-मच़र|madness|mət͡sər
+मच़र|madness|mə§t͡sə§r
 मदद|help|mədəd
 मरुन||
 मरॖद|man|marɨd|marụd
 मस|hair|məs
-मऻज|mother|məːd͡ʒ|mạ̄j
+मऻज|mother|məː§d͡ʒ|mạ̄j
 मऻश|buffalo|məːʃ|mạ̄ś
 मानुन||
 मियान|sheath|miyaːn
-मुँह|mouth|mʊ§̃ɦ|mũh
+मुँह|mouth|mʊ̃§ɦ|mũh
 मूल||
 मॅशीद|mosque||mạśīd
 मॆ||
 मेख|nail|meːkʰ
 मेठ|head coolie|meːʈʰ
-मॊत|mad|mot
+मॊत|mad|mo§t
 मोज|mother|moːd͡ʒ|mạ̄j
-मोर|peacock|moːr
-मोल|father|moːl|mōl
+मोर|peacock|moː§r
+मोल|father|moː§l|mōl
 म्वल||
 म्वलुल||
-मॏल|cost|mɔl
-यकजा|together|yəkʤaː
+मॏल|cost|mɔ§l
+यकजा|together|yə§k§ʤaː
 यछ़ुन||
-यड|belly|yəɖ
-यपऻर्य|this side|jəpəːrʲ
+यड|belly|yə§ɖ
+यपऻर्य|this side|jə§pəː§r§ʲ
 यि तॖ गछ़|coming and going||yi tụ gaċh
 यीरुन|to float, drift||yīrun
 युन||
-येर|wool|yeːr
+येर|wool|yeː§r
 रनुन||
 रफतार|speed|rə§pʰ§taː§r||** another without virama
-रबाब|rabab (musical instrument)|rəbaːb
+रबाब|rabab (musical instrument)|rə§baː§b
 राज़ॖमाह||
-राथ|night, yesterday|raːtʰ
+राथ|night, yesterday|raː§tʰ
 राद|length of cloth|raːd
 राश|zodiac sign|raːʃ
 रुकुन||
 रूद|rain|ruːd
-रॆह|flame|reh
+रॆह|flame|re§h
 र्‌यथ|month|r§§ʲə§tʰ
 रॗफ||
-लऻर|cucumber|ləːr
+लऻर|cucumber|ləː§r
 लूर|stick|luːɾ|lūr
 लॊत||
 लोल|affection|loːl
@@ -342,11 +342,11 @@ autoExpandExamples.ks = `
 वूर||
 वॅथॖर||
 वॅरी|year||wạrī
-वैकुंठ|heaven|vəĭkunʈʰ
+वैकुंठ|heaven|vəĭ§kun§ʈʰ
 वॊज|rainwater falling from house eaves|vod͡ʒ
 व्रख|tree|ʋrakʰ|wrakh
 शिग|apprehension||śig
-शीन|snow|ʃiːn|śīn
+शीन|snow|ʃiː§n|śīn
 शुर|child|ʃur
 शेठ|sixty|ʃeːʈʰ
 सावुन||
@@ -361,24 +361,24 @@ autoExpandExamples.ks = `
 हऻर|maina|həːr
 हाम||
 हाल||
-हून्|dog|huːn
+हून्|dog|huː§n
 हॆकुन||
 हॆछुन||
-हॆलि|when|heli
-हैबुंगॖ|dumb struck|həĭbungɨ
+हॆलि|when|he§li
+हैबुंगॖ|dumb struck|həĭ§bun§gɨ
 हॊख||
 हॊल||
-ॳंजीर|fig|ənd͡ʒiːr|ạnjīr
-ॳछ|eye|ət͡ʃʰ|ạch
+ॳंजीर|fig|ən§d͡ʒiː§r|ạnjīr
+ॳछ|eye|ə§t͡ʃʰ|ạch
 ॳड|half|əɖ
 ॳमीर|rich||ạmīr
 ॳस्य|we|əsʲ|ạsy
-ॴर|plum|əːr
+ॴर|plum|əː§r
 ॴश|enjoyment|əːʃ
 ॴस|mouth|əːs|ạ̄s
 ॶंह-रारय|to groan|ɨn§h§-§raː§rə§y
 ॷंच़ॖह-पॗंच़ॖह|make excuses|ɨːnt͡sɨh-pɨ̄nt͡sɨh
-ॷठिम|eighth|ɨːʈʰim
+ॷठिम|eighth|ɨː§ʈʰi§m
 ॷठ्य|eight times|ɨːʈʰʲ
 कऻशुर|Kashmiri|kəː§ʃu§r
 
