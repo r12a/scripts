@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Malayalam conjuncts</title>
+<style>
+table { font-family: ThoolikaTraditionalUnicode; }
+th { color: crimson; }
+</style>
+</head>
+
+<body>
+<p><label>Set font to <input type="text" onChange="document.getElementById('theTable').style.fontFamily = this.value"/></label></p>
+<table id="theTable">
+
+</table>
+
+<script>
+table = ''
+consonants = ["ക", "ഖ", "ഗ", "ഘ", "ങ", "ച", "ഛ", "ജ", "ഝ", "ഞ", "ട", "ഠ", "ഡ", "ഢ", "ണ", "ത", "ഥ", "ദ", "ധ", "ന", "ഩ", "പ", "ഫ", "ബ", "ഭ", "മ", "യ", "ര", "റ", "ല", "ള", "ഴ", "വ", "ശ", "ഷ", "സ", "ഹ", "ഺ"]
+table += '<tr><th>&nbsp;</th>'
+for (k=0;k<consonants.length;k++) {
+	table += '<th>'+consonants[k]+'</th>'
+	}
+table += '</tr>'
+for (let i=0;i<consonants.length;i++) {
+	table += '<tr><th>'+consonants[i]+'</th>'
+	for (j=0;j<consonants.length;j++) {
+		table += '<td>'+consonants[i]+'\u0D4D'+consonants[j]+'</td>'
+		}
+	table += '</tr>'
+	}
+document.getElementById('theTable').innerHTML = table
+
+</script>
+</body>
+</html>
