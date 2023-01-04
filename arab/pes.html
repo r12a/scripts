@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Persian orthography notes</title>
+
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common28/local.css" />
+<link rel="stylesheet" href="pes.css" />
+
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
+<script src="../../shared/scriptdb/arab-pes.js"> </script>
+<script src="pes-details.html"> </script>
+
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common28/functions.js"></script>
+<script src="../common28/transliterate.js"></script>
+<script src="../common28/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
+<script src="../common28/egcode.js"></script>
+<script src="../common28/references.js"></script>
+<script src="refs.js"></script>
+
+<script src="pes-langdata.js"></script>
+<script src="pes-examples.js"></script>
+<script src="pes-translit.js">  </script>
+<script src="../../shared/manifests/arab-pes.js"></script>
+</head>
+
+<body class="useBlockExamples">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+</header>
+
+
+
+<h1>Persian (draft) <div class="subhead">Arabic</div></h1>
+
+
+<aside class="sidebar">
+<nav>
+<h2 class="notoc flush"><a id="tochead">Contents</a></h2>
+<div id="toc"><!-- placeholder --></div>
+</nav>
+
+ <div id="fontsetting" class="closed">
+</div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:Sw1 -->13 November, 2022<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
+
+
+
+
+
+<div id="intro">
+<p>This page brings together basic information about the Arabic script and its use for the Iranian Persian language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Persian using Unicode.</p>
+
+<p id="usage"></p>
+<script>addUsageAdvice()</script>
+</div>
+
+
+
+
+
+
+
+<section id="sample">
+<h2>Sample</h2>
+
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+
+<div id="freeText" dir="rtl" lang="pes" data-target="c" data-base="/scripts/arabic/block" data-source="http://unicode.org/udhr/translations.html">
+<p  title="UDHR clause 1" onMouseUp="showtext('urduText')">تمام افراد بشر آزاد بدنیا میایند و از لحاظ حیثیت و حقوق با هم برابرند. همه دارای عقل و وجدان میباشند و باید نسبت بیکدیگر با روح برادری رفتار کنند.</p>
+<p  title="UDHR clause 2" onMouseUp="showtext('urduText')">هر کس میتواند بدون هیچگونه تمایز مخصوصا از حیث نژاد، رنگ، جنس، زبان، مذهب، عقیدهٔ سیاسی یا هر عقیده دیگر و همچنین ملیت، وضع اجتماعی، ثروت، ولادت یا هر موقعیت دیگر، از تمام حقوق و کلیهٔ آزادی‌هائیکه در اعلامیه ذکر حاضر شده است، بهره‌مند گردد.</p>
+</div>
+ 
+</section>
+
+
+
+<section id="history">
+<h2>Usage &amp; history</h2>
+
+<p>The Persian alphabet is a variant of the Arabic script, adapted to meet the needs of the different sounds in the Persian language. It is used to write the Persian language in Iran and Afghanistan.</p>
+
+<p><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">الفبای فارسی‎</span> <span class="ipa">ælefbɒːje fɒːrsiː</span> <span class="meaning">Farsi alphabet</span></span></p>
+
+<p>The former Persian Pahlavi scripts were replaced by the Arabic script, but not until some time after the Arab conquest of Persia. It was introduced by the Saffarid and Samanid dynasties in 9th-century Greater Khorasan.</p>
+</section>
+
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+  </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+    <p class="ctlink"><a href="index">See the Arabic script summary</a></p>
+</div>
+
+
+
+
+
+<section id="type">
+<h2>Basic features</h2>
+<p>Persian uses the Arabic script, with extensions to covers its  wider repertoire of sounds. The Arabic script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a></span>. This means that in normal use the script  represents only consonant and long vowel sounds. See the table to the right for a brief overview of features for the modern Persian orthography.</p>
+
+
+<p>Persian text runs <mark>right-to-left in horizontal lines</mark>, but numbers and embedded Latin text are read left-to-right.</p>
+<p>It is sometimes written using the nasta'liq style of Arabic writing. Glyphs are more drawn out, and the baseline tends to be sloping from word to word.</p>
+<p>The script is  <mark>cursive</mark>, and some basic letter shapes change radically, depending on what they join to.</p>
+<p>There is <mark>no case distinction</mark>.</p>
+<p>Words are separated by spaces.</p>
+<p>Modern Persian uses <mark>36 basic  letters</mark> to write consonants, some of which are hangovers used to spell words loaned Arabic. For example, there are 2 ways to write <span class="ipa">t</span>, 3 ways to write <span class="ipa">s</span>, and 4 ways to write <span class="ipa">z</span>. Although it is not always easy to guess the vowel sounds in a word, the consonants are largely reliable phonetically. There is mostly a one-to-one correspondance between letters and sounds.</p>
+<p>Although the vowel diacritics are not normally used, Persian has  <mark>3 diacritic code points</mark> that can be used to indicate the 'short' vowels, if needed. Additional diacritics are available to indicate the absence of a vowel in <mark>consonant clusters</mark>, and <mark>gemination</mark> in vowelled text. Long vowels, and word initial and final short vowels are  represented using one of 4 consonant letters, although there can occasionally be some ambiguity as to which sounds they represent.</p>
+<p>To indicate vowel cluster boundaries and the <span class="name">ezafe</span> conjunction, Persian uses a combining <mark>hamza above </mark> carrier letters. (A standalone hamza is only used occasionally.) The choice between precomposed and decomposed realisations of characters used for these features has a few complications.</p>
+<p>A mandatory <mark>ligature</mark> is used for combinations of <span class="trans">lam + alif</span>.</p>
+<p>Persian  uses  <mark>native digits</mark>, though the code points are different from those used for the Arabic language, and Arabic code points are used for several of the more common punctuation marks.</p>
+
+
+
+
+
+<section id="joining_forms">
+<h3>Joining forms</h3>
+
+<p>Because the Arabic script is 'cursive' (ie. joined-up) writing, letters tend to have different shapes depending on whether or not they join with adjacent letters (see <a class="secref">cursive</a>). However, several characters have no left-joining form, and this has an effect on the following letter shape.</p>
+<p>Here and in the literature there is sometimes ambiguity around the use of the terms 'initial', 'medial', 'final', and 'isolated' –  in particular, they may be confused with <em>word-initial</em> and <em>word-final</em>. Here we describe the usage in this document.</p>
+<p>'Initial'   generally refers to glyphs that are only joined to the left. These forms tend to occur word-initially but also occur word-medially following a letter that doesn't join to the left. We try to be clear when we mean word-initial. Word-initial  vowels  are always attached to or preceded by <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, eg. <span class="charExample inline" translate="no"><span class="ex" lang="pes" dir="rtl">اَ</span></span> or <span class="charExample inline" translate="no"><span class="ex" lang="pes" dir="rtl">ای‍ـ</span></span>, and those combinations may be listed in tables as (word-)initial forms.</p>
+<p>'Medial' forms are usually those that join on both sides to an adjacent letter.</p>
+<p>'Final' forms are those that join only to the right. These forms often occur at the end of a word, but not after a letter that only joins to the right. Especially in Persian, these forms can also be found in word-medial position, usually at morphological boundaries, eg. <span class="eg inline" lang="pes">گرگ‌ها</span>
+. The left joining behaviour is prevented  using <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x200C;</span> [<a href="/scripts/arabic/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span>.</p>
+<p>'Isolated' forms occur when a letter is used on its own, or when a letter in a word is unjoined. Unjoined  forms occur after a letter that doesn't join to the left, most commonly in word-final position, but also in sequences of characters that only join to the right, eg. the following word has two unjoined forms at the end: <span class="eg inline" lang="pes">بسیاری</span>. When a vowel is written on its own or word-initially it is always attached to, represented by, or preceded by <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>,  eg. this helps to distinguish between <span class="charExample inline" translate="no"><span class="ex" lang="pes" dir="rtl">ای</span> <span class="ipa">i</span></span> and <span class="charExample inline" translate="no"><span class="ex" lang="pes" dir="rtl">ی</span> <span class="ipa">j</span></span>.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+        
+        
+        
+        
+
+<section id="index">
+<h2>Character index</h2>
+
+
+
+
+<div id="index_intro"></div>
+
+
+
+
+
+<section id="index_letters">
+<h3>Letters</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+<section id="index_letters_consonants">
+<h4>Consonants &amp; matres lectionis</h4>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">ء␣آ␣أ␣ؤ␣ا␣ب␣ت␣ث␣ج␣ح␣خ␣د␣ذ␣ر␣ز␣س␣ش␣ص␣ض␣ط␣ظ␣ع␣غ␣ف␣ق␣ل␣م␣ن␣ه␣و␣پ␣چ␣ژ␣ک␣گ␣ی</figure>
+
+<figure class="auxiliaryBox noindex indexline" data-cols="" data-links="#confusables,">ة</figure>
+</section>
+
+
+<section id="index_letters_modifiers">
+<h4>Modifier letter</h4>
+<figure class="auxiliaryBox noindex indexline" data-cols="" data-links="">ـ</figure>
+</section>
+
+
+<section id="index_letters_notused">
+<h4>Not used for Persian</h4>
+<figure class="deprecatedBox indexline" data-cols="" data-links="">ئ␣ك␣ي␣ۀ␣ہ␣ۂ␣ۃ␣ە␣ࢨ</figure>
+</section>
+</details>
+</section>
+
+
+
+
+
+
+<section id="index_cchars">
+<h3>Combining marks</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+
+<section id="index_cchars_vowels">
+<h4>Vowels</h4>
+<figure class="auxiliaryBox noindex indexline" data-cols="" data-links="#suppdiacritics,#suppdiacritics,#suppdiacritics,#vowelDiacritics #gpos,#vowelDiacritics,#vowelDiacritics #ezafe #gpos,#suppdiacritics,">ً␣ٌ␣ٍ␣َ␣ُ␣ِ␣ٓ</figure>
+</section>
+
+<section id="index_cchars_other">
+<h4>Other</h4>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#ezafe #hamza #canonical_hamza #non_canonical_hamza #yeh_hamza,">ٔ</figure>
+
+<figure class="auxiliaryBox noindex indexline" data-cols="" data-links="#doubling #gpos,#clusters #confusables,">ّ␣ْ</figure>
+</section>
+</details>
+</section>
+
+
+
+
+  
+<section id="index_numbers">
+<h3>Numbers</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+<figure class="characterBox noindex indexline" data-cols="" data-links="">۰␣۱␣۲␣۳␣۴␣۵␣۶␣۷␣۸␣۹</figure>
+</details>
+</section>
+
+
+
+
+  
+<section id="index_punctuation">
+<h3>Punctuation</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+
+<section id="index_punctuation_general">
+<h4>General punctuation</h4>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#phrase,#phrase,#phrase,#percent_sign,">،␣؛␣؟␣٪</figure>
+</section>
+
+<section id="index_punctuation_ascii">
+<h4>ASCII</h4>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#phrase,#phrase,#phrase,">!␣.␣:</figure>
+</section>
+
+<section id="index_punctuation_quotes">
+<h4>Quotes</h4>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#quotations,#quotations,">«␣»</figure>
+</section>
+
+<section id="index_punctuation_openclose">
+<h4>Opening/closing</h4>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#bracketing,#bracketing,">(␣)</figure>
+</section>
+</details>
+</section>
+
+
+
+
+  
+  
+<section id="index_other">
+<h3>Other</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+<figure class="characterBox noindex indexline" data-cols="" data-notes="<img src='../../c/General_Punctuation/200C.png' alt='ZWNJ' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/200D.png' alt='ZWJ' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/2067.png' alt='RLI' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/202B.png' alt='RLE' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/2066.png' alt='LRI' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/202A.png' alt='LRE' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/2068.png' alt='FSI' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/2069.png' alt='PDI' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/202C.png' alt='PDF' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/200F.png' alt='RLM' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/200E.png' alt='LRM' style='vertical-align:middle'>,<img src='../../c/Arabic/061C.png' alt='ALM' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/200B.png' alt='ZWSP' style='vertical-align:middle'>,<img src='../../c/Syriac/070F.png' alt='SAM' style='vertical-align:middle'>" data-links="#shapingcontrols,#shapingcontrols,#directioncontrols,#directioncontrols,#directioncontrols,#directioncontrols,#directioncontrols,#directioncontrols,#directioncontrols,#directioncontrols,#directioncontrols">&#x200C;␣&#x200D;␣&#x2067;␣&#x202B;␣&#x2066;␣&#x202A;␣&#x2068;␣&#x2069;␣&#x202C;␣&#x200F;␣&#x200E;</figure>
+</details>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="showTranscriptions">
+<details>
+<summary>Items to show in lists</summary>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+<div>
+<label>Transliterate 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+</details>
+</div>
+
+
+
+
+	
+	
+	
+	
+<section id="phonology">
+<h2>Phonology</h2>
+
+<p>These are sounds of the Iranian Persian language, and more particularly tend to reflect the Tehran dialect.</p>
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Persian_language#Phonology">Wikipedia</a>.</p>
+
+
+
+
+
+<section id="phonemesV">
+<h3>Vowel sounds</h3>
+
+<p>There are 6 vowel sounds, though there are also allophonic variants. The basic phonemes are as follows: </p>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+<use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- near close -->
+  <circle cx="102" cy="160" r="3" fill="#ccc"/> <!-- near open -->
+  
+  <!-- close -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end" filter="url(#solid)">i</text>
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+  <text x="250" y="15" class="ipa" filter="url(#solid)">u</text> 
+  <text x="250" y="15" class="ipa">u</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end" filter="url(#solid)">e</text>
+  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
+  <text x="250" y="75" class="ipa" filter="url(#solid)">o</text> 
+<text x="250" y="75" class="ipa">o</text> 
+
+  <!-- near open -->
+  <text x="94" y="165" class="ipa" text-anchor="end" filter="url(#solid)">æ</text>
+  <text x="94" y="165" class="ipa" text-anchor="end">æ</text> 
+
+  <!-- open -->
+  <text x="250" y="195" class="ipa">ɒ</text> 
+</svg>
+
+<p><span class="ipa">i</span>, <span class="ipa">u</span>, and <span class="ipa">ɒ</span> are regarded as long vowels.  <span class="ipa">e</span>, <span class="ipa">o</span>, and <span class="ipa">æ</span> are short.</p>
+</section>
+
+
+
+
+
+<section id="phonemesC">
+<h3>Consonant sounds</h3>
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
+<td><span class="ipa">ɢ</span></td>
+<td><span class="ipa">ʔ</span></td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="ipa">f</span> <span class="ipa">v</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span> <span class="ipa">z</span></td>
+<td><span class="ipa">ʃ</span> <span class="ipa">ʒ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">x</span> <span class="ipa">ɣ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal </th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant </th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap </th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common28/mouth/mouth_labial.png" target="_blank"><img src="../common28/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common28/mouth/mouth_dental.png" target="_blank"><img src="../common28/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common28/mouth/mouth_alveolar.png" target="_blank"><img src="../common28/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common28/mouth/mouth_postalveolar.png" target="_blank"><img src="../common28/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common28/mouth/mouth_palatal.png" target="_blank"><img src="../common28/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common28/mouth/mouth_velar.png" target="_blank"><img src="../common28/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common28/mouth/mouth_uvular.png" target="_blank"><img src="../common28/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common28/mouth/mouth_glottal.png" target="_blank"><img src="../common28/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+<p>In Iranian Persian <span class="ipa">ɣ</span> and <span class="ipa">q</span> have merged into <span class="ipa">ɣ~ɢ</span>, as a voiced velar fricative <span class="ipa">ɣ</span> when positioned intervocalically and unstressed, and as a voiced uvular stop <span class="ipa">ɢ</span> otherwise.<tt>wpl,#Phonology</tt></p>
+</section>
+</section>
+
+
+
+
+	
+	
+	
+	
+<section id="vowels">
+<h2>Vowels</h2>
+
+
+
+<section id="vowel_mappings">
+<h3>Vowel sounds to characters</h3>
+
+
+<p class="instructions">This section maps Persian vowel sounds to common graphemes in the Arabic orthography, grouping them by initial  (<b>i</b>), medial (<b>m</b>), and final (<b>f</b>) forms. Click on the character names for examples of usage. Vowel diacritics are shown here, but can be ignored to reflect normal usage in Persian text. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
+<p>Persian follows Arabic in using diacritics to express short vowel sounds, but also rarely uses them in normal text.  </p>
+
+
+
+
+<div id="mapv_high" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">iː</span></div>
+<div class="posn">i</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;&#x06CC;&#x200D;&#x000A;</span> &nbsp; [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="arabic#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">m</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x200D;&#x06CC;&#x200D;&#x000A; </span> &nbsp; [<a href="arabic#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x200D;&#x06CC;</span> &nbsp; [<a href="arabic#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">uː</span></div>
+<div class="posn">i</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;&#x0648;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="arabic#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">m</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x200D;&#x0648;</span> [<a href="arabic#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x200D;&#x0648;</span> [<a href="arabic#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+<div id="mapv_hmid" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">e</span></div>
+<div class="posn">i</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span> in normal text.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;&#x0650;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="arabic#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span> in vowelled text.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">m</div>
+<div>
+<p>Not shown in normal text.</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x25CC;&#x0650;</span> [<a href="arabic#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span> in vowelled text.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;</span> [<a href="arabic#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> in normal text</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x25CC;&#x0650;&#x200D;&#x0647;</span> [<a href="arabic#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a> + <a href="arabic#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> in vowelled text.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">o</span></div>
+<div class="posn">i</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span> in normal text.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;&#x064F;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="arabic#char064F"><span class="uname">U+064F ARABIC DAMMA</span></a>]</span> in vowelled text.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">m</div>
+<div>
+<p>Not shown in normal text.</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x25CC;&#x064F;</span> [<a href="arabic#char064F"><span class="uname">U+064F ARABIC DAMMA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0648;</span> [<a href="arabic#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span> in normal text.</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x25CC;&#x064F;&#x0648;</span> [<a href="arabic#char064F"><span class="uname">U+064F ARABIC DAMMA</span></a> + <a href="arabic#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span> in vowelled text.</p>
+</div>
+</div>
+</div>
+<div id="mapv_low" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">æ</span></div>
+<div class="posn">i</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;&#x064E;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="arabic#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span> in normal text.&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">m</div>
+<div>
+<p>Not shown in normal text.</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x25CC;&#x064E;</span> [<a href="arabic#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;</span> [<a href="arabic#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> in normal text (not common)</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x25CC;&#x064E;&#x200D;&#x0647;</span> [<a href="arabic#char064E"><span class="uname">U+064E ARABIC FATHA</span></a> + <a href="arabic#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> in vowelled text.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɒː</span></div>
+<div class="posn">i</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0622;</span> [<a href="arabic#char0622"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">m</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x200D;&#x0627;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x200D;&#x0627;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span></p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+<div id="vowel_description"></div>
+
+
+
+
+
+<section id="matres">
+<h3>Matres lectionis</h3>
+
+<p id="def-materlectionis" class="explanatoryintro definitionStub"></p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ا␣آ␣ی␣و␣ه</figure>
+
+<p>Persian is normally written without vowel diacritics. As a general rule, only long vowels are represented by matres lectionis, except that all vowels in word-initial position are written with or preceded by <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>. Another exception is a final <span class="ipa">e</span>, which is written with <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span>. (Final <span class="ipa">a</span> and <span class="ipa">o</span> are also represented by a consonant, but are rarely found.)</p>
+<figure id="fig_no_diacritics">
+<div dir="rtl">
+<table id="no_diacritics">
+<thead>
+<tr>
+<th style="text-align: left;">initial</th>
+<th style="text-align: left;">&nbsp;</th>
+<th style="text-align: left;">medial</th>
+<th style="text-align: left;">&nbsp;</th>
+<th style="text-align: left;">final</th>
+<th style="text-align: left;">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">ا</span></span></th>
+<td><span class="ipa">o</span> <span class="ipa">e</span> <span class="ipa">æ</span></td>
+<th rowspan="2"><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">&#x200D;&#x0627; </span></span></th>
+<td rowspan="2"><span class="ipa">ɑː</span></td>
+<th rowspan="2"><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">&#x200D;&#x0627; </span></span></th>
+<td rowspan="2"><span class="ipa">ɑː</span></td>
+</tr>
+<tr>
+<th><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">آ</span></span></th>
+<td><span class="ipa">ɑː</span></td>
+</tr>
+<tr>
+<th><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">ایـ</span></span></th>
+<td><span class="ipa">iː</span></td>
+<th><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">&#x0640;ی&#x0640;</span></span></th>
+<td><span class="ipa">iː</span></td>
+<th><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">&#x0640;ی</span></span></th>
+<td><span class="ipa">iː</span></td>
+</tr>
+<tr>
+<th><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">او</span></span></th>
+<td><span class="ipa">o</span> <span class="ipa">uː</span></td>
+<th><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">&#x200D;&#x0648; </span></span></th>
+<td><span class="ipa">uː</span></td>
+<th><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">&#x200D;&#x0648; </span></span></th>
+<td><span class="ipa">o</span> <span class="ipa">uː</span> <span class="ipa">ow</span></td>
+</tr>
+<tr>
+<th>&nbsp;</th>
+<td>&nbsp;</td>
+<th>&nbsp;</th>
+<td>&nbsp;</td>
+<th><span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">&#x0640;ه</span></span></th>
+<td><span class="ipa">e</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption>Letters  mapped to vowel sounds. (The table should be read right-to-left.)</figcaption>
+</figure>
+
+<p>The vowels <span class="ipa">e</span> <span class="ipa">o</span>and <span class="ipa">æ</span> are not marked in medial position, and with the exception of <span class="ipa">e</span> generally do not occur in word-final position. However, one common word in the Tehran dialect of Persian  that does end with <span class="ipa">æ</span> is 
+<span class="charExample inline" translate="no"><span class="ex" dir="rtl" lang="pes">نه</span> <span class="ipa">næ</span> <span class="meaning">no</span></span>
+</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0622;</span> [<a href="/scripts/arabic/block#char0622"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span> is included in the table because it is normally represented by a single, precomposed character.</p>
+<p>See also <a class="secref">vowel_mappings</a>.</p>
+</section>
+
+
+
+
+
+
+
+<section id="voweldiacritics">
+<h3>Vowel diacritics</h3>
+
+<p>In situations where it is necessary to unambiguously indicate the underlying vowel sounds, the following diacritics can be added to base letters.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ِ␣ُ␣َ</figure>
+
+<p>The following table summarises the main vowel to character assigments. Note that some sounds are distinguished in vowelled text by an <em>absence</em> of diacritics. More information can be found by clicking on the characters above, or in the section <a class="secref">vowel_mappings</a>.</p>
+<p class="instructions">Each table cell shows word-initial, word-medial, and word-final forms from right to left. Click/tap on items to see a list of the components for that cell.</p>
+
+
+
+<table id="vowel_grid">
+<tr>
+<th class="ipa" style="text-align: start">iː</th>
+<th></th>
+<th class="ipa" style="text-align: start">uː</th>
+</tr>
+<tr>
+<td class="ex" lang="pes" dir="rtl"><span>&#x0627;&#x06CC;&#x200D;</span><span>&#x200D;&#x06CC;&#x200D;</span><span>&#x200D;&#x06CC;</span></td>
+
+<td class="ex" lang="pes" dir="rtl"></td>
+
+<td class="ex" lang="pes" dir="rtl"><span>&#x0627;&#x0648;</span><span>&#x200D;&#x0648;</span><span>&#x200D;&#x0648;</span></td>
+</tr>
+<tr>
+<th class="ipa" style="text-align: start">e</th>
+<th></th>
+<th class="ipa" style="text-align: start">o</th>
+</tr>
+<tr>
+<td class="ex" lang="pes" dir="rtl"><span>&#x0627;&#x0650;</span><span>&#x25CC;&#x0650;</span><span>&#x25CC;&#x0650;&#x200D;&#x0647;</span></td>
+
+<td class="ex" lang="pes" dir="rtl"></td>
+
+<td class="ex" lang="pes" dir="rtl"><span>&#x0627;&#x064F;</span><span>&#x25CC;&#x064F;</span><span>&#x25CC;&#x064F;&#x0648;</span></td>
+</tr>
+<tr>
+<th>&nbsp;</th>
+<th class="ipa">æ</th>
+<th>&nbsp;</th>
+</tr>
+<tr>
+<td class="ex" lang="pes" dir="rtl">&nbsp;</td>
+
+<td class="ex" lang="pes" dir="rtl"><span>&#x0627;&#x064E;</span><span>&#x25CC;&#x064E;</span><span>&#x25CC;&#x064E;&#x200D;&#x0647;</span></td>
+
+<td class="ex" lang="pes" dir="rtl">&nbsp;</td>
+</tr>
+<tr>
+<th></th>
+<th></th>
+<th class="ipa" style="text-align: start">&#x0251;&#x02D0;</th>
+</tr>
+<tr>
+<td class="ex" lang="pes" dir="rtl"></td>
+
+<td class="ex" lang="pes" dir="rtl"></td>
+
+<td class="ex" lang="pes" dir="rtl"><span>&#x0622;</span><span>&#x200D;&#x0627;</span><span>&#x200D;&#x0627;</span></td>
+</tr>
+</table>
+
+<p>Initial <span class="ipa">u</span> is rare, as are final <span class="ipa">æ</span> and <span class="ipa">o</span>.</p>
+<p>Final <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> and <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span> are only treated as vowels if they follow a consonant sound. If they follow a vowel sound, they revert to their normal consonant value.&nbsp;Unfortunately, since short vowels are only rarely shown, it can sometimes be difficult  to tell from the written text whether to pronounce these letters as vowel or consonant.</p>
+</section>
+
+
+
+
+
+<section id="suppdiacritics">
+<h3>Other diacritics</h3>
+
+<figure class="auxiliaryBox auto small" data-cols="ipa,trans,transc">ً␣ٌ␣ٍ␣ٓ</figure>
+
+<p>The doubled vowel diacritic, <span class="codepoint"><span lang="pes" dir="rtl">&#x25CC;&#x064B;</span> [<a href="/scripts/arabic/block#char064B"><span class="uname">U+064B ARABIC FATHATAN</span></a>]</span> is used at the ends of certain Arabic-derived adverbs in vowelled text. It is usually written over an <span class="name">alif</span>, although the vowel sound is short. Examples, <span class="eg" lang="pes">لزوماً</span> <span class="eg" lang="pes">اصلاً</span> </p>
+<p>Other doubled vowel diacritics,  <span class="codepoint"><span lang="pes" dir="rtl">&#x25CC;&#x064C;</span> [<a href="/scripts/arabic/block#char064C"><span class="uname">U+064C ARABIC DAMMATAN​</span></a>]</span> and <span class="codepoint"><span lang="pes" dir="rtl">&#x25CC;&#x064D;</span> [<a href="/scripts/arabic/block#char064D"><span class="uname">U+064D ARABIC KASRATAN​</span></a>]</span> are not used in Persian, but are taught to support education in the Qur'an<tt>wpa,#Tanvin_(nunation)</tt>.</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0653;</span> [<a href="/scripts/arabic/block#char0653"><span class="uname">U+0653 ARABIC MADDAH ABOVE</span></a>]</span> is only found in decomposed text, and is associated only with <span class="name">alef</span>. See <span class="codepoint"><span dir="rtl" lang="pes">آ</span> <a href="#char0622">[<span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span>]</a></span>.</p>
+</section>
+
+
+
+
+
+
+
+<section id="standalone">
+<h3>Standalone vowels</h3>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
+<p>Word-medial Persian vowels are sometimes pronounced without an intervening consonant, but they are normally written as if they are separated by a glottal stop. The glottal stop is written using a hamza and its carrier  (see <a class="secref">hamza</a>).</p>
+<p>Word-initial  standalone vowels  are always attached to or preceded by <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, eg. <span class="charExample inline" translate="no"><span class="ex" lang="pes" dir="rtl">اَ</span></span> or <span class="charExample inline" translate="no"><span class="ex" lang="pes" dir="rtl">ای‍ـ</span></span>.</p>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="ezafe">
+<h3>Ezafe</h3>
+
+<figure class="characterBox auto small" data-cols="ipa,trans,transc">ِ␣ٔ␣ی</figure>
+
+<p><span class="name">Ezāfe</span> is a grammatical particle used to link  words together. It is used between  adjectives and nouns. Between a sequence of nouns it is similar in use to the word 'de' in French. It is pronounced <span class="ipa">ɛ~e</span> or (after a vowel) <span class="ipa">jɛ</span>.</p>
+<p>Ezafe can be written in three ways in vowelled text, however in normal Persian text only the third is visible, because the diacritics are omitted.<tt>pm,41</tt></p>
+
+<table>
+<tr>
+<td><span class="codepoint" translate="no">&nbsp;&nbsp;<span lang="pes" dir="rtl">&#x0650;</span> &nbsp;&nbsp;[<a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span></td>
+<td>After a word-final consonant.</td>
+<td><span class="eg inline" lang="pes">گازِ طبیعی</span></td>
+</tr>
+<tr>
+<td><span style="line-height: 2;"><span class="codepoint" translate="no">&nbsp;&nbsp;<span lang="pes" dir="rtl">&#x0654;</span> &nbsp;&nbsp;[<a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></span></td>
+<td>After a word that ends with a short vowel (usually in the combination <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x200D;&#x0647;&#x0654;</span> [<a href="arabic#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>).</td>
+<td><span class="eg inline" lang="pes">نشانهٔ سجاوندی</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06CC;&#x0650;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span></td>
+<td>After a word that ends with a long vowel.</td>
+<td><span class="eg inline" lang="pes">نشانه‌هایِ سجاوندی</span></td>
+</tr>
+</table>
+</section>
+</section>
+
+
+
+
+
+
+<section id="consonants">
+<h2>Consonants</h2>
+
+
+<section id="consonant_mappings">
+<h3>Consonant sounds to characters</h3>
+
+<p class="instructions">This section maps Persian consonant sounds to common graphemes in the Arabic orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
+<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
+
+
+
+
+<section id="stops">
+<h4>Stops</h4>
+<div id="map_plosives" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">p</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x067E;</span> [<a href="/scripts/arabic/block#char067E"><span class="uname">U+067E ARABIC LETTER PEH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">b</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0628;</span> [<a href="/scripts/arabic/block#char0628"><span class="uname">U+0628 ARABIC LETTER BEH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">t</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x062A;</span> [<a href="/scripts/arabic/block#char062A"><span class="uname">U+062A ARABIC LETTER TEH</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0637;</span> [<a href="/scripts/arabic/block#char0637"><span class="uname">U+0637 ARABIC LETTER TAH</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0629;</span> [<a href="arabic#char0629"><span class="uname">U+0629 ARABIC LETTER TEH MARBUTA</span></a>]</span> at the end of some Arabic words.&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">d</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x062F;</span> [<a href="/scripts/arabic/block#char062F"><span class="uname">U+062F ARABIC LETTER DAL</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">k</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06A9;</span> [<a href="/scripts/arabic/block#char06A9"><span class="uname">U+06A9 ARABIC LETTER KEHEH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɡ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06AF;</span> [<a href="/scripts/arabic/block#char06AF"><span class="uname">U+06AF ARABIC LETTER GAF</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">q</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x063A;</span> [<a href="arabic#char063A"><span class="uname">U+063A ARABIC LETTER GHAIN</span></a>]</span> between vowels</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɢ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x063A;</span> [<a href="arabic#char063A"><span class="uname">U+063A ARABIC LETTER GHAIN</span></a>]</span> between vowels</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0642;</span> [<a href="/scripts/arabic/block#char0642"><span class="uname">U+0642 ARABIC LETTER QAF</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʔ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0621;</span> [<a href="arabic#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06CC;&#x0654;</span> [<a href="arabic#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0623;</span> [<a href="arabic#char0623"><span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span></a>]</span> or</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;&#x0654;</span> [<a href="arabic#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span> (not common)&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0624;</span> [<a href="arabic#char0624"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span> or</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0648;&#x0654;</span> [<a href="arabic#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0639;</span> [<a href="arabic#char0639"><span class="uname">U+0639 ARABIC LETTER AIN</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="affricates">
+<h4>Affricates</h4>
+<div id="map_affricates" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡ʃ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0686;</span> [<a href="/scripts/arabic/block#char0686"><span class="uname">U+0686 ARABIC LETTER TCHEH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">d͡ʒ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x062C;</span> [<a href="/scripts/arabic/block#char062C"><span class="uname">U+062C ARABIC LETTER JEEM</span></a>]</span></p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
+<div id="map_fricatives" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">f</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0641;</span> [<a href="/scripts/arabic/block#char0641"><span class="uname">U+0641 ARABIC LETTER FEH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">v</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">s</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0633;</span> [<a href="/scripts/arabic/block#char0633"><span class="uname">U+0633 ARABIC LETTER SEEN</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0635;</span> [<a href="/scripts/arabic/block#char0635"><span class="uname">U+0635 ARABIC LETTER SAD</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x062B;</span> [<a href="/scripts/arabic/block#char062B"><span class="uname">U+062B ARABIC LETTER THEH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">z</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0632;</span> [<a href="/scripts/arabic/block#char0632"><span class="uname">U+0632 ARABIC LETTER ZAIN</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0630;</span> [<a href="/scripts/arabic/block#char0630"><span class="uname">U+0630 ARABIC LETTER THAL</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0636;</span> [<a href="/scripts/arabic/block#char0636"><span class="uname">U+0636 ARABIC LETTER DAD</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0638;</span> [<a href="/scripts/arabic/block#char0638"><span class="uname">U+0638 ARABIC LETTER ZAH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʃ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0634;</span> [<a href="/scripts/arabic/block#char0634"><span class="uname">U+0634 ARABIC LETTER SHEEN</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʒ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0698;</span> [<a href="/scripts/arabic/block#char0698"><span class="uname">U+0698 ARABIC LETTER JEH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">x</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x062E;</span> [<a href="/scripts/arabic/block#char062E"><span class="uname">U+062E ARABIC LETTER KHAH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɣ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x063A;</span> [<a href="/scripts/arabic/block#char063A"><span class="uname">U+063A ARABIC LETTER GHAIN</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">h</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;</span> [<a href="arabic#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x062D;</span> [<a href="/scripts/arabic/block#char062D"><span class="uname">U+062D ARABIC LETTER HAH</span></a>]</span></p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="nasals">
+<h4>Nasals</h4>
+<div id="map_nasals" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">m</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0645;</span> [<a href="/scripts/arabic/block#char0645"><span class="uname">U+0645 ARABIC LETTER MEEM</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">n</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0646;</span> [<a href="/scripts/arabic/block#char0646"><span class="uname">U+0646 ARABIC LETTER NOON</span></a>]</span></p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="sonorants">
+<h4>Other</h4>
+<div id="map_approximants" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">-w</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span> as a glide after a vowel.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">r</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0631;</span> [<a href="/scripts/arabic/block#char0631"><span class="uname">U+0631 ARABIC LETTER REH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">l</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0644;</span> [<a href="/scripts/arabic/block#char0644"><span class="uname">U+0644 ARABIC LETTER LAM</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">j</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span></p>
+</div>
+</div>
+</div>
+<!--p style="font-size: 60%;text-align: end; line-height: 1;">Sources: <a href="https://en.wikipedia.org/wiki/Help:IPA/Hindi_and_Urdu">Wikipedia</a><, <a  href="http://anunaadam.appspot.com/">Anunaadam</a>>, and Google Translate.</p-->
+</section>
+</section>
+
+
+
+
+
+
+<div id="consonant_description"></div>
+
+
+
+
+
+<section id="basicC">
+<h3>Basic letters</h3>
+
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">پ␣ب␣ت␣ط␣د␣ک␣گ␣ق␣ء</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">چ␣ج</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ف␣و␣س␣ث␣ص␣ز␣ذ␣ض␣ظ␣ش␣ژ␣خ␣غ␣ه␣ح␣ع</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">م␣ن</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ر␣ل␣ی</figure>
+
+
+
+
+
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span> and <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> represent both consonants and vowels. See <a class="secref">mapToVowels</a>.</p>
+<p>Due to the influence of Arabic spelling in loan words, Persian has 2 letters for <span class="ipa">t</span>, 3 letters for <span class="ipa">s</span>, 4 letters for <span class="ipa">z</span>, and 2 letters for <span class="ipa">h</span>. The most common letter for <span class="ipa">s</span> is <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0633;</span> [<a href="/scripts/arabic/block#char0633"><span class="uname">U+0633 ARABIC LETTER SEEN</span></a>]</span>, and for <span class="ipa">z</span> is <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0632;</span> [<a href="/scripts/arabic/block#char0632"><span class="uname">U+0632 ARABIC LETTER ZAIN</span></a>]</span>.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!--section id="other_letters">
+<h3>Other letters</h3>
+
+<figure class="auxiliaryBox auto" data-cols="ipa,trans,transc">ۃ</figure>
+
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06C3;</span> [<a href="/scripts/arabic/block#char06C3"><span class="uname">U+06C3 ARABIC LETTER TEH MARBUTA GOAL</span></a>]</span> is rarely used except in certain loan words from Arabic. It is not pronounced. When replaced with an Urdu letter in naturalised loan words  <span class="codepoint noindex" translate="no"><span lang="pes" dir="rtl">&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span> is normally used.</p>
+</section-->
+
+
+
+
+
+
+
+
+<section id="glottalstop">
+<h3>Glottal stop</h3>
+
+<p>In Persian, a glottal stop is commonly written using <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0639;</span> [<a href="/scripts/arabic/block#char0639"><span class="uname">U+0639 ARABIC LETTER AIN</span></a>]</span>, eg.
+<span class="eg" lang="pes">معنوی</span>
+<span class="eg" lang="pes">عربی</span>
+<span class="eg" lang="pes">شیعه</span>
+</p>
+<p>In other places, Persian uses a hamza (see <a class="secref">hamza</a>).</p>
+</section>
+
+
+
+
+
+
+
+<section id="hamza">
+<h3>Hamza</h3>
+
+<figure class="characterBox auto small" data-cols="ipa,trans,transc">أ␣ء␣ٔ␣ؤ</figure>
+<p>The hamza (called <span class="name">hamze</span> in Persian) is used to represent a glottal stop, however rather than being written as a single letter it is normally written as a combination of a diacritic and a base letter.</p>
+<p>In most cases, that is the combination <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0640;&#x06CC;&#x0654;&#x0640;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>, eg.
+<span class="eg" lang="pes">مسئول</span>
+</p>
+<p>However, if the glottal stop is preceded by the sound <span class="ipa">o</span>,  the combination is
+<span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0640;&#x0624;&#x0640;</span> [<a href="/scripts/arabic/block#char0624"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span>, eg.
+<span class="eg" lang="pes">مؤمن</span>
+</p>
+<p>Although it may not be pronounced, the hamza and its carrier also appears between vowels. For example,
+<span class="eg" lang="pes">فائده</span>
+<span class="eg" lang="pes">زئوس</span>
+<span class="eg" lang="pes">مؤثر</span>
+<span class="eg" lang="pes">سؤال</span>
+<span class="eg" lang="pes">سوئیس</span>
+</p>
+<p>In the examples above you can see that the hamza+carrier provides a place to put a vowel diacritic for short vowels in vowelled text. Between two long vowels it represents a nominal glottal stop.</p>
+<p>In the <span class="ipa">i</span> sound of the indefinite ending, the hamza may also be used, or alternatively the ending may double the <span class="uname">YEH</span> after a long vowel, eg. compare: <span class="eg" lang="pes">پایٔی</span>
+<span class="eg" lang="pes">پایی</span>
+<span class="eg" lang="pes">مویٔی</span>
+<span class="eg" lang="pes">مویی</span>
+</p>
+<p>On more rare occasions the hamza may appear over <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, eg.
+<span class="eg" lang="pes">رأی</span>
+<span class="eg" lang="pes">تأکید</span>
+</p>
+<p>It may also appear as an isolated form, <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span>, eg.
+<span class="eg" lang="pes">علاءالدین</span> <span class="eg" lang="pes">امضاء</span>
+</p>
+<p>The hamza is also used over short, word-final vowels for <a class="secref">ezafe</a>.</p>
+<p>A number of precomposed combinations of base letter and hamza are encoded in Unicode. Many of these decompose and recompose under normalisation as canonical alternatives, but a few do not and need to be treated with care. For information about which precomposed characters are used or not used here see <a class="secref">hamza_choices</a>.</p>
+</section>
+
+
+
+
+
+
+
+<section id="clusters">
+<h3>Consonant clusters</h3>
+<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
+
+<figure class="characterBox auto" data-cols="">&#x0652;</figure>
+
+<p>The absence of a vowel sound can be indicated with the diacritic <span class="codepoint"><span lang="pes" dir="rtl">&#xA0;&#x0652;</span> <a href="/scripts/arabic/block#char0652">[<span class="uname">U+0652 ARABIC SUKUN</span>]</a></span>, although this diacritic is not normally shown in text, eg.
+<span class="eg" lang="pes">نَسْتَعْلیق</span>
+</p>
+</section>
+    
+    
+    
+    
+<section id="doubling">
+<h3>Consonant lengthening &amp; gemination</h3>
+
+<figure class="characterBox auto" data-cols="">&#x0651;</figure>
+<p>In vowelled text, which is  rare, geminated consonants are shown using the diacritic <span class="codepoint"><span lang="pes" dir="rtl">&#xA0;&#x0651;</span> <a href="/scripts/arabic/block#char0651">[<span class="uname">U+0651 ARABIC SHADDA​</span>]</a></span>, eg.
+<span class="eg" lang="pes">تپّه</span>
+<span class="eg" lang="pes">اوّلی</span>
+</p>
+</section>
+
+ 
+
+
+
+
+<!--section id="defarticle">
+<h3>Arabic definite article</h3>
+  <p>The pronunciation of <span class="ex" lang="pes" dir="rtl">ال</span> (<span class="name">alif</span> followed by <span
+				class="name">lām</span>) varies when it represents the Arabic definite article. This affects many words in Urdu that have come from Arabic, in
+				particular names and adverbial expressions.</p>
+ 			<p>The <span class="name">lām</span> is not pronounced if it precedes one of the following characters:</p>
+
+
+<figure class="auto" data-cols="ipa,trans,transc">ت␣ث␣د␣ذ␣ر␣ز␣س␣ش␣ص␣ض␣ط␣ظ␣ل␣ن</figure>
+
+<p>Instead, the following sound is doubled. A <span class="name">tašdīd</span> may sometimes be
+				used to indicate this. Example: <span class="eg" lang="pes" dir="rtl">السلام علیکم</span></p>
+			<p>Often the <span class="name">alif</span> is not pronounced after a short preceding word that ends in a vowel. If the preceding vowel
+				was long, it is shortened in this process. Examples: <span class="eg" lang="pes" dir="rtl">بالکل</span> <span class="eg" lang="pes" dir="rtl">فی الحال</span></p>
+  <p>Often the vowel is pronounced <span class="ipa">ʊ</span>, eg. <span class="eg" lang="pes" dir="rtl">دارالحکومت</span></p>
+</section-->
+</section>
+
+
+
+
+
+
+
+
+<section id="encoding">
+<h2>Encoding choices<a class="selflink" href="#encoding_choices"></a></h2>
+
+<p>In the Persian orthography different sequences of Unicode characters may produce the same visual result. Here we look at those, and make notes on usage.</p>
+
+
+
+
+<section id="hamza_choices">
+<h3>Hamza &amp; precomposed characters</h3>
+
+<p>Unicode support for the various uses of the hamza are complicated.<tt>u,384</tt> For notes on the usage of the hamza in Persian, see <a class="secref">hamza</a> and <a class="secref">ezafe</a>.</p>
+
+
+<section id="canonical_hamza">
+<h4>Canonically-equivalent alternatives</h4>
+
+<p>A number of combinations with the hamza diacritic can be represented as either a precomposed character or a decomposed sequence, where the parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches are canonically equivalent. These include the following:</p>
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Precomposed</th>
+<th scope="col">Decomposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">أ</span> [<a href="block#char0623" target="c"><span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">&#x0627;&#x0654;</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char0654" target="c"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">آ</span> [<a href="block#char0622" target="c"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">آ</span> [<a href="/scripts/arabic/block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0653" target="c"><span class="uname">U+0653 ARABIC MADDAH ABOVE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">ؤ</span> [<a href="block#char0624" target="c"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">&#x0648;&#x0654;</span> [<a href="block#char0648" target="c"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="block#char0654" target="c"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+<p class="info">The single code point per vowel-sign is the  form preferred by the Unicode Standard and the form in common use for Persian, but either could be used.</p>
+</section>
+
+
+
+
+<section id="non_canonical_hamza">
+<h4>Alternatives that are not canonically equivalent</h4>
+
+<p>These cases involve precomposed characters that look identical to the sequences used in Persian, however there is a catch because  the precomposed characters have canonical decompositions to letters that are not used in Persian.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Recommended</th>
+<th scope="col">Not recommended</th>
+<th scope="col">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;&#x0654;</span> [<a href="arabic#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06C0;</span> [<a href="/scripts/arabic/block#char06C0"><span class="uname">U+06C0 ARABIC LETTER HEH WITH YEH ABOVE</span></a>]</span> decomposes to:<br>
+<span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06D5;&#x0654;</span> [<a href="arabic#char06D5"><span class="uname">U+06D5 ARABIC LETTER AE</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span><br>
+<span class="codepoint" translate="no"><span dir="rtl" lang="pes">ۂ</span> [<a href="block#char06C2" target="c"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span> decomposes to:<br>
+<span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06C1;&#x0654;</span> [<a href="arabic#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+<td><span class="noteRef">①</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06CC;&#x0654;</span> [<a href="arabic#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>&nbsp;</td>
+<td><p><span class="codepoint" translate="no"><span dir="rtl" lang="pes">ئ</span> [<a href="block#char0626" target="c"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>] decomposes to:</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x064A;&#x0654;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>&nbsp;<br>
+<span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x08A8;</span> [<a href="arabic#char08A8"><span class="uname">U+08A8 ARABIC LETTER YEH WITH TWO DOTS BELOW AND HAMZA ABOVE</span></a>]</span> (no decomposition)
+</p></td>
+<td><span class="noteRef">②</span></td>
+</tr>
+</tbody>
+</table>
+<p>① The Unicode Standard explicitly recommends use of the decomposed sequence when combining a hamza with <span class="uname">HEH</span> (for <span class="name">ezafe</span>). The two precomposed characters on the right are problematic because they decompose to sequences containing <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06D5;</span> [<a href="arabic#char06D5"><span class="uname">U+06D5 ARABIC LETTER AE</span></a>]</span> or <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06C1;</span> [<a href="arabic#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span>, neither of which are appropriate for Persian.</p>
+<p>② The precomposed YEH with hamza appears, on the face of it, to be a likely alternative for the sequence on the left. However, the decomposition is to hamza over <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span> rather than <span class="codepoint"><span dir="rtl" lang="pes">ی</span> <a href="/scripts/arabic/block#char06CC" target="c">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span>, and that letter is not used for Persian (it doesn't represent the dots in the way <span class="uname">FARSI YEH</span> does). In fact, the Unicode Standard requires the precomposed and decomposed forms of the Arabic <span class="uname">YEH</span> combined with hamza to never have dots below in any of the joining forms. For this reason, this page uses and recommends the decomposed sequence for <span class="name">yeh+hamza</span>. That said, however, in the wild the precomposed character appears to be widely used.</p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x08A8;</span> [<a href="arabic#char08A8"><span class="uname">U+08A8 ARABIC LETTER YEH WITH TWO DOTS BELOW AND HAMZA ABOVE</span></a>]</span> is a character used for an African orthography which retains the dots for all joining forms. It is therefore also an inappropriate precomposed character for Persian.</p>
+
+<p class="info">Content authors should use a separate hamza for these sequences in Persian, even though the precomposed characters look the same visually, because they don't represent the same semantics, and may introduce problems if text is decomposed. However,  because approaches may yield exactly the same result when displayed,  applications will need to recognise the precomposed characters and treat them or map them to the appropriate sequence. Input mechanisms, on the other hand, can produce one rather than the other, and that choice should be made with advisement.</p>
+</section>
+</section>
+
+
+
+
+<section id="confusables">
+<h3>Confusables &amp; spelling errors<a class="selflink" href="#confusables"></a></h3>
+
+<p>The following lists some common errors found in Persian text due to the similarity of Unicode characters, or perhaps sometimes due to problems inputting the correct character.</p>
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Correct</th>
+<th scope="col">Incorrect</th>
+<th scope="col">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">ی</span> [<a href="block#char06CC" target="c"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="ar">ي</span> [<a href="block#char064A" target="c"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span></td>
+<td><span class="noteRef">①</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span></td>
+<td><p><span class="codepoint" translate="no"><span dir="rtl" lang="pes">&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06D5;</span> [<a href="arabic#char06D5"><span class="uname">U+06D5 ARABIC LETTER AE</span></a>]</span>&nbsp;</p></td>
+<td><span class="noteRef">②</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0629;</span> [<a href="/scripts/arabic/block#char0629"><span class="uname">U+0629 ARABIC LETTER TEH MARBUTA</span></a>]</span></td>
+<td><p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06C3;</span> [<a href="/scripts/arabic/block#char06C3"><span class="uname">U+06C3 ARABIC LETTER TEH MARBUTA GOAL</span></a>]</span></p></td>
+<td><span class="noteRef">③</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">ک</span> [<a href="block#char06A9" target="c"><span class="uname">U+06A9 ARABIC LETTER KEHEH</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="ar">ك</span> [<a href="block#char0643" target="c"><span class="uname">U+0643 ARABIC LETTER KAF</span></a>]</span></td>
+<td><span class="noteRef">④</span></td>
+</tr>
+</tbody>
+</table>
+<p>① As mentioned in the previous section, Arabic <span class="uname">YEH</span> doesn't drop the dots below the letter in isolate and final positions.</p>
+<p>② Although they look the same, these are all different characters. The <a class="uname">HEH GOAL</a> is used for languages that include Urdu and Kashmiri, whereas the <span class="uname">LETTER AE</span> is used for Uighur and central Asian languages.</p>
+<p>③ &amp; ④ Again,  characters that a font may render exactly the same, but that are based on different base letters.</p>
+<p class="info">Although these characters look the same (at least in certain joining forms), they are all different characters, and should not be used interchangeably. If they are used, the ability to search and compare text is impaired unless the application is aware of and takes counter-measures against this substitution.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+<section id="numbers">
+<h2>Numbers</h2>
+<p>Persian  uses the extended arabic-indic digits in the Arabic block. </p>
+
+
+<figure class="characterBox auto" data-cols="trans,transc">۰␣۱␣۲␣۳␣۴␣۵␣۶␣۷␣۸␣۹</figure>
+
+
+<p>This is a separate set of characters from those used for  Arabic, to accommodate different shaping and directional behaviour. Shapes differ from those of Arabic for the digits 4, 5, and 6.</p>
+<figure id="fig_number_shapes">
+<table>
+<tr><th>Persian</th><td dir="rtl" lang="pes" class="large"><span class="ex">۰۱۲۳<span style="color:red">۴۵۶</span>۷۸۹</span></td></tr>
+<tr><th>Arabic</th><td dir="rtl" lang="ar" class="large"><span class="ex large">٠١٢٣<span style="color:red">٤٥٦</span>٧٨٩</span></td></tr>
+</table>
+ <figcaption>Comparison of digit shapes in Persian and Arabic.</figcaption>
+</figure>
+<!--p>Urdu also has special characters for the thousands and decimal separators: <span class="codepoint"><span lang="pes" dir="rtl">&#x066C;</span> [<a href="/scripts/arabic/block#char066C"><span class="uname">U+066C ARABIC THOUSANDS SEPARATOR</span></a>]</span> and <span class="codepoint"><span lang="pes" dir="rtl">&#x066B;</span> [<a href="/scripts/arabic/block#char066B"><span class="uname">U+066B ARABIC DECIMAL SEPARATOR</span></a>]</span> (see <a class="figref">fig_percent_sign</a>), although the ASCII full stop and comma may also be used.</p-->
+<p>See <a class="secref">expressions</a> for a discussion of how to handle numeric ranges.</p>
+
+
+
+
+<section id="percent_sign">
+<h4>Percentages</h4>
+
+<figure class="characterBox auto small" data-cols="trans,transc">٪</figure>
+
+<p>Persian may use the Arabic percent sign, <span class="codepoint"><span lang="pes" dir="rtl">&#x066A;</span> [<a href="/scripts/arabic/block#char066A"><span class="uname">U+066A ARABIC PERCENT SIGN</span></a>]</span>.</p>
+<!--p>عارف علوی 53.24% ووٹ حاصل کر کے تیرہویں صدر پاکستان منتخب ہوئے۔</p-->
+
+ <figure id="fig_percent_sign">
+ <p dir="rtl" lang="pes" class="large"><span class="ex">؜۵٬۴۳۲٫۱٪</span></p>
+ <figcaption>The figure 5,432.1% using Persian characters.</figcaption>
+ </figure>
+ <p>The percent sign is typed and stored after the numbers. Like the numeric sequences using the ASCII hyphen (mentioned in <a class="secref">expressions</a>), it will appear to the left of a number if that number is preceded by Persian characters. However, if the percentage appears alone or at the beginning of a line it is necessary to use an ALM formatting character just before it to prevent the sign appearing on the right.</p>
+<p class="observation"><span class="leadin">Observation:</span> <a href="https://ur.wikipedia.org/wiki/%D8%B5%D8%AF%D9%88%D8%B1_%D9%BE%D8%A7%DA%A9%D8%B3%D8%AA%D8%A7%D9%86_%DA%A9%DB%8C_%D9%81%DB%81%D8%B1%D8%B3%D8%AA">Wikipedia</a> uses an ASCII percent sign with ASCII digits</p>
+</section>
+
+
+
+
+<!--section id="number_sign">
+<h4>Number sign</h4>
+<p>Urdu  has a sign <span class="codepoint"><span lang="pes" dir="rtl">&#x0600;</span> [<a href="/scripts/arabic/block#char0600"><span class="uname">U+0600 ARABIC NUMBER SIGN</span></a>]</span> which can be used to indicate  a number. As shown in <a class="figref">fig_number_sign</a>, its length varies with the number of digits in the number.</p>
+<figure id="fig_number_sign">
+<img src="images/ur_number_sign.png" class="ex" alt="؀۱۲۳">
+<figcaption>The Arabic number sign runs below the numbers it is used with.</figcaption>
+</figure>
+
+<p>To use this sign, type it  before the digits. Even though it displays beneath the digits, it is a formatting character, and not a combining mark. </p>
+</section-->
+
+
+
+
+
+<section id="dates">
+<h3>Dates</h3>
+
+<p>TBD</p>
+</section>
+
+
+
+
+
+<section id="currency">
+<h3>Currency</h3>
+
+<p>The name of the currency is usually spelled out:
+<span class="charExample" translate="no"><span class="ex" lang="pes" dir="rtl">ریال</span> <span class="meaning">rial</span></span>
+</p>
+<p class="info">The Unicode Standard does have a symbol code point, <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#xFDFC;</span> [<a href="arabic#charFDFC"><span class="uname">U+FDFC RIAL SIGN</span></a>]</span>, but it is only a compatibility character for use when converting from Iranian standards, and should not be used in normal Unicode text<tt>u14,379</tt>.</p>
+</section>
+</section>	
+
+
+
+
+	
+	
+	
+	
+	
+	
+<!--section id="symbols">
+<h2>Symbol</h2>
+
+<figure class="characterBox auto" data-cols="">﷽</figure>
+
+<p>This is one of the few characters in the presentation forms blocks that is valid for use in normal content.</p>
+<p><span class="codepoint"><span lang="pes" dir="rtl">&#xFDFD;</span> [<a href="/scripts/arabic/block#charFDFD"><span class="uname">U+FDFD ARABIC LIGATURE BISMILLAH AR-RAHMAN AR-RAHEEM</span></a>]</span> is used by Muslims in various contexts including the constitutions of countries where Islam has a significant presence.  The shape varies significantly from font to font and usage to usage.</p>
+</section-->
+
+
+
+	
+	
+	
+	
+<section id="formatting_chars">
+<h2>Formatting characters</h2>
+
+
+<p>The Arabic script uses a  number of Unicode characters that affect the way that other characters are rendered.</p>
+<p>Persian text makes use of a relatively large set of invisible formatting characters, especially in plain text, many of which are used to manage text direction (see <a class="secref">directioncontrols</a>), and others are used to control cursive shaping behaviour (see <a class="secref">shapingcontrols</a>).</p>
+</section>
+
+
+
+
+
+
+
+<section id="direction">
+<h2>Text direction</h2>
+    <p>Persian is written horizontally and right-to-left in the main, but (as with most RTL scripts) numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
+
+<figure id="fig_bidirectional">
+<img src="images_fa/bidirectional.png" class="ex" alt="کنسرسیوم یونیکد برای اولین بار Unicode Standard را در سال 1991 منتشر کرد (نسخه 1.0)" data-source="https://fa.wikipedia.org/wiki/%DB%8C%D9%88%D9%86%DB%8C%E2%80%8C%DA%A9%D8%AF" data-notes="32px Scheherazade New">
+    <figcaption>Persian words are read right-to-left, starting from the right of the line, but numbers and Latin text  (highlighted) are read left-to-right.</figcaption>
+</figure>
+
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidirectional</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_base_direction</a>.</p>
+
+<figure id="fig_base_direction">
+<img src="images_fa/base_direction.png" class="ex" alt="کنسرسیوم یونیکد برای اولین بار Unicode Standard را در سال 1991 منتشر کرد (نسخه 1.0)" data-source="https://fa.wikipedia.org/wiki/%DB%8C%D9%88%D9%86%DB%8C%E2%80%8C%DA%A9%D8%AF" data-notes="16px Scheherazade New">
+<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no base direction set on a LTR page (bottom).</figcaption>
+</figure>
+
+<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the  Persian orthography described here.</a></p>
+<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+<p>On this page, see also <a class="secref">expressions</a> and <a class="secref">breaking_latin</a> for additional features related to direction.</p>
+
+
+
+
+
+
+<section id="directioncontrols">
+<h3>Managing text direction</h3>
+
+<p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed. These characters have no visual form in the rendered text, however text editing applications may have a way to show their location.</p>
+<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x202B;</span><img src="../../c/General_Punctuation/202B.png" alt="RLE" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span> (<span class="uname">RLE</span>), <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x202A;</span><img src="../../c/General_Punctuation/202A.png" alt="LRE" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span> (<span class="uname">LRE</span>), and <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x202C;</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> (<span class="uname">PDF</span>) are in widespread use to set the base direction of a range of characters. <span class="uname">RLE/LRE</span> come at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
+<p class="info">More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2067;</span><img src="../../c/General_Punctuation/2067.png" alt="RLI" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span> (<span class="uname">RLI</span>), <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2066;</span><img src="../../c/General_Punctuation/2066.png" alt="LRI" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span> (<span class="uname">LRI</span>), and <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2069;</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span> (<span class="uname">PDI</span>).<strong> The Unicode Standard recommends that these be used instead</strong>. </p>
+<p>There is also <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2068;</span><img src="../../c/General_Punctuation/2068.png" alt="PDI" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span> (<span class="uname">FSI</span>), used at the start of a range to set the base direction according to the first recognised strongly-directional character.</p>
+<!--p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x061C;</span><img src="../../c/Arabic/061C.png" alt="ALM" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a>]</span> (<span class="uname">ALM</span>)  is used to produce correct sequencing of numeric data. Follow the link and see <a class="secref">expressions</a> for details.&nbsp;</p-->
+<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200F;</span><img src="../../c/General_Punctuation/200F.png" alt="RLM" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a>]</span> (<span class="uname">RLM</span>)  and <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200E;</span><img src="../../c/General_Punctuation/200E.png" alt="LRM" style="vertical-align:middle"> [<a href="/scripts/syriac/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span> (<span class="uname">LRM</span>)  are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
+<p>For more information about how to use these formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. Note, however, that when writing HTML you should generally use markup rather than these control codes. For information about that, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+</section>
+
+
+
+
+<section id="expressions">
+<h3>Expressions &amp; sequences</h3>
+    <p>A sequence of  numbers separated by hyphens (for example a range)  runs from left to right in  Persian (unlike Arabic language text).</p>
+<p><a class="figref">fig_bidi_range</a> shows some Persian text, which is right-to-left overall, containing a numeric range that is  ordered LTR, ie. it starts with <span class="ex" lang="pes">۱۱۶۹</span> (1169) and ends with <span class="ex" lang="pes">۱۱۷۰</span> (1170).</p>
+
+<figure id="fig_bidi_range">
+<img src="images_fa/bidi_range.png" class="ex" alt="۱۱۶۹-۱۱۷۰ 	آغاز نگارش هیستوریا به دستور امالریک یکم " data-source="https://fa.wikipedia.org/wiki/%D9%88%DB%8C%D9%84%DB%8C%D8%A7%D9%85_%D8%B5%D9%88%D8%B1%DB%8C" data-notes="29px Scheherazade New">
+<figcaption class="instructions">A numeric range in Persian language text.</figcaption>
+</figure>
+
+<p>Certain types of hyphen or other characters can affect the way expressions run, and you need to be aware of that when writing Persian text. For more details see the <a href="/scripts/arabic/#expressions">Expressions &amp; sequences</a> section in the description of the Arabic language orthography.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+
+<p class="instructions">This section brings together information about the following topics:
+<span id="writingstylesInline">writing styles</span>; 
+<span id="cursiveInline">cursive text</span>;
+<span id="gsubInline">context-based shaping</span>;
+<span id="gposInline">context-based positioning</span>;
+<span id="baselinesInline">baselines, line height, etc.</span>;
+<span id="fontstyleInline">font styles</span>;
+<span id="transformsInline">case &amp; other character transforms</span>.
+</p>
+
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/arab-fa/">Persian character app</a>.</p>
+<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
+
+
+
+
+
+<section id="writing_styles">
+<h3>Writing styles</h3>
+
+<p>Persian may be written in a <span class="trans">nasta'liq</span> writing style. Key features include a sloping baseline for joined letters, and overall complex shaping and positioning for base letters and diacritics alike. There are also distinctive shapes for many glyphs and ligatures.</p>
+
+<figure id="fig_sloping_baselines">
+<img src="images_fa/sloping_baselines.png" class="ex" alt="مستحق  •  شخص  •  کیفیت" >
+<figcaption>Sloping baselines and complex joining behaviours in Persian nastaliq text.</figcaption>
+</figure>
+
+<p>This is achieved in Unicode by applying the correct font – the underlying characters used are not different for nasta'liq vs. other styles.</p>
+
+<figure id="fig_nastaliq_style">
+<img src="images_fa/nastaliq_style.png" class="ex" alt="" data-source="https://fa.wikipedia.org/wiki/%D8%B5%D9%81%D8%AD%D9%87%D9%94_%D8%A7%D8%B5%D9%84%DB%8C" data-notes="retrieved 28 Aug 2021">
+<figcaption class="instructions">The Wikipedia Persian home page, showing the title in nasta'liq script.</figcaption>
+</figure>
+
+<p>Persian may also be written in several other styles, especially in artistic and historical writing.</p>
+</section>
+
+
+
+
+
+
+<section id="cursive">
+<h3>Cursive script</h3>
+<p>Arabic script joins letters together. Fonts need to produce the appropriate joining form for a code point, according to its visual context. This results in four different shapes for most letters (including an isolated shape). The highlights in <a class="figref">fig_cursive</a> below show the same letter, <span class="codepoint noindex"><span dir="rtl" lang="ar">ع</span> <a target="c" href="/scripts/arabic/block#char0639">[<span class="uname">U+0639 ARABIC LETTER AIN</span>]</a></span>, with two different joining forms.&nbsp;</p>
+
+<figure id="fig_cursive">
+<img class="ex" src="images/cursive_shapes_ur.png" alt="عقل ودیعت"/>
+<figcaption>The letter <span class="codepoint noindex"><span lang="pes" dir="rtl">&#x0639;</span> [<a href="/scripts/arabic/block#char0639"><span class="uname">U+0639 ARABIC LETTER AIN</span></a>]</span> in 2 different joining contexts.</figcaption>
+</figure>
+
+<p>A few Arabic script letters only join on the right-hand side.</p>
+<p>There are 2 Unicode blocks containing Arabic presentation forms: these contain individual characters corresponding to the various joining forms and ligatures.  With only a handful of exceptions, characters in those blocks should not be used for text content; they are only for managing legacy encodings. Instead, characters in the main Arabic block should be used, and the font will manage the necessary cursive shaping.</p>
+
+
+
+
+
+<section id="cursive_shaping">
+<h4>Cursive joining forms</h4>
+
+<p>Most dual-joining characters add or become a swash when they don't join to the left. A number of characters, however, undergo additional shape changes across the joining forms. <a class="figref">fig_joining_forms</a> and <a class="figref">fig_right_joining_forms</a> show  the basic shapes in Persian and what their joining forms look like.</p>
+<p>Two pairs of characters in the first table have base shapes that are identical, but they manage the dots differently in different joining forms. These have been put onto separate rows.</p>
+<figure id="fig_joining_forms">
+<table class="cursive_table">
+<thead>
+<tr><th>isolated</th><th>right-joined</th><th>dual-join</th><th>left-joined</th><th>Persian letters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span lang="pes">ب</span></td>
+<td><span lang="pes">ـب</span></td>
+<td><span lang="pes">ـبـ</span></td>
+<td><span lang="pes">بـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ب␣ت␣ث␣پ</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ن</span></td>
+<td><span lang="pes">ـن</span></td>
+<td><span lang="pes">ـنـ</span></td>
+<td><span lang="pes">نـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ن</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ق</span></td>
+<td><span lang="pes">ـق</span></td>
+<td><span lang="pes">ـقـ</span></td>
+<td><span lang="pes">قـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ق</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ف</span></td>
+<td><span lang="pes">ـف</span></td>
+<td><span lang="pes">ـفـ</span></td>
+<td><span lang="pes">فـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ف</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">س</span></td>
+<td><span lang="pes">ـس</span></td>
+<td><span lang="pes">ـسـ</span></td>
+<td><span lang="pes">سـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">س␣ش</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ص</span></td>
+<td><span lang="pes">ـص</span></td>
+<td><span lang="pes">ـصـ</span></td>
+<td><span lang="pes">صـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ص␣ض</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ط</span></td>
+<td><span lang="pes">ـط</span></td>
+<td><span lang="pes">ـطـ</span></td>
+<td><span lang="pes">طـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ط␣ظ</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ک</span></td>
+<td><span lang="pes">ـک</span></td>
+<td><span lang="pes">ـکـ</span></td>
+<td><span lang="pes">کـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ک␣گ</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ل</span></td>
+<td><span lang="pes">ـل</span></td>
+<td><span lang="pes">ـلـ</span></td>
+<td><span lang="pes">لـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ل</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ه</span></td>
+<td><span lang="pes">ـه</span></td>
+<td><span lang="pes">ـهـ</span></td>
+<td><span lang="pes">هـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ه</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">م</span></td>
+<td><span lang="pes">ـم</span></td>
+<td><span lang="pes">ـمـ</span></td>
+<td><span lang="pes">مـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">م</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ع</span></td>
+<td><span lang="pes">ـع</span></td>
+<td><span lang="pes">ـعـ</span></td>
+<td><span lang="pes">عـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ع␣غ</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ح</span></td>
+<td><span lang="pes">ـح</span></td>
+<td><span lang="pes">ـحـ</span></td>
+<td><span lang="pes">حـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ح␣خ␣ج␣چ</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ی</span></td>
+<td><span lang="pes">ـی</span></td>
+<td><span lang="pes">ـیـ</span></td>
+<td><span lang="pes">یـ</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ی</figure></th>
+</tr>
+</tbody>
+</table>
+
+<figcaption>Joining forms for  shapes that join on both sides.</figcaption>
+</figure>
+
+
+
+
+<figure id="fig_right_joining_forms">
+<table class="cursive_table">
+<thead>
+<tr><th>isolated</th><th>right-joined</th>
+<th>Persian letters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span lang="pes">ا</span></td>
+<td><span lang="pes">ـا</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ا␣آ␣أ</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">ر</span></td>
+<td><span lang="pes">ـر</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">ر␣ز␣ژ</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">د</span></td>
+<td><span lang="pes">ـد</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">د␣ذ</figure></th>
+</tr>
+<tr>
+<td><span lang="pes">و</span></td>
+<td><span lang="pes">ـو</span></td>
+<th><figure class="otherBox auto noindex" data-cols="">و␣ؤ</figure></th>
+</tr>
+</tbody>
+</table>
+<figcaption>Joining forms for  shapes that join on the right only. </figcaption>
+</figure>
+</section>
+
+
+
+
+
+<section id="shapingcontrols"><h4>Managing glyph shaping</h4>
+
+<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200D;</span><img src="../../c/General_Punctuation/200D.png" alt="ZWJ" style="vertical-align:middle"> [<a href="/scripts/mongolian/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> (<span class="uname">ZWJ</span>) and <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200C;</span><img src="../../c/General_Punctuation/200C.png" alt="ZWNJ" style="vertical-align:middle"> [<a href="/scripts/mongolian/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> (<span class="uname">ZWNJ</span>) are used to control the joining behaviour of cursive glyphs. They are particularly useful in educational contexts, but also have real world applications.</p>
+
+<p><span class="uname" dir="ltr">ZWJ</span>  <em>permits</em> a letter to form a cursive connection without a visible neighbour. It can  be used for illustrating cursive joining forms, eg. <span class="charExample"><span class="ex" lang="pes" dir="rtl">ان‍‍ &nbsp; ‍س‍‍ &nbsp; ‍ان</span></span> Characters from the Presentation Forms blocks in Unicode should not be used in such cases.</p>
+<p><span class="uname" dir="ltr">ZWNJ</span> <em>prevents</em> two adjacent letters forming a cursive connection with each other when rendered, eg. <span class="charExample"><span class="ex" lang="pes" dir="rtl">ان‌س‌ان</span></span></p>
+
+<p>This is particularly useful for Persian, since certain Persian suffixes don't join with word-final letters when they appear finally in a morpheme, eg.
+<span class="eg" lang="pes">خانه‌ها</span>
+<span class="eg" lang="pes">تکیه‌گاه</span>
+</p>
+<p class="instructions">Click on the words above to see the composition.</p>
+<p>To achieve this, you need to use <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200C;</span><img src="../../c/General_Punctuation/200C.png" alt="ZWNJ" style="vertical-align:middle"> [<a href="/scripts/mongolian/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span>. It's also possible to sometimes see text where the suffix is written after a space, or simply joined to the end of the word. However, those alternatives are not available when the word ends with <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;</span> [<a href="arabic#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span>.<a class="fn" target="_blank" title="Wiktionary, ها" href="https://en.wiktionary.org/wiki/ها#Persian">§</a></p>
+
+<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x034F;</span><img src="../../c/Combining_Diacritical_Marks/034F.png" alt="MVS" style="vertical-align:middle"> [<a href="/scripts/XXXXXX/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER</span></a>]</span> is used in Arabic to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
+<p>Context-based shaping is everwhere in Persian due to the combination of the cursive behaviour of the script plus the strong tendency to arrange joined characters in cascades or vertical arrangements.</p>
+<p>As in Arabic, <span class="trans">lam</span> followed by <span class="trans">alef</span> ligates, eg. <span class="eg" lang="pes" dir="rtl">اسلام</span> and there are other such commonly ligated forms.</p>
+
+
+
+
+<p>Depending on the font, Arabic letters often have special rules for joining between certain characters, and diacritic marks generally vary in height and horizontal position depending on the size of the base character.</p>
+<p>Another example of contextual positioning rules is the placement of <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0650;</span> [<a href="arabic#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span> (<span class="name">zir</span>) in vowelled text when it appears on the same letter as <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0651;</span> [<a href="arabic#char0651"><span class="uname">U+0651 ARABIC SHADDA</span></a>]</span> (<span class="name">tašdid</span>). Usually, <span class="name">zir</span> appears below the base letter, and this is how it can be distinguished from <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x064E;</span> [<a href="arabic#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span> (<span class="name">zebar</span>). However, when combined, <span class="name">zir</span> may be placed relative to the <strong><span class="name">shadda</span></strong> diacritic, rather than relative to the base character, as seen in <a class="figref">fig_kasra_placement</a>.</p>
+<figure id="fig_kasra_placement">
+<p><img src="images_fa/kasra_placement.png" alt="مَمِمّمَّمِّ" data-notes="72px scheherazade font-feature-settings: 'cv62' 1;"></p>
+<figcaption>The word <span class="eg inline" lang="pes">تپّه</span> with vowel diacritics, showing the <span class="name">zir</span> below the <span class="name">tašdid</span>, rather than below the base letter.</figcaption>
+</figure>
+<p>Positioning of cursive joining forms is particularly complicated in the nastaliq style. See <a href="/scripts/arabic/urdu#gpos">more details</a> in the Urdu page.</p>
+</section>
+
+
+
+
+
+
+
+<section id="fontstyle">
+<h3>Font styling &amp; weight</h3>
+
+<p class="prompts">tbd</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="graphemes">
+<h2>Graphemes</h2>  
+	
+<section id="graphemeC">
+<h3>Grapheme clusters</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">tbd</p>
+
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>  
+ 
+  
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Words are separated by spaces.</p>
+</section>
+
+
+
+
+
+	
+	
+<section id="phrase">
+<h3>Phrase &amp; section boundaries</h3>
+
+<figure class="characterBox auto small" data-cols="">،␣؛␣:␣.␣؟␣!</figure>
+
+<p>Persian uses a mixture of ASCII and Arabic punctuation.</p>
+<table class="character_list">
+<tbody>
+<tr>
+<th scope="row">phrase</th>
+<td><p><span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span></p>
+<p><span class="codepoint"><span lang="ar" dir="rtl">&#x061B;</span> <a href="/scripts/arabic/block#char061B">[<span class="uname">U+061B ARABIC SEMICOLON</span>]</a></span></p>
+<p><span class="codepoint" translate="no"><span lang="pes">&#x003A;</span> [<a href="/scripts/devanagari/block#char003A"><span class="uname">U+003A COLON</span></a>]</span></p></td>
+</tr>
+<tr>
+<th scope="row">sentence</th>
+<td><p><span class="codepoint" translate="no"><span lang="pes">&#x002E;</span> [<a href="/scripts/devanagari/block#char002E"><span class="uname">U+002E FULL STOP</span></a>]</span></p>
+<p><span class="codepoint"><span lang="ar" dir="rtl">&#x061F;</span> <a href="/scripts/arabic/block#char061F">[<span class="uname">U+061F ARABIC QUESTION MARK</span>]</a></span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="pes">&#x0021;</span> [<a href="/scripts/devanagari/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+
+<section id="bracketing">
+<h3>Bracketed text</h3>
+
+<figure class="characterBox auto small" data-cols="">(␣)</figure>
+
+<p>Persian commonly uses ASCII parentheses to insert parenthetical information into text.</p>
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>standard</th>
+<td><p><span class="codepoint" translate="no"><span lang="pes">&#x0028;</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="pes">&#x0029;</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<section id="mirrored_characters">
+<h4>Mirrored characters</h4>
+
+<p class="info">The words 'left' and 'right' in  the Unicode names for parentheses, brackets, and other paired characters should be ignored. <span class="uname">LEFT</span> should be read as if it said <span class="uname">START</span>, and <span class="uname">RIGHT</span> as <span class="uname">END</span>. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</p>
+
+<figure id="fig_mirrored">
+<img src="images/mirrored_latin.png" class="ex" alt="a > b > c" data-notes="Scheherazade New 48px"><br>
+<img src="images/mirrored_arab.png" class="ex" alt="ا > ب > ج" data-notes="Scheherazade New 48px">
+<figcaption>Both of these lines use <span class="codepoint noindex" translate="no"><span lang="en">&#x003E;</span> [<a href="/scripts/latin/block#char003E"><span class="uname">U+003E GREATER-THAN SIGN</span></a>]</span>, but the direction it faces depends on the base direction at the point of display.</figcaption>
+</figure>
+
+<p>The number of characters that are mirrored in this way is <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Mirrored=Yes:]">around 550</a>, most of which are mathematical symbols. Some are single characters, rather than pairs. The following are some   more common ones.</p>
+
+<figure class="exampleBox auto noindex" data-cols="">(␣)␣&lt;␣&gt;␣[␣]␣{␣}␣«␣»␣‹␣›</figure>
+</section>
+</section>
+
+
+
+
+  
+<section id="quotations">
+<h3>Quotations &amp; citations</h3>
+
+<figure class="characterBox auto small" data-cols="">«␣»</figure>
+
+<p>Persian uses guillemets around quotations, but the quotation marks typically have rounded glyph shapes, rather than sharp angles.</p>
+
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">initial</th>
+<td><p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x00AB;</span> [<a href="arabic#char00AB"><span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span></p></td>
+<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x00BB;</span> [<a href="arabic#char00BB"><span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+
+<!--p>Quote marks  are <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x201D;</span> [<a href="/scripts/arabic/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span> at the start, and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x201C;</span> [<a href="/scripts/arabic/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span> at the end.</p>
+<p>Unlike the bracketing quotation marks, these characters are <em>not</em> mirrored during display. This means that <span class="uname">LEFT</span> means use on the left, and <span class="uname">RIGHT</span> means use on the right.</p-->
+</section>
+
+
+
+
+  
+<section id="emphasis">
+<h3>Emphasis</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
+<section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+<section id="otherpunctuation">
+<h3>Other punctuation</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+<section id="otherinline">
+<h3>Other inline text decoration</h3>
+
+<p class="prompts">tbd</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="para">
+<h2>Line &amp; paragraph layout</h2>
+   
+      
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+<p>Basic line-break opportunities occur between the space-separated words.</p>
+<p>They are not broken at the small gaps that appear where a character doesn't join on the left.</p>
+
+
+<section id="breaking_latin">
+<h4>Breaking between Latin words</h4>
+<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence are rearranged visually so that the reading direction remains top-to-bottom. <a class="figref">latin_line_breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule.</p>
+<figure id="latin_line_breaks">
+<p><img class="ex" src="images_fa/latin_wrapping1.png" alt="کنسرسیوم یونیکد برای اولین بار Unicode Standard را در سال 1991 منتشر کرد (نسخه 1.0)" style="margin-bottom: 1em;" data-notes="30px Scheherazade New"></p>
+<p><img src="images_fa/latin_wrapping2.png" alt="کنسرسیوم یونیکد برای اولین بار Unicode Standard را در سال 1991 منتشر کرد (نسخه 1.0)" data-notes="30px Scheherazade New"></p>
+<figcaption>Persian with embedded Latin text. The lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
+</figure>
+<p>In digital text the rearrangement is  automatic. Only the positions of the font glyphs are changed: nothing affects the order of the characters in memory.</p>
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the Persian orthography described here.</a></p>
+</section>
+</section>
+
+
+
+<section id="justification">
+<h3>Text alignment &amp; justification</h3>
+
+<figure class="characterBox auto small" data-cols="">ـ</figure>
+<p>See the section on <a href="/scripts/arabic/#justify">justification</a> for the Arabic language.</p>
+</section>
+
+
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+
+<p>See the section on <a href="/scripts/arabic/#letterspace">text spacing</a> for the Arabic language.</p>
+</section>
+
+
+
+
+
+
+  
+<section id="baselines">
+<h3>Baselines, line height, etc.</h3>
+<p>The alphabetic baseline is a strong feature of Arabic script on the whole, since characters tend to join there. The nastaliq style of the script, on the other hand, uses arrangements of joined glyphs that cascade downwards from right to left, and ressemble a strongly sloping baseline.</p>
+</section>
+
+
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+  
+<p class="instructions">You can experiment with counter styles using the <a target="_blank" href="../../app-counters/">Counter styles converter</a>. Patterns for using these styles in CSS can be found in <a href="https://www.w3.org/TR/predefined-counter-styles/#arabic-styles">Ready-made Counter Styles</a>, and we use the names of those patterns here to refer to the various styles.</p>
+
+
+
+<p>The Persian language uses  1 numeric and  2 fixed styles.</p>
+
+
+
+
+<section id="cs_numeric">
+<h4>Numeric</h4>
+<p>The <span class="kw" translate="no">persian</span> numeric style  is decimal-based and  uses these  digits.<tt>rmcs,#arabic-styles</tt></p>
+<figure dir="rtl" class="auto characterBox" data-cols="trans,transc">۰␣۱␣۲␣۳␣۴␣۵␣۶␣۷␣۸␣۹</figure>
+
+<p>Examples:</p>
+<figure dir="rtl" class="auto counterstylesBox noindex" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">۱␣۲␣۳␣۴␣۱۱␣۲۲␣۳۳␣۴۴␣۱۱۱␣۲۲۲␣۳۳۳␣۴۴۴</figure>
+</section>
+
+
+
+
+
+<section id="cs_fixed">
+<h4>Fixed</h4>
+<p>The <span class="kw" translate="no">arabic-abjad</span> fixed style  uses these  letters. It is only able to count to 28.<tt>rmcs,#arabic-styles</tt></p>
+<figure dir="rtl" class="auto characterBox" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28"
+data-cols="">ا␣ب␣ج␣د␣ه‍␣و␣ز␣ح␣ط␣ی␣ک␣ل␣م␣ن␣س␣ع␣ف␣ص␣ق␣ر␣ش␣ت␣ث␣خ␣ذ␣ض␣ظ␣غ</figure>
+<p>Note that the 5th counter includes a zero-width joiner formatting character. This makes the shape distinguishable from <span class="codepoint noindex" translate="no"><span lang="ar" dir="rtl">&#x0665;</span> [<a href="/scripts/arabic/block#char0665"><span class="uname">U+0665 ARABIC-INDIC DIGIT FIVE</span></a>]</span>.</p>
+
+
+
+<p>The <span class="kw" translate="no">persian-alphabetic</span> fixed style  uses these  letters. It is   able to count to 32. The letters are arranged by shape.<tt>rmcs,#arabic-styles</tt></p>
+<figure dir="rtl" class="auto characterBox" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32"
+data-cols="">ا␣ب␣پ␣ت␣ث␣ج␣چ␣ح␣خ␣د␣ذ␣ر␣ز␣ژ␣س␣ش␣ص␣ض␣ط␣ظ␣ع␣غ␣ف␣ق␣ک␣گ␣ل␣م␣ن␣و␣ه‍␣ی</figure>
+
+<p>The 31st counter also includes a zero-width joiner formatting character.</p>
+</section>
+
+
+
+
+
+<section id="cs_suffix">
+<h4>Prefixes and suffixes</h4>
+
+<p>Persian lists generally use a full stop suffix as a separator.</p>
+
+<!--p>Examples:</p>
+
+<figure id="fig_cs_separators">
+<img src="images/burmese_paren.png" alt="The first 5 counters.">
+<img src="images/burmese_msm.png" alt="The first 5 counters." style="margin-inline-start: 4em;">
+<figcaption>Separators for Burmese list counters: parentheses (left) and section mark (right).</figcaption>
+</figure-->
+
+</section>
+</section>
+
+
+
+
+
+
+
+  
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">tbd</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="page">
+<h2>Page &amp; book layout</h2>
+
+<p class="instructions">This section is for  any features that are specific to Persian and that relate to the following topics:
+<span id="generallayoutInline">general page layout &amp; progression</span>; 
+<span id="gridsInline">grids &amp; tables</span>;
+<span id="footnotesInline">notes, footnotes, etc</span>;
+<span id="interactionInline">forms &amp; user interaction</span>;
+<span id="headersInline">page numbering, running headers, etc</span>.
+</p>
+
+
+
+
+
+<section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+<p>Persian  books, magazines, etc., are bound on the right-hand side, and pages progress from right to left.</p>
+
+<figure id="fig_book_binding">
+<p><img alt="عنوان كتاب" src="images/book_binding_arabic.png"/></p>
+<figcaption>Binding configuration for Persian books, magazines, etc.</figcaption>
+</figure>
+
+<p>Columns are vertical but run right-to-left across the page.</p>
+</section>
+
+
+
+
+
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p>Tables, grids, and other 2-dimensional arrangements progress from right to left across a page.</p>
+</section>
+
+
+
+
+  
+<!--section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">tbd</p>
+</section-->
+
+
+
+
+  
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p>Form controls should display Persian text from right to left, starting at the right side of the input field. Form controls should also usually be arranged from right to left.</p>
+<p><a class="figref">fig_form</a> shows some form fields from an Arabic language web page. Note the position of the labels relative to the input fields and the checkbox, mirror-imaging a similar page in English. Note also that the input text in the first field appears to the right of the box.</p>
+
+<figure id="fig_form" data-source="https://www.bbc.com/arabic/institutional-37731355">
+<p><img alt="" src="images/form.png" style="width: 100%;"/></p>
+<figcaption>A set of form fields on an Arabic web page</figcaption>
+</figure>
+<p>The position of a scrollbar should depend on the user's environment, not on the content of a page. A non-Persian user viewing a web page in Persian shouldn't have to look for the scroll bar on the left side of the window. In a system that is set up for an Persian user, however, the scrollbar may appear on the left.</p>
+</section>
+
+
+
+  
+<!--section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">tbd</p>
+</section-->
+</section>
+
+
+ 
+	
+
+
+<!--section id="online_samples">
+<h2>Online resources</h2>
+
+  <ol>
+    <li><a href="https://unicode.org/udhr/d/udhr_urd.html">Universal Declaration of Human Rights - Urdu</a></li>
+<li><a href="https://e.jang.com.pk/08-01-2021/pindi/page1.asp#:">Jang News (images of printed text &amp; links to web pages)</a></li>
+</ol>
+</section-->
+
+
+
+
+
+
+
+<section id="refs">
+<h2>References</h2>
+</section>
+
+
+
+
+<div id="analytics"></div>
+<script>addAnalytics()</script>
+
+
+
+
+<div id="phoneLinks"></div>
+
+
+<div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
+
+<script>
+addPageFeatures()
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
