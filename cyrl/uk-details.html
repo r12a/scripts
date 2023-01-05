@@ -1,0 +1,2167 @@
+/*
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+.insertTranscription { color:red; font-size: 2rem; }
+.leadin { color: chocolate; font-size: 80%; font-weight: bold; }
+p { margin: .2rem; }
+a { color: teal; font-size: 80%; }
+</style>
+<body>
+*/
+
+
+
+var charDetails = {
+
+
+'\u{0400}': `
+<p class="insertTranscription">&#x0400;</p>
+`,
+
+'\u{0401}': `
+<p class="insertTranscription">&#x0401;</p>
+`,
+
+'\u{0402}': `
+<p class="insertTranscription">&#x0402;</p>
+`,
+
+'\u{0403}': `
+<p class="insertTranscription">&#x0403;</p>
+`,
+
+'\u{0404}': `
+<p class="insertTranscription">&#x0404;</p>
+`,
+
+'\u{0405}': `
+<p class="insertTranscription">&#x0405;</p>
+`,
+
+'\u{0406}': `
+<p class="insertTranscription">&#x0406;</p>
+`,
+
+'\u{0407}': `
+<p class="insertTranscription">&#x0407;</p>
+`,
+
+'\u{0408}': `
+<p class="insertTranscription">&#x0408;</p>
+`,
+
+'\u{0409}': `
+<p class="insertTranscription">&#x0409;</p>
+`,
+
+'\u{040A}': `
+<p class="insertTranscription">&#x040A;</p>
+`,
+
+'\u{040B}': `
+<p class="insertTranscription">&#x040B;</p>
+`,
+
+'\u{040C}': `
+<p class="insertTranscription">&#x040C;</p>
+`,
+
+'\u{040D}': `
+<p class="insertTranscription">&#x040D;</p>
+`,
+
+'\u{040E}': `
+<p class="insertTranscription">&#x040E;</p>
+`,
+
+'\u{040F}': `
+<p class="insertTranscription">&#x040F;</p>
+`,
+
+'\u{0410}': `
+<p class="insertTranscription">&#x0410;</p>
+`,
+
+'\u{0411}': `
+<p class="insertTranscription">&#x0411;</p>
+`,
+
+'\u{0412}': `
+<p class="insertTranscription">&#x0412;</p>
+`,
+
+'\u{0413}': `
+<p class="insertTranscription">&#x0413;</p>
+`,
+
+'\u{0414}': `
+<p class="insertTranscription">&#x0414;</p>
+`,
+
+'\u{0415}': `
+<p class="insertTranscription">&#x0415;</p>
+`,
+
+'\u{0416}': `
+<p class="insertTranscription">&#x0416;</p>
+`,
+
+'\u{0417}': `
+<p class="insertTranscription">&#x0417;</p>
+`,
+
+'\u{0418}': `
+<p class="insertTranscription">&#x0418;</p>
+`,
+
+'\u{0419}': `
+<p class="insertTranscription">&#x0419;</p>
+`,
+
+'\u{041A}': `
+<p class="insertTranscription">&#x041A;</p>
+`,
+
+'\u{041B}': `
+<p class="insertTranscription">&#x041B;</p>
+`,
+
+'\u{041C}': `
+<p class="insertTranscription">&#x041C;</p>
+`,
+
+'\u{041D}': `
+<p class="insertTranscription">&#x041D;</p>
+`,
+
+'\u{041E}': `
+<p class="insertTranscription">&#x041E;</p>
+`,
+
+'\u{041F}': `
+<p class="insertTranscription">&#x041F;</p>
+`,
+
+'\u{0420}': `
+<p class="insertTranscription">&#x0420;</p>
+`,
+
+'\u{0421}': `
+<p class="insertTranscription">&#x0421;</p>
+`,
+
+'\u{0422}': `
+<p class="insertTranscription">&#x0422;</p>
+`,
+
+'\u{0423}': `
+<p class="insertTranscription">&#x0423;</p>
+`,
+
+'\u{0424}': `
+<p class="insertTranscription">&#x0424;</p>
+`,
+
+'\u{0425}': `
+<p class="insertTranscription">&#x0425;</p>
+`,
+
+'\u{0426}': `
+<p class="insertTranscription">&#x0426;</p>
+`,
+
+'\u{0427}': `
+<p class="insertTranscription">&#x0427;</p>
+`,
+
+'\u{0428}': `
+<p class="insertTranscription">&#x0428;</p>
+`,
+
+'\u{0429}': `
+<p class="insertTranscription">&#x0429;</p>
+`,
+
+'\u{042A}': `
+<p class="insertTranscription">&#x042A;</p>
+<p>Not pronounced.</p>
+`,
+
+'\u{042B}': `
+<p class="insertTranscription">&#x042B;</p>
+`,
+
+'\u{042C}': `
+<p class="insertTranscription">&#x042C;</p>
+`,
+
+'\u{042D}': `
+<p class="insertTranscription">&#x042D;</p>
+`,
+
+'\u{042E}': `
+<p class="insertTranscription">&#x042E;</p>
+`,
+
+'\u{042F}': `
+<p class="insertTranscription">&#x042F;</p>
+`,
+
+'\u{0430}': `
+<p class="insertTranscription">&#x0430;</p>
+<p><span class="ipa">a</span> in stressed syllables
+<span class="eg" lang="uk">аматор</span>
+</p>
+<p><span class="ipa">ɐ</span> in unstressed syllables
+<span class="eg" lang="uk">багатий</span>
+</p>
+`,
+
+'\u{0431}': `
+<p class="insertTranscription">&#x0431;</p>
+<p><span class="ipa">b</span>
+<span class="eg" lang="uk">багаж</span>
+<span class="eg" lang="uk">трубкозуб</span>
+</p>
+`,
+
+'\u{0432}': `
+<p class="insertTranscription">&#x0432;</p>
+<p><span class="ipa">ʋ</span> before a front vowel
+<span class="eg" lang="uk">вид</span>
+<span class="eg" lang="uk">вежа</span>
+</p>
+<p><span class="ipa">w</span>~<span class="ipa">β</span> before a back vowel
+<span class="eg" lang="uk">вогонь</span>
+<span class="eg" lang="uk">вокзал</span>
+<span class="eg" lang="uk">вуж</span>
+</p>
+
+<p><span class="ipa">u̯</span> in the syllable coda
+<span class="eg" lang="uk">кров</span>
+<span class="eg" lang="uk">рев</span>
+</p>
+
+<p>Other examples:
+<span class="eg" lang="uk">Львів</span>
+<span class="eg" lang="uk">Київ</span>
+</p>
+`,
+
+'\u{0433}': `
+<p class="insertTranscription">&#x0433;</p>
+<p><span class="ipa">ɦ</span>
+<span class="eg" lang="uk">гегемонія</span>
+<span class="eg" lang="uk">друг</span>
+</p>
+`,
+
+'\u{0434}': `
+<p class="insertTranscription">&#x0434;</p>
+<p><span class="ipa">d</span> when hard
+<span class="eg" lang="uk">дослід</span>
+<span class="eg" lang="uk">одуд</span>
+</p>
+<p><span class="ipa">dʲ</span> (palatalised) when followed by a softening vowel or soft sign
+<span class="eg" lang="uk">дід</span>
+<span class="eg" lang="uk">підхід</span>
+</p>
+
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">d͡ʒ</span> is <span class="codepoint" translate="no"><bdi lang="uk">&#x0434;&#x0436;</bdi> [<a href="/scripts/cyrillic/block#char0434"><span class="uname">U+0434 CYRILLIC SMALL LETTER DE</span></a> + <a href="/scripts/cyrillic/block#char0436"><span class="uname">U+0436 CYRILLIC SMALL LETTER ZHE</span></a>]</span>
+<span class="eg" lang="uk">джинси</span>
+<span class="eg" lang="uk">дріжджі</span>
+</p>
+<p><span class="ipa">d͡z</span> is <span class="codepoint" translate="no"><bdi lang="uk">&#x0434;&#x0437;</bdi> [<a href="/scripts/cyrillic/block#char0434"><span class="uname">U+0434 CYRILLIC SMALL LETTER DE</span></a> + <a href="/scripts/cyrillic/block#char0437"><span class="uname">U+0437 CYRILLIC SMALL LETTER ZE</span></a>]</span>
+<span class="eg" lang="uk">дзиґа</span>
+<span class="eg" lang="uk">кукурудза</span>
+</p>
+`,
+
+'\u{0435}': `
+<p class="insertTranscription">&#x0435;</p>
+<p><span class="ipa">ɛ</span> in stressed syllables
+<span class="eg" lang="uk">еліпс</span>
+<span class="eg" lang="uk">естетика</span>
+</p>
+<p><span class="ipa">e</span> in unstressed syllables 
+<span class="eg" lang="uk">абреже</span>
+<span class="eg" lang="uk">епітет</span>
+</p>
+`,
+
+'\u{0436}': `
+<p class="insertTranscription">&#x0436;</p>
+<p><span class="ipa">ʒ</span>
+<span class="eg" lang="uk">жарт</span>
+<span class="eg" lang="uk">масаж</span>
+</p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">d͡ʒ</span> is <span class="codepoint" translate="no"><bdi lang="uk">&#x0434;&#x0436;</bdi> [<a href="/scripts/cyrillic/block#char0434"><span class="uname">U+0434 CYRILLIC SMALL LETTER DE</span></a> + <a href="/scripts/cyrillic/block#char0436"><span class="uname">U+0436 CYRILLIC SMALL LETTER ZHE</span></a>]</span>
+<span class="eg" lang="uk">джинси</span>
+<span class="eg" lang="uk">дріжджі</span>
+</p>
+`,
+
+'\u{0437}': `
+<p class="insertTranscription">&#x0437;</p>
+<p><span class="ipa">z</span> when hard
+<span class="eg" lang="uk">загроза</span>
+<span class="eg" lang="uk">без</span>
+</p>
+<p><span class="ipa">zʲ</span> (palatalised) when followed by a softening vowel or soft sign
+<span class="eg" lang="uk">зяблик</span>
+<span class="eg" lang="uk">ізюм</span>
+</p>
+
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">d͡z</span> is <span class="codepoint" translate="no"><bdi lang="uk">&#x0434;&#x0437;</bdi> [<a href="/scripts/cyrillic/block#char0434"><span class="uname">U+0434 CYRILLIC SMALL LETTER DE</span></a> + <a href="/scripts/cyrillic/block#char0437"><span class="uname">U+0437 CYRILLIC SMALL LETTER ZE</span></a>]</span>
+<span class="eg" lang="uk">дзиґа</span>
+<span class="eg" lang="uk">кукурудза</span>
+</p>
+`,
+
+'\u{0438}': `
+<p class="insertTranscription">&#x0438;</p>
+<p><span class="ipa">ɪ</span> in stressed syllables (rare in word-initial position)
+<span class="eg" lang="uk">бити</span>
+<span class="eg" lang="uk">абикуди</span>
+</p>
+
+<p><span class="ipa">e</span> in unstressed syllables 
+<span class="eg" lang="uk">бажати</span>
+<span class="eg" lang="uk">зупинитися</span>
+</p>
+`,
+
+'\u{0439}': `
+<p class="insertTranscription">&#x0439;</p>
+<p><span class="ipa">i̯</span> as part of a diphthong
+<span class="eg" lang="uk">герой</span>
+<span class="eg" lang="uk">буйний</span>
+<span class="eg" lang="uk">гіркий</span>
+</p>
+
+<p><span class="ipa">j</span> as a syllable onset
+<span class="eg" lang="uk">йога</span>
+</p>
+
+<p><span class="ipa">i̯</span> in initial position before a consonant in a few words
+<span class="eg" lang="uk">ймовірний</span>
+</p>
+
+
+<p>From <a href="https://en.wiktionary.org/wiki/%D0%B9%D1%82%D0%B8#Ukrainian">Wiktionary</a>: The forms <span lang="uk">іти́</span> <span class="ipa">itý</span> and <span lang="uk">йти</span> <span class="ipa">jty</span> (<span class="meaning">to go</span>) are used interchangeably and are considered the same word but are different in spelling and pronunciation. Like other Ukrainian words, words starting with "<span lang="uk">і</span>" + consonant are used after consonants or at the beginning of a clause, words starting with "<span lang="uk">й</span>" + consonant are used after vowels.
+</p>
+`,
+
+'\u{043A}': `
+<p class="insertTranscription">&#x043A;</p>
+<p><span class="ipa">k</span>
+<span class="eg" lang="uk">канчук</span>
+<span class="eg" lang="uk">мʼякий</span>
+</p>
+
+<p><span class="ipa">kʲ</span>  when followed by <span class="codepoint" translate="no"><bdi lang="uk">&#x0456;</bdi> [<a href="/scripts/cyrillic/block#char0456"><span class="uname">U+0456 CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I</span></a>]</span>
+<span class="eg" lang="uk">кіно</span>
+<span class="eg" lang="uk">покій</span>
+</p>
+`,
+
+'\u{043B}': `
+<p class="insertTranscription">&#x043B;</p>
+<p><span class="ipa">ɫ</span> when hard
+<span class="eg" lang="uk">лелека</span>
+<span class="eg" lang="uk">козел</span>
+</p>
+
+<p><span class="ipa">lʲ</span> (palatalised) when followed by a softening vowel or soft sign
+<span class="eg" lang="uk">король</span>
+<span class="eg" lang="uk">пляма</span>
+</p>
+`,
+
+'\u{043C}': `
+<p class="insertTranscription">&#x043C;</p>
+<p><span class="ipa">m</span>
+<span class="eg" lang="uk">мамут</span>
+<span class="eg" lang="uk">килим</span>
+<span class="eg" lang="uk">мʼяч</span>
+</p>
+
+<p><span class="ipa">mʲ</span> before <span class="codepoint" translate="no"><bdi lang="uk">&#x0456;</bdi> [<a href="/scripts/cyrillic/block#char0456"><span class="uname">U+0456 CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I</span></a>]</span>
+<span class="eg" lang="uk">комір</span>
+<span class="eg" lang="uk">семінар</span>
+</p>
+`,
+
+'\u{043D}': `
+<p class="insertTranscription">&#x043D;</p>
+<p><span class="ipa">n</span> when hard
+<span class="eg" lang="uk">насінина</span>
+<span class="eg" lang="uk">лимон</span>
+</p>
+
+<p><span class="ipa">nʲ</span> (palatalised) when followed by a softening vowel or soft sign 
+<span class="eg" lang="uk">достатньо</span>
+<span class="eg" lang="uk">здання</span>
+</p>
+`,
+
+'\u{043E}': `
+<p class="insertTranscription">&#x043E;</p>
+<p><span class="ipa">ɔ</span> whether stressed or unstressed
+<span class="eg" lang="uk">ожина</span>
+<span class="eg" lang="uk">болото</span>
+</p>
+`,
+
+'\u{043F}': `
+<p class="insertTranscription">&#x043F;</p>
+<p><span class="ipa">p</span>
+<span class="eg" lang="uk">покупка</span>
+<span class="eg" lang="uk">пуп</span>
+<span class="eg" lang="uk">пʼять</span>
+</p>
+
+<p><span class="ipa">pʲ</span> (palatalised) when followed by a softening vowel (rare)
+<span class="eg" lang="uk">папір</span>
+<span class="eg" lang="uk">пюре</span>
+</p>
+`,
+
+'\u{0440}': `
+<p class="insertTranscription">&#x0440;</p>
+<p><span class="ipa">r</span> when hard
+<span class="eg" lang="uk">резервіст</span>
+<span class="eg" lang="uk">мир</span>
+<span class="eg" lang="uk">карʼєра</span>
+</p>
+
+<p><span class="ipa">rʲ</span> (palatalised) when followed by a softening vowel or soft sign
+<span class="eg" lang="uk">вірьовка</span>
+<span class="eg" lang="uk">грязь</span>
+</p>
+`,
+
+'\u{0441}': `
+<p class="insertTranscription">&#x0441;</p>
+<p><span class="ipa">s</span> when hard
+<span class="eg" lang="uk">селянство</span>
+<span class="eg" lang="uk">клас</span>
+</p>
+
+<p><span class="ipa">sʲ</span> (palatalised) when followed by a softening vowel or soft sign
+<span class="eg" lang="uk">вісь</span>
+<span class="eg" lang="uk">свідомість</span>
+</p>
+`,
+
+'\u{0442}': `
+<p class="insertTranscription">&#x0442;</p>
+<p><span class="ipa">t</span> when hard
+<span class="eg" lang="uk">теплота</span>
+<span class="eg" lang="uk">аромат</span>
+</p>
+
+<p><span class="ipa">tʲ</span> (palatalised) when followed by a softening vowel or soft sign
+<span class="eg" lang="uk">досить</span>
+<span class="eg" lang="uk">батяр</span>
+</p>
+`,
+
+'\u{0443}': `
+<p class="insertTranscription">&#x0443;</p>
+<p><span class="ipa">u</span> in stressed syllables
+<span class="eg" lang="uk">усунути</span>
+</p>
+<p><span class="ipa">ʊ</span> in unstressed syllables
+<span class="eg" lang="uk">укус</span>
+<span class="eg" lang="uk">додому</span>
+</p>
+`,
+
+'\u{0444}': `
+<p class="insertTranscription">&#x0444;</p>
+<p><span class="ipa">f</span>
+<span class="eg" lang="uk">фосфор</span>
+<span class="eg" lang="uk">філософ</span>
+</p>
+
+<p><span class="ipa">fʲ</span> almost exclusively when followed by <span class="codepoint" translate="no"><bdi lang="uk">&#x0456;</bdi> [<a href="/scripts/cyrillic/block#char0456"><span class="uname">U+0456 CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I</span></a>]</span>, eg.
+<span class="eg" lang="uk">суфікс</span>
+<span class="eg" lang="uk">фюзеляж</span>
+</p>
+`,
+
+'\u{0445}': `
+<p class="insertTranscription">&#x0445;</p>
+<p><span class="ipa">x</span>
+<span class="eg" lang="uk">хата</span>
+<span class="eg" lang="uk">дах</span>
+</p>
+
+<p><span class="ipa">xʲ</span> when followed by <span class="codepoint" translate="no"><bdi lang="uk">&#x0456;</bdi> [<a href="/scripts/cyrillic/block#char0456"><span class="uname">U+0456 CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I</span></a>]</span>, eg.
+<span class="eg" lang="uk">підхід</span>
+</p>
+`,
+
+'\u{0446}': `
+<p class="insertTranscription">&#x0446;</p>
+<p><span class="ipa">t͡s</span> when hard
+<span class="eg" lang="uk">цацка</span>
+<span class="eg" lang="uk">палац</span>
+</p>
+
+<p><span class="ipa">t͡sʲ</span> (palatalised) when followed by a softening vowel or soft sign
+<span class="eg" lang="uk">міць</span>
+<span class="eg" lang="uk">кориця</span>
+</p>
+`,
+
+'\u{0447}': `
+<p class="insertTranscription">&#x0447;</p>
+<p><span class="ipa">t͡ʃ</span> when hard
+<span class="eg" lang="uk">чоловічий</span>
+<span class="eg" lang="uk">діяч</span>
+</p>
+
+<p><span class="ipa">t͡ʃʲ</span> (palatalised) when followed by a softening vowel
+<span class="eg" lang="uk">вечір</span>
+<span class="eg" lang="uk">обличчя</span>
+</p>
+`,
+
+'\u{0448}': `
+<p class="insertTranscription">&#x0448;</p>
+<p><span class="ipa">ʃ</span>
+<span class="eg" lang="uk">шия</span>
+<span class="eg" lang="uk">гуляш</span>
+</p>
+
+<p><span class="ipa">ʃʲ</span> (palatalised) when followed by a softening vowel or soft sign (not common)
+<span class="eg" lang="uk">шість</span>
+<span class="eg" lang="uk">затишшя</span>
+</p>
+`,
+
+'\u{0449}': `
+<p class="insertTranscription">&#x0449;</p>
+<p><span class="ipa">ʃt͡ʃ</span>
+<span class="eg" lang="uk">щур</span>
+<span class="eg" lang="uk">дощ</span>
+</p>
+
+<p><span class="ipa">ʃt͡ʃʲ</span> (palatalised) when followed by a softening vowel or soft sign (not common)
+<span class="eg" lang="uk">щітка</span>
+<span class="eg" lang="uk">заздрощі</span>
+</p>
+`,
+
+'\u{044A}': `
+`,
+
+'\u{044B}': `
+`,
+
+'\u{044C}': `
+<p class="insertTranscription">&#x044C;</p>
+<p>Usually, but not always, found at the end of a word. Indicates that the preceding consonant is palatalized 
+<span class="eg" lang="uk">день</span>
+<span class="eg" lang="uk">нормальність</span>
+</p>
+`,
+
+'\u{044D}': `
+`,
+
+'\u{044E}': `
+<p class="insertTranscription">&#x044E;</p>
+<p>After a consonant, indicates that the consonant is palatalised.</p>
+<p><span class="ipa">u</span> in stressed syllables
+<span class="eg" lang="uk">люди</span>
+</p>
+<p><span class="ipa">ʊ</span> in unstressed syllables
+<span class="eg" lang="uk">людина</span>
+</p>
+
+<p>At the beginning of a word, or after a vowel or hard sign, represents a vowel sign preceded by <span class="ipa">j</span>.</p>
+<p><span class="ipa">ju</span> in stressed syllables
+<span class="eg" lang="uk">юний</span>
+<span class="eg" lang="uk">союз</span>
+<span class="eg" lang="uk">компʼютер</span>
+</p>
+<p><span class="ipa">jʊ</span> in unstressed syllables
+<span class="eg" lang="uk">юрба</span>
+<span class="eg" lang="uk">зрештою</span>
+</p>
+`,
+
+'\u{044F}': `
+<p class="insertTranscription">&#x044F;</p>
+<p>After a consonant, indicates that the consonant is palatalised.</p>
+<p><span class="ipa">a</span> in stressed syllables
+<span class="eg" lang="uk">будяк</span>
+</p>
+<p><span class="ipa">ɐ</span> in unstressed syllables
+<span class="eg" lang="uk">боятися</span>
+</p>
+
+<p>At the beginning of a word, or after a vowel or hard sign, represents a vowel sign preceded by <span class="ipa">j</span>.</p>
+<p><span class="ipa">ja</span> in stressed syllables
+<span class="eg" lang="uk">якір</span>
+<span class="eg" lang="uk">діяч</span>
+<span class="eg" lang="uk">пʼяний</span>
+</p>
+<p><span class="ipa">jɐ</span> in unstressed syllables
+<span class="eg" lang="uk">якби</span>
+<span class="eg" lang="uk">мрія</span>
+</p>
+`,
+
+'\u{0450}': `
+<p class="insertTranscription">&#x0450;</p>
+`,
+
+'\u{0451}': `
+`,
+
+'\u{0452}': `
+<p class="insertTranscription">&#x0452;</p>
+`,
+
+'\u{0453}': `
+<p class="insertTranscription">&#x0453;</p>
+`,
+
+'\u{0454}': `
+<p class="insertTranscription">&#x0454;</p>
+<p>After a consonant, indicates that the consonant is palatalised.</p>
+<p><span class="ipa">ɛ</span> in stressed syllables
+<span class="eg" lang="uk">суттєвий</span>
+</p>
+<p><span class="ipa">e</span> in unstressed syllables
+<span class="eg" lang="uk">майбутнє</span>
+</p>
+
+<p>At the beginning of a word, or after a vowel or hard sign, represents a vowel sign preceded by <span class="ipa">j</span>. This usage is much more common than to indicate palatalisation.</p>
+
+<p><span class="ipa">jɛ</span> in stressed syllables
+<span class="eg" lang="uk">приємно</span>
+<span class="eg" lang="uk">обʼєкт</span>
+</p>
+<p><span class="ipa">je</span> in unstressed syllables
+<span class="eg" lang="uk">єдваб</span>
+<span class="eg" lang="uk">краєвид</span>
+</p>
+`,
+
+'\u{0455}': `
+<p class="insertTranscription">&#x0455;</p>
+`,
+
+'\u{0456}': `
+<p class="insertTranscription">&#x0456;</p>
+<p>After a consonant, indicates that the consonant is palatalised.</p>
+<p><span class="ipa">i</span> in stressed or unstressed syllables
+<span class="eg" lang="uk">діло</span>
+<span class="eg" lang="uk">бесіда</span>
+</p>
+
+<p>At the beginning of a word or after a vowel it also represents <span class="ipa">i</span>
+<span class="eg" lang="uk">імла</span>
+<span class="eg" lang="uk">неістота</span>
+</p>
+`,
+
+'\u{0457}': `
+<p class="insertTranscription">&#x0457;</p>
+<p><span class="ipa">ji</span> diphone, usually appears after a vowel or hard sign, although a few words begin with this letter.
+<span class="eg" lang="uk">їжак</span>
+<span class="eg" lang="uk">Україна</span>
+<span class="eg" lang="uk">хазяїн</span>
+<span class="eg" lang="uk">вакації</span>
+<span class="eg" lang="uk" dir="ltr">зʼїсти</span>
+</p>
+
+`,
+
+'\u{0458}': `
+<p class="insertTranscription">&#x0458;</p>
+`,
+
+'\u{0459}': `
+<p class="insertTranscription">&#x0459;</p>
+`,
+
+'\u{045A}': `
+<p class="insertTranscription">&#x045A;</p>
+`,
+
+'\u{045B}': `
+<p class="insertTranscription">&#x045B;</p>
+`,
+
+'\u{045C}': `
+<p class="insertTranscription">&#x045C;</p>
+`,
+
+'\u{045D}': `
+<p class="insertTranscription">&#x045D;</p>
+`,
+
+'\u{045E}': `
+<p class="insertTranscription">&#x045E;</p>
+`,
+
+'\u{045F}': `
+<p class="insertTranscription">&#x045F;</p>
+`,
+
+'\u{0460}': `
+<p class="insertTranscription">&#x0460;</p>
+`,
+
+'\u{0461}': `
+<p class="insertTranscription">&#x0461;</p>
+`,
+
+'\u{0462}': `
+<p class="insertTranscription">&#x0462;</p>
+`,
+
+'\u{0463}': `
+<p class="insertTranscription">&#x0463;</p>
+`,
+
+'\u{0464}': `
+<p class="insertTranscription">&#x0464;</p>
+`,
+
+'\u{0465}': `
+<p class="insertTranscription">&#x0465;</p>
+`,
+
+'\u{0466}': `
+<p class="insertTranscription">&#x0466;</p>
+`,
+
+'\u{0467}': `
+<p class="insertTranscription">&#x0467;</p>
+`,
+
+'\u{0468}': `
+<p class="insertTranscription">&#x0468;</p>
+`,
+
+'\u{0469}': `
+<p class="insertTranscription">&#x0469;</p>
+`,
+
+'\u{046A}': `
+<p class="insertTranscription">&#x046A;</p>
+`,
+
+'\u{046B}': `
+<p class="insertTranscription">&#x046B;</p>
+`,
+
+'\u{046C}': `
+<p class="insertTranscription">&#x046C;</p>
+`,
+
+'\u{046D}': `
+<p class="insertTranscription">&#x046D;</p>
+`,
+
+'\u{046E}': `
+<p class="insertTranscription">&#x046E;</p>
+`,
+
+'\u{046F}': `
+<p class="insertTranscription">&#x046F;</p>
+`,
+
+'\u{0470}': `
+<p class="insertTranscription">&#x0470;</p>
+`,
+
+'\u{0471}': `
+<p class="insertTranscription">&#x0471;</p>
+`,
+
+'\u{0472}': `
+<p class="insertTranscription">&#x0472;</p>
+`,
+
+'\u{0473}': `
+<p class="insertTranscription">&#x0473;</p>
+`,
+
+'\u{0474}': `
+<p class="insertTranscription">&#x0474;</p>
+`,
+
+'\u{0475}': `
+<p class="insertTranscription">&#x0475;</p>
+`,
+
+'\u{0476}': `
+<p class="insertTranscription">&#x0476;</p>
+`,
+
+'\u{0477}': `
+<p class="insertTranscription">&#x0477;</p>
+`,
+
+'\u{0478}': `
+<p class="insertTranscription">&#x0478;</p>
+`,
+
+'\u{0479}': `
+<p class="insertTranscription">&#x0479;</p>
+`,
+
+'\u{047A}': `
+<p class="insertTranscription">&#x047A;</p>
+`,
+
+'\u{047B}': `
+<p class="insertTranscription">&#x047B;</p>
+`,
+
+'\u{047C}': `
+<p class="insertTranscription">&#x047C;</p>
+`,
+
+'\u{047D}': `
+<p class="insertTranscription">&#x047D;</p>
+`,
+
+'\u{047E}': `
+<p class="insertTranscription">&#x047E;</p>
+`,
+
+'\u{047F}': `
+<p class="insertTranscription">&#x047F;</p>
+`,
+
+'\u{0480}': `
+<p class="insertTranscription">&#x0480;</p>
+`,
+
+'\u{0481}': `
+<p class="insertTranscription">&#x0481;</p>
+`,
+
+'\u{0482}': `
+<p class="insertTranscription">&#x0482;</p>
+`,
+
+'\u{0483}': `
+<p class="insertTranscription">&#x0483;</p>
+`,
+
+'\u{0484}': `
+<p class="insertTranscription">&#x0484;</p>
+`,
+
+'\u{0485}': `
+<p class="insertTranscription">&#x0485;</p>
+`,
+
+'\u{0486}': `
+<p class="insertTranscription">&#x0486;</p>
+`,
+
+'\u{0487}': `
+<p class="insertTranscription">&#x0487;</p>
+`,
+
+'\u{0488}': `
+<p class="insertTranscription">&#x0488;</p>
+`,
+
+'\u{0489}': `
+<p class="insertTranscription">&#x0489;</p>
+`,
+
+'\u{048A}': `
+<p class="insertTranscription">&#x048A;</p>
+`,
+
+'\u{048B}': `
+<p class="insertTranscription">&#x048B;</p>
+`,
+
+'\u{048C}': `
+<p class="insertTranscription">&#x048C;</p>
+`,
+
+'\u{048D}': `
+<p class="insertTranscription">&#x048D;</p>
+`,
+
+'\u{048E}': `
+<p class="insertTranscription">&#x048E;</p>
+`,
+
+'\u{048F}': `
+<p class="insertTranscription">&#x048F;</p>
+`,
+
+'\u{0490}': `
+<p class="insertTranscription">&#x0490;</p>
+`,
+
+'\u{0491}': `
+<p class="insertTranscription">&#x0491;</p>
+<p><span class="ipa">g</span> not very common, and mostly used for loan words
+<span class="eg" lang="uk">ґирлиґа</span>
+<span class="eg" lang="uk">гештеґ</span>
+</p>
+`,
+
+'\u{0492}': `
+<p class="insertTranscription">&#x0492;</p>
+`,
+
+'\u{0493}': `
+<p class="insertTranscription">&#x0493;</p>
+`,
+
+'\u{0494}': `
+<p class="insertTranscription">&#x0494;</p>
+`,
+
+'\u{0495}': `
+<p class="insertTranscription">&#x0495;</p>
+`,
+
+'\u{0496}': `
+<p class="insertTranscription">&#x0496;</p>
+`,
+
+'\u{0497}': `
+<p class="insertTranscription">&#x0497;</p>
+`,
+
+'\u{0498}': `
+<p class="insertTranscription">&#x0498;</p>
+`,
+
+'\u{0499}': `
+<p class="insertTranscription">&#x0499;</p>
+`,
+
+'\u{049A}': `
+<p class="insertTranscription">&#x049A;</p>
+`,
+
+'\u{049B}': `
+<p class="insertTranscription">&#x049B;</p>
+`,
+
+'\u{049C}': `
+<p class="insertTranscription">&#x049C;</p>
+`,
+
+'\u{049D}': `
+<p class="insertTranscription">&#x049D;</p>
+`,
+
+'\u{049E}': `
+<p class="insertTranscription">&#x049E;</p>
+`,
+
+'\u{049F}': `
+<p class="insertTranscription">&#x049F;</p>
+`,
+
+'\u{04A0}': `
+<p class="insertTranscription">&#x04A0;</p>
+`,
+
+'\u{04A1}': `
+<p class="insertTranscription">&#x04A1;</p>
+`,
+
+'\u{04A2}': `
+<p class="insertTranscription">&#x04A2;</p>
+`,
+
+'\u{04A3}': `
+<p class="insertTranscription">&#x04A3;</p>
+`,
+
+'\u{04A4}': `
+<p class="insertTranscription">&#x04A4;</p>
+`,
+
+'\u{04A5}': `
+<p class="insertTranscription">&#x04A5;</p>
+`,
+
+'\u{04A6}': `
+<p class="insertTranscription">&#x04A6;</p>
+`,
+
+'\u{04A7}': `
+<p class="insertTranscription">&#x04A7;</p>
+`,
+
+'\u{04A8}': `
+<p class="insertTranscription">&#x04A8;</p>
+`,
+
+'\u{04A9}': `
+<p class="insertTranscription">&#x04A9;</p>
+`,
+
+'\u{04AA}': `
+<p class="insertTranscription">&#x04AA;</p>
+`,
+
+'\u{04AB}': `
+<p class="insertTranscription">&#x04AB;</p>
+`,
+
+'\u{04AC}': `
+<p class="insertTranscription">&#x04AC;</p>
+`,
+
+'\u{04AD}': `
+<p class="insertTranscription">&#x04AD;</p>
+`,
+
+'\u{04AE}': `
+<p class="insertTranscription">&#x04AE;</p>
+`,
+
+'\u{04AF}': `
+<p class="insertTranscription">&#x04AF;</p>
+`,
+
+'\u{04B0}': `
+<p class="insertTranscription">&#x04B0;</p>
+`,
+
+'\u{04B1}': `
+<p class="insertTranscription">&#x04B1;</p>
+`,
+
+'\u{04B2}': `
+<p class="insertTranscription">&#x04B2;</p>
+`,
+
+'\u{04B3}': `
+<p class="insertTranscription">&#x04B3;</p>
+`,
+
+'\u{04B4}': `
+<p class="insertTranscription">&#x04B4;</p>
+`,
+
+'\u{04B5}': `
+<p class="insertTranscription">&#x04B5;</p>
+`,
+
+'\u{04B6}': `
+<p class="insertTranscription">&#x04B6;</p>
+`,
+
+'\u{04B7}': `
+<p class="insertTranscription">&#x04B7;</p>
+`,
+
+'\u{04B8}': `
+<p class="insertTranscription">&#x04B8;</p>
+`,
+
+'\u{04B9}': `
+<p class="insertTranscription">&#x04B9;</p>
+`,
+
+'\u{04BA}': `
+<p class="insertTranscription">&#x04BA;</p>
+`,
+
+'\u{04BB}': `
+<p class="insertTranscription">&#x04BB;</p>
+`,
+
+'\u{04BC}': `
+<p class="insertTranscription">&#x04BC;</p>
+`,
+
+'\u{04BD}': `
+<p class="insertTranscription">&#x04BD;</p>
+`,
+
+'\u{04BE}': `
+<p class="insertTranscription">&#x04BE;</p>
+`,
+
+'\u{04BF}': `
+<p class="insertTranscription">&#x04BF;</p>
+`,
+
+'\u{04C0}': `
+<p class="insertTranscription">&#x04C0;</p>
+`,
+
+'\u{04C1}': `
+<p class="insertTranscription">&#x04C1;</p>
+`,
+
+'\u{04C2}': `
+<p class="insertTranscription">&#x04C2;</p>
+`,
+
+'\u{04C3}': `
+<p class="insertTranscription">&#x04C3;</p>
+`,
+
+'\u{04C4}': `
+<p class="insertTranscription">&#x04C4;</p>
+`,
+
+'\u{04C5}': `
+<p class="insertTranscription">&#x04C5;</p>
+`,
+
+'\u{04C6}': `
+<p class="insertTranscription">&#x04C6;</p>
+`,
+
+'\u{04C7}': `
+<p class="insertTranscription">&#x04C7;</p>
+`,
+
+'\u{04C8}': `
+<p class="insertTranscription">&#x04C8;</p>
+`,
+
+'\u{04C9}': `
+<p class="insertTranscription">&#x04C9;</p>
+`,
+
+'\u{04CA}': `
+<p class="insertTranscription">&#x04CA;</p>
+`,
+
+'\u{04CB}': `
+<p class="insertTranscription">&#x04CB;</p>
+`,
+
+'\u{04CC}': `
+<p class="insertTranscription">&#x04CC;</p>
+`,
+
+'\u{04CD}': `
+<p class="insertTranscription">&#x04CD;</p>
+`,
+
+'\u{04CE}': `
+<p class="insertTranscription">&#x04CE;</p>
+`,
+
+'\u{04CF}': `
+<p class="insertTranscription">&#x04CF;</p>
+`,
+
+'\u{04D0}': `
+<p class="insertTranscription">&#x04D0;</p>
+`,
+
+'\u{04D1}': `
+<p class="insertTranscription">&#x04D1;</p>
+`,
+
+'\u{04D2}': `
+<p class="insertTranscription">&#x04D2;</p>
+`,
+
+'\u{04D3}': `
+<p class="insertTranscription">&#x04D3;</p>
+`,
+
+'\u{04D4}': `
+<p class="insertTranscription">&#x04D4;</p>
+`,
+
+'\u{04D5}': `
+<p class="insertTranscription">&#x04D5;</p>
+`,
+
+'\u{04D6}': `
+<p class="insertTranscription">&#x04D6;</p>
+`,
+
+'\u{04D7}': `
+<p class="insertTranscription">&#x04D7;</p>
+`,
+
+'\u{04D8}': `
+<p class="insertTranscription">&#x04D8;</p>
+`,
+
+'\u{04D9}': `
+<p class="insertTranscription">&#x04D9;</p>
+`,
+
+'\u{04DA}': `
+<p class="insertTranscription">&#x04DA;</p>
+`,
+
+'\u{04DB}': `
+<p class="insertTranscription">&#x04DB;</p>
+`,
+
+'\u{04DC}': `
+<p class="insertTranscription">&#x04DC;</p>
+`,
+
+'\u{04DD}': `
+<p class="insertTranscription">&#x04DD;</p>
+`,
+
+'\u{04DE}': `
+<p class="insertTranscription">&#x04DE;</p>
+`,
+
+'\u{04DF}': `
+<p class="insertTranscription">&#x04DF;</p>
+`,
+
+'\u{04E0}': `
+<p class="insertTranscription">&#x04E0;</p>
+`,
+
+'\u{04E1}': `
+<p class="insertTranscription">&#x04E1;</p>
+`,
+
+'\u{04E2}': `
+<p class="insertTranscription">&#x04E2;</p>
+`,
+
+'\u{04E3}': `
+<p class="insertTranscription">&#x04E3;</p>
+`,
+
+'\u{04E4}': `
+<p class="insertTranscription">&#x04E4;</p>
+`,
+
+'\u{04E5}': `
+<p class="insertTranscription">&#x04E5;</p>
+`,
+
+'\u{04E6}': `
+<p class="insertTranscription">&#x04E6;</p>
+`,
+
+'\u{04E7}': `
+<p class="insertTranscription">&#x04E7;</p>
+`,
+
+'\u{04E8}': `
+<p class="insertTranscription">&#x04E8;</p>
+`,
+
+'\u{04E9}': `
+<p class="insertTranscription">&#x04E9;</p>
+`,
+
+'\u{04EA}': `
+<p class="insertTranscription">&#x04EA;</p>
+`,
+
+'\u{04EB}': `
+<p class="insertTranscription">&#x04EB;</p>
+`,
+
+'\u{04EC}': `
+<p class="insertTranscription">&#x04EC;</p>
+`,
+
+'\u{04ED}': `
+<p class="insertTranscription">&#x04ED;</p>
+`,
+
+'\u{04EE}': `
+<p class="insertTranscription">&#x04EE;</p>
+`,
+
+'\u{04EF}': `
+<p class="insertTranscription">&#x04EF;</p>
+`,
+
+'\u{04F0}': `
+<p class="insertTranscription">&#x04F0;</p>
+`,
+
+'\u{04F1}': `
+<p class="insertTranscription">&#x04F1;</p>
+`,
+
+'\u{04F2}': `
+<p class="insertTranscription">&#x04F2;</p>
+`,
+
+'\u{04F3}': `
+<p class="insertTranscription">&#x04F3;</p>
+`,
+
+'\u{04F4}': `
+<p class="insertTranscription">&#x04F4;</p>
+`,
+
+'\u{04F5}': `
+<p class="insertTranscription">&#x04F5;</p>
+`,
+
+'\u{04F6}': `
+<p class="insertTranscription">&#x04F6;</p>
+`,
+
+'\u{04F7}': `
+<p class="insertTranscription">&#x04F7;</p>
+`,
+
+'\u{04F8}': `
+<p class="insertTranscription">&#x04F8;</p>
+`,
+
+'\u{04F9}': `
+<p class="insertTranscription">&#x04F9;</p>
+`,
+
+'\u{04FA}': `
+<p class="insertTranscription">&#x04FA;</p>
+`,
+
+'\u{04FB}': `
+<p class="insertTranscription">&#x04FB;</p>
+`,
+
+'\u{04FC}': `
+<p class="insertTranscription">&#x04FC;</p>
+`,
+
+'\u{04FD}': `
+<p class="insertTranscription">&#x04FD;</p>
+`,
+
+'\u{04FE}': `
+<p class="insertTranscription">&#x04FE;</p>
+`,
+
+'\u{04FF}': `
+<p class="insertTranscription">&#x04FF;</p>
+`,
+
+'\u{0500}': `
+<p class="insertTranscription">&#x0500;</p>
+`,
+
+'\u{0501}': `
+<p class="insertTranscription">&#x0501;</p>
+`,
+
+'\u{0502}': `
+<p class="insertTranscription">&#x0502;</p>
+`,
+
+'\u{0503}': `
+<p class="insertTranscription">&#x0503;</p>
+`,
+
+'\u{0504}': `
+<p class="insertTranscription">&#x0504;</p>
+`,
+
+'\u{0505}': `
+<p class="insertTranscription">&#x0505;</p>
+`,
+
+'\u{0506}': `
+<p class="insertTranscription">&#x0506;</p>
+`,
+
+'\u{0507}': `
+<p class="insertTranscription">&#x0507;</p>
+`,
+
+'\u{0508}': `
+<p class="insertTranscription">&#x0508;</p>
+`,
+
+'\u{0509}': `
+<p class="insertTranscription">&#x0509;</p>
+`,
+
+'\u{050A}': `
+<p class="insertTranscription">&#x050A;</p>
+`,
+
+'\u{050B}': `
+<p class="insertTranscription">&#x050B;</p>
+`,
+
+'\u{050C}': `
+<p class="insertTranscription">&#x050C;</p>
+`,
+
+'\u{050D}': `
+<p class="insertTranscription">&#x050D;</p>
+`,
+
+'\u{050E}': `
+<p class="insertTranscription">&#x050E;</p>
+`,
+
+'\u{050F}': `
+<p class="insertTranscription">&#x050F;</p>
+`,
+
+'\u{0510}': `
+<p class="insertTranscription">&#x0510;</p>
+`,
+
+'\u{0511}': `
+<p class="insertTranscription">&#x0511;</p>
+`,
+
+'\u{0512}': `
+<p class="insertTranscription">&#x0512;</p>
+`,
+
+'\u{0513}': `
+<p class="insertTranscription">&#x0513;</p>
+`,
+
+'\u{0514}': `
+<p class="insertTranscription">&#x0514;</p>
+`,
+
+'\u{0515}': `
+<p class="insertTranscription">&#x0515;</p>
+`,
+
+'\u{0516}': `
+<p class="insertTranscription">&#x0516;</p>
+`,
+
+'\u{0517}': `
+<p class="insertTranscription">&#x0517;</p>
+`,
+
+'\u{0518}': `
+<p class="insertTranscription">&#x0518;</p>
+`,
+
+'\u{0519}': `
+<p class="insertTranscription">&#x0519;</p>
+`,
+
+'\u{051A}': `
+<p class="insertTranscription">&#x051A;</p>
+`,
+
+'\u{051B}': `
+<p class="insertTranscription">&#x051B;</p>
+`,
+
+'\u{051C}': `
+<p class="insertTranscription">&#x051C;</p>
+`,
+
+'\u{051D}': `
+<p class="insertTranscription">&#x051D;</p>
+`,
+
+'\u{051E}': `
+<p class="insertTranscription">&#x051E;</p>
+`,
+
+'\u{051F}': `
+<p class="insertTranscription">&#x051F;</p>
+`,
+
+'\u{0520}': `
+<p class="insertTranscription">&#x0520;</p>
+`,
+
+'\u{0521}': `
+<p class="insertTranscription">&#x0521;</p>
+`,
+
+'\u{0522}': `
+<p class="insertTranscription">&#x0522;</p>
+`,
+
+'\u{0523}': `
+<p class="insertTranscription">&#x0523;</p>
+`,
+
+'\u{0524}': `
+<p class="insertTranscription">&#x0524;</p>
+`,
+
+'\u{0525}': `
+<p class="insertTranscription">&#x0525;</p>
+`,
+
+'\u{0526}': `
+<p class="insertTranscription">&#x0526;</p>
+`,
+
+'\u{0527}': `
+<p class="insertTranscription">&#x0527;</p>
+`,
+
+'\u{0528}': `
+<p class="insertTranscription">&#x0528;</p>
+`,
+
+'\u{0529}': `
+<p class="insertTranscription">&#x0529;</p>
+`,
+
+'\u{052A}': `
+<p class="insertTranscription">&#x052A;</p>
+`,
+
+'\u{052B}': `
+<p class="insertTranscription">&#x052B;</p>
+`,
+
+'\u{052C}': `
+<p class="insertTranscription">&#x052C;</p>
+`,
+
+'\u{052D}': `
+<p class="insertTranscription">&#x052D;</p>
+`,
+
+'\u{052E}': `
+<p class="insertTranscription">&#x052E;</p>
+`,
+
+'\u{052F}': `
+<p class="insertTranscription">&#x052F;</p>
+`,
+
+'\u{2DE0}': `
+<p class="insertTranscription">&#x2DE0;</p>
+`,
+
+'\u{2DE1}': `
+<p class="insertTranscription">&#x2DE1;</p>
+`,
+
+'\u{2DE2}': `
+<p class="insertTranscription">&#x2DE2;</p>
+`,
+
+'\u{2DE3}': `
+<p class="insertTranscription">&#x2DE3;</p>
+`,
+
+'\u{2DE4}': `
+<p class="insertTranscription">&#x2DE4;</p>
+`,
+
+'\u{2DE5}': `
+<p class="insertTranscription">&#x2DE5;</p>
+`,
+
+'\u{2DE6}': `
+<p class="insertTranscription">&#x2DE6;</p>
+`,
+
+'\u{2DE7}': `
+<p class="insertTranscription">&#x2DE7;</p>
+`,
+
+'\u{2DE8}': `
+<p class="insertTranscription">&#x2DE8;</p>
+`,
+
+'\u{2DE9}': `
+<p class="insertTranscription">&#x2DE9;</p>
+`,
+
+'\u{2DEA}': `
+<p class="insertTranscription">&#x2DEA;</p>
+`,
+
+'\u{2DEB}': `
+<p class="insertTranscription">&#x2DEB;</p>
+`,
+
+'\u{2DEC}': `
+<p class="insertTranscription">&#x2DEC;</p>
+`,
+
+'\u{2DED}': `
+<p class="insertTranscription">&#x2DED;</p>
+`,
+
+'\u{2DEE}': `
+<p class="insertTranscription">&#x2DEE;</p>
+`,
+
+'\u{2DEF}': `
+<p class="insertTranscription">&#x2DEF;</p>
+`,
+
+'\u{2DF0}': `
+<p class="insertTranscription">&#x2DF0;</p>
+`,
+
+'\u{2DF1}': `
+<p class="insertTranscription">&#x2DF1;</p>
+`,
+
+'\u{2DF2}': `
+<p class="insertTranscription">&#x2DF2;</p>
+`,
+
+'\u{2DF3}': `
+<p class="insertTranscription">&#x2DF3;</p>
+`,
+
+'\u{2DF4}': `
+<p class="insertTranscription">&#x2DF4;</p>
+`,
+
+'\u{2DF5}': `
+<p class="insertTranscription">&#x2DF5;</p>
+`,
+
+'\u{2DF6}': `
+<p class="insertTranscription">&#x2DF6;</p>
+`,
+
+'\u{2DF7}': `
+<p class="insertTranscription">&#x2DF7;</p>
+`,
+
+'\u{2DF8}': `
+<p class="insertTranscription">&#x2DF8;</p>
+`,
+
+'\u{2DF9}': `
+<p class="insertTranscription">&#x2DF9;</p>
+`,
+
+'\u{2DFA}': `
+<p class="insertTranscription">&#x2DFA;</p>
+`,
+
+'\u{2DFB}': `
+<p class="insertTranscription">&#x2DFB;</p>
+`,
+
+'\u{2DFC}': `
+<p class="insertTranscription">&#x2DFC;</p>
+`,
+
+'\u{2DFD}': `
+<p class="insertTranscription">&#x2DFD;</p>
+`,
+
+'\u{2DFE}': `
+<p class="insertTranscription">&#x2DFE;</p>
+`,
+
+'\u{2DFF}': `
+<p class="insertTranscription">&#x2DFF;</p>
+`,
+
+'\u{A640}': `
+<p class="insertTranscription">&#xA640;</p>
+`,
+
+'\u{A641}': `
+<p class="insertTranscription">&#xA641;</p>
+`,
+
+'\u{A642}': `
+<p class="insertTranscription">&#xA642;</p>
+`,
+
+'\u{A643}': `
+<p class="insertTranscription">&#xA643;</p>
+`,
+
+'\u{A644}': `
+<p class="insertTranscription">&#xA644;</p>
+`,
+
+'\u{A645}': `
+<p class="insertTranscription">&#xA645;</p>
+`,
+
+'\u{A646}': `
+<p class="insertTranscription">&#xA646;</p>
+`,
+
+'\u{A647}': `
+<p class="insertTranscription">&#xA647;</p>
+`,
+
+'\u{A648}': `
+<p class="insertTranscription">&#xA648;</p>
+`,
+
+'\u{A649}': `
+<p class="insertTranscription">&#xA649;</p>
+`,
+
+'\u{A64A}': `
+<p class="insertTranscription">&#xA64A;</p>
+`,
+
+'\u{A64B}': `
+<p class="insertTranscription">&#xA64B;</p>
+`,
+
+'\u{A64C}': `
+<p class="insertTranscription">&#xA64C;</p>
+`,
+
+'\u{A64D}': `
+<p class="insertTranscription">&#xA64D;</p>
+`,
+
+'\u{A64E}': `
+<p class="insertTranscription">&#xA64E;</p>
+`,
+
+'\u{A64F}': `
+<p class="insertTranscription">&#xA64F;</p>
+`,
+
+'\u{A650}': `
+<p class="insertTranscription">&#xA650;</p>
+`,
+
+'\u{A651}': `
+<p class="insertTranscription">&#xA651;</p>
+`,
+
+'\u{A652}': `
+<p class="insertTranscription">&#xA652;</p>
+`,
+
+'\u{A653}': `
+<p class="insertTranscription">&#xA653;</p>
+`,
+
+'\u{A654}': `
+<p class="insertTranscription">&#xA654;</p>
+`,
+
+'\u{A655}': `
+<p class="insertTranscription">&#xA655;</p>
+`,
+
+'\u{A656}': `
+<p class="insertTranscription">&#xA656;</p>
+`,
+
+'\u{A657}': `
+<p class="insertTranscription">&#xA657;</p>
+`,
+
+'\u{A658}': `
+<p class="insertTranscription">&#xA658;</p>
+`,
+
+'\u{A659}': `
+<p class="insertTranscription">&#xA659;</p>
+`,
+
+'\u{A65A}': `
+<p class="insertTranscription">&#xA65A;</p>
+`,
+
+'\u{A65B}': `
+<p class="insertTranscription">&#xA65B;</p>
+`,
+
+'\u{A65C}': `
+<p class="insertTranscription">&#xA65C;</p>
+`,
+
+'\u{A65D}': `
+<p class="insertTranscription">&#xA65D;</p>
+`,
+
+'\u{A65E}': `
+<p class="insertTranscription">&#xA65E;</p>
+`,
+
+'\u{A65F}': `
+<p class="insertTranscription">&#xA65F;</p>
+`,
+
+'\u{A660}': `
+<p class="insertTranscription">&#xA660;</p>
+`,
+
+'\u{A661}': `
+<p class="insertTranscription">&#xA661;</p>
+`,
+
+'\u{A662}': `
+<p class="insertTranscription">&#xA662;</p>
+`,
+
+'\u{A663}': `
+<p class="insertTranscription">&#xA663;</p>
+`,
+
+'\u{A664}': `
+<p class="insertTranscription">&#xA664;</p>
+`,
+
+'\u{A665}': `
+<p class="insertTranscription">&#xA665;</p>
+`,
+
+'\u{A666}': `
+<p class="insertTranscription">&#xA666;</p>
+`,
+
+'\u{A667}': `
+<p class="insertTranscription">&#xA667;</p>
+`,
+
+'\u{A668}': `
+<p class="insertTranscription">&#xA668;</p>
+`,
+
+'\u{A669}': `
+<p class="insertTranscription">&#xA669;</p>
+`,
+
+'\u{A66A}': `
+<p class="insertTranscription">&#xA66A;</p>
+`,
+
+'\u{A66B}': `
+<p class="insertTranscription">&#xA66B;</p>
+`,
+
+'\u{A66C}': `
+<p class="insertTranscription">&#xA66C;</p>
+`,
+
+'\u{A66D}': `
+<p class="insertTranscription">&#xA66D;</p>
+`,
+
+'\u{A66E}': `
+<p class="insertTranscription">&#xA66E;</p>
+`,
+
+'\u{A66F}': `
+<p class="insertTranscription">&#xA66F;</p>
+`,
+
+'\u{A670}': `
+<p class="insertTranscription">&#xA670;</p>
+`,
+
+'\u{A671}': `
+<p class="insertTranscription">&#xA671;</p>
+`,
+
+'\u{A672}': `
+<p class="insertTranscription">&#xA672;</p>
+`,
+
+'\u{A673}': `
+<p class="insertTranscription">&#xA673;</p>
+`,
+
+'\u{A674}': `
+<p class="insertTranscription">&#xA674;</p>
+`,
+
+'\u{A675}': `
+<p class="insertTranscription">&#xA675;</p>
+`,
+
+'\u{A676}': `
+<p class="insertTranscription">&#xA676;</p>
+`,
+
+'\u{A677}': `
+<p class="insertTranscription">&#xA677;</p>
+`,
+
+'\u{A678}': `
+<p class="insertTranscription">&#xA678;</p>
+`,
+
+'\u{A679}': `
+<p class="insertTranscription">&#xA679;</p>
+`,
+
+'\u{A67A}': `
+<p class="insertTranscription">&#xA67A;</p>
+`,
+
+'\u{A67B}': `
+<p class="insertTranscription">&#xA67B;</p>
+`,
+
+'\u{A67C}': `
+<p class="insertTranscription">&#xA67C;</p>
+`,
+
+'\u{A67D}': `
+<p class="insertTranscription">&#xA67D;</p>
+`,
+
+'\u{A67E}': `
+<p class="insertTranscription">&#xA67E;</p>
+`,
+
+'\u{A67F}': `
+<p class="insertTranscription">&#xA67F;</p>
+`,
+
+'\u{A680}': `
+<p class="insertTranscription">&#xA680;</p>
+`,
+
+'\u{A681}': `
+<p class="insertTranscription">&#xA681;</p>
+`,
+
+'\u{A682}': `
+<p class="insertTranscription">&#xA682;</p>
+`,
+
+'\u{A683}': `
+<p class="insertTranscription">&#xA683;</p>
+`,
+
+'\u{A684}': `
+<p class="insertTranscription">&#xA684;</p>
+`,
+
+'\u{A685}': `
+<p class="insertTranscription">&#xA685;</p>
+`,
+
+'\u{A686}': `
+<p class="insertTranscription">&#xA686;</p>
+`,
+
+'\u{A687}': `
+<p class="insertTranscription">&#xA687;</p>
+`,
+
+'\u{A688}': `
+<p class="insertTranscription">&#xA688;</p>
+`,
+
+'\u{A689}': `
+<p class="insertTranscription">&#xA689;</p>
+`,
+
+'\u{A68A}': `
+<p class="insertTranscription">&#xA68A;</p>
+`,
+
+'\u{A68B}': `
+<p class="insertTranscription">&#xA68B;</p>
+`,
+
+'\u{A68C}': `
+<p class="insertTranscription">&#xA68C;</p>
+`,
+
+'\u{A68D}': `
+<p class="insertTranscription">&#xA68D;</p>
+`,
+
+'\u{A68E}': `
+<p class="insertTranscription">&#xA68E;</p>
+`,
+
+'\u{A68F}': `
+<p class="insertTranscription">&#xA68F;</p>
+`,
+
+'\u{A690}': `
+<p class="insertTranscription">&#xA690;</p>
+`,
+
+'\u{A691}': `
+<p class="insertTranscription">&#xA691;</p>
+`,
+
+'\u{A692}': `
+<p class="insertTranscription">&#xA692;</p>
+`,
+
+'\u{A693}': `
+<p class="insertTranscription">&#xA693;</p>
+`,
+
+'\u{A694}': `
+<p class="insertTranscription">&#xA694;</p>
+`,
+
+'\u{A695}': `
+<p class="insertTranscription">&#xA695;</p>
+`,
+
+'\u{A696}': `
+<p class="insertTranscription">&#xA696;</p>
+`,
+
+'\u{A697}': `
+<p class="insertTranscription">&#xA697;</p>
+`,
+
+'\u{A698}': `
+<p class="insertTranscription">&#xA698;</p>
+`,
+
+'\u{A699}': `
+<p class="insertTranscription">&#xA699;</p>
+`,
+
+'\u{A69A}': `
+<p class="insertTranscription">&#xA69A;</p>
+`,
+
+'\u{A69B}': `
+<p class="insertTranscription">&#xA69B;</p>
+`,
+
+'\u{A69C}': `
+<p class="insertTranscription">&#xA69C;</p>
+`,
+
+'\u{A69D}': `
+<p class="insertTranscription">&#xA69D;</p>
+`,
+
+'\u{A69E}': `
+<p class="insertTranscription">&#xA69E;</p>
+`,
+
+'\u{A69F}': `
+<p class="insertTranscription">&#xA69F;</p>
+`,
+
+'\u{1C80}': `
+<p class="insertTranscription">&#x1C80;</p>
+`,
+
+'\u{1C81}': `
+<p class="insertTranscription">&#x1C81;</p>
+`,
+
+'\u{1C82}': `
+<p class="insertTranscription">&#x1C82;</p>
+`,
+
+'\u{1C83}': `
+<p class="insertTranscription">&#x1C83;</p>
+`,
+
+'\u{1C84}': `
+<p class="insertTranscription">&#x1C84;</p>
+`,
+
+'\u{1C85}': `
+<p class="insertTranscription">&#x1C85;</p>
+`,
+
+'\u{1C86}': `
+<p class="insertTranscription">&#x1C86;</p>
+`,
+
+'\u{1C87}': `
+<p class="insertTranscription">&#x1C87;</p>
+`,
+
+'\u{1C88}': `
+<p class="insertTranscription">&#x1C88;</p>
+`,
+
+
+
+
+//  OTHER
+
+
+'\u{0027}': `
+<p>Indicates that a vowel that normally follows a palatalised consonant should be pronounced after <span class="ipa">j-</span>. The preceding consonant is not palatalised.
+<span class="eg" lang="uk">зʼїсти</span>
+<span class="eg" lang="uk">пʼята</span>
+<span class="eg" lang="uk">субʼєкт</span>
+</p>
+
+<p>Can also be represented using <span class="codepoint" translate="no"><bdi lang="uk">&#x02BC;</bdi> [<a href="/scripts/cyrillic/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span>.</p>
+`,
+
+
+'\u{02BC}': `
+<p>Indicates that a vowel that normally follows a palatalised consonant should begin with <span class="ipa">j</span>, and prevents palatalisation of the preceding consonant.
+<span class="eg" lang="uk">зʼїсти</span>
+<span class="eg" lang="uk">пʼята</span>
+<span class="eg" lang="uk">субʼєкт</span>
+</p>
+
+<p>This may be written using <span class="codepoint" translate="no"><bdi lang="uk">&#x0027;</bdi> [<a href="/scripts/cyrillic/block#char0027"><span class="uname">U+0027 APOSTROPHE</span></a>]</span>.</p>
+`,
+
+
+'\u{0301}': `
+<p>Indicates  where the word stress falls in educational materials, dictionaries, and such. The position of the stress is distinctive, and not always predictable, eg. compare
+<span class="eg" lang="uk">за́мок</span>
+<span class="eg" lang="uk">замо́к</span>
+</p>
+`,
+
+
+'\u{0306}': `
+<p>Found only in decomposed text.  Used to represent the decomposed letter <span class="codepoint" translate="no"><bdi lang="uk">&#x0438;&#x0306;</bdi> [<a href="/scripts/cyrillic/block#char0438"><span class="uname">U+0438 CYRILLIC SMALL LETTER I</span></a> + <a href="/scripts/cyrillic/block#char0306"><span class="uname">U+0306 COMBINING BREVE</span></a>]</span> (and its capital).</p>
+`,
+
+
+'\u{0308}': `
+<p>Found only in decomposed text.  Used to represent the decomposed letter <span class="codepoint" translate="no"><bdi lang="uk">&#x0456;&#x0308;</bdi> [<a href="/scripts/cyrillic/block#char0456"><span class="uname">U+0456 CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I</span></a> + <a href="/scripts/cyrillic/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a>]</span> (and its capital).</p>
+`,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
