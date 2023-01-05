@@ -5,31 +5,30 @@
 <title>Armenian orthography notes</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common28/local.css" />
+<link rel="stylesheet" href="../common29/local.css" />
 <link rel="stylesheet" href="hy.css" />
 
-<script src="../../shared/fontdb/db.js"> </script>
-<script src="../../shared/fontdb/managefonts.js"></script>
+<script src="../common29/debug.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 
 <script src="../../shared/scriptdb/armn.js"> </script>
 <script src="hy-details.html"> </script>
 
-<script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2020.js"></script>
-<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/show_codepoints29.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common28/functions.js"></script>
-<script src="../common28/transliterate.js"></script>
-<script src="../common28/prompts.js"> </script>
+<script src="../common29/functions.js"></script>
+<script src="../common29/transliterate.js"></script>
+<script src="../common29/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../common28/egcode.js"></script>
-<script src="../common28/references.js"></script>
+<script src="../common29/egcode.js"></script>
+<script src="../common29/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="hy-langdata.js"></script>
 <script src="hy-examples.js"></script>
 <script src="hy-translit.js">  </script>
-<script src="../../shared/manifests/armn-hy.js"></script>
+<script src="hy-globals.js"></script>
 </head>
 
 <body class="useBlockExamples">
@@ -55,17 +54,17 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->6 December, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->5 January, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
-<section>
+<div id="intro">
 <p>This page brings together basic information about the Armenian script and its use for the Armenian language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Armenian using Unicode.  The transcriptions reflect Eastern Armenian usage, unless otherwise noted</p>
 
 <p id="usage"></p>
 <script>addUsageAdvice('Armenian', 'Armn', 'armn')</script>
-
+</div>
 
 
 
@@ -75,11 +74,13 @@
   
 
 <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
->Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" dir="ltr" lang="hy" data-target="c" data-base="/scripts/armenian/block" data-source="http://unicode.org/udhr/translations.html">
-  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">Հոդված 1 Բոլոր մարդիկ ծնվում են ազատ ու հավասար իրենց արժանապատվությամբ ու իրավունքներով։ Նրանք ունեն բանականություն ու խիղճ և միմյանց պետք է եղբայրաբար վերաբերվեն։</p>
-  <p title="UDHR, article 2" onMouseUp="showtext('freeText')">Հոդված 2 Ամեն ոք ունի այս Հռչակագրում բերված բոլոր իրավունքներն ու ազատությունները առանց որևէ խտրության՝ հիմնված ցեղային, մաշկի գույնի, սեռի, լեզվի, կրոնի, քաղաքական կամ այլ համոզմունքների, ազգային կամ սոցիալական ծագման, ունեցվածքի, դասային պատկանելության կամ որևէ այլ կարգավիճակի վրա։ Ավելին, ոչ մի խտրականություն չպետք է լինի հիմնված երկրի կամ տարածքի, քաղաքական, իրավական, կամ միջազգային կարգավիճակի վրա, լինի դա անկախ, խնամարկյալ, ոչինքնակառավարվող կամ ինքնիշխանության որևէ այլ սահմանափակումով պետական կազմավորում, որին պատկանում է մարդը։</p>
+
+<p  title="UDHR, article 1" onMouseUp="showtext('freeText')">Հոդված 1 Բոլոր մարդիկ ծնվում են ազատ ու հավասար իրենց արժանապատվությամբ ու իրավունքներով։ Նրանք ունեն բանականություն ու խիղճ և միմյանց պետք է եղբայրաբար վերաբերվեն։</p>
+
+<p title="UDHR, article 2" onMouseUp="showtext('freeText')">Հոդված 2 Ամեն ոք ունի այս Հռչակագրում բերված բոլոր իրավունքներն ու ազատությունները առանց որևէ խտրության՝ հիմնված ցեղային, մաշկի գույնի, սեռի, լեզվի, կրոնի, քաղաքական կամ այլ համոզմունքների, ազգային կամ սոցիալական ծագման, ունեցվածքի, դասային պատկանելության կամ որևէ այլ կարգավիճակի վրա։ Ավելին, ոչ մի խտրականություն չպետք է լինի հիմնված երկրի կամ տարածքի, քաղաքական, իրավական, կամ միջազգային կարգավիճակի վրա, լինի դա անկախ, խնամարկյալ, ոչինքնակառավարվող կամ ինքնիշխանության որևէ այլ սահմանափակումով պետական կազմավորում, որին պատկանում է մարդը։</p>
   <!-- Source: http://unicode.org/udhr/translations.html -->
 </div>
 </section>
@@ -441,14 +442,14 @@ alveolar</th>
 </tr>
 <tr>
 <th></th>
-<td class="mouth"><a href="../common28/mouth/mouth_labial.png" target="_blank"><img src="../common28/mouth/mouth_small_labial.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common28/mouth/mouth_dental.png" target="_blank"><img src="../common28/mouth/mouth_small_dental.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common28/mouth/mouth_alveolar.png" target="_blank"><img src="../common28/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common28/mouth/mouth_postalveolar.png" target="_blank"><img src="../common28/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common28/mouth/mouth_palatal.png" target="_blank"><img src="../common28/mouth/mouth_small_palatal.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common28/mouth/mouth_velar.png" target="_blank"><img src="../common28/mouth/mouth_small_velar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common28/mouth/mouth_uvular.png" target="_blank"><img src="../common28/mouth/mouth_small_uvular.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common28/mouth/mouth_glottal.png" target="_blank"><img src="../common28/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_labial.png" target="_blank"><img src="../common29/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_dental.png" target="_blank"><img src="../common29/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_alveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_postalveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_palatal.png" target="_blank"><img src="../common29/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_velar.png" target="_blank"><img src="../common29/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_uvular.png" target="_blank"><img src="../common29/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_glottal.png" target="_blank"><img src="../common29/mouth/mouth_small_glottal.png" alt=" "/></a></td>
 </tr>
 </tbody>
 </table>
@@ -1890,7 +1891,7 @@ Blink and WebKit browsers will highlight a whole word in each case. Gecko, howev
 
 
 <section id="hyphenation">
-<h4>Hyphenation/word-breaking</h4>
+<h4>In-word line-breaking</h4>
 
 <p>At the end of a line, when a word is split, <span class="codepoint"><span lang="hy">&#x058A;</span> <a href="/scripts/armenian/block#char058A">[<span class="uname">U+058A ARMENIAN HYPHEN</span>]</a></span> can be used. Note that this is different from the hyphen which is used to bind compound words together, and it is only used where a word is broken across a line ending.</p>
 
@@ -2144,10 +2145,6 @@ data-cols="">ք␣փ␣ւ␣ց␣ր␣տ␣վ␣ս␣ռ␣ջ␣պ␣չ␣ո␣շ
 </section>
 
 
-
-
-<div id="analytics"></div>
-<script>addAnalytics()</script>
 
 
 
