@@ -78,7 +78,7 @@ reflist = {
 
 
 scriptLanguageList = {
-ja:{name:"Japanese", url:"index"},
+ja:{name:"Japanese", url:"ja.html"},
 ain:{name:"Ainu (Japan)"},
 ryu:{name:"Okinawan, Central"},
 nan:{name:"Chinese, Min Nan"},
