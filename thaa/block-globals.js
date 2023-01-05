@@ -1,5 +1,5 @@
 
-window.version = 'v28'
+window.version = 'v29'
 window.scriptName = 'Thaana'
 window.ghDirectory = 'thaana'
 window.blockDirectory = 'thaana'
