@@ -1,5 +1,6 @@
 
 window.version = 'v28'
+window.scriptName = 'Myanmar'
 window.ghDirectory = 'myanmar'
 window.blockDirectory = 'myanmar'
 window.languageList = ['my','shn'] // lang tags for each orthography handled

@@ -97,10 +97,10 @@ reflist = {
 scriptLanguageList = {
 akb:{name:"Angkola"},
 btd:{name:"Dairi"},
-btx:{name:"Karo", url:"index"},
-btm:{name:"Mandailing", url:"index"},
-bts:{name:"Simalungun", url:"index"},
-bbc:{name:"Toba", url:"index"},
+btx:{name:"Karo", url:"btk.html"},
+btm:{name:"Mandailing", url:"btk.html"},
+bts:{name:"Simalungun", url:"btk.html"},
+bbc:{name:"Toba", url:"btk.html"},
 }
 
 

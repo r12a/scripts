@@ -101,7 +101,7 @@ reflist = {
 
 scriptLanguageList = {
 as:{name:"Assamese"},
-bn:{name:"Bengali"},
+bn:{name:"Bengali", url:"bn.html"},
 bpy:{name:"Bishnupriya"},
 brx:{name:"Bodo (India)"},
 ccp:{name:"Chakma"},

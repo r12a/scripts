@@ -67,3 +67,10 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+ko:{name:"Korean", url:"ko.html"},
+}
+
+

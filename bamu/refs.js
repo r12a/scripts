@@ -63,6 +63,9 @@ reflist = {
 
 }
 
+scriptLanguageList = {
+bax:{name:"Bamun", url:"bax.html"},
+}
 
 
 // <a class="fn">ws,#tones</a>

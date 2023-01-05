@@ -88,7 +88,7 @@ reflist = {
 
 
 scriptLanguageList = {
-ban:{name:"Balinese"},
+ban:{name:"Balinese", url:"ban.html"},
 kaw:{name:"Kawi"},
 sas:{name:"Sasak"},
 }

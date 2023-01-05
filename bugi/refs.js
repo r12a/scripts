@@ -54,7 +54,7 @@ reflist = {
 
 
 scriptLanguageList = {
-bug:{name:"Buginese"},
+bug:{name:"Buginese", url:"bug.html"},
 mak:{name:"Makasar"},
 mdr:{name:"Mandar"},
 }
