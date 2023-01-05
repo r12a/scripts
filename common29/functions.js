@@ -841,7 +841,10 @@ function makeIndexLine (node) {
         //console.log('makeIndexLine',chars[i])
         char = chars[i]
         
-        if (typeof window.spreadsheetRows[char] === 'undefined') console.log('>>> Cannot find ', char, ' in the spreadsheet (makeIndexLine). Index building failed.')
+        if (typeof window.spreadsheetRows[char] === 'undefined') {
+            console.log('>>> Cannot find ', char, ' in the spreadsheet (makeIndexLine). Index building failed.')
+            continue
+            }
 
         // create an id attribute for the listPairs in the index
         if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
