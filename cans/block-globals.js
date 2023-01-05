@@ -1,5 +1,5 @@
 
-window.version = 'v28'
+window.version = 'v29'
 window.scriptName = 'Canadian Aboriginal Syllabics'
 window.ghDirectory = 'cans'
 window.blockDirectory = 'cans'

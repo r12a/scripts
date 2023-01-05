@@ -1,5 +1,5 @@
 
-window.version = 'v28'
+window.version = 'v29'
 window.scriptName = 'Japanese'
 window.ghDirectory = 'jpan'
 window.blockDirectory = 'jpan'
