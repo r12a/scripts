@@ -73,6 +73,9 @@ initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSumma
     window.fontDB = []
     defList = []
     fontInfo = {}
+    
+    
+    copyIntroInfo()
     }
 
 
@@ -842,7 +845,7 @@ function makeIndexLine (node) {
         char = chars[i]
         
         if (typeof window.spreadsheetRows[char] === 'undefined') {
-            console.log('>>> Cannot find ', char, ' in the spreadsheet (makeIndexLine). Index building failed.')
+            console.log('%c' + 'Cannot find '+char+' in the spreadsheet (makeIndexLine). Index building needs attention.', 'color:' + 'orange' + ';font-weight:bold;')
             continue
             }
 
@@ -1612,6 +1615,7 @@ function checkParameters () {
 
 
 
+
 function makeCharDataObj () {
     // create a charData array - (this removes reliance on the all-names.js file)
     // global, spreadsheetRows
@@ -1625,6 +1629,27 @@ function makeCharDataObj () {
 
 
 
+
+
+function copyIntroInfo () {
+    if (traceSet.has('copyIntroInfo') || traceSet.has('all')) console.log('copyIntroInfo()\n\tCopy paragraphs from the brief summary to the top of various sections')
+    
+    // do the vowels
+    var out = ''
+    var paras = document.querySelectorAll('.addToVowels')
+    console.log("Copying",paras.length,"paragraphs to Vowel section.")
+    for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
+    if (document.getElementById('vowel_mappings')) out += `<p class="instructions">For a mapping of sounds to graphemes see <a class="secref" href="#vowel_mappings">Vowel sounds to characters</a>.</p>`
+    if (out !== '') document.getElementById('vowel_description').innerHTML = out
+    
+    // do the consonants
+    var out = ''
+    var paras = document.querySelectorAll('.addToConsonants')
+    console.log("Copying",paras.length,"paragraphs to Consonant section.")
+    for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
+    if (document.getElementById('consonant_mappings')) out += `<p class="instructions">For a mapping of sounds to graphemes see <a class="secref" href="#consonant_mappings">Consonant sounds to characters</a>.</p>`
+    if (out !== '') document.getElementById('consonant_description').innerHTML = out
+    }
 
 
 
