@@ -197,7 +197,7 @@ autoExpandExamples.tru = `
 ܡܰܛܒܰܟ݂|kitchen|ma§tˤ§ba§x|maṭbax||x
 
 ܡܷܠܠܶܗ|nation|məlle|mëlle
-ܡܷܪܪܶܗ|they said|mərre|mërre
+ܡܷܪܪܶܗ|they said|mərre|mërr
 
 
 
