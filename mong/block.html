@@ -6,29 +6,31 @@
 <meta name="description" content="Notes about characters in the Unicode Mongolian script block."/>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common/block-style.css" />
+<link rel="stylesheet" href="../common29/block-style.css" />
 <link rel="stylesheet" href="local.css" />
+
+<script src="../common29/debug.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 
 <script src="../../shared/fontdb/db.js"> </script>
 <script src="../../shared/fontdb/managefonts.js"></script>
 
-<script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
-<script src="../../shared/code/character_conversion.js"></script>
-<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/show_codepoints29.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common/block-functions.js"></script>
-<script src="../common/transliterate.js"></script>
+<script src="../common29/block-functions.js"></script>
+<script src="../common29/transliterate.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 <script src="../../app-charuse/makeCharLangArray.js"></script>
 <script src="desc.js"></script>
-<script src="../common/egcode.js"></script>
-<script src="../common/references.js"></script>
+<script src="../common29/egcode.js"></script>
+<script src="../common29/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="mn-examples.js"></script>
 <script src="mn-translit.js">  </script>
+<script src="block-globals.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -454,27 +456,28 @@ function setFormsFont (font) {
 
 
 <script>
-addBasics('mn','ltr')
+// write the basic character framework, then add notes below
+// langTag is for codepoint names in descriptions of normalisation etc - choose something general
+// dir is direction
+addBasics('langTag','dir')
 </script>
 
 
 
 
 
-<script src="../../shared/scriptdb/mong-mn.js">  </script>
-<script src="mn-details.html">  </script>
+
+<script src="../../shared/scriptdb/mong-mn.js">/* declares spreadsheet */</script>
+<script src="mn-details.html">/* has the actual note data */</script>
+<script src="mn-globals.js">/* global variables */</script>
 <script>
-window.languageName = 'Halh Mongolian'
-window.letterClassName = 'mn'
-window.lang = 'mn'
-window.direction = ''
-window.explainerDir = 'mongolian/'
-window.charappDir = 'mong-mn/'
-
-addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addDetails (languageName, letterClassName, blockLangtag, blockDirection, spreadsheet, cols)
 addExamples(letterClassName)
-convertTranscriptionData(lang)
+convertTranscriptionData(blockLangtag)
 </script>
+
+
+
 
 
 
@@ -486,28 +489,11 @@ convertTranscriptionData(lang)
 <div class="smallprint"><span id="version"></span></div>
 
 
-<script>
-convertTranscriptionData()
-</script>
-
-
 
 
 
 <script>
-window.version = 'v27'
-window.scriptName = 'Mongolian'
-window.ghDirectory = 'mongolian'
-window.blockDirectory = 'mongolian'
-window.languageList = ['mn'] // lang tags for each orthography handled
-window.detailsfileList = ['mn'] // first part of xx-details for each orthography
-window.scriptISO = 'mong'
-window.webfonts = ["Noto Sans Mongolian WF"]
-window.defaultSize = '24px'
-
-initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
-for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
-makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
+buildPage()
 </script>
 </body>
 </html>
