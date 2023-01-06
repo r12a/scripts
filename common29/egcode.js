@@ -54,7 +54,7 @@ function addExamples (langFilter) {
     // find the nodes that correspond to the language in langFilter
 	var selector = '.eg[lang='+langFilter+']'
 	var nodes = document.querySelectorAll(selector)
-	if (trace) console.log(nodes.length,' example nodes to expand')
+	if (traceSet.has('addExamples')) console.log(nodes.length,' example nodes to expand')
 	
 	for (var n=0;n<nodes.length;n++) {
 		//console.log('Looking for ',nodes[n].textContent)
