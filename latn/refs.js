@@ -197,3 +197,15 @@ reflist = {
 */
 
 
+
+
+
+
+
+scriptLanguageList = {
+">>>":{name:"Too many to list here. See ScriptSource"},
+ff:{name:"Fula", url:"ff.html"},
+bm:{name:"Bamanan", url:"bm.html"},
+ha:{name:"Hausa", url:"ha.html"},
+}
+
