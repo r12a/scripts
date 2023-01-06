@@ -46,7 +46,7 @@ reflist = {
 "title":"Proposal to Encode Syriac in ISO/IEC 10646",
 "date":"1998",
 "url":"http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf",
-"lang": new Set(['syr','aii']),
+"lang": new Set(['syr','aii', 'tru']),
 },
 
 "s": {

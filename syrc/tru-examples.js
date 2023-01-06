@@ -196,7 +196,8 @@ autoExpandExamples.tru = `
 ܬܰܠܰܒ݂ܝܙܝܳܢ|television|ta§la§v§i§z§jo§n|talavizyon||x
 ܡܰܛܒܰܟ݂|kitchen|ma§tˤ§ba§x|maṭbax||x
 
-
+ܡܷܠܠܶܗ|nation|məlle|mëlle
+ܡܷܪܪܶܗ|they said|mərre|mërre
 
 
 
