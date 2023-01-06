@@ -1,6 +1,230 @@
 /* jshint strict: false */
 /* globals cl, langs, desc */
 
+function applyRedirect() {
+    var hash = ''
+    if (window.location.hash) hash = window.location.hash
+    var parameters = ''
+    if (window.location.search) parameters = window.location.search
+
+    // delete the previous content
+    document.querySelector('body').innerHTML = ''
+
+    // get the path
+    newlocation = getFilename (window.location.pathname)
+
+    var displayedURL = `https://r12a.github.io/scripts/${ newlocation}${parameters}${hash}`
+    var linkURL = `../${ newlocation}${parameters}${hash}`
+
+    var div = document.createElement('div')
+        div.id = 'redirect'
+        div.appendChild( document.createTextNode( 'This page has moved. Click on this link to go to the new location:' ))
+        div.appendChild( document.createElement('br') )
+    var a = document.createElement('a')
+        a.href = linkURL
+        a.appendChild( document.createTextNode(displayedURL))
+        div.appendChild(a)
+        document.querySelector('body').appendChild(div)
+    }
+
+
+function getFilename (locn) {
+
+    // get the end of the pathname
+    fields = locn.split('/')
+    currentLocation = fields[fields.length-2] + '/' + fields[fields.length-1]
+    console.log(currentLocation)
+    
+    var namelist = {
+        'adlam/index.html': 'adlm/index.html',
+        'adlam/fuf.html': 'adlm/fuf.html',
+        'adlam/block.html': 'adlm/block.html',
+        
+        'armenian/index.html': 'armn/index.html',
+        'armenian/hy.html': 'armn/hy.html',
+        'armenian/block.html': 'armn/block.html',
+        
+        'arabic/index.html': 'arab/index.html',
+        'arabic/arb.html': 'arab/arb.html',
+        'arabic/pes.html': 'arab/pes.html',
+        'arabic/ks.html': 'arab/ks.html',
+        'arabic/ug.html': 'arab/ug.html',
+        'arabic/ur.html': 'arab/ur.html',
+        'arabic/ha.html': 'arab/ha.html',
+        'arabic/block.html': 'arab/block.html',
+        
+        'balinese/index.html': 'bali/index.html',
+        'balinese/ban.html': 'bali/ban.html',
+        'balinese/block.html': 'bali/block.html',
+
+        'bamum/index.html': 'bamu/index.html',
+        'bamum/bax.html': 'bamu/bax.html',
+        'bamum/block.html': 'bamu/block.html',
+
+        'bassavah/index.html': 'bass/index.html',
+        'bassavah/bsq.html': 'bass/bsq.html',
+        'bassavah/block.html': 'bass/block.html',
+
+        'bengali/index.html': 'beng/index.html',
+        'bengali/bn.html': 'beng/bn.html',
+        'bengali/block.html': 'beng/block.html',
+
+        'buginese/index.html': 'bugi/index.html',
+        'buginese/bug.html': 'bugi/bug.html',
+        'buginese/block.html': 'bugi/block.html',
+
+        'cherokee/index.html': 'cher/index.html',
+        'cherokee/chr.html': 'cher/chr.html',
+        'cherokee/block.html': 'cher/block.html',
+
+        'cyrillic/index.html': 'cyrl/index.html',
+        'cyrillic/mn.html': 'cyrl/mn.html',
+        'cyrillic/ru.html': 'cyrl/ru.html',
+        'cyrillic/uk.html': 'cyrl/uk.html',
+        'cyrillic/block.html': 'cyrl/block.html',
+
+        'devanagari/index.html': 'deva/index.html',
+        'devanagari/hi.html': 'deva/hi.html',
+        'devanagari/ks.html': 'deva/ks.html',
+        'devanagari/block.html': 'deva/block.html',
+
+        'ethiopic/index.html': 'ethi/index.html',
+        'ethiopic/am.html': 'ethi/am.html',
+        'ethiopic/block.html': 'ethi/block.html',
+
+        'georgian/index.html': 'geor/index.html',
+        'georgian/ka.html': 'geor/ka.html',
+        'georgian/block.html': 'geor/block.html',
+
+        'greek/index.html': 'grek/index.html',
+        'greek/el.html': 'grek/el.html',
+        'greek/block.html': 'grek/block.html',
+
+        'gujarati/index.html': 'gujr/index.html',
+        'gujarati/gu.html': 'gujr/gu.html',
+        'gujarati/block.html': 'gujr/block.html',
+
+        'gurmukhi/index.html': 'guru/index.html',
+        'gurmukhi/pa.html': 'guru/pa.html',
+        'gurmukhi/block.html': 'guru/block.html',
+
+        'hangul/index.html': 'kore/ko.html',
+
+        'hebrew/index.html': 'hebr/index.html',
+        'hebrew/he.html': 'hebr/he.html',
+        'hebrew/block.html': 'hebr/block.html',
+
+        'javanese/index.html': 'java/index.html',
+        'javanese/jv.html': 'java/jv.html',
+        'javanese/block.html': 'java/block.html',
+
+        'khmer/index.html': 'khmr/index.html',
+        'khmer/km.html': 'khmr/km.html',
+        'khmer/block.html': 'khmr/block.html',
+
+        'lao/index.html': 'laoo/index.html',
+        'lao/lo.html': 'laoo/lo.html',
+        'lao/block.html': 'laoo/block.html',
+
+        'latin/index.html': 'latn/index.html',
+        'latin/bm.html': 'latn/bm.html',
+        'latin/ha.html': 'latn/ha.html',
+        'latin/ff.html': 'latn/ff.html',
+        'latin/block.html': 'latn/block.html',
+
+        'malayalam/index.html': 'mlym/index.html',
+        'malayalam/ml.html': 'mlym/ml.html',
+        'malayalam/block.html': 'mlym/block.html',
+
+        'mandaic/index.html': 'mand/index.html',
+        'mandaic/mid.html': 'mand/mid.html',
+        'mandaic/block.html': 'mand/block.html',
+
+        'mongolian/index.html': 'mong/index.html',
+        'mongolian/mn.html': 'mong/mn.html',
+        'mongolian/block.html': 'mong/block.html',
+
+        'myanmar/index.html': 'mymr/index.html',
+        'myanmar/my.html': 'mymr/my.html',
+        'myanmar/shn.html': 'mymr/shn.html',
+        'myanmar/block.html': 'mymr/block.html',
+
+        'newtailue/index.html': 'talu/index.html',
+        'newtailue/khb.html': 'talu/khb.html',
+        'newtailue/block.html': 'talu/block.html',
+
+        'nko/index.html': 'nkoo/index.html',
+        'nko/nqo.html': 'nkoo/nqo.html',
+        'nko/block.html': 'nkoo/block.html',
+
+        'oriya/index.html': 'orya/index.html',
+        'oriya/or.html': 'orya/or.html',
+        'oriya/block.html': 'orya/block.html',
+
+        'osage/index.html': 'osge/index.html',
+        'osage/osa.html': 'osge/osa.html',
+        'osage/block.html': 'osge/block.html',
+
+        'santali/index.html': 'olck/index.html',
+        'santali/sat.html': 'olck/sat.html',
+        'santali/block.html': 'olck/block.html',
+
+        'sinhala/index.html': 'sinh/index.html',
+        'sinhala/sat.html': 'sinh/sat.html',
+        'sinhala/block.html': 'sinh/block.html',
+
+        'sundanese/index.html': 'sund/index.html',
+        'sundanese/su.html': 'sund/su.html',
+        'sundanese/block.html': 'sund/block.html',
+
+        'syriac/index.html': 'syrc/index.html',
+        'syriac/syr.html': 'syrc/syr.html',
+        'syriac/aii.html': 'syrc/aii.html',
+        'syriac/tru.html': 'syrc/tru.html',
+        'syriac/block.html': 'syrc/block.html',
+
+        'taile/index.html': 'tale/index.html',
+        'taile/tdd.html': 'tale/tdd.html',
+        'taile/block.html': 'tale/block.html',
+
+        'taitham/index.html': 'lana/index.html',
+        'taitham/nod.html': 'lana/nod.html',
+        'taitham/kkh.html': 'lana/kkh.html',
+        'taitham/block.html': 'lana/block.html',
+
+        'taiviet/index.html': 'tavt/index.html',
+        'taiviet/blt.html': 'tavt/blt.html',
+        'taiviet/block.html': 'tavt/block.html',
+
+        'tamil/index.html': 'taml/index.html',
+        'tamil/ta.html': 'taml/ta.html',
+        'tamil/block.html': 'taml/block.html',
+
+        'telugu/index.html': 'telu/index.html',
+        'telugu/te.html': 'telu/te.html',
+        'telugu/block.html': 'telu/block.html',
+
+        'thaana/index.html': 'thaa/index.html',
+        'thaana/dv.html': 'thaa/dv.html',
+        'thaana/block.html': 'thaa/block.html',
+
+        'tibetan/index.html': 'tibt/index.html',
+        'tibetan/bo.html': 'tibt/bo.html',
+        'tibetan/block.html': 'tibt/block.html',
+
+        'tifinagh/index.html': 'tfng/index.html',
+        'tifinagh/zgh.html': 'tfng/zgh.html',
+        'tifinagh/block.html': 'tfng/block.html',
+
+        'vai/index.html': 'vaii/index.html',
+        'vai/vai.html': 'vaii/vai.html',
+        'vai/block.html': 'vaii/block.html',
+
+
+        }
+
+    if (namelist[currentLocation]) return namelist[currentLocation] 
+    }
 
 
 
@@ -20,6 +244,12 @@ function setMarks () {
 
 
 function buildPage () {
+
+
+    // ============== REDIRECT TO v29 PAGES ===========================
+    applyRedirect()
+
+
     initialise(`/scripts/${ window.blockDirectory }/block`, window.ghDirectory, window.detailsfileList, window.version)
     for (i=0;i<languageList.length;i++) autoTransliterate(window.languageList[i])
     makeFontChanger(window.languageList.join(','), window.scriptISO, window.webfonts, window.defaultSize)
@@ -51,7 +281,7 @@ function initialise (base, ghDirectory, detailsfileList, version) {
     // spreadsheetRows
     // spreadsheet
     // cols
-    // explainerDir, directory for the script notes page
+    // orthogFile, directory for the script notes page
     // pickerDir, directory name for the character app
     // charDetails, obj, the detailed notes, created in xx-examples.js
     /* autoExpandExamples */
@@ -96,7 +326,7 @@ function doHeadersAndFooters (ghDirectory, detailsfileList, version) {
 	// adds links to top and bottom of document
 	// ghDirectory is the name of the directory under /scripts/
     // detailsList is a comma-separated list of the first part of xx-details in that directory
-    // version is the version of the template, eg. v27
+    // version is the version of the template, eg. v29
 
 	
 	if (document.getElementById('versionTop') === null) return
@@ -497,7 +727,7 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
     spreadsheet, str, declared in /shared/scriptdb/xxxx.js
     cols, array, declared in the same file, matches spreadsheet columns with names
     spreadsheetRows, object, created by a call from this function from the spreadsheet string
-    explainerDir, str, directory for the script notes page
+    orthogFile, str, directory for the script notes page
     pickerDir, str, directory name for the character app
     charDetails, obj, the detailed notes, created in xx-examples.js
     */
@@ -561,18 +791,18 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
            
             
            // add a link to the script notes
-            if (window.explainerDir || window.pickerDir) {
+            if (window.orthogFile || window.pickerDir) {
  			    out += '<p class="explainerLink">Show in: '
 
-                if (window.explainerDir) {
-                out += '<a target="_blank" href="../'+window.explainerDir+'.html?showIndex&index='+encodeURIComponent(cchar)+'">script notes index</a> '
+                if (window.orthogFile) {
+                out += '<a target="_blank" href="../'+window.orthogFile+'.html?showIndex&index='+encodeURIComponent(cchar)+'">script notes index</a> '
                 }
 
-                if (window.explainerDir && window.pickerDir) out += ' &bull; '
+                if (window.orthogFile && window.pickerDir) out += ' &bull; '
 
                 // add a link to the character app
                 if (window.pickerDir) {
-                    out += '<a target="_blank" href="../../pickers/'+window.pickerDir+'index.html?text='+encodeURIComponent(cchar)+'">character app</a> '
+                    out += '<a target="_blank" href="../../pickers/'+window.pickerDir+'/index.html?text='+encodeURIComponent(cchar)+'">character app</a> '
                     }
 
                 out += '</p>'
