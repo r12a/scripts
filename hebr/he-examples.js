@@ -9249,7 +9249,7 @@ autoExpandExamples.he = `
 
 דז׳ה וו|déjà vu||dezha-vú
 
-
+אָלֶף־בֵּית עִבְרִי|Hebrew alphabet|a§le§f§-§be§‹§t§ §i§v§ri§‹|
 
 
 
