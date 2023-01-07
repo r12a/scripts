@@ -689,8 +689,8 @@ autoExpandExamples.he = `
 אנגולה||
 אנגלי||
 אנגליה||
-אנגלית|English|anɡˈlit|ang'lít|אַנְגְּלִית
-אַנְגְּלִית|English|anɡˈlit|ang'lít|אנגלית
+אנגלית|English|a§ŋ§ɡ§ˈl§i§t|ang'lít|אַנְגְּלִית
+אַנְגְּלִית|English|a§ŋ§ɡ§ˈli§‹§t|ang'lít|אנגלית
 אנגסטרום||
 אנדוסימביוזה||
 אנדורה||
@@ -977,8 +977,8 @@ autoExpandExamples.he = `
 בִּי|in me|bi
 בּז|beige|ˈbeʒ|בֵּז
 בּי|in me|bi|בִּי
-בן|son|ben|בֵּן
-בֵּן|son|bɛn|בן
+בן|son|be§n|בֵּן
+בֵּן|son|bɛ§n|בן
 ב־|at, in|ˈb(ə)-|בְּ־
 ב־ד־ל||
 ב־ה־ר||
@@ -1483,8 +1483,8 @@ autoExpandExamples.he = `
 ג'וינט||
 גְּמָלִים|camels|ɡmaˈlim
 גּברת|Mrs.||גְּבֶרֶת
-גג|roof|gag|גַּג
-גַּג|roof|gag|גג
+גג|roof|ga§g|גַּג
+גַּג|roof|ga§g|גג
 גּם|also|gam|גַּם
 גּמלים|camels|ɡmaˈlim|גְּמָלִים
 גּ׳ירפה|giraffe|dʒiˈrafa||גִּ׳ירָפָה
@@ -1764,8 +1764,8 @@ autoExpandExamples.he = `
 גתית||
 ג׳אנק פוד||
 ג׳בלאות||
-ג׳וק|cockroach, bug|d͡ʒuk|júk|ג׳וּק
-ג׳וּק|cockroach, bug|d͡ʒuk|júk|ג׳וק
+ג׳וק|cockroach, bug|d͡ʒ§‹§u§k|júk|ג׳וּק
+ג׳וּק|cockroach, bug|d͡ʒ§‹§u§k|júk|ג׳וק
 ג׳ז||
 ג׳יבריש||
 ג׳יהאד||
@@ -1833,8 +1833,8 @@ autoExpandExamples.he = `
 דוגמא||
 דוגמה||
 דוד המלך||
-דוד|dod|dod|boiler|דּוּד
-דּוּד|boiler|dod|dod|דוד
+דוד|boiler|d§o§d|dod|דּוּד
+דּוּד|boiler|d§o§d|dod|דוד
 דודא||
 דודה||
 דודומה||
@@ -2008,7 +2008,7 @@ autoExpandExamples.he = `
 דתי||
 דתל״ש||
 ד׳||
-ד׳ו אל-חיג׳ה|(Dhu al-Hijjah)||ذو الحجة
+ד׳ו אל-חיג׳ה|(Dhu al-Hijjah)|ð§‹§u§ §a§l§ §ħ§i§d͡ʒa§‹§–|ذو الحجة
 ד״א||
 ד״ר|Dr. (degree)|ˈdoktoʁ|DR
 ד״ש||
@@ -2092,8 +2092,8 @@ autoExpandExamples.he = `
 הגעה||
 הגר||
 הגשה||
-הד|echo|hɛd|héd|הֵד
-הֵד|echo|hɛd|héd|הד
+הד|echo|hɛ§d|héd|הֵד
+הֵד|echo|hɛ§d|héd|הד
 הדאיג||
 הדבקה||
 הדגים||
@@ -2328,8 +2328,8 @@ autoExpandExamples.he = `
 הישג||
 הי״ד||
 הכאיב||
-הכה|to hit|hiˈka|hiká|הִכָּה
-הִכָּה|to hit|hiˈka|hiká|הכה
+הכה|to hit|hi§ˈka§–|hiká|הִכָּה
+הִכָּה|to hit|hi§ˈka§–|hiká|הכה
 הכותל המערבי||
 הכחדה||
 הכחיש||
@@ -2897,8 +2897,8 @@ autoExpandExamples.he = `
 וגו'||
 ודאות||
 ודאי||
-וו|hook|vav|וָו
-וָו|hook|vav|וו
+וו|hook|va§v|וָו
+וָו|hook|va§v|וו
 וואו|Wow!||wáu
 וואחש||
 וודו||
@@ -2985,8 +2985,8 @@ autoExpandExamples.he = `
 זדון||
 זה סינית בשבילי||
 זה עתה||
-זה|this|ze|ze|זֶה
-זֶה|this|ze|ze|זה
+זה|this|ze§–|ze|זֶה
+זֶה|this|ze§–|ze|זה
 זהב||
 זהה||
 זהו||
@@ -3120,8 +3120,8 @@ autoExpandExamples.he = `
 זרש||
 זרתוסטרא||
 זתר||
-ז׳רגון|jargon|ʒarɡon|zhargón| זַ׳רְגוֹן
-זַ׳רְגוֹן|jargon|ʒarɡon|zhargón| ז׳רגון
+ז׳רגון|jargon|ʒa§‹§r§ɡ§o§n|zhargón| זַ׳רְגוֹן
+זַ׳רְגוֹן|jargon|ʒa§‹§r§ɡ§o§n|zhargón| ז׳רגון
 ז״ל||
 ח'רטום||
 חַם|hot|ˈχam|kham
@@ -3415,9 +3415,9 @@ autoExpandExamples.he = `
 חלש||
 חלשה||
 חלשות||
-חם|hot; father-in-law||חַם#חָם
-חַם|hot|ˈχam|kham
-חָם|father-in-law|ˈχam|khám
+חם|hot; father-in-law|ˈχa§m|חַם#חָם
+חַם|hot|ˈχa§m|kham
+חָם|father-in-law|ˈχa§m|khám
 חמאה||
 חמאס||
 חמד||
@@ -3622,8 +3622,8 @@ autoExpandExamples.he = `
 טוֹב|good|tɔv
 טואטא||
 טוב ציפור אחת ביד משתיים על העץ||
-טוב|goodness, fairness|tov|tov|טוֹב
-טוֹב|goodness, fairness|tov|tov|טוב
+טוב|goodness, fairness|t§o§v|tov|טוֹב
+טוֹב|goodness, fairness|t§o§v|tov|טוב
 טובה||
 טוביה||
 טוגן||
@@ -3965,8 +3965,8 @@ autoExpandExamples.he = `
 ים המלח||
 ים סוף||
 ים תיכוני||
-ים|sea|ˈjam|yam|יָם
-יָם|sea|ˈjam|yam|ים
+ים|sea|ˈja§m|yam|יָם
+יָם|sea|ˈja§m|yam|ים
 ימאי||
 ימי הביניים||
 ימים נוראים||
@@ -4083,8 +4083,8 @@ autoExpandExamples.he = `
 יתר||
 יתרון||
 י״ט||
-כְּתֻמִּים|oranges|kətumˈmim||כתמים
-כתמים|oranges|kətumˈmim||כְּתֻמִּים
+כְּתֻמִּים|oranges|kə§tu§mˈmi§‹§m||כתמים
+כתמים|oranges|kə§tu§mˈm§i§m||כְּתֻמִּים
 כָּבֵד|heavy, liver|kaˈvɛd|kavéd
 כל|all of, entirety|ˈkol|kol|כֹּל
 כֹּל|all of, entirety|ˈkol|kol|כל
@@ -4308,8 +4308,8 @@ autoExpandExamples.he = `
 כנען||
 כנעני||
 כנענית||
-כנף|wing|kaˈnaf|kanáf|כָּנָף
-כָּנָף|wing|kaˈnaf|kanáf|כנף
+כנף|wing|ka§ˈna§f|kanáf|כָּנָף
+כָּנָף|wing|ka§ˈna§f|kanáf|כנף
 כנר||
 כנראה||
 כנרת||
@@ -4537,7 +4537,7 @@ autoExpandExamples.he = `
 לטביה||
 לטוויה||
 לטינית||
-לי|to me|li|לִי
+לי|to me|l§i|לִי
 ליבב||
 ליבידו||
 ליבן||
@@ -4559,8 +4559,8 @@ autoExpandExamples.he = `
 ליל||
 לילה טוב||
 לילה לבן||
-לילה|night|ˈlaj.la|láyla|לַיְלָה
-לַיְלָה|night|ˈlaj.la|láyla|לילה
+לילה|night|ˈla§j.§la§–|láyla|לַיְלָה
+לַיְלָה|night|ˈla§j.§la§–|láyla|לילה
 לילי||
 לילית||
 לילך||
@@ -4859,8 +4859,8 @@ autoExpandExamples.he = `
 מהפך||
 מהפכה||
 מהר||
-מום|defect|mum|múm|מוּם
-מוּם|defect|mum|múm|מום
+מום|defect|m§u§m|múm|מוּם
+מוּם|defect|m§u§m|múm|מום
 מואב||
 מואזין||
 מואר||
@@ -4932,8 +4932,8 @@ autoExpandExamples.he = `
 מועד||
 מועדון||
 מועדף||
-מועיל|useful|moʔil|mo'íl|מוֹעִיל
-מוֹעִיל|useful|moʔil|mo'íl|מועיל
+מועיל|useful|m§o§ʔ§i§l|mo'íl|מוֹעִיל
+מוֹעִיל|useful|m§o§ʔi§‹§l|mo'íl|מועיל
 מועמד||
 מועצה אזורית||
 מועצה מקומית||
@@ -5725,7 +5725,6 @@ autoExpandExamples.he = `
 משפטי||
 משק||
 משקה||
-משקל||
 משקעים||
 משקפיים||
 משרד||
@@ -5780,10 +5779,10 @@ autoExpandExamples.he = `
 מ״ם||
 מ״מ||
 נְצִיב||
-נין|grandson|nin||נִין
-נִין|grandson|nin||נין
-נבל|harp; villain|ˈnevel||נֵבֶל#נָבָל
-נֵבֶל|harp|ˈnevel||נבל
+נין|grandson|n§i§n||נִין
+נִין|grandson|ni§‹§n||נין
+נבל|harp; villain|ˈne§ve§l||נֵבֶל#נָבָל
+נֵבֶל|harp|ˈne§ve§l||נבל
 נָבָל|bad guy, villain||navál|נבל
 נ־ד־ב||
 נ־ד־ד||
@@ -6065,8 +6064,8 @@ autoExpandExamples.he = `
 נמל||
 נמלה||
 נמלט||
-נמלים|ants|nemaˈlim||נְמָלִים
-נְמָלִים|ants|nemaˈlim||נמלים
+נמלים|ants|ne§ma§ˈl§i§m||נְמָלִים
+נְמָלִים|ants|ne§ma§ˈli§‹§m||נמלים
 נמלך||
 נמנע||
 נמס||
@@ -6313,8 +6312,8 @@ autoExpandExamples.he = `
 סוס||
 סוף סוף||
 סוף שבוע||
-סוף|end|ˈsof|sóf|סוֹף#סוּף
-סוֹף|end|ˈsof|sóf|סוף
+סוף|end|ˈs§o§f|sóf|סוֹף#סוּף
+סוֹף|end|ˈs§o§f|sóf|סוף
 סוּף|reed, bulrush||súf|סוף
 סופגניה||
 סופגנייה||
@@ -6431,7 +6430,7 @@ autoExpandExamples.he = `
 סכין גלוח||
 סכין יפני||
 סכין||
-סכך|branch-roofing|sχaχ|סְכָךְ
+סכך|branch-roofing|s§χa§χ|סְכָךְ
 סככה||
 סכל||
 סכמה||
@@ -6744,8 +6743,8 @@ autoExpandExamples.he = `
 עיקר||
 עיקרון||
 עיקרי||
-עיר|city|iʁ|'ír|עִיר
-עִיר|city|iʁ|'ír|עיר
+עיר|city|i§‹§ʁ|'ír|עִיר
+עִיר|city|i§‹§ʁ|'ír|עיר
 עיראק||
 עיראקי||
 עיראקית||
@@ -6961,8 +6960,8 @@ autoExpandExamples.he = `
 ע״ש||
 פ"נ||
 פּינגּוין|penguin|ˈpinɡwin||פִּינְגְּוִין
-פה|here; mouth; musical note|||פֹּה#פֶּה#פָה
-פֹּה|here|ˈpɔ|pó|פה
+פה|here; mouth; musical note|ˈpɔ§–§/pe/fa||פֹּה#פֶּה#פָה
+פֹּה|here|ˈpɔ§–|pó|פה
 פֶּה|mouth||pe|פה
 פָה|musical note FA||fa|פה
 פ־ו־ץ||
@@ -7115,8 +7114,8 @@ autoExpandExamples.he = `
 פיסטוק||
 פיסי||
 פיסל||
-פיספס|to miss|fisfɛs|fisfés|פִסְפֵס
-פִסְפֵס|to miss|fisfɛs|fisfés|פיספס
+פיספס|to miss|f§i§s§fɛ§s|fisfés|פִיסְפֵס
+פִיסְפֵס|to miss|f1i§s§fɛ§s|fisfés|פיספס
 פיצה||
 פיצוץ||
 פיצל|to split|piˈt͡sel
@@ -7467,8 +7466,8 @@ autoExpandExamples.he = `
 ציפורה||
 ציפורן|fingernail|t͡siˈpɔʁɛn
 ציפי||
-ציץ|bud|t͡sit͡s|tzítz|צִיץ
-צִיץ|bud|t͡sit͡s|tzítz|ציץ
+ציץ|bud|t͡s§i§t͡s|tzítz|צִיץ
+צִיץ|bud|t͡si§‹§t͡s|tzítz|ציץ
 ציצי||
 ציצית||
 ציצת||
@@ -7636,7 +7635,7 @@ autoExpandExamples.he = `
 קו רוחב||
 קו רקיע||
 קו||
-קול|voice, sound; cool|||קוֹל#קוּל
+קול|voice, sound; cool|k§o§l§/kul||קוֹל#קוּל
 קוֹל|voice, sound|kol|kol|קול
 קוּל|cool (sl.)|kul|kul|קול
 קואופרטיב||
@@ -7735,7 +7734,7 @@ autoExpandExamples.he = `
 קו״ף||
 קזבלנקה||
 קח ולך||
-קט|tiny|kat|קָט
+קט|tiny|ka§t|קָט
 קטבוליזם||
 קטגור||
 קטגוריה||
@@ -8007,7 +8006,6 @@ autoExpandExamples.he = `
 ראות||
 ראי||
 ראיה||
-ראיון|interview|reʔaˈjon|רֵאָיוֹן
 ראייה||
 ראם||
 ראקוניים||
@@ -8021,8 +8019,8 @@ autoExpandExamples.he = `
 רֹאשׁ|head|ʁɔʃ|rōš
 רֹאשׁ|hemlock||rōš
 ראשון לציון||
-רִאשׁוֹן|first|riʃɔn|rishón|ראשון
-ראשון|first|riʃɔn|rishón|רִאשׁוֹן
+רִאשׁוֹן|first|ri§‹§ʃ§ɔ§n|rishón|ראשון
+ראשון|first|r§i§ʃ§ɔ§n|rishón|רִאשׁוֹן
 ראשונה||
 ראשוני||
 ראשות||
@@ -8163,8 +8161,9 @@ autoExpandExamples.he = `
 רטרואקטיבי||
 ריאד||
 ריאה||
-ריאיון|interview|reʔajon|re'ayon|רֵאָיוֹן
-רֵאָיוֹן|interview|reʔajon|re'ayon|ריאיון
+ריאיון|interview|r§e§ʔa§j§o§n|re'ayon|רֵאָיוֹן
+רֵאָיוֹן|interview|re§ʔa§j§o§n|re'ayon|ריאיון
+ראיון|interview|re§ʔa§j§ˈo§n|רֵאָיוֹן
 ריאליטי||
 ריב||
 ריבה||
@@ -8200,7 +8199,7 @@ autoExpandExamples.he = `
 ריפוד||
 ריצד||
 ריצה||
-ריצ׳רץ׳|zip|ʁit͡ʃʁat͡ʃ
+ריצ׳רץ׳|zip|ʁ§i§t͡ʃ§‹§ʁa§t͡ʃ§‹
 ריק||
 ריקבון||
 ריקוד||
@@ -8316,11 +8315,11 @@ autoExpandExamples.he = `
 רתח||
 רתך||
 ר׳||
-ר׳ג׳ר|Ghajar
+ר׳ג׳ר|Ghajar|
 ר״ח||
 ר״מ||
-שאל|to ask|ʃaʔal|sha'ál|שָׁאַל
-שָׁאַל|to ask|ʃaʔal|sha'ál|שאל
+שאל|to ask|ʃa§ʔa§l|sha'ál|שָׁאַל
+שָׁאַל|to ask|ʃa§ʔa§l|sha'ál|שאל
 ש־ב־ע||
 ש־ב־ת||
 ש־ו־ט||
@@ -8337,7 +8336,6 @@ autoExpandExamples.he = `
 שאיבת שומן||
 שאל את עצמו||
 שאל בני ונען||
-שאל|asked|ʃaʔal|שָׁאַל
 שאלה||
 שאנגחאי||
 שאף||
@@ -8453,8 +8451,8 @@ autoExpandExamples.he = `
 שועל||
 שוף|smooth, polished||shúf|שׁוּף
 שׁוּף|smooth, polished||shúf|שוף
-שופ|shop|ʃop|shop|שׁוֹפּ
-שׁוֹפּ|shop|ʃop|shop|שופ
+שופ|shop|ʃ§o§p|shop|שׁוֹפּ
+שׁוֹפּ|shop|ʃ§o§p|shop|שופ
 שופט||
 שופטים||
 שופכה||
@@ -8673,10 +8671,10 @@ autoExpandExamples.he = `
 שם פעולה||
 שם פרטי||
 שם תואר||
-שם|to put, turn on|sam|sám|שֵׁם#שָׁם#שָׂם#שָׁם
+שם|to put, turn on|sa§m|sám|שֵׁם#שָׁם#שָׂם#שָׁם
+שָׂם|to put, turn on|sa§m|sám
 שֵׁם|(given) name||shém
 שָׁם|there|ʃam|shám
-שָׂם|to put, turn on|sam|sám
 שָׁם|to assess|ʃam|sham
 שמאל|left|ˈsmɔl
 שמאלי||
@@ -8739,8 +8737,8 @@ autoExpandExamples.he = `
 שנאי||
 שנבוב||
 שנה טובה||
-שנה|year; to repeat|||שָׁנָה
-שָׁנָה|year; to repeat|ʃaˈna|shaná|שנה
+שנה|year; to repeat|ʃa§ˈna§–|shaná|שָׁנָה
+שָׁנָה|year; to repeat|ʃa§ˈna§–|shaná|שנה
 שנהב||
 שנוא||
 שנוי||
@@ -8816,7 +8814,8 @@ autoExpandExamples.he = `
 שקית||
 שקל חדש|new shekel|ˈʃɛkɛl χaˈdaʃ|shékel khadásh|שֶׁקֶל חָדָשׁ
 שֶׁקֶל חָדָשׁ|new shekel|ˈʃɛkɛl χaˈdaʃ|shékel khadásh|שקל חדש
-שקל||
+שקל|shekel|ˈʃɛ§kɛ§l|shékel|שֶׁקֶל
+שֶׁקֶל|shekel|ˈʃɛ§kɛ§l|shékel|שקל
 שקמה||
 שקנאי||
 שקע||
@@ -8875,7 +8874,8 @@ autoExpandExamples.he = `
 תאר|epithet|ˈto.aʁ||תּאר#תאר
 תֹּאַר|epithet|ˈto.aʁ||תאר
 תּאר|epithet|ˈto.aʁ||תאר
-תּן|jackal|ˈtan|תַּן
+תּן|jackal|ˈta§n|תַן
+תן|jackal|ˈta§n|תַּן
 תּעבד|you will work|taː'vod|תַּעֲבֹד
 תּשוּקה|passion|t͡ʃuˈka|תְּשׁוּקָה
 ת־ר־ג־ם||
@@ -8983,8 +8983,8 @@ autoExpandExamples.he = `
 תושב||
 תושלב״ע||
 תות שדה||
-תות|strawberry|tut|tút|תּוּת
-תּוּת|strawberry|tut|tút|תות
+תות|strawberry|t§u§t|tút|תּוּת
+תּוּת|strawberry|t§u§t|tút|תות
 תותח||
 תזוזה||
 תזונה||
@@ -9112,7 +9112,6 @@ autoExpandExamples.he = `
 תמרור||
 תמרורים||
 תמריץ||
-תן||
 תנא||
 תנאי||
 תנודה||
@@ -9241,10 +9240,10 @@ autoExpandExamples.he = `
 תתרן||
 תתרנית||
 ת׳||
-ת׳רסטון|Thurston
+ת׳רסטון|Thurston|
 ת״א||
 
-ו׳יליאם|William|ˈwiljam|
+ו׳יליאם|William|ˈw§‹§i§l§j§a§m|
 וואללה|Walla|ˈwala|
 
 דז׳ה וו|déjà vu||dezha-vú
