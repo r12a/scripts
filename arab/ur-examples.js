@@ -178,23 +178,23 @@ autoExpandExamples.ur = `
 انپم|unequalled|ə.nʊ.pəm
 انگریزی|English|ə̃§ŋ.§ɡ§ɾ§eː.§z§iː
 انگلستان|England|ɪŋ.ɡlɪs.t̪ɑːn
-انگلی|finger|ʊŋ.ɡliː
+انگلی|finger|ʊ§ŋ.§ɡ§l§iː
 انگور|grape|ən.ɡuːɾ
 انگوری|grape wine|əŋ.ɡuː.ɾiː
 انگوٹھا|thumb, toe|əŋ.ɡuː.ʈʰɑː
 اهہ|here|ɪɦ
 اودا|purple|uː.d̪ɑː
 اودبلاؤ|otter|uːd̪.bɪ.lɑː.oː
-اوس|dew|›§oː§s
+اوس|dew|oː§‹§s
 اوسطا|on average|ɔːs.t̪ən
 اوقات|means, circumstances|ɔː.qɑːt̪
 اول|first|əʋ.ʋəl
 اولا|hailstone|oː.lɑː
 اونٹ|camel|ũːʈ
 اونچا|tall|›§ũ§‹§t͡ʃ§ɑː
-اوپر|above|–§uː§pə§r||اوٗپر#اُوپر
-اُوپَر|above|–§uː§pa§r||اوپر
-اوٗپَر|above|–§uː§pa§r||اوپر
+اوپر|above|uː§‹§pə§r||اوٗپر#اُوپر
+اُوپَر|above|uː§‹§pa§r||اوپر
+اوٗپَر|above|uː§‹§pa§r||اوپر
 اوہ|oh no!|uːɦ
 اَبابِیْل|swallow|ə.bɑː.biːl| abābīl |ابابیل
 ابابیل|swallow|ə.bɑː.biːl| abābīl |اَبابِیْل
@@ -206,12 +206,12 @@ autoExpandExamples.ur = `
 ارب|necessity|a§ra§b||اَرَب
 اَللہ|Allah|əl.lɑːɦ||اللہ
 اللہ|Allah|əl.lɑːɦ||اَللہ
-اَنْڈا|egg|əɳ.ɖɑː|aṇḍā|انڈا
-انڈا|egg|əɳ.ɖɑː|aṇḍā|اَنْڈا
+اَنْڈَا|egg|ə§ɳ.§ɖɑː§‹|aṇḍā|انڈا
+انڈا|egg|ə§ɳ.§ɖ§ɑː|aṇḍā|اَنْڈا
 اَور|and|ɔː§‹§r||اور
-اور|and|›§ɔː§r||اَور
-اَیسا|such a|ɛː§‹§s§ɑː||ایسا
-ایسا|such a|›§ɛːs§ɑː||اَیسا
+اور|and|ɔː§‹§r||اَور
+اَیسَا|such a|ɛː§‹§sɑː§‹||ایسا
+ایسا|such a|ɛː§‹§s§ɑː||اَیسا
 اُبْٹَنْ|ointment|ʊb.ʈən||ابٹن
 ابٹن|ointment|ʊb.ʈən||اُبْٹَنْ
 اُتّھان|surge, consciousness|ʊt̪.t̪ʰɑːn||اتھان
@@ -223,7 +223,7 @@ autoExpandExamples.ur = `
 اُردو|Urdu|ʊ§ɾ.§d̪§uː||اردو
 اردو|Urdu|ʊ§ɾ.§d̪§uː||اُردو
 اُڑنَا|to fly|ʊ§ɽ.§nɑː§‹§||اڑنا
-اڑنا|to fly|ʊ§ɽ.§nɑː§‹§||اُڑنَا
+اڑنا|to fly|ʊ§ɽ.§n§ɑː§||اُڑنَا
 اِتْنَا|so much|ɪ§t§n§ɑː|itnā|اتنا
 اتنا|so much|ɪ§t§n§ɑː|itnā|اِتْنَا
 اِتْوار|Sunday|ɪt̪.ʋɑːɾ|itvār|اتوار
@@ -236,7 +236,7 @@ autoExpandExamples.ur = `
 اشتمالیت|communism|ɪʃ.t̪e.mɑː.lɪ.jət̪||اِشْتِمالِیَت
 اِضافَہ|increase, addition|ɪ.zɑː.fə||اضافہ
 اضافہ|increase, addition|ɪ.zɑː.fə||اِضافَہ
-اِنسَان|human|ɪ§n§s§ɑː§n|insān|انسان
+اِنسَان|human|ɪ§n§sɑː§‹§n|insān|انسان
 انسان|human|ɪ§n§s§ɑː§n|insān|اِنسَان
 اِنْتِہاپَسَنْد|extremist|ɪn.t̪e.ɦɑː.pə.sənd̪||انتہاپسند
 انتہاپسند|extremist|ɪn.t̪e.ɦɑː.pə.sənd̪||اِنْتِہاپَسَنْد
@@ -273,7 +273,7 @@ autoExpandExamples.ur = `
 بادشاہ|king, monarch|bɑːd̪.ʃɑːɦ
 بادشاہت|monarchy|bɑːd̪.ʃɑː.ɦət̪
 بادل|cloud|bɑː.d̪əl
-بارش|rain|bɑː.ɾɪʃ
+بارش|rain|b§ɑː.§ɾɪ§ʃ
 بازو|arm|bɑː.zuː
 باشندہ|resident|bɑː.ʃən.d̪ɑː/bɑː.ʃɪn.d̪ɑː
 بَاغ|garden|bɑː§‹§ɣ||باغ
@@ -401,7 +401,7 @@ autoExpandExamples.ur = `
 تَمِیْز|manners, respect|t̪ə.§m§iː§z||تمیز
 تمیز|manners, respect|t̪ə.§m§iː§z||تَمِیْز
 تِین|three|tiː§‹§n||تین
-تین|three|tiː§‹§n||تِین
+تین|three|t§iː§n||تِین
 تْرُٹِی|loss, error|t̪ɾʊ.ʈiː||ترٹی
 ترٹی|loss, error|t̪ɾʊ.ʈiː||تْرُٹِی
 تگنا|thrice|t̪ɪɡ.nɑː
@@ -537,9 +537,9 @@ autoExpandExamples.ur = `
 خوشی|happiness, pleasure|xʊ.ʃiː
 خَوف|fear|xɔːf||خوف
 خوف|fear|xɔːf||خَوف
-خُطُخون|blood|xuːn
-letters|xʊ§t§uː§t||خطوط
-خطوط|letters|xʊ§tuː§‹§t||خُطُوط
+خون|blood|x§uː§n
+خُطُوط|letters|xʊ§t§uː§t||خطوط
+خطوط|letters|xʊ§t§uː§t||خُطُوط
 خیر|well, anyway|xɛːɾ
 داخلہ|admission fee|d̪ɑː.xɪ.lɑː
 دارالحکومت|capital|d§ɑː§rʊ§–§l§hʊ§k§uː§ma§t
@@ -550,6 +550,7 @@ letters|xʊ§t§uː§t||خطوط
 داغ|stain, spot|d̪ɑːɣ
 دانت|tooth, tusk|d̪§ɑ̃ː§‹§t̪
 دانت|tooth|d̪§ɑ̃ː§‹§t̪
+دان٘ت|tooth|d̪§ɑ̃ː§‹§t̪
 دانش گاہ|college|d̪ɑː.nɪʃ.ɡɑːɦ
 دانش|knowledge, science|d̪§ɑː.§nɪ§ʃ
 دایاں|right (side)|d̪ɑː.jɑ̃ː
@@ -626,7 +627,7 @@ letters|xʊ§t§uː§t||خطوط
 رفتار|motion, speed|ɾəf.t̪ɑːɾ
 رمضان|Ramadan|ɾəm.zɑːn
 رنگت|complexion|ɾəŋ.ɡət̪
-روئے زمین|the surface of the ground|r§uː§–§ɛ§ §za§m§iː§n
+روئے زمین|the surface of the ground|r§uː§ɛ§‹§ §za§m§iː§n
 روانڈا|Rwanda|ɾə.ʋɑːɳ.ɖɑː
 روزن|crevice, hole|ɾɔː.zən
 روزہ|fast|ɾoː.zɑː
@@ -994,7 +995,7 @@ letters|xʊ§t§uː§t||خطوط
 نارنجی|orange (colour)|nɑː.ɾən.d͡ʒiː
 نام|name|nɑːm
 نانگل|plough|nɑːŋ.ɡəl
-ناک|nose|nɑːk
+ناک|nose|n§ɑː§k
 نباتیات|botany|nə.bɑː.t̪ɪ.jɑːt̪
 نبض|pulse, heartbeat|nə§b§z
 نَتِیجَتاً|consequently, as a result|nə.t̪iː.d͡ʒə.t̪ən||نتیجتا
@@ -1034,7 +1035,7 @@ letters|xʊ§t§uː§t||خطوط
 نہ|no|n§ə
 نہایت|remarkable|nɪ.§h§ɑː.§jə§t̪
 نہیں|no, not|nə.§ɦ§ĩː§‹
-نیا|new|nə.jɑː
+نیا|new|nə.§j§ɑː
 نیم|rule, law|neːm/nɪ.jəm
 نے|ergative case marker|neː
 وا|or|ʋɑː
@@ -1070,7 +1071,7 @@ letters|xʊ§t§uː§t||خطوط
 وینجن|consonant|ʋjən.d͡ʒən
 ٹان٘گ|leg|t§ãː§‹§g||ٹان٘گ
 ٹان٘گ|leg|t§ãː§‹§g||ٹان٘گ
-ٹاںگ|leg|t§ãː§‹§g
+ٹانگ|leg|t§ãː§‹§g
 ٹوپی|hat|ʈ§oː§p§iː
 ٹکر|collision, crash|ʈək.kəɾ
 ٹکراو|collision, bump|ʈək.ɾɑːʋ
@@ -1109,8 +1110,8 @@ letters|xʊ§t§uː§t||خطوط
 پنکھا|fan|pəŋ.kʰɑː
 پنکھڑی|petal|pəŋ.kʰʊ.ɽiː
 پون|wind|pə.ʋən
-پوٗرا|absolutely|p§uː§r§ɑː||پورا
-پُورا|absolutely|puː§‹§r§ɑː||پورا
+پوٗرَا|absolutely|p§uː§rɑː§‹||پورا
+پُورَا|absolutely|puː§‹§rɑː§‹||پورا
 پورا|absolutely|p§uː§r§ɑː||پوٗرا#پورا
 پٹل|roof, thatch|pə.ʈəl
 پپاسا|thirst|pɪ.pɑː.sɑː
@@ -1169,7 +1170,7 @@ letters|xʊ§t§uː§t||خطوط
 ڈکار|burp|ɖə.kɑːɾ
 ڈھانپنا|to conceal|ɖʱɑ̃ːp.nɑː
 ڈھونڈھ|seeking, search|ɖʱ§‹§uː§ɳ§ɖʱ§‹
-ڈھيٹھ|impudent|ɖʱiːʈʰ
+ڈھيٹھ|impudent|ɖʱ§‹§iː§ʈʰ§‹
 ژالہ|hail, dew|ʒ§ɑː.§lə§–
 کئی|several|k§a§iː
 کا|of|k§ɑː
@@ -1252,6 +1253,7 @@ letters|xʊ§t§uː§t||خطوط
 گائے|they sang|g§ɑː§–§e
 گاتر|limb|ɡɑːt̪.ɾᵊ
 گاری|car|g§ɑː§r§iː
+گَارِی|car|gɑː§‹§riː§‹
 گام|step|g§ɑː§m
 گانا|song|ɡɑː.nɑː
 گاڑھا|thick|ɡ§ɑː.§ɽʱ§‹§ɑː
@@ -1277,7 +1279,7 @@ letters|xʊ§t§uː§t||خطوط
 گنت|mathematics|ɡə.§nɪ.§t̪ə
 گنتی|counting|ɡɪn.t̪iː
 گندہ|dirty|ɡən.d̪ɑː
-گنیش|Ganesha|ɡə.ɳeːʃ
+گنیش|Ganesha|ɡə.§ɳ§eː§ʃ
 گورو|pride|ɡɔː.ɾəʋ
 گوگرد|sulfur|ɡoː.ɡɪɾd̪
 گگن|sky|ɡə.§ɡə§n
@@ -1306,7 +1308,7 @@ letters|xʊ§t§uː§t||خطوط
 جنیئو|(Hindu) janeu|d͡ʒə.§n§eː.§–§uː||جَنییُٔو
 ہِنْدوٗ|Hindu|hɪ§n§d§uː||ہندو
 ہندو|Hindu|hɪ§n§d§uː||ہِنْدو#ہِنْدُو
-ہِنْدُو|Hindu|hɪ§n§d§uː||ہندو
+ہِنْدُو|Hindu|hɪ§n§duː§‹||ہندو
 ہندوستانی|Indian person|ɦɪn.d̪ʊs.t̪ɑː.niː
 ہنساتمک|violent|ɦɪ̃n.sɑːt̪.mək
 ہوا|air|ɦə.ʋɑː
@@ -1322,8 +1324,7 @@ letters|xʊ§t§uː§t||خطوط
 ہیک|hiccup|ɦiːk
 ہڈی|bone|ɦə§ɖ.ɖ§iː
 ہٹا کٹا|robust, sturdy|ɦəʈ.ʈɑː.kəʈ.ʈɑː
-ہیئت|astronomy|h§ɛː§a§t
-ہے|is (3rd p sing)|ɦɛː
+ہیئت|astronomy|h§ɛː§ə§t
 یا|oh!|jɑː
 یار|friend|j§ɑː§r
 یار|pal, friend|j§ɑː§ɾ
