@@ -2,7 +2,7 @@
 /* globals autoExpandExamples, egList */
 
 
-if (typeof traceSet === 'undefined') traceSet = new Set([])
+//if (typeof traceSet === 'undefined') traceSet = new Set([])
 
 
 window.autoExpandExamples = {}
@@ -12,7 +12,7 @@ var egList = {}
 
 
 function addExamples (langFilter) {
-    if (traceSet.has('addExamples')) console.log('addExamples(',langFilter,') Convert all .eg items to full markup.')
+    if (traceSet.has('addExamples')) console.log('addExamples(',langFilter,')\n\tConvert all .eg items to full markup.')
 /*  read the data into egList, in which each record has
 	example, meaning, transcription?, notes?, alt?
 	alt is generally a vowelled form for abjads or an alternative spelling
@@ -42,7 +42,10 @@ function addExamples (langFilter) {
     
 	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
 
-    if (typeof autoExpandExamples[langFilter] === 'undefined') console.log('autoExpandExamples[langFilter] fails for ',langFilter)
+    if (typeof autoExpandExamples[langFilter] === 'undefined') {
+        console.log('%c' + 'autoExpandExamples[langFilter] fails for '+langFilter+'  (addExamples). Check the language setting on the link element.', 'color:' + 'red' + ';font-weight:bold;')
+        return
+        }
     var egArray = autoExpandExamples[langFilter].split("\n")
 
     for (var i=0;i<egArray.length;i++) {
@@ -99,6 +102,14 @@ function addExamples (langFilter) {
 			out += term
 			out += '</bdi>'
 			
+            // bail if there is a nometadata class name
+            // this is used principally for maps with non-pointed examples
+            if (nodes[n].classList.contains('short')) {
+                out += '</span>'
+                nodes[n].outerHTML = out
+                continue
+                }
+            
 			// add a transcription, if the .transc attribute is set
             if (forceTranscription) {
                 if (transc) {
