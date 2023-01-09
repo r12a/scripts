@@ -2,165 +2,165 @@
 autoExpandExamples.blt = `
 
 
-ꪀꪚꪾ|with, and|kap²
-ꪀꪫꪱꪉ||
+ꪀꪚꪾ|with, and|k§ap²
+ꪀꪫꪱꪉ|deer|k§ʷ§aː§ŋ˨
 ꪀꪾꪚ||
-ꪁꪫꪱꪣ||
-ꪁꪫꪱꪥ||
+ꪁꪫꪱꪣ|word, language|k§ʷ§aː§m˥
+ꪁꪫꪱꪥ|water buffalo|k§ʷ§aː§j˥
 ꪁꪮꪉꫂ||
 ꪁꪲꪣ||
 ꪁꪳꪒ||
 ꪁꪾ|gold|kam⁴
 ꪁ꫁ꪮꪉ||
 ꪁ꫁ꪱ||
-ꪄꪫꪱꪙ||
+ꪄꪫꪱꪙ|axe|x§ʷ§aː§n˨
 ꪄꪮꪥꫂ||
 ꪄꪱꪣ||
-ꪄꪱꪥ||
+ꪄꪱꪥ|to sell|x§aː§j˨
 ꪄꪱꫂ||
 ꪄꪳꪙꫂ||
 ꪄꪳ꫁ꪙ||
 ꪄꪴꪙꫀ|dust|xun²
-ꪄꪴ꪿ꪙ|dust|xun²
-ꪄ꫁ꪮꪥ||
+ꪄꪴ꪿ꪙ|dust|xu§n²
+ꪄ꫁ꪮꪥ|I, me|x§ɔ§j˨˩ˀ
 ꪄ꫁ꪱ||
-ꪅꪺꪀ||
-ꪉꪮꪀ||
-ꪉꪴ||
-ꪊꪮꪚ||
-ꪊꪰ꪿ꪉ||
+ꪅꪺꪀ|tadpole|x§uə̯§ʔ˦|ꞌkhuạk
+ꪉꪮꪀ|to sprout|ŋɔʔ˦
+ꪉꪴ|snake|ŋuː˥
+ꪊꪮꪚ|hoe|t͡ɕ§ɔ§p̚˦˥
+ꪊꪰ꪿ꪉ|so, then|t͡ɕa§ŋ˦˥|chắng
 ꪋꪱꪉꫂ||
-ꪋ꫁ꪱꪉ||
-ꪎꪮꪉ||
+ꪋ꫁ꪱꪉ|elephant|t͡ɕ§aː§ŋ˧˩ˀ
+ꪎꪮꪉ|two|s§ɔ§ŋ˨
 ꪎꪮꪙ||
 ꪎꪱꪡ꫁ꪮꪉ||
 ꪎꪱꪣ||
-ꪎꪲꪚ||
+ꪎꪲꪚ|ten|si§p̚˦˥
 ꪎꪲ꪿||
 ꪎꪲꫀ||
 ꪎꪴꪉ||
-ꪎꪺꪉꫂ|trousers|suəŋ³
-ꪎ꫁ꪺꪉ|trousers|suəŋ³
-ꪏꪳ꫁||
+ꪎꪺꪉꫂ|trousers|s§uə§ŋ§³
+ꪎ꫁ꪺꪉ|trousers|s§uə§ŋ³
+ꪏꪳ꫁|to buy|sɨː˧˩ˀ
 ꪐꪱꫂ||
-ꪐ꫁ꪱ||
-ꪑꪱꪣ||
-ꪑꪲꪚ||
-ꪒꪚꪾ||
+ꪐ꫁ꪱ|grass|ɲ§aː˨˩ˀ
+ꪑꪱꪣ|time|ɲ§aː§m˥
+ꪑꪲꪚ|to sew|ɲi§p̚˦
+ꪒꪚꪾ|to extinguish|d§ap̚˦˥
 ꪒꪲꪙ||
 ꪒꪾꪚ||
-ꪔꪰꪒ|to cut|tat²
-ꪔꪱꪥ||
-ꪔꪲꪫ|to whistle|tʰiw¹
+ꪔꪰꪒ|to cut|ta§t²
+ꪔꪱꪥ|to die|t§aː§j˨
+ꪔꪲꪫ|to whistle|tʰi§w¹
 ꪕꪮꪉꫂ||
-ꪕ꫁ꪮꪉ||
-ꪖꪲ꫁ꪣ||
-ꪘꪰꪉ||
+ꪕ꫁ꪮꪉ|stomach|t§ɔ§ŋ˧˩ˀ
+ꪖꪲ꫁ꪣ|to discard, drop|tʰi§m˨˩ˀ
+ꪘꪰꪉ|skin, leather|na§ŋ˨
 ꪘꪱꫂ||
 ꪘ꫁ꪱ||
 ꪙꪮꪙ||
 ꪙꪰꪉꫀ||
-ꪙꪰ꪿ꪉ||
+ꪙꪰ꪿ꪉ|to sit|na§ŋ˦
 ꪙꪳ꪿ꪉ||
-ꪙꪾ꫁||
+ꪙꪾ꫁|water|nam˧˩ˀ
 ꪙꪾꫂ||
-ꪛꪱꪜꪺ||
+ꪛꪱꪜꪺ|queen|b§aː˥.§p§uə̯˨
 ꪜꪱ||
 ꪜꪱꪀ||
-ꪜꪳꪙ|arrow|pɨn¹
+ꪜꪳꪙ|arrow|pɨ§n¹
 ꪜꪴ||
-ꪜꪺ||
-ꪜ꫁ꪽ|to squeeze|pan³
+ꪜꪺ|king|p§uə̯˨
+ꪜ꫁ꪽ|to squeeze|p§an³
 ꪝꪷ|enough|pɔ⁴
-ꪝ꪿ꪮꪣ||
+ꪝ꪿ꪮꪣ|apple|p§ɔ§m˦
 ꪡꪱꫂ||
-ꪡ꫁ꪱ||
-ꪢꪱ||
-ꪢꪴ||
+ꪡ꫁ꪱ|sky|f§aː˧˩ˀ
+ꪢꪱ|dog|m§aː˨
+ꪢꪴ|pig|muː˨
 ꪣꪱ||
 ꪣꪲ||
 ꪣꪳ||
 ꪣꪸ|wife|miə⁴
-ꪨꪰꪉ||
+ꪨꪰꪉ|behind, after|la§ŋ˨
 ꪩꪳꪣ||
-ꪩꪴꪀ||
-ꪩꪴꪀꪋꪱꪥ||
-ꪩꪴꪀꪑꪲꪉ||
-ꪫꪸꪀ||
+ꪩꪴꪀ|child|lu§ʔ˦
+ꪩꪴꪀꪋꪱꪥ|son|l§u§ʔ˦.§t͡ɕ§aː§j˥
+ꪩꪴꪀꪑꪲꪉ|daughter|lu§ʔ˦.§ɲi§ŋ˥
+ꪫꪸꪀ|work, job|viə̯§ʔ˦
 ꪬꪱꫂ||
-ꪬ꫁ꪱ||
+ꪬ꫁ꪱ|five|h§aː˨˩ˀ
 ꪭꪮꪀ||
 ꪭꪮꪉꫂ||
 ꪭꪮꪒ||
 ꪭꪮꪥꫂ||
 ꪭꪴ||
-ꪭꪴꪒ|article|hut⁴
+ꪭꪴꪒ|article|hu§t⁴
 ꪭꪴ꫁||
 ꪭꪴꫂ||
-ꪭ꫁ꪮꪉ||
-ꪭ꫁ꪮꪥ||
-ꪮꪮꪀ|to go out|ʔɔʔ²
+ꪭ꫁ꪮꪉ|to shout|h§ɔ§ŋ˧˩ˀ
+ꪭ꫁ꪮꪥ|hundred|h§ɔ§j˧˩ˀ
+ꪮꪮꪀ|to go out|ʔ§ɔ§ʔ²
 ꪮꪮꪙꫀꪙꪮꪥꫂ||
-ꪮ꪿ꪮꪙꪙ꫁ꪮꪥ||
-ꪮ꪿ꪱꪉ|basin, tub|ʔaːŋ²
-ꪵꪀ꪿ꪙ|seed|kɛn²
-ꪵꪁꪫꪥ|cinnamon|kʷɛ²
+ꪮ꪿ꪮꪙꪙ꫁ꪮꪥ|baby|ʔ§ɔ§n˦˥.§n§ɔ§j˧˩ˀ
+ꪮ꪿ꪱꪉ|basin, tub|ʔaː§‹§ŋ²
+ꪵꪀ꪿ꪙ|seed|›§kɛ§n²
+ꪵꪁꪫꪥ|cinnamon|›§kʷɛ²§‹§‹‹
 ꪵꪄꪉ||
-ꪵꪄꪫ||
+ꪵꪄꪫ|green|›§xɛ§w˨
 ꪵꪜꪒ||
-ꪵꪣꪫ||
+ꪵꪣꪫ|cat|›§mɛ§w˥
 ꪵꪣ꪿||
 ꪵꪣꫀ||
 ꪵꪮ||
-ꪵꪮꪚ||
-ꪶꪁꪙ|to stir|kon⁴
-ꪶꪄꪙ|fur, feather|xon¹
+ꪵꪮꪚ|to learn|›§ʔɛ§p̚˦˥
+ꪶꪁꪙ|to stir|›§ko§n⁴
+ꪶꪄꪙ|fur, feather|›§xo§n¹
 ꪶꪊꪚ||
 ꪶꪔꪒ||
 ꪶꪙꪀ||
 ꪶꪙꪣ||
-ꪶꪠꪙ||
+ꪶꪠꪙ|rain|›§fo§n˨
 ꪶꪩꪉ||
 ꪶꪬꪀ||
 ꪹꪀꪱꫂ||
 ꪹꪀ꫁ꪱ||
 ꪹꪄ꫁ꪱ||
 ꪹꪄ꫁ꪱꪻꪊ||
-ꪹꪉꪱ|reflection|ŋaːw¹
+ꪹꪉꪱ|reflection|›§ŋaːw¹§‹
 ꪹꪊꪱꫂ||
 ꪹꪊꪸꪒ||
 ꪹꪊ꫁ꪱ||
 ꪹꪋꪷ||
-ꪹꪎ|tiger|sia¹
+ꪹꪎ|tiger|›§sia¹
 ꪹꪎ꫁||
 ꪹꪎꫂ||
-ꪹꪔꪸꪣ|full|tem¹
-ꪹꪚꪙ||
+ꪹꪔꪸꪣ|full|›§te§m¹
+ꪹꪚꪙ|moon|›§bɨə̯§n˨
 ꪹꪚꪱꫀ||
-ꪹꪚ꪿ꪱ||
+ꪹꪚ꪿ꪱ|not|›§baw˦˥§‹
 ꪹꪜꪸꪒ||
 ꪹꪜꪸꪙ||
 ꪹꪣꪉ||
 ꪹꪣꪉꪡꪱꫂ||
 ꪹꪣꪉꪡ꫁ꪱ||
 ꪹꪫꪱꫂ||
-ꪹꪫ꫁ꪱ||
-ꪹꪬꪷꪉ|long|həŋ¹
+ꪹꪫ꫁ꪱ|to say, speak|›§vaw˧˩ˀ§‹
+ꪹꪬꪷꪉ|long|›§hə§ŋ¹
 ꪹꪬꪸꪙ||
 ꪻꪊ||
 ꪻꪋ꫁||
-ꪻꪐ꪿|large, big|ɲəw²
+ꪻꪐ꪿|large, big|›§ɲəw²
 ꪻꪐꫀ||
-ꪻꪚꪼꪣ꫁||
+ꪻꪚꪼꪣ꫁|leaf|›§baɰ˨.§›§maj˧˩ˀ
 ꪻꪚꪼꪣꫂ||
 ꪼꪀ꪿||
 ꪼꪀꫀ||
-ꪼꪒ꫁|to attain|daj³
+ꪼꪒ꫁|to attain|›§daj³
 ꪼꪕ||
-ꪼꪕꪒꪾ||
+ꪼꪕꪒꪾ|Tai Dam|›§taj§dam
 ꪼꪜ||
 ꪼꪡ||
-ꪼꪡꪡ꫁ꪱ||
+ꪼꪡꪡ꫁ꪱ|electricity|›§faj˥.§f§aː˧˩ˀ
 ꪼꪣ꫁||
 ꪼꪣꫂ||
 ꪼꪬ꫁||
@@ -168,9 +168,9 @@ autoExpandExamples.blt = `
 ꫛ|person|kon˥
 ꫜ|one|nɨŋ˦
 
-
-
-
+ꪘꪮꪉꪨꪺꪉ|sea|nɔŋ˨.luə̯ŋ˨
+ꪅ꫁ꪽꪒꪷ|to be well|xa§n˧˩.§dɔː˨
+ꪭꪰꪀ|love|ha§k˥
 
 
 
