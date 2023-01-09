@@ -92,8 +92,11 @@ initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSumma
 
 
 function closeDialogEsc (e) {
-    // closes the dialog box when escape is pressed
-    if (e.code === 'Escape') document.getElementById('dialogBox').open = false
+    // closes the dialog box and panel when escape is pressed
+    if (e.code === 'Escape') {
+        document.getElementById('dialogBox').open = false
+        document.getElementById('panel').style.display = 'none'
+        }
 }
 
 
