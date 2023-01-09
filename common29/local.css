@@ -384,7 +384,7 @@ h4 + p {
 
 
 /* ====================== */
-#panel { 
+#panel, #dialogBox { 
 	position: fixed; 
 	bottom: 20px; 
 	right: 10px; 
@@ -402,19 +402,30 @@ h4 + p {
 	max-height: 80%;
 	overflow: auto;
 	}
-#panel img { vertical-align: middle; }
-#panel p { 
-    margin: 0;
+#dialogBox {
+    width: 60%;
+    bottom: 6%;
+    }    
+
+#panel img, #dialogBox img { vertical-align: middle; }
+
+#panel p, #dialogBox p { 
+    margin-inline-start: 0;
+    margin-inline-end: 0;
     margin-block-start: 3px;
     font-size: 120%;
     }
-#panel #title { 
+#panel table, #dialogBox table { 
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    }
+#panel #title, #dialogBox title { 
 	font-size: 200%; 
 	line-height: 2;
 	color: chocolate;
 	}
 #transInPanel { font-size: 150%; }
-#panel #advice {
+#panel #advice, #dialogBox advice {
 	text-align: right;
 	font-style: italic;
 	font-size: 80%;
@@ -439,6 +450,30 @@ h4 + p {
 	overflow: auto;
     font-size: 1rem;
 	}
+
+
+
+
+#character_panel_close_button {
+	position: fixed;
+	bottom: 0;
+	padding: 1em;
+	border: 1px solid tan;
+	background-color: #ffe;
+	right: 0;
+	border-radius: 5px;
+	}
+
+#character_dialog_close_button {
+	position: fixed;
+	bottom: 5%;
+	padding: 1em;
+	border: 1px solid tan;
+	background-color: #ffe;
+	right: 18%;
+	border-radius: 5px;
+	}
+
 /* ====================== */
 
 
@@ -1078,16 +1113,6 @@ a:visited {
 	}
 
 
-#character_panel_close_button {
-	position: fixed;
-	bottom: 0;
-	padding: 1em;
-	border: 1px solid tan;
-	background-color: #ffe;
-	right: 0;
-	border-radius: 5px;
-	}
-
 
 .fig_highlight {
 	color: chocolate;
@@ -1206,17 +1231,17 @@ p.cdHeader {
 
 
 
-#panel .cdChar {
+#panel .cdChar, #dialogBox .cdChar {
 	text-align: start;
 	border-bottom: 1px solid #aaa;
 	}
-#panel .insertTranscription {
+#panel .insertTranscription, #dialogBox .insertTranscription {
 	display: none;
 	}
-#panel ul {
+#panel ul, #dialogBox ul {
 	margin: 0;
 	}
-#panel .charD {
+#panel .charD, #dialogBox .charD {
 	margin-block: 2em;
     }
 
@@ -1232,7 +1257,8 @@ p.cdHeader {
 	float: right;
 	}
 
-#panel .tonePairing, #panel .subjPair, #panel .charUppercase, #panel .charLowercase, #panel .vowelPairing, #panel .decomposition, #panel .otherPairing, #panel .seealso {
+#panel .tonePairing, #panel .subjPair, #panel .charUppercase, #panel .charLowercase, #panel .vowelPairing, #panel .decomposition, #panel .otherPairing, #panel .seealso, 
+#dialogBox .tonePairing, #dialogBox .subjPair, #dialogBox .charUppercase, #dialogBox .charLowercase, #dialogBox .vowelPairing, #dialogBox .decomposition, #dialogBox .otherPairing, #dialogBox .seealso {
     font-size: .8rem;
     text-align: start;
     margin-inline-start: 0;
@@ -1248,7 +1274,7 @@ p.cdHeader {
     line-height: 1;
     }
 
-#panel .leadin, .charDetails .leadin {
+#panel .leadin, #dialogBox .leadin, .charDetails .leadin {
     margin-block-start: 2rem;
     margin-block-end: 0;
     color: chocolate;
@@ -1503,7 +1529,7 @@ color: #CC6600;
 }
 
 
-p.notesLink, #panel p.notesLink {
+p.notesLink, #panel p.notesLink, #dialogBox p.notesLink {
     float: right;
     font-style: italic;
     text-align: end;
@@ -1923,11 +1949,17 @@ figure summary {
 
 
 
+.addToVowels {}
+.addToConsonants {}
+
+#vowel_description .dropFromSection, #consonant_description .dropFromSection, #diacritic_description .dropFromSection {
+    display: none;
+    }
 
 
 
-
-
-
+.ipa.h {
+    font-size: 1.6rem;
+    }
 
 

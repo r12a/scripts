@@ -76,7 +76,26 @@ initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSumma
     
     
     copyIntroInfo()
+    
+    
+    // create dialog popup window (displays details after clicking on code point names)
+    var node = document.querySelector('header')
+    dialog = document.createElement('dialog')
+    dialog.open = false
+    dialog.id = 'dialogBox'
+    node.appendChild(dialog)
+    document.querySelector("body").addEventListener('keydown', closeDialogEsc)
+
+    
+    
     }
+
+
+function closeDialogEsc (e) {
+    // closes the dialog box when escape is pressed
+    if (e.code === 'Escape') document.getElementById('dialogBox').open = false
+}
+
 
 
 function initialiseSummary (blockDirectory, lang, tableName, orthogNotesFile) {
@@ -115,12 +134,24 @@ function setMarks () {
     }
 
 
-function setCharOnclicks () {
+function setCharOnclicksX () {
 	// all links with target=c should open descriptions in the panel
     if (traceSet.has('setCharOnclicks') || traceSet.has('all')) console.log('setCharOnclicks(',') All links with target=c should open descriptions in the panel')
 
 	var links = document.querySelectorAll('.codepoint a, .codepoint code')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+	}
+
+function setCharOnclicks () {
+	// all links with target=c should open descriptions in the panel
+    if (traceSet.has('setCharOnclicks') || traceSet.has('all')) console.log('setCharOnclicks(',') All links with target=c should open descriptions in the panel')
+
+	var links = document.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) {
+        links[i].onclick = showCharDetailsInPanel
+        links[i].href = 'javascript:void(0)'
+        links[i].target = ''
+        }
 	}
 
 function setupBlockLinks () {
@@ -1635,20 +1666,34 @@ function copyIntroInfo () {
     if (traceSet.has('copyIntroInfo') || traceSet.has('all')) console.log('copyIntroInfo()\n\tCopy paragraphs from the brief summary to the top of various sections')
     
     // do the vowels
-    var out = ''
-    var paras = document.querySelectorAll('.addToVowels')
-    console.log("Copying",paras.length,"paragraphs to Vowel section.")
-    for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
-    if (document.getElementById('vowel_mappings')) out += `<p class="instructions">For a mapping of sounds to graphemes see <a class="secref" href="#vowel_mappings">Vowel sounds to characters</a>.</p>`
-    if (out !== '') document.getElementById('vowel_description').innerHTML = out
+    if (document.getElementById('consonant_description')) {
+        var out = ''
+        var paras = document.querySelectorAll('.addToVowels')
+        console.log("Copying",paras.length,"paragraphs to Vowel section.")
+        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
+        if (document.getElementById('vowel_mappings')) out += `<p class="instructions">For a mapping of sounds to graphemes see <a class="secref" href="#vowel_mappings">Vowel sounds to characters</a>.</p>`
+        if (out !== '') document.getElementById('vowel_description').innerHTML = out
+        }
     
     // do the consonants
-    var out = ''
-    var paras = document.querySelectorAll('.addToConsonants')
-    console.log("Copying",paras.length,"paragraphs to Consonant section.")
-    for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
-    if (document.getElementById('consonant_mappings')) out += `<p class="instructions">For a mapping of sounds to graphemes see <a class="secref" href="#consonant_mappings">Consonant sounds to characters</a>.</p>`
-    if (out !== '') document.getElementById('consonant_description').innerHTML = out
+    if (document.getElementById('consonant_description')) {
+        var out = ''
+        var paras = document.querySelectorAll('.addToConsonants')
+        console.log("Copying",paras.length,"paragraphs to Consonant section.")
+        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
+        if (document.getElementById('consonant_mappings')) out += `<p class="instructions">For a mapping of sounds to graphemes see <a class="secref" href="#consonant_mappings">Consonant sounds to characters</a>.</p>`
+        if (out !== '') document.getElementById('consonant_description').innerHTML = out
+        }
+
+    
+    // do diacritics
+    if (document.getElementById('diacritic_description')) {
+        var out = ''
+        var paras = document.querySelectorAll('.addToDiacritics')
+        console.log("Copying",paras.length,"paragraphs to Diacritics section.")
+        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
+        if (out !== '') document.getElementById('diacritic_description').innerHTML = out
+        }
     }
 
 
