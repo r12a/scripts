@@ -1669,7 +1669,7 @@ function copyIntroInfo () {
     if (traceSet.has('copyIntroInfo') || traceSet.has('all')) console.log('copyIntroInfo()\n\tCopy paragraphs from the brief summary to the top of various sections')
     
     // do the vowels
-    if (document.getElementById('consonant_description')) {
+    if (document.getElementById('vowel_description')) {
         var out = ''
         var paras = document.querySelectorAll('.addToVowels')
         console.log("Copying",paras.length,"paragraphs to Vowel section.")
