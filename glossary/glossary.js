@@ -3,7 +3,7 @@ defList={
 
 "checked": '\'Checked\' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. \'Unchecked\' means ending in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</p>',
 
-"circumgraph": 'When a single vowel sign code point produces glyphs on more than one side of the consonant base, it is referred to here as a circumgraph.',
+"circumgraph": 'When a single vowel sign code point produces glyphs on more than one side of the consonant base, it is referred to here as a <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraph</a>.',
 
 "compositevowel": 'A <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">composite vowel</a> is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel signs, repurposed consonants, and diacritics available.',
 
@@ -21,7 +21,7 @@ defList={
 
 "ijam": 'An <a class="termref" target="_blank" href="../glossary/index.html#ijam">ijam</a> is a diacritical mark considered to be part of a basic letter form. Unicode encodes letter+ijam combinations as separate, atomic characters, which are never given decompositions in the standard. Compare with <a class="termref" target="_blank" href="../glossary/index.html#tashkil">tashkil</a>.',
 
-"independentvowel": 'An <a class="termref" target="_blank" href="../glossary/index.html#inherentvowel">inherent vowel</a> is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed.',
+"independentvowel": 'In Indic scripts <a class="termref" target="_blank" href="../glossary/index.html#independent">independent vowels</a> are independent letter symbols that stand on their own and are typically used to represent standalone vowel sounds.',
 
 "inherentvowel": 'An <a class="termref" target="_blank" href="../glossary/index.html#inherentvowel">inherent vowel</a> is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed.',
 
@@ -33,7 +33,7 @@ defList={
 
 "materlectionis": 'In the spelling of Arabic, Hebrew, and other Semitic languages, mater lectionis refers to a consonant that is used to indicate the location of a vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a>',
 
-"standalonevowel": 'Standalone vowels are vowel sounds that are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.',
+"standalonevowel": '<a class="termref" target="_blank" href="../glossary/index.html#standalone">Standalone vowels</a> are vowel sounds that are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.',
 
 "orthographicsyllable": 'The term <a class="termref" target="_blank" href="../glossary/index.html#orthographicsyllable">orthographic syllable</a> is not clearly defined in the Unicode Standard. In the orthography notes on this site we define it to mean a typographic unit that includes more than one grapheme cluster. This is commonly the case for Brahmi-derived scripts, such as for Devanagari conjuncts, or Balinese stacks.  Orthographic syllables do not correspond to phonetic syllables.',
 
