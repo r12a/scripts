@@ -36,9 +36,9 @@ autoExpandExamples.ban = `
 ᬅᬲ᭄ᬣ|bone|astə|asta
 ᬆᬕᬫ|religion||agama
 ᬆᬘᬵᬭ|rule||acara
-ᬆᬤᬶ|first|adi|adi
+ᬆᬤᬶ|first|a§di|adi
 ᬇᬥᭂᬧ᭄|thinking||idep
-ᬉᬱᬥ|traditional medecine|usadə|usada
+ᬉᬱᬥ|traditional medecine|u§sa§də|usada
 ᬏᬓ|one||éka
 ᬐᬃᬱᬡ᭄ᬬ|northeast||airsania
 ᬑᬱ᭄ᬞ᭄ᬬ|labial (ling.)||oṣthya
@@ -94,7 +94,7 @@ autoExpandExamples.ban = `
 ᬘᬓ᭄ᬭ|disk||cakra
 ᬘᬶᬘᬶᬂ||
 ᬘᬾᬂᬘᬾᬂ|musical instrument||cengceng
-ᬘᬾᬮᬾᬂ|pig|ˈcɛlɛŋ
+ᬘᬾᬮᬾᬂ|pig|ˈcɛ§lɛ§ŋ
 ᬘᭀᬓᭀᬃ|foot, leg||cokor
 ᬘᭂᬍᬂ|pig, pork|ˈcɛlɛŋ|celeng
 ᬘᭂᬦᬶᬓ᭄|small|tʃənik|cenik
@@ -369,7 +369,7 @@ autoExpandExamples.ban = `
 ᬳᬧ|what||apa
 ᬳᬧᬶ|fire|api
 ᬳᬭᬶ|younger sibling|ari
-ᬳᬮᬲ᭄|forest|alas
+ᬳᬮᬲ᭄|forest|a§la§s
 ᬳᬮᬶᬢ᭄|small, young||alit
 ᬳᬮᬸᬲ᭄|fine, soft||alus
 ᬳᬯᬃᬳᬯᬃ|fig tree||awar-awar
