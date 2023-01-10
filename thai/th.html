@@ -3252,13 +3252,13 @@ That character is only used in this context.</p>
 </figure-->
 
 <p><code>Base SARA_AM? Combining_mark*</code></p>
-<p>Combining_mark may include zero or more of the following types of character.</p>
+<p>Combining_mark may include zero or more of the following types of character, grouped by labels that correspond to Unicode Indic syllabic category values.</p>
 
 <ol>
-<li><a href="../apps/listindic/index.html?chars=ิีึืุู็ั">Dependent vowels</a> [8] (see <a class="secref">combiningvowels</a>) There is usually only one vowel combining mark per base consonant. Thai has many composite vowels that are made of combinations of ordinary letter  characters and  combining marks clustered around a base. The letter characters are  manually positioned in the text stream.</li>
+<li><a href="../apps/listindic/index.html?chars=ิีึืุู็ัำ">Dependent vowels</a> [9] (see <a class="secref">combiningvowels</a>) Thai has many composite vowels that are made of combinations of ordinary letter  characters and  combining marks clustered around a base, but in the modern Thai language only one of these dependent vowels is used per base. (Other languages may use more than one. The letter characters are ordinary spacing characters, that are manually positioned in the text stream.)</li>
 <li><a href="../apps/listindic/index.html?chars=่้๊๋">Tone marks</a> [4] (see <a class="secref">tones</a>) Tone marks should be typed and stored immediately after a dependent vowel, if there is one, and immediately after the base otherwise.</li>
 
-<li><a href="../apps/listindic/index.html?chars=์">Silencer</a> (<span class="name">májtʰantʰákʰâːt</span>) [1] (see <a class="secref">novowel</a>) Used after other elements in the grapheme cluster to indicate cancelling of a consonant or syllable.</li>
+<li><a href="../apps/listindic/index.html?chars=์">Consonant killer</a> (<span class="name">májtʰantʰákʰâːt</span>) [1] (see <a class="secref">novowel</a>) Used after other elements in the grapheme cluster to indicate cancelling of a consonant or syllable.</li>
 </ol>
 <p>The spacing letters used for vowel signs are all individual grapheme clusters, with the exception of &nbsp;&nbsp;<span class="codepoint" translate="no"><bdi lang="th">&#x0E33;</bdi> [<a href="/scripts/thai/block#char0E33"><span class="uname">U+0E33 THAI CHARACTER SARA AM</span></a>]</span> (see <a class="secref">nikhahit</a>), which has the general category of Letter, but it is treated like a combining mark during segmentation.</p>
 <p>The following examples show a variety of grapheme clusters:</p>
@@ -3286,27 +3286,6 @@ That character is only used in this context.</p>
 <p>The grapheme cluster boundaries are convenient for justification algorithms, which  insert equal amounts of space between non-combining letters, including between non-combining vowel sign components and their consonants (see <a class="secref">justification</a>).</p>
 
 <p>One exception is the aforementioned <span class="codepoint" translate="no"><bdi lang="th">&#x0E33;</bdi> [<a href="/scripts/thai/block#char0E33"><span class="uname">U+0E33 THAI CHARACTER SARA AM</span></a>]</span>, which is split across 2 typographic units for the purpose of justification (see <a class="secref">inter_character_spacing</a>).</p>
-</section>
-
-
-
-
-
-
-<section id="syllableParsing">
-<h3>Parsing syllables</h3>
-
-<p>Adding spaces (zero-width or other) around Thai syllables is problematic because syllable-final consonants are not easy to identify. Thai segmentation may have to deal with ambiguous situations. Take for example the word
-<span class="eg" lang="th">ถนน</span>
-</p>
-
-<p>Because syllable-final sounds are ordinary letters, with no special indication, this could be parsed as <span class="ipa">ta.non</span>, <span class="ipa">ton.na</span>, or even <span class="ipa">ta.na.na</span>, and indeed some words are written the same but pronounced differently, eg.
-<span class="eg" lang="th">นม</span>
-</p>
-
-<p>Similarly, because medial consonants are written with normal characters, there is a possibile ambiguity about whether a sequence contains an inherent vowel, eg.
-<span class="eg" lang="th">กรี</span>
-</p>
 </section>
 
 
@@ -3403,6 +3382,29 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 <p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
 <p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
 </section>
+
+
+
+
+
+
+
+<section id="syllableParsing">
+<h4>Parsing syllables</h4>
+
+<p>Automatically adding spaces (zero-width or other) around Thai syllables is problematic because syllable-final consonants are not easy to identify. Thai segmentation may have to deal with ambiguous situations. Take for example the word
+<span class="eg" lang="th">ถนน</span>
+</p>
+
+<p>Because syllable-final sounds are ordinary letters, with no special indication, this could be parsed as <span class="ipa">ta.non</span>, <span class="ipa">ton.na</span>, or even <span class="ipa">ta.na.na</span>, and indeed some words are written the same but pronounced differently, eg.
+<span class="eg" lang="th">นม</span>
+</p>
+
+<p>Similarly, because medial consonants are written with normal characters, there is a possibile ambiguity about whether a sequence contains an inherent vowel, eg.
+<span class="eg" lang="th">กรี</span>
+</p>
+</section>
+
 </section>
 
 
@@ -3743,14 +3745,14 @@ is always preceded by space, however it should not wrap to the next line on its 
 
 <p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for English, or most Latin text.  In addition, Thai tends to adds more interline spacing than Latin text does.</p>
 
-<p>To give an approximate idea, <a class="figref">fig_baselines</a> compares Latin and Thai glyphs from Noto  fonts. The basic height of Thai letters is typically around the Latin x-height, however extenders and combining marks reach well beyond the Latin ascenders and descenders, creating a need for larger line spacing.</p>
+<p>To give an approximate idea, <a class="figref">fig_baselines</a> compares Latin and Thai glyphs from Noto  fonts. The basic height of Thai letters is typically around the Latin x-height, however extenders and combining marks reach well beyond the Latin ascenders and descenders, creating a need for larger line spacing.  In other fonts, the basic height of the Thai letters tends to be between the Latin x-height and cap-height, and the overall height of the Thai line is therefore greater.<tt>@GitHub,https://github.com/w3c/sealreq/issues/55#issuecomment-1356183447</tt> See for example the Angsana New and FreesiaUPC font samples below.</p>
 
 
 <figure id="fig_baselines">
 <div>
-<img src="images/fig_baselines_noto_serif.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" lang="km" data-notes="Noto Serif Thai 130px" style="max-width: 90%; margin-block-end:1rem;">
+<img src="images/fig_baselines_noto_serif.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" lang="th" data-notes="Noto Serif Thai 130px" style="max-width: 90%; margin-block-end:1rem;">
 
-<img src="images/fig_baselines_noto_sans.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" lang="km" data-notes="Noto Sans Thai 130px" style="max-width: 90%;">
+<img src="images/fig_baselines_noto_sans.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" lang="th" data-notes="Noto Sans Thai 130px" style="max-width: 90%;">
 </div>
 <figcaption>Font metrics for Latin text  compared with Thai glyphs in the Noto Serif Thai (top) and Noto Sans Thai (bottom) fonts.</figcaption>
 </figure>
@@ -3761,11 +3763,11 @@ is always preceded by space, however it should not wrap to the next line on its 
 
 <figure id="fig_baselines_other">
 <div>
-<img src="images/fig_baselines_thonburi.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Thonburi 130px" style="max-width: 90%; margin-block-end:2rem;" lang="km">
+<img src="images/fig_baselines_freesiaupc.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="FreesiaUPC 130px" style="max-width: 90%; margin-block-end:2rem;" lang="th">
 
-<img src="images/fig_baselines_angsana.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Angsana New 130px" style="max-width: 90%;" lang="km">
+<img src="images/fig_baselines_angsana.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Angsana New 130px" style="max-width: 90%;" lang="th">
 </div>
-<figcaption>Latin font metrics compared with Thai glyphs in the Thonburi (top) and Angasana New (bottom) fonts.</figcaption>
+<figcaption>Latin font metrics compared with Thai glyphs in the FreesiaUPC (top) and Angasana New (bottom) fonts.</figcaption>
 </figure>
 </section>
 
