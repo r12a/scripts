@@ -1371,7 +1371,7 @@ autoExpandExamples.gu = `
 દાવાનળ||
 દાવો||
 દિલ||
-દિવસ|day||divas
+દિવસ|day|ˈd̪ɪ.§ʋə§s|divas
 દિવેટ||
 દિવેલ||
 દિવેહી||
