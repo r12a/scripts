@@ -1,4 +1,6 @@
 defList={
+"atr": `ATR (Advanced Tongue Root) refers to classes of vowels. For example, it is a key distinguisher of vowels in Mongolian, which are largely split between ATR+ (front) and ATR- (back vowels). The front and back distinction has to do with the position of the tongue root.`,
+
 "bccs": `A <a class="termref" target="_blank" href="../glossary/index.html#ccs">BCCS (base plus combining character sequence)</a> includes a (single) base (consonant, vowel, or digit) plus any combining marks and ZWJ and ZWNJ that immediately follow it. When a BCCS contains certain characters (such as viramas), multiple BCCSs may combine to make a <a class="termref" target="_blank" href="../glossary/index.html#typographicunit">typographic unit</a>, which is a unit of text that is not split during a particular text operation.`,
 
 "checked": '\'Checked\' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. \'Unchecked\' means ending in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</p>',
