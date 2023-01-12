@@ -1,6 +1,6 @@
 autoExpandExamples.mn = `
 
-ᠠᠦ᠋ᠲ᠋ᠣᠪᠦ᠋ᠰ||
+ᠠᠦ᠋ᠲ᠋ᠣᠪᠦ᠋ᠰ|bus|a§v§ˈt§ɔ§b§ʊ§s||автобyс
 ᠠᠪᠢᠶᠠᠰ||
 ᠠᠪᠤ|father|aap|abʊ
 ᠠᠭᠤᠢ ᠶᠢᠨ ᠰᠤᠳᠤᠯᠤᠯ||
@@ -9,19 +9,19 @@ autoExpandExamples.mn = `
 ᠠᠯᠲᠠᠢ||
 ᠠᠯᠲᠠᠨ||
 ᠠᠲᠠ|gelding|ata
-ᠠᠳᠠ|demon|ada
+ᠠᠳᠠ|demon|a§d§a
 ᠠᠶ᠋ᠢᠮᠠᠭ||
 ᠠᠷᠰᠯᠠᠩ||
-ᠡᠨᠳᠡ|here|əndə
+ᠡᠨᠳᠡ|here|ə§n§d§ə
 ᠡᠮᠦᠨ ᠡ||
 ᠡᠯᠴᠢᠨ ᠦ ᠭᠠᠵᠠᠷ||
 ᠡᠳᠦᠭᠡ|now||eduge
-ᠡᠵᠢ|mother|əːd͡ʒ|eǰi
+ᠡᠵᠢ|mother|eːt͡ʃ|eǰi
 ᠡᠷᠴᠢᠰ||
-ᠢᠮᠠᠭ᠎ᠠ|goat|jamaː|imag·a
+ᠢᠮᠠᠭ᠎ᠠ|goat|ja§m§aː§‹§§‹|imag·a
 ᠣ᠋ᠣ||
-ᠣᠷᠤᠰ||
-ᠣᠷᠳᠤ||
+ᠣᠷᠤᠰ|Russians|ɔ.§r§ʊ§s
+ᠣᠷᠳᠤ|camp|ɔ§r§d§ʊ
 ᠤᠯᠠᠭᠠᠨ||
 ᠤᠯᠠᠭᠠᠨᠪᠠᠭᠠᠲᠤᠷ||
 ᠤᠯᠠᠭᠠᠨᠴᠠᠪᠬᠣᠲᠠ||
@@ -29,11 +29,11 @@ autoExpandExamples.mn = `
 ᠤᠰᠤ||
 ᠤᠰᠤᠨ||
 ᠤᠳᠬ᠎ᠠ|meaning|utaɡ|ʊdx·a
-ᠤᠵᠡᠭᠦᠯᠬᠦ|to show|ud͡ʒuuləx|uǰəgulxu
-ᠤᠷᠲᠤ||
-ᠥᠨᠳᠡᠭᠡ||
+ᠤᠵᠡᠭᠦᠯᠬᠦ|to show|u§d͡ʒ§u§–§u§lə§x§–|uǰəgulxu
+ᠤᠷᠲᠤ|long|ʊ§r§t§ʊ
+ᠥᠨᠳᠡᠭᠡ|egg|ɵ§n§d§ᵊ§k§
 ᠥᠭᠡᠯᠡᠳ||
-ᠦᠵᠡᠬᠦ|to see|ud͡ʒəx|uǰexu
+ᠦᠵᠡᠬᠦ|to see|u§t͡s§ə§x§–|uǰexu
 ᠦᠵᠡᠭᠦᠯᠬᠦ|to show|ud͡ʒuːləx|uǰegulxu
 ᠨᠠᠢ᠍ᠮᠠ|eight|naima||nai³ma
 ᠨᠠᠭᠤᠷ||
@@ -53,7 +53,7 @@ autoExpandExamples.mn = `
 ᠪᠡᠯᠡᠭ|gift||beleg
 ᠪᠡᠯᠭᠦᠲᠡᠢ||
 ᠪᠢ||
-ᠪᠢᠴᠢᠭᠡᠴᠢ||
+ᠪᠢᠴᠢᠭᠡᠴᠢ|clerk|ˈp§i§t͡ɕʰ§§§eː§t͡ɕʰ§
 ᠪᠢᠴᠢᠯ ᠠᠮᠢᠨ ᠰᠤᠳᠤᠯᠤᠯ||
 ᠪᠣᠯᠵᠣᠮᠣᠷ|sparrow|pɔld͡ʒmɔr|bɔlǰɔmɔr
 ᠪᠣᠷᠵᠢᠭᠢᠨ||
@@ -65,7 +65,7 @@ autoExpandExamples.mn = `
 ᠬᠠᠨᠠ|outer casing of a vein||xana
 ᠬᠠᠨᠵᠢ||
 ᠬᠠᠭᠠᠨ|khan|xaan|xagan
-ᠬᠡᠯᠡ|language|xəl|xele
+ᠬᠡᠯᠡ|language|ˈx§e§ɮ|xele
 ᠬᠡᠷᠡᠯᠳᠤᠨ᠎ᠡ|fight|xərəldunə
 ᠬᠢᠲᠠᠳ||
 ᠬᠣᠩᠬᠤ|bell|xɔŋx|xɔŋxʊ
@@ -88,24 +88,26 @@ autoExpandExamples.mn = `
 ᠭᠣᠯᠮᠤᠳ||
 ᠭᠤᠸ ᠠ||
 ᠭᠦᠮᠦᠨ|person||gumun
-ᠭᠦᠷᠦᠨ||
+ᠭᠦᠷᠦᠨ|state|ˈk§u§r§e§ŋ
 ᠭᠦᠷᠪᠡᠯ|lizard|gurpəl|gurbəl
 ᠮᠠᠨᠵᠤᠤᠷ||
 ᠮᠠᠯᠭᠠᠢ|hat|malɣai
 ᠮᠡᠯᠡᠬᠡᠢ|frog|məlxiː|melexei
 ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ|Mongolian language|mɔŋɢɔ̆ɮ xeɮ
-ᠮᠣᠩᠭᠣᠯ||
+ᠮᠣᠩᠭᠣᠯ|Mongol|ˈm§ɔ§ŋ§k§ɔ§ɮ
 ᠮᠤᠤᠷ|cat|mʊʊr
 ᠮᠥᠭᠦ|mushroom|moog|mogu
 ᠮᠥᠰᠦᠨ||
 ᠮᠦᠦᠷ||
 ᠯᠠᠮᠠ||
 ᠯᠠᠲ᠋ᠢᠨ ᠴᠠᠭᠠᠨ ᠲᠣᠯᠤᠭᠠᠢ||
-ᠰᠠᠮ|comb|sam
+ᠰᠠᠮ|comb|s§a§m
 ᠰᠠᠶ᠋ᠢᠨ ᠪᠠᠶ᠋ᠢᠨ ᠠ ᠤᠤ||
-ᠰᠠᠶ᠋ᠢᠨ/ᠰᠠᠶᠢᠨ|good||say¹in/sayin
+ᠰᠠᠶ᠋ᠢᠨ|good||say¹in
+ᠰᠠᠶᠢᠨ|good||sayin
+ᠰᠠᠢ᠋ᠨ|good||sa¹in
 ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠋ ᠠ ᠤᠤ||
-ᠰᠡᠮ|quietly|səm||sem
+ᠰᠡᠮ|quietly|s§ə§m||sem
 ᠰᠡᠯᠡᠮᠡ|sword|sələm|seleme
 ᠰᠤᠮᠤ||
 ᠰᠦᠮ ᠡ||
@@ -123,7 +125,7 @@ autoExpandExamples.mn = `
 ᠲᠣᠭᠣᠰᠤ|dust|tɔɔs|tɔgɔsʊ
 ᠲᠣᠯᠤᠭᠠᠢ||
 ᠲᠤᠸᠠ||
-ᠲᠥᠮᠦᠰᠦ|potato|toms|tomusu
+ᠲᠥᠮᠦᠰᠦ|potato|t§o§m§§s§|tomusu
 ᠲᠥᠯᠦᠢ||
 ᠲᠸᠾᠷᠠᠨ||
 ᠳ᠋ᠢᠶᠠᠩᠬᠤᠸᠠ||
@@ -157,28 +159,30 @@ autoExpandExamples.mn = `
 ᠵᠣᠷᠲᠠᠢ|lucky||ǰɔrtai
 ᠵᠦ᠋ᠩᠭ᠋ᠠᠷ||
 ᠶᠠᠪᠤᠬᠤ|to go|japax|yabʊxʊ
-ᠶᠠᠪᠤᠭᠤᠯᠬᠤ|to send|japʊlax|yabʊgʊlxʊ
+ᠶᠠᠪᠤᠭᠤᠯᠬᠤ|to send|j§a§p§ʊ§§§lə§x§|yabʊgʊlxʊ
 ᠸᠠᠩ||
 ᠸᠢᠳᠢᠣ᠋||
 ᠸᠢᠺᠢᠫᠧᠳᠢᠶᠠ|Wikipedia||viḳipədiya
 ᠺᠢᠨᠣ᠋|theatre (archaic form)|kino|ḳinɔ¹
 ᠼᠠᠭᠠᠨ|white||cagan
-ᠾᠧᠵᠢᠩ||
+ᠾᠧᠵᠢᠩ|Hejing (Chinese county)|
 ᡀᠠᠰᠠ||
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+ᠴᠠᠰᠤ|snow|t͡s§a§s§
+ᠡᠮᠡᠭᠲᠡᠢ|woman|e§m§ə§ɡ§tʰ§e
+ᠪᠡᠭᠡᠵᠢᠩ|Beijing|b§eː§§§d͡ʒ§i§ŋ
+ᠯᠢᠷ|pear|ɮiːr
+ᠵᠢᠵᠢᠭ|small|d͡ʒ§i§d͡ʒ§i§ɡ
+ᠡᠯᠵᠢᠭᠡ|donkey|ˈi§ɮ§t͡ɕ§i§k§
+ᠢᠷᠡᠬᠦ|to come|i§r§ə§x§
+ᠢᠪᠡᠭᠡᠯ|care, aid|i§w§eː§§§ɮ
+ᠢᠯᠡᠳᠬᠡᠯ|report|ˈi§ɮ§§tʰ§k§e§ɮ
+ᠤᠤ|final interrogative particle|ˈʊː
+ᠡᠭᠦᠯᠡ|cloud|§§uː§l§
+ᠲᠷᠣᠯᠯᠧᠶᠢᠪᠦ᠋ᠰ|trolleybus|
+ᠴᠡᠷᠢᠭ|soldier||čerig
 
 
 
