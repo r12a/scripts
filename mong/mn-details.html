@@ -1,6 +1,17 @@
 /*
 <!DOCTYPE html>
+<html>
+<head>
 <meta charset="utf-8">
+<style>
+body { padding: 2rem; }
+.insertTranscription { display: block; color:red; font-size: 2rem; margin-top: 3rem; border-block-start: 2px solid #eee; }
+.leadin { color: chocolate; font-size: 80%; font-weight: bold; margin-top: 2rem; }
+a { color: teal; font-size: 80%; }
+.h { font-size: 200%; padding-inline-end: 2rem; display: inline-block; }
+</style>
+<link rel="stylesheet" href="local.css">
+<body>
 */
 
 
@@ -72,7 +83,14 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 
 '\u{180E}': `
 <p class="insertTranscription">&#x180E;</p>
-<p>Used where a final <span class="codepoint"><span class="cpchar" lang="mn">&#x1820;</span> <a href="#char1820">[<span class="uname">U+1820 MONGOLIAN LETTER A</span>]</a></span> or <span class="codepoint"><span class="cpchar" lang="mn">&#x1821;</span> <a href="#char1821">[<span class="uname">U+1821 MONGOLIAN LETTER E</span>]</a></span> vowel is separated from the rest of a word. Unlike characters following <a href="#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a>, the <span class="name">A</span> or <span class="name">E</span> following a word is not a suffix, but an integral part of the word. Whether a final <span class="name">A</span> or <span class="name">E</span> is joined or separated is a purely lexical decision, and not an instance of varying orthography. MVS always requires the forward tail form of the following <span class="name">A</span> or <span class="name">E</span> letter. The preceding letter form varies according to the letter, and in some cases whether this is traditional or modern orthography. Examples: </p>
+<p>In some Mongolian words that end with <span class="codepoint"><span class="cpchar" lang="mn">ᠠ</span> <a href="/scripts/mongolian/block#char1820">[<span class="uname">U+1820 MONGOLIAN LETTER A</span>]</a></span> or <span class="codepoint"><span class="cpchar" lang="mn">ᠡ</span> <a href="/scripts/mongolian/block#char1821">[<span class="uname">U+1821 MONGOLIAN LETTER E</span>]</a></span> a special 'forward tail' glyph shape is used, and the glyph  is slightly separated from the rest of the word (see the example below). The shape of the previous letter may also change, when this occurs, depending on the letter and sometimes whether this is a traditional or modern orthography.  Whether this forward tail shaping is applied or not depends on the word – there are no rules to determine when to apply it.</p>
+
+<p>The final letter is not a suffix, but is an integral part of the word, and line breaking, word selection, etc. should not split the start of the word from the last letter, even though there is a gap. </p>
+
+<p class="info">To achieve this effect in Unicode, it is currently necessary to use 
+<span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x180E;</span><img src="../../c/Mongolian/180E.png" alt="MVS" style="vertical-align:middle"> [<a href="/scripts/mongolian/block#char180E"><span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span></a>]</span>
+immediately before the last letter. Click on the  text in the example below to see the sequence of characters.</p>
+
 <p>Without MVS:
 <span class="eg" lang="mn">ᠬᠠᠨᠠ</span>
 </p>
@@ -83,44 +101,53 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 
 '\u{1810}': `
 <p class="insertTranscription">&#x1810;</p>
+<p><span class="h">0</span> digit.</p>
 `,
 
 '\u{1811}': `
 <p class="insertTranscription">&#x1811;</p>
+<p><span class="h">1</span> digit.</p>
 `,
 
 '\u{1812}': `
 <p class="insertTranscription">&#x1812;</p>
+<p><span class="h">2</span> digit.</p>
 `,
 
 '\u{1813}': `
 <p class="insertTranscription">&#x1813;</p>
+<p><span class="h">3</span> digit.</p>
 `,
 
 '\u{1814}': `
 <p class="insertTranscription">&#x1814;</p>
+<p><span class="h">4</span> digit.</p>
 `,
 
 '\u{1815}': `
 <p class="insertTranscription">&#x1815;</p>
+<p><span class="h">5</span> digit.</p>
 `,
 
 '\u{1816}': `
 <p class="insertTranscription">&#x1816;</p>
+<p><span class="h">6</span> digit.</p>
 `,
 
 '\u{1817}': `
 <p class="insertTranscription">&#x1817;</p>
+<p><span class="h">7</span> digit.</p>
 `,
 
 '\u{1818}': `
 <p class="insertTranscription">&#x1818;</p>
+<p><span class="h">8</span> digit.</p>
 `,
 
 '\u{1819}': `
 <p class="insertTranscription">&#x1819;</p>
+<p><span class="h">9</span> digit.</p>
 `,
-
 
 
 
@@ -129,6 +156,7 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 <p><span class="ipa h">a ~ ə</span> ATR- (back) vowel.</p>
 <p><span class="eg" lang="mn">ᠠᠳᠠ</span></p>
 <p><span class="eg" lang="mn">ᠢᠮᠠᠭ᠎ᠠ</span></p>
+<p><span class="eg" lang="mn">ᠠᠭᠠᠭ</span></p>
 
 <p class="leadin">Vowel combinations</p>
 <p>This letter is used alongside other vowels in the following sequences:</p>
@@ -137,8 +165,23 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 <li><span class="ex" lang="mn">᠊ᠠᠤ᠊ ᠊ᠠᠤ</span> <span class="ipa h">aʊ</span> </li>
 </ul>
 <p><span class="trans">ai</span> is sometimes pronounced <span class="ipa h">æ</span> or <span class="ipa h">e</span></p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/a.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/028.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/032.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/002.png" alt=""/><img src="../../mongolian-variants/i/024.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/024.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/024.png" alt=""/><img src="../../mongolian-variants/i/025.png" alt=""/></td>
+</tr>
 <tr>
 <th></th>
 <th>vc-</th>
@@ -162,16 +205,11 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1820;</span></span></td>
 <td><span class="ex" lang="mn">&#x180A;&#x182A;&#x180E;<span class="hi">&#x1820;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/028.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/032.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/002.png" alt=""/><img src="../../mongolian-variants/i/024.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/024.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/024.png" alt=""/><img src="../../mongolian-variants/i/025.png" alt=""/></td>
-</tr>
 </table>
-<p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
+</details>
+
+<p class="leadin">Variants</p>
+<p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>Final <img src="../../mongolian-variants/i/002.png" alt=""/> is used after  <span class="vright">n, <strong>q</strong>, <strong>g</strong>, m, l , s, sh, t, d, ch, j, y, r, w</span>.</li>
 <li>Final <img src="../../mongolian-variants/i/024.png" alt=""/>, is used after  <span class="vright">b, p, ts, dz, h</span>. </li>
@@ -200,6 +238,8 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
  
 <p><span class="eg" lang="mn">ᠡᠮᠡᠭᠲᠡᠢ</span></p>
 <p><span class="eg" lang="mn">ᠪᠡᠭᠡᠵᠢᠩ</span></p>
+<p><span class="eg" lang="mn">ᠡᠬᠡ</span></p>
+<p><span class="eg" lang="mn">ᠡᠭᠦᠯᠡ</span></p>
 
 <p class="leadin">Vowel combinations</p>
 <p>This letter is used alongside other vowels in the following sequences:</p>
@@ -208,8 +248,23 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 <li><span class="ex" lang="mn">᠊ᠡᠦ᠊ ᠊ᠡᠦ</span> <span class="ipa h">əu</span></li>
 </ul>
 <p>An alternate form which is only used for foreign words is encoded as <span class="codepoint"><span class="cpchar" lang="mn">&#x1827;</span> <a href="#char1827">[<span class="uname">U+1827 MONGOLIAN LETTER EE</span>]</a></span>.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/e.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/025.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/032.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/002.png" alt=""/><img src="../../mongolian-variants/i/024.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/024.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/024.png" alt=""/><img src="../../mongolian-variants/i/025.png" alt=""/></td>
+</tr>
 <tr>
 <th></th>
 <th>vc-</th>
@@ -233,15 +288,8 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1821;</span></span></td>
 <td><span class="ex" lang="mn">&#x180A;&#x182A;&#x180E;<span class="hi">&#x1821;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/025.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/032.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/002.png" alt=""/><img src="../../mongolian-variants/i/024.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/024.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/024.png" alt=""/><img src="../../mongolian-variants/i/025.png" alt=""/></td>
-</tr>
 </table>
+</details>
 
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
@@ -266,8 +314,10 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 '\u{1822}': `
 <p class="insertTranscription">&#x1822;</p>
 <p><span class="ipa h">i ~ ə</span> neutral vowel.</p>
+<p><span class="eg" lang="mn">ᠢᠳᠡᠬᠦ</span></p>
 <p><span class="eg" lang="mn">ᠵᠢᠵᠢᠭ</span></p>
 <p><span class="eg" lang="mn">ᠡᠯᠵᠢᠭᠡ</span></p>
+<p><span class="eg" lang="mn">ᠮᠡᠨᠡᠬᠡᠢ</span></p>
 
 <p>Often absorbed into the preceding syllable at the end of a word in modern Mongolian.</p>
 <p>Following a consonant, Latin transliteration of the default medial glyph is <span class="trans">i</span>. Following a vowel, Latin transliteration of the alternate medial glyph may be <span class="trans">yi</span>, with rare exceptions like <span class="trans">naim</span> (<span class="meaning">eight</span>) or <span class="trans">Naiman</span>.</p>
@@ -284,8 +334,22 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 <li><span class="ex" lang="mn">᠊ᠦᠢ᠊ ᠊ᠦᠢ</span> <span class="ipa">ui</span> </li>
 <li><span class="ex" lang="mn">᠊ᠢᠦ᠊ ᠊ᠢᠦ</span> <span class="ipa">iu</span> </li>
 </ul>
-<p><strong class="leadin">Shapes:</strong>  </p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/i.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/031.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/038.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/070.png" alt=""/><img src="../../mongolian-variants/i/054.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/070.png" alt=""/><img src="../../mongolian-variants/i/038.png" alt=""/></td>
+</tr>
 <tr>
 <th></th>
 <th>vc-</th>
@@ -308,14 +372,9 @@ is used in English. The descriptions file of the Unicode Standard clarifies that
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1822;</span>&#x182A;&#x180A;</span></td>
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1822;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/031.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/038.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/070.png" alt=""/><img src="../../mongolian-variants/i/054.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/070.png" alt=""/><img src="../../mongolian-variants/i/038.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>A trailing <span class="trans">i</span> in a diphthong is represented using two strokes (see examples above), <img src="../../mongolian-variants/i/065.png" alt=""/>.</li>
@@ -343,6 +402,7 @@ which is written
 <p><span class="ipa h">ɔ ~ ə</span> ATR- (back) vowel.</p>
 <p><span class="eg" lang="mn">ᠣᠷᠳᠤ</span></p>
 <p><span class="eg" lang="mn">ᠮᠣᠩᠭᠣᠯ</span></p>
+<p><span class="eg" lang="mn">ᠪᠣᠭᠣ</span></p>
 
 <p class="leadin">Vowel combinations</p>
 <p>This letter is used alongside other vowels in the following sequences:</p>
@@ -351,9 +411,22 @@ which is written
 <li><span class="ex" lang="mn">᠊ᠣᠤ᠊ ᠊ᠣᠤ</span> <span class="ipa">ɔʊ</span> </li>
 </ul>
 <p><span class="ipa">ɔi</span> is sometimes pronounced <span class="ipa">œ</span>.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/o.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/127.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/109.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/></td>
+</tr>
 <tr>
 <th></th>
 <th>vc-</th>
@@ -372,13 +445,10 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1823;</span>&#x182A;&#x180A;</span></td>
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1823;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/127.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/109.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>Final<img src="../../mongolian-variants/i/116.png" alt=""/> is used after  <span class="vright"> n, <strong>q</strong>, <strong>g</strong>, m, l , s, sh, t, d, ch, j, y, r, w</span>.</li>
@@ -402,6 +472,7 @@ which is written
 <p><span class="ipa h">ʊ ~ ə</span> ATR- (back) vowel.</p>
 <p><span class="eg" lang="mn">ᠤᠷᠲᠤ</span></p>
 <p><span class="eg" lang="mn">ᠶᠠᠪᠤᠭᠤᠯᠬᠤ</span></p>
+<p><span class="eg" lang="mn">ᠠᠪᠤ</span></p>
 
 <p class="leadin">Vowel combinations</p>
 <p>This letter is used alongside other vowels in the following sequences:</p>
@@ -410,8 +481,21 @@ which is written
 <li><span class="ex" lang="mn">᠊ᠣᠤ᠊ ᠊ᠣᠤ</span> <span class="ipa">ɔʊ</span></li>
 <li><span class="ex" lang="mn">᠊ᠤᠤ᠊ ᠊ᠤᠤ</span> <span class="ipa">ʊʊ</span></li>
 </ul>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/u.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/127.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/109.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/109.png" alt=""/></td>
+</tr>
 <tr>
 <th></th>
 <th>vc-</th>
@@ -434,14 +518,10 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1824;</span>&#x182A;&#x180A;</span></td>
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1824;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/127.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/109.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/109.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>Final<img src="../../mongolian-variants/i/116.png" alt=""/> is used after  <span class="vright"> n, <strong>q</strong>, <strong>g</strong>, m, l , s, sh, t, d, ch, j, y, r, w</span>.</li>
@@ -467,6 +547,7 @@ which is written
 <p><span class="ipa h">o ~ ə</span>  ATR+ (front) vowel.</p>
 <p><span class="eg" lang="mn">ᠥᠨᠳᠡᠭᠡ</span></p>
 <p><span class="eg" lang="mn">ᠲᠥᠮᠦᠰᠦ</span></p>
+<p><span class="eg" lang="mn">ᠲᠥᠭᠥᠷᠢᠭ</span></p>
 
 <p class="leadin">Vowel combinations</p>
 <p>This letter is used alongside other vowels in the following sequences:</p>
@@ -475,9 +556,20 @@ which is written
 <li><span class="ex" lang="mn">᠊ᠥᠦ᠊ ᠊ᠥᠦ</span> <span class="ipa">ou</span></li>
 </ul>
 
-<p class="leadin">Shapes</p>
 
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/oe.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/133.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/109.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/></td>
+</tr>
 <tr>
 <th></th>
 <th>vc-</th>
@@ -496,13 +588,10 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1825;</span>&#x182A;&#x180A;</span></td>
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1825;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/133.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/109.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>Final<img src="../../mongolian-variants/i/116.png" alt=""/> is used after  <span class="vright"> n, <strong>q</strong>, <strong>g</strong>, m, l , s, sh, t, d, ch, j, y, r, w</span>.</li>
@@ -536,8 +625,21 @@ which is written
 <li><span class="ex" lang="mn">᠊ᠥᠦ᠊ ᠊ᠥᠦ</span> <span class="ipa">ou</span></li>
 <li><span class="ex" lang="mn">᠊ᠦᠦ᠊ ᠊ᠦᠦ</span> <span class="ipa">uu</span></li>
 </ul>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ue.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/133.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/109.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/><img src="../../mongolian-variants/i/133.png" alt=""/></td>
+</tr>
 <tr>
 <th></th>
 <th>vc-</th>
@@ -561,14 +663,11 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1826;</span>&#x182A;&#x180A;</span></td>
 <td><span class="ex" lang="mn">&#x180A;&#x182A;<span class="hi">&#x1826;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/133.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/109.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/><img src="../../mongolian-variants/i/265.png" alt=""/><img src="../../mongolian-variants/i/133.png" alt=""/></td>
-</tr>
+
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>Final<img src="../../mongolian-variants/i/116.png" alt=""/> is used after  <span class="vright"> n, <strong>q</strong>, <strong>g</strong>, m, l , s, sh, t, d, ch, j, y, r, w</span>.</li>
@@ -598,8 +697,20 @@ which is written
 <p>This is an alternate form of <span class="codepoint"><span class="cpchar" lang="mn">&#x1821;</span> <a href="#char1821">[<span class="uname">U+1821 MONGOLIAN LETTER E</span>]</a></span> which is used for foreign loanwords.
 </p>
 
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ee.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/150.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/143.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/145.png" alt=""/></td>
+</tr>
 <tr>
 <th></th>
 <th>vc-</th>
@@ -612,13 +723,10 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x1832;<span class="hi">&#x1827;</span>&#x1832;&#x180A;</span></td>
 <td><span class="ex" lang="mn">&#x180A;&#x1832;<span class="hi">&#x1827;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/150.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/143.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/145.png" alt=""/></td>
-</tr>
+
 </table>
+</details>
+
 
 <p class="leadin">Confusables</p>
 <p>The medial and final forms of this letter are identical to those of <span class="codepoint" translate="no"><span lang="mn">&#x1838;</span> [<a href="/scripts/mongolian/block#char1838"><span class="uname">U+1838 MONGOLIAN LETTER WA</span></a>]</span>.</p>
@@ -627,12 +735,33 @@ which is written
 
 '\u{1828}': `
 <p class="insertTranscription">&#x1828;</p>
-<p><span class="ipa h">n</span> eg.
-<span class="eg" lang="mn">ᠨᠡᠷ᠎ᠠ</span>
-</p>
+<p><span class="ipa h">n</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠨᠣᠭᠤᠭᠠᠨ</span></p>
+<p><span class="eg" lang="mn">ᠡᠬᠡᠨᠡᠷ</span></p>
+<p><span class="eg" lang="mn">ᠡᠨᠳᠡ</span></p>
+<p><span class="eg" lang="mn">ᠭᠠᠳᠠᠨ᠎ᠠ</span></p>
+<p><span class="eg" lang="mn"></span></p>
+<p><span class="eg" lang="mn"></span></p>
+
 <p><span class="ipa h">ŋ</span> in syllable-final position.</p>
-<p class="leadin">Shapes</p>
+<p><span class="eg" lang="mn">ᠣᠯᠠᠨ</span></p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/na.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../pickers/mong-mn/v/1828s.png" alt=""/></td>
+<td><img src="../../pickers/mong-mn/v/1828m1.png" alt=""/></td>
+<td><img src="../../pickers/mong-mn/v/1828m.png" alt=""/></td>
+<td><img src="../../pickers/mong-mn/v/1828f.png" alt=""/></td>
+<td><img src="../../pickers/mong-mn/v/1828m2.png" alt=""/></td>
+<td><img src="../../pickers/mong-mn/v/1828s.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -707,16 +836,11 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1828;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../pickers/mong-mn/v/1828s.png" alt=""/></td>
-<td><img src="../../pickers/mong-mn/v/1828m1.png" alt=""/></td>
-<td><img src="../../pickers/mong-mn/v/1828m.png" alt=""/></td>
-<td><img src="../../pickers/mong-mn/v/1828f.png" alt=""/></td>
-<td><img src="../../pickers/mong-mn/v/1828m2.png" alt=""/></td>
-<td><img src="../../pickers/mong-mn/v/1828s.png" alt=""/></td>
-</tr>
+
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li><img src="../../pickers/mong-mn/v/1828m1.png" alt=""/> is used in medial syllable-initial positions, medial syllable final uses <img src="../../pickers/mong-mn/v/1828m.png" alt=""/></li>
@@ -737,16 +861,32 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">n, ŋ</span></p>
 `,
 
+
+
+
+
 '\u{1829}': `
 <p class="insertTranscription">&#x1829;</p>
-<p><span class="ipa h">ŋ</span> eg.
-<span class="eg" lang="mn">ᠲᠢᠩᠬᠢᠮ</span>
-</p>
-<p>Only used at end of word (medial form used for composites). </p>
+<p><span class="ipa h">ŋ</span> consonant, only used at end of word (medial form used for composites).</p>
+<p><span class="eg" lang="mn">ᠱᠣᠩᠬᠤᠷ</span></p>
+<p><span class="eg" lang="mn">ᠮᠠᠨᠠᠩ</span></p>
+
 <p>Transcribes Tibetan <a href="tibetan#char0F44"><span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">&#x0F44;</span></a>; Sanskrit <a href="devanagari#char0919"><span class="uname">U+0919 DEVANAGARI LETTER NGA</span> <span lang="sa">&#x0919;</span></a>.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ang.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/011.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/020.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syll. final</td>
@@ -791,12 +931,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1829;</span>&#x180A;</span></td>
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1829;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/011.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/020.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p></p>
 <p>There are no variants in normal Mongolian text, but the following historical variants are attested: </p>
 <ul>
@@ -807,14 +945,40 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">ŋ</span>        </p>
 `,
 
+
+
+
+
 '\u{182A}': `
 <p class="insertTranscription">&#x182A;</p>
-<p><span class="ipa h">p, w</span> eg.
-<span class="eg" lang="mn">ᠪᠠᠷᠰ</span>
-</p>
-<p><span class="ipa h">v</span> when used  to transcribe foreign words in classical Mongolian. This is the most common use of  Cyrillic <span class="trans">в</span> in Mongolian.</p>
-<p class="leadin">Shapes</p>
+<p><span class="ipa h">p ~ w</span> consonant.</p>
+
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠪᠠᠷᠰ</span></p>
+<p><span class="eg" lang="mn">ᠪᠦᠬᠦ</span></p>
+<p><span class="eg" lang="mn">ᠤᠯᠠᠭᠠᠨᠪᠠᠭᠠᠲᠤᠷ</span></p>
+<p><span class="eg" lang="mn">ᠰᠢᠪᠠᠭᠤ</span></p>
+<p><span class="eg" lang="mn">ᠠᠷᠪᠠ</span></p>
+</div>
+
+<p><span class="ipa h">v</span> when used  to transcribe foreign words or classical Mongolian. This is the most common use of  Cyrillic <span class="trans">в</span> in Mongolian.</p>
+
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ba.png" alt="">
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/122.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/122.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -889,16 +1053,10 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x1826;<span class="hi">&#x182A;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/122.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/122.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors:</p>
 <ul>
 <li><a href="#char180E"><span class="uname"></span></a>Forms ligatures with ɔ, ʊ, o, and u.</li>
@@ -911,15 +1069,35 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">b</span></p>
 `,
 
+
+
+
 '\u{182B}': `
 <p class="insertTranscription">&#x182B;</p>
-<p><span class="ipa h">pʰ</span> eg.
-<span class="eg transc" lang="mn">ᠸᠢᠺᠢᠫᠧᠳᠢᠶᠠ</span>
-</p>
+<p><span class="ipa h">pʰ</span> consonant.</p>
+
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠫᠢᠸᠣ᠋</span></p>
+<p><span class="eg" lang="mn">ᠸᠢᠺᠢᠫᠧᠳᠢᠶᠠ</span></p>
+</div>
+
+
 <p>Mostly used for foriegn words. One source says mostly used at the beginning of  foreign words<tt>ws</tt>, but another indicates use in medial and final positions only.</p>
 <p> Transcribes <span class="codepoint"><span class="cpchar" lang="mn">&#x0F54;</span> <a href="tibetan#char0F54">[<span class="uname">U+0F54 TIBETAN LETTER PA</span>]</a></span>.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/pa.png" alt="">
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/094.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/094.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/094.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/095.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -981,14 +1159,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x182B;</span>&#x180A;</span></td>
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x182B;</span></span></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/094.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/094.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/094.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/095.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li><a href="#char180E"><span class="uname"></span></a>Forms ligatures with ɔ, ʊ, o, and u.</li>
@@ -997,15 +1171,41 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">p</span></p>
 `,
 
+
+
+
 '\u{182C}': `
 <p class="insertTranscription">&#x182C;</p>
-<p><span class="ipa h">x</span></p>
-<p>Mostly used in masculine words, eg.
-<span class="eg transc" lang="mn">ᠬᠠᠭᠠᠨ</span>
-</p>
+<p><span class="ipa h">x</span> consonant. Mostly used in masculine words.</p>
+
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠬᠠᠭᠠᠨ</span></p>
+<p><span class="eg" lang="mn">ᠬᠡᠦᠬᠡᠳ</span></p>
+<p><span class="eg" lang="mn">ᠬᠣᠷᠤᠬᠠᠢ</span></p>
+<p><span class="eg" lang="mn">ᠮᠡᠯᠡᠬᠡᠢ</span></p>
+<p><span class="eg" lang="mn">ᠮᠡᠳᠡᠬᠦ</span></p>
+<p><span class="eg" lang="mn">ᠤᠳᠬ᠎ᠠ</span></p>
+</div>
+
 <p>Appears to be used only before a vowel.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/qa.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/089.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/057.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/057.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/007.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/007.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/071.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1079,16 +1279,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x182C;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/089.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/057.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/057.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/007.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/007.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/071.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>As a velar consonant, this character uses different visual shapes  before masculine and feminine vowels.</li>
@@ -1109,29 +1303,60 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">x</span></p>
 `,
 
+
+
+
+
 '\u{182D}': `
 <p class="insertTranscription">&#x182D;</p>
-<p><span class="ipa h">ɣ</span> before masculine vowels, eg.
-<span class="eg" lang="mn">ᠭᠠᠵᠠᠷ</span>
-<span class="eg" lang="mn">ᠭᠠᠬᠠᠢ</span>
-</p>
-<p>However, unless reading classical literary Mongolian, when used between two vowels this sound is typically elided, leaving a long vowel. For example, the following  is pronounced as if it was written like <span class="trans">xaan</span>:
-<span class="eg transc" lang="mn">ᠬᠠᠭᠠᠨ</span>
-</p>
-<p>Some exceptions exist, such as
-<span class="eg" lang="mn">ᠼᠠᠭᠠᠨ</span>
-</p>
-<p><span class="ipa h">g</span> before feminine vowels or non-vowels, eg.
-<span class="eg" lang="mn">ᠡᠳᠦᠭᠡ</span>
-<span class="eg" lang="mn">ᠵᠣᠷᠢᠭᠲᠠᠢ</span>
-<span class="eg" lang="mn">ᠪᠡᠯᠡᠭ</span>
-</p>
-<p><span class="ipa h">k</span> also before feminine vowels, eg.
-<span class="eg" lang="mn">ᠭᠦᠮᠦᠨ</span>
-</p>
+<p><span class="ipa h">∅</span> typically elided when used between two vowels (unless reading classical literary Mongolian), usually leaving a long vowel. Click on the following examples to see the elided letters.</p>
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠬᠠᠭᠠᠨ</span></p>
+<p><span class="eg" lang="mn">ᠠᠭᠤᠯᠠ</span></p>
+<p><span class="eg" lang="mn">ᠡᠭᠦᠯᠡ</span></p>
+<p><span class="eg" lang="mn">ᠰᠢᠷᠡᠭᠡ</span></p>
+</div>
 
-<p class="leadin">Shapes</p>
+<p>Some exceptions exist, such as</p>
+<p><span class="eg" lang="mn">ᠴᠠᠭᠠᠨ</span></p>
+
+<p><span class="ipa h">ɢ ~ ɣ</span> before back vowels.</p>
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠭᠠᠬᠠᠢ</span></p>
+<p><span class="eg" lang="mn">ᠮᠠᠯᠭᠠᠢ</span></p>
+<p><span class="eg" lang="mn">ᠵᠣᠭᠰᠤᠬᠤ</span></p>
+<p><span class="eg" lang="mn">ᠲᠠᠶᠠᠭ</span></p>
+<p><span class="eg" lang="mn">ᠮᠣᠭᠠᠢ</span></p>
+<p><span class="eg" lang="mn">ᠵᠥᠭᠡᠢ</span></p>
+<p><span class="eg" lang="mn">ᠢᠮᠠᠭ᠎ᠠ</span></p>
+</div>
+
+<p><span class="ipa h">g ~ k</span> before front vowels or non-vowels.</p>
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠭᠡᠷᠭᠡᠢ</span></p>
+<p><span class="eg" lang="mn">ᠥᠭᠬᠦ</span></p>
+<p><span class="eg" lang="mn">ᠪᠡᠯᠡᠭ</span></p>
+<p><span class="eg" lang="mn">ᠲᠥᠭᠥᠷᠢᠭ</span></p>
+<p><span class="eg" lang="mn">ᠥᠷᠭᠡᠨ</span></p>
+</div>
+
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ga.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/090.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/058.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/057.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/007.png" alt=""/><img src="../../mongolian-variants/i/017.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/008.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1202,15 +1427,9 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x1826;<span class="hi">&#x182D;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/090.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/058.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/057.png" alt=""/><img src="../../mongolian-variants/i/071.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/007.png" alt=""/><img src="../../mongolian-variants/i/017.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/008.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>As a velar consonant, this character uses different visual shapes  before masculine and feminine vowels.</li>
@@ -1219,13 +1438,16 @@ which is written
 <li>The medial form with two dots <img src="../../pickers/mong-mn/v/182Dm1.png" alt=""/> is used between vowels. The one with no dots <img src="../../pickers/mong-mn/v/182Dm.png" alt=""/> is used when followed by a consonant.</li>
 <li><img src="../../pickers/mong-mn/v/182Dm2.png" alt=""/> is used before <a href="#char180E"><span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span></a>.</li>
 </ul>
-<p>As an example of a situation where a variant selector <em>is</em> needed, consider the word <span class="eg" lang="mn">ᠭ᠋ᠠᠯ</span>. The first variant selector is needed immediately after the first letter, <span class="trans">g</span>, to prevent the standard two dots appearing (<span class="ex" lang="mn">ᠭᠠᠯ</span> is incorrect).</p>
+<p>As an example of a situation where a variant selector <em>is</em> needed, consider the following word.</p>
+<p><span class="eg" lang="mn">ᠭ᠋ᠠᠯ</span></p>
+<p>The first variant selector is needed immediately after the first letter, <span class="trans">g</span>, to prevent the standard two dots appearing (<span class="ex" lang="mn">ᠭᠠᠯ</span> is incorrect).</p>
 <p>Other variants, requiring a variation selector:</p>
 <ul>
 <li>Isolate <img src="../../mongolian-variants/i/066.png" alt=""/><img src="../../mongolian-variants/i/067.png" alt=""/></li>
 <li>Initial <img src="../../mongolian-variants/i/089.png" alt=""/><img src="../../mongolian-variants/i/081.png" alt=""/></li>
 <li>Medial <img src="../../mongolian-variants/i/008.png" alt=""/><img src="../../mongolian-variants/i/081.png" alt=""/></li>
 </ul>
+
 <p>Historical variants:</p>
 <ul>
 <li>Final <img src="../../mongolian-variants/i/016.png" alt=""/><img src="../../mongolian-variants/i/261.png" alt=""/><img src="../../mongolian-variants/i/098.png" alt=""/><img src="../../mongolian-variants/i/098.png" alt=""/></li>
@@ -1237,13 +1459,34 @@ which is written
 <p class="leadin">Derived from</p><p> Old Uyghur merger of gimel and hath (masculine) or  kaph (feminine).<tt>ws</tt></p>
 `,
 
+
+
+
+
 '\u{182E}': `
 <p class="insertTranscription">&#x182E;</p>
-<p><span class="ipa h">m</span> eg.
-<span class="eg" lang="mn">ᠮᠤᠤᠷ</span>
-</p>
-<p class="leadin">Shapes</p>
+<p><span class="ipa h">m</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠮᠤᠤᠷ</span></p>
+<p><span class="eg" lang="mn">ᠨᠢᠮᠭᠡᠨ</span></p>
+<p><span class="eg" lang="mn">ᠨᠠᠮᠤᠷ</span></p>
+<p><span class="eg" lang="mn">ᠵᠠᠮ</span></p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ma.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/152.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/155.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/155.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/159.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/159.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1314,25 +1557,47 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x1826;<span class="hi">&#x182E;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/152.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/155.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/155.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/159.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/159.png" alt=""/></td>
-</tr>
+
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>According to Wikipedia<tt>ws</tt>, there is a ligated form when <span class="trans">m</span> is followed by <span class="trans">l</span> medially.</p>
 <p class="leadin">Derived from</p><p> Old Uyghur mem.<tt>ws</tt></p>
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">m</span></p>
 `,
 
+
+
+
+
 '\u{182F}': `
 <p class="insertTranscription">&#x182F;</p>
-<p><span class="ipa h">ɮ</span></p>
-<p class="leadin">Shapes</p>
+<p><span class="ipa h">ɮ</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠯᠢᠷ</span></p>
+<p><span class="eg" lang="mn">ᠠᠯᠲᠠ</span></p>
+<p><span class="eg" lang="mn"></span></p>
+<p><span class="eg" lang="mn">ᠪᠣᠳᠤᠯ</span></p>
+<p><span class="eg" lang="mn"></span></p>
+
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/la.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/153.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/156.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/156.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/160.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/160.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/153.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1408,16 +1673,10 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x1826;<span class="hi">&#x182F;</span></span></td>
 <td><p>&nbsp;</p></td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/153.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/156.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/156.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/160.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/160.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/153.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li><p>Ligated forms occur when  <span class="trans">l</span> follows a bow-shaped consonant in loanwords<tt>ws</tt>, such as
@@ -1430,12 +1689,41 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">l</span></p>
 `,
 
+
+
+
 '\u{1830}': `
 <p class="insertTranscription">&#x1830;</p>
-<p><span class="ipa h">s, ʃ</span></p>
-<p> <span class="ipa">ʃ</span> is the pronunciation before <span class="trans">i</span>.</p>
-<p class="leadin">Shapes</p>
+<p><span class="ipa h">s ~ ʃ</span></p>
+
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠰᠠᠯᠬᠢ</span></p>
+<p><span class="eg" lang="mn">ᠬᠢᠮᠤᠰᠤ</span></p>
+<p><span class="eg" lang="mn">ᠨᠢᠰᠬᠦ</span></p>
+<p><span class="eg" lang="mn">ᠲᠣᠭᠤᠰ</span></p>
+<p><span class="eg" lang="mn">ᠰᠢᠪᠠᠭᠤ</span></p>
+<p><span class="eg" lang="mn">ᠰᠢᠷᠡᠭᠡ</span></p>
+</div>
+
+
+<p>It is pronounced <span class="ipa">ʃ</span> before <span class="ipa">i</span>, but also occurs before other vowels.</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/sa.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/161.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/172.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/172.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/186.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/186.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1506,15 +1794,10 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1830;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/161.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/172.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/172.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/186.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/186.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes require variation selectors.</p>
 <ul>
 <li><img src="../../mongolian-variants/i/188.png" alt=""/>  is an older final variant derived from old uyghur zayin (though sometimes rendered as <img src="../../mongolian-variants/i/002.png" alt=""/> as a purely  stylistic preference), eg. <span class="charExample"><span class="ex" lang="mn">ᠴᠢᠩᠭᠢᠰ᠋</span> <span class="trans">činggis</span></span> on the Stele of Yisüngge<tt>ws</tt>.</li>
@@ -1524,12 +1807,39 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span>  <span class="ipa">s, ʃ</span></p>
 `,
 
+
+
+
+
 '\u{1831}': `
 <p class="insertTranscription">&#x1831;</p>
-<p><span class="ipa h"> ʃ</span></p>
-<p>This only occurs in word-final position when it is in modern Mongolian words.<tt>ws</tt></p>
-<p class="leadin">Shapes</p>
+<p><span class="ipa h">ʃ</span></p>
+
+
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠱᠣᠩᠬᠤᠷ</span></p>
+<p><span class="eg" lang="mn">ᠮᠠᠱᠢᠨ</span></p>
+</div>
+
+<!--p>This only occurs in word-final position when it is in modern Mongolian words.<tt>ws</tt></p-->
+
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/sha.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/163.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/174.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/174.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/187.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/187.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1599,25 +1909,45 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1831;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/163.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/174.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/174.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/187.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/187.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Derived from</p><p> Old Uyghur merged samekh and shin.<tt>ws</tt></p>
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa"> ʃ</span></p>
 `,
 
+
+
+
 '\u{1832}': `
 <p class="insertTranscription">&#x1832;</p>
-<p><span class="ipa h">t</span></p>
+<p><span class="ipa h">tʰ</span> consonant.</p>
+
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠲᠥᠮᠦᠰᠦ</span></p>
+<p><span class="eg" lang="mn">ᠠᠯᠲᠠ</span></p>
+</div>
+
 <p>This character is not used in word or syllable final position for Mongolian words.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ta.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/190.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/046.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/046.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/193.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/193.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/190.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1696,16 +2026,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1832;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/190.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/046.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/046.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/193.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/193.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/190.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>Other variants, requiring a variation selector:</p>
 <ul>
 <li>Medial <img src="../../mongolian-variants/i/190.png" alt=""/>.</li>
@@ -1715,11 +2039,38 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">t</span></p>
 `,
 
+
+
+
+
 '\u{1833}': `
 <p class="insertTranscription">&#x1833;</p>
-<p><span class="ipa h">t, tʰ</span></p>
-<p class="leadin">Shapes</p>
+<p><span class="ipa h">t</span> consonant.</p>
+
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠳᠤᠮᠳᠠᠳᠤ ᠤᠯᠤᠰ</span></p>
+<p><span class="eg" lang="mn">ᠤᠳᠬ᠎ᠠ</span></p>
+<p><span class="eg" lang="mn">ᠬᠡᠦᠬᠡᠳ</span></p>
+</div>
+
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/da.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/190.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/046.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/140.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/126.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/126.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/046.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1795,16 +2146,10 @@ which is written
 <td><span class="ex" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1833;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/190.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/046.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/140.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/126.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/126.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/046.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph change should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>Medially, <img src="../../mongolian-variants/i/046.png" alt=""/> is used before a vowel, and <img src="../../mongolian-variants/i/140.png" alt=""/> is used at the end of a syllable.</li>
@@ -1820,12 +2165,37 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">d</span></p>
 `,
 
+
+
+
 '\u{1834}': `
 <p class="insertTranscription">&#x1834;</p>
-<p><span class="ipa h">ʧʰ, tsʰ</span></p>
+<p><span class="ipa h">tsʰ ~ ʧʰ</span> consonant.</p>
+
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠴᠠᠭᠠᠨ</span></p>
+<p><span class="eg" lang="mn">ᠴᠡᠴᠡᠭ</span></p>
+<p><span class="eg" lang="mn">ᠪᠢᠴᠢᠭᠡᠴᠢ</span></p>
+</div>
+
 <p><span class="ipa">ts</span> is used in Modern Mongolian owing to phonetic change in the Khalka dialect.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/cha.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/203.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/203.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/203.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/204.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/204.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1896,15 +2266,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1834;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/203.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/203.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/203.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/204.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/204.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>Historical variants:</p>
 <ul>
 <li>Medial  <img src="../../mongolian-variants/i/197.png" alt=""/>, <img src="../../mongolian-variants/i/041.png" alt=""/>, and <img src="../../mongolian-variants/i/038.png" alt=""/></li>
@@ -1913,12 +2278,38 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">ʧʰ</span></p>
 `,
 
+
+
+
 '\u{1835}': `
 <p class="insertTranscription">&#x1835;</p>
-<p><span class="ipa h">ʤ, dz</span>  </p>
+<!--p><span class="ipa h">ʤ ~ dz</span> consonant.</p-->
+<p><span class="ipa h">t͡s ~ t͡ʃ</span> consonant.</p>
+
+<div class="mn_examples">
+<p><span class="eg" lang="mn">ᠵᠤᠵᠠᠭᠠᠨ</span></p>
+<p><span class="eg" lang="mn">ᠡᠯᠵᠢᠭᠡ</span></p>
+<p><span class="eg" lang="mn"></span></p>
+</div>
+
 <p><span class="ipa">dz</span> is used in Modern Mongolian owing to phonetic change in the Khalka dialect.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ja.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/038.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/197.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/197.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/200.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/200.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -1989,15 +2380,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1835;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/038.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/197.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/197.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/200.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/200.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>Variants, requiring a variation selector:</p>
 <ul>
 <li>Medial<img src="../../mongolian-variants/i/070.png" alt=""/>. However, this is produced automatically by Baiti, Universal White, and Noto fonts before an MVS when the JA has nothing preceding it. Otherwise, the form shown in the chart is shown. Wikipedia, on the other hand, shows <span class="ex" lang="mn" style="writing-mode: vertical-lr;">ᠵᠠ᠋</span>.</li>
@@ -2012,11 +2398,31 @@ which is written
 
 '\u{1836}': `
 <p class="insertTranscription">&#x1836;</p>
-<p><span class="ipa h"> j</span>  </p>
+<p><span class="ipa h">j</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠶᠠᠰ</span></p>
+<p><span class="eg" lang="mn">ᠣᠶᠤᠬᠤ</span></p>
+<p><span class="eg" lang="mn">ᠠᠶᠢᠮᠠᠭ</span></p>
+<p><span class="eg" lang="mn">ᠨᠣᠬᠠᠶ</span></p>
+
 <p>Not used in syllable final position, except before MVS. (?)</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ya.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/041.png" alt=""/><img src="../../mongolian-variants/i/038.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/041.png" alt=""/><img src="../../mongolian-variants/i/038.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/038.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/070.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/070.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/038.png" alt=""/><img src="../../mongolian-variants/i/041.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2092,16 +2498,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1836;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/041.png" alt=""/><img src="../../mongolian-variants/i/038.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/041.png" alt=""/><img src="../../mongolian-variants/i/038.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/038.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/070.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/070.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/038.png" alt=""/><img src="../../mongolian-variants/i/041.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>Syllable final <img src="../../mongolian-variants/i/038.png" alt=""/> (ie. no upturn to the left) is used when followed by <span class="codepoint"><span lang="mn">&#x1822;</span> [<a href="/scripts/mongolian/block#char1822"><span class="uname">U+1822 MONGOLIAN LETTER I</span></a>]</span>.</li>
@@ -2119,15 +2519,28 @@ which is written
 
 '\u{1837}': `
 <p class="insertTranscription">&#x1837;</p>
-<p> <span class="ipa h"> r</span>  </p>
-<p>Examples: <span class="eg" lang="mn">ᠵᠣᠷᠢᠭᠲᠠᠢ</span>
-<span class="eg" lang="mn">ᠵᠣᠷᠲᠠᠢ</span>
-<span class="eg" lang="mn">ᠵᠣᠷ</span>
-</p>
-<p>Not normally used at the beginning of Mongolian words. Transcribed foreign words usually get a vowel prepended, for example, transcribing Русь (Russia) results in <span class="trans">Oros</span>.</p>
-<p class="leadin">Shapes</p>
+<p> <span class="ipa h"> r</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠢᠷᠡᠬᠦ</span></p>
+<p><span class="eg" lang="mn">ᠡᠷᠭᠢᠬᠦ</span></p>
+<p><span class="eg" lang="mn">ᠡᠳᠦᠷ</span></p>
 
+<p>Not normally used at the beginning of Mongolian words. Transcribed foreign words usually get a vowel prepended, for example, transcribing Русь (Russia) results in <span class="trans">Oros</span>.</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ra.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/043.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/043.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/043.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2198,27 +2611,38 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1837;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/043.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/043.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/043.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Derived from</p><p> Old Uyghur resh.<tt>ws</tt></p>
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa"> r</span>  </p>
 `,
 
 '\u{1838}': `
 <p class="insertTranscription">&#x1838;</p>
-<p><span class="ipa h">w, v</span></p>
+<p><span class="ipa h">w</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠸᠠᠩ</span></p>
+<p><span class="eg" lang="mn">ᠫᠢᠸᠣ᠋</span></p>
+
 <p>Used to transcribe foreign words. (Originally used to transcribe Sanskrit <a href="#char0935"><span class="uname">U+0935 DEVANAGARI LETTER VA</span> <span lang="sa">&#x0935;</span></a>.)</p>
 <p>Not used in syllable final position, except before MVS.</p>
-<p class="leadin">Shapes</p>
 
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/wa.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/143.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/143.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/143.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/145.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2289,15 +2713,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1838;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/143.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/143.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/143.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/145.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/116.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>The form <img src="../../pickers/mong-mn/v/1838f1.png" alt=""/> is used before <a href="#char180E"><span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span></a> <span class="ednote">by Baiti and Universal White fonts but<img src="../../mongolian-variants/i/145.png" alt=""/>  by Noto</span>.</li>
@@ -2313,10 +2732,27 @@ which is written
 
 '\u{1839}': `
 <p class="insertTranscription">&#x1839;</p>
-<p>Used to transcribe foreign words, such as Tibetan ཕ <span class="ipa">pʰ</span>.</p>
-<p class="leadin">Shapes</p>
+<p><span class="ipa h">f</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠱᠠᠹᠠ</span></p>
+<p><span class="eg" lang="mn">ᠺᠣᠹᠧ</span></p>
 
+<p>Used to transcribe foreign words, such as Tibetan ཕ <span class="ipa">pʰ</span>.</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/fa.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/117.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/117.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/117.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/123.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/117.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2387,15 +2823,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1839;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/117.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/117.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/117.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/123.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/117.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>Ligates with a following o,  u, ö,  or ü.</li>
@@ -2406,11 +2837,29 @@ which is written
 
 '\u{183A}': `
 <p class="insertTranscription">&#x183A;</p>
-<p>Used to transcribe foreign words (originally for Tibetan ག <span class="trans">ga</span> and Sanskrit ग <span class="trans">ga</span>), eg.
-<span class="eg" lang="mn">ᠸᠢᠺᠢᠫᠧᠳᠢᠶᠠ</span>
-</p>
-<p class="leadin">Shapes</p>
+<p><span class="ipa h">k</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠺᠢᠨᠣ᠋</span></p>
+<p><span class="eg" lang="mn">ᠺᠣᠹᠧ</span></p>
+<p><span class="eg" lang="mn">ᠸᠢᠺᠢᠫᠧᠳᠢᠶᠠ</span></p>
+
+<p>Used to transcribe foreign words (originally for Tibetan ག <span class="trans">ga</span> and Sanskrit ग <span class="trans">ga</span>).</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/ka.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/098.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/098.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2481,15 +2930,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x183A;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/098.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/098.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Variants</p><p>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
 <li>Ligates with a following o,  u, ö,  or ü.</li>
@@ -2498,15 +2942,43 @@ which is written
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">k</span>  </p>
 `,
 
+
+
+
+
 '\u{183B}': `
 <p class="insertTranscription">&#x183B;</p>
+<p><span class="ipa h">k</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠻᠠᠷᠲ᠋</span></p>
+
 `,
+
+
+
+
 
 '\u{183C}': `
 <p class="insertTranscription">&#x183C;</p>
+<p><span class="ipa h">t͡sʰ</span> consonant.</p>
+
 <p>Used to transcribe foreign words. (Originally  for  Tibetan ཚ <span class="ipa">tsʰ</span> and Sanskrit छ <span class="trans">cha</span>.)</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/tsa.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/205.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/205.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/205.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/206.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/206.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2577,23 +3049,41 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x183C;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/205.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/205.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/205.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/206.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/206.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Derived from</p><p>Preclassical Mongolian tsade č-ǰ .<tt>ws</tt></p>
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">ʦ</span>  </p>
 `,
 
+
+
+
+
 '\u{183D}': `
 <p class="insertTranscription">&#x183D;</p>
+<p><span class="ipa h">t͡s</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠪᠤᠤᠽ</span></p>
+
 <p>Used to transcribe foreign words. (Originally used to transcribe Tibetan dz ཛ; Sanskrit ज). </p>
-<p class="leadin">Shapes</p><table class="syllables">
+
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/za.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+<table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/208.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/208.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/208.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/208.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/209.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2664,24 +3154,41 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x183D;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/208.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/208.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/208.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/208.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/209.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Derived from</p><p>Preclassical Mongolian tsade č-ǰ .<tt>ws</tt></p>
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">ʣ</span></p>
 `,
 
+
+
+
 '\u{183E}': `
 <p class="insertTranscription">&#x183E;</p>
+<p><span class="ipa h">h</span> consonant.</p>
+<p><span class="eg" lang="mn">ᠾᠧᠵᠢᠩ</span></p>
+<p><span class="eg" lang="mn">ᠲᠸᠾᠷᠠᠨ</span></p>
+
 <p>Used to transcribe foreign words. (Originally used to transcribe Tibetan /h/ ཧ, ྷ; Sanskrit ह). </p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/haa.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/232.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/229.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/229.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2752,24 +3259,36 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x183E;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/232.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/229.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/229.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Derived from</p><p>Galik letter, preceded by an aleph for initial form.<tt>ws</tt></p>
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">x</span>  </p>
 `,
 
 '\u{183F}': `
 <p class="insertTranscription">&#x183F;</p>
+<p><span class="ipa h">ʐ</span> consonant.</p>
+
 <p>Used in Inner Mongolia to transcribe Chinese <span class="trans"><span class="trans">r</span> <span class="ipa">ɻ</span> ~ <span class="ipa">ʐ</span></span>, always followed by an <span class="trans">i</span>. Transliterates <span class="ipa">ʒ</span> in Tibetan ཞ /ʒa/.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/zra.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/239.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/239.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/239.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/240.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/240.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2840,23 +3359,36 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x183F;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/239.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/239.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/239.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/240.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/240.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">ʐ</span></p>
 `,
 
 '\u{1840}': `
 <p class="insertTranscription">&#x1840;</p>
-<p class="titlepara">Transcribes Tibetan <span class="trans">lh</span>, eg.  <span class="ex" lang="mn">ᡀᠠᠰᠠ</span> <span class="trans">lhasa</span>.</p>
-<p class="leadin">Shapes</p>
+<p><span class="ipa h">lʰ</span> consonant.</p>
+<p><span class="eg" lang="mn">ᡀᠠᠰᠠ</span></p>
+
+<p class="titlepara">Transcribes Tibetan <span class="trans">lh</span>.</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/lha.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/233.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/277.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/277.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/277.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/277.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -2927,24 +3459,36 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1840;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/233.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/277.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/277.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/277.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/277.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="leadin">Derived from</p><p>Digraph composed of <span class="ex" lang="mn">ᠯ</span> <span class="trans">l</span> and <span class="ex" lang="mn">ᠾ</span> <span class="trans">h</span>.<tt>ws</tt></p>
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">lh</span>  </p>
 `,
 
 '\u{1841}': `
 <p class="insertTranscription">&#x1841;</p>
+<p><span class="ipa h">ʑ</span> consonant.</p>
+
 <p>Transcribes Chinese <span class="trans">zhi</span> - used in Inner Mongolia.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/zhi.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -3015,14 +3559,6 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1841;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
-</tr>
 </table>
 <p class="leadin">Derived from</p><p>Galik letter.<tt>ws</tt></p>
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">ʈʂɻ</span></p>
@@ -3030,9 +3566,26 @@ which is written
 
 '\u{1842}': `
 <p class="insertTranscription">&#x1842;</p>
+<p><span class="ipa h">ɕ</span> consonant.</p>
+
 <p>Transcribes Chinese <span class="trans">chi</span> - used in Inner Mongolia.</p>
-<p class="leadin">Shapes</p>
+
+<p><span class="leadin">Shapes</span></p>
+<p class="instructions">Shaping depends on whether a letter is syllable-initial or syllable-final, but there are typically additional differences for word-initial and word-final syllables. Hint: to find the letters in the text examples, do an in-page search for the letter and highlight the results.</p>
+<img src="shape_charts/chi.png" alt="">
+
+<details>
+<summary class="instructions">Show as text (only works on Gecko browsers, such as Firefox)</summary>
+
 <table class="syllables">
+<tr>
+<th>&nbsp;</th>
+<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
+<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
+</tr>
 <tr>
 <th>&nbsp;</th>
 <td colspan="2">syllable initial</td>
@@ -3103,15 +3656,10 @@ which is written
 <td><span class="ex" title="x" lang="mn">&#x180A;&#x1826;<span class="hi">&#x1842;</span></span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<th>shapes</th>
-<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
-<td><img src="../../mongolian-variants/i/241.png" alt=""/></td>
-</tr>
 </table>
+</details>
+
+
 <p class="titlepara"><span class="title">Chakhar</span> <span class="ipa">ʈʂʰɻ</span></p>
 `,
 
@@ -3510,9 +4058,14 @@ which is written
 // OTHER CHARACTERS
 
 '\u{202F}': `
-<p>Used to separate Mongolian suffixes from the preceding part of a word. This space is thinner than a normal space, and doesn't provide an opportunity for line-breaking.</p>
+<p>Many Mongolian suffixes are separated from the root or other suffixes by a small gap. Multiple suffixes may be attached to the word stem, each with their own initial gap. Characters following immediately following the gap may take on special shapes.</p>
+<p><span class="eg" lang="mn">ᠵᠠᠷᠢᠮ ᠳᠠᠭᠠᠨ</span></p>
 
-<p>Characters following 'NNBSP' may take on special shapes.</p>
+<p>Lines and word selections, etc. should not be broken where the gaps appear. The word and its suffixes should be kept together.</p>
+
+<p>The Unicode Standard provides this character to create the gap. It is thinner than a normal space, and prevents line-breaking. Fonts and rendering should automatically perform any special glyph shaping needed for the initial letter in the suffix.</p>
+
+<p>Abbreviated as NNBSP.</p>
 `,
 
 
