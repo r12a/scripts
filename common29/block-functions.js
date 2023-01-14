@@ -138,7 +138,31 @@ function checkForCharParam () {
 		pairs = parameters[p].split('=')
 		if (pairs[0] === 'char') { 
 			if (pairs[1]) { 
-				document.getElementById('includeStyles').textContent = '.character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, section>p, .smallprint, .univiewLink, .subtitle, .unicodenotes, .charimg, .charname, #top, #ack, #refs { display: none; } .notes { margin: 0;} #char'+pairs[1]+' { display: block; }' 
+				document.getElementById('includeStyles').textContent = '.character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, section>p, .smallprint, .univiewLink, .subtitle, .unicodenotes, .charimg, .charname, #top, #ack, #refs { display: none; } .notes { margin: 0;} #char'+pairs[1]+' { display: block; } .letter { margin-inline-start: 0; margin-inline-end: 1rem; } .usedby { margin-inline-end: 1rem; margin-inline-start: 0; font-size:inherit; }' 
+				} 
+			}
+		}
+	}
+
+
+
+
+
+function checkForCharParamY () {
+	// check for parameters; if char= found with value, set style to show only that character
+    var parameters, p, pairs
+    
+	parameters = location.search.split('&')
+	parameters[0] = parameters[0].substring(1)
+	for (p=0;p<parameters.length;p++) {  
+		pairs = parameters[p].split('=')
+		if (pairs[0] === 'char') { 
+			if (pairs[1]) { 
+				document.getElementById('includeStyles').textContent = `
+                .character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, section>p, .smallprint, .univiewLink, .subtitle, .unicodenotes, .charimg, .charname, #top, #ack, #refs { display: none; } 
+                .notes { margin: 0;} #char'+pairs[1]+' { display: block; } 
+                .letter { margin-inline-start: 0; margin-inline-end: 1rem; } 
+                .usedby { margin-inline-end: 1rem; margin-inline-start: 0; font-size:inherit; }`
 				} 
 			}
 		}
