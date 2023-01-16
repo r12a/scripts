@@ -68,7 +68,7 @@ autoExpandExamples.mn = `
 ᠤᠨᠤᠬᠤ|to ride a horse|ʊnəx|unakh|унах
 ᠤᠨᠲᠠᠬᠤ|to sleep|ʊntʰax|untakh|унтах
 ᠤᠭᠠᠬᠤ|to wash||ugaakh|угаах
-ᠤᠯᠠᠭᠠᠨ|red|ˈʊɮaːŋ|ulaan|улаан
+ᠤᠯᠠᠭᠠᠨ|red|ˈʊ§ɮ§–§–§aː§ŋ|ulaan|улаан
 ᠤᠯᠠᠭᠠᠨᠪᠠᠭᠠᠲᠤᠷ|Ulaanbaatar|ʊ§ɮ§–§–§aː§n§p§–§–§a§t§–§r||Улаанбаатар
 ᠤᠯᠠᠭᠠᠨᠴᠠᠪᠬᠣᠲᠠ||
 ᠤᠯᠢᠶᠠᠰᠤᠲᠠᠢ||
