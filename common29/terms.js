@@ -8,6 +8,7 @@ const IPA = 2
 const TRANS = 3
 const NOTES = 4
 const WIKI = 5
+const IPAraw = 6
 
 
 // get names and ipa info from the spreadsheet
@@ -22,9 +23,48 @@ if (document.getElementById('tabPlaceholder')) {
             spreadsheetInfo[temp[0]]['ipa'] = temp[cols['ipaLoc']]
             }
         }
-    spreadsheet = ''
+    //spreadsheet = ''
     rows = ''
     temp = ''
+    }
+
+
+// make spreadsheetRows from the spreadsheet (for the panel routines)
+var temp = window.spreadsheet.split('\n')
+spreadsheet = ''
+window.spreadsheetRows = {}
+for (var x=0; x<temp.length; x++) {
+    if (temp[x].trim() == '') continue
+    var items = temp[x].split('\t')
+    if (items[0] === '') continue
+
+    window.spreadsheetRows[items[0]] = ['0']
+    for (let i=1;i<items.length;i++) window.spreadsheetRows[items[0]].push(items[i])
+    }
+
+// create a charData array - (this removes reliance on the all-names.js file)
+// global, spreadsheetRows
+window.charData = {}
+
+for (var c in spreadsheetRows) {
+    charData[c] = spreadsheetRows[c][cols['ucsName']].replace(/U\+[^:]+: /,'')
+    }
+
+
+// collect the sets and make markup
+var setMarkup = ''
+if (collections.length === 0) setMarkup = '<div class="set">none</div>'
+else {
+    for (set=0;set<collections.length; set++) {
+        setMarkup += `<div class="set"><span class="symbol" onclick="navigator.clipboard.writeText(this.textContent)">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span></div>`
+        }
+    }
+
+
+// set the global variable marks as a set containing all combining marks in the spreadsheet
+window.marks = new Set()
+for (var char in spreadsheetRows) {
+    if (spreadsheetRows[char][cols['class']].startsWith('M')) window.marks.add(char)
     }
 
 
@@ -56,6 +96,13 @@ if (document.getElementById('tabPlaceholder')) {
     </select>&nbsp;&nbsp;
     <button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">Go</button>
     </p>
+
+
+    <details><summary style="font-style: italic; font-size: 80%;">Sets</summary>
+    ${ setMarkup }
+    </details>
+    
+        
     <p style="font-style: italic; font-size: 80%;"><label>Items found: <span id="found">–</span></label><br/><table id="foundItems"></table></p>
     </div>
 
@@ -87,9 +134,9 @@ terms.thereAreNotes = false
 for (var n=0;n<wordList.length;n++) {
     fields = wordList[n].split('|')
     fields[TERM] = ' '+fields[TERM]+' '
+    fields[IPAraw] = ' '+fields[IPA]+' '
     fields[IPA] = ' '+fields[IPA]+' '
     fields[IPA] = fields[IPA].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
-    //console.log(fields[IPA].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,''))
 	if (typeof fields[TRANS] === 'undefined' || fields[TRANS] === '') {
         fields[TRANS] = ''
         }
@@ -140,9 +187,13 @@ function initialise () {
 
 function printAll () {
 	var out = ''
+    var panel = document.getElementById('panel')
 	for (var i=0;i<wordList.length;i++) {
         var fields = wordList[i].split('|')
 		out += '<tr>'
+
+        out += `<td><span onclick="showNameDetails('${ fields[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw] }')" style="cursor:pointer;">⛛</span></td>`
+
         out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
         
         // figure out whether to link to a different string for Wiktionary lookup
@@ -165,9 +216,11 @@ function printAll () {
                 }
             else out += '<td class="noteCol">'+fields[NOTES]+'</td>'
             }
+
+        
         out += '</tr>\n'
 		}
-	
+
 	document.getElementById('printout').innerHTML = out
 	document.getElementById('totalLemmas').innerHTML = wordList.length
 	}
@@ -192,6 +245,11 @@ function switchTabTo (tab) {
 function findWords (reg) { 
 
     if (reg === '') return
+    
+    for (set=0;set<collections.length;set++) {
+        findme = new RegExp(collections[set].symbol, 'g')
+        reg = reg.replace(findme, collections[set].chars)
+        }
 
     var regex = new RegExp(reg)
     var searchCol = document.getElementById('searchCol').value
@@ -212,6 +270,8 @@ function findWords (reg) {
     for (let i=0;i<result.length;i++) { 
 		itemArray = result[i].split('|')
 		out += '<tr>'
+
+        out += `<td><span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')" style="cursor:pointer;">⛛</span></td>`
 
 		//out += '<td lang="'+terms.language+'" dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+itemArray[TERM]+'#'+terms.wiktionaryLink+'">'+itemArray[TERM]+'</a></td>'
         out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
@@ -258,7 +318,6 @@ function findWords (reg) {
         	}
 
         // add the markup column for server-based use
-        console.log(location.hostname)
         if (location.hostname === 'r12a.github.io') {
             out += `<td class="markupCol">&lt;span class="charExample" translate="no"&gt;`
             out += `&lt;bdi class="ex`
