@@ -1,5 +1,5 @@
 
-window.version = 'v28'
+window.version = 'v29'
 window.scriptName = 'Thai'
 window.ghDirectory = 'thai'
 window.blockDirectory = 'thai'
