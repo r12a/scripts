@@ -3,32 +3,50 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common28/lemmastyle.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
+<link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/arab-ur.js"> </script>
+<script src="ur-translit.js">  </script>
 <script src="ur-examples.js"></script> 
 <script src="ur-langdata.js"></script> 
-<script src="../../shared/scriptdb/arab-ur.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Urdu'
 var contents = autoExpandExamples.ur
 terms.fontFamily = 'Noto Nastaliq Urdu'
 terms.fontSize = '150%'
-terms.direction = 'rtl'
+terms.direction = 'ltr'
 terms.language = 'ur'
 terms.wiktionaryLink = "Urdu"
 terms.langdataTag = 'ur'
+
+var collections = [
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(َ|ً|ُ|ٌ|ِ|ٍ|ْ|ٗ|ٓ|ٰ|ٖ|٘)' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(ے|ا)' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'(پ|ب|ت|ط|د|ٹ|ڈ|ک|گ|ق|ء|چ|ج|ف|و|س|ث|ص|ز|ذ|ض|ظ|ش|ژ|خ|غ|ہ|ح|ھ|ع|م|ن|ں|ر|ڑ|ل|ی|آ|ؤ|ئ|ۂ|ۓ)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
+]
 </script>
 <!-- END -->
+
+
+
 
 
 
@@ -45,6 +63,8 @@ terms.langdataTag = 'ur'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">
@@ -52,7 +72,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 </span>
 </div>
 
-<script src="../common28/terms.js"></script> 
+<script src="../common29/terms.js"></script> 
 <script>initialise()</script>
 </body>
 </html>

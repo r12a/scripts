@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
 <link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/kali.js"> </script>
+<script src="kyu-translit.js">  </script>
 <script src="kyu-examples.js"></script> 
 <script src="kyu-langdata.js"></script> 
-<script src="../../shared/scriptdb/kali.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Western Kayah'
@@ -27,8 +35,20 @@ terms.direction = 'ltr'
 terms.language = 'kyu'
 terms.wiktionaryLink = "Western_Kayah"
 terms.langdataTag = 'kyu'
+
+var collections = [
+{ symbol:'Ⓒ', desc:'Consonants', chars:'(ꤟ|ꤛ|ꤕ|ꤙ|ꤖ|ꤒ|ꤘ|ꤓ|ꤊ|ꤋ|ꤌ|ꤡ|ꤠ|ꤞ|ꤎ|ꤐ|ꤏ|ꤗ|ꤔ|ꤑ|ꤍ|ꤝ|ꤚ|ꤜ)' },
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(ꤦ|ꤧ|ꤨ|ꤩ|ꤪ)' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(ꤢ|ꤤ|ꤥ|ꤣ)' },
+{ symbol:'Ⓣ', desc:'Tones', chars:'(꤬|꤫|꤭)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+]
 </script>
 <!-- END -->
+
+
+
+
 
 
 
@@ -45,6 +65,8 @@ terms.langdataTag = 'kyu'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">

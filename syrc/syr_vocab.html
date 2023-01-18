@@ -3,11 +3,18 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
 <link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
@@ -23,9 +30,10 @@
 	}
 </style>
 
+<script src="../../shared/scriptdb/syrc-syr.js"> </script>
+<script src="syr-translit.js">  </script>
 <script src="syr-examples.js"></script> 
 <script src="syr-langdata.js"></script> 
-<script src="../../shared/scriptdb/syrc-syr.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Classical Syriac'
@@ -36,8 +44,20 @@ terms.direction = 'rtl'
 terms.language = 'syr'
 terms.wiktionaryLink = "Classical_Syriac"
 terms.langdataTag = 'syr'
+
+var collections = [
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(ܼ|ܸ|ܹ|ܿ|ܲ|ܵ|ܺ|ܻ|ܽ|ܾ|ܶ|ܷ|ّ|ܰ|ܱ|ܳ|ܴ)' },
+{ symbol:'ⓓ', desc:'Diacritics', chars:'(݁|݂|̊|̥|݀|̇|̣|݃|݄|̈|̤|݇|݈|̄|̱|̭|݉|݊|̮)' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'(ܦ|ܒ|ܬ|ܛ|ܕ|ܟ|ܓ|ܩ|ܥ|ܣ|ܤ|ܨ|ܫ|ܙ|ܚ|ܗ|ܡ|ܢ|ܘ|ܪ|ܠ|ܝ)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
+]
 </script>
 <!-- END -->
+
+
+
+
+
 
 
 
@@ -54,6 +74,8 @@ terms.langdataTag = 'syr'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">

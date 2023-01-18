@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
 <link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/btk.js"> </script>
+<script src="btk-translit.js">  </script>
 <script src="btk-examples.js"></script> 
 <script src="btk-langdata.js"></script> 
-<script src="../../shared/scriptdb/btk.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Batak'
@@ -27,8 +35,19 @@ terms.direction = 'ltr'
 terms.language = 'btk'
 terms.wiktionaryLink = "Batak"
 terms.langdataTag = 'btk'
+
+var collections = [
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(ᯧ|ᯨ|ᯩ|ᯪ|ᯫ|ᯬ|ᯭ|ᯮ|ᯯ)' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(ᯀ|ᯁ|ᯤ|ᯥ)' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'(ᯂ|ᯃ|ᯄ|ᯅ|ᯆ|ᯇ|ᯈ|ᯉ|ᯋ|ᯌ|ᯍ|ᯎ|ᯏ|ᯐ|ᯑ|ᯒ|ᯓ|ᯔ|ᯕ|ᯖ|ᯗ|ᯘ|ᯙ|ᯚ|ᯛ|ᯜ|ᯝ|ᯞ|ᯟ|ᯠ|ᯡ|ᯢ|ᯣ|ᯄ|᯦)' },
+{ symbol:'Ⓑ', desc:'Basic consonants', chars:'(ᯂ|ᯃ|ᯄ|ᯅ|ᯆ|ᯇ|ᯈ|ᯉ|ᯋ|ᯌ|ᯍ|ᯎ|ᯏ|ᯐ|ᯑ|ᯒ|ᯓ|ᯔ|ᯕ|ᯖ|ᯗ|ᯘ|ᯙ|ᯚ|ᯛ|ᯜ|ᯝ|ᯞ|ᯟ|ᯠ|ᯡ|ᯢ|ᯣ)' },
+{ symbol:'Ⓔ', desc:'Extended consonants', chars:'(ᯄ|᯦)' },
+{ symbol:'Ⓕ', desc:'Finals', chars:'(ᯰ|ᯱ)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+]
 </script>
 <!-- END -->
+
 
 
 
@@ -45,6 +64,8 @@ terms.langdataTag = 'btk'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">

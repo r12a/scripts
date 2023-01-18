@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
 <link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/tavt.js"> </script>
+<script src="blt-translit.js">  </script>
 <script src="blt-examples.js"></script> 
 <script src="blt-langdata.js"></script> 
-<script src="../../shared/scriptdb/tavt.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Tai Dam'
@@ -27,8 +35,20 @@ terms.direction = 'ltr'
 terms.language = 'blt'
 terms.wiktionaryLink = "Tai_Dam"
 terms.langdataTag = 'blt'
+
+var collections = [
+{ symbol:'Ⓥ', desc:'Vowels', chars:'(ꪹ|ꪶ|ꪵ|ꪻ|ꪼ|ꪱ|ꪺ|ꪽ)' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'(ꪝ|ꪛ|ꪕ|ꪓ|ꪗ|ꪁ|ꪆ|ꪮ|ꪜ|ꪚ|ꪔ|ꪒ|ꪖ|ꪀ|ꪇ|ꪯ|ꪋ|ꪊ|ꪡ|ꪏ|ꪑ|ꪅ|ꪭ|ꪠ|ꪪ|ꪎ|ꪐ|ꪄ|ꪬ|ꪣ|ꪙ|ꪉ|ꪢ|ꪘ|ꪈ|ꪫ|ꪧ|ꪩ|ꪥ|ꪦ|ꪨ|ꪤ)' },
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(ꪴ|ꪰ|ꪲ|ꪳ|ꪷ|ꪸ|ꪾ)' },
+{ symbol:'Ⓣ', desc:'Tones', chars:'(ꫀ|ꫂ|꪿|꫁)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+]
 </script>
 <!-- END -->
+
+
+
+
 
 
 
@@ -45,6 +65,8 @@ terms.langdataTag = 'blt'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">

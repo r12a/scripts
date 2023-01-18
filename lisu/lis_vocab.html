@@ -3,27 +3,45 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
 <link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/lisu.js"> </script>
+<script src="lis-translit.js">  </script>
 <script src="lis-examples.js"></script> 
+<script src="lis-langdata.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Lisu'
 var contents = autoExpandExamples.lis
-terms.fontFamily = 'Noto Lisu'
+terms.fontFamily = 'Noto Sans Lisu'
 terms.fontSize = '150%'
 terms.direction = 'ltr'
 terms.language = 'lis'
 terms.wiktionaryLink = "Lisu"
+terms.langdataTag = 'lis'
+
+var collections = [
+{ symbol:'Ⓥ', desc:'Vowels', chars:'(ꓲ|ꓵ|ꓶ|ꓴ|ꓰ|ꓱ|ꓷ|ꓳ|ꓯ|ꓮ)' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'(ꓑ|ꓐ|ꓒ|ꓔ|ꓓ|ꓕ|ꓗ|ꓖ|ꓘ|ꓝ|ꓜ|ꓞ|ꓚ|ꓙ|ꓛ|ꓩ|ꓢ|ꓤ|ꓣ|ꓫ|ꓬ|ꓧ|ꓭ|ꓦ|ꓨ|ꓟ|ꓠ|ꓥ|ꓪ|ꓡ)' },
+{ symbol:'Ⓣ', desc:'Tones', chars:'(ꓸ|ꓹ|ꓺ|ꓻ|ꓼ|ꓽ)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+]
 </script>
 <!-- END -->
 
@@ -31,7 +49,7 @@ terms.wiktionaryLink = "Lisu"
 
 
 
-<script src="../common29/terms.js"></script> 
+
 </head>
 
 <body class="app">
@@ -41,31 +59,10 @@ terms.wiktionaryLink = "Lisu"
 </header>
 
 
-<div id="tabs">
-<h2 id="list_tab" onClick="switchTabTo(this.id)">List</h2>
-<h2 id="find_tab" onClick="switchTabTo(this.id)">Find</h2>
-</div> 
-
-
-<div id="list_tab_area">
-<p style="font-style: italic; font-size: 80%;"><label>Total items: <span id="totalLemmas">–</span></label></p>
-<table id="printout"></table>
-</div>
+<div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
 
-<div id="find_tab_area">
-<p style="margin-inline-end:1em;"><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')"></label> &nbsp;&nbsp;
-Search in: <select id="searchCol">
-<option value="all">All</option>
-<option value="0">Terms</option>
-<option value="1">Meanings</option>
-<option value="2">IPA</option>
-<option value="3">Transcriptions</option>
-</select>&nbsp;&nbsp;
-<button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">Go</button>
-</p>
-<p style="font-style: italic; font-size: 80%;"><label>Items found: <span id="found">–</span></label><br/><table id="foundItems"></table></p>
-</div>
 
 
 <div class="smallprint"><span id="version">
@@ -73,6 +70,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 </span>
 </div>
 
+<script src="../common29/terms.js"></script> 
 <script>initialise()</script>
 </body>
 </html>

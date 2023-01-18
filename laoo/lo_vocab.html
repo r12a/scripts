@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
 <link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/lao.js"> </script>
+<script src="lo-translit.js">  </script>
 <script src="lo-examples.js"></script> 
 <script src="lo-langdata.js"></script> 
-<script src="../../shared/scriptdb/lao.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Lao'
@@ -27,8 +35,19 @@ terms.direction = 'ltr'
 terms.language = 'lo'
 terms.wiktionaryLink = "Lao"
 terms.langdataTag = 'lo'
+
+var collections = [
+{ symbol:'Ⓥ', desc:'Vowels', chars:'(ເ|ແ|ໂ|ໄ|ໃ|ະ|າ|ຽ|ຳ|ິ|ີ|ຶ|ື|ຸ|ູ|ົ|ໍ|ັ)' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'(ຜ|ຖ|ຂ|ປ|ບ|ຕ|ດ|ຈ|ກ|ອ|ພ|ທ|ຄ|ຝ|ສ|ຫ|ຟ|ຊ|ຮ|ໝ|ໜ|ມ|ນ|ຍ|ງ|ຢ|ລ|ວ|ໝ|ໜ)' },
+{ symbol:'Ⓣ', desc:'Tones', chars:'(່|້|໊|໋)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+]
 </script>
 <!-- END -->
+
+
+
+
 
 
 
@@ -45,6 +64,8 @@ terms.langdataTag = 'lo'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">

@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
 <link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/mymr-my.js"> </script>
+<script src="my-translit.js">  </script>
 <script src="my-examples.js"></script> 
 <script src="my-langdata.js"></script> 
-<script src="../../shared/scriptdb/mymr-my.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Burmese'
@@ -27,8 +35,21 @@ terms.direction = 'ltr'
 terms.language = 'my'
 terms.wiktionaryLink = "Burmese"
 terms.langdataTag = 'my'
+
+var collections = [
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(ေ|ိ|ီ|ု|ူ|ဲ|ာ|ါ)' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(ဣ|ဤ|ဥ|ဦ|ဧ|ဩ|ဪ)' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'(ပ|ဖ|ဗ|ဘ|တ|ထ|ဒ|က|ခ|ဂ|အ|သ|ဿ|စ|ဆ|ဇ|ဟ|မ|န|ည|ဉ|င|ဝ|ရ|လ|ယ|ဋ|ဌ|ဍ|ဎ|ဓ|ဃ|ဈ|ဏ|ဠ)' },
+{ symbol:'Ⓑ', desc:'Basic consonants', chars:'(ပ|ဖ|ဗ|ဘ|တ|ထ|ဒ|က|ခ|ဂ|အ|သ|ဿ|စ|ဆ|ဇ|ဟ|မ|န|ည|ဉ|င|ဝ|ရ|လ|ယ)' },
+{ symbol:'Ⓔ', desc:'Extended consonants', chars:'(ဋ|ဌ|ဍ|ဎ|ဓ|ဃ|ဈ|ဏ|ဠ)' },
+{ symbol:'Ⓜ', desc:'Medials', chars:'(ျ|ြ|ွ|ှ)' },
+{ symbol:'Ⓣ', desc:'Tones', chars:'(့|း)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+]
 </script>
 <!-- END -->
+
+
 
 
 
@@ -45,6 +66,8 @@ terms.langdataTag = 'my'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">

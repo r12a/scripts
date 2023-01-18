@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common28/lemmastyle.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
+<link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/arab-ar.js"> </script>
+<script src="arb-translit.js">  </script>
 <script src="arb-examples.js"></script> 
 <script src="arb-langdata.js"></script> 
-<script src="../../shared/scriptdb/arab-ar.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Arabic'
@@ -27,8 +35,18 @@ terms.direction = 'rtl'
 terms.language = 'ar'
 terms.wiktionaryLink = "Arabic"
 terms.langdataTag = 'arb'
+
+var collections = [
+{ symbol:'Ⓥ', desc:'Dependent vowels', chars:'(َ|ُ|ِ|ً|ٌ|ٍ|ْ|ٰ)' },
+{ symbol:'ⓗ', desc:'Hamza', chars:'(ء|آ|أ|إ|ؤ|ئ|ة)' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'(ا|و|ي|ج|ظ|ب|ت|د|ط|ض|ك|ق|ف|ث|ذ|س|ص|ز|ش|خ|غ|ه|ح|ع|م|ن|ر|ل)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
+]
 </script>
 <!-- END -->
+
+
+
 
 
 
@@ -45,6 +63,8 @@ terms.langdataTag = 'arb'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">
@@ -52,7 +72,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 </span>
 </div>
 
-<script src="../common28/terms.js"></script> 
+<script src="../common29/terms.js"></script> 
 <script>initialise()</script>
 </body>
 </html>

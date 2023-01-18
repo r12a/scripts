@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common28/lemmastyle.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
+<link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/guru-pa.js"> </script>
+<script src="pa-translit.js">  </script>
 <script src="pa-examples.js"></script> 
 <script src="pa-langdata.js"></script> 
-<script src="../../shared/scriptdb/guru-pa.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Punjabi'
@@ -27,6 +35,13 @@ terms.direction = 'ltr'
 terms.language = 'pa'
 terms.wiktionaryLink = "Punjabi"
 terms.langdataTag = 'pa'
+
+var collections = [
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(ੀ|ੂ|ਿ|ੁ|ੇ|ੋ|ੈ|ੌ|ਾ)' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(ਈ|ਊ|ਇ|ਉ|ਏ|ਓ|ਅ|ਐ|ਔ|ਆ)' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'(ਪ|ਭ|ਬ|ਫ|ਤ|ਧ|ਦ|ਥ|ਚ|ਝ|ਜ|ਛ|ਟ|ਢ|ਡ|ਠ|ਕ|ਘ|ਗ|ਖ|ਵ|ਸ|ਹ|ਮ|ਨ|ਞ|ਣ|ਙ|ਯ|ਰ|ੜ|ਲ)' },
+{ symbol:'Ⓘ', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+]
 </script>
 <!-- END -->
 
@@ -45,6 +60,8 @@ terms.langdataTag = 'pa'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">
@@ -52,7 +69,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 </span>
 </div>
 
-<script src="../common28/terms.js"></script> 
+<script src="../common29/terms.js"></script> 
 <script>initialise()</script>
 </body>
 </html>

@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common28/lemmastyle.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
+<link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/gujr-gu.js"> </script>
+<script src="gu-translit.js">  </script>
 <script src="gu-examples.js"></script> 
 <script src="gu-langdata.js"></script> 
-<script src="../../shared/scriptdb/gujr-gu.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Gujarati'
@@ -27,6 +35,13 @@ terms.direction = 'ltr'
 terms.language = 'gu'
 terms.wiktionaryLink = "Gujarati"
 terms.langdataTag = 'gu'
+
+var collections = [
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(િ|ી|ુ|ૂ|ે|ો|ૉ|ૅ|ા|ૈ|ૌ)' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(ઇ|ઈ|ઊ|ઉ|એ|ઓ|અ|ઑ|ઍ|આ|ઔ|ઐ)' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'(પ|બ|ભ|ત|થ|દ|ધ|ટ|ઠ|ડ|ઢ|ક|ખ|ગ|ઘ|ચ|છ|જ|ઝ|ફ|સ|શ|ષ|હ|મ|ન|ઞ|ણ|ઙ|વ|ર|લ|ળ|ય)' },
+{ symbol:'Ⓘ', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+]
 </script>
 <!-- END -->
 
@@ -45,6 +60,8 @@ terms.langdataTag = 'gu'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">
@@ -52,7 +69,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 </span>
 </div>
 
-<script src="../common28/terms.js"></script> 
+<script src="../common29/terms.js"></script> 
 <script>initialise()</script>
 </body>
 </html>

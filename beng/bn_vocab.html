@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
-<link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common28/lemmastyle.css" />
-<script src="../../shared/code/boilerplate.js"></script>
-<script>var autoExpandExamples = {}</script>
 
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
+<link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
+<script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/beng.js"> </script>
+<script src="bn-translit.js">  </script>
 <script src="bn-examples.js"></script> 
 <script src="bn-langdata.js"></script> 
-<script src="../../shared/scriptdb/beng.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Bengali'
@@ -27,6 +34,16 @@ terms.direction = 'ltr'
 terms.language = 'bn'
 terms.wiktionaryLink = "Bengali"
 terms.langdataTag = 'bn'
+
+
+var collections = [
+{ symbol:'Ⓥ', desc:'Vowels', chars:'(ি|ে|ৈ|ো|ৌ|ী|ু|ূ|া|ৃ)' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'(প|ব|ফ|ভ|ত|দ|থ|ধ|ট|ড|ঠ|ঢ|ক|গ|খ|ঘ|চ|ছ|জ|ঝ|য|শ|ষ|স|হ|ম|ন|ণ|ঞ|ঙ|র|ল|ড়|ঢ়|য়)' },
+{ symbol:'Ⓑ', desc:'Basic consonants', chars:'(প|ব|ফ|ভ|ত|দ|থ|ধ|ট|ড|ঠ|ঢ|ক|গ|খ|ঘ|চ|ছ|জ|ঝ|য|শ|ষ|স|হ|ম|ন|ণ|ঞ|ঙ|র|ল)' },
+{ symbol:'Ⓔ', desc:'Extended consonants', chars:'(ড়|ঢ়|য়)' },
+{ symbol:'Ⓕ', desc:'Finals', chars:'(ঁ|ং|ঃ|ৗ|ৎ)' },
+{ symbol:'Ⓘ', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+]
 </script>
 <!-- END -->
 
@@ -45,6 +62,8 @@ terms.langdataTag = 'bn'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">
@@ -52,7 +71,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 </span>
 </div>
 
-<script src="../common28/terms.js"></script> 
+<script src="../common29/terms.js"></script> 
 <script>initialise()</script>
 </body>
 </html>

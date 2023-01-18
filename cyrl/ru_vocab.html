@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common28/lemmastyle.css" />
+<link rel="stylesheet" href="../common29/local.css"/>
+<link rel="stylesheet" href="../common29/lemmastyle.css" />
+
+<script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
 <script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/cyrl-ru.js"> </script>
+<script src="ru-translit.js">  </script>
 <script src="ru-examples.js"></script> 
 <script src="ru-langdata.js"></script> 
-<script src="../../shared/scriptdb/cyrl-ru.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Russian'
@@ -27,8 +35,18 @@ terms.direction = 'ltr'
 terms.language = 'ru'
 terms.wiktionaryLink = "Russian"
 terms.langdataTag = 'ru'
+
+var collections = [
+{ symbol:'Ⓥ', desc:'Vowels', chars:'(а|я|э|е|ы|и|о|ё|у|ю|А|Я|Э|Е|Ы|И|О|Ё|У|Ю)' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'(п|б|т|д|к|г|ц|ч|ш|щ|ф|в|с|з|ж|х|м|н|р|л|й|П|Б|Т|Д|К|Г|Ц|Ч|Ш|Щ|Ф|В|С|З|Ж|Х|М|Н|Р|Л|Й)' },
+{ symbol:'ⓥ', desc:'Hard/soft signs', chars:'(ъ|ь|Ъ|Ь)' },
+]
 </script>
 <!-- END -->
+
+
+
+
 
 
 
@@ -45,6 +63,8 @@ terms.langdataTag = 'ru'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">
@@ -52,7 +72,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 </span>
 </div>
 
-<script src="../common28/terms.js"></script> 
+<script src="../common29/terms.js"></script> 
 <script>initialise()</script>
 </body>
 </html>
