@@ -11,6 +11,19 @@ const WIKI = 5
 const IPAraw = 6
 
 
+
+
+document.querySelector("body").addEventListener('keydown', closeDialogEsc)
+
+
+function closeDialogEsc (e) {
+    // closes the dialog box and panel when escape is pressed
+    if (e.code === 'Escape') {
+        document.getElementById('panel').style.display = 'none'
+        }
+}
+
+
 // get names and ipa info from the spreadsheet
 if (document.getElementById('tabPlaceholder')) {
     var rows = spreadsheet.split('\n')
@@ -190,9 +203,9 @@ function printAll () {
     var panel = document.getElementById('panel')
 	for (var i=0;i<wordList.length;i++) {
         var fields = wordList[i].split('|')
-		out += '<tr>'
-
-        out += `<td><span onclick="showNameDetails('${ fields[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw] }')" style="cursor:pointer;">⛛</span></td>`
+		//out += '<tr>'
+        //out += `<td><span onclick="showNameDetails('${ fields[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw] }')" style="cursor:pointer;"><img src="../common29/icons/rotate.svg" alt="Explode" title="Show composition" style="height:1rem;"></span>
+        //</td>`
 
         out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
         
@@ -200,6 +213,11 @@ function printAll () {
         if (fields[WIKI]  && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }">${ fields[TERM] }</a>`
         else if (fields[WIKI]) out += `${ fields[TERM] }`
         else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }">${ fields[TERM] }</a>`
+        
+        out += `
+        <span onclick="showNameDetails('${ fields[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw] }')"><img src="../common29/icons/rotate.svg" class="showPanel" alt="Explode" title="Show composition"></span>
+        `
+        out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="navigator.clipboard.writeText('${ fields[TERM].trim() }')">`
         
         out += '</td>'
 
@@ -271,13 +289,23 @@ function findWords (reg) {
 		itemArray = result[i].split('|')
 		out += '<tr>'
 
-        out += `<td><span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')" style="cursor:pointer;">⛛</span></td>`
+        //out += `<td><span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')" style="cursor:pointer;">⛛</span></td>`
 
 		//out += '<td lang="'+terms.language+'" dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+itemArray[TERM]+'#'+terms.wiktionaryLink+'">'+itemArray[TERM]+'</a></td>'
         out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
+        
+        
+
         if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }">${ itemArray[TERM] }</a>`
         else if (itemArray[WIKI]) out += `${ itemArray[TERM] }`
         else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }">${ itemArray[TERM] }</a>`
+        
+                
+        out += `<span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')"><img src="../common29/icons/rotate.svg" class="showPanel" alt="Explode" title="Show composition"></span>`
+        
+        out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ itemArray[TERM].trim() }')">`
+
+        //out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ itemArray[TERM].trim() }')">
         out += '</td>'
         
 
