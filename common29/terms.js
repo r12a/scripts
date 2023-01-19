@@ -203,9 +203,7 @@ function printAll () {
     var panel = document.getElementById('panel')
 	for (var i=0;i<wordList.length;i++) {
         var fields = wordList[i].split('|')
-		//out += '<tr>'
-        //out += `<td><span onclick="showNameDetails('${ fields[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw] }')" style="cursor:pointer;"><img src="../common29/icons/rotate.svg" alt="Explode" title="Show composition" style="height:1rem;"></span>
-        //</td>`
+		out += '<tr>'
 
         out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
         
@@ -214,12 +212,13 @@ function printAll () {
         else if (fields[WIKI]) out += `${ fields[TERM] }`
         else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }">${ fields[TERM] }</a>`
         
-        out += `
-        <span onclick="showNameDetails('${ fields[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw] }')"><img src="../common29/icons/rotate.svg" class="showPanel" alt="Explode" title="Show composition"></span>
-        `
         out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="navigator.clipboard.writeText('${ fields[TERM].trim() }')">`
+
+        out += `<span onclick="showNameDetails('${ fields[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw] }')"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></span>`
         
+
         out += '</td>'
+
 
         out += '<td>'+fields[MEANING]+'</td>'
 		out += '<td class="tr">'+fields[IPA]+'</td>'
@@ -285,14 +284,14 @@ function findWords (reg) {
 
     var out = ''
 	var itemArray
+    
+    //out += `<tr><td></td><td></td><td></td><td></td><td></td><td class="markupCol">get markup</td></tr>`
+    
     for (let i=0;i<result.length;i++) { 
 		itemArray = result[i].split('|')
 		out += '<tr>'
 
-        //out += `<td><span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')" style="cursor:pointer;">⛛</span></td>`
-
-		//out += '<td lang="'+terms.language+'" dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+itemArray[TERM]+'#'+terms.wiktionaryLink+'">'+itemArray[TERM]+'</a></td>'
-        out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
+        out += `<td class="termCol" lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
         
         
 
@@ -301,11 +300,10 @@ function findWords (reg) {
         else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }">${ itemArray[TERM] }</a>`
         
                 
-        out += `<span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')"><img src="../common29/icons/rotate.svg" class="showPanel" alt="Explode" title="Show composition"></span>`
+        out += `<span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></span>`
         
         out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ itemArray[TERM].trim() }')">`
 
-        //out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ itemArray[TERM].trim() }')">
         out += '</td>'
         
 
@@ -347,6 +345,33 @@ function findWords (reg) {
 
         // add the markup column for server-based use
         if (location.hostname === 'r12a.github.io') {
+            markup = ''
+            markup += `&lt;span class=&quot;charExample&quot; translate=&quot;no&quot;&gt;`
+            markup += `&lt;bdi class=&quot;ex`
+            markup += `&quot; lang=&quot;${ terms.language }&quot;`
+            if (terms.direction !== '') markup += ` dir=&quot;${ terms.direction }&quot;`
+            markup += `&gt;${ itemArray[TERM].trim() }&lt;/bdi&gt;`
+            
+            if (itemArray[IPA].trim()) markup += `&lt;bdi class=&quot;ipa&quot;&gt;${ itemArray[IPA].trim() }&lt;/bdi&gt;`
+             
+            if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') markup += `&lt;bdi class=&quot;transc&quot;&gt;${ itemArray[IPA].trim() }&lt;/bdi&gt;`
+             
+            if (itemArray[MEANING].trim()) markup += `&lt;bdi class=&quot;meaning&quot;&gt;${ itemArray[MEANING].trim() }&lt;/bdi&gt;`
+           
+            markup +=`&lt;/span&gt;`
+            
+            out += `<td class="markupCol"><img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ markup }')"></td>`
+     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            /*
             out += `<td class="markupCol">&lt;span class="charExample" translate="no"&gt;`
             out += `&lt;bdi class="ex`
             out += `" lang="${ terms.language }"`
@@ -360,19 +385,40 @@ function findWords (reg) {
             if (itemArray[MEANING].trim()) out += `&lt;bdi class="meaning"&gt;${ itemArray[MEANING].trim() }&lt;/bdi&gt;`
            
             out +=`&lt;/span&gt;</td>`
-            
+            */
             }
         
         
         
         
         else {
+            markup = ''
+            markup += `<span class=&quot;eg`
+            if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') markup += ' transc'
+            markup += `&quot; lang=&quot;${ terms.language }&quot;`
+            if (terms.direction !== '') markup += ` dir=&quot;${ terms.direction }&quot;`
+            markup += `>${ itemArray[TERM].trim() }</span>`
+           
+           
+            out += `<td class="markupCol">`
+            if (i===0) out += `get markup<br>`
+            out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ markup }')"></td>`
+           // out += `<td class="markupCol"><img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ markup }')"></td>`
+
+
+
+
+
+
+
+
+            /*
             out += `<td class="noteCol">&lt;span class="eg`
             if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') out += ' transc'
             out += `" lang="${ terms.language }"`
             if (terms.direction !== '') out += ` dir="${ terms.direction }"`
             out += `&gt;${ itemArray[TERM].trim() }&lt;/span&gt;</td>`
-
+            */
             //out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM].trim()+'&lt;/span&gt;</td>'
             }
 
