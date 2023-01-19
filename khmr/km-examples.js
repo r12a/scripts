@@ -987,7 +987,7 @@ autoExpandExamples.km = `
 ឃឹម||
 ឃុន||
 ឃុំ||
-ឃើញ|to see|kʰəːɲ
+ឃើញ|to see|kʰəː§ɲ
 ឃោសនា||
 ឃោស្នា||
 ឃ្មុំ||
@@ -2566,7 +2566,7 @@ autoExpandExamples.km = `
 បញ្ឆោត|to trick|ɓɑ§ɲ.§ˈcʰao§t
 បញ្ជា||
 បញ្ជាក់||
-បញ្ជី||
+បញ្ជី|list, chart|ɓɑ§ɲ.§ˈciː|bɑñcii
 បញ្ជីមុខម្ហូប||
 បញ្ជូន||
 បញ្ជោះ||
@@ -4470,7 +4470,7 @@ autoExpandExamples.km = `
 វិញ្ញាណ||
 វិញ្ញាសា||
 វិថី||
-វិទូ|expert|ʋi.ˈtuː
+វិទូ|expert|ʋi.§ˈtuː
 វិទ្យា||
 វិទ្យាល័យ|highschool|ʋi.§tʰ§jiə.§la§j
 វិទ្យាសាស្ត្រ||
