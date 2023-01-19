@@ -285,7 +285,6 @@ function findWords (reg) {
     var out = ''
 	var itemArray
     
-    //out += `<tr><td></td><td></td><td></td><td></td><td></td><td class="markupCol">get markup</td></tr>`
     
     for (let i=0;i<result.length;i++) { 
 		itemArray = result[i].split('|')
@@ -361,31 +360,6 @@ function findWords (reg) {
             markup +=`&lt;/span&gt;`
             
             out += `<td class="markupCol"><img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ markup }')"></td>`
-     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            /*
-            out += `<td class="markupCol">&lt;span class="charExample" translate="no"&gt;`
-            out += `&lt;bdi class="ex`
-            out += `" lang="${ terms.language }"`
-            if (terms.direction !== '') out += ` dir="${ terms.direction }"`
-            out += `&gt;${ itemArray[TERM].trim() }&lt;/bdi&gt;`
-            
-            if (itemArray[IPA].trim()) out += `&lt;bdi class="ipa"&gt;${ itemArray[IPA].trim() }&lt;/bdi&gt;`
-             
-            if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') out += `&lt;bdi class="transc"&gt;${ itemArray[IPA].trim() }&lt;/bdi&gt;`
-             
-            if (itemArray[MEANING].trim()) out += `&lt;bdi class="meaning"&gt;${ itemArray[MEANING].trim() }&lt;/bdi&gt;`
-           
-            out +=`&lt;/span&gt;</td>`
-            */
             }
         
         
@@ -403,23 +377,6 @@ function findWords (reg) {
             out += `<td class="markupCol">`
             if (i===0) out += `get markup<br>`
             out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ markup }')"></td>`
-           // out += `<td class="markupCol"><img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ markup }')"></td>`
-
-
-
-
-
-
-
-
-            /*
-            out += `<td class="noteCol">&lt;span class="eg`
-            if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') out += ' transc'
-            out += `" lang="${ terms.language }"`
-            if (terms.direction !== '') out += ` dir="${ terms.direction }"`
-            out += `&gt;${ itemArray[TERM].trim() }&lt;/span&gt;</td>`
-            */
-            //out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM].trim()+'&lt;/span&gt;</td>'
             }
 
         out += '</tr>\n'
