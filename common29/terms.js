@@ -131,27 +131,27 @@ if (document.getElementById('tabPlaceholder')) {
     <div id="help_tab_area">
     <p>This app has 3 main tabs:</p>
     <ol>
-    <li><samp>List</samp>: Simply lists all the entries available.</li>
-    <li><samp>Find</samp>: Allows you to search for a sequence of characters.</li>
-    <li><samp>Frequency</samp>: Provides information about the frequency of occurrence of character in the word in the term base.</li>
+    <li><samp>List</samp>: Simply lists all the entries in the term base.</li>
+    <li><samp>Find</samp>: Allows you to search for terms containing one or more characters.</li>
+    <li><samp>Frequency</samp>: Provides information about how often each character appears in the term base.</li>
     </ol>
     
-    <p>For many entries, meanings followed by IPA and other transcriptions (and sometimes notes) are listed alongside the main entry. This is a work in progress.</p>
+    <p>For many terms, adjacent columns provide meanings and IPA and other transcriptions (and sometimes notes). This is a work in progress.</p>
     
-    <p>Many words and transcriptions are taken from <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page" target="_blank">Wiktionary</a>, but there are other sources, too. Where a term has a Wiktionary page, click on the term to open that page.</p>
+    <p>For many terms, meanings and transcriptions are taken from <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page" target="_blank">Wiktionary</a>, but there are other sources, too. Where a term has a Wiktionary page it will have a link; click on the term to open that page.</p>
 
     <h2>Searching & sets</h2>
-    <p>In the Find tab you can search for any sequence of characters, and you can use regular expressions too. For example, <samp>a.a</samp> will show any words containing two a's with one intervening character (of any kind).</p>
-    <p>The <samp>Sets</samp> pulldown presents you with shortcuts, tailored to the language of the database, which are extremely useful for searching. Copy the tokens to the search field. For example, <samp>ⒸⓋⓋ</samp> will typically search for a consonant followed by 2 vowels.</p>
+    <p>In the <samp>Find</samp> tab you can search for any sequence of characters, and you can use regular expressions, too. For example, <samp>a.a</samp> will show any terms containing two a's with one intervening character (of any kind).</p>
+    <p>The <samp>Sets</samp> pulldown presents you with shortcuts, tailored to the language of the term base, which provide significant help for certain types of search. Copy the tokens to the search field to represent one of a named set of characters. For example, <samp>ⒸⓋⓋ</samp> will typically search for any consonant followed by any 2 vowels.</p>
     
     <h2>Icons</h2>
     
-    <p><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;"> opens a panel that breaks down a term into &lt;<i class="kw">base+combining_mark</i>&gt; units, and annotates them with a Latin transliteration and, where available, and IPA transcription. The characters are also listed, one by one, with their Unicode names. You can dismiss the panel by clicking on X, or hitting the ESC key.</p>
+    <p><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;"> opens a panel that breaks down a term into &lt;<i class="kw">base+combining_mark</i>&gt; units, and annotates them with a Latin transliteration and, where available, an IPA transcription. The characters are also listed, one by one, with their Unicode names. You can dismiss the panel by clicking on X, or by hitting the ESC key.</p>
     
-    <p><img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme"> on the left copies the term to the clipboard. In the Find tab, on the right this icon copies some markup code to the clipboard that allows you to insert the term with any transcriptions into an HTML page.</p>
+    <p><img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme"> next to a term copies the term to the clipboard. In the Find tab's right-hand column this icon copies some markup code to the clipboard that allows you to insert the term with any transcriptions into an HTML page.</p>
     
     <h2>URL parameters</h2>
-    <p>You can create a link that will automatically search for something using <code class="kw">?q=xxx</code> (where xxx represents one or more characters). For example, <a href="https://r12a.github.io/scripts/mlym/ml_vocab.html?q=്" target="_blank">find words using the chandrabindu in the Malayalam database</a>.</p>
+    <p>You can create a link that will automatically search for something using <code class="kw">?q=xxx</code> (where xxx represents one or more characters). For example, <a href="https://r12a.github.io/scripts/mlym/ml_vocab.html?q=്" target="_blank">find words using the chandrakkala in the Malayalam database</a>.</p>
     </div>
 `
     }
