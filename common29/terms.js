@@ -89,6 +89,7 @@ if (document.getElementById('tabPlaceholder')) {
     <h2 id="list_tab" onClick="switchTabTo(this.id)">List</h2>
     <h2 id="find_tab" onClick="switchTabTo(this.id)">Find</h2>
     <h2 id="freq_tab" onClick="switchTabTo(this.id);listFrequency()">Frequency</h2>
+    <h2 id="help_tab" onClick="switchTabTo(this.id)">Help</h2>
     </div> 
 
 
@@ -125,7 +126,33 @@ if (document.getElementById('tabPlaceholder')) {
     <p style="font-style: italic; font-size: 80%;">Total sample size: <span id="totalFreq">–</span> characters. &nbsp;&nbsp; Unique characters: <span id="uniqueChars">-</span>. &nbsp;&nbsp; Averaged: <span id="averaged">-</span> &nbsp; <img src="../../shared/images/help.png" alt="[?]" id="averagedHelp"></p>
     <table id="freqout"></table>
     </div>
-    `
+    
+
+    <div id="help_tab_area">
+    <p>This app has 3 main tabs:</p>
+    <ol>
+    <li><samp>List</samp>: Simply lists all the entries available.</li>
+    <li><samp>Find</samp>: Allows you to search for a sequence of characters.</li>
+    <li><samp>Frequency</samp>: Provides information about the frequency of occurrence of character in the word in the term base.</li>
+    </ol>
+    <p>Many words and transcriptions are taken from Wiktionary, but there are other sources, too.</p>
+    <p>Where a term appears in Wiktionary, the Wiktionary page will open if you click on the term.</p>
+
+    <h2>Searching & sets</h2>
+    <p>In the Find tab you can search for any sequence of characters, and you can use regular expressions too. For example, <samp>a.a</samp> will show any words containing two a's with one intervening character (of any kind).</p>
+    <p>The <samp>Sets</samp> pulldown presents you with shortcuts, tailored to the language of the database, which are extremely useful for searching. Copy the tokens to the search field. For example, <samp>ⒸⓋⓋ</samp> will typically search for a consonant followed by 2 vowels.</p>
+    
+    <h2>Icons</h2>
+    <ul>
+    <li><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;"> opens a panel that breaks down a term into &lt;<i class="kw">base+combining_mark</i>&gt; units, and annotates them with a Latin transliteration and, where available, and IPA transcription. The characters are also listed, one by one, with their Unicode names. You can dismiss the panel by clicking on X, or hitting the ESC key.</li>
+    
+    <li><img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme"> on the left copies the term to the clipboard. In the Find tab, on the right this icon copies some markup code to the clipboard that allows you to insert the term with its transcriptions into an HTML page.</li>
+    </ul>
+    
+    <h2>URL parameters</h2>
+    <p>You can create a link that will automatically search for something using <code class="kw">?q=xxx</code> (where xxx represents one or more characters). For example, <a href="https://r12a.github.io/scripts/mlym/ml_vocab.html?q=്" target="_blank">find words using the chandrabindu in the Malayalam database</a>.</p>
+    </div>
+`
     }
 
 
