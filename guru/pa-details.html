@@ -1,6 +1,17 @@
 /*
 <!DOCTYPE html>
+<html>
+<head>
 <meta charset="utf-8">
+<style>
+body { padding: 2rem; }
+.insertTranscription { display: block; color:red; font-size: 4rem; margin-top: 3rem; border-block-start: 2px solid #eee; }
+.leadin { color: chocolate; font-size: 80%; font-weight: bold; margin-top: 2rem; }
+a { color: teal; font-size: 80%; }
+.h { font-size: 200%; padding-inline-end: 2rem; display: inline-block; }
+</style>
+<link rel="stylesheet" href="local.css">
+<body>
 */
 
 var charDetails = {
@@ -9,15 +20,24 @@ var charDetails = {
 <p class="insertTranscription">&#x0A01;</p>
 `,
 
+
+
+
 '\u{0A02}': `
 <p class="insertTranscription">&#x0A02;</p>
 <p>Used to indicate nasalisation, except for  vowels <span class="trans">a</span>, <span class="trans">i</span>, <span class="trans">u</span>, and with final <span class="trans">ū</span> (for those, see <span class="codepoint" translate="no"><span lang="pa">&#x0A70;</span> [<a href="/scripts/gurmukhi/block#char0A70"><span class="uname">U+0A70 GURMUKHI TIPPI</span></a>]</span>).</p>
 `,
 
+
+
+
 '\u{0A03}': `
 <p class="insertTranscription">&#x0A03;</p>
 <p>Used only very occasionally. In some cases it acts like a Sanskrit visarga, producing a voiceless <span class="ipa">h</span> sound, but in others it represents an abbreviation, in the same way the period is used in English.<tt>ws</tt></p>
 `,
+
+
+
 
 '\u{0A05}': `
 <p class="insertTranscription">&#x0A05;</p>
@@ -26,267 +46,618 @@ var charDetails = {
 </p>
 `,
 
+
+
+
 '\u{0A06}': `
 <p class="insertTranscription">&#x0A06;</p>
+<p><span class="ipa h">a</span> independent vowel.</p>
+<p><span class="eg" lang="pa" dir="ltr">ਆਦਮੀ</span></p>
+<p><span class="eg" lang="pa">ਗਿਆਰਾਂ</span></p>
+<p><span class="eg" lang="pa">ਧੂੰਆਂ</span></p>
 `,
+
+
+
 
 '\u{0A07}': `
 <p class="insertTranscription">&#x0A07;</p>
+<p><span class="ipa h">ɪ</span> independent vowel.</p>
+<p><span class="eg" lang="pa">ਇੱਥੇ</span></p>
+<p><span class="eg" lang="pa">ਜੀ ਆਇਆਂ ਨੂੰ</span></p>
 `,
+
+
+
 
 '\u{0A08}': `
 <p class="insertTranscription">&#x0A08;</p>
+<p><span class="ipa h">i</span> independent vowel.</p>
+<p><span class="eg" lang="pa">ਈਦ</span></p>
+<p><span class="eg" lang="pa">ਰੁਪਈਆ</span></p>
+<p><span class="eg" lang="pa">ਭਾਈ</span></p>
 `,
+
+
+
 
 '\u{0A09}': `
 <p class="insertTranscription">&#x0A09;</p>
+<p><span class="ipa h">ʊ</span> independent vowel.</p>
+<p><span class="eg" lang="pa">ਉਸਤਤ</span></p>
+<p><span class="eg" lang="pa">ਆਉਣਾ</span></p>
+<p><span class="eg" lang="pa">ਘਿਉ</span></p>
 `,
+
+
+
 
 '\u{0A0A}': `
 <p class="insertTranscription">&#x0A0A;</p>
+<p><span class="ipa h">u</span> independent vowel.</p>
+<p><span class="eg" lang="pa">ਊਠ</span></p>
+<p><span class="eg" lang="pa">ਸਾਊਥਾਲ</span></p>
+<p><span class="eg" lang="pa">ਬਤਾਊਂ</span></p>
 `,
+
+
+
 
 '\u{0A0F}': `
 <p class="insertTranscription">&#x0A0F;</p>
+<p><span class="ipa h">e</span> independent vowel.</p>
+<p><span class="eg" lang="pa">ਏਕਤਾ</span></p>
+<p><span class="eg" lang="pa">ਕ੍ਰੋਏਸ਼ੀਆ</span></p>
+<p><span class="eg" lang="pa">ਓਏ</span></p>
 `,
+
+
+
 
 '\u{0A10}': `
 <p class="insertTranscription">&#x0A10;</p>
+<p><span class="ipa h">ɛ</span> independent vowel.</p>
+<p><span class="eg" lang="pa">ਐਨਕ</span></p>
+<p><span class="eg" lang="pa">ਵੀਕਐਂਡ</span></p>
 `,
+
+
+
 
 '\u{0A13}': `
 <p class="insertTranscription">&#x0A13;</p>
+<p><span class="ipa h">o</span> independent vowel.</p>
+<p><span class="eg" lang="pa">ਓਦਣ</span></p>
+<p><span class="eg" lang="pa">ਓਹਾਇਓ</span></p>
 `,
+
+
+
 
 '\u{0A14}': `
 <p class="insertTranscription">&#x0A14;</p>
+<p><span class="ipa h">ɔ</span> independent vowel.</p>
+<p><span class="eg" lang="pa">ਔਰਤ</span></p>
+<p><span class="eg" lang="pa">ਔਖਾ</span></p>
 `,
+
+
+
 
 '\u{0A15}': `
 <p class="insertTranscription">&#x0A15;</p>
+<p><span class="ipa h">k</span> consonant.</p>
+<p><span class="eg" lang="pa">ਕਿਸਾਨ</span></p>
+<p><span class="eg" lang="pa">ਰਕਤ</span></p>
+<p><span class="eg" lang="pa">ਉਤਸੁਕ</span></p>
 `,
+
+
+
 
 '\u{0A16}': `
 <p class="insertTranscription">&#x0A16;</p>
+<p><span class="ipa h">kʰ</span> consonant.</p>
+<p><span class="eg" lang="pa">ਖਿਡੌਣਾ</span></p>
+<p><span class="eg" lang="pa">ਤਨਖ਼ਾਹ</span></p>
+<p><span class="eg" lang="pa">ਅੱਖ</span></p>
 `,
+
+
+
 
 '\u{0A17}': `
 <p class="insertTranscription">&#x0A17;</p>
+<p><span class="ipa h">g</span> consonant.</p>
+<p><span class="eg" lang="pa">ਗੁਰਮੁਖੀ</span></p>
+<p><span class="eg" lang="pa">ਮਹਿੰਗਾ</span></p>
+<p><span class="eg" lang="pa">ਸ੍ਵਰਗ</span></p>
 `,
+
+
+
 
 '\u{0A18}': `
 <p class="insertTranscription">&#x0A18;</p>
-<p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable,  or medially between a short and long vowel, eg.
-<span class="eg" lang="pa">ਘੋੜਾ</span>
-<span class="eg" lang="pa">ਪਘਾਰਨਾ</span>
-</p>
+<p><span class="ipa h">k</span> Pronounced without aspiration, and without voicing when initial.</p>
+<p><span class="eg" lang="pa">ਘੋੜਾ</span></p>
+
+<p><span class="ipa h">g</span> Elsewhere.</p>
+<p><span class="eg" lang="pa">ਪਘਾਰਨਾ</span></p>
+
+<p>Used to indicate a low tone when at the beginning of a word or syllable,  or medially between a short and long vowel.</p>
+<p><span class="eg" lang="pa" dir="ltr">ਘਿਉ</span></p>
+
 <p>Indicates a high  tone when elsewhere<tt>o</tt>, eg. 
 <span class="eg" lang="pa">ਕੁਝ</span>
 </p>
 `,
 
+
+
+
 '\u{0A19}': `
 <p class="insertTranscription">&#x0A19;</p>
-<p>Rarely used. It cannot begin a syllable or be placed between two consonants, and occurs most often as an allophone of <span class="codepoint" translate="no"><span lang="pa">&#x0A28;</span> [<a href="/scripts/gurmukhi/block#char0A28"><span class="uname">U+0A28 GURMUKHI LETTER NA</span></a>]</span> before specific consonant phonemes.<tt>ws</tt></p>
+<p><span class="ipa h">ŋ</span>  consonant. Rarely used. </p>
+<p>The sound <span class="ipa">ŋ</span> occurs most often as an allophone of <span class="codepoint" translate="no"><span lang="pa">&#x0A28;</span> [<a href="/scripts/gurmukhi/block#char0A28"><span class="uname">U+0A28 GURMUKHI LETTER NA</span></a>]</span>, before  consonant phonemes with the same articulation.<tt>ws</tt></p>
+
+<p>It cannot begin a syllable or be placed between two consonants.</p>
 `,
+
+
+
 
 '\u{0A1A}': `
 <p class="insertTranscription">&#x0A1A;</p>
+<p><span class="ipa h">t͡ʃ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A1B}': `
 <p class="insertTranscription">&#x0A1B;</p>
+<p><span class="ipa h">t͡ʃʰ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A1C}': `
 <p class="insertTranscription">&#x0A1C;</p>
+<p><span class="ipa h">d͡ʒ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A1D}': `
 <p class="insertTranscription">&#x0A1D;</p>
+<p><span class="ipa h">t͡ʃ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 <p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable, or medially between a short and long vowel.</p>
 <p>Indicates a high  tone when elsewhere<tt>o</tt>, eg.
 <span class="eg" lang="pa">ਕੁਝ</span>
 </p>
 `,
 
+
+
+
 '\u{0A1E}': `
 <p class="insertTranscription">&#x0A1E;</p>
-<p>Rarely used. It cannot begin a syllable or be placed between two consonants, and occurs most often as an allophone of <span class="codepoint" translate="no"><span lang="pa">&#x0A28;</span> [<a href="/scripts/gurmukhi/block#char0A28"><span class="uname">U+0A28 GURMUKHI LETTER NA</span></a>]</span> before specific consonant phonemes.<tt>ws</tt></p>
+<p><span class="ipa h">ɲ</span> consonant. Rarely used.</p>
+
+<p>The sound <span class="ipa">ɲ</span> most often occurs as an allophone of <span class="codepoint" translate="no"><span lang="pa">&#x0A28;</span> [<a href="/scripts/gurmukhi/block#char0A28"><span class="uname">U+0A28 GURMUKHI LETTER NA</span></a>]</span>, before  consonant phonemes with the same articulation.<tt>ws</tt></p>
+
+<p> It cannot begin a syllable or be placed between two consonants.</p>
 `,
+
+
+
 
 '\u{0A1F}': `
 <p class="insertTranscription">&#x0A1F;</p>
+<p><span class="ipa h">ʈ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A20}': `
 <p class="insertTranscription">&#x0A20;</p>
+<p><span class="ipa h">ʈʰ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A21}': `
 <p class="insertTranscription">&#x0A21;</p>
+<p><span class="ipa h">ɖ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A22}': `
 <p class="insertTranscription">&#x0A22;</p>
+<p><span class="ipa h">ʈ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 <p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable, or medially between a short and long vowel.</p>
 <p>Indicates a high  tone when elsewhere.<tt>o</tt></p>
 `,
+
+
+
 
 '\u{0A23}': `
 <p class="insertTranscription">&#x0A23;</p>
+<p><span class="ipa h">ɳ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A24}': `
 <p class="insertTranscription">&#x0A24;</p>
+<p><span class="ipa h">t</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A25}': `
 <p class="insertTranscription">&#x0A25;</p>
+<p><span class="ipa h">tʰ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A26}': `
 <p class="insertTranscription">&#x0A26;</p>
+<p><span class="ipa h">d</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A27}': `
 <p class="insertTranscription">&#x0A27;</p>
+<p><span class="ipa h">t</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 <p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable, or medially between a short and long vowel.</p>
 <p>Indicates a high  tone when elsewhere.<tt>o</tt></p>
 `,
+
+
+
 
 '\u{0A28}': `
 <p class="insertTranscription">&#x0A28;</p>
+<p><span class="ipa h">n</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A2A}': `
 <p class="insertTranscription">&#x0A2A;</p>
+<p><span class="ipa h">p</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A2B}': `
 <p class="insertTranscription">&#x0A2B;</p>
+<p><span class="ipa h">pʰ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A2C}': `
 <p class="insertTranscription">&#x0A2C;</p>
+<p><span class="ipa h">b</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A2D}': `
 <p class="insertTranscription">&#x0A2D;</p>
+<p><span class="ipa h">p</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 <p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable, or medially between a short and long vowel.</p>
 <p>Indicates a high  tone when elsewhere.<tt>o</tt></p>
 `,
 
+
+
+
 '\u{0A2E}': `
 <p class="insertTranscription">&#x0A2E;</p>
+<p><span class="ipa h">m</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A2F}': `
 <p class="insertTranscription">&#x0A2F;</p>
+<p><span class="ipa h">j</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A30}': `
 <p class="insertTranscription">&#x0A30;</p>
+<p><span class="ipa h">r</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 <p>Also appears in subjoined form as a syllable medial consonant, eg.
 <span class="eg" lang="pa">ਪ੍ਰਬੰਧ</span>
 </p>
 `,
 
+
+
+
 '\u{0A32}': `
 <p class="insertTranscription">&#x0A32;</p>
+<p><span class="ipa h">l</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A33}': `
 <p class="insertTranscription">&#x0A33;</p>
+<p><span class="ipa h">ɭ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 <p>Was only recently added to the Gurmukhī alphabet. It was not a part of the traditional orthography, the phonological difference between 'l' and 'ɭ' is not reflected in the script. Some sources do not consider it a separate letter.<tt>ws</tt></p>
 <p>Represents an extended sound used for foriegn words, particularly Urdu or Persian. </p>
 `,
 
+
+
+
 '\u{0A35}': `
 <p class="insertTranscription">&#x0A35;</p>
-<p>The pronunciation varies between <span class="ipa">ʋə</span> and <span class="ipa">wə</span> depending on the word.<tt>ws</tt></p>
-<p>Can also appear in subjoined form as a syllable medial consonant, eg.
-<span class="eg" lang="pa">ਸ੍ਵਰਗ</span>
-</p>
+<p><span class="ipa h">ʋ</span> consonant.</p>
+<p><span class="eg" lang="pa">ਵਾਲ</span></p>
+<p><span class="eg" lang="pa">ਜਵਾਬ</span></p>
+<p><span class="eg" lang="pa">ਸਾਵਾ</span></p>
+
+<p>The pronunciation varies between <span class="ipa">ʋ</span> and <span class="ipa">w</span> depending on the word.<tt>ws</tt></p>
+<p><span class="eg" lang="pa">ਤਵੀ</span></p>
+
+<p>Can also appear in subjoined form as a syllable medial consonant in words derived from Sanskrit.</p>
+<p><span class="eg" lang="pa">ਸ੍ਵਰਗ</span></p>
+
 <p>However, this is much less common than the subjoined form of <span class="codepoint" translate="no"><span lang="pa">&#x0A30;</span> [<a href="/scripts/gurmukhi/block#char0A30"><span class="uname">U+0A30 GURMUKHI LETTER RA</span></a>]</span>
 </p>
 `,
 
+
+
+
 '\u{0A36}': `
 <p class="insertTranscription">&#x0A36;</p>
+<p><span class="ipa h">ʃ</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A38}': `
 <p class="insertTranscription">&#x0A38;</p>
+<p><span class="ipa h">s</span> consonant.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A39}': `
 <p class="insertTranscription">&#x0A39;</p>
-<p>Only pronounced <span class="ipa">ɦ</span> when it occurs word initially, eg.
-<span class="eg" lang="pa">ਹਰੀ</span>
-</p>
-<p>In other locations it is unpronounced and  indicates that the preceding vowel has a high tone, eg.
-<span class="eg" lang="pa">ਮੀਹ</span>
-</p>
-<p>When used after a consonant, it appears subjoined below that consonant<tt>d</tt>, eg.
-<span class="eg" lang="pa">ਚੜ੍ਹ</span>
-</p>
+<p><span class="ipa h">ɦ</span> consonant, only when it occurs word initially.</p>
+<p><span class="eg" lang="pa">ਹਰੀ</span></p>
+
+<p><span class="ipa h">∅</span> in other locations, where it indicates that the preceding vowel has a high tone.</p>
+<p><span class="eg" lang="pa">ਮੀਹ</span></p>
+
+<p>When used after a consonant, it appears subjoined below that consonant<tt>d</tt>.</p>
+<p><span class="eg" lang="pa">ਚੜ੍ਹ</span></p>
+
 <p>When it follows a short <span class="trans">i</span> or <span class="trans">u</span>, it changes the vowel's phonetic value from [ɪ] and [ʊ] to [é] and [ó], respectively, and indicates a high tone.</p>
+
 <p>According to Omniglot, the conjuncts <span class="charExample inline" translate="no"><span class="ex" lang="pa">ਗ੍ਹ</span> <span class="trans">gʰa</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="pa">ਜ੍ਹ</span> <span class="trans">jʰa</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="pa">ਢ੍ਹ</span> <span class="trans">ḍʰa</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="pa">ਦ੍ਹ</span> <span class="trans">dʰa</span></span>, and <span class="charExample inline" translate="no"><span class="ex" lang="pa">ਬ੍ਹ</span> <span class="trans">bʰa</span></span> indicate a level tone when at the beginning of a word or syllable, and a low rising tone when elsewhere.<tt>o</tt></p>
 `,
+
+
+
 
 '\u{0A3C}': `
 <p class="insertTranscription">&#x0A3C;</p>
 <p class="titlepara">Used with an existing consonant to represent an extended sound used for foriegn words, particularly Urdu or Persian. </p>
 `,
 
+
+
+
 '\u{0A3E}': `
 <p class="insertTranscription">&#x0A3E;</p>
+<p><span class="ipa h">a</span> dependent vowel.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A3F}': `
 <p class="insertTranscription">&#x0A3F;</p>
-<p><span class="ipa">é</span> with a high tone<tt>d</tt>, eg.
+<p><span class="ipa h">é</span> with a high tone<tt>d</tt>, eg.
 <span class="eg" lang="pa">ਕਿਹੜਾ</span>
 </p>
-<p><span class="ipa">ǽ</span> when combined with a preceding <span class="trans">ah</span><tt>d</tt>, eg.
+<p><span class="ipa h">ǽ</span> when combined with a preceding <span class="trans">ah</span><tt>d</tt>, eg.
 <span class="eg" lang="pa">ਕਹਿਣਾ</span>
 </p>
 `,
 
+
+
+
 '\u{0A40}': `
 <p class="insertTranscription">&#x0A40;</p>
+<p><span class="ipa h">i</span> dependent vowel.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A41}': `
 <p class="insertTranscription">&#x0A41;</p>
-<p><span class="trans">ó</span> with  a high tone<tt>d</tt>, eg.
+<p><span class="ipa h">ó</span> with  a high tone<tt>d</tt>, eg.
 <span class="eg" lang="pa">ਕੁਹੜਾ</span>
 </p>
-<p><span class="trans">ɔ́</span> when combined with a preceding <span class="trans">ah</span><tt>d</tt>, eg.
+<p><span class="ipa h">ɔ́</span> when combined with a preceding <span class="trans">ah</span><tt>d</tt>, eg.
 <span class="eg" lang="pa">ਵਹੁਟੀ</span>
 </p>
 `,
 
+
+
+
 '\u{0A42}': `
 <p class="insertTranscription">&#x0A42;</p>
+<p><span class="ipa h">u</span> dependent vowel.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A47}': `
 <p class="insertTranscription">&#x0A47;</p>
+<p><span class="ipa h">e</span> dependent vowel.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A48}': `
 <p class="insertTranscription">&#x0A48;</p>
+<p><span class="ipa h">ɛ</span> dependent vowel.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A4B}': `
 <p class="insertTranscription">&#x0A4B;</p>
+<p><span class="ipa h">o</span> dependent vowel.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A4C}': `
 <p class="insertTranscription">&#x0A4C;</p>
+<p><span class="ipa h">ɔ</span> dependent vowel.</p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
+<p><span class="eg" lang="pa"></span></p>
 `,
+
+
+
 
 '\u{0A4D}': `
 <p class="insertTranscription">&#x0A4D;</p>
@@ -295,75 +666,136 @@ var charDetails = {
 <p>The virama may also be used occasionally to suppress the vowel  in Sanskritised text, or in dictionaries for extra phonetic information.<tt>ws</tt></p>
 `,
 
+
+
+
 '\u{0A51}': `
 <p class="insertTranscription">&#x0A51;</p>
 <p>Used in older texts to indicate a high tone.</p>
 `,
+
+
+
 
 '\u{0A59}': `
 <p class="insertTranscription">&#x0A59;</p>
 <p>Represents an extended sound used for foriegn words, particularly Urdu or Persian. </p>
 `,
 
+
+
+
 '\u{0A5A}': `
 <p class="insertTranscription">&#x0A5A;</p>
 <p>Represents an extended sound used for foriegn words, particularly Urdu or Persian. </p>
 `,
+
+
+
 
 '\u{0A5B}': `
 <p class="insertTranscription">&#x0A5B;</p>
 <p>Represents an extended sound used for foriegn words, particularly Urdu or Persian. </p>
 `,
 
+
+
+
 '\u{0A5C}': `
 <p class="insertTranscription">&#x0A5C;</p>
 <p>Represents an extended sound used for foriegn words, particularly Urdu or Persian. </p>
 `,
+
+
+
 
 '\u{0A5E}': `
 <p class="insertTranscription">&#x0A5E;</p>
 <p>Represents an extended sound used for foriegn words, particularly Urdu or Persian. </p>
 `,
 
+
+
+
 '\u{0A66}': `
 <p class="insertTranscription">&#x0A66;</p>
+<p><span class="h">0</span> digit.</p>
 `,
+
+
+
 
 '\u{0A67}': `
 <p class="insertTranscription">&#x0A67;</p>
+<p><span class="h">1</span> digit.</p>
 `,
+
+
+
 
 '\u{0A68}': `
 <p class="insertTranscription">&#x0A68;</p>
+<p><span class="h">2</span> digit.</p>
 `,
+
+
+
 
 '\u{0A69}': `
 <p class="insertTranscription">&#x0A69;</p>
+<p><span class="h">3</span> digit.</p>
 `,
+
+
+
 
 '\u{0A6A}': `
 <p class="insertTranscription">&#x0A6A;</p>
+<p><span class="h">4</span> digit.</p>
 `,
+
+
+
 
 '\u{0A6B}': `
 <p class="insertTranscription">&#x0A6B;</p>
+<p><span class="h">5</span> digit.</p>
 `,
+
+
+
 
 '\u{0A6C}': `
 <p class="insertTranscription">&#x0A6C;</p>
+<p><span class="h">6</span> digit.</p>
 `,
+
+
+
 
 '\u{0A6D}': `
 <p class="insertTranscription">&#x0A6D;</p>
+<p><span class="h">7</span> digit.</p>
 `,
+
+
+
 
 '\u{0A6E}': `
 <p class="insertTranscription">&#x0A6E;</p>
+<p><span class="h">8</span> digit.</p>
 `,
+
+
+
 
 '\u{0A6F}': `
 <p class="insertTranscription">&#x0A6F;</p>
+<p><span class="h">9</span> digit.</p>
 `,
+
+
+
 
 '\u{0A70}': `
 <p class="insertTranscription">&#x0A70;</p>
@@ -373,6 +805,9 @@ var charDetails = {
 <span class="eg" lang="pa">ਲੰਮੀ</span>.<tt>d</tt></p>
 `,
 
+
+
+
 '\u{0A71}': `
 <p class="insertTranscription">&#x0A71;</p>
 <p>Doubling or reinforcement of a consonant sound is indicated, unusually for an indic script, using this diacritic. It is typed before the consonant (in this way it resembles the small <span class="trans">tsu</span> in Japanese), and is placed to the left of the consonant it affects (not over it), eg.
@@ -381,12 +816,18 @@ var charDetails = {
 <p>The diacritic may appear over the right side of the preceding consonant, but if that consonant has a vowel sign or extension above the horizontal topline, it may be displayed on a short extension of the joining line. See for example  <span class="charExample" translate="no"><span class="ex" lang="pa">ਭੁੱਲ ਭੇੱਲ ਉੱਛਲ</span></span> (effect may vary by font).</p>
 `,
 
+
+
+
 '\u{0A72}': `
 <p class="insertTranscription">&#x0A72;</p>
 <p>Functions as a vowel-sign carrier for independent vowels (ie. vowels with no preceding consonant).</p>
 <p>Never used on its own, and <strong>the Unicode Standard advises against using it at all</strong>, but advises authors to instead use the precomposed characters <span class="codepoint" translate="no"><span lang="pa">&#x0A08;</span> [<a href="/scripts/gurmukhi/block#char0A08"><span class="uname">U+0A08 GURMUKHI LETTER II</span></a>]</span>, <span class="codepoint" translate="no"><span lang="pa">&#x0A07;</span> [<a href="/scripts/gurmukhi/block#char0A07"><span class="uname">U+0A07 GURMUKHI LETTER I</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="pa">&#x0A0F;</span> [<a href="/scripts/gurmukhi/block#char0A0F"><span class="uname">U+0A0F GURMUKHI LETTER EE</span></a>]</span>
 </p>
 `,
+
+
+
 
 '\u{0A73}': `
 <p class="insertTranscription">&#x0A73;</p>
@@ -395,10 +836,16 @@ var charDetails = {
 </p>
 `,
 
+
+
+
 '\u{0A74}': `
 <p class="insertTranscription">&#x0A74;</p>
 <p>Religious symbol that can have various different forms. Unicode classes it as a letter. The shape in the Unicode charts is highly stylised.</p>
 `,
+
+
+
 
 '\u{0A75}': `
 <p class="insertTranscription">&#x0A75;</p>
@@ -406,9 +853,15 @@ var charDetails = {
 </p>
 `,
 
+
+
+
 '\u{0A76}': `
 <p class="insertTranscription">&#x0A76;</p>
 `,
+
+
+
 
 
 
