@@ -11,7 +11,7 @@ const WIKI = 5
 const IPAraw = 6
 
 
-
+document.querySelector("title").textContent = `${ terms.title } term lister`
 
 document.querySelector("body").addEventListener('keydown', closeDialogEsc)
 
