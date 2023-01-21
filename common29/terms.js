@@ -125,7 +125,12 @@ if (document.getElementById('tabPlaceholder')) {
     <p>Frequency of individual characters across all the entries.</p>
     <p style="font-style: italic; font-size: 80%;">Total sample size: <span id="totalFreq">–</span> characters. &nbsp;&nbsp; Unique characters: <span id="uniqueChars">-</span>. &nbsp;&nbsp; Averaged: <span id="averaged">-</span> &nbsp; <img src="../../shared/images/help.png" alt="[?]" id="averagedHelp"></p>
     <table id="freqout"></table>
-    </div>
+    <p style="font-size: 80%;">Show the following characters only: <input id="freqFilter" type="text" 
+        onchange="filterFrequency(this.value)">
+    <button onclick="   filterFrequency(documentGetElementById('freqFilter').value)">GO</button>
+    <button onclick="resetFilter()">RESET</button></p>
+
+</div>
     
 
     <div id="help_tab_area">
@@ -161,6 +166,23 @@ if (document.getElementById('tabPlaceholder')) {
 
 
 
+function filterFrequency (chars) {
+    // remove all characters from the frequency list except those in chars list
+    var rows = document.getElementById('freqout').querySelectorAll('.char')
+    
+    for (i=0;i<rows.length;i++) {
+        //console.log(rows[i].textContent, chars.includes(rows[i].textContent), chars)
+        if (! chars.includes(rows[i].textContent)) rows[i].parentNode.style.display = 'none'
+        }
+    }
+
+function resetFilter () {
+    var rows = document.getElementById('freqout').querySelectorAll('tr')
+    alert(rows.length)
+    for (i=0;i<rows.length;i++) {
+        rows[i].style.display = 'table-row'
+        }
+    }
 
 
 // remove blank lines
