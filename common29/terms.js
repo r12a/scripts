@@ -141,8 +141,11 @@ if (document.getElementById('tabPlaceholder')) {
     <p>For many terms, meanings and transcriptions are taken from <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page" target="_blank">Wiktionary</a>, but there are other sources, too. Where a term has a Wiktionary page it will have a link; click on the term to open that page.</p>
 
     <h2>Searching & sets</h2>
-    <p>In the <samp>Find</samp> tab you can search for any sequence of characters, and you can use regular expressions, too. For example, <samp>a.a</samp> will show any terms containing two a's with one intervening character (of any kind).</p>
-    <p>The <samp>Sets</samp> pulldown presents you with shortcuts, tailored to the language of the term base, which provide significant help for certain types of search. Copy the tokens to the search field to represent one of a named set of characters. For example, <samp>ⒸⓋⓋ</samp> will typically search for any consonant followed by any 2 vowels.</p>
+    <p>In the <samp>Find</samp> tab you can search for any sequence of characters, and you can use regular expressions, too. For example, <samp>a.a</samp> will show any terms containing two a's with one intervening character (of any kind). And <samp>[^ ]Ⓥ</samp> will show words with independent vowels that appear word-medially.</p>
+    
+    <p>To search for characters at word boundaries, type a space before or after the character(s).</p>
+    
+    <p>The <samp>Sets</samp> pulldown presents you with shortcuts, tailored to the language of the term base, which provide significant help for certain types of search. Copy the tokens to the search field to represent one of a named set of characters. For example, <samp>ⒸⓋⓋ</samp> will typically search for any consonant followed by any 2 vowels, and <samp>ⓋxⒸ</samp> may reveal a word-medial, syllable-final use of x.</p>
     
     <h2>Icons</h2>
     
