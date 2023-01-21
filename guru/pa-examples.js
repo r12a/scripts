@@ -48,7 +48,7 @@ autoExpandExamples.pa = `
 ਅੱਗ|fire||agga
 ਅੱਛਾ|OK||acchā
 ਅੱਜ ਕੱਲ੍ਹ||
-ਅੱਜ-ਕੱਲ੍ਹ||
+ਅੱਜ-ਕੱਲ੍ਹ|nowadays|əd§d͡ʒə̆§‿§kə́l§lə̆§–
 ਅੱਜ|today|əd͡ʒːᵊ
 ਅੱਠ||
 ਅੱਬਾ|father||abbā
@@ -401,7 +401,6 @@ autoExpandExamples.pa = `
 ਜ਼ਿੰਦਗੀ||
 ਜ਼ਿੰਦਾਬਾਦ||
 ਜ਼ੋਰ||
-ਜ਼‌‍||
 ਜਾਂ||
 ਜਾਗਣਾ||
 ਜਾਚ||

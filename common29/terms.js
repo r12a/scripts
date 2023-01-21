@@ -507,10 +507,12 @@ function listFrequency () {
             spreadsheetInfo[key].ipa = ''
             }
         out += `<tr>
-            <td class="uname"><a target="charnotes" href="block#char${ hex }">${ spreadsheetInfo[key].name }</a>`
+            <td class="uname"><a target="charnotes" href="block.html#char${ hex }">${ spreadsheetInfo[key].name }</a>`
             if (spreadsheetInfo[key].ipa !== '') out +=` <span class="ipa">${ spreadsheetInfo[key].ipa.toLowerCase() }</span>`
             out += `</td>
-            <td class="char">${ key }</td>
+            <td class="char" style="cursor:pointer;" 
+                onclick="navigator.clipboard.writeText(this.textContent)"
+                >${ key }</td>
             <td class="freq">${ sorted[key].toLocaleString() }</td>
             <td class="percent">${ eval(sorted[key]*100/total).toFixed(2) }%</td>
             </tr>\n`
