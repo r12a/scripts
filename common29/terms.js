@@ -178,7 +178,6 @@ function filterFrequency (chars) {
 
 function resetFilter () {
     var rows = document.getElementById('freqout').querySelectorAll('tr')
-    alert(rows.length)
     for (i=0;i<rows.length;i++) {
         rows[i].style.display = 'table-row'
         }
