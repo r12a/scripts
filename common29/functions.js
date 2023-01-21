@@ -114,6 +114,13 @@ function initialiseSummary (blockDirectory, lang, tableName, orthogNotesFile) {
 	setTranslitToggle()  // Add checkboxes and links to the fixed position selector
 	setCharOnclicks() // All links with target=c should open descriptions in the panel
 	if (typeof reflist !== 'undefined') createReferences(lang)
+    
+    var body = document.querySelector('body')
+    var tocPanel = document.createElement('div')
+    tocPanel.id = 'tocPanel'
+    tocPanel.style.display = 'none'
+    body.appendChild(tocPanel)
+    createtocPanel(3)
     }
 
 
@@ -1431,15 +1438,17 @@ function setTranslitToggle () {
     // add link to top of plage
 	div = document.createElement('div')
     var img = document.createElement('img')
+    img.id = 'jumpToToc'
     img.src = '../../shared/images/up.png'
     img.style.marginBlockStart = '2rem'
     img.alt = 'TOC.'
     img.title = 'Jump to table of contents.'
-
-    var a = document.createElement('a')
+    img.onclick = function () { document.getElementById('tocPanel').style.display = 'block'}
+    div.appendChild(img)
+    /*var a = document.createElement('a')
     a.appendChild(img)
     a.href = '#header-boilerplate'
-    div.appendChild(a)
+    div.appendChild(a)*/
 
 	checkboxList.appendChild(div)
 	}
@@ -1702,6 +1711,79 @@ function copyIntroInfo () {
 
 
 
+function createtocPanel (maxlevel) { console.log('hello !')
+	// creates a TOC and puts it in #tocPanel
+    // expect to find the id on the heading markup, NOT the section, and NO a around the heading text
+    // works for h2 or h2+h3 (if maxlevel set to 3
+    // calls setSectionRefs setFigRefs
+    // local h2s toc h2 h3 i h a h3s k hh aa h4s
+	
+	var h2s = document.querySelectorAll('h2')
+	var toc = document.getElementById('tocPanel')
+	var h2, h3
+	
+	for (var i=0; i<h2s.length; i++) {
+		if (!h2s[i].className.match(/notoc/)) {
+			h2 = h2s[i].innerHTML
+            
+            // create a self link <a class="selflink" aria-label="§" href="#basicconsonants"></a>
+            var selflink = document.createElement('a')
+            selflink.className = 'selflink'
+            selflink.href = '#'+h2s[i].parentNode.id
+            h2s[i].appendChild(selflink)
+            
+			var h = document.createElement('div')
+			var a = document.createElement('a')
+				a.href = '#'+h2s[i].parentNode.id
+				a.innerHTML = h2
+			h.appendChild(a)
+			h.className = 'toc1'
+		
+			if (maxlevel && maxlevel > 2) {
+				// check for h3s
+				var h3s = h2s[i].parentNode.querySelectorAll('h3')
+				for (var k=0; k<h3s.length; k++) {
+					if (!h3s[k].className.match(/notoc/)) {
+						h3 = h3s[k].innerHTML
+            
+                        // create a self link
+                        selflink = document.createElement('a')
+                        selflink.className = 'selflink'
+                        selflink.href = '#'+h3s[k].parentNode.id
+                        h3s[k].appendChild(selflink)
+            
+						var hh = document.createElement('div')
+						var aa = document.createElement('a')
+							aa.href = '#'+h3s[k].parentNode.id
+							aa.innerHTML = h3
+						hh.appendChild(aa)
+						hh.className = 'toc2'
+						
+                        // check for h4s and add self-links
+                        var h4s = h3s[k].parentNode.querySelectorAll('h4')
+                        for (var m=0; m<h4s.length; m++) {
+                            if (!h4s[m].className.match(/notoc/)) {
+
+                                // create a self link
+                                selflink = document.createElement('a')
+                                selflink.className = 'selflink'
+                                selflink.href = '#'+h4s[m].parentNode.id
+                                h4s[m].appendChild(selflink)
+                                }
+                            }
+						}
+					h.appendChild(hh)
+					}
+				}
+				toc.appendChild(h)
+			}
+		}
+    x = document.createElement('div')
+    x.id = 'toc_panel_close_button'
+    x.appendChild( document.createTextNode('X'))
+    x.onclick = function () { document.getElementById('tocPanel').style.display = 'none' }
+    toc.appendChild(x)
+	}
 
 
 
