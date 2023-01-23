@@ -49,7 +49,7 @@ autoExpandExamples.pa = `
 ਅੱਛਾ|OK||acchā
 ਅੱਜ ਕੱਲ੍ਹ|nowadays|əd§d͡ʒə̆§‿§kə́l§lə̆§–
 ਅੱਜ-ਕੱਲ੍ਹ|nowadays|əd§d͡ʒə̆§‿§kə́l§lə̆§–
-ਅੱਜ|today|əd͡ʒːᵊ
+ਅੱਜ|today|ə§d͡ʒːᵊ
 ਅੱਠ||
 ਅੱਬਾ|father||abbā
 ਅੱਭਯਾਗਤ|guest, visitor|ə§bə̀.§jɑː.§ɡə§t̪ᵊ
@@ -124,7 +124,7 @@ autoExpandExamples.pa = `
 ਐਨਕ|glasses, spectacles||ainak
 ਐਲੇਸਟਰ||
 ਐਵੇਂ||
-ਓਅੰਕਾਰ|God|oː.§ə§n.§kɑː.§ɾᵊ
+ਓਅੰਕਾਰ|God|oː.§ən.§kɑː.§ɾᵊ
 ਓਏ|hey!||oē
 ਓਦਣ|on that day|oː.§d̪ə§ɳ
 ਓਦਾਂ||
@@ -200,7 +200,7 @@ autoExpandExamples.pa = `
 ਕੁਰਾਹ||
 ਕੁਲਚਾ||
 ਕੁਹੀਰ|fog, mist|kʊ.§ɦiː.§ɾᵊ
-ਕੁਹੜਾ|leper|kó§‹§ɽɑ
+ਕੁਹੜਾ|leper|kóː§‹§ɽɑ
 ਕੁੜਮ||
 ਕੁੜੀ||
 ਕੁੰਜੀ||
@@ -1256,9 +1256,10 @@ autoExpandExamples.pa = `
 
 ਤਾਜ ਮਹਿਲ|Taj Majal|t̪äː§d͡ʒə̆§‿§mɛ́ː§‹§lə̆
 
-
-
-
+ਰਖੵਾ|protected|ɾə§kkʰjaː
+ਮਿਥੵੰਤ|deceiving|mɪ§t̪ʰjən̪§t̪ə
+ਸੰਸਾਰਸੵ|of the world|sən§saː§ɾə§sjə
+ਭਿਖੵਾ|begging|pɪ̀§kkʰjaː
 
 
 

@@ -52,9 +52,9 @@ reflist = {
 },
 
 "wl": {
-"url":"https://en.wikipedia.org/wiki/Bamum_language",
+"url":"https://en.wikipedia.org/wiki/Punjabi_language",
 "authors": "Wikipedia",
-"title":"Bamum language",
+"title":"Punjabi language",
 },
 
 "ws": {
