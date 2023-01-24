@@ -244,6 +244,12 @@ function initialise () {
 			document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')
 			}
 		}
+    
+    // add a dialogue box
+    var dialog = document.createElement('dialog')
+    dialog.appendChild( document.createTextNode('Copied !'))
+    dialog.id = 'copyNotice'
+    document.querySelector('body').appendChild( dialog )
 	}
 
 
@@ -264,7 +270,7 @@ function printAll () {
         else if (fields[WIKI]) out += `${ fields[TERM] }`
         else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }">${ fields[TERM] }</a>`
         
-        out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="navigator.clipboard.writeText('${ fields[TERM].trim() }')">`
+        out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ fields[TERM].trim() }')">`
 
         out += `<span onclick="showNameDetails('${ fields[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw] }')"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></span>`
         
@@ -355,7 +361,7 @@ function findWords (reg) {
                 
         out += `<span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></span>`
         
-        out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ itemArray[TERM].trim() }')">`
+        out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ itemArray[TERM].trim() }')">`
 
         out += '</td>'
         
@@ -413,7 +419,7 @@ function findWords (reg) {
            
             markup +=`&lt;/span&gt;`
             
-            out += `<td class="markupCol"><img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ markup }')"></td>`
+            out += `<td class="markupCol"><img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
             }
         
         
@@ -430,13 +436,37 @@ function findWords (reg) {
            
             out += `<td class="markupCol">`
             if (i===0) out += `get markup<br>`
-            out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="navigator.clipboard.writeText('${ markup }')"></td>`
+            out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
             }
 
         out += '</tr>\n'
         }
     return out
 	}
+
+
+function copyMsg ( text ) {
+    // briefly shows a dialog box to confirm copy
+    navigator.clipboard.writeText('${ text }')
+    
+    document.getElementById('copyNotice').showModal()
+    setTimeout(() => {
+        document.getElementById('copyNotice').close()
+        }, "500")
+    }
+
+
+
+function copyMsg ( text ) {
+    // briefly shows a dialog box to confirm copy
+    navigator.clipboard.writeText('${ text }')
+    
+    document.getElementById('copyNotice').style.display = 'block'
+    setTimeout(() => {
+        document.getElementById('copyNotice').style.display = 'none'
+        }, "500")
+    }
+
 
 function compareByWord(a,b) { 
   if (a < b)         
