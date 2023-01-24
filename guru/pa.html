@@ -1289,13 +1289,126 @@ though this appears to be quite rare, eg.</p>
   
 <section id="graphemes">
 <h2>Graphemes</h2>  
+
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+<p id="def-orthographicsyllable" class="explanatoryintro definitionStub"></p>
+<!--p><strong>This section is still undergoing research and development.</strong></p-->
   
+<p>Although grapheme clusters alone provide good segmentation for many Gurmukhi syllables (because of the lack of conjuncts), they are not sufficient to represent typographic units for stacks. Stacks are  common and must not be split apart by edit operations that visually change the text (such as letter-spacing, first-letter highlighting, and in-word line breaking). For those operations one needs to segment the text using <em>orthographic syllables</em>, which string grapheme clusters together with a virama.</p>
+<p>The Gurmukhi virama (<span class="name">halant</span>) is <span class="codepoint" translate="no"><bdi lang="pa">&#x0A4D;</bdi> [<a href="../../scripts/guru/block.html#char0A4D"><span class="uname">U+0A4D GURMUKHI SIGN VIRAMA​</span></a>]</span>,
+which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</code>.</p>
+
+
+
+
+
 <section id="graphemeC">
 <h3>Grapheme clusters</h3>
-<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
-<p class="prompts">tbd</p>
+<p><code>Base Combining_mark* ZW(N)J?</code></p>
+<p>Grapheme clusters cover the combinations described just above. In these sequences, Gurmukhi combining marks used for Punjabi may include zero or more of the following types of character. </p>
 
+<ol>
+<li><a href="../apps/listindic/index.html?chars=਼">Nukta</a> [1] (see <a class="secref">extendedC</a>) Only one per grapheme cluster, typed and stored immediately after the base consonant.</li>
+<li><a href="../apps/listindic/index.html?chars=ਿੀੂੁੇੋੈੌਾ">Dependent vowels</a> [9] (see <a class="secref">combiningvowels</a>) Always a single code point.</li>
+<li><a href="../apps/listindic/index.html?chars=ੰਂ">Bindi</a> [2] (see <a class="secref">nasalisation</a>) Occurs over an independent vowel or over a consonant.</li>
+<li><a href="../apps/listindic/index.html?chars=ੱ">Gemination</a> mark [1] (see <a class="secref">gemination</a>) Occurs after a consonant (with optional nukta).</li>
+<li><a href="../apps/listindic/index.html?chars=ੵਃੑ">Other</a> marks [3] (see <a class="secref">yakash</a>, <a class="secref">finals</a> and <a class="secref">udaat</a>) All are uncommon and occur after a consonant (with optional nukta).</li>
+<li><a href="../apps/listindic/index.html?chars=্">Virama</a> (<span class="name">halant</span>) (see <a class="secref">clusters</a> and <a class="secref">novowel</a>) Occurs immediately after a consonant (and optional nukta) at the beginning of a cluster. In modern Punjabi text stacks are only formed with a subjoined RA or HA, and on rare occasions VA. Other consonant clusters are simple sequences of consonant letters.</li>
+</ol>
+<p> ZW(N)J is not usually found in Gurmukhi text.</p>
+
+
+
+
+
+
+
+<p>The following examples show a variety of typical grapheme clusters:</p>
+
+<p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
+
+
+<table class="noBorderTable alignStartTable graphemes" style="margin-inline-start: 10%;">
+<tr><td><img src="images/g_smoke.png" alt="" style="height: 3rem;"><br><img src="images/gx_smoke.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਧੂੰਆਂ</span></td></tr>
+
+<tr><td><img src="images/g_pull.png" alt="" style="height: 3rem;"><br><img src="images/gx_pull.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਖਿੱਚਣਾ</span></td></tr>
+
+<tr><td><img src="images/g_paper.png" alt="" style="height: 3rem;"><br><img src="images/gx_paper.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਕਾਗ਼ਜ਼</span></td></tr>
+
+<tr><td><img src="images/g_begging.png" alt="" style="height: 3rem;"><br><img src="images/gx_begging.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਭਿਖੵਾ</span></td></tr>
+
+<tr><td><img src="images/g_nation.png" alt="" style="height: 3rem;"><br><img src="images/gx_nation.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਕ਼ੌਮ</span></td></tr>
+
+<tr><td><img src="images/g_lord.png" alt="" style="height: 3rem;"><br><img src="images/gx_lord.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਪ੍ਰਭੂ</span></td></tr>
+
+<tr><td><img src="images/g_flood.png" alt="" style="height: 3rem;"><br><img src="images/gx_flood.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਹੜ੍ਹ</span></td></tr>
+</table>
+
+
+<p>Note how grapheme clusters segment the parts of a stack after the virama in the last 2 examples. This is not always desirable (see <a class="secref">orthographicS</a> just below).</p>
+</section>
+
+
+
+
+
+
+
+<section id="orthographicS">
+<h3>Larger typographic units</h3>
+
+<p style="text-align:start;"><code>(Consonant Nukta? Virama)* Grapheme_cluster</code></p>
+
+<p>Gurmukhi  stacks medial RA (and sometimes VA) and HA after a syllable coda (see <a class="secref">clusters</a>). The stacks represent consonant clusters (but not gemination, which is indicated using a diacritic).</p>
+
+<p>Grapheme clusters terminate after a sequence of marks that includes a <span class="name">halant</span>, but editorial operations that change the visual appearance of the text, such as letter-spacing, first-letter highlighting, line-breaking, and justification, should never split conjunct forms apart. For this reason, an alternative way of segmenting graphemes is needed. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>
+<p>Where stacks appear, a typographic unit contains multiple grapheme clusters. The non-final grapheme clusters  all end with  <span class="codepoint" translate="no"><bdi lang="pa">&#x0A4D;</bdi> [<a href="../../scripts/guru/block.html#char0A4D"><span class="uname">U+0A4D GURMUKHI SIGN VIRAMA​</span></a>]</span>, and the final grapheme cluster begins with a consonant.</p>
+<p>The following are examples. Some examples were shown in the previous section: here the stack is treated as a single typographic unit.</p>
+
+<p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
+
+
+
+
+<table class="noBorderTable alignStartTable graphemes" style="margin-inline-start: 10%;">
+<tr><td><img src="images/o_lord.png" alt="" style="height: 3rem;"><br><img src="images/ox_lord.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਪ੍ਰਭੂ</span></td></tr>
+
+<tr><td><img src="images/o_flood.png" alt="" style="height: 3rem;"><br><img src="images/ox_flood.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਹੜ੍ਹ</span></td></tr>
+
+<tr><td><img src="images/o_amritsar.png" alt="" style="height: 3rem;"><br><img src="images/ox_amritsar.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਅੰਮ੍ਰਿਤਸਰ</span></td></tr>
+
+<tr><td><img src="images/o_carbon.png" alt="" style="height: 3rem;"><br><img src="images/ox_carbon.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਪ੍ਰਾਂਗਾਰ</span></td></tr>
+
+<tr><td><img src="images/o_french.png" alt="" style="height: 3rem;"><br><img src="images/ox_french.png" alt="" style="height: 2rem;"></td><td><span class="eg" lang="pa">ਫ਼੍ਰੈਂਚ</span></td></tr>
+</table>
+</section>
+
+
+
+
+
+<section id="webSegmentation">
+<h3>Browser behaviour</h3>
+
+<div style="padding: 3rem; padding-block: 0;">
+<p><span class="leadin">Test in your browser.</span> <span class="instructions">The words  test units that equate to grapheme clusters only, and others that include conjuncts. First, the text is displayed in a contenteditable paragraph, then in a textarea. Results are reported for Gecko (Firefox), Blink (Chrome), and WebKit (Safari) on a Mac.</span></p>
+
+<p contenteditable class="graphemeTest"><span class="ex" lang="pa">ਧੂੰਆਂ</span> <span class="ex" lang="pa">ਕਾਗ਼ਜ਼</span> <span class="ex" lang="pa">ਪ੍ਰਭੂ</span> <span class="ex" lang="pa">ਹੜ੍ਹ</span> <span class="ex" lang="pa">ਫ਼੍ਰੈਂਚ</span></p>
+
+<div class="graphemeTextarea"><textarea class="ex" lang="pa">ਧੂੰਆਂ ਕਾਗ਼ਜ਼ ਪ੍ਰਭੂ ਹੜ੍ਹ ਫ਼੍ਰੈਂਚ</textarea></div>
+</div>
+
+<p><span class="leadin">Cursor movement.</span> <span class="instructions">Move the cursor through the text.</span><br>
+Gecko steps through the  text using grapheme clusters. It takes 2  steps (to get through the stacks, one grapheme cluster at a time. Blink and WebKit step through all words using the orthographic syllables as described here (ie. they step over a stack and all associated combining characters in one jump).</p>
+
+<p><span class="leadin">Selection.</span> <span class="instructions">Place the cursor next to a character and hold down shift while pressing an arrow key.</span><br>
+The behaviour is the same as for cursor movement. </p>
+
+<p><span class="leadin">Deletion.</span> Forward deletion works in the same way as cursor movement.  The backspace key deletes code point by code point, for all browsers.</p>
+
+<p><span class="leadin">Line-break.</span> <span class="instructions">See <a href="https://w3c.github.io/i18n-tests/exploratory/line_breaking/int-line-break?lang=pa&fontSize=36&width=413&lineBreak=anywhere&wordBreak=normal&text=xxxxx%20%E0%A8%A7%E0%A9%82%E0%A9%B0%E0%A8%86%E0%A8%82%20%E0%A8%95%E0%A8%BE%E0%A8%97%E0%A8%BC%E0%A8%9C%E0%A8%BC%20%E0%A8%AA%E0%A9%8D%E0%A8%B0%E0%A8%AD%E0%A9%82%20%E0%A8%B9%E0%A9%9C%E0%A9%8D%E0%A8%B9%20%E0%A8%AB%E0%A8%BC%E0%A9%8D%E0%A8%B0%E0%A9%88%E0%A8%82%E0%A8%9A&a=&i=Change%20the%20width%20of%20the%20box%20slowly%20to%20see%20how%20the%20text%20wraps." target="_blank">this test</a>. The CSS sets the value of the <code class="kw" translate="no">line-break</code> property to <code class="kw" translate="no">anywhere</code>. Change the size of the box to slowly move the line break point.</span><br>
+Gecko, WebKit and Blink all wrap on orthographic syllable boundaries.</p>
 </section>
 </section>
 
@@ -1536,9 +1649,9 @@ A particularly common contraction is to represent <span class="eg inline" lang="
 <p>Gurmukhi requires slightly more vertical space than Latin text. To give an approximate idea, <a class="figref">fig_baselines</a> compares Latin and Gurmukhi glyphs from Noto  fonts. The basic  Gurmukhi letters are typically slightly higher than the Latin  x-height, and conjunct stacks and other diacritics extend slightly below the Latin descenders. The hanging baseline is slightly higher than the Latin x-height (Noto fonts actually have a lower top bar than many others).</p>
 <figure id="fig_baselines">
 <div>
-<img src="images/fig_baselines_serif.png" alt="Xhqxঐল্লিম্ভস্ট্রর্তদ্‌ঢ়ীড়ৃঁকৣ" class="ex" lang="km" data-notes="Noto Serif Khmer 130px" style="max-width: 90%; margin-block-end:1rem;">
+<img src="images/fig_baselines_serif.png" alt="Hhqxਚੜ੍ਹਸ੍ਵੰਰੀਘੋਊਰੈਲੵੴ੬" class="ex" lang="km" data-notes="Noto Serif Khmer 130px" style="max-width: 90%; margin-block-end:1rem;">
 
-<img src="images/fig_baselines_sans.png" alt="Xhqxঐল্লিম্ভস্ট্রর্তদ্‌ঢ়ীড়ৃঁকৣ" class="ex" lang="km" data-notes="Noto Sans Khmer 130px" style="max-width: 90%;">
+<img src="images/fig_baselines_sans.png" alt="Hhqxਚੜ੍ਹਸ੍ਵੰਰੀਘੋਊਰੈਲੵੴ੬" class="ex" lang="km" data-notes="Noto Sans Khmer 130px" style="max-width: 90%;">
 </div>
 <figcaption>Font metrics for Latin text  compared with Gurmukhi glyphs in the Noto Serif Gurmukhi (top) and Noto Sans Gurmukhi (bottom) fonts.</figcaption>
 </figure>
@@ -1549,9 +1662,9 @@ A particularly common contraction is to represent <span class="eg inline" lang="
 
 <figure id="fig_baselines_other">
 <div>
-<img src="images/fig_baselines_baloo_paaji_2.png" alt="Xhqxঐল্লিম্ভস্ট্রর্তদ্‌ঢ়ীড়ৃঁকৣ" class="ex" data-notes="Baloo Paaji 2 130px" style="max-width: 90%; margin-block-end:2rem;" lang="km">
+<img src="images/fig_baselines_baloo_paaji_2.png" alt="Hhqxਚੜ੍ਹਸ੍ਵੰਰੀਘੋਊਰੈਲੵੴ੬" class="ex" data-notes="Baloo Paaji 2 130px" style="max-width: 90%; margin-block-end:2rem;" lang="km">
 
-<img src="images/fig_baselines_raavi.png" alt="Xhqxঐল্লিম্ভস্ট্রর্তদ্‌ঢ়ীড়ৃঁকৣ" class="ex" data-notes="Raavi 130px" style="max-width: 90%;" lang="km">
+<img src="images/fig_baselines_raavi.png" alt="Hhqxਚੜ੍ਹਸ੍ਵੰਰੀਘੋਊਰੈਲੵੴ੬" class="ex" data-notes="Raavi 130px" style="max-width: 90%;" lang="km">
 </div>
 <figcaption>Latin font metrics compared with Gurmukhi glyphs in the Baloo Paaji  (top) and Raavi (bottom) fonts.</figcaption>
 </figure>

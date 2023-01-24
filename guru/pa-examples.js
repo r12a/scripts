@@ -42,7 +42,7 @@ autoExpandExamples.pa = `
 ਅੰਗੂਠਾ||
 ਅੰਤੜੀ||
 ਅੰਬ||
-ਅੰਮ੍ਰਿਤਸਰ||
+ਅੰਮ੍ਰਿਤਸਰ|Amritsar||ammritsar
 ਅੱਖ|eye|ək§kʰ|akkha
 ਅੱਖਰ||
 ਅੱਗ|fire||agga
@@ -161,7 +161,7 @@ autoExpandExamples.pa = `
 ਕ਼||
 ਕ਼ਲਮ||
 ਕ਼ਿਸਮਤ|fate, destiny||qismat
-ਕ਼ੌਮ||
+ਕ਼ੌਮ|nation, people||qaum
 ਕਾਂ||
 ਕਾਂਡੀ||
 ਕਾਇਮ||
@@ -703,7 +703,7 @@ autoExpandExamples.pa = `
 ਪ੍ਰਧਾਨ||
 ਪ੍ਰਬੰਧ|management|p§rə§bə́n§d̪
 ਪ੍ਰਭੂ|lord, God|p§ɾə́.§buː
-ਪ੍ਰਾਂਗਾਰ||
+ਪ੍ਰਾਂਗਾਰ|carbon||prāṅgār
 ਪ੍ਰਾਣਵਾਯੂ|oxygen||prāṇvāyū
 ਪ੍ਰੀਤ||
 ਪੜ੍ਹਣਾ||
