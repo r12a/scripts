@@ -29,6 +29,8 @@ var Consonants = new Set([
 'ക', 'ഖ', 'ഗ', 'ഘ', 'ങ', 'ച', 'ഛ', 'ജ', 'ഝ', 'ഞ', 'ട', 'ഠ', 'ഡ', 'ഢ', 'ണ', 'ത', 'ഥ', 'ദ', 'ധ', 'ന', 'ഩ', 'പ', 'ഫ', 'ബ', 'ഭ', 'മ', 'യ', 'ര', 'റ', 'ല', 'ള', 'ഴ', 'വ', 'ശ', 'ഷ', 'സ', 'ഹ', 'ഺ', 'ൺ', 'ൻ', 'ർ', 'ൽ', 'ൾ', 'ൿ',
 // Bengali
 'প', 'ফ', 'ব', 'ভ', 'ত', 'থ', 'দ', 'ধ', 'ট', 'ঠ', 'ড', 'ঢ', 'ক', 'খ', 'গ', 'ঘ', 'চ', 'ছ', 'জ', 'য', 'ঝ', 'স', 'শ', 'ষ', 'হ', 'ম', 'ন', 'ঙ', 'ঞ', 'ণ', 'ৱ', 'র', 'ৰ', 'ল', 'ৎ',
+// Gurmukhi
+'ਪ', 'ਭ', 'ਬ', 'ਫ', 'ਤ', 'ਧ', 'ਦ', 'ਥ', 'ਚ', 'ਝ', 'ਜ', 'ਛ', 'ਟ', 'ਢ', 'ਡ', 'ਠ', 'ਕ', 'ਘ', 'ਗ', 'ਖ', 'ਵ', 'ਸ', 'ਹ', 'ਮ', 'ਨ', 'ਞ', 'ਣ', 'ਙ', 'ਯ', 'ਰ', 'ੜ', 'ਲ', 'ਫ਼', 'ਜ਼', 'ਸ਼', 'ਖ਼', 'ਗ਼', 'ਲ਼', 'ੲ', 'ੳ',
 ])
 
 
@@ -73,7 +75,7 @@ if (debug) console.log(SpacingMark)
 function makeOrthSyllables (str) {
     if (trace) console.log('makeOrthSyllables(',str,')')
     
-    str = makeGraphemeClusters(str)
+    str = makeGraphemeClusters(str, true)
     
     // make temporary tokens
     // for Sinhala, V+ZWJ and ZWJ+V, added to Virama
@@ -113,6 +115,11 @@ function makeOrthSyllables (str) {
     out = out.replace(/\uE004/g,'ஸ்ரீ')
     out = out.replace(/\uE005/g,'ஶ்ரீ')
 
+    if (document.getElementById('explode').checked) {
+        original = [... out]
+        out = original.join(' ')
+        }
+
     return out
     }
 
@@ -131,7 +138,7 @@ function addToSet (type, char) {
     }
 
 
-function makeGraphemeClusters (str) {
+function makeGraphemeClustersX (str) {
     // process str and output an annotated string with |+ZWSP dividers
     if (trace) console.log('makeGraphemeClusters(',str,')')
     var strArray = [...str]
@@ -161,7 +168,9 @@ function makeGraphemeClusters (str) {
     }
 
 
-function makeGraphemeClusters (str) {
+
+
+function makeGraphemeClusters (str, calledFromOrth) {
     // process str and output an annotated string with |+ZWSP dividers
     if (trace) console.log('makeGraphemeClusters(',str,')')
     var strArray = [...str]
@@ -187,6 +196,12 @@ function makeGraphemeClusters (str) {
                 }
             }
         }
+
+    if (document.getElementById('explode').checked  && calledFromOrth !== true) {
+        original = [... out]
+        out = original.join(' ')
+        }
+
     return out
     }
 
