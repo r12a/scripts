@@ -447,7 +447,7 @@ function findWords (reg) {
 
 function copyMsg ( text ) {
     // briefly shows a dialog box to confirm copy
-    navigator.clipboard.writeText('${ text }')
+    navigator.clipboard.writeText(text)
     
     document.getElementById('copyNotice').showModal()
     setTimeout(() => {
@@ -459,7 +459,7 @@ function copyMsg ( text ) {
 
 function copyMsg ( text ) {
     // briefly shows a dialog box to confirm copy
-    navigator.clipboard.writeText('${ text }')
+    navigator.clipboard.writeText(text)
     
     document.getElementById('copyNotice').style.display = 'block'
     setTimeout(() => {
