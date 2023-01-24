@@ -57,7 +57,7 @@ autoExpandExamples.pa = `
 ਅੱਲਾਹ|Allah||allāh
 ਆਂਡਾ||
 ਆਉਣਾ|to come||āuṇā
-ਆਓਤੇਆਰੋਆ||
+ਆਓਤੇਆਰੋਆ|New Zealand||āoteāroā
 ਆਕਾਸ਼||
 ਆਖਣਾ|to say||ākhaṇā
 ਆਟਾ||
@@ -350,7 +350,7 @@ autoExpandExamples.pa = `
 ਚਿਕਨਾ|smooth||ciknā
 ਚਿਟਾ||
 ਚਿਹਰਾ||
-ਚਿੜੀ-ਛਿੱਕਾ||
+ਚਿੜੀ-ਛਿੱਕਾ|badminton||ciṛī-chikkā
 ਚਿੱਟਾ|white|t͡ʃɪʈ§ʈäː|ciṭṭā
 ਚੀਜ਼||
 ਚੀਨ||
@@ -677,7 +677,7 @@ autoExpandExamples.pa = `
 ਪਿਸਰ||
 ਪਿੰਡ||
 ਪਿੱਛੋਂ||
-ਪਿੱਠ|back|pɪʈʰ|piṭṭha*
+ਪਿੱਠ|back|pɪ§ʈʰ|piṭṭha*
 ਪੀ||
 ਪੀਣਾ|to drink||pīṇā
 ਪੀਲਾ|yellow||pīlā
@@ -1044,7 +1044,7 @@ autoExpandExamples.pa = `
 ਵਿਚਕਾਰ||
 ਵਿਚਲਾ||
 ਵਿਚਾਰ||
-ਵਿਡਿਓ-ਗੇਮ|video game|ʋɪ§ɖɪ§oː.§ɡeː§m|viḍio-gem
+ਵਿਡਿਓ-ਗੇਮ|video game|ʋɪ§ɖɪ§oː.§§ɡeː§m|viḍio-gem
 ਵਿਦਿਆਰਥੀ||
 ਵਿਰਕ||
 ਵਿਰਲੇ|few||virlē
@@ -1110,7 +1110,7 @@ autoExpandExamples.pa = `
 ਸ਼ਹਿਦ|honey|ʃ§ɛ́ː§d̪ə̆§/ʃə.ɦɪd̪ə̆
 ਸ਼ਹਿਰ|city, town|ʃ§ɛ́ː§ɾ
 ਸ਼ਹੀਦ||
-ਸ਼ਾਂਤ|peaceful|ʃɑ§̃t
+ਸ਼ਾਂਤ|peaceful|ʃɑ̃§t
 ਸ਼ਾਂਤੀ||
 ਸ਼ਾਇਦ||
 ਸ਼ਾਖਾ||
@@ -1260,7 +1260,6 @@ autoExpandExamples.pa = `
 ਮਿਥੵੰਤ|deceiving|mɪ§t̪ʰjən̪§t̪ə
 ਸੰਸਾਰਸੵ|of the world|sən§saː§ɾə§sjə
 ਭਿਖੵਾ|begging|pɪ̀§kkʰjaː
-
 
 
 
