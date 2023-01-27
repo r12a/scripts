@@ -1,0 +1,1614 @@
+/*
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../common29/details.css">
+<link rel="stylesheet" href="local.css">
+<body>
+*/
+
+
+
+
+
+var charDetails = {
+
+
+// MAIN BLOCK
+
+'\u{2000}': `
+<p class="insertTranscription">&#x2000;</p>
+`,
+
+
+
+
+'\u{2001}': `
+<p class="insertTranscription">&#x2001;</p>
+`,
+
+
+
+
+'\u{2002}': `
+<p class="insertTranscription">&#x2002;</p>
+`,
+
+
+
+
+'\u{2003}': `
+<p class="insertTranscription">&#x2003;</p>
+<p>Provides a space that is approximately 1 em wide.</p>
+
+<p>Some content authors using Southeast Asian orthographies, such as Thai and Khmer, may use this character to produce a wider space between sentences than around phrases (since there is no sentence-final punctuation).</p>
+`,
+
+
+
+
+'\u{2004}': `
+<p class="insertTranscription">&#x2004;</p>
+`,
+
+
+
+
+'\u{2005}': `
+<p class="insertTranscription">&#x2005;</p>
+`,
+
+
+
+
+'\u{2006}': `
+<p class="insertTranscription">&#x2006;</p>
+`,
+
+
+
+
+'\u{2007}': `
+<p class="insertTranscription">&#x2007;</p>
+`,
+
+
+
+
+'\u{2008}': `
+<p class="insertTranscription">&#x2008;</p>
+`,
+
+
+
+
+'\u{2009}': `
+<p class="insertTranscription">&#x2009;</p>
+`,
+
+
+
+
+'\u{200A}': `
+<p class="insertTranscription">&#x200A;</p>
+`,
+
+
+
+
+// zwsp
+'\u{200B}': ` 
+<p class="insertTranscription">&#x200B;</p>
+<p>An invisible character, used to signal line-break and word-break opportunities. It was originally provided for use with writing systems such as Thai, Myanmar, Khmer, Japanese, etc. that don't use spaces between words.</p>
+
+<p>Justification visibly adjusts the space between the characters on either side of the ZWSP as if the ZWSP wasn't there<sup><a href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout" target="_blank">§,827</a></sup>, eg. the two lines below show Thai text containing a ZWSP after the 4th base character.  The first is rendered as per normal, the second is as it would appear with justification or letter-spacing. Note how the second line has no extra spacing where the ZWSP occurs.
+<span class="charExample" translate="no"><span lang="th">อักษร​ไทย</span></span> 
+<span class="charExample" translate="no"><span lang="th">อั ก ษ ร ไ ท ย</span></span>
+</p>
+`,
+
+
+
+
+// zwnj
+'\u{200C}': `
+<p class="insertTranscription">ZWNJ</p>
+<p>Prevents two adjacent letters forming a cursive connection with each other when rendered. Especially useful for educational illustrations, but also has some real-world applications.</p>
+
+<p>Also used with complex scripts to manage the visual representation of glyphs that normally interact, eg. to form conjuncts, position diacritics, etc.</p>
+
+<p class="leadin">Examples:</p>
+
+<div class="letter">
+<p><span class="title">Persian</span></p>
+
+<p>The ZWNJ is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the ZWNJ will result in text with a different meaning or meaningless text. For example, <span class="ex" lang="ar" dir="rtl">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" lang="ar" dir="rtl">تنها</span> is the adjective <span class="meaning">alone</span>. The only difference is the presence or absence of ZWNJ after <span class="name">noon</span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="https://github.com/w3c/charmod-norm/issues/44#issuecomment-172042270" target="_blank">g</a></p>
+</div>
+
+<div class="letter">
+<p><span class="title">Khmer</span></p>
+
+<p>Khmer register shifters (ie. <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17C9;</span> [<a href="/scripts/khmer/block#char17C9"><span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span></a>]</span> or <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17CA;</span> [<a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP​</span></a>]</span>) usually appear above a consonant. However, if a superscript vowel is also attached to the consonant, the shifter is normally displayed below the consonant, instead. If you want to force the shifter to remain above the consonant, as is occasionally the case, insert ZWNJ between the consonant and the shifter.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a>
+<span class="charExample" translate="no"><span class="ex" lang="km">ហ ហ៊ ហ៊ី ហ‌៊ី</span></span></p>
+</div>
+
+<div class="letter">
+<p><span class="title">Hindi</span></p>
+
+<p>The ZWNJ can be used to prevent the formation of conjuncts, eg.
+<span class="charExample" translate="no"><span class="ex" lang="hi">क्क</span>   →   <span class="ex" lang="hi">क्‌क</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span>   →   <span class="ex" lang="hi">क्‌ष</span></span>
+</p>
+</div>
+`,
+
+
+
+
+// zwj
+'\u{200D}': `
+<p class="insertTranscription">ZWJ</p>
+<p>Permits a letter to form a cursive connection without a visible neighbour.  Especially useful for educational illustrations, but also has some real-world applications.</p>
+
+<p>Also used with complex scripts to manage the visual representation of glyphs that normally interact, eg. to form conjuncts, position diacritics, etc.</p>
+
+<p class="leadin">Examples:</p>
+
+<div class="letter arabic">
+<p><span class="title">Arabic</span></p>
+
+<p>The marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use a <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> immediately after the <span class="name">heh</span>, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 ه‍.</span>. </p>
+
+<p>In some cases <span class="codepoint"><span lang="ar" dir="rtl">&#x0640;</span> [<span class="uname">U+0640 ARABIC TATWEEL</span>]</span> is used to ensure that the shape looks right, because some applications or fonts don't produce the right effect when using the ZWJ, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 هـ.</span>.</p>
+</div>
+
+<div class="letter">
+<p><span class="title">Hindi</span></p>
+
+<p>The ZWJ can be used to make a conjunct that usually forms a ligature use half-forms instead, eg.
+<span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span>   →   <span class="ex" lang="hi">क्‍ष</span></span>
+</p>
+</div>
+`,
+
+
+
+
+// LRM
+'\u{200E}': `
+<p class="insertTranscription">&#x200E;</p>
+<p>An invisible character with strong LTR directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
+<p>Generally referred to as LRM.</p>
+`,
+
+
+
+
+// RLM
+'\u{200F}': `
+<p class="insertTranscription">&#x200F;</p>
+<p>An invisible character with strong RTL directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
+<p>Generally referred to as RLM.</p>
+`,
+
+
+
+
+'\u{2010}': `
+<p class="insertTranscription">&#x2010;</p>
+`,
+
+
+
+
+'\u{2011}': `
+<p class="insertTranscription">&#x2011;</p>
+`,
+
+
+
+
+'\u{2012}': `
+<p class="insertTranscription">&#x2012;</p>
+`,
+
+
+
+
+'\u{2013}': `
+<p class="insertTranscription">&#x2013;</p>
+`,
+
+
+
+
+'\u{2014}': `
+<p class="insertTranscription">&#x2014;</p>
+`,
+
+
+
+
+'\u{2015}': `
+<p class="insertTranscription">&#x2015;</p>
+`,
+
+
+
+
+'\u{2016}': `
+<p class="insertTranscription">&#x2016;</p>
+<p>Called <span class="name">double bar</span>.<a class="fnref" href="#refs">b</a></p>
+<p>An old standard reference mark used  with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b</a></p>
+<p>Also used as a standard symbol for bibliographic work.<a class="fnref" href="#refs">b</a></p>
+<p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a> </p>
+`,
+
+
+
+
+'\u{2017}': `
+<p class="insertTranscription">&#x2017;</p>
+`,
+
+
+
+
+'\u{2018}': `
+<p class="insertTranscription">&#x2018;</p>
+`,
+
+
+
+
+'\u{2019}': `
+<p class="insertTranscription">&#x2019;</p>
+`,
+
+
+
+
+'\u{201A}': `
+<p class="insertTranscription">&#x201A;</p>
+`,
+
+
+
+
+'\u{201B}': `
+<p class="insertTranscription">&#x201B;</p>
+`,
+
+
+
+
+'\u{201C}': `
+<p class="insertTranscription">&#x201C;</p>
+`,
+
+
+
+
+'\u{201D}': `
+<p class="insertTranscription">&#x201D;</p>
+`,
+
+
+
+
+'\u{201E}': `
+<p class="insertTranscription">&#x201E;</p>
+`,
+
+
+
+
+'\u{201F}': `
+<p class="insertTranscription">&#x201F;</p>
+`,
+
+
+
+
+'\u{2020}': `
+<p class="insertTranscription">&#x2020;</p>
+<p>Called <span class="name">dagger</span>, but also known as <span class="name">obelisk</span>, <span class="name">obelus</span>, or <span class="name">long cross</span>.<a class="fnref" href="#refs">b321</a></p>
+<p>A reference mark, used primarily with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b68</a></p>
+<p>Also a death sign in European typography, used to mark the year of death or the names of dead persons.<a class="fnref" href="#refs">b321</a></p>
+<p>In lexicography it marks obsolete forms, and in editing of classical texts flags passages judged to be corrupt.<a class="fnref" href="#refs">b321</a></p>
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a>
+</p>
+`,
+
+
+
+
+'\u{2021}': `
+<p class="insertTranscription">&#x2021;</p>
+<p>Called <span class="name">dagger</span>, but also known as <span class="name">diesis</span>, or <span class="name">double obelisk</span>.<a class="fnref" href="#refs">b321</a></p>
+<p>A reference mark used  with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b68</a></p>
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a>
+</p>
+`,
+
+
+
+
+'\u{2022}': `
+<p class="insertTranscription">&#x2022;</p>
+`,
+
+
+
+
+'\u{2023}': `
+<p class="insertTranscription">&#x2023;</p>
+`,
+
+
+
+
+'\u{2024}': `
+<p class="insertTranscription">&#x2024;</p>
+  <div class="letter">
+    <p><span class="title">Armenian</span> punctuation <span class="name">miǰakēt</span></p>
+    <p>Used like a semi-colon – a shorter break than a full stop. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u322</a></p>
+    <p><span class="charExample" lang="hy">Ոչ ոք չպետք է լինի ստրկության կամ անազատ <span class="ex">վիճակում․ </span>պետք է արգելվեն ստրկատիրության ու ստրուկների առուծախի բոլոր ձևերը։</span>&nbsp;</p>
+  </div>
+`,
+
+
+
+
+'\u{2025}': `
+<p class="insertTranscription">&#x2025;</p>
+`,
+
+
+
+
+'\u{2026}': `
+<p class="insertTranscription">&#x2026;</p>
+`,
+
+
+
+
+'\u{2027}': `
+<p class="insertTranscription">&#x2027;</p>
+`,
+
+
+
+
+'\u{2028}': `
+<p class="insertTranscription">&#x2028;</p>
+`,
+
+
+
+
+'\u{2029}': `
+<p class="insertTranscription">&#x2029;</p>
+`,
+
+
+
+
+// LRE
+'\u{202A}': `
+<p class="insertTranscription">&#x202A;</p>
+<p>Sets the start point for a range of inline text when applying a base direction of left-to-right. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> <a href="#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a></span> (PDF).</p>
+<p><strong>You should use <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2066.png" alt="LRI" style="vertical-align:middle"> <a href="#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a></span> (LRI) rather than this character.</strong></p>
+`,
+
+
+
+
+// RLE
+'\u{202B}': `
+<p class="insertTranscription">&#x202B;</p>
+<p>Sets the start point for a range of inline text when applying a base direction of right-to-left. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> <a href="#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a></span> (PDF).</p>
+<p><strong>You should use <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2067.png" alt="LRI" style="vertical-align:middle"> <a href="#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a></span> (RLI) rather than this character.</strong></p>
+`,
+
+
+
+
+// PDF
+'\u{202C}': `
+<p class="insertTranscription">&#x202C;</p>
+<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202A.png" alt="LRE" style="vertical-align:middle"> <a href="#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a></span> (LRE) or <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202B.png" alt="RLE" style="vertical-align:middle"> <a href="#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a></span> (RLE).</p>
+<p><strong>You should use <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI) and its associated range starters rather than this character.</strong></p>
+`,
+
+
+
+
+'\u{202D}': `
+<p class="insertTranscription">&#x202D;</p>
+`,
+
+
+
+
+'\u{202E}': `
+<p class="insertTranscription">&#x202E;</p>
+`,
+
+
+
+
+'\u{202F}': `
+<p class="insertTranscription">&#x202F;</p>
+<p>Initially added to Unicode for Mongolian suffix handling, where it is important to visually distinguish between spaces separating suffixes and those separating words, and where lines should not be broken between morphemes.</p>
+<p>Many Mongolian suffixes are separated from the root or other suffixes by this small gap, eg.
+<span class="charExample" translate="no"><span class="ex" lang="mn">ᠭᠠᠵᠠᠷ ᠠ</span> 
+<bdi class="trans">gaǰar-a</bdi> <bdi class="meaning">to the country</bdi></span></p>
+<p>Characters following NNBSP may take on special shapes.</p>
+
+<p>A somewhat recent innovation in writing Cree syllabics is to use this as a morpheme separator, rather than the hyphen which is used in the Latin transcription, eg.
+<span class="charExample" translate="no"><span class="ex" lang="crk">ᐁ ᐚᐸᒫᐟ</span> <span class="transc">ê-wâpamât</span></span>
+</p>
+
+<p>Also useful in Latin script languages where a thin, non-breaking space is needed:</p>
+<ul>
+<li><span class="leadin">Before/after punctuation.</span> esp. French. Occurs before »;?!, and after «.<sup><a href="https://github.com/mundschenk-at/wp-typography/issues/36">§</a></sup> (Cited in <sup><a href="https://github.com/whatwg/html/issues/5121">§</a></sup>)</li>
+<li><span class="leadin">Abbreviations.</span> eg. “z.&#x202F;B.” (German: zum Beispiel)<sup><a href="https://de.wikipedia.org/wiki/Abk%C3%BCrzung#Abk%C3%BCrzungen_ohne_Punkt_und_Leerzeichen">§</a></sup> (Cited in <sup><a href="https://github.com/whatwg/html/issues/5121">§</a></sup>)</li>
+<li><span class="leadin">Number separator.</span> "Because of the confusion that could result in international documents, in recent years the use of spaces as separators has been advocated by the superseded <a href="/wiki/ISO_31-0#Numbers" title="ISO 31-0">SI/ISO 31-0 standard</a>,<sup id="cite_ref-nist.gov_29-1" class="reference"><a href="#cite_note-nist.gov-29">[29]</a></sup> as well as by the <a href="/wiki/International_Bureau_of_Weights_and_Measures" title="International Bureau of Weights and Measures">International Bureau of Weights and Measures</a> and the <a href="/wiki/International_Union_of_Pure_and_Applied_Chemistry" title="International Union of Pure and Applied Chemistry">International Union of Pure and Applied Chemistry</a>, which have also begun advocating the use of a "<a href="/wiki/Thin_space" title="Thin space">thin space</a>" in "groups of three".<sup id="cite_ref-BIPM_30-1" class="reference"><a href="#cite_note-BIPM-30">[30]</a></sup><sup id="cite_ref-old.iupac.org_31-1" class="reference"><a href="#cite_note-old.iupac.org-31">[31]</a></sup> Within the United States, the <a href="/wiki/American_Medical_Association" title="American Medical Association">American Medical Association</a>'s widely followed <i><a href="/wiki/AMA_Manual_of_Style" title="AMA Manual of Style">AMA Manual of Style</a></i> also calls for a thin space.<sup id="cite_ref-AMA10p793_27-1" class="reference"><a href="#cite_note-AMA10p793-27">[27]</a></sup> In some online <a href="/wiki/Character_encoding" title="Character encoding">encoding</a> environments (for example, <a href="/wiki/ASCII" title="ASCII">ASCII</a>-only) a thin space is not practical or available, in which case a regular word space or no delimiter are the alternatives."<sup><a href="https://en.wikipedia.org/wiki/Decimal_separator#Digit_grouping">§</a></sup> (Cited in <sup><a href="https://github.com/whatwg/html/issues/5121">§</a></sup>)</li>
+</ul>
+`,
+
+
+
+
+'\u{2030}': `
+<p class="insertTranscription">&#x2030;</p>
+`,
+
+
+
+
+'\u{2031}': `
+<p class="insertTranscription">&#x2031;</p>
+`,
+
+
+
+
+'\u{2032}': `
+<p class="insertTranscription">&#x2032;</p>
+<p>Abbreviation for feet (1′ = 12″).<a class="fnref" href="#refs">b330</a></p>
+<p>Also used for minutes of arc (eg. 60′=1°)<span class="name"></span>.<a class="fnref" href="#refs">b330</a></p>
+`,
+
+
+
+
+'\u{2033}': `
+<p class="insertTranscription">&#x2033;</p>
+<p>Abbreviation for inches (1′ = 12″).<a class="fnref" href="#refs">b321</a></p>
+<p>Also used for seconds of arc (eg. 360″=1°)<span class="name"></span>.<a class="fnref" href="#refs">b321</a></p>
+`,
+
+
+
+
+'\u{2034}': `
+<p class="insertTranscription">&#x2034;</p>
+`,
+
+
+
+
+'\u{2035}': `
+<p class="insertTranscription">&#x2035;</p>
+`,
+
+
+
+
+'\u{2036}': `
+<p class="insertTranscription">&#x2036;</p>
+`,
+
+
+
+
+'\u{2037}': `
+<p class="insertTranscription">&#x2037;</p>
+`,
+
+
+
+
+'\u{2038}': `
+<p class="insertTranscription">&#x2038;</p>
+`,
+
+
+
+
+'\u{2039}': `
+<p class="insertTranscription">&#x2039;</p>
+`,
+
+
+
+
+'\u{203A}': `
+<p class="insertTranscription">&#x203A;</p>
+`,
+
+
+
+
+'\u{203B}': `
+<p class="insertTranscription">&#x203B;</p>
+`,
+
+
+
+
+'\u{203C}': `
+<p class="insertTranscription">&#x203C;</p>
+`,
+
+
+
+
+'\u{203D}': `
+<p class="insertTranscription">&#x203D;</p>
+`,
+
+
+
+
+'\u{203E}': `
+<p class="insertTranscription">&#x203E;</p>
+`,
+
+
+
+
+'\u{203F}': `
+<p class="insertTranscription">&#x203F;</p>
+`,
+
+
+
+
+'\u{2040}': `
+<p class="insertTranscription">&#x2040;</p>
+`,
+
+
+
+
+'\u{2041}': `
+<p class="insertTranscription">&#x2041;</p>
+`,
+
+
+
+
+'\u{2042}': `
+<p class="insertTranscription">&#x2042;</p>
+`,
+
+
+
+
+'\u{2043}': `
+<p class="insertTranscription">&#x2043;</p>
+`,
+
+
+
+
+'\u{2044}': `
+<p class="insertTranscription">&#x2044;</p>
+`,
+
+
+
+
+'\u{2045}': `
+<p class="insertTranscription">&#x2045;</p>
+`,
+
+
+
+
+'\u{2046}': `
+<p class="insertTranscription">&#x2046;</p>
+`,
+
+
+
+
+'\u{2047}': `
+<p class="insertTranscription">&#x2047;</p>
+`,
+
+
+
+
+'\u{2048}': `
+<p class="insertTranscription">&#x2048;</p>
+`,
+
+
+
+
+'\u{2049}': `
+<p class="insertTranscription">&#x2049;</p>
+`,
+
+
+
+
+'\u{204A}': `
+<p class="insertTranscription">&#x204A;</p>
+`,
+
+
+
+
+'\u{204B}': `
+<p class="insertTranscription">&#x204B;</p>
+`,
+
+
+
+
+'\u{204C}': `
+<p class="insertTranscription">&#x204C;</p>
+`,
+
+
+
+
+'\u{204D}': `
+<p class="insertTranscription">&#x204D;</p>
+`,
+
+
+
+
+'\u{204E}': `
+<p class="insertTranscription">&#x204E;</p>
+`,
+
+
+
+
+'\u{204F}': `
+<p class="insertTranscription">&#x204F;</p>
+`,
+
+
+
+
+'\u{2050}': `
+<p class="insertTranscription">&#x2050;</p>
+`,
+
+
+
+
+'\u{2051}': `
+<p class="insertTranscription">&#x2051;</p>
+`,
+
+
+
+
+'\u{2052}': `
+<p class="insertTranscription">&#x2052;</p>
+`,
+
+
+
+
+'\u{2053}': `
+<p class="insertTranscription">&#x2053;</p>
+`,
+
+
+
+
+'\u{2054}': `
+<p class="insertTranscription">&#x2054;</p>
+`,
+
+
+
+
+'\u{2055}': `
+<p class="insertTranscription">&#x2055;</p>
+`,
+
+
+
+
+'\u{2056}': `
+<p class="insertTranscription">&#x2056;</p>
+`,
+
+
+
+
+'\u{2057}': `
+<p class="insertTranscription">&#x2057;</p>
+`,
+
+
+
+
+'\u{2058}': `
+<p class="insertTranscription">&#x2058;</p>
+`,
+
+
+
+
+'\u{2059}': `
+<p class="insertTranscription">&#x2059;</p>
+`,
+
+
+
+
+'\u{205A}': `
+<p class="insertTranscription">&#x205A;</p>
+`,
+
+
+
+
+'\u{205B}': `
+<p class="insertTranscription">&#x205B;</p>
+`,
+
+
+
+
+'\u{205C}': `
+<p class="insertTranscription">&#x205C;</p>
+`,
+
+
+
+
+'\u{205D}': `
+<p class="insertTranscription">&#x205D;</p>
+`,
+
+
+
+
+'\u{205E}': `
+<p class="insertTranscription">&#x205E;</p>
+`,
+
+
+
+
+'\u{205F}': `
+<p class="insertTranscription">&#x205F;</p>
+`,
+
+
+
+
+'\u{2060}': `
+<p class="insertTranscription">WJ</p>
+<p>An invisible character, equivalent to a zero-width <em>no-break</em> space, and used to prevent line-breaks. It has no effect on word segmentation.</p>
+
+<p>It can  also be used to bracket other characters to turn them into non-breaking characters, such as <span class="uname">U+2009 THIN SPACE</span> or <span class="codepoint" translate="no"><span lang="km">&#x2015;</span> [<span class="uname">U+2015 HORIZONTAL BAR</span>]</span>.</p>
+
+<p>Not to be confused with <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> or <a href="#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER</span></a>, since it has no effect on shaping.</p>
+
+<p>This functionality is also provided by <span class="uname">U+FEFF ZERO WIDTH NO-BREAK SPACE</span>, but since that character also represents the byte-order mark, the use of this word joiner character (added in Unicode 3.2) is strongly preferred.</p>
+`,
+
+
+
+
+'\u{2061}': `
+<p class="insertTranscription">&#x2061;</p>
+`,
+
+
+
+
+'\u{2062}': `
+<p class="insertTranscription">&#x2062;</p>
+`,
+
+
+
+
+'\u{2063}': `
+<p class="insertTranscription">&#x2063;</p>
+`,
+
+
+
+
+'\u{2064}': `
+<p class="insertTranscription">&#x2064;</p>
+`,
+
+
+
+
+// LRI
+'\u{2066}': `
+<p class="insertTranscription">&#x2066;</p>
+<p>Sets the start point for a range of inline text when applying a base direction of left-to-right, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI).</p>
+<p>This character should be used rather than <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202A.png" alt="LRE" style="vertical-align:middle"> <a href="#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a></span> (LRE).</p>
+`,
+
+
+
+
+// RLI
+'\u{2067}': `
+<p class="insertTranscription">&#x2067;</p>
+<p>Sets the start point for a range of inline text when applying a base direction of right-to-left, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI).</p>
+<p>This character should be used rather than <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202B.png" alt="RLE" style="vertical-align:middle"> <a href="#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a></span> (RLE).</p>
+`,
+
+
+
+
+// FSI
+'\u{2068}': `
+<p class="insertTranscription">&#x2068;</p>
+<p>Sets the start point for a range of inline text when applying a base direction, and isolates the text within that range from text outside it. The base direction set is determined by that of the first strong directional character in the range. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI).</p>
+`,
+
+
+
+
+// PDI
+'\u{2069}': `
+<p class="insertTranscription">&#x2069;</p>
+<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2066.png" alt="LRI" style="vertical-align:middle"> <a href="#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a></span> (LRI), <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2067.png" alt="RLI" style="vertical-align:middle"> <a href="#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a></span> (RLI) or <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2068.png" alt="FSI" style="vertical-align:middle"> <a href="#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a></span> (FSI).</p>
+<p>This character should be used rather than <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> <a href="#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a></span> (PDF).</p>
+`,
+
+
+
+
+'\u{206A}': `
+<p class="insertTranscription">&#x206A;</p>
+`,
+
+
+
+
+'\u{206B}': `
+<p class="insertTranscription">&#x206B;</p>
+`,
+
+
+
+
+'\u{206C}': `
+<p class="insertTranscription">&#x206C;</p>
+`,
+
+
+
+
+'\u{206D}': `
+<p class="insertTranscription">&#x206D;</p>
+`,
+
+
+
+
+'\u{206E}': `
+<p class="insertTranscription">&#x206E;</p>
+`,
+
+
+
+
+'\u{206F}': `
+<p class="insertTranscription">&#x206F;</p>
+`,
+
+
+
+
+
+
+
+
+
+
+
+
+// SUPPLEMENTAL PUNCTUATION
+
+
+'\u{2E00}': `
+<p class="insertTranscription">&#x2E00;</p>
+`,
+
+
+
+
+'\u{2E01}': `
+<p class="insertTranscription">&#x2E01;</p>
+`,
+
+
+
+
+'\u{2E02}': `
+<p class="insertTranscription">&#x2E02;</p>
+`,
+
+
+
+
+'\u{2E03}': `
+<p class="insertTranscription">&#x2E03;</p>
+`,
+
+
+
+
+'\u{2E04}': `
+<p class="insertTranscription">&#x2E04;</p>
+`,
+
+
+
+
+'\u{2E05}': `
+<p class="insertTranscription">&#x2E05;</p>
+`,
+
+
+
+
+'\u{2E06}': `
+<p class="insertTranscription">&#x2E06;</p>
+`,
+
+
+
+
+'\u{2E07}': `
+<p class="insertTranscription">&#x2E07;</p>
+`,
+
+
+
+
+'\u{2E08}': `
+<p class="insertTranscription">&#x2E08;</p>
+`,
+
+
+
+
+'\u{2E09}': `
+<p class="insertTranscription">&#x2E09;</p>
+`,
+
+
+
+
+'\u{2E0A}': `
+<p class="insertTranscription">&#x2E0A;</p>
+`,
+
+
+
+
+'\u{2E0B}': `
+<p class="insertTranscription">&#x2E0B;</p>
+`,
+
+
+
+
+'\u{2E0C}': `
+<p class="insertTranscription">&#x2E0C;</p>
+`,
+
+
+
+
+'\u{2E0D}': `
+<p class="insertTranscription">&#x2E0D;</p>
+`,
+
+
+
+
+'\u{2E0E}': `
+<p class="insertTranscription">&#x2E0E;</p>
+`,
+
+
+
+
+'\u{2E0F}': `
+<p class="insertTranscription">&#x2E0F;</p>
+`,
+
+
+
+
+'\u{2E10}': `
+<p class="insertTranscription">&#x2E10;</p>
+`,
+
+
+
+
+'\u{2E11}': `
+<p class="insertTranscription">&#x2E11;</p>
+`,
+
+
+
+
+'\u{2E12}': `
+<p class="insertTranscription">&#x2E12;</p>
+`,
+
+
+
+
+'\u{2E13}': `
+<p class="insertTranscription">&#x2E13;</p>
+`,
+
+
+
+
+'\u{2E14}': `
+<p class="insertTranscription">&#x2E14;</p>
+`,
+
+
+
+
+'\u{2E15}': `
+<p class="insertTranscription">&#x2E15;</p>
+`,
+
+
+
+
+'\u{2E16}': `
+<p class="insertTranscription">&#x2E16;</p>
+`,
+
+
+
+
+'\u{2E17}': `
+<p class="insertTranscription">&#x2E17;</p>
+`,
+
+
+
+
+'\u{2E18}': `
+<p class="insertTranscription">&#x2E18;</p>
+`,
+
+
+
+
+'\u{2E19}': `
+<p class="insertTranscription">&#x2E19;</p>
+`,
+
+
+
+
+'\u{2E1A}': `
+<p class="insertTranscription">&#x2E1A;</p>
+`,
+
+
+
+
+'\u{2E1B}': `
+<p class="insertTranscription">&#x2E1B;</p>
+`,
+
+
+
+
+'\u{2E1C}': `
+<p class="insertTranscription">&#x2E1C;</p>
+`,
+
+
+
+
+'\u{2E1D}': `
+<p class="insertTranscription">&#x2E1D;</p>
+`,
+
+
+
+
+'\u{2E1E}': `
+<p class="insertTranscription">&#x2E1E;</p>
+`,
+
+
+
+
+'\u{2E1F}': `
+<p class="insertTranscription">&#x2E1F;</p>
+`,
+
+
+
+
+'\u{2E20}': `
+<p class="insertTranscription">&#x2E20;</p>
+`,
+
+
+
+
+'\u{2E21}': `
+<p class="insertTranscription">&#x2E21;</p>
+`,
+
+
+
+
+'\u{2E22}': `
+<p class="insertTranscription">&#x2E22;</p>
+`,
+
+
+
+
+'\u{2E23}': `
+<p class="insertTranscription">&#x2E23;</p>
+`,
+
+
+
+
+'\u{2E24}': `
+<p class="insertTranscription">&#x2E24;</p>
+`,
+
+
+
+
+'\u{2E25}': `
+<p class="insertTranscription">&#x2E25;</p>
+`,
+
+
+
+
+'\u{2E26}': `
+<p class="insertTranscription">&#x2E26;</p>
+`,
+
+
+
+
+'\u{2E27}': `
+<p class="insertTranscription">&#x2E27;</p>
+`,
+
+
+
+
+'\u{2E28}': `
+<p class="insertTranscription">&#x2E28;</p>
+`,
+
+
+
+
+'\u{2E29}': `
+<p class="insertTranscription">&#x2E29;</p>
+`,
+
+
+
+
+'\u{2E2A}': `
+<p class="insertTranscription">&#x2E2A;</p>
+`,
+
+
+
+
+'\u{2E2B}': `
+<p class="insertTranscription">&#x2E2B;</p>
+`,
+
+
+
+
+'\u{2E2C}': `
+<p class="insertTranscription">&#x2E2C;</p>
+`,
+
+
+
+
+'\u{2E2D}': `
+<p class="insertTranscription">&#x2E2D;</p>
+`,
+
+
+
+
+'\u{2E2E}': `
+<p class="insertTranscription">&#x2E2E;</p>
+`,
+
+
+
+
+'\u{2E2F}': `
+<p class="insertTranscription">&#x2E2F;</p>
+`,
+
+
+
+
+'\u{2E30}': `
+<p class="insertTranscription">&#x2E30;</p>
+`,
+
+
+
+
+'\u{2E31}': `
+<p class="insertTranscription">&#x2E31;</p>
+`,
+
+
+
+
+'\u{2E32}': `
+<p class="insertTranscription">&#x2E32;</p>
+`,
+
+
+
+
+'\u{2E33}': `
+<p class="insertTranscription">&#x2E33;</p>
+`,
+
+
+
+
+'\u{2E34}': `
+<p class="insertTranscription">&#x2E34;</p>
+`,
+
+
+
+
+'\u{2E35}': `
+<p class="insertTranscription">&#x2E35;</p>
+`,
+
+
+
+
+'\u{2E36}': `
+<p class="insertTranscription">&#x2E36;</p>
+`,
+
+
+
+
+'\u{2E37}': `
+<p class="insertTranscription">&#x2E37;</p>
+`,
+
+
+
+
+'\u{2E38}': `
+<p class="insertTranscription">&#x2E38;</p>
+`,
+
+
+
+
+'\u{2E39}': `
+<p class="insertTranscription">&#x2E39;</p>
+`,
+
+
+
+
+'\u{2E3A}': `
+<p class="insertTranscription">&#x2E3A;</p>
+`,
+
+
+
+
+'\u{2E3B}': `
+<p class="insertTranscription">&#x2E3B;</p>
+`,
+
+
+
+
+'\u{2E3C}': `
+<p class="insertTranscription">&#x2E3C;</p>
+`,
+
+
+
+
+'\u{2E3D}': `
+<p class="insertTranscription">&#x2E3D;</p>
+`,
+
+
+
+
+'\u{2E3E}': `
+<p class="insertTranscription">&#x2E3E;</p>
+`,
+
+
+
+
+'\u{2E3F}': `
+<p class="insertTranscription">&#x2E3F;</p>
+`,
+
+
+
+
+'\u{2E40}': `
+<p class="insertTranscription">&#x2E40;</p>
+`,
+
+
+
+
+'\u{2E41}': `
+<p class="insertTranscription">&#x2E41;</p>
+`,
+
+
+
+
+'\u{2E42}': `
+<p class="insertTranscription">&#x2E42;</p>
+`,
+
+
+
+
+'\u{2E43}': `
+<p class="insertTranscription">&#x2E43;</p>
+`,
+
+
+
+
+'\u{2E44}': `
+<p class="insertTranscription">&#x2E44;</p>
+`,
+
+
+
+
+'\u{2E45}': `
+<p class="insertTranscription">&#x2E45;</p>
+`,
+
+
+
+
+'\u{2E46}': `
+<p class="insertTranscription">&#x2E46;</p>
+`,
+
+
+
+
+'\u{2E47}': `
+<p class="insertTranscription">&#x2E47;</p>
+`,
+
+
+
+
+'\u{2E48}': `
+<p class="insertTranscription">&#x2E48;</p>
+`,
+
+
+
+
+'\u{2E49}': `
+<p class="insertTranscription">&#x2E49;</p>
+`,
+
+
+
+
+'\u{2E4A}': `
+<p class="insertTranscription">&#x2E4A;</p>
+`,
+
+
+
+
+'\u{2E4B}': `
+<p class="insertTranscription">&#x2E4B;</p>
+`,
+
+
+
+
+'\u{2E4C}': `
+<p class="insertTranscription">&#x2E4C;</p>
+`,
+
+
+
+
+'\u{2E4D}': `
+<p class="insertTranscription">&#x2E4D;</p>
+`,
+
+
+
+
+'\u{2E4E}': `
+<p class="insertTranscription">&#x2E4E;</p>
+`,
+
+
+
+
+'\u{2E4F}': `
+<p class="insertTranscription">&#x2E4F;</p>
+`,
+
+
+
+
+'\u{2E50}': `
+<p class="insertTranscription">&#x2E50;</p>
+`,
+
+
+
+
+'\u{2E51}': `
+<p class="insertTranscription">&#x2E51;</p>
+`,
+
+
+
+
+'\u{2E52}': `
+<p class="insertTranscription">&#x2E52;</p>
+`,
+
+
+
+
+'\u{2E53}': `
+<p class="insertTranscription">&#x2E53;</p>
+`,
+
+
+
+
+'\u{2E54}': `
+<p class="insertTranscription">&#x2E54;</p>
+`,
+
+
+
+
+'\u{2E55}': `
+<p class="insertTranscription">&#x2E55;</p>
+`,
+
+
+
+
+'\u{2E56}': `
+<p class="insertTranscription">&#x2E56;</p>
+`,
+
+
+
+
+'\u{2E57}': `
+<p class="insertTranscription">&#x2E57;</p>
+`,
+
+
+
+
+'\u{2E58}': `
+<p class="insertTranscription">&#x2E58;</p>
+`,
+
+
+
+
+'\u{2E59}': `
+<p class="insertTranscription">&#x2E59;</p>
+`,
+
+
+
+
+'\u{2E5A}': `
+<p class="insertTranscription">&#x2E5A;</p>
+`,
+
+
+
+
+'\u{2E5B}': `
+<p class="insertTranscription">&#x2E5B;</p>
+`,
+
+
+
+
+'\u{2E5C}': `
+<p class="insertTranscription">&#x2E5C;</p>
+`,
+
+
+
+
+'\u{2E5D}': `
+<p class="insertTranscription">&#x2E5D;</p>
+`,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
