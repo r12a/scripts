@@ -13,10 +13,10 @@ autoExpandExamples.fuf = `
 𞤟𞤭𞤲𞤢𞥄|Zina (name)|z§i.§n§aː|Zinaa
 𞤠𞤫𞤤𞤫|Kpelle (ethnic group)|k͡p§ɛ.§l§ɛ|Kpele
 𞤢⹁‏ 𞤢𞤣𞤢|thou|a,‏ ada
-𞤢𞤥𞤣𞤫|dance|amdɛ|amde
-𞤢𞤧𞤢𞤥𞤢𞥄𞤲|sky|asamaːn|asamaan
-𞤢𞤧𞤣𞤫|dig|asdɛ|asde
-𞤢𞤪𞤣𞤫|come|ardɛ|arde
+𞤢𞤥𞤣𞤫|dance|a§m§d§ɛ|amde
+𞤢𞤧𞤢𞤥𞤢𞥄𞤲|sky|a§s§a§m§aː§n|asamaan
+𞤢𞤧𞤣𞤫|dig|a§s§d§ɛ|asde
+𞤢𞤪𞤣𞤫|come|a§r§d§ɛ|arde
 𞤢𞤲𞤣𞤵𞤣𞤫|know|andudɛ|andude
 𞤢𞤸𞤢𞤣𞤭|agreement|a§h§a§d§i
 𞤢𞥄𞤬𞤭𞤴𞤢|wellbeing|aː§f§i§j§a|aafiya
