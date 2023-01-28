@@ -81,6 +81,20 @@ for (var char in spreadsheetRows) {
     }
 
 
+// create a list of transliterations from the spreadsheet
+var autoTranslitArray = {}
+for (var line in spreadsheetRows) {
+    if (spreadsheetRows[line][cols.transLoc] === '') continue		
+
+    // create entry for the item
+    if (autoTranslitArray[line]) console.log('Unexpected duplicate in makeTransliterationArray: ',line)
+    else autoTranslitArray[line] = spreadsheetRows[line][cols.transLoc]
+    }
+
+
+
+
+
 // build the tab markup
 if (document.getElementById('tabPlaceholder')) {
     document.getElementById('tabPlaceholder').innerHTML =
@@ -265,14 +279,18 @@ function printAll () {
 
         out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
         
-        // figure out whether to link to a different string for Wiktionary lookup
-        if (fields[WIKI]  && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }">${ fields[TERM] }</a>`
-        else if (fields[WIKI]) out += `${ fields[TERM] }`
-        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }">${ fields[TERM] }</a>`
+        // add the term with an onlick to explode
+        out += `<span onclick="showNameDetails('${ fields[TERM].trim().toLocaleLowerCase() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw].trim() }')" class="term">${ fields[TERM] }</span>`
         
+        // add copy icon
         out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ fields[TERM].trim() }')">`
 
-        out += `<span onclick="showNameDetails('${ fields[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw] }')"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></span>`
+        // add a link icon if there's a Wiktionary entry
+        if (fields[WIKI]  && fields[WIKI].trim() === 'x') {} // do nothing
+        else if (fields[WIKI]  && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }">${ fields[TERM] }</a>`
+        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
+        
+        
         
 
         out += '</td>'
@@ -351,9 +369,25 @@ function findWords (reg) {
         out += `<td id="w${ itemArray[TERM] }" class="tickCol"></td>`
 
         out += `<td class="termCol" lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
-        
-        
 
+
+
+
+
+        // add the term with an onlick to explode
+        out += `<span onclick="showNameDetails('${ itemArray[TERM].trim().toLocaleLowerCase() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw].trim() }')" class="term">${ itemArray[TERM] }</span>`
+        
+        // add copy icon
+        out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ itemArray[TERM].trim() }')">`
+
+        // add a link icon if there's a Wiktionary entry
+        if (itemArray[WIKI]  && itemArray[WIKI].trim() === 'x') {} // do nothing
+        else if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
+        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
+
+
+        
+/*
         if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';">${ itemArray[TERM] }</a>`
         else if (itemArray[WIKI]) out += `<span  onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';">${ itemArray[TERM] }</span>`
         else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';">${ itemArray[TERM] }</a>`
@@ -362,7 +396,7 @@ function findWords (reg) {
         out += `<span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></span>`
         
         out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ itemArray[TERM].trim() }')">`
-
+*/
         out += '</td>'
         
 
