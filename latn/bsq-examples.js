@@ -724,7 +724,7 @@ dunu|dew; mist||||x
 Dunu-Tòɖò|March||||x
 Dùò|May||||x
 dùǔ|moth||||x
-dúún|long dress
+dúún|long dress||||x
 fá|to rip|f§á|||
 fá mú|to split in half; to be torn||||x
 fá wɔ̃|to split||||x
@@ -1006,7 +1006,7 @@ gmɔ̀ìn gbo|to look to||||x
 gmɔ̀ìn hwɛ̀nɛ̌-dyèɖèǐn|to look on someone with jealousy||||x
 gmɔ̀ìn mú|to look through (a window)||||x
 gmɔ̌ìn|to meet||||x
-gmɔ-wɔ̃̀|gate
+gmɔ-wɔ̃̀|gate||||x
 hã́á-hã̀à|kind of bird (stork)||||x
 hée|it is not so||||x
 hésɔ̀|hyssop||||x
@@ -1014,7 +1014,7 @@ hìɖì-kpà|foundation (of the earth)||||x
 híìn|hin||||x
 hĩinyɛ|four|h§ĩ̄ː§‹§ɲ§‹§ɛ̄||𖫤𖫭𖫲𖫐𖫕𖫫𖫲𖫐|x
 hm̀m̌|five|h§m̩̀§m̩̌|||
-hɔ̃dɛ̀ɖɛ̀|hundred||
+hɔ̃dɛ̀ɖɛ̀|hundred||||x
 
 hwà|middlesized; middle age||||x
 hwaɖa|to vomit||||x
@@ -1108,7 +1108,7 @@ hwùɖùǎ|old broken down town||||x
 hwùɖùǔ|bowl (for food)||||x
 hwúe|mildew||||x
 hwúe-dyèɖè|green||||x
-hwuu-ɖɛ̀|plunder
+hwuu-ɖɛ̀|plunder||||x
 ífà|ephah||||x
 ífɔ̀|ephod||||x
 ínjà|angel||||x
@@ -1447,7 +1447,7 @@ kpɔ̃̀ìn zaa|to make guilty||||x
 kpɔ̃ín-kpɔ̃ín|caught on fire||||x
 kpɔ̀ɔ̌|thick bush|k͡p§‹§ɔ̀§ɔ̌|||
 kpɔ̃ɔ-ɖɛ̀|prey||||x
-kpɔ̃ɔ-nìmìì|carnivorous animal
+kpɔ̃ɔ-nìmìì|carnivorous animal||||x
 ḿ|I; my (inalienable); me||||x
 m̀|you; your (inalienable)||||x
 má|(introduce yes question); (recent past)||||x
@@ -1780,7 +1780,7 @@ nyuu-nàmàǔn|sinful deeds||||x
 ɔ sèìn ɖòùn|except||||x
 ɔ́ɖè-cù|olive tree||||x
 ɔ́ɖè-gbǎ|olive grove||||x
-ɔ́nɛ̀-sɔ̀ɔ̀|onyx
+ɔ́nɛ̀-sɔ̀ɔ̀|onyx||||x
 pá|place; land||||x
 pa|to sink into; to be abundant inside (e.g. honeycomb); to go into a hole||||x
 pa dyi|to disappear; to be missing; to leave secretly from someone||||x
@@ -2245,7 +2245,7 @@ vɔ́sì|verse||||x
 vɔ̃-vɔ̃|fighting||||x
 vũà dyi|to wave something (e.g. a sling)||||x
 vùɖùɛ̀-vùɖùɛ̀|fuzzy (to touch)||||x
-vúú|foam
+vúú|foam||||x
 wa|they; them; to break|w§ā|||
 wã|to blaze up (fire); to fly; to jump||||x
 wã kɔ̃|to forsake||||x
@@ -2524,7 +2524,7 @@ zùo-po-po|thanksgiving||||x
 zùo-po-wɛ̀ɖɛ̀|song of praise or thanksgiving||||x
 zùù|spirit; shadow|z§ùː§‹|||
 zùù kpɔ̃|to attract someone||||x
-zùzù-tì|summer
+zùzù-tì|summer||||x
 
 
 bòò|banana|b§òː§‹|
