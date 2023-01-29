@@ -148,6 +148,7 @@ if (document.getElementById('tabPlaceholder')) {
     
 
     <div id="help_tab_area">
+    <p style="text-align:end;"><a href="https://r12a.github.io/scripts/index.html#termbases">More term lists</a></p>
     <p>This app has 3 main tabs:</p>
     <ol>
     <li><samp>List</samp>: Simply lists all the entries in the term base.</li>
@@ -156,8 +157,8 @@ if (document.getElementById('tabPlaceholder')) {
     </ol>
     
     <p>For many terms, adjacent columns provide meanings and IPA and other transcriptions (and sometimes notes). This is a work in progress.</p>
-    
-    <p>For many terms, meanings and transcriptions are taken from <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page" target="_blank">Wiktionary</a>, but there are other sources, too. Where a term has a Wiktionary page it will have a link; click on the term to open that page.</p>
+
+    <p>Clicking on a term opens a panel that decomposes it into <i class="kw">base+combining_mark(s)</i> units, and annotates them with a Latin transliteration and, where available, an IPA transcription. The characters are also listed, one by one, with their Unicode names. You can dismiss the panel by clicking on X, or by hitting the ESC key.</p>
 
     <h2>Searching & sets</h2>
     <p>In the <samp>Find</samp> tab you can search for any sequence of characters, and you can use regular expressions, too. For example, <samp>a.a</samp> will show any terms containing two a's with one intervening character (of any kind). And <samp>[^ ]Ⓥ</samp> will show words with independent vowels that appear word-medially.</p>
@@ -168,8 +169,8 @@ if (document.getElementById('tabPlaceholder')) {
     
     <h2>Icons</h2>
     
-    <p><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;"> opens a panel that breaks down a term into &lt;<i class="kw">base+combining_mark</i>&gt; units, and annotates them with a Latin transliteration and, where available, an IPA transcription. The characters are also listed, one by one, with their Unicode names. You can dismiss the panel by clicking on X, or by hitting the ESC key.</p>
-    
+    <p><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;"> appears alongside terms that have a <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page" target="_blank">Wiktionary</a> page. Click on the icon to open that page. (In some lists, some of these currently give false positives. These will eventually be removed.)</p>
+
     <p><img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme"> next to a term copies the term to the clipboard. In the Find tab's right-hand column this icon copies some markup code to the clipboard that allows you to insert the term with any transcriptions into an HTML page.</p>
     
     <h2>URL parameters</h2>
