@@ -6,7 +6,7 @@ autoExpandExamples.ff = `
 -ɗe||
 -ɗi||
 Boɗaaɗo||
-Fulfulde|Fulfulde|fulfulde||Pular, Pulaar; 𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫
+Fulfulde|Fulfulde|f§u§l§f§u§l§d§e|𞤬𞤵𞤤𞤣𞤫|Pular, Pulaar
 Haalpulaar||
 Motti||
 Pulaar||
@@ -24,16 +24,16 @@ aali||
 aanyeere||
 aan||
 aaw-||
-aawdi|seed|aːwdi||Fulfulde, Pulaar, Pular
+aawdi|seed|aː§‹§w§d§i|𞤢𞥄𞤱𞤣𞤭‎|Fulfulde, Pulaar, Pular
 aawoowo||
 aawugol||
-abadan|never|abadan||Pulaar
-abada|never|abada||Western Niger Fulfulde
+abadan|never|a§b§a§d§a§n||Pulaar
+abada|never|a§b§a§d§a||Western Niger Fulfulde
 acaari||
 acc-||
 accaari||
 accitugol||
-adadu|total, sum|adadu
+adadu|total, sum|a§d§a§d§u
 adala||
 adugol||
 adunaaru||
@@ -47,12 +47,12 @@ arma||
 arɗo||
 asama||
 asangal||
-awdi|seed|awdi||Pular
+awdi|seed|a§w§d§i||Pular
 awotooɗo||
 awru||
 a||
 aɗa||
-baaba|father|baːba|||x
+baaba|father|b§aː§‹§b§a|||x
 baafata||
 baagol||
 baaso||
@@ -73,15 +73,15 @@ binndo||
 bolol||
 bolondaa||
 bufenri||
-buguuru|grass hut|buguːru
+buguuru|grass hut|b§u§g§uː§‹§r§u
 bukkaaru||
 bullal||
-buuru|bread, hyena|buːru
-buuruuje|hyenas|buːruːɟe
-carmalal|twig for fire|carmalal||Pular
-cellal|health, wellbeing|cellal||Pular
+buuru|bread, hyena|b§uː§‹§r§u
+buuruuje|hyenas|b§uː§‹§r§uː§‹§ɟ§e|||x
+carmalal|twig for fire|c§a§r§m§a§l§a§l||Pular
+cellal|health, wellbeing|c§e§l§l§a§l||Pular
 coggal||
-coggu|price|coggu|||x
+coggu|price|c§o§g§g§u|||x
 collaari||
 conndi||
 cukalel||
@@ -90,12 +90,12 @@ daande||
 dakkere||
 dankali||
 dankata||
-danki|bed|danki|||x
+danki|bed|d§a§n§k§i|||x
 dannaajo||
 debbo||
 deftere||
 dewtere||
-diidol|design, line|diːdol||Pular
+diidol|design, line|d§iː§‹§d§o§l||Pular
 diisagol||
 diiwal||
 dolokke||
@@ -103,35 +103,35 @@ donsanke||
 duroowo||
 enen||
 en||
-esiraawo|in-law|esiraːwo|||x
+esiraawo|in-law|e§s§i§r§aː§‹§w§o|||x
 eɓe||
 eɗen||
-fattorde|refuge|fattorde||Pular
-fayande|cooking pot|fajaⁿde|||x
-feccere|part|feccere||Fulfulde, Pulaar, Pular
+fattorde|refuge|f§a§t§t§o§r§d§e||Pular
+fayande|cooking pot|f§a§j§a§ⁿ§d§e|||x
+feccere|part|f§e§c§c§e§r§e||Fulfulde, Pulaar, Pular
 feere||
 feewugol||
 fii honɗum||
-fiɲaare|type of fish|fiɲaːre||Maasina Fulfulde
+fiɲaare|type of fish|f§i§ɲ§aː§‹§r§e||Maasina Fulfulde
 follere||
 fow||
 ful-||
 gaanin||
-gatal|prayer mat|gatal|||x
+gatal|prayer mat|g§a§t§a§l|||x
 gawri||
 geɓal||
 giggol||
 gimɗol||
 gimɗo||
-goʼo|one|ɡoʔo||Pular
-go'o|one|ɡoʔo||Pular
+goʼo|one|ɡ§o§ʔ§o||Pular
+go'o|one|ɡ§o§ʔ§o||Pular|go'o
 golle||
 golloowo||
 goofoondi||
-goonga|truth|ɡoːŋɡa||Pular
+goonga|truth|ɡ§oː§‹§ŋ§ɡ§a||Pular
 gooto||
 gootun||
-gorko|husband, man|gorko||Pular
+gorko|husband, man|g§o§r§k§o||Pular
 goro||
 haako||
 haal-||
@@ -141,7 +141,7 @@ haa||
 hakkundeejo||
 hakkunde||
 halfeere||
-hanki|yesterday|hanki|||x
+hanki|yesterday|h§a§n§k§i|||x
 haray||
 harfeere||
 harfu||
@@ -163,13 +163,13 @@ huccere||
 hunnduko||
 huntere||
 huutoral||
-innde|name|inⁿde|||x
-jahdodinal|agreement|jahdodinal||Pular
+innde|name|i§n§ⁿ§d§e|||x
+jahdodinal|agreement|j§a§h§d§o§d§i§n§a§l||Pular
 jalbugol||
 jannde||
 janngirde||
 janngo||
-jappaajo|leather worker, cobbler|ɟappaːɟo
+jappaajo|leather worker, cobbler|ɟ§a§p§p§aː§‹§ɟ§o
 jawdi||
 jawleeru||
 jaŋgurdu||
@@ -181,27 +181,27 @@ jetti||
 jeɗɗi||
 joyi||
 jukka||
-junngo|hand, arm|ɟuŋɡo
+junngo|hand, arm|ɟ§u§ŋ§‹§ɡ§o|𞤶𞤵𞤽𞥆𞤺𞤮
 juŋŋgo||
 kaaɗo||
 kahi||
 kala||
-kammu|sky|kammu||Pular
+kammu|sky|k§a§m§m§u||Pular
 kamɓe||
 kaybonru||
 kaŋko||
-keerol|border, frontier|keːrol||Pular
+keerol|border, frontier|k§eː§‹§r§o§l||Pular
 kemmbu||
 kewal||
 kiikiiɗe||
 ki||
-kono|but, however|kono||Pular
-kooho|lord, chief|koːho
-koohooɓe|lords, chiefs|koːhoːɓe
+kono|but, however|k§o§n§o||Pular
+kooho|lord, chief|k§oː§‹§h§o
+koohooɓe|lords, chiefs|k§oː§‹§h§oː§‹§ɓ§e|||x
 koosaajo||
-kosam|milk|kosam||Fulfulde, Pulaar, Pular...
+kosam|milk|k§o§s§a§m|𞤳𞤮𞤧𞤢𞤥‎|Fulfulde, Pulaar, Pular...
 ko||
-koŋŋgol|word|koŋŋgol||Pular
+koŋŋgol|word|k§o§ŋ§ŋ§g§o§l||Pular
 kudaku||
 kunnawal||
 kuuran||
@@ -210,7 +210,7 @@ laalawal||
 laamɗo||
 laawol||
 labbo||
-lacceeri|sorghum|lacceːri||Nigerian Fulfulde
+lacceeri|sorghum|l§a§c§c§eː§‹§r§i||Nigerian Fulfulde
 lacciri||
 lamm-||
 lammbe||
@@ -221,7 +221,7 @@ laɓi||
 laɓndal||
 leembol||
 leggal||
-lekki|tree|lekki
+lekki|tree|l§e§k§k§i|𞤤𞤫𞤳𞥆𞤭‎
 lesdi||
 lewru||
 leydi||
@@ -231,7 +231,7 @@ lingu||
 loot-||
 lowre||
 maabo||
-maaro|rice|maːro||Pular
+maaro|rice|m§aː§‹§r§o||Pular
 mahoowo||
 majjere||
 maleyka||
@@ -241,12 +241,12 @@ masaku||
 maw-||
 mawniraawo||
 mawniraaɗo||
-mawɗo|old person, adult|mawɗo||Fulfulde, Pulaar, Pular...
+mawɗo|old person, adult|m§a§w§ɗ§o||Fulfulde, Pulaar, Pular...
 mbaroodi||
 mbayeere||
 mbayla||
 mbedda||
-mbeewa|goat|ᵐbeːwa||Fulfulde, Pulaar, Pular...
+mbeewa|goat|›§ᵐb§eː§‹§w§a||Fulfulde, Pulaar, Pular...
 mbelndi||
 mbolo||
 mboɗ-||
@@ -260,30 +260,30 @@ min||
 mi||
 miñiraaɗo||
 miɗo||
-moƴƴere|goodness, happiness|moʔʔʲere||Pular
+moƴƴere|goodness, happiness|m§o§ʔ§ʔʲ§e§r§e||Pular
 musel||
 naange||
 nagge||
-nantinoore|translation, interpretation|nantinoore||Pular
-nantinoowo|translator, interpreter|nantinowo||Pular
+nantinoore|translation, interpretation|n§a§n§t§i§n§oː§‹§r§e||Pular
+nantinoowo|translator, interpreter|n§a§n§t§i§n§oː§‹§w§o||Pular
 nayeejo||
 nayi||
 nayo||
 nder||
 ndiyam||
 ndi||
-ndowru|mouse|ⁿdowɾu|||x
+ndowru|mouse|›§ⁿd§o§w§ɾ§u|||x
 nduggu||
 nduungu||
 ndu||
-nebbam|oil, fat|nebbam
+nebbam|oil, fat|n§e§b§b§a§m
 neesila||
 neɗɗo||
 ngalu||
 ngam||
 ngayka||
 ngaynaako||
-ngayuuri|lion|ᵑɡajuːri|||x
+ngayuuri|lion|›§ᵑɡ§a§j§uː§‹§r§i|||x
 ngelooba||
 ngel||
 ngesa||
@@ -292,29 +292,29 @@ ngol||
 nguufo||
 nguurndam||
 ngu||
-njaatigi|friend|ⁿd͡ʒaːtigi|||x
+njaatigi|friend|›§ⁿd͡ʒ§aː§‹§t§i§g§i|||x
 njanndi||
-njoyo|five|ⁿd͡ʒojo
+njoyo|five|›§ⁿd͡ʒ§o§j§o
 nofuru||
 no||
 nyayiiri||
 omo||
 onon||
 oɗon||
-o’owooye|open|oʔowoːje|||x
+o’owooye|open|o§ʔ§o§w§oː§‹§j§e|||x
 paggiri||
-peewal|integrity, honour|peːwal||Pular
+peewal|integrity, honour|p§eː§‹§w§a§l||Pular
 piindi||
 piɓol||
 poofirgel||
-puumtugol|pronunciation|puːmtugol||Pular
-puyɗo|lazy person|pujɗo|||x
+puumtugol|pronunciation|p§uː§‹§m§t§u§g§o§l||Pular
+puyɗo|lazy person|p§u§j§ɗ§o|||x
 qe||
-reedu|stomach|reːdu||𞤪𞤫𞥅𞤣𞤵|x
+reedu|stomach|r§eː§‹§d§u||𞤪𞤫𞥅𞤣𞤵|x
 rew-||
 roogo||
 ruuhu||
-saare|village, town|saːre
+saare|village, town|s§aː§‹§ˈɾ§e|
 sababu||
 sagg-||
 saggitorde||
@@ -339,13 +339,13 @@ takko||
 takuure||
 tan||
 tasakuyee||
-taskagol|to research, analyse|taskagol||Pular
-tati|three|tati||Fulfulde, Pular, Pulaar
+taskagol|to research, analyse|t§a§s§k§a§g§o§l||Pular
+tati|three|t§ɑ§t§i||Fulfulde, Pular, Pulaar
 tato||
 tawsaajo||
 teen-||
-teewu|meat|||𞤼𞤫𞥅𞤱𞤵
-tijjagol|to count on, hope for|tiɟɟagol||Pular
+teewu|meat|t§eː§‹§w§u|𞤼𞤫𞥅𞤱𞤵|
+tijjagol|to count on, hope for|t§i§ɟ§ɟ§a§g§o§l||Pular
 tinndol||
 ton||
 toyoori||
@@ -354,28 +354,28 @@ toɓɓere||
 toɗɗagol||
 tuggordu||
 tulde||
-tuma|when|tuma||Pular
+tuma|when|t§u§m§a||Pular
 tun||
-unirgal|pestle|unirgal|x
+unirgal|pestle|u§n§i§r§g§a§l|||x
 waande||
 waandu||
-waare|hay bale, beard|waːre
-waawugol|to defeat, conquer|waːwugol||Pular
-waañoowo|hunter|waːñoːwo||Pular
+waare|hay bale, beard|w§aː§‹§r§e
+waawugol|to defeat, conquer|w§aː§‹§w§u§g§o§l||Pular
+waañoowo|hunter|w§aː§‹§ñ§oː§‹§w§o||Pular
 wahabiyyaajo||
 wal-||
 walaa||
 wall-||
 wallif-||
 warrugol||
-waɓɓugo|cheek|waɓɓugo||Pular
+waɓɓugo|cheek|w§a§ɓ§ɓ§u§g§o||Pular
 winnd-||
 wonaa||
 wonande||
 wonnde||
 woodugol||
 wor-||
-woyndu|well|wojⁿdu|||x
+woyndu|well|w§o§j§›§ⁿd§u|||x
 woɗ-||
 wuumre||
 wuur-||
@@ -383,7 +383,7 @@ wuɓere||
 yamiroore||
 yar-||
 yarirko||
-yeeso|face|yeːso|||x
+yeeso|face|y§eː§‹§s§o|||x
 ye||
 yiite||
 yimɓe||
@@ -391,31 +391,31 @@ yitere||
 ñaakii||
 ñaalal||
 ñaam-||
-ñaari|cat|ɲaːri|||x
-ɲaari|cat|ɲaːri|||x
-nyaari|cat|ɲaːri|||x
+ñaari|cat|ɲ§aː§‹§r§‹§i|||x
+ɲaari|cat|ɲ§aː§‹§r§i|||x
+nyaari|cat|ɲ§aː§‹§r§i|||x
 ñalaande||
 ñallal||
 ñawu||
 ñayko||
-ŋari|beauty|ŋari
+ŋari|beauty|ŋ§a§r§i
 ƴanngal||
-ƴi'al|bone|jiʔal|
+ƴi'al|bone|j§i§ʔ§a§l|
 ƴiire||
-ƴiiƴam|blood|ʔʲiːʔʲam
-ƴiʼal|bone|jiʔal|||ƴi'al
+ƴiiƴam|blood|ʔʲ§iː§‹§ʔʲ§a§m
+ƴiʼal|bone|j§i§ʔ§a§l||
 ƴulɓere||
 ɓaawo||
-ɓalal|foundation, base|ɓalal||Pular
+ɓalal|foundation, base|ɓ§a§l§a§l||Pular
 ɓanndu||
 ɓantaare||
-ɓaŋagol|to leave, go out|ɓaŋagol||Pular
+ɓaŋagol|to leave, go out|ɓ§a§ŋ§a§g§o§l||Pular
 ɓernde||
-ɓeyngu|wife, motherhood|ɓejᵑɡu
+ɓeyngu|wife, motherhood|ɓ§e§j§›§ᵑɡ§u
 ɓe||
 ɓii||
 ɓiraaɗan||
-ɓiɗɗo|child, offspring|ɓiɗɗo||Pular
+ɓiɗɗo|child, offspring|ɓ§i§ɗ§ɗ§o||Pular
 ɓoggol||
 ɓokki||
 ɓooldi||
@@ -423,11 +423,11 @@ nyaari|cat|ɲaːri|||x
 ɗaaleehi||
 ɗaa||
 ɗam||
-ɗatal|path, route|ɗatal
-ɗaɗol|root, nerve, artery|ɗaɗol||Pular
-ɗemŋgal|language, tongue|ɗemᵑɡal||Fulfulde, Pulaar, Pular
+ɗatal|path, route|ɗ§a§t§a§l
+ɗaɗol|root, nerve, artery|ɗ§a§ɗ§o§l||Pular
+ɗemŋgal|language, tongue|ɗ§e§m§›§ᵑɡ§a§l||Fulfulde, Pulaar, Pular
 ɗi||
-ɗiɗi|two|ɗiɗi||Fulfulde, Pular, Pulaar
+ɗiɗi|two|ɗ§i§ɗ§i||Fulfulde, Pular, Pulaar
 ɗiɗo||
 ɗo||
 ɗuuɗ-||
@@ -436,26 +436,26 @@ nyaari|cat|ɲaːri|||x
 
 
 
-jango|tomorrow|jaŋgo||Sene-gambian Fula|x
-jaango|cold|jaːŋgo||Sene-gambian Fula|x
+jango|tomorrow|j§a§ŋ§g§o||Sene-gambian Fula|x
+jaango|cold|j§aː§‹§ŋ§g§o||Sene-gambian Fula|x
 
-tuttogol|to spit|tuttogol|||x
-tutogol|to plant a tree|tutogol|||x
+tuttogol|to spit|t§u§t§t§o§g§o§l|||x
+tutogol|to plant a tree|t§u§t§o§g§o§l|||x
 
-qalamu|digit, number|qalamu||Pular (Arab)|x
-qaburu|tomb|qaburu||Pular (Arab)|x
-xayru|charm, beauty|xajru||Pular (Arab)|x
-xalwa|pious retreat|xalwa||Pular (Arab)|x
-zawju|husband|zawɟu/ɟawɟu||Pular (Arab)|x
-zawjatu|wife|zawɟatu||Pular (Arab)|x
-zuwerjo|(football) player|zuwerɟo||Pular|x
-zeneral|general (Mil)|zeneral/seneral||Pular #seneral#|x
-seneral|general (Mil)|seneral||Pular|x
-shahaada|muslim expression of faith|ʃahaːda||Pular (Arab)|x
-shahiidi|martyr|ʃahiːdi||Pular (Arab)|x
-shari'a|Sharia|ʃariʔa||Pular (Arab), #sariya#|x
-sariya|Sharia|ʃariʔa||Pular (Arab)|x
-shukru|thanks|ʃukru||Pular (Arab)|x
+qalamu|digit, number|q§a§l§a§m§u||Pular (Arab)|x
+qaburu|tomb|q§a§b§u§r§u||Pular (Arab)|x
+xayru|charm, beauty|x§a§j§r§u||Pular (Arab)|x
+xalwa|pious retreat|x§a§l§w§a||Pular (Arab)|x
+zawju|husband|z§a§w§ɟ§u§/ɟawɟu||Pular (Arab)|x
+zawjatu|wife|z§a§w§ɟ§a§t§u||Pular (Arab)|x
+zuwerjo|(football) player|z§u§w§e§r§ɟ§o||Pular|x
+zeneral|general (Mil)|z§e§n§e§r§a§l§/seneral||Pular #seneral#|x
+seneral|general (Mil)|s§e§n§e§r§a§l||Pular|x
+shahaada|muslim expression of faith|ʃ§‹§a§h§aː§‹§d§a||Pular (Arab)|x
+shahiidi|martyr|ʃ§‹§a§h§iː§‹§d§i||Pular (Arab)|x
+shari'a|Sharia|ʃ§‹§a§r§i§ʔ§a||Pular (Arab), #sariya#|x
+sariya|Sharia|ʃ§a§r§i§ʔ§a||Pular (Arab)|x
+shukru|thanks|ʃ§‹§u§k§r§u||Pular (Arab)|x
 
 
 
