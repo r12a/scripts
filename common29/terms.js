@@ -283,7 +283,10 @@ function printAll () {
         out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
         
         // add the term with an onlick to explode
-        out += `<span onclick="showNameDetails('${ fields[TERM].trim().toLocaleLowerCase() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw].trim() }')" class="term">${ fields[TERM] }</span>`
+        // first, remove ascii apostrophe to avoid crashing the codde
+        termToLookUp = fields[TERM].trim().toLocaleLowerCase().replace(/'/,'ʼ')
+        out += `<span onclick="showNameDetails('${ termToLookUp }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw].trim() }')" class="term">${ fields[TERM] }</span>`
+        //out += `<span onclick="showNameDetails('${ fields[TERM].trim().toLocaleLowerCase() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw].trim() }')" class="term">${ fields[TERM] }</span>`
         
         // add copy icon
         out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ fields[TERM].trim() }')">`
@@ -378,7 +381,10 @@ function findWords (reg) {
 
 
         // add the term with an onlick to explode
-        out += `<span onclick="showNameDetails('${ itemArray[TERM].trim().toLocaleLowerCase() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw].trim() }')" class="term">${ itemArray[TERM] }</span>`
+        // first, remove ascii apostrophe to avoid crashing the codde
+        termToLookUp = itemArray[TERM].trim().toLocaleLowerCase().replace(/'/,'ʼ')
+        out += `<span onclick="showNameDetails('${ termToLookUp }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw].trim() }')" class="term">${ itemArray[TERM] }</span>`
+        //out += `<span onclick="showNameDetails('${ itemArray[TERM].trim().toLocaleLowerCase() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw].trim() }')" class="term">${ itemArray[TERM] }</span>`
         
         // add copy icon
         out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ itemArray[TERM].trim() }')">`
