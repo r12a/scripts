@@ -10,7 +10,7 @@ Wiktionary https://en.wiktionary.org/wiki/Category:Plains_Cree_lemmas
 autoExpandExamples.crk = `
 
 
-ᐃᐢᑯᑌᐤ|fire||iskotēw|
+ᐃᐢᑯᑌᐤ|fire|ˈi§s§koˌ§teː§w|iskotēw|
 ᐃᐢᑵᐤ|woman|i§s§ˈkwe:§w|iskwēw|
 ᐃᔨᓂᓯᑊ|drake|i§ˈji§ni§ˌsi§p|iyinisip
 ᐅᐢᑐᐢᑐᑕᒼ|coughs||ostostotam||x
