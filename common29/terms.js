@@ -253,6 +253,11 @@ function initialise () {
 	parameters[0] = parameters[0].substring(1)
 	for (var p=0;p<parameters.length;p++) {  
 		var pairs = parameters[p].split('=')
+		if (pairs[0] == 'col' && pairs[1]) { // which column to search
+			document.getElementById('searchCol').value = decodeURIComponent(pairs[1])
+			switchTabTo('find_tab')
+			document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, document.getElementById('searchCol').value)
+			}
 		if (pairs[0] == 'q' && pairs[1]) { // find query, value is string to search for
 			document.getElementById('needle').value = decodeURIComponent(pairs[1])
 			switchTabTo('find_tab')
@@ -372,7 +377,7 @@ function findWords (reg) {
 		itemArray = result[i].split('|')
 		out += '<tr>'
         
-        out += `<td id="w${ itemArray[TERM] }" class="tickCol"></td>`
+        out += `<td id="w${ itemArray[TERM].trim() }" class="tickCol"></td>`
 
         out += `<td class="termCol" lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
 
@@ -392,7 +397,7 @@ function findWords (reg) {
         // add a link icon if there's a Wiktionary entry
         if (itemArray[WIKI]  && itemArray[WIKI].trim() === 'x') {} // do nothing
         else if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
-        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
+        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM].trim() }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
 
 
         
