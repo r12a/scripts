@@ -1635,10 +1635,84 @@ though this appears to be quite rare, eg.</p>
 
 <section id="encoding">
 <h2>Encoding choices</h2>
-<p>This section looks at  alternative  strategies  for  typing and storing the nukta  and considers the effects of normalising the text using <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and <span class="termref" href="../glossary/#nfc"> Normalisation Form C</span> (NFC).</p>
 
 
-<p class="info">The <em>decomposed</em> form is recommended by the Unicode Standard. NFC does not recombine the parts into precomposed characters. Instead, normalisation produces decomposed forms for both  NFC and NFD. So both alternatives are canonically equivalent, but decomposed is recommended.</p>
+<p class="instructions">This section offers advice about characters or character sequences to avoid, and what to use instead. It takes into account  the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC)..</p>
+
+<p>Although usage is recommended here, content authors may well be unaware of such recommendations. Therefore, applications should look out for the non-recommended approach and treat it the same as the recommended approach wherever possible.</p>
+
+
+
+
+
+<section id="encoding_vs">
+<h3>Encoding independent vowels</h3>
+
+<p>Visually, Gurmukhi independent vowels are written using a combination of a vowel sign attached to one of three base letters. Those combinations are encoded by the Unicode Standard as single, precomposed code points, but it is also possible to analyze the letter as using a decomposed sequence of code points: a base letter followed by a vowel sign.</p>
+<p>The precomposed characters don't decompose when normalised using NFD, nor do the decomposed sequences change under NFC.  They are therefore not treated in Unicode as canonically equivalent.  The Unicode Standard  recommends that the precomposed characters be used.</p>
+
+<p>Many fonts (such as Noto Fonts) will display a dotted circle if the content author tries to use the decomposed sequence, but not all fonts do. Content authors who created their content with a font such as Gurmukhi MN will find that their content no longer looks right when a different font is used.</p>
+
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Precomposed (recommended)</th>
+<th scope="col">Decomposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A08;</bdi> [<a href="../../scripts/guru/block.html#char0A08"><span class="uname">U+0A08 GURMUKHI LETTER II</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A72;</bdi> + <bdi lang="pa">&#x0A40;</bdi> [<a href="../../scripts/guru/block.html#char0A72"><span class="uname">U+0A72 GURMUKHI IRI</span></a> + <a href="../../scripts/guru/block.html#char0A40"><span class="uname">U+0A40 GURMUKHI VOWEL SIGN II</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A07;</bdi> [<a href="../../scripts/guru/block.html#char0A07"><span class="uname">U+0A07 GURMUKHI LETTER I</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A72;</bdi> + <bdi lang="pa">&#x0A3F;</bdi> [<a href="../../scripts/guru/block.html#char0A72"><span class="uname">U+0A72 GURMUKHI IRI</span></a> + <a href="../../scripts/guru/block.html#char0A3F"><span class="uname">U+0A3F GURMUKHI VOWEL SIGN I</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A0F;</bdi> [<a href="../../scripts/guru/block.html#char0A0F"><span class="uname">U+0A0F GURMUKHI LETTER EE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A72;</bdi> + <bdi lang="pa">&#x0A47;</bdi> [<a href="../../scripts/guru/block.html#char0A72"><span class="uname">U+0A72 GURMUKHI IRI</span></a> + <a href="../../scripts/guru/block.html#char0A47"><span class="uname">U+0A47 GURMUKHI VOWEL SIGN EE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A0A;</bdi> [<a href="../../scripts/guru/block.html#char0A0A"><span class="uname">U+0A0A GURMUKHI LETTER UU</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A73;</bdi> + <bdi lang="pa">&#x0A42;</bdi> [<a href="../../scripts/guru/block.html#char0A73"><span class="uname">U+0A73 GURMUKHI URA</span></a> + <a href="../../scripts/guru/block.html#char0A42"><span class="uname">U+0A42 GURMUKHI VOWEL SIGN UU</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A09;</bdi> [<a href="../../scripts/guru/block.html#char0A09"><span class="uname">U+0A09 GURMUKHI LETTER U</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A73;</bdi> + <bdi lang="pa">&#x0A41;</bdi> [<a href="../../scripts/guru/block.html#char0A73"><span class="uname">U+0A73 GURMUKHI URA</span></a> + <a href="../../scripts/guru/block.html#char0A41"><span class="uname">U+0A41 GURMUKHI VOWEL SIGN U</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A10;</bdi> [<a href="../../scripts/guru/block.html#char0A10"><span class="uname">U+0A10 GURMUKHI LETTER AI</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A05;</bdi> + <bdi lang="pa">&#x0A48;</bdi> [<a href="../../scripts/guru/block.html#char0A05"><span class="uname">U+0A05 GURMUKHI LETTER A</span></a> + <a href="../../scripts/guru/block.html#char0A48"><span class="uname">U+0A48 GURMUKHI VOWEL SIGN AI</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A14;</bdi> [<a href="../../scripts/guru/block.html#char0A14"><span class="uname">U+0A14 GURMUKHI LETTER AU</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A05;</bdi> + <bdi lang="pa">&#x0A4C;</bdi> [<a href="../../scripts/guru/block.html#char0A05"><span class="uname">U+0A05 GURMUKHI LETTER A</span></a> + <a href="../../scripts/guru/block.html#char0A4C"><span class="uname">U+0A4C GURMUKHI VOWEL SIGN AU</span></a>]</span>&nbsp;</td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A06;</bdi> [<a href="../../scripts/guru/block.html#char0A06"><span class="uname">U+0A06 GURMUKHI LETTER AA</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><bdi lang="pa">&#x0A05;</bdi> + <bdi lang="pa">&#x0A3E;</bdi> [<a href="../../scripts/guru/block.html#char0A05"><span class="uname">U+0A05 GURMUKHI LETTER A</span></a> + <a href="../../scripts/guru/block.html#char0A3E"><span class="uname">U+0A3E GURMUKHI VOWEL SIGN AA</span></a>]</span>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>It is unlikely that content authors will always choose the approach recommended by the Unicode Standard, so applications should be able to treat precomposed and decomposed independent vowels as the same, even though they are not canonically equivalent.</p>
+</section>
+
+
+
+
+
+
+
+<section id="encoding_nukta">
+<h3>Encoding the nukta</h3>
+
+<p class="info">The nukta is a small dot used to extend the Gurmukhi repertoire to additional sounds (see <a class="secref">extendedC</a>. The <em>decomposed</em> sequence of letter+nukta is recommended by the Unicode Standard. NFC does not recombine the parts into precomposed characters. Instead, normalisation produces decomposed forms for both  NFC and NFD. So both alternatives are canonically equivalent, but decomposed is recommended.</p>
+
+
 <table class="comparison">
 <thead>
 <tr>
@@ -1673,6 +1747,7 @@ though this appears to be quite rare, eg.</p>
 </tr>
 </tbody>
 </table>
+</section>
 </section>
 
 
