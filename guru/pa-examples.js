@@ -35,7 +35,7 @@ autoExpandExamples.pa = `
 ਅਤੇ|and||atē
 ਅਦਬ||
 ਅਦਿੱਖ|invisible|a§dik§k
-ਅਧਿਆਪਕ||
+ਅਧਿਆਪਕ|teacher||adhiāpak
 ਅਨਾਥ||
 ਅਫ਼ਗ਼ਾਨਿਸਤਾਨ|Afghanistan|ə§fˈ§ɣä§nˑɪ§ˌst̪äː§n
 ਅਫ਼ਗਾਨਿਸਤਾਨ||
@@ -702,7 +702,7 @@ autoExpandExamples.pa = `
 ਪੀਣਾ|to drink||pīṇā
 ਪੀਲਾ|yellow||pīlā
 ਪੀੜ||
-ਪੁਆਉਣਾ||
+ਪੁਆਉਣਾ|to give, put||puāuṇā
 ਪੁਆਧੀ||
 ਪੁਰਾਣਾ|old||purāṇā
 ਪੁਲਿਸ|police|pʊ§ɭ§sə̆§/pʊɭɪsə̆
@@ -1205,7 +1205,7 @@ autoExpandExamples.pa = `
 ਸੋਨਾ||
 ਸੋਮਵਾਰ||
 ਸੋਲ਼ਾਂ||
-ਸੋਸ਼ਲ ਮੀਡੀਆ||
+ਸੋਸ਼ਲ ਮੀਡੀਆ|social media||sośal mīḍīā
 ਸੋਹਣਾ||
 ਸੋਹੀ||
 ਸੌਂਕਣ||

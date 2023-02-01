@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 January, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->31 January, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1170,7 +1170,7 @@ is typically pronounced <span class="ipa">h</span> when syllable-initial.</p>
 
 
 
-<p><span class="codepoint" translate="no"><span lang="pa">&#x0A05;</span> [<a href="/scripts/gurmukhi/block#char0A05"><span class="uname">U+0A05 GURMUKHI LETTER A</span></a>]</span> is also  classified as a null consonant and is described in <a class="secref">independentvowels</a>.</p>
+<p><span class="codepoint" translate="no"><span lang="pa">&#x0A05;</span> [<a href="/scripts/gurmukhi/block#char0A05"><span class="uname">U+0A05 GURMUKHI LETTER A</span></a>]</span> is also  classified as a null consonant and is described in <a class="secref">standalone</a>.</p>
 
 </section>
 
@@ -1744,8 +1744,30 @@ though this appears to be quite rare, eg.</p>
 
 <p class="instructions">You can experiment with examples using the <a href="/pickers/gurmukhi/">Gurmukhi character app</a>.</p>
 
-<p>Gurmukhi text is not cursive (ie. joined up like Arabic).</p>
-<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
+<p>The orthography has no case distinction.</p>
+
+
+
+
+
+
+<section id="cursive">
+<h3>Glyph joining</h3>
+
+
+<p>Within a word, Gurmukhi spacing glyphs are joined together at the top bar.</p>
+<p><span class="eg transc" lang="pa" dir="ltr">ਚਿੜੀ-ਛਿੱਕਾ</span></p>
+
+<p>The top bar extends across or through most spacing letters, including both consonants and vowels, but some letters create a gap in the line (while still joining at either side). Two such letters can be seen in the following example.</p>
+<p><span class="eg" lang="pa" dir="ltr">ਅਧਿਆਪਕ</span></p>
+
+<p>Letters that create these gaps include digits and the following:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ਪ␣ਘ␣ਖ␣ਮ␣ਅ␣ਃ</figure>
+
+</section>
+
+
 
 
 
@@ -2110,10 +2132,37 @@ A particularly common contraction is to represent <span class="eg inline" lang="
 <h2>Line &amp; paragraph layout</h2>
    
       
-  <section id="linebreak">
+
+<section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
+
 <p>By default, Gurmukhi  breaks lines at inter-word spaces.</p>
+
+
+
+
+
+
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
 <p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the modern Punjabi orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for some of the characters used in modern Gurmukhi. Context may affect the behaviour of some of these and other characters.</p>
+
+<ul>
+<li><span class="ex list" lang="pa">“ ‘ (</span> &nbsp; should not be the last character on a line.</li>
+<li><span class="ex list" lang="pa">” ’ ) . , ; ! ? ।  %</span> &nbsp; should not begin a new line.</li>
+</ul>
+
+<!--p>Line breaking should not move a danda or double danda to the beginning of a new line, even if they are preceded by a space character.</p-->
+</section>
+
 </section>
 
 
