@@ -16,7 +16,7 @@ autoExpandExamples.am = `
 ሀይቅ|lake||häyḳ
 ሁ||
 ሁለተኛ||
-ሁለት|two||hulät
+ሁለት|two|hu§ˈlə§tt|hulät
 ሁሉ||
 ሁሉም|all||hulum
 ሃምራዊ||
@@ -41,14 +41,14 @@ autoExpandExamples.am = `
 ሉል||
 ላም||
 ላባ|feather||laba
-ላይ|at||lay
+ላይ|at||lay||x
 ሌሊት|night||lelit
-ሌላ|other||lela
+ሌላ|other||lela||x
 ሌባ||
 ሌት||
 ልምጭ|stick||ləmč̣
 ልሳን||
-ልብ|heart||ləb
+ልብ|heart|ˈlɨ§bb|ləb
 ልብስ||
 ልብን||
 ልዥ||
@@ -72,7 +72,7 @@ autoExpandExamples.am = `
 ሕገ መንግስት||
 ሕግ||
 ሕፃን||
-መሄድ|to walk||mähed
+መሄድ|to walk|mə§he§dɨ|mähed
 መላስ||
 መልካም፡ልደት||
 መልካም፡አዲስ፡አመት||
@@ -85,7 +85,7 @@ autoExpandExamples.am = `
 መርከብ||
 መርፌ||
 መሮጥ||
-መሳቅ|to laugh||mäsaḳ
+መሳቅ|to laugh|ˈmə§sa§kʼ|mäsaḳ
 መስማት|to hear||mäsmat
 መስራት||
 መስታዎት||
@@ -131,9 +131,9 @@ autoExpandExamples.am = `
 መኪና||
 መክፈቻ||
 መወርወር|to throw||mäwärwär
-መዉረድ|to flow||mäwuräd
-መዉደቅ|to fall||mäwudäḳ
-መዉጋት|to stab||mäwugat
+መዉረድ|to flow||mäwuräd||x
+መዉደቅ|to fall||mäwudäḳ||x
+መዉጋት|to stab||mäwugat||x
 መዋኘት|to swim||mäwañät
 መዘመር|to sing||mäzämär
 መዝገበ ቃላት||
@@ -171,7 +171,7 @@ autoExpandExamples.am = `
 ሙቅ|warm||muḳ
 ሙት||
 ሙዝ||
-ሚስት|wife||mist
+ሚስት|wife|ˈmi§s§t|mist
 ሚኒስትር|minister||ministər
 ሚያዝያ||
 ሚጥሚጣ||
@@ -183,16 +183,16 @@ autoExpandExamples.am = `
 ማሰር|to tie||masär
 ማሰብ|to think||masäb
 ማስታወክ|to vomit||mastawäk
-ማሸት|to wipe||መፈተግ
+ማሸት|to wipe||መፈተግ||x
 ማሽላ||
 ማሽተት|to smell||maštät
 ማቃጠል|to burn||maḳaṭäl
 ማበጥ|to swell||mabäṭ
 ማብራቅ||
-ማቴ4፥23|Matt 4:23
+ማቴ4፥23|Matt 4:23|
 ማኅበረሰብ||
 ማኅበርተኛ||
-ማን|who||man
+ማን|who|ˈma§n|man
 ማንበብ||
 ማንኛቸው||
 ማንኛችሁ||
@@ -208,7 +208,7 @@ autoExpandExamples.am = `
 ማዳመጥ||
 ማድረግ||
 ማጠብ|to wash||maṭäb
-ምላስ|tongue (organ)||məlas
+ምላስ|tongue|ˈmɨ§la§s|məlas
 ምላሽ||
 ምርጫ||
 ምሰሶ||
@@ -219,13 +219,13 @@ autoExpandExamples.am = `
 ምስጥ||
 ምሼት||
 ምሽት||
-ምን|what||mən
+ምን|what|ˈmɨ§n|mən
 ምንናምን||
 ምንና፡ምን||
 ምንድር||
 ምንድን||
 ምን፡ምን||
-ምክንያቱም|because||məknyatum
+ምክንያቱም|because||məknyatum||x
 ምክንያት||
 ምግብ ቤት||
 ምግብ||
@@ -234,19 +234,19 @@ autoExpandExamples.am = `
 ሞንጎመሪ||
 ሠላሳ||
 ሥር||
-ሥብ|fat (noun)||śəb
+ሥብ|fat (n)||śəb||x
 ሦስት||
 ረቡ||
 ረቡዕ||
-ረዝም|long||räzm
+ረዝም|long||räzm||x
 ረጂም||
 ሩማን||
-ሩቅ|far||ruḳ
+ሩቅ|far|ˈɾu§kʼ|ruḳ
 ሩጫ||
 ራስ||
 ራብ||
 ሬሳ||
-ርስዎ|you (2sg)||rəswo
+ርስዎ|you (2sg)||rəswo||x
 ርእሰ ብሔር||
 ርግብ||
 ርጥብ|wet||rəṭb
@@ -262,7 +262,7 @@ autoExpandExamples.am = `
 ሰማንያ||
 ሰማያዊ||
 ሰማይ|sky||sämay
-ሰስፋት|to sew||säsfat
+ሰስፋት|to sew||säsfat||x
 ሰበን||
 ሰባ||
 ሰባተኛ||
@@ -271,7 +271,7 @@ autoExpandExamples.am = `
 ሰኔ||
 ሰንሰለት||
 ሰኞ||
-ሰዉ|man (human being)||säwu
+ሰዉ|man (human being)||säwu||x
 ሰዋሰው||
 ሰው||
 ሰውነት||
@@ -299,7 +299,7 @@ autoExpandExamples.am = `
 ሳንቲም||
 ሴት ልጅ||
 ሴት||
-ሴትዮ|woman||setyo
+ሴትዮ|woman|se§ˈtɨ§jjo|setyo
 ስለት|sharp (as a knife)||səlät
 ስልሳ||
 ስልቻ||
@@ -314,7 +314,7 @@ autoExpandExamples.am = `
 ስኳር||
 ስድስተኛ||
 ስድስት||
-ስጋ|meat||səga
+ስጋ|meat|ˈsɨ§ɡa|səga
 ስጦታ||
 ስጳንያ||
 ስፖርት||
@@ -347,8 +347,8 @@ autoExpandExamples.am = `
 ቀበሌ||
 ቀን|day||ḳän
 ቀንድ|horn||ḳänd
-ቀኝ|right||ḳäñ
-ቀዝቃዛ|cold||ḳäzḳaza
+ቀኝ|right||ḳäñ||x
+ቀዝቃዛ|cold|kʼə§z§ˈkʼə§zza|ḳäzḳaza
 ቀይ|red||ḳäy
 ቀጥታ|straight||ḳäṭta
 ቀጭኔ||
@@ -361,7 +361,7 @@ autoExpandExamples.am = `
 ቃል||
 ቃጥሎ||
 ቅማል|louse||ḳəmal
-ቅርብ|near||ḳərb
+ቅርብ|near||ḳərb||x
 ቅርፊት|bark (of a tree)||ḳərfit
 ቅንፍዝ||
 ቅዳሜ||
@@ -392,14 +392,14 @@ autoExpandExamples.am = `
 ቡና||
 ቡናይነት||
 ቡን||
-ቢሆን|if||bihon
+ቢሆን|if||bihon||x
 ቢላዋ||
 ቢምቢ||
 ቢራቢሮ||
 ቢዛ||
-ቢጫ|yellow||bič̣a
+ቢጫ|yellow|ˈbi§t͡ʃʼa|bič̣a
 ባህር|sea||bahr
-ባል|husband||bal
+ባል|husband|ˈba§l|bal
 ባሕር||
 ባሚያ||
 ባረከ||
@@ -419,7 +419,7 @@ autoExpandExamples.am = `
 ብቻ||
 ብናኝ|snow||bənañ
 ብዕር||
-ብዙ|many||bəzu
+ብዙ|many|ˈbɨ§zu|bəzu
 ብጒንጅ||
 ብጫ||
 ቧምቧ||
@@ -440,7 +440,7 @@ autoExpandExamples.am = `
 ቴሌፎን||
 ቴምብር||
 ቴዎድሮስ||
-ትል|worm||təl
+ትል|worm|tʰɨ§l|təl
 ትልቅ|big||təlḳ
 ትምባሆ||
 ትራስ||
@@ -450,7 +450,7 @@ autoExpandExamples.am = `
 ትናንትና||
 ትንሽ|small||tənš
 ትንቢት||
-ትክክል|correct||təkkl
+ትክክል|correct||təkkl||x
 ትግርኛ||
 ቺሌ||
 ቻይ||
@@ -485,7 +485,7 @@ autoExpandExamples.am = `
 አላህ||
 አልማዝ||
 አልጋ||
-አመት|year||ʾämät
+አመት|year|ˈ(ʔ)a§mə§t|ʾämät
 አመድ|ash||ʾämäd
 አማርኛ||
 አምላክ||
@@ -493,16 +493,16 @@ autoExpandExamples.am = `
 አምሳግር||
 አምሳ፡እግር||
 አምስተኛ||
-አምስት|five||ʾämst
+አምስት|five|ˈ(ʔ)a§mmɨ§s§t|ʾämst
 አምበሳ||
 አሞሌ||
 አረም||
 አረሰ||
 አረቂ||
-አረንገዴ|green||ʾärängäde
+አረንገዴ|green||ʾärängäde||x
 አረንጓዴ||
 አራተኛ||
-አራት|four||ʾärat
+አራት|four|(ʔ)a§ˈɾa§tt|ʾärat
 አርመንኛ||
 አርሜንኛ||
 አርበኛ||
@@ -526,21 +526,21 @@ autoExpandExamples.am = `
 አሸለመ||
 አሸዋ|sand||ʾäšäwa
 አሽዋ||
-አበባ|flower||ʾäbäba
+አበባ|flower|a§βə§βa|ʾäbäba
 አቡነ||
-አባራ|dust||ʾäbara
-አባት|father||ʾäbat
+አባራ|dust||ʾäbara||x
+አባት|father|ˈʔa§bba§t|ʾäbat
 አባጨጓሬ||
 አቧራ||
 አናናስ||
 አንሶላ||
 አንቄ||
 አንበሳ||
-አንተ|you (2sg)||ʾäntä
+አንተ|you (2sg)|ˈ(ʔ)a§n§tə|ʾäntä
 አንቱ||
-አንቺ|you (2sg)||ʾänči
+አንቺ|you (2sg)|ˈ(ʔ)a§n§t͡ʃi|ʾänči
 አንደኛ||
-አንድ|one||ʾänd
+አንድ|one|ˈ(ʔ)a§n§d|ʾänd
 አንጀባ||
 አንገት|neck||ʾängät
 አንጎል||
@@ -558,7 +558,7 @@ autoExpandExamples.am = `
 አያት||
 አይብ||
 አይን|eye||ʾäyn
-አይደለም|not||ʾäydäläm
+አይደለም|not||ʾäydäläm||x
 አይጥ||
 አደገኛ||
 አዲስ አበባ||
@@ -572,8 +572,8 @@ autoExpandExamples.am = `
 አጭር|short||ʾäč̣r
 አጻፈ||
 አፈር||
-አፍ|mouth||ʾäf
-አፍንጫ|nose||ʾäfnč̣a
+አፍ|mouth|ə§f|ʾäf
+አፍንጫ|nose|ˈ(ʔ)a§fɨ§n§t͡ʃʼa|ʾäfnč̣a
 ኡነት||
 ኢትዮጵያ|Ethiopia|i§t§jo§pʼ§ja|ʾītyōṗṗyā|itʰiopʼia
 ኢንተርኔት||
@@ -601,9 +601,9 @@ autoExpandExamples.am = `
 እርድ||
 እርጎ||
 እሮብ||
-እሱ|he, she, it (3sg)||ʾəsu
+እሱ|he, she, it (3sg)|ˈ(ʔ)ɨ§ssu|ʾəsu
 እሳተ ጎመራ||
-እሳት|fire||ʾəsat
+እሳት|fire|ˈ(ʔ)ɨ§sa§t|ʾəsat
 እሳቸው||
 እሴት||
 እስላማዊ||
@@ -611,7 +611,7 @@ autoExpandExamples.am = `
 እስስት||
 እስትንፋስ||
 እስዎ||
-እሷ|he, she, it (3sg)||ʾəsʷa
+እሷ|he, she, it (3sg)|ˈ(ʔ)ɨ§ssʷa|ʾəsʷa
 እሾህ||
 እሾክ||
 እባብ|snake||ʾəbab
@@ -622,15 +622,15 @@ autoExpandExamples.am = `
 እኅት||
 እነ-||
 እነማን||
-እነርሱ|they (3pl)||ʾənärsu
+እነርሱ|they (3pl)|ˈ(ʔ)ɨ§nnə§ɾ§su|ʾənärsu
 እነሱ||
 እነዚህ||
 እነዚያ||
-እና|and||ʾəna
-እናት|mother||ʾənat
-እናንተ|you (2pl)||ʾənantä
+እና|and||ʾəna||x
+እናት|mother|ˈʔɨ§nna§t|ʾənat
+እናንተ|you (2pl)|ˈ(ʔ)ɨ§nna§n§tə|ʾənantä
 እናንት||
-እኔ|I (1sg)||ʾəne
+እኔ|I (1sg)|ˈ(ʔ)ɨ§ne|ʾəne
 እንስሳ|animal||ʾənssa
 እንሽላሊት||
 እንቁላል|egg||ʾənḳulal
@@ -647,14 +647,14 @@ autoExpandExamples.am = `
 እንግሊዝኛ፡ይችላሉ||
 እንግዳ||
 እንጨት||
-እኛ|we (1pl)||ʾəña
-እዚህ|here||ʾəzih
-እዚያ|there||ʾəziya
+እኛ|we (1pl)|ˈ(ʔ)ɨ§ɲɲa|ʾəña
+እዚህ|here||ʾəzih||x
+እዚያ|there||ʾəziya||x
 እዛብ||
-እጅ|hand||ʾəǧ
+እጅ|hand|ˈ(ʔ)ɨ§dd͡ʒ|ʾəǧ
 እግረኛ||
 እግር ኳስ||
-እግር|leg||ʾəgr
+እግር|leg|ˈ(ʔ)ɨ§ɡɨ§ɾ|ʾəgr
 እግርጌ||
 እጡብ||
 እጥር||
@@ -670,7 +670,7 @@ autoExpandExamples.am = `
 ከተበ||
 ከታተበ||
 ከፈተ||
-ከ….ጋር|with||kä….gar
+ከ….ጋር|with||kä….gar||x
 ኩራት||
 ኪሩብ||
 ኪስ||
@@ -707,8 +707,8 @@ autoExpandExamples.am = `
 ወፍ|bird||wäf
 ወፍራም||
 ወፍጮ||
-ዉሃ|water||wuha
-ዉስጥ|in||wusṭ
+ዉሃ|water||wuha||x
+ዉስጥ|in||wusṭ||x
 ዉሻ|dog||wuša
 ዊኪፔዲያ||
 ዋሊያ||
@@ -761,10 +761,10 @@ autoExpandExamples.am = `
 የርሷ||
 የሱ||
 የሷ||
-የተወሰነ|some||yätäwäsänä
+የተወሰነ|some||yätäwäsänä||x
 የቱ||
 የቲቱ||
-የት|where||yät
+የት|where|ˈjə§t|yät
 የትኛው||
 የቷ||
 የነርሱ||
@@ -773,16 +773,16 @@ autoExpandExamples.am = `
 የኔ||
 የኛ||
 የእርስ በእርስ ጦርነት||
-የእግር መዳፍ|foot||yäʾgr mädaf
+የእግር መዳፍ|foot||yäʾgr mädaf||x
 የካቲት||
-የዶለዶመ|dull (as a knife)||yädolädomä
+የዶለዶመ|dull (as a knife)||yädolädomä||x
 የገማ|rotten||yägäma
-ያ|that||ya
+ያ|that|ˈja|ya
 ያቺ||
 ያች||
 ያንተ||
 ያንቺ||
-ይህ|this||yəh
+ይህ|this|ˈjɨ§h|yəh
 ይህቺ||
 ይህች||
 ይሉኝታ||
@@ -845,9 +845,9 @@ autoExpandExamples.am = `
 ገውዝ||
 ገዛ||
 ገጆ||
-ጉልበት|knee||gulbät
+ጉልበት|knee|ˈɡu§l§bə§t|gulbät
 ጉሮሮ|guts||guroro
-ጉበት|liver||gubät
+ጉበት|liver|ˈɡu§bbə§t|gubät
 ጉዞ||
 ጉጉት||
 ጊታር||
@@ -864,7 +864,7 @@ autoExpandExamples.am = `
 ግንቦት||
 ግንደ ቆርቁር||
 ግዕዝ||
-ጎልማሳ|man (adult male)||golmasa
+ጎልማሳ|man (adult male)||golmasa||x
 ጎመን||
 ጎረቤት||
 ጎዳና||
@@ -878,7 +878,7 @@ autoExpandExamples.am = `
 ጠጉር||
 ጠጣ||
 ጡብ||
-ጡት|breast||ṭut
+ጡት|breast|ˈtʼu§t|ṭut
 ጣም||
 ጣት||
 ጣፋጭ||
@@ -890,8 +890,8 @@ autoExpandExamples.am = `
 ጥምቀት||
 ጥሩ|good||ṭəru
 ጥር||
-ጥርስ|tooth||ṭərs
-ጥቁር|black||ṭəḳur
+ጥርስ|tooth|ˈtʼɨ§ɾ§s|ṭərs
+ጥቁር|black|t̪ʼə§ku§r|ṭəḳur
 ጥቂት|few||ṭəḳit
 ጥቅምቲ||
 ጥበብ||
@@ -901,8 +901,8 @@ autoExpandExamples.am = `
 ጦርነት||
 ጨለማ||
 ጨሌ||
-ጨረቃ|moon||č̣äräḳa
-ጨዉ|salt||č̣äwu
+ጨረቃ|moon|ˈt͡ʃʼə§ɾə§kʼa|č̣äräḳa
+ጨዉ|salt|t͡ʃʼə§w|č̣äwu
 ጨዋታ||
 ጨው||
 ጨጓራ||
@@ -911,13 +911,13 @@ autoExpandExamples.am = `
 ጭላዳ||
 ጭማቂ||
 ጭምብል||
-ጭስ|smoke||č̣əs
+ጭስ|smoke|t͡ʃʼɨ§s|č̣əs
 ጭቃ||
-ጭንቅላት|head||č̣ənḳlat
+ጭንቅላት|skull, head|t͡ʃʼɨ§n§ˈkʼɨ§lla§t|č̣ənḳlat
 ጭጋግ|fog||č̣əgag
 ጮማ||
 ጳውሎስ||
-ጸሀይ|sun||ṣähäy
+ጸሀይ|sun||ṣähäy||x
 ጸሐይ||
 ጸሓይ||
 ጸጉር|hair||ṣägur
