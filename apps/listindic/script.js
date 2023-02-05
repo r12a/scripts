@@ -82,7 +82,7 @@ function makeList (stream) {
         out += '</td>'
 		out += '<td class="select">'
         out += '<span title="Copy to clipboard" onclick="console.log(this.parentNode); copyToClipboard(this.parentNode.previousSibling)"><img src="copy.png"></span>'
-        out += ' <a title="Show a list with details." href="../../../app-analysestring/?chars='+encodeURI(scriptGroups[keys[x]])+'" target="_blank"><img src="share.png"></a>'
+        out += ' <a title="Show a list with details." href="../../../app-analysestring/index.html?chars='+encodeURI(scriptGroups[keys[x]])+'" target="_blank"><img src="share.png"></a>'
         out += '</td>'
 		out += '</tr>\n'
 		}
