@@ -4,7 +4,7 @@ autoExpandExamples.nqo = `
 ߁߭|first||1̣³
 ߂߲|second||2̣˜
 ߊ߲ ߧߴߌ ߝߏ߬ ߟߊ߫ ߸ ߞߵߌ ߞߎߟߎ߲ߖߋ߲|We give you thanks.|ã ɲi fò lá,  ki kulũd͡ʒẽ|ã y’i fò lá,  k’i kulũjẽ||x
-ߓߐߗ߭ߎߙ. ߓߌߢߍ߲ ߝ߭ߋߣߎ߳.|Bonjour. Bien venue.|bɔʒur. bi‌ɲɛ̃ veny|bɔʧ³ur. biɲɛ˜ f³enuˑ.||x
+ߓߐߗ߭ߎߙ. ߓߌߢߍ߲ ߝ߭ߋߣߎ߳.|Bonjour. Bien venue.|b§ɔ§ʒ§u§r§.§ §b§i‌§ɲ§ɛ̃§ §v§e§n§y|bɔʧ³ur. biɲɛ˜ f³enuˑ.||x
 ߕߏ߲ߜߊ|litre||to˜gᵇa
 ߘߋ߲ߣߍ߲ ߠߎ߬ ߟߊ߫ ߓߋߟߋ߲ߠߊ|a speech from the children|dẽnɛ̃ łu la belẽła|
 ߛߌ ߺ ߌ ߺ ߛߌ|anyone||si _ i _ si
@@ -55,8 +55,8 @@ autoExpandExamples.nqo = `
 ߜߍ߬ߟߍ߲߬|hard||ɡ͡bɛ̀lɛ̃||x
 ߜߏ߬ߟߏ|skin||ɡ͡bòló||x
 ߓߊ߭ߞߐ߬ߦߐ|herbaceous plant|bǎkɔ̀jɔ́|bǎkɔ̀yɔ́||x
-ߌ ߓߴߊ߬ ߝߐ߫|you say it|í b(ɛ́)à fɔ́|í bʼà fɔ́||x
-ߌ ߞߵߊ߬ ߝߐ߫|you said it|í k(à)à fɔ́|í kʼà fɔ́||x
+ߌ ߓߴߊ߬ ߝߐ߫|you say it|í§ §b§(ɛ́)§à§ §f§ɔ́|í bʼà fɔ́||x
+ߌ ߞߵߊ߬ ߝߐ߫|you said it|í§ §k§(à)§à§ §f§ɔ́|í kʼà fɔ́||x
 ߞߏ߲|do first, precede||kɔ̌n||x
 ߛߓߊ߬|three||sábá||x
 ߍߛߑߞߌߡߏߞߊ|eskimo||ɛskimoka||x
@@ -123,7 +123,7 @@ autoExpandExamples.nqo = `
 ߦߙߌ|tree||yíri||x
 
 
-߾߅،߿߉߅|5 dorome and 95 taman (đ5.ŧ95)
+߾߅،߿߉߅|5 dorome and 95 taman (đ5.ŧ95)|
 
 
 
