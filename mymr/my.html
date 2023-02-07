@@ -58,7 +58,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 February, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 February, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -2415,7 +2415,7 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
 
 
 
-<section id="charorder">
+<!--section id="charorder">
 <h3>Code point sequences</h3>
 
 <p>The following indicates the  expected ordering of Unicode characters for Burmese. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=ᬧᬩᬢᬤᬘᬚᬓᬕᬲᬳᬫᬦᬗᬜᬯᬭᬮᬬᬞᬟᬠᬔᬛᬨᬝᬣᬥᬖᬰᬱᬡᬪᬙᬇᬈᬉᬊᬏᬑᬅᬆᬐᬒᬋᬌᬍᬎᬾᬿᭀᭃᭁᬶᬷᬸᬹᭃᬺᬻᬼᬽᬀᬁᬂᬃ᬴᭄ᬄ᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙᭚᭛᭜᭝᭞᭟᭠‌%E2%80%8B">Indic Syllabic Categories</a>. Follow the links to see what characters are represented by a given label.</p>
@@ -2456,6 +2456,53 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
 </ol>
 
 <p> Unfortunately, normalization may result in a different order. In particular, <span class="codepoint"><span lang="my">်</span> <a href="/scripts/myanmar/block#char103A" target="c">[<span class="uname">U+103A MYANMAR SIGN ASAT​</span>]</a></span> occurs after <span class="codepoint"><span lang="my">့</span> <a href="/scripts/myanmar/block#char1037" target="c">[<span class="uname">U+1037 MYANMAR SIGN DOT BELOW​</span>]</a></span> in normalized text. Applications such as fonts should still handle this alternative order, since the sequences are canonically equivalent.</p>
+
+<p>Ordering characters as shown above avoids potential ambiguities and maximises the likelihood of success when rendering the text.</p>
+</section-->
+
+
+
+
+
+
+
+
+<section id="charorder">
+<h3>Combining mark order</h3>
+
+<p>The following indicates the  expected ordering of Unicode combining marks for Burmese. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=ᬧᬩᬢᬤᬘᬚᬓᬕᬲᬳᬫᬦᬗᬜᬯᬭᬮᬬᬞᬟᬠᬔᬛᬨᬝᬣᬥᬖᬰᬱᬡᬪᬙᬇᬈᬉᬊᬏᬑᬅᬆᬐᬒᬋᬌᬍᬎᬾᬿᭀᭃᭁᬶᬷᬸᬹᭃᬺᬻᬼᬽᬀᬁᬂᬃ᬴᭄ᬄ᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙᭚᭛᭜᭝᭞᭟᭠‌%E2%80%8B">Indic Syllabic Categories</a>. Follow the links to see what characters are represented by a given label.</p>
+
+<p>There are 3 types of <a href="../glossary/index.html#ccs" class="termref">combining character sequence (CCS)</a>.</p>
+
+<p><span class="leadin">The first type</span> is a base plus <a href="../apps/listindic/index.html?chars=္" target="_blank">Invisible_Stacker</a>. This is the non-final part of a consonant cluster, and consists of just the base and the stacker.</p>
+
+<p><span class="leadin">The second</span> occurs for syllable-final consonants and is a base with an <span class="name">asat</span> (<a href="../apps/listindic/index.html?chars=်">Pure_Killer</a>). Although the asat may appear after a vowel,  this type of CCS  contains only the base and the <span class="name">asat</span>, with an optional tone mark. In principle, the tone mark should appear at the end of the CCS, but normalization produces a different order where <span class="codepoint"><span lang="my">်</span> <a href="/scripts/myanmar/block#char103A" target="c">[<span class="uname">U+103A MYANMAR SIGN ASAT​</span>]</a></span> occurs after <span class="codepoint"><span lang="my">့</span> <a href="/scripts/myanmar/block#char1037" target="c">[<span class="uname">U+1037 MYANMAR SIGN DOT BELOW​</span>]</a></span> . Applications such as fonts should still handle this alternative order, since the sequences are canonically equivalent..</p>
+
+<p><span class="leadin">The remaining CCS type</span> uses the following preferred ordering after a base.</p>
+
+<ol>
+<li><a href="../apps/listindic/index.html?chars=ျြွှ">Consonant_Medial</a> (4)
+<ol style="margin:0; padding: 0; padding-inline-start: 2rem;">
+<li><span class="codepoint" translate="no"><bdi lang="my">&#x103B;</bdi> [<a href="/scripts/myanmar/block#char103B"><span class="uname">U+103B  CONSONANT SIGN MEDIAL YA</span></a>]</span>   <a href="../apps/listindic/index.html?chars=်">Pure_Killer</a> <bdi class="grammar">?</bdi></li>
+<li><span class="codepoint" translate="no"><bdi lang="my">&#x103C;</bdi> [<a href="/scripts/myanmar/block#char103C"><span class="uname">U+103C  CONSONANT SIGN MEDIAL RA</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><bdi lang="my">&#x103D;</bdi> [<a href="/scripts/myanmar/block#char103D"><span class="uname">U+103D  CONSONANT SIGN MEDIAL WA</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><bdi lang="my">&#x103E;</bdi> [<a href="/scripts/myanmar/block#char103E"><span class="uname">U+103E  CONSONANT SIGN MEDIAL HA</span></a>]</span></li>
+</ol>
+</li>
+
+<li><a href="../apps/listindic/index.html?chars=ေိီုူဲာါ">Vowel_Dependent</a> (8)
+<ol style="margin:0; padding: 0; padding-inline-start: 2rem;">
+<li><span class="codepoint" translate="no"><bdi lang="my">&#x1031;</bdi> [<a href="/scripts/myanmar/block#char1031"><span class="uname">U+1031  VOWEL SIGN E</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><bdi lang="my">&#x102D;</bdi> [<a href="/scripts/myanmar/block#char102D"><span class="uname">U+102D  VOWEL SIGN I</span></a>]</span> <bdi class="grammar">|</bdi> <span class="codepoint" translate="no"><bdi lang="my">&#x102E;</bdi> [<a href="/scripts/myanmar/block#char102E"><span class="uname">U+102E  VOWEL SIGN II</span></a>]</span> <bdi class="grammar">|</bdi> <span class="codepoint" translate="no"><bdi lang="my">&#x1032;</bdi> [<a href="/scripts/myanmar/block#char1032"><span class="uname">U+1032  VOWEL SIGN AI</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><bdi lang="my">&#x102F;</bdi> [<a href="/scripts/myanmar/block#char102F"><span class="uname">U+102F  VOWEL SIGN U</span></a>]</span> <bdi class="grammar">|</bdi> <span class="codepoint" translate="no"><bdi lang="my">&#x1030;</bdi> [<a href="/scripts/myanmar/block#char1030"><span class="uname">U+1030  VOWEL SIGN UU</span></a>]</span></li>
+<li><bdi class="grammar">(</bdi> <span class="codepoint" translate="no"><bdi lang="my">&#x102C;</bdi> [<a href="/scripts/myanmar/block#char102C"><span class="uname">U+102C  VOWEL SIGN AA</span></a>]</span> <bdi class="grammar">|</bdi> <span class="codepoint" translate="no"><bdi lang="my">&#x102B;</bdi> [<a href="/scripts/myanmar/block#char102B"><span class="uname">U+102B VOWEL SIGN TALL AA</span></a>]</span> <bdi class="grammar">)</bdi>  <a href="../apps/listindic/index.html?chars=်">Pure_Killer</a> <bdi class="grammar">?</bdi></li>
+</ol>
+</li>
+
+<li><a href="../apps/listindic/index.html?chars=ံ">Bindu</a></li>
+
+<li><a href="../apps/listindic/index.html?chars=့">Tone_Mark</a> <bdi class="grammar">|</bdi> <a href="../apps/listindic/index.html?chars=း">Visarga</a></li>
+</ol>
 
 <p>Ordering characters as shown above avoids potential ambiguities and maximises the likelihood of success when rendering the text.</p>
 </section>
