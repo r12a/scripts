@@ -18,9 +18,9 @@ autoExpandExamples.sat = `
 ᱟᱯᱮ|you (plural)|ape
 ᱩᱱᱠᱤᱱ|they|unkin
 ᱩᱱᱠᱩ|they||unku
-ᱱᱚᱣᱟ|this|nɔwa|nôva
+ᱱᱚᱣᱟ|this|n§ɔ§w§a|nôva
 ᱚᱱᱟ|that||ôna
-ᱱᱚᱰᱮ|here|nɔɖe|nôḍe
+ᱱᱚᱰᱮ|here|n§ɔ§ɖ§e|nôḍe
 ᱦᱟᱸᱰᱮ|there||hãḍe
 ᱚᱠᱚᱭ|who||ôkôy
 ᱪᱮᱫ|what||cet’
@@ -30,71 +30,71 @@ autoExpandExamples.sat = `
 ᱪᱮᱫ ᱞᱮᱠᱟᱛᱮ|how||cet’ lekate
 ᱵᱟᱝ|not||baṅ
 ᱡᱚᱛᱚ|all|ӡoto|jôtô
-ᱡᱷᱚᱛᱚ|all|ɟʰɔtɔ|jhôtô
+ᱡᱷᱚᱛᱚ|all|ɟʰ§‹§ɔ§t§ɔ|jhôtô
 ᱟᱭᱢᱟ|many||ayma
 ᱟᱫᱚᱢ|some||adôm
-ᱛᱷᱚᱲᱟ|some, few|tʰɔɽa|thôṛa
-ᱮᱴᱟᱜ|other|eʈak̚|eṭak’
+ᱛᱷᱚᱲᱟ|some, few|tʰ§‹§ɔ§ɽ§a|thôṛa
+ᱮᱴᱟᱜ|other|e§ʈ§a§k̚|eṭak’
 ᱢᱤᱫ|one||mit’
 ᱵᱟᱨ|two||bar
 ᱯᱮ|three||pe
-ᱢᱚᱬᱮ|five|mɔɳe|môṇe
-ᱛᱩᱨᱩᱭ|six|turuj|turuy
-ᱮᱭᱟᱭ|seven|ejaj|eyay
-ᱤᱨᱟᱹᱞ|eight|irəl|irăl
+ᱢᱚᱬᱮ|five|m§ɔ§ɳ§e|môṇe
+ᱛᱩᱨᱩᱭ|six|t§u§r§u§j|turuy
+ᱮᱭᱟᱭ|seven|e§j§a§j|eyay
+ᱤᱨᱟᱹᱞ|eight|i§r§ə§‹§l|irăl
 ᱟᱨᱮ|nine||are
 ᱜᱮᱞ|ten||gel
 ᱢᱟᱨᱟᱝ|big|maraŋ|maraṅ
-ᱡᱤᱞᱤᱧ|long|ɟiliɲ|jiliñ
+ᱡᱤᱞᱤᱧ|long|ɟ§i§l§i§ɲ|jiliñ
 ᱚᱥᱟᱨ|wide||ôsar
 ᱤᱵᱤᱞ|thick||ibil
 ᱦᱟᱢᱟᱞ|heavy||hamal
 ᱠᱟᱴᱤᱡ|small||kaṭic’
 ᱦᱩᱰᱤᱧ|small||huḍiñ
 ᱠᱟᱴᱤᱡ|short||kaṭic’
-ᱠᱩᱲᱤ|woman|kuɽi|kuṛi
-ᱠᱚᱲᱟ|man (adult male)|kɔɽa|kôṛa
+ᱠᱩᱲᱤ|woman|k§u§ɽ§i|kuṛi
+ᱠᱚᱲᱟ|man (adult male)|k§ɔ§ɽ§a|kôṛa
 ᱦᱚᱲ|man (human being)||hôṛ
 ᱜᱤᱫᱨᱟ|child||gidra
 ᱦᱚᱯᱚᱱ|child||hôpôn
 ᱵᱟᱦᱩ|wife||bahu
 ᱮᱨᱚ|wife||erô
-ᱡᱟᱶᱟᱭ|husband|ɟaw̃aj|jaw̃ay
+ᱡᱟᱶᱟᱭ|husband|ɟ§a§w̃§a§j|jaw̃ay
 ᱜᱚᱜᱚ|mother||gôgô
 ᱟᱭᱚ|mother||ayô
-ᱮᱝᱜᱚ|mother|eŋɡɔ|eṅgô
+ᱮᱝᱜᱚ|mother|e§ŋ§ɡ§ɔ|eṅgô
 ᱵᱟᱵᱟ|father||baba
-ᱟᱯᱟ|father|apa|apa
+ᱟᱯᱟ|father|a§p§a|apa
 ᱡᱤᱣᱟᱹᱞᱤ|animal||jivăli
 ᱦᱟᱹᱠᱩ|fish||hăku
-ᱪᱮᱬᱮ|bird|ceɳe|ceṇe
-ᱥᱮᱛᱟ|dog|seta|seta
+ᱪᱮᱬᱮ|bird|c§e§ɳ§e|ceṇe
+ᱥᱮᱛᱟ|dog|s§e§t§a|seta
 ᱥᱤ|louse||si
 ᱵᱤᱝ|snake||biṅ
 ᱛᱤᱡᱩ|worm||tiju
 
-ᱦᱮᱸᱫᱮ|black|hẽde
-ᱵᱮᱺᱫᱤ|paddy storage|bə̃di
+ᱦᱮᱸᱫᱮ|black|h§ẽ§‹§d§e
+ᱵᱮᱺᱫᱤ|paddy storage|b§ə̃§‹§d§i
 ᱡᱭᱻᱭᱤ|soul|jiːyi
-ᱢᱚᱹᱬᱮᱻ ᱢᱚᱸᱻᱦᱟ|five days|mɔɳeː mãːha
-ᱫᱟᱜᱽ|mark|daɡ
-ᱫᱟᱜᱤ|marked|daɡi
-ᱨᱚᱡᱽ|rule|raɟ
-ᱨᱚᱡᱚ|king|raɟa
-ᱜᱤᱫᱽᱨᱟ|child|ɡidra
-ᱜᱤᱫᱤ|vulture|ɡidi
+ᱢᱚᱹᱬᱮᱻ ᱢᱚᱸᱻᱦᱟ|five days|m§ɔ§‹§ɳ§eː§‹§ §m§ãː§‹§‹§h§a
+ᱫᱟᱜᱽ|mark|d§a§ɡ§‹
+ᱫᱟᱜᱤ|marked|d§a§ɡ§i
+ᱨᱚᱡᱽ|rule|r§a§ɟ§‹
+ᱨᱚᱡᱚ|king|r§a§ɟ§a
+ᱜᱤᱫᱽᱨᱟ|child|ɡ§i§d§‹§r§a
+ᱜᱤᱫᱤ|vulture|ɡ§i§d§i
 ᱩᱵᱽ|pour (from a pot)|ub
-ᱵᱤᱨ|forest|bir
-ᱫᱚᱜ|water|dak̚
+ᱵᱤᱨ|forest|b§i§r
+ᱫᱚᱜ|water|d§a§k̚
 ᱨᱚᱜ|cry|rak̚
 ᱨᱮᱡ|snatch|rec̚
-ᱢᱩᱡ|ant|muc̚
-ᱜᱳᱫ|pluck|got̚
-ᱢᱮᱫ|eye|met̚
-ᱩᱵ|hair|up̚
-ᱢᱮᱱᱟᱜᱼᱟ|have|menaka|menak’a
+ᱢᱩᱡ|ant|m§u§c̚
+ᱜᱳᱫ|pluck|g§o§t̚
+ᱢᱮᱫ|eye|m§e§t̚
+ᱩᱵ|hair|u§p̚
+ᱢᱮᱱᱟᱜᱼᱟ|have|m§e§n§a§k§‹§a|menak’a
 ᱟᱠᱟᱫᱼᱟ|?|akat|akat’
-ᱦᱤᱡᱩᱜᱼᱟ|come|hijuka|hijuk’a
+ᱦᱤᱡᱩᱜᱼᱟ|come|h§i§j§u§k§‹§a|hijuk’a
 ᱥᱩᱱᱭᱚ|zero|sunjɔ
 
 ᱚᱡᱚ|grandfather|ɔd͡ʒɔ
@@ -104,8 +104,8 @@ autoExpandExamples.sat = `
 ᱯᱳᱱ|four|poːn
 ᱳᱞ ᱪᱮᱢᱮᱫ|Ol Cemet|ol cemetˈ
 
-
-
+ᱚᱞ ᱪᱤᱠᱤ|Ol Chiki|ɔ§l§ §c§i§k§i|
+ᱥᱟᱱᱛᱟᱲᱤ|Santali|s§a§n§t§a§ɽ§i
 
 
 
