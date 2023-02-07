@@ -80,7 +80,7 @@ autoExpandExamples.crk = `
 ᐱᐦᔦᐤ|partridge|pi§h§ˈjeː§w|pihyêw
 ᐱᐦᔦᓰᐢ|||||x
 ᐱᑭᐤ|resin, gum|pi§ˈki§w|pikiw
-ᐱᒥᐸᐦᑖ|run!|pɪmɪbahtɑː (pimipahtā)||x
+ᐱᒥᐸᐦᑖ|run!|pɪ§mɪ§ba§h§tɑː|pimipahtā||x
 ᐱᒧᐦᑌᐤ|walks||pimohtēw||x
 ᐱᒫᑎᓯᐤ|lives||pimātisiw||x
 ᐱᓯᐢᑭᐤ|animal|ˈpi§si§s§ˌki§w|pisiskiw
@@ -133,7 +133,7 @@ autoExpandExamples.crk = `
 ᒌᑲᐦᐃᑲᐣ|axe||cīkahikan||x
 ᒣᐢᑲᓇᐤ|road, path|ˈmeː§s§ka§ˌna§w|mêskanaw
 ᒣᑕᐍᐤ|plays||mētawēw||x
-ᒣᒁᐨ|in the meantime|meːɡwɑːt͡s (mēkwāc)|||x
+ᒣᒁᐨ|in the meantime|meː§ɡwɑː§t͡s|mēkwāc||x
 ᒥᐢᐳᐣ|is snowing||mispon||x
 ᒥᐢᑎᐠ|tree||mistik||x
 ᒥᐢᑕᑎᒼ|horse|ˈmi§s§ta§ˌti§m|mistatim|
@@ -219,7 +219,8 @@ autoExpandExamples.crk = `
 ᔫᑎᐣ|wind|joː§ˈti§n|yōtin|
 ᕒᐁᑎᔪ|radio|r§eː§ti§jo|rētiyo||x
 
-
+ᓀᐦᐃᔭᐍᐏᐣ|Plains Cree||Nēhiyawēwin
+ᓀᐦᐃᔭᐍᒧᐏᐣ|Northern Plains Cree||Nēhiyawēmowin
 
 
 

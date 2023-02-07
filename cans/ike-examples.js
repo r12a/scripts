@@ -59,7 +59,7 @@ autoExpandExamples.ike = `
 ᐅᒥᐊᕐᔪᐊᖅ|big boat, ship|u§mi§a§ʁ§ju§a§q|umiarjuaq||x
 ᐅᒥᐊᖅ|boat|u§mi§a§q|umiaq||x
 ᐅᒥᐊᖓ|his boat|u§mi§a§ŋa|umianga||x
-ᐅᒥᐊᙳᐊᖅ|toy boat|u§mi§a§ŋ§ŋu§a§q|umiannguaq||x
+ᐅᒥᐊᙳᐊᖅ|toy boat|u§mi§a§ŋŋu§a§q|umiannguaq||x
 ᐅᒥᒃ|beard||umik
 ᐅᓈᖅ|harpoon||unaaq
 ᐅᓐᓄᖅ|night, evening||unnuq
@@ -144,7 +144,7 @@ autoExpandExamples.ike = `
 ᑐᕙᖅ|sea ice||tuvaq
 ᑐᙵᓱᒋᑦ|Welcome!|tu§ŋŋa§su§gi§t|tunngasugit||x
 ᑑᒑᓕᒃ|narwhal||tuugaalik
-ᑑᒑᖅ|ivory tusk|tuugaaq
+ᑑᒑᖅ|ivory tusk||tuugaaq
 ᑕᐃᓇ|that one|ta§i§na|taina||x
 ᑕᑯᒐᑉᓯ|because you (pl) see|ta§ku§ga§p§si||normal|x
 ᑕᑯᒐᑦᓯ|because you (pl) see|ta§ku§ga§t§si||SBaffin & Nunavik|x
@@ -157,7 +157,7 @@ autoExpandExamples.ike = `
 ᑕᕝᕙ|here||tavva
 ᑭᐊᑎ|trunk (anat.)||kiati
 ᑭᐊᒃᑎᓯᒪᔪᖅ|sweat||kiaktisimajuq
-ᑭᒍᑕᖕᒋᕐᓇᖅ|blueberry|kigutaŋgiʁnaq|kigutanggirnaq||x
+ᑭᒍᑕᖕᒋᕐᓇᖅ|blueberry|ki§gu§ta§ŋ§gi§ʁ§na§q|kigutanggirnaq||x
 ᑭᓇ|who?||kina
 ᑭᓴᐅᑦ|anchor|ki§sa§u§t|kisaut|South Qikiqtaaluk|x
 ᑭᓴᖅ|anchor|ki§ha§q|kihaq|Paallirmiutut|x
@@ -179,7 +179,7 @@ autoExpandExamples.ike = `
 ᒪᐅᔭ|deep, soft snow||mauja
 ᒪᒻᒪᓛᑎᒃ|mammal||mammalaatik
 ᓂᐅ|leg||niu
-ᓂᐅᒃ|the leg|niuq
+ᓂᐅᒃ|the leg|ni§u§q
 ᓂᐅᕕᕐᕕᒃ|store|ni§u§vi§ʁ§vi§k|niuvirvik||x
 ᓂᐅᕕᖅᑎ|trader|ni§u§vi§q§ti|niuviqti||x
 ᓂᐊᖁᖅ|head||niaquq
@@ -253,10 +253,16 @@ autoExpandExamples.ike = `
 ᖃᖓᑕᓲᖅ|airplane||qangatasuuq
 ᖄᓐᕿᔭᐅᑦ|pairing knife||qaanqijaut
 
+ᖃᓂᐅᔮᖅᐸᐃᑦ|Inuktitut syllabics|qa§ni§u§jaː§q§pa§ˈi§t
+ᖃᓕᐅᔮᖅᐸᐃᑦ|Latin orthography|qa§li§u§jaː§q§pa§i§t
 
-
-
-
+ᓱᑲᖅ|sugar|su§ka§q
+ᕼᐋᑭᕐᕕᒃ|hockey arena|h§aː§ki§ʁ§vi§k
+ᑐᐱˈᒥ|in a tent|tu§pi§ʔ§mi
+ᑐᐱᕐᒥ|in a tent|tu§pi§ʁ§mi
+ᐅᑉᓛᖅ|morning|u§b§laː§q
+ᐅᓪᓛᖅ|morning|u§l§laː§q
+ᐅᑕᖅᑭᔪᖅ|she waits|u§ta§q§qi§ju§q
 
 
 
