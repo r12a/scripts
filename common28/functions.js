@@ -120,6 +120,8 @@ function getFilename (locn) {
 
         'hangul/index.html': 'kore/ko.html',
 
+        'han/index.html': 'hani/index.html',
+
         'hebrew/index.html': 'hebr/index.html',
         'hebrew/he.html': 'hebr/he.html',
         'hebrew/block.html': 'hebr/block.html',
