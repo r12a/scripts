@@ -4,107 +4,107 @@ autoExpandExamples.vai = `
 
 ꘋ|I (1st p. sing)|ŋ|ŋ́||x
 ꕀ|water|jí
-ꔌꘋ|thing|féŋ
+ꔌꘋ|thing|fé§ŋ
 ꘓ|thing|féŋ
-ꔔꘋ|child|ɗěŋ
-ꔤꕷꕞ|ebola|ibola
--ꔰ|every, all|ɡ͡bi
-ꕘꕌ|die, kill|fáː
-ꕘꘌ|die, kill|fáː
+ꔔꘋ|child|ɗě§ŋ
+ꔤꕷꕞ|ebola|i§bo§la
+-ꔰ|every, all|-§ɡ͡bi
+ꕘꕌ|die, kill|fáː§‹
+ꕘꘌ|die, kill|fáː§‹
 ꘘ|die, kill|fáː|||x
-ꕙꔤ|Vai language|vai
-ꕚꘌ|to go|táː
-ꕚꕌ|to go|táː
-ꕢꕔ|three|sàkpá
-ꕪꔤ|man|kàí
-ꖷꖬ|woman|mùsù
+ꕙꔤ|Vai language|va§i
+ꕚꘌ|to go|táː§‹
+ꕚꕌ|to go|táː§‹
+ꕢꕔ|three|sàk§pá
+ꕪꔤ|man|kà§í
+ꖷꖬ|woman|mù§sù
 ꖸ|plural marker|nu
-ꔔꘋ ꖸ|children|ɗěŋ nu
+ꔔꘋ ꖸ|children|ɗě§ŋ§ §nu
 ꗞ|person|mɔ́
-ꗱꕞꕯꕊ|second|felanaã
-ꔞꘋ|foot|keŋ
-ꔳꘋ|island|tiŋ
-ꕇꔦ|cow|nìí|nii
-ꕇꘌ|cow|nìí|nii
-ꗬ ꗛꖙ|case of gin|kpɛ kɔwu
-ꕒꘋ|finished|ɓaŋ
-ꕠꘋ|to hear, understand|ɗaŋ
-ꖅꘋ|to enter|ɗoŋ
-ꖴꘋ|head|kuŋ
-ꗋꘋ|to be named|tɔŋ
-ꗑꖽ|to be small|ɗɔɔ
+ꗱꕞꕯꕊ|second|fe§la§na§ã
+ꔞꘋ|foot|ke§ŋ
+ꔳꘋ|island|ti§ŋ
+ꕇꔦ|cow|nì§í|nii
+ꕇꘌ|cow|nìí§‹|nii
+ꗬ ꗛꖙ|case of gin|kpɛ§ §kɔ§wu
+ꕒꘋ|finished|ɓa§ŋ
+ꕠꘋ|to hear, understand|ɗa§ŋ
+ꖅꘋ|to enter|ɗo§ŋ
+ꖴꘋ|head|ku§ŋ
+ꗋꘋ|to be named|tɔ§ŋ
+ꗑꖽ|to be small|ɗɔ§ɔ
 ꗏ|in|lɔ
-ꕚꘋ|ten|tâŋ|||x
-ꕪꕮ|elephant|kámà|kama|||x
-ꔞꘋ|house|kéŋ|keŋ|||x
-ꔉꔊ|frog|k͡péᵐɡ͡bé|kpemgbe|||x
-ꔳꔀ|chicken|tìè|||x
-ꖏꘋꗹ|bird|kòŋɗé|||x
-ꗬꘉ|catfish|k͡pɛ̀nɛ̀|||x
+ꕚꘋ|ten|tâ§ŋ|||x
+ꕪꕮ|elephant|ká§mà|kama|||x
+ꔞꘋ|house|kéŋ|ke§ŋ|||x
+ꔉꔊ|frog|k͡pé§ᵐɡ͡bé|kpemgbe|||x
+ꔳꔀ|chicken|tì§è|||x
+ꖏꘋꗹ|bird|kò§ŋ§ɗé|||x
+ꗬꘉ|catfish|k͡pɛ̀§nɛ̀|||x
 ꗬ|alcoholic drink|kpɛ́|||x
-ꗅꘋ|monkey|k͡pɔ̀ŋ|||x
+ꗅꘋ|monkey|k͡pɔ§̀ŋ|||x
 ꕒ|goat|ɓǎ|||x
-ꔬꘋꕠ|spoon|ɓìŋɗá|||x
+ꔬꘋꕠ|spoon|ɓì§ŋ§ɗá|||x
 ꖝ|abdomen, width|ɓú|||x
-ꕧꘋꕒ|leaf|d͡ʒàmbá|||x
+ꕧꘋꕒ|leaf|d͡ʒà§m§bá|||x
 ꖌ|who?|d͡ʒô|||x
-ꗘꘋ|slave|d͡ʒǒŋ
+ꗘꘋ|slave|d͡ʒǒ§ŋ
 ꕘ|father|fǎ
-ꕘꘋꗹ|cotton|fànɗé
-ꖢꘋꔔ|mushroom|fúnɗé
-ꔖꔢ|farm|sɛ̀nɛ́
-ꕢꘋꕒ|basket|sámɓà
-ꖇꕯ|rain|sòná
-ꔖꘋ|stone|sěŋ
-ꖬꔀ|animal, meat|sùé
-ꔨꕃ|week|wíkì
-ꕴꔀ|(particle)|wóé
-ꖿꘋꘂ|driver ants|wɔ́ŋjɛ̀
+ꕘꘋꗹ|cotton|fà§n§ɗé
+ꖢꘋꔔ|mushroom|fú§n§ɗé
+ꔖꔢ|farm|sɛ̀§nɛ́
+ꕢꘋꕒ|basket|sá§m§ɓà
+ꖇꕯ|rain|sò§ná
+ꔖꘋ|stone|sě§ŋ
+ꖬꔀ|animal, meat|sù§é
+ꔨꕃ|week|wí§kì
+ꕴꔀ|(particle)|wó§é
+ꖿꘋꘂ|driver ants|wɔ́§ŋ§jɛ̀
 ꕞ|mouth|lá
-ꗏꘋꗑ|one|lɔ̀nɗɔ́
-ꗷꘋꗹ|vehicle|lɛ̀nɗɛ́
-ꗏꘋ|cooked rice|lɔ́ŋ
-ꔷꔱ|night|lìfí
-ꖨꕮ|ground|lùmà
-ꕈꗡ|fish|ɲíɛ́
-ꕐꕪꔤ|papaya|pàkáì
-ꔅꔃ|mongoose|péwé
+ꗏꘋꗑ|one|lɔ̀§n§ɗɔ́
+ꗷꘋꗹ|vehicle|lɛ̀§n§ɗɛ́
+ꗏꘋ|cooked rice|lɔ́§ŋ
+ꔷꔱ|night|lì§fí
+ꖨꕮ|ground|lù§mà
+ꕈꗡ|fish|ɲí§ɛ́
+ꕐꕪꔤ|papaya|pà§ká§ì
+ꔅꔃ|mongoose|pé§wé
 ꕶ|heron|pò
-ꕦꘋ|snail|t͡ʃâŋ
-ꗗꔿ|church|t͡ʃɔ́t͡ʃì
-ꗂꔞ|bucket|bɔ́kè
-ꔫꕇ|porcupine|bínì
+ꕦꘋ|snail|t͡ʃâ§ŋ
+ꗗꔿ|church|t͡ʃɔ́§t͡ʃì
+ꗂꔞ|bucket|bɔ§́kè
+ꔫꕇ|porcupine|bí§nì
 ꖜ|gun|bù
-ꔵꔵ|insect|dìdí
+ꔵꔵ|insect|dì§dí
 ꖁ|raft|dó
-ꔵꘋ|shark|dìŋ
-ꖦꕉ|cannon|dùà
-ꕭꘋꕭꘋ|stingray|gàŋgàŋ
-ꗝꘋꗝ|grasshopper|gɔ́ŋgɔ̀
-ꕗꕢ|cassava|ɡ͡bàsà
+ꔵꘋ|shark|dì§ŋ
+ꖦꕉ|cannon|dù§à
+ꕭꘋꕭꘋ|stingray|gà§ŋ§gà§ŋ
+ꗝꘋꗝ|grasshopper|gɔ́§ŋ§gɔ̀
+ꕗꕢ|cassava|ɡ͡bà§sà
 ꔰ|all, every|ɡ͡bí
-ꕙꕰ|blood vessel|vàɲá
+ꕙꕰ|blood vessel|và§ɲá
 ꖣ|mildew, mold|vù
-ꔽꖻ|ceiling mat|zìɔ̃̀
-ꕌꔞꕿ|forgive me|hákètò
-ꖽꘋꗑ|hundred|hɔ́nɗɔ̀
-ꕋꕇ|character|ŋàní
+ꔽꖻ|ceiling mat|zì§ɔ̃̀
+ꕌꔞꕿ|forgive me|há§kè§tò
+ꖽꘋꗑ|hundred|hɔ́§n§ɗɔ̀
+ꕋꕇ|character|ŋà§ní
 ꔈ|what?|ᵐɓê
-ꕡꕘꔤ|masked entertainer|ⁿɗáfàí
-ꖆꕽꗇꔤ|snake|ⁿɗòfóɡ͡bɔ̀í
-ꕩꕒꔻ|onion|jàbásì
+ꕡꕘꔤ|masked entertainer|ⁿɗá§fà§í
+ꖆꕽꗇꔤ|snake|ⁿɗò§fó§ɡ͡bɔ§̀í
+ꕩꕒꔻ|onion|jà§bá§sì
 ꘂ|in that case|jɛ̀
 ꗚ|ressembling|jɔ́
 ꔝ|to, for|yè
 
 
-ꕞꖏꕎ|about|lákóa|||x
-ꖴꖕ|home, compound|kùú|||x
-ꖴꖙ|home, compound|kùú|||x
-ꕪꕋ|box|kã̀ã́|||x
-ꕪꖃ|moon|káló|||x
-ꕪꕴ|moon|káó|||x
-ꕪꕱ|moon|káó|||x
+ꕞꖏꕎ|about|lá§kó§a|||x
+ꖴꖕ|home, compound|kù§ú|||x
+ꖴꖙ|home, compound|kù§ú|||x
+ꕪꕋ|box|kã̀§ã́|||x
+ꕪꖃ|moon|ká§ló|||x
+ꕪꕴ|moon|ká§ó|||x
+ꕪꕱ|moon|ká§ó|||x
 
 
 
