@@ -39,7 +39,7 @@ out += `
 
 out += `
 <div class="section">
-<p>The following pages in this collection describe orthographies based on the Javanese script:</p>
+<p>The following pages in this collection describe orthographies based on the ${ window.scriptName } script:</p>
 <ul id="olinks">
 </ul>
 </div>
@@ -48,7 +48,7 @@ out += `
 out += `
 <section id="languages">
 <h2>Languages using this script</h2>
-<p>The Javanese script is used for the following languages. Information is from ScriptSource and Ethnologue.</p>
+<p>The ${ window.scriptName } script is used for the following languages. Information is from ScriptSource and Ethnologue.</p>
 <ul id="scriptLanguageList">
 </ul>
 </section>
