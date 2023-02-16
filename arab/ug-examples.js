@@ -1,3 +1,23 @@
+/*
+@ Source: 
+
+native | meaning | IPA① | transcription | other transcriptions② & notes | wiktionary③
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ x means that no link to Wiktionary should be added
+   if Wiktionary spells the word differently, add the spelling here
+*/
+
+
 
 autoExpandExamples.ug = `
 
@@ -58,9 +78,9 @@ autoExpandExamples.ug = `
 ئالاقىچى||
 ئالاقە||
 ئالبانىيە||
-ئالتىنچى|sixth|ɑltintʃi|altinchi
+ئالتىنچى|sixth|›§ɑ§l§t§i§n§t͡ʃ§i|altinchi
 ئالتۇن||
-ئالتە|six|ɑ§l§t§ɛ|alte|also ɑltæ, altɛ, altæ
+ئالتە|six|›§ɑ§l§t§ɛ|alte|also ɑltæ, altɛ, altæ
 ئالجىرىيە||
 ئالد||
 ئالدىراش||
@@ -94,7 +114,7 @@ autoExpandExamples.ug = `
 ئاپارماق||
 ئاپتاپ||
 ئاپتاپپەرەس|sunflower||aptapperes
-ئاپەت|disaster, tragedy||apet
+ئاپەت|disaster, tragedy|ʔ§ɑ§p§ɛ§t|apet
 ئاچ||
 ئاچقۇچ|key||achquch
 ئاچلىق||
@@ -102,7 +122,7 @@ autoExpandExamples.ug = `
 ئاڭلىماق||
 ئاگاھ||
 ئاۋات||
-ئاۋاز|sound, noise||awaz
+ئاۋاز|sound, noise|ʔ§ɑ§w§ɑ§z|awaz
 ئاۋسترالىيە||
 ئاۋستىرىيە||
 ئاۋىئاتسىيە||
@@ -184,11 +204,11 @@ autoExpandExamples.ug = `
 ئۆستەڭ||
 ئۆسۈملۈك||
 ئۆسۈملۈكلەر||
-ئۆلمەك|to die||ölmek
+ئۆلمەك|to die|›§œ§l§m§æ§k̚|ölmek|[œlmɛk̚], [œlmæx], [œlmɛx
 ئۆي||
 ئۆيمۇئۆي|from door to door||öymu'öy
 ئۆپكە ياللۇغى||
-ئۆپكە||
+ئۆپكە|lung|ʔ§ø§p§k§ɛ|öpke
 ئۆگەنمەك||
 ئۇ||
 ئۇخلىماق||
@@ -223,7 +243,7 @@ autoExpandExamples.ug = `
 ئېستونىيە||
 ئېسىل||
 ئېشەك||
-ئېغىز|mouth||ëghiz
+ئېغىز|mouth|ʔ§e§ʁ§i§z|ëghiz
 ئېلان||
 ئېنىق||
 ئېنىقلىماق||
@@ -282,7 +302,7 @@ autoExpandExamples.ug = `
 باش كېلىش||
 باش||
 باشقا||
-باشلئانگۇچ|beginning|b§ɑ§ʃ§l§›§ɑ§n§ʁ§u§t͡ʃ
+باشلئانگۇچ|beginning|b§ɑ§ʃ§l§›§ɑ§n§ʁ§u§t͡ʃ|||x
 باشلانغۇچ||
 باشلىماق||
 باغ||
@@ -336,7 +356,7 @@ autoExpandExamples.ug = `
 بىڭگۇر|popsicle||binggur
 بۆرەك||
 بۇ||
-بۇرۇن|nose||burun
+بۇرۇن|nose|b§u§r§u§n|burun
 بۇقا||
 بۇلاق||
 بۇلغارىيە||
@@ -470,7 +490,7 @@ autoExpandExamples.ug = `
 جالاپ||
 جان||
 جانلىق||
-جاڭيۇ|soy sauce||jangyu
+جاڭيۇ|soy sauce|d͡ʒ§ɑ§ŋ§j§u|jangyu
 جاۋاب||
 جوزا||
 جىبۇتى||
@@ -478,7 +498,7 @@ autoExpandExamples.ug = `
 جىگەر||
 جىھاد||
 جۇمھۇرىيەت||
-جۇڭگو|China||junggo
+جۇڭگو|China|d͡ʒ§u§ŋ§ɡ§o|junggo
 جۈملە||
 جۈمە||
 جۈپ||
@@ -499,7 +519,7 @@ autoExpandExamples.ug = `
 خانا||
 خاپا||
 خوتۇن||
-خوتەن|Khotan|x§o§t§æ§n
+خوتەن|Khotan|x§o§t§æ§n|||x
 خوجايىن||
 خورۋاتىيە||
 خوش||
@@ -554,7 +574,7 @@ autoExpandExamples.ug = `
 دۈشەنبە||
 دېرىزە||
 دېمەك||
-دېڭىز|sea||dëngiz
+دېڭىز|sea|d§e§ŋ§i§z|dëngiz
 دېھقان||
 دەرد||
 دەرس||
@@ -679,7 +699,7 @@ autoExpandExamples.ug = `
 شىمالىي||
 شىنجاڭ ئۇيغۇر ئاپتونوم رايونى||
 شىنجاڭ||
-شياڭگاڭ|Hong Kong||shyanggang
+شياڭگاڭ|Hong Kong|ʃ§j§ɑ§ŋ§ɡ§ɑ§ŋ|shyanggang
 شۇ||
 شۇنداق||
 شۇڭا||
@@ -848,7 +868,7 @@ autoExpandExamples.ug = `
 قۇلاق||
 قۇللۇق||
 قۇم||
-قۇمچاق|tadpole||qumchaq
+قۇمچاق|tadpole|q§u§m§t͡ʃ§ɑ§q|qumchaq
 قۇنىيە||
 قیش||
 قېرى||
@@ -976,7 +996,7 @@ autoExpandExamples.ug = `
 مىليارد|billion|m§i§l§j§ɑ§r§t|milyard
 مىلياردېر||
 مىليون||
-مىڭ|thousand|miŋ|ming
+مىڭ|thousand|m§i§ŋ|ming
 مىڭە||
 مۆتىدىل||
 مۇ||
@@ -1052,7 +1072,7 @@ autoExpandExamples.ug = `
 نۆل||
 نۆلىنچى||
 نۇرغۇن||
-نېفىت|petrol|nefit|nëfit
+نېفىت|petrol|n§e§f§i§t|nëfit
 نېمىدېگەن||
 نېمىس||
 نېمىسچە||
@@ -1151,12 +1171,12 @@ autoExpandExamples.ug = `
 پاسكىنا||
 پاشا||
 پاشائاي||
-پاك-پاكىز|very clean, pure|p§ɑ§k§p§ɑ§kɪ§z|pak-pakiz
+پاك-پاكىز|very clean, pure|p§ɑ§k§§p§ɑ§k§ɪ§z|pak-pakiz
 پاك||
 پاكىت||
 پاكىز||
 پالىماق||
-پروفېسسور|professor|propessor|profëssor
+پروفېسسور|professor|p§r§o§p§e§s§s§o§r|profëssor
 پروپاگاندا||
 پورتۇگالىيە||
 پوزىتسىيە||
