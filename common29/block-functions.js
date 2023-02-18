@@ -8,10 +8,12 @@ debug = false
 marks = new Set()
 
 
-function setMarks () {
+function setMarks (languageName) {
     // sets the global variable marks as a set containing all combining marks in the spreadsheet
+    if (languageName) console.log("Running setMarks for ",languageName)
     for (var char in spreadsheetRows) {
         //console.log(char,spreadsheetRows[char][cols['class']])
+        if (typeof spreadsheetRows[char][cols['class']] === 'undefined') console.log(`>>> setMarks: Cannot find class column info for ${ char } in spreadsheet!`)
         if (spreadsheetRows[char][cols['class']].startsWith('M')) window.marks.add(char)
         }
     return
@@ -79,7 +81,7 @@ function toggleImages () {
 			id = nodes[i].parentNode.id.replace('char','')
 			dec = parseInt(id, 16)
 			group = getScriptGroup(dec)
-			nodes[i].innerHTML = '<img src="/c/'+group+'/large/'+id+'.png"/>'
+			nodes[i].innerHTML = '<img src="../../c/'+group+'/large/'+id+'.png"/>'
 			}
 		}
 	else {
@@ -511,6 +513,14 @@ function statusExpander (status) {
 
 
 function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
+    if (traceSet.has('addDetails') || traceSet.has('all')) { console.log('addDetails(',
+        'languageName:',languageName,
+        'langClass:',langClass,
+        'lang:',lang,
+        'dir:',dir,
+        'spreadsheet.length:',spreadsheet.length,
+        'cols:',cols,
+        ')') }
     // for a given orthography, add notes to the notes block stub
     // languageName, str used for the title of the block
     // langClass, str, the class name to use for the .letter block
