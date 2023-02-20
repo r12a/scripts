@@ -70,6 +70,15 @@ reflist = {
 },
 
 
+"ewo": {
+"authors": "SIL",
+"title":"Ethnologue",
+"retr": "Feb 2023",
+"url":"https://www.ethnologue.com/language/wol",
+"lang": new Set(['wo']),
+"reviewed":true
+},
+
 "fsi": {
 "authors": "Foreign Service Institute",
 "title":"Fula Basic Course",
@@ -156,6 +165,14 @@ reflist = {
 "authors": "Wikipedia",
 "title":"Hausa language",
 "lang": new Set(['ha']),
+},
+
+
+"wwo": {
+"url":"https://en.wikipedia.org/wiki/Wolof_language",
+"authors": "Wikipedia",
+"title":"Wolof language",
+"lang": new Set(['wo']),
 },
 
 "wfl": {
