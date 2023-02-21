@@ -60,7 +60,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->20 February, 2023<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->21 February, 2023<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -492,7 +492,7 @@ Rax sa dolli amul xeej ak seen ci politig, yoon, mbaa doxalin wu aju ci bitim r�
 
 <p>Gemination and consonant clusters do not occur in word-initial position, but can occur medially and in final position, where they may be followed by a faint epenthetic schwa.<tt>wwo</tt></p>
 
-<p><span class="ipa">p</span>, <span class="ipa">d</span>, <span class="ipa">c</span>, and <span class="ipa">k</span> only occur formally in word-initial position, unless geminated (which is common). However, word final <span class="ipa">b</span>, <span class="ipa">j</span>, and <span class="ipa">g</span> are typically devoiced and become allophones of those consonants.<tt>wwo</tt></p>
+<p><span class="ipa">p</span>, <span class="ipa">d</span>, <span class="ipa">c</span>, and <span class="ipa">k</span> only occur formally in word-initial position, unless geminated (which is common), or following a nasal. However, word final <span class="ipa">b</span>, <span class="ipa">j</span>, and <span class="ipa">g</span> are typically devoiced and become allophones of those consonants.<tt>wwo</tt></p>
 </section>
 </section>
 
@@ -760,7 +760,7 @@ Rax sa dolli amul xeej ak seen ci politig, yoon, mbaa doxalin wu aju ci bitim r�
 <section id="gemination">
 <h3>Gemination</h3>
 
-<p>Consonant gemination is common and is distinctive in Wolof. Gemination is written by doubling the consonant.</p>
+<p>Consonant gemination is common and is phonemically distinctive in Wolof. Gemination is written by doubling the consonant.</p>
 <p><span class="eg" lang="wo">bët</span></p>
 <p><span class="eg" lang="wo">bëtt</span></p>
 </section>
@@ -1100,13 +1100,13 @@ Rax sa dolli amul xeej ak seen ci politig, yoon, mbaa doxalin wu aju ci bitim r�
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
 <span id="fontstyleInline">font styles</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
 <p class="instructions">You can experiment with examples using the <a href="/pickers/latn-wo/">Wolof character app</a>.</p>
-<p>No special shaping or positioning is needed.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></sup></p>
+
+<p>No special shaping or positioning is needed (except where diacritics are placed above base letters in decomposed text). Latin letters sit side by side without interaction.</p>
 
 
 
@@ -1119,25 +1119,43 @@ Rax sa dolli amul xeej ak seen ci politig, yoon, mbaa doxalin wu aju ci bitim r�
 
 
 
+
 <section id="transforms">
 <h3>Transforming characters</h3>
-<p>Wolof is bicameral, and applications may need to enable transforms to allow the user to switch between cases.</p>
+
+<p>The Latin orthography used for Wolof is bicameral, and applications may need to enable transforms to allow the user to switch between cases. Capital letters are used at the beginning of sentences or titles, and for proper nouns.</p>
 </section>
 </section>
-
-
-
-
-
-
+  
+  
+ 
+ 
+ 
+  
 <section id="graphemes">
 <h2>Graphemes</h2>  
-  
-<section id="graphemeC">
-<h3>Grapheme clusters</h3>
+
+
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
-<p class="prompts">tbd</p>
+<p>Since there are no combining marks or decompositions in normal Wolof text,  grapheme clusters correspond to individual characters. Where combining marks appear in decomposed text, the combination of base and combining mark still fits within the definition of a grapheme cluster.</p>
+<section id="graphemeC">
+<h3>Grapheme clusters</h3>
+
+<p><code>Base (Mark?)</code></p>
+
+<p>Each  letter is  a grapheme cluster, even if (rare) combining marks are attached.</p>
+
+<p class="instructions">Click on the text version of this word to see more detail about the composition.</p>
+
+
+<table class="noBorderTable alignStartTable graphemes" style="margin-inline-start: 10%;">
+<tr><td><img src="wo/g_fan.png" alt="" style="height: 3rem;"></td><td><span class="eg" lang="wo">uppukaay</span></td></tr>
+
+<tr><td><img src="wo/g_knee.png" alt="" style="height: 3rem;"></td><td><span class="eg" lang="wo">óom</span></td></tr>
+
+<tr><td><img src="wo/g_donkey.png" alt="" style="height: 3rem;"></td><td><span class="eg" lang="wo">mbaam</span></td></tr>
+</table>
 </section>
 </section>
 
@@ -1310,7 +1328,27 @@ Rax sa dolli amul xeej ak seen ci politig, yoon, mbaa doxalin wu aju ci bitim r�
 
 <p>Lines are generally broken between words.</p>
 
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the  Wolof orthography described here.</a></p>
+
+
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show  line-breaking properties for characters in the Wolof orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for some of the characters used in Wolof. Context may affect the behaviour of some of these and other characters.</p>
+
+<p class="instructions">Click/tap on the characters to show what they are.</p>
+
+<ul>
+<li><span class="ex list" lang="bn">“ ‘ (</span> &nbsp; should not be the last character on a line.</li>
+<li><span class="ex list" lang="bn">” ’ ) . , ; ! ? %</span> &nbsp; should not begin a new line.</li>
+</ul>
+</section>
 </section>
 
 
@@ -1319,7 +1357,8 @@ Rax sa dolli amul xeej ak seen ci politig, yoon, mbaa doxalin wu aju ci bitim r�
 
 <section id="justification">
 <h3>Text alignment &amp; justification</h3>
-    <p class="prompts">tbd</p>
+
+<p>The principal line-break opportunities are inter-word spaces.</p>
 </section>
 
 
@@ -1343,15 +1382,6 @@ Rax sa dolli amul xeej ak seen ci politig, yoon, mbaa doxalin wu aju ci bitim r�
 <p class="prompts">tbd</p>
 
 <p>Wolof uses the  'alphabetic' baseline.</p>
-
-<!--p>fig_baselines shows glyphs from Noto Serif fonts. The basic height of Balinese letters is the same as the Latin x-height, however extenders and combining marks, extend well beyond the Latin ascenders and descenders, creating a need for larger line heights.</p>
-
-<p>The Lao characters are generally about the same size as the Latin x-height. <a class="figref">fig_baselines</a> shows glyphs from the Noto Serif fonts. The basic height of Lao letters is just slightly larger than the Latin x-height, however ascenders and vowel signs, especially when accompanied by tone marks, rise well above the Latin ascenders.  Below the baseline descenders and vowel-signs stay within the Latin descender depth.</p>
-
-<figure id="fig_baselines">
-<img src="images/fig_baselines.png" alt="qhxໂປງຽເກິ່ກຶ້ກູ" class="ex" lang="lo" data-notes="Noto Serif Lao & Noto Serif 130px" style="max-width: 40rem;">
-<figcaption>Font metrics for Latin text in the Noto Serif font compared with Balinese glyphs in the Noto Serif Balinese font.</figcaption>
-</figure-->
 </section>
 
 
@@ -1363,7 +1393,7 @@ Rax sa dolli amul xeej ak seen ci politig, yoon, mbaa doxalin wu aju ci bitim r�
 <section id="lists">
 <h3>Counters, lists, etc.</h3>
   
-<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+<p>Wolof uses ASCII digits as counters.</p>
 </section>
 
 
@@ -1454,8 +1484,8 @@ Rax sa dolli amul xeej ak seen ci politig, yoon, mbaa doxalin wu aju ci bitim r�
 <h2>Online resources</h2>
 
 <ol>
-<li><a href="https://wo.wikipedia.org/wiki/Hello_ja%C9%93%C9%93orgo">Wikipedia</a></li>
-<li><a href="https://www.webonary.org/pular/">Dictionnaire Pular</a></li>
+<li><a href="https://wo.wikipedia.org/wiki/">Wikipedia</a></li>
+<!--li><a href="https://www.webonary.org/pular/">Dictionnaire Pular</a></li-->
 </ol>
 </section>
 

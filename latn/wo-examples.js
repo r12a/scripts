@@ -42,7 +42,7 @@ abal|to lend|ʔa§b§a§l
 afeer||
 ag||
 ak||
-akara|bean cake|ʔa§ka§r§a
+akara|bean cake|ʔa§k§a§r§a
 alaafiya||
 alaaji||
 Almaañ||
@@ -93,7 +93,7 @@ biir||
 bikk||
 bind|to write|b§i§n§d
 bindakat||
-bisaab||
+bisaab|roselle|b§i§s§aː§‹§p
 bokk||
 boroom||
 boroom kër||
@@ -129,7 +129,7 @@ ciiñ||
 coblet||
 coggal||
 coll||
-conco||
+conco|elbow|c§ɔ§n§c§ɔ
 coof|boyfriend|c§ɔː§‹§f
 coro||
 cosaan||
@@ -140,7 +140,7 @@ cuuraay||
 daaw||
 dajale||
 daje|to meet|ˈd§a§ɟ§ɛ
-daqaar||
+daqaar|tamarind|d§a§q§aː§‹§r
 dara||
 darkasa||
 dayoo||
@@ -153,7 +153,7 @@ deret||
 Desàmbar||
 dex|river|d§ɛ§x
 dibéer||
-dimbal||
+dimbal|help|d§i§m§b§a§l
 dinaa||
 dinga||
 diw||
@@ -166,7 +166,7 @@ dugub||
 dun||
 duñoor||
 dàngin||
-déedéet|no|d§eː§d§eː§t
+déedéet|no|d§eː§‹§d§eː§‹§t
 déem||
 dégg||
 déwén||
@@ -180,7 +180,7 @@ dërëm||
 esaans|petrol|ˈɛ§s§aː§‹§n§s
 Estooni|Estonia|ˈɛ§s§t§ɔː§‹§n§i
 faar||
-fajar||
+fajar|dawn|f§a§ɟ§a§r
 fajkat||
 fanweer||
 Faraas||
@@ -188,7 +188,7 @@ fas||
 fat||
 fatt||
 Feberiye||
-ferñent||
+ferñent|spark|f§ɛ§r§ɲ§ɛ§n§t
 fey||
 fii||
 firnde||
@@ -206,7 +206,7 @@ gaawu||
 gan||
 ganaar||
 garab||
-gaynde||
+gaynde|lion|ɡ§a§j§›§ⁿd§e
 geeta||
 gerte||
 giléem||
@@ -232,7 +232,7 @@ géwél|griot|ɡ§e§w§e§l
 géwël|griot|ɡ§e§w§ə§l
 gëléem||
 gëm||
-gëmm||
+gëmm|to close one's eyes|ɡ§ə§m§m
 gënn||
 gët||
 góor||
@@ -264,7 +264,7 @@ jukk||
 jumbax||
 jumtukaay||
 junjuŋ||
-junni||
+junni|thousand|j§u§n§n§i
 junqóob||
 jur||
 juróom||
@@ -276,7 +276,7 @@ jàmm||
 jàng||
 jàngal||
 jàngale||
-jàngalekat||
+jàngalekat|teacher|ɟ§aː§›§ᵑɡ§a§l§e§k§a§t
 jëgg||
 jëkkër||
 jën|fish|ɟ§ə§n|
@@ -323,19 +323,19 @@ leraw||
 lex||
 liir||
 liit||
-limoŋ||
+limoŋ|lemon|l§i§m§o§ŋ
 Lislaam||
 lonkoo||
 lor||
 loxo||
-lujum||
+lujum|vegetable|l§u§ɟ§u§m
 làkk|speak incomprehensibly|l§aː§k§k
 làmb||
 làmmiñ||
 léebéer|hippopotamus|l§eː§b§eː§r
 léegi||
 lëg||
-lóriye||
+lóriye|laurel|l§o§r§i§j§e
 ma||
 maalo||
 maam||
@@ -348,7 +348,7 @@ mar||
 Mars||
 mbaa||
 mbaal||
-mbaam|donkey, pig|ᵐb§aː§m
+mbaam|donkey, pig|›§ᵐb§aː§‹§m
 mbaam-sëf||
 mbaam-xuux||
 mbaam-àll||
@@ -381,14 +381,14 @@ mungiy||
 muus||
 muxat||
 màndarin||
-màngo|mango|m§aː§ᵑɡ§ɔ
+màngo|mango|m§aː§‹§ᵑɡ§ɔ
 móol||
 naa||
 naag||
 naaj||
 naaje||
 naajo||
-naan||
+naan|to drink|n§aː§‹§n
 naana||
 naanaa||
 naat||
@@ -399,18 +399,18 @@ nar||
 nawe||
 nawet||
 ndab||
-ndam|victory|ⁿd§a§m
+ndam|victory|›§ⁿd§a§m
 Ndar-Ndar||
 ndaw||
 ndax||
 ndaxte||
 ndey||
 ndobin||
-ndox|water|n§d§ɔ§x
+ndox|water|›§ⁿd§ɔ§x
 ndës||
 nekk||
 nelaw||
-ngelaw||
+ngelaw|wind|›§ᵑg§ɛ§l§a§w
 ngoon||
 ngor||
 nguur||
@@ -418,7 +418,7 @@ ngénté||
 nijjaay||
 nit||
 njabot||
-njamala||
+njamala|giraffe|›§ᶮj§a§m§a§l§a
 njaxat||
 njiit||
 njomboor||
@@ -444,9 +444,9 @@ papa||
 Pari||
 pataas||
 peel||
-penku||
+penku|west|p§e§n§k§u
 pexe||
-picc||
+picc|bird|p§i§c§c
 pombiteer||
 pullóox||
 pàppa||
@@ -476,7 +476,7 @@ sabar||
 safara||
 saku||
 salaan||
-salaat||
+salaat|salad|s§a§l§aː§‹§t
 samp||
 Samwiye||
 sanaanaa||
@@ -486,13 +486,13 @@ sanxal||
 sawat||
 segg||
 seku||
-Senegaal||
+Senegaal|Senegal|s§ɛ§n§ɛ§g§aː§‹§l
 seytaane||
 Siin-Siin||
 siiru||
-siis||
+siis|chair|s§iː§‹§s
 sikket||
-sikkim||
+sikkim|beard, chin|s§i§k§k§i§m
 soble||
 soon|yellow|s§ɔː§‹§n
 soow||
@@ -500,7 +500,7 @@ soppali||
 soppi||
 soraans||
 suba||
-sufëlëer|cauliflower|
+sufëlëer|cauliflower|s§u§f§ə§l§əː§‹§r
 sufólóor||
 sujeer||
 Sulye||
@@ -510,8 +510,8 @@ suuf|sand|
 suuna||
 suur||
 Suweŋ||
-suññéel||
-sàll||
+suññéel|hedgehog|s§u§ɲ§ɲ§eː§‹§l
+sàll|stallion|s§aː§l§l
 Sàttumbar||
 séex||
 sëriñ||
@@ -522,15 +522,15 @@ tagg||
 talaata||
 tali||
 tama||
-tamaate||
+tamaate|tomato|t§a§m§aː§‹§t§ɛ
 tan||
 taw||
-tayóor||
+tayóor|tailor|t§a§j§oː§‹§r
 tef||
 tene||
 teraanga||
 teral||
-tiga-dege||
+tiga-dege|peanut butter|t§i§g§a§ §d§ɛ§g§ɛ
 tiir||
 tijji||
 tilim||
@@ -558,24 +558,24 @@ tànk||
 tànta||
 téeméer||
 ténq||
-téére|book|t§eː§r§ɛ
+téére|book|t§eː§‹§r§ɛ
 tëflit||
 tëgg||
 tëggkat||
 tëj||
 tëng||
-uppukaay||
+uppukaay|fan|u§p§p§u§k§aː§‹§j
 Ut||
 waa-jur||
 waajur|parent|w§aː§‹§ɟ§u§r
 waakër||
 Waalo-Waalo||
-waaw||
+waaw|yes|w§aː§‹§w
 waawaaw||
 waañ||
 wajan||
 waliis||
-warga||
+warga|tea|w§a§r§g§a
 warugar||
 waxtaan||
 waxtu||
@@ -586,8 +586,8 @@ weex|white|w§ɛː§‹§x
 wert|green|w§ɛ§r§t
 wet||
 weñ||
-wisit||
-Wolof||
+wisit|medical appointment|w§i§s§i§t
+Wolof|Wolof|w§ɔ§l§ɔ§f
 won||
 wonn||
 wulu||
@@ -622,7 +622,7 @@ xeet||
 xel||
 xet||
 xew||
-làmbi|arena|l§aː§ᵐb§i
+làmbi|arena|l§aː§›§ᵐb§i
 able|to lend|ʔa§b§l§ɛ
 xonq|red|x§ɔ§n§q
 yaax|kind of fish|j§aː§‹§x
@@ -639,7 +639,7 @@ xob||
 xodd||
 xojox||
 xol||
-xomaag||
+xomaag|rust|x§ɔ§m§aː§‹§k
 xool||
 xoox||
 xor||
@@ -666,7 +666,7 @@ yoon||
 yoor-yoor||
 yow||
 yumpaañ||
-yumpit||
+yumpit|2nd-hand clothing|j§u§m§p§i§t
 Yàlla||
 yàmbaa||
 yàpp||
@@ -702,7 +702,7 @@ yóor||
 ñungiy||
 ñàmbi||
 ñëw||
-óom||
+óom|knee|oː§‹§m
 
 
 
