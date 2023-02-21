@@ -30,11 +30,19 @@ function applyRedirect() {
 
 function getFilename (locn) {
 
+
     // get the end of the pathname
     fields = locn.split('/')
     currentLocation = fields[fields.length-2] + '/' + fields[fields.length-1]
-    console.log(currentLocation)
+
+    console.log('locn',locn)
+    console.log('fields',fields)
+    console.log('currentLocation',currentLocation)
     
+    if (currentLocation.endsWith('/')) currentLocation += 'index'
+    if (! currentLocation.includes('.html')) currentLocation  += '.html'
+    console.log('Final currentLocation',currentLocation)
+
     var namelist = {
         'adlam/index.html': 'adlm/index.html',
         'adlam/fuf.html': 'adlm/fuf.html',
