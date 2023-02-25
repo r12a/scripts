@@ -106,7 +106,7 @@ butit||
 buum||
 buy||
 bànjóoli||
-bàq||
+bàq|stomach|
 bàyyima||
 bés||
 béy||
@@ -265,7 +265,7 @@ jumbax||
 jumtukaay||
 junjuŋ||
 junni|thousand|j§u§n§n§i
-junqóob||
+junqóob|land crab|
 jur||
 juróom||
 juróom benn||
@@ -360,7 +360,7 @@ mbokk||
 mbonaat||
 mbonkana||
 mbootaay||
-mboq||
+mboq|maize|
 mbote||
 mbott||
 mbubb||
@@ -505,7 +505,7 @@ sufólóor||
 sujeer||
 Sulye||
 suppome||
-suq||
+suq|young wrestler|
 suuf|sand|
 suuna||
 suur||
@@ -557,7 +557,7 @@ tàngal||
 tànk||
 tànta||
 téeméer||
-ténq||
+ténq|palm (hand)|
 téére|book|t§eː§‹§r§ɛ
 tëflit||
 tëgg||
@@ -594,7 +594,7 @@ wulu||
 wurus||
 wuude||
 wàll||
-wëq||
+wëq|ankle|
 wërsëg||
 wëtéen||
 wëñ||
@@ -680,7 +680,7 @@ yóor||
 àkkasaa||
 àllarba||
 àpparanti||
-àq||
+àq|sin, transgression|
 àttaya||
 ñaar||
 ñaar fukk||
