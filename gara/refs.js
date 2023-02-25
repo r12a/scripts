@@ -6,6 +6,17 @@ window.langSet = false
 reflist = {
 
 
+
+"e": {
+"authors": "Michael Everson",
+"title":"Proposal for encoding the Garay script in the SMP of the UCS",
+"date": "2016",
+"publisher":"ISO/IEC JTC1/SC2/WG2 N4709 L2/16-069",
+"url":"https://www.unicode.org/L2/L2016/16069-n4709-garay-revision.pdf",
+"reviewed":false
+},
+
+
 "rsr": {
 "authors": "Andrij Rovenchak, Abdou Souleye Faye, Charles L. Riley",
 "title":"Consideration of the encoding of Garay with updated user feedback (revised)",
