@@ -35,7 +35,7 @@ aaluwa||
 aar|wash a linen piece for the first time|ʔaː§‹§r
 aareen|wrestling arena|ʔaː§‹§r§ɛː§‹§n
 aaréen|ground nut|ʔaː§‹§r§eː§‹§n
-𐵰𐵊𐵎𐵽𐵍𐵎𐵳𐵊𐵽|magistrate|ʔ§aː§‹§t§ɛː§‹§k§a§t
+𐵰𐵊𐵎𐵽𐵩𐵎𐵳𐵊𐵽|magistrate|ʔ§aː§‹§tɛː§‹§k§a§t
 -aay||
 ab||
 abal|to lend|ʔa§b§a§l
@@ -444,7 +444,7 @@ papa||
 Pari||
 pataas||
 peel||
-𐶂𐵩𐶁𐵏𐵳𐵍𐵌|west|p§e§n§–§k§u|penku
+𐶂𐵩𐶁𐵳𐵍𐵌|west|p§ɛ§n§k§u|penku
 pexe||
 picc|bird|p§i§c§c
 pombiteer||
@@ -705,7 +705,6 @@ yóor||
 óom|knee|oː§‹§m
 𐵐𐵌𐵶𐵽𐵩𐵾𐵩𐵸𐵋𐵼𐵊|Australia|›§o§s§t§ɛ§r§ɛ§l§i§y§a
 𐵼𐵍𐵌𐵳𐵪𐵋𐵯|to jog|j§u§‹§kk§i§jukki|yukki-yukki
-
 
 
 

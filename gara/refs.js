@@ -13,7 +13,7 @@ reflist = {
 "date": "2016",
 "publisher":"ISO/IEC JTC1/SC2/WG2 N4709 L2/16-069",
 "url":"https://www.unicode.org/L2/L2016/16069-n4709-garay-revision.pdf",
-"reviewed":false
+"reviewed":true
 },
 
 
@@ -23,7 +23,7 @@ reflist = {
 "date": "2022",
 "publisher":"L2/22-048",
 "url":"https://www.unicode.org/L2/L2022/22048-garay-script.pdf",
-"reviewed":false
+"reviewed":true
 },
 
 
