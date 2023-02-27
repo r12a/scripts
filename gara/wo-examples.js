@@ -372,7 +372,7 @@ Me||
 meew||
 melax||
 metit|pain|ˈm§ɛ§t§i§t
-meññeef||
+𐵲𐵩𐵿𐵩𐵪𐵎𐶀|fruit|mɛ§ññɛː§‹§f|meññeef
 miimara||
 minise||
 moom||
