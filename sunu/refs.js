@@ -17,12 +17,22 @@ reflist = {
 },
 
 
-"rsr": {
-"authors": "Andrij Rovenchak, Abdou Souleye Faye, Charles L. Riley",
-"title":"Consideration of the encoding of Garay with updated user feedback (revised)",
+"dks": {
+"authors": "Dev Kumar Sunuwar",
+"title":"Digitizing the script of Koĩts Sunuwar Indigenous Peoples",
 "date": "2022",
-"publisher":"L2/22-048",
-"url":"https://www.unicode.org/L2/L2022/22048-garay-script.pdf",
+"url":"https://www.devkumarsunuwar.com.np/digitizing-the-script-of-koits-sunuwar-indigenous-peoples",
+"reviewed":true
+},
+
+
+
+"js": {
+"authors": "Anshuman Pandey",
+"title":"Proposal to encode the Jenticha script in ISO/IEC 10646",
+"date": "2011",
+"publisher":"ISO/IEC JTC1/SC2/WG2 N4709 L2/11",
+"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4028.pdf",
 "reviewed":true
 },
 
@@ -55,6 +65,6 @@ reflist = {
 
 
 scriptLanguageList = {
-wo:{name:"Sunuwar", url:"suz.html"},
+suz:{name:"Sunuwar", url:"suz.html"},
 }
 
