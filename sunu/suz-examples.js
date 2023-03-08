@@ -99,6 +99,10 @@ autoExpandExamples.suz = `
 𑯎𑯅́𑯠𑯌𑯖|to accumulate|b§u§ʔ§t͡ʃ§a
 𑯉𑯅𑯌𑯖|to dry|p§uː§‹§t͡ʃ§a
 𑯖̃|my|a§n
+𑯏𑯂̃|surname|d͡ʒẽ
+𑯍𑯂𑯁𑯖|address|neta
+𑯁𑯖𑯓𑯅|son|tawu
+𑯁𑯖𑯇𑯃|daughter|tami
 
 
 
