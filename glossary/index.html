@@ -4,8 +4,8 @@
 <meta charset="utf-8"/>
 <title>Script glossary</title>
 
-<link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../summaries/local.css" />
+<link rel="stylesheet" href="../../shared/style/docs.css">
+<link rel="stylesheet" href="../summaries/local.css">
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2019.js"></script>
@@ -27,13 +27,13 @@ q { font-style: italic;}
 <aside class="sidebar">
 <nav>
 <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
-<div id="toc"><!-- placeholder --></div>
+<div id="toc" style="position: fixed; right:4rem;"><!-- placeholder --></div>
   </nav>
 </aside>
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->21 February, 2023<!-- #EndDate --></p>
+  <!-- #BeginDate format:Sw1 -->8 March, 2023<!-- #EndDate --></p>
 
 
 
@@ -116,9 +116,12 @@ q { font-style: italic;}
 <dd>A checked syllable ends in a stop sound, usually <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. Unchecked syllables end in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</dd>
 
 <dt id="circumgraph">circumgraph</dt>
-<dd>When a single vowel-sign code point produces glyphs on more than one side of the consonant base, it is referred to as a circumgraph. For example, the following single codepoint representing a vowel-sign is rendered on both sides of the base consonant.</dd>
+<dd>A single vowel code point that produces glyphs on more than one side of its consonant base.</dd>
 
-<dt style="text-align: center;"><img src="img/circumgraph.png" alt="କୋ" data-notes="43px Noto Sans Tai Tham"></dt>
+<figure id="fig_circumgraph" class="sideCaption">
+<dd style="text-align: center;"><img src="img/circumgraph.svg" alt="କୋ" data-notes="Noto Sans Oriya" style="height:4rem;"></dd>
+<figcaption>In Odia the (highlighted) vowel glyphs rendered on both sides of the base consonant are from a single code point.</figcaption>
+</figure>
 
 <dt id="coda">coda (syllable)</dt>
 <dd>See <a href="#syllablestructure">syllable structure</a>.</dd>
@@ -130,15 +133,23 @@ q { font-style: italic;}
 <dd>A maximal sequence of characters following the pattern <code>Base? (Combining_mark</code><i></i> | ZWJ | ZWNJ)+. Usually a base character that is a letter or digit, followed by one or more combining characters, zero width joiners , and/or zero width non-joiners. See also <a href="#bccs">BCCS</a>.</dd>
 
 <dt id="compositevowel">composite vowel</dt>
-<dd>A composite vowel is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel-signs, repurposed consonants, and diacritics available. For example, the following Tai Tham syllable <span class="ipa">kɤʔ</span> is represented using 4 vowel-signs (orange) attached to the single base consonant.</dd>
+<dd>A single vowel sound or diphthong that is represented by more than one code point from the set of vowel marks, repurposed consonants, and diacritics available.</dd>
 
-<dt style="text-align: center;"><img src="img/compositevowel.png" alt="ᨠᩮᩬᩨᩡ" data-notes="43px Noto Sans Tai Tham"></dt>
+<figure id="fig_compositevowel" class="sideCaption">
+<dd style="text-align: center;"><img src="img/compositevowel.svg" alt="ᨠᩮᩬᩨᩡ" data-notes="Hariphunchai" style="height: 6rem;"></dd>
+<figcaption>The Tai Tham syllable <span class="ipa">kɤʔ</span> is represented using 4 separate vowel-sign characters (highlighted) attached to a single base consonant.</figcaption>
+</figure>
 
 <dt id="conjunct">conjunct</dt>
-<dd>In Brahmi-derived scripts it is common to find consonant clusters, ie. a sequence of consonants without intervening vowels. It is also common that the absence of intervening vowels is indicated visually by merging or changing the glyphs for the sequence in some way. This is what is referred to as a conjunct. Examples include <span class="charExample" translate="no"><span class="ex" lang="hi">कक</span></span> → <span class="charExample" translate="no"><span class="ex" lang="hi">क्क</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">কষ</span></span> → <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষ</span></span>. Conjunct behaviour is triggered in Unicode by adding a virama between the consonants.</dd>
+<dd>A way of indicating consonant clusters,  common in Brahmi-derived scripts, by visually merging or changing the glyphs for the sequence in some way. Conjunct behaviour is generally triggered in Unicode-encoded text by adding a virama between the consonants.</dd>
+
+<figure id="fig_conjuncts" class="sideCaption">
+<dd style="text-align: center;"><img src="img/conjuncts.svg" alt="कक → क्क কষ → ক্ষ" data-notes="Noto Sans Devanagari" style="height:7rem;"></dd>
+<figcaption>Examples of conjuncts in the Devanagari script.</figcaption>
+</figure>
 
 <dt id="consonantcluster">consonant cluster</dt>
-<dd>A consonant cluster is a sequence of consonants with no intervening vowels.</dd>
+<dd>A sequence of consonants with no intervening vowels.</dd>
 
 <dt id="contourtonelanguage">contour tone language</dt>
 <dd>A contour tone language has patterns where the pitch moves up and down over the course of a syllable. Compare with <a href="#registertonelanguage">register tone language</a>.</dd>
@@ -214,11 +225,13 @@ q { font-style: italic;}
 <span class="codepoint" translate="no"><bdi lang="ar" dir="rtl">&#x062B;</bdi> [<a href="../../scripts/arab/block.html#char062B"><span class="uname">U+062B ARABIC LETTER THEH</span></a>]</span>,
 pronounced <span class="ipa">θ</span>.  <strong>Unicode encodes letter+ijam combinations as  atomic characters which are never given equivalent decompositions in the standard</strong>. Ijam generally take the form of one-, two-, three- or four-dot markings above or below the basic letter skeleton, although other diacritic forms occur, especially in extensions of the Arabic script in Central and South Asia and in Africa. For example, <span class="pre"><span class="codepoint" translate="no"><bdi lang="ar" dir="rtl">&#x06C8;</bdi> [<a target="_blank" href="block.html#char06C8"><span class="uname">U+06C8 ARABIC LETTER YU</span></a>]</span></span>  shows a letter with  ijam that represents the vowel <span class="ipa">y</span> in the Uighur orthography. See <a href="https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf">Chapter 9</a> of the Unicode Standard. Compare with <a class="termref" href="../glossary/#tashkil">tashkil</a>.</dd>
 
-<dt id="independentvowel">independent vowel</dt>
-<dd><q cite="https://www.unicode.org/glossary/#independent_vowel">In Indic scripts, certain vowels are depicted using independent letter symbols that stand on their own. This is often true when a word starts with a vowel or a word consists of only a vowel.</q> Independent vowels tend to be used to represent <a href="#standalonevowel">standalone vowel sounds</a>.</dd>
+<dt id="def_independentvowel">independent vowel</dt>
+<dd>Independent  letters  used to represent <a href="#standalonevowel">standalone vowel sounds</a>. They are typically found in Brahmi-derived Indic scripts, at the beginning of a word or after a word-internal vowel.</dd>
 
 <dt id="inherentvowel">inherent vowel</dt>
-<dd>An inherent vowel is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed. <q cite="https://www.unicode.org/glossary/#inherent_vowel">In writing systems based on a script in the Brahmi family of Indic scripts, a consonant letter symbol normally has an inherent vowel, unless otherwise indicated. The phonetic value of this vowel differs among the various languages written with these writing systems. An inherent vowel is overridden either by indicating another vowel with an explicit vowel sign or by using virama to create a dead consonant.</q> <sup><a href="https://www.unicode.org/glossary/#inherent_vowel">u</a></sup> (<a href="../tutorial/part3#vowel-signs">Example</a>)</dd>
+<dd>A vowel sound that is automatically pronounced after a consonant letter, unless  suppressed by either indicating another vowel, or using a character specifically designed to kill the vowel sound, or contextual rules. Inherent vowels are commonly found in scripts Brahmi-derived Indic scripts. The sound of the inherent vowel varies by language. The following example shows a Bengali consonant with inherent vowel (left), overridden with an <span class="ipa">i</span> vowel-sign (center), and killed with a virama (right).</dd>
+
+<dd style="text-align: center;"><img src="img/inherentvowel.svg" alt="ক কী ক্" data-notes="Noto Sans Bengali" style="height: 6rem;"></dd>
 
 <dt id="invisiblestacker">invisible stacker</dt>
 <dd>A character that is always invisible, and that is used between each consonant in a consonant cluster to create a stacked arrangement. <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Invisible_Stacker:]">Used for</a> scripts such as Myanmar, Khmer, Tai Tham, Sundanese, etc. See also <a href="#virama">virama</a>, and  <a href="#purekiller">pure killer</a>.</dd>
@@ -306,13 +319,12 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 <h2 id="p">P</h2>
 <dl>
 <dt id="prebase">prebase</dt>
-<dd>The glyph of a pre-base (or prescript) vowel sign is displayed before the consonant or orthographic syllable after which it is pronounced. If the vowel character is a combining mark, it is still typed and stored in pronunciation order, and the application will render it in the correct location. In some scripts, such as Thai, a pre-base vowel sign is a normal letter, which is typed and stored in the correct position relative to the base.</dd>
+<dd>The glyph of a pre-base (or prescript) vowel  is displayed before the consonant or orthographic syllable after which it is pronounced. If the vowel character is a combining mark, it is still typed and stored in pronunciation order, and the application will render it in the correct location. In some scripts, such as Thai, a pre-base vowel  is represented by a normal letter, which is typed and stored in the correct position relative to the base.</dd>
 
-<dd style="text-align: center;"><figure id="fig_prebase" class="sideCaption">
+<figure id="fig_prebase" class="sideCaption">
 <img src="img/fig_prebase.png" alt="ഇദ്ദേഹം" class="ex" lang="ml" data-notes="Noto Serif Malayalam 20px">
-<figcaption>A prebase vowel sign, pronounced after a consonant cluster, but rendered to the left of the conjunct.</figcaption>
+<figcaption>A prebase vowel sign (light highlight), pronounced after a consonant cluster (dark highlight), but rendered to its left.</figcaption>
 </figure>
-</dd>
 
 <dt id="precomposed">precomposed text/characters</dt>
 <dd>A precomposed character is one that can also be broken down into separate code points representing its component parts (decomposition). Typically this will include base characters plus diacritics, such as accented Latin characters, or Indic characters with nuktas. <a href="#nfc">Normalisation Form C (NFC)</a> produces precomposed characters from many <a href="#decomposed">decomposed</a> sequences. (<a href="../tutorial/part3#predecomposed">example</a>)</dd>
@@ -334,6 +346,9 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 
 <dt id="rhyme">rhyme (syllable)</dt>
 <dd>See <a href="#syllablestructure">syllable structure</a>.</dd>
+
+<dt id="ruby">ruby</dt>
+<dd>A name for small (usually phonetic) annotations that are rendered alongside text. 'Ruby' is a British and Japanese printing term (often also called <i class="name">furigana</i> in Japan). Similar annotations are also used for Chinese, Mongolian, and sometimes Korean.</dd>
 </dl>
 </section>
 
@@ -351,7 +366,7 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 <dd>Combining characters that  consume space along the baseline, either before or after the base character. (<a href="../tutorial/part3#vowel-signs">example</a>)</dd>
 
 <dt id="standalone">standalone vowel</dt>
-<dd>Standalone vowels are vowel sounds that are not preceded by a consonant sound; they may appear at the beginning or in the middle of a word.</dd>
+<dd>Vowel sounds that are not preceded by a consonant sound; they typically appear at the beginning or in the middle of a word.  In Brahmi-derived scripts standalone vowels are often represented using <a href="#independentvowel">independent vowel</a> letters.</dd>
 
 <dt id="syllabary">syllabary</dt>
 <dd>A type of writing system in which each symbol typically represents both a consonant and a vowel, or in some instances more than one consonant and a vowel.</dd>
@@ -437,7 +452,7 @@ pronounced <span class="ipa">ha</span>, is an example of a letter plus tashkil c
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/glossary"><span id="version-info"><!-- #BeginDate format:IS1m -->2023-02-21  12:13<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bglossary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fglossary%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/glossary"><span id="version-info"><!-- #BeginDate format:IS1m -->2023-03-08  19:15<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bglossary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fglossary%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
