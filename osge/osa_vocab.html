@@ -3,20 +3,27 @@
 <head>
 <meta charset="utf-8" />
 <title>Vocab lister</title>
-<meta name="description" content="List examples." />
-<link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common29/lemmastyle.css" />
-<script src="../../shared/code/boilerplate.js"></script>
-<script>var autoExpandExamples = {}</script>
 
+<link rel="stylesheet" href="../../shared/style/docs.css">
+<link rel="stylesheet" href="../common29/local.css">
+<link rel="stylesheet" href="../common29/lemmastyle.css">
+
+<script src="../common29/debug.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
+
+<script src="../common29/transliterate.js"></script>
+<script>var autoExpandExamples = {}</script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<script src="../../shared/scriptdb/osge.js"></script> 
+<script src="osa-translit.js"></script> 
 <script src="osa-examples.js"></script> 
 <script src="osa-langdata.js"></script> 
-<script src="../../shared/scriptdb/osge.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Osage'
@@ -27,6 +34,11 @@ terms.direction = 'ltr'
 terms.language = 'osa'
 terms.wiktionaryLink = "Osage"
 terms.langdataTag = 'osa'
+
+var collections = [
+{ symbol:'Ⓥ', desc:'Vowels', chars:'(𐓣|𐓶|𐓟|𐓪|𐓛|𐓘|𐓙|𐓠|𐓫|𐓚|𐒻|𐓎|𐒷|𐓂|𐒳|𐒰|𐒱|𐒸|𐓃|𐒲)' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'(𐓬|𐓜|𐓰|𐓤|𐓦|𐓲|𐓴|𐓝|𐓵|𐓮|𐓺|𐓯|𐓻|𐓸|𐓹|𐓡|𐓢|𐓨|𐓩|𐓷|𐓧|𐓄|𐒴|𐓈|𐒼|𐒾|𐓊|𐓌|𐒵|𐓍|𐓆|𐓒|𐓇|𐓓|𐓐|𐓑|𐒹|𐒺|𐓀|𐓁|𐓏|𐒿|𐓭|𐓱|𐓥|𐓳|𐓞|𐓅|𐓉|𐒽|𐓋|𐒶)' },
+]
 </script>
 <!-- END -->
 
@@ -35,6 +47,7 @@ terms.langdataTag = 'osa'
 
 
 </head>
+
 
 <body class="app">
 <header>
@@ -45,6 +58,8 @@ terms.langdataTag = 'osa'
 
 <div id="tabPlaceholder"></div>
  
+<div id="panel"></div>
+
 
 
 <div class="smallprint"><span id="version">
@@ -55,4 +70,5 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 <script src="../common29/terms.js"></script> 
 <script>initialise()</script>
 </body>
+
 </html>
