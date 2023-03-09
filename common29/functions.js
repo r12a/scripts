@@ -73,6 +73,11 @@ function expandCharMarkup () {
         for (c=0;c<charlist.length;c++) {
             hex = charlist[c]
             dec = parseInt(hex,16)
+            if (Number.isNaN(dec)) { 
+                console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandCharMarkup)', 'color:' + 'red' + ';font-weight:bold;')
+                continue
+                }
+            console.log('>>>',charMarkup[i].classList,charMarkup[i].textContent, hex, dec)
             ch = String.fromCodePoint(dec)
             
             if (! spreadsheetRows[ch]) {
