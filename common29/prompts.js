@@ -292,7 +292,7 @@ function addUsageAdvice (script, iso, picker) {
         </details>
 
         <details class="supportdocs noprint">
-        <summary class="instructions"><a target="_blank" href="../../pickers/${ pickerDir }index.html">Character app</a></summary>
+        <summary class="instructions"><a target="_blank" href="../../pickers/${ pickerDir }/index.html">Character app</a></summary>
         </details>
 
         <details class="supportdocs noprint">
