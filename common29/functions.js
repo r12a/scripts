@@ -50,7 +50,56 @@ function addPageFeatures () {
 
 
 
+
+
+
+initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath)
+    //autoTransliterate(langTag)
+    checkParameters()
+    
+    
+    // autogenerate the index
+    makeIndexObject()
+    makeMarkupForSection('index_letters')
+    makeMarkupForSection('index_cchars')
+    makeMarkupForSection('index_numbers')
+    makeMarkupForSection('index_punctuation')
+    makeMarkupForSection('index_symbols')
+    makeMarkupForSection('index_other')
+    window.index = {}
+    
+    makeCharDataObj()
+    pointToSummaryPages()
+    
+    marks = new Set()
+    setMarks()
+    
+    // empty large global variables
+    window.fontDB = []
+    defList = []
+    fontInfo = {}
+    
+    
+    copyIntroInfo()
+    
+    
+    // create dialog popup window (displays details after clicking on code point names)
+    var node = document.querySelector('header')
+    dialog = document.createElement('dialog')
+    dialog.open = false
+    dialog.id = 'dialogBox'
+    node.appendChild(dialog)
+    document.querySelector("body").addEventListener('keydown', closeDialogEsc)
+
+    
+    
+    }
+
+
+
+
 function expandCharMarkup () {
+    if (traceSet.has('expandCharMarkup') || traceSet.has('all')) console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
      // convert char markup to .codepoint spans (has to be done before the indexing)
      // the .ch and .hx classes should only be used for characters in the
      // spreadsheet.  For other characters, generate the markup in a picker
@@ -151,280 +200,12 @@ function expandCharMarkup () {
         out += `>${ unicodeChars }</bdi>`
         out += ` [<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>]</span>`
         
-        charMarkup[i].innerHTML = out
+        charMarkup[i].outerHTML = out
         }
     }
 
 
 
-function expandCharMarkupXXX () {
-     // convert char markup to .codepoint spans (has to be done before the indexing)
-     // the .ch and .hx classes should only be used for characters in the
-     // spreadsheet.  For other characters, generate the markup in a picker
-     // if the svg class is appended, use an svg image to display the char
-     // if the split class used, the characters will be separated by +
-     
-     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block
-     
-   
-    // convert .hx markup (one or more hex codes)
-    charMarkup = document.querySelectorAll('.hex, .hx')
-    for (i=0;i<charMarkup.length;i++) {
-        charMarkup[i].classList.contains('split')? split=true: split=false
-        charMarkup[i].classList.contains('svg')? svg=true: svg=false
-        charMarkup[i].classList.contains('img')? img=true: img=false
-        charlist = charMarkup[i].textContent.trim().split(' ')
-        unicodeNames = ''
-        unicodeChars = ''
-        out = ''
-        for (c=0;c<charlist.length;c++) {
-            hex = charlist[c]
-            dec = parseInt(hex,16)
-            if (Number.isNaN(dec)) { 
-                console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandCharMarkup)', 'color:' + 'red' + ';font-weight:bold;')
-                continue
-                }
-            console.log('>>>',charMarkup[i].classList,charMarkup[i].textContent, hex, dec)
-            ch = String.fromCodePoint(dec)
-            
-            if (! spreadsheetRows[ch]) {
-                unicodeNames += `<span style="color:red">${ ch } NOT IN DB!</span>`
-                unicodeChars += ch
-               continue
-                }
-            
-            if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
-            
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
-            if (svg) {
-                block = getScriptGroup(dec, false)
-                unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ ch }" style="height:2rem;">`
-                }
-            else if (img) {
-                block = getScriptGroup(dec, false)
-                unicodeChars += `<img src="../../c/${ block }/large/${ hex }.png" alt="${ ch }" style="height:2rem;">`
-                }
-            else unicodeChars += `&#x${ hex };`
-            }
-        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
-        if (blockDirection === 'rtl') out += ` dir="rtl"`
-        out += `>${ unicodeChars }</bdi>`
-        out += ` [<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>]</span>`
-        
-        charMarkup[i].innerHTML = out
-        }
-   
-    // convert .ch markup (one or more characters using Unicode code points)
-    charMarkup = document.querySelectorAll('.ch')
-    for (i=0;i<charMarkup.length;i++) {
-        charMarkup[i].classList.contains('split')? split=true: split=false
-        charMarkup[i].classList.contains('svg')? svg=true: svg=false
-        charMarkup[i].classList.contains('img')? img=true: img=false
-        charlist = [... charMarkup[i].textContent]
-        unicodeNames = ''
-        unicodeChars = ''
-        out = ''
-        for (c=0;c<charlist.length;c++) {
-            dec = charlist[c].codePointAt(0)
-            hex = dec.toString(16).toUpperCase()
-            while (hex.length < 4) hex = '0'+hex
-
-            if (! spreadsheetRows[charlist[c]]) {
-                unicodeChars += charlist[c]
-                unicodeNames += `<span style="color:red"> ${ charlist[c] } NOT IN DB!</span> `
-                continue
-                }
-            
-            if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
-            
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
-            
-            if (svg) {
-                block = getScriptGroup(dec, false)
-                unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ charlist[c] }" style="height:2rem;">`
-                }
-            else if (img) {
-                block = getScriptGroup(dec, false)
-                unicodeChars += `<img src="../../c/${ block }/large/${ hex }.png" alt="${ charlist[c] }" style="height:2rem;">`
-                }
-            else unicodeChars += charlist[c]
-            }
-        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
-        if (blockDirection === 'rtl') out += ` dir="rtl"`
-        out += `>${ unicodeChars }</bdi>`
-        out += ` [<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>]</span>`
-        
-        charMarkup[i].innerHTML = out
-        }
-    }
-
-
-
-function expandCharMarkupXX () {
-     // convert char markup to .codepoint spans (has to be done before the indexing)
-     // the .ch and .hx classes should only be used for characters in the
-     // spreadsheet.  For other characters, generate the markup in a picker
-     // if the svg class is appended, use an svg image to display the char
-     
-     var charMarkup, unicodeNames, unicodeChars, charlist, split, hex, ch
-     
-   
-    // convert .hexc markup (single character hex code)
-    charMarkup = document.querySelectorAll('.hex')
-    for (i=0;i<charMarkup.length;i++) {
-        charMarkup[i].classList.contains('split')? split=true: split=false
-        charlist = charMarkup[i].textContent.trim().split(' ')
-        unicodeNames = ''
-        unicodeChars = ''
-        out = ''
-        for (c=0;c<charlist.length;c++) {
-            hex = charlist[c]
-            //ch = String.fromCodePoint(parseInt(hex,16))
-            dec = parseInt(hex,16)
-            ch = String.fromCodePoint(dec)
-            
-            if (! spreadsheetRows[ch]) {
-                unicodeNames += `<span style="color:red">${ ch } NOT IN DB!</span>`
-                unicodeChars += ch
-               continue
-                }
-            
-            if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
-            unicodeChars += `&#x${ hex };`
-            }
-        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
-        if (blockDirection === 'rtl') out += ` dir="rtl"`
-        out += `>${ unicodeChars }</bdi>`
-        out += ` [<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>]</span>`
-        
-        charMarkup[i].innerHTML = out
-        }
-   
-    // convert .ch markup (one or more characters using Unicode code points)
-    charMarkup = document.querySelectorAll('.ch')
-    for (i=0;i<charMarkup.length;i++) {
-        charMarkup[i].classList.contains('split')? split=true: split=false
-        charlist = [... charMarkup[i].textContent]
-        unicodeNames = ''
-        unicodeChars = ''
-        out = ''
-        for (c=0;c<charlist.length;c++) {
-            
-            if (! spreadsheetRows[charlist[c]]) {
-                unicodeChars += charlist[c]
-                unicodeNames += `<span style="color:red"> ${ charlist[c] } NOT IN DB!</span> `
-                continue
-                }
-            
-            if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
-            unicodeChars += charlist[c]
-            }
-        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
-        if (blockDirection === 'rtl') out += ` dir="rtl"`
-        out += `>${ unicodeChars }</bdi>`
-        out += ` [<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>]</span>`
-        
-        charMarkup[i].innerHTML = out
-        }
-    }
-
-
-
-function expandCharMarkupX () {
-     // convert char markup to .codepoint spans (has to be done before the indexing)
-     // the .ch and .hexc classes should only be used for characters in the
-     // spreadsheet.  For other characters, generate the markup in a picker
-   
-    // convert .hexc markup (single character hex code)
-    var charMarkup = document.querySelectorAll('.hex')
-    for (i=0;i<charMarkup.length;i++) {
-        var charlist = charMarkup[i].textContent.split(' ')
-        var unicodeNames = ''
-        var unicodeChars = ''
-        out = ''
-        for (c=0;c<charlist.length;c++) {
-            var hex = charlist[c]
-            var ch = String.fromCodePoint(parseInt(hex,16))
-            
-            if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
-            unicodeChars += `&#x${ hex };`
-            }
-        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
-        if (blockDirection === 'rtl') out += ` dir="rtl"`
-        out += `>${ unicodeChars }</bdi>`
-        out += ` [<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>]</span>`
-        
-        charMarkup[i].innerHTML = out
-        }
-   
-    // convert .ch markup (one or more characters using Unicode code points)
-    var charMarkup = document.querySelectorAll('.ch')
-    for (i=0;i<charMarkup.length;i++) {
-        var charlist = [... charMarkup[i].textContent]
-        var unicodeNames = ''
-        out = ''
-        for (c=0;c<charlist.length;c++) {
-            if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
-            }
-        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
-        if (blockDirection === 'rtl') out += ` dir="rtl"`
-        out += `>${ charMarkup[i].textContent }</bdi>`
-        out += ` [<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>]</span>`
-        
-        charMarkup[i].innerHTML = out
-        }
-    }
-
-
-initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath)
-    //autoTransliterate(langTag)
-    checkParameters()
-    
-    
-    // autogenerate the index
-    makeIndexObject()
-    makeMarkupForSection('index_letters')
-    makeMarkupForSection('index_cchars')
-    makeMarkupForSection('index_numbers')
-    makeMarkupForSection('index_punctuation')
-    makeMarkupForSection('index_symbols')
-    makeMarkupForSection('index_other')
-    window.index = {}
-    
-    makeCharDataObj()
-    pointToSummaryPages()
-    
-    marks = new Set()
-    setMarks()
-    
-    // empty large global variables
-    window.fontDB = []
-    defList = []
-    fontInfo = {}
-    
-    
-    copyIntroInfo()
-    
-    
-    // create dialog popup window (displays details after clicking on code point names)
-    var node = document.querySelector('header')
-    dialog = document.createElement('dialog')
-    dialog.open = false
-    dialog.id = 'dialogBox'
-    node.appendChild(dialog)
-    document.querySelector("body").addEventListener('keydown', closeDialogEsc)
-
-    
-    
-    }
 
 
 function closeDialogEsc (e) {
@@ -1371,7 +1152,7 @@ function showCharDetailsEvent (evt) {
 	table.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
 	evt.target.parentNode.parentNode.parentNode.appendChild(table)
 	
-	
+	expandCharMarkup()
 	addExamples(evt.target.lang)
 	//autoTransliterate(evt.target.lang)
 	convertTranscriptionData(evt.target)
