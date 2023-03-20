@@ -1167,6 +1167,10 @@ function showCharDetailsEvent (evt) {
 
 
 
+
+
+
+
 function showtext (sourceName) {
 	// when text is highlighted in the freeText area, display the character list
 	text=getSelected()
