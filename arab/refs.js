@@ -235,6 +235,18 @@ reflist = {
 "reviewed":true
 },
 
+
+"sc": {
+"authors": "Scott Clark",
+"title": "Alphabet and Orthography Statement for Fulfulde [FUB] Ajamiya",
+"sub": "Found in Nigeria, Cameroon, Chad and Central African Republic",
+"publisher":"SIL",
+"date": "2007",
+"url":"https://web.archive.org/web/20220210220448/https://mafindi.africa/public/admin/AlphabetandOrthographyStatementforFulfuldeFUBAjamiyafortheinternet.pdf",
+"lang": new Set(['ff']),
+"reviewed":true
+},
+
 "c": {
 "authors": "Unicode Consortium",
 "title":"CLDR, Arabic",
