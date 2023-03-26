@@ -27,7 +27,6 @@ function expandCharMarkup () {
      // if the split class used, the characters will be separated by +
      
      var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block
-     
    
     // convert .hx markup (one or more hex codes)
     charMarkup = document.querySelectorAll('.hex, .hx')
@@ -91,7 +90,7 @@ function expandCharMarkup () {
             dec = charlist[c].codePointAt(0)
             hex = dec.toString(16).toUpperCase()
             while (hex.length < 4) hex = '0'+hex
-
+ 
             if (! spreadsheetRows[charlist[c]]) {
                 unicodeChars += charlist[c]
                 unicodeNames += `<span style="color:red"> ${ charlist[c] } NOT IN DB!</span> `
@@ -129,7 +128,7 @@ function buildPage () {
     initialise(`/scripts/${ window.blockDirectory }/block`, window.ghDirectory, window.detailsfileList, window.version)
     for (i=0;i<languageList.length;i++) autoTransliterate(window.languageList[i])
     makeFontChanger(window.languageList.join(','), window.scriptISO, window.webfonts, window.defaultSize)
-    expandCharMarkup()
+    //expandCharMarkup()
     }
 
 
