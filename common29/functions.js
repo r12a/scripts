@@ -152,7 +152,7 @@ function expandCharMarkup () {
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         out += `>${ unicodeChars }</bdi>`
-        out += ` [<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>]</span>`
+        out += ` <a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
         charMarkup[i].innerHTML = out
         }
@@ -198,7 +198,7 @@ function expandCharMarkup () {
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         out += `>${ unicodeChars }</bdi>`
-        out += ` [<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>]</span>`
+        out += ` <a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
         charMarkup[i].outerHTML = out
         }
