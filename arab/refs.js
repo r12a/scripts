@@ -29,7 +29,7 @@ reflist = {
 "authors": "Bernard Comrie",
 "title":"The World's Major Languages",
 "isbn":"978-1138184824",
-"lang": new Set(['ha']),
+"lang": new Set(['ha','ff']),
 },
 
 "hua": {
