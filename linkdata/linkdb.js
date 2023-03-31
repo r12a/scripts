@@ -197,7 +197,7 @@ dates:"6thC – today", start:"500", end:"", current_usage:"",
 status:"The second most broadly-used script in the world, after the Latin alphabet.",
 origin:"West Asia",
 info:{ wikipedia:"Arabic_script", omniglot:"arabic" },
-local: [ ], 
+local: [ { name:"Arabic Homographs", url:"arab/homographs" } ], 
 layout: [ 
           { name:"Arabic Layout Requirements", url:"https://w3c.github.io/alreq/"},
           { name:"Arabic text justification", url:"http://www.tug.org/tugboat/tb27-2/tb87benatia.pdf"},
@@ -2524,6 +2524,23 @@ ssHistory: "rybdaxcvvm",
 chapters: "15",
 usedfor: "Mundari [unr]",
 },
+
+
+sunu:{ script:"Sunuwar", code:"Sunu", name:"", type:"Alphabet",
+dates:"1942 – today", start:"1942", end:"", current_usage:"uptake",
+status:"Invented and published in 1942 by Krishna Bahadur Jentich. It has seen limited but increasing use in literature, education, and computing in Nepal. Also used for the Sikkim Herald.",
+origin:"S Asia",
+info:{ wikipedia:"Sunuwar_alphabet", omniglot:"sunuwar" },
+local: [ ], layout: [ ],
+charts: [ ["Sunuwar", "tbd"] ],
+scriptNotes: [["Sunuwar", "sunu/suz.html"]],
+charNotesList:["Sunuwar", "sunu/block.html"],
+orthoChart: "",
+ssHistory: "jagq74f89f",
+chapters: "",
+usedfor: "Sunuwar [suz]",
+},
+
 
 
 sunu:{ script:"Sunuwar", code:"Sunu", name:"", type:"Alphabet",
