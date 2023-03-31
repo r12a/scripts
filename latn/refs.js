@@ -224,5 +224,6 @@ scriptLanguageList = {
 ff:{name:"Fula", url:"ff.html"},
 bm:{name:"Bamanan", url:"bm.html"},
 ha:{name:"Hausa", url:"ha.html"},
+wo:{name:"Wolof", url:"wo.html"},
 }
 
