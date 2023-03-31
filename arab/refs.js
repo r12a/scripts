@@ -391,7 +391,7 @@ reflist = {
 
 
 scriptLanguageList = {
-"fub":{name:"Fulfulde, Adamawa"},
+"fub":{name:"Adamawa Fulfulde", url:"ff.html"},
 "ady":{name:"Adyghe"},
 "arq":{name:"Arabic, Algerian"},
 "dgl":{name:"Andaandi"},
