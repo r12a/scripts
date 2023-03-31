@@ -206,7 +206,7 @@ layout: [
           { name:"Rule-based expert system for Urdu nastaleeq justification", url:"http://www.cle.org.pk/Publication/papers/2004/rule-based-expert-system.pdf"},
           ],
 charts: [ ["Arabic", "0600"], ["Arabic Supplement", "0750"], ["Arabic Extended-A", "08A0"], ["Arabic Extended-B", "0870"], ["Arabic Extended-C", "10EC0"], ["Arabic Presentation Forms-A", "FB50"], ["Arabic Presentation Forms-B", "FE70"] ],
-scriptNotes: [["Modern Standard Arabic", "arab/arb.html"], ["Hausa (ajami)", "arab/ha.html"], ["Kashmiri", "arab/ks.html"], ["Persian", "arab/pes.html"], ["Urdu", "arab/ur.html"], ["Uighur", "arabic/ug.html"]],
+scriptNotes: [["Modern Standard Arabic", "arab/arb.html"], ["Adamawa Fulfulde", "arab/ff.html"], ["Hausa (ajami)", "arab/ha.html"], ["Kashmiri", "arab/ks.html"], ["Persian", "arab/pes.html"], ["Urdu", "arab/ur.html"], ["Uighur", "arabic/ug.html"]],
 charNotesList:["Arabic", "arab/block.html"],
 orthoChart: "MS Arabic, Hausa, Kashmiri, Persian, Urdu, Uighur",
 ssHistory: "hqr6rc9md5",
