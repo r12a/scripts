@@ -49,11 +49,11 @@ function addPageFeatures () {
     initialiseShowNames(document, blockDirectoryName, '') // Add onclick function to all .ex elements to display in panel
 
 
+    // create translit data in autoTranslitArray
+    makeAutoTranslitArray (langTag)
 
 
-
-
-initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath)
+    initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath)
     //autoTransliterate(langTag)
     checkParameters()
     

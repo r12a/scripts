@@ -6,6 +6,32 @@
 var autoTranslitArray = {}
 
 
+function makeAutoTranslitArray (lang) {
+	// creates an array of correlated items that will be used by the transliteration control
+	// takes the data from the spreadsheet
+	if (traceSet.has('makeAutoTranslitArray')) console.log('>>> makeAutoTranslitArray(',lang,')')
+	if (traceSet.has('makeAutoTranslitArray')) console.log('SPREADSHEETROWS', spreadsheetRows)
+	if (traceSet.has('makeAutoTranslitArray')) console.log('COLS', cols.transLoc)
+    
+    autoTranslitArray[lang] = {}
+
+    // suck out the relevant data into the chars array
+    for (var line in spreadsheetRows) {
+		if (spreadsheetRows[line][cols.transLoc] === '') {
+            console.log('Empty translit column in makeAutoTranslitArray for ',spreadsheetRows[line][cols.ucsName])
+            continue		
+			}
+
+        // create entry for the item
+        if (autoTranslitArray[lang][line]) console.log('Unexpected duplicate in makeTransliterationArray: ',line)
+        else autoTranslitArray[lang][line] = spreadsheetRows[line][cols.transLoc]
+		}
+    if (traceSet.has('makeAutoTranslitArray')) console.log('<<< AUTOTRANSLITARRAY',autoTranslitArray[lang])
+	}
+
+
+
+
 function transliterate (str) {
 
 str = ' '+str
