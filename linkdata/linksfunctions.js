@@ -204,6 +204,16 @@ usedfor: "${record.usedfor}",
 
 
 
+	// term lists
+	if (record.terms) {
+        out += '<tr><td>Term lists:</td><td>'
+        for (let n=0;n<record.terms.length;n++) out += '<p><a href="'+record.terms[n][1]+'" target="_blank">'+record.terms[n][0]+'</a></p>'
+ 		out += '</td></tr>'
+        }
+
+
+
+
 	// general info
 	if (record.info) {
 		out += '<tr><td>General info:</td><td>'
