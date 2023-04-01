@@ -145,7 +145,7 @@ usedfor: "${record.usedfor}",
 
 
 	// script code
-	out += '<tr><td>Script code:</td><td>'
+	out += '<tr><th>Script code:</th><td>'
 	out += lc
 	out += '</td></tr>'
 
@@ -153,7 +153,7 @@ usedfor: "${record.usedfor}",
 	// chronology
 	if (record.dates) {
 		temp = ''
-		temp += '<tr><td>Chronology:</td><td>'
+		temp += '<tr><th>Chronology:</th><td>'
 		temp += '<p>'
 		if (record.end) temp+= 'Historic script <span style="font-size:80%;">('+record.dates+')</span>'
 		else if (record.current_usage) temp += record.dates+ ', <span style="font-size:80%">but with limited usage ('+record.current_usage+')</span>'
@@ -169,14 +169,15 @@ usedfor: "${record.usedfor}",
 
 	// type
 	if (record.type) {
-		out += '<tr><td>Type:</td><td>'
+		out += '<tr><th>Type:</th><td>'
 		out += '<p class="scripttype">'+record.type+'</p>'
+        out += '</td>'
 		}
 
 
 	// orthography descriptions
 	if (record.scriptNotes) {
-        out += '<tr><td>Orthography descriptions:</td><td>'
+        out += '<tr><th>Orthography descriptions:</th><td>'
 		if (record.scriptNotes && record.scriptNotes.length > 0) {
             for (let n=0;n<record.scriptNotes.length;n++) out += '<p><a href="'+record.scriptNotes[n][1]+'" target="_blank">'+record.scriptNotes[n][0]+'</a></p>'
             }
@@ -188,7 +189,7 @@ usedfor: "${record.usedfor}",
 
 	// character detail
 	if (record.charNotesList && record.charNotesList.length > 0 || record.ssHistory) {
-		out += '<tr><td>Character detail:</td><td>'
+		out += '<tr><th>Character detail:</th><td>'
 		if (record.charNotesList && record.charNotesList.length > 0) out += '<p><a href="../scripts/'+record.charNotesList[1]+'" target="_blank">Character notes</a></p>'
 		out += '<p><a href="http://scriptsource.org/entry/'+record.ssHistory+'" target="_blank">Unicode historical documents</a></p>'
 		out += '</td></tr>'
@@ -199,7 +200,7 @@ usedfor: "${record.usedfor}",
 
 	// term lists
 	if (record.terms) {
-        out += '<tr><td>Term lists:</td><td>'
+        out += '<tr><th>Term lists:</th><td>'
         for (let n=0;n<record.terms.length;n++) out += '<p><a href="'+record.terms[n][1]+'" target="_blank">'+record.terms[n][0]+'</a></p>'
  		out += '</td></tr>'
         }
@@ -209,7 +210,7 @@ usedfor: "${record.usedfor}",
 
 	// general info
 	if (record.info) {
-		out += '<tr><td>General info:</td><td>'
+		out += '<tr><th>General info:</th><td>'
 		out += '<p><a target="_blank" href="http://www.unicode.org/versions/latest/ch'+record.chapters+'.pdf">Unicode</a></p>'
 		out += '<p><a target="_blank" href="http://scriptsource.org/scr/'+record.code+'" >Scriptsource</a></p>'
 		if (record.info.wikipedia) out += '<p><a target="_blank" href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'">Wikipedia</a></p>'
@@ -230,26 +231,26 @@ usedfor: "${record.usedfor}",
 	// other info
 	if ((record.local && record.local.length > 0) || (record.layout && record.layout.length > 0) || record.orthoChart) {
 		var temp = ''
-        temp += '<tr><td>Other info:</td><td>'
+        temp += '<tr><th>Other info:</th><td>'
 		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" target="_blank">'+record.local[r].name+'</a></p>'
 		if (record.layout && record.layout.length > 0) {
             for (let n=0;n<record.layout.length;n++) temp += '<p><a href="'+record.layout[n].url+'" target="_blank">'+record.layout[n].name+'</a></p>'
             }
 		if (record.orthoChart) temp += '<p><a href="featurelist/index.html" target="_blank">Comparisons:</a> '+record.orthoChart+'</p>'
 		temp += '</td></tr>'
-		if (temp !== '<tr><th>This site:</th><td></td></tr>') out += temp
+		if (temp !== '<tr><th>Other info:</th><td></td></tr>') out += temp
 		}
 
 
 
 	// pickers
 	temp = ''
-	temp += '<tr><td>Pickers:</td><td>'
+	temp += '<tr><th>Pickers:</th><td>'
 	for (let p=0;p<plist.length;p++) {
 		if (plist[p].tag === script) temp += '<p><a href="../pickers/'+plist[p].url+'" target="_blank">'+plist[p].name+'</a></p>'
 		}
 	temp += '</td></tr>'
-	if (temp !== '<tr><td>Pickers:</td><td></td></tr>') out += temp
+	if (temp !== '<tr><th>Pickers:</th><td></td></tr>') out += temp
 
 
 
@@ -264,7 +265,7 @@ usedfor: "${record.usedfor}",
 			}
 		}
 	if (temp !== '') {
-		out += '<tr><td>Character usage:</td><td>'
+		out += '<tr><th>Character usage:</th><td>'
 		out += temp
 		out += '</td></tr>'
 		}
@@ -274,7 +275,7 @@ usedfor: "${record.usedfor}",
 
     // charts table
 	if (record.charts) {
-		out += '<tr><td>Charts:</td><td><table><tbody>'
+		out += '<tr><th>Charts:</th><td><table><tbody>'
 		for (var r=0;r<record.charts.length;r++) out += '<tr><td>'+record.charts[r][0]+'</td><td><a href="../uniview/index.html?block='+record.charts[r][0].toLowerCase().replace(/ /g,'_')+'" target="_blank">UniView</a></td><td><a href="http://www.unicode.org/charts/PDF/U'+record.charts[r][1]+'.pdf" target="_blank">Unicode</a></td></tr>'
 		out += '</tbody></table></td></tr>'
 		}
@@ -284,11 +285,11 @@ usedfor: "${record.usedfor}",
 	//  fonts
 	temp = ''
 	if (sampleScriptsIndex[lc] && sampleScriptsIndex[lc].font) {
-		temp = '<tr><td>Fonts:</td><td>'
+		temp = '<tr><th>Fonts:</th><td>'
 		for (let i=0;i<sampleScriptsIndex[lc].font.length;i++) temp += '<p><a href="fontlist/index.html?script='+sampleScriptsIndex[lc].font[i]+'" target="_blank">'+sampleScriptsIndex[lc].font[i]+'</a></p>'
 		}
 	temp += '</td></tr>'
-	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
+	if (temp !== '<tr><th>Fonts:</th><td></td></tr>') out += temp
 
 
 
@@ -297,7 +298,7 @@ usedfor: "${record.usedfor}",
 	// phrases
 	temp = ''
 	if ((phrasesList[lc] || sampleScriptsIndex[lc])) {
-		temp = '<tr><td>Samples:</td><td>'
+		temp = '<tr><th>Samples:</th><td>'
 		if (sampleScriptsIndex[lc]) {
 			temp += '<p><a href="samples/index.html?script='+lc+'" target="_blank">Sample DB</a> ('
 			for (let i=0;i<sampleScriptsIndex[lc].langs.length;i++) {
@@ -309,7 +310,7 @@ usedfor: "${record.usedfor}",
 		if (phrasesList[lc]) temp += '<p><a href="phrases.html#'+lc+'" target="_blank">W3C phrase list</a> ('+phrasesList[lc]+')</p>'
 		}
 	temp += '</td></tr>'
-	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
+	if (temp !== '<tr><th>Samples:</th><td></td></tr>') out += temp
   
 
 
@@ -318,10 +319,10 @@ usedfor: "${record.usedfor}",
     // used for
 	if (record.usedfor) {
 		var temp = ''
-		temp += '<tr><td>Used for:</td><td>'
+		temp += '<tr><th>Used for:</th><td>'
 		temp += '<p class="usedfor">'+record.usedfor.replace(/],/g,'],&nbsp;&nbsp;&nbsp;')+'</p>'
 		temp += '</td></tr>'
-		if (temp !== '<tr><td>Used for:</td><td></td></tr>') out += temp
+		if (temp !== '<tr><th>Used for:</th><td></td></tr>') out += temp
 		}
 
 
