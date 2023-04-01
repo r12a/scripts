@@ -174,20 +174,13 @@ usedfor: "${record.usedfor}",
 		}
 
 
-	// descriptions
-	if ((record.local && record.local.length > 0) || (record.layout && record.layout.length > 0) || record.scriptNotes || record.orthoChart) {
-		var temp = ''
-        temp += '<tr><td>Descriptions:</td><td>'
+	// orthography descriptions
+	if (record.scriptNotes) {
+        out += '<tr><td>Orthography descriptions:</td><td>'
 		if (record.scriptNotes && record.scriptNotes.length > 0) {
-            for (let n=0;n<record.scriptNotes.length;n++) temp += '<p><a href="'+record.scriptNotes[n][1]+'" target="_blank">'+record.scriptNotes[n][0]+' orthography description</a></p>'
+            for (let n=0;n<record.scriptNotes.length;n++) out += '<p><a href="'+record.scriptNotes[n][1]+'" target="_blank">'+record.scriptNotes[n][0]+'</a></p>'
             }
-		if (record.layout && record.layout.length > 0) {
-            for (let n=0;n<record.layout.length;n++) temp += '<p><a href="'+record.layout[n].url+'" target="_blank">'+record.layout[n].name+'</a></p>'
-            }
-		if (record.orthoChart) temp += '<p><a href="featurelist/index.html" target="_blank">Comparisons:</a> '+record.orthoChart+'</p>'
-		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" target="_blank">'+record.local[r].name+'</a></p>'
-		temp += '</td></tr>'
-		if (temp !== '<tr><th>This site:</th><td></td></tr>') out += temp
+		out += '</td></tr>'
 		}
 
 
@@ -229,6 +222,22 @@ usedfor: "${record.usedfor}",
 		// ?
 		for (let r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" >'+record.info[r].name+'</a></p>'
 		out += '</td></tr>'
+		}
+
+
+
+
+	// other info
+	if ((record.local && record.local.length > 0) || (record.layout && record.layout.length > 0) || record.orthoChart) {
+		var temp = ''
+        temp += '<tr><td>Other info:</td><td>'
+		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" target="_blank">'+record.local[r].name+'</a></p>'
+		if (record.layout && record.layout.length > 0) {
+            for (let n=0;n<record.layout.length;n++) temp += '<p><a href="'+record.layout[n].url+'" target="_blank">'+record.layout[n].name+'</a></p>'
+            }
+		if (record.orthoChart) temp += '<p><a href="featurelist/index.html" target="_blank">Comparisons:</a> '+record.orthoChart+'</p>'
+		temp += '</td></tr>'
+		if (temp !== '<tr><th>This site:</th><td></td></tr>') out += temp
 		}
 
 
