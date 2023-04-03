@@ -25,7 +25,16 @@ autoExpandExamples.mro = `
 𖩍𖩝𖩁|boat|l§ɔ§ŋ
 𖩈𖩍𖩆|spoon|kʰ§l§a|khla
 𖩛𖩆𖩃𖩖|moon||lamä
-
+𖩉𖩆𖩊-𖩌𖩆𖩏|stir curry||hai-kan
+𖩜-𖩌𖩆𖩏|stir curry||hai-kan
+𖩉𖩆𖩊-𖩍𖩝𖩁|to row||hai-lɔŋ
+𖩜-𖩍𖩝𖩁|to row||hai-lɔŋ
+𖩗𖩜|have||wäi
+𖩗𖩖𖩊|have||wäi
+𖩌𖩖𖩊|to break||käi
+𖩌𖩜|to break||käi
+𖩀𖩘𖩌|quote||tɛk
+𖩞|quote||tɛk
 
 
 

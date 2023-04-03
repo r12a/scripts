@@ -6,28 +6,32 @@ window.langSet = false
 reflist = {
 
 
+"p": {
+"authors": "Martin Hosken, Michael Everson",
+"title":"Proposal for encoding the Mro script in the SMP of the UCS",
+"sub": "L2/09-097R",
+"date": "2009",
+"url":"https://www.unicode.org/L2/L2009/09097r-n3589r-mro.pdf",
+"reviewed":true
+},
+
+
+"h": {
+"authors": "Martin Hosken",
+"title":"Discussion of Mro Dandas",
+"date": "2011",
+"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4010.pdf",
+"reviewed":true
+},
+
+
 "o": {
-"authors": "Toshiki Osada",
-"title":"The Munda Languages",
-"sub": "Mundari",
-"date": "2008",
+"authors": "Omniglot",
+"title":"Mro",
 "retr": "Apr 2023",
-"publisher":"Routledge",
-"url":"https://www.routledgehandbooks.com/doi/10.4324/9781315822433.chThree",
-"pages": "99-163",
-"reviewed":false
+"url":"https://omniglot.com/writing/mro.htm",
+"reviewed":true
 },
-
-
-
-"wm": {
-"authors": "Lawrence Wolf-Sonkin, Biswajit Mandal",
-"title":"Proposal to Encode the Mundari Bani Script in the Universal Character Set",
-"date": "2021",
-"url":"https://www.unicode.org/L2/L2021/21031-mundari-bani.pdf",
-"reviewed":false
-},
-
 
 
 
