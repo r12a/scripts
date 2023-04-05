@@ -16,6 +16,7 @@ reflist = {
 },
 
 
+
 "h": {
 "authors": "Martin Hosken",
 "title":"Discussion of Mro Dandas",
@@ -25,11 +26,25 @@ reflist = {
 },
 
 
+
 "o": {
 "authors": "Omniglot",
 "title":"Mro",
 "retr": "Apr 2023",
 "url":"https://omniglot.com/writing/mro.htm",
+"reviewed":true
+},
+
+
+
+
+"u": {
+"url":"https://www.unicode.org/versions/Unicode15.0.0/ch13.pdf",
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 15.0",
+"sub":"Chapter 13.8: South and Central Asia-II, Mro",
+"pages":"571",
+"isbn":"978-1-936213-16-0.",
 "reviewed":true
 },
 
@@ -84,6 +99,6 @@ reflist = {
 
 
 scriptLanguageList = {
-unr:{name:"Mundari", url:"unr.html"},
+unr:{name:"Mru", url:"mro.html"},
 }
 
