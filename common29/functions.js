@@ -152,9 +152,10 @@ function expandCharMarkup () {
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         out += `>${ unicodeChars }</bdi>`
-        out += ` <a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        if (!img && !svg) out += ' '
+        out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
-        charMarkup[i].innerHTML = out
+        charMarkup[i].outerHTML = out
         }
    
     // convert .ch markup (one or more characters using Unicode code points)
