@@ -15,7 +15,7 @@ use – for a CCS that doesn't produce sound
 
 autoExpandExamples.unr = `
 
-𞓒𞓕𞓩𞓕𞓫𞓗|scissors|l§a§ʈ§a§ˀ§b
+𞓒𞓕𞓩𞓕𞓫𞓗|scissors|l§a§ʈ§a§›§ˀb
 𞓒𞓕𞓩𞓕𞓗|scissors|l§a§ʈ§a§ˀb
 𞓧𞓟𞓬|nose|m§ũː
 𞓧𞓟𞓨𞓡𞓯𞓕𞓣𞓚𞓭|Mundari|m§u§n§ɖ§a§r§iː
@@ -60,6 +60,13 @@ autoExpandExamples.unr = `
 𞓗𞓕𞓭|flower|b§aː
 𞓛𞓕𞓭𞓣|arrow|s§aː§r
 𞓝𞓚𞓭|hand|tiː
+
+𞓣𞓟𞓭|to beat a drum|ruː
+𞓨𞓟𞓬|to drink|nũː
+𞓖𞓚𞓬|smell|d͡ʒĩː
+𞓧𞓟𞓨𞓜𞓕𞓣𞓚|Mundari (lang.)||mundari
+𞓧𞓟𞓨𞓜𞓯𞓕𞓣𞓚𞓭|Mundari (lang.)||mundari
+𞓧𞓟𞓨𞓜𞓕𞓣𞓚 𞓗𞓕𞓨𞓚|Mundari bani (script)||mundari bani
 
 
 
