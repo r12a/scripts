@@ -5,8 +5,7 @@
 <title>Orthography notes switch</title>
 <link rel="stylesheet" href="../shared/style/docs.css"/>
 <style>
-body { overflow: hidden; padding: 1em;}
-h1, p { margin: 0; }
+h1, p { margin-block: 0; margin-inline: 2rem; }
 #flexContainer { display: flex; width: 100%; min-height: 100vh; flex-direction: column; overflow: hidden; }
 #frontMatter { margin-block-end: 1em; }
 #summaries { font-size: .75rem; text-align:start; }
@@ -17,9 +16,18 @@ optgroup { margin-block-start: 0; }
 .selectTitle { font-size: 100%; color:brown;font-weight:bold; }
 .index { font-size: 100%; color:brown; font-weight:bold; min-width:2em; display: inline-block; }
 #summaries a { padding: 2px; border-radius: 2px; }
-#orthtype, #typeLabel span { color: brown; font-size: .9rem; }
+#typeLabel span { color: brown; font-size: .9rem; }
 #typeLabel { white-space: nowrap; margin-inline-start: 2rem; }
+
+#sitelinks { margin-block: 0; }
+#line { display: none; }
+#bp_picture { margin-block: 0; }
+#selectors { margin-inline: 3rem; }
+hr { width: 90%; color: antiquewhite; }
 </style>
+
+<script src="../shared/code/boilerplate.js"></script>
+
 <script>
 var currentDoc = ''
 function showDoc (url) {
@@ -50,14 +58,362 @@ function highlight (type) {
 </script>
 </head>
 
-<body>
+
+
+
+<body class="useBlockExamples">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../shared/images/world.gif','docs');</script>
+</header>
+
+
+
 <div id="flexContainer">
 <div id="frontMatter">
 <h1>Orthography notes switch</h1>
 
-<p><span class="instructions">Select/set a fragment id:</span> 
+
+<p style="margin-inline: 3rem;">This page allows you to quickly find and compare sections across the <span id="total"></span> orthography notes pages.</p>
+
+<p id="selectors">
+<!--label id="typeLabel"><span>By type:</span>
+<select id="orthtype" onChange="showDoc(this.value)">
+<optgroup label="Abugida: SAsia">
+<option value="ethi/am.html?showIndex">Amharic</option>
+</optgroup>
+<optgroup label="Abugida: SEAsia">
+<option value="bali/ban.html?showIndex">Balinese</option>
+</optgroup>
+<optgroup label="Abjad">
+</optgroup>
+<optgroup label="Alphabet: letters">
+</optgroup>
+<optgroup label="Alphabet: diacritics">
+</optgroup>
+<optgroup label="Alphabet: vowelsigns">
+</optgroup>
+<optgroup label="Syllabic: featural">
+<option value="ethi/am.html?showIndex">Amharic</option>
+</optgroup>
+<optgroup label="Syllabic: simple">
+</optgroup>
+<optgroup label="Syllabic: CJ">
+</optgroup>
+<optgroup label="Latin">
+</optgroup>
+</select></label-->
+
+
+
+
+<label id="page"><span class="instructions">Select an orthography:</span>
+<select id="selectpage" onChange="showDoc(this.value)">
+<option value="">By script</option>
+<optgroup label="Adlam">
+<option value="adlm/fuf.html?showIndex">Pular</option>
+</optgroup>
+<optgroup label="Arabic">
+<option value="arab/ff.html?showIndex">Adamawa Fulfulde</option>
+<option value="arab/arb.html?showIndex">Arabic (Modern Standard)</option>
+<option value="arab/ha.html?showIndex">Hausa</option>
+<option value="arab/ks.html?showIndex">Kashmiri</option>
+<option value="arab/pes.html?showIndex">Persian</option>
+<option value="arab/ur.html?showIndex">Urdu</option>
+<option value="arab/ug.html?showIndex">Uighur</option>
+</optgroup>
+<optgroup label="Armenian">
+<option value="armn/hy.html?showIndex">Armenian</option>
+</optgroup>
+<optgroup label="Balinese">
+<option value="bali/ban.html?showIndex">Balinese</option>
+</optgroup>
+<optgroup label="Bamum">
+<option value="bamu/bax.html?showIndex">Bamoun</option>
+</optgroup>
+<optgroup label="Bassa Vah">
+<option value="bass/bsq.html?showIndex">Bassa</option>
+</optgroup>
+<optgroup label="Batak">
+<option value="batk/btk.html?showIndex">Batak</option>
+</optgroup>
+<optgroup label="Bengali">
+<option value="beng/bn.html?showIndex">Bangla</option>
+</optgroup>
+<optgroup label="Buginese">
+<option value="bugi/bug.html?showIndex">Buginese</option>
+</optgroup>
+<optgroup label="Cherokee">
+<option value="cher/chr.html?showIndex">Cherokee</option>
+</optgroup>
+<optgroup label="Chinese">
+<option value="hani/zh.html?showIndex">Chinese</option>
+</optgroup>
+<optgroup label="Cyrillic">
+<option value="cyrl/mn.html?showIndex">Mongolian</option>
+<option value="cyrl/ru.html?showIndex">Russian</option>
+<option value="cyrl/uk.html?showIndex">Ukrainian</option>
+</optgroup>
+<optgroup label="Devanagari">
+<option value="deva/hi.html?showIndex">Hindi</option>
+<option value="deva/ks.html?showIndex">Kashmiri</option>
+</optgroup>
+<optgroup label="Ethiopic">
+<option value="ethi/am.html?showIndex">Amharic</option>
+</optgroup>
+<optgroup label="Garay">
+<option value="gara/wo.html?showIndex">Wolof</option>
+</optgroup>
+<optgroup label="Georgian">
+<option value="geor/ka.html?showIndex">Georgian</option>
+</optgroup>
+<optgroup label="Greek">
+<option value="grek/el.html?showIndex">Greek</option>
+</optgroup>
+<optgroup label="Gujarati">
+<option value="gujr/gu.html?showIndex">Gujarati</option>
+</optgroup>
+<optgroup label="Gurmukhi">
+<option value="guru/pa.html?showIndex">Punjabi</option>
+</optgroup>
+<optgroup label="Hanifi Rohingya">
+<option value="rohg/rhg.html?showIndex">Rohingya</option>
+</optgroup>
+<optgroup label="Hebrew">
+<option value="hebr/he.html?showIndex">Hebrew</option>
+</optgroup>
+<optgroup label="Japanese">
+<option value="japn/ja.html?showIndex">Japanese</option>
+</optgroup>
+<optgroup label="Javanese">
+<option value="java/jv.html?showIndex">Javanese</option>
+</optgroup>
+<optgroup label="Kayah Li">
+<option value="kali/kyu.html?showIndex">Western Kayah</option>
+</optgroup>
+<optgroup label="Khmer">
+<option value="khmr/km.html?showIndex">Cambodian</option>
+</optgroup>
+<optgroup label="Korean">
+<option value="kore/ko.html?showIndex">Korean</option>
+</optgroup>
+<optgroup label="Lao">
+<option value="laoo/lo.html?showIndex">Lao</option>
+</optgroup>
+<optgroup label="Latin">
+<option value="latn/bm.html?showIndex">Bamanan</option>
+<option value="latn/ff.html?showIndex">Fula</option>
+<option value="latn/ha.html?showIndex">Hausa</option>
+<option value="latn/wo.html?showIndex">Wolof</option>
+</optgroup>
+<optgroup label="Lepcha">
+<option value="lepc/lep.html?showIndex">Lepcha</option>
+</optgroup>
+<optgroup label="Limbu">
+<option value="limb/lif.html?showIndex">Limbu</option>
+</optgroup>
+<optgroup label="Lisu">
+<option value="lisu/lis.html?showIndex">Lisu</option>
+</optgroup>
+<optgroup label="Malayalam">
+<option value="mlym/ml.html?showIndex">Malayalam</option>
+</optgroup>
+<optgroup label="Mandaic">
+<option value="mand/mid.html?showIndex">Neo-Mandaic</option>
+</optgroup>
+<optgroup label="Mongolian">
+<option value="mong/mn.html?showIndex">Mongolian</option>
+</optgroup>
+<optgroup label="Mro">
+<option value="mroo/mro.html?showIndex">Mru</option>
+</optgroup>
+<optgroup label="Myanmar">
+<option value="mymr/my.html?showIndex">Burmese</option>
+<option value="mymr/shn.html?showIndex">Shan</option>
+</optgroup>
+<optgroup label="N’Ko">
+<option value="nkoo/nqo.html?showIndex">N’Ko</option>
+</optgroup>
+<optgroup label="Nag Mundari">
+<option value="nagm/unr.html?showIndex">Mundari</option>
+</optgroup>
+<optgroup label="Newa">
+<option value="newa/new.html?showIndex">Newar</option>
+</optgroup>
+<optgroup label="New Tai Lü">
+<option value="talu/khb.html?showIndex">Tai Lü</option>
+</optgroup>
+<optgroup label="Oriya">
+<option value="orya/or.html?showIndex">Odia</option>
+</optgroup>
+<optgroup label="Ol Chiki">
+<option value="olck/sat.html?showIndex">Santali</option>
+</optgroup>
+<optgroup label="Osage">
+<option value="osge/osa.html?showIndex">Osage</option>
+</optgroup>
+<optgroup label="Sinhala">
+<option value="sinh/si.html?showIndex">Sinhala</option>
+</optgroup>
+<optgroup label="Sundanese">
+<option value="sund/su.html?showIndex">Sundanese</option>
+</optgroup>
+<optgroup label="Sunuwar">
+<option value="sunu/suz.html?showIndex">Sunuwar</option>
+</optgroup>
+<optgroup label="Syriac">
+<option value="syrc/aii.html?showIndex">Assyrian Neo-Aramaic</option>
+<option value="syrc/syr.html?showIndex">Syriac</option>
+<option value="syrc/tru.html?showIndex">Turoyo</option>
+</optgroup>
+<optgroup label="Tai Le">
+<option value="tale/tdd.html?showIndex">Tai Nüa</option>
+</optgroup>
+<optgroup label="Tai Tham">
+<option value="lana/kkh.html?showIndex">Tai Khün</option>
+<option value="lana/nod.html?showIndex">Northern Thai</option>
+</optgroup>
+<optgroup label="Tai Viet">
+<option value="tavt/blt.html?showIndex">Tai Dam</option>
+</optgroup>
+<optgroup label="Tamil">
+<option value="taml/ta.html?showIndex">Tamil</option>
+</optgroup>
+<optgroup label="Telugu">
+<option value="telu/te.html?showIndex">Telugu</option>
+</optgroup>
+<optgroup label="Thaana">
+<option value="thaa/dv.html?showIndex">Dhivehi</option>
+</optgroup>
+<optgroup label="Thai">
+<option value="thai/th.html?showIndex">Thai</option>
+</optgroup>
+<optgroup label="Tibetan">
+<option value="tibt/bo.html?showIndex">Tibetan</option>
+</optgroup>
+<optgroup label="Tifinagh">
+<option value="tfng/zgh.html?showIndex">Std Moroccan Tamazight</option>
+</optgroup>
+<optgroup label="UCAS">
+<option value="cans/ike.html?showIndex">East Canadian Inuktitut</option>
+<option value="cans/crk.html?showIndex">Plains Cree</option>
+</optgroup>
+<optgroup label="Vai">
+<option value="vai/vai.html?showIndex">Vai</option>
+</optgroup>
+</select></label>
+
+
+
+
+<select id="orthtype" onChange="showDoc(this.value)">
+<option value="">By type</option>
+<optgroup label="Abugida: SAsia">
+<option value="beng/bn.html?showIndex">Bangla</option>
+<option value="gujr/gu.html?showIndex">Gujarati</option>
+<option value="deva/hi.html?showIndex">Hindi</option>
+<option value="deva/ks.html?showIndex">Kashmiri</option>
+<option value="lepc/lep.html?showIndex">Lepcha</option>
+<option value="limb/lif.html?showIndex">Limbu</option>
+<option value="mlym/ml.html?showIndex">Malayalam</option>
+<option value="newa/new.html?showIndex">Newar</option>
+<option value="orya/or.html?showIndex">Odia</option>
+<option value="guru/pa.html?showIndex">Punjabi</option>
+<option value="sinh/si.html?showIndex">Sinhala</option>
+<option value="taml/ta.html?showIndex">Tamil</option>
+<option value="telu/te.html?showIndex">Telugu</option>
+<option value="tibt/bo.html?showIndex">Tibetan</option>
+</optgroup>
+<optgroup label="Abugida: SEAsia">
+<option value="bali/ban.html?showIndex">Balinese</option>
+<option value="batk/btk.html?showIndex">Batak</option>
+<option value="bugi/bug.html?showIndex">Buginese</option>
+<option value="mymr/my.html?showIndex">Burmese</option>
+<option value="khmr/km.html?showIndex">Cambodian</option>
+<option value="java/jv.html?showIndex">Javanese</option>
+<option value="lisu/lis.html?showIndex">Lisu</option>
+<option value="lana/nod.html?showIndex">Northern Thai</option>
+<option value="mymr/shn.html?showIndex">Shan</option>
+<option value="sund/su.html?showIndex">Sundanese</option>
+<option value="lana/kkh.html?showIndex">Tai Khün</option>
+<option value="talu/khb.html?showIndex">Tai Lü</option>
+<option value="tale/tdd.html?showIndex">Tai Nüa</option>
+<option value="thai/th.html?showIndex">Thai</option>
+</optgroup>
+<optgroup label="Abjad">
+<option value="arab/arb.html?showIndex">Arabic (Modern Standard)</option>
+<option value="hebr/he.html?showIndex">Hebrew</option>
+<option value="arab/pes.html?showIndex">Persian</option>
+<option value="syrc/syr.html?showIndex">Syriac</option>
+<option value="arab/ur.html?showIndex">Urdu</option>
+</optgroup>
+<optgroup label="Alphabet: letters">
+<option value="armn/hy.html?showIndex">Armenian</option>
+<option value="bass/bsq.html?showIndex">Bassa</option>
+<option value="geor/ka.html?showIndex">Georgian</option>
+<option value="grek/el.html?showIndex">Greek</option>
+<option value="cyrl/mn.html?showIndex">Mongolian (Cyrl)</option>
+<option value="mong/mn.html?showIndex">Mongolian (Hudum)</option>
+<option value="mroo/mro.html?showIndex">Mru</option>
+<option value="nagm/unr.html?showIndex">Mundari</option>
+<option value="nkoo/nqo.html?showIndex">N’Ko</option>
+<option value="osge/osa.html?showIndex">Osage</option>
+<option value="adlm/fuf.html?showIndex">Pular</option>
+<option value="rohg/rhg.html?showIndex">Rohingya</option>
+<option value="cyrl/ru.html?showIndex">Russian</option>
+<option value="olck/sat.html?showIndex">Santali</option>
+<option value="tfng/zgh.html?showIndex">Std Moroccan Tamazight</option>
+<option value="sunu/suz.html?showIndex">Sunuwar</option>
+<option value="arab/ug.html?showIndex">Uighur</option>
+<option value="cyrl/uk.html?showIndex">Ukrainian</option>
+<option value="gara/wo.html?showIndex">Wolof (Garay)</option>
+</optgroup>
+<optgroup label="Alphabet: diacritics">
+<option value="arab/ff.html?showIndex">Adamawa Fulfulde</option>
+<option value="syrc/aii.html?showIndex">Assyrian Neo-Aramaic</option>
+<option value="thaa/dv.html?showIndex">Dhivehi</option>
+<option value="arab/ha.html?showIndex">Hausa</option>
+<option value="arab/ks.html?showIndex">Kashmiri</option>
+<option value="mand/mid.html?showIndex">Neo-Mandaic</option>
+<option value="syrc/tru.html?showIndex">Turoyo</option>
+</optgroup>
+<optgroup label="Alphabet: vowelsigns">
+<option value="kali/kyu.html?showIndex">Western Kayah</option>
+<option value="laoo/lo.html?showIndex">Lao</option>
+<option value="tavt/blt.html?showIndex">Tai Dam</option>
+</optgroup>
+<optgroup label="Syllabic: featural">
+<option value="ethi/am.html?showIndex">Amharic</option>
+<option value="cans/ike.html?showIndex">East Canadian Inuktitut</option>
+<option value="kore/ko.html?showIndex">Korean</option>
+<option value="cans/crk.html?showIndex">Plains Cree</option>
+</optgroup>
+<optgroup label="Syllabic: simple">
+<option value="bamu/bax.html?showIndex">Bamoun</option>
+<option value="cher/chr.html?showIndex">Cherokee</option>
+<option value="vai/vai.html?showIndex">Vai</option>
+</optgroup>
+<optgroup label="Syllabic: CJ">
+<option value="hani/zh.html?showIndex">Chinese</option>
+<option value="jpan/ja.html?showIndex">Japanese</option>
+</optgroup>
+<optgroup label="Latin">
+<option value="latn/bm.html?showIndex">Bamanan</option>
+<option value="latn/ff.html?showIndex">Fula</option>
+<option value="latn/ha.html?showIndex">Hausa</option>
+<option value="latn/wo.html?showIndex">Wolof</option>
+</optgroup>
+</select>
+
+
+<br>
+
+
+
+<span class="instructions">Select/set a fragment id:</span> 
 <select onChange="document.getElementById('fragid').value='#'+this.value; showDoc('')">
 <option value="top">Title</option>
+<option value="sample">Sample</option>
 <optgroup label="Intro">
 <option value="history">Usage &amp; history</option>
 <option value="type">Basic features</option>
@@ -71,36 +427,48 @@ function highlight (type) {
 <option value="index_other">Other</option>
 </optgroup>
 <optgroup label="Phonology">
+<option value="phonemesV">Vowels</option>
+<option value="phonemesC">Consonants</option>
+<option value="tone">Tone</option>
 <option value="structure">Structure</option>
-<option value="phonology">Phonology</option>
 </optgroup>
-<optgroup label="Characters">
-<option value="alphabet">Alphabet</option>
-<option value="vowel_mappings">Vowels mapped to characters</option>
-<option value="vowel_description">Vowel description</option>
-<option value="basicV">• Basic vowels</option>
-<option value="prebase_vowels">• Pre-base vowels</option>
-<option value="circumgraphs">• Circumgraphs</option>
-<option value="composite_vowels">• Composite vowels</option>
-<option value="matres">• Matres lectionis</option>
-<option value="voweldiacritics">• Vowel diacritics</option>
-<option value="standalone">• Standalone vowels</option>
 
+<option value="alphabet">Alphabet</option>
+
+<optgroup label="Vowels">
+<option value="vowels">Vowels</option>
+<option value="basicV">Basic vowels</option>
+<option value="prebase_vowels">Pre-base vowels</option>
+<option value="circumgraphs">Circumgraphs</option>
+<option value="composite_vowels">Composite vowels</option>
+<option value="matres">Matres lectionis</option>
+<option value="voweldiacritics">Vowel diacritics</option>
+<option value="standalone">Standalone vowels</option>
+<option value="vowel_mappings">Vowels mapped to characters</option>
+</optgroup>
+
+<optgroup label="Consonants">
+<option value="consonants">Consonants</option>
+<option value="basicC">Basic consonants</option>
+<option value="extendedC">Repertoire extensions</option>
+<option value="onsets">Syllable onsets</option>
+<option value="finals">Final consonants</option>
+<option value="clusters">Clusters</option>
+<option value="gemination">Gemination</option>
 <option value="consonant_mappings">Consonants mapped to characters</option>
-<option value="consonant_description">Consonant description</option>
-<option value="basicC">• Basic consonants</option>
-<option value="onsets">• Onset consonants</option>
-<option value="finals">• Final consonants</option>
-<option value="clusters">• Clusters</option>
+</optgroup>
 
 <option value="symbols">Symbols</option>
 <option value="encoding">Encoding choices</option>
 <option value="numbers">Numbers</option>
-</optgroup>
 
 <optgroup label="Rendering">
 <option value="direction">Text direction</option>
+<option value="writing_styles">Font styles</option>
 <option value="shaping">Glyph shaping &amp; positioning</option>
+<option value="cursive">Cursive joining</option>
+<option value="context">Context-based shaping &amp; positioning</option>
+<option value="fontstyle">Font sloping &amp; weight</option>
 <option value="graphemes">Graphemes</option>
 </optgroup>
 
@@ -130,138 +498,14 @@ function highlight (type) {
 </select>
 
 <input placeholder="frag id" id="fragid"> 
-
-<!--span style="margin-inline-start: 2rem;" id="orthtype"></span-->
-<label id="typeLabel"><span>Type:</span>
-<select id="orthtype" onChange="highlight(this.value)">
-<option value="Abugida_SAsia">Abugida: SAsia</option>
-<option value="Abugida_SEAsia">Abugida: SEAsia</option>
-<option value="Abjad">Abjad</option>
-<option value="Alphabet_letters">Alphabet: letters</option>
-<option value="Alphabet_diacritics">Alphabet: diacritics</option>
-<option value="Alphabet_vowelsigns">Alphabet: vowelsigns</option>
-<option value="Syllabic_featural">Syllabic: featural</option>
-<option value="Syllabic_simple">Syllabic: simple</option>
-<option value="Syllabic_CJ">Syllabic: CJ</option>
-<option value="Latin">Latin</option>
-</select></label>
 </p>
-
-
-
-<details open id="summaries">
-<summary>Select a document:</summary>
-
-<span class="index">A-B</span> &nbsp;&nbsp;
-<a href="ethi/am.html?showIndex" class="Syllabic_featural" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Amharic</a> •
-<a href="arab/arb.html?showIndex" class="Abjad" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Arabic (MSA)</a> • 
-<a href="armn/hy.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Armenian</a> • 
-<a href="syrc/aii.html?showIndex" class="Alphabet_diacritics" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Assyrian Neo-Aramaic</a> •
-<a href="bali/ban.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Balinese</a> • 
-<a href="latn/bm.html?showIndex" class="Latin" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Bamanan</a> •
-<a href="bamu/bax.html?showIndex" class="Syllabic_simple" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Bamum</a> • 
-<a href="bass/bsq.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Bassa</a> • 
-<a href="beng/bn.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Bangla</a> • 
-<a href="bugi/bug.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Buginese</a> • 
-<a href="mymr/my.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Burmese</a>
-<br>
-
-
-<span class="index">C-F</span> &nbsp;&nbsp;
-<a href="cher/chr.html?showIndex" class="Syllabic_simple" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Cherokee</a> •
-<a href="cans/crk.html?showIndex" class="Syllabic_featural" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Cree (Plains)</a> • 
-<a href="hani/index.html?showIndex" class="Syllabic_CJ" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Chinese</a> • 
-<a href="thaa/dv.html?showIndex" class="Alphabet_diacritics" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Dhivehi</a> •
-<a href="latn/ff.html?showIndex" class="Latin" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Fulah</a>
-<a href="geor/ka.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)"  onClick="showDoc(this.href); return false;">Georgian</a> • 
-<a href="grek/el.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)"  onClick="showDoc(this.href); return false;">Greek</a> • 
-<a href="gujr/gu.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Gujarati</a>
-<br>
-
-
-<span class="index">H-J</span> &nbsp;&nbsp;
-<a href="hani/index.html?showIndex" class="Syllabic_CJ" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Han</a> • 
-<a href="kore/index.html?showIndex" class="Syllabic_featural" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Hangul</a> • 
-Hausa [<a href="latn/ha.html?showIndex" class="Latin" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">boko</a> •
-<a href="arab/ha.html?showIndex" class="Alphabet_diacritics" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">ajami</a>] •
-<a href="hebr/he.html?showIndex" class="Abjad" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Hebrew</a> • 
-<a href="deva/hi.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Hindi</a> •
-<a href="cans/ike.html?showIndex" class="Syllabic_featural" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Inuktitut (Eastern Canadian)</a> • 
-<a href="jpan/index.html?showIndex" class="Syllabic_CJ" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Japanese</a> • 
-<a href="java/jv.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Javanese</a> •
-<br>
-
-
-<span class="index">K-L</span> &nbsp;&nbsp;
-Kashmiri [<a href="deva/ks.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">deva</a> • 
-<a href="arab/ks.html?showIndex" class="Alphabet_diacritics" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">arab</a>] • 
-<a href="kali/kyu.html?showIndex" class="Alphabet_vowelsigns" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Kayah (Western)</a> • 
-<a href="khmr/km.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Khmer</a> • 
-<a href="kore/index.html?showIndex" class="Syllabic_featural" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Korean</a> • 
-<a href="laoo/lo.html?showIndex" class="Alphabet_vowelsigns" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Lao</a> • 
-<a href="lisu/lis.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Lisu</a>
-<br>
-
-
-<span class="index">M-O</span> &nbsp;&nbsp;
-<a href="mlym/ml.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Malayalam</a> • 
-<a href="mand/mid.html?showIndex" class="Alphabet_diacritics" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Mandaic</a> •
-Mongolian [<a href="cyrl/mn.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">cyrl</a> • 
-<a href="mong/mn.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">mong</a>] •
-<a href="nkoo/nqo.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">N’Ko</a> • 
-<a href="newa/new.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Newar</a> • 
-<a href="lana/nod.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Northern Thai</a> •
-<a href="orya/or.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Odia</a> • 
-<a href="osge/osa.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Osage</a>
-<br>
-
-
-<span class="index">P-R</span> &nbsp;&nbsp;
-<a href="cans/crk.html?showIndex" class="Syllabic_featural" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Plains Cree</a> • 
-<a href="arab/pes.html?showIndex" class="Abjad" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Persian</a> • 
-<a href="newa/new.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Pracalit</a> • 
-<a href="adlm/fuf.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Pular</a> • 
-<a href="guru/pa.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Punjabi</a> •
-<a href="rohg/rhg.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Rohingya</a> • 
-<a href="cyrl/ru.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Russian</a>
-<br>
-
-
-<span class="index">S</span> &nbsp;&nbsp;
-<a href="olck/sat.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Santali</a> • 
-<a href="mymr/shn.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Shan</a> • 
-<a href="sinh/si.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Sinhala</a> • 
-<a href="sund/su.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Sundanese</a> • 
-<a href="syrc/syr.html?showIndex" class="Abjad" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Syriac</a>
-<br>
-
-
-<span class="index">T</span> &nbsp;&nbsp;
-<a href="tavt/blt.html?showIndex" class="Alphabet_vowelsigns" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Tai Dam</a> • 
-<a href="lana/kkh.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Tai Khün</a> • 
-<a href="talu/khb.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Tai Lü</a> •
-<a href="tale/tdd.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Tai Nüa</a> • 
-<a href="tfng/zgh.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Tamazight</a> •
-<a href="taml/ta.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Tamil</a> • 
-<a href="telu/te.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Telugu</a> • 
-<a href="thai/th.html?showIndex" class="Abugida_SEAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Thai</a> •
-<a href="tibt/bo.html?showIndex" class="Abugida_SAsia" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Tibetan</a> •
-<a href="syrc/tru.html?showIndex" class="Alphabet_diacritics" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Turoyo</a>
-<br>
-
-
-<span class="index">U-V</span> &nbsp;&nbsp;
-<a href="arab/ug.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Uighur</a> •
-<a href="cyrl/uk.html?showIndex" class="Alphabet_letters" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Ukrainian</a> •
-<a href="arab/ur.html?showIndex" class="Abjad" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Urdu</a> •
-<a href="vaii/vai.html?showIndex" class="Syllabic_simple" onmouseover="highlight(this.className)" onClick="showDoc(this.href); return false;">Vai</a>
-</details>
-
 
 
 <p id="currentURL"></p>
 </div>
 
+
+<hr>
 
 
 <iframe id="out"></iframe>
@@ -275,6 +519,9 @@ for (var p=0;p<parameters.length;p++) {
 	pairs = parameters[p].split('=');
 	if (pairs[0] == 'section') { if (pairs[1]) { document.getElementById('fragid').value = '#'+pairs[1] } }
 	}
+document.getElementById('total').textContent = document.getElementById('selectpage').querySelectorAll('option').length
+console.log('Alpha', document.getElementById('selectpage').querySelectorAll('option').length)
+console.log('Type', document.getElementById('orthtype').querySelectorAll('option').length)
 </script>
 </body>
 </html>
