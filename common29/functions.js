@@ -214,6 +214,7 @@ function closeDialogEsc (e) {
     if (e.code === 'Escape') {
         document.getElementById('dialogBox').open = false
         document.getElementById('panel').style.display = 'none'
+        document.getElementById('tocPanel').style.display = 'none'
         }
 }
 
