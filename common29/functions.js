@@ -98,6 +98,7 @@ function addPageFeatures () {
 
 
 
+
 function expandCharMarkup () {
     if (traceSet.has('expandCharMarkup') || traceSet.has('all')) console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
      // convert char markup to .codepoint spans (has to be done before the indexing)
@@ -126,7 +127,7 @@ function expandCharMarkup () {
                 console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandCharMarkup)', 'color:' + 'red' + ';font-weight:bold;')
                 continue
                 }
-            console.log('>>>',charMarkup[i].classList,charMarkup[i].textContent, hex, dec)
+            //console.log('>>>',charMarkup[i].classList,charMarkup[i].textContent, hex, dec)
             ch = String.fromCodePoint(dec)
             
             if (! spreadsheetRows[ch]) {
@@ -150,9 +151,9 @@ function expandCharMarkup () {
             else unicodeChars += `&#x${ hex };`
             }
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
-        if (blockDirection === 'rtl') out += ` dir="rtl"`
+        //if (blockDirection === 'rtl') out += ` dir="rtl"`
+        if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }</bdi>`
-        if (!img && !svg) out += ' '
         out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
         charMarkup[i].outerHTML = out
@@ -198,12 +199,15 @@ function expandCharMarkup () {
             }
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
+        if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }</bdi>`
-        out += ` <a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
         charMarkup[i].outerHTML = out
         }
     }
+
+
 
 
 
@@ -297,12 +301,14 @@ function setupBlockLinks () {
 
 function setFindIPA () { // test extension to map stuff
 	// makes ipa characters in sounds charts indicate locations they are used
+    // and also sets up codepoint elements
     if (traceSet.has('setFindIPA') || traceSet.has('all')) console.log('setFindIPA(',') Make ipa characters in sounds charts indicate locations they are used')
 
 	var listItems = document.querySelectorAll('.codepoint span, .codepoint bdi')
 	for (var i=0;i<listItems.length;i++) {
         if (listItems[i].parentNode.classList.contains('codepoint')) listItems[i].onclick = makeFootnoteIndex
         }
+
 	var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
 	for (i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
 	var listItems = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone')
@@ -1365,27 +1371,40 @@ function makeFootnoteIndex (charVal) {
     // to locate all instances.  Replaced the latter with .includes
     // seems to work: wait a while to ensure it's a good fix, then delete the following
     if (typeof charVal === 'string') incomingValue = charVal.replace(/◌/g,'')
+    else if (this.querySelector('img')) incomingValue = this.querySelector('img').alt.replace(/◌/g,'')
     else incomingValue = this.textContent.replace(/◌/g,'')
-    itemToFind = new RegExp(makeSafeRegex(incomingValue), 'g')
+    //itemToFind = new RegExp(makeSafeRegex(incomingValue), 'g')
     //console.log('search for:',itemToFind)
 
 	// collect all the .listItem & .codepoint elements
 	var possibleMatches = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
 	var counter = 0
 	var links = []
-    for (x=0;x<possibleMatches.length;x++) if (traceSet.has('makeFootnoteIndex')) console.log('possibleMatch:',possibleMatches[x].textContent)
+    //for (x=0;x<possibleMatches.length;x++) if (traceSet.has('makeFootnoteIndex')) console.log('possibleMatch:',possibleMatches[x].textContent)
     
     // clear any existing highlights
-	for (var k=0;k<possibleMatches.length;k++) possibleMatches[k].style.backgroundColor = 'transparent'
+	for (var k=0;k<possibleMatches.length;k++) {
+        possibleMatches[k].style.backgroundColor = 'transparent'
+        possibleMatches[k].style.padding = '0'
+        }
 	
     // check for matches and add highlights etc
 	for (var i=0;i<possibleMatches.length;i++) {
+        // get the value of this possible match, whether a bdi/span or an img
+        if (possibleMatches[i].querySelector('img')) possibleMatchValue = possibleMatches[i].querySelector('img').alt
+        else possibleMatchValue = possibleMatches[i].textContent
+        
+        //if (traceSet.has('makeFootnoteIndex')) console.log('Seeking possibleMatch in:',possibleMatchValue)
+        
+        // if this is a span around a character name, ignore it
+        // otherwise check whether the possible match matches the thing we're looking for
         if (possibleMatches[i].parentNode.nodeName !== 'A' && 
        // itemToFind.test(possibleMatches[i].textContent)) {
-        possibleMatches[i].textContent.includes(incomingValue)) {
+        possibleMatchValue.includes(incomingValue)) {
             possibleMatches[i].style.backgroundColor = '#ffa442ad'
             possibleMatches[i].style.borderRadius = '5px'
-            //console.log('FOUND',possibleMatches[i].textContent)
+            possibleMatches[i].style.paddingInline = '.25rem'
+            //console.log('FOUND',incomingValue,'in',possibleMatchValue)
             
             // gather a list of links to the found items
             var ptr = possibleMatches[i]
@@ -1438,7 +1457,10 @@ function clearFootnoteIndexHighlights () {
     // removes the highlighting associated with the footnote index links
     // called when the footnote index box is closed
 	var listItems = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
-	for (var k=0;k<listItems.length;k++) listItems[k].style.backgroundColor = 'transparent'
+	for (var k=0;k<listItems.length;k++) {
+        listItems[k].style.backgroundColor = 'transparent'
+        listItems[k].style.padding = '0'
+        }
     }
 
 
