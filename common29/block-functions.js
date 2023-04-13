@@ -344,14 +344,14 @@ function findLangs (node) {
         if (languages.length>0) out += 'Used by: '
         else if (auxlanguages.length>0) out += 'Used infrequently by: '
         for (let l=0;l<languages.length;l++) {
-            out += '<a href="/app-charuse/?language='+languages[l]+'" target="_blank">'
+            out += '<a href="../../app-charuse/index.html?language='+languages[l]+'" target="_blank">'
             out += langs[languages[l]].name.replace(/ \([^\)]+\)/g,'')
             out += '</a>'
             if (l<languages.length-1) out += ' &bull; '
             }
         if (auxlanguages.length>0 && languages.length>0)  out += ', and infrequently by: '
         for (let l=0;l<auxlanguages.length;l++) {
-            out += '<a href="/app-charuse/?language='+auxlanguages[l]+'" target="_blank" style="font-style:italic; font-size: 90%;">'
+            out += '<a href="../../app-charuse/index.html?language='+auxlanguages[l]+'" target="_blank" style="font-style:italic; font-size: 90%;">'
             out += langs[auxlanguages[l]].name.replace(/ \([^\)]+\)/g,'')
             out += '</a>'
             if (l<languages.length-1) out += ' &bull; '
@@ -563,7 +563,7 @@ function addBasics (lang, dir) {
 		out += '<div class="charimg">&#x'+hex+';</div>\n'
 		out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
 		out += '<p class="univiewLink"><a target="_blank" href="https://util.unicode.org/UnicodeJsps/character.jsp?a='+hex+'">Unicode properties</a><br>\n'
-		out += '<a target="_blank" href="../../uniview/?char='+hex+'">Open in UniView</a></p>\n'
+		out += '<a target="_blank" href="../../uniview/index.html?char='+hex+'">Open in UniView</a></p>\n'
 		
 		// get data from descriptions.js
 		var unicodenotes = ''
@@ -710,7 +710,7 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 
                 // add a link to the character app
                 if (window.pickerDir) {
-                    out += '<a target="_blank" href="../../pickers/'+window.pickerDir+'index.html?text='+encodeURIComponent(cchar)+'">character app</a> '
+                    out += '<a target="_blank" href="../../pickers/'+window.pickerDir+'/index.html?text='+encodeURIComponent(cchar)+'">character app</a> '
                     }
 
                 out += '</p>'
@@ -845,11 +845,11 @@ if (node.innerHTML == '') {
 
     <p class="instructions">The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
 
-    <p class="instructions"><span class="leadin">Language usage lists.</span> Information about languages that use these characters is taken from the list maintained for the <a href="../../app-charuse/">Character usage lookup</a> app. The list is not exhaustive.</p>
+    <p class="instructions"><span class="leadin">Language usage lists.</span> Information about languages that use these characters is taken from the list maintained for the <a href="../../app-charuse/index.html">Character usage lookup</a> app. The list is not exhaustive.</p>
 
     <p class="instructions"><span class="leadin">References &amp; further information.</span> References are indicated by superscript letters, optionally followed by page numbers. Wherever possible, those contain direct links to the source material. When there is also an arrow → it is worth following the link for  additional information. The references are listed at the bottom of the page, but the links should take you to the exact location of the source, wherever possible.</p>
 
-    <p class="instructions"><span class="leadin">UniView.</span><a href="../../uniview/">UniView</a>'s notes feature pulls in information about characters from this page.</p>
+    <p class="instructions"><span class="leadin">UniView.</span><a href="../../uniview/index.html">UniView</a>'s notes feature pulls in information about characters from this page.</p>
 
     <details class="instructions"><summary>Make a list of characters with notes for a spreadsheet:</summary>
     <p>Add list of characters here: <input id="notesListIn" placeholder=">"> <button 
