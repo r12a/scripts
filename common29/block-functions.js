@@ -19,7 +19,10 @@ function setMarks (languageName) {
     return
     }
 
+
+
 function expandCharMarkup () {
+    if (traceSet.has('expandCharMarkup') || traceSet.has('all')) console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
      // convert char markup to .codepoint spans (has to be done before the indexing)
      // the .ch and .hx classes should only be used for characters in the
      // spreadsheet.  For other characters, generate the markup in a picker
@@ -27,6 +30,7 @@ function expandCharMarkup () {
      // if the split class used, the characters will be separated by +
      
      var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block
+     
    
     // convert .hx markup (one or more hex codes)
     charMarkup = document.querySelectorAll('.hex, .hx')
@@ -45,7 +49,7 @@ function expandCharMarkup () {
                 console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandCharMarkup)', 'color:' + 'red' + ';font-weight:bold;')
                 continue
                 }
-            console.log('>>>',charMarkup[i].classList,charMarkup[i].textContent, hex, dec)
+            //console.log('>>>',charMarkup[i].classList,charMarkup[i].textContent, hex, dec)
             ch = String.fromCodePoint(dec)
             
             if (! spreadsheetRows[ch]) {
@@ -69,11 +73,12 @@ function expandCharMarkup () {
             else unicodeChars += `&#x${ hex };`
             }
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
-        if (blockDirection === 'rtl') out += ` dir="rtl"`
+        //if (blockDirection === 'rtl') out += ` dir="rtl"`
+        if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }</bdi>`
-        out += ` [<a href="#char${ hex }"><span class="uname">${ unicodeNames }</span></a>]</span>`
+        out += `<a href="#char${ hex }"><span class="uname">${ unicodeNames }</span></a></span>`
         
-        charMarkup[i].innerHTML = out
+        charMarkup[i].outerHTML = out
         }
    
     // convert .ch markup (one or more characters using Unicode code points)
@@ -90,7 +95,7 @@ function expandCharMarkup () {
             dec = charlist[c].codePointAt(0)
             hex = dec.toString(16).toUpperCase()
             while (hex.length < 4) hex = '0'+hex
- 
+
             if (! spreadsheetRows[charlist[c]]) {
                 unicodeChars += charlist[c]
                 unicodeNames += `<span style="color:red"> ${ charlist[c] } NOT IN DB!</span> `
@@ -116,12 +121,16 @@ function expandCharMarkup () {
             }
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
+        if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }</bdi>`
-        out += ` [<a href="#char${ hex }"><span class="uname">${ unicodeNames }</span></a>]</span>`
+        out += `<a href="#char${ hex }"><span class="uname">${ unicodeNames }</span></a></span>`
         
-        charMarkup[i].innerHTML = out
+        charMarkup[i].outerHTML = out
         }
     }
+
+
+
 
 
 function buildPage () {
