@@ -9250,10 +9250,11 @@ autoExpandExamples.he = `
 
 אָלֶף־בֵּית עִבְרִי|Hebrew alphabet|a§le§f§-§be§‹§t§ §i§v§ri§‹|
 
-
-
-
-
+תָּכְנִית|program|to§χ§ˈni§‹§t
+שֳׁרָשִׁים|roots|ʃo§ʁa§ˈʃi§‹§m
+צִפֳּרִים|birds|tsi§po§ˈʁi§‹§m
+אֳרָנִים|pines|o§ʁa§ˈni§‹§m
+חׇפְשִׁי|free|χo§f§ˈʃi§‹
 
 
 
