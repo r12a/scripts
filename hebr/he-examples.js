@@ -202,7 +202,9 @@ autoExpandExamples.he = `
 אווז||
 אווזון||
 אוויל||
-אוויר||
+אוויר|air|ˀa§ˈvi§‹§‹§r
+אֲוִיר|air|ˀa§ˈvi§‹§r
+אויר|air|ˀa§ˈvi§‹§r
 אווירה||
 אווירי||
 אוון||
@@ -227,7 +229,6 @@ autoExpandExamples.he = `
 אוי ואבוי||
 אוי||
 אויב||
-אויר||
 אוירה||
 אוירודינמיקה||
 אוירון||
@@ -250,7 +251,10 @@ autoExpandExamples.he = `
 אומלל||
 אומן||
 אומנות||
-אומץ||
+אומץ|courage|ˈˀo§‹§me§ts
+אֹמֶץ|courage|ˈˀo§me§ts
+אמץ|courage|ˈˀo§me§ts
+||
 אומר||
 און||
 אוניברסיטה||
@@ -8747,7 +8751,10 @@ autoExpandExamples.he = `
 שניה||
 שניוני||
 שנייה||
-שניים||
+שניים|two|ˈʃ§na§j§‹i§m
+שְׁנַיִם|two|ˈʃ§na§ji§m
+שנים|two|ˈʃ§na§ji§m
+||
 שנים עשר||
 שניצל||
 שנער||
@@ -9256,6 +9263,9 @@ autoExpandExamples.he = `
 אֳרָנִים|pines|o§ʁa§ˈni§‹§m
 חׇפְשִׁי|free|χo§f§ˈʃi§‹
 
+חלוקה|distribution|ħa§lu§‹§ˈqa§–
+חֲלֻקָּה|distribution|ħa§lu§ˈqa§–
+חלקה|distribution|ħa§lu§ˈqa§–
 
 
 
