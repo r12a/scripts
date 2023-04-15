@@ -75,6 +75,12 @@ reflist = {
 "title":"Help:IPA/Hebrew",
 },
 
+"wk": {
+"url":"https://en.wikipedia.org/wiki/Kamatz",
+"authors": "Wikipedia",
+"title":"Kamatz",
+},
+
 "wp": {
 "url":"https://en.wikipedia.org/wiki/Modern_Hebrew_phonology",
 "authors": "Wikipedia",
