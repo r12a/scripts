@@ -676,7 +676,7 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 		var dec = parseInt(hex, 16)
 		var cchar = String.fromCodePoint(dec)
 		
-		if (spreadsheetRows[cchar]) {
+		if (spreadsheetRows[cchar] && charDetails[cchar]) {
 			var out = '<div class="letter '+langClass+'" id="'+langClass+hex+'">'
 
 			// show shape from shape column (use for cursive or conjunct text)
