@@ -59,8 +59,8 @@ function expandCharMarkup () {
                 }
             
             if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
-            
+            unicodeNames += `<a href="#char${ hex }"><span class="uname">${ spreadsheetRows[ch][cols['ucsName']].replace(/:/,'') }</span></a>`
+
             if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
             if (svg) {
                 block = getScriptGroup(dec, false)
@@ -76,7 +76,7 @@ function expandCharMarkup () {
         //if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }</bdi>`
-        out += `<a href="#char${ hex }"><span class="uname">${ unicodeNames }</span></a></span>`
+        out += `${ unicodeNames }</span>`
         
         charMarkup[i].outerHTML = out
         }
@@ -104,7 +104,8 @@ function expandCharMarkup () {
             
             if (charlist[c] !== '◌') {
                 if (c > 0) unicodeNames += ' + '
-                unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
+                unicodeNames += `<a href="#char${ hex }"><span class="uname">${ spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'') }</span></a>`
+
                 }
 
             if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
@@ -123,11 +124,14 @@ function expandCharMarkup () {
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }</bdi>`
-        out += `<a href="#char${ hex }"><span class="uname">${ unicodeNames }</span></a></span>`
+        out += `${ unicodeNames }</span>`
         
         charMarkup[i].outerHTML = out
         }
     }
+
+
+
 
 
 
