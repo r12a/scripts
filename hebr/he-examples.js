@@ -8881,7 +8881,7 @@ autoExpandExamples.he = `
 תאר|epithet|ˈto.aʁ||תּאר#תאר
 תֹּאַר|epithet|ˈto.aʁ||תאר
 תּאר|epithet|ˈto.aʁ||תאר
-תּן|jackal|ˈta§n|תַן
+תַּן|jackal|ˈta§n|תן
 תן|jackal|ˈta§n|תַּן
 תּעבד|you will work|taː'vod|תַּעֲבֹד
 תּשוּקה|passion|t͡ʃuˈka|תְּשׁוּקָה
