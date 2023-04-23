@@ -37,14 +37,14 @@ function sortVocab() {
         var currentLineArray = charlist[i].split('|')
         var joinedLine = charlist[i].split('|').join('').trim()
         
-        if (previousLineArray[0].replace(/§§§§§/,'') === currentLineArray[0]) {
-            if (previousLineArray[0].replace(/§§§§§/,'') === joinedLine) {
+        if (previousLineArray[0].replace(/£££££/,'') === currentLineArray[0]) {
+            if (previousLineArray[0].replace(/£££££/,'') === joinedLine) {
                 rejected.push(charlist[i])
                 charlist.splice(i,1)
                 i--
                 }
             else {
-                charlist[i] = charlist[i]+'§§§§§'
+                charlist[i] = charlist[i]+'£££££'
                 }
             }
         }
@@ -106,9 +106,32 @@ function makeList() {
 
 
 
+<p><button onClick="generateVowelledEntries()">Generate vowelled entries</button><br><em>Input: list of terms from xx-examples for Arabic, Hebrew, etc. Output: list of items containing entries for those items with vowelled alternatives.</em></p>
+<script>
+function generateVowelledEntries() {
+	charlist = document.getElementById('in').value.split('\n')
+	
+	out = ''
+	for (i=0;i<charlist.length;i++) {
+		if (charlist[i] == '') continue
+		row = charlist[i].split('\|')
+        if (typeof row[5] === 'undefined') row[5] = ''
+		if (row[0] && row[4]) out += `${ charlist[i] }\n${ row[4] }|${ row[1] }|${ row[2] }|${ row[3] }|${ row[0] }|${ row[5] }\n`
+        else out += `${ charlist[i] }\n`
+		}
+	
+	
+
+	document.getElementById('out').value = out
+	document.getElementById('out').select()
+	}
+</script>
+
+
+
 
 <div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
-<!-- #BeginDate format:IS1m -->2021-10-06  15:56<!-- #EndDate --> 
+<!-- #BeginDate format:IS1m -->2023-04-22  6:50<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script>
