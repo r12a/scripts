@@ -65,7 +65,10 @@ autoExpandExamples.he = `
 אֲרִיאֵל|Ariel|(ʔ)a§ʁi§‹§ˈ(ʔ)e§l|ari'él|אריאל|
 אֲרַם|Aram|(ʔ)a§ˈʁa§m|'arám|ארם|
 אֲרָרָט|Ararat|(ʔ)a§ʁa§ˈʁa§t|ararát|אררט|
-אֳרָנִים|pines|o§ʁa§ˈni§‹§m
+אֳרָנִים|pines|o§ʁa§ˈni§‹§m||אורנים 
+אורנים|pines|o§ʁa§ˈni§‹§m||אֳרָנִים 
+אורן|pine tree||'óren|אֹרֶן
+אֹרֶן|pine tree||'óren|אורן
 אִבְחָה|brandishing a sword|(ʔ)i§v§ˈχa§‹|ivkhá|אבחה|
 אִבֵּד|to waste, lose|(ʔ)i§ˈbe§d|'ibéd|איבד|
 אִבּוּד|waste, loss|(ʔ)i§ˈb§u§d|ibúd|איבוד|
@@ -427,7 +430,8 @@ autoExpandExamples.he = `
 אוסטרלית||
 אוסלו||
 אוסף||
-אופה|baker|–§o§ˈfe§‹|אוֹפֶה
+אופה|baker|›§o§ˈfe§‹|'ofé|אוֹפֶה
+אוֹפֶה|baker|›§o§ˈfe§‹|'ofé|אופה
 אופוזיציה||
 אופוסום||
 אופטימי||
@@ -5035,7 +5039,7 @@ autoExpandExamples.he = `
 להתראות|goodbye|le§(h)i§t§ʁa§ˈ(ʔ)§o§t|l'hitra'ót|לְהִתְרָאוֹת
 לה״ו||
 לו|if|l§u|l§u|לוּ
-לו|to him|l§o|לוֹ££££££££££
+לו|to him|l§o|לוֹ
 לוֹ|to him|l§o|לו
 לוֹבְּסְטֶר|lobster|ˈl§o§b.§s§te§ʁ|lóbster|לובסטר|
 לוּ|if|l§u|l§u|לו|
@@ -8165,7 +8169,8 @@ autoExpandExamples.he = `
 צִי|navy|t͡si§‹|tsi|צי|
 צִיּוֹן|Zion|t͡si§ˈj§o̞§n|tsiyón|ציון|
 צִיץ|bud|t͡si§‹§t͡s|tzítz|ציץ
-צִפֳּרִים|birds|tsi§po§ˈʁi§‹§m
+צִפֳּרִים|birds|tsi§po§ˈʁi§‹§m||ציפורים
+ציפורים|birds|tsi§po§ˈʁi§‹§m||צִפֳּרִים
 צִפֹּרָה|Zipporah|t͡siˈ§p§o§ʁa§‹|tsipóra|צפורה|
 צִפּוֹר|bird|t͡si§ˈp§o§ʁ|tsipór|ציפור|
 צִ׳יק צָ׳ק|very quickly|ˈtʃi§‹§‹§k.§ §tʃa§‹§k|chik-chak|צ׳יק צ׳ק|
