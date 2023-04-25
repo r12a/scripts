@@ -7,12 +7,10 @@ autoExpandExamples.nqo = `
 ߓߐߗ߭ߎߙ. ߓߌߢߍ߲ ߝ߭ߋߣߎ߳.|Bonjour. Bien venue.|b§ɔ§ʒ§u§r§.§ §b§i‌§ɲ§ɛ̃§ §v§e§n§y|bɔʧ³ur. biɲɛ˜ f³enuˑ.||x
 ߕߏ߲ߜߊ|litre||to˜gᵇa
 ߘߋ߲ߣߍ߲ ߠߎ߬ ߟߊ߫ ߓߋߟߋ߲ߠߊ|a speech from the children|dẽnɛ̃ łu la belẽła|
-ߛߌ ߺ ߌ ߺ ߛߌ|anyone||si _ i _ si
 ߛߌߘߐ|gram||sidɔ
 ߜߟߊ߬ߗߡߍ߬ߝߘߎ߬ߓߍ߲|cm²||gbàlàcɛ̀mɛ̀fùdùbɛ̃
 ߜߟߊ߬ߥߊ߰ߘߋ߲|millimetre||gbalàwàadẽ||x
 ߞߎߘߍ|kilometer||kudɛ
-ߡߐ߰ ߺ ߐ ߺ ߡߐ߰|everyone||mɔ⁶ _ ɔ _ mɔ⁶
 ߁߂߃߲|123rd||1̣2̣3̣˜
 
 ߟߊߡߌ߲߬|drink||lami˜²
@@ -124,6 +122,9 @@ autoExpandExamples.nqo = `
 
 
 ߾߅،߿߉߅|5 dorome and 95 taman (đ5.ŧ95)|
+ߛߎ ߺ ߎ ߺ ߛߎ|every night||su-u-su
+ߛߌ ߺ ߌ ߺ ߛߌ|anyone||si _ i _ si
+ߡߐ߰ ߺ ߐ ߺ ߡߐ߰|everyone||mɔ⁶ _ ɔ _ mɔ⁶
 
 
 
