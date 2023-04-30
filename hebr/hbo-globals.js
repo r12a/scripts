@@ -12,7 +12,7 @@ pickerDir='hebr'  // directory name for picker, no slash at end
 scriptSummaryTableName='hbo'  // id used for langs record in xx-langdata.js; used to make summary table
 charUsageBCP='hbo'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only
 orthogName = 'Hebrew' // natural language name for the orthography; used only in makeIndexIntro
-languageName = 'Biblical Hebrew' // natural language name of language; used in various places, esp block
+languageName = 'Miscellaneous other' // natural language name of language; used in various places, esp block
 scriptIsIndic = true  // true if there are indic syllabic categories; used only in makeIndexIntro
 
 
