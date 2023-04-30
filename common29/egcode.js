@@ -28,6 +28,13 @@ function addExamples (langFilter) {
     [GLOBALS]
     autoExpandExamples, obj, set above, then populated under .<langFiler> in xx-examples.js; holds all vocab
     
+    [CLASSES]
+    The calling element can have class names with the following meanings:
+    inline      don't make into a separate, large text block
+    transc      used to force display of the transcription rather than the IPA
+    alt         displays the IPA/transcription with the special transcription (eg. vowelled version or other orthography than Latin)
+    vertical    applies a vertical writing mode, eg. for Mongolian
+    
     [LOCALS]
     egArray, array, built from autoExpandExamples
     egList, object, list of vocab filtered out by langFilter with native word as key
@@ -78,7 +85,14 @@ function addExamples (langFilter) {
             var ipa = termdata[2]
             var transc = termdata[3]
             var notes = termdata[4]
-            var source = termdata[5]
+            var alt = termdata[4]
+            
+            // choose the source pointer field depending on whether alt has been used
+            var source
+            if (termdata.length == 7) source = termdata[6]
+            else source = termdata[5]
+            
+            
             if (ipa) var cleanIPA = ipa.replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
             else cleanIPA = ''
             if (nodes[n].classList.contains('transc')) var forceTranscription = true
@@ -101,6 +115,19 @@ function addExamples (langFilter) {
 			out += '>'
 			out += term
 			out += '</bdi>'
+            
+            // add an alternate transcription if requested
+            if (nodes[n].classList.contains('alt')) {
+                out += ` &nbsp;≡&nbsp; <bdi class="ex`
+                if (nodes[n].classList.contains('vertical')) out += ' vertical'
+                out += `" lang="${ nodes[n].lang }"`
+                if (nodes[n].dir === 'rtl') out += ' dir="rtl"'            
+                out += `  onclick="showNameDetails('${ alt }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }')"`
+                out += '>'
+                out += alt
+                out += '</bdi>'
+                }
+                
 			
             // bail if there is a nometadata class name
             // this is used principally for maps with non-pointed examples
