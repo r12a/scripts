@@ -346,7 +346,8 @@ autoExpandExamples.he = `
 אהרוני||
 אהרן|Aaron|(ʔ)a.§ha.§ˈʁo§n|'aharón|אַהֲרֹן
 או||
-אוֹטָוָה|Ottawa||otawa|אוטווה
+אוטווה|Ottawa|o§‹§ta§›§wa§‹|otawa|אוֹטָוָה
+אוֹטָוָה|Ottawa|o§‹§ta§›§wa§‹|otawa|אוטווה
 אוֹיֵב|enemy|o§‹§ˈje§v|oyév|אויב|
 אוֹסְטְרִיָה|Austria|ˈ(ʔ)§o§s§t§ʁi§ja§‹|ost'ria|אוסטריה|
 אוֹקְיָנוֹס|ocean|(ʔ)§o§k§ja§n§u§s|oqyanós|אוקיינוס|
@@ -396,7 +397,6 @@ autoExpandExamples.he = `
 אוטו||
 אוטובוס||
 אוטוביוגרפי||
-אוטווה|Ottawa||otawa|אוֹטָוָה
 אוטוטו||
 אוטונומיה||
 אוטופיה||
