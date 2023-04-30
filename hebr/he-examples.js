@@ -1,19 +1,36 @@
 /*
 @ Source: 
-§ 'Noto Serif Hebrew WF'
-# 200
-~ rtl
-! he
+
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ x means that no link to Wiktionary should be added
+   if Wiktionary spells the word differently, add the spelling here
 */
+
+
+
+otherTranscription = true
+
+
+
+
 autoExpandExamples.he = `
-
-
 
 
  אֶבוֹלוּצִיוֹנִי|evolutionary|(ʔ)e§v§o§l§u§t͡s§ˈj§o§ni§‹|evolutsyóni|אבולוציוני|
  אַבּוּב|reed, flute|(ʔ)a§ˈb§u§v|abúv|אבוב|
  דֵּמוֹקְרַטְיָה|democracy|de§m§o§ˈk§ra§t§ja§‹|demokrátya|דמוקרטיה|
- דַּחְלִיל|scarecrow|da§χ§ˈli§‹§l|dakhlil|דחליל|
+דַּחְלִיל|scarecrow|da§χ§ˈli§‹§l|dakhlil|דחליל
  זַ׳רְגוֹן|jargon|ʒa§‹§r§ɡ§o§n|zhargón|ז׳רגון|
  ז׳רגון|jargon|ʒa§‹§r§ɡ§o§n|zhargón|זַ׳רְגוֹן|
  לְחַיִּים|a blessing, toast|le§χa§ˈji§‹§m|l'chayím|לחיים|
@@ -176,7 +193,6 @@ autoExpandExamples.he = `
 אָרוֹן|cupboard|a§ˈʁ§o§n|arón|ארון|
 אֹֽכֶל|food|ˈ(ʔ)o§χe§l|'ókhel|אוכל|
 אֹמֶץ|courage|ˈˀo§me§ts
-אֹרֶז|rice||órez|אורז|x
 אֻמָּנוּת|craft, skill|(ʔ)u§ma§ˈn§u§t|umanút|אומנות|
 א־ב־ד||
 א־ב־ז־ר||
@@ -364,8 +380,8 @@ autoExpandExamples.he = `
 אווז||
 אווזון||
 אוויל||
-אוויר|air|ˀa§ˈvi§‹§‹§r
-אווירה||
+אוויר|air|ˀa§ˈvi§‹§‹§r|avír|אֲוִיר
+אֲוִיר|air|ˀa§ˈvi§‹§‹§r|avír|אוויר
 אווירי||
 אוון||
 אוונטה|boastful act|a§wa§‹§n§ta§‹|awanta|אַוַונְטַה
@@ -473,6 +489,7 @@ autoExpandExamples.he = `
 אורה||
 אורווה||
 אורון||
+אֹרֶז|rice||órez|אורז|x
 אורז|rice||órez|אֹרֶז
 אורח||
 אורחה||
@@ -697,7 +714,7 @@ autoExpandExamples.he = `
 איש קש||
 איש שלג||
 איש|man, husband|(ʔ)i§‹§ʃ|'ish|אִישׁ
-אישה|wife, woman|i§‹§ʃˈa§‹|אִשָּׁה
+אישה|wife, woman|i§‹§ʃˈa§‹||אִשָּׁה
 אישון||
 אישי||
 אישיות||
@@ -711,7 +728,8 @@ autoExpandExamples.he = `
 אכזב||
 אכזבה||
 אכזרי||
-אכל|to eat|a§ˈχa§l|akhál
+אכל|to eat|a§ˈχa§l|akhál|אָכַל
+אָכַל|to eat|a§ˈχa§l|akhál|אכל
 אכלה|food (biblical)|ʔo§χ§ˈla§‹|okhlá|אָכְלָה
 אכלס||
 אכפת||
@@ -1722,7 +1740,8 @@ autoExpandExamples.he = `
 גֶּפֶן|grapevine|ˈɡe§fe§n|géfen|גפן|
 גֶּרֶב|sock|ˈɡe§ʁe§v|gérev|גרב|
 גַּבְרִיאֵל|Gabriel|ɡa§v§ʁi§‹§ˈɛ§l|gavri'él|גבריאל
-גַּג|roof|ga§g|גג
+גַּג|roof|ga§g||גג
+גג|roof|ga§g||גַּג
 גַּל־קוֹל|sound wave|ɡa§l§-§ˈk§o§l|gal-kól|גל־קול|
 גַּם|also|ga§m|gam|גם|
 גַּמְבָּה|bell pepper|ˈɡa§m§ba§‹|gámba|גמבה
@@ -1788,7 +1807,6 @@ autoExpandExamples.he = `
 גברתן||
 גבשושית||
 גב׳|Mrs.||gvéret
-גג|roof|ga§g|גַּג
 גד||
 גדא||
 גדה||
@@ -2155,7 +2173,7 @@ autoExpandExamples.he = `
 דושנבה||
 דז׳ה וו|déjà vu||dezha-vú
 דחה||
-דחליל|scarecrow|da§χ§ˈli§‹§l|dakhlil| דַּחְלִיל
+דחליל|scarecrow|da§χ§ˈli§‹§l|dakhlil|דַּחְלִיל
 דחף|to push|da§ˈχa§f|dakháf|דָּחַף
 דָּחַף|to push|da§ˈχa§f|dakháf|דחף
 דחפור||
@@ -2786,7 +2804,6 @@ autoExpandExamples.he = `
 הסללה||
 הסלמה||
 הסמיק||
-הסניף||
 הסעה||
 הספיק||
 הספק||
@@ -3239,7 +3256,6 @@ autoExpandExamples.he = `
 וֶרֶד|rose|ˈvɛ§ʁɛ§d|véred|ורד|
 וַיִּקְרָא|Leviticus|va.§ji§k§ˈʁa§‹|vayikrá|ויקרא|
 וַשְׁתִּי‬|Vashti|va§ʃ.§ˈti§‹|vashtí|ושתי|
-וָו|hook|va§v|וו
 וּבְכֵן|in that case|u§v§ˈχɛ§n|uvkhén|ובכן|
 ו־|and|və-
 ואגאדוגו||
@@ -3251,7 +3267,8 @@ autoExpandExamples.he = `
 וגו'||
 ודאות||
 ודאי||
-וו|hook|va§v|וָו
+וָו|hook|va§v||וו
+וו|hook|va§v||וָו
 ווֹק|wok|w§o§k|wok|ווק|
 וואו|Wow!||wáu
 וואחש||
@@ -3987,7 +4004,9 @@ autoExpandExamples.he = `
 חרס||
 חרסינה||
 חרף||
-חרפ||
+חרפ|to sleep deeply||kharáp|חָרַפּ
+חָרַפּ|to sleep deeply||kharáp|חרפ
+||
 חרץ||
 חרצית||
 חרצן||
@@ -4131,7 +4150,8 @@ autoExpandExamples.he = `
 טינף||
 טיס||
 טיסה||
-טיפ||
+טיפ|tip||tip|טִיפּ
+טִיפּ|tip||tip|טיפ
 טיפה||
 טיפול||
 טיפוס||
@@ -4157,7 +4177,8 @@ autoExpandExamples.he = `
 טלויזיה||
 טלית|prayer shawl|ta§ˈli§‹§t|talít|טַלִּית
 טלנובלה||
-טלסקופ||
+טלסקופ|telescope||teleskóp|טֶלֶסְקוֹפּ
+טֶלֶסְקוֹפּ|telescope||teleskóp|טלסקופ
 טלפון נייד||
 טלפון סלולרי||
 טלפון|phone|ˈte§le§f§o§n|télefon|טֵלֵפוֹן
@@ -5194,7 +5215,8 @@ autoExpandExamples.he = `
 לעת עתה||
 לפה|hither|le§ˈfo§‹|l'fó|לְפֹה
 לפחות||
-לפטופ||
+לפטופ|laptop||láptop|לָפְּטוֹפּ
+לָפְּטוֹפּ|laptop||láptop|לפטופ
 לפי||
 לפיד||
 לפלף||
@@ -5842,7 +5864,8 @@ autoExpandExamples.he = `
 מיקם||
 מיקרואורגניזם||
 מיקרוביאלי||
-מיקרוסקופ||
+מיקרוסקופ|microscope||mikroskop|מִיקְרוֹסְקוֹפּ
+מִיקְרוֹסְקוֹפּ|microscope||mikroskop|מיקרוסקופ
 מיקרופון|microphone|mi§‹§k§ʁ§ɔ§ˈf§ɔ§n|mikrofón|מִיקְרוֹפוֹן
 מישהו|somebody|ˈmi.§‹§ʃɛ.§(h)§u|míshehu|מִישֶׁהוּ
 מישיגן||
@@ -6918,7 +6941,8 @@ autoExpandExamples.he = `
 נתקל||
 נתרן||
 סְמִיכוּת|consistency|s§mi§‹§ˈχ§u§t|s'mikhút|סמיכות|
-סְנִיף|branch (org)|ˈs§ni§‹§f|sníf|סנפיר|
+סְנִיף|branch (org)|ˈs§ni§‹§f|sníf|סניף
+סניף|branch (org)|ˈs§ni§‹§f|sníf|סְנִיף
 סְעוּדָה|feast|se§ʔ§u§ˈda§‹|seudá|סעודה|
 סְפָרַדִּית|Spanish (lang)|s§fa§ʁa§ˈdi§‹§t|s'faradít|ספרדית|
 סְקוֹטְלַנְד|Scotland|ˈs§k§o§t§la§n§d|skótland|סקוטלנד|
@@ -7211,7 +7235,6 @@ autoExpandExamples.he = `
 סנטה פה||
 סנטיאגו||
 סנטר||
-סניף||
 סנסקריט||
 סנפיר|fin, flipper|s§na§ˈpi§‹§ʁ|n'napír|סְנַפִּיר
 סְנַפִּיר|fin, flipper|s§na§ˈpi§‹§ʁ|n'napír|סנפיר
@@ -7730,7 +7753,6 @@ autoExpandExamples.he = `
 פְּרִי|fruit|p§ʁi§‹|pri|פרי|
 פְּשִׁיטַת־רֶגֶל|bankruptcy|p§ʃi§‹§ta§t§-§ˈʁɛ§ɡɛ§l|pshitat-régel|פשיטת רגל|
 פִּטְמָה|nipple|pi§t§ma§‹|pitma|פטמה|
-פִּינְגְּוִין|penguin|ˈpi§‹§n§ɡ§wi§‹§n||פּינגּוין|
 פִּיצָה|pizza|ˈpi§‹§t͡sa§‹|pítsa|פיצה|
 פִּסֵּחַ|to jump, skip|pi§ˈse§aχ|piséakh|פיסח|
 פִּשֵּׁט|to simplify|pi§ˈʃɛ§t|pishét|פישט|
@@ -7764,7 +7786,9 @@ autoExpandExamples.he = `
 פּוֹפָּאי|Popeye|ˈp§o§pa§‹§j|pópay|פופאי|
 פּוֹפּוּלָרִי|popular|p§o.§p§u§ˈla.§ʁi§‹|populári|פופולרי|
 פּוּנְדָק|inn|p§u§n§ˈda§k|pundák|פונדק|
+פִּינְגְּוִין|penguin|ˈpi§‹§n§ɡ§wi§‹§n||פינגוין|
 פּינגּוין|penguin|ˈpi§‹§n§ɡ§wi§‹§n||פִּינְגְּוִין
+פינגוין|penguin|ˈpi§‹§n§ɡ§wi§‹§n||פִּינְגְּוִין
 פ־ו־ץ||
 פ־ח־ד||
 פ־ט־ר||
@@ -8607,7 +8631,8 @@ autoExpandExamples.he = `
 קטע||
 קטף||
 קטר||
-קטשופ||
+קטשופ|tomato ketchup||ketsop|קֶטְשׁוֹפּ
+קֶטְשׁוֹפּ|tomato ketchup||ketsop|קטשופ
 קי||
 קיבה||
 קיבוץ||
@@ -9852,6 +9877,7 @@ autoExpandExamples.he = `
 תִּפְאֶרֶת|beauty, glory|ti§ˈf§e§ʁe§t|tif'éret|תפארת|
 תִּקּוּנְצִ'יק|handyman|ti§ˈk§u§n.§tʃi§‹§‹§k|tikúnčik|תיקונצ׳יק|
 תִּשְׁעָה|nine|ti§ʃ.§ˈ(ʔ)a§‹|tish'á|תשעה|
+תל־אביב|Tel Aviv|te§l§ §(ʔ)a.§ˈvi§‹§v|tel 'aviv|תֵּל־אָבִיב|
 תֵּל־אָבִיב|Tel Aviv|te§l§ §(ʔ)a.§ˈvi§‹§v|tel 'aviv|תל אביב|
 תֶּלֶם|furrow|ˈte§le§m|télem|תלם|
 תַּחַת|below|ˈta.§χa§t|tákhat|תחת|
