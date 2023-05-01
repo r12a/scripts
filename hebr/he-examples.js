@@ -10270,6 +10270,8 @@ autoExpandExamples.he = `
 ת׳||
 ת׳רסטון|Thurston|
 ת״א||
+סוגריים|brackets||sograyin|סוֹגְרַיִם
+סוֹגְרַיִם|brackets||sograyin|סוגריים
 
 
 
