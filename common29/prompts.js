@@ -187,6 +187,7 @@ function makeIndexIntro (node) {
     out += `<div id="index_intro">
     <div class="index_intro_column">
     <p class="instructions">The index points to locations where a character is mentioned in this page, and indicates whether it is used by the ${orthog} orthography described here.</p>
+    
     <p class="instructions"><a href="#" onclick="listAllIndexCharacters('arab','arab-fa'); document.getElementById('charCountList').style.display='block'; return false;">List &amp; export characters</a> in the index.</p>
     </div>
     <div class="index_intro_column" id="orthoLinks"></div>
@@ -284,6 +285,9 @@ function addUsageAdvice (script, iso, picker) {
         <p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
 
         <p class="instructions noprint"><span class="leadin">Changing fonts.</span>Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+        
+        <p class="instructions noprint"><span class="leadin">Show characters.</span><button onclick="document.getElementById('characterDump').textContent = allchars;">GO</button></p>
+        <p id="characterDump"></p>
         </details>
 
 
