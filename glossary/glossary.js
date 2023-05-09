@@ -33,7 +33,7 @@ defList={
 
 "prebase": 'The glyph of a pre-base (or prescript) vowel sign is displayed to the left of the consonant or orthographic syllable after which it is pronounced. It is still typed and stored, however, in pronunciation order.',
 
-"materlectionis": 'In the spelling of Arabic, Hebrew, and other Semitic languages, mater lectionis refers to a consonant that is used to indicate the location of a vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a>',
+"materlectionis": 'In the spelling of Arabic, Hebrew, and other Semitic languages, mater lectionis refers to a consonant that may also indicate the location of a vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a>',
 
 "standalonevowel": '<a class="termref" target="_blank" href="../glossary/index.html#standalone">Standalone vowels</a> are vowel sounds that are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.',
 
