@@ -354,19 +354,12 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     
     
     
-    // get a list of all (unique) characters in the index, ignore if not a single codepoint
-    var listItemNodes = document.getElementById('index').querySelectorAll('.listItem')
-    for (i=0;i<listItemNodes.length;i++) {
-        if (listItemNodes[i].textContent.length === 1) allItems.push(listItemNodes[i].textContent)
-        }
-    var uniqueSet = new Set(allItems)
-    allItems = [...uniqueSet].sort()
-    if (listItemNodes.length !== [...uniqueSet].length) console.log('NOTE: Index contains ',listItemNodes.length,' items, but only ',[...uniqueSet].length,' unique characters.')
-    
-    
     out += '<tr><th colspan="3">Page</th></tr>'
 
-    out += `<tr><th>All</th><td id="allCharList" style="word-break:break-all;">${ allchars }</td><td id="allCharListTotal">${ allchars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allCharList').textContent)"></td>${ shareCodeLinks(allchars,scriptISO,pickerName) }</tr>`
+    // show unique characters in .codepoint or .listItem throughout the page
+    // the list allchars is assembled as a string elsewhere - convert to an array for supp chars
+    allchars = [...allchars]
+    out += `<tr><th>All</th><td id="allCharList" style="word-break:break-all;">${ allchars.join('') }</td><td id="allCharListTotal">${ allchars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allCharList').textContent)"></td>${ shareCodeLinks(allchars.join(''),scriptISO,pickerName) }</tr>`
     
 
 
@@ -378,6 +371,17 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
     out += '<tr><th colspan="3">Index</th></tr>'
 
+    // get a list of all (unique) characters in the index, ignore if not a single codepoint
+    var listItemNodes = document.getElementById('index').querySelectorAll('.listItem')
+    for (i=0;i<listItemNodes.length;i++) {
+        if ([...listItemNodes[i].textContent].length === 1) allItems.push(listItemNodes[i].textContent)
+        }
+    var uniqueSet = new Set(allItems)
+    allItems = [...uniqueSet].sort()
+    if (listItemNodes.length !== [...uniqueSet].length) console.log('NOTE: Index contains ',listItemNodes.length,' items, but only ',[...uniqueSet].length,' unique characters.')
+    
+    
+    // show all index characters
     out += `<tr><th>All</th><td id="allCharList" style="word-break:break-all;">${ allItems.join('') }</td><td id="allCharListTotal">${ allItems.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allCharList').textContent)"></td>${ shareCodeLinks(allItems.join(''),scriptISO,pickerName) }</tr>`
     
 
@@ -392,7 +396,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
         // gather not used, obsolete, archaic, & deprecated
         if (listItemNodes[i].parentNode.classList.contains('index_notused') || listItemNodes[i].parentNode.classList.contains('index_obsolete') || listItemNodes[i].parentNode.classList.contains('index_archaic') || listItemNodes[i].parentNode.classList.contains('index_deprecated')) { console.log('Unused:', listItemNodes[i].textContent) } // do nothing
         
-        else if (listItemNodes[i].textContent.length === 1) {
+        else if ([...listItemNodes[i].textContent].length === 1) {
             if (listItemNodes[i].textContent.codePointAt(0) < 129) {
                 asciiArray.push(listItemNodes[i].textContent)
                 mainArray.push(listItemNodes[i].textContent)
@@ -409,8 +413,10 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     var uniqueSet = new Set(asciiArray)
     asciiArray = [...uniqueSet].sort()
     
+    // show the list of all index items
     out += `<tr><th>All used</th><td id="allUsedCharList" style="word-break:break-all;">${ mainArray.join('') }</td><td id="allUsedCharListTotal">${ [...mainArray].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allCharList').textContent)"></td>${ shareCodeLinks(mainArray.join(''),scriptISO,pickerName) }</tr>`
     
+    // show the list of ASCII items in the index
     out += `<tr><th>ASCII</th><td id="asciiCharList" style="word-break:break-all;">${ asciiArray.join('') }</td><td id="allUsedCharListTotal">${ [...asciiArray].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allCharList').textContent)"></td>${ shareCodeLinks(asciiArray.join(''),scriptISO,pickerName) }</tr>`
     
     out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
@@ -444,7 +450,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
     // find out what's in the page but not in the index
     result = ''
-    for (var t=0;t<allchars.length; t++) {
+    for (var t=0;t<[...allchars].length; t++) {
         if (! allItems.includes(allchars[t])) result += allchars[t]
         }
     out += `<tr><th>Page extras</th><td id="indexSurplus" style="word-break:break-all;">${ result }</td><td id="ssCharListUsedTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
@@ -744,7 +750,7 @@ function listCharsInSpreadsheet (howmuch) {
     
     // get a starting point of all unique characters (but exclude ASCII)
     for (row in spreadsheetRows) {
-        if (row.length === 1) {
+        if ([...row].length === 1) {
             chars = [...row]
             for (j=0;j<chars.length;j++) all.push(chars[j])
             var uniqueSet = new Set(all)
