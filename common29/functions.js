@@ -99,6 +99,9 @@ function addPageFeatures () {
 
 
 
+
+
+
 function expandCharMarkup () {
     if (traceSet.has('expandCharMarkup') || traceSet.has('all')) console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
      // convert char markup to .codepoint spans (has to be done before the indexing)
@@ -317,6 +320,8 @@ function setFindIPA () { // test extension to map stuff
 
 
 
+
+
 function shareCodeLinks (charList, script, charApp) {
     // provides some of the repetitive code for listAllIndexCharacters
     
@@ -343,6 +348,230 @@ function shareCodeLinks (charList, script, charApp) {
 
 
 function listAllIndexCharacters (scriptISO, pickerName) {
+    // creates the showStats table
+    
+    var out = ''
+    var list
+    
+    
+    // find all the characters in the index sorted by common, rare, and not used
+    allIndexChars = []
+    
+    
+    
+    out += '<tr><th colspan="3">Page</th></tr>'
+
+    // show unique characters in .codepoint or .listItem throughout the page
+    // the list allchars is assembled as a string elsewhere - convert to an array for supp chars
+    allPageChars = [...allchars]
+    out += `<tr><th>All</th><td id="allPageList" style="word-break:break-all;">${ allPageChars.join('') }</td><td id="allPageListTotal">${ allPageChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allPageList').textContent)"></td>${ shareCodeLinks(allPageChars.join(''),scriptISO,pickerName) }</tr>`
+    
+
+
+
+    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
+
+
+
+
+    out += '<tr><th colspan="3">Index</th></tr>'
+
+    // get a list of all (unique) characters in the index, ignore if not a single codepoint
+    var indexNodes = document.getElementById('index').querySelectorAll('.listItem')
+    for (i=0;i<indexNodes.length;i++) {
+        if ([...indexNodes[i].textContent].length === 1) allIndexChars.push(indexNodes[i].textContent)
+        }
+    var uniqueSet = new Set(allIndexChars)
+    allIndexChars = [...uniqueSet].sort()
+    if (indexNodes.length !== [...uniqueSet].length) console.log('NOTE: Index contains ',indexNodes.length,' items, but only ',[...uniqueSet].length,' unique characters.')
+    
+    
+    // show all index characters
+    out += `<tr><th>All</th><td id="allIndexList" style="word-break:break-all;">${ allIndexChars.join('') }</td><td id="allIndexListTotal">${ allIndexChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allIndexList').textContent)"></td>${ shareCodeLinks(allIndexChars.join(''),scriptISO,pickerName) }</tr>`
+    
+
+
+
+    
+    // get a list of all Index characters used by the orthography & all ascii characters
+    mainIndexArray = []
+    asciiIndexArray = []
+    unusedIndexArray = []
+
+    for (i=0;i<indexNodes.length;i++) {
+        // gather not used, obsolete, archaic, & deprecated
+        if (indexNodes[i].parentNode.classList.contains('index_notused') || indexNodes[i].parentNode.classList.contains('index_unused') || indexNodes[i].parentNode.classList.contains('index_obsolete') || indexNodes[i].parentNode.classList.contains('index_archaic') || indexNodes[i].parentNode.classList.contains('index_possible') || indexNodes[i].parentNode.classList.contains('index_deprecated'))
+            unusedIndexArray.push(indexNodes[i].textContent) // do nothing
+        
+        else if ([...indexNodes[i].textContent].length === 1) {
+            if (indexNodes[i].textContent.codePointAt(0) < 129) {
+                asciiIndexArray.push(indexNodes[i].textContent)
+                mainIndexArray.push(indexNodes[i].textContent)
+                }
+            else mainIndexArray.push(indexNodes[i].textContent)
+            }
+            
+        }
+    
+    
+    var uniqueSet = new Set(mainIndexArray)
+    mainIndexArray = [...uniqueSet].sort()
+    
+    var uniqueSet = new Set(asciiIndexArray)
+    asciiIndexArray = [...uniqueSet].sort()
+    
+    var uniqueSet = new Set(unusedIndexArray)
+    unusedIndexArray = [...uniqueSet].sort()
+    
+    // show the list of all index items
+    out += `<tr><th>All used</th><td id="usedIndexList" style="word-break:break-all;">${ mainIndexArray.join('') }</td><td id="usedIndexListTotal">${ [...mainIndexArray].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('usedIndexList').textContent)"></td>${ shareCodeLinks(mainIndexArray.join(''),scriptISO,pickerName) }</tr>`
+    
+    // show the list of ASCII items in the index
+    out += `<tr><th>Unused</th><td id="asciiIndexList" style="word-break:break-all;">${ unusedIndexArray.join('') }</td><td id="asciiIndexListTotal">${ [...unusedIndexArray].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('asciiIndexList').textContent)"></td>${ shareCodeLinks(unusedIndexArray.join(''),scriptISO,pickerName) }</tr>`
+    
+    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
+
+
+    
+    
+    
+    // get information about the spreadsheet
+
+    out += '<tr><th colspan="3">Spreadsheet</th></tr>'
+
+    var charlist = listCharsInSpreadsheet('all')
+    allSpreadsheetChars = [...charlist].sort()
+    out += `<tr><th>All</th><td id="allSpreadsheetList" style="word-break:break-all;">${ allSpreadsheetChars.join('') }</td><td id="allSpreadsheetListTotal">${ allSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('allSpreadsheetList').textContent)"></td>${ shareCodeLinks(allSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
+
+    var charlistused = listCharsInSpreadsheet('allused')
+    usedSpreadsheetChars = [...charlistused].sort()
+    out += `<tr><th>Used</th><td id="usedSpreadsheetList" style="word-break:break-all;">${ usedSpreadsheetChars.join('') }</td><td id="usedSpreadsheetListTotal">${ usedSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('usedSpreadsheetList').textContent)"></td>${ shareCodeLinks(usedSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
+
+    var charlistunused = listCharsInSpreadsheet('unused')
+    unusedSpreadsheetChars = [...charlistunused].sort()
+    out += `<tr><th>Unused</th><td id="ssCharListUsed" style="word-break:break-all;">${ unusedSpreadsheetChars.join('') }</td><td id="ssCharListUsedTotal">${ unusedSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(unusedSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
+
+
+
+
+
+    // find out what's in the page but not in the index
+    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
+
+    out += '<tr><th colspan="3">Page &amp; Index differences</th></tr>'
+
+    result = ''
+    for (var t=0;t<[...allPageChars].length; t++) {
+        if (! allIndexChars.includes(allPageChars[t])) result += allPageChars[t]
+        }
+    out += `<tr><th>Page extras</th><td id="pageExtras" style="word-break:break-all;">${ result }</td><td id="pageExtrasTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('pageExtras').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+
+    
+    
+    result = ''
+    for (var t=0;t<allIndexChars.length; t++) {
+        if (! allPageChars.includes(allIndexChars[t])) result += allIndexChars[t]
+        }
+    out += `<tr><th>Index extras</th><td id="indexExtras" style="word-break:break-all;">${ result }</td><td id="indexExtrasTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('indexExtras').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+
+
+
+
+
+
+    // find out what's in the spreadsheet but not in the index    
+    out += '<tr><th colspan="3">Index &amp; Spreadsheet differences</th></tr>'
+
+    result = ''
+    for (var t=0;t<usedSpreadsheetChars.length; t++) {
+        if (! mainIndexArray.includes(usedSpreadsheetChars[t])) result += usedSpreadsheetChars[t]
+        }
+    out += `<tr><th>Used ssheet extras</th><td id="spreadsheetExtras" style="word-break:break-all;">${ result }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+
+
+    // find out what's in the index but not in the spreadsheet
+    result = ''
+    for (var t=0;t<mainIndexArray.length; t++) {
+        if (! usedSpreadsheetChars.includes(mainIndexArray[t])) result += mainIndexArray[t]
+        }
+    out += `<tr><th>Used index extras</th><td id="indexSurplus" style="word-break:break-all;">${ result }</td><td id="indexSurplusTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('indexSurplus').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+
+
+    // find out what's in the unused spreadsheet but not in the unused index    
+
+    result = ''
+    for (var t=0;t<unusedSpreadsheetChars.length; t++) {
+        if (! unusedIndexArray.includes(unusedSpreadsheetChars[t])) result += unusedSpreadsheetChars[t]
+        }
+    out += `<tr><th>Unused ssheet extras</th><td id="spreadsheetExtras" style="word-break:break-all;">${ result }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+
+
+    // find out what's in the unused index but not in the unused spreadsheet
+    result = ''
+    for (var t=0;t<unusedIndexArray.length; t++) {
+        if (! unusedSpreadsheetChars.includes(unusedIndexArray[t])) result += unusedIndexArray[t]
+        }
+    out += `<tr><th>Unused index extras</th><td id="indexSurplus" style="word-break:break-all;">${ result }</td><td id="indexSurplusTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('indexSurplus').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+
+
+
+
+    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
+
+
+
+    // create entry for character use
+    out += '<tr><th colspan="3">Character usage</th></tr>'
+    out += `<tr><th>&nbsp;</th><td id="cUsage" style="word-break:break-all;">`
+    result = listCharsInSpreadsheet('letters').join('')
+    out += `letter:"${ result }", `
+    result = listCharsInSpreadsheet('auxletters').join('')
+    if (result !== '') out += `letteraux:"${ result }", `
+    
+    result = listCharsInSpreadsheet('marks').join('')
+    out += `mark:"${ result }", `
+    result = listCharsInSpreadsheet('auxmarks').join('')
+    if (result !== '') out += `markaux:"${ result }", `
+    
+    result = listCharsInSpreadsheet('numbers').join('')
+    out += `number:"${ result }", `
+    result = listCharsInSpreadsheet('auxnumbers').join('')
+    if (result !== '') out += `numberaux:"${ result }", `
+    
+    result = listCharsInSpreadsheet('punctuation').join('')
+    out += `punctuation:"${ result }", `
+    result = listCharsInSpreadsheet('auxpunctuation').join('')
+    if (result !== '') out += `punctuationaux:"${ result }", `
+    
+    result = listCharsInSpreadsheet('symbols').join('')
+    out += `symbol:"${ result }", `
+    result = listCharsInSpreadsheet('auxsymbols').join('')
+    if (result !== '') out += `symbolaux:"${ result }", `
+    
+    result = listCharsInSpreadsheet('other').join('')
+    out += `other:"${ result }", `
+    result = listCharsInSpreadsheet('auxother').join('')
+    if (result !== '') out += `otheraux:"${ result }", `
+
+    out += `</td>
+        <td id="ssCharListTotal">${ result.length }</td>
+        <td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('cUsage').textContent)"></td></tr>`
+
+
+
+
+	document.getElementById('charCountList').innerHTML = out
+    }
+
+
+
+
+
+
+
+
+
+function listAllIndexCharactersXX (scriptISO, pickerName) {
     // creates the showStats table
     
     var out = ''
@@ -435,8 +664,8 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     out += `<tr><th>All</th><td id="ssCharList" style="word-break:break-all;">${ allSpreadsheetChars.join('') }</td><td id="ssCharListTotal">${ allSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharList').textContent)"></td>${ shareCodeLinks(allSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
 
     var charlistused = listCharsInSpreadsheet('allused')
-    allSpreadsheetCharsUsed = [...charlistused].sort()
-    out += `<tr><th>All used</th><td id="ssCharListUsed" style="word-break:break-all;">${ allSpreadsheetCharsUsed.join('') }</td><td id="ssCharListUsedTotal">${ allSpreadsheetCharsUsed.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(allSpreadsheetCharsUsed.join(''),scriptISO,pickerName) }</tr>`
+    usedSpreadsheetChars = [...charlistused].sort()
+    out += `<tr><th>All used</th><td id="ssCharListUsed" style="word-break:break-all;">${ usedSpreadsheetChars.join('') }</td><td id="ssCharListUsedTotal">${ usedSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(usedSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
 
 
 
@@ -471,8 +700,8 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     out += '<tr><th colspan="3">Index &amp; Spreadsheet differences</th></tr>'
 
     result = ''
-    for (var t=0;t<allSpreadsheetCharsUsed.length; t++) {
-        if (! allItems.includes(allSpreadsheetCharsUsed[t])) result += allSpreadsheetCharsUsed[t]
+    for (var t=0;t<usedSpreadsheetChars.length; t++) {
+        if (! allItems.includes(usedSpreadsheetChars[t])) result += usedSpreadsheetChars[t]
         }
     out += `<tr><th>SS extras</th><td id="ssSurplus" style="word-break:break-all;">${ result }</td><td id="ssCharListUsedTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
 
@@ -480,7 +709,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     // find out what's in the index but not in the spreadsheet
     result = ''
     for (var t=0;t<allItems.length; t++) {
-        if (! allSpreadsheetCharsUsed.includes(allItems[t])) result += allItems[t]
+        if (! usedSpreadsheetChars.includes(allItems[t])) result += allItems[t]
         }
     out += `<tr><th>Index extras</th><td id="indexSurplus" style="word-break:break-all;">${ result }</td><td id="ssCharListUsedTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
 
@@ -631,6 +860,10 @@ function listAllIndexCharactersX (scriptISO, pickerName) {
     allSpreadsheetCharsUsed = [...charlistused].sort()
     out += `<tr><th>All used</th><td id="ssCharListUsed" style="word-break:break-all;">${ allSpreadsheetCharsUsed.join('') }</td><td id="ssCharListUsedTotal">${ allSpreadsheetCharsUsed.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(allSpreadsheetCharsUsed.join(''),scriptISO,pickerName) }</tr>`
 
+    var charlistused = listCharsInSpreadsheet('unused')
+    unusedSpreadsheetChars = [...charlistused].sort()
+    out += `<tr><th>Unused</th><td id="ssCharListUsed" style="word-break:break-all;">${ unusedSpreadsheetChars.join('') }</td><td id="ssCharListUsedTotal">${ unusedSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(unusedSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
+
 
 
 
@@ -738,6 +971,7 @@ function listCharsInSpreadsheet (howmuch) {
     // provide a list of characters in the spreadsheet, sorted by category
     var all = []
     var allused = []
+    var unused = []
     var letters = []
     var selection = []
 
@@ -772,6 +1006,18 @@ function listCharsInSpreadsheet (howmuch) {
         }
         
     if (howmuch === 'allused') return allused
+    
+    
+    // get a list of unused items
+    for (k=0;k<all.length;k++) {
+        if (spreadsheetRows[all[k]][cols['status']][0] === 'u' 
+            || spreadsheetRows[all[k]][cols['status']][0] === '?'
+            || spreadsheetRows[all[k]][cols['status']][0] === 'd'
+            || spreadsheetRows[all[k]][cols['status']][0] === 'a'
+            || spreadsheetRows[all[k]][cols['status']][0] === 'o'
+            ) unused.push(all[k])
+        }
+    if (howmuch === 'unused') return unused
     
     
     // for other types, extract a list from allused
@@ -1442,6 +1688,7 @@ function getStatusForIndex (token) {
     case 'u': status = 'index_unused'; break;
     case 'o': status = 'index_obsolete'; break;
     case 'd': status = 'index_deprecated'; break;
+    case '?': status = 'index_possible'; break;
     default: status = ''
     }
 
