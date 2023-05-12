@@ -5,11 +5,11 @@ var langs = {
 "my": { name:"Burmese (Myanmar)", 
 source:"cldr_my,udhr_mya,e658408933cd9f4d157eac1af6c6373f4c7c6f44", 
 region:"seasia", countries:"Myanmar", script:"mymr", speakers:"33000000", 
-letter:"ကခဂဃငစဆဇဈဉညဋဌဍဎဏတထဒဓနပဖဗဘမယရလဝသဟဠအဣဤဥဦဧဩဪဿ", mark:"ာါိီုူေဲံျြွှ့္်း", number:"၁၉၄၈၀၂၃၅၆၇", punctuation:"၏၊။၍၌၎“”", other:"\u200C\u200B\u2060", 
+letter:"ကခဂငစဆဇဉညတထဒဓနပဖဗဘမယရလဝသဟအဣဤဥဦဧဩဪဿ", letteraux:"ဃဈဠ", mark:"ါာိီုူေဲံ့း္်ျြွှ", number:"၀၁၂၃၄၅၆၇၈၉", punctuation:"၊။၌၍၎၏“”", symbol:"", other:"\u200B\u200C\u2060", 
 orth:`Myanmar. &nbsp; <a href="../scripts/myanmar" target="_blank">Details</a>.`,
-type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"no/zwsp", baseline:"mid", wrap:"word", hyphenation:"no",  direction:"ltr",  justification:"ig", 
-vowels:"inh:1 vs:8 vsl:2 ind:7 base:အ/A pre:1 comp:6",  clusters:"inv stk",  medials:"cm:4",  finals:"cm:1 vk:်", 
-linked:"myanmar", fonts:"/pickers/mymr-my/", 
+type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"no/zwsp", baseline:"romn", wrap:"word", hyphenation:"no",  direction:"ltr",  justification:"ig", 
+vowels:"inh:1 vs:8 vsl:2 ind:7 base:အ/A pre:1 comp:6 other:3",  clusters:"inv pk stk",  medials:"cm:4",  finals:"cm:1 vk:်", 
+linked:"mymr/my", fonts:"/pickers/mymr-my/", 
 },
 
 
