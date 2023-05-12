@@ -743,9 +743,9 @@ function showContext (evt) {
     if (parts[0] === tablecolumns.vcomposite) {
         types = parts[1].split(' ')
         if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> mark is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> marks are used.`
-        out += `<br>Circumgraphs are single combining marks that place separate glyphs on more than one side of the base character.`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> composite vowel is listed in the description.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> composite vowels are listed in the description.`
+        out += `<br>A composite vowel is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel signs, repurposed consonants, and diacritics available. (Numbers after a + sign indicate combinations that only occur in decomposed text.)`
         }
       
     if (parts[0] === tablecolumns.vvocalics) {
