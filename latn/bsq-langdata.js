@@ -2,16 +2,16 @@
 
 var langs = {
 
-"bsq-bass": { name:"Bassa", local:"𖫔𖫧𖫳𖫒𖫨𖫰𖫨𖫱 (Ɓǎsɔ́ɔ̀)", silcode:"bsq", 
-source:"feb8d27835761376c21d0c994cb1c128010d1ac0", 
-region:"afr", countries:"Liberia", script:"bass", speakers:"648000", 
-letter:"𖫭𖫪𖫩𖫫𖫬𖫨𖫧𖫥𖫢𖫡𖫗𖫞𖫟𖫙𖫑𖫖𖫘𖫝𖫓𖫣𖫒𖫜𖫚𖫠𖫤𖫔𖫐𖫕𖫛𖫦", mark:"𖫰𖫱𖫲𖫳𖫴", punctuation:"𖫵“”", 
-orth:`[Bassa Vah] &nbsp; Rediscovered in the Americas at the start of the 20th century. Now used mainly by older people. <a href="../scripts/bassavah/">Details</a>.`,
+"bm": { name:"Bamanan (Bambara, Bamanankan)", local:"bamanankan", silcode:"bam", 
+source:"61711e9f6eb3f930b12ed40b27bf0d8c2c6ee101,cldr_bm,udhr_bam", 
+region:"afr", countries:"Mali", script:"latn", speakers:"4100000", 
+letter:"àáèéìíòóùúěŊŋƆƐƝǎǐǒǔɔɛɲʼ", mark:"̀́", markaux:"̂̌", number:"", punctuation:"«»‘’“”…", symbol:"", other:"", 
+orth:`[Latin] &nbsp; <a href="../scripts/latin/bm" target="_blank">Details</a>.`,
 also:
-["bsq | latn | Primary usage."],
-type:"alphabet", cs:"no", gpos:"yes", gsub:"no", cursive:"no", direction:"ltr", wordsep:"space", baseline:"mid", wrap:"?", hyphenation:"?",  justification:"?",
-vowels:"let:y",
-linked:"bassavah", fonts:"/pickers/bass/", 
+["nqo | nkoo | Written koiné used by speakers of Maninka, Bambara, Dyula and related dialects."],
+type:"alphabet", cs:"yes", gpos:"no", gsub:"no", cursive:"no", wordsep:"space", baseline:"romn", wrap:"word", hyphenation:"?",  direction:"ltr",  justification:"sp", 
+vowels:"let:7", 
+linked:"latn/bm", fonts:"/pickers/latn-bm", 
 },
 
 
