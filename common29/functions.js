@@ -498,7 +498,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
 
     // find out what's in the unused spreadsheet but not in the unused index    
-
+    /*
     result = ''
     for (var t=0;t<unusedSpreadsheetChars.length; t++) {
         if (! unusedIndexArray.includes(unusedSpreadsheetChars[t])) result += unusedSpreadsheetChars[t]
@@ -512,7 +512,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
         if (! unusedSpreadsheetChars.includes(unusedIndexArray[t])) result += unusedIndexArray[t]
         }
     out += `<tr><th>Unused index extras</th><td id="indexSurplus" style="word-break:break-all;">${ result }</td><td id="indexSurplusTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('indexSurplus').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
-
+    */
 
 
 
@@ -521,41 +521,54 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
 
     // create entry for character use
+    usedNonASCII = ''
     out += '<tr><th colspan="3">Character usage</th></tr>'
     out += `<tr><th>&nbsp;</th><td id="cUsage" style="word-break:break-all;">`
     result = listCharsInSpreadsheet('letters').join('')
     out += `letter:"${ result }", `
+    usedNonASCII += result
     result = listCharsInSpreadsheet('auxletters').join('')
     if (result !== '') out += `letteraux:"${ result }", `
-    
+    usedNonASCII += result
+
     result = listCharsInSpreadsheet('marks').join('')
     out += `mark:"${ result }", `
+    usedNonASCII += result
     result = listCharsInSpreadsheet('auxmarks').join('')
     if (result !== '') out += `markaux:"${ result }", `
+    usedNonASCII += result
     
     result = listCharsInSpreadsheet('numbers').join('')
     out += `number:"${ result }", `
+    usedNonASCII += result
     result = listCharsInSpreadsheet('auxnumbers').join('')
     if (result !== '') out += `numberaux:"${ result }", `
+    usedNonASCII += result
     
     result = listCharsInSpreadsheet('punctuation').join('')
     out += `punctuation:"${ result }", `
+    usedNonASCII += result
     result = listCharsInSpreadsheet('auxpunctuation').join('')
     if (result !== '') out += `punctuationaux:"${ result }", `
+    usedNonASCII += result
     
     result = listCharsInSpreadsheet('symbols').join('')
     out += `symbol:"${ result }", `
+    usedNonASCII += result
     result = listCharsInSpreadsheet('auxsymbols').join('')
     if (result !== '') out += `symbolaux:"${ result }", `
+    usedNonASCII += result
     
     result = listCharsInSpreadsheet('other').join('')
     out += `other:"${ result }", `
+    usedNonASCII += result
     result = listCharsInSpreadsheet('auxother').join('')
     if (result !== '') out += `otheraux:"${ result }", `
+    usedNonASCII += result
 
     out += `</td>
         <td id="ssCharListTotal">${ result.length }</td>
-        <td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('cUsage').textContent)"></td></tr>`
+        <td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('cUsage').textContent)"></td>${ shareCodeLinks(usedNonASCII,scriptISO,pickerName) }</tr>`
 
 
 
