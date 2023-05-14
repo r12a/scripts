@@ -5,7 +5,8 @@
 // to add a new column, search for "NEWCOL" to find code that needs changing
 
 
-var items = ['am', 'arb', 'aii', 'ban-bali', 'bax-bamu', 'blt', 'bn', 'bo', 'bsq-bass', 'bug-bugi', 'chr', 'cmn', 'crk', 'dv', 'el', 'fuf-adlm', 'ff-arab', 'gu', 'ha', 'ha-arab', 'he', 'hi', 'hy', 'ike', 'ja', 'jv-java', 'ka', 'khb', 'khk', 'khk-mong', 'km', 'kkh', 'ko', 'ks', 'ks-deva', 'kyu', 'lep', 'lis', 'lo', 'ml', 'mid', 'my', 'new', 'nod', 'nqo', 'ory', 'osa', 'pa', 'pes', 'rhg', 'ru', 'sat', 'shn', 'si', 'su-sund', 'syc', 'ta', 'tdd', 'te', 'th', 'tru', 'ug', 'ur', 'vai', 'zgh', ]
+// one lang tag per row
+var items = ['am', 'arb', 'hy', 'aii', 'ban-bali', 'bm', 'bax-bamu', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'cmn', 'crk', 'dv', 'ff', 'ff-arab', 'fuf-adlm', 'el', 'gu', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'ka', 'khb', 'khk', 'khk-mong', 'km', 'ko', 'ks', 'ks-deva', 'kyu', 'lep', 'lif', 'lis', 'lo', 'ml', 'mid', 'mro', 'new', 'nod', 'nqo', 'ory', 'osa', 'pa', 'pes', 'rhg', 'ru', 'sat', 'shn', 'si', 'su-sund', 'suz', 'syc', 'kkh', 'ta', 'tdd', 'te', 'th', 'tru', 'ug', 'uk', 'unr', 'ur', 'vai', 'wo', 'zgh', 'blt', 'bo', ]
 
 
 // these variables indicate which tabs are open or closed
@@ -869,6 +870,11 @@ function getCharacterStats () {
 			var aux = 0
 			var charArray
 			var charuseData = scriptData[i]
+
+            // change the name if the char db has a 'label' field
+			if (charuseData.label) {
+				scriptData[i].name = charuseData.label
+				}
 
 			if (charuseData.number) {
 				charArray = [...charuseData.number]
