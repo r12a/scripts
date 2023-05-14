@@ -499,7 +499,7 @@ nɛn||
 nɛrɛ||
 nɛ́gɛn|||nɛgɛn
 nɛ́gɛnɛgɛ|||nɛgɛnɛgɛ
-olu||
+olu|they, them!||olu
 pan|jump, fly|p§ã́§‹
 peresidan|president|p§e§r§e§s§i§d§ã§‹
 sabali||
