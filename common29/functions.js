@@ -424,7 +424,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     unusedIndexArray = [...uniqueSet].sort()
     
     // show the list of all index items
-    out += `<tr><th>All used</th><td id="usedIndexList" style="word-break:break-all;">${ mainIndexArray.join('') }</td><td id="usedIndexListTotal">${ [...mainIndexArray].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('usedIndexList').textContent)"></td>${ shareCodeLinks(mainIndexArray.join(''),scriptISO,pickerName) }</tr>`
+    out += `<tr><th>Used</th><td id="usedIndexList" style="word-break:break-all;">${ mainIndexArray.join('') }</td><td id="usedIndexListTotal">${ [...mainIndexArray].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('usedIndexList').textContent)"></td>${ shareCodeLinks(mainIndexArray.join(''),scriptISO,pickerName) }</tr>`
     
     // show the list of ASCII items in the index
     out += `<tr><th>Unused</th><td id="asciiIndexList" style="word-break:break-all;">${ unusedIndexArray.join('') }</td><td id="asciiIndexListTotal">${ [...unusedIndexArray].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('asciiIndexList').textContent)"></td>${ shareCodeLinks(unusedIndexArray.join(''),scriptISO,pickerName) }</tr>`
@@ -2553,7 +2553,7 @@ function copyIntroInfo () {
 
 
 
-function createtocPanel (maxlevel) { console.log('hello !')
+function createtocPanel (maxlevel) {
 	// creates a TOC and puts it in #tocPanel
     // expect to find the id on the heading markup, NOT the section, and NO a around the heading text
     // works for h2 or h2+h3 (if maxlevel set to 3
