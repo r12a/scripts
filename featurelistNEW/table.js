@@ -892,7 +892,7 @@ function getCharacterStats () {
 				scriptData[i].letters = charArray.length + charAuxArray.length
 				count += charArray.length + charAuxArray.length
 				}
-
+/*
 			if (charuseData.mark) {
 				charArray = [...charuseData.mark]
                 charAuxArray = []
@@ -901,8 +901,17 @@ function getCharacterStats () {
 				count += charArray.length + charAuxArray.length
 				}
 			else scriptData[i].mark = '0'
+*/
+			if (typeof charuseData.mark !== 'undefined') {
+				charArray = [...charuseData.mark]
+                charAuxArray = []
+                if (charuseData.markaux) charAuxArray = [...charuseData.markaux]
+				scriptData[i].mark = charArray.length + charAuxArray.length
+				count += charArray.length + charAuxArray.length
+				}
+			else scriptData[i].mark = '0'
 
-			if (charuseData.punctuation) {
+            if (charuseData.punctuation) {
 				charArray = [...charuseData.punctuation]
                 charAuxArray = []
                 if (charuseData.punctuationaux) charAuxArray = [...charuseData.punctuationaux]

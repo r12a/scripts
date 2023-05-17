@@ -650,6 +650,143 @@ function listCharsInSpreadsheet (howmuch) {
                                            
     if (howmuch === 'letters') {
         for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'L' && spreadsheetRows[allused[k]][cols['status']][0] !== 'r' && spreadsheetRows[allused[k]][cols['status']][0] !== 'x') selection.push(allused[k])
+            }
+        }
+    if (howmuch === 'auxletters') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'L' && (spreadsheetRows[allused[k]][cols['status']][0] === 'r' || spreadsheetRows[allused[k]][cols['status']][0] === 'x')) selection.push(allused[k])
+            }
+        }
+
+    if (howmuch === 'marks') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'M' && spreadsheetRows[allused[k]][cols['status']][0] !== 'r' && spreadsheetRows[allused[k]][cols['status']][0] !== 'x') selection.push(allused[k])
+            }
+        }
+    if (howmuch === 'auxmarks') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'M' && (spreadsheetRows[allused[k]][cols['status']][0] === 'r' || spreadsheetRows[allused[k]][cols['status']][0] === 'x')) selection.push(allused[k])
+            }
+        }
+
+    if (howmuch === 'numbers') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'N' && spreadsheetRows[allused[k]][cols['status']][0] !== 'r' && spreadsheetRows[allused[k]][cols['status']][0] !== 'x') selection.push(allused[k])
+            }
+        }
+    if (howmuch === 'auxnumbers') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'N' && (spreadsheetRows[allused[k]][cols['status']][0] === 'r' || spreadsheetRows[allused[k]][cols['status']][0] === 'x')) selection.push(allused[k])
+            }
+        }
+
+    if (howmuch === 'punctuation') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'P' && spreadsheetRows[allused[k]][cols['status']][0] !== 'r' && spreadsheetRows[allused[k]][cols['status']][0] !== 'x') selection.push(allused[k])
+            }
+        }
+    if (howmuch === 'auxpunctuation') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'P' && (spreadsheetRows[allused[k]][cols['status']][0] === 'r' || spreadsheetRows[allused[k]][cols['status']][0] === 'x')) selection.push(allused[k])
+            }
+        }
+
+    if (howmuch === 'symbols') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'S' && spreadsheetRows[allused[k]][cols['status']][0] !== 'r' && spreadsheetRows[allused[k]][cols['status']][0] !== 'x') selection.push(allused[k])
+            }
+        }
+    if (howmuch === 'auxsymbols') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'S' && (spreadsheetRows[allused[k]][cols['status']][0] === 'r' || spreadsheetRows[allused[k]][cols['status']][0] === 'x')) selection.push(allused[k])
+            }
+        }
+
+    if (howmuch === 'other') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'C') selection.push(allused[k])
+            }
+        for (x=0;x<selection.length;x++) selection[x] = selection[x].codePointAt(0).toString(16).toUpperCase()
+        for (x=0;x<selection.length;x++) while (selection[x].length < 4) selection[x] = '0'+selection[x]
+        for (x=0;x<selection.length;x++) selection[x] = '\\u'+selection[x]
+        }
+                                           
+     if (howmuch === 'possibles') {
+        for (k=0;k<all.length;k++) {
+            if (all[k] > '¡' && spreadsheetRows[all[k]][cols['status']] === '?') selection.push(all[k])
+            }
+        }
+
+   
+    return selection
+    }
+
+
+
+
+
+
+
+function listCharsInSpreadsheetX (howmuch) {
+    // provide a list of characters in the spreadsheet, sorted by category
+    var all = []
+    var allused = []
+    var unused = []
+    var letters = []
+    var selection = []
+
+    var letters = []
+    var marks = []
+    var numbers = []
+    var punctuation = []
+    var symbols = []
+    var other = []
+
+    var possibles = []
+    
+    // get a starting point of all unique characters (but exclude ASCII)
+    for (row in spreadsheetRows) {
+        if ([...row].length === 1) {
+            chars = [...row]
+            for (j=0;j<chars.length;j++) all.push(chars[j])
+            var uniqueSet = new Set(all)
+            all = [...uniqueSet].sort()
+            }
+        }
+        
+    if (howmuch === 'all') return all
+
+
+    // get a list that excludes unused items
+    for (k=0;k<all.length;k++) {
+        if (spreadsheetRows[all[k]][cols['status']][0] !== 'u' 
+            && spreadsheetRows[all[k]][cols['status']][0] !== '?'
+            && spreadsheetRows[all[k]][cols['status']][0] !== 'd'
+            && spreadsheetRows[all[k]][cols['status']][0] !== 'a'
+            && spreadsheetRows[all[k]][cols['status']][0] !== 'o'
+            ) allused.push(all[k])
+        }
+        
+    if (howmuch === 'allused') return allused
+    
+    
+    // get a list of unused items
+    for (k=0;k<all.length;k++) {
+        if (spreadsheetRows[all[k]][cols['status']][0] === 'u' 
+            || spreadsheetRows[all[k]][cols['status']][0] === '?'
+            || spreadsheetRows[all[k]][cols['status']][0] === 'd'
+            || spreadsheetRows[all[k]][cols['status']][0] === 'a'
+            || spreadsheetRows[all[k]][cols['status']][0] === 'o'
+            ) unused.push(all[k])
+        }
+    if (howmuch === 'unused') return unused
+    
+    
+    // for other types, extract a list from allused
+                                           
+    if (howmuch === 'letters') {
+        for (k=0;k<allused.length;k++) {
             if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'L' && spreadsheetRows[allused[k]][cols['status']][0] !== 'r') selection.push(allused[k])
             }
         }
@@ -1095,6 +1232,7 @@ function getStatus (token) {
     case 'u': status = 'unused'; break;
     case 'o': status = 'obsolete'; break;
     case 'd': status = 'deprecated'; break;
+    case 'x': status = 'avoid'; break;
     default: status = '&nbsp;'
     }
 
@@ -1321,6 +1459,7 @@ function getStatusForIndex (token) {
     case 'o': status = 'index_obsolete'; break;
     case 'd': status = 'index_deprecated'; break;
     case '?': status = 'index_possible'; break;
+    case 'x': status = 'index_avoid'; break;
     default: status = ''
     }
 
