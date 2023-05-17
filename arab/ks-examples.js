@@ -42,7 +42,7 @@ autoExpandExamples.ks = `
 اول||
 اوٗ||
 اوٚبُر|cloudy weather|obur
-اوٚنْگٕج|finger|õɡɨd͡ʒ
+اوٚنْگٕج|finger|›§õ§‹§ɡɨ§d͡ʒ
 اَ||
 اَبؠن||
 اَباووٚز||
@@ -79,9 +79,9 @@ autoExpandExamples.ks = `
 اَمب||
 اَنُن||
 اَنْدَر|inside|a§n.§da§r
-اَنْگریٖزؠ|English (language)|aŋɡriːzʲ/ãɡriːzʲ
+اَنْگریٖزؠ|English (language)|a§ŋ§ɡ§r§iː§zʲ/ãɡriːzʲ
+اَنْگریٖزؠ|English (language)|ã§‹§ɡ§r§iː§zʲ
 اَنْگ||
-اَنْگریٖزؠ||
 اَٹوٗٹ||
 اَٹَل||
 اَٹھووُہ||
@@ -117,8 +117,8 @@ autoExpandExamples.ks = `
 اوٚبرَس ہؠتُن نار||
 اوٚدُر||
 اوٚر||
-اوٚنْجوٗر|fig|ond͡ʒuːr
-اوٚنْجوٗر|fig|ənd͡ʒiːr
+اوٚنْجوٗر|fig|›§o§n§d͡ʒ§uː§r
+اوٚنْجوٗر|fig|›§ə§n§d͡ʒ§iː§r
 اوٚڈ||
 اوٚژھ||
 اوٚگُن||
