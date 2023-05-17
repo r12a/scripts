@@ -21,7 +21,7 @@ use – for a CCS that doesn't produce sound
 // unable to find lists of ajami Hausa words, these words and pronunciations are taken from the boko Wiktionary and transliterated to derive the ajami spelling
 
 autoExpandExamples.ha = `
-أَیْكِى|job|ʔá§i.§kìː§‹|aiki
+أَیْکِى|job|ʔá§i.§kìː§‹|aiki
 إِدَࢽْ|if|ʔì.§dá§n|idan||x
 بَبَّ|big|bà§b.bá|babba||x
 رَایُوَا|life||rayuwa
@@ -45,7 +45,7 @@ autoExpandExamples.ha = `
 بِیُ|two|bí.§jú|biyu||x
 حَࢽْحَیْ|wide open|hà§n.§hái§‹|hanhai||x
 حَیْرَࢽْ|good deed|hái.§‹§rà§n|hairan||x
-رَاٻَا|dew|ɽáː.§‹§ɓáː§‹|raba||x
+رَاݑَا|dew|ɽáː.§‹§ɓáː§‹|raba||x
 تَتَّبَرَا|pigeon|tà§t.tá.§bà.§ráː§‹|tàttabàr̃ā
 غََازٜت|gazelle|ɣaː§‹§ˈzɛ§t|gazet
 دَاحِر|reality, truth|dáː.§‹§hì§r|dahir
