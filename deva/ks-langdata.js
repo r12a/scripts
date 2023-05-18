@@ -9,7 +9,7 @@ letter:"अआइईउऊऋऎएऐऒओऔकखगचछजटठडतथ
 orth:`Devanagari. &nbsp; Associated with the Hindu Kashmiris. There were orthographic reforms in 1995, 2002, and 2009. This selection of characters reflects the latter. <a href="../scripts/devanagari/kashmiri" target="_blank">Details</a>.`,
 notes:`Need clarity about use or not of Devanagari numbers.`,
 type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", direction:"ltr", wordsep:"space", baseline:"hang", wrap:"word", hyphenation:"?",  justification:"sp",
-vowels:"inh:1 ind:17 vs:16 pre:1", clusters:"vir stk cnj lig rax", finals:"cm:1", 
+vowels:"inh:1 ind:17 cm:16 vs:16 pre:1", clusters:"vir stk cnj lig rax", finals:"cm:1", 
 linked:"deva/ks", fonts:"/pickers/deva-ks/", 
 },
 

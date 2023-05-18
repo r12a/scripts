@@ -11,7 +11,7 @@ orth:`[Devanagari] &nbsp;
 also:
 ["hi-newa | newa | Archaic, no longer in use."],
 type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"space", baseline:"hang", wrap:"word", hyphenation:"(yes)", hyphen:"-",  direction:"ltr",  justification:"sp", 
-vowels:"inh:1 vs:11 ind:12 pre:1 voc:1",  clusters:"vir stk cnj lig rax",  finals:"cm:2", 
+vowels:"inh:1 cm:11 vs:11 ind:12 pre:1 voc:1",  clusters:"vir stk cnj lig rax",  finals:"cm:2", 
 linked:"deva/hi", fonts:"/pickers/deva-hi/", 
 },
 

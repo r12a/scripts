@@ -8,7 +8,7 @@ region:"seasia", countries:"Myanmar", script:"mymr", speakers:"33000000",
 letter:"ကခဂငစဆဇဉညတထဒဓနပဖဗဘမယရလဝသဟအဣဤဥဦဧဩဪဿ", letteraux:"ဃဈဠ", mark:"ါာိီုူေဲံ့း္်ျြွှ", number:"၀၁၂၃၄၅၆၇၈၉", punctuation:"၊။၌၍၎၏“”", symbol:"", other:"\u200B\u200C\u2060", 
 orth:`Myanmar. &nbsp; <a href="../scripts/myanmar" target="_blank">Details</a>.`,
 type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"no/zwsp", baseline:"romn", wrap:"word", hyphenation:"no",  direction:"ltr",  justification:"ig", 
-vowels:"inh:1 vs:8 vsl:2 ind:7 base:အ/A pre:1 comp:6 other:3",  clusters:"inv pk stk",  medials:"cm:4",  finals:"cm:1 vk:်", 
+vowels:"inh:1 cm:9 vs:9 vsl:2 ind:7 base:အ/A pre:1 comp:6 other:3",  clusters:"inv pk stk",  medials:"cm:4",  finals:"cm:1 vk:်", 
 linked:"mymr/my", fonts:"/pickers/mymr-my/", 
 },
 

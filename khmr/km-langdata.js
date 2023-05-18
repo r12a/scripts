@@ -8,7 +8,7 @@ region:"seasia", countries:"Cambodia, Vietnam", script:"khmr", speakers:"1600000
 letter:"កខគឃងចឆជឈញដឋណតថទធនបផពភមយរលវសហឡអឥឦឧឩឪឫឭឯឰឱឲឳៗ", letteraux:"ឌឍឬឮ", mark:"ាិីឹឺុូួើឿៀេែៃោៅំះៈ៉៊់៌៍៎៏័៑្៝", number:"០១២៣៤៥៦៧៨៩", punctuation:"។៕៖៙៚‘’“”", punctuationaux:"៘", symbol:"៛", other:"\u200B\u200C\u200D", 
 orth:`Khmer. &nbsp; <a href="../scripts/khmer" target="_blank">Details</a>.`,
 type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"no/zwsp", baseline:"romn", wrap:"word", hyphenation:"no",  direction:"ltr",  justification:"ig", 
-vowels:"inh:2 vs:19 cm:2 vsl:4 other:2 ind:10 base:អ/QA pre:3 circ:5 comp:15 voc:4",  clusters:"inv stk", 
+vowels:"inh:2 vs:19 cm:21 vsl:4 other:2 ind:10 base:អ/QA pre:3 circ:5 comp:15 voc:4",  clusters:"inv stk", 
 linked:"khmr/km", fonts:"/pickers/khmr/", 
 },
 

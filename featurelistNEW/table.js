@@ -76,9 +76,9 @@ var by = function (path, reverse, primer, then) {
 		vsyllable:"Vowel syllables", 
 		vinherent:"Inherent vowel",
 		vletter:"Vowel letters",
-		vsign:"Vowel signs",
-		vdiac:"Vowel diacritics",
+		vdiac:"Vowel marks",
 		vhidden:"Vowels hidden",
+		vsign:"Vowel signs",
 		vother:"Vowels, other",
 		matres:"Matres lectionis",
         
@@ -201,12 +201,12 @@ function resort (column, reverse) {
         table += makeTableHead ('vinherent', "Inherent vowel.", REVERSE)
         
         table += makeTableHead ('vletter', "Spacing letters used to spell vowels.", REVERSE)
-        
-        table += makeTableHead ('vsign', "Vowel signs used to spell vowels.", REVERSE)
        
         table += makeTableHead ('vdiac', "Small diacritics used to spell vowels.", REVERSE)
         
         table += makeTableHead ('vhidden', "Diacritics used to spell vowels that are usually hidden.", REVERSE)
+        
+        table += makeTableHead ('vsign', "Vowel signs used to spell vowels.", REVERSE)
          
         table += makeTableHead ('vother', "Other letters used to spell vowels.", REVERSE)
         
@@ -339,11 +339,11 @@ function resort (column, reverse) {
 
                 table += drawCell('vletter', scriptData[i], 'vletter')
 
-                table += drawCell('vsign', scriptData[i], 'vowelsigns')
-
                 table += drawCell('vdiac', scriptData[i], 'combiningV')
 
                 table += drawCell('vhidden', scriptData[i], 'combiningV')
+
+                table += drawCell('vsign', scriptData[i], 'vowelsigns')
 
                 table += drawCell('vother', scriptData[i], 'otherV')
 
@@ -1007,8 +1007,11 @@ function getCharacterStats () {
                 if (vowelObj.ind) scriptData[i].ivowels = vowelObj.ind
                 else scriptData[i].ivowels = '-'
                 
-                if (vowelObj.vs) scriptData[i].vsign = vowelObj.vs
+                //if (vowelObj.vs) scriptData[i].vsign = vowelObj.vs
+                //else scriptData[i].vsign = '-'
+				if (vowelObj.vs) scriptData[i].vsign = '✓'
                 else scriptData[i].vsign = '-'
+               
                 
                 if (vowelObj.other) scriptData[i].vother = vowelObj.other
                 else scriptData[i].vother = '-'
