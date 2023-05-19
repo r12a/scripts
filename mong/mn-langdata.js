@@ -2,19 +2,19 @@
 
 var langs = {
 
-"khk-mong": { name:"Halh Mongolian", local:"Монгол хэл‎ (Mongol khel)", 
+"khk-mong": { name:"Halh Mongolian", local:"Монгол хэл‎ (Mongol khel)", label:"Mongolian, Halh",
 source:"cldr_mn", 
 region:"easia", countries:"Mongolia, China", script:"mong", speakers:"2640000", 
-letter:"ᠢᠦᠤᠡᠧᠥᠣᠠᠫᠪᠲᠳᠴᠵᠬᠰᠱᠭᠨᠩᠮᠯᠶᠷᠸᠹᠺᠻᠼᠽᠾᠿᡀᡁᡂ", number:"᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙", punctuation:"᠊᠁᠂᠃᠄()〈〉《》〔〕？！", aux:"ᢅᢆᢩ", 
+letter:"ᠠᠡᠢᠣᠤᠥᠦᠧᠨᠩᠪᠫᠬᠭᠮᠯᠰᠱᠲᠳᠴᠵᠶᠷᠸᠹᠺᠻᠼᠽᠾᠿᡀᡁᡂ", mark:"᠋᠌᠍᠏ᢅᢆᢩ", number:"᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙", punctuation:"«»᠁᠂᠃᠄᠆᠊〈〉《》〔〕！（）？", symbol:"", other:"\u180E\u200C\u200D", 
 orth:`[Mongolian (Hudum)] &nbsp; <a href="../scripts/mongolian" target="_blank">Details</a>`,
 also:
 ["khk | cyrl | ",
 "khk-phag | phag | No longer in use.",
 "khk-tibt | tibt | No longer in use."],
 related:`Macrolanguage is Mongolian [mn].`,
-type:"alphabet", cs:"no", gpos:"yes", gsub:"yes", cursive:"yes", direction:"tblr", wordsep:"space", baseline:"vertical", wrap:"word", hyphenation:"yes", hyphen:"↵᠆*",  justification:"sp",
+type:"alphabet", cs:"no", gpos:"yes", gsub:"yes", cursive:"yes", direction:"tblr", wordsep:"space", baseline:"cntr", wrap:"word", hyphenation:"yes", hyphen:"↵᠆*",  justification:"sp",
 vowels:"let:8",
-linked:"mongolian", fonts:"/pickers/mong/", 
+linked:"mong/mn", fonts:"/pickers/mong/", 
 },
 
 
