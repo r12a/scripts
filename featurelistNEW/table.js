@@ -146,7 +146,7 @@ function resort (column, reverse) {
 	scriptData.sort(by(column, reverse))
 	
 	var table = ''
-	table += '<table id="reviewtable"><thead><tr>';
+	table += '<table id="reviewtable"><thead><tr style="position:sticky; top:0; background: white;">';
 	
 	// sets of subcolumns, for toggles
 	var charsubset = new Set(['Letters','Marks', 'Punct\u00ADuation', 'Native digits', 'Other'])
@@ -175,11 +175,11 @@ function resort (column, reverse) {
 		table += `<th class="top charsubset" title="Letters"><a href="#theTable" onclick="resort(\'letters\', REVERSE); window.resortCol=\'letters\'; return false;">Letters</a></th>\n`
         
 		table += `<th class="top charsubset" title="Marks"><a href="#theTable" onclick="resort(\'mark\', REVERSE); window.resortCol=\'mark\'; return false;">Marks</a></th>\n`
-        
-		table += `<th class="top charsubset" title="Punctuation"><a href="#theTable" onclick="resort(\'punctuation\', REVERSE); window.resortCol=\'punctuation\'; return false;">Punct\u00ADuation</a></th>\n`
-        
+      
 		table += `<th class="top charsubset" title="Native digits"><a href="#theTable" onclick="resort(\'digits\', REVERSE); window.resortCol=\'digits\'; return false;">Native digits</a></th>\n`
 		
+		table += `<th class="top charsubset" title="Punctuation"><a href="#theTable" onclick="resort(\'punctuation\', REVERSE); window.resortCol=\'punctuation\'; return false;">Punct\u00ADuation</a></th>\n`
+          
         table += makeTableHead ('symbols', "Symbols.", REVERSE)
 
         table += `<th class="top charsubset" title="Format &amp; other chars"><a href="#theTable" onclick="resort(\'other\', REVERSE); window.resortCol=\'other\'; return false;">Other</a></th>\n`
@@ -318,9 +318,9 @@ function resort (column, reverse) {
 
                 table += drawCellForCharacters('mark', scriptData[i], 'index_cchars', 'yy')
 
-                table += drawCellForCharacters('punctuation', scriptData[i], 'index_punctuation', 'yy')
-
                 table += drawCellForCharacters('digits', scriptData[i], 'index_numbers', 'yy')
+
+                table += drawCellForCharacters('punctuation', scriptData[i], 'index_punctuation', 'yy')
 
                 table += drawCellForCharacters('symbol', scriptData[i], 'index_symbols', 'yy')
 
