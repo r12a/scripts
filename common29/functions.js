@@ -1287,14 +1287,14 @@ function replaceStuff (node) {
     var out = ''
 
     // make the summary count link
-    if (chars.length > 1) {
+    //if (chars.length > 1) {
         var length = chars.length
         for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
         out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')">list '
         if (length === 2) out += 'both'
-        else out += 'all '+length
+        else if (length > 2) out += 'all '+length
         out += '</div>'
-        }
+        //}
 
     // find out whether this table includes status information
     var showStatus = false
@@ -1494,14 +1494,14 @@ function makeIndexLine (node) {
     var out = ''
 
     // make the summary count link
-    if (chars.length > 1) {
+    //if (chars.length > 1) {
         var length = chars.length
         for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
         out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')">list '
         if (length === 2) out += 'both'
-        else out += 'all '+length
+        else if (length > 2) out += 'all '+length
         out += '</div>'
-        }
+        //}
 
     // start building the listArray
     out += '<div class="listArray">'
