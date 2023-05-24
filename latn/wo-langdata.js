@@ -2,17 +2,17 @@
 
 var langs = {
 
-"wo": { name:"Wolof", local:"Wolof", silcode:"wol", 
-source:"cldr_wo,udhr_wol", 
-region:"afr", countries:"Senegal, Mauritania, The Gambia",
-script:"latn", speakers:"5500000", 
-letter:"ëñàéóËÑÀÉÓŋŊ", mark:"̈̃̀́", punctuation:"‰", 
+"wo": { name:"Wolof", local:"Wolof", silcode:"wol",
+source:"cldr_wo,udhr_wol",
+region:"afr", countries:"Guinea, etc.", script:"latn", speakers:"4200000",
+letter:"ÀÉËÑÓàéëñóŊŋ", mark:"", markaux:"̀́̃̈", number:"", punctuation:"“”", symbol:"", other:"", 
+aux:"%Z[]z§«»‑–—†‡…‰′″‹›",
 orth:`Latin. &nbsp; Primary usage.`,
 also:
-['wo-arab | arab | Naskh style.  <a href="../scripts/latn/wo.html#variants" target="_blank">Details.</a>'],
-type:"alphabet", cs:"yes", gpos:"no", gsub:"no", cursive:"no", direction:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?",  justification:"?",
-vowels:"let:9",
-linked:"latn/wo.html", fonts:"/pickers/latn-wo/index.html", 
+['wo-arab | arab | Naskh style.',],
+type:"alphabet", cs:"tbc", gpos:"tbc", gsub:"tbc", cursive:"no", direction:"ltr", wordsep:"space", baseline:"romn", wrap:"word", hyphenation:"?",  justification:"sp",
+vowels:"let:18 cm:(4)",
+linked:"latn/wo", fonts:"/pickers/latn-wo/", 
 },
 
 

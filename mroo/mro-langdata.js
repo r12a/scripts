@@ -9,8 +9,8 @@ script:"mroo", speakers:"400000",
 letter:"𖩒𖩆𖩄𖩋𖩅𖩖𖩘𖩉𖩜𖩊𖩌𖩙𖩈𖩍𖩚𖩛𖩎𖩃𖩏𖩁𖩝𖩑𖩐𖩇𖩓𖩔𖩀𖩞𖩕𖩗𖩂", mark:"", punctuation:"𖩮𖩯", number:"𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩", symbol:"", 
 orth:`Mro.  <a href="../scripts/mroo/mro.html" target="_blank">Details.</a>`,
 type:"alphabet", cs:"no", gpos:"no", gsub:"no", cursive:"no", direction:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?",  justification:"word",
-vowels:"vl:7",
-linked:"mroo/mro.html", fonts:"/pickers/mroo-mro/index.html", 
+vowels:"let:7",
+linked:"mroo/mro", fonts:"/pickers/mroo-mro/", 
 },
 
 

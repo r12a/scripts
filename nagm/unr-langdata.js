@@ -6,14 +6,13 @@ var langs = {
 source:"", 
 region:"sasia", countries:"Bangladesh",
 script:"nagm", speakers:"1100000", 
-letter:"𞓙𞓗𞓠𞓡𞓜𞓦𞓞𞓖𞓢𞓒𞓧𞓨𞓘𞓔𞓥𞓑𞓣𞓪𞓛𞓝𞓩𞓓𞓕𞓤𞓚𞓐𞓟𞓫", mark:"𞓮𞓯𞓬𞓭", punctuation:"–‘’“”…", number:"𞓰𞓱𞓲𞓳𞓴𞓵𞓶𞓷𞓸𞓹", 
+letter:"𞓐𞓑𞓒𞓓𞓔𞓕𞓖𞓗𞓘𞓙𞓚𞓛𞓜𞓝𞓞𞓟𞓠𞓡𞓢𞓣𞓤𞓥𞓦𞓧𞓨𞓩𞓪𞓫", mark:"𞓮𞓯𞓬𞓭", number:"०१२३४५६७८९০১২৩৪৫৬৭৮৯୦୧୨୩୪୫୬୭୮୯𞓰𞓱𞓲𞓳𞓴𞓵𞓶𞓷𞓸𞓹", punctuation:"“”", symbol:"", other:"", 
 orth:`Nag Mundari (Mundari Bani).  <a href="../scripts/nagm/unr.html" target="_blank">Details.</a>`,
 also:
 ['unr-deva | deva.'],
 type:"alphabet", cs:"no", gpos:"yes", gsub:"no", cursive:"no", direction:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?",  justification:"word",
-vowels:"l:5",
-linked:"nagm/unr.html", fonts:"/pickers/nagm-unr/index.html", 
+vowels:"let:5 cm:2",
+linked:"nagm/unr", fonts:"/pickers/nagm-unr/", 
 },
-
 
 }
