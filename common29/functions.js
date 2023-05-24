@@ -400,7 +400,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
     for (i=0;i<indexNodes.length;i++) {
         // gather not used, obsolete, archaic, & deprecated
-        if (indexNodes[i].parentNode.classList.contains('index_notused') || indexNodes[i].parentNode.classList.contains('index_unused') || indexNodes[i].parentNode.classList.contains('index_obsolete') || indexNodes[i].parentNode.classList.contains('index_archaic') || indexNodes[i].parentNode.classList.contains('index_possible') || indexNodes[i].parentNode.classList.contains('index_deprecated'))
+        if (indexNodes[i].parentNode.classList.contains('index_notused') || indexNodes[i].parentNode.classList.contains('index_unused') || indexNodes[i].parentNode.classList.contains('index_obsolete') || indexNodes[i].parentNode.classList.contains('index_archaic') || indexNodes[i].parentNode.classList.contains('index_tbc') || indexNodes[i].parentNode.classList.contains('index_deprecated'))
             unusedIndexArray.push(indexNodes[i].textContent) // do nothing
         
         else if ([...indexNodes[i].textContent].length === 1) {
@@ -577,7 +577,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     // create entry for character use
     out += '<tr><th colspan="3">Possible additions from the spreadsheet</th></tr>'
     result = listCharsInSpreadsheet('possibles').join('')
-    out += `<tr><th>Possibles</th><td id="allSpreadsheetList" style="word-break:break-all;">${ result }</td><td id="allSpreadsheetListTotal">${ result.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('allSpreadsheetList').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+    out += `<tr><th>TBC</th><td id="toInvestigate" style="word-break:break-all;">${ result }</td><td id="toInvestigateTotal">${ result.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('toInvestigate').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
 
 
 
@@ -714,7 +714,7 @@ function listCharsInSpreadsheet (howmuch) {
                                            
      if (howmuch === 'possibles') {
         for (k=0;k<all.length;k++) {
-            if (all[k] > '¡' && spreadsheetRows[all[k]][cols['status']] === '?') selection.push(all[k])
+            if (spreadsheetRows[all[k]][cols['status']] === '?') selection.push(all[k])
             }
         }
 
@@ -1458,7 +1458,7 @@ function getStatusForIndex (token) {
     case 'u': status = 'index_unused'; break;
     case 'o': status = 'index_obsolete'; break;
     case 'd': status = 'index_deprecated'; break;
-    case '?': status = 'index_possible'; break;
+    case '?': status = 'index_tbc'; break;
     case 'x': status = 'index_avoid'; break;
     default: status = ''
     }
