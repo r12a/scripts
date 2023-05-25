@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <title>Script comparison table</title>
-<meta name="description" content="Comparative information about characteristics of a number of orthographies." />
-<link rel="stylesheet" href="../../shared/style/docs.css" />
+<meta name="description" content="Comparative information about characteristics of a number of orthographies.">
+<link rel="stylesheet" href="../../shared/style/docs.css">
 <style>
 p {
-	font-family: sans-serif;
 	text-align: left;
 }
 p[dir=rtl] {
@@ -118,15 +117,15 @@ for (j=0;j<items.length;j++) {
 <aside class="sidebar">
   <div class="noprint">
     <h2 class="flush"><a id="related">Related links</a></h2>
-    <p><a href="/scripts/">Scripts resources on this site</a></p>
-    <p><a href="/uniview/">UniView</a></p>
-    <p><a href="/scripts/tutorial/">An Introduction to Writing Systems &amp; Unicode</a></p>
+    <p><a href="../../scripts/links.html" target="_blank">Scripts resources on this site</a></p>
+    <p><a href="../../uniview/index.html" target="_blank">UniView</a></p>
+    <p><a href="../../scripts/tutorial/index.html" target="_blank">An Introduction to Writing Systems &amp; Unicode</a></p>
   </div>
 </aside>
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->9 May, 2023<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->25 May, 2023<!-- #EndDate -->
 <span id="versionTop">• recent <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/featurelist" title="Show recent commits.">changes</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[featurelist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%0A%0A" title="Leave a comment.">comment</a></span>
 </p>
 
@@ -161,67 +160,88 @@ resort('name')
 
 
 <section id="key">
-  <h2>Key</h2>
-  <p>The table is intended to provide a general indication only. There are things that could be disputed.</p>
-  <p id="characters"><b class="leadin">Total characters.</b> This figure is based on the data in the <a href="../../app-charuse/">Character Usage Lookup</a> app. When there are 2 figures separated by a + sign, the first number indicates how many characters are in standard use, the second relates to additional infrequently used characters for that language.</p>
-<p>Character counts do not include ASCII characters. It is assumed that those are available.</p>
+<h2>Key</h2>
+
+<p>The table is intended to provide a general indication only. There are things that could be disputed.</p>
+<p>The major sections are displayed like buttons below. The text following the button indicates the URL parameter that will cause that section to be automatically displayed.</p>
+
+
+
+
+
+<p><button>Character detail</button> <code>?show=characters</code></p>
+
+<p id="characters"><b class="leadin">Total chars.</b> This figure is based on the data in the <a href="../../app-charuse/">Character Usage Lookup</a> app. </p>
+
+<p>The figures in the next column, preceded by a + sign indicate how many additional characters are currently under investigation. These currently contain many characters that may not be relevant, but that are awaiting assessment before they can be removed.</p>
+
+<p>Character counts do not include ASCII characters. It is assumed that those characters are always available.</p>
+
 <p>Note also that the character counts reflect the characters needed to represent both precomposed and decomposed versions of content. For example, use of a character such as â would add 3 characters to the total count: â, a, and the combining circumflex. Use of ô would then add a further 2 (because the circumflex is already counted).</p>
-<p>Clicking on the button <samp>Toggle character detail</samp> reveals 5 columns to the right that give character counts for specific types of character, per the Unicode general property assignment. These include:</p>
+
+<p>The 5 columns to the right give character counts for specific types of character, per the Unicode general property assignment. These include:</p>
+
 <ul>
 <li><em>letters</em>: Most alphabetic and other basic letters.</li>
+
 <li><em>marks</em>: The subset of  characters that are combining characters. No attempt is made to indicate how many of the base characters each combining character can combine with. In some cases, this will be limited, but in most cases a combining character will combine with a fair number of base characters.</li>
+
 <li><em>punctuation</em>: Characters with the general property of punctuation.</li>
+
 <li><em>native digits</em>: Non-ASCII numeric digits, but also other numeric characters where applicable (eg.  characters for 20 and 30 in Amharic).</li>
+
 <li><em>other</em>: Characters with the general property 'other'. These are almost always formatting characters, such as those used for bidi control, or joining/non-joining. (These figures currently need to be updated.)</li>
 </ul>
+
 <p>Like the other character counts, these figures exclude ASCII characters, and include characters for any compositions and decompositions that may be applied (unless they are deprecated by the Unicode Standard).</p>
-<p id="type"><b class="leadin">Type.</b> The type column indicates whether the orthography is one of the following.</p>
+
+
+
+
+<p><button>Vowels</button> <code>?show=vowels</code></p>
+
+<p id="type"><b class="leadin">Writing system.</b> This column indicates whether the orthography is one of the following.</p>
 <ul>
-<li><em>alpha</em>: An alphabet, ie. vowels are written as letters.</li>
+<li><em>alphabet</em>: An alphabet, ie. vowels are written as letters.</li>
 <li><em>abjad</em>: An abjad, ie. vowels are normally not written.</li>
-<li><em>abug</em>: An abugida, ie. consonants carry an inherent vowel which is overridden by vowel-signs to express different vowel sounds.</li>
-<li><em>syll</em>: A syllabary, ie. characters generally represent a combination of consonant+vowel.</li>
+<li><em>abug</em>ida: An abugida, ie. consonants carry an inherent vowel which is overridden by vowel-signs to express different vowel sounds.</li>
+<li><em>syll</em>abic: A syllabary, ie. characters generally represent a combination of consonant+vowel.</li>
 </ul>
-<p>Clicking on the button <samp>Toggle type details</samp> reveals  a number of related columns with a different-coloured background that indicate how various features are represented in the orthography. They cover the following:</p>
+<p>The columns to the right cover the following types of character used to write vowel sounds.</p>
 <ul>
 <li><em>Inherent vowel</em>: The consonants in the orthography carry an inherent vowel sound, which, when needed, can be change using vowel-signs or nullified by a particular character. The number represents the number of sounds the inherent vowel represents.</li>
-<li><em>Vowel letters</em>: The orthography represents vowels pronounced after consonants using standalone characters.
+<li><em>Vowel letters</em>: Letter characters <em>dedicated to representation of vowels and </em><em>used after a consonant</em>.
 <ul>
-<li><samp>l</samp> signifies that vowels are represented by letters. </li>
 <li><samp>iv</samp> indicates that the orthography uses independent vowels for vowel sounds that are not preceded by a consonant. </li>
 <li><samp>ml</samp> indicates that the vowel letters are matres lectionis (which typically means that they are consonants too).</li></ul></li>
-<li><em>Vowel marks</em>: The orthography uses combining marks to represent vowel sounds after a consonant.
-<ul>
-<li><samp>d</samp> indicates that these vowel sounds are represented by diacritics that are always visible. </li>
-<li><samp>(d)</samp> is used where languages such as Arabic and Hebrew can, but normally don't write the diacritics.</li>
-<li> <samp>vs</samp> indicates that the combining marks are vowel-signs such as those used in Brahmi-derived scripts. These tend to be larger, and have more complex behaviours than simple diacritics.</li>
-</ul>
-</li>
-<li><em>Vowel base</em>: An entry in this column indicates that the orthography represents standalone vowels using a base character plus vowel-sign. The column shows the character(s) and the Unicode name.</li>
-<li><em>Pre-base vletters</em>: If the orthography uses ordinary spacing letters before a consonant to represent a sound that occurs after the consonant, you will see the number of those characters here. A number in this column indicates that we are dealing with a script such as Thai or Lao, which uses visual ordering for prescript vowels, rather than combining characters.</li>
-<li><em>Pre-base vmarks</em>: In this case, the orthography uses combining characters after the base consonant to represent vowel sounds, but the glyph for that character appears to the left of the consonant itself, eg. the short i in Hindi.</li>
+<li><em>Vowel marks</em>: Combining marks used to represent vowel sounds after a consonant.</li>
+<li><em>Vowels hidden</em>: Whether the orthography generally hides the vowel diacritics. This typically applies to abjads such as are used by Arabic, Hebrew, Urdu, etc.</li>
+<li><em>Vowel signs</em>: Whether the combining marks used to indicate vowels are referred to as vowel signs. These are usually used in Brahmi-derived scripts, and tend to be larger, and have more complex behaviours than simple diacritics. </li>
+<li><em>Vowel, other</em>: Consonants and other characters that are also used to represent vowel sounds, either alone or as part of a composite vowel sequence.</li>
+<li><em>Matres lectionis</em>: Whether some or all of the vowel characters are referred to as matres lectionis. This tends to apply to orthographies that hide vowel diacritics but use consonants where long vowels occur.</li>
+<li><em>Standalone, independent</em>: The number of letter characters that are used to represent vowels <em>that are not preceded by a consonant</em>. If the orthography doesn't have dedicated characters for this purpose (eg. most Latin script based languages), the cell is left blank.</li>
+<li><em>Standalone, carrier</em>: An entry in this column indicates that the orthography represents standalone vowels using a base character plus vowel-sign. The column shows the character(s) and the Unicode name.</li>
+<li><em>Prebase letters</em>: If the orthography uses ordinary spacing letters before a consonant to represent a sound that occurs after the consonant, you will see the number of those characters here. A number in this column indicates that we are dealing with a script such as Thai or Lao, which uses visual ordering for prescript vowels, rather than combining characters.</li>
+<li><em>Prebase marks</em>: In this case, the orthography uses combining characters after the base consonant to represent vowel sounds, but the glyph for that character appears to the left of the consonant itself, eg. the short i in Hindi.</li>
 <li><em>Circumgraphs</em>: The number of characters representing vowels by a single combining character, but where the orthography displays multiple glyphs simultaneously on different sides of the base consonant, eg. certain Tamil vowel signs.</li>
-<li><em>Composite vowels</em>: How many vowels are represented by using more than one vowel-related character with a single base character. This is often seen in Southeast Asian scripts, such as Thai.</li>
-<li><em>Vocalics</em>: How many vocalic sounds are used by the script in common, modern-day usage. This number is not doubled when both an independent vowel and a vowel-sign exist for the same vocalic letter. It represents the number of sounds for which there are special letters.</li>
-<li><em>Clusters</em>: Where consonant clusters are represented in a special way by the orthography, this column indicates the more common strategies, including the following:<ul>
-<li><samp>s</samp> stacked consonants. </li>
-<li><samp>c</samp> conjoined consonants. </li>
-<li><samp>t</samp> touching consonants.</li>
-<li><samp>l</samp> consonants that ligate.</li>
-<li><samp>v</samp> a visible virama (when it is the common way of indicating clusters).</li>
-<li><samp>d</samp> a diacritic other than a visible virama is used, eg. the sukun for Arabic.</li>
-<li><samp>r</samp> indicates that there are special rules for the handling of 'r'.</li>
+<li><em>Composite vowels</em>: How many vowels have been found that are represented by using more than one vowel-related character with a single base character. This is often seen in Southeast Asian scripts, such as Thai. Some counts include glides that form part of a diphthong, while other don't. (This should be clarified at some point.)</li>
 </ul>
-See the next column for viramas that produce conjuncts but are invisible.
-</li>
-<li><em>Invisible vkiller</em>: Indicates that the orthography uses a virama or similar character to signal conjunct clusters, but the character disappears in the process. (The consonants are stacked, or merged in some other way to indicate that they are a cluster without the need for another mark.) This is really a special case of the previous column.</li>
-<li><em>Medials</em>: The orthography uses dedicated combining or other characters to represent the second consonant in a syllable-initial cluster. Medials represented by simple letters or conjuncts are not included here. Click on 'yes' to see detailed types in the bottom right corner of the window. Abbreviations have the following meanings:<ul>
+
+
+
+
+<p><button>Consonants</button> <code>?show=consonants</code></p>
+
+<ul>
+<li><em>Vocalics</em>: How many vocalic sounds are used by the script in common, modern-day usage. This number is not doubled when both an independent vowel and a vowel-sign exist for the same vocalic letter. It represents the number of sounds for which there are special letters.</li>
+<li><em>Medials</em>: The orthography uses dedicated combining or other characters to represent the second consonant in a syllable-initial cluster. Medials represented by simple letters or conjuncts are not included here. Mouse over the cell to see detailed types at the bottom  of the window. Abbreviations have the following meanings:
+<ul>
 <li><samp>cm</samp> combining mark. </li>
 <li><samp>sj</samp> subjoined letter. </li>
 <li><samp>let</samp> other, dedicated letter.</li>
 </ul>
 </li>
-<li><em>Finals</em>: The orthography uses dedicated combining or other characters to represent syllable or word final consonants. Click on 'yes' to see detailed types in the bottom right corner of the window. Abbreviations have the following meanings:
+<li><em>Finals</em>: The orthography uses dedicated combining or other characters to represent syllable or word final consonants. Mouse over the cell to see detailed types at the bottom  of the window. Abbreviations have the following meanings:
 <ul>
 <li><samp>cm</samp> combining mark. </li>
 <li><samp>let</samp> dedicated letter. </li>
@@ -230,29 +250,73 @@ See the next column for viramas that produce conjuncts but are invisible.
 </ul>
 </li>
 </ul>
-<!--p><b class="leadin">Clusters.</b> Describes any special mechanisms for dealing with clusters of consonants. This is mostly relevant for abugidas, since it is necessary to kill the inherent vowel, but it is also useful for indicating how final characters are handled in syllablic scripts.</p>
+
+
+
+
+<p><button>Consonant clusters</button> <code>?show=cclusters</code></p>
+
+<p>Where consonant clusters are represented in a special way by the orthography, this column indicates the more common strategies. Cells indicate:</p>
+
 <ul>
-<li><em>n(one)</em>: It is common that missing vowels are not indicated at all, and the reader just needs to know not to pronounce any inherent vowel between the consonants.</li>
-<li><em>c(onjoined forms)</em>: Conjuncts are created by combining glyphs horizontally, eg. half-forms in Devanagari.</li>
-<li><em>s(tacking)</em>: Conjuncts are formed by stacking consonants vertically.</li>
-<li>l(igation): Conjuncts are formed by creating ligated forms that involve shape changes beyond just slightly adapting conjoined or stacked forms.</li>
-<li><em>v(irama)</em>: A visible virama is a common way of indicating the lack of an intervening vowel. This is only used when this is a very commonly seen method in ordinary text – most abugidas allow the use of a visible virama in corner cases or educational examples, etc.</li>
-<li><em>m(edials)</em>: There are special code points for consonants in 2nd or 3rd position in a syllable.</li>
-<li><em>f(inals)</em>: There are dedicated code points for syllable-final consonants.</li>
+<li><em>Stacks</em>: Consonants are stacked. This may or may not involve merging the consonant shapes.</li>
+<li><em>Conjoined</em>: Consonant shapes are merged horizontally, rather than stacked. </li>
+<li><em>Ligated</em>: Consonant shapes are merged in a way that is more complex than simply stacking or conjoining. Often it is difficult to see the component parts of the conjunct that is formed.</li>
+<li><em>Touching</em>: Consonant shapes are closer to each other than normal, but no shapes are altered. </li>
+<li><em>Virama</em>: A dedicated and visible character is used to indicate a cluster. The character may not always be visible, but a check mark here indicates that use of a visible marker is a relatively common approach.</li>
+<li><em>Diacritic</em>: Consonant clusters are or can be indicated by another diacritic, such as the sukun in Arabic. In orthographies that hide vowel diacritics, these are often hidden in 'unvocalised' text.</li>
+<li><em>Killer type</em>: Where a special character is introduced to 'kill' the inherent vowel, this column indicates the type of killer. Options include:
+<ul>
+<li><samp>v</samp> a virama that is usually invisible while creating a conjunct, but may be visible if the font doesn't support the conjunct glyph. </li>
+<li><samp>i</samp> an 'invisible stacker' that never has a visible glyph (and may create a conjunct in other ways than just stacking). </li>
+<li><samp>k</samp> a 'pure killer', ie. a glyph that is always visible.</li>
 </ul>
-<p id="placement"><b class="leadin">Contextual placement.</b> This is typically related to combining characters, and indicates that a typical font uses OpenType rules to position of a glyph according to the glyphs that surround it, eg. tone marks in Thai, or vowel signs in Arabic (if used). Nearly all scripts with combining characters will need some positioning rules to take account of where the combining character should be placed. This indicator is more concerned with whether that location varies significantly, depending on the surrounding context.</p>
-<p><b class="leadin">Multiple combining marks.</b> Whether more than one combining character can be associated with a give base character.</p>
-<p id="shaping"><b class="leadin">Contextual shaping.</b> Whether different glyph shapes have to be used for a character depending on the visual context, eg. the RA in Myanmar that grows and shrinks to fit around the character is surrounds. Note that this does not include shaping for cursive scripts.</p-->
-<p id="case_sensitive"><b class="leadin">Bicameral</b> Whether or not the script makes case distinctions.</p>
-<p>If the result is inside parentheses, it indicates that something similar to case conversion applies, however it operates in a slightly different way. See below:</p>
-<ul><li>Javanese has something that approximates case alternatives for some characters only, but there are no algorithms to convert from one 'case' to another. See <a href="https://r12a.github.io/scripts/javanese/#murda">more detail</a>.</li>
-<li>Georgian case forms are used as normal vs all-caps, and all-caps is applied to a whole word. However, Unicode has data to enable algorithms to convert between the 'cases'. See <a href="https://r12a.github.io/scripts/georgian/#type">more detail</a>.</li>
+</li>
 </ul>
-<p id="cursive"><b class="leadin">Cursive script.</b> Do the letters in this script join up, eg. as in Arabic, N'Ko, or Mongolian?</p>
-<p id="direction"><b class="leadin">Text direction.</b> Is this a right-to-left script (which actually usually means that bidirectional behaviour needs to be supported, for numbers and embedded foreign text)? Is it used in a vertical orientation?</p>
-<p>A value of rtl* indicates that number digits are read RTL.</p>
-<p id="baseline"><b class="leadin">Baseline.</b> The baseline for Latin text is labelled 'mid'. Scripts designed like Indic scripts that hang from a high baseline, are labelled 'high'. Scripts like Chinese are labelled 'low'.</p>
-<p id="word_separator"><b class="leadin">Word separator.</b> A word is a unit of segmentation between the grapheme and the phrase. This column asks whether, as a general rule, there are explicit delimiters for word boundaries. The alternatives are:</p>
+
+
+
+
+<p><button>Text direction</button> <code>?show=direction</code></p>
+
+<p>The typical direction(s) in which the text flows. Columns indicate:</p>
+
+<ul>
+<li><em>Text direction</em>: The general direction(s) of text flow. Options include:
+<ul>
+<li><samp>ltr</samp> horizontal and left to right. </li>
+<li><samp>rtl</samp> horizontal and right to left.</li>
+<li><samp>tbrl</samp> vertically set, with lines progressing from right to left.</li>
+<li><samp>tblr</samp> vertically set, with lines progressing from left to right.</li>
+</ul>
+</li>
+<li><em>RTL numbers</em>: In most orthographies where the text is read right to left numbers are read left to right. In these orthographies, however, number are also read right to left.</li>
+</ul>
+
+
+
+
+<p><button>Shaping &amp; positioning</button> <code>?show=shaping</code></p>
+
+<p>'Shaping' here means that glyph shapes change according to the context (gsub), whereas 'positioning' refers to the need to position glyphs differently according to context (gpos). The columns look at two specific properties of shaping.</p>
+
+<ul>
+<li><em>Bicameral</em>: Whether and how there is a mapping from one case to another. Options include:
+<ul>
+<li><samp>✓</samp> regular uppercase and lowercase mappings. </li>
+<li><samp>allcaps</samp> uppercase forms are only used for whole words or phrases. Georgian case forms are used as normal vs all-caps, and all-caps is applied to a whole word. However, Unicode has data to enable algorithms to convert between the 'cases'. See <a href="https://r12a.github.io/scripts/georgian/#type">more detail</a>.</li>
+<li><samp>partial</samp> there is not a strict upper- vs lowercase mapping, but certain characters behave a little like uppercase forms. For example, Javanese has something that approximates case alternatives for some characters only, but there are no algorithms to convert from one 'case' to another. See <a href="https://r12a.github.io/scripts/javanese/#murda">more detail</a>.</li>
+</ul>
+</li>
+<li><em>Cursive</em>: Whether letters are joined with adjacent letters, eg. as in Arabic, N'Ko, or Mongolian.</li>
+</ul>
+
+
+
+
+<p><button>Punctuation &amp; inline</button> <code>?show=inline</code></p>
+
+<p>Currently this section only indicates how and if words are separated. The following alternatives are called out:</p>
 <ul>
 <li><em>space</em>: Words are separated by spaces, eg. Hebrew.</li>
 <li><em>wb</em>: Words are visually separated, but by a non-space character, eg. Amharic.</li>
@@ -261,12 +325,23 @@ See the next column for viramas that produce conjuncts but are invisible.
 <li><em>syllable</em>: Spaces are used, but they separate syllables, not words, eg. Vietnamese or Lisu.</li>
 <li><em>sb</em>: Again, syllables are separated rather than words, but using a non-space character, eg. Tibetan.</li>
 </ul>
+
+
+
+
+<p><button>Line &amp; paragraph</button> <code>?show=para</code></p>
+<p>Columns currently cover:</p>
+
+<ul>
+<li>
 <p id="wrap"><b class="leadin">Linebreak.</b> Indicates the primary break point for wrapping lines.  It is useful to compare this column with the 'Word separator' column just described. Note that nearly all scripts have rules about which punctuation characters can appear at the end or start of a line. The alternatives are:</p>
 <ul>
 <li><em>word</em>: Text wraps at word boundaries.</li>
 <li><em>syllable</em>: Text wraps at syllable boundaries, regardless of whether word boundaries are delimited.</li>
 <li><em>char</em>: Text wraps immediately after the last character that fits on a line, regardless of word or syllable boundaries.</li>
 </ul>
+</li>
+<li>
 <p id="hyphenation"><b class="leadin">Hyphenation.</b> Whether or not hyphenation is used with the script. Hyphenation here means, having initially broken lines at word boundaries, then splitting words at the end of a line as a <em>secondary</em> mechanism for line-breaking, in order to make justified paragraphs look better. Scripts may use other visual cues than a hyphen, and may sometimes use no visual indicator that the word was broken.  Values include:</p>
 <ul>
 <li><em>yes &lt;char&gt;</em>: Hyphenation occurs, using the character indicated as a visual marker of the work break.</li>
@@ -277,6 +352,9 @@ See the next column for viramas that produce conjuncts but are invisible.
 </ul>
 <p> ↵ indicates the line-break. For example, the cell for Mongolian shows &quot;↵᠆&quot;, which indicates that the Todo soft hyphen appears at the start of the second line, rather than at the end of the first. If Polish were in the list, you would see -↵-, which indicates that the hyphen appears both at the end and beginning of the line.</p>
 <p>* indicates that although the visual marker looks like a hyphen, it is actually a different character.</p>
+</li>
+
+<li>
 <p id="justification"><b class="leadin">Justification.</b> Indicates the principal method(s) for full justification of text. Higher-end typographic systems will typically apply more than one method, and across whole paragraphs rather than just a single line. Here we simply aim to give an idea of the most common approach, or approaches, where there is a mixture.  Alternatives include:</p>
 <ul>
 <li><em>sp</em>: Spaces between words or syllables are stretched, eg. Russian. In some orthographies, eg. Thai, the stretched spaces are phrase delimiters, rather than around words.</li>
@@ -287,7 +365,34 @@ See the next column for viramas that produce conjuncts but are invisible.
 <li><em>pad</em>: Characters are repeated to pad out remaining space at the end of a line, eg. multiple tseks at the line end in Tibetan.</li>
 <li><em>none</em>: Full justification is not a feature of the language, eg. Balinese.</li>
 </ul>
-<p id="region"><b class="leadin">Region.</b> This rough grouping places the script in the region where it originated, so English is in Europe, and Arabic is in the West Asia. It serves to get a very rough idea of how things stack up on a regional basis. Regions are one of the following:</p>
+</li>
+
+<li>
+<p id="textspace"><b class="leadin">Text space.</b> Text spacing looks at ways in which spacing is applied between characters over and above that which is introduced during justification.  Alternatives include:</p>
+<ul>
+<li><samp>sp</samp> regular tracking space is introduced between each letter.</li>
+<li><samp>base</samp>: the baseline is stretched</li>
+</ul>
+</li>
+
+<li>
+<p id="baseline"><b class="leadin">Baseline.</b> The baseline for Latin text is labelled 'romn'. Scripts designed like Indic scripts that hang from a high baseline, are labelled 'hang'. Scripts like Chinese are labelled 'ideo'. Scripts that use a centre baseline </p>
+<ul>
+<li><samp>romn</samp>: the baseline used for Latin script.</li>
+<li><samp>hang</samp>: a hanging baseline, such as used by several Indic scripts.</li>
+<li><samp>ideo</samp>: a low baseline, such as used by Chinese.</li>
+<li><samp>cntr</samp>: a vertial baseline that runs through the centre of the character glyphs, such as used by vertical Japanese or by Mongolian.</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<p><button>Region</button> 
+<code>?show=more</code></p>
+
+<p id="region">This rough grouping places the script in the region where it originated, so English is in Europe, and Arabic is in the West Asia. It serves to get a very rough idea of how things stack up on a regional basis. Regions are one of the following:</p>
 <ul>
 <li>nam (Northern America), </li>
 <li>sam (South America), </li>
@@ -302,10 +407,11 @@ See the next column for viramas that produce conjuncts but are invisible.
 <li>afr (Africa) </li>
 <li>oce (Oceania - includes Australia, NZ, and Pacific Islands)</li>
 </ul>
+
 <!--p><b class="leadin">Feature count.</b> This is a very crude indicator that simply awards one point for each column after the first three columns that doesn't read 'no', 'mid' or '0'.</p-->
 </section>
 
-<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2023-05-09  10:24<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2023-05-25  5:37<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <script>

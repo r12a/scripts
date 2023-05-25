@@ -64,11 +64,11 @@ var by = function (path, reverse, primer, then) {
 		linked:" ", 
 		chars:"Total chars", 
 		aux:"+", 
-		letters:"Letters", 
-		mark:"Marks", 
+		letters:"Letter", 
+		mark:"Mark", 
 		punctuation:"Punct\u00ADuation",
-		digits:"Native digits",
-		symbols:"Symbols",
+		digits:"Number",
+		symbols:"Symbol",
 		other:"Other",
         
 		type:"Writing system",
@@ -96,12 +96,12 @@ var by = function (path, reverse, primer, then) {
 		cfinals:"Finals",
         
 		//conjunct:"Conjuncts",
-		cstack:"Clusters, stacks",
-		cconj:"Clusters, conjoined",
-		clig:"Clusters, ligated",
-        ctouch:"Clusters, touching",
-        cvirama:"Clusters, virama",
-        cmark:"Clusters, diacritics",
+		cstack:"Stacked",
+		cconj:"Conjoined",
+		clig:"Ligated",
+        ctouch:"Touching",
+        cvirama:"Visible virama",
+        cmark:"Diacritics",
 		killer:"Killer type",
         
 		//gpos:"Contextual placement", 
@@ -149,12 +149,14 @@ function resort (column, reverse) {
 	table += '<table id="reviewtable"><thead><tr style="position:sticky; top:0; background: white;">';
 	
 	// sets of subcolumns, for toggles
-	var charsubset = new Set(['Letters','Marks', 'Punct\u00ADuation', 'Native digits', 'Other'])
+	var charsubset = new Set(['Letters','Marks', 'Punct\u00ADuation', 'Numbers', 'Symbols', 'Other'])
 
 	
-	//for (var col in tablecolumns) {
-	//	table += `<th class="top" title="'+tablecolumns[col]+'"><a href="#theTable" onclick="resort(\''+col+'\'); return false;">'+tablecolumns[col]+'</a></th>'+"\n";
-	//	}
+	// *****************************
+	//	
+    // MAKE COLUMN HEADINGS
+    //
+	//	****************************
 	
 	// NEWCOL add a line of code to display headings
 	table += `<th class="top" title="Language" style="text-align:right;"><a href="#theTable" onclick="resort(\'name\'); window.resortCol=\'name\';return false;">Language</a></th>\n`
@@ -168,30 +170,28 @@ function resort (column, reverse) {
 
 
     if (window.csubset) {
-        table += `<th class="top" title="Total number of characters in regular use."><a href="#theTable" onclick="resort(\'chars\'); window.resortCol=\'chars\'; return false;">Total chars</a></th>\n`
-        
-        table += `<th class="top" title="Number of additional, infrequently-used characters."><a href="#theTable" onclick="resort(\'aux\'); window.resortCol=\'aux\'; return false;">+</a></th>\n`
-        
-		table += `<th class="top charsubset" title="Letters"><a href="#theTable" onclick="resort(\'letters\', REVERSE); window.resortCol=\'letters\'; return false;">Letters</a></th>\n`
-        
-		table += `<th class="top charsubset" title="Marks"><a href="#theTable" onclick="resort(\'mark\', REVERSE); window.resortCol=\'mark\'; return false;">Marks</a></th>\n`
+                
+        table += makeTableHead ('chars', "Total number of characters in regular use.", REVERSE)
       
-		table += `<th class="top charsubset" title="Native digits"><a href="#theTable" onclick="resort(\'digits\', REVERSE); window.resortCol=\'digits\'; return false;">Native digits</a></th>\n`
+        table += makeTableHead ('aux', "Characters still under investigation.", REVERSE)
+      
+        table += makeTableHead ('letters', "General category: Letter", REVERSE)
+      
+        table += makeTableHead ('mark', "General category: Mark", REVERSE)
 		
-		table += `<th class="top charsubset" title="Punctuation"><a href="#theTable" onclick="resort(\'punctuation\', REVERSE); window.resortCol=\'punctuation\'; return false;">Punct\u00ADuation</a></th>\n`
+        table += makeTableHead ('digits', "General category: Number", REVERSE)
           
-        table += makeTableHead ('symbols', "Symbols.", REVERSE)
+        table += makeTableHead ('punctuation', "General category: Punctuation", REVERSE)
+          
+        table += makeTableHead ('symbols', "General category: Symbol", REVERSE)
 
-        table += `<th class="top charsubset" title="Format &amp; other chars"><a href="#theTable" onclick="resort(\'other\', REVERSE); window.resortCol=\'other\'; return false;">Other</a></th>\n`
+        table += makeTableHead ('other', "Format &amp; other chars", REVERSE)
 		}
 
 
 
 
 	if (window.vsubset) {
-        //table += `<th class="top" title="Script type."><a href="#theTable" onclick="resort(\'type\'); window.resortCol=\'type\'; return false;">Type</a></th>\n`
-
-
 
 
         table += makeTableHead ('type', "Type of writing system.", REVERSE)
@@ -285,12 +285,24 @@ function resort (column, reverse) {
 
     if (window.more) {
         table += makeTableHead ('region', "Region of origin.", '')
-        
-        //table += `<th class="top" title="More info"><a href="#theTable">More info</a></th>\n`
         }
 	
 	table += '</tr></thead><tbody>'
 	
+
+
+
+
+
+
+    // *************************
+    //
+    //  ADD VALUES TO CELLS
+    //
+    // *************************
+
+
+
 
 		// NEWCOL add a value
 		for (var i=0;i<items.length;i++) {
@@ -322,7 +334,7 @@ function resort (column, reverse) {
 
                 table += drawCellForCharacters('punctuation', scriptData[i], 'index_punctuation', 'yy')
 
-                table += drawCellForCharacters('symbol', scriptData[i], 'index_symbols', 'yy')
+                table += drawCellForCharacters('symbols', scriptData[i], 'index_symbols', 'yy')
 
                 table += drawCellForCharacters('other', scriptData[i], 'index_other', 'yy')
 
@@ -511,8 +523,18 @@ function drawCellForCharacters (name, data, frag, colour) {
    
     return out
     }
+	
 
 
+
+
+
+
+    // *************************
+    //
+    //  SET MOUSEOVER TEXT
+    //
+    // *************************
 
 
 
@@ -525,6 +547,30 @@ function showContext (evt) {
     var parts = metadata.split('§')
 	out = `<strong>${ parts[0] }</strong>`
     if (parts[1] && parts[1] !== '-') out += ': &nbsp;&nbsp;'
+    
+    if (parts[0] === tablecolumns.letters) {
+        out += ` The number of characters with a Unicode General Category of Letter.`
+        }
+    
+    if (parts[0] === tablecolumns.marks) {
+        out += ` The number of characters with a Unicode General Category of Mark.`
+        }
+    
+    if (parts[0] === tablecolumns.digits) {
+        out += ` The number of characters with a Unicode General Category of Number.`
+        }
+    
+    if (parts[0] === tablecolumns.punctuation) {
+        out += ` The number of characters with a Unicode General Category of Punctuation.`
+        }
+    
+    if (parts[0] === tablecolumns.symbols) {
+        out += ` The number of characters with a Unicode General Category of Symbol.`
+        }
+    
+    if (parts[0] === tablecolumns.other) {
+        out += ` The number of characters with a Unicode General Category of Other (C), or Separator (Z). This includes many of the invisible formatting characters, such as directional controls, ZWNJ, etc.`
+        }
     
     if (parts[0] === tablecolumns.direction) {
         if (parts[1].includes('rtl')) out += ` Right to left script.`
@@ -924,7 +970,7 @@ function getCharacterStats () {
 				charArray = [...charuseData.symbol]
                 charAuxArray = []
                 if (charuseData.symbolaux) charAuxArray = [...charuseData.symbolaux]
-				scriptData[i].symbol = charArray.length + charAuxArray.length
+				scriptData[i].symbols = charArray.length + charAuxArray.length
 				count += charArray.length + charAuxArray.length
 				}
 			else scriptData[i].symbol = '0'
@@ -1085,7 +1131,7 @@ function getCharacterStats () {
             
             
             // text direction
-            if (scriptData[i] === 'rtl*') {
+            if (scriptData[i].direction.includes('rtl*')) {
                 scriptData[i].direction = 'rtl'
                 scriptData[i].numdir = '✓'
                 }
