@@ -88,6 +88,13 @@ reflist = {
 "lang": new Set(['my']),
 },
 
+"wbp": {
+"authors": "Wikipedia",
+"title":"Burmese phonology",
+"url":"http://en.wikipedia.org/wiki/Burmese_phonology",
+"lang": new Set(['my']),
+},
+
 "wbs": {
 "authors": "Wikipedia",
 "title":"Burmese alphabet",

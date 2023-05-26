@@ -888,7 +888,7 @@ autoExpandExamples.my = `
 အကယ်၍|if|ʔəkɛ̀jwḛ|a.kairwe
 အကို|||a.kui
 အကောင်|||a.kaung
-အက္ခရာ|character, script|ʔɛʔkʰəjà
+အက္ခရာ|character, script|ʔɛ§ʔ§kʰə§jà
 အက်|||ak
 အက်စတိုးနီးယားနိုင်ငံ|||akca.tui:ni:ya:nuingngam
 အက်တီနီယမ်|||aktiniyam
@@ -924,7 +924,7 @@ autoExpandExamples.my = `
 အတောင်|feather|ʔətàuɴ|a.taung
 အနက်|||a.nak
 အနောက်|||a.nauk
-အန္တရာယ်|danger|ʔàɴdəje
+အန္တရာယ်|danger|ʔà§ɴ§›§də§je
 အန်|to vomit|ʔàɴ|an
 အပင်|||a.pang
 အပေါင်|leg|ʔəpàuɴ|a.paung
@@ -1006,7 +1006,7 @@ autoExpandExamples.my = `
 အုန်းနို့ခေါက်ဆွဲ|||un:nui.hkaukhcwai:
 အုန်းသီး|coconut|ʔóʊ§ɴ.§dʰí
 အူ|guts|ʔù|u
-အူမကြီး|liver|ʔùma̰dʑí|uma.kri:
+အူမကြီး|liver|ʔù§ma̰§dʑí|uma.kri:
 အောက်|||auk
 အောက်တိုဘာ|October|ʔaʊ§ʔ.§tò§bà
 အောင်|||aung
