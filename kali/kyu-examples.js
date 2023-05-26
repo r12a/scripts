@@ -142,11 +142,13 @@ autoExpandExamples.kyu = `
 ꤢꤪ|brown|ɔ
 ꤢ꤬ꤏꤛꤢꤊꤟꤢꤩ|Asia|ʔa˨.ʃja˦.ke̤˦
 ꤢ꤬ꤕꤟꤛꤢ|difficult|a˨§p§‹§j§a̤
-ꤢ꤬ꤗꤥ꤬ꤢ꤬ꤚꤢ|tax|ʔa˨.mo˨.ʔa˨.ra˦
+ꤢ꤬ꤗꤥ꤬ꤢ꤬ꤚꤢ|tax|ʔa˨.§m§o˨.§ʔa˨.§r§a˦
+ꤢ꤬ꤗꤥ꤬ꤢ꤬ꤚꤢ|tax|ʔà.§m§ò.§ʔà.§r§á
 ꤢ꤬ꤠꤖꤚꤤꤊꤢ|Africa|a˨fri˦ka˦
 ꤤ꤬ꤕꤟꤢ|leap|i˨pa̤˦
 ꤥ꤬ꤊꤟꤌꤣ|to rest|o˨§k§‹§›§ɯ̤ə
-ꤥ꤬ꤗꤛꤢꤩ||
+ꤥ꤬ꤗꤛꤢꤩ|to sleep|o˨.§m§je˧|òmye
+ꤥ꤬ꤗꤛꤢꤩ|to sleep|ò.§m§j§ē|òmye
 
 ꤢꤛꤢ꤭ꤞꤤ꤭|lion|–§j§a˧§ʂ§i˧
 ꤖꤢꤛꤝꤥ|rubber|pʰ§a˦§j§w§o˦
@@ -162,6 +164,7 @@ autoExpandExamples.kyu = `
 ꤍꤟꤥ|word|ŋ§›§o̤˦
 ꤒꤢ꤬ꤊꤜꤝꤤ|opposite|t§a˨§k§l§w§i˦
 ꤢꤟꤌꤣꤢꤛꤢ|foolish|–§›§›§ɯ̤ᵊ˦§–§j§a˦
+ꤢꤟꤌꤣꤢꤛꤢ|foolish|–§›§›§ɯ̤́ᵊ§–§j§á
 ꤔꤤ꤮|particle to soften statements|ni˦
 ꤕꤝꤟꤥ꤭꤮ ꤒꤣ꤬ꤖꤟꤌꤣ|always|pwo̤˧tə˨pʰɯ̤ᵊ˦
 ꤙꤤꤒꤢꤩ꤭꤮ ꤒꤣ꤬ꤖꤥ꤬ ꤙꤢꤧ꤬ꤙꤢꤧ꤬|anywhere|bi˦te˧ tə˨pʰo˨ bɛ˨bɛ˨
