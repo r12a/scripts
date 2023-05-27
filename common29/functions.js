@@ -2074,6 +2074,7 @@ function setTranslitToggle () {
     div.appendChild(a)*/
 
 	checkboxList.appendChild(div)
+    checkboxList.style.display = 'none'
 	}
 
 

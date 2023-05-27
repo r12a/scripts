@@ -307,8 +307,13 @@ function addUsageAdvice (script, iso, picker) {
         }
     
     out += `
-    <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'; document.getElementById('settings_saved').style.visibility='hidden';"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
+    <img id="showTOC" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="  document.getElementById('tocPanel').style.display = 'block'">
 
+    <div id="optionSwitch" title="Options." onclick="if (document.getElementById('showTranscriptions').style.display === 'block') document.getElementById('showTranscriptions').style.display='none'; else document.getElementById('showTranscriptions').style.display='block';"><img src="../../shared/images/showImages.png" alt="Option menu"></div>
+
+    <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'; document.getElementById('settings_saved').style.visibility='hidden';"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
+    
+    
     <!-- ACCESSIBILITY PANEL  -->
     <div id="access" style="display: none;">
     <div id="access_contrast">
