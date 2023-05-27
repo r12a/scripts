@@ -125,7 +125,7 @@ autoExpandExamples.nqo = `
 ߛߎ ߺ ߎ ߺ ߛߎ|every night||su-u-su
 ߛߌ ߺ ߌ ߺ ߛߌ|anyone||si _ i _ si
 ߡߐ߰ ߺ ߐ ߺ ߡߐ߰|everyone||mɔ⁶ _ ɔ _ mɔ⁶
-
+ߓߌߢߍ߲ ߝ߭ߋߣߎ߳|welcome|b§i‌§ɲ§ɛ̃§ §v§e§n§y
 
 
 
