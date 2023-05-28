@@ -30,7 +30,7 @@ autoExpandExamples.ban = `
 ᬅᬦ᭄ᬤ|sickness|andə|anda
 ᬅᬦ᭄ᬥ|blind|andə
 ᬅᬭᬶ|ending, enemy|ari
-ᬅᬯᬢᬵᬭ|avatar|awatarə
+ᬅᬯᬢᬵᬭ|avatar|a§wa§ta§rə
 ᬅᬱ᭄ᬝ|eight|astə|asta
 ᬅᬲ᭄ᬢ|to be|astə
 ᬅᬲ᭄ᬣ|bone|astə|asta
