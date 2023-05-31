@@ -582,7 +582,7 @@ autoExpandExamples.bn = `
 উৎপল|water lily|ut̪ˈpɔˑl
 উৎস||
 উৎসব|festival|u§t§ʃɔ§b
-ঊনআশি||
+ঊনআশি|seventy-nine||unaśi
 ঋতু|season|ɾi§t̪u
 এ|this||e
 এঁকে||
@@ -680,7 +680,7 @@ autoExpandExamples.bn = `
 ওখানে|there||okhane
 ওগুলা||
 ওগুলো||
-ওজন|weight|od͡ʒon
+ওজন|weight|o§d͡ʒo§n
 ওজুদ||
 ওটা||
 ওটি||
@@ -715,7 +715,7 @@ autoExpandExamples.bn = `
 কওল||
 কক্ষপথ||
 কক্সবাজার জেলা||
-কখন|when|kɒ.kʰɒn|kôkhôn
+কখন|when|kɒ.§kʰɒ§n|kôkhôn
 কখনও||
 কখনো সখনো||
 কঙ্গো প্রজাতন্ত্র||
@@ -755,7 +755,7 @@ autoExpandExamples.bn = `
 করছ|doing|ko§r§cʰo
 করঞ্জ||
 করতাল|cymbal|kɔ§r§tɑ§l
-করবী|oleander|kɔɾɔbi
+করবী|oleander|kɔ§ɾɔ§bi
 করলা||
 করা|to do|kɔ§ɾa§/kɔɹa/kɔɽa
 করানো||
@@ -3712,7 +3712,7 @@ autoExpandExamples.bn = `
 হ্রদ||
 
 
-
+গাঞি|||gani
 
 
 
