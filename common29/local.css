@@ -29,6 +29,30 @@ body {
 
 
 
+/*. make columns wider for iPad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    p, h2, h3, h4, dl, div#footer, div.example, figure, details#scriptLinks { margin-inline-start: 7.5%; margin-inline-end: 10%; }
+    ul, ol { margin-inline-start: 9%; margin-inline-end: 10%; }
+    ul ul { margin-inline-start: 2%; margin-inline-end: 5%; }
+    table { margin-inline-start: 7.5%;  }
+    table.inband { margin-inline-end: 10%; }
+    blockquote { margin-inline-start: 11%; margin-inline-end: 10%; }
+
+    #vowel_mappings .map, #consonant_mappings .map { margin: 0 10% 1em 7.5%; }
+
+    table.soundSummary { margin-right: 10%; }
+
+}
+
+
+
+
+
 /* DARK SETTINGS */
 body.dark { 
 	background-color: #000;
@@ -409,7 +433,7 @@ h4 + p {
 	background-color:#ffe; 
     background-color: #fffdf5;
     border: 1px solid #CCC; 
-	box-shadow: 7px 7px 5px #888; 
+	box-shadow: 12px 12px 12px #CCC; 
 	padding: 5px 10px 5px 15px; 
 	border-radius: 10px; 
 	z-index:2000;
@@ -423,9 +447,14 @@ h4 + p {
     scrollbar-color: tan white;
 	}
 #dialogBox {
-    width: 60%;
+    width: 65%;
     bottom: 6%;
-    }    
+    background-color: white;
+    border: 25px solid #f3dfc4;
+    box-shadow: 12px 12px 12px #CCC;
+	padding: 5px 20px 5px 20px;
+    }
+
 #tocPanel { 
     font-size: 100%;
     width: 25%;
@@ -496,10 +525,12 @@ h4 + p {
 	position: fixed;
 	bottom: 5%;
 	padding: 1em;
-	border: 1px solid tan;
+	border: 5px solid tan;
 	background-color: #ffe;
-	right: 18%;
+	right: 12%;
 	border-radius: 5px;
+    
+    background: white;
 	}
 
 #jumpToToc {
@@ -625,7 +656,7 @@ details {
 /*.auto {
 	margin: 1em 30% 1em 10%;
 	}*/
-.characterBox, .mainBox, .auxiliaryBox, .auxBox, .deprecatedBox, .otherBox, .archaicBox, .foreignBox, .exampleBox, .unusedBox, .tbcBox {
+.characterBox, .mainBox, .auxiliaryBox, .auxBox, .deprecatedBox, .otherBox, .archaicBox, .foreignBox, .exampleBox, .unusedBox, .tbcBox, .summaryBox {
     border: 1px solid #eee; 
     padding: 8px;
     margin-left: 7.5%;
@@ -665,8 +696,21 @@ details {
     line-height: 1;
     color: brown;
     }
+.summaryBox {
+	background-color: #fff5e6;
+    background-color: white;
+	padding-top: 0;
+    border: 0;
+    border-block-end: 1px dotted tan;
+    border-radius: 0;
+    
+	}
 
 
+.soundSummary { background: antiquewhite;}
+.soundSummary td { margin:0; padding: 0; border:0; width: 100%; }
+.soundSummary th { text-align: start; padding-inline-end: 1rem; }
+.summaryBox { margin: 0; }
 
 
 
@@ -680,7 +724,7 @@ details {
     text-align: left;
     display: block;
 	}
-.characterBox.caps::before {
+.characterBox.caps::before, .summaryBox.caps::before {
     display: none;
     }
 .caps {
@@ -720,6 +764,34 @@ details {
 	}
 
 
+
+.openBox:before {
+    content: '';
+    }
+.openBox {
+    margin: 0;
+    }
+.openBox .listAll {
+    display: none;
+    }
+.vowel_grid .characterBox {
+    background-color: white;
+    border: 0;
+    }
+
+figure#fig_vowel_grid {
+    margin-inline: 5rem;
+    }
+.vowel_grid { margin:0; border-collapse: collapse; }
+.vowel_grid td { vertical-align: top; border: 0; padding-block-start: 1rem; line-height: 3rem;  white-space: nowrap; }
+.vowel_grid td span {text-align: start; border: 0; padding-left: .5em; }
+
+.vowel_grid td .ipa {
+    font-style: normal;
+    font-size: 1.4rem; 
+    color: #aaa;
+    }
+.vowel_grid tr { border-block: 1px solid #ddd; }
 
 
 .termref {
@@ -1272,6 +1344,7 @@ p.cdHeader {
 #panel .cdChar, #dialogBox .cdChar {
 	text-align: start;
 	border-bottom: 1px solid #aaa;
+    font-size: 2rem;
 	}
 #panel .insertTranscription, #dialogBox .insertTranscription {
 	display: none;
@@ -2113,7 +2186,7 @@ div.glossContainer {
     font-weight: normal;
     line-height: 1;
     margin: 0;
-    margin-block-start: -4rem;
+    margin-block-start: -3em;
     margin-inline-start: 9%;
     margin-inline-end: 32%;
     margin-block-end: 3rem;
@@ -2146,9 +2219,6 @@ div.glossContainer {
 #vowel_description .secref, #consonant_description .secref, #type .secref {
     font-size: 80%;
     }
-
-
-
 
 
 
