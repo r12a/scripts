@@ -1852,7 +1852,7 @@ autoExpandExamples.bo = `
 རག||
 རག་ལས||
 རག་ཤི||
-རང|you, self|ʐàŋ|rang
+རང|you, self|ʐà§ŋ|rang
 རང་གཅེས་འཛིན||
 རང་དབང||
 རང་དབང་མེད་པ||
