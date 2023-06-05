@@ -408,7 +408,7 @@ autoExpandExamples.shn = `
 ဢဵတ်ႇ|||
 ဢွၵ်းဢေႃ|brain||
 ဢၢင်ႇ|basin, sink|ʔaːŋ˩|
-ဢၢၼ်ႇ|to count|ʔaːn˩
+ဢၢၼ်ႇ|to count|ʔaː§n˩
 ဢၢႆ|smoke|ʔaaj˨˦
 ဢၵွၵ်ႈ|tax|ʔa˨˦.kɔk̚˧˧˨
 ဢၸူဝ်းယႃႉ|government|ʔa˨˦.t͡ɕoː˥.jaː˦˨ˀ|
