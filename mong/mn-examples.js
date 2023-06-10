@@ -331,7 +331,7 @@ autoExpandExamples.mn = `
 ᠴᠠᠭᠳᠠᠭ᠎ᠠ|police|t͡s§a§ɡ§ˈt§–§–§–§aː|tsagdaa|цагдаа
 ᠴᠠᠰᠤ|snow|t͡sʰ§a§s§–|tsas|цас
 ᠴᠡᠴᠡᠭ|flower|t͡ʃʰ§i§t͡ʃʰ§ɘ§k|tsetseg|цэцэг
-ᠴᠡᠷᠢᠭ|soldier|ˈt͡sʰerek||цэрэг
+ᠴᠡᠷᠢᠭ|soldier|ˈt͡sʰ§e§r§e§k||цэрэг
 ᠴᠢ|you (singular)|ˈt͡ɕʰi||чи
 ᠴᠢᠨᠤ᠎ᠠ|wolf|ˈt͡ɕʰɔn|chono|чоно
 ᠴᠢᠩᠭᠢᠰ ᠬᠠᠭᠠᠨ|Genghis Khan||čingɣis qaɣan|Чингис хаан
