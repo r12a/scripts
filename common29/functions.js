@@ -1288,6 +1288,10 @@ function replaceStuff (node) {
         var links = node.dataset.links.split(',')
         }
     else links = []
+    if (node.dataset.dir) {
+        var dirn = ` dir="${ node.dataset.dir }"`
+        }
+    else dirn = ''
     var out = ''
 
     // make the summary count link
@@ -1322,8 +1326,10 @@ function replaceStuff (node) {
         if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
         else indexId = ''
 
-        if (node.dataset.lang) out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
-        else out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+window.langTag+'">'+chars[i]+'</span>'
+        // if (node.dataset.lang) out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
+        if (node.dataset.lang) out += `<div class="listPair"${ indexId }><span class="listItem" lang="${ node.dataset.lang }"${ dirn }>${ chars[i] }</span>`
+        else out += `<div class="listPair"${ indexId }><span class="listItem" lang="${ window.langTag }"${ dirn }>${ chars[i] }</span>`
+        //else out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+window.langTag+'">'+chars[i]+'</span>'
 
 
         // leave a blank where a space is used
