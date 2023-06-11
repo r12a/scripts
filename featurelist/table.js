@@ -75,21 +75,21 @@ var by = function (path, reverse, primer, then) {
 
 		vsyllable:"Vowel syllables", 
 		vinherent:"Inherent vowel",
-		vletter:"Vowel letters",
-		vdiac:"Vowel marks",
+		vletter:"Dedicated letters",
+		vdiac:"Dedicated marks",
+		vother:"Vowels, other",
 		vhidden:"Vowels hidden",
 		vsign:"Vowel signs",
-		vother:"Vowels, other",
 		matres:"Matres lectionis",
         
-		ivowels:"Standalone, independent",
-		vbase:"Standalone, carrier",
+		ivowels:"Standalone letters",
+		vbase:"Standalone carrier",
 		//vmark:"Vowel marks",
         
 		pbletter:"Prebase letters",
 		pbmark:"Prebase marks",
 		vcircum:"Circum\u00ADgraphs",
-		vcomposite:"Composite vowels",
+		vcomposite:"Multipart vowels",
         
 		vvocalics:"Vocalics",
 		cmedials:"Medials",
@@ -204,12 +204,14 @@ function resort (column, reverse) {
        
         table += makeTableHead ('vdiac', "Small diacritics used to spell vowels.", REVERSE)
         
+        table += makeTableHead ('vother', "Other letters used to spell vowels.", REVERSE)
+        
+        table += makeTableHead ('vcomposite', "Vowel sounds that are represented by more than one character.", REVERSE)
+        
         table += makeTableHead ('vhidden', "Diacritics used to spell vowels that are usually hidden.", REVERSE)
         
         table += makeTableHead ('vsign', "Vowel signs used to spell vowels.", REVERSE)
          
-        table += makeTableHead ('vother', "Other letters used to spell vowels.", REVERSE)
-        
         table += makeTableHead ('matres', "Matres lectionis used to spell vowels.", REVERSE)
 
         table += makeTableHead ('vsyllable', "Syllabic characters used to spell vowels.", REVERSE)
@@ -225,8 +227,6 @@ function resort (column, reverse) {
         table += makeTableHead ('pbmark', "Combining marks that appear before the base consonant when rendered.", REVERSE)
         
         table += makeTableHead ('vcircum', "(Single) combining marks that place glyphs on more than one side of the base character.", REVERSE)
-        
-        table += makeTableHead ('vcomposite', "Vowel sounds that are represented by more than one character.", REVERSE)
         }
 
 	if (window.consonants) {
@@ -353,11 +353,13 @@ function resort (column, reverse) {
 
                 table += drawCell('vdiac', scriptData[i], 'combiningV')
 
+                table += drawCell('vother', scriptData[i], 'otherV')
+
+                table += drawCell('vcomposite', scriptData[i], 'compositeV')
+
                 table += drawCell('vhidden', scriptData[i], 'combiningV')
 
                 table += drawCell('vsign', scriptData[i], 'vowelsigns')
-
-                table += drawCell('vother', scriptData[i], 'otherV')
 
                 table += drawCell('matres', scriptData[i], 'matres')
 
@@ -373,8 +375,6 @@ function resort (column, reverse) {
                 table += drawCell('pbmark', scriptData[i], 'prebase')
 
                 table += drawCell('vcircum', scriptData[i], 'circumgraphs')
-
-                table += drawCell('vcomposite', scriptData[i], 'compositeV')
                 }
 
 
@@ -681,6 +681,7 @@ function showContext (evt) {
         types = parts[1].split(' ')
         if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> syllabic characters are used to write vowels.`
         else out += ' —'
+        out += '<br>This indicates the number of characters that represent vowel sounds with no preceding consonant in a syllabic script.'
         }
     
     if (parts[0] === tablecolumns.vinherent) {
@@ -696,14 +697,21 @@ function showContext (evt) {
         if (parts[1].trim() === '-') out += ` —`
         else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> letter is used.`
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> letters are used.`
-        out += '<br>These are ordinary, spacing letters dedicated to vowel sounds <em>that follow a consonant</em> (cf. independent vowels).'
+        out += '<br>These are ordinary, spacing letters dedicated to vowel sounds <em>that follow a consonant</em> (cf. standalone letters).'
         }
-    
+/*    
     if (parts[0] === tablecolumns.matres) {
         types = parts[1].split(' ')
         if (parts[1].trim() === '-') out += ` —`
         else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> letter is used.`
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> letters are used.`
+        out += '<br>Matres lectionis are consonant letters that may also mark the position of a vowel.'
+        }
+  */  
+    if (parts[0] === tablecolumns.matres) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else out += `Matres lectionis are used.`
         out += '<br>Matres lectionis are consonant letters that may also mark the position of a vowel.'
         }
     
@@ -720,7 +728,7 @@ function showContext (evt) {
         if (parts[1].trim() === '-') out += ` —`
         else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> combining mark is used.`
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> combining marks are used.`
-        out += '<br>These diacritics are small combining marks (cf. vowel signs) used to indicate a vowel sound after a consonant.'
+        out += '<br>These are dedicated combining marks used to indicate a vowel sound <em>after a consonant</em>.'
         }
     
     if (parts[0] === tablecolumns.vhidden) {
@@ -734,7 +742,7 @@ function showContext (evt) {
         if (parts[1].trim() === '-') out += ` —`
         else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> combining mark is used.`
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> combining marks are used.`
-        out += '<br>Vowel signs are combining marks attached to a consonant or consonant cluster that override an inherent vowel. These tend to be larger, and have more complex behaviours than simple diacritics.'
+        out += '<br>These are combining marks or occasionally letters that are referred to by the Unicode Standard as vowel signs. The combining marks are attached to a consonant or consonant cluster that override an inherent vowel, and tend to be larger, and have more complex behaviours than simple diacritics.'
         }
     
     if (parts[0] === tablecolumns.vother) {
@@ -742,7 +750,7 @@ function showContext (evt) {
         if (parts[1].trim() === '-') out += ` —`
         else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> character is used.`
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used.`
-        out += '<br>These characters are consonants or other letters that are used to write vowels, but that are not exclusively dedicated to writing vowels.'
+        out += '<br>These characters are other letters or marks that are used to write vowels,  that are not exclusively dedicated to writing vowels. Most are repurposed consonant letters.'
         }
     
     if (parts[0] === tablecolumns.ivowels) {
@@ -750,7 +758,7 @@ function showContext (evt) {
         if (parts[1].trim() === '-') out += ` —`
         else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> character is used.`
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used.`
-        out += '<br>Independent vowels are used to represent <em>standalone vowel sounds</em> (cf. Vowel letters, which are free standing letters that represent a vowel following a consonant).'
+        out += '<br>Letters used to represent <em>standalone vowel sounds</em>. (Cf. the column <samp>Dedicated letters</samp>, which lists free standing letters that represent a vowel following a consonant.)'
         }
     
     if (parts[0] === tablecolumns.vbase) {
@@ -760,7 +768,7 @@ function showContext (evt) {
             var carrier = parts[1].trim().split('/')
             out += `${ carrier[0].replace(/,/g,' or ') } is used as a vowel carrier. Used alone this represents the sound ${ carrier[1].replace(/,/g,' or ') }.`
             }
-        out += '<br>Carriers are used with combining marks to represent <em>standalone vowel sounds</em> (cf. Independent vowels, which are free standing letters).'
+        out += '<br>Carriers are used with combining marks to represent <em>standalone vowel sounds</em> (cf. <samp>Standalone letters</samp>, which are free standing letters).'
         }
       
     if (parts[0] === tablecolumns.pbletter) {
@@ -790,9 +798,9 @@ function showContext (evt) {
     if (parts[0] === tablecolumns.vcomposite) {
         types = parts[1].split(' ')
         if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> composite vowel is listed in the description.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> composite vowels are listed in the description.`
-        out += `<br>A composite vowel is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel signs, repurposed consonants, and diacritics available. (Numbers after a + sign indicate combinations that only occur in decomposed text.)`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> multipart vowel is listed in the description.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> multipart vowels are listed in the description.`
+        out += `<br>A multipart vowel is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel signs, repurposed consonants, and diacritics available. These figures may not include diphthongs that are created using glides or semivowels. (Numbers after a + sign indicate combinations that only occur in decomposed text.)`
         }
       
     if (parts[0] === tablecolumns.vvocalics) {
@@ -1046,10 +1054,13 @@ function getCharacterStats () {
                 
                 if (vowelObj.let) scriptData[i].vletter = vowelObj.let
                 else scriptData[i].vletter = '-'
-                
+/*                
                 if (vowelObj.ml) scriptData[i].matres = vowelObj.ml
                 else scriptData[i].matres = '-'
-                
+*/              
+                if (vowelObj.ml) scriptData[i].matres = '✓'
+                else scriptData[i].matres = '-'
+
                 if (vowelObj.ind) scriptData[i].ivowels = vowelObj.ind
                 else scriptData[i].ivowels = '-'
                 
