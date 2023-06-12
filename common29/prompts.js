@@ -303,7 +303,11 @@ function addUsageAdvice (script, iso, picker) {
         <summary class="instructions"><a href="../index.html#scriptnotes">Other orthography descriptions</a></summary>
         </details>
 
-        </div>`
+        </div>
+        
+        
+        <dialog id="copyNotice">Copied !</dialog>
+        `
         }
     
     out += `
