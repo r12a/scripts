@@ -75,12 +75,12 @@ var by = function (path, reverse, primer, then) {
 
 		vsyllable:"Vowel syllables", 
 		vinherent:"Inherent vowel",
-		vletter:"Dedicated letters",
 		vdiac:"Dedicated marks",
-		vother:"Vowels, other",
+		vletter:"Dedicated letters",
+		vother:"Other chars",
 		vhidden:"Vowels hidden",
-		vsign:"Vowel signs",
 		matres:"Matres lectionis",
+		vsign:"Vowel signs",
         
 		ivowels:"Standalone letters",
 		vbase:"Standalone carrier",
@@ -200,9 +200,9 @@ function resort (column, reverse) {
         
         table += makeTableHead ('vinherent', "Inherent vowel.", REVERSE)
         
-        table += makeTableHead ('vletter', "Spacing letters used to spell vowels.", REVERSE)
-       
         table += makeTableHead ('vdiac', "Small diacritics used to spell vowels.", REVERSE)
+       
+        table += makeTableHead ('vletter', "Spacing letters used to spell vowels.", REVERSE)
         
         table += makeTableHead ('vother', "Other letters used to spell vowels.", REVERSE)
         
@@ -210,10 +210,10 @@ function resort (column, reverse) {
         
         table += makeTableHead ('vhidden', "Diacritics used to spell vowels that are usually hidden.", REVERSE)
         
-        table += makeTableHead ('vsign', "Vowel signs used to spell vowels.", REVERSE)
-         
         table += makeTableHead ('matres', "Matres lectionis used to spell vowels.", REVERSE)
 
+        table += makeTableHead ('vsign', "Vowel signs used to spell vowels.", REVERSE)
+         
         table += makeTableHead ('vsyllable', "Syllabic characters used to spell vowels.", REVERSE)
 
 
@@ -349,9 +349,9 @@ function resort (column, reverse) {
 
                 table += drawCell('vinherent', scriptData[i], 'inherent')
 
-                table += drawCell('vletter', scriptData[i], 'vletter')
-
                 table += drawCell('vdiac', scriptData[i], 'combiningV')
+
+                table += drawCell('vletter', scriptData[i], 'vletter')
 
                 table += drawCell('vother', scriptData[i], 'otherV')
 
@@ -359,9 +359,9 @@ function resort (column, reverse) {
 
                 table += drawCell('vhidden', scriptData[i], 'combiningV')
 
-                table += drawCell('vsign', scriptData[i], 'vowelsigns')
+                table += drawCell('matres', scriptData[i], 'otherV')
 
-                table += drawCell('matres', scriptData[i], 'matres')
+                table += drawCell('vsign', scriptData[i], 'combiningV')
 
                 table += drawCell('vsyllable', scriptData[i], 'vowels')
 
