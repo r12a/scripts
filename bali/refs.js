@@ -68,9 +68,9 @@ reflist = {
 },
 
 "wl": {
-"url":"https://en.wikipedia.org/wiki/Bamum_language",
+"url":"https://en.wikipedia.org/wiki/Balinese_language",
 "authors": "Wikipedia",
-"title":"Bamum language",
+"title":"Balinese language",
 "reviewed":true
 },
 
