@@ -61,7 +61,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->12 June, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 June, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -2026,14 +2026,15 @@ for (i=0;i<gridItems.length;i++) gridItems[i].onclick = showCharDetailsInPanel
 <section id="direction">
 <h2>Text direction</h2>
 
-<p>Hebrew script is written right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (bidirectional text). In the following example, the Hebrew words are read right-to-left, starting with the one on the right, and the numeric expression (&quot;10-12&quot;) is read left-to-right, ie. it starts with 10 and ends with 12. (Note that this is unlike Arabic, where the 10 and 12 would be in opposite positions.)</p>
+<p>Hebrew script is written right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing <em>bidirectional</em> text). In the following example, the Hebrew words are read right-to-left, starting with the one on the right, and the numeric expression (&quot;10-12&quot;) is read left-to-right, ie. it starts with 10 and ends with 12. (Note that this is unlike Arabic, where the 10 and 12 would be in opposite positions.)</p>
 
 <figure id="fig_bidi">
 <p dir="rtl" lang="he" class="large"><span  class="ex">התאריכים 10-12 במרץ</span></p>
 <figcaption>Bidirectional Hebrew text.</figcaption>
 </figure>
 
-<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
+<p class="info">Characters in Unicode text are typed and stored in 'logical' order, ie. the order in which they are pronounced. The Unicode Bidirectional Algorithm then steps in when text is printed or displayed to rearrange the text as needed.  It automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute (which also sets the alignment of the text), or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
+
 <p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>, and can become unreadable.</p>
 
 <figure id="fig_bidi_no_base_direction">
