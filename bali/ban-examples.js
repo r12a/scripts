@@ -334,7 +334,7 @@ autoExpandExamples.ban = `
 ᬲᬭᬢ᭄|weight|sa§ra§t
 ᬲᬭᬶ|milk|sa§ri
 ᬲᬵᬕᬭ|sea|sə§ɡa§rə|segara
-ᬲᬵᬥᬸ|best||sa§du
+ᬲᬵᬥᬸ|best||sadu
 ᬲᬵᬭ|power|sa§rə
 ᬲᬵᬭᬶ|flower|sa§ri
 ᬲᬵᬲ᭄ᬢ᭄ᬭ|arrow|sa§s§t§rə|sastra
