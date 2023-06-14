@@ -214,7 +214,7 @@ autoExpandExamples.ban = `
 ᬩᬬᬸ||
 ᬩᬮᬶ|Bali||bali
 ᬩᬮᬶᬕ᭄ᬭᬧ᬴ᬶ|Balinese calligraphy||baligrafi
-ᬩᬮᬶ᭞᭓᭞ᬚᬸᬮᬶ᭞᭑᭙᭘᭒᭟|Bali, 3 July 1982
+ᬩᬮᬶ᭞᭓᭞ᬚᬸᬮᬶ᭞᭑᭙᭘᭒᭟|Bali, 3 July 1982|
 ᬩᬮᬸᬂ||
 ᬩᬮᬾ||
 ᬩᬮ᭄ᬬᬦ᭄|shaman||balian
