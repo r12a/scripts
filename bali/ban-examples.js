@@ -54,7 +54,7 @@ autoExpandExamples.ban = `
 ᬓᬬᬗᬦ᭄|paradise||kayangan
 ᬓᬬᬸ|wood||kayu
 ᬓᬭ|finger|ka§rə
-ᬓᬭ᭄ᬬ|work||ka§r§ya
+ᬓᬭ᭄ᬬ|work||karya
 ᬓᬮ|time|ka§lə
 ᬓᬮᬵ|snare|ka§lə
 ᬓᬵᬤᭂᬧ᭄|sold|kā§dĕ§p
@@ -172,7 +172,7 @@ autoExpandExamples.ban = `
 ᬦᬵᬝ|dance|na§tə|nata
 ᬦᬵᬣ|lord, master|na§tə
 ᬦᬵᬭ|water|na§rə
-ᬦᬶᬃᬛᬭ|pond||nir§jha§ra
+ᬦᬶᬃᬛᬭ|pond||nirjhara
 ᬦᬶᬓ||
 ᬦᭂᬕᬭ||
 ᬧᬓ᭄ᬋᬋᬄ|Mr Rereh||Pak Rěrěh
