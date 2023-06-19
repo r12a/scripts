@@ -6,10 +6,10 @@ const TERM = 0
 const MEANING = 1
 const IPA = 2
 const TRANS = 3
-const NOTES = 4
-const WIKI = 5
-const IPAraw = 6
-
+const EQUIV = 4
+const NOTES = 5
+const WIKI = 6
+const IPAraw = 7
 
 document.querySelector("title").textContent = `${ terms.title } term lister`
 
@@ -210,7 +210,7 @@ for (var m=0;m<wordList.length;m++) {
 
 // add spaces around term, ipa, & transc to facilitate word edge searching
 // check whether there are notes (affects drawing of table later)
-terms.thereAreNotes = false
+/*terms.thereAreNotes = false
 for (var n=0;n<wordList.length;n++) {
     fields = wordList[n].split('|')
     fields[TERM] = ' '+fields[TERM]+' '
@@ -221,11 +221,55 @@ for (var n=0;n<wordList.length;n++) {
         fields[TRANS] = ''
         }
     else fields[TRANS] = ' '+fields[TRANS]+' '
+
 	if (typeof fields[NOTES] === 'undefined' || fields[NOTES] === '') {
         fields[NOTES] = ''
         }
     else terms.thereAreNotes = true
     wordList[n] = fields.join('|')
+	}*/
+    
+    
+terms.thereAreNotes = false
+if (typeof otherTranscription === 'undefined') otherTranscription = null
+
+for (var n=0;n<wordList.length;n++) {
+    fields = wordList[n].split('|')
+    newfields = {}
+    // initialise all fields 
+    newfields.term = ''
+    newfields.meaning = ''
+    newfields.ipa = ''
+    newfields.trans = ''
+    newfields.equiv = ''
+    newfields.notes = ''
+    newfields.wiktionary = ''
+    newfields.ipaRaw = ''
+    
+    newfields.term = ' '+fields[0]+' '
+    newfields.meaning = fields[1]
+    newfields.ipaRaw = ' '+fields[2]+' '
+    newfields.ipa = ' '+fields[2]+' '
+    newfields.ipa = newfields.ipa.replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
+
+	if (fields[3]) newfields.trans = ' '+fields[3]+' '
+    
+    if (otherTranscription && fields[4]) newfields.equiv = fields[4]
+    
+    if (otherTranscription && fields[5]) {
+        terms.thereAreNotes = true
+        newfields.notes = fields[5]
+        }
+    else if (typeof otherTranscription === 'undefined' && fields[4]) {
+        terms.thereAreNotes = true
+        newfields.notes = fields[4]
+        }
+    
+    if (otherTranscription && fields[6]) newfields.wiktionary = fields[6]
+    else if (typeof otherTranscription === 'undefined' && fields[5]) newfields.wiktionary = fields[5]
+    
+
+    wordList[n] = newfields.term+'|'+newfields.meaning+'|'+newfields.ipa+'|'+newfields.trans+'|'+newfields.equiv+'|'+newfields.notes+'|'+newfields.wiktionary+'|'+newfields.ipaRaw
 	}
 
 
@@ -297,11 +341,10 @@ function printAll () {
         out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ fields[TERM].trim() }')">`
 
         // add a link icon if there's a Wiktionary entry
-        if (fields[WIKI]  && fields[WIKI].trim() === 'x') {} // do nothing
-        else if (fields[WIKI]  && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';">${ fields[TERM] }</a>`
-        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
-        
-        
+        if (fields[WIKI] && fields[WIKI].trim() === 'x') {} // do nothing
+        else if (fields[WIKI] && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
+        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
+
         
 
         out += '</td>'
