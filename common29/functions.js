@@ -1244,6 +1244,12 @@ function getStatus (token) {
     }
 
 
+
+
+
+
+
+
 function replaceStuff (node) {
 
     var bicameral = false
@@ -1265,8 +1271,14 @@ function replaceStuff (node) {
     else if (node.dataset.select) showFirst = true
     if (node.className.includes('vowelcluster')) var vowelcluster = true // this should be phased out
     else vowelcluster = false
-    if (node.dataset.ignore) var ignorableChar = node.dataset.ignore.codePointAt(0)
-    else ignorableChar = ''
+    if (node.dataset.ignore) {
+        var ignorableChar = node.dataset.ignore.codePointAt(0)
+        var ignorableCh = node.dataset.ignore
+        }
+    else {
+        ignorableChar = ''
+        ignorableCh = ''
+        }
     if (node.dataset.notes) {
         var notes = node.dataset.notes.split(',')
         }
@@ -1321,6 +1333,12 @@ function replaceStuff (node) {
             else char = charList[0]
             }
         else char = chars[i]
+        
+        // remove the character identified by data-ignore
+        if (ignorableCh) {
+            var re = new RegExp(ignorableCh,'g')
+            char = char.replace(re,'')
+            }
 
         // create an id attribute for the listPairs in the index
         if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
