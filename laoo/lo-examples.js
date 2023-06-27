@@ -22,17 +22,17 @@ autoExpandExamples.lo = `
 
 
 ກມ||
-ກວາງ||
+ກວາງ|deer|k§uːə̯§‹§ŋ˩(˧)|kuāng
 ກວາດ||
 ກວຽນ||
 ກວ່າ||
-ກວ້າງ|wide|kwaːŋ˥˧
+ກວ້າງ|wide|k§waː§‹§ŋ˥˧
 ກອງ||
 ກອງທັບອາກາດ||
 ກອດ||
 ກະດານ||
 ກະດິງ||
-ກະດູກ|bone|ka˦ duːk˧˩
+ກະດູກ|bone|k§a˦ §duː§k˧˩
 ກະດ້າງ||
 ກະຕ່າຍ||
 ກະຕໍ້||
@@ -52,17 +52,17 @@ autoExpandExamples.lo = `
 ກະແຈ||
 ກະໂຫລກ||
 ກະໂຫຼກ||
-ກັດ|to bite|kat˦
+ກັດ|to bite|ka§t˦
 ກັນຍາ||
-ກັບ|with|kap
+ກັບ|with|ka§p
 ກັບຄືນ||
 ກັບພາສີ||
 ກັບໄຟ||
 ກາ||
 ກາກ||
 ກາງ||
-ກາງຄືນ|night|kaːŋ kʰɯːn˦
-ກາງວັນ|day|kaːŋ wan˦
+ກາງຄືນ|night|k§aː§ŋ §kʰɯː§n˦
+ກາງວັນ|day|k§aː§ŋ §wa§n˦
 ກາງແກ||
 ການ||
 ການທຳຮ້າຍ||
@@ -71,7 +71,7 @@ autoExpandExamples.lo = `
 ການເມືອງ||
 ການເລືອກຕັ້ງ||
 ການໂຈມຕີ||
-ກາບ|bark (of a tree)|kaːp˧˩
+ກາບ|bark (of a tree)|k§aː§p˧˩
 ກາບກອນ||
 ກາວ||
 ກາເຟ||
@@ -84,7 +84,7 @@ autoExpandExamples.lo = `
 ກຳລັງ||
 ກຳລັງຈະ||
 ກຳແພງ||
-ກິນ|to eat|kin˩
+ກິນ|to eat|ki§n˩
 ກິນເຂົ້າ||
 ກິລາ||
 ກິໂລ||
@@ -101,9 +101,9 @@ autoExpandExamples.lo = `
 ກູ|I, me|kuː
 ກົກສາຍປາຍເຫດ||
 ກົກໄມ້||
-ກົງ|straight|koŋ
+ກົງ|straight|ko§ŋ
 ກົບ||
-ກົມ|round|kom
+ກົມ|round|ko§m
 ກົວລາລຳເປີ||
 ກົ້ນ||
 ກົ້ມ||
@@ -117,7 +117,7 @@ autoExpandExamples.lo = `
 ກໍລະກົດ||
 ກໍ່||
 ຂວດ||
-ຂວາ|right|kʰwaː˩˧
+ຂວາ|right|kʰ§w§aː˩˧
 ຂວານ||
 ຂອງ||
 ຂອງພວກເຮົາ||
@@ -128,30 +128,30 @@ autoExpandExamples.lo = `
 ຂະມຸ||
 ຂັບ||
 ຂັ້ນໃດ||
-ຂາ|leg|kʰaː˨˦
+ຂາ|leg|kʰ§aː˨˦
 ຂາຍ||
 ຂາມ||
-ຂາວ|white|kʰaːw˨˦
+ຂາວ|white|kʰ§aː§w˨˦
 ຂີງ||
 ຂີ່||
 ຂີ້ຕົວະ|liar|kʰiː§tuə̯§‹§‹‹
-ຂຸດ|to dig|kʰut˦
-ຂົນ|feather|kʰon˨˦
+ຂຸດ|to dig|kʰu§t˦
+ຂົນ|feather|kʰo§n˨˦
 ຂົນຕາ||
 ຂົມ||
 ຂົວ||
 ຂຽນ||
 ຂຽບ||
-ຂຽວ|green|kʰ§iːə§̯w˨˦
+ຂຽວ|green|kʰ§iːə̯§w˨˦
 ຂ່າ||
 ຂ່າວ||
 ຂ່າວສານ||
-ຂ້ອຍ|I, me|kʰɔːj˧˩
+ຂ້ອຍ|I, me|kʰ§ɔː§j˧˩
 ຂ້ອຍຂ້າມ້າໃຊ້||
 ຂ້ອຍຊື່||
 ຂ້ອຍນ້ອຍ||
 ຂ້ອຍຮັກເຈົ້າ||
-ຂ້າ|to kill|kʰaː˧˩
+ຂ້າ|to kill|kʰ§aː˧˩
 ຂ້ານ້ອຍ||
 ຂ້າພຣະພຸດທະເຈົ້າ||
 ຂ້າພະເຈົ້າ||
@@ -162,9 +162,9 @@ autoExpandExamples.lo = `
 ຂໍ້ຄວາມ||
 ຂໍ້ຜິດພາດ||
 ຂໍ້ມູນ||
-ຄ.ສ. 1935 ສະບັບຄົ້ນ|CE 1935 Edition
-ຄວັນ|smoke|kʰuan˦
-ຄວາຍ||
+ຄ.ສ. 1935 ສະບັບຄົ້ນ|CE 1935 Edition|
+ຄວັນ|smoke|kʰ§ua§n˦
+ຄວາຍ|water buffalo|kʰǔːə̯j|khuāi
 ຄວາມ||
 ຄວາມກວ້າງ||
 ຄວາມຄຶດ||
@@ -172,25 +172,24 @@ autoExpandExamples.lo = `
 ຄວາມບໍ່ຮູ້ໜັງສື||
 ຄວາມຝັນ||
 ຄວາມສຳພັນ||
-ຄວາມອິດອັດໃຈ||
+ຄວາມອິດອັດໃຈ|embarrasment|kʰ§uːə̯§‹§m˧˥.§ʔi§t̚˧˥.§ʔa§t̚˧˥.§›§t͡ɕaj˩(˧)|khuām ʼit ʼat chai
 ຄວາມຮູ້ສຶກ||
 ຄວາມເຈັບ||
 ຄວາມໝາຍ||
-ຄວາຢ|water buffalo|k§ʷʰ§aː§j˦
 ຄອບຄົວ||
 ຄອມມູນິດ||
 ຄະນະ||
 ຄະນິດຕະສາດ||
 ຄະນິດສາດ||
 ຄັກ||
-ຄັນ|if|kʰan˦˥
+ຄັນ|if|kʰa§n˦˥
 ຄັນຄາກ||
 ຄັນທະນູ||
 ຄັບ||
 ຄັວນ||
-ຄັ້ນ|to squeeze|kʰan˥˧
+ຄັ້ນ|to squeeze|kʰa§n˥˧
 ຄາງ||
-ຄາຍ|to spit|kʰaːj˦
+ຄາຍ|to spit|kʰ§aː§j˦
 ຄາວຽກ||
 ຄຳ||
 ຄຳຂາວ||
@@ -211,11 +210,11 @@ autoExpandExamples.lo = `
 ຄຸຍໂມ້||
 ຄູ||
 ຄູ່||
-ຄົນ|human|kʰon˦
+ຄົນ|human|kʰo§n˦
 ຄົນຂໍທານ||
 ຄົນອັງກິດ||
 ຄົນແຈ້||
-ຄົມ|sharp (as a knife)|kʰom˦
+ຄົມ|sharp (as a knife)|kʰo§m˦
 ຄົວກິນ||
 ຄົວຊ່ອງ||
 ຄຽດ||
@@ -227,7 +226,7 @@ autoExpandExamples.lo = `
 ງົວ|cow|ŋuːə̯˦§‹
 ງົວແດງ||
 ງ່າຍ||
-ຈອກ|glass|tɕ§ɔː§k˧˩
+ຈອກ|glass|tɕ§ɔ᷆ː§k
 ຈອກແກ້ວ||
 ຈອດ||
 ຈະ||
@@ -238,8 +237,8 @@ autoExpandExamples.lo = `
 ຈັກຊັກເຄື່ອງ||
 ຈັກໂມງ||
 ຈັນ||
-ຈັບ|to hold|t͡ɕap
-ຈັ່ງໃດ|how|t͡ɕaŋ daj
+ຈັບ|to hold|t͡ɕa§p
+ຈັ່ງໃດ|how|t͡ɕa§ŋ §›§daj
 ຈາກ||
 ຈາກາຕາ||
 ຈານ||
@@ -282,9 +281,9 @@ autoExpandExamples.lo = `
 ຊາວຫ້າ||
 ຊາວເກົ້າ||
 ຊາວເຈັດ||
-ຊາວເອັດ||
+ຊາວເອັດ|twenty-one|s§ǎː§w.§›§ʔě§t|sāo ʼet
 ຊາວແປດ||
-ຊາຽ|sand|s§aː§j˦
+ຊາຽ|sand|s§áː§j
 ຊຳເລົາ||
 ຊີມ||
 ຊີມັງ||
@@ -294,11 +293,11 @@ autoExpandExamples.lo = `
 ຊື່|name, straight|sɯː˧
 ຊື່ນ້ອຍ||
 ຊື້||
-ຊຸກ|to push|suk
+ຊຸກ|to push|su§k
 ຊູລີ||
 ຊູໂຈ||
 ຊົນນະບົດ||
-ຊົ່ວ|bad|suːə̯˧
+ຊົ່ວ|bad|suːə̯˧§‹
 ຊົ່ວໂມງ||
 ຊຽງ||
 ຊຽງຂວາງ||
@@ -309,46 +308,46 @@ autoExpandExamples.lo = `
 ຊ້ອນ||
 ຊ້າ||
 ຊ້າງ|elephant|s§aː§ŋ˥˧
-ຊ້າຽ|left|saːj
+ຊ້າຽ|left|s§aː§j
 ຊ້າໆ||
 ຊໍ||
 ຍາກ||
 ຍານອາວະກາດ||
 ຍາມແລງ||
-ຍາມໃດ|when|ɲaːm daj
-ຍາວ|long|ɲaːw˧
-ຍິງ|woman|ɲiŋ˦
-ຍິນ|to hear|ɲin˦
+ຍາມໃດ|when|ɲ§aː§m §›§daj
+ຍາວ|long|ɲ§aː§w˧
+ຍິງ|woman|ɲi§ŋ˦
+ຍິນ|to hear|ɲi§n˦
 ຍິນດີ||
 ຍິ້ມ||
 ຍີ່ປຸ່ນ||
 ຍຸງ|mosquito|ɲu§ŋ˦
 ຍົນ||
 ຍ່ອງ||
-ຍ່າງ|to walk|ɲaːŋ
-ຍ້ອນ|because|ɲɔːn
+ຍ່າງ|to walk|ɲ§aː§ŋ
+ຍ້ອນ|because|ɲ§ɔː§n
 ດວງຈິດ||
-ດອກ|flower|dɔːk˧˩
+ດອກ|flower|d§ɔː§k˧˩
 ດອກໄມ້||
 ດອນ||
-ດັງ|nose|daŋ˩˧
-ດາວ|star|daːw˩˨
+ດັງ|nose|da§ŋ˩˧
+ດາວ|star|d§aː§w˩˨
 ດາວທຽມ||
 ດາວຫາງ||
 ດາວໂຫຼດ||
-ດຳ|black|dam˩˨§‹
-ດິນ|earth|din
+ດຳ|black|d§am˩˨
+ດິນ|earth|di§n
 ດິນຈີ່||
 ດິນຊາຍ||
 ດິບ||
 ດີ|good|diː˩
-ດຶງ|to pull|dɯng
-ດື່ມ|to drink|dɯːm˧
-ດູດ|to suck|duːt˧˩
-ດົງ|forest|doŋ
+ດຶງ|to pull|dɯ§ŋ
+ດື່ມ|to drink|dɯː§m˧
+ດູດ|to suck|duː§t˧˩
+ດົງ|forest|do§ŋ
 ດົນຕຣີ||
 ດົນຕີ||
-ດົມ|to smell|dom˩
+ດົມ|to smell|do§m˩
 ດຽວນີ້||
 ດ້ວຍຄວາມຍິນດີ||
 ດ້ານຂວາ||
@@ -356,17 +355,17 @@ autoExpandExamples.lo = `
 ຕອງສູ້||
 ຕະຫລາດ||
 ຕະຫຼາດ||
-ຕະເວັນ|sun|taʔ ʋen
+ຕະເວັນ|sun|t§aʔ §›§ʋe§n
 ຕັກຊີ||
 ຕັງກະຕີ້ວ||
-ຕັດ|to cut|tat˦
-ຕັບ|liver|tap˦
+ຕັດ|to cut|ta§t˦
+ຕັບ|liver|ta§p˦
 ຕັບອ່ອນ||
 ຕັ່ງ||
 ຕັ່ງອີ້||
 ຕັ້ງຕົ້ນ||
 ຕາ|eye|t§aː˩
-ຕາຍ|to die|taːj˩
+ຕາຍ|to die|t§aː§j˩
 ຕານ||
 ຕາເວັນ||
 ຕາເວັນອອກ||
@@ -376,7 +375,7 @@ autoExpandExamples.lo = `
 ຕຳຫຼວດ||
 ຕິ||
 ຕີ|to hit|tiː˩
-ຕີນ|foot|tiːn
+ຕີນ|foot|tiː§n
 ຕຶກເບັດ||
 ຕື່ນ||
 ຕື່ນເຕັ້ນ||
@@ -388,11 +387,11 @@ autoExpandExamples.lo = `
 ຕູ້|dull (as a knife)|tuː˥˧
 ຕູ້ນິຣະໄພ||
 ຕູ້ເຢັນ||
-ຕົກ|to fall|tok˦
+ຕົກ|to fall|to§k˦
 ຕົນເອງ||
 ຕົມ||
 ຕົ້ນ||
-ຕົ້ນໄມ້|tree|ton˥˧ mai˥˧
+ຕົ້ນໄມ້|tree|to§n˥˧ §›§mai˥˧
 ຕຽງ||
 ຕ່ອນ||
 ຕ່າວ||
@@ -408,11 +407,11 @@ autoExpandExamples.lo = `
 ຖາມ||
 ຖິ້ມ||
 ຖື||
-ຖືກ|correct|tʰɯː§k˧˩
+ຖືກ|correct|tʰɯ᷆ː§k
 ຖູ|to rub|tʰuː
-ຖົງ|stocking|tʰo§ŋ˨˦
+ຖົງ|stocking|tʰǒ§ŋ
 ຖົງນອນ||
-ຖົ່ມ|to spit|tʰom˧
+ຖົ່ມ|to spit|tʰōm
 ຖົ່ວດິນ||
 ຖົ່ວລຽນ||
 ຖ່ານ||
@@ -487,7 +486,7 @@ autoExpandExamples.lo = `
 ນີ້|this|niː˥˦
 ນີ້||
 ນຶ່ງ|one|nɯŋ˧
-ນົກ|bird|no§k˧
+ນົກ|bird|nō§k
 ນົມ|breast|nom˦
 ນົມຂຸ້ນ||
 ນົມສົ້ມ||
@@ -595,7 +594,7 @@ autoExpandExamples.lo = `
 ປູ່||
 ປົມ||
 ປຼະເທສ||
-ປຽກ|wet|p§iːə§̯k˧˩
+ປຽກ|wet|p§i᷆ːə̯§k
 ປຽບທຽບ||
 ປ່ອງ||
 ປ່ອງຢ້ຽມ||
@@ -985,9 +984,9 @@ autoExpandExamples.lo = `
 ສ້ອມ||
 ສໍ||
 ສໍດຳ||
-ຫຍັງ|nothing|h§ɲ̱ä§ŋ̱§ (nyang)
-ຫຍິບ|to sew|ɲip˦
-ຫຍ້າ|grass|ɲaː˧˩
+ຫຍັງ|nothing|›§ɲā§ŋ|nyang|
+ຫຍິບ|to sew|›§ɲǐ§p|nyip
+ຫຍ້າ|grass|›§ɲa᷆ː|nyā
 ຫນອງ||
 ຫນັງສື​​ໃບລານ||
 ຫນາ||
@@ -1016,7 +1015,7 @@ autoExpandExamples.lo = `
 ຫວານ||
 ຫວີ||
 ຫວຽດນາມ||
-ຫວ່າງ||
+ຫວ່າງ|empty|›§ʋ§āː§ŋ|wāng
 ຫວ່ານ||
 ຫອຍນ້ຳຈືດ||
 ຫັດ||
@@ -1060,8 +1059,7 @@ autoExpandExamples.lo = `
 ຫຼັງຄາ||
 ຫຼັງຈາກ||
 ຫຼາ||
-ຫຼາຍ|many, more|laj˧
-ຫຼາຍ||
+ຫຼາຍ|many, more|lāj
 ຫຼານ||
 ຫຼື||
 ຫຼຽວເຫັນ||
@@ -1132,7 +1130,7 @@ autoExpandExamples.lo = `
 ອຸບັດຕິເຫດ||
 ອຸບັດເຫດ||
 ອຸປະຕິເຫດ||
-ອຸ່ນ|warm|u§n˧
+ອຸ່ນ|warm|ū§n
 ອູລັນບາຕໍ||
 ອົກຊີແຊນ||
 ອົງ||
@@ -1240,7 +1238,7 @@ autoExpandExamples.lo = `
 ເຈັດສິບເຈັດ||
 ເຈັດສິບເອັດ||
 ເຈັດສິບແປດ||
-ເຈັ້ຍ|paper|›§t͡ɕiːə̯˥˨§‹|chīa
+ເຈັ້ຍ|paper|›§t͡ɕîːə̯§‹|chīa
 ເຈາະ||
 ເຈົ້າ|you (singular)|t͡ɕaw˥˧
 ເຈົ້າຂະນ້ອຍ||
@@ -1278,7 +1276,7 @@ autoExpandExamples.lo = `
 ເບິ່ງ||
 ເບິ່ງແຍງ||
 ເບີ||
-ເບົາຫວານ||
+ເບົາຫວານ|diabetes|baw˩(˧).ʋaːn˩(˧)|bao wān
 ເປ||
 ເປຕອງ||
 ເປຕັງ||
@@ -1353,8 +1351,8 @@ autoExpandExamples.lo = `
 ເຫັນ|to see|hen˨˦
 ເຫັບ||
 ເຫາະ||
-ເຫົາ|louse (body, head)|haw˨˦
-ເຫຼືອງ|yellow|›§lɯːə̯§​‹§ŋ˨˦
+ເຫົາ|louse (body, head)|hǎw
+ເຫຼືອງ|yellow|›§lɯ̌ːə̯§​‹§ŋ
 ເຫຼົ້າ||
 ເອກ||
 ເອກະລາດ||
@@ -1374,7 +1372,7 @@ autoExpandExamples.lo = `
 ເຮົາ|we|haw˦˥
 ເໜືອ||
 ເໝັ້ນ||
-ແກວ່ງ|to throw|››§k§wɛː§ŋ˧
+ແກວ່ງ|to throw|››§k§wɛ̄ː§ŋ
 ແກະ||
 ແກັດ||
 ແກ່|old (things, people)|kɛː˧
@@ -1428,9 +1426,9 @@ autoExpandExamples.lo = `
 ແມງມ້າ||
 ແມງວັນ||
 ແມງໄມ້||
-ແມວ|cat|›§mɛː§w˦
+ແມວ|cat|›§mɛ́ː§w
 ແມັດ|metre|›§mɛ§t
-ແມ່|mother|mɛː˧
+ແມ່|mother|mɛ̄ː
 ແມ່ກະແຈ||
 ແມ່ນ|correct|mɛːn˧
 ແມ່ນ້ຳ|river|mɛː˧ nam˥˧
@@ -1483,7 +1481,7 @@ autoExpandExamples.lo = `
 ໂລ່ງ||
 ໂສ||
 ໂສ້||
-ໂອ|bowl|›§ʔoː˩
+ໂອ|bowl|›§ʔòː
 ໂຮງ||
 ໂຮງງານ||
 ໂຮງຮຽນ||
@@ -1552,13 +1550,13 @@ autoExpandExamples.lo = `
 ໄອ||
 ໜວກ||
 ໜອງ||
-ໜອນ|worm|nɔːn˨˦
+ໜອນ|worm|n§ɔ̌ː§n
 ໜັກ|heavy|nak˦
 ໜັງ|skin|naŋ˨˦
 ໜັງສືພິມ||
 ໜັງສື​​ໃບລານ||
-ໜາ|thick|naː˨˦
-ໜາວ|cold|n§aː§w˨˦
+ໜາ|thick|nǎː
+ໜາວ|cold|n§ǎː§w
 ໜຶ່ງ|one|nue§ŋ
 ໜູ||
 ໜຽວ||
@@ -1569,7 +1567,7 @@ autoExpandExamples.lo = `
 ໝວກ||
 ໝອກ|fog|mɔːk˧˩
 ໝັດ||
-ໝາ|dog|m§aː˨˦
+ໝາ|dog|m§ǎː
 ໝາກ||
 ໝາກຂາມ||
 ໝາກນັດ||
