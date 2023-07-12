@@ -1,5 +1,6 @@
 /*
 @ Source: https://en.wiktionary.org/wiki/Appendix:Tibeto-Burman_Swadesh_lists
+@ Source: https://en.wiktionary.org/w/index.php?title=Category:Tibetan_terms_with_IPA_pronunciation
 § 'Noto Serif Tibetan'
 # 200
 ~ ltr
@@ -18,22 +19,22 @@ autoExpandExamples.bo = `
 ཀ་ན||
 ཀ་པ་ལ||
 ཀ་པཱ་ལ||
-ཀ་བ||
-ཀ་ར||
+ཀ་བ|pillar, column|káː§§–|ka ba
+ཀ་ར|sugar|ká.§§ʐá
 ཀ་རན་ད||
-ཀ་ཤི་མིར||
+ཀ་ཤི་མིར|Kashmir|ká.§§ɕiˑ.§§miː§(ɹ)ˑ
 ཀཛ་ཀིསུ་གཏན||
 ཀར||
 ཀསྨིར||
 ཀི་རི་བ་ཏི||
 ཀུ་བ||
-ཀུ་མུད||
+ཀུ་མུད|water lily|kú.§§mŷː§‹|ku mud
 ཀུ་ཤུ||
 ཀུང་ཀུང་ཆིའི་ཁྲེ||
 ཀུང་སི||
-ཀུན||
+ཀུན|all, every|kỹ́§‹|kun
 ཀུན་པོ||
-ཀེ་ར||
+ཀེ་ར|banana|ké.§§ʐá|ke ra
 ཀེ་རི་སི||
 ཀེ་རེ་གེཛུ་སུཏེན||
 ཀེ་ལ||
@@ -41,7 +42,7 @@ autoExpandExamples.bo = `
 ཀོ་ཊི་ཌི་ཨའི་བོ་རི||
 ཀོ་བ||
 ཀོ་སག||
-ཀོག་ཤི||
+ཀོག་ཤི|dandruff|kóː.§‹§§ɕí|kog shi
 ཀོང་གོ་མི་དམངས་དམངས་གཙོ||
 ཀོང་གོ་སྤྱི་མཐུན་རྒྱལ་ཁབ||
 ཀྱག་རྗུན||
@@ -338,7 +339,7 @@ autoExpandExamples.bo = `
 གཟའ་སྤེན་པ||
 གཟི||
 གཟིག||
-གཟིགས||
+གཟིགས|to see, look (hon.)|si᷈|gzigs
 གཟིགས་པ||
 གཟེར||
 གཟེར་གཅུད||
@@ -350,7 +351,7 @@ autoExpandExamples.bo = `
 གཡས|right||g.yas
 གཡུ||
 གཡུ་ཁ||
-གཡུ་མདོག||
+གཡུ་མདོག|turquoise|–§júm.§§–§tôː§–|g.yu mdog
 གཡུ་མཚོ||
 གཡུ་ལོ||
 གཡུགས|to throw||g.yugs
@@ -463,7 +464,7 @@ autoExpandExamples.bo = `
 གློག་ཀླད||
 གློག་གི་སྐས་འཛེགས||
 གློག་བརྙན||
-གློག་བརྙན་ཁང||
+གློག་བརྙན་ཁང|cinema|lô§‹.§§›§ȵɛ̃́§‹.§§kʰá§ŋ§|glog brnyan khang
 གློག་མདའ||
 གློག་ཞུ||
 གློག་འགུལ་ཕྱགས་མ||
@@ -553,7 +554,7 @@ autoExpandExamples.bo = `
 ཆེན||
 ཆེན་པོ|big||chen po
 ཆོ་མེད||
-ཆོས||
+ཆོས|religion|t͡ɕʰø̂ː|chos
 ཆོས་ཀྱི་འཁོར་ལོ||
 ཆོས་གླུ||
 ཆོས་བདུན||
@@ -706,8 +707,7 @@ autoExpandExamples.bo = `
 ད་ལྟ་བ|present tense|tʰà.§§tá.§§wa|da lta ba
 དཀར||
 དཀར་ཆག||
-དཀར་པོ|white||dkar po
-དཀར་པོ་|white|karpo
+དཀར་པོ་|white|–§káː§‹.§§pó|dkar po
 དཀོན་མཆོག||
 དཀོན་མཆོག་མཁྱེན||
 དཀྱིལ||
@@ -772,13 +772,13 @@ autoExpandExamples.bo = `
 དཔལ་བེའུ||
 དཔལ་ལྡན||
 དཔུང་པ||
-དཔེ་ཆ||
+དཔེ་ཆ|book, scripture|–§pé§.§t͡ɕʰá|dpe cha
 དཔེ་མཛོད||
 དཔེ་མཛོད་ཁང||
 དཔེ་སྐྲུན||
 དཔེ་སྒྲོམ||
 དཔོན་ངན||
-དཔྱ་ཁྲལ||
+དཔྱ་ཁྲལ|tribute|›§t͡ɕá.§§ʈ͡ʂʰɛː§–|dpya khral
 དཔྱད་གཞི||
 དཔྲལ་བ||
 དབང||
@@ -789,7 +789,7 @@ autoExpandExamples.bo = `
 དབང་སྒྱུར་བྱས||
 དབུ||
 དབུ་ཅན||
-དབུ་མེད||
+དབུ་མེད|cursive script style|–§u.§§me§‹
 དབུགས་རྒྱག|to breathe||dbugs rgyag
 དབུས||
 དབུས་གཙང||
@@ -812,7 +812,7 @@ autoExpandExamples.bo = `
 དབྱིན་ཇིའི་སྐད||
 དབྱིན་ཡུལ||
 དམ་པ||
-དམག||
+དམག|war|–§mâː§–|dmag
 དམག་དཔུང||
 དམག་མི||
 དམག་འཁྲུག||
@@ -902,14 +902,14 @@ autoExpandExamples.bo = `
 ནགས་བྱི||
 ནགས་ཚལ||
 ནགས་རི||
-ནང||
+ནང|inside, room|na§ŋ|nang
 ནང་པ||
 ནང་བཞིན||
 ནང་བསྟན||
 ནང་ལ|in||nang la
 ནང་སོག||
 ནད||
-ནད་གཡོག||
+ནད་གཡོག|nurse|nɛː˩˧.§‹§›§jo§(k̚)ˀ˥˩|nad g.yog
 ནད་མེད||
 ནད་འབུ||
 ནད་འབུ་ཕྲ་རབ||
@@ -952,7 +952,7 @@ autoExpandExamples.bo = `
 པགས་པ|skin||pags pa
 པང་ལེབ||
 པད||
-པད་མ||
+པད་མ|lotus|pɛ́ː§‹.§§maˑ
 པད་མ་དབྱངས་ཅན||
 པད་ཚལ||
 པདྨ||
@@ -1007,7 +1007,7 @@ autoExpandExamples.bo = `
 ཕུར་མདེལ||
 ཕེན་སུལ་ཝེ་ནའི་ཡ||
 ཕེབས་ས||
-ཕོ||
+ཕོ|man, male|pʰó|pho
 ཕོ་ཉ||
 ཕོ་ཕག||
 ཕོ་བ་རིལ||
@@ -1017,7 +1017,7 @@ autoExpandExamples.bo = `
 ཕོང་ཡང||
 ཕོར་པ||
 ཕྱ||
-ཕྱག||
+ཕྱག|hand, arm|t͡ɕʰâ§–|phyag
 ཕྱག་འཚལ་ལོ||
 ཕྱག་རྒྱ||
 ཕྱག་སྣག||
@@ -1045,7 +1045,7 @@ autoExpandExamples.bo = `
 ཕྲུག||
 ཕྲེང||
 བ་དམ||
-བ་ཕྱུགས||
+བ་ཕྱུགས|cow|pʰǎ.§§t͡ɕʰû§(k̚)ˀ§–|ba phyugs
 བ་མ་ཀོ||
 བ་ཧ་མཱ་སི||
 བཀག་གཅུས||
@@ -1062,7 +1062,7 @@ autoExpandExamples.bo = `
 བཀྲ་ཤིས་བདེ་ལེགས||
 བཀྲུ་བ||
 བག་ལེབ||
-བགོད||
+བགོད|to divide|›§kø̌ː§‹|bgod
 བགོད་པ||
 བང་ཁྲི||
 བཅད་པ|to cut||bchad pa
@@ -1155,7 +1155,7 @@ autoExpandExamples.bo = `
 བརྩོན་འགྲུས||
 བརླ||
 བརླ་ཤ||
-བརླགས||
+བརླགས|to lose, misplace||brlags
 བལ||
 བལ་པོ||
 བལ་ཡུལ||
@@ -1188,7 +1188,7 @@ autoExpandExamples.bo = `
 བསྡམ|to tie||bsdam
 བསྣན་ཚིག||
 བི་ཆུ||
-བུ|child||bu
+བུ|child|pʰǔ|bu
 བུ་མོ||
 བུ་རམ||
 བུ་རུན་ཌི||
@@ -1304,12 +1304,12 @@ autoExpandExamples.bo = `
 མགུར||
 མགུར་མ||
 མགུལ||
-མགོ|head||mgo
+མགོ|head|–§kǒ|mgo
 མགོ་འཐོམ་ཡག||
 མགྱོགས་པོ||
 མགྲིན་པ||
 མགྲོན་ཁང||
-མང་པོ|many||mang po
+མང་པོ|many|mǎ§ŋ.§poˑ|mang po
 མང་ཚོགས||
 མངའ་ཐང||
 མངའ་ཞབས||
@@ -1335,7 +1335,7 @@ autoExpandExamples.bo = `
 མཇུག་སྒྲིལ||
 མཇུག་སྒྲོ||
 མཉན||
-མཉམ་དུ|with||mnyam du
+མཉམ་དུ|with|–§ȵá§m.§tuˑ|mnyam du
 མཉམ་འབྲེལ་རྒྱལ་ཚོགས||
 མཉམ་སྦྲེལ||
 མཐའ་མ||
@@ -1360,10 +1360,10 @@ autoExpandExamples.bo = `
 མདོག||
 མདོང་མོ||
 མནའ་མ||
-མཚན|night||mtshan
+མཚན|night|–§t͡sʰɛ̃́§‹|mtshan
 མཚན་མོ||
 མཚམས་|boundary||mtshams
-མཚོ|lake||mtsho
+མཚོ|lake|–§t͡sʰó|mtsho
 མཚོ་གླང||
 མཚོ་གླིང||
 མཚོ་ཕག||
@@ -1615,7 +1615,7 @@ autoExpandExamples.bo = `
 ཟླ་བོ||
 འཁར་རྒྱུག||
 འཁར་རྔ||
-འཁོར||
+འཁོར|circle, sphere|kʰóː(ɹ)|'khor
 འཁོར་བ||
 འཁོར་ལོ|wheel|–§kʰó.§–§§ló|'khor lo
 འཁོར་ལོ་|wheel|–§kʰó.§–§§ló|'khor lo
@@ -1728,7 +1728,7 @@ autoExpandExamples.bo = `
 འཕྲུལ་ལས་རིག་གནས||
 འབག||
 འབངས་འཁོར||
-འབབ||
+འབབ|to rain|–§pə̌§p̚|'bab
 འབབ་པ||
 འབབ་ཚུགས||
 འབའ||
@@ -1803,7 +1803,7 @@ autoExpandExamples.bo = `
 ཡང་ན||
 ཡང་པོ||
 ཡང་རླུང་འབོམ||
-ཡང་ལཱ||
+ཡང་ལཱ|candle||yang lā
 ཡབ||
 ཡར་ཀླུངས་གཙང་པོ||
 ཡལ||
@@ -1902,8 +1902,7 @@ autoExpandExamples.bo = `
 རུས་པ||
 རུས་སྦལ||
 རེ||
-རེ་བ|hope|ʐè.§wá|re ba
-རེ་བ་|hope|ʐè.§wá|re ba
+རེ་བ་|hope|ʐè.§§wá|re ba
 རེད||
 རོ||
 རོ་མ་ནི་ཡ||
@@ -1993,7 +1992,7 @@ autoExpandExamples.bo = `
 རྒྱུག་པ||
 རྒྱུག་པོལ||
 རྒྱུག་ཧྲིལ||
-རྒྱུད|string|cyː˩˧˨§–|rgyud
+རྒྱུད|string|cy᷈ː§–|rgyud
 རྒྱུད་པ|tendon||rgyud pa
 རྒྱུད་རྩ||
 རྒྱུད་སྨད||
@@ -2260,7 +2259,7 @@ autoExpandExamples.bo = `
 ལྡེག་པ||
 ལྡོག||
 ལྡོག་པ||
-ལྤགས་པ||
+ལྤགས་པ|skin||lpags pa
 ལྦ་བ||
 ལྦུ་བ||
 ལྷ||
@@ -2273,7 +2272,7 @@ autoExpandExamples.bo = `
 ལྷ་ས་བ||
 ལྷག་པ||
 ལྷག་མཐོང||
-ལྷགས་པ||
+ལྷགས་པ|(icy/cold) wind|ɬá§(k̚)ˀ.§–§§pá
 ལྷད་མེད་བཟོས||
 ལྷན་ཅིག་སྐྱེས་པའི་དགའ་བ||
 ལྷམ||
@@ -2451,7 +2450,7 @@ autoExpandExamples.bo = `
 སྐམ་པོ|dry||skam po
 སྐམ་ཡག་འཕྲུལ་འཁོར||
 སྐར་ཆ||
-སྐར་ཆ་|second|karcʰe (skar-cha)
+སྐར་ཆ་|second|ka§r.§§cʰe|skar cha
 སྐར་མ|star||skar ma
 སྐར་མ་གནམ་རྒྱལ||
 སྐར་མ་མཚོ་རྒྱལ||
@@ -2629,12 +2628,12 @@ autoExpandExamples.bo = `
 སྤེན་པ||
 སྤོ་བོ||
 སྤོ་ལོ||
-སྤོས||
+སྤོས|incense, perfume|pø̂ː§‹|spos
 སྤྱང་ཀི||
 སྤྱང་ཀྱི||
 སྤྱང་ཁྱུ||
 སྤྱང་པོ||
-སྤྱན||
+སྤྱན|eye (hon.)|t͡ɕɛ̃́|spyan
 སྤྱན་རས་གཟིགས||
 སྤྱི་མཐུན་རྒྱལ་ཁབ||
 སྤྱི་ཚོགས||
@@ -2642,7 +2641,7 @@ autoExpandExamples.bo = `
 སྤྱི་ལེ||
 སྤྱི་སྐད||
 སྤྱིའི་རྒྱ་མ||
-སྤྱིར་|general|ʧí§–
+སྤྱིར་|general|cí§–
 སྤྲ||
 སྤྲང་པོ||
 སྤྲད||
@@ -2758,7 +2757,7 @@ autoExpandExamples.bo = `
 ཧྥ་རན་སི||
 ཧྥི་ཇི||
 ཧྥི་ལི་པིན||
-ཧྥིན་ལན||
+ཧྥིན་ལན|Finland||hphin lan
 ཧྥེ་ཧྥེ||
 ཧྥོ་ལོ་རི་ཌ||
 ཨ་ཅག||
@@ -2834,6 +2833,9 @@ autoExpandExamples.bo = `
 ཨྰ་རི་ཟོ་ནྰ||
 ེའུ||
 ལྷ་སའི་སྐད་|Lhasa dialect||lhaséké
+བཀོད|to create|–§kǿː§–|bkod
+ཀིའུ|hey! (calling over distance)|kíu|ki'u
+ཀུན་སྤྱོད|behaviour, conduct|kỹ́§‹.§§t͡ɕø̂ː§‹
 
 
 

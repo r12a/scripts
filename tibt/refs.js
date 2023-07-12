@@ -16,16 +16,24 @@ reflist = {
 },
 
 "dtf": {
-"url":"http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text",
+"url":"https://digitaltibetan.github.io/DigitalTibetan/docs/tibetan_formatting.html",
 "authors": "Digital Tibetan",
 "title":"Formatting rules for Tibetan text",
 },
 
-"o": {
-"url":"https://www.omniglot.com/writing/bamum.htm",
-"authors": "Omniglot",
-"title":"Bamum syllabary",
-"reviewed":true
+"js": {
+"url":"#refs",
+"authors": "Jonathan Samuels",
+"title":"Colloquial Tibetan: The Complete Course for Beginners",
+"publisher":"Routledge",
+"isbn":"978-1138950191",
+},
+
+
+"mr": {
+"url":"https://www.youtube.com/watch?v=VOivVzGZ1Sw&list=PL1KVm5jgTljTatThw2YLw7nrf05XYBcZV&index=2",
+"authors": "Michael Roach",
+"title":"Tibetan Alphabet Video - LEARN TIBETAN",
 },
 
 "rmcs": {
@@ -36,9 +44,9 @@ reflist = {
 },
 
 "tls": {
-"url":"http://www.learntibetan.net/",
+//"url":"http://www.learntibetan.net/",
 "authors": "Learn Tibetan",
-"title":"The Tibetan Language Student",
+"title":"The Tibetan Language Student (no longer available)",
 "reviewed":true
 },
 
@@ -66,19 +74,18 @@ reflist = {
 },
 
 "wl": {
-"url":"https://en.wikipedia.org/wiki/Bamum_language",
+"url":"https://en.wikipedia.org/wiki/Lhasa_Tibetan",
 "authors": "Wikipedia",
-"title":"Bamum language",
+"title":"Lhasa Tibetan",
 "reviewed":true
 },
 
 "ws": {
-"url":"https://en.wikipedia.org/wiki/Bamum_script",
+"url":"https://en.wikipedia.org/wiki/Tibetan_script",
 "authors": "Wikipedia",
-"title":"Bamum script",
+"title":"Tibetan script",
 "reviewed":true
 },
-
 
 }
 
