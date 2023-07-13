@@ -10,11 +10,11 @@ reflist = {
 },
 
 "u": {
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch19.pdf",
+"url":"https://www.unicode.org/versions/Unicode15.0.0/ch18.pdf",
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
+"title":"The Unicode Standard, Version 15.0",
 "sub":"Chapter 18.9: East Asia, Lisu",
-"pages":"752-754",
+"pages":"782-784",
 "isbn":"978-1-936213-16-0.",
 },
 
