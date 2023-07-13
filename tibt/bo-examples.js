@@ -10,6 +10,7 @@
 
 autoExpandExamples.bo = `
 
+ཀ|snow|ka˥|ka
 ཀ་ཀ||
 ཀ་ཀོ་ལ||
 ཀ་ཀྲ་ལ||
@@ -49,7 +50,7 @@ autoExpandExamples.bo = `
 ཀྱག་རྗུན་ཤོད་མཁན||
 ཀྱི||
 ཀྲིན་མོག||
-ཀྲུང་གོ||
+ཀྲུང་གོ|China|ʈ͡ʂu˥§ŋ.§§ko˥|krung go
 ཀྲུང་ཙི||
 ཀྲུང་ཧྭ་མི་དམངས་སྤྱི་མཐུན་རྒྱལ་ཁབ||
 ཀྲུམས||
@@ -59,7 +60,7 @@ autoExpandExamples.bo = `
 ཀླད་ཀོར||
 ཀླད་པ||
 ཀླུང||
-ཀླུང་མ||
+ཀླུང་མ|river|lu˥˩§ŋ§§ma˩˧|klung ma
 ཀླུབ||
 ཀླུབ་པ||
 ཀློག||
@@ -153,13 +154,13 @@ autoExpandExamples.bo = `
 ཁྱགས་ཤུར་ལྷམ||
 ཁྱི|dog||khyi
 ཁྱི་ཕྲུག||
-ཁྱིམ||
+ཁྱིམ|house, residence|cʰi˥§m|khyim
 ཁྱིམ་ཚང||
 ཁྱིམ་རྒྱུད||
 ཁྱིལ་ཆུ||
 ཁྱུ||
 ཁྱུག་ཙམ་ཞིག||
-ཁྱུང||
+ཁྱུང|garuda|cʰu˥§ŋ
 ཁྱེད|you (singular)||khyed
 ཁྱེད་ཚོ|you (plural)||khyed tsho
 ཁྱེད་རང|you (singular)||khyed rang
@@ -169,13 +170,13 @@ autoExpandExamples.bo = `
 ཁྱོད་རང|you (singular)||khyod rang
 ཁྱོན་ནས||
 ཁྲ་འབྲུག་ལྷ་གང||
-ཁྲག||
+ཁྲག|blood|ʈ͡ʂʰa˥˩|khrag
 ཁྲག་ཁྲིག||
 ཁྲག་ཁྲིག་ཆེན་པོ||
 ཁྲག་འཛིན|skin||khrag 'dzin
 ཁྲག་རྩ||
 ཁྲབ་ཁྲབ||
-ཁྲི||
+ཁྲི|10,000|ʈ͡ʂʰi˥|khri
 ཁྲི་སྙན་ས་ལེ||
 ཁྲིད||
 ཁྲིམ་དཔོན||
@@ -185,16 +186,16 @@ autoExpandExamples.bo = `
 ཁྲུད་ཁང||
 ཁྲུས|to wash||khrus
 ཁྲུས་ཁང||
-ཁྲེ||
+ཁྲེ|millet|ʈ͡ʂʰe˥|khre
 ཁྲེན་ཏུ||
 ཁྲེལ་ཡོད་པ||
 ཁྲོ་ཟངས||
 ཁྲོན་པ||
-ཁྲོམ||
+ཁྲོམ|market|ʈ͡ʂʰo˥§m|khrom
 ཁྲོམ་གཟིགས་གནང||
 ག་དུས|when||ga dus
 ག་ནས|how||ga nas
-ག་པར|where||ga par
+ག་པར|where|kʰa˩˧.§§paː˥§(ɹ)|ga par
 ག་ཚད||
 ག་ཚོད||
 ག་རེ|what||ga re
@@ -220,7 +221,7 @@ autoExpandExamples.bo = `
 གངས་སེང་གེ||
 གཅག་གཏོར་བྱས||
 གཅག་གཏོར་བྱེད་ཡག||
-གཅིག|one||gcig
+གཅིག|one|›§t͡ɕi˥˩§–|gcig
 གཅུད་གཟེར||
 གཅུས་འགོག||
 གཅེས་མིང||
@@ -280,7 +281,7 @@ autoExpandExamples.bo = `
 གནད||
 གནམ|sky||gnam
 གནམ་གཤིས||
-གནམ་གྲུ||
+གནམ་གྲུ|aircraft|›§nə˥§m.§§ʈ͡ʂu˥|gnam gru
 གནམ་གྲུ་ཐང||
 གནམ་གྲུ་བབ་ལམ||
 གནམ་གྲུ་འཇོག་ཁང||
@@ -426,13 +427,13 @@ autoExpandExamples.bo = `
 གྱང་རོ||
 གྱི||
 གྱུརད་|became|kjù§r§–
-གྱོན||
+གྱོན|to wear, put on|kʰø̃˩˧§‹|gyon
 གྱོན་པ||
 གྲང་གཞི||
 གྲང་གློག་འཕྲུལ་ཆས||
 གྲང་ཉུང་མི་རིགས||
 གྲང་བ||
-གྲང་མོ|cold||grang mo
+གྲང་མོ|cold|ʈ͡ʂʰə˩˧§ŋ.§§ŋu˥|grang mo
 གྲི||
 གྲིང་ཟུར||
 གྲུ||
@@ -450,7 +451,7 @@ autoExpandExamples.bo = `
 གྲོད་ཁོག||
 གྲྭ་པ|monk|ʈ͡ʂʰà.§§pa|grwa pa
 གླ་བ||
-གླང||
+གླང|ox|la˥§ŋ|glang
 གླང་ཆེན||
 གླང་དར་མ||
 གླས||
@@ -719,17 +720,17 @@ autoExpandExamples.bo = `
 དཀྲོལ||
 དཀྲོལ་བ||
 དག་|I|dá§g
-དག་ཆ་བྲིས||
-དག་ཡིག||
+དག་ཆ་བྲིས|to spell||dag cha bris
+དག་ཡིག|dictionary||dag yig
 དགའ་|virtue|–§g§á
 དགའ་པོ་བྱེད་ཡག||
 དགའ་བ||
 དགའ་བཞི||
 དགའ་ཚོར||
 དགའ་འཁྱིལ||
-དགུ||
+དགུ|nine|›|ku˩˧|dgu
 དགུ་གཏོར||
-དགུ་བཅུ||
+དགུ་བཅུ|ninety|›§kup̚˩˧.§§›§t͡ɕu˥|dgu bcu
 དགུན||
 དགུན་ཀ||
 དགེ||
@@ -992,7 +993,7 @@ autoExpandExamples.bo = `
 ཕ་མ||
 ཕ་རི||
 ཕ་ལགས||
-ཕག||
+ཕག|pig|›§pʰa˥˩|phag
 ཕག་པ||
 ཕག་འདོ||
 ཕད་གོག||
@@ -1316,7 +1317,7 @@ autoExpandExamples.bo = `
 མངའ་འབངས||
 མངའ་རིས་ཁམ་བུ||
 མངར་མོ||
-མངལ་སྦུམ་པ||
+མངལ་སྦུམ་པ|pregnancy||mngal sbum pa
 མངོན་བརྗོད||
 མཆི་མ||
 མཆིན||
@@ -1439,7 +1440,7 @@ autoExpandExamples.bo = `
 མེ་མདའ||
 མེ་མདའ་ཁ་རིང||
 མེ་མདའ་བརྒྱབ||
-མེ་མདའ་སྦག་སྦག||
+མེ་མདའ་སྦག་སྦག|machine gun||me mda' sbag sbag
 མེ་འཁོར||
 མེ་རྫས||
 མེ་ལེ||
@@ -1900,7 +1901,7 @@ autoExpandExamples.bo = `
 རུས་ཁོག|bone||rus khog
 རུས་གཟེབ|skin||rus gzeb
 རུས་པ||
-རུས་སྦལ||
+རུས་སྦལ|tortoise, turtle||rus sbal
 རེ||
 རེ་བ་|hope|ʐè.§§wá|re ba
 རེད||
@@ -2056,8 +2057,8 @@ autoExpandExamples.bo = `
 རྣལ་འབྱོར་པ||
 རྣལ་འབྱོར་མ||
 རྣོ་པོ|sharp (as a knife)||rno po
-རྦ||
-རྦ་རླབས||
+རྦ|wave||rba
+རྦ་རླབས|wave||rba rlabs
 རྦག་རྦག||
 རྨ||
 རྨ་ཁ||
@@ -2261,7 +2262,7 @@ autoExpandExamples.bo = `
 ལྡོག་པ||
 ལྤགས་པ|skin||lpags pa
 ལྦ་བ||
-ལྦུ་བ||
+ལྦུ་བ|bubble, froth|pʊː˩˧§–|lbu ba
 ལྷ||
 ལྷ་ཁང||
 ལྷ་གཅིག||
@@ -2451,7 +2452,7 @@ autoExpandExamples.bo = `
 སྐམ་ཡག་འཕྲུལ་འཁོར||
 སྐར་ཆ||
 སྐར་ཆ་|second|ka§r.§§cʰe|skar cha
-སྐར་མ|star||skar ma
+སྐར་མ|star|kaː˥.§‹§§ma˥|skar ma
 སྐར་མ་གནམ་རྒྱལ||
 སྐར་མ་མཚོ་རྒྱལ||
 སྐར་མ་ཟུར་ལྡ||
@@ -2506,7 +2507,7 @@ autoExpandExamples.bo = `
 སྒེ་ཁུང||
 སྒེའུ||
 སྒེའུ་ཁུང||
-སྒོ||
+སྒོ|door|›§ko˩˧|sgo
 སྒོ་ལྕགས||
 སྒོ་ལྕགས་ཕྱེ||
 སྒོ་ལྕགས་བརྒྱབ||
@@ -2664,7 +2665,7 @@ autoExpandExamples.bo = `
 སྦལ་པ||
 སྦལ་བ||
 སྦས་ཡུལ||
-སྦི་ཅི་ལི||
+སྦི་ཅི་ལི|torch, flashlight|pi˩˧.§t͡ɕi˥.§liˑ|sbi ci li
 སྦི་ཅི་ལིའི་སྨན||
 སྦི་རག||
 སྦེ་ག||
@@ -2683,7 +2684,7 @@ autoExpandExamples.bo = `
 སྦྲང་བུ||
 སྦྲང་ཚང||
 སྦྲང་རྩི||
-སྦྲུལ|snake||sbrul
+སྦྲུལ|snake|ʈ͡ʂyː˩˧§‹|sbrul
 སྦྲུལ་ཉ||
 སྦྲུལ་སོའི་དུག་ཆུ||
 སྨན||
