@@ -74,6 +74,7 @@ scriptLanguageList = {
 ban:{name:"Balinese"},
 jv:{name:"Javanese", url:"jv.html"},
 osi:{name:"Osing"},
+mad:{name:"Madurese"},
 sun:{name:"Sundanese"},
 tes:{name:"Tengger"},
 }
