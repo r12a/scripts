@@ -121,7 +121,7 @@ autoExpandExamples.bo = `
 ཁུག་སྣ||
 ཁུརོ་ཤི་ཡ||
 ཁེ||
-ཁེ་ན་ཏྲ||
+ཁེ་ན་ཏྲ|Canada||khe na tra
 ཁེ་ནི་ཡ||
 ཁེ་པོ||
 ཁེངས་པ|full||khengs pa
@@ -225,7 +225,7 @@ autoExpandExamples.bo = `
 གཅུད་གཟེར||
 གཅུས་འགོག||
 གཅེས་མིང||
-གཅོད||
+གཅོད|to sever, cut|–§t͡ɕøː˥˩§–|gcod
 གཅོད་པ||
 གཉན་འབུར||
 གཉའ་གནོན་བཏང||
@@ -235,7 +235,7 @@ autoExpandExamples.bo = `
 གཉིད་ལམ་འཚུབ་པོ||
 གཉིད་སྨན||
 གཉིས|two||gnyis
-གཏམ||
+གཏམ|conversation, news|ta˥§m|gtam
 གཏམ་དཔེ||
 གཏམ་པ||
 གཏམ་བཟང||
@@ -267,13 +267,13 @@ autoExpandExamples.bo = `
 གད་སྙིག་བླུག་ས||
 གད་སྙིགས||
 གད་སྙིགས་བླུག་ས||
-གདན||
+གདན|mat, seat|-§to§nˑ|gdan
 གདན་གདིང་བ||
 གདན་སྒོར||
 གདིང||
 གདུག||
 གདུག་པ||
-གདུགས||
+གདུགས|umbrella; noon|›§tu˩˧˨§‹§–|gdugs
 གདོང་པ||
 གདོང་བྱུག་པོ་ཊར||
 གདོན་འདྲེ||
@@ -476,7 +476,7 @@ autoExpandExamples.bo = `
 ང|I||nga
 ང་ཚོ|we||nga tsho
 ང་ར||
-ངག||
+ངག|speech, voice|ŋa˩˧˨§–|ngag
 ངང་པ||
 ངང་ལག||
 ངན||
@@ -501,7 +501,7 @@ autoExpandExamples.bo = `
 ཅོག་ཙེ||
 ཆ་ཤས||
 ཆགས||
-ཆང||
+ཆང|barley beer|t͡ɕʰa˥§ŋ|chang
 ཆང་ཁང||
 ཆང་ནད||
 ཆབ་ཁུང||
@@ -638,7 +638,7 @@ autoExpandExamples.bo = `
 ཏཱ་ལའི་བླ་མ|Dalai Lama|tá.§§l§ɛ́ː§§lá.§§má
 ཏི་ཚ||
 ཏིང་ངེ་འཛིན||
-ཏིལ||
+ཏིལ|sesame seed|tiː˥§(ɹ)|til
 ཏུ་ནི་ཤི་ཡ||
 ཏུ་ཝ་ལུ||
 ཏུར་ཀི||
@@ -655,7 +655,7 @@ autoExpandExamples.bo = `
 ཐག་པ|rope||thag pa
 ཐག་རིང་པོ|far||thag ring po
 ཐགས་ཐོགས||
-ཐང||
+ཐང|plain, flatlands|tʰa˥§ŋ|thang
 ཐང་ཀ||
 ཐང་ཁ||
 ཐང་ཆད་པ||
@@ -728,7 +728,7 @@ autoExpandExamples.bo = `
 དགའ་བཞི||
 དགའ་ཚོར||
 དགའ་འཁྱིལ||
-དགུ|nine|›|ku˩˧|dgu
+དགུ|nine|›§ku˩˧|dgu
 དགུ་གཏོར||
 དགུ་བཅུ|ninety|›§kup̚˩˧.§§›§t͡ɕu˥|dgu bcu
 དགུན||
@@ -764,7 +764,7 @@ autoExpandExamples.bo = `
 དངོས་གྲུབ||
 དངོས་དང་དངོས་མེད||
 དངོས་པོ||
-དད་པ||
+དད་པ|faith|–§tɛː˩˧˨.§§paˑ|dad pa
 དཔག་ཏུ་མེད་པ||
 དཔང་པོ||
 དཔའ་དམ||
@@ -873,7 +873,7 @@ autoExpandExamples.bo = `
 དྲན་པ||
 དྲི་ངན་སངས་སྨན||
 དྲི་ཕོག||
-དྲི་མ||
+དྲི་མ|aroma, scent|ʈ͡ʂi˩˧.§§məˑ|dri ma
 དྲིལ་བུ||
 དྲུག||
 དྲུག་ཅུ||
@@ -1325,12 +1325,12 @@ autoExpandExamples.bo = `
 མཆུ་ཏོ་དམར་པོ་བཟོ་ཡག||
 མཆེ་བ||
 མཆོག||
-མཆོད||
+མཆོད|to respect, praise|–§t͡ɕʰøː˥˩§‹|mchod
 མཆོད་རྟེན||
 མཆོད་སྟེགས||
 མཇལ||
 མཇིང་པ|neck||mjing pa
-མཇུག||
+མཇུག|end, extremity|–§t͡ɕu˥˩§(k̚)ˀ|mjug
 མཇུག་བསྡོམས||
 མཇུག་མ||
 མཇུག་སྒྲིལ||
@@ -1655,13 +1655,13 @@ autoExpandExamples.bo = `
 འགྲོ་ས||
 འགྲོངས||
 འང་གུ||
-འཆད||
+འཆད|to say, speak|–§t͡ɕʰɛː˥˩§‹|'chad
 འཆད་པ||
 འཆི||
 འཆི་བ||
 འཆུ||
 འཆུ་བ||
-འཇའ||
+འཇའ|rainbow|–§t͡ɕa˩˧§–|'ja'
 འཇའ་ཚོན||
 འཇར་མན||
 འཇིག||
@@ -1682,7 +1682,7 @@ autoExpandExamples.bo = `
 འཐུང་བ||
 འཐུང་ཡག||
 འཐུང་ཡག་འཐོར་ཆུ||
-འཐུམ||
+འཐུམ|to cover, wrap around|–§tu˥˩§m|'thum
 འཐེན་ཐུག||
 འཐོར་ཆུ||
 འདག་པ||
@@ -2004,7 +2004,6 @@ autoExpandExamples.bo = `
 རྔུལ་ནག||
 རྔོ||
 རྕི་ནག||
-རྗེ||
 རྗེས་དྲན||
 རྗེས་མ||
 རྗེས་འཇུག||
@@ -2205,9 +2204,9 @@ autoExpandExamples.bo = `
 ལོངས་སྦྱོད་རྫོགས་པའི་སྐུ||
 ལོན་ཊོན||
 ལྒང་ཕུག||
-ལྔ|five||lnga
+ལྔ|five|ŋa˥|lnga
 ལྔ་བཅུ||
-ལྕགས||
+ལྕགས|iron|t͡ɕa˥˩|lcags
 ལྕགས་ཀྱུ||
 ལྕགས་ཊིན||
 ལྕགས་བཟོ་བ||
@@ -2223,7 +2222,7 @@ autoExpandExamples.bo = `
 ལྕེ་ཚ||
 ལྕོག་ཙེ||
 ལྕོང་མོ||
-ལྗགས||
+ལྗགས|tongue (hon.)|t͡ɕa˩˧˨§–§–|ljags
 ལྗང་ཁུ|yellowish-green||ljang khu
 ལྗང་གུ||
 ལྗིད་པ||
@@ -2231,7 +2230,7 @@ autoExpandExamples.bo = `
 ལྗོངས||
 ལྟ||
 ལྟ་ད||
-ལྟ་བ||
+ལྟ་བ|point of view|ta˥.§§wa˥|lta ba
 ལྟ་བུ||
 ལྟ་སྟངས||
 ལྟབ||
@@ -2265,7 +2264,7 @@ autoExpandExamples.bo = `
 ལྦུ་བ|bubble, froth|pʊː˩˧§–|lbu ba
 ལྷ||
 ལྷ་ཁང||
-ལྷ་གཅིག||
+ལྷ་གཅིག|Your Majesty|ɬa˥.§§–§t͡ɕi˥˩§–
 ལྷ་ཆོས||
 ལྷ་མོ||
 ལྷ་མོ་དགོན||
@@ -2548,7 +2547,7 @@ autoExpandExamples.bo = `
 སྒྲོག་གདུང||
 སྒྲོལ་མ||
 སྔ||
-སྔ་དྲོ||
+སྔ་དྲོ|morning|ŋa˥.§§ʈ͡ʂo˥|snga dro
 སྔ་དྲོ་བདེ་ལེགས||
 སྔ་མོ||
 སྔགས||
@@ -2588,7 +2587,7 @@ autoExpandExamples.bo = `
 སྡུག་བསྔལ་བརྒྱད||
 སྡུད||
 སྡུད་པ||
-སྡུར||
+སྡུར|to compare|tuː˩˧§(ɹ)|sdur
 སྡུར་བ||
 སྡེ་རིགས||
 སྡོད||
@@ -2825,7 +2824,7 @@ autoExpandExamples.bo = `
 ཨོ་མན||
 ཨོ་མོ་སུ||
 ཨོ་སི་ཀྲ་ལི་ཡ||
-ཨོ་སི་ཐྲི་ཡ||
+ཨོ་སི་ཐྲི་ཡ|Austria||o si thri ya
 ཨོ་ཧེའོ||
 ཨོག་མ||
 ཨོག་ཚོམ||
@@ -2837,11 +2836,13 @@ autoExpandExamples.bo = `
 བཀོད|to create|–§kǿː§–|bkod
 ཀིའུ|hey! (calling over distance)|kíu|ki'u
 ཀུན་སྤྱོད|behaviour, conduct|kỹ́§‹.§§t͡ɕø̂ː§‹
-
-
-
-
-
+ཅི|what?|t͡ɕi˥|ci
+ཇ|tea|t͡ɕʰa˩˧|cha
+རྗེ|lord, king|t͡ɕe˥|rje
+མཐེ་བོ|thumb|–§tʰe˥.§§poˑ|mthe bo
+དོ|two, pair|tʰo˩˧|do
+དྭངས|to become clear|tʰa˩˧˨§ŋ§–|dwangs
+ཁ་བྱང|title, topic|kʰa˥˥.§§t͡ɕa§ŋˑ|kha byang 
 
 
 
