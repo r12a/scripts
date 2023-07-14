@@ -1022,35 +1022,7 @@ function initialiseShowNames (node, base, target) {
 	}
 
 
-function showNameDetailsEventOLD (evt) { 
-	// base is set at the bottom of the source page
-	showNameDetails(evt.target.textContent, evt.target.lang, window.base, 'c', document.getElementById('panel'), 'list', '' )
-	}
 
-
-function showCharDetailsEventOLD (evt) {
-	if (typeof charDetails === 'undefined') return
-
-	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
-	
-	// clear any existing table
-	table = evt.target.parentNode.parentNode.parentNode.querySelector('table')
-	if (table !== null) table.parentNode.removeChild(table)
-	
-	var table = document.createElement('table')
-	table.className = 'charDetails'
-	table.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
-	evt.target.parentNode.parentNode.parentNode.appendChild(table)
-	
-	
-	addExamples(evt.target.lang)
-	autoTransliterate(evt.target.lang)
-	convertTranscriptionData(evt.target)
-	setFootnoteRefs()
-    var links = table.querySelectorAll('.codepoint a')
-	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table)
-	}
 
 
 
@@ -1091,23 +1063,8 @@ function showCharDetailsEvent (evt) {
 
 
 
-/*
-function shownames_setImgOnclick ( node, base, target ) {
-	node.onclick = function(){ showNameDetails(node.alt, node.lang, base, target, document.getElementById('panel') ) }
-	}
-
-function shownames_setOnclick ( node, base, target ) {
-	node.onclick = function(){ showNameDetails(node.firstChild.data, getLanguage(node), base, target, document.getElementById('panel')) }
-	}
 
 
-function getLanguage(node) {
-	// given a node, returns lang value of node or nearest parent
-	if(node.lang) return node.lang
-	else if(node.parentNode) return getLanguage(node.parentNode)
-	else return ''
-	}
-*/
 
 function showtext (sourceName) {
 	// when text is highlighted in the freeText area, display the character list
@@ -1281,27 +1238,6 @@ function getOrthographyList (type, location, spaced=false) {
 
 
 
-
-function getOrthographyListOLD (type, location, spaced=false) {
-    // this is a modified version of runCharCount, adapted to harvest characters after the 
-    // page has been rendered, and used by the links in the Basic Summary section on click
-    // it assumes the presence of #index
-	var charlists, out
-	if (document.getElementById('index') == null) {
-        alert('No #index element (in getOrthographyList)')
-        return
-        }
-    else charlists = document.querySelectorAll('#index '+type+' .listItem')
-    var chars = ''
-	for (let i=0;i<charlists.length;i++) chars += charlists[i].textContent
-    charlistArray = [...chars]
-	const uniqueSet = new Set(charlistArray)
-	var uniqueArray = [...uniqueSet]
-	
-    if (spaced) out = uniqueArray.toString().replace(/,/g,' ')
-	else out = uniqueArray.toString().replace(/,/g,'')
-    return out
-	}
 
 
 
@@ -1564,90 +1500,8 @@ function makeIndexObject () {
 	}
 
 
-function makeIndexObjectLESSOLD () {
-    var charArray = []
-	chars = document.querySelectorAll('.codepoint, .listItem')
-	for (i=0;i<chars.length;i++) {
-        if (chars[i].classList.contains('noindex')) continue
-        
-        cell = chars[i].firstChild.textContent
-        
-        // get the heading
-		ptr = chars[i]
-		while (ptr.nodeName != 'SECTION' && ptr.nodeName != 'HTML') {
-			ptr = ptr.parentNode
-			}
-		section = ptr.id
-                
-        // create an object for each item in the cell
-        cellList = [...cell]
-        for (j=0;j<cellList.length;j++) {
-            charArray.push(new Object)
-            charArray[charArray.length-1].codepoint = cellList[j]
-            charArray[charArray.length-1].section = section
-            }
-		}
-	console.log('charArray',charArray)
-
-	allchars = '' // makes a list of all characters for sorting later
-    for (j=0;j<charArray.length;j++) {
-        if ([... charArray[j].codepoint].length > 1) continue
-        if (charArray[j].section.includes('index_')) continue
-        if (charArray[j].section.includes('_map')) continue
-        if (charArray[j].section.includes('map_')) continue
-        // stop duplicates
-        if (index[charArray[j].codepoint] && index[charArray[j].codepoint].includes(charArray[j].section)) continue
-        //if (index[charArray[j].codepoint]) console.log('Found ',index[charArray[j].codepoint])
-		if (index[charArray[j].codepoint]) index[charArray[j].codepoint] += ' #'+charArray[j].section
-		else {
-			index[charArray[j].codepoint] = '#'+charArray[j].section
-			allchars += charArray[j].codepoint
-			}
-		}
-	console.log('index',index)
-    
-    // sort the allchars string
-    sortedAllChars = [...allchars].sort()
-    allchars = sortedAllChars.join('')
-	document.getElementById('allchars').value = allchars
-	}
 
 
-function makeIndexObjectOLD () {
-    var charArray = []
-	chars = document.querySelectorAll('.codepoint, .listItem')
-	for (i=0;i<chars.length;i++) {
-		charArray.push(new Object)
-		charArray[charArray.length-1].codepoint = chars[i].firstChild.textContent
-		//console.log(charArray)
-		ptr = chars[i]
-		//console.log(ptr.nodeName)
-		while (ptr.nodeName != 'SECTION' && ptr.nodeName != 'HTML') {
-			ptr = ptr.parentNode
-			//console.log(ptr.nodeName)
-			}
-		charArray[charArray.length-1].section = ptr.id
-		}
-	console.log('charArray',charArray)
-
-	allchars = '' // makes a list of all characters for sorting later
-    for (j=0;j<charArray.length;j++) {
-        if ([... charArray[j].codepoint].length > 1) continue
-        if (charArray[j].section.includes('index_')) continue
-        if (charArray[j].section.includes('_map')) continue
-        if (charArray[j].section.includes('map_')) continue
-        // stop duplicates
-        if (index[charArray[j].codepoint] && index[charArray[j].codepoint].includes(charArray[j].section)) continue
-        //if (index[charArray[j].codepoint]) console.log('Found ',index[charArray[j].codepoint])
-		if (index[charArray[j].codepoint]) index[charArray[j].codepoint] += ' #'+charArray[j].section
-		else {
-			index[charArray[j].codepoint] = '#'+charArray[j].section
-			allchars += charArray[j].codepoint
-			}
-		}
-	console.log(index)
-	document.getElementById('allchars').value = allchars
-	}
 
 
 function makeMarkup () {
@@ -1696,37 +1550,6 @@ function makeMarkup () {
 
 
 
-function makeMarkupForSectionOLD (sectionName) {
-
-    var out = ''
-    var indexList = document.getElementById(sectionName)
-    //var indexSections = indexList.querySelectorAll('section')
-    var indexFigures = indexList.querySelectorAll('figure')
-    for (i=0;i<indexFigures.length;i++) {
-        var listItems = indexFigures[i].querySelectorAll('.listItem')
-        var allChars = ''
-        for (j=0;j<listItems.length;j++) allChars += listItems[j].textContent
-        console.log('heading',indexFigures[i].parentNode.id, 'type', indexFigures[i].className.replace(/ auto/,''), 'content', allChars)
-        
-        allCharsArray = [...allChars]
-        out += '<figure class="'+indexFigures[i].className+'" data-cols="" data-links="'
-        for (k=0;k<allCharsArray.length;k++) console.log(allCharsArray[k])
-        for (k=0;k<allCharsArray.length;k++) {
-            if (typeof index[allCharsArray[k]] === 'undefined') console.log('NOT FOUND:',allCharsArray[k])
-            else out += index[allCharsArray[k]].section + ','
-            }
-        out += '">'
-        for (k=0;k<allCharsArray.length;k++) {
-            out += allCharsArray[k]
-            if (k<allCharsArray.length-1) out += '␣'
-            }
-        out += '</figure>\n'
-        }
-    
-	document.getElementById('out').value = out
-	document.getElementById('out').select()
-	}
-
 
 
 
@@ -1766,76 +1589,10 @@ function makeMarkupForSection (sectionName) {
 
 
 
-function makeMarkupForSectionXX (sectionName) {
-
-    var out = ''
-    var indexList = document.getElementById(sectionName)
-    //var indexSections = indexList.querySelectorAll('section')
-    var indexFigures = indexList.querySelectorAll('figure')
-    for (i=0;i<indexFigures.length;i++) {
-        var listItems = indexFigures[i].querySelectorAll('.listItem')
-        var allChars = ''
-        for (j=0;j<listItems.length;j++) allChars += listItems[j].textContent
-        console.log('heading',indexFigures[i].parentNode.id, 'type', indexFigures[i].className.replace(/ auto/,''), 'content', allChars)
-        
-        allCharsArray = [...allChars]
-        out += '<figure class="'+indexFigures[i].className+'" data-cols="" data-links="'
-        for (k=0;k<allCharsArray.length;k++) console.log(allCharsArray[k])
-        for (k=0;k<allCharsArray.length;k++) {
-            if (typeof index[allCharsArray[k]] === 'undefined') console.log('NOT FOUND:',allCharsArray[k])
-            else out += index[allCharsArray[k]].section + ','
-            }
-        out += '" data-extra="'
-        for (k=0;k<allCharsArray.length;k++) {
-            if (typeof index[allCharsArray[k]] === 'undefined') console.log('NOT FOUND:',allCharsArray[k])
-            else out += index[allCharsArray[k]].sectionName + '␣'
-            }
-        out += '">'
-        for (k=0;k<allCharsArray.length;k++) {
-            out += allCharsArray[k]
-            if (k<allCharsArray.length-1) out += '␣'
-            }
-        out += '</figure>\n'
-        }
-    
-	document.getElementById('out').value = out
-	document.getElementById('out').select()
-	}
 
 
 
 
-
-function makeMarkupLESSOLD () {
-	charList = document.getElementById('in').value
-	charList = charList.replace(/ /g,'')
-	chars = [...charList]
-    type = index[chars[0]].status
-	out = '<figure class="'+type+'Box auto"  data-cols="" data-links="'
-	for (i=0;i<chars.length;i++) {
-		out += index[chars[i]].section+','
-		}
-	out +='">'+chars.join('␣')+'</figure>'
-	document.getElementById('out').value = out
-	document.getElementById('out').select()
-	}
-
-
-
-
-
-function makeMarkupOLD () {
-	charList = document.getElementById('in').value
-	charList = charList.replace(/ /g,'')
-	chars = [...charList]
-	out = '<figure class="characterBox auto"  data-cols="" data-links="'
-	for (i=0;i<chars.length;i++) {
-		out += index[chars[i]]+','
-		}
-	out +='">'+chars.join('␣')+'</figure>'
-	document.getElementById('out').value = out
-	document.getElementById('out').select()
-	}
 
 
 
