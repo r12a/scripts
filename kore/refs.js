@@ -71,6 +71,9 @@ reflist = {
 
 scriptLanguageList = {
 ko:{name:"Korean", url:"ko.html"},
+jje:{name:"Jeju"},
+cia:{name:"Chia-chia"},
+ay:{name:"Aymara"},
 }
 
 
