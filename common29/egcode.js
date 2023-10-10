@@ -111,7 +111,8 @@ function addExamples (langFilter) {
 			//if (temp[2]) ipaBreakdown = temp[2]
             //else ipaBreakdown = ''
             //out += `  onclick="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipa }')"`
-            out += `  onclick="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }')"`
+            // LATEST out += `  onclick="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }')"`
+            out += `  onmouseover="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }')"`
 			out += '>'
 			out += term
 			out += '</bdi>'
