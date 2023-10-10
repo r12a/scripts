@@ -130,7 +130,7 @@ autoExpandExamples.ks = `
 بؠنْزٕ|neice|bʲanzɨ
 بابتھٕر|nephew|baːbtʰɨr
 بادام||
-بادَم|almond|baːdaːm
+بادَم|almond|b§aː§daː§m
 باشلیٔانگۇچ|beginning|bɑʃlɑnʁutʃ
 بانہٕ||
 باوزٕ|neice|baːwzɨ
@@ -139,7 +139,7 @@ autoExpandExamples.ks = `
 باپتھٕر|nephew|baːptʰɨr
 باہ|twelve|baːh
 برَْسوار|Thursday|braswaːr
-برَْگ|blue heron|brag
+برَْگ|blue heron|b§ra§g
 برَْسوار||
 برِْمِج||
 برْور|cat (m)|broːr
