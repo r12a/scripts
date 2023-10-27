@@ -26,10 +26,20 @@ body { font-size: 15.5px; }
 
 
 .trigger { color: teal; cursor: pointer; }
-.sample { font-size: 60px; white-space: nowrap; color: black; overflow: hidden; width: 80%; margin-left: 7.5%;  line-height: 1; text-align: start; }
-.fontItem { margin-bottom: 0; width: 80%; text-align: start; }
+.sample { 
+    font-size: 60px;
+    white-space: nowrap;
+    color: black;
+    overflow: hidden;
+    /*width: 80%;*/
+    margin-inline: 7.5%;
+    line-height: 1;
+    text-align: start;
+    }
+.sample imgX { width: 1000px; }
+.fontItem { margin-block-end: 0; width: 80%; text-align: start; }
 .fontlist { font-size: 80%; }
-.infoIcon { color: tan; font-size: 80%; margin-left: 1em; }
+.infoIcon { color: tan; font-size: 80%; margin-inline-start: 1em; }
 .text {  line-height: 2; }
 b {
     font-size: 1.2em;
@@ -50,10 +60,11 @@ b {
 }
 #textarea { font-size: 28px; text-align: left; }
 #picture {
-	margin-top: 1em;
-	margin-bottom: 0;
+	margin-block-start: 1em;
+	margin-block-end: 0;
 	}
-h2 { margin-top: 0; }
+h2 { margin-block-start: 0; }
+details h2 { margin-block-start: 2em; }
 
 .nowrap { white-space: nowrap; }
 .suboptions { font-size: 90%; color: chocolate; margin-inline-start: 2em; }
@@ -62,6 +73,17 @@ h2 { margin-top: 0; }
 .sidebar { margin-inline-start: 2em; }
 .noprint h2 { font-size: inherit; }
 }
+.samplePointer {
+    margin-inline-start: 7.5%;
+    margin-block-start: -2rem;
+    margin-inline-end: 32%;
+    text-align: start;
+    font-size: 80%;
+    font-style: italic;
+    }
+.fontItem img, .fontItem b {
+    cursor: pointer;
+    }
 </style>
 
 
@@ -74,6 +96,38 @@ h2 { margin-top: 0; }
 <script src="../../shared/fontdb/db.js"></script>
 
 <script>
+// set up settings object to be saved in localstorage
+var settings = {}
+if (localStorage.fontListerSettings) {
+    settings = JSON.parse(localStorage.fontListerSettings)    
+    }
+else {
+    settings.mac = true
+    settings.win = true
+    settings.noto = true
+    settings.sil = true
+    settings.img = true
+    settings.text = true
+    settings.altext = ''
+    settings.fontsize = '60'
+    settings.wrap = true
+    settings.language = ''
+    settings.fontfeature = ''
+    settings.font = ''
+    }
+
+
+
+
+// settings = JSON.stringify(localStorage.settings)
+    
+
+
+
+
+
+
+
 // add notes to fontDB
 for (let font=0;font<fontDB.length;font++) {
 	var fontName = fontDB[font].name
@@ -86,6 +140,30 @@ currentTag = ''
 currentTitle = ''
 currentSample = ''
 currentStyle = ''
+rtlScripts = new Set(['adlm', 'arab', 'armi', 'avst', 'chrs', 'cprt', 'elym', 'hatr', 'khar', 'lydi', 'rohg', 'hebr', 'mand', 'nkoo', 'mani', 'mend', 'nbat', 'hung', 'narb', 'orkh', 'ougr', 'phli', 'palm', 'prti', 'phlp', 'phnx', 'samr', 'sarb', 'sogd', 'syrc', 'thaa', 'yezi'])
+
+
+
+function showOnly (type, script) {
+    settings.mac = false
+    settings.win = false
+    settings.noto = false
+    settings.sil = false
+    
+    switch (type) {
+        case 'mac': settings.mac = true; break
+        case 'win': settings.win = true; break
+        case 'noto': settings.noto = true; break
+        case 'sil': settings.sil = true; break
+        default: alert('Unrecognised type: '+type)
+        }
+    
+    localStorage.fontListerSettings = JSON.stringify(settings)
+
+    window.location = `index.html?script=${ script }`
+    //getResult(script)
+    }
+
 
 
 
@@ -100,6 +178,11 @@ function addMyFont (fontName) {
 function getSection (script, scriptName, sample, style='', lang='', fontfeatures='') {
 	var out = '<section id="'+script+style+'">'
 	out += '<h2>'+scriptName+'</h2>'
+    out += `<div class="samplePointer">`
+    out += `<a href="../samples/index.html?script=${ script }" target="_blank">Sample text(s) for ${ scriptName }</a>`
+    out += `&nbsp; • &nbsp;`
+    out += `<a href="../links.html?iso=${ script }" target="_blank">Other resources for ${ scriptName }</a>`
+    out += `</div>`
     out += '<div id="myfontDisplay"></div>'
 	var lastStyle = ''
 	
@@ -108,38 +191,45 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 		if ((fontDB[r].locales.has(script) && style === '') || 
 			(fontDB[r].style && fontDB[r].locales.has(script) && fontDB[r].style === style)) {
 			
-			 if (fontDB[r].style === style) console.log('For',style,' found ',fontDB[r].name)
+            if (fontDB[r].style === style) console.log('For',style,' found ',fontDB[r].name)
 			// skip fonts that are not from one of the main sources
 			if (fontDB[r].locales.has('other')) continue
 			
 			// check against requested sources
 			if (
-				(document.getElementById('showMac')).checked && fontDB[r].system.has('mac') ||
-				(document.getElementById('showWin')).checked && fontDB[r].system.has('win') ||
-				(document.getElementById('showNoto')).checked && fontDB[r].system.has('goog') ||
-				(document.getElementById('showSIL')).checked && fontDB[r].system.has('sil')
+				settings.mac && fontDB[r].system.has('mac') ||
+				settings.win && fontDB[r].system.has('win') ||
+				settings.noto && fontDB[r].system.has('goog') ||
+				settings.sil && fontDB[r].system.has('sil')
 				)
 				{ /* carry on */ }
 			else continue
+
+            // figure out directionality
+            if (rtlScripts.has(script)) var direction = 'rtl'
+            else direction = 'auto'
 			
 			
 			out += '<div>'
 			if (fontDB[r].style && fontDB[r].style !== lastStyle) {
-				out += '<div style="color:#ccc; font-size:140%; margin: 0 2em; cursor: pointer; float:right; margin-right: 2em; font-variant-caps: all-small-caps; color:tan;">'
+				out += '<div style="color:#ccc; font-size:200%; margin: 0 2em; cursor: pointer; margin-inline-start: 7.5%; margin-block-start: 3rem; font-variant-caps: all-small-caps; color:tan; color: chocolate; border-block-end: 1px solid tan; width: 70%;">'
 				if (fontDB[r].style === 'serif') out += 'modulated'
 				else if (fontDB[r].style === 'sans') out += 'monoline'
+				else if (fontDB[r].style === 'syrc') out += 'Estrangelo Syriac'
+				else if (fontDB[r].style === 'syre') out += 'Eastern Syriac'
+				else if (fontDB[r].style === 'syrj') out += 'Western Syriac'
 				else out += fontDB[r].style
 				out += '</div> '
 				lastStyle = fontDB[r].style
 				}
 			out += '<p class="fontItem">'
 			if (fontDB[r].system) {
-				if (fontDB[r].system.has('mac')) out += '<img src="images/mac.png" width="25" height="22" alt="Mac">'
-				if (fontDB[r].md) out += '<img src="images/download.png" width="10" height="22" alt="Download" title="Download required.">'
-				if (fontDB[r].system.has('win')) out += '<img src="images/windows.png" width="25" height="22" alt="Windows">'
-				if (fontDB[r].wd) out += '<img src="images/download.png" width="10" height="22" alt="Download" title="Download required.">'
-				if (fontDB[r].system.has('goog')) out += '<b>N</b> '
-				if (fontDB[r].system.has('sil')) out += '<b>S</b> '
+				if (fontDB[r].system.has('mac')) out += `<img src="images/mac.png" width="25" height="22" alt="Mac" title="Click to show only Mac fonts." onclick="showOnly('mac', '${ script }')">`
+				if (fontDB[r].md) out += `<img src="images/download.png" width="10" height="22" alt="Download" title="Download required.">`
+				if (fontDB[r].system.has('win')) out += `<img src="images/windows.png" width="25" height="22" alt="Windows" title="Click to show only Windows fonts." onclick="showOnly('win', '${ script }')">`
+				if (fontDB[r].wd) out += `<img src="images/download.png" width="10" height="22" alt="Download" title="Download required.">`
+				if (fontDB[r].system.has('goog')) out += `<b title="Click to show only Noto fonts." onclick="showOnly('noto', '${ script }')">N</b> `
+				if (fontDB[r].system.has('sil')) out += `<b title="Click to show only SIL fonts." onclick="showOnly('sil', '${ script }')">S</b> `
 				}
 			out += ' <span class="fontname">'+fontDB[r].name
 			out += ' <span style="color:#ccc; font-size:80%; margin: 0 1em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = \'none\'">X</span> '
@@ -149,19 +239,19 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 			if (document.getElementById('showFonts').checked) {
 				out += '<div class="sample text"'
 				out += ' lang="'+lang+'"'
-				out += ' dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\';'
+				out += ` dir="${ direction }" style="font-family:\'${ fontDB[r].name }\', \'Adobe NotDef\';`
 				if (fontfeatures) out += ' font-feature-settings: '+fontfeatures+';'
 				out += '">'
 				if (document.getElementById('inputText').value !== '') {
 					out += document.getElementById('inputText').value
 					}
-				else out += sample
+				else out += phraseDB[sample].text
 				out += '</div>'
 				}
 			
-			if (document.getElementById('showGraphics').checked) {
+			if (document.getElementById('showGraphics').checked && typeof script !== 'undefined') {
 				out += '<div class="sample"'
-				out += 'dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\'"><img src="img/'+script.substring(0,4)+'/'+fontDB[r].name.toLowerCase().replace(/ /g,'')+'.png" alt="'+'NOT FOUND'+'"></div>'
+				out += ` dir="${ direction }" style="font-family:\'${ fontDB[r].name }\', \'Adobe NotDef\';"><img src="img/${ script.substring(0,4) }/${ fontDB[r].name.toLowerCase().replace(/ /g,'') }.png" alt="'+'NOT FOUND'+'"></div>`
 				}
 
 			out += '</div>'
@@ -171,24 +261,221 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 	return out
 	}
 
-function getResult (title, tag, sample, style) {
+
+
+var scriptData = {
+'adlm': { title: 'Adlam', sample: 'fuf-adlm' },
+'ahom': { title: 'Ahom', sample: 'pi-ahom' },
+'hluw': { title: 'Anatolian Hieroglyphs', sample: 'hlu' },
+'arab': { title: 'Arabic', sample: 'arb' },
+'armi': { title: 'Imperial Aramaic', sample: 'arc' },
+'armn': { title: 'Armenian', sample: 'hy' },
+'avst': { title: 'Avestan', sample: 'ae' },
+
+'bali': { title: 'Balinese', sample: 'ban' },
+'bamu': { title: 'Bamum', sample: 'bax' },
+'bass': { title: 'Bassa Vah', sample: 'bsq' },
+'batk': { title: 'Batak', sample: 'bbc' },
+'beng': { title: 'Bengali', sample: 'bn' },
+'bhks': { title: 'Bhaiksuki', sample: 'sa-bhks' },
+'brah': { title: 'Brahmi', sample: 'pra' },
+'bugi': { title: 'Buginese', sample: 'bug' },
+'batk': { title: 'Batak', sample: 'bbc' },
+'buhd': { title: 'Buhid', sample: 'bku-buhd' },
+
+'cans': { title: 'Canadian Syllabics', sample: 'ike' },
+'cari': { title: 'Carian', sample: 'xcr' },
+'aghb': { title: 'Caucasian Albanian', sample: 'cau' },
+'cakm': { title: 'Chakma', sample: 'ccp' },
+'cham': { title: 'Cham', sample: 'pi-cham' },
+'cher': { title: 'Cherokee', sample: 'chr' },
+'hans': { title: 'Chinese (simplified)', sample: 'zh-hans' },
+'hant': { title: 'Chinese (traditional)', sample: 'zh-hant' },
+'chrs': { title: 'Chorasmian', sample: 'xco' },
+'copt': { title: 'Coptic', sample: 'cop' },
+'xsux': { title: 'Cuneiform', sample: 'akk' },
+'cpmn': { title: 'Cypro Minoan', sample: 'omn' },
+'cprt': { title: 'Cypriot Syllabary', sample: 'omn-cprt' },
+'cyrl': { title: 'Cyrillic', sample: 'ru' },
+
+'dsrt': { title: 'Deseret', sample: 'en-dsrt' },
+'deva': { title: 'Devanagari', sample: 'hi' },
+'diak': { title: 'Dive Akuru', sample: 'dv-diak' },
+'dogr': { title: 'Dogra', sample: 'sa-dogr' },
+
+'egyp': { title: 'Egyptian hieroglyphs', sample: 'egy' },
+'elba': { title: 'Elbasan', sample: 'sq-elba' },
+'elym': { title: 'Elymaic', sample: 'xly' },
+'ethi': { title: 'Ethiopic', sample: 'am' },
+
+'geor': { title: 'Georgian', sample: 'ka' },
+'glag': { title: 'Glagolitic', sample: 'cu-glag' },
+'goth': { title: 'Gothic', sample: 'got' },
+'gran': { title: 'Grantha', sample: 'sa-gran' },
+'grek': { title: 'Greek', sample: 'el' },
+'gujr': { title: 'Gujarati', sample: 'gu' },
+'gong': { title: 'Gunjala Gondi', sample: 'gon' },
+'guru': { title: 'Gurmukhi', sample: 'pa' },
+
+'rohg': { title: 'Hanifi Rohingya', sample: 'rhg' },
+'hano': { title: 'Hanunoo', sample: 'hnn' },
+'hatr': { title: 'Hatran', sample: 'mis-Hatr' },
+'hebr': { title: 'Hebrew', sample: 'he' },
+
+'ital': { title: 'Old Italic', sample: 'ett' },
+
+'jpan': { title: 'Japanese', sample: 'ja' },
+'java': { title: 'Javanese', sample: 'jv' },
+
+'kthi': { title: 'Kaithi', sample: 'und-kthi' },
+'knda': { title: 'Kannada', sample: 'kn' },
+'kawi': { title: 'Kawi', sample: 'kaw' },
+'kali': { title: 'Kayah Li', sample: 'kar-kali' },
+'khar': { title: 'Kharoshthi', sample: 'pgd' },
+'khmr': { title: 'Khmer', sample: 'km' },
+'khoj': { title: 'Khojki', sample: 'sa-khoj' },
+'kits': { title: 'Khitan Small Script', sample: 'zkt' },
+'sind': { title: 'Khudawadi', sample: 'sa-sind' },
+'krai': { title: 'Kirat Rai', sample: 'bap' },
+'kore': { title: 'Korean', sample: 'ko' },
+
+'laoo': { title: 'Lao', sample: 'lo' },
+'latn': { title: 'Latin', sample: 'yo' },
+'lepc': { title: 'Lepcha', sample: 'lep' },
+'limb': { title: 'Limbu', sample: 'lif' },
+'linb': { title: 'Linear B', sample: 'gmy' },
+'lina': { title: 'Linear A', sample: 'omn-lina' },
+'lisu': { title: 'Lisu', sample: 'lis' },
+'lyci': { title: 'Lycian', sample: 'xlc' },
+'lydi': { title: 'Lydian', sample: 'xld' },
+
+'mahj': { title: 'Mahajani', sample: 'sa-mahj' },
+'maka': { title: 'Makassarese', sample: 'mak' },
+'mlym': { title: 'Malayalam', sample: 'ml' },
+'mand': { title: 'Mandaic', sample: 'mid' },
+'mani': { title: 'Manichaean', sample: 'xmn', dir:'rtl' },
+'marc': { title: 'Marchen', sample: 'sa-marc', dir:'rtl' },
+'gonm': { title: 'Masaram Gondi', sample: 'sa-gonm' },
+'medf': { title: 'Medefaidrin', sample: 'dmf' },
+'mend': { title: 'Mende Kikakui', sample: 'men' },
+'mtei': { title: 'Meetei Mayek', sample: 'mni' },
+'plrd': { title: 'Miao', sample: 'hmd-plrd' },
+'modi': { title: 'Modi', sample: 'sa-modi' },
+'mong': { title: 'Mongolian', sample: 'khk' },
+'mroo': { title: 'Mro', sample: 'sa-mroo' },
+'mult': { title: 'Multani', sample: 'skr' },
+'mymr': { title: 'Myanmar', sample: 'my' },
+
+'nbat': { title: 'Nabataean', sample: 'arc-nbat' },
+'talu': { title: 'New Tai Lue', sample: 'khb' },
+'newa': { title: 'Newa', sample: 'new' },
+'nkoo': { title: 'NKo', sample: 'nqo' },
+'nshu': { title: 'Nushu', sample: 'mis-nshu' },
+'hmnp': { title: 'Nyiakeng Puachue Hmong', sample: 'hmn-hmnp' },
+
+'ogam': { title: 'Ogham', sample: 'mga' },
+'olck': { title: 'Ol Chiki', sample: 'sat' },
+'hung': { title: 'Old Hungarian', sample: 'ohu' },
+'xpeo': { title: 'Old Persian', sample: 'peo' },
+'narb': { title: 'Old North Arabian', sample: 'mis-narb' },
+'sarb': { title: 'Old South Arabian', sample: 'xsa' },
+'orkh': { title: 'Old Turkic', sample: 'otk' },
+'orya': { title: 'Oriya', sample: 'ory' },
+'osge': { title: 'Osage', sample: 'osa' },
+'osma': { title: 'Osmanya', sample: 'so-osma' },
+'ougr': { title: 'Old Uighur', sample: 'oui' },
+
+'hmng': { title: 'Pahawh Hmong', sample: 'hmn-hmng' },
+'phli': { title: 'Inscriptional Pahlavi', sample: 'pal' },
+'phlp': { title: 'Psalter Pahlavi', sample: 'pal-phlp' },
+'palm': { title: 'Palmyrene', sample: 'arc-palm' },
+'prti': { title: 'Inscriptional Parthian', sample: 'xpr' },
+'phag': { title: 'Phags-pa', sample: 'sa-phag' },
+'phnx': { title: 'Phoenician', sample: 'phn' },
+
+'rjng': { title: 'Rejang', sample: 'rej' },
+'runr': { title: 'Runic', sample: 'non-runr' },
+
+'samr': { title: 'Samaritan', sample: 'smp' },
+'saur': { title: 'Saurashtra', sample: 'saz' },
+'shrd': { title: 'Sharada', sample: 'sa-shrd' },
+'shaw': { title: 'Shavian', sample: 'en-shaw' },
+'sidd': { title: 'Siddham', sample: 'sa-sidd' },
+'sinh': { title: 'Sinhala', sample: 'si' },
+'sund': { title: 'Sundanese', sample: 'su' },
+'sogd': { title: 'Sogdian', sample: 'sog' },
+'sora': { title: 'Sora Sompeng', sample: 'sa-sora' },
+'soyo': { title: 'Soyombo', sample: 'sa-soyo' },
+'sylo': { title: 'Syloti Nagri', sample: 'syl' },
+'syrc': { title: 'Syriac', sample: 'syc' },
+
+'tale': { title: 'Tai Le', sample: 'tdd' },
+'tglg': { title: 'Tagalog', sample: 'tgl' },
+'tagb': { title: 'Tagbanwa', sample: 'tbw' },
+'lana': { title: 'Tai Tham', sample: 'kkh' },
+'tavt': { title: 'Tai Viet', sample: 'blt' },
+'takr': { title: 'Takri', sample: 'sa-takr' },
+'taml': { title: 'Tamil', sample: 'ta' },
+'telu': { title: 'Telugu', sample: 'te' },
+'thaa': { title: 'Thaana', sample: 'dv' },
+'thai': { title: 'Thai', sample: 'th' },
+'tibt': { title: 'Tibetan', sample: 'bo' },
+'tfng': { title: 'Tifinagh', sample: 'zgh' },
+'tirh': { title: 'Tirhuta', sample: 'sa-tirh' },
+'toto': { title: 'Toto', sample: 'txo' },
+
+'ugar': { title: 'Ugaritic', sample: 'uga' },
+
+'vaii': { title: 'Vai', sample: 'vai' },
+
+'wcho': { title: 'Wancho', sample: 'sa-wcho' },
+'wara': { title: 'Warang Citi', sample: 'hoc' },
+
+'yezi': { title: 'Yezidi', sample: 'ku-yezi' },
+'yiii': { title: 'Yi', sample: 'ii' },
+
+'zanb': { title: 'Zanabazar Square', sample: 'sa-zanb' },
+
+}
+
+
+
+
+
+
+
+function getResult (tag) {
 	if (tag == '') return
-	document.getElementById('result').innerHTML = getSection(tag, title, sample, style, document.getElementById('language').value, document.getElementById('fontFeatures').value.replace(/"/,"'"))
-	//window.location = '#result'
-	currentTag = tag
-	currentTitle = title
-	currentSample = sample
-	currentStyle = style
+    
+    var language = document.getElementById('language').value
+    var features = document.getElementById('fontFeatures').value.replace(/"/,"'")
+ 
+ 	window.currentTag = tag
+	window.currentTitle = scriptData[tag].title
+	window.currentSample = scriptData[tag].sample
+
+
+    document.getElementById('result').innerHTML = getSection(currentTag, currentTitle, currentSample, '', language, features)
+
+	currentStyle = ''
+    document.getElementById("result").scrollIntoView({behavior: 'smooth'})
 	}
 
 
+
+
+
+
 function refresh () {
-	getResult(window.currentTitle, window.currentTag, window.currentSample, window.currentStyle)
+	getResult(window.currentTag)
 	}
 
 
 function changeFontSize ( newSize ) {
-	document.getElementById( 'fontSizeStyling' ).innerHTML = '.text { font-size: '+newSize + 'px; }'
+    settings.fontsize = newSize
+    localStorage.fontListerSettings = JSON.stringify(settings)
+	//document.getElementById( 'fontSizeStyling' ).innerHTML = '.text { font-size: '+newSize + 'px; }'
+    document.getElementById( 'fontSizeStyling' ).innerHTML = '.text { font-size: '+newSize + 'px; } .sample img { height: '+eval(newSize*2) + 'px; }'
 	document.getElementById( 'sizeIndicator' ).innerHTML = newSize + 'px'
 	}
 
@@ -219,340 +506,646 @@ function setFontFeatures ( features ) {
 
 <div style="font-size: 90%; margin-bottom: 2em;">
 <span style="font-weight: bold;">Show fonts for:</span><br>
-<label class="nowrap"><input type="checkbox" checked id="showMac" onChange="refresh()"> Mac</label> &nbsp;
-<label class="nowrap"><input type="checkbox" checked id="showWin" onChange="refresh()"> Windows</label> &nbsp;
-<label class="nowrap"><input type="checkbox" checked id="showNoto" onChange="refresh()"> Noto</label> &nbsp;
-<label class="nowrap"><input type="checkbox" checked id="showSIL" onChange="refresh()"> SIL</label>
+<label class="nowrap"><input id="showMac" type="checkbox" checked onChange="if (! this.checked) settings.mac = false; else settings.mac = true; localStorage.fontListerSettings = JSON.stringify(settings); refresh()"> Mac</label> &nbsp;
+
+<label class="nowrap"><input id="showWin" type="checkbox" checked onChange="if (! this.checked) settings.win = false; else settings.win = true; localStorage.fontListerSettings = JSON.stringify(settings); refresh()"> Windows</label> &nbsp;
+
+<label class="nowrap"><input id="showNoto" type="checkbox" checked onChange="if (! this.checked) settings.noto = false; else settings.noto = true; localStorage.fontListerSettings = JSON.stringify(settings); refresh()"> Noto</label> &nbsp;
+
+<label class="nowrap"><input id="showSIL" type="checkbox" checked onChange="if (! this.checked) settings.sil = false; else settings.sil = true; localStorage.fontListerSettings = JSON.stringify(settings); refresh()"> SIL</label>
+<br>
+<button id="showAll" onClick="settings.mac = true; settings.win = true; settings.noto = true; settings.sil = true; document.getElementById('showMac').checked = true;  document.getElementById('showWin').checked = true;  document.getElementById('showNoto').checked = true;  document.getElementById('showSIL').checked = true; localStorage.fontListerSettings = JSON.stringify(settings); refresh()">Reinstate all</button>
 </div>
 
 
 <div style="font-size: 90%;">
-<div style="font-weight: bold;"><label><input id="showGraphics" type="checkbox" checked onChange="refresh()"> Show font samples as images</label></div>
-<div style="font-weight: bold;"><label><input type="checkbox" id="showFonts" onChange="refresh()"> Show using fonts available on this computer</label>
+<div style="font-weight: bold;">Change font display size:<br><input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:50%;"> <span id="sizeIndicator" style="font-size:80%;">60px</span></div>
+
+<div style="font-weight: bold;"><label><input id="showGraphics" type="checkbox" checked onChange="if (! this.checked) settings.img = false; else settings.img = true; localStorage.fontListerSettings = JSON.stringify(settings); refresh()"> Show font samples as images</label></div>
+
+<div style="font-weight: bold;"><label><input type="checkbox" id="showFonts" onChange="if (! this.checked) settings.text = false; else settings.text = true; localStorage.fontListerSettings = JSON.stringify(settings); refresh()"> Show using fonts available on this computer</label>
 :</div>
-<div class="suboptions">Use this alternative text: <input placeholder="Leave blank for the default sample text" type="text" id="inputText" style="width: 90%;" onChange="refresh()"></div>
-<div class="suboptions">Change font display size: <input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:80%;"> <span id="sizeIndicator" style="font-size:80%;">60px</span></div>
+
+<div class="suboptions">Use this alternative text: <input placeholder="Leave blank for the default sample text" type="text" id="inputText" style="width: 90%;" onChange="settings.alttext = this.value; localStorage.fontListerSettings = JSON.stringify(settings); refresh()"></div>
+
+<!--div class="suboptions">Change font display size: <input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:80%;"> <span id="sizeIndicator" style="font-size:80%;">60px</span></div-->
+
 <div class="suboptions">Lines: <label class="nowrap"><input name="whitespaceSetting" type="radio" checked onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'"> no wrap</label> <label class="nowrap"><input id="wrapLines" name="whitespaceSetting" type="radio"  onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'" style="margin-left: 2em;"> wrap</label></div>
+
 <div class="suboptions">Set language: 
-<input id="language" type="text" onchange="setLanguage(this.value)" style="width:5em;"> 
+<input id="language" type="text" onchange="settings.language = this.value; localStorage.fontListerSettings = JSON.stringify(settings); setLanguage(this.value)" style="width:5em;"> 
 </div>
 
 <div class="suboptions">Apply font-feature-settings:<br>
-<input id="fontFeatures" type="text" onchange="setFontFeatures(this.value)" style="width:10em;"></div>
+<input id="fontFeatures" type="text" onchange="settings.fontfeature = this.value; localStorage.fontListerSettings = JSON.stringify(settings); setFontFeatures(this.value)" style="width:10em;"></div>
 
 <div class="suboptions">Add a font:<br>
-<input id="myFont" type="text" onchange="addMyFont(this.value)" style="width:10em;"> <button onClick="addMyFont(document.getElementById('myFont').value)">GO</button></div>
+<input id="myFont" type="text" onchange="settings.font = this.value; localStorage.fontListerSettings = JSON.stringify(settings); addMyFont(this.value)" style="width:10em;"> <button onClick="addMyFont(document.getElementById('myFont').value)">GO</button></div>
 </div>
 
 
-<div class="noprint">
+<!--div class="noprint">
 <h2 class="notoc" style="font-size: 150%;"><a id="links">Related</a></h2>
 <p style="line-height: 1.3em"><a href="/scripts/featurelist/" target="_blank">Script features by language</a></p>
 <p style="line-height: 1.3em"><a href="/app-charuse/" target="_blank">Character usage by language</a></p>
 <p style="line-height: 1.3em"><a href="../samples/" target="_blank">Sample phrases</a></p>
-</div>
+</div-->
 </aside>
 
 
 
-<p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->16 April, 2021<!-- #EndDate -->
+<p id="status">U<!-- #BeginDate format:Sw1 -->27 October, 2023<!-- #EndDate --> --> -->
 <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
   
 
 <p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows 10 and Mac OS X operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and Mac fonts have to be downloaded by the user before they can be applied to text. Install <a href="https://github.com/adobe-fonts/adobe-notdef">Adobe NotDef</a> font for best results.</p>
-<!--div style="margin-left: 7.5%; padding: 1em;border: 1px solid #ccc;border-radius: 1em;margin-right: 32%;">
-<div><label><input id="showGraphics" type="checkbox" checked onChange="refresh()"> Show font samples as images</label></div>
-<div><label><input type="checkbox" id="showFonts" onChange="refresh()"> Show using fonts available on this computer</label></div>
-<div style="margin-left: 2em; font-size: 90%; color: tan;">Use this alternative text: <input placeholder="Leave blank for the default sample text" type="text" id="inputText" style="width: 40%;" onChange="refresh()"></div>
-<div style="margin-left: 2em; font-size: 90%; color: tan;">Change font display size: <input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:15em;"> <span id="sizeIndicator" style="font-size:80%;">60px</span></div>
-<div style="margin-left: 2em; font-size: 90%; color: tan;">Lines: <label><input name="whitespaceSetting" type="radio" checked onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'"> no wrap</label> <label><input id="wrapLines" name="whitespaceSetting" type="radio"  onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'" style="margin-left: 2em;"> wrap</label></div>
-<div style="margin-left: 2em; font-size: 90%; color: tan;">Set language: 
-<input id="language" type="text" onchange="setLanguage(this.value)" style="width:5em;"> 
-&nbsp; Apply font-feature-settings: 
-<input id="fontFeatures" type="text" onchange="setFontFeatures(this.value)" style="width:10em;"></div>
-</div>
-
-<p style="margin-left: 7.5%; padding: 1em;border: 1px solid #ccc;border-radius: 1em;margin-right: 32%;"><span style="font-weight: bold;">Show fonts for:</span><br>
-<label><input type="checkbox" checked id="showMac" onChange="refresh()"> Mac</label> &nbsp;
-<label><input type="checkbox" checked id="showWin" onChange="refresh()"> Windows</label> &nbsp;
-<label><input type="checkbox" checked id="showNoto" onChange="refresh()"> Noto</label> &nbsp;
-<label><input type="checkbox" checked id="showSIL" onChange="refresh()"> SIL</label></p-->
 
 
 
 <p><span style="font-weight: bold;">Choose a script:</span><br>
-<span class="trigger" onclick="getResult('Adlam','adlm', phraseDB['fuf-adlm'].text)">adlam</span> • 
 
-<span class="trigger" onclick="getResult('Ahom','ahom', phraseDB['pi-ahom'].text)">ahom</span> • 
+<a class="trigger" href="index.html?script=adlm">adlam</a> • 
 
-<span class="trigger" onclick="getResult('Arabic','arab', phraseDB.arb.text)">arabic</span> (<span style="font-size:70%;">subsets: 
+<a class="trigger" href="index.html?script=ahom">ahom</a> • 
 
-<span class="trigger" onclick="getResult('Arabic (Nastaliq)','arab', phraseDB.arb.text, 'nastaliq')">nastaliq</span> • 
+<a class="trigger" href="index.html?script=hluw">anatolian hieroglyphs</a> • 
 
-<span class="trigger" onclick="getResult('Arabic (African)','arab-afr', phraseDB.arb.text)">african</span></span>) • 
+<a class="trigger" href="index.html?script=arab">arabic</a> •
 
-<span class="trigger" onclick="getResult('Armenian','armn', phraseDB.hy.text)">armenian</span> • 
+<a class="trigger" href="index.html?script=armi">aramaic</a> • 
 
-<span class="trigger" onclick="getResult('Balinese','bali', phraseDB.ban.text)">balinese</span> • 
+<a class="trigger" href="index.html?script=armn">armenian</a> • 
 
-<span class="trigger" onclick="getResult('Bamum','bamu', phraseDB.bax.text)">bamum</span> • 
+<a class="trigger" href="index.html?script=avst">avestan</a> • 
 
-<span class="trigger" onclick="getResult('Bassa Vah','bass', phraseDB.bsq.text)">bassa vah</span> • 
+<a class="trigger" href="index.html?script=bhks">bhaiksuki</a> • 
 
-<span class="trigger" onclick="getResult('Batak','batk', phraseDB.bbc.text)">batak</span> • 
+<a class="trigger" href="index.html?script=bali">balinese</a> • 
 
-<span class="trigger" onclick="getResult('Bengali','beng', phraseDB.bn.text)">bengali</span> • 
+<a class="trigger" href="index.html?script=bamu">bamum</a> • 
 
-<span class="trigger" onclick="getResult('Buginese','bugi', phraseDB.bug.text)">buginese</span> • 
+<a class="trigger" href="index.html?script=bass">bassa vah</a> • 
 
-<span class="trigger" onclick="getResult('Buhid','buhd', phraseDB['bku-buhd'].text)">buhid</span> • 
+<a class="trigger" href="index.html?script=batk">batak</a> • 
 
-<span class="trigger" onclick="getResult('Canadian Syllabics','cans', phraseDB.ike.text)">canadian syllabics</span> • 
+<a class="trigger" href="index.html?script=beng">bengali</a> • 
 
-<span class="trigger" onclick="getResult('Chakma','cakm', phraseDB.ccp.text)">chakma</span> • 
+<a class="trigger" href="index.html?script=brah">brahmi</a> • 
 
-<span class="trigger" onclick="getResult('Cham','cham', phraseDB['pi-cham'].text)">cham</span> • 
+<a class="trigger" href="index.html?script=bugi">buginese</a> • 
 
-<span class="trigger" onclick="getResult('Cherokee','cher', phraseDB.chr.text)">cherokee</span> • 
+<a class="trigger" href="index.html?script=buhd">buhid</a> • 
 
-<span class="trigger" onclick="getResult('Chinese (simplified)','hans', phraseDB['zh-hans'].text)">chinese, simplified</span> • 
+<a class="trigger" href="index.html?script=cans">canadian syllabics</a> • 
 
-<span class="trigger" onclick="getResult('Chinese (traditional)','hant', phraseDB['zh-hant'].text)">chinese, traditional</span> • 
+<a class="trigger" href="index.html?script=cari">carian</a> • 
 
-<span class="trigger" onclick="getResult('Coptic','copt', phraseDB.cop.text)">coptic</span> • 
+<a class="trigger" href="index.html?script=aghb">caucasian albanian</a> • 
 
-<span class="trigger" onclick="getResult('Cyrillic','cyrl', phraseDB.ru.text)">cyrillic</span> • 
+<a class="trigger" href="index.html?script=cakm">chakma</a> • 
 
-<span class="trigger" onclick="getResult('Devanagari','deva', phraseDB.hi.text)">devanagari</span> • 
+<a class="trigger" href="index.html?script=cham">cham</a> • 
 
-<span class="trigger" onclick="getResult('Ethiopic','ethi', phraseDB.am.text)">ethiopic</span> • 
+<a class="trigger" href="index.html?script=cher">cherokee</a> • 
 
-<span class="trigger" onclick="getResult('Georgian','geor', phraseDB.ka.text)">georgian</span> • 
+<a class="trigger" href="index.html?script=hans">chinese, simplified</a> • 
 
-<span class="trigger" onclick="getResult('Greek','grek', phraseDB.el.text)">greek</span> • 
+<a class="trigger" href="index.html?script=hant">chinese, traditional</a> • 
 
-<span class="trigger" onclick="getResult('Gujarati','gujr', phraseDB.gu.text)">gujarati</span> • 
+<a class="trigger" href="index.html?script=chrs">chorasmian</a> • 
 
-<span class="trigger" onclick="getResult('Gunjala Gondi','gong', phraseDB.gon.text)">gunjala gondi</span> • 
+<a class="trigger" href="index.html?script=copt">coptic</a> • 
 
-<span class="trigger" onclick="getResult('Gurmukhi','guru', phraseDB.pa.text)">gurmukhi</span> • 
+<a class="trigger" href="index.html?script=xsux">cuneiform</a> • 
 
-<span class="trigger" onclick="getResult('Hanifi Rohingya','rohg', phraseDB.rhg.text)">hanifi rohingya</span> • 
+<a class="trigger" href="index.html?script=cpmn">cypro minoan</a> • 
 
-<span class="trigger" onclick="getResult('Hanunoo','hano', phraseDB.hnn.text)">hanunoo</span> • 
+<a class="trigger" href="index.html?script=cprt">cypriot syllabary</a> • 
 
-<span class="trigger" onclick="getResult('Hebrew','hebr', phraseDB.he.text)">hebrew</span> • 
+<a class="trigger" href="index.html?script=cyrl">cyrillic</a> • 
 
-<span class="trigger" onclick="getResult('Japanese','jpan', phraseDB.ja.text)">japanese</span> • 
+<a class="trigger" href="index.html?script=dsrt">deseret</a> • 
 
-<span class="trigger" onclick="getResult('Javanese','java', phraseDB.jv.text)">javanese</span> • 
+<a class="trigger" href="index.html?script=deva">devanagari</a> • 
 
-<span class="trigger" onclick="getResult('Kaithi','kthi', phraseDB['und-kthi'].text)">kaithi</span> • 
+<a class="trigger" href="index.html?script=diak">dives akuru</a> • 
 
-<span class="trigger" onclick="getResult('Kannada','knda', phraseDB.kn.text)">kannada</span> • 
+<a class="trigger" href="index.html?script=dogr">dogra</a> • 
 
-<span class="trigger" onclick="getResult('Kayah Li','kali', phraseDB['kar-kali'].text)">kayah li</span> • 
+<a class="trigger" href="index.html?script=egyp">egyptian hieroglyphs</a> • 
 
-<span class="trigger" onclick="getResult('Khmer','khmr', phraseDB.km.text)">khmer</span> • 
+<a class="trigger" href="index.html?script=elba">elbasan</a> • 
 
-<span class="trigger" onclick="getResult('Khojki','khoj', phraseDB['sa-khoj'].text)">khojki</span> • 
+<a class="trigger" href="index.html?script=elym">elymaic</a> • 
 
-<span class="trigger" onclick="getResult('Korean','kore', phraseDB.ko.text)">korean</span> • 
+<a class="trigger" href="index.html?script=ethi">ethiopic</a> • 
 
-<span class="trigger" onclick="getResult('Lao','laoo', phraseDB.lo.text)">lao</span> • 
+<a class="trigger" href="index.html?script=geor">georgian</a> • 
 
-<span class="trigger" onclick="getResult('Latin','latn', phraseDB.yo.text)">latin</span> • 
+<a class="trigger" href="index.html?script=glag">glagolitic</a> • 
 
-<span class="trigger" onclick="getResult('Lepcha','lepc', phraseDB.lep.text)">lepcha</span> • 
+<a class="trigger" href="index.html?script=goth">gothic</a> • 
 
-<span class="trigger" onclick="getResult('Limbu','limb', phraseDB.lif.text)">limbu</span> • 
+<a class="trigger" href="index.html?script=gran">grantha</a> • 
 
-<span class="trigger" onclick="getResult('Lisu','lisu', phraseDB.lis.text)">lisu</span> • 
+<a class="trigger" href="index.html?script=grek">greek</a> • 
 
-<span class="trigger" onclick="getResult('Malayalam','mlym', phraseDB.ml.text)">malayalam</span> • 
+<a class="trigger" href="index.html?script=gujr">gujarati</a> • 
 
-<span class="trigger" onclick="getResult('Mandaic','mand', phraseDB.mid.text)">mandaic</span> •
+<a class="trigger" href="index.html?script=gong">gunjala gondi</a> • 
 
-<span class="trigger" onclick="getResult('Masaram Gondi','gonm', phraseDB['sa-gonm'].text)">masaram gondi</span> •
+<a class="trigger" href="index.html?script=guru">gurmukhi</a> • 
 
-<span class="trigger" onclick="getResult('Mende Kikakui','mend', phraseDB.men.text)">mende kikakui</span> •
+<a class="trigger" href="index.html?script=rohg">hanifi rohingya</a> • 
 
-<span class="trigger" onclick="getResult('Meetei Mayek','mtei', phraseDB.mni.text)">meetei mayek</span> •
+<a class="trigger" href="index.html?script=hano">hanunoo</a> • 
 
-<span class="trigger" onclick="getResult('Miao','plrd', phraseDB['hmd-plrd'].text)">miao</span> • 
+<a class="trigger" href="index.html?script=hatr">hatran</a> • 
 
-<span class="trigger" onclick="getResult('Modi','modi', phraseDB['sa-modi'].text)">modi</span> • 
+<a class="trigger" href="index.html?script=hebr">hebrew</a> • 
 
-<span class="trigger" onclick="getResult('Mongolian','mong', phraseDB.khk.text)">mongolian</span> • 
+<a class="trigger" href="index.html?script=jpan">japanese</a> • 
 
-<span class="trigger" onclick="getResult('Mro','mroo', phraseDB['sa-mroo'].text)">mro</span> • 
+<a class="trigger" href="index.html?script=java">javanese</a> • 
 
-<span class="trigger" onclick="getResult('Myanmar','mymr', phraseDB.my.text)">myanmar</span> • 
+<a class="trigger" href="index.html?script=kthi">kaithi</a> • 
 
-<span class="trigger" onclick="getResult('New Tai Lue','talu', phraseDB.khb.text)">new tai lue</span> • 
+<a class="trigger" href="index.html?script=knda">kannada</a> • 
 
-<span class="trigger" onclick="getResult('Newa','newa', phraseDB.new.text)">newa</span> • 
+<a class="trigger" href="index.html?script=kawi">kawi</a> • 
 
-<span class="trigger" onclick="getResult('NKo','nkoo', phraseDB.nqo.text)">n'ko</span> • 
+<a class="trigger" href="index.html?script=kali">kayah li</a> • 
 
-<span class="trigger" onclick="getResult('Nyiakeng Puachue Hmong','hmnp', phraseDB['hmn-hmnp'].text)">nyiakeng puachue hmong</span> • 
+<a class="trigger" href="index.html?script=khar">kharoshthi</a> • 
 
-<span class="trigger" onclick="getResult('Ol Chiki','olck', phraseDB.sat.text)">ol&nbsp;chiki</span> • 
+<a class="trigger" href="index.html?script=kits">khitan small script</a> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Old Hungarian','hung', phraseDB.ohu.text)">old hungarian</span> • 
+<a class="trigger" href="index.html?script=khmr">khmer</a> • 
 
-<span class="trigger" onclick="getResult('Oriya','orya', phraseDB.ory.text)">oriya</span> • 
+<a class="trigger" href="index.html?script=khoj">khojki</a> • 
 
-<span class="trigger" onclick="getResult('Osage','osge', phraseDB.osa.text)">osage</span> • 
+<a class="trigger" href="index.html?script=sind">khudawadi</a> • 
 
-<span class="trigger" onclick="getResult('Osmanya','osma', phraseDB['so-osma'].text)">osmanya</span> • 
+<a class="trigger" href="index.html?script=krai">kirat rai</a> • 
 
-<span class="trigger" onclick="getResult('Pahawh Hmong','hmng', phraseDB['hmn-hmng'].text)">pahawh hmong</span> • 
+<a class="trigger" href="index.html?script=kore">korean</a> • 
 
-<span class="trigger" onclick="getResult('Rejang','rjng', phraseDB['rej'].text)">rejang</span> • 
+<a class="trigger" href="index.html?script=laoo">lao</a> • 
 
-<span class="trigger" onclick="getResult('Runic','runr', phraseDB['non-runr'].text)">runic</span> • 
+<a class="trigger" href="index.html?script=latn">latin</a> • 
 
-<span class="trigger" onclick="getResult('Samaritan','samr', phraseDB.smp.text)">samaritan</span> • 
+<a class="trigger" href="index.html?script=lepc">lepcha</a> • 
 
-<span class="trigger" onclick="getResult('Saurashtra','saur', phraseDB.saz.text)">saurashtra</span> • 
+<a class="trigger" href="index.html?script=limb">limbu</a> • 
 
-<span class="trigger" onclick="getResult('Shavian','shaw', phraseDB['en-shaw'].text)">shavian</span> • 
+<a class="trigger" href="index.html?script=lina">linear a</a> • 
 
-<span class="trigger" onclick="getResult('Sinhala','sinh', phraseDB.si.text)">sinhala</span> • 
+<a class="trigger" href="index.html?script=linb">linear b</a> • 
 
-<span class="trigger" onclick="getResult('Sundanese','sund', phraseDB.su.text)">sundanese</span> • 
+<a class="trigger" href="index.html?script=lisu">lisu</a> • 
 
-<span class="trigger" onclick="getResult('Sora Sompeng','sora', phraseDB['sa-sora'].text)">sora sompeng</span> • 
+<a class="trigger" href="index.html?script=lyci">lycian</a> • 
 
-<span class="trigger" onclick="getResult('Syloti Nagri','sylo', phraseDB.syl.text)">syloti nagri</span> • 
+<a class="trigger" href="index.html?script=lydi">lydian</a> • 
 
-<span class="trigger" onclick="getResult('Syriac','syrc', phraseDB.syc.text)">syriac</span> • 
+<a class="trigger" href="index.html?script=mahj">mahajani</a> • 
 
-<span class="trigger" onclick="getResult('Tai Le','tale', phraseDB.tdd.text)">tai le</span> • 
+<a class="trigger" href="index.html?script=maka">makassarese</a> • 
 
-<span class="trigger" onclick="getResult('Tagalog','tglg', phraseDB.tgl.text)">tagalog</span> • 
+<a class="trigger" href="index.html?script=mlym">malayalam</a> • 
 
-<span class="trigger" onclick="getResult('Tagbanwa','tagb', phraseDB.tbw.text)">tagbanwa</span> • 
+<a class="trigger" href="index.html?script=mand">mandaic</a> •
 
-<span class="trigger" onclick="getResult('Tai Tham','lana', phraseDB.kkh.text)">tai tham</span> • 
+<a class="trigger" href="index.html?script=mani">manichaean</a> •
 
-<span class="trigger" onclick="getResult('Tai Viet','tavt', phraseDB.blt.text)">tai viet</span> • 
+<a class="trigger" href="index.html?script=marc">marchen</a> •
 
-<span class="trigger" onclick="getResult('Tamil','taml', phraseDB.ta.text)">tamil</span> • 
+<a class="trigger" href="index.html?script=gonm">masaram gondi</a> •
 
-<span class="trigger" onclick="getResult('Telugu','telu', phraseDB.te.text)">telugu</span> • 
+<a class="trigger" href="index.html?script=medf">medefaidrin</a> •
 
-<span class="trigger" onclick="getResult('Thaana','thaa', phraseDB.dv.text)">thaana</span> • 
+<a class="trigger" href="index.html?script=mend">mende kikakui</a> •
 
-<span class="trigger" onclick="getResult('Thai','thai', phraseDB.th.text)">thai</span> • 
+<a class="trigger" href="index.html?script=mtei">meetei mayek</a> •
 
-<span class="trigger" onclick="getResult('Tibetan','tibt', phraseDB.bo.text)">tibetan</span> • 
+<a class="trigger" href="index.html?script=plrd">miao</a> • 
 
-<span class="trigger" onclick="getResult('Tifinagh','tfng', phraseDB.zgh.text)">tifinagh</span> • 
+<a class="trigger" href="index.html?script=modi">modi</a> • 
 
-<span class="trigger" onclick="getResult('Vai','vaii', phraseDB.vai.text)">vai</span> • 
+<a class="trigger" href="index.html?script=mong">mongolian</a> • 
 
-<span class="trigger" onclick="getResult('Wancho','wcho', phraseDB['sa-wcho'].text)">wancho</span> • 
+<a class="trigger" href="index.html?script=mroo">mro</a> • 
 
-<span class="trigger" onclick="getResult('Warang Citi','wara', phraseDB.hoc.text)">warang citi</span> • 
+<span class="trigger" dir="ltr" onclick="getResult('mult')">multani</span> •
 
-<span class="trigger" onclick="getResult('Yezidi','yezi', phraseDB['ku-yezi'].text)">yezidi</span> • 
+<a class="trigger" href="index.html?script=mymr">myanmar</a> • 
 
-<span class="trigger" onclick="getResult('Yi','yiii', phraseDB.ii.text)">yi</span> 
+<a class="trigger" href="index.html?script=nbat">nabataean</a> • 
+
+<a class="trigger" href="index.html?script=talu">new tai lue</a> • 
+
+<a class="trigger" href="index.html?script=newa">newa</a> • 
+
+<a class="trigger" href="index.html?script=nkoo">n'ko</a> • 
+
+<a class="trigger" href="index.html?script=nshu">nushu</a> • 
+
+<a class="trigger" href="index.html?script=hmnp">nyiakeng puachue hmong</a> • 
+
+<a class="trigger" href="index.html?script=ogam">ogham</a> • 
+
+<a class="trigger" href="index.html?script=olck">ol&nbsp;chiki</a> • 
+
+<a class="trigger" href="index.html?script=hung">old hungarian</a> • 
+
+<a class="trigger" href="index.html?script=ital">old italic</a> • 
+
+<a class="trigger" href="index.html?script=narb">old north arabian</a> • 
+
+<a class="trigger" href="index.html?script=xpeo">old persian</a> • 
+
+<a class="trigger" href="index.html?script=sarb">old south arabian</a> • 
+
+<a class="trigger" href="index.html?script=orkh">old turkic</a> • 
+
+<a class="trigger" href="index.html?script=ougr">old uighur</a> • 
+
+<a class="trigger" href="index.html?script=orya">oriya</a> • 
+
+<a class="trigger" href="index.html?script=osge">osage</a> • 
+
+<a class="trigger" href="index.html?script=osma">osmanya</a> • 
+
+<a class="trigger" href="index.html?script=hmng">pahawh hmong</a> • 
+
+<a class="trigger" href="index.html?script=phli">pahlavi (inscriptional)</a> • 
+
+<a class="trigger" href="index.html?script=phlp">pahlavi (psalter)</a> • 
+
+<a class="trigger" href="index.html?script=palm">palmyrene</a> • 
+
+<a class="trigger" href="index.html?script=prti">parthian</a> • 
+
+<a class="trigger" href="index.html?script=phag">phags-pa</a> • 
+
+<a class="trigger" href="index.html?script=phnx">phoenician</a> •
+
+<a class="trigger" href="index.html?script=rjng">rejang</a> • 
+
+<a class="trigger" href="index.html?script=runr">runic</a> • 
+
+<a class="trigger" href="index.html?script=samr">samaritan</a> • 
+
+<a class="trigger" href="index.html?script=saur">saurashtra</a> • 
+
+<a class="trigger" href="index.html?script=shrd">sharada</a> •
+
+<a class="trigger" href="index.html?script=shaw">shavian</a> • 
+
+<a class="trigger" href="index.html?script=sidd">siddham</a> •
+
+<a class="trigger" href="index.html?script=sinh">sinhala</a> • 
+
+<a class="trigger" href="index.html?script=sogd">sogdian</a> • 
+
+<a class="trigger" href="index.html?script=sora">sora sompeng</a> • 
+
+<a class="trigger" href="index.html?script=soyo">soyombo</a> •
+
+<a class="trigger" href="index.html?script=sund">sundanese</a> • 
+
+<a class="trigger" href="index.html?script=sylo">syloti nagri</a> • 
+
+<a class="trigger" href="index.html?script=syrc">syriac</a> • 
+
+<a class="trigger" href="index.html?script=tale">tai le</a> • 
+
+<a class="trigger" href="index.html?script=tglg">tagalog</a> • 
+
+<a class="trigger" href="index.html?script=tagb">tagbanwa</a> • 
+
+<a class="trigger" href="index.html?script=lana">tai tham</a> • 
+
+<a class="trigger" href="index.html?script=tavt">tai viet</a> • 
+
+<a class="trigger" href="index.html?script=takr">takri</a> •
+
+<a class="trigger" href="index.html?script=taml">tamil</a> • 
+
+<a class="trigger" href="index.html?script=telu">telugu</a> • 
+
+<a class="trigger" href="index.html?script=thaa">thaana</a> • 
+
+<a class="trigger" href="index.html?script=thai">thai</a> • 
+
+<a class="trigger" href="index.html?script=tibt">tibetan</a> • 
+
+<a class="trigger" href="index.html?script=tfng">tifinagh</a> • 
+
+<a class="trigger" href="index.html?script=tirh">tirhuta</a> •
+
+<a class="trigger" href="index.html?script=toto">toto</a> • 
+
+<a class="trigger" href="index.html?script=ugar">ugaritic</a> •
+
+<a class="trigger" href="index.html?script=vaii">vai</a> • 
+
+<a class="trigger" href="index.html?script=wcho">wancho</a> • 
+
+<a class="trigger" href="index.html?script=wara">warang citi</a> • 
+
+<a class="trigger" href="index.html?script=yezi">yezidi</a> • 
+
+<a class="trigger" href="index.html?script=yiii">yi</a>  •
+
+<a class="trigger" href="index.html?script=zanb">zanabazar square</a>
 </p>
 
 
-<p style="font-style: italic; margin-left: 7.5%; margin-bottom: 0; font-size:80%;">Archaic scripts</p>
 
-<p style="margin-top: 0;">
-<span class="trigger" onclick="getResult('Anatolian Hieroglyphs','hluw', phraseDB.hlu.text)">anatolian hieroglyphs</span> • 
 
-<span class="trigger" onclick="getResult('Imperial Aramaic','armi', phraseDB.arc.text)">aramaic</span> • 
+<!-- OLD
+<p><span style="font-weight: bold;">Choose a script:</span><br>
+<a class="trigger" href="index.html?script=adlm">adlam</a> • 
 
-<span class="trigger" onclick="getResult('Avestan','avst', phraseDB.ae.text)">avestan</span> • 
+<span class="trigger" onclick="getResult('adlm')">adlam</span> • 
 
-<span class="trigger" onclick="getResult('Bhaiksuki','bhks', phraseDB['sa-bhks'].text)">bhaiksuki</span> • 
+<span class="trigger" onclick="getResult('ahom')">ahom</span> • 
 
-<span class="trigger" onclick="getResult('Brahmi','brah', phraseDB['pra'].text)">brahmi</span> • 
+<span class="trigger" onclick="getResult('hluw')">anatolian hieroglyphs</span> • 
 
-<span class="trigger" onclick="getResult('Cypriot Syllabary','cprt', phraseDB['omn-cprt'].text)">cypriot syllabary</span> • 
+<span class="trigger" onclick="getResult('arab')">arabic</span> •
 
-<span class="trigger" onclick="getResult('Deseret','dsrt', phraseDB['en-dsrt'].text)">deseret</span> • 
+<span class="trigger" onclick="getResult('armi')">aramaic</span> • 
 
-<span class="trigger" onclick="getResult('Dogra','dogr', phraseDB['sa-dogr'].text)">dogra</span> • 
+<span class="trigger" onclick="getResult('armn')">armenian</span> • 
 
-<span class="trigger" onclick="getResult('Egyptian hieroglyphs','egyp', phraseDB.egy.text)">egyptian hieroglyphs</span> • 
+<span class="trigger" onclick="getResult('avst')">avestan</span> • 
 
-<span class="trigger" onclick="getResult('Elymaic','elym', phraseDB.xly.text)">elymaic</span> • 
+<span class="trigger" onclick="getResult('bhks')">bhaiksuki</span> • 
 
-<span class="trigger" onclick="getResult('Glagolitic','glag', phraseDB['cu-glag'].text)">glagolitic</span> • 
+<span class="trigger" onclick="getResult('bali')">balinese</span> • 
 
-<span class="trigger" onclick="getResult('Gothic','goth', phraseDB['got'].text)">gothic</span> • 
+<span class="trigger" onclick="getResult('bamu')">bamum</span> • 
 
-<span class="trigger" onclick="getResult('Grantha','gran', phraseDB['sa-gran'].text)">grantha</span> • 
+<span class="trigger" onclick="getResult('bass')">bassa vah</span> • 
 
-<span class="trigger" onclick="getResult('Hatran','hatr', phraseDB['mis-Hatr'].text)">hatran</span> • 
+<span class="trigger" onclick="getResult('batk')">batak</span> • 
 
-<span class="trigger" onclick="getResult('Kharoshthi','khar', phraseDB.pgd.text)">kharoshthi</span> • 
+<span class="trigger" onclick="getResult('beng')">bengali</span> • 
 
-<span class="trigger" onclick="getResult('Khudawadi','sind', phraseDB['sa-sind'].text)">khudawadi</span> • 
+<span class="trigger" onclick="getResult('brah')">brahmi</span> • 
 
-<span class="trigger" onclick="getResult('Linear B','linb', phraseDB.gmy.text)">linear b</span> • 
+<span class="trigger" onclick="getResult('bugi')">buginese</span> • 
 
-<span class="trigger" onclick="getResult('Lycian','lyci', phraseDB.xlc.text)">lycian</span> • 
+<span class="trigger" onclick="getResult('buhd')">buhid</span> • 
 
-<span class="trigger" onclick="getResult('Lydian','lydi', phraseDB.xld.text)">lydian</span> • 
+<span class="trigger" onclick="getResult('cans')">canadian syllabics</span> • 
 
-<span class="trigger" onclick="getResult('Mahajani','mahj', phraseDB['sa-mahj'].text)">mahajani</span> • 
+<span class="trigger" onclick="getResult('cari')">carian</span> • 
 
-<span class="trigger" onclick="getResult('Makassarese','maka', phraseDB.mak.text)">makassarese</span> • 
+<span class="trigger" onclick="getResult('aghb')">caucasian albanian</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Manichaean','mani', phraseDB.xmn.text)">manichaean</span> •
+<span class="trigger" onclick="getResult('cakm')">chakma</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Marchen','marc', phraseDB['sa-marc'].text)">marchen</span> •
+<span class="trigger" onclick="getResult('cham')">cham</span> • 
 
-<span class="trigger" dir="ltr" onclick="getResult('Multani','mult', phraseDB.skr.text)">multani</span> •
+<span class="trigger" onclick="getResult('cher')">cherokee</span> • 
 
-<span class="trigger" onclick="getResult('Nabataean','nbat', phraseDB['arc-nbat'].text)">nabataean</span> • 
+<span class="trigger" onclick="getResult('hans')">chinese, simplified</span> • 
 
-<span class="trigger" onclick="getResult('Ogham','ogam', phraseDB['mga'].text)">ogham</span> • 
+<span class="trigger" onclick="getResult('hant')">chinese, traditional</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Old Persian','xpeo', phraseDB.peo.text)">old persian</span> • 
+<span class="trigger" onclick="getResult('chrs')">chorasmian</span> • 
 
-<span class="trigger" onclick="getResult('Old South Arabian','sarb', phraseDB['xsa'].text)">old south arabian</span> • 
+<span class="trigger" onclick="getResult('copt')">coptic</span> • 
 
-<span class="trigger" onclick="getResult('Old Turkic','orkh', phraseDB['otk'].text)">old turkic</span> • 
+<span class="trigger" onclick="getResult('xsux')">cuneiform</span> • 
 
-<span class="trigger" onclick="getResult('Inscriptional Pahlavi','phli', phraseDB.pal.text)">pahlavi</span> • 
+<span class="trigger" onclick="getResult('cpmn')">cypro minoan</span> • 
 
-<span class="trigger" onclick="getResult('Palmyrene','palm', phraseDB['arc-palm'].text)">palmyrene</span> • 
+<span class="trigger" onclick="getResult('cprt')">cypriot syllabary</span> • 
 
-<span class="trigger" onclick="getResult('Inscriptional Parthian','prti', phraseDB.xpr.text)">parthian</span> • 
+<span class="trigger" onclick="getResult('cyrl')">cyrillic</span> • 
 
-<span class="trigger" onclick="getResult('Phags-pa','phag', phraseDB['sa-phag'].text)">phags-pa</span> • 
+<span class="trigger" onclick="getResult('dsrt')">deseret</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Phoenician','phnx', phraseDB.phn.text)">phoenician</span> •
+<span class="trigger" onclick="getResult('deva')">devanagari</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Sharada','shrd', phraseDB['sa-shrd'].text)">sharada</span> •
+<span class="trigger" onclick="getResult('diak')">dives akuru</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Siddham','sidd', phraseDB['sa-sidd'].text)">siddham</span> •
+<span class="trigger" onclick="getResult('dogr')">dogra</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Soyombo','soyo', phraseDB['sa-soyo'].text)">soyombo</span> •
+<span class="trigger" onclick="getResult('egyp')">egyptian hieroglyphs</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Takri','takr', phraseDB['sa-takr'].text)">takri</span> •
+<span class="trigger" onclick="getResult('elba')">elbasan</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Tirhuta','tirh', phraseDB['sa-tirh'].text)">tirhuta</span> •
+<span class="trigger" onclick="getResult('elym')">elymaic</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Zanabazar Square','zanb', phraseDB['sa-zanb'].text)">zanabazar square</span> •
+<span class="trigger" onclick="getResult('ethi')">ethiopic</span> • 
 
-<span class="trigger" dir="rtl" onclick="getResult('Ugaritic','ugar', phraseDB.uga.text)">ugaritic</span>
+<span class="trigger" onclick="getResult('geor')">georgian</span> • 
 
+<span class="trigger" onclick="getResult('glag')">glagolitic</span> • 
+
+<span class="trigger" onclick="getResult('goth')">gothic</span> • 
+
+<span class="trigger" onclick="getResult('gran')">grantha</span> • 
+
+<span class="trigger" onclick="getResult('grek')">greek</span> • 
+
+<span class="trigger" onclick="getResult('gujr')">gujarati</span> • 
+
+<span class="trigger" onclick="getResult('gong')">gunjala gondi</span> • 
+
+<span class="trigger" onclick="getResult('guru')">gurmukhi</span> • 
+
+<span class="trigger" onclick="getResult('rohg')">hanifi rohingya</span> • 
+
+<span class="trigger" onclick="getResult('hano')">hanunoo</span> • 
+
+<span class="trigger" onclick="getResult('hatr')">hatran</span> • 
+
+<span class="trigger" onclick="getResult('hebr')">hebrew</span> • 
+
+<span class="trigger" onclick="getResult('jpan')">japanese</span> • 
+
+<span class="trigger" onclick="getResult('java')">javanese</span> • 
+
+<span class="trigger" onclick="getResult('kthi')">kaithi</span> • 
+
+<span class="trigger" onclick="getResult('knda')">kannada</span> • 
+
+<span class="trigger" onclick="getResult('kali')">kayah li</span> • 
+
+<span class="trigger" onclick="getResult('khar')">kharoshthi</span> • 
+
+<span class="trigger" onclick="getResult('khmr')">khmer</span> • 
+
+<span class="trigger" onclick="getResult('khoj')">khojki</span> • 
+
+<span class="trigger" onclick="getResult('sind')">khudawadi</span> • 
+
+<span class="trigger" onclick="getResult('krai')">kirat rai</span> • 
+
+<span class="trigger" onclick="getResult('kore')">korean</span> • 
+
+<span class="trigger" onclick="getResult('laoo')">lao</span> • 
+
+<span class="trigger" onclick="getResult('latn')">latin</span> • 
+
+<span class="trigger" onclick="getResult('lepc')">lepcha</span> • 
+
+<span class="trigger" onclick="getResult('limb')">limbu</span> • 
+
+<span class="trigger" onclick="getResult('linb')">linear b</span> • 
+
+<span class="trigger" onclick="getResult('lisu')">lisu</span> • 
+
+<span class="trigger" onclick="getResult('lyci')">lycian</span> • 
+
+<span class="trigger" onclick="getResult('lydi')">lydian</span> • 
+
+<span class="trigger" onclick="getResult('mahj')">mahajani</span> • 
+
+<span class="trigger" onclick="getResult('maka')">makassarese</span> • 
+
+<span class="trigger" onclick="getResult('mlym')">malayalam</span> • 
+
+<span class="trigger" onclick="getResult('mand')">mandaic</span> •
+
+<span class="trigger" dir="rtl" onclick="getResult('mani')">manichaean</span> •
+
+<span class="trigger" dir="rtl" onclick="getResult('marc')">marchen</span> •
+
+<span class="trigger" onclick="getResult('gonm')">masaram gondi</span> •
+
+<span class="trigger" onclick="getResult('mend')">mende kikakui</span> •
+
+<span class="trigger" onclick="getResult('mtei')">meetei mayek</span> •
+
+<span class="trigger" onclick="getResult('plrd')">miao</span> • 
+
+<span class="trigger" onclick="getResult('modi')">modi</span> • 
+
+<span class="trigger" onclick="getResult('mong')">mongolian</span> • 
+
+<span class="trigger" onclick="getResult('mroo')">mro</span> • 
+
+<span class="trigger" dir="ltr" onclick="getResult('mult')">multani</span> •
+
+<span class="trigger" onclick="getResult('mymr')">myanmar</span> • 
+
+<span class="trigger" onclick="getResult('nbat')">nabataean</span> • 
+
+<span class="trigger" onclick="getResult('talu')">new tai lue</span> • 
+
+<span class="trigger" onclick="getResult('newa')">newa</span> • 
+
+<span class="trigger" onclick="getResult('nkoo')">n'ko</span> • 
+
+<span class="trigger" onclick="getResult('hmnp')">nyiakeng puachue hmong</span> • 
+
+<span class="trigger" onclick="getResult('ogam')">ogham</span> • 
+
+<span class="trigger" onclick="getResult('olck')">ol&nbsp;chiki</span> • 
+
+<span class="trigger" dir="rtl" onclick="getResult('hung')">old hungarian</span> • 
+
+<span class="trigger" dir="rtl" onclick="getResult('xpeo')">old persian</span> • 
+
+<span class="trigger" onclick="getResult('sarb')">old south arabian</span> • 
+
+<span class="trigger" onclick="getResult('orkh')">old turkic</span> • 
+
+<span class="trigger" onclick="getResult('orya')">oriya</span> • 
+
+<span class="trigger" onclick="getResult('osge')">osage</span> • 
+
+<span class="trigger" onclick="getResult('osma')">osmanya</span> • 
+
+<span class="trigger" onclick="getResult('hmng')">pahawh hmong</span> • 
+
+<span class="trigger" onclick="getResult('phli')">pahlavi</span> • 
+
+<span class="trigger" onclick="getResult('palm')">palmyrene</span> • 
+
+<span class="trigger" onclick="getResult('prti')">parthian</span> • 
+
+<span class="trigger" onclick="getResult('phag')">phags-pa</span> • 
+
+<span class="trigger" dir="rtl" onclick="getResult('phnx')">phoenician</span> •
+
+<span class="trigger" onclick="getResult('rjng')">rejang</span> • 
+
+<span class="trigger" onclick="getResult('runr')">runic</span> • 
+
+<span class="trigger" onclick="getResult('samr')">samaritan</span> • 
+
+<span class="trigger" onclick="getResult('saur')">saurashtra</span> • 
+
+<span class="trigger" dir="rtl" onclick="getResult('shrd')">sharada</span> •
+
+<span class="trigger" onclick="getResult('shaw')">shavian</span> • 
+
+<span class="trigger" dir="rtl" onclick="getResult('sidd')">siddham</span> •
+
+<span class="trigger" onclick="getResult('sinh')">sinhala</span> • 
+
+<span class="trigger" onclick="getResult('sund')">sundanese</span> • 
+
+<span class="trigger" onclick="getResult('sora')">sora sompeng</span> • 
+
+<span class="trigger" dir="rtl" onclick="getResult('soyo')">soyombo</span> •
+
+<span class="trigger" onclick="getResult('sylo')">syloti nagri</span> • 
+
+<span class="trigger" onclick="getResult('syrc')">syriac</span> • 
+
+<span class="trigger" onclick="getResult('tale')">tai le</span> • 
+
+<span class="trigger" onclick="getResult('tglg')">tagalog</span> • 
+
+<span class="trigger" onclick="getResult('tagb')">tagbanwa</span> • 
+
+<span class="trigger" onclick="getResult('lana')">tai tham</span> • 
+
+<span class="trigger" onclick="getResult('tavt')">tai viet</span> • 
+
+<span class="trigger" dir="rtl" onclick="getResult('takr')">takri</span> •
+
+<span class="trigger" onclick="getResult('taml')">tamil</span> • 
+
+<span class="trigger" onclick="getResult('telu')">telugu</span> • 
+
+<span class="trigger" onclick="getResult('thaa')">thaana</span> • 
+
+<span class="trigger" onclick="getResult('thai')">thai</span> • 
+<a class="trigger" href="index.html?script=thai">thai</a> • 
+
+<span class="trigger" onclick="getResult('tibt')">tibetan</span> • 
+
+<span class="trigger" onclick="getResult('tfng')">tifinagh</span> • 
+
+<span class="trigger" dir="rtl" onclick="getResult('tirh')">tirhuta</span> •
+
+<span class="trigger" dir="rtl" onclick="getResult('ugar')">ugaritic</span> •
+
+<span class="trigger" onclick="getResult('vaii')">vai</span> • 
+
+<span class="trigger" onclick="getResult('wcho')">wancho</span> • 
+
+<span class="trigger" onclick="getResult('wara')">warang citi</span> • 
+
+<span class="trigger" onclick="getResult('yezi')">yezidi</span> • 
+
+<span class="trigger" onclick="getResult('yiii')">yi</span>  •
+
+<span class="trigger" dir="rtl" onclick="getResult('zanb')">zanabazar square</span>
 </p>
-
+-->
 
 
 
@@ -572,15 +1165,28 @@ function setFontFeatures ( features ) {
 <summary dir="rtl" style="list-style: none"><span style="color:white;background-color:#60ADFB; padding:.2em .4em; border-radius:5px; cursor:pointer; ">Notes</span></summary>
 
 <h2>General usage</h2>
+
 <p>A downwards pointing arrow next to a Mac or Windows icon indicates that the font needs to be downloaded by the user before it is available. (If you are choosing fonts for use in a CSS font-family property, you should be cautious about adding these fonts, since the reader may not have downloaded them.)</p>
-<p>The default text used is  article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="https://unicode.org/udhr/translations.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and otherwise I resorted to other texts.</p>
+
+<p>If you want to show fonts from only one source (ie. Mac, Win, Noto, or SIL), click on the relevant icon before a font name. All fonts can be restored by clicking on the button, top right.</p>
+
+<p>The default text used is  article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="https://unicode.org/udhr/translations.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and otherwise I resorted to other texts. All samples for a given script use the same text, to aid comparison, even if the font is more appropriate for a particular language. See <a href="../samples/index.html">the samples page</a> for a list of texts.</p>
+
 <p>In some cases, a square box with a cross in it is displayed (this only occurs in the text view if you have the Adobe NotDef font installed). This indicates that the font doesn't cover all the glyphs needed to represent the sample text. Most often this applies to punctuation or other common characters. In Latin text, in particular, it indicates which fonts support extended characters and which don't. In normal use in a Web browser, glyphs for such characters will be backfilled by using a glyph from some other font.</p>
-<p>All images are set to 28px in size. </p>
+
+<p>The size of text and images is set to 45px by default, but this can be altered using the control in the right column. The process of capturing Mac-based images results in a slightly heavier rendering than normal.</p>
+
+
+
 
 <h2>Font groupings</h2>
-<p>Fonts are <em>roughly</em> grouped with other similar fonts, in way that seems useful, but may not be scientific.</p>
-<p><em>By default</em>, fonts fall into one of the following two categories: 'modulated', indicates that strokes have varying widths  (and usually have tapered or pointed ends), whereas 'monoline' fonts have strokes that are generally the same width (and stroke ends are usually squared off). In some cases, the choice between these two categories is difficult to make. Also, some of the larger fonts (esp. Arial Unicode MS) may render some scripts with modulated glyphs and others with monoline, all within the same font. Use this tagging as a rough guide only.</p>
-<p>A number of other groupings are used, and fonts to which they apply appear in those groups, regardless of modulated/monoline characteristics. </p>
+
+<p>Fonts are grouped with other similar fonts, in way that seems useful, but may not be scientific.</p>
+
+<p><em>By default</em>, fonts fall into one of the following two categories: 'modulated', indicates that strokes have varying widths  (and usually have tapered or pointed ends), whereas 'monoline' fonts have strokes that are generally the same width (and stroke ends are usually squared off). This usually corresponds to the serif and sans-serif distinction in fonts. In some cases, the choice between these two categories is difficult to make. Note that some of the larger fonts (esp. Arial Unicode MS) render some scripts with modulated glyphs and others with monoline, all within the same font.</p>
+
+<p>A number of other groupings are used, and fonts to which they apply appear in those groups, regardless of modulated/monoline characteristics. Some of these groupings will form an initial proposal for generic fallback categories in CSS.</p>
+
 <p>Here is the current list of groups:</p>
 <ul>
 <li><b class="styleName">Modulated</b> (listed as 'Song' for Chinese (sometimes called 'Ming'), and 'Mincho' for Japanese)</li>
@@ -593,9 +1199,14 @@ function setFontFeatures ( features ) {
 <li><b class="styleName">Ruqa</b> (Arabic)</li>
 <li><b class="styleName">Kano</b> (Arabic)</li>
 <li><b class="styleName">Kufi</b> (Arabic)</li>
+<li><b class="styleName">Diwani</b> (Arabic)</li>
 <li><b class="styleName">Nastaliq</b> (Arabic)</li>
+<li><b class="styleName">Syriac Estrangela</b> (Syriac)</li>
+<li><b class="styleName">Syriac Eastern</b> (Syriac)</li>
+<li><b class="styleName">Syriac Western</b> (Syriac)</li>
 <li><b class="styleName">Slanted</b></li>
 <li><b class="styleName">Mool</b> (Khmer)</li>
+<li><b class="styleName">Unjoined</b></li>
 <li><b class="styleName">Heavy</b> (fonts that have substantial weight in regular versions)</li>
 <li><b class="styleName">Monospaced</b> (or fixed width)</li>
 <li><b class="styleName">Other</b> (mostly includes approximations to handwriting, but may also contain other unusual styles).</li>
@@ -617,7 +1228,7 @@ function setFontFeatures ( features ) {
 <p>You can specify what you want to see in the URL. The parameters are:</p>
 <ol>
 <li><code>script</code>: (required) This is a script code, or a script code plus language/region code that is used in the database. For example, <a href="index?script=arab">script=arab</a>, or <a href="index?script=arab-afr">script=arab-afr</a>.</li>
-<li><code>style</code>: (optional) A writing style. This should be one of the font grouping names listed above. For example, <a href="index?script=arab&style=nastaliq">script=arab&amp;style=nastaliq</a>, or <a href="index?script=thai&style=loopless">script=thai&amp;style=loopless</a>, or <a href="index?script=hans&style=kai">script=hans&amp;style=kai</a>.</li>
+<!--li><code>style</code>: (optional) A writing style. This should be one of the font grouping names listed above. For example, <a href="index?script=arab&style=nastaliq">script=arab&amp;style=nastaliq</a>, or <a href="index?script=thai&style=loopless">script=thai&amp;style=loopless</a>, or <a href="index?script=hans&style=kai">script=hans&amp;style=kai</a>.</li-->
 <li><code>text</code>: (optional) If you use this, the standard phrase will be replaced by the text you supply, and the results will be shown as text, rather than images (so you'll need to have the font on your system to see the result). For example, <a href="index?script=grek&text=άνθρωποι">script=grek&amp;text=άνθρωποι</a>.</li>
 </ol>
 </details>
@@ -631,37 +1242,48 @@ function setFontFeatures ( features ) {
 
 
 <script>
+// set the settings UI to match the localStorage data
+if (settings.mac === false) document.getElementById('showMac').checked = false
+if (settings.win === false) document.getElementById('showWin').checked = false
+if (settings.noto === false) document.getElementById('showNoto').checked = false
+if (settings.sil === false) document.getElementById('showSIL').checked = false
+
+if (settings.img === false) document.getElementById('showGraphics').checked = false
+else document.getElementById('showGraphics').checked = true
+if (settings.text === false) document.getElementById('showFonts').checked = false
+else document.getElementById('showFonts').checked = true
+
+changeFontSize(settings.fontsize)
+//document.getElementById('fontSizeSlider').value = settings.fontsize
+document.getElementById('fontSizeSlider').value = settings.fontsize
+changeFontSize(settings.fontsize)
+
+
+//if (settings.text === false) document.getElementById('showFonts').checked = false
+//else document.getElementById('showFonts').checked = true
+
+
+
+
 // check for parameters and take appropriate action
-var scriptParameter, textParameter
-var styleParameter = ''
+var scriptParameter = ''
+var extParameter
 parameters = location.search.split('&');
 parameters[0] = parameters[0].substring(1);
 for (var p=0;p<parameters.length;p++) {  
 	pairs = parameters[p].split('=');
 	if (pairs[0] == 'script') { if (pairs[1]) { scriptParameter = pairs[1] } }
 	if (pairs[0] === 'text') { if (pairs[1]) { textParameter = pairs[1] } }
-	if (pairs[0] === 'style') { if (pairs[1]) { styleParameter = pairs[1] } }
-	if (styleParameter === 'monoline' || styleParameter === 'mono') styleParameter = 'sans'
-	if (styleParameter === 'modulated' || styleParameter === 'mod') styleParameter = 'serif'
 	}
-if (scriptParameter && textParameter) {
-	document.getElementById('showGraphics').checked = false
-	document.getElementById('wrapLines').checked = true
-	document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'
-	document.getElementById('showFonts').checked = true
-	document.getElementById('inputText').value = decodeURI(textParameter)
-	getResult(scriptParameter,scriptParameter, decodeURI(textParameter), styleParameter)
-	window.location = '#result'
-	}
-else if (scriptParameter !== '') {
-	document.getElementById('showGraphics').checked = true
+
+if (scriptParameter !== '') {
 	document.getElementById('wrapLines').checked = false
 	document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'
-	document.getElementById('showFonts').checked = false
 	document.getElementById('inputText').value = ''
-	getResult(scriptParameter,scriptParameter, '', styleParameter)
+	getResult(scriptParameter)
 	window.location = '#result'
 	}
+
 </script>
 </body>
 </html>
