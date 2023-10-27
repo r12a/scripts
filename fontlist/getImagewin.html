@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>getImage</title>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+	
+
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/fontdb/db.js"></script>
+</head>
+
+<body>
+<!--header>
+    <div id="header-boilerplate"></div>
+	<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/images/world.gif','docs');</script>
+</header-->
+
+<h1>getImage</h1>
+
+<p>Produces images for fontlist.</p>
+
+<script>
+function showFont () {
+	var fontname = document.getElementById('in').value
+	var thetext = document.getElementById('text').value
+	
+	document.getElementById('font').textContent = thetext
+	document.getElementById('fontLarge').textContent = thetext
+	document.getElementById('font').style.fontFamily = '"'+fontname.trim()+'", "adobe notdef"'
+	document.getElementById('fontLarge').style.fontFamily = '"'+fontname.trim()+'", "adobe notdef"'
+	
+	document.getElementById('filename').textContent = fontname.toLowerCase().replace(/ /g,'')
+	}
+</script>
+
+<p>Font name: <input type="text" id="in" onchange="showFont()"> &nbsp; Direction: <select id="dir" onChange="document.getElementById('fontLarge').dir=this.value;"><option value="ltr">LTR</option><option value="rtl">RTL</option></select></p>
+<p>Text: <input type="text" id="text" onchange="showFont()"></p>
+<p><button onClick="showFont()">GO</button></p>
+
+<p>Filename: <span id="filename"></span></p>
+
+<p dir="auto" id="font" style="text-align: start; font-size: 28px; width:676px; height:50px; vertical-align: middle; overflow: hidden; color:black; line-height: 50px; white-space: nowrap;"></p>
+
+<p dir="ltr" id="fontLarge" style="text-align: start; font-size: 48px; vertical-align: middle; overflow: hidden; color:black; white-space: nowrap; margin-inline:2rem; padding-inline:2rem; line-height: 4;">يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.</p>
+
+
+
+</body>
+</html>
