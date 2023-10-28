@@ -27,7 +27,7 @@ body { font-size: 15.5px; }
 
 .trigger { color: teal; cursor: pointer; }
 .sample { 
-    font-size: 60px;
+    font-size: 45px;
     white-space: nowrap;
     color: black;
     overflow: hidden;
@@ -89,7 +89,7 @@ details h2 { margin-block-start: 2em; }
 
 
 
-<style id="fontSizeStyling">.text { font-size: 60px; }</style> <!-- this sets the default, but is changed by scripting -->
+<style id="fontSizeStyling">.text { font-size: 45px; }</style> <!-- this sets the default, but is changed by scripting -->
 <style id="fontWhiteSpace">.text { white-space: nowrap; }</style> <!-- this sets the default, but is changed by scripting -->
 
 <script src="../../shared/code/boilerplate.js"></script>
@@ -109,7 +109,7 @@ else {
     settings.img = true
     settings.text = true
     settings.altext = ''
-    settings.fontsize = '60'
+    settings.fontsize = '45'
     settings.wrap = true
     settings.language = ''
     settings.fontfeature = ''
@@ -140,7 +140,7 @@ currentTag = ''
 currentTitle = ''
 currentSample = ''
 currentStyle = ''
-rtlScripts = new Set(['adlm', 'arab', 'armi', 'avst', 'chrs', 'cprt', 'elym', 'hatr', 'khar', 'lydi', 'rohg', 'hebr', 'mand', 'nkoo', 'mani', 'mend', 'nbat', 'hung', 'narb', 'orkh', 'ougr', 'phli', 'palm', 'prti', 'phlp', 'phnx', 'samr', 'sarb', 'sogd', 'syrc', 'thaa', 'yezi'])
+rtlScripts = new Set(['adlm', 'arab', 'armi', 'avst', 'chrs', 'cprt', 'elym', 'hatr', 'khar', 'lydi', 'rohg', 'hebr', 'mand', 'nkoo', 'mani', 'mend', 'merc', 'nbat', 'hung', 'narb', 'orkh', 'ougr', 'phli', 'palm', 'prti', 'phlp', 'phnx', 'samr', 'sarb', 'sogd', 'syrc', 'thaa', 'yezi'])
 
 
 
@@ -359,6 +359,7 @@ var scriptData = {
 'medf': { title: 'Medefaidrin', sample: 'dmf' },
 'mend': { title: 'Mende Kikakui', sample: 'men' },
 'mtei': { title: 'Meetei Mayek', sample: 'mni' },
+'merc': { title: 'Meroitic', sample: 'xmr' },
 'plrd': { title: 'Miao', sample: 'hmd-plrd' },
 'modi': { title: 'Modi', sample: 'sa-modi' },
 'mong': { title: 'Mongolian', sample: 'khk' },
@@ -386,7 +387,7 @@ var scriptData = {
 'ougr': { title: 'Old Uighur', sample: 'oui' },
 
 'hmng': { title: 'Pahawh Hmong', sample: 'hmn-hmng' },
-'phli': { title: 'Inscriptional Pahlavi', sample: 'pal' },
+'perm': { title: 'Old Permic', sample: 'kv' },
 'phlp': { title: 'Psalter Pahlavi', sample: 'pal-phlp' },
 'palm': { title: 'Palmyrene', sample: 'arc-palm' },
 'prti': { title: 'Inscriptional Parthian', sample: 'xpr' },
@@ -416,17 +417,20 @@ var scriptData = {
 'tavt': { title: 'Tai Viet', sample: 'blt' },
 'takr': { title: 'Takri', sample: 'sa-takr' },
 'taml': { title: 'Tamil', sample: 'ta' },
+'tang': { title: 'Tangut', sample: 'txg' },
 'telu': { title: 'Telugu', sample: 'te' },
 'thaa': { title: 'Thaana', sample: 'dv' },
 'thai': { title: 'Thai', sample: 'th' },
 'tibt': { title: 'Tibetan', sample: 'bo' },
 'tfng': { title: 'Tifinagh', sample: 'zgh' },
 'tirh': { title: 'Tirhuta', sample: 'sa-tirh' },
+'tnsa': { title: 'Tangsa', sample: 'nst' },
 'toto': { title: 'Toto', sample: 'txo' },
 
 'ugar': { title: 'Ugaritic', sample: 'uga' },
 
 'vaii': { title: 'Vai', sample: 'vai' },
+'vith': { title: 'Vithkuqi', sample: 'sq-vith' },
 
 'wcho': { title: 'Wancho', sample: 'sa-wcho' },
 'wara': { title: 'Warang Citi', sample: 'hoc' },
@@ -519,7 +523,7 @@ function setFontFeatures ( features ) {
 
 
 <div style="font-size: 90%;">
-<div style="font-weight: bold;">Change font display size:<br><input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:50%;"> <span id="sizeIndicator" style="font-size:80%;">60px</span></div>
+<div style="font-weight: bold;">Change font display size:<br><input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="45" oninput="changeFontSize(this.value)" style="width:50%;"> <span id="sizeIndicator" style="font-size:80%;">45px</span></div>
 
 <div style="font-weight: bold;"><label><input id="showGraphics" type="checkbox" checked onChange="if (! this.checked) settings.img = false; else settings.img = true; localStorage.fontListerSettings = JSON.stringify(settings); refresh()"> Show font samples as images</label></div>
 
@@ -554,13 +558,14 @@ function setFontFeatures ( features ) {
 
 
 
-<p id="status">U<!-- #BeginDate format:Sw1 -->27 October, 2023<!-- #EndDate --> --> -->
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->28 October, 2023<!-- #EndDate -->
 <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
   
 
-<p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows 10 and Mac OS X operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and Mac fonts have to be downloaded by the user before they can be applied to text. Install <a href="https://github.com/adobe-fonts/adobe-notdef">Adobe NotDef</a> font for best results.</p>
+<p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows 11 and macOS Ventura operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and macOS fonts have to be downloaded by the user before they can be applied to text. Install <a href="https://github.com/adobe-fonts/adobe-notdef">Adobe NotDef</a> font for best results.</p>
 
 
 
@@ -730,6 +735,8 @@ function setFontFeatures ( features ) {
 
 <a class="trigger" href="index.html?script=mtei">meetei mayek</a> •
 
+<a class="trigger" href="index.html?script=merc">meroitic</a> •
+
 <a class="trigger" href="index.html?script=plrd">miao</a> • 
 
 <a class="trigger" href="index.html?script=modi">modi</a> • 
@@ -763,6 +770,8 @@ function setFontFeatures ( features ) {
 <a class="trigger" href="index.html?script=ital">old italic</a> • 
 
 <a class="trigger" href="index.html?script=narb">old north arabian</a> • 
+
+<a class="trigger" href="index.html?script=perm">old permic</a> •
 
 <a class="trigger" href="index.html?script=xpeo">old persian</a> • 
 
@@ -834,6 +843,10 @@ function setFontFeatures ( features ) {
 
 <a class="trigger" href="index.html?script=taml">tamil</a> • 
 
+<a class="trigger" href="index.html?script=tnsa">tangsa</a> • 
+
+<a class="trigger" href="index.html?script=tang">tangut</a> • 
+
 <a class="trigger" href="index.html?script=telu">telugu</a> • 
 
 <a class="trigger" href="index.html?script=thaa">thaana</a> • 
@@ -851,6 +864,8 @@ function setFontFeatures ( features ) {
 <a class="trigger" href="index.html?script=ugar">ugaritic</a> •
 
 <a class="trigger" href="index.html?script=vaii">vai</a> • 
+
+<a class="trigger" href="index.html?script=vith">vithkuqi</a> • 
 
 <a class="trigger" href="index.html?script=wcho">wancho</a> • 
 
@@ -1179,6 +1194,16 @@ function setFontFeatures ( features ) {
 
 
 
+<h2>Particular points</h2>
+
+<p>On Windows, many of the scripts are represented using the Sans Serif Collection font name. This applies Noto font shapes, but they are often not as up to date as fonts downloaded from the Noto site.  For example, the Meroitic font on Windows doesn't include hieroglyphs.</p>
+
+<p>A number of fonts were added by the macOS Sonoma operating system but are not included here until that operating system becomes more widely deployed.</p>
+
+
+
+
+
 <h2>Font groupings</h2>
 
 <p>Fonts are grouped with other similar fonts, in way that seems useful, but may not be scientific.</p>
@@ -1222,7 +1247,14 @@ function setFontFeatures ( features ) {
 <p>Note that it is much easier to see which characters are and are not supported if you have installed the <a href="https://github.com/adobe-fonts/adobe-notdef">Adobe NotDef font</a>, since this will cause the missing characters to be rendered as square boxes.</p>
 
 <h2>Font sources</h2>
-<p>The Mac and Windows fonts used in the images are provided by the Operating System (although, as mentioned earlier, some fonts need to be downloaded using the OS font management tools). The SIL fonts are provided on <a href="https://software.sil.org/fonts/">their download page</a>. The Noto fonts used in images are typically taken from the <a href="https://github.com/googlefonts/noto-fonts/tree/master/phaseIII_only/hinted/ttf">Phase III list on GitHub</a>, although some may be older and sourced from <a href="https://www.google.com/get/noto/">the public site</a>.</p>
+<p>The Mac and Windows fonts used in the images are provided by the Operating System (although, as mentioned earlier, some fonts need to be downloaded using the OS font management tools). The following lists were used to identify available fonts:</p>
+<ul>
+<li><a href="https://support.apple.com/en-gb/HT213773">macOS Sonoma fonts</a></li>
+<li><a href="https://learn.microsoft.com/en-us/typography/fonts/windows_11_font_list">Windows 11 fonts</a></li>
+<li><a href="https://software.sil.org/fonts/">SIL fonts</a></li>
+<li><a href="https://notofonts.github.io/">Noto fonts</a></li>
+</ul>
+
 
 <h2>Customising via the URL</h2>
 <p>You can specify what you want to see in the URL. The parameters are:</p>
