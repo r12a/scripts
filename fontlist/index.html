@@ -167,10 +167,18 @@ function showOnly (type, script) {
 
 
 
-function addMyFont (fontName) {
+function addMyFontX (fontName) {
     var out = ''
     out += '<p class="fontItem"><b>My Font</b>  <span class="fontname">'+fontName+'<span style="color:#ccc; font-size:80%; margin: 0 1em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = \'none\'">X</span></span></p>'
     out += '<div class="sample text" dir="auto" style="font-family:\''+fontName+'\', \'Adobe NotDef\';" lang="">'+window.currentSample+'</div>'
+    document.getElementById('myfontDisplay').innerHTML = out
+    }
+
+
+function addMyFont (fontName) {
+    var out = ''
+    out += `<p class="fontItem"><b>My Font</b>  <span class="fontname">${ fontName }<span style="color:#ccc; font-size:80%; margin: 0 1em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = 'none'">X</span></span></p>`
+    out += `<div class="sample text" dir="auto" style="font-family:'${ fontName }', 'Adobe NotDef';" lang="">${ phraseDB[window.currentSample].text }</div>`
     document.getElementById('myfontDisplay').innerHTML = out
     }
 
