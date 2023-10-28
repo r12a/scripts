@@ -229,7 +229,7 @@ aside p {
 </style>
 <style id="fontFamilyStyling">.phrase {  }</style> <!-- this sets the default, but is changed by scripting -->
 <style id="fontSizeStyling">.phrase { font-size: 40px; }</style> <!-- this sets the default, but is changed by scripting -->
-<style id="fontWhiteSpace">.text { white-space: nowrap; }</style> <!-- this sets the default, but is changed by scripting -->
+<style id="fontWhiteSpace">.phrase { white-space: normal; }</style> <!-- this sets the default, but is changed by scripting -->
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/fontdb/db.js"></script>
@@ -329,7 +329,8 @@ function changeFontFamily ( newFont ) {
 
 <p>Change font display size:<br><input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="40" oninput="changeFontSize(this.value)" style="width:50%;"> <span id="sizeIndicator" style="font-size:80%; color: tan;">40px</span></p>
 
-<p>Lines: <label><input name="whitespaceSetting" type="radio" checked onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'"> no wrap</label> <label><input id="wrapLines" name="whitespaceSetting" type="radio"  onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'" style="margin-left: 2em;"> wrap</label></p>
+<p>Lines: <label><input id="wrapLines" name="whitespaceSetting" type="radio" checked onclick="document.getElementById('fontWhiteSpace').innerHTML = '.phrase { white-space: normal; }'"> wrap</label>
+<label><input name="whitespaceSetting" type="radio" onclick="document.getElementById('fontWhiteSpace').innerHTML = '.phrase { white-space: nowrap; }'" style="margin-left: 2em;"> no wrap</label></p>
 </aside>
 
 
@@ -345,8 +346,7 @@ function changeFontFamily ( newFont ) {
 
 
 
-<p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->28 October, 2023<!-- #EndDate -->
+<p id="status">Upd<!-- #BeginDate format:Sw1 -->28 October, 2023<!-- #EndDate -->te -->
   <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
@@ -1005,7 +1005,7 @@ if (scriptParameter && textParameter) {
 	window.location = '#result'
 	}
 else if (scriptParameter) {
-	document.getElementById('wrapLines').checked = false
+	document.getElementById('wrapLines').checked = true
 	document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: wrap; }'
 	document.getElementById('inputText').value = ''
 	getSection(scriptParameter)
