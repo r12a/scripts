@@ -31,7 +31,7 @@ autoExpandExamples.suz = `
 𑯒𑯈𑯒𑯃|eight|s§ə§s§i
 𑯔𑯖̃|nine|y§ã
 𑯊𑯈𑯅|ten|g§ə§u
-𑯆𑯑̃𑯃𑯌 𑯎𑯄𑯂𑯒𑯂|Sunuwar script|k§õ§i§t͡ʃ§ §b§r§e§s§e
+𑯆𑯑𑯃̃𑯌 𑯎𑯄𑯂𑯒𑯂|Sunuwar script|k§o§ī§t͡ʃ§ §b§r§e§s§e
 
 𑯔𑯖̍𑯁|rice mill|j§a§t
 𑯒𑯂́𑯌𑯖|carding machine|s§e§t͡ʃ§aː
@@ -103,7 +103,8 @@ autoExpandExamples.suz = `
 𑯍𑯂𑯁𑯖|address|neta
 𑯁𑯖𑯓𑯅|son|tawu
 𑯁𑯖𑯇𑯃|daughter|tami
-
+𑯆𑯑𑯃̐𑯌|Sunuwar|k§oī§‹t͡ʃ
+𑯆𑯑𑯃̃𑯌|Sunuwar|k§oī§‹t͡ʃ
 
 
 
