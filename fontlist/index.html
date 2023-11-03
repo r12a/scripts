@@ -228,12 +228,12 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
                 var writingStyle = ''
                 if (fontDB[r].style === 'serif') writingStyle = 'modulated'
                 else if (fontDB[r].style === 'sans') writingStyle = 'monoline'
-                else if (fontDB[r].style === 'syrc') writingStyle = 'Estrangelo Syriac'
-                else if (fontDB[r].style === 'syre') writingStyle = 'Eastern Syriac'
-                else if (fontDB[r].style === 'syrj') writingStyle = 'Western Syriac'
+                else if (fontDB[r].style === 'syrc') writingStyle = 'syriac estrangela'
+                else if (fontDB[r].style === 'syre') writingStyle = 'syriac eastern'
+                else if (fontDB[r].style === 'syrj') writingStyle = 'syriac western'
                 else writingStyle = fontDB[r].style
             
-				out += `<div id="${ writingStyle }" class="writingStyle"><a href="#${ writingStyle }">${ writingStyle }</a></div> `
+				out += `<div id="${ writingStyle.replace(/ /g,'-') }" class="writingStyle"><a href="#${ writingStyle.replace(/ /g,'-') }">${ writingStyle }</a></div> `
 				lastStyle = fontDB[r].style
 				}
 			out += '<p class="fontItem">'
@@ -462,7 +462,7 @@ var scriptData = {
 
 
 
-function getResult (tag) {
+function getResult (tag, hash) {
 	if (tag == '') return
     
     var language = document.getElementById('language').value
@@ -476,7 +476,8 @@ function getResult (tag) {
     document.getElementById('result').innerHTML = getSection(currentTag, currentTitle, currentSample, '', language, features)
 
 	currentStyle = ''
-    document.getElementById("result").scrollIntoView({behavior: 'smooth'})
+    if (tag === null || hash === '') hash = 'result'
+    document.getElementById(hash).scrollIntoView({behavior: 'smooth'})
 	}
 
 
@@ -759,7 +760,7 @@ function setFontFeatures ( features ) {
 
 <a class="trigger" href="index.html?script=mroo">mro</a> • 
 
-<span class="trigger" dir="ltr" onclick="getResult('mult')">multani</span> •
+<a class="trigger" href="index.html?script=mult">multani</a> • 
 
 <a class="trigger" href="index.html?script=mymr">myanmar</a> • 
 
@@ -1323,13 +1324,14 @@ for (var p=0;p<parameters.length;p++) {
 	if (pairs[0] == 'script') { if (pairs[1]) { scriptParameter = pairs[1] } }
 	if (pairs[0] === 'text') { if (pairs[1]) { textParameter = pairs[1] } }
 	}
+var hash = location.hash
 
 if (scriptParameter !== '') {
 	document.getElementById('wrapLines').checked = false
 	document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'
 	document.getElementById('inputText').value = ''
-	getResult(scriptParameter)
-	window.location = '#result'
+	getResult(scriptParameter, hash.substring(1))
+	//window.location = '#result'
 	}
 
 </script>
