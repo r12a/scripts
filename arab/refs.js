@@ -18,13 +18,6 @@ reflist = {
 "lang": new Set(['ur']),
 },
 
-"amp": {
-"authors": "Muzaffar Aazim, Kamal Mansour, and Roozbeh Pournader",
-"title":"Proposal to add two Kashmiri characters and one annotation to the Arabic block",
-"url":"https://www.unicode.org/L2/L2009/09176-kashmiri.pdf",
-"lang": new Set(['ks']),
-},
-
 "dbs": {
 "authors": "Dmitry Bondarev",
 "title":"Standardisation Tendencies in Kanuri and Hausa Ajami Writings",
@@ -106,6 +99,15 @@ reflist = {
 "url":"http://www.unicode.org/L2/L2002/02163-n2413-4-urdu.pdf",
 "lang": new Set(['ur']),
 "reviewed":true
+},
+
+"jh": {
+"authors": "Jawaharlal Handoo",
+"title":"Kashmiri Phonetic Reader",
+"publisher":"Central Institute of Indian Languages",
+"pages":"72-109",
+"lang": new Set(['ks']),
+"reviewed":false
 },
 
 "rmcs": {
@@ -272,6 +274,13 @@ reflist = {
 "reviewed":true
 },
 
+
+"amp": {
+"authors": "Muzaffar Aazim, Kamal Mansour, and Roozbeh Pournader",
+"title":"Proposal to add two Kashmiri characters and one annotation to the Arabic block",
+"url":"https://www.unicode.org/L2/L2009/09176-kashmiri.pdf",
+"lang": new Set(['ks']),
+},
 
 "uwa": {
 "authors": " Universität Wien, adap. from Neil Skinner",
