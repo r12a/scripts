@@ -18,6 +18,13 @@ reflist = {
 "lang": new Set(['ur']),
 },
 
+"amp": {
+"authors": "Muzaffar Aazim, Kamal Mansour, and Roozbeh Pournader",
+"title":"Proposal to add two Kashmiri characters and one annotation to the Arabic block",
+"url":"https://www.unicode.org/L2/L2009/09176-kashmiri.pdf",
+"lang": new Set(['ks']),
+},
+
 "dbs": {
 "authors": "Dmitry Bondarev",
 "title":"Standardisation Tendencies in Kanuri and Hausa Ajami Writings",
@@ -265,16 +272,6 @@ reflist = {
 "reviewed":true
 },
 
-"u14": {
-"authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 14.0",
-"sub":"Chapter 9.2: Middle East-I, Arabic",
-"pages":"373-398",
-"isbn":"978-1-936213-29-0",
-"url":"https://www.unicode.org/versions/Unicode14.0.0/ch09.pdf",
-"lang": new Set(['ar','fa','ha','ks','ur']),
-"reviewed":true
-},
 
 "uwa": {
 "authors": " Universität Wien, adap. from Neil Skinner",
@@ -282,6 +279,13 @@ reflist = {
 "url":"https://www.univie.ac.at/Hausa/Ajami/Ajami_Hausa.html",
 "lang": new Set(['ha']),
 "reviewed":true
+},
+
+"mg": {
+"authors": "Manish Goregaokar (मनीष गोरेगांवकर)",
+"title":"Annotations for Kashmiri Yeh",
+"url":"https://www.unicode.org/L2/L2023/23241-annot-kashmiri-yeh.pdf",
+"lang": new Set(['ks']),
 },
 
 "gop": {
