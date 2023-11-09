@@ -161,6 +161,7 @@ function initialise (base, ghDirectory, detailsfileList, version) {
 	autoExpandExamples = {}
     cl = ''
 
+	// create list of characters under "About this page"
     }
 
     // U, unicode db declared in u.js
@@ -863,6 +864,17 @@ if (node.innerHTML == '') {
     <p class="instructions"><span class="leadin">References &amp; further information.</span> References are indicated by superscript letters, optionally followed by page numbers. Wherever possible, those contain direct links to the source material. When there is also an arrow → it is worth following the link for  additional information. The references are listed at the bottom of the page, but the links should take you to the exact location of the source, wherever possible.</p>
 
     <p class="instructions"><span class="leadin">UniView.</span><a href="../../uniview/index.html">UniView</a>'s notes feature pulls in information about characters from this page.</p>
+
+
+
+    <details class="instructions"><summary onclick="chMarkup = document.querySelectorAll('.charimg')
+    chList = ''
+    for (i=0;i<chMarkup.length;i++) chList += chMarkup[i].textContent+' '
+    document.getElementById('charsListed').innerHTML = chList
+">Show all characters listed here</summary>
+    <p id="charsListed"></p>
+    </details>
+
 
     <details class="instructions"><summary>Make a list of characters with notes for a spreadsheet:</summary>
     <p>Add list of characters here: <input id="notesListIn" placeholder=">"> <button 
