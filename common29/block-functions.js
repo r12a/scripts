@@ -141,7 +141,8 @@ function buildPage () {
     initialise(`/scripts/${ window.blockDirectory }/block`, window.ghDirectory, window.detailsfileList, window.version)
     for (i=0;i<languageList.length;i++) autoTransliterate(window.languageList[i])
     makeFontChanger(window.languageList.join(','), window.scriptISO, window.webfonts, window.defaultSize)
-    //expandCharMarkup()
+    // expandCharMarkup()   this has to be called for each language, so that the right spreadsheet is available
+    document.querySelector("body").addEventListener('keydown', closeDialogEsc)
     }
 
 
@@ -176,6 +177,20 @@ function initialise (base, ghDirectory, detailsfileList, version) {
     // charDetails, obj, the detailed notes, created in xx-examples.js
     /* autoExpandExamples */
 
+
+
+
+
+
+
+function closeDialogEsc (e) {
+    // closes the dialog box and panel when escape is pressed
+    if (e.code === 'Escape') {
+        //document.getElementById('dialogBox').open = false
+        document.getElementById('panel').style.display = 'none'
+        ///document.getElementById('tocPanel').style.display = 'none'
+        }
+    }
 
 
 function addSearchEtc () {
