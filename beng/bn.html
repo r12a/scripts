@@ -62,7 +62,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->12 June, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 November, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -73,8 +73,13 @@
 <div id="intro">
 <p>This page brings together basic information about the Bengali script and its use for the Bangla language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Bengali using Unicode.</p>
 
+<details>
+<summary class="instructions">Referencing this document</summary>
+<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->10-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+</details>
+
 <p id="usage"></p>
-<script>addUsageAdvice('Bengali', 'Beng', 'beng')</script>
+<script>addPageIntro('Bengali', 'Bangla', 'Beng', 'beng')</script>
 </div>
 
 
@@ -277,11 +282,6 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="index_punctuation_ascii">
 <h4>ASCII</h4>
 <figure class="characterBox noindex indexline" data-cols="">!␣(␣)␣,␣.␣:␣;␣?</figure>
-</section>
-
-<section id="index_punctuation_possible">
-<h4>Possible</h4>
-<figure class="auxiliaryBox noindex indexline" data-cols="">৽␣ৼ␣ঀ␣…</figure>
 </section>
 </details>
 </section>
@@ -2054,25 +2054,38 @@ eg. <span class="eg" lang="bn">বাঃ</span>
 <h4>Special forms</h4>
 
 
-<p><span id="raconjuncts" class="leadin">Cluster-initial <span class="uname">RA</span></span> <span class="codepoint"><span lang="bn">&#x09B0;</span> <a href="/scripts/bengali/block#char09B0">[<span class="uname">U+09B0 BENGALI LETTER RA</span>]</a></span> at the start of a cluster is normally displayed as a mark above the following consonant(s), eg. <span class="trans">rt</span> in <span class="ex" lang="bn">গর্ত</span> <span class="trans">gɔrtô</span> <span class="meaning">hole</span>. Unlike Devanagari, it doesn't appear to be displayed above the vowel sign of the orthographic syllable, eg.
-<span class="eg" lang="bn">কুর্তা</span>
-</p>
+<p><span id="raconjuncts" class="leadin">Cluster-initial <span class="uname">RA</span></span>
+<span class="hx">09B0</span> at the start of a cluster is normally displayed as a mark above the following consonant(s). Unlike Devanagari, it is typically displayed above consonant glyph, rather than above the vowel sign of the orthographic syllable.</p>
+<p><span class="eg" lang="bn">গর্ত</span></p>
+<p><span class="eg" lang="bn">কুর্তা</span></p>
 
-<p>Like other consonant clusters, the sound may also be written without a conjunct at all, eg.
-<span class="eg" lang="bn">কারসাজি</span>
+
+<p>Like other consonant clusters, the sound may also be written without a conjunct at all.</p>
+<p><span class="eg" lang="bn">কারসাজি</span></p>
 
 <p>In some cases, it may be preferred to render a <span class="uname">RA</span> +  <span class="uname">YA</span> cluster using the <span class="name">y̌ɔ-phɔla</span> form for the latter. In this case the <span class="uname">RA</span> retains its full shape. Add a ZWJ character before the <span class="name">hasant</span>, in order to apply the special shaping rules.</p>
 
+<p>In some cases, a full-sized <span class="uname">RA</span> should be followed by the <span class="name">y̌ɔ-phɔla</span> form for <span class="uname">YA</span>. To apply these special shaping rules, add <span class="hx img">200D</span> character before the <span class="name">hasant</span> (see <a class="figref">fig_ra_zwj_ya</a>).</p>
+
 
 <figure id="fig_ra_zwj_ya" class="sideCaption">
+<div>
+<p><span class="codepoint" translate="no"><bdi lang="bn" style="font-size: 3rem;">&#x09B0;&#x09CD;&#x09AF;</bdi> [<a href="/scripts/bengali/block#char09B0"><span class="uname">U+09B0  RA</span></a> + <a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD  VIRAMA​</span></a> + <a href="/scripts/bengali/block#char09AF"><span class="uname">U+09AF  YA</span></a>]</span></p>
+<p>&nbsp;</p>
+<p><span class="codepoint" translate="no"><bdi lang="bn" style="font-size: 3rem;">&#x09B0;&#x200D;&#x09CD;&#x09AF;</bdi> [<a href="/scripts/bengali/block#char09B0"><span class="uname">U+09B0  RA</span></a> + <a href="/scripts/bengali/block#char200D"><span class="uname">U+200D ZWJ</span></a> + <a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD  VIRAMA​</span></a> + <a href="/scripts/bengali/block#char09AF"><span class="uname">U+09AF  YA</span></a>]</span></p>
+</div>
+<figcaption>Two differently rendered forms of the <span class="transc">rya</span> consonant cluster.</figcaption>
+</figure>
+
+
+<!--figure id="fig_ra_zwj_ya" class="sideCaption">
 <div>
 <p><span class="codepoint" translate="no"><bdi lang="bn" style="font-size: 3rem;">&#x09B0;&#x09CD;&#x09AF;</bdi> [<a href="/scripts/bengali/block#char09B0"><span class="uname">U+09B0 BENGALI LETTER RA</span></a> + <a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD BENGALI SIGN VIRAMA​</span></a> + <a href="/scripts/bengali/block#char09AF"><span class="uname">U+09AF BENGALI LETTER YA</span></a>]</span></p>
 <p>&nbsp;</p>
 <p><span class="codepoint" translate="no"><bdi lang="bn" style="font-size: 3rem;">&#x09B0;&#x200D;&#x09CD;&#x09AF;</bdi> [<a href="/scripts/bengali/block#char09B0"><span class="uname">U+09B0 BENGALI LETTER RA</span></a> + <a href="/scripts/bengali/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> + <a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD BENGALI SIGN VIRAMA​</span></a> + <a href="/scripts/bengali/block#char09AF"><span class="uname">U+09AF BENGALI LETTER YA</span></a>]</span></p>
 </div>
 <figcaption>Two differently rendered forms of the <span class="transc">rya</span> consonant cluster.</figcaption>
-</figure>
-</p>
+</figure-->
 
 
 
@@ -2133,8 +2146,8 @@ although these may also be spelled with conjuncts, eg.
 
 <section id="formatting">
 <h4>Formatting characters</h4>
-<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200C;</span><img src="../../c/General_Punctuation/200C.png" alt="ZWNJ" style="vertical-align:middle"> [<a href="/scripts/bengali/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> (<span class="uname">ZWNJ</span>) can be used to force the production of a visible virama, rather than a half-form (see <a class="secref">visiblevirama</a>). It can also be used to prevent the formation of vowel ligatures (see <a class="secref">vowelligatures</a>).</p>
-<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200D;</span><img src="../../c/General_Punctuation/200D.png" alt="ZWJ" style="vertical-align:middle"> [<a href="/scripts/bengali/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>  (<span class="uname">ZWJ</span>) is used to produce special joining forms for <span class="uname">RA + YA</span> (see <a class="secref">consonant_syllable</a>).</p>
+<p><span class="hx img">200C</span> (<span class="uname">ZWNJ</span>) can be used to force the production of a visible virama, rather than a half-form (see <a class="secref">visiblevirama</a>). It can also be used to prevent the formation of vowel ligatures (see <a class="secref">vowelligatures</a>).</p>
+<p><span class="hx img">200D</span>  (<span class="uname">ZWJ</span>) is used to produce special joining forms for <span class="uname">RA + YA</span> (see <a class="secref">special_forms</a>).</p>
 </section>
 </section>
 
