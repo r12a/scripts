@@ -16,10 +16,42 @@
 var charDetails = {
 
 
+'\u{061C}': `
+<p class="insertTranscription">&#x061C;</p>
+<p>Used to produce correct sequencing of numeric data in Arabic, Syriac, and Thaana. See the <a href="../arab/block.html#char061C">Arabic character notes</a> for details.</p>
+`,
+
+
 '\u{0621}': `
 <p class="insertTranscription">&#x0621;</p>
 <p><span class="ipa h">ʔ</span> Consonant. Used for Arabic loan words or Qur'anic names only.</p>
 <p><span class="eg" lang="ff">ءَادَمُ</span></p>
+`,
+
+
+
+
+
+'\u{0623}': `
+<p class="insertTranscription">&#x0623;</p>
+<p>Occasionally, loan words or names from the Qur'an will use <span class="hx">0627</span>, <span class="hx">0623</span>, or <span class="hx">0625</span> as a standalone vowel carrier, rather than <span class="hx">0639</span> () the normal vowel carrier for standalone vowels).  The former are conventional ways of writing the standalone vowels in Arabic. <span class="hx">0621</span> may also be used.</p>
+
+<p><span class="eg" lang="ff" dir="rtl">إِبْرَاهِيمَ</span></p>
+<p><span class="eg" lang="ff" dir="rtl">الْمَسِيحُ</span></p>
+<p><span class="eg" lang="ff" dir="rtl">ءَادَمُ</span></p>
+`,
+
+
+
+
+
+'\u{0625}': `
+<p class="insertTranscription">&#x0625;</p>
+<p>Occasionally, loan words or names from the Qur'an will use <span class="hx">0627</span>, <span class="hx">0623</span>, or <span class="hx">0625</span> as a standalone vowel carrier, rather than <span class="hx">0639</span> () the normal vowel carrier for standalone vowels).  The former are conventional ways of writing the standalone vowels in Arabic. <span class="hx">0621</span> may also be used.</p>
+
+<p><span class="eg" lang="ff" dir="rtl">إِبْرَاهِيمَ</span></p>
+<p><span class="eg" lang="ff" dir="rtl">الْمَسِيحُ</span></p>
+<p><span class="eg" lang="ff" dir="rtl">ءَادَمُ</span></p>
 `,
 
 
@@ -479,6 +511,24 @@ var charDetails = {
 
 
 
+'\u{0654}': `
+<p class="insertTranscription">&#x0654;</p>
+<p>The diacritics <span class="hx">0654</span> and <span class="hx">0655</span> are only used where <span class="ch">إ</span> and <span class="ch">أ</span> are decomposed. Since the latter characters are themselves only used for a few borrowed names or words, these diacritics are very rare.</p>
+`,
+
+
+
+
+
+'\u{0655}': `
+<p class="insertTranscription">&#x0655;</p>
+<p>The diacritics <span class="hx">0654</span> and <span class="hx">0655</span> are only used where <span class="ch">إ</span> and <span class="ch">أ</span> are decomposed. Since the latter characters are themselves only used for a few borrowed names or words, these diacritics are very rare.</p>
+`,
+
+
+
+
+
 '\u{065B}': `
 <p class="insertTranscription">&#x065B;</p>
 <p><span class="ipa h">o</span> Vowel.</p>
@@ -926,6 +976,101 @@ var charDetails = {
 
 
 
+
+
+
+
+
+
+
+
+
+// FORMATTING CHARACTERS
+// zwsp
+'\u{200B}': `
+<p>An invisible character, used to signal line-break and word-break opportunities. It was originally provided for use with writing systems such as Thai, Myanmar, Khmer, Japanese, etc. that don't use spaces between words.</p>
+<p>Justification visibly adjusts the space between the characters on either side of the ZWSP as if the ZWSP wasn't there<sup><a href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout" target="_blank">§,827</a></sup>, eg. the two lines below show Thai text containing a ZWSP after the 4th base character.  The first is rendered as per normal, the second is as it would appear with justification or letter-spacing. Note how the second line has no extra spacing where the ZWSP occurs.
+<span class="charExample" translate="no"><span lang="th">อักษร​ไทย</span></span> 
+<span class="charExample" translate="no"><span lang="th">อั ก ษ ร ไ ท ย</span></span>
+</p>
+`,
+
+ // zwnj
+'\u{200C}': `
+<p>Prevents two adjacent letters forming a cursive connection with each other when rendered. Useful for illustrations that describe how the script works, eg.
+<span class="charExample" translate="no"><span class="ex" lang="fuf">𞤨𞤼𞤷</span>   ←   <span class="ex" lang="fuf">𞤨‌𞤼‌𞤷</span></span>
+</p>
+<p><a href="/scripts/punctuation/block#char200C" target="_blank">More details</a>.</p>
+`,
+
+ // zwj
+'\u{200D}': `
+<p>Permits a letter to form a cursive connection without a visible neighbour.  Useful for illustrations that describe how the script works, eg.
+<span class="charExample" translate="no"><span class="ex" lang="fuf">𞤨 𞤼 𞤷</span>   ←   <span class="ex" lang="fuf">𞤨‍  ‍𞤼‍  ‍𞤷</span></span>
+</p>
+<p><a href="/scripts/punctuation/block#char200D" target="_blank">More details</a>.</p>
+`,
+
+// LRM
+'\u{200E}': `
+<p>An invisible character with strong LTR directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
+<p>Generally referred to as LRM.</p>
+`,
+
+// RLM
+'\u{200F}': `
+<p>An invisible character with strong RTL directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
+<p>Generally referred to as RLM.</p>
+`,
+
+// LRE
+'\u{202A}': `
+<p>Sets the start point for a range of inline text when applying a base direction of left-to-right. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> <a href="#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a></span> (PDF).</p>
+<p><strong>You should use <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2066.png" alt="LRI" style="vertical-align:middle"> <a href="#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a></span> (LRI) rather than this character.</strong></p>
+`,
+
+// RLE
+'\u{202B}': `
+<p>Sets the start point for a range of inline text when applying a base direction of right-to-left. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> <a href="#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a></span> (PDF).</p>
+<p><strong>You should use <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2067.png" alt="LRI" style="vertical-align:middle"> <a href="#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a></span> (RLI) rather than this character.</strong></p>
+`,
+
+// PDF
+'\u{202C}': `
+<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202A.png" alt="LRE" style="vertical-align:middle"> <a href="#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a></span> (LRE) or <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202B.png" alt="RLE" style="vertical-align:middle"> <a href="#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a></span> (RLE).</p>
+<p><strong>You should use <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI) and its associated range starters rather than this character.</strong></p>
+`,
+
+
+
+// LRI
+'\u{2066}': `
+<p>Sets the start point for a range of inline text when applying a base direction of left-to-right, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI).</p>
+<p>This character should be used rather than <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202A.png" alt="LRE" style="vertical-align:middle"> <a href="#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a></span> (LRE).</p>
+`,
+
+// RLI
+'\u{2067}': `
+<p>Sets the start point for a range of inline text when applying a base direction of right-to-left, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI).</p>
+<p>This character should be used rather than <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202B.png" alt="RLE" style="vertical-align:middle"> <a href="#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a></span> (RLE).</p>
+`,
+
+// FSI
+'\u{2068}': `
+<p>Sets the start point for a range of inline text when applying a base direction, and isolates the text within that range from text outside it. The base direction set is determined by that of the first strong directional character in the range. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2069.png" alt="PDI" style="vertical-align:middle"> <a href="#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a></span> (PDI).</p>
+`,
+
+// PDI
+'\u{2069}': `
+<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2066.png" alt="LRI" style="vertical-align:middle"> <a href="#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a></span> (LRI), <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2067.png" alt="RLI" style="vertical-align:middle"> <a href="#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a></span> (RLI) or <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/2068.png" alt="FSI" style="vertical-align:middle"> <a href="#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a></span> (FSI).</p>
+<p>This character should be used rather than <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">⁦</span><img src="../../c/General_Punctuation/202C.png" alt="PDF" style="vertical-align:middle"> <a href="#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a></span> (PDF).</p>
+`,
+
+
+// CGJ
+'\u{034F}': `
+<p>Used in Arabic to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.</p>
+`,
 
 
 
