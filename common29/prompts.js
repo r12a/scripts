@@ -243,8 +243,162 @@ function makeIndexIntro (node) {
 
 
 
+function addPageIntro (script, orthogName, iso, picker, page) {
+	// Add a para to the intro & add accessibility controls
+    var draft = ''
+    var fonts = ''
+    
+    // capture any para relating to font availability
+    if (document.querySelector('#fontWarning')) fonts = `<p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">Fonts:</strong> ${ document.querySelector('#fontWarning').innerHTML }</p>`
+   
+    // Add a line to mention this is a draft if 'draft' appears in h1
+    if (document.querySelector('h1').textContent.includes('draft')) draft = `<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>`
 
 
+    var out = ''
+	
+    
+    if (script !== '') {
+        out += `
+        ${ draft }
+
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">Phonological transcriptions:</strong> These should be treated as a guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
+`
+
+if (window.location.href.includes('block')) out += `
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on <span class="ex" style="font-size:1em;">coloured examples</span> to reveal detailed compositional information. If your browser supports it, your cursor will change to look like <img src="../common29/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
+`
+
+else out += `
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: <strong>(a)</strong> <span class="ex" style="font-size:1em;">coloured characters</span> in examples and lists; <strong>(b)</strong> <span style="color:teal;">link text</span> on character names. If your browser supports it, your cursor will change to look like <img src="../common29/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
+`
+
+
+out += `
+
+        ${ fonts }
+
+
+        <div id="about">
+
+        <details class="supportdocs noprint">
+        <summary class="instructions">More about using this page</a></summary>
+`
+
+if (window.location.href.includes('block')) out += `
+        <p class="instructions"><span class="leadin">Fonts.</span> The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon to toggle the large characters between font glyphs and graphics.</p>
+
+        <p class="instructions"><span class="leadin">Navigation.</span> The <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon takes you to the top of the page.</p>
+`
+else out += `
+        <p class="instructions"><span class="leadin">Navigation.</span> The <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon opens the table of contents in a popup window. Dismiss it by clicking on the X alongside it, or by hitting the ESC key.</p>
+
+        <p class="instructions"><span class="leadin">Detailed character notes.</span> Clicking on coloured characters in lists or on character names opens panels that give detailed information about each character. This information is taken from the companion document, <a target="_blank" href="block.html">${ script } Character Notes</a>. (Those panels can be dismissed by pressing on the ESC key.)</p>
+`
+out += `
+        <p class="instructions"><span class="leadin">Transcriptions &amp; transliterations.</span> Phonological transcriptions are surrounded by <span style="white-space:nowrap;">⌈corner brackets⌋</span>, to indicate that they vary between narrow, [phonetic] and broad, /phonemic/ transcriptions.<br>
+        Latin <a href="../glossary/index.html#transcription" class="termref">transcriptions</a> between <span style="white-space:nowrap;">&lt;angle brackets&gt;</span>, represent the letters as commonly written in the Latin script.<br>
+        A <em><a href="../glossary/index.html#transliteration" class="termref">transliteration</a></em> has also been developed especially for this orthography, and is generally based on the sound of a letter where possible, but where a letter has multiple pronunciations, the transliteration represents only one.<br>
+        Transliterations provide perfect round-trip conversion between the native script and Latin, whereas Latin transcriptions rarely do.<br>
+        When you click on an example to see its composition, the top of the panel that opens contains a transliteration, followed by the native text, then (if available) an IPA transcription.</p>
+        
+        <!--p class="instructions noprint"><span class="leadin">Show characters.</span><button onclick="document.getElementById('characterDump').textContent = allchars;">GO</button></p>
+        <p id="characterDump"></p-->
+`
+
+
+if (window.location.href.includes('block')) out += `
+<details><summary onclick="chMarkup = document.querySelectorAll('.charimg')
+    chList = ''
+    for (i=0;i<chMarkup.length;i++) chList += chMarkup[i].textContent+' '
+    document.getElementById('charsListed').innerHTML = chList
+" style="color: #CC6600; font-style: italic; margin-right: 1em; font-size: 70%; font-weight:bold;">Show all characters listed here</summary>
+    <p id="charsListed"></p>
+    </details>
+`
+
+
+out += `
+        </details>
+
+        </div>
+        
+        
+        <dialog id="copyNotice">Copied !</dialog>
+        `
+        }
+    
+if (! window.location.href.includes('block')) out += `
+    <img id="showTOC" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="  document.getElementById('tocPanel').style.display = 'block'">
+
+    <div id="optionSwitch" title="Options." onclick="if (document.getElementById('showTranscriptions').style.display === 'block') document.getElementById('showTranscriptions').style.display='none'; else document.getElementById('showTranscriptions').style.display='block';"><img src="../../shared/images/showImages.png" alt="Option menu"></div>
+
+    <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'; document.getElementById('settings_saved').style.visibility='hidden';"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
+    
+    
+    <!-- ACCESSIBILITY PANEL  -->
+    <div id="access" style="display: none;">
+    <div id="access_contrast">
+    <div id="contrastChoice">
+    
+    <button id="contrastLow" class="access_selected" onClick="
+    document.querySelector('.access_selected').classList.remove('access_selected');
+	document.querySelector('body').classList.remove('contrast');
+	document.querySelector('body').classList.remove('dark');
+    document.querySelector('body').classList.add('low');
+        access.contrast = 'low';
+        this.classList.add('access_selected');">Low contrast</button>
+        
+    <button id="contrastDark" onClick="
+    document.querySelector('.access_selected').classList.remove('access_selected');
+	document.querySelector('body').classList.remove('low');
+	document.querySelector('body').classList.remove('contrast');
+    document.querySelector('body').classList.add('dark');
+        access.contrast = 'dark';
+        this.classList.add('access_selected');">Dark mode</button>
+        
+    <button id="contrastHigh" onClick="
+    document.querySelector('.access_selected').classList.remove('access_selected');
+	document.querySelector('body').classList.remove('low');
+	document.querySelector('body').classList.remove('dark');
+    document.querySelector('body').classList.add('contrast');
+        access.contrast = 'high';
+        this.classList.add('access_selected');">High contrast</button>
+    </div>
+    </div>
+
+    <div id="access_fontsize">Set text size: <input id="accessFontsize" type="range" min="15" max="24" step="1" value="15" oninput="access.fontsize=this.value; document.querySelector('html').style.fontSize = this.value+'px'" style="width:12rem;"></div>
+    <div style="color: white;">Font &amp; text size of the examples can be changed independently using the control that pulls out from the bottom right of the page.</div>
+    
+    <div style="display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-around;">
+    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="localStorage['docsAccess'] = JSON.stringify(access); document.getElementById('settings_saved').style.visibility = 'visible';">Save settings <span id="settings_saved" style="visibility:hidden">✓</span></div>
+    
+    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="this.parentNode.parentNode.style.display='none';">Close X</div>
+    </div>
+    </div>
+`
+
+//out += `<div>`
+
+if (window.location.href.includes('block')) out += `
+<p><a target="_blank" href="index.html#languages">Languages using the ${ script } script</a> • <a target="_blank" href="../links.html?iso=${ iso }">${ script } links</a> • <a target="_blank" href="../index.html#charnotes">Other character notes</a></p>
+`
+else out += `
+<p><a target="_blank" href="index.html#languages">Languages using the ${ script } script</a> • <a target="_blank" href="../../pickers/${ picker }/index.html">${ orthogName } picker</a> • <a target="_blank" href="../links.html?iso=${ iso }">${ script } links</a> • <a target="_blank" href="../index.html#scriptnotes">Other orthography notes</a></p>
+
+    `
+    
+    
+	document.getElementById('usage').outerHTML = out
+    }
+
+
+
+
+
+
+
+/* !!!! Calls to this function should be phased out in favour of addPageIntro  !!! */
 function addUsageAdvice (script, iso, picker) {
 	// Add a para to the intro & add accessibility controls
     var draft = ''
