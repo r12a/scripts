@@ -109,6 +109,8 @@ autoExpandExamples.suz = `
 𑯆𑯑̍𑯃̃𑯌|Sunuwar|k§oĩ§‹§t͡ʃ
 
 
+𑯎̭𑯂𑯒𑯂|script|br§e§s§e
+𑯎𑯄𑯂𑯒𑯂|script|br§e§s§e
 
 
 
