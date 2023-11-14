@@ -3,8 +3,7 @@
 @ Source: https://en.wiktionary.org/wiki/Category:Kashmiri_lemmas
 @ Source: https://archive.org/details/tbjU_kashmiri-english-dictionary-for-second-language-learners-omkar-koul/page/1/mode/2up
 
-
-native | meaning | IPA① | transcription | other transcriptions② & notes | wiktionary③
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -19,6 +18,12 @@ native | meaning | IPA① | transcription | other transcriptions② & notes | wi
 ③ x means that no link to Wiktionary should be added
    if Wiktionary spells the word differently, add the spelling here
 */
+
+
+//otherTranscription = true   // kicks in the latest order of items
+
+
+
 
 
 autoExpandExamples.ks = `
@@ -120,7 +125,6 @@ autoExpandExamples.ks = `
 اِ||
 اِدرار|urine|idrɑːr
 اِنسان|human|i§n§s§aː§n
-اٟں||
 اۄ||
 اۄا||
 اوٚ||
@@ -135,7 +139,7 @@ autoExpandExamples.ks = `
 ای||
 ایٖمان|faith, belief|›§iː§m§aː§n
 بؠنْزٕ|neice|bʲanzɨ
-بابتھٕر|nephew|baːbtʰɨr
+بابتھٕر|nephew|b§aː§b§tʰɨ§‹§r
 بادام||
 بادَم|almond|b§aː§daː§m
 باشلیٔانگۇچ|beginning|bɑʃlɑnʁutʃ
@@ -145,9 +149,8 @@ autoExpandExamples.ks = `
 باوُت||
 باپتھٕر|nephew|baːptʰɨr
 باہ|twelve|baːh
-برَْسوار|Thursday|braswaːr
+برَْسوار|Thursday|b§ra§s§w§aː§r
 برَْگ|blue heron|b§ra§g
-برَْسوار||
 برِْمِج||
 برْور|cat (m)|broːr
 برْٲر|cat (f)|brəːr
@@ -195,11 +198,10 @@ autoExpandExamples.ks = `
 بیساکھ|April-May|beːsaːkʰ
 بیمہٕ|brother-in-law|b§eː§m§ɨ
 بیْور|cat (m)|bjoːr
-بیْٲر|cat (f)|bjəːr
+بیْٲر|cat (f)|b§j§əː§r
 بیٔنْزٕ|neice|bjənzɨ
 بیٚنہِ|sister|b§e§n§i
 بیْور||
-بیْٲر||
 تارُکھ||
 تاپھ||
 ترَْٹھ||
@@ -219,8 +221,8 @@ autoExpandExamples.ks = `
 ترْٕے||
 ترْوٚوُہ||
 ترْیٚیہِ شیٖتھ||
-ترْےٚ ہَتھ|||||x
-ترْےٚ|||||x
+ترْےٚ ہَتھ||||||x
+ترْےٚ||||||x
 توشُن||
 تونْتھ||
 توٗر||
@@ -562,8 +564,7 @@ autoExpandExamples.ks = `
 واتُن|to arrive at a place|ʋ§aː§tu§n
 واریُْل|shikra|w§aː§r.§ju§l
 وان||
-وانْدُر|monkey|w§aː§̃§du§r
-وانْدُر|monkey|w§ãː§⋯§du§r
+وانْدُر|monkey|w§ãː§‹§du§r
 وانْگُن|aubergine|wãːɡun
 وانْگُن||
 وایُن||
@@ -784,16 +785,16 @@ autoExpandExamples.ks = `
 ژیر|delay|t͡seːr
 کاتُر||
 کارتِکھ|eighth month (Oct-Nov)|kaːrtikʰ
-کانْتُر|sparrow m.|kãːtur
+کانْتُر|sparrow m.|k§ãː§‹§tu§r
 کانْدُر|baker|kãːdur/kãːduɾ
 کانْدُر||
 کانْگٕر||
 کاو |crow|kaːw
 کاہ شَتھ||
 کاہ|eleven|kaːh
-کرْال|potter|kraːl
+کرْال|potter|k§r§aː§l
 کرْینْکہٕ لٔٹ|lizard|krẽːkɨləʈ
-کرْٕم|sea turtle|krɨm
+کرْٕم|sea turtle|k§rɨ§m
 کرْاوُت||
 کرْینْکہٕ لٔٹ||
 کوتُر|pigeon|koːtur
@@ -863,9 +864,8 @@ autoExpandExamples.ks = `
 کیلہٕ||
 کینْکہٕ لٔٹ|lizard|kẽːkɨləʈ
 کیُْس|common teal|kjus
-کیْوٚم|insect|kjom
+کیْوٚم|insect|k§j§o§m
 کیْازِ||
-کیْوٚم||
 گاش||
 گام|village|ɡaːm
 گانْٹھ|kite (bird)|ɡãːʈʰ
@@ -943,31 +943,31 @@ autoExpandExamples.ks = `
 
 
 
-سدٕرؠ|waist coat|sa§dɨ§rʲ§‹||x
-سوزٟنؠ طوٗپؠ|skull cap (full of stitches)|s§oː§zɨ§nʲ§‹§ §t§uː§pʲ§‹||x
-اکشر|often, generally|a§k§ʃa§r|||x
-اکطَر|actor|a§k§ta§r|||x
-اکتوٗبر|October|a§k§t§uː§ba§r|||x
-اَطراف|loafer|a§t§r§aː§f|||x
-اَنتاکرن|inner thoughts|a§n§t§aː§ka§ra§n|||x
-عَمل کرٕنی|to practice, follow|a§ma§l§ §ka§rɨ§nʲ§‹|||x
-اَرگ پوش|flower/rice offerings|a§r§g§ §p§oː§ʃ|||x
-اَرٕونْزاہ|fifty eight|a§rɨ§va§n§z§aː§h|||x
-آلُژھ|laziness|aː§lu§t͡sʰ|‹|||x
+سدٕرؠ|waist coat|sa§dɨ§rʲ§‹|||x
+سوزٟنؠ طوٗپؠ|skull cap (full of stitches)|s§oː§zɨ§nʲ§‹§ §t§uː§pʲ§‹|||x
+اکشر|often, generally|a§k§ʃa§r||||x
+اکطَر|actor|a§k§ta§r||||x
+اکتوٗبر|October|a§k§t§uː§ba§r||||x
+اَطراف|loafer|a§t§r§aː§f||||x
+اَنتاکرن|inner thoughts|a§n§t§aː§ka§ra§n||||x
+عَمل کرٕنی|to practice, follow|a§ma§l§ §ka§rɨ§nʲ§‹||||x
+اَرگ پوش|flower/rice offerings|a§r§g§ §p§oː§ʃ||||x
+اَرٕونْزاہ|fifty eight|a§rɨ§va§n§z§aː§h||||x
+آلُژھ|laziness|aː§lu§t͡sʰ|‹||||x
 عام طور|often, generally|›§aː§m§ §t§oː§r
-اولُو|potato|›§oː§lu§v|||x
-کرُْہُن|black|k§ru§hu§n|||x
-کرْوٗد|anger|k§r§uː§d|||x
-عٔشِق|romance, love|ə§ʃi§k|||x
-أڈ|half|əɖ|||x
-عٲقٟل|intelligent|›§eː§kɨ§l|||x
-عَقٟل|wisdom|a§kɨ§l|||x
-دؠل|skin, bark|d§e§l|||x
-دؠد|mother, grandmother|d§e§d|||x
-دؠگُل|earthen pot|d§e§gu§l|||x
-دؠو|devil|d§e§v|||x
+اولُو|potato|›§oː§lu§v||||x
+کرُْہُن|black|k§ru§hu§n||||x
+کرْوٗد|anger|k§r§uː§d||||x
+عٔشِق|romance, love|ə§ʃi§k||||x
+أڈ|half|əɖ||||x
+عٲقٟل|intelligent|›§eː§kɨ§l||||x
+عَقٟل|wisdom|a§kɨ§l||||x
+دؠل|skin, bark|d§e§l||||x
+دؠد|mother, grandmother|d§e§d||||x
+دؠگُل|earthen pot|d§e§gu§l||||x
+دؠو|devil|d§e§v||||x
 دؠوٕ|possibly, perhaps|d§e§vɨ
-دیٖدار|glimpse|d§iː§d§aː§r|||x
+دیٖدار|glimpse|d§iː§d§aː§r||||x
 
 اَبؠن|without a gap|a§bʲa§n
 بؠنتھٕر|nephew|bʲa§‹§n§tʰɨ§‹§r| byanthụr
