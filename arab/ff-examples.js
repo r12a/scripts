@@ -1,7 +1,8 @@
 /*
 @ Source: 
 
-native | meaning | IPA① | transcription | other transcriptions② & notes | wiktionary③
+
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -16,6 +17,13 @@ native | meaning | IPA① | transcription | other transcriptions② & notes | wi
 ③ x means that no link to Wiktionary should be added
    if Wiktionary spells the word differently, add the spelling here
 */
+
+
+
+otherTranscription = true
+
+
+
 
 
 autoExpandExamples.ff = `
