@@ -48,6 +48,18 @@ reflist = {
 
 
 
+
+
+"wl": {
+"authors": "Wikipedia",
+"title":"Sunwar language",
+"retr": "Nov 2023",
+"url":"https://en.wikipedia.org/wiki/Sunwar_language",
+"reviewed":false
+},
+
+
+
 }
 
 
