@@ -38,6 +38,16 @@ reflist = {
 
 
 
+"web": {
+"authors": "Webonary",
+"title":"Orthography of Sunuwar",
+"retr": "Nov 2023",
+"url":"https://www.webonary.org/sunuwar/files/Orthography-Of-Sunuwar.pdf",
+"reviewed":false
+},
+
+
+
 }
 
 
