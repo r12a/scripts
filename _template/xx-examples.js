@@ -1,7 +1,7 @@
 /*
 @ Source: 
 
-native | meaning | IPA① | transcription | other transcriptions② & notes | wiktionary③
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -17,23 +17,34 @@ native | meaning | IPA① | transcription | other transcriptions② & notes | wi
    if Wiktionary spells the word differently, add the spelling here
 */
 
+
+otherTranscription = true   // kicks in the latest order of items
+
+
+
 autoExpandExamples.tmp = `
 
-ᨀᨆᨗᨔᨗ|Thursday|kɑmɪːsɪ (kamisi)
-ᨄᨉᨚᨕᨂᨛ|prayers|(paddoangeng)
-ᨅᨔ ᨕᨘᨁᨗ|Buginese language|(basa ugi)
-ᨅᨗᨌᨑ|language|(bicara)
-ᨆᨌ|clever|(maca)
-ᨍᨘᨆ|Friday|(juma)
-ᨒᨄ|lava|(lapa)
-ᨓᨕᨙ|water|(wae)
-ᨔᨈᨘ|Saturday|(satung)
-ᨔᨒᨔ|Tuesday|sɑlɑːsɑ
-ᨕᨆᨑᨙᨉᨀᨂᨛ|democracy|(amaradekangəng)
-ᨕᨑᨅ|Wednesday|(araba)
-ᨕᨔᨘ|dog|(asu)
-ᨕᨙᨔᨙᨊᨙ|Monday|eseneŋ (eseneng)
-ᨕᨛᨔᨚ ᨕᨖᨕᨗ|Sunday|(əso ahai)
+𑯇𑯃𑯜|woman|m§i§ʃ||||x
+𑯓𑯖̃𑯆𑯅|water|v§ãː§k§u||||x
+
+𑯒𑯅𑯇|zero|s§u§m||||x
+𑯆𑯖|one|k§aː||का||x|
+𑯍𑯃𑯠𑯒𑯃|two|n§i§ʔ§s§i||निक्शी||x|
+𑯒𑯖̃|three|s§ãː||सां||x
+𑯐𑯂|four|l§ẽː||लें||x|
+𑯚𑯈|five|ŋ§ə||ङो||x|
+𑯄𑯈𑯆𑯅|six|r§ə§k§u||रकु||x|
+𑯌𑯈𑯍𑯃|seven|t͡ʃ§ə§n§i||चनी||x|
+𑯒𑯈𑯒𑯃|eight|s§ə§s§i||सस्सी||x|
+𑯔𑯖̃|nine|y§ãː||यां||x|
+𑯊𑯈𑯅|ten|g§ə§u||गौ||x|
+𑯆𑯑𑯃̃𑯌 𑯎𑯄𑯂𑯒𑯂|Sunuwar script|k§o§ĩ§t͡ʃ§ §b§r§e§s§e||||x
+𑯆𑯑𑯃̐𑯌 𑯎̭𑯂𑯒𑯂|Sunuwar script|k§o§ĩ§t͡ʃ§ §b§r§e§s§e||||x
+
+
+
+
+
 
 `
 
