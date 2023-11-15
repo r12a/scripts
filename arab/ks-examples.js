@@ -992,6 +992,9 @@ autoExpandExamples.ks = `
 // kashmiri dictionary
 اکھؠوٗر|letter of the alphabet|akʰʲur|akh'ur|||x
 اچھُر|letter of the alphabet|at͡ʃʰur|achur|||x
+ضٔمیٖر|nature|zə§m§iː§r|zAmi:r|||x
+ظٲلِم|cruel|z§əː§li§m|zA:lim|||x
+حاجَتھ|need|h§aː§d͡ʒa§tʰ§‹|ha:jath|||x
 
 
 
