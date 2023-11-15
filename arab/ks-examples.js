@@ -638,7 +638,7 @@ autoExpandExamples.ks = `
 پرْوٚن||
 پوش|flower|p§oː§ʃ
 پوشُن||
-پونؠ|water|poːnʲ
+پونؠ|water|p§oː§nʲ§‹
 پوٗتھ||
 پوٗر|east|puːr
 پوٗرُن|to fill up|puːɾun
@@ -835,7 +835,6 @@ autoExpandExamples.ks = `
 کٲشُر|Kashmiri|k§əː.§ʃu§r
 کٲم|work|kəːm
 کٲنْتُر|sparrow m.|kə̃ːtur
-کٲڈؠ|mind, intellect||kạ̄ḍ'
 کھ||
 کھانْدَر|marriage|kʰaːndar
 کھوٗپرٕ||
@@ -924,7 +923,7 @@ autoExpandExamples.ks = `
 ہیُْہُر|father-in-law|hjuhur
 ہیٚنْگ||
 ہیٚچھُن|to learn|het͡ʃʰun
-ۂسؠ تِنؠ|elephant f.|hə§s§ʲ§ §ti§n§ʲ
+ۂسؠ تِنؠ|elephant f.|hə§sʲ§‹§ §ti§nʲ§‹
 ۂٹ||
 ۂہرٕ باے|sister-in-law|həhrɨ baːj
 ۂہَر|brother-in-law|hə§ha§r
@@ -984,7 +983,8 @@ autoExpandExamples.ks = `
 وَہؠکھ|Apr-May| wa§hʲa§‹§kʰ§‹|vahyakh
 کھؠن چؠن|food & drink|| khyan cyan
 بِلؠ بِچُر|Himalayan bulbul| bi§lʲ§‹§ §bi§t͡ʃu§r| bil' bicur
-ژؠتھ|mind, intelligence|| ċyath
+ژؠتھ|mind, intelligence| ʦʲa§‹§tʰ§‹ | ċyath
+کٲڈؠ|mind, intellect| k§əː§ɖʲ§‹ |kạ̄ḍ'
 
 
 
