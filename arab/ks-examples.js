@@ -20,7 +20,7 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 */
 
 
-//otherTranscription = true   // kicks in the latest order of items
+otherTranscription = true   // kicks in the latest order of items
 
 
 
@@ -233,7 +233,7 @@ autoExpandExamples.ks = `
 تُرُن||
 تُلُن||
 تُلٕر||
-تْرٚے|three|t§re§‹§
+ترْےٚ|three|t§r§e|tre||ترٛےٚ
 تٔژ|hot f.|tə§t͡s
 تٕژھ||
 تٟر|cold|tɨː§r
@@ -864,6 +864,7 @@ autoExpandExamples.ks = `
 کینْکہٕ لٔٹ|lizard|kẽːkɨləʈ
 کیُْس|common teal|kjus
 کیْوٚم|insect|k§j§o§m
+کؠوٚم|insect|kʲ§‹§o§m|k'om||m.s.|x
 کیْازِ||
 گاش||
 گام|village|ɡaːm
@@ -988,6 +989,9 @@ autoExpandExamples.ks = `
 
 
 
+// kashmiri dictionary
+اکھؠوٗر|letter of the alphabet|akʰʲur|akh'ur|||x
+اچھُر|letter of the alphabet|at͡ʃʰur|achur|||x
 
 
 
