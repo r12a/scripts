@@ -127,13 +127,14 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('medi')? medial=true: medial=false
         charMarkup[i].classList.contains('fina')? final=true: final=false
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('noname')? noname=true: noname=false
         
         charlist = charMarkup[i].textContent.trim().split(' ')
         unicodeNames = ''
         unicodeChars = ''
         
         out = ''
-        if (final || medial) unicodeChars += '\u200D'
+        if (final || medial) unicodeChars += '\u200D' // the space is needed for Safari to work
         for (c=0;c<charlist.length;c++) {
             hex = charlist[c]
             dec = parseInt(hex,16)
@@ -165,14 +166,15 @@ function expandCharMarkup () {
             else unicodeChars += `&#x${ hex };`
             }
             
-        if (initial || medial) unicodeChars += '\u200D ' // the space is needed for Safari to work
+        if (initial || medial) unicodeChars += '\u200D '
         if (circle) unicodeChars = '\u25CC' + unicodeChars
 
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         //if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }</bdi>`
-        out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        if (noname) {}
+        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
         charMarkup[i].outerHTML = out
         }
@@ -191,7 +193,7 @@ function expandCharMarkup () {
         unicodeNames = ''
         unicodeChars = ''
         out = ''
-        if (final || medial) unicodeChars += '\u200D'
+        if (final || medial) unicodeChars += ' \u200D'
         for (c=0;c<charlist.length;c++) {
             dec = charlist[c].codePointAt(0)
             hex = dec.toString(16).toUpperCase()
@@ -221,7 +223,7 @@ function expandCharMarkup () {
             else unicodeChars += charlist[c]
             }
             
-        if (initial || medial) unicodeChars += '\u200D'
+        if (initial || medial) unicodeChars += '\u200D '
         if (circle) unicodeChars = '\u25CC' + unicodeChars
 
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
