@@ -995,6 +995,15 @@ autoExpandExamples.ks = `
 ضٔمیٖر|nature|zə§m§iː§r|zAmi:r|||x
 ظٲلِم|cruel|z§əː§li§m|zA:lim|||x
 حاجَتھ|need|h§aː§d͡ʒa§tʰ§‹|ha:jath|||x
+لاب|profit|l§aː§b|la:b|||x
+لالٕپھوٚل|pupil (eye)|l§aː§lɨ§pʰ§‹§o§l|la:lIphol|||x
+أش دَر|dragon|ə§ʃ§ §da§r|Ashdar|||x
+اُجرَتھ|wages|u§d͡ʒ§ra§tʰ§‹|ujrath|||x
+اوٗترٕ|day before yesterday|›§uː§t§rɨ|u:trI|||x
+کَنْگُو|comb|kã§‹§gu§v|ka~guv|||x
+عَقٕل|wisdom, understanding|a§kɨ§l|akIl|||x
+عَکٕس|image, reflection|a§kɨ§s|ákIs|||x
+
 
 
 

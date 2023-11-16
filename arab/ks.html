@@ -61,7 +61,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->15 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 November, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -80,7 +80,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Kashmiri (Nastaliq Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->15-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ks">https://r12a.github.io/scripts/arab/ks</a></small></p>
+<p class="refLine"><small>Richard Ishida, Kashmiri (Nastaliq Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->16-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ks">https://r12a.github.io/scripts/arab/ks</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -1064,9 +1064,9 @@ Affricate </th>
 
 <p>Kashmiri uses the following consonant characters to write vowels, generally in combination with diacritics, but also alone when representing <span class="ipa">eː</span> and <span class="ipa">oː</span> in non-initial positions.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ی␣و</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ی␣و␣ع</figure>
 
-<p>In a standard Arabic orthography  these characters would be regarded as <a class="termref" href="../../glossary/index.html#materlectionis">matres lectionis</a>, but since Kashmirii shows all vowel diacritics they don't have the same role here.</p>
+<p>In a standard Arabic orthography  these characters would be regarded as <a class="termref" href="../../glossary/index.html#materlectionis">matres lectionis</a>, but since Kashmiri shows all vowel diacritics they don't have the same role here.</p>
 </section>
 </section>
 
@@ -1107,11 +1107,13 @@ Affricate </th>
 <section id="standalone">
 <h3>Standalone vowels</h3>
 
-<p>Word-initial standalone vowels always begin with <span class="ch">ا</span>, either as a carrier for a diacritic, or before the other characters that represent the vowel.<br>
+<p>Word-initial standalone vowels always begin with <span class="ch">ا</span> or (for loan words) <span class="ch">ع</span>, either as a carrier for a diacritic, or before the other characters that represent the vowel.<br>
 &nbsp;</p>
-<span class="eg" lang="ks" dir="ltr">اوٚنْگٕج</span>
-<span class="eg" lang="ks" dir="ltr">اِنسان</span>
-<span class="eg" lang="ks" dir="ltr">آتھوار</span>
+<p><span class="eg" lang="ks" dir="ltr">اوٚنْگٕج</span></p>
+<p><span class="eg" lang="ks" dir="ltr">اِنسان</span></p>
+<p><span class="eg" lang="ks" dir="ltr">آتھوار</span></p>
+<p><span class="eg" lang="ks" dir="rtl">عَکٕس</span></p>
+<p><span class="eg" lang="ks" dir="rtl">عٲقٟل</span></p>
 </section>
 
 
@@ -1229,145 +1231,192 @@ Affricate </th>
 <section id="vowel_mappings">
 <h3>Vowel sounds  to characters</h3>
 
-<p class="instructions">This section maps Kashmiri vowel sounds to common graphemes in the Arabic orthography, grouped by word-initial ( <mark>i</mark> ), medial ( <mark>m</mark> ), and final ( <mark>f</mark> ). Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<p>The allocation of characters to vowel sounds is somewhat complicated. The complexity arises from the number of vowels in Kashmiri compared to the Arabic language, and the need to represent them all, but also because different sequences are needed for different positional forms. In addition, often more than one character sequence can achieve the same result.</p>
+
+<p>Vowels in word-initial position or written alone are written with a preceding <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;</span> [<a href="block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, or sometimes <span class="ch">ع</span> (we use the former for this table).</p>
+
+
+<p class="instructions">This section maps Kashmiri vowel sounds to common graphemes in the Arabic orthography. The columns run right to left and indicate word-initial,  dual joining, and right-joining alternatives..</p>
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<style>
+.mapItem {
+    text-align: start;
+    }
+.mapItem.initial {
+    border-bottom: 0;
+    }
+.mapItem .col1, .mapItem .col2 {
+    margin-inline-end: 1rem;
+    }
+.mapItem .ipa {
+    hyphens: none;
+    }
+#vowel_mappings .mapItem div.col1 {
+    flex: 1;
+    }
+#vowel_mappings .col1 .glyphs bdi::after {
+    content: '\200D';
+    }
+#vowel_mappings .mapItem div.col2 {
+    flex: 1;
+    }
+#vowel_mappings .col2 .glyphs bdi::before {
+    content: '\200D';
+    }
+#vowel_mappings .col2 .glyphs bdi::after {
+    content: '\200D';
+    }
+#vowel_mappings .mapItem div.col3 {
+    flex: 1;
+    }
+#vowel_mappings .col3 .glyphs bdi::before {
+    content: '\200D';
+    }
+#consonant_mappings .mapItem div.col1 {
+    flex: 3;
+    }
+#consonant_mappings .mapItem div.col2 {
+    flex: 1;
+    text-align: end;
+    }
+.mapItem example {
+    line-height: 3;
+    }
+.shaping bdi {
+    margin-inline: .5rem;
+    font-size: 2rem;
+    }
+.shaping > bdi::before {
+    content: '\200D';
+    }
+.shaping > bdi::after {
+    content: '\200D';
+    }
+.shaping > bdi:first-of-type::before {
+    content: '\200D';
+    }
+.shaping > bdi:first-of-type::after {
+    content: '';
+    }
+.shaping > bdi:last-of-type::before {
+    content: '';
+    }
+.shaping > bdi:last-of-type::after {
+    content: '\200D';
+    }
+</style>
+
+
+
 
 <section id="plain_vowel_map">
-
-<p>The allocation of characters to vowel sounds is somewhat complicated. The complexity arises from the number of vowels in Kashmiri compared to the Arabic language, and the need to represent them all, but also because different sequences are needed for different positional forms. In addition, often more than one character sequence can achieve the same result.</p>
-<p>Vowels in initial or isolated position are written with a preceding <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;</span> [<a href="block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>.</p>
 <div id="mapv_high" class="map">
+
 <div class="mapItem">
 <div class="phone"><span class="ipa">i</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">اِ</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char0650" target="c"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p><span class="hx">0650</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">زٲمِیہِ</span></p>
 </div>
+<div class="col2">
+<p><span class="hx">0650</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">صِفَر</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ِ</span>  &nbsp;[<a href="block#char0650" target="c"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ِ</span>  &nbsp;[<a href="block#char0650" target="c"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span></p>
+<div class="col1">
+<p><span class="hx">0627 0650</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">اِنسان</span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">iː</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0627;&#x06CC;&#x0656;&#x200D;&#x0640;</span> &nbsp;[<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char06CC" target="c"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="block#char0656" target="c"><span class="uname">U+0656 ARABIC SUBSCRIPT ALEF</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">06CC</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">زٲمی</span></p>
 </div>
+<div class="col2">
+<p class="glyphs"><span class="hx">06CC 0656</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">شيٖتھ</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0640;&#x200D;یٖ&#x200D;&#x0640;</span> &nbsp;[<a href="block#char06CC" target="c"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="block#char0656" target="c"><span class="uname">U+0656 ARABIC SUBSCRIPT ALEF</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x200D;ی</span> &nbsp;[<a href="block#char06CC" target="c"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span></p>
+<div class="col1">
+<p class="glyphs"><span class="hx">0627 06CC 0656</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">ایٖمان</span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɨ</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">إ</span> [<a href="block#char0625" target="c"><span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span></a>]</span> Decomposes to <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;&#x0655;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0655"><span class="uname">U+0655 ARABIC HAMZA BELOW</span></a>]</span> and recomposes.</p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p><span class="ch">◌ٕ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">چھِرٕ</span></p>
 </div>
+<div class="col2">
+<p><span class="ch">◌ٕ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">گَگٕر</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ٕ</span>  [<a href="block#char0655" target="c"><span class="uname">U+0655 ARABIC HAMZA BELOW</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ٕ</span> [<a href="block#char0655" target="c"><span class="uname">U+0655 ARABIC HAMZA BELOW</span></a>]</span></p>
+<div class="col1">
+<p><span class="hx">0625</span> Decomposes to <span class="hx">0627 0655</span> and recomposes.</p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">أش دَر</span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɨː</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">اٟ</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char065F" target="c"><span class="uname">U+065F ARABIC WAVY HAMZA BELOW</span></a>]</span> There is a precomposed character, <span class="codepoint" translate="no"><span dir="rtl" lang="ks">ٳ</span> [<a href="block#char0673" target="c"><span class="uname">U+0673 ARABIC LETTER ALEF WITH WAVY HAMZA BELOW</span></a>]</span>, but it neither composes nor decomposes in normalisation, and is strongly deprecated by the Unicode Standard.</p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p><span class="ch">◌ٟ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
+<div class="col2">
+<p><span class="ch">◌ٟ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">تٟر</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ٟ</span> &nbsp;[<a href="block#char065F" target="c"><span class="uname">U+065F ARABIC WAVY HAMZA BELOW</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ٟ</span> &nbsp;[<a href="block#char065F" target="c"><span class="uname">U+065F ARABIC WAVY HAMZA BELOW</span></a>]</span></p>
+<div class="col1">
+<p><span class="hx">0627 065F</span>. The precomposed character <span class="codepoint" translate="no"><span dir="rtl" lang="ks">ٳ</span> [<a href="block#char0673" target="c"><span class="uname">U+0673 ARABIC LETTER ALEF WITH WAVY HAMZA BELOW</span></a>]</span> neither composes nor decomposes in normalisation, and is strongly deprecated by the Unicode Standard.</p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">u</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">اُ</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char064F" target="c"><span class="uname">U+064F ARABIC DAMMA</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p><span class="ch">◌ُ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
+<div class="col2">
+<p><span class="ch">◌ُ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">سَرُف</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ُ</span> &nbsp;[<a href="block#char064F" target="c"><span class="uname">U+064F ARABIC DAMMA</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ُ</span> &nbsp;[<a href="block#char064F" target="c"><span class="uname">U+064F ARABIC DAMMA</span></a>]</span></p>
+<div class="col1">
+<p><span class="hx">0627 064F</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">اُجرَتھ</span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">uː</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">اوٗ</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char0648" target="c"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="block#char0657" target="c"><span class="uname">U+0657 ARABIC INVERTED DAMMA</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">0648 0657</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx">0648 0657</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">نوٗل</span></p>
+</div>
+<div class="col1">
+<p class="glyphs"><span class="hx">0627 0648 0657</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">اوٗترٕ</span></p>
 </div>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">وٗ</span> [<a href="block#char0648" target="c"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="block#char0657" target="c"><span class="uname">U+0657 ARABIC INVERTED DAMMA</span></a>]</span></p>
+
 </div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">وٗ</span> [<a href="block#char0648" target="c"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="block#char0657" target="c"><span class="uname">U+0657 ARABIC INVERTED DAMMA</span></a>]</span></p>
-</div>
-</div>
-</div>
+
+
 
 
 
@@ -1375,69 +1424,72 @@ Affricate </th>
 <div id="mapv_hmid" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">e</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0627;&#x06CC;&#x065A;&#x200D;&#x0640;</span> [<a href="block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="block#char065A"><span class="uname">U+065A ARABIC VOWEL SIGN SMALL V ABOVE</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">065A 06D2</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">ترْےٚ</span></p>
 </div>
+<div class="col2">
+<p class="glyphs"><span class="hx">06CC 065A</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">بیٚنہِ</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0640;&#x200D;&#x06CC;&#x065A;&#x200D;&#x0640;</span> [<a href="block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="block#char065A"><span class="uname">U+065A ARABIC VOWEL SIGN SMALL V ABOVE</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0640;&#x065A;&#x200D;&#x06D2;</span> [<a href="block#char065A" target="c"><span class="uname">U+065A ARABIC VOWEL SIGN SMALL V ABOVE</span></a> + <a href="block#char06D2" target="c"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span></p>
+<div class="col1">
+<p class="glyphs"><span class="hx">0627 06CC 065A</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">eː</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0627;&#x06CC;&#x200D;&#x0640;</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char06CC" target="c"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">06D2</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
+<div class="col2">
+<p class="glyphs"><span class="hx">06CC</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">شیر</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0640;&#x200D;&#x06CC;&#x200D;&#x0640;</span> &nbsp;[<a href="block#char06CC" target="c"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span>&nbsp;</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0640;&#x200D;&#x06D2;</span> [<a href="block#char06D2" target="c"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span></p>
+<div class="col1">
+<p class="glyphs"><span class="hx">0627 06CC</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">o</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">اۆ</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char06C6" target="c"><span class="uname">U+06C6 ARABIC LETTER OE</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">0648 065A</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx">0648 065A</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">تۆت</span></p>
+</div>
+<div class="col1">
+<p class="glyphs"><span class="hx">0627 0648 065A</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">اۆنْجوٗر</span></p>
 </div>
 </div>
+
 <div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ۆ</span> [<a href="block#char06C6" target="c"><span class="uname">U+06C6 ARABIC LETTER OE</span></a>]</span></p>
+<div class="phone"><span class="ipa">oː</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">0648</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx">0648</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">پوش</span></p>
+</div>
+<div class="col1">
+<p class="glyphs"><span class="hx">0627 0648</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">اوش</span></p>
 </div>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ۆ</span> [<a href="block#char06C6" target="c"><span class="uname">U+06C6 ARABIC LETTER OE</span></a>]</span></p>
-</div>
-</div>
+
 </div>
 
 
@@ -1447,34 +1499,40 @@ Affricate </th>
 <div id="mapv_lmid" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɔ</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">اۄ</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char06C4" target="c"><span class="uname">U+06C4 ARABIC LETTER WAW WITH RING</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">06C4</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">سۄ</span></p>
 </div>
+<div class="col2">
+<p class="glyphs"><span class="hx">06C4</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">کۄہ</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ۄ</span> [<a href="block#char06C4" target="c"><span class="uname">U+06C4 ARABIC LETTER WAW WITH RING</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ۄ</span> [<a href="block#char06C4" target="c"><span class="uname">U+06C4 ARABIC LETTER WAW WITH RING</span></a>]</span></p>
+<div class="col1">
+<p class="glyphs"><span class="hx">0627 06C4</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɔː</span></div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ۄآ</span> [<a href="block#char06C4" target="c"><span class="uname">U+06C4 ARABIC LETTER WAW WITH RING</span></a> + <a href="block#char0622" target="c"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]. Used only in isolated and final forms. The isolated form has an <span class="uname">ALEF</span> before it.</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">06C4 0622</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
+</div>
+<div class="col2">
+<p class="glyphs">Used only in isolated and final forms. The isolated form has an <span class="uname">ALEF</span> before it.</p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
+</div>
+<div class="col1">
+<p class="glyphs">&nbsp;</p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
 </div>
 </div>
+
+
 
 
 
@@ -1482,54 +1540,44 @@ Affricate </th>
 <div id="mapv_central" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">ə</span></div>
-<div class="posn">i</div>
-<div>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="ch">◌ٔ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="ch">◌ٔ</span> Several precomposed characters are available for use with hamza above. These include:</p>
 <p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">أ</span> [<a href="block#char0623" target="c"><span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ٔ</span> &nbsp;[<a href="block#char0654" target="c"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span> There are several precomposed characters available for use with hamza above. These include:</p>
-<ul style="margin: 0 0 0 3em; padding: 0;">
-<li><span class="codepoint" translate="no"><span dir="rtl" lang="ks">أ</span> [<a href="block#char0623" target="c"><span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span></a>]</span></li>
-<li><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ؤ</span> [<a href="block#char0624" target="c"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span></li>
-<li><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ۂ</span> [<a href="block#char06C2" target="c"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span></li>
-</ul>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ؤ</span> [<a href="block#char0624" target="c"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ۂ</span> [<a href="block#char06C2" target="c"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span></p>
 <p>All of the above decompose and recompose during normalisation.</p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">ژٔر</span></p>
 </div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;ٔ</span> &nbsp;[<a href="block#char0654" target="c"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span> (see note about precomposed characters just above).</p>
+<div class="col1">
+<p class="glyphs"><span class="hx">0623</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">أنْز</span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">əː</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ٲ</span> [<a href="block#char0672" target="c"><span class="uname">U+0672 ARABIC LETTER ALEF WITH WAVY HAMZA ABOVE</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">0672</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
+<div class="col2">
+<p class="glyphs"><span class="hx">0672</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">کٲشُر</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ٲ</span> [<a href="block#char0672" target="c"><span class="uname">U+0672 ARABIC LETTER ALEF WITH WAVY HAMZA ABOVE</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ٲ</span> [<a href="block#char0672" target="c"><span class="uname">U+0672 ARABIC LETTER ALEF WITH WAVY HAMZA ABOVE</span></a>]</span></p>
+<div class="col1">
+<p class="glyphs"><span class="hx">0672</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">ٲس</span></p>
 </div>
 </div>
 </div>
+
+
 
 
 
@@ -1537,58 +1585,76 @@ Affricate </th>
 <div id="mapv_low" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">a</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">اَ</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char064E" target="c"><span class="uname">U+064E ARABIC FATHA</span></a>]</span></p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="ch">◌َ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
+<div class="col2">
+<p class="glyphs"><span class="ch">◌َ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">ہَرُد</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;َ</span> &nbsp;[<a href="block#char064E" target="c"><span class="uname">U+064E ARABIC FATHA</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x25CC;َ</span> &nbsp;[<a href="block#char064E" target="c"><span class="uname">U+064E ARABIC FATHA</span></a>]</span></p>
+<div class="col1">
+<p class="glyphs"><span class="hx">0627 064E</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">اَرَب</span></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">aː</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">آ</span> [<a href="block#char0622" target="c"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span> Decomposes to <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;&#x0653;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0653"><span class="uname">U+0653 ARABIC MADDAH ABOVE</span></a>]</span> and recomposes.</p>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">0627</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
+<div class="col2">
+<p class="glyphs"><span class="hx">0627</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">آتھوار</span></p>
 </div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ا</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">f</div>
-<div>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ا</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span></p>
+<div class="col1">
+<p class="glyphs"><span class="hx">0622</span> Decomposes to <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;&#x0653;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0653"><span class="uname">U+0653 ARABIC MADDAH ABOVE</span></a>]</span> and recomposes.</p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">آزاد</span></p>
 </div>
 </div>
 </div>
 
 
+<!--
+<div class="mapItem">
+<div class="phone"><span class="ipa">phone</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">0627</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">example</span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx">0650</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">example</span></p>
+</div>
+<div class="col1">
+<p class="glyphs"><span class="hx">0627 0650</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">example</span></p>
+</div>
+</div>
+
+-->
 
 
 <div id="map_nasalisation" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">&nbsp;̃</span></div> <span>nasalisation</span>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0646;</span> [<a href="block#char0646"><span class="uname">U+0646 ARABIC LETTER NOON</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06BA;</span> [<a href="/scripts/arabic/block#char06BA"><span class="uname">U+06BA ARABIC LETTER NOON GHUNNA</span></a>]</span> when word-final.</p>
+<div class="mapItem initial">
+<div class="phone"><span class="ipa">&nbsp;̃<br>nasalisation</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx">06BA</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">اٟں</span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx">0646 0652</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">کَنْگُو</span></p>
+</div>
+<div class="col1">
+<p class="glyphs"><span class="hx"></span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
 </div>
 </div>
@@ -1804,7 +1870,7 @@ Affricate </th>
 <p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
 
 
-<style>
+<!--style>
 .mapItem {
     text-align: start;
     }
@@ -1849,7 +1915,7 @@ Affricate </th>
 .shaping > bdi:last-of-type::after {
     content: '\200D';
     }
-</style>
+</style-->
 
 
 
@@ -2374,7 +2440,7 @@ Affricate </th>
 <div class="posn">&nbsp;</div>
 <div class="col1">
 <p><span class="hx">0644</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">لوو</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">لالٕپھوٚل</span></p>
 </div>
 <div class="col2">
 <p><span class="shaping" lang="ks"><bdi>ل</bdi><bdi>ل</bdi><bdi>ل</bdi></span></p>
