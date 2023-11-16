@@ -935,8 +935,8 @@ autoExpandExamples.ks = `
 
 
 زۆن|man|z§o§n
-تۆت|warm|t§o§t
-اۆنْجوٗر|fig|o§‹§n§d͡ʒ§uː§r
+توٚت|warm|t§o§t
+اوٚنْجوٗر|fig|o§‹§n§d͡ʒ§uː§r
 اٟں|yeah|ɨ̃ː§‹
 شيٖتھ|eighty|ʃ§iː§tʰ§‹
 
@@ -1003,6 +1003,9 @@ autoExpandExamples.ks = `
 کَنْگُو|comb|kã§‹§gu§v|ka~guv|||x
 عَقٕل|wisdom, understanding|a§kɨ§l|akIl|||x
 عَکٕس|image, reflection|a§kɨ§s|ákIs|||x
+کٲلؠ کؠَتھ|day after tomorrow|k§əː§lʲ§‹§ §kʲa§‹§tʰ§‹|kA:l' k'ath|||x
+کَنیا دان|giving bride away|ka§nʲ§‹ §aː§ §d§aː§n|kan'a: da:n||Is the yeh a typo?|x
+کانْبَل|jaundice|k§ãː§‹§ba§l|ka~:mbal||homograph m|x
 
 
 
