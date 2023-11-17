@@ -323,7 +323,7 @@ function initialise () {
 function printAll () {
 	var out = ''
     var panel = document.getElementById('panel')
-	for (var i=0;i<wordList.length;i++) {
+	for (var i=0;i<wordList.length;i++) { 
         var fields = wordList[i].split('|')
 		out += '<tr>'
 
@@ -353,6 +353,7 @@ function printAll () {
         out += '<td>'+fields[MEANING]+'</td>'
 		out += '<td class="tr">'+fields[IPA]+'</td>'
 		out += '<td class="tr">'+fields[TRANS]+'</td>'
+		out += '<td class="tr">'+fields[EQUIV]+'</td>'
        // if (terms.thereAreNotes) out += '<td class="noteCol">'+fields[NOTES]+'</td>'
         
         if (terms.thereAreNotes) {
@@ -467,6 +468,8 @@ function findWords (reg) {
             out += `<td class="tr"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
             }
         else out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
+
+        out += '<td class="tr">'+itemArray[EQUIV]+'</td>'
 
         if (terms.thereAreNotes) { //out += `<td class="noteCol">${ itemArray[NOTES] }</td>`
             // find cross references and turn them into links
