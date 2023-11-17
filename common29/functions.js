@@ -114,7 +114,7 @@ function expandCharMarkup () {
      // if the svg class is appended, use an svg image to display the char
      // if the split class used, the characters will be separated by +
      
-     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle
+     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname
      
    
     // convert .hx markup (one or more hex codes)
@@ -128,13 +128,14 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('fina')? final=true: final=false
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
-        
+
         charlist = charMarkup[i].textContent.trim().split(' ')
         unicodeNames = ''
         unicodeChars = ''
         
         out = ''
         if (final || medial) unicodeChars += '\u200D' // the space is needed for Safari to work
+        if (circle) unicodeChars = '\u25CC' + unicodeChars
         for (c=0;c<charlist.length;c++) {
             hex = charlist[c]
             dec = parseInt(hex,16)
@@ -144,7 +145,7 @@ function expandCharMarkup () {
                 }
             //console.log('>>>',charMarkup[i].classList,charMarkup[i].textContent, hex, dec)
             ch = String.fromCodePoint(dec)
-            
+
             if (! spreadsheetRows[ch]) {
                 unicodeNames += `<span style="color:red">${ ch } NOT IN DB!</span>`
                 unicodeChars += ch
@@ -154,7 +155,7 @@ function expandCharMarkup () {
             if (c > 0) unicodeNames += ' + '
             unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
          
-           if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
+            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
             if (svg) {
                 block = getScriptGroup(dec, false)
                 unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ ch }" style="height:2rem;">`
@@ -167,7 +168,6 @@ function expandCharMarkup () {
             }
             
         if (initial || medial) unicodeChars += '\u200D '
-        if (circle) unicodeChars = '\u25CC' + unicodeChars
 
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         //if (blockDirection === 'rtl') out += ` dir="rtl"`
@@ -185,13 +185,16 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('split')? split=true: split=false
         charMarkup[i].classList.contains('svg')? svg=true: svg=false
         charMarkup[i].classList.contains('img')? img=true: img=false
+        charMarkup[i].classList.contains('init')? initial=true: initial=false
         charMarkup[i].classList.contains('medi')? medial=true: medial=false
         charMarkup[i].classList.contains('fina')? final=true: final=false
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('noname')? noname=true: noname=false
 
         charlist = [... charMarkup[i].textContent]
         unicodeNames = ''
         unicodeChars = ''
+        
         out = ''
         if (final || medial) unicodeChars += ' \u200D'
         for (c=0;c<charlist.length;c++) {
@@ -205,10 +208,8 @@ function expandCharMarkup () {
                 continue
                 }
             
-            if (charlist[c] !== '◌') {
-                if (c > 0) unicodeNames += ' + '
-                unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
-                }
+            if (c > 0) unicodeNames += ' + '
+            unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
 
             if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
             
@@ -230,7 +231,8 @@ function expandCharMarkup () {
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }</bdi>`
-        out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        if (noname) {}
+        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
         charMarkup[i].outerHTML = out
         }
