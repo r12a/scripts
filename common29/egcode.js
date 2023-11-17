@@ -92,6 +92,7 @@ function addExamples (langFilter) {
             if (termdata.length == 7) source = termdata[6]
             else source = termdata[5]
             
+            // console.log('term',term,'meaning',meaning,'ipa',ipa,'transc', transc,'notes',notes,'source',source)
             
             if (ipa) var cleanIPA = ipa.replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
             else cleanIPA = ''
