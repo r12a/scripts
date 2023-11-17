@@ -116,7 +116,11 @@ function setFootnoteRefs () {
             else out = `<a class="fn" target="_blank" title="${ itemArray[0] }" href="${ itemArray[1] }">§</a>`
             }
         else { // look up info in refs.js
-		if (typeof reflist[id] === 'undefined') console.log('reflist[id] ('+id+') is undefined.')
+		if (typeof reflist[id] === 'undefined') {
+            console.log('%c' + 'reflist[id] ('+id+') is undefined.', 'color:' + 'red' + ';font-weight:bold;')
+            console.log('languageName',languageName)
+            //continue
+            }
             var counter = reflist[id].counter
             var authors = reflist[id].authors
             var title = reflist[id].title
