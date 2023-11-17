@@ -431,7 +431,7 @@ autoExpandExamples.ur = `
 جان٘چْنا|to investigate|d͡ʒɑːn.t͡ʃnɑː||جانچنا
 جانچنا|to investigate|d͡ʒɑːn.t͡ʃnɑː||جان٘چْنا
 جانکاری|information|d͡ʒɑːn.kɑː.ɾiː
-جاپانی|Japanese|d͡ʒɑː.pɑː.niː
+جاپانی|Japanese|d͡ʒɑː.pɑː.niː||جَاپَانِی|
 جبوتی|Djibouti|d͡ʒɪ.buː.t̪iː
 جدا|to separate|d͡ʒʊ.d̪ɑː
 جدید|new, recent|d͡ʒə.d̪iːd̪
@@ -1082,7 +1082,7 @@ autoExpandExamples.ur = `
 پاؤں|foot|pɑ̃ː.ũː/pɑ̃ː.uː
 پانچ|five|pɑ̃ːt͡ʃ
 پانچواں|fifth|pɑ̃ːt͡ʃ.ʋɑ̃ː
-پانی|water|p§ɑː.§n§iː
+پانی|water|p§ɑː.§n§iː||پَانِی
 پاکستان|Pakistan|pɑː.kɪs.t̪ɑːn
 پاکستانی|Pakistani|pɑː.kɪs.t̪ɑː.niː
 پتا|address (place)|pə.t̪ɑː
@@ -1254,6 +1254,7 @@ autoExpandExamples.ur = `
 گاتر|limb|ɡɑːt̪.ɾᵊ
 گاری|car|g§ɑː§r§iː
 گَارِی|car|gɑː§‹§riː§‹
+گاری|car|gɑː§‹§riː§‹||گَارِی
 گام|step|g§ɑː§m
 گانا|song|ɡɑː.nɑː
 گاڑھا|thick|ɡ§ɑː.§ɽʱ§‹§ɑː
