@@ -7441,8 +7441,8 @@ autoExpandExamples.ar = `
 يَوْم|day|ja§w§m|yawm|يوم
 پاريس|Paris|paː§‹.§riː§‹§s|pārīs|پَارِيس
 پَارِيس|Paris|paː§‹.§riː§‹§s|pārīs|پاريس
-چاكارتا|Jakarta|jaː§‹.§kaː§‹§r.§ta§–||چَاكَارْتَا
-چَاكَارْتَا|Jakarta|jaː§‹.§kaː§‹§r.§ta§–||چاكارتا
+چاكارتا|Jakarta|d͡ʒaː§‹.§kaː§‹§r.§ta§–||چَاكَارْتَا
+چَاكَارْتَا|Jakarta|d͡ʒaː§‹.§kaː§‹§r.§ta§–||چاكارتا
 ڤيينا|Vienna|vi.§jeː§‹.§na§–
 
 
