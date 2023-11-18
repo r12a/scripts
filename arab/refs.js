@@ -389,6 +389,13 @@ reflist = {
 "lang": new Set(['ug']),
 },
 
+"wup": {
+"authors": "Wikipedia",
+"title":"Uyghur phonology",
+"url":"https://en.wikipedia.org/wiki/Uyghur_phonology",
+"lang": new Set(['ug']),
+},
+
 "yh": {
 "authors": "Yannis Haralambous",
 "title":"Breaking Arabic: the creative inventiveness of Uyghur script reforms",

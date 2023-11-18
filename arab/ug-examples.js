@@ -1,7 +1,7 @@
 /*
-@ Source: 
+@ Source: https://en.wikipedia.org/wiki/Uyghur_language#Phonology
 
-native | meaning | IPA① | transcription | other transcriptions② & notes | wiktionary③
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -16,6 +16,10 @@ native | meaning | IPA① | transcription | other transcriptions② & notes | wi
 ③ x means that no link to Wiktionary should be added
    if Wiktionary spells the word differently, add the spelling here
 */
+
+
+otherTranscription = true   // kicks in the latest order of items
+
 
 
 
@@ -1308,10 +1312,26 @@ autoExpandExamples.ug = `
 ۋەيران||
 ۋەھشىي||
 
+// wikipedia
+ئەپسۇس|pity|æp.sus|epsus||loan
+گۆش|meat|ɡøʃ|gösh||loan
+سائەت|hour|sɑʔɛt|saet||loan
+ۋېلسىپىت|bicycle|welsipit|wëlsipit||loan
+دوختۇر|doctor|doχtur|doxtur||loan
+پويىز|train|ˈpojiz|poyiz||loan
+ئوبلاست|oblast, region|oblɑst|oblast||loan
+تېلېۋىزور|TV|televizor|tëlëwizor||loan
+لەڭپۇڭ|agar-agar jelly|lɛmpuŋ|lempung||loan|x
+دۇفۇ|tofu|dufu|dufu||loan
+شۇجى|secretary|ʃud͡ʒi|shuji||loan|x
+جوزا|table, desk|d͡ʒozɑ|joza||loan
+بىڭشاڭ|refrigerator|biŋʃɑŋ|bingshang||loan|x
 
 
 
-
+ئىززەت-ھۆرمەت|dignity||izzet-hörmet|||x
+ھۆرمەت|respect|hørmɛt|hörmet
+بىر-بىرىگە|to each other||birbirige|||x
 
 
 
