@@ -377,7 +377,7 @@ function shareCodeLinks (charList, script, charApp) {
 function listAllIndexCharacters (scriptISO, pickerName) {
     // creates the showStats table
     
-    var out = ''
+    var out = '<table>'
     var list
     
     
@@ -495,7 +495,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
     /* ACTION TO TAKE */
 
-    out += '<tr><th></th><th colspan="2" style="text-align:start">Actions to take</th></tr>'
+    out += '<tr><th></th><th colspan="2" style="text-align:start">Actions to take for new characters</th></tr>'
 
     // what's in the spreadsheet but not in the index    
     result = ''
@@ -510,15 +510,8 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     for (var t=0;t<usedSpreadsheetChars.length; t++) {
         if (! blockChars.includes(usedSpreadsheetChars[t])) result += usedSpreadsheetChars[t]
         }
-    out += `<tr><th>Add to xx&#x2011;details</th><td id="spreadsheetExtras" style="word-break:break-all;">${ result }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
-
-
-    // find out what's in the index but not in the spreadsheet
-    result = ''
-    for (var t=0;t<mainIndexArray.length; t++) {
-        if (! usedSpreadsheetChars.includes(mainIndexArray[t])) result += mainIndexArray[t]
-        }
-    out += `<tr><th>Used index extras</th><td id="indexSurplus" style="word-break:break-all;">${ result }</td><td id="indexSurplusTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('indexSurplus').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+    out += `<tr><th>Add to xx&#x2011;details</th><td id="detailsNeeds" style="word-break:break-all;">${ result }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+    out += `<tr><th></th><td colspan="2" style="text-align:start"><a target="_blank" href="../_tools/generate_details_page_stubs.html?q=${ result }">Details creator</a></td></tr>`
 
 
     // find out what's in the unused spreadsheet but not in the unused index    
@@ -542,6 +535,10 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
     out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
 
+    out += `<tr><th>Add new characters to picker</th><td style="text-align:start"><a target="_blank" href="../../pickers/${ pickerDir }/index.html">Picker</a></td></tr>`
+    
+    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
+
     
     out += '<tr><th></th><th colspan="2" style="text-align:start">&nbsp;</th></tr>'
 
@@ -553,8 +550,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     
     // create entry for character use
     usedNonASCII = ''
-    out += '<tr><th></th><th colspan="2" style="text-align:start">Character usage</th></tr>'
-    out += `<tr><th>&nbsp;</th><td id="cUsage" style="word-break:break-all;">`
+    out += `<tr><th>Update Character usage</th><td id="cUsage" style="word-break:break-all;">`
     result = listCharsInSpreadsheet('letters').join('')
     out += `letter:"${ result }", `
     usedNonASCII += result
@@ -599,6 +595,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
         <td id="ssCharListTotal">${ result.length }</td>
         <td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('cUsage').textContent)"></td>${ shareCodeLinks(usedNonASCII,scriptISO,pickerName) }</tr>`
 
+    out += '<tr><th></th><th colspan="2" style="text-align:start">Also update xx-langdata.js</th></tr>'
 
 
     out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
@@ -610,17 +607,23 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     result = listCharsInSpreadsheet('possibles').join('')
     out += `<tr><th>TBC</th><td id="toInvestigate" style="word-break:break-all;">${ result }</td><td id="toInvestigateTotal">${ result.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('toInvestigate').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`*/
 
-
+    out += `</table>`
+    out += `<details><summary>More details</summary>`
+    out += `<table style="margin-inline-start:7.5%; margin-inline-end:32%;">`
 
 
 
 
     
-    /*   BLOCK PAGE   */
+    //   BLOCK PAGE   
+    
+    
     
     out += '<tr><th></th><th colspan="2" style="text-align:start">&nbsp;</th></tr>'
 
     out += '<tr><th></th><th colspan="2" style="text-align:start">Block details</th></tr>'
+
+
 
     // show unique characters in the xx-details.html file
     out += `<tr><th>All</th><td id="allPageList" style="word-break:break-all;">${ blockChars.join('') }</td><td id="allPageListTotal">${ blockChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allPageList').textContent)"></td>${ shareCodeLinks(blockChars.join(''),scriptISO,pickerName) }</tr>`
@@ -636,7 +639,17 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
 
     
-    /*   THIS PAGE   */
+    //   THIS PAGE   
+    // find out what's in the index but not in the spreadsheet
+    result = ''
+    for (var t=0;t<mainIndexArray.length; t++) {
+        if (! usedSpreadsheetChars.includes(mainIndexArray[t])) result += mainIndexArray[t]
+        }
+    out += `<tr><th>Used index extras</th><td id="indexSurplus" style="word-break:break-all;">${ result }</td><td id="indexSurplusTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('indexSurplus').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+
+
+
+
     
     out += '<tr><th></th><th colspan="2" style="text-align:start">&nbsp;</th></tr>'
 
@@ -654,7 +667,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
 
 
-    /*   INDEX   */
+    //   INDEX   
 
     out += '<tr><th></th><th colspan="2" style="text-align:start">Index</th></tr>'
     
@@ -689,6 +702,8 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
 
 
+    out += `</table></details>`
+    out += `</tr>`
 
 
 	document.getElementById('charCountList').innerHTML = out

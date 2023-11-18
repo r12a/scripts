@@ -231,7 +231,7 @@ function makeIndexIntro (node) {
 	`
     
     out += `</div>
-    <table id="charCountList"></table>
+    <div id="charCountList"></div>
     `
 	node.outerHTML = out
 
