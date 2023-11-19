@@ -43,8 +43,6 @@ autoExpandExamples.ks = `
 آگُر||
 أسؠ||
 أمیٖر||
-أنْز|male swan|ə§̃§z
-أنْزِنؠ|female swan|ə§̃.§zi§n§ʲ
 أنْجیٖر||
 أچھ||
 أہرُن||
@@ -57,7 +55,6 @@ autoExpandExamples.ks = `
 اوش|husband|oː§‹§ʃ
 اول||
 اوٗ||
-اوٚبُر|cloudy weather|obur
 اوٚنْگٕج|finger|›§õ§‹§ɡɨ§d͡ʒ
 اَ||
 اَباووٚز||
@@ -69,7 +66,7 @@ autoExpandExamples.ks = `
 اَبوٚڈ||
 اَبیْوٚن||
 اَتوٗل||
-اَتھٕ|hand|a§t§ʰɨ
+اَتھٕ|hand|a§tʰɨ§‹
 اَخبار||
 اَدَم||
 اَدۄے||
@@ -88,14 +85,11 @@ autoExpandExamples.ks = `
 اَرژُن||
 اَز||
 اَزماوُن||
-اَسمٲنؠ أنْز|goose|asməːnʲ ə̃z
 اَل||
 اَماپوٚز||
 اَمب||
 اَنُن||
 اَنْدَر|inside|a§n.§da§r
-اَنْگریٖزؠ|English (language)|a§ŋ§ɡ§r§iː§zʲ/ãɡriːzʲ
-اَنْگریٖزؠ|English (language)|ã§‹§ɡ§r§iː§zʲ
 اَنْگ||
 اَٹوٗٹ||
 اَٹَل||
@@ -152,8 +146,6 @@ autoExpandExamples.ks = `
 برَْسوار|Thursday|b§ra§s§w§aː§r
 برَْگ|blue heron|b§ra§g
 برِْمِج||
-برْور|cat (m)|broːr
-برْٲر|cat (f)|brəːr
 برْؠسوار||
 برْور||
 برْٲر||
@@ -197,8 +189,6 @@ autoExpandExamples.ks = `
 بوٚڈ||
 بیساکھ|April-May|beːsaːkʰ
 بیمہٕ|brother-in-law|b§eː§m§ɨ
-بیْور|cat (m)|bjoːr
-بیْٲر|cat (f)|b§j§əː§r
 بیٔنْزٕ|neice|bjənzɨ
 بیٚنہِ|sister|b§e§n§i
 بیْور||
@@ -233,7 +223,6 @@ autoExpandExamples.ks = `
 تُرُن||
 تُلُن||
 تُلٕر||
-ترْےٚ|three|t§r§e|tre||ترٛےٚ
 تٔژ|hot f.|tə§t͡s
 تٕژھ||
 تٟر|cold|tɨː§r
@@ -279,7 +268,6 @@ autoExpandExamples.ks = `
 دَب||
 دَنْد|tooth, tusk|dãnd
 دَوُن||
-دَکھیُْن|south|dakʰjun
 دَے||
 دُ ہٲٹھ||
 دُسَتَتھ||
@@ -312,7 +300,6 @@ autoExpandExamples.ks = `
 دیْارٕز||
 رؠتہٕ کال|summer|rʲatɨ kaːl
 رؠتہٕ کول|summer|r§ʲa§t§ɨ§ §k§oː§l
-رؠے|ant|r§ʲa§j
 راتھ||
 رازٕ||
 رازٕدٲنؠ||
@@ -340,7 +327,6 @@ autoExpandExamples.ks = `
 رٲچھ||
 رۄنْگ||
 ریش|beard|r§eː§ʃ
-ریٚے|ant|rej
 زاتھ||
 زادۄہ||
 زال||
@@ -483,7 +469,6 @@ autoExpandExamples.ks = `
 ماستُر بوے|cousin|maːstur boːj
 ماستٕر بیٚنہِ|cousin|maːstɨr beni
 ماسُو|maternal uncle|maːsuw
-مالیُْن|maternal home of wife|maːljun
 مام|maternal uncle|maːm
 مامتُر بوے||
 مامتٕر بیٚنہِ||
@@ -618,7 +603,6 @@ autoExpandExamples.ks = `
 پادَر سٕہہ|lion|paːdar sɨh
 پاس||
 پانْژٕ ترْٕہ|thirty-five|pãːt͡sɨtrɨh
-پانْژھ|five|p§ãː§⋯§t͡s§ʰ
 پانْژٕ ترْٕہ||
 پانْژٕ تٲجِہہ||
 پانْژٕ تٲجی||
@@ -712,7 +696,7 @@ autoExpandExamples.ks = `
 پیٔتٕر|paternal uncle|pjətɨr
 پیٖن||
 پیٚشاب|urine|peʃɑːb
-پیٚچھَنؠ|paternal aunt|p§e§t͡ʃ§ʰa§n§ʲ
+پیٚچھَنؠ|paternal aunt|p§e§t͡ʃʰa§‹§nʲ§‹
 پیْوٚل||
 چِلَے خۄرٕد||
 چِلَے کَلان||
@@ -763,7 +747,7 @@ autoExpandExamples.ks = `
 ژٕتھٕر|1st month (Mar-Apr)|t͡sɨtʰɨr
 ژٟرُن||
 ژھ||
-ژھانْڈُن|to look for|t͡sʰãːɖun
+ژھانْڈُن|to look for|t͡sʰ§‹§ãː§‹§ɖu§n
 ژھاوُل|goat m.|t͡sʰaːwul
 ژھاوٕج|goat f.|t͡sʰ§‹§aː§wɨ§d͡ʒ
 ژھَٹُت||
@@ -863,8 +847,6 @@ autoExpandExamples.ks = `
 کیلہٕ||
 کینْکہٕ لٔٹ|lizard|kẽːkɨləʈ
 کیُْس|common teal|kjus
-کیْوٚم|insect|k§j§o§m
-کؠوٚم|insect|kʲ§‹§o§m|k'om||m.s.|x
 کیْازِ||
 گاش||
 گام|village|ɡaːm
@@ -988,8 +970,24 @@ autoExpandExamples.ks = `
 کٲڈؠ|mind, intellect| k§əː§ɖʲ§‹ |kạ̄ḍ'
 
 
+@ wiktionary
+رؠے|ant|rʲa§‹§j|ryay
+ریٚے|ant|r§e§j|rey
+کیْوٚم|insect|k§j§o§m
 
-// kashmiri dictionary
+
+@ unknown
+مالیُْن|maternal home of wife|m§aː§l§ju§n||||x
+دَکھیُْن|south|da§kʰ§‹§ju§n||||x
+اوٚبُر|cloudy weather|›§o§bu§r
+أنْز|male swan|ə̃§‹§z
+أنْزِنؠ|female swan|ə̃§‹.§zi§n§ʲ
+اَسمٲنؠ أنْز|goose|a§s§m§əː§nʲ§‹§ §ə̃§‹§z
+
+
+
+@ kashmiri dictionary
+کؠوٚم|insect|kʲ§‹§o§m|k'om||m.s.|x
 اکھؠوٗر|letter of the alphabet|akʰʲur|akh'ur|||x
 اچھُر|letter of the alphabet|at͡ʃʰur|achur|||x
 ضٔمیٖر|nature|zə§m§iː§r|zAmi:r|||x
@@ -1008,6 +1006,17 @@ autoExpandExamples.ks = `
 کانْبَل|jaundice|k§ãː§‹§ba§l|ka~:mbal||homograph m|x
 گرٟسؠ باے|peasant woman|g§rɨː§s§ §b§aː§y|grI:s' bay|||x
 نَزرانٕہ|present|na§z§r§aː§nɨ|nazra:nI|||x
+بنْور|male cat| broːr|bro:r|||x
+بنْٲر|female cat| brəːr|brA:r|||x
+دۄیُن|to milk|d§ɔ§ju§n|d>yun|||x
+دَکھؠُن|south|da§kʰʲu§‹§‹§n|dakh'un|||x
+اُجرَتھ|wages|u§j§ra§tʰ|ujrath|||x
+ترْے|three|t§r§e|tre||ترٛےٚ
+تَپَسیٚا |meditation||tapas'a:|||x
+قوبوٗ|control|k§oː§b§uː|ko:bu:|||x
+اَنْگریز|Englishman|a§ŋ§ɡ§r§eː§z|a~gre:z|||x
+اَنْگریٖزی|English (language)|ã§‹§ɡ§r§iː§z§iː|a~gri:zi:|||x
+پانْژھ|five|p§ãː§‹§t͡sʰ|pa~:tsh|||x
 
 
 
