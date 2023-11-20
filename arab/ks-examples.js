@@ -502,8 +502,6 @@ autoExpandExamples.ks = `
 مٔہنیُْو|man|məhnjuw
 مٕتھٕر|urine|mɨtʰɨr
 مٲج|mother|məːd͡ʒ
-مٲش|buffalo|məːʃ
-مٲنْش|buffalo|mə̃ːʃ
 مۄنْجہِ ہور|9th month (Nov-Dec)|mɔnd͡ʒihoːr
 مۄنْگُر|kid m. (goat)|mɔnɡur
 مۄنْگٕر|kid f. (goat)|mɔnɡɨr
@@ -958,7 +956,7 @@ autoExpandExamples.ks = `
 رؠکھ|guano|| ryakh
 زؠو|tongue; language| zʲa§‹§w|zyav
 سؠکھ|sand||syakh
-لؠو|lick!| lʲa§‹w|lyav
+لؠو|lick!| lʲa§‹§w|lyav
 لؠوُن|to lick||lyavun
 لؠکھ|cursing, abuse||lyakh
 لؠکھ ژارٕنؠ|to abuse||lyakh ċārụn'
@@ -983,6 +981,8 @@ autoExpandExamples.ks = `
 أنْز|male swan|ə̃§‹§z
 أنْزِنؠ|female swan|ə̃§‹.§zi§n§ʲ
 اَسمٲنؠ أنْز|goose|a§s§m§əː§nʲ§‹§ §ə̃§‹§z
+مٲش|buffalo|m§əː§ʃ||||x
+مٲنْش|buffalo|m§ə̃ː§‹§ʃ||||x
 
 
 
