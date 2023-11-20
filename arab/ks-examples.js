@@ -1017,6 +1017,22 @@ autoExpandExamples.ks = `
 اَنْگریز|Englishman|a§ŋ§ɡ§r§eː§z|a~gre:z|||x
 اَنْگریٖزی|English (language)|ã§‹§ɡ§r§iː§z§iː|a~gri:zi:|||x
 پانْژھ|five|p§ãː§‹§t͡sʰ|pa~:tsh|||x
+بَمٟہ ژوٗنْٹھ|quince|ba§m§–§ §t͡s§ũː§‹§ʈʰ|bamtsu:Th||long vowel+nasalisation|x
+کھٔرؠ گی|vulgarity, meanness|kʰə§‹§rʲ§‹§ §ɡ§iː|khAr'gi:|||x
+گُلؠ مؠوٗٹھ|wedding present|ɡu§lʲ§‹§ §mʲ§‹§uː§ʈʰ|gul'm'u:Th|||x
+تَرنْگٟہ|Hindu women's headwear|ta§r§n§ɡɨ|tarngI||odd looking syllable, nasal seems misplaced|x
+تَرجَمٕ|translation|ta§r§d͡ʒa§mɨ|tarjamI|||x
+توٚنب|cotton flake|t§o§m§b|tomb||ن pronounced m|x
+درُْے|brother-in-law|d§ru§j|druy|||x
+نَوُن تٕہ پھۄلن|to flourish|na§vu§n§ §tɨ§–§ §pʰ§–§lu§n|navun tI phlun||pronunciation correct?|x
+پٔزؠ یور|person who speaks truth|pə§zʲ§‹§ §j§oː§r|pAz'yo:r|||x
+پَرؠُن|seive|pa§rʲu§‹§n|par'un|||x
+پَرُن|to read|pa§ru§n|parun|||x
+بےٚ میل|not matching|b§e§ §m§eː§l|beme:l||final e or e: ?|x
+لِکھٲے|writing|li§kʰ§əː§j|likhA:y|||x
+ثَخص|person|ʃa§kʰ§s|shakhs||unusual syllable ks|x
+شُےٚ|six|ʃ§e|she||correct spelling? final short e!|x
+سَنْگ|association|sã§‹§ɡ|sanɡ||nasaln doesn't make coda|x
 
 
 
