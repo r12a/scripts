@@ -1680,12 +1680,27 @@ function replaceStuff (node) {
     //if (chars.length > 1) {
         var length = chars.length
         for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
-        out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')">list '
+        out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>'
         if (length === 2) out += 'both'
-        else if (length > 2) out += 'all '+length
+        else if (length > 2) out += length
+        out += '</div>'
+        out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; margin-inline-end:1rem;"></span> `
         out += '</div>'
         //}
 
+/*
+
+        var length = chars.length
+        for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
+        out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')"><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"> '
+        if (length === 2) out += 'both'
+        else if (length > 2) out += 'all '+length
+        out += '</div>'
+        out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; margin-inline-end:1rem;"></span> `
+        out += '</div>'
+        //}
+
+*/
     // find out whether this table includes status information
     var showStatus = false
     for (c=0;c<chars.length;c++) {
@@ -2063,6 +2078,56 @@ function showCharDetailsEvent (evt) {
 	addExamples(evt.target.lang)
 	//autoTransliterate(evt.target.lang)
 	convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(table, window.blockDirectoryName, 'c')
+    }
+
+
+function showAllCharDetails (node) {
+    // opens a panel to display character notes details
+    
+	if (typeof charDetails === 'undefined') return
+
+    figure = node.closest('figure')
+    displayedItem = ''
+    if (figure === null) return
+ 	
+	table = figure.querySelector('table')
+   
+    var itemlist=figure.querySelectorAll('.listItem')
+    var characters = ''
+    for (i=0;i<itemlist.length;i++) characters += itemlist[i].textContent
+    
+    const uniqueSet = new Set([...characters])
+    var uniqueArray = [...uniqueSet]
+
+    var charList = uniqueArray.join('')
+    
+	table = figure.querySelector('table')
+    displayedItem = ''
+    if (table !== null) displayedItem = table.querySelector('.ex')
+    if (displayedItem) displayedItem = displayedItem.textContent
+    
+    // if clicked item and table are about the same thing, just close table
+    if (displayedItem && displayedItem === charList) { 
+        console.log("found",displayedItem)
+        table.parentNode.removeChild(table)
+        return
+        }
+    
+    // clear any existing table
+	if (table !== null) table.parentNode.removeChild(table)
+	
+	var table = document.createElement('table')
+	table.className = 'charDetails'
+	table.innerHTML = makeDetails(charList, window.langTag)
+	figure.appendChild(table)
+	
+	expandCharMarkup()
+	addExamples(window.langTag)
+	//convertTranscriptionData(evt.target)
 	setFootnoteRefs()
     var links = table.querySelectorAll('.codepoint a, .codepoint code')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
