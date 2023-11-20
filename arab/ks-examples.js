@@ -972,6 +972,7 @@ autoExpandExamples.ks = `
 رؠے|ant|rʲa§‹§j|ryay
 ریٚے|ant|r§e§j|rey
 کیْوٚم|insect|k§j§o§m
+ترٛےٚ|three|t§r§e|tre||ترٛے
 
 
 @ unknown
@@ -1011,7 +1012,6 @@ autoExpandExamples.ks = `
 دۄیُن|to milk|d§ɔ§ju§n|d>yun|||x
 دَکھؠُن|south|da§kʰʲu§‹§‹§n|dakh'un|||x
 اُجرَتھ|wages|u§j§ra§tʰ|ujrath|||x
-ترْے|three|t§r§e|tre||ترٛےٚ
 تَپَسیٚا |meditation||tapas'a:|||x
 قوبوٗ|control|k§oː§b§uː|ko:bu:|||x
 اَنْگریز|Englishman|a§ŋ§ɡ§r§eː§z|a~gre:z|||x
@@ -1019,7 +1019,7 @@ autoExpandExamples.ks = `
 پانْژھ|five|p§ãː§‹§t͡sʰ|pa~:tsh|||x
 بَمٟہ ژوٗنْٹھ|quince|ba§m§–§ §t͡s§ũː§‹§ʈʰ|bamtsu:Th||long vowel+nasalisation|x
 کھٔرؠ گی|vulgarity, meanness|kʰə§‹§rʲ§‹§ §ɡ§iː|khAr'gi:|||x
-گُلؠ مؠوٗٹھ|wedding present|ɡu§lʲ§‹§ §mʲ§‹§uː§ʈʰ|gul'm'u:Th|||x
+گُلؠ مؠوٗٹھ|wedding present|ɡu§lʲ§‹§ §mʲ§‹§uː§ʈʰ§‹|gul'm'u:Th|||x
 تَرنْگٟہ|Hindu women's headwear|ta§r§n§ɡɨ|tarngI||odd looking syllable, nasal seems misplaced|x
 تَرجَمٕ|translation|ta§r§d͡ʒa§mɨ|tarjamI|||x
 توٚنب|cotton flake|t§o§m§b|tomb||ن pronounced m|x
@@ -1033,6 +1033,7 @@ autoExpandExamples.ks = `
 ثَخص|person|ʃa§kʰ§s|shakhs||unusual syllable ks|x
 شُےٚ|six|ʃ§e|she||correct spelling? final short e!|x
 سَنْگ|association|sã§‹§ɡ|sanɡ||nasaln doesn't make coda|x
+دُپاسے|on both sides|du§p§aː§s§e|dupa:se|||x
 
 
 
