@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Get new character blocks</title>
+<meta name="description" content="Generate character sections for block doc."/>
+
+<link rel="stylesheet" href="local.css" type="text/css" />
+
+<script src="../../uniview/descriptions.js"></script> 
+<script src="../../uniview/u.js"></script> 
+</head>
+
+<body>
+<h1>Generate block page stubs</h1>
+<p>Produces a terms list from a list of romanised entries in the Kashmiri-English dictionary.</p>
+<p>Add a list of terms here. 
+<button onclick="document.getElementById('listin').value = ''";document.getElementById('listin').focus()>Clear</button></p>
+
+<p><textarea id="listin" placeholder="Add a list of characters here." style="height:400px;width:100%;"></textarea></p>
+
+<p>
+<button style="font-size: 150%;" onClick="
+document.getElementById('out').value = makeListFromChars(document.getElementById('listin').value); 
+document.getElementById('out').select()">Go</button>
+</p>
+
+<textarea id="out" style="height:600px;width:100%;"></textarea>
+
+
+
+
+<script>
+
+function makeListFromChars (terms) {
+	var termList = terms.split('\n')
+    
+	var out = ''
+	
+    for (var x=0; x<termList.length; x++) {
+        out += `||${ getIPA(termList[x]) }|${ termList[x] }|||x\n`
+		}
+	return out
+	}
+
+
+function getIPA (term) {
+    // converts the romanisation to IPA (approx)
+    
+    var out = term
+    
+    out = out.replace(/tsh/g,'t͡sʰ')
+    
+    out = out.replace(/th/g,'tʰ')
+    out = out.replace(/Th/g,'ʈʰ')
+    out = out.replace(/kh/g,'kʰ')
+    out = out.replace(/ph/g,'pʰ')
+    out = out.replace(/sh/g,'ʃ')
+    out = out.replace(/ch/g,'t͡ʃʰ')
+    out = out.replace(/ts/g,'t͡s')
+    
+    out = out.replace(/I:/g,'ɨː')
+    out = out.replace(/A:/g,'əː')
+    out = out.replace(/a:/g,'aː')
+    out = out.replace(/i:/g,'iː')
+    out = out.replace(/e:/g,'eː')
+    out = out.replace(/u:/g,'uː')
+    out = out.replace(/>:/g,'ɔː')
+    out = out.replace(/o:/g,'oː')
+
+    out = out.replace(/I/g,'ɨ')
+    out = out.replace(/A/g,'ə')
+    out = out.replace(/>/g,'ɔ')
+    
+    out = out.replace(/g/g,'ɡ')
+    out = out.replace(/c/g,'t͡ʃ')
+    out = out.replace(/j/g,'d͡ʒ')
+    out = out.replace(/T/g,'ʈ')
+    out = out.replace(/D/g,'ɖ')
+    out = out.replace(/y/g,'j')
+    out = out.replace(/'/g,'ʲ')
+    out = out.replace(/~/g,'̃')
+    out = out.replace(/:/g,'ː')
+    //out = out.replace(//,'')
+    return out
+    }
+</script>
+
+</body>
+</html>
