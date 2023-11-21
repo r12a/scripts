@@ -1038,6 +1038,7 @@ autoExpandExamples.ks = `
 ذاتھ|variety, caste|z§aː§tʰ§‹|za:th|||x
 ذِکِر|mention|zi§ki§r|zikir|||x
 حُکُمران|ruler(s)|hu§ku§m§r§aː§n|hukumra:n|||x
+کھٔرؠ پھٕ|naughty|kʰə§rʲ§‹§pʰɨ§‹|khAr'phI|||x
 
 
 
