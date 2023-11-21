@@ -1039,6 +1039,8 @@ autoExpandExamples.ks = `
 ذِکِر|mention|zi§ki§r|zikir|||x
 حُکُمران|ruler(s)|hu§ku§m§r§aː§n|hukumra:n|||x
 کھٔرؠ پھٕ|naughty|kʰə§rʲ§‹§pʰɨ§‹|khAr'phI|||x
+آرادَنا|worship, prayer|aː§r§aː§da§n§aː|a:ra:dana:|||x
+سۄاد|one and a quarter|s§ɔː§‹§d|s>:d|||x
 
 
 
