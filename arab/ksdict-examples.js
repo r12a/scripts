@@ -2756,7 +2756,7 @@ autoExpandExamples.ks = `
 ||pãːzuː|pa~:zu:|||x
 ||pãːt͡sɨtrɨh|pa~:tsItrIh|||x
 ||pãːt͡sɨtəːd͡ʒi|pa~:tsItA:ji|||x
-||pãːt͡sɨvanza|pa~:tsIvanza|||x
+||pãːt͡sɨvanzaːh|pa~:tsIvanza:h|||x
 ||pãːt͡sɨʃiːtʰ|pa~:tsIshi:th|||x
 ||||||x
 ||||||x
@@ -2894,7 +2894,7 @@ autoExpandExamples.ks = `
 ||poːʃ|po:sh|||x
 ||poːʃɨɡond|po:shIgond|||x
 ||poːʃɨt͡ʃaman|po:shIcaman|||x
-||poːʃɨpuːza|po:shIpu:za|||x
+||poːʃɨpuːzaː|po:shIpu:za:|||x
 ||poːʃɨ tʰər|po:shI thAr|||x
 ||poːʃɨ dɔpʰ|po:shI d>ph|||x
 ||poːʃɨvun|po:shIvun|||x
