@@ -1041,6 +1041,8 @@ autoExpandExamples.ks = `
 کھٔرؠ پھٕ|naughty|kʰə§rʲ§‹§pʰɨ§‹|khAr'phI|||x
 آرادَنا|worship, prayer|aː§r§aː§da§n§aː|a:ra:dana:|||x
 سۄاد|one and a quarter|s§ɔː§‹§d|s>:d|||x
+ہیٖرو|hero|h§iː§r§oː|hi:ro:|||x
+باضے|sometimes|b§aː§z§eː|ba:ze:|||x
 
 
 
