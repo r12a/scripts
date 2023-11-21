@@ -1034,6 +1034,10 @@ autoExpandExamples.ks = `
 شُےٚ|six|ʃ§e|she||correct spelling? final short e!|x
 سَنْگ|association|sã§‹§ɡ|sanɡ||nasaln doesn't make coda|x
 دُپاسے|on both sides|du§p§aː§s§e|dupa:se|||x
+ظٲلِم|cruel|z§əː§li§m|zA:lim|||x
+ذاتھ|variety, caste|z§aː§tʰ§‹|za:th|||x
+ذِکِر|mention|zi§ki§r|zikir|||x
+حُکُمران|ruler(s)|hu§ku§m§r§aː§n|hukumra:n|||x
 
 
 
