@@ -1043,6 +1043,7 @@ autoExpandExamples.ks = `
 سۄاد|one and a quarter|s§ɔː§‹§d|s>:d|||x
 ہیٖرو|hero|h§iː§r§oː|hi:ro:|||x
 باضے|sometimes|b§aː§z§eː|ba:ze:|||x
+دَریاو|river|da§r§j§aː§w|darya:v|||x
 
 
 
