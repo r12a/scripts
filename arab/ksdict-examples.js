@@ -4182,7 +4182,7 @@ autoExpandExamples.ks = `
 ||roːl|ro:l|||x
 ||roːʃun|ro:shun|||x
 ||roːʃandaːn|ro:shanda:n|||x
-||roːʃan kjajaː|ro:shan kyaya:|||x
+||roːʃan kʰajaː|ro:shan khaya:|||x
 ||rɔkɨ|r>kI|||x
 ||rɔnɡ|r>ng|||x
 ||rɔni|r>ni|||x
@@ -4976,7 +4976,7 @@ autoExpandExamples.ks = `
 ||sipʰar|siphar|||x
 ||sijaːh|siya:h|||x
 ||sijaːh t͡ʃuːs|siya:h cu:s|||x
-||sjaːsat|sya:sat|||x
+||sijaːsat|siya:sat|||x
 ||sijaːsat daːn|siya:sat da:n|||x
 ||sir|sir|||x
 ||siripʰ|siriph|||x
