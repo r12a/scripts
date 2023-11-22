@@ -71,7 +71,7 @@ autoExpandExamples.ur = `
 آنکھ|eye, sight|ɑ̃ːkʰ||آنْکھ
 آواز|sound, noise|ɑː.ʋɑːz
 آوشيکتا|necessity, need|ɑː.ʋəʃ.jək.t̪ɑː
-آٹھواں|eighth|ɑːʈʰ.ʋɑ̃ː/ɑːʈʰ.wɑ̃ː
+آٹھواں|eighth|ɑː§ʈʰ.§‹§ʋ§ɑ̃ː§‹§ / ɑːʈʰ.wɑ̃ː
 آپ کا|your|ɑːp.kɑː
 آپ|you (polite & plural)|ɑːp
 آکاش|sky|ɑː.kɑːʃ
@@ -153,7 +153,7 @@ autoExpandExamples.ur = `
 اقامت|residence permit|ɪ.qɑː.mət̪
 اقتصادی|economic|ɪq.t̪ɪ.sɑː.d̪iː
 السلام علیکم|greetings|a§–§ssa§l§ɑː§m§ §a§la§i§ku§m
-القرآن|the Qur'an
+القرآن|the Qur'an|a§l§ku§r§ɑː§n
 الم|enough|ə.ləm
 الماس|diamond|əl.mɑːs
 النکار|ornament, decoration|ə.ləŋ.kɑːɾ
@@ -195,7 +195,7 @@ autoExpandExamples.ur = `
 اولا|hailstone|oː.lɑː
 اونٹ|camel|ũːʈ
 اونچا|tall|›§ũ§‹§t͡ʃ§ɑː
-اوپر|above|uː§‹§pə§r||اوٗپر#اُوپر
+اوپر|above|uː§‹§pə§r||اوٗپر / اُوپر
 اُوپَر|above|uː§‹§pa§r||اوپر
 اوٗپَر|above|uː§‹§pa§r||اوپر
 اوہ|oh no!|uːɦ
@@ -215,8 +215,8 @@ autoExpandExamples.ur = `
 اور|and|ɔː§‹§r||اَور
 اَیسَا|such a|ɛː§‹§sɑː§‹||ایسا
 ایسا|such a|ɛː§‹§s§ɑː||اَیسا
-اُبْٹَنْ|ointment|ʊb.ʈən||ابٹن
-ابٹن|ointment|ʊb.ʈən||اُبْٹَنْ
+اُبْٹَنْ|ointment|ʊ§b.§ʈə§n||ابٹن
+ابٹن|ointment|ʊ§b.§ʈə§n||اُبْٹَنْ
 اُتّھان|surge, consciousness|ʊt̪.t̪ʰɑːn||اتھان
 اتھان|surge, consciousness|ʊt̪.t̪ʰɑːn||اُتّھان
 اُجالْنا|enlighten|ʊ.d͡ʒɑːl.nɑː||اجالنا
@@ -282,7 +282,6 @@ autoExpandExamples.ur = `
 بَاغ|garden|bɑː§‹§ɣ||باغ
 باغ|garden|b§ɑː§ɣ||بَاغ
 بال|hair|bɑːl
-بالکل|absolutely|bɪ§–§l§ku§l
 بالکل|quite, absolutely|bɪ§–§l.§kʊ§l
 بانچنا|to read|bɑ̃ːt͡ʃ.nɑː
 باٹ|way, road, track|باٹ
@@ -467,7 +466,7 @@ autoExpandExamples.ur = `
 جشن بہاراں|celebration|d͡ʒəʃn.eː.bə.ɦɑː.ɾɑ̃ː||جَشْنِ بَہاراں
 جَنَّتِی|heavenly, pious|d͡ʒə.nːə.t̪iː||جنتی
 جنتی|heavenly, pious|d͡ʒə.nːə.t̪iː||جَنَّتِی
-جنگل|jungle|d͡ʒəŋ.ɡəl||جَنْگَل#جَن٘گَل
+جنگل|jungle|d͡ʒəŋ.ɡəl||جَنْگَل / جَن٘گَل
 جَنْگَل|jungle|d͡ʒəŋ.ɡəl||جنگل
 جَن٘گَل|jungle|d͡ʒəŋ.ɡəl||جنگل
 جَیسا|as|ʤɛ§‹§s§ɑː||جیسا
@@ -524,10 +523,9 @@ autoExpandExamples.ur = `
 خلیج|gulf, bay|xə.liːd͡ʒ
 خنجر|dagger|xən.d͡ʒəɾ
 خواب گاہ|bedroom, dormitory|xʋɑːb‿ɡɑːɦ/xɑːb‿ɡɑːɦ
-خواب|dream|xɑːb
-خواب|dream|xʋɑːb/xɑːb
+خواب|dream|x§–§ɑː§b§ / xʋɑːb
 خواتین|ladies|xə.wɑː.t̪iːn
-خواہش|wish, desire|xɑː.ɦɪʃ/xʋɑː.ɦɪʃ
+خواہش|wish, desire|x§–§ɑː.§ɦɪ§ʃ§/xʋɑː.ɦɪʃ
 خوبانی|apricot|xuː.bɑː.niː
 خوبصورت|beautiful|xuːb.suː.ɾət̪
 خُود|self|x§ʊ§d||خود
@@ -683,7 +681,7 @@ autoExpandExamples.ur = `
 سرگرم|active, working|səɾ.ɡəɾm
 سزا|punishment, penalty|sə.zɑː
 سستی|laziness, sloth|sʊs.t̪iː
-سعآدت|fortunate|səʔɑːdət/sɑːdət
+سعآدت|fortunate|sə§ʔ§ɑː§də§t§ / sɑːdət
 سفارت|embassy, consulate|sɪ.fɑː.ɾət̪
 سفارتخانہ|embassy, consulate|sɪ.fɑː.ɾət̪.xɑː.nɑː
 سفر|travel, trip|sə.fəɾ
@@ -819,7 +817,7 @@ autoExpandExamples.ur = `
 عنب|grape|ɪ.§neː§b
 عوام|public, masses|ə.ʋɑːm
 عورت|woman, wife|ɔː.ɾət̪
-عرب|Arab|a§ra§b||عَرب#عَرَب
+عرب|Arab|a§ra§b||عَرب / عَرَب
 عَرب|Arab|a§ra§b||عرب
 عَرَب|Arab|ə§rə§b||عرب
 عیاشی|debauchery, hedonism|(ʔ)ə̯i.jɑː.ʃiː/(ʔ)əj.jɑː.ʃiː
@@ -933,7 +931,7 @@ autoExpandExamples.ur = `
 محشر|commotion|məɦ.ʃəɾ
 محل|palace|mɛ.ɦɛl̪
 محمد|Muhammad|mʊ.ɦəm.məd̪
-محنت|effort|məɦ.nət̪/meːɦ.nət̪
+محنت|effort|mə§ɦ.§nə§t̪§ /meːɦ.nət̪||||x
 مختصر|brief, short|mʊx.t̪ə.sɪɾ
 مخمل|velvet|məx.məl
 مذاق|fun, joke|mə.zɑːq
@@ -1115,7 +1113,7 @@ autoExpandExamples.ur = `
 پون|wind|pə.ʋən
 پوٗرَا|absolutely|p§uː§rɑː§‹||پورا
 پُورَا|absolutely|puː§‹§rɑː§‹||پورا
-پورا|absolutely|p§uː§r§ɑː||پوٗرا#پورا
+پورا|absolutely|p§uː§r§ɑː||پوٗرا / پورا
 پٹل|roof, thatch|pə.ʈəl
 پپاسا|thirst|pɪ.pɑː.sɑː
 پڑھنا|to read, study|pəɽʱ.nɑː
@@ -1348,7 +1346,7 @@ autoExpandExamples.ur = `
 
 
 
-
+کہہ|say|kɛ§ɦ§–||||x
 
 
 
