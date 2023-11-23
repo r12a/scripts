@@ -174,7 +174,7 @@ autoExpandExamples.ur = `
 انجانا|unknown, ignorant|ən.d͡ʒɑː.nɑː
 اندلس|Andalusian|ʊn.d̪ʊ.lʊs
 اندیکھا|unseen, invisible|ən.d̪eː.kʰɑː
-انش|part, portion|ənʃ
+انش|part, portion|ə§n§ʃ
 انشاءاللہ|God willing|ɪnʃallaː
 انشاءﷲ|God willing|ɪnʃallaː
 انقلاب|change, revolution|ɪn.qɪ.lɑːb
@@ -198,7 +198,7 @@ autoExpandExamples.ur = `
 اوپر|above|uː§‹§pə§r||اوٗپر / اُوپر
 اُوپَر|above|uː§‹§pa§r||اوپر
 اوٗپَر|above|uː§‹§pa§r||اوپر
-اوہ|oh no!|uːɦ
+اوہ|oh no!|›§uː§ɦ
 اَبابِیْل|swallow|ə.bɑː.biːl| abābīl |ابابیل
 ابابیل|swallow|ə.bɑː.biːl| abābīl |اَبابِیْل
 اَبِھشیک|annointing, inauguration|ə.bʱɪ.ʂeːk| abhiṣek |ابھشیک
@@ -299,7 +299,7 @@ autoExpandExamples.ur = `
 برما|drill (tool)|bəɾ.mɑː
 برچھا|spear, lance|bəɾ.t͡ʃʰɑː
 برچھیت|spearman, lancer|bəɾ.t͡ʃʰɛːt̪
-برکها|rain, showers|bəɾ.kʰɑː
+برکها|rain, showers|bə§ɾ.§kʰ§‹§ɑː
 بزرگ|aged person|bʊ.zʊɾɡ
 بستی|settlement, village|bəs.t̪iː
 بَطَّخ|duck|bə§t̪.t̪ə§x||بطخ
@@ -706,7 +706,7 @@ autoExpandExamples.ur = `
 سنہ|lion|sɪ̃ŋɦ
 سوادو|tasty|sʋɑː.d̪uː
 سوانگ|imitation, disguise|sʋɑːŋɡ
-سواگت|welcome|sʋɑː.ɡət̪
+سواگت|welcome|s§ʋ§ɑː.§ɡə§t̪
 سورج|sun|s§uː.§ɾə§d͡ʒ
 سوستک|swastika|sʋəs.t̪ɪk
 سوچنا|to think|soːt͡ʃ.nɑː
@@ -777,7 +777,7 @@ autoExpandExamples.ur = `
 صحیح|right, correct, accurate|sə.ɦiː
 صدائے بلند|a high voice|sa§d§ɑː §–§ɛ§ §bu§la§n§d
 صدر مملکت|president|sə.d̪əɾ.eː.mʊm.lɪ.kət̪
-صفحہ|page|səf.ɦɑː/sə.fɑː
+صفحہ|page|sə§f.§ɦ§ɑː§ / sə.fɑː
 صَفْحَۂ اَوَّل‎|home page|səf.ɦə.e.əʋːəl||صفحۂ اول‎
 صفحۂ اول‎|home page|səf.ɦə.e.əʋːəl||صَفْحَۂ اَوَّل‎
 صلیب|cross, crucifix|sə.liːb
@@ -951,7 +951,7 @@ autoExpandExamples.ur = `
 مظاہرہ|demonstration, rally|mʊ.zɑː.ɦɪ.ɾɑː
 معاشرہ|society|mʊ.(ʔ)ɑː.ʃɪ.ɾɑː
 معاف|forgiven|mʊ§ʔ§ɑː§f§ / mɑːf||||x
-معاملہ|matter, issue|mʊ.ɑːm.lɑː/mɑːm.lɑː
+معاملہ|matter, issue|mʊ.§›§ɑː§m.§l§ɑː§ / mɑːm.lɑː
 معلم|teacher, instructor|mʊ.(ʔ)əl.lɪm
 معیشت|economy|mə.(ʔ)iː.ʃət̪
 مفاہمت|compromise|mʊ.fɑː.ɦɪ.mət̪
@@ -1241,7 +1241,7 @@ autoExpandExamples.ur = `
 کہاوت|proverb|kə.ɦɑː.ʋət̪
 کہاں|where|kəhɑːn
 کہرا|thick fog|kʊɦ.ɾɑː
-کیا|question marker|kjɑː
+کیا|question marker|k§j§ɑː
 کیلا|banana|keː.lɑː
 کیمرہ|camera|k§ɛː§m.§ɾ§ɑː
 کیمیا|chemistry|kiː.mɪ.jɑː
