@@ -86,8 +86,8 @@ autoExpandExamples.ur = `
 ابهار|emergence|ʊ.bʱɑːɾ
 ابو|father, dad|əb.buː
 ابھشیک|annointing, inauguration|ə.bʱɪ.ʂeːk
-اِتِّحاد|unity, coalition|ɪ.t̪t̪ɪ.ɦɑːd̪| ittihād |اتحاد
-اتحاد|unity, coalition|ɪ.t̪t̪ɪ.ɦɑːd̪| ittihād |اِتِّحاد
+اِتِّحاد|unity, coalition|ɪ.§t̪t̪ɪ.§ɦ§ɑː§d̪| ittihād |اتحاد
+اتحاد|unity, coalition|ɪ.§t̪t̪ɪ.§ɦ§ɑː§d̪| ittihād |اِتِّحاد
 اتحادی|allied, coalition|ɪt̪.t̪ɪ.ɦɑː.d̪iː
 اتر پردیش|Uttar Pradesh|ʊt̪.t̪əɾ‿pɾə.d̪eːʃ
 اِتِّصال|juncture|ɪt̪.t̪ɪ.sɑːl|ittisāl|اتصال
@@ -634,11 +634,10 @@ autoExpandExamples.ur = `
 روزہ|fast|ɾoː.zɑː
 روشنی|brightness|ɾɔːʃ.niː/ɾoːʃ.niː
 رونا|to cry, weep|ɾoː.nɑː
-رَہنا|to remain|rɛ§h§n§ɑː||رہنا
-رہنا|to remain|rɛ§h§n§ɑː||رَہنا
+رَہنا|to live, remain|rɛ§h§n§ɑː||رہنا||رہنا
+رہنا|to live, remain|rɛ§h§n§ɑː||رَہنا
 رکت|red|ɾə§k§t̪
 رکشا|protection, safety|ɾək.ʂɑː
-رہنا|to live, stay|ɾəɦ.nɑː
 ریاضی|mathematics|ɾɪ.jɑː.ziː
 ریشم|silk|ɾeː.ʃəm
 ریپھ|reph|ɾeːpʰ
@@ -746,15 +745,15 @@ autoExpandExamples.ur = `
 شرکرا|sugar|ʃəɾ.kə.ɾɑː
 شریر|evil, bad, corrupt|ʃə.ɾiːɾ
 شعر|poetry couplet|ʃeːɾ
-شُعلہ|flame|ʃo§‹§l§ɑː||شعلہ
-شعلہ|flame|ʃo§‹§l§ɑː||شُعلہ
+شُعلہ|flame|ʃoː§‹§l§ɑː|śu'la|شعلہ||شعلہ
+شعلہ|flame|ʃoː§‹§l§ɑː|śu'la|شُعلہ
 شناخت|identification|ʃɪ.nɑːxt̪
 شَوق|keenness, interest|ʃɔ§‹§q||شوق
 شوق|keenness, interest|ʃ§ɔ§q||شَوق
 شَکتی|energy|ʃə§k§t§i||شکتی
 شکتی|energy|ʃə§k§t§i||شَکتی
-شُہرت|fame|ʃo§h§rə§t||شہرت
-شہرت|fame|ʃo§h§rə§t||شُہرت
+شُہرت|fame|ʃɔ§h§rə§t||شہرت
+شہرت|fame|ʃɔ§h§rə§t||شُہرت
 شِعر|verse|ʃeː§‹§ɾ|śer|شعر
 شعر|verse|ʃ§eː§ɾ|śer|شِعر
 شکتی|power, strength|ʃək.t̪iː
@@ -817,9 +816,8 @@ autoExpandExamples.ur = `
 عنب|grape|ɪ.§neː§b
 عوام|public, masses|ə.ʋɑːm
 عورت|woman, wife|ɔː.ɾət̪
-عرب|Arab|a§ra§b||عَرب / عَرَب
-عَرب|Arab|a§ra§b||عرب
-عَرَب|Arab|ə§rə§b||عرب
+عرب|Arab|ə§rə§b|arab| عَرَب
+عَرَب|Arab|ə§rə§b|arab|عرب||عرب
 عیاشی|debauchery, hedonism|(ʔ)ə̯i.jɑː.ʃiː/(ʔ)əj.jɑː.ʃiː
 عیسؑیٰ|Christ, upon him be peace!|isaː salejsallam||عیسؑی
 عیسؑی|Christ, upon him be peace!|isaː salejsallam||عیسؑیٰ
@@ -860,7 +858,8 @@ autoExpandExamples.ur = `
 قابلیت|ability|qɑːb.lɪ.jət̪||قابِلِیَّت
 قاتل|killer, assassin|qɑː.t̪ɪl
 قاضی نور محمّدؒ|Qazi Nur Muhammad, may God have mercy upon him!|kaziː nur mamed rahmatulla alayhe
-قاعدہ|law, rule|qɑː.ɪ.d̪ɑː
+قاعدہ|law, rule|q§ɑː.§ɪ.§d̪ɑː§–||قیَاعِدَہ
+قیَاعِدَہ|law, rule|q§ɑː.§ɪ.§d̪ɑː§–|قاعدہ
 قاموس|dictionary|qɑː.muːs
 قبضہ|occupation|qə§b.§zə§–
 قبول کرنا|to accept|qʊ.buːl‿kəɾ.nɑː
@@ -904,8 +903,8 @@ autoExpandExamples.ur = `
 لفظ|word, term|lə§f§z||لَفْظ
 لِکھنَا|to write|lɪ§kʰ§‹§nɑː§‹||لکھنا
 لکھنا|to write|lɪ§kʰ§‹§n§ɑː||لِکھنَا
-لِہٰذا|therefore|lɪ.ɦɑː.zɑː|le.ɦɑː.zɑː|لہذا
-لہذا|therefore|lɪ.ɦɑː.zɑː|le.ɦɑː.zɑː|لِہٰذا
+لِہٰذا|therefore|lɛ.§ɦɑː.§z§ɑː|lihāzā|لہذا||لہذا
+لہذا|therefore|lɛ.§ɦɑː.§z§ɑː|lihāzā|لِہٰذا
 لڑکا|boy|ləɽ.kɑː
 لڑکی|girl|lə§ɽ.§k§iː
 لڑکی|girl|lə§ɽ§k§iː
@@ -951,7 +950,7 @@ autoExpandExamples.ur = `
 مطلق العنانی|autocracy, totalitarianism|mʊt̪.lɪq.ʊl.ə.nɑː.niː
 مظاہرہ|demonstration, rally|mʊ.zɑː.ɦɪ.ɾɑː
 معاشرہ|society|mʊ.(ʔ)ɑː.ʃɪ.ɾɑː
-معاف|forgiven|mʊʔɑːf/mɑːf
+معاف|forgiven|mʊ§ʔ§ɑː§f§ / mɑːf||||x
 معاملہ|matter, issue|mʊ.ɑːm.lɑː/mɑːm.lɑː
 معلم|teacher, instructor|mʊ.(ʔ)əl.lɪm
 معیشت|economy|mə.(ʔ)iː.ʃət̪
@@ -1080,7 +1079,8 @@ autoExpandExamples.ur = `
 ٹھوس|solid, substantial|ʈʰoːs
 ٹھہرنا|to wait, stay|ʈʰə.ɦəɾ.nɑː
 پا خانہ|toilet|pɑː.xɑː.nɑː
-پاؤں|foot|pɑ̃ː.ũː/pɑ̃ː.uː
+پاؤں|foot|p§ɑ̃ː.§ũː§‹|pāū̃|پاؤُں
+پاؤُں|foot|p§ɑ̃ː.§ũː§‹|pāū̃|پاؤں||پاؤں
 پانچ|five|pɑ̃ːt͡ʃ
 پانچواں|fifth|pɑ̃ːt͡ʃ.ʋɑ̃ː
 پانی|water|p§ɑː.§n§iː||پَانِی
@@ -1249,7 +1249,8 @@ autoExpandExamples.ur = `
 کیڑا|worm|kiː.ɽɑː
 کے بنا|without|keː‿bɪ.nɑː
 گئے|they went|ga§–§e
-گاؤں|village, hamlet|ɡɑ̃ː.oː/ɡɑː.õː
+گاؤں|village, hamlet|ɡ§ɑː.§õː§‹|gāõ|گَاؤں
+گَاؤں|village, hamlet|ɡ§ɑː.§õː§‹|gāõ|گاؤں||گاؤں
 گائے|cow|ɡ§ɑː.§–§eː
 گائے|they sang|g§ɑː§–§e
 گاتر|limb|ɡɑːt̪.ɾᵊ
