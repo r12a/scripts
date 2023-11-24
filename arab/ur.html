@@ -62,7 +62,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->23 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->24 November, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -83,7 +83,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Urdu (Nastaliq Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->23-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ur">https://r12a.github.io/scripts/arab/ur</a></small></p>
+<p class="refLine"><small>Richard Ishida, Urdu (Nastaliq Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->24-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ur">https://r12a.github.io/scripts/arab/ur</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -2794,7 +2794,7 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <figure class="characterBox auto" data-cols="" data-links="#number_sign, #dates, #xxx, #xxx, #dates, #xxx">؀␣؁␣؂␣؃␣؄␣۝</figure>
 
 <p>Follow the links to learn more about each of these characters.</p>
-<p class="observation"><span class="leadin">Observation:</span> The subtending character display is broken in the Noto Nastaliq Urdu font. That font only produces the expected display if (a) a RTL override is applied to the characters, or (b) the SANAH is typed <em>after</em> the digits (in a RTL normal base direction, but not an override). The Awami Nastaliq font handles them as expected, as long as the sign precedes the digits and the base direction is set to RTL (but not if a directional override is applied).</p>
+
 <p>Urdu text also makes use of a relatively large set of invisible formatting characters, especially in plain text, many of which are used to manage text direction (see <a class="secref">directioncontrols</a>), and others are used to control cursive shaping behaviour (see <a class="secref">shapingcontrols</a>).</p>
 </section>
 </section>
@@ -2855,14 +2855,41 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <td><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06D3;</span> [<a href="/scripts/arabic/block#char06D3"><span class="uname">U+06D3 ARABIC LETTER YEH BARREE WITH HAMZA ABOVE</span></a>]</span>&nbsp;</td>
 <td><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06D2;&#x0654;</span> [<a href="/scripts/arabic/block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>&nbsp;</td>
 </tr>
+</tbody>
+</table>
+
+
+<p class="info">The single code point per vowel-sign is the  form preferred by the Unicode Standard and the form in common use for Urdu, but either could be used.</p>
+</section>
+
+
+
+
+<section id="hamza_yeh">
+<h4>Yeh with hamza</h4>
+
+<p>This item is a special case.  <span class="name">Yeh</span> with a <span class="name">hamza</span> is used in particular for 'hamza on its chair', but also for word medial standalone vowels.</p>
+
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Precomposed</th>
+<th scope="col">Decomposed</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><span class="codepoint" translate="no"><span dir="rtl" lang="ur">ئ</span> [<a href="block#char0626" target="c"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>] </span></td>
 <td><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x064A;&#x0654;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
 </tr>
 </tbody>
 </table>
-<p class="info">The single code point per vowel-sign is the  form preferred by the Unicode Standard and the form in common use for Urdu, but either could be used.</p>
-<p>The last item is a special case. The precomposed form has a canonical decomposition, but it is to hamza over <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span> rather than <span class="codepoint"><span dir="rtl" lang="ur">ی</span> <a href="/scripts/arabic/block#char06CC" target="c">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span>. This is used in particular for 'hamza on its chair', but also for word medial standalone vowels, and it is usually only when those are decomposed that the <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span> is found in Urdu.</p>
+
+
+<p>Urdu uses <span class="ch">ی</span> and doesn't use <span class="ch">ي</span> because the latter produces dots below in all positions, whereas <span class="name">yeh</span> in Urdu only has dots below in initial and medial forms.  However, the canonical decomposition of <span class="hx">0626</span> maps to the <em>Arabic</em> <span class="name">yeh</span> and a combining hamza.</p>
+
+<p>Nevertheless, the atomic character is widely used in Urdu text. To mitigate the issues, the Unicode Standard recommends that any time <span class="ch">ي</span> is combined with a hamza the font should drop the dot glyphs. This ensures that the text looks correct in decomposed form, but applications need to be aware that decomposed text will contain an Arabic <span class="name">yeh</span> which is not otherwise used for Urdu.</p>
 </section>
 
 
