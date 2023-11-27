@@ -16,7 +16,6 @@ autoExpandExamples.pes = `
 شما|you (2pl)|ʃomɒː|šomâ
 ایشان|they (3pl)|ˈeːʃɒːn|ešnân
 آنان|they (3pl)|ˈɒːnɒːn|ânân
-این|this|ˈiːn|in
 آن|that|ˈɒːn|ân
 اینجا|here|ˈiːndʒɒː|injâ
 آنجا|there|ˈɒːndʒɒː|ânjâ
@@ -41,14 +40,14 @@ autoExpandExamples.pes = `
 دُو|two|do|do|دو
 سه|three|se|se
 چهار|four|t͡ʃhɒːr|čhâr
-پنج|five|pændʒ|panj
+پنج|five|pæ§n§d͡ʒ|panj
 بزرگ|big|bozorg|bozorg
 دراز|long|derɒːz|derâz
 پهن|wide|pæhn|pahn
-فراخ|wide|færɒːx|farâx
+فراخ|wide|fæ§r§ɒː§x|farâx
 کلفت|thick|koloft|koloft
 سنگین|heavy|sænɡiːn|sangin
-کوچک|small|kuːt͡ʃæk|kučak
+کوچک|small|k§uː§t͡ʃæ§k|kučak
 کوتاه|short|kuːtɒːh|kôtâh
 باریک|narrow|bɒːriːk|bârik
 لاغر|thin|l§ɒː§ɣæ§r|lâğar
@@ -56,22 +55,22 @@ autoExpandExamples.pes = `
 مرد|man (adult male)|mærd|mard
 انسان|man (human being)|ensɒːn|ensân
 آدمی|man (human being)|ɒːdæmiː|âdami
-بچه|child|bat͡ʃe|bačče
+بچه|child|ba§t͡ʃ§e|bačče
 کودک|child|kuːdæk|kudak
 زن|wife|zæn|zan
 شوهر|husband|ʃohær|šowhar
 مادر|mother|mɒːdær|mâdar
 پدر|father|pedær|pedar
-حیوان|animal|hejvɒːn|heyvân
+حیوان|animal|he§j§v§ɒː§n|heyvân
 جانور|animal|dʒɒːnevær|jânvar
 ماهی|fish|mɒːhiː|mâhi
 پرنده|bird|pærænde|parande
-مرغ|bird|moɾɣ|morğ
+مرغ|bird|mo§ɾ§ɣ|morğ
 سگ|dog|sæg|sag
 شپش|louse|ʃepeʃ|šepeš
-مار|snake|mɒːr|mâr
-کرم|worm|kerm|kerm|کِرم
-کِرم|worm|kerm|kerm|کرم
+مار|snake|m§ɒː§r|mâr
+کرم|worm|ke§r§m|kerm|کِرم|kirm|کِرم
+کِرم|worm|ke§r§m|kerm|کرم|kirm|کرم||کرم
 درخت|tree|deræxt|deraxt
 جنگل|forest|dʒæŋæl|jangal
 چوب|stick|t͡ʃuːb|čub
@@ -79,11 +78,11 @@ autoExpandExamples.pes = `
 بذر|seed|bæzr|bazr
 تخم|seed|toxm|toxm
 برگ|leaf|bærg|barg
-ریشه|root|riːʃe|riše
+ریشه|root|r§iː§ʃ§e|riše
 تنه|bark (of a tree)|tæne|tane
 گل|flower|gol|gol
 چمن|grass|t͡ʃæmæn|čaman
-علف|grass, hay|ʔælæf
+علف|grass, hay|ʔæ§læ§f
 نخ|rope|næx|nax
 پوست|skin|puːst|pust
 گوشت|meat|guːʃt|gušt
@@ -107,7 +106,7 @@ autoExpandExamples.pes = `
 ناخن|fingernail|nɒːxon|nâxon
 پا|foot|pɒː|pâ
 ران|leg|ran|rân
-زانو|knee|zɒːnuː|zânu
+زانو|knee|z§ɒː§n§uː|zânu
 دست|hand|dæst|dast
 بال|wing|bɒːl|bâl
 شکم|belly|ʃekæm|šekam
@@ -118,7 +117,7 @@ autoExpandExamples.pes = `
 سینه|breast|siːne|sine
 دل|heart|del|del
 قلب|heart|ɢælb|qalb
-جگر|liver|dʒegær|jegar
+جگر|liver|d͡ʒe§ɡæ§r|jegar
 نوشیدن|to drink|nuːʃiːdæn|nušidan
 خوردن|to eat|xordæn|xordan
 جویدن|to bite|dʒæviːdæn|javidan
@@ -194,14 +193,14 @@ autoExpandExamples.pes = `
 سنگ|stone|sæŋ|sang
 شن|sand|ʃen|šen
 گرد|dust|gærd|gard
-زمین|earth|zæmiːn|zamin
+زمین|earth|zæ§m§iː§n|zamin
 ابر|cloud|æbr|abr
 مه|fog|meh|meh
-آسمان|sky|ˈɒːsemɒːn|âsmân
+آسمان|sky|ˈɒː§se§m§ɒː§n|âsmân
 باد|wind|bɒːd|bâd
 برف|snow|bærf|barf
 یخ|ice|jæx|yax
-دود|smoke|duːd|dud
+دود|smoke|d§uː§d|dud
 آتش|fire|ɒːtæʃ|âtaš
 آذر|fire|ɒːzær|âzar
 خاکستر|ash|xɒːkestær|xâkestar
@@ -234,7 +233,7 @@ autoExpandExamples.pes = `
 گرد|round|gerd|gerd
 تیز|sharp (as a knife)|tiːz|tiz
 کند|dull (as a knife)|kond|kond
-صاف|smooth|sɒːf|sâf
+صاف|smooth|s§ɒː§f|sâf
 تر|wet|tær|tar
 نم|wet|næm|nam
 خشک|dry|xoʃk|xošk
@@ -243,7 +242,7 @@ autoExpandExamples.pes = `
 نزدیک|near|næzdiːk|nazdik
 دور|far|duːr|dur
 راست|right|rɒːst|râst
-چپ|left|t͡ʃæp|čap
+چپ|left|t͡ʃæ§p|čap
 در|at|dær|dar
 در|in|dær|dar
 اندر|in|ændær|andar
@@ -354,8 +353,8 @@ autoExpandExamples.pes = `
 امضاء|signature|e§m§z§ɒː§–|emzâ'
 املای نانوشته غلط ندارد|an unwritten dictation has no errors|(ʔ)emlɒːje nɒːnəveʃte ɣælæt nædɒːɾæd
 امکان||
-امید|hope|omiːd|omêd|اُمید
-اُمید|hope|omiːd|omêd|امید
+امید|hope|o§m§iː§d|omêd|اُمید
+اُمید|hope|o§m§iː§d|omêd|امید||امید
 امیدوار||
 امیدیار||
 امین||
@@ -424,7 +423,7 @@ autoExpandExamples.pes = `
 اوردن|to bring (colloq)|ovordæn|âvardan|اُوُردَن
 اُوُردَن|to bring (colloq)|ovordæn|âvardan|اوردن
 اورشلیم|Jerusalem|ʔoɾʃæˈliːm
-اورمزد|Ahura Mazda|uɾˈmæzd
+اورمزد|Ahura Mazda|›§u§ɾ§ˈmæ§z§d
 اولی|the former, first|æ§vvæ§ˈl§iː|avvali|اَوَّلی
 اَوَّلی|the former, first|æ§vvæ§ˈl§iː|avvali|اولی||اولی
 اون|flour|(ʔ)ʊn/(ʔ)on
@@ -452,7 +451,7 @@ autoExpandExamples.pes = `
 ایسلند|Iceland|ʔisˈlænd̪
 ایمان||
 ایمان‌دار|believer|iːmɒːndɒːɾ
-این|this|iːn
+این|this|›§ˈiː§n|in
 این‌ها|these|iːnˈhɒː/inˈhɒː
 با||
 با این همه||
@@ -991,7 +990,7 @@ autoExpandExamples.pes = `
 تکیه‌گاه|fulcrum|t̪ʰæ§kʲ§j§e.§–§ɡ§ɒː§ʱ|takye-gâh
 تک‌زنگ زدن||
 تک‌شاخ||
-تیر|arrow|tʰiːɾ
+تیر|arrow|tʰ§iː§ɾ
 تیرداد||
 تیرگی||
 تیز||
@@ -1007,7 +1006,7 @@ autoExpandExamples.pes = `
 ثابتی||
 ثابت‌ها||
 ثانیه||
-ثبت|registration|sæbt
+ثبت|registration|sæ§b§t
 ثروت||
 ثروتمند||
 ثریا||
@@ -1385,7 +1384,7 @@ autoExpandExamples.pes = `
 خیر||
 خیرات||
 خیز||
-خیس|wet|xiːs
+خیس|wet|x§iː§s
 خیم||
 خین||
 خەر||
@@ -1601,7 +1600,7 @@ autoExpandExamples.pes = `
 ذبح||
 ذرت||
 ذره||
-ذهن|mind|zehn
+ذهن|mind|ze§h§n
 ذکر||
 ||
 ر||
@@ -2040,7 +2039,7 @@ autoExpandExamples.pes = `
 سیلابی||
 سیلاس||
 سیلاغ||
-سیلو|silo|ˈsi.lu
+سیلو|silo|ˈs§i.§l§u
 سیم||
 سیماب||
 سیمرغ||
@@ -2102,8 +2101,8 @@ autoExpandExamples.pes = `
 شب‌بوی|gillyflower|ʃæb buːj
 شب‌ها||
 شب‌کور||
-شتر|camel|ʃoˈtʰoɾ|šotor|شُتُر
-شُتُر|camel|ʃoˈtʰoɾ|šotor|شتر
+شتر|camel|ʃo§ˈtʰo§ɾ|šotor|شُتُر
+شُتُر|camel|ʃo§ˈtʰo§ɾ|šotor|شتر||شتر
 شترخار||
 شترغار||
 شترمرغ||
@@ -2233,7 +2232,7 @@ autoExpandExamples.pes = `
 شیعه|Shia, Shi'ite|ʃ§iː§ˈʔ§e|ši'e
 شیمی||
 شیوا||
-شیک|chic|ʃiːk
+شیک|chic|ʃ§iː§k
 صابون||
 صاحب||
 صادر کردن||
@@ -2278,7 +2277,7 @@ autoExpandExamples.pes = `
 صورتی||
 صورت‌غذا||
 ضبط||
-ضخیم|thick|zæˈxiːm
+ضخیم|thick|zæ§ˈx§iː§m
 ضد||
 ضد تانک||
 ضد ماهواره||
@@ -2297,7 +2296,7 @@ autoExpandExamples.pes = `
 طاها||
 طاووس||
 طبق||
-طبقه|floor, storey|tæbæɢe
+طبقه|floor, storey|tæ§bæ§ɢ§e
 طراح||
 طرح||
 طرفدار||
@@ -2315,7 +2314,7 @@ autoExpandExamples.pes = `
 ظرف||
 ظریف||
 ظفر||
-ظهر|noon, midday|zohɾ
+ظهر|noon, midday|zo§h§ɾ
 ظهور||
 عاج||
 عادت||
@@ -2424,7 +2423,7 @@ autoExpandExamples.pes = `
 غوز||
 غوک||
 غژب||
-غژگاو|yak|ɢæʒˈɡɒːv
+غژگاو|yak|ɢæ§ʒ§ˈɡ§ɒː§v
 غیر||
 غیر ممکن||
 غیرت||
@@ -2572,7 +2571,7 @@ autoExpandExamples.pes = `
 قاره||
 قارچ||
 قاسم||
-اِسْم|name|e§s§m|esm|اسم
+اِسْم|name|e§s§m|esm|اسم||اسم
 اسم|name|e§s§m|esm|اِسْم
 قاشق||
 قاضی||
@@ -2747,7 +2746,7 @@ autoExpandExamples.pes = `
 لیبی||
 لیسیدن||
 لیلا||
-لیمو|lemon|liːmuː
+لیمو|lemon|l§iː§m§uː
 لیو|sun, sunlight|liːv
 لیوان||
 لیک||
@@ -3141,7 +3140,7 @@ autoExpandExamples.pes = `
 میلاد||
 میلادی||
 مین||
-مینو|paradise, heaven|miːnuː
+مینو|paradise, heaven|m§iː§n§uː
 میهن||
 میهن‌پرست||
 می‌خواهم||
@@ -3292,7 +3291,7 @@ autoExpandExamples.pes = `
 نوبت||
 نوترینو|neutrino|nuːt̪ʰɾiːno
 نود||
-نور|light|nuːɾ
+نور|light|n§uː§ɾ
 نورانی||
 نوروز||
 نوروزی||
@@ -3348,7 +3347,7 @@ autoExpandExamples.pes = `
 نیلوفر||
 نیم||
 نیمروز||
-نیو|brave, valiant (archaic)|niːv
+نیو|brave, valiant (archaic)|n§iː§v
 نیوشا||
 نیوشیدن||
 نیک||
@@ -3391,7 +3390,7 @@ autoExpandExamples.pes = `
 هل||
 هلن||
 هلندی||
-هلو|peach|hoˈluː
+هلو|peach|ho§ˈl§uː
 هم||
 همان||
 همانطور که||
@@ -3496,7 +3495,7 @@ autoExpandExamples.pes = `
 وعده|promise|væʔde
 وغا||
 وفا||
-وقت|time|væɢt
+وقت|time|væ§ɢ§t
 وقتی|whenever|væɢtiː
 ول||
 ولایت||
@@ -3521,8 +3520,8 @@ autoExpandExamples.pes = `
 ویکی||
 ویکی‌پدیا||
 ویگن||
-اوج|zenith|owd͡ʒ|owj|اُوج
-اُوج|zenith|owd͡ʒ|owj|اوج
+اوج|zenith|o§w§d͡ʒ|owj|اُوج
+اُوج|zenith|o§w§d͡ʒ|owj|اوج||اوج
 پ||
 ||
 پ||
@@ -3767,7 +3766,7 @@ autoExpandExamples.pes = `
 چطور||
 چغاله||
 چغندر||
-چقدر|how much|t͡ʃeɢæd[æ]ɾ
+چقدر|how much|t͡ʃe§ɢæ§d[æ]§ɾ
 چل||
 چلنگر||
 چله||
@@ -3841,7 +3840,7 @@ autoExpandExamples.pes = `
 ژم||
 ژن||
 ژنرال||
-ژنو|Geneva|ʒeˈnev
+ژنو|Geneva|ʒe§ˈne§v
 ژولیدن||
 ژوپیتر||
 ژکفر||
@@ -3855,8 +3854,8 @@ autoExpandExamples.pes = `
 کاتولیک||
 کاج||
 کاخ||
-کادو|gift|kɒːdo|kâdo|کَادُو
-کَادُو|gift|kɒːdo|kâdo|کادو
+کادو|gift|k§ɒː§d§o|kâdo|کَادُو
+کَادُو|gift|k§ɒː§d§o|kâdo|کادو||کادو
 کاذب||
 کار||
 کاربر||
@@ -3922,7 +3921,8 @@ autoExpandExamples.pes = `
 کر||
 کر کردن||
 کرامت||
-کرایه|fare (money)|kiɾɒːjæ
+کرایه|fare (money)|kʰʲe.§ɹ§ɒː.§j§e||کِرایِه
+کِرایِه|fare (money)|kʰʲe.§ɹ§ɒː.§j§e||کرایه||کرایه
 کرباسچی||
 کربلا||
 کردار||
@@ -4013,7 +4013,8 @@ autoExpandExamples.pes = `
 که||
 کهر||
 کهربا||
-کهنه|old, used|kohne
+کهنه|old, used|ko§ɦ.§n§e|kohne|کُهنِه
+کُهنِه|old, used|ko§ɦ.§n§e|kohne|کهنه||کهنه
 کهکشان||
 کهکشان‌ها||
 کوبیدن||
@@ -4128,7 +4129,7 @@ autoExpandExamples.pes = `
 گروه||
 گرویدن|to convert|ɡeɾæviːˈd̪æn
 گرچه||
-گرگ|wolf|gorg
+گرگ|wolf|go§r§g
 گرگان||
 گرگ‌ها|wolves|ɡo§ɾ§ɡ§§ˈh§ɒː|gorg-hâ|گرگ‌ها
 گریختن||
@@ -4217,7 +4218,7 @@ autoExpandExamples.pes = `
 گیاه||
 گیتا||
 گیتار||
-گیتی|world|ɡiːˈtiː
+گیتی|world|ɡ§iː§ˈt§iː
 گیس||
 گیلاس||
 گیلانی||
@@ -4237,7 +4238,7 @@ autoExpandExamples.pes = `
 یاد گرفتن||
 یار||
 یار غار||
-یازده|eleven|jɒːzdæh
+یازده|eleven|j§ɒː§z§dæ§h
 یاسا||
 یاساء|Yassa|jɒːsɒː
 یاساق||
