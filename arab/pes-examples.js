@@ -51,7 +51,7 @@ autoExpandExamples.pes = `
 کوچک|small|kuːt͡ʃæk|kučak
 کوتاه|short|kuːtɒːh|kôtâh
 باریک|narrow|bɒːriːk|bârik
-لاغر|thin|lɒːɣær|lâğar
+لاغر|thin|l§ɒː§ɣæ§r|lâğar
 زن|woman|zæn|zan
 مرد|man (adult male)|mærd|mard
 انسان|man (human being)|ensɒːn|ensân
@@ -271,7 +271,8 @@ autoExpandExamples.pes = `
 اصفهان||
 اصفهانی||
 اصل||
-اصلاً|not at all|æslæn
+اصلاً|not at all|æ§s.§l§æn|aslan|اصلا||اصلا
+اصلا|not at all|æ§s.§l§æn|aslan|اصلاً
 اصلی||
 اصول‌گرا||
 اصیل||
@@ -350,7 +351,7 @@ autoExpandExamples.pes = `
 امروزه||
 امسال||
 امشب||
-امضاء|signature|emzɒː
+امضاء|signature|e§m§z§ɒː§–|emzâ'
 املای نانوشته غلط ندارد|an unwritten dictation has no errors|(ʔ)emlɒːje nɒːnəveʃte ɣælæt nædɒːɾæd
 امکان||
 امید|hope|omiːd|omêd|اُمید
@@ -424,9 +425,8 @@ autoExpandExamples.pes = `
 اُوُردَن|to bring (colloq)|ovordæn|âvardan|اوردن
 اورشلیم|Jerusalem|ʔoɾʃæˈliːm
 اورمزد|Ahura Mazda|uɾˈmæzd
-اولی|the former, first|ævvæˈliː|avvali|اوّلی
-اوّلی|the former, first|ævvæˈliː|avvali|اولی
-اومدن|to come|umæˈdæn|Tehran
+اولی|the former, first|æ§vvæ§ˈl§iː|avvali|اَوَّلی
+اَوَّلی|the former, first|æ§vvæ§ˈl§iː|avvali|اولی||اولی
 اون|flour|(ʔ)ʊn/(ʔ)on
 اوکراین|Ukraine|ʔokˈɾɒjn
 اوکی|OK|ˈokʰej
@@ -446,9 +446,6 @@ autoExpandExamples.pes = `
 ایجادها||
 ایدون||
 ایران||
-ایرانشهر|Iran|iːɾɒːnʃæhɾ
-ایرانی|Iranian|iːɾɒːniː
-ایرانیان|Iranians|iːɾɒːniˈjɒːn
 ایرلند||
 ایروان||
 ایستگاه|station|iːstɡɒːh
@@ -772,7 +769,7 @@ autoExpandExamples.pes = `
 بی‌پروا||
 بی‌گناه||
 بەت||
-تأکید|emphasis|tæʔkiːd
+تأکید|emphasis|tæ§ʔ§k§iː§d|ta'kid
 تا||
 تاب||
 تابستان||
@@ -977,8 +974,8 @@ autoExpandExamples.pes = `
 توپچى||
 توژ|bark (tree)|ˈtuːʒ
 توگو||
-تپه|hill|tʰæpˈpʰe|tappe|تپّه
-تپّه|hill|tʰæpˈpʰe|tappe|تپه
+تپه|hill|tʰæ§pˈpʰ§e|tappe|تَپِّه
+تَپِّه|hill|tʰæ§pˈpʰ§e|tappe|تپه||تپه
 تکان خوردن||
 تکاپو||
 تکرار||
@@ -991,7 +988,7 @@ autoExpandExamples.pes = `
 تکوک||
 تکیدن||
 تکیه||
-تکیه‌گاه|fulcrum|t̪ʰekʲ(ɪ)jeˈɡɒːh
+تکیه‌گاه|fulcrum|t̪ʰæ§kʲ§j§e.§–§ɡ§ɒː§ʱ|takye-gâh
 تک‌زنگ زدن||
 تک‌شاخ||
 تیر|arrow|tʰiːɾ
@@ -1207,8 +1204,8 @@ autoExpandExamples.pes = `
 خاندان||
 خانقاه||
 خانم||
-خانه|house|xɒːne
-خانه‌ها|houses|xɒːne-hɒː
+خانه|house|x§ɒː§n§e|xâne
+خانه‌ها|houses|x§ɒː§n§e§–§h§ɒː|xâne-hâ
 خانواده||
 خانواده‌ها||
 خانوادگی||
@@ -1609,7 +1606,7 @@ autoExpandExamples.pes = `
 ||
 ر||
 ||
-رأی|opinion, view|ɾæʔj
+رأی|opinion, view|ɾæ§ʔ§j|ra'y
 را||
 رابط||
 رابطه||
@@ -1733,7 +1730,6 @@ autoExpandExamples.pes = `
 ||
 ز||
 ||
-زئوس|Zeus|zeˈuːs
 زائر|pilgrim|zɒːʔeɾ
 زاده||
 زاغی||
@@ -1812,7 +1808,6 @@ autoExpandExamples.pes = `
 زیواندن||
 زیویدن|to live|ziːviːdæn
 زیگ||
-سؤال|question|soɒːl
 سؤال کردن|to ask, question|so.ɒːl kæɾ.dæn
 سائوتومه و پرنسیپ|São Tomé and Príncipe|sɒːuːtuːˈme vo pæɾænˈsiːp
 ساحر||
@@ -1979,7 +1974,7 @@ autoExpandExamples.pes = `
 سه‌شنبه||
 سه‌ماهه||
 سوئد|Sweden|su[ʔ]ed̪ / [so[ʔ]ed̪
-سوئیس|Switzerland|su[ʔ]is
+سوئیس|Switzerland|s§u§(ʔ)§i§s|su'is
 سوار||
 سوازیلند||
 سوت||
@@ -2235,7 +2230,7 @@ autoExpandExamples.pes = `
 شیطان||
 شیطانی||
 شیطان‌پرستی||
-شیعه|Shia, Shi'ite|ʃiːˈʔe
+شیعه|Shia, Shi'ite|ʃ§iː§ˈʔ§e|ši'e
 شیمی||
 شیوا||
 شیک|chic|ʃiːk
@@ -2342,7 +2337,8 @@ autoExpandExamples.pes = `
 عدس|lentil|ʔædæs
 عراق|Iraq|ʔæˈɾɒːɣ/ʔeˈɾɒːɣ
 عربستان|Saudi Arabia|æɾæbestɒːn
-عربی|Arabic|ʔæɾæbiː
+عربی|Arabic|ʔæ§ɾæ§b§iː|'arabi|عَرَبی
+عَرَبی|Arabic|ʔæ§ɾæ§b§iː|'arabi|عربی||عربی
 عرض|request, petition|æɾz
 عرفان|knowledge, mysticism|ʔeɾfɒːn
 عروس|bride|ʔæɾuːs
@@ -2365,10 +2361,10 @@ autoExpandExamples.pes = `
 عقرب|scorpion|ʔæɣˈɾæb
 عقل|mind, intellect; good sense|æɢl
 عقیده|belief, opinion|ʔæɣiːˈde
-علاءالدین|Aladdin|ælɒːʔoddīn
+علاءالدین|Aladdin|æ§l§ɒː§ʔ§o§d§d§ī§n
 علاقه|interest, affection|ælɒːɢe
 علامت تعجب|exclamation mark|ælɒːmæte tæʔædd͡ʒob
-علاوه|addition|elɒːve~ælɒːve
+علاوه|addition|ʔe.§l§ɒː.§v§e|'elâve
 علت|cause, reason|ellæt|ellat|عِلَّت
 عِلَّت|cause, reason|ellæt|ellat|علت
 علم|science; flag|elm; ælæm
@@ -2437,7 +2433,6 @@ autoExpandExamples.pes = `
 ||
 ف||
 ||
-فائده|advantage, benefit|fɒːʔeˈde
 فاحش||
 فاحشه||
 فاخره||
@@ -2453,7 +2448,8 @@ autoExpandExamples.pes = `
 فامیل||
 فانوس||
 فانی||
-فایده|advantage, benefit|fɒːjede
+فائده|advantage, benefit|f§ɒː§ʔe§ˈd§e|fâ'ede
+فایده|advantage, benefit|f§ɒː§je§d§e|fâyede, fâyde
 فتح||
 فحش||
 فدات||
@@ -2576,8 +2572,8 @@ autoExpandExamples.pes = `
 قاره||
 قارچ||
 قاسم||
-اِسْم|name|esm|esm|اسم
-اسم|name|esm|esm|اِسْم
+اِسْم|name|e§s§m|esm|اسم
+اسم|name|e§s§m|esm|اِسْم
 قاشق||
 قاضی||
 قاطر||
@@ -2707,7 +2703,6 @@ autoExpandExamples.pes = `
 لازم داشتن||
 لاعلاج||
 لاغ||
-لاغر||
 لاف||
 لاله||
 لاژورد||
@@ -2723,7 +2718,8 @@ autoExpandExamples.pes = `
 لحظه||
 لذت بردن||
 لذیذ||
-لزوماً|necessarily|lozuːˈmæn
+لزوماً|necessarily|lo§z§uː§ˈm§æn|lozuman|لُزوماً
+لُزوماً|necessarily|lo§z§uː§ˈm§æn|lozuman|لزوماً||لزوماً
 لسوتو|Lesotho|lesoːˈtoː
 لشکر||
 لطیف||
@@ -2755,10 +2751,10 @@ autoExpandExamples.pes = `
 لیو|sun, sunlight|liːv
 لیوان||
 لیک||
-مؤثر|effective|moʔæsseɾ
+مؤثر|effective|mo.§ʔæ§sˈse§ɹ|mo'asser
 مؤدب|polite; instructor|moʔæddæb
 مؤسسه|foundation|moʔæssæse
-مؤمن|believer|moʔmen
+مؤمن|believer|mo§ʔ.§me§n|mo'men
 ما||
 ماجرا||
 ماداگاسکار||
@@ -2935,7 +2931,7 @@ autoExpandExamples.pes = `
 مزنه||
 مزه||
 مسئله|problem, issue|mæs[ʔ]æˈle
-مسئول|responsible, liable|mæsʔuːl
+مسئول|responsible, liable|mæ§s§ʔ§uː§l|mas'ul
 مساجد||
 مسافر||
 مسافرت||
@@ -3003,7 +2999,8 @@ autoExpandExamples.pes = `
 معماری||
 معمول||
 معمولا||
-معنوی|semantic|mæʔnæviː
+معنوی|semantic|mæ§ʔ§næ§v§iː|مَعنَوی
+مَعنَوی|semantic|mæ§ʔ§næ§v§iː|معنوی||معنوی
 معنی||
 مغ||
 مغاره||
@@ -3224,8 +3221,8 @@ autoExpandExamples.pes = `
 نزدیک‌تر||
 نزدیک‌ترین||
 نسبتا||
-نستعلیق|Nasta'liq|næstæʔliːɢ|nasta'liq|نَسْتَعْلیق
-نَسْتَعْلیق|Nasta'liq|næstæʔliːɢ|nasta'liq|نستعلیق
+نستعلیق|nasta'liq|næ§s§t§æ§ʔ§l§iː§ɢ|nasta'liq|نَسْتَعْلیق
+نَسْتَعْلیق|nasta'liq|næ§s§t§æ§ʔ§l§iː§ɢ|nasta'liq|نستعلیق
 نسخ|abolition|næsx
 نسخه|copy, version|nosxe
 نسرین||
@@ -3237,10 +3234,6 @@ autoExpandExamples.pes = `
 نشان دادن||
 نشاندن||
 نشانه|sign, symbol, mark|neʃɒːˈne
-نشانهِ سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː|nešâne-ye sajâvandi|نشانه سجاوندی
-نشانه سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː|nešâne-ye sajâvandi|نشانهِ سجاوندی
-نشانه‌هایِ سجاوندی|punctuation marks|neʃɒːˌnehæːje sæd͡ʒɒːvænd̪ˈiː|nešâne-hâ-ye sajâvandi|نشانه‌های سجاوندی
-نشانه‌های سجاوندی|punctuation marks|neʃɒːˌnehæːje sæd͡ʒɒːvænd̪ˈiː|nešâne-hâ-ye sajâvandi|نشانه‌هایِ سجاوندی
 نشانگان آسپرگر|Asperger's syndrome|neʃɒːneˌɡɒːne ɒːspeɾˈɡʲeɾ
 نشلیدن||
 نشور||
@@ -4081,8 +4074,8 @@ autoExpandExamples.pes = `
 گاراژ||
 گاری||
 گاز||
-گاز طبیعی|natural gas|ˌɡɒːze tæbiːˈʔiː|gâz-e tabi'i|گازِ طبیعی
-گازِ طبیعی|natural gas|ˌɡɒːze tæbiːˈʔiː|gâz-e tabi'i|گاز طبیعی
+گاز طبیعی|natural gas|ˌɡ§ɒː§ze§ §tæ§b§iː§ˈʔ§iː|gâz-e tabi'i|گازِ طبیعی
+گازِ طبیعی|natural gas|ˌɡ§ɒː§ze§ §tæ§b§iː§ˈʔ§iː|gâz-e tabi'i|گاز طبیعی||گاز طبیعی
 گاش||
 گالری||
 گام||
@@ -4137,7 +4130,7 @@ autoExpandExamples.pes = `
 گرچه||
 گرگ|wolf|gorg
 گرگان||
-گرگ‌ها|wolves|ɡoɾɡˈhɒː
+گرگ‌ها|wolves|ɡo§ɾ§ɡ§§ˈh§ɒː|gorg-hâ|گرگ‌ها
 گریختن||
 گریستن||
 گریه||
@@ -4281,14 +4274,27 @@ autoExpandExamples.pes = `
 یگانه||
 
 
-پایی|a foot|pɒːiː||پایٔی
-پایٔی|a foot|pɒːiː||پایی
-مویی|a hair|muiː||مویٔی
-مویٔی|a hair|muiː||مویی
+پایی|a foot|p§ɒː§iː§‹||پایٔی
+پایٔی|a foot|p§ɒː§–§iː||پایی
+مویی|a hair|m§u§iː§‹||مویٔی
+مویٔی|a hair|m§u§–§iː||مویی
 
 
 
-
+@ Wiktionary
+نشانه سجاوندی|punctuation mark|ne§ʃ§ɒː§ˌne§je§ §sæ§d͡ʒ§ɒː§væ§n§d̪§ˈiː|nešâne-ye sajâvandi|نشانهِٔ سَجاوَندی
+نشانهِٔ سَجاوَندی|punctuation mark|ne§ʃ§ɒː§ˌne§je§ §sæ§d͡ʒ§ɒː§væ§n§d̪§ˈiː|nešâne-ye sajâvandi|نشانه سجاوندی||نشانه سجاوندی
+نشانه‌هایِ سجاوندی|punctuation marks|ne§ʃ§ɒː§ˌn§e§§h§æː§je§ §sæ§d͡ʒ§ɒː§væ§n§d̪§ˈiː|nešâne-hâ-ye sajâvandi|نشانه‌های سجاوندی||نشانه سجاوندی
+نشانه‌های سجاوندی|punctuation marks|ne§ʃ§ɒː§ˌn§e§§h§æː§je§ §sæ§d͡ʒ§ɒː§væ§n§d̪§ˈiː|nešâne-hâ-ye sajâvandi|نشانه‌هایِ سجاوندی
+زئوس|Zeus|ze§–§ˈuː§s|ze'ws
+سؤال|question|so§–§ɒː§l|so'âl|سُؤال
+سُؤال|question|so§–§ɒː§l|so'âl|سؤال||سؤال
+اومدن|to come|›§u§mæ§ˈdæ§n|اومَدَن|Tehran
+اومَدَن|to come|›§u§mæ§ˈdæ§n|اومدن|Tehran|اومدن
+ایرانشهر|Iran|iːɾɒːnʃæhɾ
+ایرانی|Iranian|›§iː§ɾ§ɒː§n§iː|irâni
+ایرانیان|Iranians|iːɾɒːniˈjɒːn
+ریال|rial (currency)|ɹi.§j§ɒː§l̥|riyâl
 
 
 

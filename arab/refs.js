@@ -52,7 +52,7 @@ reflist = {
 "date": "1996",
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
-"lang": new Set(['ar','ks','fa']),
+"lang": new Set(['ar','ks','pes']),
 },
 
 "ub": {
@@ -67,7 +67,7 @@ reflist = {
 "authors": "Behnam Esfahbod, Mostafa Hajizadeh, Najib Tounsi, Richard Ishida, Shervin Afshar, Titus Nemeth",
 "title":"Text Layout Requirements for the Arabic Script (alreq)",
 "url":"https://w3c.github.io/alreq/",
-"lang": new Set(['ar','fa']),
+"lang": new Set(['ar','pes']),
 },
 
 "ma": {
@@ -82,14 +82,14 @@ reflist = {
 "title":"Modern Persian",
 "publisher":"Hodder & Stoughton Ltd",
 "isbn":"0-340-80265-0",
-"lang": new Set(['fa']),
+"lang": new Set(['pes']),
 },
 
 "g49": {
 "authors": "GitHub",
 "title":"Shortcomings of Characters Table",
 "url":"https://github.com/w3c/alreq/issues/49",
-"lang": new Set(['ar','fa']),
+"lang": new Set(['ar','pes']),
 },
 
 "shp": {
@@ -114,7 +114,7 @@ reflist = {
 "authors": "Richard Ishida",
 "title":"Ready-made Counter Styles",
 "url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
-"lang": new Set(['ar','fa']),
+"lang": new Set(['ar','pes']),
 "reviewed":true
 },
 
@@ -270,7 +270,7 @@ reflist = {
 "pages":"365-389",
 "isbn":"978-1-936213-16-0.",
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf",
-"lang": new Set(['ar','fa','ha','ks','ur']),
+"lang": new Set(['ar','pes','ha','ks','ur']),
 "reviewed":true
 },
 
@@ -372,14 +372,14 @@ reflist = {
 "title":"Persian language",
 "url":"https://en.wikipedia.org/wiki/Persian_language",
 "retrieved":"Aug 2021",
-"lang": new Set(['fa']),
+"lang": new Set(['pes']),
 },
 
 "wpa": {
 "authors": "Wikipedia",
 "title":"Persian alphabet",
 "url":"https://en.wikipedia.org/wiki/Persian_alphabet",
-"lang": new Set(['fa']),
+"lang": new Set(['pes']),
 },
 
 "wul": {
