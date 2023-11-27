@@ -126,6 +126,7 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('init')? initial=true: initial=false
         charMarkup[i].classList.contains('medi')? medial=true: medial=false
         charMarkup[i].classList.contains('fina')? final=true: final=false
+        charMarkup[i].classList.contains('skip')? skipDiacritic=true: skipDiacritic=false
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
 
@@ -165,6 +166,7 @@ function expandCharMarkup () {
                 unicodeChars += `<img src="../../c/${ block }/large/${ hex }.png" alt="${ ch }" style="height:2rem;">`
                 }
             else unicodeChars += `&#x${ hex };`
+            if (skipDiacritic && c == 0) unicodeChars += '&#x200D;'
             }
             
         if (initial || medial) unicodeChars += '\u200D '
