@@ -251,7 +251,7 @@ However, if the previous character joins only to the right, they will use isolat
 
 <section id="index_letters_notused">
 <h4>Not used for Persian</h4>
-<figure class="unusedBox indexline" data-cols="" data-links="">ئ␣ك␣ي␣ۀ␣ہ␣ۂ␣ۃ␣ە␣ࢨ</figure>
+<figure class="unusedBox indexline" data-cols="" data-links="">ئ␣ك␣ي␣ۀ␣ہ␣ۂ␣ۃ␣ە␣ࢨ␣ى</figure>
 </section>
 </details>
 </section>
@@ -1892,18 +1892,18 @@ alveolar</th>
 <section id="hamza_choices">
 <h3>Hamza &amp; precomposed characters</h3>
 
-<p>Unicode support for the various uses of the hamza are complicated.<tt>u,384</tt> For notes on the usage of the hamza in Persian, see <a class="secref">hamza</a> and <a class="secref">ezafe</a>.</p>
+<p>Unicode support for the various uses of the <span class="name">hamza</span> is complicated.<tt>u,384</tt> For notes on the usage of the <span class="name">hamza </span>in Persian, see <a class="secref">hamza</a> and <a class="secref">ezafe</a>. In general, the Unicode Standard recommends to use <span class="hx circle">0654</span> in combination with a base character. However, there are a few exceptions to consider.</p>
 
 
 <section id="canonical_hamza">
 <h4>Canonically-equivalent alternatives</h4>
 
-<p>A number of combinations with the hamza diacritic can be represented as either a precomposed character or a decomposed sequence, where the parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches are canonically equivalent. These include the following:</p>
+<p>A number of combinations with the hamza diacritic can be represented as either an atomic character or a decomposed sequence, where the parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches are canonically equivalent. These include the following:</p>
 
 <table class="comparison">
 <thead>
 <tr>
-<th scope="col">Precomposed</th>
+<th scope="col">Atomic</th>
 <th scope="col">Decomposed</th>
 </tr>
 </thead>
@@ -1922,14 +1922,48 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-<p class="info">The single code point per vowel-sign is the  form preferred by the Unicode Standard and the form in common use for Persian, but either could be used.</p>
+<p class="info">The single code point per vowel-sign is the  form preferred by the Unicode Standard and the form in common use for Persian, but either could be found.</p>
 </section>
 
 
 
 
+
+
+<section id="hamza_yeh">
+<h4>Yeh with hamza</h4>
+
+<p>This item is a special case.  <span class="name">Yeh</span> with a <span class="name">hamza</span> is used  for the glottal stop, and also for word medial standalone vowels.</p>
+
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Atomic</th>
+<th scope="col">Decomposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="ur">ئ</span> [<a href="block#char0626" target="c"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>] </span></td>
+<td><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x064A;&#x0654;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Persian uses <span class="ch">ی</span> and doesn't use <span class="ch">ي</span> because the latter produces dots below in all positions, whereas <span class="name">yeh</span> in Persian only has dots below in initial and medial forms.  However, the canonical decomposition of <span class="hx">0626</span> maps to the <em>Arabic</em> <span class="name">yeh</span> and a combining hamza.</p>
+
+<p>Nevertheless, the atomic character is widely used in Persian text. To mitigate the issues, the Unicode Standard recommends that any time <span class="ch">ي</span> is combined with a hamza the font should drop the dot glyphs. This ensures that the text looks correct in decomposed form, but applications need to be aware that decomposed text will contain an Arabic <span class="name">yeh</span> which is not otherwise used for Persian.</p>
+</section>
+
+
+
+
+
+
 <section id="non_canonical_hamza">
-<h4>Alternatives that are not canonically equivalent</h4>
+<h4>Visually similar but different characters</h4>
 
 <p>These cases involve precomposed characters that look identical to the sequences used in Persian, however there is a catch because  the precomposed characters have canonical decompositions to letters that are not used in Persian.</p>
 <table class="comparison">
@@ -1942,28 +1976,31 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;&#x0654;</span> [<a href="arabic#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>&nbsp;</td>
-<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06C0;</span> [<a href="/scripts/arabic/block#char06C0"><span class="uname">U+06C0 ARABIC LETTER HEH WITH YEH ABOVE</span></a>]</span> decomposes to:<br>
-<span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06D5;&#x0654;</span> [<a href="arabic#char06D5"><span class="uname">U+06D5 ARABIC LETTER AE</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span><br>
-<span class="codepoint" translate="no"><span dir="rtl" lang="pes">ۂ</span> [<a href="block#char06C2" target="c"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span> decomposes to:<br>
-<span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06C1;&#x0654;</span> [<a href="arabic#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
-<td><span class="noteRef">①</span></td>
+<td><p><span class="hx">0647 0654</span></p></td>
+<td>
+<p><span class="hx">06C0</span></p>
+<p><span class="hx">06C2</span></p>
+</td>
+<td><p>The Unicode Standard explicitly recommends use of the decomposed sequence when combining a hamza with <span class="uname">HEH</span> (for <span class="name">ezafe</span>)<tt>u,395</tt>. </p>
+<p>The two atomic characters on the right are problematic because they decompose to sequences containing <span class="hx">06D5</span> and <span class="hx">06C1</span>, respectively, neither of which are appropriate for Persian.</p></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06CC;&#x0654;</span> [<a href="arabic#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="arabic#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>&nbsp;</td>
-<td><p><span class="codepoint" translate="no"><span dir="rtl" lang="pes">ئ</span> [<a href="block#char0626" target="c"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>] decomposes to:</span></p>
-<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x064A;&#x0654;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>&nbsp;<br>
-<span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x08A8;</span> [<a href="arabic#char08A8"><span class="uname">U+08A8 ARABIC LETTER YEH WITH TWO DOTS BELOW AND HAMZA ABOVE</span></a>]</span> (no decomposition)
-</p></td>
-<td><span class="noteRef">②</span></td>
+<td><p><span class="hx">06CC 0654</span></p></td>
+<td>
+<p><span class="hx">0626</span></p>
+<p><span class="hx">0649 0654</span></p>
+<p><span class="hx">08A8</span></p>
+</td>
+<td>
+<p>For <span class="hx">0626</span> see <a class="secref">hamza_yeh</a>.</p>
+<p>The Unicode Standard explicitly recommends not to use <span class="hx">0649 0654</span>. Persian doesn't use the <span class="name">alef maksura</span><tt>u,395</tt>.</p>
+<p><span class="hx">08A8</span> is a character used for an African orthography which retains the dots for all joining forms. It is therefore also an inappropriate  character for Persian<tt>u,395</tt>.</p>
+</td>
 </tr>
 </tbody>
 </table>
-<p>① The Unicode Standard explicitly recommends use of the decomposed sequence when combining a hamza with <span class="uname">HEH</span> (for <span class="name">ezafe</span>). The two precomposed characters on the right are problematic because they decompose to sequences containing <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06D5;</span> [<a href="arabic#char06D5"><span class="uname">U+06D5 ARABIC LETTER AE</span></a>]</span> or <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06C1;</span> [<a href="arabic#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span>, neither of which are appropriate for Persian.</p>
-<p>② The precomposed YEH with hamza appears, on the face of it, to be a likely alternative for the sequence on the left. However, the decomposition is to hamza over <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span> rather than <span class="codepoint"><span dir="rtl" lang="pes">ی</span> <a href="/scripts/arabic/block#char06CC" target="c">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span>, and that letter is not used for Persian (it doesn't represent the dots in the way <span class="uname">FARSI YEH</span> does). In fact, the Unicode Standard requires the precomposed and decomposed forms of the Arabic <span class="uname">YEH</span> combined with hamza to never have dots below in any of the joining forms. For this reason, this page uses and recommends the decomposed sequence for <span class="name">yeh+hamza</span>. That said, however, in the wild the precomposed character appears to be widely used.</p>
-<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x08A8;</span> [<a href="arabic#char08A8"><span class="uname">U+08A8 ARABIC LETTER YEH WITH TWO DOTS BELOW AND HAMZA ABOVE</span></a>]</span> is a character used for an African orthography which retains the dots for all joining forms. It is therefore also an inappropriate precomposed character for Persian.</p>
 
-<p class="info">Content authors should use a separate hamza for these sequences in Persian, even though the precomposed characters look the same visually, because they don't represent the same semantics, and may introduce problems if text is decomposed. However,  because approaches may yield exactly the same result when displayed,  applications will need to recognise the precomposed characters and treat them or map them to the appropriate sequence. Input mechanisms, on the other hand, can produce one rather than the other, and that choice should be made with advisement.</p>
+<p class="info">Content authors should use a separate <span class="name">hamza</span> for these sequences in Persian, even though the precomposed characters look the same visually, because they don't represent the same semantics, and may introduce problems if text is decomposed. However,  because approaches may yield exactly the same result when displayed,  applications will need to recognise the precomposed characters and treat them or map them to the appropriate sequence. Input mechanisms, on the other hand, can produce one rather than the other, and that choice should be made with advisement.</p>
 </section>
 </section>
 
@@ -1973,7 +2010,7 @@ alveolar</th>
 <section id="confusables">
 <h3>Confusables &amp; spelling errors<a class="selflink" href="#confusables"></a></h3>
 
-<p>The following lists some common errors found in Persian text due to the similarity of Unicode characters, or perhaps sometimes due to problems inputting the correct character.</p>
+<p>The following lists some common errors found in Persian text due to the similarity of Unicode characters, or perhaps sometimes due to problems inputting the correct character. See also the items listed for combinations with <span class="name">hamza</span> just above.</p>
 
 <table class="comparison">
 <thead>
@@ -1985,31 +2022,45 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">ی</span> [<a href="block#char06CC" target="c"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="ar">ي</span> [<a href="block#char064A" target="c"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span></td>
-<td><span class="noteRef">①</span></td>
+<td><p><span class="hx">06CC</span></p></td>
+<td>
+<p><span class="hx">064A</span></p>
+<p><span class="hx">0649</span></p>
+</td>
+<td><span class="hx">064A</span> doesn't drop the dots below the letter in isolate and final shapes, and <span class="hx">0649</span> doesn't add them for initial and medial shapes.</td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0647;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span></td>
-<td><p><span class="codepoint" translate="no"><span dir="rtl" lang="pes">&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06D5;</span> [<a href="arabic#char06D5"><span class="uname">U+06D5 ARABIC LETTER AE</span></a>]</span>&nbsp;</p></td>
-<td><span class="noteRef">②</span></td>
+<td>
+<p><span class="hx">0647</span></p>
+</td>
+<td>
+<p><span class="hx">06C1</span></p>
+<p><span class="hx">06D5</span></p>
+</td>
+<td><p>Although they look the same, these are all different characters. The <span class="hx">06C1</span> is used for languages that include Urdu and Kashmiri, whereas <span class="hx">06D5</span> is used for Uighur and central Asian languages.</p>
+</td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0629;</span> [<a href="/scripts/arabic/block#char0629"><span class="uname">U+0629 ARABIC LETTER TEH MARBUTA</span></a>]</span></td>
-<td><p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x06C3;</span> [<a href="/scripts/arabic/block#char06C3"><span class="uname">U+06C3 ARABIC LETTER TEH MARBUTA GOAL</span></a>]</span></p></td>
-<td><span class="noteRef">③</span></td>
+<td>
+<p><span class="hx">0629</span></p>
+</td>
+<td>
+<p><span class="hx">06C3</span></p>
+</td>
+<td>Again, characters that a font may render exactly the same, but that are based on different base letters.</td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">ک</span> [<a href="block#char06A9" target="c"><span class="uname">U+06A9 ARABIC LETTER KEHEH</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="ar">ك</span> [<a href="block#char0643" target="c"><span class="uname">U+0643 ARABIC LETTER KAF</span></a>]</span></td>
-<td><span class="noteRef">④</span></td>
+<td>
+<p><span class="hx">06A9</span></p>
+</td>
+<td>
+<p><span class="hx">0643</span></p>
+</td>
+<td><span class="noteRef">Differences in shape of final and isolate forms.</span></td>
 </tr>
 </tbody>
 </table>
-<p>① As mentioned in the previous section, Arabic <span class="uname">YEH</span> doesn't drop the dots below the letter in isolate and final positions.</p>
-<p>② Although they look the same, these are all different characters. The <a class="uname">HEH GOAL</a> is used for languages that include Urdu and Kashmiri, whereas the <span class="uname">LETTER AE</span> is used for Uighur and central Asian languages.</p>
-<p>③ &amp; ④ Again,  characters that a font may render exactly the same, but that are based on different base letters.</p>
+
 <p class="info">Although these characters look the same (at least in certain joining forms), they are all different characters, and should not be used interchangeably. If they are used, the ability to search and compare text is impaired unless the application is aware of and takes counter-measures against this substitution.</p>
 </section>
 </section>
