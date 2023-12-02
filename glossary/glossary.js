@@ -31,9 +31,13 @@ defList={
 
 "letterspacing": 'Unlike justification, which fits text within a fixed space, letter-spacing adds regular amounts of space between letters, and the resulting length is a by-product of that.',
 
+"livedead": 'A \'dead\' syllable ends with the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or a short vowel (which in some languages may include a glottal stop <span class="ipa">-ʔ</span>). A \'live\' syllable ends with sonorants <span class="ipa">m</span>, <span class="ipa">n</span>, <span class="ipa">ŋ</span>, <span class="ipa">w</span>, <span class="ipa">j</span>, or a long vowel.</p>',
+
 "prebase": 'The glyph of a pre-base (or prescript) vowel sign is displayed to the left of the consonant or orthographic syllable after which it is pronounced. It is still typed and stored, however, in pronunciation order.',
 
 "materlectionis": 'In the spelling of Arabic, Hebrew, and other Semitic languages, mater lectionis refers to a consonant that may also indicate the location of a vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a>',
+
+"openclosed": 'An \'open\' syllable ends with a vowel (which in careful speech may include a glottal stop <span class="ipa">-ʔ</span>), eg. CV(ʔ). A \'closed\' syllable ends with a coda, eg. CVC.</p>',
 
 "standalonevowel": '<a class="termref" target="_blank" href="../glossary/index.html#standalone">Standalone vowels</a> are vowel sounds that are not preceded by a consonant sound, or are preceded by only a glottal stop. They may appear at the beginning of a word or in the middle of a word after a preceding vowel.',
 
