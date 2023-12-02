@@ -712,54 +712,73 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     /*   CHARACTER USE   */
     
     
+    var langdata = 'Update the following in xx-langdata.js: '
+    
     // create entry for character use
     usedNonASCII = ''
     out += `<tr><th>Update Character usage</th><td id="cUsage" style="word-break:break-all;">`
     result = listCharsInSpreadsheet('letters').join('')
     out += `letter:"${ result }", `
+    if (langs[charUsageBCP].letter && result !== langs[charUsageBCP].letter) langdata += 'letter '
     usedNonASCII += result
     result = listCharsInSpreadsheet('auxletters').join('')
     if (result !== '') out += `letteraux:"${ result }", `
+    if (langs[charUsageBCP].letteraux && result !== langs[charUsageBCP].letteraux) langdata += 'letteraux '
     usedNonASCII += result
 
     result = listCharsInSpreadsheet('marks').join('')
     out += `mark:"${ result }", `
+    if (langs[charUsageBCP].mark && result !== langs[charUsageBCP].mark) langdata += 'mark '
     usedNonASCII += result
     result = listCharsInSpreadsheet('auxmarks').join('')
     if (result !== '') out += `markaux:"${ result }", `
+    if (langs[charUsageBCP].markaux && result !== langs[charUsageBCP].markaux) langdata += 'markaux '
     usedNonASCII += result
     
     result = listCharsInSpreadsheet('numbers').join('')
     out += `number:"${ result }", `
+    if (langs[charUsageBCP].numbers && result !== langs[charUsageBCP].numbers) langdata += 'numbers '
     usedNonASCII += result
     result = listCharsInSpreadsheet('auxnumbers').join('')
     if (result !== '') out += `numberaux:"${ result }", `
+    if (langs[charUsageBCP].numbersaux && result !== langs[charUsageBCP].numbersaux) langdata += 'numbersaux '
     usedNonASCII += result
     
     result = listCharsInSpreadsheet('punctuation').join('')
     out += `punctuation:"${ result }", `
+    if (langs[charUsageBCP].punctuation && result !== langs[charUsageBCP].punctuation) langdata += 'punctuation '
     usedNonASCII += result
     result = listCharsInSpreadsheet('auxpunctuation').join('')
     if (result !== '') out += `punctuationaux:"${ result }", `
+    if (langs[charUsageBCP].punctuationaux && result !== langs[charUsageBCP].punctuationaux) langdata += 'punctuationaux '
     usedNonASCII += result
     
     result = listCharsInSpreadsheet('symbols').join('')
     out += `symbol:"${ result }", `
+    if (langs[charUsageBCP].symbol && result !== langs[charUsageBCP].symbol) langdata += 'symbol '
     usedNonASCII += result
     result = listCharsInSpreadsheet('auxsymbols').join('')
     if (result !== '') out += `symbolaux:"${ result }", `
+    if (langs[charUsageBCP].symbolaux && result !== langs[charUsageBCP].symbolaux) langdata += 'symbolaux '
     usedNonASCII += result
     
     result = listCharsInSpreadsheet('other').join('')
     out += `other:"${ result }", `
+    console.log(langs[charUsageBCP].other)
+    //if (langs[charUsageBCP].other && result !== langs[charUsageBCP].other) langdata += 'other '
     result = listCharsInSpreadsheet('auxother').join('')
     if (result !== '') out += `otheraux:"${ result }", `
+    //if (langs[charUsageBCP].auxother && result !== langs[charUsageBCP].auxother) langdata += 'auxother '
 
     out += `</td>
         <td id="ssCharListTotal">${ result.length }</td>
-        <td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('cUsage').textContent)"></td>${ shareCodeLinks(usedNonASCII,scriptISO,pickerName) }</tr>`
-
-    out += '<tr><th></th><th colspan="2" style="text-align:start">Also update xx-langdata.js</th></tr>'
+        <td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('cUsage').textContent)"></td>${ shareCodeLinks(usedNonASCII,scriptISO,pickerName) }</tr>`    
+    
+    
+    if (langdata !== 'Update the following in xx-langdata.js: ') out += `<tr><th></th><th colspan="2" style="text-align:start; color:red;">${ langdata }</th></tr>`
+    else out += `<tr><th></th><th colspan="2" style="text-align:start">${ langTag }-langdata.js matches!</th></tr>`
+    
+    // out += `<tr><th></th><th colspan="2" style="text-align:start">Also update xx-langdata.js</th></tr>`
 
 
     out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
@@ -1116,6 +1135,7 @@ function listAllIndexCharactersX (scriptISO, pickerName) {
     // create entry for character use
     out += '<tr><th colspan="3">Possible additions from the spreadsheet</th></tr>'
     result = listCharsInSpreadsheet('possibles').join('')
+    if (langs[langTag].aux && result !== langs[langTag].aux) langdata += 'aux '
     out += `<tr><th>TBC</th><td id="toInvestigate" style="word-break:break-all;">${ result }</td><td id="toInvestigateTotal">${ result.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('toInvestigate').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
 
 
@@ -1709,7 +1729,7 @@ function makeSidePanel (id, otherlinks) {
 	out += '<p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>'
 	out += '<p class="ctlink"><a href="../featurelist/#key">See the key</a></p>'
 	
-	langs = {}
+	//langs = {}
 	
 	return out
 	}
