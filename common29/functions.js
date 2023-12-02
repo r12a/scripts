@@ -764,7 +764,6 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     
     result = listCharsInSpreadsheet('other').join('')
     out += `other:"${ result }", `
-    console.log(langs[charUsageBCP].other)
     //if (langs[charUsageBCP].other && result !== langs[charUsageBCP].other) langdata += 'other '
     result = listCharsInSpreadsheet('auxother').join('')
     if (result !== '') out += `otheraux:"${ result }", `
