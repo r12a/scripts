@@ -8141,7 +8141,7 @@ autoExpandExamples.th = `
 ฤกษ์|auspicious time|rɤ̂ː§k̚§–
 ฤชา||
 ฤณ||
-ฤดู||
+ฤดู|moment, occasion|rɯ́.§duː
 ฤดูฝน||
 ฤดูร้อน||
 ฤดูหนาว||
