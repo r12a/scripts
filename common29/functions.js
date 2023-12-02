@@ -114,7 +114,14 @@ function expandCharMarkup () {
      // if the svg class is appended, use an svg image to display the char
      // if the split class used, the characters will be separated by +
      
-     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname
+     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname, coda
+     
+     // split puts + signs between the characters in a sequence
+     // init, medi, fina produce positional forms of cursive text using zwj
+     // skip  puts a circle before a mark, and zwj between it and the following consonant
+     // circle puts a dotted circle before the item - used for combining marks
+     // coda puts a dotted circle after the item - used for closed syllables
+     // noname prevents the production of the Unicode name
      
    
     // convert .hx markup (one or more hex codes)
@@ -128,12 +135,14 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('fina')? final=true: final=false
         charMarkup[i].classList.contains('skip')? skipDiacritic=true: skipDiacritic=false
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
 
         charlist = charMarkup[i].textContent.trim().split(' ')
+        if (charlist[0] === '') continue
         unicodeNames = ''
         unicodeChars = ''
-        
+
         out = ''
         if (final || medial) unicodeChars += '\u200D' // the space is needed for Safari to work
         if (circle) unicodeChars = '\u25CC' + unicodeChars
@@ -148,13 +157,15 @@ function expandCharMarkup () {
             ch = String.fromCodePoint(dec)
 
             if (! spreadsheetRows[ch]) {
-                unicodeNames += `<span style="color:red">${ ch } NOT IN DB!</span>`
+                unicodeNames += `<span style="color:red">${ ch } NOT IN DB! (expandCharMarkup)</span>`
                 unicodeChars += ch
                continue
                 }
             
-            if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
+            if (hex !== '25CC') {
+                if (c > 0) unicodeNames += ' + '
+                unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
+                }
          
             if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
             if (svg) {
@@ -174,7 +185,7 @@ function expandCharMarkup () {
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         //if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
-        out += `>${ unicodeChars }</bdi>`
+        out += `>${ unicodeChars }${ coda }</bdi>`
         if (noname) {}
         else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
@@ -191,6 +202,7 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('medi')? medial=true: medial=false
         charMarkup[i].classList.contains('fina')? final=true: final=false
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
 
         charlist = [... charMarkup[i].textContent]
@@ -232,7 +244,157 @@ function expandCharMarkup () {
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
-        out += `>${ unicodeChars }</bdi>`
+        out += `>${ unicodeChars }${ coda }</bdi>`
+        if (noname) {}
+        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        
+        charMarkup[i].outerHTML = out
+        }
+    }
+
+
+
+
+
+
+
+function expandCharMarkupX () {
+    if (traceSet.has('expandCharMarkup') || traceSet.has('all')) console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
+     // convert char markup to .codepoint spans (has to be done before the indexing)
+     // the .ch and .hx classes should only be used for characters in the
+     // spreadsheet.  For other characters, generate the markup in a picker
+     // if the svg class is appended, use an svg image to display the char
+     // if the split class used, the characters will be separated by +
+     
+     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname, coda
+     
+     // split puts + signs between the characters in a sequence
+     // init, medi, fina produce positional forms of cursive text using zwj
+     // skip  puts a circle before a mark, and zwj between it and the following consonant
+     // circle puts a dotted circle before the item - used for combining marks
+     // coda puts a dotted circle after the item - used for closed syllables
+     // noname prevents the production of the Unicode name
+     
+   
+    // convert .hx markup (one or more hex codes)
+    charMarkup = document.querySelectorAll('.hex, .hx')
+    for (i=0;i<charMarkup.length;i++) {
+        charMarkup[i].classList.contains('split')? split=true: split=false
+        charMarkup[i].classList.contains('svg')? svg=true: svg=false
+        charMarkup[i].classList.contains('img')? img=true: img=false
+        charMarkup[i].classList.contains('init')? initial=true: initial=false
+        charMarkup[i].classList.contains('medi')? medial=true: medial=false
+        charMarkup[i].classList.contains('fina')? final=true: final=false
+        charMarkup[i].classList.contains('skip')? skipDiacritic=true: skipDiacritic=false
+        charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
+        charMarkup[i].classList.contains('noname')? noname=true: noname=false
+
+        charlist = charMarkup[i].textContent.trim().split(' ')
+        if (charlist[0] === '') continue
+        unicodeNames = ''
+        unicodeChars = ''
+
+        out = ''
+        if (final || medial) unicodeChars += '\u200D' // the space is needed for Safari to work
+        if (circle) unicodeChars = '\u25CC' + unicodeChars
+        for (c=0;c<charlist.length;c++) {
+            hex = charlist[c]
+            dec = parseInt(hex,16)
+            if (Number.isNaN(dec)) { 
+                console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandCharMarkup)', 'color:' + 'red' + ';font-weight:bold;')
+                continue
+                }
+            //console.log('>>>',charMarkup[i].classList,charMarkup[i].textContent, hex, dec)
+            ch = String.fromCodePoint(dec)
+
+            if (! spreadsheetRows[ch]) {
+                unicodeNames += `<span style="color:red">${ ch } NOT IN DB!</span>`
+                unicodeChars += ch
+               continue
+                }
+            
+            if (c > 0) unicodeNames += ' + '
+            unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
+         
+            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
+            if (svg) {
+                block = getScriptGroup(dec, false)
+                unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ ch }" style="height:2rem;">`
+                }
+            else if (img) {
+                block = getScriptGroup(dec, false)
+                unicodeChars += `<img src="../../c/${ block }/large/${ hex }.png" alt="${ ch }" style="height:2rem;">`
+                }
+            else unicodeChars += `&#x${ hex };`
+            if (skipDiacritic && c == 0) unicodeChars += '&#x200D;'
+            }
+            
+        if (initial || medial) unicodeChars += '\u200D '
+
+        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
+        //if (blockDirection === 'rtl') out += ` dir="rtl"`
+        if (img || svg) out += ' style="margin:0;" '
+        out += `>${ unicodeChars }${ coda }</bdi>`
+        if (noname) {}
+        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        
+        charMarkup[i].outerHTML = out
+        }
+   
+    // convert .ch markup (one or more characters using Unicode code points)
+    charMarkup = document.querySelectorAll('.ch')
+    for (i=0;i<charMarkup.length;i++) {
+        charMarkup[i].classList.contains('split')? split=true: split=false
+        charMarkup[i].classList.contains('svg')? svg=true: svg=false
+        charMarkup[i].classList.contains('img')? img=true: img=false
+        charMarkup[i].classList.contains('init')? initial=true: initial=false
+        charMarkup[i].classList.contains('medi')? medial=true: medial=false
+        charMarkup[i].classList.contains('fina')? final=true: final=false
+        charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
+        charMarkup[i].classList.contains('noname')? noname=true: noname=false
+
+        charlist = [... charMarkup[i].textContent]
+        unicodeNames = ''
+        unicodeChars = ''
+        
+        out = ''
+        if (final || medial) unicodeChars += ' \u200D'
+        for (c=0;c<charlist.length;c++) {
+            dec = charlist[c].codePointAt(0)
+            hex = dec.toString(16).toUpperCase()
+            while (hex.length < 4) hex = '0'+hex
+
+            if (! spreadsheetRows[charlist[c]]) {
+                unicodeChars += charlist[c]
+                unicodeNames += `<span style="color:red"> ${ charlist[c] } NOT IN DB!</span> `
+                continue
+                }
+            
+            if (c > 0) unicodeNames += ' + '
+            unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
+
+            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
+            
+            if (svg) {
+                block = getScriptGroup(dec, false)
+                unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ charlist[c] }" style="height:2rem;">`
+                }
+            else if (img) {
+                block = getScriptGroup(dec, false)
+                unicodeChars += `<img src="../../c/${ block }/large/${ hex }.png" alt="${ charlist[c] }" style="height:2rem;">`
+                }
+            else unicodeChars += charlist[c]
+            }
+            
+        if (initial || medial) unicodeChars += '\u200D '
+        if (circle) unicodeChars = '\u25CC' + unicodeChars
+
+        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
+        if (blockDirection === 'rtl') out += ` dir="rtl"`
+        if (img || svg) out += ' style="margin:0;" '
+        out += `>${ unicodeChars }${ coda }</bdi>`
         if (noname) {}
         else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
