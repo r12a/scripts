@@ -3182,7 +3182,7 @@ autoExpandExamples.km = `
 ផ្សងព្រេង||
 ផ្សព្វផ្សាយ||
 ផ្សាយ||
-ផ្សារ|market|pʰ§saː§–
+ផ្សារ|market|p§saː§–
 ផ្សារទំនើប||
 ផ្សិត||
 ផ្សេង||
@@ -3530,7 +3530,7 @@ autoExpandExamples.km = `
 ភ្នាក់ងារ||
 ភ្នាក់ដៃ||
 ភ្នាល់||
-ភ្នែក|eye|pʰ§nɛː§k
+ភ្នែក|eye|p§nɛː§k
 ភ្នំ|mountain|pʰnum
 ភ្នំពេញ||
 ភ្នំភ្លើង||
@@ -6140,7 +6140,8 @@ autoExpandExamples.km = `
 
 
 
-
+@ Wiktionary
+ចាប់ផ្ដើម|to begin, start|ca§p§ ˈp§ɗaə§m|cap phdaəm
 
 
 
