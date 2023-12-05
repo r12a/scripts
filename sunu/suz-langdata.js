@@ -6,7 +6,7 @@ var langs = {
 source:"", 
 region:"sasia", countries:"Nepal, Sikkim",
 script:"sunu", speakers:"38200", 
-letter:"𑯀𑯁𑯄𑯆𑯇𑯉𑯊𑯋𑯌𑯍𑯎𑯏𑯐𑯒𑯓𑯔𑯗𑯘𑯙𑯚𑯛𑯜𑯝𑯞𑯟𑯠𑯂𑯃𑯅𑯈𑯑𑯖", mark:"̭̱̀́̃̍̐᷵", punctuation:"‘’“”", number:"𑯰𑯱𑯲𑯳𑯴𑯵𑯶𑯷𑯸𑯹", symbol:"𑯡", 
+letter:"𑯀𑯁𑯂𑯃𑯄𑯅𑯆𑯇𑯈𑯉𑯊𑯋𑯌𑯍𑯎𑯏𑯐𑯑𑯒𑯓𑯔𑯕𑯖𑯗𑯘𑯙𑯚𑯛𑯜𑯝𑯞𑯟𑯠", mark:"̭̱̀́̃̍̐", number:"𑯰𑯱𑯲𑯳𑯴𑯵𑯶𑯷𑯸𑯹", punctuation:"‘’“”…", symbol:"𑯡", other:"", 
 orth:`Sunuwar.`,
 also:
 ['suz-deva | deva | Primary usage.  <a href="../scripts/latn/wo.html#variants" target="_blank">Details.</a>'],
