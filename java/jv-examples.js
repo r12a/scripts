@@ -59,7 +59,6 @@ autoExpandExamples.jv = `
 ꦏꦼꦩꦸꦭ꧀||
 ꦏꦼꦩ꧀ꦧꦁ||
 ꦏꦿꦠꦺꦴꦤ꧀||
-ꦏꦿꦩ||
 ꦏꦿꦩꦱ꧀||
 ꦏꦿꦶꦪ|skill, craft||kriya
 ꦏꦿꦸꦥꦸꦏ꧀|crackers|kru§pu§k|krupuk
@@ -96,7 +95,7 @@ autoExpandExamples.jv = `
 ꦗꦫꦤ꧀||
 ꦗꦮ|Java||jawa
 ꦗꦲꦺ|ginger||jahe
-ꦗ꦳ꦏꦠ꧀|||zakat
+ꦗ꦳ꦏꦠ꧀|alms giving||zakat|zakat
 ꦗꦸꦫꦁ||
 ꦗꦸꦮꦮꦸꦠ꧀||
 ꦗꦼꦮꦮꦸꦠ꧀||
@@ -332,8 +331,6 @@ autoExpandExamples.jv = `
 ꦲꦸꦫꦁ||
 ꦲꦸꦱꦢ||
 ꦲꦺꦥꦺꦴꦭꦸꦱꦶ||
-ꦲꦺꦭꦶꦁ||
-ꦲꦺꦱ꧀ꦠꦿꦶ||
 ꦲꦺꦴꦪꦺꦴꦢ꧀||
 ꦲꦼꦩ꧀ꦥꦿꦶꦠ꧀||
 ꧈ꦢꦺ꧈ꦲ꧈ꦌꦭ꧀꧈|DHL|
@@ -345,28 +342,46 @@ autoExpandExamples.jv = `
 
 ꦲꦏ꧀ꦱꦫꦗꦮ|Javanese script|a§k§sa§ra §d͡ʒa§wa
 ꦔꦺꦴꦏꦺꦴ|neutral register|ŋo§ko
-ꦏꦿꦩ|polite register|krɔmɔ
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@https://en.wiktionary.org/wiki/Category:Javanese_terms_with_IPA_pronunciation
+ꦲꦶꦩ꧀ꦧ|brow|i§m.§ba|imba|imba||imba
+ꦲꦭꦶꦱ꧀|eyebrow|a.§li§s|alis|alis||alis
+ꦢꦸꦱꦸꦤ꧀|village, countryside|dʊ.§sʊ§n|dusun|dusun||dusun
+ꦒꦺꦴꦫꦺꦁ|to fry|ˈɡo.§reŋ|gorèng|gorèng||gorèng
+ꦲꦾꦁ|god, divinity|ˈhjaːŋ|Hyang|Hyang||Hyang
+ꦲꦶꦤ꧀ꦢꦃ|to hear, listen|ˈī§n.§dɑːh|indah|indah||indah
+ꦗꦺꦴꦒꦺꦠ꧀|dance|ˈdʒo§ˈɡɛ§t|jogèt|jogèt||jogèt
+ꦏꦕꦏ꧀|to speak|kaː§t͡ʃaː§ʔ|kacak|kacak||kacak
+ꦏꦲꦶꦤ꧀|cloth|ˈkaː§iː§n|kain|kain||kain
+ꦏꦿꦺꦱ꧀ꦤ|child born with smooth black skin|ˈkrə§s§nɔ|Kresna|Kresna||Kresna
+ꦭꦔꦶꦠ꧀|sky, heaven|ˈlɑː§ŋɪ§t̚|langit|langit||langit
+ꦭꦺꦠꦿꦺꦏ꧀|weaving cloth|lɛ§trɛ§ʔ|letrek|letrek||letrek
+ꦥꦼꦤ꧀ꦠꦶꦭ꧀|fruit bud|pə§n§t̪e§l|pentil|pentil||pentil
+ꦥꦼꦤ꧀ꦛꦶꦭ꧀|nipple|pə§n§ʈe§l|penthil|penthil||penthil
+ꦫꦸꦗꦏ꧀|traditional salad|ˈɹʊ.§ˈdʒa§ʔ|rujak|rujak||rujak
+ꦱꦁꦒꦸꦭ꧀|female hair bun|saŋ.§ɡʊ§l|sanggul|sanggul||sanggul
+ꦱꦽꦔꦺꦔꦺ|sun|srə.§ŋe.§ŋe|srengéngé|srengéngé||srengéngé
+ꦱꦸꦁꦒꦶ|to carry (on head/shoulder)|ˈsʊŋ§ɡiː|sunggi|sunggi||sunggi
+ꦠꦼꦭꦠꦃ|area|ˈtə§laː§taːʰ|telatah|telatah||telatah
+ꦠꦸꦤ꧀|desire|tʊ§n|tun|tun||tun
+ꦠꦸꦁꦏꦱ꧀|message, instruction|tʊŋ§ka§s|tungkas|tungkas||tungkas
+ꦮꦶꦗꦪ|victory|wi.§d͡ʒɔ.§jɔ|wi.d͡ʒɔ.jɔ|wi.d͡ʒɔ.jɔ||wi.d͡ʒɔ.jɔ
+ꦮꦸꦭꦸ|hair, fur|ˈwu.§lu|wulu|wulu||wulu
+ꦲꦸꦒꦼꦂ|basis, basic rule|u.§ɡər|uger|uger||uger
+ꦲꦺꦭꦶꦁ|to remember|ˈe.§lɪŋ|éling|éling
+ꦲꦺꦴꦧꦠ꧀|medecine, potion|o.§ba§t|obat|obat||obat
+ꦲꦺꦱ꧀ꦠꦿꦶ|female|ɛ§s.§tri|èstri|èstri
+ꦏꦿꦩ|behaviour, politeness|krɔ§mɔ|krama|krama
+ꦏꦿꦠꦺꦴꦤ꧀|royal palace|ˈkra§tɔ§n|kraton|kraton
+ꦏꦔꦼꦤ꧀|desirous|ˈka.§ŋə§n|kangen|kangen
+ꦄꦂꦗꦸꦤ|Arjuna (male name)|ar.§d͡ʒu.§nɔ|Arjuna|Arjuna
+ꦉꦏ꧀ꦱ|to guard, watch over|rə§k.§sɔ|reksa|reksa
+ꦊꦁꦏꦫ|impossible, improbable|ləŋ.§ka.§ra|lengkara|lengkara
+ꦊꦩꦼꦱ꧀|pliant, supple|lə.§mə§s|lemes|lemes
+ꦊꦱ꧀ꦠꦫꦶ|eternal|lə§s.§ta.§ri|lestari|lestari
+ꦥꦁꦫꦶꦥ꧀ꦠ|author, composer|paŋriptɔ|pangripta|pangripta
 
 
 
