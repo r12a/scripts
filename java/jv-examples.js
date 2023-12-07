@@ -1,21 +1,38 @@
 /*
 @ Source: 
-§ 'Yogyakarta'
-# 200
-~ ltr
-! jv
+
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ x means that no link to Wiktionary should be added
+   if Wiktionary spells the word differently, add the spelling here
 */
+
+
+otherTranscription = true   // kicks in the latest order of items
+
+
+
 
 autoExpandExamples.jv = `
 
 ꧇꧑꧕꧇ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ꧇꧒꧐꧑꧒꧇|15 october 2012|
-ꦄꦪꦸ|Ayu|ˈa§ju*|ayu|personal name
+ꦄꦪꦸ|Ayu|ˈa§ju|ayu|personal name
 ꦄꦫꦶꦱ꧀ꦠꦺꦴꦠꦼꦭꦼꦱ꧀|Aristotle|
 ꦄꦭ꧀ꦭꦃ|Allah||allah
 ꦆꦤ꧀ꦠꦼꦫꦏ꧀ꦱꦶ|interaction||interaksi
 ꦉꦩꦸꦏ꧀ꦗꦸꦁ||
 ꦉꦩꦸꦗꦸꦁ||
-ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀|gentle|lə§mah §lə§m§bu§t*|lemah lembut
+ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀|gentle|lə§mah §lə§m§bu§t|lemah lembut
 ꦊꦩ꧀ꦧꦸ||
 ꦊꦭꦸꦲꦸꦂ||
 ꦏꦁꦩꦱ꧀||
@@ -223,7 +240,7 @@ autoExpandExamples.jv = `
 ꦩꦪꦁ||
 ꦩꦭꦲꦺꦏꦠ꧀||
 ꦩꦱꦾꦫꦏꦠ꧀||
-ꦩꦲꦺꦴꦱ꧀|to read (polite)|ma§o§s*|maos
+ꦩꦲꦺꦴꦱ꧀|to read (polite)|ma§o§s|maos
 ꦩꦶꦠꦿ||
 ꦩꦸꦏ||
 ꦩꦸꦝ|young||mudha
@@ -312,7 +329,7 @@ autoExpandExamples.jv = `
 ꦲꦧꦁ|red|ˈa.baŋ/ˈɔ.bɔŋ
 ꦲꦩ꧀ꦧꦿꦤꦁ|turn fiery red||ambranaŋ
 ꦲꦪꦤ꧀||
-ꦲꦪꦸ|graceful|ˈa§ju*|ayu
+ꦲꦪꦸ|graceful|ˈa§ju|ayu
 ꦲꦭꦱ꧀||
 ꦲꦭꦺꦴꦤ꧀ꦲꦭꦺꦴꦤ꧀||
 ꦲꦱꦸ||
@@ -342,6 +359,13 @@ autoExpandExamples.jv = `
 
 ꦲꦏ꧀ꦱꦫꦗꦮ|Javanese script|a§k§sa§ra §d͡ʒa§wa
 ꦔꦺꦴꦏꦺꦴ|neutral register|ŋo§ko
+
+
+
+@ other
+ꦩꦔꦤ꧀ꦱꦺꦴꦠꦺꦴ||ma§ŋa§n §so§to|magnan soto
+
+
 
 
 
