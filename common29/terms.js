@@ -1,6 +1,5 @@
 var wordList = contents.split('\n')
 var spreadsheetInfo = {}
-//wordList.push('|End of list reached.||')
 var metadata, value
 const TERM = 0
 const MEANING = 1
@@ -108,6 +107,7 @@ if (document.getElementById('tabPlaceholder')) {
 
 
     <div id="list_tab_area">
+    <div style="float:right; font-style: italic; font-size: 60%; margin-inline-end:2rem; cursor:pointer;" onclick="checkForDuplicates()">Check for duplicates</div>
     <p style="font-style: italic; font-size: 80%;"><label>Total items: <span id="totalLemmas">–</span></label></p>
     <table id="printout"></table>
     </div>
@@ -207,31 +207,8 @@ for (var m=0;m<wordList.length;m++) {
 		}
 	}
 
-
-// add spaces around term, ipa, & transc to facilitate word edge searching
-// check whether there are notes (affects drawing of table later)
-/*terms.thereAreNotes = false
-for (var n=0;n<wordList.length;n++) {
-    fields = wordList[n].split('|')
-    fields[TERM] = ' '+fields[TERM]+' '
-    fields[IPAraw] = ' '+fields[IPA]+' '
-    fields[IPA] = ' '+fields[IPA]+' '
-    fields[IPA] = fields[IPA].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
-	if (typeof fields[TRANS] === 'undefined' || fields[TRANS] === '') {
-        fields[TRANS] = ''
-        }
-    else fields[TRANS] = ' '+fields[TRANS]+' '
-
-	if (typeof fields[NOTES] === 'undefined' || fields[NOTES] === '') {
-        fields[NOTES] = ''
-        }
-    else terms.thereAreNotes = true
-    wordList[n] = fields.join('|')
-	}*/
-    
     
 terms.thereAreNotes = false
-if (typeof otherTranscription === 'undefined') otherTranscription = null
 
 for (var n=0;n<wordList.length;n++) {
     fields = wordList[n].split('|')
@@ -254,22 +231,17 @@ for (var n=0;n<wordList.length;n++) {
 
 	if (fields[3]) newfields.trans = ' '+fields[3]+' '
     
-    if (otherTranscription && fields[4]) newfields.equiv = fields[4]
+    if (fields[4]) newfields.equiv = fields[4]
     
-    if (otherTranscription && fields[5]) {
+    if (fields[5]) {
         terms.thereAreNotes = true
         newfields.notes = fields[5]
         }
-    else if (typeof otherTranscription === 'undefined' && fields[4]) {
-        terms.thereAreNotes = true
-        newfields.notes = fields[4]
-        }
-    
-    if (otherTranscription && fields[6]) newfields.wiktionary = fields[6]
-    else if (typeof otherTranscription === 'undefined' && fields[5]) newfields.wiktionary = fields[5]
+
+    if (fields[6]) newfields.wiktionary = fields[6]
     
 
-    wordList[n] = newfields.term+'|'+newfields.meaning+'|'+newfields.ipa+'|'+newfields.trans+'|'+newfields.equiv+'|'+newfields.notes+'|'+newfields.wiktionary+'|'+newfields.ipaRaw
+    wordList[n] = newfields.term+'|'+newfields.meaning+'|'+newfields.ipa+'|'+newfields.trans+'|'+newfields.equiv+'|'+newfields.notes+'|'+newfields.wiktionary+'|'+newfields.ipaRaw+'|'
 	}
 
 
@@ -309,10 +281,16 @@ function initialise () {
 			}
 		}
     
-    // add a dialogue box
+    // add a dialogue box to notify about Copying
     var dialog = document.createElement('dialog')
     dialog.appendChild( document.createTextNode('Copied !'))
     dialog.id = 'copyNotice'
+    document.querySelector('body').appendChild( dialog )
+    
+    // add a dialogue box to notify about Duplicates
+    var dialog = document.createElement('dialog')
+    dialog.appendChild( document.createTextNode('No duplicates !'))
+    dialog.id = 'dupNotice'
     document.querySelector('body').appendChild( dialog )
 	}
 
@@ -322,8 +300,16 @@ function initialise () {
 
 function printAll () {
 	var out = ''
+    var source = ''
     var panel = document.getElementById('panel')
 	for (var i=0;i<wordList.length;i++) { 
+    
+        // find a source header
+        if (window.wordList[i].startsWith(' @')) {
+            source = window.wordList[i].replace(/ @/,'').trim()
+            continue
+            }
+        
         var fields = wordList[i].split('|')
 		out += '<tr>'
 
@@ -335,15 +321,16 @@ function printAll () {
         // first, remove ascii apostrophe to avoid crashing the codde
         termToLookUp = fields[TERM].trim().toLocaleLowerCase().replace(/'/,'ʼ')
         out += `<span onclick="showNameDetails('${ termToLookUp }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw].trim() }')" class="term">${ fields[TERM] }</span>`
-        //out += `<span onclick="showNameDetails('${ fields[TERM].trim().toLocaleLowerCase() }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw].trim() }')" class="term">${ fields[TERM] }</span>`
         
         // add copy icon
         out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ fields[TERM].trim() }')">`
 
         // add a link icon if there's a Wiktionary entry
-        if (fields[WIKI] && fields[WIKI].trim() === 'x') {} // do nothing
-        else if (fields[WIKI] && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
-        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
+        if (source.includes('wiktionary')) {
+            if (fields[WIKI] && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
+            else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
+            }
+
 
         
 
@@ -354,7 +341,6 @@ function printAll () {
 		out += '<td class="tr">'+fields[IPA]+'</td>'
 		out += '<td class="tr">'+fields[TRANS]+'</td>'
 		out += '<td class="tr">'+fields[EQUIV]+'</td>'
-       // if (terms.thereAreNotes) out += '<td class="noteCol">'+fields[NOTES]+'</td>'
         
         if (terms.thereAreNotes) {
             if (fields[NOTES].match('§')) {
@@ -402,12 +388,21 @@ function findWords (reg) {
     var regex = new RegExp(reg)
     var searchCol = document.getElementById('searchCol').value
     result = []
+    var source = ''
     for (var i=0;i<window.wordList.length;i++) {
+    
+        // find a source header
+        if (window.wordList[i].startsWith(' @')) {
+            if (window.wordList[i].includes('wiktionary')) source = '‣'
+            else source = ''
+            continue
+            }
+        
         if (searchCol !== 'all') {
             colsToSearch = window.wordList[i].split('|')
-            if (colsToSearch[searchCol].match(regex)) result.push( window.wordList[i] )
+            if (colsToSearch[searchCol].match(regex)) result.push( window.wordList[i]+source )
             }
-        else if (window.wordList[i].match(regex)) result.push( window.wordList[i] )
+        else if (window.wordList[i].match(regex)) result.push( window.wordList[i]+source )
         }
     result.sort(compareByWord)
     
@@ -417,7 +412,10 @@ function findWords (reg) {
 	var itemArray
     
     
-    for (let i=0;i<result.length;i++) { 
+    for (let i=0;i<result.length;i++) {
+    	if (result[i].includes('‣')) source = '‣'
+    	else source = ''
+    	
 		itemArray = result[i].split('|')
 		out += '<tr>'
         
@@ -433,28 +431,16 @@ function findWords (reg) {
         // first, remove ascii apostrophe to avoid crashing the codde
         termToLookUp = itemArray[TERM].trim().toLocaleLowerCase().replace(/'/,'ʼ')
         out += `<span onclick="showNameDetails('${ termToLookUp }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw].trim() }')" class="term">${ itemArray[TERM] }</span>`
-        //out += `<span onclick="showNameDetails('${ itemArray[TERM].trim().toLocaleLowerCase() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw].trim() }')" class="term">${ itemArray[TERM] }</span>`
         
         // add copy icon
         out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ itemArray[TERM].trim() }')">`
 
         // add a link icon if there's a Wiktionary entry
-        if (itemArray[WIKI]  && itemArray[WIKI].trim() === 'x') {} // do nothing
-        else if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
-        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM].trim() }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
+        if (source) {
+            if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
+            else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM].trim() }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
+            }
 
-
-        
-/*
-        if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';">${ itemArray[TERM] }</a>`
-        else if (itemArray[WIKI]) out += `<span  onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';">${ itemArray[TERM] }</span>`
-        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';">${ itemArray[TERM] }</a>`
-        
-                
-        out += `<span onclick="showNameDetails('${ itemArray[TERM].trim() }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw] }')"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></span>`
-        
-        out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ itemArray[TERM].trim() }')">`
-*/
         out += '</td>'
         
 
@@ -473,15 +459,6 @@ function findWords (reg) {
 
         if (terms.thereAreNotes) { //out += `<td class="noteCol">${ itemArray[NOTES] }</td>`
             // find cross references and turn them into links
-        	/*if (itemArray[NOTES].match('§')) {
-                var noteParts = itemArray[NOTES].split('§')
-                var xrefs = ''
-                for (var x=1;x<noteParts.length-1;x++) {
-                    xrefs +=  `<a href="${ terms.language }_vocab?q=${ noteParts[x] }">${ noteParts[x] }</a> `
-                    }
-            	out += `<td class="noteCol">${ noteParts[0]+xrefs+noteParts[noteParts.length-1] }</td>`
-            	}
-            */
         	if (itemArray[NOTES].match('§')) {
                 var noteParts = itemArray[NOTES].split('§')
                 var xrefs =  `<a href="${ terms.language }_vocab?q=${ noteParts[1].replace(/,\s*/g,'|') }">${ noteParts[1] }</a>`
@@ -539,16 +516,6 @@ function findWords (reg) {
 	}
 
 
-function copyMsg ( text ) {
-    // briefly shows a dialog box to confirm copy
-    navigator.clipboard.writeText(text)
-    
-    document.getElementById('copyNotice').showModal()
-    setTimeout(() => {
-        document.getElementById('copyNotice').close()
-        }, "500")
-    }
-
 
 
 function copyMsg ( text ) {
@@ -561,14 +528,17 @@ function copyMsg ( text ) {
         }, "500")
     }
 
+function duplicatesMsg ( text ) {
+    // briefly shows a dialog box to list the number of duplicates
+    document.getElementById('dupNotice').textContent = text
+    
+    document.getElementById('dupNotice').style.display = 'block'
+    setTimeout(() => {
+        document.getElementById('dupNotice').style.display = 'none'
+        }, "1000")
+    }
 
-function compareByWord(a,b) { 
-  if (a < b)         
-    return 1;
-  if (a > b)
-    return -1;
-  return 0;
-	}
+
 
 function compareByWord(a,b) { 
   if (a > b)         
@@ -663,6 +633,25 @@ function listFrequency () {
     }
 
 
+
+function checkForDuplicates () {
+	// highlights duplicate entries
+	
+	var entries = document.querySelectorAll('.term')
+	
+	uniqueSet = new Set()
+
+	for (i=0;i<entries.length;i++) {
+		if (uniqueSet.has(entries[i].textContent)) {
+			entries[i].style.backgroundColor = 'yellow'
+			entries[i].textContent += ' §'
+			}
+		else uniqueSet.add(entries[i].textContent)
+		}
+console.log('entries', entries.length)
+console.log('set',uniqueSet.size)
+	duplicatesMsg(`${ entries.length - uniqueSet.size } duplicates.`)
+	}
 
 
 
