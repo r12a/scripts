@@ -1,7 +1,5 @@
 /*
-@ Source: 
-
-native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -13,16 +11,16 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
-otherTranscription = true   // kicks in the latest order of items
 
 
 
 autoExpandExamples.tmp = `
+
+@ Source
 
 𑯇𑯃𑯜|woman|m§i§ʃ||||x
 𑯓𑯖̃𑯆𑯅|water|v§ãː§k§u||||x
