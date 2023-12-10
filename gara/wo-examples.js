@@ -376,7 +376,7 @@ Me||
 𐵲𐵍𐵎𐵷|milk|m§ɛː§‹§w|meew|meew||meew
 melax||
 metit|pain|ˈm§ɛ§t§i§t
-𐵲𐵩𐵿𐵪𐵩𐵎𐶀|fruit|mɛ§ññɛː§‹§f|meññeef
+𐵲𐵩𐵿𐵩𐵪𐵎𐶀|fruit|mɛ§ññɛː§‹§f|meññeef
 miimara||
 minise||
 moom||
@@ -495,7 +495,7 @@ seytaane||
 Siin-Siin||
 siiru||
 𐵶𐵋𐵎𐵶|chair|s§iː§‹§s|siis|siis||siis
-sikket||
+𐵶𐵋𐵳𐵩𐵪𐵽|billy goat|sikkɛt|sikket|sikket||sikket
 𐵶𐵋𐵳𐵪𐵋𐵲|beard, chin|s§i§kk§i§m
 soble||
 𐵶𐵌𐵎𐶁|yellow|s§ɔː§‹§n|soon|soon||soon
