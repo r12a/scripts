@@ -1,6 +1,5 @@
 /*
-@ Source: https://en.wiktionary.org/w/index.php?title=Category:Urdu_terms_with_IPA_pronunciation&pageuntil=%D8%A7%DB%8C%D9%85%D8%A7%D9%86%0A%D8%A7%DB%8C%D9%85%D8%A7%D9%86#mw-pages
-native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -12,17 +11,18 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
-otherTranscription = true   // kicks in the latest order of items
+
+
 
 
 autoExpandExamples.ur = `
 
 
+@ https://en.wiktionary.org/w/index.php?title=Category:Urdu_terms_with_IPA_pronunciation&pageuntil=%D8%A7%DB%8C%D9%85%D8%A7%D9%86%0A%D8%A7%DB%8C%D9%85%D8%A7%D9%86#mw-pages
 
 آؤ|come|ɑː§o
 آئین|constitution|ɑː.§–§iː§n
@@ -85,7 +85,6 @@ autoExpandExamples.ur = `
 ابن الوقتی|opportunistic|ɪbn.ʊl.ʋəq.t̪iː
 ابهار|emergence|ʊ.bʱɑːɾ
 ابو|father, dad|əb.buː
-ابھشیک|annointing, inauguration|ə.bʱɪ.ʂeːk
 اِتِّحاد|unity, coalition|ɪ.§t̪t̪ɪ.§ɦ§ɑː§d̪| ittihād |اتحاد
 اتحاد|unity, coalition|ɪ.§t̪t̪ɪ.§ɦ§ɑː§d̪| ittihād |اِتِّحاد
 اتحادی|allied, coalition|ɪt̪.t̪ɪ.ɦɑː.d̪iː
@@ -118,7 +117,6 @@ autoExpandExamples.ur = `
 ادبیات|literature|əd̪.bɪ.jɑːt̪
 ادھنا|now (rare)|ə.d̪ʱʊ.nɑː
 ادی|today|əd̪.jᵊ
-ارب|billion|ə.ɾəb
 ارتعاش|tremor, vibration|ɪɾ.t̪eː.ɑːʃ
 اَرَسطُو|Aristotle|ə.ɾəs.t̪uː||ارسطو
 ارسطو|Aristotle|ə.ɾəs.t̪uː||اَرَسطُو
@@ -198,15 +196,14 @@ autoExpandExamples.ur = `
 اوپر|above|uː§‹§pə§r||اوٗپر / اُوپر
 اُوپَر|above|uː§‹§pa§r||اوپر
 اوٗپَر|above|uː§‹§pa§r||اوپر
-اوہ|oh no!|›§uː§ɦ
 اَبابِیْل|swallow|ə.bɑː.biːl| abābīl |ابابیل
 ابابیل|swallow|ə.bɑː.biːl| abābīl |اَبابِیْل
-اَبِھشیک|annointing, inauguration|ə.bʱɪ.ʂeːk| abhiṣek |ابھشیک
-ابھشیک|annointing, inauguration|ə.bʱɪ.ʂeːk| abhiṣek |اَبِھشیک
+اَبِھشیک|annointing, inauguration|ə.§bʱɪ.§‹§ʂ§eː§k| abhiṣek |ابھشیک
+ابھشیک|annointing, inauguration|ə.§bʱɪ.§‹§ʂ§eː§k| abhiṣek |اَبِھشیک
 اَحمد|Ahmed|ɛ§h§ma§d||احمد
 احمد|Ahmed|ɛ§h§ma§d||اَحمد
-اَرَب|necessity|a§ra§b||ارب
-ارب|necessity|a§ra§b||اَرَب
+اَرَب|billion|ə.§ɾə§b||ارب|अरब|ارب
+ارب|billion|ə.§ɾə§b||اَرَب|अरब
 اَللہ|Allah|əl.lɑːɦ||اللہ
 اللہ|Allah|əl.lɑːɦ||اَللہ
 اَنْڈَا|egg|ə§ɳ.§ɖɑː§‹|aṇḍā|انڈا
@@ -292,8 +289,6 @@ autoExpandExamples.ur = `
 بحر|ocean|bəɦɾ
 بدر|outside|bə.d̪əɾ
 بدن|body|bə.d̪ən
-براہِ راست|directly|bə§r§ɑː§ɦ ɛ§ §r§ɑː§s§t||براہ راست
-براہ راست|directly|bə§r§ɑː§ɦ ɛ§ §r§ɑː§s§t||براہِ راست
 براۂ راست|directly|bərɑːɦ ɛ rɑːst
 برتن|pot, bowl|bəɾ.t̪ən
 برما|drill (tool)|bəɾ.mɑː
@@ -326,8 +321,8 @@ autoExpandExamples.ur = `
 بولنا|to speak, tell|boːl.nɑː||بولْنَا
 بونا|to sow, plant|boː.nɑː
 بوڑھا|old man|buː.ɽʱɑː
-بَراہِ راسْت|live (broadcasting)|bə.§ɾ§ɑː§ɦ.e.§ §ɾ§ɑː§s§t̪||براہ راست
-براہ راست|live (broadcasting)|bə.§ɾ§ɑː§ɦ.e.§ §ɾ§ɑː§s§t̪||بَراہِ راسْت
+براہِ راست|directly|bə§r§ɑː§ɦ ɛ§ §r§ɑː§s§t||براہ راست बराह-ए-रास्त||براہ راست
+براہ راست|directly|bə§r§ɑː§ɦ ɛ§ §r§ɑː§s§t||براہِ راست बराह-ए-रास्त
 بَچّہ|child|bətt͡ʃʰɑː||بچہ
 بچہ|child|bətt͡ʃʰɑː||بَچّہ
 بَکَّم|kite|bək.kəm||بکم
@@ -335,8 +330,7 @@ autoExpandExamples.ur = `
 بٹورنا|to collect|bə.ʈoːɾ.nɑː
 بپتسمہ|baptism|bəp.t̪ɪs.mɑː
 بچپن|childhood|bət͡ʃ.pən
-بڑا|big, important|bə.§ɽ§ɑː
-بڑا|big|bə.§ɽ§ɑː
+بڑا|big, important|bə.§ɽ§ɑː|baṛā|बड़ा
 بکرا|goat m.|bək.ɾɑː
 بکری|goat f.|bək.ɾiː
 بکس|box, chest|bəks
@@ -418,8 +412,7 @@ autoExpandExamples.ur = `
 تیرنا|to swim, float|t̪ɛːɾ.nɑː
 تیزاب|acid|t̪eːˈzaːb
 تیکھا|pungent, spicy|t̪iː.kʰɑː
-ثابت|constant, static|s§ɑː.§bɪ§t̪
-ثابت|proven|s§ɑː§bə§t
+ثابت|constant, static|s§ɑː.§bɪ§t̪|sābit|साबित
 ثبوت|evidence, proof|sə.buːt̪
 ثروت|wealth, affluence|səɾ.ʋət̪
 ثقافت|culture|sə.qɑː.fət̪
@@ -549,9 +542,9 @@ autoExpandExamples.ur = `
 داستان|story|d̪ɑːs.t̪ɑːn
 داعش|Daesh, ISIS|d̪ɑː.(ʔ)ɪʃ
 داغ|stain, spot|d̪ɑːɣ
-دانت|tooth, tusk|d̪§ɑ̃ː§‹§t̪
-دانت|tooth|d̪§ɑ̃ː§‹§t̪
-دان٘ت|tooth|d̪§ɑ̃ː§‹§t̪
+دانت|tooth, tusk|d̪§ɑ̃ː§‹§t̪| dā̃t/dānt|دان٘ت/دانْت दाँत /दांत
+دان٘ت|tooth|d̪§ɑ̃ː§‹§t̪|dā̃t|दाँत||دانت
+دانْت|tooth|d̪§ɑ̃ː§‹§t̪|dānt|दांत||دانت
 دانش گاہ|college|d̪ɑː.nɪʃ.ɡɑːɦ
 دانش|knowledge, science|d̪§ɑː.§nɪ§ʃ
 دایاں|right (side)|d̪ɑː.jɑ̃ː
@@ -744,19 +737,17 @@ autoExpandExamples.ur = `
 شرک|polytheism|ʃɪɾk
 شرکرا|sugar|ʃəɾ.kə.ɾɑː
 شریر|evil, bad, corrupt|ʃə.ɾiːɾ
-شعر|poetry couplet|ʃeːɾ
 شُعلہ|flame|ʃoː§‹§l§ɑː|śu'la|شعلہ||شعلہ
 شعلہ|flame|ʃoː§‹§l§ɑː|śu'la|شُعلہ
 شناخت|identification|ʃɪ.nɑːxt̪
 شَوق|keenness, interest|ʃɔ§‹§q||شوق
 شوق|keenness, interest|ʃ§ɔ§q||شَوق
-شَکتی|energy|ʃə§k§t§i||شکتی
-شکتی|energy|ʃə§k§t§i||شَکتی
+شکتی|power, strength|ʃə§k.§t̪§iː| śaktī|شَکتی शक्ति
+شَکتی|power, strength|ʃə§k.§t̪§iː |śaktī|شکتیशक्ति||شکتی
 شُہرت|fame|ʃɔ§h§rə§t||شہرت
 شہرت|fame|ʃɔ§h§rə§t||شُہرت
-شِعر|verse|ʃeː§‹§ɾ|śer|شعر
-شعر|verse|ʃ§eː§ɾ|śer|شِعر
-شکتی|power, strength|ʃək.t̪iː
+شِعر|verse|ʃeː§‹§ɾ|śer|شعرशेर|| شعر
+شعر|verse|ʃ§eː§ɾ|śer|شِعر शेर
 شکریہ|thanks, thank you|ʃʊk.ɾɪ.jɑː
 شہر|city, town|ʃɛ.ɦɛɾ
 شہزادہ|prince|ʃəɦ.zɑː.d̪ɑː
@@ -906,8 +897,8 @@ autoExpandExamples.ur = `
 لِہٰذا|therefore|lɛ.§ɦɑː.§z§ɑː|lihāzā|لہذا||لہذا
 لہذا|therefore|lɛ.§ɦɑː.§z§ɑː|lihāzā|لِہٰذا
 لڑکا|boy|ləɽ.kɑː
-لڑکی|girl|lə§ɽ.§k§iː
-لڑکی|girl|lə§ɽ§k§iː
+لڑکی|girl|lə§ɽ.§k§iː|laṛkī|لَڑْکی लड़की
+لَڑْکی|girl|lə§ɽ§k§iː|laṛkī|لَڑْکی लड़की||لڑکی
 لڑکیاں|girls|la§ɽ§k§iː§ɑ̃ː§‹
 لڑکیوں کا|of the girls|la§ɽ§k§iː§õ§‹§ §k§ɑː
 لڑکے|boys|lə§ɽ§k§e
@@ -1053,7 +1044,6 @@ autoExpandExamples.ur = `
 وزير خارجہ|foreign minister|ʋə.ziːɾ.eː‿xɑː.ɾɪ.d͡ʒɑː
 وزیر اعظم|prime minister|ʋə.ziːɾ.eː.ɑː.zəm
 وزیر|minister|ʋə.ziːɾ
-وستو|thing|ʋəs.t̪uː
 وشنو|Vishnu|ʋɪʃ.nuː
 وصال|embrace|ʋɪ.sɑːl
 وفا|faith, loyalty|ʋə.fɑː
@@ -1063,15 +1053,14 @@ autoExpandExamples.ur = `
 ولئ کامل|perfect saint|valiː ɛ kɑːmɪl
 وَستُو|item|ʋə§s§tu§‹||وستو
 وستو|item|ʋə§s§tu§‹||وَستُو
-وہ|he|ʋoːɦ
-وہ|that, he, she, it|v§o
+اوہ|oh no!|›§uː§ɦ
+وہ|that, he, she, it|ʋ§oː|vo|वो or वह
 وہاں|there|ʋə.ɦɑ̃ː
 وہی|the same|ʋə.ɦiː
 ویاکرن|grammar|ʋjɑː.kə.ɾən
 وینجن|consonant|ʋjən.d͡ʒən
-ٹان٘گ|leg|t§ãː§‹§g||ٹان٘گ
-ٹان٘گ|leg|t§ãː§‹§g||ٹان٘گ
-ٹانگ|leg|t§ãː§‹§g
+ٹان٘گ|leg|t§ãː§‹§g| ṭāṅg |ٹان٘گ  टांग||ٹانگ
+ٹانگ|leg|t§ãː§‹§g|ṭāṅg|ٹان٘گ  टांग
 ٹوپی|hat|ʈ§oː§p§iː
 ٹکر|collision, crash|ʈək.kəɾ
 ٹکراو|collision, bump|ʈək.ɾɑːʋ
@@ -1157,8 +1146,7 @@ autoExpandExamples.ur = `
 چھتری|umbrella|t͡ʃʰət̪.ɾiː
 چھونا|to touch, feel|t͡ʃʰuː.nɑː
 چھوٹ|escape|t͡ʃʰuːʈ
-چھوٹا|small, little|t͡ʃʰ§‹§oː.§ʈ§ɑː
-چھوٹا|small|t͡ʃʰ§‹§oː.§ʈ§ɑː
+چھوٹا|small, little|t͡ʃʰ§‹§oː.§ʈ§ɑː|choṭā|छोटा
 چھٹا|unrestrained|t͡ʃʰʊʈ.ʈɑː
 چھٹی|leave, holiday|t͡ʃʰʊ.ʈːiː
 چھہ|six|t͡ʃʰəɦ/t͡ʃʰeː
@@ -1235,8 +1223,7 @@ autoExpandExamples.ur = `
 کھنک|sound of wind|kʰə.nək
 کھٹائی|sourness|kʰə.ʈɑː.iː
 کھیل|game, sport|kʰeːl
-کہ|that|k§e
-کہ|that|k§ɛ
+کہ|that|k§eː|kih/ke|कि
 کہانی|story|kə.ɦɑː.niː
 کہاوت|proverb|kə.ɦɑː.ʋət̪
 کہاں|where|kəhɑːn
@@ -1252,10 +1239,8 @@ autoExpandExamples.ur = `
 گاؤں|village, hamlet|ɡ§ɑː.§õː§‹|gāõ|گَاؤں
 گَاؤں|village, hamlet|ɡ§ɑː.§õː§‹|gāõ|گاؤں||گاؤں
 گائے|cow|ɡ§ɑː.§–§eː
-گائے|they sang|g§ɑː§–§e
 گاتر|limb|ɡɑːt̪.ɾᵊ
-گاری|car|g§ɑː§r§iː
-گَارِی|car|gɑː§‹§riː§‹
+گَارِی|car|gɑː§‹§riː§‹||گاری||گاری
 گاری|car|gɑː§‹§riː§‹||گَارِی
 گام|step|g§ɑː§m
 گانا|song|ɡɑː.nɑː
@@ -1329,12 +1314,10 @@ autoExpandExamples.ur = `
 ہٹا کٹا|robust, sturdy|ɦəʈ.ʈɑː.kəʈ.ʈɑː
 ہیئت|astronomy|h§ɛː§ə§t
 یا|oh!|jɑː
-یار|friend|j§ɑː§r
 یار|pal, friend|j§ɑː§ɾ
 یروشلم|Jerusalem|jə.ɾuː.ʃəl.ləm/jəɾ.ōʃəl.ləm
-یقینا|indeed, for sure|jə.qiː.nən
-یقیناً|certainly|ya§k§iː§n§an||یقینا
-یقینا|certainly|ya§k§iː§n§an||یقیناً
+یقیناً|indeed, certainly|jə.§q§iː.§nə§n||یقینا यक़ीनन||یقینا
+یقینا|indeed, certainly|jə.§q§iː.§nə§n||یقیناً यक़ीनन
 یوسف ثانی|extremely beautiful|juː.sʊf.eː.sɑː.niː
 یوم آزادی|Independence Day|jɔːm.eː.ɑː.zɑː.d̪iː
 یوم مزدور|Labour Day|jɔːm.eː.məz.d̪uːɾ

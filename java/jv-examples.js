@@ -1,7 +1,5 @@
 /*
-@ Source: 
-
-native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -13,33 +11,33 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
-otherTranscription = true   // kicks in the latest order of items
+
 
 
 
 
 autoExpandExamples.jv = `
 
+
+@ https://en.wiktionary.org/wiki/Category:Javanese_lemmas
+
 ꧇꧑꧕꧇ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ꧇꧒꧐꧑꧒꧇|15 october 2012|
-ꦄꦪꦸ|Ayu|ˈa§ju|ayu|personal name
+ꦄꦪꦸ|Ayu|ˈa§ju|ayu||personal name
 ꦄꦫꦶꦱ꧀ꦠꦺꦴꦠꦼꦭꦼꦱ꧀|Aristotle|
 ꦄꦭ꧀ꦭꦃ|Allah||allah
 ꦆꦤ꧀ꦠꦼꦫꦏ꧀ꦱꦶ|interaction||interaksi
 ꦉꦩꦸꦏ꧀ꦗꦸꦁ||
 ꦉꦩꦸꦗꦸꦁ||
-ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀|gentle|lə§mah §lə§m§bu§t|lemah lembut
 ꦊꦩ꧀ꦧꦸ||
 ꦊꦭꦸꦲꦸꦂ||
 ꦏꦁꦩꦱ꧀||
 ꦏꦏꦁ||
 ꦏꦏꦏ꧀||
 ꦏꦏꦶꦄꦩꦺꦴꦁ||
-ꦏꦔꦼꦤ꧀|desirous|ˈka.§ŋə§n
 ꦏꦕ|glass||kaca
 ꦏꦕꦼꦥꦼꦠꦤ꧀||
 ꦏꦚ꧀ꦕ||
@@ -75,7 +73,6 @@ autoExpandExamples.jv = `
 ꦏꦼꦧꦿꦤꦁ||
 ꦏꦼꦩꦸꦭ꧀||
 ꦏꦼꦩ꧀ꦧꦁ||
-ꦏꦿꦠꦺꦴꦤ꧀||
 ꦏꦿꦩꦱ꧀||
 ꦏꦿꦶꦪ|skill, craft||kriya
 ꦏꦿꦸꦥꦸꦏ꧀|crackers|kru§pu§k|krupuk
@@ -112,7 +109,7 @@ autoExpandExamples.jv = `
 ꦗꦫꦤ꧀||
 ꦗꦮ|Java||jawa
 ꦗꦲꦺ|ginger||jahe
-ꦗ꦳ꦏꦠ꧀|alms giving||zakat|zakat
+ꦗ꦳ꦏꦠ꧀|alms giving|zakat|zakat
 ꦗꦸꦫꦁ||
 ꦗꦸꦮꦮꦸꦠ꧀||
 ꦗꦼꦮꦮꦸꦠ꧀||
@@ -306,7 +303,6 @@ autoExpandExamples.jv = `
 ꦱꦼꦩꦢꦶ||
 ꦱꦼꦩ꧀ꦥꦿꦺꦴꦁ||
 ꦱꦼꦭꦱ꧇꧑꧙꧇ꦩꦉꦠ꧀꧇꧒꧐꧑꧓꧇|Tuesday, 19 March 2013||selasa 19 maret 2013
-ꦱꦽꦔꦺꦔꦺ||
 ꦱꦿꦁꦒ||
 ꦲꦁꦏ꧀ꦭꦸꦁ|type of musical instrument||angklung
 ꦲꦁꦫꦁ||
@@ -362,14 +358,17 @@ autoExpandExamples.jv = `
 
 
 
-@ other
+@ unknown
+
 ꦩꦔꦤ꧀ꦱꦺꦴꦠꦺꦴ||ma§ŋa§n §so§to|magnan soto
+ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀|gentle|lə§mah §lə§m§bu§t|lemah lembut
 
 
 
 
 
-@https://en.wiktionary.org/wiki/Category:Javanese_terms_with_IPA_pronunciation
+@ https://en.wiktionary.org/wiki/Category:Javanese_terms_with_IPA_pronunciation
+
 ꦲꦶꦩ꧀ꦧ|brow|i§m.§ba|imba|imba||imba
 ꦲꦭꦶꦱ꧀|eyebrow|a.§li§s|alis|alis||alis
 ꦢꦸꦱꦸꦤ꧀|village, countryside|dʊ.§sʊ§n|dusun|dusun||dusun

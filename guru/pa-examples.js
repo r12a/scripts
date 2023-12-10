@@ -1,7 +1,5 @@
 /*
-@ Source: 
-
-native | meaning | IPA① | transcription | other transcriptions② & notes | wiktionary③
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -13,13 +11,18 @@ native | meaning | IPA① | transcription | other transcriptions② & notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
 
+
+
+
+
 autoExpandExamples.pa = `
+
+@ wiktionary
 
 'ਚ||
 'ਤੇ|at||'tē
@@ -1282,6 +1285,9 @@ autoExpandExamples.pa = `
 ਭਿਖੵਾ|begging|pɪ̀§kkʰjaː
 
 
+@ unknown source
+
+ਸ੍ਵਰਗ|heaven|s§və§rə§g|
 
 
 

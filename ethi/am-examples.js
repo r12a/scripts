@@ -1,8 +1,5 @@
 /*
-@ Source: https://en.wiktionary.org/wiki/Appendix:Amharic_Swadesh_list
-@ Source: Wiktionary lemmas
-
-native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -14,18 +11,17 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
-
-otherTranscription = true   // kicks in the latest order of items
 
 
 
 
 autoExpandExamples.am = `
 
+@ https://en.wiktionary.org/wiki/Appendix:Amharic_Swadesh_list
+@ wiktionary lemmas
 
 -ዚህ||
 -ዚች||
@@ -61,9 +57,7 @@ autoExpandExamples.am = `
 ሉል||
 ላም||
 ላባ|feather||laba
-ላይ|at||lay||x
 ሌሊት|night||lelit
-ሌላ|other||lela||x
 ሌባ||
 ሌት||
 ልምጭ|stick||ləmč̣
@@ -151,9 +145,6 @@ autoExpandExamples.am = `
 መኪና||
 መክፈቻ||
 መወርወር|to throw||mäwärwär
-መዉረድ|to flow||mäwuräd||x
-መዉደቅ|to fall||mäwudäḳ||x
-መዉጋት|to stab||mäwugat||x
 መዋኘት|to swim||mäwañät
 መዘመር|to sing||mäzämär
 መዝገበ ቃላት||
@@ -203,7 +194,6 @@ autoExpandExamples.am = `
 ማሰር|to tie||masär
 ማሰብ|to think||masäb
 ማስታወክ|to vomit||mastawäk
-ማሸት|to wipe||መፈተግ||x
 ማሽላ||
 ማሽተት|to smell||maštät
 ማቃጠል|to burn||maḳaṭäl
@@ -245,7 +235,6 @@ autoExpandExamples.am = `
 ምንድር||
 ምንድን||
 ምን፡ምን||
-ምክንያቱም|because||məknyatum||x
 ምክንያት||
 ምግብ ቤት||
 ምግብ||
@@ -254,11 +243,9 @@ autoExpandExamples.am = `
 ሞንጎመሪ||
 ሠላሳ||
 ሥር||
-ሥብ|fat (n)||śəb||x
 ሦስት||
 ረቡ||
 ረቡዕ||
-ረዝም|long||räzm||x
 ረጂም||
 ሩማን||
 ሩቅ|far|ˈɾu§kʼ|ruḳ
@@ -266,7 +253,6 @@ autoExpandExamples.am = `
 ራስ||
 ራብ||
 ሬሳ||
-ርስዎ|you (2sg)||rəswo||x
 ርእሰ ብሔር||
 ርግብ||
 ርጥብ|wet||rəṭb
@@ -282,7 +268,6 @@ autoExpandExamples.am = `
 ሰማንያ||
 ሰማያዊ||
 ሰማይ|sky||sämay
-ሰስፋት|to sew||säsfat||x
 ሰበን||
 ሰባ||
 ሰባተኛ||
@@ -291,7 +276,6 @@ autoExpandExamples.am = `
 ሰኔ||
 ሰንሰለት||
 ሰኞ||
-ሰዉ|man (human being)||säwu||x
 ሰዋሰው||
 ሰው||
 ሰውነት||
@@ -367,7 +351,6 @@ autoExpandExamples.am = `
 ቀበሌ||
 ቀን|day||ḳän
 ቀንድ|horn||ḳänd
-ቀኝ|right||ḳäñ||x
 ቀዝቃዛ|cold|kʼə§z§ˈkʼə§zza|ḳäzḳaza
 ቀይ|red||ḳäy
 ቀጥታ|straight||ḳäṭta
@@ -381,7 +364,6 @@ autoExpandExamples.am = `
 ቃል||
 ቃጥሎ||
 ቅማል|louse||ḳəmal
-ቅርብ|near||ḳərb||x
 ቅርፊት|bark (of a tree)||ḳərfit
 ቅንፍዝ||
 ቅዳሜ||
@@ -412,7 +394,6 @@ autoExpandExamples.am = `
 ቡና||
 ቡናይነት||
 ቡን||
-ቢሆን|if||bihon||x
 ቢላዋ||
 ቢምቢ||
 ቢራቢሮ||
@@ -470,7 +451,6 @@ autoExpandExamples.am = `
 ትናንትና||
 ትንሽ|small||tənš
 ትንቢት||
-ትክክል|correct||təkkl||x
 ትግርኛ||
 ቺሌ||
 ቻይ||
@@ -519,7 +499,6 @@ autoExpandExamples.am = `
 አረም||
 አረሰ||
 አረቂ||
-አረንገዴ|green||ʾärängäde||x
 አረንጓዴ||
 አራተኛ||
 አራት|four|(ʔ)a§ˈɾa§tt|ʾärat
@@ -548,7 +527,6 @@ autoExpandExamples.am = `
 አሽዋ||
 አበባ|flower|a§βə§βa|ʾäbäba
 አቡነ||
-አባራ|dust||ʾäbara||x
 አባት|father|ˈʔa§bba§t|ʾäbat
 አባጨጓሬ||
 አቧራ||
@@ -578,7 +556,6 @@ autoExpandExamples.am = `
 አያት||
 አይብ||
 አይን|eye||ʾäyn
-አይደለም|not||ʾäydäläm||x
 አይጥ||
 አደገኛ||
 አዲስ አበባ||
@@ -646,7 +623,6 @@ autoExpandExamples.am = `
 እነሱ||
 እነዚህ||
 እነዚያ||
-እና|and||ʾəna||x
 እናት|mother|ˈʔɨ§nna§t|ʾənat
 እናንተ|you (2pl)|ˈ(ʔ)ɨ§nna§n§tə|ʾənantä
 እናንት||
@@ -668,8 +644,6 @@ autoExpandExamples.am = `
 እንግዳ||
 እንጨት||
 እኛ|we (1pl)|ˈ(ʔ)ɨ§ɲɲa|ʾəña
-እዚህ|here||ʾəzih||x
-እዚያ|there||ʾəziya||x
 እዛብ||
 እጅ|hand|ˈ(ʔ)ɨ§dd͡ʒ|ʾəǧ
 እግረኛ||
@@ -690,7 +664,6 @@ autoExpandExamples.am = `
 ከተበ||
 ከታተበ||
 ከፈተ||
-ከ….ጋር|with||kä….gar||x
 ኩራት||
 ኪሩብ||
 ኪስ||
@@ -727,8 +700,6 @@ autoExpandExamples.am = `
 ወፍ|bird||wäf
 ወፍራም||
 ወፍጮ||
-ዉሃ|water||wuha||x
-ዉስጥ|in||wusṭ||x
 ዉሻ|dog||wuša
 ዊኪፔዲያ||
 ዋሊያ||
@@ -781,7 +752,6 @@ autoExpandExamples.am = `
 የርሷ||
 የሱ||
 የሷ||
-የተወሰነ|some||yätäwäsänä||x
 የቱ||
 የቲቱ||
 የት|where|ˈjə§t|yät
@@ -793,9 +763,7 @@ autoExpandExamples.am = `
 የኔ||
 የኛ||
 የእርስ በእርስ ጦርነት||
-የእግር መዳፍ|foot||yäʾgr mädaf||x
 የካቲት||
-የዶለዶመ|dull (as a knife)||yädolädomä||x
 የገማ|rotten||yägäma
 ያ|that|ˈja|ya
 ያቺ||
@@ -884,7 +852,6 @@ autoExpandExamples.am = `
 ግንቦት||
 ግንደ ቆርቁር||
 ግዕዝ||
-ጎልማሳ|man (adult male)||golmasa||x
 ጎመን||
 ጎረቤት||
 ጎዳና||
@@ -937,7 +904,6 @@ autoExpandExamples.am = `
 ጭጋግ|fog||č̣əgag
 ጮማ||
 ጳውሎስ||
-ጸሀይ|sun||ṣähäy||x
 ጸሐይ||
 ጸሓይ||
 ጸጉር|hair||ṣägur
@@ -971,6 +937,40 @@ autoExpandExamples.am = `
 ፖስታ፡ቤት||
 
 
+
+
+@ unknown source
+
+ላይ|at||lay|
+ሌላ|other||lela|
+መዉረድ|to flow||mäwuräd|
+መዉደቅ|to fall||mäwudäḳ|
+መዉጋት|to stab||mäwugat|
+ማሸት|to wipe||መፈተግ|
+ምክንያቱም|because||məknyatum|
+ሥብ|fat (n)||śəb|
+ረዝም|long||räzm|
+ርስዎ|you (2sg)||rəswo|
+ሰስፋት|to sew||säsfat|
+ሰዉ|man (human being)||säwu|
+ቀኝ|right||ḳäñ|
+ቅርብ|near||ḳərb|
+ቢሆን|if||bihon|
+ትክክል|correct||təkkl|
+አረንገዴ|green||ʾärängäde|
+አባራ|dust||ʾäbara|
+አይደለም|not||ʾäydäläm|
+እና|and||ʾəna|
+እዚህ|here||ʾəzih|
+እዚያ|there||ʾəziya|
+ከ….ጋር|with||kä….gar|
+ዉሃ|water||wuha|
+ዉስጥ|in||wusṭ|
+የተወሰነ|some||yätäwäsänä|
+የእግር መዳፍ|foot||yäʾgr mädaf|
+የዶለዶመ|dull (as a knife)||yädolädomä|
+ጎልማሳ|man (adult male)||golmasa|
+ጸሀይ|sun||ṣähäy|
 
 
 

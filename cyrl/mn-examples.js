@@ -1,15 +1,28 @@
 /*
-@ Source: https://en.wiktionary.org/wiki/Appendix:Mongolian_Swadesh_list
-@ Source: https://www.youtube.com/watch?v=PnZR2DvmOck
-@ Source: Colloquial Russian
-@ Source: nomiin ger
-§ 'Noto Sans Cyrillic'
-# 200
-~ ltr
-! mn
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
+
+
+
+
+
+
 autoExpandExamples.mn = `
+
+@ https://en.wiktionary.org/wiki/Appendix:Mongolian_Swadesh_list
 
 -аа||
 -аад||
@@ -356,8 +369,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 ам|mouth|a§m|am|ᠠᠮᠠ
 амаа татах||
 амаараа шороо үмхэх||
-амар|to rest|a§m§ᵊ§r|||x
-амархан|easy|a§m§ᵊ§r§x§ᵊ§n|||x
 амгай||
 америк||
 амжилт||
@@ -476,7 +487,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 байдал||
 байлдаан||
 байлдагч||
-байлдах|to fight||baildakh||x
 байн байн||
 байр||
 байх||
@@ -560,7 +570,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 бодит||
 бодол|thought|b§o§d§–§ɮ||ᠪᠣᠳᠤᠯ
 бодох|to think|ˈp§ɔ§t§ɔ§x|bodokh|ᠪᠣᠳᠤᠬᠤ
-бодъё|let's think||||x
 бодьсадва||
 бойжих||
 бол||
@@ -600,7 +609,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 будаа агшаагч||
 будаа||
 будаг||
-будан|fog|b§u§d§a§ŋ|budan||x
 буйдан|sofa|ˈp§ʊ§i̯§t§a§ŋ||ᠪᠤᠶᠢᠳᠠᠩ
 буйл||
 буйлт||
@@ -870,7 +878,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 долоон||
 долоох||
 домог||
-доор|under|t§oː§‹§r|||x
 доргиот алх||
 дорно||
 дорой||
@@ -1122,7 +1129,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 зүйр||
 зүйрлэл||
 зүйрлэх||
-зүрх|heart||z§ü§r§kh|ᠵᠢᠷᠦᠬᠡ
+зүрх|heart||zürkh|ᠵᠢᠷᠦᠬᠡ
 зүрчид||
 зүс||
 зүсэм||
@@ -1468,7 +1475,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 одоо||
 озох||
 ой|forest||oi|ᠣᠢ
-ойлгосон|I understood|ɔi§‹§lɔ§k§–§s§ᵊ§n|||x
 ойлгох||
 оймс||
 ойрад||
@@ -1540,7 +1546,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 пянз||
 пүнтүүз||
 пүрэв||
-пүүжин|rocket|p§ʊː§‹§d͡ʒ§i§ŋ|||x
 радио||
 размер||
 редакторлах||
@@ -1676,7 +1681,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 сүүлт од||
 сүүмэг||
 сөгдөх||
-та нар|you (plural)|t§a:§§n§ă§r|ta nar||x
 та||
 таавчик||
 таах||
@@ -1789,7 +1793,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 туг үс||
 туг||
 тугал||
-туймээс|that's why|ˈtʰ§iː§‹§m§e§‹§s|||x
 тул||
 тулалдаан||
 тунадас||
@@ -1935,11 +1938,9 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 утас|phone|ʊ§t§ᵊ§s|utas|ᠤᠲᠠᠰᠤ
 утга||
 уу||
-уугуул|indigenous|ˈʊː§‹§ɡ§ʊ§‹§ɮ|||x
 уудаг цаас||
 уул|mountain|ʊː§‹§ɮ|uul|ᠠᠭᠤᠯᠠ
 уулархаг||
-уулзъя|let's meet||||x
 ууль||
 уур амьсгал||
 уур||
@@ -1979,10 +1980,9 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хаалга||
 хаалттай||
 хаан||
-хаана|where|x§aː§‹§n§ă|khaana|ᠬᠠᠮᠢᠭ᠎ᠠ
+хаана|where|§aː§‹§n§ă|khaana|ᠬᠠᠮᠢᠭ᠎ᠠ
 хаант улс||
 хаах||
-хаашаа|where to|ˈx§aː§‹§ʃ§a§‹|||x
 хааяа нэг||
 хавар||
 хавирга||
@@ -1999,10 +1999,10 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хадаас||
 хадаг||
 хадах|to sew||khadakh
-хадгалагдах|to be saved|x§a§d§ɡ§ᵊ§ɮ§ᵊ§ɡ§d§ᵊ§x
+хадгалагдах|to be saved|§a§d§ɡ§ᵊ§ɮ§ᵊ§ɡ§d§ᵊ§x
 хадуур||
 хазаар||
-хазах|to bite|x§a§t͡s§ə§x|khazakh|ᠬᠠᠵᠠᠬᠤ
+хазах|to bite|§a§t͡s§ə§x|khazakh|ᠬᠠᠵᠠᠬᠤ
 хайлмаг||
 хайнаг||
 хайр||
@@ -2014,7 +2014,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хайчлах||
 халаад||
 халаас||
-халбага|spoon|x§a§ɮ§b§a§ɡ§ᵊ|khalbaga|ᠬᠠᠯᠪᠠᠭ᠎ᠠ
+халбага|spoon|a§ɮ§b§a§ɡ§ᵊ|khalbaga|ᠬᠠᠯᠪᠠᠭ᠎ᠠ
 халдах||
 халдвар||
 халдваргүй||
@@ -2055,7 +2055,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 харагдах||
 харайх||
 харандаа үзүүрлэгч||
-харандаа|pencil|x§a§r§ə§n§t§a§‹|xarᵊnˈda/χaɾɐnˈda/kharandaa|ᠬᠠᠷᠠᠨᠳᠠ
+харандаа|pencil|a§r§ə§n§t§a§‹arᵊnˈda/χaɾɐnˈda/kharandaa|ᠬᠠᠷᠠᠨᠳᠠ
 харандааны сав||
 харах|to see|ˈx§a§r§a§x|kharakh|
 харваа||
@@ -2088,7 +2088,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хаяг||
 хаялах||
 хаялга||
-хаях|to spit|x§a§jə§x|khayakh|ᠬᠠᠶᠠᠬᠤ
+хаях|to spit|a§jə§x|khayakh|ᠬᠠᠶᠠᠬᠤ
 хиам||
 хивс||
 хивэг||
@@ -2121,7 +2121,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 холимог хуурга||
 холимог||
 холих||
-холтос|bark (of a tree)|x§ɔ§ɮ§tʰ§ə§s|kholtos|ᠬᠣᠯᠲᠣᠰᠣ
+холтос|bark (of a tree)|ɔ§ɮ§tʰ§ə§s|kholtos|ᠬᠣᠯᠲᠣᠰᠣ
 хомофоби||
 хонин гүрвэл||
 хоног||
@@ -2129,11 +2129,10 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хонь||
 хоньчин||
 хоол хийх||
-хоол|food|x§ɔː§‹§ɮ||ᠬᠣᠭᠤᠯᠠ
+хоол|food|ɔː§‹§ɮ||ᠬᠣᠭᠤᠯᠠ
 хооллох||
 хоолой||
 хооронд||
-хоосон|empty|ˈx§oː§‹§s§ᵊ§n|||x
 хор||
 хорвоо||
 хордох||
@@ -2141,9 +2140,9 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хорин||
 хорсох||
 хорхой|worm|ˈx§ɔ§r§x§ɔi§‹̯|khorkhoi|ᠬᠣᠷᠤᠬᠠᠢ
-хорь|twenty|x§o§rʲ§‹|xȯrꞌ|ᠬᠣᠷᠢ
+хорь|twenty|o§rʲ§‹ȯrꞌ|ᠬᠣᠷᠢ
 хос||
-хот|town|ˈx§ɔ§tʰ|xotŏ|ᠬᠣᠲᠠ
+хот|town|ˈx§ɔ§tʰotŏ|ᠬᠣᠲᠠ
 хотон||
 хоцрогдол||
 хоч||
@@ -2152,7 +2151,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хошуу||
 хоёр|two|χ§ɔ.§jʊ§r|khoyor|ᠬᠣᠶᠠᠷ
 хуанли||
-хуаран|barracks||x§u§a:§r§a§ŋ||x
 хуасан||
 хув||
 хуваарь||
@@ -2188,7 +2186,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хулуу||
 хулхи||
 хулчгар||
-хумс|fingernail|x§ʊ§m§s|khums|ᠬᠢᠮᠤᠰᠤ
+хумс|fingernail|ʊ§m§s|khums|ᠬᠢᠮᠤᠰᠤ
 хун||
 хур||
 хураамж||
@@ -2209,7 +2207,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хууз сахал||
 хууз||
 хуукууд||
-хууль|law|x§ʊː§‹§ɮʲ§‹|χɵːɮʲ/xu̇:lĭ/xuil|ᠬᠠᠤᠯᠢ
+хууль|law|ʊː§‹§ɮʲ§‹|χɵːɮʲ/xu̇:lĭ/xuil|ᠬᠠᠤᠯᠢ
 хуульч||
 хуульчлах||
 хуур||
@@ -2225,7 +2223,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хэв||
 хэвийн боов||
 хэвлээр явагч||
-хэвтэх|to lie (bed)|x§e§f§t§ĕ§–|khevtekh|ᠬᠡᠪᠲᠡᠬᠦ
+хэвтэх|to lie (bed)|e§f§t§ĕ§–|khevtekh|ᠬᠡᠪᠲᠡᠬᠦ
 хэвэг||
 хэвэл||
 хэд||
@@ -2234,14 +2232,14 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хэзээ ч үгүй||
 хэзээ|when|ˈx§e§t͡s§eː§‹|khezee|ᠬᠡᠵᠢᠶ᠎ᠡ
 хэл зүй||
-хэл|tongue, language|x§e§ɮ|khel|ᠬᠡᠯᠡ
+хэл|tongue, language|e§ɮ|khel|ᠬᠡᠯᠡ
 хэлбэр||
 хэлц үг||
 хэлц||
 хэлцэл||
 хэлье|let's say|
 хэлэлцэх||
-хэлэх|to say|x§i§ɮ§ə§x|khelekh|ᠬᠡᠯᠡᠬᠦ
+хэлэх|to say|i§ɮ§ə§x|khelekh|ᠬᠡᠯᠡᠬᠦ
 хэм||
 хэмжээ||
 хэн|who|ˈx§e§ŋ|khen|ᠬᠡᠨ
@@ -2276,7 +2274,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хярс||
 хятад||
 хүдэр||
-хүзүү|neck|x§u§t͡s§u§‹|khüzüü|ᠬᠦᠵᠦᠭᠦᠦ
+хүзүү|neck|u§t͡s§u§‹|khüzüü|ᠬᠦᠵᠦᠭᠦᠦ
 хүйс||
 хүйтэн|cold||khüiten
 хүлэх||
@@ -2284,8 +2282,8 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хүлээх||
 хүмүүн||
 хүн чулуу||
-хүн|man (human being)|x§u§n|khün|ᠬᠦᠮᠦᠨ
-хүнд|heavy|x§u§n§t|khünd|ᠬᠦᠨᠳᠦ
+хүн|man (human being)|u§n|khün|ᠬᠦᠮᠦᠨ
+хүнд|heavy|u§n§t|khünd|ᠬᠦᠨᠳᠦ
 хүндлэх||
 хүндрэл||
 хүндэтгэлийн үг||
@@ -2310,9 +2308,8 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хүч||
 хүчил||
 хүү||
-хүүгийн|son's|ˈx§uː§‹§ɡ§i§‹§n|||x
 хүүе||
-хүүхэд|child|x§uː§‹§x§ə§t|khüükhed|ᠬᠡᠦᠬᠡᠳ
+хүүхэд|child|uː§‹§x§ə§t|khüükhed|ᠬᠡᠦᠬᠡᠳ
 хүүхэлдэй||
 хөвгүүн||
 хөвд||
@@ -2374,7 +2371,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 хөшөө||
 хөөе||
 хөөмий||
-хөөрхөн|pretty|ˈx§oː§‹§r§x§ᵊ§n|||x
 хөөрөг зөрүүлэх||
 хөөрөг||
 хөөс||
@@ -2628,7 +2624,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 эзэн хаан||
 эзэн||
 экзистэнциализм||
-элс|sand||e§l§s|ᠡᠯᠡᠰᠦ
+элс|sand|e§l§s||ᠡᠯᠡᠰᠦ
 элэг|liver|i§ɮ§ə§ɡ|eleg|ᠡᠯᠢᠭᠡ
 эм бэлгэ эрхтэн||
 эм бэлэг эрхтэн||
@@ -2649,7 +2645,6 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 энх||
 энэ|this|e§n§–|ene|ᠡᠨᠡ
 эр зориг||
-эр хүн|man (adult male)||e§r§ §kh§ü§n||x
 эр үхэр||
 эр||
 эрвээхэй||
@@ -2776,7 +2771,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 үйлчлүүлэх||
 үлдэгдэл||
 үлээх|to blow|u§ɮ§e§‹§x|üleekh|ᠦᠯᠢᠶᠡᠬᠦ
-үмхэх|to bite||ü§m§kh§e§kh|ᠡᠮᠬᠦᠬᠦ
+үмхэх|to bite|ü§m§kh§e§kh||ᠡᠮᠬᠦᠬᠦ
 үндсэн дээр||
 үндсэн хууль||
 үндсэрхэг үзэл||
@@ -2795,7 +2790,7 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 үнэрлэх|to smell||ünerlekh
 үнэтэй||
 үнээ||
-үр|seed|ur|ü§r|ᠦᠷ᠎ᠡ
+үр|seed|u§r|ür|ᠦᠷ᠎ᠡ
 үргэлж||
 үржүүлэх||
 үрэл||
@@ -2916,11 +2911,34 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 өөш||
 
 
+@ https://www.youtube.com/watch?v=PnZR2DvmOck
+@ Colloquial Russian
+@ nomiin ger
 
 
 хэлье|let's say|
 
 
+@ unknown source
+
+амар|to rest|a§m§ᵊ§r||
+амархан|easy|a§m§ᵊ§r§x§ᵊ§n||
+байлдах|to fight||baildakh|
+бодъё|let's think|||
+будан|fog|b§u§d§a§ŋ|budan|
+доор|under|t§oː§‹§r||
+ойлгосон|I understood|ɔi§‹§lɔ§k§–§s§ᵊ§n||
+пүүжин|rocket|p§ʊː§‹§d͡ʒ§i§ŋ||
+та нар|you (plural)|t§a:§§n§ă§r|ta nar|
+туймээс|that's why|ˈtʰ§iː§‹§m§e§‹§s||
+уугуул|indigenous|ˈʊː§‹§ɡ§ʊ§‹§ɮ||
+уулзъя|let's meet|||
+хаашаа|where to|ˈx§aː§‹§ʃ§a§‹||
+хоосон|empty|ˈx§oː§‹§s§ᵊ§n||
+хуаран|barracks|§u§a:§r§a§ŋ|
+хүүгийн|son's|ˈx§uː§‹§ɡ§i§‹§n||
+хөөрхөн|pretty|ˈx§oː§‹§r§x§ᵊ§n||
+эр хүн|man (adult male)|e§r§ §kh§ü§n|
 
 
 

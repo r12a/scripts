@@ -1,12 +1,26 @@
 /*
-@ Source: https://en.wiktionary.org/wiki/Appendix:Georgian_Swadesh_list
-§ 'Noto Serif Georgian'
-# 200
-~ ltr
-! ka
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
+
+
+
+
 autoExpandExamples.ka = `
+
+@ https://en.wiktionary.org/wiki/Appendix:Georgian_Swadesh_list
 
 -ად||
 -აც||
@@ -1550,7 +1564,6 @@ autoExpandExamples.ka = `
 ბარდი||
 ბარელიეფი||
 ბარემ||
-ბარვა|to dig|b§ɑ§r§v§ɑ|barva||x
 ბართლომე||
 ბარი||
 ბარიერი||
@@ -1658,7 +1671,6 @@ autoExpandExamples.ka = `
 ბეჟუაშვილი||
 ბერავს||
 ბერეტი||
-ბერვა|to blow|b§ɛ§r§v§ɑ|berva||x
 ბერი||
 ბერიანი||
 ბერიაშვილი||
@@ -1759,7 +1771,6 @@ autoExpandExamples.ka = `
 ბიფშტექსი||
 ბიცოლა||
 ბიძა||
-ბიძგება|to push|b§i§d͡z§ɡ§ɛ§b§ɑ|biʒgeba||x
 ბიძგი||
 ბიძინა||
 ბიწიერად||
@@ -3207,7 +3218,6 @@ autoExpandExamples.ka = `
 დაჩი||
 დაჩლუნგებული||
 დაცდილი||
-დაცემა|to fall|d§ɑ§t͡s§ɛ§m§ɑ|dacema||x
 დაცვარული||
 დაცინვით||
 დაცლილი||
@@ -3223,7 +3233,6 @@ autoExpandExamples.ka = `
 დაწესებულება||
 დაწინდული||
 დაწინწკლული||
-დაწოლა|to squeeze|d§ɑ§t͡sʼ§ɔ§l§ɑ|dac̣ola||x
 დაწყებითი||
 დაწყევლილი||
 დაჭერობანა||
@@ -3335,7 +3344,6 @@ autoExpandExamples.ka = `
 დემონტაჟი||
 დემონურად||
 დემონური||
-დენა|to flow|d§ɛ§n§ɑ|dena||x
 დენთი||
 დენი||
 დენის წყარო||
@@ -4514,7 +4522,6 @@ autoExpandExamples.ka = `
 თამაშგარე||
 თამაშგარეთ||
 თამაში||
-თამაშობა|to play|tʰ§ɑ§m§ɑ§ʃ§ɔ§b§ɑ|tamašoba||x
 თამაშობს||
 თამბაქო||
 თამბაქოსფერი||
@@ -4680,7 +4687,6 @@ autoExpandExamples.ka = `
 თვითონ||
 თვისება||
 თვისტომი||
-თვლა|to count|tʰ§v§l§ɑ|tvla||x
 თვლადი||
 თვლემა||
 თვრამეტი||
@@ -5499,7 +5505,6 @@ autoExpandExamples.ka = `
 კვარცი||
 კვარცხლბეკი||
 კვდება||
-კვდომა|to die|kʼ§v§d§ɔ§m§ɑ|ḳvdoma||x
 კვება||
 კვეთა||
 კვეთები||
@@ -7628,7 +7633,6 @@ autoExpandExamples.ka = `
 მტერი||
 მტვერი|dust|m§tʼ§v§ɛ§r§i|mṭveri
 მტვერსასრუტი||
-მტვრევა|to split|m§tʼ§v§r§ɛ§v§ɑ|mṭvreva||x
 მტვრიანა||
 მტვრიანი||
 მტირალა||
@@ -7735,7 +7739,6 @@ autoExpandExamples.ka = `
 მფრინველი||
 მქრქალად||
 მქრქალი||
-მღერა|to sing|m§ɣ§ɛ§r§ɑ|mɣera||x
 მღერის||
 მღვდელი||
 მღვდლობა||
@@ -11085,7 +11088,6 @@ autoExpandExamples.ka = `
 სხივოსანი||
 სხივურად||
 სხივური||
-სხჳსი → სხვისი|others||||x
 სჯის||
 სჯობს||
 ტაბაკი||
@@ -12482,7 +12484,6 @@ autoExpandExamples.ka = `
 ფუნქციონალურად||
 ფუნჯი||
 ფურგონი||
-ფურთხვა|to spit|pʰ§u§r§tʰ§x§v§ɑ|purtxva||x
 ფურთხი||
 ფური||
 ფურირემი||
@@ -12510,7 +12511,6 @@ autoExpandExamples.ka = `
 ფშავი||
 ფშატი||
 ფხა||
-ფხაჭნა|to scratch|pʰ§x§ɑ§t͡ʃʼ§n§ɑ|pxač̣na||x
 ფხვიერი||
 ფხვნილი||
 ფხიანი||
@@ -12757,7 +12757,6 @@ autoExpandExamples.ka = `
 ქრისტიანობა||
 ქრისტინე||
 ქრისტოფერი||
-ქრისტჱ ~ ქრისტეჲ|Christ||||x
 ქრომი||
 ქრომოსომა||
 ქრონიკა||
@@ -12997,7 +12996,6 @@ autoExpandExamples.ka = `
 ყმაწვილობა||
 ყმაწვილური||
 ყნოსავს||
-ყნოსვა|to smell|qʼ§n§ɔ§s§v§ɑ|q̇nosva||x
 ყნოსვითი||
 ყოველდღე||
 ყოველდღიურად||
@@ -13366,7 +13364,6 @@ autoExpandExamples.ka = `
 შეწყალება||
 შეჭმუხნილი||
 შეხვედრა||
-შეხვევა|to tie|ʃ§ɛ§x§v§ɛ§v§ɑ|šexveva||x
 შეხსნილი||
 შეჯახება||
 შეჯვარებული||
@@ -13588,7 +13585,6 @@ autoExpandExamples.ka = `
 ჩარლსტონი||
 ჩარტიზმი||
 ჩარტისტი||
-ჩარტყმა|to stab|t͡ʃ§ɑ§r§tʼ§qʼ§m§ɑ|čarṭq̇ma||x
 ჩარჩო||
 ჩარხი||
 ჩასაწვდომი||
@@ -13602,7 +13598,6 @@ autoExpandExamples.ka = `
 ჩაქუჩი||
 ჩაშენებული||
 ჩაშლის||
-ჩაცემა|to stab|t͡ʃ§ɑ§r§tʼ§qʼ§m§ɑ|čacema||x
 ჩაძირული||
 ჩახარშავს||
 ჩახი||
@@ -14239,7 +14234,6 @@ autoExpandExamples.ka = `
 წლისთავი||
 წმ.||
 წმენდს|to clean, mop|t͡sʼ§m§ɛ§n§d§s|c̣mends
-წმენდს||
 წმიდა||
 წმინდა ომი||
 წმინდა||
@@ -15003,6 +14997,27 @@ autoExpandExamples.ka = `
 
 
 
+@ unknown source
+
+ბარვა|to dig|b§ɑ§r§v§ɑ|barva
+ბერვა|to blow|b§ɛ§r§v§ɑ|berva|
+ბიძგება|to push|b§i§d͡z§ɡ§ɛ§b§ɑ|biʒgeba|
+დაცემა|to fall|d§ɑ§t͡s§ɛ§m§ɑ|dacema|
+დაწოლა|to squeeze|d§ɑ§t͡sʼ§ɔ§l§ɑ|dac̣ola|
+დენა|to flow|d§ɛ§n§ɑ|dena|
+თამაშობა|to play|tʰ§ɑ§m§ɑ§ʃ§ɔ§b§ɑ|tamašoba|
+თვლა|to count|tʰ§v§l§ɑ|tvla|
+კვდომა|to die|kʼ§v§d§ɔ§m§ɑ|ḳvdoma|
+მტვრევა|to split|m§tʼ§v§r§ɛ§v§ɑ|mṭvreva|
+მღერა|to sing|m§ɣ§ɛ§r§ɑ|mɣera|
+სხჳსი → სხვისი|others|||
+ფურთხვა|to spit|pʰ§u§r§tʰ§x§v§ɑ|purtxva|
+ფხაჭნა|to scratch|pʰ§x§ɑ§t͡ʃʼ§n§ɑ|pxač̣na|
+ქრისტჱ ~ ქრისტეჲ|Christ|||
+ყნოსვა|to smell|qʼ§n§ɔ§s§v§ɑ|q̇nosva|
+შეხვევა|to tie|ʃ§ɛ§x§v§ɛ§v§ɑ|šexveva|
+ჩარტყმა|to stab|t͡ʃ§ɑ§r§tʼ§qʼ§m§ɑ|čarṭq̇ma|
+ჩაცემა|to stab|t͡ʃ§ɑ§r§tʼ§qʼ§m§ɑ|čacema|
 
 
 

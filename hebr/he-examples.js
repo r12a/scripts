@@ -1,6 +1,4 @@
 /*
-@ Source: 
-
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
@@ -13,19 +11,18 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
 
-otherTranscription = true
 
 
 
 
 autoExpandExamples.he = `
 
+@ wiktionary
 
  אֶבוֹלוּצִיוֹנִי|evolutionary|(ʔ)e§v§o§l§u§t͡s§ˈj§o§ni§‹|evolutsyóni|אבולוציוני|
  אַבּוּב|reed, flute|(ʔ)a§ˈb§u§v|abúv|אבוב|
@@ -73,7 +70,6 @@ autoExpandExamples.he = `
 אֲדָמָה|earth, soil|a§da§ˈma§‹|'adamá|אדמה
 אֲדֹנָי|Lord, God|a§do§ˈna§j|ăḏônāy|אדוני|
 אֲדוֹנָי|Lord, God|a§d§o§ˈna§j|ăḏônāy|אדוני|
-אֲוִיר|air|ˀa§ˈvi§‹§r
 אֲחַשְׁוֵרוֹשׁ|Ahasuerus|(ʔ)a§χa§ʃ§ve§ˈʁ§o§ʃ|Akhashverósh|אחשורוש|
 אֲנִי לֹא מְדַבֵּר אַנְגְּלִית|I don't speak English|a§ni§‹§ §lo§‹§ §mɛ§da§bɛ§ʁ§ §a§ŋ§ɡ§li§‹§t|ani lo medaber anglit|אני לא מדבר אנגלית|
 אֲנִי|I|(ʔ)a§ˈni§‹|aní|אני|
@@ -382,7 +378,7 @@ autoExpandExamples.he = `
 אווזון||
 אוויל||
 אוויר|air|ˀa§ˈvi§‹§‹§r|avír|אֲוִיר
-אֲוִיר|air|ˀa§ˈvi§‹§‹§r|avír|אוויר
+אֲוִיר|air|ˀa§ˈvi§‹§‹§r|avír|אוויר||אוויר
 אווירי||
 אוון||
 אוונטה|boastful act|a§wa§‹§n§ta§‹|awanta|אַוַונְטַה
@@ -501,7 +497,6 @@ autoExpandExamples.he = `
 אורך גל||
 אורך רוח||
 אורך||
-אורן||
 אורנוס||
 אורנז'||
 אורניום||
@@ -2344,7 +2339,7 @@ autoExpandExamples.he = `
 הִתְאַגֵּד|to incorporate|hi§t§(ʔ)a§ˈɡe§d|hit'agéd|התאגד|
 הִתְכַּוֵּן|to mean, intend|hi§t.§ka§ˈve§n|hitkavén|התכוון|
 הִתְפַּשֵּׁט|to undress|hi§t§pa§ˈʃe§t|hitpashét|התפשט|
-הִתְקוֹמְמוּת|insurrection|hi§t§k§ɔ§mɛ§m§u§t|hi§t§k§o§me§m§u§t|התקוממות|
+הִתְקוֹמְמוּת|insurrection|hi§t§k§ɔ§mɛ§m§u§t|hitkomemut|התקוממות|
 הִתְרַפֵּא|to recuperate|(h)i§t§ʁa§ˈpe§‹|hitrapé|התרפא|
 הֵבִיא|to bring|he§ˈvi§‹§‹|hevi|הביא|
 הֵבִין|to understand|hɛ§ˈvi§‹§n|hevin|הבין|
@@ -2467,7 +2462,6 @@ autoExpandExamples.he = `
 הדריך||
 הדרך לגיהנום רצופה כוונות טובות||
 הדרכה||
-ההוא||
 ההיא||
 הוֹדָעָה|notice|(h)§o.§da§ˈ(ʔ)a§‹|hoda'á|הודעה|
 הוֹכָחָה|proof, confirmation|h§o.§χa§ˈħa§‹|hokhakhá|הוכחה|
@@ -3214,7 +3208,7 @@ autoExpandExamples.he = `
 התקהל||
 התקהלות||
 התקומם||
-התקוממות|insurrection|hi§t§k§ɔ§mɛ§m§u§t|hi§t§k§o§me§m§u§t|הִתְקוֹמְמוּת
+התקוממות|insurrection|hi§t§k§ɔ§mɛ§m§u§t|hitkomemut|הִתְקוֹמְמוּת
 התקין||
 התקיף||
 התקלח||
@@ -3334,8 +3328,8 @@ autoExpandExamples.he = `
 ותיק||
 ו׳יליאם|William|ˈw§‹§i§l§j§a§m|
 ו״ו||
-זְבוּב|fly|z§v§u§v|z§v§u§v|זבוב|
-זְכוּכִית|glass||z§'kh§u§khí§‹§t|זכוכית
+זְבוּב|fly|z§v§u§v|zvuv|זבוב|
+זְכוּכִית|glass||z'khukhí‹t|זכוכית
 זְכוּת|a right|s§x§u§t|z'khút|זכות
 זְמַן|time|z§ma§n|zman|זמן
 זִהוּם|infection|ziˈ§h§u§m|zihum|זיהום
@@ -4315,8 +4309,8 @@ autoExpandExamples.he = `
 יבם||
 יבמה||
 יבנה||
-יבש|dry|jaˈ§vɛ§ʃ|yave§sh|יָבֵשׁ
-יָבֵשׁ|dry|ja§ˈvɛ§ʃ|yave§sh|יבש
+יבש|dry|jaˈ§vɛ§ʃ|yavesh|יָבֵשׁ
+יָבֵשׁ|dry|ja§ˈvɛ§ʃ|yavesh|יבש
 יבשה||
 יבשת||
 יב״ל||
@@ -5059,11 +5053,11 @@ autoExpandExamples.he = `
 להקת עורבים||
 להתראות|goodbye|le§(h)i§t§ʁa§ˈ(ʔ)§o§t|l'hitra'ót|לְהִתְרָאוֹת
 לה״ו||
-לו|if|l§u|l§u|לוּ
 לו|to him|l§o|לוֹ
 לוֹ|to him|l§o|לו
 לוֹבְּסְטֶר|lobster|ˈl§o§b.§s§te§ʁ|lóbster|לובסטר|
-לוּ|if|l§u|l§u|לו|
+לו|if|l§u|lu|לוּ
+לוּ|if|l§u|lu|לו|
 לוב||
 לובי||
 לוביסטי||
@@ -5327,7 +5321,7 @@ autoExpandExamples.he = `
 מָה|what|ˈma§‹|má|מה
 מָהִיר|fast, quick|ma§ˈ(h)i§‹§ʁ|mahír|מהיר|
 מָוֶת|death|ˈma§ve§t|mávet|מוות|
-מָחֳרָתַיִם|the day after tomorrow|mo§χ.§ʁa§ˈta.§ji§m|mo§kho§ra§tá§yi§‹§m|מחרתיים|
+מָחֳרָתַיִם|the day after tomorrow|mo§χ.§ʁa§ˈta.§ji§m|mokhoratáyim|מחרתיים|
 מָחָר|tomorrow|mɑ§χɑ§r|makhár|מחר|
 מָטָר|rain|ma§ˈta§ʁ|matár|מטר|
 מָלוֹן|hotel|ma§l§o§n|malón|מלון|
@@ -6480,15 +6474,15 @@ autoExpandExamples.he = `
 נִשָּׂא|to be elevated|ni§ˈsa§‹|nisá|נישא|
 נִתְפַּס|to be caught|ni§t§ˈpa§s|nitpás|נתפס|
 נִתּוּחַ|surgery|ni§ˈt§u§aχ|nitúakh|ניתוח|
-נָבָל|villain|ˈna§va§l||נבל|
-נֵבֶל|harp|ˈne§ve§l||נבל
 נֶאֱבַד|to perish|ne§(ʔ)e§ˈva§d|ne'evád|נאבד|
 נֶאֱבַק|to fight|ne.§(ʔ)e§ˈva§k|ne'evák|נאבק|
 נֶגֶב|the Negev|ˈne§ɡe§v|négev|נגב|
 נֶכֶס|property|ˈnɛ§χɛ§s|nékhes|נכס|
 נַנָּס לָבָן|white dwarf|na§ˈna§s§ §la§ˈva§n|nanás laván|ננס לבן|
 נָאט״וֹ|NATO|ˈneɪ.§‹§t§–§o|nat"o|נאט״ו|
-נָבָל|bad guy, villain||navál|נבל
+נֵבֶל|harp|ˈne§ve§l||נבל||נבל
+נָבָל|bad guy, villain|ˈna§va§l||נבל||נבל
+נבל|bad guy, villain/harp|na§va§l/ˈne§ve§l|navál/nevel|נָבָל/נֵבֶל
 נָגַע|to touch|na§ˈɡa§–|nagá'|נגע|
 נָדָן|sheath|na§ˈda§n|nadán|נדן|
 נָהַג|to do sth out of habit|na§ˈha§ɡ|nahág|נהג|
@@ -6501,7 +6495,7 @@ autoExpandExamples.he = `
 נָעֳמִי|Naomi|no.§ʔo§ˈmi§‹|no'omi|נעמי|
 נָעִים|nice, pleasant||na'ím|נעים
 נָעַר|to bray|na§ˈ(ʔ)a§ʁ|na'ár|נער|
-נָשַׁב|to blow (wind)|na§ˈʃa§v|nasha§v|נשב|
+נָשַׁב|to blow (wind)|na§ˈʃa§v|nashav|נשב|
 נ־ד־ב||
 נ־ד־ד||
 נ־ו־ח||
@@ -6543,7 +6537,6 @@ autoExpandExamples.he = `
 נביאים||
 נבילה||
 נבך||
-נבל|harp|ˈne§ve§l|nével|נֵבֶל|
 נבלה||
 נבנה||
 נברא||
@@ -6897,7 +6890,7 @@ autoExpandExamples.he = `
 נשא||
 נשאל||
 נשאר||
-נשב|to blow (wind)|na§ˈʃa§v|nasha§v|נָשַׁב
+נשב|to blow (wind)|na§ˈʃa§v|nashav|נָשַׁב
 נשבה|to be kidnapped|niʃˈba|nishbá| נִשְׁבָּה
 נשבע|to promise|ni§ʃ§ˈba§(ʕ)|nishbá|נִשְׁבַּע
 נשבר|to break|ni§ʃ§ˈba§ʁ|nishbár|נִשְׁבַּר
@@ -8868,8 +8861,9 @@ autoExpandExamples.he = `
 קתדרלה||
 ק״ש||
 ק״ת||
-רְחוֹב|street (abbr.)||R'kh|רח׳|
-רְחוֹב|street|ʁɛ§ˈχ§o§v|rekhóv|רחוב
+רחוב|street|ʁɛ§ˈχ§o§v|rekhóv|רְחוֹב
+רח׳|street (abbr.)|ʁɛ§ˈχ§o§v|R'kh|רחוב|
+רְחוֹב|street|ʁɛ§ˈχ§o§v|rekhóv|רחוב||רחוב
 רִאשׁוֹן|first|ri§‹§ʃ§ɔ§n|rishón|ראשון
 רִבְקָה|Rebecca|ʁi§v§ˈka§‹|rivká|רבקה|
 רִבָּה|jam|ʁi.§ˈba§‹|ribá|ריבה|
@@ -9048,7 +9042,6 @@ autoExpandExamples.he = `
 רחב ידיים||
 רחב|wide|ʁa§ˈχa§v
 רחבה||
-רחוב|street|ʁɛ§ˈχ§o§v|rekhóv|רְחוֹב
 רחובות||
 רחום||
 רחוץ||
@@ -9236,8 +9229,8 @@ autoExpandExamples.he = `
 שְׁמוֹנָה|eight|ʃ§m§o.§ˈna§‹|sh'moná|שמונה|
 שְׁמוּאֵל|Samuel|ˈʃ§m§u.§e§l|sh'múel|שמואל|
 שְׁנִיצֶל|schnitzel|ˈʃ§ni§‹§t͡se§l|shnitsel|שניצל|
-שְׁנַיִם|two|ˈʃ§na§ji§m
-שְׁנַייִם|two|ˈʃ§na.§›§ji§m|sh§'ná§›§yi§m|שניים|
+שְׁנַיִם|two|ˈʃ§na§ji§m|sh'náyim|שניים|
+שְׁנַייִם|two|ˈʃ§na.§›§ji§m|sh'náyim|שניים|
 שְׁקִיעָה|sunset|ʃ§ki§‹§ˈ(ʕ)a§‹|shki'á|שקיעה
 שְׁקָלִים|shekels|sh§ˈka§li§‹§m|sh'kalím|שקלים
 שְׁרִיר|muscle|ʃ§ʁi§‹§ʁ|sh'rir|שריר|

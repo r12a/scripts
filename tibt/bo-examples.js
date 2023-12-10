@@ -1,14 +1,31 @@
 /*
-@ Source: https://en.wiktionary.org/wiki/Appendix:Tibeto-Burman_Swadesh_lists
-@ Source: https://en.wiktionary.org/w/index.php?title=Category:Tibetan_terms_with_IPA_pronunciation
-§ 'Noto Serif Tibetan'
-# 200
-~ ltr
-! bo
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
+otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
+termListType = 3			// picks up sources automatically
+
+
+
+
+
 autoExpandExamples.bo = `
+
+@ Source: https://en.wiktionary.org/wiki/Appendix:Tibeto-Burman_Swadesh_lists
+@ Source: https://en.wiktionary.org/w/index.php?title=Category:Tibetan_terms_with_IPA_pronunciation
 
 ཀ|snow|ka˥|ka
 ཀ་ཀ||
@@ -21,7 +38,7 @@ autoExpandExamples.bo = `
 ཀ་པ་ལ||
 ཀ་པཱ་ལ||
 ཀ་བ|pillar, column|káː§§–|ka ba
-ཀ་ར|sugar|ká.§§ʐá
+ཀ་ར|sugar|ká.§§ʐá|ka ra
 ཀ་རན་ད||
 ཀ་ཤི་མིར|Kashmir|ká.§§ɕiˑ.§§miː§(ɹ)ˑ
 ཀཛ་ཀིསུ་གཏན||
@@ -141,7 +158,7 @@ autoExpandExamples.bo = `
 ཁོག་ལྡིར||
 ཁོང|he||khong
 ཁོང་ཚོ|they||khong tsho
-ཁོར་ལོ||
+ཁོར་ལོ|wheel, chakra||khor lo
 ཁྭ་ཏ||
 ཁྰ་ལེ་ཧྥོར་ནི་ཡ||
 ཁྱགས་དཔྱངས||
@@ -152,7 +169,7 @@ autoExpandExamples.bo = `
 ཁྱགས་རོམ་ཁང་པ||
 ཁྱགས་ཤུར་གློད||
 ཁྱགས་ཤུར་ལྷམ||
-ཁྱི|dog||khyi
+ཁྱི|dog|cʰi˥|khyi
 ཁྱི་ཕྲུག||
 ཁྱིམ|house, residence|cʰi˥§m|khyim
 ཁྱིམ་ཚང||
@@ -234,8 +251,8 @@ autoExpandExamples.bo = `
 གཉིད་ལམ||
 གཉིད་ལམ་འཚུབ་པོ||
 གཉིད་སྨན||
-གཉིས|two||gnyis
-གཏམ|conversation, news|ta˥§m|gtam
+གཉིས|two|-§ȵiː˥§–|gnyis
+གཏམ|conversation, news|›§ta˥§m|gtam
 གཏམ་དཔེ||
 གཏམ་པ||
 གཏམ་བཟང||
@@ -279,7 +296,7 @@ autoExpandExamples.bo = `
 གདོན་འདྲེ||
 གནང||
 གནད||
-གནམ|sky||gnam
+གནམ|sky|›§na˥§m|gnam
 གནམ་གཤིས||
 གནམ་གྲུ|aircraft|›§nə˥§m.§§ʈ͡ʂu˥|gnam gru
 གནམ་གྲུ་ཐང||
@@ -289,7 +306,7 @@ autoExpandExamples.bo = `
 གནམ་ལྕགས||
 གནའ་དངོས་རིག་གནས||
 གནའ་རྫས་རྟོག་ཞིབ||
-གནས||
+གནས|place, location|–§nɛː˥˩§‹|gnas
 གནས་པ||
 གནས་མོ||
 གནས་ཚང་||
@@ -298,7 +315,7 @@ autoExpandExamples.bo = `
 གབ་ཀོབ||
 གབ་ཚིག||
 གབ་ས||
-གཙང||
+གཙང|clean, pure|–§t͡sa˥§ŋ|gtsang
 གཙང་ཆུ||
 གཙང་པོ|river||gtsang po
 གཙང་མ||
@@ -313,7 +330,7 @@ autoExpandExamples.bo = `
 གཞས་བཏང||
 གཞས་ཚིག||
 གཞི||
-གཞིས་ཀ||
+གཞིས་ཀ|native home|–§ɕi˩˧.§–§§kə˥|gzhis ka
 གཞིས་ཀ་རྩེ||
 གཞིས་ཆགས||
 གཞིས་ཆགས་བྱེད་མཁན||
@@ -333,7 +350,7 @@ autoExpandExamples.bo = `
 གཟའ་པ་སངས||
 གཟའ་ཕུར་བུ||
 གཟའ་མིག་དམར||
-གཟའ་ཟླ་བ||
+གཟའ་ཟླ་བ|Monday|–§sa˩˧§–§§ta˩˧.§§wa˥|gza' zla ba
 གཟའ་འཁོར||
 གཟའ་ལྷག་པ||
 གཟའ་སྐར||
@@ -346,7 +363,7 @@ autoExpandExamples.bo = `
 གཟེར་གཅུད||
 གཟེར་ནག||
 གའ་ཁྲའ||
-གཡག||
+གཡག|yak|–§ja˥˩§–|g.yag
 གཡང་དི||
 གཡང་སྤྲུའུ||
 གཡས|right||g.yas
@@ -356,7 +373,7 @@ autoExpandExamples.bo = `
 གཡུ་མཚོ||
 གཡུ་ལོ||
 གཡུགས|to throw||g.yugs
-གཡེར་མ||
+གཡེར་མ|sichuan pepper|›§jeː˥§(ɹ).§ma˥|g.yer ma
 གཡོག་པོ||
 གཡོག་མོ||
 གཡོན|left||g.yon
@@ -387,7 +404,7 @@ autoExpandExamples.bo = `
 གསེར་བཟོ་བ||
 གསོད||
 གསོད་པ||
-གསོན||
+གསོན|to live, survive|›§sø̃˥§‹|gson
 གསོན་པ|to live||gson pa
 གསོན་པོ||
 གསོལ་དཀྲུམ||
@@ -421,13 +438,13 @@ autoExpandExamples.bo = `
 གོང་ཆེན་པོ||
 གོང་བཅག||
 གོན||
-གོམ་པ་རྒྱག|to walk||gom pa rgyag
+གོམ་པ་རྒྱག|to walk|kʰo˩˧§m.§§pa˥˥§§ca˩˧˨§–|gom pa rgyag
 གོའོ་མིན་ཏང||
 གོས་ཐུང||
 གྱང་རོ||
 གྱི||
 གྱུརད་|became|kjù§r§–
-གྱོན|to wear, put on|kʰø̃˩˧§‹|gyon
+གྱོན|to wear, put on|cʰø̃˩˧§‹|gyon
 གྱོན་པ||
 གྲང་གཞི||
 གྲང་གློག་འཕྲུལ་ཆས||
@@ -508,10 +525,10 @@ autoExpandExamples.bo = `
 ཆབ་གདན||
 ཆབ་མདོ||
 ཆབ་རྩེ||
-ཆབ་སྲིད||
+ཆབ་སྲིད|politics|t͡ɕʰə˥§p̚.§§si˥˩§–|chab srid
 ཆམས་པ||
 ཆར་དུས||
-ཆར་པ|rain||char pa
+ཆར་པ|rain|t͡ɕʰaː˥.§‹§pa˥|char pa
 ཆར་ཞོད||
 ཆར་རྒྱུན||
 ཆར་རླུང||
@@ -582,7 +599,7 @@ autoExpandExamples.bo = `
 ཇུར་སྒྲོག||
 ཇོ་མོ||
 ཇོ་མོ་གླང་མ||
-ཉ|fish||nya
+ཉ|fish|ȵa˩˧|nya
 ཉ་གོང||
 ཉ་ཤ||
 ཉན||
@@ -722,7 +739,7 @@ autoExpandExamples.bo = `
 དག་|I|dá§g
 དག་ཆ་བྲིས|to spell||dag cha bris
 དག་ཡིག|dictionary||dag yig
-དགའ་|virtue|–§g§á
+དགའ་|virtue|›§gá§–
 དགའ་པོ་བྱེད་ཡག||
 དགའ་བ||
 དགའ་བཞི||
@@ -796,14 +813,14 @@ autoExpandExamples.bo = `
 དབུས་གཙང||
 དབུས་ཨ་ཧྥེ་རི་ཁན་རི་པཔ་ལིཀ||
 དབེན་པ||
-དབྱངས||
+དབྱངས|vowel|ja˥˩§ŋ|dbyangs
 དབྱངས་ཅན||
 དབྱངས་ཅན་མ||
 དབྱངས་ཅན་སྒྲོལ་མ||
 དབྱངས་སྒྲ་ཉིས་ལྡན||
 དབྱར||
 དབྱར་ཀ||
-དབྱར་ཁ||
+དབྱར་ཁ|summer|›§jaː˥.§‹§kʰa˥|dbyar kha
 དབྱར་རྩྭ་དགུན་འབུ||
 དབྱི་སི་ལམ་ཆོས་ལུགས||
 དབྱིངས||
@@ -812,14 +829,14 @@ autoExpandExamples.bo = `
 དབྱིན་ཇི་མཉམ་འབྲེལ||
 དབྱིན་ཇིའི་སྐད||
 དབྱིན་ཡུལ||
-དམ་པ||
-དམག|war|–§mâː§–|dmag
+དམ་པ|holy, pure|›§tʰa˩˧§m.§pa˥˩|dam pa
+དམག|war|›§maː˥˩§–|dmag
 དམག་དཔུང||
 དམག་མི||
 དམག་འཁྲུག||
-དམངས||
+དམངས|populace|–§ma˥˩§ŋ§–|dmangs
 དམངས་གཙོ||
-དམན་པ||
+དམན་པ|low; poor|›§mɛ̃˥˩.§‹§§paˑ|dman pa
 དམའ་འབེབ་བྱས||
 དམར||
 དམར་པོ|red||dmar po
@@ -827,8 +844,8 @@ autoExpandExamples.bo = `
 དམར་ཚ||
 དམར་སྐྱ||
 དམར་ཧྲང་བ||
-དར||
-དར་ཆ||
+དར|silk|tʰaː˩˧§(ɹ)|dar
+དར་ཆ|flag|tʰaː˩˧§(ɹ).§§t͡ɕaˑ|dar cha
 དར་བ||
 དར་མདོ||
 དར་ཡབ||
@@ -1041,7 +1058,7 @@ autoExpandExamples.bo = `
 ཕྲ||
 ཕྲ་པོ|narrow, thin||phra po
 ཕྲག་གོང||
-ཕྲག་པ||
+ཕྲག་པ|shoulder|ʈ͡ʂʰa˥§(k̚)ˀ.§§pa˥|phrag pa
 ཕྲུ་གུ|child||phru gu
 ཕྲུག||
 ཕྲེང||
@@ -1125,7 +1142,7 @@ autoExpandExamples.bo = `
 བཞིན||
 བཞེས||
 བཞེས་ཐག||
-བཟང||
+བཟང|righteous, good|–§sa˩˧˨§ŋ|bzang
 བཟང་ངན||
 བཟང་ཞན||
 བཟོ||
@@ -1217,7 +1234,7 @@ autoExpandExamples.bo = `
 བོད་སྐད་དུ||
 བོན||
 བོན་པོ||
-བྱ|bird||bya
+བྱ|bird|t͡ɕʰa˩˧|bya
 བྱ་གཏོར||
 བྱ་དེ||
 བྱ་མ་བྱི||
@@ -1248,7 +1265,7 @@ autoExpandExamples.bo = `
 བྱེ||
 བྱེ་ཐང||
 བྱེ་བ||
-བྱེ་མ|sand||bye ma
+བྱེ་མ|sand|t͡ɕʰe˩˧˨.§§ma˥|bye ma
 བྱེ་རྡོ||
 བྱེད||
 བྱེད་པ||
@@ -1293,7 +1310,7 @@ autoExpandExamples.bo = `
 མ་སྒྲ||
 མ་ཧེ||
 མཀ་སིའི་རིང་ལུགས||
-མཁན་པོ||
+མཁན་པོ|khenpo|›§kʰɛ̃˥.§‹§§po˥|mkan po
 མཁའ||
 མཁའ་འགྲུལ||
 མཁལ་རིལ||
@@ -1304,8 +1321,8 @@ autoExpandExamples.bo = `
 མཁྱེན་པ||
 མགུར||
 མགུར་མ||
-མགུལ||
-མགོ|head|–§kǒ|mgo
+མགུལ|neck, throat|›§kyː˩˧§‹|mgul
+མགོ|head|–§ko˩˧|mgo
 མགོ་འཐོམ་ཡག||
 མགྱོགས་པོ||
 མགྲིན་པ||
@@ -1380,7 +1397,7 @@ autoExpandExamples.bo = `
 མཛེ་ནད||
 མཛེར་པ||
 མཛེས་སྤྱད||
-མཛོ||
+མཛོ|yak/cow hybrid|›§t͡so˩˧|mdzo
 མཛོ་ཕོ||
 མཛོ་མོ||
 མཛོག་རུམ||
@@ -1410,7 +1427,7 @@ autoExpandExamples.bo = `
 མི་སྐུ||
 མིག|eye||mig
 མིག་ཆུ||
-མིག་དམར||
+མིག་དམར|Mars|miː˩˧§‹.§§›§maː˥§‹|mig dmar
 མིག་འབྲས||
 མིག་རིལ||
 མིག་ཤེལ||
@@ -1476,7 +1493,7 @@ autoExpandExamples.bo = `
 ཙག་སྒྲ||
 ཙངས་པ||
 ཙན་དན||
-ཙི་ཙི||
+ཙི་ཙི|mouse, rat|t͡si˥.§§t͡si˥|tsi tsi
 ཙི་ཙི་ཟིན་ཡག||
 ཙུང་ཐུང||
 ཙུང་ལི||
@@ -1525,10 +1542,10 @@ autoExpandExamples.bo = `
 ཚོད་ལྟ་ཤེལ་སྟོང||
 ཚོན་མདོག||
 ཚོས་གཞི||
-ཚྭ|salt||tshwa
-ཛ་ཏི||
-ཛམ་བི་ཡ||
-ཛིམ་བབ་ཝི||
+ཚྭ|salt|t͡sʰa˥|tshwa
+ཛ་ཏི|nutmeg||dza ti
+ཛམ་བི་ཡ|Zambia||dzam bi ya
+ཛིམ་བབ་ཝི|Zimbabwe||dzim bab wi
 ཝ་ནུའ་ཏུ||
 ཝ་མོ||
 ཝ་ཡོ་མིང||
@@ -1546,10 +1563,10 @@ autoExpandExamples.bo = `
 ཞགས་པ||
 ཞང||
 ཞང་ཀང||
-ཞབས||
+ཞབས|leg, foot|ɕa˩˧§p̚§–|zhabs
 ཞབས་ཀྱུ||
 ཞབས་བྲོ||
-ཞལ||
+ཞལ|mouth (hon.)|ɕɛː˩˧§‹|zhal
 ཞལ་ཅོར||
 ཞི་ཅུན||
 ཞི་པན་ཡ||
@@ -1575,7 +1592,7 @@ autoExpandExamples.bo = `
 ཞོགས་ཇ||
 ཞོགས་པ||
 ཞོར་རྐྱེན||
-ཞྭ||
+ཞྭ|hat||zhwa
 ཟ|to eat||za
 ཟ་ཁང||
 ཟ་ཕྲུག་ལང||
@@ -1600,7 +1617,7 @@ autoExpandExamples.bo = `
 ཟོམ||
 ཟླ||
 ཟླ་དང་པོ||
-ཟླ་བ|moon||zla ba
+ཟླ་བ|moon|ta˩˧.§§wa˥|zla ba
 ཟླ་བ་གཉིས་པ||
 ཟླ་བ་གསུམ་པ||
 ཟླ་བ་དགུ་པ||
@@ -1613,7 +1630,7 @@ autoExpandExamples.bo = `
 ཟླ་བ་བཞི་པ||
 ཟླ་བ་བརྒྱད་པ||
 ཟླ་བ་ལྔ་པ||
-ཟླ་བོ||
+ཟླ་བོ|spouse|ta˩˧.§§wo˥|zla bo
 འཁར་རྒྱུག||
 འཁར་རྔ||
 འཁོར|circle, sphere|kʰóː(ɹ)|'khor
@@ -1777,7 +1794,7 @@ autoExpandExamples.bo = `
 འཚིག་ཇ||
 འཚོ་བ||
 འཛམ་གླིང||
-འཛིན||
+འཛིན|contract, pledge|–§t͡sĩ˩˧§‹|'dzin
 འཛིན་པ||
 འཛིབ||
 འཛུད||
@@ -1800,7 +1817,7 @@ autoExpandExamples.bo = `
 འོས་སྒམ||
 ཡ་མ||
 ཡག་པོ|good||yag po
-ཡང||
+ཡང|again, once more|ja˩˧§ŋ|yang
 ཡང་ན||
 ཡང་པོ||
 ཡང་རླུང་འབོམ||
@@ -1814,7 +1831,7 @@ autoExpandExamples.bo = `
 ཡི་དམ||
 ཡི་དྭགས||
 ཡི་ནེ་ཁྲེ་ཀྲི་ཨ་རབ་ཨེ་མེ་རེ་ཁྲི||
-ཡི་ཙི||
+ཡི་ཙི|soap|ji˩˧.§§t͡si˥˩|yi tsi
 ཡི་ལང||
 ཡི་ལའ་ཁོ||
 ཡིག||
@@ -1868,7 +1885,7 @@ autoExpandExamples.bo = `
 རབ་བཀྲམ་ཆེན་པོ||
 རབས||
 རས་བྱིང||
-རི|mountain||ri
+རི|mountain|ʐi˩˧|ri
 རི་དྭགས||
 རི་དྭགས་བརྒྱབ||
 རི་པིན||
@@ -1903,7 +1920,8 @@ autoExpandExamples.bo = `
 རུས་པ||
 རུས་སྦལ|tortoise, turtle||rus sbal
 རེ||
-རེ་བ་|hope|ʐè.§§wá|re ba
+རེ་བ་|hope|ʐe˩˧.§§wa˥|re ba
+རེ་བ|hope|ʐe˩˧.§§wa˥|re ba
 རེད||
 རོ||
 རོ་མ་ནི་ཡ||
@@ -1953,7 +1971,7 @@ autoExpandExamples.bo = `
 རྒྱ་བཟོ་ཤིང་གྲུ||
 རྒྱ་བྱ་དཀར་མོ||
 རྒྱ་བྲ||
-རྒྱ་མཚོ|sea||rgya mtsho
+རྒྱ་མཚོ|sea, ocean|ca˩˧.§§›§t͡sʰo˥|rgya mtsho
 རྒྱ་མཚོ་ཆེན་པོའི་གླིང་ཆེན||
 རྒྱ་མི||
 རྒྱ་འདྲེ||
@@ -1987,7 +2005,7 @@ autoExpandExamples.bo = `
 རྒྱུ||
 རྒྱུ་དཀར||
 རྒྱུ་ནག||
-རྒྱུ་མ|guts||rgyu ma
+རྒྱུ་མ|guts|cu˩˧§§ma˥˩|rgyu ma
 རྒྱུ་མ་བརྒྱངས་པ||
 རྒྱུ་རྔན||
 རྒྱུག་པ||
@@ -2010,9 +2028,9 @@ autoExpandExamples.bo = `
 རྗོད||
 རྗོད་པ||
 རྗོར་ཌན||
-རྙི||
-རྙིང||
-རྙིང་པ|old||rnying pa
+རྙི|trap||rnyi
+རྙིང|old, worn out|ȵi˥§ŋ|rnying
+རྙིང་པ|old|ȵi˥§ŋ.§§pə˥|rnying pa
 རྙོག་དྲ||
 རྙོག་ཟིང||
 རྟ||
@@ -2048,7 +2066,7 @@ autoExpandExamples.bo = `
 རྣམ་གྲོལ||
 རྣམ་ཐར||
 རྣམ་དབྱེ||
-རྣམ་པ||
+རྣམ་པ|part, division|na˥§m.§§pa˥|rnam pa
 རྣམ་པར་འཚེ་བ||
 རྣམ་ཤེས||
 རྣམས​||
@@ -2062,7 +2080,7 @@ autoExpandExamples.bo = `
 རྨ||
 རྨ་ཁ||
 རྨ་ཁོག||
-རྨ་བྱ||
+རྨ་བྱ|peacock|ma˥p̚.§§t͡ɕa˥|rma bya
 རྨ་རས||
 རྨ་རྗེས||
 རྨང||
@@ -2073,7 +2091,7 @@ autoExpandExamples.bo = `
 རྨུགས་པ||
 རྨུས་པ||
 རྨེད||
-རྨོ་མོ||
+རྨོ་མོ|grandmother|mo˥.§§mo˥|rmo mo
 རྨོག||
 རྨོང་བ||
 རྩ་བ||
@@ -2082,11 +2100,11 @@ autoExpandExamples.bo = `
 རྩམ་པ||
 རྩི||
 རྩི་བ||
-རྩི་ཤིང||
+རྩི་ཤིང|plant, vegetation|t͡si˥.§§ɕi˥§ŋ|rtsi shing
 རྩིག||
 རྩིག་པ||
 རྩིས||
-རྩེ||
+རྩེ|peak, summit|t͡se˥|rtse
 རྩེད||
 རྩེད་མོ||
 རྩེད་མོ་རྩེ|to play||rtsed mo rtse
@@ -2113,12 +2131,12 @@ autoExpandExamples.bo = `
 རྫུས་མ||
 རྫོགས་ཆེན||
 རྫོགས་པ|full||rdzogs pa
-རྫོང||
+རྫོང|castle, fortress|t͡so˩˧§ŋ|rdzong
 རྫོང་བ||
 རླངས||
 རླངས་པ||
 རླངས་བ||
-རླབས||
+རླབས|wave, billow|lə˥˩§p̚§–|rlabs
 རླབས་ཆེན||
 རླིག་རིལ||
 རླུང|wind||rlung
@@ -2126,7 +2144,7 @@ autoExpandExamples.bo = `
 རླུང་འཁོར||
 རླུང་འཁོར་འཚུབ||
 རླུང་འཚུབ||
-རླུང་རྟ||
+རླུང་རྟ|prayer flag|lu˥§ŋ.§§tə˥|rlung rta
 རློག||
 རློག་པ||
 རློན་པ|wet||rlon pa
@@ -2168,7 +2186,7 @@ autoExpandExamples.bo = `
 ལི་ཐུ་ཨེ་ནི་ཡ||
 ལི་པི་ཡ||
 ལི་བེ་རི་ཡ||
-ལི་ཝང||
+ལི་ཝང|orange (colour)|li˩˧˨.§§wa§ŋˑ|li wang
 ལི་ལོང་ཀུའེ||
 ལི་ཤི||
 ལི་ཤི་མཚོན་འཁོར||
@@ -2296,7 +2314,7 @@ autoExpandExamples.bo = `
 ཤར་གླིང་ལྷོ་ཤར||
 ཤར་ཏིམོར||
 ཤར་པ||
-ཤར་བ||
+ཤར་བ|sherpa|ɕé§r§pa|shar ba|ɕéːpa
 ཤི|to die||shi
 ཤིག|louse||shig
 ཤིང|tree||shing
@@ -2474,7 +2492,7 @@ autoExpandExamples.bo = `
 སྐྱ་བོ||
 སྐྱབས་རྟེན||
 སྐྱི་པགས||
-སྐྱིད་པོ||
+སྐྱིད་པོ|cheerful|ci˥˥.§–§§poˑ|skyid po
 སྐྱུག|to vomit||skyug
 སྐྱུག་པ་ཤོར||
 སྐྱུར་མོ||
@@ -2594,7 +2612,7 @@ autoExpandExamples.bo = `
 སྡོད་པ||
 སྡོམ||
 སྡོམ་ཐག||
-སྣ|nose||sna
+སྣ|nose|na˥|sna
 སྣ་ཁུག|nose||sna khug
 སྣ་གུག||
 སྣ་མིན་སྣ་ཚོགས||
@@ -2686,7 +2704,7 @@ autoExpandExamples.bo = `
 སྦྲུལ|snake|ʈ͡ʂyː˩˧§‹|sbrul
 སྦྲུལ་ཉ||
 སྦྲུལ་སོའི་དུག་ཆུ||
-སྨན||
+སྨན|drug, medecine|mɛ̃˥˥§‹|sman
 སྨན་ཁང||
 སྨན་ཁབ||
 སྨན་ཁྲོག||
@@ -2717,10 +2735,10 @@ autoExpandExamples.bo = `
 སྲབ་པོ|thin||srab po
 སྲབ་ལྕགས||
 སྲམ་ངང་མཆུ་ཅན||
-སྲས||
-སྲས་མོ||
+སྲས|son, child (hon.)|sɛː˥˩§‹|sras
+སྲས་མོ|princess|sɛː˥§‹§§mo˥|sras mo
 སྲིང་མོ||
-སྲིད||
+སྲིད|extension|si˥˩§–|srid
 སྲིད་གཞུང||
 སྲིད་པ||
 སྲུ་མོ||
@@ -2843,13 +2861,13 @@ autoExpandExamples.bo = `
 དོ|two, pair|tʰo˩˧|do
 དྭངས|to become clear|tʰa˩˧˨§ŋ§–|dwangs
 ཁ་བྱང|title, topic|kʰa˥˥.§§t͡ɕa§ŋˑ|kha byang 
-
-
-
-
-
-
-
+ན|age|na˩˧|na
+མྱོང|taste|ȵu˩˧§ŋ|myong
+ཚ|hot, spicy|t͡sʰa˥|tsha
+ཝ|fox|wa˩˧|wa
+ཟ|to eat|sa˩˧|za
+པ་ལི་ཀུང་ཧྲེ|Paris commune|pa˥§§li˥§§ku˥§ŋ§§ʂe˥|pa li kung hre
+ལྟ་སྲུང|surveillance|ta˥.§§ʂu˥˩§ŋ|lta srung
 
 
 

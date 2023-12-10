@@ -1,8 +1,5 @@
 /*
-@ Source: https:en.wiktionary.orgwikiAppendix:Arabic_Swadesh_list
-@ Source: https://en.wiktionary.org/w/index.php?title=Category:Arabic_terms_with_IPA_pronunciation&from=آ
-
-native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -14,12 +11,8 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
-
-
-otherTranscription = true   // kicks in the latest order of items
 
 
 
@@ -27,6 +20,9 @@ otherTranscription = true   // kicks in the latest order of items
 
 autoExpandExamples.ar = `
 
+
+@ https:en.wiktionary.orgwikiAppendix:Arabic_Swadesh_list
+@ https://en.wiktionary.org/w/index.php?title=Category:Arabic_terms_with_IPA_pronunciation&from=آ
 
 
  أَرْز|cedar|ʔa§r§z|ʾarz|أرز
@@ -1251,7 +1247,6 @@ autoExpandExamples.ar = `
 الفلبين||
 القاهرة||
 القدس||
-القرآن||
 القرون الوسطى||
 القسطنطينية||
 القصر الكبير||
@@ -2337,8 +2332,6 @@ autoExpandExamples.ar = `
 جديد|new|d͡ʒa.diːd|jadīd|جَدِيد
 جذاب||
 جذام||
-جذر|root|d͡ʒaðr|jaḏr|جَذْر
-جذر|root|d͡ʒiðr|jiḏr|جِذْر§§§§§
 جذع||
 جذمور||
 جذوع||
@@ -2507,7 +2500,8 @@ autoExpandExamples.ar = `
 جَافّ|dry|d͡ʒaːff|jāff|جاف
 جَبَل|mountain|d͡ʒa.§ba§l|jabal|جبل
 جَدِيد|new|d͡ʒa.diːd|jadīd|جديد
-جَذْر|root|d͡ʒaðr|jaḏr|جذر
+جذر|root|d͡ʒaðr|jaḏr|جَذْر
+جَذْر|root|d͡ʒaðr|jaḏr|جذر||جذر
 جَرَّ|to pull|d͡ʒar.ra|jarra|جر
 جَلَسَ|to sit|d͡ʒa.la.sa|jalasa|جلس
 جَلِيد|ice|d͡ʒa.liːd|jalīd|جليد
@@ -2792,10 +2786,8 @@ autoExpandExamples.ar = `
 خارجي||
 خارصين||
 خارصيني||
-خاط|to sew|xaː.tˤa|ḵāṭa|خَاطَ
 خاطئ||
 خاطئة||
-خاف|to fear|xaː.fa|ḵāfa|خَافَ
 خالد||
 خالف||
 خالق||
@@ -3186,7 +3178,6 @@ autoExpandExamples.ar = `
 ذٰلِكَ|that|ðaː.§li.§ka|ḏālika|ذلك
 رأس السنة||
 رأس مال||
-رأس||
 رأسمال||
 رأسي||
 رأل||
@@ -3251,8 +3242,6 @@ autoExpandExamples.ar = `
 رجع||
 رجفة||
 رجل الحمام||
-رجل|leg|rid͡ʒl|rijl|رِجْل
-رجل|man (adult male)|ra.§d͡ʒu§l|rajul|رَجُل
 رجلة||
 رجمة||
 رجينة||
@@ -3404,7 +3393,9 @@ autoExpandExamples.ar = `
 رَأَى|to see|ra.§ʔaː§‹|raʾā|رأى
 رَئِيس|President|ra.§ʔ§iː§s|raʾīs|رئيس
 رَبَطَ|to tie|ra.ba.tˤa|rabaṭa|ربط
-رَجُل|man (adult male)|ra.§d͡ʒu§l|rajul|رجل
+رجل|man/leg|ra.§d͡ʒu§l§/rid͡ʒl|rajul/rijl|رَجُل/رِجْل
+رَجُل|man|ra.§d͡ʒu§l|rajul|رجل||رجل
+رِجْل|leg|rid͡ʒl|rijl|رجل||رجل
 رَحْب|wide|raħb|raḥb|رحب
 رَسْمِيًا|officially|ra§s.§miː.§jan§–||رسميا
 رَطْب|wet|ratˤb|raṭb|رطب
@@ -3415,7 +3406,6 @@ autoExpandExamples.ar = `
 رَمَى|to throw|ra.maː|ramā|رمى
 رَمْل|sand|raml|raml|رمل
 رُكْبَة|knee|ru§k.§ba§–|rukba|ركبة
-رِجْل|leg|rid͡ʒl|rijl|رجل
 رِيح|wind|r§iː§ħ|rīḥ|ريح
 رِيشَة|feather|riː.ʃa|rīša|ريشة
 زأر||
@@ -4442,7 +4432,6 @@ autoExpandExamples.ar = `
 طريق|road|tˤa.§riː§‹§q|ṭarīq|طَرِيق
 طريقة||
 طشقند||
-طعام||
 طعن|to stab|tˤa.ʕa.na|ṭaʿana|طَعَنَ
 طفا|to float|tˤa.faː|ṭafā|طَفَا
 طفل|child|tˤi§f§l|ṭifl|طِفْل
@@ -4559,8 +4548,10 @@ autoExpandExamples.ar = `
 عال||
 عالمي||
 عالي||
-عام|to float, swim|ʕaː.ma|ʿāma|عَامَ
-عام|year|ʕaːm|ʿām|عَام§§§§§
+طعام||
+عام|year/to swim|ʕ§aː§m§/ʕaː.ma|ʿām/ʿāma|عَام/عَامَ
+عَامَ|to float, swim|ʕ§aː.§ma|ʿāma|عام||عام
+عَام|year|ʕ§aː§m|ʿām|عام||عام
 عامل||
 عانس||
 عانق||
@@ -4828,8 +4819,6 @@ autoExpandExamples.ar = `
 عيني||
 عَادَةً|usually|ʕaː§‹.§da.§tan|ʿādatan|عادة
 عَاشَ|to live|ʕaː.ʃa|ʿāša|عاش
-عَام|year|ʕaːm|ʿām|عام
-عَامَ|to float, swim|ʕaː.ma|ʿāma|عام
 عَتِيق|old|ʕa.tiːq|ʿatīq|عتيق
 عَدَّ|to count|ʕad.da|ʿadda|عد
 عَرَفَ|to know|ʕa.ra.fa|ʿarafa|عرف
@@ -7161,18 +7150,15 @@ autoExpandExamples.ar = `
 هليلج أسود||
 هليلج أصفر||
 هليلج كابلي||
-هم|they (3pl)|humm|humm|هُمْ
 هما|they (3pl)|humā||هُمَا
 همجي||
 همدان||
 همزة||
 همس||
 هميان||
+هم|they (3pl)|humm|humm|هُمْ
 هن|they (3pl)|hu.maː|hunna|هُنَّ
 هنا|here|hu.§naː§‹|hunā|هُنَا
-هناك|there|hu.§naː§‹.§ka|hunāka|هُنَاكَ
-هناك|there|hʊ.§naː§‹.§ka|hunāka|هُنَاكَ§§§§§
-هنالك|there|hu.naː.li.ka|hunālika|هُنَالِكَ
 هندباء||
 هندس||
 هندسة معمارية||
@@ -7183,7 +7169,6 @@ autoExpandExamples.ar = `
 هنيهة||
 ههنا||
 ههناك||
-هو|he, she, it (3sg)|hu.wa|huwa|هُوَ
 هواء||
 هوادة||
 هوة||
@@ -7195,6 +7180,7 @@ autoExpandExamples.ar = `
 هول||
 هوندوراس||
 هويات||
+هو|he, she, it (3sg)|hu.wa|huwa|هُوَ
 هي|he, she, it (3sg)|hi.ja|hiya|هِيَ
 هيئة||
 هيا||
@@ -7207,9 +7193,10 @@ autoExpandExamples.ar = `
 هُمَا|they (3pl)|humā||هما
 هُمْ|they (3pl)|humm|humm|هم
 هُنَا|here|hu.§naː§‹|hunā|هنا
-هُنَاكَ|there|hu.naː.ka|hunāka|هناك
-هُنَاكَ|there|hʊnaːka|hunāka|هناك§§§§§
-هُنَالِكَ|there|hu.naː.li.ka|hunālika|هنالك
+هناك|there|hʊ.§naː§‹.§ka|hunāka|هُنَاكَ
+هُنَاكَ|there|hu.naː.ka|hunāka|هناك||هناك
+هنالك|there|hu.naː.li.ka|hunālika|هُنَالِكَ
+هُنَالِكَ|there|hu.naː.li.ka|hunālika|هنالك||هنالك
 هُنَّ|they (3pl)|hu.maː|hunna|هن
 هُوَ|he, she, it (3sg)|hu.wa|huwa|هو
 هِنْغَارِيّ|Hungarian|hin.ɣaː.rijj|hinḡāriyy|هنغاري
@@ -7468,6 +7455,10 @@ autoExpandExamples.ar = `
 
 
 
+@ unknown source
+
+خاط|to sew|xaː.tˤa|ḵāṭa|خَاطَ
+خاف|to fear|xaː.fa|ḵāfa|خَافَ
 
 
 

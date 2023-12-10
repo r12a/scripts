@@ -3,7 +3,10 @@
 @ Source: https://en.wiktionary.org/wiki/Category:Kashmiri_lemmas
 @ Source: https://archive.org/details/tbjU_kashmiri-english-dictionary-for-second-language-learners-omkar-koul/page/1/mode/2up
 
-native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+SEE ALSO: https://r12a.github.io/scripts/arab/ksdict_vocab.html
+
+
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -15,12 +18,10 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
-otherTranscription = true   // kicks in the latest order of items
 
 
 
@@ -28,6 +29,7 @@ otherTranscription = true   // kicks in the latest order of items
 
 autoExpandExamples.ks = `
 
+@ https://en.wiktionary.org/wiki/Category:Kashmiri_lemmas
 
 آب|water|aːb
 آتھوار|Sunday|aː§tʰ§‹§w§aː§r
@@ -35,36 +37,28 @@ autoExpandExamples.ks = `
 آزٲدی|freedom, liberty|ɑːzəːdiː
 آسُن|to be, exist|aːsun
 آشَنؠ|wife|aːʃanʲ
-آشیٚنؠ|wife|aːʃenʲ
-آلَو||
-آوٕرُن||
-آوٕسُن||
-آپراوُن|to feed|aː§p§r§aː§ʋu§n
-آگُر||
-أسؠ||
-أمیٖر||
-أنْجیٖر||
-أچھ||
-أہرُن||
-ؤری||
+آشیٚنؠ|wife|aː§ʃ§e§nʲ§‹| āśen'||| آشێنؠ
+آلَو|call, summons|aː§la§ʋ|ālav|आलव
+آوٕرُن|to cover, envelope|ɑː§ʋɨ§ɾu§n|āvụrun|आवॖरुन
+آوٕسُن|to decay, crumble|ɑː§ʋɨ§su§n| āvụsun |आवॖसुन
+آپراوُن|to feed|aː§p§r§aː§ʋu§n|āprāvun|आप्रावुन
+آگُر|root, origin|aː§ɡu§ɾ| āgur |आगुर
+ؤری|year| wə§r§iː | wạrī |वऺरी
 ؤٹِل|cockroach|wə§ʈi§l
 ؤہراتھ|rainy season|wə§h§r§aː§t§ʰ
-یٔارىسلان|lion
-یٔىسلام|Islam|islam
 او||
 اوش|husband|oː§‹§ʃ
 اول||
 اوٗ||
-اوٚنْگٕج|finger|›§õ§‹§ɡɨ§d͡ʒ
 اَ||
-اَباووٚز||
+اَباووٚز|unpleasant, disagreeable|| abāvoz|||اَباوۆز
 اَبساوُن||
 اَبسُن||
 اَبَل||
 اَبُز||
-اَبوٚد||
-اَبوٚڈ||
-اَبیْوٚن||
+اَبوٚد|stupid, foolish|a§b§o§d|abod|अबॊद||اَبۆد
+اَبوٚڈ|small, tiny||a§b§o§ḍ|अबॊड||اَبۆڈ
+اَبیْوٚن|same, identical||abeon|अब्यॊन|| اَبیٛۆن 
 اَتوٗل||
 اَتھٕ|hand|a§tʰɨ§‹
 اَخبار||
@@ -72,46 +66,45 @@ autoExpandExamples.ks = `
 اَدۄے||
 اَرزُن||
 اَرَب|billion|a§ra§b
-اَرٕترْٕہ|thirty-eight|arɨtrɨh
+اَرٕترْٕہ|thirty-eight|a§rɨ§t§rɨ§h| arụtrụٛh |||اَرٕترٕٛہ
 اَرٕتٲجِہہ|forty-eight|arɨtəːd͡ʒih
 اَرٕتٲجی||
 اَرٕداہ|eighteen|arɨdaːh
 اَرٕسَتَتھ||
-اَرٕشیٖتھ||
 اَرٕنَمَتھ||
-اَرٕوَنْزاہ||
+اَرٕوَنْزاہ|fifty-eight|a§rɨ§wa§n§z§aː§h|arụvanzāh|||اَرٕوَنٛزاہ
 اَرٕہٲٹھ||
 اَرژَن||
 اَرژُن||
 اَز||
 اَزماوُن||
 اَل||
-اَماپوٚز||
+اَماپوٚز|but, however (lit.)| a§m§aː§p§o§z | amāpoz |अमापॊज़||اَماپۆز
 اَمب||
 اَنُن||
-اَنْدَر|inside|a§n.§da§r
-اَنْگ||
+اَنْدَر|inside|a§n.§da§r|andar|||اَنٛدَر
+اَنْگ |part, division||||| اَنٛگ
 اَٹوٗٹ||
 اَٹَل||
 اَٹھووُہ||
 اَپُز||
-اَپوٚر||
-اَپوٚز||
+اَپوٚر |illiterate, uneducated||apor|अपॊर|| اَپۆر
+اَپوٚز |false, untrue|a§p§o§z|apoz|अपॊज़|| اَپۆز
 اَچھُر||
 اَڈُن||
-اَژھوٚل||
+اَژھوٚل|honest||aċhol|अछ़ॊल||اَژھۆل
 اَکھ ساس اَکھ||
 اَکھ ساس ہَتھ||
 اَکھ ہَتھ تہٕ اَکھ||
 اَکھ|one|a§kʰ§‹
 اَکھا||
-اَکہٕ ترْٕہ||
+اَکہٕ ترْٕہ|thirty-one|akɨtrɨh|akụtrụٛh|||اَکہٕ ترٕٛہ
 اَکہٕ تٲجِہہ||
 اَکہٕ تٲجی||
 اَکہٕ سَتَتھ||
-اَکہٕ شیٖتھ||
+اَکہٕ شیٖتھ|eighty-one|a§kɨ§§ʃ§iː§tʰ§‹|akụśīth|||اَکہٕ شيٖتھ
 اَکہٕ نَمَتھ||
-اَکہٕ وَنْزاہ||
+اَکہٕ وَنْزاہ|eighty-one|a§kɨ§wa§n§z§aː§h|akụvanzāh|||اَکہٕ وَنٛزاہ
 اَکہٕ وُہ||
 اَکہٕ ہٲٹھ||
 اَہلُن||
@@ -122,14 +115,12 @@ autoExpandExamples.ks = `
 اۄ||
 اۄا||
 اوٚ||
-اوٚبرَس ہؠتُن نار||
-اوٚدُر||
-اوٚر||
-اوٚنْجوٗر|fig|›§o§n§d͡ʒ§uː§r
-اوٚنْجوٗر|fig|›§ə§n§d͡ʒ§iː§r
-اوٚڈ||
-اوٚژھ||
-اوٚگُن||
+اوٚبرَس ہؠتُن نار|there'll be good weather tomorrow|›§o§b§ra§s§ §hʲa§‹§tu§n§ §n§aː§r | obras hyatun nār |||اۆبرَس ہؠتُن نار
+اوٚدُر|wet||odur|ऒदुर||اۆدُر
+اوٚر|healthy|||||اۆر
+اوٚڈ|half|| oḍ |ऒड||اۆڈ
+اوٚژھ|thin, weak||oċh|ऒछ़||اۆژھ
+اوٚگُن|fire||ogun|ऒगुन||اۆگُن
 ای||
 ایٖمان|faith, belief|›§iː§m§aː§n
 بؠنْزٕ|neice|bʲanzɨ
@@ -182,7 +173,6 @@ autoExpandExamples.ks = `
 بہَ||
 بہٕ|I|bɨ
 بۄ|I|bɔ
-بۄ||
 بۄد وار|Wednesday|bɔdwaːr
 بۄنْوار|Tuesday|bɔ̃waːr
 بوٚڈ چِلہٕ|December-January|boɖ t͡ʃilɨ
@@ -209,7 +199,6 @@ autoExpandExamples.ks = `
 ترْٕہ||
 ترْٕہٲٹھ||
 ترْٕے||
-ترْوٚوُہ||
 ترْیٚیہِ شیٖتھ||
 ترْےٚ ہَتھ||||||x
 ترْےٚ||||||x
@@ -232,7 +221,6 @@ autoExpandExamples.ks = `
 تھُج|mallard (f)|t§ʰu§d͡ʒ
 تھۄکھ||
 تہٕ||
-توٚت|hot m.|tot
 تیٖل||
 تیٚنْگُل||
 تیٚیہِ ترْٕہ||
@@ -240,7 +228,6 @@ autoExpandExamples.ks = `
 تیٚیہِ تٲجی||
 جاناوار|bird|d͡ʒaːnaːwar
 جَدٕ بُڈؠ بَب|great-great-grandfather|d͡ʒadɨ buɖʲ bab
-جَدٕ بُڈؠ بَب||
 جُمعہ|Friday|d͡ʒu§m§aː§h
 جوٚنوٗب|south|d͡ʒonuːb
 خانہٕ دار|husband|kʰaːnɨdaːr
@@ -249,14 +236,12 @@ autoExpandExamples.ks = `
 خلق|people|kʰa§lɨ§k
 خوتەن|Khotan
 خَر|donkey|kʰar
-خَر||
 خٔرِنؠ|donkey {f}|kʰərinʲ
 دارُن|to owe|daːrun
 دانْد|bull|dãːd
 داہ ساس|10, 000|daːh saːs
 داہ لَچھ|million|daːh lat͡ʃʰ
 داہ|ten|daːh
-درُْے|brother-in-law|druj
 درْٕے کاکَنؠ|sister-in-law|drɨj kaːkanʲ
 درْٕے||
 درْاگ||
@@ -296,8 +281,6 @@ autoExpandExamples.ks = `
 دوٚگُن||
 دیْارتھٕر|nephew|djaːrtʰɨr
 دیْارٕز|neice|djaːrɨz
-دیْارتھٕر||
-دیْارٕز||
 رؠتہٕ کال|summer|rʲatɨ kaːl
 رؠتہٕ کول|summer|r§ʲa§t§ɨ§ §k§oː§l
 راتھ||
@@ -403,7 +386,6 @@ autoExpandExamples.ks = `
 سٲج گوٚبُر|nephew|səːd͡ʒ ɡobur
 سٲجُو|brother-in-law|səːd͡ʒuw
 سۄ|she|s§ɔ
-سۄاد||
 سۄر||
 سۄرٕگ||
 سۄن||
@@ -485,12 +467,8 @@ autoExpandExamples.ks = `
 مَنْگتہٕ نیٚچُو|adopted son|manɡtɨ net͡ʃuw
 مَنْگتہٕ کوٗر|adopted daughter|manɡtɨ kuːr
 مَنْگُن|to ask for|mãɡun
-مَنْجہوٚر||
 مَنْدَر||
 مَنْز||
-مَنْگتہٕ نیٚچُو||
-مَنْگتہٕ کوٗر||
-مَنْگُن||
 مَکان||
 مَگَر مَژھ|crocodile|magar mat͡sʰ
 مَگَر||
@@ -505,9 +483,6 @@ autoExpandExamples.ks = `
 مۄنْجہِ ہور|9th month (Nov-Dec)|mɔnd͡ʒihoːr
 مۄنْگُر|kid m. (goat)|mɔnɡur
 مۄنْگٕر|kid f. (goat)|mɔnɡɨr
-مۄنْجہِ ہور||
-مۄنْگُر||
-مۄنْگٕر||
 مۄٹُن||
 مۄچَر||
 مۄژُن||
@@ -549,7 +524,6 @@ autoExpandExamples.ks = `
 وان||
 وانْدُر|monkey|w§ãː§‹§du§r
 وانْگُن|aubergine|wãːɡun
-وانْگُن||
 وایُن||
 وورٕ بوے|step-brother|woːrɨ boːj
 وورٕ بیٚنہِ|step-sister|woːrɨ beni
@@ -564,8 +538,7 @@ autoExpandExamples.ks = `
 وَرشا کال|rainy season|warʃaː kaːl
 وَن ہٲر||
 وَنْدٕ|winter|wa§n.§dɨ
-وَژھٕر|2nd month (Apr-May)|wahʲakʰ
-وَژھٕر|calf f.|wat͡sʰɨr
+وَژھٕر|calf f.|wat͡sʰɨr| vaċhụr
 وُزٕمَل||
 وُشنیر||
 وُشُن||
@@ -629,7 +602,6 @@ autoExpandExamples.ks = `
 پوگ||
 پوہ|10th month (Dec-Jan)|poːh
 پَدٕکرْٲم||
-پَرُن|to read|pa§ru§n
 پَرکھٲے||
 پَزَر||
 پَش||
@@ -662,7 +634,6 @@ autoExpandExamples.ks = `
 پٲنْژٕ وَنْزاہ||
 پٲنْژٕ ہٲٹھ||
 پٲنْژھ ہَتھ||
-پٲنْژھ||
 پٲکِستان|Pakistan|pəːkistaːn
 پھ||
 پھؠرَن||
@@ -769,7 +740,6 @@ autoExpandExamples.ks = `
 کارتِکھ|eighth month (Oct-Nov)|kaːrtikʰ
 کانْتُر|sparrow m.|k§ãː§‹§tu§r
 کانْدُر|baker|kãːdur/kãːduɾ
-کانْدُر||
 کانْگٕر||
 کاو |crow|kaːw
 کاہ شَتھ||
@@ -778,7 +748,6 @@ autoExpandExamples.ks = `
 کرْینْکہٕ لٔٹ|lizard|krẽːkɨləʈ
 کرْٕم|sea turtle|k§rɨ§m
 کرْاوُت||
-کرْینْکہٕ لٔٹ||
 کوتُر|pigeon|koːtur
 کوٗر|daughter|kuːr
 کوڈ||
@@ -814,7 +783,6 @@ autoExpandExamples.ks = `
 کٔٹ|girl|kəʈ
 کٔچھوٕ|tortoise|kət͡ʃʰwɨ
 کٲشُر|Kashmiri language|k§əː.§ʃu§r
-کٲشُر|Kashmiri|k§əː.§ʃu§r
 کٲم|work|kəːm
 کٲنْتُر|sparrow m.|kə̃ːtur
 کھ||
@@ -887,7 +855,6 @@ autoExpandExamples.ks = `
 ہوٗن|dog|huːn
 ہوٗنؠ|dog f.|h§uː§n§ʲ
 ہوہور|wife's father's house|hoːhoːr
-ہَتھ|hundred|hatʰ
 ہَتھ|one hundred|hatʰ
 ہَرُد|autumn|ha§ru§d
 ہَش|mother-in-law|ha§ʃ
@@ -923,6 +890,46 @@ autoExpandExamples.ks = `
 
 
 
+اَبؠن|without a gap|a§bʲa§n
+بؠنتھٕر|nephew|bʲa§‹§n§tʰɨ§‹§r| byanthụr
+بٲدرؠتھ|Aug-Sept|b§əː§d§rʲa§tʰ§‹| bạ̄dryath
+بٲدٕرپؠتھ |Aug-Sept|b§əː§dɨ§r§pʲa§tʰ§‹| bạ̄dryath
+رؠکھ|guano|| ryakh
+زؠو|tongue; language| zʲa§‹§w|zyav
+سؠکھ|sand||syakh
+لؠو|lick!| lʲa§‹§w|lyav
+لؠوُن|to lick||lyavun
+لؠکھ|cursing, abuse||lyakh
+لؠکھ ژارٕنؠ|to abuse||lyakh ċārụn'
+وؠٹھُن|to fatten, become fat|| vyaṭhun
+وَہؠکھ|Apr-May| wa§hʲa§‹§kʰ§‹|vahyakh
+کھؠن چؠن|food & drink|| khyan cyan
+بِلؠ بِچُر|Himalayan bulbul| bi§lʲ§‹§ §bi§t͡ʃu§r| bil' bicur
+ژؠتھ|mind, intelligence| ʦʲa§‹§tʰ§‹ | ċyath
+کٲڈؠ|mind, intellect| k§əː§ɖʲ§‹ |kạ̄ḍ'
+
+
+@ wiktionary
+رؠے|ant|rʲa§‹§j|ryay
+ریٚے|ant|r§e§j|rey
+کیْوٚم|insect|k§j§o§m
+ترٛےٚ|three|t§r§e|tre||ترٛے
+أنْز|male swan|ə̃§‹§z|ạnz|||أنٛز
+أنْزِنؠ|female swan|ə̃.§‹§zi§nʲ§‹|ạnzin'|||أنٛزِنؠ
+اَسمٲنؠ أنْز|goose|a§s§m§əː§nʲ§‹§ §ə̃§‹§z
+
+
+@ unknown source
+
+أسؠ||
+أمیٖر||
+أنْجیٖر||
+أچھ||
+أہرُن||
+یٔارىسلان|lion|
+اوٚنْگٕج|finger|›§õ§‹§ɡɨ§d͡ʒ
+اَرٕشیٖتھ||
+
 سدٕرؠ|waist coat|sa§dɨ§rʲ§‹|||x
 سوزٟنؠ طوٗپؠ|skull cap (full of stitches)|s§oː§zɨ§nʲ§‹§ §t§uː§pʲ§‹|||x
 اکشر|often, generally|a§k§ʃa§r||||x
@@ -949,50 +956,21 @@ autoExpandExamples.ks = `
 دؠوٕ|possibly, perhaps|d§e§vɨ
 دیٖدار|glimpse|d§iː§d§aː§r||||x
 
-اَبؠن|without a gap|a§bʲa§n
-بؠنتھٕر|nephew|bʲa§‹§n§tʰɨ§‹§r| byanthụr
-بٲدرؠتھ|Aug-Sept|b§əː§d§rʲa§tʰ§‹| bạ̄dryath
-بٲدٕرپؠتھ |Aug-Sept|b§əː§dɨ§r§pʲa§tʰ§‹| bạ̄dryath
-رؠکھ|guano|| ryakh
-زؠو|tongue; language| zʲa§‹§w|zyav
-سؠکھ|sand||syakh
-لؠو|lick!| lʲa§‹§w|lyav
-لؠوُن|to lick||lyavun
-لؠکھ|cursing, abuse||lyakh
-لؠکھ ژارٕنؠ|to abuse||lyakh ċārụn'
-وؠٹھُن|to fatten, become fat|| vyaṭhun
-وَہؠکھ|Apr-May| wa§hʲa§‹§kʰ§‹|vahyakh
-کھؠن چؠن|food & drink|| khyan cyan
-بِلؠ بِچُر|Himalayan bulbul| bi§lʲ§‹§ §bi§t͡ʃu§r| bil' bicur
-ژؠتھ|mind, intelligence| ʦʲa§‹§tʰ§‹ | ċyath
-کٲڈؠ|mind, intellect| k§əː§ɖʲ§‹ |kạ̄ḍ'
 
-
-@ wiktionary
-رؠے|ant|rʲa§‹§j|ryay
-ریٚے|ant|r§e§j|rey
-کیْوٚم|insect|k§j§o§m
-ترٛےٚ|three|t§r§e|tre||ترٛے
-
-
-@ unknown
 مالیُْن|maternal home of wife|m§aː§l§ju§n||||x
 دَکھیُْن|south|da§kʰ§‹§ju§n||||x
 اوٚبُر|cloudy weather|›§o§bu§r
-أنْز|male swan|ə̃§‹§z
-أنْزِنؠ|female swan|ə̃§‹.§zi§n§ʲ
-اَسمٲنؠ أنْز|goose|a§s§m§əː§nʲ§‹§ §ə̃§‹§z
 مٲش|buffalo|m§əː§ʃ||||x
 مٲنْش|buffalo|m§ə̃ː§‹§ʃ||||x
 
 
 
-@ kashmiri dictionary
+@ https://archive.org/details/tbjU_kashmiri-english-dictionary-for-second-language-learners-omkar-koul/page/1/mode/2up
+
 کؠوٚم|insect|kʲ§‹§o§m|k'om||m.s.|x
 اکھؠوٗر|letter of the alphabet|akʰʲur|akh'ur|||x
 اچھُر|letter of the alphabet|at͡ʃʰur|achur|||x
 ضٔمیٖر|nature|zə§m§iː§r|zAmi:r|||x
-ظٲلِم|cruel|z§əː§li§m|zA:lim|||x
 حاجَتھ|need|h§aː§d͡ʒa§tʰ§‹|ha:jath|||x
 لاب|profit|l§aː§b|la:b|||x
 لالٕپھوٚل|pupil (eye)|l§aː§lɨ§pʰ§‹§o§l|la:lIphol|||x
@@ -1011,7 +989,6 @@ autoExpandExamples.ks = `
 بنْٲر|female cat| brəːr|brA:r|||x
 دۄیُن|to milk|d§ɔ§ju§n|d>yun|||x
 دَکھؠُن|south|da§kʰʲu§‹§‹§n|dakh'un|||x
-اُجرَتھ|wages|u§j§ra§tʰ|ujrath|||x
 تَپَسیٚا |meditation||tapas'a:|||x
 قوبوٗ|control|k§oː§b§uː|ko:bu:|||x
 اَنْگریز|Englishman|a§ŋ§ɡ§r§eː§z|a~gre:z|||x
@@ -1034,16 +1011,17 @@ autoExpandExamples.ks = `
 شُےٚ|six|ʃ§e|she||correct spelling? final short e!|x
 سَنْگ|association|sã§‹§ɡ|sanɡ||nasaln doesn't make coda|x
 دُپاسے|on both sides|du§p§aː§s§e|dupa:se|||x
-ظٲلِم|cruel|z§əː§li§m|zA:lim|||x
-ذاتھ|variety, caste|z§aː§tʰ§‹|za:th|||x
-ذِکِر|mention|zi§ki§r|zikir|||x
-حُکُمران|ruler(s)|hu§ku§m§r§aː§n|hukumra:n|||x
-کھٔرؠ پھٕ|naughty|kʰə§rʲ§‹§pʰɨ§‹|khAr'phI|||x
-آرادَنا|worship, prayer|aː§r§aː§da§n§aː|a:ra:dana:|||x
-سۄاد|one and a quarter|s§ɔː§‹§d|s>:d|||x
-ہیٖرو|hero|h§iː§r§oː|hi:ro:|||x
-باضے|sometimes|b§aː§z§eː|ba:ze:|||x
-دَریاو|river|da§r§j§aː§w|darya:v|||x
+ظٲلِم|cruel|z§əː§li§m|zA:lim
+ذاتھ|variety, caste|z§aː§tʰ§‹|za:th
+ذِکِر|mention|zi§ki§r|zikir
+حُکُمران|ruler(s)|hu§ku§m§r§aː§n|hukumra:n
+کھٔرؠ پھٕ|naughty|kʰə§rʲ§‹§pʰɨ§‹|khAr'phI
+آرادَنا|worship, prayer|aː§r§aː§da§n§aː|a:ra:dana:
+سۄاد|one and a quarter|s§ɔː§‹§d|s>:d
+ہیٖرو|hero|h§iː§r§oː|hi:ro:
+باضے|sometimes|b§aː§z§eː|ba:ze:
+دَریاو|river|da§r§j§aː§w|darya:v
+اِسلٲمی|Islamic|i§s§l§əː§m§iː|(y)islA:mi:
 
 
 

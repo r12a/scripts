@@ -1,9 +1,5 @@
 /*
-@ Source: https://en.wiktionary.org/wiki/Category:Sunwar_lemmas (2 items)
-@ Source: https://www.unicode.org/L2/L2021/21157-sunuwar.pdf
-@ Source: https://www.devkumarsunuwar.com.np/iwsadmin/imagine-filemanager/uploads/media/Second_Hamso_bhadra-August-September%202078.pdf
-
-native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -15,18 +11,23 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
+otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
+termListType = 3			// picks up sources automatically
 
-otherTranscription = true
+
 
 
 
 
 autoExpandExamples.suz = `
+
+@ https://en.wiktionary.org/wiki/Category:Sunwar_lemmas (2 items)
+@ https://www.unicode.org/L2/L2021/21157-sunuwar.pdf
+@ https://www.devkumarsunuwar.com.np/iwsadmin/imagine-filemanager/uploads/media/Second_Hamso_bhadra-August-September%202078.pdf
 
 𑯇𑯃𑯜|woman|m§i§ʃ||||x
 𑯓𑯖̃𑯆𑯅|water|v§ãː§k§u||||x

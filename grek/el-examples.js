@@ -1,7 +1,5 @@
 /*
-@ Source: https://en.wiktionary.org/wiki/Appendix:Greek_Swadesh_list
-
-native | meaning | IPA① | transcription | other transcriptions② & notes | wiktionary③
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -13,13 +11,17 @@ native | meaning | IPA① | transcription | other transcriptions② & notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
 
+
+
 autoExpandExamples.el = `
+
+@ https://en.wiktionary.org/wiki/Appendix:Greek_Swadesh_list
+
 Έλληνας|Greek|ˈe.§l§‹§i.§n§a§s|Éllinas
 ευφυΐα|intelligence|e§‹§f§–§ˈi§a
 νεράιδα|fairy|n§e§ˈɾ§a§i̯.§ð§a
@@ -59,13 +61,11 @@ autoExpandExamples.el = `
 κοντός|short|k§o§ˈn§d§o§s|kontós
 στενός|narrow|s§t§e§ˈn§o§s|stenós
 λεπτός|thin|l§e§ˈp§t§o§s|leptós
-γυναίκα|woman|ʝ§i§ˈn§›§e§k§a|gynaíka
 άνδρας|man (male)|ˈa§n§d§r§a§s|ándras
 άνθρωπος|man (human)|ˈa§n̪§θ§r§o§p§o§s|ánthropos
 παιδί|child|p§e§‹§ˈð§i|paidí
-σύζυγος|wife|ˈs§i§z§i§ɣ§o§s|sýzygos
-γυναίκα|wife|ʝ§i§ˈn§›§e§k§a|gynaíka
-σύζυγος|husband|ˈs§i§z§i§ɣ§o§s|sýzygos
+γυναίκα|woman, wife|ʝ§i§ˈn§›§e§k§a|gynaíka
+σύζυγος|husband, wife|ˈs§i§z§i§ɣ§o§s|sýzygos
 άντρας|husband|ˈa§n§d§r§a§s|ántras
 μητέρα|mother|m§i§t§é§r§a|miˈtera
 μάνα|mother|ˈm§a§n§a|mána
@@ -98,7 +98,6 @@ autoExpandExamples.el = `
 κέρατο|horn|ˈc§e§r§a§t§o|kérato
 ουρά|tail|›§u§ˈr§a|ourá
 πούπουλο|feather|ˈp§u.§‹§p§u.§‹§l§o|poúpoulo
-φτερό|feather|f§t§e§ˈr§o|fteró
 τρίχα|hair|ˈt§r§i§x§a|trícha 
 μαλλιά|hair|m§a§›§ˈʎ§a|malliá 
 κεφάλι|head|c§e§ˈf§a§l§i|kefáli
@@ -112,7 +111,7 @@ autoExpandExamples.el = `
 πόδι|leg, foot|ˈp§o.§ð§i|pódi
 γόνατο|knee|ˈɣ§o§n§a§t§o|gónato
 χέρι|hand|ˈç§e.§ɾ§i|chéri
-φτερό|wing|f§t§e§ˈr§o|fteró
+φτερό|feather, wing|f§t§e§ˈr§o|fteró
 κοιλιά|belly|c§›§i§ˈʎ§›§a|koiliá
 σπλάχνα|guts|ˈs§p§l§a§x§n§a|spláchna
 εντόσθια|guts|e§ˈn§d§o§s§θ§i§a|entósthia
@@ -260,7 +259,6 @@ autoExpandExamples.el = `
 μπορώ|to be able to|–§b§o§ˈɾ§o
 δεν πάω|I am not going|ð§e§n§ 
 μπύρα|beer|–§ˈb§i§r§a|býra
-φάση|phase|ˈf§a§s§i|||x
 βάση|base|ˈv§a§s§i
 μόνος|alone|ˈm§o§n§o§s
 νόμος|law|ˈn§o§m§o§s|
@@ -275,7 +273,6 @@ autoExpandExamples.el = `
 κόμμα|comma|ˈk§o§m§‹§a
 χώμα|soil|ˈx§o.§m§a|chóma
 γόμα|eraser|ˈɣ§o§m§a|góma
-γκάμα|range|ˈɡ§‹§a§m§a|||x
 μπροστά|in the front|b§‹§ɾ§o§ˈs§t§a
 ντοκιμαντέρ|documentary
 νταντά|nanny|d§‹§a§ˈ§‹§d§a
@@ -294,6 +291,10 @@ autoExpandExamples.el = `
 κόσμος|world, earth|ˈk§o.§z§m§o§s|kósmos
 
 
+@ unknown source
+
+φάση|phase|ˈf§a§s§i|
+γκάμα|range|ˈɡ§‹§a§m§a|
 
 
 

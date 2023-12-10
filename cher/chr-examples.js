@@ -1,7 +1,5 @@
 /*
-@ Source: https://en.wiktionary.org/wiki/Appendix:Algonquian_and_Iroquoian_Swadesh_lists
-
-native | meaning | IPA① | transcription | other transcriptions② & notes | wiktionary③
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -13,13 +11,17 @@ native | meaning | IPA① | transcription | other transcriptions② & notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
 
+
+
+
 autoExpandExamples.chr = `
+
+@ https://en.wiktionary.org/wiki/Appendix:Algonquian_and_Iroquoian_Swadesh_lists
 
 ᎠᎢ|to walk||ai|||
 ᎠᎥᏍᎦ|||
@@ -393,7 +395,6 @@ autoExpandExamples.chr = `
 ᎠᏟᎩᎠ|||
 ᎠᏟᎭ|||
 ᎠᏟᎶᎠ|||
-ᎠᏟᎶ|he's measuring it|ȁː.§ɬìː.§lo|atliloa||x
 ᎠᏟᎶᎢᏙᎯ|||
 ᎠᏟᏍᏙᏗ|||
 ᎠᏟᏴᏌᎾᏩᏍᏗᎭ|||
@@ -703,7 +704,6 @@ autoExpandExamples.chr = `
 ᎤᏍᏗ|small||usdi|||
 ᎤᏍᏗᎢ|||
 ᎤᏍᏗᏁᎦᎸᎢ|||
-ᎤᏍᏘ|baby|ùː§s§ti|usti||x
 ᎤᏍᏘᎬᎢ|||
 ᎤᏍᏟ|||
 ᎤᏎᎳᏘ|||
@@ -1647,51 +1647,57 @@ autoExpandExamples.chr = `
 ᏴᏫ ᎤᎾᏦᏙᏗ|||
 ᏴᏫ ᏧᎾᏍᏗᎢ|||
 ᏴᏫ|man (human being)||yvwi|||
-
-
-ᏒᎧᏔ|apple|sə̃:§kʰ§ta|svkata||x
-
-ᏩᏇᏅᏅᏒ|I went there|wȁ:.§kʷè:.§nə̃́:.§‹§sə̃|wakwenvsv||x
-ᎦᏇᏅᏍᎦ|he's wrapping it|kàː.§kʰw̥è:.§nə̃̀:.§s§ka|gakwenvska||x
 ᎪᎯ|today|kʰȍ§hi|
-ᏍᏊᏅᎢ|fist|s§kʷè§n̥ə̃̋§ʔi|skwenvi||x
-ᎠᏓ|wood/young animal|à§ta§/áʔta|||x
+
+
 ᎭᏛᎦ|you did it/you hung it up|hà.§tə̃̏.§ka§/hatʰə̃̏ːka|hadvga
 ᏓᎵᏲᎯᎭ|he's putting on socks|tȁː§líː§jó§hì§ha|daliyohiha
 ᏓᎵᏲᏏᎭ|he's changing socks|tȁː§líː§jó§sì§ha|daliyosiha
-
 ᏧᏁᎳ|eight||tsunela|||
-ᏣᏁᎳ|eight|tʰ͡ʃà.§néː.§la|tsanela||x
 ᏥᏃᏍᎦ|coal|tʰ͡ʃì§nò§s§ka|tsinosga
 ᏧᎦ|flea|tʰ͡ʃùh§ka|tsuka
 ᎠᏧᏣ|boy|a§tʰ͡ʃű§t͡ʒa|atsutsa
-ᎦᏥᏃᏍᏓ|straight|ka§tʰ͡ʃì§nő§s§ta|gatsinosta||x
-ᎠᏨᏯ|male animal/rooster|a.§t͡sə̃̀.§ja§/a.tʰ͡ʃə̃̀.ja|atsvya
-ᏗᏨᏍᏗ|marriage|ti§tʰ͡ʃə̃́ː§s§ti|ditsvsdi||x
-ᏯᏖᎾ|board|j̥àh§tʰě§na|yatena||x
 ᏯᏙᏟ|narrow|j̥àh.§tʰő.§ɬi|yadotli
-
-ᏰᎦᎵ|quilt|j̥èh§kà§ɬi|yekatli||x
-ᎠᎦᎾᏘ|he is licking it|ȁː.§kà.§na̋ː.§ti|aganadi||x
 ᎤᎦᎹ|soup|űː.§ká.§ma|ugama
-ᎠᎹᏴ|near the water|a.§mà.§jə̃̋ː|amayv||x
-ᎠᎺᏉᎢ|ocean|a.§méː.§kʷő.§ʔi|a.me.kwo.i||x
-ᏝᎺᎭ|bat|tlàː§mèː§ha|tla.me.ha||x
-ᏔᎹᏟ|tomato|tʰà§màː§ɬi|ta.ma.tli||x
 ᎧᎹᎹ|elephant/butterfly|kʰà.§màː.§ma|kamama
 ᏓᎹᎦ|horsefly|tàː.§má.§ka|damaga
-ᎣᎦᎳᎰᎹ|Oklahoma|òː.§kà.§làː.§hőː.§ma|ogalahoma||x
-ᎣᎦ̱ᎳᎰᎹ|Oklahoma|òː§k§làː§hőː§ma|ogalahoma||x
-ᎺᎵ|Mary|méː§li|me.li||x
 ᎨᎻᎵ|camel|kʰe̋ː.§mí.§li|gemili
-ᎹᎩ|Maggie|ma̋ː.§ki|magi||x
-ᎰᏩ|OK|hò.§wã|howa||x
+
+
+
+@ unknown source
+
+ᏒᎧᏔ|apple|sə̃:§kʰ§ta|svkata|
+ᏩᏇᏅᏅᏒ|I went there|wȁ:.§kʷè:.§nə̃́:.§‹§sə̃|wakwenvsv|
+ᎦᏇᏅᏍᎦ|he's wrapping it|kàː.§kʰw̥è:.§nə̃̀:.§s§ka|gakwenvska|
+ᏍᏊᏅᎢ|fist|s§kʷè§n̥ə̃̋§ʔi|skwenvi|
+ᎠᏓ|wood/young animal|à§ta§/áʔta||
+
+ᏣᏁᎳ|eight|tʰ͡ʃà.§néː.§la|tsanela|
+ᎦᏥᏃᏍᏓ|straight|ka§tʰ͡ʃì§nő§s§ta|gatsinosta|
+ᎠᏨᏯ|male animal/rooster|a.§t͡sə̃̀.§ja§/a.tʰ͡ʃə̃̀.ja|atsvya
+ᏗᏨᏍᏗ|marriage|ti§tʰ͡ʃə̃́ː§s§ti|ditsvsdi|
+ᏯᏖᎾ|board|j̥àh§tʰě§na|yatena|
+
+ᏰᎦᎵ|quilt|j̥èh§kà§ɬi|yekatli|
+ᎠᎦᎾᏘ|he is licking it|ȁː.§kà.§na̋ː.§ti|aganadi|
+ᎠᎹᏴ|near the water|a.§mà.§jə̃̋ː|amayv|
+ᎠᎺᏉᎢ|ocean|a.§méː.§kʷő.§ʔi|a.me.kwo.i|
+ᏝᎺᎭ|bat|tlàː§mèː§ha|tla.me.ha|
+ᏔᎹᏟ|tomato|tʰà§màː§ɬi|ta.ma.tli|
+ᎣᎦᎳᎰᎹ|Oklahoma|òː.§kà.§làː.§hőː.§ma|ogalahoma|
+ᎣᎦ̱ᎳᎰᎹ|Oklahoma|òː§k§làː§hőː§ma|ogalahoma|
+ᎺᎵ|Mary|méː§li|me.li|
+ᎹᎩ|Maggie|ma̋ː.§ki|magi|
+ᎰᏩ|OK|hò.§wã|howa|
 ᏗᎦᏙᏗ|curtains|tì.§kà.§tó̥h.§tĩ|digadodi
-ᏥᎩᎵ|ghost|t͡s§ki.§li|tsikili|||x
+ᏥᎩᎵ|ghost|t͡s§ki.§li|tsikili||
 
-ᎠᎨᏯ|woman|à.§kěː.§hj̥a|ageya||x
-ᎤᏂᎷᏨ|they arrived|ȕː.§nì.§lúh.§tʰ͡ʃə̃|unilutsv||x
+ᎠᎨᏯ|woman|à.§kěː.§hj̥a|ageya|
+ᎤᏂᎷᏨ|they arrived|ȕː.§nì.§lúh.§tʰ͡ʃə̃|unilutsv|
 
+ᎠᏟᎶ|he's measuring it|ȁː.§ɬìː.§lo|atliloa|
+ᎤᏍᏘ|baby|ùː§s§ti|usti|
 
 
 

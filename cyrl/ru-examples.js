@@ -1,4 +1,28 @@
+/*
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ if Wiktionary spells the word differently, add the spelling here
+*/
+
+
+
+
+
+
 autoExpandExamples.ru = `
+
+@ wiktionary
+
 брат|brother|b§r§a§t
 брать|to take|b§r§a§tʲ§‹
 за́мок|castle|ˈz§a.§m§ə§k
@@ -118,8 +142,7 @@ autoExpandExamples.ru = `
 язы́к|tongue (organ)|jɪ§ˈz§ɨ§k
 но́готь|fingernail|ˈn§o§g§ə§tʲ§‹
 стопа́|foot|stʌˈpa
-нога́|foot|
-нога́|leg|nʌˈga
+нога́|leg, foot|nʌˈga
 коле́но|knee|kʌˈlʲenə
 рука́|hand|ruˈka
 крыло́|wing|k§r§ɨ§ˈl§o
@@ -184,7 +207,7 @@ autoExpandExamples.ru = `
 поцара́пать|to scratch|
 копа́ть|to dig|kʌˈpatʲ
 рыть|to dig|rɨtʲ
-пла́вать|to swim|ˈplavətʲ
+пла́вать|to swim, float|ˈplavətʲ
 плыть|to swim|pɫɨtʲ
 лета́ть|to fly|lʲɪˈtatʲ
 лете́ть|to fly|
@@ -237,8 +260,6 @@ autoExpandExamples.ru = `
 игра́ть|to play|ɪ§ˈg§r§a§tʲ§‹
 поигра́ть|to play|
 сыгра́ть|to play|
-пла́вать|to float|
-плыть|to float|plɨtʲ
 течь|to flow|tʲ§e§ʨ§‹
 замерза́ть|to freeze|
 замёрзнуть|to freeze|zəˈmʲorznutʲ

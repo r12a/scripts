@@ -1,7 +1,5 @@
 /*
-@ Source: 
-
-native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -13,17 +11,23 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
+
+
+NOTES:
+- Wiktionary lumps Pular, Pulaar, & Fulfulde under Fula, see https://en.wiktionary.org/wiki/Pular#Fula
+
 */
 
 
-otherTranscription = true   // kicks in the latest order of items
 
 
 
 
 autoExpandExamples.fuf = `
+
+@ unknown source
+
 𞤉𞤲𞤫𞥅𞤲|we|ɛ§n§ɛː§n|Ɛneen
 𞤞𞤢𞤲𞤼𞤢𞤥𞤢|Gbantama (name of a town)|ɡ͡b§a§n.§t§a.§m§a|Gbantama
 𞤟𞤭𞤲𞤢𞥄|Zina (name)|z§i.§n§aː|Zinaa
@@ -162,8 +166,7 @@ autoExpandExamples.fuf = `
 𞤳𞤢𞤷𞥆𞤵|lime|k§a§t.t͡ʃ§u|kaccu
 𞤳𞤫𞤧𞤮|new|kɛsɔ|keso
 𞤳𞤮𞤧𞤢𞤥|milk|k§ɔ.§s§a§m|kosam
-𞤳𞤮𞤴𞤲𞥋𞤺𞤢𞤤|foot|kɔjᵑɡal|koyngal
-𞤳𞤮𞤴𞤲𞥋𞤺𞤢𞤤|leg|kɔjᵑɡal|koyngal
+𞤳𞤮𞤴𞤲𞥋𞤺𞤢𞤤|foot, leg|k§ɔ§j§››§›§ᵑɡ§a§l|koyngal
 𞤴𞤢𞤪𞤣𞤫|drink|jardɛ|yarde
 𞤴𞤢𞤲𞥋𞤣𞤫|fall|jaⁿdɛ|yande
 𞤴𞤢𞤸𞤣𞤫|walk|jahdɛ|yahde
@@ -201,8 +204,7 @@ autoExpandExamples.fuf = `
 𞤸𞤢𞥄𞤪𞤭|full|haːri|haari
 𞤸𞤢𞥄𞤲𞤵𞤯𞤥|basic|h§aː.§n§u§ɗ§m|haanuɗm
 𞤸𞤢𞥄𞤳𞤮|leaf|haːkɔ|haako
-𞤸𞤢𞥄𞤴𞤪𞤫|mountain|haːjrɛ|haayre
-𞤸𞤢𞥄𞤴𞤪𞤫|stone|haːjrɛ|haayre
+𞤸𞤢𞥄𞤴𞤪𞤫|mountain, stone|h§aː§j§r§ɛ|haayre
 𞤸𞤫𞤲𞤣𞤵|wind|hɛndu|hendu
 𞤸𞤫𞥅𞤱𞤭|many|hɛːwi|heewi
 𞤸𞤫𞥅𞤲|some|h§ɛː§n|heen

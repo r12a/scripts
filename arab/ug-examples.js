@@ -1,7 +1,5 @@
 /*
-@ Source: https://en.wikipedia.org/wiki/Uyghur_language#Phonology
-
-native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③ | rawIPA
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
 ① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
@@ -13,17 +11,19 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
    if there is another key orthography (eg. Mongolian cyrillic) it goes here.
    vowelled/unvowelled alternatives also go here
 
-③ x means that no link to Wiktionary should be added
-   if Wiktionary spells the word differently, add the spelling here
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
-otherTranscription = true   // kicks in the latest order of items
+
+
 
 
 
 
 autoExpandExamples.ug = `
+
+@ wiktionary
 
 -خانا||
 -لەر-||
@@ -133,7 +133,6 @@ autoExpandExamples.ug = `
 ئاۋۇ||
 ئاۋۋال||
 ئو||
-ئوبلاست||
 ئوتتۇرا|middle, central||ottura
 ئوتتۇز||
 ئوتخور||
@@ -286,7 +285,6 @@ autoExpandExamples.ug = `
 ئەمگەك||
 ئەمەس||
 ئەپ||
-ئەپسۇس||
 ئەڭ||
 ئەگەر||
 ئەھل||
@@ -464,7 +462,6 @@ autoExpandExamples.ug = `
 تېرىقە||
 تېرە||
 تېلېفون|telephone||tëlëfon
-تېلېۋىزور||
 تەتقىقات||
 تەخسە||
 تەرتىپ||
@@ -496,7 +493,6 @@ autoExpandExamples.ug = `
 جانلىق||
 جاڭيۇ|soy sauce|d͡ʒ§ɑ§ŋ§j§u|jangyu
 جاۋاب||
-جوزا||
 جىبۇتى||
 جىسىم||
 جىگەر||
@@ -555,7 +551,6 @@ autoExpandExamples.ug = `
 داڭلىق|famous||dangliq
 داۋام||
 داۋاملىق||
-دوختۇر||
 دوختۇرخانا||
 دوزاخ||
 دوست||
@@ -571,7 +566,6 @@ autoExpandExamples.ug = `
 دۇتتار||
 دۇخوپكا||
 دۇرۇس||
-دۇفۇ||
 دۇكان||
 دۇنيا سودا تەشكىلاتى||
 دۇنيا||
@@ -623,7 +617,6 @@ autoExpandExamples.ug = `
 زەكەر||
 زەيتۇن||
 زەھەر||
-سائەت||
 ساتار||
 ساتقۇن||
 ساتماق||
@@ -1184,7 +1177,6 @@ autoExpandExamples.ug = `
 پروپاگاندا||
 پورتۇگالىيە||
 پوزىتسىيە||
-پويىز||
 پىرقىرىماق||
 پىرەنىك||
 پىشلاق||
@@ -1248,7 +1240,6 @@ autoExpandExamples.ug = `
 گرېتسىيە||
 گوللاندىيە||
 گىرىپتار|infected||giriptar
-گۆش||
 گۆھەر||
 گۆھەرئاي||
 گۇناھ||
@@ -1303,7 +1294,6 @@ autoExpandExamples.ug = `
 ۋىجدان||
 ۋىكىپېدىيە||
 ۋىلايەت||
-ۋېلسىپىت||
 ۋېلىسىپىت||
 ۋېنگرىيە||
 ۋە||
@@ -1312,7 +1302,10 @@ autoExpandExamples.ug = `
 ۋەيران||
 ۋەھشىي||
 
-// wikipedia
+
+@ https://en.wikipedia.org/wiki/Uyghur_language#Phonology
+@ and wiktionary
+
 ئەپسۇس|pity|æp.sus|epsus||loan
 گۆش|meat|ɡøʃ|gösh||loan
 سائەت|hour|sɑʔɛt|saet||loan

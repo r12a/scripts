@@ -1,15 +1,29 @@
 /*
-@ Source: https://en.wiktionary.org/wiki/Appendix:Indo-Aryan_Swadesh_lists
-@ Source: https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_lemmas&pagefrom=%E0%A4%9C%E0%A4%BC%E0%A5%82%E0%A4%A8%0A%E0%A4%9C%E0%A4%BC%E0%A5%82%E0%A4%A8#mw-pages
-@ Source: http://www.koshur.org/pdf/BasicReader.pdf
-§ 'Annapurna SIL'
-# 200
-~ ltr
-! ks-deva
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ if Wiktionary spells the word differently, add the spelling here
 */
 
 
+
+
+
+
+
 autoExpandExamples.ks = `
+
+@ https://en.wiktionary.org/wiki/Appendix:Indo-Aryan_Swadesh_lists
+@ https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_lemmas&pagefrom=%E0%A4%9C%E0%A4%BC%E0%A5%82%E0%A4%A8%0A%E0%A4%9C%E0%A4%BC%E0%A5%82%E0%A4%A8#mw-pages
 
 अंग|limb, organ|əŋ§ɡ|aṅg
 अंब|mango|am§b|amb
@@ -18,7 +32,7 @@ autoExpandExamples.ks = `
 अखा||
 अछुर||
 अज़||
-अतलास|satin|a§t§laː§s||** no virama for cluster!
+अतलास|satin|a§t§laː§s|||** no virama for cluster!
 अथॖ|hand|atʰɨ
 अनुन||
 अपोर|other side|apoːr
@@ -304,7 +318,7 @@ autoExpandExamples.ks = `
 युन||
 येर|wool|yeː§r
 रनुन||
-रफतार|speed|rə§pʰ§taː§r||** another without virama
+रफतार|speed|rə§pʰ§taː§r|||** another without virama
 रबाब|rabab (musical instrument)|rə§baː§b
 राज़ॖमाह||
 राथ|night, yesterday|raː§tʰ
@@ -382,6 +396,7 @@ autoExpandExamples.ks = `
 ॷठ्य|eight times|ɨːʈʰʲ
 कऻशुर|Kashmiri|kəː§ʃu§r
 
+@ http://www.koshur.org/pdf/BasicReader.pdf
 
 
 

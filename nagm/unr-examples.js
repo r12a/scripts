@@ -1,19 +1,32 @@
 /*
-Source: https://books.google.co.uk/books?id=QrowAQAAMAAJ&pg=PA31&source=gbs_toc_r&cad=3#v=onepage&q&f=false
-Source: https://archive.org/details/dli.language.0161/page/n9/mode/2up
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
-native|meaning|IPA¹|transcription|notes|wiktionary²
 
-[₁] separate grapheme clusters with §, separate phonetic syllables with .
-use ‹ and › for a sound that spans 2 CCSes
-use – for a CCS that doesn't produce sound
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
 
-[₂] x means that no link to Wiktionary should be added
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ if Wiktionary spells the word differently, add the spelling here
 */
+
+
+otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
+termListType = 3			// picks up sources automatically
+
+
+
 
 
 
 autoExpandExamples.unr = `
+
+@ https://books.google.co.uk/books?id=QrowAQAAMAAJ&pg=PA31&source=gbs_toc_r&cad=3#v=onepage&q&f=false
+@ https://archive.org/details/dli.language.0161/page/n9/mode/2up
 
 𞓒𞓕𞓩𞓕𞓫𞓗|scissors|l§a§ʈ§a§›§ˀb
 𞓒𞓕𞓩𞓕𞓗|scissors|l§a§ʈ§a§ˀb
