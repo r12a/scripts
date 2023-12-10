@@ -109,7 +109,9 @@ if (document.getElementById('tabPlaceholder')) {
     <div id="list_tab_area">
     <div style="float:right; font-style: italic; font-size: 60%; margin-inline-end:2rem; cursor:pointer;" onclick="checkForDuplicates()">Check for duplicates</div>
     <p style="font-style: italic; font-size: 80%;"><label>Total items: <span id="totalLemmas">–</span></label></p>
-    <table id="printout"></table>
+    <table>
+    <thead><tr style="position: sticky; top: 0; background: white;"><th>&nbsp;</th><th>&nbsp;</th><th>meaning</th><th>ipa</th><th>transcription</th><th>alt</th><th>notes</th></tr></thead>
+    <tbody id="printout"></tbody></table>
     </div>
 
 
