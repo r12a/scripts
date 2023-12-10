@@ -78,7 +78,7 @@ baaxoñ|crow|ˈb§aː§‹§x§ɔ§ɲ
 baay||
 bakkan||
 bal||
-bala|before|ˈb§a§l§a
+𐵴𐵊𐵸𐵊|before|ˈb§a§l§a|bala|bala||bala
 banaana|banana|ˈb§a§n§aː§‹§n§a|
 banjooli|ostrich|ˈb§a§n§ɟ§ɔː§‹§l§i
 baraada||
@@ -133,7 +133,7 @@ ciiñ||
 coblet||
 coggal||
 coll||
-conco|elbow|c§ɔ§n§c§ɔ
+𐵱𐵌𐶁𐵱𐵌|elbow|c§ɔ§n§c§ɔ|conco|conco||conco
 coof|boyfriend|c§ɔː§‹§f
 coro||
 cosaan||
@@ -143,8 +143,8 @@ cuub||
 cuuraay||
 daaw||
 dajale||
-daje|to meet|ˈd§a§ɟ§ɛ
-daqaar|tamarind|d§a§q§aː§‹§r
+𐵺𐵊𐵵𐵩|to meet|ˈd§a§ɟɛ|daje|daje||daje
+𐵺𐵊𐵻𐵰𐵊𐵾|tamarind|d§a§qaː§‹§r|daqaar|daqaar||daqaar
 dara||
 darkasa||
 dayoo||
@@ -184,7 +184,7 @@ dërëm||
 𐵰𐵍𐵩𐵶𐵊𐵎𐶁𐵶|petrol|›§ˈɛ§s§aː§‹§n§s|esaans|esaans||esaans
 Estooni|Estonia|ˈɛ§s§t§ɔː§‹§n§i
 faar||
-fajar|dawn|f§a§ɟ§a§r
+𐶀𐵊𐵵𐵊𐵾|dawn|f§a§ɟ§a§r|fajar|fajar||fajar
 fajkat||
 fanweer||
 Faraas||
@@ -218,7 +218,7 @@ ginaar||
 Girees||
 gis||
 gobar||
-golo|monkey|ˈɡ§ɔ§l§ɔ
+𐵹𐵌𐵸𐵌|monkey|ˈɡ§ɔ§l§ɔ|golo|golo||golo
 goro||
 gox|continent|ɡ§ɔ§x
 goŋ|baboon|ɡ§ɔ§ŋ
@@ -242,7 +242,7 @@ gët||
 𐵹𐵌𐵍𐵎𐵾|man|ɡ§oː§‹§‹§r|góor|góor||góor
 góór-góórlu||
 -in||
-inchaalaaxu|inshallah|i§n§ʃ§aː§‹§l§aː§‹§x§u
+𐵰𐵋𐶁𐵰𐵶𐵊𐵎𐵸𐵊𐵎𐵻𐵍𐵌|God willing|›§i§n§›§ʃ§aː§‹§l§aː§‹§x§u§‹|inchaalaaxu|inchaalaaxu||inchaalaaxu
 𐵰𐵋𐶁𐵺𐵋|to bring|›§i§n§d§i|indi|indi||indi
 jaam||
 jaan||
@@ -286,7 +286,7 @@ jëgg||
 jën|fish|ɟ§ə§n|
 jënd||
 jóg||
-𐵵𐵌𐵍𐵹𐵍|to come from (place)|ɟoɡɛ|jóge|jóge||jóge
+𐵵𐵌𐵍𐵹𐵍|to come from (place)|ɟ§o§‹§ɡ§ɛ|jóge|jóge||jóge
 kaabaab||
 kaani||
 kaani-salaat||
@@ -313,7 +313,7 @@ kuddu||
 kund||
 kuti||
 kuuy||
-kàddu|word, phrase|k§aː§d§d§u
+𐵳𐵊𐵎𐵺𐵪𐵍𐵌|word, phrase|k§aː§‹§dd§u§‹|kàddu|kàddu||kàddu
 kànja||
 kànje||
 𐵳𐵩𐵍𐵷𐵩𐵍𐵸|gazelle|ke§‹§we§‹§l|kéwél|kéwél||kéwél
@@ -327,7 +327,7 @@ leraw||
 lex||
 liir||
 liit||
-limoŋ|lemon|l§i§m§o§ŋ
+𐵸𐵋𐵲𐵌𐵹𐵫|lemon|l§i§m§o§ŋ|limoŋ|limoŋ||limoŋ
 Lislaam||
 lonkoo||
 lor||
@@ -342,7 +342,7 @@ lëg||
 lóriye|laurel|l§o§r§i§j§e
 ma||
 maalo||
-maam||
+𐵲𐵊𐵎𐵲|grandparent|m§aː§‹§m|maam|maam||maam
 maangi||
 maangiy||
 mag||
@@ -392,7 +392,7 @@ naag||
 naaj||
 naaje||
 naajo||
-naan|to drink|n§aː§‹§n
+𐶁𐵊𐵎𐶁|to drink|n§aː§‹§n|naan|naan||naan
 naana||
 naanaa||
 naat||
@@ -414,7 +414,7 @@ ndox|water|›§ⁿd§ɔ§x
 ndës||
 nekk||
 nelaw||
-ngelaw|wind|›§ᵑg§ɛ§l§a§w
+𐵹𐵩𐵍𐵸𐵊𐵷|wind|ᵑg§ɛ§l§a§w|ngelaw|ngelaw||ngelaw
 ngoon||
 ngor||
 nguur||
@@ -422,7 +422,7 @@ ngénté||
 nijjaay||
 nit||
 njabot||
-njamala|giraffe|›§ᶮj§a§m§a§l§a
+𐵵𐵩𐵊𐵲𐵊𐵸𐵊|giraffe|ᶮj§a§m§a§l§a|njamala|njamala||njamala
 njaxat||
 njiit||
 njomboor||
@@ -450,7 +450,7 @@ pataas||
 peel||
 𐶂𐵩𐶁𐵳𐵍𐵌|west|p§ɛ§n§k§u|penku
 pexe||
-picc|bird|p§i§c§c
+𐶂𐵋𐵱𐵪|bird|p§i§cc|picc|picc||picc
 pombiteer||
 pullóox||
 pàppa||
@@ -461,7 +461,7 @@ pëdd||
 pënd||
 përu||
 radi||
-rafet|pretty|ˈr§a§f§ɛ§t
+𐵾𐵊𐶀𐵩𐵽|pretty|ˈr§a§fɛ§t|rafet|rafet||rafet
 rakk||
 ren||
 res||
@@ -502,7 +502,7 @@ soble||
 soow||
 soppali||
 soppi||
-soraans||
+𐵶𐵌𐵾𐵊𐵎𐶁𐵶|orange|s§ɔ§r§aː§‹§n§s|soraans|soraans||soraans
 suba||
 𐵶𐵍𐵌𐶀𐵍𐵊𐵸𐵍𐵊𐵎𐵾|cauliflower|s§u§‹§f§ə§‹§l§əː§‹§‹§r|sufëlëer|sufëlëer||sufëlëer
 sufólóor||
@@ -526,7 +526,7 @@ tagg||
 talaata||
 tali||
 tama||
-tamaate|tomato|t§a§m§aː§‹§t§ɛ
+𐵽𐵊𐵲𐵊𐵎𐵽𐵩|tomato|t§a§m§aː§‹§tɛ|tamaate|tamaate||tamaate
 tan||
 taw||
 tayóor|tailor|t§a§j§oː§‹§r
@@ -574,7 +574,7 @@ waa-jur||
 waajur|parent|w§aː§‹§ɟ§u§r
 waakër||
 Waalo-Waalo||
-waaw|yes|w§aː§‹§w
+𐵷𐵊𐵎𐵷|yes|w§aː§‹§w|waaw|waaw||waaw
 waawaaw||
 waañ||
 wajan||
@@ -633,8 +633,8 @@ yaax|kind of fish|j§aː§‹§x
 yoo|mosquito|j§ɔː§‹
 ñuul|black|ɲ§uː§‹§l
 ñuul kukk|black as night|ɲ§uː§‹§l§ §k§u§k§k
-ñuulaay|blackness|ˈɲ§uː§‹§l§aː§‹§j
-ŋas|measles|ŋ§a§s
+𐵿𐵍𐵌𐵎𐵸𐵊𐵎𐵼|blackness|ˈɲ§uː§‹§‹§l§aː§‹§j|ñuulaay|ñuulaay||ñuulaay
+𐵹𐵫𐵊𐵶|measles|ŋ§a§s|ŋas|ŋas||ŋas
 xibaar||
 xiif||
 xiimkat||
@@ -645,7 +645,7 @@ xojox||
 xol||
 xomaag|rust|x§ɔ§m§aː§‹§k
 xool||
-xoox||
+𐵻𐵌𐵎𐵻|seed|x§ɔː§‹§x|xoox|xoox||xoox
 xor||
 xorom||
 xuloo||
@@ -657,7 +657,7 @@ yaakaar||
 yaangi||
 yaangiy||
 yaasa||
-yaay||
+𐵼𐵊𐵎𐵼|mother|j§aː§‹§j|yaay|yaay||yaay
 yaram||
 yat||
 yax||
