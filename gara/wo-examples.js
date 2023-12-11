@@ -26,7 +26,7 @@ autoExpandExamples.wo = `
 @ wiktionary (via transcriptions of Latin orthography)
 
 aada||
-aafiya|peace|ʔaː§‹§f§i§j§a
+𐵰𐵊𐵎𐶀𐵋𐵼𐵊|peace|aː§‹§f§i§j§a|aafiya|aafiya||aafiya
 aajo|attention, consideration|ʔaː§‹§ɟ§ɔ
 aajowoo|to need|ʔaː§‹§ɟ§ɔ§w§ɔː
 aaju|to be necessary|ʔaː§‹§ɟ§u
@@ -414,7 +414,7 @@ ndox|water|›§ⁿd§ɔ§x
 ndës||
 nekk||
 nelaw||
-𐵹𐵩𐵍𐵸𐵊𐵷|wind|ᵑg§ɛ§l§a§w|ngelaw|ngelaw||ngelaw
+𐵹𐵩𐵍𐵸𐵊𐵷|wind|ᵑɡ§ɛ§l§a§w|ngelaw|ngelaw||ngelaw
 ngoon||
 ngor||
 nguur||
@@ -711,6 +711,14 @@ yóor||
 𐵼𐵍𐵌𐵳𐵪𐵋𐵯|to jog|j§u§‹§kk§i§jukki|yukki-yukki
 
 
+@ Wollof - English Dictionary https://www.wolofonline.com/docs/w_d.pdf
+𐵰𐵍𐵊𐵸𐵪𐵍𐵊𐵳|tomorrow|›§ə§‹§‹§ll§ə§‹§k|ëllëk|ëllëk||
+𐵰𐵍𐵩𐵎𐵽𐵊|to carve|›§ɛː§‹§t§a|eeta|eeta||
+𐵰𐵌𐵎𐵳𐵊|to scratch|›§ɔː§‹§k§a|ooka|ooka||
+𐵰𐵍𐵩𐵍𐵎𐶀𐵊𐵾|pagan|›§eː§‹§‹§f§a§r|ééfar|ééfar||
+𐵰𐵌𐵍𐶂𐵪𐵊|too much|›§o§‹§‹§pp§a|óppa|óppa||
+𐵰𐵋𐵎𐵾|to cover|›§iː§‹§r|iir|iir||
+𐵰𐵍𐵌𐵎𐵺𐵍|cobbler|uːdɛ|uude|uude
 
 
 
