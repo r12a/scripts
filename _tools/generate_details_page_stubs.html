@@ -51,17 +51,13 @@ function makeListFromChars (chars) {
 		else i = items[0].codePointAt(0)
 		console.log('i',i, 'items',items)
 
-		if (U[i]) {                 
-			var hex = i.toString(16).toUpperCase()
-			while (hex.length < 4) hex = '0' + hex
-			console.log(hex)
-			var dbrecord = U[i].split(';')
-			var cpName = dbrecord[1]
-			
-			out += "'\\u{"+hex+"}': `\n"
-			out += '<p class="insertTranscription">&#x'+hex+';</p>\n'
-			out += '`,\n\n\n\n\n\n'
-			}
+        var hex = i.toString(16).toUpperCase()
+        while (hex.length < 4) hex = '0' + hex
+        console.log(hex)
+
+        out += "'\\u{"+hex+"}': `\n"
+        out += '<p class="insertTranscription">&#x'+hex+';</p>\n'
+        out += '`,\n\n\n\n\n\n'
 		}
 	return out
 	}
