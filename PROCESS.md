@@ -2,11 +2,10 @@
 
 
 
-Create spreadsheet
+Create initial spreadsheet
 - [ ] maybe use UniView block(s) for a first list of chars
 - [ ] if there’s a charuse item, use that to add extras and refine categories
 - [ ] check wikipedia, etc for more info
-- [ ] rearrange per phonetic order
 - [ ] add combinations
     - [ ] doesn’t matter if the transliteration for these duplicates an existing one
 
@@ -15,14 +14,8 @@ Create spreadsheet
 - [ ] add equivs for
     - [ ] any char that decomposes in NFD (including sequences that include decompositions)
     - [ ] any char that could be represented by a sequence
-- [ ] add to class col: - d c n f o x s
+- [ ] add to class col: - ? d c n f o x s
 - [ ] refine the type descriptions
-- [ ] 
-
-Create summary page
-- [ ] do the phonemic tables as high priority
-- [ ] create a Developments & variations section to capture orthographic info
-- [ ] start dividing chars up into main, aux, etc. - compare with charuse
 - [ ] 
 
 Create initial picker
@@ -31,6 +24,13 @@ Create initial picker
 - [ ] increase size of hints, if needed
 - [ ] rearrange input aids
 - [ ] add topDivider & bottomDivider
+- [ ] 
+
+Create summary page
+- [ ] create the initial index
+- [ ] do the phonemic tables as high priority
+- [ ] create a Developments & variations section to capture orthographic info
+- [ ] start dividing chars up into main, aux, etc. - compare with charuse
 - [ ] 
 
 Work through sources, capturing info
