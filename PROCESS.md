@@ -2,7 +2,7 @@
 
 
 
-Create initial spreadsheet
+## Create initial spreadsheet
 - [ ] maybe use UniView block(s) for a first list of chars
 - [ ] if there’s a charuse item, use that to add extras and refine categories
 - [ ] check wikipedia, etc for more info
@@ -18,7 +18,7 @@ Create initial spreadsheet
 - [ ] refine the type descriptions
 - [ ] 
 
-Create initial picker
+## Create initial picker
 - [ ] arrange consonants and vowels in phonetic order
 - [ ] apply the styles
 - [ ] increase size of hints, if needed
@@ -26,7 +26,16 @@ Create initial picker
 - [ ] add topDivider & bottomDivider
 - [ ] 
 
-Create summary page
+## Create initial set of terms
+- [ ] preferably a term to cover every sound
+- [ ] 
+
+## Create the initial block file
+- [ ] use this page to create block entries from spreadsheet
+- [ ] use this page to create xx-details.html
+- [ ] 
+
+## Create summary page
 - [ ] create the initial index
 - [ ] do the phonemic tables as high priority
 - [ ] create a Developments & variations section to capture orthographic info
