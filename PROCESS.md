@@ -4,6 +4,8 @@
 
 ## Create initial spreadsheet
 - [ ] maybe use UniView block(s) for a first list of chars
+- [ ] [this page](file:///Users/ishida/Sites/pickers/_tools/_list_gen_cat.html) creates general category lists
+- [ ] [this page](file:///Users/ishida/Sites/pickers/_tools/_list_codes_and_names.html) creates lists of code point names
 - [ ] if there’s a charuse item, use that to add extras and refine categories
 - [ ] check wikipedia, etc for more info
 - [ ] add combinations
@@ -31,8 +33,13 @@
 - [ ] 
 
 ## Create the initial block file
-- [ ] use this page to create block entries from spreadsheet
-- [ ] use this page to create xx-details.html
+- [ ] use [this page](file:///Users/ishida/Sites/scripts/_tools/generate_block_page_stubs.html) to create block entries from spreadsheet
+- [ ] use [this page](file:///Users/ishida/Sites/scripts/_tools/generate_details_page_stubs.html) to create xx-details.html
+- [ ] 
+
+## Fill in the xx-details file
+- [ ] use [this page](file:///Users/ishida/Sites/scripts/_tools/generate_block_page_stubs.html) to create block entries from spreadsheet
+- [ ] use [this page](file:///Users/ishida/Sites/scripts/_tools/generate_details_page_stubs.html) to create xx-details.html
 - [ ] 
 
 ## Create summary page
