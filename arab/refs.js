@@ -332,6 +332,13 @@ reflist = {
 "lang": new Set(['ar']),
 },
 
+"ww": {
+"authors": "Wikipedia",
+"title":"Wolofal",
+"url":"http://en.wikipedia.org/wiki/wiki/Wolofal_alphabet",
+"lang": new Set(['wo']),
+},
+
 "wb": {
 "authors": "Wikipedia",
 "title":"Basmala",
@@ -402,6 +409,14 @@ reflist = {
 "url":"https://designregression.com/article/breaking-arabic",
 "retrieved":"Mar 2022",
 "lang": new Set(['ug']),
+},
+
+"gc": {
+"authors": "Galien Currah",
+"title":"Orthographe Wolofal",
+"url":"http://currah.download/pages/ajamisenegal/orthographe_wolofal_harmattan_26-aout-2015_a4.pdf",
+"retrieved":"Dec 2023",
+"lang": new Set(['wo']),
 },
 
 }
