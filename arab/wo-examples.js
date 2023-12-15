@@ -130,7 +130,8 @@ autoExpandExamples.wo = `
 سُفࣴلࣴعࣴر|cauliflower|sufələːr|sufëlëer|sufëlëer||sufëlëer
 
 
-
+@ other
+وࣷلࣷفْ لࣵکّ|Wolof language|wɔ§lɔ§f§ §la§kk|wolof lakk|wolof lakk
 
 
 
