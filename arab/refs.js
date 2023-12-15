@@ -215,7 +215,7 @@ reflist = {
 "authors": "Lorna Priest Evans, Andy Warren-Rothlin",
 "title":"Proposal to encode additional Arabic script characters for Hausa to the UCS",
 "url":"https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf",
-"lang": new Set(['ha']),
+"lang": new Set(['ha', 'wo']),
 "reviewed":true
 },
 
