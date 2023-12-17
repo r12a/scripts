@@ -15,5 +15,4 @@ vowels:"inh:1 vs:11 ind:12 pre:1 voc:1",  clusters:"inv stk cnj lig rax",  final
 linked:"devanagari", fonts:"/pickers/deva-hi/", 
 },
 
-
 }
