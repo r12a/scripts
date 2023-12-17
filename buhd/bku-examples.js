@@ -41,9 +41,9 @@ autoExpandExamples.bku = `
 ᝊᝓᝂ|hate|bu§ˈʔot|buʔót
 ᝄᝓᝂ|well|ɡubˈʔon|gubʔón
 ᝋᝎᝐᝒ|white|mʌ§ʔlʌk§siʔ|mʌlʌ́ksiʔ
-fᝎ|soul|ˈfa§lad|fálad
+ᝉᝎ|soul|ˈfa§lad|fálad
 ᝅᝒᝉᝓ|tooth|ˈŋi§fon|nífon
-ᝐf|stream|ˈsa§fa|sáfa
+ᝐᝉ|stream|ˈsa§fa|sáfa
 ᝑᝆ|to come|ˈhas§taj|hástay
 ᝄᝋ|hand/thread|ga§ˈmʌt/ˈɡʌ§mʌs|gamʌ́t/gʌ́mʌs
 ᝊᝓᝑᝄᝓ|proud|bu§ˈha§ɣod|búhagod
@@ -58,8 +58,8 @@ fᝎ|soul|ˈfa§lad|fálad
 ᝏᝐ|axe/for|wa§ˈsaj/wa§ˈsaɡ|wasáy/waság
 ᝇᝓᝏ|two|ˈdu§waʔ|dúwaʔ
 ᝄᝓᝈ|flood|ˈɡu§naw|gúnaw
-ᝌfo|supper|ˈja§fon|yáfon
-ᝀᝌᝓfa|centipede|ʔal§ˈjo§fan|ʔalyófan
+ᝌᝉᝓ|supper|ˈja§fon|yáfon
+ᝀᝌᝓᝉ|centipede|ʔal§ˈjo§fan|ʔalyófan
 ᝀᝊᝓᝑ|white|ʔa§ˈbu§haj|ʔabúhay
 ᝐᝒᝆ|dirty|ˈsi§tʌm|sítʌm
 ᝐᝒᝑᝒ|heel|si§ˈhil|sihíl
@@ -80,15 +80,15 @@ fᝎ|soul|ˈfa§lad|fálad
 ᝎᝓᝈ|calf (leg)|ˈluk§nan|lúknan
 ᝊᝓ|hair|bok|bok
 ᝉᝉ|cooked rice|ˈfa§fa|fáfa
-ᝎᝓfo|sad|ˈlu§foɡ|lúfog
-ᝄfa|thought|ˈɡaj§fan|gáyfan
+ᝎᝓᝉᝓ|sad|ˈlu§foɡ|lúfog
+ᝄᝉ|thought|ˈɡaj§fan|gáyfan
 ᝁᝌ|not yet|ˈʔid§ya|ʔídya
 ᝊᝉ|uncle|ˈba§pa|bápa
 ᝆᝌᝓ|counsel|ta§ˈjo|tayó
 ᝃᝏ|on account of|ˈka§wa|káwa
-fiᝌ|good|ˈfi§ja|fíya
+ᝉᝒᝌ|good|ˈfi§ja|fíya
 ᝑᝓᝋᝒ|beard|ˈhu§mi|húmi
-ᝋfa|lazy|ma§ˈfaŋ|mafáŋ
+ᝋᝉ|lazy|ma§ˈfaŋ|mafáŋ
 ᝈᝋᝓ|mosquito|na§ˈmok|namók
 ᝅᝌ|name|ˈŋa§jan|ŋáyan
 ᝌᝊ|breakfast|ˈya§bas|yábas
@@ -100,7 +100,7 @@ fiᝌ|good|ˈfi§ja|fíya
 ᝐᝊ|enter|ˈsak§baw|sákbaw
 ᝋᝌᝏ|clear|ma§ja§waʔ|mayawaʔ
 ᝋᝆᝒ|cold (water)|ma§ˈtis|matís
-ᝄᝒfu|whistle|ˈgi§fol|gífol
+ᝄᝒᝉᝓ|whistle|ˈgi§fol|gífol
 ᝎᝆᝓᝇ|red banana|la§ˈtur§dan|latúrdan
 ᝋᝎᝓ|upright|ˈmas§loŋ|másloŋ
 ᝑᝐᝒ|there|ˈhʌt§si|hʌ́tsi
