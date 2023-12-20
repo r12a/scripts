@@ -4,6 +4,7 @@
 
 
 var autoTranslitArray = {}
+var errmsg = ''
 
 
 function makeAutoTranslitArray (lang) {
@@ -18,7 +19,9 @@ function makeAutoTranslitArray (lang) {
     // suck out the relevant data into the chars array
     for (var line in spreadsheetRows) {
 		if (spreadsheetRows[line][cols.transLoc] === '') {
-            console.log('Empty translit column in makeAutoTranslitArray for ',spreadsheetRows[line][cols.ucsName])
+            errmsg = `Warning! Empty translit column in makeAutoTranslitArray for ${ spreadsheetRows[line][cols.ucsName] }`
+            //console.log('Empty translit column in makeAutoTranslitArray for ',spreadsheetRows[line][cols.ucsName])
+            console.log('%c'+errmsg, 'color:orange;font-weight:bold;')
             continue		
 			}
 
