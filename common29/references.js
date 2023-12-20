@@ -10,7 +10,7 @@ then add the following line just below the ref.js inclusion in the block source 
 
 function createReferences (lang) {
 	// creates the content of the references section from the refs.js file
-	console.log('Language is ',lang)
+	console.log('Creating references for ',lang)
 	// backwards compatibility release valve
 	if (typeof reflist === 'undefined') return
 	

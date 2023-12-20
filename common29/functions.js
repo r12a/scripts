@@ -34,7 +34,7 @@ function addPageFeatures () {
         }
     document.querySelector('html').style.fontSize = access.fontsize+'px'
     document.getElementById('accessFontsize').value = access.fontsize
-    console.log(access.fontsize,document.getElementById('accessFontsize').value)
+    //console.log(access.fontsize,document.getElementById('accessFontsize').value)
 
 	doHeadersFooters(window.orthogFilePath) // links at page top/bottom
     
