@@ -86,7 +86,10 @@ for (var line in spreadsheetRows) {
     if (spreadsheetRows[line][cols.transLoc] === '') continue		
 
     // create entry for the item
-    if (autoTranslitArray[line]) console.log('Unexpected duplicate in makeTransliterationArray: ',line)
+    if (autoTranslitArray[line]) {
+        var errmsg = `Warning! Unexpected duplicate in makeTransliterationArray: ${ line }`
+        console.log('%c' + errmsg, 'color:orange;font-weight:bold;')
+        }
     else autoTranslitArray[line] = spreadsheetRows[line][cols.transLoc]
     }
 
