@@ -56,6 +56,15 @@ reflist = {
 "reviewed":true
 },
 
+"mhc": {
+"authors": "mangyan.org",
+"title":"Mangyan Heritage Center",
+"sub": "(archived)",
+"retr": "Dec 2023",
+"url":"http://www.mangyan.org/",
+"reviewed":false
+},
+
 "wl": {
 "authors": "Wikipedia",
 "title":"Hanunoo language",
