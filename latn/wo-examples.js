@@ -3127,7 +3127,7 @@ soon|yellow|s§ɔː§‹§n
 soow||
 soppali||
 soppi||
-soraans|||||unusual cluster
+soraans|orange|sɔraːns|||unusual cluster
 suba||
 sufëlëer|cauliflower|s§u§f§ə§l§əː§‹§r
 sufólóor||
