@@ -60,7 +60,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->18 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->25 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -80,7 +80,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Uighur Orthography Notes, <!-- #BeginDate format:En2 -->18-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ug">https://r12a.github.io/scripts/arab/ug</a></small></p>
+<p class="refLine"><small>Richard Ishida, Uighur Orthography Notes, <!-- #BeginDate format:En2 -->25-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ug">https://r12a.github.io/scripts/arab/ug</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -138,13 +138,16 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-    </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+<div id="features">
+<table>
+<tbody id="featureTableBody">
+</tbody>
+</table>
+<p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
 </div>
+
+
+
 
 
 
@@ -157,24 +160,28 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>The Arabic script is normally an abjad, ie. in normal use the script  represents only consonant and long vowel sounds. This approach is helped by the strong emphasis on consonant patterns in Semitic languages. However Uighur is not a Semitic language, and the modern version of the Arabic script used for Uighur is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a>.  See the table to the right for a brief overview of the features of the modern Uighur orthography.</p>
 
-<p>Uighur text is written horizontally, right-to-left, but numbers and embedded Latin text are read left-to-right.  ❯&nbsp;<a class="secref" title="Read more.">direction</a></p>
+<p>Uighur text is written horizontally, <a class="seclink" href="#direction">right-to-left</a>, but numbers and embedded Latin text are read left-to-right.</p>
 
 <p>Words are separated by spaces, and contain a mixture of  consonants and  vowels. </p>
 
-<p>The script is unicameral.</p>
+<p>The script is unicameral. Words are separated by spaces, but <a class="seclink" href="#hyphenation">word-internal line breaks</a> are allowed (unlike for the Arabic orthography when used for the Arabic language).</p>
 
-<p>The script is cursive, and some basic letter shapes  change significantly, depending on their joining context.  ❯&nbsp;<a class="secref" title="Read more.">cursive</a></p>
+<p>The script is <a class="seclink" href="#cursive">cursive</a>, and some basic letter shapes  change significantly, depending on their joining context.</p>
 
-<p class="addToConsonants">Uighur has 25 consonant letters, including a character that serves as a vowel base.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Uighur has <a class="seclink" href="#basicC">25 consonant letters</a>, including a character that serves as a vowel base.</p>
 
-<p class="addToConsonants">Arabic <span class="name">sukun</span> is not used to indicate consonant clusters or lack of a vowel. Similarly, geminated consonant sounds are written by doubling the letter, rather than using the Arabic <span class="name">shadda</span>.</p>
+<p class="addToConsonants">Arabic <span class="name">sukun</span> is not used to indicate consonant clusters or lack of a vowel. Similarly, <a class="seclink" href="#clength">geminated consonant</a> sounds are written by doubling the letter, rather than using the Arabic <span class="name">shadda</span>.</p>
 
-<p class="addToVowels">The Uighur orthography is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> where vowels are written using 8 vowel letters,  in a straightforward way. Unlike Arabic, all the diacritics are <span class="name">ijam</span>, and in normal text are part of an atomic character. <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">The Uighur orthography is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> where vowels are written using <a class="seclink" href="#vletter">8 vowel letters,</a> in a straightforward way. Except in decomposed text, there are no combining marks.  Unlike Arabic, all the diacritics are <span class="name">ijam</span>, and in normal text are part of an atomic character.</p>
 
-<p class="addToVowels">Initial vowels or those preceded by a vowel in a word are preceded by 'hamza on a tooth', ie. <span class="ch init">ئ</span>.
+<p class="addToVowels">Word-initial <a class="seclink" href="#standalone">standalone vowels</a> or those following a vowel in a word are preceded by 'hamza on a tooth', ie. <span class="ch init">ئ</span>.
 </p>
 
-<p>Numbers use ASCII digits.</p>
+<p>Numbers use <a class="seclink" href="#numbers">ASCII digits</a>.</p>
+
+<p><a class="seclink" href="#inline">Punctuation marks</a> use code points from the ASCII and Arabic Unicode ranges.</p>
 
 
 
@@ -583,6 +590,15 @@ alveolar</th>
 <p>Any consonant can begin a syllable except for <span class="ipa">ŋ</span>. Any consonant can appear in the coda except for <span class="ipa">ʔ</span><tt>wup</tt>.</p>
 </section>
 </section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
@@ -590,10 +606,46 @@ alveolar</th>
 
 
 
+<p>
+<span id="otherV"></span>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="compositeV"></span>
+<span id="nasalisation"></span>
+<span id="tones"></span>
+<!--span id="novowel"></span-->
+</p>
 
-  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>The Uighur orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+
+<li>Vowel length.</li>
+
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Tones (not a tonal language).</li>
+
+<!--li>Consonants that are not followed by a vowel.</li-->
+</ul>
+</div>
+
 
 
 
@@ -609,9 +661,12 @@ alveolar</th>
 
 
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">The right-hand column shows standalone vowels.</p>
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions"><strong>The right-hand column shows word-initial forms.  The glyphs shown in the table are illustrative; alternative shapes may occur (see <a class="secref">joining_forms</a>).</strong></p>
+
 
 <table class="soundSummary">
 <tr>
@@ -698,27 +753,6 @@ alveolar</th>
 <h3>Vowel length</h3>
 
 <p>Uighur doesn't natively have long vowel sounds, and none are marked in the written orthography.<tt>wup</tt></p>
-</section>
-
-
-
-
-
-<section id="nasalisation">
-<h3>Nasalisation</h3>
-
-<p>tbd</p>
-</section>
-
-
-
-
-
-
-<section id="tones">
-<h3>Tones</h3>
-
-<p>Uighur is not a tonal language.</p>
 </section>
 
 
@@ -1029,9 +1063,22 @@ alveolar</th>
 </section>
 </section>
 </section>
- 
-  
 
+
+
+
+
+
+
+
+
+
+<p>
+<span id="extendedC"></span>
+<span id="onsets"></span>
+<span id="finals"></span>
+<!--span id="clength"></span-->
+</p>
 
 
 
@@ -1039,6 +1086,25 @@ alveolar</th>
 
 <section id="consonants">
 <h2>Consonants</h2>
+
+
+<div id="consonant_notfound" class="instructions">
+<p>The Uighur orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
+
+<li>Onset clusters.</li>
+
+<li>Syllable-final consonants.</li>
+
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+
+<!--li>Gemination or consonant lengthening.</li-->
+</ul>
+</div>
+
+
 
 
 <div id="consonant_description"></div>
@@ -1050,25 +1116,32 @@ alveolar</th>
 
 
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
+
+<p>The following table summarises the main consonant to character assigments.</p>
+
 
 <!--p class="instructions">Diacritics are added to the vowels to indicate nasalisation, which is not shown here.</p-->
 
 <table class="soundSummary">
 <tr>
-<th rowspan="5">All:</th>
+<th>Stops</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">پ␣ب␣ت␣د␣ك␣گ␣ق</figure></td>
 </tr>
 <tr>
+<th>Affricates</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">چ␣ج</figure></td>
 </tr>
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ف␣ۋ␣س␣ز␣ژ␣ش␣خ␣غ␣ھ</figure></td>
 </tr>
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">م␣ن␣ڭ</figure></td>
 </tr>
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto" data-ipa="w,r,l,j" data-cols="trans,transc">ۋ␣ر␣ل␣ي</figure></td>
 </tr>
 </table>
@@ -1113,26 +1186,6 @@ alveolar</th>
 
 
 
-<section id="onsets">
-<h3>Onset consonants</h3>
-
-<p>tbd</p>
-</section>
-
-
-
-
-
-
-<section id="finals">
-<h3>Final consonants</h3>
-
-<p>tbd</p>
-</section>
-
-
-
- 
 
 <section id="clusters">
 <h3>Consonant clusters &amp; gemination</h3>
@@ -1167,10 +1220,13 @@ alveolar</th>
 <section id="consonant_mappings">
 <h3>Consonant sounds to characters</h3>
 
-<p class="instructions">This section maps Uighur consonant sounds to common graphemes in the Arabic orthography.</p>
+<p>This section maps Uighur consonant sounds to common graphemes in the Arabic orthography.</p>
+
+<p class="instructions highlight">The right-hand column shows the various joining forms for each character.</p>
+
 <p class="instructions"> Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
-<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
+<!--p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p-->
 
 
 
@@ -1637,9 +1693,39 @@ alveolar</th>
 
 
 
+
+
+
+
+
+
+
+<p>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
-    
+
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following feature is not found in the Uighur orthography.</p>
+
+<ul>
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
+
+
+
 <p class="instructions">This section brings together information about the following topics:
 <span id="writingstylesInline">writing styles</span>; 
 
@@ -1657,6 +1743,7 @@ alveolar</th>
 </p>
 
 <p class="instructions">You can experiment with examples using the <a target="_blank" href="../../pickers/arab-ug/index.html">Uighur character app</a>.</p>
+
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 
 
@@ -1692,7 +1779,7 @@ alveolar</th>
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/33" target="_blank">type samples</a>.</p>
 
 <p class="observation"><span class="leadin">Observation:</span> The image in <a class="figref">fig_italic_forward</a> show italicisation where the glyphs lean in the direction of text (ie. to the left).</p>
@@ -1701,8 +1788,6 @@ alveolar</th>
 <img src="images_ug/italic_forward.png" alt="" data-source="shanjak_kizti_may11_2002_lr via Mamoun Sakkal">
 <figcaption>In the italicised text of the heading the glyphs lean to the left.</figcaption>
 </figure>
-
-<p>See <a href="https://github.com/r12a/typesamples/issues/33" target="_blank">type samples</a>.</p>
 </section>
 </section>
 

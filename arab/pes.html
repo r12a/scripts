@@ -63,7 +63,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->24 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -84,7 +84,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Persian Orthography Notes, <!-- #BeginDate format:En2 -->29-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/pes">https://r12a.github.io/scripts/arab/pes</a></small></p>
+<p class="refLine"><small>Richard Ishida, Persian Orthography Notes, <!-- #BeginDate format:En2 -->24-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/pes">https://r12a.github.io/scripts/arab/pes</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -151,29 +151,32 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p>Persian uses the Arabic script, with extensions to covers its  wider repertoire of sounds. The Arabic script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a></span>. This means that in normal use the script  represents only consonant and long vowel sounds. See the table to the right for a brief overview of features for the modern Persian orthography.</p>
 
 
-<p>Persian text runs <mark>right-to-left in horizontal lines</mark>, but numbers and embedded Latin text are read left-to-right.</p>
+<p>Persian text runs <a class="seclink" href="#direction">right-to-left</a> in horizontal lines, but numbers and embedded Latin text are read left-to-right.</p>
 
 <p>It is sometimes written using the nasta'liq style of Arabic writing. Glyphs are more drawn out, and the baseline tends to be sloping from word to word.</p>
 
-<p>The script is  <mark>cursive</mark>, and some basic letter shapes change radically, depending on what they join to.</p>
+<p>The script is <a class="seclink" href="#cursive">cursive</a>, and some basic letter shapes change radically, depending on what they join to.</p>
 
-<p>There is <mark>no case distinction</mark>.</p>
+<p>There is no case distinction. Words are separated by spaces.</p>
 
-<p>Words are separated by spaces.</p>
+<!--p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p-->
+<p class="addToConsonants">Modern Persian uses <a class="seclink" href="#basicC">36 basic  letters</a> to write consonants, some of which are hangovers used to spell words loaned Arabic. For example, there are 2 ways to write <span class="ipa">t</span>, 3 ways to write <span class="ipa">s</span>, and 4 ways to write <span class="ipa">z</span>. Although it is not always easy to guess the vowel sounds in a word, the consonants are largely reliable phonetically. There is mostly a one-to-one correspondance between letters and sounds.</p>
 
-<p class="addToConsonants">Modern Persian uses 36 basic  letters to write consonants, some of which are hangovers used to spell words loaned Arabic. For example, there are 2 ways to write <span class="ipa">t</span>, 3 ways to write <span class="ipa">s</span>, and 4 ways to write <span class="ipa">z</span>. Although it is not always easy to guess the vowel sounds in a word, the consonants are largely reliable phonetically. There is mostly a one-to-one correspondance between letters and sounds.</p>
+<p class="addToConsonants">Diacritics are used to indicate <a class="seclink" href="#novowel">vowel absence</a> in consonant clusters, and gemination in vowelled text. </p>
 
-<p class="addToConsonants">Diacritics are used to indicate the absence of a vowel in consonant clusters, and gemination in vowelled text. </p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">This orthography is an <a class="termref" href="../glossary/index.html#abjad">abjad</a> where vowel sounds are written using a mixture of combining marks and letters in vocalised text, but normally the diacritics are not used (and so it is not possible to accurately read the text unless you recognise the consonant patterns). However these diacritics and other phonetic information can be written where needed, and are regularly used for Qur'anic texts, dictionaries, educational materials, and where the pronunciation needs to be made clear.</p>
 
-<p class="addToVowels">This orthography is an <a class="termref" href="../glossary/index.html#abjad">abjad</a> where vowel sounds are written using a mixture of combining marks and letters in vocalised text, but normally the diacritics are not used (and so it is not possible to accurately read the text unless you recognise the consonant patterns). However these diacritics and other phonetic information can be written where needed, and are regularly used for Qur'anic texts, dictionaries, educational materials, and where the pronunciation needs to be made clear. <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
+<p class="addToVowels">Although the vowel diacritics are not normally used, Persian has <a class="seclink" href="#combiningV">3 diacritic code</a> points that can be used to indicate the 'short' vowels, if needed. Long vowels, and word initial and final short vowels are  represented using one of <a class="seclink" href="#otherV">4 consonant letters</a>, although there can occasionally be some ambiguity as to which sounds they represent.</p>
 
-<p class="addToVowels">Although the vowel diacritics are not normally used, Persian has 3 diacritic code points that can be used to indicate the 'short' vowels, if needed. Long vowels, and word initial and final short vowels are  represented using one of 4 consonant letters, although there can occasionally be some ambiguity as to which sounds they represent.</p>
+<p class="addToVowels">To indicate vowel cluster boundaries and the <span class="name"><a class="seclink" href="#ezafe">ezafe</a></span> conjunction, Persian uses a combining hamza above  carrier letters. (A standalone hamza is only used occasionally.) The choice between precomposed and decomposed realisations of characters used for these features has a few complications.</p>
+<p class="addToVowels">Word-initial  <a class="seclink" href="#standalone">standalone</a> vowels  are always attached to or preceded by <span class="hx">0627</span>. Word-medial standalone vowels are preceded by a hamza on a carrier.</p>
 
-<p class="addToVowels">To indicate vowel cluster boundaries and the <span class="name">ezafe</span> conjunction, Persian uses a combining hamza above  carrier letters. (A standalone hamza is only used occasionally.) The choice between precomposed and decomposed realisations of characters used for these features has a few complications.</p>
+<p class="addToVowels">In vowelled text, <span class="hx circle">0652</span> is used to indicate <a class="seclink" href="#novowel">vowel absence</a> in consonant clusters.</p>
 
 <p class="addToVowels">A mandatory ligature is used for combinations of <span class="trans">lam + alif</span>.</p>
 
-<p>Persian  uses  native digits, though the code points are different from those used for the Arabic language, and Arabic code points are used for several of the more common punctuation marks.</p>
+<p>Persian  uses  <a class="seclink" href="#numbers">native digits</a>, though the code points are different from those used for the Arabic language, and Arabic code points are used for several of the more common punctuation marks.</p>
 
 
 
@@ -604,16 +607,51 @@ alveolar</th>
 <p>tbd</p>
 </section>
 </section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
 
-	
-	
-	
-	
+
+
+
+<p>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="tones"></span>
+</p>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>The Persian orthography has no special features with respect to the following.</p>
+
+<ul>
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Tones (not a tonal language).</li>
+</ul>
+</div>
+
 
 
 
@@ -622,11 +660,11 @@ alveolar</th>
 
 
 <section id="basicV">
-<h3>More vowel details</h3>
+<h4>Vowel summary table</h4>
 
 <p>The following table summarises the main vowel to character assignments, in both vowelled and unvowelled forms.</p>
 
-<p class="instructions">Each table cell shows word-initial, word-medial, and word-final forms from right to left.  The glyphs shown are illustrative; alternative shapes may occur (see <a class="secref">joining_forms</a>). Click/tap on items to see a list of the components for that cell.</p>
+<p class="instructions"><strong>Each table cell shows word-initial, word-medial, and word-final forms from right to left.  The glyphs shown are illustrative; alternative shapes may occur (see <a class="secref">joining_forms</a>).</strong></p>
 
 
 
@@ -929,29 +967,6 @@ alveolar</th>
 
 
 
-<section id="nasalisation">
-<h3>Nasalisation</h3>
-
-<p>Nasalisation is not a phonemic feature of Persian.</p>
-</section>
-
-
-
-
-
-
-
-<section id="tones">
-<h3>Tones</h3>
-
-<p>Persian is not a tonal language.</p>
-</section>
-
-
-
-
-
-
 <section id="novowel">
 <h3>Vowel absence</h3>
 
@@ -972,13 +987,17 @@ alveolar</th>
 <h3>Vowel sounds to characters</h3>
 
 
-<p class="instructions">This section maps Persian vowel sounds to common graphemes in the Arabic orthography, grouping them by initial  (<b>i</b>), medial (<b>m</b>), and final (<b>f</b>) forms. Click on the character names for examples of usage. Vowel diacritics are shown here, but can be ignored to reflect normal usage in Persian text. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
-<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
-<p>Persian follows Arabic in using diacritics to express short vowel sounds, but also rarely uses them in normal text.  </p>
+<p>This section maps Modern Persian vowel sounds to common graphemes in the Arabic orthography. <!-- Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.--> Persian follows Arabic in providing diacritics to express short vowel sounds, but also rarely uses them in normal text.</p>
+
+<p class="instructions" style="font-weight: bold;">The columns run right to left and indicate typical word-initial,  word-medial, and word-final usage. The joining forms shown are illustrative; alternative shapes may occur (see <a class="secref">joining_forms</a>). The examples show normal unvowelled usage as well as vowelled where a difference exists.</p>
+
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
 
 
 
+
+<section id="plain_vowel_map">
 <div id="mapv_high" class="map">
 
 <div class="mapItem initial">
@@ -1102,10 +1121,35 @@ alveolar</th>
 
 
 
+
+
+
+
+<p>
+<span id="extendedC"></span>
+</p>
+
+
+
+
+
 <section id="consonants">
 <h2>Consonants</h2>
 
 
+<div id="consonant_notfound" class="instructions">
+<p>The Persian orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
+
+<li>Onset clusters.</li>
+
+<li>Syllable-final consonants.</li>
+
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+</ul>
+</div>
 
 
 
@@ -1226,7 +1270,7 @@ alveolar</th>
 
 
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <p>Consonant clusters in syllable onsets are simply written using a sequence of consonant letters.</p>
 </section>
@@ -1238,7 +1282,7 @@ alveolar</th>
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <p>No special mechanisms are used to write syllable or word final consonants.</p>
 </section>
@@ -1261,7 +1305,7 @@ alveolar</th>
     
     
 <section id="clength">
-<h3>Consonant length</h3>
+<h3>Geminated consonants</h3>
 
 <figure class="characterBox auto" data-cols="">&#x0651;</figure>
 <p>In vowelled text, which is  rare, geminated consonants are shown using the diacritic <span class="hx circle">0651</span> (called <span class="name">tašdid</span> in Persian).</p>
@@ -1303,9 +1347,11 @@ alveolar</th>
 <section id="consonant_mappings">
 <h3>Consonant sounds to characters</h3>
 
-<p class="instructions">This section maps Persian consonant sounds to common graphemes in the Arabic orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<p>This section maps Persian consonant sounds to common graphemes in the Arabic orthography. <!--Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.--></p>
 
-<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
+<p class="instructions"><strong>The right-hand column shows the various joining forms for each character.</strong></p>
+
+<p class="instructions"> Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
 
 
@@ -2251,8 +2297,38 @@ alveolar</th>
 
 
 
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="gsub"></span>
+<span id="gpos"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
+
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in the Persian orthography.</p>
+<ul>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
+
+
 
 <p class="instructions">This section brings together information about the following topics:
 <span id="writingstylesInline">writing styles</span>; 
@@ -2264,7 +2340,7 @@ alveolar</th>
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/arab-fa/">Persian character app</a>.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/arab-fa/index.html" target="_blank">Persian character app</a>.</p>
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 
 

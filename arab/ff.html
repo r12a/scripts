@@ -27,7 +27,6 @@
 
 <script src="ff-langdata.js"></script>
 <script src="ff-examples.js"></script>
-<script src="ff-translit.js">  </script>
 <script src="ff-globals.js"></script>
 </head>
 
@@ -58,7 +57,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->30 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->25 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -82,7 +81,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Adamawa Fulfulde (Ajamiya) Orthography Notes, <!-- #BeginDate format:En2 -->30-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ff">https://r12a.github.io/scripts/arab/ff</a></small></p>
+<p class="refLine"><small>Richard Ishida, Adamawa Fulfulde (Ajamiya) Orthography Notes, <!-- #BeginDate format:En2 -->25-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ff">https://r12a.github.io/scripts/arab/ff</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -162,20 +161,27 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 <p>The Arabic script is commonly used as an <a class="termref" href="../glossary/index.html#abjad">abjad</a>, which means that in normal use the script  represents only consonant and long vowel sounds. However, since Fulfulde Ajamiya normally shows all the vowel diacritics, it actually functions as an <a class="termref" href="../glossary/index.html/#alphabet">alphabet</a>. See the table to the right for a brief overview of features for Fulfulde using the Arabic script.</p>
 
-<p>Fulfulde is written right to left in horizontal lines. Letters are joined (cursive) as is usual for the Arabic script.</p>
+<p>Fulfulde is written <a class="seclink" href="#direction">right to left</a> in horizontal lines, but numbers and embedded Latin text are read left-to-right. </p>
 
-<p class="addToConsonants">The  orthography for Fulfulde described here has 22 basic consonants. 8 more consonants are applied to write Arabic loan words or names from the Qur'an. <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p>
+<p>Letters are joined (<a class="seclink" href="#cursive">cursive</a>) as is usual for the Arabic script. There is no case distinction. Words are separated by spaces.</p>
 
-<p class="addToConsonants">Fulfulde has prenasalised consonants, but they are spelled out using normal consonant letters (as in the Latin orthography). Doubled consonants are indicated using the <span class="name">shadda</span> diacritic.</p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">The  orthography for Fulfulde described here has <a class="seclink" href="#basicC">22 basic consonants</a>. <a class="seclink" href="#extendedC">8 more consonants</a> are applied to write Arabic loan words or names from the Qur'an.</p>
 
+<p class="addToConsonants">Fulfulde has <a class="seclink" href="#prenasalised">prenasalised consonants</a>, but they are spelled out using normal consonant letters (as in the Latin orthography). <a class="seclink" href="#clength">Doubled consonants</a> are indicated using the diacritic <span class="hx circle">0651</span>.</p>
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
 <p class="addToVowels">Fulfulde is an <a class="termref" href="../glossary/index.html/#alphabet">alphabet</a> where vowel sounds are written using  a mixture of combining marks and letters. Unlike Semitic languages such as Arabic that build words on consonant patterns and so normally hide vowel diacritics in the Arabic script, it can be  difficult to read Fulfulde text without the full vowel information, and therefore Fulfulde retains all vowel diacritics in the text. Fulfulde has more vowel sounds than Arabic, so additional diacritics are used to write those.</p>
 
-<p class="addToVowels">The way a given vowel is written depends on its joining behaviour (initial, medial, or final). In some cases a vowel is written using just a diacritic, in others it is via combinations of letters and diacritics. Most of the letters also double as consonants. 8 combining marks are used to write vowels, and 6 letters, only 1 of which is a dedicated vowel letter.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
+<p class="addToVowels">The way a given vowel is written depends on its joining behaviour (initial, medial, or final). In some cases a vowel is written using just a diacritic, in others it is via combinations of letters and diacritics. Most of the letters also double as consonants. <a class="seclink" href="#combiningV">8 combining marks</a> are used to write vowels, and <a class="seclink" href="#vletter">6 letters</a>, only 1 of which is a dedicated vowel letter.</p>
 
-<p class="addToVowels">Standalone vowels are written by adding vowel characters to <span class="ch">ع</span>, rather than the <span class="name">alef</span> used for the Arabic language, apart from a small number of exceptions for Arabic loans or names from the Qur'an. ❯&nbsp;<a class="secref" title="Read more.">standalone</a></p>
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowels</a> are written by adding vowel characters to <span class="ch">ع</span>, rather than the <span class="name">alef</span> used for the Arabic language, apart from a small number of exceptions for Arabic loans or names from the Qur'an.</p>
 
-<p class="addToVowels">Vowel absence is indicated using <span class="name">sukun</span>. ❯&nbsp;<a class="secref" title="Read more.">novowel</a></p>
+<p class="addToVowels"><a class="seclink" href="#novowel">Vowel absence</a> is indicated using the diacritic <span class="hx circle">0652</span>.</p>
 
+<p>Fulfulde uses <a class="seclink" href="#numbers">Arabic script digits</a>.</p>
+
+<p>Fula uses a mixture of <a class="seclink" href="#inline">punctuation</a> from the ASCII, Arabic and other ranges.</p>
 
 
 
@@ -552,6 +558,16 @@ However, if the previous character joins only to the right, they will use isolat
 <!--p>Semivowels <span class="ipa">ʷ</span> and <span class="ipa">ʲ</span> may occur after an initial consonant.</p-->
 </section>
 </section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
@@ -559,13 +575,37 @@ However, if the previous character joins only to the right, they will use isolat
 
 
 
+<p>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="nasalisation"></span>
+<span id="tones"></span>
+</p>
 
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>The Fula Arabic orthography has no special features with respect to the following.</p>
+
+<ul>
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Tones (not a tonal language).</li>
+</ul>
+</div>
+
 
 
 
@@ -576,12 +616,12 @@ However, if the previous character joins only to the right, they will use isolat
 
 
 <section id="basicV">
-<h3>More vowel details</h3>
+<h4>Vowel summary table</h4>
 
 
 <p>The following table summarises the main vowel to character assignments.</p>
 
-<p class="instructions">Each table cell shows word-initial, word-medial, and word-final forms from right to left.  The glyphs shown are illustrative; alternative shapes may occur (see <a class="secref">joining_forms</a>). Click/tap on items to see a list of the components for that cell.</p>
+<p class="instructions highlight">Each table cell shows word-initial, word-medial, and word-final forms from right to left.  The glyphs shown are illustrative; alternative shapes may occur (see <a class="secref">joining_forms</a>). Click/tap on items to see a list of the components for that cell.</p>
 
 
 <figure id="fig_vowelgrid">
@@ -815,27 +855,6 @@ However, if the previous character joins only to the right, they will use isolat
 
 
 
-<section id="nasalisation">
-<h3>Nasalisation</h3>
-
-<p>Vowel nasalisation is not a distinctive feature of Fulfulde. (However, see also <a class="secref">prenasalised</a>.)</p>
-</section>
-
-
-
-
-
-
-<section id="tones">
-<h3>Tones</h3>
-
-<p>Fula does not have tones.</p>
-</section>
-
-
-
-
-
 
 <section id="novowel">
 <h3>Vowel absence</h3>
@@ -864,7 +883,14 @@ However, if the previous character joins only to the right, they will use isolat
 <section id="vowel_mappings">
 <h3>Vowel sounds  to characters</h3>
 
-<p class="instructions">Tables in this section show how Fulfulde vowel sounds commonly map to characters or sequences of characters in the Arabic orthography. Positional forms are listed separately because they tend to use different character sequences. Click on the character names to see examples.</p>
+
+<p>This section maps Fulfulde vowel sounds to common graphemes in the Arabic orthography. <!--Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.--></p>
+
+<p class="instructions highlight">The columns run right to left and indicate typical word-initial,  word-medial, and word-final usage. The joining forms shown are illustrative; alternative shapes may occur (see <a class="secref">joining_forms</a>).</p>
+
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
+
 
 
 
@@ -1116,12 +1142,32 @@ However, if the previous character joins only to the right, they will use isolat
 
 
 
- 
 
 
-  
-  <section id="consonants">
+
+
+
+
+<p>
+</p>
+
+
+
+
+
+<section id="consonants">
 <h2>Consonants</h2>
+
+
+<div id="consonant_notfound" class="instructions">
+<p>The Fula Arabic orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+</ul>
+</div>
+
+
 
 
 <div id="consonant_description"></div>
@@ -1133,33 +1179,40 @@ However, if the previous character joins only to the right, they will use isolat
 
 
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<p class="instructions">The consonants in the right column include letters used for Arabic loan words and names from the Qur'an, but  not usually used for native Fulfulde text. In some cases, Fulfulde text may substitute basic Fulfulde letters for these.</p>
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight">The consonants in the right column include letters used for Arabic loan words and names from the Qur'an, but  not usually used for native Fulfulde text. In some cases, Fulfulde text may substitute basic Fulfulde letters for these.</p>
 
 <table class="soundSummary">
 <tr>
-<th rowspan="6">General:</th>
+<th>Stops</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ݠ␣ب␣ࢡ␣ت␣د␣ط␣ک␣غ␣ع</figure></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
+<th>Prenasals</th>
 <td><figure class="summaryBox auto" data-ipa="ᵐb,ⁿd,ᵑɡ,ᶮd͡ʒ" data-cols="trans,transc">مب␣ند␣نغ␣نج</figure></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
+<th>Affricates</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ش␣ج</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ذ␣ز␣ظ</figure></td>
 </tr>
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ڢ␣س␣ح</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ث␣ص␣خ␣ق␣ه</figure></td>
 </tr>
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-ipa="m,n,ɲ,ɲ" data-cols="trans,transc">م␣ن␣ࢩ␣نغ</figure></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">و␣ر␣رّ␣ل␣ي␣ࢨ</figure></td>
 <td>&nbsp;</td>
 </tr>
@@ -1225,7 +1278,7 @@ However, if the previous character joins only to the right, they will use isolat
 
 
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <p>Word-initial consonant clusters are not common in Fulfulde, with the exception of those involving prenasalisation.</p>
 
@@ -1250,7 +1303,7 @@ However, if the previous character joins only to the right, they will use isolat
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <figure class="characterBox auto"  data-cols="">ْ</figure>
 
@@ -1303,9 +1356,13 @@ However, if the previous character joins only to the right, they will use isolat
 <section id="consonant_mappings">
 <h3>Consonant sounds to characters</h3>
 
-<p>Tables in this section show how Fulfulde consonant sounds commonly map to characters or sequences of characters in the Arabic orthography.</p>
+<p>This section maps Fulfulde consonant sounds to common graphemes in the Arabic orthography. Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
 
-<p class="instructions">Click on the character names to see additional details.</p>
+<p class="instructions highlight">The right-hand column shows the various joining forms.</p>
+
+<p class="instructions"> Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
+
 
 <section id="stops">
 <h4>Stops</h4>
@@ -1991,11 +2048,39 @@ However, if the previous character joins only to the right, they will use isolat
 
 
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+<p>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
+
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in the Fulfulde Arabic orthography.</p>
+
+<ul>
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
+
 
 
 <p class="instructions">This section brings together information about the following topics:
@@ -2008,7 +2093,7 @@ However, if the previous character joins only to the right, they will use isolat
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/arab-ha/">Fulfulde ajami character app</a>.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/arab-ff/index.html" target="_blank">Fulfulde ajami character app</a>.</p>
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 <section id="cursive">
 <h3>Cursive script</h3>
