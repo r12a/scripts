@@ -28,7 +28,6 @@
 
 <script src="btk-langdata.js"> </script>
 <script src="btk-examples.js"></script>
-<script src="btk-translit.js">  </script>
 <script src="btk-globals.js"></script>
 </head>
 
@@ -63,7 +62,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->12 November, 2023<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->27 December, 2023<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -82,7 +81,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Batak Languages Orthography Notes, <!-- #BeginDate format:En2 -->12-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/batk/btk">https://r12a.github.io/scripts/batk/btk</a></small></p>
+<p class="refLine"><small>Richard Ishida, Batak Languages Orthography Notes, <!-- #BeginDate format:En2 -->27-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/batk/btk">https://r12a.github.io/scripts/batk/btk</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -150,25 +149,27 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>The Batak script  is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>. Consonants carry an inherent vowel which can be modified by appending vowel signs to the consonant.  See the table to the right for a brief overview of features for the modern Batak orthography (the character counts are for a superset of all 5 languages described here). Each language uses its own set of consonants and vowel signs from this set, and several Unicode code points are specific to a particular language.</p>
 
-<p>Batak text runs left to right in horizontal lines.</p>
+<p>Batak text runs <a class="seclink" href="#direction">left to right</a> in horizontal lines.</p>
 
-<p>Words are not separated by spaces, and text segmentation doesn't pay attention to word boundaries.</p>
+<p>Words are <a class="seclink" href="#word">not separated by spaces</a>, and text segmentation doesn't pay attention to word boundaries.</p>
 
-<p class="addToConsonants">The 33 consonant letters in the Unicode Batak block include many duplicates because of variations in the orthography from language to language.  Repertoire extensions for 2 non-native sounds occur in Mandailing only, by applying the <span class="name">tompi</span> diacritic to  characters. ❯ <a class="secref" title="Read more.">consonants</a></p>
+<!--p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p-->
+<p class="addToConsonants">The <a class="seclink" href="#basicC">33 consonant letters</a> in the Unicode Batak block include many duplicates because of variations in the orthography from language to language.  Repertoire extensions for <a class="seclink" href="#extendedC">2 non-native sounds</a> occur in Mandailing only, by applying the <span class="name">tompi</span> diacritic to  characters.</p>
 
 <p class="addToConsonants">There are no <a class="termref" href="../glossary/index.html#conjunct">conjuncts</a> or stacks.</p>
 
-<p class="addToConsonants">Syllable-initial clusters appear to be restricted to prenasalised consonants (for which there are 2 dedicated letters) or nasal+consonant, which are written using an unpronounced standalone vowel, and these only occur in Karo.  ❯ <a class="secref" title="Read more.">onsets</a></p>
+<p class="addToConsonants"><a class="seclink" href="#onsets">Syllable-initial clusters</a> appear to be restricted to prenasalised consonants (for which there are 2 dedicated letters) or nasal+consonant, which are written using an unpronounced standalone vowel, and these only occur in Karo.</p>
 
-<p class="addToConsonants">Word-final consonant sounds may be represented by 2 final-consonant diacritics. Otherwise, if nothing follows, they  are ordinary consonants followed by a visible <span class="codepoint" translate="no"><bdi lang="btk">&#x1BF2;</bdi> [<a href="/scripts/batk/block#char1BF2"><span class="uname">U+1BF2 BATAK PANGOLAT</span></a>]</span> (or <span class="codepoint" translate="no"><bdi lang="btk">&#x1BF3;</bdi> [<a href="/scripts/batk/block#char1BF3"><span class="uname">U+1BF3 BATAK PANONGONAN</span></a>]</span> in Karo and Simalungun). ❯ <a class="secref" title="Read more.">finals</a></p>
+<p class="addToConsonants"><a class="seclink" href="#finals">Word-final consonant</a> sounds may be represented by 2 final-consonant diacritics. Otherwise, if nothing follows, they  are ordinary consonants followed by a visible <span class="codepoint" translate="no"><bdi lang="btk">&#x1BF2;</bdi> [<a href="/scripts/batk/block#char1BF2"><span class="uname">U+1BF2 BATAK PANGOLAT</span></a>]</span> (or <span class="codepoint" translate="no"><bdi lang="btk">&#x1BF3;</bdi> [<a href="/scripts/batk/block#char1BF3"><span class="uname">U+1BF3 BATAK PANONGONAN</span></a>]</span> in Karo and Simalungun).</p>
 
-<p class="addToConsonants">A peculiarity of Batak is that a syllable CVCv (where 'v' represents the vowel-killer) is rendered as CCVv when the vowel is expressed using a <a class="termref" href="../glossary/index.html#vowelsign">vowel sign</a>. ❯ <a class="secref" title="Read more.">vowel_reorder</a></p>
+<p class="addToConsonants">A peculiarity of Batak is that a syllable CVCv (where 'v' represents the vowel-killer) is <a class="seclink" href="#vowel_reorder">rendered as CCVv</a> when the vowel is expressed using a <a class="termref" href="../glossary/index.html#vowelsign">vowel sign</a>.</p>
 
-<p class="addToVowels">The Batak orthography has an <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowel</a> <span class="ipa">a</span>, and represents vowels using language-specific selections from the superset of 9 <a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>. There are no <a class="termref" href="../glossary/index.html#prebase">pre-base vowels</a> or <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>. All vowel signs are combining marks, and are stored after the base character.  ❯ <a class="secref" title="Read more.">vowels</a></p>
+<!--p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p-->
+<p class="addToVowels">The Batak orthography has an <a class="seclink" href="#inherent">inherent vowel</a> <span class="ipa">a</span>, and represents vowels using language-specific selections from the superset of <a class="seclink" href="#combiningV">9 vowel signs</a>. There are no <a class="termref" href="../glossary/index.html#prebase">pre-base vowels</a> or <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>. All vowel signs are combining marks, and are stored after the base character.</p>
 
-<p class="addToVowels">Batak has 3 <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a> (one with 2 alternate shapes) which are optionally mixed with <a class="termref" href="../glossary/index.html#standalonevowel">standalone vowels</a> represented by  vowel signs applied to <span class="codepoint" translate="no"><bdi lang="btk">&#x1BC0;</bdi> [<a href="/scripts/batk/block#char1BC0"><span class="uname">U+1BC0 BATAK LETTER A</span></a>]</span> (or <span class="codepoint" translate="no"><bdi lang="btk">&#x1BC1;</bdi> [<a href="/scripts/batk/block#char1BC1"><span class="uname">U+1BC1 BATAK LETTER SIMALUNGUN A</span></a>]</span> in Simalungun). ❯ <a class="secref" title="Read more.">standalone</a></p>
+<p class="addToVowels">Batak has 3 <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a> (one with 2 alternate shapes) which are optionally mixed with <a class="seclink" href="#standalone">standalone vowels</a> represented by  vowel signs applied to <span class="codepoint" translate="no"><bdi lang="btk">&#x1BC0;</bdi> [<a href="/scripts/batk/block#char1BC0"><span class="uname">U+1BC0 BATAK LETTER A</span></a>]</span> (or <span class="codepoint" translate="no"><bdi lang="btk">&#x1BC1;</bdi> [<a href="/scripts/batk/block#char1BC1"><span class="uname">U+1BC1 BATAK LETTER SIMALUNGUN A</span></a>]</span> in Simalungun).</p>
 
-<p>Batak has very little punctuation, and the punctuation marks that are used generally indicate section boundaries.</p>
+<p>Batak has very little <a class="seclink" href="#phrase">punctuation</a>, and the punctuation marks that are used are not ASCII characters, and generally indicate section boundaries.</p>
 </section>
    
     
@@ -529,6 +530,12 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <figure class="characterBox auto" data-cols="ipa,trans,transc">𞤢␣𞤣␣𞤤␣𞤥␣𞤦␣𞤧␣𞤨␣𞤩␣𞤪␣𞤫␣𞤬␣𞤭␣𞤮␣𞤯␣𞤰␣𞤱␣𞤲␣𞤳␣𞤴␣𞤵␣𞤶␣𞤷␣𞤸␣𞤹␣𞤺␣𞤻␣𞤼␣𞤽</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">𞤀␣𞤁␣𞤂␣𞤃␣𞤄␣𞤅␣𞤆␣𞤇␣𞤈␣𞤉␣𞤊␣𞤋␣𞤌␣𞤍␣𞤎␣𞤏␣𞤐␣𞤑␣𞤒␣𞤓␣𞤔␣𞤕␣𞤖␣𞤗␣𞤘␣𞤙␣𞤚␣𞤛</figure>
 </section-->
+
+ 
+ 
+ 
+ 
+ 
  
 
 
@@ -537,11 +544,63 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
+<p>
+<span id="otherV"></span>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="compositeV"></span>
+<!--span id="vlength"></span>
+<span id="nasalisation"></span-->
+<span id="tones"></span>
+</p>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
 
 
+
+<div id="vowel_notfound" class="instructions">
+<p>The Batak orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>.</li>
+
+<!--li>Vowel length.</li>
+
+<li>Nasalisation (not a feature of the language).</li-->
+
+<li>Tones (not a tonal language).</li>
+</ul>
+</div>
+
+
+
+
 <div id="vowel_description"></div>
+
+
+
+
+
+
+
+
+<!--section id="basicV">
+<h4>Vowel summary table</h4>
+
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">ⓘ represents the inherent vowel. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here).</p-->
 
 <div id="basicV"></div>
 
@@ -552,15 +611,15 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="inherent">
 <h3>Inherent vowel</h3>
 
-<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
-<!--p>The Newar inherent vowel is usually transcribed and pronounced <span class="trans">a</span>.  So <span class="codepoint" translate="no"><span lang="new">&#x1140E;</span> [<a href="/scripts/newa/block#char1140E"><span class="uname">U+1140E NEWA LETTER KA</span></a>]</span> is pronounced <span class="ipa">ka</span>.</p-->
-<p><span class="ipa">a</span> following a consonant is not written, but is seen as an inherent part of the consonant letter, so <span class="ipa">ka</span> is written by simply using the consonant letter.</p>
-
 <p class="vowelSignExample">
     <bdi lang="btk">&#x1BC2;</bdi>
     <span class="ipa">ka</span>
     <span><span class="uname">U+1BC2 BATAK LETTER HA</span></span>
-    </p>
+</p>
+
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
+<!--p>The Newar inherent vowel is usually transcribed and pronounced <span class="trans">a</span>.  So <span class="codepoint" translate="no"><span lang="new">&#x1140E;</span> [<a href="/scripts/newa/block#char1140E"><span class="uname">U+1140E NEWA LETTER KA</span></a>]</span> is pronounced <span class="ipa">ka</span>.</p-->
+<p><span class="ipa">a</span> following a consonant is not written, but is seen as an inherent part of the consonant letter, so <span class="ipa">ka</span> is written by simply using the consonant letter.</p>
 </section>
 
 
@@ -574,15 +633,15 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="vowelsigns">
 <h3>Vowel signs</h3>
 
-<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
-
-<p>Non-inherent  vowel sounds that follow a consonant  are  represented using <span class="name">vowel signs</span>, eg.</p>
-
 <p class="vowelSignExample">
     <bdi lang="btk">&#x1BC2;&#x1BEA;</bdi>
     <span class="ipa">kiː</span>
     <span><span class="uname">U+1BC2 BATAK LETTER HA</span> + <span class="uname">U+1BEA BATAK VOWEL SIGN I</span></span>
-    </p>
+</p>
+
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
+
+<p>Non-inherent  vowel sounds that follow a consonant  are  represented using <span class="name">vowel signs</span>, eg.</p>
 
 <p>Batak vowel signs are all combining characters.  All vowel signs are  stored after the base consonant. There are no vowel signs displayed before the base, and there are no circumgraphs.</p>
 <p>An orthography that uses vowel signs is different from one that uses simple diacritics or letters for vowels in that the vowel signs may be attached to the <em>syllable onset </em>, rather than  just applied to the letter of the immediately preceding consonant. See <a class="secref">finals</a>.</p>
@@ -715,11 +774,23 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="tones">
-<h3>Tones</h3>
 
-<p>Batak is not a tonal language.</p>
+
+<section id="novowel">
+<h3>Suppressing the inherent vowel</h3>
+<p>To indicate that a consonant is not followed by an inherent vowel, Mandailing, Pakpak, and Toba use <span class="codepoint" translate="no"><bdi lang="btk">&#x1BF2;</bdi> [<a href="/scripts/batk/block#char1BF2"><span class="uname">U+1BF2 BATAK PANGOLAT</span></a>]</span>, whereas Karo and Simalungun use <span class="codepoint" translate="no"><bdi lang="btk">&#x1BF3;</bdi> [<a href="/scripts/batk/block#char1BF3"><span class="uname">U+1BF3 BATAK PANONGONAN</span></a>]</span>. These characters are used after final consonants whether they appear word-medially or word finally.</p>
+
+<p>
+<span class="eg" lang="btk" dir="ltr">ᯗᯉ᯲ᯑᯰ</span>
+<span class="eg" lang="btk" dir="ltr">ᯀᯮᯑᯉ᯲</span>
+<span class="eg" lang="btk" dir="ltr">ᯂᯉ᯳ᯘᯰ</span>
+<span class="eg" lang="btk" dir="ltr">ᯀᯉᯂ᯳</span>
+</p>
+
+<p>See also <a class="secref">finals</a>, which describes some unusual behaviour for final consonants that are preceded by a vowel sign.</p>
 </section>
+
+
 
 
 
@@ -731,8 +802,11 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <h3>Vowel sounds  to characters</h3>
 
 
-<p class="instructions">This section maps the vowel sounds of several Batak languages to common graphemes in the Batak orthography, grouped by vowel sign ( <mark>vs</mark> ) or standalone ( <mark>s</mark> ). Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
-<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
+<p>This section maps the vowel sounds of several Batak languages to common graphemes in the Batak orthography, grouped by vowel sign ( <mark>vs</mark> ) or standalone ( <mark>s</mark> ).</p>
+
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
+<!--p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p-->
 
 
 
@@ -854,9 +928,28 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
+<p>
+<!--span id="clength"></span-->
+</p>
+
+
+
+
 
 <section id="consonants">
 <h2>Consonants</h2>
+
+
+<div id="consonant_notfound" class="instructions">
+<p>The Batak orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+
+<!--li>Gemination or consonant lengthening.</li-->
+</ul>
+</div>
+
 
 
 
@@ -978,7 +1071,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <p>The only syllable-initial consonant clusters in Batak appear to be nasal+consonant or prenasalised consonants. These appear to be limited to the Karo language<tt>uk</tt>.</p>
 
@@ -1001,7 +1094,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᯰ␣ᯱ</figure>
 
@@ -1077,8 +1170,11 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="consonant_mappings">
 <h3>Consonant sounds to characters</h3>
 
-<p class="instructions">This section maps consonant sounds for languages using the Batak script to common graphemes in the orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
-<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, Sanskrit, etc. If no language is specified, the assignment is valid for all languages covered here.</p>
+<p>This section maps consonant sounds for languages using the Batak script to common graphemes in the orthography.</p>
+
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
+<!--p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, Sanskrit, etc. If no language is specified, the assignment is valid for all languages covered here.</p-->
 
 
 
@@ -1308,59 +1404,6 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="otherfeatures">
-<h2>Other features</h2>
-
-
-<section id="novowel">
-<h3>Suppressing the inherent vowel</h3>
-<p>To indicate that a consonant is not followed by an inherent vowel, Mandailing, Pakpak, and Toba use <span class="codepoint" translate="no"><bdi lang="btk">&#x1BF2;</bdi> [<a href="/scripts/batk/block#char1BF2"><span class="uname">U+1BF2 BATAK PANGOLAT</span></a>]</span>, whereas Karo and Simalungun use <span class="codepoint" translate="no"><bdi lang="btk">&#x1BF3;</bdi> [<a href="/scripts/batk/block#char1BF3"><span class="uname">U+1BF3 BATAK PANONGONAN</span></a>]</span>. These characters are used after final consonants whether they appear word-medially or word finally.</p>
-
-<p>
-<span class="eg" lang="btk" dir="ltr">ᯗᯉ᯲ᯑᯰ</span>
-<span class="eg" lang="btk" dir="ltr">ᯀᯮᯑᯉ᯲</span>
-<span class="eg" lang="btk" dir="ltr">ᯂᯉ᯳ᯘᯰ</span>
-<span class="eg" lang="btk" dir="ltr">ᯀᯉᯂ᯳</span>
-</p>
-
-<p>See also <a class="secref">finals</a>, which describes some unusual behaviour for final consonants that are preceded by a vowel sign.</p>
-</section>
-
-
-
-
-
-<!--section id="vocalics">
-<h3>Vocalics</h3>
-<p id="def-vocalic" class="explanatoryintro definitionStub"></p>
-
-<p>tbd</p>
-</section-->
-
-
-
-
-
-<!--section id="symbols">
-<h3>Symbols</h3>
-
-<p>tbd</p>
-</section-->
-</section>
-
- 
- 
-  
-  
-
-
-
-
-
-
-
-
-
 
 
 <section id="encoding">
@@ -1437,20 +1480,49 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
+
+
+<p>
+<span id="cursive"></span>
+<span id="gsub"></span>
+<span id="gpos"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in the Batak orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/batk/">Batak character app</a>.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/batk/index.html" target="_blank">Batak character app</a>.</p>
 
 <p>Batak text is not cursive (ie. joined up like Arabic).</p>
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
@@ -1535,7 +1607,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="prompts">tbd</p>
 </section>
 </section>
