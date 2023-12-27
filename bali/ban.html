@@ -59,7 +59,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 December, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -73,7 +73,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Balinese Orthography Notes, <!-- #BeginDate format:En2 -->16-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/bali/ban">https://r12a.github.io/scripts/bali/ban</a></small></p>
+<p class="refLine"><small>Richard Ishida, Balinese Orthography Notes, <!-- #BeginDate format:En2 -->26-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/bali/ban">https://r12a.github.io/scripts/bali/ban</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -130,33 +130,37 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>The script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>. See the table to the right for a brief overview of features for the Balinese language.</p>
 
-<p>Balinese text runs left to right in horizontal lines.</p>
+<p>Balinese text runs <a class="seclink" href="#direction">left to right</a> in horizontal lines.</p>
 
-<p>Words are not separated by spaces, however syllables may be separated by <abbr title="Zero width space">ZWSP</abbr>, as long as they don't fall inside a stack. ❯&nbsp;<a class="secref" title="Read more.">word</a></p>
+<p>Words are not separated by spaces, however syllables may be separated by <abbr title="Zero width space"><a class="seclink" href="#word"><abbr title="Zero width space">ZWSP</abbr></a></abbr>, as long as they don't fall inside a stack.</p>
 
-<p class="addToConsonants">The 18 consonant letters used for pure Balinese words are supplemented by 15 more derived from Sanskrit and Kawi words, some of which are used as honorifics, a little like capital letters.  Repertoire extensions for 8 non-native sounds are achieved by applying the <span class="name">rerekan</span> diacritic to  characters.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p>
+<p class="addToConsonants">Stacked consonants and conjoined pairs <a class="seclink" href="#word">span word boundaries</a>. This means that text must be <a class="seclink" href="#linebreak">wrapped</a> at orthographic syllable boundaries, and not at word boundaries. <a class="seclink" href="#pameneng">Hyphenation</a> occurs, using <span class="hx">1B60</span> at the line end to indicate the break.</p>
 
-<p class="addToConsonants">Consonant clusters are  represented by stacked consonants (many subjoined consonants have alternative shapes) or conjoined pairs. Occasionally, a visible <span class="name">adeg adeg</span>  (<a class="termref" href="../glossary/index.html#virama">virama</a>) is used. ❯&nbsp;<a class="secref" title="Read more.">clusters</a></p>
 
-<p class="addToConsonants">Stacked consonants and conjoined pairs span word boundaries.</p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">The <a class="seclink" href="#basicC">18 consonant letters</a> used for pure Balinese words are supplemented by <a class="seclink" href="#honorific">15 more</a> derived from Sanskrit and Kawi words, some of which are used as honorifics, a little like capital letters.  Repertoire extensions for <a class="seclink" href="#extendedC">8 non-native sounds</a> are achieved by applying the <span class="name">rerekan</span> diacritic to  characters.</p>
 
-<p class="addToConsonants">Syllable-initial clusters use 3 subjoined versions of ordinary consonants or vocalics
-for the second consonant.  ❯&nbsp;<a class="secref" title="Read more.">onsets</a></p>
+<p class="addToConsonants"><a class="seclink" href="#clusters">Consonant clusters</a> are  represented by stacked consonants (many subjoined consonants have alternative shapes) or conjoined pairs. Occasionally, a visible <span class="name">adeg adeg</span>  (<a class="termref" href="../glossary/index.html#virama">virama</a>) is used.</p>
 
-<p class="addToConsonants">Word-final consonant sounds may be represented by 3 final-consonant diacritics. Otherwise, if nothing follows, they  are ordinary consonants followed by a visible
-<span class="codepoint" translate="no">&nbsp;&nbsp;<span lang="ban">&#x1B44;</span> [<a href="/scripts/balinese/block#char1B44"><span class="uname">U+1B44 BALINESE ADEG ADEG</span></a>]</span>. ❯&nbsp;<a class="secref" title="Read more.">finals</a></p>
+<p class="addToConsonants">Syllable-initial clusters use <a class="seclink" href="#onsets">3 subjoined</a> versions of ordinary consonants or vocalics
+for the second consonant.</p>
 
-<p class="addToVowels">The Balinese orthography is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with one <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowel</a>, generally pronounced <span class="ipa">a</span>, but <span class="ipa">ə</span> when word-final or in some affixes. <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
+<p class="addToConsonants">Word-final consonant sounds may be represented by <a class="seclink" href="#finals">3 final-consonant diacritics</a>. Otherwise, if nothing follows, they  are ordinary consonants followed by a visible <span class="codepoint" translate="no">&nbsp;&nbsp;<span lang="ban">&#x1B44;</span> [<a href="/scripts/balinese/block#char1B44"><span class="uname">U+1B44 BALINESE ADEG ADEG</span></a>]</span>.</p>
 
-<p class="addToVowels">Other post-consonant vowels are written using 11 combining marks (<a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>). There are 2 <a class="termref" href="../glossary/index.html#prebase">pre-base</a> glyphs and 6 <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>.  ❯&nbsp;<a class="secref" title="Read more.">prebase</a> ❯&nbsp;<a class="secref" title="Read more.">circumgraphs</a></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">The Balinese orthography is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with one <a class="seclink" href="#inherent">inherent vowel</a><a class="termref" href="../glossary/index.html#inherentvowel"></a>, generally pronounced <span class="ipa">a</span>, but <span class="ipa">ə</span> when word-final or in some affixes. </p>
 
-<p class="addToVowels">In principle, Balinese has no <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a>, however the 6 circumgraphs  can also be decomposed into 2 parts. Those can involve up to 2 glyphs, and glyphs can surround the base consonant(s) on  up to 3 sides.  ❯&nbsp;<a class="secref" title="Read more.">compositeV</a></p>
+<p class="addToVowels">Other post-consonant vowels are written using <a class="seclink" href="#combiningV">11 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>). There are <a class="seclink" href="#prebase">2 pre-base glyphs</a> and <a class="seclink" href="#circumgraphs">6 circumgraphs</a>.</p>
 
-<p class="addToVowels"><a class="termref" href="../glossary/index.html#independentvowel">Independent vowels</a> are used at the beginning of a word for <a class="termref" href="../glossary/index.html#standalonevowel">standalone vowel</a> sounds. Inside a word these are written using vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="ban">&#x1B33;</span> [<a href="balinese#char1B33"><span class="uname">U+1B33 BALINESE LETTER HA</span></a>]</span>. ❯&nbsp;<a class="secref" title="Read more.">standalone</a></p>
+<p class="addToVowels">In principle, Balinese has no <a class="seclink" href="#compositeV">multipart vowels</a>, however the 6 circumgraphs  can also be decomposed into 2 parts. Those can involve up to 2 glyphs, and glyphs can surround the base consonant(s) on  up to 3 sides.</p>
 
-<p class="addToVowels">The inherent vowel is suppressed using <span class="ch">᭄</span>, which is invisible in consonant clusters, but is visible elsewhere, and is used word-finally. ❯&nbsp;<a class="secref" title="Read more.">novowel</a></p>
+<p class="addToVowels"><a class="termref" href="../glossary/index.html#independentvowel">Independent vowels</a> are used at the beginning of a word for <a class="seclink" href="#standalone">standalone vowel</a> sounds. Inside a word these are written using vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="ban">&#x1B33;</span> [<a href="balinese#char1B33"><span class="uname">U+1B33 BALINESE LETTER HA</span></a>]</span>.</p>
 
-<p class="addToVowels">Balinese has <a class="termref" href="../glossary/index.html#vocalic">vocalics</a>, and their use is required for certain consonant-vowel combinations. ❯&nbsp;<a class="secref" title="Read more.">vocalics</a></p>
+<p class="addToVowels">The <a class="seclink" href="#novowel">inherent vowel is suppressed</a> using <span class="ch">᭄</span>, which is invisible in consonant clusters, but is visible elsewhere, and is used word-finally.</p>
+
+<p class="addToVowels">Balinese has <a class="seclink" href="#vocalics">vocalics</a>, and their use is required for certain consonant-vowel combinations.</p>
+
+<p>Balinese has a set of <a class="seclink" href="#numbers">native digits</a>, and uses <a class="seclink" href="#inline">native punctuation marks</a>.</p>
 </section>
    
     
@@ -626,6 +630,12 @@ alveolar</th>
 </section>
 </section>
 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
@@ -633,22 +643,54 @@ alveolar</th>
 
 
 
+<p>
+<span id="tones"></span>
+</p>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>The Balinese orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Tones (not a tonal language).</li>
+</ul>
+</div>
 
 
 
 
 <div id="vowel_description"></div>
 
-<div id="vowelsigns"></div>
+
+
+
+
 
 
 
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">Multipart forms are not shown here because all vowels and diphthongs are normally represented using one of the atomic characters listed here. Standalone vowels are shown in the right-hand column.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">ⓘ represents the inherent vowel. Multipart forms are not shown here because all vowels and diphthongs are normally represented using one of the atomic characters listed here. Standalone vowels are shown in the right-hand column.</p>
+
 
 
 <table class="soundSummary">
@@ -666,7 +708,7 @@ alveolar</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬳᭂ␣ᬳᭃ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬵ</figure></td>
+<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="a,ɑː">ⓘ␣ᬵ</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬅ␣ᬆ␣ᬳᬵ</figure></td>
 </tr>
 
@@ -1328,6 +1370,10 @@ alveolar</th>
 
 
 
+<p>
+<span id="clength"></span>
+</p>
+
 
 
 
@@ -1336,50 +1382,73 @@ alveolar</th>
 <h2>Consonants</h2>
 
 
+<div id="consonant_notfound" class="instructions">
+<p>The Balinese orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Gemination or consonant lengthening.</li>
+</ul>
+</div>
+
+
+
 
 <div id="consonant_description"></div>
 
 
 
-<section id="consonantSummary">
-<h3>Consonant summary</h3>
 
-<p class="instructions">Consonants used for native Balinese words are shown in the left-hand column. On the right are consonants used for words from Kawi, Sanskrit, and other languages.</p>
+
+
+
+<section id="consonantSummary">
+<h4>Consonant summary table</h4>
+
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight"><strong>Consonants used for native Balinese words are shown in the left-hand column. On the right are consonants used for words from Kawi, Sanskrit, and other languages.</strong></p>
+
+
+
 
 
 <table class="soundSummary">
 <tr>
-<th rowspan="5">Initials:</th>
+<th>Stops</th>
 <td>
 <figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬧ␣ᬩ␣ᬢ␣ᬤ␣ᬓ␣ᬕ</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬨ␣ᬪ␣ᬞ␣ᬝ␣ᬣ␣ᬟ␣ᬠ␣ᬥ␣ᬔ␣ᬖ␣ ␣ᬤ᬴␣ᬗ᬴</figure></td>
 </tr>
 <tr>
+<th>Affricates</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬘ␣ᬚ</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">᭄ᬙ␣ᬛ</figure></td>
 </tr>
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬲ␣ᬳ</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬰ␣ᬱ␣ ␣ᬧ᬴␣ᬯ᬴␣ᬚ᬴␣ᬓ᬴␣ᬕ᬴␣ᬳ᬴</figure></td>
 </tr>
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬫ␣ᬦ␣ᬗ␣ᬜ</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬡ</figure></td>
 </tr>
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬯ␣ᬭ␣ᬮ␣ᬬ</figure></td>
 <td>&nbsp;</td>
 </tr>
 
 <tr>
-<th>Medials:</th>
+<th>Medials</th>
 <td colspan="3">
 <figure class="summaryBox auto" data-ipa="w,r,rə,l,j" data-cols="trans,transc">᭄ᬯ␣᭄ᬭ␣ᬺ␣᭄ᬮ␣᭄ᬬ</figure>
 </td>
 </tr>
 
 <tr>
-<th>Finals:</th>
+<th>Finals</th>
 <td colspan="3">
 <figure class="summaryBox auto" data-cols="ipa,trans,transc">ᬂ␣ᬃ␣ᬄ</figure>
 </td>
@@ -1683,19 +1752,6 @@ unless the word involves repetition, eg.
 
 
 
-
-<section id="clength">
-<h3>Consonant length</h3>
-
-<p>tbd</p>
-<!--p>Gemination and consonant lengthening are handled using the normal approach to consonant clusters (see <a class="secref">clusters</a>).</p-->
-</section>
-
-
-
-
-
-
 <style>
 .mapItem .lc {
     margin-inline-end: 2rem;
@@ -1726,11 +1782,12 @@ unless the word involves repetition, eg.
 <section id="consonant_mappings">
 <h3>Consonant sounds to characters</h3>
 
-<p class="instructions">This section maps Balinese consonant sounds to common graphemes in the Balinese orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<p>This section maps Balinese consonant sounds to common graphemes in the Balinese orthography. </p>
 
-<p class="instructions"><strong>The left column contains native Balinese letters. The right column contains letters borrowed from Sanskrit or Kawi, or extended with rerekan.</strong></p>
+<p class="instructions highlight">The left column contains native Balinese letters. The right column contains letters borrowed from Sanskrit or Kawi, or extended with rerekan.</p>
 
-<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, Sanskrit, etc.</p>
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown. Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, Sanskrit, etc.</p>
+
 
 
 
@@ -2368,20 +2425,52 @@ unless the word involves repetition, eg.
 
 
 
+
+
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in the Balinese orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/balinese/">Balinese character app</a>.</p>
+
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/bali/index.html" target="_blank">Balinese character app</a>.</p>
 
 <p>Balinese text is not cursive (ie. joined up like Arabic), however there is a significant amount of interaction between glyphs, and some joining, around consonant clusters.</p>
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
@@ -2492,7 +2581,7 @@ unless the word involves repetition, eg.
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="prompts">tbd</p>
 </section>
 </section>
