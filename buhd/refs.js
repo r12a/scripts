@@ -98,7 +98,7 @@ reflist = {
 
 
 scriptLanguageList = {
-bku:{name:"Buhid", url:"bug.html"},
+bku:{name:"Buhid", url:"bku.html"},
 tgl:{name:"Tagalog"},
 }
 
