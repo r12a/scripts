@@ -29,7 +29,6 @@
 
 <script src="bn-langdata.js"></script>
 <script src="bn-examples.js"></script>
-<script src="bn-translit.js"></script>
 <script src="bn-globals.js"></script>
 </head>
 
@@ -62,7 +61,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->10 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->27 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -75,7 +74,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->10-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->27-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -134,25 +133,37 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>The orthographic letters of the Bengali script are derived from Sanskrit, and in some cases don't quite fit the needs of modern Bangla (eg. lack of simple vowels for the sounds <span class="ipa">ɛ</span> and <span class="ipa">æ</span>, letters for only 2  of many diphthongs, long and short letters where pronunciation no longer distinguishes those sounds, etc.)</p>
 
-<p>Bengali runs left to right in horizontal lines.</p>
+<p>Bengali runs <a class="seclink" href="#direction">left to right</a> in horizontal lines.</p>
 
-<p>Words are separated by spaces.</p>
+<p>Words are separated by spaces. There are no case distinctions.</p>
 
-<p class="addToConsonants">The 33 consonant letters used for Bangla are supplemented by repertoire extensions for 3 more  sounds  by applying the <span class="name">nukta</span> diacritic to  characters  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p> 
 
-<p class="addToConsonants">Consonant clusters at any location are normally indicated using a <a class="termref" href="../glossary/index.html#virama">virama</a> (<span class="name">hasant</span>) between consonants. This results in a large number of <a class="termref" href="../glossary/index.html#conjunct">conjunct</a> forms expressed using stacked consonants, conjoined consonants, and ligated glyphs. Conjuncts often have different pronunciations than might be expected from the letters involved, and in particular gemination is very common. Occasionally, a visible virama is used. However, clusters are often not marked at all. ❯&nbsp;<a class="secref" title="Read more.">clusters</a></p>
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">The <a class="seclink" href="#basicC">33 consonant letters</a> used for Bangla are supplemented by repertoire extensions for <a class="seclink" href="#extendedC">3 more</a> sounds  by applying the <span class="name">nukta</span> diacritic to  characters.</p> 
+
+<p class="addToConsonants"><a class="seclink" href="#clusters">Consonant clusters</a> at any location are normally indicated using a <a class="termref" href="../glossary/index.html#virama">virama</a> (<span class="name">hasant</span>) between consonants. This results in a large number of <a class="termref" href="../glossary/index.html#conjunct">conjunct</a> forms expressed using stacked consonants, conjoined consonants, and ligated glyphs. Conjuncts often have different pronunciations than might be expected from the letters involved, and in particular gemination is very common. Occasionally, a visible virama is used. However, clusters are often not marked at all.</p>
 
 <p class="addToConsonants">As part of a cluster, RA has  special forms, for both cluster-initial and post-base positions.</p>
 
-<p class="addToConsonants">Word-final consonant sounds may be represented by a special letter, <span class="ex" lang="bn">ৎ</span>, or by 2 dedicated combining marks (anusvara &amp; visarga), but are generally ordinary consonants that are not marked by a virama. ❯&nbsp;<a class="secref" title="Read more.">finals</a></p>
-<p class="addToVowels">The Bangla orthography is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with 2 <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowels</a>. Other post-consonant vowels are written using 9 combining marks (<a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>) and a specialised use of the <span class="trans">y</span> consonant letter. <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
-<p class="addToVowels">Vowel harmony plays a significant role in the pronunciation of vowel-related code points. ❯&nbsp;<a class="secref" title="Read more.">vowelharmonydesc</a></p>
-<p class="addToVowels">There are 3 <a class="termref" href="../glossary/index.html#prebase">pre-base</a> and 2 <a class="termref" href="../glossary/index.html#circumgraph">circumgraph</a> vowel signs. In principle, there are no <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a>,  however in decomposed text the 2 circumgraphs split into 2 parts each. ❯&nbsp;<a class="secref" title="Read more.">circumgraphs</a></p>
-<p class="addToVowels">Standalone vowels are written using 10 <a class="termref" href="../glossary/index.html#independentvowel">independent vowel</a> letters, one for each vowel sound, including the inherent vowel and 2 diphthongs. The final sound of numerous diphthongs is also represented using independent vowels. ❯&nbsp;<a class="secref" title="Read more.">standalone</a></p>
+<p class="addToConsonants"><a class="seclink" href="#finals">Word-final consonant</a> sounds may be represented by a special letter, <span class="ex" lang="bn">ৎ</span>, or by 2 dedicated combining marks (anusvara &amp; visarga), but are generally ordinary consonants that are not marked by a virama.</p>
 
-<p class="addToVowels">Vowels may be nasalised, using the <span class="name">candrabindu</span> diacritic. ❯&nbsp;<a class="secref" title="Read more.">nasalisation</a></p>
 
-<p>Bengali has native digit shapes. ❯&nbsp;<a class="secref" title="Read more.">numbers</a></p>
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">The Bangla orthography is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with <a class="seclink" href="#inherent">2 inherent vowels</a>. Other post-consonant vowels are written using <a class="seclink" href="#combiningV">9 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>) and a <a class="seclink" href="#otherV">specialised use</a> of the <span class="trans">y</span> consonant letter.</p>
+
+<p class="addToVowels"><a class="seclink" href="#vowelharmonydesc">Vowel harmony</a> plays a significant role in the pronunciation of vowel-related code points.</p>
+
+<p class="addToVowels">There are <a class="seclink" href="#prebase">3 pre-base</a> and <a class="seclink" href="#circumgraphs">2 circumgraph</a> vowel signs. In principle, there are <a class="seclink" href="#compositeV">no multipart</a> vowels,  however in decomposed text the 2 circumgraphs split into 2 parts each.</p>
+
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowels</a> are written using 10 <a class="termref" href="../glossary/index.html#independentvowel">independent vowel</a> letters, one for each vowel sound, including the inherent vowel and 2 diphthongs. The final sound of numerous diphthongs is also represented using independent vowels.</p>
+
+<p class="addToVowels">Vowels may be <a class="seclink" href="#nasalisation">nasalised</a>, using the <span class="name">candrabindu</span> diacritic.</p>
+
+
+
+<p>Bengali has <a class="seclink" href="#numbers">native digit shapes</a>.</p>
 </section>
 
 
@@ -859,6 +870,12 @@ alveolar</th>
 </section>
 </section>
 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
@@ -866,11 +883,31 @@ alveolar</th>
 
 
 
+<p>
+<span id="tones"></span>
+</p>
 
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <section id="vowels">
-<h2 id="h_vowels">Vowels</h2>
+<h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>The Bangla orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Tones (not a tonal language).</li>
+</ul>
+</div>
+
+
 
 
 <div id="vowel_description"></div>
@@ -882,11 +919,13 @@ alveolar</th>
 
 
 
-
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">The table below doesn't capture sound changes produced by <a href="#vowelharmonydesc">vowel harmony</a>.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">The table shows dependent vowels on the left, and standalone vowels on the right. It doesn't capture sound changes produced by <a href="#vowelharmonydesc">vowel harmony</a>.</p>
 
 
 <table class="soundSummary">
@@ -1260,10 +1299,22 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 
 
 
-<section id="tones">
-<h3>Tones</h3>
+<section id="novowel">
+<h3>Vowel absence</h3>
 
-<p>Bengali is not a tonal language.</p>
+<figure class="characterBox auto" data-cols="">্</figure>
+
+<p>Bengali uses <span class="hx">09CD</span> (called <span class="charExample inline" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="transc">hasant</span> <span class="ipa">hɔsonto</span></span> in Bengali) to indicate that the inherent vowel is not pronounced after a consonant, eg. the following explicitly represents just the sound <span class="ipa">k</span>.<span class="charExample" translate="no"><span class="ex" lang="bn">ক্</span> <span class="trans">k͓</span></span></p>
+
+<p>The <span class="name">hasant</span> is rarely seen. It is not used at the end of a word even though the inherent vowel is pronounced at the end of some words and not others, eg. <span class="ex" lang="bn">গরম</span> <span class="trans">gɔrôm</span>, <span class="meaning">hot</span> vs. <span class="ex" lang="bn">গড়ান</span> <span class="trans">gɔɽɑnô</span>, <span class="meaning">to roll</span>. There is no real way to tell when the inherent vowel is pronounced and when not in this position, except that it is usually pronounced following a word-final consonant cluster.</p>
+
+<p>Within a word also, some clusters don't use the <span class="name">hasant</span>  in Bengali, and the reader simply has to know that the inherent vowel is not pronounced, eg. <span class="eg" lang="bn">করতাল</span></p>
+
+<p>This is particularly common at morpheme boundaries, for example in verb forms.</p>
+
+<p>Consonant clusters that are represented by conjunct forms use the <span class="name">hasant</span> between consonants to invoke the shape changes. If the font has the glyphs needed to produce the conjunct the <span class="name">hasant</span> is hidden (see <a class="sectionref">clusters</a>). </p>
+
+<p class="ref"><a href="../../scripts/bengali/#refs">Refs:</a> Radice 3, 7-8, 21, 148; Daniels 400</p>
 </section>
 
 
@@ -1301,9 +1352,12 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 <section id="vowel_mappings">
 <h3>Vowel sounds  to characters</h3>
 
-<p class="instructions">This section maps  Bengali vowel sounds to common graphemes in the Bengali orthography, grouped by whether they are vowel signs ( <mark>vs</mark> ), or standalone ( <mark>s</mark> ). Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<p>This section maps  Bengali vowel sounds to common graphemes in the Bengali orthography.</p>
 
-<p class="instructions">Hyphens indicate a consonant with inherent vowel.</p>
+<p class="instructions highlight">Dependent vowels appear in the left column, standalone in the right. Hyphens indicate a consonant with inherent vowel.</p>
+
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
 
 
 
@@ -1627,11 +1681,25 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 
 
 
+<p>
+</p>
+
+
 
 
 
 <section id="consonants">
-<h2 id="h_consonants">Consonants</h2>
+<h2>Consonants</h2>
+
+
+<div id="consonant_notfound" class="instructions">
+<p>The Bangla orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>None.</li>
+</ul>
+</div>
+
 
 
 
@@ -1643,38 +1711,45 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 
 
 
-
-
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
+
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight">The left column is lowercase, and the right uppercase.</p>
 
 <p class="instructions">A number of letters have allophones which are not shown here. See the following sections for details. Normal letters are used as final consonants, but we list here some additional, dedicated finals.</p>
 
 
 <table class="soundSummary">
 <tr>
-<th rowspan="6">Initials:</th>
+<th>Stops</th>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="p,b,t,d,ʈ,ɖ,k,ɡ">প␣ব␣ভ␣দ␣ট␣ড␣ক␣গ</figure></td>
 </tr>
 <tr>
+<th>Aspirated</th>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="pʰ,bʰ,tʰ,dʰ,ʈʰ,ɖʰ,kʰ,kʰ,ɡʰ">ফ␣ত␣থ␣ধ␣ঠ␣ঢ␣খ␣ক্ষ␣ঘ</figure></td>
 </tr>
 <tr>
+<th>Affricates</th>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="t͡ʃ,t͡ʃʰ,d͡ʒ,d͡ʒ,d͡ʒʰ">চ␣ছ␣জ␣য␣ঝ</figure></td>
 </tr>
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ʃ,ʃ,ʃ,h">শ␣ষ␣স␣হ</figure></td>
 </tr>
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="m,n,n,n,ŋ">ম␣ন␣ণ␣ঞ␣ঙ</figure></td>
 </tr>
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="r,ɽ,ɽʱ,l,j">র␣ড়␣ঢ়␣ল␣য়</figure>
 </td>
 </tr>
 
 <tr>
-<th>Finals:</th>
+<th>Finals</th>
 <td>
 <figure class="summaryBox auto" data-cols="ipa,trans,transc">ৎ␣ঃ␣ং</figure>
 </td>
@@ -1755,35 +1830,8 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 
 
 
-
-<section id="novowel">
-<h3>Vowel absence</h3>
-
-<figure class="characterBox auto" data-cols="">্</figure>
-
-<p>Bengali uses <span class="hx">09CD</span> (called <span class="charExample inline" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="transc">hasant</span> <span class="ipa">hɔsonto</span></span> in Bengali) to indicate that the inherent vowel is not pronounced after a consonant, eg. the following explicitly represents just the sound <span class="ipa">k</span>.<span class="charExample" translate="no"><span class="ex" lang="bn">ক্</span> <span class="trans">k͓</span></span></p>
-
-<p>The <span class="name">hasant</span> is rarely seen. It is not used at the end of a word even though the inherent vowel is pronounced at the end of some words and not others, eg. <span class="ex" lang="bn">গরম</span> <span class="trans">gɔrôm</span>, <span class="meaning">hot</span> vs. <span class="ex" lang="bn">গড়ান</span> <span class="trans">gɔɽɑnô</span>, <span class="meaning">to roll</span>. There is no real way to tell when the inherent vowel is pronounced and when not in this position, except that it is usually pronounced following a word-final consonant cluster.</p>
-
-<p>Within a word also, some clusters don't use the <span class="name">hasant</span>  in Bengali, and the reader simply has to know that the inherent vowel is not pronounced, eg. <span class="eg" lang="bn">করতাল</span></p>
-
-<p>This is particularly common at morpheme boundaries, for example in verb forms.</p>
-
-<p>Consonant clusters that are represented by conjunct forms use the <span class="name">hasant</span> between consonants to invoke the shape changes. If the font has the glyphs needed to produce the conjunct the <span class="name">hasant</span> is hidden (see <a class="sectionref">clusters</a>). </p>
-
-<p class="ref"><a href="../../scripts/bengali/#refs">Refs:</a> Radice 3, 7-8, 21, 148; Daniels 400</p>
-</section>
-
-
-
-
-
-
-
-
-
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Bengali, and they are handled as described in the section <a class="secref">clusters</a>.</p>
 
@@ -1800,7 +1848,7 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <p>One letter and 2 diacritics represent syllable-final consonant sounds.</p>
 
@@ -2191,7 +2239,9 @@ although these may also be spelled with conjuncts, eg.
 <h3>Consonant sounds to characters</h3>
 
 
-<p class="instructions">This section maps Bengali consonant sounds to common graphemes in the Bengali orthography, grouped according to whether they are regular ( <mark>r</mark> ), conjuncts ( <mark>c</mark> ), or final ( <mark>f</mark> ). Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<p>This section maps Bengali consonant sounds to common graphemes in the Bengali orthography, grouped according to whether they are regular ( <mark>r</mark> ), conjuncts ( <mark>c</mark> ), or final ( <mark>f</mark> ).</p>
+
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
 
 
@@ -2836,23 +2886,52 @@ although these may also be spelled with conjuncts, eg.
 
 
 
+
+
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in the Bangla orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic), however there is a significant amount of interaction between glyphs, and some joining, around consonant clusters.</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/bengali/">Bengali character app</a>.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/beng/index.html" target="_blank">Bengali character app</a>.</p>
 
-<p>Bengali text is not cursive (ie. joined up like Arabic), however there is a significant amount of interaction between glyphs, and some joining, around consonant clusters.</p>
-<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 
 <!--section id="writing_styles">
 <h3>Writing styles</h3>
@@ -2965,7 +3044,7 @@ although these may also be spelled with conjuncts, eg.
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weights</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="prompts">tbd</p>
 </section>
 </section>
