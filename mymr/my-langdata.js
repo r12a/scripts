@@ -10,8 +10,7 @@ aux:"!§͏‍–—‘’†‡…′″",
 orth:`Myanmar. &nbsp; <a href="../scripts/myanmar" target="_blank">Details</a>.`,
 type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"no/zwsp", baseline:"romn", wrap:"word", hyphenation:"no",  direction:"ltr",  justification:"ig", 
 vowels:"inh:4 cm:10 vs:9 ind:7 base:အ/ʔ pre:1 comp:6 other:2",  clusters:"inv pk stk",  medials:"cm:4",  finals:"cm:1 vk:်", 
-linked:"mymr/my", fonts:"/pickers/mymr-my/", 
+linked:"mymr/my", fonts:"/pickers/mymr-my/", picker:"mymr-my", 
 },
-
 
 }

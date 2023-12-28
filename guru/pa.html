@@ -27,7 +27,6 @@
 
 <script src="pa-langdata.js"></script>
 <script src="pa-examples.js"></script>
-<script src="pa-translit.js">  </script>
 <script src="pa-globals.js"></script>
 </head>
 
@@ -64,7 +63,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->27 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -87,7 +86,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Punjabi (Gurmukhi) Orthography Notes, <!-- #BeginDate format:En2 -->11-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/guru/pa">https://r12a.github.io/scripts/guru/pa</a></small></p>
+<p class="refLine"><small>Richard Ishida, Punjabi (Gurmukhi) Orthography Notes, <!-- #BeginDate format:En2 -->27-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/guru/pa">https://r12a.github.io/scripts/guru/pa</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -166,29 +165,36 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>Gurmukhi text runs left to right in horizontal lines.</p>
 
-<p>Words are separated by spaces.</p>
+<p>Words are separated by spaces. There is no case distinction.</p>
 
-<p class="addToConsonants">Gujarati uses 32 consonant letters. The repertoire can be extended by applying the <span class="name">nukta</span> diacritic to 5 characters, to represent foreign sounds, particularly for words from Persian.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p>
 
-<p class="addToConsonants">A final <span class="trans">h</span> can be indicated using the <span class="name">visarga</span>, but otherwise final consonants are written using ordinary characters. ❯&nbsp;<a class="secref" title="Read more.">finals</a></p>
 
-<p class="addToConsonants">Although consonant clusters are frequent, there are very few conjuncts, mostly just <span class="trans">r</span> and <span class="trans">h</span>, which are subjoined. This leads to difficulties for automatic transcription. ❯&nbsp;<a class="secref" title="Read more.">clusters</a></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Gujarati uses <a class="seclink" href="#basicC">32 consonant letters</a>. The repertoire can be extended by applying the <span class="name">nukta</span> diacritic to <a class="seclink" href="#extendedC">5 characters</a>, to represent foreign sounds, particularly for words from Persian.</p>
 
-<p class="addToConsonants">Consonant gemination is indicated, unusually for an Indian script, by a special diacritic that appears before the letter being lengthened. ❯&nbsp;<a class="secref" title="Read more.">clength</a></p>
+<p class="addToConsonants">A <a class="seclink" href="#finals">final <span class="trans">h</span></a> can be indicated using the <span class="name">visarga</span>, but otherwise final consonants are written using ordinary characters.</p>
 
-<p class="addToVowels">This orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with one <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowel</a>. It represents other vowels using 9 <a class="termref" href="../glossary/index.html#vowelsign">vowel signs, which are all </a> combining marks. The inherent vowel is usually not pronounced at the end of a word, however there is often a ghost <span class="ipa">ᵊ</span>. <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
+<p class="addToConsonants">Although <a class="seclink" href="#clusters">consonant clusters</a> are frequent, there are very few conjuncts, mostly just <span class="trans">r</span> and <span class="trans">h</span>, which are subjoined. This leads to difficulties for automatic transcription.</p>
 
-<p class="addToVowels">Punjabi has 1 <a class="termref" href="../glossary/index.html#prebase">pre-base vowel</a> and no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>. A single Unicode character is used per base consonant, so there are no multipart vowels.</p>
+<p class="addToConsonants">Consonant <a class="seclink" href="#clength">gemination</a> is indicated, unusually for an Indian script, by a special diacritic that appears before the letter being lengthened.</p>
 
-<p class="addToVowels"><a class="termref" href="../glossary/index.html#standalone">Standalone vowel</a> sounds are represented by 10 <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, one for each vowel sound, including the inherent vowel. There are no unique shapes for independent vowels. Instead vowel signs are added to one of three consonants that are used only as vowel carriers, however Unicode provides separate code points for all the combinations and deprecates the use of 2 of the carriers. ❯&nbsp;<a class="secref" title="Read more.">standalone</a></p>
 
-<p class="addToVowels">There are two diacritics for nasalisation, <span class="trans">tippi</span> and <span class="trans">bindi</span>, each used in different phonetic contexts. ❯&nbsp;<a class="secref" title="Read more.">nasalisation</a></p>
 
-<p class="addToVowels">Punjabi is a tonal language. Tones are normally indicated by the use of certain consonants, rather than diacritics. ❯&nbsp;<a class="secref" title="Read more.">tones</a></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">This orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with one <a class="seclink" href="#inherent">inherent vowel</a>. It represents other vowels using <a class="seclink" href="#combiningV">9 vowel signs</a>, which are all  combining marks. The inherent vowel is usually not pronounced at the end of a word, however there is often a ghost <span class="ipa">ᵊ</span>.</p>
 
-<p>Gurmukhi has its own set of native digits, however modern text tends to use ASCII digits. ❯&nbsp;<a class="secref" title="Read more.">numbers</a></p>
+<p class="addToVowels">Punjabi has 1 <a class="seclink" href="#prebase">pre-base vowel</a> and no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>. A single Unicode character is used per base consonant, so there are no multipart vowels.</p>
 
-<p>Punctuation is mostly western, but dandas are used for sentence and verse final punctuation.</p>
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are represented by 10 <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, one for each vowel sound, including the inherent vowel. There are no unique shapes for independent vowels. Instead vowel signs are added to one of three consonants that are used only as vowel carriers, however Unicode provides separate code points for all the combinations and deprecates the use of 2 of the carriers.</p>
+
+<p class="addToVowels">There are two diacritics for <a class="seclink" href="#nasalisation">nasalisation</a>, <span class="trans">tippi</span> and <span class="trans">bindi</span>, each used in different phonetic contexts.</p>
+
+<p class="addToVowels">Punjabi is a <a class="seclink" href="#tones">tonal language</a>. Tones are normally indicated by the use of certain consonants, rather than diacritics.</p>
+
+
+<p>Gurmukhi has its own set of <a class="seclink" href="#numbers">native digits</a>, however modern text tends to use ASCII digits.</p>
+
+<p><a class="seclink" href="#phrase">Punctuation</a> is mostly western, but dandas are used for sentence and verse final punctuation.</p>
 </section>
 
 
@@ -654,14 +660,49 @@ alveolar</th>
 </section>
 </section>
 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
-  
-  
 
 
+
+
+
+<p>
+<span id="otherV"></span>
+<span id="circumgraphs"></span>
+<span id="vlength"></span>
+</p>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>The Punjabi Gurmukhi orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+
+<li><a class="termref" target="_blank" href="../glossary/index.html#circumgraph">Circumgraphs</a>.</li>
+
+<li>Vowel length.</li>
+</ul>
+</div>
+
 
 
 
@@ -672,10 +713,15 @@ alveolar</th>
 
 
 
-<section id="basicV">
-<h3>Vowel summary</h3>
 
-<p class="instructions">The right-hand column shows standalone vowels.</p>
+
+<section id="basicV">
+<h4>Vowel summary table</h4>
+
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">ⓘ represents the inherent vowel. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here). The right-hand column shows standalone vowels.</p>
 
 <table class="soundSummary">
 <tr>
@@ -984,6 +1030,26 @@ is typically pronounced <span class="ipa">h</span> when syllable-initial.</p>
 
 
 
+<section id="novowel">
+<h3>Vowel absence</h3>
+
+<p>Unlike  most other indic scripts,  there is generally no indication when a consonant is not pronounced with a following inherent vowel. (For the few occasions where this is made clear see   <a class="#secref">clusters</a>.) Generally speaking, the reader simply has to know whether an inherent vowel is pronounced or not, eg. <span class="eg" lang="pa">ਉਤਸੁਕ</span></p>
+
+<p>The inherent vowel is generally not pronounced at the end of a word (see the previous example), however the last letter is often followed by a <span class="ipa">ᵊ</span> ghost, eg.</p>
+
+<p><span class="eg" lang="pa" dir="ltr">ਅੱਜ</span></p>
+
+<p>Gurmukhi can use <span class="codepoint" translate="no"><span lang="pa">&#x0A4D;</span> [<a href="/scripts/gurmukhi/block#char0A4D"><span class="uname">U+0A4D GURMUKHI SIGN VIRAMA</span></a>]</span> (called <span class="name">halant</span> in Punjabi) to kill the inherent vowel after a consonant, but it is rarely seen. It isn't used at the end of a word, and is normally only used in modern Punjabi for subjoined <span class="trans">r</span>, <span class="trans">ʋ</span> (rare), and <span class="trans">h</span>, in which case it is invisible.</p>
+
+<p>The virama may also be used occasionally to suppress the vowel in Sanskritised text, or in dictionaries for extra phonetic information.</p>
+</section>
+
+
+
+
+
+
+
 
 
 
@@ -1014,9 +1080,11 @@ is typically pronounced <span class="ipa">h</span> when syllable-initial.</p>
 <section id="vowel_mappings">
 <h3>Vowel sounds to characters</h3>
 
-<p class="instructions">This section maps Punjabi vowel sounds to common graphemes in the Gurmukhi orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<p>This section maps Punjabi vowel sounds to common graphemes in the Gurmukhi orthography.</p>
 
-<p class="instructions"><strong>Dependent vowels are shown to the left, and independent vowels are shown on the right</strong></p>
+<p class="instructions highlight">Dependent vowels are shown to the left, and independent vowels are shown on the right</p>
+
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
 
 <div id="mapv_high" class="map">
@@ -1183,11 +1251,26 @@ is typically pronounced <span class="ipa">h</span> when syllable-initial.</p>
 
 
 
+<p>
+<!--span id="clength"></span-->
+</p>
+
+
 
 
 
 <section id="consonants">
 <h2>Consonants</h2>
+
+
+<div id="consonant_notfound" class="instructions">
+<p>The Punjabi Gurmukhi orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>—</li>
+</ul>
+</div>
+
 
 
 
@@ -1200,14 +1283,16 @@ is typically pronounced <span class="ipa">h</span> when syllable-initial.</p>
 
 
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<p class="instructions"><span class="ch">ਹ</span> can be used in combination with other consonants to indicate tone. Those combinations are not shown here. Hyphens indicate consonants that play a role in tone marking, depending on the position in the word.</p>
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight"><span class="ch">ਹ</span> can be used in combination with other consonants to indicate tone. Those combinations are not shown here. Hyphens indicate consonants that play a role in tone marking, depending on the position in the word.</p>
 
 
 <table class="soundSummary">
 <tr>
-<th>Initials:</th>
+<th>Initials</th>
 <td>
 <figure class="summaryBox auto" data-cols="ipa,trans,transc">ਪ␣ਭ␣ਬ␣ਤ␣ਧ␣ਦ␣ਟ␣ਢ␣ਡ␣ਕ␣ਘ␣ਗ</figure>
 <figure class="summaryBox auto" data-cols="ipa,trans,transc">ਫ␣ਥ␣ਠ␣ਖ</figure>
@@ -1219,7 +1304,7 @@ is typically pronounced <span class="ipa">h</span> when syllable-initial.</p>
 </tr>
 
 <tr>
-<th>Finals:</th>
+<th>Finals</th>
 <td>
 <figure class="summaryBox auto" data-cols="ipa,trans,transc">ਃ</figure>
 </td>
@@ -1302,28 +1387,8 @@ to
 
 
 
-
-
-<section id="novowel">
-<h3>Vowel absence</h3>
-
-<p>Unlike  most other indic scripts,  there is generally no indication when a consonant is not pronounced with a following inherent vowel. (For the few occasions where this is made clear see   <a class="#secref">clusters</a>.) Generally speaking, the reader simply has to know whether an inherent vowel is pronounced or not, eg. <span class="eg" lang="pa">ਉਤਸੁਕ</span></p>
-
-<p>The inherent vowel is generally not pronounced at the end of a word (see the previous example), however the last letter is often followed by a <span class="ipa">ᵊ</span> ghost, eg.</p>
-
-<p><span class="eg" lang="pa" dir="ltr">ਅੱਜ</span></p>
-
-<p>Gurmukhi can use <span class="codepoint" translate="no"><span lang="pa">&#x0A4D;</span> [<a href="/scripts/gurmukhi/block#char0A4D"><span class="uname">U+0A4D GURMUKHI SIGN VIRAMA</span></a>]</span> (called <span class="name">halant</span> in Punjabi) to kill the inherent vowel after a consonant, but it is rarely seen. It isn't used at the end of a word, and is normally only used in modern Punjabi for subjoined <span class="trans">r</span>, <span class="trans">ʋ</span> (rare), and <span class="trans">h</span>, in which case it is invisible.</p>
-
-<p>The virama may also be used occasionally to suppress the vowel in Sanskritised text, or in dictionaries for extra phonetic information.</p>
-</section>
-
-
-
-
-
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <p>tbd</p>
 <!--p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Gujarati, and they are handled as described in the section <a class="secref">clusters</a>.</p>
@@ -1338,7 +1403,7 @@ to
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <p>Syllable-final consonant sounds are generally represented by ordinary consonant characters (or perhaps a conjunct with <span class="trans">h</span> for tonal indications). However, a final <span class="ipa">h</span> can sometimes be represented by the <span class="name">visarga</span> (<span class="codepoint" translate="no"><span lang="pa">&#x0A03;</span> [<a href="/scripts/gurmukhi/block#char0A03"><span class="uname">U+0A03 GURMUKHI SIGN VISARGA</span></a>]</span>).</p>
 </section>
@@ -1464,7 +1529,9 @@ though this appears to be quite rare, eg.</p>
 <section id="consonant_mappings">
 <h3>Consonant sounds to characters</h3>
 
-<p class="instructions">This section maps Punjabi consonant sounds to common graphemes in the Gurmukhi orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<p>This section maps Punjabi consonant sounds to common graphemes in the Gurmukhi orthography.</p>
+
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
 
 
@@ -1965,24 +2032,52 @@ though this appears to be quite rare, eg.</p>
 
 
 
-  
-  
+
+
+
+
+
+
+
+
+
+<p>
+<span id="transforms"></span>
+</p>
+
+
+
+
 
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
+
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in the Punjabi Gurmukhi orthography.</p>
+
+<ul>
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="/pickers/gurmukhi/">Gurmukhi character app</a>.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/guru/index.html" target="_blank">Gurmukhi character app</a>.</p>
 
-<p>The orthography has no case distinction.</p>
 
 
 
@@ -2030,7 +2125,7 @@ though this appears to be quite rare, eg.</p>
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 
 <p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/6" target="_blank">type samples</a>.</p>
 
