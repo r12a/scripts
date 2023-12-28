@@ -27,7 +27,6 @@
 
 <script src="th-langdata.js"></script>
 <script src="th-examples.js"></script>
-<script src="th-translit.js">  </script>
 <script src="th-globals.js"></script>
 </head>
 
@@ -59,7 +58,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 December, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->28 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -79,7 +78,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Thai Orthography Notes, <!-- #BeginDate format:En2 -->02-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/thai/th">https://r12a.github.io/scripts/thai/th</a></small></p>
+<p class="refLine"><small>Richard Ishida, Thai Orthography Notes, <!-- #BeginDate format:En2 -->28-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/thai/th">https://r12a.github.io/scripts/thai/th</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -155,33 +154,38 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 <p>Thai text runs left to right in horizontal lines.</p>
 
-<p>Spaces  separate phrases, rather than words. ❯ <a class="secref" title="Read more.">word</a></p>
+<p><a class="seclink" href="#word">Spaces  separate phrases</a>, rather than words.</p>
 
-<p class="addToConsonants">Modern Thai uses 41 basic consonant letters. Each onset consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (live/dead), plus any tone mark.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span> ❯&nbsp;<a class="secref" title="Read more.">tones</a></p> 
 
-<p class="addToConsonants">No <a class="termref" href="../glossary/index.html#conjunct">conjuncts</a> are used for consonant clusters. ❯&nbsp;<a class="secref" title="Read more.">clusters</a></p>
 
-<p class="addToConsonants">Syllable-initial clusters and syllable-final consonant sounds are all written with ordinary consonant letters. It can therefore be difficult to algorithmically detect syllable boundaries.  ❯ <a class="secref" title="Read more.">finals</a></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Modern Thai uses <a class="seclink" href="#basicC">41 basic consonant letters</a>. Each onset consonant is associated with a high, mid, or low class related to tone. <a class="seclink" href="#tones">Tone</a> is indicated by a combination of the consonant class, the syllable type (live/dead), plus any tone mark.</p> 
 
-<p class="addToVowels">This orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with 3 <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowels</a>, pronounced <span class="ipa">o</span> in a closed syllable and <span class="ipa">a</span> in an open syllable, and <span class="ipa">ɔː</span> before a final <span class="ipa">-r</span>.</p>
+<p class="addToConsonants">No <a class="termref" href="../glossary/index.html#conjunct">conjuncts</a> are used for consonant clusters.</p>
 
-<p class="addToVowels">Other post-consonant vowel sounds are represented using 8 combining marks, 8 vowel letters, and 4 consonants, very often combined into <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a>. There are 5 <a class="termref" href="../glossary/index.html#prebase">pre-base</a> vowel glyphs, but no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>, although the many multipart vowel components  often appear on more than one side of the base.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
+<p class="addToConsonants"><a class="seclink" href="#onsets">Syllable-initial clusters</a> and <a class="seclink" href="#finals">syllable-final consonant</a> sounds are all written with ordinary consonant letters. It can therefore be difficult to algorithmically detect syllable boundaries.</p>
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">This orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with <a class="seclink" href="#inherent">3 inherent vowels</a>, pronounced <span class="ipa">o</span> in a closed syllable and <span class="ipa">a</span> in an open syllable, and <span class="ipa">ɔː</span> before a final <span class="ipa">-r</span>.</p>
+
+<p class="addToVowels">Other post-consonant vowel sounds are represented using <a class="seclink" href="#combiningV">8 combining marks</a>, <a class="seclink" href="#vletter">8 vowel letters</a>, and <a class="seclink" href="#otherV">4 consonants</a>, very often combined into <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a>. There are <a class="seclink" href="#prebase">5 pre-base</a> vowel glyphs, but no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>, although the many multipart vowel components  often appear on more than one side of the base.</p>
 
 <p class="addToVowels">Thai uses <em>visual placement</em>: only the 8 vowel components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are <em>typed in the order seen</em>.</p>
 
-<p class="addToVowels">This page lists 37 <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a> (including diphthongs) made from 12 dedicated vowel characters, and 4 consonants.  Multipart vowels can involve up to 4 glyphs (plus a tone mark), and glyphs can surround the base consonant(s) on up to 3 sides. ❯ <a class="secref" title="Read more.">compositeV</a></p>
+<p class="addToVowels">This page lists <a class="seclink" href="#compositeV">37 multipart vowels</a> (including diphthongs) made from 12 dedicated vowel characters, and 4 consonants.  Multipart vowels can involve up to 4 glyphs (plus a tone mark), and glyphs can surround the base consonant(s) on up to 3 sides.</p>
 <p class="addToVowels">The glyphs used to represent vowels,  whether alone or in multipart vowels, are arranged around a <em>syllable onset</em>, which may be 2 consonants, rather than just around the immediately preceding consonant. For an example of the effect this produces, see <a class="secref">prebase</a> and <a class="secref">compositeV</a>.</p>
 
-<p class="addToVowels">There are no <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, and <a class="termref" href="../glossary/index.html#standalone">standalone vowel</a> sounds are written using  vowel signs applied to
-<span class="codepoint noindex" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span>. ❯ <a class="secref" title="Read more.">standalone</a></p>
+<p class="addToVowels">There are no <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, and <a class="seclink" href="#standalone">standalone vowel</a> sounds are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span>.</p>
 
 <p class="addToVowels">Thai vowels all come in short and long forms, which are phonemically distinctive. A set of diphthongs end in <span class="ipa">a̯</span>, and most vowels can be followed by either <span class="ipa">w</span> or <span class="ipa">j</span>. </p>
 
 <p class="addToVowels">Vowel sounds are often written differently when they appear in a closed vs. open syllable. Short vowels in open syllables usually end with a glottal stop.</p>
 
-<p>Thai has <a class="termref" href="../glossary/index.html#vocalic">vocalics</a>. ❯ <a class="secref" title="Read more.">vocalics</a></p>
+<p class="addToVowels">Thai has <a class="seclink" href="#vocalics">vocalics</a>.</p>
 
-<p>Thai has native digits, and they are commonly used. ❯ <a class="secref" title="Read more.">numbers</a></p>
+<p>Thai has <a class="seclink" href="#numbers">native digits</a>, and they are commonly used.</p>
 </section>
 
 
@@ -1183,6 +1187,7 @@ alveolar</th>
 </section>
 
 
+ 
 
 
 
@@ -1190,26 +1195,43 @@ alveolar</th>
 
 
 
+<p>
+</p>
 
+ 
+
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
 
 
-<div id="vowel_description"></div>
 
+<div id="vowel_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Nasalisation (not a feature of the language).</li>
+</ul>
+</div>
+
+
+
+<div id="vowel_description"></div>
 <p>See also <a class="sectionref">vocalics</a>.</p>
 
 
 
 
-
-
-
-
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">ⓘ represents the inherent vowel. Not listed here are 18 additional diphthongs (shown in the sections below) that are created by adding a <span class="ipa">-j</span> or <span class="ipa">-w</span> glide after vowels shown in this table. ◌ indicates the location of a consonant, but does not necessarily indicate a combining mark.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">ⓘ represents the inherent vowel. Not listed here are 18 additional diphthongs (shown in the sections below) that are created by adding a <span class="ipa">-j</span> or <span class="ipa">-w</span> glide after vowels shown in this table. ◌ indicates the location of a consonant, but does not necessarily indicate a combining mark.</p>
+
+
 
 <table class="soundSummary">
 <tr>
@@ -1917,8 +1939,26 @@ alveolar</th>
 
 <p class="info">The expected typing and storage position for tone marks is immediately after the base consonant of the syllable, or after a superscript or subscript vowel mark if there is one. </p>
 
-<p class="info">The tone mark should be typed before <span class="codepoint" translate="no"><span lang="th">&#x0E33;</span> [<a href="/scripts/thai/block#char0E33"><span class="uname">U+0E33 THAI CHARACTER SARA AM</span></a>]</span>, but should be displayed above the <span class="name">nikhahit</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ก่ำ</span></span></p>
+<p class="info">The tone mark should be typed before <span class="codepoint" translate="no"><span lang="th">&#x0E33;</span> [<a href="/scripts/thai/block#char0E33"><span class="uname">U+0E33 THAI CHARACTER SARA AM</span></a>]</span>, but should be displayed above the <span class="name">nikhahit</span> by the application, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ก่ำ</span></span></p>
 </section>
+</section>
+
+
+
+
+
+
+<section id="novowel">
+<h3>Vowel absence</h3>
+
+<figure class="characterBox auto" data-cols="">์</figure>
+
+<p>Vowel absence after syllable-final consonants is not normally marked in any way. Nor is it marked in syllable-initial clusters.</p>
+
+<p><span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E4C;</span> [<a href="/scripts/thai/block#char0E4C"><span class="uname">U+0E4C THAI CHARACTER THANTHAKHAT​</span></a>]</span>
+can be used  above a consonant or syllable when it is not pronounced (usually at the end of a syllable).</p>
+<p class="instructions">Click on the words to see the pronunciation more clearly.</p>
+<p><span class="eg" lang="th">รถเมล์</span><span class="eg" lang="th">ศักดิ์สิทธิ์</span> It is often used for foreign loan words, eg. <span class="eg" lang="th">คอมพิวเตอร์</span> <span class="eg" lang="th">โปสการ์ด</span> <span class="eg" lang="th">สแตมป์</span></p>
 </section>
 
 
@@ -2638,14 +2678,9 @@ That character is only used in this context.</p>
 
 
 
-
-
-
-
-
-
-
-
+<p>
+<span id="extendedC"></span>
+</p>
 
 
 
@@ -2654,53 +2689,70 @@ That character is only used in this context.</p>
 <h2>Consonants</h2>
 
 
+<div id="consonant_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
+
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+
+<li>Gemination or consonant lengthening.</li>
+</ul>
+</div>
+
+
+
 
 <div id="consonant_description"></div>
 
 
 
 
-
-
-
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<p class="instructions">The initial consonants are split across high, mid, and low columns.</p>
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight">The first few rows are for initial consonants. They are split across high, mid, and low columns. The later rows are for syllable-final consonants.</p>
 
 <table class="soundSummary">
 <tr>
-<th rowspan="5">Initials:</th>
+<th>Stops</th>
 <td><figure class="summaryBox auto" data-ipa="pʰ,tʰ,tʰ,kʰ" data-cols="trans,transc">ผ␣ถ␣ฐ␣ข</figure></td>
 <td><figure class="summaryBox auto" data-ipa="p,b,t,t,d,d,k" data-cols="trans,transc">ป␣บ␣ต␣ฏ␣ด␣ฎ␣ก</figure></td><td><figure class="summaryBox auto" data-ipa="pʰ,pʰ,tʰ,tʰ,tʰ,kʰ,kʰ" data-cols="trans,transc">พ␣ภ␣ท␣ฑ␣ฒ␣ค␣ฆ</figure></td>
 </tr>
 
 <tr>
+<th>Affricates</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ฉ</figure></td>
 <td><figure class="summaryBox auto" data-ipa="t͡ɕ" data-cols="trans,transc">จ</figure></td>
 <td><figure class="summaryBox auto" data-ipa="t͡ɕʰ,t͡ɕʰ" data-cols="trans,transc">ช␣ฌ</figure></td>
 </tr>
 
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto" data-ipa="f,s,s,s,h" data-cols="trans,transc">ฝ␣ส␣ศ␣ษ␣ห</figure></td>
 <td>&nbsp;</td>
 <td><figure class="summaryBox auto" data-ipa="f,s,h" data-cols="trans,transc">ฟ␣ซ␣ฮ</figure></td>
 </tr>
 
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">หม␣หน␣หง</figure></td>
 <td>&nbsp;</td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ม␣น␣ณ␣ง</figure></td>
 </tr>
 
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">หว␣หร␣หล␣หย␣หญ</figure></td>
 <td>&nbsp;</td>
 <td><figure class="summaryBox auto" data-ipa="w,r,l,l,j,j" data-cols="trans,transc">ว␣ร␣ล␣ฬ␣ย␣ญ</figure></td>
 </tr>
 
 <tr>
-<th rowspan="3">Finals:</th>
+<th rowspan="3">Finals</th>
 <td colspan="3"><figure class="summaryBox auto" data-ipa="p,p,p,p,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,k,k,k,k,k,k" data-cols="trans,transc">ป␣พ␣ภ␣บ␣ถ␣ฐ␣ต␣ฏ␣ท␣ธ␣ฑ␣ฒ␣ด␣ฎ␣ถ␣ฐ␣ต␣ฏ␣ท␣ธ␣ฑ␣ฒ␣ด␣ฎ␣จ␣ช␣ส␣ศ␣ษ␣ซ␣ข␣ก␣ค␣ฆ</figure></td>
 </tr>
 <tr>
@@ -2834,27 +2886,9 @@ That character is only used in this context.</p>
 
 
 
-<section id="novowel">
-<h3>Vowel absence</h3>
-
-<figure class="characterBox auto" data-cols="">์</figure>
-
-<p>Vowel absence after syllable-final consonants is not normally marked in any way. Nor is it marked in syllable-initial clusters.</p>
-
-<p><span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E4C;</span> [<a href="/scripts/thai/block#char0E4C"><span class="uname">U+0E4C THAI CHARACTER THANTHAKHAT​</span></a>]</span>
-can be used  above a consonant or syllable when it is not pronounced (usually at the end of a syllable).</p>
-<p class="instructions">Click on the words to see the pronunciation more clearly.</p>
-<p><span class="eg" lang="th">รถเมล์</span><span class="eg" lang="th">ศักดิ์สิทธิ์</span> It is often used for foreign loan words, eg. <span class="eg" lang="th">คอมพิวเตอร์</span> <span class="eg" lang="th">โปสการ์ด</span> <span class="eg" lang="th">สแตมป์</span></p>
-</section>
-
-
-
-
-
-
 
 <section id="onsets">
-<h3>Onset clusters</h3>
+<h3>Onsets</h3>
 
 <p>Consonant clusters at the start of a syllable are usually one of the following:</p>
 
@@ -2922,7 +2956,7 @@ can be used  above a consonant or syllable when it is not pronounced (usually at
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <p>Only the phonemes <span class="ipa">p, t, k, m, n, ŋ</span> occur at the end of a syllable, however many more consonant letters can appear in final position. </p>
 <p>The following consonant letters are pronounced differently in syllable-initial and syllable-final positions.</p>
@@ -3765,25 +3799,51 @@ can be used  above a consonant or syllable when it is not pronounced (usually at
 
 
 
+
+
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="gsub"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Context-based shaping (letters do not interact).</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
-
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
-
 <span id="gsubInline">context-based shaping</span>;
-
 <span id="gposInline">context-based positioning</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
+<span id="transformsInline">case &amp; other character transforms</span>.
+</p>
 
-<span id="baselinesInline">baselines, line height, etc.</span>;
-
-<span id="fontstyleInline">font styles</span>;
-
-<span id="transformsInline">case &amp; other character transforms</span>.</p>
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/thai/index.html">Thai character app</a>.</p>
-<p>The orthography has no case distinction, and no special transforms are needed to convert between characters. Nor is printed text cursive.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/thai/index.html" target="_blank">Thai character app</a>.</p>
 
 
 
@@ -3872,7 +3932,7 @@ can be used  above a consonant or syllable when it is not pronounced (usually at
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 
 <p><a href="http://www.fontpad.co.uk/thai-italics-1/">Ben Mitchell</a> describes how italicisation is used for meta text and to convey the ‘about’ voice, rather than for emphasis or names of things (for which  bold is used).</p>
 <p>Italicisation tends to be applied to whole paragraphs or groups of paragraphs, for such things as picture captions, bylines, and other labels, commentaries, summaries such as standfirsts in magazines or news stories, and signposting. It is also regularly used for direct speech between quote marks.</p>

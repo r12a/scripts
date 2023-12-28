@@ -27,8 +27,6 @@
 
 <script src="nod-langdata.js"></script>
 <script src="nod-examples.js"></script>
-<script src="kkh-translit.js">  </script>
-<script src="nod-translit.js">  </script>
 <script src="nod-globals.js"></script>
 </head>
 
@@ -62,7 +60,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->28 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -84,7 +82,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Northern Thai (Lanna) Orthography Notes, <!-- #BeginDate format:En2 -->11-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/lana/nod">https://r12a.github.io/scripts/lana/nod</a></small></p>
+<p class="refLine"><small>Richard Ishida, Northern Thai (Lanna) Orthography Notes, <!-- #BeginDate format:En2 -->28-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/lana/nod">https://r12a.github.io/scripts/lana/nod</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -157,26 +155,30 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>The Tai Tham script is an <a class="termref" href="../glossary/index.html/#abugida">abugida</a>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In Tai Tham, consonants carry an inherent vowel. See the table to the right for a brief overview of  features for the modern Northern Thai orthography.</p>
 
-<p>Northern Thai text runs left to right in horizontal lines.</p>
+<p>Northern Thai text runs left to right in horizontal lines. <a class="seclink" href="#word">Words</a> are not separated by spaces, however syllables may be separated by <abbr title="Zero width space">ZWSP</abbr>, as long as they don't fall inside a stack.</p>
 
-<p>Words are not separated by spaces, however syllables may be separated by <abbr title="Zero width space">ZWSP</abbr>, as long as they don't fall inside a stack.</p>
 
-<p class="addToConsonants">Each onset consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p> 
 
-<p class="addToConsonants">Tai Tham has stacked consonants, but these do not necessarily indicate consonant clusters. The script is unusual in that any consonant in a stack can retain its <a class="termref" href="../glossary/index.html/#inherentvowel">inherent vowel</a>, or be associated with a <a class="termref" href="../glossary/index.html/#vowelsign">vowel sign</a>. The <span class="name">sakot</span>, which produces stacks, is never visible. ❯ <a class="secref" title="Read more.">clusters</a></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Each onset consonant is associated with a high, mid, or low class related to tone. <a class="seclink" href="#tones">Tone</a> is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.</p> 
+
+<p class="addToConsonants">Tai Tham has <a class="seclink" href="#clusters">stacked consonants</a>, but these do not necessarily indicate consonant clusters. The script is unusual in that any consonant in a stack can retain its <a class="termref" href="../glossary/index.html/#inherentvowel">inherent vowel</a>, or be associated with a <a class="termref" href="../glossary/index.html/#vowelsign">vowel sign</a>. The <span class="name">sakot</span>, which produces stacks, is never visible.</p>
 
 <p class="addToConsonants">Stacks can  span word boundaries.</p>
 
-<p class="addToConsonants">Syllable-initial clusters use 2 dedicated code points for the medial <span class="trans">l</span>, and a subjoined letter for medial <span class="trans">w</span>. ❯ <a class="secref" title="Read more.">onsets</a></p>
+<p class="addToConsonants"><a class="seclink" href="#onsets">Syllable-initial clusters</a> use 2 dedicated code points for the medial <span class="trans">l</span>, and a subjoined letter for medial <span class="trans">w</span>.</p>
 
-<p class="addToConsonants">Syllable-final consonant sounds can be written using 6 special diacritics, but otherwise use ordinary letters, which may or may not be subjoined depending on the context. ❯ <a class="secref" title="Read more.">finals</a></p>
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final consonant</a> sounds can be written using 6 special diacritics, but otherwise use ordinary letters, which may or may not be subjoined depending on the context.</p>
 
-<p class="addToVowels">The Northern Thai orthography is an <a class="termref" href="../glossary/index.html/#abugida">abugida</a> with one <a class="termref" href="../glossary/index.html/#inherentvowel">inherent vowel</a>, pronounced <span class="ipa">a</span>. </p>
-<p class="addToVowels">Other post-consonant vowels are written using 19 combining marks and 3 consonant letters (2 of which as subjoined forms). Unlike Thai and Lao, all vowel signs are combining marks, and are stored after the base character.  Vowels are often written differently when they appear in a closed vs. open syllable. There are  5 <a class="termref" href="../glossary/index.html/#prebase">pre-base vowel signs</a>, but no <a class="termref" href="../glossary/index.html/#circumgraph">circumgraphs</a>.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
 
-<p class="addToVowels">This page lists 29 <a class="termref" href="../glossary/index.html/#compositevowel">multipart vowels</a> (made from 9 vowel signs, and 3 consonants/diacritics).  Multipart vowels can involve up  to 5 glyphs,  which can surround the base consonant(s) on up to 4 sides. ❯ <a class="secref" title="Read more.">compositeV</a></p>
 
-<p class="addToVowels">There is an incomplete set of <a class="termref" href="../glossary/index.html/#independentvowel">independent vowels</a>, and <a class="termref" href="../glossary/index.html/#standalone">standalone vowel</a> sounds are typically written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span>. ❯ <a class="secref" title="Read more.">standalone</a></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">The Northern Thai orthography is an <a class="termref" href="../glossary/index.html/#abugida">abugida</a> with one <a class="seclink" href="#inherent">inherent vowel</a>, pronounced <span class="ipa">a</span>. </p>
+<p class="addToVowels">Other post-consonant vowels are written using <a class="seclink" href="#combiningV">19 combining marks</a> and <a class="seclink" href="#otherV">3 consonant letters</a> (2 of which as subjoined forms). Unlike Thai and Lao, all vowel signs are combining marks, and are stored after the base character.  Vowels are often written differently when they appear in a closed vs. open syllable. There are  <a class="seclink" href="#prebase">5 pre-base vowel signs</a>, but no <a class="termref" href="../glossary/index.html/#circumgraph">circumgraphs</a>.</p>
+
+<p class="addToVowels">This page lists <a class="seclink" href="#compositeV">29 multipart vowels</a> (made from 9 vowel signs, and 3 consonants/diacritics).  Multipart vowels can involve up  to 5 glyphs,  which can surround the base consonant(s) on up to 4 sides.</p>
+
+<p class="addToVowels">There is an incomplete set of <a class="termref" href="../glossary/index.html/#independentvowel">independent vowels</a>, and <a class="seclink" href="#standalone">standalone vowel</a> sounds are typically written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span>.</p>
 
 <p>Northern Thai and Khün not only use a slightly different set of characters, but  a number of characters have consistently divergeant shapes.</p>
 </section>
@@ -831,35 +833,60 @@ glottalised</td>
 </section>
 </section>
 
+ 
 
 
 
 
-  
 
 
 
+<p>
+<span id="circumgraphs"></span>
+<!--span id="vlength"></span>
+<span id="nasalisation"></span>
+<span id="novowel"></span-->
+</p>
+
+ 
+
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
 
 
 
+<div id="vowel_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li><a class="termref" target="_blank" href="../glossary/index.html#circumgraph">Circumgraphs</a>.</li>
+
+<!--li>Vowel length.</li>
+
+<li>Nasalisation (not a feature of the language).</li-->
+
+<!--li>Consonants that are not followed by a vowel.</li-->
+</ul>
+</div>
+
+
+
 <div id="vowel_description"></div>
-
-
 <p class="instructions">Dashes are used to indicate the location of a consonant or consonant cluster. Prescript vowel signs have been stored before the hyphen because of the limitations of the font, but in reality all vowel signs should occur after the consonant they modify.</p>
 
 
 
 
-
-
-
-
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">ⓘ represents the inherent vowel. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here). Standalone vowels are shown in the right-hand column.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">ⓘ represents the inherent vowel. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here). Standalone vowels are shown in the right-hand column.</p>
+
 
 <table class="soundSummary">
 <tr>
@@ -1379,6 +1406,18 @@ is pronounced as the diphthong <span class="ipa">ia</span>  when it appears alon
 
 
 
+<section id="novowel">
+<h3>Consonants with no following vowel</h3>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+
 <section id="vowel_mappings">
 <h3>Vowel sounds mapped to characters</h3>
 
@@ -1777,13 +1816,10 @@ is pronounced as the diphthong <span class="ipa">ia</span>  when it appears alon
 
 
 
-
-
-
-
-
-
-
+<p>
+<span id="extendedC"></span>
+<!--span id="clength"></span-->
+</p>
 
 
 
@@ -1792,19 +1828,31 @@ is pronounced as the diphthong <span class="ipa">ia</span>  when it appears alon
 <h2>Consonants</h2>
 
 
+<div id="consonant_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
+
+<!--li>Gemination or consonant lengthening.</li-->
+</ul>
+</div>
+
+
+
 
 <div id="consonant_description"></div>
 
 
 
 
-
-
-
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<p class="instructions">Columns represent high, medium, and low class, left to right.</p>
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight">Columns represent high, medium, and low class, left to right.</p>
+
 
 <table class="soundSummary">
 <tr>
@@ -1953,7 +2001,7 @@ is pronounced as the diphthong <span class="ipa">ia</span>  when it appears alon
 
 
 
-<section id="novowel">
+<section id="silencer">
 <h3>Silencer</h3>
 
 <figure class="characterBox auto" data-cols="trans">᩺</figure>
@@ -2037,7 +2085,7 @@ is used in Northern Thai to identify double-acting consonants, or to indicate th
 
 
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 
 <p>The following are used to represent the second consonant in syllable-initial clusters.</p>
@@ -2066,7 +2114,7 @@ is used in Northern Thai to identify double-acting consonants, or to indicate th
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <p>Northern Thai text commonly renders syllable-final consonants using regular consonant code points (see the example just below), but sometimes  special combining characters  are used.</p>
 <p><span class="eg" lang="nod">ᩑᨠ</span></p>
@@ -2772,20 +2820,46 @@ is an optional alternative to the normal subjoined form of
 
 
 
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="/pickers/lana-nod/">Northern Thai character app</a>.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/lana-nod/index.html" target="_blank">Northern Thai character app</a>.</p>
 
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 
@@ -2877,7 +2951,7 @@ is an optional alternative to the normal subjoined form of
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="prompts">tbd</p>
 </section>
 </section>

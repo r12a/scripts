@@ -9,7 +9,7 @@ letter:"ᥐᥑᥒᥓᥔᥕᥖᥗᥘᥙᥚᥛᥜᥝᥞᥟᥠᥡᥢᥣᥤᥥᥦᥧ
 orth:`Tai Le. &nbsp; <a href="../scripts/taile/" target="_blank">Details</a>.`,
 type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", direction:"ltr", wordsep:"no/zwsp", baseline:"romn", wrap:"?", hyphenation:"?",  justification:"?",
 vowels:"inh:1 let:11", 
-linked:"tale/tdd", fonts:"/pickers/tale/"
+linked:"tale/tdd", fonts:"/pickers/tale/", picker:"tale"
 },
 
 

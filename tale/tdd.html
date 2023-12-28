@@ -26,7 +26,6 @@
 
 <script src="tdd-langdata.js"></script>
 <script src="tdd-examples.js"></script>
-<script src="tdd-translit.js">  </script>
 <script src="tdd-globals.js"></script>
 </head>
 
@@ -62,7 +61,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->28 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -83,7 +82,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Tai Nüa (Tai Le) Orthography Notes, <!-- #BeginDate format:En2 -->11-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/tale/tdd">https://r12a.github.io/scripts/tale/tdd</a></small></p>
+<p class="refLine"><small>Richard Ishida, Tai Nüa (Tai Le) Orthography Notes, <!-- #BeginDate format:En2 -->28-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/tale/tdd">https://r12a.github.io/scripts/tale/tdd</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -155,24 +154,28 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>The Tai Le script is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>, ie. consonants carry an inherent vowel sound that is overridden using <a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>. In Tai Le, consonants carry an inherent vowel  <span class="ipa">a</span>. See the table to the right for a brief overview of features for the modern Tai Nüa orthography.</p>
 
-<p>Tai Le text runs left to right in horizontal lines.</p>
-
-<p>Words are not separated by spaces.</p>
+<p>Tai Le text runs left to right in horizontal lines. <a class="seclink" href="#word">Words are not separated</a> by spaces.</p>
 
 <p>The key  distinguishing feature of Tai Le is its regularity and simplicity compared to other Tai scripts. The sequence of characters is C(V)(C)(T). Tones always go after any other characters in the syllable.</p>
 
-<p class="addToConsonants">Tai Le's 19 consonants are straightforward. There is no duplication for tone support, no stacking or other conjunct behaviour, etc. <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p>
 
-<p class="addToConsonants">Syllable-final consonant sounds use ordinary code points without an inherent vowel. Parsing syllables is usually straightforward because each syllable-final consonant is  folllowed by a tone mark. ❯ <a class="secref" title="Read more.">finals</a></p>
 
-<p class="addToVowels">The Tai Le orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with one <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowel</a>, pronounced <span class="ipa">a</span>.</p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Tai Le's <a class="seclink" href="#basicC">19 consonants</a> are straightforward. There is no duplication for tone support, no stacking or other conjunct behaviour, etc.</p>
 
-<p class="addToVowels">Other post-consonant vowels are written using 11 dedicated vowel letters, including a <span class="ipa">j</span> glide, and one consonant for the <span class="ipa">w</span> glide. All vowel signs are ordinary spacing characters (no combining marks), and are stored  and displayed after the base character. </p>
-<p class="addToVowels">There are no <a class="termref" href="../glossary/index.html#prebase">pre-base vowels</a>, <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a>. <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final consonant sounds</a> use ordinary code points without an inherent vowel. Parsing syllables is usually straightforward because each syllable-final consonant is  folllowed by a tone mark.</p>
 
-<p class="addToVowels">Tones are written using 5 spacing characters after the final character in a syllable, however they were written using 5 combining marks until 1988. ❯ <a class="secref" title="Read more.">tones</a></p>
 
-<p>Tai Nüa numbers use ASCII digits, but may also use Myanmar digits with some shape changes. ❯ <a class="secref" title="Read more.">numbers</a></p>
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">The Tai Le orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with one <a class="seclink" href="#inherent">inherent vowel</a>, pronounced <span class="ipa">a</span>.</p>
+
+<p class="addToVowels">Other post-consonant vowels are written using <a class="seclink" href="#vletter">11 dedicated vowel letters</a>, including a <span class="ipa">j</span> glide, and one consonant for the <span class="ipa">w</span> glide. All vowel signs are ordinary spacing characters (no combining marks), and are stored  and displayed after the base character. </p>
+<p class="addToVowels">There are no <a class="termref" href="../glossary/index.html#prebase">pre-base vowels</a>, <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a>.</p>
+
+<p class="addToVowels">Tones are written using <a class="seclink" href="#tones">5 spacing characters</a> after the final character in a syllable, however they were written using 5 combining marks until 1988.</p>
+
+<p>Tai Nüa <a class="seclink" href="#numbers">numbers</a> use ASCII digits, but may also use Myanmar digits with some shape changes.</p>
 </section>
 
 
@@ -745,6 +748,7 @@ alveolar</th>
 </section>
 </section>
 
+ 
 
 
 
@@ -752,12 +756,40 @@ alveolar</th>
 
 
 
+<p>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="compositeV"></span>
+<!--span id="vlength"></span>
+<span id="nasalisation"></span>
+<span id="tones"></span>
+<span id="novowel"></span-->
+</p>
 
+ 
 
-
-
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+
+<!--li>Vowel length.</li>
+
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Standalone vowels.</li>
+
+<li>Consonants that are not followed by a vowel.</li-->
+</ul>
+</div>
 
 
 
@@ -766,14 +798,15 @@ alveolar</th>
 
 
 
-
-
-
-
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">ⓘ represents the inherent vowel.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">ⓘ represents the inherent vowel.</p>
+
+
 
 <table class="soundSummary">
 <tr>
@@ -993,6 +1026,16 @@ alveolar</th>
 
 
 
+<section id="novowel">
+<h3>Consonants with no following vowel</h3>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
 
 
 
@@ -1130,10 +1173,35 @@ alveolar</th>
 
 
 
+<p>
+<span id="extendedC"></span>
+<!--span id="clength"></span-->
+</p>
+
+
 
 
 <section id="consonants">
 <h2>Consonants</h2>
+
+
+<div id="consonant_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
+
+<li>Onset clusters.</li>
+
+<li>Syllable-final consonants.</li>
+
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+
+<!--li>Gemination or consonant lengthening.</li-->
+</ul>
+</div>
+
+
 
 
 <div id="consonant_description"></div>
@@ -1141,35 +1209,38 @@ alveolar</th>
 
 
 
-
-
-
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<!--p class="instructions">Diacritics are added to the vowels to indicate nasalisation, which is not shown here.</p-->
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<!--p class="instructions highlight">Diacritics are added to the vowels to indicate nasalisation, which is not shown here.</p-->
 
 <table class="soundSummary">
 <tr>
-<th rowspan="5">General:</th>
+<th>Stops</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᥙ␣ᥖ␣ᥐ␣ᥟ␣ ␣ᥚ␣ᥗ␣ᥠ</figure></td>
 </tr>
 <tr>
+<th>Affricates</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᥓ␣ ␣ᥡ</figure></td>
 </tr>
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᥜ␣ᥔ␣ᥑ␣ᥞ</figure></td>
 </tr>
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᥛ␣ᥢ␣ᥒ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ᥝ␣ᥘ␣ᥕ</figure></td>
+<th>Other</th>
+<td><figure class="summaryBox auto" data-cols="" data-ipa="v,l,j">ᥝ␣ᥘ␣ᥕ</figure></td>
 </tr>
 
 <tr>
-<th>Finals:</th>
-<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+<th>Finals</th>
+<td><figure class="summaryBox auto" data-cols="" data-ipa="-w">ᥝ</figure></td>
 </tr>
 </table>
 
@@ -1200,18 +1271,8 @@ alveolar</th>
 
 
 
-<section id="novowel">
-<h3>Consonants with no following vowel</h3>
-
-<p>tbd</p>
-</section>
-
-
-
-
-
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <p>Tai Nüa has no syllable-initial clusters. <span class="ednote">Check this.</span></p>
 </section>
@@ -1222,7 +1283,7 @@ alveolar</th>
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <p>Consonants do appear in syllable-final position, but Tai Le has no dedicated characters for this. Standard consonant characters are used. It is usually easy to tell that a character is used in final consonant position, because of the position of tone marks, however it seems possible that an open syllable with no tone mark followed by an open syllable using the inherent vowel would create some ambiguity.</p>
 <p>When used in final position, <span class="codepoint" translate="no"><span lang="tdd">&#x195D;</span> [<a href="/scripts/taile/block#char195D"><span class="uname">U+195D TAI LE LETTER VA</span></a>]</span> is pronounced <span class="ipa">w</span>.</p>
@@ -1540,21 +1601,47 @@ alveolar</th>
 
 
 
-  <section id="shaping">
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
+<section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/taile/">Tai Le character app</a>.</p>
-<p>The orthography has no case distinction, and no special transforms are needed to convert between characters. Nor is printed text cursive.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/tale/index.html" target="_blank">Tai Le character app</a>.</p>
+
 
 
 
@@ -1601,7 +1688,7 @@ alveolar</th>
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="prompts">tbd</p>
 </section>
 </section>

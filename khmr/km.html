@@ -28,8 +28,6 @@
 
 <script src="km-langdata.js"></script>
 <script src="km-examples.js"></script>
-<script src="km-translit.js">  </script>
-
 <script src="km-globals.js"></script>
 </head>
 
@@ -60,7 +58,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->4 December, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->28 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
   
@@ -78,7 +76,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Cambodian (Khmer) Orthography Notes, <!-- #BeginDate format:En2 -->04-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/khmr/km">https://r12a.github.io/scripts/khmr/km</a></small></p>
+<p class="refLine"><small>Richard Ishida, Cambodian (Khmer) Orthography Notes, <!-- #BeginDate format:En2 -->28-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/khmr/km">https://r12a.github.io/scripts/khmr/km</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -146,29 +144,33 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>The script is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>, ie. like most Brahmi-influenced scripts, each consonant carries with it an inherent vowel. The sound following a consonant can be modified by attaching vowel signs to the consonant when writing.  See the table to the right for a brief overview of features for the modern Khmer orthography.</p>
 
-<p>Khmer text runs left to right in horizontal lines.</p>
+<p>Khmer text runs left to right in horizontal lines. Words are <a class="seclink" href="#word">not separated by spaces</a>, however words may be separated by <abbr title="Zero width space">ZWSP</abbr>. Spaces are used as phrase separators.</p>
 
-<p>Words are not separated by spaces, however words may be separated by <abbr title="Zero width space">ZWSP</abbr>. Spaces are used as phrase separators. ❯ <a class="secref" title="Read more.">word</a></p>
 
-<p class="addToConsonants">Modern Khmer uses 33 basic consonants, and 10 special character combinations are used for foreign sounds.</p>
 
-<p class="addToConsonants">Each onset consonant is associated with a high or low class related to pronunciation (there is no tone). Khmer has more vowel sounds than ways to write them, so the choice of consonant class indicates different sounds for the same written vowel. Other factors may also affect the  sound, such as stress, vowel harmony, and diacritics. ❯ <a class="secref" title="Read more.">consonant_registers</a></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Modern Khmer uses <a class="seclink" href="#basicC">33 basic consonants</a>, and <a class="seclink" href="#extendedC">10 special character </a>combinations are used for foreign sounds.</p>
 
-<p class="addToConsonants">Word-internal clusters are very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word (though the 2nd consonant at the word end is usually not pronounced). Clusters are indicated by stacked consonants. Subjoined forms are created using an invisible <span class="name">coeng</span> character. Stacks do not span word boundaries. ❯ <a class="secref" title="Read more.">clusters</a></p>
+<p class="addToConsonants">Each <a class="seclink" href="#onsets">onset consonant</a> is associated with a high or low class related to pronunciation (there is no tone). Khmer has more vowel sounds than ways to write them, so the choice of <a class="seclink" href="#consonant_registers">consonant class</a> indicates different sounds for the same written vowel. Other factors may also affect the  sound, such as stress, vowel harmony, and diacritics.</p>
 
-<p class="addToConsonants">Word-final consonant sounds (typically 8 consonants and characters) use ordinary code points without an inherent vowel. Because there are no spaces or other word dividers, it is difficult to detect boundaries algorithmically. Two word-final sounds (<span class="trans">m</span> and <span class="trans">h</span>) can be produced using combining marks. ❯ <a class="secref" title="Read more.">finals</a></p>
+<p class="addToConsonants">Word-internal <a class="seclink" href="#clusters">clusters</a> are very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word (though the 2nd consonant at the word end is usually not pronounced). Clusters are indicated by stacked consonants. Subjoined forms are created using an invisible <span class="name">coeng</span> character. Stacks do not span word boundaries.</p>
 
-<p class="addToVowels">The Khmer orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with 2 <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowels</a> (for example, using the two symbols for the sound <span class="ipa">k</span>, <span class="ex" lang="km">ក</span> is <span class="ipa">kɑː</span> <span class="meaning">neck</span>, and <span class="ex" lang="km">គ</span> is <span class="ipa">kɔː</span> <span class="meaning">mute</span>). </p>
-<p class="addToVowels">Other post-consonant vowels are written using 21 <a class="termref" href="../glossary/index.html#vowelsign">vowel sign</a> or other combining marks and 2 glide consonant letters. Two additional diacritics are used to change the register of a syllable.  ❯ <a class="secref" title="Read more.">vowels</a></p>
+<p class="addToConsonants"><a class="seclink" href="#finals">Word-final consonant</a> sounds (typically 8 consonants and characters) use ordinary code points without an inherent vowel. Because there are no spaces or other word dividers, it is difficult to detect boundaries algorithmically. Two word-final sounds (<span class="trans">m</span> and <span class="trans">h</span>) can be produced using combining marks.</p>
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">The Khmer orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with <a class="seclink" href="#inherent">2 inherent vowels</a> (for example, using the two symbols for the sound <span class="ipa">k</span>, <span class="ex" lang="km">ក</span> is <span class="ipa">kɑː</span> <span class="meaning">neck</span>, and <span class="ex" lang="km">គ</span> is <span class="ipa">kɔː</span> <span class="meaning">mute</span>).</p>
+
+<p class="addToVowels">Other post-consonant vowels are written using <a class="seclink" href="#combiningV">21 vowel sign or other combining marks</a> and 2 glide consonant letters. Two additional diacritics are used to change the register of a syllable.</p>
 
 <p class="addToVowels">Khmer has more vowel sounds than ways to write them. Therefore, a written vowel can have different pronunciations, depending on the class of the base consonant. (There is no tone in Khmer, so classes are specially designed for vowel selection.)  Additional factors include whether this is an unstressed vowel, vowel harmony, and whether any of the special diacritics have been used to change the sound. For an in-depth treatment of pronunciation see <a href="#refs">Huffman</a> in the sources section.</p>
 
-<p class="addToVowels">There are 3 <a class="termref" href="../glossary/index.html#prebase">pre-base glyphs</a> and    5 <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>, 2 of which can decompose into <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a>. This page lists 15 <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a> (made from 9 vowel signs, and 8 consonants/diacritics), not counting decompositions. Multipart vowels can involve up to 3 glyphs, but  only surround the base consonant(s) on 2 sides, eg.  ❯ <a class="secref" title="Read more.">compositeV</a>
-<span class="charExample" translate="no"><span class="ex" lang="km">កោះ</span> <span class="transc">koh̽</span></span></p>
+<p class="addToVowels">There are <a class="seclink" href="#prebase">3 pre-base glyphs</a> and    <a class="seclink" href="#circumgraphs">5 circumgraphs</a>, 2 of which can decompose into multipart vowels. This page lists <a class="seclink" href="#compositeV">15 multipart vowels</a> (made from 9 vowel signs, and 8 consonants/diacritics), not counting decompositions. Multipart vowels can involve up to 3 glyphs, but  only surround the base consonant(s) on 2 sides, eg.<span class="charExample" translate="no"><span class="ex" lang="km">កោះ</span> <span class="transc">koh̽</span></span></p>
 
-<p class="addToVowels"><a class="termref" href="../glossary/index.html#standalonevowel">Standalone vowel</a> sounds are typically written using vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="km">&#x17A2;</span> [<a href="/scripts/khmer/block#char17A2"><span class="uname">U+17A2 KHMER LETTER QA</span></a>]</span>, but there is also an incomplete set of <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>. ❯ <a class="secref" title="Read more.">standalone</a></p>
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are typically written using vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="km">&#x17A2;</span> [<a href="/scripts/khmer/block#char17A2"><span class="uname">U+17A2 KHMER LETTER QA</span></a>]</span>, but there is also an incomplete set of <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>.</p>
 
-<p>Modern Khmer has  a number of distinct writing styles, including <em>slanted</em> (called <span class="ex" lang="km">អក្សរច្រៀង</span>), which has an upright variant, and <em>round</em> (called <span class="ex" lang="km">អក្សរឈរ</span>). The round style includes more ligated forms. The upright style is used here.  ❯ <a class="secref">writing_styles</a>.</p>
+<p>Modern Khmer has  a number of distinct <a class="seclink" href="#writing_styles">font styles</a>, including <em>slanted</em> (called <span class="ex" lang="km">អក្សរច្រៀង</span>), which has an upright variant, and <em>round</em> (called <span class="ex" lang="km">អក្សរឈរ</span>). The round style includes more ligated forms. The upright style is used here.</p>
 </section>
 
 
@@ -926,6 +928,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </section>
 </section>
 
+ 
 
 
 
@@ -933,28 +936,45 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
+<p>
+<span id="nasalisation"></span>
+<span id="tones"></span>
+</p>
 
+ 
 
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
 
 
 
+<div id="vowel_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Tones (not a tonal language).</li>
+</ul>
+</div>
+
+
+
 <div id="vowel_description"></div>
-
-
 <p class="instructions">Dashes are used to  indicate whether the character represents a vowel sound in a closed   or an open syllable.</p>
 
 
 
 
-
-
-
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">Vowels in the left column show pronunciations after a-class consonants, and the  column to its right shows use for o-class consonants. The right-hand column shows standalone vowels.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">ⓘ represents the inherent vowel. Vowels in the left column show pronunciations after a-class consonants, and the  column to its right shows use for o-class consonants. The right-hand column shows standalone vowels.</p>
 
 <table class="soundSummary">
 <tr>
@@ -2648,11 +2668,25 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 
 
+<p>
+<span id="clength"></span>
+</p>
+
 
 
 
 <section id="consonants">
 <h2>Consonants</h2>
+
+
+<div id="consonant_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Gemination or consonant lengthening.</li>
+</ul>
+</div>
+
 
 
 
@@ -2661,51 +2695,51 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 
 
-
-
-
-
-
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<p class="instructions">Consonants of the a-class register appear on the left, o-class on the right.</p>
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight">Consonants of the a-class register appear on the left, o-class on the right.</p>
 
 <table class="soundSummary">
 <tr>
-<th rowspan="6">Initials:</th>
-<td><figure class="summaryBox auto" data-ipa="p,t,k,ɡ,ʔ,,ɓ,ɗ" data-cols="trans,transc">ប៉␣ត␣ក␣ហ្គ␣អ␣ ␣ប␣ដ</figure></td>
-<td><figure class="summaryBox auto" data-ipa="p,t,k,ɡ,,ɗ" data-cols="trans,transc">ព␣ទ␣គ␣ហ្គ៊␣ ␣ឌ</figure></td>
+<th rowspan="3">Stops</th>
+<td><figure class="summaryBox auto" data-ipa="p,t,c,k,ɡ,ʔ,,ɓ,ɗ" data-cols="trans,transc">ប៉␣ត␣ច␣ក␣ហ្គ␣អ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="p,t,c,k,ɡ,,ɗ" data-cols="trans,transc">ព␣ទ␣ជ␣គ␣ហ្គ៊</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto" data-ipa="pʰ,pʰ,tʰ,tʰ,tʰ,tʰ,kʰ,kʰ" data-cols="trans,transc">ផ␣ថ␣ឋ␣ខ</figure></td>
-<td><figure class="summaryBox auto" data-ipa="pʰ,pʰ,tʰ,tʰ,tʰ,tʰ,kʰ,kʰ" data-cols="trans,transc">ភ␣ធ␣ឍ␣ឃ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ɓ,ɗ" data-cols="trans,transc">ប␣ដ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ɗ" data-cols="trans,transc">ឌ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto" data-ipa="c,,cʰ" data-cols="trans,transc">ច␣ ␣ឆ</figure></td>
-<td><figure class="summaryBox auto" data-ipa="c,,cʰ" data-cols="trans,transc">ជ␣ ␣ឈ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="pʰ,pʰ,tʰ,tʰ,cʰ,tʰ,kʰ,kʰ" data-cols="trans,transc">ផ␣ថ␣ឋ␣ខ␣ឆ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="pʰ,pʰ,tʰ,tʰ,cʰ,tʰ,kʰ,kʰ" data-cols="trans,transc">ភ␣ធ␣ឍ␣ឃ␣ឈ</figure></td>
 </tr>
 <tr>
+<th>Frictives</th>
 <td><figure class="summaryBox auto" data-ipa="f ʋ,s,ʒ z,h" data-cols="trans,transc">ហ្វ␣ស␣ហ្ស␣ហ</figure></td>
 <td><figure class="summaryBox auto" data-ipa="f ʋ,ʋ,s,ʒ z" data-cols="trans,transc">ហ្វ៊␣វ␣ហ្ស៊</figure></td>
 </tr>
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-ipa="m,n,n" data-cols="trans,transc">ហ្ម␣ណ␣ហ្ន</figure></td>
 <td><figure class="summaryBox auto" data-ipa="m,n,ɲ,ŋ" data-cols="trans,transc">ម␣ន␣ញ␣ង</figure></td>
 </tr>
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto" data-ipa="l" data-cols="trans,transc">ហ្ល</figure></td>
 <td><figure class="summaryBox auto" data-ipa="r,l,l,j" data-cols="trans,transc">រ␣ឡ␣ល␣យ</figure></td>
 </tr>
 
 <tr>
-<th>Followed by<br>coeng:</th>
+<th>Followed<br>by coeng</th>
 <td><figure class="summaryBox auto" data-ipa="p-,p-,p-,ɗ- t-,t-,t-,t-,kʰ-,kʰ-,k-,k-" data-cols="trans,transc">ប␣ផ␣ត␣ដ␣ថ␣ឋ␣ក␣ខ</figure></td>
 <td><figure class="summaryBox auto" data-ipa="p-,p-,p-,ɗ- t-,t-,t-,t-,kʰ-,kʰ-,k-,k-" data-cols="trans,transc">ព␣ភ␣ទ␣ឌ␣ធ␣ឍ␣គ␣ឃ</figure></td>
 </tr>
 
 <tr>
-<th rowspan="4">Finals:</th>
+<th rowspan="4">Finals</th>
 <td colspan="2"><figure class="summaryBox auto" data-ipa="-p,-p,-p,-p,-t,-t,-t,-t,-t,-t,-t,-k,-k,-k,-k" data-cols="trans,transc">ព␣ប␣ផ␣ភ␣ទ␣ដ␣ឌ␣ថ␣ឋ␣ធ␣ឍ␣ក␣គ␣ខ␣ឃ</figure></td>
 </tr>
 <tr>
@@ -3863,24 +3897,51 @@ A consonant followed by a coeng indicates that this different sound is produced 
 
 
 
+
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
-  
+
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/khmer/">Khmer character app</a>.</p>
-<p>The Khmer script has no case distinction, and no special transforms are needed to convert between characters.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/khmr/index.html" target="_blank">Khmer character app</a>.</p>
 
-
-<p>The  script is not cursive (ie. joined up, like Arabic).</p>
 
 
 

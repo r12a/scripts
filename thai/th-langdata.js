@@ -9,8 +9,8 @@ letter:"กขคฆงจฉชซฌญฎฏฐฑฒณดตถทธนบ
 aux:"%;[]§«»ʼ͏ ‌‍‑†‡‰′″‹›",
 orth:`Thai. &nbsp; <a href="../scripts/thai/" target="_blank">Details</a>.`,
 type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"no/zwsp", baseline:"romn", wrap:"word", hyphenation:"no",  direction:"ltr",  justification:"sp ig", 
-vowels:"inh:2 cm:9 vs:8 let:8 other:4 vsl:12 base:อ/O venc:5 comp:37 voc:2", 
-linked:"thai/th", fonts:"/pickers/thai/", 
+vowels:"inh:2 cm:9 vs:8 let:8 other:4 vsl:12 base:อ/ɔː,a venc:5 comp:28 voc:2", 
+linked:"thai/th", fonts:"/pickers/thai/", picker:"thai", 
 },
 
 
