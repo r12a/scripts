@@ -29,7 +29,6 @@
 
 <script src="am-langdata.js"></script>
 <script src="am-examples.js"></script>
-<script src="am-translit.js">  </script>
 <script src="am-globals.js"></script>
 </head>
 
@@ -67,7 +66,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->31 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -86,7 +85,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Amharic (Ethiopic) Orthography Notes, <!-- #BeginDate format:En2 -->11-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/ethi/am">https://r12a.github.io/scripts/ethi/am</a></small></p>
+<p class="refLine"><small>Richard Ishida, Amharic (Ethiopic) Orthography Notes, <!-- #BeginDate format:En2 -->31-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/ethi/am">https://r12a.github.io/scripts/ethi/am</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -159,19 +158,22 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 <p>The Ethiopic script is a <a class="termref" href="https://en.wikipedia.org/wiki/Featural_writing_system">featural syllabary</a>, ie. each symbol typically represents both a consonant and a vowel, but vowel components are indicated by largely standardised adaptations to the base consonant shape.  See the table to the right for a brief overview of features for the modern Amharic orthography.</p>
 
-<p>The Ethiopic  script runs left to right in horizontal lines.</p>
+<p>The Ethiopic  script runs left to right in horizontal lines. There is no case distinction.</p>
 
-<p>Modern Amharic generally uses spaces to separate words, but sometimes still uses the Ethiopic wordspace character, instead. ❯&nbsp;<a class="secref" title="Read more.">word</a></p>
+<p>Modern Amharic generally uses spaces to separate words, but sometimes still uses the <a class="seclink" href="#word">Ethiopic wordspace</a> character, instead.</p>
 
-<p class="addToConsonants">The Ethiopic script blocks in Unicode list over 453 characters. Amharic uses 282 syllable characters.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">characters</a></span></p>
 
-<p class="addToConsonants">Gemination and consonant clusters are not indicated by the script (although some diacritics have been proposed for that, which are encoded in Unicode). Silent vowels are typically indicated using the 6th order <span class="ipa">-ə</span> syllable, which creates some ambiguity. ❯&nbsp;<a class="secref" title="Read more.">novowel</a></p>
 
-<p>The script is unicameral, and has only the three just mentioned combining characters, which are rarely used. Characters don't interact, and the baseline is standard.</p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">characters</a></span></p>
+<p class="addToConsonants">The Ethiopic script blocks in Unicode list over 453 characters. Amharic uses 282 syllable characters: comprising <a class="seclink" href="#vowels">15 standalone vowel</a> syllables, and the remainder for <a class="seclink" href="#basicC">CV syllables</a>.</p>
 
-<p>Ethiopic does have a range of native punctuation. In particular, although words in modern text are increasingly separated by spaces they may  be separated by a wordspace character instead. ❯&nbsp;<a class="secref" title="Read more.">phrase</a></p>
+<p class="addToConsonants">Gemination and consonant clusters are not indicated by the script (although some diacritics have been proposed for that, which are encoded in Unicode). <a class="seclink" href="#novowel">Silent vowels</a> are typically indicated using the 6th order <span class="ipa">-ə</span> syllable, which creates some ambiguity.</p>
 
-<p>Ethiopic also has its own numeric digits, which are used in an additive way, rather than in the way numbers are formed in Western text. ❯&nbsp;<a class="secref" title="Read more.">numbers</a></p>
+<p>The script  has only the three just mentioned combining characters, which are rarely used. Characters don't interact, and the baseline is standard.</p>
+
+<p>Ethiopic does have a range of native <a class="seclink" href="#phrase">punctuation</a>. In particular, although words in modern text are increasingly separated by spaces they may  be separated by a wordspace character instead.</p>
+
+<p>Ethiopic also has its own <a class="seclink" href="#numbers">numeric digits</a>, which are used in an additive way, rather than in the way numbers are formed in Western text.</p>
 </section>
 
 
@@ -551,11 +553,42 @@ alveolar</th>
 
 
 
+<p>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<!--<span id="nasalisation"></span-->
+<span id="tones"></span>
+</p>
+
+
 
 
 
 <section id="characters">
 <h2>Syllables</h2>
+
+
+
+<div id="consonant_notfound" class="instructions">
+<p>The Bamum orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Onset clusters.</li>
+
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+
+<li>Consonants used to create vowel sounds.</li>
+
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>.</li>
+
+<li>Vowel length.</li>
+
+<!--li>Nasalisation (not a feature of the language).</li-->
+
+<li>Tones.</li>
+</ul>
+</div>
+
 
 
 
@@ -1205,22 +1238,53 @@ often superscripted. It can be applied to numbers using both Western and Ethiopi
 
 
 
+
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="gsub"></span>
+<span id="gpos"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Context-based shaping (letters do not interact).</li>
+
+<li>Context-based positioning (no combining marks).</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/ethiopic/">Ethiopic character app</a>.</p>
-<p>Since there are normally no combining characters and no joining behaviour, text in the Ethiopic script usually has no contextual variation or placement of glyphs. Nor is printed text cursive.</p>
-<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
+<p class="instructions">Experiment with examples using the <a href="../../pickers/ethi-am/index.html" target="_blank">Ethiopic character app</a>.</p>
 
 <!--section id="writing_styles">
 <h3>Writing styles</h3>

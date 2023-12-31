@@ -28,7 +28,6 @@
 
 <script src="mn-langdata.js"></script>
 <script src="mn-examples.js"></script>
-<script src="mn-translit.js">  </script>
 <script src="mn-globals.js"></script>
 </head>
 
@@ -63,7 +62,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->29 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -86,7 +85,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Mongolian (Cyrillic) Orthography Notes, <!-- #BeginDate format:En2 -->11-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cyrl/mn">https://r12a.github.io/scripts/cyrl/mn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Mongolian (Cyrillic) Orthography Notes, <!-- #BeginDate format:En2 -->29-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cyrl/mn">https://r12a.github.io/scripts/cyrl/mn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -159,27 +158,31 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>Cyrillic is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a>. Letters typically represent a consonant or vowel sound.   See the table to the right for a brief overview of features for the Mongolian language.</p>
 
-<p>Cyrillic Mongolian text runs left-to-right in horizontal lines.</p>
+<p>Cyrillic Mongolian text runs left-to-right in horizontal lines. Words are separated by spaces.</p>
 
-<p>Words are separated by spaces.</p>
+<p>The script is bicameral. The shapes of the upper and lowercase forms are typically the same. There can be a <a class="seclink" href="#fontstyle">significant difference</a>, however, between regular and cursive/italic shapes for the same character.</p>
 
-<p>The script is bicameral. The shapes of the upper and lowercase forms are typically the same. There can be a significant difference, however, between regular and cursive/italic shapes for the same character. ❯&nbsp;<a class="secref" title="Read more.">fontstyle</a></p>
+<p>Normal text contains no combining marks (and decomposed text contains only 2). The visual forms of letters don't usually interact.</p>
 
-<p>Normal text contains no combining marks (and decomposed text contains only 2).</p>
 
-<p class="addToConsonants">Mongolian has 21 consonant letters, including 3 for writing sounds from foreign loan words, and one of which is not used in uppercase. The letter inventory also includes a hard sign and a soft sign.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p>
 
-<p class="addToVowels">The orthography is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> that writes vowels using 16 vowel letters (30 in total, because 2 are only used in lowercase), including 4 ioticised vowels which may also indicate palatalisation of the previous consonant. Long vowels are indicated by doubling the vowel letters. A number of diphthongs are written using the semi-vowel letter <span class="codepoint" translate="no"><span lang="mn">й</span> [<a href="/scripts/cyrillic/block#char0439" target="c"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Mongolian has <a class="seclink" href="#basicC">21 basic consonant letters</a>, including 3 for writing <a class="seclink" href="#extendedC">sounds from foreign loan words</a>, and one of which is not used in uppercase. The letter inventory also includes a <a class="seclink" href="#signs">hard sign and a soft sign</a>.</p>
 
-<p class="addToVowels">Vowel reduction is a significant feature of Mongolian. Non-initial short vowels are reduced to vestiges or to zero, and non-initial long vowels in the orthography are reduced to short vowel length.  ❯&nbsp;<a class="secref" title="Read more.">reduction</a></p>
 
-<p class="addToVowels">Vowel harmony is another key feature, grouping vowels in a way that indicates a front or back position for the tongue <em>root</em> (ATR). ❯&nbsp;<a class="secref" title="Read more.">harmony</a></p>
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">The orthography is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> that writes vowels using <a class="seclink" href="#vletter">16 vowel letters</a> (30 in total, because 2 are only used in lowercase), including 4 ioticised vowels which may also indicate palatalisation of the previous consonant. <a class="seclink" href="#vlength">Long vowels</a> are indicated by doubling the vowel letters. A number of diphthongs are written using the semi-vowel letter <span class="codepoint" translate="no"><span lang="mn">й</span> [<a href="/scripts/cyrillic/block#char0439" target="c"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>.</p>
+
+<p class="addToVowels"><a class="seclink" href="#reduction">Vowel reduction</a> is a significant feature of Mongolian. Non-initial short vowels are reduced to vestiges or to zero, and non-initial long vowels in the orthography are reduced to short vowel length.</p>
+
+<p class="addToVowels"><a class="seclink" href="#harmony">Vowel harmony</a> is another key feature, grouping vowels in a way that indicates a front or back position for the tongue <em>root</em> (ATR).</p>
+
+<p class="addToVowels">There are no special mechanisms to represent standalone vowels. Combining marks are normally not used, and only occur in decomposed text.</p>
 
 <p>Text is generally wrapped at word boundaries, and justification predominantly stretches the spaces between words.</p>
 
 <p>Numbers use ASCII digits.</p>
-
-<p>The visual forms of letters don't usually interact.</p>
 </section>
 
 
@@ -637,15 +640,51 @@ alveolar</th>
 </section>
 </section>
 
+ 
 
 
 
-  
 
 
 
+
+<p>
+<span id="otherV"></span>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="compositeV"></span>
+<span id="nasalisation"></span>
+<span id="tones"></span>
+<!--span id="novowel"></span-->
+</p>
+
+ 
+
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Tones (not a tonal language).</li>
+
+<li>Standalone vowels.</li>
+
+<li>Consonants that are not followed by a vowel.</li>
+</ul>
+</div>
+
 
 
 <div id="vowel_description"></div>
@@ -653,14 +692,14 @@ alveolar</th>
 
 
 
-
-
-
-
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">These are nominal pronunciations that don't take into account vowel harmony or vowel reduction. The vowels with IPA beginning <span class="ipa">j..</span> have transcriptions for standalone contexts; after a consonant the <span class="ipa">j</span> generally transmutes to <span class="ipa">ʲ</span> in the sense that it palatalises the consonant.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">These are nominal pronunciations that don't take into account vowel harmony or vowel reduction. The vowels with IPA beginning <span class="ipa">j..</span> have transcriptions for standalone contexts; after a consonant the <span class="ipa">j</span> generally transmutes to <span class="ipa">ʲ</span> in the sense that it palatalises the consonant.</p>
+
 
 <table class="soundSummary">
 <tr>
@@ -848,21 +887,15 @@ alveolar</th>
 
 
 
-<section id="nasalisation">
-<h3>Nasalisation</h3>
-
-<p>Nasalisation is not marked.</p>
-</section>
 
 
 
 
 
+<section id="novowel">
+<h3>Vowel absence</h3>
 
-<section id="tones">
-<h3>Tones</h3>
-
-<p>Mongolian is not a tonal language.</p>
+<p>tbd</p>
 </section>
 
 
@@ -1175,8 +1208,23 @@ alveolar</th>
 </section>
 </section>
 </section>   
-    
-      
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<!--span id="onsets"></span>
+<span id="clusters"></span>
+<span id="clength"></span-->
+</p>
+
 
 
 
@@ -1184,18 +1232,34 @@ alveolar</th>
 <h2>Consonants</h2>
 
 
+<div id="consonant_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Onset clusters.</li>
+
+<li>Syllable-final consonants.</li>
+
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+
+<li>Gemination or consonant lengthening.</li>
+</ul>
+</div>
+
+
+
+
 <div id="consonant_description"></div>
 
 
 
 
-
-
-
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<p class="instructions">The finals shown are ones that change pronunciation when syllable-final</p>
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight">The left column is lowercase, and the right uppercase.</p>
 
 <table class="soundSummary">
 <tr>
@@ -1327,18 +1391,8 @@ alveolar</th>
 
 
 
-<section id="novowel">
-<h3>Vowel absence</h3>
-
-<p>tbd</p>
-</section>
-
-
-
-
-
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <p>tbd</p>
 </section>
@@ -1349,7 +1403,7 @@ alveolar</th>
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 
 <figure class="characterBox auto small" data-cols="ipa,trans,transc,trans2">д␣г␣н␣в</figure>
@@ -1701,23 +1755,59 @@ thead th { text-align: start; }
 
 
 
+
+
+<p>
+<span id="cursive"></span>
+<span id="gsub"></span>
+<span id="gpos"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. not joined up like Arabic).</li>
+
+<li>Context-based shaping (letters do not interact).</li>
+
+<li>Context-based positioning (no combining marks).</li>
+
+<li>Context-based positioning for multiple diacritis. (no multiple combining marks).</li>
+</ul>
+</div>
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/cyrillic/">All Cyrillic character app</a> and the <a href="../../pickers/russian/">Russian character app</a>.</p>
-<p>The Cyrillic script is not cursive, and involves no significant context-based shaping or positioning. Nor are there significant issues around baselines or inline alignment.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/cyrl-all/index.html" target="_blank">All Cyrillic character app</a> and the <a href="../../pickers/cyrl-mn/index.html" target="_blank">Mongolian character app</a>.</p>
+
+
+
+
+
+
+
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
+
 <p>Cyrillic doesn't normally have any of the changeability of complex scripts. Characters are typically separate and self-contained. However, there can be a significant difference in shape between regular and italic/cursive font shapes for the same character. </p>
 
 

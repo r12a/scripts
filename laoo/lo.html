@@ -28,7 +28,6 @@
 
 <script src="lo-langdata.js"></script>
 <script src="lo-examples.js"></script>
-<script src="lo-translit.js">  </script>
 <script src="lo-globals.js"></script>
 </head>
 
@@ -60,7 +59,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->31 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -81,7 +80,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Lao Orthography Notes, <!-- #BeginDate format:En2 -->11-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/laoo/lo">https://r12a.github.io/scripts/laoo/lo</a></small></p>
+<p class="refLine"><small>Richard Ishida, Lao Orthography Notes, <!-- #BeginDate format:En2 -->31-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/laoo/lo">https://r12a.github.io/scripts/laoo/lo</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -157,26 +156,28 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<p>Lao text runs left to right in horizontal lines.</p>
+<p>Lao text runs left to right in horizontal lines. Spaces  separate phrases, rather than words. There is no case distinction.</p>
 
-<p>Spaces  separate phrases, rather than words.</p>
 
-<p class="addToConsonants">There are 26 consonants.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p>
 
-<p class="addToConsonants">Each onset consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (<a class="termref" href="../glossary/index.html#checked">checked/unchecked</a>), plus any tone mark.</p> 
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Lao has <a class="seclink" href="#basicC">26 consonants</a>. Each onset consonant is associated with a high, mid, or low class related to tone. <a class="seclink" href="#tones">Tone</a> is indicated by a combination of the consonant class, the syllable type (<a class="termref" href="../glossary/index.html#checked">checked/unchecked</a>), plus any tone mark.</p> 
 
-<p class="addToConsonants">No <a class="termref" href="../glossary/index.html#conjunct">conjuncts</a> are used for consonant clusters, except for one subjoined consonant, used in combination only with HA. ❯&nbsp;<a class="secref" title="Read more.">clusters</a></p>
+<p class="addToConsonants">No <a class="termref" href="../glossary/index.html#conjunct">conjuncts</a> are used for consonant clusters, except for one <a class="seclink" href="#clusters">subjoined consonant</a>, used in combination only with HA.</p>
 
-<p class="addToConsonants">Syllable-initial clusters and  syllable-final consonant sounds are all written with ordinary consonant letters. However, because all vowels are written, it is not difficult to algorithmically detect syllable boundaries. ❯&nbsp;<a class="secref" title="Read more.">finals</a></p>
+<p class="addToConsonants"><a class="seclink" href="#onsets">Syllable-initial clusters</a> and  <a class="seclink" href="#finals">syllable-final consonant sounds</a> are all written with ordinary consonant letters. However, because all vowels are written, it is not difficult to algorithmically detect syllable boundaries.</p>
 
-<p class="addToVowels">Unlike its close relative, Thai, the Lao orthography is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> and has  no <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowel</a>, but it still represents vowels using 18 <a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>, and 2 consonants.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
 
-<p class="addToVowels">Vowels in Lao are written with a mixture of combining characters and ordinary spacing characters. Lao uses <em>visual placement</em>: only the 8 vowel components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are <em>typed in the order seen</em>. There are 5 <a class="termref" href="../glossary/index.html#prebase">pre-base</a> letters. In principle, there are no single-character <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a> in Lao text, but  a single vowel or diphthong is frequently made up of multiple components. ❯&nbsp;<a class="secref" title="Read more.">prebase</a></p>
 
-<p class="addToVowels">This page lists 28 <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a> (made from 12 vowel signs, and 2 consonants).  Multipart vowels can involve up to 4 glyphs, and glyphs can surround the base consonant(s) on up to 3 sides. ❯&nbsp;<a class="secref" title="Read more.">compositeV</a></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">Unlike its close relative, Thai, the Lao orthography is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> and has  no <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowel</a>, but it still represents vowels using 18 vowel signs (<a class="seclink" href="#combiningV">9 combining marks, </a><a class="seclink" href="#vletter">8 dedicated vowel letters</a>, and <a class="seclink" href="#otherV">2 consonants</a>).</p>
+
+<p class="addToVowels">Vowels in Lao are written with a mixture of combining characters and ordinary spacing characters. Lao uses <em>visual placement</em>: only the 8 vowel components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are <em>typed in the order seen</em>. There are <a class="seclink" href="#prebase">5 pre-base letters</a>. In principle, there are no single-character <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a> in Lao text, but  a single vowel or diphthong is frequently made up of multiple components.</p>
+
+<p class="addToVowels">This page lists <a class="seclink" href="#compositeV">28 multipart vowels</a> (made from 12 vowel signs, and 2 consonants).  Multipart vowels can involve up to 4 glyphs, and glyphs can surround the base consonant(s) on up to 3 sides.</p>
 <p class="addToVowels">Vowels are often written differently when they appear in a closed vs. open syllable.</p>
 
-<p class="addToVowels">There are no <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, and <a class="termref" href="../glossary/index.html#standalonevowel">standalone vowel</a> sounds are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="lo">&#x0EAD;</span> [<a href="/scripts/lao/block#char0EAD"><span class="uname">U+0EAD LAO LETTER O</span></a>]</span>. ❯&nbsp;<a class="secref" title="Read more.">standalone</a></p>
+<p class="addToVowels">There are no <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, and <a class="seclink" href="#standalone">standalone vowel</a> sounds are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="lo">&#x0EAD;</span> [<a href="/scripts/lao/block#char0EAD"><span class="uname">U+0EAD LAO LETTER O</span></a>]</span>.</p>
 </section>
 
 
@@ -1031,6 +1032,7 @@ mai cat-ta-waː</th>
 </section>
 </section>
 
+ 
 
 
 
@@ -1038,11 +1040,31 @@ mai cat-ta-waː</th>
 
 
 
+<p>
+<span id="circumgraphs"></span>
+<span id="nasalisation"></span>
+</p>
 
+ 
 
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
 
+
+
+<div id="vowel_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li><a class="termref" target="_blank" href="../glossary/index.html#circumgraph">Circumgraphs</a>.</li>
+
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Consonants that are not followed by a vowel.</li>
+</ul>
+</div>
 
 
 
@@ -1050,17 +1072,14 @@ mai cat-ta-waː</th>
 
 
 
-<p class="instructions">Dashes are used to  indicate whether the character represents a vowel sound in a closed   or an open syllable.</p>
-
-
-
-
-
 
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">The diphthongs section below contains one character that incorporates a final nasal. The  list doesn't include those combinations that involve simply appending a glide after the vowel (see <a class="secref">compositeV</a>). Standalone vowels use the character shown as a base for the normal vowel symbols. ◌ indicates the location of consonants, but doesn't necessarily indicate the presence of a combining mark.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">The diphthongs section below contains one character that incorporates a final nasal. The  list doesn't include those combinations that involve simply appending a glide after the vowel (see <a class="secref">compositeV</a>). Standalone vowels use the character shown as a base for the normal vowel symbols. ◌ indicates the location of consonants, but doesn't necessarily indicate the presence of a combining mark.</p>
 
 
 <table class="soundSummary">
@@ -1531,16 +1550,6 @@ mai cat-ta-waː</th>
 
 
 
-<section id="nasalisation">
-<h3>Nasalisation</h3>
-
-<p>The orthography has no special mechanism to indicate vowel nasalisation.</p>
-</section>
-
-
-
-
-
 
 <section id="tones">
 <h3>Tones</h3>
@@ -1638,6 +1647,26 @@ mai cat-ta-waː</th>
 </tr>
 </tbody>
 </table>
+</section>
+
+
+
+
+
+
+
+<section id="novowel">
+<h3>Vowel absence</h3>
+
+<p>Because the orthography is alphabetic, rather than an abugida, vowel absence after syllable-final consonants does not normally need to be marked in any way. The absence of a vowel sound is simply indicated by the absence of a vowel sign.</p>
+
+<p>Nor is vowel absence normally marked in syllable-initial clusters. The only <a class="termref" href="../glossary/index.html#conjunct">conjunct forms</a> in Lao are the subjoined <span class="ipa">l</span> and the ligatures described in <a class="secref">highclass</a>.</p>
+
+<div class="btw">
+<figure class="archaicBox auto"  data-cols="trans">&#x0ECC;</figure>
+
+<p>&nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="lo">&#x0ECC;</span> [<a href="/scripts/lao/block#char0ECC"><span class="uname">U+0ECC LAO CANCELLATION MARK</span></a></span> was previously used to indicate silenced consonants, but is now described as obsolete.<tt>wl,#Punctuation</tt></p>
+</div>
 </section>
 
 
@@ -1939,6 +1968,10 @@ mai cat-ta-waː</th>
 
 
 
+<p>
+<span id="extendedC"></span>
+<span id="clength"></span>
+</p>
 
 
 
@@ -1947,35 +1980,38 @@ mai cat-ta-waː</th>
 <h2>Consonants</h2>
 
 
+<div id="consonant_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
 
-<div id="consonant_description">
-<p>Each onset consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (<a class="termref" href="../glossary/index.html#checked">checked/unchecked</a>), plus any tone mark.</p> 
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
 
-<p>No <a class="termref" href="../glossary/index.html#conjunct">conjuncts</a> are used for consonant clusters, except for one subjoined consonant, used in combination only with HA.</p>
+<li>Conjuncts or other shaping related to consonant clusters.</li>
 
-<p>Syllable-initial clusters and  syllable-final consonant sounds are all written with ordinary consonant letters. However, because all vowels are written, it is not difficult to algorithmically detect syllable boundaries.</p>
-
-
-<p class="instructions"> For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.</p>
+<li>Gemination or consonant lengthening.</li>
+</ul>
 </div>
 
 
 
 
-
+<div id="consonant_description"></div>
 
 
 
 
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<p class="instructions">The initial consonants are split across high, mid, and low columns.</p>
+<p>The following table summarises the main consonant to character assigments.</p>
+
+
+<p class="instructions highlight">The initial consonants are split across high, mid, and low columns.</p>
 
 
 <table class="soundSummary">
 <tr>
-<th rowspan="5">Initials:</th>
+<th rowspan="2">Stops</th>
 <td>&nbsp;</td>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="p,b,t,d,t͡ɕ,k,ʔ">ປ␣ບ␣ຕ␣ດ␣ຈ␣ກ␣ອ</figure></td>
 <td>&nbsp;</td>
@@ -1988,25 +2024,28 @@ mai cat-ta-waː</th>
 </tr>
 
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ຝ␣ສ␣ຫ</figure></td>
 <td>&nbsp;</td>
 <td><figure class="summaryBox auto" data-ipa="ʋ-,f,s,h" data-cols="trans,transc">ວ␣ຟ␣ຊ␣ຮ</figure></td>
 </tr>
 
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="m,m,n,n,ɲ,ŋ">ໝ␣ຫມ␣ໜ␣ຫນ␣ຫງ␣ຫຍ</figure></td>
 <td>&nbsp;</td>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="m,n,ɲ,ŋ">ມ␣ນ␣ຍ␣ງ</figure></td>
 </tr>
 
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="w,l,l,,">ຫວ␣ຫຼ␣ຫລ␣ຫຽ</figure></td>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="j">ຢ</figure></td>
 <td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="-w,l,l,l,l,,j">ວ␣ຣ␣ລ</figure></td>
 </tr>
 
 <tr>
-<th rowspan="3">Finals:</th>
+<th rowspan="3">Finals</th>
 <td colspan="3"><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="p,t,k">ບ␣ດ␣ກ</figure></td>
 </tr>
 <tr>
@@ -2201,28 +2240,8 @@ mai cat-ta-waː</th>
 
 
 
-<section id="novowel">
-<h3>Vowel absence</h3>
-
-<p>Because the orthography is alphabetic, rather than an abugida, vowel absence after syllable-final consonants does not normally need to be marked in any way. The absence of a vowel sound is simply indicated by the absence of a vowel sign.</p>
-
-<p>Nor is vowel absence normally marked in syllable-initial clusters. The only <a class="termref" href="../glossary/index.html#conjunct">conjunct forms</a> in Lao are the subjoined <span class="ipa">l</span> and the ligatures described in <a class="secref">highclass</a>.</p>
-
-<div class="btw">
-<figure class="archaicBox auto"  data-cols="trans">&#x0ECC;</figure>
-
-<p>&nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="lo">&#x0ECC;</span> [<a href="/scripts/lao/block#char0ECC"><span class="uname">U+0ECC LAO CANCELLATION MARK</span></a></span> was previously used to indicate silenced consonants, but is now described as obsolete.<tt>wl,#Punctuation</tt></p>
-</div>
-</section>
-
-
-
-
-
-
-
 <section id="onsets">
-<h3>Onset clusters</h3>
+<h3>Onsets</h3>
 
 <p>Modern Lao really only has one audible, syllable-initial cluster, and that occurs when it labialises just over half a dozen initial consonants (see <a class="secref">structure</a>). In those cases, the initial consonant is simply followed by <span class="ch">ວ</span>, eg.</p>
 <p><span class="eg" lang="lo" dir="ltr">ກວ້າງ</span></p>
@@ -2240,7 +2259,7 @@ mai cat-ta-waː</th>
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 <p>Lao doesn't have any special code points dedicated to syllable final consonants, although consonants do appear in those positions, eg. <span class="eg" lang="lo">ນົກ</span></p>
 <p>Only the following consonants appear in syllable-final position. Note how the sound may change: where there is more than one phonetic realisation, the one with a preceding hyphen is the final.</p>
   
@@ -2860,30 +2879,53 @@ mai cat-ta-waː</th>
 
 
 
+
+
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="gsub"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Context-based shaping (letters do not interact).</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
-
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
-
 <span id="gsubInline">context-based shaping</span>;
-
 <span id="gposInline">context-based positioning</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
+<span id="transformsInline">case &amp; other character transforms</span>.
+</p>
 
-<span id="baselinesInline">baselines, line height, etc.</span>;
-
-<span id="fontstyleInline">font styles</span>;
-
-<span id="transformsInline">case &amp; other character transforms</span>.</p>
-
-<p class="instructions">You can experiment with examples using the <a href="/pickers/lao/">Lao character app</a>.</p>
+<p class="instructions">Experiment with examples using the <a href="../../pickers/lao/index.html" target="_blank">Lao character app</a>.</p>
 
 
-<p>None of the characters require special shaping based on the visual context.. Nor is printed text cursive.</p>
-<p>Lao has no special requirements for baseline alignment between mixed scripts or in general.</p>
-<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 <!--section id="writing_styles">
 <h3>Writing styles</h3>
 
@@ -2965,7 +3007,7 @@ mai cat-ta-waː</th>
   
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="observation"><span class="leadin">Observation:</span> Italicised text <a href="https://www.rfa.org/lao/daily/environment/railway-construction-causes-flood-in-nakhoun-village-vientiane-08272019103427.html">used</a> for a figure captions, and also for quotations.</p>
 </section>
 

@@ -28,7 +28,6 @@
 
 <script src="ru-langdata.js"></script>
 <script src="ru-examples.js"></script>
-<script src="ru-translit.js">  </script>
 <script src="ru-globals.js"></script>
 </head>
 
@@ -64,7 +63,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->29 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -86,7 +85,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Russian Orthography Notes, <!-- #BeginDate format:En2 -->11-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cyrl/ru">https://r12a.github.io/scripts/cyrl/ru</a></small></p>
+<p class="refLine"><small>Richard Ishida, Russian Orthography Notes, <!-- #BeginDate format:En2 -->29-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cyrl/ru">https://r12a.github.io/scripts/cyrl/ru</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -148,17 +147,21 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>Of the 441 characters in the Unicode Cyrillic blocks, 177 are historic (33%) and 2 are for Lithuanian dialectology.  The remaining 262 are just letters – no punctuation, digits, or combining characters. These are all bicameral, which brings the number of distinct modern letters to 131. Although modern Cyrillic text tends to use precomposed forms, rather than combining diacritics separately with base letters,  many extended characters  are formed by slightly tweaking   a set of basic shapes.</p>
 
-<p>Russian text runs left-to-right in horizontal lines.</p>
+<p>Russian text runs left-to-right in horizontal lines. Words are separated by spaces. The visual forms of letters don't usually interact.</p>
 
-<p>Words are separated by spaces.</p>
+<p>The script is bicameral. The shapes of the upper and lowercase forms are typically the same. There can be a <a class="seclink" href="#fontstyle">significant difference</a>, however, between regular and cursive/italic shapes for the same character.</p>
 
-<p>The script is bicameral. The shapes of the upper and lowercase forms are typically the same. There can be a significant difference, however, between regular and cursive/italic shapes for the same character.   ❯&nbsp;<a class="secref" title="Read more.">fontstyle</a></p>
 
-<p class="addToConsonants">Modern  Russian has 23 consonant letters, including the hard and soft signs, and <span class="codepoint" translate="no"><span lang="ru">&#x0439;</span> [<a href="/scripts/cyrillic/block#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>, which is a semivowel used to write Russian diphthongs.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p>
 
-<p class="addToConsonants">In the absence of an indicator vowel, the soft sign can be used to indicate palatalisation of a consonant.</p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Modern  Russian has <a class="seclink" href="#basicC">23 basic consonant letters</a>, including the <a class="seclink" href="#signs">hard sign and  soft sign</a>, and <span class="codepoint" translate="no"><span lang="ru">&#x0439;</span> [<a href="/scripts/cyrillic/block#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>, which is a semivowel used to write Russian diphthongs.</p>
 
-<p class="addToVowels">This orthography is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a>, where vowels are written using 10  dedicated vowel letters, half of which usually indicate palatalisation of the previous consonant. They may, however, sometimes be used after one of the few consonants that is always hard, and <span class="codepoint" translate="no"><span lang="ru">&#x0435;</span> [<a href="/scripts/cyrillic/block#char0435"><span class="uname">U+0435 CYRILLIC SMALL LETTER IE</span></a>]</span> is commonly used after non-palatalised consonants in loan words.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">vowels</a></span></p>
+<p class="addToConsonants">In the absence of an indicator vowel, the soft sign can be used to indicate <span class="addToVowels"><a class="seclink" href="#palatalisation">palatalisation</a></span> of a consonant.</p>
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">This orthography is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a>, where vowels are written using <a class="seclink" href="#vletter">10 dedicated vowel letters</a>, half of which usually indicate palatalisation of the previous consonant. They may, however, sometimes be used after one of the few consonants that is always hard, and <span class="codepoint" translate="no"><span lang="ru">&#x0435;</span> [<a href="/scripts/cyrillic/block#char0435"><span class="uname">U+0435 CYRILLIC SMALL LETTER IE</span></a>]</span> is commonly used after non-palatalised consonants in loan words.</p>
 <p class="addToVowels">There are no special mechanisms to represent standalone vowels. Combining marks are normally not used, and only occur in decomposed text.</p>
 
 <p>Numbers use ASCII digits.</p>
@@ -609,14 +612,54 @@ alveolar</th>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">А␣Б␣В␣Г␣Д␣Е␣Ё␣Ж␣З␣И␣Й␣К␣Л␣М␣Н␣О␣П␣Р␣С␣Т␣У␣Ф␣Х␣Ц␣Ч␣Ш␣Щ␣Ы␣Э␣Ю␣Я</figure>
 </section>
 
+ 
 
 
 
 
-  
-  
+
+
+
+<p>
+<span id="otherV"></span>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="compositeV"></span>
+<span id="vlength"></span>
+<span id="nasalisation"></span>
+<span id="tones"></span>
+<!--span id="novowel"></span-->
+</p>
+
+ 
+
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+
+<li>Vowel length.</li>
+
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Tones (not a tonal language).</li>
+
+<li>Standalone vowels.</li>
+
+<li>Consonants that are not followed by a vowel.</li>
+</ul>
+</div>
+
 
 
 <div id="vowel_description"></div>
@@ -624,12 +667,13 @@ alveolar</th>
 
 
 
-
-
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">Vowels preceded by <span class="ipa">ʲ</span> cause the preceding consonant to be palatalised. Where 2 transcriptions are given for a symbol they show stressed and unstressed pronunciations. Diphones typically occur for standalone vowel sounds. The bottom row shows the glides/semivowels used to make diphthongs.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">Vowels preceded by <span class="ipa">ʲ</span> cause the preceding consonant to be palatalised. Where 2 transcriptions are given for a symbol they show stressed and unstressed pronunciations. Diphones typically occur for standalone vowel sounds. The bottom row shows the glides/semivowels used to make diphthongs.</p>
 
 <table class="soundSummary">
 <tr>
@@ -982,31 +1026,11 @@ alveolar</th>
 
 
 
-<section id="vlength">
-<h3>Vowel length</h3>
 
-<p>Vowel length is not marked.</p>
-</section>
+<section id="novowel">
+<h3>Vowel absence</h3>
 
-
-
-
-
-<section id="nasalisation">
-<h3>Nasalisation</h3>
-
-<p>Nasalisation is not marked.</p>
-</section>
-
-
-
-
-
-
-<section id="tones">
-<h3>Tones</h3>
-
-<p>Russian is not a tonal language.</p>
+<p>No special mechanism.</p>
 </section>
 
 
@@ -1196,11 +1220,25 @@ alveolar</th>
 </div>
 <!--p style="font-size: 60%;text-align: end; line-height: 1;">Sources: <a href="https://en.wikipedia.org/wiki/Help:IPA/Hindi_and_Urdu">Wikipedia</a>, and Google Translate.</p-->
 </section>
-</section></section>
+</section>
+</section>
 
 
 
 
+
+
+
+
+
+
+
+<p>
+<span id="extendedC"></span>
+<!--span id="onsets"></span>
+<span id="clusters"></span>
+<span id="clength"></span-->
+</p>
 
 
 
@@ -1209,38 +1247,61 @@ alveolar</th>
 <h2>Consonants</h2>
 
 
+<div id="consonant_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
+
+<li>Onset clusters.</li>
+
+<li>Syllable-final consonants.</li>
+
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+
+<li>Gemination or consonant lengthening.</li>
+</ul>
+</div>
+
+
+
+
 <div id="consonant_description"></div>
 
 
 
 
-
-
-
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<!--p class="instructions">Diacritics are added to the vowels to indicate nasalisation, which is not shown here.</p-->
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight">The left column is lowercase, and the right uppercase.</p>
+
 
 <table class="soundSummary">
 <tr>
-<th rowspan="5">General:</th>
+<th>Stops</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">п␣б␣т␣д␣к␣г</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">П␣Б␣Т␣Д␣К␣Г</figure></td>
 </tr>
 <tr>
+<th>Affricates</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ц␣ч</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">Ц␣Ч</figure></td>
 </tr>
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ф␣в␣с␣з␣ш␣ж␣щ␣х</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">Ф␣В␣С␣З␣Ш␣Ж␣Щ␣Х</figure></td>
 </tr>
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">м␣н</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">М␣Н</figure></td>
 </tr>
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">р␣л</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">Р␣Л</figure></td>
 </tr>
@@ -1358,19 +1419,8 @@ alveolar</th>
 
 
 
-<section id="novowel">
-<h3>Vowel absence</h3>
-
-<p>No special mechanism.</p>
-</section>
-
-
-
-
-
-
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <p>tbd</p>
 </section>
@@ -1381,7 +1431,7 @@ alveolar</th>
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <p>tbd</p>
 </section>
@@ -1668,21 +1718,51 @@ alveolar</th>
 
 
 
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="gsub"></span>
+<span id="gpos"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. not joined up like Arabic).</li>
+
+<li>Context-based shaping (letters do not interact).</li>
+
+<li>Context-based positioning (no combining marks).</li>
+
+<li>Context-based positioning for multiple diacritis. (no multiple combining marks).</li>
+</ul>
+</div>
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/cyrillic/">All Cyrillic character app</a> and the <a href="../../pickers/russian/">Russian character app</a>.</p>
-<p>The Cyrillic script is not cursive, and involves no significant context-based shaping or positioning. Nor are there significant issues around baselines or inline alignment.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/cyrl-all/index.html" target="_blank">All Cyrillic character app</a> and the <a href="../../pickers/cyrl-ru/index.html" target="_blank">Russian character app</a>.</p>
+
 
 
 
@@ -1690,7 +1770,7 @@ alveolar</th>
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p>Cyrillic doesn't normally have any of the changeability of complex scripts. Characters are typically separate and self-contained. However, there can be a significant difference in shape between regular and italic/cursive font shapes for the same character. </p>
 
 

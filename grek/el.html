@@ -28,7 +28,6 @@
 
 <script src="el-langdata.js"></script>
 <script src="el-examples.js"></script>
-<script src="el-translit.js">  </script>
 <script src="el-globals.js"></script>
 </head>
 
@@ -58,7 +57,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 November, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->29 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -73,7 +72,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Modern Greek Orthography Notes, <!-- #BeginDate format:En2 -->11-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/grek/el">https://r12a.github.io/scripts/grek/el</a></small></p>
+<p class="refLine"><small>Richard Ishida, Modern Greek Orthography Notes, <!-- #BeginDate format:En2 -->29-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/grek/el">https://r12a.github.io/scripts/grek/el</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -143,25 +142,25 @@
 
 <p>Modern Greek comes in 2 flavours: monotonic and polytonic. Monotonic Greek generally uses only the tonos diacritic to show the location of emphasis in a word, although it may also use the dialytika occasionally to separate vowel sounds. Polytonic Greek attaches multiple diacritics more often. For this description, we will focus on modern Greek, but will include a short overview of polytonic Greek differences.</p>
 
-<p>Greek letters are in a sense encoded twice, since there is a sizeable set of atomic characters, but it is also always possible to write equivalent decomposed sequences.</p>
+<p>Greek letters are in a sense encoded twice, since there is a sizeable set of atomic characters, but it is also always possible to write equivalent decomposed sequences. The visual forms of letters don't usually interact.</p>
 
-<p>Greek text runs left-to-right in horizontal lines.</p>
+<p>Greek text runs left-to-right in horizontal lines. Words are separated by spaces. The script is bicameral. The shapes of the upper and lowercase forms are typically the same. </p>
 
-<p>Words are separated by spaces.</p>
 
-<p>The script is bicameral. The shapes of the upper and lowercase forms are typically the same. </p>
 
-<p class="addToConsonants">Modern  Greek has 17 consonant letters, plus a special lowercase, word-final form of the letter sigma.  <span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonants</a></span></p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Modern  Greek has <a class="seclink" href="#basicC">17 basic consonant letters</a>, plus a special lowercase, word-final form of the letter sigma.</p>
 
-<p class="addToVowels">The Modern Greek <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> has 7  basic vowel letters, but they are  combined to produce 8 digraphs representing additional sounds. They can also take tonos and/or dialytika diacritics, for which there are separate code points.</p>
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">The Modern Greek <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> has <a class="seclink" href="#vletter">7  basic vowel letters</a>, but they are  combined to produce <a class="seclink" href="#compositeV">8 digraphs</a> representing additional sounds. They can also take <a class="seclink" href="#combiningV">tonos and/or dialytika diacritics</a>, for which there are separate code points.</p>
 
 <p class="addToVowels">Standalone vowels are written using ordinary vowel letters and no special arrangements.</p>
 
 <p class="addToVowels"> Polytonic Greek can be found occasionally in modern texts, and that adds another 110 combinations of vowel plus diacritic to the repertoire.</p>
 
 <p>Numbers use ASCII digits.</p>
-
-<p>The visual forms of letters don't usually interact.</p>
 </section>
    
     
@@ -519,13 +518,53 @@ alveolar</th>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">Α␣Β␣Γ␣Δ␣Ε␣Ζ␣Η␣Θ␣Ι␣Κ␣Λ␣Μ␣Ν␣Ξ␣Ο␣Π␣Ρ␣Σ␣Τ␣Υ␣Φ␣Χ␣Ψ␣Ω</figure>
 </section>
 
+ 
 
 
 
 
 
+
+
+<p>
+<span id="otherV"></span>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="vlength"></span>
+<span id="nasalisation"></span>
+<span id="tones"></span>
+<!--span id="novowel"></span-->
+</p>
+
+ 
+
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
+
+
+
+<div id="vowel_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+
+<li>Vowel length.</li>
+
+<li>Nasalisation (not a feature of the language).</li>
+
+<li>Tones (not a tonal language).</li>
+
+<li>Standalone vowels.</li>
+
+<!--li>Consonants that are not followed by a vowel.</li-->
+</ul>
+</div>
+
 
 
 <div id="vowel_description"></div>
@@ -533,14 +572,13 @@ alveolar</th>
 
 
 
-
-
-
-
 <section id="basicV">
-<h3>Vowel summary</h3>
+<h4>Vowel summary table</h4>
 
-<p class="instructions">The accented letters shown here are only those for which atomic code points exist.  Other letters can carry combining marks.</p>
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">The accented letters shown here are only those for which atomic code points exist.  Other letters can carry combining marks.</p>
 
 <table class="soundSummary">
 <tr>
@@ -724,31 +762,11 @@ alveolar</th>
 
 
 
-<section id="vlength">
-<h3>Vowel length</h3>
 
-<p>Vowel length is not marked.</p>
-</section>
+<section id="novowel">
+<h3>Vowel absence</h3>
 
-
-
-
-
-<section id="nasalisation">
-<h3>Nasalisation</h3>
-
-<p>Nasalisation is not marked.</p>
-</section>
-
-
-
-
-
-
-<section id="tones">
-<h3>Tones</h3>
-
-<p>Modern Greek is not a tonal language.</p>
+<p>tbd</p>
 </section>
 
 
@@ -970,8 +988,20 @@ alveolar</th>
 </section>
 
 
-    
-      
+
+
+
+
+
+
+
+<p>
+<span id="extendedC"></span>
+<!--span id="onsets"></span>
+<span id="finals"></span>
+<span id="clength"></span-->
+<span id="clusters"></span>
+</p>
 
 
 
@@ -980,22 +1010,42 @@ alveolar</th>
 <h2>Consonants</h2>
 
 
+<div id="consonant_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
+
+<!--li>Onset clusters.</li>
+
+<li>Syllable-final consonants.</li>
+
+<li>Gemination or consonant lengthening.</li-->
+
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+</ul>
+</div>
+
+
+
+
 <div id="consonant_description"></div>
 
 
 
 
-
-
-
 <section id="consonantSummary">
-<h3>Consonant summary</h3>
+<h4>Consonant summary table</h4>
 
-<!--p class="instructions">Diacritics are added to the vowels to indicate nasalisation, which is not shown here.</p-->
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight">The left column is lowercase, and the right uppercase.</p>
+
+
 
 <table class="soundSummary">
 <tr>
-<th rowspan="5">General:</th>
+<th rowspan="2">Stops</th>
 <td><figure class="summaryBox auto" data-ipa="p,b,t,d,k,ɡ,ɡ,ɡ" data-cols="trans,transc">π␣μπ␣τ␣ντ␣κ␣νκ␣γγ␣γκ</figure></td>
 <td><figure class="summaryBox auto" data-ipa="p,b,t,d,k,ɡ" data-cols="trans,transc">Π␣ΜΠ␣Τ␣ΝΤ␣Κ␣ΝΚ</figure></td>
 </tr>
@@ -1004,14 +1054,17 @@ alveolar</th>
 <td><figure class="summaryBox auto" data-ipa="p͡s,k͡s,,m͡b,n͡d,ŋ͡ɡ" data-cols="trans,transc">Ψ␣Ξ␣ ␣ΜΠ␣ΝΤ␣ΝΚ</figure></td>
 </tr>
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">φ␣β␣θ␣δ␣σ␣ς␣ζ␣χ␣γ</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">Φ␣Β␣Θ␣Δ␣Σ␣Ζ␣Χ␣Γ</figure></td>
 </tr>
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">μ␣ν</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">Μ␣Ν</figure></td>
 </tr>
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">ρ␣λ</figure></td>
 <td><figure class="summaryBox auto" data-cols="ipa,trans,transc">Ρ␣Λ</figure></td>
 </tr>
@@ -1093,19 +1146,8 @@ alveolar</th>
 
 
 
-<section id="novowel">
-<h3>Vowel absence</h3>
-
-<p>tbd</p>
-</section>
-
-
-
-
-
-
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <p>tbd</p>
 </section>
@@ -1116,7 +1158,7 @@ alveolar</th>
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <p>tbd</p>
 </section>
@@ -1613,25 +1655,52 @@ alveolar</th>
 <p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the  Greek orthography described here.</a></p>
 </section>
 
-    
-      
+
+
+
+
+
+
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="gsub"></span>
+</p>
+
 
 
 
 
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
+
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Context-based shaping (letters do not interact).</li>
+</ul>
+</div>
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="/pickers/greek/">Greek character app</a>.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/grek/index.html" target="_blank">Greek character app</a>.</p>
 
 
 
@@ -1673,7 +1742,7 @@ alveolar</th>
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="prompts">tbd</p>
 </section>
 

@@ -13,7 +13,7 @@ ISO 15924 has a general script code for Syriac (syrc), and another (syrn) for th
 related:`Macrolanguage is Syriac [syr].`,
 type:"alphabet", cs:"no", gpos:"yes", gsub:"yes", cursive:"yes", direction:"rtl", wordsep:"space", baseline:"romn", wrap:"word", hyphenation:"?",  justification:"?",
 vowels:"ml:3 cm:5 other:3",
-linked:"syrc/tru", fonts:"/pickers/syrc-tru/", 
+linked:"syrc/tru", fonts:"/pickers/syrc-tru/", picker:"syrc-tru", font:"'Noto Sans Syriac Western'" 
 },
 
 

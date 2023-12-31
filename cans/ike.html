@@ -27,7 +27,6 @@
 
 <script src="ike-langdata.js"></script>
 <script src="ike-examples.js"></script>
-<script src="ike-translit.js">  </script>
 <script src="ike-globals.js"></script>
 </head>
 
@@ -61,7 +60,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->8 December, 2023<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->31 December, 2023<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -80,7 +79,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Eastern Canadian Inuktitut (Unified Canadian Aboriginal Syllabics) Orthography Notes, <!-- #BeginDate format:En2 -->08-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cans/ike">https://r12a.github.io/scripts/cans/ike</a></small></p>
+<p class="refLine"><small>Richard Ishida, Eastern Canadian Inuktitut (Unified Canadian Aboriginal Syllabics) Orthography Notes, <!-- #BeginDate format:En2 -->31-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cans/ike">https://r12a.github.io/scripts/cans/ike</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -165,11 +164,15 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>The Inuit languages can be written using the syllabic script, or using a Latin transcription. The former is widely used in eastern dialects, whereas the latter is more common in the west.</p>
 
-<p>The UCAS script runs left to right in horizontal lines.</p>
+<p>The UCAS script runs left to right in horizontal lines. Words are separated by spaces. There is no case distinction.</p>
 
-<p class="addToConsonants">In the UCAS <a class="termref" href="../glossary/index.html#featuralsyllabary">featural syllabary</a> a majority of symbols in the syllabary represesent a CV pairing, but the symbol is rotated to indicate whether the vowel is <span class="ipa">i</span>, <span class="ipa">u</span>, or <span class="ipa">a</span>, or in some dialects <span class="ipa">ai</span>. </p>
 
-<p class="addToConsonants">Syllable-final consonants (ie. not followed by a vowel), are represented by a set of superscript symbols. </p>
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">characters</a></span></p>
+<p class="addToConsonants">In the UCAS <a class="termref" href="../glossary/index.html#featuralsyllabary">featural syllabary</a> a majority of symbols in the syllabary represesent a <a class="seclink" href="#basicC">CV pairing</a>, but the symbol is rotated to indicate whether the vowel is <span class="ipa">i</span>, <span class="ipa">u</span>, or <span class="ipa">a</span>, or in some dialects <span class="ipa">ai</span>. </p>
+<p class="addToConsonants">Standalone vowels are represented by either <a class="seclink" href="#vowels">6 or 7 syllable letters.</a></p>
+
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final consonants</a> (ie. not followed by a vowel), are represented by a set of superscript symbols. </p>
 
 <p class="addToConsonants">A small dot above a symbol indicates a lengthened vowel, but there are precomposed code points for all combinations of base plus diacritics. Inuktitut uses no combining marks.</p>
 
@@ -547,8 +550,45 @@ becomes
 
 
 
+
+
+
+
+<p>
+<span id="otherV"></span>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="compositeV"></span>
+<span id="tones"></span>
+<span id="extendedC"></span>
+</p>
+
+
+
+
+
 <section id="characters">
 <h2>Syllables</h2>
+
+<div id="vowel_notfound" class="instructions">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+
+<li>Tones (not a tonal language).</li>
+
+<li>Repertoire extensions to cover loan words, etc.</li>
+
+<li>Onset clusters.</li>
+
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+</ul>
+</div>
+
+
 
 
 <div id="vowel_description"></div>
@@ -1126,30 +1166,62 @@ resulting in the sequence <span class="charExample" translate="no"><span class="
 
 
 
+
+
+
+
+
+
+
+<p>
+<span id="cursive"></span>
+<span id="gsub"></span>
+<span id="gpos"></span>
+<span id="transforms"></span>
+</p>
+
+
+
+
+
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
+
+
+<div id="shaping_notfound" class="instructions">
+<p>The following features are not found in this orthography.</p>
+
+<ul>
+<li>Cursive joining (ie. joined up like Arabic).</li>
+
+<li>Context-based shaping (letters do not interact).</li>
+
+<li>Context-based positioning (no combining marks).</li>
+
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+</div>
+
+
+
 <p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">writing styles</span>; 
+<span id="writingstylesInline">font/writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
 <span id="gsubInline">context-based shaping</span>;
 <span id="gposInline">context-based positioning</span>;
-<span id="baselinesInline">baselines, line height, etc.</span>;
-<span id="fontstyleInline">font styles</span>;
+<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="../../pickers/cans-ike/">Inuktitut character app</a>.</p>
+<p class="instructions">Experiment with examples using the <a href="../../pickers/cans-ike/index.html" target="_blank">Inuktitut character app</a>.</p>
 
-<p>Inuktitut has no context-based shaping or positioning, and is not cursive.</p>
-<p>It has no special requirements for baseline alignment between mixed scripts or in general.</p>
-<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 
 
 
 
 <section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
+<h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="prompts">tbd</p>
 </section>
 </section>
