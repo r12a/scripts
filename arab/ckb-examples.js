@@ -1,10 +1,35 @@
 /*
 @ Source: https://en.wikipedia.org/wiki/Sorani
 */
+/*
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ if Wiktionary spells the word differently, add the spelling here
+*/
+
+
+
+
+
 
 
 autoExpandExamples.ckb = `
 
+@ Source: https://en.wikipedia.org/wiki/Sorani
+
+
+
+@ https://en.wiktionary.org/wiki/Category:Central_Kurdish_lemmas
 ئا||
 ئادەم||
 ئارام||
@@ -12,13 +37,9 @@ autoExpandExamples.ckb = `
 ئازاد||
 ئازادی||
 ئازار||
-ئاشتی||
-ئافرەت||
-ئال||
 ئاو||
 ئاور||
 ئاوی||
-ئاپارتمان||
 ئاگر||
 ئاگردان||
 ئایا||
@@ -29,17 +50,11 @@ autoExpandExamples.ckb = `
 ئێمە||
 ئێوە||
 ئەجزاخانە||
-ئەحمەد||
 ئەرخەوانی||
-ئەرمەن||
-ئەرمەنی||
 ئەستێرە||
 ئەمریکا||
-ئەو||
-ئەوان||
 ئەوین||
 باخچە||
-بادەم||
 باران||
 باش||
 بانگ||
@@ -47,58 +62,33 @@ autoExpandExamples.ckb = `
 برج||
 برنج||
 بزن||
-بنەوشە||
 بورج||
 بۆ||
 بۆ چ||
 بۆ چی||
-بۆمبا||
-بۆن||
 بیرکاری||
 بیرە||
-بیست||
-بیست و یەک||
-بێ||
 بێقیمەت||
 بە||
 بەد||
 بەرخ||
-بەردەستێ||
-بەرز||
 بەش||
-بەفر||
-بەڕوو||
 بەھار||
 تازە||
 تاوستان||
-تر||
-ترین||
-ترێ||
-توانا||
 توتن||
-تووک||
-تۆ||
 تۆپ||
 تەلەڤیزیۆن||
-تەمەن||
-تەواو||
+تەمەن|age|t§ɛ§m§ɛ§n|temen|temen
 جار||
-جامعە||
-جوو||
-جووتیار||
 جووتێر||
 جۆ||
-جەژن||
-حەوت||
-حەڤدە||
 خاتوون||
 خانوو||
 خاو||
 خاچ||
 خوشک||
 خوێ||
-خۆر||
-خۆڵەمێشی||
 خەزان||
 خەست||
 خەو||
@@ -110,20 +100,16 @@ autoExpandExamples.ckb = `
 دان||
 دانشگا||
 دنیا||
-دوانزە||
-دوو||
 دووشەممە||
 دۆ||
 دۆست||
 دیسان||
-دیوار||
-دێ||
-دە||
+دیوار|wall|d§iː§w§aː§ɾ|dîwar
 دەرد||
 دەرزی||
 دەرمان||
 دەرمانخانە||
-دەرگا||
+دەرگا|door|d§a§r§ɡ§aː|dargâ|dargâ
 دەست||
 دەفتەر||
 دەنگ||
@@ -131,7 +117,6 @@ autoExpandExamples.ckb = `
 رووداو||
 رێوی||
 زانستگا||
-زانستگە||
 زانکۆ||
 زانین||
 زاوە||
@@ -139,82 +124,53 @@ autoExpandExamples.ckb = `
 زه‌نجه‌فیل||
 زڕبرا||
 زڕخوشک||
-زێڕنگەر||
-زەرد||
 زەلام||
 ساغ||
 ساڵ||
 سفر||
-سلێمانی||
 سنجاو||
-سوور||
+سوور|red|s§uː§‹§ɾ|sûr
 سپاس||
 سپی||
-سپیدار||
-سڕ||
-سڵاو||
-سیانزە||
 سیر||
-سێ||
 سێو||
 سێگۆشە||
 سەخت||
-سەد||
 سەر||
 سەرەتا||
 سەماوەر||
-سەوز||
 سەگ||
 شا||
 شاخ||
-شانزە||
 شت||
-شوقە||
 شیر||
-شین||
-شێت||
-شێر||
-شەش||
-عێراق||
-عەشق||
 فیل||
 فەرمانرەوا||
 فەرھەنگ||
 فەرەنسا||
 فەرەنساوی||
 قارەمان||
-قاز||
 قامووس||
-قاوەیی||
 قاپی||
-قسڵ||
-قووڵ||
+قووڵ|deep|q§uː§‹§ɫ|qûḷ
 قەساب||
 قەفەس||
 قەوزە||
-قەڵخان||
 قەیچی||
 لادێ||
 لاق||
 لۆکە||
 لە ... دا||
-لەبن||
-لەبەینی ... دا||
 مادیار||
 مار||
-مازوو||
 ماست||
 ماستاو||
 ماشێن||
-مامر||
 مانگ||
 مر||
 مراوی||
 مرواری||
 مرۆڤ||
-مریشک||
-مزگەوت||
-من||
 منداڵ||
 موزیک||
 مووزیک||
@@ -239,34 +195,25 @@ autoExpandExamples.ckb = `
 نامە||
 نان||
 نوێ||
-نۆ||
-نۆزدە||
 نیاز||
 نینۆک||
 نێڕ||
 نە||
 نەزانی||
-نەچە||
-وشک||
 وشەنامە||
 وەخت||
 وەرز||
 پارچە||
 پارێزەر||
 پارە||
-پانزە||
 پاکستان||
 پایز||
-پرتەقاڵی||
 پرد||
 پشیلە||
 پووڵ||
-پیاو||
+پیاو|man|p§j§aː§w|pyaw
 پیشە||
 پێ||
-پێغەمەر||
-پێنج||
-پێنووس||
 پەرتووک||
 پەرتوک||
 پەنیر||
@@ -276,16 +223,8 @@ autoExpandExamples.ckb = `
 چادر||
 چار||
 چارە||
-چارەنووس||
-چاو||
 چایخانە||
-چوار||
-چواردە||
-چۆل||
-چۆنی||
-چۆنی باشی||
 چۆک||
-چۆڵ||
 چی||
 چین||
 چەرم||
@@ -297,233 +236,230 @@ autoExpandExamples.ckb = `
 ڕووداو||
 ڕۆژ||
 ڕۆژانە||
-ڕۆژنامە||
-ڕێوی||
-ڕەش||
-ڕەقە||
 ڕەنگ||
-ژان||
-ژن||
-ژوان||
 ژووان||
 ڤۆدکا||
 ڤۆدگا||
 کا||
 کات||
 کاروان||
-کارۆ||
 کارەبا||
 کاغەز||
 کتاو||
 کتێب||
 کران||
 کردن||
-کرم||
 کورد||
-کوردستان||
 کوردی||
-کوردیی ناوەندی||
 کوشتن||
 کونەلووت||
 کووڕ||
-کوڕ||
 کچ||
 کۆمپیوتەر||
-کۆیلە||
 کێرد||
 کێشان||
-کەر||
+کەر|donkey|k§ɛ§ɾ|ker|ker
 کەلەرم||
 کەو||
 کەڕ||
-کەڵەباب||
-کەڵەشێر||
-گا||
 گران||
 گرتن||
 گردن||
 گوند||
 گووگڵ||
 گوڵ||
-گڵ||
 گۆڕ||
 گیرفان||
-گیسک||
 گیفان||
 گەرما||
 گەشین||
-گەمێ||
-گەنج||
-گەورە||
 ھاوین||
-ھیوا||
 ھەر||
-ھەر شتێک||
 ھەردەم||
-ھەرمێ||
 ھەرمەن||
 ھەرمەنی||
-ھەسان||
 ھەش||
-ھەشت||
-ھەموو||
-ھەوا||
 ھەور||
-ھەوێن||
-ھەژدە||
 ھەی||
 یاسا||
-یانزە||
-یەک||
 
-بووڵ|ashes||bûł
-پیاو|man||pyâw
-ته‌مه‌ن|age||taman
-ده‌رگا|door||dargâ
-که‌ر|donkey||kar
-گه‌وره|big||gawra
-قووڵ|deep||qûł
+
+ئاشتی|peace|ʔ§aː§ʃ§t§iː|aştî
+ئافرەت|woman|ʔ§aː§f§ɾ§a§t|afret
+ئال|middle finger|a§l|al
+ئاپارتمان|appartment, flat|ʔ§aː§p§aː§ɾ§t§m§aː§n|apartman
+ئەحمەد|Ahmed|aħ§‹§m§a§d|Eḥmed||Iran
+ئەرمەن|Armenian (people)|ʔ§a§ɾ§m§a§n|ermen
+ئەرمەنی|Armenian (lang)|ʔ§a§ɾ§m§a§n§iː|ermenî
+ئەو|he, she|›§æ§w|ew
+ئەوان|they|›§a§ˈw§aː§n|ewan
+بادەم|almond|b§aː§d§a§m|badem
+بنەوشە|violet|bə§n§a§w§ʃ§a|binewşe
+بۆمبا|bomb|b§o̞ː§m§b§aː|bomba
+بۆن|smell, odor|b§o̞ː§n|bon
+بیست|twenty|b§iː§s§t|bîst
+بیست و یەک|twenty-one|b§iː§s§t§§u§§j§a§k|bîst u yek
+بێ|without|b§e|bê
+بەردەستێ|flint|b§a§ɾ§d§a§s§t§e̞ː|berdestê
+بەفر|snow|b§æ§f§ɾ|befr
+بەڕوو|acorn|b§a§r§uː§‹|berrû
+تر|comparative suffix|tɪ§ɾ|-tir
+ترین|superlative suffix|tɪ§ɾ§i§n|-tirîn
+ترێ|grape|t§ɾ§e̞ː|tirê
+توانا|Twana (male given name)|t§w§aː§n§aː|twana
+تووک|hair, fur|t§uː§‹§k|tûk
+تەواو|complete, ready|t§a§w§aː§w|tewaw
+جامعە|university|d͡ʒ§aː§m(ə)§ʕ§a|cami'e
+جوو|Jew|d͡ʒ§uː§‹|cû
+جووتیار|farmer|d͡ʒ§uː§‹§t§j§aː§r|cûtyar
+حەوت|seven|ħ§a§w§t|ḧewt
+حەڤدە|seventeen|ħ§a§v§d§a|ḧevde
+خۆڵەمێشی|grey|x§oː§ɫ§a§m§eː§ʃ§iː|xoḷemêşi
+دوانزە|twelve|d(ə)§w§aː§n§z§a|dwanze
+دوو|two|d§uː§‹|dû
+دە|ten|d§a|de
+زانستگە|university|z§aː§nə§s§t§ɡ§a|zanistge
+زێڕنگەر|goldsmith|z§e̞ː§rə§ŋ§ɡ§a§ɾ|zêrringer
+سلێمانی|Sulaymaniyah|sɪ§l§eː§m§ɑː§n§iː|Silêmanî
+سپیدار|white poplar|s§p§iː§d§aː§ɾ|spîdar
+سڕ|numb|sə§r|serr
+سڵاو|greeting|sə§ɫ§aː§w|siḷaw
+سیانزە|thirteen|s(ə)§j§aː§n§z§a|syanze
+سێ|three|s§eː|sê
+سەد|hundred|s§a§d|sad
+سەوز|green|s§a§w§z|sewz
+شانزە|sixteen|ʃ§aː§n§z§a|şanze
+شوقە|appartment|ʃ§u§q§a|şuqe
+شێت|madman, lunatic|ʃ§e̞ː§t|şêt
+شێر|lion|ʃ§e̞ː§ɾ|şêr
+شەش|six|ʃ§a§ʃ|şeş
+عێراق|Iraq|ʕ§eː§r§aː§q|ʿÊraq
+عەشق|love|ʕ§a§ʃ§q|'eşq|ʔaʃq (Iran)|Iraq
+قاز|goose|q§aː§z|qaz
+قاوەیی|brown|q§aː§w§a§j§iː|qaweyî
+قسڵ|lime (geol.)|qə§s§ɫ|qisḷ
+قەڵخان|shield|q§a§ɫ§x§aː§n|qellxan
+لەبن|below|l§a§bə§n|lebin
+لەبەینی ... دا|between|l§æ§b§æ§j§n§ɪ§§ ... §§d§a|lebeyni ... da
+مازوو|oak apple|m§aː§z§uː§‹|mâzû
+مامر|hen|m§aː§mə§ɾ|mamir
+مْریشک|hen|m§ɾ§iː§ʃ§k|mirîşk|||مریشک
+مریشک|hen|m§ɾ§iː§ʃ§k|mirîşk
+مزگەوت|mosque|mə§z§ɡ§a§u̯§t|mizgewt
+من|I, me|mɪ§n|min
+نۆ|nine|n§oː|no
+نۆزدە|nineteen|n§oː§z§d§a|nozde
+نەچە|generation|n§a§t͡ʃ§a|neçe
+وشک|dry, arid|wə§ʃ§k|wišk
+پانزە|fifteen|p§aː§n§z§a|panze
+پرتەقاڵی|orange|pə§ɾ§t§a§q§aː§ɫ§iː|pirteqałî
+پێغەمەر|prophet|p§eː§ɣ§a§m§a§ɾ|pêğemer
+پێنج|five|p§eː§n§d͡ʒ|pênc
+چارەنووس|destiny|t͡ʃ§aː§ɾ§a§n§uː§‹§s|çarenûs
+چوار|four|t͡ʃ(ə)§w§aː§r|çwar
+چواردە|fourteen|t͡ʃ(ə)§w§aː§r§d§a|çwarde
+چۆل|desert|t͡ʃ§o̞ː§l|çol
+چۆڵ|desert|t͡ʃ§o̞ː§ɫ|çoll
+چۆنی|how are you|t͡ʃ§oː§n§i|çonî
+چۆنی باشی‎|how are you|t͡ʃ§oː§n§i§ §b§aː§ʃ§i|çonî başî
+ڕۆژنامە|newspaper|r§oː§ʒ§n§aː§m§a|řojname
+ڕێوی|fox|r§e̞ː§w§iː|rêwî
+ڕەش|black|r§a§ʃ|reş
+ڕەقە|sea turtle|r§a§q§a|reqe
+ژان|pain|ʒ§aː§n|jan
+ژن|woman, wife|ʒə§n|jin
+ژوان|appointment|ʒ§w§aː§n|jwan
+کارۆ|Karo (name)|k§aː§ɾ§o̞ː|karo
+کرم|worm|kə§r(ə)§m|kirm
+کوردستان|Kurdistan|k§ʊ§ɾ§dɪ§s§ˈt§ɑː§n|kurdistan
+کوردیی ناوەندی|Central Kurdish|k§u§r§d§iː§(j)§ §n§aː§w§a§n§d§iː|kurdîy nawendî
+کۆیلە|slave|k§oː§i̯§l§a|koyle
+کەڵەباب|cock, rooster|k§a§ɫ§a§b§aː§b|keḷebab
+کەڵەشێر|cock, rooster|k§a§ɫ§a§ʃeː§ɾ|keḷeşêr
+گا|bull|ɡ§aː|ga
+گڵ|clay|ɡə§ɫ|gill
+گیسک|kid goat|ɟ§iː§s§k|gîsk
+گەمێ|ship|ɡ§a§m§e̞ː|gemê
+گەنج|young|ɡ§a§n§d͡ʒ|genc
+گەورە|big|ɡ§ə§w§ˈɾ§æ|gewre
+ھیوا|hope|h§iː§w§aː|hîwa
+ھەر شتێک|whatever|h§a§r§ §ʃ(ə)§t§eː§k|her şitêk
+ھەرمێ|pear|h§a§ɾ§m§e̞ː|hermê
+ھەسان|whetstone|h§a§s§aː§n|hesan
+ھەشت|eight|h§a§ʃ§t|heşt
+ھەموو|all, every|h§a§m§uː§‹|hemû
+ھەوا|air, weather|h§a§w§aː|hewa
+ھەوێن|leaven|h§a§w§e̞ː§n|hewên
+ھەژدە|eighteen|h§a§ʒ§d§a|hejde
+یانزە|eleven|j§aː§n§z§a|yanze
+یەک|one|j§a§k|yek
+با|wind|b§aː|ba
+مەزن|great|m§ɛ§zɪ§n
+کورد|Kurd|k§ʊ§ɾ§d|kurd
+تۆ|you, your|toː|to
+دوور|far|d§uː§‹§ɾ
+شین|blue|ʃ§iː§n|şîn
+دێ|village|d§eː|dê
+بەرز|high||berz
+کوڕ|boy||kurr/kuř
+زەرد|yellow|z§a§ɾ§d|zerd
+خۆر|sun||xor
+جەژن|festive holiday||cejn
+دڵ|heart|də§ɫ|dill
+شەو|night|ˈʃəw|şew
+
+
+
+
+@ unknown May have suspect spelling !
+
+بووڵ|ashes|b§uː§‹§ɫ|bûł
 ئاماده|ready||âmâda
 فنجان|cup||finjân
-گه‌ڤزان|to roll over||gavzân
-سوور|red||sûr
+گەڤزان|to roll over||gavzân
 زۆر|many||zor
+
 خه‌زر|anger||khazr
 عراق|Iraq||‘irâq
 پێغه‌مه‌ر|prophet||peghamar
-شار|city||shâr
-ژوور|room||zhûr
 چاک|good||châk
 جوان|beautiful||jwân
 حزب|political party||ḥizb
 هه‌ز|desire||haz
-مامر|chicken||mâmir
 نامه|letter||nâma
-ولات|country||wiłât
 یانه|club||yâna
 رۆژ|day||rozh
 ئه‌مڕۆ|today||amřo
 له‌ت|piece||lat
 باڵ|arm||bâł
 
-ئاشتی|peace|aːʃtiː|aştî
-ئافرەت|woman|aːfɾat|afret
-ئال|middle finger|al|al
-ئاپارتمان|appartment, flat|aːpaːɾtmaːn|apartman
-ئەحمەد|Ahmed|aħmad|Eḥmed|ahmad (Iran)
-ئەرمەن|Armenian (people)|aɾman|ermen
-ئەرمەنی|Armenian (lang)|aɾmaniː|ermenî
-ئەو|he, she|aw|ew
-ئەوان|they|aˈwaːn|ewan
-بادەم|almond|baːdam|badem
-بنەوشە|violet|bənawʃa|binewşe
-بۆمبا|bomb|bo̞ːmbaː|bomba
-بۆن|smell, odor|bo̞ːn|bon
-بیست|twenty|biːst|bîst
-بیست و یەک|twenty-one|biːstujak|bîst u yek
-بێ|without|be|bê
-بەردەستێ|flint|baɾdaste̞ː|berdestê
-بەفر|snow|bæfɾ|befr
-بەڕوو|acorn|baruː|berrû
-تر|comparative suffix|tɪɾ|-tir
-ترین|superlative suffix|tɪɾin|-tirîn
-ترێ|grape|tɾe̞ː|tirê
-توانا|Twana (male given name)|twaːnaː|twana
-تووک|hair, fur|tuːk|tûk
-تەواو|complete, ready|tawaːw|tewaw
-جامعە|university|d͡ʒaːm(ə)ʕa|cami'e
-جوو|Jew|d͡ʒuː|cû
-جووتیار|farmer|d͡ʒuːtjaːr|cûtyar
-حەوت|seven|ħawt|ḧewt
-حەڤدە|seventeen|ħavda|ḧevde
-خۆڵەمێشی|grey|xoːɫameːʃiː|xoḷemêşi
-دوانزە|twelve|d(ə)waːnza|dwanze
-دوو|two|duː|dû
-دە|ten|da|de
-دەرگا|door|darɡaː|derga
-زانستگە|university|zaːnəstɡa|zanistge
-زێڕنگەر|goldsmith|ze̞ːrəŋɡaɾ|zêrringer
-سلێمانی|Sulaymaniyah|sɪleːmɑːniː|Silêmanî
-سپیدار|white poplar|spiːdaːɾ|spîdar
-سڕ|numb|sər|serr
-سڵاو|greeting|səɫaːw|siḷaw
-سیانزە|thirteen|s(ə)jaːnza|syanze
-سێ|three|seː|sê
-سەد|hundred|sad|sad
-سەوز|green|sawz|sewz
-شانزە|sixteen|ʃaːnza|şanze
-شوقە|appartment|ʃuqa|şuqe
-شێت|madman, lunatic|ʃe̞ːt|şêt
-شێر|lion|ʃe̞ːɾ|şêr
-شەش|six|ʃaʃ|şeş
-عێراق|Iraq|ʕeːraːq|ʿÊraq
-عەشق|love|ʔaʃq|'eşq|ʕaʃq (Iraq)
-قاز|goose|qaːz|qaz
-قاوەیی|brown|qaːwajiː|qaweyî
-قسڵ|lime (geol.)|qəsɫ|qisḷ
-قووڵ|deep|quːɫ|qûḷ
-قەڵخان|shield|qaɫxaːn|qellxan
-لەبن|below|labən|lebin
-لەبەینی ... دا|between|læbæjnɪ ... da|lebeyni ... da
-مازوو|oak apple|maːzuː|mâzû
-مامر|hen|maːməɾ|mamir
-مْریشک|hen|mɾiːʃk|mirîşk
-مزگەوت|mosque|məzɡau̯t|mizgewt
-من|I, me|mɪn|min
-نۆ|nine|noː|no
-نۆزدە|nineteen|noːzda|nozde
-نەچە|generation|nat͡ʃa|neçe
-وشک|dry, arid|wəʃk|wišk
-پانزە|fifteen|paːnza|panze
-پرتەقاڵی|orange|pəɾtaqaːɫiː|pirteqałî
-پێغەمەر|prophet|peːɣamaɾ|pêğemer
-پێنج|five|peːnd͡ʒ|pênc
-چارەنووس|destiny|t͡ʃaːɾanuːs|çarenûs
-چوار|four|t͡ʃ(ə)waːr|çwar
-چواردە|fourteen|t͡ʃ(ə)waːrda|çwarde
-چۆل|desert|t͡ʃo̞ːl|çol
-چۆڵ|desert|t͡ʃo̞ːɫ|çoll
-چۆنی|how are you|t͡ʃoːni|çonî
-چۆنی باشی‎|how are you|t͡ʃoːni baːʃi|çonî başî
-ڕۆژنامە|newspaper|roːʒnaːma|řojname
-ڕێوی|fox|re̞ːwiː|rêwî
-ڕەش|black|raʃ|reş
-ڕەقە|sea turtle|raqa|reqe
-ژان|pain|ʒaːn|jan
-ژن|woman, wife|ʒən|jin
-ژوان|appointment|ʒwaːn|jwan
-کارۆ|Karo (name)|kaːɾo̞ː|karo
-کرم|worm|kər(ə)m|kirm
-کوردستان|Kurdistan|kʊɾdɪsˈtɑːn|kurdistan
-کوردیی ناوەندی|Central Kurdish|kurdiː(j) naːwandiː|kurdîy nawendî
-کۆیلە|slave|koːi̯la|koyle
-کەڵەباب|cock, rooster|kaɫabaːb|keḷebab
-کەڵەشێر|cock, rooster|kaɫaʃeːɾ|keḷeşêr
-گا|bull|ɡaː|ga
-گڵ|clay|ɡəɫ|gill
-گیسک|kid goat|ɟiːsk|gîsk
-گەمێ|ship|ɡame̞ː|gemê
-گەنج|young|ɡand͡ʒ|genc
-گەورە|big|ɡewre|gewre
-ھیوا|hope|hiːwaː|hîwa
-ھەر شتێک|whatever|har ʃ(ə)teːk|her şitêk
-ھەرمێ|pear|haɾme̞ː|hermê
-ھەسان|whetstone|hasaːn|hesan
-ھەشت|eight|haʃt|heşt
-ھەموو|all, every|hamuː|hemû
-ھەوا|air, weather|hawaː|hewa
-ھەوێن|leaven|hawe̞ːn|hewên
-ھەژدە|eighteen|haʒda|hejde
-یانزە|eleven|jaːnza|yanze
-یەک|one|jak|yek
+
+
+@ https://en.wikipedia.org/wiki/Kurdish_alphabets#Vowels
+
+یاری|play|j§ɑ§ɾ§iː
 
 
 
+@ https://en.wikipedia.org/wiki/Sorani
+
+ڕەق|solid||req
+فیلم|film||film
+هەڤدە|eleven||hevde
+شار|city||shâr
+ژوور|room||zhûr
+ناو|name||naw
+وڵات|country||wilat
+یارمەتی|help||yarmetî
+ئەمڕۆ|today||emrro
+لێرە|here||lêre
 
 
+@ https://en.wikipedia.org/wiki/Kurdish_phonology
 
-
-
+چاو|eye|ˈt͡ʃɑːw|čaw
+بڕۆین|let's go|bɪ§ˈr§oː§j§n|birroyn
+چووی|went|ˈt͡ʃ§uː§‹§j|çûy
 
 
 
