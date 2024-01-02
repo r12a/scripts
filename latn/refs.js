@@ -209,6 +209,32 @@ reflist = {
 "retr": "Jan 0224",
 },
 
+
+"wmt": {
+"authors": "W. M. Thackston",
+"title":"Kurmanji Kurdish",
+"sub": "A Reference Grammar with Selected Readings",
+"date": "2006",
+"retr": "Jan 2024",
+"url":"https://web.archive.org/web/20160304194105/http://www.fas.harvard.edu/~iranian/Kurmanji/kurmanji_1_grammar.pdf",
+"lang": new Set(['kmr']),
+"reviewed":false
+},
+
+"ua": {
+"authors": "University of Arizona",
+"title":"Kurmanji Kurdish",
+"retr": "Jan 2024",
+"url":"https://iranian-languages.arizona.edu/node/7",
+"lang": new Set(['kmr']),
+"reviewed":false
+},
+
+
+
+
+
+
 }
 
 

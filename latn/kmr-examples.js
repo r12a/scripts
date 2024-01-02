@@ -594,7 +594,7 @@ bi ser xwe ve hatin||
 bi xatirê te||
 bi-||
 biala||
-biencam||
+biencam|resultful|b§ɪ§ɛ§n§ˈd͡ʒ§ɑː§m
 biencamî||
 biguman||
 bigumanî||
@@ -1424,7 +1424,7 @@ hêstir||
 hêvî||
 hêvî kirin||
 hêvîdar||
-hêz||
+hêz|strength, power|h§eː§z
 hêzên bejayî||
 hîdro-||
 hîdrojen||
@@ -1593,7 +1593,7 @@ kirêt||
 kirîn||
 kisl||
 kitik||
-kitêb||
+kitêb|book|k§ɪ§ˈt§eː§b
 kizir||
 klorîn||
 kojandin||
@@ -2185,7 +2185,7 @@ qelb||
 qelem||
 qelen||
 qemî||
-qenaet||
+qenaet|contentment|q§ɛ§n§ɑː§ˈɛ§t
 qencî||
 qenepe||
 qepax||
@@ -2710,7 +2710,7 @@ xemsarî||
 xendek||
 xeniqîn||
 xerman||
-xerîb||
+xerîb|stranger, foreigner|x§ɛ§ˈɾ§iː§b
 xerûze||
 xest||
 xet||
