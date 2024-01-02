@@ -79,6 +79,15 @@ reflist = {
 "reviewed":true
 },
 
+"ekmr": {
+"authors": "SIL",
+"title":"Ethnologue",
+"retr": "Jan 2024",
+"url":"https://www.ethnologue.com/language/kmr",
+"lang": new Set(['kmr']),
+"reviewed":true
+},
+
 "fsi": {
 "authors": "Foreign Service Institute",
 "title":"Fula Basic Course",
@@ -192,6 +201,13 @@ reflist = {
 "retr": "Nov 2021",
 },
 
+"wkurd": {
+"url":"https://en.wikipedia.org/wiki/Kurdish_alphabets",
+"authors": "Wikipedia",
+"title":"Kurdish alphabets",
+"lang": new Set(['kmr']),
+"retr": "Jan 0224",
+},
 
 }
 
@@ -225,5 +241,6 @@ ff:{name:"Fula", url:"ff.html"},
 bm:{name:"Bamanan", url:"bm.html"},
 ha:{name:"Hausa", url:"ha.html"},
 wo:{name:"Wolof", url:"wo.html"},
+kmr:{name:"Kurmanji", url:"kmr.html"},
 }
 
