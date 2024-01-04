@@ -43,12 +43,12 @@ autoExpandExamples.ckb = `
 ئاگر||
 ئاگردان||
 ئایا||
-ئۆھایۆ||
+ئۆھایۆ|Ohio|›§oː§h§aː§j§oː|ohayo
 ئێران||
-ئێرانی||
+ئێرانی|Iranian|ʔ§e̞ː§ɾ§aː§n§iː|êranî
 ئێرە||
-ئێمە||
-ئێوە||
+ئێمە|we, us|›§eː§m§æ|ême
+ئێوە|you (pl)|›§eː§w§æ|êwe
 ئەجزاخانە||
 ئەرخەوانی||
 ئەستێرە||
@@ -71,13 +71,13 @@ autoExpandExamples.ckb = `
 بێقیمەت||
 بە||
 بەد||
-بەرخ||
+بەرخ|lamb|b§ɛ§r§x|berx
 بەش||
 بەھار||
 تازە||
 تاوستان||
-توتن||
-تۆپ||
+توتن|tobacco|t§ʊ§tɪ§n|tutin
+تۆپ|ball|t§oː§p|top
 تەلەڤیزیۆن||
 تەمەن|age|t§ɛ§m§ɛ§n|temen|temen
 جار||
@@ -86,7 +86,7 @@ autoExpandExamples.ckb = `
 خاتوون||
 خانوو||
 خاو||
-خاچ||
+خاچ|cross|x§aː§t͡ʃ|xaç
 خوشک||
 خوێ||
 خەزان||
@@ -120,17 +120,17 @@ autoExpandExamples.ckb = `
 زانکۆ||
 زانین||
 زاوە||
-زستان||
-زه‌نجه‌فیل||
+زستان|winter|zɪ§s§t§aː§n|zistan
+زەنجەفیل|ginger|z§a§n§d͡ʒ§a§f§iː§l|zencefîl
 زڕبرا||
 زڕخوشک||
 زەلام||
 ساغ||
 ساڵ||
-سفر||
+سفر|zero|sɪ§fɪ§r|sifir
 سنجاو||
 سوور|red|s§uː§‹§ɾ|sûr
-سپاس||
+سپاس|thanks|s§p§aː§s|spas
 سپی||
 سیر||
 سێو||
@@ -141,10 +141,10 @@ autoExpandExamples.ckb = `
 سەماوەر||
 سەگ||
 شا||
-شاخ||
+شاخ|mountain|ʃ§aː§x|şax
 شت||
 شیر||
-فیل||
+فیل|elephant|f§iː§l|fil
 فەرمانرەوا||
 فەرھەنگ||
 فەرەنسا||
@@ -156,7 +156,7 @@ autoExpandExamples.ckb = `
 قەساب||
 قەفەس||
 قەوزە||
-قەیچی||
+قەیچی|scissors|q§ə§j§t͡ʃ§iː|qeyçî
 لادێ||
 لاق||
 لۆکە||
@@ -166,32 +166,32 @@ autoExpandExamples.ckb = `
 ماست||
 ماستاو||
 ماشێن||
-مانگ||
+مانگ|moon, month|m§aː§ŋ§ɡ|mang
 مر||
 مراوی||
 مرواری||
-مرۆڤ||
+مرۆڤ|person, human being|mɪ§r§oː§v|mirov
 منداڵ||
 موزیک||
 مووزیک||
-مووسیقی||
+مووسیقی|music|m§uː§‹§s§iː§q§iː|mûsîqî
 مۆبایل||
 مۆدە||
 مۆر||
 مۆز||
 مۆسیقا||
 میسر||
-میکرۆب||
+میکرۆب|microbe|m§iː§k§r§oː§b|mîkrob
 میکرۆفۆن||
 مێ||
 مێز||
-مێش||
+مێش|fly (insect)|m§eː§ʃ|mêş
 مەرگ||
 مەقەس||
 مەکتووب||
 مەگەز||
 نا||
-ناسین||
+ناسین|to know, recognize|n§aː§s§iː§n|nasîn
 نامە||
 نان||
 نوێ||
@@ -228,23 +228,23 @@ autoExpandExamples.ckb = `
 چی||
 چین||
 چەرم||
-چەقۆ||
+چەقۆ|knife|t͡ʃ§eː§k§oː|çeko
 چەند||
 چەپ||
 ڕاست||
 ڕان||
 ڕووداو||
-ڕۆژ||
+ڕۆژ|day, sun|r§o̞ː§ʒ|roj
 ڕۆژانە||
 ڕەنگ||
 ژووان||
-ڤۆدکا||
+ڤۆدکا|vodka|v§oː§d§k§aː|vodka
 ڤۆدگا||
 کا||
 کات||
 کاروان||
-کارەبا||
-کاغەز||
+کارەبا|electricity|kaːræbaː|kareba
+کاغەز|paper|k§aː§ɣ§eː§z|kaẍez
 کتاو||
 کتێب||
 کران||
@@ -262,13 +262,13 @@ autoExpandExamples.ckb = `
 کەلەرم||
 کەو||
 کەڕ||
-گران||
+گران|heavy|g§r§aː§n|gran
 گرتن||
 گردن||
 گوند||
-گووگڵ||
+گووگڵ|Google|g§uː§gɪ§ɫ|gûgill
 گوڵ||
-گۆڕ||
+گۆڕ|grave|ɡ§oː§r|gorr
 گیرفان||
 گیفان||
 گەرما||
@@ -288,7 +288,7 @@ autoExpandExamples.ckb = `
 ئافرەت|woman|ʔ§aː§f§ɾ§a§t|afret
 ئال|middle finger|a§l|al
 ئاپارتمان|appartment, flat|ʔ§aː§p§aː§ɾ§t§m§aː§n|apartman
-ئەحمەد|Ahmed|aħ§‹§m§a§d|Eḥmed||Iran
+ئەحمەد|Ahmed|›§a§ħ§m§a§d|Eḥmed||Iran
 ئەرمەن|Armenian (people)|ʔ§a§ɾ§m§a§n|ermen
 ئەرمەنی|Armenian (lang)|ʔ§a§ɾ§m§a§n§iː|ermenî
 ئەو|he, she|›§æ§w|ew
@@ -420,16 +420,13 @@ autoExpandExamples.ckb = `
 زۆر|many||zor
 
 خه‌زر|anger||khazr
-عراق|Iraq||‘irâq
-پێغه‌مه‌ر|prophet||peghamar
 چاک|good||châk
 جوان|beautiful||jwân
 حزب|political party||ḥizb
-هه‌ز|desire||haz
+هەز|desire|h§a§z|haz
 نامه|letter||nâma
 یانه|club||yâna
 رۆژ|day||rozh
-ئه‌مڕۆ|today||amřo
 له‌ت|piece||lat
 باڵ|arm||bâł
 
@@ -445,19 +442,19 @@ autoExpandExamples.ckb = `
 
 ڕەق|solid||req
 فیلم|film||film
-هەڤدە|eleven||hevde
+هەڤدە|eleven|h§a§v§d§a|hevde
 شار|city||shâr
 ژوور|room||zhûr
 ناو|name||naw
 وڵات|country||wilat
 یارمەتی|help||yarmetî
-ئەمڕۆ|today||emrro
+ئەمڕۆ|today|›§æ§m§r§oː|amřo
 لێرە|here||lêre
 
 
 @ https://en.wikipedia.org/wiki/Kurdish_phonology
 
-چاو|eye|ˈt͡ʃɑːw|čaw
+چاو|eye|ˈt͡ʃ§ɑː§w|čaw
 بڕۆین|let's go|bɪ§ˈr§oː§j§n|birroyn
 چووی|went|ˈt͡ʃ§uː§‹§j|çûy
 

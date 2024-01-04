@@ -125,6 +125,15 @@ reflist = {
 "lang": new Set(['ar']),
 },
 
+"jkn": {
+"authors": "Jonathan Kew",
+"title":"Notes on some Unicode Arabic characters: recommendations for usage (draft 2)",
+"date":"2005",
+"publisher":"SIL International",
+"url":"http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=arabicletterusagenotes&filename=ArabicLetterUsageNotes.pdf",
+"lang": new Set(['ckb']),
+},
+
 "mki": {
 "authors": "Mohamad Khan",
 "title":"Izāfat",
@@ -274,6 +283,17 @@ reflist = {
 "reviewed":true
 },
 
+"u15": {
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 15.0",
+"sub":"Chapter 9.2: Middle East-I, Arabic",
+"pages":"365-389",
+"isbn":"978-1-936213-16-0.",
+"url":"https://www.unicode.org/versions/Unicode15.0.0/ch09.pdf",
+"lang": new Set(['ar','pes','ha','ks','ur','ckb']),
+"reviewed":true
+},
+
 
 "amp": {
 "authors": "Muzaffar Aazim, Kamal Mansour, and Roozbeh Pournader",
@@ -418,6 +438,40 @@ reflist = {
 "retrieved":"Dec 2023",
 "lang": new Set(['wo']),
 },
+
+
+
+"wmt": {
+"authors": "W. M. Thackston",
+"title":"Kurmanji Kurdish",
+"sub": "A Reference Grammar with Selected Readings",
+"date": "2006",
+"retr": "Jan 2024",
+"url":"https://web.archive.org/web/20160304194105/http://www.fas.harvard.edu/~iranian/Kurmanji/kurmanji_1_grammar.pdf",
+"lang": new Set(['ckb']),
+"reviewed":false
+},
+
+"ua": {
+"authors": "University of Arizona",
+"title":"Sorani Kurdish Iranian languages",
+"retr": "Jan 2024",
+"url":"https://iranian-languages.arizona.edu/node/2",
+"lang": new Set(['ckb']),
+"reviewed":false
+},
+
+"rp": {
+"authors": "Roozbeh Pournader",
+"title":"The right hehs for Arabic script orthographies of Sorani Kurdish and Uighur",
+"subtitle":"L2/14-136",
+"date":"2014",
+"retr": "Jan 2024",
+"url":"https://www.unicode.org/L2/L2014/14136-hehs-sorani-uighur.pdf",
+"lang": new Set(['ckb']),
+"reviewed":false
+},
+
 
 }
 
