@@ -157,7 +157,7 @@ autoExpandExamples.ckb = `
 قەفەس||
 قەوزە||
 قەیچی|scissors|q§ə§j§t͡ʃ§iː|qeyçî
-لادێ||
+لادێ|countryside|l§aː§d§eː|ladê
 لاق||
 لۆکە||
 لە ... دا||
@@ -429,6 +429,7 @@ autoExpandExamples.ckb = `
 رۆژ|day||rozh
 له‌ت|piece||lat
 باڵ|arm||bâł
+زمانێ سۆرانی|Sorani language|zɪmaːneː soːɾaːniː
 
 
 
