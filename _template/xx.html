@@ -57,7 +57,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->3 January, 2024<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->4 January, 2024<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -73,7 +73,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->03-Jan-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->04-Jan-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -2272,38 +2272,63 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-
 <section id="decomposition">
-<h3>Atomic vs. decomposed letters</h3>
-<p>Five letters can be represented as an atomic character (the norm), or as a sequence of base letter plus combining mark. The parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches should be treated as canonically equivalent.</p>
+<h3>Canonically equivalent encodings</h3>
+
+<p>One letter only can be represented as an atomic character (the norm), or as a sequence of base letter plus combining mark. The parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches should be treated as canonically equivalent.</p>
+
 
 <table class="comparison">
 <thead>
 <tr>
-<th scope="col">Precomposed</th>
-<th scope="col">Decomposed</th>
+<th scope="col">Atomic (recommended)</th>
+<th scope="col">Decomposed ( NOT recommended )</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="ch">î</span></td>
-<td><span class="hx">0069 0302</span></td>
+<td><span class="ch">ێ</span></td>
+<td><span class="hx">064A 0654</span></td>
+</tr>
+</tbody>
+</table>
+
+<p>Note that the base character in the decomposed sequence is <span class="hx">064A</span>, and not <span class="hx">06CC</span>, which is used elsewhere for <span class="name">yeh</span> in Kurmanji.  <span class="hx">064A</span> is <em>only</em> used for this specific decomposed sequence; it is inappropriate to use it elsewhere in Kurmanji text.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="unresolved_encoding">
+<h3>Unresolved encodings</h3>
+
+<p>A couple of Sorani letters are encoded in different ways in different texts, and in fact can be mixed within the same text. At the moment there doesn't appear to be a clear ruling on which is expected. This section lists the alternatives.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Alternative 1</th>
+<th scope="col">Alternative 2</th>
+<th scope="col">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="hx">06BE</span></td>
+<td><span class="hx">0647</span></td>
+<td>Wikipedia and Wiktionary represent the sound <span class="ipa">h</span> using only <span class="uname">HEH DOACHASHMEE</span>, whereas gov.krd uses only <span class="uname">ARABIC HEH</span>. Other online resources examined are not completely one or the other. Note that Uighur uses <span class="uname">HEH DOACHASHMEE</span> to represent <span class="ipa">h</span>.</td>
 </tr>
 <tr>
-<td><span class="ch">ê</span></td>
-<td><span class="hx">0065 0302</span></td>
-</tr>
-<tr>
-<td><span class="ch">û</span></td>
-<td><span class="hx">0075 0302</span></td>
-</tr>
-<tr>
-<td><span class="ch">ç</span></td>
-<td><span class="hx">0063 0327</span></td>
-</tr>
-<tr>
-<td><span class="ch">ş</span></td>
-<td><span class="hx">0073 0327</span></td>
+<td><span class="hx">06D5</span></td>
+<td><span class="hx">0647 200E</span></td>
+<td>
+<p>The majority usage seems to favour <span class="uname">AE</span>, although again some resources mix both to some degree (although they tend to mostly use <span class="uname">AE</span>). This makes sense, since the use of <span class="uname">HEH</span> plus ZWNJ has the appearance of a hack intended to prevent HEH joining to the left, whereas AE will do this naturally, without any formatting code point. Use of <span class="uname">AE</span> also gets around practical difficulties that arise because the ZWNJ character is invisible and is not readily accessible from many keyboards – difficulties that are amplified by the fact that this vowel letter is one of the most commonly used letters in the Sorani alphabet. Note that Uighur also uses <span class="uname">AE</span> to represent a vowel, and a different character for the sound <span class="ipa">h</span>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2312,6 +2337,42 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
+
+
+
+
+
+
+
+
+<section id="confusable_encoding">
+<h3>Confusables &amp; spelling errors</h3>
+
+<p>This table lists characters that are often mistakenly used because they look the same as or similar to the code points used for Kurmanji, or perhaps because the correct character is not available on the user's keyboard.</p>
+
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Incorrect</th>
+<th scope="col">Correct</th>
+<th scope="col">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="hx">064A</span></td>
+<td><span class="hx">06CC</span></td>
+<td>The Arabic YEH doesn't drop the dots below in isolate and final positions.</td>
+</tr>
+<tr>
+<td><span class="hx">0643</span></td>
+<td><span class="hx">06A9</span></td>
+<td>Common fonts tend not to show the difference between these two characters, but the ability to search and compare text is impaired unless the application is aware of and takes counter-measures against this substitution.</td>
+</tr>
+</tbody>
+</table>
+</section>
 
 
 
@@ -2357,159 +2418,10 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-
-
-<section id="confusable_encoding">
-<h3>Confusables &amp; spelling errors</h3>
-
-<p>This table lists characters that are often mistakenly used because they look the same as or similar to the code points used for Kurmanji, or perhaps because the correct character is not available on the user's keyboard.</p>
-<table class="comparison">
-<thead>
-<tr>
-<th scope="col">Incorrect</th>
-<th scope="col">Correct</th>
-<th scope="col">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="hx">064A</span></td>
-<td><span class="hx">06CC</span></td>
-<td>The Arabic YEH doesn't drop the dots below in isolate and final positions.</td>
-</tr>
-<tr>
-<td><span class="hx">0626</span></td>
-<td><span class="hx">06CC 0654</span></td>
-<td>This precomposed form becomes <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x064A;&#x0654;</span> [<a href="block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a> + <a href="block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span> when the text is decomposed during normalisation, ie. the base character is replaced by U+064A instead of U+06CC.</td>
-</tr>
-<tr>
-<td><span class="hx">0643</span></td>
-<td><span class="hx">06A9</span></td>
-<td>Common fonts tend not to show the difference between these two characters, but the ability to search and compare text is impaired unless the application is aware of and takes counter-measures against this substitution.</td>
-</tr>
-<tr>
-<td><span class="ch">ۍ</span></td>
-<td><span class="ch">ؠ</span></td>
-<td>The letter <span class="ch">ۍ</span> is used in Pashto to represent the diphthong <span class="ipa">əi</span>, but it sometimes appears in Kashmiri texts instead of a word-final KASHMIRI YEH.  This usage is incorrect and should be avoided.</td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><bdi lang="ks" dir="rtl" style="font-family:'Scheherazade WF'">&#x06CC;&#x08D1;</bdi> <span class="uname">U+06CC ARABIC LETTER FARSI YEH</span> + <span class="uname">U+08D1 ARABIC LARGE CIRCLE BELOW</span></span></td>
-<td><span class="ch">ؠ</span></td>
-<td>Sometimes <span class="codepoint" translate="no"><bdi lang="ks" dir="rtl" style="font-family:'Scheherazade WF'">&#x06CC;&#x08D1;</bdi> <span class="uname">U+06CC ARABIC LETTER FARSI YEH</span> + <span class="uname">U+08D1 ARABIC LARGE CIRCLE BELOW</span></span> is used for isolated and final forms of KASHMIRI YEH in naskh style text.  Version 15.1 of the Unicode Standard says that it is the normal form for the naskh style of Kashmiri, but this usage is incorrect and should be avoided. (The text in the Unicode Standard will be updated for version 16.0, and font vendors will be contacted to modify their glyphs.)</td>
-</tr>
-<tr>
-<td><span class="hx medi">066E 06EA</span></td>
-<td><span class="hx medi">0620</span></td>
-<td>This  occurs when the KASHMIRI YEH is right-joining or dual-joining, in which case it has the ring below. This usage is also incorrect and should be avoided, but arose from a time when the FARSI YEH character was not available and people were trying to show palatalisation. The incorrect solution doesn't work well with common fonts, as well as corrupting the semantics of the text stream.</td>
-</tr>
-<tr>
-<td><span class="hx">065B</span></td>
-<td><span class="hx">0652</span></td>
-<td>The function of this glyph is that of the <span class="name">sukun</span>, so the correct semantic character should be used. Although <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x065B;</span> [<a href="/scripts/arabic/block#char065B"><span class="uname">U+065B ARABIC VOWEL SIGN INVERTED SMALL V ABOVE</span></a>]</span> looks like the Kashmiri <span class="name">jazm</span>, it was introduced to Unicode to serve as a vowel sign for African languages<sup><a href="https://www.unicode.org/L2/L2003/03168-african-chars.pdf">§</a></sup>. In order to produce the correct glyph using a font such as Noto it is essential to indicate that the language of the text is Kashmiri. (In HTML this can be done using the attribute <code translate="no">lang="ks"</code>.) Otherwise, the shape is likely to be a small circle.</td>
-</tr>
-<tr>
-<td><span class="codepoint noindex" translate="no"><span lang="ks" dir="rtl">&#x06C5;</span><a href="/scripts/arabic/block#char06C5"><span class="uname">U+06C5 ARABIC LETTER KIRGHIZ OE</span></a></span></td>
-<td><span class="hx">06C4</span></td>
-<td>The incorrect letter is intended for use with Kirghiz. Some fonts add a loop to the tail, similar to that of the recommended character, but other fonts render it with a  bar through the tail.</td>
-</tr>
-</tbody>
-</table>
-</section>
-
-
-
-
-
-<section id="vs_encoding">
-<h3>Vowel signs</h3>
-<p>Five of the circumgraphs  can be written as a single character, or as two characters, the second being <span class="codepoint" translate="no"><span lang="ban">&#x1B35;</span> [<a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span>  in all  cases.</p>
-
-<table class="comparison">
-<thead>
-<tr>
-<th scope="col">Precomposed</th>
-<th scope="col">Decomposed</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B41;</span> [<a href="balinese#char1B41"><span class="uname">U+1B41 BALINESE VOWEL SIGN TALING REPA TEDUNG</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B3F;&#x1B35;</span> [<a href="/scripts/balinese/block#char1B3F"><span class="uname">U+1B3F BALINESE VOWEL SIGN TALING REPA</span></a> + <a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B43;</span> [<a href="/scripts/balinese/block#char1B43"><span class="uname">U+1B43 BALINESE VOWEL SIGN PEPET TEDUNG</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B42;&#x1B35;</span> [<a href="/scripts/balinese/block#char1B42"><span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET</span></a> + <a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B41;</span> [<a href="/scripts/balinese/block#char1B41"><span class="uname">U+1B41 BALINESE VOWEL SIGN TALING REPA TEDUNG</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B3F;&#x1B35;</span> [<a href="/scripts/balinese/block#char1B3F"><span class="uname">U+1B3F BALINESE VOWEL SIGN TALING REPA</span></a> + <a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B3B;</span> [<a href="/scripts/balinese/block#char1B3B"><span class="uname">U+1B3B BALINESE VOWEL SIGN RA REPA TEDUNG</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B3A;&#x1B35;</span> [<a href="/scripts/balinese/block#char1B3A"><span class="uname">U+1B3A BALINESE VOWEL SIGN RA REPA</span></a> + <a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B3D;</span> [<a href="/scripts/balinese/block#char1B3D"><span class="uname">U+1B3D BALINESE VOWEL SIGN LA LENGA TEDUNG</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B3C;&#x1B35;</span> [<a href="/scripts/balinese/block#char1B3C"><span class="uname">U+1B3C BALINESE VOWEL SIGN LA LENGA</span></a> + <a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
-</tr>
-</tbody>
-</table>
-<p class="info">The single code point per vowel sign is preferred, however the parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches are canonically equivalent.</p>
-<p>Whichever approach is used, the vowel signs must be typed and stored after the consonant characters they surround, and in  left to right order.</p>
-</section>
-
-
-
-
-<section id="standalone_encoding">
-<h3>Independent vowels</h3>
-<p>Three of the independent vowels can be written as a single character, or as two. Again, this always involves <span class="codepoint" translate="no"><span lang="ban">&#x1B35;</span> [<a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span>.</p>
-<table class="comparison">
-<thead>
-<tr>
-<th scope="col">Precomposed</th>
-<th scope="col">Decomposed</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B0A;</span> [<a href="/scripts/balinese/block#char1B0A"><span class="uname">U+1B0A BALINESE LETTER UKARA TEDUNG</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B09;&#x1B35;</span> [<a href="/scripts/balinese/block#char1B09"><span class="uname">U+1B09 BALINESE LETTER UKARA</span></a> + <a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B12;</span> [<a href="/scripts/balinese/block#char1B12"><span class="uname">U+1B12 BALINESE LETTER OKARA TEDUNG</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B11;&#x1B35;</span> [<a href="/scripts/balinese/block#char1B11"><span class="uname">U+1B11 BALINESE LETTER OKARA</span></a> + <a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B06;</span> [<a href="/scripts/balinese/block#char1B06"><span class="uname">U+1B06 BALINESE LETTER AKARA TEDUNG</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ban">&#x1B05;&#x1B35;</span> [<a href="/scripts/balinese/block#char1B05"><span class="uname">U+1B05 BALINESE LETTER AKARA</span></a> + <a href="/scripts/balinese/block#char1B35"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
-</tr>
-</tbody>
-</table>
-<p class="info">The precomposed characters decompose in NFD, and reform again in NFC. It is generally recommended to use the precomposed character.</p>
-</section>
-
-
-
-
-
-
-
 <section id="charorder">
 <h3>Codepoint sequences</h3>
 
-<p>Components of an orthographic syllable  should be composed in the following order:</p>
-<ol style="text-align: left;">
-<li>base consonant or independent vowel </li>
-<li><span class="name">rɔɓaːt </span></li>
-<li><span class="name">museʔkətoə̯n </span>or <span class="name">trəisaɓ </span> (register shifters)</li>
-<li>subscript (consonant or independent vowel)</li>
-<li>vowel sign</li>
-<li>zero-width joiner or non-joiner</li>
-<li>any other mark </li>
-</ol>
-
-<p>This fixed ordering makes it easier to search for and collate text. For more details, see <a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">this SIL document</a>.<tt>sil</tt></p>
+<p>Combining marks always follow the based character, however for Sorani, which doesn't normally use combining marks, this is only relevant for <span class="ch">ێ</span> when it occurs in decomposed text.</p>
 </section>
 </section>
 
@@ -2645,249 +2557,6 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 </p>
 
 <p class="instructions">Experiment with examples using the <a href="../../pickers/xxxx/index.html" target="_blank">XXXX character app</a>.</p>
-
-
-
-
-
-
-
-<section id="writing_styles">
-<h3>Writing styles</h3>
-
-<p>Urdu is normally written in a <span class="trans">nasta'liq</span> writing style. Key features include a sloping baseline for joined letters, and overall complex shaping and positioning for base letters and diacritics alike. There are also distinctive shapes for many glyphs and ligatures.</p>
-
-<figure id="fig_baseline">
-<p dir="rtl" lang="ur" class="large" style="margin-top: 1em; margin-bottom: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
-<figcaption>Sloping baselines and complex joining behaviours in Urdu nastaliq text.</figcaption>
-</figure>
-
-<p>This is achieved in Unicode by applying the correct font – the underlying characters used are not different for nasta'liq vs. other styles.</p>
-
-<figure id="fig_nastaliq_style">
-<p dir="rtl" lang="ur" class="medium" style="line-height: 2.5"> کوئی شخص محض حاکم کی مرضی پر اپنی قومیت سے محروم نہیں کیا جائے گا اور اس کو قومیت تبدیل کرنے کا حق دینے سے انکار نہ کیا جائے گا۔</p>
-<figcaption>Urdu is normally written in the nasta'liq writing style.</figcaption>
-</figure>
-
-
-<figure id="fig_naskh_style">
-<p dir="rtl" lang="ur" class="medium" style="font-family: Scheherazade; font-size: 240%;"> کوئی شخص محض حاکم کی مرضی پر اپنی قومیت سے محروم نہیں کیا جائے گا اور اس کو قومیت تبدیل کرنے کا حق دینے سے انکار نہ کیا جائے گا۔</p>
-<figcaption>The same text, written in a standard naskh writing style.</figcaption>
-</figure>
-</section>
-
-
-
-
-
-
-
-<section id="cursive">
-<h3>Cursive text</h3>
-
-  <p class="prompts">tbd</p>
-<p>N'Ko is usually cursive, ie. letters in a word are joined up. </p>
-<p>Fonts need to produce the appropriate joining form for a code point, according to its visual context.</p>
-  <figure>
-<p dir="rtl" lang="nqo" class="large"><span class="ex">ߕߟߋ߬ߓߊ߰ߓߟߐߟߐ</span></p>
-<figcaption>Cursive connections in a word. Note that here is both a medial and final form of <span lang="nqo">ߐ</span>.</figcaption>
-</figure>
-    
-  <p>The cursive treatment doesn't produce significant variations of the essential part of the glyph for a character (unlike Arabic).</p>
-  <p>Non-cursive fonts are sometimes used, mainly as display fonts for books and article titles. <sup><a href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></sup></p>
-</section>
-
-
-
-
-
-<section id="context">
-<h3>Context-based shaping &amp; positioning</h3>
-
-<p class="prompts">tbd</p>
-<p>tbd</p>
-
-<section id="cursive_shaping">
-<h4>Cursive shaping</h4>
-
-<p>The cursive treatment  produces only minor changes to  glyph shapes in most cases. A few letters, however, exhibit noteworthy changes, especially in word final  positions. <a class="figref">fig_joining_forms</a> and <a class="figref">fig_right_joining_forms</a> show all the basic shapes in Assyrian and what their joining forms look like. Significant variations are highlighted.</p>
-
-
-<figure id="fig_joining_forms">
-<table class="cursive_table">
-<thead>
-<tr><th>Joining side:</th><th>none</th><th>right</th><th>both</th><th>left</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0712;</span> [<a href="/scripts/syriac/block#char0712"><span class="uname">U+0712 SYRIAC LETTER BETH</span></a>]</span></th>
-<td><span lang="tru">ܒ</span></td>
-<td><span lang="tru">ـܒ</span></td>
-<td><span lang="tru">ـܒـ</span></td>
-<td><span lang="tru">ܒـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x071B;</span> [<a href="/scripts/syriac/block#char071B"><span class="uname">U+071B SYRIAC LETTER TETH</span></a>]</span></th>
-<td><span lang="tru">ܛ</span></td>
-<td><span lang="tru">ـܛ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܛـ</span></td>
-<td><span class="fig_highlight" lang="tru">ܛـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x071F;</span> [<a href="/scripts/syriac/block#char071F"><span class="uname">U+071F SYRIAC LETTER KAPH</span></a>]</span></th>
-<td><span lang="tru">ܟ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܟ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܟـ</span></td>
-<td><span lang="tru">ܟـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0713;</span> [<a href="/scripts/syriac/block#char0713"><span class="uname">U+0713 SYRIAC LETTER GAMAL</span></a>]</span></th>
-<td><span lang="tru">ܓ</span></td>
-<td><span lang="tru">ـܓ</span></td>
-<td><span lang="tru">ـܓـ</span></td>
-<td><span lang="tru">ܓـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0729;</span> [<a href="/scripts/syriac/block#char0729"><span class="uname">U+0729 SYRIAC LETTER QAPH</span></a>]</span></th>
-<td><span lang="tru">ܩ</span></td>
-<td><span lang="tru">ـܩ</span></td>
-<td><span lang="tru">ـܩـ</span></td>
-<td><span lang="tru">ܩـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0726;</span> [<a href="/scripts/syriac/block#char0726"><span class="uname">U+0726 SYRIAC LETTER PE</span></a>]</span></th>
-<td><span lang="tru">ܦ</span></td>
-<td><span lang="tru">ـܦ</span></td>
-<td><span lang="tru">ـܦـ</span></td>
-<td><span lang="tru">ܦـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0723;</span> [<a href="/scripts/syriac/block#char0723"><span class="uname">U+0723 SYRIAC LETTER SEMKATH</span></a>]</span></th>
-<td><span lang="tru">ܣ</span></td>
-<td><span lang="tru">ـܣ</span></td>
-<td><span lang="tru">ـܣـ</span></td>
-<td><span lang="tru">ܣـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x072B;</span> [<a href="/scripts/syriac/block#char072B"><span class="uname">U+072B SYRIAC LETTER SHIN</span></a>]</span></th>
-<td><span lang="tru">ܫ</span></td>
-<td><span lang="tru">ـܫ</span></td>
-<td><span lang="tru">ـܫـ</span></td>
-<td><span lang="tru">ܫـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x071A;</span> [<a href="/scripts/syriac/block#char071A"><span class="uname">U+071A SYRIAC LETTER HETH</span></a>]</span></th>
-<td><span lang="tru">ܚ</span></td>
-<td><span lang="tru">ـܚ</span></td>
-<td><span lang="tru">ـܚـ</span></td>
-<td><span lang="tru">ܚـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0725;</span> [<a href="/scripts/syriac/block#char0725"><span class="uname">U+0725 SYRIAC LETTER E</span></a>]</span></th>
-<td><span lang="tru">ܥ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܥ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܥـ</span></td>
-<td><span lang="tru">ܥـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0721;</span> [<a href="/scripts/syriac/block#char0721"><span class="uname">U+0721 SYRIAC LETTER MIM</span></a>]</span></th>
-<td><span lang="tru">ܡ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܡ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܡـ</span></td>
-<td><span lang="tru">ܡـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0722;</span> [<a href="/scripts/syriac/block#char0722"><span class="uname">U+0722 SYRIAC LETTER NUN</span></a>]</span></th>
-<td><span lang="tru">ܢ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܢ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܢـ</span></td>
-<td><span lang="tru">ܢـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0720;</span> [<a href="/scripts/syriac/block#char0720"><span class="uname">U+0720 SYRIAC LETTER LAMADH</span></a>]</span></th>
-<td><span lang="tru">ܠ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܠ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܠـ</span></td>
-<td><span lang="tru">ܠـ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span></th>
-<td><span lang="tru">ܝ</span></td>
-<td><span lang="tru">ـܝ</span></td>
-<td><span lang="tru">ـܝـ</span></td>
-<td><span lang="tru">ܝـ</span></td>
-</tr>
-</tbody>
-</table>
-<figcaption>Joining forms for  shapes that join on both sides. Those showing significant shape change are highlighted.</figcaption>
-</figure>
-
-
-
-
-
-<figure id="fig_right_joining_forms">
-<table class="cursive_table">
-<thead>
-<tr><th>Joining side:</th><th>none</th><th>right</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x072C;</span> [<a href="/scripts/syriac/block#char072C"><span class="uname">U+072C SYRIAC LETTER TAW</span></a>]</span></th>
-<td><span class="fig_highlight" lang="tru">ܬ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܬ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0719;</span> [<a href="/scripts/syriac/block#char0719"><span class="uname">U+0719 SYRIAC LETTER ZAIN</span></a>]</span></th>
-<td><span lang="tru">ܙ</span></td>
-<td><span lang="tru">ـܙ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0728;</span> [<a href="/scripts/syriac/block#char0728"><span class="uname">U+0728 SYRIAC LETTER SADHE</span></a>]</span></th>
-<td><span lang="tru">ܨ</span></td>
-<td><span lang="tru">ـܨ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0717;</span> [<a href="/scripts/syriac/block#char0717"><span class="uname">U+0717 SYRIAC LETTER HE</span></a>]</span></th>
-<td><span lang="tru">ܗ</span></td>
-<td><span lang="tru">ـܗ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0718;</span> [<a href="/scripts/syriac/block#char0718"><span class="uname">U+0718 SYRIAC LETTER WAW</span></a>]</span></th>
-<td><span lang="tru">ܘ</span></td>
-<td><span lang="tru">ـܘ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x072A;</span> [<a href="/scripts/syriac/block#char072A"><span class="uname">U+072A SYRIAC LETTER RISH</span></a>]</span></th>
-<td><span class="fig_highlight" lang="tru">ܪ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܪ</span></td>
-</tr>
-<tr>
-<th><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0710;</span> [<a href="/scripts/syriac/block#char0710"><span class="uname">U+0710 SYRIAC LETTER ALAPH</span></a>]</span></th>
-<td><span class="fig_highlight" lang="tru">ܐ</span></td>
-<td><span class="fig_highlight" lang="tru">ـܐ</span></td>
-</tr>
-</tbody>
-</table>
-<figcaption>Joining forms for  shapes that join on the right only. Those showing significant shape change are highlighted.</figcaption>
-</figure>
-</section>
-
-
-
-
-
-<p>@ Prescript vowels are visually ordered, and therefore do not need to be positioned by the font.</p>
-<p>@ Vowel signs, tones, and one consonant, on the other hand, are combining characters that need to be correctly positioned relative to the base character, and multiple marks can be combined with a single base character.</p>
-<p>@ When a vowel and a final consonant sign both appear above a consonant, they are placed side by side, eg. <span class="charExample" translate="no"><span class="ex" lang="YYYY">ᬱᬫ᭄ᬧᬶᬂ</span> <span class="trans">sm͓piŋ̇̽ (samping)</span> <span class="meaning">side</span></span>.</p>
-<p>@ Include info about multiple combining characters.</p>
-</section>
-
-
-
-
 <section id="fontstyle">
 <h3>Letterform slopes, weights, &amp; italics</h3>
 <p class="prompts">tbd</p>
@@ -2916,116 +2585,6 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-<section id="graphemes">
-<h2>Graphemes</h2>  
-
-<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
-<p id="def-orthographicsyllable" class="explanatoryintro definitionStub"></p>
-<p><strong>This section is still undergoing research and development.</strong></p>
-
-<p>Modern Sinhala has a virama, but it doesn't combine grapheme clusters unless it is accompanied by a ZWJ. A base is either a consonant or an independent vowel.</p>
-
-
-
-
-<section id="graphemeC">
-<h3>Grapheme clusters</h3>
-
-
-<p><code>Base Combining_mark*</code></p>
-
-<p>Grapheme clusters can be used much of the time to segment Sinhala words. </p>
-<p>Because a virama used alone is a visible vowel-killer and doesn't create conjuncts, it can be treated as just another combining mark and segmentation can break after it.</p>
-<p>Evidence for this approach can be seen when a consonant cluster is followed by a vowel sign glyph that is displayed to the left of the base.  For example, observe the placement of the pre-base vowel in <a class="figref">fig_kro</a>. In the conjunct form for <span class="ipa">kro</span> on the left, the vowel sign surrounds the whole conjunct. If the sequence is not rendered as a conjunct (see the second example), such as <span class="ipa">-k.ro</span>,  the pre-base glyph precedes the <span class="uname">RA</span>, not the <span class="uname">KA</span>.</p>
-
-
-<figure id="fig_kro">
-<img src="images/kro.png" alt="ක්‍රො  ක්රො  *කේරා" class="ex" lang="si" data-notes="40px Noto Serif Sinhala">
-<figcaption>Placement of pre-base vowel glyphs.</figcaption>
-</figure>
-
-<!--p>Most of the time, in modern Sinhala, a typographic unit  is equivalent to a grapheme cluster. The virama, which is a visible vowel-killer, is just another combining mark and doesn't extend the typographic unit.</p-->
-
-<p><mark>Sequences that include a syllable nucleus</mark> may include combining marks with the following Indic syllabic categories:</p>
-
-<ol>
-<li><a href="../apps/listindic/index.html?chars=ිීුූෙේොෝැෑාෛෞෘ">Vowel_Dependent</a> [13] (see <a class="secref">combiningV</a>)</li>
-<li><a href="../apps/listindic/index.html?chars=ං">Bindu</a> [1] (see <a class="secref">finals</a>)</li>
-<li><a href="../apps/listindic/index.html?chars=ඃ">Visarga</a> [1] (see <a class="secref">finals</a>)</li>
-</ol>
-
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/s_pull.png" alt="අදිනවා" class="ex" lang="si"></td><td><span class="eg transc" lang="si">අදිනවා</span></td></tr>
-<tr><td><img src="images/s_small.png" alt="පුංචි" class="ex" lang="si"></td><td><span class="eg transc" lang="si">පුංචි</span></td></tr>
-</table>
-
-<p><mark>Syllable codas and vowel-less consonants in clusters</mark> are written using a sequence of consonant letter followed by a visible <a href="../apps/listindic/index.html?chars=්">Virama</a> (see <a class="secref">novowel</a>) (called <span class="name">al-lakuni</span>).</p>
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/s_new.png" alt="අලුත්" class="ex" lang="si"></td><td><span class="eg" lang="si">අලුත්</span></td></tr>
-<tr><td><img src="images/s_mountain.png" alt="කන්ද" class="ex" lang="si"></td><td><span class="eg" lang="si">කන්ද</span></td></tr>
-</table>
-
-<p>Although <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a> are equivalent to the basic typographic units just described, they are not useful for dealing with conjuncts, because grapheme cluster boundaries always fall between the virama and the following consonant.</p>
-
-<p class="observation"><span class="leadin">Observation:</span> Browsers based on the Gecko engine (Firefox, etc.) use grapheme clusters for cursor movement and forward delete when a virama occurs without a following ZWJ, whereas Blink (Chrome) and WebKit (Safari) browsers use the typographic units described in the next section.</p>
-</section>
-
-
-
-<section id="orthSyllables">
-<h3>Larger typographic units</h3>
-
-<p><code>Grapheme_cluster (Virama Grapheme_cluster)*</code></p>
-<p>Where conjuncts appear, a typographic unit contains multiple grapheme clusters. The union is signalled by the <em>sequence</em> <span class="codepoint" translate="no"><span lang="si">&#x0DCA;&#x200D;</span><span class="uname">+ZWJ</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA</span></a> + <a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> before a base.</p>
-
-<p>Because conjunct forms are never split apart visually, the whole conjunct form is typically treated as a typographic unit when gaps are introduced into the text, such as for line-breaking or letter-spacing. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/s_english.png" alt="ඉංග්‍රීසි" class="ex" lang="si"></td><td><span class="eg transc" lang="si">ඉංග්‍රීසි</span></td></tr>
-<tr><td><img src="images/s_skin.png" alt="චර්‍මය" class="ex" lang="si"></td><td><span class="eg transc" lang="si">චර්‍මය</span></td></tr>
-</table>
-
-
-
-<section id="fontFactors">
-<h4>Font factors</h4>
-
-<p>Behaviour is font-dependent. If a font doesn't have a conjunct form for a particular combination of characters it will fall back to what looks  like 2 grapheme clusters. For example, observe the placement of the pre-base vowel in <a class="figref">fig_kro</a>. In the syllable <span class="ipa">kro</span> on the left, the vowel sign surrounds the whole conjunct. In the middle we drop the ZWJ to give <span class="ipa">-k.ro</span>, and now the pre-base glyph precedes the RA.  The same should happen  if the code points indicate a conjunct but the font doesn't have the necessary glyphs.</p>
-
-<p>This is currently difficult to manage because the decision as to whether the text is segmented into 2 grapheme clusters or one orthographic syllable depends on the capabilities of the font used (ie. the rendered result). The code point sequence is identical for both cases, and gives no clues if different typographic units are applicable.</p>
-</section>
-
-
-
-<section id="webSegmentation">
-<h4>Browser behaviour</h4>
-
-<div style="padding: 3rem; padding-block: 0;">
-<p><span class="leadin">Test in your browser.</span> <span class="instructions">Left to right, the following words contain 2 conjunct sequences with virama+ZWJ, one that displays as a conjunct, another that doesn't, and two sequences with virama but no ZWJ. First, the text is displayed in a contenteditable paragraph, then in a textarea. Results are reported for Gecko (Firefox), Blink (Chrome), and WebKit (Safari) on a Mac.</span></p>
-
-<p class="ex" lang="si" contenteditable style="margin-inline-start:7.5%; line-break:anywhere; border: 1px solid #ccc;">ක්‍රො ක්‍සො ක්රො කන්ද</p>
-
-<textarea class="ex" lang="si" style="margin-inline-start:7.5%; line-break:anywhere;">ක්‍රො ක්‍සො ක්රො කන්ද</textarea>
-</div>
-
-<p><span class="leadin">Cursor movement.</span> <span class="instructions">Move the cursor through the text.</span><br>
-Gecko steps through the whole text using grapheme clusters. The cursor visually stops in the middle of the virama+ZWJ sequences. Blink steps through the virama+ZWJ sequences using grapheme clusters, however the cursor appears to skip to the end of the whole sequence and you have to hit the cursor key again (with no apparent movement) to actually clear it. Blink treats the sequences with just a virama as a single unit. WebKit skips all sequences with a virama (whether or not there is a ZWJ) as a single unit.</p>
-
-<p><span class="leadin">Selection.</span> <span class="instructions">Place the cursor next to a character and hold down shift while pressing an arrow key.</span><br>
-The behaviour is the same as for cursor movement. This has the effect of sometimes appearing to highlight backwards in Blink.</p>
-
-<p><span class="leadin">Deletion.</span> Forward deletion works in the same way as cursor movement.  The backspace key deletes code point by code point, except that WebKit deletes both the virama and the ZWJ at the same time.</p>
-
-<p><span class="leadin">Line-break.</span> <span class="instructions">The CSS sets the value of the <code class="kw" translate="no">line-break</code> property to <code class="kw" translate="no">anywhere</code>. Pad the start of the container with characters to slowly push the Sinhala text off the first line.</span><br>
-Gecko wraps at grapheme cluster boundaries except that it wraps a sequence with virama+ZWJ as a single unit. Blink and WebKit wrap everything at grapheme cluster boundaries, which has the effect of breaking a conjunct in half at the end of a line.</p>
-</section>
-</section>
-</section>
-
-
-
 
 
 
@@ -3038,88 +2597,6 @@ Gecko wraps at grapheme cluster boundaries except that it wraps a sequence with 
 
 <p>XXXX doesn't use word boundaries for text segmentation, relying instead on grapheme boundaries (sometimes called orthographic syllables).</p>
 <p>Phrase, sentence, and section delimiters are described in <a class="secref">phrase</a>. </p>
-
-
-
-
-
-<section id="graphemeC">
-<h3>Grapheme clusters</h3>
-
-
-
-<p>Typographically, the basic unit of XXXX text is a grapheme whose boundaries may differ from those of the phonetic syllable.</p>
-
-
-
-
-<section id="basicSeg">
-<h4>Basic typographic units</h4>
-
-<p><code>(Consonant (Rerekan)* Adeg_adeg)* Base (Combining_mark)*</code></p>
-<p>A simple typographic unit for Balinese includes a base and any combining marks associated with it.</p>
-<p>The base is generally a consonant, however independent vowels also constitute a base and may be followed by combining marks.</p>
-<p>In the case of Balinese,  <mark>sequences that include a syllable nucleus</mark> may include the following combining marks:</p>
-<ol>
-<li><span class="name"><a href="#rerekan">rerekan</a></span> (a kind of nukta)</li>
-<li><a href="#vocalics">medial vocalic</a></li>
-<li><a href="#vowelsigns">vowel sign</a></li>
-<li><a href="#finals">final consonant marks</a></li>
-</ol>
-<p> The following examples show simple typographic units that begin with a single consonant or independent vowel: </p>
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/tirte.png" alt=""></td><td><span class="eg transc" lang="ban">ᬢᬷᬃᬢ</span></td></tr>
-<tr><td><img src="images/arte.png" alt=""></td><td><span class="eg transc" lang="ban">ᬅᬃᬣ</span></td></tr>
-<tr><td><img src="images/s_krishna.png" alt=""></td><td><span class="eg transc" lang="ban">ᬓᬺᬰ᭄ᬡ</span></td></tr>
-</table>
-
-<p>Because  <mark>stacked or conjoined forms</mark>  are never split apart visually, they are incorporated into the beginning of a typographic unit. These represent consonant clusters, which can arise where one phonetic syllable ends in a consonant letter and the following syllable begins with a consonant, or when most medial consonants are written, since Balinese uses conjunct forms for sequences such as Cr-, Cy-, Cw-, Cry-, etc. The consonants that make up the cluster are all encoded with a following <span class="name">adeg adeg</span> (see <a class="secref">clusters</a>).</p>
-<p>Balinese is also unusual in that these conjuncts occur across word boundaries, so the word-final consonant of the first word may be stacked above the word-initial consonant of the second. See <a class="figref">fig_kahananlankwasa2</a> for an example.</p>
-<p>The following examples show typographic units that begin with a consonant cluster:</p>
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/dante.png" alt=""></td><td><span class="eg" lang="ban">ᬤᬦ᭄ᬢ</span></td></tr>
-<tr><td><img src="images/timpal.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬢᬶᬫ᭄ᬧᬮ᭄</span></td></tr>
-<tr><td><img src="images/s_bryag.png" alt=""></td><td><span class="eg transc" lang="ban" dir="ltr">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span></td></tr>
-<tr><td><img src="images/sastre.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬰᬵᬲ᭄ᬢ᭄ᬭ</span></td></tr>
-</table>
-
-<p><mark>Syllable codas</mark>, as we have just seen, may be represented by a combining mark, or may be incorporated into a consonant cluster, but they may also be written using a sequence of consonant letter (possibly including a <span class="name">rerekan</span>) followed by an  <span class="name">adeg adeg</span>, which is visible if no base immediately follows it, eg.</p>
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/dalem.png" alt=""></td><td><span class="eg" lang="ban">ᬤᬍᬫ᭄</span></td></tr>
-</table>
-
-<p>If another consonant does follow this, the coda becomes part of a new conjunct and therefore of a new typographic unit.</p>
-
-<p>On the infrequent occasions when an <span class="name">adeg adeg</span> needs to be visible even though it is followed by another base, an invisible character must be added to prevent it joining with the following base. A zero-width space can achieve that.</p>
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/pakraman.png" alt=""></td><td><span class="eg" lang="ban">ᬧᬓ᭄​ᬭᬫᬦ᭄</span></td></tr>
-</table>
-
-<p><mark>Grapheme clusters.</mark> This  kind of  typographic unit cannot be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a> because they create breaks after an <span class="name">adeg-adeg</span>, rather than including the following consonants. The following shows the segmentation that would be produced when using grapheme clusters.</p>
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr>
-<td><img src="images/cursor_movt.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬰᬵᬲ᭄ᬢ᭄ᬭ</span></td></tr>
-</table>
-
-<p class="observation"><span class="leadin">Observation:</span> Browsers based on the Gecko engine (Firefox, etc.) use grapheme clusters for cursor movement and forward delete, whereas Blink (Chrome) and WebKit (Safari) browsers use the tyographic units described here.</p>
-</section>
-
-<!--figure id="fig_grapheme_cluster">
-<div style="display: flex; justify-content: center; flex-wrap: wrap;">
-<img src="images/grapheme_cluster1.png" alt="ᬩ᭄ᬭ᭄ᬬᬕ᭄" data-notes="hibiscus, colour-modified" class="ex" lang="ban" style="height:120px">
-<span style="width: 4rem">&nbsp;</span>
-<img src="images/grapheme_cluster2.png" alt="ᬩ᭄ᬭ᭄ᬬᬕ᭄" data-notes="hibiscus, colour-modified" class="ex" lang="ban" style="height:120px">
-<span style="width: 4rem">&nbsp;</span>
-<img src="images/grapheme_cluster3.png" alt="ᬩ᭄ᬭ᭄ᬬᬕ᭄" data-notes="hibiscus, colour-modified" class="ex" lang="ban" style="height:120px">
-</div>
-<figcaption>Grapheme clusters in 3 Balinese words.</figcaption>
-</figure-->
-</section>
 </section>
 
 
@@ -3429,34 +2906,7 @@ Gecko wraps at grapheme cluster boundaries except that it wraps a sequence with 
 <section id="baselines">
 <h3>Baselines, line height, etc.</h3>
 
-<p>Thai uses the so-called 'alphabetic' baseline, which is the same as for Latin and many other scripts.</p>
-
-<p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for English, or most Latin text.  In addition, Thai tends to adds more interline spacing than Latin text does.</p>
-
-<p>To give an approximate idea, <a class="figref">fig_baselines</a> compares Latin and Thai glyphs from Noto  fonts. The basic height of Thai letters is typically around the Latin x-height, however extenders and combining marks reach well beyond the Latin ascenders and descenders, creating a need for larger line spacing.</p>
-
-
-<figure id="fig_baselines">
-<div>
-<img src="images/fig_baselines_noto_serif.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" lang="km" data-notes="Noto Serif Thai 130px" style="max-width: 90%; margin-block-end:1rem;">
-
-<img src="images/fig_baselines_noto_sans.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" lang="km" data-notes="Noto Sans Thai 130px" style="max-width: 90%;">
-</div>
-<figcaption>Font metrics for Latin text  compared with Thai glyphs in the Noto Serif Thai (top) and Noto Sans Thai (bottom) fonts.</figcaption>
-</figure>
-
-
-<p><a class="figref">fig_baselines_other</a> shows similar comparisons for the Thonburi and Angsana New fonts.</p>
-
-
-<figure id="fig_baselines_other">
-<div>
-<img src="images/fig_baselines_thonburi.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Thonburi 130px" style="max-width: 90%; margin-block-end:2rem;" lang="km">
-
-<img src="images/fig_baselines_angsana.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Angsana New 130px" style="max-width: 90%;" lang="km">
-</div>
-<figcaption>Latin font metrics compared with Thai glyphs in the Thonburi (top) and Angasana New (bottom) fonts.</figcaption>
-</figure>
+tbd
 </section>
 
 
@@ -3474,99 +2924,7 @@ Gecko wraps at grapheme cluster boundaries except that it wraps a sequence with 
 
 <p class="instructions">You can experiment with counter styles using the <a target="_blank" href="../../app-counters/">Counter styles converter</a>. Patterns for using these styles in CSS can be found in <a href="https://www.w3.org/TR/predefined-counter-styles/#oriya-styles">Ready-made Counter Styles</a>, and we use the names of those patterns here to refer to the various styles.</p>
 
-<p>The modern Greek orthography uses 2 additive and one alphabetic styles. It also uses a numeric decimal style based on ASCII digits.</p>
-<p>The modern Thai orthography uses  numeric and  fixed styles.  <a href="https://en.wikipedia.org/wiki/Abjad_numerals">Wikipedia</a> lists 2 more styles: an <code class="kw" translate="no">old maghrebi</code> sequence and the <code class="kw" translate="no">hijai</code> sequence.</p>
-
-
-
-
-<section id="cs_numeric">
-<h4>Numeric</h4>
-<p>The <span class="kw" translate="no">oriya</span> numeric style  is decimal-based and  uses these  digits.<tt>rmcs</tt></p>
-<figure class="auto characterBox" data-cols="trans,transc" data-notes="1,2,3,4,5,6,7,8,9,0">୦␣୧␣୨␣୩␣୪␣୫␣୬␣୭␣୮␣୯</figure>
-
-<p>Examples:</p>
-<figure class="auto counterstylesBox noindex" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">୧␣୨␣୩␣୪␣୧୧␣୨୨␣୩୩␣୪୪␣୧୧୧␣୨୨୨␣୩୩୩␣୪୪୪</figure>
-</section>
-
-
-
-
-
-<section id="cs_fixed">
-<h4>Fixed</h4>
-<p>@ The <span class="kw" translate="no">arabic-abjad</span> fixed style for the Arabic language  uses these  letters. It is only able to count to 28. </p>
-<figure class="auto characterBox" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28"
-data-cols="">ا␣ب␣ج␣د␣ه‍␣و␣ز␣ح␣ط␣ي␣ك␣ل␣م␣ن␣س␣ع␣ف␣ص␣ق␣ر␣ش␣ت␣ث␣خ␣ذ␣ض␣ظ␣غ</figure>
-<p>Note that the 5th counter includes a zero-width joiner formatting character. This makes the shape distinguishable from <span class="codepoint" translate="no">lang="xx" [<a href="/scripts/arabic/block#char0665"><span class="uname">U+0665 ARABIC-INDIC DIGIT FIVE</span></a>]</span>.</p>
-
-<p>Examples:</p>
-<figure class="auto counterstylesBox noindex" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">୧␣୨␣୩␣୪␣୧୧␣୨୨␣୩୩␣୪୪␣୧୧୧␣୨୨୨␣୩୩୩␣୪୪୪</figure>
-</section>
-
-
-
-
-
-<section id="cs_alphabetic">
-<h4>Alphabetic</h4>
-<p>The <span class="kw" translate="no">khmer-consonant</span> alphabetic style for the Khmer language  uses these  letters. </p>
-<figure class="auto characterBox" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41"
-data-cols="">ก␣ข␣ค␣ง␣จ␣ฉ␣ช␣ซ␣ฌ␣ญ␣ฎ␣ฏ␣ฐ␣ฑ␣ฒ␣ณ␣ด␣ต␣ถ␣ท␣ธ␣น␣บ␣ป␣ผ␣ฝ␣พ␣ฟ␣ภ␣ม␣ย␣ร␣ล␣ว␣ศ␣ษ␣ส␣ห␣ฬ␣อ␣ฮ</figure>
-
-<p>Examples:</p>
-<figure class="auto counterstylesBox" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">୧␣୨␣୩␣୪␣୧୧␣୨୨␣୩୩␣୪୪␣୧୧୧␣୨୨୨␣୩୩୩␣୪୪୪</figure>
-</section>
-
-
-
-
-
-<section id="cs_additive">
-<h4>Additive</h4>
-<p>The <span class="kw" translate="no">ancient-tamil</span> additive style   uses these  letters. It is  specified for a range between 1 and 9,999. </p>
-<figure class="auto characterBox" data-notes="9000,8000,7000,6000,5000,4000,3000,2000,1000,900,800,700,600,500,400,300,200,100,90,80,70,60,50,40,30,20,10,9,8,7,6,5,4,3,2,1"
-data-cols="">௯௲␣௮௲␣௭௲␣௬௲␣௫௲␣௪௲␣௩௲␣௨௲␣௲␣௯௱␣௮௱␣௭௱␣௬௱␣௫௱␣௪௱␣௩௱␣௨௱␣௱␣௯௰␣௮௰␣௭௰␣௬௰␣௫௰␣௪௰␣௩௰␣௨௰␣௰␣௯␣௮␣௭␣௬␣௫␣௪␣௩␣௨␣௧</figure>
-
-<p>Examples:</p>
-<figure class="auto counterstylesBox" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">୧␣୨␣୩␣୪␣୧୧␣୨୨␣୩୩␣୪୪␣୧୧୧␣୨୨୨␣୩୩୩␣୪୪୪</figure>
-</section>
-
-
-
-
-
-<section id="cs_suffix">
-<h4>Prefixes and suffixes</h4>
-
-
-<p>The default list style uses a full stop + space as a suffix.</p>
-<p>The most common approach to writing lists in Burmese puts the counters in parentheses. An alternate style uses  <span class="codepoint" translate="no"><span lang="my">&#x104B;</span> [<a href="/scripts/myanmar/block#char104B"><span class="uname">U+104B MYANMAR SIGN SECTION</span></a>]</span> after the counter. Full stops are not commonly used.</p>
-
-<p>Examples:</p>
-
-
-<figure id="fig_cs_separators" style="margin-top: 0">
-<div style="display: flex; flex-direction:column; justify-content: flex-end;">
-<span lang="hy">ա. </span>
-<span lang="hy">բ. </span>
-<span lang="hy">գ. </span>
-<span lang="hy">դ. </span>
-<span lang="hy">ե. </span>
-</div>
-<figcaption>Separator for XXXXX list counters.</figcaption>
-</figure>
-
-
-
-<!--figure id="fig_cs_separators">
-<img src="images/burmese_paren.png" alt="The first 5 counters.">
-<img src="images/burmese_msm.png" alt="The first 5 counters." style="margin-inline-start: 4em;">
-<figcaption>Separators for Burmese list counters: parentheses (left) and section mark (right).</figcaption>
-</figure-->
-</section>
-
-<p>See <a href="https://github.com/r12a/typesamples/issues/9" target="_blank">type samples</a>.</p>
+<p>tbd</p>
 </section>
 
 
