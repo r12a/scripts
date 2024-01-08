@@ -5,7 +5,7 @@ var langs = {
 "kmr": { name:"Northern Kurdish (Kurmanji)", local:"Kurmancî", 
 source:"udhr_kmr", 
 region:"wasia", countries:"Turkey, Iraq, Syria, Iran, Lebanon, Armenia", script:"latn", speakers:"15000000", 
-letter:"ÇÊÎÛçêîûňŞş", letteraux:"ŇḦḧẌẍ", mark:"", markaux:"̧̂", number:"", punctuation:"‑–—‘’“”…‰", symbol:"", other:"", 
+letter:"ÇÊÎÛçêîûŞş", letteraux:"ŇňḦḧẌẍ", mark:"", markaux:"̧̂", number:"", punctuation:"‑–—‘’“”…‰", symbol:"", other:"", 
 orth:`[Latin] &nbsp; Hawar alphabet, from 1932 in Syria and (fully) from 2013 in Turkey.`,
 also:
 ["kmr-arab | arab | Naskh style, used in Iran, Iraq, Syria, Lebanon.",
