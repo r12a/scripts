@@ -448,7 +448,7 @@ papa||
 Pari||
 pataas||
 peel||
-𐶂𐵩𐶁𐵳𐵍𐵌|west|p§ɛ§n§k§u|penku
+𐶂𐵩𐶁𐵳𐵍𐵌|west|pɛ§n§k§u§‹|penku
 pexe||
 𐶂𐵋𐵱𐵪|bird|p§i§cc|picc|picc||picc
 pombiteer||
