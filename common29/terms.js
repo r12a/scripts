@@ -68,7 +68,8 @@ var setMarkup = ''
 if (collections.length === 0) setMarkup = '<div class="set">none</div>'
 else {
     for (set=0;set<collections.length; set++) {
-        setMarkup += `<div class="set"><span class="symbol" onclick="navigator.clipboard.writeText(this.textContent)">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars.replace(/\|/g,' &nbsp; ') }</div>`
+        setMarkup += `<div class="set"><span class="symbol" onclick="navigator.clipboard.writeText(this.textContent)">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars }</div>`
+        //setMarkup += `<div class="set"><span class="symbol" onclick="navigator.clipboard.writeText(this.textContent)">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars.replace(/\|/g,' &nbsp; ') }</div>`
         }
     }
 
