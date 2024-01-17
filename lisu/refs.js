@@ -9,6 +9,25 @@ reflist = {
 "isbn":"0-19-507993-0",
 },
 
+"f": {
+"authors": "James Fraser",
+"title":"Handbook of the Lisu (Yawyin) Language",
+"date": "1922",
+"publisher":"Rangoon, Superintendent, Govt. print., Burma",
+"pages": "1-5",
+"url":"https://archive.org/details/cu31924022354462/page/n17/mode/2up",
+"reviewed":false
+},
+
+"p": {
+"authors": "Adrian Cheuk",
+"title":"Proposal for encoding the Old Lisu script in the BMP of the UCS",
+"date": "2007",
+"publisher":"ISO/IEC JTC1/SC2/WG2 N3317R",
+"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3317.pdf",
+"reviewed":false
+},
+
 "u": {
 "url":"https://www.unicode.org/versions/Unicode15.0.0/ch18.pdf",
 "authors": "Unicode Consortium",
@@ -59,5 +78,21 @@ atb:{name:"Zaiwa"},
 
 
 
+/*
 
+"auth_initials": {
+"authors": "Sort_by_family_name_of_first_contributor",
+"title":"The_Worlds_Writing_Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "May 2021",
+"publisher":"Oxford_University_Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+
+*/
 
