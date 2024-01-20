@@ -29,50 +29,50 @@ autoExpandExamples.lif = `
 ᤃᤠᤰᤌᤢᤱ ᤐᤠ᤺ᤴ|Limbu language|gak§tʰuŋ§ §paːn
 ᤃᤠᤰᤌᤢᤱ|Limbu|gak§tʰuŋ
 ᤀᤠᤀᤡᤴ|today|a.in|ain|आइन्
-ᤀᤠᤀᤡᤴᤋᤠᤴᤍᤡᤰ||
-ᤀᤠᤂᤧᤴ||
-ᤀᤠᤏᤡ||
-ᤀᤠᤑᤠᤗᤣ||
-ᤀᤠᤱᤃᤠ||
+ᤀᤠᤀᤡᤴᤋᤠᤴᤍᤡᤰ|nowadays|a.§in.§tan.§dik|aintandik|आइन्तान्दिक्
+ᤀᤠᤂᤧᤴ|how much|a.§kʰɛn|akhên|आखे़न्
+ᤀᤠᤏᤡ|we|a.§ni|ani|आनि
+ᤀᤠᤑᤠᤗᤣ|when|a.§pʰa.§le|aphale|आफाले
+ᤀᤠᤱᤃᤠ|I|aŋ.§ɡa|aṅga|आङ्गा
 ᤀᤠᤳᤋᤡᤴ|which|at.§tin|attin|आत्तिन्
-ᤀᤠᤴᤇᤡ||
-ᤀᤠᤶᤒᤡ||
-ᤀᤠᤸᤗᤠᤣ||
-ᤀᤡᤰᤗᤣᤰ|alone|ik.§lek|इक्लेक्
-ᤀᤡᤱᤄᤱ||
-ᤀᤡᤶᤔᤠ||
+ᤀᤠᤴᤇᤡ|we (two)|an.§t͡ɕʰi|anchi|आन्छि
+ᤀᤠᤶᤒᤡ|oh|am.§bi|ambi|आम्बि
+ᤀᤠᤸᤗᤥ|now|al.§lo|allo|आल्लो||ᤀᤠᤸᤗᤠᤣ
+ᤀᤡᤰᤗᤣᤰ|alone|ik.§lek|iklek|इक्लेक्
+ᤀᤡᤱᤄᤱ|news|iŋ.ɡʱɔŋ|iṅghôṅ|इङ्घङ्
+ᤀᤡᤶᤔᤠ|to sleep|im.§ma|imma|इम्मा
 ᤀᤧᤄᤠᤱ|ahead|ɛ.§ɡʱaŋ|êghaṅ|ए़घाङ्
-ᤁᤴ||
+ᤁᤴ|this|kɔn|kôn|कन्
 ᤁᤴᤇᤡ||
 ᤁᤴᤏᤠ||
 ᤁᤴᤜᤠ||
 ᤂᤠᤍᤠᤶᤔᤠ||
-ᤅᤠᤛᤡ||
+ᤅᤠᤛᤡ|five|ŋa.§si|ṅasi|ङासि
 ᤆᤠᤜᤠᤒᤠ||
 ᤆᤢᤰᤛᤠ||
 ᤆᤣᤛᤢᤱ||
 ᤆᤫᤠ|water|t͡ɕwa|cwa|च्वा
 ᤆᤫᤠ᤹ᤸ|water|t͡ɕwaˀl|cwa’l|च्वाॽल्
-ᤋᤖᤣᤒᤠ||
-ᤋᤖᤣᤔᤠ||
+ᤋᤖᤣᤒᤠ|guest (m.)|tɔ.§re.§ba|tôreba|तरेबा
+ᤋᤖᤣᤔᤠ|guest (f.)|tɔ.§re.§ma|tôrema|
 ᤋᤠᤃᤣᤖᤠ ᤏᤡᤱᤘᤠᤑᤢᤔᤠᤱ||
 ᤋᤠᤑᤧᤶᤒᤠ||
 ᤋᤠᤴᤍᤡ||
-ᤋᤠᤴᤍᤡᤰ||
-ᤌᤠᤣ||
+ᤋᤠᤴᤍᤡᤰ|tomorrow|tan.§dik|tandik|तान्दिक्
+ᤌᤥ|up|tʰo|tho|थो||ᤌᤠᤣ
 ᤌᤠᤱᤒᤣᤴ||
-ᤌᤡᤒᤠᤣᤱ||
+ᤌᤡᤒᤥᤱ|ten|tʰi.§boŋ|thiboṅ|थिबोङ्
 ᤌᤡᤰ|one|tʰik|thik|थिक्
 ᤌᤡᤰᤛᤡᤃᤣᤰ||
 ᤏᤠᤁᤢᤛᤱ||
-ᤏᤠᤶᤎᤡᤱᤃᤥ||
+ᤏᤠᤶᤎᤡᤱᤃᤥ|rainbow|nam.§dʱiŋ.§ɡo|namdhiṅgo|नाम्धिङ्गो
 ᤏᤡᤱᤄᤢᤶ||
 ᤏᤢ||
 ᤏᤢᤒᤠ||
 ᤏᤢᤔᤠ||
 ᤏᤢᤛᤡ||
 ᤏᤧᤳᤇᤡ|two|nɛt.§t͡ɕʰi|nêtchi|ने़त्छि
-ᤐᤠᤍᤠᤱᤒᤠ||
+ᤐᤠᤍᤠᤱᤒᤠ|guardian|pa.§daŋ.§ba|padaṅba|पादाङ्बा
 ᤑᤠᤱᤛᤡ||
 ᤑᤢᤱ||
 ᤑᤧᤍᤠᤱᤔᤠ||
@@ -83,11 +83,11 @@ autoExpandExamples.lif = `
 ᤔᤢᤰᤁᤢᤶᤒᤠ|powerful|muk.§kum.§ba|mukkumba|मुक्कुम्बा
 ᤔᤧᤴᤇᤢᤔᤠ||
 ᤔᤧᤴᤇᤩᤠ|young girl|mɛn.§t͡ɕʰja|mênchya|मे़न्छ्या
-ᤔᤧᤶᤒᤣ||
-ᤕᤠᤣ||
+ᤔᤧᤶᤒᤣ|no|mɛm.§be|mêmbe|मे़म्बे
+ᤕᤥ|down|jo|yo|यो
 ᤕᤠᤶᤒᤡᤇᤠ||
 ᤕᤣ᤺ᤰᤕᤠ|important|jeːk.§ja|yēkya|येःक्या
-ᤕᤧᤳᤇᤡ||
+ᤕᤧᤳᤇᤡ|eight|jɛt.t͡ɕʰi|yêtchi|ये़त्छि
 ᤕᤶᤒᤠ||
 ᤗᤠᤱ||
 ᤗᤡᤛᤡ||
@@ -96,16 +96,16 @@ autoExpandExamples.lif = `
 ᤛᤠᤵᤔᤢᤴᤎᤢᤶ||
 ᤛᤢᤶᤛᤡ||
 ᤛᤧᤰᤂᤠᤒᤡ|really|sɛk.§kʰa.§bi|sêkkhabi|से़क्खाबि
-ᤜᤠᤖᤠ||
+ᤜᤠᤖᤠ|fast|ɦa.§ra|hara|हारा
 ᤜᤡᤶ||
 ᤜᤢᤏᤡ||
 ᤜᤢᤏᤣ||
 ᤜᤢᤴᤇᤡ||
-ᤜᤥᤵ||
+ᤜᤥᤵ|zero|ɦop|hop|होप्
 ᤜᤧᤏᤡ||
-ᤜᤧᤏᤣ||
-ᤜᤧᤰᤁᤣᤀᤠᤱ|thereafter|ɦɛk.ke.aŋ|hêk§ke§aṅ
-ᤜᤧᤳᤋᤠᤣ||
+ᤜᤧᤏᤣ|you|ɦɛ.§ne|hêne|हे़ने
+ᤜᤧᤰᤁᤣᤀᤠᤱ|thereafter|ɦɛk.§ke.§aŋ|hêkkeaṅ
+ᤜᤧᤳᤋᤥ|there|ɦɛt.§to|hêtto|हे़त्तो||ᤜᤧᤳᤋᤠᤣ
 ᤜᤧᤴ||
 ᤜᤧᤴᤇᤡ||
 ᤜᤧᤴᤜᤠ||
