@@ -93,7 +93,8 @@ function setContentPrompts () {
     
     // set the summary text for the tbd details markup
     var summaries = document.querySelectorAll('.tbd summary')
-    for (i=0;i<summaries.length;i++) summaries[i].textContent = 'Still to be investigated...'
+    for (i=0;i<summaries.length;i++) summaries[i].textContent = 'Sections to be added...'
+    //for (i=0;i<summaries.length;i++) summaries[i].textContent = 'Still to be investigated...'
 	}
 
 
