@@ -1,91 +1,107 @@
 // prompts will be inserted into the title attributes of various headers after page upload
 
 
-var contentPrompts = {
-'cursive':"Is this script cursive? Is the basic shape of a letter radically changed? Is it sometimes not cursive? Are there any special features to note? Are Unicode joiner and non-joiner characters needed to override default joining behaviours?",
-
-'gsub':"Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?",
-
-"gpos":"Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?",
-
-"baselines":"Does the script have special requirements for baseline alignment between mixed scripts and in general? Is line height special for this script? Are there other aspects that affect line spacing, or positioning of items vertically within a line?",
-
-"fontstyle":"Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?",
-
-"graphemes":"Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements for the following operations: forwards/backwards deletion, cursor movement & selection, character counts, searching & matching, text insertion, line-breaking, justification, case conversions, sorting?",
-
-"word":"Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?",
-
-"phrase":"What characters are used to indicate the boundaries of phrases, sentences, and sections?",
-
-"otherinline":"Any other form of highlighting or marking of text, such as underlining, numeric overbars, etc. What characters or methods (eg. text decoration) are used to convey information about a range of text?\n• If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself?\n• Is it important to skip characters when underlining, etc?\n• How do things change for vertically set text?\n• (See also the following sections which deal with specific purposes.)",
-
-"quotations":"What characters are used to indicate quotations?\n• Do quotations within quotations use different characters?\n• What characters are used to indicate dialogue?\n• Are the same mechanisms used to cite words, or for scare quotes, etc?\n• What about citing book or article names?",
-
-"abbrev":"What characters are used to indicate abbreviation, ellipsis & repetition?",
-
-"emphasis":"How are emphasis and highlighting achieved?\n• If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself?\n• Is it important to skip characters when underlining, etc?\n• How do things change for vertically set text?",
-
-"bracketing":"What parentheses, brackets or other punctuation is used to offset parenthetical information?",
-
-"otherpunctuation":"Punctuation not already mentioned, such as dashes, connectors, separators, scare quotes, etc.",
-
-"inlinenotes":"What mechanisms, if any, are used to create *inline* notes and annotations? (For referent-type notes such as footnotes, see below.)",
-
-"linebreak":"Are there special rules about the way text  wraps when it hits the end of a line?\n• Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)?\n• What characters should not appear at the end or start of a line, and what should be done to prevent that?",
-
-"hyphenation":"Is hyphenation used, or something else? What rules are used? What difficulties exist?",
-
-"justification":"Does text in a paragraph needs to have flush lines down both sides?\n• Does the script allow punctuation to hang outside the text box at the start or end of a line?\n• Where adjustments are need to make a line flush, how is that done?\n• Does the script shrink/stretch space between words and/or letters?\n• Are word baselines stretched, as in Arabic?\n• What about paragraph indents?",
-
-"spacing":"This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification. For example, does the orthography create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see Text alignment & justification, above).",
-
-"lists":"Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed?",
-
-"initials":"Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? Are dropped, sunken, and raised types found? etc.",
-
-"generallayout":"How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?",
-
-"grids":"Does the script have special requirements for character grids or tables?",
-"footnotes":"Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)",
-
-"interaction":"Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?",
-
-"headers":"Are there special conventions for page numbering, or the way that running headers and the like are handled?",
-
-"writingstyles":"How are fonts grouped into recognisable writing styles? How is each writing style used?",
-
-"transforms":"Is the orthography bicameral? Are there other character pairings, especially when transforms are needed to convert between the two?",
-
-}
-
-
-
-
 
 function setContentPrompts () {
-	if (contentPrompts) {
-		// set the prompts in the titles
-		for (var thePrompt in contentPrompts) {
-			var node = document.getElementById(thePrompt)
-			if (node) {		 	
-				var heading = node.querySelector('h3')
-				if (heading) heading.title = contentPrompts[thePrompt]
-				
-				var promptPara = node.querySelector('.prompts')
-				if (promptPara) promptPara.textContent = contentPrompts[thePrompt]
-				}
-			 }
-			 
-		// set the prompts in the initial paras of shaping and pagelayout
-		for (thePrompt in contentPrompts) {
-			var node = document.getElementById(thePrompt+'Inline')
-			if (node) node.title = contentPrompts[thePrompt]
-			}
 
-		contentPrompts = {}
-		}
+    subsectionPrompts = [
+        {node:document.querySelector('#writingstyles h3, #writingstyles h4'), text:"How are fonts grouped into recognisable writing styles? How is each writing style used?"},
+
+        {node:document.querySelector('#cursive h3, #cursive h4'), text:"Do letters in this script join with each other by default? Is the basic shape of a letter radically changed? Is it sometimes not cursive? Are there any special features to note? Are Unicode joiner and non-joiner characters needed to override default joining behaviours?"},
+
+        {node:document.querySelector('#context h3, #context h4'), text:"Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances? Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?"},
+
+        {node:document.querySelector('#fontstyle h3, #fontstyle h4'), text:"Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?"},
+
+        {node:document.querySelector('#transforms h3, #transforms h4'), text:"Is the orthography bicameral? Are there other character pairings, especially when transforms are needed to convert between the two?"},
+
+
+        {node:document.querySelector('#word h3, #word h4'), text:"Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?"},
+
+        {node:document.querySelector('#phrase h3, #phrase h4'), text:"What characters are used to indicate the boundaries of phrases, sentences, and sections?"},
+
+        {node:document.querySelector('#bracketing h3, #bracketing h4'), text:"What parentheses, brackets or other punctuation is used to offset parenthetical information?"},
+
+        {node:document.querySelector('#quotations h3, #quotations h4'), text:"What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue? Are the same mechanisms used to cite words, or for scare quotes, etc? What about citing book or article names?"},
+
+        {node:document.querySelector('#emphasis h3, #emphasis h4'), text:"How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?"},
+
+        {node:document.querySelector('#abbrev h3, #abbrev h4'), text:"What characters are used to indicate abbreviation, ellipsis & repetition?"},
+
+        {node:document.querySelector('#inlinenotes h3, #inlinenotes h4'), text:"What mechanisms, if any, are used to create *inline* notes and annotations? (For referent-type notes such as footnotes, see below?"},
+
+        {node:document.querySelector('#otherpunctuation h3, #otherpunctuation h4'), text:"Punctuation not already mentioned, such as dashes, connectors, separators, scare quotes, etc."},
+
+        {node:document.querySelector('#otherinline h3, #otherinline h4'), text:"Any other form of highlighting or marking of text, such as underlining, numeric overbars, etc. What characters or methods (eg. text decoration) are used to convey information about a range of text? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?"},
+
+
+        {node:document.querySelector('#linebreak h3, #linebreak h4'), text:"Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that? Is hyphenation used, or something else? What rules are used? What difficulties exist?"},
+
+        {node:document.querySelector('#justification h3, #justification h4'), text:"Does text in a paragraph needs to have flush lines down both sides? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?"},
+
+        {node:document.querySelector('#spacing h3, #spacing h4'), text:"This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification. For example, does the orthography create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see Text alignment & justification, above)."},
+ 
+        {node:document.querySelector('#baselines h3, #baselines h4'), text:"Does the script have special requirements for baseline alignment between mixed scripts and in general? Is line height special for this script? Are there other aspects that affect line spacing, or positioning of items vertically within a line?"},
+ 
+        {node:document.querySelector('#lists h3, #lists h4'), text:"Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed?"},
+ 
+        {node:document.querySelector('#initials h3, #initials h4'), text:"Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? Are dropped, sunken, and raised types found? etc."},
+
+
+        {node:document.querySelector('#generallayout h3, #generallayout h4'), text:"How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?"},
+
+        {node:document.querySelector('#grids h3, #grids h4'), text:"Does the script have special requirements for character grids or tables?"},
+
+        {node:document.querySelector('#footnotes h3, #footnotes h4'), text:"Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes."},
+
+        {node:document.querySelector('#interaction h3, #interaction h4'), text:"Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?"},
+
+        {node:document.querySelector('#headers h3, #headers h4'), text:"Are there special conventions for page numbering, or the way that running headers and the like are handled?"},
+        ]
+
+
+
+    // set the prompts in the subtitles
+    for (i=0;i<subsectionPrompts.length;i++) {
+        prompt = document.createElement('p')
+        prompt.className = 'sectionSummary'
+        prompt.appendChild(document.createTextNode(subsectionPrompts[i].text))
+        if (subsectionPrompts[i].node) subsectionPrompts[i].node.after(prompt)
+        }
+    
+    // set summaries for typography H2s
+    typographyH2s = [
+        {node:document.querySelector('#numbers h2'), text:"This section describes typographic features related to digits, dates, currencies, etc."},
+
+        {node:document.querySelector('#shaping aside'), text:"This section describes typographic features related to font/writing styles, cursive text, context-based shaping, context-based positioning, letterform slopes, weights & italics, and case & other character transforms."},
+
+        {node:document.querySelector('#graphemes h2'), text:"Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements for the following operations: forwards/backwards deletion, cursor movement & selection, character counts, searching & matching, text insertion, line-breaking, justification, case conversions, sorting?"},
+
+        {node:document.querySelector('#inline aside'), text:"This section describes typographic features related to word boundaries, phrase & section boundaries, bracketed text, quotations & citations, emphasis, abbreviation, ellipsis & repetition, inline notes & annotations, other punctuation, and other inline text decoration."},
+
+        {node:document.querySelector('#para aside'), text:"This section describes typographic features related to line breaking & hyphenation, text alignment & justification, text spacing, baselines, line height, counters, lists, and styling initials."},
+
+        {node:document.querySelector('#page aside'), text:"This section describes typographic features related to general page layout & progression; grids & tables, notes, footnotes, etc, forms & user interaction, and page numbering, running headers, etc."},
+        ]
+
+    for (i=0;i<typographyH2s.length;i++) {
+        prompt = document.createElement('p')
+        prompt.className = 'sectionSummary'
+        prompt.appendChild(document.createTextNode(typographyH2s[i].text))
+        if (typographyH2s[i].node) typographyH2s[i].node.after(prompt)
+        }
+    
+    // set the summary text for the tbd details markup
+    var summaries = document.querySelectorAll('.tbd summary')
+    for (i=0;i<summaries.length;i++) summaries[i].textContent = 'Still to be investigated...'
 	}
+
+
+
+
+
+
+
 
 
 

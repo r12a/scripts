@@ -305,6 +305,10 @@ p.large {
 .prompts {
 	color: #ccc;
 	}
+h3 + p.prompts {
+    margin-block-start: -1em;
+    margin-top: -1em;
+	}
 .explanatoryintro, .definition { /* use the former, rather than the latter */
 	font-style: italic;
     font-size: 80%;
@@ -1576,14 +1580,16 @@ h1 {
 font-size: 400%;
 }
 h2 {
-text-transform: none;
-color: #999;
-}
+    text-transform: none;
+    color: #999;
+    margin-block-start: 10rem;
+    }
 h3 {
-font-weight: 600;
-color: #444;
-text-transform: none; 
-}
+    font-weight: 600;
+    color: #444;
+    text-transform: none;
+    margin-block-start: 4rem;
+    }
 h4 {
 color: #555;
 font-weight: 600;
@@ -2335,18 +2341,86 @@ div.glossContainer {
     }
 
 
-#vowel_notfound, #consonant_notfound, #shaping_notfound {
+/* THIS SHOULD BE REPLACED WITH SECTIONASIDE */
+#vowel_notfound, #consonant_notfound, #shaping_notfound, #inline_notfound, #para_notfound, #page_notfound {
     float: right;
     width: 30%;
     padding-block-start: 0em;
     border-block-start: 1rem antiquewhite solid;
+    margin-block-start: 11rem;
+    clear: both;
     }
 #vowel_notfound li, #vowel_notfound ul, #vowel_notfound p, #consonant_notfound li, #consonant_notfound ul, #consonant_notfound p, #shaping_notfound li, #shaping_notfound p, #shaping_notfound ul {
     margin-inline: 2em;
     padding: 0;
     text-align: start;
     }
+/* END */
 
+.sectionAside {
+    float: right;
+    width: 26%;
+    padding-block-start: 0em;
+    border-block-start: 1rem antiquewhite solid;
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+    clear: both;
+    font-style: italic;
+    font-size: 80%;
+    line-height: 1.4;
+    font-weight: normal;
+    margin-inline-start: 2%;
+    margin-inline-end: 0;
+    background-color: white;
+    }
+.sectionAside li, .sectionAside p, .sectionAside details {
+    margin-inline-start: 0;
+    margin-inline-end: 1rem;
+    padding: 0;
+    text-align: start;
+    }
+.sectionAside ul {
+    margin-inline: 2em;
+    padding: 0;
+    text-align: start;
+    }
+.tbd { 
+    background-color: white;
+    }
+.tbd h4 {
+    margin-inline: 0;
+    font-size: 100%;
+    margin-block-start: 2em;
+    margin-block-end: 1em;
+    text-align: start;
+    }
+.tbd summary {
+    margin-block-start: 3rem;
+    }
+
+
+
+
+.sectionSummary { 
+    font-style: italic;
+    font-size: 80%;
+    line-height: 1.4;
+    font-weight: normal;
+    color: #aaa;
+    }
+
+h3 + .sectionSummary, h2 + .sectionSummary { 
+    margin-block-start: -1rem;
+    }
+
+/* remove any hangover markup for prompts that is now replaced by scripting
+#shaping > .instructions, #page > .instructions {
+    display: none;
+    }  */
+
+.prompts {
+    display: none;    /* these are now replaced by scripting */
+    }
 
 
 

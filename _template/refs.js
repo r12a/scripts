@@ -1,4 +1,4 @@
-window.langSet = true
+window.langSet = false
 
 
 

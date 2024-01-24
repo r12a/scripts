@@ -426,7 +426,8 @@ function initialiseSummary (blockDirectory, lang, tableName, orthogNotesFile) {
     createtoc(3)
 	removeEditorNotes()
 	addDefinitions()
-	if (typeof(contentPrompts) !== 'undefined') setContentPrompts()
+	//if (typeof(contentPrompts) !== 'undefined') setContentPrompts()
+	setContentPrompts()
 	setFindIPA()  // Make ipa characters in sounds charts indicate locations they are used
 	setupBlockLinks() // Set target attribute for links that point to characters in the block page
 	setTranslitToggle()  // Add checkboxes and links to the fixed position selector
