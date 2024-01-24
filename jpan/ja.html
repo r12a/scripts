@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->31 December, 2023<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->24 January, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -79,7 +79,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Japanese (Kanji, Hiragana, Katakana, &amp; Latin) Orthography Notes, <!-- #BeginDate format:En2 -->31-Dec-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/jpan/ja">https://r12a.github.io/scripts/jpan/ja</a></small></p>
+<p class="refLine"><small>Richard Ishida, Japanese (Kanji, Hiragana, Katakana, &amp; Latin) Orthography Notes, <!-- #BeginDate format:En2 -->24-Jan-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/jpan/ja">https://r12a.github.io/scripts/jpan/ja</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -576,7 +576,10 @@ alveolar</th>
 <section id="characters">
 <h2>Characters</h2>
 
-<div id="vowel_notfound" class="instructions">
+
+
+
+<aside class="sectionAside">
 <p>This orthography has no special features with respect to the following.</p>
 
 <ul>
@@ -600,7 +603,10 @@ alveolar</th>
 
 <li>Conjuncts or other shaping related to consonant clusters.</li>
 </ul>
-</div>
+</aside>
+
+
+
 
 
 <div id="vowel_description"></div>
@@ -1057,26 +1063,28 @@ is written in hiragana as<span class="charExample" translate="no"><span class="e
 
 
 
-<div id="shaping_notfound" class="instructions">
+<aside class="sectionAside">
 <p>The following features are not found in this orthography.</p>
-
 <ul>
 <li>Cursive joining (ie. joined up like Arabic).</li>
-
 <li>Context-based shaping (letters do not interact).</li>
 </ul>
-</div>
+
+
+<details class="tbd">
+<summary>Still to be investigated ...</summary>
+
+<section id="fontstyle">
+<h4>Letterform slopes, weights, &amp; italics</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+</details>
+</aside>
 
 
 
-<p class="instructions">This section brings together information about the following topics:
-<span id="writingstylesInline">font/writing styles</span>; 
-<span id="cursiveInline">cursive text</span>;
-<span id="gsubInline">context-based shaping</span>;
-<span id="gposInline">context-based positioning</span>;
-<span id="fontstyleInline">letterform slopes, weights, &amp; italics</span>;
-<span id="transformsInline">case &amp; other character transforms</span>.
-</p>
+
+
 
 <p class="instructions">Experiment with examples using the <a href="../../pickers/jpan/index.html" target="_blank">Japanese character app</a>.</p>
 
@@ -1231,10 +1239,6 @@ is written in hiragana as<span class="charExample" translate="no"><span class="e
 
 
 
-<section id="fontstyle">
-<h3>Letterform slopes, weights, &amp; italics</h3>
-<p class="prompts">tbd</p>
-</section>
 
 
 
@@ -1297,8 +1301,33 @@ is written in hiragana as<span class="charExample" translate="no"><span class="e
 
 
 
+
+
+
+
+
+
+
 <section id="inline">
 <h2>Punctuation &amp; inline features</h2>  
+
+
+
+<aside class="sectionAside">
+<details class="tbd">
+<summary>Other information needed ...</summary>
+
+<section id="otherinline">
+<h4>Other inline text decoration</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+</details>
+</aside>
+
+
+
+
+
 
 <section id="word">
 <h3>Word boundaries</h3>
@@ -1879,21 +1908,14 @@ and not
 <figure class="characterBox auto" data-cols="">ゝ␣ゞ␣ヽ␣ヾ</figure>
 <p>Unicode also has <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x034F;</span><img src="../../c/CJK_Symbols_and_Punctuation/3000.png" alt="Ideographic Space" style="vertical-align:middle"> [<a href="block#char034F"><span class="uname">U+3000 IDEOGRAPHIC SPACE</span></a>]</span> for occasions where it is needed.</p>
 </section>
-
-
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline text decoration</h3>
-
-<p class="prompts">tbd</p>
-</section>
 </section>
 
 
+ 
+ 
+ 
+ 
+ 
  
  
  
@@ -1904,6 +1926,13 @@ and not
 <section id="para">
 <h2>Line &amp; paragraph layout</h2>
    
+
+
+
+
+<aside class="sectionAside">
+</aside>
+
 
 
 
@@ -2055,14 +2084,25 @@ and not
 <p>Such spacing is not needed when the phrase is followed or preceded by punctuation that already has built in space. It also doesn't appear at the line start/end.</p>
 
 <div class="html">
-<p>To achieve this in web pages use the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup> in your style sheet with the following values. It's best not to use space characters. The actual amount of spacing applied is dependent on the browser.</p>
+<p>To achieve this in web pages use the <code class="kw" translate="no">text-autospace</code> CSS property in your style sheet; don't use space characters. For full details of the options available see the <a href="https://drafts.csswg.org/css-text-4/#text-autospace-property" target="_blank">CSS spec</a>.</p>
+
+<p>By default, the browser should insert a gap automatically between runs of ideographs and runs of both non-ideographic letters/numerals.  The size of the gap is dependent on the browser, however the  CSS spec suggests 1/8 of the width of an ideographic character.</p>
+
+<p>There are 2 ways in which CSS can add gaps. If the text already contains gaps produced using ordinary space characters the CSS will, by default, only add gaps where there are no spaces. If, on the other hand, you want to reduce the width of the those space-based gaps, or apply even spacing throughout, then use the <code class="kw" translate="no">replace</code> value. <code class="kw" translate="no">text-autospace:ideograph-alpha ideograph-numeric replace;</code> will remove any space characters and replace them with a standard width gap, while also creating gaps where the space character hadn't been used.</p>
+
+<p>To remove all synthesised gaps (but leave any manually-typed space characters in place) use  <code class="kw" translate="no">text-autospace:no-autospace</code>.</p>
+
+<p>The other values can be used to tweak the results as follows.</p>
 <dl>
-<dt>ideograph-alpha <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
-<dd>Creates extra spacing between runs of ideographs and non-ideographic letters.</dd>
-<dt>ideograph-numeric <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
-<dd>Creates extra spacing between runs of ideographs and non-ideographic numerals glyphs.</dd>
+<dt>normal <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
+<dd>Restores the default setting of the browser, ie. it creates a gap between runs of ideographs and runs of  non-ideographic letters or  numerals., but only inserts a gap where an ordinary space has not been used.<dt>ideograph-alpha or ideograph-numeric <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
+<dd>These 2 values can be used individually to exclude the other option..</dd>
+<dt>auto <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
+<dd>Gives over control of  autospace behaviour to the browser, assuming that the browser has implemented special rules that differ from the normal case. Note that if you use this value your text may look different from browser to browser.</dd>
+</dd>
 </dl>
-<p>Eg. the following puts spacing around both:<br><code>text-spacing: ideograph-alpha ideograph-numeric;</code></p>
+<p>Most of the time you will probably want to use the following:<br>
+<code>text-autospace: ideograph-alpha ideograph-numeric replace;</code></p>
 </div>
 </section>
 
@@ -2344,16 +2384,33 @@ data-cols="">九阡␣八阡␣七阡␣六阡␣伍阡␣四阡␣参阡␣弐�
 
 
 
+
+
+
+
+
+
 <section id="page">
 <h2>Page &amp; book layout</h2>
  
- <p class="instructions">This section is for  any features that are specific to Japanese and that relate to the following topics:
-<span id="generallayoutInline">general page layout &amp; progression</span>; 
-<span id="gridsInline">grids &amp; tables</span>;
-<span id="footnotesInline">notes, footnotes, etc</span>;
-<span id="interactionInline">forms &amp; user interaction</span>;
-<span id="headersInline">page numbering, running headers, etc</span>.
-</p>
+ 
+ 
+ 
+ 
+ 
+<aside class="sectionAside">
+<details class="tbd">
+<summary>Other information needed ...</summary>
+
+<section id="grids">
+<h4>Grids &amp; tables</h4>
+</section>
+</details>
+</aside>
+
+
+
+
 
 
 
