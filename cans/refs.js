@@ -37,8 +37,10 @@ reflist = {
 
 "m": {
 "authors": "Mick Mallon",
+"publisher":"The UQAILAUT Project",
 "title":"Inuktitut Linguistics for Technocrats",
-"url":"http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html",
+"date":"2000",
+"url":"http://www.inuktitutcomputing.ca/Technocrats/ILFT.php",
 "lang": new Set(['ike']),
 },
 

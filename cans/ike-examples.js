@@ -277,7 +277,7 @@ autoExpandExamples.ike = `
 
 ᓱᑲᖅ|sugar|su§ka§q
 ᕼᐋᑭᕐᕕᒃ|hockey arena|h§aː§ki§ʁ§vi§k
-ᑐᐱˈᒥ|in a tent|tu§pi§ʔ§mi
+ᑐᐱʼᒥ|in a tent|tu§pi§ʔ§mi
 ᑐᐱᕐᒥ|in a tent|tu§pi§ʁ§mi
 ᐅᑉᓛᖅ|morning|u§b§laː§q
 ᐅᓪᓛᖅ|morning|u§l§laː§q
