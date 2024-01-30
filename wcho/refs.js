@@ -100,7 +100,7 @@ reflist = {
 
 
 scriptLanguageList = {
-nnp:{name:"Wancho Naga"},
+nnp:{name:"Wancho Naga", url:"nnp.html"},
 }
 
 
