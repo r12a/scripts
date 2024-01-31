@@ -1,5 +1,23 @@
 reflist = {
 
+/*
+
+"auth_initials": {
+"authors": "Sort_by_family_name_of_first_contributor",
+"title":"The_Worlds_Writing_Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "Jan 2024",
+"publisher":"Oxford_University_Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ckb']),
+"reviewed":false
+},
+
+
+*/
 
 "c": {
 "url":"https://w3c.github.io/clreq/",
@@ -43,6 +61,12 @@ reflist = {
 "url":"https://en.wikipedia.org/wiki/Standard_Chinese_phonology",
 "authors": "Wikipedia",
 "title":"Standard Chinese phonology",
+},
+
+"wcp": {
+"url":"https://en.wikipedia.org/wiki/Chinese_punctuation",
+"authors": "Wikipedia",
+"title":"Chinese punctuation",
 },
 
 
