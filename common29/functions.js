@@ -95,6 +95,10 @@ function addPageFeatures () {
     // set up show composition to show composition in panel
     summaryNodes = document.querySelectorAll('.figureSub summary')
     for (i=0;i<summaryNodes.length;i++) summaryNodes[i].onclick = function(){ this.parentNode.querySelector('bdi').click() }
+    
+    // show all sections to be added
+    summaryNodes = document.querySelectorAll('.sectionAside details')
+    for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = true
     }
 
 
