@@ -5,12 +5,13 @@ window.langSet = false
 reflist = {
 
 
+/*
 "auth_initials": {
 "authors": "Sort_by_family_name_of_first_contributor",
 "title":"The_Worlds_Writing_Systems",
 "sub": "subtitle",
 "date": "1996",
-"retr": "May 2021",
+"retr": "Feb 2024",
 "publisher":"Oxford_University_Press",
 "isbn":"0-19-507993-0",
 "pages": "xxx",
@@ -18,6 +19,7 @@ reflist = {
 "lang": new Set(['ru']),
 "reviewed":false
 },
+*/
 
 "ul": {
 "authors": "Christopher Chapman",
@@ -80,7 +82,7 @@ reflist = {
 "wl": {
 "authors": "Wikipedia",
 "title":"Rohingya language",
-"retr": "May 2021",
+"retr": "Feb 2024",
 "url":"https://en.wikipedia.org/wiki/Rohingya_language",
 "reviewed":false
 },
@@ -88,7 +90,7 @@ reflist = {
 "ws": {
 "authors": "Wikipedia",
 "title":"Bamum script",
-"retr": "May 2021",
+"retr": "Feb 2024",
 "url":"https://en.wikipedia.org/wiki/Bamum_script",
 "reviewed":false
 },
