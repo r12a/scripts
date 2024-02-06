@@ -2,7 +2,7 @@ reflist = {
 
 
 "cd": {
-"authors": "Sort by family name of first contributor",
+"authors": "Coleman Donaldson",
 "title":"Clear Language: Script, Register And The N’ko Movement Of Manding-Speaking West Africa",
 "date": "2017",
 "retr": "Nov 2021",
