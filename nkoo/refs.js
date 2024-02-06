@@ -7,7 +7,7 @@ reflist = {
 "date": "2017",
 "retr": "Nov 2021",
 "publisher":"University of Pennsylvania ScholarlyCommons",
-"url":"https://repository.upenn.edu/cgi/viewcontent.cgi?article=4537&context=edissertations",
+"url":"https://repository.upenn.edu/handle/20.500.14332/29701",
 "reviewed":false
 },
 
