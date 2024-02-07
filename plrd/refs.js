@@ -160,6 +160,16 @@ reflist = {
 "reviewed":false
 },
 
+"eth": {
+"authors": "Eberhard, David M., Gary F. Simons, and Charles D. Fennig (eds.)",
+"title":"Ethnologue: Languages of the World. Twenty-sixth edition",
+"date": "2023",
+"retr": "Feb 2024",
+"publisher":"SIL International",
+"url":"https://www.ethnologue.com/language/hmd/",
+"reviewed":false
+},
+
 }
 
 
