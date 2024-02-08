@@ -39,6 +39,7 @@ autoExpandExamples.hmd = `
 @ https://web-archive.southampton.ac.uk/miao/songs/TranslatedSongs/m101/m101tx.pdf
 
 𖽐𖼚𖽡𖽝𖾏 𖼊𖽡𖾐|earth|
+𖽐𖼚𖽡𖽝𖾏 𖼊𖽡𖾐|earth|›§ⁿt͡ɬi̯e¹§ §ti²
 𖼡𖽻𖾐 𖽐𖼊𖽪𖾏|sky|
 
 

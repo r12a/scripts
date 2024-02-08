@@ -35,7 +35,7 @@ reflist = {
 "authors": "Jeremiah Y.S. Chung, Eric Drewry",
 "title":"The Uses and Users of the Miao Script",
 "url":"https://www.academia.edu/93203752/The_Uses_and_Users_of_the_Miao_Script",
-"reviewed":false
+"reviewed":true
 },
 
 "l": {
@@ -54,7 +54,7 @@ reflist = {
 "date": "2010",
 "publisher":"L2/10-093",
 "url":"https://www.unicode.org/L2/L2010/10093-n3789-miao.pdf",
-"reviewed":false
+"reviewed":true
 },
 
 "pc": {
@@ -63,7 +63,7 @@ reflist = {
 "date": "2007",
 "publisher":"L2/07-299",
 "url":"https://www.unicode.org/L2/L2007/07299-n3335.pdf",
-"reviewed":false
+"reviewed":true
 },
 
 "pj": {
@@ -72,7 +72,7 @@ reflist = {
 "date": "1997",
 "publisher":"L2/97-104",
 "url":"http://www.unicode.org/L2/L1997/97104-Pollard.pdf",
-"reviewed":false
+"reviewed":true
 },
 
 "pc": {
@@ -81,7 +81,7 @@ reflist = {
 "date": "2017",
 "publisher":"L2/17-345",
 "url":"https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf",
-"reviewed":false
+"reviewed":true
 },
 
 "ef": {
