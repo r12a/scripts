@@ -105,10 +105,21 @@ function makeListFromChars (chars) {
             `\n<p><span class="ipa h">${ ipas[i] }</span> ${ spreadsheetRows[charList[x]][9] }.</p>
 <p><span class="eg" lang="${ lang }"></span></p>
 <p><span class="eg" lang="${ lang }"></span></p>
-<p><span class="eg" lang="${ lang }"></span></p>\n`
+<p><span class="eg" lang="${ lang }"></span></p>`
+
+                
+                // check for combinations
+                combinations = ''
+                for (comb in spreadsheetRows) {
+                    if ([...comb].length > 1 && comb.includes(charList[x]) && spreadsheetRows[comb][2]) {
+                        console.log(comb,'>>',spreadsheetRows[comb][2])
+                        combinations += `\n<p><span class="ipa h">${ spreadsheetRows[comb][2] }</span> is <span class="ch">${ comb }</span></p>\n`
+                        }
+                    }
+                if (combinations) out += `\n\n<p class="leadin">Combinations</p>${ combinations }`
                 }
             }
-        out += '`,\n\n\n\n\n\n'
+        out += '\n`,\n\n\n\n\n\n'
 		}
 	return out
 	}
