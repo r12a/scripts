@@ -16,85 +16,101 @@ reflist = {
 "isbn":"0-19-507993-0",
 "pages": "xxx",
 "url":"refs",
-"lang": new Set(['ru']),
 "reviewed":false
 },
 */
 
-"ul": {
-"authors": "Christopher Chapman",
-"title":"Unicode Line Breaking Algorithm (UAX#14)",
-"date": "1996",
-"publisher": "Unicode Consortium",
-"url":"https://www.unicode.org/reports/tr14/",
-"reviewed":true
-},
-
-"d": {
-"authors": "Peter T. Daniels and William Bright",
-"title":"The World's Writing Systems",
-"date": "1996",
-"publisher":"Oxford University Press",
-"isbn":"0-19-507993-0",
-"url":"#refs",
-"lang": new Set(['ru']),
-"reviewed":false
-},
-
 "e": {
-"authors": "Everson, Michael; Riley, Charles; Tuchscherer, Konrad",
-"title":"L2/08-350: Proposal to encode modern Bamum in the BMP",
-"url":"https://www.unicode.org/L2/L2008/08350-n3522-bamum.pdf",
-},
-
-"o": {
-"authors": "Omniglot",
-"title":"Bamum syllabary",
-"url":"https://www.omniglot.com/writing/bamum.htm",
+"authors": "Michael Everson",
+"title":"Proposal for encoding the Cham script in the BMP of the UCS",
+"sub": "L2/06-257",
+"date": "2006",
+"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3120.pdf",
 "reviewed":false
-},
-
-"r": {
-"authors": "Riley, Charles",
-"title":"L2/07-023: Towards the Encoding of the Bamum Script in the UCS",
-"url":"https://www.unicode.org/L2/L2007/07023-bamum-report.pdf",
-"reviewed":false
-},
-
-"rmcs": {
-"authors": "Richard Ishida",
-"title":"Ready-made Counter Styles",
-"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
-"reviewed":true
 },
 
 
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
-"sub":"Chapter 19.6: Africa, Bamum",
-"pages":"779-780",
+"title":"The Unicode Standard, Version 15.0",
+"sub":"Chapter 16.10: Southeast Asia-I, Cham",
+"pages":"701-702",
 "isbn":"978-1-936213-16-0.",
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch19.pdf",
+"url":"https://www.unicode.org/versions/Unicode15.1.0/ch16.pdf",
 "reviewed": false
 },
 
 "wl": {
 "authors": "Wikipedia",
-"title":"Rohingya language",
+"title":"Cham language",
 "retr": "Feb 2024",
-"url":"https://en.wikipedia.org/wiki/Rohingya_language",
+"url":"https://en.wikipedia.org/wiki/Cham_language",
 "reviewed":false
 },
 
 "ws": {
 "authors": "Wikipedia",
-"title":"Bamum script",
+"title":"Cham script",
 "retr": "Feb 2024",
-"url":"https://en.wikipedia.org/wiki/Bamum_script",
+"url":"https://en.wikipedia.org/wiki/Cham_script",
 "reviewed":false
 },
 
+"loc": {
+"authors": "Library of Congress",
+"title":"Cham romanization",
+"url":"https://www.loc.gov/catdir/cpso/romanization/cham.pdf",
+"reviewed":false
+},
+
+"tf": {
+"authors": "Timothy Friberg",
+"title":"Phonological summary of Cham",
+"date": "1972",
+"url":"https://www.sil.org/system/files/reapdata/64/83/14/64831432474887983846024574338328352636/Friberg_Phonological_study_of_Cham.pdf",
+"reviewed":false
+},
+
+"mb": {
+"authors": "Marc Brunelle",
+"title":"A phonetic study of Eastern Cham register",
+"date": "2005",
+"url":"https://www.sil.org/system/files/reapdata/64/83/14/64831432474887983846024574338328352636/Friberg_Phonological_study_of_Cham.pdf",
+"reviewed":false
+},
+
+"ss": {
+"authors": "SIL ScriptSource",
+"title":"Historical Unicode documents about Cham",
+"retr": "Feb 2024",
+"url":"https://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=c4yzafta3f",
+"reviewed":false
+},
+
+"bh": {
+"authors": "Marc Brunelle, Phú Văn Hẳn",
+"title":"Colloquial Eastern Cham",
+"url":"https://chamstudies.files.wordpress.com/2015/09/brunellevanhan_2015_colloquialcham.pdf",
+"reviewed":false
+},
+
+"as": {
+"authors": "Alexander Smith",
+"title":"A grammatical sketch of Eastern Cham",
+"url":"https://www.academia.edu/12033399/A_grammatical_sketch_of_Eastern_Cham",
+"reviewed":false
+},
+
+"eth": {
+"authors": "Eberhard, David M., Gary F. Simons, and Charles D. Fennig (eds.)",
+"title":"Ethnologue: Languages of the World. Twenty-sixth edition",
+"sub": "Cham",
+"date": "2023",
+"retr": "Feb 2024",
+"publisher":"SIL International",
+"url":"https://www.ethnologue.com/language/cjm/",
+"reviewed":true
+},
 
 }
 

@@ -14,4 +14,8 @@ var collections = [
 { symbol:'Ⓥ', desc:'Independent vowels', chars:'(ꨀ|ꨁ|ꨂ|ꨃ|ꨄ|ꨅ)' },
 { symbol:'Ⓕ', desc:'Finals', chars:'(ꩀ|ꩁ|ꩂ|ꩃ|ꩄ|ꩅ|ꩆ|ꩇ|ꩈ|ꩉ|ꩊ|ꩋ|ꩌ|ꩍ)' },
 { symbol:'Ⓜ', desc:'Medials', chars:'(ꨳ|ꨴ|ꨵ|ꨶ)' },
+{ symbol:'Ⓝ', desc:'Nasals with ɨ', chars:'(ꨟ|ꨗ|ꨐ|ꨊ)' },
+{ symbol:'ⓝ', desc:'Nasals with a', chars:'(ꨠ|ꨘ|ꨑ|ꨋ)' },
+
+{ symbol:'🆅', desc:'Latin vowels', chars:'(a|e|i|o|u|ɔ|ə|ɛ|ɨ|ɯ)' },
 ]

@@ -24,7 +24,7 @@ autoExpandExamples.cjm = `
 
 ꨀꨆꨯꨱꩀ|head|ʔa.§kɔ§ʔ|akaok
 ꨀꨇꩉ|letter|ʔa.§kʰa§r|akhar
-ꨀꨋꨪꩆ|wind||angin
+ꨀꨋꨪꩆ|wind|ʔa.§ŋi§n§|angin
 ꨀꨓꨭꨥ|soul|ʔa.§ta§ʊ|atuw
 ꨀꨗꨲꩀ|child|ʔa.§nɨː§ʔ|anâk
 ꨀꨗꩀ|child|ʔa.§nɨː§ʔ|anâk
@@ -53,7 +53,7 @@ autoExpandExamples.cjm = `
 ꨔꨮꨭ|to know, understand|tʰaʊ|thau
 ꨔꨯꨱꩍ|zero|tʰɔh|thaoh
 ꨔꩆꨕꨩ|post, stake|tʰa§n.§d̪aː|thanda
-ꨔꩍ|to sharpen||thah
+ꨔꩍ|to sharpen|tʰah|thah
 ꨕꨣꨶꨰ|thorn|d̪a.§rʊoɪ|daruai
 ꨕꨣꩍ|blood|d̪a.§rah|darah
 ꨕꨤꨚꩆ|eight|d̪a.§la.§pʌ§n|dalapan
@@ -100,8 +100,18 @@ autoExpandExamples.cjm = `
 
 
 
+@ https://www.sil.org/system/files/reapdata/64/83/14/64831432474887983846024574338328352636/Friberg_Phonological_study_of_Cham.pdf
+
+ꨕꨪ|at|di
+ꨆꩆ|fish|kan
+ꨈꨵ|crazy|gla
+ꨓꨨ|old|taha
+ꨟꨕꨴꨭꩌ|guava|madrum
 
 
+
+@ https://en.wikipedia.org/wiki/Cham_script
+ꨀꨇꩉ ꨌꩌ|Cham script|ʔa§kʰa§r§ §cam
 
 
 
