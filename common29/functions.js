@@ -509,7 +509,9 @@ function setFindIPA () { // test extension to map stuff
         if (listItems[i].parentNode.classList.contains('codepoint')) listItems[i].onclick = makeFootnoteIndex
         }
 
-	var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
+	//var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
+	//for (i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
+	var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone, .diphthongTable .ipa, .diphthongTable .allophone')
 	for (i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
 	var listItems = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone')
 	for (i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
@@ -719,6 +721,8 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     
     var langdata = 'Update the following in xx-langdata.js: '
     
+    if (typeof langs[charUsageBCP] === 'undefined') alert("Can't create entry for character use because there's no Character Usage entry yet.")
+
     // create entry for character use
     usedNonASCII = ''
     out += `<tr><th>Update Character usage</th><td id="cUsage" style="word-break:break-all;">`
@@ -739,7 +743,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     if (result !== '') out += `markaux:"${ result }", `
     if (langs[charUsageBCP].markaux && result !== langs[charUsageBCP].markaux) langdata += 'markaux '
     usedNonASCII += result
-    
+
     result = listCharsInSpreadsheet('numbers').join('')
     out += `number:"${ result }", `
     if (langs[charUsageBCP].numbers && result !== langs[charUsageBCP].numbers) langdata += 'numbers '
@@ -748,7 +752,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     if (result !== '') out += `numberaux:"${ result }", `
     if (langs[charUsageBCP].numbersaux && result !== langs[charUsageBCP].numbersaux) langdata += 'numbersaux '
     usedNonASCII += result
-    
+
     result = listCharsInSpreadsheet('punctuation').join('')
     out += `punctuation:"${ result }", `
     if (langs[charUsageBCP].punctuation && result !== langs[charUsageBCP].punctuation) langdata += 'punctuation '
@@ -757,7 +761,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     if (result !== '') out += `punctuationaux:"${ result }", `
     if (langs[charUsageBCP].punctuationaux && result !== langs[charUsageBCP].punctuationaux) langdata += 'punctuationaux '
     usedNonASCII += result
-    
+
     result = listCharsInSpreadsheet('symbols').join('')
     out += `symbol:"${ result }", `
     if (langs[charUsageBCP].symbol && result !== langs[charUsageBCP].symbol) langdata += 'symbol '
@@ -766,7 +770,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     if (result !== '') out += `symbolaux:"${ result }", `
     if (langs[charUsageBCP].symbolaux && result !== langs[charUsageBCP].symbolaux) langdata += 'symbolaux '
     usedNonASCII += result
-    
+
     result = listCharsInSpreadsheet('other').join('')
     out += `other:"${ result }", `
     //if (langs[charUsageBCP].other && result !== langs[charUsageBCP].other) langdata += 'other '
