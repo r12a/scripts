@@ -217,9 +217,6 @@ section { clear: left; }
 	font-size: 120%;
     font-size: 1.2rem;
 	}
-.ipaTable .ipa, .ipaTable .allophone, .ipaSVG {
-    font-size: 1.2rem;
-    }
 .ipa:before { 
 	content: '⌈'; 
 	font-family: ExtendedLatinWF, "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif; 
@@ -926,11 +923,13 @@ details figure {
     }
 
 
+
 .ipaSVG {
     margin-inline-start: 7.5%;
     margin-block: 0;
     height: 260px;
     width: 550px;
+    font-size: 1.2rem;
     }
 .ipaTable thead th {
 	vertical-align: bottom;
@@ -956,23 +955,24 @@ details figure {
 	font-weight: normal;
 	line-height: 1;
 	}
-.ipaTable .ipa, .ipaTable .allophone {
+.ipaTable .ipa, .ipaTable .allophone, .diphthongTable .ipa, .diphthongTable .allophone {
 	cursor:pointer;
+    font-size: 1.2rem;
 	}
-.ipaTable .ipa:before {
+.ipaTable .ipa:before, .diphthongTable .ipa:before {
 	content: none;
 	}
-.ipaTable .ipa:after {
+.ipaTable .ipa:after, .diphthongTable .ipa:after {
 	/*content: ' ';*/
 	content: none;
 	}
-.ipaTable td {
+.ipaTable td, .diphthongTable td {
 	white-space: nowrap;
 	text-align: start;
 	min-width: 2em;
 	border: 0;
 	}
-.ipaTable .allophone {
+.ipaTable .allophone, .diphthongTable .allophone {
     color: tan;
     font-family: "ExtendedLatinWF";
     font-weight:normal;
@@ -982,7 +982,7 @@ details figure {
     cursor: pointer;
     font-style: normal;
 	}
-.ipaTable .ipa {
+.ipaTable .ipa, .diphthongTable .ipa {
     font-family: "ExtendedLatinWF";
     font-weight:normal;
     font-size:1.4rem;
@@ -995,6 +995,15 @@ details figure {
 	font-family: ExtendedLatinWF, doulosipa,"Gentium Plus", "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica", sans-serif;
 	text-align: center;
 	}
+.diphthongTable {
+    margin-inline: 10%
+    }
+.diphthongTable span {
+    margin-inline: .5rem;
+    }
+.diphthongTable td {
+    padding-inline: 2rem;
+    }
 .allophone { font-family: ExtendedLatinWF, doulosipa,"Gentium Plus", sans-serif; 
 	font-size: 120%; 
 	color: #ccc; }
