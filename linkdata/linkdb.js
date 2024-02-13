@@ -1521,7 +1521,7 @@ usedfor: "Tibetan [bo], Sanskrit [sa]",
 
 cham:{ script:"Cham", code:"Cham", name:"", type:"Abugida",
 dates:"10thC – today", start:"900", end:"", current_usage:"",
-status:"Used for the Cham language, which has around 300,000 speakers, in Vietnam and Cambodia.",
+status:"Primary orthography for the Eastern Cham language, which has around 130,000 speakers in southern Vietnam. Historically learned by males but not females.",
 origin:"Southeast Asia",
 info:{ wikipedia:"Cham_script", omniglot:"cham", endalpha:"cham" },
 local: [ ], layout: [ ],
