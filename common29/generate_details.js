@@ -92,13 +92,21 @@ function makeListFromChars (chars) {
             for (i=0;i<ipas.length;i++) {
                 
             
+//                out +=
+//            `\n<p><span class="ipa h">${ ipas[i] }</span> ${ spreadsheetRows[charList[x]][9] }.</p>
+//<p><span class="eg" lang="${ lang }"></span></p>
+//<p><span class="eg" lang="${ lang }"></span></p>
+//<p><span class="eg" lang="${ lang }"></span></p>`
+
                 out +=
-            `\n<p><span class="ipa h">${ ipas[i] }</span> ${ spreadsheetRows[charList[x]][9] }.</p>
+            `\n<p><span class="ipa h">${ ipas[i] }</span> ${ spreadsheetRows[charList[x]][9] }`
+                if ( spreadsheetRows[charList[x]][3] ) out += ` with inherent vowel <span class="ipa">${ spreadsheetRows[charList[x]][3] }</span>`
+                out +=
+            `.</p>
 <p><span class="eg" lang="${ lang }"></span></p>
 <p><span class="eg" lang="${ lang }"></span></p>
 <p><span class="eg" lang="${ lang }"></span></p>`
-
-                
+              
                 // check for combinations
                 combinations = ''
                 for (comb in spreadsheetRows) {
