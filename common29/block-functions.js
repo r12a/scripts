@@ -875,7 +875,7 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 
                 // add a link to the character app
                 if (window.pickerDir) {
-                    out += '<a target="_blank" href="../../pickers/'+window.pickerDir+'/index.html?text='+encodeURIComponent(cchar)+'">character app</a> '
+                    out += '<a target="picker" href="../../pickers/'+window.pickerDir+'/index.html?text='+encodeURIComponent(cchar)+'">character app</a> '
                     }
 
                 out += '</p>'
