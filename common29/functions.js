@@ -82,6 +82,8 @@ function addPageFeatures () {
     
     copyIntroInfo()
     
+    addResources()
+    
     
     // create dialog popup window (displays details after clicking on code point names)
     var node = document.querySelector('header')
@@ -98,7 +100,8 @@ function addPageFeatures () {
     
     // show all sections to be added
     summaryNodes = document.querySelectorAll('.sectionAside details')
-    for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = true
+    //for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = true
+    for (i=0;i<summaryNodes.length;i++) if (summaryNodes[i].parentNode.parentNode.id !== 'page') summaryNodes[i].open = true
     }
 
 
@@ -3053,6 +3056,35 @@ function createtocPanel (maxlevel) {
     x.onclick = function () { document.getElementById('tocPanel').style.display = 'none' }
     toc.appendChild(x)
 	}
+
+
+
+
+function addResources () {
+    // Adds information from xx-examples to the section Online resources
+    
+    if (typeof termLists === 'undefined') return
+    
+    var section = document.getElementById('online_samples')
+    if (section === null) return
+    
+    var out = `<h2>Online resources</h2>
+
+<ol>\n`
+    for (i=0;i<termLists.length;i++) {
+        if (typeof termLists[i].notes == 'undefined') termLists[i].notes = '    '
+        out += `<li><a href="${ termLists[i].url }" target="_blank">${ termLists[i].title }</a> &nbsp;&nbsp; ${ termLists[i].notes }\n`
+        }
+    out += `</ol>`
+    
+    document.getElementById('online_samples').innerHTML = out
+    }
+
+
+
+
+
+
 
 
 
