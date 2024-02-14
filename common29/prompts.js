@@ -57,6 +57,26 @@ function setContentPrompts () {
         {node:document.querySelector('#interaction h3, #interaction h4'), text:"Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?"},
 
         {node:document.querySelector('#headers h3, #headers h4'), text:"Are there special conventions for page numbering, or the way that running headers and the like are handled?"},
+
+        // the following add descriptions to vowel/consonant section headers only if in the aside
+        
+        {node:document.querySelector('#vletter h4'), text:"What characters are used that have the general category of letter?"},
+
+        {node:document.querySelector('#standalone h4'), text:"How does the orthography handle vowels that are not preceded by a consonant?"},
+
+        {node:document.querySelector('#vlength h4'), text:"How does the orthography handle differences in vowel length?"},
+
+        {node:document.querySelector('#nasalisation h4'), text:"How does the orthography handle vowel nasalisation?"},
+
+        {node:document.querySelector('#novowel h4'), text:"How is the inherent vowel killed? What other mechanisms are used to indicate consonant clusters? When are they used and not used?"},
+
+        {node:document.querySelector('#onsets h4'), text:"Do syllable onsets support consonant clusters, or other features (such as prenasalisation, aspiration, devoicing, etc.)? If so, how are these managed by the orthography"},
+
+        {node:document.querySelector('#finals h4'), text:"How are syllable codas written in this orthography?"},
+
+        {node:document.querySelector('#clusters h4'), text:"Are any special approaches taken for consonant clusters?"},
+
+        {node:document.querySelector('#clength h4'), text:"If the phonology of the language supports gemination or consonant lengthening, how is that reflected in the orthography?"},
         ]
 
 
@@ -93,8 +113,9 @@ function setContentPrompts () {
     
     // set the summary text for the tbd details markup
     var summaries = document.querySelectorAll('.tbd summary')
-    for (i=0;i<summaries.length;i++) summaries[i].textContent = 'Sections to be added...'
+    //for (i=0;i<summaries.length;i++) summaries[i].textContent = 'Sections to be added...'
     //for (i=0;i<summaries.length;i++) summaries[i].textContent = 'Still to be investigated...'
+    for (i=0;i<summaries.length;i++) summaries[i].textContent = 'Topics needing investigation...'
 	}
 
 
