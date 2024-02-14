@@ -11,7 +11,7 @@ defList={
 
 "conjunct": 'A <a class="termref" target="_blank" href="../glossary/index.html#conjunct">conjunct</a> is a consonant cluster where the lack of intervening vowels is indicated by one or more of stacking, changing and merging the shapes of the constituent letter forms (usually in abugidas). Not all consonant clusters are displayed as conjuncts.',
 
-"consonantcluster": 'A consonant cluster is a sequence of consonants with no intervening vowels.',
+"consonantcluster": 'A consonant cluster is a sequence of consonant sounds with no intervening vowels.',
 
 "contourtonelanguage": 'A contour tone language has patterns where the pitch moves up and down over the course of a syllable. (Compare with register tone languages.)',
 
