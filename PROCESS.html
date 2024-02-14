@@ -5,10 +5,10 @@
 <title>Scripts process</title>
 <style>
 body { font-family: raleway; }
-ul li { font-weight: bold; margin-block-start: 2rem; font-size: 1.2rem;}
-li::marker { content: '▢ '; font-size: 2em; color: #ccc; }
-
-ul ul li { font-weight: normal;  margin-block-start: .5rem; font-size: 1rem;  }
+ol li { margin-block-start: 2rem; font-size: 1.2rem;}
+ul li { margin-block-start: 2rem; font-size: 1.2rem;}
+li::marker { content: ''; font-size: 2em; color: #ccc; }
+ol ul li { font-weight: normal;  margin-block-start: .5rem; font-size: 1rem;  }
 </style>
 </head>
 
@@ -18,60 +18,90 @@ ul ul li { font-weight: normal;  margin-block-start: .5rem; font-size: 1rem;  }
 
 <h2>Create initial framework</h2>
 
-<ul>
-<li>Create spreadsheet
+<ol>
+<li><b>List sources</b>
 
     <ul>
-    <li><a href="file:///Users/ishida/Sites/pickers/_tools/_list_gen_cat.html" target="_blank">this page</a> creates general category lists</li>
-
-    <li><a href="file:///Users/ishida/Sites/pickers/_tools/_list_codes_and_names.html" target="_blank">this page</a> lists code point names</li>
-
-    <li>Sources: UniView, Charuse, Wikipedia etc</li>
+    <li>Open Brave and open each source in tabs</li>
+    <li>Arrange source tabs by usefulness</li>
+    <li>List the sources in the xx-refs file</li>
     </ul>
 </li>
 
-<li>Create initial picker</li>
+<li><b>Create spreadsheet</b>
+
+    <ul>
+    <li>Use sources to create spreadsheet.</li>
+
+    <li><a href="file:///Users/ishida/Sites/pickers/_tools/_list_gen_cat.html" target="_blank">this page</a> creates general category lists</li>
+
+    <li><a href="file:///Users/ishida/Sites/pickers/_tools/_list_codes_and_names.html" target="_blank">this page</a> lists code point names</li>
+    </ul>
+</li>
+
+<li><b>Create initial picker</b></li>
 <ul>
 <li><a href="../pickers/_tools/_make-shape-list-img.html" target="_blank">Create image shape keys</a></li>
 <li><a href="../pickers/_tools/_make-shape-list.html" target="_blank">Create character shape keys</a></li>
 </ul>
 
 
-<li>Create initial set of terms
-<ul>
-<li>Preferably a term to cover every sound</li>
-<li>Tweak the picker keyboard settings, if needed</li>
-</ul>
-</li>
-
-
-<li>Create the initial block file &amp; notes skeletons 
+<li><b>Create initial set of terms</b>
     <ul>
-    <li><a href="file:///Users/ishida/Sites/scripts/_tools/generate_block_page_stubs.html" target="_blank">this page</a> creates block entries from spreadsheet</li>
-    <li><a href="file:///Users/ishida/Sites/scripts/_tools/generate_details_page_stubs.html" target="_blank">this page</a> creates xx-details.html</li>
-<li>Add the sample to the notes</li>
-<li>Make the index</li>
-<li>Put the basic lists in place for vowels &amp; consonants</li>
+    <li>Make xx-globals.js &amp; xx-vocab</li>
+    <li>Preferably a term to cover every sound</li>
+    <li>Tweak the picker keyboard settings, if needed</li>
     </ul>
 </li>
 
 
-<li>Fill in the xx-details and notes files
-<ul>
-    <li>Do the phonology section</li>
-<li>Work through the primary source &amp; fill in xx-details &amp; xx.html</li>
-<li>Make the  mapping tables</li>
-</ul>
-</li>
-<li>Finish off
-<ul>
-<li>Create the vowel &amp; consonant summaries</li>
-<li>Do the basic features section</li>
-<li>Do the history</li>
-<li>Check the typography sections</li>
-</ul>
+<li><b>Create the initial content in xx.html</b> 
+    <ul>
+    <li>Add the usage section</li>
+    <li>From the spreadsheet, create consonant &amp; vowel summary tables</li>
+    <li>Create panels for letters, marks, etc.</li>
+    <li>Fill in the main vowel sections.</li>
+    <li>Create the phonology section basics</li>
+    <li>Add the sample</li>
+    <li>Make the index</li>
+    </ul>
 </li>
 
-</ul>
+
+<li><b>Create the initial block file &amp; notes skeletons</b> 
+    <ul>
+    <li>Make block-globals.js</li>
+    <li><a href="file:///Users/ishida/Sites/scripts/_tools/generate_block_page_stubs.html" target="_blank">this page</a> creates block entries from spreadsheet</li>
+    <li>Use the local generate_details_page_stubs page to create xx-details.html</li>
+    <li>Add extra information to the xx-details file</li>
+    </ul>
+</li>
+
+
+<li><b>Add extra details</b>
+    <ul>
+    <li>Work through the primary sources &amp; fill in xx-details &amp; xx.html</li>
+    <li>Check the typography sections</li>
+    <li>Make the mapping tables (optional)</li>
+    </ul>
+</li>
+
+<li><b>Finish off</b>
+    <ul>
+    <li>Do the basic features section</li>
+    <li>Create xx-langdata</li>
+    <li>Update the character usage app</li>
+    </ul>
+</li>
+
+</ol>
+
+
+<script>
+bs = document.querySelectorAll('li b')
+for (i=0;i<bs.length;i++) bs[i].innerHTML = `<input type="checkbox"> ${ bs[i].textContent }`
+lis = document.querySelectorAll('ul li')
+for (i=0;i<lis.length;i++) lis[i].innerHTML = `<input type="checkbox"> ${ lis[i].innerHTML }`
+</script>
 </body>
 </html>
