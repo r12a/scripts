@@ -463,7 +463,9 @@ function initialiseIndex () {
 function setMarks () {
     // sets the global variable marks as a set containing all combining marks in the spreadsheet
     for (var char in spreadsheetRows) {
-        //console.log(char,spreadsheetRows[char][cols['class']])
+        if (spreadsheetRows[char][1] === 'key') continue
+        if (typeof spreadsheetRows[char][cols['class']] === 'undefined') console.log('%c' + 'Error! General category not found in setMarks() for '+spreadsheetRows[char], 'color:' + 'red' + ';font-weight:bold;')
+
         if (spreadsheetRows[char][cols['class']].startsWith('M')) window.marks.add(char)
         }
     return
