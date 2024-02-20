@@ -87,6 +87,14 @@ reflist = {
 "reviewed":true
 },
 
+"aas": {
+"authors": "Ardwan Al-Sabti,",
+"title":"The Non-Joining U+0858 in the Mandaic Unicode Standard",
+"date": "2019",
+"url":"https://www.unicode.org/L2/L2020/20044-mandaic-0858.pdf",
+"reviewed":true
+},
+
 }
 
 
