@@ -1,5 +1,21 @@
 reflist = {
 
+/*
+"auth_initials": {
+"authors": "Sort_by_family_name_of_first_contributor",
+"title":"The_Worlds_Writing_Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "Feb 2024",
+"publisher":"Oxford_University_Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+*/
+
 
 "d": {
 "url":"#refs",
@@ -8,15 +24,26 @@ reflist = {
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
 "pages":"511-513",
+"reviewed":true
 },
 
 "e": {
 "url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3485.pdf",
 "authors": "Michael Everson",
 "title":"Proposal for encoding the Mandaic script in the BMP of the UCS",
+"reviewed":true
 },
 
 "h": {
+"authors": "Charles G Häberl",
+"title":"The Neo-Mandaic Dialect of Khorramshahr",
+"publisher":"Harrassovitz Verlag",
+"url":"https://www.google.co.uk/books/edition/The_Neo_Mandaic_Dialect_of_Khorramshahr/BBjwrJY6-sYC?gbpv=1",
+"isbn":"978-3-447-05874-2",
+"date":"2009",
+},
+
+"hw": {
 "url":"https://www.academia.edu/1416132/41._Neo-Mandaic",
 "authors": "Charles Häberl, ed. Stefan Weninger in collaboration with Geoffrey Khan, Michael P. Streck, and Janet C.E. Watson",
 "title":"Semitic Languages: An International Handbook/Ein internationales Handbuch, Handbücher zur Sprach- und Kommunikationswissenschaft",
@@ -52,6 +79,13 @@ reflist = {
 "title":"Mandaic alphabet",
 },
 
+"da": {
+"authors": "Debbie Anderson",
+"title":"Feedback on Mandaic Shaping as noted in Public Review L2/14-179",
+"date": "2014",
+"url":"https://www.unicode.org/L2/L2014/14194-mandaic-feedback.pdf",
+"reviewed":true
+},
 
 }
 

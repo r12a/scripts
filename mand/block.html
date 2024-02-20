@@ -30,7 +30,6 @@
 <script src="../../uniview/descriptions.js"></script> 
 
 <script src="mid-examples.js"></script>
-<script src="mid-translit.js">  </script>
 <script src="block-globals.js"></script>
 
 <style id="includeStyles"></style>
@@ -75,12 +74,14 @@
 
 <p>This page lists characters used in orthographies based on the Mandaic script and provides information about them.</p>
 
+<p><strong>It was difficult to find word lists that show IPA pronunciations for Neo-Mandaic spellings, although there <em>are</em> lists of words that show IPA for transcriptions that appear to be close to transliterations. A Neo-Mandaic term with † alongside it indicates that the spelling has been guessed at, rather than copied.</strong></p>
+
 <p>Character notes have companion pages that summarise how a script is used for a specific orthography. For the Mandaic script, see <a href="mid.html" target="_blank" class="linkHighlight">Neo-Mandaic</a>.</p>
 
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Mandaic Character Notes, <!-- #BeginDate format:En2 -->11-Nov-2023<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mand/block">https://r12a.github.io/scripts/mand/block</a></small></p>
+<p class="refLine"><small>Richard Ishida, Mandaic Character Notes, <!-- #BeginDate format:En2 -->19-Feb-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mand/block">https://r12a.github.io/scripts/mand/block</a></small></p>
 </details>
 
 
@@ -174,6 +175,10 @@
 <div class="character" id="char061B"></div>
 
 <div class="character" id="char061F"></div>
+
+<div class="character" id="charFD3E"></div>
+
+<div class="character" id="charFD3F"></div>
 </section>
 
 
@@ -198,20 +203,19 @@ addBasics('mid','ltr')
 
 
 
-<script src="../../shared/scriptdb/mandaic.js">  </script>
+<script src="../../shared/scriptdb/mand-mid.js">  </script>
 <script src="mid-details.html">  </script>
 <script src="mid-globals.js">/* global variables */</script>
 <script>
-addDetails (languageName, letterClassName, blockLangtag, blockDirection, spreadsheet, cols)
+addDetails(languageName, letterClassName, blockLangtag, blockDirection, spreadsheet, cols)
+makeAutoTranslitArray(blockLangtag)
 addExamples(letterClassName)
 convertTranscriptionData(blockLangtag)
 setMarks()
+expandCharMarkup()
 </script>
 
 
-<script>
-convertTranscriptionData()
-</script>
 
 
 

@@ -15,9 +15,6 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 */
 
 
-otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
-termListType = 3			// picks up sources automatically
-
 
 
 
@@ -60,8 +57,8 @@ autoExpandExamples.mid = `
 ࡉࡀࡄࡅࡃࡉࡋࡀࡏࡉࡋ|Judea||yahwdyla'yl
 ࡉࡅࡔࡀࡌࡉࡍ|Yoshamin||Yōšamin
 ࡊࡀࡄࡍࡀ|Jewish priest||kahna
-ࡊࡋࡀࡕࡀ|three|k§l§ɒː§θ§ɒ|klɔ̄ṯɔ
-ࡋࡉࡁ࡛ࡀ|heart||lib˖ā
+ࡊࡋࡀࡕࡀ|three|k§l̥§ɔː.§θ§ɔ|klɔ̄ṯɔ
+ࡋࡉࡁ࡛ࡀ|heart|ˈlɛbbɔ|lib˖ā
 ࡌࡀࡋࡊࡀ ࡖࡍࡄࡅࡓࡀ|King of Light||malka d-nhura
 ࡌࡀࡋࡊࡀ|king||malka
 ࡌࡀࡍࡀ ࡓࡁࡀ|Great Mind||mana rba
@@ -81,7 +78,7 @@ autoExpandExamples.mid = `
 ࡍࡅ|Noah||nū
 ࡍࡉࡎࡓࡀࡕ|Nazareth||nisrat
 ࡍࡉࡔࡉࡌࡕࡀ|soul||nišimta
-ࡎࡉࡍࡀࡉ|Sinai||sinai
+ࡎࡉࡍࡀࡉ|Sinai|si.naɪ|sinai
 ࡏࡅࡓࡀࡔࡋࡀࡌ|Jerusalem||urašlām
 ࡏࡅࡕࡓࡀ|angel||uthra
 ࡏࡔࡅ|Jesus||’šu/īšū
@@ -96,22 +93,118 @@ autoExpandExamples.mid = `
 ࡕࡀࡓࡌࡉࡃࡀ|disciple, priest||tarmida
 ࡕࡉࡁࡉࡋ|world||tibil
 ࡕࡓࡉࡎࡀࡓ|twelve||trisar
+ࡊࡀࡅࡊࡀ|peach|xawxa|ḵawḵā
+
+
+
+@ https://www.youtube.com/watch?v=Mg-v6M3bqsk transcriptions by myself
+ࡉࡀࡄࡓࡀ|month|j§e§h§r§a
+ࡔࡉࡃࡕࡀ|year|ʃ§ɛ§tt§aː
+ࡔࡉ࡚ࡃࡕࡀ|year|ʃ§ɛ§tt§aː
+ࡏࡕࡌࡀࡋ|yesterday|e§θ§m§a§l
+ࡀࡌࡀࡉ|today|aː§m§a§j
+ࡑࡅࡁࡀࡄ|morning|s§o§b§aː§h
+ࡒࡀࡌࡉࡕ|noon|q§a§m§e§θ
+ࡐࡀࡉࡍ|evening|p§e§i§n
+ࡔࡀࡐࡋࡉࡀ|second (time)|ʃ§aː§p§l§iː
+ࡔࡉࡕࡀ|hour|ʃ§iː§θ§aː
+ࡔࡀࡉࡉࡀ|hours|ʃ§aː§iː§‹§‹
+ࡉࡅࡌࡀ|day|j§o§m§aː
+ࡉࡅ࡚ࡌࡀ|day|j§o§m§aː
+ࡔࡅࡁࡀࡉࡕࡀ|week|ʃ§o§w§e§j§θ§aː
+ࡋࡀࡄࡌࡀࡋ|two days ago|l§a§h§m§a§l
+ࡀࡐࡀࡉࡍ|tonight|aː§p§ei§‹§n
+ࡐࡉࡓࡔࡀ|tomorrow|p§e§r§ʃ§aː
+ࡓࡅࡌࡀࡄࡉࡓ|the day after tomorrow|r§o§m§æ§h§e§r
+ࡑࡅࡁࡀࡄ|morning|sˤ§o§b§aː§h
+ࡑࡅࡁࡀ࡚ࡄ|morning|sˤ§o§b§aː§h
+ࡁࡀࡕࡀࡓ ࡒࡀࡌࡅࡕ|afternoon|b§aː§θ§a§r§ §q§a§m§e§θ
+ࡋࡉࡋࡉࡀ|night|l§ɛ§l§j§a
+ࡄࡀࡁࡔࡀࡁࡀ|Sunday|h§ɛ§v§ʃ§a§bb§a
+ࡕࡓࡉࡍ ࡄࡀࡁࡔࡀࡁࡀ|Monday|ət§r§ei§n§ §h§ɛ§v§ʃ§a§bb§aː
+ࡕࡋࡀࡕࡀ ࡄࡀࡁࡔࡀࡁࡀ|Tuesday|əθ§l§aː§θ§aː§ §h§ɛ§v§ʃ§a§bb§aː
+ࡀࡓࡁࡀ ࡄࡀࡁࡔࡀࡁࡀ|Wednesday|a§r§b§aː§ §h§ɛ§v§ʃ§a§bb§aː
+ࡄࡀࡌࡔࡀ ࡄࡀࡁࡔࡀࡁࡀ|Thursday|h§a§m§ʃ§aː§ §h§ɛ§v§ʃ§a§bb§aː
+ࡄࡉࡁࡉࡋ ࡆࡉࡅࡀ|Thursday|h§iː§w§ɛ§l§ §z§iː§v§aː
+ࡏࡅࡓࡅࡐࡕࡀ|Friday|›§o§r§ɒ§f§t§aː
+ࡔࡀࡐࡕࡀ|Saturday|ʃ§a§f§t§aː
+ࡔࡀࡐ࡙ࡕࡀ|Saturday|ʃ§a§f§t§aː
+ࡀࡎࡅࡕࡀ ࡍࡉࡄࡅࡉࡋࡉࡊ|hello (to male)|a§s§uː§θ§a§ §n§ɛ§h§v§iː§l§ɛ§χ
+ࡊࡉࡌࡀ ࡀࡊࡕࡉࡊ|how are you? (to female)|k§e§m§a§ §ɛ§χ§t§ɛ§χ
+ࡊࡉࡌࡀ ࡀࡊࡕࡉࡊ|how are you? (to female)|k§e§m§a§ §ɛ§χ§t§ɛ§χ
 
 
 
 
 
+@ ?
+ࡂࡀࡐࡀ|feather|ˈɡ§æ§pp§ɔ|gāpā
+ࡖࡍࡐࡀࡒࡕ|who left you|di§n§p§a§q§t
+ࡖࡎࡉࡍࡀ|of hatred|di§s§i§n§a
+ࡗ|when, as, like|kədi
+
+
+
+@ Haberl
+ࡑࡅࡐࡓࡀ†|bird|sˤoprɔ|ˈṣoprā
+ࡑࡅࡐ࡙ࡓࡀ†|yellow|sˤofrɔ|ˈṣop̄rā
+ṣəḇyi|he baptized him|ˈsˤɛv.ji|ṣəḇyi
+ࡒࡀࡁࡉࡃ†|he will do|ˈqɒː.vɛd|qāḇed
+láhriḇi|he hasn't destroyed it|læh.rɪ.vi|láhriḇi
+əḇud|do! (f.s.)|ə.wod|əḇud
+qəmahreḇāt|you will destroy|qə.mah.rɛ.wɔt|qəmahreḇāt
+aṯṯon|they brought|aθ.θon|aṯṯon
+atton|you (pl)|at.ton|atton
+ehdā|one|ɛh.dɔ|ehdā
+ࡈࡀࡁ†|good|tˤɔʊ|ṭāḇ
+baṭluḵtā|misfortune|bat.lʊχ.tɔ|bɑṭluḵtā
+ࡎࡀࡒࡀࡕ†|she went up|ˈsɔːqɑt|sāqɑt
+qāzi|he goes|qɒː.zi|ˈqāzi
+ṣəḇyi|he baptized him|ˈsˤɛv.jɪ|ṣəḇyi
+miṣrā|boundary|ˈmɪs.rɒ|miṣrā
+ࡍࡅࡃࡀ†|earthquake|ˈnoː.dɔ|nodā
+ࡏࡉࡍࡂࡋࡉࡆࡉࡀ†|English|iŋ.glɪ.ˈzi|inglizi
+ʿabdalla|Abdallah|ʕab.ˈdɑɫ.ɫa|ʿabdalla
+ࡓࡀࡁࡀ†|great|ˈræb.bɔ|rabbā
+ࡂࡅࡁࡓࡀ†|man|ˈgæv.rɔ|gaḇrā
+barra|outside|ˈbar.ra|barra
+ešmi|his name|ˈɛʃ.mi|ešmi
+eččā|nine|ˈɛt͡ʃ.t͡ʃɔ|eččā
+ࡔࡉࡍ†|ninety|t͡ʃin|čin
+ࡔ࡙ࡉࡍ†|ninety|t͡ʃin|čin
+čemmā|nine hundred|ˈt͡ʃɛm.mɔ
+gač|gypsum|gæt͡ʃ|gač
+ࡔࡉࡄࡉࡋ†|child|ˈd͡ʒiː.hɛl|jihel
+mujur|how|mʌ.ˈd͡ʒuɹ|mujur
+pərā|money|pɛ.ˈrɔː|pərā
+ࡁoࡁo†|door|ˈwɔː.wɔ|ḇāḇā
+ࡊࡀࡓࡎࡉࡀ†|his stomach|ˈkaɹ.si|karsi
+ࡁࡀࡓࡀ†|outside|ˈbar.ra|barra
+ࡌࡉࡑࡓࡀ†|boundary|ˈmɪs.rɒ|miṣrā
+ࡀࡄࡀ†|this|ˈɔː.§h§ɔ|āhā
+ࡀࡋࡐࡀ†|one thousand|ˈæ§l.§f§ɔ|alp̄ā
+ࡏࡉࡄࡋࡅ†|they have|ˈɛh.§l§u|ehlu
+ࡏࡉࡍࡀ†|eye|ˈiː.§n§ɔ|inā
 
 
 
 
+@ Haberl Swadesh list
+ࡊࡀࡊࡅࡀ†|star|ˈk§o§χ§w§ɔ|kakua
+ࡊࡀࡊ࡙ࡅࡀ†|star|ˈk§o§χ§w§ɔ|kakua
+ࡄࡀࡔࡉࡔ†|grass|ħ§a§ˈʃ§i§ʃ|hašiš
+ࡄ࡙ࡀࡔࡉࡔ†|grass|ħ§a§ˈʃ§i§ʃ|hašiš
+ࡂࡀࡑࡍࡀ†|stick|ˈʁ§ʊ§sˤ§n§ɔ|gasna
+ࡂ࡙ࡀࡑࡍࡀ†|stick|ˈʁ§ʊ§sˤ§n§ɔ|gasna
 
 
 
-
-
-
-
+@ Everson
+ࡓࡁ࡛ࡀ|great|ˈræ§b.b§ɔ|rabbā
+ࡀࡊࡀ|there is|ɛ§k.k§a|ekka
+ࡀࡊ࡛ࡀ|there is|ɛ§k.k§a|ekka
+ࡔࡉࡍࡀ|tooth|ʃ§ɛ§nn§a|šenna
+ࡔࡉࡍ࡛ࡀ|tooth|ʃ§ɛ§nn§a|šenna
 
 
 
@@ -123,4 +216,44 @@ autoExpandExamples.mid = `
 
 
 `
+
+
+
+
+
+
+termLists = [
+
+{
+"title":"Das Johannesbuch der Mandäer",
+"url":"https://archive.org/details/dasjohannesbuchd01lidzuoft/page/n299/mode/2up",
+},
+
+{
+"title":"The Mandaean Book of John",
+"url":"http://gnosis.org/library/The_Mandaean_Book_of_John_Open_Access_Ve.pdf",
+},
+
+{
+"title":"Mandaic.org lexicon",
+"url":"https://web.archive.org/web/20160401192517/http://mandaic.org/Mandaic/lexicon/main.htm",
+},
+
+{
+"title":"Swadesh List of 207 Common Terms in Neo-Mandaic",
+"url":"https://hcommons.org/deposits/item/hc:20247/",
+},
+
+{
+"title":"UDHR translation",
+"url":"https://www.ohchr.org/sites/default/files/udhr/documents/udhrtranslations/2022-12-05/mid.pdf",
+},
+
+{
+"title":"A Mandaic Dictionary, Majid Fandi Al-Mubaraki",
+"url":"https://books.google.com.pa/books?id=c-XuWWx3734C&printsec=copyright#v=onepage&q&f=false",
+},
+
+]
+
 
