@@ -61,7 +61,10 @@ function makeTables (lang) {
 
 
 function makeListFromChars (chars) {
+    // generate the code for the xx-details
+    
 	var charList = chars.split(' ')
+    var items, hex, ipas, combinations
     
     if (document.getElementById('sort').checked) charList = charList.sort()
     
@@ -69,7 +72,7 @@ function makeListFromChars (chars) {
 	
     for (var x=0; x<charList.length; x++) {
         if (charList[x] == '') continue
-        var items = charList[x].split('\t')
+        items = charList[x].split('\t')
         
         // get code point value, converting escapes if necessary
         if (items[0].includes('&#x')) {
@@ -79,15 +82,93 @@ function makeListFromChars (chars) {
 		else i = items[0].codePointAt(0)
 		//console.log('i',i, 'items',items)
 
-        var hex = i.toString(16).toUpperCase()
+        hex = i.toString(16).toUpperCase()
+        while (hex.length < 4) hex = '0' + hex
+        //console.log(hex)
+
+        out += "'\\u{"+hex+"}': `\n"
+        out += '<p class="insertTranscription">&#x'+hex+';</p>\n\n'
+        
+        // make code for each phone
+        if (spreadsheetRows[charList[x]] && spreadsheetRows[charList[x]][cols['ipaLoc']]) {
+            ipas = spreadsheetRows[charList[x]][cols['ipaLoc']].split(' ')
+            
+            for (i=0;i<ipas.length;i++) {
+                out +=
+            `<p><span class="ipa h">${ ipas[i] }</span> ${ spreadsheetRows[charList[x]][cols['typeLoc']] }`
+                if ( spreadsheetRows[charList[x]][cols['ipaPlus']] ) out += ` with inherent vowel <span class="ipa">${ spreadsheetRows[charList[x]][cols['ipaPlus']] }</span>`
+                out +=
+            `.</p>
+<p><span class="eg" lang="${ lang }"></span></p>
+<p><span class="eg" lang="${ lang }"></span></p>
+<p><span class="eg" lang="${ lang }"></span></p>\n\n`
+                }
+            
+            
+            // check for IPAOther column
+            if (spreadsheetRows[charList[x]][cols['ipaOther']]) {
+                ipao = spreadsheetRows[charList[x]][cols['ipaOther']].split(' ')
+                for (i=0;i<ipao.length;i++) {
+                    out +=
+                `<p><span class="ipa h">${ ipao[i] }</span>`
+                    out += `</p>\n<p><span class="eg" lang="${ lang }"></span></p>\n<p><span class="eg" lang="${ lang }"></span></p>\n<p><span class="eg" lang="${ lang }"></span></p>\n`
+                    }              
+                }
+            
+            // check for combinations
+            combinations = ''
+            for (comb in spreadsheetRows) {
+                if ([...comb].length > 1 && comb.includes(charList[x]) && spreadsheetRows[comb][cols['ipaLoc']]) {
+                    console.log(comb,'>>',spreadsheetRows[comb][cols['ipaLoc']])
+                    combinations += `\n<p><span class="ipa h">${ spreadsheetRows[comb][cols['ipaLoc']] }</span> is <span class="ch">${ comb }</span></p>\n`
+                    combinations += `<p><span class="eg" lang="${ lang }"></span></p>\n`
+                    }
+                }
+            if (combinations) out += `\n<p class="leadin">Combinations</p>${ combinations }`
+            }
+        out += '\n`,\n\n\n\n\n\n'
+		}
+	return out
+	}
+
+
+
+
+
+
+
+function makeListFromCharsXX (chars) {
+    // generate the code for the xx-details
+    
+	var charList = chars.split(' ')
+    var items, hex, ipas, combinations
+    
+    if (document.getElementById('sort').checked) charList = charList.sort()
+    
+	var out = ''
+	
+    for (var x=0; x<charList.length; x++) {
+        if (charList[x] == '') continue
+        items = charList[x].split('\t')
+        
+        // get code point value, converting escapes if necessary
+        if (items[0].includes('&#x')) {
+            items[0] = items[0].replace('&#x','').replace(';','')
+            i = parseInt(items[0],16)
+            }
+		else i = items[0].codePointAt(0)
+		//console.log('i',i, 'items',items)
+
+        hex = i.toString(16).toUpperCase()
         while (hex.length < 4) hex = '0' + hex
         //console.log(hex)
 
         out += "'\\u{"+hex+"}': `\n"
         out += '<p class="insertTranscription">&#x'+hex+';</p>\n'
         
-        if (spreadsheetRows[charList[x]] && spreadsheetRows[charList[x]][2]) {
-            ipas = spreadsheetRows[charList[x]][2].split(' ')
+        // make code for each phone
+        if (spreadsheetRows[charList[x]] && spreadsheetRows[charList[x]][cols['ipaLoc']]) {
+            ipas = spreadsheetRows[charList[x]][cols['ipaLoc']].split(' ')
             
             for (i=0;i<ipas.length;i++) {
                 
@@ -99,8 +180,8 @@ function makeListFromChars (chars) {
 //<p><span class="eg" lang="${ lang }"></span></p>`
 
                 out +=
-            `\n<p><span class="ipa h">${ ipas[i] }</span> ${ spreadsheetRows[charList[x]][9] }`
-                if ( spreadsheetRows[charList[x]][3] ) out += ` with inherent vowel <span class="ipa">${ spreadsheetRows[charList[x]][3] }</span>`
+            `\n<p><span class="ipa h">${ ipas[i] }</span> ${ spreadsheetRows[charList[x]][cols['typeLoc']] }`
+                if ( spreadsheetRows[charList[x]][cols['ipaPlus']] ) out += ` with inherent vowel <span class="ipa">${ spreadsheetRows[charList[x]][cols['ipaPlus']] }</span>`
                 out +=
             `.</p>
 <p><span class="eg" lang="${ lang }"></span></p>
@@ -110,9 +191,9 @@ function makeListFromChars (chars) {
                 // check for combinations
                 combinations = ''
                 for (comb in spreadsheetRows) {
-                    if ([...comb].length > 1 && comb.includes(charList[x]) && spreadsheetRows[comb][2]) {
-                        console.log(comb,'>>',spreadsheetRows[comb][2])
-                        combinations += `\n<p><span class="ipa h">${ spreadsheetRows[comb][2] }</span> is <span class="ch">${ comb }</span></p>\n`
+                    if ([...comb].length > 1 && comb.includes(charList[x]) && spreadsheetRows[comb][cols['ipaLoc']]) {
+                        console.log(comb,'>>',spreadsheetRows[comb][cols['ipaLoc']])
+                        combinations += `\n<p><span class="ipa h">${ spreadsheetRows[comb][cols['ipaLoc']] }</span> is <span class="ch">${ comb }</span></p>\n`
                         combinations += `<p><span class="eg" lang="${ lang }"></span></p>\n`
                         }
                     }
