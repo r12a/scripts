@@ -17,7 +17,6 @@ access = {
 function addPageFeatures () {
     if (traceSet.has('addPageFeatures') || traceSet.has('all')) console.log('Globals(','blockDirectoryName:',window.blockDirectoryName, 'langTag:',window.langTag, 'scriptSummaryTableName:',window.scriptSummaryTableName, 'orthogFilePath:',window.orthogFilePath,')')
 
-
     //set accessibility defaults
     if (localStorage['docsAccess']) access = JSON.parse(localStorage['docsAccess']) 
     if (access.contrast === 'high') {
@@ -1821,6 +1820,8 @@ function replaceStuff (node) {
 
     var bicameral = false
     var showFirst = false
+    var noexpansion = false
+    var nolist = false
     //console.log(node)
 
     // check whether this is an index line
@@ -1832,6 +1833,8 @@ function replaceStuff (node) {
     chars = node.textContent.split('␣')
     if (typeof node.dataset.cols === 'undefined') var info = ''
     else info = node.dataset.cols
+    if (node.className.includes('noexpansion')) noexpansion = true // don't show the curved arrow
+    if (node.className.includes('nolist')) nolist = true // don't show the total+arrow
     if (node.className.includes('bicameral')) bicameral = true // note: phase this out in favour of data-select=last
     else bicameral = false
     if (node.dataset.select && node.dataset.select == 'last') bicameral = true
@@ -1875,14 +1878,18 @@ function replaceStuff (node) {
 
     // make the summary count link
     //if (chars.length > 1) {
-        var length = chars.length
-        for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
-        out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>'
-        if (length === 2) out += 'both'
-        else if (length > 2) out += length
-        out += '</div>'
-        out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; margin-inline-end:1rem;"></span> `
-        out += '</div>'
+        if (! nolist) {
+            var length = chars.length
+            for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
+            out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>'
+            if (length === 2) out += 'both'
+            else if (length > 2) out += length
+            out += '</div>'
+            }
+        if (! noexpansion) {
+            out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; margin-inline-end:1rem;"></span> `
+            out += '</div>'
+            }
         //}
 
 /*
