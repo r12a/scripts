@@ -15,9 +15,10 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 */
 
 
-otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
-termListType = 3			// picks up sources automatically
 
+// IPA terms done up to but NOT including མ
+// * signifies that an IPA transcription is available, but only for Old Tibetan
+// great example of complicated syllable and short sound གདུགས  and བརྒྱད
 
 
 
@@ -29,18 +30,19 @@ autoExpandExamples.bo = `
 
 ཀ|snow|ka˥|ka
 ཀ་ཀ||
-ཀ་ཀོ་ལ||
+ཀ་ཀོ་ལ||*
 ཀ་ཀྲ་ལ||
 ཀ་ཁ||
-ཀ་ཁུ་བྷ་ཡ||
-ཀ་ཏ་མན་ཏུ||
+ཀ་ཁུ་བྷ་ཡ||*
+ཀ་ཏ་མན་ཏུ|Kathmandu|ka˥˥.§§ta˥˥.§§mɛ̃˩˨§–.§§tu˥˥|ka ta man tu
 ཀ་ན||
-ཀ་པ་ལ||
+ཀ་པ་ལ||*
 ཀ་པཱ་ལ||
 ཀ་བ|pillar, column|káː§§–|ka ba
+ཀ་འཁོར་བ|endless cycle|ka˥˥.kʰoː(ɹ)˥˥.wa˥˥|ka 'khor ba
 ཀ་ར|sugar|ká.§§ʐá|ka ra
-ཀ་རན་ད||
-ཀ་ཤི་མིར|Kashmir|ká.§§ɕiˑ.§§miː§(ɹ)ˑ
+ཀ་རན་ད||*
+ཀ་ཤི་མིར|Kashmir|ká.§§ɕiˑ.§§miː§(ɹ)ˑ|ka shi mir
 ཀཛ་ཀིསུ་གཏན||
 ཀར||
 ཀསྨིར||
@@ -65,77 +67,76 @@ autoExpandExamples.bo = `
 ཀོང་གོ་སྤྱི་མཐུན་རྒྱལ་ཁབ||
 ཀྱག་རྗུན||
 ཀྱག་རྗུན་ཤོད་མཁན||
-ཀྱི||
+ཀྱི|genitive particle|kiˑ/ciˑ|kyi
 ཀྲིན་མོག||
 ཀྲུང་གོ|China|ʈ͡ʂu˥§ŋ.§§ko˥|krung go
 ཀྲུང་ཙི||
 ཀྲུང་ཧྭ་མི་དམངས་སྤྱི་མཐུན་རྒྱལ་ཁབ||
-ཀྲུམས||
-ཀྲུའུ་ཞི||
-ཀྲོ་མ་ཀྲུ||
-ཀླད||
-ཀླད་ཀོར||
-ཀླད་པ||
-ཀླུང||
+ཀྲུམས|meat (hon.)|ʈ͡ʂum˥˨|krums
+ཀྲུའུ་ཞི|president (of country)|ʈ͡ʂu˥˥.ɕi˥˥|kru'u zhi
+ཀྲོ་མ་ཀྲུ|tomato|ʈ͡ʂu˥˥.maː˥˥.ʈ͡ʂuˑ|kru ma kru
+ཀླད་ཀོར|zero|le˥.ko˥|klad kor
+ཀླད་པ|brain|lɛː˥˥.pa˥˥|glog klad
+ཀླུང|river, stream|luŋ˥˨|klung
 ཀླུང་མ|river|lu˥˩§ŋ§§ma˩˧|klung ma
 ཀླུབ||
 ཀླུབ་པ||
-ཀློག||
+ཀློག|to read, study|lo˥˨|klog
 ཀློག་པ||
 ཀློག་བདེ་པོ||
 ཁ|mouth||kha
 ཁ་ཁེབ་|cover|kʰa-kʰep
 ཁ་གཅུས||
 ཁ་གདན||
-ཁ་ཆེ||
-ཁ་ཆེའི་ཆོས་ཁང||
+ཁ་ཆེ|Islam, muslim|kʰa˥˥.t͡ɕʰɛːˑ|kha che
+ཁ་ཆེའི་ཆོས་ཁང|mosque|kʰaˑ.t͡ɕʰɛːˑ.ʔiˑ t͡ɕʰøːˑ.kʰaŋˑ|kha che'i chos khang
 ཁ་ཎ་ཌ|Canada||kha ṇa ḍa
 ཁ་ཏར||
 ཁ་ཏོག||
 ཁ་ཐུག|straight||kha thug
 ཁ་དཔར་གཏོང||
+གཏོང|to drive|toŋ˥˥|gtong
 ཁ་དཔར་གཏོང་བ||
-ཁ་པར||
+ཁ་པར|telephone|kʰa˥˥.paː˥˥|kha par
 ཁ་ཕེ||
 ཁ་བ||
-ཁ་བཏགས||
+ཁ་བཏགས|ceremonial scarf|kʰa˥˥.ta˥˨|kha btags
 ཁ་བདར་གློད||
 ཁ་བསྐོམས||
 ཁ་བྲག||
 ཁ་ཚ་པོ||
 ཁ་ཟས||
-ཁ་འདབ||
+ཁ་འདབ||*
 ཁ་འབུས||
 ཁ་རོ་ལི་ན་ལྷོ་ཕྱོགས||
 ཁ་ལག||
 ཁ་ལག་ཐོ||
-ཁ་ལོ་བ||
+ཁ་ལོ་བ||*
 ཁ་ལོ་སྒྱུར་འཁོར||
 ཁ་ཤས|some, few||kha shas
-ཁ་སང||
+ཁ་སང||*
 ཁ་སྐོམ་ཡག||
 ཁག་པོ||
-ཁང||
 ཁང་ཀྲོང||
-ཁང་པ||
+ཁང་པ|house, room|kʰaŋ˥˥.pa˥˥|khang pa
 ཁང་པ་མཐོ་པོ་ཀྲོང་ཀྲོང||
 ཁང་བདག||
 ཁང་མིག||
 ཁང་རྩིག་བཟོ་རིག||
 ཁངས|full||khangs
 ཁན་སཱ་སི||
-ཁབ||
+ཁབ|needle|kʰəp̚˥˨|khab
 ཁབ་གཟེར||
 ཁམ་པོ་ཛ||
 ཁམ་མུ་རོན||
-ཁམས||
-ཁར||
+ཁམས|Kham; realm|kʰa§m˥˨|khams
+ཁར|sugar|kʰaː˥˥/ kʰaː(ɹ)˥˥|khar
 ཁལ་ལུང་ཕུ||
 ཁུ་ཁེ་རྲོའུར||
 ཁུ་བ||
 ཁུ་ཝི་ཐི||
-ཁུག་བྱི||
-ཁུག་སྣ||
+ཁུག་བྱི||*
+ཁུག་སྣ||*
 ཁུརོ་ཤི་ཡ||
 ཁེ||
 ཁེ་ན་ཏྲ|Canada||khe na tra
@@ -144,7 +145,7 @@ autoExpandExamples.bo = `
 ཁེངས་པ|full||khengs pa
 ཁེབ་ཝར་ཌི||
 ཁེམ་བུ||
-ཁོ|he||kho
+ཁོ|he|kʰo˥˥|kho
 ཁོ་ཕི||
 ཁོ་མོ་རོ་སུ||
 ཁོ་ཙེ||
@@ -155,13 +156,13 @@ autoExpandExamples.bo = `
 ཁོ་སོ་ཝོ||
 ཁོག་མ||
 ཁོག་ལྟིར||
-ཁོག་ལྡིར||
-ཁོང|he||khong
+ཁོག་ལྡིར|teapot (for butter tea)|kʰoː˥˥.tiŋ˥˥|khog ldir
+ཁོང|he, she|kʰoŋ˥˥|khong
 ཁོང་ཚོ|they||khong tsho
 ཁོར་ལོ|wheel, chakra||khor lo
-ཁྭ་ཏ||
+ཁྭ་ཏ||*
 ཁྰ་ལེ་ཧྥོར་ནི་ཡ||
-ཁྱགས་དཔྱངས||
+ཁྱགས་དཔྱངས|icicle|kʰa(k̚)ˀ˥˥.t͡ɕaŋ˥˨|khyags dpyangs
 ཁྱགས་པ་ཆགས||
 ཁྱགས་པ་བཟོས||
 ཁྱགས་པ་མངར་མོ||
@@ -172,12 +173,12 @@ autoExpandExamples.bo = `
 ཁྱི|dog|cʰi˥|khyi
 ཁྱི་ཕྲུག||
 ཁྱིམ|house, residence|cʰi˥§m|khyim
-ཁྱིམ་ཚང||
-ཁྱིམ་རྒྱུད||
+ཁྱིམ་ཚང|family|cʰim˥˥.t͡saŋˑ|khyim tshang
+ཁྱིམ་རྒྱུད|clan, lineage|cʰim˥˥.cyː˥˨|khyim rgyud
 ཁྱིལ་ཆུ||
 ཁྱུ||
 ཁྱུག་ཙམ་ཞིག||
-ཁྱུང|garuda|cʰu˥§ŋ
+ཁྱུང|garuda|cʰu˥§ŋ|khyung
 ཁྱེད|you (singular)||khyed
 ཁྱེད་ཚོ|you (plural)||khyed tsho
 ཁྱེད་རང|you (singular)||khyed rang
@@ -188,54 +189,55 @@ autoExpandExamples.bo = `
 ཁྱོན་ནས||
 ཁྲ་འབྲུག་ལྷ་གང||
 ཁྲག|blood|ʈ͡ʂʰa˥˩|khrag
-ཁྲག་ཁྲིག||
-ཁྲག་ཁྲིག་ཆེན་པོ||
+ཁྲག་ཁྲིག||*
+ཁྲག་ཁྲིག་ཆེན་པོ||*
 ཁྲག་འཛིན|skin||khrag 'dzin
 ཁྲག་རྩ||
 ཁྲབ་ཁྲབ||
 ཁྲི|10,000|ʈ͡ʂʰi˥|khri
 ཁྲི་སྙན་ས་ལེ||
-ཁྲིད||
-ཁྲིམ་དཔོན||
+ཁྲིད|to lead, guide|ʈ͡ʂʰi˥˨|khrid
+ཁྲིམ་དཔོན||*
 ཁྲིམས་མཐུན||
 ཁྲིམས་རྩོད་པ||
 ཁྲིམས་ལ་བསྐྱལ||
 ཁྲུད་ཁང||
 ཁྲུས|to wash||khrus
-ཁྲུས་ཁང||
+ཁྲུས་ཁང|bathroom|ʈ͡ʂʰyː˥˥.kʰaŋ˥˥|khrus khang
 ཁྲེ|millet|ʈ͡ʂʰe˥|khre
-ཁྲེན་ཏུ||
-ཁྲེལ་ཡོད་པ||
+ཁྲེན་ཏུ|Chengdu|ʈ͡ʂʰẽ˥˥.tu˥˥|khren tu
+ཁྲེལ་ཡོད་པ||*
 ཁྲོ་ཟངས||
 ཁྲོན་པ||
 ཁྲོམ|market|ʈ͡ʂʰo˥§m|khrom
+ཁྲོམ་ར|marketplace|ʈ͡ʂʰom˥˥.ʐaˑ|khrom ra
 ཁྲོམ་གཟིགས་གནང||
 ག་དུས|when||ga dus
 ག་ནས|how||ga nas
 ག་པར|where|kʰa˩˧.§§paː˥§(ɹ)|ga par
 ག་ཚད||
-ག་ཚོད||
-ག་རེ|what||ga re
-ག་རེ་བྱས་ནས||
-གང||
-གང་འདྲ||
+ག་ཚོད|how much, how many|kʰə˩˨ t͡sʰɛː˥˨|ga tshod
+ག་རེ|what|kʰa˩˨.ʐe˥˥|ga re
+ག་རེ་བྱས་ནས||*
+གང|whatever, whichever|kʰaŋ˩˧˨|gang
+གང་འདྲ|how, in what way|kʰəŋ˩˨.ʈ͡ʂɛː˥˨|gang 'dra
 གང་ཡིན་ཟེར་ན|because||gang yin zer na
 གང་ས||
-གངས|snow||gangs
+གངས|snow|kʰaŋ˩˧˨|gangs
 གངས་ཆུ||
-གངས་ཆེན||
+གངས་ཆེན||*
 གངས་ཆེན་མཛོད་ལྔ||
 གངས་ཕྱིད||
 གངས་བཏང||
 གངས་འུར||
-གངས་རི||
-གངས་རིན་པོ་ཆེ||
+གངས་རི|high snowy mountain, glacier|kʰəŋ˩˨.ʐi˥˥|gangs ri
+གངས་རིན་པོ་ཆེ|Mount Kailash|kʰaŋ˩˧˨ ʐĩ˩˨.pu˥˥.t͡ɕʰiˑ|gangs rin po che
 གངས་རུད||
 གངས་ལྷམ||
 གངས་ཤུར་གཏོང་ཡག||
 གངས་ཤུར་བཏང||
 གངས་ཤུར་མོ་ཊ||
-གངས་སེང་གེ||
+གངས་སེང་གེ|snow lion|kʰaŋ˩˧˨.seŋ˥˥.ke˥˥|gangs seng ge
 གཅག་གཏོར་བྱས||
 གཅག་གཏོར་བྱེད་ཡག||
 གཅིག|one|›§t͡ɕi˥˩§–|gcig
@@ -255,9 +257,9 @@ autoExpandExamples.bo = `
 གཏམ|conversation, news|›§ta˥§m|gtam
 གཏམ་དཔེ||
 གཏམ་པ||
-གཏམ་བཟང||
+གཏམ་བཟང|good news, gospel|tam˥˥.saŋˑ|gtam bzang
 གཏམ་རྒྱུད||
-གཏམས||
+གཏམས|to fill up|tam˥˥|gtams
 གཏིང་རྡོ||
 གཏུག་དྲི||
 གཏུག་དྲི་བཏང||
@@ -276,9 +278,9 @@ autoExpandExamples.bo = `
 གཏེར་སྟོན||
 གཏོམ||
 གཏོམ་པ||
-གཏོར||
-གཏོར་མ||
-གད་ཉིག||
+གཏོར||*
+གཏོར་མ|torma|toː˥˥.ma˥˥|gtor ma
+གད་ཉིག||*
 གད་མོ་ཤོར|to laugh||gad mo shor
 གད་སྙིག||
 གད་སྙིག་བླུག་ས||
@@ -293,20 +295,21 @@ autoExpandExamples.bo = `
 གདུགས|umbrella; noon|›§tu˩˧˨§‹§–|gdugs
 གདོང་པ||
 གདོང་བྱུག་པོ་ཊར||
-གདོན་འདྲེ||
-གནང||
+གདོན་འདྲེ|demon, ghost|toŋ˩˨.ʈ͡ʂeˑ|gdno 'dre
+གནང|to give, grant|naŋ˥˥|gnang
 གནད||
 གནམ|sky|›§na˥§m|gnam
-གནམ་གཤིས||
+གནམ་གཤིས|weather, climate|nəm˥˥.ɕi˥˨|gnam gshis
 གནམ་གྲུ|aircraft|›§nə˥§m.§§ʈ͡ʂu˥|gnam gru
 གནམ་གྲུ་ཐང||
 གནམ་གྲུ་བབ་ལམ||
 གནམ་གྲུ་འཇོག་ཁང||
-གནམ་མཚོ||
+གནམ་མཚོ|Namtso Lake|nam˥˥.t͡sʰo˥˥|gnam mtsho
 གནམ་ལྕགས||
 གནའ་དངོས་རིག་གནས||
 གནའ་རྫས་རྟོག་ཞིབ||
 གནས|place, location|–§nɛː˥˩§‹|gnas
+གནས་ཚུལ|information|nɛː˥˥.t͡ɕyːˑ|gnas tshul
 གནས་པ||
 གནས་མོ||
 གནས་ཚང་||
@@ -318,45 +321,45 @@ autoExpandExamples.bo = `
 གཙང|clean, pure|–§t͡sa˥§ŋ|gtsang
 གཙང་ཆུ||
 གཙང་པོ|river||gtsang po
-གཙང་མ||
+གཙང་མ|clean|t͡saŋ˥˥.ma˥˥|gtsang ma
 གཙང་མ་བཟོས||
-གཙུག་གཡུ||
-གཙོ||
-གཙོ་བོ||
+གཙུག་གཡུ|turquoise|ju˥˥|g.yu
+གཙོ|main, central|t͡so˥˥|gtso
+གཙོ་བོ|main, chief|t͡so˥˥.woˑ|gtso bo
 གཞང་ཚོང་མ||
 གཞན|other||gzhan
 གཞན་དག|other||gzhan dag
-གཞས||
+གཞས|song, joke|ɕɛː˩˧˨|gzhas
 གཞས་བཏང||
-གཞས་ཚིག||
-གཞི||
+གཞས་ཚིག|lyrics|ɕe˩˨.t͡sʰi(k̚)ˀ˥˨|gzhas tshig
+གཞི|cause, source|ɕi˩˨|gzhi
 གཞིས་ཀ|native home|–§ɕi˩˧.§–§§kə˥|gzhis ka
-གཞིས་ཀ་རྩེ||
+གཞིས་ཀ་རྩེ|Shigatse|ɕi˩˨.kə˥˥.t͡seˑ|gzhis ka rtse
 གཞིས་ཆགས||
 གཞིས་ཆགས་བྱེད་མཁན||
 གཞིས་ཆགས་ལ་ཡོང||
 གཞིས་ཆགས་ལ་ཡོང་པའི་མི||
 གཞིས་ཆགས་ལ་ཡོང་ཡག||
-གཞུ||
+གཞུ|bow (weapon)|ɕu˩˨|gzhu
 གཞུ་ཤུབས||
-གཞུག་གུ||
-གཞུང||
+གཞུག་གུ||*
+གཞུང|text, scripture|ɕuŋ˩˧˨|gzhung
 གཞུང་ལམ||
 གཞུས་པ|to hit||gzhus pa
 གཞོགས||
 གཞོགས་ལྡ||
-གཟའ||
-གཟའ་ཉི་མ||
-གཟའ་པ་སངས||
-གཟའ་ཕུར་བུ||
-གཟའ་མིག་དམར||
+གཟའ|eclipse|sa˩˨|gza'
+གཟའ་ཉི་མ|Sunday|sa˩˨ ȵi˩˨.mə˥˥|gza' nyi ma
+གཟའ་པ་སངས|Friday|sa˩˨ pa˥˥.saŋ˥˨|gza' pa sangs
+གཟའ་ཕུར་བུ|Thursday|sa˩˨ pʰuː˥˥.pu˥˥|gza' phur bu
+གཟའ་མིག་དམར|Tuesday|sa˩˨ miː˩˨.maː˥˥|gza' mig dmar
 གཟའ་ཟླ་བ|Monday|–§sa˩˧§–§§ta˩˧.§§wa˥|gza' zla ba
-གཟའ་འཁོར||
-གཟའ་ལྷག་པ||
+གཟའ་འཁོར|week|sa˩˨.kʰoː˥˥|gza' 'khor
+གཟའ་ལྷག་པ|Wednesday|sa˩˨ ɬa(k̚)ˀ˥˥.pa˥˥|gza' lhag pa
 གཟའ་སྐར||
-གཟའ་སྤེན་པ||
-གཟི||
-གཟིག||
+གཟའ་སྤེན་པ|Saturday|sa˩˨ pẽ˥˥.pa˥˥|gza' spen pa
+གཟི|shininess|si˩˨|gzi
+གཟིག|leopard|si(k̚)ˀ˩˨||gzig
 གཟིགས|to see, look (hon.)|si᷈|gzigs
 གཟིགས་པ||
 གཟེར||
@@ -368,81 +371,82 @@ autoExpandExamples.bo = `
 གཡང་སྤྲུའུ||
 གཡས|right||g.yas
 གཡུ||
-གཡུ་ཁ||
+གཡུ་ཁ|turquoise|ju˥˥.kʰa˥˨|g.yu kha
 གཡུ་མདོག|turquoise|–§júm.§§–§tôː§–|g.yu mdog
-གཡུ་མཚོ||
-གཡུ་ལོ||
+གཡུ་མཚོ|glacier lake|jum˥˥.t͡sʰo˥˨|g.yu mtsho
+གཡུ་ལོ|turquoise-coloured leaf|ju˥˥.loˑ|g.yu lo
 གཡུགས|to throw||g.yugs
 གཡེར་མ|sichuan pepper|›§jeː˥§(ɹ).§ma˥|g.yer ma
 གཡོག་པོ||
 གཡོག་མོ||
 གཡོན|left||g.yon
-གལ་ཆེན་པོ||
+གལ་ཆེན་པོ||*
 གལ་ཏེ|if||gal te
 གཤག་གཅོད||
 གཤག་གཅོད་སྨན་པ||
 གཤོག་པ||
 གསང་ཚིག||
 གསང་སྔགས||
-གསང་སྤྱོད||
+གསང་སྤྱོད|bathroom|saŋ˥˥.t͡ɕøː˥˨|gsang spyod
 གསན||
-གསའ||
+གསའ|snow leopard|sa˥˥|gsa'
 གསར་གནས་འདྲི་རྕོམ་བྱེད་མཁན||
-གསར་པ|new||gsar pa
+གསར་པ|new|saː˥˥.pa˥˥|gsar pa
 གསར་བཟོ||
 གསར་བརྗེ||
-གསར་འགྱུར||
+གསར་འགྱུར|news; broadcast|səŋ˥˥.cuː˥˥|gsar 'gyur
 གསར་འགྱུར་བྱེད་པོ||
 གསལ་བ||
-གསལ་བཤད||
+གསལ་བཤད||*
 གསིང་མ||
 གསུང་རབ||
-གསུམ|three||gsum
-གསེར||
+གསུམ|three|sum˥˥|gsum
+གསེར||*
 གསེར་ཉ||
-གསེར་དཀར་པོ||
+གསེར་དཀར་པོ|platignum|seː(ɹ)˥˥ kaː(ɹ)˥˥.poˑ|gser dkar po
 གསེར་བཟོ་བ||
-གསོད||
+གསོད|to kill, murder|sɛː˥˨|gsod
 གསོད་པ||
 གསོན|to live, survive|›§sø̃˥§‹|gson
 གསོན་པ|to live||gson pa
-གསོན་པོ||
-གསོལ་དཀྲུམ||
-གི||
+གསོན་པོ|alive|sø̃˥˥.pa˥˥|gson po
+གསོལ་དཀྲུམ|meat|søː˥˥.ʈ͡ʂum˥˨|gsol dkrum
+གི|genitive particle|kiˑ|gi
 གི་གུ||
 གི་ནེ||
 གི་ནེ་-བི་སའོ||
 གི་རི་ན་ཌ||
-གུ་དོག་པོ|narrow||gu dog po
+གུ་དོག་པོ|narrow|tʰo(k̚)ˀ˩˨.poˑ|gu dog po
+དོག་པ|pea pod|tʰo(k̚)ˀ˩˨.paˑ|dog pa
 གུ་ཝེ་ཐི་མ་ལ||
 གུ་ཡ་ན||
-གུང་ཁྲན་ཏང||
-གུང་ཁྲན་རིང་ལུགས||
+གུང་ཁྲན་ཏང|communist party|kʰuŋ˩˨.ʈ͡ʂʰɛ̃˥˥ taŋ˥˨|gung khran tang
+གུང་ཁྲན་རིང་ལུགས|communism|kʰuŋ˩˨.ʈ͡ʂʰɛ̃˥˥ ʐiŋ˩˨.lu˥˨|gung khran ring lugs
 གུང་གསེང||
 གུར||
-གུར་གུམ||
+གུར་གུམ|safron|kʰu˩˨.kum˥˥|gur gum
 གུར་ཐོགས||
 གེ་བོན||
 གེ་རེན་ལ||
 གེ་སར||
 གེམ་བྷི་ཡ||
-གོ|to hear||go
-གོ་ཐལ||
+གོ|to hear|kʰo˩˨|go
+གོ་ཐལ||*
 གོ་མཚོན||
 གོ་ཡུ||
 གོ་རེ||
 གོ་སྙོད||
-གོག||
+གོག|to crawl|kʰo˩˧˨|gog
 གོག་པ||
-གོང||
+གོང|price|kʰoŋ˩˨|gong
 གོང་ཆེན་པོ||
 གོང་བཅག||
-གོན||
+གོན|to wear|kʰø̃˩˨|gon
 གོམ་པ་རྒྱག|to walk|kʰo˩˧§m.§§pa˥˥§§ca˩˧˨§–|gom pa rgyag
 གོའོ་མིན་ཏང||
 གོས་ཐུང||
 གྱང་རོ||
-གྱི||
+གྱི|genitive particle|kiˑ/ciˑ|gyi
 གྱུརད་|became|kjù§r§–
 གྱོན|to wear, put on|cʰø̃˩˧§‹|gyon
 གྱོན་པ||
@@ -453,35 +457,35 @@ autoExpandExamples.bo = `
 གྲང་མོ|cold|ʈ͡ʂʰə˩˧§ŋ.§§ŋu˥|grang mo
 གྲི||
 གྲིང་ཟུར||
-གྲུ||
+གྲུ|boat, ship|ʈ͡ʂʰu˩˨|gru
 གྲུ་གསུམ|triangle|ʈ͡ʂʰùˀ.§§–§su§m|gru gsum
-གྲུ་བཞི||
+གྲུ་བཞི|square|ʈ͡ʂʰup̚˩˨.ɕi˥˥|gru bzhi
 གྲུ་མོ||
 གྲུ་ཤན||
 གྲོ་ཐིག||
 གྲོ་མ||
-གྲོག་མ||
+གྲོག་མ|ant|ʈ͡ʂʰoː˩˨.ma˥˥|grog ma
 གྲོགས་པོ||
 གྲོགས་མེད་གཅིག་རྐྱང||
-གྲོང་ཁྱེར||
+གྲོང་ཁྱེར|city town|ʈ͡ʂʰoŋ˩˨.cʰeː˥˥|grong khyer
 གྲོངས||
 གྲོད་ཁོག||
 གྲྭ་པ|monk|ʈ͡ʂʰà.§§pa|grwa pa
-གླ་བ||
+གླ་བ||*
 གླང|ox|la˥§ŋ|glang
-གླང་ཆེན||
+གླང་ཆེན|elephant|laŋ˥˥.t͡ɕʰẽ˥˥|glang chen
 གླང་དར་མ||
 གླས||
-གླིང||
+གླིང||*
 གླིང་ཕྲན||
-གླུ་དབྱངས||
+གླུ་དབྱངས|song, music|lu˥˥.jaŋ˥˨|glu dbyangs
 གླེ||
-གློ་བ||
+གློ་བ||*
 གློ་བརྒྱབ||
-གློག||
+གློག|electricity|lo˥˨|glog
 གློག་ཀླད||
 གློག་གི་སྐས་འཛེགས||
-གློག་བརྙན||
+གློག་བརྙན|movie, film|loː˥˥.ȵɛ̃˥˥|glog brnyan
 གློག་བརྙན་ཁང|cinema|lô§‹.§§›§ȵɛ̃́§‹.§§kʰá§ŋ§|glog brnyan khang
 གློག་མདའ||
 གློག་ཞུ||
@@ -491,105 +495,105 @@ autoExpandExamples.bo = `
 གློག་རྫས||
 གློག་སྨན||
 ང|I||nga
-ང་ཚོ|we||nga tsho
+ང་ཚོ|we|ŋan˩˨.t͡sʰo˥˥|nga tsho
 ང་ར||
 ངག|speech, voice|ŋa˩˧˨§–|ngag
 ངང་པ||
 ངང་ལག||
 ངན||
-ངན་པ||
+ངན་པ|evil, bad|ŋɛ̃˩˨.paˑ|ngan pa
 ངར་གདུང||
 ངར་ལྕགས||
 ངལ་དུབ||
-ངུ||
+ངུ|to weep, cry|ŋu˩˨|ngu
 ངུ་བ||
 ངོ་མ||
 ངོ་ཚ་མེད་པ||
-ངོ་ཚ་ཤེས་པ||
+ངོ་ཚ་ཤེས་པ||*
 ངོ་རྒོལ་སྒེར་ལངས||
-ཅ་ལག||
+ཅ་ལག||*
 ཅི་ལི||
 ཅི་སི་ནའུ||
-ཅིག||
-ཅུང་ཙམ||
-ཅུང་ཟད||
-ཅུང་ཟད་ཙམ||
+ཅིག|a/an, some|t͡ɕi˥˨|cig
+ཅུང་ཙམ||*
+ཅུང་ཟད||*
+ཅུང་ཟད་ཙམ||*
 ཅེ་ཁེ||
 ཅོག་ཙེ||
 ཆ་ཤས||
 ཆགས||
 ཆང|barley beer|t͡ɕʰa˥§ŋ|chang
 ཆང་ཁང||
-ཆང་ནད||
+ཆང་ནད|hangover|t͡ɕʰaŋ˥˥.nɛː˥˨|chang nad
 ཆབ་ཁུང||
-ཆབ་གདན||
-ཆབ་མདོ||
-ཆབ་རྩེ||
+ཆབ་གདན|nappy|t͡ɕəp̚˥˥.tɛ̃ˑ|chab gdan
+ཆབ་མདོ|Chamdo|t͡ɕʰam˥˥ to˥˥|chab mdo
+ཆབ་རྩེ||*
 ཆབ་སྲིད|politics|t͡ɕʰə˥§p̚.§§si˥˩§–|chab srid
 ཆམས་པ||
 ཆར་དུས||
 ཆར་པ|rain|t͡ɕʰaː˥.§‹§pa˥|char pa
-ཆར་ཞོད||
+ཆར་ཞོད||*
 ཆར་རྒྱུན||
-ཆར་རླུང||
-ཆར་སྤྲིན||
+ཆར་རླུང||*
+ཆར་སྤྲིན||*
 ཆཱ་ཌ||
 ཆིང་ཏན||
 ཆིས་ཁྲེའེ||
-ཆུ|water||chu
+ཆུ|water|t͡ɕʰu˥˥|chu
 ཆུ་ཆུ||
 ཆུ་ཆེན||
 ཆུ་དོང་ལྕགས་རི||
 ཆུ་པ||
 ཆུ་བོ||
 ཆུ་མངར་མོ||
-ཆུ་མིག||
-ཆུ་ཚོད||
+ཆུ་མིག|spring (water)|t͡ɕʰu˥˥.miˑ|chu mig
+ཆུ་ཚོད|hour, clock|t͡ɕʰo˥˥.t͡sʰøː˥˨/t͡ɕʰu˥˥.t͡sʰyː˥˨|chu tshod|
 ཆུ་ཟོམ||
 ཆུ་འཐེན་འཕྲུལ་བྱད||
 ཆུ་རག||
 ཆུ་རྐྱལ་རྒྱག||
-ཆུ་རྒུན་འབྲུམ||
+ཆུ་རྒུན་འབྲུམ|grape|t͡ɕʰu˥˥ kỹ˩˨.ʈ͡ʂum˥˥|chu rgun 'brum
 ཆུ་རྟ||
-ཆུ་ལོག||
+ཆུ་ལོག|flood|t͡ɕʰu˥˥.lo(k̚)ˀ˥˨|chu log
 ཆུ་ལྒང||
-ཆུ་ཤེལ||
-ཆུ་སེར||
+ཆུ་ཤེལ|crystal|t͡ɕʰu˥˥ ɕeː˥˥|chu shel
+ཆུ་སེར|lymph|t͡ɕʰu˥˥.seː(ɹ)ˑ|chu ser
 ཆུ་སྒྲོམ||
 ཆུ་སྣོད||
 ཆུ་སྲིན||
-ཆུང||
+ཆུང|small|t͡ɕʰuŋ˥˥|chung
 ཆུང་ངུ||
-ཆུང་ཆུང|small||chung chung
-ཆུང་བ|small||chung ba
-ཆུང་མ||
-ཆུད||
+ཆུང་ཆུང|small, tiny|t͡ɕʰỹ˥˥.t͡ɕʰỹ˥˥/t͡ɕʰuŋ˥˥.t͡ɕʰuŋ˥˥|chung chung
+ཆུང་བ|small, little|t͡ɕʰuŋ˥˨.ŋəˑ|chung ba
+ཆུང་མ|wife|t͡ɕʰuŋ˥˥.maˑ|chung ma
+ཆུད||*
 ཆུར་བ||
-ཆེ||
+ཆེ||*
 ཆེ་གེ||
-ཆེ་ཆུད||
+ཆེ་ཆུད||*
 ཆེ་ཤེལ||
 ཆེན||
-ཆེན་པོ|big||chen po
+ཆེན་པོ|big|t͡ɕʰẽ˥˥.po˥˥/t͡ɕʰem˥˥.po˥˥|chen po
 ཆོ་མེད||
-ཆོས|religion|t͡ɕʰø̂ː|chos
+ཆོས|religion|t͡ɕʰøː˥˨|chos
 ཆོས་ཀྱི་འཁོར་ལོ||
 ཆོས་གླུ||
 ཆོས་བདུན||
-ཆོས་འཁོར||
+ཆོས་འཁོར||*
 ཆོས་འཁོར་གསུམ||
 ཆོས་འཁོར་དང་དོན་གཅིག||
-ཆོས་རྒྱལ||
-ཆོས་ལུགས||
-ཆོས་སྐད||
+ཆོས་རྒྱལ|chogyal|t͡ɕʰøː˥˥.cɛː˥˥|chos rgyal
+ཆོས་ལུགས|religion|t͡ɕʰøː˥˥.lu(k̚)ˀ˥˨|chos lugs
+ཆོས་སྐད|classical religious terminology|t͡ɕʰøː˥˥.kɛː˥˨|chos skad
 ཇ་ཀོབ་པི||
 ཇ་ཁང||
 ཇ་ཁེབས||
 ཇ་དཀར||
 ཇ་བག||
 ཇ་མའི་ཀ||
-ཇ་ལོ||
-ཇ་སྲུབ་མ||
+ཇ་ལོ|tea leaf|t͡ɕʰa˩˨.lo˥˥|ja lo
+ཇ་སྲུབ་མ|butter tea|t͡ɕʰa˩˨ syː˥˥.mə˥˥|ja srub ma
 ཇག་ཁྲིད་བྱས||
 ཇག་པ||
 ཇང་ཡུའི||
@@ -597,18 +601,18 @@ autoExpandExamples.bo = `
 ཇི་བའོ་ཊི||
 ཇི་བེན||
 ཇུར་སྒྲོག||
-ཇོ་མོ||
-ཇོ་མོ་གླང་མ||
+ཇོ་མོ||*
+ཇོ་མོ་གླང་མ|Mt Everest|t͡ɕʰo˩˨.mo˥˥ laŋ˥˥.ma˥˥|jo mo glang ma
 ཉ|fish|ȵa˩˧|nya
 ཉ་གོང||
 ཉ་ཤ||
-ཉན||
-ཉན་བྱེད་འཕྲུལ་ཆས||
-ཉམས||
-ཉམས་མྱོང||
-ཉར||
+ཉན|to listen|ȵɛ̃˩˨|nyan
+ཉན་བྱེད་འཕྲུལ་ཆས|headphones|ȵɛ̃˩˨.t͡ɕe˥˨ ʈ͡ʂʰyː˥˥.t͡ɕʰɛː˥˨|byan byed 'phrul chas
+ཉམས|to deteriorate|ȵam˩˧˨|nyams
+ཉམས་མྱོང|experience|ȵam˩˧˨ ȵuŋ˩˨|nyams myong
+ཉར|to keep, guard|ȵaː˩˨|nyar
 ཉར་བ||
-ཉལ||
+ཉལ|to go to sleep|ȵɛː˩˨|nyal
 ཉལ་ཁང||
 ཉལ་ཁེབས||
 ཉལ་ཁྲི||
@@ -622,11 +626,11 @@ autoExpandExamples.bo = `
 ཉི་མ|day, sun|ȵi˩˧.mə˥˥|nyi ma
 ཉི་མ་ལོག་ཡག||
 ཉི་མའི་འོད་ཤུགས||
-ཉི་ཤུ||
+ཉི་ཤུ|twenty|ȵi˩˨.ɕu˥˥|nyi shu
 ཉི་སྲེག||
 ཉི་སྲེག་བཏང||
 ཉི་ཧོང||
-ཉིང་ཁྲི||
+ཉིང་ཁྲི|Nyingchi|ȵiŋ˩˨.ʈ͡ʂʰi˥˥|nying khri
 ཉིན|day||nyin
 ཉིན་གུང||
 ཉུག་བྱེད|bird||nyug byed
@@ -634,14 +638,14 @@ autoExpandExamples.bo = `
 ཉུང་མ||
 ཉུང་ཤས|few||nyung shas
 ཉེ་པོ|near||nye po
-ཉེ་བ||
+ཉེ་བ|near, close|ȵe˩˨.waˑ|nye ba
 ཉེ་སྐོར་གྲོང་ཚོ||
 ཉེན་ག་ནས་བཏོན||
 ཉེར་སྤྱད||
 ཉེས་པ||
-ཉོ||
+ཉོ||*
 ཉོ་ཆའི་ཐོ||
-ཉོན་མོངས||
+ཉོན་མོངས||*
 ཉོས||
 ཊི་ཀ་སི||
 ཊེབ་ཐག||
@@ -652,7 +656,7 @@ autoExpandExamples.bo = `
 ཌོ་མི་ནི་ཀན་སྤྱི་མཐུན་རྒྱལ་ཁབ||
 ཏན་ཛ་ནི་ཡ||
 ཏཱ་བླ་མ་|grand lama||tā-bla-ma
-ཏཱ་ལའི་བླ་མ|Dalai Lama|tá.§§l§ɛ́ː§§lá.§§má
+ཏཱ་ལའི་བླ་མ|Dalai Lama|tá.§§l§ɛ́ː§§lá.§§má|tā la'i bla ma
 ཏི་ཚ||
 ཏིང་ངེ་འཛིན||
 ཏིལ|sesame seed|tiː˥§(ɹ)|til
@@ -665,68 +669,68 @@ autoExpandExamples.bo = `
 ཏྲི་ནི་ཌད་དང་ཏྲོ་བེ་གོ||
 ཐ་ཇི་ཁེ་སི་ཏན||
 ཐ་དད་པ||
-ཐ་མ་རྡབ་ས||
+ཐ་མ་རྡབ་ས||*
 ཐ་མག||
 ཐ་མག་བརྡབ་ས||
 ཐ་མི་དད་པ||
-ཐག་པ|rope||thag pa
+ཐག་པ|rope|tʰa˥˨.pa˥˥/tʰa(k̚)ˀˑ.pa˥˥|thag pa
 ཐག་རིང་པོ|far||thag ring po
-ཐགས་ཐོགས||
+ཐགས་ཐོགས||*
 ཐང|plain, flatlands|tʰa˥§ŋ|thang
-ཐང་ཀ||
+ཐང་ཀ|thangka|tʰaŋ˥˥.ka˥˥|thang ka
 ཐང་ཁ||
 ཐང་ཆད་པ||
-ཐང་འབྲས||
-ཐང་ཤིང||
+ཐང་འབྲས||*
+ཐང་ཤིང|pine, fir|tʰəŋ˥˥.ɕiŋ˥˥|thang shing
 ཐད་འཕུར་གནམ་གྲུ||
 ཐབ||
 ཐབ་ཚང||
 ཐམ་ཀ||
 ཐམ་ཁ||
-ཐམ་པ||
+ཐམ་པ|full, complete|tʰam˥˥.pa˥˥|tham pa
 ཐའི་ལེན||
 ཐའེ་པེ||
 ཐའེ་ཝན||
-ཐལ|dust||thal
-ཐལ་བ||
+ཐལ|dust|tʰa˥˥|thal
+ཐལ་བ|dust, powder|tʰa˥˥.la˥˥/, /tʰɛː˥˥.la˥˥|thal ba
 ཐིག་ལི||
 ཐིག་ལེ||
 ཐིང||
 ཐིམ་ཕུ||
-ཐུ་མོ||
-ཐུག||
-ཐུག་པ||
-ཐུགས||
+ཐུ་མོ||*
+ཐུག|to reach, arrive at|tʰu˥˨|thug
+ཐུག་པ|broth, soup|tʰu(k̚)ˀ˥˥.pə˥˥|thug pa
+ཐུགས|mind, heart|thu(k̚)ˀ˥˥|thugs
 ཐུགས་དམ||
-ཐུགས་རྗེ||
-ཐུགས་རྗེ་ཆེ||
-ཐུང་ཐུང|short||thung thung
+ཐུགས་རྗེ|compassion, generosity|tʰu(k̚)ˀ˥˥.t͡ɕeˑ|thugs rje
+ཐུགས་རྗེ་ཆེ|thank you|tʰu(k̚)ˀ˥˥.t͡ɕeˑ.ʈ͡ʂʰeˑ|thugs rje che
+ཐུང་ཐུང|short|thuŋ˥˥.thuŋ˥˥|thung thung
 ཐུང་བ|short||thung ba
 ཐུབ||
 ཐེ་རོན་ཕུ||
 ཐེན་ནེ་སི||
 ཐེན་པ||
 ཐེབ་འཇུ||
-ཐེབས||
+ཐེབས|to be hit, struck|tʰe˥˨|thebs
 ཐེབས་པ||
-ཐེར་འབུམ||
-ཐེར་འབུམ་ཆེན་པོ||
+ཐེར་འབུམ|billion|tʰiŋ˥˥.pum˥˥|ther 'bum
+ཐེར་འབུམ་ཆེན་པོ||*
 ཐོ||
 ཐོ་ཁེ་ཡོ||
-ཐོ་དེབ||
+ཐོ་དེབ||*
 ཐོ་ལ་ཅི||
 ཐོགས་ཞིང||
 ཐོང་བཤོལ||
 ཐོངས་མཆན||
-ཐོབ||
+ཐོབ|to win|tʰop̚˥˨|thob
 ཐོར་པ||
 ད་རིང||
 ད་ལྟ་|now|tʰàn.§§tá|dan ta
 ད་ལྟ་བ|present tense|tʰà.§§tá.§§wa|da lta ba
 དཀར||
-དཀར་ཆག||
+དཀར་ཆག|index, table of contents|kaː(ɹ)˥˥.t͡ɕʰa˥˨|dkar chag
 དཀར་པོ་|white|–§káː§‹.§§pó|dkar po
-དཀོན་མཆོག||
+དཀོན་མཆོག|rare jewel; God (christian)|kø̃˥˥.t͡ɕo(k̚)ˀ˥˨|dkon mchog
 དཀོན་མཆོག་མཁྱེན||
 དཀྱིལ||
 དཀྱིལ་ཁྲོ||
@@ -744,56 +748,57 @@ autoExpandExamples.bo = `
 དགའ་བ||
 དགའ་བཞི||
 དགའ་ཚོར||
-དགའ་འཁྱིལ||
+དགའ་འཁྱིལ||*
 དགུ|nine|›§ku˩˧|dgu
 དགུ་གཏོར||
 དགུ་བཅུ|ninety|›§kup̚˩˧.§§›§t͡ɕu˥|dgu bcu
 དགུན||
-དགུན་ཀ||
-དགེ||
+དགུན་ཀ|winter|kuŋ˩˨.kʰə˥˥|dgun ka
+དགེ||*
 དགེ་བ||
-དགེ་བཤེས||
+དགེ་བཤེས|geshe|ke˩˨.ɕe˥˨|dge bshes
 དགེ་འདུན||
 དགེ་འདུན་|buddhist community|–§ɡe§ §n§y§n|dge-'dun
-དགེ་རྒན||
-དགེ་ལུགས་པ||
-དགེ་སློང||
-དགེ་སློང་མ||
+དགེ་རྒན|teacher, tutor|ke˩˨.kɛ̃˥˥|dge rgan
+དགེ་ལུགས་པ|Gelug|ki˩˨.lu˥˨.pəˑ|dge lugs pa
+དགེ་སློང|bhikkhu (full ordained monk)|ke˩˨.loŋ˥˥|dge slong
+དགེ་སློང་མ|nun|ke˩˨.loŋ˥˥ ma˩˨|dge slong ma
 དགོང་དྲོ||
 དགོང་མོ||
-དགོངས་དག||
+དགོངས་དག|sorry, excuse me|koŋ˩˧˨.taˑ|dgongs dag
 དགོངས་པ||
 དགོངས་རྒྱུད||
-དགོན་པ||
+དགོན་པ|monastery, abbey|kom˩˨.pa˥˥|dgon pa
 དགོམ་པ||
-དགོས||
+དགོས|to want to|ko˩˨|dgos
 དགོས་པ||
-དགྲ་བཅོམ་པ||
-དགྲ་བོ||
-དང|and||dang
-དང་པོ||
-དངུལ||
-དངུལ་ཁང||
+དགྲ་བཅོམ་པ||*
+དགྲ་བོ|enemy|ʈ͡ʂa˩˨.wo˥˥|dgra bo
+དང|and|tʰaŋ˩˨|dang
+དང་པོ|first|tʰaŋ˩˨.po˥˥|dang po
+དངུལ|silver, money|ŋyː˥˥|dngul
+དངུལ་ཁང|bank (finance)|ŋyː˥˥.kʰaŋ˥˥|dngul khang
 དངུལ་ཁུག||
 དངུལ་བུན་གཏོང་མཁན||
 དངུལ་རྩིས||
-དངོས||
-དངོས་གྲུབ||
+དངོས||*
+དངོས་གྲུབ||*
 དངོས་དང་དངོས་མེད||
 དངོས་པོ||
 དད་པ|faith|–§tɛː˩˧˨.§§paˑ|dad pa
 དཔག་ཏུ་མེད་པ||
-དཔང་པོ||
+དཔང་པོ|witness|paŋ˥˥.poˑ|dpang po
 དཔའ་དམ||
 དཔའ་བོ||
-དཔར་ཆས||
+དཔར་ཆས||*
 དཔལ་བེའུ||
-དཔལ་ལྡན||
-དཔུང་པ||
+དཔལ་ལྡན|glorious, illustrious|pan˥˥.tɛ̃˥˥|dpal ldan
+དཔུང་པ|shoulder|puŋ˥˥.pəˑ/puŋ˥˥.pa˥˨|dpung pa
+དཔུང་མགོ|shoulder|puŋ˥˥.koˑ|dpung mgo
 དཔེ་ཆ|book, scripture|–§pé§.§t͡ɕʰá|dpe cha
-དཔེ་མཛོད||
+དཔེ་མཛོད|library|pẽ˥˥.t͡søː˥˨|dpe mdzod
 དཔེ་མཛོད་ཁང||
-དཔེ་སྐྲུན||
+དཔེ་སྐྲུན||*
 དཔེ་སྒྲོམ||
 དཔོན་ངན||
 དཔྱ་ཁྲལ|tribute|›§t͡ɕá.§§ʈ͡ʂʰɛː§–|dpya khral
@@ -801,18 +806,19 @@ autoExpandExamples.bo = `
 དཔྲལ་བ||
 དབང||
 དབང་ཆ་|power|–§wa§ŋ§§t͡ʃa
-དབང་ཕྱུག||
+དབང་ཕྱུག|Ishvara, lord|wəŋ˥˥.t͡ɕʰu˥˨|dbang phyug
 དབང་ལྡན||
-དབང་སྒྱུར||
-དབང་སྒྱུར་བྱས||
-དབུ||
+དབང་སྒྱུར|to control|waŋ˥˥.kuː(ɹ)ˑ|dbang sgyur
+དབང་སྒྱུར་བྱས||*
+དབུ|head (hon.)|ʔu˥˥/wu˥˥|dbu
+དབུ་ཀླད|brain|ʔu˥˥.lɛː˥˥/wu˥˥.lɛː˥˥|dbu klad
 དབུ་ཅན||
 དབུ་མེད|cursive script style|–§u.§§me§‹
 དབུགས་རྒྱག|to breathe||dbugs rgyag
-དབུས||
-དབུས་གཙང||
+དབུས|middle, centre|ʔyː˥˨|dbus
+དབུས་གཙང|Ü-Tsang|ʔyː˥˥.t͡saŋ˥˥|dbus gtsang
 དབུས་ཨ་ཧྥེ་རི་ཁན་རི་པཔ་ལིཀ||
-དབེན་པ||
+དབེན་པ|solitude, seclusion|ʔem˥˥.paˑ|dben pa
 དབྱངས|vowel|ja˥˩§ŋ|dbyangs
 དབྱངས་ཅན||
 དབྱངས་ཅན་མ||
@@ -821,91 +827,97 @@ autoExpandExamples.bo = `
 དབྱར||
 དབྱར་ཀ||
 དབྱར་ཁ|summer|›§jaː˥.§‹§kʰa˥|dbyar kha
-དབྱར་རྩྭ་དགུན་འབུ||
-དབྱི་སི་ལམ་ཆོས་ལུགས||
+དབྱར་རྩྭ་དགུན་འབུ|caterpilla fungus|jaː˥˥.t͡sa˥˥ kỹ˩˨.pu˥˥|dbyar rtswa dgun 'bu
+དབྱི་སི་ལམ་ཆོས་ལུགས|Islam|jiˑ.siˑ.lamˑ t͡ɕʰøːˑ.lu(k̚)ˀˑ|dbyi si lam chos lugs
 དབྱིངས||
-དབྱིན་གོ||
-དབྱིན་ཇི||
+དབྱིན་གོ|Great Britain|jĩ˥˥.ko˥˥|dbyin go
+དབྱིན་ཇི|Englishman|jĩ˥˥.t͡ɕi˥˥|dbyin ji
 དབྱིན་ཇི་མཉམ་འབྲེལ||
-དབྱིན་ཇིའི་སྐད||
+དབྱིན་ཇིའི་སྐད|English (lang.)|jĩ˥˥.t͡ɕiː˥˥ kɛː˥˨|dbyin ji'i skad
 དབྱིན་ཡུལ||
 དམ་པ|holy, pure|›§tʰa˩˧§m.§pa˥˩|dam pa
 དམག|war|›§maː˥˩§–|dmag
-དམག་དཔུང||
-དམག་མི||
-དམག་འཁྲུག||
+དམག་དཔུང||*
+དམག་མི||*
+དམག་འཁྲུག|war|mə(k̚)ˀ˥˥.ʈ͡ʂʰu˥˨|dmag 'khrug
 དམངས|populace|–§ma˥˩§ŋ§–|dmangs
-དམངས་གཙོ||
+དམངས་ཁྲོད|common people, folk|maŋ˥˥.ʈ͡ʂøː˥˨|dmangs khrod
+དམངས་གཙོ|democracy|maŋ˥˥.t͡so˥˥|dmangs gtso
 དམན་པ|low; poor|›§mɛ̃˥˩.§‹§§paˑ|dman pa
+དམར་པོ|red|maː˥˥.mo˥˥/maː˥˥.po˥˥|dmar po
 དམའ་འབེབ་བྱས||
 དམར||
 དམར་པོ|red||dmar po
 དམར་པོའི་རིང་ལུགས||
 དམར་ཚ||
-དམར་སྐྱ||
+དམར་སྐྱ|pink|maː(ɹ)˥˥.caˑ|dmar skya
 དམར་ཧྲང་བ||
 དར|silk|tʰaː˩˧§(ɹ)|dar
 དར་ཆ|flag|tʰaː˩˧§(ɹ).§§t͡ɕaˑ|dar cha
 དར་བ||
 དར་མདོ||
 དར་ཡབ||
-དར་རྩེ་མདོ||
-དར་ལྕོག||
+དར་རྩེ་མདོ|Tachienlu|tʰaː(ɹ)˩˨ t͡se˥˥ to˩˨|dar rtse mdo
+དར་ལྕོག|prayer flag|tʰaː(ɹ)˩˨.t͡ɕo(k̚)ˀ˥˨|dar lcog
 དར་ཤོག||
 དར་སྐུད||
 དི་རིང||
 དིམ||
-དུ་བ|smoke||du ba
-དུག||
-དུག་སྦྲང||
+དུ་བ|smoke|tʰʊː˩˨|du ba
+དུག|poison, toxin|tʰu˩˧˨|dug
+དུག་སྦྲང||*
 དུག་སློག་སྐམ་ཡག་འཕྲུལ་འཁོར||
-དུང་དཀར||
-དུང་ཕྱུར||
-དུང་སྒོར||
+དུང་དཀར||*
+དུང་ཕྱུར|hundred million|tʰuŋ˩˨.t͡ɕʰuː(ɹ)˥˥|dung phyur
+དུང་སྒོར||*
+དུར་ཁྲོད|sky burial site|tʰuː(ɹ)˩˨.ʈ͡ʂøː˥˨|dur khrod
+དུས་དེབ|magazine|tʰyː˩˨.tep̚ˑ|dus deb
 དུད་ཆང||
 དུས་གསུམ||
 དུས་ཆེན||
 དུས་ཚོད་བཟོས||
-དེ|that||de
+དེ|that||*
 དེ་བཞིན་གཤེགས་པ||
 དེ་ལ|there||de la
 དེ་སྒྲ||
 དེན་མག||
-དེབ||
+དེབ|book, notebook|tʰep̚˩˧˨|deb
+དེབ་ཆུང|brochure, pamphlet|tʰep̚˩˨.t͡ɕuŋˑ|deb chung
 དེབ་ཁང||
 དེབ་གཏེར||
-དེབ་ཐེར||
+དེབ་ཐེར|annals, records|tʰep̚˩˨.tʰeː˥˥|deb ther
 དེབ་སྒྲོམ||
 དེར|there||der
 དོ་པོ||
-དོམ||
+དོམ|bear|tʰom˩˨|dom
 དོམ་ཁྲ||
 དྭང་བླངས་བྱས||
 དྭང་བླངས་བྱེད་མཁན||
-དྭངས་ལྕགས||
+དྭངས་ལྕགས|steel|tʰaŋ˩˨.t͡ɕaː˥˨|dwangs lcags
 དྲ་བ||
 དྲག་ཆར||
 དྲན||
 དྲན་གསོའི་རྟེན||
-དྲན་པ||
+དྲན་པ||*
 དྲི་ངན་སངས་སྨན||
 དྲི་ཕོག||
 དྲི་མ|aroma, scent|ʈ͡ʂi˩˧.§§məˑ|dri ma
 དྲིལ་བུ||
-དྲུག||
-དྲུག་ཅུ||
-དྲུག་དཀར||
-དྲུང་ཡིག||
+དྲུག|six|ʈ͡ʂʰu˩˧˨|drug
+དྲུག་ཅུ|sixty|ʈ͡ʂʰu(k̚)ˀ˩˨.t͡ɕu˥˥|drug cu
+དྲུག་དཀར||*
+དྲུང་ཡིག|secretary, clerk|ʈ͡ʂʰuŋ˩˨.ji(k̚)ˀ˥˥|drung yig
 དྲེད་མོང||
 དྲེལ||
 དྲོ་གྲང||
 དྲོ་པོ|warm||dro po
-དྲོ་ཚད||
+དྲོ་ཚད|temperature|ʈ͡ʂo˩˨.t͡sɛː˥˨|dro tshad
+དྲོད་ཚད|temperature|ʈ͡ʂøː˩˧˨.t͡sɛː˥˨|drod tshad
 དྷེའི་ལ་ཝར||
 ན་གོར་མོ||
 ན་ནིང||
 ན་བ||
-ན་བཟའ||
+ན་བཟའ||*
 ན་མི་བྷི་ཡ||
 ན་ཚ||
 ན་ཟུག་འཇགས་ཡག་གི་སྨན||
@@ -913,29 +925,31 @@ autoExpandExamples.bo = `
 ན་རོ||
 ནག||
 ནག་པང||
-ནག་པོ|black||nag po
+ནག་པོ|black|na˩˨.ko˥˥|nag po
 ནག་ཚོང||
-ནགས||
+ནགས|forest|na˩˧˨|nags
 ནགས་ཐོན||
 ནགས་བྱི||
 ནགས་ཚལ||
 ནགས་རི||
 ནང|inside, room|na§ŋ|nang
-ནང་པ||
+ནང་པ|Buddhist|naŋ˩˨.pa˥˥|nang pa
+ནང་བཞིན|like, as if|naŋ˩˧˨.ɕĩˑ|nang bzhin
 ནང་བཞིན||
-ནང་བསྟན||
+ནང་བསྟན|Buddhism|naŋ˩˨.tɛ̃˥˥|nang bstan
 ནང་ལ|in||nang la
 ནང་སོག||
-ནད||
+ནད|disease, sickness|nɛː˩˧˨|nad
 ནད་གཡོག|nurse|nɛː˩˧.§‹§›§jo§(k̚)ˀ˥˩|nad g.yog
+ནད་པ|sick person|nɛː˩˨.paˑ|nad pa
 ནད་མེད||
 ནད་འབུ||
 ནད་འབུ་ཕྲ་རབ||
-ནད་ཡམས||
-ནམ་ཡང||
+ནད་ཡམས|epidemic, plague|nɛː˩˧˨.jamˑ|nad yams
+ནམ་ཡང|forever|nam˩˨.jaŋˑ|nam yang
 ནའུ་ཀ་ཅོ་ཊི||
 ནའུ་རུ||
-ནས||
+ནས|highland barley|nɛː˩˧˨|nas
 ནི||
 ནི་ཀ་ར་གུ་ཝ||
 ནི་ཇར||
@@ -944,7 +958,7 @@ autoExpandExamples.bo = `
 ནུ་མ||
 ནུ་རྡོག||
 ནུ་སྦྱིན་མ་ཚབ||
-ནུབ||
+ནུབ|west|nu˩˧˨/nup̚˩˧˨|nub
 ནུབ་པ||
 ནུབ་ས་ཧ་ར||
 ནེ་བ་ད||
@@ -955,8 +969,8 @@ autoExpandExamples.bo = `
 ནེའུ་ཧམ་ཕུ་ཤར||
 ནོ་ཡོན||
 ནོར་ཝེ||
-ནོར་འཁྲུལ||
-ནོར་སྐལ||
+ནོར་འཁྲུལ|mistake|non˩˧˨.ʈ͡ʂyːˑ|nor 'khrul
+ནོར་སྐལ|inheritance|noː(ɹ)˩˧˨.kɛːˑ|nor skal
 པ་ཀི་སི་ཐན||
 པ་ཀིར||
 པ་ན་མ||
@@ -970,20 +984,21 @@ autoExpandExamples.bo = `
 པགས་པ|skin||pags pa
 པང་ལེབ||
 པད||
-པད་མ|lotus|pɛ́ː§‹.§§maˑ
+པད་མ|lotus|pɛ́ː§‹.§§maˑ|pad ma
 པད་མ་དབྱངས་ཅན||
-པད་ཚལ||
-པདྨ||
-པན་ཆེན་བླ་མ||
+པད་ཚལ|bok choy|pɛː˥˥.t͡sʰɛː˥˥|pad tshal
+པདྨ|lotus flower|pɛma|pdma
+པན་ཆེན་བླ་མ|Panchen Lama|pɛ̃˥˥.t͡ɕʰẽ˥˥ la˥˥.ma˥˥|pan chen bla ma
 པན་ནི་སི་ལིན||
 པར་ཁང||
-པར་ཆས||
-པས||
-པི་ཝང||
+པར་ཆས||*
+པར་སྐྲུན|publishing|paː(ɹ)˥˥.ʈ͡ʂø̃ˑ|par skrun
+པས|question marker|pɛː˥˨|pas
+པི་ཝང|two-stringed fiddle|pi˥˥.waŋ˥˥|pi wang
 པི་སི་ཏོབ||
 པིང་ཀྱུ་མ||
 པིང་པང||
-པིར||
+པིར|paintbrush|piː(ɹ)˥˥|pir
 པུ་གུ||
 པུ་ར་ག་རི་ཡ||
 པུ་རུ་ཟི་ལི་ཡ||
@@ -1000,17 +1015,20 @@ autoExpandExamples.bo = `
 པེ་རུ||
 པེར་ཅིན||
 པོ་ཅུ་གྷལ||
-པོ་ཏ་ལ||
-པོ་ཏི||
-པོ་ལོ||
-པོད||
+པོ་ཏ་ལ|Potala Palace|po˥˥.ta˥˥.laˑ|po ta la
+པོ་ཏི|volume, book|pu˥˥.ti˥˥|po ti
+པོ་ལོ|ball|pʰo˥˥.lo˥˥|po lo
+པོད|volume, book|pøː˥˨|pod
 པྲ་ཚིལ||
 ཕ་གི|that||pha gi
 ཕ་གིར|there||pha gir
-ཕ་མ||
+ཕ་མ||*
 ཕ་རི||
 ཕ་ལགས||
 ཕག|pig|›§pʰa˥˩|phag
+ཕལ་སྐད|vernacular|pʰɛː˥˥.kɛː˥˨|phal skad
+ཕུ་ཐག|valley depth|pʰu˥˥.ta(k̚)ˀ˥˨/pʰu˥˥.tʰa(k̚)ˀ˥˨|phu thag
+ཕུ་བོ|older brother|pʰu˥˥.woˑ|phu bo
 ཕག་པ||
 ཕག་འདོ||
 ཕད་གོག||
@@ -1021,45 +1039,47 @@ autoExpandExamples.bo = `
 ཕུ་རྒྱག|to blow||phu rgyag
 ཕུད||
 ཕུར་བ||
-ཕུར་བུ||
+ཕུར་བུ|Thursday|pʰu˥˥.pu˥˥|phur bu
 ཕུར་མདེལ||
 ཕེན་སུལ་ཝེ་ནའི་ཡ||
 ཕེབས་ས||
 ཕོ|man, male|pʰó|pho
-ཕོ་ཉ||
+ཕོ་ཉ|angel|pʰo˥˥.ȵaˑ|pho nya
+ཕོ་ཉ་མོ|maidservant|pʰo˥˥.ȵa˩˨.moˑ|pho nya mo
 ཕོ་ཕག||
 ཕོ་བ་རིལ||
-ཕོ་བྲང||
+ཕོ་བྲང|palace, mansion|pʰo˥˥.ʈ͡ʂaŋ˥˥|pho brang
 ཕོ་ལན||
 ཕོ་ཧྲང||
 ཕོང་ཡང||
-ཕོར་པ||
+ཕོར་པ||*
 ཕྱ||
 ཕྱག|hand, arm|t͡ɕʰâ§–|phyag
+ཕྱག་ན་རྡོ་རྗེ|Vajrapāṇi|t͡ɕʰa˥˨.na˥˥.to˩˨.t͡ɕe˥˥|phyag na rdo rje
 ཕྱག་འཚལ་ལོ||
 ཕྱག་རྒྱ||
 ཕྱག་སྣག||
 ཕྱགས་མ||
 ཕྱལ་པ||
-ཕྱི||
+ཕྱི|outside, exterior|t͡ɕʰi˥˥|phyi
 ཕྱི་བ||
 ཕྱི་རྒྱལ||
 ཕྱི་རྒྱལ་གྱི་མི||
 ཕྱིང་པ||
 ཕྱིར་སློག་བྱས||
-ཕྱུ་པ||
+ཕྱུ་པ|chuba|t͡ɕʰu˥˥.pə˥˥|phyu pa
 ཕྱུ་ར||
 ཕྱུར་ཕྱུར||
 ཕྱུར་བ||
-ཕྱེ||
-ཕྱེ་མ་ལེབ||
+ཕྱེ||*
+ཕྱེ་མ་ལེབ|butterfly|t͡ɕʰe˥˥.ma˥˥.lep̚˥˨|phye ma leb
 ཕྱེད་ཀ||
 ཕྱེན||
 ཕྲ||
 ཕྲ་པོ|narrow, thin||phra po
 ཕྲག་གོང||
 ཕྲག་པ|shoulder|ʈ͡ʂʰa˥§(k̚)ˀ.§§pa˥|phrag pa
-ཕྲུ་གུ|child||phru gu
+ཕྲུ་གུ|child|ʈ͡ʂʰu˥˥.kuˑ|phru gu
 ཕྲུག||
 ཕྲེང||
 བ་དམ||
@@ -1068,23 +1088,28 @@ autoExpandExamples.bo = `
 བ་ཧ་མཱ་སི||
 བཀག་གཅུས||
 བཀབ་སྦྱར||
-བཀའ||
-བཀའ་བརྒྱུད||
-བཀའ་བསྒོ||
-བཀའ་བློན||
-བཀའ་ཤག||
+བཀའ|precept|ka˥˥|bka'
+བཀའ་གྲོས|conference|ka˥˥.ʈ͡ʂøː˥˨|bka' gros
+བཀའ་དྲིན|kindness|kə˥˥.ʈ͡ʂĩˑ|bka' drin
+བཀའ་དྲིན་ཆེ|thank you|kə˥˥.ʈ͡ʂĩˑ.t͡sʰe˥˥|bka' drin che
+བཀའ་བཀོད|proclamation, decree|ka˥˥.køː˥˨|bka' bkod
+བཀའ་བརྒྱུད|Kagyu|ka˥˥.cyː˩˧˨|bka' brgyud
+བཀའ་བསྒོ||*
+བཀའ་བློན||*
+བཀའ་མོལ|conversation|ka˥˥.møːˑ|bka' mol
+བཀའ་ཤག|Kashag|ka˥˥.ɕa˥˨|bka' shag
 བཀོལ་གཅོད||
 བཀོལ་སྤྱོད||
 བཀྱག|straight||bkyag
-བཀྲ་ཤིས||
-བཀྲ་ཤིས་བདེ་ལེགས||
+བཀྲ་ཤིས|good luck|ʈ͡ʂə˥˥.ɕi˥˨|bkra shis
+བཀྲ་ཤིས་བདེ་ལེགས|tashi delek|ʈ͡ʂə˥˥.ɕi˥˨.te˩˨.le˥˨|bkra shis bde legs
 བཀྲུ་བ||
 བག་ལེབ||
 བགོད|to divide|›§kø̌ː§‹|bgod
 བགོད་པ||
 བང་ཁྲི||
 བཅད་པ|to cut||bchad pa
-བཅུ||
+བཅུ|ten|t͡ɕu˥˥|bcu
 བཅུ་གཅིག||
 བཅུ་གཉིས||
 བཅུ་གསུམ||
@@ -1099,82 +1124,84 @@ autoExpandExamples.bo = `
 བཏགས||
 བཏང||
 བཏུབས་སྟན||
-བདག||
-བདག་པོ||
+བདག|I, self|ta˩˧˨|bdag
+བདག་པོ|master|ta(k̚)ˀ˩˨ po˥˨|bdag po
 བདག་མེད||
 བདའ་བ||
-བདུག་སྤོས||
-བདུད||
-བདུན||
-བདུན་|seven|–§tỹ̀§‹
-བདུན་ཅུ||
-བདུན་ཕྲག||
+བདུག་སྤོས||*
+བདུད|demon|tyː˩˧˨|bdud
+བདུན|seven|–§tỹ̀§‹|bdun
+བདུན་ཅུ|seventy|tỹ˩˨.t͡ɕu˥˥|bdun cu
+བདུན་ཕྲག|week|tỹ˩˨.ʈ͡ʂʰa˥˨|bdun phrag
 བདེ||
-བདེ་ཐང||
-བདེ་བ||
+བདེ་ཐང|plain, flatlands|te˩˨.tʰaŋ˥˥|bde thang
+བདེ་བ|happiness|te˩˨.wa˥˥|bde ba
 བདེ་བ་ཅན||
 བདེ་འབྱུང||
-བདེ་ལེགས||
-བདེ་སྐྱིད||
-བབས་ཆུ||
+བདེ་ལེགས|bliss|te˩˨.le˥˨|bde legs
+བདེ་སྐྱིད|happiness|te˩˨.ci˥˨|bde skyid
+བདེན་པ|true, real|tẽ˩˨.paˑ|bden pa
+བབས་ཆུ|waterfall|pʰap̚˩˧˨.t͡ɕʰuˑ|babs chu
 བཙན་གནོན་བྱས||
-བཙན་པོ||
+བཙན་པོ|strong, violent|t͡sɛ̃˥˥.po˥˥|btsan po
 བཙན་བྱོལ་བ||
 བཙན་འགོག་བྱས||
 བཙན་འཛུལ||
 བཙན་འཛུལ་བྱས||
 བཙན་རྒོལ་གསང་ཚོགས||
 བཙབས||
-བཙལ||
+བཙལ|to look for|t͡sɛː˥˥|btsal
 བཙེམས||
 བཙོག་པ|dirty||btsog pa
-བཙོང||
+བཙོང|onion|t͡soŋ˥˥|btsong
 བཙོངས||
-བཙོད||
+བཙོད||*
 བཙོན་ཁང||
-བཙོན་པ||
-བཞག||
-བཞད||
+བཙོན་པ|prisoner|t͡sø̃˥˥.pa˥˥|btson pa
+བཞག|to put, set|ɕa(k̚)ˀ˩˧˨|bzhag
+བཞད|to laugh, smile|ɕɛː˩˧˨|bzhad
+ཁམ|piece|kʰá§m|kham
 བཞད་པ||
 བཞར||
-བཞི|four||bzhi
-བཞི་བཅུ||
-བཞིན||
+བཞི|four|ɕi˩˨|bzhi
+བཞི་བཅུ|forty|ɕip̚˩˨.t͡ɕu˥˥|bzhi bcu
+བཞིན|image|ɕĩ˩˧˨|bzhin
 བཞེས||
 བཞེས་ཐག||
 བཟང|righteous, good|–§sa˩˧˨§ŋ|bzang
-བཟང་ངན||
+བཟང་ངན|quality|saŋ˩˨.ŋɛ̃ˑ|bzang ngan
 བཟང་ཞན||
-བཟོ||
-བཟོ་གྲྭ||
-བཟོ་པ||
-བཟླས་བརྗོད||
+བཟོ|to make, construct|so˩˧˨|bzo
+བཟོ་གྲྭ|factory|so˩˨.ʈ͡ʂaˑ|bzo grwa
+བཟོ་པ|craftsman|o˩˨.paˑ|bzo pa
+བཟླས་བརྗོད||*
 བར་གནས་རྡུལ་ཕྲན||
-བར་དོ||
+བར་དོ|limbo|pʰaː(ɹ)˩˨.to˥˥|bar do
 བར་བ་ཌོ་སི||
 བར་མི||
 བར་མི་མཚམས་རྡོ||
-བརྒྱ||
-བརྒྱད||
-བརྒྱད་ཅུ||
-བརྒྱུད||
+བརྒྱ|hundred|ca˩˨|brgya
+བརྒྱད|eight|cɛː˩˧˨|brgyad
+བརྒྱད་ཅུ|eighty|cɛː˩˨.t͡ɕu˥˥|brgyad cu
+བརྒྱུད|to pass through stages|cyː˩˧˨|brgyud
+བརྗེད|to forget|t͡ɕeː˩˧˨|brjed
 བརྒྱུད་པ||
 བརྒྱུད་བརྒྱུགས||
 བརྗེད་ངས||
-བརྙན||
+བརྙན|image, reflection|ȵɛ̃˥˥|brnyan
 བརྙན་པར||
-བརྙན་འཕྲིན||
-བརྡ||
+བརྙན་འཕྲིན|television|ȵɛ̃˥˥.ʈ͡ʂʰĩ˥˥|brnyan 'phrin
+བརྡ|sign, signal|ta˩˨|brda
 བརྡ་དཀྲོག||
-བརྡ་རྙིང||
-བརྡ་སྤྲོད་ཀྱི་གཞུང||
+བརྡ་རྙིང|archaic word|tə˩˨.ȵiŋ˥˥|brda rnying
+བརྡ་སྤྲོད་ཀྱི་གཞུང||*
 བརྡ་སྤྲོད་རིག་གནས||
 བརྩེ་བ||
-བརྩོན་འགྲུས||
+བརྩོན་འགྲུས|effort, diligence|t͡sỹ˥˥.ʈ͡ʂyː˥˨|brtson 'grus
 བརླ||
-བརླ་ཤ||
+བརླ་ཤ|thigh|lɛː˥˥.ɕa˥˥|brla sha
 བརླགས|to lose, misplace||brlags
-བལ||
+བལ|wool|pʰɛː˩˨|bal
 བལ་པོ||
 བལ་ཡུལ||
 བལ་སོ||
@@ -1190,29 +1217,31 @@ autoExpandExamples.bo = `
 བསམ་གཏན||
 བསམ་པའི་སྟོབས||
 བསམ་བློ་གཏོང་བ|to think||bsam blo gtong ba
-བསམ་ཚུལ||
+བསམ་བློ|thought, idea|sam˥˥.loˑ|bsam blo
+བསམ་བློ་ཀུན་སྤྱོད|moral education|sam˥˥.loˑ kỹ˥˥.t͡ɕøː˥˨|bsam blo kun spyod
+བསམ་ཚུལ|opinion|səm˥˥.t͡syːˑ|bsam tshul
 བསམ་ཡས||
 བསིལ་སྨན||
-བསེ་རུ||
+བསེ་རུ||*
 བསེའུ||
-བསོད་ནམས||
-བསོད་ནམས་དཔལ་འཛོམས||
+བསོད་ནམས|merit, virtue|so˥˥.nam˥˨/søː˥˥.nam˥˨|bsod nams
+བསོད་ནམས་དཔལ་འཛོམས|cilantro, coriander|so˥˥.naː˥˨.pɛ̃˥˨.t͡somˑ/søː˥˥.namˑ.pɛ̃˥˨.t͡somˑ|bsod nams dpal 'dzoms
 བསྐྲངས||
 བསྒྲུགས||
 བསྒྲུབས་|established|–§ɖɹú§b§–
-བསྟན་པ||
-བསྟན་འཛིན||
+བསྟན་པ|doctrine|tɛ̃˥˥.pa˥˥|bstan pa
+བསྟན་འཛིན|adherent|tɛ̃˥˥.t͡sĩ˥˥|bstan 'dzin
 བསྡད|to sit||bsdad
 བསྡམ|to tie||bsdam
-བསྣན་ཚིག||
+བསྣན་ཚིག|adverb|nɛ̃˥˥.t͡sʰi˥˨|bsnan tshig
 བི་ཆུ||
-བུ|child|pʰǔ|bu
-བུ་མོ||
-བུ་རམ||
+བུ|son|pʰǔ|bu
+བུ་མོ|daughter|pʰo˩˨.mo˥˥/pʰu˩˨.mo˥˥|bu mo
+བུ་རམ|molasses pill|pʰu˩˧˨.ʐamˑ|bu ram
 བུ་རུན་ཌི||
 བུང་བ||
-བུད་མེད||
-བུམ་པ||
+བུད་མེད|woman|pʰyː˩˧˨.meː˥˨|bud med
+བུམ་པ|treasure urn|pʰum˩˨.pa˥˥|bum pa
 བུར་ཀི་ན་ཕ་སོ||
 བུལ་ཏོག||
 བེ་ནིན||
@@ -1221,68 +1250,70 @@ autoExpandExamples.bo = `
 བོ་ནོ་བོ||
 བོ་སེ་ཊོན||
 བོང་བུ||
-བོད||
-བོད་ཇ||
-བོད་པ||
-བོད་བརྒྱུད་ནང་བསྟན||
+བོད|Tibet|pʰøː˩˧˨|bod
+བོད་ཇ|butter tea|pʰøː˩˨.t͡ɕa˥˥|bod ja
+བོད་པ|Tibetan person|pʰøː˩˨.pa˥˥|bod pa
+བོད་བརྒྱུད་ནང་བསྟན||*
 བོད་མི||
-བོད་ཡིག||
+བོད་ཡིག|Tibetan script|pʰyː˩˨.ji˥˨|bod yig
 བོད་ཡུལ||
-བོད་རང་སྐྱོང་ལྗོངས||
-བོད་ལྗོངས||
-བོད་སྐད|Tibetan||böké
+བོད་རང་སྐྱོང་ལྗོངས|Tibet Autonomous Region|pʰøː˩˧˨ ʐaŋ˩˨.coŋ˥˨ t͡ɕoŋ˩˧˨|bod rang skyong ljongs
+བོད་ལྗོངས|Central Tibet|pʰø̃˩˨.t͡ɕoŋ˥˨|bod ljongs
+བོད་སྐད|Tibetan language|pʰøː˩˨.kɛː˥˨|bod skad
 བོད་སྐད་དུ||
-བོན||
-བོན་པོ||
+བོན|Bon religion|pʰø̃˩˨|bon
+བོན་པོ|Bon practitioner|pʰø̃˩˨.po˥˥|bon po
 བྱ|bird|t͡ɕʰa˩˧|bya
-བྱ་གཏོར||
+བྱ་གཏོར|sky burial|t͡ɕʰa˩˨.toː(ɹ)˥˨|bya gtor
 བྱ་དེ||
 བྱ་མ་བྱི||
 བྱ་མོ||
-བྱ་ཚིག||
+བྱ་ཚིག|verb|t͡ɕʰə˩˨.t͡sʰi˥˨|bya tshig
 བྱ་འཕིར||
 བྱ་འབྲས||
-བྱ་རྒོད||
+བྱ་རྒོད|vulture|t͡ɕʰa˩˨.køː˩˧˨|bya rgod
 བྱ་ཤ||
 བྱ་སྒྲོ||
 བྱ་སྤུ||
-བྱང||
+བྱང|north|t͡ɕʰaŋ˩˨|byang
 བྱང་ཀོ་རི་ཡ||
-བྱང་ཆུབ||
+བྱང་ཆུབ|enlightenment|t͡ɕʰaŋ˩˨.t͡ɕʰu˥˨|byang chub
 བྱང་ཆུབ་སེམས་དཔའ||
-བྱང་ཐང||
-བྱང་བུ||
+བྱང་ཐང|Changtang|t͡ɕʰaŋ˩˨.tʰaŋ˥˥|byang thang
+བྱང་བུ||*
 བྱང་སྣེའི་དོམ་དཀར||
-བྱམས་པ||
-བྱམས་བརྩེ||
-བྱི་བ||
-བྱི་རིལ||
+བྱམས་པ|kindness|t͡ɕʰam˩˨ pa˥˥|byams pa
+བྱམས་བརྩེ|compassion|t͡ɕʰam˩˨.tse˥˨|byams brtse
+བྱི་བ|mouse|t͡ɕʰi˩˨.wə˥˥|byi ba
+བྱི་རིལ|candy|t͡sʰi˩˧˨.ʐiːˑ|byi ril
 བྱི་ལ་དོམ་ཆུང||
 བྱི་ལོང||
 བྱུ་རུ||
 བྱུང||
 བྱུང་འཛིན||
 བྱེ||
-བྱེ་ཐང||
-བྱེ་བ||
+བྱེ་ཐང|desert|t͡ɕʰe˩˨ tʰaŋ˥˥|bye thang
+བྱེ་བ|ten million|t͡ɕʰi˩˨.wə˥˥|bye ba
 བྱེ་མ|sand|t͡ɕʰe˩˧˨.§§ma˥|bye ma
 བྱེ་རྡོ||
-བྱེད||
+བྱེད|to do|t͡ɕʰe˩˧˨|byed
+བྲ་བོ|buckwheat|ʈ͡ʂʰao˩˨|bra bo
 བྱེད་པ||
 བྲག་ཚྭ||
-བྲན||
-བྲན་གཡོག||
+བྲན||*
+བྲན་གཡོག|slave|ʈ͡ʂʰɛ̃˩˨.jo˥˨|bran g.yog
 བྲོ||
 བྲོ་བ་ཆེན་པོ||
-བླ||
+བླ|soul, spirit|la˥˥|bla
 བླ་གཡུ||
-བླ་མ||
+བླ་མ|lama|la˥˥.ma˥˥|bla ma
 བླ་རི||
 བླུགས||
-བློ||
-བློ་ཁོག||
-བློ་བཟང||
-བློ་མཐུན||
+བློ|mind, awareness|lo˥˥|blo
+བློ་ཁོག|courage|lo˥˥.kʰo˥˨|blo khog
+བློ་གྲོས|wisdom|lo˥˥.ʈ͡ʂøː˥˨|blo gros
+བློ་བཟང|Lobsang (name)|lo˥˥.saŋ˩˧˨|blo bzang
+བློ་མཐུན|comrade|lu˥˥.tʰỹ˥˥|blo mthun
 བྷ་ག||
 བྷང་ལ་རྡེ་ཤུ||
 བྷར་མ||
@@ -1618,7 +1649,7 @@ autoExpandExamples.bo = `
 ཟླ||
 ཟླ་དང་པོ||
 ཟླ་བ|moon|ta˩˧.§§wa˥|zla ba
-ཟླ་བ་གཉིས་པ||
+ཟླ་བ་གཉིས་པ||*
 ཟླ་བ་གསུམ་པ||
 ཟླ་བ་དགུ་པ||
 ཟླ་བ་དང་པོ||
@@ -1649,7 +1680,7 @@ autoExpandExamples.bo = `
 འཁྲུ་འཁོར||
 འཁྲུ་ཡག་འཕྲུལ་འཁོར||
 འཁྲུངས་སྐར||
-འཁྲོལ||
+འཁྲོལ|to play (music)|ʈ͡ʂøː˥˥|'khrol
 འགོ་པ||
 འགོག||
 འགོག་པ||
@@ -2556,7 +2587,7 @@ autoExpandExamples.bo = `
 སྒྲིལ||
 སྒྲིལ་བ||
 སྒྲུང||
-སྒྲུང་གཏམ||
+སྒྲུང་གཏམ|conversation, news|tam˥˥|gtam
 སྒྲུབ||
 སྒྲུབ་ཐབས||
 སྒྲུབ་པ||
@@ -2852,7 +2883,8 @@ autoExpandExamples.bo = `
 ེའུ||
 ལྷ་སའི་སྐད་|Lhasa dialect||lhaséké
 བཀོད|to create|–§kǿː§–|bkod
-ཀིའུ|hey! (calling over distance)|kíu|ki'u
+བཀོད་པ|design, plan|køː˥˥.paˑ|bkod pa
+ཀིའུ|hey! (calling over distance); red garlic|kí§u|ki'u
 ཀུན་སྤྱོད|behaviour, conduct|kỹ́§‹.§§t͡ɕø̂ː§‹
 ཅི|what?|t͡ɕi˥|ci
 ཇ|tea|t͡ɕʰa˩˧|cha
@@ -2868,9 +2900,32 @@ autoExpandExamples.bo = `
 ཟ|to eat|sa˩˧|za
 པ་ལི་ཀུང་ཧྲེ|Paris commune|pa˥§§li˥§§ku˥§ŋ§§ʂe˥|pa li kung hre
 ལྟ་སྲུང|surveillance|ta˥.§§ʂu˥˩§ŋ|lta srung
-
-
-
+གཞོང|basin, bowl|ɕoŋ˩|gzhong
+གཞོང་སྒོར|round basin, trough|ɕoŋ˩˨.koː(ɹ)ˑ|gzhong sgor
+གཞོང་པ|basin, tub, bowl|ɕoŋ˩˨.paˑ|gzhong pa
+གཞོང་དབྱིབས་ས་ཁུལ|basin-shaped area|ɕoŋ˩˨.jip̚ˑ sə˥˥.kyːˑ|gzhong dbyibs sa khul
+གཞོང་བུ|small basin|ɕoŋ˩˨.puˑ|gzhong bu
+གཟུགས་པོ|body|su(k̚)ˀ˩˨.po˥˨/su˩˨.ko˥˨|gzugs po
+གཡས་ཕྱོགས|right-hand side|jɛː˩˧˨.t͡ɕoː˥˨|g.yas phyogs
+གཡིས|mustard seed oil|ji˩˧˨|g.yis
+གཡོན་ཕྱོགས|left-hand side|jø̃˥˥.t͡ɕoː˥˨|g.yon phyogs
+གཤེན|shaman, priest|ɕẽ˥˥|gshen
+གསུང|to say, speak|suŋ˥˥|gsung
+གསུང་བཤད|speech, talk|suŋ˥˥.ɕɛː˥˨|gsung bshad
+གྲུ་གཟིངས|ship, boat|ʈ͡ʂʰu˩˨.siŋˑ|gru gzings
+གླག|eagle|la(k̚)ˀ˥˨|glag
+ཆ་སྙོམས|average|t͡ɕʰa˥˥.ȵom˥˥|cha snyoms
+ཆིག་སྒྲིལ|solidarity, unity|t͡ɕʰi˥˥.ʈ͡ʂiːˑ|chig sgril
+ཆིང་ཡིག|treaty, agreement|t͡ɕʰiŋ˥˥.ji(k̚)ˀ˥˨|ching yig
+ཆོལ་ཁ|region, province|t͡ɕʰøː˥˥.kaˑ|chol kha
+ཆོས་ལུགས་དད་མོས|religious faith|t͡ɕʰyː˥˥.lu(k̚)ˀ˥˨ tʰɛː˩˧˨.møː˥˨|chos lugs dad mos
+ཇོ་ཇོ|older brother|t͡ɕo˥˥.t͡ɕo˥˨|jo jo
+ཐུགས་རྗེ་ཆེ་གནང|thank you very much|tʰu(k̚)ˀ˥˥.t͡ɕeˑ.ʈ͡ʂʰe˥˥.naŋ˥˥|thugs rje che gnang
+ད་ལྟ་ཉིད་དུ|immediately|tʰan˩˨.taˑ ȵi˩˨.tuˑ|da lta nyid du
+དག་ཅི|mint|tʰə(k̚)ˀ˩˨.t͡ɕiˑ|dag ci
+དོ|pair, two|tʰo˩˨|do
+དོ་མོད|tonight|tʰo˩˨.møː˥˨|do mod
+དྭངས་མ་|main, chief|taŋ˩˨.maˑ|dwangs ma
 
 
 
