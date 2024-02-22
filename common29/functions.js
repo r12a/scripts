@@ -1870,6 +1870,10 @@ function replaceStuff (node) {
         var links = node.dataset.links.split(',')
         }
     else links = []
+    if (node.dataset.highlight) {
+        var highlights = node.dataset.highlight.split(',')
+        }
+    else highlights = []
     if (node.dataset.dir) {
         var dirn = ` dir="${ node.dataset.dir }"`
         }
@@ -1934,8 +1938,20 @@ function replaceStuff (node) {
         else indexId = ''
 
         // if (node.dataset.lang) out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
+        /* superceded
         if (node.dataset.lang) out += `<div class="listPair"${ indexId }><span class="listItem" lang="${ node.dataset.lang }"${ dirn }>${ chars[i] }</span>`
         else out += `<div class="listPair"${ indexId }><span class="listItem" lang="${ window.langTag }"${ dirn }>${ chars[i] }</span>`
+        */
+  
+        // capture the listItem markup and add highlight class and special lang if appropriate
+        out += `<div class="listPair"${ indexId }><span class="listItem`
+        if (highlights[i]) out += ` highlight`
+        out += `"`
+        if (node.dataset.lang) out += ` lang="${ node.dataset.lang }"`
+        else out += ` lang="${ window.langTag }"`
+        out += `${ dirn }>${ chars[i] }</span>`
+
+        
         //else out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+window.langTag+'">'+chars[i]+'</span>'
 
 
