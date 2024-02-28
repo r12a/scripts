@@ -129,6 +129,8 @@ if (document.getElementById('tabPlaceholder')) {
     <option value="3">Transcriptions</option>
     </select>&nbsp;&nbsp;
     <button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">Go</button>
+    
+    <button onclick="hideNonIPA()">With IPA</button>
     </p>
 
 
@@ -452,7 +454,7 @@ function findWords (reg) {
 
 		out += '<td>'+itemArray[MEANING]+'</td>'
 
-        out += '<td class="tr">'+itemArray[IPA]+'</td>'
+        out += '<td class="tr ipaCol">'+itemArray[IPA]+'</td>'
 
         // if this is an abjad, check for vowelled alternatives
         if (itemArray[TRANS].match('#')) {
@@ -658,6 +660,45 @@ console.log('entries', entries.length)
 console.log('set',uniqueSet.size)
 	duplicatesMsg(`${ entries.length - uniqueSet.size } duplicates.`)
 	}
+
+
+
+
+
+function hideNonIPA () {
+    // hide table rows that don't have an IPA transcription
+    
+    var count = 0
+    var nodes = document.getElementById('foundItems').querySelectorAll('.ipaCol')
+    for (i=0;i<nodes.length;i++) {
+        if (nodes[i].textContent.trim() == '') {
+            nodes[i].parentNode.style.display = 'none'
+            count++
+            }
+        }
+    
+    var initialCount = parseInt( document.getElementById('found').textContent )
+    document.getElementById('found').textContent = initialCount - count
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
