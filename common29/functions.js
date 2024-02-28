@@ -1822,6 +1822,7 @@ function replaceStuff (node) {
     var showFirst = false
     var noexpansion = false
     var nolist = false
+    var ipaplus = ''
     //console.log(node)
 
     // check whether this is an index line
@@ -1895,6 +1896,7 @@ function replaceStuff (node) {
             out += '</div>'
             }
         //}
+        
 
 /*
 
@@ -1977,10 +1979,16 @@ function replaceStuff (node) {
             out += `<span class="listItemType">${ status }</span>`
             }
 
+        
+        // if the ipaplus class is set, get the ipa+ value (if there is one)
+        if (info.includes('ipa')) {
+            ipaplus = ''
+            if (node.className.includes('ipaplus')) {
+                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaPlus]) ipaplus = window.spreadsheetRows[char][cols.ipaPlus].toLowerCase()
+                }
 
-        if (info.includes('ipa')) { 
         //if (window.spreadsheetRows[char]) console.log('ipa',char,window.spreadsheetRows[char][cols.ipaLoc])
-            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc].toLowerCase()
+            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc].toLowerCase()+ipaplus
             else ch = '&nbsp;'
             if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
             else out += '<span class="listIPA">'+ch.replace(/ /g,' ')+'</span>'
