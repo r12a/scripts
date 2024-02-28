@@ -16,6 +16,9 @@ var collections = [
 { symbol:'ⓟ', desc:'Prefixes', chars:'(ག|ད|བ|མ|འ)' },
 { symbol:'🅢', desc:'Superscripts', chars:'(ར|ལ|ས)' },
 { symbol:'ⓢ', desc:'Subscripts', chars:'(ྱ|ྲ|ླ|ྭ)' },
+{ symbol:'🆂', desc:'Suffixes', chars:'(བ|ད|ག|ས|མ|ན|ང|ར|ལ|འ)' },
+{ symbol:'🆀', desc:'Secondary suffixes', chars:'(ད|ས)' },
+{ symbol:'🅧', desc:'Column 3', chars:'(ག|ཇ|ད|བ|ཛ)' },
 { symbol:'ⓓ', desc:'Extended dependent vowels', chars:'(ྀ|ཻ|ཽ)' },
 { symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
 ]
