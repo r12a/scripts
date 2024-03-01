@@ -1,0 +1,3318 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>XXXX orthography notes</title>
+<meta name="description" content="Summary of the XXXX script.">
+
+<link rel="stylesheet" href="../../shared/style/docs.css">
+<link rel="stylesheet" href="../common29/local.css">
+<link rel="stylesheet" href="xx.css">
+
+<script src="../common29/debug.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
+
+<script src="../../shared/scriptdb/XXXX.js"> </script>
+<script src="xx-details.html"> </script>
+
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common29/functions.js"></script>
+<script src="../common29/transliterate.js"></script>
+<script src="../common29/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
+<script src="../common29/egcode.js"></script>
+<script src="../common29/references.js"></script>
+<script src="refs.js"></script>
+
+<script src="xx-langdata.js"> </script>
+<script src="xx-examples.js"></script>
+<script src="xx-globals.js"></script>
+</head>
+
+<body class="useBlockExamples">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+</header>
+
+
+
+
+<h1>XXXX</h1>
+<div class="orthographyLine">XXXX script orthography notes</div>
+
+
+
+<aside class="sidebar"> 
+<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+<div id="toc"><!-- placeholder --></div>
+
+<div id="fontsetting" class="closed">
+</div>
+</aside>
+
+
+
+
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->1 March, 2024<!-- #EndDate -->
+<span id="versionTop"></span>
+</p>
+
+
+
+
+
+
+
+<div class="intro">
+<p>This page brings together basic information about the XXXX script and its use for the XXXX language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write XXXX using Unicode.</p>
+
+
+<details>
+<summary class="instructions">Referencing this document</summary>
+<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->01-Mar-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+</details>
+
+<p id="usage"></p>
+<script>addPageIntro('Scriptname', 'Languagename', 'iso', 'picker')</script>
+</div>
+
+
+
+
+
+
+
+<section id="howtos">
+<h2>Howtos</h2>
+
+
+
+<section id="template_characterpanels">
+<h3>Character panels</h3>
+
+<p>A typical character panel looks like:</p>
+
+<p><figure class="characterBox auto" data-cols="ipa,trans,transc">𖼁␣𖼋␣𖼏␣𖼟␣𖼢␣𖼸␣𖼯␣𖼛␣𖼅␣𖼑␣𖼕</figure></p>
+
+<p>The source text is:</p>
+<p>&lt;figure class=&quot;characterBox auto&quot; data-cols=&quot;ipa,trans,transc&quot;&gt;𖼁␣𖼋␣𖼏␣𖼟␣𖼢␣𖼸␣𖼯␣𖼛␣𖼅␣𖼑␣𖼕&lt;/figure&gt;</p>
+
+<p><span class="leadin">Class:</span> characterBox produces a yellow background. Other coloured backgrounds are only used occasionally; they include auxiliaryBox (mauve), etc.</p>
+
+<p><span class="leadin">class:small</span> renders the character at 80% size. Good for long lists of conjuncts, list counters, etc.</p>
+
+<p><span class="leadin">class:hideCh</span> renders the character at 20% size with a border. Good for invisible characters that are represented by images (see data-notes).</p>
+
+<p><span class="leadin">class:noexpansion</span> prevents the production of the downwards arrow that shows details for all characters.</p>
+
+<p><span class="leadin">class:nolist</span> prevents production of the arrow that lists all characters.</p>
+
+<p><span class="leadin">class:ipaplus</span> adds the contents of the ipa+ column in the spreadsheet (usually inherent vowel).</p>
+
+<p><span class="leadin">data-ignore</span> a (single) character that should be ignored when listing the hex code point values; typically used for dotted circles.</p>
+
+<p><span class="leadin">data-ipa</span> value is a comma-separated list of ipa transcriptions that will be aligned with the items displayed. You should normally remove 'ipa' from the data-cols field.</p>
+
+<p><span class="leadin">data-translit</span> tbd.</p>
+
+<p><span class="leadin">data-links</span> associates a link with each item.</p>
+
+<p><span class="leadin">data-extra</span> tbd.</p>
+
+<p><span class="leadin">data-notes</span> a comma-separated list of texts that are displayed below the main item. This is particularly useful for invisible characters because it can be used to pull in images, eg.<br>
+<code>data-notes=&quot;&lt;img src='../../c/Miao/large/16F8F.png' alt='ZWNJ' style='vertical-align:middle; height:2rem'&gt;, ...&quot;</code></p>
+
+<p><span class="leadin">data-last</span> indicates that the hex code point value refers to the last item; used mostly for bicameral listings.</p>
+</section>
+
+
+
+
+
+<section id="template_codepoints">
+<h3>Codepoints</h3>
+
+<p>A typical reference to a code point or sequence of code points looks like the following 4 examples. The page converts  simple markup to more complicated markup during rendering.</p>
+
+<p><span class="ch">𞋀</span></p>
+<p><span class="ch">𞋖𞋭</span></p>
+<p><span class="ch">𞋮</span></p>
+<p><span class="hx img">200B</span></p>
+
+<p>Basic markup for these is, respectively:</p>
+
+<p><code>&lt;span class="ch"&gt;𞋀&lt;/span&gt;</code> or <code>&lt;span class="hx"&gt;1E2C0&lt;/span&gt;</code></p>
+<p><code>&lt;span class="ch"&gt;𞋖𞋭&lt;/span&gt;</code> or <code>&lt;span class="hx"&gt;1E2D6 1E2ED&lt;/span&gt;</code></p>
+<p><code>&lt;span class="ch"&gt;𞋮&lt;/span&gt;</code> or <code>&lt;span class="hx"&gt;1E2EE&lt;/span&gt;</code></p>
+<p><code>&lt;span class="hx img"&gt;200B&lt;/span&gt;</code></p>
+
+<p>The generated markup will look something like this:</p>
+
+<p style="text-align: start;"><code>&lt;span class="codepoint" translate="no"&gt;&lt;bdi lang="th"&gt;𞋀&lt;/bdi&gt;&lt;a href="javascript:void(0)" target=""&gt;&lt;span class="uname"&gt;U+1E2C0 WANCHO LETTER AA&lt;/span&gt;&lt;/span&gt;</code></p>
+
+<p>Each orthography notes page globally declares a language tag to be used with example text. The markup automatically adds a lang attribute for that language to the generated markup.  If you want a different lang attribute to be applied, simply add <code>lang="xx"</code> to the span tag (where xx is the lang value).</p>
+
+<p>Every span tag must contain one of the following classes:</p>
+
+<p><span class="leadin">ch</span> The span element content contains one or more characters (with no separators).</p>
+
+<p><span class="leadin">hx</span> The span element content contains one or more hex code point values, separated by a space.</p>
+
+<p>Optional, additional class names are as follows. Most of these can be combined with others.</p>
+
+<p><span class="leadin">img</span> A PNG image will be used to show the character.</p>
+
+<p><span class="leadin">svg</span> An SVG image will be used to show the character.</p>
+
+<p><span class="leadin">noname</span> Show the character but suppress the name &amp; codepoint value.</p>
+
+<p><span class="leadin">split</span> Renders a sequence as <span class="ch split">𞋖𞋭</span>, rather than <span class="ch">𞋖𞋭</span>.</p>
+
+<p><span class="leadin">circle</span> Adds a dotted circle before the listed character(s) on display.</p>
+
+<p><span class="leadin">coda</span> Adds a dotted circle <em>after</em> the listed character(s) on display. This is useful for showing character sequences from scripts like Thai, where the pronunciation is different in syllables with and without a coda.</p>
+
+<p><span class="leadin">init</span> Adds ZWJ after the character(s), when displayed.</p>
+
+<p><span class="leadin">medi</span> Adds ZWJ before and after the character(s), when displayed.</p>
+
+<p><span class="leadin">fina</span> Adds ZWJ before the character(s), when displayed.</p>
+
+<p><span class="leadin">skip</span> Adds ZWJ before the <em>second</em> character(s), when displayed. This is useful for cases where, for a cursive script, you want to show a combining mark followed by a joining letter.</p>
+
+</section>
+
+
+
+
+
+<section id="template_refs">
+<h3>References</h3>
+
+<p>References can be added to the markup using  &lt;tt&gt;...&lt;/tt&gt;. (The brackets are converted to markup automatically.)</p>
+
+<p>To indicate a source link that is listed in the refs.js file, use  &lt;tt&gt; with the key for that resource.  After a comma you can add a number for a page, or '#fragid', eg. <code>[[ul,22]]</code></p>
+
+<p>To indicate a source link that is NOT listed in the refs.js file, use &lt;tt&gt; containing '@shortname,url', eg. <code>[[@Github,https://github.com/w3c/sealreq/issues/45]]</code></p>
+
+<p>If this is something the reader should also look at, rather than just a source link, add <code class="kw" translate="no">class=&quot;more&quot;</code> to the <code class="kw" translate="no">tt</code> element.</p>
+
+<p>On devices that don't have hover any page number will be shown alongside the reference number.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="sample">
+<h2>Sample</h2>
+  
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>
+
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">CHANGE_ME</span></p>
+
+<div id="freeText" dir="ltr" lang="YYYY" contenteditable="true">
+<p onMouseUp="showtext('freeText')">Sample_text_goes_here</p>
+</div>
+
+<p class="instructions">Source: <a href="https://unicode.org/udhr/d/udhr_ike.html" target="_blank">Unicode UDHR</a>, articles 1 &amp; 2</p>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="history">
+<h2>Usage &amp; history</h2>
+
+<p>10thC – today</p>
+
+<div  class="ancestry">
+<p>Phoenician<sup>?</sup></p>
+<p style="margin-inline-start:1em;">└ Aramaic</p>
+<p style="margin-inline-start:2em;">└ Brahmi</p>
+<p style="margin-inline-start:3em;">└ Tamil-Brahmi</p>
+<p style="margin-inline-start:4em;">└ Pallava</p>
+<p style="margin-inline-start:5em; font-weight: bold;">└ Khmer</p>
+<p style="margin-inline-start:6em;">+ Cham</p>
+<p style="margin-inline-start:6em;">+ Kawi</p>
+<p style="margin-inline-start:6em;">+ Mon-Burmese</p>
+<p style="margin-inline-start:6em;">+ Grantha</p>
+<p style="margin-inline-start:6em;">+ Tamil</p>
+</div>
+
+<p>Speakers of the Eastern Cham language number about 132,000 in Bình Thuận, Ninh Thuận, and Đồng Nai provinces in southern Vietnam, as well as in Hồ Chí Minh City. The Ethnologue estimates the L1 literacy rate to be 5%–10%. The Cham script is the primary orthography for the  Eastern Cham, but the largely muslim Western Cham peoples of Cambodia prefer the Arabic script.<tt>eth</tt> Historically, the Eastern Cham script was learned by boys once they reached a certain age, but not by women and girls.<tt>ws</tt></p>
+
+<p><span class="eg" lang="cjm">ꨀꨇꩉ ꨌꩌ</span></p>
+
+<p>Coming to Southeast Asia with the expansion of Indian religions, Cham was one of the first scripts to develop from the Pallava script some time around 200 CE.<tt>ws</tt></p>
+
+<p class="instructions">More information: <a href="https://en.wikipedia.org/wiki/Cham_script#History" target="_blank">Wikipedia</a> • <a href="https://www.endangeredalphabets.net/alphabets/cham/" target="_blank">Endangered Alphabets</a></p>
+</section>
+
+
+
+
+
+
+
+
+
+<div id="features">
+<p class="ctlink"><a href="../featurelist/">Comparison table here</a></p>
+</div>
+
+
+
+
+<section id="type">
+<h2>Basic features</h2>
+
+<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>, ie. each consonant contains an inherent vowel sound. See the table to the right for a brief overview of features for the modern ZZZZ orthography.</p>
+<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a>, ie. consonants and vowels are written separately.  See the table to the right for a brief overview of features  for the ZZZZ language.</p>
+<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a>, ie. short vowels are not normally written.  See the table to the right for a brief overview of features  for the ZZZZ language.</p>
+
+
+<p>The ZZZZ XXXX orthography is derived from the Arabic/Persian  <a class="termref" href="../glossary/index.html#abjad">abjads</a>, where  in normal use the script  represents only consonant and long vowel sounds. However, the script has been adapted in this orthography in order to cope with the many more vowels sounds in  Kashmiri, and this is one of the Arabic orthographies that regularly indicates all vowel sounds, making it  an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a>.  See the table to the right for a brief overview of features for the modern Kashmiri orthography using the Arabic script.</p>
+
+<p>XXXX text runs <a href="#direction" class="seclink">left-to-right</a> in horizontal lines, but numbers and embedded Latin text are read left-to-right. There is no case distinction. Words are separated by spaces.</p>
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants">Modern XXXX represents native consonant sounds using <a href="basicC" class="seclink">19 basic letters</a> and <a href="#aspirated" class="seclink">6 aspirated digraphs</a>, but can use <a href="#extendedC" class="seclink">13 more consonants</a> to spell words loaned from Persian, Arabic and Urdu. </p>
+
+<p class="addToConsonants">A special letter is used to indicate <a href="#palatalisation" class="seclink">palatalisation</a>, which is common in Kashmiri. Similarly to the other <span class="name">yeh</span> used in Kashmiri, it has a circle below when used in syllable onsets, and a swash with no circle after a syllable coda.</p>
+
+<p class="addToConsonants">Unlike other Arabic orthographies, <span class="hx circle">0652</span>  (<span class="name">jazm</span>),  normally used to show vowel absence, is placed over the <em>second</em> consonant in an <a href="#onsets" class="seclink">onset cluster</a> (such as <span class="ipa">tr</span>). That letter may therefore carry both the <span class="name">jazm</span> diacritic and a vowel diacritic, which is quite unusual.</p>
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels">Kashmiri is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> where 16 vowel sounds (far more than in Arabic or Persian) are written using  a mixture of  <a href="#combiningV" class="seclink">10 combining marks</a> and <a href="#vletter" class="seclink">10 letters</a>.  Unlike Arabic, Persian, and Urdu, all vowel diacritics are always visible in Kashmiri texts. Representation of vowel sounds is complicated  because the code points used to represent a given vowel typically differ according to its position within a word.</p>
+
+
+
+
+<p class="addToVowels">The distinction between  <a href="../arab/homographs.html#ijam_tashkil">ijam vs. tashkil</a> has a bearing on several Kashmiri graphemes, and the choice between precomposed and decomposed realisations of a vowel letter can be complicated (see <a class="secref">encoding</a>).</p>
+
+<p>Word-initial <a class="seclink" href="#standalone">standalone</a> vowels are preceded by or attached to either <span class="hx">0627</span> or <span class="hx">0639</span>.</p>
+
+<p class="addToVowels">The <span class="name">jazm</span> is  used over a word-medial <span class="hx">0646</span> to indicate <a href="#nasalisation" class="seclink">nasalisation</a> of a preceding vowel sound. Apart from this use and that for medial consonants, it is not typically used to indicate <a href="#novowel" class="seclink">vowel absence</a>.</p>
+
+
+
+
+<p>Kashmiri  uses  <a href="#numbers" class="seclink">native digits</a>, and Arabic code points for several of the more common <a href="#phrase" class="seclink">punctuation marks</a>.</p>
+</section>
+   
+    
+      
+
+
+
+<section id="index">
+<h2>Character index</h2>
+
+
+
+
+<div id="index_intro"></div>
+
+
+
+
+
+<section id="index_letters">
+<h3>Letters</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+
+<section id="index_letters_consonants">
+<h4>Basic consonants</h4>
+<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxxxx</figure>
+</section>
+
+<section id="index_letters_extended">
+<h4>Extended consonants</h4>
+<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxxxx</figure>
+</section>
+
+<section id="index_letters_vowels">
+<h4>Vowels</h4>
+<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxxxx</figure>
+</section>
+
+<section id="index_letters_vocalics">
+<h4>Vocalics</h4>
+<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
+</section>
+
+
+<section id="index_letters_other">
+<h4>Other</h4>
+<figure class="characterBox noindex indexline"  data-cols="" data-links="">xxxx</figure>
+</section>
+
+<section id="index_letters_unused">
+<h4>Not used for XXXXX</h4>
+<figure class="otherBox noindex indexline" data-cols="">xxxxx</figure>
+</section>
+</details>
+</section>
+
+
+
+<section id="index_cchars">
+<h3>Combining marks</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+
+<section id="index_cchars_vowels">
+<h4>Vowels</h4>
+<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxxxx</figure>
+</section>
+
+<section id="index_cchars_vocalics">
+<h4>Vocalics</h4>
+<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
+</section>
+
+<section id="index_cchars_tone">
+<h4>Tones</h4>
+<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
+</section>
+
+<section id="index_cchars_medials">
+<h4>Medials</h4>
+<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
+</section>
+
+<section id="index_cchars_finals">
+<h4>Finals</h4>
+<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
+</section>
+
+<section id="index_cchars_other">
+<h4>Other</h4>
+<figure class="characterBox noindex indexline"  data-cols="" data-links="">xxxxx</figure>
+</section>
+
+<section id="index_cchars_unused">
+<h4>Not used for XXXXX</h4>
+<figure class="otherBox noindex indexline"  data-cols="">xxxxx</figure>
+</section>
+</details>
+</section>
+
+
+
+
+  
+<section id="index_numbers">
+<h3>Numbers</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+<figure class="characterBox noindex indexline" data-links="" data-cols="">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
+</details>
+</section>
+
+
+
+
+  
+<section id="index_punctuation">
+<h3>Punctuation</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+<figure class="characterBox noindex indexline" data-links="" data-cols="">xxxxx</figure>
+
+
+<section id="index_punctuation_ascii">
+<h4>ASCII</h4>
+<figure class="characterBox noindex indexline" data-cols="">!␣(␣)␣,␣-␣.␣:␣;␣?</figure>
+</section>
+
+
+<section id="index_punctuation_cldr">
+<h4>CLDR additions</h4>
+<figure class="auxiliaryBox noindex indexline" data-cols="">xxxx</figure>
+</section>
+
+<section id="index_punctuation_unused">
+<h4>Not used for XXXXX</h4>
+<figure class="otherBox noindex indexline" data-cols="">xxx</figure>
+</section>
+</details>
+</section>
+
+
+
+
+  
+<section id="index_symbols">
+<h3>Symbols</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+<figure class="characterBox noindex indexline" data-links="" data-cols="">xxx</figure>
+
+<section id="index_symbols_unused">
+<h4>Not used for XXXXX</h4>
+<figure class="archaicBox noindex indexline"  data-cols="">xxx</figure>
+</section>
+</details>
+</section>
+
+
+
+
+  
+  
+<section id="index_other">
+<h3>Other</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+<figure class="characterBox noindex indexline" data-cols="" data-notes="<img src='../../c/General_Punctuation/large/200C.png' alt='ZWNJ' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/200D.png' alt='ZWJ' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/2067.png' alt='RLI' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/202B.png' alt='RLE' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/2066.png' alt='LRI' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/202A.png' alt='LRE' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/2068.png' alt='FSI' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/2069.png' alt='PDI' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/202C.png' alt='PDF' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/200F.png' alt='RLM' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/200E.png' alt='LRM' style='vertical-align:middle; height:2rem'>,<img src='../../c/Arabic/large/061C.png' alt='ALM' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/200B.png' alt='ZWSP' style='vertical-align:middle; height:2rem'>,<img src='../../c/Syriac/070F.png' alt='SAM' style='vertical-align:middle; height:2rem'>,<img src='../../c/Arabic/061C.png' alt='ALM' style='vertical-align:middle; height:2rem'>,<img src='../../c/Combining_Diacritical_Marks/034F.png' alt='CGJ' style='vertical-align:middle; height:2rem'>" data-links="">&#x200C;␣&#x200D;␣&#x2067;␣&#x202B;␣&#x2066;␣&#x202A;␣&#x2068;␣&#x2069;␣&#x202C;␣&#x200F;␣&#x200E;␣&#x061C;␣&#x034F;</figure>
+
+
+
+<section id="index_other_tbc">
+<h4>To be investigated</h4>
+<figure class="tbcBox noindex indexline" data-cols="">!␣?</figure>
+</section>
+</details>
+</section>
+</section>
+
+
+
+
+
+
+
+<div id="showTranscriptions">
+<details>
+<summary>Items to show in lists</summary>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked></label></div>
+<div>
+<label>Latin 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)"></label></div>
+</details>
+</div>
+  
+
+
+  
+
+
+
+<section id="phonology">
+<h2>Phonology</h2>
+
+<p>The following represents the repertoire of the ZZZZ language.</p>
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">Wikipedia</a>.</p>
+
+
+
+
+<section id="phonemesV">
+<h3>Vowel sounds</h3>
+
+
+<section id="plain_vowels">
+<h4>Plain vowels</h4>
+
+
+
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feflood flood-color="white"/>
+      <fecomposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+  <!-- near close -->
+  <circle cx="93" cy="40" r="3" fill="#ccc"/>
+  <circle cx="200" cy="40" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- near open -->
+  <circle cx="102" cy="160" r="3" fill="#ccc"/> <!-- near open -->
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" text-anchor="end"><tspan class="ipa">ĩ</tspan> <tspan class="ipa">iː</tspan> <tspan class="ipa">i</tspan></text> 
+  <text x="50" y="15" filter="url(#solid)"><tspan class="ipa">y</tspan></text> 
+  <text x="50" y="15"><tspan class="ipa">y</tspan></text> 
+
+  <text x="132" y="15" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɨ</tspan></text>
+  <text x="132" y="15" text-anchor="end"><tspan class="ipa">ɨ</tspan></text> 
+  <text x="150" y="15" filter="url(#solid)"><tspan class="ipa">ʉ</tspan></text> 
+  <text x="150" y="15" ><tspan class="ipa">ʉ</tspan></text> 
+
+  <text x="232" y="15" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɯ</tspan></text>
+  <text x="232" y="15" text-anchor="end"><tspan class="ipa">ɯ</tspan></text> 
+  <text x="250" y="15" text-anchor="start"><tspan class="ipa">u</tspan> <tspan class="ipa">uː</tspan> <tspan class="ipa">ũ</tspan></text> 
+
+  <!-- near close -->
+  <text x="85" y="45" text-anchor="end"><tspan class="ipa">ɪ</tspan></text> 
+  <text x="100" y="45"><tspan class="ipa">ʏ</tspan></text> 
+
+  <text x="210" y="45"><tspan class="ipa">ʊ</tspan></text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" text-anchor="end"><tspan class="ipa">ẽ</tspan> <tspan class="ipa">eː</tspan> <tspan class="ipa">e</tspan></text> 
+  <text x="75" y="75" filter="url(#solid)"><tspan class="ipa">ø</tspan></text> 
+  <text x="75" y="75"><tspan class="ipa">ø</tspan></text> 
+
+  <text x="144" y="75" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɘ</tspan></text>
+  <text x="144" y="75" text-anchor="end"><tspan class="ipa">ɘ</tspan></text> 
+  <text x="165" y="75" filter="url(#solid)"><tspan class="ipa">ɵ</tspan></text> 
+  <text x="165" y="75"><tspan class="ipa">ɵ</tspan></text> 
+
+  <text x="232" y="75" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɤ</tspan></text>
+  <text x="232" y="75" text-anchor="end"><tspan class="ipa">ɤ</tspan></text> 
+  <text x="250" y="75"><tspan class="ipa">o</tspan> <tspan class="ipa">oː</tspan> <tspan class="ipa">õ</tspan> </text> 
+
+  <!-- mid -->
+  <text x="158" y="105" text-anchor="middle" filter="url(#solid)"><tspan class="ipa">ə</tspan></text>
+  <text x="158" y="105" text-anchor="middle"><tspan class="ipa">ə̃</tspan> <tspan class="ipa">ə</tspan> <tspan class="ipa">əː</tspan></text> 
+
+  <!-- open mid -->
+  <text x="81" y="135" text-anchor="end"><tspan class="ipa">ɛ̃</tspan> <tspan class="ipa">ɛː</tspan> <tspan class="ipa">ɛ</tspan></text> 
+  <text x="100" y="135" filter="url(#solid)"><tspan class="ipa">œ</tspan></text> 
+  <text x="100" y="135"><tspan class="ipa">œ</tspan></text> 
+
+  <text x="157" y="135" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɜ</tspan></text>
+  <text x="157" y="135" text-anchor="end"><tspan class="ipa">ɜ</tspan></text> 
+  <text x="177" y="135" filter="url(#solid)"><tspan class="ipa">ɞ</tspan></text> 
+  <text x="177" y="135"><tspan class="ipa">ɞ</tspan></text> 
+
+  <text x="232" y="135" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ʌ</tspan></text>
+  <text x="232" y="135" text-anchor="end"><tspan class="ipa">ʌ</tspan></text> 
+  <text x="250" y="135"><tspan class="ipa">ɔ</tspan> <tspan class="ipa">ɔː</tspan> <tspan class="ipa">ɔ̃</tspan> </text> 
+
+  <!-- near open -->
+  <text x="94" y="165" text-anchor="end"><tspan class="ipa">æ</tspan></text> 
+  <text x="170" y="165" text-anchor="middle" filter="url(#solid)"><tspan class="ipa">ɐ</tspan></text> 
+  <text x="170" y="165" text-anchor="middle"><tspan class="ipa">ɐ</tspan></text> 
+
+  <!-- open -->
+  <text x="106" y="195" text-anchor="end"><tspan class="ipa">ã</tspan> <tspan class="ipa">aː</tspan> <tspan class="ipa">a</tspan></text> 
+  <text x="125" y="195" filter="url(#solid)"><tspan class="ipa">ɶ</tspan></text> 
+  <text x="125" y="195"><tspan class="ipa">ɶ</tspan></text> 
+
+  <text x="232" y="195" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɑː</tspan> <tspan class="ipa">ɑ</tspan></text>
+  <text x="232" y="195" text-anchor="end"><tspan class="ipa">ɑː</tspan> <tspan class="ipa">ɑ</tspan></text> 
+  <text x="250" y="195"><tspan class="ipa">ɒ</tspan></text> 
+</svg>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="diphthongs">
+<h4>Complex vowels</h4>
+
+
+<table class="diphthongTable">
+<tbody>
+<tr>
+<td><span class="ipa">ia</span> <span class="ipa">iɯʔ</span> <span class="ipa">iə</span></td>
+<td><span class="ipa">ua</span> <span class="ipa">uə</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="ipa">ea</span></td>
+<td><span class="ipa">oa</span></td>
+</tr>
+<tr>
+<td><span class="ipa">ɛə</span></td>
+<td><span class="ipa">ɔə</span></td>
+</tr>
+<tr>
+<td><span class="ipa">auʔ</span> <span class="ipa">aɪ</span> <span class="ipa">aʊ</span></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr></tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!--section id="diphthongs">
+<h4>Diphthongs</h4>
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -- >
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+  <!-- near close -- >
+  <circle cx="93" cy="40" r="3" fill="#ccc"/>
+  <circle cx="200" cy="40" r="3" fill="#ccc"/>
+  
+   <!-- mid close -- >
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -- >
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- near open -- >
+  <circle cx="102" cy="160" r="3" fill="#ccc"/> <!-- near open -->
+  
+  <!-- open -- >
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -- >
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+  <text x="50" y="15" class="ipa" filter="url(#solid)">y</text> 
+  <text x="50" y="15" class="ipa">y</text> 
+
+  <text x="132" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɨ</text>
+  <text x="132" y="15" class="ipa" text-anchor="end">ɨ</text> 
+  <text x="150" y="15" class="ipa" filter="url(#solid)">ʉ</text> 
+  <text x="150" y="15" class="ipa">ʉ</text> 
+
+  <text x="232" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɯ</text>
+  <text x="232" y="15" class="ipa" text-anchor="end">ɯ</text> 
+  <text x="250" y="15" class="ipa">u</text> 
+
+  <!-- near close -- >
+  <text x="85" y="45" class="ipa" text-anchor="end">ɪ</text> 
+  <text x="100" y="45" class="ipa">ʏ</text> 
+
+  <text x="210" y="45" class="ipa">ʊ</text> 
+
+  <!-- close mid -- >
+  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
+  <text x="75" y="75" class="ipa" filter="url(#solid)">ø</text> 
+  <text x="75" y="75" class="ipa">ø</text> 
+
+  <text x="144" y="75" class="ipa" text-anchor="end" filter="url(#solid)">ɘ</text>
+  <text x="144" y="75" class="ipa" text-anchor="end">ɘ</text> 
+  <text x="165" y="75" class="ipa" filter="url(#solid)">ɵ</text> 
+  <text x="165" y="75" class="ipa">ɵ</text> 
+
+  <text x="232" y="75" class="ipa" text-anchor="end" filter="url(#solid)">ɤ</text>
+  <text x="232" y="75" class="ipa" text-anchor="end">ɤ</text> 
+  <text x="250" y="75" class="ipa">o</text> 
+
+  <!-- mid -- >
+  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
+  <text x="158" y="105" class="ipa" text-anchor="middle">ə</text> 
+
+  <!-- open mid -- >
+  <text x="81" y="135" class="ipa" text-anchor="end">ɛ</text> 
+  <text x="100" y="135" class="ipa" filter="url(#solid)">œ</text> 
+  <text x="100" y="135" class="ipa">œ</text> 
+
+  <text x="157" y="135" class="ipa" text-anchor="end" filter="url(#solid)">ɜ</text>
+  <text x="157" y="135" class="ipa" text-anchor="end">ɜ</text> 
+  <text x="177" y="135" class="ipa" filter="url(#solid)">ɞ</text> 
+  <text x="177" y="135" class="ipa">ɞ</text> 
+
+  <text x="232" y="135" class="ipa" text-anchor="end" filter="url(#solid)">ʌ</text>
+  <text x="232" y="135" class="ipa" text-anchor="end">ʌ</text> 
+  <text x="250" y="135" class="ipa">ɔ</text> 
+
+  <!-- near open -- >
+  <text x="94" y="165" class="ipa" text-anchor="end">æ</text> 
+  <text x="170" y="165" class="ipa" text-anchor="middle" filter="url(#solid)">ɐ</text> 
+  <text x="170" y="165" class="ipa" text-anchor="middle">ɐ</text> 
+
+  <!-- open -- >
+  <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
+  <text x="125" y="195" class="ipa" filter="url(#solid)">ɶ</text> 
+  <text x="125" y="195" class="ipa">ɶ</text> 
+
+  <text x="232" y="195" class="ipa" text-anchor="end" filter="url(#solid)">ɑ</text>
+  <text x="232" y="195" class="ipa" text-anchor="end">ɑ</text> 
+  <text x="250" y="195" class="ipa">ɒ</text> 
+</svg>
+</div>
+</section>
+
+
+
+<p>All but 1 of the diphthongs in Shan end in <span class="ipa">i</span> or <span class="ipa">u/w</span>.</p-->
+</section>
+
+
+
+
+
+
+<section id="phonemesC">
+<h3>Consonant sounds</h3>
+
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>labio-<br>dental</th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>retroflex</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>pharyngeal<br>epiglottal</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">t</span> <span class="ipa">d</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʈ</span> <span class="ipa">ɖ</span></td>
+<td><span class="ipa">c</span> <span class="ipa">ɟ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
+<td><span class="ipa">q</span> <span class="ipa">ɢ</span></td>
+<td><span class="ipa">ʡ</span></td>
+<td><span class="ipa">ʔ</span></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><span class="ipa">pʰ</span> <span class="ipa">bʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">tʰ</span> <span class="ipa">dʰ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʈʰ</span> <span class="ipa">ɖʰ</span></td>
+<td><span class="ipa">cʰ</span> <span class="ipa">ɟʰ</span></td>
+<td><span class="ipa">kʰ</span> <span class="ipa">ɡʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><span class="ipa">ɓ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɗ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʄ</span></td>
+<td><span class="ipa">ɠ</span></td>
+<td><span class="ipa">ʛ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><span class="ipa">ᵐp</span> <span class="ipa">ᵐb</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ⁿt</span> <span class="ipa">ⁿd</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ᶯʈ</span> <span class="ipa">ᶯɖ</span></td>
+<td><span class="ipa">ᶮc</span> ᶮ<span class="ipa">ɟ</span></td>
+<td><span class="ipa">ᵑk</span> <span class="ipa">ᵑɡ</span></td>
+<td><span class="ipa">ᶰq</span> <span class="ipa">ᶰɢ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span> <span class="ipa">d͡z</span></td>
+<td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span></td>
+<td><span class="ipa">ʈ͡ʂ</span> <span class="ipa">ɖ͡ʐ</span></td>
+<td><span class="ipa">t͡ɕ</span> <span class="ipa">d͡ʑ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡sʰ</span> <span class="ipa">d͡zʰ</span></td>
+<td><span class="ipa">t͡ʃʰ</span> <span class="ipa">d͡ʒʰ</span></td>
+<td><span class="ipa">ʈ͡ʂʰ</span> <span class="ipa">ɖ͡ʐʰ</span></td>
+<td><span class="ipa">t͡ɕʰ</span> <span class="ipa">d͡ʑʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<th>fricative</th>
+<td><span class="ipa">ɸ</span> <span class="ipa">β</span></td>
+<td><span class="ipa">f</span> <span class="ipa">v</span></td>
+<td><span class="ipa">θ</span> <span class="ipa">ð</span></td>
+<td><span class="ipa">s</span> <span class="ipa">z</span></td>
+<td><span class="ipa">ʃ</span> <span class="ipa">ʒ</span></td>
+<td><span class="ipa">ʂ</span> <span class="ipa">ʐ</span></td>
+<td><span class="ipa">ç</span> <span class="ipa">ʝ</span></td>
+<td><span class="ipa">x</span> <span class="ipa">ɣ</span></td>
+<td><span class="ipa">χ</span> <span class="ipa">ʁ</span></td>
+<td><span class="ipa">ħ</span> <span class="ipa">ʕ</span></td>
+<td><span class="ipa">h</span> <span class="ipa">ɦ</span></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɬ</span> <span class="ipa">ɮ</span></td>
+<td><span class="ipa">ɧ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɕ</span> <span class="ipa">ʑ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td><span class="ipa">ɱ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɳ</span></td>
+<td><span class="ipa">ɲ</span></td>
+<td><span class="ipa">ŋ</span></td>
+<td><span class="ipa">ɴ</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">ʍ</span> <span class="ipa">w</span></td>
+<td><span class="ipa">ʋ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span> <span class="ipa">ɫ</span> <span class="ipa">ɹ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɻ</span> <span class="ipa">ɭ</span></td>
+<td><span class="ipa">j</span> <span class="ipa">ʎ</span></td>
+<td><span class="ipa">ɰ</span> <span class="ipa">ʟ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td><span class="ipa">ʙ</span></td>
+<td><span class="ipa">ⱱ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span> <span class="ipa">ɾ</span> <span class="ipa">ɺ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɽ</span></td>
+<td></td>
+<td></td>
+<td><span class="ipa">ʀ</span></td>
+<td><span class="ipa">ʜ</span> <span class="ipa">ʢ</span></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common29/mouth/mouth_labial.png" target="_blank"><img src="../common29/mouth/mouth_small_labial.png" alt=" "></a></td>
+<td class="mouth">&nbsp;</td>
+<td class="mouth"><a href="../common29/mouth/mouth_dental.png" target="_blank"><img src="../common29/mouth/mouth_small_dental.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_alveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_alveolar.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_postalveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_postavleolar.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_retroflex.png" target="_blank"><img src="../common29/mouth/mouth_small_retroflex.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_palatal.png" target="_blank"><img src="../common29/mouth/mouth_small_palatal.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_velar.png" target="_blank"><img src="../common29/mouth/mouth_small_velar.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_uvular.png" target="_blank"><img src="../common29/mouth/mouth_small_uvular.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_pharyngeal.png" target="_blank"><img src="../common29/mouth/mouth_small_pharyngeal.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_glottal.png" target="_blank"><img src="../common29/mouth/mouth_small_glottal.png" alt=" "></a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+<section id="phonemesC">
+<h3>Consonant sounds OLD</h3>
+
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>retroflex</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>pharyngeal</th>
+<th>epiglottal</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span><br>
+<span class="ipa">pʰ</span> <span class="ipa">bʰ</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span><br>
+<span class="ipa">tʰ</span> <span class="ipa">dʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʈ</span> <span class="ipa">ɖ</span><br>
+<span class="ipa">ʈʰ</span> <span class="ipa">ɖʰ</span></td>
+<td><span class="ipa">c</span> <span class="ipa">ɟ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br>
+<span class="ipa">kʰ</span> <span class="ipa">ɡʰ</span></td>
+<td><span class="ipa">q</span> <span class="ipa">ɢ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʡ</span></td>
+<td><span class="ipa">ʔ</span></td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span> <span class="ipa">d͡z</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span><br>
+<span class="ipa">t͡ʃʰ</span> <span class="ipa">d͡ʒʰ</span><br>
+<span class="ipa">t͡ɕ</span> <span class="ipa">d͡ʑ</span><br>
+<span class="ipa">t͡ɕʰ</span> <span class="ipa">d͡ʑʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="ipa">f</span> <span class="ipa">v</span></td>
+<td><span class="ipa">θ</span> <span class="ipa">ð</span></td>
+<td><span class="ipa">s</span> <span class="ipa">z</span><br>
+<span class="ipa">ɬ</span> <span class="ipa">ɮ</span></td>
+<td><span class="ipa">ʃ</span> <span class="ipa">ʒ</span><br>
+<span class="ipa">ɕ</span> <span class="ipa">ʑ</span><br>
+<span class="ipa">ɧ</span></td>
+<td><span class="ipa">ʂ</span> <span class="ipa">ʐ</span></td>
+<td><span class="ipa">ç</span> <span class="ipa">ʝ</span></td>
+<td><span class="ipa">x</span> <span class="ipa">ɣ</span></td>
+<td><span class="ipa">χ</span> <span class="ipa">ʁ</span></td>
+<td><span class="ipa">ħ</span> <span class="ipa">ʕ</span></td>
+<td><span class="ipa">ʜ</span> <span class="ipa">ʢ</span></td>
+<td><span class="ipa">h</span> <span class="ipa">ɦ</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɳ</span></td>
+<td><span class="ipa">ɲ</span></td>
+<td><span class="ipa">ŋ</span></td>
+<td><span class="ipa">ɴ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">ʋ</span> <span class="ipa">w</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span> <span class="ipa">ɫ</span> <span class="ipa">ɹ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɻ</span> <span class="ipa">ɭ</span></td>
+<td><span class="ipa">j</span> <span class="ipa">ʎ</span></td>
+<td><span class="ipa">ɰ</span><br>
+<span class="ipa">ʟ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span> <span class="ipa">ɾ</span> <span class="ipa">ɺ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɽ</span></td>
+<td></td>
+<td></td>
+<td><span class="ipa">ʀ</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common29/mouth/mouth_labial.png" target="_blank"><img src="../common29/mouth/mouth_small_labial.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_dental.png" target="_blank"><img src="../common29/mouth/mouth_small_dental.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_alveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_alveolar.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_postalveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_postavleolar.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_retroflex.png" target="_blank"><img src="../common29/mouth/mouth_small_retroflex.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_palatal.png" target="_blank"><img src="../common29/mouth/mouth_small_palatal.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_velar.png" target="_blank"><img src="../common29/mouth/mouth_small_velar.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_uvular.png" target="_blank"><img src="../common29/mouth/mouth_small_uvular.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_pharyngeal.png" target="_blank"><img src="../common29/mouth/mouth_small_pharyngeal.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_epiglottal.png" target="_blank"><img src="../common29/mouth/mouth_small_epiglottal.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_glottal.png" target="_blank"><img src="../common29/mouth/mouth_small_glottal.png" alt=" "></a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+
+<section id="tone">
+<h3>Tone</h3>
+
+<p id="def-openclosed" class="explanatoryintro definitionStub"></p>
+
+<p id="def-livedead" class="explanatoryintro definitionStub"></p>
+
+<p>Thai is a <a href="../glossary/index.html#contourtonelanguage">contour tone language</a>, with 5 tones: high, mid, low, falling, &amp; rising.</p>
+
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+<section id="structure">
+<h3>Structure</h3>
+
+<p>tbd</p>
+<!--p>The following notes on structure are taken from Wikipedia<tt>.</tt></p>
+<blockquote><code>[C1] [S1] V [S2] [C2 [C3]]</code></blockquote>
+
+<details><summary class="instructions">Legend</summary>
+<div class="legend">
+<dl><dt><code>C</code></dt><dd>Consonant.</dd></dl>
+<dl>
+<dt><code>V</code></dt>
+<dd>Vowel.</dd></dl>
+<dl>
+<dt><code>S</code></dt>
+<dd>Semi-vowel.</dd></dl>
+</div></details>
+
+<p>Arabic syllable structure consists of an optional syllable onset, consisting of one or two consonants; an obligatory syllable nucleus, consisting of a vowel optionally preceded by and/or followed by a semivowel; and an optional syllable coda, consisting of one or two consonants.</p>
+<p>The following restrictions apply:</p>
+<dl>
+<dt>Onset</dt>
+<dd>C1 can be any consonant, including a liquid (<span class="ipa">l r</span>). The onset is composed only of one consonant; consonant clusters are only found in loanwords. Sometimes an epenthetic <span class="ipa">a</span> is inserted between consonants.</dd>
+<dt>Nucleus</dt><dd>Includes S1 V S2.</dd>
+<dt>Coda</dt><dd>C2 and C3 can be any consonant.</dd>
+</dl-->
+</section>
+</section>
+
+ 
+
+
+
+
+
+
+<section id="alphabet">
+<h2>Alphabet</h2>
+
+<p class="instructions">Click on the  characters  to find where they are mentioned in this page.</p>
+
+<p>The ZZZZ alphabet has 23 consonants and 5 vowels. Each has upper and lowercase forms; shown above and below, respectively.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">𞤢␣𞤣␣𞤤␣𞤥␣𞤦␣𞤧␣𞤨␣𞤩␣𞤪␣𞤫␣𞤬␣𞤭␣𞤮␣𞤯␣𞤰␣𞤱␣𞤲␣𞤳␣𞤴␣𞤵␣𞤶␣𞤷␣𞤸␣𞤹␣𞤺␣𞤻␣𞤼␣𞤽</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">𞤀␣𞤁␣𞤂␣𞤃␣𞤄␣𞤅␣𞤆␣𞤇␣𞤈␣𞤉␣𞤊␣𞤋␣𞤌␣𞤍␣𞤎␣𞤏␣𞤐␣𞤑␣𞤒␣𞤓␣𞤔␣𞤕␣𞤖␣𞤗␣𞤘␣𞤙␣𞤚␣𞤛</figure>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="characters">
+<h2>Syllables</h2>
+
+
+
+
+
+<p>
+<span id="otherV"></span>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="compositeV"></span>
+<span id="vlength"></span>
+<span id="nasalisation"></span>
+<span id="tones"></span>
+<span id="novowel"></span>
+<span id="extendedC"></span>
+<span id="onsets"></span>
+<span id="finals"></span>
+<span id="clusters"></span>
+<span id="clength"></span>
+</p>
+
+
+
+<aside class="sectionAside">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+<li>Vowel length.</li>
+<li>Nasalisation (not a feature of the language).</li>
+<li>Tones (not a tonal language).</li>
+<li>Standalone vowels.</li>
+<li>Consonants that are not followed by a vowel.</li>
+<li>Repertoire extensions to cover loan words, etc.</li>
+<li>Onset clusters.</li>
+<li>Syllable-final consonants.</li>
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+<li>Gemination or consonant lengthening.</li>
+</ul>
+</aside>
+
+
+
+
+
+
+<div id="vowel_description"></div>
+<div id="consonant_description"></div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<section id="vowels">
+<h2>Vowels</h2>
+
+
+
+
+
+<p>
+<span id="otherV"></span>
+<span id="prebase"></span>
+<span id="circumgraphs"></span>
+<span id="compositeV"></span>
+<span id="vlength"></span>
+<span id="nasalisation"></span>
+<span id="tones"></span>
+<span id="novowel"></span>
+</p>
+
+
+
+
+<aside class="sectionAside">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Consonants used to create vowel sounds.</li>
+<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
+<li>Vowel length.</li>
+<li>Nasalisation (not a feature of the language).</li>
+<li>Tones (not a tonal language).</li>
+<li>Standalone vowels.</li>
+<li>Consonants that are not followed by a vowel.</li>
+</ul>
+
+
+
+<details class="tbd">
+<summary>Sections needing attention ...</summary>
+
+<section id="standalone">
+<h4>Standalone vowels</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="vlength">
+<h4>Vowel length</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="nasalisation">
+<h4>Nasalisation</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="novowel">
+<h4>Vowel absence</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+</details>
+</aside>
+
+ 
+
+ 
+ 
+<div id="vowel_description"></div>
+
+
+
+
+<section id="basicV">
+<h4>Vowel summary table</h4>
+
+
+<p>The following table summarises the main vowel to character assigments.</p>
+
+<p class="instructions highlight">ⓘ represents the inherent vowel. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here).</p>
+
+<table class="soundSummary">
+<tr>
+<th rowspan="5">Simple:</th>
+<td><figure class="summaryBox auto" data-ipa="" data-ignore="-" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+
+
+<tr>
+<th>Vocalics:</th>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+</table>
+
+
+<p class="instructions">For additional details see <a class="secref">vowel_mappings</a>.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="inherent">
+<h3>Inherent vowel</h3>
+
+<p class="vowelSignExample">
+    <bdi lang="nod">&#x1A20;</bdi>
+    <span class="ipa">ka</span>
+    <span><span class="uname">U+1A20 LETTER HIGH KA</span></span>
+</p>
+
+<p id="def-inherentvowel" class="explanatoryintro definitionStub"></p>
+
+<p><span class="ipa">a</span> following a consonant is not written, but is seen as an inherent part of the consonant letter, so <span class="ipa">ka</span> is written by simply using the consonant letter.</p>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="combiningV">
+<h3>Combining marks used for vowels</h3>
+
+<p class="vowelSignExample">
+    <bdi lang="ban">&#x1B13;&#x1B36;</bdi>
+    <span class="ipa">ki</span>
+    <span><span class="uname">U+1B13 BALINESE LETTER KA</span> + <span class="uname">U+1B36 BALINESE VOWEL SIGN ULU</span></span>
+</p>
+
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
+
+<p>Balinese uses the following dedicated combining marks for vowels.  They may be used on their own, or in combination with others (see <a class="secref">composite_vowels</a>). They are all vowel signs.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">xxxxxxx</figure>
+
+<p>To represent the sounds <span class="ipa">rə</span> or <span class="ipa">lə</span>, Balinese uses vocalic letters. A sequence such as <span class="codepoint noindex" translate="no"><bdi lang="ban">*&#x1B2D;&#x1B42;</bdi> [<a href="/scripts/balinese/block#char1B2D"><span class="uname">U+1B2D BALINESE LETTER RA</span></a> + <a href="/scripts/balinese/block#char1B42"><span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET</span></a>]</span> is <em>not</em> used. See  <a class="sectionref">vocalics</a>.</p>
+
+<p>Six of the vowel signs are <a class="termref" href="../glossary/index.html#spacingmark">spacing marks</a>, meaning that they consume horizontal space when added to a base consonant.</p>
+
+<p>All vowel signs are typed and stored after the base consonant, and the glyph rendering system takes care of the positioning at display time. The glyphs used to represent vowels,  whether alone or in multipart vowels, are arranged around a <em>syllable onset</em>, which may be 2 consonants, rather than just around the immediately preceding consonant. See <a class="secref"></a> <a class="secref">prebase</a> and <a class="secref">circumgraphs</a>.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="vletter">
+<h3>Vowel letters</h3>
+
+
+<section id="dedicatedV">
+<h4>Dedicated vowel letters</h4>
+
+<p>These are the dedicated vowel letters.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,transc">xxxxxx</figure>
+
+
+
+
+
+
+
+<section id="vOther">
+<h4>Consonants  used for vowels</h4>
+
+<p>Kashmiri uses the following consonant characters to write vowels, generally in combination with diacritics, but also alone when representing eː and oː in non-initial positions.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,transc">xxxxxx</figure>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="compositeV">
+<h3>Multipart vowels</h3>
+
+<p>Multipart vowels are only produced when text is decomposed; 5 of the circumgraphs split off the <span class="hx">1B35</span> glyph, to create the following pairs:</p>
+
+<figure class="characterBox auto small" data-cols="ipa,trans,transc">&#x1B3E;&#x1B35;&#x2423;&#x1B42;&#x1B35;&#x2423;&#x1B3F;&#x1B35;&#x2423;&#x1B3A;&#x1B35;&#x2423;&#x1B3C;&#x1B35;</figure>
+</section>
+
+
+
+
+
+
+ 
+<section id="standalone">
+<h3>Standalone vowels</h3>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
+<p>Standalone vowels are written using the normal vowel signs with no special additional mechanisms.</p>
+<p><span class="eg" lang="nnp" dir="ltr">𞋀𞋊𞋞</span></p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="prebase">
+<h3>Pre-base vowel signs</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">𑐶</figure>
+
+<p>The short <span class="ipa">i</span> sound is written using <span class="codepoint" translate="no"><span lang="new">&#x11436;</span> [<a href="/scripts/newa/block#char11436"><span class="uname">U+11436 NEWA VOWEL SIGN I</span></a>]</span>, which appears to the left of the base consonant letter or cluster.</p>
+
+<figure id="fig_prebase" class="sideCaption">
+<img src="rej/fig_prebase.png" class="ex" lang="rej" alt="ꤱꥉ" data-notes="200px Noto Sans Rejang" style="height:7rem; margin-inline:2rem;">
+<figcaption>A pre-base vowel sign (highlighted). It is positioned to the left of the consonant after which it is typed, stored, and pronounced.</figcaption>
+</figure>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="rej">ꤷꥉꤼꥉꤿ꥓</span></p></details>
+
+<p class="info">This combining mark is always typed and stored after the base consonant. The rendering process places the glyph before the base consonant at the time of display.</p>
+
+<p>When an orthographic syllable begins with a consonant cluster that is rendered as a conjunct, the vowel sign is rendered before the start of the <em>syllable</em>, eg. here are 3 sets of consonant clusters, each followed by <span class="ipa">i</span> when spoken, but the vowel sign appears to the left of each cluster.<span class="charExample" translate="no"><span class="ex" lang="new">𑐗𑑂𑐏𑐶 𑐳𑑂𑐟𑐶 𑐧𑑂𑐬𑐶</span> <span class="transc">jkhi sti bri</span></span></p>
+
+
+<p>When an orthographic syllable begins with a consonant cluster, the vowel sign is actually placed before the start of the onset, ie. to the left of the <em>syllable</em> as a whole. See <a class="figref">fig_prebase</a>.</p>
+
+
+<figure id="fig_prebase" class="sideCaption">
+<img src="cjm/fig_prebase.png" alt="ꨚꨴꨯꨱꩃ" class="ex" lang="cjm" data-notes="Noto Sans Cham" style="height: 9rem;">
+<figcaption>A pre-base vowel glyph (light highlight colour) placed before both consonants in an onset cluster, rather than just before the consonant pronounced immediately before it.</figcaption>
+</figure>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="cjm">ꨚꨴꨯꨱꩃ</span></p></details>
+
+<p>However, note that if the cluster is split by a visible virama, this creates two orthographic syllables and the pre-base vowel sign appears after the consonant with the virama.</p>
+</section>
+
+
+
+
+
+
+<section id="circumgraphs">
+<h3>Circumgraphs</h3>
+
+<p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
+
+<p class="vowelSignExample">
+    <bdi lang="ban">&#x1B13;&#x1B40;</bdi>
+    <span class="ipa">ko</span>
+    <span><span class="uname">U+1B13 BALINESE LETTER KA</span> + <span class="uname">U+1B40 BALINESE VOWEL SIGN TALING TEDUNG</span></span>
+</p>
+
+<p>Five vowel signs are usually produced by a single combining character with visually separate parts, that appear on  different sides of the consonant onset.</p>
+
+<figure class="characterBox auto small" data-cols="ipa,trans,transc">ᭀ␣ᭃ␣ᭁ␣ᬻ␣ᬼ␣ᬽ</figure>
+
+<p class="instructions">This section includes some vowel signs described in the section <a class="secref">vocalics</a>.</p>
+
+<p>Like pre-base glyphs, these are combining marks that are always stored after the base consonant. When rendered, the single code point produces multiple glyphs, which are placed on different sides of the base consonant. Click on <a class="figref">fig_circumgraphs</a> to see the sequence of characters in storage.</p>
+
+<figure id="fig_circumgraphs" class="sideCaption">
+<img src="rej/fig_circumgraphs.png" alt="ꤷꥇꥆꥋꥆ" data-notes="200px Noto Sans Rejang" class="ex" lang="rej" style="height: 8rem; margin-inline:2rem;">
+<figcaption>A circumgraph. The vowel stored after the consonant as a single character in memory is rendered with separate glyphs on 2 sides of the base.</figcaption>
+</figure>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="rej">ꤷꥇꥆꥋꥆ</span></p></details>
+
+<p>Glyphs can appear on up to 3 sides of the base. Some of the glyphs merge with the base character's glyph (see <a class="secref">context</a>).</p>
+
+<p>These circumgraphs have canonically equivalent decomposed forms (see <a class="secref">vs_encoding</a>).</p>
+</section>
+
+
+
+
+
+
+
+
+<section id="vlength">
+<h3>Vowel length</h3>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+<section id="nasalisation">
+<h3>Nasalisation</h3>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+<section id="tones">
+<h3>Tones</h3>
+
+<p id="def-openclosed" class="explanatoryintro definitionStub"></p>
+
+<p id="def-livedead" class="explanatoryintro definitionStub"></p>
+
+<p id="def-checked" class="explanatoryintro definitionStub"></p>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+
+<section id="novowel">
+<h3>Vowel absence</h3>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+<section id="vowel_mappings">
+<h3>Vowel sounds  to characters</h3>
+
+
+<p>This section maps XXXX vowel sounds to common graphemes in the XXXX orthography. <!--Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.--></p>
+
+<p class="instructions highlight">The left column shows dependent vowels, and the right column independent vowel letters.</p>
+
+<p class="instructions">Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
+
+
+<section id="plain_vowel_map">
+<h4>Plain vowels</h4>
+
+<div id="mapv_high" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">i</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p class="glyphs"><span class="hx circle">1752</span></p>
+<p class="example"><span class="eg" lang="bku">ᝐᝒᝆ</span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx circle">1741</span></p>
+<p class="example"><span class="eg" lang="bku">ᝁᝇᝓ</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">u</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p class="glyphs"><span class="hx circle">1753</span></p>
+<p class="example"><span class="eg" lang="bku">ᝎᝓᝆᝓ</span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx circle">1742</span></p>
+<p class="example"><span class="eg" lang="bku">ᝂᝇᝓ</span></p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+<section id="diphthong_map">
+<h4>Diphthongs and other combinations</h4>
+
+<div id="map_hmiddiphthongs" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">i</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p class="glyphs"><span class="hx circle">1752</span></p>
+<p class="example"><span class="eg" lang="bku">ᝐᝒᝆ</span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx circle">1741</span></p>
+<p class="example"><span class="eg" lang="bku">ᝁᝇᝓ</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">u</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p class="glyphs"><span class="hx circle">1753</span></p>
+<p class="example"><span class="eg" lang="bku">ᝎᝓᝆᝓ</span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx circle">1742</span></p>
+<p class="example"><span class="eg" lang="bku">ᝂᝇᝓ</span></p>
+</div>
+</div>
+</div>
+</section>
+
+</section>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="vocalics">
+<h2>Vocalics</h2>
+<p id="def-vocalic" class="explanatoryintro definitionStub"></p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᬋ␣ᬌ␣ᬍ␣ᬎ␣ᬺ␣ᬻ␣ᬼ␣ᬽ</figure>
+
+<p>description</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="consonants">
+<h2>Consonants</h2>
+
+
+
+<p>
+<span id="extendedC"></span>
+<span id="onsets"></span>
+<span id="finals"></span>
+<span id="clusters"></span>
+<span id="clength"></span>
+</p>
+
+
+<aside class="sectionAside">
+<p>This orthography has no special features with respect to the following.</p>
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
+<li>Onset clusters.</li>
+<li>Syllable-final consonants.</li>
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+<li>Gemination or consonant lengthening.</li>
+</ul>
+
+
+
+<details class="tbd">
+<summary>Sections needing attention ...</summary>
+
+<section id="onsets">
+<h4>Onsets</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="finals">
+<h4>Finals</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="clusters">
+<h4>Consonant clusters</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="clength">
+<h4>Consonant length</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+</details>
+</aside>
+
+
+
+
+<div id="consonant_description"></div>
+
+
+
+
+<section id="consonantSummary">
+<h4>Consonant summary table</h4>
+
+<p>The following table summarises the main consonant to character assigments.</p>
+
+<p class="instructions highlight">The left column is lowercase, and the right uppercase.</p>
+
+
+
+<table class="soundSummary">
+<tr>
+<th>Stops</th>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+<tr>
+<th>Affricates</th>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+<tr>
+<th>Fricatives</th>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+<tr>
+<th>Nasals</th>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+<tr>
+<th>Approximants<br>
+trills &amp; flaps</th>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+
+<tr>
+<th>Finals:</th>
+<td><figure class="summaryBox auto" data-cols="ipa,trans,transc"></figure></td>
+</tr>
+</table>
+
+
+<p class="instructions">For additional details see <a class="secref">consonant_mappings</a>.</p>
+</section>
+
+
+
+
+
+
+<section id="basicC">
+<h3>Basic consonants</h3>
+
+<p>Whereas the table just above takes you from sounds to letters, the following simply lists the basic consonant letters (however, since the orthography is highly phonetic there is little difference in ordering).</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᝉ␣ᝊ␣ᝆ␣ᝇ␣ᝃ␣ᝄ␣ ␣ᝐ␣ᝑ␣ ␣ᝋ␣ᝈ␣ᝅ␣ ␣ᝏ␣ᝍ␣ᝎ␣ᝌ</figure>
+
+<!--figure class="characterBox auto" data-cols="ipa,trans,transc">ᝉ␣ᝊ␣ᝆ␣ᝇ␣ᝃ␣ᝄ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᝐ␣ᝑ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᝋ␣ᝈ␣ᝅ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᝏ␣ᝍ␣ᝎ␣ᝌ</figure-->
+</section>
+
+
+
+
+
+
+<section id="extendedC">
+<h3>Repertoire extension</h3>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="onsets">
+<h3>Onsets</h3>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+<section id="finals">
+<h3>Finals</h3>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+<section id="clusters">
+<h3>Consonant clusters</h3>
+
+<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
+<p id="def-conjunct" class="explanatoryintro definitionStub"></p>
+
+<p>The absence of a vowel sound between two or more consonants is visually indicated in one of the following ways.</p>
+<ol>
+    <li>Create a conjunct. There are a number of possibilities here:<ol style="margin: 0;">
+<li>
+<mark>Stacking</mark>
+: Reduce a non-initial consonant in size and shape and position it below the first.</li>
+<li>
+<mark>Conjoining</mark>
+: The two consonants sit side by side, but the second consonant has a special shape.</li>
+<li>
+<mark>Ligation</mark>
+: Create a fusion of the letter shapes, where it may be difficult to identify one or more of the components.</li>
+<li>The 
+<mark>letter <span class="trans">ra</span></mark> 
+has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
+</ol></li>
+<li>Show a <mark>visible virama</mark> below the non-final consonants in the cluster.</li>
+<li>Use the 
+<mark>anusvara</mark>
+.</li>
+<!--li>No indication, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li-->
+</ol>
+
+
+
+<p>In Unicode, the conjunct formation is achieved by adding <span class="codepoint" translate="no"><span lang="or">&#x0B4D;</span> [<a href="/scripts/oriya/block#char0B4D"><span class="uname">U+0B4D ORIYA SIGN VIRAMA</span></a>]</span>  between the consonants. The font hides the virama glyph automatically when a conjunct is formed.</p>
+<p>See also <a class="secref">finals</a> and <a class="secref">gemination</a>.</p>
+
+
+
+
+<section id="stacking">
+<h4>Stacking</h4>
+
+<p>tbd</p>
+<figure id="fig_stacked_first"> </figure>
+</section>
+
+
+
+
+
+<section id="preceding_ra">
+<h4>Initial RA  in clusters</h4>
+
+<p>tbd</p>
+</section>
+
+
+
+<section id="ligated">
+<h4>Ligated forms<span class="name"></span></h4>
+
+<p>tbd</p>
+</section>
+
+
+
+
+<section id="conjoined">
+<h4>Conjoined consonants or a visible halanta</h4>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+<section id="triple_clusters">
+<h4>Triple-consonant clusters</h4>
+
+<p>tbd</p>
+</section>
+
+
+<section id="visible_virama">
+<h4>Visible vowel-killer</h4>
+
+<p>tbd</p>
+</section>
+</section>
+
+
+
+
+
+
+<section id="clength">
+<h3>Consonant length</h3>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="consonant_mappings">
+<h3>Consonant sounds to characters</h3>
+
+<p>This section maps XXXXX consonant sounds to common graphemes in the XXXXXX orthography. Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
+
+<p class="instructions"><strong>The right-hand column shows xxxx</strong></p>
+
+<p class="instructions"> Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
+
+
+
+
+<section id="stops">
+<h4>Stops</h4>
+<div id="map_plosives" class="map">
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">p</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">067E</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">067E</span><span class="hx medi noname">067E</span><span class="hx init noname">067E</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">b</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0628</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0628</span><span class="hx medi noname">0628</span><span class="hx init noname">0628</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">t</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">062A</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">062A</span><span class="hx medi noname">062A</span><span class="hx init noname">062A</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">d</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">062F</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">062F</span><span class="hx init noname">062F</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">k</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0643</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0643</span><span class="hx medi noname">0643</span><span class="hx init noname">0643</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɡ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">06AF</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">06AF</span><span class="hx medi noname">06AF</span><span class="hx init noname">06AF</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">q</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0642</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">قۇمچاق</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0642</span><span class="hx medi noname">0642</span><span class="hx init noname">0642</span> ⏴</span></p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+
+<section id="affricates">
+<h4>Affricates</h4>
+<div id="map_affricates" class="map">
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡ʃ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0686</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0686</span><span class="hx medi noname">0686</span><span class="hx init noname">0686</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">d͡ʒ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">062C</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">062C</span><span class="hx medi noname">062C</span><span class="hx init noname">062C</span> ⏴</span></p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
+<div id="map_fricatives" class="map">
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">f</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0641</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0641</span><span class="hx medi noname">0641</span><span class="hx init noname">0641</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">v</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">06CB</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">06CB</span><span class="hx init noname">06CB</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">s</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0633</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0633</span><span class="hx medi noname">0633</span><span class="hx init noname">0633</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">z</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0632</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0632</span><span class="hx init noname">0632</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʃ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0634</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0634</span><span class="hx medi noname">0634</span><span class="hx init noname">0634</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʒ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0634</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0698</span><span class="hx init noname">0698</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">χ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">062E</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">062E</span><span class="hx medi noname">062E</span><span class="hx init noname">062E</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʁ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">063A</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">063A</span><span class="hx medi noname">063A</span><span class="hx init noname">063A</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɦ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">06BE</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">06BE</span><span class="hx medi noname">06BE</span><span class="hx init noname">06BE</span> ⏴</span></p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+
+<section id="nasals">
+<h4>Nasals</h4>
+<div id="map_nasals" class="map">
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">m</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0645</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0645</span><span class="hx medi noname">0645</span><span class="hx init noname">0645</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">n</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0646</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0646</span><span class="hx medi noname">0646</span><span class="hx init noname">0646</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ŋ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">06AD</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">06AD</span><span class="hx medi noname">06AD</span><span class="hx init noname">06AD</span> ⏴</span></p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+
+<section id="sonorants">
+<h4>Other sonorants</h4>
+<div id="map_approximants" class="map">
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">w</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">06CB</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">06CB</span><span class="hx medi noname">06CB</span><span class="hx init noname">06CB</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">r</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0631</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0631</span><span class="hx init noname">0631</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">l</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0644</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">0644</span><span class="hx medi noname">0644</span><span class="hx init noname">0644</span> ⏴</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">j</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">064A</span></p>
+<p class="example"><span class="eg" lang="ug" dir="rtl">xxx</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ur"><span class="hx fina noname">064A</span><span class="hx medi noname">064A</span><span class="hx init noname">064A</span> ⏴</span></p>
+</div>
+</div>
+
+</div>
+</section>
+</section>
+</section>
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+<section id="symbols">
+<h2>Symbols</h2>
+
+<p>tbd</p>
+</section>
+
+ 
+ 
+ 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<section id="otherfeatures">
+<h2>Other features</h2>
+
+
+<section id="vocalics">
+<h3>XXXX</h3>
+<p id="def-vocalic" class="explanatoryintro definitionStub"></p>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+<section id="symbols">
+<h3>XXXXX</h3>
+
+<p>tbd</p>
+</section>
+</section>
+
+ 
+ 
+ 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<section id="encoding">
+<h2>Encoding choices</h2>
+
+<p class="instructions">This section offers advice about characters or character sequences to avoid, and what to use instead. It takes into account  the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC)..</p>
+
+<p>Although usage is recommended here, content authors may well be unaware of such recommendations. Therefore, applications should look out for the non-recommended approach and treat it the same as the recommended approach wherever possible.</p>
+
+
+
+
+
+
+
+
+
+
+<section id="decomposition">
+<h3>Canonically equivalent encodings</h3>
+
+<p>One letter only can be represented as an atomic character (the norm), or as a sequence of base letter plus combining mark. The parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches should be treated as canonically equivalent.</p>
+
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Atomic (recommended)</th>
+<th scope="col">Decomposed ( NOT recommended )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="ch">ێ</span></td>
+<td><span class="hx">064A 0654</span></td>
+</tr>
+</tbody>
+</table>
+
+<p>Note that the base character in the decomposed sequence is <span class="hx">064A</span>, and not <span class="hx">06CC</span>, which is used elsewhere for <span class="name">yeh</span> in Kurmanji.  <span class="hx">064A</span> is <em>only</em> used for this specific decomposed sequence; it is inappropriate to use it elsewhere in Kurmanji text.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="unresolved_encoding">
+<h3>Unresolved encodings</h3>
+
+<p>A couple of Sorani letters are encoded in different ways in different texts, and in fact can be mixed within the same text. At the moment there doesn't appear to be a clear ruling on which is expected. This section lists the alternatives.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Alternative 1</th>
+<th scope="col">Alternative 2</th>
+<th scope="col">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="hx">06BE</span></td>
+<td><span class="hx">0647</span></td>
+<td>Wikipedia and Wiktionary represent the sound <span class="ipa">h</span> using only <span class="uname">HEH DOACHASHMEE</span>, whereas gov.krd uses only <span class="uname">ARABIC HEH</span>. Other online resources examined are not completely one or the other. Note that Uighur uses <span class="uname">HEH DOACHASHMEE</span> to represent <span class="ipa">h</span>.</td>
+</tr>
+<tr>
+<td><span class="hx">06D5</span></td>
+<td><span class="hx">0647 200E</span></td>
+<td>
+<p>The majority usage seems to favour <span class="uname">AE</span>, although again some resources mix both to some degree (although they tend to mostly use <span class="uname">AE</span>). This makes sense, since the use of <span class="uname">HEH</span> plus ZWNJ has the appearance of a hack intended to prevent HEH joining to the left, whereas AE will do this naturally, without any formatting code point. Use of <span class="uname">AE</span> also gets around practical difficulties that arise because the ZWNJ character is invisible and is not readily accessible from many keyboards – difficulties that are amplified by the fact that this vowel letter is one of the most commonly used letters in the Sorani alphabet. Note that Uighur also uses <span class="uname">AE</span> to represent a vowel, and a different character for the sound <span class="ipa">h</span>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="confusable_encoding">
+<h3>Confusables &amp; spelling errors</h3>
+
+<p>This table lists characters that are often mistakenly used because they look the same as or similar to the code points used for Kurmanji, or perhaps because the correct character is not available on the user's keyboard.</p>
+
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Incorrect</th>
+<th scope="col">Correct</th>
+<th scope="col">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="hx">064A</span></td>
+<td><span class="hx">06CC</span></td>
+<td>The Arabic YEH doesn't drop the dots below in isolate and final positions.</td>
+</tr>
+<tr>
+<td><span class="hx">0643</span></td>
+<td><span class="hx">06A9</span></td>
+<td>Common fonts tend not to show the difference between these two characters, but the ability to search and compare text is impaired unless the application is aware of and takes counter-measures against this substitution.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+
+
+<section id="ff_encoding">
+<h3>False friends</h3>
+
+<p>The following atomic characters look as if they could be composed of parts, but in fact there is no equivalence during normalisation, and so the atomic characters only should be used.</p>
+
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Atomic</th>
+<th scope="col">Sequence ( DO NOT use! )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="ch">ڵ</span></td>
+<td><span class="hx">0644 065A</span></td>
+</tr>
+<tr>
+<td><span class="ch">ێ</span></td>
+<td><span class="hx">06CC 065A</span></td>
+</tr>
+<tr>
+<td><span class="ch">ۆ</span></td>
+<td><span class="hx">0648 065A</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="charorder">
+<h3>Codepoint sequences</h3>
+
+<p>Combining marks always follow the based character, however for Sorani, which doesn't normally use combining marks, this is only relevant for <span class="ch">ێ</span> when it occurs in decomposed text.</p>
+
+<p>Where present, characters in a syllable should always occur in the following order.</p>
+
+<ol>
+<li>A consonant or independent vowel.</li>
+<li>One or 2 medial consonants.</li>
+<li>A pre-base dependent vowel.</li>
+<li>A non-prebase dependent vowel.</li>
+<li>A vowel lengthener.</li>
+<li>A final consonant letter or combining mark.</li>
+</ol>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="formatting">
+<h2>Formatting characters</h2>
+<p><span class="codepoint" translate="no"><a href="/scripts/folderName/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> (<span class="uname">ZWNJ</span>) can be used to force the production of a visible virama, rather than a half-form (see <a class="secref">visiblevirama</a>). It can also be used to prevent the formation of vowel ligatures (see <a class="secref">vowelligatures</a>).</p>
+<p><span class="codepoint" translate="no"><a href="/scripts/folderName/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> (<span class="uname">ZWJ</span>) is used to produce special joining forms for <span class="uname">YA</span> (see <a class="secref">consonant_syllable</a>).</p>
+</section>
+   
+    
+    
+    
+    
+<section id="numbers">
+<h2>Numbers</h2>
+
+<section id="digits">
+<h3>Digits</h3>
+
+<p>@ XXXX has a set of native digits</p>
+ 
+<figure class="characterBox auto"  data-cols="trans,transc">߀␣߁␣߂␣߃␣߄␣߅␣߆␣߇␣߈␣߉</figure>
+
+<p>The CLDR standard-decimal pattern is <code>#,##,##0.###</code>. The standard-percent pattern is <code>#,##,##0%</code>.<span class="refcode"><a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/lo.html">c</a></span></p>
+<p>However, unlike other right-to-left scripts such as Arabic, Hebrew, Thaana, the numbers are displayed <em>right-to-left</em>, with the most significant digit first. This means that numbers don't produce bidirectional text in N'Ko.</p>
+<figure>
+<p dir="rtl" lang="nqo" class="large">ߝߌߟߊߣߊ߲ ߕߋ߬ߟߋ߫ <span class="ex">߂߇-߂߈/߂߀߁߀</span> ߕߊ߬ߡߌ߲߬ߣߍ߲ ߠߊ߫߸</p>
+<figcaption>A date in N'Ko. All characters are read right to left, including numbers.</figcaption>
+</figure>
+</section>
+
+
+
+
+<section id="ordinals">
+<h3>Ordinal numbers</h3>
+
+    <p>Ordinal numbers are produced using  diacritics. </p>
+    <p>The first ordinal is produced using <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07ED;</span> <a href="/scripts/nko/block#char07ED">[<span class="uname">U+07ED NKO COMBINING SHORT RISING TONE​</span>]</a></span>, eg. <span class="ex" lang="nqo" dir="rtl">߁߭</span> <span class="meaning">first</span>.</p>
+    <p>Others use <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07F2;</span> <a href="/scripts/nko/block#char07F2">[<span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK​</span>]</a></span>, eg. <span class="ex" lang="nqo" dir="rtl">߂߲</span> <span class="meaning">second</span>. When there are multiple digits in a number, the diacritic appears only under the last in sequence, eg. <span class="ex" lang="nqo" dir="rtl">߁߂߃߲</span> <span class="meaning">123rd</span>.</p>
+  </section>
+
+
+
+
+<section id="currency">
+<h3>Currency</h3>
+
+<p>The CLDR standard format for currency is <code>¤#,##0.00;¤-#,##0.00</code>, and the symbol for the Lao currency, Kip, is <span class="codepoint" translate="no"><span lang="lo">&#x20AD;</span> [<a href="/scripts/currency/block#char20AD"><span class="uname">U+20AD KIP SIGN</span></a>]</span><span class="refcode">.</span></p>
+
+<figure class="characterBox auto" data-cols="trans">₭</figure>
+
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="direction">
+<h2>Text direction</h2>
+
+<p>@ XXXX text runs left to right in horizontal lines.</p>
+
+<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the  XXXXX orthography described here.</a></p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+
+
+
+<p>
+<span id="cursiveX"></span>
+<span id="gsubX"></span>
+<span id="gposX"></span>
+<span id="transformsX"></span>
+</p>
+
+<aside class="sectionAside">
+<p>This orthography has no special features with respect to the following.</p>
+<ul>
+<li>Cursive/joined up text (eg.like Arabic).</li>
+<li>Context-based shaping (letters do not interact).</li>
+<li>Context-based positioning (no combining marks).</li>
+<li>Multiple combining marks on a single base.</li>
+<li>Case distinction, or special transforms to convert between characters.</li>
+</ul>
+
+
+<details class="tbd">
+<summary>Sections to be added ...</summary>
+
+<section id="writingstyles">
+<h4>Writing styles</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="cursive">
+<h4>Cursive or joining letters</h4>
+</section>
+
+<section id="fontstyle">
+<h4>Letterform slopes, weights, &amp; italics</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="transforms">
+<h4>Transforming characters</h4>
+
+<!--p>The Latin orthography used for Kurmanji is bicameral, and applications may need to enable transforms to allow the user to switch between cases. Capital letters are used at the beginning of sentences or titles, and for proper nouns.</p-->
+</section>
+</details>
+</aside>
+
+
+
+
+
+
+
+<p class="instructions">Experiment with examples using the <a href="../../pickers/xxxx/index.html" target="_blank">XXXX character app</a>.</p>
+
+
+
+
+
+
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
+
+<p>Wancho letters don't interact, so no special shaping is needed.</p>
+
+<p>Base characters carry only a single combining mark.</p>
+
+<p>Some small adjustments may be needed for the placement of tone marks relative to the base letter, but these are mostly horizontal, since Wancho letters tend to have the same height. <a class="figref">fig_gpos</a> shows adjustments to the horizontal position of the tone mark, depending on the shape of the base character.  It also shows kerning of the letters.</p>
+
+
+<figure id="fig_gpos" class="sideCaption">
+<img src="nnp/gpos.png" alt="𞋀𞋬𞋫𞋬 𞋀𞋮𞋫𞋮" class="ex" lang="nnp" data-notes="Noto Sans Wancho 200px" style="height: 7em">
+<figcaption>An illustration of context-sensitive glyph placement in Wancho.</figcaption>
+</figure>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="graphemes">
+<h2>Graphemes</h2>  
+
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p>Graphemes in XXXX consist of single letters or letters with one or two combining marks. This means that text can be segmented into typographic units using grapheme clusters.</p>
+
+<p>XXXX doesn't use word boundaries for text segmentation, relying instead on grapheme boundaries (sometimes called orthographic syllables).</p>
+
+<p>Graphemes in XXXX consist of single letters or letters with a single combining mark.</p>
+
+<p>When applied to XXXX, Unicode grapheme clusters split text into base characters plus any combining marks that follow. Therefore, grapheme clusters can be used to segment XXXX into typographic units.</p>
+
+
+<p>Phrase, sentence, and section delimiters are described in <a class="secref">phrase</a>. </p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>  
+
+
+
+
+<aside class="sectionAside">
+<details class="tbd">
+<summary>Sections to be added ...</summary>
+
+<section id="bracketing">
+<h4>Bracketed text</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">(␣)</figure>
+
+<p>Wancho commonly uses ASCII parentheses to insert parenthetical information into text.</p>
+
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>standard</th>
+<td><p><span class="codepoint" translate="no"><span lang="hi">&#x0028;</span> [<a href="/scripts/folderName/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="hi">&#x0029;</span> [<a href="/scripts/folderName/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
+</tr>
+</tbody>
+</table-->
+</section>
+
+<section id="quotations">
+<h4>Quotations &amp; citations</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p>
+
+<p>Wancho texts typically use  quotation marks around quotations instead. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks.</p>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">‘␣’␣“␣”</figure>
+
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">initial</th>
+<td>
+<p><span class="ch">“</span></p>
+</td>
+<td>
+<p><span class="ch">”</span></p>
+</td>
+</tr>
+<tr>
+<th scope="row">nested</th>
+<td>
+<p><span class="ch">‘</span></p>
+</td>
+<td>
+<p><span class="ch">’</span></p>
+</td>
+</tr>
+</tbody>
+</table-->
+
+<!--p>The default quote marks for Wancho are <span class="codepoint" translate="no"><span lang="hi">&#x201C;</span> [<a href="/scripts/folderName/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span> at the start, and <span class="codepoint" translate="no"><span lang="hi">&#x201D;</span> [<a href="/scripts/folderName/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span> at the end.</p>
+<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="hi">&#x2018;</span> [<a href="/scripts/folderName/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="hi">&#x2019;</span> [<a href="/scripts/folderName/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span>.</p-->
+</section>
+
+<section id="emphasis">
+<h4>Emphasis</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="abbrev">
+<h4>Abbreviation, ellipsis &amp; repetition</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="inlinenotes">
+<h4>Inline notes &amp; annotations</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="otherpunctuation">
+<h4>Other punctuation</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="otherinline">
+<h4>Other inline text decoration</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+</details>
+</aside>
+
+
+
+
+
+
+
+
+<section id="word">
+<h3>Word boundaries</h3>
+
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p>Words are separated by spaces.</p>
+<p>Some words are hyphenated.</p>
+
+</section>
+
+
+
+
+
+
+
+<section id="phrase">
+<h3>Phrase &amp; section boundaries</h3>
+
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+
+
+<figure class="characterBox auto small"  data-cols="trans,transc">,␣:␣;␣.␣?␣!␣।␣॥␣—</figure>
+
+<p>XXXX  uses a mixture of ASCII and Arabic punctuation. Other languages using the Arabic script may use different punctuation, such as the full stop in Urdu.</p>
+
+<p>XXX uses ASCII punctuation marks.</p>
+
+<table class="character_list">
+<tbody>
+<tr>
+<th scope="row">phrase</th>
+<td>
+<p><span class="ch">,</span></p>
+<p><span class="ch">;</span></p>
+<p><span class="ch">:</span></p>
+</td>
+</tr>
+<tr>
+<th scope="row">sentence</th>
+<td>
+<p><span class="ch">.</span></p>
+<p><span class="ch">?</span></p>
+<p><span class="ch">!</span></p>
+</td>
+</tr>
+<tr>
+<th scope="row">paragraph</th>
+<td>
+<p><span class="hx">A9CB</span></p>
+</td>
+</tr>
+<tr>
+<th scope="row">section</th>
+<td>Ditto.</td>
+</tr>
+<tr>
+<th scope="row">general&nbsp;divider</th>
+<td>
+<p><span class="hx">A9CA</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<section id="para">
+<h2>Line &amp; paragraph layout</h2>
+
+
+
+
+<aside class="sectionAside">
+<details class="tbd">
+<summary>Sections to be added ...</summary>
+
+<section id="justification">
+<h4>Text alignment &amp; justification</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="spacing">
+<h4>Text spacing</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+
+<section id="baselines">
+<h4>Baselines, line height, etc.</h4>
+</section>
+
+<section id="lists">
+<h4>Counters, lists, etc.</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+
+<!--p class="instructions">You can experiment with counter styles using the <a target="_blank" href="../../app-counters/">Counter styles converter</a>. Patterns for using these styles in CSS can be found in <a href="https://www.w3.org/TR/predefined-counter-styles/#oriya-styles">Ready-made Counter Styles</a>, and we use the names of those patterns here to refer to the various styles.</p-->
+</section>
+
+<section id="initials">
+<h4>Styling initials</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+</section>
+</details>
+</aside>
+
+
+
+
+
+
+
+
+
+
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+
+<p>Lines are generally broken between words.</p>
+
+
+
+
+
+
+
+<!--section id="hyphenation">
+<h4>Breaking lines within a word</h4>
+<p>tbd</p>
+</section-->
+
+
+
+
+
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show  line-breaking properties for characters in the modern XXXXXX orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for certain characters. Context may affect the behaviour of some of these.</p>
+
+<p class="instructions">Click/tap on the characters to show what they are.</p>
+
+<ul>
+<li><span class="ex list" lang="bn">“ ‘ (</span> &nbsp; should not be the last character on a line.</li>
+<li><span class="ex list" lang="bn">” ’ ) . , ; ! ? । ॥ %</span> &nbsp; should not begin a new line.</li>
+<li><span class="ex list" lang="bn">৳</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li>
+</ul>
+
+<p>Line breaking should not move a danda or double danda to the beginning of a new line even if they are preceded by a space character.</p>
+</section>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<section id="page">
+<h2>Page &amp; book layout</h2>
+
+
+
+
+<aside class="sectionAside">
+<details class="tbd">
+<summary>Sections to be added ...</summary>
+
+<section id="generallayout">
+<h4>General page layout &amp; progression</h4>
+</section>
+
+<section id="grids">
+<h4>Grids &amp; tables</h4>
+</section>
+
+<section id="footnotes">
+<h4>Notes, footnotes, etc</h4>
+
+<p class="instructions">See <a class="secref">inlinenotes</a> for purely inline annotations, such as ruby or warichu. This section is about annotation systems that separate the reference marks and the content of the notes.</p>
+</section>
+
+<section id="interaction">
+<h4>Forms &amp; user interaction</h4>
+</section>
+
+<section id="headers">
+<h4>Page numbering, running headers, etc</h4>
+</section>
+</details>
+</aside>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="historical">
+<h2>Historical information</h2>
+
+
+<section id="variants">
+<h3>Orthographic development &amp; variants</h3>
+<p>tbd</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+ 
+	
+
+
+<section id="online_samples">
+<h2>Online resources</h2>
+
+<ol>
+<li><a href="https://unicode.org/udhr/d/udhr_aii.html">Universal Declaration of Human Rights - Assyrian Neo-Aramaic</a></li>
+<li><a href="http://worldbibles.org/language_detail.php/eng/aii/Assyrian+Neo-Aramaic?translation=eng&&language=aii&&name=Assyrian+Neo-Aramaic">The Bible in Assyrian Neo-Aramaic</a></li>
+</ol>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="refs">
+<h2>References</h2>
+</section>
+
+
+
+
+
+
+
+<div id="phoneLinks"></div>
+
+
+<div id="panel" style="display:none"></div>
+
+
+
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
+<script>
+addPageFeatures()
+</script>
+</body>
+</html>
