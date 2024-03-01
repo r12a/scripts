@@ -57,7 +57,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->24 February, 2024<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->1 March, 2024<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -73,7 +73,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->24-Feb-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->01-Mar-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -133,14 +133,71 @@
 
 
 
+<section id="template_codepoints">
+<h3>Codepoints</h3>
+
+<p>A typical reference to a code point or sequence of code points looks like the following 4 examples. The page converts  simple markup to more complicated markup during rendering.</p>
+
+<p><span class="ch">𞋀</span></p>
+<p><span class="ch">𞋖𞋭</span></p>
+<p><span class="ch">𞋮</span></p>
+<p><span class="hx img">200B</span></p>
+
+<p>Basic markup for these is, respectively:</p>
+
+<p><code>&lt;span class="ch"&gt;𞋀&lt;/span&gt;</code> or <code>&lt;span class="hx"&gt;1E2C0&lt;/span&gt;</code></p>
+<p><code>&lt;span class="ch"&gt;𞋖𞋭&lt;/span&gt;</code> or <code>&lt;span class="hx"&gt;1E2D6 1E2ED&lt;/span&gt;</code></p>
+<p><code>&lt;span class="ch"&gt;𞋮&lt;/span&gt;</code> or <code>&lt;span class="hx"&gt;1E2EE&lt;/span&gt;</code></p>
+<p><code>&lt;span class="hx img"&gt;200B&lt;/span&gt;</code></p>
+
+<p>The generated markup will look something like this:</p>
+
+<p style="text-align: start;"><code>&lt;span class="codepoint" translate="no"&gt;&lt;bdi lang="th"&gt;𞋀&lt;/bdi&gt;&lt;a href="javascript:void(0)" target=""&gt;&lt;span class="uname"&gt;U+1E2C0 WANCHO LETTER AA&lt;/span&gt;&lt;/span&gt;</code></p>
+
+<p>Each orthography notes page globally declares a language tag to be used with example text. The markup automatically adds a lang attribute for that language to the generated markup.  If you want a different lang attribute to be applied, simply add <code>lang="xx"</code> to the span tag (where xx is the lang value).</p>
+
+<p>Every span tag must contain one of the following classes:</p>
+
+<p><span class="leadin">ch</span> The span element content contains one or more characters (with no separators).</p>
+
+<p><span class="leadin">hx</span> The span element content contains one or more hex code point values, separated by a space.</p>
+
+<p>Optional, additional class names are as follows. Most of these can be combined with others.</p>
+
+<p><span class="leadin">img</span> A PNG image will be used to show the character.</p>
+
+<p><span class="leadin">svg</span> An SVG image will be used to show the character.</p>
+
+<p><span class="leadin">noname</span> Show the character but suppress the name &amp; codepoint value.</p>
+
+<p><span class="leadin">split</span> Renders a sequence as <span class="ch split">𞋖𞋭</span>, rather than <span class="ch">𞋖𞋭</span>.</p>
+
+<p><span class="leadin">circle</span> Adds a dotted circle before the listed character(s) on display.</p>
+
+<p><span class="leadin">coda</span> Adds a dotted circle <em>after</em> the listed character(s) on display. This is useful for showing character sequences from scripts like Thai, where the pronunciation is different in syllables with and without a coda.</p>
+
+<p><span class="leadin">init</span> Adds ZWJ after the character(s), when displayed.</p>
+
+<p><span class="leadin">medi</span> Adds ZWJ before and after the character(s), when displayed.</p>
+
+<p><span class="leadin">fina</span> Adds ZWJ before the character(s), when displayed.</p>
+
+<p><span class="leadin">skip</span> Adds ZWJ before the <em>second</em> character(s), when displayed. This is useful for cases where, for a cursive script, you want to show a combining mark followed by a joining letter.</p>
+
+</section>
+
+
+
+
+
 <section id="template_refs">
 <h3>References</h3>
 
-<p>References can be added to the markup using either [[...]] or &lt;tt&gt;...&lt;/tt&gt;. (The brackets are converted to markup automatically.)</p>
+<p>References can be added to the markup using  &lt;tt&gt;...&lt;/tt&gt;. (The brackets are converted to markup automatically.)</p>
 
-<p>To indicate a source link that is listed in the refs.js file, use [[..]] or &lt;tt&gt; with the key for that resource.  After a comma you can add a number for a page, or '#fragid', eg. <code>[[ul,22]]</code></p>
+<p>To indicate a source link that is listed in the refs.js file, use  &lt;tt&gt; with the key for that resource.  After a comma you can add a number for a page, or '#fragid', eg. <code>[[ul,22]]</code></p>
 
-<p>To indicate a source link that is NOT listed in the refs.js file, use [[..]] or &lt;tt&gt; containing '@shortname,url', eg. <code>[[@Github,https://github.com/w3c/sealreq/issues/45]]</code></p>
+<p>To indicate a source link that is NOT listed in the refs.js file, use &lt;tt&gt; containing '@shortname,url', eg. <code>[[@Github,https://github.com/w3c/sealreq/issues/45]]</code></p>
 
 <p>If this is something the reader should also look at, rather than just a source link, add <code class="kw" translate="no">class=&quot;more&quot;</code> to the <code class="kw" translate="no">tt</code> element.</p>
 
@@ -187,16 +244,16 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <div  class="ancestry">
 <p>Phoenician<sup>?</sup></p>
-<p style="margin-inline:1em;">└ Aramaic<sup>?</sup></p>
-<p style="margin-inline:2em;">└ Brahmi</p>
-<p style="margin-inline:3em;">└ Tamil-Brahmi</p>
-<p style="margin-inline:4em;">└ Pallava</p>
-<p style="margin-inline:5em; font-weight: bold;">└ Cham</p>
-<p style="margin-inline:5em;">+ Khmer</p>
-<p style="margin-inline:5em;">+ Kawi</p>
-<p style="margin-inline:5em;">+ Old Mon</p>
-<p style="margin-inline:5em;">+ Grantha</p>
-<p style="margin-inline:5em;">+ Tamil</p>
+<p style="margin-inline-start:1em;">└ Aramaic</p>
+<p style="margin-inline-start:2em;">└ Brahmi</p>
+<p style="margin-inline-start:3em;">└ Tamil-Brahmi</p>
+<p style="margin-inline-start:4em;">└ Pallava</p>
+<p style="margin-inline-start:5em; font-weight: bold;">└ Khmer</p>
+<p style="margin-inline-start:6em;">+ Cham</p>
+<p style="margin-inline-start:6em;">+ Kawi</p>
+<p style="margin-inline-start:6em;">+ Mon-Burmese</p>
+<p style="margin-inline-start:6em;">+ Grantha</p>
+<p style="margin-inline-start:6em;">+ Tamil</p>
 </div>
 
 <p>Speakers of the Eastern Cham language number about 132,000 in Bình Thuận, Ninh Thuận, and Đồng Nai provinces in southern Vietnam, as well as in Hồ Chí Minh City. The Ethnologue estimates the L1 literacy rate to be 5%–10%. The Cham script is the primary orthography for the  Eastern Cham, but the largely muslim Western Cham peoples of Cambodia prefer the Arabic script.<tt>eth</tt> Historically, the Eastern Cham script was learned by boys once they reached a certain age, but not by women and girls.<tt>ws</tt></p>
