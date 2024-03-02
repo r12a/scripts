@@ -290,7 +290,7 @@ autoExpandExamples.bo = `
 གདིང||
 གདུག||
 གདུག་པ||
-གདུགས|umbrella; noon|›§tu˩˧˨§‹§–|gdugs
+གདུགས|umbrella|›§tu˩˧˨§‹§–|gdugs
 གདོང་པ||
 གདོང་བྱུག་པོ་ཊར||
 གདོན་འདྲེ|demon, ghost|toŋ˩˨.ʈ͡ʂeˑ|gdno 'dre
@@ -1441,7 +1441,7 @@ autoExpandExamples.bo = `
 མར་ཤལ་གླིང་ཕྲན་རྒྱལ་ཁབ||
 མལ་ཏ||
 མལ་དི་ཝེསུ||
-མི་|person, human being|mì|mi
+མི|person, human being|mì|mi
 མི་གཟུགས་འཕྲུལ་བྱད||
 མི་གཡོ་བ||
 མི་ཅི་གྷན||
@@ -1498,7 +1498,6 @@ autoExpandExamples.bo = `
 མེག་སི་ཀོ་གསར་མ||
 མེག་སི་ཀོ་གྲོང||
 མེད|not|mɛː˩˧˨/me˩˧˨|med
-མེའུ་|dwarf||me'u
 མོ|woman|mo˩˨|mo
 མོ་ཊ|car|mò.§ §ʈ͡ʂa|mo ta
 མོ་ཊ་ཇིབ||
@@ -2111,7 +2110,7 @@ autoExpandExamples.bo = `
 རྡ་རམ་ས་ལ||
 རྡུལ||
 རྡུལ་ཕྲན|atom|tyː˩˨.ʈ͡ʂʰɛ̃˥|rdul phran
-རྡེའུ་|pebble||rde'u
+རྡེའུ|pebble||rde'u
 རྡོ|stone|to˩˧|rdo
 རྡོ་|stone|to˩˧|rdo
 རྡོ་རྒྱུད||
@@ -2387,7 +2386,7 @@ autoExpandExamples.bo = `
 ཤར་གླིང་ལྷོ་ཤར||
 ཤར་ཏིམོར||
 ཤར་པ||
-ཤར་བ|sherpa|ɕé§r§pa|shar ba|ɕéːpa
+ཤར་བ|sherpa|ɕé§r§pa§/ɕéːpa|shar ba|
 ཤི|to die||shi||OT
 ཤིག|louse|ɕi(k̚)ˀˑ|shig
 ཤིང|tree|ɕiŋ˥|shing
@@ -2433,7 +2432,7 @@ autoExpandExamples.bo = `
 ཤོག་ཧྲིལ||
 ཤོར|to lose|ɕoː˥|shor
 ཤོས|most|ɕøːˑ/ɕyːˑ|shos
-ཤྲཱི་|wealth||shrī
+ཤྲཱི|wealth||shrī
 ས|earth||sa
 ས་ཁུལ|area|sa˥.kʰyː˥|sa khul
 ས་དཀར|whitewash, chalk|sa˥.kaː(ɹ)ˑ|sa dkar
@@ -2986,11 +2985,12 @@ autoExpandExamples.bo = `
 
 
 @ ?
-ཁ་ཁེབ་|cover|kʰa.§§kʰe§p
+ཁ་ཁེབ|cover|kʰa.§§kʰe§p
 དགའ|virtue|›§gá§–
-གྱུརད་|became|kjù§r§–
-སྤྱིར་|general|cí§–
+གྱུརད|became|kjù§r§–
+སྤྱིར|general|cí§–
 ཤུན་ལྤགས|skin||shun lpags
+མེའུ|dwarf||me'u
 
 
 
