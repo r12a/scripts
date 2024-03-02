@@ -1988,10 +1988,18 @@ function replaceStuff (node) {
                 }
 
         //if (window.spreadsheetRows[char]) console.log('ipa',char,window.spreadsheetRows[char][cols.ipaLoc])
-            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc].toLowerCase()+ipaplus
+            //if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc].toLowerCase()+ipaplus
+            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) {
+                ch = window.spreadsheetRows[char][cols.ipaLoc].toLowerCase()
+                chs = ch.split(' ')
+                ch = ''
+                for (x=0;x<chs.length;x++) {
+                    ch += chs[x]+ipaplus+' '
+                    }
+                }
             else ch = '&nbsp;'
             if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
-            else out += '<span class="listIPA">'+ch.replace(/ /g,' ')+'</span>'
+            else out += '<span class="listIPA">'+ch.replace(/ /g,' ').trim()+'</span>'
             //else out += '<span class="listIPA">'+ch.replace(/ /g,'<i>~</i>')+'</span>'
             }
 
