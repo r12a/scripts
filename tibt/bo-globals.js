@@ -8,7 +8,7 @@ blockDirection=''  // ltr/rtl or '' for ltr; used by block.html
 
 blockDirectoryName='tibt'  // folder name where block file is found, no slash
 orthogFilePath='tibt/bo'  // path below /scripts, including filename, but no extension, eg. lana/nod
-pickerDir='tibt'  // directory name for picker, no slash at end
+pickerDir='tibt-bo'  // directory name for picker, no slash at end
 scriptSummaryTableName='bo'  // id used for langs record in xx-langdata.js; used to make summary table
 charUsageBCP='bo'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only
 orthogName = 'Tibetan' // natural language name for the orthography; used only in makeIndexIntro
