@@ -331,7 +331,7 @@ autoExpandExamples.bo = `
 གཞས་བཏང||
 གཞས་ཚིག|lyrics|ɕe˩˨.t͡sʰi(k̚)ˀ˥˨|gzhas tshig
 གཞི|cause, source|ɕi˩˨|gzhi
-གཞིས་ཀ|native home|–§ɕi˩˧.§–§.§kə˥|gzhis ka
+གཞིས་ཀ|native home|–§ɕi˩˧§–§.§kə˥|gzhis ka
 གཞིས་ཀ་རྩེ|Shigatse|ɕi˩˨.kə˥.t͡seˑ|gzhis ka rtse
 གཞིས་ཆགས||
 གཞིས་ཆགས་བྱེད་མཁན||
@@ -350,7 +350,7 @@ autoExpandExamples.bo = `
 གཟའ་ཉི་མ|Sunday|sa˩˨ ȵi˩˨.mə˥|gza' nyi ma
 གཟའ་པ་སངས|Friday|sa˩˨ pa˥.saŋ˥˨|gza' pa sangs
 གཟའ་ཕུར་བུ|Thursday|sa˩˨ pʰuː˥.pu˥|gza' phur bu
-གཟའ་མིག་དམར|Tuesday|sa˩˨ miː˩˨.maː˥|gza' mig dmar
+གཟའ་མིག་དམར|Tuesday|–§sa˩˨§–§.§miː˩˨§‹§.§›§maː˥§–|gza' mig dmar
 གཟའ་ཟླ་བ|Monday|–§sa˩˧§–§.§ta˩˧§.§wa˥|gza' zla ba
 གཟའ་འཁོར|week|sa˩˨.kʰoː˥|gza' 'khor
 གཟའ་ལྷག་པ|Wednesday|sa˩˨ ɬa(k̚)ˀ˥.pa˥|gza' lhag pa
@@ -736,7 +736,7 @@ autoExpandExamples.bo = `
 དཀྲོག་གཏམ||
 དཀྲོལ||
 དཀྲོལ་བ||
-དག|I|da§g˥
+དག|I|da§ɡ˥
 དག་ཆ་བྲིས|to spell||dag cha bris
 དག་ཡིག|dictionary||dag yig
 དགའ་པོ་བྱེད་ཡག||
@@ -752,7 +752,7 @@ autoExpandExamples.bo = `
 དགེ|||||OT
 དགེ་བ||
 དགེ་བཤེས|geshe|ke˩˨.ɕe˥˨|dge bshes
-དགེ་འདུན|buddhist community|–§ɡe§ §›§n§y§n|dge-'dun
+དགེ་འདུན|buddhist community|–§ɡe§.§›§n§y§n|dge-'dun
 དགེ་རྒན|teacher, tutor|ke˩˨.kɛ̃˥|dge rgan
 དགེ་ལུགས་པ|Gelug|ki˩˨.lu˥˨.pəˑ|dge lugs pa
 དགེ་སློང|bhikkhu (full ordained monk)|ke˩˨.loŋ˥|dge slong
@@ -1662,7 +1662,7 @@ autoExpandExamples.bo = `
 འཁར་རྔ||
 འཁོར|circle, sphere|kʰóː(ɹ)|'khor
 འཁོར་བ||
-འཁོར་ལོ|wheel|–§kʰó.§–§.§ló|'khor lo
+འཁོར་ལོ|wheel|–§kʰo˥§–§.§lo˥|'khor lo
 འཁོར་ལོ་བཀག||
 འཁོར་ཤུར་ལྷམ་གོག||
 འཁྱག|to be cold|–§cʰa§(k̚)ˀ˥˨|'khyag
@@ -1681,7 +1681,7 @@ autoExpandExamples.bo = `
 འཁྲུད|to wash, bathe|ʈ͡ʂʰyː˥˨|'khrud
 འགོ་པ||
 འགོག|to halt, block|ka˥˨|'gog
-འགོང|to bewitch|koŋ˩˨|'gong
+འགོང|to bewitch|–§ko§ŋ˩˨|'gong
 འགོང་པོ|enchanter, sorcerer|koŋ˩˨.poˑ|'gong po
 འགོད|to plan|køː˩˧˨|'god
 འགྱོད་པ|regret, remorse|–§cøː§‹˩˧˨§.§paˑ|'gyod pa
@@ -2344,7 +2344,7 @@ autoExpandExamples.bo = `
 ལྡོག་པ||
 ལྤགས་པ|skin||lpags pa
 ལྦ་བ||
-ལྦུ་བ|bubble, froth|pʊː˩˧§ §–|lbu ba
+ལྦུ་བ|bubble, froth|pʊː˩˧§.§–|lbu ba
 ལྷ|god, deity|ɬa˥|lha
 ལྷ་ཁང|temple|ɬa˥.kʰaŋ˥|lha khang
 ལྷ་གཅིག|Your Majesty|ɬa˥§.§–§t͡ɕi˥˩§–|lha gcig
