@@ -129,7 +129,7 @@ autoExpandExamples.km = `
 កម្ពុជា||
 កម្ពោជិក||
 កម្ម|action, deed|kɑ§m§–
-កម្មករ|worker|ka§m.§mĕə§ʔ.kɑː§–§~ka§m.§ma§ʔ.kɑː§–~ka§m.§ˈkɑː§–
+កម្មករ|worker|ka§m.§mĕə§ʔ.kɑː§–§ / ka§m.§ma§ʔ.kɑː§– / ka§m.§ˈkɑː§–
 កម្មករនាវា||
 កម្មការិនី||
 កម្មន្ត||
@@ -577,7 +577,7 @@ autoExpandExamples.km = `
 ក្រុមទាហាន||
 ក្រុមទាហានពេជ្ឈឃាដ||
 ក្រុមប្រឹក្សា||
-ក្រុមហ៊ុន|company|k§ro§m§ ˈhu§n§ ~ krom.ˈmaʔ hun
+ក្រុមហ៊ុន|company|k§ro§m§ ˈhu§n§ / krom.ˈmaʔ hun
 ក្រូច||
 ក្រូចឃ្វិច||
 ក្រូចឆ្មារ||
@@ -752,7 +752,7 @@ autoExpandExamples.km = `
 ខ្មៅ|black|kʰmaw
 ខ្មៅដៃ||
 ខ្យង||
-ខ្យល់|wind, breath|kjɑl~kʰcɑl~kʰsɑl
+ខ្យល់|wind, breath|kjɑl / kʰcɑl / kʰsɑl
 ខ្យល់ផាយ||
 ខ្យល់ព្យុះ||
 ខ្លា||
@@ -1840,7 +1840,7 @@ autoExpandExamples.km = `
 តុស្តី||
 តុះ||
 តូក្យូ||
-តូច|small|tou§c§/tuːc
+តូច|small|tou§c§ / tuːc
 តូចតាច||
 តូន||
 តូហ្គោ||
@@ -2086,7 +2086,7 @@ autoExpandExamples.km = `
 ទសជាតក||
 ទសបញ្ញត្តិ||
 ទសបារមី||
-ទសវត្សរ៍|decade|tĕəʔ.saʔ.ʋŏət~tŭəh.saʔ.ʋŏət
+ទសវត្សរ៍|decade|tĕəʔ.saʔ.ʋŏət / tŭəh.saʔ.ʋŏət
 ទស្សន||
 ទស្សនកិច្ច||
 ទស្សនវិជ្ជា||
@@ -3572,14 +3572,14 @@ autoExpandExamples.km = `
 មណី||
 មណ្ឌល||
 មណ្ឌុកសត្វ||
-មតិ|opinion|mĕəʔ.§ˈteʔ§~ma.ˈteʔ
+មតិ|opinion|mĕəʔ.§ˈteʔ§ / ma.ˈteʔ
 មត្ត||
 មធុរជាតិ||
 មធ្យម||
 មធ្យោបាយ||
 មន||
 មនសិការ||
-មនុស្ស|man (human being)|mɔ.ˈnuh~mɔ.ˈnɨh~mĕəʔ.ˈnuh||Sanskrit
+មនុស្ស|man (human being)|mɔ.ˈnuh / mɔ.ˈnɨh / mĕəʔ.ˈnuh||Sanskrit
 មនុស្សគ្រាស||
 មនុស្សជាតិ||
 មនុស្សទោស||
@@ -5444,7 +5444,7 @@ autoExpandExamples.km = `
 ហ្វឹក|to practice|–§fə§k
 ហ្វឹកហាត់||
 ហ្វឹកហ្វឺន||
-ហ្វូង|flock, crowd|–§fou§ŋ§/ʋouŋ/pʰouŋ
+ហ្វូង|flock, crowd|–§fou§ŋ§ / ʋouŋ / pʰouŋ
 ហ្វឿងហ្វា||
 ហ្វេសប៊ុក||
 ហ្វៃហ្វា||
@@ -5808,8 +5808,8 @@ autoExpandExamples.km = `
 អាឡូ||
 អាំង||
 អាំស្ទែដាំ||
-អិស្លាម|Islam|ʔih.§ˈs§laː§m§/ʔeh.ˈslaːm|ʼihslaam, ʼehslaam
-អី/what||ʔəj
+អិស្លាម|Islam|ʔih.§ˈs§laː§m§ / ʔeh.ˈslaːm|ʼihslaam, ʼehslaam
+អី|what||ʔəj
 អីវ៉ាន់|objects|ʔəj.ˈʋan|ʼəyvan
 អឺរ៉ាស៊ី||
 អឺរ៉ុប||
@@ -6023,7 +6023,7 @@ autoExpandExamples.km = `
 ឥឡូវនេះ||
 ឥឡូវហ្នឹង||
 ឦស||
-ឦសាន|northeast|ʔəj.§ˈsaː§n§ ~ ʔiː.ˈsaːn
+ឦសាន|northeast|ʔəj.§ˈsaː§n§ / ʔiː.ˈsaːn
 ឧកញ៉ា|official of ministerial rank|ʔo§k.§ˈɲaː
 ឧក្កាបាត||
 ឧក្រិដ្ឋ||
