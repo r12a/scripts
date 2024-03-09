@@ -15,9 +15,6 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 */
 
 
-otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
-termListType = 3			// picks up sources automatically
-
 
 
 
@@ -190,7 +187,7 @@ autoExpandExamples.lo = `
 ຄັນຄາກ||
 ຄັນທະນູ||
 ຄັບ||
-ຄັວນ||
+ຄັວນ|smoke (dated form)|kʷʰa§‹§n˧˥|khuan
 ຄັ້ນ|to squeeze|kʰâ§n
 ຄາງ||
 ຄາຍ|to spit|kʰ§áː§j
@@ -463,7 +460,7 @@ autoExpandExamples.lo = `
 ທົ່ງ||
 ທົ່ງນາ||
 ທຽນ||
-ທຽວ||
+ທຽວ|to stroll|tʰ§iːə̯§w˧˥|thiāu
 ນຄຣ||
 ນຄອນ||
 ນວດ||
@@ -486,7 +483,7 @@ autoExpandExamples.lo = `
 ນາລິກາ||
 ນຳ|with|n§am
 ນິພານ||
-ນີວຢອກ||
+ນີວຢອກ|New York|niː§w˧˥.§j§ɔː§k̚˧˩|nīu yǭk
 ນີ້|this|nîː
 ນີ້||
 ນຶ່ງ|one|nɯ̄§ŋ
@@ -805,7 +802,7 @@ autoExpandExamples.lo = `
 ລັດທິ||
 ລັດທິຄອມມູນິດ||
 ລັດເຊຍ||
-ລັດເຊັຽ||
+ລັດເຊັຽ|Russia|la§t̚˧.§›§siːə̯˧˥§‹|lat sīa
 ລາ||
 ລາຄາ||
 ລາຍ||
@@ -990,14 +987,14 @@ autoExpandExamples.lo = `
 ຫຍັງ|nothing|›§ɲā§ŋ|nyang|
 ຫຍິບ|to sew|›§ɲǐ§p|nyip
 ຫຍ້າ|grass|›§ɲ§a᷆ː|nyā
-ຫນອງ||
+ຫນອງ|lake, pond (dated spelling)|›§n§ɔː§ŋ˩(˧)|nǭng
 ຫນັງສື​​ໃບລານ||
 ຫນາ||
 ຫນາວ||
 ຫມາກບ້າຫົວເຂົ່າ||
 ຫມາກປົ່ມ||
 ຫມີ||
-ຫມຶກ||
+ຫມຶກ|squid|›§mɯ§k̚˧˥|mưk
 ຫມູ||
 ຫມໍ້||
 ຫມໍ້ໄຟ||
@@ -1033,7 +1030,7 @@ autoExpandExamples.lo = `
 ຫາຽໃຈ|to breathe|h§aː§j§›§t͡ɕaj
 ຫິນ|stone|hí§n
 ຫິມະ|snow|hí§m§ā
-ຫິວ||
+ຫິວ|hungry|hi§w˩(˧)|hiu
 ຫີນ||
 ຫຸ່ງ||
 ຫູ|ear|hǔː
@@ -1113,8 +1110,8 @@ autoExpandExamples.lo = `
 ອາວຸດ||
 ອາຫານ||
 ອາຫານເຊົ້າ||
-ອາໂຫລ||
-ອາໂຫຼ||
+ອາໂຫລ|hello (on telephone, dated spelling)|ʔ§aː˩(˧).§›§›§loː˩(˧)|'aa-loo|
+ອາໂຫຼ|hello (on telephone)|ʔ§aː˩(˧).§›§loː˩(˧)|'aa-loo
 ອຳພັນ||
 ອິນດູຈີນ||
 ອິນທະວົງ||
@@ -1348,7 +1345,8 @@ autoExpandExamples.lo = `
 ເສົາ||
 ເຫລັກໂຄບຕີນມ້າ||
 ເຫລືອງ||
-ເຫລົ່ານີ້||
+ເຫລົ່ານີ້|these|›§›§law˧.§‹§niː˥˨|lao nī
+ເຫຼົ່ານີ້|these|›§law˧.§‹§niː˥˨|lao nī
 ເຫລົ້າ||
 ເຫັດ||
 ເຫັນ|to see|›§hě§n
@@ -1598,6 +1596,7 @@ autoExpandExamples.lo = `
 ໝໍປົວແຂ້ວ||
 ໝໍ້||
 ໝໍ້ໄຟ||
+ນຄຣ|city (obsolete spelling)|na(ʔ˧).§kʰɔː§n˧˥| nak ra
 
 
 

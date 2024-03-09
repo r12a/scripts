@@ -112,7 +112,7 @@ function makeListFromChars (chars) {
 
             for (i=0;i<ipas.length;i++) {
                out +=
-            `<p><span class="ipa h">${ ipas[i] }</span> ${ spreadsheetRows[charList[x]][cols['typeLoc']] }`
+            `<p><span class="ipa h">${ ipas[i].toLowerCase() }</span> ${ spreadsheetRows[charList[x]][cols['typeLoc']] }`
                 if ( spreadsheetRows[charList[x]][cols['ipaPlus']] ) out += ` with inherent vowel <span class="ipa">${ spreadsheetRows[charList[x]][cols['ipaPlus']] }</span>`
                 out +=
             `.</p>
@@ -140,7 +140,7 @@ function makeListFromChars (chars) {
                 if (spreadsheetRows[comb][cols['transLoc']]) {
                     combinations += `\n<p class="insertTranscription">${ comb }</p>`
                     }
-                combinations += `\n<p><span class="ipa h">${ spreadsheetRows[comb][cols['ipaLoc']] }</span> is <span class="ch">${ comb }</span>`
+                combinations += `\n<p><span class="ipa h">${ spreadsheetRows[comb][cols['ipaLoc']].toLowerCase() }</span> is <span class="ch">${ comb }</span>`
                 if (spreadsheetRows[comb][cols['status']]) {
                     switch (spreadsheetRows[comb][cols['status']]) {
                         case 'l': combinations += ' (used for non-native sounds in loan words)'; break
