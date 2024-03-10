@@ -100,6 +100,8 @@ function makeListFromChars (chars) {
                     case 'l': out += 'Used for non-native sounds in loan words.'; break
                     case 'i': out += 'Infrequent.'; break
                     case 'a': out += 'Archaic.'; break
+                    case 'o': out += 'Rare.'; break
+                    case 'r': out += 'Obsolete.'; break
                     }
                 }
             out += `</p>\n`
@@ -146,6 +148,8 @@ function makeListFromChars (chars) {
                         case 'l': combinations += ' (used for non-native sounds in loan words)'; break
                         case 'i': combinations += ' (infrequent)'; break
                         case 'a': combinations += ' (archaic)'; break
+                        case 'o': combinations += ' (obsolete)'; break
+                        case 'r': combinations += ' (rare)'; break
                         }
                     }
                 if (spreadsheetRows[comb][cols['statusLoc']]) {
