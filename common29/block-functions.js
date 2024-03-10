@@ -42,6 +42,7 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('medi')? medial=true: medial=false
         charMarkup[i].classList.contains('fina')? final=true: final=false
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
 
         charlist = charMarkup[i].textContent.trim().split(' ')
@@ -87,7 +88,7 @@ function expandCharMarkup () {
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         //if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
-        out += `>${ unicodeChars }</bdi>`
+        out += `>${ unicodeChars }${ coda }</bdi>`
         if (noname) {}
         else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
@@ -104,6 +105,7 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('medi')? medial=true: medial=false
         charMarkup[i].classList.contains('fina')? final=true: final=false
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
 
         charlist = [... charMarkup[i].textContent]
@@ -145,7 +147,7 @@ function expandCharMarkup () {
         out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
-        out += `>${ unicodeChars }</bdi>`
+        out += `>${ unicodeChars }${ coda }</bdi>`
         if (noname) {}
         else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
@@ -725,7 +727,7 @@ function addBasics (lang, dir) {
 		var out = ''
 		
 		// add top stuff
-		out += '<div class="charimg">&#x'+hex+';</div>\n'
+		out += `<div class="charimg" style="cursor:copy;" onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">&#x${ hex };</div>\n`
 		out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
 		out += '<p class="univiewLink"><a target="_blank" href="https://util.unicode.org/UnicodeJsps/character.jsp?a='+hex+'">Unicode properties</a><br>\n'
 		out += '<a target="_blank" href="../../uniview/index.html?char='+hex+'">Open in UniView</a></p>\n'
