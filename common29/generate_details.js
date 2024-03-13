@@ -93,15 +93,15 @@ function makeListFromChars (chars) {
         if (spreadsheetRows[charList[x]][cols['status']] || spreadsheetRows[charList[x]][cols['statusLoc']]) {
             out += `<p>`
             if (spreadsheetRows[charList[x]][cols['statusLoc']]) {
-                out += ' '+ spreadsheetRows[charList[x]][cols['statusLoc']]
+                out += spreadsheetRows[charList[x]][cols['statusLoc']]
                 }
             if (spreadsheetRows[charList[x]][cols['status']]) {
                 switch (spreadsheetRows[charList[x]][cols['status']]) {
                     case 'l': out += 'Used for non-native sounds in loan words.'; break
                     case 'i': out += 'Infrequent.'; break
                     case 'a': out += 'Archaic.'; break
-                    case 'o': out += 'Rare.'; break
-                    case 'r': out += 'Obsolete.'; break
+                    case 'o': out += 'Obsolete.'; break
+                    case 'r': out += 'Rare.'; break
                     }
                 }
             out += `</p>\n`
