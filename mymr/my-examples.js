@@ -15,9 +15,6 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 */
 
 
-otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
-termListType = 3			// picks up sources automatically
-
 
 
 autoExpandExamples.my = `
@@ -277,7 +274,7 @@ autoExpandExamples.my = `
 စောင်|||caung
 စေး|||ce:
 စံပယ်|jasmine|zə§b§ɛ̀|campai
-စျေး|market|zé
+ဈေး|market|zé|jhe:
 စွန်|||cwan
 စွမ်း|||cwam:
 စွယ်|||cwai
@@ -330,7 +327,6 @@ autoExpandExamples.my = `
 ဇူလိုင်|||juluing
 ဇွန်|||jwan
 ဇွန်း|spoon|zʊ́§ɴ
-ဈေး|||jhe:
 ည|night|ɲa̰|nya.
 ညစ်|||nyac
 ညစ်ထည်း|dirty|ɲiʔtʰí|nyachtany:
@@ -485,7 +481,7 @@ autoExpandExamples.my = `
 နွားထီး|||nwa:hti:
 နွားမ|||nwa:ma.
 နွေရာသီ|||nwerasi
-နွေဦးပေါက်|Spring|nwèʔúbaʊʔ|nweu:pauk
+နွေဦးပေါက်|Spring|nwè.§ʔú.§baʊ§ʔ|nweu:pauk
 နွေး|warm|nwé|nwe:
 နှင့်|and|n̥ḭɴ|hnang.
 နှင့်တကွ|with|n̥ḭɴdəɡwa̰|hnang.ta.kwa.
@@ -653,7 +649,7 @@ autoExpandExamples.my = `
 မီး|fire|mí|mi:
 မုန့်ဆိုင်|bakery|mo̰ʊ§ɴ.§zàɪ§ɴ
 မုန့်ဟင်းခါး|||mun.hang:hka:
-မုန်လာဥနီ|carrots|mòʊɴlàʔṵnì
+မုန်လာဥနီ|carrots|mòʊ§ɴ.§là.§ʔṵ.§nì
 မေ|||me
 မေ့|forget|mḛ
 မဲရုံ|||mai:rum
@@ -883,7 +879,7 @@ autoExpandExamples.my = `
 သေခြင်း|||sehkrang:
 သောက်|to drink|θauʔ|sauk
 သောကြာ|||sau:kra
-သောကြာဂြိုဟ်|||sau:kragruih
+သောကြာဂြိုဟ်|Venus|θaʊʔ§t͡ɕà§d͡ʑò§–|sau:kragruih
 သော်တာ|||sauta
 သေး|small|θé|se:
 သဲ|sand|θɛ́|sai:
@@ -926,7 +922,7 @@ autoExpandExamples.my = `
 အင်္ဂလိပ်စကား|||angga.lipca.ka:
 အင်္ဂလိပ်ဘာသာ|||angga.lipbhasa
 အင်္ဂါ|Mars|ʔɪ̀§ɴ§ɡà|angga
-အငြိမ့်|||a.ngrim.
+အငြိမ့်|Burmese-style entertainment|ʔə§ɲḛɪ§ɴ|a.ngrim.
 အငွေ့|steam, fumes|ʔa̰§ŋwḛ|a.ngwe.
 အစေ့|seed|ʔəsḭ|a.ce.
 အဆီ|fat (noun)|ʔəsʰì|a.hci
@@ -1010,7 +1006,7 @@ autoExpandExamples.my = `
 အိပ်|to sleep|ʔeiʔ|ip
 အိပ်ရာ|||ip-ra
 အိမ်|house, home|ʔèɪ§ɴ|im
-အိမ်မြှောင်|||imhmraung
+အိမ်မြှောင်|compass|ʔèɪ§ɴ.§m̥jàʊ§ɴ|imhmraung
 အို|old|ʔò|ui
 အိုင်ဗရီကို့စ်ထ်|||uingba.rikuic.ht
 အီကွေဒေါနိုင်ငံ|||i-kwedau:nuingngam
@@ -1038,7 +1034,8 @@ autoExpandExamples.my = `
 ဥရောပ သမဂ္ဂ|||u.rau:pa. sa.magga.
 ဥရောပ|||u.rau:pa.
 ဦး|uncle, Mr.|ʔù|u:
-ဦးချို|horn|ʔúdʑò|u:hkyui
+ဦးချို|horn|ʔú§dʑò|u:hkyui
+ဦးချို|horn|ʔú§dʑò|u:hkyui
 ဦးလေး|uncle|úlé
 ဧက|acre|ʔè.§ka̰
 ဧပြီ|April|ʔèbjì|e-pri
