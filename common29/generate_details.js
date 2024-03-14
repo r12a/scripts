@@ -90,7 +90,7 @@ function makeListFromChars (chars) {
         out += '<p class="insertTranscription">&#x'+hex+';</p>\n\n'
 
         // add status info to top of entry
-        if (spreadsheetRows[charList[x]][cols['status']] || spreadsheetRows[charList[x]][cols['statusLoc']]) {
+        if (spreadsheetRows[charList[x]] && spreadsheetRows[charList[x]][cols['status']] || spreadsheetRows[charList[x]][cols['statusLoc']]) {
             out += `<p>`
             if (spreadsheetRows[charList[x]][cols['statusLoc']]) {
                 out += spreadsheetRows[charList[x]][cols['statusLoc']]
