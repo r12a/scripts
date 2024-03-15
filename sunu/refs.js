@@ -59,6 +59,15 @@ reflist = {
 },
 
 
+"np": {
+"authors": "Neil Patel",
+"title":"Comparison of Sunuwar font in Unicode proposal to font developed for Sunuwar Welfare Society",
+"date": "2024",
+"publisher":"L2/24-022",
+"url":"https://www.unicode.org/L2/L2024/24022-sunuwar-font-comp.pdf",
+"reviewed":true
+},
+
 
 }
 
