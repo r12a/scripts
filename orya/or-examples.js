@@ -26,8 +26,6 @@ autoExpandExamples.or = `
 @ wiktionary
 
 -ମାନେ||
-ଅଂକ|ink|ɔŋkɔ
-ଅକ୍ଷର|character|ɔkʰjɔrɔ|akṣara
 ଅଖରୋଟ||
 ଅଖାତ|bay, lake|ɔkʰatɔ|ôkhatô
 ଅଗ୍ନି||
@@ -73,7 +71,7 @@ autoExpandExamples.or = `
 ଆପଣ|you (2sg)||apôṇô
 ଆପଣମାନେ|you (2pl)||apôṇômane
 ଆମେ|we (1pl)||ame
-ଆମ୍ବ|mango|amba|amba
+ଆମ୍ବ|mango|a§m§bɔ|amba
 ଆମ୍ବିଳିଆ|sour||ambiḷia
 ଆରବୀ||
 ଆରମ୍ଭ||
@@ -106,7 +104,6 @@ autoExpandExamples.or = `
 ଏଠାରେ|here||eṭhare
 ଏଠି|here||eṭhi
 ଏପିଡେମିକ୍||
-ଏବଂ|and||ebôṃ
 ଏହା|this||eha
 ଓ|and|o|o
 ଓଟ|camel||oṭô
@@ -245,8 +242,6 @@ autoExpandExamples.or = `
 ଛେପ ପକାଇବା|to spit||chepô pôkaiba
 ଛେଲି|bark (of a tree)||cheli
 ଛୋଟ|short, small||choṭô
-ଜଂଗଲ|forest||jôṃgôlô
-ଜଂତୁ|animal||jôṃtu
 ଜଡି||
 ଜନନୀ|mother||jônônī
 ଜନ୍ମ|birth||jônmô
@@ -296,7 +291,6 @@ autoExpandExamples.or = `
 ତିକ୍ତ||
 ତିନି|three|tini|tini
 ତିନ୍ତା|wet||tinta
-ତୀକ୍ଷ୍ଣ|sharp (as a knife)||tīkṣṇô
 ତୁ|you (2sg)||tu
 ତୁମଡ଼ୀ||
 ତୁମେ|you (2sg)||tume
@@ -359,7 +353,7 @@ autoExpandExamples.or = `
 ନୁହେଁ|not||nuhem̐
 ନୂଆ|new||nūa
 ନୂତନ|new||nūtônô
-ପକ୍ଷୀ|bird|pɔksi|pôkṣī
+ପକ୍ଷୀ|bird|pɔ§k§si|pôkṣī
 ପଚା|rotten||pôca
 ପଡ଼ିବା|to fall||pôṛiba
 ପଡି ରହିବା|to lie (as in a bed)||pôḍi rôhiba
@@ -479,7 +473,6 @@ autoExpandExamples.or = `
 ବିଷ୍ଣୁ||
 ବୁଢା|old||buḍha
 ବୁଧବାର||
-ବୃକ୍ଷ|tree||brukṣô
 ବେକ|neck||bekô
 ବେଙ୍ଗାଳୁରୁ||
 ବେମାରିଆ|ill||bemaria
@@ -530,7 +523,7 @@ autoExpandExamples.or = `
 ମହୁମାଛି||
 ମା|mother||ma
 ମାଁମାଁ||
-ମାଂସ|meat||maṃsô
+ମାଂସ|meat|mã§sɔ|maṃsô
 ମାଇକିଣା|wife||maikiṇa
 ମାଉସ||
 ମାଛ|fish|mat͡ʃʰɔ|machô
@@ -610,9 +603,9 @@ autoExpandExamples.or = `
 ଶିକାର କରିବା|to hunt||śikarô kôriba
 ଶିକାର||
 ଶିକାରୀ||
-ଶିକ୍ଷକ|teacher||śikṣôkô
-ଶିକ୍ଷା ଦେବା|to teach||śikṣa deba
-ଶିକ୍ଷା|education||śikṣa
+ଶିକ୍ଷକ|teacher|si§k§sɔ§kɔ|śikṣôkô
+ଶିକ୍ଷା ଦେବା|to teach|si§k§sa§ §d̪e§ba|śikṣa deba
+ଶିକ୍ଷା|education|si§k§sa|śikṣa
 ଶିଙ୍ଗ|horn||śiṅgô
 ଶିବ||
 ଶିର||
@@ -629,7 +622,7 @@ autoExpandExamples.or = `
 ଶୋଳ||
 ଶୋଷ||
 ଷ଼||
-ସଂଖ୍ୟା|number||sôṃkhya
+ସଂଖ୍ୟା|number|sɔ̃§kʰ§ja|sôṃkhya
 ସଂସ୍କୃତ|Sanskrit|sɔ̃skɾutɔ|sôṃskrutô
 ସଖା||
 ସଡ଼କ|road||sôṛôkô
@@ -645,7 +638,7 @@ autoExpandExamples.or = `
 ସାଙ୍ଗେ|with||saṅge
 ସାତ||
 ସାପ|snake|sapɔ|sapô
-ସିଂହ||
+ସିଂହ|lion|sĩ§hɔ|siṁhô
 ସିଧା|straight||sidha
 ସିଲାଇ କରିବା|to sew||silai kôriba
 ସୁନା||
@@ -664,7 +657,7 @@ autoExpandExamples.or = `
 ସ୍ୱର୍ଗ|heaven|swɔɾɡɔ|swôrgô
 ସ୍ୱାମୀ|husband||swamī
 ହଁ||
-ହଂଗ୍||
+ହଂଗ୍|asafoetida|hɔ̃§ɡ|hôṅg
 ହଜାର||
 ହଳଦିଆ|yellow||hôḷôdia
 ହସିବା|to laugh||hôsiba
@@ -684,11 +677,18 @@ autoExpandExamples.or = `
 ହ୍ରଦ|lake||hrôdô
 
 
-
+@ ?
 ଊତ୍ତୋଳନ|flag-hoisting||
 ଋତୁ|season||ṛutu
 ଐରାଵତ|elephant||
 ଓଡ଼ିଆ ଅକ୍ଷର|Odia script|o§ɽi§a§ §ɔ§kʰ§jɔ§rɔ
+ଅକ୍ଷର|character|ɔkʰjɔrɔ|akṣara
+ତୀକ୍ଷ୍ଣ|sharp (as a knife)||tīkṣṇô
+ବୃକ୍ଷ|tree||brukṣô
+ଜଂଗଲ|forest||jôṃgôlô
+ଜଂତୁ|animal||jôṃtu
+ଅଂକ|ink|ɔŋkɔ
+ଏବଂ|and||ebôṃ
 
 
 
