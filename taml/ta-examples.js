@@ -1892,7 +1892,7 @@ autoExpandExamples.ta = `
 செங்கழுநீர்||
 செங்காடை||
 செங்கிழங்கு||
-செங்கிஸ் ஃகான்|Gengis Khan||&lt;ceṅkis kāṉ>
+செங்கிஸ் ஃகான்|Gengis Khan||ceṅkis kāṉ
 செங்கோல்||
 செச்சினியா||
 செச்சை||
@@ -4300,7 +4300,8 @@ autoExpandExamples.ta = `
 
 
 
-
+@ ?
+ரெஃஸ்||re§›§x|
 
 
 
