@@ -775,6 +775,7 @@ function statusExpander (status) {
         case 'd': out += 'deprecated '; break
         case 'u': out += 'unused '; break
         case 'o': out += 'obsolete '; break
+        case 'x': out += 'best avoided '; break
         case 'l': out += 'loan words or foreign sounds '; break
         }
     return out
