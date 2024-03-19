@@ -23,7 +23,7 @@ termListType = 3			// picks up sources automatically
 
 autoExpandExamples.tdd = `
 
-@ wiktionary
+@ wiktionary  &  https://abvd.eva.mpg.de/austronesian/language.php?id=1650
 
 ᥐᥝ|I, me||kaw
 ᥐᥣ|crow||kaa
@@ -63,7 +63,7 @@ autoExpandExamples.tdd = `
 ᥔᥥᥢᥲ||
 ᥔᥧᥛᥳ|room||s§u§̇m
 ᥔᥧᥴ||
-ᥔᥩᥒᥴ|two||sóang
+ᥔᥩᥒᥴ|two|sɔŋ⁵|sóang
 ᥔᥩᥢᥴ||
 ᥕᥒ||
 ᥕᥝᥳ||
@@ -75,7 +75,7 @@ autoExpandExamples.tdd = `
 ᥖᥦᥛᥲ|to write||tàem
 ᥖᥧ||
 ᥖᥨᥙ||
-ᥖᥨᥝ||
+ᥖᥨᥝ|body|to˧|tow
 ᥖᥩᥒ||
 ᥖᥩᥒᥰ||
 ᥖᥩᥒᥱ||
@@ -96,7 +96,6 @@ autoExpandExamples.tdd = `
 ᥘᥦᥒ|red||laeng
 ᥘᥦᥰ|imperative particle||läe
 ᥘᥧᥐ||
-ᥘᥩᥐᥳ|outside||||x
 ᥙᥣ|fish||paa
 ᥙᥣᥐᥱ||
 ᥙᥤ|year||pi
@@ -115,7 +114,7 @@ autoExpandExamples.tdd = `
 ᥛᥦᥒᥰ|insect||mäeng
 ᥛᥦᥝᥴ|cat||máew
 ᥛᥧᥴ||
-ᥛᥨᥝᥴ||
+ᥛᥨᥝᥴ|doctor||mów
 ᥛᥨᥝᥴᥔᥩᥢᥴ||
 ᥛᥨᥢᥱ||
 ᥛᥫᥒᥰ|city, country|m§ə§ŋ§²|möeng
@@ -131,7 +130,7 @@ autoExpandExamples.tdd = `
 ᥞᥝᥰ||
 ᥞᥣᥲ|five||hàa
 ᥞᥧᥴ|ear||hú
-ᥞᥨᥐᥱ|six||hǒk
+ᥞᥨᥐᥱ|six|hok⁵|hǒk
 ᥞᥪᥴ||
 ᥟᥛᥱ|not||ʼǎm
 ᥟᥝ|to read||ʼaw
@@ -142,7 +141,19 @@ autoExpandExamples.tdd = `
 ᥖᥭᥰᥘᥫᥴ|Tai Le|ta§j§˦.§l§ə§˧˥
 
 
+@ ?
+ᥘᥩᥐᥳ|outside||||x
 
+
+@ with tone marks, rather than letters
+ᥛᥣ̈|to come||mäa
+ᥘᥣᥐ́|heavy||lȧak
+ᥛᥣ́|dog||máa
+ᥘᥩᥐ̇|outside||||x
+ᥛᥣ̇|horse||mȧa
+ᥛᥣ̀|hemp|
+ᥞᥨᥐ̌|six|hok⁵|hǒk
+ᥛᥣ̌|shoulder||mǎa
 
 
 
