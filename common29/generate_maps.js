@@ -87,7 +87,7 @@ function gatherData () {
         else status = ''
         if (status.includes('r') || status.includes('l')) out += ' uncommon'
         out += `>\n`
-        out += `<div class="phone"><span class="ipa">${ entry }</span></div>\n`
+        out += `<div class="phone"><span class="ipa">${ entry.toLowerCase() }</span></div>\n`
         out += `<div class="posn">&nbsp;</div>\n`
         out += `<div class="col1">\n`
         for (i=0;i<ipaData[entry].length;i++) {
