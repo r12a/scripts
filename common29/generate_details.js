@@ -92,9 +92,6 @@ function makeListFromChars (chars) {
         // add status info to top of entry
         if (spreadsheetRows[charList[x]] && spreadsheetRows[charList[x]][cols['status']] || spreadsheetRows[charList[x]][cols['statusLoc']]) {
             out += `<p>`
-            if (spreadsheetRows[charList[x]][cols['statusLoc']]) {
-                out += spreadsheetRows[charList[x]][cols['statusLoc']]
-                }
             if (spreadsheetRows[charList[x]][cols['status']]) {
                 switch (spreadsheetRows[charList[x]][cols['status']]) {
                     case 'l': out += 'Used for non-native sounds in loan words.'; break
@@ -102,7 +99,12 @@ function makeListFromChars (chars) {
                     case 'a': out += 'Archaic.'; break
                     case 'o': out += 'Obsolete.'; break
                     case 'r': out += 'Rare.'; break
+                    case 'x': out += 'Best avoided.'; break
+                    case 'd': out += '<strong>Deprecated.</strong>'; break
                     }
+                }
+            if (spreadsheetRows[charList[x]][cols['statusLoc']]) {
+                out += ' '+spreadsheetRows[charList[x]][cols['statusLoc']]
                 }
             out += `</p>\n`
             }
@@ -150,6 +152,8 @@ function makeListFromChars (chars) {
                         case 'a': combinations += ' (archaic)'; break
                         case 'o': combinations += ' (obsolete)'; break
                         case 'r': combinations += ' (rare)'; break
+                        case 'x': combinations += ' (best avoided)'; break
+                        case 'd': combinations += ' (<strong>Deprecated.</strong>)'; break
                         }
                     }
                 if (spreadsheetRows[comb][cols['statusLoc']]) {
