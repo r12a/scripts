@@ -261,7 +261,7 @@ autoExpandExamples.bn = `
 আতশ|fire|at̪oʃ
 আতশবাজি|fireworks|at̪oʃbazi
 আতা||
-আত্মহত্যা||
+আত্মহত্যা|suicide|a§›§t.to.§ɦo§›§t.ta|attohotta
 আদম||
 আদমশুমার|census|ˈɑ.d̪ɔmˌʃu.mɑɾ
 আদমসুমার||
@@ -766,7 +766,7 @@ autoExpandExamples.bn = `
 কলকাতা|Kolkata|ˈkolˌkat̪a
 কলজে|liver||kôlje
 কলব||
-কলম|pen|kɔ§lo§m
+কলম|pen|kɔ§lo§m|kolom
 কলম্বিয়া||
 কলা|banana|ˈkɔ.läˑ
 কলেজ||
@@ -1163,7 +1163,7 @@ autoExpandExamples.bn = `
 গ্রাম|village|ɡ§ra§m
 গ্রিক ভাষা||
 গ্রিস||
-গ্রীষ্ম||
+গ্রীষ্ম|summer|ɡ§ɾi§ʃʃo§‹|griśśõ
 গ্রেট ব্রিটেন ও উত্তর আয়ারল্যান্ড যুক্তরাজ্য||
 গ্রেপ্তার|arrest|ɡɾept̪aɾ
 গ্রেফতার|arrest|ɡɾeft̪aɾ
@@ -1294,7 +1294,7 @@ autoExpandExamples.bn = `
 চৌধুরী||
 চৌষট্টি||
 ছএ||
-ছত্তীসগঢ়||
+ছত্তীসগঢ়|Chhattisgarh|t͡ʃɔt.tis.ɡɔɽ|Chôttisgoŗh
 ছত্রিশ||
 ছবি|drawing, painting|tʃʰobi
 ছয়||
@@ -1813,10 +1813,10 @@ autoExpandExamples.bn = `
 দৌলতদারি||
 দৌলতদারী||
 দ্বার||
-দ্বারা||
+দ্বারা|by, through|d̪aɾa|dara
 দ্বিতীয়|second|t̪rit̪ijɔ
 দ্বিভাষিক||
-দ্বীপ||
+দ্বীপ|island|d̪ip|dip
 দ্বীপপুঞ্জ||
 দ্রব্য|thing|ˈd̪ɾɔbːɔ̝ˑ
 দ্রুত|fast|d̪ɾʊt̪o
@@ -2259,7 +2259,7 @@ autoExpandExamples.bn = `
 ফার্সি ভাষা||
 ফাল||
 ফালুদা||
-ফাহ্মী||
+ফাহ্মী|surname|fa§ɦ§mi|phahmi
 ফিকির||
 ফিজি||
 ফিনল্যান্ড||
@@ -2592,7 +2592,7 @@ autoExpandExamples.bn = `
 ব্যক্তিগত কম্পিউটার||
 ব্যক্তিগত||
 ব্যক্তিত্ব||
-ব্যঞ্জনধ্বনি||
+ব্যঞ্জনধ্বনি|consonant|b§æ§n§dʒɔ§n§d̪ʱo§‹§ni|bênjonddhoni
 ব্যথা|pain|b§æ§tʰɑ
 ব্যবস্থা||
 ব্যবহার করা||
@@ -2801,7 +2801,7 @@ autoExpandExamples.bn = `
 মাল ফেলা||
 মাল||
 মালওয়্যার||
-মালদ্বীপ||
+মালদ্বীপ|Maldives|mald̪ip|maldip
 মালয়ালম ভাষা||
 মালয়েশিয়া||
 মালা||
@@ -3021,7 +3021,7 @@ autoExpandExamples.bn = `
 রাজাই||
 রাজি||
 রাটা বরুয়া||
-রাঢ়|Radha
+রাঢ়|Radha|raɽʱ|raṛh
 রাণী||
 রাত|night||rat
 রাত্রি|night||ratri
@@ -3062,7 +3062,7 @@ autoExpandExamples.bn = `
 লক্ষ্মীপুর জেলা||
 লক্ষ্মীপেঁচা|barn owl|lo§k§kʰ§i§pæ̃§ca
 লক্ষ্মীফল||
-লক্ষ্য||
+লক্ষ্য|goal, intent|lo§k§kʰo§‹|lôkkhô
 লটকন||
 লটকা||
 লড়া|to fight|lɔɹa/lɔɽa|lôṛa
@@ -3231,7 +3231,7 @@ autoExpandExamples.bn = `
 শ্বশুর||
 শ্বাস নেওয়া|to breathe||śaś neoẏa
 শ্বাস|breathing|s̠äːs̠
-শ্মশান||
+শ্মশান|cremation|ʃo§‹§ʃɐ§n|śmôśanô
 শ্মশ্রু|beard|ʃ§wɔ§ʃ§ɾu||ʃõsʃɾu
 শ্রীনিকেতন||
 শ্রীফল||
@@ -3492,7 +3492,7 @@ autoExpandExamples.bn = `
 স্খলন||
 স্তনবৃন্ত||
 স্তালিন|Stalin|ˈs̠t̪ä.liˑn
-স্ত্রী||
+স্ত্রী|woman, female|stri|stri
 স্নান||
 স্নেহ|affection|ˈs§ne§ɦo
 স্পেন||
