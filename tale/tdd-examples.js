@@ -175,24 +175,36 @@ autoExpandExamples.tdd = `
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 `
+
+
+
+
+
+
+termLists = [
+
+{
+"title":"Wiktionary, Tai Nüa lemmas",
+"url":"https://en.wiktionary.org/wiki/Category:Tai_Nüa_lemmas",
+},
+
+{
+"title":"Austronesian Basic Vocabulary Database, Tai Nüa",
+"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=1650",
+"notes":"Latin only",
+},
+
+]
+
+
+
+
+
+
+
+
+
+
+
 
