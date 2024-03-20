@@ -8,4 +8,4 @@ window.detailsfileList = ['arb','pes','ha','ks','ug','ur','ff','misc'] // first 
 window.scriptISO = 'arab'
 window.webfonts = ["Scheherazade WF", "Awami Nastaliq WF","Noto Nastaliq Urdu WF","Alkalami WF"]
 window.defaultSize = '32px'
-
+window.hideBlockName = "ARABIC"
