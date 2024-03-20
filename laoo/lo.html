@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 March, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->20 March, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -80,7 +80,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Lao Orthography Notes, <!-- #BeginDate format:En2 -->16-Mar-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/laoo/lo">https://r12a.github.io/scripts/laoo/lo</a></small></p>
+<p class="refLine"><small>Richard Ishida, Lao Orthography Notes, <!-- #BeginDate format:En2 -->20-Mar-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/laoo/lo">https://r12a.github.io/scripts/laoo/lo</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -3083,11 +3083,27 @@ mai cat-ta-waː</th>
 
 
 
+
+
+
+
+
+
+
+
+<section id="segmentation">
+<h2>Text segmentation</h2>  
+
+
+
+
+
 <section id="graphemes">
-<h2>Graphemes</h2>  
+<h3>Graphemes</h3>  
+
   
 <section id="graphemeC">
-<h3>Grapheme clusters</h3>
+<h4>Grapheme clusters</h4>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 <p class="prompts">tbd</p>
@@ -3096,6 +3112,38 @@ mai cat-ta-waː</th>
 <p>This means that Lao typography is different from some other SE Asian scripts where pre-base vowel signs are selected with the base because they are combining characters, or syllable-initial consonant clusters form a unit because the 'medial' consonants are represented by combining characters.</p>
 </section>
 </section>
+
+
+
+
+
+
+
+
+<section id="word">
+<h3>Word boundaries</h3>
+
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Words are not separated by spaces, nontheless double-clicking or other selection methods are expected to identify word boundaries. There are 2 alternative approaches for managing this.</p>
+
+<ol>
+<li>An application  uses a dictionary or smart algorithm to parse the text and determine word boundaries.</li>
+<li>The author uses <span class="hx img">200B</span> (ZWSP) between words when creating the content.</li>
+</ol>
+
+<p>Unlike Thai or Khmer, it is fairly straightforward to parse individual syllables in Lao, because its alphabetic nature makes it possible to identify syllable-final consonants. Note that syllable-based segmentation must identify and keep together any syllable-initial clusters involving <span class="trans">h</span> or <span class="trans">l</span>, for example, the initial 2 letters in <span class="charExample inline" translate="no"><span class="ex" lang="lo">ຫມາ</span></span> should wrap as a unit just like the ligated form, <span class="charExample inline" translate="no"><span class="ex" lang="lo">ໝາ</span> <span class="trans">mā</span></span>.</p>
+<p class="ednote">What about kw etc?</p>
+
+<p>While nearly all syllables can be argued to be words in their own right, there is still a preference for keeping  multi-syllabic words together during word-based segmentation. eg. <span class="eg" lang="lo">ປະເທດ</span>   For this, an application  needs to use a dictionary to parse Lao text.</p>
+
+<p>However, widely used software automatically inserts <span class="hx img">200B</span> in Lao text at word or syllable boundaries, and many web pages use such inserted ZWSP characters to get browsers to wrap correctly.<tt>g3,#issuecomment-385847864</tt></p>
+
+<p>If a dictionary fails to keep two or more syllables together as needed, it should be possible to use the Unicode character <span class="hx img">2060</span> between the two syllables. This is an invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks.</p>
+
+<p>If dictionaries are used for segmentation, they should be selected based on the language, not the script. (See the <a href="#languages">list of languages</a> using the Lao script.)</p>
+</section>
+</section>
+
 
 
 
@@ -3145,27 +3193,6 @@ mai cat-ta-waː</th>
 
 
 
-<section id="word">
-<h3>Word boundaries</h3>
-
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Words are not separated by spaces, nontheless double-clicking or other selection methods are expected to identify word boundaries. There are 2 alternative approaches for managing this.</p>
-<ol>
-<li>An application  uses a dictionary or smart algorithm to parse the text and determine word boundaries.</li>
-<li>The author uses <span class="hx img">200B</span> (ZWSP) between words when creating the content.</li>
-</ol>
-<p>Unlike Thai or Khmer, it is fairly straightforward to parse individual syllables in Lao, because its alphabetic nature makes it possible to identify syllable-final consonants. Note that syllable-based segmentation must identify and keep together any syllable-initial clusters involving <span class="trans">h</span> or <span class="trans">l</span>, for example, the initial 2 letters in <span class="charExample inline" translate="no"><span class="ex" lang="lo">ຫມາ</span></span> should wrap as a unit just like the ligated form, <span class="charExample inline" translate="no"><span class="ex" lang="lo">ໝາ</span> <span class="trans">mā</span></span>.</p>
-<p class="ednote">What about kw etc?</p>
-<p>While nearly all syllables can be argued to be words in their own right, there is still a preference for keeping  multi-syllabic words together during word-based segmentation. eg. <span class="eg" lang="lo">ປະເທດ</span>   For this, an application  needs to use a dictionary to parse Lao text.</p>
-
-<p>However, widely used software automatically inserts <span class="hx img">200B</span> in Lao text at word or syllable boundaries, and many web pages use such inserted ZWSP characters to get browsers to wrap correctly.<tt>g3,#issuecomment-385847864</tt></p>
-<p>If a dictionary fails to keep two or more syllables together as needed, it should be possible to use the Unicode character <span class="hx img">2060</span> between the two syllables. This is an invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks.</p>
-<p>If dictionaries are used for segmentation, they should be selected based on the language, not the script. (See the <a href="#languages">list of languages</a> using the Lao script.)</p>
-</section>
-
-
-
-
 
 
 
@@ -3204,14 +3231,13 @@ mai cat-ta-waː</th>
 <p class="observation"><span class="leadin">Observation:</span> Lao Wikipedia uses periods at the end of sentences, and commas (see <a href="https://lo.wikipedia.org/wiki/%E0%BA%9E%E0%BA%B2%E0%BA%AA%E0%BA%B2%E0%BA%A5%E0%BA%B2%E0%BA%A7">an example</a>).<tt>l</tt> An <a href="https://www.rfa.org/lao/daily/human-trafficking/Authorities-looking-for-over-30-women-missing-in-Oudomxay-Province-12172019104348.html">online news site</a> also consistently uses periods to end sentences.</p>
 <p>Western punctuation is also used. Contemporary writing may include punctuation marks  borrowed from French, such as the exclamation mark (!), and question mark (?). However, questions can be determined by question words within a sentence.<tt>wl,#Punctuation</tt></p>
 <p>Hyphens are also commonly found in modern writing.<tt>wl,#Punctuation</tt></p>
-</section>
  
 
 
 
 
 <section id="bracketing">
-<h3>Bracketed text</h3>
+<h4>Bracketed text</h4>
 
 <figure class="characterBox auto small" data-cols="">(␣)</figure>
 
@@ -3235,6 +3261,7 @@ mai cat-ta-waː</th>
 </tbody>
 </table>
 <p><span class="codepoint" translate="no"><span lang="lo">(</span> [<a href="/scripts/tamil/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lo">)</span> [<a href="/scripts/tamil/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span> are used for parentheses in contemporary writing.<tt>wl,#Punctuation</tt></p>
+</section>
 </section>
 
 
