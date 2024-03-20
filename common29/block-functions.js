@@ -92,7 +92,11 @@ function expandCharMarkup () {
         if (noname) {}
         else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
-        charMarkup[i].outerHTML = out
+        if (window.hideBlockName) {
+            let re = new RegExp(window.hideBlockName, 'g')
+            charMarkup[i].outerHTML = out.replace(re,'')
+            }
+        else charMarkup[i].outerHTML = out
         }
    
     // convert .ch markup (one or more characters using Unicode code points)
@@ -151,7 +155,11 @@ function expandCharMarkup () {
         if (noname) {}
         else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
         
-        charMarkup[i].outerHTML = out
+        if (window.hideBlockName) {
+            let re = new RegExp(window.hideBlockName, 'g')
+            charMarkup[i].outerHTML = out.replace(re,'')
+            }
+        else charMarkup[i].outerHTML = out
         }
     }
 
@@ -216,7 +224,11 @@ function expandCharMarkupX () {
         out += `>${ unicodeChars }</bdi>`
         out += `${ unicodeNames }</span>`
         
-        charMarkup[i].outerHTML = out
+        if (window.hideBlockName) {
+            let re = new RegExp(window.hideBlockName, 'g')
+            charMarkup[i].outerHTML = out.replace(re,'')
+            }
+        else charMarkup[i].outerHTML = out
         }
    
     // convert .ch markup (one or more characters using Unicode code points)
@@ -264,7 +276,12 @@ function expandCharMarkupX () {
         out += `>${ unicodeChars }</bdi>`
         out += `${ unicodeNames }</span>`
         
-        charMarkup[i].outerHTML = out
+        console.log(window.hideBlockName)
+        if (window.hideBlockName) {
+            let re = new RegExp(window.hideBlockName, 'g')
+            charMarkup[i].outerHTML = out.replace(re,'')
+            }
+        else charMarkup[i].outerHTML = out
         }
     }
 

@@ -324,11 +324,15 @@ out += `
 `
 
 if (window.location.href.includes('block')) out += `
+        <p class="instructions"><span class="leadin">Character names.</span> The names of characters in codepoint markup drop the initial ${ script.toUpperCase() } label (purely to reduce the length of the examples). In other places the full name can be found.</p>
+
         <p class="instructions"><span class="leadin">Fonts.</span> The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon to toggle the large characters between font glyphs and graphics.</p>
 
         <p class="instructions"><span class="leadin">Navigation.</span> The <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon takes you to the top of the page.</p>
 `
 else out += `
+        <p class="instructions"><span class="leadin">Character names.</span> The names of characters in codepoint markup drop the initial ${ script.toUpperCase() } label (purely to reduce the length of the examples). In other places the full name can be found.</p>
+
         <p class="instructions"><span class="leadin">Navigation.</span> The <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon opens the table of contents in a popup window. Dismiss it by clicking on the X alongside it, or by hitting the ESC key.</p>
 
         <p class="instructions"><span class="leadin">Detailed character notes.</span> Clicking on coloured characters in lists or on character names opens panels that give detailed information about each character. This information is taken from the companion document, <a target="_blank" href="block.html">${ script } Character Notes</a>. (Those panels can be dismissed by pressing on the ESC key.)</p>
