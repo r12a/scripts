@@ -8,4 +8,4 @@ window.detailsfileList = ['ike','crk'] // first part of xx-details for each orth
 window.scriptISO = 'cans'
 window.webfonts = ["Noto Sans Canadian Aboriginal WF"]
 window.defaultSize = '24px'
-
+window.hideBlockName = "CANADIAN SYLLABICS"
