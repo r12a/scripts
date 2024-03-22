@@ -58,7 +58,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 March, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->22 March, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -78,7 +78,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Thai Orthography Notes, <!-- #BeginDate format:En2 -->20-Mar-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/thai/th">https://r12a.github.io/scripts/thai/th</a></small></p>
+<p class="refLine"><small>Richard Ishida, Thai Orthography Notes, <!-- #BeginDate format:En2 -->22-Mar-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/thai/th">https://r12a.github.io/scripts/thai/th</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -3958,7 +3958,89 @@ That character is only used in this context.</p>
 
 
 <section id="segmentation">
-<h2>Text segmentation</h2>  
+<h2>Typographic units</h2>  
+
+
+
+
+
+
+
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Thai doesn't separate words in a phrase. </p>
+<p>Spaces <em>are</em> used in Thai as phrase separators, but Thai doesn't separate words in a phrase using visible spaces.</p>
+<p>There is, however, a concept of words in the text. For example, lines are supposed to be broken at word boundaries. </p>
+
+<figure id="fig_thai_words">
+<img src="images/thai_words.png" class="ex" alt="รวมทั้งวิทยาการด้านคอมพิว" data-alt="รวม​ทั้ง​วิทยาการ​ด้าน​คอมพิว" data-notes="56px Noto Serif Thai">
+<figcaption>Word boundaries occur where the vertical lines appear, though they are not marked by the script.</figcaption>
+</figure>
+
+
+
+
+
+
+<section id="wordBoundary">
+<h4>Word boundary detection</h4>
+
+<p>The main difficulty arises when dealing with compound words. It can often be difficult to decide whether a given string of syllables represents multiple words or a single compound word.</p>
+
+<figure id="fig_thai_alt">
+<img src="images/thai_alt1.png" class="ex" alt="ตัวอย่างการเขียนกาษาไทย" data-alt="ตัวอย่าง​การเขียน​กาษาไทย" data-notes="42px Noto Serif Thai">
+<img src="images/thai_alt2.png" class="ex" alt="ตัวอย่างการเขียนกาษาไทย" data-alt="ตัวอย่าง​การ​เขียน​กาษาไทย" data-notes="42px Noto Serif Thai">
+<figcaption>Alternative line break opportunities for Thai text using compound nouns.</figcaption>
+</figure>
+
+<p>The variation may be related to the operation being performed on the text (eg. line breaking in narrow newsprint columns, vs. double-click selection, vs. cursor movement, etc.), or it may just   be down to personal preference,</p>
+<p>The  difference may also be contextually dependent. Wirote Aroonmanakun describes how <span class="eg" lang="th">คนขับรถ</span> should be viewed as a single word in the context <span class="eg" lang="th">คนขับรถนั่งคอยอยู่ในรถ</span>, whereas in the phrase <span class="eg" lang="th">คนขับรถผ่านแยกนี้ไม่มากนัก</span> it would be viewed as 3 words, referring to anyone who is driving.<tt>at</tt></p>
+<p>Proper names, which are composed from multiple words, are also problematic, especially because there are no capital letters to distinguish them from other pieces of text.<tt>g2455,#issuecomment-375162188</tt></p>
+</section>
+
+
+
+
+
+
+<section id="zwsp">
+<h4>ZWSP &amp; WJ</h4>
+
+<p>In order to manually fine-tune word-boundary detection, the  invisible character <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200B;</span><img src="../../c/General_Punctuation/200B.png" alt="ZWSP" style="vertical-align:middle"> [<a href="/scripts/thai/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a>]</span> (ZWSP) can  be  used  to  create  breaks.<tt>u,625</tt></p>
+<p>To prevent a break between syllables, <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2060;</span><img src="../../c/General_Punctuation/2060.png" alt="ZWJ" style="vertical-align:middle"> [<a href="/scripts/thai/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a>]</span> (WJ) can be used.</p>
+<p> It is also important to bear in mind that Thai may be used to write various languages, in particular minority languages for which different dictionaries are needed. Since such dictionaries may not available in a given browser or other application, there is a tendency to use ZWSP in order to compensate.</p>
+<p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
+<p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
+</section>
+
+
+
+
+
+
+
+<section id="syllableParsing">
+<h4>Parsing syllables</h4>
+
+<p>Automatically adding spaces (zero-width or other) around Thai syllables is problematic because syllable-final consonants are not easy to identify. Thai segmentation may have to deal with ambiguous situations. Take for example the word
+<span class="eg" lang="th">ถนน</span>
+</p>
+
+<p>Because syllable-final sounds are ordinary letters, with no special indication, this could be parsed as <span class="ipa">ta.non</span>, <span class="ipa">ton.na</span>, or even <span class="ipa">ta.na.na</span>, and indeed some words are written the same but pronounced differently, eg.
+<span class="eg" lang="th">นม</span>
+</p>
+
+<p>Similarly, because medial consonants are written with normal characters, there is a possibile ambiguity about whether a sequence contains an inherent vowel, eg.
+<span class="eg" lang="th">กรี</span>
+</p>
+</section>
+</section>
+
+
+
+
+
 
 
 
@@ -4055,87 +4137,6 @@ The behaviour is the same as for cursor movement. </p>
 Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 </section>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-<section id="word">
-<h3>Word boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Thai doesn't separate words in a phrase. </p>
-<p>Spaces <em>are</em> used in Thai as phrase separators, but Thai doesn't separate words in a phrase using visible spaces.</p>
-<p>There is, however, a concept of words in the text. For example, lines are supposed to be broken at word boundaries. </p>
-
-<figure id="fig_thai_words">
-<img src="images/thai_words.png" class="ex" alt="รวมทั้งวิทยาการด้านคอมพิว" data-alt="รวม​ทั้ง​วิทยาการ​ด้าน​คอมพิว" data-notes="56px Noto Serif Thai">
-<figcaption>Word boundaries occur where the vertical lines appear, though they are not marked by the script.</figcaption>
-</figure>
-
-
-
-
-
-
-<section id="wordBoundary">
-<h4>Word boundary detection</h4>
-
-<p>The main difficulty arises when dealing with compound words. It can often be difficult to decide whether a given string of syllables represents multiple words or a single compound word.</p>
-
-<figure id="fig_thai_alt">
-<img src="images/thai_alt1.png" class="ex" alt="ตัวอย่างการเขียนกาษาไทย" data-alt="ตัวอย่าง​การเขียน​กาษาไทย" data-notes="42px Noto Serif Thai">
-<img src="images/thai_alt2.png" class="ex" alt="ตัวอย่างการเขียนกาษาไทย" data-alt="ตัวอย่าง​การ​เขียน​กาษาไทย" data-notes="42px Noto Serif Thai">
-<figcaption>Alternative line break opportunities for Thai text using compound nouns.</figcaption>
-</figure>
-
-<p>The variation may be related to the operation being performed on the text (eg. line breaking in narrow newsprint columns, vs. double-click selection, vs. cursor movement, etc.), or it may just   be down to personal preference,</p>
-<p>The  difference may also be contextually dependent. Wirote Aroonmanakun describes how <span class="eg" lang="th">คนขับรถ</span> should be viewed as a single word in the context <span class="eg" lang="th">คนขับรถนั่งคอยอยู่ในรถ</span>, whereas in the phrase <span class="eg" lang="th">คนขับรถผ่านแยกนี้ไม่มากนัก</span> it would be viewed as 3 words, referring to anyone who is driving.<tt>at</tt></p>
-<p>Proper names, which are composed from multiple words, are also problematic, especially because there are no capital letters to distinguish them from other pieces of text.<tt>g2455,#issuecomment-375162188</tt></p>
-</section>
-
-
-
-
-
-
-<section id="zwsp">
-<h4>ZWSP &amp; WJ</h4>
-
-<p>In order to manually fine-tune word-boundary detection, the  invisible character <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200B;</span><img src="../../c/General_Punctuation/200B.png" alt="ZWSP" style="vertical-align:middle"> [<a href="/scripts/thai/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a>]</span> (ZWSP) can  be  used  to  create  breaks.<tt>u,625</tt></p>
-<p>To prevent a break between syllables, <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2060;</span><img src="../../c/General_Punctuation/2060.png" alt="ZWJ" style="vertical-align:middle"> [<a href="/scripts/thai/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a>]</span> (WJ) can be used.</p>
-<p> It is also important to bear in mind that Thai may be used to write various languages, in particular minority languages for which different dictionaries are needed. Since such dictionaries may not available in a given browser or other application, there is a tendency to use ZWSP in order to compensate.</p>
-<p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
-<p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
-</section>
-
-
-
-
-
-
-
-<section id="syllableParsing">
-<h4>Parsing syllables</h4>
-
-<p>Automatically adding spaces (zero-width or other) around Thai syllables is problematic because syllable-final consonants are not easy to identify. Thai segmentation may have to deal with ambiguous situations. Take for example the word
-<span class="eg" lang="th">ถนน</span>
-</p>
-
-<p>Because syllable-final sounds are ordinary letters, with no special indication, this could be parsed as <span class="ipa">ta.non</span>, <span class="ipa">ton.na</span>, or even <span class="ipa">ta.na.na</span>, and indeed some words are written the same but pronounced differently, eg.
-<span class="eg" lang="th">นม</span>
-</p>
-
-<p>Similarly, because medial consonants are written with normal characters, there is a possibile ambiguity about whether a sequence contains an inherent vowel, eg.
-<span class="eg" lang="th">กรี</span>
-</p>
-</section>
-</section>
 </section>
 
 
@@ -4173,11 +4174,6 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 
 <section id="inlinenotes">
 <h4>Inline notes &amp; annotations</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-
-<section id="otherinline">
-<h4>Other inline text decoration</h4>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 </section>
 </details>
@@ -4371,15 +4367,20 @@ which is short for
 
 
 
+<section id="otherinline">
+<h3>Other inline features</h3>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+
 
 <section id="otherpunctuation">
-<h3>Other punctuation</h3>
+<h4>Other punctuation</h4>
 
 <p>CLDR indicates that the following are also used:</p>
 
 <figure class="characterBox auto"  data-cols="trans">′␣″␣&#x0E4E;</figure>
 
 <p class="btw">&nbsp;<span class="codepoint" translate="no"><span lang="th">&#x0E4E;</span> [<a href="/scripts/thai/block#char0E4E"><span class="uname">U+0E4E THAI CHARACTER YAMAKKAN</span></a>]</span> is an ancient punctuation mark used to mark clusters, such as in <span class="charExample" translate="no"><span class="ex" lang="th">พ๎ราห๎มณ</span> <span class="trans">p̱ʰ๎ṟāh๎m̱ṇ̱</span> <span class="ipa">pʰraːmǒn</span></span></p>
+</section>
 </section>
 </section>
 
