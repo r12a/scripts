@@ -371,7 +371,9 @@ out += `
         }
     
 if (! window.location.href.includes('block')) out += `
-    <img id="showTOC" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="  document.getElementById('tocPanel').style.display = 'block'">
+    <span id="findChar"><input type="text" style="width: 1rem;" title="Highlight locations of a character in this page." onchange="if (this.value !== '') makeFootnoteIndex(this.value)"></span>
+
+    <img id="showTOC" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="document.getElementById('tocPanel').style.display = 'block'">
 
     <div id="optionSwitch" title="Options." onclick="if (document.getElementById('showTranscriptions').style.display === 'block') document.getElementById('showTranscriptions').style.display='none'; else document.getElementById('showTranscriptions').style.display='block';"><img src="../../shared/images/showImages.png" alt="Option menu"></div>
 
