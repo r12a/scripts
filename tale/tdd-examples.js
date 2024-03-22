@@ -37,18 +37,17 @@ autoExpandExamples.tdd = `
 ᥑᥛᥰ||
 ᥑᥝᥲ|rice||xàw
 ᥑᥝᥲᥔᥥᥢᥲ|rice noodles||xàwsèn
-ᥑᥝᥴ||
+ᥑᥝᥴ|they, them||xáw
 ᥑᥣᥛᥰ|language||xäam
 ᥑᥣᥝᥱ|news, message|x§aː§w§˩˩|xǎaw
-ᥑᥣᥝ̌|news, message|x§aː§w§˩˩|xǎaw
-ᥑᥣᥝᥴ||
-ᥑᥣᥭᥰ|water buffalo||xäay
+ᥑᥣᥝᥴ|white||xáaw
+ᥑᥣᥭᥰ|water buffalo|x§aː§j§˥|xäay
 ᥑᥣᥰ||
 ᥑᥣᥱ||
 ᥑᥣᥴ||
 ᥑᥧᥢᥴᥞᥨᥝᥴᥑᥛᥰ|king|xúnhówxäm
-ᥑᥭᥲ|to want, wish||xày
-ᥒᥝᥰ||
+ᥑᥭᥲ|to want, wish|xa§j§˦˨|xày
+ᥒᥝᥰ|shadow||ngäw
 ᥒᥧᥰ|snake|ŋ§u§˥˧|ngü
 ᥓᥣᥒᥳ||
 ᥓᥣᥭᥰ|man||tsäay
@@ -56,21 +55,21 @@ autoExpandExamples.tdd = `
 ᥓᥬᥴ||
 ᥔᥒᥴ||
 ᥔᥣᥛᥴ||
-ᥔᥣᥝᥴ||
+ᥔᥣᥝᥴ|girl||sáaw
 ᥔᥤᥙᥴ|ten||síp
 ᥔᥤᥱ||
 ᥔᥥᥒᥴ|sound, voice||séng
 ᥔᥥᥢᥲ||
 ᥔᥧᥛᥳ|room||s§u§̇m
 ᥔᥧᥴ||
-ᥔᥩᥒᥴ|two|sɔŋ⁵|sóang
+ᥔᥩᥒᥴ|two|s§ɔ§ŋ§˨˦|sóang
 ᥔᥩᥢᥴ||
 ᥕᥒ||
 ᥕᥝᥳ||
 ᥕᥤᥒᥰ||
 ᥕᥧᥱ|to be at|j§u§˩˩|yǔ
 ᥕᥧ̌|to be at|j§u§˩˩|yǔ
-ᥕᥭᥰ|cicada||yäy
+ᥕᥭᥰ|cicada|j§aj§˥˧|yäy
 ᥖᥣᥢᥲ|to speak||tàan
 ᥖᥦᥛᥲ|to write||tàem
 ᥖᥧ||
@@ -115,9 +114,9 @@ autoExpandExamples.tdd = `
 ᥛᥦᥝᥴ|cat||máew
 ᥛᥧᥴ||
 ᥛᥨᥝᥴ|doctor||mów
-ᥛᥨᥝᥴᥔᥩᥢᥴ||
+ᥛᥨᥝᥴᥔᥩᥢᥴ|teacher||mówsóan
 ᥛᥨᥢᥱ||
-ᥛᥫᥒᥰ|city, country|m§ə§ŋ§²|möeng
+ᥛᥫᥒᥰ|city, country|m§ə§ŋ§˥|möeng
 ᥛᥬᥰ|you (s)||mäue
 ᥛᥬᥱ|new||mǎue
 ᥜᥒᥰ||
@@ -125,24 +124,24 @@ autoExpandExamples.tdd = `
 ᥜᥒᥴ|to bury||fáng
 ᥜᥒ́|to bury||fáng
 ᥜᥫᥐᥱ|to study, learn||fǒek
-ᥜᥭᥰ|fire||fäy
+ᥜᥭᥰ|fire|f§aj§⁴|fäy
 ᥝᥢᥰ|day||wän
-ᥞᥝᥰ||
+ᥞᥝᥰ|we, us||häw
 ᥞᥣᥲ|five||hàa
 ᥞᥧᥴ|ear||hú
-ᥞᥨᥐᥱ|six|hok⁵|hǒk
+ᥞᥨᥐᥱ|six|h§o§k§˩|hǒk
 ᥞᥪᥴ||
 ᥟᥛᥱ|not||ʼǎm
-ᥟᥝ|to read||ʼaw
+ᥟᥝ|to read|a§w|ʼaw
 ᥟᥣᥒᥱ|basin, bowl||ʼǎang
 ᥢᥛᥱ||
 ᥢᥣᥒᥰ|lady, mistress||näang
-ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ|Tai Nüa|ta§j˥§t§aɯ§˧˩§x§o§ŋ§˥
-ᥖᥭᥰᥘᥫᥴ|Tai Le|ta§j§˦.§l§ə§˧˥
 
 
 @ ?
 ᥘᥩᥐᥳ|outside||||x
+ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ|Tai Nüa|t§aj§˥.§t§aɯ§˧˩.§x§o§ŋ§˥
+ᥖᥭᥰᥘᥫᥴ|Tai Le|ta§j§˦.§l§ə§˧˥
 
 
 @ with tone marks, rather than letters
@@ -154,6 +153,7 @@ autoExpandExamples.tdd = `
 ᥛᥣ̀|hemp|
 ᥞᥨᥐ̌|six|hok⁵|hǒk
 ᥛᥣ̌|shoulder||mǎa
+ᥑᥣᥝ̌|news, message|x§aː§w§˩˩|xǎaw
 
 
 
