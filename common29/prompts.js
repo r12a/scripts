@@ -371,14 +371,48 @@ out += `
         }
     
 if (! window.location.href.includes('block')) out += `
-    <span id="findChar"><input type="text" style="text-align:center; width: 1rem; height:1.4rem; vertical-align:top;" title="Highlight locations of a character in this page." onchange="if (this.value !== '') makeFootnoteIndex(this.value)" placeholder="🔎"></span>
-
-    <img id="showTOC" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="document.getElementById('tocPanel').style.display = 'block'">
-
-    <div id="optionSwitch" title="Options." onclick="if (document.getElementById('showTranscriptions').style.display === 'block') document.getElementById('showTranscriptions').style.display='none'; else document.getElementById('showTranscriptions').style.display='block';"><img src="../../shared/images/showImages.png" alt="Option menu"></div>
-
-    <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'; document.getElementById('settings_saved').style.visibility='hidden';"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
+    <div id="topRightControls" 
+        style="    position: fixed;
+        top: 0px;
+        right: 0;
+        width: 150px;
+        background-color: #fff5e6;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        padding: 0.4rem;
+        flex-wrap: nowrap;
+        align-items: self-start;
+        justify-content: space-between;
+        border-bottom-left-radius: 0.5rem;
+        padding-inline-start: 1rem;
+        padding-block-end: 0.2rem;
+        line-height: 1;
+        ">
     
+    <span id="findChar2"><input type="text" style="text-align:center; width: 1.2rem; height:1.4rem; vertical-align:top;" title="Add a (single) character to highlight where it appears in this page." oninput="if (this.value !== '') makeFootnoteIndex(this.value)" placeholder="🔎"></span>
+
+    <div id="contrastSwitch2" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'; document.getElementById('settings_saved').style.visibility='hidden';"><img src="../../shared/images/access.png" alt="Accessibility settings" style="height:2rem;"></div>
+
+    <img id="showTOC2" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="document.getElementById('tocPanel').style.display = 'block'" style="height: 1.9rem; width: 1.9rem;">
+
+    <div id="optionSwitchx"><span
+        style="display: inline-block;
+            font-size: 2rem;
+            border: 1px solid chocolate;
+            padding-inline: 0.3rem;
+            border-radius: 0.3rem;
+            text-align: center;
+            width: 1rem;
+            height: 1.5rem;
+            vertical-align: top;
+            line-height: 1.4;
+            background-color: white;
+            cursor:pointer;"
+        title="Show more options."
+        onclick="if (document.getElementById('showTranscriptions').style.display === 'block') document.getElementById('showTranscriptions').style.display='none'; else document.getElementById('showTranscriptions').style.display='block';">ˇ</span></div>
+
+    </div>
     
     <!-- ACCESSIBILITY PANEL  -->
     <div id="access" style="display: none;">
@@ -421,6 +455,20 @@ if (! window.location.href.includes('block')) out += `
     </div>
     </div>
 `
+
+/* OLD STUFF FROM ABOVE IS HERE     
+if (! window.location.href.includes('block')) out += `
+    <span id="findChar"><input type="text" style="text-align:center; width: 1rem; height:1.4rem; vertical-align:top;" title="Highlight locations of a character in this page." onchange="if (this.value !== '') makeFootnoteIndex(this.value)" placeholder="🔎"></span>
+
+    <img id="showTOC" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="document.getElementById('tocPanel').style.display = 'block'">
+
+    <div id="optionSwitch" title="Options." onclick="if (document.getElementById('showTranscriptions').style.display === 'block') document.getElementById('showTranscriptions').style.display='none'; else document.getElementById('showTranscriptions').style.display='block';"><img src="../../shared/images/showImages.png" alt="Option menu"></div>
+
+    <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'; document.getElementById('settings_saved').style.visibility='hidden';"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
+    
+
+*/
+
 
 //out += `<div>`
 

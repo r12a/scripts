@@ -2674,6 +2674,7 @@ function setTranslitToggle () {
 		return
 		}
     
+    /*
     var details = document.createElement('details')
     
     var summary = document.createElement('summary')
@@ -2708,6 +2709,7 @@ function setTranslitToggle () {
 	details.appendChild(div)
     
 	checkboxList.appendChild(details)
+    */
 
 	// add links to phonetic symbol info
 	div = document.createElement('div')
@@ -2765,7 +2767,7 @@ function setTranslitToggle () {
 	checkboxList.appendChild(div)
 
     // add link to top of plage
-	div = document.createElement('div')
+	/* div = document.createElement('div')
     var img = document.createElement('img')
     img.id = 'jumpToToc'
     img.src = '../../shared/images/up.png'
@@ -2773,7 +2775,7 @@ function setTranslitToggle () {
     img.alt = 'TOC.'
     img.title = 'Jump to table of contents.'
     img.onclick = function () { document.getElementById('tocPanel').style.display = 'block'}
-    div.appendChild(img)
+    div.appendChild(img) */
     /*var a = document.createElement('a')
     a.appendChild(img)
     a.href = '#header-boilerplate'
