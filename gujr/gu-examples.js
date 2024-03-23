@@ -69,7 +69,7 @@ autoExpandExamples.gu = `
 અજગર||
 અજમો||
 અજ્ઞાન||
-અજ્ઞાની||
+અજ્ઞાની|ignorant||agnānī
 અટકવું||
 અટકાવું||
 અટપટું||
@@ -121,7 +121,7 @@ autoExpandExamples.gu = `
 અધરંગ||
 અધિકાર||
 અધુના||
-અધૂરું||
+અધૂરું|unfinished|ˈə.§d̪ʱu.§ɾũ|adhūrũ
 અધોમંડળ||
 અધોમંડળીય||
 અનનાસ||
@@ -156,7 +156,7 @@ autoExpandExamples.gu = `
 અમારું||
 અમાસ||
 અમી||
-અમુક|some||amuk
+અમુક|some|ˈə.§mu§k|amuk
 અમૂર્ત||
 અમે|we (1pl)||ame
 અયોગ્ય||
@@ -203,13 +203,13 @@ autoExpandExamples.gu = `
 અસ્પૃશ્યતાનિવારણ||
 અસ્પૃશ્યોદ્ધાર||
 અહં||
-અહીં|here||ahī̃
+અહીં|here|ˈə.§ɦĩ|ahī̃
 અહીંતહીં||
 અહોરાત||
 આ|this||ā
 આંકડાશાસ્ત્ર||
 આંકડો||
-આંખ|eye||ā̃kha
+આંખ|eye|ˈɑ̃§kʰ|ā̃kha
 આંગણ||
 આંગળી||
 આંચકો||
@@ -311,7 +311,7 @@ autoExpandExamples.gu = `
 ઇસ્પિતાલ||
 ઈંટ||
 ઈંટવાડો||
-ઈંડું|egg||ī̃ḍũ
+ઈંડું|egg|ˈɪ§ɳ.§ɖũ|ī̃ḍũ
 ઈંધણ||
 ઈમાનદારી||
 ઈસ્ટોનિયા||
@@ -330,7 +330,7 @@ autoExpandExamples.gu = `
 ઉતાવળ||
 ઉત્કીર્ણ||
 ઉત્ક્રાંતિ||
-ઉત્તર||
+ઉત્તર|north|ˈu§t̪.§t̪ə§ɾ|uttar
 ઉત્તરદાતા||
 ઉત્તરપશ્ચિમ||
 ઉત્પાદક||
@@ -349,7 +349,7 @@ autoExpandExamples.gu = `
 ઉદ્યોગી||
 ઉધરસ||
 ઉનાળો||
-ઉપઉષ્ણકટિબંધીય||
+ઉપઉષ્ણકટિબંધીય|subtropical|ˈu.§pə§u§ʃ.§ɳə§k.§ʈɪ.§bə§n.§d̪ʱi.§jə|upauṣṇakṭibandhīya
 ઉપકરણ||
 ઉપભોક્તા||
 ઉપર||
@@ -396,7 +396,7 @@ autoExpandExamples.gu = `
 ઊધઈખાધું||
 ઊનતેલ||
 ઊનું||
-ઊપર||
+ઊપર|above, upwards|ˈu.§pə§ɾ|ūpar
 ઊભરો||
 ઊભવું|to stand||ūbhavũ
 ઊભા રહેવું|to stand||ūbhā rahevũ
@@ -416,27 +416,27 @@ autoExpandExamples.gu = `
 ઋણી||
 એ|at||e
 એંસી||
-એક|one||eka
+એક|one|e§k|eka
 એકકોષી||
 એકતાળો||
 એકપગું||
 એકલક||
 એકલડું||
-એકલું||
+એકલું|alone|ˈeː.§kə.§lũ|ekalũ
 એકવીસ||
 એટલું||
 એટલે||
 એડી||
 એણે||
 એરંડિયું||
-એરણ||
+એરણ|anvil|ˈɛ.§ɾə§ɳ|eraṇ
 એરુ||
 એરું||
 એલચી||
 એશિયા||
 એસ્પેરાન્તો||
-ઐતિહાસિક||
-ઑફિસ||
+ઐતિહાસિક|historic|ˈəɪ.§t̪ɪ.§ɦɑ.§sɪ§k|aitihāsik
+ઑફિસ|office|ˈɔ§pʰɪ§s|ŏphis
 ઓકવું||
 ઓગણીસ||
 ઓગણોતરો||
@@ -507,7 +507,7 @@ autoExpandExamples.gu = `
 કરિયાતું||
 કરોડરજ્જુ||
 કર્કરોગ||
-કર્ણાટક||
+કર્ણાટક|Karnataka|ˈkə§ɾ.§ɳɑ.§ʈə§k|karṇāṭak
 કલનશાસ્ત્ર||
 કલિંગર||
 કલિયુગ||
@@ -603,7 +603,7 @@ autoExpandExamples.gu = `
 કેશવાહિની||
 કેસર||
 કેસરી||
-કૉફી||
+કૉફી|coffee|ˈkɔ§pʰi|kŏphī
 કોંકણી||
 કોંગ્રેસ||
 કોકમ||
@@ -664,7 +664,7 @@ autoExpandExamples.gu = `
 ખરચવું||
 ખરવું||
 ખરાબ|bad||kharāb
-ખરીદવું||
+ખરીદવું|to buy|ˈkʰə.§ɾi§d̪.§ʋũ|kharīdvũ
 ખરીદી||
 ખરેખર||
 ખસી||
@@ -827,7 +827,7 @@ autoExpandExamples.gu = `
 ઘોડો||
 ઘ્રાણમસ્તિષ્ક||
 ચંદન||
-ચંદ્ર|moon||candra
+ચંદ્ર|moon|ˈt͡ʃən.§d̪ɾə|candra
 ચંદ્રગ્રહણ||
 ચંદ્રમા||
 ચંદ્રવાર||
@@ -852,7 +852,7 @@ autoExpandExamples.gu = `
 ચડ્ડી||
 ચતર||
 ચમકીલું||
-ચમચી||
+ચમચી|spoon|ˈt͡ʃə§m.§t͡ʃi|camcī
 ચમચો||
 ચમરી ગાય||
 ચરખો||
@@ -878,7 +878,7 @@ autoExpandExamples.gu = `
 ચામાચીડિયું||
 ચાર|four||cār
 ચાલવું|to walk||cālvũ
-ચાલીસ||
+ચાલીસ|forty|ˈt͡ʃɑ.§li§s|cālīs
 ચાવવું||
 ચાવી||
 ચાહકજગત||
@@ -898,7 +898,7 @@ autoExpandExamples.gu = `
 ચીકી||
 ચીજ||
 ચીતરમુબ||
-ચીની||
+ચીની|Chinese|ˈt͡ʃi.§ni|cīnī
 ચીપડો||
 ચીસ||
 ચુંગી||
@@ -924,7 +924,7 @@ autoExpandExamples.gu = `
 ચેવડો||
 ચૈતન્ય||
 ચોંટતી ચિઠ્ઠી||
-ચોખા||
+ચોખા|uncooked rice|ˈt͡ʃo.§kʰɑ|cokhā
 ચોત્રીસો||
 ચોથું||
 ચોપગું||
@@ -938,13 +938,13 @@ autoExpandExamples.gu = `
 ચોરસ||
 ચોરી||
 ચોવીસ||
-ચૌદ||
+ચૌદ|fourteen|t͡ʃəʋ§d|caud
 ચ્યમ||
 છકડું||
 છટકબારી||
 છઠ્ઠું||
 છતપંખો||
-છત્રી||
+છત્રી|umbrella|ˈt͡ʃʰə§t̪.§ɾi|chatrī
 છત્રીવાજું||
 છપ્પનિયો||
 છમછરી||
@@ -973,7 +973,7 @@ autoExpandExamples.gu = `
 છેતરપિંડી||
 છેલ્લું||
 છોકરમત||
-છોકરી||
+છોકરી|girl|tʃʰo§k§ri|chokrī
 છોકરું|child||chokrũ
 છોકરો||
 છોગ્યાલ||
@@ -1094,7 +1094,7 @@ autoExpandExamples.gu = `
 જોવું|to see||jovũ
 જ્ઞ||
 જ્ઞાતિ||
-જ્ઞાન||
+જ્ઞાન|intelligence|›§ˈɡjɑ§n|jñān
 જ્ઞાનતંતુ||
 જ્યા||
 જ્યારે||
@@ -1110,7 +1110,7 @@ autoExpandExamples.gu = `
 ઝાંપો||
 ઝાકળ બિંદુ||
 ઝાકળ||
-ઝાડ|tree||jhāḍ
+ઝાડ|tree|ˈd͡ʒʱɑ§ɖ|jhāḍ
 ઝાડપાલો||
 ઝાડુ||
 ઝાડો||
@@ -1123,7 +1123,7 @@ autoExpandExamples.gu = `
 ટચલી આંગળી||
 ટપાલગાડી||
 ટપાલપેટી||
-ટમલર||
+ટમલર|tumbler (cup)|ˈʈə§m.§lə§ɾ|ṭamlar
 ટરપિથ||
 ટાંકણ||
 ટાપટીપ||
@@ -1141,8 +1141,9 @@ autoExpandExamples.gu = `
 ટેવ||
 ટોકળો||
 ટોપલીદડો||
-ટોપી||
+ટોપી|hat, cap|ˈʈo.§pi|ṭopī
 ટોળાશાહી||
+ઠંડ|cold|ˈʈʰəɳ§ɖ|ṭhaṇḍ
 ઠંડી||
 ઠંડુ|cold||ṭhaṇḍu
 ઠંડું||
@@ -1176,7 +1177,6 @@ autoExpandExamples.gu = `
 ડોકલું||
 ડોકલો||
 ડોકું||
-ડોક્ટર|doctor
 ઢગરું||
 ઢેબરું||
 ઢોકળું||
@@ -1204,7 +1204,7 @@ autoExpandExamples.gu = `
 તપાસણી||
 તપાસવું||
 તબક્કો||
-તબિયત||
+તબિયત|health|ˈt̪ə.§bɪ.§jə§t̪|tabiyat
 તમને||
 તમાકુ||
 તમામ|all||tamām
@@ -1222,7 +1222,7 @@ autoExpandExamples.gu = `
 તરીકે||
 તરીકો||
 તરુ||
-તર્કજ્ઞ||
+તર્કજ્ઞ|logician||tarkajñ
 તર્કશાસ્ત્ર||
 તલવાર||
 તળસી||
@@ -1306,7 +1306,7 @@ autoExpandExamples.gu = `
 ત્રીસ||
 ત્રેવીસ||
 ત્વરિત||
-થડ||
+થડ|tree trunk|ˈt̪ʰə§ɖ|thaḍ
 થરથરવું||
 થવું||
 થાંકા||
@@ -1315,7 +1315,7 @@ autoExpandExamples.gu = `
 થાકવું||
 થાન||
 થાપો||
-થાળી||
+થાળી|plate|ˈt̪ʰɑ.§ɭi|thāḷī
 થાળીવાજું||
 થીજવું||
 થૂંક||
@@ -1394,7 +1394,7 @@ autoExpandExamples.gu = `
 દીવી||
 દુઃખ||
 દુઃખિયારું||
-દુઃસ્વપ્ન||
+દુઃસ્વપ્ન|nightmare|ˈd̪u.ʰ§s§ʋə§p.§nə|duḥsvapna
 દુકાન||
 દુકાળ||
 દુખ||
@@ -1548,7 +1548,7 @@ autoExpandExamples.gu = `
 નિકટ||
 નિખારવું||
 નિપાળો||
-નિબંધ||
+નિબંધ|essay|ˈnɪ.§bən§d̪ʱ|nibandh
 નિબંધકાર||
 નિભાડો||
 નિયંત્રણ||
@@ -1598,8 +1598,8 @@ autoExpandExamples.gu = `
 પંજાબી||
 પંદર||
 પકડવું|to hold||pakaḍvũ
-પકડ઼|hold|(pakaṛ)
-પકડ઼ે|holds|(pakaṛe)
+પકડ઼|hold||pakaṛ
+પકડ઼ે|holds||pakaṛe
 પકડી લેવું||
 પક્ષાઘાત||
 પક્ષી|bird||pakṣī
@@ -1644,7 +1644,7 @@ autoExpandExamples.gu = `
 પદ્મ||
 પનખિદ||
 પપનસ||
-પપૈયું||
+પપૈયું|papaya|ˈpə.§pəɪ.§jũ|papaiyũ
 પપ્પા||
 પર||
 પરંપરા||
@@ -1754,7 +1754,7 @@ autoExpandExamples.gu = `
 પીળો|yellow||pīḷo
 પીવું|to drink||pīvũ
 પુંકેસર||
-પુનઃતાજું કરવું||
+પુનઃતાજું કરવું|to refresh (computer)|ˈpu.§nə.ʰ§t̪ɑ.§d͡ʒũ§‿§ˈkə§ɾ.§ʋũ|punaḥtājũ karvũ
 પુનઃપ્રકાશિત||
 પુનઃફાળવણી||
 પુનઃસંગ્રહ||
@@ -1883,7 +1883,7 @@ autoExpandExamples.gu = `
 ફાલુદા||
 ફાળવણી||
 ફાવવું||
-ફિરસ્તો||
+ફિરસ્તો|angel|ˈpʰɪ.§ɾə§s.§t̪o§/ˈfɪ.ɾəs.t̪o|phirasto
 ફિરોઝપુર||
 ફીકું||
 ફીણ||
@@ -1915,7 +1915,7 @@ autoExpandExamples.gu = `
 બંધાણી||
 બંધાવું||
 બંને||
-બંબો||
+બંબો|fire hydrant|ˈbəm.§bo|bambo
 બકુડી||
 બગડવું||
 બગીચો||
@@ -2090,7 +2090,7 @@ autoExpandExamples.gu = `
 ભૂ||
 ભૂંસવું||
 ભૂકંપ||
-ભૂખ||
+ભૂખ|hunger|ˈbʱu§kʰ|bhūkh
 ભૂખહડતાળ||
 ભૂખ્યું||
 ભૂગર્ભજળ||
@@ -2159,7 +2159,7 @@ autoExpandExamples.gu = `
 મને||
 મનોમંથન||
 મનોરંજન||
-મમમમ||
+મમમમ|food (childish)|ˈmə§m.§mə§m|mammam
 મમ્મા||
 મમ્મી||
 મરકી||
@@ -2415,7 +2415,7 @@ autoExpandExamples.gu = `
 રાષ્ટ્રધ્વજ||
 રાહ જોવી||
 રિક્ષા||
-રિચાર્ડ||
+રિચાર્ડ|Richard|ˈɾɪ.§t͡ʃɑ§ɾ§ɖ|ricārḍ
 રિનપોછે||
 રિપુ||
 રીંગણ||
@@ -2424,7 +2424,7 @@ autoExpandExamples.gu = `
 રુફિયા||
 રૂ||
 રૂપ||
-રૂપિયો|rupee
+રૂપિયો|rupee|ˈɾu.§pɪ.§jɔ|rūpiyo
 રૂપું||
 રેખાંશ||
 રેજા||
@@ -2532,7 +2532,7 @@ autoExpandExamples.gu = `
 લીલો|green||līlo
 લીસું|smooth||līsũ
 લુછણિયું||
-લુપ્ત||
+લુપ્ત|vanished|ˈlu§p§t̪|lupt
 લુહાર||
 લૂ||
 લૂંટારો||
@@ -2578,7 +2578,7 @@ autoExpandExamples.gu = `
 વજીર||
 વટાણો||
 વટેમાર્ગુ||
-વડવાગળું||
+વડવાગળું|flying fox|ˈʋə§ɖ.§ʋɑ.§ɡə.§ɭũ|vaḍvāgaḷũ
 વડાપ્રધાન||
 વડુમથક||
 વણકહ્યું||
@@ -2679,7 +2679,7 @@ autoExpandExamples.gu = `
 વિચારવું|to think||vicārvũ
 વિચિત્ર||
 વિજેતા||
-વિજ્ઞાન||
+વિજ્ઞાન|science|ˈʋɪ§ɡ.§nɑ§n|vijñān
 વિજ્ઞાનવેત્તા||
 વિજ્ઞાનશાસ્ત્રી||
 વિજ્ઞાનશુદ્ધ||
@@ -2757,7 +2757,7 @@ autoExpandExamples.gu = `
 વ્યક્તિવાચક||
 વ્યવસાય||
 વ્યવહાર||
-વ્યાકરણ||
+વ્યાકરણ|grammar|ˈʋ§jɑ§k.§ɾə§ɳ|vyākraṇ
 વ્યાખ્યા||
 વ્યાજ||
 વ્યાજદર||
@@ -2772,7 +2772,7 @@ autoExpandExamples.gu = `
 શત્રુ||
 શનિવાર||
 શબ્દ||
-શબ્દકોશ||
+શબ્દકોશ|dictionary|ˈʃə§b.§d̪ə.§ko§ʃ|śabdakoś
 શબ્દમાળા||
 શબ્દયોગીઅવ્યય||
 શમવું||
@@ -2842,7 +2842,7 @@ autoExpandExamples.gu = `
 શ્વસનતંત્ર||
 શ્વસવું|to breathe||śvasvũ
 શ્વાસ લેવો|to breathe||śvās levo
-શ્વાસ||
+શ્વાસ|breath|ˈʃ§ʋɑ§s|śvās
 શ્વાસનલિકા||
 શ્વાસનળી||
 શ્વેતકણ||
@@ -2870,7 +2870,7 @@ autoExpandExamples.gu = `
 સંશોધક||
 સંસાર||
 સંસ્કૃત||
-સંસ્કૃતિ||
+સંસ્કૃતિ|culture, civilisation|ˈsən.§s§kɾu.§t̪ɪ|sãskŕti
 સકલ ઘરેલુ ઉત્પાદન||
 સક્કરટેટી||
 સગવડ||
@@ -2979,7 +2979,7 @@ autoExpandExamples.gu = `
 સામળું||
 સામસામે||
 સામાન||
-સામાન્ય જ્ઞાન||
+સામાન્ય જ્ઞાન|common sense||sāmānya jñān
 સામાન્ય||
 સામે||
 સામો||
@@ -3129,7 +3129,7 @@ autoExpandExamples.gu = `
 હજરત||
 હજામ||
 હજાર||
-હજી||
+હજી|still, as yet|ˈɦə.§d͡ʒi|hajī
 હજીરો||
 હજુ||
 હઝરત||
@@ -3196,7 +3196,7 @@ autoExpandExamples.gu = `
 હુંપણું||
 હુમલો||
 હૂંફાળું||
-હૃદય|heart||hṛdya
+હૃદય|heart|ˈɾə.§d̪ə§j|hṛdya
 હૃદયચિકિત્સક||
 હૃદયચિકિત્સા||
 હૃદયશૂન્ય||
@@ -3205,7 +3205,7 @@ autoExpandExamples.gu = `
 હૈયાબળાપો||
 હૈયાવરાળ||
 હૈયાવિહોણું||
-હૈયું||
+હૈયું|heart|ˈɦəɪ.§jũ|haiyũ
 હોડી||
 હોનારત||
 હોલોંગ||
@@ -3214,41 +3214,79 @@ autoExpandExamples.gu = `
 હોવું||
 હોશિયાર||
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+આંબો|mango tree|ˈɑ̃.§bo|ā̃bo
+આશ્રમ|ashram, monastery|ˈɑ§ʃ.§ɾə§m|āśram
+ઇઝરાયલ|Israel|ˈɪ.§d͡ʒʱə.§ɾɑ.§jə§l|ijharāyal
+ઇફતાર|iftar (Ramadan meal)|ɪ§f.§t̪ɑ§ɾ§/ˈɪpʰ.t̪ɑɾ|iphatār
+ઇયળ|worm, caterpillar|ˈɪ.§jə§ɭ|iyaḷ
+ઇસ્માઇલ|Ishmael|ˈɪ§s.§mɑ§ɪ§l|ismāil
+ઈરાન|Iran|ˈi.§ɾɑ§n|īrān
+ઊકળવું|to boil|ˈu.§kə.§ɭ§ʋũ|ūkaḷvũ
+ઋતુ|season|ˈɾʊ§t̪u|ŕtu
+ઋષિ|sage, rishi|ˈɾʊ§ʃɪ|ŕṣi
+એન્થોની|Anthony|ˈæ§n§t̪ʰo.§nɪ|enthonī
+એરંગ|herring|ˈeː.§ɾəŋ§ɡ|eraṅg
+ઑક્ટોબર|October|ˈɔ§k§ʈo.§bə§ɾ|ŏkṭobar
+ઑફિસર|officer|ˈɔ§pʰɪ.§sə§ɾ|ŏphisar
+ઓક્ટોપસ|octopus|ˈo§k.§ʈo.§pə§s|okṭopas
+ઓગસ્ટ|August|ˈo.§ɡə§s§ʈ|ogasṭ
+ઓળો|shadow|ˈɔ.§ɭo|oḷo
+ઔરંગઝેબ|Aurangzeb (Mughal emperor)|ˈəu.§ɾə§ŋ.§ɡ§d͡ʒʱeː§b|auraṅgjheb
+કલાકાર|skilled artist|ˈkə.§lɑ.§kɑ§ɾ|kalākār
+કોન્ટ્રાક્ટર|contractor|ˈko§n.§ʈ§ɾɑ§k.§ʈə§ɾ|konṭrākṭar
+ક્ષત્રિય|warrior caste|ˈk§ʃə§t̪.§ɾɪ.§jə|kṣatriya
+ક્ષેત્ર|battlefield|ˈkʃeː§t̪.§ɾə|kṣetra
+ખોખું|empty box|ˈkʰo.§kʰũ|khokhũ
+ગંગા|Ganges|ˈɡəŋ.§ɡɑ|gaṅgā
+ગોકળગાય|snail|ˈɡo.§kə.§ɭ§ɡɑ§j|gokaḷgāya
+ઘડો|pitcher, jug|ˈɡʱə.§ɽɔ|ghaḍo
+ઘેટું|sheep|ˈɡʱeː.§ʈũ|gheṭũ
+જનાજો|funeral|ˈd͡ʒə.§nɑ.§d͡ʒo|janājo
+જ્યોતિષ|astrologer|ˈd͡ʒ§jo.§t̪ɪ§ʂ|jyotiṣ
+ઝુહરા|Venus|ˈd͡ʒʱu§ʱ.§ɾɑ|jhuhrā
+ટિકિટ|ticket|ˈʈɪ.§kɪ§ʈ|ṭikiṭ
+ટાંકી|cistern|ˈʈɑ̃.§ki|ṭā̃kī
+જેઠ|brother-in-law|ˈd͡ʒeː§ʈʰ|jeṭh
+ઠઠ્ઠો|joke|ˈʈʰə§ʈ.§ʈʰɔ|ṭhaṭhṭho
+ડગલો|overcoat|ˈɖə§ɡ.§lɔ|ḍaglo
+ઢાંકણ|lid, cover|ˈɖʱɑ̃.§kə§ɳ|ḍhā̃kaṇ
+ઢોર|cattle|ˈɖʱo§ɾ|ḍhor
+ઠાણ|place|ˈʈʰɑ§ɳ|ṭhāṇ
+તિમિ|whale|ˈt̪ɪ.§mɪ|timi
+દાદરો|staircase|ˈd̪ɑ§d̪.§ɾɔ|dādro
+દયા|mercy|ˈd̪ə.§jɑ|dayā
+નણંદ|sister-in-law|ˈnə.§ɳən§d̪|naṇand
+ધન્યવાદ|thank you|ˈd̪ʱə§n.§jə.§ʋɑ§d̪|dhanyavād
+ધૂય|daughter|ˈd̪ʱu.§jə|dhūya
+ધૂમ્રપાન|smoking|ˈd̪ʱu§m.§ɾə.§pɑ§n|dhūmrapān
+નબી|prophet|ˈnə.§bi|nabī
+નૃત્ય|dance|ˈnɾʊ§t̪§jə|nŕtya
+પોર્ટુગલ|Portugal|ˈpo§ɾ.§ʈu.§ɡə§l|porṭugal
+ફજર|dawn|ˈfə.§d͡ʒə§ɾ|phajar
+બિહાર|Bihar|ˈbɪ.§ɦɑ§ɾ|bihār
+ભાભી|sister-in-law|ˈbʱɑ.§bʱi|bhābhī
+મેવો|dried fruit|ˈmeː.§ʋo|mevo
+યંત્ર|machine, gadget|ˈjən.§t̪§ɾə|yantra
+રાય|king|ˈɾɑ.§jə|rāya
+લહર|wave|ˈlə.§ɦə§ɾ|lahar
+રક્ષા|protection|ˈɾə§k.§ʃɑ|rakṣā
+વકીલ|lawyer|ˈʋə.§ki§l|vakīl
+લંચ|lunch|ˈlən§t͡ʃ|lañc
+વર્ણમાળા|alphabet|ˈʋə§ɾ.§ɳə.§mɑ.§ɭɑ|varṇamāḷā
+વાંસળી|flute|ˈʋɑ̃.§sə.§ɭi|vā̃saḷī
+વચલું|middle|ˈʋə§t͡ʃ.§lũ|vaclũ
+વતન|homeland|ˈʋə.§t̪ə§n|vatan
+વિપ્લવ|revolt|ˈʋɪ§p.§lə§ʋ|viplav
+શિશુ|baby, infant|ˈʃɪ.§ʃu|śiśu
+શામ|evening|ˈʃɑ§m|śām
+વૈષ્ણવ|Vishnu devotee|ˈʋəɪ§ʃ.§ɳə§ʋ|vaiṣṇav
+શ્રીનગર|Srinagar|ˈʃ§ɾi.§nə.§ɡə§ɾ|śrīngar
+શ્રીલંકા|Sri Lanka|ˈʃɾi.ləŋ.kɑ|śrīlaṅkā
+રાષ્ટ્રભાષા|national language|ˈɾɑ§ʃ.§ʈ§ɾə.§bʱɑ.§ʃɑ|rāṣṭrabhāṣā
+વિષ|poison|ˈʋɪ§ʂ|viṣ
+સ્વસ્તિક|swastika|ˈs§ʋə§s.§t̪ɪ§k|svastik
+સ્થાપત્ય|architecture|ˈs§t̪ʰɑ.§pə§t̪.§jə|sthāpatya
+સ્નેહ|love, affection|ˈs§neː.§ɦə|sneha
 
 
 
