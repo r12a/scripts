@@ -371,7 +371,7 @@ out += `
         }
     
 if (! window.location.href.includes('block')) out += `
-    <span id="findChar"><input type="text" style="width: 1rem;" title="Highlight locations of a character in this page." onchange="if (this.value !== '') makeFootnoteIndex(this.value)"></span>
+    <span id="findChar"><input type="text" style="text-align:center; width: 1rem; height:1.4rem; vertical-align:top;" title="Highlight locations of a character in this page." onchange="if (this.value !== '') makeFootnoteIndex(this.value)" placeholder="🔎"></span>
 
     <img id="showTOC" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="document.getElementById('tocPanel').style.display = 'block'">
 
