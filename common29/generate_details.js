@@ -73,6 +73,11 @@ function makeListFromChars (chars) {
 	
     for (var x=0; x<charList.length; x++) {
         if (charList[x] == '') continue
+        if (typeof charList[x] === 'undefined') { console.log('Undefined ',charList[x]); continue }
+        if (typeof  spreadsheetRows[charList[x]] === 'undefined') { console.log('Undefined in spreadsheet',charList[x]); continue }
+        if (spreadsheetRows[charList[x]][cols['status']] === '?') { console.log('? status for',charList[x]); continue }
+        if (spreadsheetRows[charList[x]][cols['status']] === 'u') { console.log('U status for',charList[x]); continue }
+        
         items = charList[x].split('\t')
         
         // get code point value, converting escapes if necessary
@@ -91,7 +96,8 @@ function makeListFromChars (chars) {
         out += '<p class="insertTranscription">&#x'+hex+';</p>\n\n'
 
         // add status info to top of entry
-        if (spreadsheetRows[charList[x]] && spreadsheetRows[charList[x]][cols['status']] || spreadsheetRows[charList[x]][cols['statusLoc']]) {
+        console.log('charList[x]',charList[x])
+        if (spreadsheetRows[charList[x]][cols['status']] || spreadsheetRows[charList[x]][cols['statusLoc']]) {
             out += `<p>`
             if (spreadsheetRows[charList[x]][cols['status']]) {
                 switch (spreadsheetRows[charList[x]][cols['status']]) {
@@ -111,7 +117,7 @@ function makeListFromChars (chars) {
             }
 
         // make code for each phone
-        if (spreadsheetRows[charList[x]] && spreadsheetRows[charList[x]][cols['ipaLoc']]) {
+        if (spreadsheetRows[charList[x]][cols['ipaLoc']]) {
             ipas = spreadsheetRows[charList[x]][cols['ipaLoc']].split(' ')
 
 
@@ -137,6 +143,18 @@ function makeListFromChars (chars) {
                     }              
                 }
             }
+        
+        // if this code executes, there is no ipa value, so just print the type info
+        else {
+            temp = [... spreadsheetRows[charList[x]][cols['typeLoc']]]
+            first = temp.shift()
+            console.log('first',first)
+            if (first) {
+                out +=  `<p>${ first.toUpperCase() + temp.join('') }.</p>`
+                }
+            }
+        
+        
         // check for combinations
         combinations = ''
         for (comb in spreadsheetRows) {
