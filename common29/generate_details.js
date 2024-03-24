@@ -73,6 +73,7 @@ function makeListFromChars (chars) {
 	
     for (var x=0; x<charList.length; x++) {
         if (charList[x] == '') continue
+        if (charList[x].length > 1) continue
         if (typeof charList[x] === 'undefined') { console.log('Undefined ',charList[x]); continue }
         if (typeof  spreadsheetRows[charList[x]] === 'undefined') { console.log('Undefined in spreadsheet',charList[x]); continue }
         if (spreadsheetRows[charList[x]][cols['status']] === '?') { console.log('? status for',charList[x]); continue }
