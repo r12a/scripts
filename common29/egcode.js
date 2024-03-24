@@ -79,7 +79,7 @@ function addExamples (langFilter) {
             
             if (traceSet.has('addExamples')) console.log('addExamples:',egList[nodes[n].textContent])
             // get the available data
-            var termdata = egList[nodes[n].textContent].split('|')
+            var termdata = egList[nodes[n].textContent].replace(/␣/g,'').split('|')
             var term = termdata[0]
             var meaning = termdata[1]
             var ipa = termdata[2]

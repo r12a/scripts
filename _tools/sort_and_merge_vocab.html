@@ -24,6 +24,55 @@
 <p><button onClick="sortVocab()">Sort &amp; merge vocab</button><br><em>Input: List of vocab data. Output: List with no repeats, ordered by native text.</em></p>
 <script>
 function sortVocab() {
+    //var items, charlist, result
+    // boil down any duplicate lines and add to sorted charlist array
+	items = document.getElementById('in').value.split('\n')
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+    window.rejected = []
+    result = []
+    
+    for (var i=0;i<charlist.length-1;i++) {
+        conflict = false
+        var thisLineArray = charlist[i].split('|')
+        var nextLineArray = charlist[i+1].split('|')
+        
+        if (thisLineArray[0] === nextLineArray[0]) {
+            for (f=1;f<7;f++) {
+                // if both have different values, check for a conflict
+                if (nextLineArray[f] && thisLineArray[f]  && nextLineArray[f] !== thisLineArray[f] && nextLineArray[f] !== '␣') {
+                    if (nextLineArray[f] === '␣' && thisLineArray[f] !== '␣') {
+                        // if current is placeholder & previous isn't, leave prevous line alone
+                        }
+                    else if (thisLineArray[f] === '␣' && nextLineArray[f] !== '␣') {
+                        // if previous is placeholder & current isn't, add the value to previousline
+                        thisLineArray[f] = nextLineArray[f]
+                        }
+                    else {
+                        // else both are different: raise a conflict
+                        thisLineArray[f] = thisLineArray[f] + ' £££££ ' + nextLineArray[f]
+                        }
+                    }
+                // if current has a value but previous doesn't, copy the value to previous
+                else if (nextLineArray[f] !== '' && thisLineArray[f] === '') {
+                    thisLineArray[f] = nextLineArray[f]
+                    }
+                // otherwise, do nothing since there's no difference
+                }
+            charlist[i] = thisLineArray.join('|').trim()
+            charlist.splice(i+1,1)
+            i--
+            }
+        }
+    
+    console.log(charlist)
+	document.getElementById('out').value = charlist.join('\n')
+	document.getElementById('out').select()
+	}
+    
+function sortVocabX() {
+    // boil down any duplicate lines and add to sorted charlist array
 	items = document.getElementById('in').value.split('\n')
 	const uniqueSet = new Set(items)
 	charlist = [...uniqueSet]
@@ -130,8 +179,39 @@ function generateVowelledEntries() {
 
 
 
+
+
+<!--p><button onClick="generateVowelledEntries()">Create special transcription column</button><br><em>Input: list of terms from xx-examples for Arabic, Hebrew, etc. that has vowelled text in the notes field, or could be be sth like Adlam with same Output: list of items containing entries for those items with the vowelled text or special transcription in a separate column.  NOTE the xx-examples file needs to contain specialTranscription = true for this to work in other apps</em></p>
+<script>
+function generateSpecialTranscriptionColumn () {
+	charlist = document.getElementById('in').value.split('\n')
+	
+	out = ''
+	for (i=0;i<charlist.length;i++) {
+		if (charlist[i] == '') continue
+		row = charlist[i].split('\|')
+        
+        if (row.length>4 && row[5] !== '') {
+            out += `${row[0]}|${row[1]}|${row[2]}|${row[4]}|`
+            }
+        
+        if (typeof row[5] === 'undefined') row[5] = ''
+		if (row[0] && row[4]) out += `${ charlist[i] }\n${ row[4] }|${ row[1] }|${ row[2] }|${ row[3] }|${ row[0] }|${ row[5] }\n`
+        else out += `${ charlist[i] }\n`
+		}
+	
+	
+
+	document.getElementById('out').value = out
+	document.getElementById('out').select()
+	}
+</script-->
+
+
+
+
 <div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
-<!-- #BeginDate format:IS1m -->2023-04-22  6:50<!-- #EndDate --> 
+<!-- #BeginDate format:IS1m -->2024-03-24  15:08<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script>

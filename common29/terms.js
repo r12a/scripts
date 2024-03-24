@@ -671,7 +671,7 @@ function hideNonIPA () {
     var count = 0
     var nodes = document.getElementById('foundItems').querySelectorAll('.ipaCol')
     for (i=0;i<nodes.length;i++) {
-        if (nodes[i].textContent.trim() == '') {
+        if (nodes[i].textContent.trim() == '' || nodes[i].textContent.trim() == '␣') {
             nodes[i].parentNode.style.display = 'none'
             count++
             }
