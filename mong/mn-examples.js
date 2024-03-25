@@ -25,9 +25,10 @@ autoExpandExamples.mn = `
 
 @ wiktionary
 
+
 ᠠᠦ᠋ᠲ᠋ᠣᠪᠦ᠋ᠰ|bus|a§w§̜tʰ§ɔ§ˈp§ʊ§s||автобyс
 ᠠᠩᠨᠠᠬᠤ|to hunt||agnakh|агнах
-ᠠᠪᠢᠶᠠᠰ||
+ᠠᠪᠢᠶᠠᠰ||␣
 ᠠᠪᠤ|father|aː§w̜§–|aav|аав
 ᠠᠪᠬᠤ|to go, leave|a§w§ə§x||авах
 ᠠᠭᠠᠭ|strength|–§–§ˈaː§k||ааг
@@ -38,6 +39,8 @@ autoExpandExamples.mn = `
 ᠠᠮᠢᠨ ᠰᠤᠳᠤᠯᠤᠯ||
 ᠠᠮᠢᠰᠬᠤᠯᠠᠬᠤ|to breathe|amʲsɢəɮəx|amisgalakh|амьсгалах
 ᠠᠮᠢᠲᠠᠨ|animal|æm.tə̠ɴ̟|ȧmĭtan|амьтан
+ᠠᠮᠧᠷᠢᠺᠠ ᠶᠢᠨ ᠨᠢᠭᠡᠳᠦᠭᠰᠡᠨ ᠤᠯᠤᠰ||␣|
+ᠠᠮᠧᠷᠢᠺᠠ||␣|
 ᠠᠯᠠᠬᠤ|to kill||alakh|алах
 ᠠᠯᠬᠤᠬᠤ|to step||alkhakh|алхах
 ᠠᠯᠲᠠ|gold|a§ɮ§tʰ§–||алт
@@ -47,11 +50,14 @@ autoExpandExamples.mn = `
 ᠠᠳᠠ|demon|a§d§a
 ᠠᠴᠢᠬᠤ|to load, burden|ˈat͡ɕʰix||ачих
 ᠠᠶ᠋ᠢᠮᠠᠭ||
+ᠠᠶᠢᠮᠠᠭ|tribe|æː.§–§–§m§ə§k̠||аймаг
 ᠠᠶᠤᠬᠤ|to fear||aikh|айх
 ᠠᠷᠠᠰᠤ|skin|arʲs||арьс
 ᠠᠷᠠᠳ|people|arăd|ard|ард
 ᠠᠷᠪᠠ|ten|a§rᵊ§w̜§–||арав
 ᠠᠷᠰᠯᠠᠩ|lion|
+ᠠᠷᠴᠠ||␣|
+ᠠᠺᠠᠳᠧᠮᠢᠴᠢ||␣|
 ᠡᠨᠡ|this|en|ene|энэ
 ᠡᠨᠳᠡ|here|e§n§t§–|end|энд
 ᠡᠪᠡᠰᠦ|grass|ows|övs|өвс
@@ -96,12 +102,14 @@ autoExpandExamples.mn = `
 ᠤᠯᠠᠭᠠᠨᠪᠠᠭᠠᠲᠤᠷ|Ulaanbaatar|ʊ§ɮ§–§–§aː§n§p§–§–§a§t§–§r||Улаанбаатар
 ᠤᠯᠠᠭᠠᠨᠴᠠᠪᠬᠣᠲᠠ||
 ᠤᠯᠢᠶᠠᠰᠤᠲᠠᠢ||
-ᠤᠰᠤ||
+ᠤᠯᠤᠰ||␣|
+ᠤᠰᠤ||␣
 ᠤᠰᠤᠨ|water|ˈʊs|us|ус
 ᠤᠲᠠᠰᠤ|phone|ʊtᵊs|utas|утас
 ᠤᠲᠤᠭ ᠠ|smoke|ʊtʰa|utaa|утаа
 ᠤᠳᠬ᠎ᠠ|meaning|ʊ§tʰ§əɢ§–§–|ʊdx·a
 ᠤᠵᠡᠭᠦᠯᠬᠦ|to show|u§t͡s§–§–§uː§lə§x§–|uǰəgulxu
+ᠤᠶᠢᠭᠤᠷᠵᠢᠨ||␣|
 ᠤᠷᠲᠤ|long|ʊ§r§t§ă|urt|урт
 ᠥᠨᠦᠳᠦᠷ|today|ɵnɵ:dɵr||өнөөдөр
 ᠥᠨᠳᠡᠭᠡ|egg|ɵ§n§d§ᵊ§k|öndög|өндөг
@@ -125,8 +133,10 @@ autoExpandExamples.mn = `
 ᠨᠠᠪᠴᠢ|leaf|naft͡ʃĭ|navch|навч
 ᠨᠠᠭᠤᠷ|lake|nʊːr|nuur|нуур
 ᠨᠠᠮᠤᠷ|autumn|ˈn§a§m§a§r̥|namᵊr namar|намар
+ᠨᠠᠮᡠᡵ||␣|
 ᠨᠠᠰᠤ ᠪᠠᠷᠠᠬᠤ|to die||nas barakh|нас барах
 ᠨᠠᠰᠤᠲᠠᠢ|old||nastai|настай
+ᠨᠠᠶᠠ||␣|
 ᠨᠠᠷᠠ|sun|nɐɾ|nar|нар
 ᠨᠡᠷ᠎ᠠ|name|n§e§r|ner|нэр
 ᠨᠡᠷ᠎ᠡ|name|ner|ner|нэр
@@ -146,8 +156,9 @@ autoExpandExamples.mn = `
 ᠨᠥᠬᠦᠷ|husband|nɵ.xur|nökhör|нөхөр
 ᠪᠠ|and|ˈpa|ba|ба
 ᠪᠠᠭ᠋ᠠᠲᠤᠷ|hero|ˈpaːtʰar̥|баатар|baɣatur paɢᶠᵛˢ¹atʰʊr|
-ᠪᠠᠮᠪᠠᠢ ᠪᠤᠯᠴᠢᠷᠬᠠᠢ||
+ᠪᠠᠮᠪᠠᠢ ᠪᠤᠯᠴᠢᠷᠬᠠᠢ||␣
 ᠪᠠᠶᠠᠷ ᠵᠢᠷᠭᠠᠯ|pleasure|||баяр жаргал
+ᠪᠠᠶᠠᠷᠯᠠᠯᠤᠭ᠎ᠠ|thank you|p§a§j§ə§r§ɮ§–§–§–§–§–§a|||баярлалаа
 ᠪᠠᠷᠠᠭᠤᠨ ᠲᠥ᠋ᠪᠡᠳ||
 ᠪᠠᠷᠠᠭᠤᠨ||
 ᠪᠠᠷᠢᠬᠤ|to hold|parʲəx|barikh|барих
@@ -155,6 +166,7 @@ autoExpandExamples.mn = `
 ᠪᠡᠭᠡᠵᠢᠩ|Beijing|ˈp§eː§§§t͡ɕ§i§ŋ||Бээжин
 ᠪᠡᠯᠡᠭ|gift|p§i§ɮ§i§ɡ|beleg|бэлэг
 ᠪᠡᠯᠭᠦᠲᠡᠢ||
+ᠪᠢ ᠮᠣᠩᠭᠤᠯ ᠢᠶᠠᠷ ᠶᠠᠷᠢᠳᠠᠭ ᠦᠭᠡᠢ||␣|
 ᠪᠢ|I|ˈpʲi|bi|би
 ᠪᠢᠳ᠋ᠡ|we|pit|bid|бид
 ᠪᠢᠴᠢᠭᠡᠴᠢ|clerk|ˈp§i§t͡ɕʰ§–§–§eː§t͡ɕʰ§–||бичээч
@@ -166,19 +178,21 @@ autoExpandExamples.mn = `
 ᠪᠣᠳᠤᠬᠤ|to think|ˈpɔtɔx|bodokh|бодох
 ᠪᠣᠳᠤᠯ|thought|b§o§d§–§ɮ||бодол
 ᠪᠣᠷᠤᠭ᠎ᠠ|rain|ˈpɔroː|boroo|бороо
-ᠪᠣᠷᠵᠢᠭᠢᠨ||
+ᠪᠣᠷᠵᠢᠭᠢᠨ||␣
 ᠪᠤᠤᠽ|dumpling|p§ʊː§‹§t͡s||бууз
 ᠪᠤᠭᠤ|deer|pʊɡ|bʊgʊ
+ᠪᠤᠶᠢᠳᠠᠩ|sofa|ˈpʊi̯taŋ||буйдан
 ᠪᠥᠭᠡᠯᠵᠢᠬᠦ|to vomit|poːɮt͡ɕəx|bööljikh|бөөлжих
 ᠪᠥᠭᠡᠰᠦ|louse|poːs|böös|бөөс
 ᠪᠦᠢᠯᠡᠰᠦ|almond|pueɮs|büils|бүйлс
 ᠪᠦᠬᠦ|all|p§u§x§–|bxĕ/bükh|бүх
-ᠪᠦᠭᠦᠳᠡ ᠨᠠᠶ᠋ᠢᠷᠠᠮᠳᠠᠬᠤ ᠤᠯᠤᠰ||
+ᠪᠦᠭᠦᠳᠡ ᠨᠠᠶ᠋ᠢᠷᠠᠮᠳᠠᠬᠤ ᠤᠯᠤᠰ||␣
 ᠫᠢᠸᠣ᠋|beer|ˈpʰ§i§w̜§–§–||пиво
 ᠬᠠᠤᠯᠢ|law|xʊːɮʲ|χɵːɮʲ/xu̇:lĭ/xuil|хууль
 ᠬᠠᠨ᠎ᠠ|wall of a tent||xan·a
 ᠬᠠᠨᠠ|outer casing of a vein||xana
-ᠬᠠᠨᠵᠢ||
+ᠬᠠᠨᠵᠢ||␣
+ᠬᠠᠩᠪᠤ||␣|
 ᠬᠠᠪᠠᠷ|nose||khamar|хамар
 ᠬᠠᠭᠠᠨ|khan, king|ˈx§–§–§aː§ŋ||ухаан
 ᠬᠠᠭᠠᠷᠠᠬᠤ|to break|ˈxaɢrəx|khagarakh|хагарах
@@ -186,31 +200,36 @@ autoExpandExamples.mn = `
 ᠬᠠᠯᠪᠠᠭ᠎ᠠ|spoon|xaɮbaɡᵊ|khalbaga|халбага
 ᠬᠠᠵᠠᠬᠤ|to bite|xat͡səx|khazakh|хазах
 ᠬᠠᠶᠠᠬᠤ|to spit|xajəx|khayakh|хаях
+ᠬᠠᠷ ᠠ ᠬᠡᠷᠢᠶ ᠡ||␣|
 ᠬᠠᠷ᠎ᠠ|black|χar̊|khar|хар
 ᠬᠠᠷᠠᠨᠳᠠ|pencil|x§a§r§ə§n§t§a|xarᵊnˈda/χaɾɐnˈda/kharandaa|харандаа
 ᠬᠡᠦᠬᠡᠳ|child|x§–§uː§x§ə§t|khüükhed|хүүхэд
 ᠬᠡᠨ|who|ˈxeŋ|khen|хэн
 ᠬᠡᠪᠲᠡᠬᠦ|to lie (bed)|xeftĕ|khevtekh|хэвтэх
+ᠬᠡᠯᠡ ᠰᠢᠨᠵᠢᠯᠡᠯ||␣|
 ᠬᠡᠯᠡ|tongue, language|xeɮ|khel|хэл
 ᠬᠡᠯᠡᠬᠦ|to say|xiɮəx|khelekh|хэлэх
 ᠬᠡᠵᠢᠶ᠎ᠡ|when|ˈxet͡seː|khezee|хэзээ
 ᠬᠡᠷᠡᠯᠳᠤᠨ᠎ᠡ|fight|xərəldunə
 ᠬᠢᠮᠤᠰᠤ|fingernail|x§ʊ§m§–§s§–|khums|хумс
-ᠬᠢᠲᠠᠳ||
+ᠬᠢᠲᠠᠳ||␣
 ᠬᠣᠩᠬᠤ|bell|xɔŋx|xɔŋxʊ
 ᠬᠣᠭᠤᠯᠠ|food|xɔːɮ||хоол
 ᠬᠣᠯᠠ|far|χɔɬ|khol|хол
 ᠬᠣᠯᠲᠣᠰᠣ|bark (of a tree)|xɔɮtʰəs|kholtos|холтос
+ᠬᠣᠲᠠ ᠶᠢᠨ||␣|
 ᠬᠣᠲᠠ|town|ˈxɔtʰ|xotŏ|хот
+ᠬᠣᠶᠠᠳᠤᠭᠠᠷ||␣|
 ᠬᠣᠶᠠᠷ|two|χɔ.jʊr|khoyor|хоёр
 ᠬᠣᠶᠢᠳᠤ||
 ᠬᠣᠷᠢ|twenty||xorʲ|хорь
 ᠬᠣᠷᠤᠬᠠᠢ|worm|ˈx§ɔ§r§–§x§ɔ§i̯|khorkhoi|хорхой
+ᠬᠤᠤᠱᠤᠤᠷ|dumpling|xʊːʃʊr|||хуушуур
 ᠬᠤᠯᠤᠰᠤ||
 ᠬᠥᠬᠡ ᠨᠠᠭᠤᠷ||
 ᠬᠥᠬᠡ ᠰᠢᠯ||
 ᠬᠥᠬᠡ|breast|ˈxɵx|khökh|хөх
-ᠬᠥᠬᠡᠬᠣᠲᠠ||
+ᠬᠥᠬᠡᠬᠣᠲᠠ||␣
 ᠬᠥᠬᠦᠨ ᠤ ᠲᠣᠯᠤᠭᠠᠢ||
 ᠬᠥᠯ|foot, leg||khöl|хөл
 ᠬᠦᠨᠳᠦ|heavy|xunt|khünd|хүнд
@@ -219,16 +238,17 @@ autoExpandExamples.mn = `
 ᠭ᠋ᠠᠯ|fire|ɢ§–§a§ɮ|gal|гал
 ᠭᠠᠩᠰᠠ||
 ᠭᠠᠬᠠᠢ|pig|ɢa.χæː||гахай
-ᠭᠠᠰᠠᠯᠠᠩ ᠠᠴᠠ ᠨᠥᠭᠴᠢᠭᠰᠡᠨ||
+ᠭᠠᠰᠠᠯᠠᠩ ᠠᠴᠠ ᠨᠥᠭᠴᠢᠭᠰᠡᠨ||␣
 ᠭᠠᠳᠠᠨ᠎ᠠ|outside|ɢ§a§t§ə§n§|ɢadn|гадна
 ᠭᠠᠳᠠᠭ᠎ᠠ|outside|ɣaˈtaː||гадаа
 ᠭᠠᠳᠠᠭᠠᠳᠤ|foreign|ɢadaːt|gadaad|гадаад
 ᠭᠠᠵᠠᠷ|place||gaǰar
 ᠭᠠᠵᠠᠷᠤᠨ ᠵᠢᠷᠤᠭ|||газар
+ᠭᠠᠵᠠᠷᠴᠢ||␣|
 ᠭᠠᠵᠠᠷ ᠠ|to the country||gaǰar-a
 ᠭᠠᠷ|hand|ɢar|gar|гар
 ᠭᠡᠳᠡᠰᠦ|belly|ˈketes|gedes|гэдэс
-ᠭᠡᠷ||
+ᠭᠡᠷ||␣
 ᠭᠡᠷᠡᠯᠲᠦᠨ᠎ᠡ|twinkle|ɡərəltənə|gereltun·e
 ᠭᠡᠷᠭᠡᠢ|wife|ɡ§e§r.§ɡ§–§iː|gergii|гэргий
 ᠭᠣᠤᠯ|river|ɢɔɮ|gol|гол
@@ -242,9 +262,10 @@ autoExpandExamples.mn = `
 ᠭᠦᠷᠪᠡᠯ|lizard|gurpəl|gurbəl
 ᠮᠠᠨᠠᠨ|fog|manəŋ|manan|манан
 ᠮᠠᠨᠠᠩ|fog|m§a§n§ə§ŋ|manan|манан
-ᠮᠠᠨᠵᠤᠤᠷ||
+ᠮᠠᠨᠵᠤᠤᠷ||␣
 ᠮᠠᠭᠠᠵᠢᠬᠤ|to scratch|maːt͡ɕəx|maajikh|маажих
 ᠮᠠᠭᠤ|bad|mʊː|muu|муу
+ᠮᠠᠭᠮᠠ||␣|
 ᠮᠠᠯᠭᠠᠢ|hat|m§a§ɮ§ɢ§a§i||малгай
 ᠮᠠᠱᠢᠨ|car|m§a§ˈʃ§i§ŋ|mashin|машин
 ᠮᠡᠨᠡᠬᠡᠢ|frog|miɮxi||мэлхий
@@ -263,7 +284,7 @@ autoExpandExamples.mn = `
 ᠮᠥᠰᠦ|ice|mos|mös mɵs|мөс
 ᠮᠥᠰᠦᠨ||
 ᠮᠥᠷᠡᠨ|river|mɵ.ruŋ|mörön|мөрөн
-ᠮᠦᠦᠷ||
+ᠮᠦᠦᠷ||␣
 ᠯᠠᠮᠠ||
 ᠯᠠᠲ᠋ᠢᠨ ᠴᠠᠭᠠᠨ ᠲᠣᠯᠤᠭᠠᠢ||
 ᠯᠢᠷ|pear|ɮ§iː§r|liir|лийр
@@ -284,6 +305,7 @@ autoExpandExamples.mn = `
 ᠰᠡᠯᠡᠮᠡ|sword|sələm|seleme
 ᠰᠡᠯᠢᠬᠦ|to swim|seɮəx|selekh|сэлэх
 ᠰᠢᠨ᠎ᠡ|new|ʃin|shin|шин
+ᠰᠢᠨᠵᠢᠯᠡᠯ||␣|
 ᠰᠢᠪᠠᠭᠤ|bird|ʃ§ʊ§w§–§–§ʊ|shuvuu|шувуу
 ᠰᠢᠬᠠᠬᠤ|to squeeze|ʃaxəx|shakhakh|шахах
 ᠰᠢᠮᠠᠭᠤᠯ|mosquito|ʃumu:l||шумуул
@@ -293,7 +315,7 @@ autoExpandExamples.mn = `
 ᠰᠢᠷᠡᠭᠡ|table|ʃ§i§r§–§–§e|shiree|ширээ
 ᠰᠣᠨᠢᠨ|news|sœ.nəŋ|sɔnin|сонин
 ᠰᠣᠨᠤᠰᠬᠤ|to hear|sɔnsəx|sonsokh|сонсох
-ᠰᠤᠮᠤ||
+ᠰᠤᠮᠤ||␣
 ᠰᠥ᠋ᠨ᠋ᠢ|night|ʃɵn|shönö|шөнө
 ᠰᠦᠨ|milk|suː|süü|сүү
 ᠰᠦᠮ ᠡ||
@@ -315,8 +337,8 @@ autoExpandExamples.mn = `
 ᠲᠡᠷᠡ|he, that|tʰer|ter|тэр
 ᠲᠢᠩᠬᠢᠮ|living room|tiŋxim|||x
 ᠲᠣᠭᠠᠯᠠᠬᠤ|to count||toolokh|тоолох
-ᠲᠣᠭᠤᠰ|peacock|ˈtʰ§ɔ§ɢ§ə§s||тогос|тогос
 ᠲᠣᠭᠣᠰᠤ|dust|tɔɔs|tɔgɔsʊ
+ᠲᠣᠭᠤᠰ|peacock|ˈtʰ§ɔ§ɢ§ə§s||тогос|тогос
 ᠲᠣᠮᠤ|big|tʰɔm|tom|том
 ᠲᠣᠯᠤᠭᠠᠢ|head|tʰɔɮɢɔi|tolgoi|толгой
 ᠲᠤᠸᠠ||
@@ -329,7 +351,7 @@ autoExpandExamples.mn = `
 ᠲᠸᠾᠷᠠᠨ|Tehran|tʰ§e§̝ɡ.§r§äˑ§ɴ̟||Тегеран
 ᠳ᠋ᠢᠶᠠᠩᠬᠤᠸᠠ||
 ᠳᠠᠪᠤᠰᠤ|salt|dawᵊs|davs|давс
-ᠳᠠᠭᠠᠷᠢᠯᠲᠠ||
+ᠳᠠᠭᠠᠷᠢᠯᠲᠠ||␣
 ᠳᠠᠭᠤ|song|tʊː||дуу
 ᠳᠠᠭᠤᠤ|song|tʊː||дуу
 ᠳᠠᠭᠤᠷ||
@@ -346,6 +368,7 @@ autoExpandExamples.mn = `
 ᠳᠤᠭᠤᠯᠬᠤ|to sing||duulakh|дуулах
 ᠳᠤᠮᠳᠠᠳᠤ ᠤᠯᠤᠰ|China|ˈt§ʊ§n§t§a§t§–§ §ʊ§ɮ§–§s||Дундад улс
 ᠳᠥᠷᠪᠡ|four|tɵruw̜|döröv|дөрөв
+ᠴᠠᠢ ᠶᠢᠨ ᠭᠠᠵᠠᠷ||␣|
 ᠴᠠᠢ||
 ᠴᠠᠢᠶᠢᠨ ᠭᠠᠵᠠᠷ||
 ᠴᠠᠭ|clock|ʧaɡ
@@ -359,10 +382,11 @@ autoExpandExamples.mn = `
 ᠴᠢ|you (singular)|ˈt͡ɕʰi||чи
 ᠴᠢᠨᠤ᠎ᠠ|wolf|ˈt͡ɕʰɔn|chono|чоно
 ᠴᠢᠩᠭᠢᠰ ᠬᠠᠭᠠᠨ|Genghis Khan||čingɣis qaɣan|Чингис хаан
-ᠴᠢᠩᠭᠢᠰ||
+ᠴᠢᠩᠭᠢᠰ||␣
 ᠴᠢᠬᠢ|ear|t͡ʃ§i§x§ᵊ|chikh|чих
 ᠴᠢᠯᠠᠭᠤ|stone||chuluu|чулуу
 ᠴᠢᠰᠤ|blood|t͡sʊs|tsus|цус
+ᠴᠢᠳᠠᠪᠤᠷᠢ||␣|
 ᠴᠢᠷᠢᠭ᠌|soldier||čirig²
 ᠴᠣᠬᠢᠬᠤ|to hit|t͡sʰɔxʲəx|tsokhikh|цохих
 ᠴᠣᠬᠤ|beetle|ʦoxŏ||цох
@@ -403,22 +427,17 @@ autoExpandExamples.mn = `
 ᠶᠡᠩ‍ᢉᠢᠷ|mountain goat||jaŋgir|янгир
 ᠶᠢᠰᠦ|nine|jɵsᵊ|yes|ес
 ᠶᠣᠣᠲᠠᠩ|sugar cube|ˈjɔːtʰɔŋ|yooton|ёотон
+ᠸᠠᠩ|king, prince|w§a§ŋ̠||ван
 ᠸᠠᠭᠣᠨ|train|wa.ɢɔˑɴ̟|boɡoːn|вагон
 ᠸᠢᠨᠣ|wine|w̜§i§ˈn§–|viˈnoː|вино
-ᠸᠢᠳᠢᠣ᠋||
+ᠸᠢᠳᠢᠣ᠋|video|ˈw̜itʲɵ||видео
 ᠸᠢᠺᠢᠫᠧᠳᠢᠶᠠ|Wikipedia||viḳipədiya
+ᠺᠠᠽᠠᠭᠰᠲ᠋ᠠᠨ||␣|
 ᠺᠢᠨᠣ᠋|theatre (archaic form)|k§i§n§o|ḳinɔ¹
 ᠺᠣᠹᠧ|coffee|kʰ§ɔˑ.§f§eˑ|kofe|кофе
 ᠻᠠᠷᠲ᠋|card|k§a§r§t§–||карт
 ᠾᠧᠵᠢᠩ|Hejing (Chinese county)|
 ᡀᠠᠰᠠ|Lhasa|ˈɬʰ§a§s§–||Лхас
-ᠪᠤᠶᠢᠳᠠᠩ|sofa|ˈpʊi̯taŋ||буйдан
-ᠠᠶᠢᠮᠠᠭ|tribe|æː.§–§–§m§ə§k̠||аймаг
-ᠸᠢᠳᠢᠣ᠋|video|ˈw̜itʲɵ||видео
-ᠸᠠᠩ|king, prince|w§a§ŋ̠||ван
-ᠪᠠᠶᠠᠷᠯᠠᠯᠤᠭ᠎ᠠ|thank you|p§a§j§ə§r§ɮ§–§–§–§–§–§a|||баярлалаа
-ᠬᠤᠤᠱᠤᠤᠷ|dumpling|xʊːʃʊr|||хуушуур
-
 
 
 
