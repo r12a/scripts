@@ -8,4 +8,5 @@ window.detailsfileList = ['tbw'] // first part of xx-details for each orthograph
 window.scriptISO = 'tagb'
 window.webfonts = ["Noto Sans Tagbanwa WF"]
 window.defaultSize = '24px'
+window.hideBlockName = "TAGBANWA"
 
