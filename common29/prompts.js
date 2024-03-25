@@ -389,12 +389,12 @@ if (! window.location.href.includes('block')) out += `
         padding-block-end: 0.2rem;
         line-height: 1;
         ">
+
+    <img id="showTOC2" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="document.getElementById('tocPanel').style.display = 'block'" style="height: 1.9rem; width: 1.9rem;">
     
     <span id="findChar2"><input type="text" style="text-align:center; width: 1.2rem; height:1.4rem; vertical-align:top;" title="Add a (single) character to highlight where it appears in this page." oninput="if (this.value !== '') makeFootnoteIndex(this.value)" placeholder="🔎"></span>
 
     <div id="contrastSwitch2" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'; document.getElementById('settings_saved').style.visibility='hidden';"><img src="../../shared/images/access.png" alt="Accessibility settings" style="height:2rem;"></div>
-
-    <img id="showTOC2" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="document.getElementById('tocPanel').style.display = 'block'" style="height: 1.9rem; width: 1.9rem;">
 
     <div id="optionSwitchx"><span
         style="display: inline-block;
