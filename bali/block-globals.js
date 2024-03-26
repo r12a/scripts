@@ -8,4 +8,4 @@ window.detailsfileList = ['ban'] // first part of xx-details for each orthograph
 window.scriptISO = 'bali'
 window.webfonts = ["Vimala", "Noto Serif Balinese WF", "Aksara Bali WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "BALINESE"
