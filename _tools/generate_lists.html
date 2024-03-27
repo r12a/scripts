@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>List general categories</title>
+
+<!-- creates markup for a list of Latin characters -->
+
+<script src="../../uniview/u.js"></script>
+<script src="../../uniview/descriptions.js"></script>
+<script src="../../app-conversion/conversionfunctions.js"></script>
+<script>
+
+
+
+
+	
+function listCategories () {
+	// 
+	
+	// create object in memory
+	var _charSet = new Object()
+	
+	var blob = document.getElementById('inputArea').value
+	
+	blob = convertjEsc2Char( blob, true )
+
+	charArray = blob.split('\n')
+	
+	var out = ''
+	for (i=0;i<charArray.length;i++) {
+		if (charArray[i].trim() != '') { 
+			var seq = [...charArray[i]]
+            length = seq.length
+            if (length>1) {
+                out += '\n'
+                continue
+                }
+			
+			cp = ''
+			for (j=0; j<seq.length; j++) {
+				if (document.getElementById('ignoreHyphens').checked && seq[j] === '-') continue
+				if (cp != '') { cp += ' ' }
+				num = seq[j].codePointAt(0).toString(16).toUpperCase()
+				while (num.length<4) { num = '0'+num }
+				cp += 'U+'+num
+				}
+			//out += cp
+
+			//out += ': '
+		
+			console.log(cp, seq)
+			name = ''
+			for (j=0; j<seq.length; j++) {
+				if (document.getElementById('ignoreHyphens').checked && seq[j] === '-') continue
+				uPointer = seq[j].codePointAt(0)
+				console.log('upointer',uPointer)
+				udata = U[uPointer].split(';')
+				if (name != '') { name += ', ' }
+				name += udata[1]
+				}
+			out += name
+
+			uPointer = seq[0].codePointAt(0)
+			udata = U[uPointer].split(';')
+			if (udata[1].substr(0,1) == 'M') { 
+				out += '\u200B'
+				}
+			}
+		
+		out += '\n'
+		}
+		
+	console.log(out)
+	return out
+	}
+
+
+
+
+function listNames () {
+	// takes a list of characters or character sequences from  Ranges and creates 
+	// an object array with each character/sequence as key and info about name & codepoint
+	
+	// create object in memory
+	var _charSet = new Object()
+	
+	var blob = document.getElementById('inputArea').value
+	
+	blob = convertjEsc2Char( blob, true )
+
+	charArray = blob.split('\n')
+	
+	var out = ''
+	for (i=0;i<charArray.length;i++) {
+		if (charArray[i].trim() != '') { 
+			var seq = [...charArray[i]]
+			
+			cp = ''
+			for (j=0; j<seq.length; j++) {
+				if (document.getElementById('ignoreHyphens').checked && seq[j] === '-') continue
+				if (cp != '') { cp += ' ' }
+				num = seq[j].codePointAt(0).toString(16).toUpperCase()
+				while (num.length<4) { num = '0'+num }
+				cp += 'U+'+num
+				}
+			out += cp
+
+			out += ': '
+			
+			console.log(cp, seq)
+			name = ''
+			for (j=0; j<seq.length; j++) {
+				if (document.getElementById('ignoreHyphens').checked && seq[j] === '-') continue
+				uPointer = seq[j].codePointAt(0)
+				console.log('upointer',uPointer)
+				udata = U[uPointer].split(';')
+				if (name != '') { name += ', ' }
+				name += udata[0]
+				}
+			out += name
+
+			uPointer = seq[0].codePointAt(0)
+			udata = U[uPointer].split(';')
+			if (udata[3].substr(0,1) == 'M') { 
+				out += '\u200B'
+				}
+			}
+		
+		out += '\n'
+		}
+		
+	console.log(out)	
+	if (document.getElementById('delete').value) {
+		re = new RegExp(', '+document.getElementById('delete').value, 'gi')
+		out = out.replace(re, ',')
+		}
+	return out
+	}
+
+</script>
+<style>
+p, input, #character, #inputArea  { font-size: 140%; }
+#inputArea { float: left; margin-inline-end: 2em; width: 10%; height: 850px; }
+#output_cats { float: left; width: 10%; height: 800px; }
+#output_names { float: left; width: 50%; height: 800px; margin-inline: 4rem;}
+</style>
+</head>
+
+<body>
+<p>Make a list of GC values to paste to google sheets</p>
+<p><button onClick="document.getElementById('inputArea').value = '';document.getElementById('inputArea').select();">Clear input</button> &nbsp; &nbsp; <label style="font-size: .5em;"><input type="checkbox" id="ignoreHyphens" checked> Ignore hyphens</label>   &nbsp; 
+<label style="font-size: .5em;">Remove duplication of: <input type="text" id="delete"></label></p>
+<p>
+<textarea dir="ltr" id="inputArea" placeholder="Copy a column of characters here."></textarea></p>
+
+
+<p><button type="submit" onClick="
+    document.getElementById('output_cats').value  = listCategories(document.getElementById('inputArea').value); 
+    document.getElementById('output_cats').select();
+    document.getElementById('output_names').value  = listNames(document.getElementById('inputArea').value); 
+    document.getElementById('output_names').select();
+    return false;
+    ">Create lists!</button></p>
+
+<p><textarea id="output_cats" onClick="this.select()"></textarea></p>
+
+<p><textarea id="output_names" onClick="this.select()"></textarea></p>
+
+<br clear="all">
+
+
+</body>
+</html>
