@@ -76,7 +76,7 @@ autoExpandExamples.bo = `
 ཀྲོ་མ་ཀྲུ|tomato|ʈ͡ʂu˥.maː˥.ʈ͡ʂuˑ|kru ma kru
 ཀླད་ཀོར|zero|le˥.ko˥|klad kor
 ཀླད་པ|brain|lɛː˥.pa˥|glog klad
-ཀླུང|river, stream|luŋ˥˨|klung
+ཀླུང|river, stream|lu§ŋ˥˨|klung
 ཀླུང་མ|river|lu§ŋ˥˩§.§ma˩˧|klung ma
 ཀླུབ||
 ཀླུབ་པ||
@@ -327,7 +327,7 @@ autoExpandExamples.bo = `
 གཞང་ཚོང་མ||
 གཞན|other||gzhan
 གཞན་དག|other||gzhan dag
-གཞས|song, joke|ɕɛː˩˧˨|gzhas
+གཞས|song, joke|›§ɕɛː˩˧˨§‹|gzhas
 གཞས་བཏང||
 གཞས་ཚིག|lyrics|ɕe˩˨.t͡sʰi(k̚)ˀ˥˨|gzhas tshig
 གཞི|cause, source|ɕi˩˨|gzhi
@@ -346,19 +346,19 @@ autoExpandExamples.bo = `
 གཞུས་པ|to hit||gzhus pa
 གཞོགས||
 གཞོགས་ལྡ||
-གཟའ|eclipse|sa˩˨|gza'
+གཟའ|eclipse|›§sa˩˨§–|gza'
 གཟའ་ཉི་མ|Sunday|sa˩˨ ȵi˩˨.mə˥|gza' nyi ma
 གཟའ་པ་སངས|Friday|sa˩˨ pa˥.saŋ˥˨|gza' pa sangs
 གཟའ་ཕུར་བུ|Thursday|sa˩˨ pʰuː˥.pu˥|gza' phur bu
 གཟའ་མིག་དམར|Tuesday|–§sa˩˨§–§.§miː˩˨§‹§.§›§maː˥§–|gza' mig dmar
 གཟའ་ཟླ་བ|Monday|–§sa˩˧§–§.§ta˩˧§.§wa˥|gza' zla ba
-གཟའ་འཁོར|week|sa˩˨.kʰoː˥|gza' 'khor
+གཟའ་འཁོར|week|›§sa˩˨§‹§.§›§kʰoː˥§‹|gza' 'khor
 གཟའ་ལྷག་པ|Wednesday|sa˩˨ ɬa(k̚)ˀ˥.pa˥|gza' lhag pa
 གཟའ་སྐར||
 གཟའ་སྤེན་པ|Saturday|sa˩˨ pẽ˥.pa˥|gza' spen pa
 གཟི|shininess|–§si˩˨|gzi
-གཟིག|leopard|›§si§(k̚)ˀ˩˨||gzig
-གཟིགས|to see, look (hon.)|si᷈|gzigs
+གཟིག|leopard|›§si˩˨§(k̚)ˀ|gzig
+གཟིགས|to see, look (hon.)|›§si᷈§‹§–|gzigs
 གཟིགས་པ||
 གཟེར||
 གཟེར་གཅུད||
@@ -398,7 +398,7 @@ autoExpandExamples.bo = `
 གསལ་བཤད|||||OT
 གསིང་མ||
 གསུང་རབ||
-གསུམ|three|sum˥|gsum
+གསུམ|three|›§su˥§m|gsum
 གསེར|||||OT
 གསེར་ཉ||
 གསེར་དཀར་པོ|platignum|seː(ɹ)˥ kaː(ɹ)˥.poˑ|gser dkar po
@@ -523,7 +523,7 @@ autoExpandExamples.bo = `
 ཆང་ཁང||
 ཆང་ནད|hangover|t͡ɕʰaŋ˥.nɛː˥˨|chang nad
 ཆབ་ཁུང||
-ཆབ་གདན|nappy|t͡ɕəp̚˥.tɛ̃ˑ|chab gdan
+ཆབ་གདན|nappy|t͡ɕə§p̚˥§.§›§tɛ̃ˑ§‹|chab gdan
 ཆབ་མདོ|Chamdo|t͡ɕʰam˥ to˥|chab mdo
 ཆབ་རྩེ|||||OT
 ཆབ་སྲིད|politics|t͡ɕʰə˥§p̚§.§si˥˩§–|chab srid
@@ -609,7 +609,7 @@ autoExpandExamples.bo = `
 ཉམས་མྱོང|experience|ȵam˩˧˨ ȵuŋ˩˨|nyams myong
 ཉར|to keep, guard|ȵaː˩˨|nyar
 ཉར་བ||
-ཉལ|to go to sleep|ȵɛː˩˨|nyal
+ཉལ|to go to sleep|ȵɛː˩˨§‹|nyal
 ཉལ་ཁང||
 ཉལ་ཁེབས||
 ཉལ་ཁྲི||
@@ -873,7 +873,7 @@ autoExpandExamples.bo = `
 དེ་ལ|there||de la
 དེ་སྒྲ||
 དེན་མག||
-དེབ|book, notebook|tʰep̚˩˧˨|deb
+དེབ|book, notebook|tʰe§p̚˩˧˨|deb
 དེབ་ཆུང|brochure, pamphlet|tʰep̚˩˨.t͡ɕuŋˑ|deb chung
 དེབ་ཁང||
 དེབ་གཏེར||
@@ -904,7 +904,7 @@ autoExpandExamples.bo = `
 དྲོ་གྲང||
 དྲོ་པོ|warm||dro po
 དྲོ་ཚད|temperature|ʈ͡ʂo˩˨.t͡sɛː˥˨|dro tshad
-དྲོད་ཚད|temperature|ʈ͡ʂøː˩˧˨.t͡sɛː˥˨|drod tshad
+དྲོད་ཚད|temperature|ʈ͡ʂøː˩˧˨§‹§.§t͡sɛː˥˨§‹|drod tshad
 དྷེའི་ལ་ཝར|Delaware||dhe'i la war
 ན་གོར་མོ||
 ན་ནིང||
@@ -941,7 +941,7 @@ autoExpandExamples.bo = `
 ནམ་ཡང|forever|nam˩˨.jaŋˑ|nam yang
 ནའུ་ཀ་ཅོ་ཊི||
 ནའུ་རུ||
-ནས|highland barley|nɛː˩˧˨|nas
+ནས|highland barley|nɛː˩˧˨§–|nas
 ནི||
 ནི་ཀ་ར་གུ་ཝ||
 ནི་ཇར||
@@ -990,7 +990,7 @@ autoExpandExamples.bo = `
 པི་སི་ཏོབ||
 པིང་ཀྱུ་མ||
 པིང་པང||
-པིར|paintbrush|piː(ɹ)˥|pir
+པིར|paintbrush|piː˥§(ɹ)|pir
 པུ་གུ||
 པུ་ར་ག་རི་ཡ||
 པུ་རུ་ཟི་ལི་ཡ||
@@ -1010,7 +1010,7 @@ autoExpandExamples.bo = `
 པོ་ཏ་ལ|Potala Palace|po˥.ta˥.laˑ|po ta la
 པོ་ཏི|volume, book|pu˥.ti˥|po ti
 པོ་ལོ|ball|pʰo˥.lo˥|po lo
-པོད|volume, book|pøː˥˨|pod
+པོད|volume, book|pøː˥˨§‹|pod
 པྲ་ཚིལ|beeswax||pra tshil
 ཕ་གི|that||pha gi
 ཕ་གིར|there||pha gir
@@ -1121,7 +1121,7 @@ autoExpandExamples.bo = `
 བདག་མེད||
 བདའ་བ||
 བདུག་སྤོས|||||OT
-བདུད|demon|tyː˩˧˨|bdud
+བདུད|demon|›§tyː˩˧˨§‹|bdud
 བདུན|seven|–§tỹ̀§‹|bdun
 བདུན་ཅུ|seventy|tỹ˩˨.t͡ɕu˥|bdun cu
 བདུན་ཕྲག|week|tỹ˩˨.ʈ͡ʂʰa˥˨|bdun phrag
@@ -1151,7 +1151,7 @@ autoExpandExamples.bo = `
 བཙོན་ཁང||
 བཙོན་པ|prisoner|t͡sø̃˥.pa˥|btson pa
 བཞག|to put, set|ɕa(k̚)ˀ˩˧˨|bzhag
-བཞད|to laugh, smile|ɕɛː˩˧˨|bzhad
+བཞད|to laugh, smile|›§ɕɛː˩˧˨§‹|bzhad
 ཁམ|piece|kʰá§m|kham
 བཞད་པ||
 བཞར||
@@ -1189,7 +1189,7 @@ autoExpandExamples.bo = `
 བརྡ་སྤྲོད་ཀྱི་གཞུང|||||OT
 བརྡ་སྤྲོད་རིག་གནས||
 བརྩེ་བ||
-བརྩོན་འགྲུས|effort, diligence|t͡sỹ˥.ʈ͡ʂyː˥˨|brtson 'grus
+བརྩོན་འགྲུས|effort, diligence|›§t͡sỹ˥§‹§.§›§ʈ͡ʂyː˥˨§‹|brtson 'grus
 བརླ||
 བརླ་ཤ|thigh|lɛː˥.ɕa˥|brla sha
 བརླགས|to lose, misplace||brlags
@@ -1210,7 +1210,7 @@ autoExpandExamples.bo = `
 བསམ་གཏན||
 བསམ་པའི་སྟོབས||
 བསམ་བློ་གཏོང་བ|to think||bsam blo gtong ba
-བསམ་བློ|thought, idea|sam˥.loˑ|bsam blo
+བསམ་བློ|thought, idea|‹§sa§m˥§.§loˑ|bsam blo
 བསམ་བློ་ཀུན་སྤྱོད|moral education|sam˥.loˑ kỹ˥.t͡ɕøː˥˨|bsam blo kun spyod
 བསམ་ཚུལ|opinion|səm˥.t͡syːˑ|bsam tshul
 བསམ་ཡས||
@@ -1223,7 +1223,7 @@ autoExpandExamples.bo = `
 བསྒྲུགས||
 བསྒྲུབས|established|–§ɖɹú§b§–
 བསྟན་པ|doctrine|tɛ̃˥.pa˥|bstan pa
-བསྟན་འཛིན|adherent|tɛ̃˥.t͡sĩ˥|bstan 'dzin
+བསྟན་འཛིན|adherent|›§tɛ̃˥§‹§.§›§t͡sĩ˥§‹|bstan 'dzin
 བསྡད|to sit||bsdad
 བསྡམ|to tie||bsdam
 བསྣན་ཚིག|adverb|nɛ̃˥.t͡sʰi˥˨|bsnan tshig
@@ -1249,13 +1249,13 @@ autoExpandExamples.bo = `
 བོད་པ|Tibetan person|pʰøː˩˨.pa˥|bod pa
 བོད་བརྒྱུད་ནང་བསྟན|||||OT
 བོད་མི||
-བོད་ཡིག|Tibetan script|pʰyː˩˨.ji˥˨|bod yig
+བོད་ཡིག|Tibetan script|pʰyː˩˨§‹§.§ji˥˨§‹|bod yig
 བོད་ཡུལ||
 བོད་རང་སྐྱོང་ལྗོངས|Tibet Autonomous Region|pʰøː˩˧˨ ʐaŋ˩˨.coŋ˥˨ t͡ɕoŋ˩˧˨|bod rang skyong ljongs
 བོད་ལྗོངས|Central Tibet|pʰø̃˩˨.t͡ɕoŋ˥˨|bod ljongs
-བོད་སྐད|Tibetan language|pʰøː˩˨.kɛː˥˨|bod skad
+བོད་སྐད|Tibetan language|pʰøː˩˨§‹§.§kɛː˥˨§‹|bod skad
 བོད་སྐད་དུ||
-བོན|Bon religion|pʰø̃˩˨|bon
+བོན|Bon religion|pʰø̃˩˨§‹|bon
 བོན་པོ|Bon practitioner|pʰø̃˩˨.po˥|bon po
 བྱ|bird|t͡ɕʰa˩˧|bya
 བྱ་གཏོར|sky burial|t͡ɕʰa˩˨.toː(ɹ)˥˨|bya gtor
@@ -1678,7 +1678,7 @@ autoExpandExamples.bo = `
 འཁྲུ་ཡག་འཕྲུལ་འཁོར||
 འཁྲུངས་སྐར|birthday|ʈ͡ʂʰuŋ˥.kaː˥|'khrungs skar
 འཁྲོལ|to play (music)|ʈ͡ʂøː˥|'khrol
-འཁྲུད|to wash, bathe|ʈ͡ʂʰyː˥˨|'khrud
+འཁྲུད|to wash, bathe|›§ʈ͡ʂʰyː˥˨§‹|'khrud
 འགོ་པ||
 འགོག|to halt, block|ka˥˨|'gog
 འགོང|to bewitch|–§ko§ŋ˩˨|'gong
@@ -1941,7 +1941,7 @@ autoExpandExamples.bo = `
 རི་པིན||
 རི་བོ|mountain|ʐi˩˨.wu˥|ri bo
 རི་བོང||
-རི་མོ|picture, painting|ʐi˩˨.mo˥|ri mo
+རི་མོ|picture, painting|ʐi˩˨§.§mo˥|ri mo
 རི་རྒྱུད|mountain range|ʐi˩˨.cyː˥˨|ri rgyud
 རི་མོ་བྲིས||
 རི་མོ་མཁས་པ||
@@ -1982,7 +1982,7 @@ autoExpandExamples.bo = `
 རོ་ལངས||
 རོ་སྒམ|coffin|ʐo˩˨.kam˩˧˨|ro sgam
 རོང||
-རོལ|to enjoy|ʐøː˩˨|rol
+རོལ|to enjoy|ʐøː˩˨§‹|rol
 རོལ་གཞས|||||OT
 རོལ་ཆ|musical instrument|ʐøː˩˨.t͡ɕʰa˥|rol cha
 རོལ་བ||
@@ -2045,7 +2045,7 @@ autoExpandExamples.bo = `
 རྒྱམ||
 རྒྱམ་ཚྭ||
 རྒྱལ|||||OT
-རྒྱལ་ཁབ|country, state|gyal khap̚ˑ|rgyal khab
+རྒྱལ་ཁབ|country, state|gya§l§.§kha§p̚ˑ|rgyal khab
 རྒྱལ་ཁོངས||
 རྒྱལ་པོ|king|cɛː˩˨.po˥|rgyal po
 རྒྱལ་བ|||||OT
@@ -2277,7 +2277,7 @@ autoExpandExamples.bo = `
 ལོ་མ|leaf|lo˩˨.ma˥|lo ma
 ལོ་ཙཱ་བ||
 ལོ་ཡི་སི་གྲུ་ཁ||
-ལོ་རྒྱུས|story, legend|lu˩˨.cyː˥˨|lo rgyus
+ལོ་རྒྱུས|story, legend|lu˩˨§.§cyː˥˨§‹|lo rgyus
 ལོག་ཤེས||
 ལོངས་སྦྱོད་རྫོགས་པའི་སྐུ||
 ལོན་ཊོན||
@@ -2381,7 +2381,7 @@ autoExpandExamples.bo = `
 ཤར་གླིང་ལྷོ་ཤར||
 ཤར་ཏིམོར||
 ཤར་པ||
-ཤར་བ|sherpa|ɕé§r§pa§/ɕéːpa|shar ba|
+ཤར་བ|sherpa|ɕé§r§.§pa§/ɕéːpa|shar ba|
 ཤི|to die||shi||OT
 ཤིག|louse|ɕi(k̚)ˀˑ|shig
 ཤིང|tree|ɕiŋ˥|shing
@@ -2961,11 +2961,11 @@ autoExpandExamples.bo = `
 གསུང|to say, speak|suŋ˥|gsung
 གསུང་བཤད|speech, talk|–§su§ŋ˥§.§–§ɕɛː˥˨§‹|gsung bshad
 གྲུ་གཟིངས|ship, boat|ʈ͡ʂʰu˩˨.siŋˑ|gru gzings
-གླག|eagle|la(k̚)ˀ˥˨|glag
+གླག|eagle|la˥˨§(k̚)ˀ|glag
 ཆ་སྙོམས|average|t͡ɕʰa˥.ȵom˥|cha snyoms
 ཆིག་སྒྲིལ|solidarity, unity|t͡ɕʰi˥.ʈ͡ʂiːˑ|chig sgril
 ཆིང་ཡིག|treaty, agreement|t͡ɕʰiŋ˥.ji(k̚)ˀ˥˨|ching yig
-ཆོལ་ཁ|region, province|t͡ɕʰøː˥.kaˑ|chol kha
+ཆོལ་ཁ|region, province|t͡ɕʰøː˥§‹§.§kaˑ|chol kha
 ཆོས་ལུགས་དད་མོས|religious faith|t͡ɕʰyː˥.lu(k̚)ˀ˥˨ tʰɛː˩˧˨.møː˥˨|chos lugs dad mos
 ཇོ་ཇོ|older brother|t͡ɕo˥.t͡ɕo˥˨|jo jo
 ཐུགས་རྗེ་ཆེ་གནང|thank you very much|tʰu(k̚)ˀ˥.t͡ɕeˑ.ʈ͡ʂʰe˥.naŋ˥|thugs rje che gnang
