@@ -1,4 +1,4 @@
-    var symbols = {
+    var IPAsymbols = {
     'p':'Voiceless bilabial plosive',
     'b':'Voiced bilabial plosive',
     't':'Voiceless alveolar plosive',

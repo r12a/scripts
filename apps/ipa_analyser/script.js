@@ -15,8 +15,8 @@ function showIPAPhone (str) {
     
     var searchArray = [... searchitem]
     for (i=0;i<searchArray.length;i++) {
-        if (symbols[searchArray[i]]) {
-            var names = symbols[searchArray[i]].split('§')
+        if (IPAsymbols[searchArray[i]]) {
+            var names = IPAsymbols[searchArray[i]].split('§')
             var name = names[0]
             if (typeof names[1] !== 'undefined') var webpage = names[1]
             else webpage = names[0]
