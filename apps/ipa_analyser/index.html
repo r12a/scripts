@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>IPA analyser</title>
+<meta name="description" content="Tool to parse a string into graphemic units." />
+
+<link rel="stylesheet" href="../../../shared/style/docs.css" />
+<link rel="stylesheet"  href="style.css" />
+
+<script src="../../../shared/code/boilerplate.js"></script>
+<script src="propertylist.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body class="app">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../../shared/images/world.gif','IPA analyser','');</script>
+</header>
+
+
+
+
+
+
+<div id="start">
+<p id="clearInput" onClick="document.getElementById('in').value = '';">Clear all</p>
+
+<input type="text" id="in" placeholder="Drop text to be analysed here."  onInput="showIPAPhone(document.getElementById('in').value)">
+</div>
+
+<div id="out"></div>
+
+
+<p><button id="go" onClick="openUniViewWindow();">Show in UniView</button></p>
+
+
+
+
+
+
+
+
+<div id="notes" style=" background-color: bisque; margin-top:4em; padding: 1em; ">
+
+<p>This tool parses an IPA (International Phonetic Alphabet) string and indicates the meaning of each symbol.</p>
+
+<p>Click on the links for in-depth descriptions in Wikipedia.</p>
+
+
+
+<details>
+<summary>show more</summary>
+
+<section>
+<aside class="sidebar">
+  <div class="section">
+    <p><a target="_blank" href="../../../uniview/">UniView</a></p>
+  </div>
+</aside>
+
+<p>To pass a string in the URL, use :</p>
+<ul>
+<li><code style="white-space: nowrap">?q=&lt;string&gt;</code></li>
+</ul>
+
+<p>To indicate in the URL the font you want to use for the display, add <code style="white-space: nowrap">&amp;font=&lt;font_name&gt;</code>.</p>
+</section>
+
+<p id="status">Updated<!-- #BeginDate format:Sw1 -->1 April, 2024<!-- #EndDate --></p>
+</details>
+</div>
+
+<div class="smallprint"><span id="version">
+See <a href="https://github.com/r12a/scripts/apps/ipa_analyser/commits/gh-pages">recent changes</a>.
+Make a <a href="https://github.com/r12a/scripts/issues/new">comment</a>. 
+Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
+</span>
+</div>
+  
+ <script>
+// check for parameters and take appropriate action
+parameters = location.search.split('&');
+parameters[0] = parameters[0].substring(1);
+for (var p=0;p<parameters.length;p++) {  
+	pair = parameters[p].split('=');
+	if (pair[0] == 'q' && pair[1]) { 
+        document.getElementById('in').value = decodeURIComponent(pair[1])
+        showIPAPhone(decodeURIComponent(pair[1])) 
+        }
+	if (pair[0] == 'font' && pair[1]) {
+        document.getElementById('fontChanger').value = decodeURIComponent(pair[1])
+        changeFont( decodeURIComponent(pair[1]) ) 
+        }
+	}
+
+</script>
+</body>
+</html>
