@@ -198,7 +198,7 @@
     'ʷ':'Labialization',
     'ʲ':'Palatalization',
     'ˠ':'Velarization/pharyngealization§Velarization',
-    'ˤ':'Pharyngealization§Velarization',
+    'ˤ':'Pharyngealization§Pharyngealization',
     '\u0334':'Velarization',
     '\u0318':'Advanced tongue root§Advanced and retracted tongue root',
     '\u0319':'Retracted tongue root§Advanced and retracted tongue root',
