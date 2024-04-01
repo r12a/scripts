@@ -206,7 +206,8 @@
     '\u02DE':'Rhoticity§R-colored vowel',
     '\u0348':'Faucalized voice',
     '\u0327':'Fricative§Voiceless_palatal_fricative',   // add to IPA picker
-    
+    '\u0306':'Extra short§Breve',
+
     
     
     
@@ -224,6 +225,12 @@
     '\u8600':'Global fall§Intonation_(linguistics)',
     'ꜛ':'Upstep',
     'ꜜ':'Downstep',
+    'φ':'Prosodic phrase§Prosody_(linguistics)',
+    'ω':'Onset§Syllable',
+    'ω':'Onset§Syllable',
+    'ρ':'Nucleus§Syllable',
+    'κ':'Coda§Syllable',
+    'μ':'Mora§Mora_(linguistics)',
     
     
     
