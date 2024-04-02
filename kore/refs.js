@@ -28,6 +28,12 @@ reflist = {
 "title":"한글 맞춤법[문화체육관광부고시 제2017-12호(2017. 3. 28.)] 바로 가기",
 },
 
+"hs": {
+"url":"https://korean.go.kr/kornorms/regltn/regltnView.do?regltn_code=0001&regltn_no=183#a714",
+"authors": "한글 맞춤법 (Hangul Spelling [Ministry of Culture, Sports and Tourism Notice No. 2017-12 (March 28, 2017)])",
+"title":"한글 맞춤법[문화체육관광부고시 제2017-12호(2017. 3. 28.)] 바로 가기",
+},
+
 "k": {
 "url":"http://w3c.github.io/klreq/",
 "authors": "임순범, 심우진, 이용제, 남동선, 김현영, 임용호",
