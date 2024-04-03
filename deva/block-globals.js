@@ -8,4 +8,4 @@ window.detailsfileList = ['hi','ks','misc'] // first part of xx-details for each
 window.scriptISO = 'deva'
 window.webfonts = ["Noto Serif Devanagari WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "DEVANAGARI"
