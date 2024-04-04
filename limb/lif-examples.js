@@ -26,9 +26,8 @@ autoExpandExamples.lif = `
 
 @ https://en.wiktionary.org/wiki/Category:Limbu_lemmas
 
-ᤃᤠᤰᤌᤢᤱ ᤐᤠ᤺ᤴ|Limbu language|gak§tʰuŋ§ §paːn
-ᤃᤠᤰᤌᤢᤱ|Limbu|gak§tʰuŋ
-ᤀᤠᤀᤡᤴ|today|a.in|ain|आइन्
+
+ᤀᤠᤀᤡᤴ|today|a.§in|ain|आइन्
 ᤀᤠᤀᤡᤴᤋᤠᤴᤍᤡᤰ|nowadays|a.§in.§tan.§dik|aintandik|आइन्तान्दिक्
 ᤀᤠᤂᤧᤴ|how much|a.§kʰɛn|akhên|आखे़न्
 ᤀᤠᤏᤡ|we|a.§ni|ani|आनि
@@ -37,78 +36,85 @@ autoExpandExamples.lif = `
 ᤀᤠᤳᤋᤡᤴ|which|at.§tin|attin|आत्तिन्
 ᤀᤠᤴᤇᤡ|we (two)|an.§t͡ɕʰi|anchi|आन्छि
 ᤀᤠᤶᤒᤡ|oh|am.§bi|ambi|आम्बि
+ᤀᤠᤸᤗᤠᤣ||␣|
 ᤀᤠᤸᤗᤥ|now|al.§lo|allo|आल्लो||ᤀᤠᤸᤗᤠᤣ
 ᤀᤡᤰᤗᤣᤰ|alone|ik.§lek|iklek|इक्लेक्
-ᤀᤡᤱᤄᤱ|news|iŋ.ɡʱɔŋ|iṅghôṅ|इङ्घङ्
+ᤀᤡᤱᤄᤱ|news|iŋ.§ɡʱɔŋ|iṅghôṅ|इङ्घङ्
 ᤀᤡᤶᤔᤠ|to sleep|im.§ma|imma|इम्मा
 ᤀᤧᤄᤠᤱ|ahead|ɛ.§ɡʱaŋ|êghaṅ|ए़घाङ्
 ᤁᤴ|this|kɔn|kôn|कन्
-ᤁᤴᤇᤡ||
-ᤁᤴᤏᤠ||
-ᤁᤴᤜᤠ||
-ᤂᤠᤍᤠᤶᤔᤠ||
+ᤁᤴᤇᤡ||␣
+ᤁᤴᤏᤠ||␣
+ᤁᤴᤜᤠ|these|kɔn.§ɦa|kônha|कन्हा
+ᤂᤠᤍᤠᤶᤔᤠ|evening|kʰa.§dam.§ma|khadamma|खादाम्मा
 ᤅᤠᤛᤡ|five|ŋa.§si|ṅasi|ङासि
-ᤆᤠᤜᤠᤒᤠ||
-ᤆᤢᤰᤛᤠ||
-ᤆᤣᤛᤢᤱ||
+ᤆᤠᤜᤠᤒᤠ||␣
+ᤆᤢᤰᤛᤠ|small|t͡ɕuk.§sa|cuksa|चुक्सा
+ᤆᤣᤛᤢᤱ||␣
 ᤆᤫᤠ|water|t͡ɕwa|cwa|च्वा
 ᤆᤫᤠ᤹ᤸ|water|t͡ɕwaˀl|cwa’l|च्वाॽल्
 ᤋᤖᤣᤒᤠ|guest (m.)|tɔ.§re.§ba|tôreba|तरेबा
 ᤋᤖᤣᤔᤠ|guest (f.)|tɔ.§re.§ma|tôrema|
-ᤋᤠᤃᤣᤖᤠ ᤏᤡᤱᤘᤠᤑᤢᤔᤠᤱ||
-ᤋᤠᤑᤧᤶᤒᤠ||
-ᤋᤠᤴᤍᤡ||
+ᤋᤠᤃᤣᤖᤠ ᤏᤡᤱᤘᤠᤑᤢᤔᤠᤱ|supreme god|ta.§ɡe.§ra.§ §niŋ.§wa.§pʰu.§maŋ|tagera niṅwaphumaṅ|तागेरा निङ्वाफुमाङ्
+ᤋᤠᤑᤧᤶᤒᤠ||␣
+ᤋᤠᤴᤍᤡ|later|tan.§di|tandi|तान्दि
 ᤋᤠᤴᤍᤡᤰ|tomorrow|tan.§dik|tandik|तान्दिक्
-ᤌᤥ|up|tʰo|tho|थो||ᤌᤠᤣ
-ᤌᤠᤱᤒᤣᤴ||
+ᤌᤠᤣ||␣|
+ᤌᤠᤱᤒᤣᤴ||␣
+ᤌᤡᤒᤠᤣᤱ||␣|
 ᤌᤡᤒᤥᤱ|ten|tʰi.§boŋ|thiboṅ|थिबोङ्
 ᤌᤡᤰ|one|tʰik|thik|थिक्
-ᤌᤡᤰᤛᤡᤃᤣᤰ||
-ᤏᤠᤁᤢᤛᤱ||
+ᤌᤡᤰᤛᤡᤃᤣᤰ||␣
+ᤌᤥ|up|tʰo|tho|थो||ᤌᤠᤣ
+ᤏᤠᤁᤢᤛᤱ||␣
 ᤏᤠᤶᤎᤡᤱᤃᤥ|rainbow|nam.§dʱiŋ.§ɡo|namdhiṅgo|नाम्धिङ्गो
-ᤏᤡᤱᤄᤢᤶ||
-ᤏᤢ||
-ᤏᤢᤒᤠ||
-ᤏᤢᤔᤠ||
-ᤏᤢᤛᤡ||
+ᤏᤡᤱᤄᤢᤶ||␣
+ᤏᤢ||␣
+ᤏᤢᤒᤠ|handsome|nu.ba|nuba|नुबा
+ᤏᤢᤔᤠ||␣
+ᤏᤢᤛᤡ||␣
 ᤏᤧᤳᤇᤡ|two|nɛt.§t͡ɕʰi|nêtchi|ने़त्छि
 ᤐᤠᤍᤠᤱᤒᤠ|guardian|pa.§daŋ.§ba|padaṅba|पादाङ्बा
-ᤑᤠᤱᤛᤡ||
-ᤑᤢᤱ||
-ᤑᤧᤍᤠᤱᤔᤠ||
-ᤔᤠᤱ||
+ᤑᤠᤱᤛᤡ||␣
+ᤑᤢᤱ||␣
+ᤑᤧᤍᤠᤱᤔᤠ||␣
+ᤔᤠᤱ||␣
 ᤔᤠ᤺ᤰᤜᤡ|blood||mākhi|माःक्हि
-ᤔᤡ||
-ᤔᤡᤰ||
+ᤔᤡ||␣
+ᤔᤡᤰ||␣
 ᤔᤢᤰᤁᤢᤶᤒᤠ|powerful|muk.§kum.§ba|mukkumba|मुक्कुम्बा
-ᤔᤧᤴᤇᤢᤔᤠ||
+ᤔᤧᤴᤇᤢᤔᤠ||␣
 ᤔᤧᤴᤇᤩᤠ|young girl|mɛn.§t͡ɕʰja|mênchya|मे़न्छ्या
 ᤔᤧᤶᤒᤣ|no|mɛm.§be|mêmbe|मे़म्बे
-ᤕᤥ|down|jo|yo|यो
-ᤕᤠᤶᤒᤡᤇᤠ||
+ᤕᤠᤣ|down|jo|yo|यो
+ᤕᤠᤶᤒᤡᤇᤠ||␣
 ᤕᤣ᤺ᤰᤕᤠ|important|jeːk.§ja|yēkya|येःक्या
-ᤕᤧᤳᤇᤡ|eight|jɛt.t͡ɕʰi|yêtchi|ये़त्छि
-ᤕᤶᤒᤠ||
-ᤗᤠᤱ||
-ᤗᤡᤛᤡ||
+ᤕᤥ|down|jo|yo|यो
+ᤕᤧᤳᤇᤡ|eight|jɛt.§t͡ɕʰi|yêtchi|ये़त्छि
+ᤕᤶᤒᤠ|big|jɔm.§ba|yômba|यम्बा
+ᤗᤠᤱ||␣
+ᤗᤡᤛᤡ||␣
 ᤗᤣᤵᤔᤡ|pardon|lep.§mi|lepmi|लेप्मि
-ᤛᤠᤖᤡᤰ||
-ᤛᤠᤵᤔᤢᤴᤎᤢᤶ||
-ᤛᤢᤶᤛᤡ||
+ᤛᤠᤖᤡᤰ|really|sa.§rik|sarik|सारिक्)
+ᤛᤠᤵᤔᤢᤴᤎᤢᤶ|history|sap.§mun.§dʱum|sapmundhum|साप्मुन्धुम्
+ᤛᤢᤶᤛᤡ||␣
 ᤛᤧᤰᤂᤠᤒᤡ|really|sɛk.§kʰa.§bi|sêkkhabi|से़क्खाबि
 ᤜᤠᤖᤠ|fast|ɦa.§ra|hara|हारा
-ᤜᤡᤶ||
-ᤜᤢᤏᤡ||
-ᤜᤢᤏᤣ||
-ᤜᤢᤴᤇᤡ||
+ᤜᤡᤶ||␣
+ᤜᤢᤏᤡ||␣
+ᤜᤢᤏᤣ||␣
+ᤜᤢᤴᤇᤡ||␣
 ᤜᤥᤵ|zero|ɦop|hop|होप्
-ᤜᤧᤏᤡ||
+ᤜᤧᤏᤡ||␣
 ᤜᤧᤏᤣ|you|ɦɛ.§ne|hêne|हे़ने
 ᤜᤧᤰᤁᤣᤀᤠᤱ|thereafter|ɦɛk.§ke.§aŋ|hêkkeaṅ
+ᤜᤧᤳᤋᤠᤣ||␣|
 ᤜᤧᤳᤋᤥ|there|ɦɛt.§to|hêtto|हे़त्तो||ᤜᤧᤳᤋᤠᤣ
-ᤜᤧᤴ||
-ᤜᤧᤴᤇᤡ||
-ᤜᤧᤴᤜᤠ||
+ᤜᤧᤴ||␣
+ᤜᤧᤴᤇᤡ||␣
+ᤜᤧᤴᤜᤠ||␣
+
+
 
 
 @ https://www.unicode.org/versions/Unicode15.0.0/ch13.pdf
@@ -126,6 +132,12 @@ autoExpandExamples.lif = `
 ᤏᤷᤘᤠ|heart||nerwa||x
 
 
+
+
+@ unknown
+
+ᤃᤠᤰᤌᤢᤱ ᤐᤠ᤺ᤴ|Limbu language|gak§tʰuŋ§ §paːn
+ᤃᤠᤰᤌᤢᤱ|Limbu|gak§tʰuŋ
 
 
 

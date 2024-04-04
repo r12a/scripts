@@ -8,4 +8,5 @@ window.detailsfileList = ['lif'] // first part of xx-details for each orthograph
 window.scriptISO = 'limb'
 window.webfonts = ["Namdhinggo SIL WF"]
 window.defaultSize = '24px'
+hideBlockName = "LIMBU"
 

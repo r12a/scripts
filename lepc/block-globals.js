@@ -8,4 +8,5 @@ window.detailsfileList = ['lep'] // first part of xx-details for each orthograph
 window.scriptISO = 'lepc'
 window.webfonts = ["Mingzat WF"]
 window.defaultSize = '24px'
+hideBlockName = "LEPCHA"
 
