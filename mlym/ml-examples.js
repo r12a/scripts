@@ -104,7 +104,7 @@ autoExpandExamples.ml = `
 അനിവാര്യം||
 അനുജത്തി|little sister|a§nu§d͡ʒa§t̪§t̪i|anujatti
 അനുജൻ||
-അന്തഃപുരം||
+അന്തഃപുരം|wife|ɐn̪d̪ɐppuɾɐm|antaḥpuraṁ
 അന്തരായം||
 അന്തരീയം||
 അന്ത്യശാസനം||
@@ -390,7 +390,7 @@ autoExpandExamples.ml = `
 ഉർവ്വീജാനി||
 ഉർവ്വീധരം||
 ഉൽപ്പന്നം||
-ഊഃ|moon|
+ഊഃ|moon||ūḥ
 ഊഞ്ഞാൽ||
 ഊട്ട||
 ഊണ്|meals|uː§ɳɨ̆|ūṇŭ
@@ -402,7 +402,7 @@ autoExpandExamples.ml = `
 ഊഷരദ്രാവണം||
 ഊഹിക്കുക||
 ഊർജം||
-ഋഷി||
+ഋഷി|rishi, sage|riʂi|r̥ṣi
 എക്കിട്ട||
 എക്കിൾ||
 എങ്കിൽ||
@@ -723,7 +723,7 @@ autoExpandExamples.ml = `
 കൃമി||
 കൃഷിക്കാരൻ||
 കൃഷ്ണന്‍||
-കൃഷ്ണമണി|pupil||kr̥ṣṇamaṇi
+കൃഷ്ണമണി|pupil|kri§ʂ§ɳɐ§mɐ§ɳi|kr̥ṣṇamaṇi
 കെട്ടിടം||
 കെട്ടിയവൻ|husband|keʈʈijaʋan
 കെട്ടിയവൾ|wife|keʈʈijaʋaɭ
@@ -792,7 +792,7 @@ autoExpandExamples.ml = `
 ക്ഷ||
 ക്ഷാമം|scarcity, famine||kṣāmaṃ
 ക്ഷേത്രം||
-കൢപ്തം|prepared|klpt̪ɐm|kl̥ptaṃ
+കൢപ്തം|fixed, limited|kɭipt̪ɐm|kliptaṁ
 കർക്കടകം||
 കർണാടക||
 കർമ്മം||
@@ -1158,7 +1158,7 @@ autoExpandExamples.ml = `
 ദൂതൻ||
 ദൂരം||
 ദൂരദർശിനി||
-ദൃശ്യം||
+ദൃശ്യം|scene, tableau|d̪r̩ʃjɐm|dr̥śyaṁ
 ദേവത||
 ദേശം||
 ദേശവാഴി||
@@ -1710,7 +1710,7 @@ autoExpandExamples.ml = `
 മൂത്രം||
 മൂന്ന്|three|muː§n̪§n̪ɨ̆|mūnnŭ
 മൂഷകം||
-മൃഗം|animal
+മൃഗം|animal|mri§ɡɐm|mr̥gaṁ
 മൃതശരീരം||
 മൃദംഗം||
 മെത്ത||
@@ -1947,7 +1947,7 @@ autoExpandExamples.ml = `
 വീർക്ക്|to swell|ʋiːɾkkɨ̆
 വൃക്ക||
 വൃക്ഷം||
-വൃദ്ധൻ|old man|ʋr§d̪§d̪ːʰɐ§n|vr̥ddhaṉ
+വൃദ്ധൻ|old man|ʋri§d̪§d̪ʰɐ§n|vr̥ddhaṉ
 വൃശ്ചികം||
 വെങ്കലം||
 വെങ്കലപതക്കം||

@@ -9,4 +9,5 @@ window.detailsfileList = ['ml'] // first part of xx-details for each orthography
 window.scriptISO = 'mlym'
 window.webfonts = ["Noto Serif Malayalam WF", "Noto Sans Malayalam WF"]
 window.defaultSize = '24px'
+hideBlockName = "MALAYALAM"
 
