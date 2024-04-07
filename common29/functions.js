@@ -293,6 +293,7 @@ function closeDialogEsc (e) {
     // closes the dialog box and panel when escape is pressed
     if (e.code === 'Escape') {
         document.getElementById('dialogBox').open = false
+        document.getElementById('ipaDialogBox').open = false
         document.getElementById('panel').style.display = 'none'
         document.getElementById('tocPanel').style.display = 'none'
         }
