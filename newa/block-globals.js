@@ -9,4 +9,4 @@ window.detailsfileList = ['new'] // first part of xx-details for each orthograph
 window.scriptISO = 'newa'
 window.webfonts = ["Noto Sans Newa WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "NEWA"
