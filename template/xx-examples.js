@@ -20,7 +20,9 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 
 autoExpandExamples.tmp = `
 
-@ Source
+
+
+@ ?
 
 𑯇𑯃𑯜|woman|m§i§ʃ||||x
 𑯓𑯖̃𑯆𑯅|water|v§ãː§k§u||||x
