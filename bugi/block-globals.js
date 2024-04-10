@@ -8,4 +8,5 @@ window.detailsfileList = ['bug'] // first part of xx-details for each orthograph
 window.scriptISO = 'bugi'
 window.webfonts = ["Noto Sans Buginese WF"]
 window.defaultSize = '24px'
+hideBlockName = "BUGINESE"
 
