@@ -8,5 +8,5 @@ window.detailsfileList = ['khb'] // first part of xx-details for each orthograph
 window.scriptISO = 'talu'
 window.webfonts = ["Noto Serif New Tai Lue WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "NEW TAI LUE"
 
