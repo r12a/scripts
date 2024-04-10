@@ -8,4 +8,4 @@ window.detailsfileList = ['lis'] // first part of xx-details for each orthograph
 window.scriptISO = 'lisu'
 window.webfonts = ["Noto Lisu WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "LISU"
