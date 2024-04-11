@@ -8,4 +8,4 @@ window.detailsfileList = ['hy'] // first part of xx-details for each orthography
 window.scriptISO = 'armn'
 window.webfonts = ["Arian AMU WF", "Noto Sans Armenian WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "ARMENIAN"
