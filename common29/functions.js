@@ -321,7 +321,7 @@ function initialiseSummary (blockDirectory, lang, tableName, orthogNotesFile) {
     tocPanel.id = 'tocPanel'
     tocPanel.style.display = 'none'
     body.appendChild(tocPanel)
-    createtocPanel(3)
+    createtocPanel(4)
     }
 
 
@@ -2882,6 +2882,10 @@ function copyIntroInfo () {
 
 
 
+
+
+
+
 function createtocPanel (maxlevel) {
 	// creates a TOC and puts it in #tocPanel
     // expect to find the id on the heading markup, NOT the section, and NO a around the heading text
@@ -2934,13 +2938,22 @@ function createtocPanel (maxlevel) {
                         var h4s = h3s[k].parentNode.querySelectorAll('h4')
                         for (var m=0; m<h4s.length; m++) {
                             if (!h4s[m].className.match(/notoc/)) {
+                                h4 = h4s[m].innerHTML
 
                                 // create a self link
                                 selflink = document.createElement('a')
                                 selflink.className = 'selflink'
                                 selflink.href = '#'+h4s[m].parentNode.id
                                 h4s[m].appendChild(selflink)
+                                var hhh = document.createElement('div')
+                                var aaa = document.createElement('a')
+                                    aaa.href = '#'+h4s[m].parentNode.id
+                                    aaa.innerHTML = h4
+                                hhh.appendChild(aaa)
+                                hhh.className = 'toc3'
                                 }
+                                console.log(h2)
+                                if (! h2.includes('index')) hh.appendChild(hhh)
                             }
 						}
 					h.appendChild(hh)
