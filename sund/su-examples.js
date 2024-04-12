@@ -15,10 +15,6 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 */
 
 
-otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
-termListType = 3			// picks up sources automatically
-
-
 
 
 
@@ -516,7 +512,8 @@ autoExpandExamples.su = `
 ᮠᮩᮛᮩᮒ᮪||
 ᮮᮥᮯᮥ|state of grace||xušu خاشع||
 ᮃᮊ᮪ᮞᮛ ᮞᮥᮔ᮪ᮓ|Sundanese alphabet|a§k§sa§ra§ §su§n§da
-
+ᮍᮕᮊ᮪|to flap|ŋa.§pak|ngapak
+ᮞᮛᮥᮀ|sarong|sa§rʊŋ|
 
 
 

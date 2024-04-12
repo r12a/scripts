@@ -7,4 +7,5 @@ window.detailsfileList = ['su'] // first part of xx-details for each orthography
 window.scriptISO = 'sund'
 window.webfonts = ["Sundanese Unicode WF", "Noto Sans Sundanese WF"]
 window.defaultSize = '24px'
+hideBlockName = "SUNDANESE"
 
