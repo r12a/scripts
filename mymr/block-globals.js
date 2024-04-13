@@ -8,4 +8,5 @@ window.detailsfileList = ['my','shn'] // first part of xx-details for each ortho
 window.scriptISO = 'mymr'
 window.webfonts = ["Noto Serif Myanmar WF", "Myanmar3 WF", "Noto Sans Myanmar WF"]
 window.defaultSize = '24px'
+hideBlockName = "MYANMAR"
 
