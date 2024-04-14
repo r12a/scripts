@@ -8,4 +8,5 @@ window.detailsfileList = ['bsq'] // first part of xx-details for each orthograph
 window.scriptISO = 'bass'
 window.webfonts = ["Noto Sans Bassah Vah WF"]
 window.defaultSize = '24px'
+hideBlockName = "BASSA VAH"
 
