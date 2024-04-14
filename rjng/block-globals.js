@@ -8,4 +8,4 @@ window.detailsfileList = ['rej'] // first part of xx-details for each orthograph
 window.scriptISO = 'rjng'
 window.webfonts = ["Noto Sans Rejang WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "REJANG"
