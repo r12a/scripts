@@ -62,7 +62,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->9 April, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 April, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -75,7 +75,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->09-Apr-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->14-Apr-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -1062,34 +1062,45 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 <section id="dependentV">
 <h3>Post-consonant vowels</h3>
 
-
-
-
-
-<section id="combiningV">
-<h4>Vowel signs</h4>
-
 <p class="vowelSignExample">
     <bdi lang="bn">&#x0995;&#x09C0;</bdi>
     <span class="ipa">ki</span>
     <span><span class="uname">U+0995 BENGALI LETTER KA</span> + <span class="uname">U+09C0 BENGALI VOWEL SIGN II</span></span>
     </p>
 
-<p>Bangla uses the following dedicated combining marks for vowels.</p>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ি␣ী␣ু␣ূ␣ে␣ো␣া␣ ␣ৈ␣ৌ</figure>
 
-<p>Bengali has lost the distinction between short and long vowels in pronunciation, but retains the difference in spelling.</p>
+<p>Post-consonant vowels are written using 9 combining marks (vowel signs) and a specialised use of the y consonant letter.
 
-<p>The variation in pronunciation for the vowel signs  can often be explained by <a href="#vowelharmonydesc">vowel harmony</a>.</p>
-
-<p><span class="hx">09CB</span> was originally pronounced <span class="ipa">ʊ</span>, and that pronunciation sometimes persists alongside the <span class="ipa">o</span> that came from Sanskrit, eg. <span class="eg" lang="bn">নোংরা</span></p>
+Vowel harmony plays a significant role in the pronunciation of vowel-related code points.</p>
+<p>There are 3 pre-base and 2 circumgraph vowel signs. In principle, there are no multipart vowels, however in decomposed text the 2 circumgraphs split into 2 parts each.</p>
 
 <p>Seven  vowel signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant.</p>
 
 <p>All vowel signs are typed and stored after the base consonant, whether or not they precede it when displayed. The glyph rendering system takes care of the positioning at display time.</p>
 
 <p>An orthography that uses vowel signs is different from one that uses simple diacritics or letters for vowels, in that the vowel signs are generally rendered relative to an <em>orthographic syllable</em>, rather than  just applied to the letter of the immediately preceding consonant (see <a class="secref">prebase</a> for an example).</p>
+
+
+
+
+
+
+<section id="combiningV">
+<h4>Plain vowels</h4>
+
+<p>The following panel shows the primary vowels for Bengali, and how they are written. Most sounds are written using a single, dedicated code point, but one is represented by a sequence that includes a character usually used as a consonant (see <a class="secref">otherV</a> for more details).</p>
+
+<figure class="characterBox auto"  data-cols="trans,transc" data-ipa="i,i,u,u,e,o,æ,a">ি␣ী␣ু␣ূ␣ে␣ো␣্যা␣া</figure>
+
+<p>Bengali has lost the distinction between short and long vowels in pronunciation, but retains the difference in spelling.</p>
+
+<p>Other sounds are associated with some of the above graphemes. The variation in pronunciation for the vowel signs  can often be explained by <a href="#vowelharmonydesc">vowel harmony</a>. (Click on the characters in the panel for more details.)</p>
+
+<figure class="characterBox auto"  data-cols="trans,transc" data-ipa="e,æ,ɔ,æ">ি␣ে␣ো␣া</figure>
+
+
+<p><span class="hx">09CB</span> was originally pronounced <span class="ipa">ʊ</span>, and that pronunciation sometimes persists alongside the <span class="ipa">o</span> that came from Sanskrit, eg. <span class="eg" lang="bn">নোংরা</span></p>
 </section>
 
 
@@ -1145,78 +1156,24 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 
 
 
-<section id="compositeV">
-<h4>Multipart vowels &amp; diphthongs</h4>
+<section id="diphthongsz">
+<h4>Diphthongs</h4>
 
-<p class="vowelSignExample">
-    <bdi lang="bn">কেউ</bdi>
-    <span class="ipa">keu̯</span>
-    <span><span class="uname">U+0995 BENGALI KA</span> + <span class="uname">U+09C7 VOWEL SIGN E</span> + <span class="uname">U+0989 VOWEL LETTER U</span></span>
-    </p>
+<p>Like several other brahmi-derived scripts, the following 2 diphthongs are written using a single character each.</p>
 
-<p>Multipart vowels in Bengali may occur when <span class="hx">09CB</span> and <span class="hx">09CC</span> are decomposed, however this is not common. See <a class="secref">encoding</a> for more details.</p>
+<figure class="characterBox auto"  data-cols="ipa" data-ipa="">ৈ␣ৌ</figure>
 
-<figure class="characterBox auto"  data-cols="" data-ipa="o,ou̯">&#x09C7;&#x09BE;&#x2423;&#x09C7;&#x09D7;</figure>
-
-<p>Although 2  of the vowel signs (and independent vowels) represent diphthongs (<span class="ipa">oi̯</span> and <span class="ipa">ou̯</span>) with a single code point, most of the many  diphthongs are represented by a sequence of vowels,<tt>wa,#Vowels</tt> eg. <span class="eg" lang="bn">কেউ</span></p>
-<p>Diphthongs  typically represent the off-glide using one of the following:</p>
+<p>However, most of the many additional diphthongs are represented by a sequence of vowels<tt>wa,#Vowels</tt>, where the off-glide is typically represented using one of the following independent vowels:</p>
 <ul>
 <li><span class="hx">0987</span></li>
 <li><span class="hx">0989</span></li>
 <li><span class="hx">0993</span></li>
 <li><span class="hx">09AF 09BC</span> (for <span class="ipa">e̯</span>).</li>
 </ul>
+
 <p>The following are examples of diphthongs. Hyphens indicate a consonant with inherent vowel. The detailed character notes contain examples of Bangla words containing the diphthongs shown.</p>
 
 <figure class="characterBox auto"  data-cols="" data-ipa="ii̯,ui̯,ei̯,oi̯,oi̯,ai̯,,iu̯,eu̯,ou̯,au̯,,ɔe̯,ae̯,,ɔo̯ oo̯,ao̯">িই␣ুই␣েই␣ৈ␣-ই␣াই␣ ␣িউ␣েউ␣ৌ␣াউ␣ ␣-য়␣ায়␣ ␣-ও␣াও</figure>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-<section id="vlength">
-<h4>Vowel elongation</h4>
-
-<figure class="characterBox auto" data-cols="">ঽ</figure>
-
-<p><span class="hx">09BD</span> is a Sanskrit-derived symbol that is used in modern Bengali to lengthen vowel sounds<tt>ws</tt>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কিঽঽঽ?</span> <span class="ipa">kiiii</span> <span class="meaning">Whaaatt?</span></span> <span class="charExample" translate="no"><span class="ex" lang="bn">শুনঽঽঽ</span> <span class="ipa">ʃunooo</span> <span class="meaning">Listennn</span></span></p>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-<section id="nasalisation">
-<h4 id="h_nasalisation">Nasalisation</h4>
-
-<figure class="characterBox auto"  data-cols="">ঁ</figure>
-
-<p><span class="hx">0981</span> nasalises the vowel in a syllable, eg. <span class="eg" lang="bn">হ্যাঁ</span>  <span class="eg" lang="bn">হাঁপান</span> Nasalised vowels include <span class="ipa">ĩ ũ ẽ õ ɛ̃ ɔ̃  ã</span>.</p>
-<p>The <span class="name">candrabindu</span> should be placed over the top of an independent vowel, but over the base consonant when a vowel sign is attached – <em>not</em> over the vowel sign. In the code point sequence, however, this should occur <em>after</em> any combining vowel sign associated with the same syllable. Note how the base consonant is identified correctly in the second word of <a class="figref">fig_candrabindu</a>, even though the <span class="name">candrabindu</span> is 4 code points away. Some fonts do not position the <span class="name">candrabindu</span> correctly.</p>
-
-
-<figure id="fig_candrabindu" class="sideCaption">
-<div class="multiItemFigure">
-<img src="images/candrabindu1.png" alt="হাঁপান" class="ex" lang="bn" data-notes="62px Kohinoor Bangla" style="margin-inline: 2rem;">
-<img src="images/candrabindu2.png" alt="হ্যাঁ" class="ex" lang="bn" data-notes="62px Kohinoor Bangla" style="margin-inline: 2rem;">
-</div>
-<figcaption>The  candrabindu is positioned over the base consonant, even though it is the last code point in the syllable. (The arrow gives the approximate location of the code point.)</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="bn">হাঁপান</span></p></details>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="bn">হ্যাঁ</span></p></details>
 </section>
 
 
@@ -1318,6 +1275,77 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 </div>
 <figcaption>An example of precomposed (top) and decomposed (bottom) approaches to circumgraph vowels.</figcaption>
 </figure>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="vlength">
+<h4>Vowel elongation</h4>
+
+<figure class="characterBox auto" data-cols="">ঽ</figure>
+
+<p><span class="hx">09BD</span> is a Sanskrit-derived symbol that is used in modern Bengali to lengthen vowel sounds<tt>ws</tt>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কিঽঽঽ?</span> <span class="ipa">kiiii</span> <span class="meaning">Whaaatt?</span></span> <span class="charExample" translate="no"><span class="ex" lang="bn">শুনঽঽঽ</span> <span class="ipa">ʃunooo</span> <span class="meaning">Listennn</span></span></p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="nasalisation">
+<h4 id="h_nasalisation">Nasalisation</h4>
+
+<figure class="characterBox auto"  data-cols="">ঁ</figure>
+
+<p><span class="hx">0981</span> nasalises the vowel in a syllable, eg. <span class="eg" lang="bn">হ্যাঁ</span>  <span class="eg" lang="bn">হাঁপান</span> Nasalised vowels include <span class="ipa">ĩ ũ ẽ õ ɛ̃ ɔ̃  ã</span>.</p>
+<p>The <span class="name">candrabindu</span> should be placed over the top of an independent vowel, but over the base consonant when a vowel sign is attached – <em>not</em> over the vowel sign. In the code point sequence, however, this should occur <em>after</em> any combining vowel sign associated with the same syllable. Note how the base consonant is identified correctly in the second word of <a class="figref">fig_candrabindu</a>, even though the <span class="name">candrabindu</span> is 4 code points away. Some fonts do not position the <span class="name">candrabindu</span> correctly.</p>
+
+
+<figure id="fig_candrabindu" class="sideCaption">
+<div class="multiItemFigure">
+<img src="images/candrabindu1.png" alt="হাঁপান" class="ex" lang="bn" data-notes="62px Kohinoor Bangla" style="margin-inline: 2rem;">
+<img src="images/candrabindu2.png" alt="হ্যাঁ" class="ex" lang="bn" data-notes="62px Kohinoor Bangla" style="margin-inline: 2rem;">
+</div>
+<figcaption>The  candrabindu is positioned over the base consonant, even though it is the last code point in the syllable. (The arrow gives the approximate location of the code point.)</figcaption>
+</figure>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="bn">হাঁপান</span></p></details>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="bn">হ্যাঁ</span></p></details>
+</section>
+
+
+
+
+
+
+
+
+<section id="compositeV">
+<h4>Multipart vowels</h4>
+
+<p class="vowelSignExample">
+    <bdi lang="bn">কেউ</bdi>
+    <span class="ipa">keu̯</span>
+    <span><span class="uname">U+0995 BENGALI KA</span> + <span class="uname">U+09C7 VOWEL SIGN E</span> + <span class="uname">U+0989 VOWEL LETTER U</span></span>
+    </p>
+
+<p>Multipart vowels in Bengali may occur when <span class="hx">09CB</span> and <span class="hx">09CC</span> are decomposed, however this is not common. See <a class="secref">encoding</a> for more details.</p>
+
+<figure class="characterBox auto"  data-cols="" data-ipa="o,ou̯">&#x09C7;&#x09BE;&#x2423;&#x09C7;&#x09D7;</figure>
+
+<p>Although 2  of the vowel signs (and independent vowels) represent diphthongs (<span class="ipa">oi̯</span> and <span class="ipa">ou̯</span>) with a single code point, most of the many  diphthongs are represented by a sequence of vowels,<tt>wa,#Vowels</tt> eg. <span class="eg" lang="bn">কেউ</span></p>
 </section>
 </section>
 
@@ -2274,7 +2302,7 @@ although these may also be spelled with conjuncts, eg.
 <h3>Consonant length</h3>
 
 <p>There are a number of ways of producing a lengthened consonant sound in Bangla.</p>
-<p>A straightforward approach is to duplicate the consonant sound in conjunct form. For example, a long <span class="ipa">l</span> can be written <span class="codepoint noindex" translate="no"><span lang="bn">&#x09B2;&#x09CD;&#x09B2;</span> [<a href="/scripts/bengali/block#char09B2"><span class="uname">U+09B2 BENGALI LETTER LA</span></a> + <a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD  SIGN VIRAMA</span></a> + <a href="/scripts/bengali/block#char09B2"><span class="uname">U+09B2  LETTER LA</span></a>]</span>, eg.
+<p>A straightforward approach is to duplicate the consonant sound in conjunct form. For example, a long <span class="ipa">l</span> can be written <span class="ch">ল্ল</span>, eg.
 <span class="eg" lang="bn">ঝিল্লি</span>
 </p>
 <p>Another common way of doubling the length of a consonant is to use a conjunct ending with <span class="hx">09AC</span> or <span class="hx">09AE</span>, eg. 
