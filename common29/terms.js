@@ -130,7 +130,8 @@ if (document.getElementById('tabPlaceholder')) {
     </select>&nbsp;&nbsp;
     <button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">Go</button>
     
-    <button onclick="hideNonIPA()">With IPA</button>
+    <button onclick="hideAllNonIPA()" title="Show only items with an IPA transcription in this list.">With IPA</button>
+    <button onclick="hideNonIPA()" title="Show only items with an IPA transcription in the list or in Wiktionary.">␣</button>
     </p>
 
 
@@ -666,6 +667,24 @@ console.log('set',uniqueSet.size)
 
 
 function hideNonIPA () {
+    // hide table rows that don't have an IPA transcription or ␣
+    
+    var count = 0
+    var nodes = document.getElementById('foundItems').querySelectorAll('.ipaCol')
+    for (i=0;i<nodes.length;i++) {
+        if (nodes[i].textContent.trim() == '') {
+            nodes[i].parentNode.style.display = 'none'
+            count++
+            }
+        }
+    
+    var initialCount = parseInt( document.getElementById('found').textContent )
+    document.getElementById('found').textContent = initialCount - count
+    
+    }
+
+
+function hideAllNonIPA () {
     // hide table rows that don't have an IPA transcription
     
     var count = 0
