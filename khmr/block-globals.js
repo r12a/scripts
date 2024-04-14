@@ -8,4 +8,5 @@ window.detailsfileList = ['km'] // first part of xx-details for each orthography
 window.scriptISO = 'khmr'
 window.webfonts = ["Khmer OS Battambang WF", "Noto Serif Khmer WF"]
 window.defaultSize = '24px'
+hideBlockName = "KHMER"
 
