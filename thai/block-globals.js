@@ -8,4 +8,5 @@ window.detailsfileList = ['th'] // first part of xx-details for each orthography
 window.scriptISO = 'thai'
 window.webfonts = ["Noto Serif Thai WF"]
 window.defaultSize = '24px'
+hideBlockName = "THAI"
 
