@@ -7,4 +7,5 @@ window.detailsfileList = ['bm','ha', 'ff'] // first part of xx-details for each 
 window.scriptISO = 'latn'
 window.webfonts = ["Doulos SIL WF"]
 window.defaultSize = '24px'
+hideBlockName = "LATIN"
 

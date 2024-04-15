@@ -22,33 +22,53 @@ termListType = 3			// picks up sources automatically
 
 autoExpandExamples.bm = `
 
-@ wiktionary
+@ https://en.wiktionary.org/w/index.php?title=Category:Bambara_terms_with_IPA_pronunciation
+@ wiktionary general
 
-a dɔ la||
-a dɔ ra||
-a dɔ rɔ||
-á|you|á|á||a'
-a|he, she, it|a|a||x
+-ba||
+-kan||
+-ma||
+-ntan||
+-tigi||
+-tɔ||
+-ya||
+A ye à fɔ.|He said it.||||x
+A y’à fɔ.|He said it.||||x
+Ala||␣
+Bamakɔ||
+Bamanankan||
+Bamanan||
+Farafinna||
+Fulakan||
+Fulani||
+Fula||
+Segu||
+Tubabukan||
+Zanga||␣
+a dɔ la||␣
+a dɔ ra||␣
+a dɔ rɔ||␣
 abada|forever|a§b§a§d§a
-abarika||
-abarka||
-adamadenya||
-adamaden||
-aderenalini||
+abarika||␣
+abarka||␣
+adamadenya||␣
+adamaden||␣
+aderenalini||␣
 adɛrɛsi|address|á§d§ɛ§r§ɛ§s§i
 alalandi||
-alamisa||
-ale||
+alamisa||␣
+ale||␣
 alijɛnɛ||
-alikuranɛ||
-alikɔli||
-alimɛti||
+alikuranɛ||␣
+alikɔli||␣
+alimɛti||␣
 amiina|amen|à§m§iː§‹§n§a|àmiina
 anw||
-an||
+an||␣
 aw||
 ayiwa||
-ayi||
+ayi||␣
+a|he, she, it|a|a||x
 baana|rich, wealthy|b§aː§‹§n§a|
 baarakalan|learning to work|
 baara|work|b§áː§‹§r§a
@@ -56,6 +76,7 @@ babili|bridge|
 babɛlɛ||
 bacɛncɛn||
 badaa|forever|
+badingɛ|riverbed|b§á§d§ĩ§‹§g§ɛ|bádingɛ||bádingɛ
 bafaarɔ|manatee|
 bagangɛnna||
 baganmara||
@@ -85,9 +106,6 @@ base||
 bawo||
 bawɔlɔ||
 ba|river|b§á|ba|see also §bà, bá, bǎ§|ba
-bà|thousand|b§à|ba|see also §bà,bá,bǎ§|ba
-bá|river, stream|b§á|ba|see also §bà,bá,bǎ§|ba
-bǎ|goat|b§àá|ba|see also §bà, bá, bǎ§|ba
 bere||
 bilali||
 binkannikɛla||
@@ -105,16 +123,19 @@ bolokɔni||
 bolo||
 bonya||
 bubaakisɛ|termite|
-bugu||
+bugu||␣
 bulon||
 buruju||
-buru||
+buru||␣
 buyaki||
 bàanan|||baanan
 bàsi|||basi
-badingɛ|riverbed|b§á§d§ĩ§‹§g§ɛ|bádingɛ||bádingɛ
+bà|thousand|b§à|ba|see also §bà,bá,bǎ§|ba
+bàá|dad||baa||x
+bá|river, stream|b§á|ba|see also §bà,bá,bǎ§|ba
 bín|||bin
 bírinka|||birinka
+bǎ|goat|b§àá|ba|see also §bà, bá, bǎ§|ba
 bɔgɔlanfini||
 bɔgɔ||
 bɔlɔn||
@@ -132,10 +153,10 @@ ci||
 cogo||
 cáman|||caman
 cáya|||caya
-cɔnkɔ||
+cɔnkɔ||␣
 cɛmancɛrɔbana||
 cɛncɛn|sand|c§ɛ̃§‹§̀c§ɛ̃§‹§|cɛ̀ncɛn
-cɛrɔ||
+cɛrɔ||␣
 cɛ||
 cɛ́mà|among|c§ɛ§́§mǎ|cɛma
 dabamuso||
@@ -157,12 +178,12 @@ dancɛ||
 danfara|difference|d§ã̀§‹§f§a§r§a
 danga||
 dankana||
-dan||
+dan||␣
 dayɛlɛ||
 da|mouth|d§áà|dáà|see also §dâ§
-dâ|mouth|d§áà|dáà|see also §da§|da
 dee|child|d§ẽ́§ẽ̀
 degeden||
+dege|to learn|d§è§g§e|dège||dège
 denbaya||
 denbo||
 denkɛ|son|d§ẽ§‹§k§ɛ
@@ -170,18 +191,21 @@ denmuso||
 denso||
 den||
 depitebulon|parliament|
-de||
+de||␣
 dibi||
 dimi||
 dimɔgɔ||
+dingɛ|the hole|d§ĩ̀§‹§ɡ§ɛ̀ꜜɛ̀|dìngɛ
 disi||
 diya||
-di||
+di||␣
 diɲɛ||
 dolen|fishhook|d§ó§l§ẽẽ§‹̀
 dolokulu||
-don||
-do||
+donso|hunter|d§õ§‹§z§o|dònso||dònso
+don||␣
+doolen|fishhook|d§óː§‹§l§ẽẽ̀§‹|doolen||dóolen
+do||␣
 duguba||
 dugujɛ||
 dugutigi||
@@ -190,26 +214,25 @@ duminiba||
 dumuni||
 dunan||
 dunun||
-dun||
-du||
+dun||␣
+duuru|five||||x
+du||␣
 dá-ji|saliva||d§a§-§j§i
 dáyɛlɛlan|||dayɛ
-dege|to learn|d§è§g§e|dège||dège
-donso|hunter|d§õ§‹§z§o|dònso||dònso
-doolen|fishhook|d§óː§‹§l§ẽẽ̀§‹|doolen||dóolen
+dâ|mouth|d§áà|dáà|see also §da§|da
 dúuru|||duuru
+dɔgɔkun|week|d§ɔ́§g§ɔ§k§ũ§‹|dɔ́gɔkun||dɔ́gɔkun
 dɔnko||
 dɔnni||
-dɔn||
+dɔn||␣
 dɔrɔn||
 dɔɔnin|a little|d§ɔː§‹§n§ĩ§‹
 dɔ̀lɔ|||dɔlɔ
 dɔ̀nkɔri|||dɔnkɔri
-dɔgɔkun|week|d§ɔ́§g§ɔ§k§ũ§‹|dɔ́gɔkun||dɔ́gɔkun
 dɔ́nni|||dɔnni
-dɛn||
+dɛn||␣
 dɛnɛ||
-dɛ||
+dɛ||␣
 dɛ̀bɛn|||dɛbɛn
 dɛ̀mɛ|help, assistance|d§ɛ̀§m§ɛ|dɛmɛ
 dɛ̀ɲɛ|||dɛɲɛ
@@ -219,16 +242,18 @@ falenfɛnw|flora, vegetation|f§a§l§ẽ§‹§f§ɛ̃§‹§u
 fali||
 fana||
 fanga||
-fan||
+fan||␣
 farafin||
 farajɛ||
 farama||
 faso||
+fila|two|f§i§l§a|fila||fìla
 filɛli||
 filɛ||
 fin||
-firifiri||
+firifiri||␣
 fiɲɛ||
+fogonfogon|lung|f§ó§g§ṍ§‹§f§ò§g§ṍ§‹|fógonfògon
 folon||
 foroko||
 foro||
@@ -244,7 +269,6 @@ fàgali|||fagali
 fàri|||fari
 fára|||fara
 fìla|two|f§i§l§a|fila
-fila|two|f§i§l§a|fila||fìla
 fòrobafanga|||forobafanga
 fòrokiya|||forokiya
 fɔli||
@@ -253,20 +277,23 @@ fɔ́|||fɔ
 fɛn||
 fɛ||
 gala||
-gan||
+gan||␣
 gasi||
 gato||
 geji||
 gele||
+gwɛsɛ|toothbrush|gʷ§‹§ɛ§s§ɛ|gwɛsɛ||x
 gèsedala|||gesedala
-gɔmɛ||
+gɔmɛ||␣
 gɔngɔrɔ|pebble, stone|g§ɔ̃§‹§g§ɔ§r§ɔ
 gɔsi||
+gɛlɛn|hard, difficult|j§ɛ̀§l§ɛ̃|jɛ̀lɛ̃
 gɛlɛ||
 gɛnna||
 gɛn||
+gɛsɛ|toothbrush|gʷ§ɛ§s§ɛ|gɛsɛ||x
 habada|never|h§á§b§a§d§a
-hadamaden|human||hádamàden
+hadamaden|human|␣|hádamàden
 hakilila||
 hakilinan||
 hakili||
@@ -281,9 +308,10 @@ jago||
 jakuma||
 jalamugu||
 jala||
+jankamu|black scorpion|j§ã̌§‹§k§à§m§ù|jànkàmu||x
 jankaro||
-jan||
-jele||
+jan||␣
+jele||␣
 jeli||
 jenbe||
 jigiɲɛ||
@@ -307,35 +335,38 @@ jùrumu|||jurumu
 jɔn||
 jɔyɔrɔ||
 jɔ̀nya||jɔnya
-jɛgɛ||
+jɛgɛ||␣
 jɛnɛ||
+jɛ|white|j§ɛ̀|jɛ̀||x
 jɛ̀|assembly, union|j§ɛ
 jɛ́|white; a plain|j§ɛ
 kabako||
 kafo||
 kalanni||
 kalansen||
-kalan||
+kalan||␣
 kalata||
 kalili||
 kalo||
 kamafura|wing||k§à§m§à§f§u§r§a
 kamakun||
+kamalen|young man|k§á§m§á§l§ẽ́§‹|kámalen||x
 kanntanya||
 kanuya||
-kan||
+kan||␣
 kanɲɛ||
 karamɔgɔ||
 kari||
 kasabi||
 kasara||
 ka||
+kelen|one||kélen||x
 keninge||
 kibaru||
 kiritigɛla||
 kojugu||
-kolo||
-ko||
+kolo||␣
+ko||␣
 kuluba||
 kulunin||
 kulu||
@@ -355,7 +386,7 @@ kunsi||
 kuntaala|time period|
 kuntigi||
 kuntilenna||
-kunun||
+kunun||␣
 kura||
 kurun||
 ku||
@@ -371,18 +402,23 @@ kálo|||kalo
 kènde|||kende
 kòlonkala|||kolonkala
 kòlon|mortar (grinding)|kòlon|k§o§l§o§n
+kòori|circle, surround||koori||x
 kólon|worn out|k§ó§l§o§n|kolon
 kósɔ̀n|||kosɔn
 kóya|||koya
+kùnnasìri|to be ashamed|k§ũ̀§‹§n§á§s§ì§r§ì|kunnasiri||x
 kùntigi|||kuntigi
 kú|||ku
-kɔli||
-kɔlɔ||
-kɔlɛ||
+kɔli||␣
+kɔlɔ||␣
+kɔlɛ||␣
+kɔn|do first, precede|k§ɔ̌§n|kɔ̌n||x
+kɔnɔntɔn|nine||kɔ̀nɔ̀ntɔn||x
 kɔnɔ||
 kɔra||
 kɔrɔmuso||
-kɔrɔ||
+kɔrɔn|east|k§ɔ́§r§ɔ̃§‹|kɔ́rɔn||kɔ́rɔn
+kɔrɔ||␣
 kɔɔri|cotton|
 kɔ̀gɔjida|||kɔgɔjida
 kɔ̀gɔji|||kɔgɔji
@@ -391,7 +427,6 @@ kɔ̀nɔ|||kɔnɔ
 kɔ̀rɔ|||kɔrɔ
 kɔ́kàn|||kɔkan
 kɔ́ra|||kɔra
-kɔrɔn|east|k§ɔ́§r§ɔ̃§‹|kɔ́rɔn||kɔ́rɔn
 kɛlɛbolo||
 kɛlɛ||
 kɛn||
@@ -403,10 +438,11 @@ kɛnɛ||
 kɛrɛ||
 kɛ||
 kɛɲɛ||
-laada|custom, tradition|l§àː§‹§d§a|làada
+laada|custom, tradition|l§àː§‹§d§a|làada
 laadilikan|advice|
 laadi|to advise|
 labalo||
+labilali|permission|l§á§b§i§l§a§l§i|lábilali||lábilali
 labɛnni||
 ladamu||
 lajɛba||
@@ -417,7 +453,6 @@ lankolon||
 lasigiden||
 lasɔmi||
 la||
-labilali|permission|l§á§b§i§l§a§l§i|lábilali||lábilali
 lábi|||labi
 lábìla|||labila
 lábìn|||labin
@@ -445,7 +480,7 @@ masaden||
 masaku||
 masaya||
 masa||
-ma||
+ma||␣
 mburu|bread|m͡b§‹§ú§r§u||see also §nbuuru§|
 minisiriɲɛmɔgɔ|prime minister|
 minkɛ||
@@ -455,19 +490,26 @@ misi|cow|m§ì§s§í
 mpan|the sword|m͡p§‹§ã̀ꜜã̀§‹
 munna||
 muso|woman, wife|m§ù.§s§o|mùso
+màdòn|approach|m§ǎ§d§ò§n|madon||x
+màfára|separate|m§à§f§á§r§á|mafara||x
 màli|hippopotamus|m§à§l§i|mali
 màra|||mara
 màsa|||masa
+màá|person||maa||x
 mìn|||min
 mùgan|||mugan
 mɔgɔ||
+mɔ̀muso|grandmother|m§ɔ̀§m§u§s§o|mɔmuso||x
 mɛn||
-nafolo|riches, wealth|n§à§f§o§l§o
+mɛɛn|last a long time|m§ɛ̃ː§‹§‹‹|mɛɛn||x
+naani|four|n§áː§‹§n§i|náani||náani 
+nafolo|riches, wealth|n§à§f§o§l§o
 naji||
 nakɔ||
 namasa||
 nanbara||
-na||
+na||␣
+nba|male reply to greeting|m͡b§‹§a|ǹba||x
 nbuurufunun|yeast|
 nbuuru|bread|m͡b§‹§uː§‹§r§u||see also §mburu§|
 ncɔgɔn|yam|n͡ʃ§‹§ɔ̀§ɡ§ɔ̃ꜜɔ̃̀§‹|ncɔ̀gɔn
@@ -487,10 +529,11 @@ nkɛɛrɛn|cricket|
 npan|sword|m͡p§‹§ã̀§‹
 npogotigi|girl, young woman||n§p§ò§g§ò§t§i§g§i
 npògo|||npogo
+nsaajɛ|gum arabic tree|n͡z§‹§áː§‹§d͡ʒ§ɛ|nsáajɛ||nsáajɛ
 nsana|proverb||nsàna
 nsaransaranin|small fish|n§z§á§‹§r§ã§s§a§r§a§n§ĩ̀ː§‹
+nse|female reply to greeting|n͡z§‹§e|ǹse||x
 nsiranɛgɛ|bronze|
-nsaajɛ|gum arabic tree|n͡z§‹§áː§‹§d͡ʒ§ɛ|nsáajɛ||nsáajɛ
 nsɛrɛ|watermelon|
 ntilen|giraffe|n͡t§‹§i§l§e§n
 ntomi|tamarind|n͡t§‹§o§m§i
@@ -505,6 +548,7 @@ n||
 nàfa|||nafa
 nàra|||nara
 nàsira|||nasira
+nàámu|response when name is called|n§a§a§m§u|||x
 náamu|iman's turban, rule||naamu
 nákɔ|||nakɔ
 núnwo|||nunwo
@@ -522,11 +566,14 @@ olu|they, them!||olu
 pan|jump, fly|p§ã́§‹
 peresidan|president|p§e§r§e§s§i§d§ã§‹
 sabali||
+saba|three||sàba||x
 sagasi||
+saga|sheep|s§a§ɣ§a|sàga||x
+saha!|thanks!||saha||x
 sama||
 samiya||
 sanfɛ||
-sanga||
+sanga||␣
 sanji||
 sankolo||
 sanni||
@@ -539,15 +586,20 @@ saɲɔ||
 sebaaya|lpower, means|
 sebe||
 seere|witness|s§eː§‹§r§e
+segin|eight||||x
 seko||
 seleke||
 senfɛ||
 shinye|time|ʃ§‹§ì§ɲ§‹§ɛꜜɛ̀
+shu|cabbage|ʃ§‹§ù|shù
+shɔ̀|beans|ʃ§‹§ɔ̀|shɔ̀|variant of §sɔsɔ§|x
+shɛ|chicken|ʃ§‹§ɛ̌|shɛ̌|variant of §sise§, also spelled sɛ or syɛ|x
 sigida||
 sigiyɔrɔ||
-sinin||
+sinin||␣
 sini||
 sira||
+sisɛ|chicken|s§ì§s§ɛ|sìsɛ||x
 situlu||
 siya||
 sogoba||
@@ -567,6 +619,7 @@ sánfɛfɛn|||sanfɛfɛn
 sánfɛla|||sanfɛla
 sánkuda|||sankuda
 sán|||san
+sèn|foot, leg||sen||x
 sèɡin|||segin
 sìgida|||sigida
 sìgidolo|||sigidolo
@@ -581,6 +634,7 @@ sɔgɔma||
 sɔgɔsɔgɔ||
 sɔrɔdasi||
 sɔsɔli|argument, debate|
+sɔsɔ|beans|s§ɔ̀§s§ɔ|sɔ̀sɔ||x
 sɔ̀mɔ|||sɔmɔ
 sɔ̀ngɔ|||sɔngɔ
 sɛfan||
@@ -588,6 +642,8 @@ sɛnɛ||
 sɛsi|chair|s§ɛ́§s§i|
 sɛ|chicken, hen|
 sɛ́bɛn|||sɛbɛn
+taafan|direction|t§áː§‹§f§ã§‹|táafan||táafan
+tan|ten||||x
 tiga||
 tigɛ||
 tilema||
@@ -602,7 +658,6 @@ tàasi|to reflect, consider||taasi
 tàfo|||tafo
 tàga|||taga
 táabaa|the deceased||taabaa
-taafan|direction|t§áː§‹§f§ã§‹|táafan||táafan
 táalan|necessity, habit||taalan
 táala|one who leaves||taala
 táaran|gutter||taaran
@@ -610,27 +665,32 @@ táa|to go, leave||taa
 tìɲɛ|||tiɲɛ
 tùn|||tun
 túlo|||tulo
-tɔn||
+tɔn||␣
 tɔ̀gɔ̀tɔ̀gɔ̀nin|||tɔgɔtɔgɔnin
 tɛmɛ||
 tɛ||
 u||
 walima||
 waraba||
+wari caaman|a LOT of money|w§a§r§i§ §c§aː§‹§m§a§n|wari caaman||x
 warijɛ||
-wa||
+wari|money|w§a§r§i|||x
+wa||␣
 wele||
+wolonfila|seven||||x
+wolonwula|seven|w§ó§l§ɔ̃§‹§w§u§l§a|wólonwula||wólonwula
+wolo|skin|w§ò§l§ó|wòló||x
 woro||
 wotoro||
 wula||
 wulu||
 wòro|||woro
 wólonwulanan|seventh|w§ó§l§ɔ̃§‹§w§u§l§a§n§ã§‹|wolonwulanan
-wolonwula|seven|w§ó§l§ɔ̃§‹§w§u§l§a|wólonwula||wólonwula
 wólo|||wolo
 wɔlɔsɔ||
 wɔlɔ||
 wɔsiji||
+wɔɔrɔ|six||
 wɔ́ɔrɔ|||wɔɔrɔ
 wɛrɛ||
 yaani|before|
@@ -639,104 +699,35 @@ yan||
 yen||
 ye||
 yiri||
+yoya|war|j§ó§j§a|yóya||yóya
 yàfa|||yafa
 yànfan|||yanfan
-yoya|war|j§ó§j§a|yóya||yóya
 yɔrɔ||
 yɛlɛma||
 yɛlɛnyɛlɛnnan||
 yɛrɛ||
+zaban|fruit|z§à§b§ã§‹|zàban||x
+zandarmu|policeman|z§ã́§‹§d§a§r§m§u|zándarmu||x
+zɛrɛ|watermelon||||x
 àlikaama|wheat||alikaama
-àlisilamɛ|||alisilamɛ
+àlisilamɛ||␣|alisilamɛ
+á|you|á|á||a'
 ŋana|tough|ŋ§à§n§aꜜà
 ŋaniya|intention, decision|ŋ§à§n§ì§j§a|ŋànìya
 ŋɔmɔ|bark (tree)|ŋ§ɔ̀§m§ɔꜜɔ̀
+ŋɛɲɛ|itch|ŋʷ§ɛ́§ɲ§ɛ|ŋɛ́ɲɛ||x
 ɲaami|to mix, confuse|
 ɲaamɛ|camel|ɲ§aː§‹§m§ɛ
 ɲin||
-ɲùman|good|ɲ§ù§m§a§n|ɲuman||
 ɲuman|good|ɲ§ù§m§a§n|ɲuman||ɲùman
+ɲùman|good|ɲ§ù§m§a§n|ɲuman||
 ɲɔgɔmɛ||
 ɲɔgɔn||
 ɲɔ||
+ɲɛ-ji|tears|ɲ§ɛ§-§d͡ʒ§i|ɲɛ́-ji||ɲɛ́-ji
 ɲɛda||
 ɲɛmɔgɔ||
 ɲɛ|eye||ɲɛ́
-ɲɛ-ji|tears|ɲ§ɛ§-§d͡ʒ§i|ɲɛ́-ji||ɲɛ́-ji
-
-
--ba||
--kan||
--ma||
--ntan||
--tigi||
--tɔ||
--ya||
-
-
-Ala||
-Bamakɔ||
-Bamanankan||
-Bamanan||
-Farafinna||
-Fulakan||
-Fulani||
-Fula||
-Segu||
-Tubabukan||
-Zanga||
-
-
-
-kòori|circle, surround||koori||x
-nàámu|response when name is called|n§a§a§m§u|||x
-nba|male reply to greeting|m͡b§‹§a|ǹba||x
-nse|female reply to greeting|n͡z§‹§e|ǹse||x
-saha!|thanks!||saha||x
-kelen|one||kélen||x
-saba|three||sàba||x
-naani|four|n§áː§‹§n§i|náani||náani 
-duuru|five||||x
-wɔɔrɔ|six||
-wolonfila|seven||||x
-segin|eight||||x
-kɔnɔntɔn|nine||kɔ̀nɔ̀ntɔn||x
-tan|ten||||x
-bàá|dad||baa||x
-màá|person||maa||x
-
-jankamu|black scorpion|j§ã̌§‹§k§à§m§ù|jànkàmu||x
-fogonfogon|lung|f§ó§g§ṍ§‹§f§ò§g§ṍ§‹|fógonfògon
-màfára|separate|m§à§f§á§r§á|mafara||x
-màdòn|approach|m§ǎ§d§ò§n|madon||x
-kùnnasìri|to be ashamed|k§ũ̀§‹§n§á§s§ì§r§ì|kunnasiri||x
-sèn|foot, leg||sen||x
-kamalen|young man|k§á§m§á§l§ẽ́§‹|kámalen||x
-dingɛ|the hole|d§ĩ̀§‹§ɡ§ɛ̀ꜜɛ̀|dìngɛ
-zɛrɛ|watermelon||||x
-zaban|fruit|z§à§b§ã§‹|zàban||x
-A ye à fɔ.|He said it.||||x
-A y’à fɔ.|He said it.||||x
-
-mɔ̀muso|grandmother|m§ɔ̀§m§u§s§o|mɔmuso||x
-wari|money|w§a§r§i|||x
-shɛ|chicken|ʃ§‹§ɛ̌|shɛ̌|variant of §sise§, also spelled sɛ or syɛ|x
-sisɛ|chicken|s§ì§s§ɛ|sìsɛ||x
-zandarmu|policeman|z§ã́§‹§d§a§r§m§u|zándarmu||x
-sɔsɔ|beans|s§ɔ̀§s§ɔ|sɔ̀sɔ||x
-shɔ̀|beans|ʃ§‹§ɔ̀|shɔ̀|variant of §sɔsɔ§|x
-shu|cabbage|ʃ§‹§ù|shù
-wolo|skin|w§ò§l§ó|wòló||x
-jɛ|white|j§ɛ̀|jɛ̀||x
-gɛlɛn|hard, difficult|j§ɛ̀§l§ɛ̃|jɛ̀lɛ̃
-gɛsɛ|toothbrush|gʷ§ɛ§s§ɛ|gɛsɛ||x
-gwɛsɛ|toothbrush|gʷ§‹§ɛ§s§ɛ|gwɛsɛ||x
-saga|sheep|s§a§ɣ§a|sàga||x
-ŋɛɲɛ|itch|ŋʷ§ɛ́§ɲ§ɛ|ŋɛ́ɲɛ||x
-mɛɛn|last a long time|m§ɛ̃ː§‹§‹‹|mɛɛn||x
-wari caaman|a LOT of money|w§a§r§i§ §c§aː§‹§m§a§n|wari caaman||x
-kɔn|do first, precede|k§ɔ̌§n|kɔ̌n||x
-
 
 
 
