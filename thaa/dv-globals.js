@@ -19,3 +19,4 @@ scriptIsIndic = true  // true if there are indic syllabic categories; used only 
 
 defaultSize = '24px'  // used by block.html to set size of font, including in font mgt panel
 letterClassName = 'dv'  // classname for a given orthography in the block page
+hideBlockName = "THAANA"

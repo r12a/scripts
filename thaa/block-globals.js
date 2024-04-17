@@ -8,4 +8,4 @@ window.detailsfileList = ['dv'] // first part of xx-details for each orthography
 window.scriptISO = 'thaa'
 window.webfonts = ["Noto Sans Thaana WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "THAANA"
