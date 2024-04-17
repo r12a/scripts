@@ -8,4 +8,4 @@ window.detailsfileList = ['syr','aii','tru'] // first part of xx-details for eac
 window.scriptISO = 'syrc'
 window.webfonts = ["Estrangelo Edessa WF", "East Syriac Adiabene WF", "Serto Jerusalem WF", "Noto Sans Syriac Eastern", "Noto Sans Syriac Estrangela", "Noto Sans Syriac Western"]
 window.defaultSize = '24px'
-
+hideBlockName = "SYRIAC"
