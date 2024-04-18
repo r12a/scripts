@@ -453,6 +453,7 @@ nyaari|cat|ɲ§aː§‹§r§i|||x
 ɗiɗo||
 ɗo||
 ɗuuɗ-||
+ngoƴaare|barn owl|›§ᵑɡ§o.§ʔʲ§aː.§‹§r§e|
 
 
 
