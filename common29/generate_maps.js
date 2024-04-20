@@ -61,9 +61,13 @@ function makeTables (lang) {
 function gatherData () {
     // extract the map items
     ipaData = {}
+    unwanted = new Set(['d','u','o','a'])
+    
     for (row in spreadsheetRows) {
         if (spreadsheetRows[row][cols.ipaLoc]) {
             //console.log(spreadsheetRows[row][cols.ipaLoc])
+            
+            if (spreadsheetRows[row][cols.status] && unwanted.has(spreadsheetRows[row][cols.status])) continue
             
             items = spreadsheetRows[row][cols.ipaLoc].split(' ')
             for (i=0;i<items.length;i++) {
