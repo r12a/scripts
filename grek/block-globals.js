@@ -8,4 +8,4 @@ window.detailsfileList = ['el'] // first part of xx-details for each orthography
 window.scriptISO = 'grek'
 window.webfonts = ["Gentium Plus WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "GREEK"
