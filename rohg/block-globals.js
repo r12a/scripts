@@ -8,4 +8,4 @@ window.detailsfileList = ['rhg'] // first part of xx-details for each orthograph
 window.scriptISO = 'rohg'
 window.webfonts = ["Noto Sans Hanifi Rohingya WF"]
 window.defaultSize = '24px'
-
+hideBlockName = 'HANIFI ROHINGYA'
