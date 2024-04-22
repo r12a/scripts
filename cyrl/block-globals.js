@@ -8,4 +8,4 @@ window.detailsfileList = ['ru','mn', 'uk'] // first part of xx-details for each 
 window.scriptISO = 'cyrl'
 window.webfonts = ["Gentium Plus WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "CYRILLIC"
