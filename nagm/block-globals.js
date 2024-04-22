@@ -8,4 +8,5 @@ window.detailsfileList = ['unr'] // first part of xx-details for each orthograph
 window.scriptISO = 'nagm'
 window.webfonts = ["Mingzat WF"]
 window.defaultSize = '24px'
+hideBlockName = "NAG MUNDARI"
 
