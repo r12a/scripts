@@ -8,4 +8,5 @@ window.detailsfileList = ['sat'] // first part of xx-details for each orthograph
 window.scriptISO = 'olck'
 window.webfonts = ["Noto Sans Ol Chiki WF"]
 window.defaultSize = '24px'
+hideBlockName = "OL CHIKI"
 
