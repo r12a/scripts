@@ -9,4 +9,5 @@ window.scriptISO = 'olck'
 window.webfonts = ["Noto Sans Ol Chiki WF"]
 window.defaultSize = '24px'
 hideBlockName = "OL CHIKI"
+hideBlockName = "OSAGE"
 
