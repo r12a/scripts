@@ -1946,6 +1946,8 @@ function findSpecificIPA (ipa) {
     // activated from the panel showing phoneme links
     // the panel separates 
 
+    ipa = ipa.normalize('NFC')
+
 	// create a set of the character(s) being looked up
 	const phoneSet = new Set(ipa.replace(/-/g,'').split(' '))
 	//console.log('search for:',phoneSet)
@@ -2008,6 +2010,7 @@ function findSpecificIPA (ipa) {
             if (i>0) out += ' • '
             out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
             }
+        out += ` \u2022 <a href="${ langTag }_vocab.html?q=${ ipa }" target="terms">terms list</a>`
 		document.getElementById('phoneLinks').style.display = 'block'
 		document.getElementById('phoneLinks').innerHTML = out+' &nbsp;&nbsp;<span style="cursor:pointer" onclick="this.parentNode.style.display = \'none\'">X</span>&nbsp;&nbsp;'
 		}
@@ -2092,6 +2095,7 @@ function findIPA () {
             if (i>0) out += ' • '
             out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
             }
+        out += ` &nbsp; <a href="${ ipa }" target="_blank">terms list</a>`
 		document.getElementById('phoneLinks').style.display = 'block'
 		document.getElementById('phoneLinks').innerHTML = out+' &nbsp;&nbsp;<span style="cursor:pointer" onclick="this.parentNode.style.display = \'none\'">X</span>&nbsp;&nbsp;'
 		}
@@ -2138,7 +2142,7 @@ function makeFootnoteIndex (charVal) {
     else if (this.querySelector('img')) incomingValue = this.querySelector('img').alt.replace(/◌/g,'')
     else incomingValue = this.textContent.replace(/◌/g,'')
     //itemToFind = new RegExp(makeSafeRegex(incomingValue), 'g')
-    //console.log('search for:',itemToFind)
+    //console.log('search for:',incomingValue)
 
 	// collect all the .listItem & .codepoint elements
 	var possibleMatches = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
@@ -2202,6 +2206,7 @@ function makeFootnoteIndex (charVal) {
             out += `>${ leanLinks[i] }</a> `
             //out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
             }
+        out += ` \u2022 <a href="${ langTag }_vocab.html?q=${ incomingValue }" target="terms">terms list</a>`
 		document.getElementById('phoneLinks').style.display = 'block'
 		document.getElementById('phoneLinks').innerHTML = out+`<span style="cursor:pointer; margin-inline: 1em;" onclick="this.parentNode.style.display = 'none'; clearFootnoteIndexHighlights()">X</span>&nbsp;&nbsp;`
 		}
