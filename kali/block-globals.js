@@ -8,4 +8,5 @@ window.detailsfileList = ['kyu'] // first part of xx-details for each orthograph
 window.scriptISO = 'kali'
 window.webfonts = ["Noto Sans Kayah Li WF"]
 window.defaultSize = '24px'
+hideBlockName = "KAYAH LI"
 
