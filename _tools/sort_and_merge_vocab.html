@@ -12,13 +12,19 @@
 <header>
 <h1>List transform</h1>
 </header>
-<p><textarea id="in" placeholder="Add input list here" style="height:800px;float:left; width:45%; font-size: 150%;"></textarea>
+
+
+
+<p><button onClick="document.getElementById('in').value = ''">Clear</button></p>
+
+<p><textarea id="in" placeholder="Add input list here" style="height:800px;float:left; width:45%; font-size: 150%;" onInput="lines=document.getElementById('in').value.split('\n');document.getElementById('inLength').textContent=lines.length;"></textarea>
 </p>
 
 <textarea id="out" style="height:800px;width:45%;float:right;"></textarea>
 
 <br style="clear: both;"/>
 
+<p>Lengths: <span id="inLength"></span> • <span id="outLength"></span></p>
 
 
 <p><button onClick="sortVocab()">Sort &amp; merge vocab</button><br><em>Input: List of vocab data. Output: List with no repeats, ordered by native text.</em></p>
@@ -69,6 +75,9 @@ function sortVocab() {
     console.log(charlist)
 	document.getElementById('out').value = charlist.join('\n')
 	document.getElementById('out').select()
+    
+    lines=document.getElementById('out').value.split('\n')
+    document.getElementById('outLength').textContent=lines.length
 	}
     
 function sortVocabX() {
@@ -211,7 +220,7 @@ function generateSpecialTranscriptionColumn () {
 
 
 <div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
-<!-- #BeginDate format:IS1m -->2024-03-24  15:08<!-- #EndDate --> 
+<!-- #BeginDate format:IS1m -->2024-04-24  15:12<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script>
