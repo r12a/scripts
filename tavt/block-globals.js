@@ -8,4 +8,5 @@ window.detailsfileList = ['blt'] // first part of xx-details for each orthograph
 window.scriptISO = 'tavt'
 window.webfonts = ["Tai Heritage WF", "Noto Sans Tai Viet WF"]
 window.defaultSize = '24px'
+hideBlockName = "TAI VIET"
 
