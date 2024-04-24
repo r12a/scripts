@@ -8,4 +8,4 @@ window.detailsfileList = ['zgh'] // first part of xx-details for each orthograph
 window.scriptISO = 'tfng'
 window.webfonts = ["Noto Sans Tifinagh WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "TIFINAGH"
