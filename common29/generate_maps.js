@@ -16,7 +16,7 @@ function initialise () {
 gatherData(document.getElementById('listin').value);">Go</button>
 </p>
 
-<textarea id="out" style="height:400px;width:100%;"></textarea>
+<textarea id="out" style="height:85vh;width:100%;"></textarea>
 `
 	document.getElementById('intro').innerHTML = out
 	
