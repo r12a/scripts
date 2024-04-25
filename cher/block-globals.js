@@ -8,4 +8,4 @@ window.detailsfileList = ['chr'] // first part of xx-details for each orthograph
 window.scriptISO = 'cher'
 window.webfonts = ["Noto Sans Cherokee WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "CHEROKEE"
