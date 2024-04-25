@@ -8,4 +8,4 @@ window.detailsfileList = ['vai'] // first part of xx-details for each orthograph
 window.scriptISO = 'vaii'
 window.webfonts = ["Noto Sans Vai WF"]
 window.defaultSize = '24px'
-
+hideBlockName = 'VAI'
