@@ -8,4 +8,4 @@ window.detailsfileList = ['bax'] // first part of xx-details for each orthograph
 window.scriptISO = 'bamu'
 window.webfonts = ["Noto Sans Bamum WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "BAMUM"
