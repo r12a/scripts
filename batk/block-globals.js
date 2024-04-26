@@ -8,4 +8,4 @@ window.detailsfileList = ['btk'] // first part of xx-details for each orthograph
 window.scriptISO = 'batk'
 window.webfonts = ["Noto Sans Batak WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "BATAK"
