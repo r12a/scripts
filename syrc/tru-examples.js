@@ -15,202 +15,346 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 */
 
 
-otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
-termListType = 3			// picks up sources automatically
-
-
 
 
 
 autoExpandExamples.tru = `
 
 @ wiktionary
+@ https://en.wiktionary.org/w/index.php?title=Category:Turoyo_terms_with_IPA_pronunciation
 
-ـܰܢܐ|this|-a§no§–|-ano||ـܢܐ
-ـܰܢܝ|these|-a§n§i|-ani||ـܢܝ
-ـܰܬ݂ܶܐ|this|-a§θe§–|-aṯe||ـܬܐ
-ܐܳܒ|August|o§b|ob||ܐܒ
-ܐܰܒܪܳܐ|son|a§b§ro§–|abro||ܐܒܪܐ
-ܐܰܕܡܐ|blood|a§d§mo§–|admo||ܐܕܡܐ
-ܐܰܕ݂ܢܐ|ear||aḏno||ܐܕܢܐ
-ܐܳܕ݂ܰܪ|March|o§ða§r|oḏar||ܐܕܪ
-ܐܰܚܘܢܳܐ|brother|a§ħ§u§no§–|aḥuno|‎|ܐܚܘܢܐ
-ܐܰܚܢܰܐ|we|a§ħ§na§–|aḥna||ܐܚܢܐ
-ܐܝـܝܰܪ|May|–§i§–§ja§r|iyar||ܐܝـܝܪ
-ܐܝܕ݂ܳܐ|hand||iḏo||ܐܝܕܐ
-ܐܝܠܷܢ|September|–§i§lə§n|ilën||ܐܝܠܢ
-ܐܰܠܦܐ|thousand|a§l§fo§–|alfo||ܐܠܦܐ
-ܐܠܦܐ|thousand|a§l§fo§–|alfo
-ܐܳܢܳܐ|I|o§no§–|ono||ܐܢܐ
-ܐܰܪܒܥܐ|four|a§r§b§ʕo§–|arbco||ܐܪܒܥܐ
-ܐܰܪܒܥܝ|forty|a§r§b§ʕ§i|arbci||ܐܪܒܥܝ
-ܐܰܪܒܰܥܣܰܪ|fourteen|a§r§ba§ʕ§sa§r|arbacsar||ܐܪܒܥܣܪ
-ܐܰܪܝܳܐ|lion||aryo||ܐܪܝܐ
-ܐܷܫܘܷܛ|February|ə§ʃ§wə§tˤ|ëšwëṭ||ܐܫܘܛ
-ܐܷܫܬܐ|six|ə§ʃ§to§–|ëšto||ܐܫܬܐ
-ܐܷܫܬܝ|fifty|ə§ʃ§t§i|ëšti||ܐܫܬܝ
-ܐܷܫܬܰܥܣܰܪ|sixteen|ə§ʃ§ta§ʕ§sa§r|ëštacsar||ܐܫܬܥܣܪ
-ܐܰܬ̣ܬܳܐ|wife||aṭto||ܐܬܬܐ
-ܐܰܕܠܰܠܝܐ|tonight||adlalyo||x
-ܐܰܝܕܰܪܒܐ|how||aydarbo||x
-ܐܰܪܢܘܘܳܐ|rabbit||arnuwo||x
-ܐܰܬ݂ܡܷܠ|yesterday||aṯmël||x
-ܐܰܬ݂ܬܐ|woman||aṯto||x
-ܐܳܬ݂ܐ|sign||oṯo||x
-ܐܶܡܐ|mother||emo||x
-ܐܷܫܡܐ|name||ëšmo||x
-ܒ̣ܝܝܰܢܰܐ|Vienna||Viyana||x
-ܒܰܒܐ|father|ba§b§o|||ܒܒܐ
-ܒܝܪܰܐ|beer||bira||x
-ܒܰܪܟܳܐ|knee||barko||ܒܪܟܐ
-ܒܰܪܬ݂ܳܐ|daughter|ba§r§θo§–|barṯo||ܒܪܬܐ
-ܒܰܒܰܗ|her father||baba||x
-ܒܰܒܶܗ|his father||babe||x
-ܒܰܗܪܐ|light||bahro||x
-ܒܳܬܶܐ|houses||bote||x
-ܒ݂ܝܠܠܰܐ|villa||villa||x
-ܓܰܘܳܐ|belly||gawo||ܓܘܐ
-ܓܰܘܪܳܐ|man, husband|ɡa§w§ro§–|ɡawro||ܓܘܪܐ	
-ܓܘܫܡܳܐ|body|g§u§ʃ§mo§–|gušmo||ܓܘܫܡܐ
-ܓܰܠܕܳܐ|skin||galdo||ܓܠܕܐ
-ܓܪܷܫܠܰܗ|she pulled||grëšla||x
-ܓܪܷܫܠܶܗ|he pulled||grëšle||x
-ܓ݂ܰܠܛܐ|mistake||ġalṭo||x
-ܓ݂ܱܠܱܒܶܐ|many||ġäläbe||x
-ܔܷܪܔܐ|George|d͡ʒə§r§d͡ʒo§–|jërjo|ܔܪܔܐ
-ܔܰܙܘܶܐ|coffee pot|d͡ʒa§z§we§–|jazwe||x
-ܕܘܟܬܐ|place||dukṯo||x
-ܕܰܩܩܰܐ|minute|da§q§qa§–|daqqa||ܕܩܩܐ
-ܕܪܘܥܳܐ|arm||druco||ܕܪܘܥܐ
-ܕܰܘܡܐ|tree||dawmo||x
-ܕܰܪܓ݂ܐ|stair||darġo||x
-ܗܰܘܐ|that|ha§wo§–|hawo||ܗܘܐ
-ܗܰܝܐ|that|ha§jo§–|hayo||ܗܝܐ
-ܗܝـܝܶܐ|he|h§i§–§ye§–|||ܗܝܝܐ
-ܗܝـܝܰܐ|she|h§i§–§ya§–|||ܗܝܝܐ
-ܗܰܢܳܐ|this|ha§no§–|hano||ܗܢܐ
-ܗܰܢܝ|these|ha§n§i§–|hani||ܗܢܝ
-ܗܰܢܷܟ|those|ha§nə§k|hanëk||ܗܢܟ
-ܗܷܢܢܶܐ|they|hə§n.§ne§–|hënne||ܗܢܢܐ
-ܗܰܬ|you (s)|ha§t|hat||ܗܬ
-ܗܰܬ݂ܶܐ|this|ha§θe§–|haṯe||ܗܬܐ
-ܗܰܬܘ|you (pl)|ha§t§u|hatu||ܗܬܘ
-ܗܶܫ|still||heš||x
-ܘܰܥܕܐ|appointment||wacdo||x
-ܙ̰ܱܒܰܫܶܐ|watermelon||žäbaše||x
-ܙܰܒܢܐ|time||zabno||x
-ܚܰܐ|one (m)|ħa§–|ḥa||ܚܐ
-ܚܕ݂ܐ|one (f)|ħ§ðo§–|ḥḏo||ܚܕܐ
-ܚܰܒܘܫܳܐ|apple|ħa§b§u§ʃo§–|ḥabušo||ܚܒܘܫܐ
-ܚܕ݂ܰܥܣܰܪ|eleven|ħ§ða§ʕ§sa§r|ḥḏacsar‎||ܚܕܥܣܪ
-ܚܘܠܬܐ|maternal aunt||ḥulto||ܚܘܠܬܐ
-ܚܙܝܪܷܢ|June|ħ§z§i§rə§n|ḥzirën||ܚܙܝܪܢ
-ܚܳܠܐ|maternal uncle||ḥolo||ܚܠܐ
-ܚܡܳܪܳܐ|donkey|ħ§mo§ro§–|ḥmoro||ܚܡܪܐ
-ܚܰܡܪܳܐ|wine|ħa§m§ro§–|ḥamro||ܚܡܪܐ
-ܚܰܡܫܐ|five|ħa§m§ʃo§–|ḥamšo||ܚܡܫܐ
-ܚܰܡܫܝ|fifty|ħa§m§ʕ§i|ḥamši||ܚܡܫܝ
-ܚܰܡܫܰܥܣܰܪ|fifteen|ħa§m§ʃa§ʕ§sa§r|ḥamšacsar||ܚܡܫܥܣܪ
-ܚܳܬ݂ܳܐ|sister|ħo§θo§–|ḥoṯo||ܚܬܐ
-ܚܰܠܘܐ|milk||ḥalwo||x
-ܛܷܒܒܰܟ݂|August|tə§b§ba§x|ṭëbbax||ܛܒܒܟ
-ܛܰܓ݂ܢܳܐ|pan, frying pan|ta§ɣ§no§–|ṭaġno||ܛܓܢܐ
-ܛܰܝܳܐ|muslim|tˤa§jo§–|ṭayo||ܛܝܐ
-ܝܰܘܡܳܐ|day|ja§w§mo§–|yawmo||ܝܘܡܐ
-ܝܰܪܚܳܐ|month|ja§r§ħo§–|yarḥo||ܝܪܚܐ
-ܟܰܠܒܳܐ|dog|ka§l§bo§–|kalbo||ܟܠܒܐ
-ܟܳܢܘܢ ܚܰܪܳܝܳܐ|January|ko§n§u§n§ §ħa§ro§jo§–|konun ḥaroyo||ܟܢܘܢ ܚܪܝܐ
-ܟܳܢܘܢ ܩܰܡܳܝܳܐ|December|ko§n§u§n§ §qa§mo§jo§–|konun qamoyo||ܟܢܘܢ ܩܡܝܐ
-ܟܬ݂ܳܒ݂ܳܐ|book|k§θo§wo§–|kθowo||ܟܬܒܐ
-ܟܰܬܦܳܐ|shoulder||katfo||ܟܬܦܐ
-ܟܰܓ݂ܰܬ|paper||kaġat||x
-ܟ݂ܰܒܪܐ|word||xabro||x
-ܠܰܚܡܳܐ|bread|la§ħ§mo§–|laḥmo||ܠܚܡܐ
-ܠܝܫܳܢܳܐ|tongue, language||lišono||ܠܝܫܢܐ
-ܡܐ|hundred|mo§–|mo||ܡܐ
-ܡܘܚܐ|brain||muḥo||ܡܘܚܐ
-ܡܘܟܠܐ|food||muklo||x
-ܡܰܬ݂ܶܐ|two hundred|ma§θe§–|maṯe||ܡܬܐ
-ܡܰܠܟܘܬ݂ܐ|kingdom||malkuṯo||x
-ܢܚܝܪܳܐ|nose||nḥiro||ܢܚܝܪܐ
-ܢܝܣܷܢ|April|n§i§sə§n|nisën||ܢܝܣܢ
-ܣܘܪܓܳܕ݂ܳܐ|calendar|s§u§r§ɡo§ðo§–|surgoḏo||ܣܘܪܓܕܐ
-ܣܰܥܰܐ|hour|sa§ʕa§–|saca||ܣܥܐ
-ܫܳܥܬ݂ܳܐ|hour|ʃo§ʕ§θo§–|šocṯo||ܫܥܬܐ
-ܣܰܥܪܳܐ|hair||sacro||ܣܥܪܐ
-ܣܰܬ݂ܘܳܐ|winter|sa§θ§wo§–|saṯwo||ܣܬܘܐ
-ܣܷܣܝܐ|horse|sə§s§j§o|sësyo||x
-ܥܰܛܡܳܐ|bone, thigh||caṭmo||ܥܛܡܐ
-ܥܰܝܢܳܐ|eye||cayno||ܥܝܢܐ
-ܥܰܟܣܘܢܳܐ|elbow||caksuno||ܥܟܣܘܢܐ
-ܥܰܡܡܐ|paternal uncle||cammo||ܥܡܡܐ
-ܥܰܡܬ̣ܐ|paternal aunt||camṯo||ܥܡܬܐ
-ܥܰܣܪܐ|ten|ʕa§sˤ§ro§–|casro||ܥܣܪܐ
-ܥܷܣܪܝ|twenty|ʕə§ʃ§r§i|cësri||ܥܣܪܝ
-ܥܰܪܩܘܘܐ|heel||carquwo||ܥܪܩܘܘܐ
-ܥܰܨܪܝـܝܶܐ|evening||caṣriye||x
-ܦܶܡܳܐ|mouth||femo||ܦܡܐ
-ܦܪܳܣܩܳܠܳܐ|radio|f§ro§s§qo§lo§–|frosqolo||ܦܪܣܩܠܐ
-ܦܳܬ̣ܳܐ|face||foṭo||ܦܬܐ
-ܦ݁ܠܰܢ|plan||plan||x
-ܨܰܕܪܳܐ|chest||ṣadro||ܨܕܪܐ
-ܨܰܘܥܳܐ|finger||ṣawco||ܨܘܥܐ
-ܨܰܢܝـܝܶܐ|second|sˤa§n§i§–§je§–|ṣaniye||ܨܢܝـܝܐ
-ܪܦܳܦܳܐ|a second|r§fo§fo§–|rfofo||ܪܦܦܐ
-ܨܰܦ݂ܪܳܐ|tomorrow|sˤa§f§ro§–|ṣaf݂ro||ܨܦܪܐ
-ܨܷܪܬܳܐ|picture, image|sˤə§r§to§–|ṣërto||ܨܪܬܐ
-ܩܕ݂ܳܠܳܐ|neck||qḏolo||ܩܕܠܐ
-ܩܰܘܪܳܐ|grave, cemetery|qa§w§ro§–|qawro||ܩܘܪܐ
-ܩܰܛܷܢܬܳܐ‎|minute|qa§tˤə§n§to§–|qaṭënto‎||ܩܛܢܬܐ
-ܩܰܝܛܳܐ|spring|qa§j§tˤo§–|qayṭo||ܩܝܛܐ
-ܩܠܝܕ݂ܐ|key||qliḏo||ܩܠܝܕܐ
-ܩܡܶܣܬܳܐ|shirt, robe|q§mə§s§tɒ§–|qmesto||ܩܡܣܬܐ
-ܩܰܚܘܰܐ|coffee||qaḥwa||x
-ܪܰܒܷܥ|Spring|ra§bə§ʕ|rabëc||ܪܒܥ
-ܪܰܓ݂ܠܳܐ|foot||raġlo||ܪܓܠܐ
-ܪܝܫܳܐ|head||rišo||ܪܝܫܐ
-ܫܰܢܛܰܐ|bag|ʃa§n.§tˤa§–|šanṭa||ܫܢܛܐ
-ܫ̰ܰܢܛܰܐ|bag|t͡ʃa§n§tˤa§–|čanṭa||ܫ̰ܢܛܐ
-ܫܰܒܬ݂ܳܐ|week, Saturday|ʃa§b§θo§–|šabṯo|ܫܒܬܐ
-ܫܘܚܠܳܦܳܐ|season|ʃ§u§ħ§lo§fo§–|šuḥlofo||ܫܘܚܠܦܐ
-ܫܰܘܥܐ|seven|ʃa§w§ʕo§–|šawco||ܫܘܥܐ
-ܫܰܘܥܝ|seventy|ʃa§w§ʕ§i|šawci||ܫܘܥܝ
-ܫܘܰܥܣܰܪ|seventy|ʃ§wa§ʕ§sa§r|šwacsar||ܫܘܥܣܪ
-ܫܠܳܡܐ|hello||šlomo||ܫܠܡܐ
-ܫܳܩܳܐ|leg||šoqo||ܫܩܐ
-ܫܰܬܳܐ|year|ʃa§to§–|šato||ܫܬܐ
-ܬܠܳܬ݂ܐ|three|t§lo§θo§–|tloṯo||ܬܠܬܐ
-ܬܠܶܬ݂ܝ|thirty|t§le§θ§i|tleṯi||ܬܠܬܝ
-ܬܠܷܬ݂ܡܐ|three hundred|t§lə§θ§mo§–|tlëṯmo||ܬܠܬܡܐ
-ܬܠܳܬ݂ܰܥܣܰܪ|thirteen|t§lo§θa§ʕ§sa§r|tloṯacsar||ܬܠܬܥܣܪ
-ܬܰܡܷܙ|July|ta§mə§z|tamëz||ܬܡܙ
-ܬܡܳܢܝ|eighty|t§mo§n§i|tmoni||ܬܡܢܝ
-ܬܡܰܢܝܐ|eight|t§ma§n§jo§–|tmanyo||ܬܡܢܝܐ
-ܬܡܳܢܰܥܣܰܪ|eighteen|t§mo§na§ʕ§sa§r|tmonacsar||ܬܡܢܥܣܪ
-ܬܪܶܐ|two|t§re§–|tre||ܬܪܐ
-ܬܪܰܥܣܰܪ|twelve|t§ra§ʕ§sa§r|tracsar||ܬܪܥܣܪ
-ܬܷܫܥܐ|nine|tə§ʃ§ʕo§–|tëšco||ܬܫܥܐ
-ܬܷܫܥܝ|ninety|tə§ʃ§ʕ§i|tëšci||ܬܫܥܝ
-ܬܫܰܥܣܰܪ|nineteen|t§ʃa§ʕ§sa§r|tšacsar||ܬܫܥܣܪ
-ܬܷܫܪܳܝܳܬ݂ܶܐ|autumn|tə§ʃ§ro§jo§θe§–|tëšroyoṯe||ܬܫܪܝܬܐ
-ܬܷܫܪܷܢ ܚܰܪܳܝܳܐ|November|tə§ʃ§rə§n§ §ħa§ro§jo§–|tëšrën ḥaroyo||ܬܫܪܢ ܚܪܝܐ
-ܬܷܫܪܷܢ ܩܰܡܳܝܳܐ|October|tə§ʃ§rə§n§ §qa§mo§jo§–|tëšrën qamoyo||ܬܫܪܢ ܩܡܝܐ
-ܬܰܠܓܐ|snow||talgo||x
-ܕܰܗܘܐ|gold|da§h§wo§–||||x
 
-ܫ̰ܰܟܶܬ|jacket|t͡ʃa§ke§t|caket||x
-ܟܱܫ̰ܰܠ|bald head|kə§t͡ʃa§l|käčal||x
-ܬܰܠܰܒ݂ܝܙܝܳܢ|television|ta§la§v§i§z§jo§n|talavizyon||x
-ܡܰܛܒܰܟ݂|kitchen|ma§tˤ§ba§x|maṭbax||x
-
+-ܝܕܝ||␣||
+ـܢܐ||␣||
+ـܢܝ||␣||
+ـܬܐ||␣||
+ـܰܢܐ|this|-a§no§–|-ano|ـܢܐ||ـܢܐ
+ـܰܢܝ|these|-a§n§i|-ani|ـܢܝ||ـܢܝ
+ـܰܬ݂ܶܐ|this|-a§θe§–|-aṯe|ـܬܐ||ـܬܐ
+ܐܒ||␣||
+ܐܒܪܐ||␣||
+ܐܕܪ||␣||
+ܐܘܪܗܝ||␣||
+ܐܚܘܢܐ||␣||
+ܐܚܢܐ||␣||
+ܐܝـܝܪ||␣||
+ܐܝـܝܰܪ|May|–§i§–§ja§r|iyar|ܐܝـܝܪ||ܐܝـܝܪ
+ܐܝܕ݂ܳܐ|hand||iḏo|ܐܝܕܐ||ܐܝܕܐ
+ܐܝܠܢ||␣||
+ܐܝܠܷܢ|September|–§i§lə§n|ilën|ܐܝܠܢ||ܐܝܠܢ
+ܐܠܗ||␣||
+ܐܠܗܐ||␣||
+ܐܰܠܦܐ|thousand|a§l§fo§–|alfo|ܐܠܦܐ||ܐܠܦܐ
+ܐܡܐ||␣||
+ܐܢܐ||␣||
+ܐܪܒܥܐ||␣||
+ܐܪܒܥܝ||␣||
+ܐܪܒܥܣܪ||␣||
+ܐܫܘܛ||␣||
+ܐܫܡܐ||␣||
+ܐܫܢܐ||␣||
+ܐܫܩܕ||␣||
+ܐܫܬܐ||␣||
+ܐܫܬܝ||␣||
+ܐܫܬܥܣܪ||␣||
+ܐܰܒܪܳܐ|son|a§b§ro§–|abro|ܐܒܪܐ||ܐܒܪܐ
+ܐܰܕܡܐ|blood|a§d§mo§–|admo|ܐܕܡܐ||ܐܕܡܐ
+ܐܰܕ݂ܢܐ|ear||aḏno|ܐܕܢܐ||ܐܕܢܐ
+ܐܰܚܘܢܳܐ|brother|a§ħ§u§no§–|aḥuno|ܐܚܘܢܐ|‎|ܐܚܘܢܐ
+ܐܰܚܢܰܐ|we|a§ħ§na§–|aḥna|ܐܚܢܐ||ܐܚܢܐ
+ܐܰܪܒܥܐ|four|a§r§b§ʕo§–|arbco|ܐܪܒܥܐ||ܐܪܒܥܐ
+ܐܰܪܒܥܝ|forty|a§r§b§ʕ§i|arbci|ܐܪܒܥܝ||ܐܪܒܥܝ
+ܐܰܪܒܰܥܣܰܪ|fourteen|a§r§ba§ʕ§sa§r|arbacsar|ܐܪܒܥܣܪ||ܐܪܒܥܣܪ
+ܐܰܪܝܳܐ|lion||aryo|ܐܪܝܐ||ܐܪܝܐ
+ܐܰܬ̣ܬܳܐ|wife||aṭto|ܐܬܬܐ||ܐܬܬܐ
+ܐܳܒ|August|o§b|ob|ܐܒ||ܐܒ
+ܐܳܕ݂ܰܪ|March|o§ða§r|oḏar|ܐܕܪ||ܐܕܪ
+ܐܳܢܳܐ|I|o§no§–|ono|ܐܢܐ||ܐܢܐ
+ܐܷܫܘܷܛ|February|ə§ʃ§wə§tˤ|ëšwëṭ|ܐܫܘܛ||ܐܫܘܛ
+ܐܷܫܬܐ|six|ə§ʃ§to§–|ëšto|ܐܫܬܐ||ܐܫܬܐ
+ܐܷܫܬܝ|fifty|ə§ʃ§t§i|ëšti|ܐܫܬܝ||ܐܫܬܝ
+ܐܷܫܬܰܥܣܰܪ|sixteen|ə§ʃ§ta§ʕ§sa§r|ëštacsar|ܐܫܬܥܣܪ||ܐܫܬܥܣܪ
+ܒܚܪܐ||␣||
+ܒܩܐ||␣||
+ܒܪܬܐ||␣||
+ܒܫܡ||␣||
+ܒܰܒܐ|father|ba§b§o||ܒܒܐ||ܒܒܐ
+ܒܰܪܟܳܐ|knee||barko|ܒܪܟܐ||ܒܪܟܐ
+ܒܰܪܬ݂ܳܐ|daughter|ba§r§θo§–|barṯo|ܒܪܬܐ||ܒܪܬܐ
+ܓܒ||␣||
+ܓܘܪܐ||␣||
+ܓܘܫܡܳܐ|body|g§u§ʃ§mo§–|gušmo|ܓܘܫܡܐ||ܓܘܫܡܐ
+ܓܝܗܢܐ||␣||
+ܓܢܢܐ||␣||
+ܓܢܬܐ||␣||
+ܓܦܐ||␣||
+ܓܫܪܐ||␣||
+ܓܰܘܪܳܐ|man, husband|ɡa§w§ro§–|ɡawro|ܓܘܪܐ||ܓܘܪܐ
+ܓܰܘܳܐ|belly||gawo|ܓܘܐ||ܓܘܐ
+ܓܰܠܕܳܐ|skin||galdo|ܓܠܕܐ||ܓܠܕܐ
+ܔܪܔܐ||␣||
+ܔܷܪܔܐ|George|d͡ʒə§r§d͡ʒo§–|jërjo|ܔܪܔܐ||ܔܪܔܐ
+ܕܘܓܠܐ||␣||
+ܕܟܪܐ||␣||
+ܕܩܩܐ||␣||
+ܕܩܩܬ||␣||
+ܕܪܘܥܳܐ|arm||druco|ܕܪܘܥܐ||ܕܪܘܥܐ
+ܕܰܩܩܰܐ|minute|da§q§qa§–|daqqa|ܕܩܩܐ||ܕܩܩܐ
+ܗܘܐ||␣||
+ܗܝـܝܰܐ|she|h§i§–§ya§–||ܗܝܝܐ||ܗܝܝܐ
+ܗܝـܝܶܐ|he|h§i§–§ye§–||ܗܝܝܐ||ܗܝܝܐ
+ܗܝܐ||␣||
+ܗܝܝܐ||␣||
+ܗܢܐ||␣||
+ܗܢܝ||␣||
+ܗܢܟ||␣||
+ܗܢܢܐ||␣||
+ܗܬ||␣||
+ܗܬܐ||␣||
+ܗܬܘ||␣||
+ܗܰܘܐ|that|ha§wo§–|hawo|ܗܘܐ||ܗܘܐ
+ܗܰܝܐ|that|ha§jo§–|hayo|ܗܝܐ||ܗܝܐ
+ܗܰܢܝ|these|ha§n§i§–|hani|ܗܢܝ||ܗܢܝ
+ܗܰܢܳܐ|this|ha§no§–|hano|ܗܢܐ||ܗܢܐ
+ܗܰܢܷܟ|those|ha§nə§k|hanëk|ܗܢܟ||ܗܢܟ
+ܗܰܬ|you (s)|ha§t|hat|ܗܬ||ܗܬ
+ܗܰܬܘ|you (pl)|ha§t§u|hatu|ܗܬܘ||ܗܬܘ
+ܗܰܬ݂ܶܐ|this|ha§θe§–|haṯe|ܗܬܐ||ܗܬܐ
+ܗܷܢܢܶܐ|they|hə§n.§ne§–|hënne|ܗܢܢܐ||ܗܢܢܐ
+ܙܢܢܟܐ||␣||
+ܙܥܘܪܐ||␣||
+ܚܐ||␣||
+ܚܕܐ||␣||
+ܚܕܥܣܪ||␣||
+ܚܕ݂ܐ|one (f)|ħ§ðo§–|ḥḏo|ܚܕܐ||ܚܕܐ
+ܚܕ݂ܰܥܣܰܪ|eleven|ħ§ða§ʕ§sa§r|ḥḏacsar‎|ܚܕܥܣܪ||ܚܕܥܣܪ
+ܚܘܠܬܐ|maternal aunt||ḥulto|ܚܘܠܬܐ||ܚܘܠܬܐ
+ܚܘܪܐ||␣||
+ܚܙܝܪܢ||␣||
+ܚܙܝܪܷܢ|June|ħ§z§i§rə§n|ḥzirën|ܚܙܝܪܢ||ܚܙܝܪܢ
+ܚܡܪܐ||␣||
+ܚܡܫܐ||␣||
+ܚܡܫܝ||␣||
+ܚܡܫܥܣܪ||␣||
+ܚܡܳܪܳܐ|donkey|ħ§mo§ro§–|ḥmoro|ܚܡܪܐ||ܚܡܪܐ
+ܚܬܐ||␣||
+ܚܰܐ|one (m)|ħa§–|ḥa|ܚܐ||ܚܐ
+ܚܰܒܘܫܳܐ|apple|ħa§b§u§ʃo§–|ḥabušo|ܚܒܘܫܐ||ܚܒܘܫܐ
+ܚܰܡܪܳܐ|wine|ħa§m§ro§–|ḥamro|ܚܡܪܐ||ܚܡܪܐ
+ܚܰܡܫܐ|five|ħa§m§ʃo§–|ḥamšo|ܚܡܫܐ||ܚܡܫܐ
+ܚܰܡܫܝ|fifty|ħa§m§ʕ§i|ḥamši|ܚܡܫܝ||ܚܡܫܝ
+ܚܰܡܫܰܥܣܰܪ|fifteen|ħa§m§ʃa§ʕ§sa§r|ḥamšacsar|ܚܡܫܥܣܪ||ܚܡܫܥܣܪ
+ܚܳܠܐ|maternal uncle||ḥolo|ܚܠܐ||ܚܠܐ
+ܚܳܬ݂ܳܐ|sister|ħo§θo§–|ḥoṯo|ܚܬܐ||ܚܬܐ
+ܛܒܒܟ||␣||
+ܛܓܢܐ||␣||
+ܛܘܘܐ||␣||
+ܛܝܐ||␣||
+ܛܰܓ݂ܢܳܐ|pan, frying pan|ta§ɣ§no§–|ṭaġno|ܛܓܢܐ||ܛܓܢܐ
+ܛܰܝܳܐ|muslim|tˤa§jo§–|ṭayo|ܛܝܐ||ܛܝܐ
+ܛܷܒܒܰܟ݂|August|tə§b§ba§x|ṭëbbax|ܛܒܒܟ||ܛܒܒܟ
+ܝܘܡܐ||␣||
+ܝܡܐ||␣||
+ܝܪܚܐ||␣||
+ܝܫܘܥ||␣||
+ܝܰܘܡܳܐ|day|ja§w§mo§–|yawmo|ܝܘܡܐ||ܝܘܡܐ
+ܝܰܪܚܳܐ|month|ja§r§ħo§–|yarḥo|ܝܪܚܐ||ܝܪܚܐ
+ܟܓܬ||␣||
+ܟܝܐ||␣||
+ܟܝܝܣܐ||␣||
+ܟܟܐ||␣||
+ܟܠܒܐ||␣||
+ܟܠܠܐ||␣||
+ܟܡܐ||␣||
+ܟܢܘܢ ܚܪܝܐ||␣||
+ܟܢܘܢ ܩܡܝܐ||␣||
+ܟܫܫܟܐ||␣||
+ܟܬܘܐ||␣||
+ܟܬܦܐ||␣||
+ܟܬ݂ܳܒ݂ܳܐ|book|k§θo§wo§–|kθowo|ܟܬܒܐ||ܟܬܒܐ
+ܟܰܠܒܳܐ|dog|ka§l§bo§–|kalbo|ܟܠܒܐ||ܟܠܒܐ
+ܟܰܬܦܳܐ|shoulder||katfo|ܟܬܦܐ||ܟܬܦܐ
+ܟܳܢܘܢ ܚܰܪܳܝܳܐ|January|ko§n§u§n§ §ħa§ro§jo§–|konun ḥaroyo|ܟܢܘܢ ܚܪܝܐ||ܟܢܘܢ ܚܪܝܐ
+ܟܳܢܘܢ ܩܰܡܳܝܳܐ|December|ko§n§u§n§ §qa§mo§jo§–|konun qamoyo|ܟܢܘܢ ܩܡܝܐ||ܟܢܘܢ ܩܡܝܐ
+ܠܐܠܐ||␣||
+ܠܗܒܟ||␣||
+ܠܚܡܐ||␣||
+ܠܝܫܳܢܳܐ|tongue, language||lišono|ܠܝܫܢܐ||ܠܝܫܢܐ
+ܠܰܚܡܳܐ|bread|la§ħ§mo§–|laḥmo|ܠܚܡܐ||ܠܚܡܐ
+ܡܐ|hundred|mo§–|mo|ܡܐ||ܡܐ
+ܡܓܠܝܘܢ||␣||
+ܡܓܠܝܢ||␣||
+ܡܕܐ||␣||
+ܡܘܚܐ|brain||muḥo|ܡܘܚܐ||ܡܘܚܐ
+ܡܠܟܐ||␣||
+ܡܣܟܝܢܐ||␣||
+ܡܫܚܐ||␣||
+ܡܬܐ||␣||
+ܡܰܬ݂ܶܐ|two hundred|ma§θe§–|maṯe|ܡܬܐ||ܡܬܐ
 ܡܷܠܠܶܗ|nation|məlle|mëlle
 ܡܷܪܪܶܗ|they said|mərre|mërr
+ܢܚܝܪܳܐ|nose||nḥiro|ܢܚܝܪܐ||ܢܚܝܪܐ
+ܢܝܣܢ||␣||
+ܢܝܣܷܢ|April|n§i§sə§n|nisën|ܢܝܣܢ||ܢܝܣܢ
+ܣܘܪܓܕܐ||␣||
+ܣܘܪܓܳܕ݂ܳܐ|calendar|s§u§r§ɡo§ðo§–|surgoḏo|ܣܘܪܓܕܐ||ܣܘܪܓܕܐ
+ܣܟܡܒܝܠ||␣||
+ܣܥܐ||␣||
+ܣܥܬ||␣||
+ܣܬܘܐ||␣||
+ܣܰܥܪܳܐ|hair||sacro|ܣܥܪܐ||ܣܥܪܐ
+ܣܰܥܰܐ|hour|sa§ʕa§–|saca|ܣܥܐ||ܣܥܐ
+ܣܰܬ݂ܘܳܐ|winter|sa§θ§wo§–|saṯwo|ܣܬܘܐ||ܣܬܘܐ
+ܥܙܪܐ||␣||
+ܥܣܟܪ||␣||
+ܥܣܪܐ||␣||
+ܥܣܪܝ||␣||
+ܥܰܛܡܳܐ|bone, thigh||caṭmo|ܥܛܡܐ||ܥܛܡܐ
+ܥܰܝܢܳܐ|eye||cayno|ܥܝܢܐ||ܥܝܢܐ
+ܥܰܟܣܘܢܳܐ|elbow||caksuno|ܥܟܣܘܢܐ||ܥܟܣܘܢܐ
+ܥܰܡܡܐ|paternal uncle||cammo|ܥܡܡܐ||ܥܡܡܐ
+ܥܰܡܬ̣ܐ|paternal aunt||camṯo|ܥܡܬܐ||ܥܡܬܐ
+ܥܰܣܪܐ|ten|ʕa§sˤ§ro§–|casro|ܥܣܪܐ||ܥܣܪܐ
+ܥܰܪܩܘܘܐ|heel||carquwo|ܥܪܩܘܘܐ||ܥܪܩܘܘܐ
+ܥܷܣܪܝ|twenty|ʕə§ʃ§r§i|cësri|ܥܣܪܝ||ܥܣܪܝ
+ܦܪܳܣܩܳܠܳܐ|radio|f§ro§s§qo§lo§–|frosqolo|ܦܪܣܩܠܐ||ܦܪܣܩܠܐ
+ܦܳܬ̣ܳܐ|face||foṭo|ܦܬܐ||ܦܬܐ
+ܦܶܡܳܐ|mouth||femo|ܦܡܐ||ܦܡܐ
+ܨܢܝـܝܐ||␣||
+ܨܢܝـܝܬ||␣||
+ܨܦܪܐ||␣||
+ܨܪܬܐ||␣||
+ܨܰܕܪܳܐ|chest||ṣadro|ܨܕܪܐ||ܨܕܪܐ
+ܨܰܘܥܳܐ|finger||ṣawco|ܨܘܥܐ||ܨܘܥܐ
+ܨܰܢܝـܝܶܐ|second|sˤa§n§i§–§je§–|ṣaniye|ܨܢܝـܝܐ||ܨܢܝـܝܐ
+ܨܰܦ݂ܪܳܐ|tomorrow|sˤa§f§ro§–|ṣaf݂ro|ܨܦܪܐ||ܨܦܪܐ
+ܨܷܪܬܳܐ|picture, image|sˤə§r§to§–|ṣërto|ܨܪܬܐ||ܨܪܬܐ
+ܩܕ݂ܳܠܳܐ|neck||qḏolo|ܩܕܠܐ||ܩܕܠܐ
+ܩܘܪܐ||␣||
+ܩܛܝܢܬܐ||␣||
+ܩܛܢܬܐ||␣||
+ܩܝܛܐ||␣||
+ܩܠܝܕ݂ܐ|key||qliḏo|ܩܠܝܕܐ||ܩܠܝܕܐ
+ܩܡܝܐ||␣||
+ܩܡܣܬܐ||␣||
+ܩܡܶܣܬܳܐ|shirt, robe|q§mə§s§tɒ§–|qmesto|ܩܡܣܬܐ||ܩܡܣܬܐ
+ܩܪܩܘܪܐ||␣||
+ܩܰܘܪܳܐ|grave, cemetery|qa§w§ro§–|qawro|ܩܘܪܐ||ܩܘܪܐ
+ܩܰܛܷܢܬܳܐ‎|minute|qa§tˤə§n§to§–|qaṭënto‎|ܩܛܢܬܐ||ܩܛܢܬܐ
+ܩܰܝܛܳܐ|spring|qa§j§tˤo§–|qayṭo|ܩܝܛܐ||ܩܝܛܐ
+ܪܒܝܥܝܐ||␣||
+ܪܒܥ||␣||
+ܪܝܫܳܐ|head||rišo|ܪܝܫܐ||ܪܝܫܐ
+ܪܦܦܐ||␣||
+ܪܦܳܦܳܐ|a second|r§fo§fo§–|rfofo|ܪܦܦܐ||ܪܦܦܐ
+ܪܰܒܷܥ|Spring|ra§bə§ʕ|rabëc|ܪܒܥ||ܪܒܥ
+ܪܰܓ݂ܠܳܐ|foot||raġlo|ܪܓܠܐ||ܪܓܠܐ
+ܫ̰ܰܢܛܰܐ|bag|t͡ʃa§n§tˤa§–|čanṭa|ܫ̰ܢܛܐ||ܫ̰ܢܛܐ
+ܫܒܐ||␣||
+ܫܒܬܐ||␣||
+ܫܘܚܠܦܐ||␣||
+ܫܘܚܠܳܦܳܐ|season|ʃ§u§ħ§lo§fo§–|šuḥlofo|ܫܘܚܠܦܐ||ܫܘܚܠܦܐ
+ܫܘܥܐ||␣||
+ܫܘܥܝ||␣||
+ܫܘܥܣܪ||␣||
+ܫܘܰܥܣܰܪ|seventy|ʃ§wa§ʕ§sa§r|šwacsar|ܫܘܥܣܪ||ܫܘܥܣܪ
+ܫܝܟܐ||␣||
+ܫܠܳܡܐ|hello||šlomo|ܫܠܡܐ||ܫܠܡܐ
+ܫܡܐ||␣||
+ܫܢܓܐ||␣||
+ܫܢܛܐ||␣||
+ܫܥܐ||␣||
+ܫܥܬܐ||␣||
+ܫܩܡܩ||␣||
+ܫܬܐ||␣||
+ܫܰܒܬ݂ܳܐ|week, Saturday|ʃa§b§θo§–|šabṯo|ܫܒܬܐ||ܫܒܬܐ
+ܫܰܘܥܐ|seven|ʃa§w§ʕo§–|šawco|ܫܘܥܐ||ܫܘܥܐ
+ܫܰܘܥܝ|seventy|ʃa§w§ʕ§i|šawci|ܫܘܥܝ||ܫܘܥܝ
+ܫܰܢܛܰܐ|bag|ʃa§n.§tˤa§–|šanṭa|ܫܢܛܐ||ܫܢܛܐ
+ܫܰܬܳܐ|year|ʃa§to§–|šato|ܫܬܐ||ܫܬܐ
+ܫܳܥܬ݂ܳܐ|hour|ʃo§ʕ§θo§–|šocṯo|ܫܥܬܐ||ܫܥܬܐ
+ܫܳܩܳܐ|leg||šoqo|ܫܩܐ||ܫܩܐ
+ܬܠܝܬܝܐ||␣||
+ܬܠܬܐ||␣||
+ܬܠܬܝ||␣||
+ܬܠܬܡܐ||␣||
+ܬܠܬܥܣܪ||␣||
+ܬܠܳܬ݂ܐ|three|t§lo§θo§–|tloṯo|ܬܠܬܐ||ܬܠܬܐ
+ܬܠܳܬ݂ܰܥܣܰܪ|thirteen|t§lo§θa§ʕ§sa§r|tloṯacsar|ܬܠܬܥܣܪ||ܬܠܬܥܣܪ
+ܬܠܶܬ݂ܝ|thirty|t§le§θ§i|tleṯi|ܬܠܬܝ||ܬܠܬܝ
+ܬܠܷܬ݂ܡܐ|three hundred|t§lə§θ§mo§–|tlëṯmo|ܬܠܬܡܐ||ܬܠܬܡܐ
+ܬܡܙ||␣||
+ܬܡܢܝ||␣||
+ܬܡܢܝܐ||␣||
+ܬܡܢܥܣܪ||␣||
+ܬܡܰܢܝܐ|eight|t§ma§n§jo§–|tmanyo|ܬܡܢܝܐ||ܬܡܢܝܐ
+ܬܡܳܢܝ|eighty|t§mo§n§i|tmoni|ܬܡܢܝ||ܬܡܢܝ
+ܬܡܳܢܰܥܣܰܪ|eighteen|t§mo§na§ʕ§sa§r|tmonacsar|ܬܡܢܥܣܪ||ܬܡܢܥܣܪ
+ܬܪܐ||␣||
+ܬܪܝܢܐ||␣||
+ܬܪܥܣܪ||␣||
+ܬܪܰܥܣܰܪ|twelve|t§ra§ʕ§sa§r|tracsar|ܬܪܥܣܪ||ܬܪܥܣܪ
+ܬܪܶܐ|two|t§re§–|tre|ܬܪܐ||ܬܪܐ
+ܬܫܥܐ||␣||
+ܬܫܥܝ||␣||
+ܬܫܥܣܪ||␣||
+ܬܫܪܝܬܐ||␣||
+ܬܫܪܢ ܚܪܝܐ||␣||
+ܬܫܪܢ ܩܡܝܐ||␣||
+ܬܫܰܥܣܰܪ|nineteen|t§ʃa§ʕ§sa§r|tšacsar|ܬܫܥܣܪ||ܬܫܥܣܪ
+ܬܰܡܷܙ|July|ta§mə§z|tamëz|ܬܡܙ||ܬܡܙ
+ܬܷܫܥܐ|nine|tə§ʃ§ʕo§–|tëšco|ܬܫܥܐ||ܬܫܥܐ
+ܬܷܫܥܝ|ninety|tə§ʃ§ʕ§i|tëšci|ܬܫܥܝ||ܬܫܥܝ
+ܬܷܫܪܳܝܳܬ݂ܶܐ|autumn|tə§ʃ§ro§jo§θe§–|tëšroyoṯe|ܬܫܪܝܬܐ||ܬܫܪܝܬܐ
+ܬܷܫܪܷܢ ܚܰܪܳܝܳܐ|November|tə§ʃ§rə§n§ §ħa§ro§jo§–|tëšrën ḥaroyo|ܬܫܪܢ ܚܪܝܐ||ܬܫܪܢ ܚܪܝܐ
+ܬܷܫܪܷܢ ܩܰܡܳܝܳܐ|October|tə§ʃ§rə§n§ §qa§mo§jo§–|tëšrën qamoyo|ܬܫܪܢ ܩܡܝܐ||ܬܫܪܢ ܩܡܝܐ
 
 
 
 
-
-
+@ ?
+ܐܰܕܠܰܠܝܐ|tonight||adlalyo|
+ܐܰܝܕܰܪܒܐ|how||aydarbo|
+ܒܰܒܰܗ|her father||baba|
+ܒܰܒܶܗ|his father||babe|
+ܒܰܗܪܐ|light||bahro|
+ܒܳܬܶܐ|houses||bote|
+ܒ݂ܝܠܠܰܐ|villa||villa|
+ܓܪܷܫܠܰܗ|she pulled||grëšla|
+ܓܪܷܫܠܶܗ|he pulled||grëšle|
+ܓ݂ܰܠܛܐ|mistake||ġalṭo|
+ܓ݂ܱܠܱܒܶܐ|many||ġäläbe|
+ܔܰܙܘܶܐ|coffee pot|d͡ʒa§z§we§–|jazwe|
+ܕܘܟܬܐ|place||dukṯo|
+ܕܰܗܘܐ|gold|da§h§wo§–||
+ܕܰܘܡܐ|tree||dawmo|
+ܕܰܪܓ݂ܐ|stair||darġo|
+ܗܶܫ|still||heš|
+ܘܰܥܕܐ|appointment||wacdo|
+ܙ̰ܱܒܰܫܶܐ|watermelon||žäbaše|
+ܙܰܒܢܐ|time||zabno|
+ܚܰܠܘܐ|milk||ḥalwo|
+ܟܰܓ݂ܰܬ|paper||kaġat|
+ܟܱܫ̰ܰܠ|bald head|kə§t͡ʃa§l|käčal|
+ܟ݂ܰܒܪܐ|word||xabro|
+ܡܘܟܠܐ|food||muklo|
+ܡܰܛܒܰܟ݂|kitchen|ma§tˤ§ba§x|maṭbax|
+ܡܰܠܟܘܬ݂ܐ|kingdom||malkuṯo|
+ܣܷܣܝܐ|horse|sə§s§j§o|sësyo|
+ܥܰܨܪܝـܝܶܐ|evening||caṣriye|
+ܦ݁ܠܰܢ|plan||plan|
+ܩܰܚܘܰܐ|coffee||qaḥwa|
+ܫ̰ܰܟܶܬ|jacket|t͡ʃa§ke§t|caket|
+ܬܰܠܓܐ|snow||talgo|
+ܬܰܠܰܒ݂ܝܙܝܳܢ|television|ta§la§v§i§z§jo§n|talavizyon|
+ܐܰܪܢܘܘܳܐ|rabbit||arnuwo|
+ܐܰܬ݂ܡܷܠ|yesterday||aṯmël|
+ܐܰܬ݂ܬܐ|woman||aṯto|
+ܐܳܬ݂ܐ|sign||oṯo|
+ܐܶܡܐ|mother||emo|
+ܐܷܫܡܐ|name||ëšmo|
+ܒ̣ܝܝܰܢܰܐ|Vienna||Viyana|
+ܒܝܪܰܐ|beer||bira|
 
 
 
