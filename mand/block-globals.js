@@ -8,4 +8,4 @@ window.detailsfileList = ['mid'] // first part of xx-details for each orthograph
 window.scriptISO = 'mand'
 window.webfonts = ["Noto Sans Mandaic WF"]
 window.defaultSize = '24px'
-
+hideBlockName = "MANDAIC"
