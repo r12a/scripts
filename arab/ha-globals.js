@@ -18,3 +18,4 @@ scriptIsIndic = true  // true if there are indic syllabic categories; used only 
 
 defaultSize = '32px'  // used by block.html to set size of font, including in font mgt panel
 letterClassName = 'ha'  // classname for a given orthography in the block page
+hideBlockName = "ARABIC"
