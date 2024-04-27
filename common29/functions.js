@@ -153,6 +153,9 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
 
+        if (charMarkup[i].lang === '') var language = window.langTag
+        else language = charMarkup[i].lang
+        
         charlist = charMarkup[i].textContent.trim().split(' ')
         if (charlist[0] === '') continue
         unicodeNames = ''
@@ -182,7 +185,7 @@ function expandCharMarkup () {
                 unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
                 }
          
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
+            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ language }">`
             if (svg) {
                 block = getScriptGroup(dec, false)
                 unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ ch }" style="height:2rem;">`
@@ -197,7 +200,7 @@ function expandCharMarkup () {
             
         if (initial || medial) unicodeChars += '\u200D '
 
-        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
+        out += `<span class="codepoint" translate="no"><bdi lang="${ language }"`
         //if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }${ coda }</bdi>`
@@ -226,6 +229,9 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
         charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
+        
+        if (charMarkup[i].lang === '') var language = window.langTag
+        else language = charMarkup[i].lang
 
         charlist = [... charMarkup[i].textContent]
         unicodeNames = ''
@@ -247,7 +253,7 @@ function expandCharMarkup () {
             if (c > 0) unicodeNames += ' + '
             unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
 
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
+            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ language }">`
             
             if (svg) {
                 block = getScriptGroup(dec, false)
@@ -263,7 +269,7 @@ function expandCharMarkup () {
         if (initial || medial) unicodeChars += '\u200D '
         if (circle) unicodeChars = '\u25CC' + unicodeChars
 
-        out += `<span class="codepoint" translate="no"><bdi lang="${ window.langTag }"`
+        out += `<span class="codepoint" translate="no"><bdi lang="${ language }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }${ coda }</bdi>`
