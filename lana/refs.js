@@ -10,6 +10,16 @@ reflist = {
 "lang": new Set(['kkh', 'nod']),
 },
 
+"cp": {
+"authors": "Patrick Chew, et al.",
+"title":"Tai Tham",
+"sub": "A “hybrid” script that challenges current encoding models",
+"date": "2015",
+"url":"https://www.unicodeconference.org/39/presentations/S3-T3-Chew.pdf",
+"lang": new Set(['nod','kkh']),
+"reviewed":false
+},
+
 "d": {
 "authors": "Peter T. Daniels and William Bright",
 "title":"The World's Writing Systems",
@@ -47,6 +57,15 @@ reflist = {
 "url":"https://en.wikipedia.org/wiki/Northern_Thai_language",
 "lang": new Set(['nod']),
 "reviewed":true
+},
+
+"wu": {
+"authors": "Wikipedia",
+"title":"Tai Tham (Unicode block)",
+"retr": "Apr 2024",
+"url":"https://en.wikipedia.org/wiki/Tai_Tham_(Unicode_block)",
+"lang": new Set(['nod','kkh']),
+"reviewed":false
 },
 
 "r": {

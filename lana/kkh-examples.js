@@ -15,20 +15,18 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 */
 
 
-otherTranscription = true   // kicks in the latest order of items: indicates that this uses a format that includes other transcriptions in the position shown above – this affects the assignments for the code, and i think also affects lookup for script notes that show both unvocalised and vocalised
-termListType = 3			// picks up sources automatically
-
-
 
 
 autoExpandExamples.kkh = `
 
-@ wiktionary
+@ https://en.wiktionary.org/w/index.php?title=Category:Kh%C3%BCn_terms_with_IPA_pronunciation
+
 
 ᨠ᩠ᩅ᩠ᨿᩁ|ox-cart|kweːn¹
 ᨠᩣ᩠ᨯ|market|kaːt³
 ᨠᩣ᩠ᩁ|work|kaːn¹
 ᨠᩥ᩠ᨶ|eat|kin¹
+ᨠᩫ᩠ᨷ||␣||
 ᨠᩮ᩠ᨷᩉᩬᨾ|accumulate|kep²hɔːm¹
 ᨠᩮᩨᩬ|salt|kɤː¹
 ᨠᩮᩬᩨ|salt|kɤː¹
@@ -43,8 +41,11 @@ autoExpandExamples.kkh = `
 ᨧ᩠ᨷᩪ|kiss|cuːp³
 ᨧᩨᨪ᩶ᩣᩴ|again|cɯː¹sam⁶
 ᨨ᩠ᩃᩣ᩠ᨯ|clever|cʰa² laːt⁴
+ᨩ᩠ᨿᨦᨲᩩᨦ|Kentung|␣
 ᨩᩭ᩵|help|cɔːj⁴
 ᨪᩨ᩶|buy|sɯː⁶
+ᨯᩬᨠᨾᩱ᩶||␣||
+ᨯᩭ||␣||
 ᨯᩱ᩶|did|daj⁵
 ᨲᩕᩯ|bugle|tʰɛː¹
 ᨲᩫ᩠ᩅ|animal classifier|toː¹
@@ -56,23 +57,30 @@ autoExpandExamples.kkh = `
 ᨶᩢ᩠᩶ᨶ|that|nan⁶
 ᨶᩦ᩶|this|niː⁶
 ᨷᩕᩰ᩠ᨯ|help (royal)|broːt³
-ᨷᩢᨱ᩠ᨻᨷᩩᩁᩩᩇ|disciple
+ᨷᩢ||␣||
+ᨷᩢᨱ᩠ᨻᨷᩩᩁᩩᩇ|disciple|
 ᨸᩮᩬᩨᩡ|mud|pɤ²
 ᨸ᩶ᩣ|auntie|paː⁵
+ᨻᩱ|to go|␣|pai
 ᨻᩳᨾᩯ᩵|parents|pɔː⁴mɛː⁴
 ᨻᩳ᩵ᨾᩯ᩵|parents|pɔː⁴mɛː⁴
 ᨼᩥ᩠ᩃ᩼ᨾ|film|fim²
+ᨽᩣᩈᩣ|language|␣
+ᨽᩣᩈᩣᨡ᩠ᨶᩨ|the Khün language|
 ᨽᩥ᩠ᨠ|chili|pʰik⁶
 ᨾᩣ|come|maː²
+ᨾᩦ|to have|␣
+ᨿᩪᨶᩥᨤ᩠ᨯᩰᨯ᩼|Unicode|
 ᩀᩣ᩠ᨠ|to want
-ᩀᩪ᩵|to be situated
-ᩀ᩵ᩣ|don't (command)
-ᩀ᩵ᩣ᩠ᨦ|type, sort
+ᩀᩪ᩵|to be situated|
+ᩀ᩵ᩣ|don't (command)|
+ᩀ᩵ᩣ᩠ᨦ|type, sort|
 ᩁᩮᩨ᩠ᨶ|house|rɤːn²
 ᩃᩩᨦ|uncle|luŋ²
 ᩃᩪᨠ|offspring|luːk⁴
+ᩃᩮᩨ᩠ᨠ||␣||
 ᩅᩢ᩠ᨶ|day|wan²
-ᩈᨱᩛᩣ᩠ᨶ|shape
+ᩈᨱᩛᩣ᩠ᨶ|shape|
 ᩈᩣ᩠ᨾ|three|saːm¹
 ᩈᩫ᩠ᨾᨷᩪᩁ᩠᩼ᨱ|perfect|som¹buːn²
 ᩈᩮᩃᩯ᩠ᩅ᩶|already|seː¹lɛːw⁶
@@ -83,7 +91,7 @@ autoExpandExamples.kkh = `
 ᩉ᩠ᨾᩪᨶ᩶ᩭ|piglet|muː¹nɔːj⁶
 ᩉᩬᨷ|carry|hɔːp³
 ᩉᩱ᩠ᨿ᩵|big|jaj³
-ᩋᨾᩛ|mango
+ᩋᨾᩛ|mango|
 ᩋᩧ᩠ᨷ|starve|ɯp²
 ᩋᩨ᩠᩵ᨶ|other|ɯːn³
 ᩋᩫᨶ᩠ᨲᩕᩣ᩠ᨿ|danger|ʔontʰalaːi
@@ -92,14 +100,6 @@ autoExpandExamples.kkh = `
 ᩐ᩶ᩣ|take|aw²
 ᩑᨠ|one|eːk³
 ᪓᩠ᨴ|three times|saːm tiː
-
-ᨩ᩠ᨿᨦᨲᩩᨦ|Kentung|
-ᨻᩱ|to go||pai
-ᨽᩣᩈᩣ|language|
-ᨽᩣᩈᩣᨡ᩠ᨶᩨ|the Khün language|
-ᨾᩦ|to have|
-ᨿᩪᨶᩥᨤ᩠ᨯᩰᨯ᩼|Unicode|
-
 
 
 
