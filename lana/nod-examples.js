@@ -218,7 +218,7 @@ autoExpandExamples.nod = `
 ᨠᩯ᩵|to be old|kɛː˨
 ᨡ᩶ᩣᨻᩕᨧᩮᩢ᩶ᩣ|I, me|xaː˥˧.§pʰa˨.§t͡ɕaw˥˧|||v formal
 ᨡ᩶ᩣᩉᩥ᩠ᩅ|I'm hungry|xaː˥˧.§hi§w˨˦
-ᨡᩧ᩠᩶ᨶ|to go up|xɯ˥˧§n
+ᨡᩧ᩠᩶ᨶ|to go up|xɯ§n˥˧
 ᨡᩮᩢᩣ|they, them|xaw˨˦
 ᨣᩕᩢ᩠ᨷ|male polite particle|xa§p˥˧
 ᨣᩕᩪᩉ᩶ᩣᨤᩫ᩠ᨶ|five teachers|
@@ -251,7 +251,7 @@ autoExpandExamples.nod = `
 ᨴᩤ᩠᩵ᨶ|he, she, you|taː§n˥˩
 ᨴᩩᨧᩮᩢ᩶ᩣ|monk|tu˥˧.§t͡ɕaw˥˧
 ᨶᩢ᩠ᨠ|much, many|na᷇§k
-ᨶᩧ᩠᩵ᨦ|one|nɯ̂§ŋ
+ᨶᩧ᩠᩵ᨦ|one|nɯ§ŋ˥˩
 ᨷᩕᨴᩮ᩠ᩆ|country|pʰa.§teː§t˥˩
 ᨷᩕᩤᩈᩣ᩠ᨴ|palace|pʰaː˨˦.§saː§t˨
 ᨸ᩶ᩣ᩠ᨿ|sign|paː§j˥˧
