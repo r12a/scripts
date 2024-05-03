@@ -1789,6 +1789,8 @@ function initialiseShowNames (node, base, target) {
 function showCharDetailsEvent (evt) {
     // opens a panel to display character notes details
     
+	if (evt.target.parentNode.parentNode.parentNode.classList.contains('noexpansion')) return
+    
 	if (typeof charDetails === 'undefined') return
 
 	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
