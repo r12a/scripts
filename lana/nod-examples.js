@@ -255,7 +255,7 @@ autoExpandExamples.nod = `
 ᨷᩕᨴᩮ᩠ᩆ|country|pʰa.§teː§t˥˩
 ᨷᩕᩤᩈᩣ᩠ᨴ|palace|pʰaː˨˦.§saː§t˨
 ᨸ᩶ᩣ᩠ᨿ|sign|paː§j˥˧
-ᨸᩮ᩠ᨶ|to be|pě§n
+ᨸᩮ᩠ᨶ|to be|pe§n˨˦
 ᨺᩣ᩠ᨶ|to slice|faː§n˨˦
 ᨻ᩠ᩅᩢ|group|p§uak˧
 ᨻᩣ᩠᩵ᨿ|to lose|paː§j˥˩
