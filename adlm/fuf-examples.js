@@ -60,7 +60,6 @@ autoExpandExamples.fuf = `
 𞤤𞤫𞤨𞥆𞤭|wet|lɛppi|leppi
 𞤤𞤫𞤱𞤪𞤵|moon|lɛwru|lewru
 𞤤𞤫𞤳𞥆𞤭|tree|lɛkki|lekki
-𞤤𞤫𞤴𞤣𞤭|earth|lɛjdi|leydi
 𞤤𞤫𞤺𞥆𞤢𞤤|stick|lɛɡɡal|leggal
 𞤤𞤭𞤥𞤣𞤫|count|limdɛ|limde
 𞤤𞤭𞥅𞤲𞥋𞤺𞤵|fish|l§iː.§ᵑ§–§ɡ§u|liingu
@@ -269,7 +268,24 @@ autoExpandExamples.fuf = `
 
 
 
+@ https://en.wiktionary.org/w/index.php?title=Category:Fula_lemmas&pagefrom=%C6%81UU%C6%81UGOL%0A%C9%93uu%C9%93ugol#mw-pages
 
+𞤁𞤢𞤳𞤢𞥄𞤪|Dakar||Dakaar|||Dakaar
+𞤤𞤫𞤴𞤣𞤭|earth, soil|lɛjdi|leydi|||leydi
+𞤃𞤢𞥄𞤤𞤭|Mali||Mali|||Mali
+𞤃𞤮𞤪𞤭𞤼𞤢𞤲𞤭|Mauritania||Moritani|||Moritani
+𞤄𞤢𞤥𞤢𞤳𞤮|Bamako||Bamako|||Bamako
+𞤄𞤢𞤲𞥆𞤶𞤵𞤤𞤵|Banjul||Bannjulu|||Bannjulu
+𞤄𞤵𞤪𞤳𞤭𞤲𞤢 𞤊𞤢𞤧𞤮|Burkina Faso||Burkina Faso|||Burkina Faso
+𞤅𞤫𞤲𞤫𞤺𞤢𞥄𞤤𞤭|Senegal||Senegaali|||Senegaali
+𞤆𞤵𞤤𞤢𞤪|Pular||Pular|||Pular
+𞤆𞤵𞤤𞤢𞥄𞤪|Pulaar||Pulaar|||Pulaar
+𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫|Fula||Fula|||Fula
+𞤐𞤭𞥅𞤧𞤫𞤪|Niger||Niiser|||Niiser
+𞤳𞤢𞤣𞤵𞤲𞤢|Kaduna||Kaduna|||Kaduna
+𞤘𞤢𞤥𞤦𞤭|Gambia||Gammbi|||Gammbi
+𞤘𞤭𞤲𞤫|Guinea||Gine|||Gine
+𞤘𞤭𞤲𞤫-𞤄𞤭𞤧𞤢𞥄𞤱𞤮|Guinea-Bissau||Gine-Bisaawo|||Gine-Bisaawo
 
 
 

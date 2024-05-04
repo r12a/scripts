@@ -8,4 +8,4 @@ window.detailsfileList = ['fuf'] // first part of xx-details for each orthograph
 window.scriptISO = 'adlm'
 window.webfonts = ["Noto Sans Adlam WF","Noto Sans Adlam Unjoined WF"]
 window.defaultSize = '28px'
-
+hideBlockName = "ADLAM"
