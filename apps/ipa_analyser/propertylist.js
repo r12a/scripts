@@ -162,14 +162,22 @@
     'ɚ':'Rhoticised schwa§R-colored_vowel',
     'ɝ':'Rhoticised lower mid central vowel§R-colored_vowel',
 
+
+    '\u0361':'Upper ligature tie§Tie_(typography)#Ligature_tie',
+    '\u035C':'Lower ligature tie§Tie_(typography)#Ligature_tie',
+ 
+    'ᵐ':'Prenasalisation§Prenasalized_consonant',
+    'ⁿ':'Prenasalisation/Nasal release§Nasal_release',
+    'ᶮ':'Prenasalisation§Prenasalized_consonant',
+    'ᵑ':'Prenasalisation§Prenasalized_consonant',
     
+    'ˣ':'Pre-affrication§Affricate#Pre-affrication',
     
     
     '\u030A':'Voicelessness',
     '\u0325':'Voicelessness',
     '\u0329':'Syllabic consonant',
     '\u030D':'Syllabic consonant',
-    '\u207F':'Nasal release',
     'ʰ':'Aspirated consonant',
     'ʱ':'Breathy voice',
     '\u032F':'Semivowel',
