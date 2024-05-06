@@ -352,6 +352,15 @@ reflist = {
 "lang": new Set(['ar']),
 },
 
+"wfl": {
+"authors": "Wikipedia",
+"title":"Fula language",
+"retr": "Nov 2021",
+"url":"https://en.wikipedia.org/wiki/Fula_language",
+"lang": new Set(['ff']),
+"reviewed":false
+},
+
 "ww": {
 "authors": "Wikipedia",
 "title":"Wolofal",

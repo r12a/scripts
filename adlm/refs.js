@@ -40,7 +40,7 @@ reflist = {
 "e": {
 "authors": "Michael Everson",
 "title":"Proposal for encoding the Adlam script in the SMP of the UCS",
-"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf",
+"url":"https://www.unicode.org/L2/L2014/14219-n4628-adlam.pdf",
 },
 
 "g": {
