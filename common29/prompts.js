@@ -60,13 +60,13 @@ function setContentPrompts () {
 
         // the following add descriptions to vowel/consonant section headers only if in the aside
         
-        {node:document.querySelector('#vletter h4'), text:"What characters are used that have the general category of letter?"},
+        //{node:document.querySelector('#vletter h4'), text:"What characters are used that have the general category of letter?"},
 
         {node:document.querySelector('#standalone h4'), text:"How does the orthography handle vowels that are not preceded by a consonant?"},
 
-        {node:document.querySelector('#vlength h4'), text:"How does the orthography handle differences in vowel length?"},
+        {node:document.querySelector('.tbd #vlength h4'), text:"How does the orthography handle differences in vowel length?"},
 
-        {node:document.querySelector('#nasalisation h4'), text:"How does the orthography handle vowel nasalisation?"},
+        {node:document.querySelector('.tbd #nasalisation h4'), text:"How does the orthography handle vowel nasalisation?"},
 
         {node:document.querySelector('#novowel h4'), text:"How is the inherent vowel killed? What other mechanisms are used to indicate consonant clusters? When are they used and not used?"},
 
