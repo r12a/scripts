@@ -111,6 +111,49 @@ reflist = {
 "url":"https://en.wikipedia.org/wiki/Fula_language",
 },
 
+"jm": {
+"authors": "Jusuf Salihu Jauro & Aquilina Mawadza",
+"title":"Fulani Dictionary and Phrasebook",
+"date": "2019",
+"publisher":"Hippocrene Books Ltd",
+"reviewed":false
+},
+
+
+"bc": {
+"authors": "Bernard Comrie",
+"title":"The World's Major Languages",
+"isbn":"978-1138184824",
+},
+
+
+"as": {
+"authors": "Ahmed Sosal",
+"title":"Contrastive Analysis: Fulfulde and English Languages",
+"date": "2012",
+"publisher":"University of Khartoum",
+"url":"https://www.academia.edu/14789815/Contrastive_Analysis_Fulfulde_and_English_Languages",
+"reviewed":false
+},
+
+"mhm": {
+"authors": "Mary Hollis McIntosh",
+"title":"Aspects of Fulfulde Syntax and Morphology",
+"sub": "subtitle",
+"publisher":"SOAS",
+"url":"https://eprints.soas.ac.uk/28545/1/10672704.pdf",
+"reviewed":false
+},
+
+"lhs": {
+"authors": "Leslie H Stennes",
+"title":"A Reference Grammar of Adamawa Fulani",
+"sub": "subtitle",
+"date": "1967",
+"publisher":"African Studies Center, Michigan State University",
+"url":"https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/African/Niger-Congo/other%20Atlantic-Congo/Fula%3B%20A%20Reference%20Grammar%20of%20Adamawa%20Fulani%20%28Stennes%29.pdf",
+"reviewed":false
+},
 
 }
 

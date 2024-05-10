@@ -70,7 +70,7 @@ autoExpandExamples.fuf = `
 𞤥𞤢𞥄𞤲𞥋𞤣𞤫|mark|m§aː.§ⁿ§–§d§e|maande
 𞤥𞤢𞥄𞤴𞤣𞤫|die|maːjde|maayde
 𞤥𞤢𞥄𞤴𞤮|river|maːjo|maayo
-𞤥𞤭⹁‏ 𞤲'𞤦𞤭𞤣𞤢|I|mi,‏ n'bida
+𞤥𞤭⹁‏ 𞤲'𞤦𞤭𞤣𞤢|I|mi,‏ nʼbida
 𞤥𞤭𞤲⹁‏ 𞤲𞥋𞤦𞤭𞤣𞤫𞤲⹁‏ 𞤫𞤲⹁‏ 𞤫𞤣𞤫𞤲|we|min,‏ ᵐbiden,‏ en,‏ eden|min,‏ mbiden,‏ en,‏ eden
 𞤥𞤮𞤰𞥆𞤭𞥅|good|m§o§ʔ.ʔʲ§iː|moƴƴiː
 𞤥𞤵𞤷𞥆𞤵𞤣𞤫|suck|mutt͡ʃude|muccude
@@ -197,7 +197,7 @@ autoExpandExamples.fuf = `
 𞤷𞤵𞤪𞤳𞤭|smoke|t͡ʃ§u§r.§k§i|curki
 𞤷𞤵𞤳𞤢𞤤𞤫𞤤|child|t͡ʃukalel|cukalel
 𞤷𞤵𞥅𞤪𞤳𞤭|smoke|t͡ʃuːrki|cuurki
-𞤸𞤢'𞤢𞤤𞤢|language|ha'ala
+𞤸𞤢'𞤢𞤤𞤢|language|h§a§ʼ§a§l§a
 𞤸𞤢𞤦𞤣𞤫|fight|habde|habde
 𞤸𞤢𞤴𞤣𞤢𞤪𞤢|zero|h§a§j.§d§a.§r§a|haydara
 𞤸𞤢𞥄𞤪𞤭|full|haːri|haari
@@ -303,6 +303,8 @@ autoExpandExamples.fuf = `
 
 
 
+@ other
+𞤀𞤣𞤤𞤢𞤥|Adlam|a§d§l§a§m
 
 
 
