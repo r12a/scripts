@@ -177,7 +177,7 @@ usedfor: "${record.usedfor}",
 
 	// orthography descriptions
 	if (record.scriptNotes) {
-        out += '<tr><th>Orthography descriptions:</th><td>'
+        out += '<tr><th>Orthography descriptions:</th><td style="font-size:1.2em;">'
 		if (record.scriptNotes && record.scriptNotes.length > 0) {
             for (let n=0;n<record.scriptNotes.length;n++) out += '<p><a href="'+record.scriptNotes[n][1]+'" target="_blank">'+record.scriptNotes[n][0]+'</a></p>'
             }
