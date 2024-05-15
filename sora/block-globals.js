@@ -9,3 +9,4 @@ window.scriptISO = 'sora'
 window.webfonts = ["Noto Sans Sora Sompeng WF"]
 window.defaultSize = '24px'
 hideBlockName = "SORA SOMPENG"
+langTag = 'srb'
