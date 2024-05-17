@@ -179,19 +179,60 @@ usedfor: "${record.usedfor}",
 	if (record.scriptNotes) {
         out += '<tr><th>Orthography descriptions:</th><td style="font-size:1.2em;">'
 		if (record.scriptNotes && record.scriptNotes.length > 0) {
-            for (let n=0;n<record.scriptNotes.length;n++) out += '<p><a href="'+record.scriptNotes[n][1]+'" target="_blank">'+record.scriptNotes[n][0]+'</a></p>'
+            for (let n=0;n<record.scriptNotes.length;n++) {
+                out += '<p><a href="'+record.scriptNotes[n][1]+'" target="_blank">'+record.scriptNotes[n][0]+'</a>'
+                if (clickthrough && [...clickthrough].length < 2) out += `<span class="clickthrough"><a href="${ record.scriptNotes[n][1] }?showIndex#index${ clickthrough }" target="_blank">find ${ clickthrough }</a></span>`
+                out += '</p>'
+                }
             }
 		out += '</td></tr>'
 		}
 
 
 
+	// pickers 
+	if (record.pickers) {
+        out += '<tr><th>Pickers:</th><td style="font-size:1.1em;">'
+		if (record.pickers && record.pickers.length > 0) {
+            for (let n=0;n<record.pickers.length;n++) {
+                out += '<p><a href="../pickers/'+record.pickers[n][1]+'/index.html" target="_blank">'+record.pickers[n][0]+'</a>'
+                if (clickthrough) out += `<span class="clickthrough"><a href="${ record.pickers[n][1] }?showIndex#index${ clickthrough }" target="_blank">find ${ clickthrough }</a></span>`
+                out += '</p>'
+                }
+            }
+		out += '</td></tr>'
+		}
 
-	// character detail
-	if (record.charNotesList && record.charNotesList.length > 0 || record.ssHistory) {
-		out += '<tr><th>Character detail:</th><td>'
-		if (record.charNotesList && record.charNotesList.length > 0) out += '<p><a href="../scripts/'+record.charNotesList[1]+'" target="_blank">Character notes</a></p>'
-		out += '<p><a href="http://scriptsource.org/entry/'+record.ssHistory+'" target="_blank">Unicode historical documents</a></p>'
+
+	// pickers OLD
+	/*temp = ''
+	temp += '<tr><th>Pickers:</th><td>'
+	for (let p=0;p<plist.length;p++) {
+		if (plist[p].tag === script) {
+            temp += '<p><a href="../pickers/'+plist[p].url+'" target="_blank">'+plist[p].name+'</a>'
+            if (clickthrough) temp += `<span class="clickthrough"><a href="../pickers/${ plist[p].url }?text=${ clickthrough }" target="_blank">add ${ clickthrough }</a></span>`
+            temp += '</p>'
+            }
+		}
+	temp += '</td></tr>'
+	if (temp !== '<tr><th>Pickers:</th><td></td></tr>') out += temp
+    */
+
+
+
+	// character usage
+	temp = ''
+	beginning = true
+	for (lang in langs) {
+		if (langs[lang].script === script) {
+			if (! beginning) temp += ' • '
+			beginning = false
+			temp += '<a href="../app-charuse/index.html?language='+lang+'" target="_blank">'+langs[lang].name+'</a> '
+			}
+		}
+	if (temp !== '') {
+		out += '<tr><th>Character usage:</th><td>'
+		out += temp
 		out += '</td></tr>'
 		}
 
@@ -211,8 +252,9 @@ usedfor: "${record.usedfor}",
 	// general info
 	if (record.info) {
 		out += '<tr><th>General info:</th><td>'
-		out += '<p><a target="_blank" href="http://www.unicode.org/versions/latest/ch'+record.chapters+'.pdf">Unicode</a></p>'
-		out += '<p><a target="_blank" href="http://scriptsource.org/scr/'+record.code+'" >Scriptsource</a></p>'
+		if (record.htmlchapter) out += `<p><a target="_blank" href="https://unicode-org.github.io/core-spec/chapter-${ record.htmlchapter }">Unicode</a></p>`
+		else out += `<p><a target="_blank" href="http://www.unicode.org/versions/latest/ch${ record.chapters }.pdf">Unicode</a></p>`
+		out += `<p><a target="_blank" href="http://scriptsource.org/scr/${ record.code }">Scriptsource</a></p>`
 		if (record.info.wikipedia) out += '<p><a target="_blank" href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'">Wikipedia</a></p>'
 		if (record.info.omniglot) {
 			if ( record.info.omniglot.match('http') ) out += '<p><a target="_blank" href="'+record.info.omniglot+'">Omniglot</a></p>'
@@ -222,6 +264,17 @@ usedfor: "${record.usedfor}",
 		//if (record.info.endangered[lc]) out += '<p><a target="_blank" href="https://www.endangeredalphabets.net/alphabets/'+endangered[lc]+'">Endangered alphabets</a></p>'
 		// ?
 		for (let r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" >'+record.info[r].name+'</a></p>'
+		out += '</td></tr>'
+		}
+
+
+
+
+	// character detail
+	if (record.charNotesList && record.charNotesList.length > 0 || record.ssHistory) {
+		out += '<tr><th>Character detail:</th><td>'
+		if (record.charNotesList && record.charNotesList.length > 0) out += '<p><a href="../scripts/'+record.charNotesList[1]+'" target="_blank">Character notes</a></p>'
+		out += '<p><a href="http://scriptsource.org/entry/'+record.ssHistory+'" target="_blank">Unicode historical documents</a></p>'
 		out += '</td></tr>'
 		}
 
@@ -239,35 +292,6 @@ usedfor: "${record.usedfor}",
 		if (record.orthoChart) temp += '<p><a href="featurelist/index.html" target="_blank">Comparisons:</a> '+record.orthoChart+'</p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>Other info:</th><td></td></tr>') out += temp
-		}
-
-
-
-	// pickers
-	temp = ''
-	temp += '<tr><th>Pickers:</th><td>'
-	for (let p=0;p<plist.length;p++) {
-		if (plist[p].tag === script) temp += '<p><a href="../pickers/'+plist[p].url+'" target="_blank">'+plist[p].name+'</a></p>'
-		}
-	temp += '</td></tr>'
-	if (temp !== '<tr><th>Pickers:</th><td></td></tr>') out += temp
-
-
-
-	// character usage
-	temp = ''
-	beginning = true
-	for (lang in langs) {
-		if (langs[lang].script === script) {
-			if (! beginning) temp += ' • '
-			beginning = false
-			temp += '<a href="../app-charuse/index.html?language='+lang+'" target="_blank">'+langs[lang].name+'</a> '
-			}
-		}
-	if (temp !== '') {
-		out += '<tr><th>Character usage:</th><td>'
-		out += temp
-		out += '</td></tr>'
 		}
 		
 		
