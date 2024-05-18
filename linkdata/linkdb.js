@@ -10,10 +10,6 @@ dates:"11thC – today", start:"1100", end:"", current_usage:"",
 status:"Official script of India. Used for over 120 languages, and Classical Sanskrit.",
 origin:"South Asia",
 info:{ wikipedia:"Devanagari", omniglot:"devanagari" },
-local: [ 
-    { name:"Introduction to Indic Scripts", url:"indic-overview"},
-    ],
-layout: [ ],
 charts: [ ["Devanagari", "0900"], ["Devanagari Extended", "A8E0"], ["Devanagari Extended-A", "11B00"], ["Vedic Extensions", "1CD0"] ],
 scriptNotes: [["Hindi", "deva/hi.html"], ["Kashmiri", "deva/ks.html"]],
 charNotesList:["Devanagari", "deva/block.html"],
@@ -24,6 +20,12 @@ ssHistory: "b6c6j63sf5",
 chapters: "12",
 htmlchapter: "12/#G12284",
 usedfor: "Gondi, Aheri [esg], Andh [anr], Angika [anp], Asuri [asr], Athpariya [aph], Awadhi [awa], Bagheli [bfy], Bagheli [bfy], Bagri [bgq], Bahing [bhj], Bantawa [bap], Baraamu [brd], Bateri [btv], Belhariya [byw], Bhadrawahi [bhd], Bharia [bha], Bhatri [bgw], Bhilali [bhi], Bhili [bhb], Bhojpuri [bho], Bhujel [byh], Bhunjia [bhu], Bilaspuri [kfs], Birhor [biy], Bodo (India) [brx], Bote-Majhi [bmj], Braj [bra], Buksa [tkb], Bundeli [bns], Byangsi [bee], Camling [rab], Nicobarese, Central [ncb], Chambeali [cdh], Chantyal [chx], Chepang [cdm], Chhattisgarhi [hne], Chhintange [ctn], Chinali [cih], Tharu, Chitwania [the], Churahi [cdj], Maria, Dandami [daq], Tharu, Dangaura [thl], Darai [dry], Deccan [dcc], Dhanwar (Nepal) [dhw], Dhimal [dhi], Dhodia [dho], Dhundari [dhd], Dogri (individual language) [dgo], Dogri (macrolanguage) [doi], Dotyali [dty], Dumi [dus], Dungmali [raa], Dungra Bhil [duh], Duruwa [pci], Eastern Gurung [ggn], Magar, Eastern [mgp], Meohang, Eastern [emg], Tamang, Eastern [taj], Hindi, Fiji [hif], Gaddi [gbk], Kham, Gamale [kgj], Gamit [gbl], Garhwali [gbm], Konkani, Goan [gom], Gondi [gon], Gowli [gok], Gujari [gju], Gurung [gvr], Halbi [hlb], Kinnauri, Harijan [kjo], Haroti [hoj], Haryanvi [bgc], Hindi [hin], Ho [hoc], Hyolmo [scp], Idu-Mishmi [clk], Jaunsari [jns], Jerung [jee], Jirel [jul], Jumli [jml], Kachhi [kfr], Kagate [syw], Kanauji [bjj], Kangri [xnr], Kashmiri [kas], Tharu, Kathoriya [tkt], Khaling [klr], Khandesi [khn], Kharia [khr], Kinnauri [kfk], Tharu, Kochila [thq], Kodaku [ksz], Koi [kkt], Konkani (individual language) [knn], Konkani (macrolanguage) [kok], Korku [kfq], Creole Portuguese, Korlai [vkp], Korwa [kfp], Koya [kff], Kudmali [kyw], Kukna [kex], Pahari, Kullu [kfx], Kulung (Nepal) [kle], Kumaoni [kfy], Kumhali [kra], Kurukh [kru], Lambadi [lmn], Lhomi [lhm], Limbu [lif], Lohorung [lbr], Loke [loy], Magahi [mag], Pahari, Mahasu [bfz], Maithili [mai], Majhi [mjz], Mal Paharia [mkb], Malvi [mup], Manangba [nmm], Mandeali [mjl], Marathi [mar], Maria (India) [mrr], Marwari (India) [rwr], Marwari [mwr], Mawchi [mke], Mewari [mtr], Mewati [wtm], Newar, Middle [nwx], Mising [mrg], Munda [unx], Mundari [unr], Na [nbt], Nachering [ncd], Nepali (individual language) [npi], Nepali (macrolanguage) [nep], Kurux, Nepali [kxl], Newari [new], Nimadi [noe], Noiri [noi], Gondi, Northern [gno], Kolami, Northwestern [kfb], Tamang, Northwestern [tmk], Pali [pli], Palpa [plp], Panchpargania [tdb], Pangwali [pgg], Pankhu [pkh], Pattani [lae], Bareli, Pauri [bfb], Puma [pum], Puroik [suv], Rajasthani [raj], Rajbanshi [rjs], Raji [rji], Garasia, Rajput [gra], Tharu, Rana [thr], Bareli, Rathwi [bgd], Rawat [jnl], Sadri [sck], Sampang [rav], Sanskrit [san], Santali [sat], Saraiki [skr], Sartang [onp], Prākrit, Sauraseni [psu], Saurashtra [saz], Sauria Paharia [mjt], Shekhawati [swv], Sherpa [xsr], Kham, Sheshi [kip], Sindhi [snd], Sirmauri [srx], Ghale, Southern [ghe], Southwestern Tamang [tsf], Bhoti, Stod [sbu], Sunwar [suz], Surgujia [sgj], Surjapuri [sjp], Monpa, Tawang [twm], Monpa, Tawang [twm], Thakali [ths], Thangmi [thf], Thulung [tdh], Tilung [tij], Tinani [lbf], Toto [txo], Varhadi-Nagpuri [vah], Varli [vav], Vasavi [vas], Wagdi [wbr], Wambule [wme], Naga, Wancho [nnp], Wayu [vay], Magar, Western [mrd], Meohang, Western [raf], Muria, Western [mut], Kham, Western Parbate [kjl], Tamang, Western [tdg], Yakha [ybh], Yamphu [ybi]",
+local: [ 
+    { name:"Introduction to Indic Scripts", url:"indic-overview/index.html"},
+    ],
+layout: [ 
+    { name:"Devanagari counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#devanagari-styles"},
+    ],
 },
 
 
@@ -58,6 +60,8 @@ ssHistory: "llp3cqd7gg",
 htmlchapter: "19/#G56860",
 chapters: "19",
 usedfor: "Fula [ful], Pular [fuf]",
+layout:[/*{ name:"Adlam Layout Requirements", url:"https://www.w3.org/TR/adlm-lreq/"},*/
+	{ name:"Adlam counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#adlam-styles"}, ]
 },
 
 
@@ -68,7 +72,8 @@ origin:"West Asia",
 info:{ wikipedia:"Arabic_script", omniglot:"arabic" },
 local: [ { name:"Arabic Homographs", url:"arab/homographs" } ], 
 layout: [ 
-          { name:"Arabic Layout Requirements", url:"https://w3c.github.io/alreq/"},
+          { name:"Arabic & Persian Layout Requirements", url:"https://www.w3.org/TR/alreq/"},
+          { name:"Arabic Counter Styles", url:"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles"},
           { name:"Arabic text justification", url:"http://www.tug.org/tugboat/tb27-2/tb87benatia.pdf"},
           { name:"Justify Just or Just Justify", url:"http://quod.lib.umich.edu/j/jep/3336451.0013.105?view=text;rgn=main"},
           { name:"Typography questions for HTML & CSS: Arabic", url:"https://r12a.github.io/blog/201110.html#20140523"},
@@ -103,6 +108,9 @@ ssHistory: "z35gwmg4ft",
 chapters: "07",
 htmlchapter: "7/#G3334",
 usedfor: "Armenian [hy], Kurdish [kur], Kurdish, Northern [kmr], Armenian, Western [hyw]",
+layout: [ 
+    { name:"Armenian Counter Styles", url:"https://www.w3.org/TR/predefined-counter-styles/#armenian-styles"},
+    ],
 },
 
 
@@ -141,7 +149,6 @@ dates:"10thC – today", start:"900", end:"", current_usage:"",
 status:"Traditionally used for writing Slavic languages, of which Russian is the most widely spoken. During the 19th and 20th centuries, particularly under Soviet rule, it was extended to write over 50 languages throughout Eastern Europe and Asia.",
 origin:"Europe",
 info:{ wikipedia:"Cyrillic_script", omniglot:"cyrillic" },
-local: [ ], layout: [ ],
 charts: [ ["Cyrillic", "0400"], ["Cyrillic Supplement", "0500"], ["Cyrillic Extended-A", "2DE0"], ["Cyrillic Extended-B", "A640"], ["Cyrillic Extended-C", "1C80"], ["Cyrillic Extended-D", "1E030"] ],
 scriptNotes: [["Mongolian", "cyrl/mn.html"], ["Ukrainian", "cyrl/uk.html"], ["Russian", "cyrl/ru.html"]],
 charNotesList:["Cyrillic", "cyrl/block.html"],
@@ -152,6 +159,10 @@ ssHistory: "ngc339csy8",
 chapters: "07",
 htmlchapter: "7/#G10850",
 usedfor: "Abaza [abq], Abkhazian [abk], Adyghe [ady], Aghul [agx], Akhvakh [akv], Sami, Akkala [sia], Alutor [alr], Andi [ani], Archi [aqc], Arin [xrn], Armazic [xrm], Assan [xss], Neo-Aramaic, Assyrian [aii], Avaric [ava], Azerbaijani [aze], Bagvalal [kva], Romani, Balkan [rmn], Romani, Baltic [rml], Bashkir [bak], Belarusian [bel], Bezhta [kap], Bosnian [bos], Botlikh [bph], Bukharic [bhh], Bulgarian [bul], Buriat [bua], Yupik, Central Siberian [ess], Chamalal [cji], Chechen [che], Chukot [ckt], Chulym [clw], Slavonic, Church [chu], Chuvash [chv], Tatar, Crimean [crh], Dargwa [dar], Daur [dta], Dido [ddo], Dolgan [dlg], Dungan [dng], Mari, Eastern [mhr], Erzya [myv], Even [eve], Evenki [evn], Enets, Forest [enf], Gagauz [gag], Ghodoberi [gdo], Gilyak [niv], Mongolian, Halh [khk], Mongolian, Halh [khk], Hinukh [gin], Hunzib [huz], Ingush [inh], Itelmen [itl], Judeo-Tat [jdt], Kabardian [kbd], Kalmyk [xal], Kamas [xas], Kara-Kalpak [kaa], Karachay-Balkar [krc], Karagas [kim], Karaim [kdr], Karata [kpt], Karelian [krl], Kazakh [kaz], Kerek [krk], Ket [ket], Khakas [kjh], Khanty [kca], Khazar [zkz], Khvarshi [khv], Sami, Kildin [sjd], Koibal [zkb], Komi [kom], Komi-Permyak [koi], Komi-Zyrian [kpv], Koryak [kpy], Kott [zko], Krymchak [jct], Kuman (Russia) [qwm], Kumyk [kum], Kurdish [kur], Kyrgyz [kir], Ladino [lad], Lak [lbe], Lezghian [lez], Lingua Franca Nova [lfn], Macedonian [mkd], Mansi [mns], Mari (Russia) [chm], Mator [mtm], Mator [mtm], Aleut, Mednyj [mud], Greek, Modern (1453-) [ell], Moksha [mdf], Buriat, Mongolia [bxm], Mongolian [mon], Montenegrin [cnr], Tat, Muslim [ttt], Nadruvian [ndf], Nanai [gld], Yupik, Naukan [ynk], Negidal [neg], Nenets [yrk], Nganasan [nio], Nogai [nog], Azerbaijani, North [azj], Altai, Northern [atv], Kurdish, Northern [kmr], Sami, Northern [sme], Uzbek, Northern [uzn], Yukaghir, Northern [ykg], Russian, Old [orv], Omok [omk], Oroch [oac], Orok [oaa], Ossetic [oss], Yupik, Pacific Gulf [ems], Pontic [pnt], Pumpokol [xpm], Romanian [ron], Romany [rom], Buriat, Russia [bxr], Russian [rus], Rusyn [rue], Rutul [rut], Selkup [sel], Serbian [srp], Shor [cjs], Shughni [sgh], Tatar, Siberian [sty], Yupik, Sirenik [ysr], Altai, Southern [alt], Yukaghir, Southern [yux], Svan [sva], Tabassaran [tab], Tajik [tgk], Talysh [tly], Tatar [tat], Sami, Ter [sjt], Tindi [tin], Tlingit [tli], Tsakhur [tkr], Enets, Tundra [enh], Turkish [tur], Turkmen [tuk], Tuvinian [tyv], Udi [udi], Udihe [ude], Udmurt [udm], Ukrainian [ukr], Ulch [ulc], Urum [uum], Uyghur [uig], Uyghur [uig], Uzbek [uzb], Uzbek [uzb], Romani, Vlax [rmy], Wakhi [wbl], Balochi, Western [bgn], Mari, Western [mrj], Oirat, Written [xwo], Xibe [sjo], Yagnobi [yai], Yakut [sah], Yazgulyam [yah], Yug [yug]",
+local: [ ],
+layout: [ 
+    { name:"Cyrillic counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#cyrillic-styles"},
+    ],
 },
 
 
@@ -187,7 +198,6 @@ dates:"5thC – today", start:"1400", end:"", current_usage:"",
 status:"The script of the Georgian language, spoken by approximately 4,000,000 people in Georgia and Azerbaijan, Turkey and Iran.",
 origin:"Europe",
 info:{ wikipedia:"Georgian_script", omniglot:"georgian" },
-local: [ ], layout: [ ],
 charts: [ ["Georgian", "10A0"], ["Georgian Extended", "1C90"], ["Georgian Supplement", "2D00"] ],
 scriptNotes: [["Georgian", "geor/ka.html"]],
 charNotesList:["Georgian", "geor/block.html"],
@@ -198,6 +208,11 @@ ssHistory: "rbr2wkvu4m",
 chapters: "07",
 htmlchapter: "7/#G3360",
 usedfor: "Abkhaz [abk], Georgian [ka], Laz [lzz], Mingrelian [xmf], Old Avar [oav], Ossetian [oss], Svan [sva]",
+local: [ ], 
+layout: [ 
+	/*{ name:"Georgian Layout Requirements", url:"https://www.w3.org/TR/geor-lreq/"},*/
+    { name:"Georgian counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#georgian-styles"},
+	],
 },
 
 
@@ -238,7 +253,6 @@ dates:"BCE 8thC – today", start:"-800", end:"", current_usage:"",
 status:"The script for the Greek language, spoken by around 10,500,000 people in Greece.",
 origin:"Europe",
 info:{ wikipedia:"Greek_alphabet", omniglot:"greek" },
-local: [ ], layout: [ ],
 charts: [ ["Greek and Coptic", "0370"], ["Greek Extended", "1F00"], ["Ancient Greek Numbers", "10140"] ],
 scriptNotes: [["Greek", "grek/el.html"]],
 charNotesList:["Greek", "grek/block.html"],
@@ -249,6 +263,11 @@ ssHistory: "wxsx5j4kzt",
 chapters: "07",
 htmlchapter: "7/#G10832",
 usedfor: "Albanian [sqi], Greek, Ancient (to 1453) [grc], Albanian, Arbëreshë [aae], Aromanian [rup], Albanian, Arvanitika [aat], Turkish, Balkan Gagauz [bgx], Romani, Balkan [rmn], Greek, Cappadocian [cpg], Coptic [cop], Arabic, Cypriot [acy], Gagauz [gag], Greek, Modern (1453-) [ell], Phrygian [xpg], Pontic [pnt], Albanian, Tosk [als], Tsakonian [tsd], Turkish [tur], Urum [uum]",
+local: [ ], 
+layout: [ 
+	/*{ name:"Greek Layout Requirements", url:"https://www.w3.org/TR/geor-lreq/"},*/
+    { name:"Greek counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#greek-styles"},
+	],
 },
 
 
@@ -257,8 +276,6 @@ dates:"BCE 7thC – today", start:"-700", end:"", current_usage:"",
 status:"",
 origin:"Europe",
 info:{ wikipedia:"Latin_script", omniglot:"latin" },
-local: [ ], 
-layout: [ { name:"Requirements for Latin Text Layout and Pagination", url:"http://w3c.github.io/dpub-pagination/"}, ],
 charts: [ ["Basic Latin", "0000"], ["Latin-1 Supplement", "0080"], ["Latin Extended-A", "0100"], ["Latin Extended-B", "0180"], ["Latin Extended-C", "2C60"], ["Latin Extended-D", "A720"], ["Latin Extended-E", "AB30"], ["Latin Extended-F", "10780"], ["Latin Extended-G", "1DF00"], ["Latin Extended Additional", "1E00"], ["Halfwidth and Fullwidth Forms", "FF00"], ["IPA Extensions", "0250"], ["Phonetic Extensions", "1D00"], ["Phonetic Extensions Supplement", "1D80"] ],
 scriptNotes: [["Bamanan", "latn/bm.html"], ["Fula", "latn/ff.html"], ["Hausa (boko)", "latn/ha.html"], ["Kurmanji", "latn/kmr.html"], ["Wolof", "latn/wo.html"]],
 charNotesList:["Latin", "latn/block.html"],
@@ -269,6 +286,11 @@ ssHistory: "xztdezls8h",
 chapters: "07",
 htmlchapter: "7/#G4321",
 usedfor: "",
+local: [ ],
+layout: [ 
+	{ name:"Requirements for Latin Text Layout and Pagination", url:"http://w3c.github.io/dpub-pagination/"},
+    { name:"Latin counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#latin-styles"},
+	],
 },
 
 
@@ -424,6 +446,9 @@ ssHistory: "aeg5ah9fbg",
 chapters: "19",
 htmlchapter: "19/#G45398",
 usedfor: "Bamun [bax]",
+layout: [ 
+    { name:"Bamum counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#bamum-styles"},
+    ],
 },
 
 
@@ -483,9 +508,6 @@ dates:"BCE 4thC – today", start:"-400", end:"", current_usage:"",
 status:"Widely used for writing the Ethiopian and Eritrean Semitic languages such as Tigré, Amharic and Tigrinya.",
 origin:"Africa",
 info:{ wikipedia:"Ge'ez_script", omniglot:"ethiopic" },
-local: [ ], 
-layout: [ { name:"Ethiopic Layout Requirements", url:"https://w3c.github.io/elreq/"},
-        { name:"Proposal to Reclassify Ethiopic Wordspace as a Space Separator (Zs) Symbol", url:"http://www.unicode.org/L2/L2015/15148-ethiopic-wordspace.pdf"}, ],
 charts: [ ["Ethiopic", "1200"], ["Ethiopic Supplement", "1380"], ["Ethiopic Extended", "2D80"], ["Ethiopic Extended-A", "AB00"], ["Ethiopic Extended-B", "1E7E0"] ],
 scriptNotes: [["Amharic", "ethi/am.html"]],
 charNotesList:["Ethiopic", "ethi/block.html"],
@@ -496,6 +518,12 @@ ssHistory: "fvp74ug66k",
 chapters: "19",
 htmlchapter: "19/#G14116",
 usedfor: "Aari [aiw], Afar [aar], Alaba-K’abeena [alw], Amharic [amh], Anuak [anu], Argobba [agj], Awngi [awn], Basketo [bst], Bench [bcq], Bilin [byn], Oromo, Borana-Arsi-Guji [gax], Boro (Ethiopia) [bwo], Burji [bji], Dawro [dwr], Dirasha [gdl], Dizin [mdx], Gamo [gmv], Gedeo [drs], Geez [gez], Gofa [gof], Gumuz [guk], Hadiyya [hdy], Hamer-Banna [amf], Harari [har], Kafa [kbr], Kambaata [ktb], Kistane [gru], Konso [kxc], Koorete [kqy], Majang [mpe], Male (Ethiopia) [mdy], Me'en [mym], Mursi [muz], Oromo [orm], Qimant [ahg], Saho [ssy], Sebat Bet Gurage [sgw], Sidamo [sid], Silt'e [stv], Suri [suq], Tigre [tig], Tigrinya [tir], Tigrinya [tir], Oromo, West Central [gaz], Wolaytta [wal], Xamtanga [xan], Zaysete [zay]",
+local: [ ], 
+layout: [ 
+	{ name:"Ethiopic Layout Requirements", url:"https://www.w3.org/TR/elreq/"},
+    { name:"Ethiopic counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#ethiopic-styles"},
+	{ name:"Proposal to Reclassify Ethiopic Wordspace as a Space Separator (Zs) Symbol", url:"http://www.unicode.org/L2/L2015/15148-ethiopic-wordspace.pdf"}, 
+	],
 },
 
 
@@ -535,7 +563,6 @@ dates:"1949 – today", start:"1949", end:"", current_usage:"",
 status:"Used in Guinea and Côte d'Ivoire as well as Mali, for publications relating to indigenous knowledge, including descriptions of medical rituals, traditional poetry, and philosophical works, as well as textbooks and a transcription of the Qur'an.",
 origin:"Africa",
 info:{ wikipedia:"N'Ko_alphabet", omniglot:"nko", endalpha:"nko" },
-local: [ ], layout: [ ],
 charts: [ ["NKo", "07C0"] ],
 scriptNotes: [["N’Ko", "nkoo/nqo.html"]],
 charNotesList:["NKo", "nkoo/block.html"],
@@ -546,6 +573,11 @@ ssHistory: "mnqzubphu7",
 chapters: "19",
 htmlchapter: "19/#G18603",
 usedfor: "Bamanankan [bam], Eastern Maninkakan [man], Jula [dyu], N'Ko [nqo]",
+local: [ ],
+layout: [ 
+    { name:"N’Ko Layout Requirements", url:"https://www.w3.org/TR/nkoo-lreq/"},
+    { name:"N’Ko counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#nko-styles"},
+	],
 },
 
 
@@ -699,7 +731,6 @@ dates:"BCE 3rdC – today", start:"-300", end:"", current_usage:"",
 status:"The writing system for the Hebrew language, but also for others.",
 origin:"West Asia",
 info:{ wikipedia:"Hebrew_script", omniglot:"hebrew" },
-local: [ ], layout: [ ],
 charts: [ ["Hebrew", "0590"], ["Alphabetic Presentation Forms", "FB00"] ],
 scriptNotes: [["Modern Israeli Hebrew", "hebr/he.html"]],
 charNotesList:["Hebrew", "hebr/block.html"],
@@ -710,6 +741,11 @@ ssHistory: "qek84cbq5u",
 chapters: "09",
 htmlchapter: "9/#G6528",
 usedfor: "Hebrew, Ancient [hbo], Bukharic [bhh], Yiddish, Eastern [ydd], Hebrew [heb], Hebrew [heb], Hulaulá [huy], Judeo-Arabic [jrb], Judeo-Berber [jbe], Arabic, Judeo-Iraqi [yhd], Judeo-Italian [itk], Arabic, Judeo-Moroccan [aju], Judeo-Persian [jpr], Judeo-Tat [jdt], Arabic, Judeo-Tripolitanian [yud], Arabic, Judeo-Tunisian [ajt], Arabic, Judeo-Yemeni [jye], Ladino [lad], Lishán Didán [trg], Lishana Deni [lsd], Lishanid Noshan [aij], Aramaic, Samaritan [sam], Samaritan [smp], Tajik [tgk], Yiddish, Western [yih], Yiddish [yid]",
+local: [ ], 
+layout: [ 
+	/*{ name:"Hebrew Layout Requirements", url:"https://www.w3.org/TR/hebr-lreq/"},*/
+    { name:"Hebrew counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#hebrew-styles"},
+	],
 },
 
 
@@ -961,10 +997,6 @@ dates:"11thC – today", start:"1100", end:"", current_usage:"",
 status:"The script used for the Bengali language, which has over 180,000,000 speakers, but also for several others.",
 origin:"South Asia",
 info:{ wikipedia:"Bengali_alphabet", omniglot:"bengali" },
-local: [ ],
-layout: [ 
-    { name:"Introduction to Indic Scripts", url:"indic-overview"},
-    ],
 charts: [ ["Bengali", "0980"] ],
 scriptNotes: [["Bengali/Bangla", "beng/bn.html"]],
 charNotesList:["Bengali", "beng/block.html"],
@@ -975,6 +1007,11 @@ ssHistory: "f8jrlqwbac",
 chapters: "12",
 htmlchapter: "12/#G664195",
 usedfor: "Assamese [as], Bengali [bn], Bishnupriya [bpy], Bodo (India) [brx], Chakma [ccp], Chiru [cdf], Chittagonian [ctg], Naga, Chothe [nct], Deori [der], Dimasa [dis], Chin, Falam [cfm], Garo [grt], Hajong [haj], Khasi [kha], Koch [kdq], Koda [cdz], Kok Borok [trp], Kudmali [kyw], Lushai [lus], Manipuri [mni], Naga, Maring [nng], Mising [mrg], Naga, Moyon [nmo], Munda [unx], Mundari [unr], Nyishi [njz], Nyishi [njz], Sadri, Oraon [sdr], Panchpargania [tdb], Puroik [suv], Rabha [rah], Rangpuri [rkt], Sadri [sck], Santali [sat], Sauria Paharia [mjt], Sylheti [syl], Naga, Thangal [nki], Tippera [tpe], Tiwa [lax], Toto [txo], Usui [usi]",
+local: [ ],
+layout: [ 
+    { name:"Introduction to Indic Scripts", url:"indic-overview"},
+    { name:"Bengali counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#bengali-styles"},
+    ],
 },
 
 
@@ -1042,6 +1079,13 @@ ssHistory: "yqug2kbjjr",
 chapters: "12",
 htmlchapter: "12/#G34334",
 usedfor: "Garasia, Adiwasi [gas], Avestan [ave], Bhili [bhb], Chodri [cdi], Dhanki [dhn], Dubli [dub], Dungra Bhil [duh], Gamit [gbl], Gujarati [guj], Kachhi [kfr], Koli, Kachi [gjk], Kukna [kex], Garasia, Rajput [gra], Varli [vav], Vasavi [vas], Koli, Wadiyara [kxp]",
+local: [
+    { name:"Introduction to Indic Scripts", url:"indic-overview.html"},
+	], 
+layout: [ 
+	/*{ name:"Gujarati Layout Requirements", url:"https://www.w3.org/TR/gujr-lreq/"},*/
+    { name:"Greek counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#greek-styles"},
+	],
 },
 
 
@@ -1050,9 +1094,6 @@ dates:"16thC – today", start:"1500", end:"", current_usage:"",
 status:"The script used for the Punjabi language in India.",
 origin:"South Asia",
 info:{ wikipedia:"Gurmukhi_alphabet", omniglot:"punjabi" },
-local: [ 
-    { name:"Introduction to Indic Scripts", url:"indic-overview"},
-    ],
 layout: [ ],
 charts: [ ["Gurmukhi", "0A00"] ],
 scriptNotes: [["Punjabi", "guru/pa.html"]],
@@ -1064,6 +1105,13 @@ ssHistory: "fd27tquj5j",
 chapters: "12",
 htmlchapter: "12/#G668388",
 usedfor: "Eastern Punjabi [pan], Saraiki [skr], Sindhi [snd]",
+local: [
+    { name:"Introduction to Indic Scripts", url:"indic-overview.html"},
+	], 
+layout: [ 
+	/*{ name:"Gurmukhi Layout Requirements", url:"https://www.w3.org/TR/guru-lreq/"},*/
+    { name:"Gurmukhi counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#gurmukhi-styles"},
+	],
 },
 
 
@@ -1087,16 +1135,18 @@ dates:"1500 – today", start:"1500", end:"", current_usage:"",
 status:"The script used for the Kannada language, with around 35,000,000 speakers, and also for other minority languages, some of which have millions of speakers also.",
 origin:"South Asia",
 info:{ wikipedia:"Kannada_alphabet", omniglot:"kannada" },
-local: [ 
-    { name:"Introduction to Indic Scripts", url:"indic-overview"},
-    ],
-layout: [ ],
 charts: [ ["Kannada", "0C80"] ],
 orthoChart: "Kannada",
 ssHistory: "ur8y3qj6yk",
 chapters: "12",
 htmlchapter: "12/#G38298",
 usedfor: "Badaga [bfq], Betta Kurumba [xub], Goan Konkani [gom], Kannada Kurumba [kfi], Kannada [kan], Kodava [kfa], Konkani [knn], Kudiya [kfg], Lambadi [lmn], Paniya [pcg], Ravula [yea], Tulu [tcy]",
+local: [ 
+    { name:"Introduction to Indic Scripts", url:"indic-overview/index.html"},
+    ],
+layout: [ 
+    { name:"Kannada counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#kannada-styles"},
+	],
 },
 
 
@@ -1150,7 +1200,6 @@ dates:"1720 – today", start:"1720", end:"", current_usage:"community",
 status:"The writing system for the Lepcha language, spoken in Sikkim and in the Darjeeling district of the West Bengal state of India by around 53,000 people.",
 origin:"South Asia",
 info:{ wikipedia:"Lepcha_alphabet", omniglot:"lepcha", endalpha:"rong" },
-local: [ ], layout: [ ],
 charts: [ ["Lepcha", "1C00"] ],
 scriptNotes: [["Lepcha", "lepc/lep.html"]],
 charNotesList:["Lepcha", "lepc/block.html"],
@@ -1161,6 +1210,10 @@ ssHistory: "g6cv78jn42",
 chapters: "13",
 htmlchapter: "13/#G27253",
 usedfor: "Lepcha [lep]",
+local: [ ],
+layout: [ 
+    { name:"Lepcha counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#lepcha-styles"},
+	],
 },
 
 
@@ -1169,7 +1222,6 @@ dates:"19thC – today", start:"1800", end:"", current_usage:"community",
 status:"Used alongside Devanagari by about 2-400,000 people for writing the Limbu language spoken in Nepal and northern India.",
 origin:"South Asia",
 info:{ wikipedia:"Limbu_alphabet", omniglot:"limbu" },
-local: [ ], layout: [ ],
 charts: [ ["Limbu", "1900"] ],
 scriptNotes: [["Limbu", "limb/lif.html"]],
 charNotesList:["Limbu", "limb/block.html"],
@@ -1180,6 +1232,10 @@ ssHistory: "a2exgfkrmf",
 chapters: "13",
 htmlchapter: "13/#G27263",
 usedfor: "Limbu [lif]",
+local: [ ],
+layout: [ 
+    { name:"Limbu counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#limbu-styles"},
+	],
 },
 
 
@@ -1203,10 +1259,6 @@ dates:"13thC – today", start:"1200", end:"", current_usage:"",
 status:"The script used for the Malayalam language, with around 35,000,000 speakers, and a number of other minority languages.",
 origin:"South Asia",
 info:{ wikipedia:"Malayalam_alphabet", omniglot:"malayalam" },
-local: [ 
-    { name:"Introduction to Indic Scripts", url:"indic-overview"},
-    ],
-layout: [ ],
 charts: [ ["Malayalam", "0D00"] ],
 scriptNotes: [["Malayalam", "mlym/ml.html"]],
 charNotesList:["Malayalam", "mlym/block.html"],
@@ -1217,6 +1269,12 @@ ssHistory: "ypvmjurtyg",
 chapters: "12",
 htmlchapter: "12/#G22346",
 usedfor: "Allar [all], Kurumba, Attapady [pkr], Kurumba, Betta [xub], Irula [iru], Kudiya [kfg], Kurichiya [kfh], Malayalam [mal], Mannan [mjv], Muduga [udg], Paniya [pcg], Ravula [yea]",
+local: [ 
+    { name:"Introduction to Indic Scripts", url:"indic-overview/index.html"},
+    ],
+layout: [ 
+    { name:"Malayalam counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#malayalam-styles"},
+	],
 },
 
 
@@ -1240,13 +1298,16 @@ dates:"11thC – today", start:"1000", end:"", current_usage:"uptake",
 status:"Used to write Manipuri, spoken by about 1,400,000 people in India, primarily in the state of Manipur, in Bangladesh, and in Myanmar. Growing in popularity as a replacement for Bengali script.",
 origin:"South Asia",
 info:{ wikipedia:"Meetei_Mayek", omniglot:"manipuri", endalpha:"meitei-mayek" },
-local: [ ], layout: [ ],
 charts: [ ["Meetei Mayek", "ABC0"], ["Meetei Mayek Extensions", "AAE0"] ],
 orthoChart: "",
 ssHistory: "x29ycx7hp5",
 chapters: "13",
 htmlchapter: "13/#G27615",
 usedfor: "Meitei [mni], Old Manipuri [omp]",
+local: [ ],
+layout: [ 
+    { name:"Meetei counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#meetei-styles"},
+	],
 },
 
 
@@ -1270,7 +1331,6 @@ dates:"1980s – today", start:"1980", end:"", current_usage:"community",
 status:"Used for Mro language, spoken by 30-50,000 people in the Chittagong Hill Tracts of Bangladesh. Taught in schools, and literacy is over 80% in Mru speakers.",
 origin:"South Asia",
 info:{ wikipedia:"Mru_language", omniglot:"mro", endalpha:"mro" },
-local: [ ], layout: [ ],
 charts: [ ["Mro", "16A40"] ],
 scriptNotes: [["Mru", "mroo/mro.html"]],
 charNotesList:["Mro", "mroo/block.html"],
@@ -1281,6 +1341,10 @@ ssHistory: "b6ebw4c6al",
 chapters: "13",
 htmlchapter: "13/#G27701",
 usedfor: "Mru [mro]",
+local: [ ],
+layout: [ 
+    { name:"Mro counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#mro-styles"},
+	],
 },
 
 
@@ -1304,7 +1368,6 @@ dates:"1920s – today", start:"1920", end:"", current_usage:"",
 status:"Used for the Santali language, which has around 6,000,000 speakers, as a proposed replacement for Devanagari, Bengali, Odia, and Latin. Mostly used by the southern dialect speakers.",
 origin:"South Asia",
 info:{ wikipedia:"Ol_Chiki_alphabet", omniglot:"olchiki", endalpha:"ol-chiki-santali" },
-local: [ ], layout: [ ],
 charts: [ ["Ol Chiki", "1C50"] ],
 scriptNotes: [["Santali", "olck/sat.html"]],
 charNotesList:["Ol Chiki", "olck/block.html"],
@@ -1315,6 +1378,10 @@ ssHistory: "rrkdvn7crf",
 chapters: "13",
 htmlchapter: "13/#G29195",
 usedfor: "Santali [sat]",
+local: [ ],
+layout: [ 
+    { name:"Ol Chiki counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#ol-chiki-styles"},
+	],
 },
 
 
@@ -1323,10 +1390,6 @@ dates:"1051 – today", start:"1051", end:"", current_usage:"",
 status:"The script for the Odia language, with around 40,000,000 speakers, and several minority languages.",
 origin:"South Asia",
 info:{ wikipedia:"Odia_alphabet", omniglot:"oriya" },
-local: [ 
-    { name:"Introduction to Indic Scripts", url:"indic-overview"},
-    ],
-layout: [ ],
 charts: [ ["Oriya", "0B00"] ],
 scriptNotes: [["Odia (Oriya)", "orya/or.html"]],
 charNotesList:["Oriya", "orya/block.html"],
@@ -1337,6 +1400,12 @@ ssHistory: "znkmblg693",
 chapters: "12",
 htmlchapter: "12/#G10153",
 usedfor: "Bodo Gadaba [gbj], Bodo Parja [bdv], Bondo [bfw], Dawik [dwk], Desiya [dso], Duruwa [pci], Gara' [gaq], ho [hoc], Juang [jun], Kisan [xis], Koya [kff], Kudmali [kyw], Kui [kxu], Kuvi [kxv], Mirgan [zrg], Mundari [unr], Odia [ory], Pengo [peg], Pottangi Ollar Gadaba [gdb], Sambalpuri [spv], Santhali [sat], Sora [srb]",
+local: [ 
+    { name:"Introduction to Indic Scripts", url:"indic-overview/index.html"},
+    ],
+layout: [ 
+    { name:"Oriya counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#oriya-styles"},
+	],
 },
 
 
@@ -1458,10 +1527,6 @@ dates:"7thC – today", start:"600", end:"", current_usage:"",
 status:"The script used for the Tamil language, with around 65,000,000 speakers, and for several minority languages.",
 origin:"South Asia",
 info:{ wikipedia:"Tamil_script", omniglot:"tamil" },
-local: [ 
-    { name:"Introduction to Indic Scripts", url:"indic-overview"},
-    ],
-layout: [ ],
 charts: [ ["Tamil", "0B80"], ["Tamil Supplement", ""] ],
 scriptNotes: [["Tamil", "taml/ta.html"]],
 charNotesList:["Tamil", "taml/block.html"],
@@ -1472,6 +1537,13 @@ ssHistory: "zw5nedjarb",
 chapters: "12",
 htmlchapter: "12/#G10162",
 usedfor: "Badaga [bfq], Betta Kurumba [xub], Irula [iru], Kannada Kurumba [kfi], Kota (India) [kfe], Muthuvan [muv], Paniya [pcg], Saurashtra [saz], Tamil [ta], Toda [tcx], Vaagri Booli [vaa], Wayanad Chetti [ctt]",
+local: [ 
+    { name:"Introduction to Indic Scripts", url:"indic-overview/index.html"},
+    ],
+layout: [ 
+    { name:"Tamil Layout Requirements", url:"https://www.w3.org/TR/ilreq-taml/"},
+    { name:"Tamil counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#tamil-styles"},
+	],
 },
 
 
@@ -1480,10 +1552,6 @@ dates:"13thC – today", start:"1200", end:"", current_usage:"",
 status:"The script used for the Telugu language, with around 70,000,000 speakers, and several other minority languages.",
 origin:"South Asia",
 info:{ wikipedia:"Telugu_alphabet", omniglot:"telugu" },
-local: [ 
-    { name:"Introduction to Indic Scripts", url:"indic-overview"},
-    ],
-layout: [ ],
 charts: [ ["Telugu", "0C00"] ],
 scriptNotes: [["Telugu", "telu/te.html"]],
 charNotesList:["Telugu", "telu/block.html"],
@@ -1494,6 +1562,12 @@ ssHistory: "sjrwm9ppr3",
 chapters: "12",
 htmlchapter: "12/#G81985",
 usedfor: "Gondi, Adilabad [wsg], Oriya, Adivasi [ort], Chenchu [cde], Gondi [gon], Ho [hoc], Konda-Dora [kfc], Koya [kff], Kupia [key], Lambadi [lmn], Manna-Dora [mju], Mirgan [zrg], Gadaba, Mudhili [gau], Parenga [pcj], Gadaba, Pottangi Ollar [gdb], Saurashtra [saz], Sora [srb], Kolami, Southeastern [nit], Telugu [tel], Waddar [wbq], Yerukula [yeu]",
+local: [ 
+    { name:"Introduction to Indic Scripts", url:"indic-overview/index.html"},
+    ],
+layout: [ 
+    { name:"Telugu counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#telugu-styles"},
+	],
 },
 
 
@@ -1543,6 +1617,10 @@ ssHistory: "llvwz8vpn8",
 chapters: "13",
 htmlchapter: "13/#G27702",
 usedfor: "Ho [hoc]",
+local: [ ],
+layout: [ 
+    { name:"Warang Citi counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#warangciti-styles"},
+	],
 },
 
 
@@ -1566,10 +1644,6 @@ dates:"13thC – today", start:"1200", end:"", current_usage:"",
 status:"Used alongside Cyrillic for the Mongolian language in Mongolia and China, around 6,500,000 speakers, as well as for a number of other languages.",
 origin:"Central Asia",
 info:{ wikipedia:"Mongolian_alphabet", omniglot:"mongolian", endalpha:"mongolian" },
-local: [ 
-    { name:"Mongolian Variant Forms", url:"https://r12a.github.io/mongolian-variants/"},
-    ], 
-layout: [ ],
 charts: [ ["Mongolian", "1800"], ["Mongolian Supplement", "11660"] ],
 scriptNotes: [["Mongolian", "mong/mn.html"]],
 charNotesList:["Mongolian", "mong/block.html"],
@@ -1580,6 +1654,13 @@ ssHistory: "xluqdp54ts",
 chapters: "13",
 htmlchapter: "13/#G27803",
 usedfor: "Mongolian, Halh [khk], Kalmyk [xal], Manchu [mnc], Buriat [bxm], Mongolian [mon], Old Uighur [oui], Peripheral Mongolian [mvf], Southern Altai [alt], Xibe [sjo], Daur [dta]",
+local: [ 
+    { name:"Mongolian Variant Forms", url:"https://r12a.github.io/mongolian-variants/"},
+    ], 
+layout: [ 
+    { name:"Mongolian Layout Requirements", url:"https://www.w3.org/TR/mlreq/"},
+    { name:"Mongolian counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#mongolian-styles"},
+	],
 },
 
 
@@ -1633,11 +1714,6 @@ dates:"6thC – today", start:"500", end:"", current_usage:"",
 status:"The script used for the Tibetan, Dzongka, and several other languages, in the Himalayas and India. Language speakers number around 6,000,000.",
 origin:"Central Asia",
 info:{ wikipedia:"Tibetan_alphabet", omniglot:"tibetan" },
-local: [ ],
-layout: [ 
-    { name:"Tibetan emphasis (blog)", url:"https://r12a.github.io/blog/200610.html#20070719"},
-    { name:"Formatting rules for Tibetan text", url:"http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text"},
-    ],
 charts: [ ["Tibetan", "0F00"] ],
 scriptNotes: [["Tibetan", "tibt/bo.html"]],
 charNotesList:["Tibetan", "tibt/block.html"],
@@ -1648,6 +1724,13 @@ ssHistory: "mg8ulatcjb",
 chapters: "13",
 htmlchapter: "13/#G31615",
 usedfor: "Adi [adi], Tibetan, Amdo [adx], Balti [bft], Bumthangkha [kjz], Changthang [cna], Dolpo [dre], Dzongkha [dzo], Tamang, Eastern [taj], Gahri [bfu], Mongolian, Halh [khk], Idu-Mishmi [clk], Jiarong [jya], Khamba [kbg], Tibetan, Khams [khg], Khengkha [xkf], Kurtokha [xkz], Ladakhi [lbj], Lepcha [lep], Loke [loy], Manangba [nmm], Mugom [muk], Tibetan, Old [otb], Pattani [lae], Purik [prx], Sherpa [xsr], Sikkimese [sip], Bhoti, Spiti [spt], Bhoti, Stod [sbu], Tibetan [bod], Tinani [lbf], Tshangla [tsj], Walungge [ola], Tamang, Western [tdg], Zangskari [zau]",
+local: [ ],
+layout: [ 
+    { name:"Tibetan Layout Requirements", url:"https://www.w3.org/TR/tlreq/"},
+    { name:"Tibetan counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#tibetan-styles"},
+    { name:"Tibetan emphasis (blog)", url:"https://r12a.github.io/blog/200610.html#20070719"},
+    { name:"Formatting rules for Tibetan text", url:"http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text"},
+	],
 },
 
 
@@ -1690,7 +1773,6 @@ dates:"1962 – today", start:"1962", end:"", current_usage:"",
 status:"No usage data. The Kayah languages are spoken by around 500,000 people.",
 origin:"Southeast Asia",
 info:{ wikipedia:"Kayah Li_alphabet", omniglot:"kayahli", endalpha:"kayah-li" },
-local: [ ], layout: [ ],
 charts: [ ["Kayah Li", "A900"] ],
 scriptNotes: [["Western Kayah", "kali/kyu.html"]],
 charNotesList:["Kayah Li", "kali/block.html"],
@@ -1701,6 +1783,10 @@ ssHistory: "enl5dse8jv",
 chapters: "16",
 htmlchapter: "16/#G61902",
 usedfor: "Eastern Kayah [eky], Western Kayah [kyu]",
+local: [ ],
+layout: [ 
+    { name:"Kayah Li counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#kayah-li-styles"},
+	],
 },
 
 
@@ -1709,7 +1795,6 @@ dates:"6thC – today", start:"500", end:"", current_usage:"",
 status:"The script for the Khmer (Cambodian) language, which has around 16,000,000 speakers, and for several minority languages.",
 origin:"Southeast Asia",
 info:{ wikipedia:"Khmer_script", omniglot:"khmer" },
-local: [ ], layout: [ ],
 charts: [ ["Khmer", "1780"], ["Khmer Symbols", "19E0"] ],
 scriptNotes: [["Khmer", "khmr/km.html"]],
 charNotesList:["Khmer", "khmr/block.html"],
@@ -1720,6 +1805,11 @@ ssHistory: "2269c7g9ee",
 chapters: "16",
 htmlchapter: "16/#G64642",
 usedfor: "Mnong, Central [cmo], Jarai [jra], Kavet [krv], Khmer [khm], Krung [krr], Kuy [kdt], Lave [brb], Khmer, Northern [kxm], Tampuan [tpu]",
+local: [ ],
+layout: [ 
+    { name:"Khmer Layout Requirements", url:"http://w3c.github.io/khmr-lreq/"},
+    { name:"Khmer counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#khmer-styles"},
+	],
 },
 
 
@@ -1728,7 +1818,6 @@ dates:"16thC – today", start:"1500", end:"", current_usage:"",
 status:"The script for the Lao language, with around 4,000,000 speakers, and several minority languages in Laos.",
 origin:"Southeast Asia",
 info:{ wikipedia:"Lao_script", omniglot:"lao" },
-local: [ ], layout: [ ],
 charts: [ ["Lao", "0E80"] ],
 scriptNotes: [["Lao", "laoo/lo.html"]],
 charNotesList:["Lao", "laoo/block.html"],
@@ -1739,6 +1828,11 @@ ssHistory: "98522835fg",
 chapters: "16",
 htmlchapter: "16/#G10988",
 usedfor: "Bru, Eastern [bru], Hmong Daw [mww], Mien, Iu [ium], Jeh [jeh], Kataang [kgd], Khmu [kjg], Kriang [ngt], Kuy [kdt], Lamet [lbn], Lao [lao], Lave [brb], Ta'oih, Lower [tto], Katang, Northern [ncq], Pacoh [pac], Phunoi [pho], Sô [sss], Tai Dam [blt], Ta'oih, Upper [tth], Bru, Western [brv], Katu, Western [kuf]",
+local: [ ],
+layout: [ 
+    { name:"Lao Layout Requirements", url:"http://w3c.github.io/laoo-lreq/"},
+    { name:"Lao counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#lao-styles"},
+	],
 },
 
 
@@ -1758,6 +1852,11 @@ ssHistory: "vcz6flwzqs",
 chapters: "16",
 htmlchapter: "16/#G24999",
 usedfor: "Aiton [aio], Akha [ahk], Chin, Asho [csh], Burmese [mya], Karen, Bwe [bwe], Karen, Geba [kvq], Intha [int], Khamti [kht], Lamkang [lmk], Karen, Manumanaw [kxf], Marma [rmz], Moken [mwt], Mon [mnw], Burmese, Old [obr], Karen, Pa'o [blk], Pali [pli], Phake [phk], Karen, Pwo Eastern [kjp], Karen, Pwo Eastern [kjp], Karen, Pwo Eastern [kjp], Karen, Pwo Western [pwo], Rakhine [rki], Palaung, Ruching [pce], Palaung, Rumai [rbb], Karen, S'gaw [ksw], Sanskrit [san], Shan [shn], Palaung, Shwe [pll], Tai Laing [tjl], Kayah, Western [kyu]",
+local: [ ],
+layout: [ 
+    /*{ name:"Lao Layout Requirements", url:"https://www.w3.org/TR/mlreq/"},*/
+    { name:"Myanmar counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#myanmar-styles"},
+	],
 },
 
 
@@ -1766,7 +1865,6 @@ dates:"1950s – today", start:"1900", end:"", current_usage:"",
 status:"A script used to write the Lü language in China, which has around 280,000 speakers.",
 origin:"Southeast Asia",
 info:{ wikipedia:"New_Tai_Lue_alphabet", omniglot:"tailue" },
-local: [ ], layout: [ ],
 charts: [ ["New Tai Lue", "1980"] ],
 scriptNotes: [["Tai Lü", "talu/khb.html"]],
 charNotesList:["New Tai Lue", "talu/block.html"],
@@ -1777,6 +1875,10 @@ ssHistory: "37fcf7h92b",
 chapters: "16",
 htmlchapter: "16/#G65706",
 usedfor: "Lü [khb]",
+local: [ ],
+layout: [ 
+    { name:"Tai Lü counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#tailue-styles"},
+	],
 },
 
 
@@ -1835,7 +1937,6 @@ dates:"13thC – today", start:"1200", end:"", current_usage:"",
 status:"Used principally to write Tai Khün, with relatively high literacy for around 100,000 speakers, and Northern Thai, with around 6,000,000 speakers but low literacy in the Tham script. Northern Thai is also written in the Thai script, and Lü is also written in New Tai Lue.",
 origin:"Southeast Asia",
 info:{ wikipedia:"Tai_Tham_alphabet", omniglot:"lanna", endalpha:"lanna-aka-tai-tham" },
-local: [ ], layout: [ ],
 charts: [ ["Tai Tham", "1A20"] ],
 scriptNotes: [["Tai Khün", "lana/kkh.html"], ["Northern Thai", "lana/nod.html"]],
 charNotesList:["Tai Tham", "lana/block.html"],
@@ -1846,6 +1947,10 @@ ssHistory: "gf97b8ad78",
 chapters: "16",
 htmlchapter: "16/#G53337",
 usedfor: "Khün [kkh], Lü [khb], Northern Thai [nod], Tai Ya [cuu]",
+local: [ ],
+layout: [ 
+    { name:"Lanna (Tai Tham) counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#lanna-styles"},
+	],
 },
 
 
@@ -1873,10 +1978,6 @@ dates:"1283 – today", start:"1283", end:"", current_usage:"",
 status:"The script used to write the Thai language, with around 60,000,000 speakers, plus almost 40 other languages.",
 origin:"Southeast Asia",
 info:{ wikipedia:"Thai_alphabet", omniglot:"thai" },
-local: [ ],
-layout: [ 
-    { name:"Thai line breaking in Firefox", url:"https://r12a.github.io/blog/200707.html#20070717"},
-    ],
 charts: [ ["Thai", "0E00"] ],
 scriptNotes: [["Thai", "thai/th.html"]],
 charNotesList:["Thai", "thai/block.html"],
@@ -1887,6 +1988,12 @@ ssHistory: "d877ebfc65",
 chapters: "16",
 htmlchapter: "16/#G46485",
 usedfor: "Akha [ahk], Bisu [bzi], Blang [blr], Chong [cog], Bru, Eastern [bru], Lawa, Eastern [lwl], Hmong Daw [mww], Hmong Njua [hnj], Mien, Iu [ium], Kataang [kgd], Kensiu [kns], Khmu [kjg], Khuen [khf], Kuy [kdt], Laomian [lwm], Mal [mlf], Mlabri [mra], Moken [mwt], Moklen [mkm], Mpi [mpz], Thai, Northeastern [tts], Khmer, Northern [kxm], Thai, Northern [nod], Nyahkur [cbn], Pali [pli], Malay, Pattani [mfa], Phai [prt], Karen, Phrae Pwo [kjt], Karen, Pwo Eastern [kjp], Karen, Pwo Northern [pww], Shan [shn], Sô [sss], Thai, Southern [sou], Thai Song [soa], Thai [tha], Urak Lawoi' [urk], Bru, Western [brv], Bru, Western [brv], Lawa, Western [lcp]",
+local: [ ],
+layout: [ 
+    { name:"Thai Layout Requirements", url:"https://www.w3.org/TR/thai-lreq/"},
+    { name:"Thai counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#thai-styles"},
+    { name:"Thai line breaking in Firefox", url:"https://r12a.github.io/blog/200707.html#20070717"},
+	],
 },
 
 
@@ -1906,6 +2013,9 @@ ssHistory: "f2bb6f3bh9",
 chapters: "17",
 htmlchapter: "17/#G26759",
 usedfor: "Bali [ban], Kawi [kaw], Sasak [sas]",
+layout: [ 
+    { name:"Balinese counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#balinese-styles"},
+    ],
 },
 
 
@@ -1990,7 +2100,6 @@ dates:"17thC – today", start:"1600", end:"", current_usage:"endangered",
 status:"Currently, no newspapers or magazines are being printed in the script, although it is still taught in most elementary schools and some junior high schools in Javanese speaking areas.",
 origin:"Indonesia & Oceania",
 info:{ wikipedia:"Javanese_alphabet", omniglot:"javanese", endalpha:"javanese" },
-local: [ ], layout: [ ],
 charts: [ ["Javanese", "A980"] ],
 scriptNotes: [["Javanese", "java/jv.html"]],
 charNotesList:["Javanese", "java/block.html"],
@@ -2001,6 +2110,11 @@ ssHistory: "db9724gea9",
 chapters: "17",
 htmlchapter: "17/#G27153",
 usedfor: "Bali [ban], Javanese [jv], Osing [osi], Sunda [sun], Tengger [tes]",
+local: [ ],
+layout: [ 
+    /*{ name:"Hangul Layout Requirements", url:"http://w3c.github.io/klreq/"},*/
+    { name:"Javanese counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#javanese-styles"},
+	],
 },
 
 
@@ -2028,7 +2142,6 @@ dates:"14thC – today", start:"1300", end:"", current_usage:"",
 status:"As of 1996, the official script for the Sundanese language, which has around 25,000,000 speakers on the island of Java. Sundanese is also written in the Latin script. It is currently taught in schools and used for public signage.",
 origin:"Indonesia & Oceania",
 info:{ wikipedia:"Sundanese_alphabet", omniglot:"http://www.omniglot.com/writing/sundanese.php", endalpha:"sundanese" },
-local: [ ], layout: [ ],
 charts: [ ["Sundanese", "1B80"], ["Sundanese Supplement", "1CC0"] ],
 scriptNotes: [["Sundanese", "sund/su.html"]],
 charNotesList:["Sundanese", "sund/block.html"],
@@ -2039,6 +2152,10 @@ ssHistory: "3844bc8cea",
 chapters: "17",
 htmlchapter: "17/#G27244",
 usedfor: "Sunda [sun]",
+local: [ ],
+layout: [ 
+    { name:"Sundanese counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#sundanese-styles"},
+	],
 },
 
 
@@ -2096,12 +2213,6 @@ dates:"1stC – today", start:"100", end:"", current_usage:"",
 status:"Used for Chinese, and a number of related languages.",
 origin:"East Asia",
 info:{ wikipedia:"Chinese_characters", omniglot:"" },
-local: [ 
-    { name:"Simplified vs Traditional", url:"http://r12a.github.io/scripts/chinese/"},
-    ],
-layout: [ 
-    { name:"Chinese Layout Requirements", url:"http://w3c.github.io/clreq/"},
-    ],
 charts: [ ["CJK Unified Ideographs", "4E00"], ["CJK Unified Ideographs Extension A", "3400"], ["CJK Unified Ideographs Extension B", "20000"], ["CJK Unified Ideographs Extension C", "2A700"], ["CJK Unified Ideographs Extension D", "2B740"], ["CJK Unified Ideographs Extension E", "2B820"], ["CJK Unified Ideographs Extension F", ""], ["CJK Unified Ideographs Extension G", ""], ["CJK Unified Ideographs Extension H", "31350"], ["CJK Compatibility Ideographs", "F900"], ["CJK Compatibility Ideographs Supplement", "2F800"], ["KangXi Radicals", "2F00"], ["CJK Radicals Supplement", "2E80"], ["CJK Strokes", "31C0"], ["Ideographic Description Characters", "2FF0"], ["CJK Symbols and Punctuation", "3000"], ["Enclosed CJK Letters and Months", "3200"], ["Kanbun", "3190"] ],
 scriptNotes: [["Chinese", "hani/zh.html"]],
 charNotesList:["Punctuation", "punctuation/block.html"],
@@ -2111,6 +2222,13 @@ ssHistory: "tsps57x35g",
 chapters: "18",
 htmlchapter: "18/#G29086",
 usedfor: "Bouyei [pcc], Bai, Central [bca], Zhuang, Central Hongshuihe [zch], Zhuang, Dai [zhd], Zhuang, Eastern Hongshuihe [zeh], Zhuang, Guibei [zgb], Zhuang, Guibian [zgn], Honi [how], Mien, Iu [ium], Zhuang, Lianshan [zln], Zhuang, Liujiang [zlj], Zhuang, Liuqian [zlq], Zhuang, Minz [zgm], Zhuang, Nong [zhn], Puyuma [pyu], Zhuang, Qiubei [zqe], Bai, Southern [bfs], Dong, Southern [kmc], Sui [swi], Vietnamese [vie], Zhuang, Yang [zyg], Zhuang, Yongbei [zyb], Zhuang, Yongnan [zyn], Zhuang, Youjiang [zyj], Zhuang [zha], Zhuang, Zuojiang [zzj], Traditional: Atayal [tay], Chinese [zho], Chinese, Gan [gan], Chinese, Hakka [hak], Chinese, Huizhou [czh], Chinese, Jinyu [cjy], Chinese, Literary [lzh], Chinese, Mandarin [cmn], Maonan [mmd], Chinese, Min Dong [cdo], Chinese, Wu [wuu], Chinese, Xiang [hsn], Chinese, Yue [yue], Simplified: Atayal [tay], Chinese [zho], Daur [dta], Chinese, Gan [gan], Chinese, Hakka [hak], Chinese, Huizhou [czh], Chinese, Jinyu [cjy], Chinese, Literary [lzh], Chinese, Mandarin [cmn], Maonan [mmd], Chinese, Min Dong [cdo], Chinese, Min Nan [nan], Chinese, Wu [wuu], Chinese, Xiang [hsn], Chinese, Yue [yue], Zhuang [zha]",
+local: [ 
+    { name:"Simplified vs Traditional", url:"http://r12a.github.io/scripts/chinese/"},
+    ],
+layout: [ 
+    { name:"Chinese Layout Requirements", url:"https://www.w3.org/TR/clreq/"},
+    { name:"Han & CJK counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#chinese-styles"},
+	],
 },
 
 
@@ -2120,10 +2238,6 @@ dates:"1444 – today", start:"1444", end:"", current_usage:"",
 status:"Used for the Korean language.",
 origin:"East Asia",
 info:{ wikipedia:"Hangul", omniglot:"korean" },
-local: [ ], 
-layout: [ 
-    { name:"Hangul Layout Requirements", url:"http://w3c.github.io/klreq/"},
-    ],
 charts: [ ["Hangul Syllables", "AC00"], ["Hangul Jamo", "1100"], ["Hangul Compatibility Jamo", "3130"], ["Hangul Jamo Extended-A", "A960"], ["Hangul Jamo Extended-B", "D7B0"] ],
 scriptNotes: [["Korean", "kore/ko.html"]],
 pickers: [["Korean", "kore-ko"]],
@@ -2132,6 +2246,11 @@ ssHistory: "umfm3ftrny",
 chapters: "18",
 htmlchapter: "18/#G31028",
 usedfor: "Cia-cia [cia], Jejueo [jje], Korean [ko]",
+local: [ ],
+layout: [ 
+    { name:"Hangul Layout Requirements", url:"http://w3c.github.io/klreq/"},
+    { name:"Korean counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#korean-styles"},
+	],
 },
 
 
@@ -2140,12 +2259,6 @@ dates:"8thC – today", start:"700", end:"", current_usage:"",
 status:"Used to write the Japanese language. The Kanji, Hiragana, Katakana, and Latin characters are all mixed together in a sentence.",
 origin:"East Asia",
 info:{ wikipedia:"Japanese_writing_system", omniglot:"japanese" },
-local: [ 
-    { name:"Jukugo ruby (blog)", url:"https://r12a.github.io/blog/201002.html#20100924"},
-    ], 
-layout: [ 
-    { name:"Japanese Layout Requirements", url:"http://w3c.github.io/jlreq/"},
-    ],
 charts: [ ["Hiragana", "3040"], ["Katakana", "30A0"], ["Katakana Phonetic Extensions", "31F0"], ["Small Kana Extension", ""], ["Kana Supplement", "1B000"], ["Kana Extended-A", "1B100"], ["Kana Extended-B", "1AFF0"], ["Halfwidth and Fullwidth Forms", "FF00"] ],
 scriptNotes: [["Japanese", "jpan/ja.html"]],
 charNotesList:["Japanese", "jpan/block.html"],
@@ -2155,6 +2268,13 @@ ssHistory: "lrnzlkagyq",
 chapters: "18",
 htmlchapter: "18/#G22462",
 usedfor: "Japanese [ja]",
+local: [ 
+    { name:"Jukugo ruby (blog)", url:"https://r12a.github.io/blog/201002.html#20100924"},
+    ],
+layout: [ 
+    { name:"Japanese Layout Requirements", url:"https://www.w3.org/TR/jlreq/"},
+    { name:"Japanese counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#kana-styles"},
+	],
 },
 
 
@@ -2303,7 +2423,6 @@ dates:"10thC – today", start:"900", end:"", current_usage:"uptake",
 status:"Largely eclipsed by Devanagari nowadays, this script is used especially for writing the Newar language, but also others. Currently little used, but receiving interest for revival.",
 origin:"South Asia",
 info:{ wikipedia:"Prachalit_Nepal_alphabet", omniglot:"newa" },
-local: [ ], layout: [ ],
 charts: [ ["Newa", "11400"] ],
 scriptNotes: [["Newar", "newa/new.html"]],
 charNotesList:["Newa", "newa/block.html"],
@@ -2314,6 +2433,10 @@ ssHistory: "y53lggbts6",
 chapters: "13",
 htmlchapter: "13/#G31609",
 usedfor: "Bengali [bn], Hindi [hi], Maithili [mai], Newar [new], Sanskrit [sa]",
+local: [ ],
+layout: [ 
+    { name:"Newa counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#newa-styles"},
+	],
 },
 
 
@@ -2426,7 +2549,6 @@ dates:"1980s – today", start:"1900", end:"", current_usage:"uptake",
 status:"Used for the publication of books and newspapers, both hand-written and printed.",
 origin:"Southeast Asia",
 info:{ wikipedia:"Hanifi_Rohingya_script", omniglot:"rohingya.htm#hanifi", endalpha:"hanifi-rohingya" },
-local: [ ], layout: [ ],
 charts: [ ["Hanifi Rohingya", "10D00"] ],
 scriptNotes: [["Hanifi Rohingya", "rohg/rhg.html"]],
 charNotesList:["Hanifi Rohingya", "rohg/block.html"],
@@ -2437,6 +2559,11 @@ ssHistory: "mj3a6n78t2",
 chapters: "16",
 htmlchapter: "16/#G73728",
 usedfor: "Rohingya [rhg]",
+local: [ ], 
+layout: [ 
+	/*{ name:"Greek Layout Requirements", url:"https://www.w3.org/TR/geor-lreq/"},*/
+    { name:"Hanifi Rohingya counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#rohingya-styles"},
+	],
 },
 
 
@@ -2693,7 +2820,6 @@ dates:"1982 – today", start:"1982", end:"", current_usage:"",
 status:"Invented and published in late 1980 by community elder and author Rohidas Singh Nag. It has seen limited but increasing use in literature, education, and computing.",
 origin:"S Asia",
 info:{ wikipedia:"Mundari_Bani", omniglot:"mundaribani" },
-local: [ ], layout: [ ],
 charts: [ ["Nag Mundari", "1E4D0"] ],
 scriptNotes: [["Mundari", "nagm/unr.html"]],
 charNotesList:["Nag Mundari", "nagm/block.html"],
@@ -2704,6 +2830,10 @@ ssHistory: "rybdaxcvvm",
 chapters: "13",
 htmlchapter: "13/#G112439",
 usedfor: "Mundari [unr]",
+local: [ ],
+layout: [ 
+    { name:"Nag Mundari counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#nag-mundari-styles"},
+	],
 },
 
 
@@ -2932,7 +3062,7 @@ LOCAL: other useful descriptions on r12a site
 charts:[ "Ahom" ],
 CHARTS: list of Unicode block names
 
-layout:[	]
+layout:[{ name:"Arabic Layout Requirements", url:"https://w3c.github.io/alreq/"},... ]
 LAYOUT: List of links to W3C language enablement docs
 },
 
