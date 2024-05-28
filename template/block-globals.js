@@ -1,4 +1,4 @@
-
+langTag = 'xxxx'
 window.version = 'v29'
 window.scriptName = 'Punctuation'
 window.ghDirectory = 'punctuation'
