@@ -18,9 +18,9 @@ function setContentPrompts () {
 
         {node:document.querySelector('#word h3, #word h4'), text:"Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?"},
 
-        {node:document.querySelector('#phrase h3, #phrase h4'), text:"What characters are used to indicate the boundaries of phrases, sentences, and sections?"},
+        {node:document.querySelector('#phrase h3, .tbd #phrase h4'), text:"What characters are used to indicate the boundaries of phrases, sentences, and sections?"},
 
-        {node:document.querySelector('#bracketing h3, #bracketing h4'), text:"What parentheses, brackets or other punctuation is used to offset parenthetical information?"},
+        {node:document.querySelector('.tbd #bracketing h4'), text:"What parentheses, brackets or other punctuation is used to offset parenthetical information?"},
 
         {node:document.querySelector('#quotations h3, #quotations h4'), text:"What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue? Are the same mechanisms used to cite words, or for scare quotes, etc? What about citing book or article names?"},
 
@@ -74,7 +74,7 @@ function setContentPrompts () {
 
         {node:document.querySelector('#finals h4'), text:"How are syllable codas written in this orthography?"},
 
-        {node:document.querySelector('#clusters h4'), text:"Are any special approaches taken for consonant clusters?"},
+        {node:document.querySelector('.tbd #clusters h4'), text:"Are any special approaches taken for consonant clusters?"},
 
         {node:document.querySelector('#clength h4'), text:"If the phonology of the language supports gemination or consonant lengthening, how is that reflected in the orthography?"},
         ]
