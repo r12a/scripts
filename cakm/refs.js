@@ -137,25 +137,4 @@ tnv:{name:"Tangchangya"},
 
 
 
-terms = {
-
-"i": {
-"url":"https://tal.ircam.ma/tamawalt/alphabet_p.php",
-"authors": "ERCIM",
-"title":"ⵜⴰⵎⴰⵡⴰⵍⵜ ⵏ ⵉⵎⵥⵥⵢⴰⵏⵏ",
-},
-
-"a": {
-"url":"https://amawal.net/about",
-"authors": "?",
-"title":"ⴰⵎⴰⵡⴰⵍ The Berber dictionary",
-"notes":"Latin only",
-},
-
-
-}
-
-
-
-
 

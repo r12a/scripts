@@ -58,7 +58,7 @@ autoExpandExamples.ccp = `
 𑄛𑄚𑄨|water||pāni|
 𑄛𑄪𑄚𑄨|comb||puni|
 𑄛𑄬𑄇𑄴|bird||pek|
-𑄝𑄬𑄋𑄴|frog||beṅ|
+𑄝𑄬𑄋𑄴|frog|beŋ|beṅ|
 𑄞𑄌𑄴||||
 𑄞𑄌𑄴𑄟𑄖𑄴|pronunciation||bhācmāt|
 𑄞𑄖𑄴|rice||bhāt|
@@ -119,6 +119,45 @@ autoExpandExamples.ccp = `
 
 
 
+@ https://www.youtube.com/watch?v=qhqYL73gibk
+𑄍𑄘𑄨|umbrella||chadi
+𑄎𑄣𑄴|net||jal
+𑄏𑄉|basket||jhaga
+𑄟𑄨𑄡𑄮𑄁|cat||miyong
+𑄑𑄬𑄋|money|ṭeŋaː|tenga
+𑄒𑄉𑄪𑄢𑄴|buddhist monk|ʈʰaːgur|thagur
+𑄓𑄝𑄴|green coconut|ɖaːb|dab
+𑄔𑄊𑄥𑄪𑄟𑄨|okra|ɖʰaːɡʰaːsumi|dhagasumi
+𑄚𑄘𑄬𑄁|top|naːdeŋ|nadeng
+𑄖𑄣|lock|taːlaː|tala
+𑄗𑄣𑄴|plate|tʰaːl|thal
+𑄘𑄝|hookah|daːbaː|daba
+𑄙𑄚𑄴|paddy|dʰaːn|dhan
+𑄚𑄇𑄴|nose|naːk|nak
+𑄛𑄉𑄢𑄳𑄦|spade|faːgaːraːh|pagarah
+𑄜𑄧𑄣𑄴|cucumber|fʰɔl|phal
+𑄝𑄝𑄳𑄦|father|baːbaːh|babah
+𑄞𑄖𑄴|rice|bʰaːt|bhat
+𑄟𑄟𑄳𑄦|mother|maːmaːh|mamah
+𑄉𑄮𑄠𑄬𑄟𑄴|guava|gojem|goyem
+𑄡𑄖𑄳𑄢𑄴|drama||jatra
+𑄢𑄘 𑄇𑄪𑄢𑄯|cock||rada kurou
+𑄣𑄋𑄮𑄣𑄴|plough||langol
+𑄥𑄉𑄮𑄚𑄴|soap||sagon
+𑄃𑄌𑄴|duck||ahsh
+𑄟𑅄 𑄥𑄪𑄉𑄮𑄢𑄴|male pig||malah sugor
+𑄖𑄧 𑄊𑄧𑄢𑄚𑄴 𑄇𑄪𑄘𑄪𑅃|where is your house?||to ghoran kudu?
+𑄟𑄋𑄢|crab|haːŋaːraː|kangara
+𑄈𑄘𑄨|Chakma traditional dress|haːdi|khadi
+𑄉𑄌𑄴|tree||gach
+𑄊𑄖𑄴|bathing place||ghat
+𑄃𑄧𑄏𑄛𑄖𑄴|alphabet|od͡ʒʰaːfa:t|ajhāpāt
+
+
+
+
+
+
 
 `
 
@@ -138,6 +177,12 @@ termLists = [
 "title":"Wordlist Chakma Unnamedinsource",
 "url":"https://asjp.clld.org/languages/CHAKMA_UnnamedInSource",
 "notes":"Latin only",
+},
+
+{
+"title":"Bivuti contributions to Wikipedia incubator",
+"url":"https://incubator.m.wikimedia.org/wiki/Special:Contributions/ChakmaBivuti",
+"notes":"",
 },
 
 ]
