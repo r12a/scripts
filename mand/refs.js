@@ -28,7 +28,7 @@ reflist = {
 },
 
 "e": {
-"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3485.pdf",
+"url":"https://www.unicode.org/L2/L2007/07412-n3373-mandaic.pdf",
 "authors": "Michael Everson",
 "title":"Proposal for encoding the Mandaic script in the BMP of the UCS",
 "reviewed":true
