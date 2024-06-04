@@ -89,7 +89,7 @@ autoExpandExamples.ccp = `
 
 
 @ https://en.wikipedia.org/wiki/Chakma_script
-𑄌𑄋𑄴𑄟𑄳𑄦 𑄧𑄧𑄃𑄧𑄏𑄛𑄖𑄴|Chakma alphabet||changmha ajhapat
+𑄌𑄋𑄴𑄟𑄳𑄦 𑄃𑄧𑄏𑄛𑄖𑄴|Chakma alphabet||changmha ajhapat
 
 
 
