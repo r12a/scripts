@@ -15,11 +15,27 @@ vowels:"inh:1 vs:11 ind:12 pre:1 voc:1",  clusters:"inv stk cnj lig rax",  final
 linked:"devanagari", fonts:"/pickers/deva-hi/", 
 },
 
-"ccp": { name:"Chakma", source:"cldr_ccp,udhr_ccp", region:"sasia", countries:"Bangladesh, India", script:"cakm", speakers:"330000", letter:"𑄟𑄚𑄃𑄇𑄥𑄢𑄝𑄅𑄉𑄌𑄙𑄡𑄠𑄖𑄑𑄎𑄘𑄦𑄣𑄛𑄏𑄈𑄊𑄜𑄓𑄋𑄗𑄞𑄍𑄕𑄒𑄄𑄆𑄐𑄔𑄤", mark:"𑄬𑄭𑄴𑄧𑄁𑄮𑄳𑄨𑄩𑄪𑄱𑄰𑄫𑄯𑄲𑄀𑄂","number":"০১২৩৪৫৬৭৮৯𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿𑄶", punctuation:"𑅁𑅃𑅂𑅀‰‐–—…‘’“”†‡′″§", local:"𑄌𑄋𑄴𑄟𑄳𑄦 𑄞𑄌𑄴", localtrans:"(changmha bhach)", notes:`UDHR uses Chakma digits, whereas CLDR shows only Bengali digits.`, 
+"ccp": { name:"Chakma", source:"cldr_ccp,udhr_ccp", region:"sasia", countries:"Bangladesh, India", script:"cakm", speakers:"330000", 
+letter:"𑄃𑄄𑄅𑄆𑄇𑄈𑄉𑄊𑄋𑄌𑄍𑄎𑄏𑄐𑄑𑄒𑄓𑄔𑄕𑄖𑄗𑄘𑄙𑄚𑄛𑄜𑄝𑄞𑄟𑄠𑄡𑄢𑄣𑄤𑄥𑄦𑅇", letteraux:"𑅄", mark:"͏𑄀𑄁𑄂𑄧𑄨𑄩𑄪𑄫𑄬𑄭𑄮𑄯𑄰𑄱𑄲𑄳𑄴", markaux:"𑅅𑅆", number:"০১২৩৪৫৬৭৮৯𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿", punctuation:"𑅀𑅁𑅂𑅃", symbol:"", other:"\u200C\u200D\u2060",	
+local:"𑄌𑄋𑄴𑄟𑄳𑄦 𑄞𑄌𑄴", localtrans:"(changmha bhach)", notes:`UDHR uses Chakma digits, whereas CLDR shows only Bengali digits.`, 
 orth:`[Chakma] &nbsp; `,
 also:
 ['ccp-beng | beng | ',
 'ccp-latn | latn | ']
+},
+
+"ccp": { name:"Chakma", local:"𑄌𑄋𑄴𑄟𑄳𑄦 𑄞𑄌𑄴", localtrans:"(changmha bhach)", 
+source:"cldr_ccp,udhr_ccp", 
+region:"sasia", countries:"Bangladesh, India", script:"cakm", speakers:"330000", 
+letter:"𑄃𑄄𑄅𑄆𑄇𑄈𑄉𑄊𑄋𑄌𑄍𑄎𑄏𑄐𑄑𑄒𑄓𑄔𑄕𑄖𑄗𑄘𑄙𑄚𑄛𑄜𑄝𑄞𑄟𑄠𑄡𑄢𑄣𑄤𑄥𑄦𑅇", letteraux:"𑅄", mark:"͏𑄀𑄁𑄂𑄧𑄨𑄩𑄪𑄫𑄬𑄭𑄮𑄯𑄰𑄱𑄲𑄳𑄴", markaux:"𑅅𑅆", number:"০১২৩৪৫৬৭৮৯𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿", punctuation:"𑅀𑅁𑅂𑅃", other:"‌‍⁠", 
+orth:`[Chakma] &nbsp; `,
+also:
+["ccp-beng | beng | ",
+"ccp-latn | latn | "],
+notes:`UDHR uses Chakma digits, whereas CLDR shows only Bengali digits.`,
+type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?",  direction:"ltr",  justification:"?", 
+vowels:"inh:1 vs:12 ind:4 base:A pre:1 circ:2",  clusters:"vir stk cnj lig",  finals:"cm:2", 
+linked:"cakm/ccp", fonts:"cakm-ccp", font:"Noto Sans Chakma", 
 },
 
 }

@@ -8,7 +8,7 @@ blockDirection=''  // ltr/rtl or '' for ltr; used by block.html
 
 blockDirectoryName='cakm'  // folder name where block file is found, no slash
 orthogFilePath='cakm/ccp'  // path below /scripts, including filename, but no extension, eg. lana/nod
-pickerDir='cakm'  // directory name for picker, no slash at end
+pickerDir='cakm-ccp'  // directory name for picker, no slash at end
 scriptSummaryTableName='ccp'  // id used for langs record in xx-langdata.js; used to make summary table
 charUsageBCP='ccp'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only
 orthogName = 'Chakma' // natural language name for the orthography; used only in makeIndexIntro
