@@ -112,7 +112,7 @@ reflist = {
 */
 
 "sil": {
-"authors": "Lorna Priest",
+"authors": "Stephanie Holloway",
 "title":"Unicode Status (Chakma)",
 "retr": "May 2024",
 "publisher":"SIL International",
