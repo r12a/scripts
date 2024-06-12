@@ -48,14 +48,9 @@ autoExpandExamples.srb = `
 termLists = [
 
 {
-"title":"Wiktionary, Eastern Cham lemmas",
-"url":"https://en.wiktionary.org/wiki/Category:Eastern_Cham_lemmas",
-},
-
-{
-"title":"Austronesian Basic Vocabulary Database, Phan Rang Cham (Eastern Cham)",
-"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=371&sort=item",
-"notes":"Latin only",
+"title":"Living Dictionaries",
+"url":"https://livingdictionaries.app/sora/entries/list",
+"notes":"No native script.",
 },
 
 ]
