@@ -252,7 +252,7 @@ usedfor: "${record.usedfor}",
 	// general info
 	if (record.info) {
 		out += '<tr><th>General info:</th><td>'
-		if (record.htmlchapter) out += `<p><a target="_blank" href="https://unicode-org.github.io/core-spec/chapter-${ record.htmlchapter }">Unicode</a></p>`
+		if (record.htmlchapter) out += `<p><a target="_blank" href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-${ record.htmlchapter }">Unicode</a></p>`
 		else out += `<p><a target="_blank" href="http://www.unicode.org/versions/latest/ch${ record.chapters }.pdf">Unicode</a></p>`
 		out += `<p><a target="_blank" href="http://scriptsource.org/scr/${ record.code }">Scriptsource</a></p>`
 		if (record.info.wikipedia) out += '<p><a target="_blank" href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'">Wikipedia</a></p>'
