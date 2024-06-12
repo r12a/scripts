@@ -1,5 +1,5 @@
-
-window.version = 'v28'
+langTag = 'ka'
+window.version = 'v29'
 window.scriptName = 'Georgian'
 window.ghDirectory = 'georgian'
 window.blockDirectory = 'georgian'
@@ -9,4 +9,3 @@ window.scriptISO = 'geor'
 window.webfonts = ["BGP 2017 DejaVu Serif WF", "BGP 2017 DejaVu Sans WF", "Noto Sans Georgian WF", "Noto Serif Georgian WF"]
 window.defaultSize = '24px'
 hideBlockName = "GEORGIAN"
-
