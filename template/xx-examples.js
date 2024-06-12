@@ -51,7 +51,7 @@ autoExpandExamples.tmp = `
 
 
 
-
+// automatically creates Online Resources section, if markup is uncommented in xx.html
 
 termLists = [
 
@@ -64,6 +64,12 @@ termLists = [
 "title":"Austronesian Basic Vocabulary Database, Phan Rang Cham (Eastern Cham)",
 "url":"https://abvd.eva.mpg.de/austronesian/language.php?id=371&sort=item",
 "notes":"Latin only",
+},
+
+{
+"title":"Living Dictionaries",
+"url":"https://livingdictionaries.app/sora/entries/list",
+"notes":"No native script.",
 },
 
 ]
