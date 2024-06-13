@@ -1,4 +1,4 @@
-
+langTag = 'zgh'
 window.version = 'v28'
 window.scriptName = 'Tifinagh'
 window.ghDirectory = 'tifinagh'
