@@ -198,7 +198,7 @@ function printDetails (char) {
    // check for decomposable characters
     if (char.normalize('NFD') != char) {
         out += '<p class="decomposition">'
-        out += `Decomposes to ${ char.normalize('NFD') }.`
+        out += `Decomposes to <span class="ch">${ char.normalize('NFD') }</span>.`
         if (char.normalize('NFD') === char.normalize('NFC')) out += '<br><strong>The NFC normalised form of this character is the decomposed sequence!</strong>'
         out += '</p>'
         }           
