@@ -58,11 +58,10 @@ function showCharDetails (ch) {
         span.innerHTML = spreadsheetRows[ch][cols['shape']]
         p.appendChild(span)
         }
-    if (spreadsheetRows[ch][cols['nnameLoc']]) {
+    if (spreadsheetRows[ch][cols['typeLoc']]) {
         span = document.createElement('span')
-        span.lang = langTag
-        span.className = 'nnameLoc'
-        span.innerHTML = spreadsheetRows[ch][cols['nnameLoc']]
+        span.className = 'typeLoc'
+        span.innerHTML = spreadsheetRows[ch][cols['typeLoc']]
         p.appendChild(span)
         }
     if (spreadsheetRows[ch][cols['nameLoc']]) {
@@ -71,10 +70,11 @@ function showCharDetails (ch) {
         span.innerHTML = spreadsheetRows[ch][cols['nameLoc']]
         p.appendChild(span)
         }
-    if (spreadsheetRows[ch][cols['typeLoc']]) {
+    if (spreadsheetRows[ch][cols['nnameLoc']]) {
         span = document.createElement('span')
-        span.className = 'typeLoc'
-        span.innerHTML = spreadsheetRows[ch][cols['typeLoc']]
+        span.lang = langTag
+        span.className = 'nnameLoc'
+        span.innerHTML = spreadsheetRows[ch][cols['nnameLoc']]
         p.appendChild(span)
         }
     document.getElementById('output').appendChild(p)
