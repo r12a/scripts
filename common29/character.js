@@ -86,6 +86,13 @@ function showCharDetails (ch) {
     
     document.getElementById('output').appendChild(div)
 
+
+	div = document.createElement('div')
+	div.className = 'orthogFilePath'
+    div.innerHTML = `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Find in orthography notes.</a>`
+    document.getElementById('output').appendChild(div)
+
+
     expandCharMarkup()
 	if (typeof autoExpandExamples[langTag] !== 'undefined') addExamples(langTag)
 	convertTranscriptionData(blockLangtag)
