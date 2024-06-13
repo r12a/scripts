@@ -156,6 +156,24 @@ autoExpandExamples.ccp = `
 
 
 
+@ Bivuti Chakma correspondence
+𑄞𑄌𑄴𑄳𑄦𑄪𑄢𑄨|bamboo shoot|ˈbʱʌt.t͡ʃʰʊri
+𑄞𑄣𑄧𑄇𑄴𑄳𑄦𑄚𑄨|a lot|ˈbʰʌlɒk.kʰʌnɪ
+𑄝𑄬𑄌𑄴𑄳𑄦𑄬𑄉|bamboo fence|bet.ˈt͡ʃʰegʌ
+𑄈𑄠𑄴|to eat|kʰʌj
+𑄖𑄬 𑄞𑄖𑄴 𑄈𑄠𑄴𑅁|she eats rice|te bʱʌt kʱʌj
+𑄃𑄧𑄠𑄧𑄚𑄴|Ayan (name)|ɒjɒn
+𑄃𑄧𑄠𑄧𑄚𑄴𑄌𑄋𑄴𑄟𑄳𑄦 𑄟𑄧 𑄞𑄬𑄭𑅁|Ayan Chakma is my brother|ɒjɒn t͡ʃʌk.mʰɑ: mɔ  bʱɛɪ
+𑄝𑄧𑄖𑄴𑄳𑄠|twisted|ˈbɔt.tæ
+𑄇𑄪𑄉𑄪𑄢𑄮 𑄣𑄬𑄌𑄴𑄝𑄧𑄖𑄴𑄳𑄠|the dog's tail is twisted|kʊ.ɡʊ.rɔ: let͡ʃ ˈbɔt.tæ
+𑄡𑄧𑄟𑄴𑄢𑄎|ghost|d͡ʒɒm.ˈrʌzʌ
+𑄡𑄧𑄟𑄴𑄢𑄎  𑄃𑄬𑄏𑄬𑄢𑄴|the ghost comes|d͡ʒɒm.ˈrʌzʌ e.d͡ʒʱer
+𑄡𑄠𑄢𑄧𑄖𑄴|pilgrimage|zɪj.rɒt
+𑄟𑄪𑄎𑄮𑄣𑄴𑄟𑄚𑄪𑄚𑄬 𑄡𑄠𑄢𑄧𑄖𑄴 𑄉𑄧𑄢𑄧𑄚𑄴|Muslims make pilgrimages|mʊˈd͡ʒɔ:l.mʌnʊne zɪj.rɒt gɒrɒn
+
+
+
+
 
 
 
