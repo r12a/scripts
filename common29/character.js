@@ -43,7 +43,21 @@ function showCharDetails (ch) {
 	if (typeof spreadsheetRows[ch] === 'undefined') return   
     
 	
+
+    // Add the current character - use shape column, if it is defined
+    div = document.createElement('div')
+    div.lang = langTag
+    div.className = 'currentCharacter'
+    //div.className = 'charShape'
     
+    if (cols['shape'] !== 0 && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
+        div.appendChild(document.createTextNode(spreadsheetRows[ch][cols['shape']]))
+        }
+    else {
+        div.appendChild(document.createTextNode(ch))
+        }
+    document.getElementById('output').appendChild(div)
+   
     
     h2 = document.createElement('h2')
     h2.appendChild(document.createTextNode(languageName))
@@ -51,13 +65,13 @@ function showCharDetails (ch) {
 
     p = document.createElement('p')
     p.className = 'basicInfo'
-    if (cols['shape'] !== 0 && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
+    /*if (cols['shape'] !== 0 && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
         span = document.createElement('span')
         span.lang = langTag
         span.className = 'charShape'
         span.innerHTML = spreadsheetRows[ch][cols['shape']]
         p.appendChild(span)
-        }
+        }*/
     if (spreadsheetRows[ch][cols['typeLoc']]) {
         span = document.createElement('span')
         span.className = 'typeLoc'
@@ -79,6 +93,10 @@ function showCharDetails (ch) {
         }
     document.getElementById('output').appendChild(p)
 
+
+
+
+
 	div = document.createElement('div')
 	div.className = 'charDetails'
    
@@ -87,10 +105,22 @@ function showCharDetails (ch) {
     document.getElementById('output').appendChild(div)
 
 
+
 	div = document.createElement('div')
 	div.className = 'orthogFilePath'
-    div.innerHTML = `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Find in orthography notes.</a>`
+    out = ''
+    out += 'Find in: '
+    out += `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Orthography notes</a>`
+    out += ` • <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Picker</a>`
+    out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ ch }" target="_blank">Term list</a>`
+    out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }" target="_blank">Character usage</a>`
+    div.innerHTML = out
+   // div.innerHTML = `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Find in orthography notes.</a> •
+    //                <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Open in picker.</a> •
+    //                <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Open in picker.</a>
+    //                `
     document.getElementById('output').appendChild(div)
+
 
 
     expandCharMarkup()
@@ -408,7 +438,7 @@ function expandCharMarkup () {
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }${ coda }</bdi>`
         if (noname) {}
-        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        else out += `<a href="character.html?q=${ unicodeChars }"><span class="uname">${ unicodeNames }</span></a></span>`
         
         if (window.hideBlockName) {
             let re = new RegExp(window.hideBlockName, 'g')
@@ -448,7 +478,9 @@ function expandCharMarkup () {
                 }
             
             if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
+            //unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
+            unicodeNames += `<a href="character.html?q=${ charlist[c] }"><span class="uname">${ spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'') }</span></a>` 
+            
 
             if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
             
@@ -471,7 +503,8 @@ function expandCharMarkup () {
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }${ coda }</bdi>`
         if (noname) {}
-        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        //else out += `<a href="character.html?q=${ unicodeChars }"><span class="uname">${ unicodeNames }</span></a></span>`
+        else out += `${ unicodeNames }</span>`
         
         if (window.hideBlockName) {
             let re = new RegExp(window.hideBlockName, 'g')
@@ -505,6 +538,9 @@ function parseSpreadsheet (spreadsheet) {
     fields, array, the items on a spreadsheetLine
     i, counter
     */
+
+
+
 
     if (typeof spreadsheet == 'undefined') {
 		alert("Spreadsheet not loaded !")
