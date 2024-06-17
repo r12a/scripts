@@ -155,51 +155,7 @@ function showCharDetails (ch) {
     }
 
 
-//p class="charShape"><span class="ex" lang="ar">آ ـآ</span></p>
 
-
-
-function showCharDetailsX (ch) {
-    // creates a heading and a div for a given orthography
-    // window.charDetails is the code from xx-details
-    
-    var table, tr, td
-    console.log('showCharDetails', ch)
-    
-	if (typeof charDetails === 'undefined') return
-	
-    if (ch.length > 1) {
-        ch = [... ch][0]
-        }
-
-	if (typeof charDetails[ch] === 'undefined') {
-        div = document.createElement('div')
-        div.className = 'charDetails'
-
-        div.innerHTML = "Not used."
-
-        document.getElementById('output').appendChild(div)
-        return
-        }
-    
-    else {
-    h2 = document.createElement('h2')
-    h2.appendChild(document.createTextNode(languageName))
-    document.getElementById('output').appendChild(h2)
-
-
-	div = document.createElement('div')
-	div.className = 'charDetails'
-   
-    div.innerHTML = makeDetails(ch, langTag)
-    
-    document.getElementById('output').appendChild(div)
-}
-
-    expandCharMarkup()
-	addExamples(langTag)
-	//convertTranscriptionData(ch)
-    }
 
 
 
