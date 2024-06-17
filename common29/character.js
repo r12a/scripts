@@ -50,9 +50,12 @@ function showCharDetails (ch) {
     div.className = 'currentCharacter'
     //div.className = 'charShape'
     
-    if (cols['shape'] !== 0 && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
-        div.appendChild(document.createTextNode(spreadsheetRows[ch][cols['shape']]))
-        }
+    if (cols['shape'] !== 0 && spreadsheetRows[ch] && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
+        //div.appendChild(document.createTextNode(spreadsheetRows[ch][cols['shape']]))
+        if (spreadsheetRows[ch][cols['shape']] === '4') div.appendChild(document.createTextNode(`${ ch } ${ ch }${ ch }${ ch }`))
+        else if (spreadsheetRows[ch][cols['shape']] === '2') div.appendChild(document.createTextNode(`${ ch } ${ ch }${ ch }`))
+        else div.appendChild(document.createTextNode(spreadsheetRows[ch][cols['shape']]))
+       }
     else {
         div.appendChild(document.createTextNode(ch))
         }
@@ -91,6 +94,12 @@ function showCharDetails (ch) {
         span.innerHTML = spreadsheetRows[ch][cols['nnameLoc']]
         p.appendChild(span)
         }
+    if (spreadsheetRows[ch][cols['class']]) {
+        span = document.createElement('span')
+        span.className = 'class'
+        span.innerHTML = spreadsheetRows[ch][cols['class']]
+        p.appendChild(span)
+        }
     document.getElementById('output').appendChild(p)
 
 
@@ -126,6 +135,23 @@ function showCharDetails (ch) {
     expandCharMarkup()
 	if (typeof autoExpandExamples[langTag] !== 'undefined') addExamples(langTag)
 	convertTranscriptionData(blockLangtag)
+    
+    
+    // expand any .characterMarkup elements (mainly for cursive)
+    shapes = document.querySelectorAll('.characterShape')
+    console.log('shapes length', shapes.length)
+    if (cols['shape'] && cols['shape'] !== 0) {
+        for (i=0;i<shapes.length;i++) {
+            ch = shapes[i].textContent
+            if (spreadsheetRows[ch] && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
+                if (spreadsheetRows[ch][cols['shape']] === '4') shapes[i].innerHTML = `${ ch } ${ ch }${ ch }${ ch }`
+                else if (spreadsheetRows[ch][cols['shape']] === '2') shapes[i].innerHTML = `${ ch } ${ ch }${ ch }`
+                else shapes[i].innerHTML = spreadsheetRows[ch][cols['shape']]
+                }
+            shapes[i].className = 'charShape'
+            shapes[i].lang = langTag
+            }
+        }
     }
 
 
