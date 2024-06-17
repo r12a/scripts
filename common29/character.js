@@ -48,10 +48,8 @@ function showCharDetails (ch) {
     div = document.createElement('div')
     div.lang = langTag
     div.className = 'currentCharacter'
-    //div.className = 'charShape'
     
     if (cols['shape'] !== 0 && spreadsheetRows[ch] && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
-        //div.appendChild(document.createTextNode(spreadsheetRows[ch][cols['shape']]))
         if (spreadsheetRows[ch][cols['shape']] === '4') div.appendChild(document.createTextNode(`${ ch } ${ ch }${ ch }${ ch }`))
         else if (spreadsheetRows[ch][cols['shape']] === '2') div.appendChild(document.createTextNode(`${ ch } ${ ch }${ ch }`))
         else div.appendChild(document.createTextNode(spreadsheetRows[ch][cols['shape']]))
@@ -68,13 +66,6 @@ function showCharDetails (ch) {
 
     p = document.createElement('p')
     p.className = 'basicInfo'
-    /*if (cols['shape'] !== 0 && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
-        span = document.createElement('span')
-        span.lang = langTag
-        span.className = 'charShape'
-        span.innerHTML = spreadsheetRows[ch][cols['shape']]
-        p.appendChild(span)
-        }*/
     if (spreadsheetRows[ch][cols['typeLoc']]) {
         span = document.createElement('span')
         span.className = 'typeLoc'
@@ -124,10 +115,6 @@ function showCharDetails (ch) {
     out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ ch }" target="_blank">Term list</a>`
     out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }" target="_blank">Character usage</a>`
     div.innerHTML = out
-   // div.innerHTML = `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Find in orthography notes.</a> •
-    //                <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Open in picker.</a> •
-    //                <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Open in picker.</a>
-    //                `
     document.getElementById('output').appendChild(div)
 
 
@@ -139,7 +126,6 @@ function showCharDetails (ch) {
     
     // expand any .characterMarkup elements (mainly for cursive)
     shapes = document.querySelectorAll('.characterShape')
-    console.log('shapes length', shapes.length)
     if (cols['shape'] && cols['shape'] !== 0) {
         for (i=0;i<shapes.length;i++) {
             ch = shapes[i].textContent
