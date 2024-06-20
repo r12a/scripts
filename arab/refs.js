@@ -277,7 +277,7 @@ reflist = {
 "title":"The Unicode Standard, Version 13.0",
 "sub":"Chapter 9.2: Middle East-I, Arabic",
 "pages":"365-389",
-"isbn":"978-1-936213-16-0.",
+"isbn":"978-1-936213-16-0",
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf",
 "lang": new Set(['ar','pes','ha','ks','ur']),
 "reviewed":true
@@ -288,9 +288,20 @@ reflist = {
 "title":"The Unicode Standard, Version 15.0",
 "sub":"Chapter 9.2: Middle East-I, Arabic",
 "pages":"365-389",
-"isbn":"978-1-936213-16-0.",
+"isbn":"978-1-936213-16-0",
 "url":"https://www.unicode.org/versions/Unicode15.0.0/ch09.pdf",
 "lang": new Set(['ar','pes','ha','ks','ur','ckb']),
+"reviewed":true
+},
+
+"u16": {
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 16.0",
+"sub":"Chapter 9.2: Middle East-I, Arabic",
+"pages":"365-389",
+"isbn":"978-1-936213-34-4",
+"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-9/",
+"lang": new Set(['ar','pes','ha','ks','ur','ckb','sd']),
 "reviewed":true
 },
 
@@ -512,7 +523,6 @@ reflist = {
 "reviewed":false
 },
 
-
 "lhs": {
 "authors": "Leslie H Stennes",
 "title":"A Reference Grammar of Adamawa Fulani",
@@ -521,6 +531,65 @@ reflist = {
 "publisher":"African Studies Center, Michigan State University",
 "url":"https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/African/Niger-Congo/other%20Atlantic-Congo/Fula%3B%20A%20Reference%20Grammar%20of%20Adamawa%20Fulani%20%28Stennes%29.pdf",
 "lang": new Set(['ff']),
+"reviewed":false
+},
+
+
+"wsdl": {
+"authors": "Wikipedia",
+"title":"Sindhi language",
+"retr": "Jun 2024",
+"url":"https://en.wikipedia.org/wiki/Sindhi_language",
+"lang": new Set(['sd']),
+"reviewed":false
+},
+
+
+"lisindia": {
+"authors": "Wikipedia",
+"title":"CIIL-India Mysore",
+"retr": "Jun 2024",
+"url":"http://lisindia.ciil.org/Sindhi/sindhi_script.html",
+"lang": new Set(['sd']),
+"reviewed":false
+},
+
+"osd": {
+"authors": "Omniglot",
+"title":"Sindhi",
+"retr": "Jun 2024",
+"url":"https://www.omniglot.com/writing/sindhi.htm",
+"lang": new Set(['sd']),
+"reviewed":false
+},
+
+"kmsd": {
+"authors": "Kamal Mansour",
+"title":"Handling of the Heh in Sindhi Text",
+"sub": "L2-23/17",
+"date": "2023",
+"url":"https://www.unicode.org/L2/L2023/23117-sindhi-heh.pdf",
+"lang": new Set(['sd']),
+"reviewed":false
+},
+
+"kmsd2": {
+"authors": "Kamal Mansour",
+"title":"Sindhi Heh",
+"sub": "L2-22/053",
+"date": "2022",
+"url":"https://www.unicode.org/L2/L2022/22053-sindhi-heh.pdf",
+"lang": new Set(['sd']),
+"reviewed":false
+},
+
+"lesd": {
+"authors": "Lorna Priest Evans",
+"title":"Regarding the Sindhi Heh",
+"sub": "L2-22/052",
+"date": "2021",
+"url":"https://www.unicode.org/L2/L2022/22052-regarding-sindhi-heh.pdf",
+"lang": new Set(['sd']),
 "reviewed":false
 },
 
