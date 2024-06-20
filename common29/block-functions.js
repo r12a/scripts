@@ -848,6 +848,192 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 		var dec = parseInt(hex, 16)
 		var cchar = String.fromCodePoint(dec)
 		
+        
+        // Add the current character - use shape column, if it is defined
+		if (spreadsheetRows[cchar] && charDetails[cchar]) {
+			var out = '<div class="letter '+langClass+'" id="'+langClass+hex+'">'
+
+            out += `<div lang="${ lang }" class="currentCharacter">`
+    
+            if (cols['shape'] !== 0 && spreadsheetRows[cchar] && spreadsheetRows[cchar][cols['shape']] && spreadsheetRows[cchar][cols['shape']] !== '') {
+                if (spreadsheetRows[cchar][cols['shape']] === '4') out += `${ cchar } ${ cchar }${ cchar }${ cchar }`
+                else if (spreadsheetRows[cchar][cols['shape']] === '2') out += `${ cchar } \u200D${ cchar }`
+                else out += spreadsheetRows[cchar][cols['shape']]
+                }
+            else out += cchar
+            
+            out += `</div>`
+    
+
+            // draw the data at the top
+            out += '<div class="basicInfo">'
+			
+            out += '<p class="titlepara"><span class="title">'+languageName+'</span></p>'
+
+            //out += `<p class="basicInfo">`
+			if (spreadsheetRows[cchar][cols['meaning']] && spreadsheetRows[cchar][cols['meaning']] != '0') out += '<span class="charMeaning meaning">'+spreadsheetRows[cchar][cols['meaning']]+'</span>'
+			
+			out += '</p>'
+
+            out += `<p class="basicInfo">`
+			if (spreadsheetRows[cchar][cols['typeLoc']]) out += '<span class="charType" title="Type of character.">'+spreadsheetRows[cchar][cols['typeLoc']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['statusLoc']]) out += ' <span class="charType" title="Usage information.">('+spreadsheetRows[cchar][cols['statusLoc']]+')</span>'
+			
+			if (spreadsheetRows[cchar][cols['status']]) out += '<span class="charStatus" title="Status information.">'+statusExpander(spreadsheetRows[cchar][cols['status']])+'</span>'
+			
+			//if (spreadsheetRows[cchar][cols['ipaLoc']]) out += '<span class="charIPA ipa" title="Typical IPA phonetic values.">'+spreadsheetRows[cchar][cols['ipaLoc']].toLowerCase()+'</span>'
+            
+			if (spreadsheetRows[cchar][cols['nameLoc']] && spreadsheetRows[cchar][cols['nameLoc']] != '0') out += '<span class="transliteratedname trans">'+spreadsheetRows[cchar][cols['nameLoc']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['nnameLoc']] && spreadsheetRows[cchar][cols['nnameLoc']] != '0') out += '<span class="localname" lang="'+lang+'">'+spreadsheetRows[cchar][cols['nnameLoc']]+'</span>'
+			
+			
+			//if (spreadsheetRows[cchar][cols['transLoc']]) out += '<span class="localtrans trans" title="How transliterated in the scheme used for this document.">'+spreadsheetRows[cchar][cols['transLoc']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['transLoc']]) out += '<span class="transLoc trans" title="How transliterated in the scheme used for this document.">'+spreadsheetRows[cchar][cols['transLoc']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['class']]) out += '&nbsp; <span class="class" title="Unicode General Category property value.">'+spreadsheetRows[cchar][cols['class']]+'</span>'
+
+            out += '</p>'
+           
+            
+			// vowel correspondences
+			if (cols.ivowel>0 && spreadsheetRows[cchar][cols.ivowel]) {
+				out += '<p class="vowelPairing">The corresponding independent vowel is '+makeCharacterLink(spreadsheetRows[cchar][cols.ivowel], lang, dir)+'</p>'
+				}
+			if (cols.dvowel>0 && spreadsheetRows[cchar][cols.dvowel]) {
+				out += '<p class="vowelPairing">The corresponding dependent vowel is '+makeCharacterLink(spreadsheetRows[cchar][cols.dvowel], lang, dir)+'</p>'
+				}
+
+			// upper/lowercase
+			if (cols.uc>0 && spreadsheetRows[cchar][cols.uc]) {
+				out += '<p class="charUppercase">Uppercase is '+makeCharacterLink(spreadsheetRows[cchar][cols.uc], lang, dir)+'</p>'
+				}
+			if (cols.lc>0 && spreadsheetRows[cchar][cols.lc]) {
+				out += '<p class="charLowercase">Lowercase is '+makeCharacterLink(spreadsheetRows[cchar][cols.lc], lang, dir)+'</p>'
+				}
+
+			// subjoined forms
+			if (cols.subj>0 && spreadsheetRows[cchar][cols.subj]) {
+				out += '<p class="subjPair">Subjoined form is '+makeCharacterLink(spreadsheetRows[cchar][cols.subj], lang, dir)+'</p>'
+				}
+			if (cols.fform>0 && spreadsheetRows[cchar][cols.fform]) {
+				out += '<p class="subjPair">Non-subjoined form is '+makeCharacterLink(spreadsheetRows[cchar][cols.fform], lang, dir)+'</p>'
+				}
+
+			// tone correspondences
+			if (cols.htone>0 && spreadsheetRows[cchar][cols.htone]) {
+				out += '<p class="tonePairing">High class equivalent is  '+makeCharacterLink(spreadsheetRows[cchar][cols.htone], lang, dir)+'</p>'
+				}
+			if (cols.ltone>0 && spreadsheetRows[cchar][cols.ltone]) {
+				out += '<p class="tonePairing">Low class equivalent is '+makeCharacterLink(spreadsheetRows[cchar][cols.ltone], lang, dir)+'</p>'
+				}
+            
+            out += '</div>' // end of letterData
+
+
+            // add the xx-details code
+            out += '<div class="letterDetails">'
+            
+            // if a character is in the spreadsheet, but not in the xx-details file, add it to the missingDetails list
+			if (typeof charDetails[cchar] === 'undefined') missingDetails += ' '+cchar
+			else if (charDetails[cchar].trim() !== '') out += charDetails[cchar]
+
+            out += '</div>' // end of letterDetails
+			
+            
+            // add links
+            out += `<div class="orthogFilePath">`
+            out += 'Find in: '
+            out += `<a href="../${ orthogFilePath }.html?showIndex#index${ cchar }" target="_blank">Orthography notes</a>`
+            out += ` • <a href="../../pickers/${ pickerDir }/index.html?text=${ cchar }" target="_blank">Picker</a>`
+            out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ cchar }" target="_blank">Term list</a>`
+            out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }" target="_blank">Character usage</a>`
+            out += `</div>`
+
+            out += '</div>' // end of letter div
+			
+			noteList[x].innerHTML = noteList[x].innerHTML + '\n\n' + out
+            
+            
+            // expand any shaping information embedded in the xx-details code
+            shapes = document.querySelectorAll('.characterShape')
+            if (cols['shape'] && cols['shape'] !== 0) {
+                for (i=0;i<shapes.length;i++) {
+                    ch = shapes[i].textContent
+                    if (spreadsheetRows[ch] && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
+                        if (spreadsheetRows[ch][cols['shape']] === '4') shapes[i].innerHTML = `${ ch } ${ ch }${ ch }${ ch }`
+                        else if (spreadsheetRows[ch][cols['shape']] === '2') shapes[i].innerHTML = `${ ch } ${ ch }${ ch }`
+                        else shapes[i].innerHTML = spreadsheetRows[ch][cols['shape']]
+                        }
+                    shapes[i].className = 'charShape'
+                    shapes[i].lang = langTag
+                    }
+                }
+            }
+
+		else missing += ' '+cchar
+		}
+	if (debug) console.log('Characters in block file but not in spreadsheet for '+lang+': ',missing)
+	if (debug) console.log('Spreadsheet characters not in xx-details for '+lang+': ',missingDetails)
+	}
+
+
+
+
+
+
+
+
+
+function addDetailsX (languageName, langClass, lang, dir, spreadsheet, cols) {
+    if (traceSet.has('addDetails') || traceSet.has('all')) { console.log('addDetails(',
+        'languageName:',languageName,
+        'langClass:',langClass,
+        'lang:',lang,
+        'dir:',dir,
+        'spreadsheet.length:',spreadsheet.length,
+        'cols:',cols,
+        ')') }
+    // for a given orthography, add notes to the notes block stub
+    // languageName, str used for the title of the block
+    // langClass, str, the class name to use for the .letter block
+    // lang, BCP47 language tag
+    // dir, direction
+    
+    /* GLOBAL
+    spreadsheet, str, declared in /shared/scriptdb/xxxx.js
+    cols, array, declared in the same file, matches spreadsheet columns with names
+    spreadsheetRows, object, created by a call from this function from the spreadsheet string
+    explainerDir, str, directory for the script notes page
+    pickerDir, str, directory name for the character app
+    charDetails, obj, the detailed notes, created in xx-examples.js
+    */
+    /* LOCAL
+    noteList, node array, list of all .notes nodes
+    hex, str, hex code point value for current character in noteList
+    dec, int, dec code point value for current character
+    cchar, str, current character, from dec
+    out, str, the markup being built
+    missing, str, comma-separated list of characters in page but not in the spreadsheet 
+	missingDetails, str, comma-separated list of characters in the spreadsheet, but not in the xx-details file
+    x, counter
+    */
+    
+    var missingDetails = ''
+    var missing = ''
+    
+	var noteList = document.querySelectorAll('.notes')
+	if (debug) console.log('noteList length',noteList.length)
+	parseSpreadsheet(spreadsheet)
+	
+    for (var x=0; x<noteList.length; x++) {
+		// get the character
+		var hex = noteList[x].parentNode.id.replace(/char/,'')
+		var dec = parseInt(hex, 16)
+		var cchar = String.fromCodePoint(dec)
+		
 		if (spreadsheetRows[cchar] && charDetails[cchar]) {
 			var out = '<div class="letter '+langClass+'" id="'+langClass+hex+'">'
 

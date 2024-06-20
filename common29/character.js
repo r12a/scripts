@@ -28,9 +28,17 @@ function showCharDetails (ch) {
     // creates a heading and a div for a given orthography
     // window.charDetails is the code from xx-details
     
-    var table, tr, td
-    console.log('showCharDetails', ch, langTag)
+    // ch, a character or string
     
+    // langTag, defined in globals.js
+    // charDetails, 
+    // spreadsheetRows
+    // cols
+    
+    var div, h2, p, out, shapes
+    console.log('showCharDetails', ch, langTag)
+
+
 	if (typeof charDetails === 'undefined') return
 	
     // make sure we're only looking for a single character
@@ -51,7 +59,7 @@ function showCharDetails (ch) {
     
     if (cols['shape'] !== 0 && spreadsheetRows[ch] && spreadsheetRows[ch][cols['shape']] && spreadsheetRows[ch][cols['shape']] !== '') {
         if (spreadsheetRows[ch][cols['shape']] === '4') div.appendChild(document.createTextNode(`${ ch } ${ ch }${ ch }${ ch }`))
-        else if (spreadsheetRows[ch][cols['shape']] === '2') div.appendChild(document.createTextNode(`${ ch } ${ ch }${ ch }`))
+        else if (spreadsheetRows[ch][cols['shape']] === '2') div.appendChild(document.createTextNode(`${ ch } \u200D${ ch }`))
         else div.appendChild(document.createTextNode(spreadsheetRows[ch][cols['shape']]))
        }
     else {
@@ -60,10 +68,20 @@ function showCharDetails (ch) {
     document.getElementById('output').appendChild(div)
    
     
+    // add the title
     h2 = document.createElement('h2')
     h2.appendChild(document.createTextNode(languageName))
     document.getElementById('output').appendChild(h2)
 
+
+    // add the title
+    p = document.createElement('p')
+    p.className = 'unicodeName'
+    p.appendChild(document.createTextNode(spreadsheetRows[ch][cols['ucsName']]))
+    document.getElementById('output').appendChild(p)
+
+
+    // create the basic info
     p = document.createElement('p')
     p.className = 'basicInfo'
     if (spreadsheetRows[ch][cols['typeLoc']]) {
@@ -88,12 +106,21 @@ function showCharDetails (ch) {
     if (spreadsheetRows[ch][cols['class']]) {
         span = document.createElement('span')
         span.className = 'class'
+        span.title = 'Unicode general category.'
         span.innerHTML = spreadsheetRows[ch][cols['class']]
+        p.appendChild(span)
+        }
+    if (spreadsheetRows[ch][cols['transLoc']]) {
+        span = document.createElement('span')
+        span.className = 'transLoc'
+        span.title = 'Transliteration used in these documents.'
+        span.innerHTML = spreadsheetRows[ch][cols['transLoc']]
         p.appendChild(span)
         }
     document.getElementById('output').appendChild(p)
 
 
+			//if (spreadsheetRows[cchar][cols['transLoc']]) out += '<span class="localtrans trans" title="How transliterated in the scheme used for this document.">'+spreadsheetRows[cchar][cols['transLoc']]+'</span>'
 
 
 
@@ -657,6 +684,9 @@ function convertTranscriptionData (lang) {
 					if (i<cols.othertranscriptions.length-1) para += '<br>'
 					}
 				}
+            
+            //para += `<br>translit: <span class="trans">${ spreadsheetRows[insertTranscriptions[t].textContent][cols['transLoc']] }</span>`
+            
 			insertTranscriptions[t].innerHTML = para
 			insertTranscriptions[t].className = 'transcription'
 			}
@@ -699,7 +729,53 @@ function getScriptGroup (charNum, blockfile) {
 
 
 
+/* FUNCTIONS FOR THE XX-CHARACTER PAGES */
 
+function getCharList () {
+// get a list of characters for the xx-character files
+    out = ''
+    for (chr in spreadsheetRows) {
+        console.log(spreadsheetRows[chr][cols['status']])
+        if (typeof spreadsheetRows[chr][cols['status']] === 'undefined' ||
+            spreadsheetRows[chr][cols['status']] === 'x' ||
+            spreadsheetRows[chr][cols['status']] === 'o' ||
+            spreadsheetRows[chr][cols['status']] === '?' ||
+            spreadsheetRows[chr][cols['status']] === 'status' ||
+            [... chr].length > 1 ||
+            spreadsheetRows[chr][cols['status']].startsWith('/') ||
+            spreadsheetRows[chr][cols['status']].startsWith('var'))
+            { console.log('Avoiding',chr)} // do nothing
+        else out += chr
+        }
+
+    return out
+    }
+
+
+function makeXXCharacterPage () {
+    // write the data to the page
+    document.querySelector('header').textContent = `${ languageName } (${ orthogName })`
+    document.querySelector('title').textContent = `${ langTag } db dump (${ orthogName })`
+
+    parseSpreadsheet(spreadsheet)
+    charList = getCharList()
+    charArray = [... charList]
+    charArray = charArray.sort()
+    console.log(charArray, charArray.length)
+    for (item=0;item<charArray.length;item++) showCharDetails(charArray[item])
+    cChars = document.querySelectorAll('.currentCharacter')
+    for (c=0;c<cChars.length;c++) {
+        cChar = [... cChars[c].textContent][0]
+        titleNode = cChars[c].nextElementSibling
+        hex = cChar.codePointAt(0).toString(16).toUpperCase()
+        while (hex.length < 4) hex = '0'+hex
+        content = `<bdi class="largeChar">${ cChar }</bdi> &nbsp; ${ hex }`
+        titleNode.innerHTML = content
+        titleNode.id = 'char'+hex
+        titleNode.style.fontSize = '3rem'
+        console.log(cChar, cChars[c].nextElementSibling.textContent)
+        }
+    }
 
 
 
