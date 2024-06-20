@@ -157,8 +157,8 @@ autoExpandExamples.ccp = `
 
 
 @ Bivuti Chakma correspondence
-𑄞𑄌𑄴𑄳𑄦𑄪𑄢𑄨|bamboo shoot|ˈbʱʌt.t͡ʃʰʊri
-𑄞𑄣𑄧𑄇𑄴𑄳𑄦𑄚𑄨|a lot|ˈbʰʌlɒk.kʰʌnɪ
+𑄞𑄌𑄴𑄳𑄦𑄪𑄢𑄨|bamboo shoot|ˈbʱʌ§t.t͡ʃʰʊ.§‹§ri
+𑄞𑄣𑄧𑄇𑄴𑄳𑄦𑄚𑄨|a lot|ˈbʰʌ.§lɒ§k.kʰʌ.§‹§nɪ
 𑄝𑄬𑄌𑄴𑄳𑄦𑄬𑄉|bamboo fence|bet.ˈt͡ʃʰegʌ
 𑄈𑄠𑄴|to eat|kʰʌj
 𑄖𑄬 𑄞𑄖𑄴 𑄈𑄠𑄴𑅁|she eats rice|te bʱʌt kʱʌj
