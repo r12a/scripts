@@ -546,8 +546,8 @@ reflist = {
 
 
 "lisindia": {
-"authors": "Wikipedia",
-"title":"CIIL-India Mysore",
+"authors": "CIIL-India Mysore",
+"title":"Script and Spelling",
 "retr": "Jun 2024",
 "url":"http://lisindia.ciil.org/Sindhi/sindhi_script.html",
 "lang": new Set(['sd']),

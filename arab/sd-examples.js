@@ -174,7 +174,7 @@ autoExpandExamples.sd = `
 قلم||␣|||
 قهوو|coffee|qə§hɪ§ʋ§o|qahivo|قَهِوو|क़हिवो
 لاء|for|l§ɑ§ɪ|lāi|لاءِ|लाइ
-لاسي||␣|||
+لاسي|lasi (drink)|lasi|lāsī|لاسي|लासी
 لاهور|Lahore|l§ɑ§h§o§ɾʊ|lāhoru|لاهور|लाहोरु
 لسو||␣|||
 لهڻ|to descend|lə§hə§ɳʊ|lahaṇu|لَهَڻُ|लहणु
