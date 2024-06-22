@@ -140,7 +140,7 @@ function showCharDetails (ch) {
     out += `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Orthography notes</a>`
     out += ` • <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Picker</a>`
     out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ ch }" target="_blank">Term list</a>`
-    out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }" target="_blank">Character usage</a>`
+    out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }&charlist=${ ch }" target="_blank">Character usage</a>`
     div.innerHTML = out
     document.getElementById('output').appendChild(div)
 
