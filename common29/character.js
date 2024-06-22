@@ -51,7 +51,6 @@ function showCharDetails (ch) {
 	if (typeof spreadsheetRows[ch] === 'undefined') return   
     
 	
-
     // Add the current character - use shape column, if it is defined
     div = document.createElement('div')
     div.lang = langTag
@@ -70,6 +69,7 @@ function showCharDetails (ch) {
     
     // add the title
     h2 = document.createElement('h2')
+    h2.id = langTag
     h2.appendChild(document.createTextNode(languageName))
     document.getElementById('output').appendChild(h2)
 
@@ -752,10 +752,26 @@ function getCharList () {
     }
 
 
+
+
+function getFindStr (hex) {
+// return a value for the Find box
+
+    if (hex.length === 1) hex = hex.codePointAt(0).toString(16)
+    while(hex.length<4) hex='0'+hex
+    return '#char'+hex.toUpperCase()
+    }
+
+
+
+
 function makeXXCharacterPage () {
     // write the data to the page
-    document.querySelector('header').textContent = `${ languageName } (${ orthogName })`
+    document.querySelector('header').innerHTML = `<h1>${ languageName } (${ orthogName })</h1>\n
+        <p class="intro">Show data in the database for this orthography.</p>
+        <p id="find">Find:<br><input type="text" id="findInput" placeholder="Find..." onchange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }">`
     document.querySelector('title').textContent = `${ langTag } db dump (${ orthogName })`
+    document.querySelector('header').style.fontSize = '2rem'
 
     parseSpreadsheet(spreadsheet)
     charList = getCharList()
