@@ -11,6 +11,12 @@
 <script src="linkdata/linkdb.js"></script>
 <style>
 .scriptname { font-weight: bold; }
+.summaries { font-size: 80%;text-align:start; }
+.letter::before { content: attr(title); font-size: 100%; color:brown;font-weight:bold; margin-inline-end: .5rem; }
+.constituents { /*font-style: italic;*/ font-size: 95%; }
+.constituents::before { content: '{'; font-style: normal; color: #ccc; }
+.constituents::after { content: '} '; font-style: normal; color: #ccc; }
+.plus::before { content: ' • '}
 </style>
 </head>
 
@@ -73,14 +79,6 @@
 <a href="#scriptnotes"><img src="../shared/images/lists/scriptsummary.png" alt=""/></a>
 
 
-<style>
-.summaries { font-size: 80%;text-align:start; }
-.letter::before { content: attr(title); font-size: 100%; color:brown;font-weight:bold; margin-inline-end: .5rem; }
-.constituents { font-style: italic; font-size: 80%; }
-.constituents::before { content: '{'; font-style: normal; color: #ccc; }
-.constituents::after { content: '} '; font-style: normal; color: #ccc; }
-.plus::before { content: ' • '}
-</style>
 
 <div>
 <p class="mainLink">Orthography descriptions</p>
@@ -91,469 +89,86 @@
 <p style="margin-block-start:0; font-size:90%;">Allows quick comparisons across the various orthographic information.</p>
 
 
+<script>
+scriptList = { a:[], b:[], c:[], d:[], e:[], f:[], g:[], h:[], i:[], j:[], k:[], l:[], m:[], n:[], o:[], p:[], q:[], r:[], s:[], t:[], u:[], v:[], w:[], x:[], y:[], z:[] }
+
+function listScripts () {
+    // create an alphabetically grouped list of scripts
+    // global scriptList
+    var i, counter=0, firstLetter, script
+    
+         
+    function compareByScriptName(a,b) { // comparison function
+      if (linkDB[a].script < linkDB[b].script)         // compare by script name
+        return -1;
+      if (linkDB[a].script > linkDB[b].script)
+        return 1;
+      return 0;
+    }
+
+
+    // get a list of scripts in indexLetters
+    for (script in linkDB) {
+        firstLetter = linkDB[script].script[0].toLowerCase()
+        //console.log(firstLetter, linkDB[script].script)
+        counter++
+        scriptList[firstLetter].push(script)
+        }
+    // sort the lists
+    for (script in scriptList) {
+        scriptList[script] = scriptList[script].sort(compareByScriptName)
+        }
+    //console.log(counter,'scripts',scriptList)
+    }
+
+
+function getOrthogNotes () {
+    // make a list of links to orthgraphy notes
+    // global scriptList, linkDB (linkdb.js)
+    var i, s, p, scripts, out='', ptrs=[], found, temp, index, counter=0
+    
+    // get a list of scripts in indexLetters
+    for (index in scriptList) {
+        if (scriptList[index].length>0) { // there are scripts associated with an initial letter
+            temp = '' // screen out index letters with scripts but no scriptnotes
+            temp += `<div class="letter" title="${ index.toUpperCase() }">\n`
+            found = false
+            
+            for (s=0;s<scriptList[index].length;s++) { // for each script associated with a given letter
+                if (linkDB[scriptList[index][s]].scriptNotes) {
+                    if (found) temp += ` • `
+                    temp += `<a href="${ scriptList[index][s] }/index.html" class="scriptname">${ linkDB[scriptList[index][s]].script }</a>\n`
+                    temp += `<span class="constituents">\n`
+                    ptrs = linkDB[scriptList[index][s]].scriptNotes // eg. [["Hindi", "deva/hi.html"], ["Kashmiri", "deva/ks.html"]]
+                    for (p=0;p<ptrs.length;p++) {
+                        if (p>0) temp += ` • `
+                        temp += `<a href="${ ptrs[p][1] }" class="orthlink">${ ptrs[p][0] }\n`
+                        counter++
+                        }
+                    temp += `</span>\n`
+                    found = true
+                    }
+                }
+            temp += `</div>\n`
+            if (temp !== `<div class="letter" title="${ index.toUpperCase() }">\n</div>\n`) out += temp // screen out index letters with scripts but no scriptnotes
+            }
+        }
+    console.log(counter,' orthography notes.')
+    document.getElementById('countOrth').textContent = counter
+    return out
+    }
+    
+    
+listScripts()
+</script>
+
+
+<div class="summaries" id="orthogNotesSummaries"></div>
+<p style="font-size:70%">Total orthography pages: <span id="countOrth"></span></p>
+<script>document.getElementById('orthogNotesSummaries').innerHTML = getOrthogNotes()</script>
 
 
 
-<p>By orthography</p>
-<div class="summaries">
-
-<div class="letter" title="A">
-<a href="adlm/index.html" class="scriptname">Adlam</a>
-            <span class="constituents">
-            <a href="adlm/fuf.html" class="orthlink">Pular</a>
-            </span>
-<a href="arab/index.html" class="plus scriptname">Arabic</a>
-            <span class="constituents">
-            <a href="arab/arb.html" class="orthlink">Arabic (MSA)</a>
-            <a href="arab/ff.html" class="orthlink plus">Fulfulde</a>
-            <a href="arab/ha.html" class="orthlink plus">Hausa</a>
-            <a href="arab/ks.html" class="orthlink plus">Kashmiri</a>
-            <a href="arab/pes.html" class="orthlink plus">Persian</a>
-            <a href="arab/sd.html" class="orthlink plus">Sindhi</a>
-            <a href="arab/ckb.html" class="orthlink plus">Sorani</a>
-            <a href="arab/ug.html" class="orthlink plus">Uighur</a>
-            <a href="arab/ur.html" class="orthlink plus">Urdu</a>
-            <a href="arab/wo.html" class="orthlink plus">Wolof</a>
-            </span>
-<a href="armn/index.html" class="plus scriptname">Armenian</a>
-            <span class="constituents">
-            <a class="orthlink" href="armn/hy.html">Armenian</a>
-            </span>
-</div>
-
-<div class="letter" title="B">
-<a href="bali/index.html" class="scriptname">Balinese</a>
-            <span class="constituents">
-            <a class="orthlink" href="bali/ban.html">Balinese</a>
-            </span>
-<a href="bamu/index.html" class="plus scriptname">Bamum</a>
-            <span class="constituents">
-            <a href="bamu/bax.html" class="orthlink">Bamoun</a>
-            </span>
-<a href="bass/index.html" class="plus scriptname">Bassa Vah</a>
-            <span class="constituents">
-            <a href="bass/bsq.html" class="orthlink">Bassa</a>
-            </span>
-<a href="batk/index.html" class="plus scriptname">Batak</a>
-            <span class="constituents">
-            <a href="batk/btk.html" class="orthlink">Batak</a>
-            </span>
-<a href="beng/index.html" class="plus scriptname">Bengali</a>
-            <span class="constituents">
-            <a href="beng/bn.html" class="orthlink">Bangla</a>
-            </span>
-<a href="bugi/index.html" class="plus scriptname">Buginese</a>
-            <span class="constituents">
-            <a href="bugi/bug.html" class="orthlink">Buginese</a>
-            </span>
-<a href="buhd/index.html" class="plus scriptname">Buhid</a>
-            <span class="constituents">
-            <a href="buhd/bku.html" class="orthlink">Buhid</a>
-            </span>
-</div>
-
-
-<div class="letter" title="C">
-<a href="cham/index.html" class="scriptname">Cham</a>
-            <span class="constituents">
-            <a href="cham/cjm.html" class="orthlink">Eastern Cham</a>
-            </span>
-<a href="cakm/index.html" class="plus scriptname">Chakma</a>
-            <span class="constituents">
-            <a href="cakm/ccp.html" class="orthlink">Chakma</a>
-            </span>
-<a href="cher/index.html" class="plus scriptname">Cherokee</a>
-            <span class="constituents">
-            <a href="cher/chr.html" class="orthlink">Cherokee</a>
-            </span>
-<a href="hani/zh.html" class="orthlink plus scriptname">Chinese</a>
-<a href="cyrl/index.html" class="plus scriptname">Cyrillic</a>
-            <span class="constituents">
-            <a href="cyrl/mn.html" class="orthlink">Mongolian</a>
-            <a href="cyrl/ru.html" class="orthlink plus">Russian</a>
-            <a href="cyrl/uk.html" class="orthlink plus">Ukrainian</a>
-            </span>
-</div>
-
-
-<div class="letter" title="D">
-<a href="deva/index.html" class="scriptname">Devanagari</a>
-            <span class="constituents">
-            <a href="deva/hi.html" class="orthlink">Hindi</a>
-            <a href="deva/ks.html" class="orthlink plus">Kashmiri</a>
-            </span>
-</div>
-
-
-<div class="letter" title="E">
-<a href="ethi/index.html" class="scriptname">Ethiopic</a>
-            <span class="constituents">
-            <a class="orthlink" href="ethi/am.html">Amharic</a>
-            </span>
-</div>
-
-
-<div class="letter" title="F">
-<a href="lisu/index.html" class="scriptname">Fraser script</a>
-            <span class="constituents">
-            <a class="orthlink" href="lisu/lis.html">Lisu</a>
-            </span>
-</div>
-
-
-
-
-<div class="letter" title="G">
-<a href="gara/index.html" class="scriptname">Garay</a>
-            <span class="constituents">
-            <a href="gara/wo.html" class="orthlink">Wolof</a>
-            </span>
-<a href="geor/index.html" class="plus scriptname">Georgian</a>
-            <span class="constituents">
-            <a href="geor/ka.html" class="orthlink">Georgian</a>
-            </span>
-<a href="grek/index.html" class="plus scriptname">Greek</a>
-            <span class="constituents">
-            <a href="grek/el.html" class="orthlink">Greek</a>
-            </span>
-<a href="gujr/index.html" class="plus scriptname">Gujarati</a>
-            <span class="constituents">
-            <a href="gujr/gu.html" class="orthlink">Gujarati</a>
-            </span>
-<a href="guru/index.html" class="plus scriptname">Gurmukhi</a>
-            <span class="constituents">
-            <a href="guru/pa.html" class="orthlink">Punjabi</a>
-            </span>
-</div>
-
-
-<div class="letter" title="H">
-<a href="rohg/index.html" class="scriptname">Hanifi Rohingya</a>
-            <span class="constituents">
-            <a href="rohg/rhg.html" class="orthlink">Rohingya</a>
-            </span>
-<a href="hano/index.html" class="plus scriptname">Hanunóo</a>
-            <span class="constituents">
-            <a href="hano/hnn.html" class="orthlink">Hanunó’o</a>
-            </span>
-• <span class="scriptname">Hausa</span>
-            <span class="constituents">
-            <a href="latn/ha.html" class="orthlink">boko</a>
-            <a href="arab/ha.html" class="orthlink plus">ajami</a>
-            </span>
-<a href="hebr/index.html" class="plus scriptname">Hebrew</a>
-            <span class="constituents">
-            <a href="hebr/he.html" class="orthlink">Hebrew</a>
-            </span>
-</div>
-
-
-
-
-<div class="letter" title="J">
-<a href="jpan/index.html" class="scriptname">Japanese</a>
-            <span class="constituents">
-            <a href="jpan/ja.html" class="orthlink">Japanese</a>
-            </span>
-<a href="java/index.html" class="plus scriptname">Javanese</a>
-            <span class="constituents">
-            <a href="java/jv.html" class="orthlink">Javanese</a>
-            </span>
-</div>
-
-
-<div class="letter" title="K">
-<span class="scriptname">Kashmiri</span>
-            <span class="constituents">
-            <a href="arab/ks.html" class="orthlink">arab</a>
-            <a href="deva/ks.html" class="orthlink plus">deva</a>
-            </span>
-<a href="kali/index.html" class="plus scriptname">Kayah Li</a>
-            <span class="constituents">
-            <a href="kali/kyu.html" class="orthlink">Kayah (Western)</a>
-            </span>
-<a href="khmr/index.html" class="plus scriptname">Khmer</a>
-            <span class="constituents">
-            <a href="khmr/km.html" class="orthlink">Cambodian</a>
-            </span>
-<a href="kore/ko.html" class="orthlink plus scriptname">Korean</a>
-<span class="plus scriptname">Kurdish</span>
-            <span class="constituents">
-            <a href="arab/ckb.html" class="orthlink">Sorani</a>
-            <a href="latn/kmr.html" class="orthlink plus">Kurmanji</a>
-            </span>
-</div>
-
-
-<div class="letter" title="L">
-<a href="lana/index.html" class="scriptname">Lanna</a>
-            <span class="constituents">
-            <a href="lana/nod.html" class="orthlink">Northern Thai</a>
-            <a href="lana/kkh.html" class="orthlink plus">Tai Khün</a>
-            </span>
-<a href="laoo/index.html" class="plus scriptname">Lao</a>
-            <span class="constituents">
-            <a href="laoo/lo.html" class="orthlink">Lao</a>
-            </span>
-<a href="latn/index.html" class="plus  scriptname">Latin</a>
-            <span class="constituents">
-            <a href="latn/bm.html" class="orthlink">Bamanan</a>
-            <a href="latn/ff.html" class="orthlink plus">Fula</a>
-            <a href="latn/ha.html" class="orthlink plus">Hausa</a>
-            <a href="latn/kmr.html" class="orthlink plus">Kurmanji</a>
-            <a href="latn/wo.html" class="orthlink plus">Wolof</a>
-            </span>
-<a href="lepc/index.html" class="plus scriptname">Lepcha</a>
-            <span class="constituents">
-            <a href="lepc/lep.html" class="orthlink">Lepcha</a>
-            </span>
-<a href="limb/index.html" class="plus scriptname">Limbu</a>
-            <span class="constituents">
-            <a href="limb/lif.html" class="orthlink">Limbu</a>
-            </span>
-<a href="lisu/index.html" class="plus scriptname">Lisu</a>
-            <span class="constituents">
-            <a href="lisu/lis.html" class="orthlink">Lisu</a>
-            </span>
-</div>
-
-
-<div class="letter" title="M">
-<a href="mlym/index.html" class="scriptname">Malayalam</a>
-            <span class="constituents">
-            <a href="mlym/ml.html" class="orthlink">Malayalam</a>
-            </span>
-<a href="mand/index.html" class="plus scriptname">Mandaic</a>
-            <span class="constituents">
-            <a href="mand/mid.html" class="orthlink">Mandaic</a>
-            </span>
-<a href="plrd/index.html" class="plus scriptname">Miao</a>
-            <span class="constituents">
-            <a href="plrd/hmd.html" class="orthlink">A-Hmao</a>
-            </span>
-• <span class="scriptname">Mongolian</span>
-            <span class="constituents">
-            <a href="cyrl/mn.html" class="orthlink">cyrl</a>
-            <a href="mong/mn.html" class="orthlink plus">mong</a>
-            </span>
-<a href="mroo/index.html" class="plus scriptname">Mro</a>
-            <span class="constituents">
-            <a href="mroo/mro.html" class="orthlink">Mru</a>
-            </span>
-<a href="mymr/index.html" class="plus scriptname">Myanmar</a>
-    <span class="constituents">
-    <a href="mymr/my.html" class="orthlink">Burmese</a>
-    <a href="mymr/shn.html" class="orthlink plus">Shan</a>
-    </span>
-</div>
-
-
-<div class="letter" title="N">
-<a href="nkoo/index.html" class="scriptname">N’Ko</a>
-            <span class="constituents">
-            <a href="nkoo/nqo.html" class="orthlink">N’Ko</a>
-            </span>
-<a href="nagm/index.html" class="plus scriptname">Nag Mundari</a>
-            <span class="constituents">
-            <a href="nagm/unr.html" class="orthlink">Mundari</a>
-            </span>
-<a href="newa/index.html" class="plus scriptname">Newa</a>
-            <span class="constituents">
-            <a href="newa/new.html" class="orthlink">Newar</a>
-            </span>
-<a href="talu/index.html" class="plus scriptname">New Tai Lü</a>
-            <span class="constituents">
-            <a href="talu/khb.html" class="orthlink">Tai Lü</a>
-            </span>
-</div>
-
-
-<div class="letter" title="O">
-<a href="olck/index.html" class="scriptname">Ol Chiki</a>
-            <span class="constituents">
-            <a href="olck/sat.html" class="orthlink">Santali</a>
-            </span>
-<a href="orya/index.html" class="plus scriptname">Oriya</a>
-            <span class="constituents">
-            <a href="orya/or.html" class="orthlink">Odia</a>
-            </span>
-<a href="osge/index.html" class="plus scriptname">Osage</a>
-            <span class="constituents">
-            <a href="osge/osa.html" class="orthlink">Osage</a>
-            </span>
-</div>
-
-
-
-
-<div class="letter" title="P">
-<a href="plrd/index.html" class="scriptname">Pollard script</a>
-            <span class="constituents">
-            <a href="plrd/hmd.html" class="orthlink">A-Hmao</a>
-            </span>
-</div>
-
-
-
-
-<div class="letter" title="S">
-<a href="sinh/index.html" class="scriptname">Sinhala</a>
-            <span class="constituents">
-            <a href="sinh/si.html" class="orthlink">Sinhala</a>
-            </span>
-<a href="sora/index.html" class="plus scriptname">Sora Sompeng</a>
-            <span class="constituents">
-            <a href="sora/srb.html" class="orthlink">Sora</a>
-            </span>
-<a href="sunu/index.html" class="plus scriptname">Sunuwar</a>
-            <span class="constituents">
-            <a href="sunu/suz.html" class="orthlink">Kiranti-Kõits</a>
-            </span>
-<a href="sund/index.html" class="plus scriptname">Sundanese</a>
-            <span class="constituents">
-            <a href="sund/su.html" class="orthlink">Sundanese</a>
-            </span>
-<a href="syrc/index.html" class="plus scriptname">Syriac</a>
-            <span class="constituents">
-            <a href="syrc/aii.html" class="orthlink">Assyrian Neo-Aramaic</a>
-            <a href="syrc/syr.html" class="orthlink plus">Classical Syriac</a>
-            <a href="syrc/tru.html" class="orthlink plus">Turoyo</a>
-            </span>
-</div>
-
-
-<div class="letter" title="T">
-<a href="tagb/index.html" class="scriptname">Tagbanwa</a>
-            <span class="constituents">
-            <a href="tagb/tbw.html" class="orthlink">Aborlan Tagbanwa</a>
-            </span>
-<a href="tale/index.html" class="plus scriptname">Tai Le</a>
-            <span class="constituents">
-            <a href="tale/tdd.html" class="orthlink">Tai Nüa</a>
-            </span>
-<a href="lana/index.html" class="plus scriptname">Tai Tham</a>
-            <span class="constituents">
-            <a href="lana/nod.html" class="orthlink">Northern Thai</a>
-            <a href="lana/kkh.html" class="orthlink plus">Tai Khün</a>
-            </span>
-<a href="tavt/index.html" class="plus scriptname">Tai Viet</a>
-            <span class="constituents">
-            <a href="tavt/blt.html" class="orthlink">Tai Dam</a>
-            </span>
-<a href="taml/index.html" class="plus scriptname">Tamil</a>
-            <span class="constituents">
-            <a href="taml/ta.html" class="orthlink">Tamil</a>
-            </span>
-<a href="telu/index.html" class="plus scriptname">Telugu</a>
-            <span class="constituents">
-            <a href="telu/te.html" class="orthlink">Telugu</a>
-            </span>
-<a href="thaa/index.html" class="plus scriptname">Thaana</a>
-            <span class="constituents">
-            <a href="thaa/dv.html" class="orthlink">Dhivehi</a>
-            </span>
-<a href="thai/index.html" class="plus scriptname">Thai</a>
-            <span class="constituents">
-            <a href="thai/th.html" class="orthlink">Thai</a>
-            </span>
-<a href="tibt/index.html" class="plus scriptname">Tibetan</a>
-            <span class="constituents">
-            <a href="tibt/bo.html" class="orthlink">Lhasa</a>
-            </span>
-<a href="tfng/index.html" class="plus scriptname">Tifinagh</a>
-            <span class="constituents">
-            <a href="tfng/zgh.html" class="orthlink">Tamazight</a>
-            </span>
-</div>
-
-
-<div class="letter" title="U">
-<a href="cans/index.html" class="scriptname">UCAS</a>
-            <span class="constituents">
-            <a href="cans/crk.html" class="orthlink">Plains Cree</a>
-            <a href="cans/ike.html" class="orthlink plus">Eastern Canadian Inuktitut</a>
-            </span>
-</div>
-
-
-<div class="letter" title="V">
-<a href="vaii/index.html" class="scriptname">Vai</a>
-            <span class="constituents">
-            <a href="vaii/vai.html" class="orthlink">Vai</a>
-            </span>
-</div>
-
-<div class="letter" title="W">
-<a href="wcho/index.html" class="scriptname">Wancho</a>
-            <span class="constituents">
-            <a href="wcho/nnp.html" class="orthlink">Wancho</a>
-            </span>
-<span class="scriptname plus">Wolof</span>
-            <span class="constituents">
-            <a href="latn/wo.html" class="orthlink">latin</a>
-            <a href="gara/wo.html" class="orthlink plus">garay</a>
-            <a href="arab/wo.html" class="orthlink plus">wolofal</a>
-            </span>
-</div>
-</div>
-
-
-
-<!--p style="margin-block-start: 1.4rem;">By script</p>
-<p style="font-size: 80%;text-align:start;">
-<a href="adlm/index.html">Adlam</a> •
-<a href="arab/index.html">Arabic</a> •
-<a href="armn/index.html">Armenian</a> •
-<a href="bali/index.html">Balinese</a> •
-<a href="bamu/index.html">Bamum</a> •
-<a href="bass/index.html">Bassa Vah</a> •
-<a href="beng/index.html">Bengali</a> •
-<a href="bugi/index.html">Buginese</a> •
-<a href="cher/index.html">Cherokee</a> •
-<a href="cyrl/index.html">Cyrillic</a> •
-<a href="deva/index.html">Devanagari</a> •
-<a href="ethi/index.html">Ethiopic</a> •
-<a href="gara/index.html">Garay</a> •
-<a href="geor/index.html">Georgian</a> •
-<a href="grek/index.html">Greek</a> •
-<a href="gujr/index.html">Gujarati</a> •
-<a href="guru/index.html">Gurmukhi</a> •
-<a href="rohg/index.html">Hanifi Rohingya</a> •
-<a href="hebr/index.html">Hebrew</a> •
-<a href="java/index.html">Javanese</a> •
-<a href="kali/index.html">Kayah Li</a> •
-<a href="khmr/index.html">Khmer</a> •
-<a href="laoo/index.html">Lao</a> •
-<a href="latn/index.html">Latin</a> •
-<a href="lepc/index.html">Lepcha</a> •
-<a href="limb/index.html">Limbu</a> •
-<a href="lisu/index.html">Lisu</a> •
-<a href="mlym/index.html">Malayalam</a> •
-<a href="mand/index.html">Mandaic</a> •
-<a href="mroo/index.html">Mro</a> •
-<a href="mymr/index.html">Myanmar</a> •
-<a href="nkoo/index.html">N’Ko</a> •
-<a href="nagm/index.html">Nag Mundari</a> •
-<a href="newa/index.html">Newa</a> •
-<a href="talu/index.html">New Tai Lü</a> •
-<a href="orya/index.html">Oriya</a> •
-<a href="olck/index.html">Ol Chiki</a> •
-<a href="osge/index.html">Osage</a> •
-<a href="sinh/index.html">Sinhala</a> •
-<a href="sund/index.html">Sundanese</a> •
-<a href="sunu/index.html">Sunuwar</a> •
-<a href="syrc/index.html">Syriac</a> •
-<a href="tale/index.html">Tai Le</a> •
-<a href="lana/index.html">Tai Tham</a> •
-<a href="tavt/index.html">Tai Viet</a> •
-<a href="taml/index.html">Tamil</a> •
-<a href="telu/index.html">Telugu</a> •
-<a href="thaa/index.html">Thaana</a> •
-<a href="thai/index.html">Thai</a> •
-<a href="tibt/index.html">Tibetan</a> •
-<a href="tfng/index.html">Tifinagh</a> •
-<a href="vaii/index.html">Vai</a>
-</p-->
 </div>
 </div>
 
@@ -647,574 +262,64 @@
 
 
 
+<script>
 
+function getTermLists () {
+    // make a list of links to term lists
+    // global scriptList, linkDB (linkdb.js)
+    var i, s, p, scripts, out='', ptrs=[], found, temp, index, counter=0
+    
+    // get a list of scripts in indexLetters
+    for (index in scriptList) {
+        if (scriptList[index].length>0) { // there are scripts associated with an initial letter
+            temp = '' // screen out index letters with scripts but no scriptnotes
+            temp += `<div class="letter" title="${ index.toUpperCase() }">\n`
+            found = false
+            
+            for (s=0;s<scriptList[index].length;s++) { // for each script associated with a given letter
+                if (linkDB[scriptList[index][s]].scriptNotes) {
+                    if (found) temp += ` • `
+                    //temp += `<a href="${ scriptList[index][s] }/index.html" class="scriptname">${ linkDB[scriptList[index][s]].script }</a>\n`
+                    temp += `<span class="scriptname">${ linkDB[scriptList[index][s]].script }</span>\n`
+                    temp += `<span class="constituents">\n`
+                    ptrs = linkDB[scriptList[index][s]].terms // eg. [["Hindi", "deva/hi.html"], ["Kashmiri", "deva/ks.html"]]
+                    if (typeof ptrs === 'undefined') ptrs = []
+                    else for (p=0;p<ptrs.length;p++) {  // for each script listed
+                        if (p>0) temp += ` • `
+                        temp += `<a href="${ ptrs[p][1] }" class="orthlink">${ ptrs[p][0] }</a>\n`
+                        counter++
+                        }
+                    temp += `</span>\n`
+                    found = true
+                    }
+                }
+            temp += `</div>\n`
+            if (temp !== `<div class="letter" title="${ index.toUpperCase() }">\n</div>\n`) out += temp // screen out index letters with scripts but no scriptnotes
+            }
+        }
+    console.log(counter,' term lists.')
+    document.getElementById('countTerm').textContent = counter
+    return out
+    }
+
+</script>
 
 
 
 
 <div id="termbases" class="flexbox">
   	<a href="index.html#termbases"><img src="../shared/images/lists/termbase.png" alt=""/></a>
-    <div>
+<div>
       <p class="mainLink"><a href="index.html#termbases">Terms lists</a></p>
       <p>Filterable lists of terms that can be used for finding examples or testing for letter combinations. Many terms are accompanied by meaning, IPA and other transcriptions, and for all it is possible to see the sequence of characters used.</p>
 
-<!--div class="summaries">
 
-<div class="letter" title="A">
-<a class="orthlink" href="arab/ff_vocab.html">Adamawa Fulfulde</a>
-<a class="orthlink plus" href="ethi/am_vocab.html">Amharic</a>
-<a class="orthlink plus" href="arab/arb_vocab.html">Arabic (MSA)</a>
-<a class="orthlink plus" href="armn/hy_vocab.html">Armenian</a>
-<a class="orthlink plus" href="syrc/aii_vocab.html">Assyrian Neo-Aramaic</a>
-</div>
 
-<div class="letter" title="B">
-<a class="orthlink" href="bali/ban_vocab.html">Balinese</a>
-<a class="orthlink plus" href="latn/bm_vocab.html">Bamanan</a>
-• Bassa
-<span class="constituents">
-<a href="latn/bsq_vocab.html" class="orthlink">latn</a>
-<a href="bass/bsq_vocab.html" class="orthlink plus">bass</a>
-</span>
-<a class="orthlink plus" href="batk/btk_vocab.html">Batak</a>
-<a class="orthlink plus" href="beng/bn_vocab.html">Bangla</a>
-<a class="orthlink plus" href="bugi/bug_vocab.html">Buginese</a>
-<a class="orthlink plus" href="mymr/my_vocab.html">Burmese</a>
-</div>
 
 
-<div class="letter" title="C">
-<a class="orthlink" href="khmr/km_vocab.html">Cambodian</a>
-<a class="orthlink plus" href="cher/chr_vocab.html">Cherokee</a>
-<a class="orthlink plus" href="cans/crk_vocab.html">Cree (Plains)</a>
-</div>
-
-<div class="letter" title="D">
-<a href="thaa/dv_vocab.html" class="orthlink">Dhivehi</a>
-</div>
-
-<div class="letter" title="F">
-<a href="latn/ff_vocab.html" class="orthlink">Fula</a>
-<a class="orthlink plus" href="arab/ff_vocab.html">Fulfulde</a>
-</div>
-
-<div class="letter" title="G">
-<a href="geor/ka_vocab.html" class="orthlink">Georgian</a>
-<a href="grek/el_vocab.html" class="orthlink plus">Greek</a>
-<a href="gujr/gu_vocab.html" class="orthlink plus">Gujarati</a>
-</div>
-
-<div class="letter" title="H">
-Hausa
-<span class="constituents">
-<a href="latn/ha_vocab.html" class="orthlink">boko</a>
-</span>
-<a href="hebr/he_vocab.html" class="orthlink plus">Hebrew</a>
-<a href="deva/hi_vocab.html" class="orthlink plus">Hindi</a>
-</div>
-
-<div class="letter" title="I">
-<a href="cans/ike_vocab.html" class="orthlink">Inuktitut (Eastern Canadian)</a>
-</div>
-
-<div class="letter" title="J">
-<a href="java/jv_vocab.html" class="orthlink">Javanese</a>
-</div>
-
-<div class="letter" title="K">
-Kashmiri
-<span class="constituents">
-<a href="arab/ks_vocab.html" class="orthlink">arab</a>
-<a href="deva/ks_vocab.html" class="orthlink plus">deva</a>
-</span>
-<a href="kali/kyu_vocab.html" class="orthlink plus">Kayah (Western)</a>
-<a href="khmr/km_vocab.html" class="orthlink plus">Khmer</a>
-</div>
-
-<div class="letter" title="L">
-<a href="laoo/lo_vocab.html" class="orthlink">Lao</a>
-<a href="lepc/lep_vocab.html" class="orthlink plus">Lepcha</a>
-<a href="limb/lif_vocab.html" class="orthlink plus">Limbu</a>
-<a href="lisu/lis_vocab.html" class="orthlink plus">Lisu</a>
-</div>
-
-<div class="letter" title="M">
-<a href="mlym/ml_vocab.html" class="orthlink">Malayalam</a>
-<a href="mand/mid_vocab.html" class="orthlink plus">Mandaic</a>
-• Mongolian
-<span class="constituents">
-<a href="cyrl/mn_vocab.html" class="orthlink">cyrl</a>
-<a href="mong/mn_vocab.html" class="orthlink plus">mong</a>
-</span>
-<a href="mroo/mro_vocab.html" class="orthlink plus">Mro</a>
-<a href="nagm/unr_vocab.html" class="orthlink plus">Mundari</a>
-</div>
-
-<div class="letter" title="N">
-<a href="nkoo/nqo_vocab.html" class="orthlink">N’Ko</a>
-<a href="newa/new_vocab.html" class="orthlink plus">Newa</a>
-<a href="lana/nod_vocab.html" class="orthlink plus">Northern Thai</a>
-</div>
-
-<div class="letter" title="O">
-<a href="orya/or_vocab.html" class="orthlink">Odia (Oriya)</a>
-<a href="osge/osa_vocab.html" class="orthlink plus">Osage</a>
-</div>
-
-<div class="letter" title="P">
-<a href="cans/crk_vocab.html" class="orthlink">Plains Cree</a>
-<a href="arab/pes_vocab.html" class="orthlink plus">Persian</a>
-<a href="newa/new_vocab.html" class="orthlink plus">Pracalit</a>
-<a href="adlm/fuf_vocab.html" class="orthlink plus">Pular</a>
-<a href="guru/pa_vocab.html" class="orthlink plus">Punjabi</a>
-</div>
-
-<div class="letter" title="R">
-<a href="rohg/rhg_vocab.html" class="orthlink">Rohingya</a>
-<a href="cyrl/ru_vocab.html" class="orthlink plus">Russian</a>
-</div>
-
-<div class="letter" title="S">
-<a href="olck/sat_vocab.html" class="orthlink">Santali</a>
-<a href="mymr/shn_vocab.html" class="orthlink plus">Shan</a>
-<a href="sinh/si_vocab.html" class="orthlink plus">Sinhala</a>
-<a href="sunu/suz_vocab.html" class="orthlink plus">Sunuwar</a>
-<a href="sund/su_vocab.html" class="orthlink plus">Sundanese</a>
-<a href="syrc/syr_vocab.html" class="orthlink plus">Syriac</a>
-</div>
-
-<div class="letter" title="T">
-<a href="tavt/blt_vocab.html" class="orthlink">Tai Dam</a>
-<a href="lana/kkh_vocab.html" class="orthlink plus">Tai Khün</a>
-<a href="talu/khb_vocab.html" class="orthlink plus">Tai Lü</a>
-<a href="tale/tdd_vocab.html" class="orthlink plus">Tai Nüa</a>
-<a href="tfng/zgh_vocab.html" class="orthlink plus">Tamazight</a>
-<a href="taml/ta_vocab.html" class="orthlink plus">Tamil</a>
-<a href="telu/te_vocab.html" class="orthlink plus">Telugu</a>
-<a href="thai/th_vocab.html" class="orthlink plus">Thai</a>
-<a href="tibt/bo_vocab.html" class="orthlink plus">Tibetan</a>
-<a href="syrc/tru_vocab.html" class="orthlink plus">Turoyo</a>
-</div>
-
-<div class="letter" title="U">
-<a href="arab/ug_vocab.html" class="orthlink">Uighur</a>
-<a href="cyrl/uk_vocab.html" class="orthlink plus">Ukrainian</a>
-<a href="arab/ur_vocab.html" class="orthlink plus">Urdu</a>
-</div>
-
-<div class="letter" title="V">
-<a href="vaii/vai_vocab.html" class="orthlink">Vai</a>
-</div>
-
-<div class="letter" title="W">
-<a href="latn/wo_vocab.html" class="orthlink">Wolof</a>
-</div>
-</div-->
-
-
-
-
-
-
-
-
-<div class="summaries">
-
-<div class="letter" title="A">
-<span class="scriptname">Adlam</span>
-    <span class="constituents">
-    <a href="adlm/fuf_vocab.html" class="orthlink">Pular</a>
-    </span>
-<span class="plus scriptname">Arabic</span>
-            <span class="constituents">
-            <a href="arab/arb_vocab.html" class="orthlink">Arabic (MSA)</a>
-            <a href="arab/ff_vocab.html" class="orthlink plus">Fulfulde</a>
-            <a href="arab/ha_vocab.html" class="orthlink plus">Hausa</a>
-            <a href="arab/ks_vocab.html" class="orthlink plus">Kashmiri</a>
-            <a href="arab/pes_vocab.html" class="orthlink plus">Persian</a>
-            <a href="arab/sd_vocab.html" class="orthlink plus">Sindhi</a>
-            <a href="arab/ckb_vocab.html" class="orthlink plus">Sorani</a>
-            <a href="arab/ug_vocab.html" class="orthlink plus">Uighur</a>
-            <a href="arab/ur_vocab.html" class="orthlink plus">Urdu</a>
-            <a href="arab/wo_vocab.html" class="orthlink plus">Wolof</a>
-            </span>
-<span class="plus scriptname">Armenian</span>
-            <span class="constituents">
-            <a href="armn/hy_vocab.html" class="orthlink">Armenian</a>
-            </span>
-</div>
-
-<div class="letter" title="B">
-<span class="scriptname">Balinese</span>
-            <span class="constituents">
-            <a href="bali/ban_vocab.html" class="orthlink">Balinese</a>
-            </span>
-<span class="plus scriptname">Bamum</span>
-            <span class="constituents">
-            <a href="bamu/bax_vocab.html" class="orthlink">Bamoun</a>
-            </span>
-<span class="plus scriptname">Bassa Vah</span>
-            <span class="constituents">
-            <a href="bass/bsq_vocab.html" class="orthlink">Bassa</a>
-            </span>
-<span class="plus scriptname">Batak</span>
-            <span class="constituents">
-            <a href="batk/btk_vocab.html" class="orthlink">Batak</a>
-            </span>
-<span class="plus scriptname">Bengali</span>
-            <span class="constituents">
-            <a href="beng/bn_vocab.html" class="orthlink">Bangla</a>
-            </span>
-<span class="plus scriptname">Buginese</span>
-            <span class="constituents">
-            <a href="bugi/bug_vocab.html" class="orthlink">Buginese</a>
-            </span>
-<span class="plus scriptname">Buhid</span>
-            <span class="constituents">
-            <a href="buhd/bku_vocab.html" class="orthlink">Buhid</a>
-            </span>
-</div>
-
-
-<div class="letter" title="C">
-<span class="scriptname">Cham</span>
-            <span class="constituents">
-            <a href="cham/cjm_vocab.html" class="orthlink">Eastern Cham</a>
-            </span>
-<span class="plus scriptname">Chakma</span>
-            <span class="constituents">
-            <a href="cakm/ccp_vocab.html" class="orthlink">Chakma</a>
-            </span>
-<span class="plus scriptname">Cherokee</span>
-            <span class="constituents">
-            <a href="cher/chr_vocab.html" class="orthlink">Cherokee</a>
-            </span>
-<span class="plus scriptname">Cyrillic</span>
-            <span class="constituents">
-            <a href="cyrl/mn_vocab.html" class="orthlink">Mongolian</a>
-            <a href="cyrl/ru_vocab.html" class="orthlink plus">Russian</a>
-            <a href="cyrl/uk_vocab.html" class="orthlink plus">Ukrainian</a>
-            </span>
-</div>
-
-
-<div class="letter" title="D"> 
-<span class="scriptname">Devanagari</span>
-            <span class="constituents">
-            <a href="deva/hi_vocab.html" class="orthlink">Hindi</a>
-            <a href="deva/ks_vocab.html" class="orthlink plus">Kashmiri</a>
-            </span>
-</div>
-
-
-<div class="letter" title="E">
-<span class="scriptname">Ethiopic</span>
-<span class="constituents">
-        <a class="orthlink" href="ethi/am_vocab.html">Amharic</a>
-</span>
-</div>
-
-
-
-<div class="letter" title="F">
-<span class="scriptname">Fraser script</span>
-            <span class="constituents">
-            <a href="lisu/lis_vocab.html" class="orthlink">Lisu</a>
-            </span>
-</div>
-
-
-
-<div class="letter" title="G">
-<span class="scriptname">Garay</span>
-            <span class="constituents">
-            <a href="gara/wo_vocab.html" class="orthlink">Wolof</a>
-            </span>
-<span class="plus scriptname">Georgian</span>
-            <span class="constituents">
-            <a href="geor/ka_vocab.html" class="orthlink">Georgian</a>
-            </span>
-<span class="plus scriptname">Greek</span>
-            <span class="constituents">
-            <a href="grek/el_vocab.html" class="orthlink">Greek</a>
-            </span>
-<span class="plus scriptname">Gujarati</span>
-            <span class="constituents">
-            <a href="gujr/gu_vocab.html" class="orthlink">Gujarati</a>
-            </span>
-<span class="plus scriptname">Gurmukhi</span>
-            <span class="constituents">
-            <a href="guru/pa_vocab.html" class="orthlink">Punjabi</a>
-            </span>
-</div>
-
-
-<div class="letter" title="H">
-<span class="scriptname">Hanifi Rohingya</span>
-            <span class="constituents">
-            <a href="rohg/rhg_vocab.html" class="orthlink">Rohingya</a>
-            </span>
-<span class="scriptname">Hanunóo</span>
-            <span class="constituents">
-            <a href="hano/hnn_vocab.html" class="orthlink">Hanunó’o</a>
-            </span>
-<span class="plus scriptname">Hausa</span>
-            <span class="constituents">
-            <a href="latn/ha_vocab.html" class="orthlink">boko</a>
-            <a href="arab/ha_vocab.html" class="orthlink plus">ajami</a>
-            </span>
-<span class="plus scriptname">Hebrew</span>
-            <span class="constituents">
-            <a href="hebr/he_vocab.html" class="orthlink">Hebrew</a>
-            </span>
-</div>
-
-
-
-<div class="letter" title="J">
-<span class="scriptname">Japanese</span>
-            <span class="constituents">
-            <a href="jpan/ja_vocab.html" class="orthlink">Japanese</a>
-            </span>
-<span class="plus scriptname">Javanese</span>
-            <span class="constituents">
-            <a href="java/jv_vocab.html" class="orthlink">Javanese</a>
-            </span>
-</div>
-
-
-<div class="letter" title="K">
-<span class="scriptname">Kashmiri</span>
-            <span class="constituents">
-            <a href="arab/ks_vocab.html" class="orthlink">arab</a>
-            <a href="deva/ks_vocab.html" class="orthlink plus">deva</a>
-            </span>
-<span class="plus scriptname">Kayah Li</span>
-            <span class="constituents">
-            <a href="kali/kyu_vocab.html" class="orthlink">Western Kayah</a>
-            </span>
-<span class="plus scriptname">Khmer</span>
-            <span class="constituents">
-            <a href="khmr/km_vocab.html" class="orthlink">Cambodian</a>
-            </span>
-<span class="plus scriptname">Kurdish</span>
-            <span class="constituents">
-            <a href="arab/ckb_vocab.html" class="orthlink">Sorani</a>
-            <a href="latn/kmr_vocab.html" class="orthlink plus">Kurmanji</a>
-            </span>
-</div>
-
-
-<div class="letter" title="L">
-<span class="scriptname">Lanna</span>
-            <span class="constituents">
-            <a href="lana/nod_vocab.html" class="orthlink">Northern Thai</a>
-            <a href="lana/kkh_vocab.html" class="orthlink plus">Tai Khün</a>
-            </span>
-<span class="plus scriptname">Lao</span>
-            <span class="constituents">
-            <a href="laoo/lo_vocab.html" class="orthlink">Lao</a>
-            </span>
-<span class="plus scriptname">Latin</span>
-            <span class="constituents">
-            <a href="latn/bm_vocab.html" class="orthlink">Bamanan</a>
-            <a href="latn/ff_vocab.html" class="orthlink plus">Fula</a>
-            <a href="latn/ha_vocab.html" class="orthlink plus">Hausa</a>
-            <a href="latn/kmr_vocab.html" class="orthlink plus">Kurmanji</a>
-            <a href="latn/wo_vocab.html" class="orthlink plus">Wolof</a>
-            </span>
-<span class="plus scriptname">Lepcha</span>
-            <span class="constituents">
-            <a href="lepc/lep_vocab.html" class="orthlink">Lepcha</a>
-            </span>
-<span class="plus scriptname">Limbu</span>
-            <span class="constituents">
-            <a href="limb/lif_vocab.html" class="orthlink">Limbu</a>
-            </span>
-<span class="plus scriptname">Lisu</span>
-            <span class="constituents">
-            <a href="lisu/lis_vocab.html" class="orthlink">Lisu</a>
-            </span>
-</div>
-
-
-<div class="letter" title="M">
-<span class="scriptname">Malayalam</span>
-            <span class="constituents">
-            <a href="mlym/ml_vocab.html" class="orthlink">Malayalam</a>
-            </span>
-<span class="plus scriptname">Mandaic</span>
-            <span class="constituents">
-            <a href="mand/mid_vocab.html" class="orthlink">Mandaic</a>
-            </span>
-<span class="plus scriptname">Miao</span>
-            <span class="constituents">
-            <a href="plrd/hmd_vocab.html" class="orthlink">A-Hmao</a>
-            </span>
-<span class="plus scriptname">Mongolian</span>
-            <span class="constituents">
-            <a href="cyrl/mn_vocab.html" class="orthlink">cyrl</a>
-            <a href="mong/mn_vocab.html" class="orthlink plus">mong</a>
-            </span>
-<span class="plus scriptname">Mro</span>
-            <span class="constituents">
-            <a href="mroo/mro_vocab.html" class="orthlink">Mru</a>
-            </span>
-<span class="plus scriptname">Myanmar</span>
-    <span class="constituents">
-    <a href="mymr/my_vocab.html" class="orthlink">Burmese</a>
-    <a href="mymr/shn_vocab.html" class="orthlink plus">Shan</a>
-    </span>
-</div>
-
-
-<div class="letter" title="N">
-<span class="scriptname">N’Ko</span>
-            <span class="constituents">
-            <a href="nkoo/nqo_vocab.html" class="orthlink">N’Ko</a>
-            </span>
-<span class="plus scriptname">Nag Mundari</span>
-            <span class="constituents">
-            <a href="nagm/unr_vocab.html" class="orthlink">Mundari</a>
-            </span>
-<span class="plus scriptname">Newa</span>
-            <span class="constituents">
-            <a href="newa/new_vocab.html" class="orthlink">Newar</a>
-            </span>
-<span class="plus scriptname">New Tai Lü</span>
-            <span class="constituents">
-            <a href="talu/khb_vocab.html" class="orthlink">Tai Lü</a>
-            </span>
-</div>
-
-
-<div class="letter" title="O">
-<span class="scriptname">Ol Chiki</span>
-            <span class="constituents">
-            <a href="olck/sat_vocab.html" class="orthlink">Santali</a>
-            </span>
-<span class="plus scriptname">Oriya</span>
-            <span class="constituents">
-            <a href="orya/or_vocab.html" class="orthlink">Odia</a>
-            </span>
-<span class="plus scriptname">Osage</span>
-            <span class="constituents">
-            <a href="osge/osa_vocab.html" class="orthlink">Osage</a>
-            </span>
-</div>
-
-
-
-<div class="letter" title="P">
-<span class="scriptname">Pollard script</span>
-            <span class="constituents">
-            <a href="plrd/hmd_vocab.html" class="orthlink">A-Hmao</a>
-            </span>
-</div>
-
-
-
-<div class="letter" title="S">
-<span class="scriptname">Sinhala</span>
-            <span class="constituents">
-            <a href="sinh/si_vocab.html" class="orthlink">Sinhala</a>
-            </span>
-<span class="plus scriptname">Sora Sompeng</span>
-            <span class="constituents">
-            <a href="sora/srb_vocab.html" class="orthlink">Sora</a>
-            </span>
-<span class="plus scriptname">Sunuwar</span>
-            <span class="constituents">
-            <a href="sunu/suz_vocab.html" class="orthlink">Kiranti-Kõits</a>
-            </span>
-<span class="plus scriptname">Sundanese</span>
-            <span class="constituents">
-            <a href="sund/su_vocab.html" class="orthlink">Sundanese</a>
-            </span>
-<span class="plus scriptname">Syriac</span>
-            <span class="constituents">
-            <a href="syrc/aii_vocab.html" class="orthlink">Assyrian Neo-Aramaic</a>
-            <a href="syrc/syr_vocab.html" class="orthlink plus">Classical Syriac</a>
-            <a href="syrc/tru_vocab.html" class="orthlink plus">Turoyo</a>
-            </span>
-</div>
-
-
-<div class="letter" title="T">
-<span class="scriptname">Tagbanwa</span>
-            <span class="constituents">
-            <a href="tagb/tbw_vocab.html" class="orthlink">Aborlan Tagbanwa</a>
-            </span>
-<span class="plus scriptname">Tai Le</span>
-            <span class="constituents">
-            <a href="tale/tdd_vocab.html" class="orthlink">Tai Nüa</a>
-            </span>
-<span class="plus scriptname">Tai Tham</span>
-            <span class="constituents">
-            <a href="lana/nod_vocab.html" class="orthlink">Northern Thai</a>
-            <a href="lana/kkh_vocab.html" class="orthlink plus">Tai Khün</a>
-            </span>
-<span class="plus scriptname">Tai Viet</span>
-            <span class="constituents">
-            <a href="tavt/blt_vocab.html" class="orthlink">Tai Dam</a>
-            </span>
-<span class="plus scriptname">Tamil</span>
-            <span class="constituents">
-            <a href="taml/ta_vocab.html" class="orthlink">Tamil</a>
-            </span>
-<span class="plus scriptname">Telugu</span>
-            <span class="constituents">
-            <a href="telu/te_vocab.html" class="orthlink">Telugu</a>
-            </span>
-<span class="plus scriptname">Thaana</span>
-            <span class="constituents">
-            <a href="thaa/dv_vocab.html" class="orthlink">Dhivehi</a>
-            </span>
-<span class="plus scriptname">Thai</span>
-            <span class="constituents">
-            <a href="thai/th_vocab.html" class="orthlink">Thai</a>
-            </span>
-<span class="plus scriptname">Tibetan</span>
-            <span class="constituents">
-            <a href="tibt/bo_vocab.html" class="orthlink">Lhasa</a>
-            </span>
-<span class="plus scriptname">Tifinagh</span>
-            <span class="constituents">
-            <a href="tfng/zgh_vocab.html" class="orthlink">Tamazight</a>
-            </span>
-</div>
-
-
-<div class="letter" title="U">
-<span class="scriptname">UCAS</span>
-            <span class="constituents">
-            <a href="cans/crk_vocab.html" class="orthlink">Cree (Plains)</a>
-            <a href="cans/ike_vocab.html" class="orthlink plus">Eastern Canadian Inuktitut</a>
-            </span>
-</div>
-
-
-<div class="letter" title="V">
-<span class="scriptname">Vai</span>
-            <span class="constituents">
-            <a href="vaii/vai_vocab.html" class="orthlink">Vai</a>
-            </span>
-</div>
-
-<div class="letter" title="W">
-<span class="scriptname">Wancho</span>
-            <span class="constituents">
-            <a href="wcho/nnp_vocab.html" class="orthlink">Wancho</a>
-            </span>
-<span class="plus scriptname">Wolof</span>
-            <span class="constituents">
-            <a href="latn/wo_vocab.html" class="orthlink">latin</a>
-            <a href="gara/wo_vocab.html" class="orthlink plus">garay</a>
-            <a href="arab/wo_vocab.html" class="orthlink plus">wolofal</a>
-            </span>
-</div>
-</div>
-</div>
+<div class="summaries" id="termListSummaries"></div>
+<p style="font-size:70%">Total term lists: <span id="countTerm"></span></p>
+<script>document.getElementById('termListSummaries').innerHTML = getTermLists()</script></div>
 </div>
 
 
@@ -1261,8 +366,53 @@ Kashmiri
       <p class="mainLink"><a href="/pickers/">Unicode character apps</a></p>
         <p>Character apps are likely to be most useful if you don't know a script well enough to use the native keyboard. The arrangement of characters also makes it much more useable than a regular character map utility, and they may include characters from more than one block. However, character apps also provide transliteration and other tools, and are as useful for analysing text as for inputting it.</p>
 
-  <iframe id="pickerlist" src="../pickers/pickerlist.html" style="width: 100%; height: 60em; margin-left: 0; border: 0; "></iframe>
-    </div></div>
+
+<script>
+function getPickers () {
+    // make a list of links to pickers
+    // global scriptList, linkDB (linkdb.js)
+    var i, s, p, scripts, out='', ptrs=[], found, temp, index, counter=0
+    
+    // get a list of scripts in indexLetters
+    for (index in scriptList) {
+        if (scriptList[index].length>0) { // there are scripts associated with an initial letter
+            temp = '' // screen out index letters with scripts but no pickers
+            temp += `<div class="letter" title="${ index.toUpperCase() }">\n`
+            found = false
+            
+            for (s=0;s<scriptList[index].length;s++) { // for each script associated with a given letter
+                if (linkDB[scriptList[index][s]].pickers) {
+                    if (found) temp += ` • `
+                    //temp += `<a href="${ scriptList[index][s] }/index.html" class="scriptname">${ linkDB[scriptList[index][s]].script }</a>\n`
+                    temp += `<span class="scriptname">${ linkDB[scriptList[index][s]].script }</span>\n`
+                    temp += `<span class="constituents">\n`
+                    ptrs = linkDB[scriptList[index][s]].pickers // eg. [["Hindi", "deva/hi.html"], ["Kashmiri", "deva/ks.html"]]
+                    for (p=0;p<ptrs.length;p++) {
+                        if (p>0) temp += ` • `
+                        temp += `<a href="../pickers/${ ptrs[p][1] }/index.html" class="orthlink">${ ptrs[p][0] }</a>\n`
+                        counter++
+                        }
+                    temp += `</span>\n`
+                    found = true
+                    }
+                }
+            temp += `</div>\n`
+            if (temp !== `<div class="letter" title="${ index.toUpperCase() }">\n</div>\n`) out += temp // screen out index letters with scripts but no pickers
+            }
+        }
+    console.log(counter,' pickers.')
+    document.getElementById('countPicker').textContent = counter
+    return out
+    }
+</script>
+
+
+
+<div class="summaries" id="pickerSummaries"></div>
+<p style="font-size:70%">Total character apps: <span id="countPicker"></span></p>
+<script>document.getElementById('pickerSummaries').innerHTML = getPickers()</script>
+</div>
+</div>
 
 
 
@@ -1296,7 +446,7 @@ Kashmiri
 
 
 <div class="smallprint">
-  <span id="version">Last update <span id="version-info"><!-- #BeginDate format:IS1m -->2024-06-21  7:53<!-- #EndDate -->
+  <span id="version">Last update <span id="version-info"><!-- #BeginDate format:IS1m -->2024-06-21  16:06<!-- #EndDate -->
     </span> GMT.  &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span>
 </div>
 <script>
