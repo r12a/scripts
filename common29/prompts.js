@@ -300,15 +300,15 @@ function addPageIntro (script, orthogName, iso, picker, page) {
         out += `
         ${ draft }
 
-        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">Phonological transcriptions:</strong> These should be treated as a guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:90%;">Phonological transcriptions</strong> should be treated as a guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
 `
 
 if (window.location.href.includes('block')) out += `
-        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on <span class="ex" style="font-size:1em;">coloured examples</span> to reveal detailed compositional information. If your browser supports it, your cursor will change to look like <img src="../common29/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on <span class="ex" style="font-size:1em;">coloured examples</span> to reveal detailed compositional information. If your browser supports it, your cursor will change to look like <img src="../common29/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
 `
 
 else out += `
-        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: <strong>(a)</strong> <span class="ex" style="font-size:1em;">coloured characters</span> in examples and lists; <strong>(b)</strong> <span style="color:teal;">link text</span> on character names. If your browser supports it, your cursor will change to look like <img src="../common29/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on the following to reveal detailed information and examples for each character: <strong>(a)</strong> <span class="ex" style="font-size:1em;">coloured characters</span> in examples and lists; <strong>(b)</strong> <span style="color:teal;">link text</span> on character names. If your browser supports it, your cursor will change to look like <img src="../common29/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
 `
 
 
@@ -473,7 +473,7 @@ if (! window.location.href.includes('block')) out += `
 //out += `<div>`
 
 if (window.location.href.includes('block')) out += `
-<p><a target="_blank" href="index.html#languages">Languages using the ${ script } script</a> • <a target="_blank" href="${ langTag }_vocab.html">Terms list</a> • <a target="_blank" href="../links.html?iso=${ iso }">${ script } links</a> • <a target="_blank" href="../index.html#charnotes">Other character notes</a></p>
+<p><a target="_blank" href="index.html#languages">Languages using the ${ script } script</a> • <a target="_blank" href="../links.html?iso=${ iso }">${ script } links</a> • <a target="_blank" href="../index.html#charnotes">Other character notes</a></p>
 `
 else out += `
 <p><a target="_blank" href="index.html#languages">Languages using the ${ script } script</a> • <a target="_blank" href="../../pickers/${ picker }/index.html">${ orthogName } picker</a> • <a target="_blank" href="${ langTag }_vocab.html">Terms list</a> • <a target="_blank" href="../links.html?iso=${ iso }">${ script } links</a> • <a target="_blank" href="../index.html#scriptnotes">Other orthography notes</a></p>
@@ -512,9 +512,9 @@ function addUsageAdvice (script, iso, picker) {
 
         ${ draft }
 
-        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">Phonological transcriptions:</strong> These should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:90%;">Phonological transcriptions</strong> should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
 
-        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) <span class="ex">coloured characters</span> in examples and lists. If your browsers supports it, your cursor will change to look like <img src="../common29/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items. (b) <span style="color:teal;">link text</span> on character names. You can show details as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.</p>
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) <span class="ex">coloured characters</span> in examples and lists. If your browsers supports it, your cursor will change to look like <img src="../common29/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items. (b) <span style="color:teal;">link text</span> on character names. You can show details as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.</p>
 
         <!--p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) characters in boxes with coloured backgrounds, (b) <span style="color:teal;">link text</span> on character names. (You can make this happen as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.) The same information also appears in the companion document, <a href="block.html" target="_blank" class="linkHighlightx">${ orthogName } character notes</a>. In addition, you can click/tap on <span class="ex">coloured examples</span> and on figures to see a list of the characters they contain.</p-->
 
