@@ -10,7 +10,7 @@ orthogFilePath='arab/ckb'  // path below /scripts, including filename, but no ex
 pickerDir='arab-ckb'  // directory name for picker, no slash at end
 scriptSummaryTableName='ckb'  // id used for langs record in xx-langdata.js; used to make summary table
 charUsageBCP='ckb'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only
-orthogName = 'Sorani' // natural language name for the orthography; used only in makeIndexIntro
+orthogName = 'Arabic' // natural language name for the orthography; used only in makeIndexIntro
 languageName = 'Sorani' // natural language name of language; used in various places, esp block
 scriptIsIndic = false  // true if there are indic syllabic categories; used only in makeIndexIntro
 
