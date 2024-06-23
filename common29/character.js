@@ -36,7 +36,7 @@ function showCharDetails (ch) {
     // cols
     
     var div, h2, p, out, shapes
-    console.log('showCharDetails', ch, langTag)
+    //console.log('showCharDetails', ch, langTag)
 
 
 	if (typeof charDetails === 'undefined') return
@@ -74,9 +74,10 @@ function showCharDetails (ch) {
     document.getElementById('output').appendChild(h2)
 
 
-    // add the title
+    // add the Unicode name
     p = document.createElement('p')
     p.className = 'unicodeName'
+    p.onclick = copyToClipboard
     p.appendChild(document.createTextNode(spreadsheetRows[ch][cols['ucsName']]))
     document.getElementById('output').appendChild(p)
 
@@ -170,7 +171,19 @@ function showCharDetails (ch) {
 
 
 
+function copyToClipboard(evt) {
+  // Copies the content of an element to the clipboard when clicked on
+  // Currently applied to #characterName and #characterAsText
 
+  var node = evt.target
+  navigator.clipboard.writeText(node.textContent)
+
+
+  document.getElementById('copyNotice').style.display = 'block'
+  setTimeout(() => {
+    document.getElementById('copyNotice').style.display = 'none'
+  }, "500")
+}
 
 
 
@@ -671,7 +684,7 @@ function convertTranscriptionData (lang) {
     // local insertTranscriptions t para 
     // global cols spreadsheetRows
 	var insertTranscriptions = document.querySelectorAll('.insertTranscription')
-	console.log("For language ",lang,'Transcriptions to check: ',insertTranscriptions.length)
+	//console.log("For language ",lang,'Transcriptions to check: ',insertTranscriptions.length)
 	
 	// do the inserted transcription locations
 	for (var t=0;t<insertTranscriptions.length;t++) {
@@ -735,7 +748,7 @@ function getCharList () {
 // get a list of characters for the xx-character files
     out = ''
     for (chr in spreadsheetRows) {
-        console.log(spreadsheetRows[chr][cols['status']])
+        //console.log(spreadsheetRows[chr][cols['status']])
         if (typeof spreadsheetRows[chr][cols['status']] === 'undefined' ||
             spreadsheetRows[chr][cols['status']] === 'x' ||
             spreadsheetRows[chr][cols['status']] === 'o' ||
@@ -744,7 +757,7 @@ function getCharList () {
             [... chr].length > 1 ||
             spreadsheetRows[chr][cols['status']].startsWith('/') ||
             spreadsheetRows[chr][cols['status']].startsWith('var'))
-            { console.log('Avoiding',chr)} // do nothing
+            { console.log('Avoiding',chr,'status is ',spreadsheetRows[chr][cols['status']])} // do nothing
         else out += chr
         }
 
@@ -769,6 +782,7 @@ function makeXXCharacterPage () {
     // write the data to the page
     document.querySelector('header').innerHTML = `<h1>${ languageName } (${ orthogName })</h1>\n
         <p class="intro">Show data in the database for this orthography.</p>
+        <dialog id="copyNotice">Copied !</dialog>
         <p id="find">Find:<br><input type="text" id="findInput" placeholder="Find..." onchange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }">`
     document.querySelector('title').textContent = `${ langTag } db dump (${ orthogName })`
     document.querySelector('header').style.fontSize = '2rem'
@@ -777,7 +791,7 @@ function makeXXCharacterPage () {
     charList = getCharList()
     charArray = [... charList]
     charArray = charArray.sort()
-    console.log(charArray, charArray.length)
+    //console.log(charArray, charArray.length)
     for (item=0;item<charArray.length;item++) showCharDetails(charArray[item])
     cChars = document.querySelectorAll('.currentCharacter')
     for (c=0;c<cChars.length;c++) {
@@ -785,11 +799,11 @@ function makeXXCharacterPage () {
         titleNode = cChars[c].nextElementSibling
         hex = cChar.codePointAt(0).toString(16).toUpperCase()
         while (hex.length < 4) hex = '0'+hex
-        content = `<bdi class="largeChar">${ cChar }</bdi> &nbsp; ${ hex }`
+        content = `<bdi class="largeChar" onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ cChar }</bdi><span class="largeHex" onclick="document.location = getFindStr('${ hex }')">${ hex }</span>`
         titleNode.innerHTML = content
         titleNode.id = 'char'+hex
         titleNode.style.fontSize = '3rem'
-        console.log(cChar, cChars[c].nextElementSibling.textContent)
+        //console.log(cChar, cChars[c].nextElementSibling.textContent)
         }
     }
 
