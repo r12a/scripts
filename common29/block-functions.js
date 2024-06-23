@@ -298,6 +298,15 @@ function buildPage () {
     makeFontChanger(window.languageList.join(','), window.scriptISO, window.webfonts, window.defaultSize)
     // expandCharMarkup()   this has to be called for each language, so that the right spreadsheet is available
     document.querySelector("body").addEventListener('keydown', closeDialogEsc)
+    
+    // add first para with character count
+    if (document.getElementById('introPara')) {
+        totalNotes = document.querySelectorAll('.notes')
+        count = 0
+        for (i=0;i<totalNotes.length;i++) if (totalNotes[i].textContent) count++
+        totalCharacters = document.querySelectorAll('.character')
+        document.getElementById('introPara').innerHTML = `Information about ${ count } characters out of ${ totalCharacters.length } in Unicode blocks associated with the ${ window.scriptName } script.`
+        }
     }
 
 
@@ -732,17 +741,34 @@ function addBasics (lang, dir) {
     
 	var charList = document.querySelectorAll('.character')
 	console.log('Number of .character sections:',charList.length)
-	
-	for (var i=0;i<charList.length;i++) {
-		// get the character & character name
-		var hex = charList[i].id.replace(/char/,'')
-		while (hex.length < 4) hex = '0' + hex
-		var dec = parseInt(hex, 16)
-		var cchar = String.fromCodePoint(dec)
-        var cpName = charData[cchar]
+    
+    sections = document.querySelectorAll('.input')
+    for (s=0;s<sections.length;s++) addBasicMarkup(sections[s], sections[s].title)
+	}
 
-		var out = ''
+
+
+
+function addBasicMarkup (section, title) {
+    
+    
+    out = ''
+    out += `<section id="${ title.replace(/ /g,'_')}">
+            <h2>${ title }</h2>
+            `
+
+	var charList = [... section.textContent]
+	console.log(out, charList)
+
+	for (var i=0;i<charList.length;i++) {
+        hex = charList[i].codePointAt(0).toString(16).toUpperCase()
+        while (hex.length < 4) hex = '0'+hex 
+		var dec = parseInt(hex, 16)
+		var cchar = charList[i]
+        var cpName = charData[cchar]
 		
+        out += `<div class="character" id="char${ hex }">`
+        
 		// add top stuff
 		out += `<div class="charimg" style="cursor:copy;" onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">&#x${ hex };</div>\n`
 		out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
@@ -763,19 +789,17 @@ function addBasics (lang, dir) {
 	   // check for decomposable characters
 		if (cchar.normalize('NFD') != cchar) {
 			out += '<p class="decomposition">'
-			out += 'Decomposes to '+makeCharacterLink(cchar.normalize('NFD'), lang, dir)
+			//out += 'Decomposes to '+makeCharacterLink(cchar.normalize('NFD'), window.languageList[0], dir)
+			out += `Decomposes to <span class="ch split">${ cchar.normalize('NFD') }`
 			if (cchar.normalize('NFD') === cchar.normalize('NFC')) out += '<br><strong>The NFC normalised form of this character is the decomposed sequence!</strong>'
 			out += '</p>'
 			}
 
 
-		out += '<div class="notes">\n'           
-		
-		out += '</div>\n'
-		out += '</div>\n'
-
-		charList[i].innerHTML = out
+		out += `<div class="notes"></div>\n</div>\n`          
 		}
+    out += `</section>\n\n`
+    section.innerHTML = out
 	}
 
 
@@ -968,7 +992,7 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
                         else shapes[i].innerHTML = spreadsheetRows[ch][cols['shape']]
                         }
                     shapes[i].className = 'charShape'
-                    shapes[i].lang = langTag
+                    shapes[i].lang = window.defaultLanguage
                     }
                 }
             }
