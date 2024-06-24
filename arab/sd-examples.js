@@ -23,7 +23,7 @@ autoExpandExamples.sd = `
 @ https://en.wiktionary.org/w/index.php?title=Category:Sindhi_terms_with_IPA_pronunciation
 آئون|I, me|ɑː§ũː§‹§‹|āū̃|آئُون|आउं
 آسمان|sky|ɑ§s§m§ɑ§nʊ|āsmānu|آسمانُ|आस्मानु
-آنو|egg|ɑno|āno|آنو|आनो
+آنو|egg|ɑ§n§o|āno|آنو|आनो
 آنڊو|intestine|ɑ§ɳ§ɖ§o|āndo|آنڊو|आंडो
 آچر|Sunday|ɑː.§t͡ʃə.§ɾʊ|ācaru|آچر|आचरु
 آکاڙو|monastery|ɑː.§kʰɑː.§ɽ§oː|ākhāṛo|آکاڙو|आखाड़ो
@@ -50,7 +50,7 @@ autoExpandExamples.sd = `
 اکر||␣|||
 اکري|wooden spoon|ʊ§kʰɪ§r§i|ukhirī|اُکِرِي|उखिरी
 اگھڻ|to wipe|ʊ§ɡʱə§‹§ɳʊ|ughaṇu|اُگهَڻُ|उघणु  اُگَهڻُ in SED
-اڱارو|Tuesday|ɑː.§ŋɑː.§ɾ§oː|āṅāro|اَڱارو|आङारो
+اڱارو|Tuesday|ɑː.§ŋ§ɑː.§ɾ§oː|āṅāro|اَڱارو|आङारो
 اڱڻ||␣|||
 اڳي||␣|||
 باري ۾||␣|||
@@ -73,12 +73,12 @@ autoExpandExamples.sd = `
 تيل||␣|||
 تٿ|place of residence|tɪ§tʰʊ|tithu|تِٿُ|तिथु
 تکو||␣|||
-تیز|sharp|t̪§e§zʊ|tezu|تيزُ|तेज़ु
+تيز|sharp|t̪§e§zʊ|tezu|تيزُ|तेज़ु|تیز
 ثواب|rectitude, virtue|sa§v§ɑː§b|savābu|ثواب|सवाबु
 جانور||␣|||
 جبل|mountain|d͡ʑə§bə§lʊ|jabalu|جَبَلُ|जबलु
 جنوری||␣|||
-جنڊ|handmill|d͡ʑəɳɖʊ|jaṇḍu|جَنڊُ|जंड
+جنڊ|handmill|d͡ʑə§ɳ§ɖʊ|jaṇḍu|جَنڊُ|जंड
 جهاز|ship|ɟa§ɦ§ɑː§zʊ|jahāzu|جهاز|जहाज़ु
 جھلڻ|to hold, seize|d͡ʑʱə§lə§ɳʊ|jhalaṇu|جھَلڻُ|झलणु|جهلڻ
 جھنڊو|flag|d͡ʑʱə§‹§ɳ§ɖ§o|jhaṇḍo|جھَنڊو|झंडो|جهنڊو
@@ -118,8 +118,8 @@ autoExpandExamples.sd = `
 زبان|tongue|zʊ§b§ɑ§nə|zubāna|زُبانَ|ज़ुबान
 زمين|chronically ill|za.§m§iː§n|zamīn|زَمِين|
 زندگي||␣|||
-سئي|needle|sʊ§i§‹|suī|سُئِي|सुई
-سائو|green|sɑo|sāo|سائو|साओ
+سئي|needle|sʊ§›§i|suī|سُئِي|सुई
+سائو|green|s§ɑ§›§o|sāo|سائو|साओ
 سال||␣|||
 سالو||␣|||
 سامهون|face to face|s§ɑ§mʊ§h§ũ§‹|samuhũ|سامُهُون|समुहूं
@@ -164,7 +164,7 @@ autoExpandExamples.sd = `
 شُڪْرُ|Venus|ʂʊ§k§rʊ|śukru|شڪر||شڪر
 شُڪُرُ|thanks|ʂʊ§kʊ§rʊ|śukuru|شڪر||شڪر
 صاف||␣|||
-صحيح|correct, true|sə§h§ɪ§h§ʊ|sahihu|صَحِيحُ|सहिहु
+صحيح|correct, true|sə§h§ɪ§hʊ|sahihu|صَحِيحُ|सहिहु
 علائقو|district|æɪ§l§ɑ§ʔɪ§q§o|'alāiqo|عِلائِقو|
 غلطي|mistake|ɣa§l§t§iː|ġaltī|غلطي|ग़ल्ती
 فالودو||␣|||
@@ -201,7 +201,7 @@ autoExpandExamples.sd = `
 منگل||␣|||
 مهانگہ|dear, expensive|mə§h§ə§ŋ§ɡʊ§‹|mahāṅgu|مَهانگُہ|महांगु
 مهٽڻ|to rub|mə§h§ʈə§ɳʊ|mahṭaṇu|مَهٽَڻُ|मह्टणु
-موسیقی|music|m§u§s§i§q§i|mūsīqī|مُوسِيقِي|मूसीक़ी
+موسيقي|music|m§u§s§i§q§i|mūsīqī|مُوسِيقِي|मूसीक़ी|موسیقی
 ميرو||␣|||
 مينهن|rain|m§ĩ§‹§hʊ̃§‹|mī̃hũ|مِينهُن|मींहुं
 ميوو||␣|||
@@ -385,14 +385,14 @@ autoExpandExamples.sd = `
 ڏوهٽو|grandson|ɗ§o§hɪ§ʈ§o|ḍ̠ohiṭo|ڏوهِٽو|ॾोहिटो
 ڏوڌي||␣|||
 ڏياري|Diwali|ɗɪ§j§ɑ§r§i|ḍ̠iyārī|ڏِيَارِي|ॾियारी
-ڏينهن|day|ɗ§ĩ§hʊ̃§‹|ḍ̠īhũ|ڏِينهُن|ॾींहुं
+ڏينهن|day|ɗ§ĩ§‹§hʊ̃§‹|ḍ̠īhũ|ڏِينهُن|ॾींहुं
 ڏيهي|countryman|ɗ§e§h§i|ḍ̠ehī|ڏيهِي|ॾेही
 ڏکڻ||␣|||
 ڦار|ploughshare|pʰ§ɑ§rʊ|phāru|ڦارُ|फारु
 ڦوڪڻ|to blow|pʰ§u§kə§ɳʊ|phūkaṇu|ڦُوڪَڻُ|फूकणु
 کائڻ||␣|||
 کان||␣|||
-کاند|endurance|kʰɑ̃§‹§dɪ|khā̃di|کاندِ|खाँदि
+کاند|endurance|kʰ§ɑ̃§‹§dɪ|khā̃di|کاندِ|खाँदि
 کل||␣|||
 کلڻ||␣|||
 کنهڻ|to scratch|kʰə§nə§hə§ɳʊ|khanahaṇu|کَنَهَڻُ|खनहणु
@@ -494,19 +494,20 @@ autoExpandExamples.sd = `
 
 @ http://sed.cle.org.pk
 علاقو|dependency|æə§l§ɑ§q§o||عَلاقو|
-ايران|Iran|i§‹§r§ɑ§nʊ||اِيرانُ
-اوڀر|east|o§‹§bʰə§r§ʊ||اوڀَرُ
+ايران|Iran|›§i§r§ɑ§nʊ||اِيرانُ
+اوڀر|east|›§o§bʰə§r§ʊ||اوڀَرُ
 اونڪارڻ|to whine|u§‹§n§k§ɑ§rə§ɳɪ||اُونڪارَڻِ
 اونڌمهون|downcast|u§‹§n§d̪ʰə§mʊ§h§o§n||اُونڌَمُهون
-اوناڙڻ|to howl|u§‹§n§ɑ§ɽə§ɳʊ||اُوناڙَڻُ
-ارادو|intention|ɪrɑd̪ɑ||اِرادو
+اوناڙڻ|to howl|›§u§n§ɑ§ɽə§ɳʊ||اُوناڙَڻُ
+ارادو|intention|ɪ§r§ɑ§d̪§u||اِرادو
 اخلاق|ethics|ɪxlɑqʊ||اِخلاقُ
 آئٽ|to melt|ɑʔʊʈə||آئُٽَ
-پئوڻ|three quarters|pəʔuɳɪ||پَئُوڻِ
+پئوڻ|three quarters|pə§›§ʔu§ɳɪ||پَئُوڻِ
 پنئن|success|pənʔʊn||پَنئُن
-پائلو|store room|pɑʔʊlo||پائُلو
+پائلو|store room|pɑ§ʔ§ʊ§l§o||پائُلو
 الهيڙ|stray animal|ʊlhəeɽʊ||اُلهَيڙُ
-ائين|in this manner|ɪʔen||اِئين
+ائين|in this manner|ɪ§ʔ§e§n||اِئين
+للھو|dull|lɪ§lh§‹§o||لِلھو
 
 
 
