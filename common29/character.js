@@ -47,6 +47,10 @@ function showCharDetails (ch) {
 	if (typeof spreadsheetRows[ch] === 'undefined') return   
     
 	
+    charBlock = document.createElement('div')
+    charBlock.className = 'character'
+    
+    
     // Add the current character - use shape column, if it is defined
     div = document.createElement('div')
     div.lang = langTag
@@ -60,14 +64,14 @@ function showCharDetails (ch) {
     else {
         div.appendChild(document.createTextNode(ch))
         }
-    document.getElementById('output').appendChild(div)
+    charBlock.appendChild(div)
    
     
     // add the title
     h2 = document.createElement('h2')
     h2.id = langTag
     h2.appendChild(document.createTextNode(languageName))
-    document.getElementById('output').appendChild(h2)
+    charBlock.appendChild(h2)
 
 
     // add the Unicode name
@@ -75,7 +79,7 @@ function showCharDetails (ch) {
     p.className = 'unicodeName'
     p.onclick = copyToClipboard
     p.appendChild(document.createTextNode(spreadsheetRows[ch][cols['ucsName']]))
-    document.getElementById('output').appendChild(p)
+    charBlock.appendChild(p)
 
 
     // create the basic info
@@ -114,7 +118,7 @@ function showCharDetails (ch) {
         span.innerHTML = spreadsheetRows[ch][cols['transLoc']]
         p.appendChild(span)
         }
-    document.getElementById('output').appendChild(p)
+    charBlock.appendChild(p)
 
 
 			//if (spreadsheetRows[cchar][cols['transLoc']]) out += '<span class="localtrans trans" title="How transliterated in the scheme used for this document.">'+spreadsheetRows[cchar][cols['transLoc']]+'</span>'
@@ -126,7 +130,7 @@ function showCharDetails (ch) {
    
     div.innerHTML = makeDetails(ch, langTag)
     
-    document.getElementById('output').appendChild(div)
+    charBlock.appendChild(div)
 
 
 
@@ -139,7 +143,9 @@ function showCharDetails (ch) {
     out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ ch }" target="_blank">Term list</a>`
     out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }&charlist=${ ch }" target="_blank">Character usage</a>`
     div.innerHTML = out
-    document.getElementById('output').appendChild(div)
+    charBlock.appendChild(div)
+
+    document.getElementById('output').appendChild(charBlock)
 
 
 
@@ -770,16 +776,65 @@ function getFindStr (hex) {
 
 
 
+function toggleImages () {
+	// replace all the large characters with images
+	var testnode, toImg, i, nodes, id, dec, group
+    
+	// check whether we're converting to images or characters
+	testnode = document.querySelector('.largeChar')
+	if (testnode.textContent == '') toImg = false
+	else toImg = true
+	nodes = document.querySelectorAll('.largeChar')
+	
+	if (toImg) {
+		for (i=0;i<nodes.length;i++) {
+			id = nodes[i].parentNode.id.replace('char','')
+			dec = parseInt(id, 16)
+			group = getScriptGroup(dec)
+			nodes[i].innerHTML = '<img src="../../c/'+group+'/large/'+id+'.png"/>'
+			}
+		}
+	else {
+		for (i=0;i<nodes.length;i++) {
+			id = nodes[i].parentNode.id.replace('char','')
+			nodes[i].innerHTML = '&#x'+id+';'
+			}
+		}
+	}
+
+
+
+
 function makeXXCharacterPage () {
     // write the data to the page
     var panel
 
-    document.querySelector('header').innerHTML = `<h1>${ languageName } (${ orthogName })</h1>\n
-        <p class="intro">Show data in the database for this orthography.</p>
+    document.querySelector('header').innerHTML = `
+        
+        <div id="site-navigation"> <img id="bp_picture" alt=" " src="../../shared/images/world.gif"></div>
+        <div id="boilerplate">
+        <div id="topbar"><a href="/">r12a</a> &gt;&gt; docs</div>
+        <div id="sitelinks" class="noprint">
+        <a href="/scripts">scripts</a>&nbsp; <a href="/doclist">docs</a>&nbsp; <a href="/applist">apps</a>&nbsp; <a href="/maplist">maps</a>&nbsp; <a href="/blog/">blog</a>&nbsp; <a href="/photos">photos</a>&nbsp;&nbsp;</span></div>
+        </div>
+      
+        
+        
+        <h1>${ languageName } (${ orthogName }) db</h1>\n
+        <p class="intro">Shows data in the database for this orthography.</p>
         <dialog id="copyNotice">Copied !</dialog>
-        <p id="find">Find:<br><input type="text" id="findInput" placeholder="Find..." onchange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }">`
+        
+        <nav id="top">
+            <img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()">
+            <br>
+            <a href="#site-navigation"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."></a>
+            <br>
+            <input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onchange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }">
+            </nav>
+        `
+        
     document.querySelector('title').textContent = `${ langTag } db dump (${ orthogName })`
-    document.querySelector('header').style.fontSize = '2rem'
+    //document.querySelector('header').style.fontSize = '2rem'
     
     // create a panel
     panel = document.createElement('div')
