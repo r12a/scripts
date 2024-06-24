@@ -4,10 +4,6 @@
 
 ch = ''
 charData = {}
-function showNameDetails () {
-    // stop the mouseover producing a composition panel
-    // should probably be fixed by removing the mouseovers...
-    }
 traceSet = new Set([])
 
 
@@ -368,7 +364,6 @@ function setMarks (languageName) {
     // sets the global variable marks as a set containing all combining marks in the spreadsheet
     if (languageName) console.log("Running setMarks for ",languageName)
     for (var char in spreadsheetRows) {
-        //console.log(char,spreadsheetRows[char][cols['class']])
         if (typeof spreadsheetRows[char][cols['class']] === 'undefined') console.log(`>>> setMarks: Cannot find class column info for ${ char } in spreadsheet!`)
         if (spreadsheetRows[char][cols['class']].startsWith('M')) window.marks.add(char)
         }
@@ -415,7 +410,6 @@ function expandCharMarkup () {
                 console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandCharMarkup)', 'color:' + 'red' + ';font-weight:bold;')
                 continue
                 }
-            //console.log('>>>',charMarkup[i].classList,charMarkup[i].textContent, hex, dec)
             ch = String.fromCodePoint(dec)
 
             if (! spreadsheetRows[ch]) {
@@ -684,7 +678,6 @@ function convertTranscriptionData (lang) {
     // local insertTranscriptions t para 
     // global cols spreadsheetRows
 	var insertTranscriptions = document.querySelectorAll('.insertTranscription')
-	//console.log("For language ",lang,'Transcriptions to check: ',insertTranscriptions.length)
 	
 	// do the inserted transcription locations
 	for (var t=0;t<insertTranscriptions.length;t++) {
@@ -748,7 +741,6 @@ function getCharList () {
 // get a list of characters for the xx-character files
     out = ''
     for (chr in spreadsheetRows) {
-        //console.log(spreadsheetRows[chr][cols['status']])
         if (typeof spreadsheetRows[chr][cols['status']] === 'undefined' ||
             spreadsheetRows[chr][cols['status']] === 'x' ||
             spreadsheetRows[chr][cols['status']] === 'o' ||
@@ -780,18 +772,28 @@ function getFindStr (hex) {
 
 function makeXXCharacterPage () {
     // write the data to the page
+    var panel
+
     document.querySelector('header').innerHTML = `<h1>${ languageName } (${ orthogName })</h1>\n
         <p class="intro">Show data in the database for this orthography.</p>
         <dialog id="copyNotice">Copied !</dialog>
         <p id="find">Find:<br><input type="text" id="findInput" placeholder="Find..." onchange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }">`
     document.querySelector('title').textContent = `${ langTag } db dump (${ orthogName })`
     document.querySelector('header').style.fontSize = '2rem'
+    
+    // create a panel
+    panel = document.createElement('div')
+    panel.id = 'panel'
+    panel.style.display = 'none'
+    document.querySelector('header').appendChild(panel)
 
     parseSpreadsheet(spreadsheet)
+
+    setMarks(languageName)
+
     charList = getCharList()
     charArray = [... charList]
     charArray = charArray.sort()
-    //console.log(charArray, charArray.length)
     for (item=0;item<charArray.length;item++) showCharDetails(charArray[item])
     cChars = document.querySelectorAll('.currentCharacter')
     for (c=0;c<cChars.length;c++) {
@@ -803,11 +805,173 @@ function makeXXCharacterPage () {
         titleNode.innerHTML = content
         titleNode.id = 'char'+hex
         titleNode.style.fontSize = '3rem'
-        //console.log(cChar, cChars[c].nextElementSibling.textContent)
         }
     }
 
 
 
+function showNameDetails (chars, clang, base, target, panel, list, translit, ipa) {
+    // called by onclick created by shownames_setOnclick & shownames_setImgOnclick & listAll
+    // chars (string), alt text of example
+    // clang (string), lang attribute value of example img
+    // base (string), path for link to character detail
+    // target (string), name of the window to display results in, usually 'c' or ''; given the latter, link goes to same window
+    // list (string), if not null, indicates that spaces and nbsp should be ignored
+    // local out charArray chardiv charimg thename thelink hex dec blockname blockfile c
+    // global charData pickerDir
+    // calls getScriptGroup
 
+    // to show per-grapheme ipa the ipa transcriptions should have § as grapheme separator (and syllables should be separated by '.'). Unpronounced segments are represented by – (en hyphen).  Monosyllabic words don't need any extra stuff.
+    // កន្ត្រៃ|scissors|kɑː§n.§t§raj§–
+
+    var dir, characterList, graphemes, ptr, transcriptions, gloss, charArray
+	var chardiv, charimg, thename, thelink, hex, dec, blockname, blockfile
+
+	// check whether the calling page has set a base and target window: if not base, point to UniView
+	if(typeof base === 'undefined' || base === '') { base = '../../uniview/index.html?char=' }
+	if(typeof target === 'undefined') { target = 'c' }
+	if(typeof list === 'undefined') { list = null }
+	if(typeof translit === 'undefined') { translit = '' }
+	  
+	// clear and show the panel
+	panel.innerHTML = ''
+	panel.style.display = 'block'
+    dir = ''
+    if (typeof window.direction === 'string') dir = window.direction
+    else if (typeof template !== 'undefined' && typeof template.direction === 'string') dir = template.direction
+    
+    
+	var out = '<div id="ruby">'
+	
+    // get any IPA data provided - should be pre-separated for graphemes by §
+    if (typeof ipa === 'string' && ipa !== '') ipa = ipa.split('§')
+    else ipa = false
+    
+    
+	// add the example to the panel as a title
+    characterList = [...chars]
+    graphemes = []
+    ptr = -1
+    for (var c=0;c<characterList.length;c++) {
+        if (window.marks && window.marks.has(characterList[c]) && c !== 0) graphemes[ptr] += characterList[c]
+        else {
+            ptr++
+            graphemes[ptr] = characterList[c]
+            }
+        }
+
+    transcriptions = []
+    for (var t=0;t<graphemes.length;t++) {
+        transcriptions[t] = transliteratePanel(graphemes[t], clang)
+        }
+
+
+    // draw the glosses
+    iconURL = '../common29/icons/copytiny.svg'
+    gloss = '<div class="multilineGlossedText">'
+    for (t=-1;t<graphemes.length;t++) {
+        if (t===-1) {
+            gloss += `<div class="stack"><span class="rt translitGloss" lang="und-fonipa" title="Transliteration of the text."><img src="${ iconURL }" class="copyIcon" onclick="copyPanelText('.translitGloss')" title="Copy the transliteration." alt="Copy transliteration"></span><span class="rb"><img src="${ iconURL }" onclick="copyPanelText('.rb')" class="copyIcon" title="Copy the text." alt="Copy text"></span>`
+            if (ipa !== false) {
+                if (ipa[t+1]) gloss += `<span class="rt IPAGloss" lang="und-fonipa" title="IPA transcription of the text."><img class="copyIcon" src="${ iconURL }" onclick="copyPanelText('.IPAGloss')" title="Copy the IPA transcription." alt="Copy IPA"></span>`
+                else gloss += `<span class="rt">&nbsp;</span>`
+                }
+            gloss += `</div>`
+            }
+        else {
+            gloss += ` <div class="stack"><span class="rt translitGloss" lang="und-fonipa">${ transcriptions[t] }</span><span class="rb">${ graphemes[t] }</span>`
+            if (ipa !== false) {
+                if (ipa[t]) gloss += `<span class="rt IPAGloss" lang="und-fonipa">${ ipa[t] }</span>`
+                else gloss += `<span class="rt">&nbsp;</span>`
+                }
+            gloss += `</div>`
+            }
+        }
+    gloss += '</div>'
+
+	out += `<div dir="ltr" class="glossContainer" lang="${ clang }" id="title">${ gloss }</div>`
+    
+        
+    
+    // add instructions line
+	out += '<p id="advice" style="line-height:1;">Glossed lines are transliteration/text/IPA.<br>Click on character names below for detailed information.</p>'
+	
+	// create a list of characters
+	if (list) chars = chars.replace(/ /g,'').replace(/\u00A0/g,'') // remove spaces if list
+    charArray = [...chars]
+
+    out += '<div id="listOfCharacters">'
+	for (var c=0; c<charArray.length; c++) { 
+        dec = charArray[c].codePointAt(0)
+        hex = dec.toString(16)
+        while (hex.length < 4) { hex = '0'+hex }
+        hex = hex.toUpperCase()
+ 
+		if (spreadsheetRows[charArray[c]]) {            
+			out += '<div class="panelCharacter">'
+            out += `<img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }" style="height:2rem;">`
+            out += `<a href="#char${ hex }">`
+            out += spreadsheetRows[charArray[c]][cols['ucsName']]
+            out += '</a>\n'
+			}
+		else {
+			out += `<div class="panelCharacter"><a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }"> U+${ hex } No data for this character</a></div>`
+			}
+
+        out += '</div>'
+		}
+	out += '</div>'
+	
+    
+	// write out the bottom line
+	out += '<p style="text-align:left; margin-block-start: 1em; line-height:2rem;" id="panelSharingLine">'
+    out += '<button onclick="copyPanelList()" style="cursor:copy;">Copy list</button> \u00A0 '
+	
+    out += `<button onclick="openExportWindow('../../app-analysestring/index.html?chars=${ chars }')">Details</button> \u00A0 `
+	
+    out += `<button onclick="openExportWindow('../../uniview/index.html?charlist=${ chars }')">UniView</button> \u00A0 `
+	
+    out += `<button onclick="openExportWindow('../../scripts/apps/graphemes/index.html?gc=${ chars }')">Graphemes</button> \u00A0 `
+	
+    if (window.pickerDir) {
+        out += `<button onclick="openExportWindow('../../pickers/${ window.pickerDir }/index.html?text=${ chars }')">Character App</button> \u00A0 `
+	   }
+
+    // add a link to the _vocab page
+    if (typeof window.languageName === 'undefined') var fragid = ''
+    else fragid = '#'+window.languageName
+
+    // figure out where to find the url for the _vocab page
+    var url
+    if (typeof template !== 'undefined' && typeof template.vocablocation === 'string')  url = `../../scripts/${ template.vocablocation }.html`
+    
+    else url = `${ window.langTag }_vocab`
+    
+    if (typeof window.removeVowels === 'function') chars = removeVowels(chars)
+
+    out += `<button onclick="openExportWindow('${ url }.html?q=${ chars }')">Terms</button> \u00A0 `
+		
+	// add a close button
+	out += '<p id="character_panel_close_button" '
+	out += ' onclick="document.getElementById(\'panel\').style.display = \'none\'"'
+	out += '>X</p>'
+	panel.innerHTML = out
+	}
+
+
+
+function transliteratePanel (str, lang) {
+// transliterate the rb tags in the panel
+
+var strArray = [...str]
+str = ''
+
+var exclusions = new Set(['(',')','[',']','.',' '])
+for (i=0;i<strArray.length;i++) {
+    if (spreadsheetRows[strArray[i]][cols['transLoc']]) str += spreadsheetRows[strArray[i]][cols['transLoc']]
+    else str += ''
+    }
+
+return str.trim()
+}
 
