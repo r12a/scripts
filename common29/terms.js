@@ -13,6 +13,7 @@ const IPAraw = 7
 document.querySelector("title").textContent = `${ terms.title } term lister`
 
 document.querySelector("body").addEventListener('keydown', closeDialogEsc)
+document.querySelector("body").classList.add('termListApp')
 
 
 function closeDialogEsc (e) {
@@ -608,16 +609,18 @@ function listFrequency () {
             else spreadsheetInfo[key].name = 'U+'+ hex
             spreadsheetInfo[key].ipa = ''
             }
+        //out += `<tr>
+        //    <td class="uname"><a target="charnotes" href="block.html#char${ hex }">${ spreadsheetInfo[key].name }</a>`
         out += `<tr>
-            <td class="uname"><a target="charnotes" href="block.html#char${ hex }">${ spreadsheetInfo[key].name }</a>`
-            if (spreadsheetInfo[key].ipa !== '') out +=` <span class="ipa">${ spreadsheetInfo[key].ipa.toLowerCase() }</span>`
-            out += `</td>
-            <td class="char" style="cursor:pointer;" 
-                onclick="copyMsg(this.textContent)"
-                >${ key }</td>
-            <td class="freq">${ sorted[key].toLocaleString() }</td>
-            <td class="percent">${ eval(sorted[key]*100/total).toFixed(2) }%</td>
-            </tr>\n`
+            <td class="uname"><a target="charnotes" href="${ terms.langdataTag }-characters.html#char${ hex }">${ spreadsheetInfo[key].name }</a>`
+        if (spreadsheetInfo[key].ipa !== '') out +=` <span class="ipa">${ spreadsheetInfo[key].ipa.toLowerCase() }</span>`
+        out += `</td>
+        <td class="char" style="cursor:pointer;" 
+            onclick="copyMsg(this.textContent)"
+            >${ key }</td>
+        <td class="freq">${ sorted[key].toLocaleString() }</td>
+        <td class="percent">${ eval(sorted[key]*100/total).toFixed(2) }%</td>
+        </tr>\n`
         }
 
     document.getElementById('freqout').innerHTML = out 
