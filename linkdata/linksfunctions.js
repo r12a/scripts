@@ -270,12 +270,25 @@ usedfor: "${record.usedfor}",
 
 
 
+
+
 	// character detail
 	if (record.charNotesList && record.charNotesList.length > 0 || record.ssHistory) {
 		out += '<tr><th>Character detail:</th><td>'
-		if (record.charNotesList && record.charNotesList.length > 0) out += '<p><a href="../scripts/'+record.charNotesList[1]+'" target="_blank">Character notes</a></p>'
 		out += '<p><a href="http://scriptsource.org/entry/'+record.ssHistory+'" target="_blank">Unicode historical documents</a></p>'
-		out += '</td></tr>'
+		
+        if (record.scriptNotes && record.scriptNotes.length > 0) {
+            out += '<p>'
+            for (let n=0;n<record.scriptNotes.length;n++) {
+                if (n>0) out += ' • '
+                out += '<a href="'+record.scriptNotes[n][1].replace(/.html/,'')+'-characters.html" target="_blank">'+record.scriptNotes[n][0]+'</a>'
+                }
+            out += '</p>'
+            }
+        
+        if (record.charNotesList && record.charNotesList.length > 0) out += '<p><a href="../scripts/'+record.charNotesList[1]+'" target="_blank">Unicode block notes</a></p>'
+
+        out += '</td></tr>'
 		}
 
 
