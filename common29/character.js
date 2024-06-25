@@ -132,13 +132,17 @@ function showCharDetails (ch) {
     
     charBlock.appendChild(div)
 
+    var hex = ch.codePointAt(0).toString(16).toUpperCase()
+    while (hex.length < 4) hex = '0'+hex 
 
 
 	div = document.createElement('div')
 	div.className = 'orthogFilePath'
     out = ''
     out += 'Find in: '
-    out += `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Orthography notes</a>`
+    out += `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank" title="Click on the character name, then one of the links on the orange space at the bottom of the page.">Orthography</a>`
+    out += ` • <a href="../${ blockDirectoryName }/character.html?q=${ ch }#${ langTag }" target="_blank">Other uses</a>`
+    out += ` • <a href="../../uniview/index.html?char=${ hex }" target="_blank">UniView</a>`
     out += ` • <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Picker</a>`
     out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ ch }" target="_blank">Term list</a>`
     out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }&charlist=${ ch }" target="_blank">Character usage</a>`
@@ -446,7 +450,8 @@ function expandCharMarkup () {
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }${ coda }</bdi>`
         if (noname) {}
-        else out += `<a href="character.html?q=${ unicodeChars }"><span class="uname">${ unicodeNames }</span></a></span>`
+        //else out += `<a href="character.html?q=${ unicodeChars }"><span class="uname">${ unicodeNames }</span></a></span>`
+        else out += `<a href="#char${ hex }"><span class="uname">${ unicodeNames }</span></a></span>`
         
         if (window.hideBlockName) {
             let re = new RegExp(window.hideBlockName, 'g')
@@ -487,7 +492,8 @@ function expandCharMarkup () {
             
             if (c > 0) unicodeNames += ' + '
             //unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
-            unicodeNames += `<a href="character.html?q=${ charlist[c] }"><span class="uname">${ spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'') }</span></a>` 
+            //unicodeNames += `<a href="character.html?q=${ charlist[c] }"><span class="uname">${ spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'') }</span></a>` 
+            unicodeNames += `<a href="#char${ hex }"><span class="uname">${ spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'') }</span></a>` 
             
 
             if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ window.langTag }">`
@@ -982,6 +988,8 @@ function showNameDetails (chars, clang, base, target, panel, list, translit, ipa
 	out += '<p style="text-align:left; margin-block-start: 1em; line-height:2rem;" id="panelSharingLine">'
     out += '<button onclick="copyPanelList()" style="cursor:copy;">Copy list</button> \u00A0 '
 	
+    out += `<button onclick="openExportWindow('character.html?q=${ chars[0] }')">Notes</button> \u00A0 `
+	
     out += `<button onclick="openExportWindow('../../app-analysestring/index.html?chars=${ chars }')">Details</button> \u00A0 `
 	
     out += `<button onclick="openExportWindow('../../uniview/index.html?charlist=${ chars }')">UniView</button> \u00A0 `
@@ -1030,3 +1038,33 @@ for (i=0;i<strArray.length;i++) {
 return str.trim()
 }
 
+
+function openExportWindow (url) {
+	var shareWindow = window.open(url, 'analyse') 
+	shareWindow.focus()
+	}
+
+function copyPanelList () {
+    var lines = document.getElementById('listOfCharacters').querySelectorAll('.panelCharacter')
+    var imgs = document.getElementById('listOfCharacters').querySelectorAll('img')
+    var out = ''
+    for (var i=0;i<lines.length;i++) out += imgs[i].alt+' '+lines[i].textContent
+	var node = document.getElementById('panelCopyField')
+    node.value = out
+	node.focus()
+	document.execCommand('selectAll')
+	document.execCommand('copy')
+	}
+
+
+function copyPanelText (type) {
+    var text = document.getElementById('ruby').querySelectorAll(type)
+    var out = ''
+    for (var i=0;i<text.length;i++) out += text[i].textContent
+    if (type === '.IPAGloss') out = out.replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
+	var node = document.getElementById('panelCopyField')
+    node.value = out
+	node.focus()
+	document.execCommand('selectAll')
+	document.execCommand('copy')
+	}
