@@ -40,6 +40,7 @@ function showCharDetails (ch) {
     // make sure we're only looking for a single character
     if (ch.length > 1) {
         ch = [... ch][0]
+        console.log(ch,'rejected because more than one character')
         }
 
 	if (typeof charDetails[ch] === 'undefined') return
