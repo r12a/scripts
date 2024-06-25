@@ -476,7 +476,7 @@ if (window.location.href.includes('block')) out += `
 <p><a target="_blank" href="index.html#languages">Languages using the ${ script } script</a> • <a target="_blank" href="../links.html?iso=${ iso }">${ script } links</a> • <a target="_blank" href="../index.html#charnotes">Other character notes</a></p>
 `
 else out += `
-<p><a target="_blank" href="index.html#languages">Languages using the ${ script } script</a> • <a target="_blank" href="../../pickers/${ picker }/index.html">${ orthogName } picker</a> • <a target="_blank" href="${ langTag }_vocab.html">Terms list</a> • <a target="_blank" href="../links.html?iso=${ iso }">${ script } links</a> • <a target="_blank" href="../index.html#scriptnotes">Other orthography notes</a></p>
+<p><a target="_blank" href="index.html#languages">Languages using the ${ script } script</a> • <a target="_blank" href="../../pickers/${ picker }/index.html">${ orthogName } picker</a> • <a target="_blank" href="${ langTag }_vocab.html">Terms list</a> • <a target="_blank" href="${ langTag }-characters.html">Character notes</a> • <a target="_blank" href="../links.html?iso=${ iso }">${ script } links</a> • <a target="_blank" href="../index.html#scriptnotes">Other orthography notes</a></p>
 
     `
     
