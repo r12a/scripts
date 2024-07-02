@@ -5,7 +5,7 @@ var langs = {
 "sd": { name:"Sindhi", local:"سنڌي‎", localtrans:"(sindhi)", silcode:"snd", rtl:true, 
 source:"cldr_sd", 
 region:"sasia", countries:"Pakistan, India", script:"arab", speakers:"25000000", 
-letter:"آابتثجحخدذرزسشصضطظعغفقلمنهويٺٻٽپٿڀڃڄچڇڊڌڍڏڙڦکڪگڱڳڻھہ", mark:"͏", markaux:"َُِٓٔ", number:"۰۱۲۳۴۵۶۷۸۹", punctuation:"؟⁏⹁", punctuationaux:"،؛", symbol:"۽۾", other:"؜​‌‍‎‏‪‫‬⁠⁦⁧⁨⁩", 
+letter:"آابتثجحخدذرزسشصضطظعغفقلمنهويٺٻٽپٿڀڃڄچڇڊڌڍڏڙڦکڪگڱڳڻھہ", mark:"͏", markaux:"َُِٓٔ", number:"۰۱۲۳۴۵۶۷۸۹", punctuation:"؟⁏⹁", symbol:"۽۾", other:"\u061C\u200C\u200D\u200E\u200F\u202A\u202B\u202C\u2066\u2067\u2068\u2069", 
 orth:`Arabic. &nbsp; Naskh style.`,
 also:
 ["sd-deva | deva | In India.",
