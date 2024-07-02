@@ -120,6 +120,21 @@ reflist = {
 "reviewed":false
 },
 
+"pod": {
+"authors": "Podder et al.",
+"title":"Self-ChakmaNet: A deep learning framework for indigenous language learning using handwritten characters",
+"date": "2023",
+"publisher":"Egyptian Informatics Journal",
+"url":"https://www.sciencedirect.com/science/article/pii/S1110866523000695?via%3Dihub",
+"reviewed":false
+},
+
+"cldt": {
+"authors": "Bivuti Chakma",
+"title":"Chakma Language Developing in Technology",
+"reviewed":false
+},
+
 "b": {
 "authors": "Bivuti Chakma",
 "title":"Personal correspondence",
