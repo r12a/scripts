@@ -569,17 +569,16 @@ termLists = [
 },
 
 {
-"title":"Sinhdi English Dictionary",
+"title":"Sindhi English Dictionary",
 "url":"http://sed.cle.org.pk/",
 "notes":"Includes IPA.",
 },
-/*
+
 {
-"title":"Living Dictionaries",
-"url":"https://livingdictionaries.app/sora/entries/list",
-"notes":"No native script.",
+"title":"Wikipedia",
+"url":"https://sd.wikipedia.org/wiki/%D9%85%D9%8F%DA%A9_%D8%B5%D9%81%D8%AD%D9%88",
 },
-*/
+
 ]
 
 
