@@ -487,18 +487,6 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
 
 
-    // page/index diff
-    pageYesIndexNo = ''
-    for (var t=0;t<[...allPageChars].length; t++) {
-        if (! allIndexChars.includes(allPageChars[t])) pageYesIndexNo += allPageChars[t]
-        }
-    pageNoIndexYes = ''
-    for (var t=0;t<allIndexChars.length; t++) {
-        if (! allPageChars.includes(allIndexChars[t])) pageNoIndexYes += allIndexChars[t]
-        }
-
-
-
             var charlist = listCharsInSpreadsheet('all')
     allSpreadsheetChars = [...charlist].sort()
             var charlistused = listCharsInSpreadsheet('allused')
@@ -507,6 +495,22 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     unusedSpreadsheetChars = [...charlistunused].sort()
             var charlisttbc = listCharsInSpreadsheet('possibles')
     tbcSpreadsheetChars = [...charlisttbc].sort()
+
+
+
+    // page/index diff
+    pageYesSpreadsheetNo = ''
+    for (var t=0;t<[...allPageChars].length; t++) {
+        if (! allSpreadsheetChars.includes(allPageChars[t])) pageYesSpreadsheetNo += allPageChars[t]
+        }
+    pageYesIndexNo = ''
+    for (var t=0;t<[...allPageChars].length; t++) {
+        if (! allIndexChars.includes(allPageChars[t])) pageYesIndexNo += allPageChars[t]
+        }
+    pageNoIndexYes = ''
+    for (var t=0;t<allIndexChars.length; t++) {
+        if (! allPageChars.includes(allIndexChars[t])) pageNoIndexYes += allIndexChars[t]
+        }
 
 
 
@@ -526,7 +530,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     
     // get information about the spreadsheet
 
-    out += '<tr><th></th><th colspan="2" style="text-align:start">Spreadsheet</th></tr>'
+    out += '<tr><th></th><th colspan="2" style="text-align:start">Spreadsheet db</th></tr>'
 
     out += `<tr><th>All</th><td id="allSpreadsheetList" style="word-break:break-all;">${ allSpreadsheetChars.join('') }</td><td id="allSpreadsheetListTotal">${ allSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('allSpreadsheetList').textContent)"></td>${ shareCodeLinks(allSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
 
@@ -547,12 +551,21 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
     out += '<tr><th></th><th colspan="2" style="text-align:start">Actions to take for new characters</th></tr>'
 
+
+    // what's in the page but not in the spreadsheet
+    out += `<tr><th>In page.<br>Add to db.</th>
+    <td id="pageExtrasDB" style="word-break:break-all;">${ pageYesSpreadsheetNo.replace(/ |\u25CC/g,'') }</td>
+    <td id="pageExtrasDBTotal">${ [...pageYesSpreadsheetNo.replace(/ |\u25CC/g,'')].length }</td>
+    <td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('pageExtrasDB').textContent)">
+    </td>${ shareCodeLinks(pageYesSpreadsheetNo.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
+
+
     // what's in the spreadsheet but not in the index    
     result = ''
     for (var t=0;t<usedSpreadsheetChars.length; t++) {
         if (! mainIndexArray.includes(usedSpreadsheetChars[t])) result += usedSpreadsheetChars[t]
         }
-    out += `<tr><th>Add to index</th><td id="spreadsheetExtras" style="word-break:break-all;">${ result }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
+    out += `<tr><th>In db.<br>Add to index</th><td id="spreadsheetExtras" style="word-break:break-all;">${ result.replace(/ |\u25CC/g,'') }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ |\u25CC/g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
 
 
     // what's in the spreadsheet but not in the xx-details file    
@@ -560,8 +573,14 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     for (var t=0;t<usedSpreadsheetChars.length; t++) {
         if (! blockChars.includes(usedSpreadsheetChars[t])) result += usedSpreadsheetChars[t]
         }
-    out += `<tr><th>Add to xx&#x2011;details</th><td id="detailsNeeds" style="word-break:break-all;">${ result }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
-    out += `<tr><th></th><td colspan="2" style="text-align:start"><a target="_blank" href="../_tools/generate_details_page_stubs.html?q=${ result }">Details creator</a></td></tr>`
+    out += `<tr><th>Add to xx&#x2011;details</th><td id="detailsNeeds" style="word-break:break-all;">${ result.replace(/ |\u25CC/g,'') }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ |\u25CC/g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
+    //out += `<tr><th></th><td colspan="2" style="text-align:start"><a target="_blank" href="../_tools/generate_details_page_stubs.html?q=${ result }">Details creator</a></td></tr>`
+    
+    
+    
+    
+
+    out += `<tr><th>In page.<br>Add to index</th><td id="pageExtras" style="word-break:break-all;">${ pageYesIndexNo.replace(/ |\u25CC/g,'') }</td><td id="pageExtrasTotal">${ [...pageYesIndexNo.replace(/ |\u25CC/g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('pageExtras').textContent)"></td>${ shareCodeLinks(pageYesIndexNo.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
 
 
     // find out what's in the unused spreadsheet but not in the unused index    
