@@ -600,6 +600,15 @@ reflist = {
 "reviewed":false
 },
 
+"amtra": {
+"authors": "Roozbeh Pournader, Bob Hallissy, Lorna Evans",
+"title":"Unicode® Arabic Mark Rendering",
+"sub": "subtitle",
+"date": "2024",
+"url":"https://www.unicode.org/reports/tr53/tr53-9.html",
+"lang": new Set(['ar','pes','ha','ks','ur','ckb','sd']),
+"reviewed":true
+},
 
 
 }

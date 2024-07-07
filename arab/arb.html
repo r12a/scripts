@@ -2601,6 +2601,130 @@ alveolar</th>
 
 
 
+
+
+<section id="encoding">
+<h2>Encoding choices<a class="selflink" href="#encoding_choices"></a></h2>
+
+<p>In the Persian orthography different sequences of Unicode characters may produce the same visual result. Here we look at those, and make notes on usage.</p>
+
+
+
+
+<section id="hamza_choices">
+<h3>Hamza &amp; precomposed characters</h3>
+
+<p>Unicode support for the various uses of the <span class="name">hamza</span> is complicated.<tt>u,384</tt>  In general, the Unicode Standard recommends to use <span class="hx circle">0654</span> in combination with a base character. However, there are a few exceptions to consider.</p>
+
+
+<section id="canonical_hamza">
+<h4>Canonically-equivalent alternatives</h4>
+
+<p>A number of combinations with the hamza diacritic can be represented as either an atomic character or a decomposed sequence, where the parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches are canonically equivalent. These include the following:</p>
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Atomic</th>
+<th scope="col">Decomposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">أ</span> [<a href="block#char0623" target="c"><span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">&#x0627;&#x0654;</span> [<a href="block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char0654" target="c"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">آ</span> [<a href="block#char0622" target="c"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">آ</span> [<a href="/scripts/arabic/block#char0627" target="c"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0653" target="c"><span class="uname">U+0653 ARABIC MADDAH ABOVE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">ؤ</span> [<a href="block#char0624" target="c"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="pes">&#x0648;&#x0654;</span> [<a href="block#char0648" target="c"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="block#char0654" target="c"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span dir="rtl" lang="ur">ئ</span> [<a href="block#char0626" target="c"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>] </span></td>
+<td><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x064A;&#x0654;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+<p class="info">The single code point per vowel-sign is the  form preferred by the Unicode Standard and the form in common use for Arabic language text, but either could be found.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="charorder">
+<h3>Codepoint sequences</h3>
+
+<p>When typing and in storage, combining marks always follow the base character they are associated with.</p>
+
+
+<section id="amtra">
+<h4>Special rendering rules</h4>
+
+<p>In principle, if more than one combining mark appears on the same side of the base character, Unicode expects applications to render the marks such that those marks closer to the base character in memory appear closer to the base character when rendered. (This is called the <q>inside-out rule</q>.) However, due to the reordering applied by the Unicode normalisation forms, some of the Arabic script diacritics end up in an inappropriate order on display.</p>
+
+<p>For example, if a user types the sequence of characters in <a class="figref">fig_amtra</a>, the order of the marks will be changed such that applying the inside-out rule would render the shadda above the vowel (which is incorrect).  (In fact, most application renderers have special rules to correct this.)</p>
+
+<p>The Unicode Standard formally addresses this anomaly in the Technical Annex <a href="https://www.unicode.org/reports/tr53/tr53-9.html">Unicode® Arabic Mark Rendering</a> (AMTRA), with a set of rules for how to render sequences of Arabic characters. The rules generally move <span class="name">shadda</span>, <span class="name">hamza</span>, round dots, etc. so that they are close to the base character.</p>
+
+
+<figure id="fig_amtra" class="sideCaption">
+<table>
+<thead>
+<tr><th>User input</th><th>Post-normalisation output</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="line-height: 3em;">
+<p><span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">بُّ</span></span></p>
+<p><span class="ch">ب</span></p>
+<p><span class="ch">ّ</span></p>
+<p><span class="ch">ُ</span></p>
+</td>
+<td style="line-height: 3em;">
+<p><span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">بُ͏ّ</span></span></p>
+<p><span class="ch">ب</span></p>
+<p><span class="ch">ُ</span></p>
+<p><span class="ch">ّ</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<figcaption>A sequence of shadda and damma as the user is likely to input it (left), and how it could potentially be arranged after normalisation (right).</figcaption>
+</figure>
+
+
+<p>In the rare exceptions where the AMTRA rules should not change the rendering, this can be achieved by placing an invisible <span class="hx img">034F</span> character between the combining marks.  (In fact, this is what was done to simulate the incorrect appearance in <a class="figref">fig_amtra</a>, because otherwise the browser rendering engine would have automatically produced the same output as in the first column. Clicking on the example will show the sequence used.)</p>
+<!--
+<p>Where present, characters in a syllable should always occur in the following order.</p>
+
+<ol>
+<li>A consonant or independent vowel.</li>
+<li>One or 2 medial consonants.</li>
+<li>A pre-base dependent vowel.</li>
+<li>A non-prebase dependent vowel.</li>
+<li>A vowel lengthener.</li>
+<li>A final consonant letter or combining mark.</li>
+</ol>
+-->
+</section>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
   
   
 <section id="numbers">

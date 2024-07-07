@@ -3069,6 +3069,70 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 </table>
 <p class="observation info"><span class="leadin">Observation:</span> In the Noto Nastaliq Urdu and SIL Awami Nastaliq fonts the <span class="name">sukun</span> is automatically displayed with the inverted-v shape  if the language of the content is declared to be Urdu (<code>ur</code>). It is therefore important to ensure that the language of content is correctly declared for web pages if you expect to see this shape.</p>
 </section>
+
+
+
+
+
+
+
+<section id="charorder">
+<h3>Codepoint sequences</h3>
+
+<p>When typing and in storage, combining marks always follow the base character they are associated with.</p>
+
+
+<section id="amtra">
+<h4>Special rendering rules</h4>
+
+<p>In principle, if more than one combining mark appears on the same side of the base character, Unicode expects applications to render the marks such that those marks closer to the base character in memory appear closer to the base character when rendered. (This is called the <q>inside-out rule</q>.) However, due to the reordering applied by the Unicode normalisation forms, some of the Arabic script diacritics end up in an inappropriate order on display.</p>
+
+<p>For example, if a user types the sequence of characters in <a class="figref">fig_amtra</a>, the order of the marks will be changed such that applying the inside-out rule would render the shadda above the vowel (which is incorrect).  (In fact, most application renderers have special rules to correct this.)</p>
+
+<p>The Unicode Standard formally addresses this anomaly in the Technical Annex <a href="https://www.unicode.org/reports/tr53/tr53-9.html">Unicode® Arabic Mark Rendering</a> (AMTRA), with a set of rules for how to render sequences of Arabic characters. The rules generally move <span class="name">shadda</span>, <span class="name">hamza</span>, round dots, etc. so that they are close to the base character.</p>
+
+
+<figure id="fig_amtra" class="sideCaption">
+<table>
+<thead>
+<tr><th>User input</th><th>Post-normalisation output</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="line-height: 3em;">
+<p><span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">بُّ</span></span></p>
+<p><span class="ch">ب</span></p>
+<p><span class="ch">ّ</span></p>
+<p><span class="ch">ُ</span></p>
+</td>
+<td style="line-height: 3em;">
+<p><span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">بُ͏ّ</span></span></p>
+<p><span class="ch">ب</span></p>
+<p><span class="ch">ُ</span></p>
+<p><span class="ch">ّ</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<figcaption>A sequence of shadda and damma as the user is likely to input it (left), and how it could potentially be arranged after normalisation (right).</figcaption>
+</figure>
+
+
+<p>In the rare exceptions where the AMTRA rules should not change the rendering, this can be achieved by placing an invisible <span class="hx img">034F</span> character between the combining marks.  (In fact, this is what was done to simulate the incorrect appearance in <a class="figref">fig_amtra</a>, because otherwise the browser rendering engine would have automatically produced the same output as in the first column. Clicking on the example will show the sequence used.)</p>
+<!--
+<p>Where present, characters in a syllable should always occur in the following order.</p>
+
+<ol>
+<li>A consonant or independent vowel.</li>
+<li>One or 2 medial consonants.</li>
+<li>A pre-base dependent vowel.</li>
+<li>A non-prebase dependent vowel.</li>
+<li>A vowel lengthener.</li>
+<li>A final consonant letter or combining mark.</li>
+</ol>
+-->
+</section>
+</section>
 </section>
 
 
