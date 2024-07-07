@@ -59,7 +59,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->27 April, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 July, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -83,7 +83,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Hausa (Warsh Kano) Orthography Notes, <!-- #BeginDate format:En2 -->27-Apr-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ha">https://r12a.github.io/scripts/arab/ha</a></small></p>
+<p class="refLine"><small>Richard Ishida, Hausa (Warsh Kano) Orthography Notes, <!-- #BeginDate format:En2 -->07-Jul-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ha">https://r12a.github.io/scripts/arab/ha</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -2007,11 +2007,48 @@ Same for <span class="ipa">eː</span>.</p>
 <section id="direction">
 <h2>Text direction</h2>
 
-<p>Text is normally written horizontally, right to left, however numbers and non-Arabic script text run left to right.</p>
+<p>Hausa ajami text is written horizontally and right to left in the main but, as in most right-to-left scripts, numbers and embedded   text in other scripts are written left to right (producing 'bidirectional' text).</p>
 
-<p>See the <a href="index/#direction">Arabic overview</a> for more details, especially related to sequences of items and numbers.</p>
 
-<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the  Hausa orthography described here.</a></p>
+<figure id="fig_bidi">
+<img src="images/bidirectional.png" alt="العاشر ليونيكود (Unicode Conference)،الذي سيعقد في 10-12 آذار 1997 مبدينة" class="ex" lang="ar" data-notes="Scheherazade 42px العاشر ليونيكود (Unicode Conference)،الذي سيعقد في 10-12 آذار 1997 مبدينة">
+<figcaption>In this example of Arabic language text Arabic words are read right-to-left, starting from the right of this line, but numbers and Latin text (highlighted) are read left-to-right.</figcaption>
+</figure>
+
+
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' (ie. the surrounding directional context) is set to right-to-left (RTL).</p>
+
+<p>Characters are all stored in the order in which they are spoken (and typed). This so-called 'logical' order is then rendered as bidirectional flows by the application at run time, as the text is displayed or printed. The relative placement of characters within a single directional flow is based on strong directional properties (RTL or LTR) assigned to each Unicode character by the Unicode Standard. There exist, however a set of neutral direction property values, mostly for punctuation, where the placement of characters depends on the base direction.</p>
+
+<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in this orthography.</a></p>
+
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>, making it very difficult to get the meaning.</p>
+
+
+<figure id="fig_bidi_no_base_direction">
+<img src="images/base_direction.png" class="ex" lang="ar" alt="في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo." data-notes="Scheherazade 30px" style="height:12rem;">
+<figcaption class="instructions">More Arabic language text, where this time the exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom). The arrows show how items are relocated.</figcaption>
+</figure>
+
+
+<p>In some circumstances the Unicode Bidirectional Algorithm requires additional assistance to correctly render the directionality of bidirectional text. For such cases the Unicode Standard provides invisible formatting characters for use in plain text. See <a class="secref">directioncontrols</a>.</p>
+
+<p>In HTML the base direction and higher level controls can be set using the <code>dir</code> or <code>bdi</code> attributes. CSS should <em>not</em> be used to control direction. Unicode formatting codes should also not be used where markup is available.</p>
+
+<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+
+<p class="html">For authoring HTML pages, one of the most important things to remember is to use <code>&lt;html dir=&quot;rtl&quot; … &gt;</code> at the top of a right-to-left page, and then use the <code class="kw" translate="no">dir</code> attribute or <code class="kw" translate="no">bdi</code> tag for ranges within the page, but only when you need to <em>change</em> the base direction. Also, use markup to manage direction, and do not use CSS styling.</p>
+
+
+<p>For other aspects of dealing with right-to-left writing systems see the following sections:</p>
+<ul>
+<li><a class="secref">directioncontrols</a></li>
+<li><a href="arb.html#expressions" target="_blank">Expressions &amp; sequences</a> (in the Arabic orthography notes)</li>
+<li><a class="secref">breaking_latin</a></li>
+<li><a class="secref">mirrored_characters</a></li>
+<li><a class="secref">page</a></li>
+</ul>
+
 
 
 
@@ -2210,7 +2247,7 @@ Same for <span class="ipa">eː</span>.</p>
 </section>
 
 <section id="otherinline">
-<h4>Other inline features</h4>
+<h4>Text decoration &amp; other inline features</h4>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 </section>
 </details>
@@ -2280,13 +2317,68 @@ Same for <span class="ipa">eː</span>.</p>
 
 
 
-  
+
+<section id="mirrored_characters">
+<h4>Mirrored characters</h4>
+
+<p class="info">The words 'left' and 'right' in  the Unicode names for parentheses, brackets, and other paired characters should be ignored. <span class="uname">LEFT</span> should be read as if it said <span class="uname">START</span>, and <span class="uname">RIGHT</span> as <span class="uname">END</span>. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</p>
+
+<figure id="fig_mirrored" class="sideCaption">
+<div>
+<img src="images/mirrored_latin.png" class="ex" alt="a > b > c" data-notes="Scheherazade New 48px"><br>
+<img src="images/mirrored_arab.png" class="ex" alt="ا > ب > ج" data-notes="Scheherazade New 48px">
+</div>
+<figcaption>Both of these lines use <span class="codepoint noindex" translate="no"><span lang="en">&#x003E;</span> [<a href="/scripts/latin/block#char003E"><span class="uname">U+003E GREATER-THAN SIGN</span></a>]</span>, but the direction it faces depends on the base direction at the point of display.</figcaption>
+</figure>
+
+<p>The number of characters that are mirrored in this way is <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Mirrored=Yes:]">around 550</a>, most of which are mathematical symbols. Some are single characters, rather than pairs. The following are some   more common ones.</p>
+
+<figure class="exampleBox auto noindex" data-cols="">(␣)␣&lt;␣&gt;␣[␣]␣{␣}␣«␣»␣‹␣›</figure>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 <section id="quotations">
 <h3>Quotations &amp; citations</h3>
+<p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/45" target="_blank">type samples</a>.</p>
 
-<figure class="characterBox auto noindex" data-cols="">«␣»␣‹␣›</figure>
+<figure class="characterBox auto small" data-cols="">”␣“␣’␣‘␣«␣»␣‹␣›</figure>
 
-<p>Hausa texts typically use guillemets around quotations, but some texts may use  quotation marks instead. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks. Note, however, that the order of use is different from that in LTR text, because they are not automatically mirrored.</p>
+<p>The following  quotation marks can be found in Hausa ajami  texts. When quoted text appears within quoted text different characters are used. (Of course, depending on ease of input, quotations may also be surrounded by ASCII double and single quote marks.).</p>
+
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">primary</th>
+<td><span class="ch">«</span></td>
+<td><span class="ch">»</span></td>
+</tr>
+<tr>
+<th scope="row">nested</th>
+<td><span class="ch">‹</span></td>
+<td><span class="ch">›</span></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Because they are <a href="#mirrored_characters">mirrored</a>, when using the guillemets, <span class="uname">LEFT</span> should be read as if it said <span class="uname">START</span>, and <span class="uname">RIGHT</span> as <span class="uname">END</span>.</p>
 
 
 <table class="character_list">
@@ -2299,17 +2391,20 @@ Same for <span class="ipa">eː</span>.</p>
 </thead>
 <tbody>
 <tr>
-<th scope="row">initial</th>
-<td><p><span class="ch">«</span></p></td>
-<td><span class="ch">»</span></td>
+<th scope="row">primary</th>
+<td><p><span class="ch">”</span></p></td>
+<td><p><span class="ch">“</span></p></td>
 </tr>
 <tr>
 <th scope="row">nested</th>
-<td><p><span class="ch">‹</span></p></td>
-<td><span class="ch">›</span></td>
+<td><p><span class="ch">’</span></p></td>
+<td><p><span class="ch">‘</span></p></td>
 </tr>
 </tbody>
 </table>
+
+
+<p>Unlike the guillemets, these quote marks are <em>not</em> <a href="#mirrored_characters">mirrored</a> during display. As a result, <span class="uname">LEFT</span> means use on the left, and <span class="uname">RIGHT</span> means use on the right.</p>
 </section>
 </section>
 
@@ -2366,9 +2461,51 @@ Same for <span class="ipa">eː</span>.</p>
 
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
-<p class="prompts">tbd</p>
-<p>See the <a href="index/#shaping">Arabic overview</a>.</p>
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the Hausa orthography described here.</a></p>
+
+<p>Lines are normally broken at  word boundaries.</p>
+
+<p>They are not broken at the small gaps that appear where a character doesn't join on the left.</p>
+
+
+
+
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show default line-breaking properties for characters in this orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for characters affected by these rules. Context may affect the behaviour of some of these and other characters.</p>
+
+<ul>
+<li><span class="ex list" lang="ha">« “ ‘ (</span> &nbsp; should not be the last character on a line</li>
+<li><span class="ex list" lang="ha">» ” ’ ) . ، ؛ ؟ !</span> &nbsp; should not begin a new line</li>
+</ul>
+</section>
+
+
+
+
+
+
+<section id="breaking_latin">
+<h4>Breaking between Latin words</h4>
+
+<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines upwards.</p>
+
+<p><a class="figref" href="#latin-line-breaks">latin-line-breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule. Of course, the rearragement is only that of the visual glyphs: nothing affects the order of the characters in memory.</p>
+
+<figure id="latin-line-breaks">
+<p><img src="images/latin-line-breaks-1.png" alt="Text with no line break in Latin text."></p>
+<p><img src="images/latin-line-breaks-2.png" alt="Text with line break in Latin text."></p>
+<figcaption>In this Arabic language text, the lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
+</figure>
+</section>
+
 </section>
 
 
@@ -2461,15 +2598,9 @@ Same for <span class="ipa">eː</span>.</p>
 	
 
 
-<!--section id="online_samples">
+<section id="online_samples">
 <h2>Online resources</h2>
-
-  <ol>
-    <li><a href="https://unicode.org/udhr/d/udhr_aii.html">Universal Declaration of Human Rights - Assyrian Neo-Aramaic</a></li>
-<li><a href="http://worldbibles.org/language_detail.php/eng/aii/Assyrian+Neo-Aramaic?translation=eng&&language=aii&&name=Assyrian+Neo-Aramaic">The Bible in Assyrian Neo-Aramaic</a></li>
-</ol>
-</section-->
-
+</section>
 
 
 

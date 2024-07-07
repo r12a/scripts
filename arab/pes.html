@@ -63,7 +63,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->25 January, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 July, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -84,7 +84,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Persian Orthography Notes, <!-- #BeginDate format:En2 -->25-Jan-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/pes">https://r12a.github.io/scripts/arab/pes</a></small></p>
+<p class="refLine"><small>Richard Ishida, Persian Orthography Notes, <!-- #BeginDate format:En2 -->07-Jul-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/pes">https://r12a.github.io/scripts/arab/pes</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -2246,17 +2246,42 @@ alveolar</th>
     <figcaption>Persian words are read right-to-left, starting from the right of the line, but numbers and Latin text  (highlighted) are read left-to-right.</figcaption>
 </figure>
 
-<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidirectional</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
-<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_base_direction</a>.</p>
+
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidirectional</a>, as long as the 'base direction' (ie. the surrounding directional context) is set to right-to-left (RTL).</p>
+
+<p>Characters are all stored in the order in which they are spoken (and typed). This so-called 'logical' order is then rendered as bidirectional flows by the application at run time, as the text is displayed or printed. The relative placement of characters within a single directional flow is based on strong directional properties (RTL or LTR) assigned to each Unicode character by the Unicode Standard. There exist, however a set of neutral direction property values, mostly for punctuation, where the placement of characters depends on the base direction.</p>
+
+<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in this orthography.</a></p>
+
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_base_direction</a>, making it very difficult to get the meaning.</p>
+
 
 <figure id="fig_base_direction">
-<img src="images_fa/base_direction.png" class="ex" alt="کنسرسیوم یونیکد برای اولین بار Unicode Standard را در سال 1991 منتشر کرد (نسخه 1.0)" data-source="https://fa.wikipedia.org/wiki/%DB%8C%D9%88%D9%86%DB%8C%E2%80%8C%DA%A9%D8%AF" data-notes="16px Scheherazade New">
-<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no base direction set on a LTR page (bottom).</figcaption>
+<img src="images_fa/base_direction.png" class="ex" alt="کنسرسیوم یونیکد برای اولین بار Unicode Standard را در سال 1991 منتشر کرد (نسخه 1.0)" data-source="https://fa.wikipedia.org/wiki/%DB%8C%D9%88%D9%86%DB%8C%E2%80%8C%DA%A9%D8%AF" data-notes="16px Scheherazade New" style="height:6rem;">
+<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no base direction set on a LTR page (bottom). The arrows show how items are relocated.</figcaption>
 </figure>
 
-<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the  Persian orthography described here.</a></p>
+
+
+<p>In some circumstances the Unicode Bidirectional Algorithm requires additional assistance to correctly render the directionality of bidirectional text. For such cases the Unicode Standard provides invisible formatting characters for use in plain text. See <a class="secref">directioncontrols</a>.</p>
+
+<p>In HTML the base direction and higher level controls can be set using the <code>dir</code> or <code>bdi</code> attributes. CSS should <em>not</em> be used to control direction. Unicode formatting codes should also not be used where markup is available.</p>
+
 <p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
-<p>On this page, see also <a class="secref">expressions</a> and <a class="secref">breaking_latin</a> for additional features related to direction.</p>
+
+<p class="html">For authoring HTML pages, one of the most important things to remember is to use <code>&lt;html dir=&quot;rtl&quot; … &gt;</code> at the top of a right-to-left page, and then use the <code class="kw" translate="no">dir</code> attribute or <code class="kw" translate="no">bdi</code> tag for ranges within the page, but only when you need to <em>change</em> the base direction. Also, use markup to manage direction, and do not use CSS styling.</p>
+
+
+<p>For other aspects of dealing with right-to-left writing systems see the following sections:</p>
+<ul>
+<li><a class="secref">directioncontrols</a></li>
+<li><a class="secref">expressions</a></li>
+<li><a class="secref">breaking_latin</a></li>
+<li><a class="secref">mirrored_characters</a></li>
+<li><a class="secref">page</a></li>
+</ul>
+
+
 
 
 
@@ -2611,15 +2636,35 @@ alveolar</th>
 
 
 
+<section id="segmentation">
+<h2>Typographic units</h2>  
+
+
+<section id="word">
+<h3>Word boundaries</h3>
+
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p>Words are separated by spaces.</p>
+</section>
+
+
+
+
+
+	
+	
+
 
 <section id="graphemes">
-<h2>Graphemes</h2>  
+<h3>Graphemes</h3>  
 	
-<section id="graphemeC">
+<p class="prompts">tbd</p>
+
+<!--<section id="graphemeC">
 <h3>Grapheme clusters</h3>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
-
-<p class="prompts">tbd</p>
+-->
 
 </section>
 </section>
@@ -2663,13 +2708,8 @@ alveolar</th>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 </section>
 
-<section id="otherpunctuation">
-<h4>Other punctuation</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-
 <section id="otherinline">
-<h4>Other inline text decoration</h4>
+<h4>Text decoration &amp; other inline text decoration</h4>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 </section>
 </details>
@@ -2681,18 +2721,6 @@ alveolar</th>
 
 
 
-<section id="word">
-<h3>Word boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Words are separated by spaces.</p>
-</section>
-
-
-
-
-
-	
-	
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
@@ -2715,7 +2743,6 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-</section>
 
 
 
@@ -2723,11 +2750,13 @@ alveolar</th>
 
 
 <section id="bracketing">
-<h3>Bracketed text</h3>
+<h4>Bracketed text</h4>
 
 <figure class="characterBox auto small" data-cols="">(␣)</figure>
 
 <p>Persian commonly uses ASCII parentheses to insert parenthetical information into text.</p>
+
+
 <table class="character_list">
 <thead>
 <tr>
@@ -2739,13 +2768,12 @@ alveolar</th>
 <tbody>
 <tr>
 <th>standard</th>
-<td><p><span class="codepoint" translate="no"><span lang="pes">&#x0028;</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
-<td><p><span class="codepoint" translate="no"><span lang="pes">&#x0029;</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="ch">(</span></p></td>
+<td><p><span class="ch">)</span></p></td>
 </tr>
 </tbody>
 </table>
-
-
+</section>
 
 
 
@@ -2756,9 +2784,11 @@ alveolar</th>
 
 <p class="info">The words 'left' and 'right' in  the Unicode names for parentheses, brackets, and other paired characters should be ignored. <span class="uname">LEFT</span> should be read as if it said <span class="uname">START</span>, and <span class="uname">RIGHT</span> as <span class="uname">END</span>. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</p>
 
-<figure id="fig_mirrored">
+<figure id="fig_mirrored" class="sideCaption">
+<div>
 <img src="images/mirrored_latin.png" class="ex" alt="a > b > c" data-notes="Scheherazade New 48px"><br>
 <img src="images/mirrored_arab.png" class="ex" alt="ا > ب > ج" data-notes="Scheherazade New 48px">
+</div>
 <figcaption>Both of these lines use <span class="codepoint noindex" translate="no"><span lang="en">&#x003E;</span> [<a href="/scripts/latin/block#char003E"><span class="uname">U+003E GREATER-THAN SIGN</span></a>]</span>, but the direction it faces depends on the base direction at the point of display.</figcaption>
 </figure>
 
@@ -2771,13 +2801,17 @@ alveolar</th>
 
 
 
+
+
+
+
   
 <section id="quotations">
 <h3>Quotations &amp; citations</h3>
 
 <figure class="characterBox auto small" data-cols="">«␣»</figure>
 
-<p>Persian uses guillemets around quotations, but the quotation marks typically have rounded glyph shapes, rather than sharp angles.</p>
+<p>The following quotation marks can be found in Persian texts.  (Depending on ease of input, quotations may alternatively be surrounded by ASCII double and single quote marks.) </p>
 
 <table class="character_list">
 <thead>
@@ -2789,15 +2823,13 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<th scope="row">initial</th>
+<th scope="row">primary</th>
 <td><p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x00AB;</span> [<a href="arabic#char00AB"><span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span></p></td>
 <td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x00BB;</span> [<a href="arabic#char00BB"><span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span></td>
 </tr>
 </tbody>
 </table>
-
-<!--p>Quote marks  are <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x201D;</span> [<a href="/scripts/arabic/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span> at the start, and <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x201C;</span> [<a href="/scripts/arabic/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span> at the end.</p>
-<p>Unlike the bracketing quotation marks, these characters are <em>not</em> mirrored during display. This means that <span class="uname">LEFT</span> means use on the left, and <span class="uname">RIGHT</span> means use on the right.</p-->
+<p>Because they are <a href="#mirrored_characters">mirrored</a>, when using these quotation marks, <span class="uname">LEFT</span> should be read as if it said <span class="uname">START</span>, and <span class="uname">RIGHT</span> as <span class="uname">END</span>. These quotation marks typically have rounded glyph shapes, rather than sharp angles. </p>
 </section>
 </section>
 
@@ -2839,22 +2871,59 @@ alveolar</th>
 
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
+
 <p>Basic line-break opportunities occur between the space-separated words.</p>
+
 <p>They are not broken at the small gaps that appear where a character doesn't join on the left.</p>
+
+
+<section id="hyphenation">
+<h4>In-word line-breaking</h4>
+<p>Hyphenation isn't used for the Persian  language, however other languages using the Arabic script may hyphenate (such as Uighur).<tt>a</tt></p>
+</section>
+
+
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show default line-breaking properties for characters in this orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for characters affected by these rules. Context may affect the behaviour of some of these and other characters.</p>
+
+<ul>
+<li><span class="ex list" lang="ar">« “ ‘ (</span> &nbsp; should not be the last character on a line</li>
+<li><span class="ex list" lang="ar">» ” ’ ) . ، ؛ ؟ !</span> &nbsp; should not begin a new line</li>
+</ul>
+</section>
+
+
+
+
 
 
 <section id="breaking_latin">
 <h4>Breaking between Latin words</h4>
-<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence are rearranged visually so that the reading direction remains top-to-bottom. <a class="figref">latin_line_breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule.</p>
+
+<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines from bottom to top.</p>
+
+<p><a class="figref" href="#latin-line-breaks">latin-line-breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule. Of course, the rearragement is only that of the visual glyphs: nothing affects the order of the characters in memory.</p>
+
 <figure id="latin_line_breaks">
 <p><img class="ex" src="images_fa/latin_wrapping1.png" alt="کنسرسیوم یونیکد برای اولین بار Unicode Standard را در سال 1991 منتشر کرد (نسخه 1.0)" style="margin-bottom: 1em;" data-notes="30px Scheherazade New"></p>
 <p><img src="images_fa/latin_wrapping2.png" alt="کنسرسیوم یونیکد برای اولین بار Unicode Standard را در سال 1991 منتشر کرد (نسخه 1.0)" data-notes="30px Scheherazade New"></p>
 <figcaption>Persian with embedded Latin text. The lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
 </figure>
-<p>In digital text the rearrangement is  automatic. Only the positions of the font glyphs are changed: nothing affects the order of the characters in memory.</p>
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the Persian orthography described here.</a></p>
 </section>
 </section>
+
+
+
+
 
 
 
@@ -3052,14 +3121,9 @@ data-cols="">ا␣ب␣پ␣ت␣ث␣ج␣چ␣ح␣خ␣د␣ذ␣ر␣ز␣ژ
 	
 
 
-<!--section id="online_samples">
+<section id="online_samples">
 <h2>Online resources</h2>
-
-  <ol>
-    <li><a href="https://unicode.org/udhr/d/udhr_urd.html">Universal Declaration of Human Rights - Urdu</a></li>
-<li><a href="https://e.jang.com.pk/08-01-2021/pindi/page1.asp#:">Jang News (images of printed text &amp; links to web pages)</a></li>
-</ol>
-</section-->
+</section>
 
 
 
@@ -3070,6 +3134,7 @@ data-cols="">ا␣ب␣پ␣ت␣ث␣ج␣چ␣ح␣خ␣د␣ذ␣ر␣ز␣ژ
 <section id="refs">
 <h2>References</h2>
 </section>
+
 
 
 
@@ -3087,7 +3152,6 @@ addPageFeatures()
 </script>
 </body>
 </html>
-
 
 
 

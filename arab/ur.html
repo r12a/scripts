@@ -63,7 +63,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 April, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 July, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -84,7 +84,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Urdu (Nastaliq Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->11-Apr-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ur">https://r12a.github.io/scripts/arab/ur</a></small></p>
+<p class="refLine"><small>Richard Ishida, Urdu (Nastaliq Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->07-Jul-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ur">https://r12a.github.io/scripts/arab/ur</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -3721,7 +3721,7 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 </section>
 
 <section id="otherinline">
-<h4>Other inline features</h4>
+<h4>Text decoration &amp; other inline features</h4>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 </section>
 </details>
@@ -3809,6 +3809,28 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 </tbody>
 </table>
 </section>
+
+
+
+
+
+<section id="mirrored_characters">
+<h4>Mirrored characters</h4>
+
+<p class="info">The words 'left' and 'right' in  the Unicode names for parentheses, brackets, and other paired characters should be ignored. <span class="uname">LEFT</span> should be read as if it said <span class="uname">START</span>, and <span class="uname">RIGHT</span> as <span class="uname">END</span>. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</p>
+
+<figure id="fig_mirrored" class="sideCaption">
+<div>
+<img src="images/mirrored_latin.png" class="ex" alt="a > b > c" data-notes="Scheherazade New 48px"><br>
+<img src="images/mirrored_arab.png" class="ex" alt="ا > ب > ج" data-notes="Scheherazade New 48px">
+</div>
+<figcaption>Both of these lines use <span class="codepoint noindex" translate="no"><span lang="en">&#x003E;</span> [<a href="/scripts/latin/block#char003E"><span class="uname">U+003E GREATER-THAN SIGN</span></a>]</span>, but the direction it faces depends on the base direction at the point of display.</figcaption>
+</figure>
+
+<p>The number of characters that are mirrored in this way is <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Mirrored=Yes:]">around 550</a>, most of which are mathematical symbols. Some are single characters, rather than pairs. The following are some   more common ones.</p>
+
+<figure class="exampleBox auto noindex" data-cols="">(␣)␣&lt;␣&gt;␣[␣]␣{␣}␣«␣»␣‹␣›</figure>
+</section>
 </section>
 
 
@@ -3816,14 +3838,16 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 
 
 
-  
+
 <section id="quotations">
 <h3>Quotations &amp; citations</h3>
+<p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/45" target="_blank">type samples</a>.</p>
 
 <figure class="characterBox auto small" data-cols="">”␣“</figure>
 
-<p>Urdu texts use  quotation marks around quotations. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks. Note, however, that the order of use is different from that in LTR text, because they are not automatically mirrored.</p>
-
+<p>The following type of quotation mark can be found in Urdu texts. 
+<!--When quoted text appears within quoted text different characters are used, though usually of the same type. -->
+(Of course, depending on ease of input, quotations may also be surrounded by ASCII double and single quote marks.)</p>
 <table class="character_list">
 <thead>
 <tr>
@@ -3834,12 +3858,20 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 </thead>
 <tbody>
 <tr>
-<th scope="row">initial</th>
+<th scope="row">primary</th>
 <td><p><span class="ch">”</span></p></td>
-<td><span class="ch">“</span></td>
+<td><p><span class="ch">“</span></p></td>
 </tr>
+<!--<tr>
+<th scope="row">nested</th>
+<td><p><span class="ch">’</span></p></td>
+<td><p><span class="ch">‘</span></p></td>
+</tr>-->
 </tbody>
 </table>
+
+
+<p>Unlike brackets, these quote marks are <em>not</em> <a href="#mirrored_characters">mirrored</a> during display. As a result, <span class="uname">LEFT</span> means use on the left, and <span class="uname">RIGHT</span> means use on the right.</p>
 </section>
 </section>
 
@@ -3895,16 +3927,46 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 
 
 
+
+
+
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
+
 <p>Basic line-break opportunities occur between the space-separated words.</p>
+
 <p>They are not broken at the small gaps that appear where a character doesn't join on the left.</p>
+
+
+
+
+
+<section id="linedge">
+<h4>Line-edge rules</h4>
+
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show default line-breaking properties for characters in this orthography.</a></p>
+
+<p>The following list gives examples of typical behaviours for characters affected by these rules. Context may affect the behaviour of some of these and other characters.</p>
+
+<ul>
+<li><span class="ex list" lang="ur">« “ ‘ (</span> &nbsp; should not be the last character on a line</li>
+<li><bdo class="ex list" lang="ur">» ” ’ ) ۔ . ، ؛ ؟ !</bdo> &nbsp; should not begin a new line</li>
+</ul>
+</section>
+
+
+
+
 
 
 <section id="breaking_latin">
 <h4>Breaking between Latin words</h4>
-<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence are rearranged visually so that the reading direction remains top-to-bottom. <a class="figref">latin_line_breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule.</p>
 
+<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines upwards.</p>
+
+<p><a class="figref" href="#latin-line-breaks">latin-line-breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule. Of course, the rearragement is only that of the visual glyphs: nothing affects the order of the characters in memory.</p>
 
 <figure id="latin_line_breaks" class="sideCaption">
 <div dir="rtl">
@@ -3913,10 +3975,12 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 </div>
 <figcaption>Urdu with embedded Latin text. The lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
 </figure>
-<p>In digital text the rearrangement is  automatic. Only the positions of the font glyphs are changed: nothing affects the order of the characters in memory.</p>
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the Urdu orthography described here.</a></p>
 </section>
 </section>
+
+
+
+
 
 
 
@@ -4070,7 +4134,7 @@ is not used, and moreover is not even functional in some fonts. For example, it 
 <section id="online_samples">
 <h2>Online resources</h2>
 
-  <ol>
+<ol>
     <li><a href="https://unicode.org/udhr/d/udhr_urd.html">Universal Declaration of Human Rights - Urdu</a></li>
 <li><a href="https://e.jang.com.pk/08-01-2021/pindi/page1.asp#:">Jang News (images of printed text &amp; links to web pages)</a></li>
 </ol>

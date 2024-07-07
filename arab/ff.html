@@ -62,7 +62,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->10 May, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 July, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -86,7 +86,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Adamawa Fulfulde (Ajamiya) Orthography Notes, <!-- #BeginDate format:En2 -->10-May-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ff">https://r12a.github.io/scripts/arab/ff</a></small></p>
+<p class="refLine"><small>Richard Ishida, Adamawa Fulfulde (Ajamiya) Orthography Notes, <!-- #BeginDate format:En2 -->07-Jul-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ff">https://r12a.github.io/scripts/arab/ff</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -2098,36 +2098,43 @@ However, if the previous character joins only to the right, they will use isolat
 
 <figure id="fig_bidi">
 <img src="images/bidirectional.png" alt="العاشر ليونيكود (Unicode Conference)،الذي سيعقد في 10-12 آذار 1997 مبدينة" class="ex" lang="ar" data-notes="Scheherazade 42px العاشر ليونيكود (Unicode Conference)،الذي سيعقد في 10-12 آذار 1997 مبدينة">
-<figcaption>In this example of Arabic text Arabic words are read right-to-left, starting from the right of this line, but numbers and Latin text (highlighted) are read left-to-right.</figcaption>
+<figcaption>In this example of Arabic language text Arabic words are read right-to-left, starting from the right of this line, but numbers and Latin text (highlighted) are read left-to-right.</figcaption>
 </figure>
 
 
-<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' (ie. the surrounding directional context) is set to right-to-left (RTL).</p>
+
+<p>Characters are all stored in the order in which they are spoken (and typed). This so-called 'logical' order is then rendered as bidirectional flows by the application at run time, as the text is displayed or printed. The relative placement of characters within a single directional flow is based on strong directional properties (RTL or LTR) assigned to each Unicode character by the Unicode Standard. There exist, however a set of neutral direction property values, mostly for punctuation, where the placement of characters depends on the base direction.</p>
+
+<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in this orthography.</a></p>
+
 <p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>, making it very difficult to get the meaning.</p>
 
+
 <figure id="fig_bidi_no_base_direction">
-<img src="images/base_direction_RTL.png" class="ex" lang="ar" alt="في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo." data-notes="Scheherazade 30px"><br>
-<img src="images/base_direction_LTR.png" class="ex" lang="ar" alt="في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo." data-notes="Scheherazade 30px">
-<figcaption class="instructions">More Arabic text, where this time the exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom). Certain items are highlighted to help track their position.</figcaption>
+<img src="images/base_direction.png" class="ex" lang="ar" alt="في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo." data-notes="Scheherazade 30px" style="height:12rem;">
+<figcaption class="instructions">More Arabic language text, where this time the exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom). The arrows show how items are relocated.</figcaption>
 </figure>
 
 
-<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the Fulfulde language.</a></p>
+<p>In some circumstances the Unicode Bidirectional Algorithm requires additional assistance to correctly render the directionality of bidirectional text. For such cases the Unicode Standard provides invisible formatting characters for use in plain text. See <a class="secref">directioncontrols</a>.</p>
+
+<p>In HTML the base direction and higher level controls can be set using the <code>dir</code> or <code>bdi</code> attributes. CSS should <em>not</em> be used to control direction. Unicode formatting codes should also not be used where markup is available.</p>
+
+<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+
+<p class="html">For authoring HTML pages, one of the most important things to remember is to use <code>&lt;html dir=&quot;rtl&quot; … &gt;</code> at the top of a right-to-left page, and then use the <code class="kw" translate="no">dir</code> attribute or <code class="kw" translate="no">bdi</code> tag for ranges within the page, but only when you need to <em>change</em> the base direction. Also, use markup to manage direction, and do not use CSS styling.</p>
 
 
 <p>For other aspects of dealing with right-to-left writing systems see the following sections:</p>
 <ul>
 <li><a class="secref">directioncontrols</a></li>
+<li><a href="arb.html#expressions" target="_blank">Expressions &amp; sequences</a> (in the Arabic orthography notes)</li>
 <li><a class="secref">breaking_latin</a></li>
 <li><a class="secref">mirrored_characters</a></li>
 <li><a class="secref">page</a></li>
 </ul>
 
-<p>See also the section <a href="arb.html#expressions">Expressions &amp; sequences</a> in the description of the Arabic language orthography.</p>
-
-<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
-
-<p class="html">When authoring HTML pages, one of the most important things to remember is to use <code>&lt;html dir=&quot;rtl&quot; … &gt;</code> at the top of the page. Also, use markup to manage direction, and do not use CSS styling.</p>
 
 
 
@@ -2516,7 +2523,7 @@ However, if the previous character joins only to the right, they will use isolat
 </section>
 
 <section id="otherinline">
-<h4>Other inline features</h4>
+<h4>Text decoration &amp; other inline features</h4>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 </section>
 </details>
@@ -2603,7 +2610,7 @@ However, if the previous character joins only to the right, they will use isolat
 <figcaption>Both of these lines use <span class="codepoint noindex" translate="no"><span lang="en">&#x003E;</span> <a href="/scripts/latin/block#char003E"><span class="uname">U+003E GREATER-THAN SIGN</span></a></span>, but the direction it faces depends on the base direction at the point of display.</figcaption>
 </figure>
 
-<p>The number of characters that are mirrored in this way is <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Mirrored=Yes:]">around 550</a>, most of which are mathematical symbols. Some are single characters, rather than pairs. The following are some of the more common ones used in Arabic orthographies.</p>
+<p>The number of characters that are mirrored in this way is <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Mirrored=Yes:]">around 550</a>, most of which are mathematical symbols. Some are single characters, rather than pairs. The following are some of the more common ones.</p>
 
 <figure class="exampleBox auto noindex" data-cols="">(␣)␣&lt;␣&gt;␣[␣]␣{␣}␣«␣»␣‹␣›</figure>
 </section>
@@ -2622,14 +2629,15 @@ However, if the previous character joins only to the right, they will use isolat
 
 
 
-  
+
+
+
 <section id="quotations">
 <h3>Quotations &amp; citations</h3>
 
-<figure class="characterBox auto noindex" data-cols="">«␣»</figure>
+<figure class="characterBox auto small" data-cols="">«␣»</figure>
 
-<p>Fulfulde texts typically use guillemets around quotations. Like brackets, these characters are automatically mirrored (see <a class="secref">mirrored_characters</a>).</p>
-
+<p>The following quotation marks can be found in Fulfulde texts.  (Depending on ease of input, quotations may alternatively be surrounded by ASCII double and single quote marks.) </p>
 
 <table class="character_list">
 <thead>
@@ -2641,12 +2649,13 @@ However, if the previous character joins only to the right, they will use isolat
 </thead>
 <tbody>
 <tr>
-<th scope="row">initial</th>
-<td><p><span class="ch">«</span></p></td>
-<td><span class="ch">»</span></td>
+<th scope="row">primary</th>
+<td><p><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x00AB;</span> [<a href="arabic#char00AB"><span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span></p></td>
+<td><span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x00BB;</span> [<a href="arabic#char00BB"><span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span></td>
 </tr>
 </tbody>
 </table>
+<p>Because they are <a href="#mirrored_characters">mirrored</a>, when using these quotation marks, <span class="uname">LEFT</span> should be read as if it said <span class="uname">START</span>, and <span class="uname">RIGHT</span> as <span class="uname">END</span>.</p>
 </section>
 </section>
  
@@ -2731,7 +2740,7 @@ However, if the previous character joins only to the right, they will use isolat
 <section id="breaking_latin">
 <h4>Breaking between Latin words</h4>
 
-<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines from top to bottom. </p>
+<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines upwards. </p>
 <p><a class="figref" href="#latin-line-breaks">latin-line-breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule. Of course, the rearragement is only that of the visual glyphs: nothing affects the order of the characters in memory.</p>
 
 <figure id="latin-line-breaks">
@@ -2890,14 +2899,9 @@ However, if the previous character joins only to the right, they will use isolat
 	
 
 
-<!--section id="online_samples">
+<section id="online_samples">
 <h2>Online resources</h2>
-
-  <ol>
-    <li><a href="https://unicode.org/udhr/d/udhr_aii.html">Universal Declaration of Human Rights - Assyrian Neo-Aramaic</a></li>
-<li><a href="http://worldbibles.org/language_detail.php/eng/aii/Assyrian+Neo-Aramaic?translation=eng&&language=aii&&name=Assyrian+Neo-Aramaic">The Bible in Assyrian Neo-Aramaic</a></li>
-</ol>
-</section-->
+</section>
 
 
 

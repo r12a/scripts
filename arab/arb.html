@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->21 June, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 July, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -77,7 +77,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Modern Standard Arabic Orthography Notes, <!-- #BeginDate format:En2 -->21-Jun-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/arb">https://r12a.github.io/scripts/arab/arb</a></small></p>
+<p class="refLine"><small>Richard Ishida, Modern Standard Arabic Orthography Notes, <!-- #BeginDate format:En2 -->07-Jul-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/arb">https://r12a.github.io/scripts/arab/arb</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -2680,11 +2680,8 @@ alveolar</th>
 <section id="direction">
 <h2>Text direction</h2>
 
-<p>Arabic text is written horizontally and right-to-left in the main but, as in most right-to-left scripts, numbers and embedded   text in other scripts are written left-to-right (producing 'bidirectional' text). </p>
-<!--figure>
-<p dir="rtl" lang="ar" class="large"><span class="ex" style="white-space: nowrap;">اليوم هو 23 يناير 2020</span></p>
-<figcaption>Arabic words are read RTL, starting  on the right, but numbers are  read left-to-right.</figcaption>
-</figure-->
+<p>Arabic script text is written horizontally and right-to-left in the main but, as in most right-to-left scripts, numbers and embedded text in other scripts are written left-to-right (producing 'bidirectional' text).</p>
+
 
 <figure id="fig_bidi">
 <img src="images/bidirectional.png" alt="العاشر ليونيكود (Unicode Conference)،الذي سيعقد في 10-12 آذار 1997 مبدينة" class="ex" lang="ar" data-notes="Scheherazade 42px العاشر ليونيكود (Unicode Conference)،الذي سيعقد في 10-12 آذار 1997 مبدينة">
@@ -2692,17 +2689,27 @@ alveolar</th>
 </figure>
 
 
-<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' (ie. the surrounding directional context) is set to right-to-left (RTL).</p>
+
+<p>Characters are all stored in the order in which they are spoken (and typed). This so-called 'logical' order is then rendered as bidirectional flows by the application at run time, as the text is displayed or printed. The relative placement of characters within a single directional flow is based on strong directional properties (RTL or LTR) assigned to each Unicode character by the Unicode Standard. There exist, however a set of neutral direction property values, mostly for punctuation, where the placement of characters depends on the base direction.</p>
+
+<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in this orthography.</a></p>
+
 <p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>, making it very difficult to get the meaning.</p>
 
 <figure id="fig_bidi_no_base_direction">
-<img src="images/base_direction_RTL.png" class="ex" lang="ar" alt="في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo." data-notes="Scheherazade 30px"><br>
-<img src="images/base_direction_LTR.png" class="ex" lang="ar" alt="في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo." data-notes="Scheherazade 30px">
-<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom). Certain items are highlighted to help track their position.</figcaption>
+<img src="images/base_direction.png" class="ex" lang="ar" alt="لحجز مواعيد اللقاح ضد COVID-19 انتقل إلى، www.nhs.uk/vaccination أو اتصل برقم 119 الذي." data-notes="Scheherazade 30px" style="height: 12rem;">
+<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom). The arrows show how items are relocated.</figcaption>
 </figure>
 
 
-<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the Standard Arabic language.</a></p>
+<p>In some circumstances the Unicode Bidirectional Algorithm requires additional assistance to correctly render the directionality of bidirectional text. For such cases the Unicode Standard provides invisible formatting characters for use in plain text. See <a class="secref">directioncontrols</a>.</p>
+
+<p>In HTML the base direction and higher level controls can be set using the <code>dir</code> or <code>bdi</code> attributes. CSS should <em>not</em> be used to control direction. Unicode formatting codes should also not be used where markup is available.</p>
+
+<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+
+<p class="html">For authoring HTML pages, one of the most important things to remember is to use <code>&lt;html dir=&quot;rtl&quot; … &gt;</code> at the top of a right-to-left page, and then use the <code class="kw" translate="no">dir</code> attribute or <code class="kw" translate="no">bdi</code> tag for ranges within the page, but only when you need to <em>change</em> the base direction. Also, use markup to manage direction, and do not use CSS styling.</p>
 
 
 <p>For other aspects of dealing with right-to-left writing systems see the following sections:</p>
@@ -2713,8 +2720,6 @@ alveolar</th>
 <li><a class="secref">mirrored_characters</a></li>
 <li><a class="secref">page</a></li>
 </ul>
-<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
-<p class="info instructions">For authoring HTML pages, one of the most important things to remember is to use <code>&lt;html dir=&quot;rtl&quot; … &gt;</code> at the top of the page. Also, use markup to manage direction, and do not use CSS styling.</p>
 
 
 
@@ -2732,7 +2737,7 @@ alveolar</th>
 
 <p>There is also <span class="hx img">2068</span> (<span class="uname">FSI</span>), used initially to set the base direction according to the first recognised strongly-directional character.</p>
 
-<p><span class="hx img">061C</span> (<span class="uname">ALM</span>)  is used to produce correct sequencing of numeric data. Follow the link and see <a class="secref">expressions</a> for details.</p>
+<p><span class="hx img">061C</span> (<span class="uname">ALM</span>)  is used to produce correct sequencing of numeric data. Click on the character name, and see also <a class="secref">expressions</a> for details.</p>
 
 <p><span class="hx img">200F</span> (<span class="uname">RLM</span>)  and <span class="hx img">200E</span> (<span class="uname">LRM</span>)  are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
 
@@ -2910,7 +2915,6 @@ alveolar</th>
 </section>
 </section>
 </section>
-
 
 
 
@@ -3580,7 +3584,7 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 <figcaption>Both of these lines use <span class="codepoint noindex" translate="no"><span lang="en">&#x003E;</span> <a href="/scripts/latin/block#char003E"><span class="uname">U+003E GREATER-THAN SIGN</span></a></span>, but the direction it faces depends on the base direction at the point of display.</figcaption>
 </figure>
 
-<p>The number of characters that are mirrored in this way is <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Mirrored=Yes:]">around 550</a>, most of which are mathematical symbols. Some are single characters, rather than pairs. The following are some of the more common ones for Arabic.</p>
+<p>The number of characters that are mirrored in this way is <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Mirrored=Yes:]">around 550</a>, most of which are mathematical symbols. Some are single characters, rather than pairs. The following are some of the more common ones.</p>
 
 <figure class="exampleBox auto noindex" data-cols="">(␣)␣&lt;␣&gt;␣[␣]␣{␣}␣«␣»␣‹␣›</figure>
 </section>
@@ -3608,7 +3612,7 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 
 <figure class="characterBox auto small" data-cols="">”␣“␣’␣‘␣«␣»␣‹␣›</figure>
 
-<p>Arabic texts may use guillemets or quotation marks around quotations. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks. Note, however, that the order of use is different from that in LTR text, because they are not automatically mirrored.</p>
+<p>Two different styles of quotation mark can be found in Arabic language texts. When quoted text appears within quoted text different characters are used, though usually of the same type. (Of course, depending on ease of input, quotations may also be surrounded by ASCII double and single quote marks.) Spacing inside the marks is optional.<tt>wqm</tt></p>
 
 <table class="character_list">
 <thead>
@@ -3620,7 +3624,33 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 </thead>
 <tbody>
 <tr>
-<th scope="row">initial</th>
+<th scope="row">primary</th>
+<td><span class="ch">«</span></td>
+<td><span class="ch">»</span></td>
+</tr>
+<tr>
+<th scope="row">nested</th>
+<td><span class="ch">‹</span></td>
+<td><span class="ch">›</span></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Because they are <a href="#mirrored_characters">mirrored</a>, when using the guillemets, <span class="uname">LEFT</span> should be read as if it said <span class="uname">START</span>, and <span class="uname">RIGHT</span> as <span class="uname">END</span>.   The guillemet shapes are typically  rounded, as shown in <a class="figref">fig_quotation_marks</a>. </p>
+
+
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">primary</th>
 <td><p><span class="ch">”</span></p></td>
 <td><p><span class="ch">“</span></p></td>
 </tr>
@@ -3629,35 +3659,20 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 <td><p><span class="ch">’</span></p></td>
 <td><p><span class="ch">‘</span></p></td>
 </tr>
-<tr>
-<th scope="row">alternate</th>
-<td><span class="ch">«</span></td>
-<td><span class="ch">»</span></td>
-</tr>
-<tr>
-<th scope="row">alternate nested</th>
-<td><span class="ch">‹</span></td>
-<td><span class="ch">›</span></td>
-</tr>
 </tbody>
 </table>
-<p>Arabic language text  uses 2 different sets of quotation marks. Sometimes they are mixed in the same text. The example in <a class="figref">fig_quotation_marks</a> uses both in a single sentence.</p>
+
+
+<p>Unlike the guillemets, these quote marks are <em>not</em> <a href="#mirrored_characters">mirrored</a> during display. As a result, <span class="uname">LEFT</span> means use on the left, and <span class="uname">RIGHT</span> means use on the right.</p>
+
+
+<p>Sometimes these styles are mixed in the same text. The example in <a class="figref">fig_quotation_marks</a> uses both in a single sentence.</p>
 
 
 <figure id="fig_quotation_marks" class="sideCaption">
 <p><img src="images/quotes.png" alt=" يعني اسم ”سيسيميوت“ «المستعمرة القريبة من أرض بها ثعالب»." data-source="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9"/></p>
 <figcaption>A sentence containing 2 types of quotation mark.</figcaption>
 </figure>
-
-
-<p>When using bracketing quotation marks, <span class="ch">«</span> is used at the start,  and <span class="ch">»</span> is used at the end. The shapes are typically  rounded, a shown in <a class="figref">fig_quotation_marks</a>.</p>
-<p>When an additional quote is embedded within the first, the quote marks are <span class="ch">‹</span> and <span class="ch">›</span>.</p>
-
-<p>The other quote marks  are <span class="ch">”</span> at the start, and <span class="ch">“</span> at the end.</p>
-
-<p>When an additional quote is embedded within the first, the quote marks are <span class="ch">’</span> and <span class="ch">‘</span>.</p>
-
-<p>Unlike the bracketing quotation marks, these characters are <em>not</em> mirrored during display. This means that <span class="uname">LEFT</span> means use on the left, and <span class="uname">RIGHT</span> means use on the right.</p>
 </section>
 
 
@@ -3688,7 +3703,7 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 
 
 <section id="otherinline">
-<h3>Other inline features</h3>
+<h3>Text decoration &amp; other inline features</h3>
 
 <section id="underlining">
 <h4>Underlines &amp; overlines</h4>
@@ -3770,12 +3785,24 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 
 
 
+
+
+
+
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
-<p>Lines are normally broken at  word boundaries.</p>
-<p>They are not broken at the small gaps that appear where a character doesn't join on the left.</p>
-<p>Like most writing systems, certain characters are expected not to start or end a line. For example, periods and commas shouldn't start a line, and opening parentheses shouldn't end a line.</p>
 
+<p>Lines are normally broken at  word boundaries.</p>
+
+<p>They are not broken at the small gaps that appear where a character doesn't join on the left.</p>
+
+
+
+
+<section id="hyphenation">
+<h4>In-word line-breaking</h4>
+<p>Hyphenation isn't used for the Arabic  language, however other languages using the Arabic script may hyphenate (such as Uighur).<tt>a</tt></p>
+</section>
 
 
 
@@ -3786,24 +3813,17 @@ Gecko sets break opportunities in the same places as cursor stops. WebKit and Bl
 
 <p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
 
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show default line-breaking properties for characters in the Modern Standard Arabic language.</a></p>
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show default line-breaking properties for characters in this orthography.</a></p>
 
-<p>The following list gives examples of typical behaviours for characters used in modern Arabic. Context may affect the behaviour of some of these and other characters.</p>
-
-<p class="instructions">Click on the Khmer characters to show what they are.</p>
+<p>The following list gives examples of typical behaviours for characters affected by these rules. Context may affect the behaviour of some of these and other characters.</p>
 
 <ul>
-<li><span class="ex list" lang="km">“ ‘ (</span> &nbsp; should not be the last character on a line</li>
-<li><span class="ex list" lang="km">” ’ ) ? ! ។ ៕ ៚ %</span> &nbsp; should not begin a new line</li>
-<li><span class="ex list" lang="km">៛</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li>
+<li><span class="ex list" lang="ar">« “ ‘ (</span> &nbsp; should not be the last character on a line</li>
+<li><span class="ex list" lang="ar">» ” ’ ) . ، ؛ ؟ !</span> &nbsp; should not begin a new line</li>
 </ul>
-
-<p>The following character should <em>not</em> produce a line-break when they appear inside or alongside a word: <span class="charExample inline list" translate="no"><span class="ex" lang="hy">៙</span></span>.</p>
-
-<!--p>The repetition character, 
-<span class="codepoint" translate="no"><bdi lang="km">&#x0E46;</bdi> [<a href="/scripts/thai/block#char0E46"><span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span></a>]</span>
-is always preceded by space, however it should not wrap to the next line on its own.<tt class="more">@Github,https://github.com/w3c/sealreq/issues/45</tt></p-->
 </section>
+
+
 
 
 
@@ -3811,22 +3831,15 @@ is always preceded by space, however it should not wrap to the next line on its 
 <section id="breaking_latin">
 <h4>Breaking between Latin words</h4>
 
-<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines from top to bottom. </p>
+<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines upwards.</p>
+
 <p><a class="figref" href="#latin-line-breaks">latin-line-breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule. Of course, the rearragement is only that of the visual glyphs: nothing affects the order of the characters in memory.</p>
 
 <figure id="latin-line-breaks">
-<p><img src="images/latin-line-breaks-1.png" alt="Text with no line break in Latin text."/></p>
-<p><img src="images/latin-line-breaks-2.png" alt="Text with line break in Latin text."/></p>
-<figcaption>The lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
+<p><img src="images/latin-line-breaks-1.png" alt="Text with no line break in Latin text."></p>
+<p><img src="images/latin-line-breaks-2.png" alt="Text with line break in Latin text."></p>
+<figcaption>In this Arabic language text, the lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
 </figure>
-</section>
-
-
-
-
-<section id="hyphenation">
-<h4>In-word line-breaking</h4>
-<p>Hyphenation isn't used for the Arabic  language, however other languages using the Arabic script may hyphenate (such as Uighur).<tt>a</tt></p>
 </section>
 </section>
 
@@ -4427,11 +4440,6 @@ data-cols="">ا␣ب␣ج␣د␣ه‍␣و␣ز␣ح␣ط␣ي␣ك␣ل␣م�
 
 <!--section id="online_samples">
 <h2>Online resources</h2>
-
-  <ol>
-    <li><a href="https://unicode.org/udhr/d/udhr_aii.html">Universal Declaration of Human Rights - Assyrian Neo-Aramaic</a></li>
-<li><a href="http://worldbibles.org/language_detail.php/eng/aii/Assyrian+Neo-Aramaic?translation=eng&&language=aii&&name=Assyrian+Neo-Aramaic">The Bible in Assyrian Neo-Aramaic</a></li>
-</ol>
 </section-->
 
 
