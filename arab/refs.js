@@ -443,6 +443,13 @@ reflist = {
 "lang": new Set(['ug']),
 },
 
+"wqm": {
+"authors": "Wikipedia",
+"title":"Quotation mark",
+"url":"https://en.wikipedia.org/wiki/Quotation_mark",
+"lang": new Set(['ar', 'pes', 'ur', 'ug']),
+},
+
 "yh": {
 "authors": "Yannis Haralambous",
 "title":"Breaking Arabic: the creative inventiveness of Uyghur script reforms",

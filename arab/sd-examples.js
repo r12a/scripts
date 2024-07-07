@@ -579,6 +579,11 @@ termLists = [
 "url":"https://sd.wikipedia.org/wiki/%D9%85%D9%8F%DA%A9_%D8%B5%D9%81%D8%AD%D9%88",
 },
 
+{
+"title":"Time News",
+"url":"https://epaper.pahenjiakhbar.com/",
+},
+
 ]
 
 

@@ -4164,19 +4164,20 @@ autoExpandExamples.pes = `
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 `
+
+
+
+
+
+
+termLists = [
+
+{
+"title":"BBC News فارسي",
+"url":"https://www.bbc.com/persian",
+},
+
+
+]
 
