@@ -3189,8 +3189,14 @@ implosive bilabial stop in Adamawa Fulfulde</td>
     <figcaption>Urdu words are read right-to-left, starting  from the right of this line, but numbers and Latin text are  read left-to-right.</figcaption>
 </figure>
 
-<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_uefa</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
-<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>.</p>
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' (ie. the surrounding directional context) is set to right-to-left (RTL).</p>
+
+<p>Characters are all stored in the order in which they are spoken (and typed). This so-called 'logical' order is then rendered as bidirectional flows by the application at run time, as the text is displayed or printed. The relative placement of characters within a single directional flow is based on strong directional properties (RTL or LTR) assigned to each Unicode character by the Unicode Standard. There exist, however a set of neutral direction property values, mostly for punctuation, where the placement of characters depends on the base direction.</p>
+
+<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in this orthography.</a></p>
+
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>, making it very difficult to get the meaning.</p>
+
 
 <figure id="fig_bidi_no_base_direction" class="sideCaption">
 <div>
@@ -3201,9 +3207,23 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 <figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom).</figcaption>
 </figure>
 
-<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the  Urdu orthography described here.</a></p>
+<p>In some circumstances the Unicode Bidirectional Algorithm requires additional assistance to correctly render the directionality of bidirectional text. For such cases the Unicode Standard provides invisible formatting characters for use in plain text. See <a class="secref">directioncontrols</a>.</p>
+
+<p>In HTML the base direction and higher level controls can be set using the <code>dir</code> or <code>bdi</code> attributes. CSS should <em>not</em> be used to control direction. Unicode formatting codes should also not be used where markup is available.</p>
+
 <p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
-<p>On this page, see also <a class="secref">expressions</a> and <a class="secref">breaking_latin</a> for additional features related to direction.</p>
+
+<p class="html">For authoring HTML pages, one of the most important things to remember is to use <code>&lt;html dir=&quot;rtl&quot; … &gt;</code> at the top of a right-to-left page, and then use the <code class="kw" translate="no">dir</code> attribute or <code class="kw" translate="no">bdi</code> tag for ranges within the page, but only when you need to <em>change</em> the base direction. Also, use markup to manage direction, and do not use CSS styling.</p>
+
+
+<p>For other aspects of dealing with right-to-left writing systems see the following sections:</p>
+<ul>
+<li><a class="secref">directioncontrols</a></li>
+<li><a class="secref">expressions</a></li>
+<li><a class="secref">breaking_latin</a></li>
+<li><a class="secref">mirrored_characters</a></li>
+<li><a class="secref">page</a></li>
+</ul>
 
 
 
@@ -3227,13 +3247,21 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 
 <section id="expressions">
 <h3>Expressions &amp; sequences</h3>
-    <p>A sequence of  numbers separated by hyphens (for example a range)  runs from right to left in  Urdu.</p>
+
+<p>A sequence of  numbers separated by hyphens (for example a range)  runs from right to left in  Urdu.</p>
+
 <p><a class="figref">fig_range</a> shows some   Urdu text, which is right-to-left overall, containing a numeric range that is also  ordered RTL, ie. it starts with 100 and ends with 999.</p>
+
+
 <figure id="fig_range" class="sideCaption">
 <p dir="rtl" class="medium" lang="ur"><span class="ex">100–999 تصدیق شدہ کیس</span></p>
-    <figcaption>A numeric range in Urdu language text.</figcaption>
+<figcaption>A numeric range in Urdu language text.</figcaption>
 </figure>
+
+
 <p>When a list uses the ASCII hyphen as a separator, the Unicode Bidirectional Algorithm automatically produces the expected ordering <em> only when a sequence or expression follows Urdu characters</em>. However, a sequence that appears alone on a line will be ordered left-to-right. To make the sequence read right-to-left you should, in this case, add the  formatting character <span class="hx img">061C</span> (ALM) at the start of the line (see and click on each line in <a class="figref">fig_ALM</a>).</p>
+
+
 <figure id="fig_ALM" class="sideCaption">
 <div class="medium" style="line-height: 3rem;">
     <p dir="rtl" lang="ur"><span class="ex">؜10-01-2018</span></p>
@@ -3241,9 +3269,14 @@ implosive bilabial stop in Adamawa Fulfulde</td>
 </div>
     <figcaption>A numeric date alone on a line of RTL text, with ALM before it (top), and without (bottom). (Click on each line to see the code points.)</figcaption>
 </figure>
+
+
 <p>Note that the required order cannot be achieved  by simply setting the base direction, nor by using <span class="hx img">200F</span>.</p>
+
 <p>Alternatively, you could use a different separator, such as <span class="ch">–</span> (as in <a class="figref">fig_range</a>) or <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x2010;</span> <a href="/scripts/arabic/block#char2010"><span class="uname">U+2010 HYPHEN</span></a></span>. No special arrangements are then necessary.</p>
+
 <p>Similar RTL ordering is applied to numbers in equations, such as <span class="ex" lang="ur" dir="rtl" style="white-space: nowrap">1 + 2 = 3</span>, for Urdu language text.</p>
+
 <p>See also <a class="secref">percent_sign</a>.</p>
 </section>
 </section>
