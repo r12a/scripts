@@ -110,6 +110,8 @@ function addPageFeatures () {
     summaryNodes = document.querySelectorAll('.sectionAside details')
     //for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = true
     for (i=0;i<summaryNodes.length;i++) if (summaryNodes[i].parentNode.parentNode.id !== 'page') summaryNodes[i].open = true
+    
+    addCharacterLists()
     }
 
 
@@ -129,7 +131,7 @@ function expandCharMarkup () {
      // if the svg class is appended, use an svg image to display the char
      // if the split class used, the characters will be separated by +
      
-     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname, coda
+     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname, coda, noindex
      
      // split puts + signs between the characters in a sequence
      // init, medi, fina produce positional forms of cursive text using zwj
@@ -152,6 +154,7 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
         charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
+        charMarkup[i].classList.contains('noindex')? noindex=' noindex': noindex=''
 
         if (charMarkup[i].lang === '') var language = window.langTag
         else language = charMarkup[i].lang
@@ -200,7 +203,7 @@ function expandCharMarkup () {
             
         if (initial || medial) unicodeChars += '\u200D '
 
-        out += `<span class="codepoint" translate="no"><bdi lang="${ language }"`
+        out += `<span class="codepoint${ noindex }" translate="no"><bdi lang="${ language }"`
         //if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }${ coda }</bdi>`
@@ -229,6 +232,7 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('circle')? circle=true: circle=false
         charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
+        charMarkup[i].classList.contains('noindex')? noindex=' noindex': noindex=''
         
         if (charMarkup[i].lang === '') var language = window.langTag
         else language = charMarkup[i].lang
@@ -269,7 +273,7 @@ function expandCharMarkup () {
         if (initial || medial) unicodeChars += '\u200D '
         if (circle) unicodeChars = '\u25CC' + unicodeChars
 
-        out += `<span class="codepoint" translate="no"><bdi lang="${ language }"`
+        out += `<span class="codepoint${ noindex }" translate="no"><bdi lang="${ language }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }${ coda }</bdi>`
@@ -2855,10 +2859,84 @@ function addResources () {
 
 
 
+function addCharacterLists () {
+    // adds the lists of characters in selected sections to the right hand column
+
+    if (document.getElementById('vowels') && document.getElementById('vowels').querySelector('aside') !== null) listSectionCharacters('vowels')
+    if (document.getElementById('consonants') && document.getElementById('consonants').querySelector('aside') !== null)listSectionCharacters('consonants')
+    if (document.getElementById('inline') && document.getElementById('inline').querySelector('aside') !== null)listSectionCharacters('inline')
+    
+    }
 
 
 
 
+function listSectionCharacters (section) {
+    charElems = document.getElementById(section).querySelectorAll('.listItem')
+    charList = ''
+    for (i=0;i<charElems.length;i++) {
+        if (charElems[i].className === 'listItem' && ! charElems[i].closest('figure').classList.contains('noindex'))  charList += charElems[i].textContent
+        else if (charElems[i].closest('.codepoint') && charElems[i].closest('.codepoint').classList !== null && ! charElems[i].closest('.codepoint').classList.contains('noindex'))  charList += charElems[i].textContent
+        }
+    charList = charList.replace(/\u25CC/g,'')
+    charList = charList.replace(/\u200D/g,'')
+    charList = charList.replace(/\u0020/g,'')
+    charList = charList.replace(/\u00A0/g,'')
+    charList = charList.replace(/\u24D8/g,'')
+        
+    charArray = [... charList]
+    uniqueSet = new Set(charArray)
+    charArray = [...uniqueSet]
+    charArray.sort()
+    charList = charArray.join('\u2423')
+    
+    document.getElementById(section).querySelector('aside').innerHTML += `
+    <div class="sectionCharacterList">
+    <p>Characters described in this section</p>
+    <figure class="characterBox auto noexpansion small" data-cols="">${ charList }</figure>
+    </div>
+    `
+    
+    replaceStuff(document.getElementById(section).querySelector('figure'))
+    listItems = document.getElementById(section).querySelectorAll('.listItem')
+	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
+    }
+
+
+
+/*
+function listSectionCharactersX (section) {
+    charElems = document.getElementById(section).querySelectorAll('.codepoint bdi, .listItem')
+    charList = ''
+    //for (i=0;i<charElems.length;i++) charList += charElems[i].textContent
+    for (i=0;i<charElems.length;i++) {
+        if (charElems[i].className === 'listItem' && ! charElems[i].closest('figure').classList.contains('noindex'))  charList += charElems[i].textContent
+        else if (charElems[i].closest('.codepoint') && charElems[i].closest('.codepoint').classList !== null && ! charElems[i].closest('.codepoint').classList.contains('noindex'))  charList += charElems[i].textContent
+        }
+    charList = charList.replace(/\u25CC/g,'')
+    charList = charList.replace(/\u200D/g,'')
+    charList = charList.replace(/\u0020/g,'')
+    charList = charList.replace(/\u00A0/g,'')
+    charList = charList.replace(/\u24D8/g,'')
+        
+    charArray = [... charList]
+    uniqueSet = new Set(charArray)
+    charArray = [...uniqueSet]
+    charArray.sort()
+    charList = charArray.join('\u2423')
+    
+    //console.log(charList)
+    
+    document.getElementById(section).querySelector('.sectionCharacterList').innerHTML = `
+    <summary>Characters described in this section</summary>
+    <figure class="characterBox auto noexpansion small" data-cols="ipa" style="margin: 0 1rem 0 0; font-size:1rem; font-style:  normal;">${ charList }</figure>
+    `
+    
+    replaceStuff(document.getElementById(section).querySelector('figure'))
+    listItems = document.getElementById(section).querySelectorAll('.listItem')
+	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
+    }
+*/
 
 
 
