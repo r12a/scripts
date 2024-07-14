@@ -168,10 +168,10 @@ function resort (column, reverse) {
 	table += `<th class="top" title="Link to character usage app"><a href="#theTable"; return false;"> </a></th>\n`
 
 
+                
+    table += makeTableHead ('chars', "Total number of characters in regular use.", REVERSE)
 
     if (window.csubset) {
-                
-        table += makeTableHead ('chars', "Total number of characters in regular use.", REVERSE)
       
         table += makeTableHead ('aux', "Characters still under investigation.", REVERSE)
       
@@ -191,13 +191,10 @@ function resort (column, reverse) {
 
 
 
+    table += makeTableHead ('type', "Type of writing system.", REVERSE)
+
 	if (window.vsubset) {
-
-
-        table += makeTableHead ('type', "Type of writing system.", REVERSE)
-
-
-        
+    
         table += makeTableHead ('vinherent', "Inherent vowel.", REVERSE)
         
         table += makeTableHead ('vdiac', "Small diacritics used to spell vowels.", REVERSE)
@@ -229,13 +226,13 @@ function resort (column, reverse) {
         table += makeTableHead ('vcircum', "(Single) combining marks that place glyphs on more than one side of the base character.", REVERSE)
         }
 
-	if (window.consonants) {
+//	if (window.consonants) {
         table += makeTableHead ('vvocalics', "Vocalic letters.", REVERSE)
 
         table += makeTableHead ('cmedials', "Dedicated combining marks used for syllable-initial clusters.", REVERSE)
 
         table += makeTableHead ('cfinals', "Dedicated combining marks used for syllable- or word-final consonants.", REVERSE)
-       }
+//       }
 
 	if (window.cclusters) {
         table += makeTableHead ('cstack', "Consonant clusters indicated by stacking.", REVERSE)
@@ -255,23 +252,23 @@ function resort (column, reverse) {
 		}
 
 
-    if (window.direction) {
+//    if (window.direction) {
         table += makeTableHead ('direction', "Text direction.", REVERSE)
 
         table += makeTableHead ('numdir', "Direction of digits.", REVERSE)
-        }
+//        }
 
-    if (window.shaping) {
+//    if (window.shaping) {
         table += makeTableHead ('cs', "Case transforms.", REVERSE)
 
         table += makeTableHead ('cursive', "Letters are joined (cursive).", REVERSE)
-        }
+//        }
 
-    if (window.inline) {
+//    if (window.inline) {
         table += makeTableHead ('wordsep', "What separates words.", '')
-        }
+//        }
  
-    if (window.para) {
+//    if (window.para) {
         table += makeTableHead ('wrap', "Basic approach to wrapping text at line ends.", REVERSE)
 
         table += makeTableHead ('hyphenation', "Hyphenation.", REVERSE)
@@ -281,11 +278,11 @@ function resort (column, reverse) {
         table += makeTableHead ('spacing', "Is text spacing used?", '')
 
         table += makeTableHead ('baseline', "Location of the baseline: romn, ideo, hang, cntr.", '')
-        }
+//        }
 
-    if (window.more) {
+//    if (window.more) {
         table += makeTableHead ('region', "Region of origin.", '')
-        }
+//        }
 	
 	table += '</tr></thead><tbody>'
 	
@@ -319,10 +316,10 @@ function resort (column, reverse) {
 			
             table += '<td title="Go to the Character Usage page for '+scriptData[i].id+'"><a href="../../app-charuse/index.html?language='+scriptData[i].id+'" style="font-size:100%;font-weight:bold; padding-inline:.25rem;" target="_blank">C</td>'
 
+            table += '<td title="Total characters" style="text-align:right;padding: 0 .5em;" class="y">'+scriptData[i].chars+'</td>'
+
 
 			if (window.csubset) {
-                table += '<td title="Total characters" style="text-align:right;padding: 0 .5em;" class="y">'+scriptData[i].chars+'</td>'
-
                 table += '<td title="Infequent characters" style="text-align:left;">'+scriptData[i].aux+'</td>'
 
         
@@ -341,9 +338,9 @@ function resort (column, reverse) {
 				}
 
 			
-			if (window.vsubset) {
-                table += drawCell('type', scriptData[i], 'vowels', 'y')
+            table += drawCell('type', scriptData[i], 'vowels', 'y')
 
+			if (window.vsubset) {
 
 
 
@@ -378,13 +375,13 @@ function resort (column, reverse) {
                 }
 
 
-			if (window.consonants) {
+//			if (window.consonants) {
                 table += drawCell('vvocalics', scriptData[i], 'vocalics', 'y')
 
                 table += drawCell('cmedials', scriptData[i], 'onsets')
 
                 table += drawCell('cfinals', scriptData[i], 'finals')
-                }
+//                }
 
 
 			if (window.cclusters) {
@@ -421,26 +418,26 @@ function resort (column, reverse) {
 			//if (scriptData[i].gsub!=='no') table += 'class="y"'
 			//table += '>'+scriptData[i].gsub+'</td>'
 			
-			if (window.direction) {
+//			if (window.direction) {
                 table += drawCellWithDefault('direction', scriptData[i], 'direction','y', 'ltr')
  
                 table += drawCell('numdir', scriptData[i], 'direction')
-               }
+//               }
 
 
-			if (window.shaping) {
+//			if (window.shaping) {
                 table += drawCell('cs', scriptData[i], 'transforms')
 
                 table += drawCell('cursive', scriptData[i], 'cursive')
-                }
+//                }
 
 
-			if (window.inline) {
+//			if (window.inline) {
                 table += drawCellWithDefault('wordsep', scriptData[i], 'word','y', 'space')
-                }
+//                }
 
 
-			if (window.para) {
+//			if (window.para) {
                 table += drawCellWithDefault('wrap', scriptData[i], 'linebreak','yy', 'word')
 
                 table += drawCellWithDefault('hyphenation', scriptData[i], 'hyphenation','yy', 'no')
@@ -450,15 +447,15 @@ function resort (column, reverse) {
                 table += drawCellWithDefault('spacing', scriptData[i], 'spacing','yy', '?')
 
                 table += drawCellWithDefault('baseline', scriptData[i], 'baselines','yy', 'romn')
-                }
+//                }
 			
 
 
-			if (window.more) {
+//			if (window.more) {
                 table += `<td title="${ tablecolumns.region }§${ scriptData[i].region }">${ scriptData[i].region }</td>`
 
                 //table += '<td title="Go to Charuse page for '+scriptData[i].id+'"><a href="../../app-charuse/index.html?language='+scriptData[i].id+'" style="font-size:80%;font-style:italic;" target="_blank"><img src="link.png" alt="details"/></td>'
-                }
+  //              }
 			table += '</tr>'+"\n";
 
 		}
