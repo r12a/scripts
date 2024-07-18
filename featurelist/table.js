@@ -313,8 +313,13 @@ function resort (column, reverse) {
 			table += '<td title="Script" style="text-align:right; padding-inline:.5rem;">'+scriptData[i].script+'</td>'
 			
 			table += '<td title="Link to the orthography notes.">'+linked+'</td>'
-			
-            table += '<td title="Go to the Character Usage page for '+scriptData[i].id+'"><a href="../../app-charuse/index.html?language='+scriptData[i].id+'" style="font-size:100%;font-weight:bold; padding-inline:.25rem;" target="_blank">C</td>'
+
+            if (scriptData[i].id !== 'cmn' && scriptData[i].id !== 'ja' && scriptData[i].id !== 'ko') {
+                table += '<td title="Go to the Character Usage page for '+scriptData[i].id+'"><a href="../../app-charuse/index.html?language='+scriptData[i].id+'" style="font-size:100%;font-weight:bold; padding-inline:.25rem;" target="_blank">C</a></td>'
+                }
+            else {
+                 table += '<td>&nbsp;</td>'
+                 }
 
             table += '<td title="Total characters" style="text-align:right;padding: 0 .5em;" class="y">'+scriptData[i].chars+'</td>'
 
