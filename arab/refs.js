@@ -29,7 +29,7 @@ reflist = {
 "authors": "Bernard Comrie",
 "title":"The World's Major Languages",
 "isbn":"978-1138184824",
-"lang": new Set(['ha','ff']),
+"lang": new Set(['ha','ff','ps']),
 },
 
 "hua": {
@@ -52,7 +52,7 @@ reflist = {
 "date": "1996",
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
-"lang": new Set(['ar','ks','pes']),
+"lang": new Set(['ar','ks','pes','ps']),
 },
 
 "ub": {
@@ -427,6 +427,22 @@ reflist = {
 "title":"Persian alphabet",
 "url":"https://en.wikipedia.org/wiki/Persian_alphabet",
 "lang": new Set(['pes']),
+},
+
+"wpsl": {
+"authors": "Wikipedia",
+"title":"Pashto language",
+"url":"https://en.wikipedia.org/wiki/Pashto_language",
+"retrieved":"Jul 2024",
+"lang": new Set(['ps']),
+},
+
+"wpsa": {
+"authors": "Wikipedia",
+"title":"Pashto alphabet",
+"url":"https://en.wikipedia.org/wiki/Pashto_alphabet",
+"retrieved":"Jul 2024",
+"lang": new Set(['ps']),
 },
 
 "wul": {

@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>List general categories</title>
+
+<!-- creates transcription cols for a list of characters -->
+
+<!-- CHANGE THIS -->
+<script src="../../shared/scriptdb/arab-ps.js"></script>
+<script>lang = 'sd'</script>
+<!-- -------------- -->
+<script>
+
+
+makeTables(lang)
+
+
+
+function makeTables (lang) {
+// make the spreadsheetRows object
+
+    if (typeof window.spreadsheet === 'undefined') {
+        console.log("Spreadsheet undefined.")
+        console.log('%c' + 'Cannot find '+char+' the spreadsheet.', 'color:' + 'red' + ';font-weight:bold;')
+        return
+        }
+
+    // make an object from the spreadsheet
+    var temp = window.spreadsheet.split('\n')
+    spreadsheet = ''
+    window.spreadsheetRows = {}
+    for (var x=0; x<temp.length; x++) {
+        if (temp[x].trim() == '') continue
+        var items = temp[x].split('\t')
+        if (items[0] === '') continue
+
+        window.spreadsheetRows[items[0]] = ['0']
+        for (let i=1;i<items.length;i++) window.spreadsheetRows[items[0]].push(items[i])
+        }
+}
+
+
+function convertEscapes (ch) {
+    // convert \u{...} to a character
+    if (ch === '') return
+    if (ch.length === 1) return ch
+    if (ch.startsWith('\\')) {
+        ch = ch.replace(/\\u/,'')
+        ch = ch.replace(/\{/,'')
+        ch = ch.replace(/\}/,'')
+        }
+    else return ''
+    
+    console.log(ch)
+    
+    ch = String.fromCodePoint(parseInt(ch, 16))
+    return ch
+}
+
+	
+function listCategories () {
+	// 
+	
+	// create object in memory
+	var _charSet = new Object()
+	
+	var blob = document.getElementById('inputArea').value
+	
+	charArray = blob.split('\n')
+    console.log('charArray', charArray)
+
+
+    // remove the headings
+    for (i=0;i<charArray.length;i++) {
+        if (charArray[i].startsWith('//')) charArray[i] = ''
+        }
+
+    console.log('remove headings', charArray)
+
+
+    // remove the escapes
+    for (i=0;i<charArray.length;i++) {
+        charArray[i] = convertEscapes(charArray[i])
+        }
+
+    console.log('remove escapes', charArray)
+
+
+    // create a list of phonological transcriptions
+    phoneArray = []
+    for (i=0;i<charArray.length;i++) {
+        if (spreadsheetRows[charArray[i]] && spreadsheetRows[charArray[i]][cols.ipaLoc])
+            phoneArray.push(spreadsheetRows[charArray[i]][cols.ipaLoc])
+        else phoneArray.push('')
+        }
+
+    console.log('phoneArray', phoneArray)
+
+
+    // remove alternative ipa sounds
+    for (i=0;i<phoneArray.length;i++) {
+        p = phoneArray[i].split(' ')
+        phoneArray[i] = p[0]
+        }
+
+    console.log('phoneArray singles', phoneArray)
+
+
+    // convert some known items
+    for (i=0;i<phoneArray.length;i++) {
+        phoneArray[i] = phoneArray[i].replace(/t͡s/,'ʦ')
+        phoneArray[i] = phoneArray[i].replace(/d͡z/,'ʣ')
+        phoneArray[i] = phoneArray[i].replace(/t͡ʃ/,'ʧ')
+        phoneArray[i] = phoneArray[i].replace(/d͡ʒ/,'ʤ')
+        phoneArray[i] = phoneArray[i].replace(/(.)i/,'$1ⁱ')
+        phoneArray[i] = phoneArray[i].replace(/(.)u/,'$1ᵘ')
+    /*
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+        phoneArray[i] = phoneArray[i].replace(//,'')
+    */
+    }
+
+    console.log('phoneArray condensed', phoneArray)
+
+
+    translitArray = []
+    memory = {}
+    // create the transliteration column and add diacritics to multiples
+    for (i=0;i<phoneArray.length;i++) {
+        if (phoneArray[i] === '') continue
+        else if (memory[phoneArray[i]]) memory[phoneArray[i]] = memory[phoneArray[i]]+1
+        else { memory[phoneArray[i]] = 1 }
+        
+        switch ( memory[phoneArray[i]] ) {
+            case 2: phoneArray[i] += '̣'; break
+            case 3: phoneArray[i] += '̱'; break
+            case 4: phoneArray[i] += '͈'; break
+            }
+        }
+
+    console.log('phoneArray ordered', phoneArray)
+
+// x̣ x̱ x͈ x͇
+
+    return phoneArray.join('\n').normalize('NFC')
+}
+
+
+
+/*
+
+
+	var out = ''
+	for (i=0;i<charArray.length;i++) {
+		if (charArray[i].trim() != '') { 
+			var seq = [...charArray[i]]
+            length = seq.length
+            if (length>1) {
+                out += '\n'
+                continue
+                }
+			
+			cp = ''
+			for (j=0; j<seq.length; j++) {
+				if (document.getElementById('ignoreHyphens').checked && seq[j] === '-') continue
+				if (cp != '') { cp += ' ' }
+				num = seq[j].codePointAt(0).toString(16).toUpperCase()
+				while (num.length<4) { num = '0'+num }
+				cp += 'U+'+num
+				}
+			//out += cp
+
+			//out += ': '
+		
+			console.log(cp, seq)
+			name = ''
+			for (j=0; j<seq.length; j++) {
+				if (document.getElementById('ignoreHyphens').checked && seq[j] === '-') continue
+				uPointer = seq[j].codePointAt(0)
+				console.log('upointer',uPointer)
+				udata = U[uPointer].split(';')
+				if (name != '') { name += ', ' }
+				name += udata[1]
+				}
+			out += name
+
+			uPointer = seq[0].codePointAt(0)
+			udata = U[uPointer].split(';')
+			if (udata[1].substr(0,1) == 'M') { 
+				out += '\u200B'
+				}
+			}
+		
+		out += '\n'
+		}
+		
+	console.log(out)
+	return out
+	}
+    */
+
+
+
+
+function listNames () {
+	// takes a list of characters or character sequences from  Ranges and creates 
+	// an object array with each character/sequence as key and info about name & codepoint
+	
+	// create object in memory
+	var _charSet = new Object()
+	
+	var blob = document.getElementById('inputArea').value
+	
+	blob = convertjEsc2Char( blob, true )
+
+	charArray = blob.split('\n')
+	
+	var out = ''
+	for (i=0;i<charArray.length;i++) {
+		if (charArray[i].trim() != '') { 
+			var seq = [...charArray[i]]
+			
+			cp = ''
+			for (j=0; j<seq.length; j++) {
+				if (document.getElementById('ignoreHyphens').checked && seq[j] === '-') continue
+				if (cp != '') { cp += ' ' }
+				num = seq[j].codePointAt(0).toString(16).toUpperCase()
+				while (num.length<4) { num = '0'+num }
+				cp += 'U+'+num
+				}
+			out += cp
+
+			out += ': '
+			
+			console.log(cp, seq)
+			name = ''
+			for (j=0; j<seq.length; j++) {
+				if (document.getElementById('ignoreHyphens').checked && seq[j] === '-') continue
+				uPointer = seq[j].codePointAt(0)
+				console.log('upointer',uPointer)
+				udata = U[uPointer].split(';')
+				if (name != '') { name += ', ' }
+				name += udata[0]
+				}
+			out += name
+
+			uPointer = seq[0].codePointAt(0)
+			udata = U[uPointer].split(';')
+			if (udata[3].substr(0,1) == 'M') { 
+				out += '\u200B'
+				}
+			}
+		
+		out += '\n'
+		}
+		
+	console.log(out)	
+	if (document.getElementById('delete').value) {
+		re = new RegExp(', '+document.getElementById('delete').value, 'gi')
+		out = out.replace(re, ',')
+		}
+	return out
+	}
+
+
+function convertjEsc2Char ( str, shortEscapes ) { 
+	// converts a string containing JavaScript or Java escapes to a string of characters
+	// str: string, the input
+	// shortEscapes: boolean, if true the function will convert \b etc to characters
+	
+	// convert ES6 escapes to characters
+	str = convertuBracket2Char(str)
+    
+	// convert \U and 6 digit escapes to characters
+	str = convertU0000002Char(str)
+    
+	// convert \u and 4 digit escapes to characters
+	str = convertU00002Char(str)
+    
+	// convert \x and 2 digit escapes to characters
+	str = convertx002Char(str)
+    
+	// convert \b etc to characters, if flag set
+	if (shortEscapes) {
+		str = convertSlashChar2Char(str)
+		}
+	return str
+	}
+
+function convertuBracket2Char ( str ) { 
+	// converts a string containing \u{...} escapes to a string of characters
+	// str: string, the input
+	
+	// convert escapes to characters
+	str = str.replace(/\\u\{([A-Fa-f0-9]{1,})\}/g, 
+					function(matchstr, parens) {
+						return hex2char(parens)
+						}
+						)
+	return str
+	}
+
+</script>
+<style>
+p, input, #character, #inputArea  { font-size: 140%; }
+#inputArea { float: left; margin-inline-end: 2em; width: 10%; height: 850px; }
+#output_cats { float: left; width: 10%; height: 800px; }
+#output_names { float: left; width: 50%; height: 800px; margin-inline: 4rem;}
+</style>
+</head>
+
+<body>
+<p>Make a list of transliterations to paste to google sheets</p>
+<p><button onClick="document.getElementById('inputArea').value = '';document.getElementById('inputArea').select();">Clear input</button> &nbsp; &nbsp; <label style="font-size: .5em;"><input type="checkbox" id="ignoreHyphens" checked> Ignore hyphens</label>   &nbsp; 
+<label style="font-size: .5em;">Remove duplication of: <input type="text" id="delete"></label></p>
+<p>
+<textarea dir="ltr" id="inputArea" placeholder="Copy a column of characters here."></textarea></p>
+
+
+<p><button type="submit" onClick="
+    document.getElementById('output_cats').value  = listCategories(document.getElementById('inputArea').value); 
+    document.getElementById('output_cats').select();
+    return false;
+    ">Create lists!</button></p>
+
+<p><textarea id="output_cats" onClick="this.select()"></textarea></p>
+
+<p><textarea id="output_names" onClick="this.select()"></textarea></p>
+
+<br clear="all">
+
+
+</body>
+</html>
