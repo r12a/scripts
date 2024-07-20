@@ -145,7 +145,7 @@ function showCharDetails (ch) {
     out += ` • <a href="../${ blockDirectoryName }/character.html?q=${ ch }#${ langTag }" target="_blank">Other uses</a>`
     out += ` • <a href="../../uniview/index.html?char=${ hex }" target="_blank">UniView</a>`
     out += ` • <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Picker</a>`
-    out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ ch }" target="_blank">Term list</a>`
+    out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ ch }" target="terms">Term list</a>`
     out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }&charlist=${ ch }" target="_blank">Character usage</a>`
     div.innerHTML = out
     charBlock.appendChild(div)
