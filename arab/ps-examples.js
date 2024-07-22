@@ -38,7 +38,7 @@ autoExpandExamples.ps = `
 آبکند|||||
 آجر|||||
 آر||␣|||
-آره|original, real|ɑra|ā§r§a|آره|
+آره|original, real|ɑ§r§a|āra|آره|
 آس|||||
 آلمان|||||
 آم|||||
@@ -197,7 +197,7 @@ autoExpandExamples.ps = `
 ايران|||||
 ايستل||␣|||
 ايسلنډ|Iceland|a§i§s§ˈlə§ŋ§ɖ|ayslə́nḍ||
-ايغلو|igloo|§i§ɣ.§l§u|íğlu||
+ايغلو|igloo|›§i§ɣ.§l§u|íğlu||
 اينو||␣|||
 اپريدی||␣|||
 اپيم|opium|a.§p§i§m|apim||
@@ -211,7 +211,7 @@ autoExpandExamples.ps = `
 ايالت|district, province||iyālát|||ایالت
 اېخ|kneeling command for camel|ex|ex||
 اېسټونيا|Estonia|›§e§s§ˈʈ§o§n§j§ɑ|esṭónyā||
-اېموجي|emoji|e.§m§o.§d͡ʒ§i|emoji||
+اېموجي|emoji|›§e.§m§o.§d͡ʒ§i|emoji||
 اېکوادور|Ecuador|›§e§k§w§ɑ§ˈd§o§r|ekwādór||
 بابا||␣|||
 باد||␣|||
