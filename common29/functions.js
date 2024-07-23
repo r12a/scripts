@@ -15,7 +15,7 @@ access = {
 
 
 function addPageFeatures () {
-    if (traceSet.has('addPageFeatures') || traceSet.has('all')) console.log('Globals(','blockDirectoryName:',window.blockDirectoryName, 'langTag:',window.langTag, 'scriptSummaryTableName:',window.scriptSummaryTableName, 'orthogFilePath:',window.orthogFilePath,')')
+     //console.log('Globals(','blockDirectoryName:',window.blockDirectoryName, 'langTag:',window.langTag, 'scriptSummaryTableName:',window.scriptSummaryTableName, 'orthogFilePath:',window.orthogFilePath,')')
 
     //set accessibility defaults
     if (localStorage['docsAccess']) access = JSON.parse(localStorage['docsAccess']) 
@@ -1769,7 +1769,7 @@ function makeIndexLine (node) {
 
 
 function initialiseShowNames (node, base, target) {
-    if (traceSet.has('initialiseShowNames') || traceSet.has('all')) console.log('initialiseShowNames(',node, base, target,') Add onclick function to all .ex elements to display in panel')
+    console.log('initialiseShowNames(',node, base, target,') Add onclick function to all .ex elements to display in panel')
     // function will display character by character names for example in the panel
     // base (string), path for link to character detail
 
@@ -1796,8 +1796,6 @@ function initialiseShowNames (node, base, target) {
 	for (let i=0;i<listItems.length;i++) {
 		listItems[i].addEventListener('click', showCharDetailsEvent)
 		listItems[i].addEventListener('click', makeFootnoteIndex)
-		//listItems[i].addEventListener('click', showCharDetailsInPanel)
-		//listItems[i].addEventListener('mouseover', showCharDetailsInPanel)
 		listItems[i].addEventListener('mouseover', showCharDetailsEvent)
 		}
 	
@@ -2904,39 +2902,318 @@ function listSectionCharacters (section) {
 
 
 
-/*
-function listSectionCharactersX (section) {
-    charElems = document.getElementById(section).querySelectorAll('.codepoint bdi, .listItem')
-    charList = ''
-    //for (i=0;i<charElems.length;i++) charList += charElems[i].textContent
-    for (i=0;i<charElems.length;i++) {
-        if (charElems[i].className === 'listItem' && ! charElems[i].closest('figure').classList.contains('noindex'))  charList += charElems[i].textContent
-        else if (charElems[i].closest('.codepoint') && charElems[i].closest('.codepoint').classList !== null && ! charElems[i].closest('.codepoint').classList.contains('noindex'))  charList += charElems[i].textContent
+
+/* SHOW TRANSCRIPTIONS INLINE, RATHER THAN IN POPUP PANEL */
+
+
+function showCharDetailsInline (chars, clang, base, target, panel, list, translit, ipa, node) {
+    // open an article window after an example and fill it with character details
+    
+	if (typeof charDetails === 'undefined') return
+
+    // get the insertion point
+    insertPoint = node.closest('p, table, div, li, figure')
+
+    // create the article element & table outer
+    var panel = document.createElement('article') 
+	var table = document.createElement('table')
+	table.className = 'panel'
+	table.innerHTML = makeExampleArticleDetails(chars, clang, base, target, panel, list, translit, ipa, node)
+	panel.appendChild(table)
+    insertPoint.after(panel)
+	
+	expandCharMarkup()
+	addExamples(clang)
+	//convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(table, window.blockDirectoryName, 'c')
+    
+    // set event trigger on all .ipa elements - opens description box on click
+    var ipaNodes = document.querySelectorAll(".ipa")
+    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+	return false
+	}
+
+
+
+function makeExampleArticleDetails (chars, clang, base, target, panel, list, translit, ipa) {
+    //console.log('makeExampleArticleDetails (chars=',chars, 'clang=',clang, 'base=',base, 'target=', target, 'panel=',panel, 'list=',list, 'translit=',translit, 'ipa=',ipa,')\n\tDisplay characters in an example (like in the panel)')
+    // called by showCharDetailsInline
+    // chars (string), alt text of example
+    // clang (string), lang attribute value of example img
+    // base (string), path for link to character detail
+    // target (string), name of the window to display results in, usually 'c' or ''; given the latter, link goes to same window
+    // list (string), if not null, indicates that spaces and nbsp should be ignored
+    // local out charArray chardiv charimg thename thelink hex dec blockname blockfile c
+    // global charData pickerDir
+    // calls getScriptGroup
+
+    // to show per-grapheme ipa the ipa transcriptions should have ï¿½ as grapheme separator (and syllables should be separated by '.'). Unpronounced segments are represented by ï¿½ (en hyphen).  Monosyllabic words don't need any extra stuff.
+
+    var dir, characterList, graphemes, ptr, transcriptions, gloss, charArray, out
+	var chardiv, charimg, thename, thelink, hex, dec, blockname, blockfile
+
+	// check whether the calling page has set a base and target window: if not base, point to UniView
+	if(typeof base === 'undefined' || base === '') { base = '../../uniview/index.html?char=' }
+	if(typeof target === 'undefined') { target = 'c' }
+	if(typeof list === 'undefined') { list = null }
+	if(typeof translit === 'undefined') { translit = '' }
+	  
+	// clear and show the panel
+	/*panel.innerHTML = ''
+	panel.style.display = 'block'*/
+    dir = ''
+    if (typeof window.direction === 'string') dir = window.direction
+    else if (typeof template !== 'undefined' && typeof template.direction === 'string') dir = template.direction
+    
+    
+    
+    out = '<tr>'
+    
+    
+    out += `<th class="cdChar" onclick="this.closest('article').remove()"><span class="exCharClose">x</span></th>`
+    
+    
+    // add the links
+    out += `<td class="cData">`
+    out += `<p class="notesLink">`
+    
+    out += `<a href="javascript:void(0)" onclick="copyPanelList(); return false;" style="cursor:copy;">Copy list</a>`
+    out += `<br>`
+    
+    out += `<a href="javascript:void(0)" onclick="openExportWindow('../../app-analysestring/index.html?chars=${ chars }'); return false;">Details</a>`
+    out += `<br>`
+    
+    out += `<a href="javascript:void(0)" onclick="openExportWindow('../../uniview/index.html?charlist=${ chars }')">UniView</a>`
+    out += `<br>`
+    
+    out += `<a href="javascript:void(0)" onclick="openExportWindow('../../scripts/apps/graphemes/index.html?gc=${ chars }')">Graphemes</a>`
+    out += `<br>`
+
+    if (window.pickerDir) {
+        out += `<a href="javascript:void(0)" onclick="openExportWindow('../../pickers/${ window.pickerDir }/index.html?text=${ chars }')">Character App</a>`
+        out += `<br>`
         }
-    charList = charList.replace(/\u25CC/g,'')
-    charList = charList.replace(/\u200D/g,'')
-    charList = charList.replace(/\u0020/g,'')
-    charList = charList.replace(/\u00A0/g,'')
-    charList = charList.replace(/\u24D8/g,'')
+    
+    // add a link to the _vocab page
+    if (typeof window.languageName === 'undefined') var fragid = ''
+    else fragid = '#'+window.languageName
+
+    // figure out where to find the url for the _vocab page
+    var url
+    if (typeof template !== 'undefined' && typeof template.vocablocation === 'string')  url = `../../scripts/${ template.vocablocation }.html`
+    
+    else url = `${ window.langTag }_vocab`
+    
+    if (typeof window.removeVowels === 'function') chars = removeVowels(chars)
+
+    out += `<a href="javascript:void(0)" onclick="openExportWindow('${ url }.html?q=${ chars }')">Term list</a>`
+    out += `<br>`
+
+    out += `</p>`
+
+
+
+    // make the character gloss
+	out += '<div id="ruby">'
+	
+    // get any IPA data provided - should be pre-separated for graphemes by ï¿½
+    if (typeof ipa === 'string' && ipa !== '') ipa = ipa.split('\u00A7')
+    else ipa = false
+    
+	// add the example to the panel as a title
+    characterList = [...chars]
+    graphemes = []
+    ptr = -1
+    for (var c=0;c<characterList.length;c++) {
+        if (window.marks && window.marks.has(characterList[c]) && c !== 0) graphemes[ptr] += characterList[c]
+        else {
+            ptr++
+            graphemes[ptr] = characterList[c]
+            }
+        }
+
+    transcriptions = []
+    for (var t=0;t<graphemes.length;t++) {
+        transcriptions[t] = transliteratePanel(graphemes[t], clang)
+        }
+    
+    if (traceSet.has('showNameDetails')) {
+        console.log('graphemes: ',graphemes)
+        console.log('transcriptions: ',transcriptions)
+        console.log('ipa: ',ipa)
+        }
+
+
+    // draw the glosses
+    if (location.toString().includes('picker')) var iconURL = '../../scripts/common29/icons/copytiny.svg'
+    else iconURL = '../common29/icons/copytiny.svg'
+    gloss = '<div class="multilineGlossedText">'
+    for (t=-1;t<graphemes.length;t++) {
+        if (t===-1) {
+            gloss += `<div class="stack"><span class="rt translitGloss" lang="und-fonipa" title="Transliteration of the text."><img src="${ iconURL }" class="copyIcon" onclick="copyExamplePanelText(this, '.translitGloss')" title="Copy the transliteration." alt="Copy transliteration"></span><span class="rb"><img src="${ iconURL }" onclick="copyExamplePanelText(this, '.rb')" class="copyIcon" title="Copy the text." alt="Copy text"></span>`
+            if (ipa !== false) {
+                if (ipa[t+1]) gloss += `<span class="rt IPAGloss" lang="und-fonipa" title="IPA transcription of the text."><img class="copyIcon" src="${ iconURL }" onclick="copyExamplePanelText(this, '.IPAGloss')" title="Copy the IPA transcription." alt="Copy IPA"></span>`
+                else gloss += `<span class="rt">&nbsp;</span>`
+                }
+            gloss += `</div>`
+            }
+        else {
+            gloss += ` <div class="stack"><span class="rt translitGloss" lang="und-fonipa">${ transcriptions[t] }</span><span class="rb">${ graphemes[t] }</span>`
+            if (ipa !== false) {
+                if (ipa[t]) gloss += `<span class="rt IPAGloss" lang="und-fonipa">${ ipa[t] }</span>`
+                else gloss += `<span class="rt">&nbsp;</span>`
+                }
+            gloss += `</div>`
+            }
+        }
+    gloss += '</div>'
+
+	//out += `<div dir="${ dir }" class="ex" lang="${ clang }" id="title">${ gloss }</div>`
+    // removing the alternating direction so that IPA reads better
+	//out += `<div dir="${ window.blockDirection }" class="ex" lang="${ clang }" id="title">${ gloss }</div>`
+	out += `<div dir="ltr" class="glossContainer" lang="${ clang }" id="title">${ gloss }</div>`
+    
         
-    charArray = [... charList]
-    uniqueSet = new Set(charArray)
-    charArray = [...uniqueSet]
-    charArray.sort()
-    charList = charArray.join('\u2423')
     
-    //console.log(charList)
+    // add instructions line
+	out += '<p class="advice" style="line-height:1;">Glossed lines are transliteration/text/IPA.<br>Click on character names below for detailed information.</p>'
+	
+	// create a list of characters
+	if (list) chars = chars.replace(/ /g,'').replace(/\u00A0/g,'') // remove spaces if list
+    charArray = [...chars]
     
-    document.getElementById(section).querySelector('.sectionCharacterList').innerHTML = `
-    <summary>Characters described in this section</summary>
-    <figure class="characterBox auto noexpansion small" data-cols="ipa" style="margin: 0 1rem 0 0; font-size:1rem; font-style:  normal;">${ charList }</figure>
-    `
+    if (traceSet.has('showNameDetails')) console.log('charArray: ',charArray)
+
+    out += '<div id="listOfCharacters">'
+	for (var c=0; c<charArray.length; c++) { 
+        dec = charArray[c].codePointAt(0)
+        hex = dec.toString(16)
+        while (hex.length < 4) { hex = '0'+hex }
+        hex = hex.toUpperCase()
+ 
+        //if (traceSet.has('showNameDetails')) console.log('charData: ',charData)
+        //if (traceSet.has('showNameDetails')) console.log('charArray[c]: ',charArray[c])
+
+		if (charData[charArray[c]]) {
+            blockname = getScriptGroup(dec, false)
+            blockfile = getScriptGroup(dec, true)
+            //console.log(dec,blockfile)
+            isInBlock = spreadsheetRows[charArray[c]]?true:false
+            //isInBlock = spreadsheetRows[charArray[c]]?spreadsheetRows[charArray[c]][cols['block']]:''
+
+            out += '<div class="panelCharacter">'
+			//if (blockfile) {
+			if (isInBlock) {
+				//out += `<a target="${ target }" href="`
+                // undoing this change which put characters in the list because imgs are needed in order to make the list to copy to clipboard
+                // out += `<span style="display:inline-block; font-size:1.5rem; min-width: 2rem;">${ charArray[c] }</span>`
+                out += `<img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }" style="height:2rem;">`
+                
+                // FOR ORTHOGRAPHY NOTES
+                if (document.querySelector('.useBlockExamples')) {
+                    out += `<a href="javascript:void(0)" onclick="showCharDetailsInPanel(event)"> U+${ hex } ${ charData[charArray[c]] }</a>`
+                    //out += `<a href="javascript:void(0)" onclick="showCharDetailsInPanel('${ charArray[c] }', '${ clang }', '','','','','', '${ ipa }', this)"> U+${ hex } ${ charData[charArray[c]] }</a>`
+                    }
+   //(chars, clang, base, target, panel, list, translit, ipa, node)             
+                // FOR TERMS LISTS
+                else if (document.querySelector('.termListApp')) {
+                    out += `<a target="c" href="../../scripts/${ blockfile }/${ terms.language }-characters.html#char${ hex }"> U+${ hex } ${ charData[charArray[c]] }</a>`
+                    console.log('blockfile',terms.language )
+                    }
+
+                else {
+                    out += `<a target="c" href="`
+                    //if (base === '../../uniview/index.html?char=') out += base+hex
+                    //else out += '../../scripts/'+blockfile+'/block.html#char'+hex useBlockExamples
+                    out += '../../scripts/'+blockfile+'/block.html#char'+hex
+                    out += '">'
+                    //out += '<img src="'+'../../c/'+blockname+"/"+hex+'.png'+'" alt="'+charArray[c]+'">'
+                    out += ' U+'+hex + ' '+charData[charArray[c]]
+                    out += '</a>\n'
+                    }
+				}
+			else {
+				out += '<img src="'+'../../c/'+blockname+"/large/"+hex+'.png'+'" alt="'+charArray[c]+'" style="height:2rem;">'
+				out += ' U+'+hex+' '+charData[charArray[c]]+'\n'
+				}
+			}
+		else {
+			//out += `<a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/Basic_Latin/005F.png" alt="U+${ hex }"> U+${ hex } No data for this character</a>`
+			out += `<div class="panelCharacter"><a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }"> U+${ hex } No data for this character</a></div>`
+			}
+		out += '</div>'
+		}
+	out += '</div>'
+
+    out += `</td>`
+    out += `<tr>`
     
-    replaceStuff(document.getElementById(section).querySelector('figure'))
-    listItems = document.getElementById(section).querySelectorAll('.listItem')
-	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
+    return out
+	}
+
+
+
+
+
+
+function makeArticleDetails (chars) {
+    if (traceSet.has('makeDetails')) console.log('makeDetails(', 'chars:'+chars, ')\n\tAdd  details for character(s) below a block.\n\tGLOBALS notesLangtag:'+window.notesLangtag, 'blockDirectoryName:'+window.blockDirectoryName)
+    
+    // global charDetails spreadsheetRows cols
+    // local out charArray i lang dir
+
+    if (typeof charDetails === 'undefined') return
+
+    var out = ''
+    var charArray = [... chars]
+    var lang = window.notesLangtag
+    var dir = window.blockDirectoryName
+
+    for (var i=0;i<charArray.length;i++) {
+        if (spreadsheetRows[charArray[i]]) {
+            // make title to side
+            out += `<tr><th class="cdChar" onclick="this.closest('article').remove()"><span class="ex" lang="${ lang }">${ charArray[i] }</span><br><span class="cdCharClose">x</span></th>`
+            
+            // add the full details
+            out += '<td class="cdData">'
+            out += printDetails(charArray[i])
+            out += '</td></tr>'
+            }
+        }
+
+    return out
     }
-*/
+
+
+
+
+function closeArticle (node) {
+    node.parentNode.remove()
+    }
+
+function copyExamplePanelText (node, type) {
+console.log(node)
+    var text = node.closest('.glossContainer').querySelectorAll(type)
+    var out = ''
+    for (var i=0;i<text.length;i++) out += text[i].textContent
+    if (type === '.IPAGloss') out = out.replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
+    navigator.clipboard.writeText(out)
+    
+    document.getElementById('copyNotice').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('copyNotice').style.display = 'none'
+      }, '500')
+	}
+
+
+
+
+function closeArticle (node) {
+    node.parentNode.remove()
+    }
 
 
 

@@ -2,6 +2,7 @@
 /* globals autoExpandExamples, egList */
 
 
+
 ch = ''
 charData = {}
 traceSet = new Set([])
@@ -1069,3 +1070,7 @@ function copyPanelText (type) {
 	document.execCommand('selectAll')
 	document.execCommand('copy')
 	}
+
+function setFootnoteRefs () {}
+function initialiseShowNames () {}
+
