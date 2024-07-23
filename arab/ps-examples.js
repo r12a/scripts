@@ -180,7 +180,7 @@ autoExpandExamples.ps = `
 اوشه||␣|||
 اولس||␣|||
 اوم||␣|||
-اومامي|umami|›§u.§m§ɑ.§m§i|umāmi||
+اومامي|umami|›§u.§m§ɑ.§m§i|umāmi|اُومامي|
 اوولس|seventeen|›§u§ˈwə§l§a§s|uwə́las||
 اووه||␣|||
 اويا||␣|||
@@ -251,6 +251,7 @@ autoExpandExamples.ps = `
 بدړ|||||
 بدکار|||||
 برابر|even, equal|ba§r§ɑ§ˈba§r|barābár|برابر|
+بَرابَر|even, equal|ba§r§ɑ§ˈba§r|barābár|برابر|
 براونه|||||
 برايي|last night|bə§ˈr§ɑ§ˈj§i|bərāyi||
 بربر|||||
@@ -605,14 +606,14 @@ autoExpandExamples.ps = `
 سمندر||␣|||
 سنډا|buffalo|sa§n.§ˈɖ§ɑ|sanḍâ||
 سهم|||||
-سور||␣|||
+سور|red|sur|sur||
 سورلنډی||␣|||
-سورنا|||||
+سورنا|a woodwind instrument||surná||
 سوماليا||␣|||
 سومر||␣|||
 سوټک||␣|||
 سوړ|cold|s§o§ɻ|soṛ||
-سوۍ|||||
+سوۍ|rabbit||saway||
 سياست|||||
 سياسي|||||
 سيلۍ||␣|||
@@ -800,7 +801,7 @@ autoExpandExamples.ps = `
 لوړل||␣|||
 لوښي||␣|||
 لوی|big, large|l§o§i|loy||Afghan orthography
-لوے|big, large|l§o§i|loy||Afghan orthography
+لوے|big, large|l§o§i|loy||Peshawar orthography
 لوېديځ||␣|||
 ليدل||␣|||
 ليکوال||␣|||
@@ -862,7 +863,7 @@ autoExpandExamples.ps = `
 مشعل|torch||maš'ál|مَشْعَل|
 مشغول|||||
 مصر|Egypt|mɪ§s§ɾ|misr||
-معجزه|miracle||mu'jizá|مُعْجِزَہ|
+معجزه|miracle||mu'jizá|مُعْجِزَه|
 معدن|mineral|m§ɑ§d̪ə§n|mâdën||
 مفهوم|sense, concept||mafhúm||
 مقاله|||||
@@ -1193,7 +1194,7 @@ autoExpandExamples.ps = `
 ځمکه|||||
 ځمکپوهنه||␣|||
 ځنډ||␣|||
-ځنګل|jungle|d͡zə§ŋ§ɡə§l|źëngël||
+ځنګل|jungle|d͡zə§ŋ§ɡə§l|źëngël|ځٙنْګٙل|
 ځوان||␣|||
 ځواک||␣|||
 ځيرک||␣|||
@@ -1459,13 +1460,28 @@ autoExpandExamples.ps = `
 termLists = [
 
 {
-"title":"Wiktionary, Pashto lemmas",
-"url":"https://en.wiktionary.org/wiki/Category:Pashto_lemmas",
+"title":"Pashto Wikipedia",
+"url":"https://ps.wikipedia.org/wiki/%D9%84%D9%88%D9%85%DA%93%DB%8C_%D9%85%D8%AE",
 },
 
 {
-"title":"Pashto Wikipedia",
-"url":"https://ps.wikipedia.org/wiki/%D9%84%D9%88%D9%85%DA%93%DB%8C_%D9%85%D8%AE",
+"title":"BBC News پښتو",
+"url":"https://www.bbc.com/pashto",
+},
+
+{
+"title":"VOA",
+"url":"https://www.pashtovoa.com/",
+},
+
+{
+"title":"wahdatnews.tv",
+"url":"https://wahdatnews.tv/",
+},
+
+{
+"title":"Wiktionary, Pashto lemmas",
+"url":"https://en.wiktionary.org/wiki/Category:Pashto_lemmas",
 },
 
 {
