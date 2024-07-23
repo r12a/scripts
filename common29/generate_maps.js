@@ -62,6 +62,81 @@ function gatherData () {
     // extract the map items
     ipaData = {}
     unwanted = new Set(['d','u','o','a'])
+    var status, shape, hex
+    
+    for (row in spreadsheetRows) {
+        if (spreadsheetRows[row][cols.ipaLoc]) {
+            //console.log(spreadsheetRows[row][cols.ipaLoc])
+            
+            if (spreadsheetRows[row][cols.status] && unwanted.has(spreadsheetRows[row][cols.status])) continue
+            
+            items = spreadsheetRows[row][cols.ipaLoc].split(' ')
+            for (i=0;i<items.length;i++) {
+                console.log(items[i])
+                if (typeof ipaData[items[i]] === 'undefined') {
+                    ipaData[items[i]] = []
+                    ipaData[items[i]].push( row )
+                    }
+                else {
+                    ipaData[items[i]].push( row )
+                    }
+                }
+            }
+        }
+    
+    // create the output
+    out = ''
+    for (phone in ipaData) {
+        for (i=0;i<ipaData[phone].length;i++) {
+            char = ipaData[phone][i]
+            
+            if (ipaData[phone].length > 1 && i < ipaData[phone].length-1) out += `<div class="mapItem initial`
+            else out += `<div class="mapItem`
+            if (spreadsheetRows[char] && spreadsheetRows[char][cols.status]) status = spreadsheetRows[char][cols.status]
+            else status = ''
+            if (status.includes('r') || status.includes('l')) out += ' uncommon'
+            out += `">\n`
+        
+            if (ipaData[phone].length > 1 && i > 0) out += `<div class="phone">&nbsp;</div>\n`
+            else out += `<div class="phone"><span class="ipa">${ phone.toLowerCase() }</span></div>\n`
+            //out += `<div class="posn">&nbsp;</div>\n`
+        
+            out += `<div class="col1">\n`
+            out += `<p><span class="ch">${ char }</span> <b></b></p>\n`
+            out += `<p class="example"><span class="eg" lang="${ lang }">xxx</span></p>\n`
+            out += `</div>\n`
+            
+            // add shaped forms if shape column exists
+            if (spreadsheetRows[char] && spreadsheetRows[char][cols.shape]) shape = spreadsheetRows[char][cols.shape]
+            else shape = ''
+            
+            hex =char.codePointAt(0).toString(16).toUpperCase()
+            while (hex.length < 4) hex = '0'+hex
+
+            if (shape === '4') {
+                out += `<div class="col2">\n<p><span class="shaping" lang="ps"><span class="hx noname">${ hex }</span><span class="hx fina noname">${ hex }</span><span class="hx medi noname">${ hex }</span><span class="hx init noname">${ hex }</span>⏴</span></p>`
+                }
+
+            if (shape === '2') {
+                out += `<div class="col2">\n<p><span class="shaping" lang="ps"><span class="hx init noname">${ hex }</span><span class="hx fina noname">${ hex }</span>⏴</span></p>`
+                }
+            out += `\n</div>\n` // end of phone
+            out += `</div>\n\n` // end of mapitem
+            }
+        }
+    
+    return out
+    }
+
+
+
+
+
+function gatherDataX () {
+    // extract the map items
+    ipaData = {}
+    unwanted = new Set(['d','u','o','a'])
+    var status, shape, hex
     
     for (row in spreadsheetRows) {
         if (spreadsheetRows[row][cols.ipaLoc]) {
@@ -97,8 +172,26 @@ function gatherData () {
         for (i=0;i<ipaData[entry].length;i++) {
             out += `<p><span class="ch">${ ipaData[entry][i] }</span></p>\n`
             out += `<p class="example"><span class="eg" lang="${ lang }">xxx</span></p>\n`
+            
+            //console.log('shape',spreadsheetRows[ipaData[entry][i]][cols.shape])
+            // add shaped forms if checkbox selected
+            if (spreadsheetRows[ipaData[entry][i]] && spreadsheetRows[ipaData[entry][i]][cols.shape]) shape = spreadsheetRows[ipaData[entry][i]][cols.shape]
+            else shape = ''
+            console.log('shape',shape)
+            
+            hex =ipaData[entry][i].codePointAt(0).toString(16).toUpperCase()
+            while (hex.length < 4) hex = '0'+hex
+
+            if (shape === '4') {
+                out += `</div>\n<div class="col2">\n<p><span class="shaping" lang="ps"><span class="hx fina noname">${ hex }</span><span class="hx medi noname">${ hex }</span><span class="hx init noname">${ hex }</span>⏴</span></p>`
+                }
+
+            if (shape === '2') {
+                out += `</div>\n<div class="col2">\n<p><span class="shaping" lang="ps"><span class="hx fina noname">${ hex }</span><span class="hx init noname">${ hex }</span>⏴</span></p>`
+                }
             }
-        out += `</div>\n`
+        out += `\n</div>\n`
+
         out += `</div>\n\n`
         }
     
