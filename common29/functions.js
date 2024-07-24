@@ -1358,6 +1358,18 @@ function replaceStuff (node) {
     // populate the chars array with characters & gather additional info
     //chars = node.dataset.chars.split('␣')
     chars = node.textContent.split('␣')
+    
+    // remove ignorable characters from the list
+    if (node.dataset.ignore) {
+        ignorables = node.dataset.ignore.split(',')
+        for (c=0;c<chars.length;c++) {
+            for (g=0;g<ignorables.length;g++) {
+                var re = new RegExp(ignorables[g],'g')
+                chars[c] = chars[c].replace(re,'')
+                }
+            }
+        }
+
     if (typeof node.dataset.cols === 'undefined') var info = ''
     else info = node.dataset.cols
     if (node.className.includes('noexpansion')) noexpansion = true // don't show the curved arrow
@@ -1368,7 +1380,7 @@ function replaceStuff (node) {
     else if (node.dataset.select) showFirst = true
     if (node.className.includes('vowelcluster')) var vowelcluster = true // this should be phased out
     else vowelcluster = false
-    if (node.dataset.ignore) {
+/*    if (node.dataset.ignore) {
         var ignorableChar = node.dataset.ignore.codePointAt(0)
         var ignorableCh = node.dataset.ignore
         }
@@ -1376,6 +1388,7 @@ function replaceStuff (node) {
         ignorableChar = ''
         ignorableCh = ''
         }
+*/
     if (node.dataset.notes) {
         var notes = node.dataset.notes.split(',')
         }
@@ -1456,10 +1469,10 @@ function replaceStuff (node) {
         else char = chars[i]
         
         // remove the character identified by data-ignore
-        if (ignorableCh) {
-            var re = new RegExp(ignorableCh,'g')
-            char = char.replace(re,'')
-            }
+        //if (ignorableCh) {
+        //    var re = new RegExp(ignorableCh,'g')
+        //    char = char.replace(re,'')
+        //    }
 
         // create an id attribute for the listPairs in the index
         if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
@@ -1577,7 +1590,7 @@ function replaceStuff (node) {
             charList = [... chars[i]]
             for (let z=0;z<charList.length;z++) {
                 var hex = charList[z].codePointAt(0)
-                if (ignorableChar && ignorableChar === hex) continue // ignore specified character
+                //if (ignorableChar && ignorableChar === hex) continue // ignore specified character
                 if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
                 hex = hex.toString(16).toUpperCase()
                 while (hex.length < 4) hex = '0'+hex
