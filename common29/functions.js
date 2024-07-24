@@ -1349,7 +1349,7 @@ function replaceStuff (node) {
     var noexpansion = false
     var nolist = false
     var ipaplus = ''
-    //console.log(node)
+    //console.log('replacing',node)
 
     // check whether this is an index line
     if (node.classList.contains('indexline')) var indexline = true
@@ -1359,14 +1359,12 @@ function replaceStuff (node) {
     //chars = node.dataset.chars.split('␣')
     chars = node.textContent.split('␣')
     
-    // remove ignorable characters from the list
+    // create a set of ignorable characters from data-ingore
+    var ignoreset = new Set([])
     if (node.dataset.ignore) {
         ignorables = node.dataset.ignore.split(',')
-        for (c=0;c<chars.length;c++) {
-            for (g=0;g<ignorables.length;g++) {
-                var re = new RegExp(ignorables[g],'g')
-                chars[c] = chars[c].replace(re,'')
-                }
+        for (g=0;g<ignorables.length;g++) {
+            ignoreset.add(ignorables[g])
             }
         }
 
@@ -1589,6 +1587,7 @@ function replaceStuff (node) {
             out += '<span class="listUnum">'
             charList = [... chars[i]]
             for (let z=0;z<charList.length;z++) {
+                if (ignoreset.has(charList[z])) continue // ignore hex for this character
                 var hex = charList[z].codePointAt(0)
                 //if (ignorableChar && ignorableChar === hex) continue // ignore specified character
                 if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
