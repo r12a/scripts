@@ -54,7 +54,7 @@ reflist = {
 "authors": "Lorna A. Priest, Jon Coblentz",
 "title":"Documenting a fallback glyph for Tifinagh Consonant Joiner",
 "date": "2011",
-"url":"http://std.dkuug.dk/JTC1/SC2/WG2/docs/n4069.pdf",
+"url":"https://www.unicode.org/wg2/docs/n4069.pdf",
 "lang": new Set(['zgh']),
 "reviewed":false
 },
@@ -63,7 +63,7 @@ reflist = {
 "authors": "Lorna A. Priest, Jon Coblentz, Andrew Savage",
 "title":"Proposal to encode additional Tifinagh characters",
 "date": "2008",
-"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3482.pdf",
+"url":"https://www.unicode.org/wg2/docs/n3482.pdf",
 "lang": new Set(['zgh']),
 "reviewed":false
 },
@@ -79,12 +79,11 @@ reflist = {
 
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
-"date": "2020",
+"title":"The Unicode Standard, Version 16.0",
+"date": "2024",
 "sub":"Chapter 19.3: Africa, Tifinagh",
-"pages":"769-771",
-"isbn":"978-1-936213-16-0.",
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch19.pdf",
+"isbn":"978-1-936213-34-4",
+"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-19/#G43184",
 "lang": new Set(['zgh']),
 "reviewed":false
 },
