@@ -142,6 +142,15 @@ reflist = {
 "reviewed":false
 },
 
+"snima": {
+"authors": "Service de Normalisation Industrielle Marocaine (SNIMA)",
+"title":"Projet de norme marocaine, Jeux de caractères, Alphabet tifinaghe",
+"date": "2004",
+"url":"https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf",
+"lang": new Set(['zgh']),
+"reviewed":true
+},
+
 
 }
 
