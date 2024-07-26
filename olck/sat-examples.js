@@ -284,20 +284,32 @@ autoExpandExamples.sat = `
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 `
+
+
+
+
+
+// automatically creates Online Resources section, if markup is uncommented in xx.html
+
+termLists = [
+
+{
+"title":"Wiktionary, Santali lemmas",
+"url":"https://en.wiktionary.org/wiki/Category:Santali_terms_with_IPA_pronunciation",
+},
+
+{
+"title":"Austronesian Basic Vocabulary Database, Santali",
+"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=737",
+"notes":"Latin only",
+},
+
+{
+"title":"Living Dictionaries",
+"url":"https://livingdictionaries.app/sora/entries/list",
+"notes":"Latin only, but audio and phonemic transcriptions.",
+},
+
+]
 
