@@ -28,7 +28,6 @@
 
 <script src="ks-langdata.js"></script>
 <script src="ks-examples.js"></script>
-<script src="ks-translit.js"></script>
 <script src="ks-globals.js"></script>
 </head>
 
@@ -36,6 +35,12 @@
 <header>
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+
+<style>
+.mapItem b .codepoint bdi[lang], .mapItem b .codepoint span[lang] {
+    font-size: 1rem;
+}
+</style>
 </header>
 
 
@@ -62,7 +67,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->7 July, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->4 August, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -81,7 +86,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Kashmiri (Nastaliq Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->07-Jul-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ks">https://r12a.github.io/scripts/arab/ks</a></small></p>
+<p class="refLine"><small>Richard Ishida, Kashmiri (Nastaliq Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->04-Aug-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/ks">https://r12a.github.io/scripts/arab/ks</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -171,11 +176,11 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p class="addToConsonants">Unlike other Arabic orthographies, <span class="hx circle">0652</span>  (<span class="name">jazm</span>),  normally used to show vowel absence, is placed over the <em>second</em> consonant in an <a href="#onsets" class="seclink">onset cluster</a> (such as <span class="ipa">tr</span>). That letter may therefore carry both the <span class="name">jazm</span> diacritic and a vowel diacritic, which is quite unusual.</p>
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">Kashmiri is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> where 16 vowel sounds (far more than in Arabic or Persian) are written using  a mixture of  <a href="#combiningV" class="seclink">10 combining marks</a> and <a href="#vletter" class="seclink">10 letters</a>.  Unlike Arabic, Persian, and Urdu, all vowel diacritics are always visible in Kashmiri texts. Representation of vowel sounds is complicated  because the code points used to represent a given vowel typically differ according to its position within a word.</p>
+<p class="addToVowels">Kashmiri is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> where 16 vowel sounds (far more than in Arabic or Persian) are written using  a mixture of  <a href="#combiningV" class="seclink">10 combining marks</a> and <a href="#vletter" class="seclink">10 letters</a>.  Unlike Arabic, Persian, and Urdu, all vowel diacritics are always visible in Kashmiri texts. Representation of 3 vowel sounds is complicated  by the use of different code points   in medial vs. final position.</p>
 
 <p class="addToVowels">The distinction between  <a href="../arab/homographs.html#ijam_tashkil">ijam vs. tashkil</a> has a bearing on several Kashmiri graphemes, and the choice between precomposed and decomposed realisations of a vowel letter can be complicated (see <a class="secref">encoding</a>).</p>
 
-<p>Word-initial <a class="seclink" href="#standalone">standalone</a> vowels are preceded by or attached to either <span class="hx">0627</span> or <span class="hx">0639</span>.</p>
+<p class="addToVowels">Word-initial <a class="seclink" href="#standalone">standalone</a> vowels are preceded by or attached to either <span class="hx">0627</span> or <span class="hx">0639</span>.</p>
 
 <p class="addToVowels">The <span class="name">jazm</span> is  used over a word-medial <span class="hx">0646</span> to indicate <a href="#nasalisation" class="seclink">nasalisation</a> of a preceding vowel sound. Apart from this use and that for medial consonants, it is not typically used to indicate <a href="#novowel" class="seclink">vowel absence</a>.</p>
 
@@ -1060,13 +1065,6 @@ Affricate </th>
 
 <p class="instructions">For a question about the ordering of characters in final <span class="trans">e</span>, see <a class="secref">final_e</a>. For questions about whether to use precomposed or decomposed letters, see <a class="secref">encoding</a>.</p>
 
-<p>Below is the full set of characters needed to represent the Kashmiri vowels, including decompositions and compositions. Several of the characters   are  used in combinations to represent a given vowel sound, in a given position. Whether a vowel is represented using a precomposed or decomposed form is not straightforward (see <a class="secref">encoding</a>).</p>
-
-
-
-<figure class="characterBox auto" data-cols="trans">ی␣إ␣ے␣و␣ۄ␣ٲ␣أ␣آ␣ا␣ع␣ن␣ں</figure>
-
-<figure class="characterBox auto" data-cols="trans">ِ␣ٕ␣ٟ␣ُ␣ٚ␣ٔ␣َ␣ٓ␣ٖ␣ٗ␣ْ</figure>
 
 
 
@@ -1074,14 +1072,6 @@ Affricate </th>
 <!--figure class="characterBox auto"  data-cols="ipa,trans,transc">ی␣ِ␣إ␣ٕ␣ٟ␣ُ␣ے␣ٚ␣و␣ۄ␣ٲ␣أ␣ٔ␣آ␣ا␣َ␣ٓ␣ٖ␣ٗ␣ع</figure-->
 
 <!--p class="observation"><span class="leadin">Observation:</span> <span class="ipa">e</span>, and its joining forms, is not particularly clear from the sources. Wikipedia originally used <span class="codepoint noindex" translate="no"><span lang="ks" dir="rtl">&#x06CE;</span> [<a href="block#char06CE"><span class="uname">U+06CE ARABIC LETTER YEH WITH SMALL V</span></a>]</span> throughout, but now uses a combination of that and YEH BAREE, however it shows the initial form without ALEF. Daniels and LOC show a <span class="uname">YEH</span> with what looks like a combining breve above for the initial and medial forms, and <span class="codepoint noindex" translate="no"><span lang="ks" dir="rtl">&#x06D2;</span> [<a href="block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span> with the same diacritic above for final and isolate.</p-->
-
-<section id="precomposed_hamza">
-<h4>Precomposed  vs. decomposed characters</h4>
-
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">إ␣أ␣آ␣ؤ␣ۂ</figure>
-
-<p>The characters just above are vowels or consonants followed by a vowel  that Unicode represents in <a class="termref" href="../glossary/#nfc">NFC-normalised</a> text as atomic characters, but that normalise in <a class="termref" href="../glossary/#nfd">NFD</a> to a code point sequence. Generally, the precomposed form is preferred, and more common, but they are canonically equivalent. These are therefore included in the Kashmiri repertoire for representing those sound combinations.</p>
-</section>
 </section>
 
 
@@ -1095,21 +1085,28 @@ Affricate </th>
 
 
 <section id="dependentV">
-<h3>Vowel basics</h3>
+<h3>Post-consonant vowels</h3>
+<p>Kashmiri is an alphabet where 16 vowel sounds (far more than in Arabic or Persian) are written using a mixture of 10 combining marks and 10 letters. Unlike Arabic, Persian, and Urdu, all vowel diacritics are always visible in Kashmiri texts. Representation of 3 vowel sounds is complicated by the use of different code points in medial vs. final position.</p>
+
+<p>The distinction between ijam vs. tashkil has a bearing on several Kashmiri graphemes, and the choice between precomposed and decomposed realisations of a vowel letter can be complicated.</p>
 
 
 
+<section id="plainvowels">
+<h4>Plain vowels</h4>
 
 
+<p>Kashmiri uses the following for basic mappings between vowel sounds and code points.</p>
 
-<section id="combiningV">
-<h4>Combining marks used for vowels</h4>
+<!--<figure class="characterBox auto" data-ipa="i,iː,ɨ,ɨː,u,uː,-e-,-e,-eː-,-eː,o,oː,ə,əː,ɔ,ɔː,a,aː"  data-cols="trans,transc">ِ␣یٖ␣ٕ␣ٟ␣ُ␣وٗ␣یٚ␣ےٚ␣ی␣ے␣وٚ␣و␣ٔ␣ٲ␣ۄ␣ۄا␣َ␣ا</figure>
+-->
+<figure class="characterBox auto" data-ipa="i,-iː-,-iː,ɨ,ɨː,u,uː,-e-,-e,-eː-,-eː,o,oː,ə,əː,ɔ,ɔː,a,aː"  data-cols="trans,transc">ِ␣یٖ␣ی␣ٕ␣ٟ␣ُ␣وٗ␣یٚ␣ےٚ␣ی␣ے␣وٚ␣و␣ٔ␣ٲ␣ۄ␣ۄا␣َ␣ا␣</figure>
 
-<p>Kashmiri uses the following combining marks for vowels.</p>
+<p>Six of the above vowel sounds are represented by a combination of letter and diacritic or by a combination of letters.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ِ␣ٖ␣ٕ␣ٟ␣ُ␣ٚ␣ٔ␣َ␣ٗ␣ٓ</figure>
+<p>The sound <span class="ipa">eː</span> uses different shapes for the medial and final representations, which are encoded in Unicode using separate characters: <span class="ch">ی</span> for word-medial vowels, and <span class="ch">ے</span> for word-final vowels. The short vowel works in the same way.</p>
 
-<p><span class="hx">0653</span> only occurs in decomposed text. All the rest appear as separate code points, although a few may also, in some cases, be combined with a base as an atomic character. Where a vowel is indicated in the IPA, the mark can produce that vowel on its own, whereas the others only occur in combination with other letters.</p>
+<p>The sound <span class="ipa">iː</span> doesn't use introduce a new code point for medial vs. final representations, but the word-final spelling drops the diacritic <span class="hx circle">0656</span>.</p>
 </section>
 
 
@@ -1118,17 +1115,16 @@ Affricate </th>
 
 
 
+<section id="precomposed_hamza">
+<h4>Precomposed  vs. decomposed characters</h4>
 
+<p class="info">Kashmiri uses <span class="hx circle">0654</span> to represent the vowel <span class="ipa">ə</span>. Since it represents a vowel, this should normally be typed and encoded separately from the base letter in the encoding. See <a href="homographs.html#ijam_tashkil">ijam vs. tashkil</a>.</p>
 
-<section id="vletter">
-<h4>Dedicated vowel letters</h4>
+<p>However, <a class="termref" href="../glossary/#nfc">NFC-normalisation</a> will produce atomic characters for the combinations of hamza with a base letter shown in the box below.  (<a class="termref" href="../glossary/#nfd">NFD-normalisation</a> produces a code point sequence.) In most orthographies, precomposed forms are preferred and more common, but since the hamza is a <a class="termref" href="../glossary/index.html#tashkil"><span class="name">harakat</span></a> in Kashmiri it is more logical to encode and type it <em>separately</em> from the base. On the other hand, since the Unicode Standard regards both alternatives as canonically equivalent in this case, it is less important whether they are encoded atomically or as a sequence. The following atomic characters are therefore included in the Kashmiri repertoire for representing vowel sounds.</p>
 
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">إ␣أ␣ؤ␣ۂ</figure>
 
-<p>These are the dedicated vowel letters.</p>
-
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">إ␣ے␣ۄ␣ٲ␣أ␣آ␣ا</figure>
-
-<p>All word-initial vowels begin with <span class="ch">ا</span>, which either carries a vowel diacritic or precedes the characters that indicate the vowel (see <a class="secref">standalone</a>).  Word-medially, it also functions alone as a vowel in its own right, to represent the sound <span class="ipa">aː</span>.</p>
+<p>There are, however, other combinations of base letter with hamza (such as <span class="ch">حٔ</span> and <span class="ch">ځ</span>) that are <em>not</em> considered canonically equivalent, and these should be encoded with a separate hamza (see <a class="secref">deprecated_vowel</a>).</p>
 </section>
 
 
@@ -1136,23 +1132,7 @@ Affricate </th>
 
 
 
-
-<section id="otherV">
-<h4>Consonant letters used for vowels</h4>
-
-<p>Kashmiri uses the following consonant characters to write vowels, generally in combination with diacritics, but also alone when representing <span class="ipa">eː</span> and <span class="ipa">oː</span> in non-initial positions.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ی␣و␣ع</figure>
-
-<p>In a standard Arabic orthography  these characters would be regarded as <a class="termref" href="../../glossary/index.html#materlectionis">matres lectionis</a>, but since Kashmiri shows all vowel diacritics they don't have the same role here.</p>
-</section>
-
-
-
-
-
-
-
+<!--
 <section id="compositeV">
 <h4>Multipart vowels</h4>
 
@@ -1175,16 +1155,7 @@ Affricate </th>
 <figure class="characterBox auto" data-ipa="iː,uː,e,e,e,o,ɔː" data-ignore="&#x25CC;"  data-cols="trans,transc">یٖ␣وٗ␣یٚ␣◌ٚے␣ےٚ␣وٚ␣ۄا</figure>
 </section>
 
-
-
-
-
-
-<section id="vlength">
-<h4>Vowel length</h4>
-
-<p>Vowel length is indicated by use of different characters or character sequences. See <a class="figref">fig_vowelgrid</a>.</p>
-</section>
+-->
 
 
 
@@ -1201,8 +1172,19 @@ Affricate </th>
 <p>This makes a nasalised vowel indistinguishable from a normal <span class="ipa">n</span>.</p>
 <p><span class="eg" lang="ks">پَنہٕ پونْپُر</span></p>
 
-<p>At the end of a word, <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06BA;</span> [<a href="block#char06BA"><span class="uname">U+06BA ARABIC LETTER NOON GHUNNA</span></a>]</span> is used<sup><a target="_blank" href="https://en.wiktionary.org/wiki/%DA%BA#Kashmiri">§</a></sup>, like in Urdu, although this doesn't appear to be very common.</p>
+<p>At the end of a word, <span class="ch">ں</span> is used<sup><a target="_blank" href="https://en.wiktionary.org/wiki/%DA%BA#Kashmiri">§</a></sup>, like in Urdu, although this doesn't appear to be very common.</p>
 <p><span class="eg" lang="ks">اٟں</span></p>
+</section>
+
+
+
+
+
+
+<section id="vlength">
+<h4>Vowel length</h4>
+
+<p>Vowel length is indicated by use of different characters or character sequences. See <a class="figref">fig_vowelgrid</a>.</p>
 </section>
 </section>
 
@@ -1221,8 +1203,22 @@ Affricate </th>
 
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
-<p>Word-initial standalone vowels always begin with <span class="ch">ا</span> or (for loan words) <span class="ch">ع</span>, either as a carrier for a diacritic, or before the other characters that represent the vowel.<br>
-&nbsp;</p>
+
+<p>Word-initial standalone vowels involves placing one of the following before the normal vowel indicators.</p>
+
+<figure class="characterBox auto"  data-cols="trans,transc">ا␣آ␣آ␣ع</figure>
+
+<!--
+<p>The following box shows typical word-initial standalone vowels.</p>
+
+<figure class="characterBox auto" data-ipa="i,iː,ɨ,ɨː,u,uː,e,eː,o,oː,ə,əː,ɔ,ɔː,a,aː"  data-cols="trans,transc" data-ignore="&#x200D;">اِ␣ایٖ‍␣إ␣اٟ␣اُ␣اوٗ␣ایٚ‍␣ای‍␣اوٚ␣او␣أ␣ٲ␣اۄ␣اۄا␣اَ␣آ</figure>
+-->
+
+<p>Word-initial <span class="ipa">aː</span> is written using <span class="ch">آ</span>. This is canonically equivalent with the decomposed sequence <span class="hx split">0627 0653</span>, but the atomic character is the one that is normally used.</p>
+
+<p>Other word-initial standalone vowels always begin with <span class="ch">ا</span> or (for loan words) <span class="ch">ع</span>, either as a carrier for a diacritic, or before the other characters that represent the vowel.</p>
+
+<p>Examples:</p>
 <p><span class="eg" lang="ks" dir="ltr">اوٚنْگٕج</span></p>
 <p><span class="eg" lang="ks" dir="ltr">اِنسان</span></p>
 <p><span class="eg" lang="ks" dir="ltr">آتھوار</span></p>
@@ -1243,13 +1239,13 @@ Affricate </th>
 <p id="def-ijam" class="explanatoryintro definitionStub"></p>
 <p id="def-tashkil" class="explanatoryintro definitionStub"></p>
 
-<figure class="deprecatedBox auto"  data-cols="">ٳ␣ێ␣ۆ␣ځ␣ݬ␣ࢡ</figure>
+<figure class="deprecatedBox auto noindex"  data-cols="">ٳ␣ێ␣ۆ␣ځ␣ݬ␣ࢡ</figure>
 
-<p class="info">The Unicode character <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0673;</span> [<a href="block#char0673"><span class="uname">U+0673 ARABIC LETTER ALEF WITH WAVY HAMZA BELOW</span></a>]</span>    is explicitly deprecated by the Standard in favour of the decomposed sequence <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;&#x065F;</span> [<a href="block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char065F"><span class="uname">U+065F ARABIC WAVY HAMZA BELOW</span></a>]</span>. There is no normalisation equivalence.</p>
+<p class="info">The Unicode character <span class="ch">ٳ</span> is explicitly deprecated by the Standard in favour of the decomposed sequence <span class="hx">0627 065F</span>. There is no normalisation equivalence.</p>
 
 <p>The list above contains several other single Unicode code points that look like combinations of Kashmiri letters and  vowel diacritics, but they neither decompose nor recompose during normalisation. The Unicode Standard descriptions for these characters indicate that they are intended for use with specific languages, and Kashmiri is not listed amongst those. The hamza in these characters is an <a class="termref" target="_blank" href="../glossary/#ijam">ijam</a>, rather than a vowel diacritic, ie. it is an integral part of the letter. See <a href="../arab/homographs.html#ijam_tashkil">Ijam, tashkil, hamza</a>.</p>
 
-<p>Nevertheless, they may appear in Kashmiri text – for example, <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06C6;</span> [<a href="/scripts/arabic/block#char06C6"><span class="uname">U+06C6 ARABIC LETTER OE</span></a>]</span> is the default encoding for the vowel <span class="ipa">o</span> in Wiktionary's list of words.</p>
+<p>Nevertheless, they may appear in Kashmiri text – for example, <span class="ch">ۆ</span> is the default encoding for the vowel <span class="ipa">o</span> in Wiktionary's list of words.</p>
 
 <p class="info">Content authors should use the decomposed forms, but because that can't be guaranteed, applications  need to apply special rules to recognise both precomposed and decomposed forms as equivalent. See <a class="secref">non_canonical</a> for more details.</p>
 </section>
@@ -1291,7 +1287,7 @@ Affricate </th>
 </figure>
 <details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="ks">کرْال</span></p></details>
 
-<p class="info">Note that this is NOT &nbsp; <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x065B;</span> &nbsp; [<a href="/scripts/arabic/block#char065B"><span class="uname">U+065B ARABIC VOWEL SIGN INVERTED SMALL V ABOVE</span></a>]</span>. That character is used as a vowel diacritic, eg. to write the letter <span class="ipa">o</span> in Fulfulde. The <span class="uname">ARABIC SUKUN</span> code point has the semantic meaning intended here, and is also used for this function in Standard Arabic, Persian, Urdu, etc.. For Kashmiri you should use a font that produces the expected glyph shape.  Using a different character that has the same shape but not the same semantics will cause problems for interoperable use of your text, and some fonts may fail to display it correctly (see <a class="secref">confusables</a>).</p>
+<p class="info">Note that this is NOT <span class="hx">065B</span>. That character is used as a vowel diacritic, eg. to write the letter <span class="ipa">o</span> in Fulfulde. The <span class="uname">ARABIC SUKUN</span> code point has the semantic meaning intended here, and is also used for this function in Standard Arabic, Persian, Urdu, etc.. For Kashmiri you should use a font that produces the expected glyph shape.  Using a different character that has the same shape but not the same semantics will cause problems for interoperable use of your text, and some fonts may fail to display it correctly (see <a class="secref">confusables</a>).</p>
 </section>
 
 
@@ -1310,7 +1306,7 @@ Affricate </th>
 
 <p>This section maps Kashmiri vowel sounds to common graphemes in the Arabic orthography. The allocation of characters to vowel sounds is somewhat complicated. The complexity arises from the number of vowels in Kashmiri compared to the Arabic language, and the need to represent them all, but also because different sequences are needed for different positional forms. In addition, often more than one character sequence can achieve the same result.</p>
 
-<p>Vowels in word-initial position or written alone are written with a preceding <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;</span> [<a href="block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, or sometimes <span class="ch">ع</span> (we use the former for this table).</p>
+<p>Vowels in word-initial position or written alone are written with a preceding <span class="ch">ا</span>, or sometimes <span class="ch">ع</span> (we use the former for this table).</p>
 
 
 <p class="instructions" style="font-weight: bold;">The columns run right to left and indicate typical word-initial,  word-medial, and word-final usage. The joining forms shown are illustrative; alternatives may occur (see <a class="secref">joining_forms</a>).</p>
@@ -1319,66 +1315,22 @@ Affricate </th>
 
 
 
-<style>
-.mapItem {
-    text-align: start;
-    }
-.mapItem.initial {
-    border-bottom: 0;
-    }
-.mapItem .col1, .mapItem .col2 {
-    margin-inline-end: 1rem;
-    }
-.mapItem .ipa {
-    hyphens: none;
-    }
-#vowel_mappings .mapItem div.col1 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col2 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col3 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col1 {
-    flex: 3;
-    }
-#consonant_mappings .mapItem div.col2 {
-    flex: 1;
-    text-align: end;
-    }
-.mapItem example {
-    line-height: 3;
-    }
-.shaping bdi {
-    margin-inline: .5rem;
-    font-size: 2rem;
-    }
-.shaping > bdi::before {
-    content: '\200D';
-    }
-.shaping > bdi::after {
-    content: '\200D';
-    }
-.shaping > bdi:first-of-type::before {
-    content: '\200D';
-    }
-.shaping > bdi:first-of-type::after {
-    content: '';
-    }
-.shaping > bdi:last-of-type::before {
-    content: '';
-    }
-.shaping > bdi:last-of-type::after {
-    content: '\200D';
-    }
-</style>
-
-
 
 
 <section id="plain_vowel_map">
+<div class="mapHeading">
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">&nbsp;</div>
+<div class="col1">Word-final</div>
+<div class="col1">Word-medial</div>
+<div class="col2">Word-initial</div>
+</div>
+</div>
+
+
+
+
 <div id="mapv_high" class="map">
 
 <div class="mapItem">
@@ -1427,8 +1379,8 @@ Affricate </th>
 <p class="example"><span class="eg" lang="ks" dir="rtl">گَگٕر</span></p>
 </div>
 <div class="col1">
-<p><span class="hx">0625</span> Decomposes to <span class="hx">0627 0655</span> and recomposes.</p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">أش دَر</span></p>
+<p><span class="hx">0625</span> <b>Canonically equivalent with <span class="hx">0627 0655</span>.</b></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
 </div>
 
@@ -1444,7 +1396,7 @@ Affricate </th>
 <p class="example"><span class="eg" lang="ks" dir="rtl">تٟر</span></p>
 </div>
 <div class="col1">
-<p><span class="hx">0627 065F</span>. The precomposed character <span class="codepoint" translate="no"><span dir="rtl" lang="ks">ٳ</span> [<a href="block#char0673" target="c"><span class="uname">U+0673 ARABIC LETTER ALEF WITH WAVY HAMZA BELOW</span></a>]</span> neither composes nor decomposes in normalisation, and is strongly deprecated by the Unicode Standard.</p>
+<p><span class="hx">0627 065F</span> <b>The precomposed character <span class="ch">ٳ</span> is <em>not</em> canonically equivalent, and is strongly deprecated by the Unicode Standard.</b></p>
 <p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
 </div>
 </div>
@@ -1454,7 +1406,7 @@ Affricate </th>
 <div class="posn">&nbsp;</div>
 <div class="col3">
 <p><span class="ch circle">ُ</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">دُ ہٲٹھ</span></p>
 </div>
 <div class="col2">
 <p><span class="ch circle">ُ</span></p>
@@ -1558,7 +1510,50 @@ Affricate </th>
 <p class="example"><span class="eg" lang="ks" dir="rtl">اوش</span></p>
 </div>
 </div>
+</div>
 
+
+
+
+
+
+<div id="mapv_central" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">ə</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="ch circle">ٔ</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="ch circle">ٔ</span> <b>Several canonically equivalent, precomposed characters are available for use with hamza above. These include:<br>
+<span class="ch">أ</span><br>
+<span class="ch">ؤ</span><br>
+<span class="ch">ۂ</span></b></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">ژٔر</span></p>
+</div>
+<div class="col1">
+<p class="glyphs"><span class="hx">0623</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">أنْز</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">əː</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col3">
+<p class="glyphs"><span class="hx fina">0672</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
+</div>
+<div class="col2">
+<p class="glyphs"><span class="hx fina">0672</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">کٲشُر</span></p>
+</div>
+<div class="col1">
+<p class="glyphs"><span class="hx">0672</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">ٲس</span></p>
+</div>
+</div>
 </div>
 
 
@@ -1606,51 +1601,6 @@ Affricate </th>
 
 
 
-<div id="mapv_central" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">ə</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col3">
-<p class="glyphs"><span class="ch circle">ٔ</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
-</div>
-<div class="col2">
-<p class="glyphs"><span class="ch circle">ٔ</span> Several precomposed characters are available for use with hamza above. These include:</p>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">أ</span> [<a href="block#char0623" target="c"><span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ؤ</span> [<a href="block#char0624" target="c"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span dir="rtl" lang="ks">ۂ</span> [<a href="block#char06C2" target="c"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span></p>
-<p>All of the above decompose and recompose during normalisation.</p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">ژٔر</span></p>
-</div>
-<div class="col1">
-<p class="glyphs"><span class="hx">0623</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">أنْز</span></p>
-</div>
-</div>
-
-<div class="mapItem">
-<div class="phone"><span class="ipa">əː</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col3">
-<p class="glyphs"><span class="hx fina">0672</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl"></span></p>
-</div>
-<div class="col2">
-<p class="glyphs"><span class="hx fina">0672</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">کٲشُر</span></p>
-</div>
-<div class="col1">
-<p class="glyphs"><span class="hx">0672</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">ٲس</span></p>
-</div>
-</div>
-</div>
-
-
-
-
-
-
 <div id="mapv_low" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">a</span></div>
@@ -1681,7 +1631,7 @@ Affricate </th>
 <p class="example"><span class="eg" lang="ks" dir="rtl">آتھوار</span></p>
 </div>
 <div class="col1">
-<p class="glyphs"><span class="hx">0622</span> Decomposes to <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;&#x0653;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0653"><span class="uname">U+0653 ARABIC MADDAH ABOVE</span></a>]</span> and recomposes.</p>
+<p class="glyphs"><span class="hx">0622</span> <b>Canonically equivalent with <span class="hx">0627 0653</span></b></p>
 <p class="example"><span class="eg" lang="ks" dir="rtl">آزاد</span></p>
 </div>
 </div>
@@ -1745,7 +1695,12 @@ Affricate </th>
 <section id="consonants">
 <h2>Consonants</h2>
 
-
+<aside class="sectionAside">
+<p>This orthography has no special features with respect to the following.</p>
+<ul>
+<li>Conjuncts or other shaping related to consonant clusters.</li>
+</ul>
+</aside>
 <div id="consonant_description"></div>
 
 
@@ -1762,6 +1717,14 @@ Affricate </th>
 <p class="instructions"><strong>The consonants in the right column map mostly to the same phonemes, but are generally for loan words and to preserve the original spellings in the language of origin.</strong></p>
 
 <table class="soundSummary">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>Basic letters</th>
+<th>Unassimilated spellings in loan words</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <th rowspan="2">Stops</th>
 <td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">پ␣ب␣ت␣د␣ٹ␣ڈ␣ک␣گ</figure></td>
@@ -1791,7 +1754,7 @@ Affricate </th>
 <td><figure class="summaryBox auto noexpansion" data-ipa="w,r,l,j,ʲ" data-cols="trans,transc">و␣ر␣ل␣ی␣ؠ</figure></td>
 <td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">ڑ</figure></td>
 </tr>
-</table>
+</tbody></table>
 
 
 <p class="instructions">For additional details see <a class="secref">consonant_mappings</a>.</p>
@@ -1810,8 +1773,7 @@ Affricate </th>
 
 <p>Whereas the table just above takes you from sounds to letters, the following simply lists the basic consonant letters (however, since the orthography is highly phonetic there is little difference in ordering).</p>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">پ␣ب␣ت␣د␣ٹ␣ڈ␣ک␣گ␣ ␣ژ␣چ␣ج␣ ␣س␣ز␣ش␣ھ␣ہ␣ ␣م␣ن␣ ␣و␣ر␣ل␣ی</figure>
-
+<figure class="characterBox auto"  data-cols="trans,transc" data-ipa="p,b,t,d,ʈ,ɖ,k,g,t͡s,t͡ʃ,d͡ʒ,s,z,ʃ,h,m,n,ʋ w,r,l,j">پ␣ب␣ت␣د␣ٹ␣ڈ␣ک␣گ␣ژ␣چ␣ج␣س␣ز␣ش␣ہ␣م␣ن␣و␣ر␣ل␣ی</figure>
 </section>
 
 
@@ -1821,7 +1783,7 @@ Affricate </th>
 <h3>Aspirated consonants</h3>
     
     
-<p>Six additional letters of the alphabet represent aspirated sounds. These are all written by combining a standard character with a following <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06BE;</span> [<a href="block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>.</p>
+<p>Six additional letters of the alphabet represent aspirated sounds. These are all written by combining a standard character with a following <span class="ch">ھ</span>.</p>
 
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">پھ␣تھ␣ٹھ␣کھ␣ ␣ژھ␣چھ</figure>
 </section>
@@ -1846,7 +1808,7 @@ Affricate </th>
    
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ؠ</figure>
 
-<p>Palatalisation is a frequent feature of  Kashmiri words. It is represented using <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0620;</span> [<a href="block#char0620"><span class="uname">U+0620 ARABIC LETTER KASHMIRI YEH</span></a>]</span> after the consonant to be palatalised. Medial forms have a small circle beneath them. These changes follow the same pattern as <span class="hx">06CC</span>, which has 2 dots below initial and medial forms, but no dots below final and isolate forms.</p>
+<p>Palatalisation is a frequent feature of  Kashmiri words. It is represented using <span class="ch">ؠ</span> after the consonant to be palatalised. Medial forms have a small circle beneath them. These changes follow the same pattern as <span class="hx">06CC</span>, which has 2 dots below initial and medial forms, but no dots below final and isolate forms.</p>
 
 <figure id="fig_kashmiri_yeh" class="sideCaption">
 <img src="images_ks/kashmiri_yeh.svg" class="ex" lang="ks" alt="ؠؠؠ ؠ" style="height:6rem;" data-notes="Noto Nastaliq Urdu">
@@ -1859,9 +1821,11 @@ Affricate </th>
 <p><span class="eg" lang="ks" dir="rtl">پونؠ</span></p>
 <p><span class="eg" lang="ks" dir="rtl">کٲڈؠ</span></p>
 
-<p>When palatalisation is applied to the coda of a syllable <em>within</em> a lexical item, the swash form is always used. To produce this, it can be followed by a space or a zero-width non-joiner. It is common for single lexical items to be split in Kashmiri.</p>
+<p>It is common for single lexical items to be split in Kashmiri. When palatalisation is applied to the coda of a syllable <em>within</em> a lexical item, the swash form is always used. To produce this, it can be followed by a space or <span class="hx img">200C</span>.</p>
 <p><span class="eg" lang="ks" dir="rtl">ۂسؠ تِنؠ</span></p>
+<p><span class="eg" lang="ks" dir="rtl">ۂسؠ‌تِنؠ</span></p>
 <p><span class="eg" lang="ks" dir="rtl">کھٔرؠ پھٕ</span></p>
+<p><span class="eg" lang="ks" dir="rtl">کھٔرؠ‌پھٕ</span></p>
 </section>
 
 
@@ -1910,7 +1874,7 @@ Affricate </th>
 <section id="clusters">
 <h3>Consonant clusters</h3>
 
-<p>Kashmiri uses &nbsp;  <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0652;</span> &nbsp; [<a href="block#char0652"><span class="uname">U+0652 ARABIC SUKUN</span></a>]</span> (<span class="name">jazm</span>) to indicate some consonant clusters, as described in <a class="secref">novowel</a>. In general, however, clusters are just represented by a sequence of unmarked consonants.</p>
+<p>Kashmiri uses <span class="hx circle">0652</span> (<span class="name">jazm</span>) to indicate some consonant clusters, as described in <a class="secref">novowel</a>. In general, however, clusters are just represented by a sequence of unmarked consonants.</p>
 
 <p><span class="eg" lang="ks" dir="rtl">بابتھٕر</span></p>
 </section>
@@ -1925,7 +1889,7 @@ Affricate </th>
 
 <figure class="characterBox auto small"  data-cols="">ّ</figure>
 
-<p>The diacritic <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0651;</span>&nbsp; [<a href="block#char0651"><span class="uname">U+0651 ARABIC SHADDA</span></a>]</span> doubles the value of the consonant it is attached to.</p>
+<p>The diacritic <span class="hx circle">0651</span> doubles the value of the consonant it is attached to.</p>
 
 <p class="observation"><span class="leadin">Observation:</span> It's not clear that this is used for Kashmiri.</p></section>
 
@@ -1946,8 +1910,17 @@ Affricate </th>
 
 <!-- the ← character is needed to make Firefox and Safari work properly -->
 
+<div class="mapHeading">
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">&nbsp;</div>
+<div class="col1">&nbsp;</div>
+<div class="col2" style="margin-inline-end:4em;">Joining forms</div>
+</div>
+</div>
+
+
 <section id="stops">
-<h4>Stops</h4>
 <div id="map_plosives" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">p</span></div>
@@ -1958,6 +1931,18 @@ Affricate </th>
 </div>
 <div class="col2">
 <p><span class="shaping" lang="ks"><span class="hx fina noname">067E</span><span class="hx medi noname">067E</span><span class="hx init noname">067E</span>ـ</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">pʰ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">067E 06BE</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">پھَش</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ks"><span class="hx fina noname">067E 06BE</span><span class="hx medi noname">067E 06BE</span><span class="hx init noname">067E 06BE</span>ـ</span></p>
 </div>
 </div>
 
@@ -1998,6 +1983,18 @@ Affricate </th>
 </div>
 
 <div class="mapItem">
+<div class="phone"><span class="ipa">tʰ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">062A 06BE</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">تھُج</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ks"><span class="hx fina noname">062A 06BE</span><span class="hx medi noname">062A 06BE</span><span class="hx init noname">062A 06BE</span>ـ</span></p>
+</div>
+</div>
+
+<div class="mapItem">
 <div class="phone"><span class="ipa">d</span></div>
 <div class="posn">&nbsp;</div>
 <div class="col1">
@@ -2018,6 +2015,18 @@ Affricate </th>
 </div>
 <div class="col2">
 <p><span class="shaping" lang="ks"><span class="hx fina noname">0679</span><span class="hx medi noname">0679</span><span class="hx init noname">0679</span>ـ</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʈʰ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0679 06BE</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">کَٹھ</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ks"><span class="hx fina noname">0679 06BE</span><span class="hx medi noname">0679 06BE</span><span class="hx init noname">0679 06BE</span>ـ</span></p>
 </div>
 </div>
 
@@ -2058,87 +2067,6 @@ Affricate </th>
 </div>
 
 <div class="mapItem initial">
-<div class="phone"><span class="ipa">g</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p><span class="hx">06AF</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">زَنْگ</span></p>
-</div>
-<div class="col2">
-<p><span class="shaping" lang="ks"><span class="hx fina noname">06AF</span><span class="hx medi noname">06AF</span><span class="hx init noname">06AF</span>ـ</span></p>
-</div>
-</div>
-
-<div class="mapItem">
-<div class="phone"><span class="ipa">&nbsp;</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p><span class="hx">063A</span> in loan words.</p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">مَغرِب</span></p>
-</div>
-<div class="col2">
-<p><span class="shaping" lang="ks"><span class="hx fina noname">063A</span><span class="hx medi noname">063A</span><span class="hx init noname">063A</span>ـ</span></p>
-</div>
-</div>
-
-</div>
-</section>
-
-
-
-<section id="stopsH">
-<h4>Stops (aspirated)</h4>
-<div id="map_plosivesH" class="map">
-
-<div class="mapItem initial">
-<div class="phone"><span class="ipa">pʰ</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p><span class="hx">067E 06BE</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">پھَش</span></p>
-</div>
-<div class="col2">
-<p><span class="shaping" lang="ks"><span class="hx fina noname">067E 06BE</span><span class="hx medi noname">067E 06BE</span><span class="hx init noname">067E 06BE</span>ـ</span></p>
-</div>
-</div>
-
-<div class="mapItem">
-<div class="phone"><span class="ipa">&nbsp;</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p><span class="hx">0641</span> sometimes in loan words.</p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">صِفَر</span></p>
-</div>
-<div class="col2">
-<p><span class="shaping" lang="ks"><span class="hx fina noname">0641</span><span class="hx medi noname">0641</span><span class="hx init noname">0641</span>ـ</span></p>
-</div>
-</div>
-
-<div class="mapItem">
-<div class="phone"><span class="ipa">tʰ</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p><span class="hx">062A 06BE</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">تھُج</span></p>
-</div>
-<div class="col2">
-<p><span class="shaping" lang="ks"><span class="hx fina noname">062A 06BE</span><span class="hx medi noname">062A 06BE</span><span class="hx init noname">062A 06BE</span>ـ</span></p>
-</div>
-</div>
-
-<div class="mapItem">
-<div class="phone"><span class="ipa">ʈʰ</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p><span class="hx">0679 06BE</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">کَٹھ</span></p>
-</div>
-<div class="col2">
-<p><span class="shaping" lang="ks"><span class="hx fina noname">0679 06BE</span><span class="hx medi noname">0679 06BE</span><span class="hx init noname">0679 06BE</span>ـ</span></p>
-</div>
-</div>
-
-<div class="mapItem initial">
 <div class="phone"><span class="ipa">kʰ</span></div>
 <div class="posn">&nbsp;</div>
 <div class="col1">
@@ -2162,14 +2090,40 @@ Affricate </th>
 </div>
 </div>
 
+<div class="mapItem initial">
+<div class="phone"><span class="ipa">g</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">06AF</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">زَنْگ</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ks"><span class="hx fina noname">06AF</span><span class="hx medi noname">06AF</span><span class="hx init noname">06AF</span>ـ</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">&nbsp;</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">063A</span> in loan words.</p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">مَغرِب</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ks"><span class="hx fina noname">063A</span><span class="hx medi noname">063A</span><span class="hx init noname">063A</span>ـ</span></p>
+</div>
+</div>
 </div>
 </section>
 
 
 
+
+
+
 <section id="affricates">
-<h4>Affricates</h4>
 <div id="map_affricates" class="map">
+
 <div class="mapItem">
 <div class="phone"><span class="ipa">t͡s</span></div>
 <div class="posn">&nbsp;</div>
@@ -2182,6 +2136,17 @@ Affricate </th>
 </div>
 </div>
 
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡sʰ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0698 06BE</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">ژھاوٕج</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ks"><span class="hx fina noname">0698 06BE</span><span class="hx medi noname">0698 06BE</span><span class="hx init noname">0698 06BE</span>ـ</span></p>
+</div>
+</div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">t͡ʃ</span></div>
@@ -2192,6 +2157,18 @@ Affricate </th>
 </div>
 <div class="col2">
 <p><span class="shaping" lang="ks"><span class="hx fina noname">0686</span><span class="hx medi noname">0686</span><span class="hx init noname">0686</span>ـ</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡ʃʰ</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0686 06BE</span></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">چھَلُن</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ks"><span class="hx fina noname">0686 06BE</span><span class="hx medi noname">0686 06BE</span><span class="hx init noname">0686 06BE</span>ـ</span></p>
 </div>
 </div>
 
@@ -2212,42 +2189,24 @@ Affricate </th>
 
 
 
-<section id="affricatesH">
-<h4>Affricates (aspirated)</h4>
-<div id="map_affricatesH" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">t͡sʰ</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p><span class="hx">0698 06BE</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">ژھاوٕج</span></p>
-</div>
-<div class="col2">
-<p><span class="shaping" lang="ks"><span class="hx fina noname">0698 06BE</span><span class="hx medi noname">0698 06BE</span><span class="hx init noname">0698 06BE</span>ـ</span></p>
-</div>
-</div>
-
-<div class="mapItem">
-<div class="phone"><span class="ipa">t͡ʃʰ</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p><span class="hx">0686 06BE</span></p>
-<p class="example"><span class="eg" lang="ks" dir="rtl">چھَلُن</span></p>
-</div>
-<div class="col2">
-<p><span class="shaping" lang="ks"><span class="hx fina noname">0686 06BE</span><span class="hx medi noname">0686 06BE</span><span class="hx init noname">0686 06BE</span>ـ</span></p>
-</div>
-</div>
-</div>
-</section>
-
-
 
 
 
 <section id="fricatives">
-<h4>Fricatives</h4>
 <div id="map_fricatives" class="map">
+
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">f</span></div>
+<div class="posn">&nbsp;</div>
+<div class="col1">
+<p><span class="hx">0641</span> <b>sometimes in loan words.</b></p>
+<p class="example"><span class="eg" lang="ks" dir="rtl">صِفَر</span></p>
+</div>
+<div class="col2">
+<p><span class="shaping" lang="ks"><span class="hx fina noname">0641</span><span class="hx medi noname">0641</span><span class="hx init noname">0641</span>ـ</span></p>
+</div>
+</div>
+
 <div class="mapItem">
 <div class="phone"><span class="ipa">ʋ</span></div>
 <div class="posn">&nbsp;</div>
@@ -2389,7 +2348,6 @@ Affricate </th>
 
 
 <section id="nasals">
-<h4>Nasals</h4>
 <div id="map_nasals" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">m</span></div>
@@ -2422,7 +2380,6 @@ Affricate </th>
 
 
 <section id="sonorants">
-<h4>Other sonorants</h4>
 <div id="map_approximants" class="map">
 
 <div class="mapItem">
@@ -2597,24 +2554,24 @@ Affricate </th>
 </thead>
 <tbody>
 <tr>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="ks">إ</span> [<a href="block#char0625"><span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0627;&#x0655;</span> [<a href="block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char0655"><span class="uname">U+0655 ARABIC HAMZA BELOW</span></a>]</span></td>
+<td><span class="ch">إ</span></td>
+<td><span class="hx">0627 0655</span></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0623;</span> [<a href="block#char0623"><span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;&#x0654;</span> [<a href="block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+<td><span class="hx">0623</span></td>
+<td><span class="hx">0627 0654</span></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="ks">آ</span> [<a href="block#char0622"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0627;&#x0653;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0653"><span class="uname">U+0653 ARABIC MADDAH ABOVE</span></a>]</span></td>
+<td><span class="ch">آ</span></td>
+<td><span class="hx">0627 0653</span></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0624;</span> [<a href="block#char0624"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span dir="rtl" lang="ks">&#x0648;&#x0654;</span> [<a href="block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+<td><span class="hx">0624</span></td>
+<td><span class="hx">0648 0654</span></td>
 </tr>
 <tr>
-<td><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06C2;</span> [<a href="block#char06C2"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06C1;&#x0654;</span> [<a href="block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a> + <a href="block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+<td><span class="hx">06C2</span></td>
+<td><span class="hx">06C1 0654</span></td>
 </tr>
 </tbody>
 </table>
@@ -2702,7 +2659,7 @@ Affricate </th>
 
 <td><span class="hx">0626</span></td>
 <td><span class="hx">06CC 0654</span></td>
-<td>This precomposed form becomes <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x064A;&#x0654;</span> [<a href="block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a> + <a href="block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span> when the text is decomposed during normalisation, ie. the base character is replaced by U+064A instead of U+06CC.</td>
+<td>This precomposed form becomes <span class="hx">064A 0654</span> when the text is decomposed during normalisation, ie. the base character is replaced by U+064A instead of U+06CC.</td>
 </tr>
 
 <tr>
@@ -2718,9 +2675,9 @@ Affricate </th>
 </tr>
 
 <tr>
-<td><span class="codepoint" translate="no"><bdi lang="ks" dir="rtl" style="font-family:'Scheherazade WF'">&#x06CC;&#x08D1;</bdi> <span class="uname">U+06CC ARABIC LETTER FARSI YEH</span> + <span class="uname">U+08D1 ARABIC LARGE CIRCLE BELOW</span></span></td>
+<td><span class="codepoint" translate="no"><bdi lang="ks" dir="rtl" style="font-family:'Scheherazade WF'">&#x06CC;&#x08D1;</bdi> <span class="uname">U+06CC LETTER FARSI YEH</span> + <span class="uname">U+08D1 LARGE CIRCLE BELOW</span></span></td>
 <td><span class="ch">ؠ</span></td>
-<td>Sometimes <span class="codepoint" translate="no"><bdi lang="ks" dir="rtl" style="font-family:'Scheherazade WF'">&#x06CC;&#x08D1;</bdi> <span class="uname">U+06CC ARABIC LETTER FARSI YEH</span> + <span class="uname">U+08D1 ARABIC LARGE CIRCLE BELOW</span></span> is used for isolated and final forms of KASHMIRI YEH in naskh style text.  Version 15.1 of the Unicode Standard says that it is the normal form for the naskh style of Kashmiri, but this usage is incorrect and should be avoided. (The text in the Unicode Standard will be updated for version 16.0, and font vendors will be contacted to modify their glyphs.)</td>
+<td>Sometimes <span class="codepoint" translate="no"><bdi lang="ks" dir="rtl" style="font-family:'Scheherazade WF'">&#x06CC;&#x08D1;</bdi> <span class="uname">U+06CC LETTER FARSI YEH</span> + <span class="uname">U+08D1 LARGE CIRCLE BELOW</span></span> is used for isolated and final forms of KASHMIRI YEH in naskh style text.  Version 15.1 of the Unicode Standard says that it is the normal form for the naskh style of Kashmiri, but this usage is incorrect and should be avoided. The text in the Unicode Standard was updated for version 16.0, and font vendors will be contacted to modify their glyphs.</td>
 </tr>
 
 <tr>
@@ -2732,11 +2689,11 @@ Affricate </th>
 <tr>
 <td><span class="hx">065B</span></td>
 <td><span class="hx">0652</span></td>
-<td>The function of this glyph is that of the <span class="name">sukun</span>, so the correct semantic character should be used. Although <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x065B;</span> [<a href="/scripts/arabic/block#char065B"><span class="uname">U+065B ARABIC VOWEL SIGN INVERTED SMALL V ABOVE</span></a>]</span> looks like the Kashmiri <span class="name">jazm</span>, it was introduced to Unicode to serve as a vowel sign for African languages<sup><a href="https://www.unicode.org/L2/L2003/03168-african-chars.pdf">§</a></sup>. In order to produce the correct glyph using a font such as Noto it is essential to indicate that the language of the text is Kashmiri. (In HTML this can be done using the attribute <code translate="no">lang="ks"</code>.) Otherwise, the shape is likely to be a small circle.</td>
+<td>The function of this glyph is that of the <span class="name">sukun</span>, so the correct semantic character should be used. Although <span class="hx circle">065B</span> looks like the Kashmiri <span class="name">jazm</span>, it was introduced to Unicode to serve as a vowel sign for African languages<sup><a href="https://www.unicode.org/L2/L2003/03168-african-chars.pdf">§</a></sup>. In order to produce the correct glyph using a font such as Noto it is essential to indicate that the language of the text is Kashmiri. (In HTML this can be done using the attribute <code translate="no">lang="ks"</code>.) Otherwise, the shape is likely to be a small circle.</td>
 </tr>
 
 <tr>
-<td><span class="codepoint noindex" translate="no"><span lang="ks" dir="rtl">&#x06C5;</span><a href="/scripts/arabic/block#char06C5"><span class="uname">U+06C5 ARABIC LETTER KIRGHIZ OE</span></a></span></td>
+<td><span class="codepoint noindex" translate="no"><span lang="ks" dir="rtl">&#x06C5;</span><a href="/scripts/arabic/block#char06C5"><span class="uname">U+06C5 LETTER KIRGHIZ OE</span></a></span></td>
 <td><span class="hx">06C4</span></td>
 <td>The incorrect letter is intended for use with Kirghiz. Some fonts add a loop to the tail, similar to that of the recommended character, but other fonts render it with a  bar through the tail.</td>
 </tr>
@@ -2755,12 +2712,17 @@ Affricate </th>
 <section id="final_e">
 <h4>Final e</h4>
 
-<p>In the online term list at <a href="https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_terms_with_IPA_pronunciation&pagefrom=%D9%BE%D9%8E%DA%86%DA%BE%D9%90%D9%85%0A%D9%BE%D9%8E%DA%86%DA%BE%D9%90%D9%85#mw-pages">Wiktionary</a> there are items containing a final <span class="ipa">e</span> where the order of code points is <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x200D;&#x065A;&#x06D2;</span> [<a href="block#char065A"><span class="uname">U+065A ARABIC VOWEL SIGN SMALL V ABOVE</span></a> + <a href="block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span>, and others where the order is reversed to give <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x200D;&#x06D2;&#x065A;</span> [<a href="block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a> + <a href="block#char065A"><span class="uname">U+065A ARABIC VOWEL SIGN SMALL V ABOVE</span></a>]</span>. Click on the following examples to see their composition:
-<span class="eg" lang="ks">شےٚ</span>
-</p>
-<p>It's unclear whether this is simply driven by user preference, or by orthographic rules, or the words are wrongly encoded. If the inverted-v occurs after the consonant in the word for 'six', it would look like this:
-<span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">شٚے</span></span></p>
+<p>In the online term list at <a href="https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_terms_with_IPA_pronunciation&pagefrom=%D9%BE%D9%8E%DA%86%DA%BE%D9%90%D9%85%0A%D9%BE%D9%8E%DA%86%DA%BE%D9%90%D9%85#mw-pages">Wiktionary</a> there are items containing a final <span class="ipa">e</span> where the order of code points is <span class="hx fina">065A 06D2</span>, and others where the order is reversed to give <span class="hx fina">06D2 065A</span>.</p>
+<p class="instructions">Click on the following examples to see their composition:</p>
+<p><span class="eg" lang="ks">شےٚ</span></p>
+
+<p>It's unclear whether this is simply driven by user preference, or by orthographic rules, or the words are wrongly encoded. If the inverted-v occurs after the consonant in the word for 'six', it would look like this:</p>
+<p><span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">شٚے</span></span></p>
 </section>
+
+
+
+
 
 <section id="jazm_placement">
 <h4>Jazm placement</h4>
@@ -2789,7 +2751,7 @@ Affricate </th>
 
 
 <section id="charorder">
-<h3>Codepoint sequences</h3>
+<h3>Code point sequences</h3>
 
 <p>When typing and in storage, combining marks always follow the base character they are associated with.</p>
 
@@ -2963,11 +2925,17 @@ Affricate </th>
 <h3>Managing text direction</h3>
 
 <p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed. These characters have no visual form in the rendered text, however text editing applications may have a way to show their location.</p>
-<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x202B;</span><img src="../../c/General_Punctuation/large/202B.png" alt="RLE" style="vertical-align:middle; height:2rem;"> [<a href="block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span> (<span class="uname">RLE</span>), <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x202A;</span><img src="../../c/General_Punctuation/large/202A.png" alt="LRE" style="vertical-align:middle; height:2rem;"> [<a href="block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span> (<span class="uname">LRE</span>), and <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x202C;</span><img src="../../c/General_Punctuation/large/202C.png" alt="PDF" style="vertical-align:middle; height:2rem;"> [<a href="block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> (<span class="uname">PDF</span>) are in widespread use to set the base direction of a range of characters. <span class="uname">RLE/LRE</span> comes at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
-<p class="info">In Unicode 6.1, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2067;</span><img src="../../c/General_Punctuation/large/2067.png" alt="RLI" style="vertical-align:middle; height:2rem;"> [<a href="block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span> (<span class="uname">RLI</span>), <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2066;</span><img src="../../c/General_Punctuation/large/2066.png" alt="LRI" style="vertical-align:middle; height:2rem;"> [<a href="block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span> (<span class="uname">LRI</span>), and <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2069;</span><img src="../../c/General_Punctuation/large/2069.png" alt="PDI" style="vertical-align:middle; height:2rem;"> [<a href="block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span> (<span class="uname">PDI</span>).<strong> The Unicode Standard recommends that these be used instead</strong>. </p>
-<p>There is also <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x2068;</span><img src="../../c/General_Punctuation/large/2068.png" alt="PDI" style="vertical-align:middle; height:2rem;"> [<a href="block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span> (<span class="uname">FSI</span>), used initially to set the base direction according to the first recognised strongly-directional character.</p>
-<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x061C;</span><img src="../../c/Arabic/large/061C.png" alt="ALM" style="vertical-align:middle; height:2rem;"> [<a href="block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a>]</span> (<span class="uname">ALM</span>)  is used to produce correct sequencing of numeric data. Follow the link and see <a class="secref">expressions</a> for details.&nbsp;</p>
-<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200F;</span><img src="../../c/General_Punctuation/large/200F.png" alt="RLM" style="vertical-align:middle; height:2rem;"> [<a href="block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a>]</span> (<span class="uname">RLM</span>)  and <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200E;</span><img src="../../c/General_Punctuation/large/200E.png" alt="LRM" style="vertical-align:middle; height:2rem;"> [<a href="block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span> (<span class="uname">LRM</span>)  are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
+
+<p><span class="hx img">202B</span> (<span class="uname">RLE</span>), <span class="hx img">202A</span> (<span class="uname">LRE</span>), and <span class="hx img">202C</span> (<span class="uname">PDF</span>) are in widespread use to set the base direction of a range of characters. <span class="uname">RLE/LRE</span> comes at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
+
+<p class="info">In Unicode 6.1, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="hx img">2067</span> (<span class="uname">RLI</span>), <span class="img hx">2066</span> (<span class="uname">LRI</span>), and <span class="hx img">2066</span> (<span class="uname">PDI</span>).<strong> The Unicode Standard recommends that these be used instead</strong>. </p>
+
+<p>There is also <span class="hx img">2068</span> (<span class="uname">FSI</span>), used initially to set the base direction according to the first recognised strongly-directional character.</p>
+
+<p><span class="hx img">061C</span> (<span class="uname">ALM</span>)  is used to produce correct sequencing of numeric data. Click on the character name, and see also <a class="secref">expressions</a> for details.</p>
+
+<p><span class="hx img">200F</span> (<span class="uname">RLM</span>)  and <span class="hx img">200E</span> (<span class="uname">LRM</span>)  are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
+
 <p>For more information about how to use these formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. Note, however, that when writing HTML you should generally use markup rather than these control codes. For information about that, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
 </section>
 
@@ -3230,10 +3198,14 @@ Affricate </th>
 
 <section id="shapingcontrols">
 <h4>Managing glyph shaping</h4>
-<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200D;</span><img src="../../c/General_Punctuation/large/200D.png" alt="ZWJ" style="vertical-align:middle; height:2rem;"> [<a href="/scripts/mongolian/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> (<span class="uname">ZWJ</span>) and <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x200C;</span><img src="../../c/General_Punctuation/large/200C.png" alt="ZWNJ" style="vertical-align:middle; height:2rem;"> [<a href="/scripts/mongolian/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> (<span class="uname">ZWNJ</span>) are used to control the joining behaviour of cursive glyphs. They are particularly useful in educational contexts, but also have real world applications.</p>
+
+<p><span class="hx img">200D</span> (<span class="uname">ZWJ</span>) and <span class="hx img">200C</span> (<span class="uname">ZWNJ</span>) are used to control the joining behaviour of cursive glyphs. They are particularly useful in educational contexts, but also have real world applications.</p>
+
 <p><span class="uname" dir="ltr">ZWJ</span>  permits a letter to form a cursive connection without a visible neighbour. For example, the marker for hijri dates in Arabic language text is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use  <span class="uname" dir="ltr">ZWJ</span> immediately after the <span class="name">heh</span>, eg. <span class="ex" dir="rtl" lang="ar">الاثنين 10 رجب 1415 ه‍.</span>.</p>
+
 <p><span class="uname" dir="ltr">ZWNJ</span> prevents two adjacent letters forming a cursive connection with each other when rendered. For example, it is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the <span class="uname" dir="ltr">ZWNJ</span> will result in text with a different meaning or meaningless text, eg, <span class="ex" dir="rtl" lang="ar">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" dir="rtl" lang="ar">تنها</span> is the adjective <span class="meaning">alone</span>.<sup>2</sup> The only difference is the presence or absence of <span class="uname" dir="ltr">ZWNJ</span> after <span class="name">noon</span>.  </p>
-<p><span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x034F;</span><img src="../../c/Combining_Diacritical_Marks/large/034F.png" alt="MVS" style="vertical-align:middle; height:2rem;"> [<a href="/scripts/XXXXXX/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER</span></a>]</span> is used in Arabic-script text to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.</p>
+
+<p><span class="hx img">034F</span> is used in Arabic-script text to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.</p>
 </section>
 
 </section>
@@ -3376,15 +3348,15 @@ Affricate </th>
 <tbody>
 <tr>
 <th scope="row">phrase</th>
-<td><p><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x060C;</span> [<a href="block#char060C"><span class="uname">U+060C ARABIC COMMA</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x061B;</span> [<a href="block#char061B"><span class="uname">U+061B ARABIC SEMICOLON</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="ks">&#x003A;</span> [<a href="/scripts/devanagari/block#char003A"><span class="uname">U+003A COLON</span></a>]</span></p></td>
+<td><p><span class="ch">،</span></p>
+<p><span class="ch">؛</span></p>
+<p><span class="ch">:</span></p></td>
 </tr>
 <tr>
 <th scope="row">sentence</th>
-<td><p><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06D4;</span> [<a href="block#char06D4"><span class="uname">U+06D4 ARABIC FULL STOP</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x061F;</span> [<a href="block#char061F"><span class="uname">U+061F ARABIC QUESTION MARK</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="ks">&#x0021;</span> [<a href="/scripts/devanagari/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span></p></td>
+<td><p><span class="ch">۔</span></p>
+<p><span class="ch">؟</span></p>
+<p><span class="ch">!</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -3432,7 +3404,7 @@ Affricate </th>
 <img src="images/mirrored_latin.png" class="ex" alt="a > b > c" data-notes="Scheherazade New 48px"><br>
 <img src="images/mirrored_arab.png" class="ex" alt="ا > ب > ج" data-notes="Scheherazade New 48px">
 </div>
-<figcaption>Both of these lines use <span class="codepoint noindex" translate="no"><span lang="en">&#x003E;</span> [<a href="/scripts/latin/block#char003E"><span class="uname">U+003E GREATER-THAN SIGN</span></a>]</span>, but the direction it faces depends on the base direction at the point of display.</figcaption>
+<figcaption>Both of these lines use <span class="codepoint noindex" translate="no"><span lang="en">&#x003E;</span> <a href="/scripts/latin/block#char003E"><span class="uname">U+003E GREATER-THAN SIGN</span></a></span>, but the direction it faces depends on the base direction at the point of display.</figcaption>
 </figure>
 
 <p>The number of characters that are mirrored in this way is <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Mirrored=Yes:]">around 550</a>, most of which are mathematical symbols. Some are single characters, rather than pairs. The following are some   more common ones.</p>
