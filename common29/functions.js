@@ -2910,6 +2910,9 @@ function listSectionCharacters (section) {
     replaceStuff(document.getElementById(section).querySelector('figure'))
     listItems = document.getElementById(section).querySelectorAll('.listItem')
 	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
+    
+    console.log('charlist',charList)
+    document.getElementById(section).querySelector('aside').innerHTML += `<p class="instructions"><a href="../apps/listcategories/index.html?chars=${ charList.replace(/\u2423/g,'') }" target="_blank">Triage by General Category</a></p>`
     }
 
 
