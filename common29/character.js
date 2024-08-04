@@ -21,6 +21,7 @@ for (var p=0;p<parameters.length;p++) {
 
 
 
+
 function showCharDetails (ch) {
     // creates a heading and a div for a given orthography
     // window.charDetails is the code from xx-details
@@ -869,6 +870,17 @@ function makeXXCharacterPage () {
         titleNode.id = 'char'+hex
         titleNode.style.fontSize = '3rem'
         }
+    
+    stats = findCharactersInDB()
+    parts = stats.split('§')
+    div = document.createElement('div')
+    div.dir = 'ltr'
+    div.id = 'stats'
+    div.innerHTML = `Characters in the database: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[0] }</bdi> &nbsp; <bdi>(${ [...parts[0]].length })</bdi><br>
+    To be investigated: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[1] }</bdi> &nbsp; <bdi>(${ [...parts[1]].length })</bdi>
+    <br>
+    Not used: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[2] }</bdi> &nbsp; <bdi>(${ [...parts[2]].length })</bdi>`
+    document.querySelector('#output').appendChild(div)
     }
 
 
@@ -1074,3 +1086,22 @@ function copyPanelText (type) {
 function setFootnoteRefs () {}
 function initialiseShowNames () {}
 
+
+
+function findCharactersInDB () {
+    // make a list of all used characters and another of tbc characters & return them joined with §
+    
+    outUsed = ''
+    outTBC = ''
+    outUnused = ''
+    for (char in spreadsheetRows) {
+        if (char.startsWith('/') || spreadsheetRows[char][cols['status']].includes('status')) continue
+        if ([... char].length > 1) continue
+        if (spreadsheetRows[char][cols['status']].includes('?')) outTBC += char
+        else if (spreadsheetRows[char][cols['status']].includes('u') || spreadsheetRows[char][cols['status']].includes('d') || spreadsheetRows[char][cols['status']].includes('a')) outUnused += char
+        else outUsed += char
+        }
+    out = outUsed+'§'+outTBC+'§'+outUnused
+    
+    return out
+}
