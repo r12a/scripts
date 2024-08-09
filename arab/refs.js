@@ -125,6 +125,17 @@ reflist = {
 "lang": new Set(['ar']),
 },
 
+
+"jkpe": {
+"authors": "Jonathan Kew",
+"title":"Proposals for extensions to the Arabic block",
+"date": "2002",
+"url":"https://unicode.org/L2/L2002/02274-arabic-ext.pdf",
+"lang": new Set(['skr']),
+"reviewed":true
+},
+
+
 "jkn": {
 "authors": "Jonathan Kew",
 "title":"Notes on some Unicode Arabic characters: recommendations for usage (draft 2)",
@@ -568,6 +579,26 @@ reflist = {
 },
 
 
+"wskrl": {
+"authors": "Wikipedia",
+"title":"Saraiki language",
+"retr": "Aug 2024",
+"url":"https://en.wikipedia.org/wiki/Saraiki_language",
+"lang": new Set(['skr']),
+"reviewed":false
+},
+
+
+"wskrs": {
+"authors": "Wikipedia",
+"title":"Saraiki alphabet",
+"retr": "Aug 2024",
+"url":"https://en.wikipedia.org/wiki/Saraiki_alphabet",
+"lang": new Set(['skr']),
+"reviewed":false
+},
+
+
 "lisindia": {
 "authors": "CIIL-India Mysore",
 "title":"Script and Spelling",
@@ -624,6 +655,17 @@ reflist = {
 "url":"https://www.unicode.org/reports/tr53/tr53-9.html",
 "lang": new Set(['ar','pes','ha','ks','ur','ckb','sd']),
 "reviewed":true
+},
+
+
+"fjz": {
+"authors": "Firdos Atta, Jeroen van de Weijer, Lei Zhu",
+"title":"Saraiki",
+"date": "2020",
+"publisher":"Cambridge University Press",
+"url":"https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/saraiki/6ED3484594B71833BB030429B7229F1A",
+"lang": new Set(['skr']),
+"reviewed":false
 },
 
 
