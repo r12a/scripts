@@ -9,8 +9,8 @@
 <link rel="stylesheet"  href="style.css" />
 
 <script src="../../../shared/code/boilerplate.js"></script>
-<script src="../../../uniview/functions.js"></script>
 <script src="../../../shared/code/scriptGroups.js"></script>
+<script src="../../../uniview/functions.js"></script>
 <script src="propertylist.js"></script>
 <script src="script.js"></script>
 </head>
@@ -37,31 +37,36 @@
 <div id="legend">
 <h2>Legend</h2>
 
-<p id="AI"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
-<p id="AL"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
-<p id="B2"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
-<p id="BB"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BB (break before)</a> indicates that characters  move to the next line at a line break and thus provide a line break opportunity before.&nbsp;</p>
-<p id="BA"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
-<p id="CJ"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CJ">CJ (conditional japanese starter)</a> may be treated as either NS or ID. Treating characters of class CJ as class NS will give CSS strict line breaking; treating them as class ID will give CSS normal breaking.</p>
-<p id="CL"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
-<p id="CM"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
-<p id="CP"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
-<p id="EX"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
-<p id="GL"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#GL">GL (non-breaking “glue&quot;)</a> non-tailorable, non-breaking characters prohibit breaks on either side, but that prohibition can be overridden by SP or ZW.</p>
-<p id="HL"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#HL">HL (Hebrew letter)</a> does not break around a following hyphen; otherwise acts as Alphabetic.</p>
-<p id="HY"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#H2">HY (hyphen)</a> additional context analysis is required to distinguish usage of this character as a hyphen from its usage as a minus sign (or indicator of numerical range). If used as hyphen, it acts like U+2010 HYPHEN, which has line break class BA.</p>
-<p id="IN"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
-<p id="ID"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">ID (ideographic)</a> do not require other characters to provide break opportunities; lines can ordinarily break before and after and between pairs of ideographic characters. Note that this class also includes characters other than Han ideographs..</p>
-<p id="IS"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
-<p id="NS"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NS (nonstarters)</a> cannot start a line, but unlike CL they may allow a break in some contexts when they follow one or more space characters.</p>
-<p id="NU"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
-<p id="OP"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
-<p id="PO"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">PO (postfix numeric)</a> usually follows a numerical expression and may not be separated from preceding numeric characters or preceding closing characters, even if one or more space characters intervene. For example, there is no break opportunity in “(12.00) %”.</p>
-<p id="PR"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#PR">PR (numeric prefix)</a>  may not be separated from following numeric characters or following opening characters, even if a space character intervenes. For example, there is no break opportunity in “฿ (100.00)”.</p>
-<p id="QU"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
-<p id="SA"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SA (Southeast Asian)</a> require morphological analysis to determine break opportunities, in a way similar to a hyphenation algorithm. No break opportunities will be found otherwise. Complex context analysis, often involving dictionary lookup of some form, is required to determine non-emergency line breaks. If such analysis is not available, it is recommended to treat them as AL.</p>
-<p id="SY"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SY (symbols allowing break after)</a> provides a break opportunity after, except in front of digits, so as to not break “1/2” or “06/07/99”.</p>
-<p id="ZWJ"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">ZW (ZERO WIDTH SPACE, ZWSP)</a> enables  invisible break opportunities wherever <span class="uname">SPACE</span> cannot be used. It  has no width, and is treated as if it wasn't there during justification.</p>
+<p id="AI"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
+<p id="AK"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#AK">AK (Aksara)</a> can occur as the base of a Brahmic orthographic syllable and can also follow a virama of Indic syllabic category <code class="kw" translate="no">Virama</code> or <code class="kw" translate="no">Invisible_Stacker</code> within the same orthographic syllable.</p>
+<p id="AL"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p id="AP"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#AP">AP (Aksara Pre-Base)</a>  characters of Brahmic scripts that are part of an orthographic syllable but in logical order precede the base or any half-forms.</p>
+<p id="AS"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#AS">AS (Aksara Start)</a> can occur as the base of a Brahmic orthographic syllable, but cannot follow a virama of Indic syllabic category <code class="kw" translate="no">Virama</code> or <code class="kw" translate="no">Invisible_Stacker</code> within the same orthographic syllable.</p>
+<p id="B2"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
+<p id="BB"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#BA">BB (break before)</a> indicates that characters  move to the next line at a line break and thus provide a line break opportunity before.&nbsp;</p>
+<p id="BA"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p id="CJ"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#CJ">CJ (conditional japanese starter)</a> may be treated as either NS or ID. Treating characters of class CJ as class NS will give CSS strict line breaking; treating them as class ID will give CSS normal breaking.</p>
+<p id="CL"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
+<p id="CM"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p id="CP"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
+<p id="EX"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p id="GL"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#GL">GL (non-breaking “glue&quot;)</a> non-tailorable, non-breaking characters prohibit breaks on either side, but that prohibition can be overridden by SP or ZW.</p>
+<p id="HL"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#HL">HL (Hebrew letter)</a> does not break around a following hyphen; otherwise acts as Alphabetic.</p>
+<p id="HY"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#H2">HY (hyphen)</a> additional context analysis is required to distinguish usage of this character as a hyphen from its usage as a minus sign (or indicator of numerical range). If used as hyphen, it acts like U+2010 HYPHEN, which has line break class BA.</p>
+<p id="IN"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
+<p id="ID"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#NU">ID (ideographic)</a> do not require other characters to provide break opportunities; lines can ordinarily break before and after and between pairs of ideographic characters. Note that this class also includes characters other than Han ideographs..</p>
+<p id="IS"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
+<p id="NS"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#NU">NS (nonstarters)</a> cannot start a line, but unlike CL they may allow a break in some contexts when they follow one or more space characters.</p>
+<p id="NU"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
+<p id="OP"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
+<p id="PO"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#OP">PO (postfix numeric)</a> usually follows a numerical expression and may not be separated from preceding numeric characters or preceding closing characters, even if one or more space characters intervene. For example, there is no break opportunity in “(12.00) %”.</p>
+<p id="PR"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#PR">PR (numeric prefix)</a>  may not be separated from following numeric characters or following opening characters, even if a space character intervenes. For example, there is no break opportunity in “฿ (100.00)”.</p>
+<p id="QU"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
+<p id="SA"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#SA">SA (Southeast Asian)</a> require morphological analysis to determine break opportunities, in a way similar to a hyphenation algorithm. No break opportunities will be found otherwise. Complex context analysis, often involving dictionary lookup of some form, is required to determine non-emergency line breaks. If such analysis is not available, it is recommended to treat them as AL.</p>
+<p id="SY"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#SA">SY (symbols allowing break after)</a> provides a break opportunity after, except in front of digits, so as to not break “1/2” or “06/07/99”.</p>
+<p id="VF"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#VF">VF (Virama Final)</a> a virama of Indic syllabic category <code class="kw" translate="no">Pure_Killer</code> in scripts where the final consonant of a phonological syllable is expressed as a sequence of a consonant and such a virama, and the final consonant needs to be kept together with the preceding orthographic syllable.</p>
+<p id="VI"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#VI">VI (Virama)</a> a virama of Indic syllabic categories <code class="kw" translate="no">Virama</code> and <code class="kw" translate="no">Invisible_Stacker</code>.</p>
+<p id="ZWJ"><a href="https://www.unicode.org/reports/tr14/tr14-51.html#SA">ZW (ZERO WIDTH SPACE, ZWSP)</a> enables  invisible break opportunities wherever <span class="uname">SPACE</span> cannot be used. It  has no width, and is treated as if it wasn't there during justification.</p>
 </div>
 
 
@@ -111,7 +116,7 @@
   <p>The <img src="share.png" alt="Show details"> icon opens a separate window with an app that displays basic information about the characters for that row.</p>
 </section>
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->21 April, 2021<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->15 August, 2024<!-- #EndDate -->
 </p>
 </details>
 </div>

@@ -1,23 +1,24 @@
 // make proplist array
-strList = rawPropertyListStr.split('\n')
+lines = rawPropertyListStr.split('\n')
 var U = []
-for (let i=0;i<strList.length;i++) {
-	if (strList[i].startsWith('#')) continue
-	if (strList[i] == '') continue
-	spaceArray = strList[i].split(' ')
-	keyData = spaceArray[0]
-	keyDataArray = keyData.split(';')
-	if (keyDataArray[0].includes('..')) {
-		cpoints = keyDataArray[0].split('.')
+for (let i=0;i<lines.length;i++) {
+	if (lines[i].startsWith('#')) continue
+	if (lines[i].trim() == '') continue
+	splitLine = lines[i].split('#')
+	cpRange = splitLine[0].split(';')[0].trim()
+	property = splitLine[0].split(';')[1].trim()
+    
+	if (cpRange.includes('..')) {
+		cpoints = cpRange.split('.')
 		start = parseInt(cpoints[0],16)
 		end = parseInt(cpoints[2],16)
 		while (start<=end) {
-			U[start] = keyDataArray[1]
+			U[start] = property
 			start++
 			} 
 		}
 	else { 
-		U[parseInt(keyDataArray[0],16)] = keyDataArray[1]
+		U[parseInt(cpRange,16)] = property
 		}
 	}
 
@@ -57,12 +58,15 @@ function makeList (stream) {
 		else scriptGroups[group] = cps[i]
 		}
 	
-	
 	// output the list 
 	var out = '<table><tbody>\n'
 	var keys = Object.keys(scriptGroups)
 	keys.sort()
 
+    // clear out any previously displayed legend notes
+    notes = document.querySelectorAll('#legend p')
+    for (i=0;i<notes.length;i++) notes[i].style.display = 'none'
+    
 	// construct a table
 	for (x=0;x<keys.length;x++) {
 		out += '<tr class="main">'
