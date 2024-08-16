@@ -2184,6 +2184,9 @@ function makeFootnoteIndex (charVal) {
     else incomingValue = this.textContent.replace(/◌/g,'')
     //itemToFind = new RegExp(makeSafeRegex(incomingValue), 'g')
     //console.log('search for:',incomingValue)
+    
+    // convert hex code point values to a character
+    if (! Number.isNaN(parseInt(charVal, 16))) incomingValue = String.fromCodePoint(parseInt(charVal, 16))
 
 	// collect all the .listItem & .codepoint elements
 	var possibleMatches = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
