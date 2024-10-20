@@ -1,5 +1,29 @@
 reflist = {
 
+/*
+"auth_initials": {
+"authors": "Sort_by_family_name_of_first_contributor",
+"title":"The_Worlds_Writing_Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "Feb 2024",
+"publisher":"Oxford_University_Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+*/
+
+"abp": {
+"authors": "Aditya Bayu Perdana",
+"title":"Musical Symbols and Sasak Characters in the Balinese Script",
+"date": "2023",
+"url":"https://www.unicode.org/notes/tn51/UTN51-Balinese-Characters-1.pdf",
+"reviewed":false
+},
+
 
 "d": {
 "url":"#refs",
