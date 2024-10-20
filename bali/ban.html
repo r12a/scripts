@@ -59,7 +59,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->18 October, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->20 October, 2024<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -73,7 +73,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Balinese Orthography Notes, <!-- #BeginDate format:En2 -->18-Oct-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/bali/ban">https://r12a.github.io/scripts/bali/ban</a></small></p>
+<p class="refLine"><small>Richard Ishida, Balinese Orthography Notes, <!-- #BeginDate format:En2 -->20-Oct-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/bali/ban">https://r12a.github.io/scripts/bali/ban</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -171,18 +171,20 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>Words are not separated by spaces, however syllables may be separated by <abbr title="Zero width space"><a class="seclink" href="#word"><abbr title="Zero width space">ZWSP</abbr></a></abbr>, as long as they don't fall inside a stack.</p>
 
-<p class="addToConsonants">Stacked consonants and conjoined pairs <a class="seclink" href="#word">span word boundaries</a>. This means that text must be <a class="seclink" href="#linebreak">wrapped</a> at orthographic syllable boundaries, and not at word boundaries. <a class="seclink" href="#pameneng">Hyphenation</a> occurs, using <span class="hx">1B60</span> at the line end to indicate the break.</p>
+<p>Stacked consonants and conjoined pairs <a class="seclink" href="#word">span word boundaries</a>. This means that text must be <a class="seclink" href="#linebreak">wrapped</a> at orthographic syllable boundaries, and not at word boundaries. <a class="seclink" href="#pameneng">Hyphenation</a> occurs, using <span class="hx">1B60</span> at the line end to indicate the break.</p>
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">The <a class="seclink" href="#basicC">18 consonant letters</a> used for pure Balinese words are supplemented by <a class="seclink" href="#honorific">15 more</a> derived from Sanskrit and Kawi words, some of which are used as honorifics, a little like capital letters.  Repertoire extensions for <a class="seclink" href="#extendedC">8 non-native sounds</a> are achieved by applying the <span class="name">rerekan</span> diacritic to  characters.</p>
+<p class="addToConsonants"><a class="seclink" href="#basicC">18 consonant letters</a> are used for pure Balinese words, supplemented by <a class="seclink" href="#honorific">15 more</a> used for Sanskrit and Kawi loanwords. Some of these letters are used as honorifics, a little like capital letters in English proper nouns.</p>
 
-<p class="addToConsonants"><a class="seclink" href="#clusters">Consonant clusters</a> are  represented by stacked consonants (many subjoined consonants have alternative shapes) or conjoined pairs. Occasionally, a visible <span class="name">adeg adeg</span>  (<a class="termref" href="../glossary/index.html#virama">virama</a>) is used.</p>
+<p class="addToConsonants">The second (or occasionally third) consonant in a <a class="seclink" href="#onsets">syllable-initial cluster</a> is written using <span class="hx circle">1B44</span> followed by one of 4 ordinary  consonants or using a special vocalic combining mark.</p>
 
-<p class="addToConsonants">Syllable-initial clusters use <a class="seclink" href="#onsets">3 subjoined</a> versions of ordinary consonants or vocalics
-for the second consonant.</p>
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final consonant</a> sounds are most commonly written using an ordinary consonant followed by <span class="hx circle">1B44</span>. If another consonant follows, the consonant shapes are combined into a conjunct form — even if the consonants represent the end of one word and the beginning of another! Alternatively, three syllable-final consonants may be represented by one of <a class="seclink" href="#finals">3 final-consonant diacritics</a>, two of which only occur word-finally.</p>
 
-<p class="addToConsonants">Word-final consonant sounds may be represented by <a class="seclink" href="#finals">3 final-consonant diacritics</a>. Otherwise, if nothing follows, they  are ordinary consonants followed by a visible <span class="ch">᭄</span>.</p>
+<p class="addToConsonants"><a class="seclink" href="#clusters">Consonant clusters</a> are  represented by conjunct forms that are either stacked consonants or conjoined pairs. The shape of many subjoined consonant glyphs differs from the normal shape. The shaping is produced by adding <span class="hx circle">1B44</span> between consonant code points.</p>
+<p class="addToConsonants">Usually the <span class="name">adeg adeg</span> is invisible, but it is rendered visibly when no other consonant follows, or occasionally in special circumstances, when it can be forced to appear using an invisible formatting character.</p>
+
+
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
 <p class="addToVowels">The Balinese orthography is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with one <a class="seclink" href="#inherent">inherent vowel</a><a class="termref" href="../glossary/index.html#inherentvowel"></a>, generally pronounced <span class="ipa">a</span>, but <span class="ipa">ə</span> when word-final or in some affixes. </p>
@@ -1153,9 +1155,19 @@ alveolar</th>
 
 
 
-
 <section id="plain_vowel_map">
 <h4>Plain vowels</h4>
+
+<div class="mapHeading">
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">&nbsp;</div>
+<div class="col1">&nbsp;</div>
+<div class="lc">Dependent vowels</div>
+<div class="uc" style="margin-inline-end:4em;">Independent vowels</div>
+</div>
+</div>
+
 
 <div id="mapv_high" class="map">
 <div class="mapItem">
@@ -1317,6 +1329,17 @@ alveolar</th>
 
 <section id="diphthong_map">
 <h4>Diphthongs and other combinations</h4>
+<div class="mapHeading">
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">&nbsp;</div>
+<div class="col1">&nbsp;</div>
+<div class="lc">Dependent vowels</div>
+<div class="uc" style="margin-inline-end:4em;">Independent vowels</div>
+</div>
+</div>
+
+
 <div id="map_lowdiphthongs" class="map">
 
 <div class="mapItem">
@@ -1351,6 +1374,17 @@ alveolar</th>
 
 <section id="vocalic_map">
 <h4>Vocalics</h4>
+<div class="mapHeading">
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">&nbsp;</div>
+<div class="col1">&nbsp;</div>
+<div class="lc">Dependent vowels</div>
+<div class="uc" style="margin-inline-end:4em;">Independent vowels</div>
+</div>
+</div>
+
+
 <div id="map_vocalics" class="map">
 
 <div class="mapItem">
@@ -1491,8 +1525,8 @@ alveolar</th>
 <thead>
 <tr>
 <th>&nbsp;</th>
-<th>Native Balinese sounds</th>
-<th>Used for Kawi, Sanskrit, etc.</th>
+<th style="width:40%;">Native Balinese sounds</th>
+<th>Used for Kawi, Sanskrit, etc. loan words</th>
 </tr>
 </thead>
 <tbody>
@@ -1548,17 +1582,16 @@ alveolar</th>
 <section id="basicC">
 <h3>Basic  consonants</h3>
 
-<p>The characters listed here and in the following sections also have conjoined and/or subjoined forms, which may differ significantly from those shown here. See <a class="secref">clusters</a> for a list of glyph shapes.</p>
+<p>Balinese uses 18 basic consonants known as <span class="name">aksara wreṣāstra</span> (<span class="ex" lang="ban">ᬅᬓ᭄ᬱᬭᬯᬺᬱᬵᬲ᭄ᬢ᭄ᬭ</span>).</p>
 
-<p>This section lists the basic 18 consonants known as <span class="name">aksara wreṣāstra</span> (<span class="ex" lang="ban">ᬅᬓ᭄ᬱᬭᬯᬺᬱᬵᬲ᭄ᬢ᭄ᬭ</span>). Whereas the table just above takes you from sounds to letters, the following simply lists the basic consonant letters (however, since the orthography is highly phonetic there is little difference in ordering).</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᬧ␣ᬩ␣ᬢ␣ᬤ␣ᬓ␣ᬕ␣ᬘ␣ᬚ␣ᬲ␣ᬳ␣ᬫ␣ᬦ␣ᬗ␣ᬜ␣ᬯ␣ᬭ␣ᬮ␣ᬬ</figure>
 
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᬧ␣ᬩ␣ᬢ␣ᬤ␣ᬓ␣ᬕ␣ ␣ᬘ␣ᬚ␣ ␣ᬲ␣ᬳ␣ ␣ᬫ␣ᬦ␣ᬗ␣ᬜ␣ ␣ᬯ␣ᬭ␣ᬮ␣ᬬ</figure>
-
+<p>The characters listed here (and in the following sections) also have subjoined/conjoined shapes, which may differ significantly from those shown here. See <a class="secref">clusters</a> for a list of glyph shapes.</p>
 
 
 
-<p><span class="ch">ᬳ</span> at the beginning of a word or after a preceding vowel is mostly used as a support for a vowel sign (see <a class="sectionref">standalone</a>), and is not pronounced or transcribed. Word finally with a suffix vowel, however, it is transcribed.<tt>loc</tt></p>
+
+<p><span class="ch">ᬳ</span> at the beginning of a word or after a preceding vowel is mostly used as a support for a vowel sign (see <a class="sectionref">standalone</a>), and is not pronounced or transcribed. Word finally with a suffix vowel, however, it <em>is</em> transcribed.<tt>loc</tt></p>
 </section>
 
 
@@ -1580,6 +1613,8 @@ alveolar</th>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᬨ␣ᬪ␣ᬝ␣ᬣ␣ᬥ␣ᬖ␣ᬰ␣ᬱ␣ᬡ</figure>
 
+<p class="instructions">The following are particularly noteworthy points about certain characters listed above. More details for each character can be revealed by clicking on the lists above. See also the <a href="#consonant_mappings">sound to character</a> mapping table.</p>
+
 <p>Two consonants, <span class="ch">ᬔ</span> and <span class="ch">ᬙ</span>, are considered very rare, and one other, <span class="ch">ᬛ</span>, seems to be known from only one word:</p>
 
 <p><span class="eg transc" lang="ban">ᬦᬶᬃᬛᬭ</span></p>
@@ -1597,17 +1632,22 @@ alveolar</th>
 <section id="extendedC">
 <h3>Rerekan</h3>
 
-<p>The combining mark <span class="ch">᬴</span> is used, as is a similar sign in Javanese, to extend the character repertoire for foreign sounds.</p>
+<div class="btw">
+<p>The combining mark <span class="ch">᬴</span> is used, as is a similar sign in Javanese, to extend the character repertoire for foreign sounds. However, according to Perdana<tt>abp,13</tt> the use of this sign is specific to Lombok texts, and even there its use is sporadic and inconsistent. While the sign can theoretically be used in Balinese settings, common Balinese users would not be familiar with the sign and normally render foreign consonants using the nearest sounding native sound without any additional markings.</p>
+
+<p class="instructions">See <a href="https://www.unicode.org/notes/tn51/UTN51-Balinese-Characters-1.pdf">Perdana p13</a> for many more details.</p>
+
+<p>The first 7 of the 8 combinations listed below are attested in Library of Congress transliterations and in earlier Sasak orthography. The 8th, <span class="ch">ᬤ᬴</span> could be used for one-to-one transliteration for Javanese <span class="ipa">ɖ</span>.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᬧ᬴␣ᬯ᬴␣ᬚ᬴␣ᬓ᬴␣ᬕ᬴␣ᬳ᬴␣ᬗ᬴␣ᬤ᬴</figure>
 
-<p>The first 7 of the 8 listed above are attested in Library of Congress transliterations and in earlier Sasak orthography. The 8th, <span class="ch">ᬤ᬴</span> could be used for one-to-one transliteration for Javanese <span class="ipa">ɖ</span>. </p>
 <p>In rendering, the dots of these letters appear above the top character, which can cause some ambiguity in reading.  The following are all visually indistinguishable: 
 <span class="charExample" translate="no"><span class="ex" lang="ban">ᬓ᬴᭄ᬚ</span> <span class="trans">kˑ͓ʤ</span> <span class="transc">xja</span></span>
 <span class="charExample" translate="no"><span class="ex" lang="ban">ᬓ᭄ᬚ᬴</span> <span class="trans">k͓ʤˑ</span> <span class="transc">kza</span></span>
 <span class="charExample" translate="no"><span class="ex" lang="ban">ᬓ᬴᭄ᬚ᬴</span> <span class="trans">kˑ͓ʤˑ</span> <span class="transc">xza</span></span>
 </p>
 <p>In practice these combinations are probably rather rare. </p>
+</div>
 </section>
 
 
@@ -1619,6 +1659,9 @@ alveolar</th>
 
 <div class="btw">
 <p>In recent times, Sasak users abandoned the use of the Javanese-influenced <span class="name">rerekan</span> in favour of a series of modified letters (see above), making use, in addition, of some of unused Kawi letters for the Arabic sounds. In place of <span class="charExample inline"><span class="ex" lang="ban">ᬓ᬴</span></span> <span class="ipa">x</span> and <span class="charExample inline"><span class="ex" lang="ban">ᬕ᬴</span></span> <span class="ipa">ɣ</span>, for instance, the new fusion of <span class="uname">KA</span> and <span class="uname">HA</span>,<span class="ch">ᭆ</span>  and the Kawi letter <span class="ch">ᬖ</span> are used.</p>
+
+<p class="instructions">See <a href="https://www.unicode.org/notes/tn51/UTN51-Balinese-Characters-1.pdf">Perdana p15</a> for many more details.</p>
+
 <p><span class="ednote">(Does the fact that these relate to aspirated or retroflex forms originally affect the pronunciation?)</span></p>
 
 <figure class="otherBox auto" data-cols="">ᭅ␣ᭆ␣ᭇ␣ᭈ␣ᭉ␣ᭊ␣ᭋ</figure>
@@ -1632,7 +1675,7 @@ alveolar</th>
 
 
 <section id="onsets">
-<h3>Onset consonants</h3>
+<h3>Onsets</h3>
 
 <figure class="characterBox auto" data-ipa="w,r,rə,l,j" data-cols="trans,transc">᭄ᬯ␣᭄ᬭ␣ᬺ␣᭄ᬮ␣᭄ᬬ</figure>
 
@@ -1653,13 +1696,18 @@ alveolar</th>
 
 
 <section id="finals">
-<h3>Final consonants</h3>
+<h3>Finals</h3>
 
 <p>Normally, syllable and word-final consonant sounds with no following consonant are represented using an ordinary consonant character followed by <span class="ch">᭄</span>. For example,</p>
 <p><span class="eg" lang="ban">ᬓᬵᬤᭂᬧ᭄</span></p>
 <p><span class="eg" lang="ban">ᬓᬧᬮ᭄</span></p>
 
 <p>If the consonant is followed by another consonant, either in the middle or at the end of a word, the <span class="name">adeg adeg</span> code point remains, but becomes invisible as the consonant shapes combine vertically or horizontally.</p>
+
+
+
+<section id="fcMarks">
+<h4>Combining marks</h4>
 
 <p>However, there is also a set of combining marks for syllable-final consonants that don't need to be followed by the <span class="name">adeg adeg</span>.</p>
 
@@ -1684,6 +1732,7 @@ alveolar</th>
 <span class="eg" lang="ban">ᬕᭂᬤᭀᬂ</span>
 </p>
 <p>See also <a class="secref">cchar_modre</a>.</p>
+</section>
 </section>
 
  
@@ -1870,6 +1919,17 @@ alveolar</th>
 
 
 
+
+
+<div class="mapHeading">
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">&nbsp;</div>
+<div class="col1">&nbsp;</div>
+<div class="lc">Native Balinese letters</div>
+<div class="uc" style="margin-inline-end:4em;">Letter used for Sanskrit, Kawi, etc loanwords</div>
+</div>
+</div>
 
 
 
@@ -2312,6 +2372,8 @@ alveolar</th>
 <p>There is also a set of musical diacritical marks, which are not described here.</p>
 
 <figure class="otherBox auto noindex"  data-cols="">᭫␣᭬␣᭭␣᭮␣᭯␣᭰␣᭱␣᭲␣᭳</figure>
+
+<p class="instructions">For an in-depth look at musical symbols in Balinese see <a href="https://www.unicode.org/notes/tn51/UTN51-Balinese-Characters-1.pdf">Perdana</a>.</p>
 </section>
 </section>
 
