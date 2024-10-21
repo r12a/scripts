@@ -76,12 +76,11 @@ reflist = {
 },
 
 "u": {
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch17.pdf",
+"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-17/",
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
+"title":"The Unicode Standard, Version 16.0",
 "sub":"Chapter 17.3: Indonesia and Oceania, Balinese",
-"pages":"691-696",
-"isbn":"978-1-936213-16-0.",
+"isbn":"978-1-936213-34-4",
 },
 
 "ul": {
