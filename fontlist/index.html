@@ -6,6 +6,7 @@
 <title>Font lister</title>
 <meta name="description" content="Shows fonts supplied with Windows10 and Mac OS X, Google Noto, & SIL, by script."/>
 <script src="../../shared/phrasedb/db.js"> </script>
+<script src="../../shared/scriptdb/script_summaries.js"> </script>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 	
@@ -39,7 +40,7 @@ body { font-size: 15.5px; }
 .sample imgX { width: 1000px; }
 .fontItem { margin-block-end: 0; width: 80%; text-align: start; }
 .fontlist { font-size: 80%; }
-.infoIcon { color: tan; font-size: 80%; margin-inline-start: 1em; }
+.infoIcon { color: tan; font-size: 80%; margin-inline-start: 1em; cursor: pointer; }
 .text {  line-height: 2; }
 b {
     font-size: 1.2em;
@@ -77,12 +78,33 @@ details h2 { margin-block-start: 2em; }
     margin-inline-start: 7.5%;
     margin-block-start: -2rem;
     margin-inline-end: 32%;
-    text-align: start;
+    text-align: end;
     font-size: 80%;
     font-style: italic;
     }
+.scriptDescription {
+    margin-inline-start: 7.5%;
+    /*margin-block-start: 2rem;*/
+    margin-inline-end: 32%;
+    text-align: start;
+    font-size: 85%;
+    font-style: normal;
+    line-height: 1.5;
+    }
+.scriptLineage {
+    margin-block-start: 1em;
+    }
+.scriptLineage, .scriptSiblings {
+    font-style: italic;
+    font-size: 80%;
+    }
+.scriptDetails {
+    margin-block-start: 1rem;
+    }
+
 .fontItem img, .fontItem b {
     cursor: pointer;
+    font-size: 80%;
     }
 
 .writingStyle {
@@ -98,6 +120,7 @@ details h2 { margin-block-start: 2em; }
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/fontdb/db.js"></script>
+<script src="../../shared/fontdb/fontinfo.js"></script>
 
 <script>
 // set up settings object to be saved in localstorage
@@ -188,13 +211,30 @@ function addMyFont (fontName) {
 
 
 function getSection (script, scriptName, sample, style='', lang='', fontfeatures='') {
+    console.log('getSection', script,scriptName, sample, style, lang, fontfeatures )
 	var out = '<section id="'+script+style+'">'
 	out += '<h2>'+scriptName+'</h2>'
+    
     out += `<div class="samplePointer">`
     out += `<a href="../samples/index.html?script=${ script }" target="_blank">Sample text(s) for ${ scriptName }</a>`
     out += `&nbsp; • &nbsp;`
     out += `<a href="../links.html?iso=${ script }" target="_blank">Other resources for ${ scriptName }</a>`
     out += `</div>`
+    
+    
+    out += `<div class="scriptDescription">`
+    scriptId = scriptSummaries[script]
+    console.log(scriptId)
+    if (typeof scriptId !== 'undefined') {
+        if (scriptId.dates) out += `<div class="scriptDates">${ scriptId.dates }</div>`
+        if (scriptId.status) out += `<div class="scriptStatus">${ scriptId.status }</div>`
+        if (scriptId.lineage) out += `<div class="scriptLineage">Lineage: ${ scriptId.lineage }</div>`
+        if (scriptId.siblings) out += `<div class="scriptSiblings">Siblings: ${ scriptId.siblings }</div>`
+        if (scriptId.description) out += `<div class="scriptDetails">${ scriptId.description }</div>`
+        }
+    out += `</div>`
+    
+    
     out += '<div id="myfontDisplay"></div>'
 	var lastStyle = ''
 	
@@ -247,7 +287,9 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 				}
 			out += ' <span class="fontname">'+fontDB[r].name
 			out += ' <span style="color:#ccc; font-size:80%; margin: 0 1em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = \'none\'">X</span> '
-			if (fontDB[r].notes) out += '<span class="infoIcon">🛈 '+fontDB[r].notes+'</span>'
+			//if (fontDB[r].notes) out += '<span class="infoIcon">🛈 '+fontDB[r].notes+'</span>'
+            fontInfoKey = fontDB[r].name.toLowerCase()
+			if (fontInfoDB[fontInfoKey]) out += `<span class="infoIcon" onclick="showFontInfo('${ fontDB[r].name }')"><span style="font-size:2em;">ℹ</span> Show details.</span>`
 			out += '</span></p>'
 
 			if (document.getElementById('showFonts').checked) {
@@ -274,6 +316,13 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 	out += '</section>'
 	return out
 	}
+
+
+function showFontInfo (font) {
+    document.getElementById('fontInfoTitle').textContent = font
+    document.getElementById('fontInfoContent').innerHTML = fontInfoDB[font.toLowerCase()].replace(/\n/g,'<br><br>')
+    document.getElementById('fontInfo').style.display = 'block'
+    }
 
 
 
@@ -314,7 +363,7 @@ var scriptData = {
 
 'dsrt': { title: 'Deseret', sample: 'en-dsrt' },
 'deva': { title: 'Devanagari', sample: 'hi' },
-'diak': { title: 'Dive Akuru', sample: 'dv-diak' },
+'diak': { title: 'Dives Akuru', sample: 'dv-diak' },
 'dogr': { title: 'Dogra', sample: 'sa-dogr' },
 
 'egyp': { title: 'Egyptian hieroglyphs', sample: 'egy' },
@@ -332,7 +381,7 @@ var scriptData = {
 'guru': { title: 'Gurmukhi', sample: 'pa' },
 
 'rohg': { title: 'Hanifi Rohingya', sample: 'rhg' },
-'hano': { title: 'Hanunoo', sample: 'hnn' },
+'hano': { title: 'Hanunó’o', sample: 'hnn' },
 'hatr': { title: 'Hatran', sample: 'mis-Hatr' },
 'hebr': { title: 'Hebrew', sample: 'he' },
 
@@ -574,13 +623,13 @@ function setFontFeatures ( features ) {
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->3 November, 2023<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->30 October, 2024<!-- #EndDate -->
 <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
   
 
-<p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows 11 and macOS Ventura operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and macOS fonts have to be downloaded by the user before they can be applied to text. Install <a href="https://github.com/adobe-fonts/adobe-notdef">Adobe NotDef</a> font for best results.</p>
+<p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows 11 and macOS Sequoia operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and macOS fonts have to be downloaded by the user before they can be applied to text. Install <a href="https://github.com/adobe-fonts/adobe-notdef">Adobe NotDef</a> font for best results.</p>
 
 
 
@@ -680,7 +729,7 @@ function setFontFeatures ( features ) {
 
 <a class="trigger" href="index.html?script=rohg">hanifi rohingya</a> • 
 
-<a class="trigger" href="index.html?script=hano">hanunoo</a> • 
+<a class="trigger" href="index.html?script=hano">hanunó’o</a> • 
 
 <a class="trigger" href="index.html?script=hatr">hatran</a> • 
 
@@ -1288,9 +1337,84 @@ function setFontFeatures ( features ) {
 <div class="smallprint"><span id="version">See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist/index.html">recent changes</a>. &nbsp;•&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfontlist%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%2F%0A%0A" target="_blank">comment</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
+<style>
+#fontInfo {
+    display: none;
+    background: #fffbff;
+    width: 40%;
+    padding: 2em;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 1rem;
+    box-shadow: lightgray 10px 5px 5px;
+    font-family: arial;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: #666;
+    max-height: 60vh;
+
+    position: fixed;
+    overflow-y: auto;
+    scrollbar-color: tan transparent;
+    scrollbar-width: thin;
+    z-index: 1000;
+    left: 30%;
+    right: 18%;
+    top: 10%;
+    }
+#summaryWin {
+    display: none;
+    font-size: .9rem;
+    background-color: white;
+    margin: auto;
+    padding: 2em;
+    border: 1px solid rgb(204, 204, 204);
+    /* border-radius: 1em; */
+    max-width: 70%;
+    max-height: 80vh;
+    box-shadow: gray 10px 5px 5px;
+    overflow-y: auto;
+    scrollbar-color: tan transparent;
+    scrollbar-width: thin;
+    z-index: 1000;
+    border-top-right-radius: .25em;
+    border-top-left-radius: .25em;
+    left: 30%;
+    right: 18%;
+    bottom: 2.5rem;
+}
+
+
+#fontInfoContent {
+    font-size: smaller;
+    }
+#fontInfoTitle {
+    font-weight: bold;
+    margin-block-end: .5rem;
+    color: #333;
+    }
+#fontInfoClose  {
+    text-align: end;
+    margin-block-start: 1rem;
+    }
+#fontInfoClose span {
+    cursor: pointer;
+    background: #924931;
+    color: white;
+    padding: .75rem 1.5rem;
+    border-radius: 1.5rem;
+    font-size: 90%;
+    }
+</style>
+<dialog id="fontInfo">
+<div id="fontInfoTitle">Font name</div>
+<div id="fontInfoContent">Content</div>
+<div id="fontInfoClose" onclick="this.parentNode.style.display = 'none'"><span>OK</span></div>
+</dialog>
 
 
 <script>
+//document.getElementById('fontInfo').style.display = 'block'
+
+
 // set the settings UI to match the localStorage data
 if (settings.mac === false) document.getElementById('showMac').checked = false
 if (settings.win === false) document.getElementById('showWin').checked = false
@@ -1311,6 +1435,13 @@ changeFontSize(settings.fontsize)
 //if (settings.text === false) document.getElementById('showFonts').checked = false
 //else document.getElementById('showFonts').checked = true
 
+
+function closeDialogEsc (e) {
+    // closes the dialog box and panel when escape is pressed
+    if (e.code === 'Escape') {
+        document.getElementById('fontInfo').style.display = 'none'
+        }
+}
 
 
 
@@ -1333,6 +1464,8 @@ if (scriptParameter !== '') {
 	getResult(scriptParameter, hash.substring(1))
 	//window.location = '#result'
 	}
+
+document.querySelector("body").addEventListener('keydown', closeDialogEsc)
 
 </script>
 </body>
