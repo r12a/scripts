@@ -194,14 +194,6 @@ function showOnly (type, script) {
 
 
 
-function addMyFontX (fontName) {
-    var out = ''
-    out += '<p class="fontItem"><b>My Font</b>  <span class="fontname">'+fontName+'<span style="color:#ccc; font-size:80%; margin: 0 1em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = \'none\'">X</span></span></p>'
-    out += '<div class="sample text" dir="auto" style="font-family:\''+fontName+'\', \'Adobe NotDef\';" lang="">'+window.currentSample+'</div>'
-    document.getElementById('myfontDisplay').innerHTML = out
-    }
-
-
 function addMyFont (fontName) {
     var out = ''
     out += `<p class="fontItem"><b>My Font</b>  <span class="fontname">${ fontName }<span style="color:#ccc; font-size:80%; margin: 0 1em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = 'none'">X</span></span></p>`
@@ -313,6 +305,10 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 			out += '</div>'
 			}
 		}
+    
+    // add a message if no fonts found
+    if (out.endsWith('<div id="myfontDisplay"></div>')) out += `<h3 style="margin-block:3rem; border:0; font-size: 2rem;">No fonts !</h3>`
+    
 	out += '</section>'
 	return out
 	}
@@ -371,6 +367,7 @@ var scriptData = {
 'elym': { title: 'Elymaic', sample: 'xly' },
 'ethi': { title: 'Ethiopic', sample: 'am' },
 
+'gara': { title: 'Garay', sample: 'wo-gara' },
 'geor': { title: 'Georgian', sample: 'ka' },
 'glag': { title: 'Glagolitic', sample: 'cu-glag' },
 'goth': { title: 'Gothic', sample: 'got' },
@@ -432,6 +429,8 @@ var scriptData = {
 'mymr': { title: 'Myanmar', sample: 'my' },
 
 'nbat': { title: 'Nabataean', sample: 'arc-nbat' },
+'nagm': { title: 'Nag Mundari', sample: 'unr-nagm' },
+'nand': { title: 'Nandinagari', sample: 'sa-nand' },
 'talu': { title: 'New Tai Lue', sample: 'khb' },
 'newa': { title: 'Newa', sample: 'new' },
 'nkoo': { title: 'NKo', sample: 'nqo' },
@@ -440,22 +439,25 @@ var scriptData = {
 
 'ogam': { title: 'Ogham', sample: 'mga' },
 'olck': { title: 'Ol Chiki', sample: 'sat' },
+'onao': { title: 'Ol Onal', sample: 'unr-onao' },
 'hung': { title: 'Old Hungarian', sample: 'ohu' },
 'xpeo': { title: 'Old Persian', sample: 'peo' },
 'narb': { title: 'Old North Arabian', sample: 'mis-narb' },
 'sarb': { title: 'Old South Arabian', sample: 'xsa' },
 'orkh': { title: 'Old Turkic', sample: 'otk' },
-'orya': { title: 'Oriya', sample: 'ory' },
+'orya': { title: 'Odia', sample: 'ory' },
 'osge': { title: 'Osage', sample: 'osa' },
 'osma': { title: 'Osmanya', sample: 'so-osma' },
 'ougr': { title: 'Old Uighur', sample: 'oui' },
 
 'hmng': { title: 'Pahawh Hmong', sample: 'hmn-hmng' },
 'perm': { title: 'Old Permic', sample: 'kv' },
+'phli': { title: 'Inscriptional Pahlavi', sample: 'pal-phli' },
 'phlp': { title: 'Psalter Pahlavi', sample: 'pal-phlp' },
 'palm': { title: 'Palmyrene', sample: 'arc-palm' },
 'prti': { title: 'Inscriptional Parthian', sample: 'xpr' },
 'phag': { title: 'Phags-pa', sample: 'sa-phag' },
+'xphais': { title: 'Phaistos Disk', sample: 'und-xphais' },
 'phnx': { title: 'Phoenician', sample: 'phn' },
 
 'rjng': { title: 'Rejang', sample: 'rej' },
@@ -624,7 +626,7 @@ function setFontFeatures ( features ) {
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->2 November, 2024<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->3 November, 2024<!-- #EndDate -->
 <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
@@ -711,6 +713,8 @@ function setFontFeatures ( features ) {
 <a class="trigger" href="index.html?script=elym">elymaic</a> • 
 
 <a class="trigger" href="index.html?script=ethi">ethiopic</a> • 
+
+<a class="trigger" href="index.html?script=gara">garay</a> • 
 
 <a class="trigger" href="index.html?script=geor">georgian</a> • 
 
@@ -818,6 +822,10 @@ function setFontFeatures ( features ) {
 
 <a class="trigger" href="index.html?script=nbat">nabataean</a> • 
 
+<a class="trigger" href="index.html?script=nagm">nag mundari</a> • 
+
+<a class="trigger" href="index.html?script=nand">nandinagari</a> • 
+
 <a class="trigger" href="index.html?script=talu">new tai lue</a> • 
 
 <a class="trigger" href="index.html?script=newa">newa</a> • 
@@ -828,9 +836,13 @@ function setFontFeatures ( features ) {
 
 <a class="trigger" href="index.html?script=hmnp">nyiakeng puachue hmong</a> • 
 
+<a class="trigger" href="index.html?script=orya">odia</a> • 
+
 <a class="trigger" href="index.html?script=ogam">ogham</a> • 
 
 <a class="trigger" href="index.html?script=olck">ol&nbsp;chiki</a> • 
+
+<a class="trigger" href="index.html?script=onao">ol&nbsp;onal</a> • 
 
 <a class="trigger" href="index.html?script=hung">old hungarian</a> • 
 
@@ -848,8 +860,6 @@ function setFontFeatures ( features ) {
 
 <a class="trigger" href="index.html?script=ougr">old uighur</a> • 
 
-<a class="trigger" href="index.html?script=orya">oriya</a> • 
-
 <a class="trigger" href="index.html?script=osge">osage</a> • 
 
 <a class="trigger" href="index.html?script=osma">osmanya</a> • 
@@ -865,6 +875,8 @@ function setFontFeatures ( features ) {
 <a class="trigger" href="index.html?script=prti">parthian</a> • 
 
 <a class="trigger" href="index.html?script=phag">phags-pa</a> • 
+
+<a class="trigger" href="index.html?script=xphais">phaistos disk</a> •
 
 <a class="trigger" href="index.html?script=phnx">phoenician</a> •
 
