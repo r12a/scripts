@@ -7,6 +7,7 @@
 <meta name="description" content="Shows sample texts, by script."/>
 <script src="../../shared/phrasedb/db.js"> </script>
 <script src="../../shared/phrasedb/samplescripts.js"> </script>
+<script src="../../shared/scriptdb/script_summaries.js"> </script>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <style>
@@ -51,9 +52,28 @@ b {
     margin-inline-start: 7.5%;
     margin-block-start: -2rem;
     margin-inline-end: 32%;
-    text-align: start;
+    text-align: end;
     font-size: 80%;
     font-style: italic;
+    }
+.scriptDescription {
+    margin-inline-start: 7.5%;
+    /*margin-block-start: 2rem;*/
+    margin-inline-end: 32%;
+    text-align: start;
+    font-size: 85%;
+    font-style: normal;
+    line-height: 1.5;
+    }
+.scriptLineage {
+    margin-block-start: 1em;
+    }
+.scriptLineage, .scriptSiblings {
+    font-style: italic;
+    font-size: 80%;
+    }
+.scriptDetails {
+    margin-block-start: 1rem;
     }
 
 
@@ -176,6 +196,7 @@ aside p {
 [lang=sa-marc] { font-family: "Noto Sans Marchen" }
 [lang=sa-modi] { font-family: "Noto Sans Modi", "Sans Serif Collection" }
 [lang=sa-mroo] { font-family: "Noto Sans Mro", "Sans Serif Collection" }
+[lang=sa-nand] { font-family: "Noto Sans Nandinagari" }
 [lang=sa-phag], [lang=bo-phag] { font-family: "Noto Sans PhagsPa", "Microsoft PhagsPa" }
 [lang=sa-sidd] { font-family: "Noto Sans Siddham" }
 [lang=sa-sind] { font-family: "Noto Sans Khudawadi", "Sans Serif Collection" }
@@ -201,13 +222,14 @@ aside p {
 [lang=ta] { font-family: "Tamil MN", "Latha", "Nirmala UI" }
 [lang=te] { font-family: "Telugu MN", "Vani", "Nirmala UI" }
 [lang=tbw] { font-family: "Noto Sans Tagbanwa" }
-[lang=tdd] { font-family: "Microsoft Tai Le", "Noto Sans Tai Le" }
+[lang=tdd] { font-family: "Microsoft Tai Le", "Noto Sans Tai Le"; line-break: anywhere; }
 [lang=tgl] { font-family: "Noto Sans Tagalog" }
 [lang=th] { font-family: "Leelawadee UI", "Tahoma" }
 [lang=tru] { font-family: "Noto Sans Syriac Western" }
 [lang=txg] { font-family: "Noto Serif Tangut" }
 [lang=txo] { font-family: "Noto Serif Toto" }
 [lang=uga] { font-family: "Noto Sans Ugaritic", "Segoe UI Historic" }
+[lang=unr-nagm] { font-family: "Noto Sans Nag Mundari" }
 [lang=ur], [lang=ks-arab] { font-family: "Noto Nastaliq Urdu", "Urdu Typesetting", "Scheherazade New", "Al Bayan", "Traditional Arabic"}
 [lang=und-kthi] { font-family: "Noto Sans Kaithi", "Sans Serif Collection" }
 [lang=vai] { font-family: "Noto Sans Vai", "Ebrima" }
@@ -257,7 +279,19 @@ function getSection (script) {
 	out = '<section id="'+script+'">'
 	out += '<h2>'+sampleScriptsIndex[script].name+'</h2>'
     out += `<div class="fontPointer"><a href="../fontlist/index.html?script=${ script }" target="_blank">Show fonts for ${ sampleScriptsIndex[script].name }.</a>&nbsp; • &nbsp;<a href="../links.html?iso=${ script }" target="_blank">Other resources for ${ sampleScriptsIndex[script].name }</a></div>`
-
+    
+    
+    out += `<div class="scriptDescription">`
+    scriptId = scriptSummaries[script]
+    console.log(scriptId)
+    if (typeof scriptId !== 'undefined') {
+        if (scriptId.dates) out += `<div class="scriptDates">${ scriptId.dates }</div>`
+        if (scriptId.status) out += `<div class="scriptStatus">${ scriptId.status }</div>`
+        if (scriptId.lineage) out += `<div class="scriptLineage">Lineage: ${ scriptId.lineage }</div>`
+        if (scriptId.siblings) out += `<div class="scriptSiblings">Siblings: ${ scriptId.siblings }</div>`
+        if (scriptId.description) out += `<div class="scriptDetails">${ scriptId.description }</div>`
+        }
+    out += `</div>`
     
     
 	for (let l=0;l<sampleScriptsIndex[script].langs.length;l++) {
@@ -349,7 +383,7 @@ function changeFontFamily ( newFont ) {
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->2 November, 2024<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->3 November, 2024<!-- #EndDate -->
   <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
 </p>
@@ -541,6 +575,10 @@ function changeFontFamily ( newFont ) {
 <a class="trigger" href="index.html?script=mymr">myanmar</a> • 
 
 <a class="trigger" href="index.html?script=nbat">nabataean</a> • 
+
+<a class="trigger" href="index.html?script=nagm">nag mundari</a> • 
+
+<a class="trigger" href="index.html?script=nand">nandinagari</a> • 
 
 <a class="trigger" href="index.html?script=newa">newa</a> • 
 
