@@ -399,7 +399,7 @@ usedfor: "${record.usedfor}",
 		}
 	if (scriptSummaries[lc] && scriptSummaries[lc].siblings) {
 		var temp = ''
-		temp += '<tr><th>Lineage:</th><td>'
+		temp += '<tr><th>Siblings:</th><td>'
 		temp += `<p class="siblings">${ scriptSummaries[lc].siblings }</p>`
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>Lineage:</th><td></td></tr>') out += temp
