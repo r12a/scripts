@@ -141,15 +141,23 @@ usedfor: "${record.usedfor}",
 	// title
 	if ( record.name ) out = '<h2>'+record.name+'</h2>'
 	else out = '<h2>'+record.script+'</h2>'
-	out += '<table class="links"><tbody>'
 
+    if (scriptSummaries[lc]) document.getElementById('scriptIntro').innerHTML = scriptSummaries[lc].description
+
+/*
+    if (scriptSummaries[lc].description) {
+        out += `<p class="intro">${ scriptSummaries[lc].description }</p>`
+        }
+*/
+
+    out += '<table class="links"><tbody>'
 
 	// script code
 	out += '<tr><th>Script code:</th><td>'
 	out += lc
 	out += '</td></tr>'
 
-
+/*
 	// chronology
 	if (record.dates) {
 		temp = ''
@@ -161,6 +169,21 @@ usedfor: "${record.usedfor}",
 		temp += '</p>'
 		if (record.status) {
 			temp += '<p class="status">'+record.status+'</p>'
+			}
+		temp += '</td></tr>'
+		out += temp
+		}
+*/
+
+	// chronology
+	if (scriptSummaries[lc]) {
+		temp = ''
+		temp += '<tr><th>Chronology:</th><td>'
+		temp += '<p>'
+		temp += scriptSummaries[lc].dates
+		temp += '</p>'
+		if (scriptSummaries[lc].status) {
+			temp += '<p class="status">'+scriptSummaries[lc].status+'</p>'
 			}
 		temp += '</td></tr>'
 		out += temp
@@ -360,6 +383,26 @@ usedfor: "${record.usedfor}",
 		temp += '<p class="usedfor">'+record.usedfor.replace(/],/g,'],&nbsp;&nbsp;&nbsp;')+'</p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>Used for:</th><td></td></tr>') out += temp
+		}
+  
+
+
+
+
+    // lineage & siblings
+	if (scriptSummaries[lc] && scriptSummaries[lc].lineage) {
+		var temp = ''
+		temp += '<tr><th>Lineage:</th><td>'
+		temp += `<p class="lineage">${ scriptSummaries[lc].lineage.replace(/>/g,' → ') }</p>`
+		temp += '</td></tr>'
+		if (temp !== '<tr><th>Lineage:</th><td></td></tr>') out += temp
+		}
+	if (scriptSummaries[lc] && scriptSummaries[lc].siblings) {
+		var temp = ''
+		temp += '<tr><th>Lineage:</th><td>'
+		temp += `<p class="siblings">${ scriptSummaries[lc].siblings }</p>`
+		temp += '</td></tr>'
+		if (temp !== '<tr><th>Lineage:</th><td></td></tr>') out += temp
 		}
 
 
