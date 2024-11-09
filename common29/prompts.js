@@ -295,6 +295,9 @@ function addPageIntro (script, orthogName, iso, picker, page) {
 
     var out = ''
 	
+    // add toc toggle
+    out += `<p onclick="toc=document.getElementById('tocPanel'); if (toc.style.display === 'block') toc.style.display = 'none'; else toc.style.display = 'block';" id="tocTab" title="Open/close the table of contents.">&nbsp;</p>
+    `
     
     if (script !== '') {
         out += `
