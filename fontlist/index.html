@@ -222,7 +222,13 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
         if (scriptId.status) out += `<div class="scriptStatus">${ scriptId.status }</div>`
         if (scriptId.lineage) out += `<div class="scriptLineage">Lineage: ${ scriptId.lineage }</div>`
         if (scriptId.siblings) out += `<div class="scriptSiblings">Siblings: ${ scriptId.siblings }</div>`
-        if (scriptId.description) out += `<div class="scriptDetails">${ scriptId.description }</div>`
+        if (scriptId.history || scriptId.description || scriptId.unicode) {
+            out += `<div class="scriptDetails">`
+            if (scriptId.history) out += `${ scriptId.history } `
+            if (scriptId.description) out += `${ scriptId.description } `
+            if (scriptId.unicode) out += `${ scriptId.unicode } `
+            out += `</div>`
+            }
         }
     out += `</div>`
     
@@ -627,7 +633,7 @@ function setFontFeatures ( features ) {
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->4 November, 2024<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->10 November, 2024<!-- #EndDate -->
 <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>

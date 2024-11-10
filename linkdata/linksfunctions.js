@@ -142,7 +142,7 @@ usedfor: "${record.usedfor}",
 	if ( record.name ) out = '<h2>'+record.name+'</h2>'
 	else out = '<h2>'+record.script+'</h2>'
 
-    if (scriptSummaries[lc]) document.getElementById('scriptIntro').innerHTML = scriptSummaries[lc].description
+    if (scriptSummaries[lc]) document.getElementById('scriptIntro').innerHTML = scriptSummaries[lc].history+'<br><br>'+scriptSummaries[lc].description+'<br><br>'+scriptSummaries[lc].unicode
 
 /*
     if (scriptSummaries[lc].description) {
