@@ -100,7 +100,10 @@ function addPageFeatures () {
     // set event trigger on all .ipa elements - opens description box on click
     var ipaNodes = document.querySelectorAll(".ipa, .listIPA, .allophone")
     for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
-    
+
+    // set event listener on TOC links to close the TOC
+    var tocNodes = document.querySelectorAll(".toc1, .toc2, .toc3")
+    for (i=0;i<tocNodes.length;i++) tocNodes[i].onclick = closeTOC
     
     // set up show composition to show composition in panel
     summaryNodes = document.querySelectorAll('.figureSub summary')
@@ -308,6 +311,12 @@ function closeDialogEsc (e) {
         document.getElementById('tocPanel').style.display = 'none'
         }
 }
+
+
+function closeTOC (e) {
+    // closes the dialog box and panel when escape is pressed
+    document.getElementById('tocPanel').style.display = 'none'
+    }
 
 
 
