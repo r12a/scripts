@@ -40,14 +40,20 @@ function showCharDetails (ch) {
 	if (typeof charDetails === 'undefined') return
 	
     // make sure we're only looking for a single character
-    if (ch.length > 1) {
+    if ([...ch].length > 1) {
         ch = [... ch][0]
         console.log(ch,'rejected because more than one character')
         }
 
-	if (typeof charDetails[ch] === 'undefined') return
+	if (typeof charDetails[ch] === 'undefined') {
+        console.log('charDetails is undefined for',ch)
+        return
+        }
     
-	if (typeof spreadsheetRows[ch] === 'undefined') return   
+	if (typeof spreadsheetRows[ch] === 'undefined') {
+        console.log('spreadsheetRows doesn\'t have',ch)
+        return
+        }  
     
 	
     charBlock = document.createElement('div')
