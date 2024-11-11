@@ -24,19 +24,73 @@ autoExpandExamples.tyj = `
 
 @ https://www.unicode.org/L2/L2022/22152-yo-lai-tay-script.pdf
 
-𞛆𞛠𞛑|snake skin|t͡ʃaːp|
-𞛛𞛠𞛀|root|haːk|
-𞛖𞛠𞛋|birthmark|maːt
-𞛏𞛠𞛖|thorn|naːm
-𞛆𞛴|perched|t͡ʃap|
-𞛛𞛲|love|hak|
-𞛖𞛳|vermin|mat
-𞛏𞛱|thorn|naːm
-𞛖𞛣|hand|mɨ|
-𞛆𞛣|character|t͡ʃɨ|
-𞛑𞛣𞛏|arrow|pɨn
-𞛔𞛣𞛏|firewood|fɨn
+𞛆𞛠𞛑|snake skin|c§aː§p|
+𞛛𞛠𞛀|root|h§aː§k|
+𞛖𞛠𞛋|birthmark|m§aː§t
+𞛏𞛠𞛖|thorn|n§aː§m
+𞛆𞛴|perched|t͡ʃ§ap|
+𞛛𞛲|love|h§ak|
+𞛖𞛳|vermin|m§at
+𞛏𞛱|water|n§am
+𞛖𞛣|hand|m§ɨ|
+𞛆𞛣|character|c§ɨ|
+𞛑𞛢𞛏|arrow|p§ɨ§n|
+𞛔𞛢𞛏|firewood|f§ɨ§n|
 𞛾|village, country|mɨəŋ|
+𞛅𞛮𞛩𞛏|root; reason|ŋw§iə§n
+𞛘𞛮𞛠𞛏|rebellion, chaos|lʷ§aː§n
+
+
+@ Ferlus https://www.persee.fr/doc/clao_0153-3320_1993_num_22_1_1432
+
+𞛄𞛥|boat|ɣ§ɛ
+𞛋𞛯|nose|ɗ§aŋ
+𞛏𞛯|skin|n§aŋ
+𞛘𞛯|roof|l§aŋ
+𞛔𞛯|to bury|f§aŋ
+𞛃𞛦|rice|kʰau̯
+𞛘𞛦|alcohol|lau̯
+𞛚𞛦|knee|hau̯
+𞛆𞛩|paper|t͡ʃiə̯
+𞛚𞛩|bamboo|h§iə̯
+𞛌𞛩𞛏|money|tiə̯n
+𞛑𞛮|to go|paj
+𞛀𞛮|chicken|kaj
+𞛃𞛮𞛡|buttonhole|kw§i
+𞛇𞛬𞛅|two|soŋ
+𞛈𞛧𞛅|to sow|zoŋ
+𞛈𞛠𞛉|young man|zaːj
+𞛈𞛠𞛉|sand|saːj
+𞛉𞛠|grass|ɲaː
+𞛍𞛠𞛅|path|d§aː§n§/taːn
+𞛍𞛡𞛏|foot|t§i§n
+𞛍𞛧|body|d§o§/to
+𞛎𞛨𞛀|book|tʰ§e§k
+𞛎𞛢𞛀|male|tʰ§ɨ§k
+𞛎𞛠𞛏|carbon|tʰ§aː§n
+𞛐𞛬𞛀|flower|ɓ§ɔː§k
+𞛃𞛧𞛐|to bite|kʰ§o§p
+𞛓𞛧𞛖|hair|pʰ§o§m
+𞛓𞛫|husband|pʰ§uə̯
+𞛓𞛪|plough|pʰ§ɨə
+𞛓𞛢𞛅|bee|pʰ§ɨ§ŋ
+𞛕𞛰|to dream|v§an
+𞛕𞛯|to hear|faŋ
+𞛗𞛠|tobacco|j§aː
+𞛗𞛠𞛅|opium|j§aː§ŋ
+𞛗𞛮|shoe|jaj
+𞛗𞛴|to throw|j§ap
+𞛙𞛠|to speak|w§aː
+𞛙𞛩𞛀|work|w§iə̯§k
+𞛙𞛰|soul|w§an
+𞛙𞛡|comb|w§i
+𞛜𞛦|to take|ʔau̯|
+𞛜𞛠𞛉|elder brother|ʔ§aː§j
+𞛜𞛬𞛀|to go out|ʔ§o§k
+𞛜𞛡𞛖|satiated|ʔ§i§m
+𞛑𞛤|mountain|p§u
+𞛏𞛤|breast|n§u
+
 
 
 
@@ -49,7 +103,7 @@ autoExpandExamples.tyj = `
 // automatically creates Online Resources section, if markup is uncommented in xx.html
 
 termLists = [
-
+/*
 {
 "title":"Wiktionary, Eastern Cham lemmas",
 "url":"https://en.wiktionary.org/wiki/Category:Eastern_Cham_lemmas",
@@ -66,6 +120,6 @@ termLists = [
 "url":"https://livingdictionaries.app/sora/entries/list",
 "notes":"No native script.",
 },
-
+*/
 ]
 
