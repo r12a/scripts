@@ -4,6 +4,7 @@
 
 
 ch = ''
+list = ''
 charData = {}
 traceSet = new Set([])
 
@@ -23,6 +24,7 @@ for (var p=0;p<parameters.length;p++) {
 
 
 function showCharDetails (ch) {
+    //console.log('showCharDetails(',ch,')')
     // creates a heading and a div for a given orthography
     // window.charDetails is the code from xx-details
     
@@ -392,7 +394,7 @@ function setMarks (languageName) {
 
 
 function expandCharMarkup () {
-    if (traceSet.has('expandCharMarkup') || traceSet.has('all')) console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
+    // console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
      // convert char markup to .codepoint spans (has to be done before the indexing)
      // the .ch and .hx classes should only be used for characters in the
      // spreadsheet.  For other characters, generate the markup in a picker
@@ -639,7 +641,7 @@ function statusExpander (status) {
 
 
 function getNotesList (charList) {
-    console.log(charList)
+    //console.log(charList)
     charList = charList.replace(/\n/,' ')
     //charList = charList.replace(/[\s]+/,' ').trim()
     listArray = charList.split(' ')
@@ -759,7 +761,8 @@ function getScriptGroup (charNum, blockfile) {
 /* FUNCTIONS FOR THE XX-CHARACTER PAGES */
 
 function getCharList () {
-// get a list of characters for the xx-character files
+    //console.log('>> getCharlist()')
+    // get a list of characters for the xx-character files
     out = ''
     for (chr in spreadsheetRows) {
         if (typeof spreadsheetRows[chr][cols['status']] === 'undefined' ||
@@ -773,7 +776,6 @@ function getCharList () {
             { console.log('Avoiding',chr,'status is ',spreadsheetRows[chr][cols['status']])} // do nothing
         else out += chr
         }
-
     return out
     }
 
@@ -821,8 +823,24 @@ function toggleImages () {
 
 
 function makeXXCharacterPage () {
+    //console.log('makeXXCharacterPage()')
     // write the data to the page
-    var panel
+    // list is a specific list of characters (rather than the whole db); this is provided by a parameter
+    var panel, specificList
+    
+    specificList = ''
+    // check for q parameter containing a list of characters
+    // set list var to those characters
+    parameters = location.search.split('&');
+    parameters[0] = parameters[0].substring(1)
+    for (var p=0;p<parameters.length;p++) {
+        pairs = parameters[p].split('=')
+        if (pairs[0] == 'q' && pairs[1]) specificList = decodeURIComponent(pairs[1])
+        }
+    const uniqueSet = new Set([...specificList])
+    specificList = [...uniqueSet]
+
+
 
     document.querySelector('header').innerHTML = `
         
@@ -861,7 +879,8 @@ function makeXXCharacterPage () {
 
     setMarks(languageName)
 
-    charList = getCharList()
+    if (specificList.length > 0) charList = specificList.join('')
+    else charList = getCharList()
     charArray = [... charList]
     charArray = charArray.sort()
     for (item=0;item<charArray.length;item++) showCharDetails(charArray[item])
@@ -877,16 +896,18 @@ function makeXXCharacterPage () {
         titleNode.style.fontSize = '3rem'
         }
     
-    stats = findCharactersInDB()
-    parts = stats.split('§')
-    div = document.createElement('div')
-    div.dir = 'ltr'
-    div.id = 'stats'
-    div.innerHTML = `Characters in the database: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[0] }</bdi> &nbsp; <bdi>(${ [...parts[0]].length })</bdi><br>
-    To be investigated: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[1] }</bdi> &nbsp; <bdi>(${ [...parts[1]].length })</bdi>
-    <br>
-    Not used: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[2] }</bdi> &nbsp; <bdi>(${ [...parts[2]].length })</bdi>`
-    document.querySelector('#output').appendChild(div)
+    if (specificList.length === 0) { //add some stats to bottom of page, unless this is just a subset of the db
+        stats = findCharactersInDB()
+        parts = stats.split('§')
+        div = document.createElement('div')
+        div.dir = 'ltr'
+        div.id = 'stats'
+        div.innerHTML = `Characters in the database: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[0] }</bdi> &nbsp; <bdi>(${ [...parts[0]].length })</bdi><br>
+        To be investigated: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[1] }</bdi> &nbsp; <bdi>(${ [...parts[1]].length })</bdi>
+        <br>
+        Not used: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[2] }</bdi> &nbsp; <bdi>(${ [...parts[2]].length })</bdi>`
+        document.querySelector('#output').appendChild(div)
+        }
     }
 
 
