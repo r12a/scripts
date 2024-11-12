@@ -28,7 +28,7 @@ autoExpandExamples.tyj = `
 𞛛𞛠𞛀|root|h§aː§k|
 𞛖𞛠𞛋|birthmark|m§aː§t
 𞛏𞛠𞛖|thorn|n§aː§m
-𞛆𞛴|perched|t͡ʃ§ap|
+𞛆𞛴|perched|c§ap|
 𞛛𞛲|love|h§ak|
 𞛖𞛳|vermin|m§at
 𞛏𞛱|water|n§am
@@ -51,7 +51,7 @@ autoExpandExamples.tyj = `
 𞛃𞛦|rice|kʰau̯
 𞛘𞛦|alcohol|lau̯
 𞛚𞛦|knee|hau̯
-𞛆𞛩|paper|t͡ʃiə̯
+𞛆𞛩|paper|ciə̯
 𞛚𞛩|bamboo|h§iə̯
 𞛌𞛩𞛏|money|tiə̯n
 𞛑𞛮|to go|paj
