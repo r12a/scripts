@@ -48,7 +48,7 @@ autoExpandExamples.tyj = `
 𞛏𞛯|skin|n§aŋ
 𞛘𞛯|roof|l§aŋ
 𞛔𞛯|to bury|f§aŋ
-𞛃𞛦|rice|kʰau̯
+𞛂𞛦|rice|kʰau̯
 𞛘𞛦|alcohol|lau̯
 𞛚𞛦|knee|hau̯
 𞛆𞛩|paper|ciə̯
@@ -56,7 +56,7 @@ autoExpandExamples.tyj = `
 𞛌𞛩𞛏|money|tiə̯n
 𞛑𞛮|to go|paj
 𞛀𞛮|chicken|kaj
-𞛃𞛮𞛡|buttonhole|kw§i
+𞛂𞛮𞛡|buttonhole|kw§i
 𞛇𞛬𞛅|two|soŋ
 𞛈𞛧𞛅|to sow|zoŋ
 𞛈𞛠𞛉|young man|zaːj
@@ -69,7 +69,7 @@ autoExpandExamples.tyj = `
 𞛎𞛢𞛀|male|tʰ§ɨ§k
 𞛎𞛠𞛏|carbon|tʰ§aː§n
 𞛐𞛬𞛀|flower|ɓ§ɔː§k
-𞛃𞛧𞛐|to bite|kʰ§o§p
+𞛂𞛧𞛐|to bite|kʰ§o§p
 𞛓𞛧𞛖|hair|pʰ§o§m
 𞛓𞛫|husband|pʰ§uə̯
 𞛓𞛪|plough|pʰ§ɨə
@@ -90,6 +90,60 @@ autoExpandExamples.tyj = `
 𞛜𞛡𞛖|satiated|ʔ§i§m
 𞛑𞛤|mountain|p§u
 𞛏𞛤|breast|n§u
+𞛝𞛠𞛉|buffalo|kʷ§a§j
+𞛀𞛪|salt|k§ɨə
+𞛀𞛧𞛏|to say|k§o§n
+𞛀𞛫𞛅|in|k§uə̯§ŋ
+𞛂𞛬𞛉|I, me|k§ɔː§j
+𞛋𞛱|black|ɗ§am
+𞛋𞛥𞛅|red|ɗ§ɛ§ŋ
+𞛋𞛡|good, well|ɗ§i
+𞛌𞛭|under|t§ə
+𞛌𞛠𞛅|path|t§aː§ŋ
+𞛌𞛳|to cut|t§at
+𞛌𞛠𞛉|to die|t§aː§j
+𞛎𞛮|to work|tʰaj
+𞛏𞛧𞛀|bird|n§o§k
+𞛏𞛫𞛀|deaf|n§uə̯§k
+𞛐𞛪𞛏|month|ɓ§ɨə̯§n
+𞛐𞛭|leaf|ɓ§ə
+𞛐𞛳|to seize|ɓ§at
+𞛑𞛰|to share|p§an
+𞛑𞛡𞛀|wing|p§i§k
+𞛑𞛫|emperor|p§uə̯
+𞛔𞛧𞛏|rain|f§o§n
+𞛔𞛲|sheath|f§ak
+𞛔𞛡|fire|f§i
+𞛔𞛰|to cut|f§an
+𞛖𞛠𞛀|fruit|m§aː§k
+𞛖𞛰|oil|m§an
+𞛖𞛩|spouse|m§iə̯
+𞛘𞛢𞛀|son|l§ɨ§k
+𞛘𞛧𞛖|wind|l§o§m
+𞛘𞛨𞛀|iron|l§e§k
+𞛘𞛡𞛅|monkey|l§i§ŋ
+𞛇𞛬𞛀|to search for|s§ɔː§k
+𞛇𞛮|egg|s§aj
+𞛇𞛪|shirt|s§ɨə̯
+𞛚𞛧|laugh|h§o
+𞛚𞛥𞛙|tooth|h§ɛ§w
+𞛚𞛪𞛏|house|h§ɨə̯§n
+𞛚𞛠|thigh|h§aː
+𞛄𞛪𞛖|sabre|ɣ§ɨə§m
+𞛄𞛠|to marry|ɣaː
+𞛁𞛧𞛏|man|ɡ§o§n
+𞛁|neck|ɡɔ
+𞛁𞛱|but|ɡ§am
+𞛁𞛡|to eat|ɡ§i
+𞛁𞛢𞛏|night|ɡ§ɨ§n
+𞛕𞛠|cover|v§aː
+𞛒𞛠|to go|b§aː§/p§aː
+𞛒|father|pɔ§/bɔ
+𞛒𞛭|dark|b§ə/p§ə
+𞛛|family|hɔ
+𞛀|tree|kɔ
+𞛏|push|nɔ
+
 
 
 
