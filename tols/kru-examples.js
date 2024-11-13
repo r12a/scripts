@@ -38,16 +38,16 @@ autoExpandExamples.kru = `
 𑷊𑶲𑷊𑷊|head|kukk
 𑶱𑷙𑷊𑶵|to walk|eː.kɑ
 𑶰𑷔𑶻𑷑𑶱𑷙𑷊|from here|ist.leːk
-𑶷𑶴𑷔𑶰𑷏𑶵𑷐|falsehood|pʰa.si.yɑr
+𑶷𑶴𑷔𑶰𑷏𑶵𑷐|falsehood|pʰa.si.jɑr
 𑷅𑶲𑶷𑶱𑶺|secretly|cu.pʰem
 𑶺𑶵𑶷|pardon|mɑpʰ
-𑶼𑶴𑷐𑶰𑷏𑶵|brass plate|tʰa.ri.yɑ
+𑶼𑶴𑷐𑶰𑷏𑶵|brass plate|tʰa.ri.jɑ
 𑶱𑷙𑶼𑷐ʼ𑶵|to be visible|eːtʰr.ʔɑ
 𑷑𑶵𑶼|kick|lɑtʰ
 𑷁𑶱𑷊𑷐ʼ𑶵|to be stopped|ʈʰekr.ʔɑ
 𑷑𑶲𑷁𑶰𑷙|half-burned wood|lu.ʈʰiː
 𑶶𑶱𑷙𑷁|market|peːʈʰ
-𑷆𑶰𑷐𑶰𑷏𑶵𑷐ʼ𑶵|to be dispersed|t͡ʃʰi.ri.yɑ.ʔɑ
+𑷆𑶰𑷐𑶰𑷏𑶵𑷐ʼ𑶵|to be dispersed|cʰi.ri.jɑ.ʔɑ
 𑷊𑶴.𑷆𑶲𑷙𑷐|slough|ka.cʰuːr
 𑶶𑶳𑷐𑶳𑷆|half-cooked|po.rocʰ
 𑷋𑶱𑶶𑶶𑶵|village|kʰep.pɑ
@@ -62,9 +62,9 @@ autoExpandExamples.kru = `
 𑷂𑶵̃𑷗𑶵|branch|ɖãː.ɽɑ
 𑶽𑶳𑷂𑶳𑷐-𑶸𑶳𑷂𑶳𑷐|dirty|so.ɖor-bo.ɖor
 𑷖𑶱𑷂𑷂|food|xeɖɖ
-𑷇𑶳𑷊𑷊|a few|d͡ʒokk
-𑷖𑶳𑷙𑷇𑶵|to collect|xoː.d͡ʒɑ
-𑷖𑶴𑷇𑷇|dirt|xajj
+𑷇𑶳𑷊𑷊|a few|ɟokk
+𑷖𑶳𑷙𑷇𑶵|to collect|xoː.ɟɑ
+𑷖𑶴𑷇𑷇|dirt|xaɟɟ
 𑷌𑶳𑷑𑷑𑶴𑷔|landlord|ɡol.las
 𑷅𑶰𑷌𑶵|seedling|ci.ɡɑ
 𑶿𑶱𑷙𑷌|rite|neːɡ
@@ -77,12 +77,12 @@ autoExpandExamples.kru = `
 𑷃𑶰̇𑷊𑶰𑷙|pounding machine|ɖʰiŋ.kiː
 𑷂𑶰𑷃𑷌𑶴𑷐|intrepid|ɖiɖʰ.ɡar
 𑷂𑶰𑷃|courage|ɖiɖʰ
-𑷈𑶴𑷐𑶿𑶵|spring|d͡ʒʰar.nɑ
-𑶺𑶲̃𑷙𑷈𑶲𑷐ʼ𑶵|to wash one's face|m§ũ§ː.§d͡ʒʰ§u§r.§ʔ§ɑ
-𑷐𑶰𑷈|joy|rid͡ʒʰ
+𑷈𑶴𑷐𑶿𑶵|spring|ɟʰar.nɑ
+𑶺𑶲̃𑷙𑷈𑶲𑷐ʼ𑶵|to wash one's face|m§ũ§ː.§ɟʰ§u§r.§ʔ§ɑ
+𑷐𑶰𑷈|joy|riɟʰ
 𑷍𑶵̃𑷔𑶰𑷙|grass|ɡʰɑ.siː
 𑶺𑶵𑷍𑶱𑷙|name of a month|mɑ.ɡʰeː
-𑷈𑶳𑷎𑷍|pitfall|d͡ʒʰ§o§ŋ§ɡʰ
+𑷈𑶳𑷎𑷍|pitfall|ɟʰ§o§ŋ§ɡʰ
 𑶶𑶴̃𑷏𑷏𑶵|cold|p§a§ɲ.§ɲ§ɑ
 𑶿𑶰𑷙𑶿|you|n§iː§‹§n
 𑶳𑶿-𑶵|to drink|o§n§-§ɑ
@@ -97,12 +97,12 @@ autoExpandExamples.kru = `
 𑷖𑶱𑷙𑷐|chicken|x§eː§‹§r
 𑶵𑷗𑶰𑷙|ridge|ɑ.§ɽ§iː§‹
 𑶲𑷎𑷌𑶲𑷗|a while|u§ŋ.§ɡ§u§ɽ
-𑶿𑶳𑷙𑷘𑶳Rʼ𑶵|to wash oneself|n§oː.§‹§ɽʰ§or.§ʔ§ɑ
+𑶿𑶳𑷙𑷘𑶳̰ʼ𑶵|to wash oneself|n§oː.§‹§ɽʰ§or.§ʔ§ɑ
 𑷌𑶴𑷘|fort|ɡ§a§ɽʰ
 𑷑𑶵𑷑𑶱|saliva|l§ɑ.§l§e
-𑷅𑶵𑷑|voice|t͡ʃ§ɑ§l
+𑷅𑶵𑷑|voice|c§ɑ§l
 𑷏𑶴𑶰𑶽|memory|j§a§i§d
-𑷖𑶵𑷏𑶵|to dry|x§ɑ.§y§ɑ
+𑷖𑶵𑷏𑶵|to dry|x§ɑ.§j§ɑ
 𑷊𑶰𑷏𑷏𑶵|below|k§i§j.§j§ɑ
 𑶶𑶱𑷐𑷒𑶵̃|pigeon|p§e§r.§w§ãː
 𑷀𑶴𑷕𑷀𑶴𑷕𑶴𑷒𑷒𑶵|very bright|ʈ§a§h.§ʈ§a.§h§a§w.§w§ɑ
@@ -113,7 +113,7 @@ autoExpandExamples.kru = `
 𑶿𑶵𑷖|four|n§ɑ§x
 𑷕𑶴ʼ𑶵|yes|h§a.§ʔ§ɑ
 𑶻𑶰𑷕𑶵|inclination|t§i.§h§ɑ
-𑷅𑶵𑷕|tea|t͡ʃ§ɑ§h
+𑷅𑶵𑷕|tea|c§ɑ§h
 𑷕𑶴𑷊𑶿𑶽𑶵𑷐ʼ𑶵|to roar|h§a§k§n.§d§ɑ§r.§ʔ§ɑ
 𑶿𑶰𑷎𑷌𑷔𑷖𑶱𑷗𑶳𑷙|your daughter-in-law|n§i§ŋ§ɡ§s§x§e§ɽ§oː§‹
 𑶹𑶱𑶿𑶽𑷌𑷑𑶱𑷙|lovely|bʰ§e§n§d§ɡ§l§eː§‹
@@ -128,6 +128,7 @@ autoExpandExamples.kru = `
 𑶴𑷊𑷊𑶲|now|a§k.§k§u
 𑷅𑶴̃ʼ𑶵|to pour into|c§ã.§ʔ§ɑ
 𑶸𑶴𑶿ʼ𑶿𑶵|to be made|b§a§n.§§n§ɑ
+𑷅𑶵𑷑|voice|cɑl
 
 
 @ Wikipedia, Kurukh language https://en.wikipedia.org/wiki/Kurukh_language
@@ -136,10 +137,10 @@ autoExpandExamples.kru = `
 𑷕𑶴𑷐𑶴𑷕 𑶻𑶳𑷙𑷗|consonants|h§a§r§a§h§ §t§oː§‹§ɽ
 𑷛|auspicious symbol|ũɡɡu
 𑶵̆𑶶𑶰𑷔|office|ɔ§f§i§s
-𑶾𑶴𑶿𑶽𑷕𑶵|astonishment|dʱ§a§n§d.§h§a:
-𑶾𑶴𑶿𑶾𑶵|exertion|dʱ§a§n.§dʱ§a:
-𑶺𑶴𑷈𑷕𑶰𑷙|middle|m§a§dʒʱ.§h§i:§‹
-𑶺𑶴𑷈𑶰𑷔|zamindar's agent|m§a.§dʒʱ§i§s
+𑶾𑶴𑶿𑶽𑷕𑶵|astonishment|dʱ§a§n§d.§h§aː
+𑶾𑶴𑶿𑶾𑶵|exertion|dʱ§a§n.§dʱ§aː
+𑶺𑶴𑷈𑷕𑶰𑷙|middle|m§a§ɟʱ.§h§iː§‹
+𑶺𑶴𑷈𑶰𑷔|zamindar's agent|m§a.§ɟʱ§i§s
 𑷊𑶲̃𑷗𑶲𑷖|Kurukh language|kũɽux
 
 
