@@ -1,0 +1,11 @@
+langTag = 'kru'
+window.version = 'v29'
+window.scriptName = 'Tolong Siki'
+window.ghDirectory = 'tols'
+window.blockDirectory = 'tols'
+window.languageList = ['kru'] // lang tags for each orthography handled
+window.detailsfileList = ['kru'] // first part of xx-details for each orthography
+window.scriptISO = 'tols'
+window.webfonts = ["Tolong Siki WF"]
+window.defaultSize = '24px'
+hideBlockName = "TOLONG SIKI"

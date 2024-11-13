@@ -21,99 +21,113 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 autoExpandExamples.kru = `
 
 
+𑶻𑶳𑷑𑶳𑷎 𑷔𑶰𑷊𑶰|Tolong Siki|toloŋ siki
 
 @ The Kurukh Language https://www.google.co.uk/books/edition/The_Kurux_Language/v9BCDwAAQBAJ?hl=en&kptab=getbook&gbpv=1
 
 𑶶𑶱𑷑𑷑𑶳|woman|pel.lo
-𑷖𑶵𑶶𑶵|to graze|xaːpaː
+𑷖𑶵𑶶𑶵|to graze|xɑpɑ
 𑶾𑶴𑶶|shutting|ɖʰap
-𑶻𑶲𑷊𑷊𑶵|to push|tuk.kaː
-𑷖𑶱𑷙𑶻𑶵|leaf cup|xeː.taː
+𑶻𑶲𑷊𑷊𑶵|to push|tuk.kɑ
+𑷖𑶱𑷙𑶻𑶵|leaf cup|xeː.tɑ
 𑶺𑶱𑷙𑶻|husband|meːt
-𑷀𑶵𑷀𑶵|to lick|ʈaːʈaː
+𑷀𑶵𑷀𑶵|to lick|ʈɑʈɑ
 𑷑𑶴𑷀𑶶𑶴𑷀|sticky|laʈ.paʈ
 𑷅𑶰𑷅𑷅|fire|cicc
-𑶵𑷅𑶵|thin|aː.caː
+𑶵𑷅𑶵|thin|ɑ.cɑ
 𑷊𑶲𑷊𑷊|head|kukk
-𑶱𑷙𑷊𑶵|to walk|eː.kaː
+𑶱𑷙𑷊𑶵|to walk|eː.kɑ
 𑶰𑷔𑶻𑷑𑶱𑷙𑷊|from here|ist.leːk
-𑶷𑶴𑷔𑶰𑷏𑶵𑷐|falsehood|pʰa.si.yaːr
+𑶷𑶴𑷔𑶰𑷏𑶵𑷐|falsehood|pʰa.si.yɑr
 𑷅𑶲𑶷𑶱𑶺|secretly|cu.pʰem
-𑶺𑶵𑶷|pardon|maːpʰ
-𑶼𑶴𑷐𑶰𑷏𑶵|brass plate|tʰa.ri.yaː
-𑶱𑷙𑶼𑷐ʼ𑶵|to be visible|eːtʰr.ʔaː
-𑷑𑶵𑶼|kick|laːtʰ
-𑷁𑶱𑷊𑷐ʼ𑶵|to be stopped|ʈʰekr.ʔaː
+𑶺𑶵𑶷|pardon|mɑpʰ
+𑶼𑶴𑷐𑶰𑷏𑶵|brass plate|tʰa.ri.yɑ
+𑶱𑷙𑶼𑷐ʼ𑶵|to be visible|eːtʰr.ʔɑ
+𑷑𑶵𑶼|kick|lɑtʰ
+𑷁𑶱𑷊𑷐ʼ𑶵|to be stopped|ʈʰekr.ʔɑ
 𑷑𑶲𑷁𑶰𑷙|half-burned wood|lu.ʈʰiː
 𑶶𑶱𑷙𑷁|market|peːʈʰ
-𑷆𑶰𑷐𑶰𑷏𑶵𑷐ʼ𑶵|to be dispersed|t͡ʃʰi.ri.yaː.ʔaː
+𑷆𑶰𑷐𑶰𑷏𑶵𑷐ʼ𑶵|to be dispersed|t͡ʃʰi.ri.yɑ.ʔɑ
 𑷊𑶴.𑷆𑶲𑷙𑷐|slough|ka.cʰuːr
 𑶶𑶳𑷐𑶳𑷆|half-cooked|po.rocʰ
-𑷋𑶱𑶶𑶶𑶵|village|kʰep.paː
-𑷖𑶴𑷋𑷐ʼ𑶵|to be available|xakʰr.ʔaː
+𑷋𑶱𑶶𑶶𑶵|village|kʰep.pɑ
+𑷖𑶴𑷋𑷐ʼ𑶵|to be available|xakʰr.ʔɑ
 𑶸𑶳𑷋𑷋|locust|bokkʰ
-𑶸𑶳𑷎𑷌𑷌𑶵|to run away|boŋɡ.ɡaː
-𑷃𑶰𑶸𑶵|money|ɖʰi.baː
+𑶸𑶳𑷎𑷌𑷌𑶵|to run away|boŋɡ.ɡɑ
+𑷃𑶰𑶸𑶵|money|ɖʰi.bɑ
 𑶰𑷐𑶰𑶸|two (persons)|i.rib
-𑶽𑶰𑷌𑷕𑶵|long|dig.haː
-𑶶𑶵𑶽𑶵|root|paː.daː
+𑶽𑶰𑷌𑷕𑶵|long|dig.hɑ
+𑶶𑶵𑶽𑶵|root|pɑ.dɑ
 𑷖𑶴𑶽𑶽|child|xadd
-𑷂𑶵̃𑷗𑶵|branch|ɖãː.ɽaː
+𑷂𑶵̃𑷗𑶵|branch|ɖãː.ɽɑ
 𑶽𑶳𑷂𑶳𑷐-𑶸𑶳𑷂𑶳𑷐|dirty|so.ɖor-bo.ɖor
 𑷖𑶱𑷂𑷂|food|xeɖɖ
 𑷇𑶳𑷊𑷊|a few|d͡ʒokk
-𑷖𑶳𑷙𑷇𑶵|to collect|xoː.d͡ʒaː
+𑷖𑶳𑷙𑷇𑶵|to collect|xoː.d͡ʒɑ
 𑷖𑶴𑷇𑷇|dirt|xajj
 𑷌𑶳𑷑𑷑𑶴𑷔|landlord|ɡol.las
-𑷅𑶰𑷌𑶵|seedling|ci.ɡaː
+𑷅𑶰𑷌𑶵|seedling|ci.ɡɑ
 𑶿𑶱𑷙𑷌|rite|neːɡ
 𑶹𑶴𑶰𑷏𑶳𑷔|brother|bʰai.jos
-𑶹𑶵𑶹𑶿𑶵|conjecture|bʰaːbʰ.naː
+𑶹𑶵𑶹𑶿𑶵|conjecture|bʰɑbʰ.nɑ
 𑷑𑶴𑶹-𑷑𑶴𑶹|voraciously|labʰ-labʰ
-𑶾𑶴𑷐ʼ𑶵|to hold|dʰar.ʔaː
+𑶾𑶴𑷐ʼ𑶵|to hold|dʰar.ʔɑ
 𑷑𑶳𑶾𑶴𑷐|name of a tribe|lo.dʰar
 𑶸𑶲𑶾|Wednesday|budʰ
 𑷃𑶰̇𑷊𑶰𑷙|pounding machine|ɖʰiŋ.kiː
 𑷂𑶰𑷃𑷌𑶴𑷐|intrepid|ɖiɖʰ.ɡar
 𑷂𑶰𑷃|courage|ɖiɖʰ
-𑷈𑶴𑷐𑶿𑶵|spring|d͡ʒʰar.naː
-𑶺𑶲̃𑷙𑷈𑶲𑷐ʼ𑶵|to wash one's face|mũː.d͡ʒʰur.ʔaː
+𑷈𑶴𑷐𑶿𑶵|spring|d͡ʒʰar.nɑ
+𑶺𑶲̃𑷙𑷈𑶲𑷐ʼ𑶵|to wash one's face|m§ũ§ː.§d͡ʒʰ§u§r.§ʔ§ɑ
 𑷐𑶰𑷈|joy|rid͡ʒʰ
-𑷍𑶵̃𑷔𑶰𑷙|grass|ɡʰaː.siː
-𑶺𑶵𑷍𑶱𑷙|name of a month|maː.ɡʰeː
+𑷍𑶵̃𑷔𑶰𑷙|grass|ɡʰɑ.siː
+𑶺𑶵𑷍𑶱𑷙|name of a month|mɑ.ɡʰeː
 𑷈𑶳𑷎𑷍|pitfall|d͡ʒʰ§o§ŋ§ɡʰ
-𑶶𑶴̃𑷏𑷏𑶵|cold|p§a§ɲ.§ɲ§aː
+𑶶𑶴̃𑷏𑷏𑶵|cold|p§a§ɲ.§ɲ§ɑ
 𑶿𑶰𑷙𑶿|you|n§iː§‹§n
-𑶳𑶿-𑶵|to drink|o§n§-§aː
-𑶺𑶳𑷙𑷖𑶵|to eat|m§oː.§‹§x§aː
+𑶳𑶿-𑶵|to drink|o§n§-§ɑ
+𑶺𑶳𑷙𑷖𑶵|to eat|m§oː.§‹§x§ɑ
 𑷖𑶴𑶺𑶰𑷙|spear-grass|x§a.§m§iː§‹
 𑶱𑷙𑶺|we|eː§‹§m
 𑷀𑶲𑷉𑶵̃|small parrot|ʈ§u.§ɲ§ãː
-𑷀𑶳̇𑷊𑶵|openfield|ʈ§oŋ.§k§aː
+𑷀𑶳̇𑷊𑶵|openfield|ʈ§oŋ.§k§ɑ
 𑷕𑶳𑶻𑶴𑷎𑷌|it seems|h§o.§t§a§ŋ§ɡ
-𑷐𑶱𑶻ʼ𑶵|to file|r§e§t.§ʔ§aː
+𑷐𑶱𑶻ʼ𑶵|to file|r§e§t.§ʔ§ɑ
 𑶴𑷐𑶰𑷙|small saw|a.§r§iː
 𑷖𑶱𑷙𑷐|chicken|x§eː§‹§r
-𑶵𑷗𑶰𑷙|ridge|aː.§ɽ§iː§‹
+𑶵𑷗𑶰𑷙|ridge|ɑ.§ɽ§iː§‹
 𑶲𑷎𑷌𑶲𑷗|a while|u§ŋ.§ɡ§u§ɽ
-𑶿𑶳𑷙𑷘𑶳Rʼ𑶵|to wash oneself|n§oː.§‹§ɽʰ§or.§ʔ§aː
+𑶿𑶳𑷙𑷘𑶳Rʼ𑶵|to wash oneself|n§oː.§‹§ɽʰ§or.§ʔ§ɑ
 𑷌𑶴𑷘|fort|ɡ§a§ɽʰ
-𑷑𑶵𑷑𑶱|saliva|l§aː.§l§e
-𑷅𑶵𑷑|voice|t͡ʃ§aː§l
+𑷑𑶵𑷑𑶱|saliva|l§ɑ.§l§e
+𑷅𑶵𑷑|voice|t͡ʃ§ɑ§l
 𑷏𑶴𑶰𑶽|memory|j§a§i§d
-𑷖𑶵𑷏𑶵|to dry|x§aː.§y§aː
-𑷊𑶰𑷏𑷏𑶵|below|k§i§j.§j§aː
+𑷖𑶵𑷏𑶵|to dry|x§ɑ.§y§ɑ
+𑷊𑶰𑷏𑷏𑶵|below|k§i§j.§j§ɑ
 𑶶𑶱𑷐𑷒𑶵̃|pigeon|p§e§r.§w§ãː
-𑷀𑶴𑷕𑷀𑶴𑷕𑶴𑷒𑷒𑶵|very bright|ʈ§a§h.§ʈ§a.§h§a§w.§w§aː
+𑷀𑶴𑷕𑷀𑶴𑷕𑶴𑷒𑷒𑶵|very bright|ʈ§a§h.§ʈ§a.§h§a§w.§w§ɑ
 𑷔𑶴𑶳̃𑷔𑶱𑷙|whole|s§a§õ.§s§eː
-𑷊𑶴𑷔𑷔𑶵|scurf|k§a§s.§s§aː
-𑶵𑷔|he|aː§s
-𑶺𑶱𑷙𑷖𑶵|to call|m§eː.§‹§x§aː
-𑶿𑶵𑷖|four|n§aː§x
-𑷕𑶴ʼ𑶵|yes|h§a.§ʔ§aː
-𑶻𑶰𑷕𑶵|inclination|t§i.§h§aː
-𑷅𑶵𑷕|tea|t͡ʃ§aː§h
-
+𑷊𑶴𑷔𑷔𑶵|scurf|k§a§s.§s§ɑ
+𑶵𑷔|he|ɑ§s
+𑶺𑶱𑷙𑷖𑶵|to call|m§eː.§‹§x§ɑ
+𑶿𑶵𑷖|four|n§ɑ§x
+𑷕𑶴ʼ𑶵|yes|h§a.§ʔ§ɑ
+𑶻𑶰𑷕𑶵|inclination|t§i.§h§ɑ
+𑷅𑶵𑷕|tea|t͡ʃ§ɑ§h
+𑷕𑶴𑷊𑶿𑶽𑶵𑷐ʼ𑶵|to roar|h§a§k§n.§d§ɑ§r.§ʔ§ɑ
+𑶿𑶰𑷎𑷌𑷔𑷖𑶱𑷗𑶳𑷙|your daughter-in-law|n§i§ŋ§ɡ§s§x§e§ɽ§oː§‹
+𑶹𑶱𑶿𑶽𑷌𑷑𑶱𑷙|lovely|bʰ§e§n§d§ɡ§l§eː§‹
+𑶴𑷀𑷀𑶵|to spread|a§ʈ.§ʈ§ɑ
+𑶴𑷅𑷅|thorn|a§c§c
+𑷅𑶴ʼ𑶵|to stink|c§a.§ʔ§ɑ
+𑶰𑶻𑶻𑶵|to distribute|i§t.§t§ɑ
+𑷅𑶰𑷅𑷅|fire|c§i§c§c
+𑶴𑷊𑷔𑶰𑷙|hook|a§k.§s§iː
+𑶲𑷎𑷊𑷊|chaff|u§ŋ§k§k
+𑷊𑶲𑷊𑷊|head|k§u§k§k
+𑶴𑷊𑷊𑶲|now|a§k.§k§u
+𑷅𑶴̃ʼ𑶵|to pour into|c§ã.§ʔ§ɑ
+𑶸𑶴𑶿ʼ𑶿𑶵|to be made|b§a§n.§§n§ɑ
 
 
 @ Wikipedia, Kurukh language https://en.wikipedia.org/wiki/Kurukh_language
