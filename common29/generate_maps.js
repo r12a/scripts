@@ -120,7 +120,7 @@ function gatherData () {
             if (shape === '2') {
                 out += `<div class="col2">\n<p><span class="shaping" lang="ps"><span class="hx init noname">${ hex }</span><span class="hx fina noname">${ hex }</span>⏴</span></p>`
                 }
-            out += `\n</div>\n` // end of phone
+            //out += `\n</div>\n` // end of phone
             out += `</div>\n\n` // end of mapitem
             }
         }
