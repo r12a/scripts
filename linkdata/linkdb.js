@@ -2998,6 +2998,26 @@ usedfor:"Bhumij [snd]",
 
 
 
+tols:{ script:"Tolong Siki", code:"Tols", name:"", type:"Alphabet", 
+dates:"1999 – today", start:"1400", end:"", current_usage:"", 
+status: "describe_current_status_for_living_scripts",
+origin:"South Asia",
+info:{ wikipedia:"Tolong_Siki", omniglot:"ahom" }, 
+local: [	],
+charts: [ ],
+layout:[	],
+scriptNotes: [["Kurukh", "tols/kru.html"]],
+charNotesList:["Kurukh", "tols/kru-characters.html"],
+terms: [["Kurukh", "tols/kru_vocab.html"]],
+pickers: [["Tolong Siki", "tols"]],
+orthoChart: "",
+ssHistory: "rrkdvn7crf",
+chapters: "",
+htmlchapter: "",
+usedfor:"Kurukh [kru]",
+},
+
+
 /*
 
 TO BE ADDED FOR v16
