@@ -1,0 +1,11 @@
+langTag = 'bap'
+window.version = 'v29'
+window.scriptName = 'Kirat Rai'
+window.ghDirectory = 'krai'
+window.blockDirectory = 'krai'
+window.languageList = ['bap'] // lang tags for each orthography handled
+window.detailsfileList = ['bap'] // first part of xx-details for each orthography
+window.scriptISO = 'krai'
+window.webfonts = ["Kanchenjunga WF"]
+window.defaultSize = '24px'
+hideBlockName = "KIRAT RAI"
