@@ -21,66 +21,66 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 autoExpandExamples.kru = `
 
 
-𑶻𑶳𑷑𑶳𑷎 𑷔𑶰𑷊𑶰|Tolong Siki|toloŋ siki
+𑶻𑶳𑷑𑶳𑷎 𑷔𑶰𑷊𑶰|Tolong Siki|t§o§l§o§ŋ§ §s§i§k§i
 
 @ The Kurukh Language https://www.google.co.uk/books/edition/The_Kurux_Language/v9BCDwAAQBAJ?hl=en&kptab=getbook&gbpv=1
 
-𑶶𑶱𑷑𑷑𑶳|woman|pel.lo
+𑶶𑶱𑷑𑷑𑶳|woman|p§e§l.§l§o
 𑷖𑶵𑶶𑶵|to graze|xɑpɑ
-𑶾𑶴𑶶|shutting|ɖʰap
-𑶻𑶲𑷊𑷊𑶵|to push|tuk.kɑ
+𑶾𑶴𑶶|shutting|ɖʰ§a§p
+𑶻𑶲𑷊𑷊𑶵|to push|t§u§k.§k§ɑ
 𑷖𑶱𑷙𑶻𑶵|leaf cup|xeː.tɑ
-𑶺𑶱𑷙𑶻|husband|meːt
+𑶺𑶱𑷙𑶻|husband|m§eː§‹§t
 𑷀𑶵𑷀𑶵|to lick|ʈɑʈɑ
 𑷑𑶴𑷀𑶶𑶴𑷀|sticky|laʈ.paʈ
 𑷅𑶰𑷅𑷅|fire|cicc
-𑶵𑷅𑶵|thin|ɑ.cɑ
+𑶵𑷅𑶵|thin|ɑ.§c§ɑ
 𑷊𑶲𑷊𑷊|head|kukk
-𑶱𑷙𑷊𑶵|to walk|eː.kɑ
+𑶱𑷙𑷊𑶵|to walk|eː.§‹§k§ɑ
 𑶰𑷔𑶻𑷑𑶱𑷙𑷊|from here|ist.leːk
-𑶷𑶴𑷔𑶰𑷏𑶵𑷐|falsehood|pʰa.si.jɑr
+𑶷𑶴𑷔𑶰𑷏𑶵𑷐|falsehood|pʰ§a.§s§i.§j§ɑ§r
 𑷅𑶲𑶷𑶱𑶺|secretly|cu.pʰem
 𑶺𑶵𑶷|pardon|mɑpʰ
-𑶼𑶴𑷐𑶰𑷏𑶵|brass plate|tʰa.ri.jɑ
-𑶱𑷙𑶼𑷐ʼ𑶵|to be visible|eːtʰr.ʔɑ
+𑶼𑶴𑷐𑶰𑷏𑶵|brass plate|tʰ§a.§r§i.§j§ɑ
+𑶱𑷙𑶼𑷐ʼ𑶵|to be visible|eː§‹§tʰ§r.§ʔ§ɑ
 𑷑𑶵𑶼|kick|lɑtʰ
-𑷁𑶱𑷊𑷐ʼ𑶵|to be stopped|ʈʰekr.ʔɑ
+𑷁𑶱𑷊𑷐ʼ𑶵|to be stopped|ʈʰ§e§k§r.§ʔ§ɑ
 𑷑𑶲𑷁𑶰𑷙|half-burned wood|lu.ʈʰiː
 𑶶𑶱𑷙𑷁|market|peːʈʰ
-𑷆𑶰𑷐𑶰𑷏𑶵𑷐ʼ𑶵|to be dispersed|cʰi.ri.jɑ.ʔɑ
+𑷆𑶰𑷐𑶰𑷏𑶵𑷐ʼ𑶵|to be dispersed|cʰ§i.§r§i.§j§ɑ§r.§ʔ§ɑ
 𑷊𑶴.𑷆𑶲𑷙𑷐|slough|ka.cʰuːr
 𑶶𑶳𑷐𑶳𑷆|half-cooked|po.rocʰ
-𑷋𑶱𑶶𑶶𑶵|village|kʰep.pɑ
+𑷋𑶱𑶶𑶶𑶵|village|kʰ§e§p.§p§ɑ
 𑷖𑶴𑷋𑷐ʼ𑶵|to be available|xakʰr.ʔɑ
 𑶸𑶳𑷋𑷋|locust|bokkʰ
 𑶸𑶳𑷎𑷌𑷌𑶵|to run away|boŋɡ.ɡɑ
-𑷃𑶰𑶸𑶵|money|ɖʰi.bɑ
-𑶰𑷐𑶰𑶸|two (persons)|i.rib
-𑶽𑶰𑷌𑷕𑶵|long|dig.hɑ
+𑷃𑶰𑶸𑶵|money|ɖʰ§i.§b§ɑ
+𑶰𑷐𑶰𑶸|two (persons)|i.§r§i§b
+𑶽𑶰𑷌𑷕𑶵|long|d§i§g.§h§ɑ
 𑶶𑶵𑶽𑶵|root|pɑ.dɑ
 𑷖𑶴𑶽𑶽|child|xadd
-𑷂𑶵̃𑷗𑶵|branch|ɖãː.ɽɑ
+𑷂𑶵̃𑷗𑶵|branch|ɖ§ɑ̃.§ɽ§ɑ
 𑶽𑶳𑷂𑶳𑷐-𑶸𑶳𑷂𑶳𑷐|dirty|so.ɖor-bo.ɖor
-𑷖𑶱𑷂𑷂|food|xeɖɖ
-𑷇𑶳𑷊𑷊|a few|ɟokk
-𑷖𑶳𑷙𑷇𑶵|to collect|xoː.ɟɑ
+𑷖𑶱𑷂𑷂|food|x§e§ɖ§ɖ
+𑷇𑶳𑷊𑷊|a few|ɟ§o§k§k
+𑷖𑶳𑷙𑷇𑶵|to collect|x§oː.§‹§ɟ§ɑ
 𑷖𑶴𑷇𑷇|dirt|xaɟɟ
 𑷌𑶳𑷑𑷑𑶴𑷔|landlord|ɡol.las
-𑷅𑶰𑷌𑶵|seedling|ci.ɡɑ
+𑷅𑶰𑷌𑶵|seedling|c§i.§ɡ§ɑ
 𑶿𑶱𑷙𑷌|rite|neːɡ
 𑶹𑶴𑶰𑷏𑶳𑷔|brother|bʰai.jos
-𑶹𑶵𑶹𑶿𑶵|conjecture|bʰɑbʰ.nɑ
-𑷑𑶴𑶹-𑷑𑶴𑶹|voraciously|labʰ-labʰ
+𑶹𑶵𑶹𑶿𑶵|conjecture|bʰ§ɑ§bʰ.§n§ɑ
+𑷑𑶴𑶹-𑷑𑶴𑶹|voraciously|l§a§bʰ§–§l§a§bʰ
 𑶾𑶴𑷐ʼ𑶵|to hold|dʰar.ʔɑ
 𑷑𑶳𑶾𑶴𑷐|name of a tribe|lo.dʰar
-𑶸𑶲𑶾|Wednesday|budʰ
+𑶸𑶲𑶾|Wednesday|b§u§dʰ
 𑷃𑶰̇𑷊𑶰𑷙|pounding machine|ɖʰiŋ.kiː
 𑷂𑶰𑷃𑷌𑶴𑷐|intrepid|ɖiɖʰ.ɡar
 𑷂𑶰𑷃|courage|ɖiɖʰ
 𑷈𑶴𑷐𑶿𑶵|spring|ɟʰar.nɑ
 𑶺𑶲̃𑷙𑷈𑶲𑷐ʼ𑶵|to wash one's face|m§ũ§ː.§ɟʰ§u§r.§ʔ§ɑ
-𑷐𑶰𑷈|joy|riɟʰ
-𑷍𑶵̃𑷔𑶰𑷙|grass|ɡʰɑ.siː
+𑷐𑶰𑷈|joy|r§i§ɟʰ
+𑷍𑶵̃𑷔𑶰𑷙|grass|ɡʰ§ɑ̃.§s§iː§‹
 𑶺𑶵𑷍𑶱𑷙|name of a month|mɑ.ɡʰeː
 𑷈𑶳𑷎𑷍|pitfall|ɟʰ§o§ŋ§ɡʰ
 𑶶𑶴̃𑷏𑷏𑶵|cold|p§a§ɲ.§ɲ§ɑ
@@ -106,7 +106,7 @@ autoExpandExamples.kru = `
 𑷊𑶰𑷏𑷏𑶵|below|k§i§j.§j§ɑ
 𑶶𑶱𑷐𑷒𑶵̃|pigeon|p§e§r.§w§ãː
 𑷀𑶴𑷕𑷀𑶴𑷕𑶴𑷒𑷒𑶵|very bright|ʈ§a§h.§ʈ§a.§h§a§w.§w§ɑ
-𑷔𑶴𑶳̃𑷔𑶱𑷙|whole|s§a§õ.§s§eː
+𑷔𑶴𑶳̃𑷔𑶱𑷙|whole|s§a§õ.§s§eː§‹
 𑷊𑶴𑷔𑷔𑶵|scurf|k§a§s.§s§ɑ
 𑶵𑷔|he|ɑ§s
 𑶺𑶱𑷙𑷖𑶵|to call|m§eː.§‹§x§ɑ
@@ -141,7 +141,7 @@ autoExpandExamples.kru = `
 𑶾𑶴𑶿𑶾𑶵|exertion|dʱ§a§n.§dʱ§aː
 𑶺𑶴𑷈𑷕𑶰𑷙|middle|m§a§ɟʱ.§h§iː§‹
 𑶺𑶴𑷈𑶰𑷔|zamindar's agent|m§a.§ɟʱ§i§s
-𑷊𑶲̃𑷗𑶲𑷖|Kurukh language|kũɽux
+𑷊𑶲̃𑷗𑶲𑷖|Kurukh language|k§ũ§ɽ§u§x
 
 
 
