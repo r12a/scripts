@@ -30,8 +30,6 @@ layout: [
 
 
 ahom:{ script:"Ahom", code:"Ahom", name:"", type:"Abugida",
-dates:"15thC – today", start:"1400", end:"", current_usage:"community, endangered",
-status:"Used principally for Tai Ahom language. Very few speakers of Ahom remain, despite attempts at revival in 20th century.",
 origin:"South Asia",
 info:{ wikipedia:"Ahom_alphabet", omniglot:"ahom", endalpha:"ahom" },
 local: [ ], layout: [ ],
@@ -45,8 +43,6 @@ usedfor: "Ahom [aho]",
 
 
 adlm:{ script:"Adlam", code:"Adlm", name:"", type:"Alphabet, cased, RTL",
-dates:"1980s – today", start:"1980", end:"", current_usage:"",
-status:"Used to write Fulani and other African languages. The Fulani are a large, historically nomadic tribe of  Africa numbering  more than 45  million and spread across Senegambia (Senegal) to the banks of the Nile and the Red Sea.",
 origin:"Africa",
 info:{ wikipedia:"Adlam_script", omniglot:"adlam", endalpha:"adlam" },
 local: [ ], layout: [ ],
@@ -66,9 +62,6 @@ layout:[/*{ name:"Adlam Layout Requirements", url:"https://www.w3.org/TR/adlm-lr
 
 
 arab:{ script:"Arabic", code:"Arab", name:"", type:"Abjad, RTL",
-dates:"6thC – today", start:"500", end:"", current_usage:"",
-status:"The second most broadly-used script in the world, after the Latin alphabet.",
-origin:"West Asia",
 info:{ wikipedia:"Arabic_script", omniglot:"arabic" },
 local: [ { name:"Arabic Homographs", url:"arab/homographs" } ], 
 layout: [ 
@@ -94,8 +87,6 @@ usedfor: "Fulfulde, Adamawa [fub], Adyghe [ady], Arabic, Algerian [arq], Andaand
 
 
 armn:{ script:"Armenian", code:"Armn", name:"", type:"alphabet, cased",
-dates:"406 – today", start:"406", end:"", current_usage:"",
-status:"Standard script for the Armenian language, in the Caucasus and the wide diaspora.",
 origin:"Europe",
 info:{ wikipedia:"Armenian_script", omniglot:"armenian" },
 local: [ ], layout: [ ],
@@ -433,8 +424,6 @@ usedfor: "English [en]",
 
 
 bamu:{ script:"Bamum", code:"Bamu", name:"", type:"Syllabary",
-dates:"1896 – today", start:"1896", end:"", current_usage:"endangered",
-status:"Fell into disuse around 1930, but revival attempted since around 2007. Little used currently. The Bamum Scripts and Archives Project preserves and digitally archive manuscripts written in the script to prevent its total loss.",
 origin:"Africa",
 info:{ wikipedia:"Bamum_script", omniglot:"bamum", endalpha:"bamum" },
 local: [ ], layout: [ ],
@@ -454,8 +443,6 @@ layout: [
 
 
 bass:{ script:"Bassa Vah", code:"Bass", name:"", type:"Alphabet",
-dates:"1907 – today", start:"1907", end:"", current_usage:"endangered",
-status:"Used for the Bassa language, which has around 700,000 speakers. Some efforts underway to revive the use of the script, but still little used.",
 origin:"Africa",
 info:{ wikipedia:"Bassa_Vah", omniglot:"bassa", endalpha:"bassa-vah" },
 local: [ ], layout: [ ],
@@ -669,8 +656,6 @@ usedfor: "Luwian [hlu]",
 
 
 armi:{ script:"Aramaic", code:"Armi", name:"", type:"Abjad",
-dates:"BCE 8thC – BCE 4thC", start:"-800", end:"-400", current_usage:"",
-status:"",
 origin:"West Asia",
 info:{ wikipedia:"Aramaic_alphabet", omniglot:"aramaic" },
 local: [ ], layout: [ ],
@@ -685,8 +670,6 @@ usedfor: "Official Aramaic [arc], Western Neo-Aramaic [amw]",
 
 
 avst:{ script:"Avestan", code:"Avst", name:"", type:"Alphabet, RTL",
-dates:"6thC – today", start:"500", end:"", current_usage:"liturgical",
-status:"Use for Zoroastrian religious texts.",
 origin:"West Asia",
 info:{ wikipedia:"Avestan_alphabet", omniglot:"avestan" },
 local: [ ], layout: [ ],
@@ -1012,8 +995,6 @@ usedfor: "Ugaritic [uga]",
 
 
 beng:{ script:"Bengali", code:"Beng", name:"", type:"Abugida",
-dates:"11thC – today", start:"1100", end:"", current_usage:"",
-status:"The script used for the Bengali language, which has over 180,000,000 speakers, but also for several others.",
 origin:"South Asia",
 info:{ wikipedia:"Bengali_alphabet", omniglot:"bengali" },
 charts: [ ["Bengali", "0980"] ],
@@ -1837,8 +1818,6 @@ layout: [
 
 
 laoo:{ script:"Lao", code:"Laoo", name:"", type:"Alphabet",
-dates:"16thC – today", start:"1500", end:"", current_usage:"",
-status:"The script for the Lao language, with around 4,000,000 speakers, and several minority languages in Laos.",
 origin:"Southeast Asia",
 info:{ wikipedia:"Lao_script", omniglot:"lao" },
 charts: [ ["Lao", "0E80"] ],
@@ -1856,6 +1835,24 @@ layout: [
     { name:"Lao Layout Requirements", url:"http://w3c.github.io/laoo-lreq/"},
     { name:"Lao counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#lao-styles"},
 	],
+},
+
+
+tayo:{ script:"Tai Yo", code:"Tayo", name:"", type:"Abugida",
+origin:"Southeast Asia",
+info:{ wikipedia:"Tai_Yo_script", omniglot:"" },
+charts: [ ["Tai Yo", ""] ],
+scriptNotes: [["Tai Yo", "tayo/tyj.html"]],
+charNotesList:["Tai Yo", "tayo/tyj-characters.html"],
+terms: [["Tai Yo", "tayo/tyj_vocab.html"]],
+pickers: [["Tai Yo", "tayo"]],
+orthoChart: "",
+ssHistory: "7dcadb4hha",
+chapters: "?",
+htmlchapter: "?",
+usedfor: "Tai Yo [tyj]",
+local: [ ],
+layout: [ 	],
 },
 
 
@@ -1997,8 +1994,6 @@ usedfor: "Tai Daeng [tyr], Tai Dam [blt], Tai Dón [twh], Tày Tac [tyt], Thai S
 
 
 thai:{ script:"Thai", code:"Thai", name:"", type:"Abugida",
-dates:"1283 – today", start:"1283", end:"", current_usage:"",
-status:"The script used to write the Thai language, with around 60,000,000 speakers, plus almost 40 other languages.",
 origin:"Southeast Asia",
 info:{ wikipedia:"Thai_alphabet", omniglot:"thai" },
 charts: [ ["Thai", "0E00"] ],
@@ -2021,8 +2016,6 @@ layout: [
 
 
 bali:{ script:"Balinese", code:"Bali", name:"", type:"Abugida",
-dates:"11thC – today", start:"1000", end:"", current_usage:"uptake",
-status:"Significant prevalence in many of the island's traditional ceremonies and strongly associated with the Hindu religion. Mainly used today for copying lontar or palm leaf manuscripts containing religious texts, however traditional literature is published on a limited scale. Used for public signage on roads, at entrances to villages, and on government buildings, and read by community reading groups called Sekaha Pesantian, commonly in song form.",
 origin:"Indonesia & Oceania",
 info:{ wikipedia:"Balinese_script", omniglot:"balinese", endalpha:"balinese" },
 local: [ ], layout: [ ],
@@ -2062,8 +2055,6 @@ usedfor: "Batak Angkola [akb], Batak Dairi [btd], Batak Karo [btx], Batak Mandai
 
 
 bugi:{ script:"Buginese", code:"Bugi", name:"", type:"Abugida, Defective",
-dates:"14thC – today", start:"1300", end:"", current_usage:"",
-status:"Used for a number of languages in Sulawesi, with speakers numbering around 2,300,000.",
 origin:"Indonesia & Oceania",
 info:{ wikipedia:"Buginese_script", omniglot:"lontara", endalpha:"lontara" },
 local: [ ], layout: [ ],
@@ -2999,8 +2990,6 @@ usedfor:"Bhumij [snd]",
 
 
 tols:{ script:"Tolong Siki", code:"Tols", name:"", type:"Alphabet", 
-dates:"1999 – today", start:"1400", end:"", current_usage:"", 
-status: "describe_current_status_for_living_scripts",
 origin:"South Asia",
 info:{ wikipedia:"Tolong_Siki", omniglot:"ahom" }, 
 local: [	],

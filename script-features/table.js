@@ -1,4 +1,4 @@
-// in the main source file scriptData array is created
+﻿// in the main source file scriptData array is created
 // then populated from the langs.js data for the languages (items) listed just below
 // then additional fields are added to each record after analysing the info, using getCharacterStats
 // resort is then called to draw the table
@@ -7,12 +7,12 @@
 
 // one lang tag per row
 //var items = ['adlm', 'am', 'arb', 'hy', 'aii', 'ban-bali', 'bm', 'bax-bamu', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'cmn', 'crk', 'dv', 'ff', 'ff-arab', 'fuf-adlm', 'el', 'gu', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'ka', 'khb', 'khk', 'khk-mong', 'km', 'ko', 'ks', 'ks-deva', 'kyu', 'lep', 'lif', 'lis', 'lo', 'ml', 'mid', 'mro', 'new', 'nod', 'nqo', 'ory', 'osa', 'pa', 'pes', 'rhg', 'ru', 'sat', 'shn', 'si', 'su-sund', 'suz', 'syc', 'kkh', 'ta', 'tdd', 'te', 'th', 'tru', 'ug', 'uk', 'unr', 'ur', 'vai', 'wo', 'zgh', 'blt', 'bo', ]
-var items = ['adlm', 'ahom', 'arab', 'armi', 'armn', 'avst', 'bali', 'bamu', 'hluw', 'laoo', 'tayo', 'thai' ]
+var items = ['adlm', 'ahom', 'arab', 'araba', 'arabu', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'beng', 'bugi', 'hluw', 'laoo', 'tayo', 'thai', 'tols' ]
 
 
 // these variables indicate which tabs are open or closed
 var type = false
-var csubset = false
+var caseubset = false
 var vsubset = false
 var consonants = false
 var cclusters = false
@@ -67,29 +67,29 @@ var by = function (path, reverse, primer, then) {
 		aux:"Blocks", 
 		letters:"Letter", 
 		mark:"Mark", 
-		punctuation:"Punct\u00ADuation",
+		punctuation:"Punct<br>uation",
 		digits:"Number",
 		symbols:"Symbol",
 		other:"Other",
         
 		type:"Writing system",
 
-		vsyllable:"Vowel syllables", 
-		vinherent:"Inherent vowel",
-		vdiac:"Vowel marks",
-		vletter:"Vowel letters",
-		vother:"Other chars",
-		vhidden:"Hides vowels",
+		vsyllable:"Vowel<br>syllables", 
+		vinherent:"Inherent<br>vowel",
+		vdiac:"Vowel<br>marks",
+		vletter:"Vowel<br>letters",
+		vother:"Other<br>chars",
+		vhidden:"Hides<br>vowels",
 		matres:"Matres lectionis",
-		vsign:"Visual order",
+		vsign:"Visual<br>order",
         
-		ivowels:"Standalone letters",
-		vbase:"Standalone carrier",
+		ivowels:"Standalone<br>letters",
+		vbase:"Standalone<br>carrier",
 		//vmark:"Vowel marks",
         
-		pbletter:"Prebase letters",
-		pbmark:"Prebase glyphs",
-		vcircum:"Circum\u00ADgraphs",
+		pbletter:"Prebase<br>letters",
+		pbmark:"Prebase<br>glyphs",
+		vcircum:"Circum-<br>graphs",
 		vcomposite:"Multipart vowels",
         
 		vvocalics:"Vocalics",
@@ -112,7 +112,7 @@ var by = function (path, reverse, primer, then) {
 		//matras:"Vowel signs",
 		//gsub:"Contextual shaping", 
         
-		cs:"Bicameral", 
+		case:"Case", 
 		cursive:"Cursive<br>script",
         
 		direction:"Text<br>direction",
@@ -121,7 +121,7 @@ var by = function (path, reverse, primer, then) {
         baseline:"Baseline",
 		wordsep:"Word separator",
 		wrap:"Linebreak",
-		hyphenation:"Hyphen\u00ADation",
+		hyphenation:"Hyphen<br>ation",
 		justification:"Justification",
 		spacing:"Text space",
 
@@ -235,7 +235,7 @@ function resort (column, reverse) {
         }
 
 //	if (window.consonants) {
-        table += makeTableHead ('cs', "Case transforms.", REVERSE)
+        table += makeTableHead ('case', "Case transforms.", REVERSE)
 
         table += makeTableHead ('cursive', "Letters are joined (cursive).", REVERSE)
 
@@ -319,6 +319,7 @@ function resort (column, reverse) {
 			
 			table += '<td title="Language" style="text-align:right;white-space:nowrap;">'+scriptData[i].name.replace(/ \([^\)]+\)/,'')+'</td>'
 			
+			//table += '<td title="Script" style="text-align:right; padding-inline:.5rem;">'+scriptData[i].script+'</td>'
 			table += '<td title="Script" style="text-align:right; padding-inline:.5rem;">'+scriptData[i].script+'</td>'
 			
 			table += '<td title="Link to the orthography notes.">'+linked+'</td>'
@@ -379,7 +380,7 @@ function resort (column, reverse) {
 
                 table += drawCell('vsign', scriptData[i], 'combiningV')
 
-                table += drawCell('vvocalics', scriptData[i], 'vocalics', 'y')
+                table += drawCell('vvocalics', scriptData[i], 'vocalics', 'yy')
 
                 //table += drawCell('vsyllable', scriptData[i], 'vowels')
 
@@ -393,14 +394,14 @@ function resort (column, reverse) {
                 table += drawCell('vcircum', scriptData[i], 'circumgraphs')
                 }
 
-                table += drawCell('cs', scriptData[i], 'transforms')
+                table += drawCell('case', scriptData[i], 'transforms', 'y')
 
-                table += drawCell('cursive', scriptData[i], 'cursive')
+                table += drawCell('cursive', scriptData[i], 'cursive', 'y')
 
 //			if (window.consonants) {
-                table += drawCell('gsub', scriptData[i], 'gsub', 'y')
+                table += drawCell('gsub', scriptData[i], 'gsub', 'yy')
 
-                table += drawCell('gpos', scriptData[i], 'gsub', 'y')
+                table += drawCell('gpos', scriptData[i], 'gsub', 'yy')
 //                }
 
 
@@ -515,7 +516,7 @@ function drawCellWithDefault (name, data, frag, colour, defaultvalue) {
     if (typeof defaultvalue === 'undefined') defaultvalue = '-'
     
     out += `<td title="${ tablecolumns[name] }§${ data[name] }" class="vsubset`
-    if (data[name] !== defaultvalue) out += ` ${ colour }`
+    if (data[name] !== defaultvalue  && data[name] !== '?') out += ` ${ colour }`
     //if (data[name] === defaultvalue) out += `">${ data[name] }</td>`
     //else 
     out += `"><a href="../${ data.linked }.html#${ frag }" target="_blank">${ data[name] }</a></td>`
@@ -542,7 +543,7 @@ function drawCellForCharacters (name, data, frag, colour) {
 
 
 
-function drawCellForCharactersX (name, data, frag, colour) {
+/*function drawCellForCharactersX (name, data, frag, colour) {
     var out = ''
     if (typeof data[name] === 'undefined') data[name] = '0'
     if (typeof data[name] === 0) data[name] = '0'
@@ -555,7 +556,7 @@ function drawCellForCharactersX (name, data, frag, colour) {
     return out
     }
 	
-
+*/
 
 
 
@@ -896,7 +897,7 @@ function showContext (evt) {
         }
 
       
-    if (parts[0] === tablecolumns.cs) {
+    if (parts[0] === tablecolumns.case) {
         types = parts[1].split(' ')
         if (parts[1].trim() === '-') out += ` —`
         else {
@@ -953,12 +954,14 @@ function getCharacterStats () {
     // this function converts db values to values that can be used in the table, where needed
 	for (var i=0;i<items.length;i++) {
 		if (scriptData[i]) {
-
 			var count = 0
 			var aux = 0
 			var charArray
 			var charuseData = scriptData[i]
 
+            scriptData[i].script = items[i]
+            
+            
             // change the name if the char db has a 'label' field
 			if (charuseData.label) {
 				scriptData[i].name = charuseData.label
@@ -989,11 +992,11 @@ function getCharacterStats () {
             
             
             // glyph shaping & positioning
-			if (charuseData.shaping) {
-				if (charuseData.cs.includes('yes')) scriptData[i].cs = '✓'
-                else if (charuseData.cs.includes('no')) scriptData[i].cs = '-'
-				else scriptData[i].cs = charuseData.cs
-				}
+			//if (charuseData.shaping) {
+				if (charuseData.case === true) scriptData[i].case = '✓'
+                else if (charuseData.case === false) scriptData[i].case = '-'
+				else scriptData[i].case = charuseData.case
+			//	}
 
 
             scriptData[i].cursive = charuseData.cursive?'✓':'-'
@@ -1001,10 +1004,11 @@ function getCharacterStats () {
 
 
 			// deal with types
-			if (charuseData.type.includes('alpha')) scriptData[i].type = 'alphabet'
+            // push this straight through; options are alpha abug syll ideo abjad
+			/*if (charuseData.type.includes('alpha')) scriptData[i].type = 'alphabet'
 			if (charuseData.type.includes('abug')) scriptData[i].type = 'abugida'
 			if (charuseData.type.includes('syll')) scriptData[i].type = 'syllabic'
-			if (charuseData.type.includes('ideo')) scriptData[i].type = 'syllabic'
+			if (charuseData.type.includes('ideo')) scriptData[i].type = 'syllabic'*/
 
 
 			// NEWCOL set a default, then derive a value
@@ -1157,6 +1161,10 @@ function getCharacterStats () {
             scriptData[i].numdir = charuseData.rtlnumbers?'✓':'-'
 
 
+            scriptData[i].wrap = charuseData.linebreak
+
+
+            scriptData[i].script = charuseData.script
 
             // text spacing
             if (scriptData[i].spacing) {
