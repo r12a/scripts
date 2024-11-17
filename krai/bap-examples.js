@@ -20,6 +20,7 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 
 autoExpandExamples.bap = `
 
+𖵄𖵤𖵝𖵒 𖵝𖵨|Kirat Rai|k§i§ra§t§ §r§aɪ
 
 
 @ https://www.unicode.org/L2/L2022/22043r-kirat-rai.pdf
@@ -30,7 +31,7 @@ autoExpandExamples.bap = `
 𖵛𖵣𖵀𖵄𖵩𖵞𖵧𖵖|tomorrow|m§aː§ŋ§k§o§l§e§n
 𖵛𖵣𖵀𖵠𖵣𖵟𖵣|bless|m§aː§n§s§aː§w§aː
 𖵗𖵀𖵉𖵣𖵜𖵧𖵒|panchayat|pa§ɲ§t͡s§aː§j§e§t
-𖵜𖵣𖵠𖵣𖵁𖵟𖵣|curse|j§ãː§‹§s§aː§w§aː
+𖵜𖵣𖵠𖵣𖵁𖵟𖵣|curse|j§aː§‹§s§ãː§w§aː
 𖵊𖵧𖵁𖵃𖵤𖵟𖵣|brother|t͡sʰ§ẽ§‹§›§i§w§aː
 𖵉𖵣𖵂𖵟𖵣|water|t͡s§aː§ʔ§w§aː
 𖵉𖵣𖵃𖵫𖵟𖵣|water|t͡s§aː§ʔ§‹§w§aː
@@ -42,12 +43,17 @@ autoExpandExamples.bap = `
 𖵢𖵬𖵜𖵣𖵖𖵤|there|h§‹§j§aː§n§i
 𖵢𖵬𖵜𖵥𖵖𖵤|down|h§‹§j§u§n§i
 𖵛𖵬𖵢𖵥𖵛𖵣|quarrel|m§‹§h§u§m§aː
-𖵠𖵥𖵅𖵫𖵅𖵤𖵛|Sikkim|s§u§k§‹§k§i§m
+𖵠𖵥𖵅𖵫𖵅𖵤𖵛|Sikkim|s§u§k§‹§kʰ§i§m
 𖵃𖵈𖵫𖵄𖵣|me|a§ŋ§‹§k§aː
 𖵅𖵣𖵎𖵫𖵛𖵣|to go|kʰ§aː§ʈ§‹§m§aː
 𖵐𖵭|Dr. (doctor)|
 𖵐𖵭𖵋𖵭𖵗𖵤𖵭|DGP (Dir. Gen of police)|di§–§d͡zi§–§p§i§–
 𖵠𖵣𖵜𖵣-𖵙𖵥𖵈|turban|s§aː§j§aː§-§b§u§ŋ
+
+
+
+@ A Bantawa Dictionary https://books.google.co.uk/books?id=RTuMWRZ8OfkC&pg=PA1&source=gbs_toc_r&cad=2#v=onepage&q&f=false
+𖵃𖵤𖵛𖵣|laughter|ʔi.maː
 
 
 
@@ -61,17 +67,17 @@ autoExpandExamples.bap = `
 // automatically creates Online Resources section, if markup is uncommented in xx.html
 
 termLists = [
-/*
 {
-"title":"Wiktionary, Eastern Cham lemmas",
-"url":"https://en.wiktionary.org/wiki/Category:Eastern_Cham_lemmas",
+"title":"Sikkim Herald",
+"url":"https://sikkim.gov.in/uploads/SikkimHerald/Kirat_Rai_Herald-_40_0_20241030.pdf",
 },
 
 {
-"title":"Austronesian Basic Vocabulary Database, Phan Rang Cham (Eastern Cham)",
-"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=371&sort=item",
+"title":"Bantawa Dictionary",
+"url":"https://books.google.co.uk/books?id=RTuMWRZ8OfkC&pg=PA1&source=gbs_toc_r&cad=2#v=onepage&q&f=false",
 "notes":"Latin only",
 },
+/*
 
 {
 "title":"Living Dictionaries",
