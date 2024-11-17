@@ -6,8 +6,6 @@ var linkDB = {
 
 
 deva:{ script:"Devanagari", code:"Deva", name:"", type:"Abugida",
-dates:"11thC – today", start:"1100", end:"", current_usage:"",
-status:"Official script of India. Used for over 120 languages, and Classical Sanskrit.",
 origin:"South Asia",
 info:{ wikipedia:"Devanagari", omniglot:"devanagari" },
 charts: [ ["Devanagari", "0900"], ["Devanagari Extended", "A8E0"], ["Devanagari Extended-A", "11B00"], ["Vedic Extensions", "1CD0"] ],
@@ -137,8 +135,6 @@ usedfor: "Ancient Greek [grc], Minoan [omn]",
 
 
 cyrl:{ script:"Cyrillic", code:"Cyrl", name:"", type:"Alphabet, cased",
-dates:"10thC – today", start:"900", end:"", current_usage:"",
-status:"Traditionally used for writing Slavic languages, of which Russian is the most widely spoken. During the 19th and 20th centuries, particularly under Soviet rule, it was extended to write over 50 languages throughout Eastern Europe and Asia.",
 origin:"Europe",
 info:{ wikipedia:"Cyrillic_script", omniglot:"cyrillic" },
 charts: [ ["Cyrillic", "0400"], ["Cyrillic Supplement", "0500"], ["Cyrillic Extended-A", "2DE0"], ["Cyrillic Extended-B", "A640"], ["Cyrillic Extended-C", "1C80"], ["Cyrillic Extended-D", "1E030"] ],
@@ -186,8 +182,6 @@ usedfor: "Albanian [sq]",
 
 
 geor:{ script:"Georgian", code:"Geor", name:"", type:"Alphabet",
-dates:"5thC – today", start:"1400", end:"", current_usage:"",
-status:"The script of the Georgian language, spoken by approximately 4,000,000 people in Georgia and Azerbaijan, Turkey and Iran.",
 origin:"Europe",
 info:{ wikipedia:"Georgian_script", omniglot:"georgian" },
 charts: [ ["Georgian", "10A0"], ["Georgian Extended", "1C90"], ["Georgian Supplement", "2D00"] ],
@@ -241,8 +235,6 @@ usedfor: "Gothic [got]",
 
 
 grek:{ script:"Greek", code:"Grek", name:"", type:"Alphabet, cased",
-dates:"BCE 8thC – today", start:"-800", end:"", current_usage:"",
-status:"The script for the Greek language, spoken by around 10,500,000 people in Greece.",
 origin:"Europe",
 info:{ wikipedia:"Greek_alphabet", omniglot:"greek" },
 charts: [ ["Greek and Coptic", "0370"], ["Greek Extended", "1F00"], ["Ancient Greek Numbers", "10140"] ],
@@ -492,8 +484,6 @@ usedfor: "Egyptian [egy]",
 
 
 ethi:{ script:"Ethiopic", code:"Ethi", name:"", type:"Featural syllabary",
-dates:"BCE 4thC – today", start:"-400", end:"", current_usage:"",
-status:"Widely used for writing the Ethiopian and Eritrean Semitic languages such as Tigré, Amharic and Tigrinya.",
 origin:"Africa",
 info:{ wikipedia:"Ge'ez_script", omniglot:"ethiopic" },
 charts: [ ["Ethiopic", "1200"], ["Ethiopic Supplement", "1380"], ["Ethiopic Extended", "2D80"], ["Ethiopic Extended-A", "AB00"], ["Ethiopic Extended-B", "1E7E0"] ],
@@ -729,8 +719,6 @@ usedfor: "Uncoded languages [mis]",
 
 
 hebr:{ script:"Hebrew", code:"Hebr", name:"", type:"Abjad, RTL",
-dates:"BCE 3rdC – today", start:"-300", end:"", current_usage:"",
-status:"The writing system for the Hebrew language, but also for others.",
 origin:"West Asia",
 info:{ wikipedia:"Hebrew_script", omniglot:"hebrew" },
 charts: [ ["Hebrew", "0590"], ["Alphabetic Presentation Forms", "FB00"] ],
@@ -1065,8 +1053,6 @@ usedfor: "Old Tamil [oty], Sanskrit [sa]",
 
 
 gujr:{ script:"Gujarati", code:"Gujr", name:"", type:"Abugida",
-dates:"1592 – today", start:"1592", end:"", current_usage:"",
-status:"The script used for the Gujarati and Chodri languages, with around 47,000,000 speakers, and several other languages.",
 origin:"South Asia",
 info:{ wikipedia:"Gujarati_alphabet", omniglot:"gujarati" },
 local: [ 
@@ -1094,8 +1080,6 @@ layout: [
 
 
 guru:{ script:"Gurmukhi", code:"Guru", name:"", type:"Abugida",
-dates:"16thC – today", start:"1500", end:"", current_usage:"",
-status:"The script used for the Punjabi language in India.",
 origin:"South Asia",
 info:{ wikipedia:"Gurmukhi_alphabet", omniglot:"punjabi" },
 layout: [ ],
@@ -2248,8 +2232,6 @@ layout: [
 
 
 hang:{ script:"Hangul", code:"Hang", name:"", type:"Featural syllabary",
-dates:"1444 – today", start:"1444", end:"", current_usage:"",
-status:"Used for the Korean language.",
 origin:"East Asia",
 info:{ wikipedia:"Hangul", omniglot:"korean" },
 charts: [ ["Hangul Syllables", "AC00"], ["Hangul Jamo", "1100"], ["Hangul Compatibility Jamo", "3130"], ["Hangul Jamo Extended-A", "A960"], ["Hangul Jamo Extended-B", "D7B0"] ],
@@ -2361,8 +2343,6 @@ usedfor: "Eastern Nisu [nos], Mantsi [nty], Nuosu [iii], Samatao [ysd], Samei [s
 
 
 cher:{ script:"Cherokee", code:"Cher", name:"", type:"Syllabary",
-dates:"1821 – today", start:"1821", end:"", current_usage:"community",
-status:"Among the approximately 1,500 Cherokees who speak the language, the script is widely used for writing letters, recipes, folktales, diaries, and personal record-keeping, as well as some legal, governmental and religious documents and public signage. Knowledge of the script is considered a prerequisite for full Cherokee citizenship.",
 origin:"Americas",
 info:{ wikipedia:"Cherokee_script", omniglot:"cherokee", endalpha:"cherokee" },
 local: [ ], layout: [ ],
@@ -2395,8 +2375,6 @@ usedfor: "English [en]",
 
 
 cans:{ script:"UCAS", code:"Cans", name:"Unified Canadian Aboriginal Syllabics", type:"Syllabary",
-dates:"1830s – today", start:"1830", end:"", current_usage:"",
-status:"Used by several aboriginal groups throughout Canada, including Algonquian, Inuktitut, and Athapascan  language families, though usage varies across languages.",
 origin:"Americas",
 info:{ wikipedia:"Canadian_Aboriginal_syllabics", omniglot:"ucas", endalpha:"canadian-aboriginal-syllabics" },
 local: [ ], layout: [ ],
@@ -2952,15 +2930,15 @@ usedfor:"Gurung [gvr]",
 
 
 krai:{ script:"Kirat Rai", code:"Krai", name:"Kirat Rai, Khambu Rai Lipi", type:"Abugida", 
-dates:"1920 – today", start:"1920", end:"", current_usage:"community", 
-status: "A year 2000 reformed version of the official script for Bantawa/Rai language adopted in 1995.",
 origin:"South Asia",
 info:{ wikipedia:"Kirat_Rai", omniglot:"kiratrai" }, 
 local: [	],
 charts: [ ["Kirat Rai", "16D40"] ],
 layout:[	],
-charNotesList:[],
-terms: [],
+scriptNotes: [["Bantawa", "krai/bap.html"]],
+charNotesList:["Kirat Rai", "krai/block.html"],
+terms: [["Bantawa", "krai/bap_vocab.html"]],
+pickers: [["Kirat Rai", "krai-bap"]],
 orthoChart: "",
 ssHistory: "q7j9cknppb",
 chapters: "",

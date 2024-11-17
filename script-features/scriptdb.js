@@ -282,12 +282,207 @@ baseline: "romn",
 
 
 
+"cans": { name:"Canadian Aboriginal Syllabics", region:"nam", 
+blocks:3, chars:726, letter:723, mark:0, number:0, punctuation:2, symbol:1, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"syll", 
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
+case: N, cursive:N, gpos:"l", gsub:"l", 
+medials:"", finals:"ss",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "space",
+linebreak:"word", hyphen:"yes -", justification:"sp", spacing:"?",
+baseline: "romn",
+},
+
+
+
+"cher": { name:"Cherokee", region:"nam", 
+blocks:2, chars:172, letter:172, mark:0, number:0, punctuation:0, symbol:0, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"syll", 
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
+case:Y, cursive:N, gpos:"n", gsub:"n", 
+medials:"", finals:"",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "space",
+linebreak:"word", hyphen:"?", justification:"sp", spacing:"?",
+baseline: "romn",
+},
+
+
+
+"cyrl": { name:"Cyrillic", region:"eur", 
+blocks:6, chars:506, letter:447, mark:56, number:0, punctuation:2, symbol:1, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"alpha", 
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
+case:Y, cursive:N, gpos:"l", gsub:"l", 
+medials:"", finals:"",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "space",
+linebreak:"word", hyphen:"yes -", justification:"sp", spacing:"?",
+baseline: "romn",
+},
+
+
+
+"deva": { name:"Devanagari", region:"sasia", 
+blocks:3, chars:170, letter:90, mark:53, number:10, punctuation:17, symbol:0, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"abug", 
+voweltype: { inherent:1, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:Y, vbase:"", prebase:Y, circum:N },
+case:N, cursive:N, gpos:"m", gsub:"m", 
+medials:"", finals:"cm",
+clusters: { conjuncts:Y, stacks:Y, touch:N, conjoined:Y, subjoinedcp:N, visviram:N, diacritic:N, ligation:Y, killer:"v" },
+wordsep: "space",
+linebreak:"word", hyphen:"yes -", justification:"sp", spacing:"sp",
+baseline: "hang",
+},
+
+
+
+"ethi": { name:"Ethiopic", region:"afr", 
+blocks:5, chars:523, letter:481, mark:3, number:20, punctuation:9, symbol:10, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"feat", 
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
+case:N, cursive:N, gpos:"n", gsub:"n", 
+medials:"", finals:"",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "space ws ፡",
+linebreak:"word", hyphen:"?", justification:"sp", spacing:"?",
+baseline: "romn",
+},
+
+
+
+"geor": { name:"Georgian", region:"eur", 
+blocks:3, chars:174, letter:173, mark:0, number:0, punctuation:1, symbol:0, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"alpha", 
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
+case:"allcaps", cursive:N, gpos:"l", gsub:"l", 
+medials:"", finals:"",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "space",
+linebreak:"word", hyphen:"yes -", justification:"sp", spacing:"sp",
+baseline: "romn",
+},
+
+
+
+"grek": { name:"Greek", region:"eur", 
+blocks:3, chars:417, letter:318, mark:0, number:59, punctuation:2, symbol:38, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"alpha", 
+voweltype: { inherent:0, letters:Y, marks:"(✓)", hidden:N, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
+case:Y, cursive:N, gpos:"l", gsub:"n", 
+medials:"", finals:"",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "space",
+linebreak:"word", hyphen:"yes -", justification:"sp", spacing:"?",
+baseline: "romn",
+},
+
+
+
+"gujr": { name:"Gujarati", region:"sasia", 
+blocks:1, chars:91, letter:53, mark:26, number:10, punctuation:1, symbol:1, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"abug", 
+voweltype: { inherent:1, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:Y, vbase:"", prebase:Y, circum:N },
+case:N, cursive:N, gpos:"m", gsub:"m", 
+medials:"", finals:"cm",
+clusters: { conjuncts:Y, stacks:Y, touch:Y, conjoined:Y, subjoinedcp:N, visviram:N, diacritic:N, killer:"v" },
+wordsep: "space",
+linebreak:"word", hyphen:"?", justification:"sp", spacing:"?",
+baseline: "hang",
+},
+
+
+
+"guru": { name:"Gurmukhi", region:"sasia", 
+blocks:1, chars:80, letter:51, mark:18, number:10, punctuation:1, symbol:0, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"abug", 
+voweltype: { inherent:1, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, vbase:"", prebase:Y, circum:N },
+case:N, cursive:N, gpos:"m", gsub:"m", 
+medials:"", finals:"cm",
+clusters: { conjuncts:N, stacks:Y, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"v" },
+wordsep: "space",
+linebreak:"word", hyphen:"?", justification:"sp", spacing:"?",
+baseline: "hang",
+},
+
+
+
+"hang": { name:"Hangul", region:"easia", 
+blocks:5, chars:11635, letter:11635, mark:0, number:0, punctuation:0, symbol:0, other:0, 
+direction: "ltr tbrl", rtlnumbers:N,
+type:"feat", 
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
+case:N, cursive:N, gpos:"n", gsub:"n", 
+medials:"", finals:"",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "space",
+linebreak:"char word", hyphen:"no", justification:"sp", spacing:"?",
+baseline: "ideo",
+},
+
+
+
+"hani": { name:"Han", region:"easia", 
+blocks:17, chars:99110, letter:98706, mark:3, number:4, punctuation:1, symbol:396, other:0, 
+direction: "ltr tbrl", rtlnumbers:N,
+type:"ideo", 
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
+case:N, cursive:N, gpos:"n", gsub:"n", 
+medials:"", finals:"",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "no",
+linebreak:"char", hyphen:"no", justification:"ic", spacing:"",
+baseline: "ideo",
+},
+
+
+
+"hebr": { name:"Hebrew", region:"wasia", 
+blocks:2, chars:134, letter:75, mark:52, number:0, punctuation:6, symbol:1, other:0, 
+direction: "rtl", rtlnumbers:N,
+type:"abjad", 
+voweltype: { inherent:0, letters:Y, marks:Y, hidden:Y, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
+case:N, cursive:N, gpos:"m", gsub:"l", 
+medials:"", finals:"let",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "space",
+linebreak:"word", hyphen:"?", justification:"sp", spacing:"sp",
+baseline: "romn",
+},
+
+
+
+"krai": { name:"Kirat Rai", region:"sasia", 
+blocks:1, chars:58, letter:45, mark:0, number:10, punctuation:3, symbol:0, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"abug", 
+voweltype: { inherent:1, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, vbase:"A", prebase:N, circum:N },
+case:N, cursive:N, gpos:"n", gsub:"n", 
+medials:"", finals:"let",
+clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:Y, diacritic:N, killer:"k" },
+wordsep: "space",
+linebreak:"word", hyphen:"?", justification:"sp", spacing:"?",
+baseline: "romn",
+},
+
+
+
 "xxxx": { name:"Adlam", region:"nam sam cam carib eur sasia easia nasia seasia casia wasia afr oce", 
 blocks:1, chars:88, letter:69, mark:7, number:10, punctuation:2, symbol:0, other:0, 
 direction: "ltr rtl tbrl tblr bt bous", rtlnumbers:N,
 type:"alpha abug syll ideo abjad", 
 voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, vbase:"", prebase:N, circum:N },
-case: N, cursive:N, gpos:"l m h n", gsub:"l m h n", 
+case:N, cursive:N, gpos:"l m h n", gsub:"l m h n", 
 medials:"cm sj let", finals:"cm let vk ss",
 clusters: { conjuncts:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"v i k" },
 wordsep: "space ws x no zwsp syllable sb",

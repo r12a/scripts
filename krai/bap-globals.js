@@ -12,7 +12,7 @@ pickerDir='krai-bap'  // directory name for picker, no slash at end
 scriptSummaryTableName='bap'  // id used for langs record in xx-langdata.js; used to make summary table
 charUsageBCP='bap'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only
 orthogName = 'Kirat Rai' // natural language name for the orthography; used only in makeIndexIntro
-languageName = 'Kirat Rai' // natural language name of language; used in various places, esp block
+languageName = 'Bantawa' // natural language name of language; used in various places, esp block
 scriptIsIndic = true  // true if there are indic syllabic categories; used only in makeIndexIntro
 
 

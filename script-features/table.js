@@ -7,7 +7,7 @@
 
 // one lang tag per row
 //var items = ['adlm', 'am', 'arb', 'hy', 'aii', 'ban-bali', 'bm', 'bax-bamu', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'cmn', 'crk', 'dv', 'ff', 'ff-arab', 'fuf-adlm', 'el', 'gu', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'ka', 'khb', 'khk', 'khk-mong', 'km', 'ko', 'ks', 'ks-deva', 'kyu', 'lep', 'lif', 'lis', 'lo', 'ml', 'mid', 'mro', 'new', 'nod', 'nqo', 'ory', 'osa', 'pa', 'pes', 'rhg', 'ru', 'sat', 'shn', 'si', 'su-sund', 'suz', 'syc', 'kkh', 'ta', 'tdd', 'te', 'th', 'tru', 'ug', 'uk', 'unr', 'ur', 'vai', 'wo', 'zgh', 'blt', 'bo', ]
-var items = ['adlm', 'ahom', 'arab', 'araba', 'arabu', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'beng', 'bugi', 'hluw', 'laoo', 'tayo', 'thai', 'tols' ]
+var items = ['adlm', 'ahom', 'arab', 'araba', 'arabu', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'beng', 'bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hang', 'hani', 'hebr', 'hluw', 'krai', 'laoo', 'tayo', 'thai', 'tols' ]
 
 
 // these variables indicate which tabs are open or closed
