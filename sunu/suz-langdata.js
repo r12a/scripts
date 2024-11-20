@@ -1,17 +1,33 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
 var langs = {
 
 "suz": { name:"Sunuwar (Kiranti-Kõits, Mukhia)", local:"𑯆𑯑𑯃̃𑯌 𑯎𑯄𑯂𑯒𑯂", localtrans:"/koīt͡ʃ brese/", silcode:"suz", 
-source:"3673556864e9fc547d3c22fabf0b0bda88d5a5f3",
+source:"3673556864e9fc547d3c22fabf0b0bda88d5a5f3", 
 region:"sasia", countries:"Nepal, Sikkim", script:"sunu", speakers:"38200", 
-letter:"𑯀𑯁𑯂𑯃𑯄𑯅𑯆𑯇𑯈𑯉𑯊𑯋𑯌𑯍𑯎𑯏𑯐𑯑𑯒𑯓𑯔𑯕𑯖𑯗𑯘𑯙𑯚𑯛𑯜𑯝𑯞𑯟𑯠", mark:"̭̱̀́̃̍̐", number:"𑯰𑯱𑯲𑯳𑯴𑯵𑯶𑯷𑯸𑯹", punctuation:"‘’“”…", symbol:"𑯡",
+letter:"𑯀𑯁𑯂𑯃𑯄𑯅𑯆𑯇𑯈𑯉𑯊𑯋𑯌𑯍𑯎𑯏𑯐𑯑𑯒𑯓𑯔𑯕𑯖𑯗𑯘𑯙𑯚𑯛𑯜𑯝𑯞𑯟𑯠", letteraux:"", mark:"̭̱̀́̃̍̐", markaux:"", number:"𑯰𑯱𑯲𑯳𑯴𑯵𑯶𑯷𑯸𑯹", numberaux:"", punctuation:"‘’“”…", punctuationaux:"", symbol:"𑯡", symbolaux:"", other:"", otheraux:"", aux:"", deprecated:"", 
 orth:`Sunuwar. <a href="../scripts/sunu/suz.html" target="_blank">Details.</a>`,
 also:
 ["suz-deva | deva | Primary usage."],
-type:"alphabet", cs:"no", gpos:"yes", gsub:"no", cursive:"no", wordsep:"space", baseline:"romn", wrap:"word", hyphenation:"?", direction:"ltr",  justification:"?", 
-vowels:"let:6",  medials:"sj:1", 
-linked:"sunu/suz", fonts:"/pickers/sunu-suz/index.html", picker:"..sunu-suz", font:"Uni11BC0Sunuwar", 
+linked:"sunu/suz", picker:"..sunu-suz", font:"Uni11BC0Sunuwar", 
+},
+
+
+"sunu": {name:"Sunuwar", region:"sasia", type:"abug alpha", 
+blocks:1, chars:44, bletter:33, bmark:0, bnumber:10, bpunctuation:1, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
+medials:"cm", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:Y, killer:""},
+wordsep:"space",
+linebreak:"word", hyphen:"", justification:U, spacing:U, gc:Y, baseline:"romn", 
 },
 
 }

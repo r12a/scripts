@@ -1,5 +1,11 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
 var langs = {
 
 "lo": { name:"Lao (Laotian)", local:"ພາສາລາວ‎", localtrans:"(Phasa Lao)", silcode:"lao", 
@@ -11,6 +17,20 @@ orth:`Lao. &nbsp; <a href="../scripts/lao" target="_blank">Details</a>.`,
 type:"alphabet", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"no/zwsp", baseline:"romn", wrap:"word", hyphenation:"no",  direction:"ltr",  justification:"ig", 
 vowels:"let:8 cm:9 vs:9 vsl:12 base:ອ/ɔː venc:5 pre:5 other:4 comp:29",  clusters:"stk", 
 linked:"laoo/lo", fonts:"/pickers/lao/", picker:"lao", 
+},
+
+
+"laoo": { name:"Lao", region:"seasia",
+blocks:1, chars:83, letter:56, mark:17, number:10, punctuation:0, symbol:0, other:0, 
+direction: "ltr", rtlnumbers:N,
+type:"alpha", tones:Y,
+voweltype: { inherent:0, letters:Y, marks:Y, hidden:N, visorder:Y, vocalics:N, ivowels:N, vbase:"O", vcomposite:Y, prebase:Y, circum:N },
+case:N, cursive:N, mcchars:Y, conjuncts:N, ligatures:Y,
+medials:"", finals:"",
+clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "no",
+linebreak:"word", hyphen:"no", justification:U, spacing:U, gc:Y,
+baseline: "romn",
 },
 
 

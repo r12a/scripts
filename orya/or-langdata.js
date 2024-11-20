@@ -1,26 +1,31 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
 var langs = {
 
-"ory": { name:"Odia (Oriya)", local:"ଓଡ଼ିଆ‎ (Oḍiā)", 
+"ory": { name:"Odia (Oriya)", local:"ଓଡ଼ିଆ‎", localtrans:"(oḍiā)", silcode:"", 
 source:"7dcf17c28affb360d4d46f7a0540a5e4644ab9e3,cldr_or", 
 region:"sasia", countries:"India", script:"orya", speakers:"33000000", 
-letter:"ଅଆଇଈଉଊଏଐଓଔକଖଗଘଙଚଛଜଝଞଟଠଡଢଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହଽୟୱ", letteraux:"ଋଌଡ଼ଢ଼ୠୡ", mark:"ଁଂଃ଼ାିୀୁୂୃେୈୋୌ୍", markaux:"ୄୖୗୢୣ", number:"୦୧୨୩୪୫୬୭୮୯", punctuation:"।॥‘’“”…", symbol:"୰", other:"\u200C\u200D", 
+letter:"ଅଆଇଈଉଊଏଐଓଔକଖଗଘଙଚଛଜଝଞଟଠଡଢଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହଽୟୱ", letteraux:"ଋଌଡ଼ଢ଼ୠୡ", mark:"ଁଂଃ଼ାିୀୁୂୃେୈୋୌ୍", markaux:"ୄୖୗୢୣ", number:"୦୧୨୩୪୫୬୭୮୯", numberaux:"", punctuation:"।॥‘’“”…", punctuationaux:"", symbol:"୰", symbolaux:"", other:"\u200C\u200D", otheraux:"", aux:"%-[]§ʼ͏‑–—†‡′″", deprecated:"", 
+
 related:`Macrolanguage is Oriya [or].`,
-type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"space", baseline:"romn", wrap:"word", hyphenation:"?",  direction:"ltr",  justification:"sp", 
-vowels:"inh:1 cm:11 vs:9 ind:10 pre:1 circ:3 voc:4",  clusters:"vir stk cnj lig rax",  finals:"cm:2", 
-linked:"orya/or", fonts:"/pickers/orya/", 
+linked:"orya/or", picker:"orya", font:"", 
 },
 
-"ory": { name:"Odia (Oriya)", local:"ଓଡ଼ିଆ‎", localtrans:"(oḍiā)", 
-source:"7dcf17c28affb360d4d46f7a0540a5e4644ab9e3,cldr_or", 
-region:"sasia", countries:"India", script:"orya", speakers:"33000000", 
-letter:"ଅଆଇଈଉଊଏଐଓଔକଖଗଘଙଚଛଜଝଞଟଠଡଢଣତଥଦଧନପଫବଭମଯରଲଳଵଶଷସହଽୟୱ", letteraux:"ଋଌଡ଼ଢ଼ୠୡ", mark:"ଁଂଃ଼ାିୀୁୂୃେୈୋୌ୍", markaux:"ୄୖୗୢୣ", number:"୦୧୨୩୪୫୬୭୮୯", punctuation:"।॥‘’“”…", symbol:"୰", other:"\u200C\u200D",
-aux:"%-[]§ʼ͏‑–—†‡′″",
-related:`Macrolanguage is Oriya [or].`,
-type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"space", baseline:"romn", wrap:"word", hyphenation:"?",  direction:"ltr",  justification:"sp", 
-vowels:"inh:1 cm:11 vs:9 ind:10 pre:1 circ:3 voc:4",  clusters:"vir stk cnj lig rax",  finals:"cm:2", 
-linked:"orya/or", fonts:"/pickers/orya/", picker:"orya", 
+
+"orya": {name:"Odia/Oriya", region:"sasia", type:"abug", 
+blocks:1, chars:91, bletter:53, bmark:21, bnumber:16, bpunctuation:0, bsymbol:1, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"", vcomposite:N, prebase:Y, circum:Y, },
+case:N, cursive:N, mcchars:N, conjuncts:Y, ligs:Y, 
+medials:"", finals:"cm",
+clusters:{ ligation:Y, stacks:Y, touch:N, conjoined:Y, subjoinedcp:N, visviram:Y, diacritic:N, killer:"v"},
+wordsep:"space",
+linebreak:"word", hyphen:"", justification:"sp", spacing:U, gc:N, baseline:"romn", 
 },
 
 

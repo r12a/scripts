@@ -1,18 +1,33 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
 var langs = {
 
 "ml": { name:"Malayalam", local:"മലയാളം‎", localtrans:"(malayāḷam)", silcode:"mal", 
 source:"cldr_ml,udhr_mal,d347047791774df1311d53dee98495c224fe0166", 
 region:"sasia", countries:"India, Singapore", script:"mlym", speakers:"38000000", 
-letter:"അആഇഈഉഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരറലളഴവശഷസഹൔൕൖൺൻർൽൾൿ", letteraux:"ഌൠൡ", mark:"ംഃാിീുൂൃെേൈൊോ്ൗ", number:"൦൧൨൩൪൫൬൭൮൯", punctuation:"‘’“”", symbol:"", symbolaux:"൹", other:"\u200C\u200D",
-aux:"%[]§«»ʼ͏ഀഁ഻഼ഽ​‑–—†‡…‰′″‹›⁠",
+letter:"അആഇഈഉഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരറലളഴവശഷസഹൔൕൖൺൻർൽൾൿ", letteraux:"ഌൠൡ", mark:"ംഃാിീുൂൃെേൈൊോ്ൗ", markaux:"", number:"൦൧൨൩൪൫൬൭൮൯", numberaux:"", punctuation:"‘’“”", punctuationaux:"", symbol:"", symbolaux:"൹", other:"\u{200C}\u{200D}", otheraux:"", aux:"%[]§«»ʼ͏ഀഁ഻഼ഽ​‑–—†‡…‰′″‹›⁠", deprecated:"", 
 orth:`Malayalam. &nbsp; Primary usage. <a href="../scripts/malayalam" target="_blank">Details</a>.`,
 also:
 ["ml-arab | arab | Naskh style."],
-type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", direction:"ltr", wordsep:"space", baseline:"romn", wrap:"word", hyphenation:"yes", hyphen:"∅",  justification:"sp",
-vowels:"inh:1 ind:12 cm:12 vs:12 pre:3 circ:3 voc:4 comp:(3)", clusters:"vvir inv stk cnj rax let", finals:"cm:2 let:6", 
-linked:"mlym/ml", fonts:"/pickers/mlym/", picker:"mlym", font:"'Noto Serif Malayalam'",
+linked:"mlym/ml", picker:"mlym", font:"'Noto Serif Malayalam'", 
+},
+
+
+"mlym": {name:"Malayalam", region:"sasia", type:"abug", 
+blocks:1, chars:118, bletter:67, bmark:23, bnumber:26, bpunctuation:0, bsymbol:2, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"", vcomposite:Y, prebase:Y, circum:Y, },
+case:N, cursive:N, mcchars:N, conjuncts:N, ligs:Y, 
+medials:"", finals:"cm",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"v"},
+wordsep:"space",
+linebreak:"word", hyphen:"", justification:"sp", spacing:U, gc:N, baseline:"romn", 
 },
 
 }

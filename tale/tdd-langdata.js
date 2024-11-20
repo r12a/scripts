@@ -1,16 +1,30 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
 var langs = {
 
-"tdd": { name:"Tai Nüa (Nɯa, Dehong Dai, Chinese Shan, Tai Mau, Tai Kong)", 
+"tdd": { name:"Tai Nüa (Nɯa, Dehong Dai, Chinese Shan, Tai Mau, Tai Kong)", local:"", localtrans:"", silcode:"", 
 source:"7bbb60b1ae185293cf14c8d8088e14351477c26b", 
 region:"seasia", countries:"China, Myanmar, Vietnam, Laos", script:"tale", speakers:"720000", 
-letter:"ᥐᥑᥒᥓᥔᥕᥖᥗᥘᥙᥚᥛᥜᥝᥞᥟᥠᥡᥢᥣᥤᥥᥦᥧᥨᥩᥪᥫᥬᥭᥰᥱᥲᥳᥴ", mark:"̀́̇̈̌", number:"၀၁၂၃၄၅၆၇၈၉", punctuation:"、。〈〉《》！（），．：；？", symbol:"", other:"", 
+letter:"ᥐᥑᥒᥓᥔᥕᥖᥗᥘᥙᥚᥛᥜᥝᥞᥟᥠᥡᥢᥣᥤᥥᥦᥧᥨᥩᥪᥫᥬᥭᥰᥱᥲᥳᥴ", letteraux:"", mark:"̀́̇̈̌", markaux:"", number:"၀၁၂၃၄၅၆၇၈၉", numberaux:"", punctuation:"、。〈〉《》！（），．：；？", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"", deprecated:"", 
 orth:`Tai Le. &nbsp; <a href="../scripts/taile/" target="_blank">Details</a>.`,
-type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", direction:"ltr", wordsep:"no/zwsp", baseline:"romn", wrap:"?", hyphenation:"?",  justification:"?",
-vowels:"inh:1 let:11", 
-linked:"tale/tdd", fonts:"/pickers/tale/", picker:"tale"
+linked:"tale/tdd", picker:"tale", font:"", 
 },
 
+"tale": {name:"Tai Le", region:"seasia", type:"abug", 
+blocks:1, chars:35, bletter:35, bmark:0, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"no",
+linebreak:"", hyphen:"", justification:U, spacing:U, gc:Y, baseline:"romn", 
+},
 
 }
