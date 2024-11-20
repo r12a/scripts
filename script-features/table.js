@@ -7,7 +7,7 @@
 
 // one lang tag per row
 //var items = ['adlm', 'am', 'arb', 'hy', 'aii', 'ban-bali', 'bm', 'bax-bamu', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'cmn', 'crk', 'dv', 'ff', 'ff-arab', 'fuf-adlm', 'el', 'gu', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'ka', 'khb', 'khk', 'khk-mong', 'km', 'ko', 'ks', 'ks-deva', 'kyu', 'lep', 'lif', 'lis', 'lo', 'ml', 'mid', 'mro', 'new', 'nod', 'nqo', 'ory', 'osa', 'pa', 'pes', 'rhg', 'ru', 'sat', 'shn', 'si', 'su-sund', 'suz', 'syc', 'kkh', 'ta', 'tdd', 'te', 'th', 'tru', 'ug', 'uk', 'unr', 'ur', 'vai', 'wo', 'zgh', 'blt', 'bo', ]
-var items = ['adlm', 'ahom', 'arab', 'araba', 'arabu', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'beng', 'bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hang', 'hani', 'hebr', 'hluw', 'krai', 'laoo', 'tayo', 'thai', 'tols' ]
+var items = ['adlm', 'ahom', 'arab', 'araba', 'arabu', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'beng', 'bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hang', 'hani', 'hebr', 'hira', 'hluw', 'java', 'kali', 'kana', 'khmr', 'krai', 'lana', 'laoo', 'latn', 'lepc', 'limb', 'lisu', 'mand', 'mlym', 'mong', 'mroo', 'mymr', 'nagm', 'newa', 'nkoo', 'olck', 'orya', 'osge', 'rohg', 'sinh', 'sund', 'sunu', 'syrc', 'syrn', 'syrj', 'tale', 'talu', 'taml', 'tayo', 'tavt', 'telu', 'tfng', 'thaa', 'thai', 'tibt', 'tols', 'vaii' ]
 
 
 // these variables indicate which tabs are open or closed
@@ -80,36 +80,38 @@ var by = function (path, reverse, primer, then) {
 		vletter:"Vowel<br>letters",
 		vother:"Other<br>chars",
 		vhidden:"Hides<br>vowels",
-		matres:"Matres lectionis",
+		//matres:"Matres lectionis",
 		vsign:"Visual<br>order",
         
-		ivowels:"Standalone<br>letters",
-		vbase:"Standalone<br>carrier",
+		ivowels:"Ind.<br>vowels",
+		vbase:"Vowel<br>carrier",
 		//vmark:"Vowel marks",
         
 		pbletter:"Prebase<br>letters",
-		pbmark:"Prebase<br>glyphs",
+		pbmark:"Prebase<br>marks",
 		vcircum:"Circum-<br>graphs",
-		vcomposite:"Multipart vowels",
+		vcomposite:"Composite<br>vowels",
         
 		vvocalics:"Vocalics",
 		cmedials:"Medials",
 		cfinals:"Finals",
         
-        gpos:"GPos",
-        gsub:"Gsub",
-		//conjunct:"Conjuncts",
+        //gpos:"GPos",
+        //gsub:"Gsub",
+		conjuncts:"Conj-<br>uncts",
 		cstack:"Stacked",
 		cconj:"Conjoined",
 		clig:"Ligated",
         ctouch:"Touching",
-        cvirama:"Visible virama",
-        cmark:"Diacritics",
+        cvirama:"Visible<br>killer",
+        cmark:"Diacritic",
 		killer:"Killer type",
         
+		ligs:"Other<br>ligs.",
+        
 		//gpos:"Contextual placement", 
-		//mcchars:"Multiple combining marks",
-		//matras:"Vowel signs",
+		mcchars:"Mult.<br>marks",
+		matras:"Independent vowels",
 		//gsub:"Contextual shaping", 
         
 		case:"Case", 
@@ -122,6 +124,7 @@ var by = function (path, reverse, primer, then) {
 		wordsep:"Word separator",
 		wrap:"Linebreak",
 		hyphenation:"Hyphen<br>ation",
+		gc:"Graph.<br>clust.",
 		justification:"Justification",
 		spacing:"Text space",
 
@@ -208,23 +211,19 @@ function resort (column, reverse) {
         table += makeTableHead ('vletter', "Spacing letters used to spell vowels.", REVERSE)
         
         //table += makeTableHead ('vother', "Other letters used to spell vowels.", REVERSE)
-        
-        //table += makeTableHead ('vcomposite', "Vowel sounds that are represented by more than one character.", REVERSE)
+
+        table += makeTableHead ('ivowels', "Independent vowels used to spell standalone vowels.", REVERSE)
        
         table += makeTableHead ('vbase', "Character used as a carrier for standalone vowels.", REVERSE)
-        
+       
         table += makeTableHead ('vhidden', "Diacritics used to spell vowels that are usually hidden.", REVERSE)
-        
-        //table += makeTableHead ('matres', "Matres lectionis used to spell vowels.", REVERSE)
-
+ 
         table += makeTableHead ('vsign', "Vowel signs used to spell vowels.", REVERSE)
         
-        table += makeTableHead ('vvocalics', "Vocalic letters.", REVERSE)
+        //table += makeTableHead ('matres', "Matres lectionis used to spell vowels.", REVERSE)
          
         //table += makeTableHead ('vsyllable', "Syllabic characters used to spell vowels.", REVERSE)
 
-
-        //table += makeTableHead ('ivowels', "Independent vowels used to spell standalone vowels.", REVERSE)
 
 
         //table += makeTableHead ('pbletter', "Standalone letters that appear before the base consonant. (Indicates visual ordering.)", REVERSE)
@@ -232,6 +231,10 @@ function resort (column, reverse) {
         table += makeTableHead ('pbmark', "Combining marks that appear before the base consonant when rendered.", REVERSE)
         
         table += makeTableHead ('vcircum', "(Single) combining marks that place glyphs on more than one side of the base character.", REVERSE)
+        
+        table += makeTableHead ('vcomposite', "Vowel sounds that are represented by more than one character.", REVERSE)
+        
+        table += makeTableHead ('vvocalics', "Vocalic letters.", REVERSE)
         }
 
 //	if (window.consonants) {
@@ -239,17 +242,19 @@ function resort (column, reverse) {
 
         table += makeTableHead ('cursive', "Letters are joined (cursive).", REVERSE)
 
-        table += makeTableHead ('gsub', "Context-sensitive shaping.", REVERSE)
 
-        table += makeTableHead ('gpos', "Context-sensitive positioning.", REVERSE)
+
+        table += makeTableHead ('mcchars', "Context-sensitive positioning.", REVERSE) 
+        
+        table += makeTableHead ('conjuncts', "Context-sensitive shaping to indicate consonant clusters.", REVERSE)
+
 //       }
 
+	if (window.cclusters) {
         table += makeTableHead ('cmedials', "Dedicated combining marks used for syllable-initial clusters.", REVERSE)
 
         table += makeTableHead ('cfinals', "Dedicated combining marks used for syllable- or word-final consonants.", REVERSE)
 
-
-	if (window.cclusters) {
         table += makeTableHead ('cstack', "Consonant clusters indicated by stacking.", REVERSE)
 
         table += makeTableHead ('cconj', "Consonant clusters indicated by conjoined characters.", REVERSE)
@@ -266,6 +271,7 @@ function resort (column, reverse) {
         table += makeTableHead ('killer', "Type of vowel killer used for conjuncts.", REVERSE)
 		}
 
+        table += makeTableHead ('ligs', "Other ligatures, beside conjuncts.", '')
 
 //    if (window.direction) {
 //        }
@@ -281,6 +287,8 @@ function resort (column, reverse) {
         table += makeTableHead ('wrap', "Basic approach to wrapping text at line ends.", REVERSE)
 
         table += makeTableHead ('hyphenation', "Hyphenation.", REVERSE)
+
+        table += makeTableHead ('gc', "Grapheme clusters sufficient?", REVERSE)
 
         table += makeTableHead ('justification', "Justification methods.", REVERSE)
 
@@ -317,10 +325,10 @@ function resort (column, reverse) {
 			
 			if (scriptData[i].linked) linked = " \u003Ca href='../"+scriptData[i].linked+".html' target='_blank'>\u003Cimg src='link.png' alt='details'/>\u003C/a>"
 			
-			table += '<td title="Language" style="text-align:right;white-space:nowrap;">'+scriptData[i].name.replace(/ \([^\)]+\)/,'')+'</td>'
+			table += '<td title="Script name" style="text-align:right;white-space:nowrap;">'+scriptData[i].name.replace(/ \([^\)]+\)/,'')+'</td>'
 			
 			//table += '<td title="Script" style="text-align:right; padding-inline:.5rem;">'+scriptData[i].script+'</td>'
-			table += '<td title="Script" style="text-align:right; padding-inline:.5rem;">'+scriptData[i].script+'</td>'
+			table += '<td id="'+scriptData[i].script+'" title="Script ISO code" style="text-align:right; padding-inline:.5rem;">'+scriptData[i].script+'</td>'
 			
 			table += '<td title="Link to the orthography notes.">'+linked+'</td>'
 
@@ -333,7 +341,7 @@ function resort (column, reverse) {
 
             table += '<td title="Dedicated blocks" style="text-align:center;">'+scriptData[i].aux+'</td>'
 
-            table += '<td title="Total characters" style="text-align:right;padding: 0 .5em;" class="y">'+scriptData[i].chars+'</td>'
+            table += '<td title="Total characters in dedicated blocks" style="text-align:right;padding: 0 .5em;" class="y">'+scriptData[i].chars+'</td>'
 
 
 			if (window.csubset) {
@@ -370,7 +378,7 @@ function resort (column, reverse) {
 
                 //table += drawCell('vother', scriptData[i], 'otherV')
 
-                //table += drawCell('vcomposite', scriptData[i], 'compositeV')
+                table += drawCell('ivowels', scriptData[i], 'standalone')
 
                 table += drawCell('vbase', scriptData[i], 'standalone')
 
@@ -380,18 +388,18 @@ function resort (column, reverse) {
 
                 table += drawCell('vsign', scriptData[i], 'combiningV')
 
-                table += drawCell('vvocalics', scriptData[i], 'vocalics', 'yy')
-
                 //table += drawCell('vsyllable', scriptData[i], 'vowels')
 
-
-                //table += drawCell('ivowels', scriptData[i], 'standalone')
 
                 //table += drawCell('pbletter', scriptData[i], 'prebase')
 
                 table += drawCell('pbmark', scriptData[i], 'prebase')
 
                 table += drawCell('vcircum', scriptData[i], 'circumgraphs')
+
+                table += drawCell('vcomposite', scriptData[i], 'compositeV')
+
+                table += drawCell('vvocalics', scriptData[i], 'vocalics', 'yy')
                 }
 
                 table += drawCell('case', scriptData[i], 'transforms', 'y')
@@ -399,17 +407,19 @@ function resort (column, reverse) {
                 table += drawCell('cursive', scriptData[i], 'cursive', 'y')
 
 //			if (window.consonants) {
-                table += drawCell('gsub', scriptData[i], 'gsub', 'yy')
 
-                table += drawCell('gpos', scriptData[i], 'gsub', 'yy')
+                table += drawCell('mcchars', scriptData[i], 'mcchars', 'y')
+
+                table += drawCell('conjuncts', scriptData[i], 'conjuncts', 'y')
+
 //                }
 
 
-            table += drawCell('cmedials', scriptData[i], 'onsets')
-
-            table += drawCell('cfinals', scriptData[i], 'finals')
-
 			if (window.cclusters) {
+                table += drawCell('cmedials', scriptData[i], 'onsets')
+
+                table += drawCell('cfinals', scriptData[i], 'finals')
+
                 table += drawCell('cstack', scriptData[i], 'clusters')
 
                 table += drawCell('cconj', scriptData[i], 'clusters')
@@ -427,9 +437,11 @@ function resort (column, reverse) {
                 table += drawCell('killer', scriptData[i], 'clusters')
 				}
 
+            table += drawCell('ligs', scriptData[i], 'ligs', 'y')
+
 			//table += '<td title="Contextual placement"'
-			//if (scriptData[i].gpos!=='no') table += 'class="y"'
-			//table += '>'+scriptData[i].gpos+'</td>'
+			//if (scriptData[i].mcchars!=='no') table += 'class="y"'
+			//table += '>'+scriptData[i].mcchars+'</td>'
 			
 			//table += '<td title="'+tablecolumns.mcchars+'"'
 			//if (scriptData[i].mcchars!=='no') table += 'class="y"'
@@ -460,6 +472,8 @@ function resort (column, reverse) {
                 table += drawCellWithDefault('wrap', scriptData[i], 'linebreak','yy', 'word')
 
                 table += drawCellWithDefault('hyphenation', scriptData[i], 'hyphenation','yy', 'no')
+
+                table += drawCellWithDefault('gc', scriptData[i], 'gc','yy', '✓')
 
                 table += drawCellWithDefault('justification', scriptData[i], 'justification','yy', 'sp')
 
@@ -499,7 +513,7 @@ function drawCell (name, data, frag, colour) {
     if (typeof colour === 'undefined') colour = 'yy'
     
     out += `<td title="${ tablecolumns[name] }§${ data[name] }" class="vsubset`
-    if (data[name] !== '-') out += ` ${ colour }`
+    if (data[name] !== '-' && data[name] !== '?') out += ` ${ colour }`
     if (data[name] === '-') out += `">${ data[name] }</td>`
     else out += `"><a href="../${ data.linked }.html#${ frag }" target="_blank">${ data[name] }</a></td>`
    
@@ -657,6 +671,14 @@ function showContext (evt) {
         if (parts[1].includes('-')) out += ` A regular hyphen is used at the end of the first line.`
         }
      
+    if (parts[0] === 'Graph. clus') {
+        if (parts[1].includes('✓')) out += ` Text segmentation conforms to Unicode grapheme clusters.`
+        else if (parts[1].includes('?')) out += ` Research needed.`
+        else out += ` Grapheme clusters are insufficient to segment this script. It is likely that orthographic syllables are appropriate.`
+        
+        out += `<br>Indicates whether or not grapheme clusters alone are sufficient to segment the text for line breaking, justification, and text spacing.`
+        }
+     
     if (parts[0] === 'Linebreak') {
         if (parts[1].includes('word/char')) out += ` Text wraps at word boundaries OR immediately after the last character that fits on a line, regardless of word or syllable boundaries.`
         else if (parts[1].includes('word')) out += ` Text wraps at word boundaries.`
@@ -785,6 +807,7 @@ function showContext (evt) {
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used.`
         out += '<br>These characters are other letters or marks that are used to write vowels,  that are not exclusively dedicated to writing vowels. Most are repurposed consonant letters.'
         }
+    */
     
     if (parts[0] === tablecolumns.ivowels) {
         types = parts[1].split(' ')
@@ -793,7 +816,6 @@ function showContext (evt) {
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used.`
         out += '<br>Letters used to represent <em>standalone vowel sounds</em>. (Cf. the column <samp>Dedicated letters</samp>, which lists free standing letters that represent a vowel following a consonant.)'
         }
-    */
     
     if (parts[0] === tablecolumns.vbase) {
         types = parts[1].split(' ')
@@ -828,7 +850,7 @@ function showContext (evt) {
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> marks are used.`
         out += `<br>Circumgraphs are single combining marks that place separate glyphs on more than one side of the base character.`
         }
-    /*
+
     if (parts[0] === tablecolumns.vcomposite) {
         types = parts[1].split(' ')
         if (parts[1].trim() === '-') out += ` —`
@@ -836,7 +858,7 @@ function showContext (evt) {
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> multipart vowels are listed in the description.`
         out += `<br>A multipart vowel is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel signs, repurposed consonants, and diacritics available. These figures may not include diphthongs that are created using glides or semivowels. (Numbers after a + sign indicate combinations that only occur in decomposed text.)`
         }
-    */
+
     if (parts[0] === tablecolumns.vvocalics) {
         types = parts[1].split(' ')
         if (parts[1].trim() === '-') out += ` —`
@@ -968,17 +990,17 @@ function getCharacterStats () {
 				}
 
             // get information about character counts
-            scriptData[i].letters = charuseData.letter?charuseData.letter:0
+            scriptData[i].letters = charuseData.bletter?charuseData.bletter:0
 
-            scriptData[i].digits = charuseData.number?charuseData.number:0
+            scriptData[i].digits = charuseData.bnumber?charuseData.bnumber:0
             
-            scriptData[i].mark = charuseData.mark?charuseData.mark:0
+            scriptData[i].mark = charuseData.bmark?charuseData.bmark:0
             
-            scriptData[i].punctuation = charuseData.punctuation?charuseData.punctuation:0
+            scriptData[i].punctuation = charuseData.bpunctuation?charuseData.bpunctuation:0
             
-            scriptData[i].symbols = charuseData.symbol?charuseData.symbol:0
+            scriptData[i].symbols = charuseData.bsymbol?charuseData.bsymbol:0
             
-            scriptData[i].other = charuseData.other?charuseData.other:0
+            scriptData[i].other = charuseData.bother?charuseData.bother:0
             
             scriptData[i].chars = charuseData.chars?charuseData.chars:0
 
@@ -988,6 +1010,8 @@ function getCharacterStats () {
 
             //  hyphenation & hyphen values
             scriptData[i].hyphenation = charuseData.hyphen?charuseData.hyphen:''
+
+            scriptData[i].gc = charuseData.gc?'✓':'no'
 
             
             
@@ -1036,12 +1060,16 @@ function getCharacterStats () {
             scriptData[i].vsign = charuseData.voweltype.visorder?'✓':'-'
 
             scriptData[i].vhidden = charuseData.voweltype.hidden?'✓':'-'
-            
+
+            scriptData[i].ivowels = charuseData.voweltype.ivowels?'✓':'-'
+
             if (charuseData.voweltype.vbase) scriptData[i].vbase = charuseData.voweltype.vbase
 
             scriptData[i].pbmark = charuseData.voweltype.prebase?'✓':'-'
 
             scriptData[i].vcircum = charuseData.voweltype.circum?'✓':'-'
+
+            scriptData[i].vcomposite = charuseData.voweltype.vcomposite?'✓':'-'
 
 
 
@@ -1118,6 +1146,11 @@ function getCharacterStats () {
                     
 				}
 
+            scriptData[i].conjuncts = charuseData.conjuncts?'✓':'-'
+            scriptData[i].mcchars = charuseData.mcchars?'✓':'-'
+            
+            if (scriptData[i].ligs === '?') charuseData.ligs = '?'
+            else scriptData[i].ligs = charuseData.ligs?'✓':'-'
             
             //clusters:"vir inv stk cnj lig tcg rax mrk let unm"
 			scriptData[i].cstack = '-'
@@ -1132,8 +1165,10 @@ function getCharacterStats () {
                 scriptData[i].killer = ''
                 scriptData[i].killer = charuseData.clusters.killer?charuseData.clusters.killer:'-'
                 scriptData[i].cstack = charuseData.clusters.stacks?'✓':'-'
-                scriptData[i].cconj = charuseData.clusters.conjuncts?'✓':'-'
-                scriptData[i].clig = charuseData.clusters.conjoined?'✓':'-'
+                scriptData[i].clig = charuseData.clusters.ligation?'✓':'-'
+                scriptData[i].cconj = charuseData.clusters.conjoined?'✓':'-'
+                //scriptData[i].conjuncts = charuseData.clusters.conjuncts?'✓':'-'
+                //scriptData[i].clig = charuseData.clusters.conjoined?'✓':'-'
                 scriptData[i].ctouch = charuseData.clusters.touch?'✓':'-'
                 scriptData[i].cvirama = charuseData.clusters.visviram?'✓':'-'
                 scriptData[i].cmark = charuseData.clusters.diacritic?'✓':'-'
