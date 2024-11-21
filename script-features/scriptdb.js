@@ -401,7 +401,7 @@ linebreak:"char", hyphen:"", justification:"ic", spacing:U, gc:Y, baseline:"ideo
 "hluw": { name:"Anatolian hieroglyphs", local:"", localtrans:"", 
 region:"wasia", countries:"Turkey", script:"hluw", speakers:U, 
 blocks:1, chars:583, bletter:583, bmark:0, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
-direction: "bs", rtlnumbers:N,
+direction: "rtl ltr bous", rtlnumbers:N,
 type:"syll", 
 voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N },
 case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
