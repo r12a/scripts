@@ -1293,7 +1293,15 @@ function makeSidePanel () {
         out += '<p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>'
         out += '<p class="ctlink"><a href="../featurelist/#key">See the key</a></p>'
         }
-        
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- --> 
+<!-- NEW STUFF -->
+
+
         
     else {  // this is a script-based summary
         out = '<table>'
@@ -1364,8 +1372,10 @@ function makeSidePanel () {
 
 
 
+        out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
 
-        out += '<tr><th colspan="2">Character counts exclude ASCII.</td></tr>'
+
+        out += '<tr><th colspan="2">Character counts above are for this<br>orthography but exclude ASCII.</td></tr>'
 
         out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
 
@@ -1373,8 +1383,16 @@ function makeSidePanel () {
         //out += '<tr><th>Script code</th><td>'+langs[id].script+'</td></tr>'
 
         out += '<tr><th>Text direction</th><td'
-        if (langs[sid].direction !== "ltr") out += ' class="tableHighlight"'
+        if (langs[sid].direction !== "ltr") out += ' class="tableHighlight">'
+        out += `${ langs[sid].direction }`
+        if (langs[sid].rtlnumbers) out += ` \u2014 including <br> numbers`
+        out += `</td></tr>`
+
+
+        /*if (langs[sid].direction !== "ltr") out += ' class="tableHighlight">'
+        out += `${ langs[sid].direction }`
         out += `>${ langs[sid].direction }</td></tr>`
+        out += `</td></tr>`*/
 
 
         if (langs[sid].voweltype) {
@@ -1422,13 +1440,16 @@ function makeSidePanel () {
         out += langs[sid].cursive ? 'yes' : 'no'
         out += '</td></tr>'
 
-        out += '<tr><th>Multiple marks</th><td'
+        out += '<tr><th>Combining  marks</th><td'
         if (langs[sid].mcchars) out += ' class="tableHighlight"'
         out += '>'
-        out += langs[sid].mcchars ? 'yes' : 'no'
+        if (langs[sid].mcchars === true) out += 'yes'
+        else if (langs[sid].mcchars === 'm') out += 'multiple'
+        else out += 'no'
+        //out += langs[sid].mcchars ? 'yes' : 'no'
         out += '</td></tr>'
 
-        out += '<tr><th>Conjuncts</th><td'
+        out += '<tr><th>Clusters marked</th><td'
         if (langs[sid].conjuncts) out += ' class="tableHighlight"'
         out += '>'
         out += langs[sid].conjuncts ? 'yes' : 'no'
@@ -1461,7 +1482,7 @@ function makeSidePanel () {
             out += '</td></tr>'
             }
 
-        if (langs[sid].clusters) {
+        if (langs[sid].conjuncts !== false) {
             out += '<tr><th>Consonant<br>Clusters</th><td class="tableHighlight">'
             
             if (langs[sid].clusters.ligation) out += `ligated glyphs<br>`
@@ -1482,6 +1503,16 @@ function makeSidePanel () {
 
             out += '</td></tr>'
             }
+
+
+
+        out += '<tr><th>Other ligatures</th><td'
+        if (langs[sid].ligs) out += ' class="tableHighlight"'
+        out += '>'
+        out += langs[sid].ligs ? 'yes' : 'no'
+        out += '</td></tr>'
+
+
 
         if (langs[sid].wordsep !== '') {
             out += '<tr><th>Word separator</th><td'
@@ -1518,8 +1549,9 @@ function makeSidePanel () {
             }
 
 
+
         out += '<tr><th>G Clusters OK?</th><td'
-        if (langs[sid].gc) out += ' class="tableHighlight"'
+        if (langs[sid].gc === false) out += ' class="tableHighlight"'
         out += '>'
         out += langs[sid].gc ? 'yes' : 'no'
         out += '</td></tr>'
@@ -1637,7 +1669,7 @@ function makeSidePanelXX (id, otherlinks) {
 
         out += '<tr><th>Possible other</th><td>'+aux+'</td></tr>'
 
-        out += '<tr><th colspan="2">Character counts exclude ASCII.</td></tr>'
+        out += '<tr><th colspan="2">Character counts are for this<br>orthography but exclude ASCII.</td></tr>'
 
         out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
 
