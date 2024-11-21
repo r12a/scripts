@@ -106,7 +106,7 @@ autoExpandExamples.fuf = `
 𞤩𞤮𞤳𞥆𞤭|baobab|ɓokki|ɓokki
 𞤪𞤢𞤦𞥆𞤭𞤣𞤭|short|rabbidi
 𞤪𞤢𞤱𞤢𞥄𞤲𞥋𞤣𞤵|dog|r§a.§w§aː.§ⁿ§–§d§u|rawaandu
-𞤪𞤫𞤥𞤣𞤫|grow|remde|remde
+𞤪𞤫𞤥𞤣𞤫|grow|r§e§m§d§e|remde
 𞤪𞤫𞥅𞤣𞤵|belly|reːdu|reedu
 𞤪𞤮𞤳𞥆𞤵𞤣𞤫|give|rokkude|rokkude
 𞤫|with|e|e
@@ -119,7 +119,7 @@ autoExpandExamples.fuf = `
 𞤬𞤫𞤷𞥆𞤵𞤣𞤫|split|fett͡ʃude|feccude
 𞤬𞤭𞤲𞤳𞤢𞥄𞤪𞤭|gun|f§i§n.§k§aː.§r§i|finkaari
 𞤬𞤭𞤴𞤣𞤫|hit|fijde|fiyde
-𞤬𞤭𞤶𞤣𞤫|play|fid͡ʒde|fijde
+𞤬𞤭𞤶𞤣𞤫|play|f§i§d͡ʒ§d§e|fijde
 𞤬𞤮𞤣𞥆𞤫𞤪𞤫|seed|foddere|foddere
 𞤬𞤮𞤨𞥆𞤵𞤣𞤫|wipe|foppude|foppude
 𞤬𞤮𞤬|all|fof|fof
