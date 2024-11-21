@@ -22,6 +22,21 @@ baseline: "romn",
 
 
 
+"ahom": { name:"Ahom", region:"seasia",
+blocks:1, chars:65, bletter:34, bmark:15, bnumber:12, bpunctuation:3, bsymbol:1, bother:0, 
+direction: "ltr", rtlnumbers:N,
+type:"abug", 
+voweltype: { inherent:0, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"A 𑜒", vcomposite:N, prebase:Y, circum:N },
+case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:U,
+medials:"cm", finals:"",
+clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:Y, diacritic:N, killer:"" },
+wordsep: "space",
+linebreak:"word", hyphen:U, justification:U, spacing:U, gc:Y,
+baseline: "romn",
+},
+
+
+
 "arab": { name:"Arabic [arb]", region:"wasia",
 blocks:7, chars:449, bletter:276, bmark:118, bnumber:20, bpunctuation:13, bsymbol:11, bother:11, 
 direction: "rtl", rtlnumbers:N,
@@ -110,21 +125,6 @@ medials:"", finals:"",
 clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
 wordsep: "ws:·",
 linebreak:U, hyphen:U, justification:U, spacing:U, gc:Y,
-baseline: "romn",
-},
-
-
-
-"ahom": { name:"Ahom", region:"seasia",
-blocks:1, chars:65, bletter:34, bmark:15, bnumber:12, bpunctuation:3, bsymbol:1, bother:0, 
-direction: "ltr", rtlnumbers:N,
-type:"abug", 
-voweltype: { inherent:0, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:U, vbase:"A", vcomposite:N, prebase:Y, circum:N },
-case:N, cursive:N, mcchars:U, conjuncts:N, ligs:U,
-medials:"cm", finals:"",
-clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"v" },
-wordsep: "space",
-linebreak:"word", hyphen:U, justification:U, spacing:U, gc:Y,
 baseline: "romn",
 },
 
