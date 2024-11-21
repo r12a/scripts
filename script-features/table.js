@@ -98,7 +98,7 @@ var by = function (path, reverse, primer, then) {
         
         //gpos:"GPos",
         //gsub:"Gsub",
-		conjuncts:"Conj-<br>uncts",
+		conjuncts:"Clusters<br>marked",
 		cstack:"Stacked",
 		cconj:"Conjoined",
 		clig:"Ligated",
@@ -110,7 +110,7 @@ var by = function (path, reverse, primer, then) {
 		ligs:"Other<br>ligs.",
         
 		//gpos:"Contextual placement", 
-		mcchars:"Mult.<br>marks",
+		mcchars:"Comb.<br>marks",
 		matras:"Independent vowels",
 		//gsub:"Contextual shaping", 
         
@@ -206,9 +206,9 @@ function resort (column, reverse) {
     
         table += makeTableHead ('vinherent', "Inherent vowel.", REVERSE)
         
-        table += makeTableHead ('vdiac', "Small diacritics used to spell vowels.", REVERSE)
+        table += makeTableHead ('vdiac', "Combining marks used to spell vowels.", REVERSE)
        
-        table += makeTableHead ('vletter', "Spacing letters used to spell vowels.", REVERSE)
+        table += makeTableHead ('vletter', "Letters used to spell vowels.", REVERSE)
         
         //table += makeTableHead ('vother', "Other letters used to spell vowels.", REVERSE)
 
@@ -244,9 +244,9 @@ function resort (column, reverse) {
 
 
 
-        table += makeTableHead ('mcchars', "Context-sensitive positioning.", REVERSE) 
+        table += makeTableHead ('mcchars', "Combining marks.", REVERSE) 
         
-        table += makeTableHead ('conjuncts', "Context-sensitive shaping to indicate consonant clusters.", REVERSE)
+        table += makeTableHead ('conjuncts', "Consonant clusters are marked by shaping or diacritics.", REVERSE)
 
 //       }
 
@@ -591,7 +591,7 @@ function showContext (evt) {
     else metadata = evt.target.title
     
     var parts = metadata.split('§')
-	out = `<strong>${ parts[0] }</strong>`
+	out = `<strong>${ parts[0].replace(/<br>/,' ') }</strong>`
     if (parts[1] && parts[1] !== '-') out += ': &nbsp;&nbsp;'
     
     if (parts[0] === tablecolumns.letters) {
@@ -814,7 +814,7 @@ function showContext (evt) {
         if (parts[1].trim() === '-') out += ` —`
         else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> character is used.`
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used.`
-        out += '<br>Letters used to represent <em>standalone vowel sounds</em>. (Cf. the column <samp>Dedicated letters</samp>, which lists free standing letters that represent a vowel following a consonant.)'
+        out += '<br>Letters used to represent <em>standalone vowel sounds</em>. (Cf. the column <samp>Vowel letters</samp>, which lists free standing letters that represent a vowel following a consonant.)'
         }
     
     if (parts[0] === tablecolumns.vbase) {
@@ -1147,7 +1147,11 @@ function getCharacterStats () {
 				}
 
             scriptData[i].conjuncts = charuseData.conjuncts?'✓':'-'
-            scriptData[i].mcchars = charuseData.mcchars?'✓':'-'
+            //scriptData[i].mcchars = charuseData.mcchars?'✓':'-'
+            if (charuseData.mcchars === true) scriptData[i].mcchars = '✓'
+            else if (charuseData.mcchars === 'm') scriptData[i].mcchars = 'm'
+            else scriptData[i].mcchars = '-'
+            
             
             if (scriptData[i].ligs === '?') charuseData.ligs = '?'
             else scriptData[i].ligs = charuseData.ligs?'✓':'-'
