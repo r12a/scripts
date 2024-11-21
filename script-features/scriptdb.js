@@ -655,20 +655,6 @@ linebreak:"word", hyphen:"", justification:"sp", spacing:U, gc:Y, baseline:"romn
 },
 
 
-"tayo": { name:"Tai Yo", region:"seasia",
-blocks:1, chars:54, bletter:49, bmark:5, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
-direction: "tbrl", rtlnumbers:N,
-type:"abug", 
-voweltype: { inherent:1, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"QO", vcomposite:N, prebase:N, circum:N },
-case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
-medials:"cm", finals:"",
-clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
-wordsep: "space",
-linebreak:"word", hyphen:"no", justification:U, spacing:U, gc:Y,
-baseline: "cntr",
-},
-
-
 "orya": {name:"Odia/Oriya", region:"sasia", type:"abug", 
 blocks:1, chars:91, bletter:53, bmark:21, bnumber:16, bpunctuation:0, bsymbol:1, bother:0, 
 direction:"ltr", rtlnumbers:N,
@@ -825,6 +811,20 @@ linebreak:"word", hyphen:"", justification:U, spacing:U, gc:Y, baseline:"romn",
 },
 
 
+"tayo": { name:"Tai Yo", region:"seasia",
+blocks:1, chars:54, bletter:49, bmark:5, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
+direction: "tbrl", rtlnumbers:N,
+type:"abug", 
+voweltype: { inherent:1, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"QO 𞛜", vcomposite:N, prebase:N, circum:N },
+case:N, cursive:N, mcchars:"m", conjuncts:N, ligs:N, 
+medials:"cm", finals:"",
+clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
+wordsep: "space",
+linebreak:"word", hyphen:"no", justification:U, spacing:U, gc:Y,
+baseline: "cntr",
+},
+
+
 "telu": {name:"Telugu", region:"sasia", type:"abug", 
 blocks:1, chars:100, bletter:57, bmark:24, bnumber:17, bpunctuation:1, bsymbol:1, bother:0, 
 direction:"ltr", rtlnumbers:N,
@@ -877,17 +877,15 @@ linebreak:"syllable", hyphen:"", justification:"pad", spacing:U, gc:N, baseline:
 
 
 
-"tols": { name:"Tolong Siki", region:"sasia",
-blocks:1, chars:88, bletter:69, bmark:7, bnumber:10, bpunctuation:2, bsymbol:0, bother:0, 
-direction: "ltr", rtlnumbers:N,
-type:"alpha", 
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N },
-cs: N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
+"tols": {name:"Tolong Siki", region:"sasia", type:"alpha", 
+blocks:1, chars:54, bletter:44, bmark:0, bnumber:10, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:Y, conjuncts:N, ligs:N, 
 medials:"cm", finals:"cm",
-clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
-wordsep: "space",
-linebreak:"word", hyphen:U, justification:U, spacing:U, gc:Y,
-baseline: "romn",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"space",
+linebreak:"word", hyphen:U, justification:U, spacing:U, gc:Y, baseline:"romn", 
 },
 
 
