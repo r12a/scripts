@@ -1,19 +1,35 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
 var langs = {
 
 "skr": { name:"Saraiki (Siraiki, Seraiki)", local:"سرائیکی‎", localtrans:"sə.ˈɾɛːkiː", silcode:"skr", rtl:true, 
 source:"r12a, udhr_skr", 
 region:"sasia", countries:"Pakistan", script:"arab", speakers:"30000000", 
-letter:"آؤئابتثجحخدذرزسشصضطظعغفقلمنوٹٻپڄچڈڑژکگڳںھہیےۓݙݨ", letteraux:"ي", mark:"ٍَُِ٘", markaux:"ًٌّْٰٖٓٔٗ", number:"۰۱۲۳۴۵۶۷۸۹", punctuation:"،؛؟۔", symbol:"", other:"\u200C\u200D\u200E\u200F\u202A\u202B\u202C\u2066\u2067\u2068\u2069", 
+letter:"آؤئابتثجحخدذرزسشصضطظعغفقلمنوٹٻپڄچڈڑژکگڳںھہیےۓݙݨ", letteraux:"ي", mark:"ٍَُِ٘", markaux:"ًٌّْٰٖٓٔٗ", number:"۰۱۲۳۴۵۶۷۸۹", numberaux:"", punctuation:"،؛؟۔", punctuationaux:"", symbol:"", symbolaux:"", other:"\u{200C}\u{200D}\u{200E}\u{200F}\u{202A}\u{202B}\u{202C}\u{2066}\u{2067}\u{2068}\u{2069}", otheraux:"", aux:"", deprecated:"", 
 orth:`Arabic. &nbsp; Nastaliq ([Aran]) style. Primary usage.`,
 also:
-['skr-deva | deva | No longer in use.',
-'skr-guru | guru | No longer in use.',
-'skr-khoj | khoj | '],
-type:"abjad", cs:"no", gpos:"yes", gsub:"yes", cursive:"yes", wordsep:"space", baseline:"romn", wrap:"word", hyphenation:"?",  direction:"rtl",  justification:"?", 
-vowels:"ml:10 hcm:12", 
-linked:"arab/skr", fonts:"arab-skr", font:"Noto Nastaliq Urdu", 
+["skr-deva | deva | No longer in use.",
+"skr-guru | guru | No longer in use.",
+"skr-khoj | khoj | "],
+linked:"arab/skr", picker:"", font:"Noto Nastaliq Urdu", 
+},
+
+
+"arab": {name:"Arabic", region:"wasia", type:"abjad", 
+blocks:7, chars:449, bletter:276, bmark:118, bnumber:20, bpunctuation:0, bsymbol:11, bother:11, 
+direction:"rtl", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:Y, hidden:Y, visorder:N, vocalics:N, ivowels:N, vbase:"alef ا", vcomposite:Y, prebase:N, circum:N, },
+case:N, cursive:Y, mcchars:"m", conjuncts:Y, ligs:Y, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:Y, killer:""},
+wordsep:"space",
+linebreak:"word", hyphen:N, justification:"sp str sw", spacing:"base", gc:Y, baseline:"romn", 
 },
 
 }

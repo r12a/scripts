@@ -317,7 +317,7 @@ autoExpandExamples.ps = `
 بچ|border, edge|ba§t͡ʃ|bač||
 بچه|||||
 بډال|||||
-بړستن|blanket|b§ɺ˞ə§s§tə§n|bṛëstën||
+بړستن|blanket|b§ɺ˞ə§s§tə§n|bṛëstën|بْړسْتن|
 بښنه||␣|||
 بکاڼه|chinaberry|ba§k§ɑ§ɳ§a|bakâṇ||
 بګړۍ|||||
@@ -1277,7 +1277,7 @@ autoExpandExamples.ps = `
 ړومبی||␣|||
 ړوند|blind|ɽ§u§n§d|ṛund||
 ږغېدل||␣|||
-ږمنځ|comb|ʐ§m̩ə§ŋ§d͡z|ǵmënźl||Peshawar ɡəˈmənz
+ږمنځ|comb|ʐ§m̩ə§ŋ§d͡z|ǵmënźl|ږْمنْځ|Peshawar ɡəˈmənz
 ږيره|beard|ˈʐ§i§r§a|ǵíra||ˈɡira/ˈʒira
 ژامه||␣|||
 ژباړل||␣|||
