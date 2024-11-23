@@ -7,7 +7,7 @@
 
 // one lang tag per row
 //var items = ['adlm', 'am', 'arb', 'hy', 'aii', 'ban-bali', 'bm', 'bax-bamu', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'cmn', 'crk', 'dv', 'ff', 'ff-arab', 'fuf-adlm', 'el', 'gu', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'ka', 'khb', 'khk', 'khk-mong', 'km', 'ko', 'ks', 'ks-deva', 'kyu', 'lep', 'lif', 'lis', 'lo', 'ml', 'mid', 'mro', 'new', 'nod', 'nqo', 'ory', 'osa', 'pa', 'pes', 'rhg', 'ru', 'sat', 'shn', 'si', 'su-sund', 'suz', 'syc', 'kkh', 'ta', 'tdd', 'te', 'th', 'tru', 'ug', 'uk', 'unr', 'ur', 'vai', 'wo', 'zgh', 'blt', 'bo', ]
-var items = ['adlm', 'ahom', 'arab', 'araba', 'arabu', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'beng', 'bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hang', 'hani', 'hebr', 'hira', 'hluw', 'java', 'kali', 'kana', 'khmr', 'krai', 'lana', 'laoo', 'latn', 'lepc', 'limb', 'lisu', 'mand', 'mlym', 'mong', 'mroo', 'mymr', 'nagm', 'newa', 'nkoo', 'olck', 'orya', 'osge', 'rohg', 'sinh', 'sund', 'sunu', 'syrc', 'syrn', 'syrj', 'tale', 'talu', 'taml', 'tayo', 'tavt', 'telu', 'tfng', 'thaa', 'thai', 'tibt', 'tols', 'vaii' ]
+var items = ['adlm', 'ahom', 'arab', 'arabl', 'arabd', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'beng', 'bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hang', 'hani', 'hebr', 'hira', 'hluw', 'java', 'kali', 'kana', 'khmr', 'krai', 'lana', 'laoo', 'latn', 'lepc', 'limb', 'lisu', 'mand', 'mlym', 'mong', 'mroo', 'mymr', 'nagm', 'newa', 'nkoo', 'olck', 'orya', 'osge', 'rohg', 'sinh', 'sund', 'sunu', 'syrc', 'syrn', 'syrj', 'tale', 'talu', 'taml', 'tayo', 'tavt', 'telu', 'tfng', 'thaa', 'thai', 'tibt', 'tols', 'vaii' ]
 
 
 // these variables indicate which tabs are open or closed
@@ -594,6 +594,7 @@ function showContext (evt) {
 	out = `<strong>${ parts[0].replace(/<br>/,' ') }</strong>`
     if (parts[1] && parts[1] !== '-') out += ': &nbsp;&nbsp;'
     
+    // character counts
     if (parts[0] === tablecolumns.letters) {
         out += ` The number of characters with a Unicode General Category of Letter.`
         }
@@ -617,93 +618,178 @@ function showContext (evt) {
     if (parts[0] === tablecolumns.other) {
         out += ` The number of characters with a Unicode General Category of Other (C), or Separator (Z). This includes many of the invisible formatting characters, such as directional controls, ZWNJ, etc.`
         }
-    
+
+
+
+
+    // text direction
     if (parts[0] === tablecolumns.direction) {
         if (parts[1].includes('rtl')) out += ` Right to left script.`
         if (parts[1].includes('ltr')) out += ` Left to right script.`
         if (parts[1].includes('rtl*')) out += ` Digits also run right to left.`
         if (parts[1].includes('tblr')) out += ` Vertically set script, with lines running left to right.`
         if (parts[1].includes('tbrl')) out += ` Vertically set script, with lines running right to left.`
+        if (parts[1].includes('bt')) out += ` Vertically set script, with characters running from bottom to top.`
+        if (parts[1].includes('bous')) out += ` Boustrophedon text, ie. alternate lines of left to right and right to left.`
         }
     
     if (parts[0] === tablecolumns.numdir) {
         if (parts[1] !== '-') out += ` Digits also run right to left (unlike most RTL orthographies, where embedded digits run left to right within the right to left text flow.`
         }
-    
-    if (parts[0] === tablecolumns.spacing) {
-        if (parts[1].includes('✓')) out += ` Spaces are used to stretch text.`
-        if (parts[1].includes('base')) out += ` Text is stretched by expanding cursive connections.`
-        if (parts[1].includes('no')) out += ` Text spacing is not normally seen.`
-        if (parts[1].includes('?')) out += ` TBC`
-        out += `<br>Text spacing looks at ways in which spacing is applied between characters over and above that which is introduced during justification.`
+
+
+    // writing sytem type
+    if (parts[0] === tablecolumns.type) {
+        if (parts[1].includes('alpha')) out += ` Alphabet, ie. both consonant and vowel sounds are written.`
+        if (parts[1].includes('abug')) out += ` Abugida, ie. consonants have an inherent vowel that doesn't need to be written.`
+        if (parts[1].includes('abjad')) out += ` Abjad, ie. vowel diacritics are usually hidden, leaving only consonants and long vowels.`
+        if (parts[1].includes('syll')) out += ` Syllabary, ie. letters/characters typically represent one of V, CV, or CVC.`
+        if (parts[1].includes('feat')) out += ` Featural syllabary, ie. a syllabary where regular features identify the vowels represented in the syllable.`
+        }
+
+
+
+    // VOWELS
+    if (parts[0] === tablecolumns.vinherent) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `An inherent vowel is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> inherent vowels are used.`
+        out += '<br>The consonants in the orthography carry an inherent vowel sound, which, when needed, can be changed using vowel-signs or nullified by a particular character. The number indicates the number of ways in which the inherent vowel is typically pronounced in languages using this orthography.'
         }
     
-    if (parts[0] === 'Baseline') {
-        if (parts[1].includes('romn')) out += ` Alphabetic baseline, as used in Latin script text.`
-        if (parts[1].includes('ideo')) out += ` Ideographic baseline, as used in Chinese & Japanese.`
-        if (parts[1].includes('hang')) out += ` Hanging baseline, as used by some Indic scripts.`
-        if (parts[1].includes('cntr')) out += ` Vertical, centred baseline, as used by Traditional Mongolian, and by vertical Chinese and Japanese.`
+    if (parts[0] === tablecolumns.vdiac) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> combining mark is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> combining marks are used to represent vowels.`
+        out += '<br>These are combining marks used to indicate a vowel sound <em>after a consonant</em>. It doesn\'t include things like nasalisation or vowel length markers; just marks that represent a vowel sound itself.'
+        }
+
+    if (parts[0] === tablecolumns.vletter) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> letter is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> letters are used to represent vowels.`
+        out += '<br>The orthography uses letter characters to represent vowels pronounced <em>after a consonant</em>. This does NOT include letters used to represent standalone vowels (cf. independent letters).'
+        }
+
+    if (parts[0] === tablecolumns.ivowels) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> character is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used to represent standalone vowels.`
+        out += '<br>More than one letters are used to represent <em>standalone vowel sounds</em>. (Cf. the column <samp>Vowel letters</samp>, which lists free standing letters that represent a vowel following a consonant.)'
         }
     
-    if (parts[0] === 'Justification') {
-        if (parts[1].includes('sp')) out += ` <strong>Spaces</strong> between words, syllables, or phrases are adjusted.`
-        if (parts[1].includes('ic')) out += ` <strong>Characters</strong> are separated by equal amounts of space across a line. (In practice, some characters tend to attract this spacing before others).`
-        if (parts[1].includes('ig')) out += ` Space is introduced between <strong>unconnected glyphs</strong>, eg. Thai not only adds space around base characters, but also between those base characters and associated vowel-signs that are not combining marks. In Tamil, vowel-signs that don't interact with the base character may be separated in narrow column text when there is only one word on a line, even though the base character and vowel-sign together make a single grapheme cluster.`
-        if (parts[1].includes('str')) out += ` <strong>Connections</strong> between letters in cursive scripts are stretched.`
-        if (parts[1].includes('sw')) out += ` Some letters are given <strong>swash forms</strong> or lengthened glyph shapes to fill up space.`
-        if (parts[1].includes('pad')) out += ` Characters are repeated to <strong>pad out</strong> remaining space at the end of a line.`
-        if (parts[1].includes('none')) out += ` Full justification is not a feature of the language.`
+    if (parts[0] === tablecolumns.vbase) {
+        if (parts[1].trim() === '-') out += ` —`
+        else {
+            out += `${ parts[1] } is used as a vowel carrier.`
+            }
+        out += '<br>Carriers are used with combining marks to represent <em>standalone vowel sounds</em> (cf. <samp>Standalone letters</samp>, which are free standing letters).'
         }
     
-    if (parts[0] === 'Hyphenation') {
-        if (parts[1].includes('no')) out += ` The primary line-break algorithm involves word boundaries, but words are not broken at the end of a line.`
-        if (parts[1].includes('n/a')) out += ` The primary line-break algorithm takes no account of word boundaries.`
-        if (parts[1].includes('(')) out += ` Hyphenation occurs but is rare.`
-        else if (parts[1].includes('yes')) out += ` Hyphenation occurs.`
-        
-        if (parts[1].includes('֊')) out += ` ֊  U+058A ARMENIAN HYPHEN is used at the end of the first line.`
-        if (parts[1].includes('↵᠆')) out += ` ᠆ U+1806 MONGOLIAN TODO SOFT HYPHEN is used at the <em>beginning of the second line</em>.`
-        if (parts[1].includes('᭠')) out += ` ᭠ U+1B60 BALINESE PAMENENG is used at the end of the first line.`
-        if (parts[1].includes('᐀')) out += ` ᐀ U+1400 CANADIAN SYLLABICS HYPHEN is used at the end of the first line.`
-        if (parts[1].includes('ـ')) out += ` ـ  U+0640 ARABIC TATWEEL is used at the end of the first line.`
-        if (parts[1].includes('ꦺ')) out += ` ꦺ U+A9BA JAVANESE VOWEL SIGN TALING is used at the end of the first line.`
-        if (parts[1].includes('∅')) out += ` Words are broken to fit at the line end, but no visual indicator is added to indicate that the word continues on the next line.`
-        if (parts[1].includes('-')) out += ` A regular hyphen is used at the end of the first line.`
+    if (parts[0] === tablecolumns.vhidden) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else out += `Diacritic vowel marks are normally hidden.<br>Orthographies using this script generally hide vowel diacritics. This typically applies to abjads such as are used by Arabic, Hebrew, Urdu, etc. In the case of Arabic some orthographies always show all vowel diacritics, or show all vowels as letters; these alphabetic uses of the Arabic script appear on separate lines.`
         }
-     
-    if (parts[0] === 'Graph. clus') {
-        if (parts[1].includes('✓')) out += ` Text segmentation conforms to Unicode grapheme clusters.`
-        else if (parts[1].includes('?')) out += ` Research needed.`
-        else out += ` Grapheme clusters are insufficient to segment this script. It is likely that orthographic syllables are appropriate.`
-        
-        out += `<br>Indicates whether or not grapheme clusters alone are sufficient to segment the text for line breaking, justification, and text spacing.`
+    
+    if (parts[0] === tablecolumns.vsign) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> combining mark is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> the script uses visual ordering of vowel signs.`
+        out += '<br>The orthography uses ordinary spacing letters before a consonant to represent a vowel sound that is pronounced after the consonant (it could be part of a composite vowel). This includes scripts such as Thai or Lao.'
         }
-     
-    if (parts[0] === 'Linebreak') {
-        if (parts[1].includes('word/char')) out += ` Text wraps at word boundaries OR immediately after the last character that fits on a line, regardless of word or syllable boundaries.`
-        else if (parts[1].includes('word')) out += ` Text wraps at word boundaries.`
-        else if (parts[1].includes('char')) out += ` Text wraps immediately after the last character that fits on a line, regardless of word or syllable boundaries.`
-        if (parts[1].includes('syllable')) out += ` Text wraps at syllable boundaries, regardless of whether word boundaries are delimited.`
-        
-        out += `<br>Indicates the primary break point for wrapping lines. Note that nearly all scripts have rules about which punctuation characters can appear at the end or start of a line.`
+
+    if (parts[0] === tablecolumns.pbmark) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> mark is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> marks are used.`
+        out += `<br>The orthography uses combining characters after the base consonant to represent vowel sounds, but the glyph for that character appears to the left of the consonant itself. (This doesn't include circumgraphs.)`
         }
-     
-    if (parts[0] === 'Word separator') {
-        if (parts[1].includes('no')) out += ` No explicit delimiters define word boundaries.`
-        if (parts[1].includes('space')) out += ` Words are separated by spaces.`
-        if (parts[1].includes('zwsp')) out += ` A zero-width space may be used.`
-        if (parts[1].includes('syllable')) out += ` Spaces are used, but they separate syllables, not words.`
-        if (parts[1].includes('sb')) out += ` Syllables are separated rather than words, but using a non-space character.`
-        if (parts[1].includes('wb')) out += ` Words are visually separated, but by a non-space character.`
-        
-        out += `<br>A word is a unit of segmentation between the grapheme and the phrase. This column asks whether, as a general rule, there are explicit delimiters for word boundaries.`
+
+    if (parts[0] === tablecolumns.vcircum) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> mark is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> marks are used.`
+        out += `<br>A vowel is represented by a single combining character, but the orthography displays multiple glyphs simultaneously on different sides of the base consonant, eg. certain Tamil vowel signs.`
         }
-     
-    if (parts[0] === 'Cursive script') {
-        if (parts[1].includes('yes')) out += ` Letters are joined by default.`
-        if (parts[1].includes('no')) out += ` Letters are not joined by default.`
+
+    if (parts[0] === tablecolumns.vcomposite) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> multipart vowel is listed in the description.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> multipart vowels are listed in the description.`
+        out += `<br>Orthographies using this script express a single vowel sound using a combination of combining marks and/or letters. This is a common feature of Southeast Asian scripts, such as Thai and Lao. It doesn't generally include glides that form part of a diphthong, nor does it include nasalisation or vowel lengthening diacritics.`
         }
-     
+
+    if (parts[0] === tablecolumns.vvocalics) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else out += `<bdi>${ parts[1] }</bdi> vocalics are used.`
+        out += `<br>The script is an abugida that has single characters that represent a consonant plus vowel, as in Sanskrit and other indic scripts.`
+        }
+
+
+
+
+
+    // shaping & positioning
+    if (parts[0] === tablecolumns.case) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else {
+            out += `<bdi>${ parts[1] }</bdi>`
+            if (parts[1] == 'allcaps') out += `<br>Case forms are used as normal vs all-caps, and all-caps is applied to a whole word. However, Unicode has data to enable algorithms to convert between the 'cases'.`
+            else if (parts[1] == 'partial') out += `<br>Some letters have alternate forms that approximate case alternatives, but there are no algorithms to convert from one 'case' to another.`
+            else out += '<br>The orthography has uppercase and lowercase forms of letters.'
+            }
+        }
+      
+    if (parts[0] === tablecolumns.cursive) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else out += `Most or all letters join.`
+        }
+
+    if (parts[0] === tablecolumns.mcchars) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else {
+            out += `<bdi>${ parts[1] }</bdi>`
+            if (parts[1] == 'm') out += `<br>Base characters can have multiple combining marks.  These may require care over relative positioning.`
+            else out += '<br>The orthography has combining marks.'
+            }
+        }
+
+    if (parts[0] === tablecolumns.conjuncts) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else out += `The orthography has a way of indicating clusters of consonants without intervening vowels.`
+        }
+
+
+
+
+    // CONSONANT CLUSTERS
+    if (parts[0] === tablecolumns.cmedials) {
+        types = parts[1].split(' ')
+        if (parts[1] !== '-') {
+            for (t=0;t<types.length;t++) {
+                if (types[t].includes('cm')) out += ` <bdi>${ types[t].substring(3) }</bdi> combining marks.`
+                if (types[t].includes('sj')) out += ` <bdi>${ types[t].substring(3) }</bdi> subjoined letters.`
+                if (types[t].includes('let')) out += ` <bdi>${ types[t].substring(4) }</bdi> dedicated letters.`
+                }
+             out += `<br>The orthography uses these dedicated combining or other characters to represent the non-initial consonant(s) in a syllable-initial cluster. Medials represented by simple letters or conjuncts are not included here.<br>`
+           }
+        else out = ' —'
+        }
+
     if (parts[0] === tablecolumns.cfinals) {
         types = parts[1].split(' ')
         if (parts[1] !== 'undefined') {
@@ -718,155 +804,6 @@ function showContext (evt) {
         else out = ' —'
         }
      
-    if (parts[0] === tablecolumns.cmedials) {
-        types = parts[1].split(' ')
-        if (parts[1] !== '-') {
-            for (t=0;t<types.length;t++) {
-                if (types[t].includes('cm')) out += ` <bdi>${ types[t].substring(3) }</bdi> combining marks.`
-                if (types[t].includes('sj')) out += ` <bdi>${ types[t].substring(3) }</bdi> subjoined letters.`
-                if (types[t].includes('let')) out += ` <bdi>${ types[t].substring(4) }</bdi> dedicated letters.`
-                }
-             out += `<br>The orthography uses these dedicated combining or other characters to represent the non-initial consonant(s) in a syllable-initial cluster. Medials represented by simple letters or conjuncts are not included here.<br>`
-           }
-        else out = ' —'
-        }
-/*   
-    if (parts[0] === tablecolumns.vsyllable) {
-        types = parts[1].split(' ')
-        if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> syllabic characters are used to write vowels.`
-        else out += ' —'
-        out += '<br>This indicates the number of characters that represent vowel sounds with no preceding consonant in a syllabic script.'
-        }
-  */  
-    if (parts[0] === tablecolumns.vinherent) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `An inherent vowel is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> inherent vowels are used.`
-        out += '<br>Inherent vowels are not written, but are pronounced by default after a consonant.'
-        }
-    
-    if (parts[0] === tablecolumns.vletter) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> letter is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> letters are used.`
-        out += '<br>These are ordinary, spacing letters dedicated to vowel sounds <em>that follow a consonant</em> (cf. standalone letters).'
-        }
-/*    
-    if (parts[0] === tablecolumns.matres) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> letter is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> letters are used.`
-        out += '<br>Matres lectionis are consonant letters that may also mark the position of a vowel.'
-        }
-    if (parts[0] === tablecolumns.matres) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else out += `Matres lectionis are used.`
-        out += '<br>Matres lectionis are consonant letters that may also mark the position of a vowel.'
-        }
-   */  
-   
-    /*if (parts[0] === tablecolumns.vdiac) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> combining mark is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> combining marks are used.`
-        out += '<br>These diacritics are small combining marks (cf. vowel signs) used to indicate a vowel sound after a consonant.'
-        }*/
-    
-    if (parts[0] === tablecolumns.vdiac) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> combining mark is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> combining marks are used.`
-        out += '<br>These are dedicated combining marks used to indicate a vowel sound <em>after a consonant</em>.'
-        }
-    
-    if (parts[0] === tablecolumns.vhidden) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else out += `Diacritic vowel marks are normally hidden.<br>These orthographies are abjads that only show the vowel diacritics when pronunciation is not clear.`
-        }
-    
-    if (parts[0] === tablecolumns.vsign) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> combining mark is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> combining marks are used.`
-        out += '<br>These are combining marks or occasionally letters that are referred to by the Unicode Standard as vowel signs. The combining marks are attached to a consonant or consonant cluster that override an inherent vowel, and tend to be larger, and have more complex behaviours than simple diacritics.'
-        }
-    
-    /*
-    if (parts[0] === tablecolumns.vother) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> character is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used.`
-        out += '<br>These characters are other letters or marks that are used to write vowels,  that are not exclusively dedicated to writing vowels. Most are repurposed consonant letters.'
-        }
-    */
-    
-    if (parts[0] === tablecolumns.ivowels) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> character is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used.`
-        out += '<br>Letters used to represent <em>standalone vowel sounds</em>. (Cf. the column <samp>Vowel letters</samp>, which lists free standing letters that represent a vowel following a consonant.)'
-        }
-    
-    if (parts[0] === tablecolumns.vbase) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else {
-            var carrier = parts[1].trim().split('/')
-            out += `${ carrier[0].replace(/,/g,' or ') } is used as a vowel carrier. Used alone this represents the sound ${ carrier[1].replace(/,/g,' or ') }.`
-            }
-        out += '<br>Carriers are used with combining marks to represent <em>standalone vowel sounds</em> (cf. <samp>Standalone letters</samp>, which are free standing letters).'
-        }
-/*
-    if (parts[0] === tablecolumns.pbletter) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> letter is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> letters are used.`
-        out += '<br>The orthography uses ordinary spacing letters before a consonant to represent a sound that occurs <em>after</em> the consonant.'
-        }
-*/      
-    if (parts[0] === tablecolumns.pbmark) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> mark is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> marks are used.`
-        out += `<br>The orthography uses combining characters after the base consonant to represent vowel sounds, but the glyph for that character appears to the left of the consonant itself. (This doesn't include circumgraphs.)`
-        }
-      
-    if (parts[0] === tablecolumns.vcircum) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> mark is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> marks are used.`
-        out += `<br>Circumgraphs are single combining marks that place separate glyphs on more than one side of the base character.`
-        }
-
-    if (parts[0] === tablecolumns.vcomposite) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> multipart vowel is listed in the description.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> multipart vowels are listed in the description.`
-        out += `<br>A multipart vowel is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel signs, repurposed consonants, and diacritics available. These figures may not include diphthongs that are created using glides or semivowels. (Numbers after a + sign indicate combinations that only occur in decomposed text.)`
-        }
-
-    if (parts[0] === tablecolumns.vvocalics) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> vocalic is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> vocalics are used.`
-        out += `<br>How many vocalic sounds are used by the script in common, modern-day usage. This number is not doubled when both an independent vowel and a vowel-sign exist for the same vocalic letter. It represents the number of sounds for which there are special letters.`
-        }
-      
     if (parts[0] === tablecolumns.cstack) {
         types = parts[1].split(' ')
         if (parts[1].trim() === '-') out += ` —`
@@ -918,24 +855,154 @@ function showContext (evt) {
         out += `<br>This Unicode indic category indicates how the orthography creates conjuncts. An invisible stacker never has any visible glyph (and may do other things than stacking). A virama is usually invisible when creating a conjunct, but may be visible if the font doesn't support the conjunct glyph.  A pure killer is always visible.`
         }
 
-      
-    if (parts[0] === tablecolumns.case) {
+    if (parts[0] === tablecolumns.ligs) {
         types = parts[1].split(' ')
         if (parts[1].trim() === '-') out += ` —`
-        else {
-            out += `<bdi>${ parts[1] }</bdi>`
-            if (parts[1] == 'allcaps') out += `<br>Case forms are used as normal vs all-caps, and all-caps is applied to a whole word. However, Unicode has data to enable algorithms to convert between the 'cases'.`
-            else if (parts[1] == 'partial') out += `<br>Some letters have alternate forms that approximate case alternatives, but there are no algorithms to convert from one 'case' to another.`
-            else out += '<br>The orthography has uppercase and lowercase forms of letters.'
-            }
+        else out += `Besides conjuncts, the orthography has characters that create mandatory ligatures.`
         }
       
-    if (parts[0] === tablecolumns.cursive) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else out += `Most or all letters join.`
+
+
+
+
+    // TYPOGRAPHY
+    if (parts[0] === 'Word separator') {
+        if (parts[1].includes('no')) out += ` No explicit delimiters define word boundaries.`
+        if (parts[1].includes('space')) out += ` Words are separated by spaces.`
+        if (parts[1].includes('zwsp')) out += ` A zero-width space may be used.`
+        if (parts[1].includes('syllable')) out += ` Spaces are used, but they separate syllables, not words.`
+        if (parts[1].includes('sb')) out += ` Syllables are separated rather than words, but using a non-space character.`
+        if (parts[1].includes('wb')) out += ` Words are visually separated, but by a non-space character.`
+        
+        out += `<br>A word is a unit of segmentation between the grapheme and the phrase. This column asks whether, as a general rule, there are explicit delimiters for word boundaries.`
+        }
+     
+    if (parts[0] === 'Linebreak') {
+        if (parts[1].includes('word/char')) out += ` Text wraps at word boundaries OR immediately after the last character that fits on a line, regardless of word or syllable boundaries.`
+        else if (parts[1].includes('word')) out += ` Text wraps at word boundaries.`
+        else if (parts[1].includes('char')) out += ` Text wraps immediately after the last character that fits on a line, regardless of word or syllable boundaries.`
+        if (parts[1].includes('syllable')) out += ` Text wraps at syllable boundaries, regardless of whether word boundaries are delimited.`
+        
+        out += `<br>Indicates the primary break point for wrapping lines. Note that nearly all scripts have rules about which punctuation characters can appear at the end or start of a line.`
+        }
+    
+    if (parts[0] === 'Hyphenation') {
+        if (parts[1].includes('no')) out += ` The primary line-break algorithm involves word boundaries, but words are not broken at the end of a line.`
+        if (parts[1].includes('n/a')) out += ` The primary line-break algorithm takes no account of word boundaries.`
+        if (parts[1].includes('(')) out += ` Hyphenation occurs but is rare.`
+        else if (parts[1].includes('yes')) out += ` Hyphenation occurs.`
+        
+        if (parts[1].includes('֊')) out += ` ֊  U+058A ARMENIAN HYPHEN is used at the end of the first line.`
+        if (parts[1].includes('↵᠆')) out += ` ᠆ U+1806 MONGOLIAN TODO SOFT HYPHEN is used at the <em>beginning of the second line</em>.`
+        if (parts[1].includes('᭠')) out += ` ᭠ U+1B60 BALINESE PAMENENG is used at the end of the first line.`
+        if (parts[1].includes('᐀')) out += ` ᐀ U+1400 CANADIAN SYLLABICS HYPHEN is used at the end of the first line.`
+        if (parts[1].includes('ـ')) out += ` ـ  U+0640 ARABIC TATWEEL is used at the end of the first line.`
+        if (parts[1].includes('ꦺ')) out += ` ꦺ U+A9BA JAVANESE VOWEL SIGN TALING is used at the end of the first line.`
+        if (parts[1].includes('∅')) out += ` Words are broken to fit at the line end, but no visual indicator is added to indicate that the word continues on the next line.`
+        if (parts[1].includes('-')) out += ` A regular hyphen is used at the end of the first line.`
+        }
+     
+    if (parts[0] === 'Graph. clus') {
+        if (parts[1].includes('✓')) out += ` Text segmentation conforms to Unicode grapheme clusters.`
+        else if (parts[1].includes('?')) out += ` Research needed.`
+        else out += ` Grapheme clusters are insufficient to segment this script. It is likely that orthographic syllables are appropriate.`
+        
+        out += `<br>Indicates whether or not grapheme clusters alone are sufficient to segment the text for line breaking, justification, and text spacing.`
+        }
+    
+    if (parts[0] === 'Justification') {
+        if (parts[1].includes('sp')) out += ` <strong>Spaces</strong> between words, syllables, or phrases are adjusted.`
+        if (parts[1].includes('ic')) out += ` <strong>Characters</strong> are separated by equal amounts of space across a line. (In practice, some characters tend to attract this spacing before others).`
+        if (parts[1].includes('ig')) out += ` Space is introduced between <strong>unconnected glyphs</strong>, eg. Thai not only adds space around base characters, but also between those base characters and associated vowel-signs that are not combining marks. In Tamil, vowel-signs that don't interact with the base character may be separated in narrow column text when there is only one word on a line, even though the base character and vowel-sign together make a single grapheme cluster.`
+        if (parts[1].includes('str')) out += ` <strong>Connections</strong> between letters in cursive scripts are stretched.`
+        if (parts[1].includes('sw')) out += ` Some letters are given <strong>swash forms</strong> or lengthened glyph shapes to fill up space.`
+        if (parts[1].includes('pad')) out += ` Characters are repeated to <strong>pad out</strong> remaining space at the end of a line.`
+        if (parts[1].includes('none')) out += ` Full justification is not a feature of the language.`
         }
 
+    if (parts[0] === tablecolumns.spacing) {
+        if (parts[1].includes('✓')) out += ` Blank space is used to stretch text or insert gaps around text items.`
+        if (parts[1].includes('base')) out += ` Text is stretched by expanding cursive connections.`
+        if (parts[1].includes('no')) out += ` Text spacing is not normally seen.`
+        if (parts[1].includes('?')) out += ` TBC`
+        out += `<br>Text spacing looks at ways in which spacing is applied between characters over and above that which is introduced during justification.`
+        }
+    
+    if (parts[0] === 'Baseline') {
+        if (parts[1].includes('romn')) out += ` Alphabetic baseline, as used in Latin script text.`
+        if (parts[1].includes('ideo')) out += ` Ideographic baseline, as used in Chinese & Japanese.`
+        if (parts[1].includes('hang')) out += ` Hanging baseline, as used by some Indic scripts.`
+        if (parts[1].includes('cntr')) out += ` Vertical, centred baseline, as used by Traditional Mongolian, and by vertical Chinese and Japanese.`
+        }
+     
+/*   
+    if (parts[0] === 'Cursive script') {
+        if (parts[1].includes('yes')) out += ` Letters are joined by default.`
+        if (parts[1].includes('no')) out += ` Letters are not joined by default.`
+        }
+     
+    if (parts[0] === tablecolumns.vsyllable) {
+        types = parts[1].split(' ')
+        if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> syllabic characters are used to write vowels.`
+        else out += ' —'
+        out += '<br>This indicates the number of characters that represent vowel sounds with no preceding consonant in a syllabic script.'
+        }
+  */  
+/*    
+    if (parts[0] === tablecolumns.matres) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> letter is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> letters are used.`
+        out += '<br>Matres lectionis are consonant letters that may also mark the position of a vowel.'
+        }
+    if (parts[0] === tablecolumns.matres) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else out += `Matres lectionis are used.`
+        out += '<br>Matres lectionis are consonant letters that may also mark the position of a vowel.'
+        }
+   */  
+   
+    /*if (parts[0] === tablecolumns.vdiac) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> combining mark is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> combining marks are used.`
+        out += '<br>These diacritics are small combining marks (cf. vowel signs) used to indicate a vowel sound after a consonant.'
+        }*/    
+    /*
+    if (parts[0] === tablecolumns.vother) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> character is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used.`
+        out += '<br>These characters are other letters or marks that are used to write vowels,  that are not exclusively dedicated to writing vowels. Most are repurposed consonant letters.'
+        }
+    */
+/*
+    if (parts[0] === tablecolumns.vbase) {
+        types = parts[1].split('§')
+        if (parts[1].trim() === '-') out += ` —`
+        else {
+            var carrier = parts[1].trim().split('/')
+            out += `${ carrier[0].replace(/,/g,' or ') } is used as a vowel carrier. Used alone this represents the sound ${ carrier[1].replace(/,/g,' or ') }.`
+            }
+        out += '<br>Carriers are used with combining marks to represent <em>standalone vowel sounds</em> (cf. <samp>Standalone letters</samp>, which are free standing letters).'
+        }
+
+    if (parts[0] === tablecolumns.pbletter) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> letter is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> letters are used.`
+        out += '<br>The orthography uses ordinary spacing letters before a consonant to represent a sound that occurs <em>after</em> the consonant.'
+        }
+*/      
+      
+      
+
+      
 
 
     if (parts[0] === tablecolumns.region) {
@@ -1009,7 +1076,7 @@ function getCharacterStats () {
 
 
             //  hyphenation & hyphen values
-            scriptData[i].hyphenation = charuseData.hyphen?charuseData.hyphen:''
+            scriptData[i].hyphenation = charuseData.hyphen?charuseData.hyphen:'no'
 
             scriptData[i].gc = charuseData.gc?'✓':'no'
 
