@@ -7,7 +7,7 @@
 
 // one lang tag per row
 //var items = ['adlm', 'am', 'arb', 'hy', 'aii', 'ban-bali', 'bm', 'bax-bamu', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'cmn', 'crk', 'dv', 'ff', 'ff-arab', 'fuf-adlm', 'el', 'gu', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'ka', 'khb', 'khk', 'khk-mong', 'km', 'ko', 'ks', 'ks-deva', 'kyu', 'lep', 'lif', 'lis', 'lo', 'ml', 'mid', 'mro', 'new', 'nod', 'nqo', 'ory', 'osa', 'pa', 'pes', 'rhg', 'ru', 'sat', 'shn', 'si', 'su-sund', 'suz', 'syc', 'kkh', 'ta', 'tdd', 'te', 'th', 'tru', 'ug', 'uk', 'unr', 'ur', 'vai', 'wo', 'zgh', 'blt', 'bo', ]
-var items = ['adlm', 'ahom', 'arab', 'arabl', 'arabd', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'beng', 'bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hang', 'hani', 'hebr', 'hira', 'hluw', 'java', 'kali', 'kana', 'khmr', 'krai', 'lana', 'laoo', 'latn', 'lepc', 'limb', 'lisu', 'mand', 'mlym', 'mong', 'mroo', 'mymr', 'nagm', 'newa', 'nkoo', 'olck', 'orya', 'osge', 'rohg', 'sinh', 'sund', 'sunu', 'syrc', 'syrn', 'syrj', 'tale', 'talu', 'taml', 'tayo', 'tavt', 'telu', 'tfng', 'thaa', 'thai', 'tibt', 'tols', 'vaii' ]
+var items = ['adlm', 'ahom', 'arab', 'arabl', 'arabd', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'batk', 'beng', 'bugi', 'buhd', 'cans', 'cakm', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hang', 'hani', 'hebr', 'hira', 'hluw', 'java', 'kali', 'kana', 'khmr', 'krai', 'lana', 'laoo', 'latn', 'lepc', 'limb', 'lisu', 'mand', 'mlym', 'mong', 'mroo', 'mymr', 'nagm', 'newa', 'nkoo', 'olck', 'orya', 'osge', 'rohg', 'sinh', 'sund', 'sunu', 'syrc', 'syrn', 'syrj', 'tale', 'talu', 'taml', 'tayo', 'tavt', 'telu', 'tfng', 'thaa', 'thai', 'tibt', 'tols', 'vaii' ]
 
 
 // these variables indicate which tabs are open or closed
@@ -124,9 +124,9 @@ var by = function (path, reverse, primer, then) {
 		wordsep:"Word separator",
 		wrap:"Linebreak",
 		hyphenation:"Hyphen<br>ation",
+		wordspan:"Word<br>span",
 		gc:"Graph.<br>clust.",
 		justification:"Justification",
-		spacing:"Text space",
 
 		region:"Region of origin",
 		fcount:"More info"
@@ -288,11 +288,11 @@ function resort (column, reverse) {
 
         table += makeTableHead ('hyphenation', "Hyphenation.", REVERSE)
 
+        table += makeTableHead ('wordspan', "Do conjuncts span word boundaries?", '')
+
         table += makeTableHead ('gc', "Grapheme clusters sufficient?", REVERSE)
 
         table += makeTableHead ('justification', "Justification methods.", REVERSE)
-
-        table += makeTableHead ('spacing', "Is text spacing used?", '')
 
         table += makeTableHead ('baseline', "Location of the baseline: romn, ideo, hang, cntr.", '')
 //        }
@@ -473,11 +473,11 @@ function resort (column, reverse) {
 
                 table += drawCellWithDefault('hyphenation', scriptData[i], 'hyphenation','yy', 'no')
 
+                table += drawCellWithDefault('wordspan', scriptData[i], 'wordspan','yy', '-')
+
                 table += drawCellWithDefault('gc', scriptData[i], 'gc','yy', '✓')
 
                 table += drawCellWithDefault('justification', scriptData[i], 'justification','yy', 'sp')
-
-                table += drawCellWithDefault('spacing', scriptData[i], 'spacing','yy', '?')
 
                 table += drawCellWithDefault('baseline', scriptData[i], 'baselines','yy', 'romn')
 //                }
@@ -920,12 +920,9 @@ function showContext (evt) {
         if (parts[1].includes('none')) out += ` Full justification is not a feature of the language.`
         }
 
-    if (parts[0] === tablecolumns.spacing) {
-        if (parts[1].includes('✓')) out += ` Blank space is used to stretch text or insert gaps around text items.`
-        if (parts[1].includes('base')) out += ` Text is stretched by expanding cursive connections.`
-        if (parts[1].includes('no')) out += ` Text spacing is not normally seen.`
-        if (parts[1].includes('?')) out += ` TBC`
-        out += `<br>Text spacing looks at ways in which spacing is applied between characters over and above that which is introduced during justification.`
+    if (parts[0] === tablecolumns.wordspan) {
+        if (parts[1].includes('✓')) out += ` Conjuncts span word boundaries.`
+        else out += ` Conjuncts only occur word-internally, and not across word boundaries.`
         }
     
     if (parts[0] === 'Baseline') {
@@ -1272,11 +1269,8 @@ function getCharacterStats () {
 
             scriptData[i].script = charuseData.script
 
-            // text spacing
-            if (scriptData[i].spacing) {
-                if (scriptData[i].spacing === 'yes') scriptData[i].spacing = '✓'
-                }
-            else scriptData[i].spacing = '?'
+            // word spanning conjuncts
+            scriptData[i].wordspan = charuseData.wordspan?'yes':'-'
 			}
 		}
 	}
