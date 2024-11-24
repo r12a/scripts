@@ -1313,8 +1313,8 @@ function makeSidePanel () {
         scriptType = scriptType.replace(/alpha/,'alphabet')
         scriptType = scriptType.replace(/abug/,'abugida')
         scriptType = scriptType.replace(/abjad/,'abjad')
-        scriptType = scriptType.replace(/feat/,'featural syllabary')
         scriptType = scriptType.replace(/syll/,'syllabary')
+        scriptType = scriptType.replace(/feat/,'featural syllabary')
         
         /*switch (langs[sid].type) {
             case 'alpha': scriptType = 'alphabet'; break  
@@ -1383,8 +1383,8 @@ function makeSidePanel () {
         //out += '<tr><th>Script code</th><td>'+langs[id].script+'</td></tr>'
 
         out += '<tr><th>Text direction</th><td'
-        if (langs[sid].direction !== "ltr") out += ' class="tableHighlight">'
-        out += `${ langs[sid].direction }`
+        if (langs[sid].direction !== "ltr") out += ' class="tableHighlight"'
+        out += `>${ langs[sid].direction }`
         if (langs[sid].rtlnumbers) out += ` \u2014 including <br> numbers`
         out += `</td></tr>`
 
@@ -1396,7 +1396,7 @@ function makeSidePanel () {
 
 
         if (langs[sid].voweltype) {
-            out += '<tr><th>Vowels</th><td class="tableHighlight">'
+            out += '<tr><th>Post-consonant vowels</th><td class="tableHighlight">'
             
             if (langs[sid].voweltype.inherent !== 0) {
                 if (langs[sid].voweltype.inherent === 1) out += `1 inherent vowel<br>`
@@ -1411,10 +1411,6 @@ function makeSidePanel () {
             
             if (langs[sid].voweltype.vocalics) out += `vocalics<br>`
             
-            if (langs[sid].voweltype.ivowels) out += `independent vowels<br>`
-            
-            if (langs[sid].voweltype.vbase) out += `carrier ${ langs[sid].voweltype.vbase }<br>`
-             
             if (langs[sid].voweltype.vcomposite) out += `composite vowels<br>`
              
             if (langs[sid].voweltype.prebase) out += `pre-base marks<br>`
@@ -1422,6 +1418,17 @@ function makeSidePanel () {
             if (langs[sid].voweltype.visorder) out += `pre-base letters<br>`
             
             if (langs[sid].voweltype.circum) out += `circumgraphs<br>`
+
+            out += '</td></tr>'
+            }
+
+
+        if (langs[sid].voweltype) {
+            out += '<tr><th>Standalone vowels</th><td class="tableHighlight">'
+            
+            if (langs[sid].voweltype.ivowels) out += `independent vowels<br>`
+            
+            if (langs[sid].voweltype.vbase) out += `carrier ${ langs[sid].voweltype.vbase }<br>`
 
             out += '</td></tr>'
             }
@@ -1444,7 +1451,7 @@ function makeSidePanel () {
         if (langs[sid].mcchars) out += ' class="tableHighlight"'
         out += '>'
         if (langs[sid].mcchars === true) out += 'yes'
-        else if (langs[sid].mcchars === 'm') out += 'multiple'
+        else if (langs[sid].mcchars === 'm') out += '>1 per base'
         else out += 'no'
         //out += langs[sid].mcchars ? 'yes' : 'no'
         out += '</td></tr>'
@@ -1549,6 +1556,14 @@ function makeSidePanel () {
             }
 
 
+        if (langs[sid].hyphen !== '') {
+            out += `<tr><th>Hyphenation</th><td class="tableHighlight">${ langs[sid].hyphen }</td></tr>`
+            }
+
+        if (langs[sid].wordspan) {
+            out += `<tr><th>Conjuncts</th><td class="tableHighlight">span word boundaries</td></tr>`
+            }
+
 
         out += '<tr><th>G Clusters OK?</th><td'
         if (langs[sid].gc === false) out += ' class="tableHighlight"'
@@ -1576,6 +1591,8 @@ function makeSidePanel () {
             if (langs[sid].justification.includes('pad')) out += `line-end padding<br>`
             
             if (langs[sid].justification.includes('none')) out += `none<br>`
+            
+            if (langs[sid].justification === '?') out += `?`
 
             out += '</td></tr>'
             }
