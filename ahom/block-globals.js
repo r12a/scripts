@@ -1,0 +1,11 @@
+langTag = 'aho'
+window.version = 'v29'
+window.scriptName = 'Ahom'
+window.ghDirectory = 'ahom'
+window.blockDirectory = 'ahom'
+window.languageList = ['aho'] // lang tags for each orthography handled
+window.detailsfileList = ['aho'] // first part of xx-details for each orthography
+window.scriptISO = 'ahom'
+window.webfonts = ["Noto Sans Ahom WF"]
+window.defaultSize = '24px'
+hideBlockName = "AHOM"
