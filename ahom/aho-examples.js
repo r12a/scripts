@@ -24,7 +24,7 @@ autoExpandExamples.aho = `
 
 @ https://en.wiktionary.org/wiki/Category:Ahom_lemmas
 
-𑜀𑜂𑜫||||
+𑜀𑜂𑜫||||||
 𑜀𑜃𑜫|together||kan|
 𑜀𑜄𑜫||||
 𑜀𑜟𑜨||||
@@ -36,14 +36,14 @@ autoExpandExamples.aho = `
 𑜀𑜠𑜊𑜡𑜎𑜣||||
 𑜀𑜡𑜂𑜫||||
 𑜀𑜢𑜃𑜫||||
-𑜀𑜢𑜆𑜫||||
+𑜀𑜢𑜆𑜫|chaff|ki§p|kip|
 𑜀𑜣||||
 𑜀𑜤𑜂𑜫||||
 𑜀𑜤𑜃𑜫||||
 𑜀𑜤𑜆𑜫||||
 𑜀𑜤𑜆𑜫 𑜀𑜥||||
-𑜀𑜤𑜆𑜫𑜍𑜤||||
-𑜀𑜤𑜰𑜫||||
+𑜀𑜤𑜆𑜫𑜍𑜤|skull|ku§p§ru|kupru|
+𑜀𑜤𑜚𑜫||||||𑜀𑜤𑜰𑜫
 𑜀𑜥||||
 𑜀𑜦𑜡||||
 𑜀𑜦𑜡 𑜍𑜀𑜫||||
@@ -60,11 +60,11 @@ autoExpandExamples.aho = `
 𑜁𑜠||||
 𑜁𑜡||||
 𑜁𑜢𑜉𑜫||||
-𑜁𑜢𑜤𑜃𑜫||||
+𑜁𑜢𑜤𑜃𑜫|night|kʰɯ§n|khün|
 𑜁𑜣||||
 𑜁𑜤||||
 𑜁𑜤𑜃𑜫||||
-𑜁𑜤𑜈𑜫||||
+𑜁𑜤𑜈𑜫|to laugh|kʰoː§‹|khuw|
 𑜁𑜦𑜡||||
 𑜁𑜦𑜧||||
 𑜁𑜧||||
@@ -80,16 +80,16 @@ autoExpandExamples.aho = `
 𑜃𑜉𑜫 𑜉𑜃𑜫||||
 𑜃𑜡||||
 𑜃𑜢𑜂𑜫||||
-𑜃𑜢𑜤𑜰𑜫||||
-𑜃𑜢𑜤𑜰𑜫 𑜀𑜩||||
-𑜃𑜢𑜤𑜰𑜫 𑜉𑜥||||
-𑜃𑜢𑜤𑜰𑜫 𑜑𑜥||||
+𑜃𑜢𑜤𑜚𑜫||||||𑜃𑜢𑜤𑜰𑜫
+𑜃𑜢𑜤𑜚𑜫 𑜀𑜩||||||𑜃𑜢𑜤𑜰𑜫 𑜀𑜩
+𑜃𑜢𑜤𑜚𑜫 𑜉𑜥|pork|nɯː muː|nü0 mū|||𑜃𑜢𑜤𑜰𑜫 𑜉𑜥
+𑜃𑜢𑜤𑜚𑜫 𑜑𑜥||||||𑜃𑜢𑜤𑜰𑜫 𑜑𑜥
 𑜃𑜤𑜀𑜫||||
 𑜃𑜤𑜀𑜫 𑜀𑜩||||
 𑜃𑜤𑜀𑜫 𑜆𑜦𑜄𑜫||||
 𑜃𑜨𑜂𑜫||||
 𑜃𑜨𑜂𑜫 𑜋𑜩||||
-𑜃𑜨𑜂𑜫𑜄𑜡||||
+𑜃𑜨𑜂𑜫𑜄𑜡|eyebrow|no§ŋ.§taː|noṅtā|
 𑜃𑜨𑜃𑜫||||
 𑜃𑜨𑜃𑜫𑜄𑜠||||
 𑜃𑜪||||
@@ -108,7 +108,7 @@ autoExpandExamples.aho = `
 𑜆𑜢𑜄𑜫||||
 𑜆𑜣 𑜀𑜩||||
 𑜆𑜣 𑜋𑜩||||
-𑜆𑜣 𑜏𑜰𑜫||||
+𑜆𑜣 𑜏𑜚𑜫||||||𑜆𑜣 𑜏𑜰𑜫
 𑜆𑜣𑜂𑜫||||
 𑜆𑜥||||
 𑜆𑜦𑜄𑜫||||
@@ -131,14 +131,13 @@ autoExpandExamples.aho = `
 𑜈𑜨𑜄𑜫||||
 𑜈𑜨𑜩||||
 𑜈𑜩𑜨 𑜀𑜪𑜨||||
-𑜈𑜰𑜫||||
-𑜉𑜀𑜫||||
+𑜈𑜚𑜫|leaf|baːw|baue|||𑜈𑜰𑜫
+𑜉𑜀𑜫|fruit||mak|
 𑜉𑜀𑜫 𑜁𑜥 𑜌𑜧||||
 𑜉𑜃𑜫||||
 𑜉𑜡||||
 𑜉𑜡 𑜎𑜢𑜃𑜫||||
 𑜉𑜢𑜂𑜫 𑜈𑜣||||
-𑜉𑜢𑜤𑜂𑜫||||
 𑜉𑜢𑜤𑜂𑜫 𑜀𑜥𑜎𑜡||||
 𑜉𑜢𑜤𑜂𑜫 𑜇𑜣||||
 𑜉𑜢𑜤𑜂𑜫 𑜍𑜣 𑜉𑜢𑜤𑜂𑜫 𑜍𑜪||||
@@ -152,7 +151,7 @@ autoExpandExamples.aho = `
 𑜉𑜧𑜨||||
 𑜉𑜨𑜀𑜫||||
 𑜉𑜩||||
-𑜉𑜩𑜓𑜝𑜪||||
+𑜉𑜩𑜓𑜝𑜪|graveyard|||
 𑜋𑜂𑜫||||
 𑜋𑜄𑜫||||
 𑜋𑜢𑜄𑜫||||
@@ -162,9 +161,9 @@ autoExpandExamples.aho = `
 𑜋𑜦𑜧𑜑𑜤𑜂𑜫||||
 𑜋𑜧𑜨||||
 𑜋𑜩||||
-𑜋𑜰𑜫||||
-𑜋𑜰𑜫𑜎𑜤𑜂𑜫||||
-𑜋𑜰𑜫𑜓𑜂𑜫||||
+𑜋𑜚𑜫||||||𑜋𑜰𑜫
+𑜋𑜚𑜫𑜎𑜤𑜂𑜫||||||𑜋𑜰𑜫𑜎𑜤𑜂𑜫
+𑜋𑜚𑜫𑜓𑜂𑜫||||||𑜋𑜰𑜫𑜓𑜂𑜫
 𑜌𑜤𑜂𑜫||||
 𑜍𑜀𑜫||||
 𑜍𑜢𑜤𑜃𑜫||||
@@ -174,7 +173,7 @@ autoExpandExamples.aho = `
 𑜍𑜥||||
 𑜍𑜨𑜀𑜫||||
 𑜍𑜪𑜧𑜆𑜪𑜀𑜫||||
-𑜎𑜚𑜫||||
+𑜎𑜚𑜫|licquor|l§aːw|law|
 𑜎𑜢𑜃𑜫||||
 𑜎𑜢𑜤𑜀𑜫||||
 𑜎𑜢𑜤𑜂𑜫||||
@@ -186,8 +185,6 @@ autoExpandExamples.aho = `
 𑜏𑜢𑜆𑜫||||
 𑜏𑜢𑜆𑜫𑜏𑜨𑜂𑜫𑜆𑜃𑜫𑜃𑜡||||
 𑜏𑜢𑜐𑜫||||
-𑜏𑜢𑜤𑜈𑜫||||
-𑜏𑜢𑜤𑜰𑜫||||
 𑜏𑜣||||
 𑜏𑜤𑜂𑜫||||
 𑜏𑜤𑜃𑜫𑜍𑜤||||
@@ -210,15 +207,18 @@ autoExpandExamples.aho = `
 𑜒𑜢𑜀𑜫||||
 𑜒𑜢𑜃𑜫|crocodile||ʼin|
 𑜒𑜧||||
-𑜒𑜧 𑜋𑜰𑜫||||
-𑜒𑜪𑜀𑜫𑜁𑜪𑜰𑜫||||
+𑜒𑜧 𑜋𑜚𑜫||||||𑜒𑜧 𑜋𑜰𑜫
+𑜒𑜪𑜀𑜫𑜁𑜪𑜚𑜫||||||𑜒𑜪𑜀𑜫𑜁𑜪𑜰𑜫
 𑜓𑜂𑜫||||
-𑜓𑜝𑜪||||
+𑜓𑜝𑜪|dead (person)|dlam|dlam|
 𑜓𑜢𑜂𑜫||||
 𑜓𑜢𑜤𑜃𑜫||||
 𑜓𑜤𑜀𑜫||||
 𑜓𑜪||||
-𑜴𑜪𑜨||||
+𑜴𑜪𑜨|green||4ṃo
+𑜏𑜢𑜤𑜈𑜫|tiger|sɯː|süw
+𑜏𑜢𑜤𑜚𑜫|tiger|sɯː|süw|||𑜏𑜢𑜤𑜰𑜫
+𑜉𑜢𑜤𑜂𑜫|city||mueang
 
 
 
@@ -226,6 +226,12 @@ autoExpandExamples.aho = `
 𑜃𑜧𑜨𑜈𑜫𑜤|star|||
 𑜲𑜻𑜺𑜸|58|||
 𑜶𑜻𑜺𑜶|136||
+𑜻𑜺𑜒𑜢𑜄𑜫|31||{20}{10}it
+
+
+@ https://www.youtube.com/watch?v=CH-hcnBL544&t=301s
+𑜒𑜢𑜆𑜫 𑜊𑜚𑜫|the end||ip jao
+
 
 
 
@@ -239,10 +245,10 @@ autoExpandExamples.aho = `
 termLists = [
 
 {
-"title":"Wiktionary, Eastern Cham lemmas",
-"url":"https://en.wiktionary.org/wiki/Category:Eastern_Cham_lemmas",
+"title":"Wiktionary, Ahom lemmas",
+"url":"https://en.wiktionary.org/wiki/Category:Ahom_lemmas",
 },
-
+/*
 {
 "title":"Austronesian Basic Vocabulary Database, Phan Rang Cham (Eastern Cham)",
 "url":"https://abvd.eva.mpg.de/austronesian/language.php?id=371&sort=item",
@@ -254,6 +260,6 @@ termLists = [
 "url":"https://livingdictionaries.app/sora/entries/list",
 "notes":"No native script.",
 },
-
+*/
 ]
 
