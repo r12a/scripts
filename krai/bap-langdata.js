@@ -19,17 +19,17 @@ also:
 linked:"krai/bap.html", fonts:"/pickers/krai-bap/", 
 },
 
-"krai": { name:"Kirat Rai", region:"sasia", 
-blocks:1, chars:58, letter:45, mark:0, number:10, punctuation:3, symbol:0, other:0, 
-direction: "ltr", rtlnumbers:N,
-type:"abug", 
-voweltype: { inherent:1, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"A", vcomposite:N, prebase:N, circum:N },
+
+
+"krai": {name:"Kirat Rai", region:"sasia", type:"abug", 
+blocks:1, chars:58, bletter:45, bmark:0, bnumber:10, bpunctuation:3, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"A 𖵃", vcomposite:N, prebase:N, circum:N, },
 case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
 medials:"", finals:"let",
-clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:Y, diacritic:N, killer:"k" },
-wordsep: "space",
-linebreak:"word", hyphen:"?", justification:"sp", spacing:"?", gc:Y,
-baseline: "romn",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:Y, diacritic:N, killer:"k"},
+wordsep:"space",
+linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp", gc:Y, baseline:"romn", 
 },
 
 

@@ -1,20 +1,35 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
 var langs = {
 
 "hi": { name:"Hindi", local:" मानक हिन्दी‎ / हिन्दी‎", localtrans:"(Mānak Hindī / Hindī)", silcode:"hin", 
 source:"21f8184138e858d28a8478313d2b5b59a1f650f6,cldr_hi,udhr_hin", 
 region:"sasia", countries:"India, Nepal, Singapore, South Africa", script:"deva", speakers:"260000000", 
-letter:"अआइईउऊऋऍएऐऑओऔकखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहऽॐ", letteraux:"क़ख़ग़ज़ड़ढ़फ़", mark:"ँंः़ािीुूृॅेैॉोौ्", number:"०१२३४५६७८९", punctuation:"।॥॰‘’“”", symbol:"₹", other:"\u200C\u200D",
-aux:"[]ʼ͏​‑–—…‰",
-orth:`[Devanagari] &nbsp;  
-<a href="../scripts/devanagari" target="_blank">Detailed summary</a>.`,
+letter:"अआइईउऊऋऍएऐऑओऔकखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहऽॐ", letteraux:"क़ख़ग़ज़ड़ढ़फ़", mark:"ँंः़ािीुूृॅेैॉोौ्", markaux:"", number:"०१२३४५६७८९", numberaux:"", punctuation:"।॥॰‘’“”", punctuationaux:"", symbol:"₹", symbolaux:"", other:"\u{200C}\u{200D}", otheraux:"", aux:"[]ʼ͏​‑–—…‰", deprecated:"", 
+orth:`[Devanagari] &nbsp; <a href="../scripts/deva/hi.html" target="_blank">Detailed summary</a>.`,
 also:
 ["hi-newa | newa | Archaic, no longer in use."],
-type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"space", baseline:"hang", wrap:"word", hyphenation:"(yes)", hyphen:"-",  direction:"ltr",  justification:"sp", 
-vowels:"inh:1 cm:11 vs:11 ind:12 pre:1 voc:1",  clusters:"vir stk cnj lig rax",  finals:"cm:2", 
-linked:"deva/hi", fonts:"/pickers/deva-hi/", picker:"deva-hi", 
+linked:"deva/hi", picker:"deva-hi", font:"Noto Sans Devanagari", 
 },
+
+
+"deva": {name:"Devanagari", region:"sasia", type:"abug", 
+blocks:3, chars:170, bletter:90, bmark:53, bnumber:10, bpunctuation:17, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"", vcomposite:N, prebase:Y, circum:N, },
+case:N, cursive:N, mcchars:Y, conjuncts:Y, ligs:N, 
+medials:"", finals:"cm",
+clusters:{ ligation:Y, stacks:Y, touch:N, conjoined:Y, subjoinedcp:N, visviram:N, diacritic:N, killer:"v"},
+wordsep:"space",
+linebreak:"word", hyphen:"yes -", wordspan:N, justification:"sp", gc:N, baseline:"hang", 
+},
+
 
 
 }
