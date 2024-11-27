@@ -28,6 +28,18 @@ reflist = {
 "url":"https://www.unicode.org/L2/L2012/12309r-n4321r.pdf",
 },
 
+"up2": {
+"authors": "Martin Hosken, Stephen Morey",
+"title":"L2/15-272: Proposal to add one extra character to the Ahom Block of the UCS",
+"url":"https://www.unicode.org/L2/L2015/15272-ahom-extra.pdf",
+},
+
+"up3": {
+"authors": "Stephen Morey",
+"title":"L2/20-258: Proposal to encode additional signs for the Tai Ahom script",
+"url":"https://www.unicode.org/L2/L2020/20258-add-tai-ahom.pdf",
+},
+
 "u": {
 "authors": "Unicode Consortium",
 "title":"The Unicode Standard, Version 16.0",
@@ -72,6 +84,20 @@ reflist = {
 "url":"https://www.youtube.com/watch?v=vkL7MBrakEQ",
 "reviewed":true
 },
+
+"yt3": {
+"authors": "ILoveLanguages!",
+"title":"Tai Ahom language, people, & culture (Video)",
+"url":"https://www.youtube.com/watch?v=afg3sgXQY6w",
+"reviewed":true
+},
+
+"yt4": {
+"authors": "Learn Ahom",
+"title":"Learn Ahom (Twitter channel)",
+"url":"https://x.com/LearnAhom",
+},
+
 
 
 
