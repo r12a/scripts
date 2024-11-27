@@ -99,28 +99,58 @@ function gatherData () {
         
             if (ipaData[phone].length > 1 && i > 0) out += `<div class="phone">&nbsp;</div>\n`
             else out += `<div class="phone"><span class="ipa">${ phone.toLowerCase() }</span></div>\n`
-            //out += `<div class="posn">&nbsp;</div>\n`
         
-            out += `<div class="col1">\n`
-            out += `<p><span class="ch">${ char }</span> <b></b></p>\n`
-            out += `<p class="example"><span class="eg" lang="${ lang }">xxx</span></p>\n`
-            out += `</div>\n`
+            out += `<div>\n`
             
             // add shaped forms if shape column exists
             if (spreadsheetRows[char] && spreadsheetRows[char][cols.shape]) shape = spreadsheetRows[char][cols.shape]
             else shape = ''
-            
             hex =char.codePointAt(0).toString(16).toUpperCase()
             while (hex.length < 4) hex = '0'+hex
 
             if (shape === '4') {
-                out += `<div class="col2">\n<p><span class="shaping" lang="ps"><span class="hx noname">${ hex }</span><span class="hx fina noname">${ hex }</span><span class="hx medi noname">${ hex }</span><span class="hx init noname">${ hex }</span>⏴</span></p>`
+                out += `<div style="float:right">\n<p><span class="shaping" lang="${ lang }"><span class="hx noname">${ hex }</span><span class="hx fina noname">${ hex }</span><span class="hx medi noname">${ hex }</span><span class="hx init noname">${ hex }</span>⏴</span></p>`
                 }
 
-            if (shape === '2') {
-                out += `<div class="col2">\n<p><span class="shaping" lang="ps"><span class="hx init noname">${ hex }</span><span class="hx fina noname">${ hex }</span>⏴</span></p>`
+            else if (shape === '2') {
+                out += `<div style="float:right">\n<p><span class="shaping" lang="${ lang }"><span class="hx init noname">${ hex }</span><span class="hx fina noname">${ hex }</span>⏴</span></p>`
                 }
-            //out += `\n</div>\n` // end of phone
+
+            else if (shape !== '' && shape !== '0') {
+                out += `<div style="float:right">\n<p><span class="shaping" lang="${ lang }"><span class="ch noname">${ shape }</span>⏴</span></p></div>`
+                }
+          
+            
+            
+            
+            out += `<p>`
+            out += `<span class="posn">${ spreadsheetRows[char][cols.typeLoc] }</span>\n`
+            out += `<span class="ch">${ char }</span> <b>`
+            if (spreadsheetRows[char] && spreadsheetRows[char][cols.statusLoc]) out += spreadsheetRows[char][cols.statusLoc]
+            out += `</b></p>\n`
+            //out += `<p class="example"><span class="eg" lang="${ lang }">xxx</span></p>\n`
+            out += `</div>\n`
+            
+            /*// add shaped forms if shape column exists
+            console.log(spreadsheetRows[char], spreadsheetRows[char][cols.shape])
+            if (spreadsheetRows[char] && spreadsheetRows[char][cols.shape]) shape = spreadsheetRows[char][cols.shape]
+            else shape = ''
+            console.log(shape)
+            hex =char.codePointAt(0).toString(16).toUpperCase()
+            while (hex.length < 4) hex = '0'+hex
+
+            if (shape === '4') {
+                out += `<div class="col2">\n<p><span class="shaping" lang="${ lang }"><span class="hx noname">${ hex }</span><span class="hx fina noname">${ hex }</span><span class="hx medi noname">${ hex }</span><span class="hx init noname">${ hex }</span>⏴</span></p>`
+                }
+
+            else if (shape === '2') {
+                out += `<div class="col2">\n<p><span class="shaping" lang="${ lang }"><span class="hx init noname">${ hex }</span><span class="hx fina noname">${ hex }</span>⏴</span></p>`
+                }
+
+            else if (shape !== '') {
+                out += `<div class="col2">\n<p><span class="shaping" lang="${ lang }"><span class="ch noname">${ shape }</span>⏴</span></p>`
+                }
+            out += `\n</div>\n` // end of phone*/
             out += `</div>\n\n` // end of mapitem
             }
         }
