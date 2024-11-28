@@ -53,8 +53,8 @@ autoExpandExamples.aho = `
 𑜀𑜨𑜂𑜫||||
 𑜀𑜩|chicken|kai|kay|
 𑜀𑜪|fist|kam|kam|
-𑜀𑜪𑜧||||
-𑜀𑜪𑜧𑜃𑜨𑜃𑜫||||
+𑜀𑜧𑜪|cheek|kɛm|kaṃw|||𑜀𑜪𑜧
+𑜀𑜧𑜪𑜃𑜨𑜃𑜫|cheekbone|kɛm§nɔ§n|kaṃwnon|||𑜀𑜪𑜧𑜃𑜨𑜃𑜫
 𑜁𑜂𑜫||||
 𑜁𑜃𑜫||||
 𑜁𑜠||||
@@ -172,7 +172,7 @@ autoExpandExamples.aho = `
 𑜍𑜤𑜈𑜫||||
 𑜍𑜥||||
 𑜍𑜨𑜀𑜫||||
-𑜍𑜪𑜧𑜆𑜪𑜀𑜫|earlobe|rɛmpamk|raṃwpaṃk||is this right?
+𑜍𑜧𑜪𑜆𑜪𑜀𑜫|earlobe|rɛmpamk|raṃwpaṃk||is mk right?|𑜍𑜪𑜧𑜆𑜪𑜀𑜫
 𑜎𑜚𑜫|licquor|l§aːw|law|
 𑜎𑜢𑜃𑜫|tongue|li§n|lin|
 𑜎𑜢𑜤𑜀𑜫||||
