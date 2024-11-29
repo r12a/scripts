@@ -1426,7 +1426,7 @@ function makeSidePanel () {
         if (langs[sid].voweltype) {
             out += '<tr><th>Standalone vowels</th><td class="tableHighlight">'
             
-            if (langs[sid].voweltype.ivowels) out += `independent vowels<br>`
+            if (langs[sid].voweltype.ivowels) out += `letters<br>`
             
             if (langs[sid].voweltype.vbase) out += `carrier ${ langs[sid].voweltype.vbase }<br>`
 

@@ -18,14 +18,14 @@ linked:"mymr/shn", picker:"mymr-shn", font:"",
 
 
 "mymr": {name:"Myanmar", region:"seasia", type:"abug", 
-blocks:4, chars:243, bletter:120, bmark:62, bnumber:50, bpunctuation:0, bsymbol:5, bother:0, 
+blocks:4, chars:243, bletter:120, bmark:62, bnumber:50, bpunctuation:6, bsymbol:5, bother:0, 
 direction:"ltr", rtlnumbers:N,
 voweltype: { inherent:4, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"A အ", vcomposite:Y, prebase:Y, circum:N, },
-case:N, cursive:N, mcchars:Y, conjuncts:Y, ligs:Y, 
+case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:Y, 
 medials:"cm", finals:"vk",
 clusters:{ ligation:N, stacks:Y, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"i"},
 wordsep:"no",
-linebreak:"word", hyphen:"", justification:U, spacing:U, gc:N, baseline:"romn", 
+linebreak:"word", hyphen:U, wordspan:N, justification:U, gc:N, baseline:"romn", 
 },
 
 }

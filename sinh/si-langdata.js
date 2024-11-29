@@ -21,11 +21,11 @@ linked:"sinh/si", picker:"sinh", font:"",
 blocks:2, chars:111, bletter:59, bmark:21, bnumber:30, bpunctuation:1, bsymbol:0, bother:0, 
 direction:"ltr", rtlnumbers:N,
 voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"", vcomposite:N, prebase:Y, circum:Y, },
-case:N, cursive:N, mcchars:N, conjuncts:Y, ligs:Y, 
+case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:Y, 
 medials:"", finals:"cm",
 clusters:{ ligation:N, stacks:N, touch:Y, conjoined:Y, subjoinedcp:N, visviram:Y, diacritic:N, killer:"v"},
 wordsep:"space",
-linebreak:"word", hyphen:"", justification:"sp", spacing:U, gc:N, baseline:"romn", 
+linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp", gc:N, baseline:"romn", 
 },
 
 }

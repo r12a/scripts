@@ -25,11 +25,11 @@ linked:"sund/su", picker:"sund", font:"",
 blocks:2, chars:72, bletter:38, bmark:16, bnumber:10, bpunctuation:8, bsymbol:0, bother:0, 
 direction:"ltr", rtlnumbers:N,
 voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:Y, circum:N, },
-case:N, cursive:N, mcchars:Y, conjuncts:N, ligs:N, 
+case:N, cursive:N, mcchars:"m", conjuncts:N, ligs:N, 
 medials:"cm", finals:"cm",
 clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:Y, diacritic:N, killer:"k"},
 wordsep:"space",
-linebreak:"", hyphen:"", justification:U, spacing:U, gc:Y, baseline:"romn", 
+linebreak:"", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
 },
 
 }

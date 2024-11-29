@@ -20,11 +20,11 @@ linked:"telu/te", picker:"telu", font:"",
 blocks:1, chars:100, bletter:57, bmark:24, bnumber:17, bpunctuation:1, bsymbol:1, bother:0, 
 direction:"ltr", rtlnumbers:N,
 voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:Y, },
-case:N, cursive:N, mcchars:N, conjuncts:Y, ligs:Y, 
+case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:Y, 
 medials:"", finals:"cm",
 clusters:{ ligation:N, stacks:Y, touch:N, conjoined:Y, subjoinedcp:N, visviram:N, diacritic:N, killer:"v"},
 wordsep:"space",
-linebreak:"word", hyphen:"", justification:"sp", spacing:U, gc:N, baseline:"romn", 
+linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp", gc:N, baseline:"romn", 
 },
 
 }

@@ -29,7 +29,7 @@ case:N, cursive:N, mcchars:Y, conjuncts:Y, ligs:N,
 medials:"", finals:"",
 clusters:{ ligation:N, stacks:Y, touch:N, conjoined:N, subjoinedcp:Y, visviram:N, diacritic:N, killer:""},
 wordsep:"sb",
-linebreak:"syllable", hyphen:"", justification:"pad", spacing:U, gc:N, baseline:"hang", 
+linebreak:"syllable", hyphen:"? ", wordspan:N, justification:"pad", gc:N, baseline:"hang", 
 },
 
 }

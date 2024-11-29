@@ -16,7 +16,7 @@ orth:`Tai Viet &nbsp; <a href="../scripts/tavt/index.html" target="_blank">Detai
 also:
 ["blt-laoo | laoo | ",
 "blt-latn | latn | "],
-linked:"tavt/blt", picker:"", font:"", 
+linked:"tavt/blt", picker:"tavt", font:"Noto Sans Tai Viet", 
 },
 
 
@@ -28,7 +28,7 @@ case:N, cursive:N, mcchars:Y, conjuncts:N, ligs:N,
 medials:"", finals:"let",
 clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
 wordsep:"space",
-linebreak:"word", hyphen:"", justification:U, spacing:U, gc:Y, baseline:"romn", 
+linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
 },
 
 

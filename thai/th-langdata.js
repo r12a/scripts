@@ -1,17 +1,31 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
 var langs = {
 
-"th": { name:"Thai (Siamese)", local:"ภาษาไทย", silcode:"tha", 
+"th": { name:"Thai (Siamese)", local:"ภาษาไทย", localtrans:"", silcode:"tha", 
 source:"85b37d327a5e470abcc40234d6cbfdfa388d6566,cldr_th,udhr_tha", 
 region:"seasia", countries:"Thailand", script:"thai", speakers:"44000000", 
-letter:"กขคฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮะาำเแโใไๅๆ", mark:"ัิีึืุู็่้๊๋์", markaux:"ํ", number:"๐๑๒๓๔๕๖๗๘๙", punctuation:"ฯ๏๚๛–—‘’“”…", symbol:"฿", other:"\u200B\u2060", 
-aux:"%;[]§«»ʼ͏ ‌‍‑†‡‰′″‹›",
+letter:"กขคฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮะาำเแโใไๅๆ", letteraux:"", mark:"ัิีึืุู็่้๊๋์", markaux:"ํ", number:"๐๑๒๓๔๕๖๗๘๙", numberaux:"", punctuation:"ฯ๏๚๛–—‘’“”…", punctuationaux:"", symbol:"฿", symbolaux:"", other:"\u{200B}\u{2060}", otheraux:"", aux:"%;[]§«»ʼ͏ ‌‍‑†‡‰′″‹›", deprecated:"", 
 orth:`Thai. &nbsp; <a href="../scripts/thai/" target="_blank">Details</a>.`,
-type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"no/zwsp", baseline:"romn", wrap:"word", hyphenation:"no",  direction:"ltr",  justification:"sp ig", 
-vowels:"inh:2 cm:9 vs:8 let:8 other:4 vsl:12 base:อ/ɔː,a venc:5 comp:28 voc:2", 
-linked:"thai/th", fonts:"/pickers/thai/", picker:"thai", 
+linked:"thai/th", picker:"thai", font:"Noto Serif Thai", 
 },
 
+
+"thai": {name:"Thai", region:"seasia", type:"abug", 
+blocks:1, chars:87, bletter:57, bmark:16, bnumber:10, bpunctuation:3, bsymbol:1, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:3, letters:Y, marks:Y, hidden:N, visorder:Y, vocalics:Y, ivowels:N, vbase:"O อ", vcomposite:Y, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:"m", conjuncts:N, ligs:N, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"no",
+linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
+},
 
 }

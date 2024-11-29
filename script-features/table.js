@@ -7,7 +7,7 @@
 
 // one lang tag per row
 //var items = ['adlm', 'am', 'arb', 'hy', 'aii', 'ban-bali', 'bm', 'bax-bamu', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'cmn', 'crk', 'dv', 'ff', 'ff-arab', 'fuf-adlm', 'el', 'gu', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'ka', 'khb', 'khk', 'khk-mong', 'km', 'ko', 'ks', 'ks-deva', 'kyu', 'lep', 'lif', 'lis', 'lo', 'ml', 'mid', 'mro', 'new', 'nod', 'nqo', 'ory', 'osa', 'pa', 'pes', 'rhg', 'ru', 'sat', 'shn', 'si', 'su-sund', 'suz', 'syc', 'kkh', 'ta', 'tdd', 'te', 'th', 'tru', 'ug', 'uk', 'unr', 'ur', 'vai', 'wo', 'zgh', 'blt', 'bo', ]
-var items = ['adlm', 'ahom', 'arab', 'arabl', 'arabd', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'batk', 'beng', 'bugi', 'buhd', 'cans', 'cakm', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hang', 'hani', 'hano', 'hebr', 'hira', 'hluw', 'java', 'kali', 'kana', 'khmr', 'krai', 'lana', 'laoo', 'latn', 'lepc', 'limb', 'lisu', 'mand', 'mlym', 'mong', 'mroo', 'mymr', 'nagm', 'newa', 'nkoo', 'olck', 'orya', 'osge', 'rohg', 'sinh', 'sund', 'sunu', 'syrc', 'syrn', 'syrj', 'tale', 'talu', 'taml', 'tayo', 'tavt', 'telu', 'tfng', 'thaa', 'thai', 'tibt', 'tols', 'vaii' ]
+var items = ['adlm', 'ahom', 'arab', 'arabl', 'arabd', 'armi', 'armn', 'avst', 'bali', 'bamu', 'bass', 'batk', 'beng', 'bugi', 'buhd', 'cans', 'cakm', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hang', 'hani', 'hano', 'hebr', 'hira', 'hluw', 'java', 'kali', 'kana', 'khmr', 'krai', 'lana', 'laoo', 'latn', 'lepc', 'limb', 'lisu', 'mand', 'mlym', 'mong', 'mroo', 'mymr', 'nagm', 'newa', 'nkoo', 'olck', 'orya', 'osge', 'plrd', 'rjng', 'rohg', 'sinh', 'sora', 'sund', 'sunu', 'syrc', 'syrn', 'syrj', 'tagb', 'tale', 'talu', 'taml', 'tayo', 'tavt', 'telu', 'tfng', 'thaa', 'thai', 'tibt', 'tols', 'vaii', 'wcho' ]
 
 
 // these variables indicate which tabs are open or closed
@@ -76,15 +76,15 @@ var by = function (path, reverse, primer, then) {
 
 		vsyllable:"Vowel<br>syllables", 
 		vinherent:"Inherent<br>vowel",
-		vdiac:"Vowel<br>marks",
-		vletter:"Vowel<br>letters",
+		vdiac:"PCV<br>marks",
+		vletter:"PCV<br>letters",
 		vother:"Other<br>chars",
 		vhidden:"Hides<br>vowels",
 		//matres:"Matres lectionis",
 		vsign:"Visual<br>order",
         
-		ivowels:"Ind.<br>vowels",
-		vbase:"Vowel<br>carrier",
+		ivowels:"SA<br>letters",
+		vbase:"SA<br>carrier",
 		//vmark:"Vowel marks",
         
 		pbletter:"Prebase<br>letters",
@@ -206,15 +206,11 @@ function resort (column, reverse) {
     
         table += makeTableHead ('vinherent', "Inherent vowel.", REVERSE)
         
-        table += makeTableHead ('vdiac', "Combining marks used to spell vowels.", REVERSE)
+        table += makeTableHead ('vdiac', "Post-consonant vowels are written using combining marks.", REVERSE)
        
-        table += makeTableHead ('vletter', "Letters used to spell vowels.", REVERSE)
+        table += makeTableHead ('vletter', "Post-consonant vowels are written using letters.", REVERSE)
         
         //table += makeTableHead ('vother', "Other letters used to spell vowels.", REVERSE)
-
-        table += makeTableHead ('ivowels', "Independent vowels used to spell standalone vowels.", REVERSE)
-       
-        table += makeTableHead ('vbase', "Character used as a carrier for standalone vowels.", REVERSE)
        
         table += makeTableHead ('vhidden', "Diacritics used to spell vowels that are usually hidden.", REVERSE)
  
@@ -233,6 +229,10 @@ function resort (column, reverse) {
         table += makeTableHead ('vcircum', "(Single) combining marks that place glyphs on more than one side of the base character.", REVERSE)
         
         table += makeTableHead ('vcomposite', "Vowel sounds that are represented by more than one character.", REVERSE)
+
+        table += makeTableHead ('ivowels', "Standalone vowels are written using letters.", REVERSE)
+       
+        table += makeTableHead ('vbase', "Standalone vowels are written using a base carrier with diacritics.", REVERSE)
         
         table += makeTableHead ('vvocalics', "Vocalic letters.", REVERSE)
         }
@@ -378,10 +378,6 @@ function resort (column, reverse) {
 
                 //table += drawCell('vother', scriptData[i], 'otherV')
 
-                table += drawCell('ivowels', scriptData[i], 'standalone')
-
-                table += drawCell('vbase', scriptData[i], 'standalone')
-
                 table += drawCell('vhidden', scriptData[i], 'combiningV')
 
                 //table += drawCell('matres', scriptData[i], 'otherV')
@@ -398,6 +394,10 @@ function resort (column, reverse) {
                 table += drawCell('vcircum', scriptData[i], 'circumgraphs')
 
                 table += drawCell('vcomposite', scriptData[i], 'compositeV')
+
+                table += drawCell('ivowels', scriptData[i], 'standalone')
+
+                table += drawCell('vbase', scriptData[i], 'standalone')
 
                 table += drawCell('vvocalics', scriptData[i], 'vocalics', 'yy')
                 }
@@ -673,22 +673,6 @@ function showContext (evt) {
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> letters are used to represent vowels.`
         out += '<br>The orthography uses letter characters to represent vowels pronounced <em>after a consonant</em>. This does NOT include letters used to represent standalone vowels (cf. independent letters).'
         }
-
-    if (parts[0] === tablecolumns.ivowels) {
-        types = parts[1].split(' ')
-        if (parts[1].trim() === '-') out += ` —`
-        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> character is used.`
-        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used to represent standalone vowels.`
-        out += '<br>More than one letters are used to represent <em>standalone vowel sounds</em>. (Cf. the column <samp>Vowel letters</samp>, which lists free standing letters that represent a vowel following a consonant.)'
-        }
-    
-    if (parts[0] === tablecolumns.vbase) {
-        if (parts[1].trim() === '-') out += ` —`
-        else {
-            out += `${ parts[1] } is used as a vowel carrier.`
-            }
-        out += '<br>Carriers are used with combining marks to represent <em>standalone vowel sounds</em> (cf. <samp>Standalone letters</samp>, which are free standing letters).'
-        }
     
     if (parts[0] === tablecolumns.vhidden) {
         types = parts[1].split(' ')
@@ -726,6 +710,22 @@ function showContext (evt) {
         else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> multipart vowel is listed in the description.`
         else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> multipart vowels are listed in the description.`
         out += `<br>Orthographies using this script express a single vowel sound using a combination of combining marks and/or letters. This is a common feature of Southeast Asian scripts, such as Thai and Lao. It doesn't generally include glides that form part of a diphthong, nor does it include nasalisation or vowel lengthening diacritics.`
+        }
+
+    if (parts[0] === tablecolumns.ivowels) {
+        types = parts[1].split(' ')
+        if (parts[1].trim() === '-') out += ` —`
+        else if (parts[1].trim() === '1') out += `<bdi>${ parts[1] }</bdi> character is used.`
+        else if (parts[1] !== '-') out += `<bdi>${ parts[1] }</bdi> characters are used to represent standalone vowels.`
+        out += '<br>More than one letters are used to represent <em>standalone vowel sounds</em>. (Cf. the column <samp>Vowel letters</samp>, which lists free standing letters that represent a vowel following a consonant.)'
+        }
+    
+    if (parts[0] === tablecolumns.vbase) {
+        if (parts[1].trim() === '-') out += ` —`
+        else {
+            out += `${ parts[1] } is used as a vowel carrier.`
+            }
+        out += '<br>Carriers are used with combining marks to represent <em>standalone vowel sounds</em> (cf. <samp>Standalone letters</samp>, which are free standing letters).'
         }
 
     if (parts[0] === tablecolumns.vvocalics) {

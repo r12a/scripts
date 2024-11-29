@@ -9,8 +9,9 @@ blockDirection=''  // ltr/rtl or '' for ltr; used by block.html
 blockDirectoryName='plrd'  // folder name where block file is found, no slash
 orthogFilePath='plrd/hmd'  // path below /scripts, including filename, but no extension, eg. lana/nod
 pickerDir='plrd-hmd'  // directory name for picker, no slash at end
-scriptSummaryTableName='hmd'  // id used for langs record in xx-langdata.js; used to make summary table
-charUsageBCP='hmd-plrd'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only
+orthogSummaryTableName='hmd'  // id used for langs record in xx-langdata.js; used to make summary table
+scriptSummaryTableName='plrd'  // id used for langs record in xx-langdata.js; used to make summary table
+charUsageBCP='hmd'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only
 orthogName = 'Pollard script' // natural language name for the orthography; used only in makeIndexIntro
 languageName = 'A-Hmao' // natural language name of language; used in various places, esp block
 scriptIsIndic = true  // true if there are indic syllabic categories; used only in makeIndexIntro
@@ -18,3 +19,4 @@ scriptIsIndic = true  // true if there are indic syllabic categories; used only 
 
 defaultSize = '24px'  // used by block.html to set size of font, including in font mgt panel
 letterClassName = 'hmd'  // classname for a given orthography in the block page
+hideBlockName = "MIAO"

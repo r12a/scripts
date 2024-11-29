@@ -20,15 +20,15 @@ linked:"syrc/tru", picker:"syrc-tru", font:"'Noto Sans Syriac Western'",
 },
 
 
-"syrj": {name:"Western Syriac", region:"wasia", type:"alpha", 
+"syrj": {name:"Eastern Syriac", region:"wasia", type:"alpha", 
 blocks:2, chars:88, bletter:45, bmark:28, bnumber:0, bpunctuation:14, bsymbol:0, bother:1, 
 direction:"rtl", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N, },
-case:N, cursive:Y, mcchars:Y, conjuncts:N, ligs:Y, 
+voweltype: { inherent:0, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"ʔ ܐ", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:Y, mcchars:"m", conjuncts:N, ligs:Y, 
 medials:"", finals:"",
 clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
 wordsep:"space",
-linebreak:"word", hyphen:"", justification:U, spacing:U, gc:Y, baseline:"romn", 
+linebreak:"word", hyphen:"?", wordspan:N, justification:U, gc:Y, baseline:"romn", 
 },
 
 
