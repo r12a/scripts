@@ -455,7 +455,7 @@ linebreak:"syllable", hyphen:"", justification:"sp ig", wordspan:Y, gc:N, baseli
 
 
 "jpan": {name:"Japanese", region:"eur", type:"syll", 
-blocks:9+, chars:2731, bletter:2731, bmark:0, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
+blocks:"9+", chars:2724, bletter:2731, bmark:2, bnumber:3, bpunctuation:0, bsymbol:2, bother:0, 
 direction:"ltr tbrl", rtlnumbers:N,
 voweltype: { inherent:0, letters:N, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
 case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 

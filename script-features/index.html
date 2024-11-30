@@ -138,7 +138,7 @@ for (j=0;j<items.length;j++) {
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->23 November, 2024<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->30 November, 2024<!-- #EndDate -->
 <span id="versionTop">• recent <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/featurelist" title="Show recent commits.">changes</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[featurelist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%0A%0A" title="Leave a comment.">comment</a></span>
 </p>
 
@@ -182,16 +182,18 @@ resort('name')
 
 <ul>
 <li><b class="leadin">Arabic:</b> The original usage is as an abjad. This applies to Modern Standard Arabic. Another significantly different approach mandates the use of all diacritics, which makes it an alphabet, since all the consonants and vowels are written. This approach is used for languages such as Kashmiri, or African ajami orthographies.  A third approach is also alphabetic, but uses letters rather than diacritics to write vowels. This approach is used, for example, by Uighur.</li>
+
+<li><b class="leadin">Sunuwar:</b> The original usage is as an abugida, but in Nepal the script is used as an alphabet. In this case we kept a single line but listed both alpha and abug in the type column.</li>
 </ul>
 
 
 
 
 
-<p>The major divisions are displayed like buttons below. The text following the button indicates the URL parameter that will cause that section to be automatically displayed.</p>
+<p>The major divisions are displayed like buttons below. Any text following the button indicates a URL parameter that will cause that section to be automatically displayed.</p>
 
 
-<p id="blocks"><b class="leadin">Blocks.</b> The number of Unicode blocks dedicated to the script. Blocks containing common characters, such as punctuation and many accent marks, are not included in the count.</p>
+<p id="blocks"><b class="leadin">Blocks.</b> The number of Unicode blocks dedicated to the script. Blocks containing common characters, such as punctuation and many accent marks, are not included in the count. (This is significant for CJK and Latin scripts, in particular.)</p>
 
 
 
@@ -212,7 +214,7 @@ resort('name')
 
 <li><em>symbol</em>: Any characters with the general property of symbol in the blocks examined.</li>
 
-<li><em>other</em>: Characters with the general property 'other'. These are almost always formatting characters, such as those used for bidi control, or joining/non-joining. Many of these characters are in a common Unicode block, rather than in the dedicated blocks for which the figures are assembled.</li>
+<li><em>other</em>: Characters with the general property 'other'. These are almost always formatting characters, such as those used for bidi control, or joining/non-joining. Many of these characters are in a common Unicode block, rather than in the dedicated blocks for which the figures are assembled, and those numbers are not reflected in this column.</li>
 </ul>
 
 
@@ -236,7 +238,7 @@ resort('name')
 <li><samp>bous</samp> boustrophedon.</li>
 </ul>
 </li>
-<li><em>RTL digits</em>: In most orthographies where the text is read right to left numbers are read left to right. In these orthographies, however, number are also read right to left.</li>
+<li><em>RTL digits</em>: In most orthographies where the text is read right to left numbers are read left to right. In these orthographies, however, numbers are also read right to left.</li>
 </ul>
 
 
@@ -249,10 +251,10 @@ resort('name')
 
 <p id="type"><b class="leadin">Writing system.</b> This column indicates whether the orthography is one of the following.</p>
 <ul>
-<li><em>alpha</em>: An alphabet, ie. vowels are written as letters.</li>
-<li><em>abjad</em>: An abjad, ie. vowels are normally not written.</li>
-<li><em>abug</em>: An abugida, ie. consonants carry an inherent vowel which is overridden by vowel-signs to express different vowel sounds.</li>
-<li><em>syll</em>: A syllabary, ie. characters generally represent a combination of consonant+vowel.</li>
+<li><em>alpha</em>: An alphabet, ie. vowels are written separately from the consonants. This includes scripts such as Latin, Cyrillic, Armenian, etc, but also scripts where the vowels are written using combining marks rather than letters, such as Arabic used for Kashmiri, Tai Viet, Thaana, etc.</li>
+<li><em>abjad</em>: An abjad, ie. short vowels are normally not written. This applies to scripts such as Arabic (when used for the Arabic language), Syriac, Aramaic, etc.</li>
+<li><em>abug</em>: An abugida, ie. consonants carry an inherent vowel which is overridden by vowel signs to represent other vowel sounds. Typical scripts include Devanagari, Thai, Buginese, etc.</li>
+<li><em>syll</em>: A syllabary, ie. characters generally represent a combination of consonant+vowel. These scripts include Cherokee, Vai, etc, but also Chinese, Japanese, etc.</li>
 <li><em>feat</em>: A featural syllabary, ie. characters are syllabic, but specific, standardised features of the glyphs carry information about the vowel represented. These scripts include Korean, Canadian Syllabics, and Ethiopic.</li>
 </ul>
 
@@ -261,23 +263,23 @@ resort('name')
 <ul>
 <li><em>Inherent vowel</em>: The consonants in the orthography carry an inherent vowel sound, which, when needed, can be changed using vowel-signs or nullified by a particular character. The number indicates the number of ways in which the inherent vowel is typically pronounced in languages using this orthography.</li>
 
-<li><em>Vowel marks</em>: The script represents vowel sounds through combining marks. Note that this doesn't refer to marks that combine with letters to indicate nasalisation, etc, but rather to marks that on their own represent a vowel sound, such as for many vowel signs.</li>
+<li><em>PCV marks</em>: The script represents <em>post-consonant</em> vowel sounds using combining marks. Note that this doesn't refer to marks that combine with letters to indicate nasalisation, etc, but rather to marks that on their own constitute the basic representation of a vowel sound, such as for many vowel signs.</li>
 
-<li><em>Vowel letters</em>: The orthography uses letter characters to represent vowels <em>pronounced after a consonant</em>. This does NOT include letters used to represent standalone vowels (see below).</li>
-
-<li><em>Independent vowels</em>: Letter characters are used to represent vowels <em>that are NOT preceded by a consonant</em>.</li>
-
-<li><em>Vowel carrier</em>: Standalone vowels are written using a base character plus vowel-sign. The column shows the character(s) and part of the Unicode name.</li>
+<li><em>PCV letters</em>: The orthography uses letter characters to represent  vowels <em>pronounced after a consonant</em>. This does NOT include letters used to represent standalone vowels (see below).</li>
 
 <li><em>Hides vowels</em>: Orthographies using this script generally hide vowel diacritics. This typically applies to abjads such as are used by Arabic, Hebrew, Urdu, etc. In the case of Arabic some orthographies always show all vowel diacritics, or show all vowels as letters; these alphabetic uses of the Arabic script appear on separate lines.</li>
 
-<li><em>Visual order</em>: The orthography uses ordinary spacing letters before a consonant to represent a vowel sound that is pronounced after the consonant (it could be part of a composite vowel). This includes scripts such as Thai or Lao.</li>
+<li><em>Visual order</em>: The orthography uses <em>ordinary spacing letters</em> before a consonant to represent a vowel sound that is pronounced after the consonant (it could be part of a composite vowel). This includes scripts such as Thai, Lao &amp; Tai Viet. (See prebase marks for the corresponding use of combining marks.)</li>
 
 <li><em>Prebase marks</em>: Scripts where orthographies use combining characters after the base consonant to represent vowel sounds, but the glyph for that character appears before the consonant itself when displayed, eg. the short i in Hindi. (See visual order for the corresponding use of letters.)</li>
 
 <li><em>Circumgraphs</em>: A vowel is represented by a single combining character, but  the orthography displays multiple glyphs simultaneously on different sides of the base consonant, eg. certain Tamil vowel signs.</li>
 
-<li><em>Composite vowels</em>: Orthographies using this script express a single vowel sound using a combination of combining marks and/or letters. This is a common feature of Southeast Asian scripts, such as Thai and Lao. It doesn't generally include glides that form part of a diphthong.</li>
+<li><em>Composite vowels</em>: Orthographies using this script express a single vowel sound using multiple code points (the opposite of a circumgraph). This is a common feature of Southeast Asian scripts, such as Thai and Lao. It doesn't generally include glides that form part of a diphthong, and it ignores marks used to indicate nasalisation or vowel length.</li>
+
+<li><em>SA letters</em>: Letter characters are used to represent standalone vowels, ie. <em>that are NOT preceded by a consonant</em>.</li>
+
+<li><em>SA carrier</em>: Standalone vowels are written using a base character plus vowel-sign. The column shows the character(s) and part of the Unicode name.</li>
 
 <li><em>Vocalics</em>: The script has single characters that represent a consonant plus vowel, as in Sanskrit and other indic scripts.</li>
 </ul>
@@ -294,13 +296,13 @@ resort('name')
 <ul>
 <li><samp>✓</samp> regular uppercase and lowercase mappings. </li>
 <li><samp>allcaps</samp> uppercase forms are only used for whole words or phrases. Georgian case forms are used as normal vs all-caps, and all-caps is applied to a whole word. However, Unicode has data to enable algorithms to convert between the 'cases'. See <a href="https://r12a.github.io/scripts/georgian/#type">more detail</a>.</li>
-<li><samp>partial</samp> there is not a strict upper- vs lowercase mapping, but certain characters behave a little like uppercase forms. For example, Javanese has something that approximates case alternatives for some characters only, but there are no algorithms to convert from one 'case' to another. See <a href="https://r12a.github.io/scripts/javanese/#murda">more detail</a>.</li>
+<li><samp>similar</samp> there is not a strict upper- vs lowercase mapping, but certain characters behave a little like uppercase forms. For example, Javanese has something that approximates case alternatives for some characters only, but there are no algorithms to convert from one 'case' to another. See <a href="https://r12a.github.io/scripts/javanese/#murda">more detail</a>.</li>
 </ul>
 </li>
 
-<li><em>Cursive script</em>: Whether letters are joined with adjacent letters, eg. as in Arabic, N'Ko, or Mongolian.</li>
+<li><em>Cursive script</em>: Whether letters are joined with adjacent letters, eg. as in Arabic, N'Ko, or Mongolian, but also indic scripts that have a joining headstroke, such as Devanagari, Bengali, etc.</li>
 
-<li><em>Combining marks</em>: Whether the script uses combining marks. <code class="kw" translate="no">m</code> indicates that  the script attaches multiple combining marks to a single base.</li>
+<li><em>Comb. marks</em>: Whether the script uses combining marks. <code class="kw" translate="no">m</code> indicates that  the script attaches multiple combining marks to a single base.</li>
 
 <li><em>Clusters marked</em>: Consonant glyphs are merged or a diacritic is used to indicate consonant clusters.  Merging is most likely to happen when the script has inherent vowels, since the conjunct indicates a killed vowel between consonants. Diacritics include things such as the Arabic sukun.</li>
 
@@ -313,6 +315,7 @@ resort('name')
 
 <p><button>Consonant clusters</button> <code>?show=cclusters</code></p>
 
+<p>These items are shown by clicking on the 'Consonant clusters' button.</p>
 <ul>
 <li><em>Medials</em>: The orthography uses <em>dedicated</em> combining or other characters to represent the second consonant in a syllable-initial cluster. Arrangements that use ordinary conjunct forms, or ordinary letters do not count here; these must be code points specially created for medial positions. Abbreviations have the following meanings:
 <ul>
@@ -438,10 +441,13 @@ resort('name')
 <li>oce (Oceania - includes Australia, NZ, and Pacific Islands)</li>
 </ul>
 
+<p>The following map shows how Africa, Europe, and Asia are roughly divided up along the lines of these regional labels.</p>
+
+<p><img src="regions.jpg" alt="Map of Europe, Africa, & Asia." style="height: 25rem;"></p>
 <!--p><b class="leadin">Feature count.</b> This is a very crude indicator that simply awards one point for each column after the first three columns that doesn't read 'no', 'mid' or '0'.</p-->
 </section>
 
-<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2024-11-23  14:07<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2024-11-30  9:24<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <script>
