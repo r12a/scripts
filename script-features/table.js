@@ -177,7 +177,7 @@ function resort (column, reverse) {
       
     table += makeTableHead ('aux', "Number of dedicated Unicode blocks.", REVERSE)
                 
-    table += makeTableHead ('chars', "Total number of characters in regular use.", REVERSE)
+    table += makeTableHead ('chars', "Total number of characters in the dedicated Unicode blocks.", REVERSE)
 
     if (window.csubset) {
       
@@ -194,27 +194,27 @@ function resort (column, reverse) {
         table += makeTableHead ('other', "Format &amp; other chars", REVERSE)
 		}
 
-    table += makeTableHead ('direction', "Text direction.", REVERSE)
+    table += makeTableHead ('direction', "Text direction(s).", REVERSE)
 
-    table += makeTableHead ('numdir', "Direction of digits.", REVERSE)
+    table += makeTableHead ('numdir', "Are digits read RTL in RTL text?", REVERSE)
 
 
 
-    table += makeTableHead ('type', "Type of writing system.", REVERSE)
+    table += makeTableHead ('type', "Type of writing system: Alphabet, Abugida, Abjad, Syllabary, Featural Syllabary", REVERSE)
 
 	if (window.vsubset) {
     
-        table += makeTableHead ('vinherent', "Inherent vowel.", REVERSE)
+        table += makeTableHead ('vinherent', "Do consonant letters have an inherent vowel?", REVERSE)
         
-        table += makeTableHead ('vdiac', "Post-consonant vowels are written using combining marks.", REVERSE)
+        table += makeTableHead ('vdiac', "Are post-consonant vowels written using combining marks?", REVERSE)
        
-        table += makeTableHead ('vletter', "Post-consonant vowels are written using letters.", REVERSE)
+        table += makeTableHead ('vletter', "Are post-consonant vowels written using letters?", REVERSE)
         
         //table += makeTableHead ('vother', "Other letters used to spell vowels.", REVERSE)
        
-        table += makeTableHead ('vhidden', "Diacritics used to spell vowels that are usually hidden.", REVERSE)
+        table += makeTableHead ('vhidden', "Are diacritics used to spell vowels usually hidden?", REVERSE)
  
-        table += makeTableHead ('vsign', "Vowel signs used to spell vowels.", REVERSE)
+        table += makeTableHead ('vsign', "Does the script use visual order? If so, pre-base vowel signs will be written using letters before the consonant.", REVERSE)
         
         //table += makeTableHead ('matres', "Matres lectionis used to spell vowels.", REVERSE)
          
@@ -224,54 +224,54 @@ function resort (column, reverse) {
 
         //table += makeTableHead ('pbletter', "Standalone letters that appear before the base consonant. (Indicates visual ordering.)", REVERSE)
         
-        table += makeTableHead ('pbmark', "Combining marks that appear before the base consonant when rendered.", REVERSE)
+        table += makeTableHead ('pbmark', "Does the script have combining vowel signs that are stored after but rendered before the base consonant letter?", REVERSE)
         
-        table += makeTableHead ('vcircum', "(Single) combining marks that place glyphs on more than one side of the base character.", REVERSE)
+        table += makeTableHead ('vcircum', "Does the script have single code point, combining vowel signs that render glyphs on more than one side of the base character?", REVERSE)
         
-        table += makeTableHead ('vcomposite', "Vowel sounds that are represented by more than one character.", REVERSE)
+        table += makeTableHead ('vcomposite', "Is more than one code point needed to represent a basic vowel sound? (Not counting nasalisation or vowel length marks.)", REVERSE)
 
-        table += makeTableHead ('ivowels', "Standalone vowels are written using letters.", REVERSE)
+        table += makeTableHead ('ivowels', "Are standalone vowels written using letters?", REVERSE)
        
-        table += makeTableHead ('vbase', "Standalone vowels are written using a base carrier with diacritics.", REVERSE)
+        table += makeTableHead ('vbase', "Are standalone vowels written using a  carrier base letter with vowel signs or diacritics?", REVERSE)
         
-        table += makeTableHead ('vvocalics', "Vocalic letters.", REVERSE)
+        table += makeTableHead ('vvocalics', "Does the script have vocalic letters?", REVERSE)
         }
 
 //	if (window.consonants) {
-        table += makeTableHead ('case', "Case transforms.", REVERSE)
+        table += makeTableHead ('case', "Does the script have case or other transforms?", REVERSE)
 
-        table += makeTableHead ('cursive', "Letters are joined (cursive).", REVERSE)
+        table += makeTableHead ('cursive', "Are letters joined (cursive)?", REVERSE)
 
 
 
-        table += makeTableHead ('mcchars', "Combining marks.", REVERSE) 
+        table += makeTableHead ('mcchars', "Does the script have combining marks? Is it just one per base letter, or more?", REVERSE) 
         
-        table += makeTableHead ('conjuncts', "Consonant clusters are marked by shaping or diacritics.", REVERSE)
+        table += makeTableHead ('conjuncts', "Does the script indicate consonant clusters by shaping or diacritics? (If so, reveal the Consonant Clustess columns to see how.)", REVERSE)
 
 //       }
 
 	if (window.cclusters) {
-        table += makeTableHead ('cmedials', "Dedicated combining marks used for syllable-initial clusters.", REVERSE)
+        table += makeTableHead ('cmedials', "Are dedicated code points used for medial consonants in onsets (syllable-initial clusters)?", REVERSE)
 
-        table += makeTableHead ('cfinals', "Dedicated combining marks used for syllable- or word-final consonants.", REVERSE)
+        table += makeTableHead ('cfinals', "Are dedicated code point used for codas (syllable- or word-final consonants)?", REVERSE)
 
-        table += makeTableHead ('cstack', "Consonant clusters indicated by stacking.", REVERSE)
+        table += makeTableHead ('cstack', "Are consonant clusters indicated by stacking?", REVERSE)
 
-        table += makeTableHead ('cconj', "Consonant clusters indicated by conjoined characters.", REVERSE)
+        table += makeTableHead ('cconj', "Are consonant clusters indicated by conjoined characters (ie. semi-merged horizontal shapes)?", REVERSE)
 
-        table += makeTableHead ('clig', "Consonant clusters indicated by ligated characters.", REVERSE)
+        table += makeTableHead ('clig', "Are consonant clusters indicated by ligated characters?", REVERSE)
 
-        table += makeTableHead ('ctouch', "Consonant clusters indicated by touching characters.", REVERSE)
+        table += makeTableHead ('ctouch', "Are consonant clusters indicated by touching characters?", REVERSE)
 
-        table += makeTableHead ('cvirama', "Consonant clusters indicated by a virama.", REVERSE)
+        table += makeTableHead ('cvirama', "Are consonant clusters indicated by a virama or mark that is always visible?", REVERSE)
 
-        table += makeTableHead ('cmark', "Consonant clusters indicated by a diacritic mark.", REVERSE)
+        table += makeTableHead ('cmark', "Are consonant clusters indicated by a diacritic mark (eg. Arabic sukun)?", REVERSE)
 
 
-        table += makeTableHead ('killer', "Type of vowel killer used for conjuncts.", REVERSE)
+        table += makeTableHead ('killer', "If a virama is used, what type of vowel killer is used for conjuncts (pure killer, invisible killer, virama)?", REVERSE)
 		}
 
-        table += makeTableHead ('ligs', "Other ligatures, beside conjuncts.", '')
+        table += makeTableHead ('ligs', "Does the script apply other, non-optional ligatures, beside conjuncts? (Eg. Tamil ligation of the u vowel.)", '')
 
 //    if (window.direction) {
 //        }
@@ -280,21 +280,21 @@ function resort (column, reverse) {
 //        }
 
 //    if (window.inline) {
-        table += makeTableHead ('wordsep', "What separates words.", '')
+        table += makeTableHead ('wordsep', "What separates words?", '')
 //        }
  
 //    if (window.para) {
-        table += makeTableHead ('wrap', "Basic approach to wrapping text at line ends.", REVERSE)
+        table += makeTableHead ('wrap', "What's the basic approach to wrapping text at line ends?", REVERSE)
 
-        table += makeTableHead ('hyphenation', "Hyphenation.", REVERSE)
+        table += makeTableHead ('hyphenation', "Is hyphenation a thing?", REVERSE)
 
         table += makeTableHead ('wordspan', "Do conjuncts span word boundaries?", '')
 
-        table += makeTableHead ('gc', "Grapheme clusters sufficient?", REVERSE)
+        table += makeTableHead ('gc', "Are Unicode grapheme clusters sufficient for text segmentation?", REVERSE)
 
-        table += makeTableHead ('justification', "Justification methods.", REVERSE)
+        table += makeTableHead ('justification', "How is text fully justified?", REVERSE)
 
-        table += makeTableHead ('baseline', "Location of the baseline: romn, ideo, hang, cntr.", '')
+        table += makeTableHead ('baseline', "What type of baseline is relevant: romn, ideo, hang, cntr?", '')
 //        }
 
 //    if (window.more) {
