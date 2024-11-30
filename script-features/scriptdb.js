@@ -242,6 +242,18 @@ linebreak:"word", hyphen:"yes -", wordspan:N, justification:"sp", gc:Y, baseline
 },
 
 
+"cham": {name:"Cham", region:"seasia", type:"abug", 
+blocks:1, chars:83, bletter:52, bmark:17, bnumber:10, bpunctuation:4, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:2, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"A ꨀ", vcomposite:Y, prebase:Y, circum:N, },
+case:N, cursive:N, mcchars:"m", conjuncts:N, ligs:N, 
+medials:"cm", finals:"cm let",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"space",
+linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
+},
+
+
 
 "cher": { name:"Cherokee", region:"nam", 
 blocks:2, chars:172, bletter:172, bmark:0, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
@@ -523,12 +535,12 @@ baseline: "romn",
 "latn": {name:"Latin", region:"afr", type:"alpha", 
 blocks:14, chars:1551, bletter:1427, bmark:0, bnumber:26, bpunctuation:53, bsymbol:41, bother:3, 
 direction:"ltr", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N, },
-case:N, cursive:N, mcchars:Y, conjuncts:N, ligs:N, 
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:Y, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
 medials:"", finals:"",
 clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
 wordsep:"space",
-linebreak:"word", hyphen:"", justification:"sp", wordspan:N, gc:Y, baseline:"romn", 
+linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp", gc:Y, baseline:"romn", 
 },
 
 
