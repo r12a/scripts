@@ -1,5 +1,11 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
 var langs = {
 
 "ko": {  name:"Korean", local:"한국말‎ (Hanguk-mal), 한국어‎ (Hanguk-eo)",
@@ -8,6 +14,20 @@ region:"easia", countries:"Korea", script:"hang", speakers:"79368420", letter:"�
 type:"feat.syll", cs:"no", gpos:"no", gsub:"no", cursive:"no", wordsep:"space", baseline:"low", wrap:"word/char", hyphenation:"no",  direction:"ltr tbrl",  justification:"sp", 
 vowels:"syl:2078", 
 linked:"hangul",
+},
+
+
+
+
+"hang": {name:"Hangul", region:"eur", type:"feat", 
+blocks:5, chars:11635, bletter:11635, bmark:0, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"ltr tbrl", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"space",
+linebreak:"word char", hyphen:"no ", wordspan:N, justification:"sp", gc:Y, baseline:"ideo", 
 },
 
 

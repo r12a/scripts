@@ -363,32 +363,28 @@ linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp", gc:N, baseline:"h
 
 
 
-"hang": { name:"Hangul", region:"easia", 
+"hang": {name:"Hangul", region:"eur", type:"feat", 
 blocks:5, chars:11635, bletter:11635, bmark:0, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
-direction: "ltr tbrl", rtlnumbers:N,
-type:"feat", 
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N },
+direction:"ltr tbrl", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
 case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
 medials:"", finals:"",
-clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
-wordsep: "space",
-linebreak:"char word", hyphen:"no", justification:"sp", wordspan:N, gc:Y,
-baseline: "ideo",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"space",
+linebreak:"word char", hyphen:"no ", wordspan:N, justification:"sp", gc:Y, baseline:"ideo", 
 },
 
 
 
-"hani": { name:"Han", region:"easia", 
+"hani": {name:"Han", region:"eur", type:"ideo", 
 blocks:17, chars:99110, bletter:98706, bmark:3, bnumber:4, bpunctuation:1, bsymbol:396, bother:0, 
-direction: "ltr tbrl", rtlnumbers:N,
-type:"ideo", 
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N },
+direction:"ltr tbrl", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
 case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
 medials:"", finals:"",
-clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"" },
-wordsep: "no",
-linebreak:"char", hyphen:"no", justification:"ic", wordspan:N, gc:Y,
-baseline: "ideo",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"no",
+linebreak:"char", hyphen:"no ", wordspan:N, justification:"ic", gc:Y, baseline:"ideo", 
 },
 
 
@@ -458,15 +454,15 @@ linebreak:"syllable", hyphen:"", justification:"sp ig", wordspan:Y, gc:N, baseli
 },
 
 
-"kana": {name:"Katakana", region:"eur", type:"syll", 
-blocks:3, chars:171, bletter:168, bmark:0, bnumber:0, bpunctuation:3, bsymbol:0, bother:0, 
+"jpan": {name:"Japanese", region:"eur", type:"syll", 
+blocks:9+, chars:2731, bletter:2731, bmark:0, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
 direction:"ltr tbrl", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N, },
+voweltype: { inherent:0, letters:N, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
 case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
 medials:"", finals:"",
 clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
 wordsep:"no",
-linebreak:"char", hyphen:"", justification:"ic", wordspan:N, gc:Y, baseline:"ideo", 
+linebreak:"char", hyphen:"no ", wordspan:N, justification:"ic", gc:Y, baseline:"romn", 
 },
 
 
@@ -479,6 +475,18 @@ medials:"", finals:"",
 clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
 wordsep:"space",
 linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
+},
+
+
+"kana": {name:"Katakana", region:"eur", type:"syll", 
+blocks:3, chars:171, bletter:168, bmark:0, bnumber:0, bpunctuation:3, bsymbol:0, bother:0, 
+direction:"ltr tbrl", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"no",
+linebreak:"char", hyphen:"", justification:"ic", wordspan:N, gc:Y, baseline:"ideo", 
 },
 
 

@@ -1,5 +1,11 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
 var langs = {
 
 "ja": { name:"Japanese",  local:"日本語‎ (Nihongo)", 
@@ -10,5 +16,17 @@ vowels:"syl:2078",
 linked:"jpan", fonts:"/pickers/jpan/", 
 },
 
+
+
+"jpan": {name:"Japanese", region:"eur", type:"syll", 
+blocks:"9+", chars:2731, bletter:2731, bmark:0, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"ltr tbrl", rtlnumbers:N,
+voweltype: { inherent:0, letters:N, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"no",
+linebreak:"char", hyphen:"no ", wordspan:N, justification:"ic", gc:Y, baseline:"romn", 
+},
 
 }
