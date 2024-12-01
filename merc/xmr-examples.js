@@ -84,7 +84,7 @@ autoExpandExamples.xmr = `
 // automatically creates Online Resources section, if markup is uncommented in xx.html
 
 termLists = [
-
+/*
 {
 "title":"Wiktionary, Eastern Cham lemmas",
 "url":"https://en.wiktionary.org/wiki/Category:Eastern_Cham_lemmas",
@@ -101,6 +101,6 @@ termLists = [
 "url":"https://livingdictionaries.app/sora/entries/list",
 "notes":"No native script.",
 },
-
+*/
 ]
 

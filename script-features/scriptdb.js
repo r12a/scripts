@@ -600,6 +600,18 @@ linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp str pad", gc:Y, bas
 },
 
 
+"merc": {name:"Meroitic Cursive", region:"afr", type:"abug", 
+blocks:1, chars:90, bletter:26, bmark:0, bnumber:64, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"rtl", rtlnumbers:Y,
+voweltype: { inherent:1, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:": ws",
+linebreak:"", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
+},
+
+
 "mlym": {name:"Malayalam", region:"sasia", type:"abug", 
 blocks:1, chars:118, bletter:67, bmark:23, bnumber:26, bpunctuation:0, bsymbol:2, bother:0, 
 direction:"ltr", rtlnumbers:N,
