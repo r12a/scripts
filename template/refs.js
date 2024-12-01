@@ -32,26 +32,17 @@ reflist = {
 "reviewed":false
 },
 
-"me": {
-"authors": "Everson, Michael; Riley, Charles; Tuchscherer, Konrad",
+"up": {
+"authors": "Everson, Michael",
 "title":"L2/08-350: Proposal to encode modern Bamum in the BMP",
 "url":"https://www.unicode.org/L2/L2008/08350-n3522-bamum.pdf",
 },
 
-"rmcs": {
-"authors": "Richard Ishida",
-"title":"Ready-made Counter Styles",
-"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
-"reviewed":true
-},
-
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
-"sub":"Chapter 19.6: Africa, Bamum",
-"pages":"779-780",
-"isbn":"978-1-936213-16-0.",
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch19.pdf",
+"title":"The Unicode Standard, Version 16.0",
+"sub":"Chapter 11.5: Cuneiform and Hieroglyphs, Meroitic Cursive",
+"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-11/#G26726",
 "reviewed": false
 },
 
