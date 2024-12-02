@@ -284,6 +284,9 @@ usedfor: "${record.usedfor}",
 			else out += '<p><a target="_blank" href="http://www.omniglot.com/writing/'+record.info.omniglot+'.htm">Omniglot</a></p>'
 			}
 		if (record.info.endalpha) out += '<p><a target="_blank" href="https://www.endangeredalphabets.net/alphabets/'+record.info.endalpha+'">Endangered alphabets</a></p>'
+        
+        if (record.orthoChart) out += '<p><a href="script-features/index.html" target="_blank">Script comparison table</a></p></td></tr>'
+
 		//if (record.info.endangered[lc]) out += '<p><a target="_blank" href="https://www.endangeredalphabets.net/alphabets/'+endangered[lc]+'">Endangered alphabets</a></p>'
 		// ?
 		for (let r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" >'+record.info[r].name+'</a></p>'
@@ -325,7 +328,6 @@ usedfor: "${record.usedfor}",
 		if (record.layout && record.layout.length > 0) {
             for (let n=0;n<record.layout.length;n++) temp += '<p><a href="'+record.layout[n].url+'" target="_blank">'+record.layout[n].name+'</a></p>'
             }
-		if (record.orthoChart) temp += '<p><a href="featurelist/index.html" target="_blank">Comparisons:</a> '+record.orthoChart+'</p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>Other info:</th><td></td></tr>') out += temp
 		}
