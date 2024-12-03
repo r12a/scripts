@@ -54,10 +54,42 @@ autoExpandExamples.zag = `
 𖺼𖺾𖻌𖻌|they|b§ɛ§ɾ§ɾ
 𖻇𖺻|you|n§a
 𖻇𖻊𖻒|you (pl)|n§ɔ§w
+𖺡𖺾𖻌𖻂𖺻 𖺥𖻂𖻌𖺻𖻓 𖺣𖻌𖺿𖺾𖺾|Beria Giray Erfe|b§ɛ§r§ɪ§a§ §ɡ§ɪ§r§a§j §ɛ§r§f§ɛ§‹
 
 
 
+@ https://en.wikipedia.org/wiki/Zaghawa_alphabet
+𖺼𖺾𖻌𖻂𖺻 𖺾𖻌𖺿𖺾𖺾|Beria Erfe|b§e§r§i§a§ §e§r§f§e§‹
+𖺡𖺾𖻌𖻂𖺻 𖺣𖻌𖺿𖺾𖺾|Beria Erfe|b§e§r§i§a§ §e§r§f§e§‹
 
+
+
+@ https://www.lingref.com/cpp/acal/44/paper3136.pdf
+𖻆𖺾̄𖻌𖻂|hot season|m§e§r§i
+𖻎𖻑̄𖻌𖻑|shell|s§u§r§u
+𖻎𖻊̄𖺼𖻑|ashes|s§o§b§u
+𖺼𖻂̄𖻌𖻂|dog|b§i§ɾ§i
+𖺼𖻂̄𖻂|water|b§iː§‹
+𖻂𖻎𖻐𖻂|four|ɪ§s§t§ɪ
+𖻐𖻂𖺼𖺾|field|t§ɪ§b§ɛ
+𖻆𖻂𖻎𖺻|pot|m§ɪ§s§a
+𖻇𖻊𖺽𖻂|heron|n§ɔ§d§ɪ
+𖻎𖻑𖻌𖺻|lion|s§ʊ§r§a
+𖻐𖻂𖻌|name|t§ɪ§ɾ
+𖺽𖻂𖻇|tail|d§ɪ§n
+𖻂𖻂|eye|iː§‹
+𖻆𖻂𖻂|calf|m§ɪː§‹
+𖻑𖻌𖻂|giraffe|ʊ§ɾ§ɪ
+𖻑𖺽𖺻|fresh milk|ʊ§d§a
+𖺼𖻑𖻌|baby|b§ʊ§ɾ
+𖻐𖻑𖺽𖻑|back|t§ʊ§d§ʊ
+𖻂̄𖻎𖺾|food|i§s§e
+𖺽𖻂̄𖻆𖺾|wild cat|d§i§m§e
+𖻐𖻂̄𖻇𖺾|thief|t§i§n§e
+𖺾̄𖻇𖻂|riverbed|e§n§i
+𖻊̄𖻌𖻂|nice smell|o§r§i
+𖻐𖻊̄𖺽𖻑|heart|t§o§d§u
+𖻊̄𖻇𖻂|behind|o§n§i
 
 
 
@@ -70,12 +102,12 @@ autoExpandExamples.zag = `
 
 termLists = [
 
-/*
 {
-"title":"Wiktionary, Eastern Cham lemmas",
-"url":"https://en.wiktionary.org/wiki/Category:Eastern_Cham_lemmas",
+"title":"Wiktionary, Zaghawa",
+"url":"https://en.wiktionary.org/wiki/Category:Zaghawa_lemmas",
 },
 
+/*
 {
 "title":"Austronesian Basic Vocabulary Database, Phan Rang Cham (Eastern Cham)",
 "url":"https://abvd.eva.mpg.de/austronesian/language.php?id=371&sort=item",

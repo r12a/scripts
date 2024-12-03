@@ -1,0 +1,11 @@
+langTag = 'zag'
+window.version = 'v29'
+window.scriptName = 'Beria Erfe'
+window.ghDirectory = 'beri'
+window.blockDirectory = 'beri'
+window.languageList = ['zag'] // lang tags for each orthography handled
+window.detailsfileList = ['zag'] // first part of xx-details for each orthography
+window.scriptISO = 'beri'
+window.webfonts = ["Kedebideri WF"]
+window.defaultSize = '24px'
+hideBlockName = "BERIA ERFE"
