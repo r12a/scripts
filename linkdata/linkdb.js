@@ -2992,6 +2992,23 @@ usedfor:"Kurukh [kru]",
 },
 
 
+beri:{ script:"Beria Erfe", code:"Beri", name:"", type:"Alphabet", 
+origin:"Africa",
+info:{ wikipedia:"Zaghawa_alphabet", omniglot:"ahom" }, 
+local: [	],
+charts: [ ["", ""] ],
+layout:[	],
+scriptNotes: [["Zaghawa", "beri/zag.html"]],
+charNotesList:["Beria Erfe", "beri/block.html"],
+terms: [["Zaghawa", "beri/zag_vocab.html"]],
+orthoChart: false,
+ssHistory: "47fbca6g25",
+chapters: "",
+htmlchapter: "",
+usedfor:"Zaghawa [zag]",
+},
+
+
 /*
 
 TO BE ADDED FOR v16

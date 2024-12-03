@@ -190,6 +190,18 @@ linebreak:"word", hyphen:"(yes) -", wordspan:N, justification:"sp", gc:N, baseli
 },
 
 
+"beri": {name:"Beria Erfe", region:"afr", type:"alpha", 
+blocks:1, chars:50, bletter:50, bmark:0, bnumber:0, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:Y, cursive:N, mcchars:Y, conjuncts:N, ligs:N, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"space",
+linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
+},
+
+
 
 "bugi": {name:"Buginese", region:"oce", type:"abug", 
 blocks:1, chars:30, bletter:23, bmark:5, bnumber:0, bpunctuation:2, bsymbol:0, bother:0, 
