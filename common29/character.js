@@ -24,7 +24,7 @@ for (var p=0;p<parameters.length;p++) {
 
 
 function showCharDetails (ch) {
-    //console.log('showCharDetails(',ch,')')
+    console.log('showCharDetails(',ch,')')
     // creates a heading and a div for a given orthography
     // window.charDetails is the code from xx-details
     
@@ -49,6 +49,7 @@ function showCharDetails (ch) {
 
 	if (typeof charDetails[ch] === 'undefined') {
         console.log('charDetails is undefined for',ch)
+        document.getElementById('output').innerHTML = '<p>No notes available for this character.</p>'
         return
         }
     
