@@ -644,7 +644,7 @@ case:N, cursive:Y, mcchars:N, conjuncts:N, ligs:Y,
 medials:"", finals:"",
 clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
 wordsep:"space",
-linebreak:"word", hyphen:"↵᠆*", justification:U, wordspan:N, gc:Y, baseline:"cntr", 
+linebreak:"word", hyphen:N, justification:U, wordspan:N, gc:Y, baseline:"cntr", 
 },
 
 
