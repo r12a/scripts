@@ -70,6 +70,9 @@ function gatherData () {
             
             if (spreadsheetRows[row][cols.status] && unwanted.has(spreadsheetRows[row][cols.status])) continue
             
+            // lowercase the IPA
+            spreadsheetRows[row][cols.ipaLoc] = spreadsheetRows[row][cols.ipaLoc].toLowerCase()
+            
             items = spreadsheetRows[row][cols.ipaLoc].split(' ')
             for (i=0;i<items.length;i++) {
                 console.log(items[i])
