@@ -35,7 +35,7 @@ reflist = {
 "up": {
 "authors": "Everson, Michael",
 "title":"L2/09-250: Proposal for encoding the Meroitic Hieroglyphic and the Meroitic Cursive scripts in the SMP of the UCS",
-"url":"https://www.unicode.org/L2/L2008/08350-n3522-bamum.pdf",
+"url":"https://www.unicode.org/wg2/docs/n3665.pdf",
 },
 
 "u": {
