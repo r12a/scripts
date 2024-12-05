@@ -94,7 +94,7 @@ reflist = {
 
 
 scriptLanguageList = {
-zag:{name:"Zaghawa (Beria)"},
+zag:{name:"Zaghawa (Beria)", url:"zag.html" },
 }
 
 

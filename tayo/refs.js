@@ -74,7 +74,7 @@ reflist = {
 
 
 scriptLanguageList = {
-tyj:{name:"Tai Yo"},
+tyj:{name:"Tai Yo", url:"tyj.html" },
 }
 
 

@@ -56,7 +56,7 @@ reflist = {
 
 
 scriptLanguageList = {
-bap:{name:"Bantawa"},
+bap:{name:"Bantawa", url:"bap.html" },
 }
 
 

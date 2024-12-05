@@ -106,7 +106,7 @@ reflist = {
 
 
 scriptLanguageList = {
-kru:{name:"Kurukh"},
+kru:{name:"Kurukh", url:"kru.html" },
 }
 
 

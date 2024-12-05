@@ -62,7 +62,7 @@ reflist = {
 
 
 scriptLanguageList = {
-xmr:{name:"Meroitic"},
+xmr:{name:"Meroitic", url:"xmr.html"},
 }
 
 

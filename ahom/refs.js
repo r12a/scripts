@@ -108,7 +108,7 @@ reflist = {
 
 
 scriptLanguageList = {
-aho:{name:"Ahom"},
+aho:{name:"Ahom", url:"aho.html" },
 }
 
 
