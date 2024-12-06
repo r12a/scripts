@@ -134,7 +134,7 @@ function expandCharMarkup () {
      // if the svg class is appended, use an svg image to display the char
      // if the split class used, the characters will be separated by +
      
-     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname, coda, noindex
+     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname, coda, noindex, uncommon
      
      // split puts + signs between the characters in a sequence
      // init, medi, fina produce positional forms of cursive text using zwj
@@ -158,6 +158,7 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
         charMarkup[i].classList.contains('noindex')? noindex=' noindex': noindex=''
+        charMarkup[i].classList.contains('uncommon')? uncommon=' class="uncommon"': uncommon=''
 
         if (charMarkup[i].lang === '') var language = window.langTag
         else language = charMarkup[i].lang
@@ -191,7 +192,7 @@ function expandCharMarkup () {
                 unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
                 }
          
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ language }">`
+            if (split && c > 0) unicodeChars += `</bdi> + <bdi ${ uncommon } lang="${ language }">`
             if (svg) {
                 block = getScriptGroup(dec, false)
                 unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ ch }" style="height:2rem;">`
@@ -206,7 +207,7 @@ function expandCharMarkup () {
             
         if (initial || medial) unicodeChars += '\u200D '
 
-        out += `<span class="codepoint${ noindex }" translate="no"><bdi lang="${ language }"`
+        out += `<span class="codepoint${ noindex }" translate="no"><bdi ${ uncommon } lang="${ language }"`
         //if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }${ coda }</bdi>`
@@ -236,6 +237,7 @@ function expandCharMarkup () {
         charMarkup[i].classList.contains('coda')? coda='◌': coda=''
         charMarkup[i].classList.contains('noname')? noname=true: noname=false
         charMarkup[i].classList.contains('noindex')? noindex=' noindex': noindex=''
+        charMarkup[i].classList.contains('uncommon')? uncommon=' class="uncommon"': uncommon=''
         
         if (charMarkup[i].lang === '') var language = window.langTag
         else language = charMarkup[i].lang
@@ -260,7 +262,7 @@ function expandCharMarkup () {
             if (c > 0) unicodeNames += ' + '
             unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
 
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi lang="${ language }">`
+            if (split && c > 0) unicodeChars += `</bdi> + <bdi ${ uncommon } lang="${ language }">`
             
             if (svg) {
                 block = getScriptGroup(dec, false)
@@ -276,7 +278,7 @@ function expandCharMarkup () {
         if (initial || medial) unicodeChars += '\u200D '
         if (circle) unicodeChars = '\u25CC' + unicodeChars
 
-        out += `<span class="codepoint${ noindex }" translate="no"><bdi lang="${ language }"`
+        out += `<span class="codepoint${ noindex }" translate="no"><bdi ${ uncommon } lang="${ language }"`
         if (blockDirection === 'rtl') out += ` dir="rtl"`
         if (img || svg) out += ' style="margin:0;" '
         out += `>${ unicodeChars }${ coda }</bdi>`
