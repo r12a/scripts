@@ -11,7 +11,7 @@ var langs = {
 "km": { name:"Khmer (Cambodian)", local:"ខ្មែរ‎", localtrans:"(khmer)", silcode:"khm", 
 source:"cldr_km,udhr_khm,7f422cd6f0781ddbcb488b785f4f0d3a5883c93b", 
 region:"seasia", countries:"Cambodia, Vietnam", script:"khmr", speakers:"16000000", 
-letter:"កខគឃងចឆជឈញដឋណតថទធនបផពភមយរលវសហឡអឥឦឧឩឪឫឭឯឰឱឲឳៗ", letteraux:"ឌឍឬឮ", mark:"ាិីឹឺុូួើឿៀេែៃោៅំះៈ៉៊់៌៍៎៏័៑្៝", markaux:"", number:"០១២៣៤៥៦៧៨៩", numberaux:"", punctuation:"។៕៖៙៚‘’“”", punctuationaux:"៘", symbol:"៛", symbolaux:"", other:"\u200B\u200C\u200D", otheraux:"", aux:"%:;[]§«»ʼ͏‑–—†‡…‰′″‹›⁠", deprecated:"", 
+letter:"កខគឃងចឆជឈញដឋណតថទធនបផពភមយរលវសហឡអឥឦឧឩឪឫឭឯឰឱឲឳៗ", letteraux:"ឌឍឬឮ", mark:"ាិីឹឺុូួើឿៀេែៃោៅំះៈ៉៊់៌៍៎៏័៑្៝", number:"០១២៣៤៥៦៧៨៩", punctuation:"។៕៖៙៚‘’“”", punctuationaux:"៘", symbol:"៛", other:"\u200B\u200C\u200D", 
 orth:`Khmer. &nbsp; <a href="../scripts/khmer" target="_blank">Details</a>.`,
 linked:"khmr/km", picker:"khmr", font:"", 
 },
