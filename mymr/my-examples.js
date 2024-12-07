@@ -206,7 +206,7 @@ autoExpandExamples.my = `
 ခြုံရုံ|||hkrum-rum
 ခြေ|foot|tɕʰè|hkre
 ခြေထောက်|leg|tɕʰèdauʔ|hkrehtauk
-ခြေသည်း|||hkresany:
+ခြေသည်း|toenail|t͡ɕʰè§ðé§–|hkresany:
 ခြောက်|dry|tɕauʔ|hkrauk
 ခြောက်ဆယ်|||hkraukhcai
 ခွေး|dog|kʰwé|hkwe:
@@ -466,7 +466,7 @@ autoExpandExamples.my = `
 နုန်း|||nun:
 နုပ်|small|nouʔ|nup
 နေ|sun, to live|nè|ne
-နေပြည်တော်|||ne-pranytau
+နေပြည်တော်|Naypyidaw|nè§pjì§–§dɔ̀|ne-pranytau
 နောက်|||nauk
 နောက်တဖန်|||naukta.hpan
 နောက်လ|next month|naʊʔla̰
@@ -630,9 +630,9 @@ autoExpandExamples.my = `
 မက်မန်းသီး|||makman:si:
 မင်း|you sg|míɴ|mang:
 မင်္ဂလာပါ|||mangga.lapa
-မည်|||many
-မည်သည်|||manysany
-မည်သူ|||manysu
+မည်|to mean|mjì§–|many
+မည်သည်|what, where|mì§–§ðì§–|manysany
+မည်သူ|who|mì§–§ðù|manysu
 မည်း|black|mɛ́|many:
 မတ်|March|ma§ʔ
 မန္တလေး|Mandalay|mà§ɴ.§da̰.§lé
@@ -774,7 +774,7 @@ autoExpandExamples.my = `
 လို့|because|lo̰|lui.
 လုပ်|||lup
 လုပ်အား|||lup-a:
-လုံချည်|||lumhkyany
+လုံချည်|longyi|lòʊɴ§d͡ʑì§–|lumhkyany
 လုံး|round|lóuɴ|lum:
 လူ|man (human being)|lù|lu
 လူမျိုး|nationality|lùmjó
@@ -795,7 +795,7 @@ autoExpandExamples.my = `
 လွန်|rope|lùɴ|lwan
 လှ|pretty|l̥a̰
 လှည့်|to turn (intransitive)|ɬɛ̰|hlany.
-လှည်း|||hlany:
+လှည်း|to sweep|l̥ɛ́§–|hlany:
 လှုပ်|shake|l̥oʊ§ʔ
 လှေ|||hle
 လှဲ|to lie (as in a bed)|ɬɛ́|hlai:
@@ -840,8 +840,8 @@ autoExpandExamples.my = `
 သစ်သီး|fruit|θiʔθí|sacsi:
 သစ်သီးဖျော်စက်|||sacsi:hpyaucak
 သည်|||sany
-သည်မှာ|||sanyhma
-သည်းခြေ|||sany:hkre
+သည်မှာ|here|ðì§–§m̥à|sanyhma
+သည်းခြေ|gall, bile|θí§–§d͡ʑè|sany:hkre
 သတင်းစာ|farmer|θə.§dɪ́§ɴ.§zà
 သတ်|to kill|θaʔ|sat
 သတ်ဖြတ်|to kill|θaʔpʰjaʔ|sathprat
@@ -940,7 +940,7 @@ autoExpandExamples.my = `
 အပင်|||a.pang
 အပေါင်|leg|ʔəpàuɴ|a.paung
 အပ်|||ap
-အပ်ချုပ်သမား|tailor|ʔaʔtɕʰoʊʔθəmá
+အပ်ချုပ်သမား|tailor|ʔa§ʔ§tɕʰoʊ§ʔ§θə§má
 အပြုံး|smile|ʔə.§pjóʊɴ|a.prum:
 အပွင့်|flower|ʔəpwḭɴ|a.pwang.
 အဖ|father|ʔəpʰa̰|a.hpa.14
