@@ -24,7 +24,7 @@ for (var p=0;p<parameters.length;p++) {
 
 
 function showCharDetails (ch) {
-    console.log('showCharDetails(',ch,')')
+    console.log('showCharDetails(',ch,')',ch.charCodeAt(0).toString(16))
     // creates a heading and a div for a given orthography
     // window.charDetails is the code from xx-details
     
@@ -40,7 +40,6 @@ function showCharDetails (ch) {
 
 
 	if (typeof charDetails === 'undefined') return
-	
     // make sure we're only looking for a single character
     if ([...ch].length > 1) {
         ch = [... ch][0]
@@ -48,8 +47,8 @@ function showCharDetails (ch) {
         }
 
 	if (typeof charDetails[ch] === 'undefined') {
-        console.log('charDetails is undefined for',ch)
-        document.getElementById('output').innerHTML = '<p>No notes available for this character.</p>'
+        console.log('charDetails is undefined for',ch,ch.charCodeAt(0).toString(16))
+        //document.getElementById('output').innerHTML += '<p id="noNotes">No notes available for this character.</p>'
         return
         }
     
@@ -58,7 +57,6 @@ function showCharDetails (ch) {
         return
         }  
     
-	
     charBlock = document.createElement('div')
     charBlock.className = 'character'
     
@@ -77,7 +75,6 @@ function showCharDetails (ch) {
         div.appendChild(document.createTextNode(ch))
         }
     charBlock.appendChild(div)
-   
     
     // add the title
     h2 = document.createElement('h2')
@@ -141,7 +138,8 @@ function showCharDetails (ch) {
 	div.className = 'charDetails'
    
     div.innerHTML = makeDetails(ch, langTag)
-    
+
+
     charBlock.appendChild(div)
 
     var hex = ch.codePointAt(0).toString(16).toUpperCase()
@@ -767,7 +765,7 @@ function getCharList () {
     out = ''
     for (chr in spreadsheetRows) {
         if (typeof spreadsheetRows[chr][cols['status']] === 'undefined' ||
-            spreadsheetRows[chr][cols['status']] === 'x' ||
+            /*spreadsheetRows[chr][cols['status']] === 'x' ||*/
             spreadsheetRows[chr][cols['status']] === 'o' ||
             spreadsheetRows[chr][cols['status']] === '?' ||
             spreadsheetRows[chr][cols['status']] === 'status' ||
@@ -826,7 +824,7 @@ function toggleImages () {
 function makeXXCharacterPage () {
     //console.log('makeXXCharacterPage()')
     // write the data to the page
-    // list is a specific list of characters (rather than the whole db); this is provided by a parameter
+    // specificList is a specific list of characters (rather than the whole db); this is provided by a parameter
     var panel, specificList
     
     specificList = ''
