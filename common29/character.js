@@ -901,6 +901,7 @@ function makeXXCharacterPage () {
         div = document.createElement('div')
         div.dir = 'ltr'
         div.id = 'stats'
+        div.style.color = "#ccc"
         div.innerHTML = `Characters in the database: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[0] }</bdi> &nbsp; <bdi>(${ [...parts[0]].length })</bdi><br>
         To be investigated: <bdi onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ parts[1] }</bdi> &nbsp; <bdi>(${ [...parts[1]].length })</bdi>
         <br>
