@@ -953,7 +953,8 @@ function listCharsInSpreadsheet (howmuch) {
             }
         for (x=0;x<selection.length;x++) selection[x] = selection[x].codePointAt(0).toString(16).toUpperCase()
         for (x=0;x<selection.length;x++) while (selection[x].length < 4) selection[x] = '0'+selection[x]
-        for (x=0;x<selection.length;x++) selection[x] = '\\u'+selection[x]
+        //for (x=0;x<selection.length;x++) selection[x] = '\\u'+selection[x]
+        for (x=0;x<selection.length;x++) selection[x] = '\\u{'+selection[x]+'}'
         }
     if (howmuch === 'auxother') {
         for (k=0;k<allused.length;k++) {
@@ -961,7 +962,8 @@ function listCharsInSpreadsheet (howmuch) {
             }
         for (x=0;x<selection.length;x++) selection[x] = selection[x].codePointAt(0).toString(16).toUpperCase()
         for (x=0;x<selection.length;x++) while (selection[x].length < 4) selection[x] = '0'+selection[x]
-        for (x=0;x<selection.length;x++) selection[x] = '\\u'+selection[x]
+        //for (x=0;x<selection.length;x++) selection[x] = '\\u'+selection[x]
+        for (x=0;x<selection.length;x++) selection[x] = '\\u{'+selection[x]+'}'
         }
 
 
