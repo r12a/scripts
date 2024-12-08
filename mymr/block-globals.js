@@ -1,8 +1,8 @@
 
 window.version = 'v28'
 window.scriptName = 'Myanmar'
-window.ghDirectory = 'myanmar'
-window.blockDirectory = 'myanmar'
+window.ghDirectory = 'mymr'
+window.blockDirectory = 'mymr'
 window.languageList = ['my','shn'] // lang tags for each orthography handled
 window.detailsfileList = ['my','shn'] // first part of xx-details for each orthography
 window.scriptISO = 'mymr'
