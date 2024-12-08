@@ -588,7 +588,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     for (var t=0;t<usedSpreadsheetChars.length; t++) {
         if (! blockChars.includes(usedSpreadsheetChars[t])) result += usedSpreadsheetChars[t]
         }
-    out += `<tr><th>Add to xx&#x2011;details</th><td id="detailsNeeds" style="word-break:break-all;">${ result.replace(/ |\u25CC/g,'') }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ |\u25CC/g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
+    out += `<tr><th>Add to xx&#x2011;details</th><td id="detailsNeeds" style="word-break:break-all;">${ result.replace(/ |\u25CC/g,'') }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ |\u25CC/g,'')].length }</td><td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('detailsNeeds').textContent)"></td>${ shareCodeLinks(result.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
     //out += `<tr><th></th><td colspan="2" style="text-align:start"><a target="_blank" href="../_tools/generate_details_page_stubs.html?q=${ result }">Details creator</a></td></tr>`
     
     
@@ -638,7 +638,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
     // create entry for character use
     usedNonASCII = ''
-    out += `<tr><th>Update Character usage</th><td id="cUsage" style="word-break:break-all;">`
+    out += `<tr><th>Update Character usage</th><td id="cUsage" style="word-break:break-all;"    >`
     result = listCharsInSpreadsheet('letters').join('')
     out += `letter:"${ result }", `
     if (langs[charUsageBCP].letter && result !== langs[charUsageBCP].letter) langdata += 'letter '
@@ -691,8 +691,13 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     if (result !== '') out += `otheraux:"${ result }", `
     //if (langs[charUsageBCP].auxother && result !== langs[charUsageBCP].auxother) langdata += 'auxother '
 
-    out += `</td>
-        <td id="ssCharListTotal">${ result.length }</td>
+    result = listCharsInSpreadsheet('possibles').join('')
+    out += `aux:"${ result }", `
+    //if (langs[charUsageBCP].other && result !== langs[charUsageBCP].other) langdata += 'other '
+
+    out += `\n</td>
+        <!--<td id="ssCharListTotal">${ result.length }</td>-->
+        <td id="ssCharListTotal" style="border:0;">&nbsp;</td>
         <td class="indexShareLinks"><img src="../common29/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('cUsage').textContent)"></td>${ shareCodeLinks(usedNonASCII,scriptISO,pickerName) }</tr>`    
     
     
@@ -941,15 +946,25 @@ function listCharsInSpreadsheet (howmuch) {
             }
         }
 
+
     if (howmuch === 'other') {
         for (k=0;k<allused.length;k++) {
-            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'C') selection.push(allused[k])
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'C' && spreadsheetRows[allused[k]][cols['status']][0] !== 'r' && spreadsheetRows[allused[k]][cols['status']][0] !== 'x') selection.push(allused[k])
             }
         for (x=0;x<selection.length;x++) selection[x] = selection[x].codePointAt(0).toString(16).toUpperCase()
         for (x=0;x<selection.length;x++) while (selection[x].length < 4) selection[x] = '0'+selection[x]
         for (x=0;x<selection.length;x++) selection[x] = '\\u'+selection[x]
         }
-                                           
+    if (howmuch === 'auxother') {
+        for (k=0;k<allused.length;k++) {
+            if (allused[k] > '¡' && spreadsheetRows[allused[k]][cols['class']][0] === 'C' && (spreadsheetRows[allused[k]][cols['status']][0] === 'r' || spreadsheetRows[allused[k]][cols['status']][0] === 'x')) selection.push(allused[k])
+            }
+        for (x=0;x<selection.length;x++) selection[x] = selection[x].codePointAt(0).toString(16).toUpperCase()
+        for (x=0;x<selection.length;x++) while (selection[x].length < 4) selection[x] = '0'+selection[x]
+        for (x=0;x<selection.length;x++) selection[x] = '\\u'+selection[x]
+        }
+
+
      if (howmuch === 'possibles') {
         for (k=0;k<all.length;k++) {
             if (spreadsheetRows[all[k]][cols['status']] === '?') selection.push(all[k])

@@ -226,7 +226,7 @@ function makeIndexIntro (node) {
     <div class="index_intro_column">
     <p class="instructions">The index points to locations where a character is mentioned in this page, and indicates whether it is used by the ${orthog} orthography described here.</p>
     
-    <p class="instructions"><a href="#" onclick="listAllIndexCharacters('arab','arab-fa'); document.getElementById('charCountList').style.display='block'; return false;">List &amp; export characters</a> in the index.</p>
+    <p class="instructions"><a href="#" onclick="listAllIndexCharacters('arab','arab-fa'); document.getElementById('charCountList').style.display='block'; return false;">Manage characters</a>.</p>
     </div>
     <div class="index_intro_column" id="orthoLinks"></div>
     `
