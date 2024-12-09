@@ -11,7 +11,7 @@ var langs = {
 "arb": { name:"Arabic, Standard", local:"العَرَبِيَّة‎", localtrans:"[alʕaraˈbijja]", silcode:"", rtl:true, 
 source:"5d92060d0376b6a659e408ddc1c289cc0cecbba8,cldr_ar,udhr_arb", 
 region:"wasia", countries:"Saudi Arabia, Egypt, Mali, Algeria, Iraq, Sudan, Yemen, Syria, Morocco, etc.", script:"arab", speakers:"273989700", 
-letter:"ءآأؤإئابةتثجحخدذرزسشصضطظعغـفقكلمنهوىيپچڢڤڧࢲﷲﷺﷻ", letteraux:"ٱ", mark:"͏ًٌٍَُِّْٰ", markaux:"ٕٓٔ", number:"٠١٢٣٤٥٦٧٨٩", numberaux:"", punctuation:"«»؉،؍؛؟٪٫٬٭–—‘’“”…‰‹›﴾﴿", punctuationaux:"۔", symbol:"﷼﷽", symbolaux:"", other:"\u{061C}\u{200C}\u{200D}\u{200E}\u{200F}\u{202A}\u{202B}\u{202C}\u{2066}\u{2067}\u{2068}\u{2069}", otheraux:"", aux:"", deprecated:"", 
+letter:"ءآأؤإئابةتثجحخدذرزسشصضطظعغـفقكلمنهوىيٱپچڢڤڧࢲﷲﷴﷺﷻ", mark:"͏ًٌٍَُِّْٰؔ", markaux:"ٕٓٔۜ", number:"٠١٢٣٤٥٦٧٨٩", punctuation:"«»؉،؍؛؟٪٫٬٭–—‘’“”…‰‹›﴾﴿", symbol:"﵀﵁﵂﵃﵄﵅﵆﵇﵈﵉﵊﵋﵌﵍﵎﵏﷏﷼﷽﷾﷿", symbolaux:"﮲﮳﮴﮵﮶﮷﮸﮹﮺﮻﮼﮽﮾﮿﯀﯁﯂", other:"\u{061C}\u{200C}\u{200D}\u{200E}\u{200F}\u{202A}\u{202B}\u{202C}\u{2066}\u{2067}\u{2068}\u{2069}", otheraux:"\u{06DD}", aux:"", 
 orth:`Arabic. &nbsp; Naskh style. <a href="../scripts/arabic" target="_blank">Details</a>.`,
 related:`Macrolanguage is Arabic [ar]. Legacy applications often use [ar] rather than arb.`,
 linked:"arab/arb", picker:"arab-ar", font:"", 
