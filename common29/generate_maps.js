@@ -105,6 +105,12 @@ function gatherData () {
         
             out += `<div>\n`
             
+            
+            
+            
+            out += `<p class="map_row">`
+
+
             // add shaped forms if shape column exists
             if (spreadsheetRows[char] && spreadsheetRows[char][cols.shape]) shape = spreadsheetRows[char][cols.shape]
             else shape = ''
@@ -112,21 +118,21 @@ function gatherData () {
             while (hex.length < 4) hex = '0'+hex
 
             if (shape === '4') {
-                out += `<div style="float:right">\n<p><span class="shaping" lang="${ lang }"><span class="hx noname">${ hex }</span><span class="hx fina noname">${ hex }</span><span class="hx medi noname">${ hex }</span><span class="hx init noname">${ hex }</span>⏴</span></p>`
+                out += `\n<span class="shaping" lang="${ lang }"><span class="hx noname">${ hex }</span><span class="hx fina noname">${ hex }</span><span class="hx medi noname">${ hex }</span><span class="hx init noname">${ hex }</span></span>\n`
                 }
 
             else if (shape === '2') {
-                out += `<div style="float:right">\n<p><span class="shaping" lang="${ lang }"><span class="hx init noname">${ hex }</span><span class="hx fina noname">${ hex }</span>⏴</span></p>`
+                out += `\n<span class="shaping" lang="${ lang }"><span class="hx init noname">${ hex }</span><span class="hx fina noname">${ hex }</span></span>\n`
                 }
 
             else if (shape !== '' && shape !== '0') {
-                out += `<div style="float:right">\n<p><span class="shaping" lang="${ lang }"><span class="ch noname">${ shape }</span>⏴</span></p></div>`
+                out += `\n<span class="shaping" lang="${ lang }"><span class="ch noname">${ shape }</span></span>\n`
                 }
           
-            
-            
-            
-            out += `<p>`
+
+
+
+
             out += `<span class="posn">${ spreadsheetRows[char][cols.typeLoc] }</span>\n`
             out += `<span class="ch">${ char }</span> <b>`
             if (spreadsheetRows[char] && spreadsheetRows[char][cols.statusLoc]) out += spreadsheetRows[char][cols.statusLoc]
