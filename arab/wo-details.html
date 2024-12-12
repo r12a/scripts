@@ -964,94 +964,184 @@ var charDetails = {
 
 
 
-// rle
-'\u{202B}': `
-<p class="insertTranscription">&#x202B;</p>
-<p>Sets the base direction for the following text to RTL, with no isolation. The Unicode Standard recommends use of RLI, instead.</p>
+
+'\u{002D}': `
+<p class="insertTranscription">&#x002D;</p>
+
+<p>Hyphen.</p>
+
 `,
 
 
 
 
-// lre
+
+'\u{060C}': `
+<p class="insertTranscription">&#x060C;</p>
+
+<p>Comma.</p>
+`,
+
+
+
+
+
+'\u{061B}': `
+<p class="insertTranscription">&#x061B;</p>
+
+<p>Semicolon.</p>
+`,
+
+
+
+
+
+'\u{061F}': `
+<p class="insertTranscription">&#x061F;</p>
+
+<p>Question mark.</p>
+`,
+
+
+
+
+
+
+
+
+
+
+// zwnj
+'\u{200C}': `
+<p class="insertTranscription">&#x200C;</p>
+
+<p>Zero-width non-joiner (ZWNJ).</p>
+
+<p>An invisible character, that prevents two adjacent letters forming a visual connection with each other when rendered. Especially useful for educational illustrations, but also has real-world applications.</p>
+
+<p>It is used to interrupt the shaping of joining glyphs in cursive scripts, and also used to manage the visual interactions of glyphs in other scripts, eg. to prevent the formation of conjuncts, position diacritics, etc.</p>
+
+<p>More details:</p>
+<ul>
+<li><a href="wo.html#shapingcontrols">Managing glyph shaping</a></li>
+</ul>
+
+`,
+
+
+
+
+
+// zwj
+'\u{200D}': `
+<p class="insertTranscription">&#x200D;</p>
+
+<p>Zero-width joiner (ZWJ).</p>
+
+<p>An invisible character, that permits a letter to form a cursive connection without a visible neighbour. Especially useful for educational illustrations, but also has some real-world applications.</p>
+
+<p>Also used with complex scripts to manage the visual representation of glyphs that normally interact, eg. to form conjuncts, position diacritics, etc.</p>
+
+<p>More details:</p>
+<ul>
+<li><a href="wo.html#shapingcontrols">Managing glyph shaping</a></li>
+</ul>
+`,
+
+
+
+
+
+// LRM
+'\u{200E}': `
+<p>An invisible character with strong LTR directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
+
+<p>Generally referred to as LRM.</p>
+`,
+
+
+
+
+// RLM
+'\u{200F}': `
+<p>An invisible character with strong RTL directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
+
+<p>Generally referred to as RLM.</p>
+`,
+
+
+
+
+// LRE
 '\u{202A}': `
-<p class="insertTranscription">&#x202A;</p>
-<p>Sets the base direction for the following text to LTR, with no isolation. The Unicode Standard recommends use of LRI, instead.</p>
+<p>Sets the start point for a range of inline text when applying a base direction of left-to-right. The range is terminated by <span class="hx img">202C</span> (PDF).</p>
+
+<p><strong>Use <span class="hx img">2066</span> (LRI) rather than this character.</strong></p>
 `,
 
+// RLE
+'\u{202B}': `
+<p>Sets the start point for a range of inline text when applying a base direction of right-to-left. The range is terminated by <span class="hx img">202C</span> (PDF).</p>
 
+<p><strong>Use <span class="hx img">2067</span> (RLI) rather than this character.</strong></p>
+`,
 
-
-// pdf
+// PDF
 '\u{202C}': `
-<p class="insertTranscription">&#x202C;</p>
-<p>Ends the range of text that started with RLE, or LRE.</p>
+<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="hx img">202A</span> (LRE) or <span class="hx img">202B</span> (RLE).</p>
+
+<p><strong>Use <span class="hx img">2069</span> (PDI) and its associated range starters rather than this character.</strong></p>
 `,
 
 
 
 
-'\u{2032}': `
-<p class="insertTranscription">&#x2032;</p>
-<p>Abbreviation for feet (1′ = 12″).<a class="fnref" href="#refs">b330</a></p>
-<p>Also used for minutes of arc (eg. 60′=1°)<span class="name"></span>.<a class="fnref" href="#refs">b330</a></p>
-`,
 
-
-
-
-'\u{2033}': `
-<p class="insertTranscription">&#x2033;</p>
-<p>Abbreviation for inches (1′ = 12″).<a class="fnref" href="#refs">b321</a></p>
-<p>Also used for seconds of arc (eg. 360″=1°)<span class="name"></span>.<a class="fnref" href="#refs">b321</a></p>
-`,
-
-
-
-
-// word-break
-'\u{2060}': `
-<p class="insertTranscription">WB</p>
-<p>An invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks, eg. it can be used around the + sign in base&#x2060;+delta&#x2060; to prevent a line break occuring in that sequence of characters. It has no effect on word segmentation.</p>
-<p>It can also be used to bracket other characters to turn them into non-breaking characters, such as <a href="/scripts/punctuation/block#char2009"><span class="uname">U+2009 THIN SPACE</span></a> or <span class="codepoint" translate="no"><span lang="km">&#x2015;</span> [<a href="/scripts/khmer/block#char2015"><span class="uname">U+2015 HORIZONTAL BAR</span></a>]</span>.</p>
-<p>Not to be confused with <a href="/scripts/khmer/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> or <a href="/scripts/khmer/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER​</span></a>, since it has no effect on shaping.</p>
-<p>This functionality is also provided by <span class="uname">U+FEFF ZERO WIDTH NO-BREAK SPACE</span>, but since that character also represents the byte-order mark, the use of this word joiner character (added in Unicode 3.2) is strongly preferred over the latter.</p>
-`,
-
-
-
-
-// rli
-'\u{2067}': `
-<p class="insertTranscription">&#x2067;</p>
-<p>Sets the base direction for the following text to RTL, and isolates it (ie. stops the bidirectional algorithm causing interactions across the boundaries of the embedded text).</p>
-`,
-
-
-
-
-// lri
+// LRI
 '\u{2066}': `
-<p class="insertTranscription">&#x2066;</p>
-<p>Sets the base direction for the following text to LTR, and isolates it (ie. stops the bidirectional algorithm causing interactions across the boundaries of the embedded text).</p>
+<p>Sets the start point for a range of inline text when applying a base direction of left-to-right, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="hx img">2069</span> (PDI).</p>
+
+<p>This character should be used rather than <span class="hx img">202A</span> (LRE).</p>
 `,
 
 
+// RLI
+'\u{2067}': `
+<p>Sets the start point for a range of inline text when applying a base direction of right-to-left, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="hx img">2069</span> (PDI).</p>
 
+<p>This character should be used rather than <span class="hx img">202B</span> (RLE).</p>
+`,
 
-//fsi
+// FSI
 '\u{2068}': `
-<p class="insertTranscription">&#x2068;</p>
-<p>Sets the base direction for the following text to the direction of the first strong directional character, per Unicode Bidirectional Algorithm rules, and isolates it (ie. stops the bidirectional algorithm causing interactions across the boundaries of the embedded text).</p>
+<p>Sets the start point for a range of inline text when applying a base direction, and isolates the text within that range from text outside it. The base direction set is determined by that of the first strong directional character in the range. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="hx img">2069</span> (PDI).</p>
+`,
+
+// PDI
+'\u{2069}': `
+<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="hx img">2066</span> (LRI), <span class="hx img">2066</span> (RLI) or <span class="hx img">2068</span> (FSI).</p>
+
+<p>This character should be used rather than <span class="hx img">202C</span> (PDF).</p>
 `,
 
 
 
 
-// pdi
-'\u{2069}': `
-<p class="insertTranscription">&#x2069;</p>
-<p>Ends the range of text that started with RLI, LRI, or FSI.</p>
+
+// CGJ
+'\u{034F}': `
+<p class="insertTranscription">&#x034F;</p>
+
+<p>Combining grapheme joiner.</p>
+
+<p>Used to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.</p>
+
+<p>More details:</p>
+
+<ul>
+<li><a href="arb.html#shapingcontrols">Managing glyph shaping</a></li>
+<li><a href="arb.html#amtra">Special rendering rules</a></li>
+</ul>
 `,
 
 
