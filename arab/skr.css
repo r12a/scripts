@@ -14,6 +14,8 @@
 
 [lang=skr] { font-family: 'Noto Nastaliq Urdu WF', serif; font-size: 200%; }
 
+.rb { font-family: 'Noto Nastaliq Urdu WF'; }
+
 
 #freeText {
 	font-size: 28px;
@@ -21,17 +23,62 @@
 	text-align: right;
 	line-height: 2.4;
 	}
-
-
 @media print { #freeText { font-size: 24px; } }
 
 
 
+/* Examples */
+.charExample .ex {
+    font-size:200%;
+    line-height: 1.4;
+    }
+.charExample.inline .ex {
+    font-size: 200%;
+    }
+/* see also map tweaks */
 
 
-.large[lang=ar], .large[lang=pes] { font-size: 400%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
-.large[lang=ur] {font-size: 300%; text-align: center; line-height: 1; margin-top: .75em; margin-bottom: .5em; }
-.medium[lang=ar], .large[lang=pes] { font-size: 280%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
+/* CharacterBox panels */
+.listItem[lang] {
+    line-height: 2.4;
+	}
+
+/* Vowel examples in right column */
+.vowelSignExample bdi {
+    font-size:300%;
+    line-height:.6;
+    }
+
+
+/* Map tweaks */
+.map .charExample .ex {
+    font-size: 1.6rem;
+    }
+.map_row {
+	min-height: 2rem;
+	line-height: 1.4;
+	}
+.mapItem .ipa {
+    line-height: 2;
+    }
+.mapItem .posn {
+	min-width: 2rem;
+	}
+
+.mapItem .phone + div { width: 100%; }  /* this can be removed once all pages migrate */
+#consonant_mappings .mapItem .posn { display: none; }
+
+.shaping bdi {
+    margin-inline: .5rem;
+    }
+.mapItem .shaping .codepoint bdi[lang] {
+	font-size: 1.6rem;
+	}
+
+
+
+
+
 .counter_style_comp { border-collapse: collapse; }
 .counter_style_comp th { border: 0; line-height: 1; text-align:  start; }
 .counter_style_comp td { border-color: #eee; }
@@ -63,71 +110,11 @@ figure#fig_vowel_grid, figure#fig_vowel_grid2 {
 #consonant_mappings .mapItem .posn { display: none; }
 
 
-.mapItem {
-    text-align: start;
-    }
-.mapItem.initial {
-    border-bottom: 0;
-    }
-.mapItem .col1, .mapItem .col2 {
-    margin-inline-end: 1rem;
-    }
-.mapItem .ipa {
-    hyphens: none;
-    }
-#vowel_mappings .mapItem div.col3 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col2 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col1 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col3 {
-    flex: 3;
-    }
-#consonant_mappings .mapItem div.col2 {
-    flex: 1;
-    text-align: end;
-    }
-.mapItem example {
-    line-height: 3;
-    }
-.shaping bdi {
-    margin-inline: .5rem;
-    font-size: 2rem;
-    }
-.shaping > bdi::before {
-    content: '\200D';
-    }
-.shaping > bdi::after {
-    content: '\200D';
-    }
-.shaping > bdi:first-of-type::before {
-    content: '\200D';
-    }
-.shaping > bdi:first-of-type::after {
-    content: '';
-    }
-.shaping > bdi:last-of-type::before {
-    content: '';
-    }
-.shaping > bdi:last-of-type::after {
-    content: '\200D';
-    }
-
-
 .tr + .tr + .tr {
     font-size: 160%;
     color: #666;
     font-family: "Noto Nastaliq Urdu WF"
 }
-
-
-.listItem[lang] {
-    line-height: 2.4;
-    }
 
 
 

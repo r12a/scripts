@@ -15,8 +15,9 @@
 
 [lang=ha] { font-family: 'Alkalami WF'; font-size: 150%; }
 
-
 [lang=ar] { font-family: 'Scheherazade WF'; font-size: 150%; }
+
+.rb { font-family: 'Alkalami WF'; }
 
 
 #freeText {
@@ -24,53 +25,67 @@
 	font-family: 'Alkalami WF', 'Scheherazade WF', serif;
     line-height: 2.2;
 	}
-
 @media print { #freeText { font-size: 18px; } }
 
-.large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1.75; }
-.medium .ex { font-size: 200%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1.75; }
-.listTransc { font-family: gentiumpluswf; }
 
 
-
-
-
-
-
-.useBlockExamples .charExample .ex {
+/* Examples */
+.charExample .ex {
     font-size:200%;
     line-height: 1;
     }
-.useBlockExamples .charExample.inline .ex {
+.charExample.inline .ex {
     font-size: 200%;
     }
-
-.map .charExample .ex {
-    font-size: 2rem;
-}
+/* see also map tweaks */
 
 
+/* CharacterBox panels */
+.listItem[lang] {
+    line-height: 2;
+	}
+
+/* Vowel examples in right column */
 .vowelSignExample bdi {
     font-size:300%;
     line-height:.6;
     }
 
-#consonant_mappings .posn { display: none; }
 
-p.map_row {
-    min-height: 2.6rem;
+/* Map tweaks */
+.map .charExample .ex {
+    font-size: 1.5rem;
     }
+.map_row {
+	min-height: 2.6rem;
+	line-height: 1.4;
+	}
+.mapItem .ipa {
+    line-height: 2;
+    }
+.mapItem .posn {
+	min-width: 4rem;
+	}
+
+.mapItem .phone + div { width: 100%; }  /* this can be removed once all pages migrate */
+#consonant_mappings .mapItem .posn { display: none; }
+
+.shaping bdi {
+    margin-inline: .5rem;
+    }
+.mapItem .shaping .codepoint bdi[lang] {
+	font-size: 1.6rem;
+	}
 
 
 
-/*#vowel_grid td { height: 3em; vertical-align: top; border: 0; border-bottom: 1px solid #ccc; }
-#vowel_grid th { vertical-align: bottom; line-height: 1;}
-#vowel_grid td span { white-space: nowrap; text-align: start; border: 0; padding-left: .5em; font-size: 120%; }*/
 
 
-/*#vowel_grid td:has(span) {
-    border: 1px solid tan;
-    }*/
+
+
+
+
+
 figure#vowel_grid {
     margin-inline: 5rem;
     }
@@ -88,67 +103,6 @@ figure#vowel_grid {
 
 
 
-.mapItem {
-    text-align: start;
-    }
-.mapItem.initial {
-    border-bottom: 0;
-    }
-.mapItem .col1, .mapItem .col2 {
-    margin-inline-end: 1rem;
-    }
-.mapItem .ipa {
-    hyphens: none;
-    }
-#vowel_mappings .mapItem div.col3 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col2 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col1 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col3 {
-    flex: 3;
-    }
-#consonant_mappings .mapItem div.col2 {
-    flex: 1;
-    text-align: end;
-    min-width: 10rem;
-    }
-.mapItem example {
-    line-height: 3;
-    }
-.shaping bdi {
-    margin-inline: .5rem;
-    font-size: 2rem;
-    min-width: 20rem;
-    }
-.shaping > bdi::before {
-    content: '\200D';
-    }
-.shaping > bdi::after {
-    content: '\200D';
-    }
-.shaping > bdi:first-of-type::before {
-    content: '\200D';
-    }
-.shaping > bdi:first-of-type::after {
-    content: '';
-    }
-.shaping > bdi:last-of-type::before {
-    content: '';
-    }
-.shaping > bdi:last-of-type::after {
-    content: '\200D';
-    }
-#vowel_mappings .mapItem p.example {
-    margin-inline-start: .5rem;
-    }
-#consonant_mappings .mapItem p.example {
-    margin-inline-start: 1.5rem;
-    }
 
 
 
