@@ -8,7 +8,7 @@
 
 var langs = {
 
-"ban-bali": { name:"Bali (Balinese)", local:"ᬪᬵᬱᬩᬮᬶ / ᬩᬲᬩᬮᬶ", localtrans:"/baʃa bali/", silcode:"ban", 
+"ban-bali": { name:"Bali (Balinese)", local:"ᬪᬵᬱᬩᬮᬶ / ᬩᬲᬩᬮᬶ", localtrans:"/baʃa bali/", xxlang:"ban", silcode:"ban", 
 source:"ff844379ad4006570a536dd0572148858532d87b", 
 region:"oce", countries:"Indonesia", script:"bali", speakers:"3300000", 
 letter:"ᬅᬆᬇᬈᬉᬊᬋᬌᬍᬎᬏᬐᬑᬒᬓᬕᬖᬗᬘᬚᬜᬝᬞᬟᬠᬡᬢᬣᬤᬥᬦᬧᬨᬩᬪᬫᬬᬭᬮᬯᬰᬱᬲᬳ", letteraux:"ᬔᬙᬛ", mark:"ᬀᬁᬂᬃᬄ᬴ᬵᬶᬷᬸᬹᬺᬻᬼᬽᬾᬿᭀᭁᭂᭃ᭄", number:"᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙", punctuation:"᭎᭏᭚᭛᭜᭝᭞᭟᭠᭽᭾᭿", symbol:"", other:"\u200B\u200C", 
