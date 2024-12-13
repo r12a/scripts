@@ -103,7 +103,7 @@ function gatherData () {
             if (ipaData[phone].length > 1 && i > 0) out += `<div class="phone">&nbsp;</div>\n`
             else out += `<div class="phone"><span class="ipa">${ phone.toLowerCase() }</span></div>\n`
         
-            out += `<div>\n`
+            out += `<div class="map_detail">\n`
             
             
             
