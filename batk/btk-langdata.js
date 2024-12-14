@@ -8,7 +8,7 @@
 
 var langs = {
 
-"btk": { name:"Batak (gen)", local:"ᯘᯮᯒᯖ᯲ ᯅᯖᯂ᯲", localtrans:"", silcode:"", 
+"btk": { name:"Batak (gen)", local:"ᯘᯮᯒᯖ᯲ ᯅᯖᯂ᯲", localtrans:"", silcode:"", xxlang:"btk",
 source:"r12a", 
 region:"oce", countries:"Indonesia", script:"batk", speakers:"5665000", 
 letter:"ᯀᯁᯂᯃᯄᯅᯆᯇᯈᯉᯊᯋᯌᯍᯎᯏᯐᯑᯒᯓᯔᯕᯖᯗᯘᯙᯚᯛᯜᯝᯞᯟᯠᯡᯢᯣᯤᯥ", letteraux:"", mark:"᯦ᯧᯨᯩᯪᯫᯬᯭᯮᯯᯰᯱ᯲᯳", markaux:"", number:"", numberaux:"", punctuation:"᯼᯽᯾᯿", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"", deprecated:"", 

@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Noto Sans Batak WF';
-    src: url('../../shared/webfonts/notosansbatak-regular-webfont.woff2') format('woff2'),
-         url('../../shared/webfonts/notosansbatak-regular-webfont.woff') format('woff');
+    src: url('../../shared/webfonts/notosansbatak-regular-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 	}
@@ -12,6 +11,8 @@
     font-size: 140%;
     }
 
+.rb { font-family: 'this WF'; }
+
 
 
 #freeText {
@@ -20,28 +21,64 @@
 	text-align: start;
     line-height: 2;
 	}
-
 @media print { #freeText { font-size: 18px; } }
 
 
 
-
-.large .ex { 
-    font-size: 300%;
-    margin-block-start: .5em;
-    margin-block-end: 0.5em;
-    line-height: 1;
-    }	
-
-
-
-.useBlockExamples .charExample .ex {
-    font-size: 3rem;
+/* Examples */
+.charExample .ex {
+    font-size:200%;
     line-height: 1.2;
     }
-.useBlockExamples .charExample.inline .ex {
-    font-size: 1.4rem;
+.charExample.inline .ex {
+    font-size: 200%;
     }
+/* see also map tweaks */
+
+
+/* CharacterBox panels */
+.listItem[lang] {
+    line-height: 2;
+	}
+
+/* Vowel examples in right column */
+.vowelSignExample bdi {
+    font-size:300%;
+    line-height:.6;
+    }
+
+
+/* Map tweaks */
+.map .charExample .ex {
+    font-size: 1.6rem;
+    }
+.map_row {
+	min-height: 2rem;
+	line-height: 1.4;
+	}
+.mapItem .ipa {
+    line-height: 2;
+    }
+.mapItem .posn {
+	min-width: 4rem;
+	}
+
+/* .mapItem .phone + div { width: 100%; }  this can be removed once all pages migrate */
+#consonant_mappings .mapItem .posn { display: none; }
+
+.shaping bdi {
+    margin-inline: .5rem;
+    }
+.mapItem .shaping .codepoint bdi[lang] {
+	font-size: 1.6rem;
+	}
+
+
+
+
+
+
+
 
 
 h5 {
@@ -49,6 +86,7 @@ h5 {
     margin-block-end: 0;
     }
 
+.mapItemX .posn { display: none; }
 
 
 .map .charExample .ex {
