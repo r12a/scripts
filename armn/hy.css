@@ -14,8 +14,7 @@
 	}
 @font-face {
     font-family: 'Noto Sans Armenian WF';
-    src: url('../../shared/webfonts/NotoSansArmenian-Regularwebfont.woff2') format('woff2'),
-         url('../../shared/webfonts/NotoSansArmenian-Regularwebfont.woff') format('woff');
+    src: url('../../shared/webfonts/NotoSansArmenian-Regularwebfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 	}
@@ -26,6 +25,8 @@
 	font-size: 140%; 
 	}
 
+.rb { font-family: 'Noto Serif Armenian WF'; }
+
 
 
 #freeText {
@@ -34,40 +35,64 @@
 	text-align: start;
     line-height: 1.4;
 	}
-
-
 @media print { #freeText { font-size: 18px; } }
 
 
 
-
-.large { 
-	font-size: 200%; 
-	margin-top: .5em; 
-	margin-bottom: 0.5em; 
-	line-height: 1.4; 
-	}
-.iso9985 { 
-	font-family: gentiumpluswf; 
-	}
-
-
-
-
-
-
-
-.useBlockExamples .charExample .ex {
+/* Examples */
+.charExample .ex {
     font-size:200%;
     line-height: 1;
     }
-.useBlockExamples .charExample.inline .ex {
+.charExample.inline .ex {
     font-size: 200%;
     }
+/* see also map tweaks */
 
+
+/* CharacterBox panels */
+.listItem[lang] {
+    line-height: 2;
+	}
+
+/* Vowel examples in right column */
+.vowelSignExample bdi {
+    font-size:300%;
+    line-height:.6;
+    }
+
+
+/* Map tweaks */
 .map .charExample .ex {
     font-size: 1.6rem;
-}
+    }
+.map_row {
+	min-height: 2rem;
+	line-height: 1.4;
+	}
+.mapItem .ipa {
+    line-height: 2;
+    }
+.mapItem .posn {
+	min-width: 1rem;
+	}
+
+.mapItem .phone + div { width: 100%; }  /* this can be removed once all pages migrate */
+/*#consonant_mappings .mapItem .posn { display: none; }*/
+
+.shaping bdi {
+    margin-inline: .5rem;
+    }
+.mapItem .shaping .codepoint bdi[lang] {
+	font-size: 1.6rem;
+	}
+
+
+
+
+
+
+
 
 
 
