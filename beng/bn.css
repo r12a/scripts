@@ -1,17 +1,22 @@
 @font-face {
 	font-family: 'Noto Sans Bengali WF';
-	src: 	local('Noto Sans Bengali'),
-			url('../../shared/webfonts/NotoSansBengali-Regularwebfont.woff2') format('woff2');
+	src: url('../../shared/webfonts/NotoSansBengali-Regularwebfont.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	}
 @font-face {
 	font-family: 'Noto Serif Bengali WF';
-	src: 	local('Noto Serif Bengali'),
-			url('../../shared/webfonts/notoserifbengali-regular-webfont.woff2') format('woff2');
+	src: url('../../shared/webfonts/notoserifbengali-regular-webfont.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	}
+
+
+[lang=bn] { font-family: 'Noto Serif Bengali WF', SolaimanLipi, Likhan, "Bangla Sangam MN", "Shonar Bangla", "Vrinda", "Lohit Bengali", "Noto Sans Bengali", "Arial Unicode MS", sans-serif; font-size: 150%; }
+
+.rb { font-family: 'Noto Serif Bengali WF'; }
+
+
 
 #freeText {
 	font-size: 28px;
@@ -19,71 +24,57 @@
 	text-align: start;
     line-height: 1.4;
 	}
-
-
-[lang=bn] { font-family: 'Noto Serif Bengali WF', SolaimanLipi, Likhan, "Bangla Sangam MN", "Shonar Bangla", "Vrinda", "Lohit Bengali", "Noto Sans Bengali", "Arial Unicode MS", sans-serif; font-size: 150%; }
-
-
 @media print { #freeText { font-size: 18px; } }
 
 
 
-
-
-.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
-
-.iso15919 { font-family: "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif;
-font-size: 1.1em;
-font-weight: 300; }
-
-
-
-
-
-.useBlockExamples .charExample .ex {
-    font-size: 2.5rem;
+/* Examples */
+.charExample .ex {
+    font-size:250%;
     line-height: 1.2;
     }
-.useBlockExamples .charExample.inline .ex {
-    font-size: 1.4rem;
+.charExample.inline .ex {
+    font-size: 140%;
+    }
+/* see also map tweaks */
+
+
+/* CharacterBox panels */
+.listItem[lang] {
+    line-height: 2;
+	}
+
+/* Vowel examples in right column */
+.vowelSignExample bdi {
+    font-size:300%;
+    line-height:.6;
     }
 
 
+/* Map tweaks */
 .map .charExample .ex {
     font-size: 1.6rem;
     }
-.mapItem {
-    text-align: start;
-    }
-.mapItem.initial {
-    border-bottom: 0;
-    }
-.mapItem .col1, .mapItem .col2 {
-    margin-inline-end: 1rem;
-    }
+.map_row {
+	min-height: 2rem;
+	line-height: 1.4;
+	}
 .mapItem .ipa {
-    hyphens: none;
+    line-height: 2;
     }
-#vowel_mappings .mapItem div.col1 {
-    flex: 1;
+.mapItem .posn {
+	min-width: 4rem;
+	}
+
+.mapItem .phone + div { width: 100%; }  /* this can be removed once all pages migrate */
+#consonant_mappings .mapItem .posn { display: none; }
+
+.shaping bdi {
+    margin-inline: .5rem;
     }
-#vowel_mappings .mapItem div.col2 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col3 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col1 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col2 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col3 {
-    flex: 1;
-    }
-.mapItem example {
-    line-height: 3;
-    }
+.mapItem .shaping .codepoint bdi[lang] {
+	font-size: 1.6rem;
+	}
+
 
 
