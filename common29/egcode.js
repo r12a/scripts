@@ -515,6 +515,75 @@ function showCharDetailsInPanel (evt) {
 	else console.log('No lang found in showCharDetailsInPanel')
 
     // find the character(s)
+	if (evt.target.className == 'listItem') chars = evt.target.textContent.replace(/◌/g,'')
+    else if (evt.target.parentNode.className === 'panelCharacter') chars = evt.target.parentNode.querySelector('img').alt.replace(/◌/,'')
+	else if (evt.target.parentNode.parentNode.querySelector('bdi') !== null) {
+        var bdi = evt.target.parentNode.parentNode.querySelector('bdi')
+        if (bdi.querySelector('img')) chars = bdi.querySelector('img').alt
+        else chars = bdi.textContent.replace(/◌/g,'')
+        }
+	else if (evt.target.parentNode.parentNode.querySelector('span') !== null) chars = evt.target.parentNode.parentNode.querySelector('span').textContent.replace(/◌/g,'')
+	else console.log('No characters found in showCharDetailsInPanel')
+
+
+    // if this article is already open, close it
+    console.log('insertPoint',insertPoint,'next',insertPoint.nextElementSibling)
+    ptr = insertPoint.nextElementSibling
+    //console.log('tagname',ptr.tagName, 'title',ptr.title)
+    if (ptr !== null && ptr.tagName === 'ARTICLE' && ptr.title === chars) {
+        ptr.remove()
+        return
+        }
+
+
+    // create the article element & table outer
+    panel = document.createElement('article') 
+	panel.title = chars
+	table = document.createElement('table')
+	table.className = 'charDetails2'
+	table.innerHTML = makeArticleDetails(chars)
+	panel.appendChild(table)
+    insertPoint.after(panel)
+	
+	expandCharMarkup()
+	addExamples(lang)
+	//convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(table, window.blockDirectoryName, 'c')
+    
+    // set event trigger on all .ipa elements - opens description box on click
+    ipaNodes = document.querySelectorAll(".ipa")
+    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+	return false
+	}
+
+
+
+
+
+
+
+
+function showCharDetailsInPanelX (evt) {
+	var lang, chars, insetPoint, panel, table, ipaNodes
+    
+    //console.log('Event:',evt.target.textContent)
+	if (typeof charDetails === 'undefined') return
+
+    // get the insertion point
+    insertPoint = evt.target.closest('p, table, div, li, figure')
+
+
+	// find the language
+	if (evt.target.className == 'listItem') lang = evt.target.lang
+    else if (evt.target.parentNode.className === 'panelCharacter') lang = langTag
+	else if (evt.target.parentNode.parentNode.querySelector('bdi') !== null) lang = evt.target.parentNode.parentNode.querySelector('bdi').lang
+	else if (evt.target.parentNode.parentNode.querySelector('span') !== null) lang = evt.target.parentNode.parentNode.querySelector('span').lang
+	else console.log('No lang found in showCharDetailsInPanel')
+
+    // find the character(s)
 	if (evt.target.className == 'listItem') chars = evt.target.textContent
     else if (evt.target.parentNode.className === 'panelCharacter') chars = evt.target.parentNode.querySelector('img').alt
 	else if (evt.target.parentNode.parentNode.querySelector('bdi') !== null) {
