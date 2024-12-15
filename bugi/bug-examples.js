@@ -44,7 +44,7 @@ autoExpandExamples.bug = `
 ᨕᨗᨊ|mother|i§na|ina
 ᨕᨙᨔᨙᨊᨙ|Monday|e§se§neŋ|eseneng
 ᨕᨛᨔᨚ ᨕᨖᨕᨗ|Sunday||əso ahai
-ᨕᨛᨊᨛ|six||ənəng
+ᨕᨛᨊᨛ|six|ə§nəŋ|ənəng
 ᨀᨓᨗ|Kawi||kawi
 ᨄᨉᨚᨕᨂᨛ|prayers|pa§do§a§ŋəŋ|paddoangeng
 

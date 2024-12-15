@@ -8,10 +8,10 @@
 
 var langs = {
 
-"bug-bugi": { name:"Buginese", local:"ᨅᨔ ᨕᨘᨁᨗ", localtrans:"(basa ugi)", silcode:"bug", 
+"bug-bugi": { name:"Buginese", local:"ᨅᨔ ᨕᨘᨁᨗ", localtrans:"(basa ugi)", silcode:"bug", xxlang:"bug",
 source:"d997476f6f5d5a7525a2cdf2d0790e944bfa83f2", 
 region:"seasia", countries:"Indonesia, Malaysia", script:"bugi", speakers:"5000000", 
-letter:"ᨀᨁᨂᨃᨄᨅᨆᨇᨈᨉᨊᨋᨌᨍᨎᨏᨐᨑᨒᨓᨔᨕᨖꧏ", letteraux:"", mark:"ᨘᨗᨙᨚᨛ", markaux:"", number:"", numberaux:"", punctuation:"᨞᨟", punctuationaux:"", symbol:"", symbolaux:"", other:"\u{200D}", otheraux:"", aux:"​‌", deprecated:"", 
+letter:"ᨀᨁᨂᨃᨄᨅᨆᨇᨈᨉᨊᨋᨌᨍᨎᨏᨐᨑᨒᨓᨔᨕᨖꧏ", mark:"ᨘᨗᨙᨚᨛ", number:"", punctuation:"᨞᨟", symbol:"", other:"\u{200D}", aux:"​‌", 
 orth:`[Buginese] &nbsp; No longer in significant use, but found on signage. 
 <a href="../scripts/buginese" target="_blank">Detailed summary</a>.`,
 also:
