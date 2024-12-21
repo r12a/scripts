@@ -59,6 +59,7 @@ function showCharDetails (ch) {
     
     charBlock = document.createElement('div')
     charBlock.className = 'character'
+    charBlock.title = ch
     
     
     // Add the current character - use shape column, if it is defined
@@ -880,11 +881,14 @@ function makeXXCharacterPage () {
 
     if (specificList.length > 0) charList = specificList.join('')
     else charList = getCharList()
+    console.log('charList:',charList)
     charArray = [... charList]
     charArray = charArray.sort()
+    console.log('sorted charArray:',charArray)
     for (item=0;item<charArray.length;item++) showCharDetails(charArray[item])
+    /*
     cChars = document.querySelectorAll('.currentCharacter')
-    for (c=0;c<cChars.length;c++) {
+    for (c=0;c<cChars.length;c++) { 
         cChar = [... cChars[c].textContent][0]
         titleNode = cChars[c].nextElementSibling
         hex = cChar.codePointAt(0).toString(16).toUpperCase()
@@ -894,7 +898,19 @@ function makeXXCharacterPage () {
         titleNode.id = 'char'+hex
         titleNode.style.fontSize = '3rem'
         }
-    
+        */
+    cChars = document.querySelectorAll('.character')
+    for (c=0;c<cChars.length;c++) { 
+        cChar = cChars[c].title
+        titleNode = cChars[c].querySelector('h2')
+        hex = cChar.codePointAt(0).toString(16).toUpperCase()
+        while (hex.length < 4) hex = '0'+hex
+        content = `<bdi class="largeChar" onclick="navigator.clipboard.writeText(this.textContent); document.getElementById('copyNotice').style.display = 'block'; setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')">${ cChar }</bdi><span class="largeHex" onclick="document.location = getFindStr('${ hex }')">${ hex }</span>`
+        titleNode.innerHTML = content
+        titleNode.id = 'char'+hex
+        titleNode.style.fontSize = '3rem'
+        }
+
     if (specificList.length === 0) { //add some stats to bottom of page, unless this is just a subset of the db
         stats = findCharactersInDB()
         parts = stats.split('§')
