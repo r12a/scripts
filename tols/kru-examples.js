@@ -97,7 +97,7 @@ autoExpandExamples.kru = `
 𑷖𑶱𑷙𑷐|chicken|x§eː§‹§r
 𑶵𑷗𑶰𑷙|ridge|ɑ.§ɽ§iː§‹
 𑶲𑷎𑷌𑶲𑷗|a while|u§ŋ.§ɡ§u§ɽ
-𑶿𑶳𑷙𑷘𑶳̰ʼ𑶵|to wash oneself|n§oː.§‹§ɽʰ§or.§ʔ§ɑ
+𑶿𑶳𑷙𑷘𑶳𑷐ʼ𑶵|to wash oneself|n§oː.§‹§ɽʰ§o§r.§ʔ§ɑ
 𑷌𑶴𑷘|fort|ɡ§a§ɽʰ
 𑷑𑶵𑷑𑶱|saliva|l§ɑ.§l§e
 𑷅𑶵𑷑|voice|c§ɑ§l
