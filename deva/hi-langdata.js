@@ -11,7 +11,7 @@ var langs = {
 "hi": { name:"Hindi", local:" मानक हिन्दी‎ / हिन्दी‎", localtrans:"(Mānak Hindī / Hindī)", silcode:"hin", 
 source:"21f8184138e858d28a8478313d2b5b59a1f650f6,cldr_hi,udhr_hin", 
 region:"sasia", countries:"India, Nepal, Singapore, South Africa", script:"deva", speakers:"260000000", 
-letter:"अआइईउऊऋऍएऐऑओऔकखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहऽॐ", letteraux:"क़ख़ग़ज़ड़ढ़फ़", mark:"ँंः़ािीुूृॅेैॉोौ्", markaux:"", number:"०१२३४५६७८९", numberaux:"", punctuation:"।॥॰‘’“”", punctuationaux:"", symbol:"₹", symbolaux:"", other:"\u{200C}\u{200D}", otheraux:"", aux:"[]ʼ͏​‑–—…‰", deprecated:"", 
+letter:"अआइईउऊऋऍएऐऑओऔकखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहऽॐ", letteraux:"क़ख़ग़ज़ड़ढ़फ़", mark:"ँंः़ािीुूृॅेैॉोौ्", number:"०१२३४५६७८९", punctuation:"।॥॰‘’“”", symbol:"₹", other:"\u{200C}\u{200D}", aux:"[]ʼ͏​‑–—…‰", 
 orth:`[Devanagari] &nbsp; <a href="../scripts/deva/hi.html" target="_blank">Detailed summary</a>.`,
 also:
 ["hi-newa | newa | Archaic, no longer in use."],

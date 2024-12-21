@@ -320,6 +320,18 @@ linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp", gc:Y, baseline:"r
 },
 
 
+"gara": {name:"Garay", region:"afr", type:"alpha", 
+blocks:1, chars:69, bletter:51, bmark:5, bnumber:10, bpunctuation:1, bsymbol:2, bother:0, 
+direction:"rtl", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"A 𐵰 𐵐 ", vcomposite:N, prebase:N, circum:N, },
+case:Y, cursive:N, mcchars:"m", conjuncts:N, ligs:Y, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"space",
+linebreak:"word", hyphen:"yes 𐵮", wordspan:N, justification:U, gc:Y, baseline:"romn", 
+},
+
+
 
 "geor": {name:"Georgian", region:"eur", type:"alpha", 
 blocks:3, chars:174, bletter:173, bmark:0, bnumber:0, bpunctuation:1, bsymbol:0, bother:0, 

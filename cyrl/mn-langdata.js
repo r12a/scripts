@@ -8,7 +8,7 @@
 
 var langs = {
 
-"khk": { name:"Halh Mongolian", local:"Монгол хэл‎", localtrans:"(Mongol khel)", silcode:"", 
+"khk": { name:"Halh Mongolian", local:"Монгол хэл‎", localtrans:"(Mongol khel)", silcode:"", xxlang:"mn",
 source:"f41ea8a05b20e8c0c5d97f2c8d98f10aae211c03,cldr_mn,udhr_khk", 
 region:"easia", countries:"Mongolia, Russia", script:"cyrl", speakers:"2640000", 
 letter:"ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёҮүӨө", letteraux:"", mark:"", markaux:"̆̈", number:"", numberaux:"", punctuation:"«»“„…", punctuationaux:"", symbol:"₮", symbolaux:"", other:"", otheraux:"", aux:"%[]§ʼЫ‑–—‘‚†‡‰′″‹›№", deprecated:"", 

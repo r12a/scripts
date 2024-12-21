@@ -352,7 +352,7 @@ mar||
 Mars||
 mbaa||
 mbaal||
-𐵴𐵩𐵋𐵎𐵲|donkey, pig|ᵐb§aː§‹§m|mbaam
+𐵴𐵩𐵊𐵎𐵲|donkey, pig|ᵐb§aː§‹§m|mbaam
 mbaam-sëf||
 mbaam-xuux||
 mbaam-àll||

@@ -11,7 +11,7 @@ var langs = {
 "el": { name:"Greek, Modern", local:"ελληνικά / Νέα Ελληνικά‎", localtrans:"(elliniká / néa ellīniká)", silcode:"ell", 
 source:"699008154b84228aa76b6e70cce872c0177878c1,cldr_el,udhr_udhr_ell_monotonic", 
 region:"eur", countries:"Greece, Cyprus, Albania", script:"grek", speakers:"12000000", 
-letter:"ʹΆΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώ", letteraux:"ϗϛϞϟϠϡ", mark:"́̈", markaux:"", number:"", numberaux:"", punctuation:"«·»‑–—‘’“”…", punctuationaux:"", symbol:"͵€", symbolaux:"", other:"", otheraux:"", aux:"-[]§ʼ̍†‡‰′″‹›", deprecated:"", 
+letter:"ʹΆΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώ", letteraux:"ϗϛϞϟϠϡ", mark:"́̈", number:"", punctuation:"«·»‑–—‘’“”…", symbol:"͵€", other:"", aux:"-[]ʼ̍‰‹›", 
 orth:`[Greek] &nbsp; Essentially Monotonic Greek ([el-monoton]), however the polytonic Greek characters are included in the list of infrequently used characters. <a href="../scripts/greek" target="_blank">Details</a>.`,
 also:
 ["grc | grek | Ancient Greek, polytonic ([polyton]).",

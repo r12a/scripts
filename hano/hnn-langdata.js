@@ -8,7 +8,7 @@
 
 var langs = {
 
-"hnn-hano": { name:"Hanunoo", local:"ᜱᜨᜳᜨᜳᜢ", localtrans:"(Hanunó'o)", silcode:"", 
+"hnn-hano": { name:"Hanunoo", local:"ᜱᜨᜳᜨᜳᜢ", localtrans:"(Hanunó'o)", silcode:"", xxlang:"hnn",
 source:"f9d39cb72f3eca8fa47b766a6fdb42797b8390f9", 
 region:"oce", countries:"Philippines", script:"hano", speakers:"25000", 
 letter:"ᜠᜡᜢᜣᜤᜥᜦᜧᜨᜩᜪᜫᜬᜭᜮᜯᜰᜱ", letteraux:"", mark:"ᜲᜳ᜴", markaux:"", number:"", numberaux:"", punctuation:"᜵᜶", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"", deprecated:"", 

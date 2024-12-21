@@ -11,7 +11,7 @@ var langs = {
 "pa": { name:"Punjabi", local:"ਪੰਜਾਬੀ‎ / ਪੰਜਾਬੀ ਭਾਸ਼ਾ‎", localtrans:"(panjabi / panjabi bhasa)", silcode:"pan", 
 source:"cldr_pa,udhr_pan,f940e5c7fc381992f942120f89cd8137cb3c3eda", 
 region:"sasia", countries:"India", script:"guru", speakers:"122000000", 
-letter:"ਅਆਇਈਉਊਏਐਓਔਕਖਗਘਚਛਜਝਟਠਡਢਣਤਥਦਧਨਪਫਬਭਮਯਰਲਵਸਹੜੴ", letteraux:"ਙਞਲ਼ਸ਼ਖ਼ਗ਼ਜ਼ਫ਼", mark:"ਂਃ਼ਾਿੀੁੂੇੈੋੌ੍ੰੱੵ", markaux:"", number:"੦੧੨੩੪੫੬੭੮੯", numberaux:"", punctuation:"।‘’“”", punctuationaux:"", symbol:"☬", symbolaux:"", other:"", otheraux:"", aux:"%[]§«»ʼ॥‌‍‑–—†‡…‰′″‹›⁠", deprecated:"", 
+letter:"ʼਅਆਇਈਉਊਏਐਓਔਕਖਗਘਚਛਜਝਟਠਡਢਣਤਥਦਧਨਪਫਬਭਮਯਰਲਵਸਹੜੴ", letteraux:"ਙਞਲ਼ਸ਼ਖ਼ਗ਼ਜ਼ਫ਼", mark:"ਂਃ਼ਾਿੀੁੂੇੈੋੌ੍ੰੱੵ", number:"੦੧੨੩੪੫੬੭੮੯", punctuation:"।‘’“”", symbol:"☬", other:"", aux:"%[]«»॥‌‍‑–—…‰‹›⁠", 
 orth:`Gurmukhi. &nbsp; Primary usage. <a href="../scripts/gurmukhi" target="_blank">Details</a>.`,
 also:
 ["pa-arab | arab | Naskh style. See also [pnb].",

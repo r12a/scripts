@@ -11,7 +11,7 @@ var langs = {
 "gu": { name:"Gujarati", local:"ગુજરાત‎", localtrans:"(gujarātī)", silcode:"guj", 
 source:"cldr_gu,udhr_guj,cd18536eac759a61da40080d717664d64a29b397", 
 region:"sasia", countries:"India, Tanzania, Kenya, Bahrain, Zambia, Pakistan", script:"gujr", speakers:"49000000", 
-letter:"અઆઇઈઉઊઋઍએઐઑઓઔકખગઘઙચછજઝઞટઠડઢણતથદધનપફબભમયરલળવશષસહૐૠ", letteraux:"", mark:"ંઃ઼ાિીુૂૃૄૅેૈૉોૌ્", markaux:"", number:"૦૧૨૩૪૫૬૭૮૯", numberaux:"", punctuation:"।॥૰‘’“”", punctuationaux:"", symbol:"૱", symbolaux:"", other:"\u{200C}\u{200D}", otheraux:"", aux:"%[]§«»ʼ͏ઁઌૡૢૣ​‑–—†‡…‰′″‹›⁠", deprecated:"", 
+letter:"અઆઇઈઉઊઋઍએઐઑઓઔકખગઘઙચછજઝઞટઠડઢણતથદધનપફબભમયરલળવશષસહૐૠ", mark:"ંઃ઼ાિીુૂૃૄૅેૈૉોૌ્", number:"૦૧૨૩૪૫૬૭૮૯", punctuation:"।॥૰‘’“”", symbol:"૱", other:"\u{200C}\u{200D}", aux:"%[]«»ʼ͏ઁઌૡૢૣ​‑–—…‰‹›⁠", 
 orth:`[Gujurati] &nbsp; Primary usage. 
 <a href="../scripts/gujarati" target="_blank">Detailed summary</a>.`,
 also:
