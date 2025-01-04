@@ -8,10 +8,10 @@
 
 var langs = {
 
-"su-sund": { name:"Sundanese", local:"", localtrans:"", silcode:"sun", 
+"su-sund": { name:"Sundanese", local:"", localtrans:"", silcode:"sun", xxlang:"su",
 source:"ba3345132c34462391346964eea198c4041e1a52", 
 region:"seasia", countries:"Indonesia", script:"sund", speakers:"42000000", 
-letter:"ᮃᮄᮅᮆᮇᮈᮉᮊᮋᮌᮍᮎᮏᮐᮑᮒᮓᮔᮕᮖᮗᮘᮙᮚᮛᮜᮝᮞᮟᮠᮮᮯ", letteraux:"", mark:"ᮀᮁᮂᮡᮢᮣᮤᮥᮦᮧᮨᮩ᮪", markaux:"", number:"᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹", numberaux:"", punctuation:"‘’“”", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"%-[]§«»ʼ͏​‌‍‑–—†‡…‰′″‹›⁠", deprecated:"", 
+letter:"ᮃᮄᮅᮆᮇᮈᮉᮊᮋᮌᮍᮎᮏᮐᮑᮒᮓᮔᮕᮖᮗᮘᮙᮚᮛᮜᮝᮞᮟᮠᮮᮯ", mark:"ᮀᮁᮂᮡᮢᮣᮤᮥᮦᮧᮨᮩ᮪", number:"᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹", punctuation:"‘’“”", symbol:"", other:"", aux:"%-[]«»ʼ͏​‌‍‑–—…‰‹›⁠", 
 orth:`Sundanese. &nbsp; No longer in common use. <a href="../scripts/sundanese/" target="_blank">Details</a>.`,
 also:
 ["su-arab | arab | Naskh style. Since 12th-13th century.",

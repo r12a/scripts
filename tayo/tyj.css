@@ -9,6 +9,9 @@
 
 [lang=tyj] { font-family: 'Noto Serif Tai Yo WF', serif; writing-mode: vertical-rl; }
 
+.rb { font-family: 'Noto Serif Tai Yo WF'; }
+
+
 
 #freeText {
 	font-size: 28px;
@@ -17,151 +20,77 @@
     line-height: 2;
     width: 60%;
 	}
-
-
 @media print { #freeText { font-size: 18px; } }
 
-.listItem {
-  min-height: 1.8rem;
-}
-
-
-
-/* optional
-.listItem[lang] {
-    font-size: 300%;
-    }
-.codepoint span[lang=nod], .codepoint bdi[lang=nod] {
-    color: black;
-    font-size: 3rem;
-    }
-*/
 
 
 
 
 
-
-
-.useBlockExamples .charExample .ex {
+/* Examples */
+.charExample .ex {
     font-size:200%;
     line-height: 1;
     }
-.useBlockExamples .charExample.inline .ex {
+.charExample.inline .ex {
     font-size: 200%;
     }
+/* see also map tweaks */
 
 
+/* CharacterBox panels */
+.listItem[lang] {
+    min-height: 1.8rem;
+	}
 
+/* Vowel examples in right column */
 .vowelSignExample bdi {
     font-size:300%;
     line-height:.6;
     }
 
 
-
-
-
-/* FOR MOST SCRIPTS */
-
+/* Map tweaks */
 .map .charExample .ex {
     font-size: 1.6rem;
     }
-.mapItem {
-    text-align: start;
-    }
-.mapItem.initial {
-    border-bottom: 0;
-    }
-.mapItem .col1, .mapItem .col2 {
+.map_row {
+	min-height: 2rem;
+	line-height: 1.4;
+	}
+.mapItem .codepoint bdi[lang] {
+    color: black;
+    font-size: 2rem;
     margin-inline-end: 1rem;
-    }
+    line-height: 1.6;
+	}
 .mapItem .ipa {
-    hyphens: none;
+    line-height: 2;
     }
-#vowel_mappings .mapItem div.col1 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col2 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col3 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col1 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col2 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col3 {
-    flex: 1;
-    }
-.mapItem example {
-    line-height: 3;
-    }
+.mapItem .posn {
+	min-width: 3rem;
+	}
 
+.mapItem .phone + div { width: 100%; }  /* this can be removed once all pages migrate */
+#vowel_mappings .mapItem .posn { display: none; }
 
-
-
-
-
-/* FOR ARABIC ETC */
-
-.map .charExample .ex {
-    font-size: 1.6rem;
-    }
-.mapItem {
-    text-align: start;
-    }
-.mapItem.initial {
-    border-bottom: 0;
-    }
-.mapItem .col1, .mapItem .col2 {
-    margin-inline-end: 1rem;
-    }
-.mapItem .ipa {
-    hyphens: none;
-    }
-#vowel_mappings .mapItem div.col3 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col2 {
-    flex: 1;
-    }
-#vowel_mappings .mapItem div.col1 {
-    flex: 1;
-    }
-#consonant_mappings .mapItem div.col3 {
-    flex: 3;
-    }
-#consonant_mappings .mapItem div.col2 {
-    flex: 1;
-    text-align: end;
-    }
-.mapItem example {
-    line-height: 3;
-    }
 .shaping bdi {
     margin-inline: .5rem;
-    font-size: 2rem;
     }
-.shaping > bdi::before {
-    content: '\200D';
-    }
-.shaping > bdi::after {
-    content: '\200D';
-    }
-.shaping > bdi:first-of-type::before {
-    content: '\200D';
-    }
-.shaping > bdi:first-of-type::after {
-    content: '';
-    }
-.shaping > bdi:last-of-type::before {
-    content: '';
-    }
-.shaping > bdi:last-of-type::after {
-    content: '\200D';
-    }
+.mapItem .shaping .codepoint bdi[lang] {
+	font-size: 1.6rem;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 

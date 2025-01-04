@@ -11,7 +11,7 @@ var langs = {
 "tdd": { name:"Tai Nüa (Nɯa, Dehong Dai, Chinese Shan, Tai Mau, Tai Kong)", local:"", localtrans:"", silcode:"", 
 source:"7bbb60b1ae185293cf14c8d8088e14351477c26b", 
 region:"seasia", countries:"China, Myanmar, Vietnam, Laos", script:"tale", speakers:"720000", 
-letter:"ᥐᥑᥒᥓᥔᥕᥖᥗᥘᥙᥚᥛᥜᥝᥞᥟᥠᥡᥢᥣᥤᥥᥦᥧᥨᥩᥪᥫᥬᥭᥰᥱᥲᥳᥴ", letteraux:"", mark:"̀́̇̈̌", markaux:"", number:"၀၁၂၃၄၅၆၇၈၉", numberaux:"", punctuation:"、。〈〉《》！（），．：；？", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"", deprecated:"", 
+letter:"ᥐᥑᥒᥓᥔᥕᥖᥗᥘᥙᥚᥛᥜᥝᥞᥟᥠᥡᥢᥣᥤᥥᥦᥧᥨᥩᥪᥫᥬᥭᥰᥱᥲᥳᥴ", mark:"̀́̇̈̌", number:"၀၁၂၃၄၅၆၇၈၉", punctuation:"、。〈〉《》！（），．：；？", symbol:"", other:"", aux:"", 
 orth:`Tai Le. &nbsp; <a href="../scripts/taile/" target="_blank">Details</a>.`,
 linked:"tale/tdd", picker:"tale", font:"", 
 },

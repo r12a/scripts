@@ -11,7 +11,7 @@ var langs = {
 "ff": { name:"Fula (Fulani, Fulfulde, Fulah)", local:"Fula / Fulfulde", localtrans:"", silcode:"ful", 
 source:"2175c4f5eeb22d1c5d1c299445a11ffe23e00a2f", 
 region:"afr", countries:"Benin, Burkina Faso, Cameroon, Chad, Gambia, Ghana, Guinea, Liberia, Mali, Mauritania, Niger, Nigeria, Senegal, Sierra Leone", script:"latn", speakers:"24000000", 
-letter:"ÑñŊŋƁƊƝƳƴɓɗɲʼ", letteraux:"", mark:"", markaux:"", number:"", numberaux:"", punctuation:"", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"", deprecated:"", 
+letter:"ÑñŊŋƁƊƝƳƴɓɗɲʼ", mark:"", number:"", punctuation:"‘’“”…", symbol:"", other:"", aux:"[]«»Ɠɠ‑–—‰‹›", 
 orth:`[Latin] &nbsp; <a href="../scripts/latin/ff" target="_blank">Details</a>.`,
 also:
 ["ff-adlm | adlm | Since 1989, in development.",

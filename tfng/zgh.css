@@ -9,7 +9,8 @@
 [lang=ber] { font-family: "Noto Sans Tifinagh WF", sans; font-size: 150%; }
 [lang=zgh] { font-family: "Noto Sans Tifinagh WF", sans; font-size: 150%; }
 
-@media print { #freeText { font-size: 18px; } }
+.rb { font-family: 'Noto Sans Tifinagh WF'; }
+
 
 
 
@@ -20,13 +21,11 @@
     text-align: start;
 	line-height: 1.4;
 	}
+@media print { #freeText { font-size: 18px; } }
 
 
 
 
-
-
-.large[lang=ber] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
 .narrowlines .listPair { margin-bottom: 0.25em; }
 .narrowlines .listItem[lang=ber] { font-family: Tagmukay, 'Noto Sans Tifinagh WF'; }
 
@@ -34,19 +33,75 @@
 
 
 
-
-
-.useBlockExamples .charExample .ex {
+/* Examples */
+.charExample .ex {
     font-size:200%;
     line-height: 1;
     }
-.useBlockExamples .charExample.inline .ex {
+.charExample.inline .ex {
     font-size: 200%;
     }
+/* see also map tweaks */
 
+
+/* CharacterBox panels */
+.listItem[lang] {
+    line-height: 2;
+	}
+
+/* Vowel examples in right column */
+.vowelSignExample bdi {
+    font-size:300%;
+    line-height:.6;
+    }
+
+
+/* Map tweaks */
 .map .charExample .ex {
     font-size: 1.6rem;
-}
+    }
+.map_row {
+	min-height: 2rem;
+	line-height: 1.4;
+	}
+.mapItem .codepoint bdi[lang] {
+    color: black;
+    font-size: 2rem;
+    margin-inline-end: 1rem;
+    line-height: 1.6;
+	}
+.mapItem .ipa {
+    line-height: 2;
+    }
+#vowel_mappings .mapItem .ipa {
+	display: inline-block;
+	min-width: 8rem;
+	}
+.mapItem .posn {
+	min-width: 4rem;
+	}
+
+.mapItem .phone + div { width: 100%; }  /* this can be removed once all pages migrate */
+.mapItem .posn { display: none; }
+
+.shaping bdi {
+    margin-inline: .5rem;
+    }
+.mapItem .shaping .codepoint bdi[lang] {
+	font-size: 1.6rem;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

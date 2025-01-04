@@ -11,7 +11,7 @@ var langs = {
 "bap": { name:"Bantawa", local:"", silcode:"", 
 source:"r12a", 
 region:"sasia", countries:"India, Nepal", script:"krai", speakers:"", 
-letter:"𖵀𖵁𖵂𖵃𖵄𖵅𖵆𖵇𖵈𖵉𖵊𖵋𖵌𖵍𖵎𖵏𖵐𖵑𖵒𖵓𖵔𖵕𖵖𖵗𖵘𖵙𖵚𖵛𖵜𖵝𖵞𖵟𖵠𖵡𖵢𖵣𖵤𖵥𖵦𖵨𖵧𖵩𖵪𖵫𖵬", letteraux:"", mark:"", markaux:"", number:"𖵰𖵱𖵲𖵳𖵴𖵵𖵶𖵷𖵸𖵹", punctuation:"𖵭𖵮𖵯‘’“”", symbol:"", other:"‌‍", 
+letter:"𖵀𖵁𖵂𖵃𖵄𖵅𖵆𖵇𖵈𖵉𖵊𖵋𖵌𖵍𖵎𖵏𖵐𖵑𖵒𖵓𖵔𖵕𖵖𖵗𖵘𖵙𖵚𖵛𖵜𖵝𖵞𖵟𖵠𖵡𖵢𖵣𖵤𖵥𖵦𖵨𖵧𖵩𖵪𖵫𖵬", mark:"", number:"𖵰𖵱𖵲𖵳𖵴𖵵𖵶𖵷𖵸𖵹", punctuation:"‘’“”𖵭𖵮𖵯", symbol:"", other:"", aux:"", 
 orth:`[Kirat Rai] &nbsp;  
 <a href="../scripts/krai/bap.html" target="_blank">Detailed summary</a>.`,
 also:

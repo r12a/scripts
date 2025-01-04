@@ -8,17 +8,19 @@
 
 var langs = {
 
-"khk-mong": { name:"Halh Mongolian", local:"Монгол хэл‎", localtrans:"(Mongol khel)", silcode:"", redirect:true, 
-source:"cldr_mn", 
+"khk-mong": { name:"Halh Mongolian", local:"Монгол хэл‎", localtrans:"(Mongol khel)", label:"Mongolian, Halh",
+source:"cldr_mn", xxlang:"mn",
 region:"easia", countries:"Mongolia, China", script:"mong", speakers:"2640000", 
-letter:"ᠠᠡᠢᠣᠤᠥᠦᠧᠨᠩᠪᠫᠬᠭᠮᠯᠰᠱᠲᠳᠴᠵᠶᠷᠸᠹᠺᠻᠼᠽᠾᠿᡀᡁᡂ", letteraux:"", mark:"᠋᠌᠍᠏ᢅᢆᢩ", markaux:"", number:"᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙", numberaux:"", punctuation:"«»᠁᠂᠃᠄᠆᠊〈〉《》〔〕！（）？", punctuationaux:"", symbol:"", symbolaux:"", other:"\u{180E}\u{200C}\u{200D}", otheraux:"", aux:"%;[]§ʼ͏᠀᠅‑–—‘’“”†‡‰′″‹›⁈⁉、。", deprecated:"", 
+letter:"ᠠᠡᠢᠣᠤᠥᠦᠧᠨᠩᠪᠫᠬᠭᠮᠯᠰᠱᠲᠳᠴᠵᠶᠷᠸᠹᠺᠻᠼᠽᠾᠿᡀᡁᡂ", mark:"᠋᠌᠍᠏ᢅᢆᢩ", number:"᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙", punctuation:"«»᠁᠂᠃᠄᠆᠊〈〉《》〔〕！（）？", symbol:"", other:"\u{180E}", aux:"%;[]ʼ͏᠀᠅‌‍‑–—‘’“”‰‹›⁈⁉、。", 
 orth:`[Mongolian (Hudum)] &nbsp; <a href="../scripts/mongolian" target="_blank">Details</a>`,
 also:
 ["khk | cyrl | ",
 "khk-phag | phag | No longer in use.",
 "khk-tibt | tibt | No longer in use."],
 related:`Macrolanguage is Mongolian [mn].`,
-linked:"mong/mn", picker:"mong", font:"", 
+type:"alphabet", cs:"no", gpos:"yes", gsub:"yes", cursive:"yes", direction:"tblr", wordsep:"space", baseline:"cntr", wrap:"word", hyphenation:"yes", hyphen:"↵᠆*",  justification:"sp",
+vowels:"let:8",
+linked:"mong/mn", picker:"mong", 
 },
 
 

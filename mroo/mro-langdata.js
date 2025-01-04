@@ -11,7 +11,7 @@ var langs = {
 "mro": { name:"Mru, Mro", local:"", localtrans:"", silcode:"mro", 
 source:"", 
 region:"sasia", countries:"Bangladesh", script:"mroo", speakers:"400000", 
-letter:"𖩒𖩆𖩄𖩋𖩅𖩖𖩘𖩉𖩜𖩊𖩌𖩙𖩈𖩍𖩚𖩛𖩎𖩃𖩏𖩁𖩝𖩑𖩐𖩇𖩓𖩔𖩀𖩞𖩕𖩗𖩂", letteraux:"", mark:"", markaux:"", number:"𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩", numberaux:"", punctuation:"𖩮𖩯", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"%[]–—…‰", deprecated:"", 
+letter:"𖩀𖩁𖩂𖩃𖩄𖩅𖩆𖩇𖩈𖩉𖩊𖩋𖩌𖩍𖩎𖩏𖩐𖩑𖩒𖩓𖩔𖩕𖩖𖩗𖩘𖩙𖩚𖩛𖩜𖩝𖩞", mark:"", number:"𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩", punctuation:"“”𖩮𖩯", symbol:"", other:"", aux:"%[]–—…‰", 
 orth:`Mro.  <a href="../scripts/mroo/mro.html" target="_blank">Details.</a>`,
 linked:"mroo/mro", picker:"mroo-mro", font:"", 
 },

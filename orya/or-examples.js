@@ -1626,7 +1626,7 @@ autoExpandExamples.or = `
 ଋତୁ|season||ṛutu
 ଐରାଵତ|elephant||
 ଓଡ଼ିଆ ଅକ୍ଷର|Odia script|o§ɽi§a§ §ɔ§kʰ§jɔ§rɔ
-ଅକ୍ଷର|character|ɔkʰjɔrɔ|akṣara
+ଅକ୍ଷର|character|ɔ§kʰ§jɔ§rɔ|akṣara
 ତୀକ୍ଷ୍ଣ|sharp (as a knife)||tīkṣṇô
 ବୃକ୍ଷ|tree||brukṣô
 ଜଂଗଲ|forest||jôṃgôlô

@@ -1,11 +1,18 @@
 // this should always be updated when app-charuse/langs.js is updated
 
+    const Y = true
+    const N = false
+    const P = 'partial'
+    const U = '?'
+
+
+
 var langs = {
 
-"tbw-tagb": { name:"Tagbanwa (Aborlan Tagbanwa, Apurawnon, Tagbanua)", local:"ᝦᝪᝯ", localtrans:"(tagbanwa)", silcode:"", 
+"tbw-tagb": { name:"Tagbanwa (Aborlan Tagbanwa, Apurawnon, Tagbanua)", local:"ᝦᝪᝯ", localtrans:"(tagbanwa)", silcode:"", xxlang:"tbw", 
 source:"09633b7f41ba0964afe7ba85e2a36b37ceff58b7", 
 region:"oce", countries:"Philippines", script:"tagb", speakers:"17200", 
-letter:"ᝩᝦᝣᝪᝧᝤᝰᝫᝨᝥᝯᝮᝬᝠᝡᝢ", letteraux:"", mark:"ᝲᝳ", markaux:"", number:"", numberaux:"", punctuation:"᜵᜶", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"", deprecated:"", 
+letter:"ᝠᝡᝢᝣᝤᝥᝦᝧᝨᝩᝪᝫᝬᝮᝯᝰ", mark:"ᝲᝳ", number:"", punctuation:"᜵᜶", symbol:"", other:"", aux:"", 
 orth:`Tagbanwa &nbsp;`,
 also:
 ["tbw | latn | Primary."],

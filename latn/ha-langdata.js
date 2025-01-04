@@ -11,7 +11,7 @@ var langs = {
 "ha": { name:"Hausa (boko)", local:"Harshen Hausa", localtrans:"", silcode:"hau", 
 source:"cldr_ha,udhr_hau_NE,udhr_hau_NG", 
 region:"afr", countries:"Nigeria, Niger, Côte d'Ivoire, Benin, Chad, Sudan", script:"latn", speakers:"43928100", 
-letter:"ƙƴƁƊƘƳɓɗʼ", letteraux:"", mark:"", markaux:"̃́̀̂", number:"", numberaux:"", punctuation:"‐’‘", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"áàâéèêíìîóòôúùûÁÀÂÉÈÊÍÌÎÓÒÔÚÙÛ", deprecated:"", 
+letter:"ƁƊƘƙƳƴɓɗʼ", letteraux:"ÀÁÂÈÉÊÌÍÎÒÓÔÙÚÛàáâèéêìíîòóôùúû", mark:"", markaux:"̀́̂", number:"", punctuation:"‘’“”…", symbol:"", other:"", aux:"[]«»‑–—‰‹›", 
 orth:`[Latin] &nbsp; Primary usage. Based on Pan-Nigerian alphabet since 1980s. <a href="../scripts/latin/hausa#variants" target="_blank">Details.</a>&nbsp;
 See also <a href="../scripts/latin/hausa" target="_blank">Hausa (boko)</a>`,
 also:

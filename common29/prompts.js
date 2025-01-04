@@ -283,6 +283,7 @@ function makeIndexIntro (node) {
 
 function addPageIntro (script, orthogName, iso, picker, page) {
 	// Add a para to the intro & add accessibility controls
+    console.log('>> addPageIntro(',script, orthogName, iso, picker, page,')')
     var draft = ''
     var fonts = ''
     
@@ -497,6 +498,7 @@ else out += `
 /* !!!! Calls to this function should be phased out in favour of addPageIntro  !!! */
 function addUsageAdvice (script, iso, picker) {
 	// Add a para to the intro & add accessibility controls
+    console.log('>> addUsageAdvice(',script, iso, picker,')')
     var draft = ''
     var fonts = ''
     

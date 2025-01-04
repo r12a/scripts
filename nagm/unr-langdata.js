@@ -11,9 +11,9 @@ var langs = {
 "unr": { name:"Mundari", local:"", localtrans:"", silcode:"unr", 
 source:"", 
 region:"sasia", countries:"Bangladesh", script:"nagm", speakers:"1100000", 
-letter:"𞓐𞓑𞓒𞓓𞓔𞓕𞓖𞓗𞓘𞓙𞓚𞓛𞓜𞓝𞓞𞓟𞓠𞓡𞓢𞓣𞓤𞓥𞓦𞓧𞓨𞓩𞓪𞓫", letteraux:"", mark:"𞓮𞓯𞓬𞓭", markaux:"", number:"०१२३४५६७८९০১২৩৪৫৬৭৮৯୦୧୨୩୪୫୬୭୮୯𞓰𞓱𞓲𞓳𞓴𞓵𞓶𞓷𞓸𞓹", numberaux:"", punctuation:"“”", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"%-[]–—…‰", deprecated:"", 
+letter:"𞓐𞓑𞓒𞓓𞓔𞓕𞓖𞓗𞓘𞓙𞓚𞓛𞓜𞓝𞓞𞓟𞓠𞓡𞓢𞓣𞓤𞓥𞓦𞓧𞓨𞓩𞓪𞓫", mark:"𞓮𞓯𞓬𞓭", number:"०१२३४५६७८९০১২৩৪৫৬৭৮৯୦୧୨୩୪୫୬୭୮୯𞓰𞓱𞓲𞓳𞓴𞓵𞓶𞓷𞓸𞓹", punctuation:"“”", symbol:"", other:"", aux:"%-[]–—…‰", 
 orth:`Nag Mundari (Mundari Bani).  <a href="../scripts/nagm/unr.html" target="_blank">Details.</a>`,
-linked:"nagm/unr", picker:"nagm-unr", font:"", 
+linked:"nagm/unr", picker:"nagm-unr", font:"Noto Sans Nag Mundari", 
 },
 
 

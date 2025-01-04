@@ -11,7 +11,7 @@ var langs = {
 "dv": { name:"Dhivehi (Maldivian, Divehi)", local:"ދިވެހި / ދިވެހިބަސް ", localtrans:"[d̪iˈʋehi / d̪iˈʋehi bas]", silcode:"div", rtl:true, 
 source:"udhr_div,760eec0c90074853cbeeb6ec23e9bb8d14dd7c0d", 
 region:"sasia", countries:"Maldives", script:"thaa", speakers:"340000", 
-letter:"ހށނރބޅކއވމފދތލގޏސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ", letteraux:"ﷲ", mark:"ަާިީުޫެޭޮޯް", markaux:"", number:"", numberaux:"٠١٢٣٤٥٦٧٨٩", punctuation:"،؛؟“”", punctuationaux:"", symbol:"", symbolaux:"﷽", other:"", otheraux:"", aux:",/;[]⹁", deprecated:"", 
+letter:"ހށނރބޅކއވމފދތލގޏސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ", letteraux:"ﷲ", mark:"ަާިީުޫެޭޮޯް", number:"", numberaux:"٠١٢٣٤٥٦٧٨٩", punctuation:"،؛؟“”", symbol:"", symbolaux:"﷽", other:"\u{061C}", aux:",/;<>[]⹁", 
 orth:`[Thaana] &nbsp;  <a href="../scripts/thaana/" target="_blank">Details</a>.`,
 also:
 ["dv-latn | latn | ‘Maldivian Latin’."],

@@ -11,7 +11,7 @@ var langs = {
 "lif": { name:"Limbu", local:"ᤃᤠᤰᤌᤢᤱ ᤐᤠ᤺ᤴ", localtrans:"[gaktʰuŋ paːn]", silcode:"lif", 
 source:"", 
 region:"sasia", countries:"Nepal, Sikkim", script:"limb", speakers:"400000", 
-letter:"ᤀᤁᤂᤃᤄᤅᤆᤇᤈᤋᤌᤍᤎᤏᤐᤑᤒᤓᤔᤕᤖᤗᤘᤙᤛᤜ", letteraux:"", mark:"ᤠᤡᤢᤣᤤᤥᤦᤧᤨᤩᤪᤫᤰᤱᤳᤴᤵᤶᤷᤸ᤻᤹᤺", markaux:"", number:"᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏", numberaux:"", punctuation:"॥᥄᥅“”", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"%[]§‌‍–—†‡…‰′″", deprecated:"", 
+letter:"ᤀᤁᤂᤃᤄᤅᤆᤇᤈᤋᤌᤍᤎᤏᤐᤑᤒᤓᤔᤕᤖᤗᤘᤙᤛᤜ", mark:"ᤠᤡᤢᤣᤤᤥᤦᤧᤨᤩᤪᤫᤰᤱᤳᤴᤵᤶᤷᤸ᤻᤹᤺", number:"᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏", punctuation:"॥᥄᥅“”", symbol:"", other:"", aux:"%[]‌‍–—…‰", 
 orth:`Limbu.  <a href="../scripts/limb/lif.html#variants" target="_blank">Details.</a>`,
 also:
 ["lif-deva | deva | Primary usage."],
