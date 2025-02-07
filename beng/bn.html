@@ -62,7 +62,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 December, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 February, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -75,7 +75,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->14-Dec-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->07-Feb-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -3509,9 +3509,12 @@ although these may also be spelled with conjuncts, eg.
 
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 <p id="def-orthographicsyllable" class="explanatoryintro definitionStub"></p>
-<p><strong>This section is still undergoing research and development.</strong></p>
+<!--<p><strong>This section is still undergoing research and development.</strong></p>-->
   
-<p>Grapheme clusters alone are not sufficient to represent typographic units in Bengali in all circumstances. Conjuncts are  common and must not be split apart by edit operations that visually change the text (such as letter-spacing, first-letter highlighting, and in-word line breaking). For those operations one needs to segment the text using <em>orthographic syllables</em>, which string grapheme clusters together with a virama.</p>
+<p>Changes introduced in Unicode 15.1 mean that grapheme clusters alone are now sufficient to represent typographic units in Bengali. Conjuncts are common and must not be split apart by edit operations that visually change the text (such as letter-spacing, first-letter highlighting, and in-word line breaking). For those operations one needs to segment the text using <em>orthographic syllables</em>, which string grapheme clusters together with a virama.</p>
+  
+<!--<p>Grapheme clusters alone are not sufficient to represent typographic units in Bengali in all circumstances. Conjuncts are  common and must not be split apart by edit operations that visually change the text (such as letter-spacing, first-letter highlighting, and in-word line breaking). For those operations one needs to segment the text using <em>orthographic syllables</em>, which string grapheme clusters together with a virama.</p>
+-->
 
 <p>The Bengali virama (<span class="name">hasant</span>) is <span class="hx">09CD</span>, which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</code>.</p>
 
@@ -3520,7 +3523,7 @@ although these may also be spelled with conjuncts, eg.
 
 
 <section id="graphemeC">
-<h4>Grapheme clusters</h4>
+<h4>Simple grapheme clusters</h4>
 
 <p><code>Base ZW(N)J? Combining_mark* ZW(N)J?</code></p>
 <p>Combining marks may include zero or more of the following types of character. </p>
@@ -3550,17 +3553,15 @@ although these may also be spelled with conjuncts, eg.
 
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/g_bucket_gc.png" alt=""></td><td><span class="eg" lang="bn">বালতি</span></td></tr>
+<tr><td><img src="images/g_bucket_gc.png" alt="বালতি" style="height:3em;"></td><td><span class="eg" lang="bn">বালতি</span></td></tr>
 
 <!--tr><td><img src="images/g_bangla_gc.png" alt=""></td><td><span class="eg" lang="bn">বাংলা</span></td></tr-->
 
-<tr><td><img src="images/g_english_gc.png" alt=""></td><td><span class="eg" lang="bn">ইংরেজ</span></td></tr>
+<tr><td><img src="images/g_english_gc.png" alt="ইংরেজ" style="height:3em;"></td><td><span class="eg" lang="bn">ইংরেজ</span></td></tr>
 
-<tr><td><img src="images/g_silence_gc.png" alt=""></td><td><span class="eg" lang="bn">নিঃশব্দ</span></td></tr>
+<!--<tr><td><img src="images/g_silence_gc.png" alt=""></td><td><span class="eg" lang="bn">নিঃশব্দ</span></td></tr>-->
 
-<tr><td><img src="images/g_grasshopper_gc.png" alt=""></td><td><span class="eg" lang="bn">ঝিল্লি</span></td></tr>
-
-<tr><td><img src="images/g_campus_gc.png" alt=""></td><td><span class="eg" lang="bn">ক্যম্পাস</span></td></tr>
+<tr><td><img src="images/g_sorrow_gc.png" alt="দুঃখও" style="height:3em;"></td><td><span class="eg" lang="bn">দুঃখও</span></td></tr>
 </table>
 
 
@@ -3576,21 +3577,28 @@ although these may also be spelled with conjuncts, eg.
 <section id="orthographicS">
 <h4>Larger typographic units</h4>
 
-<p style="text-align:start;"><code>(Consonant Nukta? Virama)* Grapheme_cluster</code></p>
+<p style="text-align:start;"><code>(Consonant Nukta? Virama)+ Simple_grapheme_cluster</code></p>
 
 <p>Bengali commonly stacks or conjoins glyphs, to form conjuncts (see <a class="secref">clusters</a>). The conjuncts represent consonant clusters or gemination.</p>
 
-<p>Grapheme clusters terminate after a sequence of marks that includes a <span class="name">hasant</span>, but editorial operations that change the visual appearance of the text, such as letter-spacing, first-letter highlighting, line-breaking, and justification, should never split conjunct forms apart. For this reason, an alternative way of segmenting graphemes is needed. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>
-<p>Where conjuncts appear, a typographic unit contains multiple grapheme clusters. The non-final grapheme clusters  all end with  <span class="hx">09CD</span>, and the final grapheme cluster begins with a consonant.</p>
-<p>The following are examples. Some examples were shown in the previous section: here the conjunct is treated as a single typographic unit.</p>
+<p>Editorial operations that change the visual appearance of the text, such as letter-spacing, first-letter highlighting, line-breaking, and justification, should never split conjunct forms apart. For this reason, the extended grapheme cluster rules were modified in Unicode 15.1 to cover a number of named scripts, including  Bengali. Since Bengali's <span class="ch">্</span> has an <code class="kw" translate="no">Indic_Conjunct_Break</code> property value of <code class="kw" translate="no">Linker</code> the <span class="name">hasant</span> effectively extends the grapheme cluster that began the conjunct to include the grapheme cluster that follows it.</p>
+
+
+
+
+<!--<p>Grapheme clusters terminate after a sequence of marks that includes a <span class="name">hasant</span>, but editorial operations that change the visual appearance of the text, such as letter-spacing, first-letter highlighting, line-breaking, and justification, should never split conjunct forms apart. For this reason, an alternative way of segmenting graphemes is needed. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>-->
+
+<!--<p>Where conjuncts appear, a typographic unit contains multiple grapheme clusters. The non-final grapheme clusters  all end with  <span class="hx">09CD</span>, and the final grapheme cluster begins with a consonant.</p>-->
+
+<p>The following are examples.</p>
 
 <p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/g_grasshopper_os.png" alt=""></td><td><span class="eg" lang="bn">ঝিল্লি</span></td></tr>
-<tr><td><img src="images/g_campus_os.png" alt=""></td><td><span class="eg" lang="bn">ক্যম্পাস</span></td></tr>
-<tr><td><img src="images/g_moment_os.png" alt=""></td><td><span class="eg" lang="bn">ক্ষণ</span></td></tr>
-<tr><td><img src="images/g_shirt_os.png" alt=""></td><td><span class="eg" lang="bn">কুর্তা</span></td></tr>
+<tr><td><img src="images/g_grasshopper_os.png" alt="ঝিল্লি" style="height:3em;"></td><td><span class="eg" lang="bn">ঝিল্লি</span></td></tr>
+<tr><td><img src="images/g_campus_os.png" alt="" style="height:3em;"></td><td><span class="eg" lang="bn">ক্যম্পাস</span></td></tr>
+<tr><td><img src="images/g_moment_os.png" alt="" style="height:3em;"></td><td><span class="eg" lang="bn">ক্ষণ</span></td></tr>
+<tr><td><img src="images/g_shirt_os.png" alt="" style="height:3em;"></td><td><span class="eg" lang="bn">কুর্তা</span></td></tr>
 </table>
 
 <p>Note that consonant clusters aren't always rendered as conjuncts, and in those cases the individual letters remain as separate graphemes. For example, consonants without an inherent vowel may be written using a consonant letter on its own at the end of a word or in other locations (see <a class="secref">novowel</a>).</p>
@@ -3599,9 +3607,9 @@ although these may also be spelled with conjuncts, eg.
 
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/g_rickshaw_os.png" alt=""></td><td><span class="eg" lang="bn">রিকশা</span></td></tr>
+<tr><td><img src="images/g_rickshaw_os.png" alt="" style="height:3em;"></td><td><span class="eg" lang="bn">রিকশা</span></td></tr>
 
-<tr><td><img src="images/g_noteat_os.png" alt=""></td><td><span class="eg" lang="bn">খাননা</span></td></tr>
+<tr><td><img src="images/g_noteat_os.png" alt="" style="height:3em;"></td><td><span class="eg" lang="bn">খাননা</span></td></tr>
 </table>
 
 
@@ -3609,9 +3617,9 @@ although these may also be spelled with conjuncts, eg.
 
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/g_flat_os.png" alt=""></td><td><span class="eg" lang="bn">ফ্‌ল্যাট</span></td></tr>
+<tr><td><img src="images/g_flat_os.png" alt="" style="height:3em;"></td><td><span class="eg" lang="bn">ফ্‌ল্যাট</span></td></tr>
 
-<tr><td><img src="images/g_lunch_os.png" alt=""></td><td><span class="eg" lang="bn">লান্‌চ</span></td></tr>
+<tr><td><img src="images/g_lunch_os.png" alt="" style="height:3em;"></td><td><span class="eg" lang="bn">লান্‌চ</span></td></tr>
 </table>
 </section>
 
@@ -3625,7 +3633,7 @@ although these may also be spelled with conjuncts, eg.
 <p>Behaviour is font-dependent. If a font doesn't have a conjunct form for a particular combination of characters it will make the virama visible.</p>
 <p>What's important to note here is that it is normally possible to break a line after the grapheme cluster containing the virama when the virama is visible. This is currently difficult to manage because the decision as to whether the text is segmented into 2 graphemes or one  depends only on the capabilities of the font used (ie. the rendered result); the code point sequence is identical for both cases, and gives no clues to which approach to segmentation is applicable.</p>
 
-<p>Visible viramas can also affect vowel sign positioning. For the purposes of illustration, see <a class="figref">fig_prebase_position</a>, where the placement of the pre-base vowel varies. In the conjunct form on the left, the vowel sign is rendered to the left of the whole conjunct. If the sequence is not rendered as a conjunct, as in the second example, the pre-base glyph precedes the <span class="uname">TA</span>, not the <span class="uname">SA</span>.</p>
+<p>Visible viramas can also affect vowel sign positioning. For the purposes of illustration, see <a class="figref">fig_prebase_position</a>, where the placement of the pre-base vowel varies. In the conjunct form on the left, the vowel sign is rendered to the left of the whole conjunct. If the sequence is not rendered as a conjunct, as in the second example, the pre-base glyph precedes the <span class="uname">TA</span>, not the <span class="uname">SA</span>. (The underlying sequence of characters is the same in both cases.)</p>
 
 <figure id="fig_prebase_position" class="sideCaption">
 <div style="text-align: start;">
@@ -3652,7 +3660,10 @@ although these may also be spelled with conjuncts, eg.
 </div>
 
 <p><span class="leadin">Cursor movement.</span> <span class="instructions">Move the cursor through the text.</span><br>
-Gecko steps through the  text using grapheme clusters with one exception. It takes 2 or more steps (depending on the number of GCs) to get through the conjuncts, one grapheme cluster at a time. In some cases, especially with <span class="uname">RA</span>, the cursor may look as if it is in the wrong position. The exception is the sequences with yo-phala (eg. <span class="charExample inline" translate="no"><span class="ex" lang="bn">ল্যা</span></span>), which are skipped over as if they were a single grapheme cluster. Blink and WebKit step through all words using the orthographic syllables as described here (ie. they step over a stack and all associated combining characters in one jump), except that WebKit doesn't include the ZWNJ in the grapheme cluster it ends, requiring an extra jump to get past it (although the cursor doesn't move).</p>
+Gecko, Blink, and WebKit browsers step through the text using grapheme clusters, including the new rules around conjuncts (ie. they step over a stack and all associated combining characters in one jump), except that WebKit doesn't include the ZWNJ in the grapheme cluster it ends, requiring an extra jump to get past it (although the cursor doesn't move).</p>
+
+<!--<p><span class="leadin">Cursor movement.</span> <span class="instructions">Move the cursor through the text.</span><br>
+Gecko steps through the  text using grapheme clusters with one exception. It takes 2 or more steps (depending on the number of GCs) to get through the conjuncts, one grapheme cluster at a time. In some cases, especially with <span class="uname">RA</span>, the cursor may look as if it is in the wrong position. The exception is the sequences with yo-phala (eg. <span class="charExample inline" translate="no"><span class="ex" lang="bn">ল্যা</span></span>), which are skipped over as if they were a single grapheme cluster. Blink and WebKit step through all words using the orthographic syllables as described here (ie. they step over a stack and all associated combining characters in one jump), except that WebKit doesn't include the ZWNJ in the grapheme cluster it ends, requiring an extra jump to get past it (although the cursor doesn't move).</p>-->
 
 <p><span class="leadin">Selection.</span> <span class="instructions">Place the cursor next to a character and hold down shift while pressing an arrow key.</span><br>
 The behaviour is the same as for cursor movement. </p>
@@ -3660,7 +3671,7 @@ The behaviour is the same as for cursor movement. </p>
 <p><span class="leadin">Deletion.</span> Forward deletion works in the same way as cursor movement.  The backspace key deletes code point by code point, for all browsers.</p>
 
 <p><span class="leadin">Line-break.</span> <span class="instructions">See <a href="https://w3c.github.io/i18n-tests/exploratory/line_breaking/int-line-break?lang=bn&fontSize=36&width=770&lineBreak=anywhere&wordBreak=normal&text=xxxxx%20%E0%A6%87%E0%A6%82%E0%A6%B0%E0%A7%87%E0%A6%9C%20%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BE%E0%A6%B8%20%E0%A6%AB%E0%A7%8D%E2%80%8C%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9F%20%E0%A6%95%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BE&a=&i=Change%20the%20width%20of%20the%20box%20slowly%20to%20see%20how%20the%20text%20wraps." target="_blank">this test</a>. The CSS sets the value of the <code class="kw" translate="no">line-break</code> property to <code class="kw" translate="no">anywhere</code>. Change the size of the box to slowly move the line break point.</span><br>
-Gecko sets break opportunities in the same places as cursor stops. WebKit and Blink both wrap on orthographic syllable boundaries.</p>
+The behaviour is the same as for cursor movement.</p>
 </section>
 </section>
 </section>
