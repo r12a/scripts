@@ -16,6 +16,10 @@ var InvisibleStacker = new Set(['\u{AAF6}', '\u{1193E}', '\u{11D45}', '\u{11D97}
 
 var Virama = new Set(['\u{94D}', '\u{9CD}', '\u{A4D}', '\u{ACD}', '\u{B4D}', '\u{C4D}', '\u{CCD}', '\u{D4D}', '\u{1B44}', '\u{A806}', '\u{A8C4}', '\u{110B9}', '\u{111C0}', '\u{11235}', '\u{1134D}', '\u{11442}', '\u{114C2}', '\u{115BF}', '\u{1163F}', '\u{116B6}', '\u{119E0}', '\u{11839}', '\u{11046}', '\u{11C3F}', '\u{1B44}', '\u{A9C0}', '\u{E001}', '\u{E002}' ])
 
+var Linker = new Set(['\u{94D}', '\u{9CD}', '\u{ACD}', '\u{B4D}', '\u{C4D}', '\u{D4D}' ])
+
+//var Virama = new Set(['\u{A4D}', '\u{CCD}', '\u{1B44}', '\u{A806}', '\u{A8C4}', '\u{110B9}', '\u{111C0}', '\u{11235}', '\u{1134D}', '\u{11442}', '\u{114C2}', '\u{115BF}', '\u{1163F}', '\u{116B6}', '\u{119E0}', '\u{11839}', '\u{11046}', '\u{11C3F}', '\u{1B44}', '\u{A9C0}', '\u{E001}', '\u{E002}' ])
+
 var Consonants = new Set([
 // Balinese
 'ᬧ', 'ᬩ', 'ᬢ', 'ᬤ', 'ᬓ', 'ᬕ', 'ᬘ', 'ᬚ', 'ᬲ', 'ᬳ', 'ᬫ', 'ᬦ', 'ᬗ', 'ᬜ', 'ᬯ', 'ᬭ', 'ᬮ', 'ᬬ', 'ᬨ', 'ᬪ', 'ᬝ', 'ᬣ', 'ᬥ', 'ᬖ', 'ᬰ', 'ᬱ', 'ᬡ', 'ᬞ', 'ᬟ', 'ᬠ', 'ᬔ', 'ᬙ', 'ᬛ', 'ᭅ', 'ᭆ', 'ᭇ', 'ᭈ', 'ᭉ', 'ᭊ', 'ᭋ', 'ᬋ', 'ᬌ', 'ᬍ', 'ᬎ',
@@ -64,10 +68,10 @@ addToSet('Extend', '\uE006')
 addToSet('Extend', '\uE007')
 
 
-if (debug) console.log(Prepend)
-if (debug) console.log(Control)
-if (debug) console.log(Extend)
-if (debug) console.log(SpacingMark)
+if (debug) console.log('Prepend',Prepend)
+if (debug) console.log('Control',Control)
+if (debug) console.log('Extend',Extend)
+if (debug) console.log('SpacingMark', SpacingMark)
 
 
 
@@ -138,38 +142,6 @@ function addToSet (type, char) {
     }
 
 
-function makeGraphemeClustersX (str) {
-    // process str and output an annotated string with |+ZWSP dividers
-    if (trace) console.log('makeGraphemeClusters(',str,')')
-    var strArray = [...str]
-    var out = ''
-    var prependFlag = false
-    
-    for (var i=0;i<strArray.length;i++) {
-        if (Extend.has(strArray[i])) out += strArray[i]
-        else if (SpacingMark.has(strArray[i])) out += strArray[i]
-        else if (Control.has(strArray[i])) out += strArray[i]
-        else if (Prepend.has(strArray[i])) {
-            out += '</bdi><bdi class="divider">|</bdi>&#x200B;<bdi class="segment" onmouseover="if (document.getElementById(\'mouseover\').checked) showComponents(this.textContent)" onclick="showComponents(this.textContent)">'+strArray[i]
-            prependFlag = true
-            }
-        else {
-            if (prependFlag) {
-                out += strArray[i]
-                prependFlag = false
-                }
-            else {
-                if (i>0) out += '</bdi><bdi class="divider">|</bdi>&#x200B;'
-                out += '<bdi class="segment" onmouseover="if (document.getElementById(\'mouseover\').checked) showComponents(this.textContent)" onclick="showComponents(this.textContent)">'+strArray[i]
-                }
-            }
-        }
-    return out
-    }
-
-
-
-
 function makeGraphemeClusters (str, calledFromOrth) {
     // process str and output an annotated string with |+ZWSP dividers
     if (trace) console.log('makeGraphemeClusters(',str,')')
@@ -178,12 +150,14 @@ function makeGraphemeClusters (str, calledFromOrth) {
     var prependFlag = false
     
     for (var i=0;i<strArray.length;i++) {
+        //console.log('IN',strArray[i])
         if (Extend.has(strArray[i])) out += strArray[i]
         else if (SpacingMark.has(strArray[i])) out += strArray[i]
         else if (Control.has(strArray[i])) out += strArray[i]
         else if (Prepend.has(strArray[i])) {
             out += '|'+strArray[i]
             prependFlag = true
+            //console.log('prependFlag set to TRUE')
             }
         else {
             if (prependFlag) {
@@ -191,10 +165,13 @@ function makeGraphemeClusters (str, calledFromOrth) {
                 prependFlag = false
                 }
             else {
-                if (i>0) out += '|'
+                //console.log('>',strArray[i])
+                if (i>0 && ! Linker.has(strArray[i-1])) out += '|'
                 out += strArray[i]
+                //console.log('Vertical bar added')
                 }
             }
+        //console.log('OUT',out)
         }
 
     if (document.getElementById('explode').checked  && calledFromOrth !== true) {
@@ -244,37 +221,6 @@ function makeGraphemes (str) {
     }
 
 
-function makeBCvGraphemesOLD (str) {
-    // process str and output an annotated string with |+ZWSP dividers
-    if (trace) console.log('makeBCvGraphemes(',str,')')
-    var strArray = [...str]
-    var out = ''
-    var prependFlag = false
-    
-    for (var i=0;i<strArray.length;i++) {
-        if (InvisibleStacker.has(strArray[i]) || Virama.has(strArray[i])) {
-            out += strArray[i]
-            prependFlag = true
-            }
-        else if (Extend.has(strArray[i]) || SpacingMark.has(strArray[i]) || Exceptions.has(strArray[i])) out += strArray[i]
-        else if (Control.has(strArray[i])) out += strArray[i]
-        else if (Prepend.has(strArray[i])) {
-            out += '</bdi><bdi class="divider">|</bdi>&#x200B;<bdi class="segment" onmouseover="if (document.getElementById(\'mouseover\').checked) showComponents(this.textContent)" onclick="showComponents(this.textContent)">'+strArray[i]
-            prependFlag = true
-            }
-        else {
-            if (prependFlag) {
-                out += strArray[i]
-                prependFlag = false
-                }
-            else {
-                if (i>0) out += '</bdi><bdi class="divider">|</bdi>&#x200B;'
-                out += '<bdi class="segment" onmouseover="if (document.getElementById(\'mouseover\').checked) showComponents(this.textContent)" onclick="showComponents(this.textContent)">'+strArray[i]
-                }
-            }
-        }
-    return out
-    }
 
 
 function makeBCvGraphemes (str) {
