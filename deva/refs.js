@@ -58,6 +58,13 @@ reflist = {
 "lang": new Set(['ks']),
 },
 
+"vr": {
+"authors": "Vinodh Rajan",
+"title":"Proposal to Encode Kashmiri Sharada Characters in Unicode",
+"url":"https://www.unicode.org/L2/L2023/23122-kashmiri-sharada.pdf",
+"lang": new Set(['ks']),
+},
+
 "sg": {
 "authors": "Akshay Sharma, The Sunday Guardian",
 "title":"Pandits want official status for Kashmiri written in Devanagari script",
