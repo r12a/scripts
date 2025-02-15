@@ -1,0 +1,11 @@
+langTag = 'ks'
+window.version = 'v29'
+window.scriptName = 'Sharada'
+window.ghDirectory = 'shrd'
+window.blockDirectory = 'shrd'
+window.languageList = ['ks'] // lang tags for each orthography handled
+window.detailsfileList = ['ks'] // first part of xx-details for each orthography
+window.scriptISO = 'shrd'
+window.webfonts = ["Noto Sans Sharada WF"]
+window.defaultSize = '24px'
+hideBlockName = "SHARADA"

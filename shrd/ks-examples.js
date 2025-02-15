@@ -1,0 +1,86 @@
+/*
+native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
+
+
+① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+   use ‹ and › for a sound that spans 2 text units
+   use – for a text unit that doesn't produce sound
+   syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
+
+② the previous transcription field is always Latin. 
+   if there is another key orthography (eg. Mongolian cyrillic) it goes here.
+   vowelled/unvowelled alternatives also go here
+
+③ if Wiktionary spells the word differently, add the spelling here
+*/
+
+
+
+
+
+autoExpandExamples.ks = `
+
+
+
+@ https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_lemmas
+
+𑆃𑆗𑇀|eye|ə§t͡ʃʰ|ach|ॳछ أچھ
+𑆃𑆧𑆾𑆢𑇀|foolish, stupid|a§bo§d|abod|अबॊद اَبۆد
+𑆄𑆓𑆶𑆫𑇀|root, origin|aː§ɡu§ɾ|āgur|आगुर آگُر
+𑆄𑆡𑆮𑆳𑆫𑇀|Sunday|aː§tʰ§waː§r|āthavār|आथवार آتھوار
+𑆄𑆯𑆤𑇀𑆪𑇀|wife|aː§ʃa§n§ʲ|āśany|आशन्य آشَنؠ
+𑆄𑆯𑆼𑆤𑇀𑆪𑇀|wife|aː§ʃa§n§ʲ|āśany|आशन्य آشَنؠ
+𑆄𑆱𑆶𑆤𑇀|to exist|aː§su§n|āsun|आसुन آسُن
+-𑆇𑆬𑇀|-ful, rich|-u§l|-ul|-उल ـاُل
+𑆉𑆒𑇀|guano||ṛkh|र्यख رؠکھ
+𑆏𑆬𑇀|nest|oː§l|ol|ओल اول
+𑆑𑆤𑇀|ear|ka§n|kan|कन کَن
+𑆑𑆳𑆯𑆶𑆫𑇀|Kashmiri language|kəː§ʃu§r|kāśur|कॉशुर کٲشُر
+𑆒𑇀𑆪𑆩𑆳|forgiveness|kʲʰa§‹§maː|khyamā|ख्यमा کھؠما
+𑆓𑆳𑆛𑆶𑆬𑇀|wise, learned|ɡaː§ʈu§l|gāṭul|गाटुल گاٹُل
+𑆓𑆾𑆫𑆾|Jupiter|ɡoː§roː|goro|गोरो گورو
+𑆠𑇀𑆫𑆜𑇀|lightning|t§ra§ʈʰ|traṭh|त्रठ ترَٛٹھ
+𑆢𑆪𑆴|god|d̪a§j|dai|दय دَے
+𑆧𑆶𑆠𑆶' 𑆫𑆳𑆡|earth, world|bu§tɨ§§§raː§tʰ|butu' rātha|बुतराथ بُتہٕ راتھ
+𑆧𑆾𑆩|anger|boː§m|boma|बोम بوم
+𑆧𑇀𑆮𑆢|Mercury|b§ɔ§d|bvada|ब्वद بۄد
+𑆫𑆴𑆒𑇀|line, frontier|ri§kʰ|rikh|रिख رِکھ
+𑆮𑆫𑆵|year|wə§riː|wạrī|वऺरी ؤری
+𑆮𑆲𑆫𑆳𑆡𑇀|rainy season|wə§h§raː§tʰ|vạhrāth|वऺहराथ ؤہراتھ
+𑆯𑇀𑆮𑆒𑆶𑆫|Venus (planet)|ʃ§ɔ§kʰu§r|śvakhura|श्वखुर شۆکُر
+𑆱𑆷𑆠𑇀𑆪𑇀|with (dative)||sụ̄t'|
+𑆱𑆿𑆫𑇀|Saturn|sɑw§r|saur|सौर
+𑆯𑆳𑆫𑆢𑆳|Sharada||śāradā|||x
+
+
+
+
+
+`
+
+
+
+
+// automatically creates Online Resources section, if markup is uncommented in xx.html
+
+termLists = [
+/*
+{
+"title":"Wiktionary, Eastern Cham lemmas",
+"url":"https://en.wiktionary.org/wiki/Category:Eastern_Cham_lemmas",
+},
+
+{
+"title":"Austronesian Basic Vocabulary Database, Phan Rang Cham (Eastern Cham)",
+"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=371&sort=item",
+"notes":"Latin only",
+},
+
+{
+"title":"Living Dictionaries",
+"url":"https://livingdictionaries.app/sora/entries/list",
+"notes":"No native script.",
+},
+*/
+]
+
