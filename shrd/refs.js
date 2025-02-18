@@ -200,6 +200,15 @@ reflist = {
 },
 
 
+"om": {
+"authors": "Shriramana Sharma",
+"title":"A clear policy on encoding OM characters",
+"date": "2011",
+"url":"https://www.unicode.org/L2/L2011/11308-policy-on-om-characters.pdf",
+"reviewed":true
+},
+
+
 "vr": {
 "authors": "Vinodh Rajan",
 "title":"Proposal to Encode Kashmiri Sharada Characters in Unicode",

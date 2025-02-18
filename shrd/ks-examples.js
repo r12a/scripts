@@ -25,7 +25,7 @@ autoExpandExamples.ks = `
 @ https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_lemmas
 
 𑆃𑆗𑇀|eye|ə§t͡ʃʰ|ach|ॳछ أچھ
-𑆃𑆧𑆾𑆢𑇀|foolish, stupid|a§bo§d|abod|अबॊद اَبۆد
+𑆃𑆧𑆾𑆢𑇀|foolish, stupid|a§boː§d|abod|अबॊद اَبۆد
 𑆄𑆓𑆶𑆫𑇀|root, origin|aː§ɡu§ɾ|āgur|आगुर آگُر
 𑆄𑆡𑆮𑆳𑆫𑇀|Sunday|aː§tʰ§waː§r|āthavār|आथवार آتھوار
 𑆄𑆯𑆤𑇀𑆪𑇀|wife|aː§ʃa§n§ʲ|āśany|आशन्य آشَنؠ
@@ -50,7 +50,18 @@ autoExpandExamples.ks = `
 𑆯𑇀𑆮𑆒𑆶𑆫|Venus (planet)|ʃ§ɔ§kʰu§r|śvakhura|श्वखुर شۆکُر
 𑆱𑆷𑆠𑇀𑆪𑇀|with (dative)||sụ̄t'|
 𑆱𑆿𑆫𑇀|Saturn|sɑw§r|saur|सौर
-𑆯𑆳𑆫𑆢𑆳|Sharada||śāradā|||x
+𑆯𑆳𑆫𑆢𑆳|Sharada|ʃaːrɐdaː|śāradā|||x
+
+
+
+
+@ https://en.wiktionary.org/w/index.php?title=Category:Sanskrit_lemmas
+𑆃𑆩𑇀𑆧𑆳|mother|ɐ§m.§bɑ́ː|ambā|अम्बा|Sanskrit!
+𑆑𑆩𑆬|lotus|kɐ.§mɐ.§lɐ|kamala|कमल|Sanskrit!
+𑆢𑆳𑆝𑆴𑆩|pomegranate|d̪ɑː.§ɖi.§mɐ|dāḍima|दाडिम|Sanskrit!
+𑆫𑆳𑆩𑆳𑆪𑆟|Ramayana|ɾɑː.§mɑː.§jɐ.§ɳɐ|rāmāyaṇa|रामायण|Sanskrit!
+𑆮𑆴𑆫𑆲|||viraha|विरह|Sanskrit!
+𑆯𑇀𑆫𑆵|light, radiance|ɕɾiː|śrī́|श्री|Sanskrit!
 
 
 
@@ -69,16 +80,16 @@ autoExpandExamples.ks = `
 𑆩𑭡𑆘|mother|məː§d͡ʑ||मऻज||x
 𑆢𑭡𑆫|window|dəː§r||दऻर||x
 𑆢𑭡𑆤|pomegranate|dəː§n||दऻन||x
-𑆧𑆛𑭢|rice (cooked)|ba§tɨ||बतॖ||x
+𑆧𑆠𑭢|rice (cooked)|ba§tɨ||बतॖ||x
 𑆖𑇊𑭢𑆤𑆴|charcoal|t͡sɨ§ni||च़ॖनि||x
 𑆑𑆤𑭢𑆓𑭢𑆗|Himalayan mushroom|ka§nɨ§ɡɨ§t͡ɕʰ||कनॖगॖछ||x
 𑆪𑆳𑆫𑭢𑆧𑆬|riverbank|jaː§rɨ§ba§l||यारॖबल||x
-𑆑𑆛𑭢𑆫|earthenware fragment|ka§tɨ§r||कतॖर||x
+𑆑𑆠𑭢𑆫|earthenware fragment|ka§tɨ§r||कतॖर||x
 𑆓𑭦𑆓𑭢𑆘|turnip|ɡɔ§ɡɨ§d͡ʑ||गॅगॖज||x
 𑆠𑭣𑆫|cold|tɨː§r||तॗर||x
 𑆑𑆫𑭣𑆬|rice weevil|k§rɨː§l||क्रॗल||x
 𑆑𑭣𑆢𑇀𑆪|prisoner|kɨː§dʲ||कॗद्य||x
-𑆒𑭣𑆁𑆖𑇊|baby mouse|kʰɨ̃ː§t͡sl||खॗंच़||x
+𑆒𑭣𑆁𑆖𑇊|baby mouse|kʰɨ̃ː§t͡s||खॗंच़||x
 𑆝𑭣𑆱|stick|ɖɨː§s||डॗस||x
 𑆥𑇀𑆫𑭣𑆠|ghost|p§rɨː§t||प्रॗत||x
 𑆫𑭤𑆲|flame|re§h||रॆह||x
@@ -92,7 +103,8 @@ autoExpandExamples.ks = `
 𑆖𑇊𑆼𑆫𑭢|peach|t͡ɕeː§rɨ||च़ेरॖ||x
 
 
-
+@ https://www.unicode.org/wg2/docs/n4158.pdf
+𑆍𑆑𑆁|one|eː§kɐm|ekaṃ|||x
 
 `
 
