@@ -8,7 +8,7 @@ blockDirection=''  // ltr/rtl or '' for ltr; used by block.html
 
 blockDirectoryName='berf'  // folder name where block file is found, no slash
 orthogFilePath='berf/zag'  // path below /scripts, including filename, but no extension, eg. lana/nod
-pickerDir='berf'  // directory name for picker, no slash at end
+pickerDir='berf-zag'  // directory name for picker, no slash at end
 orthogSummaryTableName='zag'  // id used for langs record in xx-langdata.js; used to make summary table
 scriptSummaryTableName='berf'  // id used for langs record in xx-langdata.js; used to make summary table
 charUsageBCP='zag'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only
