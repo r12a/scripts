@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<title>XXXX orthography notes</title>
-<meta name="description" content="Summary of the XXXX script.">
+<meta charset="utf-8"/>
+<title>Sharada orthography notes</title>
 
-<link rel="stylesheet" href="../../shared/style/docs.css">
-<link rel="stylesheet" href="../common29/local.css">
-<link rel="stylesheet" href="xx.css">
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common29/local.css" />
+<link rel="stylesheet" href="ks.css" />
 
 <script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../apps/ipa_analyser/propertylist.js"></script>
 
-<script src="../../shared/scriptdb/XXXX.js"> </script>
-<script src="xx-details.html"> </script>
+<script src="../../shared/scriptdb/shrd-ks.js"> </script>
+<script src="ks-details.html"> </script>
 
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
@@ -27,9 +26,9 @@
 <script src="../common29/references.js"></script>
 <script src="refs.js"></script>
 
-<script src="xx-langdata.js"> </script>
-<script src="xx-examples.js"></script>
-<script src="xx-globals.js"></script>
+<script src="ks-langdata.js"></script>
+<script src="ks-examples.js"></script>
+<script src="ks-globals.js"></script>
 </head>
 
 <body class="useBlockExamples">
@@ -41,13 +40,16 @@
 
 
 
-<h1>XXXX</h1>
-<div class="orthographyLine">XXXX script orthography notes</div>
+
+
+<h1>Sharada</h1>
+<div class="orthographyLine">orthography notes</div>
 
 
 
-<aside class="sidebar"> 
-<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+
+<aside class="sidebar">
+<h2 class="notoc flush"><a id="tochead">Contents</a></h2>
 <div id="toc"><!-- placeholder --></div>
 
 <div id="fontsetting" class="closed">
@@ -55,12 +57,10 @@
 </aside>
 
 
-
-
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->22 December, 2024<!-- #EndDate -->
-<span id="versionTop"></span>
-</p>
+  <!-- #BeginDate format:Sw1 -->20 February, 2025<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
 
 
 
@@ -69,143 +69,17 @@
 
 
 <div class="intro">
-<p>This page brings together basic information about the XXXX script and its use for the XXXX language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write XXXX using Unicode.</p>
+<p>This page brings together basic information about the Sharada script and its use for the Sanskrit and Kashmiri languages. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Sanskrit/Kashmiri using Unicode.</p>
 
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->22-Dec-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Sharada Orthography Notes, <!-- #BeginDate format:En2 -->20-Feb-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/shrd/ks">https://r12a.github.io/scripts/shrd/ks</a></small></p>
 </details>
 
 <p id="usage"></p>
-<script>addPageIntro('Scriptname', 'Languagename', 'iso', 'picker')</script>
+<script>addPageIntro('Sharada', 'Kashmiri', 'shrd', 'shrd-ks')</script>
 </div>
-
-
-
-
-
-
-
-<section id="howtos">
-<h2>Howtos</h2>
-
-
-
-<section id="template_characterpanels">
-<h3>Character panels</h3>
-
-<p>A typical character panel looks like:</p>
-
-<p><figure class="characterBox auto" data-cols="ipa,trans,transc">𖼁␣𖼋␣𖼏␣𖼟␣𖼢␣𖼸␣𖼯␣𖼛␣𖼅␣𖼑␣𖼕</figure></p>
-
-<p>The source text is:</p>
-<p>&lt;figure class=&quot;characterBox auto&quot; data-cols=&quot;ipa,trans,transc&quot;&gt;𖼁␣𖼋␣𖼏␣𖼟␣𖼢␣𖼸␣𖼯␣𖼛␣𖼅␣𖼑␣𖼕&lt;/figure&gt;</p>
-
-<p><span class="leadin">Class:</span> characterBox produces a yellow background. Other coloured backgrounds are only used occasionally; they include auxiliaryBox (mauve), etc.</p>
-
-<p><span class="leadin">class:small</span> renders the character at 80% size. Good for long lists of conjuncts, list counters, etc.</p>
-
-<p><span class="leadin">class:hideCh</span> renders the character at 20% size with a border. Good for invisible characters that are represented by images (see data-notes).</p>
-
-<p><span class="leadin">class:noexpansion</span> prevents the production of the downwards arrow that shows details for all characters.</p>
-
-<p><span class="leadin">class:nolist</span> prevents production of the arrow that lists all characters.</p>
-
-<p><span class="leadin">class:ipaplus</span> adds the contents of the ipa+ column in the spreadsheet (usually inherent vowel).</p>
-
-<p><span class="leadin">data-ignore</span> a (single) character that should be ignored when listing the hex code point values; typically used for dotted circles.</p>
-
-<p><span class="leadin">data-ipa</span> value is a comma-separated list of ipa transcriptions that will be aligned with the items displayed. You should normally remove 'ipa' from the data-cols field.</p>
-
-<p><span class="leadin">data-translit</span> tbd.</p>
-
-<p><span class="leadin">data-links</span> associates a link with each item.</p>
-
-<p><span class="leadin">data-extra</span> tbd.</p>
-
-<p><span class="leadin">data-notes</span> a comma-separated list of texts that are displayed below the main item. This is particularly useful for invisible characters because it can be used to pull in images, eg.<br>
-<code>data-notes=&quot;&lt;img src='../../c/Miao/large/16F8F.png' alt='ZWNJ' style='vertical-align:middle; height:2rem'&gt;, ...&quot;</code></p>
-
-<p><span class="leadin">data-last</span> indicates that the hex code point value refers to the last item; used mostly for bicameral listings.</p>
-</section>
-
-
-
-
-
-<section id="template_codepoints">
-<h3>Codepoints</h3>
-
-<p>A typical reference to a code point or sequence of code points looks like the following 4 examples. The page converts  simple markup to more complicated markup during rendering.</p>
-
-<p><span class="ch">𞋀</span></p>
-<p><span class="ch">𞋖𞋭</span></p>
-<p><span class="ch">𞋮</span></p>
-<p><span class="hx img">200B</span></p>
-
-<p>Basic markup for these is, respectively:</p>
-
-<p><code>&lt;span class="ch"&gt;𞋀&lt;/span&gt;</code> or <code>&lt;span class="hx"&gt;1E2C0&lt;/span&gt;</code></p>
-<p><code>&lt;span class="ch"&gt;𞋖𞋭&lt;/span&gt;</code> or <code>&lt;span class="hx"&gt;1E2D6 1E2ED&lt;/span&gt;</code></p>
-<p><code>&lt;span class="ch"&gt;𞋮&lt;/span&gt;</code> or <code>&lt;span class="hx"&gt;1E2EE&lt;/span&gt;</code></p>
-<p><code>&lt;span class="hx img"&gt;200B&lt;/span&gt;</code></p>
-
-<p>The generated markup will look something like this:</p>
-
-<p style="text-align: start;"><code>&lt;span class="codepoint" translate="no"&gt;&lt;bdi lang="th"&gt;𞋀&lt;/bdi&gt;&lt;a href="javascript:void(0)" target=""&gt;&lt;span class="uname"&gt;U+1E2C0 WANCHO LETTER AA&lt;/span&gt;&lt;/span&gt;</code></p>
-
-<p>Each orthography notes page globally declares a language tag to be used with example text. The markup automatically adds a lang attribute for that language to the generated markup.  If you want a different lang attribute to be applied, simply add <code>lang="xx"</code> to the span tag (where xx is the lang value).</p>
-
-<p>Every span tag must contain one of the following classes:</p>
-
-<p><span class="leadin">ch</span> The span element content contains one or more characters (with no separators).</p>
-
-<p><span class="leadin">hx</span> The span element content contains one or more hex code point values, separated by a space.</p>
-
-<p>Optional, additional class names are as follows. Most of these can be combined with others.</p>
-
-<p><span class="leadin">img</span> A PNG image will be used to show the character.</p>
-
-<p><span class="leadin">svg</span> An SVG image will be used to show the character.</p>
-
-<p><span class="leadin">noname</span> Show the character but suppress the name &amp; codepoint value.</p>
-
-<p><span class="leadin">split</span> Renders a sequence as <span class="ch split">𞋖𞋭</span>, rather than <span class="ch">𞋖𞋭</span>.</p>
-
-<p><span class="leadin">circle</span> Adds a dotted circle before the listed character(s) on display.</p>
-
-<p><span class="leadin">coda</span> Adds a dotted circle <em>after</em> the listed character(s) on display. This is useful for showing character sequences from scripts like Thai, where the pronunciation is different in syllables with and without a coda.</p>
-
-<p><span class="leadin">init</span> Adds ZWJ after the character(s), when displayed.</p>
-
-<p><span class="leadin">medi</span> Adds ZWJ before and after the character(s), when displayed.</p>
-
-<p><span class="leadin">fina</span> Adds ZWJ before the character(s), when displayed.</p>
-
-<p><span class="leadin">skip</span> Adds ZWJ before the <em>second</em> character(s), when displayed. This is useful for cases where, for a cursive script, you want to show a combining mark followed by a joining letter.</p>
-
-<p><span class="leadin">noindex</span> Prevents this item being picked up for inclusion in the index.</p>
-</section>
-
-
-
-
-
-<section id="template_refs">
-<h3>References</h3>
-
-<p>References can be added to the markup using  &lt;tt&gt;...&lt;/tt&gt;.</p>
-
-<p>To indicate a source link that is listed in the refs.js file, use  &lt;tt&gt; with the key for that resource.  After a comma you can add a number for a page, or '#fragid', eg.&lt;tt&gt;<code>ul,22&lt;/tt&gt;</code></p>
-
-<p>To indicate a source link that is NOT listed in the refs.js file, use &lt;tt&gt; containing '@shortname,url', eg. <code>&lt;tt&gt;@Github,https://github.com/w3c/sealreq/issues/45&lt;/tt&gt;</code></p>
-
-<p>If this is something the reader should also look at, rather than just a source link, add <code class="kw" translate="no">class=&quot;more&quot;</code> to the <code class="kw" translate="no">tt</code> element.</p>
-
-<p>On devices that don't have hover any page number will be shown alongside the reference number.</p>
-</section>
-</section>
 
 
 
@@ -222,13 +96,13 @@
   
 <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>
 
-Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">CHANGE_ME</span></p>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="36" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">36px</span></p>
 
-<div id="freeText" dir="ltr" lang="YYYY" contenteditable="true">
-<p onMouseUp="showtext('freeText')">Sample_text_goes_here</p>
+<div id="freeText" dir="ltr" lang="ks" contenteditable="true">
+<p onMouseUp="showtext('freeText')" title="How wonderful! Even though the Pure Being Is learned in all topics in the world, He follows the conventions of the world. Thus he has come to school. He has learned scripts Even the names of which I have not heard, Yet he has come to school.">𑆄𑆯𑇀𑆖𑆫𑇀𑆪𑆁 𑆯𑆶𑆢𑇀𑆣𑆱𑆠𑇀𑆠𑇀𑆮𑆱𑇀𑆪 𑆬𑆾𑆑𑆼 𑆬𑆾𑆑𑆳𑆤𑆶𑆮𑆫𑇀𑆠𑆴𑆤𑆾𑇅 𑆯𑆴𑆑𑇀𑆰𑆴𑆠𑆂 𑆱𑆫𑇀𑆮𑆯𑆳𑆱𑇀𑆠𑇀𑆫𑆼𑆰𑆶 𑆬𑆴𑆥𑆴𑆯𑆳𑆬𑆳𑆩𑆶𑆥𑆳𑆓𑆠𑆂𑇅 𑆪𑆼𑆰𑆳𑆩𑆲𑆁 𑆤𑆳𑆩𑆣𑆼𑆪𑆁 𑆬𑆴𑆥𑆵𑆤𑆳𑆁 𑆤 𑆥𑇀𑆫𑆘𑆳𑆤𑆩𑆴𑇅 𑆠𑆠𑇀𑆫𑆽𑆰 𑆯𑆴𑆑𑇀𑆰𑆴𑆠𑆂 𑆱𑆤𑇀𑆠𑆾 𑆬𑆴𑆥𑆴𑆯𑆳𑆬𑆳𑆩𑆶𑆥𑆳𑆓𑆠𑆂𑇅</p>
 </div>
 
-<p class="instructions">Source: <a href="http://efele.net/udhr/d/udhr_ccp.html" target="_blank">Universal Declaration of Human Rights - Chakma</a>, articles 1 &amp; 2</p>
+<p class="instructions">Source: Vinodh Rajan</p>
 </section>
 
 
@@ -239,47 +113,45 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="history">
+
+
+ <section id="history">
 <h2>Usage &amp; history</h2>
 
 
-
 <div class="ancestry">
-<p style="margin-block-end:1.5em;">Origins of the Oriya script, 1051 – today.</p>
+<p style="margin-block-end:1.5em;">Origins of the Devanagari script, 11thC – today.</p>
+
 <p>Phoenician</p>
-<p>└ Aramaic</p>
-<p style="margin-inline-start:1em;">└ Brahmi</p>
-<p style="margin-inline-start:2em;">└ Tamil-Brahmi</p>
-<p style="margin-inline-start:3em;">└ Pallava</p>
-<p style="margin-inline-start:4em;">└ Grantha</p>
-<p style="margin-inline-start:5em; font-weight: bold;">└ Malayalam</p>
-<p style="margin-inline-start:6em;">+ Tigalari</p>
-<p style="margin-inline-start:6em;">+ Dhives Akuru</p>
-<p style="margin-inline-start:6em;">+ Saurashtra</p>
+<p style="margin-inline-start:1em;">└ Aramaic</p>
+<p style="margin-inline-start:2em;">└ Brahmi</p>
+<p style="margin-inline-start:3em;">└ Gupta</p>
+<p style="margin-inline-start:4em; font-weight: bold;">└ Sharada</p>
+<p style="margin-inline-start:7em;">+ Siddham</p>
+<p style="margin-inline-start:7em;">+ Tibetan</p>
+<p style="margin-inline-start:7em;">+ Kalinga</p>
+<p style="margin-inline-start:7em;">+ Bhaiksuki</p>
 </div>
 
 
+<p>Kashmiri is written in the Devanagari script by Hindus. Muslims use the Arabic script. Due to population migrations, the use of the Devanagari script to write Kashmiri has significantly dwindled, although there are efforts to revive its use, and a number of recent reforms attempted to standardise the orthography.</p>
 
-<p>Speakers of the Eastern Cham language number about 132,000 in Bình Thuận, Ninh Thuận, and Đồng Nai provinces in southern Vietnam, as well as in Hồ Chí Minh City. The Ethnologue estimates the L1 literacy rate to be 5%–10%. The Cham script is the primary orthography for the  Eastern Cham, but the largely muslim Western Cham peoples of Cambodia prefer the Arabic script.<tt>eth</tt> Historically, the Eastern Cham script was learned by boys once they reached a certain age, but not by women and girls.<tt>ws</tt></p>
+<p><span class="eg" lang="ks">𑆯𑆳𑆫𑆢𑆳</span></p>
 
-<p><span class="eg" lang="cjm">ꨀꨇꩉ ꨌꩌ</span></p>
+<p>In 1995, 2002, and 2009 the orthographic reforms centred around the representation of vowel sounds.  The result is that texts on the internet can be found using various different approaches, and the largest number of pages found were written just after the introduction of the 2002 reform, and so use slightly different vowel graphemes. This page presents the orthography based on the 2009 revision. For more information see <a class="secref">previousOrthographies</a>.</p>
 
-<p>Coming to Southeast Asia with the expansion of Indian religions, Cham was one of the first scripts to develop from the Pallava script some time around 200 CE.<tt>ws</tt></p>
-
-<p class="instructions">More information: <a href="https://en.wikipedia.org/wiki/Cham_script#History" target="_blank">Wikipedia</a> • <a href="https://www.endangeredalphabets.net/alphabets/cham/" target="_blank">Endangered Alphabets</a></p>
+<p>For information about the script in general, see the <a href="index#history">Devanagari overview</a>.<tt>u</tt></p>
 </section>
 
 
 
-
-
-
-
-
-
-<div id="features">
-<p class="ctlink"><a href="../featurelist/">Comparison table here</a></p>
-</div>
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
 
 
 
@@ -287,45 +159,45 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>, ie. each consonant contains an inherent vowel sound. See the table to the right for a brief overview of features for the modern ZZZZ orthography.</p>
-<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a>, ie. consonants and vowels are written separately.  See the table to the right for a brief overview of features  for the ZZZZ language.</p>
-<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a>, ie. short vowels are not normally written.  See the table to the right for a brief overview of features  for the ZZZZ language.</p>
+<p>Devanagari is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>. Consonant letters have an inherent vowel sound. Combining vowel signs are attached to the consonant to indicate that a different vowel follows the consonant.   See the table in the right-hand column for a brief overview of features for the modern Kashmiri orthography using the Devanagari script.</p>
 
+<p>Kashmiri uses fewer consonants than Hindi, but has more vowels. The orthography includes some Kashmiri-specific characters.</p>
 
-<p>The ZZZZ XXXX orthography is derived from the Arabic/Persian  <a class="termref" href="../glossary/index.html#abjad">abjads</a>, where  in normal use the script  represents only consonant and long vowel sounds. However, the script has been adapted in this orthography in order to cope with the many more vowels sounds in  Kashmiri, and this is one of the Arabic orthographies that regularly indicates all vowel sounds, making it  an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a>.  See the table to the right for a brief overview of features for the modern Kashmiri orthography using the Arabic script.</p>
+<p>Devanagari text runs left-to-right in horizontal lines.</p>
 
-<p>XXXX text runs <a href="#direction" class="seclink">left-to-right</a> in horizontal lines, but numbers and embedded Latin text are read left-to-right. There is no case distinction. Words are separated by spaces.</p>
+<p>Orthographic syllables (as opposed to phonetic syllables) play a significant role in Devanagari text. An orthographic syllable starts at the beginning of any cluster of consonants and incorporates the whole cluster plus any following vowels and diacritics.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">Modern XXXX represents native consonant sounds using <a href="basicC" class="seclink">19 basic letters</a> and <a href="#aspirated" class="seclink">6 aspirated digraphs</a>, but can use <a href="#extendedC" class="seclink">13 more consonants</a> to spell words loaned from Persian, Arabic and Urdu. </p>
+<p class="addToConsonants">The 27 basic consonant sounds of Kashmiri are represented using <a class="seclink" href="#basicC">24 basic consonant letters</a> and <a class="seclink" href="#extendedC">3 combinations</a> of letters plus the <span class="name">nukta</span> diacritic. Kashmiri also commonly indicates palatalisation of consonants, using <span class="ch">य्</span>. The <span class="name">virama</span> is typically visible when palatalisation occurs at the end of a word.</p> 
 
-<p class="addToConsonants">A special letter is used to indicate <a href="#palatalisation" class="seclink">palatalisation</a>, which is common in Kashmiri. Similarly to the other <span class="name">yeh</span> used in Kashmiri, it has a circle below when used in syllable onsets, and a swash with no circle after a syllable coda.</p>
+<p class="addToConsonants"><a class="seclink" href="#extendedC">Eleven more letters</a> are used to represent Sanskrit spellings in unassimilated words. Phonetically, Kashmiri has only three forms of plosives, illustrated here with the bilabial stop: unvoiced  <span class="ipa">p</span>, voiced <span class="ipa">b</span>, aspirated <span class="ipa">pʰ</span>. The murmured <span class="ipa">bʱ</span> is not used, although these letters may crop up in Sanskrit or Hindi loan words. It also has a set of retroflex consonants. Kashmiri normally uses only one letter for <span class="name">m</span> and one for <span class="name">n</span>, although other nasals may occur in words borrowed from Sanskrit.</p>
 
-<p class="addToConsonants">Unlike other Arabic orthographies, <span class="hx circle">0652</span>  (<span class="name">jazm</span>),  normally used to show vowel absence, is placed over the <em>second</em> consonant in an <a href="#onsets" class="seclink">onset cluster</a> (such as <span class="ipa">tr</span>). That letter may therefore carry both the <span class="name">jazm</span> diacritic and a vowel diacritic, which is quite unusual.</p>
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final nasals</a>  are most commonly represented by <span class="hx circle">0902</span>.</p>
+
+<p class="addToConsonants"><a class="seclink" href="#clusters">Consonant clusters</a>  (and palatalisation) are normally indicated using the <span class="name"><a class="termref" href="../glossary/index.html#virama">virama</a></span> between consonants, though often there is no marker for unpronounced inherent vowels. Conjunct forms are expressed using the common Devanagari half-forms, stacked consonants, and ligated glyphs.</p>
+
+<p class="addToConsonants">As part of a cluster, RA has  special forms, but a palatalised RA at the beginning of a word needs special treatment to avoid a <span class="name">repha</span> formation.</p>
+
+
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">Kashmiri is an <a class="termref" href="../glossary/index.html#alphabet">alphabet</a> where 16 vowel sounds (far more than in Arabic or Persian) are written using  a mixture of  <a href="#combiningV" class="seclink">10 combining marks</a> and <a href="#vletter" class="seclink">10 letters</a>.  Unlike Arabic, Persian, and Urdu, all vowel diacritics are always visible in Kashmiri texts. Representation of vowel sounds is complicated  because the code points used to represent a given vowel typically differ according to its position within a word.</p>
+<p class="addToVowels">The Kashmiri <a class="termref" href="../glossary/index.html#abugida">abugida</a> has one <a class="seclink" href="#inherent">inherent vowel</a>. The initial 2009 orthography reform represents other vowels using <a class="seclink" href="#combiningV">16 vowel signs</a>.  All vowel signs are combining marks. There are no <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a> and no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>. There is <a class="seclink" href="#prebase">1 pre-base</a> vowel sign.</p>
 
+<p class="addToVowels">All <a class="seclink" href="#standalone">standalone vowel</a> sounds are written using one of 17 <a class="termref" href="../glossary/index.html#independentvowel">independent vowel</a> letters. One <a class="termref" href="../glossary/index.html#vocalic">vocalic</a> letter is also used.</p>
 
+<p class="addToVowels">Two vowel signs and letters represent diphthongs.</p>
 
+<p class="addToVowels">Some organisations use the characters <span class="ch circle">ॅ</span>, <span class="ch circle">ॉ</span>, <span class="ch">ॲ</span>, and <span class="ch">ऑ</span> to represent the sounds <span class="ipa">ɔ</span> and <span class="ipa">ɔː</span>.</p>
 
-<p class="addToVowels">The distinction between  <a href="../arab/homographs.html#ijam_tashkil">ijam vs. tashkil</a> has a bearing on several Kashmiri graphemes, and the choice between precomposed and decomposed realisations of a vowel letter can be complicated (see <a class="secref">encoding</a>).</p>
+<p class="addToVowels">Vowels may be <a class="seclink" href="#nasalisation">nasalised</a>, using the diacritic <span class="ch circle">ँ</span>.</p>
 
-<p>Word-initial <a class="seclink" href="#standalone">standalone</a> vowels are preceded by or attached to either <span class="hx">0627</span> or <span class="hx">0639</span>.</p>
-
-<p class="addToVowels">The <span class="name">jazm</span> is  used over a word-medial <span class="hx">0646</span> to indicate <a href="#nasalisation" class="seclink">nasalisation</a> of a preceding vowel sound. Apart from this use and that for medial consonants, it is not typically used to indicate <a href="#novowel" class="seclink">vowel absence</a>.</p>
-
-
-
-
-<p>Kashmiri  uses  <a href="#numbers" class="seclink">native digits</a>, and Arabic code points for several of the more common <a href="#phrase" class="seclink">punctuation marks</a>.</p>
+<p class="addToVowels"><a class="seclink" href="#numbers">Native digits</a> are used. <a class="seclink" href="#phrase">Punctuation</a> is mostly ASCII, but <span class="name">dandas</span> may be used for phrase boundaries.</p>
 </section>
    
     
       
-
 
 
 <section id="index">
@@ -348,33 +220,27 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="index_letters_consonants">
 <h4>Basic consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxxxx</figure>
+<figure class="characterBox noindex indexline" data-cols="">प␣फ␣ब␣त␣थ␣द␣ट␣ठ␣ड␣क␣ख␣ग␣च␣छ␣ज␣व␣स␣श␣ह␣म␣न␣र␣ल␣य␣&#x095B;</figure>
 </section>
 
 <section id="index_letters_extended">
-<h4>Extended consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxxxx</figure>
+<h4>Sanskrit/Hindi consonants</h4>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">ण␣ञ␣ङ␣भ␣ध␣ढ␣झ␣घ␣ष</figure>
 </section>
 
 <section id="index_letters_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxxxx</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">इ␣ई␣ॶ␣ॷ␣उ␣ऊ␣ऎ␣ए␣ॳ␣ॴ␣ऒ␣ओ␣ॵ␣अ␣आ␣ऐ␣औ</figure>
 </section>
 
 <section id="index_letters_vocalics">
-<h4>Vocalics</h4>
-<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
-</section>
-
-
-<section id="index_letters_other">
-<h4>Other</h4>
-<figure class="characterBox noindex indexline"  data-cols="" data-links="">xxxx</figure>
+<h4>Vocalic</h4>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#vocalics,">ऋ</figure>
 </section>
 
 <section id="index_letters_unused">
-<h4>Not used for XXXXX</h4>
-<figure class="otherBox noindex indexline" data-cols="">xxxxx</figure>
+<h4>Not used for modern Kashmiri</h4>
+<figure class="unusedBox noindex indexline" data-cols="" data-links="">ॲ␣ऑ␣ऽ</figure>
 </section>
 </details>
 </section>
@@ -389,37 +255,27 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="index_cchars_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxxxx</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">ि␣ी␣ॖ␣ॗ␣ु␣ू␣ॆ␣े␣ऺ␣ऻ␣ॊ␣ो␣ॏ␣ा␣ै␣ौ</figure>
 </section>
 
 <section id="index_cchars_vocalics">
-<h4>Vocalics</h4>
-<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
-</section>
-
-<section id="index_cchars_tone">
-<h4>Tones</h4>
-<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
-</section>
-
-<section id="index_cchars_medials">
-<h4>Medials</h4>
-<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
+<h4>Vocalic</h4>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#vocalics,">ृ</figure>
 </section>
 
 <section id="index_cchars_finals">
 <h4>Finals</h4>
-<figure class="characterBox noindex indexline" data-cols="trans" data-links="">xxx</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#sanskrit_nasals #finals,">ं</figure>
 </section>
 
 <section id="index_cchars_other">
 <h4>Other</h4>
-<figure class="characterBox noindex indexline"  data-cols="" data-links="">xxxxx</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#affricates #fricatives #nukta_encoding,#suppression #palatalisation #other_sanskrit,#nasalisation,">़␣्␣ँ</figure>
 </section>
 
 <section id="index_cchars_unused">
-<h4>Not used for XXXXX</h4>
-<figure class="otherBox noindex indexline"  data-cols="">xxxxx</figure>
+<h4>Not used for modern Kashmiri</h4>
+<figure class="unusedBox noindex indexline" data-cols="">ॅ␣ॉ</figure>
 </section>
 </details>
 </section>
@@ -428,14 +284,11 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
   
-<section id="index_numbers">
+<!--section id="index_numbers">
 <h3>Numbers</h3>
-<details>
-<summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-links="" data-cols="">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
-</details>
-</section>
+<figure class="characterBox noindex indexline" data-links="#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits" data-cols="">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
+</section-->
 
 
 
@@ -446,45 +299,14 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-links="" data-cols="">xxxxx</figure>
-
+<figure class="characterBox noindex indexline" data-cols="" data-links="">।␣॥</figure>
 
 <section id="index_punctuation_ascii">
 <h4>ASCII</h4>
-<figure class="characterBox noindex indexline" data-cols="">!␣(␣)␣,␣-␣.␣:␣;␣?</figure>
-</section>
-
-
-<section id="index_punctuation_cldr">
-<h4>CLDR additions</h4>
-<figure class="auxiliaryBox noindex indexline" data-cols="">xxxx</figure>
-</section>
-
-<section id="index_punctuation_unused">
-<h4>Not used for XXXXX</h4>
-<figure class="otherBox noindex indexline" data-cols="">xxx</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">!␣(␣)␣,␣:␣;␣?</figure>
 </section>
 </details>
 </section>
-
-
-
-
-  
-<section id="index_symbols">
-<h3>Symbols</h3>
-<details>
-<summary class="instructions">Show</summary>
-
-<figure class="characterBox noindex indexline" data-links="" data-cols="">xxx</figure>
-
-<section id="index_symbols_unused">
-<h4>Not used for XXXXX</h4>
-<figure class="archaicBox noindex indexline"  data-cols="">xxx</figure>
-</section>
-</details>
-</section>
-
 
 
 
@@ -495,37 +317,41 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-cols="" data-notes="<img src='../../c/General_Punctuation/large/200C.png' alt='ZWNJ' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/200D.png' alt='ZWJ' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/2067.png' alt='RLI' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/202B.png' alt='RLE' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/2066.png' alt='LRI' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/202A.png' alt='LRE' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/2068.png' alt='FSI' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/2069.png' alt='PDI' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/202C.png' alt='PDF' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/200F.png' alt='RLM' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/200E.png' alt='LRM' style='vertical-align:middle; height:2rem'>,<img src='../../c/Arabic/large/061C.png' alt='ALM' style='vertical-align:middle; height:2rem'>,<img src='../../c/General_Punctuation/large/200B.png' alt='ZWSP' style='vertical-align:middle; height:2rem'>,<img src='../../c/Syriac/070F.png' alt='SAM' style='vertical-align:middle; height:2rem'>,<img src='../../c/Arabic/061C.png' alt='ALM' style='vertical-align:middle; height:2rem'>,<img src='../../c/Combining_Diacritical_Marks/034F.png' alt='CGJ' style='vertical-align:middle; height:2rem'>" data-links="">&#x200C;␣&#x200D;␣&#x2067;␣&#x202B;␣&#x2066;␣&#x202A;␣&#x2068;␣&#x2069;␣&#x202C;␣&#x200F;␣&#x200E;␣&#x061C;␣&#x034F;</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-notes="<img src='../../c/General_Punctuation/large/200C.png' alt='ZWNJ' style='vertical-align:middle;height:2rem;'>,<img src='../../c/General_Punctuation/large/200D.png' alt='ZWJ' style='vertical-align:middle;height:2rem;'>" data-links="">&#x200C;␣&#x200D;</figure>
 
 
 
 <section id="index_other_tbc">
 <h4>To be investigated</h4>
-<figure class="tbcBox noindex indexline" data-cols="">!␣?</figure>
+<figure class="tbcBox noindex indexline" data-cols="">%␣.␣[␣]␣§␣ʼ␣͏␣ॄ␣ॐ␣ॠ␣०␣१␣२␣३␣४␣५␣६␣७␣८␣९␣॰␣‑␣–␣—␣‘␣’␣“␣”␣†␣‡␣…␣‰␣′␣″␣⁠␣₹␣⹁</figure>
 </section>
 </details>
 </section>
+
 </section>
-
-
 
 
 
 
 
 <div id="showTranscriptions">
-<details>
-<summary>Items to show in lists</summary>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked></label></div>
-<div>
-<label>Latin 
-<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"></label></div>
-<div>
-<label>Transliteration 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)"></label></div>
-</details>
+<div>In character lists, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+<div><label>Transliteration <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 </div>
-  
+
+
+
+
+
+<section id="structure">
+<h2>Structure</h2>
+    <p>See the <a href="index#structure">Devanagari overview</a>.<tt>u</tt></p>
+</section>
+
+
 
 
   
@@ -535,9 +361,10 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="phonology">
 <h2>Phonology</h2>
 
-<p>The following represents the repertoire of the ZZZZ language.</p>
+<p>These are sounds for the Kashmiri language.</p>
+
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
-<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">Wikipedia</a>.</p>
+<!--p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">Wikipedia</a>.</p-->
 
 
 
@@ -545,15 +372,10 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="phonemesV">
 <h3>Vowel sounds</h3>
 
-
 <section id="plain_vowels">
 <h4>Plain vowels</h4>
 
-
-
-<div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG"> 
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
   <defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
       <feflood flood-color="white"/>
@@ -561,6 +383,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
     </filter>
   </defs>
 
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
   <use xlink:href="#arrowRight" x="155" y="25"></use> 
   
   <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
@@ -576,10 +399,6 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
   <circle cx="40" cy="10" r="3" fill="#ccc"/>
   <circle cx="140" cy="10" r="3" fill="#ccc"/>
   <circle cx="240" cy="10" r="3" fill="#ccc"/>
-  
-  <!-- near close -->
-  <circle cx="93" cy="40" r="3" fill="#ccc"/>
-  <circle cx="200" cy="40" r="3" fill="#ccc"/>
   
    <!-- mid close -->
   <circle cx="65" cy="70" r="3" fill="#ccc"/>
@@ -591,9 +410,6 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
   <circle cx="165" cy="130" r="3" fill="#ccc"/>
   <circle cx="240" cy="130" r="3" fill="#ccc"/>
   
-  <!-- near open -->
-  <circle cx="102" cy="160" r="3" fill="#ccc"/> <!-- near open -->
-  
   <!-- open -->
   <circle cx="115" cy="190" r="3" fill="#ccc"/>
   <circle cx="177" cy="190" r="3" fill="#ccc"/>
@@ -601,141 +417,157 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
   
   
   <!-- close -->
-  <text x="32" y="15" text-anchor="end"><tspan class="ipa">ĩ</tspan> <tspan class="ipa">iː</tspan> <tspan class="ipa">i</tspan></text> 
-  <text x="50" y="15" filter="url(#solid)"><tspan class="ipa">y</tspan></text> 
-  <text x="50" y="15"><tspan class="ipa">y</tspan></text> 
-
-  <text x="132" y="15" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɨ</tspan></text>
-  <text x="132" y="15" text-anchor="end"><tspan class="ipa">ɨ</tspan></text> 
-  <text x="150" y="15" filter="url(#solid)"><tspan class="ipa">ʉ</tspan></text> 
-  <text x="150" y="15" ><tspan class="ipa">ʉ</tspan></text> 
-
-  <text x="232" y="15" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɯ</tspan></text>
-  <text x="232" y="15" text-anchor="end"><tspan class="ipa">ɯ</tspan></text> 
-  <text x="250" y="15" text-anchor="start"><tspan class="ipa">u</tspan> <tspan class="ipa">uː</tspan> <tspan class="ipa">ũ</tspan></text> 
-
-  <!-- near close -->
-  <text x="85" y="45" text-anchor="end"><tspan class="ipa">ɪ</tspan></text> 
-  <text x="100" y="45"><tspan class="ipa">ʏ</tspan></text> 
-
-  <text x="210" y="45"><tspan class="ipa">ʊ</tspan></text> 
+  <text x="32" y="15" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">i</tspan>
+<tspan class="ipa">iː</tspan>
+</text>
+  <text x="32" y="15" text-anchor="end">
+<tspan class="ipa">i</tspan>
+<tspan class="ipa">iː</tspan>
+</text> 
+  <text x="132" y="15" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">ɨ</tspan>
+<tspan class="ipa">ɨː</tspan>
+</text>
+  <text x="132" y="15" text-anchor="end">
+<tspan class="ipa">ɨ</tspan>
+<tspan class="ipa">ɨː</tspan>
+</text> 
+  <text x="250" y="15" filter="url(#solid)">
+<tspan class="ipa">u</tspan>
+<tspan class="ipa">uː</tspan>
+</text> 
+  <text x="250" y="15">
+<tspan class="ipa">u</tspan>
+<tspan class="ipa">uː</tspan>
+</text> 
 
   <!-- close mid -->
-  <text x="57" y="75" text-anchor="end"><tspan class="ipa">ẽ</tspan> <tspan class="ipa">eː</tspan> <tspan class="ipa">e</tspan></text> 
-  <text x="75" y="75" filter="url(#solid)"><tspan class="ipa">ø</tspan></text> 
-  <text x="75" y="75"><tspan class="ipa">ø</tspan></text> 
-
-  <text x="144" y="75" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɘ</tspan></text>
-  <text x="144" y="75" text-anchor="end"><tspan class="ipa">ɘ</tspan></text> 
-  <text x="165" y="75" filter="url(#solid)"><tspan class="ipa">ɵ</tspan></text> 
-  <text x="165" y="75"><tspan class="ipa">ɵ</tspan></text> 
-
-  <text x="232" y="75" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɤ</tspan></text>
-  <text x="232" y="75" text-anchor="end"><tspan class="ipa">ɤ</tspan></text> 
-  <text x="250" y="75"><tspan class="ipa">o</tspan> <tspan class="ipa">oː</tspan> <tspan class="ipa">õ</tspan> </text> 
+  <text x="57" y="75" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">e</tspan>
+<tspan class="ipa">eː</tspan>
+</text>
+  <text x="57" y="75" text-anchor="end">
+<tspan class="ipa">e</tspan>
+<tspan class="ipa">eː</tspan>
+</text> 
+  <text x="250" y="75" filter="url(#solid)">
+<tspan class="ipa">o</tspan>
+<tspan class="ipa">oː</tspan>
+</text> 
+  <text x="250" y="75">
+<tspan class="ipa">o</tspan>
+<tspan class="ipa">oː</tspan>
+</text> 
 
   <!-- mid -->
-  <text x="158" y="105" text-anchor="middle" filter="url(#solid)"><tspan class="ipa">ə</tspan></text>
-  <text x="158" y="105" text-anchor="middle"><tspan class="ipa">ə̃</tspan> <tspan class="ipa">ə</tspan> <tspan class="ipa">əː</tspan></text> 
+  <text x="158" y="105" text-anchor="middle" filter="url(#solid)">
+<tspan class="ipa">ə</tspan>
+<tspan class="ipa">əː</tspan>
+</text>
+  <text x="158" y="105" text-anchor="middle">
+<tspan class="ipa">ə</tspan>
+<tspan class="ipa">əː</tspan>
+</text> 
 
   <!-- open mid -->
-  <text x="81" y="135" text-anchor="end"><tspan class="ipa">ɛ̃</tspan> <tspan class="ipa">ɛː</tspan> <tspan class="ipa">ɛ</tspan></text> 
-  <text x="100" y="135" filter="url(#solid)"><tspan class="ipa">œ</tspan></text> 
-  <text x="100" y="135"><tspan class="ipa">œ</tspan></text> 
-
-  <text x="157" y="135" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɜ</tspan></text>
-  <text x="157" y="135" text-anchor="end"><tspan class="ipa">ɜ</tspan></text> 
-  <text x="177" y="135" filter="url(#solid)"><tspan class="ipa">ɞ</tspan></text> 
-  <text x="177" y="135"><tspan class="ipa">ɞ</tspan></text> 
-
-  <text x="232" y="135" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ʌ</tspan></text>
-  <text x="232" y="135" text-anchor="end"><tspan class="ipa">ʌ</tspan></text> 
-  <text x="250" y="135"><tspan class="ipa">ɔ</tspan> <tspan class="ipa">ɔː</tspan> <tspan class="ipa">ɔ̃</tspan> </text> 
-
-  <!-- near open -->
-  <text x="94" y="165" text-anchor="end"><tspan class="ipa">æ</tspan></text> 
-  <text x="170" y="165" text-anchor="middle" filter="url(#solid)"><tspan class="ipa">ɐ</tspan></text> 
-  <text x="170" y="165" text-anchor="middle"><tspan class="ipa">ɐ</tspan></text> 
+  <text x="250" y="135" filter="url(#solid)">
+<tspan class="ipa">ɔ</tspan>
+</text> 
+  <text x="250" y="135">
+<tspan class="ipa">ɔ</tspan>
+</text> 
 
   <!-- open -->
-  <text x="106" y="195" text-anchor="end"><tspan class="ipa">ã</tspan> <tspan class="ipa">aː</tspan> <tspan class="ipa">a</tspan></text> 
-  <text x="125" y="195" filter="url(#solid)"><tspan class="ipa">ɶ</tspan></text> 
-  <text x="125" y="195"><tspan class="ipa">ɶ</tspan></text> 
-
-  <text x="175" y="195" text-anchor="middle" filter="url(#solid)"><tspan class="ipa">a</tspan> <tspan class="ipa">aː</tspan></text>
-  <text x="175" y="195" text-anchor="middle"><tspan class="ipa">a</tspan> <tspan class="ipa">aː</tspan></text> 
-
-  <text x="232" y="195" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ɑː</tspan> <tspan class="ipa">ɑ</tspan></text>
-  <text x="232" y="195" text-anchor="end"><tspan class="ipa">ɑː</tspan> <tspan class="ipa">ɑ</tspan></text> 
-  <text x="250" y="195"><tspan class="ipa">ɒ</tspan></text> 
+  <text x="106" y="195" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">a</tspan>
+<tspan class="ipa">aː</tspan>
+</text>
+  <text x="106" y="195" text-anchor="end">
+<tspan class="ipa">a</tspan>
+<tspan class="ipa">aː</tspan>
+</text> 
 </svg>
-</div>
+
+
+
+
+<table class="ipaTable" style="display: none">
+<thead>
+<tr>
+<th>&#160; </th>
+<th>Front </th>
+<th>Central </th>
+<th>Back </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>High </th>
+<td><span class="ipa">i</span> <span class="ipa">iː</span></td>
+<td><span class="ipa">ɨ</span> <span class="ipa">ɨː</span></td>
+<td><span class="ipa">u</span> <span class="ipa">uː</span></td>
+</tr>
+<tr>
+<th>Mid </th>
+<td><span class="ipa">e</span> <span class="ipa">eː</span></td>
+<td><span class="ipa">ə</span> <span class="ipa">əː</span></td>
+<td><span class="ipa">o</span> <span class="ipa">oː</span></td>
+</tr>
+<tr>
+<th>Low </th>
+<td></td>
+<td><span class="ipa">a</span> <span class="ipa">aː</span></td>
+<td><span class="ipa">ɔ</span></td>
+</tr>
+</tbody>
+</table>
+<!--table class="ipaTable">
+<thead>
+<tr>
+<th>&#160; </th>
+<th>Front </th>
+<th>Central </th>
+<th>Back </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>High </th>
+<td><span class="ipa">i</span> <span class="ex" lang="ks">इ</span> <span class="ipa">iː</span> <span class="ex" lang="ks">ई</span></td>
+<td><span class="ipa">ɨ</span> <span class="ex" lang="ks">ॶ</span> <span class="ipa">ɨː</span> <span class="ex" lang="ks">ॷ</span></td>
+<td><span class="ipa">u</span> <span class="ex" lang="ks">उ</span> <span class="ipa">uː</span> <span class="ex" lang="ks">ऊ</span></td>
+</tr>
+<tr>
+<th>Mid </th>
+<td><span class="ipa">e</span> <span class="ex" lang="ks">ऎ</span> <span class="ipa">eː</span> <span class="ex" lang="ks">ए</span></td>
+<td><span class="ipa">ə</span> <span class="ex" lang="ks">ॳ</span> <span class="ipa">əː</span> <span class="ex" lang="ks">ॴ</span></td>
+<td><span class="ipa">o</span> <span class="ex" lang="ks">ऒ</span> <span class="ipa">oː</span> <span class="ex" lang="ks">ओ</span></td>
+</tr>
+<tr>
+<th>Low </th>
+<td></td>
+<td><span class="ipa">a</span> <span class="ex" lang="ks">अ</span> <span class="ipa">aː</span> <span class="ex" lang="ks">आ</span></td>
+<td><span class="ipa">ɔ</span> <span class="ex" lang="ks">ॵ</span></td>
+</tr>
+</tbody>
+</table-->
 </section>
-
-
-
-
-
-
-
-
 
 
 
 <section id="diphthongs">
-<h4>Complex vowels</h4>
-
-
-<table class="diphthongTable">
-<tbody>
-<tr>
-<td><span class="ipa">ia</span> <span class="ipa">iɯʔ</span> <span class="ipa">iə</span></td>
-<td><span class="ipa">ua</span> <span class="ipa">uə</span></td>
-<td></td>
-</tr>
-<tr>
-<td><span class="ipa">ea</span></td>
-<td><span class="ipa">oa</span></td>
-</tr>
-<tr>
-<td><span class="ipa">ɛə</span></td>
-<td><span class="ipa">ɔə</span></td>
-</tr>
-<tr>
-<td><span class="ipa">auʔ</span> <span class="ipa">aɪ</span> <span class="ipa">aʊ</span></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr></tr>
-</tbody>
-</table>
-</section>
-
-
-
-
-
-
-
-
-
-
-<!--section id="diphthongs">
 <h4>Diphthongs</h4>
 
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
   <defs>
-    <filter x="0" y="0" width="1" height="1" id="solid">
-      <feFlood flood-color="white"/>
-      <feComposite in="SourceGraphic" operator="xor"/>
+    <filter x="0" y="0" width="1" height="1" id="solid2">
+      <feflood flood-color="white"/>
+      <fecomposite in="SourceGraphic" operator="xor"/>
     </filter>
   </defs>
 
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
   <use xlink:href="#arrowRight" x="155" y="25"></use> 
   
   <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
@@ -747,108 +579,79 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
   <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
   <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
   
-  <!-- close -- >
+  <!-- close -->
   <circle cx="40" cy="10" r="3" fill="#ccc"/>
   <circle cx="140" cy="10" r="3" fill="#ccc"/>
   <circle cx="240" cy="10" r="3" fill="#ccc"/>
   
-  <!-- near close -- >
-  <circle cx="93" cy="40" r="3" fill="#ccc"/>
-  <circle cx="200" cy="40" r="3" fill="#ccc"/>
-  
-   <!-- mid close -- >
+   <!-- mid close -->
   <circle cx="65" cy="70" r="3" fill="#ccc"/>
   <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
   <circle cx="240" cy="70" r="3" fill="#ccc"/>
   
-  <!-- mid open -- >
+  <!-- mid open -->
   <circle cx="90" cy="130" r="3" fill="#ccc"/>
   <circle cx="165" cy="130" r="3" fill="#ccc"/>
   <circle cx="240" cy="130" r="3" fill="#ccc"/>
   
-  <!-- near open -- >
-  <circle cx="102" cy="160" r="3" fill="#ccc"/> <!-- near open -->
-  
-  <!-- open -- >
+  <!-- open -->
   <circle cx="115" cy="190" r="3" fill="#ccc"/>
   <circle cx="177" cy="190" r="3" fill="#ccc"/>
   <circle cx="240" cy="190" r="3" fill="#ccc"/>
   
   
-  <!-- close -- >
-  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
-  <text x="50" y="15" class="ipa" filter="url(#solid)">y</text> 
-  <text x="50" y="15" class="ipa">y</text> 
-
-  <text x="132" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɨ</text>
-  <text x="132" y="15" class="ipa" text-anchor="end">ɨ</text> 
-  <text x="150" y="15" class="ipa" filter="url(#solid)">ʉ</text> 
-  <text x="150" y="15" class="ipa">ʉ</text> 
-
-  <text x="232" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɯ</text>
-  <text x="232" y="15" class="ipa" text-anchor="end">ɯ</text> 
-  <text x="250" y="15" class="ipa">u</text> 
-
-  <!-- near close -- >
-  <text x="85" y="45" class="ipa" text-anchor="end">ɪ</text> 
-  <text x="100" y="45" class="ipa">ʏ</text> 
-
-  <text x="210" y="45" class="ipa">ʊ</text> 
-
-  <!-- close mid -- >
-  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
-  <text x="75" y="75" class="ipa" filter="url(#solid)">ø</text> 
-  <text x="75" y="75" class="ipa">ø</text> 
-
-  <text x="144" y="75" class="ipa" text-anchor="end" filter="url(#solid)">ɘ</text>
-  <text x="144" y="75" class="ipa" text-anchor="end">ɘ</text> 
-  <text x="165" y="75" class="ipa" filter="url(#solid)">ɵ</text> 
-  <text x="165" y="75" class="ipa">ɵ</text> 
-
-  <text x="232" y="75" class="ipa" text-anchor="end" filter="url(#solid)">ɤ</text>
-  <text x="232" y="75" class="ipa" text-anchor="end">ɤ</text> 
-  <text x="250" y="75" class="ipa">o</text> 
-
-  <!-- mid -- >
-  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
-  <text x="158" y="105" class="ipa" text-anchor="middle">ə</text> 
-
-  <!-- open mid -- >
-  <text x="81" y="135" class="ipa" text-anchor="end">ɛ</text> 
-  <text x="100" y="135" class="ipa" filter="url(#solid)">œ</text> 
-  <text x="100" y="135" class="ipa">œ</text> 
-
-  <text x="157" y="135" class="ipa" text-anchor="end" filter="url(#solid)">ɜ</text>
-  <text x="157" y="135" class="ipa" text-anchor="end">ɜ</text> 
-  <text x="177" y="135" class="ipa" filter="url(#solid)">ɞ</text> 
-  <text x="177" y="135" class="ipa">ɞ</text> 
-
-  <text x="232" y="135" class="ipa" text-anchor="end" filter="url(#solid)">ʌ</text>
-  <text x="232" y="135" class="ipa" text-anchor="end">ʌ</text> 
-  <text x="250" y="135" class="ipa">ɔ</text> 
-
-  <!-- near open -- >
-  <text x="94" y="165" class="ipa" text-anchor="end">æ</text> 
-  <text x="170" y="165" class="ipa" text-anchor="middle" filter="url(#solid)">ɐ</text> 
-  <text x="170" y="165" class="ipa" text-anchor="middle">ɐ</text> 
-
-  <!-- open -- >
-  <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
-  <text x="125" y="195" class="ipa" filter="url(#solid)">ɶ</text> 
-  <text x="125" y="195" class="ipa">ɶ</text> 
-
-  <text x="232" y="195" class="ipa" text-anchor="end" filter="url(#solid)">ɑ</text>
-  <text x="232" y="195" class="ipa" text-anchor="end">ɑ</text> 
-  <text x="250" y="195" class="ipa">ɒ</text> 
+  <!-- mid -->
+  <text x="158" y="105" text-anchor="middle" filter="url(#solid)">
+<tspan class="ipa">əĭ</tspan>
+<tspan class="ipa">əŭ</tspan>
+</text>
+  <text x="158" y="105" text-anchor="middle">
+<tspan class="ipa">əĭ</tspan>
+<tspan class="ipa">əŭ</tspan>
+</text> 
 </svg>
-</div>
+
+
+
+
+
+
+
+
+
+
+<table class="ipaTable" style="display: none">
+<thead>
+<tr>
+<th>&#160; </th>
+<th>Front </th>
+<th>Central </th>
+<th>Back </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>High </th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>Mid </th>
+<td>&nbsp;</td>
+<td><span class="ipa">əi</span><span class="ipa"> əu</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>Low </th>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 </section>
-
-
-
-<p>All but 1 of the diphthongs in Shan end in <span class="ipa">i</span> or <span class="ipa">u/w</span>.</p-->
 </section>
-
 
 
 
@@ -863,7 +666,6 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <tr>
 <th></th>
 <th>labial </th>
-<th>labio-<br>dental</th>
 <th>dental </th>
 <th>alveolar </th>
 <th>post-<br>
@@ -871,245 +673,294 @@ alveolar</th>
 <th>retroflex</th>
 <th>palatal </th>
 <th>velar </th>
-<th>uvular</th>
-<th>pharyngeal<br>epiglottal</th>
 <th>glottal </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th>stop</th>
+<th>stops</th>
 <td><span class="ipa">p</span> <span class="ipa">b</span></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
 <td><span class="ipa">t</span> <span class="ipa">d</span></td>
 <td>&nbsp;</td>
+<td>&nbsp;</td>
 <td><span class="ipa">ʈ</span> <span class="ipa">ɖ</span></td>
-<td><span class="ipa">c</span> <span class="ipa">ɟ</span></td>
+<td>&nbsp;</td>
 <td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
-<td><span class="ipa">q</span> <span class="ipa">ɢ</span></td>
-<td><span class="ipa">ʡ</span></td>
-<td><span class="ipa">ʔ</span></td>
-</tr>
-
-<tr>
-<th>&nbsp;</th>
-<td><span class="ipa">pʰ</span> <span class="ipa">bʰ</span></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><span class="ipa">tʰ</span> <span class="ipa">dʰ</span></td>
-<td>&nbsp;</td>
-<td><span class="ipa">ʈʰ</span> <span class="ipa">ɖʰ</span></td>
-<td><span class="ipa">cʰ</span> <span class="ipa">ɟʰ</span></td>
-<td><span class="ipa">kʰ</span> <span class="ipa">ɡʰ</span></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-
 <tr>
-<th>&nbsp;</th>
-<td><span class="ipa">ɓ</span></td>
+<th>aspirated</th>
+<td><span class="ipa">pʰ</span></td>
+<td><span class="ipa">tʰ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">ɗ</span></td>
+<td><span class="ipa">ʈʰ</span></td>
 <td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><span class="ipa">ʄ</span></td>
-<td><span class="ipa">ɠ</span></td>
-<td><span class="ipa">ʛ</span></td>
-<td>&nbsp;</td>
+<td><span class="ipa">kʰ</span></td>
 <td>&nbsp;</td>
 </tr>
-
 <tr>
-<th>&nbsp;</th>
-<td><span class="ipa">ᵐp</span> <span class="ipa">ᵐb</span></td>
+<th>affricates</th>
 <td>&nbsp;</td>
+<td><span class="ipa">t͡s</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">ⁿt</span> <span class="ipa">ⁿd</span></td>
-<td>&nbsp;</td>
-<td><span class="ipa">ᶯʈ</span> <span class="ipa">ᶯɖ</span></td>
-<td><span class="ipa">ᶮc</span> ᶮ<span class="ipa">ɟ</span></td>
-<td><span class="ipa">ᵑk</span> <span class="ipa">ᵑɡ</span></td>
-<td><span class="ipa">ᶰq</span> <span class="ipa">ᶰɢ</span></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-
-<tr>
-<th>affricate</th>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><span class="ipa">t͡s</span> <span class="ipa">d͡z</span></td>
 <td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span></td>
-<td><span class="ipa">ʈ͡ʂ</span> <span class="ipa">ɖ͡ʐ</span></td>
-<td><span class="ipa">t͡ɕ</span> <span class="ipa">d͡ʑ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-
 <tr>
-<th>&nbsp;</th>
+<th>aspirated</th>
 <td>&nbsp;</td>
+<td><span class="ipa">t͡sʰ</span></td>
 <td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><span class="ipa">t͡sʰ</span> <span class="ipa">d͡zʰ</span></td>
-<td><span class="ipa">t͡ʃʰ</span> <span class="ipa">d͡ʒʰ</span></td>
-<td><span class="ipa">ʈ͡ʂʰ</span> <span class="ipa">ɖ͡ʐʰ</span></td>
-<td><span class="ipa">t͡ɕʰ</span> <span class="ipa">d͡ʑʰ</span></td>
+<td><span class="ipa">t͡ʃʰ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-
 <tr>
-<th>fricative</th>
-<td><span class="ipa">ɸ</span> <span class="ipa">β</span></td>
-<td><span class="ipa">f</span> <span class="ipa">v</span></td>
-<td><span class="ipa">θ</span> <span class="ipa">ð</span></td>
+<th>fricatives</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 <td><span class="ipa">s</span> <span class="ipa">z</span></td>
-<td><span class="ipa">ʃ</span> <span class="ipa">ʒ</span></td>
-<td><span class="ipa">ʂ</span> <span class="ipa">ʐ</span></td>
-<td><span class="ipa">ç</span> <span class="ipa">ʝ</span></td>
-<td><span class="ipa">x</span> <span class="ipa">ɣ</span></td>
-<td><span class="ipa">χ</span> <span class="ipa">ʁ</span></td>
-<td><span class="ipa">ħ</span> <span class="ipa">ʕ</span></td>
-<td><span class="ipa">h</span> <span class="ipa">ɦ</span></td>
+<td><span class="ipa">ʃ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">h</span></td>
 </tr>
-
 <tr>
-<th>&nbsp;</th>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><span class="ipa">ɬ</span> <span class="ipa">ɮ</span></td>
-<td><span class="ipa">ɧ</span></td>
-<td>&nbsp;</td>
-<td><span class="ipa">ɕ</span> <span class="ipa">ʑ</span></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-
-<tr>
-<th>nasal</th>
+<th>nasals</th>
 <td><span class="ipa">m</span></td>
-<td><span class="ipa">ɱ</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">n</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">ɳ</span></td>
-<td><span class="ipa">ɲ</span></td>
-<td><span class="ipa">ŋ</span></td>
-<td><span class="ipa">ɴ</span></td>
 <td>&nbsp;</td>
-<td></td>
-</tr>
-<tr>
-<th>approximant</th>
-<td><span class="ipa">ʍ</span> <span class="ipa">w</span></td>
-<td><span class="ipa">ʋ</span></td>
-<td>&nbsp;</td>
-<td><span class="ipa">l</span> <span class="ipa">ɫ</span> <span class="ipa">ɹ</span></td>
-<td>&nbsp;</td>
-<td><span class="ipa">ɻ</span> <span class="ipa">ɭ</span></td>
-<td><span class="ipa">j</span> <span class="ipa">ʎ</span></td>
-<td><span class="ipa">ɰ</span> <span class="ipa">ʟ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td></td>
 </tr>
 <tr>
-<th>trill/flap</th>
-<td><span class="ipa">ʙ</span></td>
-<td><span class="ipa">ⱱ</span></td>
+<th>approximants</th>
+<td><span class="ipa">w</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">r</span> <span class="ipa">ɾ</span> <span class="ipa">ɺ</span></td>
+<td><span class="ipa">l</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">ɽ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trills/flaps</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 <td></td>
 <td></td>
-<td><span class="ipa">ʀ</span></td>
-<td><span class="ipa">ʜ</span> <span class="ipa">ʢ</span></td>
 <td></td>
 </tr>
 <tr>
 <th></th>
-<td class="mouth"><a href="../common29/mouth/mouth_labial.png" target="_blank"><img src="../common29/mouth/mouth_small_labial.png" alt=" "></a></td>
-<td class="mouth">&nbsp;</td>
-<td class="mouth"><a href="../common29/mouth/mouth_dental.png" target="_blank"><img src="../common29/mouth/mouth_small_dental.png" alt=" "></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_alveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_alveolar.png" alt=" "></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_postalveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_postavleolar.png" alt=" "></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_retroflex.png" target="_blank"><img src="../common29/mouth/mouth_small_retroflex.png" alt=" "></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_palatal.png" target="_blank"><img src="../common29/mouth/mouth_small_palatal.png" alt=" "></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_velar.png" target="_blank"><img src="../common29/mouth/mouth_small_velar.png" alt=" "></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_uvular.png" target="_blank"><img src="../common29/mouth/mouth_small_uvular.png" alt=" "></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_pharyngeal.png" target="_blank"><img src="../common29/mouth/mouth_small_pharyngeal.png" alt=" "></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_glottal.png" target="_blank"><img src="../common29/mouth/mouth_small_glottal.png" alt=" "></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_labial.png" target="_blank"><img src="../common29/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_dental.png" target="_blank"><img src="../common29/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_alveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_postalveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_retroflex.png" target="_blank"><img src="../common29/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_palatal.png" target="_blank"><img src="../common29/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_velar.png" target="_blank"><img src="../common29/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common29/mouth/mouth_glottal.png" target="_blank"><img src="../common29/mouth/mouth_small_glottal.png" alt=" "/></a></td>
 </tr>
 </tbody>
 </table>
+
+
+
+
+<p>Kashmiri has no voiced aspirated sounds.</p>
+<table class="ipaTable" style="display: none">
+<thead>
+<tr>
+<th colspan="2"></th>
+<th>Bilabial </th>
+<th>Dental </th>
+<th>Alveolar </th>
+<th>Retroflex </th>
+<th>Alveolo<br />
+-palatal </th>
+<th>Velar </th>
+<th>Glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th rowspan="2">Stop /<br />
+Affricate </th>
+<th><span style="font-size:85%;">plain</span></th>
+<td><span class="ipa">p</span><br/>
+<span class="ipa">b</span></td>
+<td><span class="ipa">t</span><br/>
+<span class="ipa">d</span></td>
+<td><span class="ipa">ts</span></td>
+<td><span class="ipa">ʈ</span><br/>
+<span class="ipa">ɖ</span></td>
+<td><span class="ipa">tʃ</span><br/>
+<span class="ipa">dʒ</span></td>
+<td><span class="ipa">k</span><br/>
+<span class="ipa">ɡ</span></td>
+<td></td>
+</tr>
+<tr>
+<th><span style="font-size:85%;">aspirated</span></th>
+<td><span class="ipa">pʰ</span></td>
+<td><span class="ipa">tʰ</span></td>
+<td><span class="ipa">tsʰ</span></td>
+<td><span class="ipa">ʈʰ</span></td>
+<td><span class="ipa">tʃʰ</span></td>
+<td><span class="ipa">kʰ</span></td>
+<td></td>
+</tr>
+<tr>
+<th colspan="2">Fricative </th>
+<td></td>
+<td></td>
+<td><span class="ipa">s</span><br/>
+<span class="ipa">z</span></td>
+<td></td>
+<td><span class="ipa">ʃ</span></td>
+<td></td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th colspan="2">Nasal </th>
+<td><span class="ipa">m</span></td>
+<td><span class="ipa">n</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th colspan="2">Approximant </th>
+<td></td>
+<td><span class="ipa">l</span></td>
+<td></td>
+<td></td>
+<td><span class="ipa">j</span></td>
+<td><span class="ipa">w</span></td>
+<td></td>
+</tr>
+<tr>
+<th colspan="2">Trill </th>
+<td></td>
+<td><span class="ipa">r</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!--table class="ipaTable">
+<thead>
+<tr>
+<th colspan="2"></th>
+<th>Bilabial </th>
+<th>Dental </th>
+<th>Alveolar </th>
+<th>Retroflex </th>
+<th>Alveolo<br />
+-palatal </th>
+<th>Velar </th>
+<th>Glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th rowspan="2">Stop /<br />
+Affricate </th>
+<th><span style="font-size:85%;">plain</span> </th>
+<td><span class="ipa">p</span> <span class="ex" lang="ks">प</span><br/>
+<span class="ipa">b</span> <span class="ex" lang="ks">ब</span></td>
+<td><span class="ipa">t</span> <span class="ex" lang="ks">त</span><br/>
+<span class="ipa">d</span> <span class="ex" lang="ks">द</span></td>
+<td><span class="ipa">ts</span> <span class="ex" lang="ks">च़</span></td>
+<td><span class="ipa">ʈ</span> <span class="ex" lang="ks">ट</span><br/>
+<span class="ipa">ɖ</span> <span class="ex" lang="ks">ड</span></td>
+<td><span class="ipa">tʃ</span> <span class="ex" lang="ks">च</span><br/>
+<span class="ipa">dʒ</span> <span class="ex" lang="ks">ज</span></td>
+<td><span class="ipa">k</span> <span class="ex" lang="ks">क</span><br/>
+<span class="ipa">ɡ</span> <span class="ex" lang="ks">ग</span></td>
+<td></td>
+</tr>
+<tr>
+<th><span style="font-size:85%;">aspirated</span> </th>
+<td><span class="ipa">pʰ</span> <span class="ex" lang="ks">फ</span></td>
+<td><span class="ipa">tʰ</span> <span class="ex" lang="ks">थ</span></td>
+<td><span class="ipa">tsʰ</span> <span class="ex" lang="ks">छ़</span></td>
+<td><span class="ipa">ʈʰ</span> <span class="ex" lang="ks">ठ</span></td>
+<td><span class="ipa">tʃʰ</span> <span class="ex" lang="ks">छ</span></td>
+<td><span class="ipa">kʰ</span> <span class="ex" lang="ks">ख</span></td>
+<td></td>
+</tr>
+<tr>
+<th colspan="2">Fricative </th>
+<td></td>
+<td></td>
+<td><span class="ipa">s</span> <span class="ex" lang="ks">स</span><br/>
+<span class="ipa">z</span> <span class="ex" lang="ks">ज़</span></td>
+<td></td>
+<td><span class="ipa">ʃ</span> <span class="ex" lang="ks">श</span></td>
+<td></td>
+<td><span class="ipa">h</span> <span class="ex" lang="ks">ह</span></td>
+</tr>
+<tr>
+<th colspan="2">Nasal </th>
+<td><span class="ipa">m</span> <span class="ex" lang="ks">म</span></td>
+<td><span class="ipa">n</span> <span class="ex" lang="ks">न</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th colspan="2">Approximant </th>
+<td></td>
+<td><span class="ipa">l</span> <span class="ex" lang="ks">ल</span></td>
+<td></td>
+<td></td>
+<td><span class="ipa">j</span> <span class="ex" lang="ks">य</span></td>
+<td><span class="ipa">w</span> <span class="ex" lang="ks">व</span></td>
+<td></td>
+</tr>
+<tr>
+<th colspan="2">Trill </th>
+<td></td>
+<td><span class="ipa">r</span> <span class="ex" lang="ks">र</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table-->
+</section>
 </section>
 
-
-
-
-
-
-
-
-<section id="tone">
-<h3>Tone</h3>
-
-<p id="def-openclosed" class="explanatoryintro definitionStub"></p>
-
-<p id="def-livedead" class="explanatoryintro definitionStub"></p>
-
-<p>Thai is a <a href="../glossary/index.html#contourtonelanguage">contour tone language</a>, with 5 tones: high, mid, low, falling, &amp; rising.</p>
-
-
-<p>tbd</p>
-</section>
-
-
-
-
-
-<section id="structure">
-<h3>Structure</h3>
-
-<p>tbd</p>
-<!--p>The following notes on structure are taken from Wikipedia<tt>.</tt></p>
-<blockquote><code>[C1] [S1] V [S2] [C2 [C3]]</code></blockquote>
-
-<details><summary class="instructions">Legend</summary>
-<div class="legend">
-<dl><dt><code>C</code></dt><dd>Consonant.</dd></dl>
-<dl>
-<dt><code>V</code></dt>
-<dd>Vowel.</dd></dl>
-<dl>
-<dt><code>S</code></dt>
-<dd>Semi-vowel.</dd></dl>
-</div></details>
-
-<p>Arabic syllable structure consists of an optional syllable onset, consisting of one or two consonants; an obligatory syllable nucleus, consisting of a vowel optionally preceded by and/or followed by a semivowel; and an optional syllable coda, consisting of one or two consonants.</p>
-<p>The following restrictions apply:</p>
-<dl>
-<dt>Onset</dt>
-<dd>C1 can be any consonant, including a liquid (<span class="ipa">l r</span>). The onset is composed only of one consonant; consonant clusters are only found in loanwords. Sometimes an epenthetic <span class="ipa">a</span> is inserted between consonants.</dd>
-<dt>Nucleus</dt><dd>Includes S1 V S2.</dd>
-<dt>Coda</dt><dd>C2 and C3 can be any consonant.</dd>
-</dl-->
-</section>
-</section>
-
+ 
+ 
+ 
+ 
+ 
  
 
 
@@ -1117,112 +968,21 @@ alveolar</th>
 
 
 
-<section id="alphabet">
-<h2>Alphabet</h2>
-
-<p class="instructions">Click on the  characters  to find where they are mentioned in this page.</p>
-
-<p>The ZZZZ alphabet has 23 consonants and 5 vowels. Each has upper and lowercase forms; shown above and below, respectively.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">𞤢␣𞤣␣𞤤␣𞤥␣𞤦␣𞤧␣𞤨␣𞤩␣𞤪␣𞤫␣𞤬␣𞤭␣𞤮␣𞤯␣𞤰␣𞤱␣𞤲␣𞤳␣𞤴␣𞤵␣𞤶␣𞤷␣𞤸␣𞤹␣𞤺␣𞤻␣𞤼␣𞤽</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">𞤀␣𞤁␣𞤂␣𞤃␣𞤄␣𞤅␣𞤆␣𞤇␣𞤈␣𞤉␣𞤊␣𞤋␣𞤌␣𞤍␣𞤎␣𞤏␣𞤐␣𞤑␣𞤒␣𞤓␣𞤔␣𞤕␣𞤖␣𞤗␣𞤘␣𞤙␣𞤚␣𞤛</figure>
-</section>
-
-
-
-
-
-
-
-
-
-
-<section id="characters">
-<h2>Syllables</h2>
-
-
-
-
-
-<p>
-<span id="otherV"></span>
-<span id="prebase"></span>
-<span id="circumgraphs"></span>
-<span id="compositeV"></span>
-<span id="vlength"></span>
-<span id="nasalisation"></span>
-<span id="tones"></span>
-<span id="novowel"></span>
-<span id="extendedC"></span>
-<span id="onsets"></span>
-<span id="finals"></span>
-<span id="clusters"></span>
-<span id="clength"></span>
-</p>
-
-
-
-<aside class="sectionAside">
-<p>This orthography has no special features with respect to the following.</p>
-
-<ul>
-<li>Consonants used to create vowel sounds.</li>
-<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">multipart vowels</a>.</li>
-<li>Vowel length.</li>
-<li>Nasalisation (not a feature of the language).</li>
-<li>Tones (not a tonal language).</li>
-<li>Standalone vowels.</li>
-<li>Consonants that are not followed by a vowel.</li>
-<li>Repertoire extensions to cover loan words, etc.</li>
-<li>Onset clusters.</li>
-<li>Syllable-final consonants.</li>
-<li>Conjuncts or other shaping related to consonant clusters.</li>
-<li>Gemination or consonant lengthening.</li>
-</ul>
-</aside>
-
-
-
-
-
-
-<div id="vowel_description"></div>
-<div id="consonant_description"></div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
  
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
 <section id="vowels">
 <h2>Vowels</h2>
 
 
 
-
-
 <p>
-<span id="otherV"></span>
-<span id="prebase"></span>
 <span id="circumgraphs"></span>
-<span id="compositeV"></span>
-<span id="vlength"></span>
-<span id="nasalisation"></span>
-<span id="tones"></span>
 </p>
-
-
 
 
 <aside class="sectionAside">
@@ -1230,41 +990,19 @@ alveolar</th>
 
 <ul>
 <li>Consonants used to create vowel sounds.</li>
-<li><a class="termref" target="_blank" href="../glossary/index.html#prebase">Pre-base vowels</a> or <a class="termref" target="_blank" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" target="_blank" href="../glossary/index.html#compositevowel">composite vowels</a>.</li>
-<li>Vowel length.</li>
-<li>Nasalisation (not a feature of the language).</li>
+<li><a class="termref" target="_blank" href="../glossary/index.html#circumgraph">Circumgraphs</a>.</li>
 <li>Tones (not a tonal language).</li>
-<li>Standalone vowels.</li>
-<li>Consonants that are not followed by a vowel.</li>
 </ul>
-
-
-
-<details class="tbd">
-<summary>Sections needing attention ...</summary>
-
-<section id="standalone">
-<h4>Standalone vowels</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-
-<section id="vlength">
-<h4>Vowel length</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-
-<section id="nasalisation">
-<h4>Nasalisation</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-</details>
 </aside>
 
- 
 
- 
- 
+
+
 <div id="vowel_description"></div>
+
+
+
+
 
 
 
@@ -1275,52 +1013,43 @@ alveolar</th>
 
 <p>The following table summarises the main vowel to character assigments.</p>
 
-<p class="instructions highlight">ⓘ represents the inherent vowel. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here).</p>
+<p class="instructions highlight">ⓘ represents the inherent vowel. Dependent vowels are on the left, standalone vowels on the right. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here).</p>
+
 
 <table class="soundSummary">
-<thead>
 <tr>
-<th>&nbsp;</th>
-<th>post-consonant</th>
-<th>word-final standalone</th>
-<th>word-medial standalone</th>
-<th>word-initial standalone</th>
+<th rowspan="5">Plain:</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ि␣ी␣ॖ␣ॗ␣ु␣ू</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">इ␣ई␣ॶ␣ॷ␣उ␣ऊ</figure></td>
 </tr>
-</thead>
-<tbody>
 <tr>
-<th rowspan="5">Simple:</th>
-<td><figure class="summaryBox auto noexpansion" data-ipa="" data-ignore="-" data-cols="ipa,trans,transc"></figure></td>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ॆ␣े␣ॊ␣ो</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ऎ␣ए␣ऒ␣ओ</figure></td>
 </tr>
-
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ऺ␣ऻ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ॳ␣ॴ</figure></td>
 </tr>
-
 <tr>
-<td>&nbsp;</td>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ॏ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ॵ</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="a,aː">ⓘ␣ा</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">अ␣आ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<th>Diphthongs:</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ै␣ौ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ऐ␣औ</figure></td>
 </tr>
-
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
-</tr>
-
 
 <tr>
 <th>Vocalics:</th>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ृ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ऋ</figure></td>
 </tr>
-</tbody>
 </table>
 
 
@@ -1334,24 +1063,41 @@ alveolar</th>
 
 
 
-
-
 <section id="inherent">
 <h3>Inherent vowel</h3>
 
 <p class="vowelSignExample">
-    <bdi lang="nod">&#x1A20;</bdi>
+    <bdi lang="ks">&#x11191;</bdi>
     <span class="ipa">ka</span>
-    <span><span class="uname">U+1A20 LETTER HIGH KA</span></span>
-</p>
+    <span><span class="uname">U+11191 SHARADA LETTER KA</span></span>
+    </p>
 
-<p id="def-inherentvowel" class="explanatoryintro definitionStub"></p>
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
-<p>The inherent vowel for XXXXXX is pronounced <span class="ipa">a</span> or <span class="ipa">ʌ</span>. So <span class="ipa">ka</span> is written by simply using the consonant letter.</p>
+<p>The inherent vowel for Sharada consonants is <span class="ipa">a</span>, and <span class="ipa">ka</span> is written by simply using the consonant letter.</p>
 
-<p>The inherent vowel is not usually pronounced at the end of a word.</p>
 
-<p>The suppression of the inherent vowel in a syllable coda is indicated using the <span class="ch">𑜫</span> diacritic (see the examples above).</p>
+
+
+
+
+
+<section id="novowel">
+<h4>Vowel absence</h4>
+
+<figure class="characterBox auto hide"  data-cols="trans">𑇀</figure>
+
+<p>Sharada uses <span class="ch">𑇀</span> to indicate that there is no inherent vowel after a consonant.</p>
+
+<p>The virama is typically visible in Sharada text. It is unusual in that it appears to the right of the consonant whose vowel it cancels, much like a letter.</p>
+<p><span class="eg" lang="ks">𑆃𑆩𑇀𑆧𑆳</span></p>
+<p><span class="eg" lang="ks">𑆃𑆧𑆾𑆢𑇀</span></p>
+
+<p>However, there are some consonant clusters that are rendered as conjuncts (see <a class="secref">clusters</a>), and in these cases the virama is still used in the encoded sequence of characters, but is invisible when rendered. </p>
+<p><span class="eg" lang="ks"></span></p>
+<p><span class="eg" lang="ks"></span></p>
+<p><span class="eg" lang="ks"></span></p>
+</section>
 </section>
 
 
@@ -1365,32 +1111,61 @@ alveolar</th>
 
 
 <section id="dependentV">
-<h3>Post-consonant vowels</h3>
+<h3>Vowels after  consonants</h3>
+
+<!--figure class="characterBox auto" data-cols="trans,transc" data-ipa="i,i,u,u,e,o,ɔ,æ,æ,æ,a">ি␣ী␣ু␣ূ␣ে␣ো␣ো␣্যা␣্য␣া␣া</figure-->
+
+<p>Post-consonant vowels are written using using  vowel signs. All vowel signs are combining marks. There are no multipart vowels and no circumgraphs. There is 1 pre-base vowel sign.</p>
+
+<p>All vowel signs are typed and stored after the base consonant, and the rendering process puts them in the correct place for display.</p>
+
+<p>Three vowel signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant.</p>
+
+
+
+
+
 
 
 
 
 
 <section id="combiningV">
-<h4>Combining marks used for vowels</h4>
+<h4>Sanskrit vowel signs</h4>
 
 <p class="vowelSignExample">
-    <bdi lang="ban">&#x1B13;&#x1B36;</bdi>
-    <span class="ipa">ki</span>
-    <span><span class="uname">U+1B13 BALINESE LETTER KA</span> + <span class="uname">U+1B36 BALINESE VOWEL SIGN ULU</span></span>
+    <bdi lang="ks">𑆑𑆵</bdi>
+    <span class="ipa">kiː</span>
+    <span><span class="uname">U+11191 SHARADA LETTER KA</span> + <span class="uname">U+111B5 SHARADA VOWEL SIGN II​</span></span>
 </p>
 
-<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Balinese uses the following dedicated combining marks for vowels.  They may be used on their own, or in combination with others (see <a class="secref">composite_vowels</a>). They are all vowel signs.</p>
+<p>For simple Sanskrit post-consonant vowels, Kashmiri uses the following dedicated combining marks.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">xxxxxxx</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">𑆴␣𑆶␣𑆵␣𑆷␣𑆼␣𑆾␣𑆳</figure>
+</section>
 
-<p>To represent the sounds <span class="ipa">rə</span> or <span class="ipa">lə</span>, Balinese uses vocalic letters. A sequence such as <span class="codepoint noindex" translate="no"><bdi lang="ban">*&#x1B2D;&#x1B42;</bdi> [<a href="/scripts/balinese/block#char1B2D"><span class="uname">U+1B2D BALINESE LETTER RA</span></a> + <a href="/scripts/balinese/block#char1B42"><span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET</span></a>]</span> is <em>not</em> used. See  <a class="sectionref">vocalics</a>.</p>
 
-<p>Six of the vowel signs are <a class="termref" href="../glossary/index.html#spacingmark">spacing marks</a>, meaning that they consume horizontal space when added to a base consonant.</p>
 
-<p>All vowel signs are typed and stored after the base consonant, and the glyph rendering system takes care of the positioning at display time. The glyphs used to represent vowels,  whether alone or in multipart vowels, are arranged around a <em>syllable onset</em>, which may be 2 consonants, rather than just around the immediately preceding consonant. See <a class="secref"></a> <a class="secref">prebase</a> and <a class="secref">circumgraphs</a>.</p>
+
+
+
+
+
+
+<section id="kashmiriV">
+<h4>Kashiri vowel signs</h4>
+
+
+<p>The Kashmiri language contains a number of sounds that do not appear in Sanskrit. Representation of those additional sounds has varied in the past, but recently agreement was reached to use an additional set of vowel signs to cover them. Those vowel signs are not yet encoded in Unicode (due in version 17), and are not available in the font used for this page, but the list will be as follows. The actual shapes are shown in <a class="figref">fig_kashmiri_vowel_signs</a>.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">𑭢␣𑭣␣𑭤␣𑭠␣𑭡␣𑭥␣𑭦␣𑭧</figure>
+
+
+<figure id="fig_kashmiri_vowel_signs" class="sideCaption">
+<img src="imgs/fig_kashmiri_vowel_signs.png" alt="Pictures of the Kashmiri vowel signs" style="height:6rem;">
+<figcaption>Kashmiri vowel signs.</figcaption>
+</figure>
 </section>
 
 
@@ -1402,60 +1177,20 @@ alveolar</th>
 
 
 
+<section id="diphthongV">
+<h4>Diphthongs</h4>
 
-<section id="vletter">
-<h4>Vowel letters</h4>
+<p class="vowelSignExample">
+    <bdi lang="ks">𑆑𑆽</bdi>
+    <span class="ipa">kaːi̯</span>
+    <span><span class="uname">U+11191 SHARADA LETTER KA</span> + <span class="uname">U+111BD SHARADA VOWEL SIGN AI</span></span>
+</p>
 
-<p>something</p>
+
+<p>Single vowel signs are also used to write 2 diphthongs.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">𑆽␣𑆿</figure>
 </section>
-
-
-
-
-
-
-
-<section id="dedicatedV">
-<h4>Dedicated vowel letters</h4>
-
-<p>These are the dedicated vowel letters.</p>
-
-<figure class="characterBox auto"  data-cols="ipa,transc">xxxxxx</figure>
-</section>
-
-
-
-
-
-
-<section id="vOther">
-<h4>Consonants  used for vowels</h4>
-
-<p>Kashmiri uses the following consonant characters to write vowels, generally in combination with diacritics, but also alone when representing eː and oː in non-initial positions.</p>
-
-<figure class="characterBox auto"  data-cols="ipa,transc">xxxxxx</figure>
-</section>
-
-
-
-
-
-
-
-
-
-<section id="compositeV">
-<h4>Composite vowel signs</h4>
-
-<p>Multipart vowels are only produced when text is decomposed; 5 of the circumgraphs split off the <span class="hx">1B35</span> glyph, to create the following pairs:</p>
-
-<figure class="characterBox auto small" data-cols="ipa,trans,transc">&#x1B3E;&#x1B35;&#x2423;&#x1B42;&#x1B35;&#x2423;&#x1B3F;&#x1B35;&#x2423;&#x1B3A;&#x1B35;&#x2423;&#x1B3C;&#x1B35;</figure>
-</section>
-
-
-
-
-
 
 
 
@@ -1463,71 +1198,47 @@ alveolar</th>
 
 
 <section id="prebase">
-<h4>Pre-base vowel signs</h4>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">𑐶</figure>
-
-<p>The short <span class="ipa">i</span> sound is written using <span class="codepoint" translate="no"><span lang="new">&#x11436;</span> [<a href="/scripts/newa/block#char11436"><span class="uname">U+11436 NEWA VOWEL SIGN I</span></a>]</span>, which appears to the left of the base consonant letter or cluster.</p>
-
-<figure id="fig_prebase" class="sideCaption">
-<img src="rej/fig_prebase.png" class="ex" lang="rej" alt="ꤱꥉ" data-notes="200px Noto Sans Rejang" style="height:7rem; margin-inline:2rem;">
-<figcaption>A pre-base vowel sign (highlighted). It is positioned to the left of the consonant after which it is typed, stored, and pronounced.</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="rej">ꤷꥉꤼꥉꤿ꥓</span></p></details>
-
-<p class="info">This combining mark is always typed and stored after the base consonant. The rendering process places the glyph before the base consonant at the time of display.</p>
-
-<p>When an orthographic syllable begins with a consonant cluster that is rendered as a conjunct, the vowel sign is rendered before the start of the <em>syllable</em>, eg. here are 3 sets of consonant clusters, each followed by <span class="ipa">i</span> when spoken, but the vowel sign appears to the left of each cluster.<span class="charExample" translate="no"><span class="ex" lang="new">𑐗𑑂𑐏𑐶 𑐳𑑂𑐟𑐶 𑐧𑑂𑐬𑐶</span> <span class="transc">jkhi sti bri</span></span></p>
-
-
-<p>When an orthographic syllable begins with a consonant cluster, the vowel sign is actually placed before the start of the onset, ie. to the left of the <em>syllable</em> as a whole. See <a class="figref">fig_prebase</a>.</p>
-
-
-<figure id="fig_prebase" class="sideCaption">
-<img src="cjm/fig_prebase.png" alt="ꨚꨴꨯꨱꩃ" class="ex" lang="cjm" data-notes="Noto Sans Cham" style="height: 9rem;">
-<figcaption>A pre-base vowel glyph (light highlight colour) placed before both consonants in an onset cluster, rather than just before the consonant pronounced immediately before it.</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="cjm">ꨚꨴꨯꨱꩃ</span></p></details>
-
-<p>However, note that if the cluster is split by a visible virama, this creates two orthographic syllables and the pre-base vowel sign appears after the consonant with the virama.</p>
-</section>
-
-
-
-
-
-
-<section id="circumgraphs">
-<h4>Circumgraphs</h4>
-
-<p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
+<h4>Pre-base vowel sign</h4>
 
 <p class="vowelSignExample">
-    <bdi lang="ban">&#x1B13;&#x1B40;</bdi>
-    <span class="ipa">ko</span>
-    <span><span class="uname">U+1B13 BALINESE LETTER KA</span> + <span class="uname">U+1B40 BALINESE VOWEL SIGN TALING TEDUNG</span></span>
+    <bdi lang="ks">𑆑𑆴</bdi>
+    <span class="ipa">ki</span>
+    <span><span class="uname">U+11191: SHARADA LETTER KA</span> + <span class="uname">U+111B4: SHARADA VOWEL SIGN I</span></span>
 </p>
 
-<p>Five vowel signs are usually produced by a single combining character with visually separate parts, that appear on  different sides of the consonant onset.</p>
 
-<figure class="characterBox auto small" data-cols="ipa,trans,transc">ᭀ␣ᭃ␣ᭁ␣ᬻ␣ᬼ␣ᬽ</figure>
+<figure class="characterBox auto small"  data-cols="ipa,trans,transc">𑆴</figure>
 
-<p class="instructions">This section includes some vowel signs described in the section <a class="secref">vocalics</a>.</p>
+<p>The vowel sign <span class="ch">𑆴</span> appears to the left of the base consonant letter or cluster.</p>
 
-<p>Like pre-base glyphs, these are combining marks that are always stored after the base consonant. When rendered, the single code point produces multiple glyphs, which are placed on different sides of the base consonant. Click on <a class="figref">fig_circumgraphs</a> to see the sequence of characters in storage.</p>
+<p class="info">This is a combining mark that is always typed and stored after the base consonant(s), ie. the codepoints follow the order in which the items are pronounced. The rendering process places the glyph before the base consonant without changing the code points.</p>
 
-<figure id="fig_circumgraphs" class="sideCaption">
-<img src="rej/fig_circumgraphs.png" alt="ꤷꥇꥆꥋꥆ" data-notes="200px Noto Sans Rejang" class="ex" lang="rej" style="height: 8rem; margin-inline:2rem;">
-<figcaption>A circumgraph. The vowel stored after the consonant as a single character in memory is rendered with separate glyphs on 2 sides of the base.</figcaption>
+<p class="instructions">Clicking on the following word reveals that in the sequence of characters the initial vowel sound is stored after the consonant, even though it is displayed to its left.</p>
+
+<p><span class="eg" lang="ks">𑆢𑆳𑆝𑆴𑆩</span></p>
+
+<!--<p>It is actually placed before the start of an <em>orthographic syllable</em>. In <a class="figref">fig_prebase</a> the sequence of glyphs for the orthographic syllable is rendered VCC, whereas the pronunciation is CCV. In conjuncts with 3 consonants, it will still be rendered before the consonants.</p>
+
+
+<figure id="fig_prebase" class="sideCaption">
+<img src="imgks/fig_prebase.svg" alt="बेत्रि" class="ex" lang="ks" data-notes="Noto Serif Devanagari" style="height:6rem;">
+<figcaption>A prebase vowel, pronounced after a consonant cluster, but rendered to the left of the conjunct.</figcaption>
 </figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="rej">ꤷꥇꥆꥋꥆ</span></p></details>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="ks">बेत्रि</span></p></details>
 
-<p>Glyphs can appear on up to 3 sides of the base. Some of the glyphs merge with the base character's glyph (see <a class="secref">context</a>).</p>
 
-<p>These circumgraphs have canonically equivalent decomposed forms (see <a class="secref">vs_encoding</a>).</p>
+<p>However,  if the cluster is split by a visible virama, this creates two syllables and the pre-base vowel sign appears after the last consonant with the virama. The sequence of displayed glyphs is now CVC. If the conjunct contains 3 consonants, the displayed order will be CCVC.
+</p>-->
+
+
+<!--figure id="fig_prebase_split" class="sideCaption">
+<img src="images/fig_prebase_split.svg" alt="शक्ति" class="ex" lang="ks" data-notes="Noto Serif Devanagari" style="height:8rem;">
+<div>
+<figcaption>The same word, but without the conjunct. The vowel is now rendered to the left of the last consonant in the cluster.</figcaption>
+<details><summary>details</summary><span class="eg" lang="ks">शक्ति</span></details>
+</div>
+</figure-->
 </section>
-
-
 
 
 
@@ -1537,9 +1248,8 @@ alveolar</th>
 <section id="vlength">
 <h4>Vowel length</h4>
 
-<p>tbd</p>
+<p>Vowel length is indicated by the vowel sign used (see <a class="secref">combiningV</a> and  <a class="secref">kashmiriV</a>).</p>
 </section>
-
 
 
 
@@ -1548,23 +1258,9 @@ alveolar</th>
 <section id="nasalisation">
 <h4>Nasalisation</h4>
 
-<p>tbd</p>
-</section>
+<figure class="characterBox auto"  data-cols="trans">𑆀␣𑇏</figure>
 
-
-
-
-
-
-
-
-
-<section id="compositeV">
-<h4>Composite vowel signs</h4>
-
-<p>Multipart vowels are only produced when text is decomposed; 5 of the circumgraphs split off the <span class="hx">1B35</span> glyph, to create the following pairs:</p>
-
-<figure class="characterBox auto small" data-cols="ipa,trans,transc">&#x1B3E;&#x1B35;&#x2423;&#x1B42;&#x1B35;&#x2423;&#x1B3F;&#x1B35;&#x2423;&#x1B3A;&#x1B35;&#x2423;&#x1B3C;&#x1B35;</figure>
+<p>Nasalisation of the vowel in a syllable is generally indicated using <span class="hx">11180</span> above the vowel.  An alternative shape, <span class="hx">111CF</span> can also be found, and sometimes in the same manuscript. For more information see <a href="https://www.unicode.org/L2/L2017/17428-sharada-inv-candrabindu.pdf" target="_blank">Pandey</a>.</p>
 </section>
 </section>
 
@@ -1575,23 +1271,26 @@ alveolar</th>
 
 
 
- 
 <section id="standalone">
 <h3>Standalone vowels</h3>
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
-<p>Kirat Rai has no <a class="termref" href="../glossary/index.html#independentvowel">independent vowel</a> letters, but instead uses <span class="ch">𖵃</span> as a carrier for standalone vowels. This can represent a zero or glottal stop onset. The vowel to be pronounced is indicated by attaching a vowel sign, eg.</p>
-<p><span class="eg" lang="bap">𖵃𖵤𖵛𖵣</span></p>
+<p>Sanskrit standalone vowels are written using a set of independent vowel letters. The set contains a character to represent the inherent vowel sound, and 2 letters representing diphthongs.</p>
 
-<p>Used alone, this letter represents the standalone vowel <span class="ipa">a</span>.</p>
-<p><span class="eg" lang="bap" dir="ltr">𖵃𖵈𖵫𖵄𖵣</span></p>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">𑆅␣𑆇␣𑆆␣𑆈␣𑆍␣𑆏␣𑆃␣𑆃␣ ␣𑆎␣𑆐</figure>
 
-<p>The following list shows how to write each of the standalone vowels.</p>
+<p>However, the additional vowel sounds in Kashmiri are represented by 3 of the above letters combined with a vowel signs listed in <a class="secref">kashmiriV</a>. The following list contains the standalone vowel representations for the additional Kashmiri vowels. Rajan lists alternative base letters for <span class="ipa">ɔ</span> and <span class="ipa">ɔː</span>.</p>
 
-<figure class="characterBox auto" data-ipa="i,ɨ,u,e,o,a,aː,aɪ,aʊ">𖵃𖵤␣𖵃𖵦␣𖵃𖵥␣𖵃𖵧␣𖵃𖵩␣𖵃␣𖵃𖵣␣𖵃𖵨␣𖵃𖵪</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">𑆃𑭢␣𑆃𑭣␣𑆍𑭤␣𑆏𑭥␣𑆃𑭠␣𑆃𑭡␣𑆃𑭦␣𑆃𑭧</figure>
 
-<p>Standalone vowels are written using the normal vowel signs with no special additional mechanisms, eg.</p>
-<p><span class="eg" lang="nnp" dir="ltr">𞋀𞋊𞋞</span></p>
+
+<p><a class="figref">fig_kashmiri_vowel_signs</a> shows the actual shapes.</p>
+
+
+<figure id="fig_kashmiri_ivowels" class="sideCaption">
+<img src="imgs/fig_kashmiri_ivowels.png" alt="Pictures of the Kashmiri vowel signs" style="height:6rem;">
+<figcaption>Kashmiri standalone vowel signs.</figcaption>
+</figure>
 </section>
 
 
@@ -1599,21 +1298,6 @@ alveolar</th>
 
 
 
-
-
-
-
-<section id="tones">
-<h3>Tones</h3>
-
-<p id="def-openclosed" class="explanatoryintro definitionStub"></p>
-
-<p id="def-livedead" class="explanatoryintro definitionStub"></p>
-
-<p id="def-checked" class="explanatoryintro definitionStub"></p>
-
-<p>tbd</p>
-</section>
 
 
 
@@ -1628,15 +1312,13 @@ alveolar</th>
 <h3>Vowel sounds  to characters</h3>
 
 
-
-
 <div class="mapKey">
 <div>
-<p>This section maps Fula vowel sounds to common graphemes in the Adlam orthography.</p>
+<p>This section maps Kashmiri or Sanskrit vowel sounds to common graphemes in the Devanagari orthography. It shows characters used since the reforms of 2009, and ignores previous orthographies (see <a class="secref">previousOrthographies</a>).</p>
 
-<p class="instructions highlight">Important notes.</p>
+<!--<p class="instructions highlight">Important notes.</p>-->
 
-<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc. <span style="color:tan">Light coloured</span> characters occur infrequently.</p>
+<!--<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc. <span style="color:tan">Light coloured</span> characters occur infrequently.</p>-->
 </div>
 
 <aside>
@@ -1653,26 +1335,6 @@ alveolar</th>
 
 
 
-
-<!-- NEEDS REFORMATTING to conform to
-
-<div class="mapItem">
-<div class="phone"><span class="ipa">i</span></div>
-<div class="map_detail">
-<p class="map_row"><span class="posn">dependent vowel</span>
-<span class="ch">ꨪ</span> <b></b></p>
-</div>
-</div>
-
--->
-
-
-
-
-
-
-
-
 <section id="plain_vowel_map">
 <h4>Plain vowels</h4>
 
@@ -1681,52 +1343,226 @@ alveolar</th>
 <div id="mapv_high" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">iː</span></div>
-<div>
-<p><span class="posn">mixed</span>
-<span class="ch circle">ີ</span></p>
+<div class="phone"><span class="ipa">i</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ि</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">इ</span> <b></b></p>
 </div>
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">i</span></div>
-<div>
-<p><span class="posn">mixed</span>
-<span class="ch circle">ິ</span></p>
+<div class="phone"><span class="ipa">iː</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ी</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ई</span> <b></b></p>
 </div>
 </div>
 
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɨ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ॖ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ॶ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɨː</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ॗ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ॷ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">u</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ु</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">उ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">uː</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ू</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ऊ</span> <b></b></p>
+</div>
+</div>
 </div>
 
 
 
-<div id="mapv_midhigh" class="map">
 
+
+
+
+<div id="mapv_hmid" class="map">
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">e</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ॆ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ऎ</span> <b></b></p>
 </div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">eː</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">े</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ए</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">o</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ॊ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ऒ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">oː</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ो</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ओ</span> <b></b></p>
+</div>
+</div>
+</div>
+
 
 
 
 
 <div id="mapv_mid" class="map">
 
+<div class="mapItem">
+<div class="phone"><span class="ipa">ə</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ऺ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ॳ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">əː</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ऻ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ॴ</span> <b></b></p>
+</div>
+</div>
 </div>
 
 
 
 
-<div id="mapv_midlow" class="map">
 
+
+<div id="mapv_lmid" class="map">
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɔ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ॏ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ॅ</span> <b>In some organisations.</b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ॵ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ॲ</span> <b>In some organisations.</b></p>
 </div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɔː</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ौ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ॉ</span> <b>In some organisations.</b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">औ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ऑ</span> <b>In some organisations.</b></p>
+</div>
+</div>
+</div>
+
 
 
 
 
 <div id="mapv_low" class="map">
 
+<div class="mapItem">
+<div class="phone"><span class="ipa">a</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn" style="color: black">inherent vowel</span>
+ <b>eg. <span class="eg" lang="ks">दर्शुन</span></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">अ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">aː</span></div>
+<div class="map_detail">
+
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ा</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">आ</span> <b></b></p>
+</div>
 </div>
 </div>
 </section>
-
 
 
 
@@ -1735,40 +1571,37 @@ alveolar</th>
 
 
 <section id="diphthong_map">
-<h4>Diphthongs &amp; rhymes</h4>
+<h4>Diphthongs</h4>
 
-<div id="map_hmiddiphthongs" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">i</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p class="glyphs"><span class="hx circle">1752</span></p>
-<p class="example"><span class="eg" lang="bku">ᝐᝒᝆ</span></p>
-</div>
-<div class="col2">
-<p class="glyphs"><span class="hx circle">1741</span></p>
-<p class="example"><span class="eg" lang="bku">ᝁᝇᝓ</span></p>
-</div>
-</div>
+<div id="map_highdiphthongs" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">u</span></div>
-<div class="posn">&nbsp;</div>
-<div class="col1">
-<p class="glyphs"><span class="hx circle">1753</span></p>
-<p class="example"><span class="eg" lang="bku">ᝎᝓᝆᝓ</span></p>
-</div>
-<div class="col2">
-<p class="glyphs"><span class="hx circle">1742</span></p>
-<p class="example"><span class="eg" lang="bku">ᝂᝇᝓ</span></p>
+<div class="phone"><span class="ipa">əĭ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ै</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">ऐ</span> <b></b></p>
 </div>
 </div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">əŭ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch circle">ौ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">standalone</span>
+<span class="ch">औ</span> <b></b></p>
 </div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
-</section>
-</section>
-</section>
+
 
 
 
@@ -1781,12 +1614,18 @@ alveolar</th>
 
 <section id="vocalics">
 <h2>Vocalics</h2>
+
 <p id="def-vocalic" class="explanatoryintro definitionStub"></p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᬋ␣ᬌ␣ᬍ␣ᬎ␣ᬺ␣ᬻ␣ᬼ␣ᬽ</figure>
+<p>Sharada has 4 vocalic vowel signs and 4 corresponding independent vowels.</p>
 
-<p>description</p>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">𑆸␣𑆹␣𑆺␣𑆻</figure>
+
+<figure class="characterBox auto caps"  data-cols="ipa,trans,transc">𑆉␣𑆊␣𑆋␣𑆌</figure>
 </section>
+
+
+
 
 
 
@@ -1802,51 +1641,18 @@ alveolar</th>
 <h2>Consonants</h2>
 
 
-
 <p>
-<span id="extendedC"></span>
-<span id="onsets"></span>
-<span id="finals"></span>
-<span id="clusters"></span>
-<span id="clength"></span>
+<!--span id="clength"></span-->
 </p>
 
 
 <aside class="sectionAside">
 <p>This orthography has no special features with respect to the following.</p>
+
 <ul>
-<li>Repertoire extensions to cover loan words, etc.</li>
 <li>Onset clusters.</li>
-<li>Syllable-final consonants.</li>
-<li>Conjuncts or other shaping related to consonant clusters.</li>
 <li>Gemination or consonant lengthening.</li>
 </ul>
-
-
-
-<details class="tbd">
-<summary>Sections needing attention ...</summary>
-
-<section id="onsets">
-<h4>Onsets</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-
-<section id="finals">
-<h4>Finals</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-
-<section id="clusters">
-<h4>Consonant clusters</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-
-<section id="clength">
-<h4>Consonant length</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-</details>
 </aside>
 
 
@@ -1857,53 +1663,46 @@ alveolar</th>
 
 
 
+
+
+
 <section id="consonantSummary">
-<h4>Consonant summary table</h4>
+<h3>Consonant summary table</h3>
 
 <p>The following table summarises the main consonant to character assigments.</p>
 
-<p class="instructions highlight">The left column is lowercase, and the right uppercase.</p>
-
-
+<!--p class="instructions">Diacritics are added to the vowels to indicate nasalisation, which is not shown here.</p-->
 
 <table class="soundSummary">
-<thead>
-<tr>
-<th>&nbsp;</th>
-<th>post-consonant</th>
-<th>word-final standalone</th>
-<th>word-medial standalone</th>
-<th>word-initial standalone</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <th rowspan="5">Onsets</th>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">प␣ब␣त␣द␣ट␣ड␣क␣ग␣ ␣फ␣थ␣ठ␣ख</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">च़␣च␣ज␣ ␣छ़␣छ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">व␣स␣ज़␣श␣ह</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">म␣न</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">र␣ल␣य</figure></td>
 </tr>
 
 <tr>
-<th>Finals:</th>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc"></figure></td>
+<th>Finals</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ं</figure></td>
 </tr>
-</tbody>
 </table>
 
 
-<p class="instructions">For additional details see <a class="secref">consonant_mappings</a>.</p>
+<p class="instructions">For additional details see <a class="secref">vowel_mappings</a>.</p>
 </section>
+
+
+
 
 
 
@@ -1912,16 +1711,12 @@ alveolar</th>
 
 <section id="basicC">
 <h3>Basic consonants</h3>
+    
+    
+<p>The following is a list of basic Sharada consonants. All of these are used for Sanskrit, but not all are used for native Kashmiri words.</p>
 
-<p>Whereas the table just above takes you from sounds to letters, the following simply lists the basic consonant letters (however, since the orthography is highly phonetic there is little difference in ordering).</p>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">𑆥␣𑆦␣𑆧␣𑆨␣𑆠␣𑆡␣𑆢␣𑆣␣𑆛␣𑆜␣𑆝␣𑆞␣𑆖␣𑆗␣𑆘␣𑆙␣𑆑␣𑆒␣𑆓␣𑆔␣𑆱␣𑆯␣𑆰␣𑆲␣𑆩␣𑆤␣𑆚␣𑆟␣𑆕␣𑆮␣𑆫␣𑆬␣𑆭␣𑆪</figure>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᝉ␣ᝊ␣ᝆ␣ᝇ␣ᝃ␣ᝄ␣ ␣ᝐ␣ᝑ␣ ␣ᝋ␣ᝈ␣ᝅ␣ ␣ᝏ␣ᝍ␣ᝎ␣ᝌ</figure>
-
-<!--figure class="characterBox auto" data-cols="ipa,trans,transc">ᝉ␣ᝊ␣ᝆ␣ᝇ␣ᝃ␣ᝄ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᝐ␣ᝑ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᝋ␣ᝈ␣ᝅ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᝏ␣ᝍ␣ᝎ␣ᝌ</figure-->
-</section>
 
 
 
@@ -1929,14 +1724,38 @@ alveolar</th>
 
 
 <section id="extendedC">
-<h3>Repertoire extension</h3>
+<h4>Kashmiri extensions</h4>
 
-<p>tbd</p>
+<p>The additional consonant sounds used for Kashmiri can be written using one of the above characters with <span class="ch">𑇊</span>. These include:</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">𑆘𑇊␣𑆖𑇊</figure>
+
+<p>Neither of these combinations exist in atomic form.</p>
+
+<p class="observation"><span class="leadin">Observation:</span> It's likely that the combination <span class="ch">𑆗𑇊</span> also exists for the sound <span class="ipa">t͡sʰ</span>, but I haven't yet found an example of that. That set of 3 would match the set of characters with nukta found in the Devanagari rendering of Kashmiri.</p>
+</section>
 </section>
 
 
 
 
+
+
+<section id="palatalisation">
+<h3>Palatalisation</h3>
+    
+    
+<p>Palatalisation is a frequent feature of  Kashmiri words. It is represented using <span class="ch">𑆪</span> as the final element of a consonant cluster.</p>
+
+<p>Inside a word the <span class="uname">YA</span> forms a conjunct or a cluster with the preceding consonant, eg. <span class="eg" lang="ks" dir="ltr">𑆒𑇀𑆪𑆩𑆳</span></p>
+
+<p>At the end of a word, the <span class="uname">YA</span> is followed by a visible virama, eg. <span class="eg" lang="ks">𑆄𑆯𑆤𑇀𑆪𑇀</span></p>
+
+
+<p>Since they are palatal sounds, the <span class="uname">YA</span> is not needed after the following consonants.</p>
+
+<figure class="otherBox auto"  data-cols="ipa,trans,transc">𑆖␣𑆗␣𑆘␣𑆙</figure>
+</section>
 
 
 
@@ -1946,8 +1765,11 @@ alveolar</th>
 <section id="onsets">
 <h3>Onsets</h3>
 
-<p>tbd</p>
+<p>Clusters of consonant letters at the beginning of an orthographic syllable are handled as described in the section <a class="secref">clusters</a>.</p>
+
+<!--<p>Special behaviours include handling of <span class="uname">RA</span> at the beginning of an orthographic syllable (see <a class="secref">palatalisation</a>).</p>-->
 </section>
+
 
 
 
@@ -1957,103 +1779,48 @@ alveolar</th>
 <section id="finals">
 <h3>Finals</h3>
 
-<p>tbd</p>
+<p>Wiktionary data shows some words that end with a consonant letter and a following virama (<a href="https://r12a.github.io/scripts/shrd/ks_vocab.html?q=%F0%91%87%80%20" target="_blank">link</a>), but other words that end without the virama (<a href="https://r12a.github.io/scripts/shrd/ks_vocab.html?q=Ⓒ%20" target="_blank">link</a>).</p>
+
+<p>Sharada also has 2 dedicated characters for syllable codas.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">𑆁␣𑆂</figure>
+
+<p><span class="hx circle">11181</span> represents  a nasal that is homorganic with a following consonant. It is positioned over the previous consonant or vowel sign.</p>
+
+<p><span class="eg" lang="ks">𑆒𑭣𑆁𑆖𑇊</span></p>
+<p><span class="eg" lang="ks">𑆃𑭠𑆁𑆘𑇊</span></p>
+
+<p class="observation"><span class="leadin">Observation:</span> When using the Devanagari script, the visarga is not used in Kashmiri.  That may also be the case for Sharada. Research needed.</p>
 </section>
 
 
 
+  
 
 
 
+
+  
 <section id="clusters">
 <h3>Consonant clusters</h3>
-
 <p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
 <p id="def-conjunct" class="explanatoryintro definitionStub"></p>
 
-<p>The absence of a vowel sound between two or more consonants is visually indicated in one of the following ways.</p>
-<ol>
-    <li>Create a conjunct. There are a number of possibilities here:<ol style="margin: 0;">
-<li>
-<mark>Stacking</mark>
-: Reduce a non-initial consonant in size and shape and position it below the first.</li>
-<li>
-<mark>Conjoining</mark>
-: The two consonants sit side by side, but the second consonant has a special shape.</li>
-<li>
-<mark>Ligation</mark>
-: Create a fusion of the letter shapes, where it may be difficult to identify one or more of the components.</li>
-<li>The 
-<mark>letter <span class="trans">ra</span></mark> 
-has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
-</ol></li>
-<li>Show a <mark>visible virama</mark> below the non-final consonants in the cluster.</li>
-<li>Use the 
-<mark>anusvara</mark>
-.</li>
-<!--li>No indication, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li-->
-</ol>
+<p>Sharada commonly uses a visible <span class="ch">𑇀</span> between consonant letters to indicate an absence of the inherent vowel. Description in the Unicode Standard<tt>u</tt> only mentions this approach.</p>
 
+<p><span class="eg" lang="ks">𑆃𑆩𑇀𑆧𑆳</span></p>
 
+<p>However, in a number of cases  consonant clusters are stacked, and the virama is hidden, eg.</p>
 
-<p>In Unicode, the conjunct formation is achieved by adding <span class="codepoint" translate="no"><span lang="or">&#x0B4D;</span> [<a href="/scripts/oriya/block#char0B4D"><span class="uname">U+0B4D ORIYA SIGN VIRAMA</span></a>]</span>  between the consonants. The font hides the virama glyph automatically when a conjunct is formed.</p>
-<p>See also <a class="secref">finals</a> and <a class="secref">gemination</a>.</p>
+<p><span class="eg" lang="ks">𑆑𑭣𑆢𑇀𑆪</span></p>
 
+<p>The Noto Sans Sharada font currently shows the following combinations of CvC as stacked. The other combinations have a visible virama.</p>
 
+<figure class="characterBox auto"  data-cols="" data-ipa="ttʱ,ts,tj,ddʱ,dj,ʈk,d͡ʑd͡ʑ,d͡ʑɲ,d͡ʑɳ,d͡ʑj,kt,kk,kʂ,ɡr,st,stʱ,sm,ʂʈ,ʂʈʰ,ʂɳ,ɦj,nt,ntʱ,ndʱ,ɳɖ,ɳʃ,ŋk,ŋŋ,rt,rtʱ,rd͡ʑ,rk,rɡ,rʂ,rʂ,rʋ,rj">𑆠𑇀𑆡␣𑆠𑇀𑆱␣𑆠𑇀𑆪␣𑆢𑇀𑆣␣𑆢𑇀𑆪␣𑆛𑇀𑆑␣𑆘𑇀𑆘␣𑆘𑇀𑆚␣𑆘𑇀𑆟␣𑆘𑇀𑆪␣𑆑𑇀𑆠␣𑆑𑇀𑆑␣𑆑𑇀𑆰␣𑆓𑇀𑆫␣𑆱𑇀𑆠␣𑆱𑇀𑆡␣𑆱𑇀𑆩␣𑆰𑇀𑆛␣𑆰𑇀𑆜␣𑆰𑇀𑆟␣𑆲𑇀𑆪␣𑆤𑇀𑆠␣𑆤𑇀𑆡␣𑆤𑇀𑆣␣𑆟𑇀𑆝␣𑆟𑇀𑆯␣𑆕𑇀𑆑␣𑆕𑇀𑆕␣𑆫𑇀𑆠␣𑆫𑇀𑆡␣𑆫𑇀𑆘␣𑆫𑇀𑆑␣𑆫𑇀𑆓␣𑆫𑇀𑆰␣𑆫𑇀𑆲␣𑆫𑇀𑆮␣𑆫𑇀𑆪</figure>
 
-
-<section id="stacking">
-<h4>Stacking</h4>
-
-<p>tbd</p>
-<figure id="fig_stacked_first"> </figure>
 </section>
 
 
-
-
-
-<section id="preceding_ra">
-<h4>Initial RA  in clusters</h4>
-
-<p>tbd</p>
-</section>
-
-
-
-<section id="ligated">
-<h4>Ligated forms<span class="name"></span></h4>
-
-<p>tbd</p>
-</section>
-
-
-
-
-<section id="conjoined">
-<h4>Conjoined consonants or a visible halanta</h4>
-
-<p>tbd</p>
-</section>
-
-
-
-
-
-
-<section id="triple_clusters">
-<h4>Triple-consonant clusters</h4>
-
-<p>tbd</p>
-</section>
-
-
-<section id="visible_virama">
-<h4>Visible vowel-killer</h4>
-
-<p>tbd</p>
-</section>
-</section>
 
 
 
@@ -2063,16 +1830,8 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <section id="clength">
 <h3>Consonant length</h3>
 
-<p>tbd</p>
+<p>Gemination and consonant lengthening are handled using the normal approach to consonant clusters (see <a class="secref">clusters</a>).</p>
 </section>
-
-
-
-
-
-
-
-
 
 
 
@@ -2084,13 +1843,11 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <h3>Consonant sounds to characters</h3>
 
 
-
-
 <div class="mapKey">
 <div>
-<p>This section maps Fula consonant sounds to common graphemes in the Adlam orthography.</p>
+<p>This section maps Kashmiri/Sanskrit consonant sounds to common graphemes in the Sharada orthography.</p>
 
-<p class="instructions highlight">Important notes.</p>
+<p class="instructions highlight">The list includes consonant letters are not normally found in Kashmiri words, and generally occur only in loan words that have kept their original spelling. They are often replaced with one of the consonants used for Kashmiri sounds.</p>
 
 <p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc. <span style="color:tan">Light coloured</span> characters occur infrequently.</p>
 </div>
@@ -2113,32 +1870,182 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-
-
 <section id="stops">
-<div id="map_plosives" class="map">
+<h4>Onsets</h4>
 
+
+<div id="map_plosives" class="map">
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">p</span></div>
-<div>
-<p><span class="posn">onset</span>
-<span class="ch">ပ</span> <b></b></p>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">प</span> <b></b></p>
 </div>
 </div>
 
 <div class="mapItem">
 <div class="phone"><span class="ipa">pʰ</span></div>
-<div>
-<p><span class="posn">onset</span>
-<span class="ch">ဖ</span> <b></b></p>
-<p><span class="posn">onset</span>
-<span class="ch">ဘ</span> <b>sometimes at the beginning of words or particles.</b></p>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">फ</span> <b></b></p>
 </div>
 </div>
 
+<div class="mapItem">
+<div class="phone"><span class="ipa">b</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ब</span> <b></b></p>
+
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch uncommon">भ</span> <b>Retained in unassimilated loan words. Often replaced by mainstream Kashmiri consonants.</b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">t</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">त</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">tʰ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">थ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡s</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">च़</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡sʰ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">छ़</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡ʃ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">च</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡ʃʰ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">छ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">d</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">द</span> <b></b></p>
+
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch uncommon">ध</span> <b>Retained in unassimilated loan words. Often replaced by mainstream Kashmiri consonants.</b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">d͡ʒ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ज</span> <b></b></p>
+
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch uncommon">झ</span> <b>Retained in unassimilated loan words. Often replaced by mainstream Kashmiri consonants.</b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʈ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ट</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʈʰ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ठ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɖ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ड</span> <b></b></p>
+
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch uncommon">ढ</span> <b>Retained in unassimilated loan words. Often replaced by mainstream Kashmiri consonants.</b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">k</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">क</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">kʰ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ख</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">kʂ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant cluster</span>
+<span class="ch uncommon">क्ष</span> <b>Spelling retained in Sanskrit loans.</b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɡ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ग</span> <b></b></p>
+
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch uncommon">घ</span> <b>Retained in unassimilated loan words. Often replaced by mainstream Kashmiri consonants.</b></p>
+</div>
+</div>
+
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">ɡj</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant cluster</span>
+<span class="ch uncommon">ज्ञ</span> <b>Spelling retained in Sanskrit loans.</b></p>
+</div>
+</div>
 </div>
 </section>
+
+
 
 
 
@@ -2148,48 +2055,178 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <section id="fricatives">
 <div id="map_fricatives" class="map">
 
+<div class="mapItem">
+<div class="phone"><span class="ipa">v</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">व</span> <b></b></p>
 </div>
-</section>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">s</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">स</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">z</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ज़</span> <b></b></p>
+
+<p class="map_row"><span class="posn">precomposed consonant</span>
+<span class="ch">ज़</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʃ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">श</span> <b></b></p>
+
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch uncommon">ष</span> <b>Retained in unassimilated loan words. Often replaced by mainstream Kashmiri consonants.</b></p>
+</div>
+</div>
+
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">h</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ह</span> <b></b></p>
+</div>
+</div>
+</div>
 
 
 
 
-<section id="nasals">
+
 <div id="map_nasals" class="map">
 
+<div class="mapItem">
+<div class="phone"><span class="ipa">m</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">म</span> <b></b></p>
+
+<p class="map_row"><span class="posn">final nasal</span>
+<span class="ch">ं</span> <b>Coda.</b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">n</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">न</span> <b></b></p>
+
+<p class="map_row"><span class="posn">final nasal</span>
+<span class="ch">ं</span> <b>Coda.</b></p>
+
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch uncommon">ञ</span> <b>Rare. Retained in unassimilated loan words. Often replaced by mainstream Kashmiri consonants.</b></p>
+
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch uncommon">ण</span> <b>Spellings retained in Sanskrit loans.</b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ŋ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">final nasal</span>
+<span class="ch">ं</span> <b>Coda.</b></p>
+
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch uncommon">ङ</span> <b>Rare. Retained in unassimilated loan words. Often replaced by mainstream Kashmiri consonants.</b></p>
+</div>
+</div>
 </div>
 </section>
+
+
 
 
 
 
 <section id="sonorants">
+
 <div id="map_approximants" class="map">
 
+<div class="mapItem">
+<div class="phone"><span class="ipa">w</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">व</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">r</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">र</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ri</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vocalic vowel sign</span>
+<span class="ch">ृ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">vocalic independent vowel</span>
+<span class="ch">ऋ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">riː</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">vowel sign</span>
+<span class="ch">ॄ</span> <b></b></p>
+
+<p class="map_row"><span class="posn">independent vowel</span>
+<span class="ch">ॠ</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">l</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant</span>
+<span class="ch">ल</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">j</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">consonant/palatalisation marker</span>
+<span class="ch">य</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʲ</span></div>
+<div class="map_detail">
+<p class="map_row"><span class="posn">palatalisation marker</span>
+<span class="ch">य्</span> <b>Palatalisation indicator.</b></p>
+
+<p class="map_row"><span class="posn">consonant/palatalisation marker</span>
+<span class="ch">य</span> <b>Palatalisation indicator.</b></p>
+</div>
+</div>
 </div>
 </section>
 </section>
 </section>
-
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-<section id="symbols">
-<h2>Symbols</h2>
-
-<p>tbd</p>
-</section>
-
- 
- 
  
   
   
@@ -2204,36 +2241,14 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-<section id="otherfeatures">
+<!--section id="otherfeatures">
 <h2>Other features</h2>
-
-
-<section id="vocalics">
-<h3>XXXX</h3>
-<p id="def-vocalic" class="explanatoryintro definitionStub"></p>
-
-<p>tbd</p>
-</section>
-
-
-
-
-
 <section id="symbols">
-<h3>XXXXX</h3>
+<h3>Symbols</h3>
 
 <p>tbd</p>
 </section>
-</section>
-
- 
- 
- 
-  
-  
-
-
-
+</section-->
 
 
 
@@ -2245,116 +2260,79 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <section id="encoding">
 <h2>Encoding choices</h2>
 
-<p class="instructions">This section offers advice about characters or character sequences to avoid, and what to use instead. It takes into account  the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC)..</p>
-
-<p>Although usage is recommended here, content authors may well be unaware of such recommendations. Therefore, applications should look out for the non-recommended approach and treat it the same as the recommended approach wherever possible.</p>
+<p class="instructions">This section looks at  alternative  strategies  for  typing and storing letters used by Kashmiri, taking into consideration the effects of normalising the text using <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and <span class="termref" href="../glossary/#nfc"> Normalisation Form C</span> (NFC).</p>
 
 
-
-
-
-
-
-
-
-
-<section id="decomposition">
-<h3>Canonically equivalent encodings</h3>
-
-<p>One letter only can be represented as an atomic character (the norm), or as a sequence of base letter plus combining mark. The parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches should be treated as canonically equivalent.</p>
-
+<section id="encoding_vowelsigns">
+<h3>Vowel signs</h3>
+<p class="info">The single code points on the left should be used, and not the sequences on the right, because they are not made the same by normalisation. Therefore the content will be regarded as different, which will affect searching and other operations on the text.</p>
 
 <table class="comparison">
 <thead>
 <tr>
-<th scope="col">Atomic (recommended)</th>
-<th scope="col">Decomposed ( NOT recommended )</th>
+<th scope="col">Use</th>
+<th scope="col">Do not use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="ch">ێ</span></td>
-<td><span class="hx">064A 0654</span></td>
+<td><span class="hx">094B</span></td>
+<td><span class="hx split">093E 0947</span></td>
+</tr>
+<tr>
+<td><span class="hx">094C</span></td>
+<td><span class="hx split">093E 0948</span></td>
+</tr>
+<tr>
+<td><span class="hx">094A</span></td>
+<td><span class="hx split">093E 0946</span></td>
+</tr>
+<tr>
+<td><span class="hx">093B</span></td>
+<td><span class="hx split">093E 093A</span></td>
 </tr>
 </tbody>
 </table>
 
-<p>Note that the base character in the decomposed sequence is <span class="hx">064A</span>, and not <span class="hx">06CC</span>, which is used elsewhere for <span class="name">yeh</span> in Kurmanji.  <span class="hx">064A</span> is <em>only</em> used for this specific decomposed sequence; it is inappropriate to use it elsewhere in Kurmanji text.</p>
-</section>
 
 
-
-
-
-
-
-
-
-
-
-<section id="unresolved_encoding">
-<h3>Unresolved encodings</h3>
-
-<p>A couple of Sorani letters are encoded in different ways in different texts, and in fact can be mixed within the same text. At the moment there doesn't appear to be a clear ruling on which is expected. This section lists the alternatives.</p>
+<p class="info">The next table shows vowel signs that were rendered obsolete by recent standardisation work. Use the characters on the left, rather than those on the right. (See <a class="secref">previousOrthographies</a>.)</p>
 <table class="comparison">
 <thead>
 <tr>
-<th scope="col">Alternative 1</th>
-<th scope="col">Alternative 2</th>
-<th scope="col">Notes</th>
+<th scope="col">Use</th>
+<th scope="col">Do not use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="hx">06BE</span></td>
-<td><span class="hx">0647</span></td>
-<td>Wikipedia and Wiktionary represent the sound <span class="ipa">h</span> using only <span class="uname">HEH DOACHASHMEE</span>, whereas gov.krd uses only <span class="uname">ARABIC HEH</span>. Other online resources examined are not completely one or the other. Note that Uighur uses <span class="uname">HEH DOACHASHMEE</span> to represent <span class="ipa">h</span>.</td>
+<td><span class="hx">0956</span></td>
+<td><span class="hx">0945 0941</span></td>
 </tr>
 <tr>
-<td><span class="hx">06D5</span></td>
-<td><span class="hx">0647 200E</span></td>
-<td>
-<p>The majority usage seems to favour <span class="uname">AE</span>, although again some resources mix both to some degree (although they tend to mostly use <span class="uname">AE</span>). This makes sense, since the use of <span class="uname">HEH</span> plus ZWNJ has the appearance of a hack intended to prevent HEH joining to the left, whereas AE will do this naturally, without any formatting code point. Use of <span class="uname">AE</span> also gets around practical difficulties that arise because the ZWNJ character is invisible and is not readily accessible from many keyboards – difficulties that are amplified by the fact that this vowel letter is one of the most commonly used letters in the Sorani alphabet. Note that Uighur also uses <span class="uname">AE</span> to represent a vowel, and a different character for the sound <span class="ipa">h</span>.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="confusable_encoding">
-<h3>Confusables &amp; spelling errors</h3>
-
-<p>This table lists characters that are often mistakenly used because they look the same as or similar to the code points used for Kurmanji, or perhaps because the correct character is not available on the user's keyboard.</p>
-
-
-<table class="comparison">
-<thead>
-<tr>
-<th scope="col">Incorrect</th>
-<th scope="col">Correct</th>
-<th scope="col">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="hx">064A</span></td>
-<td><span class="hx">06CC</span></td>
-<td>The Arabic YEH doesn't drop the dots below in isolate and final positions.</td>
+<td><span class="hx">0957</span></td>
+<td><span class="hx">0945 0942</span></td>
 </tr>
 <tr>
-<td><span class="hx">0643</span></td>
-<td><span class="hx">06A9</span></td>
-<td>Common fonts tend not to show the difference between these two characters, but the ability to search and compare text is impaired unless the application is aware of and takes counter-measures against this substitution.</td>
+<td><span class="hx">093A</span></td>
+<td><p><span class="hx">0945</span> except where it is used by a few organisations to represent the sound <span class="ipa">ɔ</span>.</p>
+<p><span class="hx">093D</span></p></td>
+</tr>
+<tr>
+<td><span class="hx">093B</span></td>
+<td><span class="hx">0949</span> except where it is used by a few organisations to represent the sound <span class="ipa">ɔː</span>.</td>
+</tr>
+<tr>
+<td><span class="hx">0946</span></td>
+<td><span class="hx">0947 02BC</span></td>
+</tr>
+<tr>
+<td><span class="hx">094B</span></td>
+<td><span class="hx">094B 02BC</span></td>
+</tr>
+<tr>
+<td><span class="hx">094F</span></td>
+<td><span class="ch">व</span></td>
 </tr>
 </tbody>
 </table>
@@ -2363,34 +2341,100 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
+<section id="encoding_independents">
+<h3>Independent vowels</h3>
+<p class="info">Again, the single code points on the left should be used, and not the sequences on the right, because they are not made the same by normalisation.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Use</th>
+<th scope="col">Do not use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="ch">आ</span></td>
+<td><span class="hx split">0905 093E</span></td>
+</tr>
+<tr>
+<td><span class="ch">ॳ</span></td>
+<td><span class="hx split">0905 093A</span></td>
+</tr>
+<tr>
+<td><span class="ch">ॴ</span></td>
+<td><span class="hx split">0905 093B</span></td>
+</tr>
+<tr>
+<td><span class="ch">ओ</span></td>
+<td><span class="hx split">0905 094B</span></td>
+</tr>
+<tr>
+<td><span class="ch">औ</span></td>
+<td><span class="hx split">0905 094C</span></td>
+</tr>
+<tr>
+<td><span class="ch">ऒ</span></td>
+<td><span class="hx split">0905 094A</span></td>
+</tr>
+<tr>
+<td><span class="ch">ॶ</span></td>
+<td><span class="hx split">0905 0956</span></td>
+</tr>
+<tr>
+<td><span class="ch">ॷ</span></td>
+<td><span class="hx split">0905 0957</span></td>
+</tr>
+<tr>
+<td><span class="ch">ऐ</span></td>
+<td><span class="hx split">090F 0947</span></td>
+</tr>
+<tr>
+<td><span class="ch">ऎ</span></td>
+<td><span class="hx split">090F 0946</span></td>
+</tr>
+</tbody>
+</table>
 
 
-
-<section id="ff_encoding">
-<h3>False friends</h3>
-
-<p>The following atomic characters look as if they could be composed of parts, but in fact there is no equivalence during normalisation, and so the atomic characters only should be used.</p>
+<p class="info">The next table shows vowel signs that were rendered obsolete by recent standardisation work. Use the characters on the left, rather than those on the right. (See <a class="secref">previousOrthographies</a>.)</p>
 
 
 <table class="comparison">
 <thead>
 <tr>
-<th scope="col">Atomic</th>
-<th scope="col">Sequence ( DO NOT use! )</th>
+<th scope="col">Use</th>
+<th scope="col">Do not use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="ch">ڵ</span></td>
-<td><span class="hx">0644 065A</span></td>
+<td><span class="ch">ॶ</span></td>
+<td><span class="hx">0945 0941</span></td>
 </tr>
 <tr>
-<td><span class="ch">ێ</span></td>
-<td><span class="hx">06CC 065A</span></td>
+<td><span class="ch">ॷ</span></td>
+<td><span class="hx">0945 0942</span></td>
 </tr>
 <tr>
-<td><span class="ch">ۆ</span></td>
-<td><span class="hx">0648 065A</span></td>
+<td><span class="ch">ॳ</span></td>
+<td><p><span class="ch">ॲ</span> except where it is used by a few organisations to represent the sound <span class="ipa">ɔ</span>.</p>
+<p><span class="ch">ऽ</span></p></td>
+</tr>
+<tr>
+<td><span class="ch">ॴ</span></td>
+<td><span class="ch">ऑ</span> except where it is used by a few organisations to represent the sound <span class="ipa">ɔː</span>.</td>
+</tr>
+<tr>
+<td><span class="ch">ऎ</span></td>
+<td><span class="hx">0947 02BC</span></td>
+</tr>
+<tr>
+<td><span class="ch">ओ</span></td>
+<td><span class="hx">094B 02BC</span></td>
+</tr>
+<tr>
+<td><span class="ch">ॵ</span></td>
+<td><span class="ch">व</span></td>
 </tr>
 </tbody>
 </table>
@@ -2401,88 +2445,51 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-
-
-
-<section id="charorder">
-<h3>Codepoint sequences</h3>
-
-<p>Combining marks always follow the based character, however for Sorani, which doesn't normally use combining marks, this is only relevant for <span class="ch">ێ</span> when it occurs in decomposed text.</p>
-
-<p>Where present, characters in a syllable should always occur in the following order.</p>
-
-<ol>
-<li>A consonant or independent vowel.</li>
-<li>One or 2 medial consonants.</li>
-<li>A pre-base dependent vowel.</li>
-<li>A non-prebase dependent vowel.</li>
-<li>A vowel lengthener.</li>
-<li>A final consonant letter or combining mark.</li>
-</ol>
+<section id="encoding_consonants">
+<h3>Consonants</h3>
+<p class="info">The table just below shows  precomposed and decomposed representation of a Kashmiri letter which are treated as canonically equivalent by Unicode, meaning that you can use either. The Unicode Standard, however, recommends the use of the <em>decomposed</em> version, because normalisation does not reconstitute the precomposed  from the decomposed.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Recommended</th>
+<th scope="col">Not recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="ch">ज़</span></td>
+<td><span class="ch">ज़</span></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
 
 
+  
 
 
 
-
-
-
-
-<section id="formatting">
-<h2>Formatting characters</h2>
-<p><span class="codepoint" translate="no"><a href="/scripts/folderName/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> (<span class="uname">ZWNJ</span>) can be used to force the production of a visible virama, rather than a half-form (see <a class="secref">visiblevirama</a>). It can also be used to prevent the formation of vowel ligatures (see <a class="secref">vowelligatures</a>).</p>
-<p><span class="codepoint" translate="no"><a href="/scripts/folderName/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> (<span class="uname">ZWJ</span>) is used to produce special joining forms for <span class="uname">YA</span> (see <a class="secref">consonant_syllable</a>).</p>
-</section>
-   
-    
-    
-    
-    
 <section id="numbers">
-<h2>Numbers</h2>
+<h2>Numbers, dates, currency, etc</h2>
 
-<section id="digits">
-<h3>Digits</h3>
+<p class="observation"><span class="leadin">Observation:</span> Clarification needed on whether or not Kashmiri uses indic digits, and the rupee sign. Sources used so far keep to ASCII digits, but the Devanagari block has a set of digits that are used in Hindi.</p>
+<!--figure class="characterBox auto"  data-cols="trans,transc">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
 
-<p>@ XXXX has a set of native, decimal digits</p>
- 
-<figure class="characterBox auto"  data-cols="trans,transc">𖵰␣𖵱␣𖵲␣𖵳␣𖵴␣𖵵␣𖵶␣𖵷␣𖵸␣𖵹</figure>
+<p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
+    <figure>
+    <p class="large"><span class="ex" lang="ks">20,00,000</span></p>
+    <figcaption>Two million, written with Indian comma separators.</figcaption>
+    </figure-->
 
-<p>The CLDR standard-decimal pattern is <code>#,##,##0.###</code>. The standard-percent pattern is <code>#,##,##0%</code>.<span class="refcode"><a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/lo.html">c</a></span></p>
-<p>However, unlike other right-to-left scripts such as Arabic, Hebrew, Thaana, the numbers are displayed <em>right-to-left</em>, with the most significant digit first. This means that numbers don't produce bidirectional text in N'Ko.</p>
-<figure>
-<p dir="rtl" lang="nqo" class="large">ߝߌߟߊߣߊ߲ ߕߋ߬ߟߋ߫ <span class="ex">߂߇-߂߈/߂߀߁߀</span> ߕߊ߬ߡߌ߲߬ߣߍ߲ ߠߊ߫߸</p>
-<figcaption>A date in N'Ko. All characters are read right to left, including numbers.</figcaption>
-</figure>
+  
+<!--section>
+<h3 id="currency">Currency</h3>
+
+<p><span class="codepoint" translate="no"><span lang="ks">&#x20B9;</span> [<a href="/scripts/devanagari/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></p>
+</section-->
 </section>
-
-
-
-
-<section id="ordinals">
-<h3>Ordinal numbers</h3>
-
-    <p>Ordinal numbers are produced using  diacritics. </p>
-    <p>The first ordinal is produced using <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07ED;</span> <a href="/scripts/nko/block#char07ED">[<span class="uname">U+07ED NKO COMBINING SHORT RISING TONE​</span>]</a></span>, eg. <span class="ex" lang="nqo" dir="rtl">߁߭</span> <span class="meaning">first</span>.</p>
-    <p>Others use <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07F2;</span> <a href="/scripts/nko/block#char07F2">[<span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK​</span>]</a></span>, eg. <span class="ex" lang="nqo" dir="rtl">߂߲</span> <span class="meaning">second</span>. When there are multiple digits in a number, the diacritic appears only under the last in sequence, eg. <span class="ex" lang="nqo" dir="rtl">߁߂߃߲</span> <span class="meaning">123rd</span>.</p>
-  </section>
-
-
-
-
-<section id="currency">
-<h3>Currency</h3>
-
-<p>The CLDR standard format for currency is <code>¤#,##0.00;¤-#,##0.00</code>, and the symbol for the Lao currency, Kip, is <span class="codepoint" translate="no"><span lang="lo">&#x20AD;</span> [<a href="/scripts/currency/block#char20AD"><span class="uname">U+20AD KIP SIGN</span></a>]</span><span class="refcode">.</span></p>
-
-<figure class="characterBox auto" data-cols="trans">₭</figure>
-
-</section>
-</section>
-
 
 
 
@@ -2491,11 +2498,13 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 <section id="direction">
 <h2>Text direction</h2>
-
-<p>@ XXXX text runs left to right in horizontal lines.</p>
-
-<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the  XXXXX orthography described here.</a></p>
+<p>Kashmiri in the Devanagari script runs left to right in horizontal lines.</p>
+<p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the  Kashmiri orthography described here.</a></p>
 </section>
+
+
+
+
 
 
 
@@ -2513,22 +2522,17 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 <p>
-<span id="cursiveX"></span>
-<span id="gsubX"></span>
-<span id="gposX"></span>
-<span id="transformsX"></span>
+<span id="transforms"></span>
 </p>
 
+
 <aside class="sectionAside">
-<p>This orthography has no special features with respect to the following.</p>
+
+<p>The following features are not found in this orthography.</p>
+
 <ul>
-<li>Cursive/joined up text (eg.like Arabic).</li>
-<li>Context-based shaping (letters do not interact).</li>
-<li>Context-based positioning (no combining marks).</li>
-<li>Multiple combining marks on a single base.</li>
 <li>Case distinction, or special transforms to convert between characters.</li>
 </ul>
-
 
 <details class="tbd">
 <summary>Sections to be added ...</summary>
@@ -2538,19 +2542,9 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 </section>
 
-<section id="cursive">
-<h4>Cursive or joining letters</h4>
-</section>
-
 <section id="fontstyle">
 <h4>Letterform slopes, weights, &amp; italics</h4>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-
-<section id="transforms">
-<h4>Transforming characters</h4>
-
-<!--p>The Latin orthography used for Kurmanji is bicameral, and applications may need to enable transforms to allow the user to switch between cases. Capital letters are used at the beginning of sentences or titles, and for proper nouns.</p-->
 </section>
 </details>
 </aside>
@@ -2561,7 +2555,32 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-<p class="instructions">Experiment with examples using the <a href="../../pickers/xxxx/index.html" target="_blank">XXXX character app</a>.</p>
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/deva-ks/index.html" target="_blank">Kashmiri character app</a>.</p>
+
+
+
+
+
+
+
+
+
+<section id="cursive">
+<h3>Glyph joining</h3>
+
+
+<p>Within a Kashmiri word, spacing glyphs are typically joined together at the top bar (shirorekha).</p>
+<p><span class="eg" lang="ks" dir="ltr">काहवऺट</span></p>
+
+<p>The top bar extends across or through most spacing letters, including both consonants and vowels, but some letters create a gap in the line (while still joining at either side). Two such letters can be seen in the following example.</p>
+<p><span class="eg" lang="ks" dir="ltr">अथॖ</span></p>
+
+<p>Characters that create these gaps include digits and the following:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ॶ␣ॷ␣ॳ␣ऒ␣ॴ␣ओ␣अ␣आ␣ॵ␣औ␣थ␣श</figure>
+
+<p>Alignment of the top bar may be appropriate when mixing text of different sizes (see <a class="secref">initials</a>).  Also, when Gurmukhi text is mixed with another script that also has a top bar, such as Devanagari, the top bars of both scripts may need to be aligned.</p>
+</section>
 
 
 
@@ -2571,19 +2590,83 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <section id="context">
 <h3>Context-based shaping &amp; positioning</h3>
 
-<p>Wancho letters don't interact, so no special shaping is needed.</p>
+<section id="gsub">
+<h4>Context-based shaping</h4>
 
-<p>Base characters carry only a single combining mark.</p>
+<p>The shape of a character when displayed can vary, often dramatically, according to the context.</p>
 
-<p>Some small adjustments may be needed for the placement of tone marks relative to the base letter, but these are mostly horizontal, since Wancho letters tend to have the same height. <a class="figref">fig_gpos</a> shows adjustments to the horizontal position of the tone mark, depending on the shape of the base character.  It also shows kerning of the letters.</p>
+<p>One very common example in most indic scripts is the handling of 'conjunct consonants', ie. groups of consonants with no intervening vowel sounds. Since consonants in indic scripts have an inherent vowel sound, when two consonants are combined this way you have to indicate that the vowel of the initial consonant  is suppressed. This is normally done by altering the shape of the first consonant, or merging the shape of the two consonants. </p>
+
+<p>To tell the font to do this, in Unicode you add <span class="hx">094D</span>  between the two consonants. This produces the change in the shapes of the glyphs  that indicates to the reader that this is a conjunct. The actual outcome is font dependent. For the word  below which contains a conjunct of two <span class="ch">ल</span> characters (making a long L sound) you may see a 'half-form' used for the first LA (shown on the left) or you may see (as shown on the right) a ligated form.</p>
 
 
-<figure id="fig_gpos" class="sideCaption">
-<img src="nnp/gpos.png" alt="𞋀𞋬𞋫𞋬 𞋀𞋮𞋫𞋮" class="ex" lang="nnp" data-notes="Noto Sans Wancho 200px" style="height: 7em">
-<figcaption>An illustration of context-sensitive glyph placement in Wancho.</figcaption>
+<figure id="fig_l_conjunct" data-notes="62px Lohit Devanagari">
+<div class="multiItemFigure">
+<img class="ex" src="images/l-conjunct_horizontal.png" alt="दिल्ली">
+<img class="ex" src="images/l-conjunct_vertical.png" alt="दिल्‍ली">
+</div>
+<figcaption>Alternative representations of a geminated <span class="trans">l</span> consonant.</figcaption>
+</figure>
+
+
+<p>There are other types of context-based shaping, which are font specific. One is shown below. The width of the glyph for <span class="hx">093F</span> differs according to the base character to which it is attached.</p>
+    
+<figure id="fig_i_width" data-notes="62px Devanagari MT">
+<div class="multiItemFigure">
+<img class="ex" src="images/i_width1.png" alt="हालाँकि">
+<img class="ex" src="images/i_width2.png" alt="प्रचलित">
+</div>
+<figcaption>Context-sensitive shaping of the glyph for <span class="trans">i</span>.</figcaption>
+</figure>
+</section>
+  
+
+
+
+<section>
+<h4>Multiple combining characters</h4>
+
+<p>Diacritics regularly combine with a vowel sign attached to the same consonant or consonant cluster. The example below shows  two combining characters that are positioned above the base character in a very common form of the verb 'to be'. One is <span class="hx">0948</span>, and the other the nasalisation mark <span class="hx">0902</span>.</p>
+
+<figure id="fig_multiple_combining" data-notes="62px Devanagari MT">
+<img class="ex" src="images/multiple_combining.png" alt="हैं">
+<figcaption>Multiple combining characters over one base character.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+<section>
+<h4>Context-based positioning</h4>
+
+<p>Combining characters need to be placed in different positions, according to the context.</p>
+<p>The  example on the left below displays the dot (anusvara) immediately over the long vertical stroke. The example to the right has moved the dot slightly to the right in order to accomodate the vowel sign.</p>
+    
+<figure id="fig_anusvara_position" data-notes="62px Devanagari MT">
+<div class="multiItemFigure">
+<img class="ex" src="images/anusvara_normal.png" alt="अंधे">
+<img class="ex" src="images/anusvara_shifted.png" alt="में">
+</div>
+<figcaption>Context-sensitive placement of the anusvara diacritic.</figcaption>
+</figure>
+
+
+<p>In the following  the  image to the left shows the normal position of <span class="hx">0942</span>, beneath the first letter. The  example on the right shows that character displayed higher up and to the right when combined with the base character <span class="ch">र</span>.</p>
+    
+<figure id="fig_ra_placement" data-notes="62px Devanagari MT">
+<div class="multiItemFigure">
+<img class="ex" src="images/ra_placement_low.png" alt="पूजा">
+<img class="ex" src="images/ra_placement_side.png" alt="परू">
+</div>
+<figcaption>Context-dependent placement of the glyph representing <span class="trans">ra</span>.</figcaption>
 </figure>
 </section>
 </section>
+</section>  
+
+
 
 
 
@@ -2609,8 +2692,9 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 
-<p>Words are separated by spaces.</p>
-<p>Some words are hyphenated.</p>
+<p>Word boundaries are indicated by spaces.</p>
+
+<p>Kashmiri sometimes uses a hyphen to separate parts of a compound noun, eg. <span class="eg" lang="ks" dir="ltr">ॶंह-रारय</span></p>
 </section>
 
 
@@ -2624,20 +2708,16 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <section id="graphemes">
 <h3>Graphemes</h3>  
 
-<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
-
-<p>Graphemes in XXXX consist of single letters or letters with one or two combining marks. This means that text can be segmented into typographic units using grapheme clusters.</p>
-
-<p>XXXX doesn't use word boundaries for text segmentation, relying instead on grapheme boundaries (sometimes called orthographic syllables).</p>
-
-<p>Graphemes in XXXX consist of single letters or letters with a single combining mark.</p>
-
-<p>When applied to XXXX, Unicode grapheme clusters split text into base characters plus any combining marks that follow. Therefore, grapheme clusters can be used to segment XXXX into typographic units.</p>
-
-
-<p>Phrase, sentence, and section delimiters are described in <a class="secref">phrase</a>. </p>
+<p>See the <a href="hi.html#graphemes" target="_blank">description for Hindi</a>.</p>
+  
+</section>  
 </section>
-</section>
+
+
+
+
+
+
 
 
 
@@ -2647,7 +2727,8 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 <section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<h2>Punctuation &amp; inline features</h2>
+
 
 
 
@@ -2658,13 +2739,11 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 <section id="quotations">
 <h4>Quotations &amp; citations</h4>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p>
 
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/67" target="_blank">type samples</a>.</p>
+<p>Wancho texts typically use  quotation marks around quotations instead. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks.</p>
 
-<figure class="characterBox auto small"  data-cols="trans,transc">“␣”␣‘␣’</figure>
-
-<p>Adlam texts use the following  punctuation around quotations. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks.</p>
-
+<figure class="characterBox auto small"  data-cols="trans,transc">‘␣’␣“␣”</figure>
 
 <table class="character_list">
 <thead>
@@ -2694,12 +2773,10 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 </td>
 </tr>
 </tbody>
-</table>
+</table-->
 
-
-<p>The row labelled 'initial' indicates the usual default quote marks. When an additional quote is embedded within the first, the quote marks are those in the 'nested' row.</p>
-
-<p>Note that these characters are <em>not</em> mirrored during display in RTL text. This means that <span class="uname">LEFT</span> indicates use on the left, and <span class="uname">RIGHT</span> indicates use on the right, unlike other types of paired punctuation. That is why, in the table above, the 'start' and 'end' columns in the table above are ordered as they are.</p-->
+<!--p>The default quote marks for Wancho are <span class="codepoint" translate="no"><span lang="ks">&#x201C;</span> [<a href="/scripts/folderName/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span> at the start, and <span class="codepoint" translate="no"><span lang="ks">&#x201D;</span> [<a href="/scripts/folderName/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span> at the end.</p>
+<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="ks">&#x2018;</span> [<a href="/scripts/folderName/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ks">&#x2019;</span> [<a href="/scripts/folderName/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span>.</p-->
 </section>
 
 <section id="emphasis">
@@ -2730,55 +2807,42 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
+
+
+
+
+
+
+  
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+<figure class="characterBox auto small"  data-cols="">,␣;␣:␣।␣?␣!␣॥</figure>
 
-
-<figure class="characterBox auto small"  data-cols="trans,transc">,␣:␣;␣.␣?␣!␣।␣॥␣—</figure>
-
-<p>XXXX  uses a mixture of ASCII and Arabic punctuation. Other languages using the Arabic script may use different punctuation, such as the full stop in Urdu.</p>
-
-<p>XXX uses ASCII punctuation marks.</p>
+<p>Devanagari uses standard Latin punctuation, but also has its own version of a full stop, <span class="ch">।</span>.</p>
 
 <table class="character_list">
 <tbody>
 <tr>
 <th scope="row">phrase</th>
-<td>
-<p><span class="ch">,</span></p>
+<td><p><span class="ch">,</span></p>
 <p><span class="ch">;</span></p>
-<p><span class="ch">:</span></p>
-</td>
+<p><span class="ch">:</span></p></td>
 </tr>
 <tr>
 <th scope="row">sentence</th>
-<td>
-<p><span class="ch">.</span></p>
+<td><p><span class="ch">।</span></p>
 <p><span class="ch">?</span></p>
-<p><span class="ch">!</span></p>
-</td>
+<p><span class="ch">!</span></p></td>
 </tr>
 <tr>
 <th scope="row">paragraph</th>
-<td>
-<p><span class="hx">A9CB</span></p>
-</td>
-</tr>
-<tr>
-<th scope="row">section</th>
-<td>Ditto.</td>
-</tr>
-<tr>
-<th scope="row">general&nbsp;divider</th>
-<td>
-<p><span class="hx">A9CA</span></p>
-</td>
+<td><span class="ch">॥</span></td>
 </tr>
 </tbody>
 </table>
 
+</section>
 
 
 
@@ -2786,11 +2850,10 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 <section id="bracketing">
 <h4>Bracketed text</h4>
-<p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p>
 
-<figure class="characterBox auto small"  data-cols="trans,transc">(␣)</figure>
+<figure class="characterBox auto small"  data-cols="">(␣)</figure>
 
-<p>Wancho commonly uses ASCII parentheses to insert parenthetical information into text.</p>
+<p>Kashmiri commonly uses ASCII parentheses to insert parenthetical information into text.</p>
 
 <table class="character_list">
 <thead>
@@ -2810,9 +2873,6 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 </table>
 </section>
 </section>
-</section>
- 
- 
 
 
 
@@ -2825,7 +2885,12 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
- 
+
+
+
+
+
+
 <section id="para">
 <h2>Line &amp; paragraph layout</h2>
 
@@ -2868,28 +2933,11 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-
-
-
-
-
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
 
-<p>Lines are generally broken between words.</p>
 
-
-
-
-
-
-
-<!--section id="hyphenation">
-<h4>Breaking lines within a word</h4>
-<p>tbd</p>
-</section-->
-
-
+<p>Devanagari is normally wrapped at word boundaries. </p>
 
 
 
@@ -2901,39 +2949,53 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 <p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
 
-<p><a id="showLinebreaks" target="_blank" href="tbd">Show  line-breaking properties for characters in the modern XXXXXX orthography.</a></p>
+<p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the modern Kashmiri orthography.</a></p>
 
-<p>The following list gives examples of typical behaviours for certain characters. Context may affect the behaviour of some of these.</p>
+<p>The following list gives examples of typical behaviours for characters used in modern Hindi. Context may affect the behaviour of some of these and other characters.</p>
 
-<p class="instructions">Click/tap on the characters to show what they are.</p>
+<p class="instructions">Click on the Hindi characters to show what they are.</p>
 
 <ul>
-<li><span class="ex list" lang="bn">“ ‘ (</span> &nbsp; should not be the last character on a line.</li>
-<li><span class="ex list" lang="bn">” ’ ) . , ; ! ? । ॥ %</span> &nbsp; should not begin a new line.</li>
-<li><span class="ex list" lang="bn">৳</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li>
+<li><span class="ex list" lang="ks">“ ‘ (</span> &nbsp; should not be the last character on a line</li>
+<li><span class="ex list" lang="ks">” ’ ) ? ! ।॥ %</span> &nbsp; should not begin a new line</li>
 </ul>
 
-<p>Line breaking should not move a danda or double danda to the beginning of a new line even if they are preceded by a space character.</p>
+<!--p>The following character should <em>not</em> produce a line-break when they appear inside or alongside a word: <span class="charExample inline list" translate="no"><span class="ex" lang="hy">៙</span></span>.</p-->
+
+<p>Line breaking should also not move a danda or double danda to the beginning of a new line, even if they are preceded by a space character. These punctuation characters should behave in the same way as a full stop does in English text.</p>
+</section>
+
+
+
+
+
+
+<section id="hyphenation">
+<h4>In-word line-breaks</h4>
+<p id="def-hyphenation" class="explanatoryintro definitionStub"></p>
+
+<p>Devanagari text can be hyphenated during line wrap, though it is not very common (unlike several south Indian scripts). </p>
+
+<p>Hyphenation adds a hyphen at the end of the line when a word is broken.</p>
 </section>
 </section>
 </section>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="page">
 <h2>Page &amp; book layout</h2>
-
-
 
 
 <aside class="sectionAside">
@@ -2963,33 +3025,7 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 </section>
 </details>
 </aside>
-
-
-
 </section>
-
-
-
-
-
-
-
-
-<section id="historical">
-<h2>Historical information</h2>
-
-
-<section id="variants">
-<h3>Orthographic development &amp; variants</h3>
-<p>tbd</p>
-</section>
-</section>
-
-
-
-
-
-
 
 
  
@@ -3000,13 +3036,13 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <h2>Online resources</h2>
 
 <ol>
-<li><a href="https://unicode.org/udhr/d/udhr_aii.html">Universal Declaration of Human Rights - Assyrian Neo-Aramaic</a></li>
-<li><a href="http://worldbibles.org/language_detail.php/eng/aii/Assyrian+Neo-Aramaic?translation=eng&&language=aii&&name=Assyrian+Neo-Aramaic">The Bible in Assyrian Neo-Aramaic</a></li>
+<li><a href="http://www.koshur.org/contents.html">Koshur, An introduction to spoken Kashmiri</a></li>
+
+<li><a href="http://www.koshur.org/pdf/reader.pdf">Let us learn Kashmiri</a></li>
+
+<li><a href="https://www.yumpu.com/en/document/read/6603999/a-dictionary-of-kashmiri-proverbs">A Dictionary of Kashmiri Proverbs</a></li>
 </ol>
 </section>
-
-
-
 
 
 
@@ -3020,15 +3056,10 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-
-
-
 <div id="phoneLinks"></div>
 
 
 <div id="panel" style="display:none"></div>
-
-
 
 
 <div class="smallprint"><span id="version"></span></div>
