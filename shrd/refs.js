@@ -155,7 +155,7 @@ reflist = {
 },
 
 
-"pc": {
+"pcon": {
 "authors": "Anshuman Pandey",
 "title":"Proposal to Encode the Continuation Sign for Sharada",
 "date": "2012",

@@ -106,6 +106,14 @@ autoExpandExamples.ks = `
 @ https://www.unicode.org/wg2/docs/n4158.pdf
 𑆍𑆑𑆁|one|eː§kɐm|ekaṃ|||x
 
+
+
+@ https://www.unicode.org/wg2/docs/n3595.pdf
+𑆮𑆴𑇇𑆱𑇇 𑇑𑇐|||abbreviation of Viṣṇunāma Sahasram [folio] 10||
+
+
+
+
 `
 
 
