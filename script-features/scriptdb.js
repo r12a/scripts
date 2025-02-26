@@ -795,12 +795,12 @@ linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp str", gc:Y, baselin
 "shrd": {name:"Sharada", region:"sasia", type:"abug", 
 blocks:2, chars:95, bletter:54, bmark:31, bnumber:10, bpunctuation:0, bsymbol:0, bother:0, 
 direction:"ltr", rtlnumbers:N,
-voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"𑆃 𑆍 𑆏", vcomposite:N, prebase:Y, circum:N, },
+voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"AEO 𑆃 𑆍 𑆏", vcomposite:N, prebase:Y, circum:N, },
 case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:Y, 
 medials:"", finals:"cm",
 clusters:{ ligation:N, stacks:Y, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"v"},
-wordsep:":𑇈 space ws",
-linebreak:"word", hyphen:"(yes) 𑇝", wordspan:N, justification:U, gc:N, baseline:"romn", 
+wordsep:"𑇈 space ws",
+linebreak:"word", hyphen:"(yes) 𑇝", wordspan:N, justification:U, gc:N, baseline:"hang", 
 },
 
 
