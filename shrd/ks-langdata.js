@@ -8,32 +8,25 @@
 
 var langs = {
 
-"ks": { name:"Hindi", local:" मानक हिन्दी‎ (Mānak Hindī), हिन्दी‎ (Hindī)", silcode:"hin", 
-source:"cldr_hi,udhr_hin,9d8e188be96400153901b55006feaaf9fd4bf3b1", 
-region:"sasia", countries:"India, Nepal, Singapore, South Africa", script:"deva", speakers:"260000000", 
-letter:"अआइईउऊऋएऐओऔकखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहक़फ़ज़ख़ग़ड़ढ़", letteraux:"ऍऑऽॐ", mark:"ँंः़ािीुूृेैोौ्", markaux:"ॅॉ", number:"०१२३४५६७८९", punctuation:"।॥॰‘’“”—", symbol:"₹", other:"‌‍", 
-orth:`[Devanagari] &nbsp;  
-<a href="../scripts/devanagari" target="_blank">Detailed summary</a>.`,
-also:
-["hi-newa | newa | Archaic, no longer in use."],
-type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"space", baseline:"high", wrap:"word", hyphenation:"(yes)", hyphen:"-",  direction:"ltr",  justification:"sp", 
-vowels:"inh:1 vs:11 ind:12 pre:1 voc:1",  clusters:"inv stk cnj lig rax",  finals:"cm:2 let:y", 
-linked:"devanagari", fonts:"/pickers/deva-hi/", 
+"sa-shrd": { name:"Sanskrit", local:"", localtrans:"", silcode:"san", 
+source:"r12a", 
+region:"sasia", countries:"India", script:"shrd", speakers:"", 
+letter:"𑆃𑆄𑆅𑆆𑆇𑆈𑆉𑆊𑆋𑆌𑆍𑆎𑆏𑆐𑆑𑆒𑆓𑆔𑆕𑆖𑆗𑆘𑆙𑆚𑆛𑆜𑆝𑆞𑆟𑆠𑆡𑆢𑆣𑆤𑆥𑆦𑆧𑆨𑆩𑆪𑆫𑆬𑆭𑆮𑆯𑆰𑆱𑆲𑇁𑇂𑇃𑇚𑇜", letteraux:"", mark:"𑆀𑆁𑆂𑆳𑆴𑆵𑆶𑆷𑆸𑆹𑆺𑆻𑆼𑆽𑆾𑆿𑇀𑇉𑇊𑇋𑇌𑇎𑇏𑭠𑭡𑭢𑭣𑭤𑭥𑭦𑭧", markaux:"", number:"𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙", numberaux:"", punctuation:"«»𑇅𑇆𑇇𑇈𑇍𑇛𑇝𑇞𑇟", punctuationaux:"", symbol:"", symbolaux:"", other:"", otheraux:"", aux:"", deprecated:"", 
+orth:`[Sharada] Historically used for Sanskrit and Kashmiri texts. <a href='../scripts/shrd/ks.html' target='_blank'>Details</a>`,
+linked:"shrd/ks", picker:"shrd-ks", font:"Noto Sans Sharada", 
 },
 
 
 
-"shrd": { name:"Ahom", region:"seasia",
-blocks:1, chars:65, bletter:34, bmark:15, bnumber:12, bpunctuation:3, bsymbol:1, bother:0, 
-direction: "ltr", rtlnumbers:N,
-type:"abug", 
-voweltype: { inherent:0, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"A 𑜒", vcomposite:N, prebase:Y, circum:N },
-case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:U,
-medials:"cm", finals:"",
-clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:Y, diacritic:N, killer:"" },
-wordsep: "space",
-linebreak:"word", hyphen:U, justification:U, wordspan:N, gc:Y,
-baseline: "romn",
+"shrd": {name:"Sharada", region:"sasia", type:"abug", 
+blocks:2, chars:95, bletter:54, bmark:31, bnumber:10, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"𑆃 𑆍 𑆏", vcomposite:N, prebase:Y, circum:N, },
+case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:Y, 
+medials:"", finals:"cm",
+clusters:{ ligation:N, stacks:Y, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"v"},
+wordsep:":𑇈 space ws",
+linebreak:"word", hyphen:"(yes) 𑇝", wordspan:N, justification:U, gc:N, baseline:"romn", 
 },
 
 
