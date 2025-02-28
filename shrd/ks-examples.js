@@ -87,7 +87,7 @@ autoExpandExamples.ks = `
 𑆑𑆠𑭢𑆫|earthenware fragment|ka§tɨ§r||कतॖर||x
 𑆓𑭦𑆓𑭢𑆘|turnip|ɡɔ§ɡɨ§d͡ʑ||गॅगॖज||x
 𑆠𑭣𑆫|cold|tɨː§r||तॗर||x
-𑆑𑆫𑭣𑆬|rice weevil|k§rɨː§l||क्रॗल||x
+𑆑𑇀𑆫𑭣𑆬|rice weevil|k§rɨː§l||क्रॗल||x
 𑆑𑭣𑆢𑇀𑆪|prisoner|kɨː§dʲ||कॗद्य||x
 𑆒𑭣𑆁𑆖𑇊|baby mouse|kʰɨ̃ː§t͡s||खॗंच़||x
 𑆝𑭣𑆱|stick|ɖɨː§s||डॗस||x
