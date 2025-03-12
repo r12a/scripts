@@ -61,7 +61,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->27 December, 2024<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->12 March, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -80,7 +80,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Malayalam Orthography Notes, <!-- #BeginDate format:En2 -->27-Dec-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mlym/ml">https://r12a.github.io/scripts/mlym/ml</a></small></p>
+<p class="refLine"><small>Richard Ishida, Malayalam Orthography Notes, <!-- #BeginDate format:En2 -->12-Mar-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mlym/ml">https://r12a.github.io/scripts/mlym/ml</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -1541,6 +1541,8 @@ alveolar</th>
 
 <p>See also <mark><a href="#finals">syllable-final consonants</a></mark>, which may be followed by a regular consonant.</p>
 
+<p>If the font supports it, <span class="hx img">200C</span> (ZWNJ) and <span class="hx img">200D</span> (ZWJ) can be used to control the shaping of conjuncts. See <a class="secref">joiner</a>.</p>
+
 
 
 
@@ -2464,21 +2466,36 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 <section id="joiner">
 <h3>Explicit shaping controls</h3>
 
-<p>Assuming that you have fonts that produce the expected behaviours,  the Unicode Standard describes the use of the joiner characters as follows:<tt>u,505</tt></p>
-<ul>
-<li><span class="hx img">200C</span> (ZWNJ) placed <em>after</em> the <span class="name">chandrakkala</span>  can be used to force the production of a visible virama, rather than a conjunct form. For example, <span class="ch">ക്‌ക</span> produces <span class="charExample" translate="no"><span class="ex" lang="ml">ക്‌ക</span></span>rather than <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ക</span></span></li>
-
-<li>Uniquely to Malayalam, placing the ZWNJ <em>before</em> the <span class="name">chandrakkala</span> is supposed to produce the modern 'open' form of the conjunct in fonts that would otherwise produce a traditional conjunct, eg. <span class="ch">ക‌്ര</span> should produce the form <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ര</span></span></li>
-</ul>
+<p><a class="figref">fig_zwnj</a> summarises the various ways in which a consonant cluster can be rendered (on the right), and on the left indicates which code sequences may produce those forms.</p>
 
 <figure id="fig_zwnj">
 <img src="images/zwnj.png" alt="" data-notes="Large characters are Noto Serif 72px. Left side is screen grab of text.">
 <figcaption>Uses of ZWNJ (zero-width non-joiner) in Malayalam.</figcaption>
 </figure>
 
+<p>Assuming that you have fonts that produce the expected behaviours,  the Unicode Standard<tt>@Unicode16,https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/#G706085</tt> describes the use of the joiner characters <span class="hx img">200C</span> (ZWNJ) and <span class="hx img">200D</span> (ZWJ) as follows:</p>
+
+
 <ul>
-<li><span class="hx img">200D</span> (ZWJ) can  be used <em>before</em> the <span class="name">chandrakkala</span>  to produce a traditional conjunct form in fonts that produce the open form by default but have the glyphs for the traditional forms too.</li>
-<li>ZWJ  used <em>after</em> the <span class="name">chandrakkala</span> may produce a chillu form (eg. <span class="ch">ക്‍</span>), but this approach is now deprecated in favour of using the chillu codepoints. See <a class="secref">finals</a>.</li>
+<li><p><strong>ZWNJ placed <em>after</em> the <span class="name">chandrakkala</span></strong>  can be used to force the production of a visible virama, rather than a conjunct form. For example, compare:</p>
+<ul>
+<li><span class="ch">ക്ക</span></li>
+<li><span class="ch">ക്‌ക</span></li>
+</ul>
+</li>
+
+<li><p>Uniquely to Malayalam, placing the <strong>ZWNJ <em>before</em> the <span class="name">chandrakkala</span></strong> is supposed to produce the modern 'open' form of the conjunct in fonts that would otherwise produce a traditional conjunct. For example, compare:</p>
+<ul>
+<li><span class="ch">ക്ക</span></li>
+<li><span class="ch">ക‌്ര</span></li>
+</ul>
+</li>
+
+<li><p><strong>ZWJ <em>before</em> the <span class="name">chandrakkala</span></strong>  can be used to produce a traditional conjunct form in fonts that produce the open form by default but have the glyphs for the traditional forms too.</p>
+</li>
+
+<li><p><strong>ZWJ  used <em>after</em> the <span class="name">chandrakkala</span></strong> may produce a chillu form (eg. <span class="ch">ക്‍</span>), but this approach is now deprecated in favour of using the chillu codepoints. See <a class="secref">finals</a>.</p>
+</li>
 </ul>
 </section>
 </section>
