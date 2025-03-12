@@ -435,7 +435,7 @@ autoExpandExamples.ml = `
 എറണാകുളം||
 എറിയ്|to throw|erijɨ̆
 എലി||
-എല്ലാ|all|ellaː
+എല്ലാ|all|e§l§laː
 എല്ലാം|all|ellaːm
 എല്ല്|bone|ellɨ̆
 എളി||
@@ -508,7 +508,7 @@ autoExpandExamples.ml = `
 കടിക്കുക||
 കടുംവെട്ട്||
 കടുവ|tiger|kɐ§ɖu§ʋɐ|kaṭuva
-കട്ടയാക്|to freeze|kaʈʈajaːkɨ̆
+കട്ടയാക്|to freeze|ka§ʈ§ʈa§jaː§kɨ̆
 കട്ടിയുള്ള|thick|kaʈʈijuɭɭa
 കട്ടൻ കാപ്പി||
 കട്ടൻ ചായ||
@@ -530,7 +530,7 @@ autoExpandExamples.ml = `
 കത്ത്|to burn|kat̪t̪ɨ̆
 കത്രിക||
 കഥ|story|kɐ§t̪ʰɐ|katha
-കനത്ത|heavy|kanat̪t̪a
+കനത്ത|heavy|ka§na§t̪§t̪a
 കനമുള്ള|heavy|kanamuɭɭa
 കന്നഡ|Kannada|ka§n̪§n̪a§ɖa|kannaḍa
 കന്നി|unmarried girl|ka§n§ni
@@ -2078,7 +2078,7 @@ autoExpandExamples.ml = `
 സിദ്ധന്||
 സിദ്ധാന്തം||
 സിന്ദൂരം||
-സിമേഈ|Simei (place in Singapore)|simei|simēī
+സിമേഈ|Simei (place in Singapore)|si§me§i|simēī
 സുഖം||
 സുഹൃത്ത്||
 സൂക്ഷ്മം||
