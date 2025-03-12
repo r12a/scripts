@@ -9,8 +9,22 @@
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2019.js"></script>
+<!--<script src="../../shared/code/toc_2020.js"></script>-->
 <style>
 q { font-style: italic;}
+dt a:link {
+    text-decoration: none;
+    color: inherit;
+    }
+dt a:visited {
+    color: inherit;
+    text-decoration: none;
+    }
+dt a:hover {
+    color: inherit;
+    background: beige;
+    text-decoration: none;
+    }
 </style>
 </head>
 
@@ -33,7 +47,7 @@ q { font-style: italic;}
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->18 October, 2024<!-- #EndDate --></p>
+  <!-- #BeginDate format:Sw1 -->11 March, 2025<!-- #EndDate --></p>
 
 
 
@@ -45,13 +59,31 @@ q { font-style: italic;}
 <dl>
 
 <dt id="abugida">abugida</dt>
-<dd><q cite="https://www.unicode.org/glossary/#abugida">A writing system in which consonants are indicated by the base letters that have an inherent vowel, and in which other vowels are indicated by additional distinguishing marks of some kind modifying the base letter. The term “abugida” is derived from the first four letters of the Ethiopic script in the Semitic order: <i>alf, bet, gaml, dant</i>. (See <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G7382">Section 6.1, Writing Systems</a>.)</q></dd>
+<dd>A writing system in which consonant letters  have an <a class="termref" href="#inherentvowel">inherent vowel</a>. Other post-consonant vowel sounds are indicated by associating one or more letters or marks  with the consonant and they override the inherent vowel. These are often referred to as <a class="termref" href="#vowelsign">vowel signs</a>. Most abugidas derive from the ancient Brahmi script. The term “abugida” is derived from the first four letters of the Ethiopic script in the Semitic order: <i>alf, bet, gaml, dant</i>.  (See also <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G7382">Section 6.1, Writing Systems</a>. Note: In  resources on the r12a site, modern Ethiopic is regarded as a <a href="#featuralsyllabary" class="termref">featural syllabary</a>, rather than an abugida, since it doesn't require a sequence of code points to represent a CV syllable.)</dd>
+
+<figure id="fig_abugida" class="sideCaption">
+<dd style="text-align: center;"><img src="img/abugida.png" alt="କୋ" data-notes="Noto Serif Thai" style="height:10rem;"></dd>
+<figcaption>The Thai letter alone is <span class="ipa">ka</span>; a diacritic gives <span class="ipa">ki</span>; and two vowel letters around the consonant give <span class="ipa">ko</span>.</figcaption>
+</figure>
+
+
 
 <dt id="abjad">abjad</dt>
-<dd><q cite="https://www.unicode.org/glossary/#abjad">A writing system in which only consonants are indicated. The term “abjad” is derived from the first four letters of the traditional order of the Arabic script: <i>alef, beh, jeem, dal</i>. (See <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G7382">Section 6.1, Writing Systems</a>.)</q></dd>
+<dd>A writing system in which consonant sounds are written but short vowel sounds are usually not. Usually, diacritics can be used represent the missing vowels in order to disambiguate words or help in education, but they are not used in normal text. Abjads include the Arabic and Hebrew scripts. The term “abjad” is derived from the first four letters of the traditional order of the Arabic script: <i>alef, beh, jeem, dal</i>. (See also <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G7382">Section 6.1, Writing Systems</a>.)</dd>
+<dd>&nbsp;</dd>
+
+<figure id="fig_abjad" class="sideCaption">
+<dd style="text-align: center;"><img id="abjadimg" src="img/abjad.png" alt="କୋ" data-notes="Scheherazade New 150px" style="height:10rem;"></dd>
+<figcaption>The Arabic word for “rotten” (<span class="ipa">mu.ta.ʕaf.fin</span> is written <span class="transc">mtʕfn</span>, but diacritics can be used to fill in the gaps when necessary. <button onclick="document.getElementById('abjadimg').src='img/abjad_plus.png'">Show the diacritics</button></figcaption>
+</figure>
 
 <dt id="alphabet">alphabet</dt>
-<dd><q cite="https://www.unicode.org/glossary/#alphabet">A writing system in which both consonants and vowels are indicated. The term “alphabet” is derived from the first two letters of the Greek script: <i>alpha, beta</i>. (See <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G7382">Section 6.1, Writing Systems</a>.)</q></dd>
+<dd>A writing system in which both consonants and vowels are indicated. Vowels may be indicated using dedicated letters or combining marks. For example, several orthographies using the Arabic script always show all diacritics, making them alphabetic in nature. The term “alphabet” is derived from the first two letters of the Greek script: <i>alpha, beta</i>. (See also <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G7382">Section 6.1, Writing Systems</a>.)</dd>
+
+<figure id="fig_alphabet" class="sideCaption">
+<dd style="text-align: center;"><img src="img/alphabet.png" alt="αριστερά" data-notes="Noto Serif 150px" style="height:8rem;"></dd>
+<figcaption>In the Greek word for “left” (<span class="ipa">a.ri.ste.ˈra</span> all the vowel sounds are clearly written alongside the consonants.</figcaption>
+</figure>
 </dl>
 </section>
 
@@ -102,22 +134,22 @@ q { font-style: italic;}
 <h2 id="c">C</h2>
 
 <dl>
-<dt id="checked">checked</dt>
-<dd>A checked syllable ends in a stop sound, usually <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. Unchecked syllables end in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</dd>
+<dt id="checked">checked syllable</dt>
+<dd>A  syllable that ends in a stop sound, usually <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. Unchecked syllables end in one of the sonorants <span class="ipa">-m</span>, <span class="ipa">-n</span>, <span class="ipa">-ŋ</span>, <span class="ipa">-w</span>, <span class="ipa">-j</span>, <span class="ipa">w</span>, or vowels.</dd>
 
 <dt id="circumgraph">circumgraph</dt>
-<dd>A single vowel code point that produces glyphs on more than one side of its consonant base.</dd>
+<dd>A <em>single</em> vowel code point that produces glyphs on more than one side of its consonant base. (Vowels that are written using multiple code points are <a href="#compositevowel" class="termref">composite vowels</a>, rather than circumgraphs.)</dd>
 
 <figure id="fig_circumgraph" class="sideCaption">
-<dd style="text-align: center;"><img src="img/circumgraph.svg" alt="କୋ" data-notes="Noto Sans Oriya" style="height:4rem;"></dd>
+<dd style="text-align: center;"><img src="img/circumgraph.svg" alt="କୋ" data-notes="Noto Sans Oriya" style="height:8rem;"></dd>
 <figcaption>In Odia the (highlighted) vowel glyphs rendered on both sides of the base consonant are from a single code point.</figcaption>
 </figure>
 
 <dt id="coda">coda (syllable)</dt>
-<dd>See <a href="#syllablestructure">syllable structure</a>.</dd>
+<dd>See <a href="#syllablestructure" class="termref">syllable structure</a>.</dd>
 
-<dt id="combiningcharacter">combining character</dt>
-<dd>Unicode characters such as  accents,  diacritics,  Hebrew  points, Arabic vowel signs, and Indic matras. They   normally never appear alone unless they are being described, but are combined with a preceding base character. More than one combining character may be associated with the same base character. Many combining characters appear above or below or inside the base character, however some consume space along the baseline, either before or after the base character, and are referred to as <i>spacing marks</i>, or <i>spacing combining characters</i>.</dd>
+<dt id="combiningcharacter">combining mark / combining character</dt>
+<dd>Unicode characters such as  accents,  diacritics,  Hebrew  points, Arabic vowel signs, and Indic matras. They   normally never appear alone unless they are being described, but are combined with a preceding base character. More than one combining mark may be associated with the same base character. Many combining marks appear above or below or inside the base character, however some consume space along the baseline, either before or after the base character, and are referred to as <a href="#spacingmark" class="termref">spacing marks</a>, or <a href="#spacingmark" class="termref">spacing combining characters</a>.</dd>
 
 <dt id="ccs">combining character sequence (CCS)</dt>
 <dd><a href="https://www.unicode.org/glossary/#combining_character_sequence">Unicode definition</a>: <q>A maximal sequence of characters following the pattern <code>Base? (Combining_mark | ZWJ | ZWNJ)+</code>. Usually a base character that is a letter or digit, followed by one or more combining characters, zero width joiners, and/or zero width non-joiners.</q></dd>
@@ -126,7 +158,7 @@ q { font-style: italic;}
 <dd>A single vowel sound or diphthong that is represented by more than one code point from the available set of vowel marks, repurposed consonants, and diacritics.</dd>
 
 <figure id="fig_compositevowel" class="sideCaption">
-<dd style="text-align: center;"><img src="img/compositevowel.svg" alt="ᨠᩮᩬᩨᩡ" data-notes="Hariphunchai" style="height: 6rem;"></dd>
+<dd style="text-align: center;"><img src="img/compositevowel.svg" alt="ᨠᩮᩬᩨᩡ" data-notes="Hariphunchai" class="ex" lang="nod" style="height: 8rem;"></dd>
 <figcaption>The Tai Tham syllable <span class="ipa">kɤʔ</span> is represented using 4 separate vowel-sign characters (highlighted) attached to a single base consonant.</figcaption>
 </figure>
 
@@ -228,12 +260,15 @@ q { font-style: italic;}
 pronounced <span class="ipa">θ</span>.  <strong>Unicode encodes letter+ijam combinations as  atomic characters which are never given equivalent decompositions in the standard</strong>. Ijam generally take the form of one-, two-, three- or four-dot markings above or below the basic letter skeleton, although other diacritic forms occur, especially in extensions of the Arabic script in Central and South Asia and in Africa. For example, <span class="pre"><span class="codepoint" translate="no"><bdi lang="ar" dir="rtl">&#x06C8;</bdi> [<a target="_blank" href="block.html#char06C8"><span class="uname">U+06C8 ARABIC LETTER YU</span></a>]</span></span>  shows a letter with  ijam that represents the vowel <span class="ipa">y</span> in the Uighur orthography. See <a href="https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf">Chapter 9</a> of the Unicode Standard. Compare with <a class="termref" href="../glossary/#tashkil">tashkil</a>.</dd>
 
 <dt id="independentvowel">independent vowel</dt>
-<dd>Independent  letters  used to represent <a href="#standalonevowel">standalone vowel sounds</a>. They are typically found in Brahmi-derived Indic scripts, at the beginning of a word or after a word-internal vowel.</dd>
+<dd>Independent  letters are used to represent <a href="#standalone" class="termref">standalone vowel sounds</a>. They are typically found in Brahmi-derived Indic scripts, at the beginning of a word or after a word-internal vowel.</dd>
 
 <dt id="inherentvowel">inherent vowel</dt>
-<dd>A vowel sound that is automatically pronounced after a consonant letter, unless  suppressed by either indicating another vowel, or using a character specifically designed to kill the vowel sound, or contextual rules. Inherent vowels are commonly found in scripts Brahmi-derived Indic scripts. The sound of the inherent vowel varies by language. The following example shows a Bengali consonant with inherent vowel (left), overridden with an <span class="ipa">i</span> vowel-sign (center), and killed with a virama (right).</dd>
+<dd>A vowel sound that is automatically pronounced after a consonant letter, unless suppressed by either (a) indicating another vowel,  (b) using a character specifically designed to kill the vowel sound, or  (c) contextual rules. Inherent vowels are commonly found in scripts Brahmi-derived Indic scripts, and are a defining feature of an <a href="#abugida" class="termref">abugida</a>. The sound of the inherent vowel varies by language.</dd>
 
-<dd style="text-align: center;"><img src="img/inherentvowel.svg" alt="ক কী ক্" data-notes="Noto Sans Bengali" style="height: 6rem;"></dd>
+<figure id="fig_inherentvowel" class="sideCaption">
+<dd style="text-align: center;"><img src="img/inherentvowel.svg" alt="ক কী ক্" data-notes="Noto Sans Bengali" style="height: 8rem;"></dd>
+<figcaption>A Bengali consonant with inherent vowel (left), overridden with an <span class="ipa">i</span> vowel-sign (center), and killed with a virama (right).</figcaption>
+</figure>
 
 <dt id="invisiblestacker">invisible stacker</dt>
 <dd>A character that is always invisible, and that is used between each consonant in a consonant cluster to create a stacked arrangement. <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Invisible_Stacker:]">Used for</a> scripts such as Myanmar, Khmer, Tai Tham, Sundanese, etc. See also <a href="#virama">virama</a>, and  <a href="#purekiller">pure killer</a>.</dd>
@@ -326,7 +361,12 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 
 <dl>
 <dt id="orthographicsyllable">orthographic syllable</dt>
-<dd>A typographic  unit that includes one or more <a href="#syllablestructure">grapheme clusters</a>. Orthographic syllable units are most commonly found in Brahmi-derived scripts (such as Devanagari, or Balinese) when consonant clusters are formed into  stacks or other types of conjunct. They commonly demarcate sequences of characters that are different from phonetic syllables, and they may even span word boundaries. See also the <a href="https://unicode.org/glossary/#orthographic_syllable" target="_blank">definition</a> in the Unicode Standard.</dd>
+<dd>A typographic  unit that includes one or more <a href="#syllablestructure" class="termref">grapheme clusters</a>. Orthographic syllables are important typographic units for Brahmi-derived scripts where consonant clusters are formed into  stacks or other types of <a href="#conjunct" class="termref">conjunct</a> that should not be split by various text operations. The sequence of characters in an orthographic syllable is typically different from that in a phonetic syllable (see the example), and may begin with the coda of the preceding phonetic syllable. In scripts with no inter-word boundaries an orthographic syllable may span word boundaries (eg. Javanese).</dd>
+
+<figure id="fig_syll_phonetic" class="sideCaption">
+<dd style="text-align: center;"><img src="img/syll_phonetic.png" alt="କୋ" data-notes="Noto Serif Devanagari" style="height:8rem;"> <img src="img/syll_orthographic.png" alt="କୋ" data-notes="Noto Serif Devanagari" style="height:8rem;"></dd>
+<figcaption>The word in Khmer, split into phonetic syllables (top) and orthgraphic syllables (bottom).</figcaption>
+</figure>
 </dl>
 </section>
 
@@ -384,7 +424,7 @@ Section 3.11, Normalization Forms</a>.</q></dd>
 <dd>Combining characters that  consume space along the baseline, either before or after the base character. (<a href="../tutorial/part3#vowel-signs">example</a>)</dd>
 
 <dt id="standalone">standalone vowel</dt>
-<dd>Vowel sounds that are not preceded by a consonant sound, except perhaps a glottal stop. They typically appear at the beginning of a word, or in the middle of a word after a preceding vowel.  In Brahmi-derived scripts standalone vowels are often represented using <a href="#independentvowel">independent vowel</a> letters. The exception for the glottal stop is because there is often ambiguity about whether a glottal stop is used or not, and in some orthographies vowels following a glottal stop are written using the same patterns as those standalone vowels without.</dd>
+<dd>Vowel sounds that are not preceded by a consonant sound, except perhaps a glottal stop. They typically appear at the beginning of a word, or in the middle of a word after a preceding vowel.  In Brahmi-derived scripts standalone vowels are often represented using <a href="#independentvowel" class="termref">independent vowel</a> letters. The exception for the glottal stop is because there is often ambiguity about whether a glottal stop is used or not, and in some orthographies vowels following a glottal stop are written using the same patterns as those standalone vowels without.</dd>
 
 <dt id="syllabary">syllabary</dt>
 <dd>A type of writing system in which each symbol typically represents both a consonant and a vowel, or in some instances more than one consonant and a vowel.  Usually there is also a set of symbols that represent <span class="termref" href="#standalone">standalone vowel</span> sounds.</dd>
@@ -446,7 +486,15 @@ pronounced <span class="ipa">ha</span>, is an example of a letter plus tashkil c
 <dd>Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent <span class="ipa">r</span> or <span class="ipa">l</span> followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</dd>
 
 <dt id="vowelsign">vowel sign</dt>
-<dd>One or more  glyphs which taken together represent a vowel. Typically found in Brahmi-derived scripts, where a vowel sign overwrites the <a href="#inherentvowel">inherent vowel</a>. Sometimes vowel-signs have multiple parts, which may be displayed on different sides of the base consonant or cluster. Vowel signs are usually combining characters, but may sometimes be a combination of combining marks and free-standing letters (eg. Thai, Lao), or just free-standing letters (eg. New Tai Lue). Vowel signs are typically attached to the onset of an orthographic syllable, rather than to a particular consonant, even when the syllable begins with a consonant cluster. (<a href="../tutorial/part3#vowel-signs">example</a>)</dd>
+<dd>Glyphs which represent vowel sounds in Brahmi-derived scripts. One or more vowel signs overwrite the <a href="#inherentvowel" class="termref">inherent vowel</a>. Sometimes vowel signs have multiple parts, which may be displayed on different sides of the base consonant or cluster. Vowel signs are usually combining characters, but may sometimes be a combination of combining marks and free-standing letters (eg. Thai, Lao), or just free-standing letters (eg. New Tai Lue). Vowel signs are typically attached to the onset of an <a href="#orthographicsyllable" class="termref">orthographic syllable</a>, rather than to a particular consonant, even when the syllable begins with a consonant cluster.</dd>
+
+<figure id="fig_vowel_sign" class="sideCaption">
+<dd style="text-align: center;"><img src="img/vowel_sign.png" alt="କୋ" data-notes="Noto Serif Devanagari" style="height:10rem;"></dd>
+<figcaption>The Devanagari letter alone is <span class="ipa">kə</span>. Vowel signs (highlighted) are associated with the consonant to produce <span class="ipa">kɪ</span> (centre) or <span class="ipa">koː</span> (right).</figcaption>
+</figure>
+
+
+
 <!--dt>xxx</dt>
 <dd>ddd</dd>
 <dt>xxx</dt>
@@ -471,12 +519,26 @@ pronounced <span class="ipa">ha</span>, is an example of a letter plus tashkil c
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/glossary"><span id="version-info"><!-- #BeginDate format:IS1m -->2024-10-18  19:14<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bglossary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fglossary%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/glossary"><span id="version-info"><!-- #BeginDate format:IS1m -->2025-03-11  12:02<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bglossary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fglossary%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
 createtoc(3)
+
+// add self-links to dt elements
+dts = document.querySelectorAll('dt')
+for (var k=0; k<dts.length; k++) {
+    if (!dts[k].className.match(/notoc/)) {
+        dt = dts[k].innerHTML
+        dts[k].innerHTML = `<a href="#${ dts[k].id }" class="selflinkx">${ dt }</a>`
+        }
+    }
+
+
+
+
+
 </script>
 </html>
