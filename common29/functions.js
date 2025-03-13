@@ -2417,7 +2417,7 @@ function replaceStuff (node) {
         }
     else notes = []
     if (node.dataset.extra) {
-        var extra = node.dataset.extra.split('␣')
+        var extra = node.dataset.extra.split('\u2423')
         var extraLang = extra.pop()
         }
     else extra = []
@@ -2426,7 +2426,7 @@ function replaceStuff (node) {
         }
     else ipa = []
     if (node.dataset.translit) {
-        var translit = node.dataset.translit.split('␣')
+        var translit = node.dataset.translit.split(',')
         }
     else translit = []
     if (node.dataset.links) {
