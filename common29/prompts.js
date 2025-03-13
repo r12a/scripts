@@ -70,9 +70,9 @@ function setContentPrompts () {
 
         {node:document.querySelector('.tbd #novowel h4'), text:"How is the inherent vowel killed? What other mechanisms are used to indicate consonant clusters? When are they used and not used?"},
 
-        {node:document.querySelector('#onsets h4'), text:"Do syllable onsets support consonant clusters, or other features (such as prenasalisation, aspiration, devoicing, etc.)? If so, how are these managed by the orthography"},
+        {node:document.querySelector('.tbd #onsets h4'), text:"Do syllable onsets support consonant clusters, or other features (such as prenasalisation, aspiration, devoicing, etc.)? If so, how are these managed by the orthography"},
 
-        {node:document.querySelector('#finals h4'), text:"How are syllable codas written in this orthography?"},
+        {node:document.querySelector('.tbd #finals h4'), text:"How are syllable codas written in this orthography?"},
 
         {node:document.querySelector('.tbd #clusters h4'), text:"Are any special approaches taken for consonant clusters?"},
 
