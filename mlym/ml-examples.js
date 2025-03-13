@@ -44,7 +44,6 @@ autoExpandExamples.ml = `
 അ-|that|a-
 അം||
 അംഹ്രി||
-അഃ||
 അകലെ|far|a§ɡa§le|akale
 അകിൽ||
 അക്ക||
@@ -269,7 +268,7 @@ autoExpandExamples.ml = `
 ഇദ്ദേഹം|he|i§d§de§ham
 ഇന്തുപ്പ്||
 ഇന്ത്യ||
-ഇന്ത്യയ്ക്ക്|to India 
+ഇന്ത്യയ്ക്ക്|to India|
 ഇന്ദ്രനീലം||
 ഇന്ദ്രൻ||
 ഇന്ധനം||
@@ -320,7 +319,7 @@ autoExpandExamples.ml = `
 ഈയം പൂശൽ||
 ഈയം||
 ഈറൻ|wet|iː§rɐ§n|īṟaṉ
-ഈർപ്പമുള്ള|wet|iːɾppamuɭɭa
+ഈർപ്പമുള്ള|wet|iː§ɾ§p§pa§mu§ɭ§ɭa
 ഉം||
 ഉച്ച||
 ഉച്ചകോടി||
@@ -402,7 +401,7 @@ autoExpandExamples.ml = `
 ഊഷരദ്രാവണം||
 ഊഹിക്കുക||
 ഊർജം||
-ഋഷി|rishi, sage|riʂi|r̥ṣi
+ഋഷി|rishi, sage|ri§ʂi|r̥ṣi
 എക്കിട്ട||
 എക്കിൾ||
 എങ്കിൽ||
@@ -719,7 +718,7 @@ autoExpandExamples.ml = `
 കൂറാമ്പുലി||
 കൂലി||
 കൂവരക്||
-കൂർത്ത|sharp (as a knife)|kuːɾt̪t̪a
+കൂർത്ത|sharp (as a knife)|kuː§ɾ§t̪§t̪a
 കൃമി||
 കൃഷിക്കാരൻ||
 കൃഷ്ണന്‍||
@@ -792,7 +791,7 @@ autoExpandExamples.ml = `
 ക്ഷ||
 ക്ഷാമം|scarcity, famine||kṣāmaṃ
 ക്ഷേത്രം||
-കൢപ്തം|fixed, limited|kɭipt̪ɐm|kliptaṁ
+കൢപ്തം|fixed, limited|kɭi§p§t̪ɐm|kliptaṁ
 കർക്കടകം||
 കർണാടക||
 കർമ്മം||
@@ -1101,7 +1100,7 @@ autoExpandExamples.ml = `
 തുള||
 തുവൽ-|feather (rather not down)|t̪uːʋal-
 തൂക്കം||
-തൂക്ക്|to rub, wipe|t̪uːkkɨ̆
+തൂക്ക്|to rub, wipe|t̪uː§k§kɨ̆
 തൂവല്|feather (rather not down)|t̪uːʋalɨ̆
 തെക്ക്||
 തെങ്ങ്||
@@ -1140,7 +1139,8 @@ autoExpandExamples.ml = `
 ത്രിപുര||
 ത്സ||
 തൎക്കം||
-തർക്കം||
+തർക്കം|argument|ta§r§k§kam
+തൎക്കം|argument|ta§r§k§kam
 ഥൻ
 ദക്ഷിണ|southern|d̪a§k§ʂi§ɳa|dakṣiṇa
 ദക്ഷിണം||
@@ -1280,7 +1280,7 @@ autoExpandExamples.ml = `
 നേരം||
 നേരെ|straight|n̪eː§ɾe|nēre
 നേർ-|straight|n̪eːɾ-
-നേർത്ത|thin|n̪eːɾt̪t̪a
+നേർത്ത|thin|n̪eː§ɾ§t̪§t̪a
 നോക്കുക||
 നോക്കുകുത്തി||
 ന്ത||
@@ -1743,7 +1743,7 @@ autoExpandExamples.ml = `
 മ്പ||
 മ്മ||
 മ്ല||
-മൺപാത്രം||
+മൺപാത്രം|earthenware||maṇpātraṁ
 മർത്ത്യൻ||
 മർത്തൻ||
 യന്ത്രം|machine|jɐ§n̪§d̪§rɐm|yantraṃ

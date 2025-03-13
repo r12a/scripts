@@ -30,6 +30,15 @@ reflist = {
 "sub":"Chapter 12.9: South and Central Asia-I, Malayalam",
 "pages":"508-515",
 "isbn":"978-1-936213-16-0.",
+"reviewed":true
+},
+
+"u16": {
+"url":"https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/",
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 16.0",
+"sub":"Chapter 12.9: South and Central Asia-I, Malayalam",
+"reviewed":true
 },
 
 "ul": {
