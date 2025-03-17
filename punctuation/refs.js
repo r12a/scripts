@@ -5,6 +5,16 @@ window.langSet = false
 reflist = {
 
 
+"u16": {
+"authors": "The Unicode Consortium",
+"title":"The Unicode Standard",
+"sub": "Version 16",
+"date": "2024",
+"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/",
+"reviewed":false
+},
+
+
 /*
 "auth_initials": {
 "authors": "Sort_by_family_name_of_first_contributor",

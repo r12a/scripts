@@ -19,10 +19,91 @@ var charDetails = {
 // MAIN BLOCK
 
 
+// N Quad space
+'\u{2000}': `
+<p>Originally designed for hot metal typesetting as a space that is approximately 0.5 em wide. In digital text, the size is fixed by the font, and does not normally increase in size during justification. Canonically equivalent to <span class="hx">2002</span>.</p>
+`,
+
+
+
+
+// M Quad space
+'\u{2001}': `
+<p>Originally designed for hot metal typesetting as a space that is approximately 1 em wide. In digital text, the size is fixed by the font, and does not normally increase in size during justification. Canonically equivalent to <span class="hx">2003</span>.</p>
+`,
+
+
+
+
+'\u{2002}': `
+<p>Provides a space that is approximately 0.5 em wide. Does not increase in size during justification.</p>
+
+`,
+
+
+
+
 '\u{2003}': `
 <p>Provides a space that is approximately 1 em wide.</p>
 
-<p>Some content authors using Southeast Asian orthographies, such as Thai and Khmer, may use this character to produce a wider space between sentences than around phrases (since there is no sentence-final punctuation).</p>
+<p>Some content authors using Southeast Asian orthographies, such as Thai and Khmer, may use this character to produce a wider space between sentences than around phrases (since there is no sentence-final punctuation). Does not increase in size during justification.</p>
+`,
+
+
+
+
+// 3/M space
+'\u{2004}': `
+<p>Originally designed for hot metal typesetting as a space that is approximately 0.3 em wide. In digital text, the size is fixed by the font, and does not normally increase in size during justification.</p>
+`,
+
+
+
+
+// 4/M space
+'\u{2005}': `
+<p>Originally designed for hot metal typesetting as a space that is approximately 0.25 em wide. In digital text, the size is fixed by the font, and does not normally increase in size during justification.</p>
+`,
+
+
+
+
+// 6/M space
+'\u{2006}': `
+<p>Originally designed for hot metal typesetting as a space that is approximately 1/6th em wide. In digital text, the size is fixed by the font, and does not normally increase in size during justification.</p>
+`,
+
+
+
+
+
+// fig space
+'\u{2007}': `
+<p>Has a fixed width known as <span class="name">tabular width</span>, which is the same width as digits used in tables. Does not increase in size during justification.<tt>u16,#G1834</tt></p>
+`,
+
+
+
+
+// punctuation space
+'\u{2008}': `
+<p>Defined to be the same width as a period. Does not increase in size during justification.<tt>u16,#G1834</tt></p>
+`,
+
+
+
+
+// thin space
+'\u{2009}': `
+<p>Used for narrow word gaps and for justification of type. Slightly larger than <span class="hx">200A</span>.  Sometimes gets expanded during justification, unlike the other fixed width spaces.<tt>u16,#G1834</tt></p>
+`,
+
+
+
+
+// hair space
+'\u{200A}': `
+<p>Used for narrow word gaps and for justification of type. Slightly smaller than <span class="hx">2009</span>. Does not increase in size during justification.<tt>u16,#G1834</tt></p>
 `,
 
 
@@ -34,7 +115,7 @@ var charDetails = {
 
 <p>An invisible character, used to signal line-break and word-break opportunities. It was originally provided for use with writing systems such as Thai, Myanmar, Khmer, Japanese, etc. that don't use spaces between words.</p>
 
-<p>Justification adjusts the space between the characters on either side of the ZWSP as if the ZWSP wasn't there<sup><a href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout" target="_blank">§,827</a></sup>, eg. the two lines below show Thai text containing a ZWSP after the 4th base character.  The first is rendered as per normal, the second is as it would appear with justification or letter-spacing. Note how the second line has no extra spacing where the ZWSP occurs.</p>
+<p>Justification adjusts the gap between the characters on either side of the ZWSP as if the ZWSP wasn't there<sup><a href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout" target="_blank">§,827</a></sup>, eg. the two lines below show Thai text containing a ZWSP after the 4th base character.  The first is rendered as per normal, the second is as it would appear with justification or letter-spacing. Note how the second line has no extra spacing where the ZWSP occurs.</p>
 
 <p><span class="charExample" translate="no"><span lang="th">อักษร​ไทย</span></span></p> 
 <p><span class="charExample" translate="no"><span lang="th">อั ก ษ ร ไ ท ย</span></span></p>
@@ -134,6 +215,75 @@ var charDetails = {
 
 
 
+'\u{2010}': `
+
+<p>This hyphen is rendered with a narrow width, and used in words such as 'left-to-right'.<tt>u16,#G6120</tt></p>
+
+<p>When typesetting text, this character is preferred, rather than <span class="codepoint" translate="no"><span class="uname">U+002D HYPHEN-MINUS</span></span> (which has ambiguous semantic value and rendered with an average width).<tt>u16,#G6120</tt></p>
+`,
+
+
+
+
+
+
+'\u{2011}': `
+
+<p>Has the same semantics as <span class="codepoint" translate="no"><span class="uname">U+2010 HYPHEN</span></span> except that it prevents line breaks around it. This hyphen is rendered with a narrow width, and used in words such as 'left-to-right'.<tt>u16,#G6120</tt></p>
+`,
+
+
+
+
+
+
+'\u{2012}': `
+
+<p>Has the same ambiguous semantics as <span class="codepoint" translate="no"><span class="uname">U+002D HYPHEN-MINUS</span></span> but has the same width as monospaced digits.<tt>u16,#G6120</tt></p>
+`,
+
+
+
+
+
+
+'\u{2013}': `
+
+<p>Used to indicate a range of values, such as 2002–2025.<tt>u16,#G6120</tt></p>
+
+<p>It is also used by some typographers to make a break – like this – and when used this way it usually has spaces either side.</p>
+
+<p>Note, however, that in Hebrew, using this rather than <span class="codepoint" translate="no"><span class="uname">U+002D HYPHEN-MINUS</span></span> to write a range results in the numbers in the range being read right to left, rather than the normal left to right, eg.</p>
+<p><span class="charExample" translate="no"><bdi class="ex" lang="he" dir="rtl">ספרה 23–24 ספרה</bdi></span></p>
+`,
+
+
+
+
+
+
+'\u{2014}': `
+
+<p>Used to make a break—like this—in which case it usually has no spaces either side (unlike <span class="codepoint" translate="no"><bdi lang="und">&#x2013;</bdi> <code class="uname">U+2013 EN DASH</code></span>). In typewriter text this is oftn represented by a double hyphen.<tt>u16,#G6120</tt></p>
+
+<p>Authors of Chinese text may use two of these characters, side-by-side, to indicate a break, but nowadays <span class="codepoint" translate="no"><bdi lang="und">&#x2E3A;</bdi> <code class="uname">U+2E3A TWO-EM DASH</code></span> is recommended, instead.</p>
+
+<p>In older mathematical typography this may be used to indicate a <span class="name">binary minus sign</span>.<tt>u16,#G6120</tt></p>
+`,
+
+
+
+
+
+
+'\u{2015}': `
+
+<p>Introduces quoted text in some typographic styles.<tt>u16,#G6120</tt></p>
+`,
+
+
+
+
 
 
 '\u{2016}': `
@@ -142,6 +292,19 @@ var charDetails = {
 <p>An old standard reference mark used  with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b</a></p>
 <p>Also used as a standard symbol for bibliographic work.<a class="fnref" href="#refs">b</a></p>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a> </p>
+`,
+
+
+
+
+
+
+'\u{2019}': `
+<p>This is the preferred default for a <span class="name">punctuation</span> apostrophe (avoiding the ambiguity of <span class="codepoint" translate="no"><bdi lang="und">&#x0027;</bdi> <code class="uname">U+0027 APOSTROPHE</code></span>), eg. in contractions such as "We’ve been here before."<tt>u16,#G6120</tt></p>
+
+<p>If surrounded by text or digits on both sides, this should not constitute a line-break opportunity.<tt>u16,#G6120</tt></p>
+
+<p>Where the apostrophe is to represent a modifier letter (for example, in transliterations to indicate a glottal stop), a <span class="name">letter</span> apostrophe is used. The code point for that is <span class="codepoint" translate="no"><bdi lang="und">&#x02BC;</bdi> <code class="uname">U+02BC MODIFIER LETTER APOSTROPHE</code></span>.<tt>u16,#G6120</tt> That code point is used, for example, for many languages as a letter of their alphabets, as a tone marker in Bodo and Dogri, and to indicate vowel elongation, or various truncations and ellipsis in Maithili.</p>
 `,
 
 
@@ -169,6 +332,66 @@ var charDetails = {
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a>
 </p>
+`,
+
+
+
+
+
+
+'\u{2024}': `
+<p>Used in Armenia like a semicolon, eg.</p>
+<p><span class="charExample" translate="no"><bdi class="ex" lang="hy">Հայկական Բարձրաւանդակ․ նկարուած հարաւային Կովկասի արբանեակէն</bdi> <span class="meaning">Armenian Highlands; satellite image of the southern Caucasus</span></span></p>
+
+<p>It can also be used with <span class="hx">2025</span> to construct dot leaders in plain text, when the application doesn't generate them automatically. This character allows for fine-tuning of the dot leader sequence length.<tt>u16,#G13727</tt> (Note that this only works when the page width is fixed.) For example:</p>
+
+<p><span class="ex" lang="und">Chapter 1‥‥‥‥‥‥‥‥․2</span></p>
+`,
+
+
+
+
+
+
+'\u{2025}': `
+<p>Dot leaders that connect things like chapter titles with page numbers are often generated automatically by an application. If they are not, this and <span class="hx">2024</span> can be used to construct them.<tt>u16,#G13727</tt> (Note that this only works when the page width is fixed.) For example:</p>
+
+<p><span class="ex" lang="und">Chapter 1‥‥‥‥‥‥‥‥․2</span></p>
+`,
+
+
+
+
+
+
+'\u{2026}': `
+<p>A convenient alternative to writing ellipsis with 3 consecutive full stops. This makes it easy to ensure that the ellipsis is not broken across a line, but the spacing of the dots in the ellipsis glyph may need to change based on the language.<tt>u16,#G13586</tt></p>
+
+<p>In CJK texts, it is normal to express ellipsis using this character twice (making 6 dots). When used that way, a line should not normally be broken between the 2 code points. CJK ellipsis is usually vertically centred in horizontal text and horizontally centred in vertical text. The dots are evenly spread across the 2em width. CJK fonts tend to do this automatically when rendering this code point (although not all fonts do).</p>
+
+<p>The following is an example of Korean usage:</p>
+<p><span class="charExample" translate="no" style="font-family: AppleMyungjo, Batang;"><bdi class="ex" lang="ko">그는 최선을 다했다. 그러나 성공할지는……</bdi> <span class="meaning">He did his best. But if he succeeds...</span></span></p>
+
+<p><span class="codepoint" translate="no"><bdi lang="und">&#x22EF;</bdi> <code class="uname">U+22EF MIDLINE HORIZONTAL ELLIPSIS</code></span> may be substituted for this character in order to make the dots appear centred in the line, but this is really a mathematical symbol. Neither CLReq nor JLReq mention the use of that character.</p>
+
+<p>There is also a presentation form aimed at vertical text, <span class="codepoint" translate="no"><bdi lang="und">&#xFE19;</bdi> <code class="uname">U+FE19 PRESENTATION FORM FOR VERTICAL HORIZONTAL ELLIPSIS</code></span>, which maps to the GB 18030 Chinese standard, but as for most presentation forms, fonts should render the text appropriately so that it is not needed. There is also another mathematical symbol, <span class="codepoint" translate="no"><bdi lang="und">&#x22EE;</bdi> <code class="uname">U+22EE VERTICAL ELLIPSIS</code></span>, which looks similar, but the Unicode Standard recommends that, if the font doesn't automatically render U+2026 as needed, then U+FE19 is a better choice.</p>
+
+<p>Mongolian, which is normally written vertically, has its own, 4-dot ellipsis code point, <span class="codepoint" translate="no"><bdi style="writing-mode:vertical-lr;" lang="und">&#x1801;</bdi> <code class="uname">U+1801 MONGOLIAN ELLIPSIS</code></span>.</p>
+
+<p>Do not confuse this character with <span class="codepoint" translate="no"><bdi lang="und">&#x205D;</bdi> <code class="uname">U+205D TRICOLON</code></span>, which is used as a word or phrase delimiter.</p>
+`,
+
+
+
+
+
+
+'\u{2027}': `
+<p>A raised dot used in dictionaries to indicate word-break opportunities, eg. “dic‧tio‧nary”.<tt>u16,#G20622</tt></p>
+
+<p>It should not be confused with <span class="codepoint" translate="no"><bdi lang="und">&#x00B7;</bdi> <code class="uname">U+00B7 MIDDLE DOT</code></span>.<tt>u16,#G20622</tt></p>
+
+<p>The Unicode Standard<tt>u16,#G746543</tt> has a table illustrating the use of this and other methods for indicating word-breaks in a selection of dictionaries.</p>
 `,
 
 
@@ -209,11 +432,10 @@ var charDetails = {
 
 '\u{202F}': `
 
-<p>Initially added to Unicode for Mongolian suffix handling, where it is important to visually distinguish between spaces separating suffixes and those separating words, and where lines should not be broken between morphemes.</p>
-<p>Many Mongolian suffixes are separated from the root or other suffixes by this small gap, eg.
-<span class="charExample" translate="no"><span class="ex" lang="mn">ᠭᠠᠵᠠᠷ ᠠ</span> 
+<p>Many Mongolian suffixes are separated from the root or other suffixes by a gap that is smaller than a normal space. Characters following this gap may take on special shapes, and lines should not be broken at this gap. For example:</p>
+<p><span class="charExample" translate="no"><span class="ex" lang="mn">ᠭᠠᠵᠠᠷ ᠠ</span> 
 <bdi class="trans">gaǰar-a</bdi> <bdi class="meaning">to the country</bdi></span></p>
-<p>Characters following NNBSP may take on special shapes.</p>
+<p>This character was initially added to Unicode for Mongolian suffix handling, but in Unicode 16 a decision was taken to use <span class="codepoint" translate="no"><span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span></span> instead for this purpose.</p>
 
 <p>A somewhat recent innovation in writing Cree syllabics is to use this as a morpheme separator, rather than the hyphen which is used in the Latin transcription, eg.
 <span class="charExample" translate="no"><span class="ex" lang="crk">ᐁ ᐚᐸᒫᐟ</span> <span class="transc">ê-wâpamât</span></span>
@@ -244,6 +466,206 @@ var charDetails = {
 
 <p>Abbreviation for inches (1′ = 12″).<a class="fnref" href="#refs">b321</a></p>
 <p>Also used for seconds of arc (eg. 360″=1°)<span class="name"></span>.<a class="fnref" href="#refs">b321</a></p>
+`,
+
+
+
+
+
+
+'\u{203C}': `
+<p>Encoded for convenience when working with vertical text in East Asian or Mongolian scripts.<tt>u16,#G5491</tt></p>
+
+<p>It has a compatibility decomposition to a sequence of 2 code points.</p>
+`,
+
+
+
+
+
+
+'\u{203E}': `
+<p>Can be used to create a high line, corresponding to <span class="codepoint" translate="no"><bdi lang="und">&#x005F;</bdi> <code class="uname">U+005F LOW LINE</code></span>. A sequence of these characters should create an unbroken line.<tt>u16,#G2006</tt></p>
+
+<p>This is distinct from the following: <span class="codepoint" translate="no"><bdi lang="und">&#x0305;</bdi> <code class="uname">U+0305 COMBINING OVERLINE</code></span>, and <span class="codepoint" translate="no"><bdi lang="und">&#x0304;</bdi> <code class="uname">U+0304 COMBINING MACRON</code></span>.</p>
+`,
+
+
+
+
+
+
+'\u{2041}': `
+<p>A proofreading mark indicating a location where something should be inserted.<tt>u16,#G14769</tt></p>
+`,
+
+
+
+
+
+
+'\u{2044}': `
+<p>A fraction slash to be used between digits. Fonts may convert the sequence to a single typographic unit, such as in the following examples:<tt>u16,#G2001</tt></p>
+
+<p><span class="eg" lang="und">1⁄4 1⁄2 3⁄4</span></p>
+`,
+
+
+
+
+
+
+'\u{2047}': `
+<p>Encoded for convenience when working with vertical text in East Asian or Mongolian scripts.<tt>u16,#G5491</tt></p>
+
+<p>It has a compatibility decomposition to a sequence of 2 code points.</p>
+`,
+
+
+
+
+
+
+'\u{2048}': `
+<p>Encoded for convenience when working with vertical text in East Asian or Mongolian scripts.<tt>u16,#G5491</tt></p>
+
+<p>It has a compatibility decomposition to a sequence of 2 code points.</p>
+`,
+
+
+
+
+
+
+'\u{2049}': `
+<p>Encoded for convenience when working with vertical text in East Asian or Mongolian scripts.<tt>u16,#G5491</tt></p>
+
+<p>It has a compatibility decomposition to a sequence of 2 code points.</p>
+`,
+
+
+
+
+
+
+'\u{204A}': `
+<p>Used in Old English or Irish Gaelic in the same way as a modern ampersand (&amp;), but may also be used as a letter in some contexts.<tt>u16,#G28551</tt></p>
+
+<p>In some medieval materials an uppercase form appears. This can be represented using <span class="codepoint" translate="no"><bdi lang="und">&#x2E52;</bdi> <code class="uname">U+2E52 TIRONIAN SIGN CAPITAL ET</code></span>, however note that these two are not case-mapped in Unicode.<tt>u16,#G28551</tt></p>
+`,
+
+
+
+
+
+
+'\u{204B}': `
+<p>A common alternative to <span class="codepoint" translate="no"><bdi lang="und">&#x00B6;</bdi> <code class="uname">U+00B6 PILCROW SIGN</code></span>.  The pilcrow characters and <span class="codepoint" translate="no"><bdi lang="und">&#x00A7;</bdi> <code class="uname">U+00A7 SECTION SIGN</code></span> are used to indicate sections or paragraphs, in editorial markup, to show format modes, etc. Which character is used is dictated by convention.<tt>u16,#G4247</tt></p>
+`,
+
+
+
+
+
+
+'\u{2052}': `
+<p>Used as a minus sign in commercial or tax-related forms or publications in several European countries, including Germany and Scandinavia. Can also be written as the sequence <span class="codepoint" translate="no"><bdi lang="und">&#x002E;&#x002F;&#x002E;</bdi> <code class="uname">U+002E FULL STOP</code> + <code class="uname">U+002F SOLIDUS</code> + <code class="uname">U+002E FULL STOP</code></span>.<tt>u16,#G7935</tt></p>
+
+<p>In European countries such as Finland, this character and <span class="codepoint" translate="no"><bdi lang="und">&#x2713;</bdi> <code class="uname">U+2713 CHECK MARK</code></span> are used in marking student work to indicate 'correct' and 'incorrect', respectively.<tt>u16,#G7935</tt></p>
+
+<p> Also used as a marginal note in letters to indicate enclosures, and in the Uralic Phonetic Alphabet to indicate a structurally related borrowed element of different pronunciation.<tt>u16,#G7935</tt></p>
+`,
+
+
+
+
+
+
+// swung dash
+'\u{2053}': `
+<p>Used in dictionaries to repeat the defined term in examples.<tt>u16,#G6120</tt></p>
+`,
+
+
+
+
+
+
+'\u{2056}': `
+<p>One character in a set of archaic punctuation characters used in common for ancient and medieval scripts. The specific function can vary by script.<tt>u16,#G13108</tt></p>
+`,
+
+
+
+
+
+
+'\u{2058}': `
+<p>One character in a set of archaic punctuation characters used in common for ancient and medieval scripts. The specific function can vary by script.<tt>u16,#G13108</tt></p>
+`,
+
+
+
+
+
+
+'\u{2059}': `
+<p>One character in a set of archaic punctuation characters used in common for ancient and medieval scripts. The specific function can vary by script.<tt>u16,#G13108</tt></p>
+`,
+
+
+
+
+
+
+'\u{205A}': `
+<p>One character in a set of archaic punctuation characters used in common for ancient and medieval scripts. The specific function can vary by script.<tt>u16,#G13108</tt></p>
+`,
+
+
+
+
+
+
+'\u{205B}': `
+<p>One character in a set of archaic punctuation characters used in common for ancient and medieval scripts. The specific function can vary by script.<tt>u16,#G13108</tt></p>
+
+<p>Also used by scribes in a margin to highlight text.<tt>u16,#G13108</tt></p>
+`,
+
+
+
+
+
+
+'\u{205C}': `
+<p>One character in a set of archaic punctuation characters used in common for ancient and medieval scripts. The specific function can vary by script.<tt>u16,#G13108</tt></p>
+
+<p>Also used by scribes in a margin to highlight text.<tt>u16,#G13108</tt></p>
+`,
+
+
+
+
+
+
+'\u{205D}': `
+<p>One character in a set of archaic punctuation characters used in common for ancient and medieval scripts. The specific function can vary by script.<tt>u16,#G13108</tt></p>
+`,
+
+
+
+
+
+
+'\u{205E}': `
+<p>Used in dictionaries to indicate syllable boundaries that are not suitable word-break opportunities, eg.<tt>u16,#G20622</tt></p>
+<p><span class="ex" lang="und">a⁞⁠plomb</span></p>
+<p><span class="ex" lang="und">hoar⁞⁠y</span></p>
+
+<p>To reinforce the idea that there should be no line break here, this character may be followed by <span class="hx img">2060</span>.<tt>u16,#G20622</tt></p>
+
+<p>See also <span class="hx">2027</span>.</p>
 `,
 
 
@@ -304,235 +726,17 @@ var charDetails = {
 
 
 
-// ===============   GRAB BAG OF FORMATTING CODE DESCRIPTIONS =============
 
-/* 
 
-// zwnj
-'\u{200C}': `
-<p class="insertTranscription">&#x200C;</p>
 
-<p>Zero-width non-joiner (ZWNJ).</p>
 
-<p>An invisible character, that prevents two adjacent letters forming a visual connection with each other when rendered. Especially useful for educational illustrations, but also has real-world applications.</p>
 
-<p>It is used to interrupt the shaping of joining glyphs in cursive scripts, and also used to manage the visual interactions of glyphs in other scripts, eg. to prevent the formation of conjuncts, position diacritics, etc.</p>
 
-<p>More details:</p>
-<ul>
-<li><a href="XXX.html#shapingcontrols">Managing glyph shaping</a></li>
-</ul>
 
-`,
+'\u{2E17}': `
+<p>Used in dictionaries to indicate certain morphological boundaries in West Asian linguistics.<tt>u16,#G9921</tt></p>
 
-
-
-
-
-// zwj
-'\u{200D}': `
-<p class="insertTranscription">&#x200D;</p>
-
-<p>Zero-width joiner (ZWJ).</p>
-
-<p>An invisible character, that permits a letter to form a cursive connection without a visible neighbour. Especially useful for educational illustrations, but also has some real-world applications.</p>
-
-<p>Also used with complex scripts to manage the visual representation of glyphs that normally interact, eg. to form conjuncts, position diacritics, etc.</p>
-
-<p>More details:</p>
-<ul>
-<li><a href="XXX.html#shapingcontrols">Managing glyph shaping</a></li>
-</ul>
-`,
-
-
-
-
-
-// LRM
-'\u{200E}': `
-<p>An invisible character with strong LTR directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
-
-<p>Generally referred to as LRM.</p>
-`,
-
-
-
-
-// RLM
-'\u{200F}': `
-<p>An invisible character with strong RTL directional properties that can be used to produce the correct ordering of text, especially where there is a risk of spillover effects while the Unicode Bidirectional Algorithm is at work.</p>
-
-<p>Generally referred to as RLM.</p>
-`,
-
-
-
-
-// LRE
-'\u{202A}': `
-<p>Sets the start point for a range of inline text when applying a base direction of left-to-right. The range is terminated by <span class="hx img">202C</span> (PDF).</p>
-
-<p><strong>Use <span class="hx img">2066</span> (LRI) rather than this character.</strong></p>
-`,
-
-// RLE
-'\u{202B}': `
-<p>Sets the start point for a range of inline text when applying a base direction of right-to-left. The range is terminated by <span class="hx img">202C</span> (PDF).</p>
-
-<p><strong>Use <span class="hx img">2067</span> (RLI) rather than this character.</strong></p>
-`,
-
-// PDF
-'\u{202C}': `
-<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="hx img">202A</span> (LRE) or <span class="hx img">202B</span> (RLE).</p>
-
-<p><strong>Use <span class="hx img">2069</span> (PDI) and its associated range starters rather than this character.</strong></p>
-`,
-
-
-
-
-
-// LRI
-'\u{2066}': `
-<p>Sets the start point for a range of inline text when applying a base direction of left-to-right, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="hx img">2069</span> (PDI).</p>
-
-<p>This character should be used rather than <span class="hx img">202A</span> (LRE).</p>
-`,
-
-
-// RLI
-'\u{2067}': `
-<p>Sets the start point for a range of inline text when applying a base direction of right-to-left, and isolates the text within that range from text outside it. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="hx img">2069</span> (PDI).</p>
-
-<p>This character should be used rather than <span class="hx img">202B</span> (RLE).</p>
-`,
-
-// FSI
-'\u{2068}': `
-<p>Sets the start point for a range of inline text when applying a base direction, and isolates the text within that range from text outside it. The base direction set is determined by that of the first strong directional character in the range. The isolation prevents unintended spill-over effects when the text is reordered by the Unicode Bidirectional Algorithm. The range is terminated by <span class="hx img">2069</span> (PDI).</p>
-`,
-
-// PDI
-'\u{2069}': `
-<p>Sets the end point for a range of inline text when applying a base direction. The range is started with either  <span class="hx img">2066</span> (LRI), <span class="hx img">2066</span> (RLI) or <span class="hx img">2068</span> (FSI).</p>
-
-<p>This character should be used rather than <span class="hx img">202C</span> (PDF).</p>
-`,
-
-
-
-
-
-// CGJ
-'\u{034F}': `
-<p class="insertTranscription">&#x034F;</p>
-
-<p>Combining grapheme joiner.</p>
-
-<p>Used to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.</p>
-
-<p>More details:</p>
-
-<ul>
-<li><a href="arb.html#shapingcontrols">Managing glyph shaping</a></li>
-<li><a href="arb.html#amtra">Special rendering rules</a></li>
-</ul>
-`,
-
-
-*/
-
-
-
-
-
-
-
-
-// ===============   GRAB BAG OF RTL QUOTATION &AMP; PARENS =============
-
-/* 
-
-
-
-'\u{00AB}': `
-<p class="insertTranscription">&#x00AB;</p>
-
-<p>Opening quotation mark.</p>
-
-<p>The words 'left' and 'right' in the Unicode names for parentheses, brackets, and other paired characters should be ignored. LEFT should be read as if it said START, and RIGHT as END. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</p>
-`,
-
-
-
-
-
-'\u{00BB}': `
-<p class="insertTranscription">&#x00BB;</p>
-
-<p>Closing quotation mark.</p>
-
-<p>The words 'left' and 'right' in the Unicode names for parentheses, brackets, and other paired characters should be ignored. LEFT should be read as if it said START, and RIGHT as END. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</p>
-`,
-
-
-
-
-
-'\u{0028}': `
-<p class="insertTranscription">&#x0028;</p>
-
-<p>Opening parenthesis.</p>
-
-<p>The words 'left' and 'right' in the Unicode names for parentheses, brackets, and other paired characters should be ignored. LEFT should be read as if it said START, and RIGHT as END. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</p>
-`,
-
-
-
-
-'\u{0029}': `
-<p class="insertTranscription">&#x0029;</p>
-
-<p>Closing parenthesis.</p>
-
-<p>The words 'left' and 'right' in the Unicode names for parentheses, brackets, and other paired characters should be ignored. LEFT should be read as if it said START, and RIGHT as END. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</p>
-`,
-
-
-
-'\u{2018}': `
-<p class="insertTranscription">&#x2018;</p>
-
-<p>Closing quotation mark. Unlike parentheses, the glyph of this character is not mirrored in right-to-left text.</p>
-`,
-
-
-
-
-'\u{2019}': `
-<p class="insertTranscription">&#x2019;</p>
-
-<p>Opening quotation mark. Unlike parentheses, the glyph of this character is not mirrored in right-to-left text.</p>
-`,
-
-
-
-
-'\u{201C}': `
-<p class="insertTranscription">&#x201C;</p>
-
-<p>Closing quotation mark. Unlike parentheses, the glyph of this character is not mirrored in right-to-left text.</p>
-`,
-
-
-
-
-'\u{201D}': `
-<p class="insertTranscription">&#x201D;</p>
-
-<p>Opening quotation mark. Unlike parentheses, the glyph of this character is not mirrored in right-to-left text.</p>
+<p>For similar-looking Fraktur hyphens use the normal hyphen characters with an appropriate font, rather than this character.<tt>u16,#G9921</tt></p>
 `,
 
 
@@ -540,9 +744,11 @@ var charDetails = {
 
 
 
+'\u{2E31}': `
+<p>Orthographies that separate words with a raised dot, such as Avestan or Samaritan, can use this word separator which is not script-specific.  However, Runic has its own code point for the same purpose (<span class="codepoint" translate="no"><bdi lang="und">&#x16EB;</bdi> <code class="uname">U+16EB RUNIC SINGLE PUNCTUATION</code></span>).<tt>u16,#G15382</tt></p>
 
-
-*/
+<p>Similar-looking code points with different semantics include: <span class="ch">⸳</span>, <span class="ch">‧</span>, and <span class="codepoint" translate="no"><bdi lang="und">&#x00B7;</bdi> <code class="uname">U+00B7 MIDDLE DOT</code></span>.</p>
+`,
 
 
 

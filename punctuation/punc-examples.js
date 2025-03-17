@@ -18,12 +18,13 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 
 
 
-autoExpandExamples.en = `
+autoExpandExamples.und = `
 
 
 
-@ ?
-
+@ Unicode 16
+1⁄4 1⁄2 3⁄4||
+그는 최선을 다했다. 그러나 성공할지는……|He did his best. But if he succeeds...|
 
 
 
