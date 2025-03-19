@@ -387,7 +387,7 @@ autoExpandExamples.bn = `
 আলোচনা||
 আল্লাহ||
 আল্লাহু আকবার||
-আল্লাহ্||
+আল্লাহ্|Allah|a§›§lːa§–
 আশখাস||
 আশমান জমিন ফারাক||
 আশমান-জমিন ফারাক||
@@ -457,7 +457,7 @@ autoExpandExamples.bn = `
 ইত্যাদি||
 ইথিওপিয়া||
 ইন||
-ইনকিলাব|revolution|in.ki.lab
+ইনকিলাব|revolution|i§n.§ki.§la§b
 ইনকিলাবি|revolutionary|in.ki.la.bi
 ইনকিলাবী||
 ইনপুট||
@@ -1075,7 +1075,7 @@ autoExpandExamples.bn = `
 গন্ধ|scent|ɡɔndʰo
 গন্ধতৃণ||
 গন্ধভাদাল||
-গপ|gossip|ɡɔp
+গপ|gossip|ɡɔ§p
 গম||
 গর-||
 গরম|warm, hot|ɡɔ§ɾo§m§/ɡɔɽom|ɡôrôm
@@ -1414,7 +1414,7 @@ autoExpandExamples.bn = `
 জিরা||
 জির্ভা||
 জিহবা|tongue (organ)||jihba
-জিহ্বা|tongue|d͡ʒiu̯̯bʱa/d͡ʒiu̯̯βa
+জিহ্বা|tongue|d͡ʒiu̯§›§bʱa§/d͡ʒiu̯βa
 জীবন|life|d͡ʒibɔn
 জীবন্ত||
 জীববিজ্ঞান||
@@ -2270,7 +2270,7 @@ autoExpandExamples.bn = `
 ফুঁ দেত্তয়া|to blow||phũ dettẏa
 ফুট||
 ফুটবল||
-ফুটি|melon|pʰuʈi
+ফুটি|melon|pʰu§ʈi
 ফুল|flower|pʰul/ful|phul
 ফুলা||
 ফেনী জেলা||
@@ -2801,7 +2801,7 @@ autoExpandExamples.bn = `
 মাল ফেলা||
 মাল||
 মালওয়্যার||
-মালদ্বীপ|Maldives|mald̪ip|maldip
+মালদ্বীপ|Maldives|ma§l§›§d̪i§p|maldip
 মালয়ালম ভাষা||
 মালয়েশিয়া||
 মালা||

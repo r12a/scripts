@@ -51,6 +51,13 @@ reflist = {
 "title":"Personal correspondence",
 },
 
+"u16": {
+"url":"https://unicode-core-spec.pages.dev/chapter-12/#G664195",
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 16.0",
+"sub":"Chapter 12.2: South and Central Asia-I, Official Scripts of South Asia, Bengali (Bangla)",
+},
+
 "u": {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch12.pdf",
 "authors": "Unicode Consortium",
