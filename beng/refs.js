@@ -52,7 +52,7 @@ reflist = {
 },
 
 "u16": {
-"url":"https://unicode-core-spec.pages.dev/chapter-12/#G664195",
+"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/",
 "authors": "Unicode Consortium",
 "title":"The Unicode Standard, Version 16.0",
 "sub":"Chapter 12.2: South and Central Asia-I, Official Scripts of South Asia, Bengali (Bangla)",
