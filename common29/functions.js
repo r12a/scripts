@@ -40,6 +40,7 @@ function addPageFeatures () {
     makeIndexIntro(document.getElementById('index_intro')) // write page intro
     
     makeTables(langTag)  // Create the lists of characters in yellow, etc. boxes
+    makeSequenceTables()
 
     expandCharMarkup() // Expand spans with ch classes to full character markup
     
@@ -82,7 +83,7 @@ console.log('scriptSummaryTableName',scriptSummaryTableName)
     copyIntroInfo()
     
     addResources()
-    
+
     
     // create dialog popup window (displays details after clicking on code point names)
     var node = document.querySelector('header')
@@ -4520,7 +4521,7 @@ console.log(node)
     var text = node.closest('.glossContainer').querySelectorAll(type)
     var out = ''
     for (var i=0;i<text.length;i++) out += text[i].textContent
-    if (type === '.IPAGloss') out = out.replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
+    if (type === '.IPAGloss') out = out.replace(/ï¿½/g,'').replace(/ï¿½/g,'').replace(/ï¿½/g,'')
     navigator.clipboard.writeText(out)
     
     document.getElementById('copyNotice').style.display = 'block';
@@ -4535,6 +4536,46 @@ console.log(node)
 function closeArticle (node) {
     node.parentNode.remove()
     }
+
+
+
+
+function makeSequenceTables () {
+    // Converts simple markup to tables showing sequences of characters
+    var tables, out, trs, chars, notes, types, prefixes, font
+
+    tables = document.querySelectorAll('.sequenceTable')
+
+    for (t=0;t<tables.length;t++) {
+        out = ''
+        trs = tables[t].querySelectorAll('tr')
+        for (i=0;i<trs.length;i++) {
+            chars = trs[i].querySelector('td').textContent.split('\u{2423}')
+            notes = trs[i].dataset.notes.split(',')
+            types = trs[i].dataset.type.split(',')
+            prefixes = trs[i].dataset.prefix.split(',')
+            if (trs[i].dataset.font) font = ` style="font-family: '${ trs[i].dataset.font }'"`
+            else font = ''
+
+            out += `<tr>`
+            for (c=0;c<chars.length;c++) {
+                out += `<td>${ prefixes[c] }</td>`
+                out += `<td><bdi class="ex" lang="${ window.langTag }" onclick="showCharDetailsInPanel(event)" ${ font }>${ chars[c]}</bdi><span class="${ types[c] }">${ notes[c] }</span></td>`
+                }
+            out += `</tr>`
+            }
+        tables[t].innerHTML = out
+        }
+    }
+
+
+
+
+
+
+
+
+
 
 
 
