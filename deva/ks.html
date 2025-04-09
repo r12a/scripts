@@ -42,8 +42,8 @@
 
 
 
-<h1>Kashmiri</h1>
-<div class="orthographyLine">Devanagari orthography notes</div>
+<h1>Devanagari (Kashmiri)</h1>
+<div class="orthographyLine">orthography notes</div>
 
 
 
@@ -58,7 +58,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->12 February, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->9 April, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -74,7 +74,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Kashmiri (Devanagari) Orthography Notes, <!-- #BeginDate format:En2 -->12-Feb-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/deva/ks">https://r12a.github.io/scripts/deva/ks</a></small></p>
+<p class="refLine"><small>Richard Ishida, (Devanagari) (Kashmiri) Orthography Notes, <!-- #BeginDate format:En2 -->09-Apr-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/deva/ks">https://r12a.github.io/scripts/deva/ks</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -1117,9 +1117,10 @@ Affricate </th>
 
 <p>There are no multipart vowels and no circumgraphs. There is 1 pre-base vowel sign.</p>
 
-<p>All vowel signs are typed and stored after the base consonant, and the rendering process puts them in the correct place for display.</p>
+<p>All vowel signs are typed and stored after the base consonant, whether or not they precede it when displayed. The glyph rendering system takes care of the positioning at display time.  <a href="../glossary/index.html#conjunct" class="termref" target="terms">Conjuncts</a> are treated as indivisible units when it comes to rendering vowel signs, meaning that pre-base vowel signs are rendered before the conjunct as a whole (see <a class="secref" href="#prebase">Pre-base vowel signs</a>).</p>
 
-<p>An orthography that uses vowel signs is different from one that uses simple diacritics or letters for vowels, in that the vowel signs are generally attached to an <em>orthographic syllable</em>, rather than  just applied to the letter of the immediately preceding consonant. In other words, pre-base vowel sign components are rendered before a whole consonant cluster if that cluster is rendered as a conjunct (see <a class="secref">prebase</a> for an example).</p>
+<p>Eight vowel signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant.</p>
+
 
 
 
@@ -1145,8 +1146,6 @@ Affricate </th>
 
 <p>Some of these vowel signs are the result of recent standardisation of the orthography (see <a class="secref">previousOrthographies</a>).</p>
 
-<p>Eight vowel signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant.</p>
-
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ॅ␣ॉ␣ो</figure>
 
 <p>The representation of the sound <span class="ipa">ɔː</span> has not typically been clear. However Rajan<tt>vr</tt> reports that in publications of a few Kashmiri organisations the sounds <span class="ipa">ɔ</span> and <span class="ipa">ɔː</span> are represented using <span class="ch circle">ॅ</span> and <span class="ch circle">ॉ</span>, respectively. (These characters were previously used for the sounds <span class="ipa">ə</span> and <span class="ipa">əː</span>.) This allows for a clear distinction.</p>
@@ -1171,13 +1170,17 @@ Affricate </th>
 
 <figure class="characterBox auto small"  data-cols="ipa,trans,transc">ि</figure>
 
-<p>One vowel sign appears to the left of the base consonant letter or cluster.</p>
+<p>One vowel sign appears to the left of the base consonant letter or cluster, eg.</p>
 
-<p class="instructions">Clicking on the following word reveals that in the sequence of characters the initial vowel sound is stored after the consonant, even though it is displayed to its left.</p>
+<!--<p class="instructions">Clicking on the following word reveals that in the sequence of characters the initial vowel sound is stored after the consonant, even though it is displayed to its left.</p>-->
 
 <p><span class="eg" lang="ks">बिचोर</span></p>
 
-<p class="info">This is a combining mark that is always typed and stored after the base consonant(s), ie. the codepoints follow the order in which the items are pronounced. The rendering process places the glyph before the base consonant without changing the code points.</p>
+<p class="info">This is a combining mark that is always typed and stored after the base consonant(s), ie. the codepoints follow the order in which the items are pronounced. The rendering process places the glyph before the base consonant without changing the code points. The following shows the sequence of code points that make up the word just above.</p>
+
+<table class="sequenceTable">
+<tr data-notes="BA,I,CA,O,RA" data-type="uname,uname,uname,uname,uname" data-prefix=",,,,"><td>ब␣ि␣च␣ो␣र</td></tr>
+</table>
 
 <p>It is actually placed before the start of an <em>orthographic syllable</em>. In <a class="figref">fig_prebase</a> the sequence of glyphs for the orthographic syllable is rendered VCC, whereas the pronunciation is CCV. In conjuncts with 3 consonants, it will still be rendered before the consonants.</p>
 
@@ -1222,7 +1225,7 @@ Affricate </th>
 
 <figure class="characterBox auto"  data-cols="trans">ँ</figure>
 
-<p>Nasalisation of the vowel in a syllable can be indicated using <span class="hx circle">0901</span>.
+<p>Nasalisation of the vowel in a syllable can be indicated using <span class="hx">0901</span>.
 <span class="eg" lang="ks">मुँह</span>
 <span class="eg" lang="ks">वाँदुर</span>
 </p>
@@ -1879,13 +1882,31 @@ Affricate </th>
     
 <p>Palatalisation is a frequent feature of  Kashmiri words. It is represented using <span class="ch">य</span> as the final element of a cluster.</p>
 
-<p>Inside a word the <span class="uname">YA</span> forms a conjunct or a cluster with the preceding consonant, eg. <span class="eg" lang="ks" dir="ltr">त्यम्बॖर</span></p>
+<p>Inside a word the <span class="uname">YA</span> forms a conjunct or a cluster with the preceding consonant, eg.</p>
+<p><span class="eg" lang="ks" dir="ltr">त्यम्बॖर</span></p>
 
-<p>At the end of a word, the <span class="uname">YA</span> is followed by a visible virama, eg. <span class="eg" lang="ks">थऺन्य्</span></p>
+<p>At the end of a word, the <span class="uname">YA</span> is followed by a visible virama, eg.</p>
+<p><span class="eg" lang="ks">थऺन्य्</span></p>
 
 <p>Usage preceding the inherent vowel is typically transcribed using <span class="trans">ê</span>, eg. <span class="trans">têmbar</span>. At the end of a word, it is often transcribed using a superscript <span class="trans">i</span>, eg. <span class="trans">tånⁱ</span></p>
 
-<p class="info">Some care needs to be taken when the palatalisation follows <span class="ipa">r</span> at the beginning of a word, so as to prevent the sequence forming a repha, ie. <span class="ch">र्य</span>. The required rendering can be achieved using <span class="ch">र्‌य</span>, eg. <span class="eg" lang="ks" dir="ltr">र्‌यथ</span> Word-internal use of the repha with palatalisation can, however, be seen, eg. <span class="eg" lang="ks" dir="ltr">पऻर्यज़ान</span></p>
+<p class="info">At the beginning of a word, some care needs to be taken when the palatalisation follows <span class="uname">RA</span>, so as to prevent the sequence from forming a repha, eg.</p>
+
+<p><span class="eg" lang="ks" dir="ltr">र्‌यथ</span></p>
+
+<p>The required rendering can be achieved using <span class="hx img">200C</span>. The sequences  below show the outcomes with and without the ZWNJ, respectively.</p>
+
+<table class="sequenceTable">
+<tr data-notes="RA,virama,ZWNJ,YA,rʲ" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→"><td>र␣्␣‌␣य␣र्‌य</td></tr>
+
+<tr data-notes="RA,virama,YA,,rʲ" data-type="uname,uname,uname,,ipa" data-prefix=",+,+,,→"><td>र␣्␣य␣␣र्य</td></tr>
+</table>
+
+<p>Word-internal use of the repha with palatalisation can, however, be seen, eg.</p>
+<p><span class="eg" lang="ks" dir="ltr">पऻर्यज़ान</span></p>
+
+
+<!--<p class="info">Some care needs to be taken when the palatalisation follows <span class="ipa">r</span> at the beginning of a word, so as to prevent the sequence forming a repha, ie. <span class="ch">र्य</span>. The required rendering can be achieved using <span class="ch">र्‌य</span>, eg. <span class="eg" lang="ks" dir="ltr">र्‌यथ</span> Word-internal use of the repha with palatalisation can, however, be seen, eg. <span class="eg" lang="ks" dir="ltr">पऻर्यज़ान</span></p>-->
 
 <p>Since they are palatal sounds, the <span class="uname">YA</span> is not needed after the following consonants.</p>
 
@@ -1895,18 +1916,34 @@ Affricate </th>
 
 
 
+
+
+
+
 <section id="extendedC">
 <h3>Sanskrit letters</h3>
         
-  <p>Words directly borrowed from Sanskrit and Hindi may use additional characters that are not normally used in Kashmiri.<tt>mkr</tt></p>
+<p>Words directly borrowed from Sanskrit and Hindi may use additional characters that are not normally used in Kashmiri.<tt>mkr</tt></p>
+
+
 
 
 <section id="sanskrit_nasals">
 <h4>Nasals</h4>
+
 <figure class="auxiliaryBox auto"  data-cols="ipa,trans,transc">ण␣ञ␣ङ</figure>
 <p>Kashmiri normally uses only 2 of the 5 standard nasal letters in Sanskrit. The missing letters shown just above are normally rendered in Kashmiri using <span class="hx circle">0902</span><tt>mkr</tt>, eg. compare<span class="charExample" translate="no"><span class="ex" lang="ks">*ब्रह्मण्ड</span> <span class="trans">b͓rh͓mɳ͓ɖ</span></span><span class="eg" lang="ks">ब्रह्मांड</span></p>
-<p>They may, however, be found occasionally in conjuncts,<tt>rt,9</tt> eg. <span class="ipa">ang</span> in the Kashmiri orthography is written <span class="charExample" translate="no"><span class="ex" lang="ks">अंग</span></span>but may be written <span class="charExample" translate="no"><span class="ex" lang="ks">अङ्ग</span></span></p>
-<p>On the other hand, they normally never appear outside of a conjunct, ie. <span class="ipa">ganapatʰ</span> is more properly written in Kashmiri as<span class="charExample" translate="no"><span class="ex" lang="ks">गनपथ</span> <span class="trans">gnptʰ</span></span>  rather than the Sanskrit <span class="charExample" translate="no"><span class="ex" lang="ks">गणपथ</span> <span class="trans">gɳptʰ</span></span>That said, some writers will nonetheless use the Sanskrit forms.<tt>rt,9</tt></p>
+<p>They may, however, be found occasionally in conjuncts,<tt>rt,9</tt> eg. <span class="ipa">ang</span> in the Kashmiri orthography is typically written as in the top example just below, but may also be written like the the one on the bottom.</p>
+
+<p><span class="charExample" translate="no"><span class="ex" lang="ks">अंग</span></span></p>
+<p><span class="charExample" translate="no"><span class="ex" lang="ks">अङ्ग</span></span></p>
+
+<p>On the other hand, they normally never appear outside of a conjunct, ie. <span class="ipa">ganapatʰ</span> is more properly written in Kashmiri as per the top example, rather than the Sanskrit one on the bottom.</p>
+
+<p><span class="charExample" translate="no"><span class="ex" lang="ks">गनपथ</span> <span class="trans">gnptʰ</span></span></p>
+<p><span class="charExample" translate="no"><span class="ex" lang="ks">गणपथ</span> <span class="trans">gɳptʰ</span></span></p>
+
+<p>That said, some writers will nonetheless use the Sanskrit forms.<tt>rt,9</tt></p>
 </section>
 
 <section id="voiced_aspirates">
@@ -1927,13 +1964,39 @@ Affricate </th>
 
 
 
+
+
 <section id="onsets">
 <h3>Onsets</h3>
 
-<p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Kashmiri, and they are handled as described in the section <a class="secref">clusters</a>.</p>
+<p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Kashmiri, and they are generally handled as described in the section <a class="secref">clusters</a>.</p>
 
-<p>Special behaviours include handling of <span class="uname">RA</span> at the beginning of an orthographic syllable (see <a class="secref">palatalisation</a>).</p>
+<p>However, a medial <span class="ch">र</span> is rendered idiosyncratically, as is a medial <span class="ch">य</span> (see <a class="secref">palatalisation</a>).</p>
+
+
+
+<section id="medial_ra">
+<h4>Medial RA</h4>
+
+<p>When ra follows another consonant or consonants in a syllable onset, it is typically rendered as a small, diagonal line pointing downwards to the left, eg.</p>
+
+
+
+<figure class="characterBox auto" data-cols="transc" data-ipa="kr,ɡr,br,hr,ʃr">क्र␣ग्र␣ब्र␣ह्र␣श्र</figure>
+
+
+<p>After <span class="ch">त</span>, however, it produces:</p>
+
+<figure class="characterBox auto" data-cols="transc" data-ipa="tr">त्र</figure>
+
+<p>After 5 other consonants, it is rendered as an upside-down v shape below, ie.</p>
+
+<figure class="characterBox auto" data-cols="transc" data-ipa="ʈr,ʈʰr,ɖr,ɖʰr,t͡ʃʰr">ट्र␣ठ्र␣ड्र␣ढ्र␣छ्र</figure>
 </section>
+</section>
+
+
+
 
 
 
@@ -1943,31 +2006,283 @@ Affricate </th>
 
 <section id="finals">
 <h3>Finals</h3>
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ं</figure>
 
-<p><span class="hx circle">0902</span> represents  a nasal that is homorganic with a following consonant. It is positioned over the previous consonant or vowel sign,<tt>mkr</tt> eg. <span class="eg" lang="ks">पॖंच़ॗह</span><span class="eg" lang="ks">ज़ॊंग</span></p>
-<p>See also the <a href="#nasalisation">candrabindu</a> diacritic, which nasalises a vowel.</p>
-<p>The visarga is not used in Kashmiri.<tt>rt,8</tt></p>
+
+<p>Syllable codas are typically represented by ordinary consonant letters. When the following syllable has a consonant onset, the coda and onset will typically form a <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct</a> (see <a class="secref">clusters</a>).</p>
+
+<p>Consonant clusters involving an <span class="ipa">-r</span> coda have special joining forms. Kashmiri also has a dedicated diacritic.</p>
+
+
+
+
+<section id="coda_ra">
+<h4>RA coda</h4>
+
+<p>When <span class="uname">RA</span> precedes a consonant, it is  rendered as a small hook above that consonant, typically above the rightmost vertical line. Where it precedes a cluster of 2 more consonants, it is aligned with the vertical line of the trailing consonant. Examples:</p>
+
+<figure class="characterBox auto" data-cols="transc" data-ipa="rk,rl,rʲ,rsp">र्क␣र्ल␣र्य␣र्स्प</figure>
+
+<p>However, if there is a spacing vowel sign with a vertical line to the right of the cluster, it aligns with that, eg.</p>
+
+<figure class="characterBox auto" data-cols="transc" data-ipa="rkaː,rkiː">र्का␣र्की</figure>
 </section>
 
 
 
-  
+
+
+
+<section id="coda_diacritics">
+<h4>Coda diacritics</h4>
+
+<p><span class="hx circle">0902</span> represents  a nasal that is homorganic with a following consonant. It is positioned over the previous consonant or vowel sign,<tt>mkr</tt> eg.</p>
+<p><span class="eg" lang="ks">पॖंच़ॗह</span></p>
+<p><span class="eg" lang="ks">ज़ॊंग</span></p>
+
+<p>See also the <a href="#nasalisation">candrabindu</a> diacritic, which nasalises a vowel.</p>
+
+<p>The visarga is not used in Kashmiri.<tt>rt,8</tt></p>
+</section>
+</section>
 
 
 
 
-  
+
+
+
+
+
 <section id="clusters">
 <h3>Consonant clusters</h3>
+
 <p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
 <p id="def-conjunct" class="explanatoryintro definitionStub"></p>
 
-<p>See the <a href="hi.html#clusters" target="_blank">Devanagari overview</a>.</p>
+<p>The absence of a vowel sound between two or more consonants can be visually indicated in one of the following ways.</p>
+
+<ol>
+<li>Create a <mark><a href="#conjuncts">conjunct</a></mark>. There are a number of possibilities here:<ol style="margin: 0;">
+
+<li><mark><a href="#halfforms">Half-forms</a></mark> : Reduce the shape of all consonants in the cluster except the last to a 'half-form' by removing the vertical stroke.</li>
+
+<li><mark><a href="#verticalcombinations">Stacking</a></mark> : Reduce a non-initial consonant in size and shape and position it below the first.</li>
+
+<li><mark><a href="#ligatedconjuncts">Special ligation</a></mark> : Create a fusion of the two shapes, where one or other of the components may not be easily recognisable.</li>
+
+<li>The <mark><a href="#rconjuncts">letter <span class="uname">RA</span></a></mark> has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
+</ol></li>
+
+<li>Show a <mark><a href="#visiblevirama">visible virama</a></mark> below the non-final consonants in the cluster.</li>
+
+<li><mark>No indication</mark>, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li>
+</ol>
+
+<p>See also <a class="secref">clength</a>.</p>
+
+
+
+
+
+
+<section id="conjuncts">
+<h4>Conjunct formation</h4>
+
+<p class="linkToApp"><a target="_blank" href="../apps/conjunct_generator/?preset=deva">See a table of 2-consonant clusters.</a><br>The table allows you to test results for various fonts.</p>
+
+<figure class="characterBox auto"  data-cols="trans">्</figure>
+
+<p>To produce a conjunct, <span class="codepoint" translate="no"><span lang="hi">&#x094D;</span> [<a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a>]</span> is added between the consonants in the cluster. There are exceptions, but this type of virama is usually not displayed, for example:</p>
+
+
+<table class="sequenceTable">
+<tr data-notes="KA,virama,SSA,kʃ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>क␣्␣ष␣क्ष</td></tr>
+</table>
+
+
+<p>The font usually determines which visual method is used, although it is possible to influence this (see <a class="secref">joiner</a>).</p>
+
+<p>The rendered shape of the conjunct may also vary from font to font. For example, compare the sequences below which are identical except that Noto Serif Devanagari is used for the top row, and Annapurna SIL is used for the bottom row.</p>
+
+
+<table class="sequenceTable">
+<tr data-notes="KA,virama,KA,kk" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→" data-font="Noto Serif Devanagari WF"><td>क␣्␣क␣क्क</td></tr>
+<tr data-notes="KA,virama,KA,kk" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→" data-font="Annapurna SIL WF"><td>क␣्␣क␣क्क</td></tr>
+</table>
 </section>
 
 
 
+
+    
+    
+<section id="halfforms">
+<h4>Conjoined half-forms</h4>
+
+<p>A half-form is typically created by removing the vertical line in the consonant shape, where there is one. (The vertical line is associated with the inherent vowel, and around two-thirds of Devanagari consonant shapes contain one.) There is often some additional tweaking of glyphs in order to join the components neatly. The last consonant in the cluster retains its full shape.</p>
+
+
+<figure class="sideCaption">
+<table class="sequenceTable">
+<tr data-notes="TA,virama,VA,tʋ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>त␣्␣व␣त्व</td></tr>
+
+<tr data-notes="KA,virama,CA,kt͡ʃ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>क␣्␣च␣क्च</td></tr>
+
+<tr data-notes="TA,virama,SA,virama,VA,tsʋ" data-type="uname,uname,uname,uname,uname,ipa" data-prefix=",+,+,+,+,→"><td>त␣्␣स␣्␣व␣त्स्व</td></tr>
+</table>
+<figcaption>Examples of conjuncts formed by using half-forms.</figcaption>
+</figure>
+
+
+
+<p>A small number of  half-forms are only minimally different from side-by-side characters.</p>
+
+<figure id="fig_subtle_half_forms" data-notes="62px Noto Serif Devanagari">
+<div class="multiItemFigure">
+<img class="ex" src="images/subtle_half_forms_sep.png" alt="छग">
+<img class="ex" src="images/subtle_half_forms_cluster.png" alt="छ्ग">
+</div>
+<figcaption>An example of a conjunct with a subtle difference between separate consonants with intervening vowel (left), and a conjunct cluster (right). The difference is highlighted on the left.</figcaption>
+</figure>
+
+</section>
+    
+    
+    
+<section id="verticalcombinations">
+<h4>Vertical stacks</h4>
+<p>This is more common for Sanskrit, and few modern fonts reorder glyphs in this way, or do so for a limited number of combinations.</p>
+
+
+<figure class="sideCaption">
+<table class="sequenceTable">
+<tr data-notes="KA,virama,KA,kk" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>क␣्␣क␣क्क</td></tr>
+
+<tr data-notes="TTA,virama,TTHA,ʈʈʰ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ट␣्␣ठ␣ट्ठ</td></tr>
+
+<tr data-notes="DA,virama,DHA,ddʱ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>द␣्␣ध␣द्ध</td></tr>
+
+<tr data-notes="HA,virama,VA,hʋ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ह␣्␣व␣ह्व</td></tr>
+</table>
+<figcaption>Conjuncts formed by subjoining non-initial consonants.</figcaption>
+</figure>
+
+
+<!--<figure id="fig_stacks" data-notes="62px Annapurna SIL/Noto Serif Devanagari">
+<div class="multiItemFigure">
+<img class="ex" src="images/stacks1.png" alt="कक→क्क">
+<img class="ex" src="images/stacks2.png" alt="दब→द्ब">
+<img class="ex" src="images/stacks3.png" alt="हव→ह्व">
+</div>
+<figcaption>Conjuncts formed by subjoining non-initial consonants.
+</figcaption>
+</figure>-->
+</section>
+    
+    
+    
+<section id="ligatedconjuncts">
+<h4>Ligated conjuncts</h4>
+<p>Typically, only a small number of clusters are combined in a way that makes it difficult to spot the component parts. This is, however, the default for 3 particular clusters:</p>
+
+
+<figure class="sideCaption">
+<table class="sequenceTable">
+<tr data-notes="KA,virama,SSA,kʂ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>क␣्␣ष␣क्ष</td></tr>
+
+<tr data-notes="JA,virama,NYA,ɡj" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ज␣्␣ञ␣ज्ञ</td></tr>
+
+<tr data-notes="KA,virama,TA,kt" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>क␣्␣त␣क्त</td></tr>
+</table>
+<figcaption>Conjuncts formed by subjoining non-initial consonants.</figcaption>
+</figure>
+
+
+
+<!--<figure id="fig_ligatures" data-notes="62px Noto Serif Devanagari">
+<div class="multiItemFigure">
+<img class="ex" src="images/ligatures1.png" alt="कष→क्ष">
+<img class="ex" src="images/ligatures2.png" alt="जञ→ज्ञ">
+<img class="ex" src="images/ligatures3.png" alt="कत→क्त">
+</div>
+<figcaption>Conjuncts formed by ligation.</figcaption>
+</figure>-->
+</section>
+    
+    
+    
+<!--<section id="rconjuncts">
+<h4>Conjuncts with <span class="trans">ra</span></h4>
+<p>When <span class="codepoint" translate="no"><span lang="hi">&#x0930;</span> [<a href="/scripts/devanagari/block#char0930"><span class="uname">U+0930 DEVANAGARI LETTER RA</span></a>]</span> <em>follows</em> another consonant, it is typically rendered as a small, diagonal line to the left, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्र ग्र भ्र</span></span>After 6 consonants, however, it is rendered as an upside-down v shape below, ie. <span class="charExample" translate="no"><span class="ex" lang="hi">ट्र ठ्र ड्र ढ्र ड़्र छ्र</span></span>After <span class="codepoint" translate="no"><span lang="hi">&#x0924;</span> [<a href="/scripts/devanagari/block#char0924"><span class="uname">U+0924 DEVANAGARI LETTER TA</span></a>]</span> it produces <span class="charExample" translate="no"><span class="ex" lang="hi">त्र</span></span></p>
+
+<figure id="fig_r_following" data-notes="62px Noto Serif Devanagari">
+<div class="multiItemFigure">
+<img class="ex" src="images/r_following2.png" alt="कर→क्र">
+<img class="ex" src="images/r_following3.png" alt="टर→ट्र">
+<img class="ex" src="images/r_following1.png" alt="तर→त्र">
+</div>
+<figcaption>Conjuncts formed by a following <span class="name">ra</span>.</figcaption>
+</figure>
+
+
+
+<p>When ra <em>precedes</em> another consonant, it is  rendered as a small hook above the vertical line in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">र्क</span> <span class="trans">r͓k</span></span> <span class="charExample" translate="no"><span class="ex" lang="hi">र्ल</span> <span class="trans">r͓l</span></span>Where it precedes a cluster using half-forms, it is aligned with the vertical line of the trailing consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">र्स्प</span> <span class="trans">r͓s͓p</span></span>However, if there is a spacing vowel sign with a vertical line to the right of the cluster, it aligns with that, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">र्का</span> <span class="trans">r͓kā</span></span> <span class="charExample" translate="no"><span class="ex" lang="hi">र्की</span> <span class="trans">r͓kī</span></span>(This illustrates how the basic units of the script are orthographic syllables.)</p>
+
+<figure id="fig_r_repha" data-notes="62px Noto Serif Devanagari">
+<div class="multiItemFigure">
+<img class="ex" src="images/r_repha1.png" alt="र्क">
+<img class="ex" src="images/r_repha4.png" alt="र्ल">
+<img class="ex" src="images/r_repha3.png" alt="र्स्प">
+<img class="ex" src="images/r_repha2.png" alt="र्का">
+</div>
+<figcaption>The horizontal position of the hook for conjuncts formed by a preceding <span class="name">ra</span> follows the main vertical bar of the <em>syllable</em>.</figcaption>
+</figure>
+</section>-->
+
+
+
+<section id="rconjuncts">
+<h4>Conjuncts with <span class="uname">RA</span></h4>
+
+<p>When <span class="uname">RA</span> occurs in a cluster, either as a medial consonant or a coda followed by another consonant, there are special rules for rendering. See <a class="secref">medial_ra</a> and <a class="secref">coda_ra</a> for details.</p>
+</section>
+
+    
+    
+<section id="visiblevirama">
+<h4>Visible virama</h4>
+<p>The ability to form conjuncts depends on the richness of the font. Where a font is not able to produce a half-form or ligature, etc., it will leave a visible virama glyph below the initial consonant(s) to indicate the missing vowel sound, as illustrated in <a class="figref">fig_virama_visible</a>.</p>
+
+<figure id="fig_virama_visible">
+<div class="multiItemFigure">
+<img class="ex" src="images/virama_visible_tiro.png" alt="ङ्ख" data-notes="62px Tiro Hindi" style="margin-inline-end:5em;">
+<img class="ex" src="images/virama_visible_noto.png" alt="ङ्ख" data-notes="62px Noto Serif Devanagari" style="margin-inline-start:5em;">
+</div>
+<figcaption>A consonant cluster for which there exists a conjunct form in the Tiro Hindi font (left), but not in the Noto Serif Devanagari font (right). The latter indicates that this is a cluster by showing a visible virama<em></em>.</figcaption>
+</figure>
+
+
+<p>An important consequence of representing clusters in this way is that the syllable boundaries are different. For example, if we follow the cluster with a left-positioned vowel sign, it will now appear after the virama, rather than before the cluster, eg. compare the position of the pre-base vowel sign in <a class="figref">fig_virama_vowel</a>. This change is also reflected in segmentation of the text for line-breaking, inter-character spacing, etc.</p>
+
+<figure id="fig_virama_vowel">
+<div class="multiItemFigure">
+<img class="ex" src="images/virama_vowel_tiro.png" alt="ङ्खि" data-notes="62px Tiro Hindi" style="margin-inline-end:5em;">
+<img class="ex" src="images/virama_vowel_noto.png" alt="ङ्खि" data-notes="62px Noto Serif Devanagari" style="margin-inline-start:5em;">
+</div>
+<figcaption>Positioning of the pre-base vowel sign in relation to the same consonant cluster where a conjunct forms (left) vs. where a visible virama appears (right).</figcaption>
+</figure>
+
+<p>A visible virama may also be used with a single consonant, to indicate that it is to be pronounced without the inherent vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्</span> <span class="ipa">k</span></span></p>
+</section>
+</section>
+
+
+  
+
+
+
+
+  
 
 
 
@@ -1979,6 +2294,44 @@ Affricate </th>
 <p>Gemination and consonant lengthening are handled using the normal approach to consonant clusters (see <a class="secref">clusters</a>).</p>
 </section>
 
+
+
+
+
+
+
+<section id="joiner">
+<h3>Using ZWJ &amp; ZWNJ</h3>
+<p>It's possible to prevent the formation of conjuncts, and force a visible virama, using <span class="hx img">200C</span> ( ZWNJ ). To produce a half-form, rather than a ligated form, use <span class="hx img">200D</span> ( ZWJ ).</p>
+
+
+<figure class="sideCaption">
+<table class="sequenceTable">
+<tr data-notes="KA,virama,KA,,kk" data-type="uname,uname,uname,,ipa" data-prefix=",+,+,,→"><td>क␣्␣क␣␣क्क</td></tr>
+
+<tr data-notes="KA,virama,ZWJ,KA,kk" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→"><td>क␣्␣‍␣क␣क्‍क</td></tr>
+
+<tr data-notes="KA,virama,ZWNJ,KA,kk" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→"><td>क␣्␣‌␣क␣क्‌क</td></tr>
+</table>
+<figcaption>Use of ZWNJ and ZWJ to control conjunct rendering.</figcaption>
+</figure>
+
+<p>If a font doesn't have a half-form glyph for a letter (eg. such as <span class="ch">ड</span>), it will fall back to showing a visible virama (ie. <span class="ch noname">ड्‍</span>).</p>
+
+<p><span class="hx img">200D</span> can also be used to produce standalone half-forms (for educational text) such as the following:</p>
+
+
+<figure class="sideCaption">
+<table class="sequenceTable">
+<tr data-notes="KA,virama,ZWJ,k" data-type="uname,uname,uname,ipa" data-prefix=",+,+,+,→"><td>क␣्␣‍␣क्‍</td></tr>
+
+<tr data-notes="KA,virama,ZWJ,ɡʱ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>घ␣्␣‍␣घ्‍</td></tr>
+
+<tr data-notes="HA,virama,ZWJ,h" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→"><td>ह␣्␣‍␣ह्‍</td></tr>
+</table>
+<figcaption>Standalone half-forms produced using ZWJ.</figcaption>
+</figure>
+</section>
 
 
 
