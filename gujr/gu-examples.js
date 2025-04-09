@@ -40,7 +40,7 @@ autoExpandExamples.gu = `
 અંતરિક્ષજળ||
 અંતર્મસ્તિષ્ક||
 અંત્યમસ્તિષ્ક||
-અંદર|in||andar
+અંદર|inside|ˈən.§d̪ə§ɾ|andar
 અંધારું||
 અઃ||
 અકળાવું||
@@ -311,7 +311,7 @@ autoExpandExamples.gu = `
 ઇસ્પિતાલ||
 ઈંટ||
 ઈંટવાડો||
-ઈંડું|egg|ˈɪ§ɳ.§ɖũ|ī̃ḍũ
+ઈંડું|egg|ˈɪɳ.§ɖũ|ī̃ḍũ
 ઈંધણ||
 ઈમાનદારી||
 ઈસ્ટોનિયા||
@@ -796,13 +796,13 @@ autoExpandExamples.gu = `
 ઘડીભેર||
 ઘણું|many||ghaṇũ
 ઘનતા||
-ઘર|house|ɡar
-ઘરકામ|housework|ɡarkəm
+ઘર|house|ɡʱə§ɾ
+ઘરકામ|housework|ɡʱə§ɾ§kɑ§m
 ઘરકૂકડિયું||
 ઘરડાંઘર||
 ઘરડું||
 ઘરનું માણસ||
-ઘરપર|on the house|ɡarpar
+ઘરપર|on the house|ɡʱə§ɾ§pə§r
 ઘરબાંધકામ||
 ઘરવેરો||
 ઘસવું|to rub||ghasvũ
@@ -827,7 +827,7 @@ autoExpandExamples.gu = `
 ઘોડો||
 ઘ્રાણમસ્તિષ્ક||
 ચંદન||
-ચંદ્ર|moon|ˈt͡ʃən.§d̪ɾə|candra
+ચંદ્ર|moon|ˈt͡ʃən.§d̪§ɾə|candra
 ચંદ્રગ્રહણ||
 ચંદ્રમા||
 ચંદ્રવાર||
@@ -1598,8 +1598,8 @@ autoExpandExamples.gu = `
 પંજાબી||
 પંદર||
 પકડવું|to hold||pakaḍvũ
-પકડ઼|hold||pakaṛ
-પકડ઼ે|holds||pakaṛe
+પકડ|hold|pə§kə§ɖ|pakaṛ
+પકડે|holds|pə§k§ɖe|pakaṛe
 પકડી લેવું||
 પક્ષાઘાત||
 પક્ષી|bird||pakṣī
@@ -2597,7 +2597,7 @@ autoExpandExamples.gu = `
 વરતણિયો||
 વરવહુ||
 વરસ|year||varas
-વરસાદ|rain||varsād
+વરસાદ|rain|ˈʋə§ɾ.§sɑ§d̪|varsād
 વરાળ||
 વરાળયંત્ર||
 વરિયાળી||
@@ -3238,7 +3238,7 @@ autoExpandExamples.gu = `
 ક્ષેત્ર|battlefield|ˈkʃeː§t̪.§ɾə|kṣetra
 ખોખું|empty box|ˈkʰo.§kʰũ|khokhũ
 ગંગા|Ganges|ˈɡəŋ.§ɡɑ|gaṅgā
-ગોકળગાય|snail|ˈɡo.§kə.§ɭ§ɡɑ§j|gokaḷgāya
+ગોકળગાય|snail|ˈɡo.§kə§ɭ.§ɡɑ§j|gokaḷgāya
 ઘડો|pitcher, jug|ˈɡʱə.§ɽɔ|ghaḍo
 ઘેટું|sheep|ˈɡʱeː.§ʈũ|gheṭũ
 જનાજો|funeral|ˈd͡ʒə.§nɑ.§d͡ʒo|janājo

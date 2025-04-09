@@ -32,6 +32,13 @@ reflist = {
 },
 
 "u": {
+"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/",
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 16.0",
+"sub":"Chapter 12.4: South and Central Asia-I, Gujarati",
+},
+
+"u13": {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch12.pdf",
 "authors": "Unicode Consortium",
 "title":"The Unicode Standard, Version 13.0",
