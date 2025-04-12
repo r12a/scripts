@@ -4559,6 +4559,42 @@ function makeSequenceTables () {
 
             out += `<tr>`
             for (c=0;c<chars.length;c++) {
+                switch (chars[c]) {
+                    case '\u200C': chars[c] = `<img src="../../c/General_Punctuation/large/200C.png" alt="ZWNJ" style="height:1em;">`
+                    case '\u200D': chars[c] = `<img src="../../c/General_Punctuation/large/200D.png" alt="ZWJ" style="height:1em;">`
+                    }
+                console.log('charsc',chars[c])
+                out += `<td>${ prefixes[c] }</td>`
+                out += `<td><bdi class="ex" lang="${ window.langTag }" onclick="showCharDetailsInPanel(event)" ${ font }>${ chars[c] }</bdi><span class="${ types[c] }">${ notes[c] }</span></td>`
+                }
+            out += `</tr>`
+            }
+        tables[t].innerHTML = out
+        }
+    }
+
+
+
+
+function makeSequenceTablesX () {
+    // Converts simple markup to tables showing sequences of characters
+    var tables, out, trs, chars, notes, types, prefixes, font
+
+    tables = document.querySelectorAll('.sequenceTable')
+
+    for (t=0;t<tables.length;t++) {
+        out = ''
+        trs = tables[t].querySelectorAll('tr')
+        for (i=0;i<trs.length;i++) {
+            chars = trs[i].querySelector('td').textContent.split('\u{2423}')
+            notes = trs[i].dataset.notes.split(',')
+            types = trs[i].dataset.type.split(',')
+            prefixes = trs[i].dataset.prefix.split(',')
+            if (trs[i].dataset.font) font = ` style="font-family: '${ trs[i].dataset.font }'"`
+            else font = ''
+
+            out += `<tr>`
+            for (c=0;c<chars.length;c++) {
                 out += `<td>${ prefixes[c] }</td>`
                 out += `<td><bdi class="ex" lang="${ window.langTag }" onclick="showCharDetailsInPanel(event)" ${ font }>${ chars[c]}</bdi><span class="${ types[c] }">${ notes[c] }</span></td>`
                 }
