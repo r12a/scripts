@@ -15,6 +15,8 @@ parameters[0] = parameters[0].substring(1)
 for (var p=0;p<parameters.length;p++) {
 	pairs = parameters[p].split('=')
 	if (pairs[0] == 'q' && pairs[1]) ch = decodeURIComponent(pairs[1])
+	if (pairs[0] == 'showX') showX = true
+    else showX = false
 	}
 
 
@@ -57,9 +59,31 @@ function showCharDetails (ch) {
         return
         }  
     
+    
     charBlock = document.createElement('div')
     charBlock.className = 'character'
     charBlock.title = ch
+    
+    // add a close button only if showX is in the parameter set
+    if (showX) {
+        showXDiv = document.createElement('div')
+        showXDiv.id = 'closeIframe'
+        showXDiv.textContent = 'X'
+        showXDiv.title = 'Close this window'
+        showXDiv.style.position = 'fixed'
+        showXDiv.style.bottom = '1rem'
+        showXDiv.style.right = '1rem'
+        showXDiv.style.fontSize = '2rem'
+        showXDiv.style.color = '#ccc'
+        showXDiv.style.cursor = 'pointer'
+        showXDiv.style.width = '3rem'
+        showXDiv.style.background = 'seashell'
+        showXDiv.style.textAlign = 'center'
+        showXDiv.style.borderRadius = '.8rem'
+        showXDiv.addEventListener("click", function() {
+            window.parent.postMessage("closeIframe", "*"); })
+        charBlock.appendChild(showXDiv)
+        }
     
     
     // Add the current character - use shape column, if it is defined
