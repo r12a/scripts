@@ -289,6 +289,9 @@ function initialise () {
 			switchTabTo('find_tab')
 			document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')
 			}
+		if (pairs[0] == 'ipa') { // remove items with no IPA
+			hideAllNonIPA()
+			}
 		}
     
     // add a dialogue box to notify about Copying
