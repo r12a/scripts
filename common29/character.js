@@ -622,6 +622,7 @@ function parseSpreadsheet (spreadsheet) {
 			for (let i=1;i<items.length;i++) window.spreadsheetRows[items[1]].push(items[i])
 			}
 	   }
+    setMarks(langTag)
 	}
 
 
