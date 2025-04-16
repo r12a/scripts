@@ -69,8 +69,8 @@ var setMarkup = ''
 if (collections.length === 0) setMarkup = '<div class="set">none</div>'
 else {
     for (set=0;set<collections.length; set++) {
-        setMarkup += `<div class="set"><span class="symbol" onclick="navigator.clipboard.writeText(this.textContent)">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars }</div>`
-        //setMarkup += `<div class="set"><span class="symbol" onclick="navigator.clipboard.writeText(this.textContent)">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars.replace(/\|/g,' &nbsp; ') }</div>`
+        setMarkup += `<div class="set"><span class="symbol" onclick="document.getElementById('needle').value += this.textContent">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars }</div>`
+        //setMarkup += `<div class="set"><span class="symbol" onclick="navigator.clipboard.writeText(this.textContent)">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars }</div>`
         }
     }
 
@@ -121,7 +121,7 @@ if (document.getElementById('tabPlaceholder')) {
 
 
     <div id="find_tab_area">
-    <p style="margin-inline-end:1em;"><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')"></label> &nbsp;&nbsp;
+    <p style="margin-inline-end:1em;"><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')" style="font-size:2rem;"></label> &nbsp;&nbsp;
     Search in: <select id="searchCol">
     <option value="all">All</option>
     <option value="0">Terms</option>
