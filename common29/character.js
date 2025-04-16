@@ -72,7 +72,7 @@ function showCharDetails (ch) {
         showXDiv.title = 'Close this window'
         showXDiv.style.position = 'fixed'
         showXDiv.style.bottom = '1rem'
-        showXDiv.style.right = '1rem'
+        showXDiv.style.left = '1rem'
         showXDiv.style.fontSize = '2rem'
         showXDiv.style.color = '#ccc'
         showXDiv.style.cursor = 'pointer'
