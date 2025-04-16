@@ -711,6 +711,16 @@ function hideAllNonIPA () {
 
 
 
+function copyCharToClipboard (textToCopy) {
+	// copy an item in List Characters to the clipboard
+    navigator.clipboard.writeText(textToCopy)
+    document.getElementById('copyNotice').style.display = 'block'
+    setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')
+	}
+
+function showMenuText () {} // dummies so we can use the same code as for pickers
+function hideMenuText () {}
+
 
 
 
