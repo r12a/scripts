@@ -121,7 +121,7 @@ if (document.getElementById('tabPlaceholder')) {
 
 
     <div id="find_tab_area">
-    <p style="margin-inline-end:1em;"><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')" style="font-size:2rem;"></label> &nbsp;&nbsp;
+    <!--p style="margin-inline-end:1em;"><label>Find words containing: <input id="needle" type="text" placeholder="(Regex ok)"  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')" style="font-size:2rem;"></label> &nbsp;&nbsp;
     Search in: <select id="searchCol">
     <option value="all">All</option>
     <option value="0">Terms</option>
@@ -133,15 +133,45 @@ if (document.getElementById('tabPlaceholder')) {
     
     <button onclick="hideAllNonIPA()" title="Show only items with an IPA transcription in this list.">With IPA</button>
     <button onclick="hideNonIPA()" title="Show only items with an IPA transcription in the list or in Wiktionary.">␣</button>
-    </p>
+    </p-->
 
 
-    <details><summary style="font-style: italic; font-size: 80%;">Sets</summary>
+
+
+    <div style="display:flex; flex-direction: row; flex-wrap: nowrap; margin-inline-start: 7.5%; margin-inline-end:1em; line-height:1rem; align-items:center; justify-content:start; margin-block-end:1rem;">
+    
+    <span>Find words containing:<br><span style="font-size:70%; color:#999;">Use regex syntax</span></span>
+    
+    <input id="needle" type="text" placeholder=">"  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')" style="font-size:2rem; margin-inline: .5rem; width:15rem; border-radius:.25rem; border:1px solid tan;">
+    
+    <span>Search in:</span>
+    <select id="searchCol" style="margin-inline:.5em;border: 1px solid tan;
+    height: 2rem;
+    border-radius: 10px;
+">
+    <option value="all">All</option>
+    <option value="0">Terms</option>
+    <option value="1">Meanings</option>
+    <option value="2">IPA</option>
+    <option value="3">Transcriptions</option>
+    </select>
+
+    <button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')" style="margin-inline:.1em;">Go</button>
+    
+    <button onclick="hideAllNonIPA()" title="Show only items with an IPA transcription in this list." style="margin-inline:.5em;">With IPA</button>
+    <button onclick="hideNonIPA()" title="Show only items with an IPA transcription in the list or in Wiktionary." style="margin-inline:.1em;">␣</button>
+    </div>
+
+
+    <details><summary style="font-style: italic; font-size: 80%; margin-block-end:1rem;">Sets</summary>
     ${ setMarkup }
     </details>
     
         
-    <p style="font-style: italic; font-size: 80%;"><label>Items found: <span id="found">–</span></label><br/><table id="foundItems"></table></p>
+    <!--p style="font-style: italic; font-size: 80%;"><label>Items found: <span id="found">–</span></label><br/--><table>
+    <thead><tr style="position: sticky; top: 0; background: white;"><th colspan="2" style="color:chocolate; font-size:.8em;">Items found: <span id="found">–</span></th><th>meaning</th><th>ipa</th><th>transcription</th><th>alt</th><th>notes</th><th>get markup</th></tr></thead>
+    <tbody id="foundItems"></tbody>
+    </table><!--/p-->
     </div>
 
 
@@ -167,15 +197,20 @@ if (document.getElementById('tabPlaceholder')) {
     </ol>
     
     <p>For many terms, adjacent columns provide meanings and IPA and other transcriptions (and sometimes notes). This is a work in progress.</p>
+    
+    <p>In the <span class="kw">Find</span> tab, many items indicate that they have IPA transcriptions in Wiktionary using <span class="kw">\u2423</span> in the <span class="kw">IPA</span> column. Click on the <img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;height:.5em;"> icon to open the relevant Wiktionary page. The <span class="kw">transcription</span> column for these entries is likely to have an auto-generated, greyed out transliteration of the term, to help locate useful items.</p>
 
     <p>Clicking on a term opens a panel that decomposes it into <i class="kw">base+combining_mark(s)</i> units, and annotates them with a Latin transliteration and, where available, an IPA transcription. The characters are also listed, one by one, with their Unicode names. You can dismiss the panel by clicking on X, or by hitting the ESC key.</p>
+        
+    <p>Clicking on a character in the <span class="kw">Frequency</span> tab copies it to the clipboard.  This can often be a useful way of getting a character you want to search for.</p>
+    
 
     <h2>Searching & sets</h2>
     <p>In the <samp>Find</samp> tab you can search for any sequence of characters, and you can use regular expressions, too. For example, <samp>a.a</samp> will show any terms containing two a's with one intervening character (of any kind). And <samp>[^ ]Ⓥ</samp> will show words with independent vowels that appear word-medially.</p>
     
     <p>To search for characters at word boundaries, type a space before or after the character(s).</p>
     
-    <p>The <samp>Sets</samp> pulldown presents you with shortcuts, tailored to the language of the term base, which provide significant help for certain types of search. Copy the tokens to the search field to represent one of a named set of characters. For example, <samp>ⒸⓋⓋ</samp> will typically search for any consonant followed by any 2 vowels, and <samp>ⓋxⒸ</samp> may reveal a word-medial, syllable-final use of x.</p>
+    <p>The <samp>Sets</samp> pulldown presents you with shortcuts, tailored to the language of the term base, which provide significant help for certain types of search. The tokens represent one of a named set of characters. For example, <samp>ⒸⓋⓋ</samp> will typically search for any consonant followed by any 2 vowels, and <samp>ⓋxⒸ</samp> may reveal a word-medial, syllable-final use of x. Just click on the token to insert it into the search field.</p>
     
     <h2>Icons</h2>
     
@@ -185,6 +220,10 @@ if (document.getElementById('tabPlaceholder')) {
     
     <h2>URL parameters</h2>
     <p>You can create a link that will automatically search for something using <code class="kw">?q=xxx</code> (where xxx represents one or more characters). For example, <a href="https://r12a.github.io/scripts/mlym/ml_vocab.html?q=്" target="_blank">find words using the chandrakkala in the Malayalam database</a>.</p>
+    
+    <p>If you add <code class="kw">&ipa</code> after the <code class="kw">q</code> parameter, the app will show only those items that have an ipa transcription.</p>
+    
+    <p>It is also possible to indicate which column should be searched, using the <code class="kw">col</code> parameter. The values to use are <strong>0</strong> for terms, <strong>1</strong> for meanings, <strong>2</strong> for IPA, and <strong>3</strong> for transcriptions.</p>
     </div>
 `
     }
@@ -390,7 +429,7 @@ function switchTabTo (tab) {
 
 
 function findWords (reg) { 
-
+    // console.log('>> findWords(',reg,')')
     if (reg === '') return
     
     for (set=0;set<collections.length;set++) {
@@ -441,7 +480,7 @@ function findWords (reg) {
 
 
         // add the term with an onlick to explode
-        // first, remove ascii apostrophe to avoid crashing the codde
+        // first, remove ascii apostrophe to avoid crashing the code
         termToLookUp = itemArray[TERM].trim().toLocaleLowerCase().replace(/'/,'ʼ')
         out += `<span onclick="showNameDetails('${ termToLookUp }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw].trim() }')" class="term">${ itemArray[TERM] }</span>`
         
@@ -459,13 +498,26 @@ function findWords (reg) {
 
 		out += '<td>'+itemArray[MEANING]+'</td>'
 
+
+
+        // add the IPA
+        generatedTranscription = '' // if IPA has ␣ generate & store a transcription
+        if (itemArray[IPA]===' ␣ ') { 
+            var termChars = [...itemArray[TERM]]
+            for (t=1;t<termChars.length-1;t++) generatedTranscription += autoTranslitArray[termChars[t]]
+            }
+
         out += '<td class="tr ipaCol">'+itemArray[IPA]+'</td>'
+
+
+
 
         // if this is an abjad, check for vowelled alternatives
         if (itemArray[TRANS].match('#')) {
             var link = itemArray[TRANS].replace(/#/g,'|')
             out += `<td class="tr"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
             }
+        else if (generatedTranscription !== '') out += `<td class="tr" style="color:#ccc;"> ${ generatedTranscription }</td>`
         else out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
 
         out += '<td class="tr">'+itemArray[EQUIV]+'</td>'
@@ -519,7 +571,7 @@ function findWords (reg) {
            
            
             out += `<td class="markupCol">`
-            if (i===0) out += `get markup<br>`
+            //if (i===0) out += `get markup<br>`
             out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
             }
 
