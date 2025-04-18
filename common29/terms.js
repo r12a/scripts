@@ -142,7 +142,7 @@ if (document.getElementById('tabPlaceholder')) {
     
     <span>Find words containing:<br><span style="font-size:70%; color:#999;">Use regex syntax</span></span>
     
-    <input id="needle" type="text" placeholder=">"  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')" style="font-size:2rem; margin-inline: .5rem; width:15rem; border-radius:.25rem; border:1px solid tan;">
+    <input id="needle" type="text" placeholder="…"  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')" style="font-size:2rem; margin-inline: .5rem; width:15rem; border-radius:.25rem; border:1px solid tan;">
     
     <span>Search in:</span>
     <select id="searchCol" style="margin-inline:.5em;border: 1px solid tan;
@@ -223,7 +223,10 @@ if (document.getElementById('tabPlaceholder')) {
     
     <p>If you add <code class="kw">&ipa</code> after the <code class="kw">q</code> parameter, the app will show only those items that have an ipa transcription.</p>
     
-    <p>It is also possible to indicate which column should be searched, using the <code class="kw">col</code> parameter. The values to use are <strong>0</strong> for terms, <strong>1</strong> for meanings, <strong>2</strong> for IPA, and <strong>3</strong> for transcriptions.</p>
+    <p>It is also possible to indicate which column should be searched, using the <code class="kw">&col</code> parameter. The values to use are <strong>0</strong> for terms, <strong>1</strong> for meanings, <strong>2</strong> for IPA, and <strong>3</strong> for transcriptions.</p>
+    
+    <p>For example, the following URL will search the Tamil term list for the letter ɖ in the IPA column, and only show results for which there's an entry in the IPA column:<br>
+    <a href="https://r12a.github.io/scripts/taml/ta_vocab.html?q=%C9%96&ipa&col=2" target="_blank"><code class="kw">r12a.github.io/scripts/taml/ta_vocab.html?q=%C9%96&ipa&col=2</code></a></p>
     </div>
 `
     }
