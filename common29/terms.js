@@ -69,7 +69,7 @@ var setMarkup = ''
 if (collections.length === 0) setMarkup = '<div class="set">none</div>'
 else {
     for (set=0;set<collections.length; set++) {
-        setMarkup += `<div class="set"><span class="symbol" onclick="document.getElementById('needle').value += this.textContent">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars }</div>`
+        setMarkup += `<div class="set"><span class="symbol" onclick="document.getElementById('needle').value += this.textContent;document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars }</div>`
         //setMarkup += `<div class="set"><span class="symbol" onclick="navigator.clipboard.writeText(this.textContent)">${ collections[set].symbol }</span> <span class="desc">${ collections[set].desc }</span> ${ collections[set].chars }</div>`
         }
     }
