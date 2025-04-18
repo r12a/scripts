@@ -97,7 +97,7 @@ autoExpandExamples.ta = `
 அகராதி||␣
 அகரு||␣
 அகற்சி||␣
-அகற்று||␣
+அகற்று|to remove|a§ɡa§t§rɯ|akaṟṟu
 அகலம்||␣
 அகல்||␣|
 அகழி||␣
@@ -2319,7 +2319,7 @@ autoExpandExamples.ta = `
 கிட்டி||␣|
 கிட்டு||␣|
 கிணறு||␣
-கிணற்றாமை||␣
+கிணற்றாமை|indian black turtle|ki§ɳa§t§raː§mai|kiṇaṟṟāmai
 கிணற்றுக்கட்டு||␣
 கிண்டி||␣|
 கிண்ணம்||␣|
@@ -5164,7 +5164,7 @@ autoExpandExamples.ta = `
 பற்பசை||␣|
 பற்றவை||␣|
 பற்றாக்குறை||␣|
-பற்றி|about|pa§t§ri|paʈʈɾi
+பற்றி|about|pa§t§ri|paṟṟi
 பற்று||␣|
 பல|many|pa§la|pala
 பலகை||␣|
@@ -6353,7 +6353,7 @@ autoExpandExamples.ta = `
 மறை||␣
 மற்ற|other|ma§t§ɾa|maṟṟa
 மற்றப்படி||␣|
-மற்று||␣
+மற்று|another|ma§t§rɯ|maṟṟu
 மற்றும்|and|ma§t§ɾu§m|maṟṟum
 மற்றை||␣
 மலக்கழிவு||␣
@@ -7124,7 +7124,7 @@ autoExpandExamples.ta = `
 வரம்||␣
 வரம்பு||␣
 வரலாறு||␣
-வரலாற்று||␣
+வரலாற்று|historical|ʋa§ɾa§laː§t§rɯ|varalāṟṟu
 வரவு||␣
 வரவேற்கிறேன்||␣
 வராகம்||␣|
