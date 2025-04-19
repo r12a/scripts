@@ -4573,7 +4573,7 @@ function makeExampleArticleDetails (chars, clang, base, target, panel, list, tra
     out = '<tr>'
     
     
-    out += `<th class="cdChar" onclick="this.closest('article').remove()"><span class="exCharClose">x</span></th>`
+    out += `<th class="cdChar" onclick="this.closest('article').remove()"><span class="exCharClose">X</span></th>`
     
     
     // add the links
@@ -4775,7 +4775,7 @@ function makeArticleDetails (chars) {
     for (var i=0;i<charArray.length;i++) {
         if (spreadsheetRows[charArray[i]]) {
             // make title to side
-            out += `<tr><th class="cdChar" onclick="this.closest('article').remove()"><span class="ex" lang="${ lang }">${ charArray[i] }</span><br><span class="cdCharClose">x</span></th>`
+            out += `<tr><th class="cdChar" onclick="this.closest('article').remove()"><span class="ex" lang="${ lang }" onclick="copyCharToClipboard('${ charArray[i] }');">${ charArray[i] }</span><br><span class="cdCharClose">X</span></th>`
             
             // add the full details
             out += '<td class="cdData">'
