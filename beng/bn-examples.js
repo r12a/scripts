@@ -93,7 +93,7 @@ autoExpandExamples.bn = `
 অকরণ||␣|
 অকরণীয় ঘর||␣|
 অকরুণ||␣|
-অকর্তা||␣|
+অকর্তা|passive, inactive|ˈɔ§kɔ§ɹ§t̪a|okorta
 অকর্মণ্য||␣|
 অকর্মা||␣|
 অকর্মিষ্ঠ||␣|
@@ -554,7 +554,7 @@ autoExpandExamples.bn = `
 অগ্রিয়||␣|
 অগ্রীয়||␣|
 অগ্রে||␣|
-অগ্র‍্য||␣|
+অগ্র্য|former, previous|ˈɔ§ɡ§ɾɔ§e̯o|ôgrô|||অগ্র‍্য
 অঘ||␣|
 অঘটন||␣|
 অঘটনঘটনপটিয়সী||␣|
@@ -1450,7 +1450,7 @@ autoExpandExamples.bn = `
 উচ্ছব||␣|
 উচ্ছিষ্ট||␣|
 উচ্ছ্বাস||␣|
-উচ্‌চারণ|pronunciation|u§t͡ʃ§t͡ʃɑ§rɔ§n
+উচ্‌চারণ|pronunciation|u§t͡ʃ§§t͡ʃɑ§rɔ§n
 উছব||␣|
 উজবেক ভাষা||
 উজবেকিস্তান||
@@ -1772,7 +1772,7 @@ autoExpandExamples.bn = `
 ওলি||␣|
 ওশেনিয়া||␣|
 ওষুধ||␣|
-ওষ্ঠ্য||␣|
+ওষ্ঠ্য|labial (phon.)|ˈo§ʃ§ttʰo§‹|ōśṭṭho
 ওসমান||␣|
 ওস্তাদ|teacher|o§s§t̪a§d̪
 ওহাইও||␣
@@ -1841,7 +1841,7 @@ autoExpandExamples.bn = `
 কম্পাস||␣|
 কম্পিউটার||␣
 কম্পিউটিং||␣
-কম্প্যাক্ট ডিস্ক||␣|
+কম্প্যাক্ট ডিস্ক|compact disk|ˈkɔ§m§p§æ§k§ʈ§‿§ɖi§s§k|komppakṭo ḍisko
 কম্বল||␣
 কম্বোডিয়া||
 কয়||␣|
@@ -1880,7 +1880,7 @@ autoExpandExamples.bn = `
 কর্পূর||␣|
 কর্বুর||␣|
 কর্ম||␣
-কর্মকর্তা||␣|
+কর্মকর্তা|official, officer|ˈkɔ§ɹ§mɔ§kɔ§ɹ§t̪a|kormokorta
 কর্মসূচি||␣|
 কলকাতা|Kolkata|ˈkolˌkat̪a
 কলজে|liver||kôlje
@@ -2127,7 +2127,7 @@ autoExpandExamples.bn = `
 কুশিয়ার|sugarcane|kuʃijaɾ
 কুষ্টিয়া জেলা||
 কুষ্টিয়া||␣|
-কুষ্ঠ||␣
+কুষ্ঠ|leprosy|ˈku§ʃ§tʰo|kuśṭho
 কুসকুস||␣|
 কুসুম|flower|kuʃum
 কুস্তি|wrestling|kust̪i
@@ -2236,7 +2236,7 @@ autoExpandExamples.bn = `
 কৌশল||␣|
 কৌশিক||␣|
 ক্যম্পাস|campus|k§yæ§m§pa§s
-ক্যম্‌পাস|campus|k§yæ§m§pa§s
+ক্যম্‌পাস|campus|k§yæ§m§§pa§s
 ক্যা||␣
 ক্যাঁ||␣|
 ক্যাঁচাল||␣|
@@ -2470,7 +2470,7 @@ autoExpandExamples.bn = `
 গরু||␣
 গরুড়||␣|
 গরুর দুধ||
-গর্ত|hole|␣|gɔrtô
+গর্ত|hole|ɡɔ§ɾ§t̪o|gɔrtô
 গর্দভ||␣|
 গর্দান|neck|ɡɔɾ.d̪an
 গর্ভধারণ||
@@ -2997,7 +2997,7 @@ autoExpandExamples.bn = `
 জনম||␣|
 জনসংখ্যা||␣|
 জন্তু|animal|␣|jôntu
-জন্ম||␣
+জন্ম|birth|ˈdʑɔ§n§mo|jonmo
 জন্মদিন|birthday|ˈd͡ʒɔnmoˌd̪in
 জন্মস্থান||␣|
 জন্য|for|d͡ʒɔ§nno§‹
@@ -4733,7 +4733,7 @@ autoExpandExamples.bn = `
 প্রোটন||
 প্রোস্টেট গ্রন্থি||
 প্রোস্টেট||
-প্রৌঢ়||␣|
+প্রৌঢ়|adult|ˈp§ɾou̯§ɹoˑ|prōuṛh
 প্লাজমা||
 প্লাটিনাম||␣|
 প্লাস্টিক||␣
@@ -5058,7 +5058,6 @@ autoExpandExamples.bn = `
 বাঘিনি||␣
 বাঙালি নদী||
 বাঙালি||␣
-বাঙালী|Bengali (person)|bɑ§ŋɡɑ§liː
 বাঙ্গালা||
 বাঙ্গালী||␣
 বাচাল||␣|
@@ -5744,7 +5743,7 @@ autoExpandExamples.bn = `
 মরোক্কো||
 মর্ত||␣|
 মর্তমান||␣|
-মর্ত্ত্য||␣|
+মর্ত্ত্য|mortal (alt.)|ˈmɔ§ɹ§t̪§t̪§t̪o|morttto
 মর্ত্য||␣|
 মর্দ||␣|
 মর্দনী||␣|
@@ -6368,7 +6367,7 @@ autoExpandExamples.bn = `
 রাশি||␣|
 রাশিয়া||␣
 রাশেদ||␣|
-রাষ্ট্র|state, country|ɾaʃ.ʈɾɔ
+রাষ্ট্র|state, country|ˈra§ʃ§t§ɹo|raśṭro
 রাষ্ট্রপতি||␣|
 রাসেল||␣|
 রাস্তা|road, street|ɾa§s§t̪a|raśta
@@ -6451,7 +6450,7 @@ autoExpandExamples.bn = `
 লকার||␣|
 লক্ষ||␣|
 লক্ষ্মণ||␣|
-লক্ষ্মী||␣|
+লক্ষ্মী|Lakshmi|lo§kkʰi§‹§‹|lokkhi
 লক্ষ্মীপুর জেলা||
 লক্ষ্মীপেঁচা|barn owl|lo§k§kʰ§i§pæ̃§ca
 লক্ষ্মীফল||␣
@@ -6643,7 +6642,7 @@ autoExpandExamples.bn = `
 শায়ের||
 শারমেন্দাগী||␣
 শারীরিক||␣|
-শার্ট|shirt|ʃaɹt|śarṭo
+শার্ট|shirt|ʃa§ɹ§t|śarṭo
 শাল||␣|
 শালগম|turnip|ʃalɡɔm
 শালা||␣|
@@ -7653,6 +7652,7 @@ autoExpandExamples.bn = `
 
 ʼপরে|above||ʼpôre||x
 কʼরে|after||kôʼre||x
+বাঙালী|Bengali (person)|bɑ§ŋɡɑ§liː
 
 
 
