@@ -4838,7 +4838,7 @@ function makeSequenceTables () {
             out += `<tr>`
             for (c=0;c<chars.length;c++) {
                 switch (chars[c]) {
-                    case '\u200C': chars[c] = `<img src="../../c/General_Punctuation/large/200C.png" alt="ZWNJ" style="height:1em;">`
+                    case '\u200C': chars[c] = `<img src="../../c/General_Punctuation/large/200C.png" alt="ZWNJ" style="height:1em;">`;break
                     case '\u200D': chars[c] = `<img src="../../c/General_Punctuation/large/200D.png" alt="ZWJ" style="height:1em;">`
                     }
                 console.log('charsc',chars[c])
