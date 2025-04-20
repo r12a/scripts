@@ -13,4 +13,5 @@ var collections = [
 { symbol:'Ⓔ', desc:'Extended consonants', chars:'(ড়|ঢ়|য়)' },
 { symbol:'Ⓕ', desc:'Finals', chars:'(ঁ|ং|ঃ|ৗ|ৎ)' },
 { symbol:'Ⓘ', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+{ symbol:'ⓧ', desc:'Virama', chars:'(\u09CD)' },
 ]
