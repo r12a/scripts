@@ -1805,7 +1805,7 @@ autoExpandExamples.bn = `
 কড়ে আঙ্গুল||
 কণা||␣|
 কণ্ঠ্য||␣|
-কত|how much|ˈkɔt̪o
+কত|how much|ˈkɔ§t̪o
 কথন||␣|
 কথা||␣
 কথাবার্তা||␣
