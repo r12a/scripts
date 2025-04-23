@@ -13,5 +13,6 @@ var collections = [
 { symbol:'ⓒ', desc:'All combining marks', chars:'(ੀ|ੂ|ਿ|ੁ|ੇ|ੋ|ੈ|ੌ|ਾ|ੰ|ਂ|ੱ|ੵ|਼|੍|ਃ|ੑ)' },
 { symbol:'Ⓣ', desc:'Tonal stops', chars:'(ਘ|ਝ|ਢ|ਧ|ਭ)' },
 { symbol:'Ⓘ', desc:'Invisibles (ZWJ, ZWNJ)', chars:'(\u200C|\u200D)' },
-{ symbol:'🅥', desc:'Halant (virama)', chars:'(\u0A4D)' },
+{ symbol:'ⓧ', desc:'Halant (virama)', chars:'(\u0A4D)' },
+{ symbol:'🅲', desc:'Latin consonants', chars:'(b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z)' },
 ]
