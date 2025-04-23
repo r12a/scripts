@@ -429,7 +429,7 @@ autoExpandExamples.pa = `
 ਕੌਸ਼ਲ||␣|
 ਕ੍ਰਿਸਮਸ||␣|
 ਕ੍ਰੋਏਸ਼ੀਆ|Croatia||kroēśīā
-ਕ੍ਰੋਧ||␣|
+ਕ੍ਰੋਧ|anger, wrath|k§ɾoː˦.§d̪ə̆|krodh|کرودھ
 ਕੜਛੀ||␣|
 ਕੜਾ||␣|
 ਕੜਾਹ|halva|kə.§ɽäː˩˥§‹|kaṛāh|کڑاہ
@@ -511,7 +511,7 @@ autoExpandExamples.pa = `
 ਖੁਸ਼||
 ਖੁੰਢਾ|dull (as a knife)||khuṇḍhā
 ਖੇਉਣਾ||␣|
-ਖੇਡਣਾ|to play|␣|khēḍṇā
+ਖੇਡਣਾ|to play|kʰeː.§ɖə§̆ɳaː|kheḍăṇā
 ਖੇਵਾ||␣|
 ਖੈਰਾ||␣|
 ਖੋਖਰ||␣|
@@ -1405,7 +1405,7 @@ autoExpandExamples.pa = `
 ਫੂਸੀ||␣|
 ਫੇਰ||␣|
 ਫੈਂਟਾ||
-ਫੜਨਾ|to hold|␣|phaṛnā
+ਫੜਨਾ|to hold|pʰə§ɽᵊ.§näː|phaṛnā|پھڑنا
 ਫੰਬਾ||
 ਫੱਗਣ||␣|
 ਫੱਟ||
@@ -2270,7 +2270,7 @@ autoExpandExamples.pa = `
 ਹਿੰਦਵਾਣਾ||␣|
 ਹਿੰਦੀ||
 ਹਿੰਦੋਸਤਾਨ||
-ਹਿੰਮਤ|guts||himmat
+ਹਿੰਮਤ|bravery, courage|ɦɪm.§mə§t̪|himmat|ہمت
 ਹਿੰਸਾ||
 ਹਿੱਕ|chest, breast|bik§kᵊ
 ਹੀ||

@@ -992,6 +992,16 @@ alveolar</th>
 </figure>
 <details class="figureSub"><summary>show composition</summary><p><span class="eg inline" lang="pa">ਧੂੰਆਂ</span></p>
 </details>
+
+
+<p>The <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/#G746330" target="_blank">Unicode Standard</a> describes ‘special cases’ where the bindi dot needs to appear to the <em>left</em> of the letter <span class="ch">ੀ</span>.  To produce this effect, type and store the bindi and vowel sign in the reverse order compared to the norm.</p>
+
+<table class="sequenceTable">
+<tr data-notes="KA,I,bindi,kin" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ਕ␣ੀ␣ਂ␣ਕੀਂ</td></tr>
+
+<tr data-notes="KA,bindi,I,kin" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ਕ␣ਂ␣ੀ␣ਕਂੀ</td></tr>
+</table>
+
 </section>
 </section>
 
@@ -1373,14 +1383,10 @@ alveolar</th>
 
 
 
-<details class="tbd">
+<!--<details class="tbd">
 <summary>Sections needing attention ...</summary>
 
-<section id="onsets">
-<h4>Onsets</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-</details>
+</details>-->
 </aside>
 
 
@@ -1539,6 +1545,35 @@ to
 
 
 
+<section id="onsets">
+<h3>Onsets</h3>
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
+
+<p>Consonant clusters in syllable onsets are not particularly common in Punjabi.  The more common variety involves a medial <span class="uname">RA</span> or a <span class="uname">VA</span> after the initial consonant.  These are normally rendered as reduced subjoined forms below the preceding consonant (see <a class="secref">stacks</a>), eg.</p>
+
+<p><span class="eg" lang="pa">ਕ੍ਰੋਧ</span></p>
+<p><span class="eg" lang="pa">ਸ੍ਵਰ</span></p>
+
+
+
+
+    
+<section id="yakash">
+<h4>Yakash</h4>
+
+<p>Occasionally, a cluster ending with <span class="trans">y</span>  is rendered using <span class="ch">ੵ</span>, though this appears to be quite rare, eg.</p>
+<p><span class="charExample" translate="no"><span class="ex" lang="pa">ਕਲੵਚਰੈ</span> <span class="transc">kly̆ʧrɛ</span> <span class="meaning">culture</span></span></p>
+</section>
+
+
+
+
+</section>
+
+
+
+
+
 
 
 
@@ -1618,7 +1653,7 @@ to
 
 <p>Normally Gurmukhi produces stacks to indicate a consonant cluster for only 3 combinations. In each case, the second letter in the cluster appears subjoined to the first.</p>
 
-<p>The stacking behaviour is produced by adding <span class="hx">0A4D</span> between the two characters to be stacked.  The lower character's shape and size are significantly reduced, eg.</p>
+<p class="info">The stacking behaviour is produced by adding <span class="hx">0A4D</span> between the two characters to be stacked.  The lower character's shape and size are significantly reduced, eg.</p>
 
 <table class="sequenceTable">
 <tr data-notes="PA,virama,RA,pr" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ਪ␣੍␣ਰ␣ਪ੍ਰ</td></tr>
@@ -1635,11 +1670,6 @@ to
 
 <p>Syllable-initial clusters also occur with <span class="trans">r</span> and occasionally <span class="trans">v</span>, and are also indicated using subjoined forms, eg. <span class="eg" lang="pa">ਪ੍ਰਬੰਧ</span> <span class="eg" lang="pa">ਸ੍ਵਰਗ</span> Subjoined <span class="trans">v</span> is much less common in modern text.</p>
 
-<p class="info  ">To indicate conjunct clusters in Unicode text add <span class="ch">੍</span> before the subjoined character, eg.
-<span class="ex">ਪ੍ਰ</span>
-is produced by the sequence
-<span class="hx split">0A2A 0A4D 0A30</span>.
-</p>
 
 <p>The virama may also be used occasionally to suppress the vowel  in Sanskritised text, or in dictionaries for extra phonetic information.<tt>ws</tt> In some fonts subjoined forms are available for other consonant clusters, though they are not used unless the content author uses a virama.</p>
 
@@ -1657,14 +1687,18 @@ The table allows you to test results for various fonts.</p>
 
 
 
+<div class="btw">
+<section id="dya">
+<h4>Half-forms</h4>
 
-    
-<section id="yakash">
-<h4>Yakash</h4>
+<p>Modern Gurmukhi texts don't feature half-forms like those in Devanagari, but a few pairings are attested in older texts. They include the following.  In a few other cases, the half-form is sometimes the first consonant in the cluster, and other times the second. Read more in the <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/#G34625" target="_blank">Unicode Standard</a>.</p>
 
-<p>Occasionally, a cluster ending with <span class="trans">y</span>  is rendered using <span class="ch">ੵ</span>, though this appears to be quite rare, eg.</p>
-<p><span class="charExample" translate="no"><span class="ex" lang="pa">ਕਲੵਚਰੈ</span> <span class="transc">kly̆ʧrɛ</span> <span class="meaning">culture</span></span></p>
+<table class="sequenceTable">
+<tr data-notes="DA,virama,YA,dj" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ਦ␣੍␣ਯ␣ਦ੍ਯ</td></tr>
+</table>
+
 </section>
+</div>
 </section>
 
 
