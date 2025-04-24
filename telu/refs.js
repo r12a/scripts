@@ -35,6 +35,13 @@ reflist = {
 "title":"Personal correspondence",
 },
 
+"u16": {
+"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/",
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 16.0",
+"sub":"Chapter 12.7: South and Central Asia-I, Official Scripts of South Asia, Telugu",
+},
+
 "u": {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch12.pdf",
 "authors": "Unicode Consortium",
