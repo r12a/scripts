@@ -33,7 +33,7 @@ border: 1px solid #ddd; vertical-align: top; }
 .highlighted { color: white; background-color: tan; }
 ins { background-color: antiquewhite; }
 input { border: 1px dotted tan; }
-
+.names { font-size: 1rem; margin-inline-start: 3rem; }
 
 .firstLetterTest { color: grey; }
 .firstLetterTest::first-letter { color: blue; font-size: 150%; }
@@ -45,6 +45,7 @@ input { border: 1px dotted tan; }
 <style id="fontWhiteSpace">.text { white-space: nowrap; }</style> <!-- this sets the default, but is changed by scripting -->
 
 <script src="../../../shared/code/boilerplate.js"></script>
+<script src="../../../shared/code/all-names.js"></script>
 
 <script>
 </script>
@@ -107,6 +108,14 @@ function applyTest( type ) { console.log('type', type)
         if (cells[i].classList.contains('letterSpaceTest')) cells[i].classList.remove('letterSpaceTest')
         cells[i].classList.add(type)
         }
+    }
+
+function preview (chars) {
+    // display the characters moused over
+    conjunct = [...chars.split('=')[1].trim()]
+    names = ''
+    for (i=0;i<conjunct.length;i++) names += charData[conjunct[i]]+' &nbsp; '
+    document.getElementById('preview').innerHTML = `${ chars } <span class="names">${ names }</span>`
     }
 </script>
 
@@ -270,12 +279,14 @@ function generate (clist, clistSide, virama) {
 		for (j=0;j<consonantsSide.length;j++) {
 			if (includes) {
 				if (inclSet.has(consonants[i]+virama+consonantsSide[j])) {
-					table += '<td class="highlighted" onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonantsSide[j]+' = '+consonants[i]+virama+consonantsSide[j]+'\'">'
+					//table += '<td class="highlighted" onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonantsSide[j]+' = '+consonants[i]+virama+consonantsSide[j]+'\'">'
+					table += `<td class="highlighted" onmouseover="preview('${ consonants[i] }+${ consonantsSide[j] } = ${ consonants[i]+virama+consonantsSide[j] }')">`
 					if (! exclSet.has(consonants[i]+virama+consonantsSide[j])) table += consonants[i]+virama+consonantsSide[j]
 					table += '</td>'
 					}
 				else {
-					table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonantsSide[j]+' = '+consonants[i]+virama+consonantsSide[j]+'\'">'
+					//table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonantsSide[j]+' = '+consonants[i]+virama+consonantsSide[j]+'\'">'
+					table += `<td onmouseover="preview('${ consonants[i] }+${ consonantsSide[j] } = ${ consonants[i]+virama+consonantsSide[j] }')">`
 					if (! exclSet.has(consonants[i]+virama+consonantsSide[j])) table += consonants[i]+virama+consonantsSide[j]
 					table += '</td>'
 
