@@ -53,7 +53,7 @@ autoExpandExamples.si = `
 අතුරනවා||␣|
 අතුල්ලනවා|to rub|atullanawā
 අදිනවා|to pull|␣|adinawā
-අන්ත්‍රාව||
+අන්ත්‍රාව|danger||antrāwa
 අන්නාසි||␣|
 අනිටු||␣|
 අනුරාධපුර||␣|
@@ -65,7 +65,7 @@ autoExpandExamples.si = `
 අපිරිසිදු|dirty|␣|apirisidu
 අම්බලම||␣|
 අම්බා||␣|
-අම්මා|mother|␣|ammā
+අම්මා|mother|a§m§maː|ammā
 අම්ලකර||
 අඹ|mango|a.§ᵐbə|aᵐba|
 අය්‍යා|older brother||ayyā
@@ -88,7 +88,7 @@ autoExpandExamples.si = `
 අවරිය||␣|
 අවියක්||
 අවුරුද්ද|year|␣|awurudda
-අවුරුද්‍ද||␣
+අවුරුද්‍ද|year|a.§wu.§ru§d.§§də|awurudda
 අශ්වය||
 අසල|near|␣|asala
 අස්ථි||
@@ -96,13 +96,13 @@ autoExpandExamples.si = `
 අහස|sky|␣|ahasa
 අළු||␣
 ආජන්ටිනාව|Argentina|aː.§d͡ʒə§n̪.§ʈi.§n̪aː.§wə|ājanṭināwa|
-ආඥාව||␣|
+ආඥාව|command, order|aː§ɡnaː§wə|āgnāwa
 ආණ්ඩුව||␣|
 ආත්තා||␣|
 ආදරය||␣|
 ආදායම||␣|
 ආදෙස|command, order|aː.§de.§sə|ādesa|
-ආන්ද්ර ප්රදේශ්||
+ආන්ද්ර ප්රදේශ්|Andhra Pradesh||āndra pradēś
 ආප්පය||␣|
 ආයුබෝවන්||
 ආරෝග්‍යශාලා||
@@ -181,7 +181,7 @@ autoExpandExamples.si = `
 ඌව|Uwa (province)|uː§ʋa|ūwa|
 එක|one||eka
 එකතු|united|e.§kə.§tu|ekatu|
-එක්වෙනවා||␣|
+එක්වෙනවා|to become united|ek.§ʋe.§nə.§waː|ekwenawā
 එක්සත් ජනපදය||␣|
 එක්සත් රාජධානිය||␣|
 එක්සත්||␣|
@@ -258,7 +258,7 @@ autoExpandExamples.si = `
 කරත්තය||
 කරනවා||
 කරවළ||␣|
-කර්‍පූර||␣|
+කර්‍පූර|camphor|ka§r§§puː§rə|karpūra
 කරුණ||␣|
 කලල||␣|
 කලවම||␣|
@@ -275,7 +275,6 @@ autoExpandExamples.si = `
 කහිනවා||␣|
 කළු සුද්දා||␣|
 කළු|black||kaḷu
-ක්‍ය්‍ර|Kyra|
 ක්‍රිමියාව|worm||krimiyāwa
 ක්‍රොඒෂියාව|Croatia||kroēṣiyāwa
 කාණ්ඩය||␣|
@@ -286,7 +285,6 @@ autoExpandExamples.si = `
 කාමරය||
 කාර||␣|
 කාරයා||␣|
-කාර්‍ය්‍යාලය|the office|
 කාලගුණ||
 කාලය||␣|
 කාවල||␣|
@@ -317,7 +315,7 @@ autoExpandExamples.si = `
 කුඹුරුවෙල්||␣|
 කුරුණෑගල|Kurunegala|ku§ru§næː§ɡa§lə|kuruṇǣgala|
 කුරුල්ලා|bird|ku§ru§l§laː|kurullā
-කුරුල්‍ලා|bird|ku§ru§l§laː|kurullā|with ZWJ
+කුරුල්‍ලා|bird|ku§ru§l§§laː|kurullā|with ZWJ
 කුලප්පුව||␣|
 කුලල||␣|
 කුලි||␣|
@@ -369,7 +367,7 @@ autoExpandExamples.si = `
 කෝපි||
 කෝවිල|hindu temple|koː§wi§lə|kōwila|
 ඛඩ්ගය||␣|
-ඛාද්‍ය||␣|
+ඛාද්‍ය|edible|kaː§d§§jə|khādya
 ගඟ|river|␣|gaⁿga
 ගඩුව||␣|
 ගණිනවා|to count|␣|gaṇinawā
@@ -420,7 +418,7 @@ autoExpandExamples.si = `
 ගොඩක්|many||goḍak
 ගොතනවා||␣|
 ගෝණිය|sack, cloth bag|ɡoː.§n̪i.§jə|gōṇiya|
-ගෞරවය||␣|
+ගෞරවය|respect|ɡau§rə§ʋə§jə|gaurawaya
 චණ්ඩියා||␣|
 චතුරිකා||
 චර්‍මය|skin, hide||carmaya
@@ -438,7 +436,6 @@ autoExpandExamples.si = `
 ජෙප්පා||␣|
 ජෝඩුව||␣|
 ඤාණ|Jnana||ɲāna
-ඥාන|knowledge||ᵑǰāṅa
 ටකනවා|to heed|ʈa.§kə.§nə.§waː|ṭakanawā|
 ටිකක්|few|␣|ṭikak
 ඪාකා|Dhaka||ḍhākā
@@ -483,11 +480,11 @@ autoExpandExamples.si = `
 තුවරා||␣|
 තුෂාරය||␣|
 තුළ|in|␣|tuḷa
-තෘෂ්ණාව||␣|
+තෘෂ්ණාව|passionate desire|tr̩§s§ɳaː§wə|tr̥ṣṇāwa
 තෙත්|wet|␣|tet
 තෙමේ||␣|
 තේ||
-තෛලය||␣|
+තෛලය|oil, ointment|tai§lə§jə|tailaya
 තොපි|you (2pl)(derogatory)|␣|topi
 තොමෝ||␣|
 තෝ|you (2sg)(derogatory)|␣|tō
@@ -588,7 +585,7 @@ autoExpandExamples.si = `
 නො-|not||no-
 නොණ්ඩි||␣|
 නෝංජල්||␣|
-නෝනා|wife|␣|nōnā
+නෝනා|lady|noː§naː|nōnā
 පංසු||␣|
 පක||␣|
 පකයා||␣|
@@ -633,9 +630,9 @@ autoExpandExamples.si = `
 ප්රේත|ghost|p§reː.§tə|prēta|
 ප්‍රභාසංශ්ලේෂණය||
 ප්‍රාචීරය|fence, wall|p§§raː§t͡ʃiː§rə§jə|prācīraya|
-ප්‍රාන්තය||␣|
-ප්‍රාර්‍ථනය||␣|
-ප්‍රේමය||␣|
+ප්‍රාන්තය|extremity|ˈp§§raː§n§tə§jə|prāntaya
+ප්‍රාර්‍ථනය|request, hope|p§raː§r§tə§nə§jə|prārthanaya
+ප්‍රේමය|love|p§§reː§mə§jə|prēmaya
 පාකිස්ථානය|Pakistan|paː.§ki§s.§t̪aː.§n̪ə.§jə|pākisthānaya|
 පාඩම||␣|
 පාන්||
@@ -651,7 +648,7 @@ autoExpandExamples.si = `
 පිට|guts|␣|piṭa
 පිට්ටු||␣|
 පිටි|flour|pi.§ʈi|piṭi|
-පිපිඤ්ඤා||␣|
+පිපිඤ්ඤා|cucumber|pi§pi§ɲə.§ɲaː|pipiññā
 පිඹිනවා||␣|
 පිය|father||piya
 පියඹනවා|to fly||piyaᵐbanawā
@@ -724,7 +721,7 @@ autoExpandExamples.si = `
 බස්නාහිර පළාත||␣|
 බස්නාහිර|western, west|ba§s§naː§hi§ra|basnāhira|
 බළලා||
-බ්‍රසීලය||␣|
+බ්‍රසීලය|Brazil|b§§ra.§siː.§la.§ja|brasīlaya
 බ්‍රාහ්මණයා||␣|
 බා||␣|
 බානවා||␣|
@@ -812,7 +809,7 @@ autoExpandExamples.si = `
 මියනවා|to die|␣|miyanawā
 මිරිකනවා|to squeeze|␣|mirikanawā
 මිලියනය||
-මිශ්‍ර||␣|
+මිශ්‍ර|mingled, blended|mi§s§§ra|miśra
 මිහිඟුව||␣|
 මීගමුව||␣|
 මීටර්||␣|
@@ -846,7 +843,6 @@ autoExpandExamples.si = `
 මෙහෙ||␣|
 මෙහේ|here||mehē
 මේ|this (speaker proximal, gender-neutral)|␣|mē
-මේද|fat (noun)||mēda
 මේදය||␣|
 මේසය||
 මොක|what||moka 
@@ -928,7 +924,7 @@ autoExpandExamples.si = `
 වලිගය|tail|␣|waligaya
 වහන්සේ||␣|
 වළ||␣|
-ව්‍යාඝ්‍රයා||␣|
+ව්‍යාඝ්‍රයා|tiger|ʋ§§jɑː§ɡʱ§§rə§jaː|wyāghrayā
 ව්‍යාජ|fake|||vyāja
 වාතය||
 වැටෙනවා|to fall|␣|wæṭenawā
@@ -961,7 +957,7 @@ autoExpandExamples.si = `
 වෙළුව||␣|
 වේදනාව||
 වේෂ්ටය||␣|
-වෛද්‍ය||␣|
+වෛද්‍ය|medical|ʋaj§d§§jə|waidya
 ශ්වාස|air, wind|s§waː.§sə|śwāsa|
 ශ්‍රී ජයවර්ධනපුර කෝට්ටේ||␣|
 ශ්‍රී ලංකා|Sri Lanka|ʃ§riː§ §ləm̃§kaː|śrī laṁkā
@@ -973,7 +969,7 @@ autoExpandExamples.si = `
 ශුක්‍ර||␣|
 ශුක්‍රාණුව||␣|
 ශුද්ධ|clean, pure|su§d̚§də|śuddha|
-ශෛව||␣|
+ශෛව|relating to Shiva|saj§ʋə|śaiwa
 සක||␣|
 සටන් කරන්න|to fight||saṭan karanna
 සටන්කරනවා||␣|
@@ -990,7 +986,7 @@ autoExpandExamples.si = `
 සමග|with|␣|samaga
 සමහර||
 සමාජ||
-සමෘද්ධ||␣|
+සමෘද්ධ|prosperous|sə§mr̩§d̪§d̪ə|samr̥ddha
 සයුර|sea|␣|sayura
 සර්පයා||
 සල||␣|
@@ -1006,7 +1002,7 @@ autoExpandExamples.si = `
 ස්වාමියා||␣|
 සාගරය||
 සාමය||
-සාහිත්‍යය||␣|
+සාහිත්‍යය|literature|saː.§hi§t.§ja.§ja|sāhityaya
 සැදැහැ||␣|
 සිංහය|lion|siŋ§hə§jaː|siṁhayā|
 සිංහයා|lion|siŋ§hə§jaː|siṁhayā|
@@ -1095,6 +1091,12 @@ autoExpandExamples.si = `
 
 
 
+@ ?
+
+මේද|fat (noun)|meː§də|mēda
+ඥාන|knowledge||ᵑǰāṅa
+ක්‍ය්‍ර|Kyra|
+කාර්‍ය්‍යාලය|the office|
 
 
 
