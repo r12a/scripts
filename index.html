@@ -11,11 +11,25 @@
 <script src="linkdata/linkdb.js"></script>
 <style>
 .scriptname { font-weight: bold; }
-.summaries { font-size: 80%;text-align:start; }
-.letter::before { content: attr(title); font-size: 100%; color:brown;font-weight:bold; margin-inline-end: .5rem; }
+.summaries {
+  font-size: 100%;
+  text-align: start;
+  opacity: 80%;
+  line-height: 1.6;
+  background: #f2f1f1;
+  /*background: #fffdf5;*/
+  background: #f9f9fb;
+  padding: 1rem;
+  }
+.letter {
+  margin-block-end: .8rem;
+  position: relative;
+  padding-inline-start: 3rem;
+  }
+.letter::before { content: attr(title); font-size: 120%; color:brown;font-weight:bold; margin-inline-end: .5rem; position: absolute; left:0; }
 .constituents { /*font-style: italic;*/ font-size: 95%; }
-.constituents::before { content: '{'; font-style: normal; color: #ccc; }
-.constituents::after { content: '} '; font-style: normal; color: #ccc; }
+.constituents::before { content: '{\00A0'; font-style: normal; color: #ccc; }
+.constituents::after { content: '\00A0} '; font-style: normal; color: #ccc; }
 .plus::before { content: ' • '}
 </style>
 </head>
@@ -136,12 +150,14 @@ function getOrthogNotes () {
             
             for (s=0;s<scriptList[index].length;s++) { // for each script associated with a given letter
                 if (linkDB[scriptList[index][s]].scriptNotes) {
-                    if (found) temp += ` • `
+                    //if (found) temp += ` • `
+                    if (found) temp += `<br>`
                     temp += `<a href="${ scriptList[index][s] }/index.html" class="scriptname">${ linkDB[scriptList[index][s]].script }</a>\n`
                     temp += `<span class="constituents">\n`
                     ptrs = linkDB[scriptList[index][s]].scriptNotes // eg. [["Hindi", "deva/hi.html"], ["Kashmiri", "deva/ks.html"]]
                     for (p=0;p<ptrs.length;p++) {
                         if (p>0) temp += ` • `
+                        //if (p>0) temp += `<br>`
                         temp += `<a href="${ ptrs[p][1] }" class="orthlink">${ ptrs[p][0] }\n`
                         counter++
                         }
@@ -286,7 +302,7 @@ function getTermLists () {
             
             for (s=0;s<scriptList[index].length;s++) { // for each script associated with a given letter
                 if (linkDB[scriptList[index][s]].scriptNotes) {
-                    if (found) temp += ` • `
+                    if (found) temp += `<br>`
                     //temp += `<a href="${ scriptList[index][s] }/index.html" class="scriptname">${ linkDB[scriptList[index][s]].script }</a>\n`
                     temp += `<span class="scriptname">${ linkDB[scriptList[index][s]].script }</span>\n`
                     temp += `<span class="constituents">\n`
@@ -315,7 +331,7 @@ function getTermLists () {
 
 
 
-<div id="termbases" class="flexbox">
+<div id="termbases" class="flexbox" style="margin-right: 15%;">
   	<a href="index.html#termbases"><img src="../shared/images/lists/termbase.png" alt=""/></a>
 <div>
       <p class="mainLink"><a href="index.html#termbases">Terms lists</a></p>
@@ -368,7 +384,7 @@ function getTermLists () {
 
 
 
-<div class="flexbox">
+<div class="flexbox" style="margin-right: 15%;">
   <a href="/pickers/"><img src="../shared/images/lists/pickers.png" alt=""/></a>
     <div>
       <p class="mainLink"><a href="/pickers/">Unicode character apps</a></p>
@@ -390,7 +406,7 @@ function getPickers () {
             
             for (s=0;s<scriptList[index].length;s++) { // for each script associated with a given letter
                 if (linkDB[scriptList[index][s]].pickers) {
-                    if (found) temp += ` • `
+                    if (found) temp += `<br>`
                     //temp += `<a href="${ scriptList[index][s] }/index.html" class="scriptname">${ linkDB[scriptList[index][s]].script }</a>\n`
                     temp += `<span class="scriptname">${ linkDB[scriptList[index][s]].script }</span>\n`
                     temp += `<span class="constituents">\n`
@@ -454,7 +470,7 @@ function getPickers () {
 
 
 <div class="smallprint">
-  <span id="version">Last update <span id="version-info"><!-- #BeginDate format:IS1m -->2025-02-24  11:37<!-- #EndDate -->
+  <span id="version">Last update <span id="version-info"><!-- #BeginDate format:IS1m -->2025-04-26  9:08<!-- #EndDate -->
     </span> GMT.  &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span>
 </div>
 <script>
