@@ -393,8 +393,7 @@ autoExpandExamples.si = `
 ගැබිණිය||␣|
 ගැඹුරු||␣|
 ගැළ||␣|
-ගෑනි|woman||gǣni
-ගෑනී||␣|
+ගෑනී|woman|ɡæː§niː|gǣnī
 ගිගුරනවා||␣|
 ගිගුරුම|thunder|ɡi.§ɡu.§ru.§mə|giguruma|
 ගිටාරය||
