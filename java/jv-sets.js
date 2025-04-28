@@ -15,5 +15,6 @@ var collections = [
 { symbol:'Ⓔ', desc:'Murda consonants', chars:'(ꦦ|ꦨ|ꦡ|ꦑ|ꦓ|ꦖ|ꦟ|ꦘ|ꦯ)' },
 { symbol:'Ⓕ', desc:'Finals', chars:'(ꦃ|ꦀ|ꦁ|ꦂ)' },
 { symbol:'Ⓜ', desc:'Medials', chars:'(ꦿ|ꦽ|ꦾ)' },
+{ symbol:'ⓧ', desc:'Pangkon', chars:'(\uA9C0)' },
 { symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
 ]
