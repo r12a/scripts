@@ -3398,10 +3398,151 @@ function initialiseShowNames (node, base, target) {
 	}
 
 
+function showCharDetailsInlineXXXXX (chars, clang, base, target, panel, list, translit, ipa, node) {
+    // open an article window after an example and fill it with character details
+    
+	if (typeof charDetails === 'undefined') return
+
+    // get the insertion point
+    insertPoint = node.closest('p, table, div, li, figure')
+
+    // create the article element & table outer
+    var panel = document.createElement('article') 
+	var table = document.createElement('table')
+	table.className = 'panel'
+	table.innerHTML = makeExampleArticleDetails(chars, clang, base, target, panel, list, translit, ipa, node)
+	panel.appendChild(table)
+    insertPoint.after(panel)
+	
+	expandCharMarkup()
+	addExamples(clang)
+	//convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(table, window.blockDirectoryName, 'c')
+    
+    // set event trigger on all .ipa elements - opens description box on click
+    var ipaNodes = document.querySelectorAll(".ipa")
+    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+	return false
+	}
+
+
+
+
+
+
+
+
+function showCharDetailsForSummary (evt) {
+    // opens a panel to display character notes details
+        
+	if (typeof charDetails === 'undefined') return
+    
+    summaryTable = evt.target.closest('.soundSummary')
+    
+    if (summaryTable === null) return
+	
+    
+    // if there's already an article displayed, remove it
+    if (summaryTable.nextElementSibling.tagName === 'ARTICLE') {
+        // if clicking on the same item, remove the article
+        console.log('EX', summaryTable.nextElementSibling.querySelector('.ex').textContent)
+        console.log('EVT', evt.target.textContent)
+        if (summaryTable.nextElementSibling.querySelector('.ex').textContent === evt.target.textContent) {
+            summaryTable.nextElementSibling.remove()
+            return
+            }
+        else summaryTable.nextElementSibling.remove()
+        }
+	
+    // make a new article
+	var newArticle = document.createElement('article')
+	var table = document.createElement('table')
+	table.className = 'charDetails'
+	table.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
+    newArticle.appendChild(table)
+    
+    // append the new article after the summary table
+    summaryTable.after(newArticle)
+	
+	expandCharMarkup()
+	addExamples(evt.target.lang)
+	convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(table, window.blockDirectoryName, 'c')
+    
+    // set event trigger on all .ipa elements - opens description box on click
+    var ipaNodes = document.querySelectorAll(".ipa")
+    console.log('ipaNodes',ipaNodes.length)
+    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+    }
+
+
+
+
 
 
 
 function showCharDetailsEvent (evt) {
+    // opens a panel to display character notes details
+    
+	//if (evt.target.closest('.noexpansion')) return
+    
+	if (typeof charDetails === 'undefined') return
+
+	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
+    
+    if (evt.target.closest('.soundSummary')) { showCharDetailsForSummary(evt); return }
+	
+    // find out whether there's already something being displayed
+	table = evt.target.closest('figure').querySelector('table')
+    displayedItem = ''
+    if (table !== null) displayedItem = table.querySelector('.ex')
+    if (displayedItem) displayedItem = displayedItem.textContent
+    
+    // if clicked item and table are about the same thing, just close table
+    if (displayedItem && displayedItem === evt.target.textContent) { 
+        //console.log("found",displayedItem)
+        table.parentNode.removeChild(table)
+        return
+        }
+    
+    // clear any existing table
+	if (table !== null) table.parentNode.removeChild(table)
+	
+    // make a new table
+	var table = document.createElement('table')
+	table.className = 'charDetails'
+	table.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
+    
+	evt.target.parentNode.parentNode.parentNode.appendChild(table)
+	
+	expandCharMarkup()
+	addExamples(evt.target.lang)
+	convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(table, window.blockDirectoryName, 'c')
+    
+    // set event trigger on all .ipa elements - opens description box on click
+    var ipaNodes = document.querySelectorAll(".ipa")
+    console.log('ipaNodes',ipaNodes.length)
+    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+    }
+
+
+
+
+
+
+
+
+function showCharDetailsEventX (evt) {
     // opens a panel to display character notes details
     
 	if (evt.target.parentNode.parentNode.parentNode.classList.contains('noexpansion')) return
