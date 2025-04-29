@@ -29,7 +29,7 @@ tones:
 autoExpandExamples.shn = `
 
 @ https://en.wiktionary.org/wiki/Appendix:Kra-Dai_Swadesh_lists
-@ https://en.wiktionary.org/w/index.php?title=Category:Shan_terms_with_IPA_pronunciation&pagefrom=%E1%81%BD%E1%80%BC%E1%82%83%E1%80%B8%0A%E1%81%BD%E1%80%BC%E1%82%83%E1%80%B8#mw-pages
+@ https://en.wiktionary.org/w/index.php?title=Category:Shan_terms_with_IPA_pronunciation
 
 ငဝ်းလၢႆး||␣|
 ငိင်း||␣||
@@ -1056,7 +1056,7 @@ autoExpandExamples.shn = `
 ၵိူဝ်းၽီ||␣||
 ၵိူဝ်ၸဵမ်း||␣||
 ၵိူဝ်ႉတူၺ်း||␣||
-ၵိူၺ်း|friendly|kɤj˥|kóei|
+ၵိူၺ်း|friendly|kɤ§j˥|kóei|
 ၵိူၼ်ႇ||␣||
 ၵိၵ်ႈ||␣||
 ၵိၼ်|to eat|kin˨˦
