@@ -102,7 +102,9 @@ function addExamples (langFilter) {
             // start the charExample element
 			var out = '<span class="charExample'
 			if (nodes[n].classList.contains('inline')) out += ' inline'
-			out += '" translate="no">'
+            out += '"'
+			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
+			out += ' translate="no">'
 			
 			// add the .ex element, with onclick
 			out += `<bdi class="ex`
