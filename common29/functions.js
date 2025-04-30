@@ -2186,6 +2186,53 @@ function initialiseShowNames (node, base, target) {
 
 
 
+function showCharDetailsForCased (evt) {
+    // opens a panel to display character notes details
+        
+	if (typeof charDetails === 'undefined') return
+    
+    summaryTable = evt.target.closest('.cased')
+    
+    if (summaryTable === null) return
+	
+    
+    // if there's already an article displayed, remove it
+    if (summaryTable.nextElementSibling.tagName === 'ARTICLE') {
+        // if clicking on the same item, remove the article
+        if (summaryTable.nextElementSibling.querySelector('.ex').textContent === evt.target.textContent) {
+            summaryTable.nextElementSibling.remove()
+            return
+            }
+        else summaryTable.nextElementSibling.remove()
+        }
+	
+    // make a new article
+	var newArticle = document.createElement('article')
+	var table = document.createElement('table')
+	table.className = 'charDetails'
+	table.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
+    newArticle.appendChild(table)
+    
+    // append the new article after the summary table
+    summaryTable.after(newArticle)
+	
+	expandCharMarkup()
+	addExamples(evt.target.lang)
+	convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(table, window.blockDirectoryName, 'c')
+    
+    // set event trigger on all .ipa elements - opens description box on click
+    var ipaNodes = document.querySelectorAll(".ipa")
+    console.log('ipaNodes',ipaNodes.length)
+    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+    }
+
+
+
+
 function showCharDetailsForSummary (evt) {
     // opens a panel to display character notes details
         
@@ -2246,6 +2293,8 @@ function showCharDetailsEvent (evt) {
 	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
     
     if (evt.target.closest('.soundSummary')) { showCharDetailsForSummary(evt); return }
+	
+    if (evt.target.closest('.cased')) { showCharDetailsForCased(evt); return }
 	
     // find out whether there's already something being displayed
 	table = evt.target.closest('figure').querySelector('table')
