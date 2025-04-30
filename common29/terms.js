@@ -507,7 +507,11 @@ function findWords (reg) {
         generatedTranscription = '' // if IPA has ␣ generate & store a transcription
         if (itemArray[IPA]===' ␣ ') { 
             var termChars = [...itemArray[TERM]]
-            for (t=1;t<termChars.length-1;t++) generatedTranscription += autoTranslitArray[termChars[t]]
+            for (t=1;t<termChars.length-1;t++) {
+            	if (termChars[t] === ' ') generatedTranscription += ' '
+            	else if (termChars[t] === '-') generatedTranscription += '-'
+            	else generatedTranscription += autoTranslitArray[termChars[t]]
+            	}
             }
 
         out += '<td class="tr ipaCol">'+itemArray[IPA]+'</td>'
