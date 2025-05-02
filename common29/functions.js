@@ -2197,7 +2197,7 @@ function showCharDetailsForCased (evt) {
 	
     
     // if there's already an article displayed, remove it
-    if (summaryTable.nextElementSibling.tagName === 'ARTICLE') {
+    if (summaryTable.nextElementSibling && summaryTable.nextElementSibling.tagName === 'ARTICLE') {
         // if clicking on the same item, remove the article
         if (summaryTable.nextElementSibling.querySelector('.ex').textContent === evt.target.textContent) {
             summaryTable.nextElementSibling.remove()
