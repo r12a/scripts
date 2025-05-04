@@ -109,6 +109,7 @@ autoExpandExamples.mid = `
 ࡐࡀࡉࡍ|evening|p§e§i§n
 ࡔࡀࡐࡋࡉࡀ|second (time)|ʃ§aː§p§l§iː
 ࡔࡉࡕࡀ|hour|ʃ§iː§θ§aː
+ࡔࡉࡕ࡙ࡀ|hour|ʃ§iː§θ§aː
 ࡔࡀࡉࡉࡀ|hours|ʃ§aː§iː§‹§‹
 ࡉࡅࡌࡀ|day|j§o§m§aː
 ࡉࡅ࡚ࡌࡀ|day|j§o§m§aː
@@ -150,32 +151,31 @@ autoExpandExamples.mid = `
 ࡑࡅࡐࡓࡀ|bird|sˤ§o§p§r§ɔ †|ˈṣoprā
 ࡑࡅࡐ࡙ࡓࡀ|yellow|sˤ§o§f§r§ɔ †|ˈṣop̄rā
 ṣəḇyi|he baptized him|ˈsˤɛv.ji|ṣəḇyi
-ࡒࡀࡁࡉࡃ|he will do|ˈqɒː.vɛd †|qāḇed
+ࡒࡀࡁࡉࡃ|he will do|ˈq§ɒː.§v§ɛ§d †|qāḇed
 láhriḇi|he hasn't destroyed it|læh.rɪ.vi|láhriḇi
 əḇud|do! (f.s.)|ə.wod|əḇud
 qəmahreḇāt|you will destroy|qə.mah.rɛ.wɔt|qəmahreḇāt
 aṯṯon|they brought|aθ.θon|aṯṯon
 atton|you (pl)|at.ton|atton
 ehdā|one|ɛh.dɔ|ehdā
-ࡈࡀࡁ|good|tˤɔʊ †|ṭāḇ
+ࡈࡀࡁ|good|tˤ§ɔ§ʊ †|ṭāḇ
 baṭluḵtā|misfortune|bat.lʊχ.tɔ|bɑṭluḵtā
-ࡎࡀࡒࡀࡕ|she went up|ˈsɔːqɑt †|sāqɑt
+ࡎࡀࡒࡀࡕ|she went up|ˈs§ɔː§q§ɑ§t †|sāqɑt
 qāzi|he goes|qɒː.zi|ˈqāzi
 ṣəḇyi|he baptized him|ˈsˤɛv.jɪ|ṣəḇyi
-miṣrā|boundary|ˈmɪs.rɒ|miṣrā
-ࡍࡅࡃࡀ|earthquake|ˈnoː.dɔ †|nodā
+ࡍࡅࡃࡀ|earthquake|ˈn§oː.§d§ɔ †|nodā
 ࡏࡉࡍࡂࡋࡉࡆࡉࡀ|English|›§i§ŋ.§g§l§ɪ.§ˈz§i§– †|inglizi
 ʿabdalla|Abdallah|ʕab.ˈdɑɫ.ɫa|ʿabdalla
-ࡓࡀࡁࡀ|great|ˈræb.bɔ †|rabbā
+ࡓࡀࡁࡀ|great|ˈr§æ§b.b§ɔ †|rabbā
 ࡂࡅࡁࡓࡀ|man|ˈg§æ§v.§r§ɔ †|gaḇrā
 barra|outside|ˈbar.ra|barra
 ešmi|his name|ˈɛʃ.mi|ešmi
 eččā|nine|ˈɛt͡ʃ.t͡ʃɔ|eččā
-ࡔࡉࡍ|ninety|t͡ʃin †|čin
-ࡔ࡙ࡉࡍ|ninety|t͡ʃin †|čin
+ࡔࡉࡍ|ninety|t͡ʃ§i§n †|čin
+ࡔ࡙ࡉࡍ|ninety|t͡ʃ§i§n †|čin
 čemmā|nine hundred|ˈt͡ʃɛm.mɔ
 gač|gypsum|gæt͡ʃ|gač
-ࡔࡉࡄࡉࡋ|child|ˈd͡ʒiː.hɛl †|jihel
+ࡔࡉࡄࡉࡋ|child|ˈd͡ʒ§iː.§h§ɛ§l †|jihel
 mujur|how|mʌ.ˈd͡ʒuɹ|mujur
 pərā|money|pɛ.ˈrɔː|pərā
 ࡁoࡁo|door|ˈw§ɔː.§w§ɔ †|ḇāḇā
@@ -184,7 +184,7 @@ pərā|money|pɛ.ˈrɔː|pərā
 ࡌࡉࡑࡓࡀ|boundary|ˈm§ɪ§s.§r§ɒ †|miṣrā
 ࡀࡄࡀ|this|ˈɔː.§h§ɔ †|āhā
 ࡀࡋࡐࡀ|one thousand|ˈæ§l.§f§ɔ †|alp̄ā
-ࡏࡉࡄࡋࡅ|they have|ˈɛh.§l§u †|ehlu
+ࡏࡉࡄࡋࡅ|they have|›§ˈɛ§h.§l§u †|ehlu
 ࡏࡉࡍࡀ|eye|ˈiː.§n§ɔ †|inā
 
 
