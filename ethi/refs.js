@@ -49,9 +49,16 @@ reflist = {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch19.pdf",
 "authors": "Unicode Consortium",
 "title":"The Unicode Standard, Version 13.0",
-"sub":"Chapter 19.6: Africa, Bamum",
+"sub":"Chapter 19.1: Africa, Ethiopic",
 "pages":"779-780",
 "isbn":"978-1-936213-16-0.",
+},
+
+"u16": {
+"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-19/",
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 16.0",
+"sub":"Chapter 19.1: Africa, Ethiopic",
 },
 
 "ul": {
