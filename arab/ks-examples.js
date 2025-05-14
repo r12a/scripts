@@ -224,7 +224,7 @@ autoExpandExamples.ks = `
 بیمہٕ|brother-in-law|b§eː§m§ɨ
 بیوٚت||␣||||بیۆت
 بیْور||␣
-بیْٲر||␣||||بیٛٲر
+بیْٲر|she-cat|bjəːr|byạ̄r|ब्यऻर||بیٛٲر
 بیٔنْزٕ|neice|bjənzɨ
 بیٚنہِ|sister|b§e§n§i
 تارُن||␣||
@@ -525,7 +525,7 @@ autoExpandExamples.ks = `
 لِکھٲرؠ||
 لٔٹؠ تارُکھ||
 لٔڈکی||␣||
-لٔڑکہٕ|boy|ləɽkɨ
+لٔڑکہٕ|boy|lə§ɽ§kɨ§–| lạḍkụ
 لٔڑکی|girl|lə§ɽ§k§iː
 لٔکٕر||␣
 لٲر||
@@ -865,6 +865,7 @@ autoExpandExamples.ks = `
 کرْوٗد|anger|k§r§uː§d|krūd|||کرٛوٗد
 کرْوٗدی|angry|k§r§uː§d§iː|krūdī|क्रूदी||کرٛوٗدی
 کرْٕم|sea turtle|k§rɨ§m
+کرْٕم|sea turtle|k§rɨ§m||||کرْٕم
 کرْینْکہٕ لٔٹ|lizard|krẽːkɨləʈ
 کوتُر|pigeon|koːtur
 کوشُر||␣||
