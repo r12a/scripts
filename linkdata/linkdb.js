@@ -1844,8 +1844,8 @@ terms: [["Tai Yo", "tayo/tyj_vocab.html"]],
 pickers: [["Tai Yo", "tayo"]],
 orthoChart: true,
 ssHistory: "7dcadb4hha",
-chapters: "?",
-htmlchapter: "?",
+chapters: "",
+htmlchapter: "16/#G73729",
 usedfor: "Tai Yo [tyj]",
 local: [ ],
 layout: [ 	],
@@ -2992,7 +2992,7 @@ pickers: [["Tolong Siki", "tols"]],
 orthoChart: true,
 ssHistory: "rrkdvn7crf",
 chapters: "",
-htmlchapter: "",
+htmlchapter: "13/#G746342",
 usedfor:"Kurukh [kru]",
 },
 
@@ -3001,7 +3001,7 @@ berf:{ script:"Beria Erfe", code:"berf", name:"", type:"Alphabet",
 origin:"Africa",
 info:{ wikipedia:"Zaghawa_alphabet", omniglot:"ahom" }, 
 local: [	],
-charts: [ ["", ""] ],
+charts: [ ["Beria Erfe", "16EA0"] ],
 layout:[	],
 scriptNotes: [["Zaghawa", "berf/zag.html"]],
 charNotesList:["Beria Erfe", "berf/block.html"],
@@ -3010,23 +3010,48 @@ pickers: [["Zaghawa", "berf-zag"]],
 orthoChart: false,
 ssHistory: "47fbca6g25",
 chapters: "",
-htmlchapter: "",
+htmlchapter: "19/#G746359",
 usedfor:"Zaghawa [zag]",
 },
 
 
-/*
+sidt:{ script:"Sidetic", code:"Sidt", name:"", type:"Alphabet", 
+origin:"Europe",
+info:{ wikipedia:"Sidetic_language", omniglot:"" }, 
+local: [	],
+charts: [ ["Sidetic", "10940"] ],
+layout:[	],
+scriptNotes: [],
+charNotesList:[],
+terms: [],
+pickers: [],
+orthoChart: false,
+ssHistory: "wacbwqu54b",
+chapters: "",
+htmlchapter: "8/#G27262",
+usedfor:"Sidetic [xsd]",
+},
 
-TO BE ADDED FOR v16
 
-Tohdri  8/#G746332
-Tulu-Tigalari   15/#G746412
-Gurung Khema   13/#G746338
-Kirat Rai   13/#G746340
-Ol Onal   13/#G746334
+chis:{ script:"Chisoi", code:"chis", name:"", type:"Alphabet", 
+origin:"Europe",
+info:{ wikipedia:"Kurmali_language", omniglot:"" }, 
+local: [	],
+charts: [ ["Chisoi", "16D80"] ],
+layout:[	],
+scriptNotes: [],
+charNotesList:[],
+terms: [],
+pickers: [],
+orthoChart: false,
+ssHistory: "sy25v32h79",
+chapters: "",
+htmlchapter: "13/#G746557",
+usedfor:"",
+},
 
 
-*/
+
 
 
 
