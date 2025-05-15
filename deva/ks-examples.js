@@ -23,39 +23,299 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 autoExpandExamples.ks = `
 
 @ https://en.wiktionary.org/wiki/Appendix:Indo-Aryan_Swadesh_lists
-@ https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_lemmas&pagefrom=%E0%A4%9C%E0%A4%BC%E0%A5%82%E0%A4%A8%0A%E0%A4%9C%E0%A4%BC%E0%A5%82%E0%A4%A8#mw-pages
+@ https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_lemmas
+
 
 
 -अल||␣|
 -उल||␣|
-अंग|limb, organ|əŋ§ɡ|aṅg
-अंब|mango|am§b|amb
-अख|one|akʰ|akh
-अख़बार|newspaper|akʰbaːr|akhbār
-अखा||
-अछुर||
-अज़||
+अंग|limb, organ|əŋ§ɡ|aṅg|انگ
+अंब|mango|am§b|amb|اَمب
+अख|one|a§kʰ|akh|اَکھ
+अख़बार|newspaper|a§kʰ§baː§r|akhbār|اَخبار
+अखा|one, only||akhā|اَکھا
+अछुर|letter (of the alphabet)||achur|اَچھُر
+ऒर अछुर|vowel||ora achur
+ज़ॊर अछुर|consonant||zora achur
+अज़|today||az
+अनुन|to bring||anun|اَنُن
+अपुज़|false, untrue|a§pu§z|apuz|اَپُز
+अपॖज़|false, untrue||apụz|
+अबॊद|stupid, foolish|a§bo§d|abod|اَبۆد
+अम्ब|mango|a§m§b|amb|اَمب
+असुन|to smile, laugh||asun|اَسُن
+आगुर|root, source|aːɡuɾ|āgur|آگُر
+आप्रावुन|to feed someone||āprāwun|
+आब|water|aː§b|āb|آب
+आसुन|to be||āsun
+इंडिया|India|in§ɖi§jaː|indiyā|اِنڈِیا
+ऑव्युल|delicate, fragile||ạ̄wyul|ٲویُٛل
+ऒक-|uni-, mono-||oka-
+ऒदुर|wet||odur|اۆدُر
+ऒश|tears, teardrops||oś|اۆش
+ओत्रॖ|day before yesterday||ōtrụ|
+कडुन|to take out, remove||kaḍun|کَڈُن
+कथ|story, account||kath|کَتھ
+कन|ear|kan|kan|کَن
+कर|when||kar|
+करतम|do me|kartam|kartam|کَرتَم
+करुन|to do|kərun|karun|کَرُن
+कलॖ|head|ka§lɨ|kalụ|کَلہٕ
+कुंज़|key||kuṃz|کُنٛز
+कुस|who?|kus|kus|کُس
+केलॖ|banana|keː§lɨ|kēlụ|کیلہٕ
+कॉशुर|Kashmiri|kəː§ʃu§r|kạ̄śur|کٲشُر
+क्याज़ि|why||kyāzi|کیٛازِ
+क्रावुत|verb||krāwut|کرٛاوُت
+क्रुहुन|black||kruhun|کۯُہُن
+क्वस|who|kwas|
+कॏह|hill, mountain|kɔ§h|kôh|کۄہ
+खालुन|to raise, lift|kʰɑː§lu§n|khālun|کھالُن
+खॊर|foot, feet||khor|کھۄر
+ख्यमा|forgiveness|kʰæ§‹§maː|khæmā|کھؠما
+ख्यावुन|to feed|kʰ§ʲɑː§ʋu§n|khyāwun|کھیٛاوُن
+ख्यॊन|to eat|kʰ§jo§n|khyon|کھیٛۆن
+ख्वतॖ|than||khwatụ|کھۄتہٕ
+ख्वर|foot (alt)||khwar
+गगुर|rat|ɡa§ɡu§r|gagur|گَگُر
+गछ़ुन|to go, leave|ɡa§t͡sʰu§n|gaċhun|گَژھُن
+गम|grief|gəm|gam
+गरॖ|house, home|ɡa§rɨ|garụ|گَرٕ
+गलुन|to melt|ɡalun|galun|گَلُن
+गऺगुर|rat|ɡə§ɡu§r|gạgur|
+गाज़ॖर|carrot||gāzụr
+गाटुल|wise|gaːʈul|gāṭul|گاٹُل
+गाटॖ|wisdom|ɡaː§ʈɨ|gāṭụ|گاٹہٕ
+गाटॖज|wise nom. f. sing.|ɡaːʈɨd͡ʒ|gāṭụj|گاٹٕج
+गाटॖल्य|wise (pl.)|ɡaː§ʈɨ§l§ʲ|gāṭụl'|گاٹٕلؠ
+गाम|village|ɡaː§m|gām|گام
+गाश|light, daylight|ɡaː§ʃ|gāś|گاش
+गुपुन|to hide, conceal|ɡu.§pu§n|gupun|گُپُن
+गुर|horse|ɡu§r|gur|گُر
+गुल|flower|ɡu§l|gul|گُل
+गॊब|heavy||gob|گۆب
+गोरो|Jupiter|ɡoː§roː|gōrō|گورو
+गौ|went/cow|gəŭ§/ɡɔː|gau|
+ग्रंद|number, numeral|ɡ§ran§d|graṃd
+ग्रकुन|to boil||grakun|گۯَکُن
+गॖस|excrement|ɡɨ§s|gụs|گٕس
+च़टुन|to cut|t͡sa§ʈu§n|ċaṭun|ژَٹُن
+च़लुन|to flee, escape||ċalun|ژَلُن
+च़ूंठ|apple|t͡sũː§ʈʰ|ċūṃṭh|ژوٗنٛٹھ
+च़ॆ||
+च़ेनुन|to recognize||ċēnun
+च़ेर|apricot|t͡seː§r|ċēr|ژیر
+च़ॖ|you|t͡sɨ|ċụ|ژٕ
+च़ॗन|powder||ċụ̄n|ژٟن
+चावुन|to s.o a drink||cāwun|چاوُن
+चिठ्य|letter||ciṭhy
+चीर|wring|t͡ʃiː§r
+चॊन|to drink||con
+छलुन|to wash||chalun|چھلُن
+छ़ावुल|goat|t͡sʰaː§wu§l|ċhāwul|ژھاوُل
+छॊत|faded, pale||chot|چھۆت
+जहाज़|ship, saddle||jahāz|جَہاز
+ज़ंग|leg|zən§g|zaṃg|زَنٛگ
+ज़ंगॖ|legs||zaṃgụ|زَنٛگہٕ
+ज़गथ|world, universe|za§ɡa§tʰ|zagath|زَگَتھ
+ज़मानॖ|age, era|za§maː§nɨ|zamānụ|زَمانہٕ
+ज़ल|water|za§l|zal|زَل
+ज़ालुन|to burn|zɑː§lu§n|zālun|زالُن
+ज़ून|moon|zuː§n|zūn|زوٗن
+ज़्यव|language, tongue||zyav|زؠو
+ज़्यूठ|long, tall||zyūṭh|زیٛوٗٹھ
+ज़ॖ|two|zɨ|zụ|زٕ
+टर|fake news||ṭar|ٹَر
+डॊख|support, cushion||ḍokh|ڈۆکھ
+डॗस|cudgel||ḍụ̄s|ڈٟس
+तगुन|to be able to||tagun|تَگُن
+तरुन|to cross, traverse|ta§ɾu§n|tarun|تَرُن
+ताम|until||tām
+तामथ|until||tāmath
+तील|oil||tīl|تیٖل
+तुरुन|cold, cool||turun|تُرُن
+तुलुन|to pick, pick up||tulun|تُلُن
+तॊन|thin||ton|تۆن
+तोलुन|to weigh|toː§lu§n|tōlun|تولُن
+त्रठ|cloudburst|t§ra§ʈʰ|traṭh|ترَٛٹھ
+त्रावुन|to drop|t̪ɾɑːʋun|trāwun|تۯاوُن
+त्रॆ|three|t§re|tre
+त्रेश|drinking water||trēś|ترٛیش
+तॖ|and||tụ|تہٕ
+तॗर|cold|tɨːr|tụ̄r|تٟر
+थॊद|erect||thod|تھۆد
+दन|flash, bang||dan
+दरवाज़ॖ|door, gate|da§r§waː§zɨ§/darvaːzɨ|darwāzụ|دَروازٕ
+दर्शुन|sight, vision|da§r§ʃu§n|darśun|دَرشُن
+दऺज़|burned|də§z
+दऻर|window|dəː§r|dạ̄r|دٲر
+दाथ|metal|daː§tʰ|dāth|داتھ
+दान|hearth|daːn
+दार्यल|bearded|daː§r§ʲa§l|dāryal|دارؠل
+दुकानदार|shopkeeper|du§kaː§n§daː§r|dukānadār|دُکاندار
+दॊर|hard, rigid||dor|دۆر
+दॊह|day, daytime|dɔ§h|doh|دۄہ
+दॊहय|daily, every day|d̪o§ha§j|dọhay|دۄہَے
+दोरुन|to run||dōrun|دورُن
+द्यद्|elderly lady|d̪§ʲɛ§d̪|dẹd|دؠد
+द्रोंठ|hardened|d§roːn§ʈʰ
+द्वद|milk|dɔd|dwad|دۄد
+द्वद्|milk|dɔd|dwad|دۄد
+दॖह|smoke||dụh
+दॗथ|messenger|dɨː§tʰ|dǖth|دٟتھ
+नच़ुन|to dance||naċun|نَژُن
+नवि सरॖ|again, anew||nawi sarụ|نوِ سرٕ
+नस|nose|nə§s|nas|نَس
+नऺर|arm||nạr
+नार|fire||nār|نار
+नाव|name|nɑː§ʋ|nāw|ناو
+नावुत|noun|nɑː§wu§t|nāwut|ناوُت
+नावॖत्य|nouns|nɑː§wɨ§t§ʲ|nāwụty|ناوٕتؠ
+नॆन्दॖर|sleep|ne§n§dɨ§r|nendụr
+न्यूल|blue||nyūl
+नॖ|no, not|nɨ|nụ
+पंजऻब्य|Punjabi|pan§d͡ʒəː§b§ʲ|panjạ̄b'|پَنٛجٲبؠ
+पकुन|to walk||pakun
+पगाह|tomorrow||pagāh|پَگاہ
+पतॖ|after||patụ
+पनुन|own||panum|پَنُن
+पम्पोश|lotus|pa§m§poː§ʃ|pampōś|پَمپوش
+परुन|to read||parun|پَرُن
+परुस|last year||parus
+पूथ|book, manuscript|puː§t̪ʰ|pūth|پوٗتھ
+पूथ्य|book||pūthy
+पॆठ|on, upon||peṭh
+पेर्युस|year before last||pēryus
+पॊंज़|monkey||poṃz|پۆنٛز
+पॊज़|true, correct|poz|poz|پۆز
+पॊत लॊग|a suffix||pota log|پۆت لۆگ
+पोन्य|water|poːnʲ|pōny|پونؠ
+पोश|flower|poː§ʃ|pōś|پوش
+प्यॊन|to fall||pyon
+प्रशुन|question|p§ra§ʃu§n|prashun|پرَٛشُن
+प्रावुन|to get, obtain||prāwun
+फख|bad smell|pʰa§kʰ|phakh|پھَکھ
+फिरुन|to translate, turn over||phirun|پھِرُن
+बतॖ|rice|ba§tɨ|batụ|
+बब|father|ba§b|bab|بَب
+बलुन|to heal|ba§lu§n|balun|بَلُن
+बहार|spring|ba§haː§r|bahār|بَہار
+बऻल|ox|bəː§l|bạ̄l
+बादम|almond|baː§da§m|bādam|بادَم
+बादाम|almond|bɑː.§d̪ɑː§m|bādām|بادام
+बापथ|for||bāpath|باپَتھ
+बावुत|adjective|bɑːwut|bāwut|باوُت
+बुतराथ|the earth|bu§ta§raː§tʰ|butarāth|بُتہٕ راتھ
+बुथ|face||buth|بُتھ
+बॆहुन|to sit||behun|بێہُن
+बेत्रि|etc.||bētri
+बॊठ|riverbank||boṭh
+बॊड|big, great||boḍ|بۆڈ
+बोग|apportionment|boːɡ|bōg|بوگ
+बोज़ुन|to listen, hear|boːzun|bōzun|بوزُن
+बोम|anger|boː§m|bōm|بوم
+ब्यॊन|separate||byon
+ब्रॊंह लॊग|prefix||broṃha log|برٛۆنٛہہ لۆگ
+ब्व|I||bọ
+ब्वद|Mercury|bɔ§‹§d|bwad|بۄد
+बॖ|I, me|bɨ|bụ|بہٕ
+भारत|India (formal)|bʰaː§ra§t|bhārat|بھارَت
+मंज़|in|mən§z|maṃz|مَنٛز
+मरुन|to die|ma§ɾu§n|marun|مَرُن
+मरॖद|man|marɨd|marụd|مَرٕد
+मऻज|mother|məː§d͡ʒ|mạ̄j|مٲج
+मऻदान|field, park|məː§daː§n|mạ̄dān|مٲدان
+मऻश|buffalo|məːʃ|mạ̄ś|مٲش
+मानुन|to consent||mānun|مانُن
+मूल|root||mūl|موٗل
+मॅशीद|mosque||mạśīd
+मॆ|me||me
+मेख|Aries|meːkʰ|mekh|
+मॊत|mad|mo§t|mot|مۆت
+मोज|mother|moːd͡ʒ|mōj|موج
+मोल|father|moː§l|mōl|مول
+म्वल|price, cost||mwal|مۄل
+म्वलुल|expensive||mwalul|مۄلُل
+मॏल|cost|mɔ§l
+यछ़ुन|to desire, want||yaċhun|یَژھُن
+यछ्|demi-god, fairy|ja§t͡ʃʰ|yach|یَچھ
+यि तॖ गछ़|coming and going||yi tụ gaċh|یِہ تٕہ گَژھ
+यीरुन|to float, drift||yīrun|ییٖرُن
+युन|to come, arrive||yun|یُن
+रनुन|to cook||ranun|رَنُن
+राज़ॖमाह|kidney bean||rāzụmāh|رازٕماہ
+राथ|last night, yesterday|raː§tʰ|rāth|راتھ
+रुकुन|member||rukun|رُکُن
+रूद|river|ɾuːd̪|rūd|رود
+रेश|beard|reː§ʃ|rēś|ریش
+रेशल|bearded|reː§ʃa§l|rēśal|ریشَل
+रॗफ|form, figure||rụ̄ph|رٟپھ
+लूर|a stick|luːɾ|lūr|لوٗر
+लॊत|lightweight||lot|لۆت
+ल्वकुट|small, tiny||lwakuṭ|لۄکُٹ
+वच़ुन|recitation||waċun|وَژُن
+वदुन|to cry, weep||wadun|وَدُن
+वनुत|utterance||wanut
+वनुन|to tell||wanun|وَنُن
+वर्ताव|use, usage||wartāw|وَرتاو
+वऺरी|year|wə§riː§/vəriː|wạrī|ؤری
+वऻनिज्|heart|ʋəː§ni§d͡ʒ|wạ̄nij|وٲنِج|
+वऻलिन्ज|heart|ʋəː§li§n§d͡ʒ|wạ̄linj|وٲلِنٛج
+वाँगुन|eggplant, brinjal|wãːɡun|wām̐gun|وانٛگُن
+वाँदुर|monkey|wãː§du§r|wām̐dur|وانٛدُر
+वालुन|to bring down|ʋɑːlun|wālun|والُن
+वीर|hero||wīr|ویٖر
+वुडुन|to fly||wuḍun|وُڈُن
+वुफ|flight||wuph|وُپھ
+वुशुन|hot, warm|wu.§ʃu§n|wuśun|وُشُن
+वूर|quilt cover||wūr|ووٗر
+वॅथॖर|leaf||wạthụr|ؤتھٕر
+वॅरी|year|wə§riː§/vəriː|wạrī|ؤری
+व्रख|tree|ʋrakʰ|wrakh|ورَٛکھ
+व्वंदॖ|feelings|wɔ̃.§dɨ|wwaṃdụ|وۄندٕ
+व्वतर|answer|wɔ§ta§r|wwatar|وۄتَر
+शाल|jackal|ʃaːl|śāl|شال
+शिग|apprehension||śig|شِگ
+शीन|snow|ʃiː§n|śīn|شیٖن
+श्वखुर|Venus|ʃɔ§kʰu§r|śwakhur|شۆکُر
+सावुन|to put to sleep|sɑː§ʋu§n|sāwun|ساوُن
+सिरी|sun||sirī|سِری
+सिरीनगर|Srinagar|si§riː§na§ɡa§r|sirīnagar|سِریٖنَگَر
+सु|that|su|su|سُہ
+सौर|Saturn|sɑwr|saur|
+स्वरॖग|heaven||swarụg|سۄرٕگ
+सॖह|lion|sɨ§h|sụh|
+हाम|soiled|hɑːm|hā§m|ہام
+हाल|large room||hāl
+हाल्|house, hall|haː§l|hāl|ہال
+हिन्दुस्तान|India|hi§n§du§s§taː§n|hindustān|ہِندُستان
+हिन्दोस्तऻन्य|an Indian|hindoːstəːnʲ|hindōstạ̄ny|ہِندوستٲن
+हिन्दोस्तान|India|hindoːstaːn|hindōstān|ہِندوستان
+हॆकुन|to be able to||hekun
+हॆछुन|to learn||hechun|ہیٚچھُن
+हॊख|dry||hokh|ہۆکھ
+हॊल|bent, crooked||hol
+ॳंजीर|fig|ən§d͡ʒiː§r|ạnjīr|أنٛجیٖر
+ॳछ|eye|ə§t͡ʃʰ|ạch|أچھ
+ॳड|half|əɖ
+ॳमीर|rich||ạmīr|أمیٖر
+ॳस्य|we|əsʲ|ạsy|أسؠ
+ॴस|mouth|əːs|ạ̄s|ٲس
+
+
+
+@ http://www.koshur.org/pdf/BasicReader.pdf OR elsewhere
+
 अतलास|satin|a§t§laː§s|||** no virama for cluster!
 अथॖ|hand|atʰɨ
-अनुन||
-अपुज़||␣|
 अपोर|other side|apoːr
-अपॖज़||
-अबॊद|stupid, foolish|a§bo§d|abod
-अम्ब||␣|
 अम्ब्|bramble||amb
 अरतल|gold foil|artəl
 अरदाह|eighteen|ardaːh
-असुन||
 अहोक|central pivot of millstone|a§hoː§k
 आख|mark|aː§kʰ
-आगुर|root, source|aːɡuɾ|āgur
-आप्रावुन||
-आब|water|aː§b|āb
 आवुर|busy|aːvur
 आश|hope|aːʃ
-आसुन||
-इंडिया||␣|
 इजाज़थ|permission|id͡ʒaːzətʰ
 इशटाम|stamp paper|i§ʃ§ʈaː§m
 ईमान|faith|iː§maː§n|īmān
@@ -70,395 +330,128 @@ autoExpandExamples.ks = `
 ऎहसान|favour|e§h§saː§n
 एतिराज़|objection|eː§ti§raː§z
 ऐब|defect|əĭ§b
-ऑव्युल||
-ऒक-||
 ऒछ़|frail|ot͡sʰ
-ऒदुर||
 ऒन|blind|o§n
 ऒर|good|or
-ऒश||
 ओट|flour|oː§ʈ
-ओत्रॖ||
 ओबरॏय|respect|oː§b§rɔ§y
 ओम|raw|oːm
 ओलुव|potato|oːluv
 ओस|was|oːs
 औज़ार|instrument|əŭzaːr
 औशद|medecine|əŭ§ʃə§d
-कडुन||
-कथ||
-कन||␣
 कपुर|cloth|kə§pu§r
-कर||
-करतम||␣|
-करुन|to do|kərun
 कलुश|kalash|kəluʃ
-कलॖ||␣
 कऻशुर|Kashmiri|kəː§ʃu§r
 काहवऺट|touchstone|kaːhvəʈ
-कुंज़||
 कुल|tree|kul
-कुस|who?|kus|kus|کُس
 कून|corner|kuːn
-केलॖ|banana|keː§lɨ|kēlụ
-कॉशुर|Kashmiri|kəː§ʃu§r
 कोचॖ|lane|koːt͡ʃɨ
 कोम|tribe, race|koː§m
-क्याज़ि|why||kyāzi
-क्रावुत||
-क्रुहुन||
-क्वस||
-कॏह|hill, mountain|kɔ§h|kôh|کۄہ
 कॗत्य्|how many?|kɨː§t§ʲ
 खबर|news|kʰə§bə§r
 खल|threshing floor|kʰəl
-खालुन||␣
-खॊर||
-ख्यमा||␣|
-ख्यावुन|to feed|kʰ§ʲɑː§ʋu§n|khyāwun
-ख्यॊन||␣
 ख्यॊल|flock|kʰyol
-ख्वतॖ||
-ख्वर||
 खॏर|foot|kʰɔr
 खॖर|slip|kʰɨr
-गगुर||␣|
-गछ़ुन|to go, leave|ɡa§t͡sʰu§n|gaċhun
-गम|grief|gəm
-गरॖ|house, home|ɡa§rɨ|garụ
-गलुन||␣
-गऺगुर||␣|
-गाज़ॖर||
-गाटुल|wise|gaːʈul
-गाटॖ||␣|
-गाटॖज|wise nom. f. sing.|ɡaːʈɨd͡ʒ|gāṭụj
-गाटॖल्य||␣|
-गाम||␣
-गाश||␣
-गुपुन||␣
-गुर||␣
-गुल||␣
 गॊछ़|wanted|got͡sʰ
-गॊब||
 गोख|went|goːkʰ
-गोरो||␣|
-गौ|went|gəŭ
-ग्रंद||␣
-ग्रकुन||
 गॏर|guru|gɔr
 गॖर|energetic|gɨr
-गॖस|excrement|ɡɨs|gụs
-च़||␣|
-च़टुन||␣
-च़लुन||
 च़ऺर|sparrow|t͡sə§r
-च़ूंठ|apple|t͡sũː§ʈʰ|ċūṃṭh
-च़ॆ||
-च़ेनुन||
-च़ेर|apricot|t͡seː§r|ċēr
 च़ोंग|earthen lamp|t͡soːng
 च़्यड|patience|t͡sʲəɖ
-च़ॖ|you|t͡sɨ
-च़ॗन||
-चावुन||
-चिठ्य|letter||ciṭhy
-चीर|wring|t͡ʃiː§r
-चॊन||
 चौंखॖरुन|to shrivel up|t͡ʃəŭn§kʰɨ§ru§n
-छलुन||
-छ़||␣|
-छ़ावुल|goat|t͡sʰaː§wu§l|ċhāwul|ژھاوُل
 छ़्यतॖ|extinguish|t͡sʰ§y§tɨ
 छान|carpenter|t͡ʃʰaː§n
-छॊत||
 जवान|young|d͡ʒəwaːn
-जहाज़||
-ज़ंग|leg|zən§g|zaṃg
-ज़ंगॖ||
-ज़गथ||␣
-ज़मानॖ|age, era|za§maː§nɨ|zamānụ|زَمانہٕ
-ज़ल||␣
 ज़ान|knowledge|zaːn
 ज़ाल|net|zaːl
-ज़ालुन||␣
-ज़ून|moon|zuː§n|zūn
 ज़ॊंग|fire|zoŋ§g
-ज़्यव||
-ज़्यूठ||
-ज़ॖ|two|zɨ|zụ
 जान|good|d͡ʒaː§n
 टमाटर|tomato|ʈə§maː§ʈə§r
-टर||
 टेंग|hillock|ʈeːng
 ठग|cheat|ʈʰəg
 ठानॖ|lid|ʈʰaː§nɨ
 डख|support|ɖə§kʰ
-डॊख||
-डॗस||
 तखसीर|fault|təkʰsiːr
-तगुन||
-तरुन||␣
 ताख|odd number|taːkʰ
 ताफ|sunny|taː§pʰ
-ताम||
-तामथ||
 तीत्य्|so many|tiːtʲ
 तीर|arrow|tiːr
-तील|oil||tīl
-तुरुन||
-तुलुन||
 तृष्ना|greed|triʂnaː
-तॊन||
-तोलुन|to weigh|toː§lu§n|tōlun
 त्यम्बर|cataract|tʲəmbər
 त्यम्बॖर|spark|t§ʲə§m§bɨ§r
-त्रठ||␣
 त्राम|copper|t§raː§m
-त्रावुन|to drop|t̪ɾɑːʋun|trāwun|تۯاوُن
-त्रॆ|three|t§re|tre
-त्रेश||
-तॖ||
-तॗर|cold|tɨːr
 थऺन्य्|butter|tʰə§n§ʲ
-थॊद||
-दन|wealth|dən
-दरवाज़ॖ|door, gate|da§r§waː§zɨ§/darvaːzɨ|darwāzụ|دَروازٕ
-दर्शुन|sight, vision|da§r§ʃu§n|darśun|دَرشُن
-दऺज़|burned|də§z
-दऻर|window|dəːr
 दाग|stain|daːg
-दाथ||␣|
-दान|hearth|daːn
-दार्यल||␣|
 दिवता|devta|divtaː
-दुकानदार||␣|
 दॆह|body|deh
-दॊर||
-दॊह|day, daytime|dɔ§h|doh
-दॊहय|daily, every day|d̪o§ha§j|dọhay|دۄہَے
-दोरुन||
-द्रोंठ|hardened|d§roːn§ʈʰ
-द्वद|milk|dɔd|dwad
-द्वद्|milk|dɔd|dwad
-दॖह||
-दॗथ||␣|
-नच़ुन||
-नवि सरॖ|again, anew||nawi sarụ
-नस|nose|nə§s|nas
-नऺर|arm||nạr
 नाबद|candy|naːbəd
-नार||
-नाव|name|nɑː§ʋ|nāw|ناو
-नावुत|noun|nɑː§wu§t|nāwut|ناوُت
-नावॖत्य|nouns|nɑː§wɨ§t§ʲ|nāwụty|ناوٕتؠ
 नॆंन्दॖर|sleep||neṃndụr
-नॆन्दॖर||␣|
-न्यूल||
-नॖ||␣
-पंजऻब्य|Punjabi|pan§d͡ʒəː§b§ʲ|panjạ̄b'
-पकुन||
-पगाह||
 पज़र|truth|pəzər
-पतॖ||
 पथर|floor|pətʰər
-पनुन||
-पम्पोश|lotus|pa§m§poː§ʃ|pampōś|پَمپوش
-परुन||
-परुस||
 पश|roof|pəʃ
 पऻर्यज़ान|knowledge|pəː§r§ʲ§zaː§n
 पाचि|trotters|paː§t͡ʃi
-पूथ|book, manuscript|puː§t̪ʰ|pūth
-पूथ्य||
 पृतख|divorce|pri§tə§kʰ
-पॆठ||
-पेर्युस||
-पॊंज़||
-पॊज़||␣|
-पॊत लॊग||
 पोग|destruction|poːg
 पोञु॒||
-पोन्य|water|poːnʲ|pōny
-पोश|flower|poː§ʃ|pōś
-प्यॊन||
-प्रशुन||␣|
 प्रऻज|chopped straw|prəːʤ
 प्रागाश|moonshine|p§raː§gaː§ʃ
-प्रावुन||
 पॖंच़ॗह|twenty-five|pɨn§t͡sɨː§h
-फख||␣
 फिरन|turn upside down|pʰi§rə§n
-फिरुन|to translate, turn over||phirun
-बतॖ||␣
-बब||␣
-बलुन||␣
-बहार|spring|ba§haː§r|bahār|بَہار
-बऻल||␣|
 बाज़र|market|baː§zə§r
-बादम||␣
-बादाम||␣
-बापथ||
-बावुत|adjective|bɑːwut|bāwut|باوُت
 बिचोर|helpless|bi§t͡ʃoː§r
 बितुर|capacity|bitur
 बिसलाय|fishing rod|bislaːy
-बुतराथ||␣|
-बुथ||
-बॆहुन||
 बेछुन|to beg|beːt͡ʃʰun
-बेत्रि|etc.||bētri
-बॊठ||
-बॊड||
-बोग||␣|
-बोज़ुन|to listen, hear|boːzun|bōzun
-बोम||␣|
-ब्यॊन||
 ब्रह्मांड|universe|
-ब्रॊंह लॊग||
-ब्व||
-ब्वद|Mercury|bɔ§‹§d|bwad|بۄد
-बॖ|I, me|bɨ|bụ
-भारत||␣|
-मंज़|in|mənz
 मच़र|madness|mə§t͡sə§r
 मदद|help|mədəd
-मरुन||␣
-मरॖद|man|marɨd|marụd
 मस|hair|məs
-मऻज|mother|məː§d͡ʒ|mạ̄j
-मऻदान||␣|
-मऻश|buffalo|məːʃ|mạ̄ś
-मानुन||
 मियान|sheath|miyaːn
 मुँह|mouth|mʊ̃§ɦ|mũh
-मूल||
-मॅशीद|mosque||mạśīd
-मॆ||
-मेख|nail|meːkʰ
 मेठ|head coolie|meːʈʰ
-मॊत|mad|mo§t
-मोज|mother|moːd͡ʒ|mạ̄j
 मोर|peacock|moː§r
-मोल|father|moː§l|mōl
-म्वल||
-म्वलुल||
-मॏल|cost|mɔ§l
 यकजा|together|yə§k§ʤaː
-यछ़ुन||
 यड|belly|yə§ɖ
 यपऻर्य|this side|jə§pəː§r§ʲ
-यि तॖ गछ़|coming and going||yi tụ gaċh
-यीरुन|to float, drift||yīrun
-युन||
 येर|wool|yeː§r
-रनुन||
 रफतार|speed|rə§pʰ§taː§r|||** another without virama
 रबाब|rabab (musical instrument)|rə§baː§b
-राज़ॖमाह||
-राथ|night, yesterday|raː§tʰ
 राद|length of cloth|raːd
 राश|zodiac sign|raːʃ
-रुकुन||
-रूद|rain|ruːd
 रॆह|flame|re§h
-रेश||␣|
-रेशल||␣|
 र्‌यथ|month|r§§ʲə§tʰ
-रॗफ||
 लऻर|cucumber|ləː§r
-लूर|stick|luːɾ|lūr
-लॊत||
 लोल|affection|loːl
-ल्वकुट||
-वच़ुन||
 वथ|way|vətʰ
-वदुन||
-वनुत||
-वनुन||
-वर्ताव||
 वसवास|perturbation|vəsvaːs
-वाँगुन|eggplant, brinjal|wãːɡun|wām̐gun|وانٛگُن
-वाँदुर|monkey|wãː§du§r|wām̐dur
 वाठ|union|vaːʈʰ
 वार|day|vaːr
-वालुन|to bring down|ʋɑːlun|wālun|والُن
-वीर|hero||wīr
 वुछ|see|vut͡ʃʰ
 वुठ|lip|wuʈʰ
-वुडुन||
-वुफ||
 वुशनेर|warmth|vuʃneːr
-वुशुन|hot, warm|wu.§ʃu§n|wuśun|وُشُن
-वूर||
-वॅथॖर||
-वऺरी|year|wə§riː§/vəriː|wạrī|ؤری
-वॅरी|year|wə§riː§/vəriː|wạrī|ؤری
 वैकुंठ|heaven|vəĭ§kun§ʈʰ
 वॊज|rainwater falling from house eaves|vod͡ʒ
-व्रख|tree|ʋrakʰ|wrakh
-व्वंदॖ||␣|
-व्वतर||␣|
-शाल|jackal|ʃaːl|śāl|شال
-शिग|apprehension||śig
-शीन|snow|ʃiː§n|śīn
 शुर|child|ʃur
 शेठ|sixty|ʃeːʈʰ
-श्वखुर|Venus|ʃɔ§kʰu§r|śwakhur|شۆکُر
-सावुन||␣
-सिरी|sun||sirī
 सीर|brick|siːr
-सु|that|su|su|سُہ
 सूर|ash|suːr
 सोन|our|soːn
-सौर|Saturn|sɑwr|saur|
-स्वरॖग|heaven||swarụg
-सॖह|lion|sɨ§h|sụh|
 हगुर|wheel|həgur
 हलेल|yellow myrobalan|həleːl
 हऻर|maina|həːr
-हाम||␣
-हाल||
-हिन्दुस्तान||␣|
-हिन्दोस्तऻन्य|an Indian|hindoːstəːnʲ|hindōstạ̄ny|ہِندوستٲن
-हिन्दोस्तान|India|hindoːstaːn|hindōstān|ہِندوستان
 हून्|dog|huː§n
-हॆकुन||
-हॆछुन||
 हॆलि|when|he§li
 हैबुंगॖ|dumb struck|həĭ§bun§gɨ
-हॊख||
-हॊल||
-ॳ||␣|
-ॳंजीर|fig|ən§d͡ʒiː§r|ạnjīr
-ॳछ|eye|ə§t͡ʃʰ|ạch
-ॳड|half|əɖ
-ॳमीर|rich||ạmīr
-ॳस्य|we|əsʲ|ạsy|أسؠ
-ॴ||␣|
 ॴर|plum|əː§r
 ॴश|enjoyment|əːʃ
-ॴस|mouth|əːs|ạ̄s|ٲس
 ॶंह-रारय|to groan|ɨn§h§-§raː§rə§y
 ॷंच़ॖह-पॗंच़ॖह|make excuses|ɨːnt͡sɨh-pɨ̄nt͡sɨh
 ॷठिम|eighth|ɨː§ʈʰi§m
 ॷठ्य|eight times|ɨːʈʰʲ
-
-
-
-
-@ http://www.koshur.org/pdf/BasicReader.pdf
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
