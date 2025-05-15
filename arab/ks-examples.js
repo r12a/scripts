@@ -37,60 +37,56 @@ autoExpandExamples.ks = `
 @ https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_terms_with_IPA_pronunciation
 
 
-آب|water|aːb
-آتھوار|Sunday|aː§tʰ§‹§w§aː§r
-آدَن||␣||
-آزاد|free, independent|aː§z§aː§d
-آزٲدی|freedom, liberty|ɑːzəːdiː
-آسُن|to be, exist|aːsun
-آشَنؠ|wife|aːʃanʲ
-آشیٚنؠ|wife|aː§ʃ§e§nʲ§‹|āśen'|||آشێنؠ
+آب|water|aːb|āb|आब
+آتھوار|Sunday|aː§tʰ§‹§w§aː§r| āthvār|आथवार
+آدَن|first|aː§da§n| ādan |आदन
+آزاد|free, independent|aː§z§aː§d|āzād|आज़ाद
+آزٲدی|freedom, liberty|ɑː§zəː§diː|āzạ̄dī|आज़ऻदी
+آسُن|to be, exist|aː§su§n|āsun|आसुन
+آشَنؠ|wife|aːʃanʲ|āśan'|आशन्य
+آشیٚنؠ|wife|aː§ʃ§e§nʲ§‹|āśen'|आशॆन्य||آشێنؠ
 آلَو|call, summons|aː§la§ʋ|ālav|आलव
 آوٕرُن|to cover, envelope|ɑː§ʋɨ§ɾu§n|āvụrun|आवॖरुन
 آوٕسُن|to decay, crumble|ɑː§ʋɨ§su§n| āvụsun |आवॖसुन
 آپراوُن|to feed|aː§p§r§aː§ʋu§n|āprāvun|आप्रावुन
 آگُر|root, origin|aː§ɡu§ɾ| āgur |आगुर
-أسؠ||␣||
+أسؠ|we| ə§s§ʲ |ạs'|ॳस्य
 أنْجیٖر|fig|ə§n§d͡ʒ§iː§r|ạnjīr|ॳंजीर||أنٛجیٖر
-أنْز|male swan|ə̃§‹§z|ạnz|||أنٛز
-أنْزِنؠ|female swan|ə̃.§‹§zi§nʲ§‹|ạnzin'|||أنٛزِنؠ
-أچھ||␣||
-أچھِ دود||␣||
-أہرُن||␣||
-ؤری|year| wə§r§iː | wạrī |वऺरी
-ؤٹِل|cockroach|wə§ʈi§l
-ؤہراتھ|rainy season|wə§h§r§aː§t§ʰ
-او||␣
-اوش|husband|oː§‹§ʃ
-اول||
-اوٗ||␣
-اوٚ||␣
+أنْز|male swan|ə̃§‹§z|ạnz|ॳंज़||أنٛز
+أنْزِنؠ|female swan|ə̃.§‹§zi§nʲ§‹|ạnzin'|ॳंज़िन्य||أنٛزِنؠ
+أچھ|eye|ə§t͡ʃʰ§‹|ạch|ॳछ
+أچھِدود|eyesore|ə§tʃʰɪ§‹§ §d§oː§d|ạchi dōd|
+أہرُن|to be distraught|ə§h§ɾu§n|ạhrun|ॳहरुन
+ؤری|year|wə§r§iː|wạrī|वऺरी
+ؤٹِل|cockroach|wə§ʈi§l|vạṭil|वऺटिल
+ؤہراتھ|rainy season|wə§h§r§aː§t§ʰ|vạhrāth|वऺहराथ
+اوش|husband|oː§‹§ʃ|ōś|ओश
+اول|nest|| ōl|ओल
 اوٚبرَس ہؠتُن نار|there'll be good weather tomorrow|›§o§b§ra§s§ §hʲa§‹§tu§n§ §n§aː§r | obras hyatun nār |||اۆبرَس ہؠتُن نار
-اوٚبُر|cloudy weather|›§o§bu§r|obur|||اۆبُر
+اوٚبُر|cloudy weather|›§o§bu§r|obur|ऒबुर||اۆبُر
 اوٚدُر|wet||odur|ऒदुर||اۆدُر
-اوٚر|healthy|||||اۆر
-اوٚش||␣||
+اوٚر|healthy||or|||اۆر
+اوٚش|tear| o§ʃ|oś|
 اوٚنْجوٗر|fig|o§‹§n§d͡ʒ§uː§r
 اوٚنْگٕج|finger|›§õ§‹§ɡɨ§d͡ʒ|ongụj|ऒंगॖज||اوٚنٛگٕج
 اوٚڈ|half|| oḍ |ऒड||اۆڈ
 اوٚژھ|thin, weak||oċh|ऒछ़||اۆژھ
 اوٚگُن|fire||ogun|ऒगुन||اۆگُن
-اَ||␣
-اَبؠن|without a gap|a§bʲa§n
+اَبؠن|without a gap|a§bʲa§n| abyan
 اَباووٚز|unpleasant, disagreeable|| abāvoz|||اَباوۆز
-اَبساوُن||␣
-اَبسُن||␣
+اَبساوُن|to twist| a§b§s§aː§wu§n| absāvun|अबसावुन
+اَبسُن|to twist|a§b§su§n|absun|अबसुन
 اَبوٚد|stupid, foolish|a§b§o§d|abod|अबॊद||اَبۆد
 اَبوٚڈ|small, tiny||aboḍ|अबॊड||اَبۆڈ
-اَبَل||
-اَبُز||
+اَبَل|weak||abal|अबल
+اَبُز|unroasted||abuz|अबुज़
 اَبیْوٚن|same, identical||abeon|अब्यॊन|| اَبیٛۆن 
-اَتوٗل||
-اَتھٕ|hand|a§tʰɨ§‹
-اَخبار||␣
-اَدَم||
-اَدۄے||
-اَرزُن||␣
+اَتوٗل|immesurable||atūl|अतूल
+اَتھٕ|hand|a§tʰɨ§‹|athụ
+اَخبار|newspaper|a§kʰ§b§aː§r|akhbār|अख़बार
+اَدَم|mean, vile||adam|अदम
+اَدۄے|indistinct||adọy|अद्वय
+اَرزُن|to win|aɾzun|arzun|अर्ज़ुन
 اَرَب|billion|a§ra§b
 اَرٕترْٕہ|thirty-eight|a§rɨ§t§rɨ§h| arụtrụٛh |||اَرٕترٕٛہ
 اَرٕتٲجِہہ|forty-eight|arɨtəːd͡ʒih
