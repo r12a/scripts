@@ -41,7 +41,7 @@ autoExpandExamples.ur = `
 آدهنك|modern, contemporary|ɑː.§d̪ʱʊ.§‹§nɪ§k
 آدھا|half|ɑː.§d̪ʱ§‹§ɑː
 آذربائجان|Azerbaijan|ɑː.§zə§ɾ.§b§ɑː.§ɪ.§d͡ʒ§ɑː§n
-آرام|relaxation|ɑː§ɾ§ɑː§m
+آرام|relaxation|ɑː§ɾ§ɑː§m|ārām|آرَام
 آرزو|wish, desire|ɑː§ɾ.§z§uː
 آزادی|freedom, independence|ɑː.zɑː.d̪iː
 آزادئ مذہب|freedom of religion|ɑː§z§ɑː§d§iː ɛ§ §mə§z§hə§b
@@ -656,8 +656,8 @@ autoExpandExamples.ur = `
 سبد|basket|sə.bʊd̪
 سبزی|vegetable|sə§b.§z§iː
 سبھا|assembly, council|sə.bʱɑː
-ستّر|seventy|sa§tta§r||ستر
-ستر|seventy|sa§tta§r||ستّر
+ستّر|seventy|sa§tta§r|sattar|ستر||ستر
+ستر|seventy|sa§tta§r|sattar|سَتَّر
 سدابہار|evergreen|sə.d̪ɑː.bə.ɦɑːɾ
 سدھارنا|to improve|sʊ.d̪ʱɑːɾ.nɑː
 سراب|mirage, apparition|sə.ɾɑːb
