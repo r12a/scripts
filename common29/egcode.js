@@ -185,13 +185,62 @@ function addExamples (langFilter) {
 /* SHOW TRANSCRIPTIONS INLINE, RATHER THAN IN POPUP PANEL */
 
 
-function showCharDetailsInline (chars, clang, base, target, panel, list, translit, ipa, node) {
+/*function showCharDetailsInline (chars, clang, base, target, panel, list, translit, ipa, node) {
     // open an article window after an example and fill it with character details
     
 	if (typeof charDetails === 'undefined') return
 
     // get the insertion point
     insertPoint = node.closest('p, table, div, li')
+
+
+
+    // if this article is already open, close it
+    console.log('insertPoint',insertPoint,'next',insertPoint.nextElementSibling)
+    ptr = insertPoint.nextElementSibling
+    //console.log('tagname',ptr.tagName, 'title',ptr.title)
+    if (ptr !== null && ptr.tagName === 'ARTICLE' && ptr.title === chars) {
+        ptr.remove()
+        return
+        }
+
+
+    // create the article element & table outer
+    var panel = document.createElement('article')
+    panel.title = chars
+	var table = document.createElement('table')
+	table.className = 'panel'
+	table.innerHTML = makeExampleArticleDetails(chars, clang, base, target, panel, list, translit, ipa, node)
+	panel.appendChild(table)
+    insertPoint.after(panel)
+	
+	expandCharMarkup()
+	addExamples(clang)
+	//convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(table, window.blockDirectoryName, 'c')
+    
+    // set event trigger on all .ipa elements - opens description box on click
+    if (document.querySelector('.useBlockExamples')) {
+        var ipaNodes = document.querySelectorAll(".ipa")
+        for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+        }
+        
+	return false
+	}
+*/
+
+function showCharDetailsInline (chars, clang, base, target, panel, list, translit, ipa, node) {
+    // open an article window after an example and fill it with character details
+    //console.log(`showCharDetailsInline ( ${ chars }, ${ clang }, ${ base }, ${ target }, ${ panel }, ${ list }, ${ translit }, ${ ipa }, ${ node } )`)
+
+	if (typeof charDetails === 'undefined') return
+
+    // get the insertion point
+    if (node.closest('figure')) insertPoint = node.closest('figure')
+    else insertPoint = node.closest('p, table, div, li')
 
 
 
@@ -501,6 +550,7 @@ function closeArticle (node) {
 
 function showCharDetailsInPanel (evt) {
 	var lang, chars, insetPoint, panel, table, ipaNodes
+    //console.log(`showCharDetailsInPanel (${evt })`)
     
 	if (typeof charDetails === 'undefined') return
 

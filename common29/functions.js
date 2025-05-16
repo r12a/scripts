@@ -3402,7 +3402,8 @@ function showCharDetailsInline (chars, clang, base, target, panel, list, transli
 	if (typeof charDetails === 'undefined') return
 
     // get the insertion point
-    insertPoint = node.closest('p, table, div, li, figure')
+    if (node.closest('figure')) insertPoint = node.closest('figure')
+    else insertPoint = node.closest('p, table, div, li, figure')
 
     // create the article element & table outer
     var panel = document.createElement('article') 
