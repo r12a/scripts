@@ -26,65 +26,65 @@ autoExpandExamples.kru = `
 @ The Kurukh Language https://www.google.co.uk/books/edition/The_Kurux_Language/v9BCDwAAQBAJ?hl=en&kptab=getbook&gbpv=1
 
 𑶶𑶱𑷑𑷑𑶳|woman|p§e§l.§l§o
-𑷖𑶵𑶶𑶵|to graze|xɑpɑ
+𑷖𑶵𑶶𑶵|to graze|x§ɑ§p§ɑ
 𑶾𑶴𑶶|shutting|ɖʰ§a§p
 𑶻𑶲𑷊𑷊𑶵|to push|t§u§k.§k§ɑ
-𑷖𑶱𑷙𑶻𑶵|leaf cup|xeː.tɑ
+𑷖𑶱𑷙𑶻𑶵|leaf cup|x§eː.§‹§t§ɑ
 𑶺𑶱𑷙𑶻|husband|m§eː§‹§t
-𑷀𑶵𑷀𑶵|to lick|ʈɑʈɑ
-𑷑𑶴𑷀𑶶𑶴𑷀|sticky|laʈ.paʈ
-𑷅𑶰𑷅𑷅|fire|cicc
+𑷀𑶵𑷀𑶵|to lick|ʈ§ɑ§ʈ§ɑ
+𑷑𑶴𑷀𑶶𑶴𑷀|sticky|l§a§ʈ.§p§a§ʈ
+𑷅𑶰𑷅𑷅|fire|c§i§c§c
 𑶵𑷅𑶵|thin|ɑ.§c§ɑ
-𑷊𑶲𑷊𑷊|head|kukk
+𑷊𑶲𑷊𑷊|head|k§u§k§k
 𑶱𑷙𑷊𑶵|to walk|eː.§‹§k§ɑ
-𑶰𑷔𑶻𑷑𑶱𑷙𑷊|from here|ist.leːk
+𑶰𑷔𑶻𑷑𑶱𑷙𑷊|from here|i§s§t.§l§eː§‹§k
 𑶷𑶴𑷔𑶰𑷏𑶵𑷐|falsehood|pʰ§a.§s§i.§j§ɑ§r
-𑷅𑶲𑶷𑶱𑶺|secretly|cu.pʰem
-𑶺𑶵𑶷|pardon|mɑpʰ
+𑷅𑶲𑶷𑶱𑶺|secretly|c§u.§pʰ§e§m
+𑶺𑶵𑶷|pardon|m§ɑ§pʰ
 𑶼𑶴𑷐𑶰𑷏𑶵|brass plate|tʰ§a.§r§i.§j§ɑ
 𑶱𑷙𑶼𑷐ʼ𑶵|to be visible|eː§‹§tʰ§r.§ʔ§ɑ
-𑷑𑶵𑶼|kick|lɑtʰ
+𑷑𑶵𑶼|kick|l§ɑ§tʰ
 𑷁𑶱𑷊𑷐ʼ𑶵|to be stopped|ʈʰ§e§k§r.§ʔ§ɑ
-𑷑𑶲𑷁𑶰𑷙|half-burned wood|lu.ʈʰiː
-𑶶𑶱𑷙𑷁|market|peːʈʰ
+𑷑𑶲𑷁𑶰𑷙|half-burned wood|l§u.§ʈʰ§iː§‹
+𑶶𑶱𑷙𑷁|market|p§eː§‹§ʈʰ
 𑷆𑶰𑷐𑶰𑷏𑶵𑷐ʼ𑶵|to be dispersed|cʰ§i.§r§i.§j§ɑ§r.§ʔ§ɑ
-𑷊𑶴.𑷆𑶲𑷙𑷐|slough|ka.cʰuːr
-𑶶𑶳𑷐𑶳𑷆|half-cooked|po.rocʰ
+𑷊𑶴.𑷆𑶲𑷙𑷐|slough|k§a.§cʰ§uː§‹§r
+𑶶𑶳𑷐𑶳𑷆|half-cooked|p§o.§r§o§cʰ
 𑷋𑶱𑶶𑶶𑶵|village|kʰ§e§p.§p§ɑ
-𑷖𑶴𑷋𑷐ʼ𑶵|to be available|xakʰr.ʔɑ
-𑶸𑶳𑷋𑷋|locust|bokkʰ
-𑶸𑶳𑷎𑷌𑷌𑶵|to run away|boŋɡ.ɡɑ
+𑷖𑶴𑷋𑷐ʼ𑶵|to be available|x§a§kʰ§r.§ʔ§ɑ
+𑶸𑶳𑷋𑷋|locust|b§o§k§kʰ
+𑶸𑶳𑷎𑷌𑷌𑶵|to run away|b§o§ŋ§ɡ.§ɡ§ɑ
 𑷃𑶰𑶸𑶵|money|ɖʰ§i.§b§ɑ
 𑶰𑷐𑶰𑶸|two (persons)|i.§r§i§b
 𑶽𑶰𑷌𑷕𑶵|long|d§i§g.§h§ɑ
-𑶶𑶵𑶽𑶵|root|pɑ.dɑ
-𑷖𑶴𑶽𑶽|child|xadd
+𑶶𑶵𑶽𑶵|root|p§ɑ.§d§ɑ
+𑷖𑶴𑶽𑶽|child|x§a§d§d
 𑷂𑶵̃𑷗𑶵|branch|ɖ§ɑ̃.§ɽ§ɑ
-𑶽𑶳𑷂𑶳𑷐-𑶸𑶳𑷂𑶳𑷐|dirty|so.ɖor-bo.ɖor
+𑶽𑶳𑷂𑶳𑷐-𑶸𑶳𑷂𑶳𑷐|dirty|s§o.§ɖ§o§r§-§b§o.§ɖ§o§r
 𑷖𑶱𑷂𑷂|food|x§e§ɖ§ɖ
 𑷇𑶳𑷊𑷊|a few|ɟ§o§k§k
 𑷖𑶳𑷙𑷇𑶵|to collect|x§oː.§‹§ɟ§ɑ
-𑷖𑶴𑷇𑷇|dirt|xaɟɟ
-𑷌𑶳𑷑𑷑𑶴𑷔|landlord|ɡol.las
+𑷖𑶴𑷇𑷇|dirt|x§a§ɟ§ɟ
+𑷌𑶳𑷑𑷑𑶴𑷔|landlord|ɡ§o§l.§l§a§s
 𑷅𑶰𑷌𑶵|seedling|c§i.§ɡ§ɑ
-𑶿𑶱𑷙𑷌|rite|neːɡ
-𑶹𑶴𑶰𑷏𑶳𑷔|brother|bʰai.jos
+𑶿𑶱𑷙𑷌|rite|n§eː§‹§ɡ
+𑶹𑶴𑶰𑷏𑶳𑷔|brother|bʰ§a§i.§j§o§s
 𑶹𑶵𑶹𑶿𑶵|conjecture|bʰ§ɑ§bʰ.§n§ɑ
 𑷑𑶴𑶹-𑷑𑶴𑶹|voraciously|l§a§bʰ§–§l§a§bʰ
-𑶾𑶴𑷐ʼ𑶵|to hold|dʰar.ʔɑ
-𑷑𑶳𑶾𑶴𑷐|name of a tribe|lo.dʰar
+𑶾𑶴𑷐ʼ𑶵|to hold|dʰ§a§r.§ʔ§ɑ
+𑷑𑶳𑶾𑶴𑷐|name of a tribe|l§o.§dʰ§a§r
 𑶸𑶲𑶾|Wednesday|b§u§dʰ
-𑷃𑶰̇𑷊𑶰𑷙|pounding machine|ɖʰiŋ.kiː
-𑷂𑶰𑷃𑷌𑶴𑷐|intrepid|ɖiɖʰ.ɡar
-𑷂𑶰𑷃|courage|ɖiɖʰ
-𑷈𑶴𑷐𑶿𑶵|spring|ɟʰar.nɑ
-𑶺𑶲̃𑷙𑷈𑶲𑷐ʼ𑶵|to wash one's face|m§ũ§ː.§ɟʰ§u§r.§ʔ§ɑ
+𑷃𑶰̇𑷊𑶰𑷙|pounding machine|ɖʰ§iŋ.§k§iː§‹
+𑷂𑶰𑷃𑷌𑶴𑷐|intrepid|ɖ§i§ɖʰ.§ɡ§a§r
+𑷂𑶰𑷃|courage|ɖ§i§ɖʰ
+𑷈𑶴𑷐𑶿𑶵|spring|ɟʰ§a§r.§n§ɑ
+𑶺𑶲̃𑷙𑷈𑶲𑷐ʼ𑶵|to wash one's face|m§ũː§‹.§ɟʰ§u§r.§ʔ§ɑ
 𑷐𑶰𑷈|joy|r§i§ɟʰ
 𑷍𑶵̃𑷔𑶰𑷙|grass|ɡʰ§ɑ̃.§s§iː§‹
-𑶺𑶵𑷍𑶱𑷙|name of a month|mɑ.ɡʰeː
+𑶺𑶵𑷍𑶱𑷙|name of a month|m§ɑ.§ɡʰ§eː§‹
 𑷈𑶳𑷎𑷍|pitfall|ɟʰ§o§ŋ§ɡʰ
 𑶶𑶴̃𑷏𑷏𑶵|cold|p§a§ɲ.§ɲ§ɑ
-𑶿𑶰𑷙𑶿|you|n§iː§‹§n
+𑶿𑶰𑷙𑶿|you|n§iː§‹§n|nīn|नीन||नीन
 𑶳𑶿-𑶵|to drink|o§n§-§ɑ
 𑶺𑶳𑷙𑷖𑶵|to eat|m§oː.§‹§x§ɑ
 𑷖𑶴𑶺𑶰𑷙|spear-grass|x§a.§m§iː§‹
@@ -121,14 +121,11 @@ autoExpandExamples.kru = `
 𑶴𑷅𑷅|thorn|a§c§c
 𑷅𑶴ʼ𑶵|to stink|c§a.§ʔ§ɑ
 𑶰𑶻𑶻𑶵|to distribute|i§t.§t§ɑ
-𑷅𑶰𑷅𑷅|fire|c§i§c§c
 𑶴𑷊𑷔𑶰𑷙|hook|a§k.§s§iː
 𑶲𑷎𑷊𑷊|chaff|u§ŋ§k§k
-𑷊𑶲𑷊𑷊|head|k§u§k§k
 𑶴𑷊𑷊𑶲|now|a§k.§k§u
 𑷅𑶴̃ʼ𑶵|to pour into|c§ã.§ʔ§ɑ
 𑶸𑶴𑶿ʼ𑶿𑶵|to be made|b§a§n.§§n§ɑ
-𑷅𑶵𑷑|voice|cɑl
 
 
 @ Wikipedia, Kurukh language https://en.wikipedia.org/wiki/Kurukh_language
@@ -144,9 +141,10 @@ autoExpandExamples.kru = `
 𑷊𑶲̃𑷗𑶲𑷖|Kurukh language|k§ũ§ɽ§u§x
 
 
+@ https://en.wiktionary.org/w/index.php?title=Category:Kurukh_terms_with_IPA_pronunciation
 
-
-
+𑶽𑶲𑶾𑶰𑷙|milk|d§u§dʱ§iː§‹|dudhī|दुधी||दुधी
+𑶾𑶲𑷙𑷑𑶱𑷙|dust|dʱ§u§ː§l§e§ː|dhūle|धूले||धूले
 
 
 
