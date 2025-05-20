@@ -72,7 +72,6 @@ autoExpandExamples.zag = `
 𖻆𖺻𖻍|star|m§a§ɾ|mar|||mar
 𖻇𖺻|you|n§a|na|||na
 𖻇𖺾𖻉𖻀𖻂𖻌|squirrel|n§ɛ§ŋ§ɡ§ɪ§r|nengir|||nengir
-||␣|-ni|
 𖻇𖻑̄𖻒|you|n§u§w|nuw|||nuw
 𖻇𖻂̄|one|n§i˥˩|nî|||nî
 𖻊𖻐𖻐𖺾|eight|ʔɔ§t§t§ɛ|otte|||otte
