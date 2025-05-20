@@ -58,10 +58,10 @@ autoExpandExamples.suz = `
 𑯖𑯉𑯙𑯑|father|aː§p§pʰ§o||||x
 𑯉𑯃𑯉𑯃|emperor|p§i§p§||||x
 𑯊𑯖𑯒|cloud|g§aː§s||गोस्स||x
-𑯋𑯖𑯇𑯒𑯑|light|h§a§m§s§o||||x
+𑯋𑯖𑯇𑯒𑯑|light|h§a§m.§s§o||||x
 𑯌𑯖𑯄𑯇𑯃|young calf|t͡ʃ§a§r§m§i||||x
 𑯍𑯖|sun|n§aː||नां||x
-𑯓𑯖𑯄𑯌𑯃|friend|w§a§r§t͡ʃ§i||||x
+𑯓𑯖𑯄𑯌𑯃|friend|w§a§r.§t͡ʃ§i||||x
 𑯖𑯐|infant|aː§l||गोस्स||x
 𑯗𑯑̃:𑯊𑯖|deep pit|ɖ§õː§‹§g§aː||||x
 𑯘𑯖𑯄𑯃|boarder|tʰ§a§r§i||||x
@@ -90,6 +90,7 @@ autoExpandExamples.suz = `
 𑯍𑯂:|leech|n§eː§‹||||x
 𑯍𑯂̀|what?; fame|n§e||||x
 𑯁𑯂𑯇𑯌𑯖|to serve|t§e§m§c§a||||x
+𑯁𑯂𑯇̱𑯌𑯖|to serve|t§e§m§c§a||||x
 𑯁𑯂̍𑯇𑯌𑯖|to add|ˈt§e§m§c§a||तेम्चा||x
 𑯘𑯃̍𑯌𑯌𑯖|to meet|ˈtʰ§i§c§c§a||||x
 𑯘𑯃𑯌𑯌𑯖̍|to fall down|tʰ§i§c§ˈc§a||||x
@@ -122,7 +123,7 @@ autoExpandExamples.suz = `
 
 
 𑯎̭𑯂𑯒𑯂|script|br§e§s§e||||x
-𑯎𑯄𑯂𑯒𑯂|script|br§e§s§e||||x
+𑯎𑯄𑯂𑯒𑯂|script|b§r§e§s§e||||x
 
 𑯊𑯅𑯔|hand|ɡ§u§j||गुइ||x
 𑯏𑯑𑯃|tiger|d͡ʒ§o§j||जोइ||x
