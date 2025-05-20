@@ -58,7 +58,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->2 May, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->20 May, 2025<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -76,7 +76,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Chakma Orthography Notes, <!-- #BeginDate format:En2 -->02-May-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cakm/ccp">https://r12a.github.io/scripts/cakm/ccp</a></small></p>
+<p class="refLine"><small>Richard Ishida, Chakma Orthography Notes, <!-- #BeginDate format:En2 -->20-May-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cakm/ccp">https://r12a.github.io/scripts/cakm/ccp</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -197,7 +197,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">Chakma is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with an inherent vowel pronounced <span class="ipa">aː</span>. Plain post-consonant vowel sounds are written using <a href="#combiningV" class="seclink">7 combining marks</a> and <a href="#diphthongs" class="seclink">3 more</a> are used for diphthongs.  Chakma has 1  <a class="seclink" href="#prebase">pre-base vowel sign</a> and 2  <a class="seclink" href="#circumgraphs">circumgraphs</a>.</p>
+<p class="addToVowels">The Chakma <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> has an inherent vowel pronounced <span class="ipa">aː</span>. Plain post-consonant vowel sounds are written using <a href="#combiningV" class="seclink">7 combining marks</a> and <a href="#diphthongs" class="seclink">3 more</a> are used for diphthongs.  Chakma has 1  <a class="seclink" href="#prebase">pre-base vowel sign</a> and 2  <a class="seclink" href="#circumgraphs">circumgraphs</a>.</p>
 
 
 <p class="addToVowels">Four independent vowels are available for writing <a class="seclink" href="#standalone">standalone</a> vowels. Other standalone vowels can be written by attaching vowel signs to <span class="hx">11103</span>.</p>
@@ -207,6 +207,22 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 <p>Chakma has a set of  <a href="#numbers" class="seclink">native digits</a>, but sometimes Bengali digits may be used. It has a mixture of ASCII and Chakma code points for <a href="#phrase" class="seclink">punctuation marks</a>.</p>
+
+
+
+
+
+<section id="notable">
+<h3>Notable features</h3>
+
+<ul>
+<li>the inherent vowel is long</li>
+<li>there is a simplified orthography, which is in increasing use by the Chakma community, and a traditional orthography (which has more complicated vowel representations)</li>
+<li>diphthongs may be written after a consonant using a combination of virama and independent vowel, and may be followed by an additional vowel sign</li>
+<li>consonant clusters may be indicated either by an always visible diacritic, or as stacks formed using a virama</li>
+<li>where a consonant cluster has a geminated consonant followed by another consonant, both the visible vowel killer and the virama are used for the same stack</li>
+</ul>
+</section>
 </section>
    
     
@@ -734,7 +750,7 @@ alveolar</th>
 <h3>Vowel summary table</h3>
 
 
-<p>This table summarises basic vowel to character assignments.</p>
+<p>This table summarises only basic vowel to character assignments.</p>
 
 <p class="instructions highlight">ⓘ represents the inherent vowel. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here).</p>
 
@@ -814,6 +830,12 @@ alveolar</th>
 <p>The inherent vowel for Chakma is <span class="ipa">aː</span> (longer than the inherent vowels in Bangla and Hindi). So <span class="ipa">kaː</span> is written by simply using the consonant letter, eg.</p>
 
 <p><span class="eg" lang="ccp">𑄇𑄋𑄢</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="kā,nā,ā"
+    data-type="transc,transc,transc"
+    data-prefix=",,,"
+    ><td>𑄇␣𑄋␣𑄢</td></tr>
+</table>
 
 
 
@@ -822,14 +844,17 @@ alveolar</th>
 
 
 <section id="novowel">
-<h4>Vowel absence</h4>
+<h4>Suppressing the inherent vowel</h4>
 
-<p>The dropping of the inherent vowel for syllable codas in Chakma is marked using <span class="ch">𑄴</span>.</p>
+<p>The dropping of the inherent vowel for syllable codas in Chakma is marked using <span class="ch">𑄴</span>. This is used also over a word-final coda.</p>
 <p><span class="eg" lang="ccp">𑄌𑄖𑄴</span></p>
 <p><span class="eg" lang="ccp">𑄖𑄨𑄚𑄴</span></p>
 <p><span class="eg" lang="ccp">𑄈𑄧𑄢𑄴𑄉𑄧𑄌𑄴</span></p>
 
 <p>The same diacritic is also used to signal <a href="#clusters">consonant clusters</a> and <a href="#gemination">gemination</a>.</p>
+
+
+<p>Consonant clusters may also be transformed into stacks using <span class="ch">𑄳</span> (see <a class="secref">clusters</a>).</p>
 </section>
 </section>
 
@@ -852,11 +877,19 @@ alveolar</th>
     <span><span class="uname">U+11107 LETTER KAA</span> + <span class="uname">U+11128 VOWEL SIGN I</span></span>
 </p>
 
-<p>Plain post-consonant vowel sounds are written using 7 combining marks and 3 more are used for diphthongs. Chakma has 1 pre-base vowel sign and 2 circumgraphs.</p>
+<p>Chakma has two orthographies, simplified and traditional. The traditional orthography has a more complex approach to writing vowels, and includes a number of composite vowel signs. The current Unicode block may require some additional code points for proper support of the traditional orthography, but the various vowels are achievable. According to Bivuti Chakma, the general populace is adopting the simplified approach for modern Chakma.</p>
+
+<p id="caveat"><b>The descriptions of the traditional vowels relies on an interpretation of the list of vowels in <cite>𑄌𑄋𑄴𑄟𑄳𑄦 𑄃𑄨𑄇𑄴𑄳𑄠𑄬 𑄝𑄪𑄙𑄨</cite> (by the District School Education Board, CADC). It needs to be tweaked somewhat, and should be treated as suggestive rather than authoritative. That document uses English approximations, rather than IPA, to indicate sound equivalents.  The code point sequences used are those that, through trial and error, appear to produce the necessary shapes, given that the original document is not Unicode-encoded.</b></p>
+
+<p>Simplified plain post-consonant vowel sounds are written using 7 combining marks and 3 more are used for diphthongs. Chakma has 1 pre-base vowel sign and 2 circumgraphs.</p>
 
 <p>Two of the vowel signs are <a class="termref" href="../glossary/index.html#spacingmark">spacing marks</a>, meaning that they consume horizontal space when added to a base consonant.</p>
 
-<p>All vowel signs are typed and stored after the base consonant, and the glyph rendering system takes care of the positioning at display time. When consonants are stacked the glyphs used to represent vowels,  whether alone or in multipart vowels, are arranged around a <em>syllable onset</em>, which may be 2 consonants, rather than just around the immediately preceding consonant. See <a class="secref"></a> <a class="secref">prebase</a> and <a class="secref">circumgraphs</a>.</p>
+<p>All vowel signs are typed and stored after the base consonant, and the glyph rendering system takes care of the positioning at display time.  <a href="../glossary/index.html#conjunct" class="termref" target="terms">Conjuncts</a> (stacks) are treated as indivisible units when it comes to rendering vowel signs, meaning that pre-base vowel signs and left-side glyphs of circumgraphs are rendered before the conjunct as a whole (see <a class="secref" href="#prebase">Pre-base vowel signs</a> and <a class="secref">circumgraphs</a>).</p>
+
+
+
+
 
 
 
@@ -865,15 +898,22 @@ alveolar</th>
 
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Chakma uses the following dedicated combining marks for basic vowels.  They are all vowel signs.</p>
+<p><span class="leadin">Simplified orthography.</span> Chakma uses the following dedicated combining marks for plain vowels in the simplified orthography.  They are all vowel signs.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">𑄨␣𑄩␣𑄪␣𑄫␣𑄬␣𑄮␣𑄧␣𑅅</figure>
+<figure class="characterBox auto" data-cols="trans,transc"
+data-ipa="i,iː,u,uː,e ɛ,o,ɔ,ɑː"
+>𑄨␣𑄩␣𑄪␣𑄫␣𑄬␣𑄮␣𑄧␣𑅅</figure>
 
-<p>The vowel-sign <span class="ch">𑅅</span> is used to indicate an explicit <span class="ipa">aː</span> sound in the Baarah Maatraa orthography.</p>
+
+
+
+
+<p><span class="leadin">Traditional orthography.</span> Chakma appears to use the following vowel signs for basic vowels in the traditional orthography. (See the <a href="#caveat">caveat</a>.)</p>
+
+<figure class="characterBox auto" data-cols="trans,transc"
+data-ipa="i,iː,u,uː,e,ɛ,ɔ,ɔ,ɔː,ɔː,ɔː,ɑː"
+>𑄨␣𑄩␣𑄪␣𑄫␣𑄬␣𑄬𑄬␣𑄧␣𑄱␣𑄧𑅅␣𑄲␣𑄯␣𑅅</figure>
 </section>
-
-
-
 
 
 
@@ -885,16 +925,31 @@ alveolar</th>
 <section id="diphthongs">
 <h4>Diphthongs</h4>
 
-<p>Single-character vowel signs are used to write the following diphthongs.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">𑄰␣𑄭␣𑄯␣𑅆</figure>
+<p><span class="leadin">Simplified orthography.</span> The following are used to write diphthongs in the simplified orthography. There may be more or less than shown.</p>
 
-<p>The Baarah Maatraa orthography uses the vowel sign <span class="ch">𑅆</span> to write the sound <span class="ipa">eːi</span>.</p>
+<figure class="characterBox auto" data-cols="trans,transc"
+data-ipa="oi̯,ai̯,ou̯,eːi̯,ui̯,?"
+>𑄰␣𑄭␣𑄯␣𑅆␣𑄪𑄭␣𑄬𑄭</figure>
 
-<p>Other diphthongs appear to use multiple vowel signs over the same base consonant.  These include:</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc" data-ipa="ui̯">𑄪𑄭</figure>
+
+
+<p><span class="leadin">Traditional orthography.</span> Chakma appears to use the following for diphthongs in the traditional orthography. (See the <a href="#caveat">caveat</a>.)  Some of these diphthongs are written using the virama between the consonants and the vowel sign.  To make things clearer, the diphthongs are shown after <span class="ch">𑄇</span> in the list below.</p>
+
+<figure class="characterBox auto"
+data-ipa="wo,ei,ei,eːi,oi,oːi,ou,ou,oːu,ai,?,?"
+data-cols="trans,transc">𑄃𑄮␣𑄃𑅆␣𑄃𑄬𑄳𑄆␣𑄃𑄬𑅆␣𑄃𑄳𑄆␣𑄃𑄳𑄆𑄧𑄤𑄴␣𑄃𑄳𑄅𑄧␣𑄃𑄮𑅅␣𑄃𑄯𑅅␣𑄃𑄭␣𑄃𑄳𑄆𑄧␣𑄃𑄧𑅆</figure>
+
+<p class="observation"><span class="leadin">Observation:</span> It's not clear how to write the third sound in the list, since the font doesn't support the expected sequence.</p>
+
+<p class="observation"><span class="leadin">Observation:</span> It appears to be an inconsistency in the encoding that a single combining mark is available to write <span class="ch">𑅆</span>, but the shape <span class="ch">𑄳𑄆</span> has to be written using a (highly unusual) combination of <span class="name">virama</span> plus independent vowel.</p>
+
 </section>
+
+
+
+
 
 
 
@@ -934,25 +989,32 @@ alveolar</th>
 
 <p id="def-prebase" class="explanatoryintro definitionStub"></p>
 
-<p>Chakma has one pre-base vowel sign.</p>
-
 <figure class="characterBox auto" data-cols="ipa,trans,transc">𑄬</figure>
 
-<p class="info">This combining mark is always typed and stored after the base consonant. The rendering process places the glyph before the base consonant at the time of display.</p>
+<p>Chakma has one pre-base vowel sign, eg.</p>
+
 <p><span class="eg" lang="ccp">𑄛𑄬𑄇𑄴</span></p>
 
-<p>When this vowel is pronounced after a consonant cluster the vowel sign is typed and stored after the second consonant in the cluster but is displayed before the first consonant.</p>
+<p class="info">This is a combining mark that is always typed and stored after the base consonant(s), ie. the codepoints follow the order in which the items are pronounced. The rendering process places the glyph before the base consonant without changing the code points. The following shows the sequence of code points that make up the word just above.</p>
+
+<table class="sequenceTable">
+<tr data-notes="p,e,k"
+    data-type="ipa,ipa,ipa"
+    data-prefix=",,"
+    ><td>𑄛␣𑄬␣𑄇</td></tr>
+</table>
+
+
+
+<p>Because <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjuncts</a> are never split, the vowel sign  is placed before the start of a stack. The vowel sign is typed and stored after the second consonant in the cluster but is displayed before the first consonant, eg.</p>
+
 <p><span class="eg" lang="ccp">𑄝𑄬𑄌𑄴𑄳𑄦𑄬𑄉</span></p>
-
-<!--See <a class="figref">fig_prebase</a>.-->
-
-<!--
-<figure id="fig_prebase" class="sideCaption">
-<img src="cjm/fig_prebase.png" alt="ꨚꨴꨯꨱꩃ" class="ex" lang="cjm" data-notes="Noto Sans Cham" style="height: 9rem;">
-<figcaption>A pre-base vowel glyph (light highlight colour) placed before both consonants in an onset cluster, rather than just before the consonant pronounced immediately before it.</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="cjm">ꨚꨴꨯꨱꩃ</span></p></details>
--->
+<table class="sequenceTable breakdown">
+<tr data-notes=",CAA,MAAYAA,virama,HA,E"
+    data-type="uname,uname,uname,uname,uname"
+    data-prefix=",→,+,+,+,+"
+    ><td>𑄌𑄴𑄳𑄦𑄬␣𑄌␣𑄴␣𑄳␣𑄦␣𑄬</td></tr>
+</table>
 </section>
 
 
@@ -971,20 +1033,20 @@ alveolar</th>
 
 <p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
 
-<p>Chakma has 2 circumgraphs.</p>
-
 <figure class="characterBox auto small" data-cols="ipa,trans,transc">𑄮␣𑄯</figure>
 
-<p class="info">Like pre-base glyphs, these are single combining marks that are always stored <em>after</em> the base consonant. When rendered, the single code point produces multiple glyphs, which are placed on different sides of the base consonant. <!--Click on <a class="figref">fig_circumgraphs</a> to see the sequence of characters in storage.--></p>
+<p class="info">Chakma has 2 circumgraphs. These are single combining marks that are always stored after the base consonant. When rendered, the single code point produces multiple glyphs, which are placed on different sides of the base consonant, eg.</p>
 
-<!--
-<figure id="fig_circumgraphs" class="sideCaption">
-<img src="rej/fig_circumgraphs.png" alt="ꤷꥇꥆꥋꥆ" data-notes="200px Noto Sans Rejang" class="ex" lang="rej" style="height: 8rem; margin-inline:2rem;">
-<figcaption>A circumgraph. The vowel stored after the consonant as a single character in memory is rendered with separate glyphs on 2 sides of the base.</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="rej">ꤷꥇꥆꥋꥆ</span></p></details>
+<p><span class="eg" lang="ccp">𑄦𑄮𑄢𑄮𑄋</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="h,o,r,o,ŋaː"
+    data-type="ipa,ipa,ipa,ipa,ipa"
+    data-prefix=",,,,"
+    ><td>𑄦␣𑄮␣𑄢␣𑄮␣𑄋</td></tr>
+</table>
 
--->
+
+<p>Like pre-base glyphs, these do not split a conjunct, but instead they treat the conjunct as a single unit and place glyphs either side of it.</p>
 
 <p>These circumgraphs have canonically equivalent decomposed forms (see <a class="secref">encoding</a>). </p>
 
@@ -1042,9 +1104,14 @@ alveolar</th>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">𑄄␣𑄅␣𑄆␣𑄃</figure>
 
-<p>Other standalone vowels are written using vowel signs attached to <span class="ch">𑄃</span>, but there is also a modern trend to represent the sounds covered by the independent vowels using combinations, too. The following list shows just a few examples.</p>
+<p>Other standalone vowels are written using vowel signs attached to <span class="ch">𑄃</span>, but there is also a modern trend to represent the sounds covered by the independent vowels, too, using combinations. The following list shows just a few examples.</p>
 
 <figure class="characterBox auto" data-cols="trans,transc" data-ipa="i,iː,u,uː,e,oi̯">𑄃𑄨␣𑄃𑄩␣𑄃𑄪␣𑄃𑄫␣𑄃𑄬␣𑄃𑄰</figure>
+
+<p>Examples in use:</p>
+
+<p><span class="eg" lang="ccp">𑄃𑄘𑄢</span></p>
+<p><span class="eg" lang="ccp">𑄃𑄧𑄏𑄛𑄖𑄴</span></p>
 </section>
 
 
@@ -1337,7 +1404,7 @@ alveolar</th>
 <section id="consonantSummary">
 <h3>Consonant summary table</h3>
 
-<p>This table summarises basic consonant to character assignments.</p>
+<p>This table summarises only basic consonant to character assignments.  The pronunciation of a few letters is not entirely clear, and some sources appear to contradict others. Treat the following as summarising the information found so far, principally using the few IPA transcriptions found, and the pronunciations provided by Chave-Rong Chakma.</p>
 
 <!--<p class="instructions highlight">The right column contains aspirated sounds.</p>-->
 
@@ -1353,16 +1420,12 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<th rowspan="5">Onsets</th>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">𑄛␣𑄝␣𑄖␣𑄘␣𑄑␣𑄓␣𑄇␣𑄉</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">𑄜␣𑄞␣𑄗␣𑄙␣𑄒␣𑄔␣𑄈␣𑄊</figure></td>
+<th rowspan="4">Onsets</th>
+<td><figure class="summaryBox auto noexpansion" data-cols="trans,transc" data-ipa="p,b,t,d,ʈ,ɖ,k,ɡ">𑄛␣𑄝␣𑄖␣𑄘␣𑄑␣𑄓␣𑄇␣𑄉</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-cols="trans,transc" data-ipa="f,bʰ,tʰ,dʰ,ʈʰ,ɖʰ,kʰ,ɡʰ">𑄜␣𑄞␣𑄗␣𑄙␣𑄒␣𑄔␣𑄈␣𑄊</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">𑄌␣𑄎</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">𑄍␣𑄏</figure></td>
-</tr>
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">𑄥␣𑄦</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-cols="trans,transc" data-ipa="v,s ʃ,s,s,z,z,ʒ,h,h,h">𑄞␣𑄥␣𑄌␣𑄍␣𑄡␣𑄎␣𑄏␣𑄦␣𑄇␣𑄈</figure></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -1370,7 +1433,7 @@ alveolar</th>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">𑄤␣𑄢␣𑄣␣𑄡␣𑄠</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">𑄤␣𑄢␣𑄣␣𑄠</figure></td>
 <td>&nbsp;</td>
 </tr>
 
@@ -1394,16 +1457,30 @@ alveolar</th>
 <h3>Basic consonants</h3>
 
 
-<p>These are the basic consonant letters in Chakma.</p>
+<p>These are the basic consonant letters in Chakma. The pronunciation of a few letters is not entirely clear, and some sources appear to contradict others. Treat the following as summarising the information found so far, principally using pronunciations given in the few IPA transcriptions found, and the pronunciations provided by Chave-Rong Chakma.</p>
 
 <p class="instructions">Click on each letter for more details and for examples of usage, especially where more than one sound is indicated.</p>
 
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">𑄛␣𑄜␣𑄝␣𑄞␣𑄖␣𑄗␣𑄍␣𑄘␣𑄙␣𑄏␣𑄑␣𑄒␣𑄓␣𑄔␣𑄇␣𑄈␣𑄉␣𑄊␣𑄌␣𑄎␣𑄥␣𑄡␣𑄦␣𑄟␣𑄚␣𑄕␣𑄐␣𑄋␣𑄤␣𑄢␣𑄣␣𑄠</figure>
+<figure class="characterBox auto" data-cols="trans,transc" data-ipa="p,f,b,v bʰ,t,tʰ,s,d,dʰ,ʒ,ʈ,ʈʰ,ɖ,ɖʰ,k h,h,ɡ,ɡʰ,s,z,s,z,h,m,n,ɳ,ɲ,ŋ,w,r ɽ,l,j">𑄛␣𑄜␣𑄝␣𑄞␣𑄖␣𑄗␣𑄍␣𑄘␣𑄙␣𑄏␣𑄑␣𑄒␣𑄓␣𑄔␣𑄇␣𑄈␣𑄉␣𑄊␣𑄌␣𑄎␣𑄥␣𑄡␣𑄦␣𑄟␣𑄚␣𑄕␣𑄐␣𑄋␣𑄤␣𑄢␣𑄣␣𑄠</figure>
 
-<p>Ganguly et al. say that native speakers don't distinguish between <span class="ipa">s</span> and <span class="ipa">ʃ</span>, and that there is also much interchangeability between <span class="ipa">s</span> and <span class="ipa">t͡ʃ</span>. The following 2 examples with IPA transcriptions in Wikipedia appear to illustrate this, and an ambivalence between <span class="ipa">kʰ</span> and <span class="ipa">h</span>, but more research is needed to completely map out the correspondences between written letters and sounds, and for now we will stick with the correspondences conventionally ascribed in the resources seen.</p>
+<p>Ganguly et al. say that native speakers don't distinguish between <span class="ipa">s</span> and <span class="ipa">ʃ</span>, and that there is also much interchangeability between <span class="ipa">s</span> and <span class="ipa">t͡ʃ</span>. The following 2 examples with IPA transcriptions in Wikipedia appear to illustrate both this and an ambivalence between <span class="ipa">kʰ</span> and <span class="ipa">h</span>, but more research is needed to completely map out the correspondences between written letters and sounds, and for now we will stick with the correspondences conventionally ascribed in the resources seen.</p>
+
 <p><span class="eg" lang="ccp">𑄍𑄮𑄣𑄉𑄧𑄢𑄴</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="CHA,O,so"
+    data-type="uname,uname,ipa"
+    data-prefix=",+,→"
+    ><td>𑄍𑄮␣𑄍␣𑄮</td></tr>
+</table>
+
 <p><span class="eg" lang="ccp">𑄈𑄧𑄢𑄴𑄉𑄧𑄌𑄴</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="KHAA,O,ho"
+    data-type="uname,uname,ipa"
+    data-prefix=",+,→"
+    ><td>𑄍𑄮␣𑄍␣𑄮</td></tr>
+</table>
 
 <p class="observation"><span class="leadin">Observation:</span> It is worth noting, however, that recordings on YouTube by Bivuti Chakma pronounce <span class="ch">𑄇</span> and <span class="ch">𑄈</span> as <span class="ipa">haː</span>. He also tends to pronounce <span class="ch">𑄌</span> and <span class="ch">𑄍</span> as <span class="ipa">saː</span>. It isn't clear whether this is a dialect, or idiolect, or standard pronunciation.</p>
 
@@ -1440,16 +1517,45 @@ alveolar</th>
 <section id="onsets">
 <h3>Onsets</h3>
 
-<p class="observation"><span class="leadin">Observation:</span> There is an indication from the couple of terms below that multiple consonants can appear in syllable onsets, but this needs further investigation. The examples found both use stacked consonants, which may be significant. The combination with <span class="transc">h</span> may produce breathiness or aspiration(?).</p>
 
-<p><span class="eg" lang="ccp">𑄌𑄋𑄴𑄟𑄳𑄦 𑄞𑄌𑄴</span></p>
+<section id="medials">
+<h4>Medial consonants</h4>
+
+<p>It would appear that Chakma uses 3 medial consonants in onsets: <span class="ipa">w</span>, <span class="ipa">r</span>, and <span class="ipa">j</span>. These may be written after a virama, so that they are rendered as part of a stack, eg.</p>
+
 <p><span class="eg" lang="ccp">𑄟𑄳𑄢𑄨𑄖𑄴𑄨𑄇</span></p>
-<p><span class="eg" lang="ccp"></span></p>
 
-<p class="observation"><span class="leadin">Observation:</span> It's not clear whether a subjoined <span class="uname">HA</span> represents a way of indicating an aspirated or breathy consonant, or a syllable-initial <span class="ipa">h</span>, or a syllable-final <span class="ipa">h</span>. In the word for Chakma above it doesn't appear to be a syllable initial.  However, there are other occurrences of a subjoined <span class="uname">HA</span> with come with a <span class="name">maayyaa</span> above the stack, and this may indicate a different pronunciation, eg. <span class="charExample" translate="no"><span class="ex" lang="ccp">𑄇𑄧𑄙𑄝𑄖𑄳𑄦𑄴</span></span>.</p>
+<p>The shapes of 2 of these medial consonants are significantly different when subjoined.</p>
 
+<table class="sequenceTable">
+<tr data-notes="RA,-r"
+    data-type="uname,"
+    data-prefix=",→"
+    ><td>𑄢␣𑄳𑄢</td></tr>
+<tr data-notes="WA,-w"
+    data-type="uname,"
+    data-prefix=",→"
+    ><td>𑄠␣𑄳𑄠</td></tr>
+</table>
 </section>
 
+
+
+
+<section id="onset_ha">
+<h4>Subjoined <span class="uname">HA</span></h4>
+
+<p>Another seemingly common stack of consonants in an onset involves a subjoined <span class="ch">𑄦</span>. It's not clear from the sources consulted whether a subjoined <span class="uname">HA</span> represents a way of indicating an aspirated or breathy consonant, or a syllable-initial <span class="ipa">h</span>, or even a syllable-final <span class="ipa">h</span>. In the following example, the stack with subjoined <span class="uname">HA</span> is contrasted with the use of an atomic letter for the sound <span class="transc">bh</span>.</p>
+
+<p><span class="eg" lang="ccp">𑄌𑄋𑄴𑄟𑄳𑄦 𑄞𑄌𑄴</span></p>
+
+
+
+<p class="observation"><span class="leadin">Observation:</span> In the word for Chakma above the <span class="uname">HA</span> looks like it is syllable-initial.  However, there are other occurrences of a subjoined <span class="uname">HA</span> with IPA transcriptions that put the <span class="ipa">h</span> at the end of the syllable, eg.</p>
+
+<p><span class="eg" lang="ccp">𑄟𑄟𑄳𑄦</span></p>
+</section>
+</section>
 
 
 
@@ -1472,7 +1578,7 @@ alveolar</th>
 
 <p><span class="leadin">Marks for codas</span> Final <span class="ipa">ŋ</span> and <span class="ipa">h</span> can also be marked using the anusvara and visarga diacritics, <span class="ch">𑄁</span> and <span class="ch">𑄂</span>, respectively.</p>
 <p><span class="eg" lang="ccp">𑄦𑄨𑄠𑄧𑄁</span></p>
-<p><span class="eg" lang="ccp"></span></p>
+<p><span class="eg" lang="ccp">𑄥𑄧𑄁𑄥𑄧𑄞</span></p>
 <p><span class="eg" lang="ccp"></span></p>
 </section>
 
@@ -1494,13 +1600,13 @@ alveolar</th>
 <ol>
 <li>Show <mark><span class="ch">𑄴</span></mark> above the initial consonant in the cluster.</li>
 
-<li><mark>Stack or conjoin the characters.</mark> The non-initial consonant is reduced in size and positioned below or alongside the first.</li>
+<li><mark><a href="#stacking">Stack or conjoin the characters.</a></mark> The non-initial consonant is reduced in size and positioned below or alongside the first.</li>
 
-<li><mark>Create a ligature.</mark> A fusion of the letter shapes, where it may be difficult to identify one or more of the components.</li>
+<li><mark><a href="#ligated">Create a ligature</a>.</mark> A fusion of the letter shapes, where it may be difficult to identify one or more of the components.</li>
 </ol>
 
 
-<p>See also <a class="secref">finals</a> and <a class="secref">clength</a>.</p>
+<p>See also <a class="secref">onsets</a>, <a class="secref">finals</a> and <a class="secref">clength</a>.</p>
 
 
 
@@ -1524,6 +1630,9 @@ alveolar</th>
 
 
 
+
+
+
 <section id="stacking">
 <h4>Stacking &amp; conjoining</h4>
 
@@ -1538,10 +1647,11 @@ alveolar</th>
 
 <p class="observation"><span class="leadin">Observation:</span> The letter <span class="uname">HA</span> commonly appears in subjoined form, but it isn't clear whether this indicates an aspirated onset or a final <span class="ipa">-h</span>.</p>
 <p><span class="eg" lang="ccp">𑄛𑄉𑄢𑄳𑄦</span></p>
-
-<p class="observation"><span class="leadin">Observation:</span> Some combinations of consonants are both stacked and have <span class="name">maayyaa</span> above. More research is needed to understand this usage.  See <a class="secref">questions</a> for more detail.</p>
-
 </section>
+
+
+
+
 
 
 
@@ -1568,15 +1678,19 @@ alveolar</th>
 
 
 
+
+
+
 <section id="clength">
 <h3>Consonant length</h3>
 
-<p>Gemination is indicated using <span class="ch">𑄴</span>. Iusually t is distinguished from the use for consonant clusters because a vowel sign is combined with the same base consonant.<tt>gc</tt></p>
+<p>Gemination is indicated using <span class="ch">𑄴</span>. Usually, this use can be distinguished from the use for consonant clusters because a vowel sign is combined with the same base consonant.<tt>gc</tt></p>
 
 <p><span class="eg" lang="ccp">𑄇𑄟𑄇𑄴𑄭</span></p>
 <p><span class="eg" lang="ccp">𑄇𑄨𑄖𑄴𑄬</span></p>
 
-<p>When the <span class="name">maayyaa</span> appears with a stacked consonant cluster, it is used in this role, ie. not to kill the vowel, but to lengthen the initial consonant.</p>
+<p>When the <span class="name">maayyaa</span> appears with a stacked consonant cluster, it is used in this role, ie. not to kill the vowel, but to lengthen the initial consonant, eg.</p>
+
 <p><span class="eg" lang="ccp">𑄞𑄌𑄴𑄳𑄦𑄪𑄢𑄨</span></p>
 <p><span class="eg" lang="ccp">𑄞𑄣𑄧𑄇𑄴𑄳𑄦𑄚𑄨</span></p>
 <p><span class="eg" lang="ccp"></span></p>
@@ -2429,8 +2543,23 @@ alveolar</th>
 <p>The glyphs used for Chakma in India and Bangladesh differ slightly in roundness (similar to variation in the Tai Tham script as used in Northern Thai and Tai Khün).<tt>mh,1</tt></p>
 
 <p>Base characters can carry multiple combining marks. For example, in addition to a vowel sign a base consonant may carry one or more of the following diacritics: <span class="ch">𑄴</span>, <span class="ch">𑄁</span>, <span class="ch">𑄂</span>, <span class="ch">𑄀</span>. In some cases the glyphs for multiple combining marks need to be positioned side by side or carefully positioned relative to each other, as shown in the examples just below.</p>
+
 <p><span class="eg" lang="ccp">𑄇𑄟𑄇𑄴𑄭</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="HAA,MAA,KAA,maayaa,AI"
+    data-type="uname,uname,uname,uname,uname"
+    data-prefix=",,,,"
+    ><td>𑄇␣𑄟␣𑄇␣𑄴␣𑄭</td></tr>
+</table>
+
 <p><span class="eg" lang="ccp">𑄇𑄨𑄠𑄮𑄁</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="KAA,I,YYAA,O,anusvara"
+    data-type="uname,uname,uname,uname,uname"
+    data-prefix=",,,,"
+    ><td>𑄇␣𑄨␣𑄠␣𑄮␣𑄁</td></tr>
+</table>
+
 <p><span class="eg" lang="ccp"></span></p>
 
 
@@ -2477,7 +2606,30 @@ rendered</th>
 <img src="nnp/gpos.png" alt="𞋀𞋬𞋫𞋬 𞋀𞋮𞋫𞋮" class="ex" lang="ccp" data-notes="Noto Sans Wancho 200px" style="height: 7em">
 <figcaption>An illustration of context-sensitive glyph placement in Wancho.</figcaption>
 </figure>
---></section>
+-->
+
+<p class="observation"><span class="leadin">Observation:</span> The Noto Sans Chakma font has various special glyph forms. Among those are forms such as the following, which appear to represent sounds such as <span class="ipa">ʈjeːi̯</span> and <span class="ipa">ʈje</span>.</p>
+
+<figure id="tjei" class="sideCaption">
+<p style="margin-inline:2rem;"><img src="../../c/Chakma/tthaa_yyaa_e.below.svg" alt="" style="height:8rem;"></p>
+<p style="margin-inline:2rem;"><img src="../../c/Chakma/ttaa_yyaa_eiMatra.svg" alt="" style="height:8rem;"></p>
+<figcaption>Complex glyph shapes in the Noto Sans Chakma font.</figcaption>
+</figure>
+<table class="sequenceTable">
+<tr data-notes="ʈjeːi̯,TTAA,virama,YYAA,EI"
+    data-type="ipa,uname,uname,uname,uname"
+    data-prefix=",→,+,+,+,"
+    ><td>𑄑𑄳𑄠𑅆␣𑄑␣𑄳␣𑄠␣𑅆</td></tr>
+</table>
+
+<table class="sequenceTable">
+<tr data-notes="ʈje,TTAA,virama,YYAA,virama,E"
+    data-type="ipa,uname,uname,uname,uname,uname"
+    data-prefix=",→,+,+,+,+,"
+    ><td>𑄑𑄳𑄠𑄳𑄆␣𑄑␣𑄳␣𑄠␣𑄳␣𑄆</td></tr>
+</table>
+
+</section>
 </section>
 
 
@@ -2656,7 +2808,15 @@ rendered</th>
 </tbody>
 </table>
 
-<p>The shape of <span class="ch">𑅀</span> can vary, including some shapes that look like flowers or leaves.<tt>mh,6</tt></p>
+<p>The shape of <span class="ch">𑅀</span> can vary, including some shapes that look like flowers or leaves.<tt>mh,6</tt> <a class="figref">section_mark</a> shows an example of an alternative.</p>
+
+
+<figure id="section_mark" class="sideCaption">
+<img src="../../c/Chakma/section_chakma.alt.svg" alt="𑅀" style="height:10rem;">
+<img src="../../c/Chakma/11140.svg" alt="𑅀" style="height:10rem;">
+<figcaption>Alternative shapes for the section sign in the Noto Sans Chakma font.</figcaption>
+</figure>
+
 
 <p class="observation"><span class="leadin">Observation:</span> Other punctuation marks may be in use, especially things such as colon and exclamation mark. Further research is needed to establish the complete set.</p>
 

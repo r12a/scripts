@@ -24,31 +24,30 @@ autoExpandExamples.ccp = `
 
 @ https://en.wiktionary.org/wiki/Category:Chakma_lemmas
 
-𑄃𑄘𑄢|saw||ādārā|
+𑄃𑄘𑄢|saw|aːdaːraː|ādārā|
 𑄇𑄋𑄢|crab||kāṅārā|
 𑄇𑄧|pigeon||ka|
-𑄇𑄧𑄙𑄖𑄢||||
+𑄇𑄧𑄙𑄖𑄢|dictionary||kadhātārā|
 𑄇𑄧𑄙𑄗𑄪𑄛𑄴|vocabulary||kadhāthup|
-𑄇𑄧𑄣𑄨𑄇𑄖||||
+𑄇𑄧𑄣𑄨𑄇𑄖|Kolkata||kalikātā|
 𑄇𑄨𑄠𑄮𑄁|temple||kiẏoṅ|
 𑄈𑄧𑄢𑄴𑄉𑄧𑄌𑄴|rabbit, hare|hɔ§ɾ§ɡɔ§c|hôrgôc|
 𑄉𑄧𑄋|river||gaṅā|
 𑄉𑄧𑄖𑄴|music||gat|
-𑄉𑄧𑄙||||
+𑄉𑄧𑄙|dam||gadhā|
 𑄉𑄧𑄢𑄴𑄝|guest||garbā|
 𑄊𑄧𑄢𑄴|home, house||ghar|
 𑄌𑄖𑄴|snail||cāt|
-𑄌𑄘𑄨||||
+𑄌𑄘𑄨|oil lamp||cādi|
 𑄌𑄚𑄴|moon||cān|
 𑄌𑄟𑄴|skin||cām|
-𑄌𑄧𑄉𑄧𑄘||||
-𑄌𑄧𑄉𑄧𑄣||||
+𑄌𑄧𑄉𑄧𑄘|squirrel||cagadā|
+𑄌𑄧𑄉𑄧𑄣|shell||cagalā|
 𑄍𑄮𑄣𑄉𑄧𑄢𑄴|match|so§la§ɡɔ§ɾ|solagôr|
 𑄎𑄧𑄘|shoe||jadā|
 𑄏𑄧𑄢𑄴|rain||jhar|
 𑄒𑄉𑄪𑄢𑄴|priest||ṭhāgur|
 𑄒𑄙𑄢𑄴|thunder||ṭādhār|
-𑄖𑄣||||
 𑄖𑄨𑄚𑄴|three|ti§n|tin|
 𑄗𑄉|temple patron||thāgā|
 𑄗𑄣𑄴|plate||thāl|
@@ -59,28 +58,28 @@ autoExpandExamples.ccp = `
 𑄛𑄪𑄚𑄨|comb||puni|
 𑄛𑄬𑄇𑄴|bird||pek|
 𑄝𑄬𑄋𑄴|frog|beŋ|beṅ|
-𑄞𑄌𑄴||||
+𑄞𑄌𑄴|language||bhāc|
 𑄞𑄌𑄴𑄟𑄖𑄴|pronunciation||bhācmāt|
 𑄞𑄖𑄴|rice||bhāt|
 𑄞𑄪𑄖𑄴|ghost||bhut|
 𑄟𑄌𑄴|fish||māc
 𑄟𑄪𑄎𑄴𑄏𑄬𑄁|monk||mujjheṅ|
-𑄢𑄖𑄴||||
-𑄢𑄧||||
-𑄢𑄧𑄖𑄴||||
-𑄣𑄋𑄧𑄚𑄨||||
+𑄢𑄖𑄴|famine||rāt|
+𑄢𑄧|word, sound||ra|
+𑄢𑄧𑄖𑄴|strength||rat|
+𑄣𑄋𑄧𑄚𑄨|girlfriend||lāṅoni|
 𑄣𑄋𑄳𑄡𑄴|boyfriend||lāṅyā|
 𑄣𑄋𑄴|love||lāṅ|
-𑄣𑄪𑄢𑄨||||
+𑄣𑄪𑄢𑄨|Mahayana monk||luri|
 𑄤𑄇𑄴|wolf||wāk|
-𑄥𑄟𑄪𑄇𑄴||||
+𑄥𑄟𑄪𑄇𑄴|snail||sāmuk|
 𑄥𑄧𑄁𑄥𑄧𑄞|parliament||saṃsabhā|
 𑄥𑄧𑄚|gold||sana|
 𑄥𑄪𑄟𑄪𑄣𑄁|wedding||sumulāṅ|
-𑄦𑄌𑄴||||
-𑄦𑄖𑄴||||
-𑄦𑄝||||
-𑄦𑄢𑄉||||
+𑄦𑄌𑄴|duck||hāc|
+𑄦𑄖𑄴|hand||hāt|
+𑄦𑄝|air||hābā|
+𑄦𑄢𑄉|attendant||hārāgā|
 𑄦𑄧𑄙|sentence||hadhā|
 𑄦𑄨𑄠𑄧𑄁|temple||hiẏoṅ|
 𑄦𑄨𑄢𑄴𑄝𑄬|affection||hirbe|
@@ -96,7 +95,6 @@ autoExpandExamples.ccp = `
 @ https://www.unicode.org/L2/L2016/16303-chakma-maayyaa-chg.pdf
 𑄛𑄖𑄴|lesson||paat
 𑄢𑄚𑄴|cook||raan
-𑄢𑄖𑄴|lack||raat
 𑄎𑄚𑄴|go||jaar
 𑄇𑄨𑄖𑄴𑄬|why||kitte
 𑄎𑄨𑄖𑄴𑄬|winner||jitte
@@ -114,8 +112,6 @@ autoExpandExamples.ccp = `
 
 
 
-@ other
-𑄃𑄧𑄏𑄛𑄖𑄴|alphabet||ajhapat
 
 
 
@@ -151,7 +147,7 @@ autoExpandExamples.ccp = `
 𑄈𑄘𑄨|Chakma traditional dress|haːdi|khadi
 𑄉𑄌𑄴|tree||gach
 𑄊𑄖𑄴|bathing place||ghat
-𑄃𑄧𑄏𑄛𑄖𑄴|alphabet|od͡ʒʰaːfa:t|ajhāpāt
+𑄃𑄧𑄏𑄛𑄖𑄴|alphabet|o§d͡ʒʰaː§fa:§t|ajhāpāt
 
 
 

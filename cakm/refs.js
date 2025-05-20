@@ -143,6 +143,26 @@ reflist = {
 },
 
 
+"crc": {
+"authors": "Chave-Rong Chakma",
+"title":"Chakma Script Traning Center",
+"date": "2015",
+"publisher":"YouTube",
+"url":"https://www.youtube.com/watch?v=5caLpT00YmI",
+"reviewed":true
+},
+
+
+"cadc": {
+"authors": "District School Education Board, CADC",
+"title":"𑄌𑄋𑄴𑄟𑄳𑄦 𑄃𑄨𑄇𑄴𑄳𑄠𑄬 𑄝𑄪𑄙𑄨",
+"sub": "Chakma Text Book for Class-VII",
+"date": "2010",
+"url":"#refs",
+"reviewed":false
+},
+
+
 }
 
 

@@ -13,5 +13,7 @@ var collections = [
 { symbol:'ⓥ', desc:'Dependent vowels', chars:'(𑄨|𑄪|𑄩|𑄫|𑄬|𑄮|𑅆|𑄰|𑄧|𑅅|𑄭|𑄯)' },
 { symbol:'Ⓥ', desc:'Independent vowels', chars:'(𑄄|𑄅|𑄆|𑄃)' },
 { symbol:'Ⓕ', desc:'Finals', chars:'(𑄀|𑄁|𑄂)' },
+{ symbol:'🅲', desc:'Latin consonants', chars:'(h|k|kʰ|ɡ|ɡʰ|ŋ|t͡ʃ|s|t͡ʃʰ|d͡ʒ|d͡ʒʰ|ɲ|ʈ|ʈʰ|ɖ|ɖʰ|ɳ|t|tʰ|d|dʰ|n|p|f|pʰ|fʰ|b|bʰ|m|j|z|r|ɽ|l|w|s|ʃ|lʰ|v)' },
+{ symbol:'ⓧ', desc:'Virama', chars:'(\u11133)' },
 { symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
 ]
