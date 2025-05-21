@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 May, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 May, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -79,7 +79,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, N’Ko Orthography Notes, <!-- #BeginDate format:En2 -->02-May-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/nkoo/nqo">https://r12a.github.io/scripts/nkoo/nqo</a></small></p>
+<p class="refLine"><small>Richard Ishida, N’Ko Orthography Notes, <!-- #BeginDate format:En2 -->21-May-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/nkoo/nqo">https://r12a.github.io/scripts/nkoo/nqo</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -233,6 +233,25 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p class="addToVowels">N’Ko has <a class="seclink" href="#tones">7 combining tone marks</a> and <a class="seclink" href="#tone_letters">2 tone letters</a>. Several of these have more than one use, indicating vowel length in addition to tone.</p>
 
 <p>N’Ko has it's own set of <a class="seclink" href="#digits">digits</a>, which, as mentioned earlier, are (unusually) written right-to-left.</p>
+
+
+
+
+
+
+<section id="notable">
+<h3>Notable features</h3>
+
+<ul>
+<li>numbers as well as text are read right to left</li>
+<li>vowel length and tone diacritics are merged</li>
+<li>when two adjacent consonants are followed by the same vowel the vowel is omitted after the first consonant</li>
+<li>tonal apostrophes retain tone information for elided vowels</li>
+<li>abstract consonants for allophonic variants <span class="ipa">n</span> and <span class="ipa">ɲ</span></li>
+<li>lack of vowels between consonants is represented using a spacing letter</li>
+<li>a nasal syllabic letter</li>
+</ul>
+</section>
 </section>
 
 
@@ -630,7 +649,7 @@ alveolar</th>
 <h3>Vowel summary table</h3>
 
 
-<p>This table summarises basic vowel to character assignments.</p>
+<p>This table summarises only basic vowel to character assignments.</p>
 
 <p class="instructions highlight">Each of the following can carry a tone mark and a nasalisation mark which are not shown here. The choice of tone mark also indicates whether the vowel is long or short. See <a class="secref">tones</a>.</p>
 
@@ -699,7 +718,7 @@ alveolar</th>
 
 
 
-<section id="vlength">
+<section id="vowellength">
 <h4>Vowel length</h4>
 
 <p>See <a class="secref">tones</a>.</p>
@@ -713,9 +732,11 @@ alveolar</th>
 <section id="nasalisation">
 <h4>Nasalisation</h4>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">߲</figure>
+<figure class="characterBox auto hidden"  data-cols="ipa,trans,transc">߲</figure>
 
-<p>The low diacritic <span class="hx">07F2</span> is applied to a vowel to indicate nasalisation. This may produce multiple combining marks attached to a single character.</p>
+<p>The low diacritic <span class="hx">07F2</span> is applied to a vowel to indicate nasalisation, eg.</p>
+
+<p><span class="eg" dir="rtl" lang="nqo">ߟߊߡߌ߲߬</span></p>
 
 
 <figure id="fig_multiple_diacritics" class="sideCaption">
@@ -723,7 +744,7 @@ alveolar</th>
 <figcaption>A nasalisation mark attached to a letter that already has a combining character.</figcaption>
 </figure>
 
-<p class="info">This mark should be typed and stored before any tone mark to preserve the canonical order.<tt>u</tt></p>
+<p class="info">Use of a nasalisation mark may cause multiple combining marks to be attached to a single base character. The nasalisation mark should be typed and stored before any tone mark to preserve the canonical order.<tt>u</tt></p>
 </section>
   
   
@@ -735,7 +756,7 @@ alveolar</th>
 <section id="compositeV">
 <h4>Multipart vowels</h4>
 
-<p>Three vowels are represented by more than one character. These are the combinations of letter plus the diaeresis-like diacritic that is used to extend the repertoire to cover sounds from other languages. See <a class="secref">basicV</a>.</p>
+<p>Three vowels are represented by more than one character. These are the combinations of letter plus the diaeresis-like diacritic that is used to extend the repertoire to cover sounds from other languages. See the <a class="secref">basicV</a>.</p>
 <p>See also <a class="secref">tones</a>.</p>
 </section>
 </section>
@@ -810,6 +831,12 @@ alveolar</th>
 <figcaption>Tone diacritics in N’Ko.</figcaption>
 </figure>
 
+<p>Examples:</p>
+
+<p><span class="eg" dir="rtl" lang="nqo">ߖߛߎ߬ߘߐ߬ߗߍ߫</span></p>
+<p><span class="eg" dir="rtl" lang="nqo">ߢߐ߯ߡߍ</span></p>
+<p><span class="eg" dir="rtl" lang="nqo">ߞߏ߬ߝߊ߮</span></p>
+
 <p class="info">Tone marks should be typed and stored after any nasalisation marker.</p>
 
 <p>Several of these diacritics are also used over consonants to extend the repertoire when translitering foreign sounds (see <a class="secref">extendedC</a>).</p>
@@ -835,14 +862,28 @@ alveolar</th>
 <span class="eg" dir="rtl" lang="nqo">ߛߑߔߌߣߏߖ߭ߊ߫</span>
 </p>
 
-<p>However, when writing N’Ko, when two adjacent consonants are followed by the same vowel the vowel is omitted after the first consonant<tt>u</tt>, eg.
-<span class="eg" dir="rtl" lang="nqo">ߛߓߊ߬</span>
-</p>
+<p>However, when writing N’Ko, when two adjacent consonants are followed by the same vowel the vowel is omitted after the first consonant<tt>u</tt>, eg.</p>
 
-<p>There is no ambiguity here with regards to consonant clusters, since in the case of a cluster <span class="ch">ߑ</span> would appear between the two letters.</p>
+<p><span class="eg" dir="rtl" lang="nqo">ߛߓߊ߬</span></p>
+<table class="sequenceTable breakdown" dir="rtl">
+<tr data-notes="SA,BA,A"
+    data-type="uname,uname,uname"
+    data-prefix=",,,"
+    ><td>ߛ␣ߓ␣ߊ߬</td></tr>
+</table>
+
+<p><span class="eg" dir="rtl" lang="nqo">ߓߙߋ</span></p>
+<table class="sequenceTable breakdown" dir="rtl">
+<tr data-notes="BA,RA,EE"
+    data-type="uname,uname,uname"
+    data-prefix=",,"
+    ><td>ߓ␣ߙ␣ߋ</td></tr>
+</table>
 
 <p>This does not happen, however, if the two consonants are the same<tt>cd,xvii</tt>, eg.
 <span class="eg" lang="nqo" dir="rtl">ߝߊߝߊ</span>
+
+<p>There is no ambiguity here with regards to consonant clusters, since in the case of a cluster <span class="ch">ߑ</span> would appear between the two letters.</p>
 </p>
 
 
@@ -1210,7 +1251,7 @@ alveolar</th>
 <section id="consonantSummary">
 <h3>Consonant summary table</h3>
 
-<p>This table summarises basic consonant to character assignments.</p>
+<p>This table summarises only basic consonant to character assignments.</p>
 
 <p class="instructions highlight">The second column shows extensions to the repertoire produced by adding diacritics.</p>
 
@@ -1225,29 +1266,34 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<th rowspan="5">Normal</th>
-<td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߔ␣ߓ␣ߕ␣ߘ␣ߞ␣ ␣ߜ</figure></td>
-<td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߕ߭␣ߘ߭␣ߜ߭␣ߞ߫␣ ␣ߜ߳␣ ␣ߓ߭␣ߙ߳</figure></td>
+<th>Stops</th>
+<td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߔ␣ߓ␣ߕ␣ߘ␣ߞ</figure></td>
+<td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߓ߭␣ߕ߭␣ߙ߳␣ߘ߭␣ߜ߭␣ߞ߫</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߗ␣ߖ</figure></td>
+<th>Diphones</th>
+<td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߗ␣ߖ␣ߜ</figure></td>
+<td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߜ߳</figure></td>
 <td>&nbsp;</td>
 </tr>
 
 <tr>
+<th>Fricatives</th>
 <td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߝ␣ߛ␣ߤ</figure></td>
 <td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߝ߭␣ߛ߳␣ߗ߭␣ߖ߭␣ߛ߫␣ߖ߳␣ߛ߭␣ߜ߫␣ߞ߭␣ߤ߭</figure></td>
 </tr>
 
 <tr>
+<th>Nasals</th>
 <td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߡ␣ߣ␣ߢ</figure></td>
 <td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߡ߭␣ߢ߭</figure></td>
 </tr>
 
 <tr>
+<th>Other</th>
 <td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߥ␣ߙ␣ߚ␣ߟ␣ߦ</figure></td>
-<td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߙ߭␣ ␣ߟ߭␣ߦ߭</figure></td>
+<td><figure class="summaryBox auto noexpansion"  data-cols="ipa,trans,transc">ߙ߭␣ߟ߭␣ߦ߭</figure></td>
 </tr>
 
 <tr>
@@ -1299,7 +1345,9 @@ alveolar</th>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ߒ</figure>
 
 
-<p><span class="hx">07D2</span> is considered to be neither a consonant nor a vowel. It represents an alveolar or velar syllabic nasal sound.<tt>u</tt></p>
+<p><span class="hx">07D2</span> is considered to be neither a consonant nor a vowel. It represents an alveolar or velar syllabic nasal sound<tt>u</tt>, eg.</p>
+
+<p><span class="eg" dir="rtl" lang="nqo">ߒߞߏ</span></p>
 
 <p>This character may carry a tone diacritic, eg. <span class="ch" lang="nqo">ߒ߬</span>.</p>
 </section>
@@ -1312,7 +1360,11 @@ alveolar</th>
  
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ߠ␣ߧ</figure>
 
-<p>The 'abstract' consonants  <span class="hx">07E0</span> and <span class="hx">07E7</span> are used where allophonic variants of <span class="hx">07DF</span> and <span class="hx">07E6</span> after a nasal or nasalisation produce the sounds <span class="ipa">n</span> and <span class="ipa">ɲ</span>, respectively, either word-internally or across word boundaries.<tt>u</tt>  They are generally transcribed using <span class="transc">n</span> and <span class="transc">y</span>, respectively<tt>cd,xviii</tt>.</p>
+<p>The 'abstract' consonants  <span class="hx">07E0</span> and <span class="hx">07E7</span> are used where allophonic variants of <span class="hx">07DF</span> and <span class="hx">07E6</span> after a nasal or nasalisation produce the sounds <span class="ipa">n</span> and <span class="ipa">ɲ</span>, respectively, either word-internally or across word boundaries.<tt>u</tt>  They are generally transcribed using <span class="transc">n</span> and <span class="transc">y</span>, respectively<tt>cd,xviii</tt>. Examples:</p>
+
+<p><span class="eg" dir="rtl" lang="nqo">ߘߏ߲߬ߠߌ߲</span></p>
+<p><span class="eg" dir="rtl" lang="nqo">ߓߏ߲߬ߧߊ</span></p>
+
 </section>
   
   
@@ -1326,7 +1378,7 @@ alveolar</th>
 <p>Three diacritics, two of them tone markers, are used to represent foreign sounds (particularly Arabic and French) in conjunction with existing N’Ko letters, eg. <span class="ch">ߛ߳</span> represents the <span class="ipa">θ</span> sound of the Arabic letter <span lang="ar" dir="rtl">ث</span>.<tt>u</tt></p>
 
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߓ߭␣ߕ߭␣ߙ߳␣ߘ߭␣ߜ߳␣ߜ߭␣ߞ߫␣ ␣ߝ߭␣ߛ߳␣ߗ߭␣ߛ߫␣ߖ߭␣ߖ߳␣ߛ߭␣ߜ߫␣ߞ߭␣ߤ߭␣ ␣ߡ߭␣ߢ߭␣ ␣ߟ߭␣ߦ߭␣ߙ߭</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߓ߭␣ߕ߭␣ߙ߳␣ߘ߭␣ߜ߳␣ߜ߭␣ߞ߫␣ߝ߭␣ߛ߳␣ߗ߭␣ߛ߫␣ߖ߭␣ߖ߳␣ߛ߭␣ߜ߫␣ߞ߭␣ߤ߭␣ߡ߭␣ߢ߭␣ߟ߭␣ߦ߭␣ߙ߭</figure>
 
 
 
@@ -1346,7 +1398,11 @@ alveolar</th>
 <section id="clusters">
 <h3>Consonant clusters</h3>
 
-<p>Adjacent consonants with no intervening vowel sound are indicated using <span class="hx">07D1</span>. The following example, is pronounced with the vowel after the first letter, even though none is present, because of the vowel letter omission rule explained in <a class="secref">novowel</a>.</p>
+<p>Adjacent consonants with no intervening vowel sound are indicated using <span class="hx">07D1</span>, eg.</p>
+
+<p><span class="eg" dir="rtl" lang="nqo">ߍߛߑߞߌߡߏߞߊ</span></p>
+
+<p>Note that the following example is pronounced with the vowel after the first letter, even though none is present, because of the vowel letter omission rule explained in <a class="secref">novowel</a>.</p>
 <p><span class="charExample" dir="rtl" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߟߏ</span> <span class="trans">blo</span> <span class="ipa">bolo</span></span></p>
 
 <p>To show that this should be pronounced <em>without</em> the vowel you need the following.<tt>u</tt></p>

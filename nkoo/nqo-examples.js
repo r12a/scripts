@@ -25,9 +25,25 @@ autoExpandExamples.nqo = `
 
 ߒߞߏ|N’Ko||ńko
 ߖߌ|water|d͡ʒí
-ߛߊߓߊߙߌ|excuse me, sorry|sa.ba.ri
 ߡߊߟߌ|Mali|ma.li
 
+
+
+@ https://en.wiktionary.org/wiki/Category:N%27Ko_terms_with_IPA_pronunciation
+
+ߛߊߓߊߙߌ|excuse me, sorry|s§a.§b§a.§.r§i||
+ߛߎ߬ߟߋ߬ߡߊ߬ߣߊ߬|male given name|s§ù§l§è§m§à§n§à|Sùlèmànà
+
+
+@ https://en.wiktionary.org/wiki/Category:Dyula_lemmas
+
+ߖߎ߬ߟߊ߬ߞߊ߲|the Djula language||
+
+@ https://en.wiktionary.org/w/index.php?title=Category:Bambara_lemmas
+
+ߓߡߊߣߊ߲ߞߊ߲|the Bamanan language||Bámánánkán
+ߓߡߊ߬ߞߐ߬|Bamako||Bàmakɔ̌
+ߡߊߟߌ|Mali||Mali
 
 
 
