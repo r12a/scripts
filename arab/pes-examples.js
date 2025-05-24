@@ -1489,7 +1489,7 @@ autoExpandExamples.pes = `
 دنبال||
 دنیا||
 دنیدن||
-دنیوی|mundane|donjæve
+دنیوی|mundane|d̪o§ɲ.§jæ.§v§iː|donyavi
 ده||
 دهانی||
 دهستان||
