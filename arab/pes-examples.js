@@ -135,10 +135,10 @@ autoExpandExamples.pes = `
 جویدن|to bite|dʒæviːdæn|javidan
 مکیدن|to suck|mekiːdæn|mekidan
 تف انداختن|to spit|tof ændɒːxtæn|tof andâxtan
-استفراغ کردن|to vomit
+استفراغ کردن|to vomit|ʔe§s.§t̪ʰe§f.§ɹ§ɒː§ɢ̥§ §kʰʲæ§ɹ.§d̪æ§n|
 وزیدن|to blow|væziːdæn|vazidan
 دمیدن|to blow|dæmiːdæn|damidan
-نفس کشیدن|to breathe
+نفس کشیدن|to breathe||nafas kešidan
 خندیدن|to laugh|xændiːdæn|xandidan
 دیدن|to see|diːdæn|didan
 شنیدن|to hear|ʃeniːdæn|šenidan
@@ -190,7 +190,6 @@ autoExpandExamples.pes = `
 نواختن|to play|nævaxtæn|navâxtan
 شناور بودن|to float|ʃenɒːvær budæn|šenâvar budan
 جاری بودن|to flow|dʒɒːriː budæan|jâri budan
-شریدن|to flow
 یخ زدن|to freeze|jæx bæstæn|jax bastan
 باد کردن|to swell|bɒːd kærdæn|bâd kardan
 خورشیدن|sun|xorʃiːd|xoršid
@@ -1648,8 +1647,8 @@ autoExpandExamples.pes = `
 روسی||
 روسیه||
 روش||
-روشن|light, bright|ɾo§w§ʃæ§n|||*
-روشنگری|enlightenment|ɾowʃænɡæɾiː
+روشن|bright, clear|ɹ§ow.§ʃǽ§n|rowšan|
+روشنگری|enlightenment|ɹ§ow.§ʃæ§ɲ.§ɡʲæ.§ɹ§íː|rowšangari
 روشنی||
 روش‌ها||
 روغن||
@@ -2302,7 +2301,7 @@ autoExpandExamples.pes = `
 عوض|recompense, substitute|æ§væ§z
 عکس|photographs, reversed|æks
 عکس‌ها|photographs|æksˈhɒː
-عیب|fault, defect|ejb
+عیب|fault, defect|ejb̥|'eyb
 عید|Eid|ʔei̯d/ʔiːd
 عیسی|Jesus|ʔiːˈsɒː
 غار||
@@ -4146,6 +4145,7 @@ autoExpandExamples.pes = `
 
 @ unknown source
 خانهٔ بزرگ|big house|x§ɒː§n§eje§ §bo§zo§r§ɡ
+شریدن|to flow||
 
 
 
