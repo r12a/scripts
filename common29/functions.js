@@ -2297,9 +2297,67 @@ function showCharDetailsEvent (evt) {
     if (evt.target.closest('.cased')) { showCharDetailsForCased(evt); return }
 	
     // find out whether there's already something being displayed
+	detailsTable = evt.target.closest('figure').querySelector('table')
+    displayedItem = ''
+    displayedItems = []
+    if (detailsTable !== null) displayedItems = detailsTable.querySelectorAll('th .ex')
+    for (i=0;i<displayedItems.length;i++) displayedItem += displayedItems[i].textContent
+    
+    // if clicked item and detailsTable are about the same thing, just close detailsTable
+    if (displayedItem && displayedItem === evt.target.textContent) { 
+        detailsTable.parentNode.removeChild(detailsTable)
+        return
+        }
+    
+    // clear any existing detailsTable
+	if (detailsTable !== null) detailsTable.parentNode.removeChild(detailsTable)
+	
+    // make a new detailsTable
+	var detailsTable = document.createElement('table')
+	detailsTable.className = 'charDetails'
+	detailsTable.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
+    
+	evt.target.parentNode.parentNode.parentNode.appendChild(detailsTable)
+	
+	expandCharMarkup()
+	addExamples(evt.target.lang)
+	convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = detailsTable.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(detailsTable, window.blockDirectoryName, 'c')
+    
+    // set event trigger on all .ipa elements - opens description box on click
+    var ipaNodes = document.querySelectorAll(".ipa")
+    console.log('ipaNodes',ipaNodes.length)
+    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+    }
+
+
+
+
+
+
+
+function showCharDetailsEventX (evt) {
+    // opens a panel to display character notes details
+    
+	//if (evt.target.closest('.noexpansion')) return
+    
+	if (typeof charDetails === 'undefined') return
+
+	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
+    
+    if (evt.target.closest('.soundSummary')) { showCharDetailsForSummary(evt); return }
+	
+    if (evt.target.closest('.cased')) { showCharDetailsForCased(evt); return }
+	
+    // find out whether there's already something being displayed
 	table = evt.target.closest('figure').querySelector('table')
     displayedItem = ''
+    displayedItems = []
     if (table !== null) displayedItem = table.querySelector('.ex')
+    if (displayedItem) displayedItem = displayedItem.textContent
     if (displayedItem) displayedItem = displayedItem.textContent
     
     // if clicked item and table are about the same thing, just close table
