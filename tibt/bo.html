@@ -78,7 +78,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 May, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->2 June, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -98,7 +98,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Tibetan Orthography Notes, <!-- #BeginDate format:En2 -->02-May-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/tibt/bo">https://r12a.github.io/scripts/tibt/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Tibetan Orthography Notes, <!-- #BeginDate format:En2 -->02-Jun-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/tibt/bo">https://r12a.github.io/scripts/tibt/bn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -827,7 +827,7 @@ alveolar</th>
 <h3>Vowel summary table</h3>
 
 
-<p>This table summarises basic vowel to character assignments.</p>
+<p>This table summarises only basic vowel to character assignments.</p>
 
 <p class="instructions highlight">ⓘ represents the inherent vowel. Ⓢ represents one of 4 <a href="#suffix">root suffix letters</a>.</p>
 
@@ -883,9 +883,24 @@ alveolar</th>
 
 <p id="def-inherentvowel" class="explanatoryintro definitionStub"></p>
 
-<p><span class="ipa">a</span> following a consonant is not written, but is seen as an inherent part of the consonant letter, so <span class="ipa">ka</span> is written by simply using the consonant letter.</p>
+<p><span class="ipa">a</span> following a consonant is not written, but is seen as an inherent part of the consonant letter, so <span class="ipa">Ca</span> is written by simply using the consonant letter, eg.</p>
 <!--p><span class="eg" lang="bo" >ཧི་མ་ལ་ཡ</span></p-->
 <p><span class="eg" lang="bo" >པ་ན་མ</span></p>
+
+
+
+
+
+
+
+
+<section id="novowel">
+<h4>Consonants with no following vowel</h4>
+
+<p>The inherent vowel is not normally pronounced at the end of a syllable which ends with a coda. These syllable-final sounds are written using one of 7 suffixes (see <a class="secref">suffix</a>).</p>
+<!--<p>Word-internally, consonants with no intervening vowel are stacked (see <a class="secref">clusters</a>).</p>
+-->
+</section>
 </section>
 
 
@@ -907,6 +922,9 @@ alveolar</th>
 
 <p>There are no pre-base, circumgraph, or multipart vowels in the Tibetan used to write the Llasa dialect (though there are when writing in Sanskrit).</p>
 
+<p>None of the vowel signs are <em>spacing</em> marks, ie. they  don't consume horizontal space when added to a base consonant.</p>
+
+<p>All vowel signs are typed and stored after a consonant or stack. The glyph rendering system takes care of the positioning at display time. Stacks are treated as indivisible units when it comes to rendering vowel signs.</p>
 
 
 
@@ -927,30 +945,38 @@ alveolar</th>
 
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
+<p>Four of the post-consonant vowels are written using combining marks (vowel signs).</p>
+
 <figure class="characterBox auto" data-cols="ipa,trans">ི␣ུ␣ེ␣ོ</figure>
 
-<p>Four post-consonant vowels are written using combining marks, called vowel signs. For example:</p>
+
+<p>For example:</p>
 <p><span class="eg" lang="bo" >རི་མོ</span></p>
 <p><span class="eg" lang="bo" >དབུ་མེད</span></p>
-
-<p>None of the vowel signs are <em>spacing</em> marks, ie. they  don't consume horizontal space when added to a base consonant.</p>
-
-<p>An orthography that uses vowel signs is different from one that uses simple diacritics or letters for vowels in that the vowel signs are generally displayed relative to the <em>orthographic syllable</em>, rather than  just applied to the letter of the immediately preceding consonant. This means that  vowel signs that appear above a base appear above a whole consonant cluster if the cluster is rendered as a stack.</p>
 
 
       
 <figure id="fig_vowel_in_stack" class="sideCaption">
-<svg width="900px" height="150px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
+<div>
+<svg width="450px" height="150px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" style="text-align: start;">
 <text x="0" y="48" class="svg_bo36">སྤྱིར་</text>
-<text x="70" y="20" class="svg_annotation">Vowel</text>
+<text x="70" y="20" class="svg_annotation" style="font-size:.4em;">Vowel</text>
 <use xlink:href="#arrow" x="25" y="12"/>
-<text x="70" y="60" class="svg_annotation">Consonant before vowel</text>
+<text x="70" y="60" class="svg_annotation" style="font-size:.4em;">Consonant before vowel</text>
 <use xlink:href="#arrow" x="25" y="50"/>
 </svg>
+<table class="sequenceTable breakdown" style="margin-inline:0;">
+<tr data-notes="SA,PA,YA,I,RA,tsheg"
+    data-type="uname,uname,uname,uname,uname,uname"
+    data-prefix=",,,,,"
+    ><td>ས␣ྤ␣ྱ␣ི␣ར␣་</td></tr>
+</table>
+
+</div>
 <figcaption>Vowel sign position relative to a stack of consonants.</figcaption>
 </figure>
 
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="bo">སྤྱིར་</span></p></details>
+<!--<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="bo">སྤྱིར་</span></p></details>-->
 </section>
 
 
@@ -975,17 +1001,17 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<td><span class="ipa">y</span></td>
+<th><span class="ipa">y</span></th>
 <td><figure class="auto noexpansion" data-cols="" style="margin:0">ུད␣ུས␣ུན␣ུལ</figure></td>
 <td><span class="eg inline" lang="bo" >བདུད</span><br><span class="eg inline" lang="bo" >དངུལ</span><br><span class="eg inline" lang="bo" >ལོ་རྒྱུས</span><br><span class="eg inline" lang="bo" >བརྩོན་འགྲུས</span></td>
 </tr>
 <tr>
-<td><span class="ipa">ø</span></td>
+<th><span class="ipa">ø</span></th>
 <td><figure class="auto noexpansion" data-cols="" style="margin:0">ོད␣ོས␣ོན␣ོལ</figure></td>
 <td><span class="eg inline" lang="bo" >པོད</span><br><span class="eg inline" lang="bo" >བོན</span><br><span class="eg inline" lang="bo" >རོལ</span><br><span class="eg inline" lang="bo" >ཆོས</span></td>
 </tr>
 <tr>
-<td><span class="ipa">ɛ</span></td>
+<th><span class="ipa">ɛ</span></th>
 <td><figure class="auto noexpansion" data-cols="" style="margin:0" data-ignore="–">–ད␣–ས␣–ན␣–ལ</figure></td>
 <td><span class="eg inline" lang="bo" >བཞད</span><br><span class="eg inline" lang="bo" >ནས</span><br><span class="eg inline" lang="bo" >བལ</span><br><span class="eg inline" lang="bo" >ཆབ་གདན</span></td>
 </tr>
@@ -1145,21 +1171,6 @@ represent the phoneme <span class="ipa">a</span>. In the Lhasa dialect, they hav
 <p>Otherwise, there are no diacritics or other ways of marking tone in the orthography (nor is tone marked in the Wylie transcriptions).</p>
 </section>
 
-
-
-
-
-
-
-
-
-<section id="novowel">
-<h3>Consonants with no following vowel</h3>
-
-<p>The inherent vowel is not normally pronounced at the end of a syllable which ends with a coda. These syllable-final sounds are written using one of 7 suffixes (see <a class="secref">suffix</a>).</p>
-<!--<p>Word-internally, consonants with no intervening vowel are stacked (see <a class="secref">clusters</a>).</p>
--->
-</section>
 </section>
 
 
@@ -1282,7 +1293,7 @@ represent the phoneme <span class="ipa">a</span>. In the Lhasa dialect, they hav
 <section id="consonantSummary">
 <h3>Consonant summary table</h3>
 
-<p>The following table summarises the only the nominal consonant to character assignments. Note that the dialect of the upper social strata of Lhasa doesn't include voiced sounds, and simply de-aspirates the other sound where two are shown. <em>For additional details and sounds see <a class="secref">consonant_mappings</a>.</em></p>
+<p>The following table summarises only the nominal consonant to character assignments. Note that the dialect of the upper social strata of Lhasa doesn't include voiced sounds, and simply de-aspirates the other sound where two are shown. <em>For additional details and sounds see <a class="secref">consonant_mappings</a>.</em></p>
 
 <p class="instructions highlight">This table only shows the unmodified syllable onset values, using sounds from the Lhasa dialect. It doesn't include letters used for writing Sanskrit other than those in the right column, which are typically used to write foreign proper nouns. There's a need for more research to determine what others should be listed, and the exact IPA equivalents for each.</p>
 
@@ -1458,11 +1469,16 @@ represent the phoneme <span class="ipa">a</span>. In the Lhasa dialect, they hav
 <figure id="fig_stack" class="sideCaption">
 <div>
 <img src="images/fig_stack.svg" class="ex" lang="bo" alt="སྤྱིར་" data-notes="Noto Serif Tibetan" style="height:10rem; margin-inline:2em;">
-<!--img src="images/spyir.png" alt="spyir"-->
+<table class="sequenceTable breakdown" style="margin-inline:0;">
+<tr data-notes="SA,PA,YA,I,RA,TSHEG"
+    data-type="uname,uname,uname,uname,uname,uname"
+    data-prefix=",,,,,"
+    ><td>ས␣ྤ␣ྱ␣ི␣ར␣་</td></tr>
+</table>
 </div>
 <figcaption>A word containing a stack of 3 consonants and a vowel sign.</figcaption>
 </figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="bo">སྤྱིར་</span></p></details>
+<!--<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="bo">སྤྱིར་</span></p></details>-->
 
 
 <p>Unlike other Brahmi-derived scripts, no virama is used for native Tibetan text. Instead, just a full and subjoined form of each consonant. The subjoined forms are combining characters. Avoiding the virama makes sense because the virama is not used by Tibetans, and the approach taken makes it easier to create the large number of stacks contained in Tibetan text.</p>
@@ -1489,7 +1505,7 @@ represent the phoneme <span class="ipa">a</span>. In the Lhasa dialect, they hav
 
 <p>The pronunciation of Tibetan syllables is typically much simpler than the orthography, which involves patterns of consonants that reduce ambiguity and can affect pronunciation and tone.</p>
 
-<p>The primary consonant in a <span class="name">tseg-bar</span> is called the root consonant or radical (<span class="ex inline" lang="bo">མིང་བཞི</span>), and the other consonants in the syllable (normally up to a maximum of 6) annotate or modify it. The following rules help identify the root:</p>
+<p>The primary consonant in a <span class="name">tseg-bar</span> is called the root consonant or radical (<span class="charExample inline" translate="no"><bdi class="ex" lang="bo">མིང་བཞི</bdi></span>), and the other consonants in the syllable (normally up to a maximum of 6) annotate or modify it. The following rules help identify the root:</p>
 
 <style>
 .showRoot bdi.ex { color: tan; }
@@ -1498,9 +1514,9 @@ represent the phoneme <span class="ipa">a</span>. In the Lhasa dialect, they hav
 <ul>
 <li>
 <p>a consonant with a vowel is always the root, unless it is the phrase connector <span class="ex" lang="bo">འི</span>, and letters with superscripts or subscripts are root consonants.</p>
-<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onmouseover="showNameDetails('གཡུ་མདོག', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', '–§júm.§§–§tôː§–')" onclick="showNameDetails('གཡུ་མདོག', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', '–§júm.§§–§tôː§–')">ག<span class="highlight">ཡུ</span>་མ<span class="highlight">དོ</span>ག</bdi> <bdi class="ipa">júm.tôː</bdi> <bdi class="meaning">turquoise</bdi></span></p>
+<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onclick="showNameDetails('གཡུ་མདོག', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', '–§júm.§§–§tôː§–')">ག<span class="highlight">ཡུ</span>་མ<span class="highlight">དོ</span>ག</bdi> <bdi class="ipa">júm.tôː</bdi> <bdi class="meaning">turquoise</bdi></span></p>
 
-<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onmouseover="showNameDetails('དཔྱ་ཁྲལ', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', '›§t͡ɕá.§§ʈ͡ʂʰɛː§–')" onclick="showNameDetails('དཔྱ་ཁྲལ', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', '›§t͡ɕá.§§ʈ͡ʂʰɛː§–')">ད<span class="highlight">པྱ</span>་<span class="highlight">ཁྲ</span>ལ</bdi> <bdi class="ipa">t͡ɕá.ʈ͡ʂʰɛː</bdi> <bdi class="meaning">tribute</bdi></span></p>
+<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onclick="showNameDetails('དཔྱ་ཁྲལ', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', '›§t͡ɕá.§§ʈ͡ʂʰɛː§–')">ད<span class="highlight">པྱ</span>་<span class="highlight">ཁྲ</span>ལ</bdi> <bdi class="ipa">t͡ɕá.ʈ͡ʂʰɛː</bdi> <bdi class="meaning">tribute</bdi></span></p>
 
 
 <!--p><span class="eg" lang="bo">གཡུ་མདོག</span></p>
@@ -1510,19 +1526,19 @@ represent the phoneme <span class="ipa">a</span>. In the Lhasa dialect, they hav
 <li>
 <p>in a 2-consonant syllable with no vowel, the first consonant is always the root</p>
 
-<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onmouseover="showNameDetails('ནང', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', 'na§ŋ')" onclick="showNameDetails('ནང', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', 'na§ŋ')"><span class="highlight">ན</span>ང</bdi> <bdi class="ipa">naŋ</bdi> <bdi class="meaning">inside, room</bdi></span></p>
+<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onclick="showNameDetails('ནང', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', 'na§ŋ')"><span class="highlight">ན</span>ང</bdi> <bdi class="ipa">naŋ</bdi> <bdi class="meaning">inside, room</bdi></span></p>
 <!--p><span class="eg" lang="bo">ནང</span></p-->
 </li>
 
 <li>
 <p>in a 3-consonant syllable where the last consonant is not <span class="ch">ས</span>, the second consonant is likely to be the root.</p>
-<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onmouseover="showNameDetails('དམག', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', '›§maː˥˩§–')" onclick="showNameDetails('དམག', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', '›§maː˥˩§–')">ད<span class="highlight">མ</span>ག</bdi> <bdi class="ipa">maː˥˩</bdi> <bdi class="meaning">war</bdi></span></p>
+<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onclick="showNameDetails('དམག', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', '›§maː˥˩§–')">ད<span class="highlight">མ</span>ག</bdi> <bdi class="ipa">maː˥˩</bdi> <bdi class="meaning">war</bdi></span></p>
 <!--p><span class="eg" lang="bo">དམག</span></p-->
 </li>
 
 <li>
 <p>in a 4-consonant syllable, the second consonant is always the root.</p>
-<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onmouseover="showNameDetails('གཟིགས', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', 'si᷈')" onclick="showNameDetails('གཟིགས', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', 'si᷈')">ག<span class="highlight">ཟི</span>གས</bdi> <bdi class="ipa">si᷈</bdi> <bdi class="meaning">to see, look (hon.)</bdi></span></p>
+<p><span class="charExample showRoot" translate="no"><bdi class="ex" lang="bo" onclick="showNameDetails('གཟིགས', 'bo', window.blockDir, '', document.getElementById('panel'), '', '', 'si᷈')">ག<span class="highlight">ཟི</span>གས</bdi> <bdi class="ipa">si᷈</bdi> <bdi class="meaning">to see, look (hon.)</bdi></span></p>
 <!--p><span class="eg" lang="bo">གཟིགས</span></p-->
 </li>
 </ul>
@@ -2947,15 +2963,15 @@ which has the full form already.</p>
 
 
 
-<section id="balti" class="btw">
+<div class="btw">
+<section id="balti">
 <h3>Balti</h3>
 
-<div class="btw">
 <p>Two characters are provided for use with Balti.</p>
 
 <figure class="otherBox auto" data-cols="ipa,trans">ཫ␣ཬ</figure>
-</div>
 </section>
+</div>
 </section>
  
  
@@ -3066,7 +3082,7 @@ which has the full form already.</p>
 <p>Occasionally, Tibetan text may occur in vertically-set text. In this case, syllables are kept together as an unbreakable unit.</p>
 
 
-<figure id="fig_vertical_text" class="sideCaption">
+<figure id="fig_vertical_text">
 <img src="images/fig_vertical_text.jpg" alt="藏传佛教活佛转世专题展 བོད་བརྒྱད་ནང་བསྟན་སྤྲུལ་སྐུའི་ལམ་སྲོལ་སྐོར་གྱི་བཤམས་སྟོན།" data-source="http://www.xzmuseum.cn/" style="height:20em;">
 <figcaption>Tibetan syllables that are not broken in vertically-set text.</figcaption>
 </figure>
@@ -3370,7 +3386,7 @@ which has the full form already.</p>
 
 <p>Key divisions of the text include expressions (<span class="name">brjod-pa</span>) and topics (<span class="name">don-tshan</span>). They do not necessarily equate to English phrases, sentences and paragraphs. </p>
 
-<p>Sections normally end with <span class="hx">0F0D</span> (called <span class="name">shad</span> but pronounced <span class="ipa">ʃe</span>) followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated with a double <span class="name">shad</span> or separated with <span class="name">shad</span>+space+<span class="name">shad</span>.</p>
+<p>Sections normally end with <span class="hx">0F0D</span> (transliterated as <span class="name">shad</span> but pronounced <span class="ipa">ʃe</span>) followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated with a double <span class="name">shad</span> or separated with <span class="name">shad</span>+space+<span class="name">shad</span>.</p>
 
 
 <figure id="fig_double_shad" class="sideCaption">
