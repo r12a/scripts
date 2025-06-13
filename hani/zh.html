@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->12 June, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->13 June, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -74,7 +74,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Han (Chinese) Orthography Notes, <!-- #BeginDate format:En2 -->12-Jun-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/hani/zh">https://r12a.github.io/scripts/hani/zh</a></small></p>
+<p class="refLine"><small>Richard Ishida, Han (Chinese) Orthography Notes, <!-- #BeginDate format:En2 -->13-Jun-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/hani/zh">https://r12a.github.io/scripts/hani/zh</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -2119,10 +2119,10 @@ alveolar</th>
 <figcaption>Space removed from an opening bracket at the start of a line.</figcaption>
 </figure>
 
-<p>Where paragraphs are separated by a blank line, there is usually no first-line indent. In this situation, any bracket at the start of the first line should also have the leading space removed.</p>
+<p>Where paragraphs are separated by a blank line and there is no first-line indent, any bracket at the start of the first line should also have the leading space removed.</p>
 
 
-<p>It is common, however, to have no blank line before a paragraph, but instead to indent the paragraph's first line. Usually this indent is the width of one fullwidth character. If the text begins with a punctuation mark such as a bracket or quote mark, the empty space to the left of that punctuation is dropped. <a class="figref">fig_text_space_para</a> shows an example.</p>
+<p>It is common, however, to have no vertical space before a paragraph, but instead to indent the paragraph's first line. Usually this indent is the width of one fullwidth character. If the text begins with a punctuation mark such as a bracket or quote mark, the empty space to the left of that punctuation is dropped. <a class="figref">fig_text_space_para</a> shows an example.</p>
 
 <figure id="fig_text_space_para" class="sideCaption">
 <img src="images/fig_text_space_para.png" alt="　“万亿市值潜力”？欧洲核聚变初创企业吸引创记录投资" style="width:30rem">
@@ -2139,7 +2139,6 @@ alveolar</th>
 
 <p>To remove superfluous gaps when a punctuation mark appears at the start of a line, the CSS specification<tt>@CSS Text,https://drafts.csswg.org/css-text-4/#text-spacing-trim-property</tt> proposes the <code class="kw" translate="no">text-spacing-trim</code> property.</p>
 
-<p class="seeCode">See <a href="https://w3c.github.io/i18n-tests/exploratory/index.html?text=%3Cdiv%20class%3D%22flush%22%3E%0A%3Cp%3E%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%20no%20indent%3C%2Fp%3E%0A%3Cp%3E%EF%BC%88%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3Cp%3E%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%3Chr%3E%0A%3Cdiv%20class%3D%22indented%22%3E%0A%3Cp%3E%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%20CSS%20indent%3C%2Fp%3E%0A%3Cp%3E%EF%BC%88%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3Cp%3E%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%3Chr%3E%0A%3Cdiv%20class%3D%22idsp%22%3E%0A%3Cp%3E%E3%80%80%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%20IDSP%20indent%3C%2Fp%3E%0A%3Cp%3E%E3%80%80%EF%BC%88%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3Cp%3E%E3%80%80%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A&css=.flush%20p%20%7B%20text-autospace-trim%3A%20trim-start%3B%20%7D%0A%0A.indented%20p%20%7B%20text-autospace-trim%3A%20trim-start%3B%20text-indent%3A%201em%3B%20margin-block%3A%200%3B%20%7D%0A%0A.idsp%20p%20%7B%20text-autospace-trim%3A%20trim-start%3B%20margin-block%3A%200%3B%20%7D%0A%0A&lang=zh&fontSize=26&width=461&height=511&a=Text-autospace-trim%20will%20remove%20superfluous%20gaps%20at%20the%20beginning%20of%20a%20paragraph.&i=Test%20passes%20if%20the%20parenthesis%20is%20flush%20with%20the%20lines%20above%20and%20below." target="_blank">live code</a>.</p>
 <p style="white-space: pre;"><code>text-spacing-trim: auto | 
         [space-all | normal | space-first | trim-start | trim-both | trim-all]</code></p>
 
@@ -2147,9 +2146,11 @@ alveolar</th>
 <p>The values needed to remove the superfluous gaps at the start of any line and after an indentation are <code class="kw" translate="no">trim-start</code> or <code class="kw" translate="no">trim-both</code>. The former only strips space at the line start, whereas the latter strips it also at the line end (see the next subsection). You may want to use the following in your style sheet:</p>
 
 
+<p class="seeCode">See <a href="https://w3c.github.io/i18n-tests/exploratory/index.html?text=%3Cdiv%20class%3D%22flush%22%3E%0A%3Cp%3E%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%20no%20indent%3C%2Fp%3E%0A%3Cp%3E%EF%BC%88%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3Cp%3E%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%3Chr%3E%0A%3Cdiv%20class%3D%22indented%22%3E%0A%3Cp%3E%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%20CSS%20indent%3C%2Fp%3E%0A%3Cp%3E%EF%BC%88%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3Cp%3E%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%3Chr%3E%0A%3Cdiv%20class%3D%22idsp%22%3E%0A%3Cp%3E%E3%80%80%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%20IDSP%20indent%3C%2Fp%3E%0A%3Cp%3E%E3%80%80%EF%BC%88%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3Cp%3E%E3%80%80%E8%A1%A8%E6%84%8F%E5%AD%97%E7%AC%A6%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%0A&css=.flush%20p%20%7B%20text-autospace-trim%3A%20trim-start%3B%20%7D%0A%0A.indented%20p%20%7B%20text-autospace-trim%3A%20trim-start%3B%20text-indent%3A%201em%3B%20margin-block%3A%200%3B%20%7D%0A%0A.idsp%20p%20%7B%20text-autospace-trim%3A%20trim-start%3B%20margin-block%3A%200%3B%20%7D%0A%0A&lang=zh&fontSize=26&width=461&height=511&a=Text-autospace-trim%20will%20remove%20superfluous%20gaps%20at%20the%20beginning%20of%20a%20paragraph.&i=Test%20passes%20if%20the%20parenthesis%20is%20flush%20with%20the%20lines%20above%20and%20below." target="_blank">live code</a>.</p>
 <pre>p {
   text-spacing-trim: trim-both;
   text-indent: 1em;  /* only if there is no gap between paragraphs */
+  margin-block: 0;   /* ditto */
   }</pre>
 
 <p>The <code class="kw" translate="no">trim-both</code> value also removes gaps between punctuation marks, so it will also produce the expected rendering if the indentation is created using an ideographic space character.</p>
