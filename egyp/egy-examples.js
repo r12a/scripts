@@ -2981,7 +2981,7 @@ ddw||||||ddw
 ḏmꜥ||||||ḏmꜥ
 ḏnjt||||||ḏnjt
 ḏnb||||||ḏnb
-ḏnnt||||||ḏnnt
+𓆓𓈖𓐰𓈖𓐰𓏏𓐱𓁶|skull|d͡ʒɛnɛnɛt|D-n:n:t*tp|ḏnnt||ḏnnt
 ḏnḥ||||||ḏnḥ
 ḏnd||||||ḏnd
 ḏr||||||ḏr
