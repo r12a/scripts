@@ -147,11 +147,15 @@ function makeListFromChars (chars) {
         
         // if this code executes, there is no ipa value, so just print the type info
         else {
-            temp = [... spreadsheetRows[charList[x]][cols['typeLoc']]]
-            first = temp.shift()
-            console.log('first',first)
-            if (first) {
-                ch = charList[x]
+            //temp = [... spreadsheetRows[charList[x]][cols['typeLoc']]]
+            //first = temp.shift()
+            //console.log('first',first)
+            //if (first) {
+                 
+            ch = charList[x]
+           
+            if (unikemet[ch] && unikemet[ch].kEH_Core && unikemet[ch].kEH_Core === 'L') out += '<p>Legacy character!</p>\n'
+            
                 //out +=  `<p>${ first.toUpperCase() + temp.join('') }.</p>`
                 if (unikemet[ch]) {
                     out += `<p class="leadin">Unikemet</p>`
@@ -170,7 +174,7 @@ function makeListFromChars (chars) {
                     out += `</table>`
                     //out += `<pre style="white-space:pre-wrap">${ JSON.stringify(unikemet[ch], null, 1).replace(/"/g,'') }</pre>`
                     }
-                }
+                //}
             }
         
         
