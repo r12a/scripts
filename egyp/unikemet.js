@@ -1781,55 +1781,55 @@ unikemet = {
   "𓂮": {
     "kEH_Cat": "D-30-008",
     "kEH_Core": "C",
-    "kEH_Func": "\\20000",
+    "kEH_Func": "20000",
     "kEH_UniK": "D050A"
   },
   "𓂯": {
     "kEH_Cat": "D-30-009",
     "kEH_Core": "C",
-    "kEH_Func": "\\30000",
+    "kEH_Func": "30000",
     "kEH_UniK": "D050B"
   },
   "𓂰": {
     "kEH_Cat": "D-30-010",
     "kEH_Core": "C",
-    "kEH_Func": "\\40000",
+    "kEH_Func": "40000",
     "kEH_UniK": "D050C"
   },
   "𓂱": {
     "kEH_Cat": "D-30-011",
     "kEH_Core": "C",
-    "kEH_Func": "\\50000",
+    "kEH_Func": "50000",
     "kEH_UniK": "D050D"
   },
   "𓂲": {
     "kEH_Cat": "D-30-012",
     "kEH_Core": "C",
-    "kEH_Func": "\\60000",
+    "kEH_Func": "60000",
     "kEH_UniK": "D050E"
   },
   "𓂳": {
     "kEH_Cat": "D-30-013",
     "kEH_Core": "C",
-    "kEH_Func": "\\70000",
+    "kEH_Func": "70000",
     "kEH_UniK": "D050F"
   },
   "𓂴": {
     "kEH_Cat": "D-30-014",
     "kEH_Core": "C",
-    "kEH_Func": "\\80000",
+    "kEH_Func": "80000",
     "kEH_UniK": "D050G"
   },
   "𓂵": {
     "kEH_Cat": "D-30-015",
     "kEH_Core": "C",
-    "kEH_Func": "\\90000",
+    "kEH_Func": "90000",
     "kEH_UniK": "D050H"
   },
   "𓂶": {
     "kEH_Cat": "D-30-016",
     "kEH_Core": "C",
-    "kEH_Func": "\\50000",
+    "kEH_Func": "50000",
     "kEH_UniK": "D050I"
   },
   "𓂷": {
@@ -4520,49 +4520,49 @@ unikemet = {
   "𓆽": {
     "kEH_Cat": "M-11-041",
     "kEH_Core": "C",
-    "kEH_Func": "\\2000",
+    "kEH_Func": "2000",
     "kEH_UniK": "M012A"
   },
   "𓆾": {
     "kEH_Cat": "M-11-043",
     "kEH_Core": "C",
-    "kEH_Func": "\\3000",
+    "kEH_Func": "3000",
     "kEH_UniK": "M012B"
   },
   "𓆿": {
     "kEH_Cat": "M-11-044",
     "kEH_Core": "C",
-    "kEH_Func": "\\4000",
+    "kEH_Func": "4000",
     "kEH_UniK": "M012C"
   },
   "𓇀": {
     "kEH_Cat": "M-11-046",
     "kEH_Core": "C",
-    "kEH_Func": "\\5000",
+    "kEH_Func": "5000",
     "kEH_UniK": "M012D"
   },
   "𓇁": {
     "kEH_Cat": "M-11-047",
     "kEH_Core": "C",
-    "kEH_Func": "\\6000",
+    "kEH_Func": "6000",
     "kEH_UniK": "M012E"
   },
   "𓇂": {
     "kEH_Cat": "M-11-048",
     "kEH_Core": "C",
-    "kEH_Func": "\\7000",
+    "kEH_Func": "7000",
     "kEH_UniK": "M012F"
   },
   "𓇃": {
     "kEH_Cat": "M-11-049",
     "kEH_Core": "C",
-    "kEH_Func": "\\8000",
+    "kEH_Func": "8000",
     "kEH_UniK": "M012G"
   },
   "𓇄": {
     "kEH_Cat": "M-11-050",
     "kEH_Core": "C",
-    "kEH_Func": "\\9000",
+    "kEH_Func": "9000",
     "kEH_UniK": "M012H"
   },
   "𓇅": {
@@ -17428,7 +17428,7 @@ unikemet = {
     "kEH_Cat": "C-01-002",
     "kEH_Core": "C",
     "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long hair/wig, with a crescent moon with the entire moon disk (N62) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
-    "kEH_Func": "Logogram (in combination with \\C268B)",
+    "kEH_Func": "Logogram (in combination with C268B)",
     "kEH_FVal": "rꜥ-nb",
     "kEH_UniK": "HJ C118A",
     "kEH_JSesh": "C118A",
@@ -21188,7 +21188,7 @@ unikemet = {
     "kEH_Cat": "C-39-003",
     "kEH_Core": "C",
     "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, wearing the double crown (S5) and a vulture headdress, holding a stem of papyrus with a bud (M131) or flower vertically. ",
-    "kEH_Func": "Logogram (together with \\C98 and \\C43A, representing the triad of Dendera)",
+    "kEH_Func": "Logogram (together with C98 and C43A, representing the triad of Dendera)",
     "kEH_FVal": "ꞽwn.t ",
     "kEH_UniK": "C183B"
   },
@@ -34510,7 +34510,7 @@ unikemet = {
     "kEH_Cat": "M-11-026",
     "kEH_Core": "C",
     "kEH_Desc": "A leaf and stem of a lotus plant, with two branches on either side of the stem.",
-    "kEH_Func": "Logogram (\\1000)",
+    "kEH_Func": "Logogram (1000)",
     "kEH_FVal": "ḫꜣ",
     "kEH_UniK": "HJ M105",
     "kEH_JSesh": "M105",
@@ -34532,7 +34532,7 @@ unikemet = {
     "kEH_Cat": "M-11-028",
     "kEH_Core": "C",
     "kEH_Desc": "A leaf, stem and root of a lotus plant, with the leaf written vertically.",
-    "kEH_Func": "Logogram (\\1000)",
+    "kEH_Func": "Logogram (1000)",
     "kEH_FVal": "ḫꜣ",
     "kEH_UniK": "HJ M109",
     "kEH_JSesh": "M109",
@@ -34565,7 +34565,7 @@ unikemet = {
     "kEH_Cat": "M-11-045",
     "kEH_Core": "C",
     "kEH_Desc": "The root of a lotus, with four stems with leaves, with the leaf written vertically.",
-    "kEH_Func": "\\4000",
+    "kEH_Func": "4000",
     "kEH_UniK": "HJ M230",
     "kEH_JSesh": "M230",
     "kEH_HG": "M230"
