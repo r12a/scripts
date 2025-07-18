@@ -32,7 +32,7 @@ unikemet = {
   "𓀃": {
     "kEH_Cat": "A-01-040",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, back straight, both arms raised in front, handpalms outwards.",
+    "kEH_Desc": "Man, seated, right knee raised, back straight, both arms raised in front, hand palms outwards.",
     "kEH_Func": "Classifier supplication/hiding/rejection",
     "kEH_UniK": "A004",
     "kEH_JSesh": "A4",
@@ -49,7 +49,7 @@ unikemet = {
   "𓀅": {
     "kEH_Cat": "A-11-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, back straight, both arms raised in front, handpalms outwards, under a corner of a wall.",
+    "kEH_Desc": "Man, seated, right knee raised, back straight, both arms raised in front, hand palms outwards, under a corner of a wall.",
     "kEH_Func": "Logogram (to hide)",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "A005A",
@@ -60,7 +60,7 @@ unikemet = {
   "𓀆": {
     "kEH_Cat": "A-09-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, both arms raised towards the front, handpalms outwards.",
+    "kEH_Desc": "Man, seated, right knee raised, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, both arms raised towards the front, hand palms outwards.",
     "kEH_Func": "Logogram (pure, clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "A006",
@@ -71,7 +71,7 @@ unikemet = {
   "𓀇": {
     "kEH_Cat": "A-09-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, both knees down, with with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, with the water ending on a block, both arms forward, extended downwards toward the block.",
+    "kEH_Desc": "Man, seated, both knees down, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, with the water ending on a block, both arms forward, extended downwards toward the block.",
     "kEH_Func": "Classifier to libate",
     "kEH_FVal": "sṯ",
     "kEH_UniK": "A006A",
@@ -86,7 +86,7 @@ unikemet = {
   "𓀉": {
     "kEH_Cat": "A-01-036",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, right leg extended with foot in front of left leg, right and left arm sloping downward to either side of the body.",
+    "kEH_Desc": "Man, seated on heel, right leg extended with foot in front of left leg, right and left arm sloping downwards to either side of the body.",
     "kEH_Func": "Classifier sitting/weak/faint",
     "kEH_UniK": "A007",
     "kEH_JSesh": "A7",
@@ -96,7 +96,7 @@ unikemet = {
   "𓀊": {
     "kEH_Cat": "A-01-059",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm angled in front of the body, left arm raised, hand held verically, handpalm inwards (hnw gesture).",
+    "kEH_Desc": "Man, seated, right knee raised, right arm angled in front of the body, left arm raised, hand held vertically, hand palm inwards (hnw gesture).",
     "kEH_Func": "Classifier joy/veneration",
     "kEH_UniK": "A008",
     "kEH_JSesh": "A8",
@@ -207,7 +207,7 @@ unikemet = {
   "𓀕": {
     "kEH_Cat": "A-23-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, seated on nothing, forelegs spread, right arm forward, extended towards the knee, handpalm down, left arm hanging beside the body.",
+    "kEH_Desc": "Child, seated on nothing, forelegs spread, right arm forward, extended towards the knee, hand palm down, left arm hanging beside the body.",
     "kEH_Func": "Classifier youth/child",
     "kEH_UniK": "A017A",
     "kEH_JSesh": "A17A"
@@ -225,7 +225,7 @@ unikemet = {
   "𓀗": {
     "kEH_Cat": "A-06-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with a bend back, right arm forward, holding a staff/stick near the top, left arm hanging beside the body.",
+    "kEH_Desc": "Old man, standing, with a bend back, right arm forwards, holding a staff/stick near the top, with the staff at a slight backward angle, left arm hanging beside the body.",
     "kEH_Func": "Logogram (old, old age)",
     "kEH_FVal": "ꞽꜣw",
     "kEH_UniK": "A019",
@@ -246,7 +246,7 @@ unikemet = {
   "𓀙": {
     "kEH_Cat": "A-06-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm in front, holding a long stick/staff, left arm hanging beside the body, holding a piece of cloth.",
+    "kEH_Desc": "Man, standing, wearing a short sash-kilt, right arm in front, holding a long stick/staff, left arm hanging beside the body, holding a piece of cloth.",
     "kEH_UniK": "A021",
     "kEH_JSesh": "A21",
     "kEH_HG": "A21",
@@ -264,7 +264,7 @@ unikemet = {
   "𓀛": {
     "kEH_Cat": "A-27-024",
     "kEH_Core": "C",
-    "kEH_Desc": "The king, standing, with a long straight beard and short wig/coif, with a uraeus bound to the forehead, right arm forward, hand at the hight of the shoulder, holding a staff with a triangular piece (point down) at the hight of the waist, left arm hanging beside the body, holding a mace (T3) horizontally.",
+    "kEH_Desc": "The king, standing, with a long straight beard and short wig/coif, with a uraeus bound to the forehead, right arm forward, hand at the height of the shoulder, holding a staff with a triangular piece (point down) at the height of the waist, left arm hanging beside the body, holding a mace (T3) horizontally.",
     "kEH_Func": "Classifier sovereign",
     "kEH_FVal": "ꞽt.y",
     "kEH_UniK": "A023",
@@ -284,7 +284,7 @@ unikemet = {
   "𓀝": {
     "kEH_Cat": "A-16-039",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forward, right arm forward, holding a stick which slightly curves towards the body, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, back bent forward, right arm forward, holding a stick which slightly curves towards the body, left arm hanging beside the body.",
     "kEH_Func": "Classifier force/effort",
     "kEH_UniK": "A025",
     "kEH_JSesh": "A25",
@@ -315,7 +315,7 @@ unikemet = {
   "𓀠": {
     "kEH_Cat": "A-02-044",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with arms raised at either side of the body , handpalms inwards.",
+    "kEH_Desc": "Man, standing, with arms raised at either side of the body, hand palms inwards.",
     "kEH_Func": "Logogram (to be high)",
     "kEH_FVal": "ḳꜣꞽ",
     "kEH_UniK": "A028",
@@ -326,8 +326,8 @@ unikemet = {
   "𓀡": {
     "kEH_Cat": "A-03-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, upside down, both arms raised at either side of the body, handpalms inwards.",
-    "kEH_Func": "Classifier upside down",
+    "kEH_Desc": "Man, upside-down, both arms raised at either side of the body, hand palms inwards.",
+    "kEH_Func": "Classifier upside-down",
     "kEH_FVal": "sḫd",
     "kEH_UniK": "A029",
     "kEH_JSesh": "A29",
@@ -338,7 +338,7 @@ unikemet = {
   "𓀢": {
     "kEH_Cat": "A-04-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms raised in front, hands held vertically, handpalms outwards.",
+    "kEH_Desc": "Man, standing, both arms raised in front, hands held vertically, hand palms outwards.",
     "kEH_Func": "Classifier adoration",
     "kEH_UniK": "A030",
     "kEH_JSesh": "A30",
@@ -358,7 +358,7 @@ unikemet = {
   "𓀤": {
     "kEH_Cat": "A-19-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, dancing, left leg straight, right knee in front of the left leg, right foot behind the left leg, toes at the hight of the left foot, right arm in front of the body, left arm raised at the back, hand at the hight of the head.",
+    "kEH_Desc": "Man, dancing, left leg straight, right knee in front of the left leg, right foot behind the left leg, toes at the height of the left foot, right arm in front of the body, left arm raised at the back, hand at the height of the head.",
     "kEH_Func": "Classifier dancing",
     "kEH_FVal": "ḫbꞽ",
     "kEH_UniK": "A032",
@@ -407,7 +407,7 @@ unikemet = {
   "𓀩": {
     "kEH_Cat": "A-12-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forwards, both arms forward, extending downward into a large vessel.",
+    "kEH_Desc": "Man, standing, back bent forwards, both arms forwards, extending downwards into a large vessel.",
     "kEH_Func": "Logogram (brewer)",
     "kEH_FVal": "ꜥf.ty",
     "kEH_UniK": "A036",
@@ -450,7 +450,7 @@ unikemet = {
   "𓀭": {
     "kEH_Cat": "A-26-005",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long wig.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long wig.",
     "kEH_Func": "Classifier divinity",
     "kEH_UniK": "A040",
     "kEH_JSesh": "A40",
@@ -459,7 +459,7 @@ unikemet = {
   "𓀮": {
     "kEH_Cat": "A-26-013",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long wig, holding a holding a sceptre with a straight shaft, topped with the head of the Seth animal.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long wig, holding a holding a sceptre with a straight shaft, topped with the head of the Seth animal.",
     "kEH_Func": "Classifier divinity",
     "kEH_UniK": "A040A",
     "kEH_JSesh": "A40A",
@@ -522,7 +522,7 @@ unikemet = {
     "kEH_Cat": "A-28-010",
     "kEH_Core": "C",
     "kEH_Desc": "King, seated, both knees up, with covered legs and arms, without beard, wearing the white crown with uraeus (S1A), holding a flagellum (S45).",
-    "kEH_Func": "Classsifier king",
+    "kEH_Func": "Classifier king",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "A044",
     "kEH_JSesh": "A44",
@@ -532,7 +532,7 @@ unikemet = {
   "𓀵": {
     "kEH_Cat": "A-29-001",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing the red crown with (S3).",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing the red crown with (S3).",
     "kEH_Func": "Classifier king",
     "kEH_FVal": "bꞽ.ty",
     "kEH_UniK": "A045",
@@ -554,7 +554,7 @@ unikemet = {
   "𓀷": {
     "kEH_Cat": "A-29-004",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing the red crown with (S3), holding a flagellum (S45).",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing the red crown with (S3), holding a flagellum (S45).",
     "kEH_Func": "Classifier king",
     "kEH_FVal": "bꞽ.tyw",
     "kEH_UniK": "A046",
@@ -583,12 +583,12 @@ unikemet = {
     "kEH_JSesh": "A48"
   },
   "𓀺": {
-    "kEH_Cat": "A-13-031",
+    "kEH_Cat": "A-13-032",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, both knees up, with covered legs and arms, with a short bushy beard and long wig, holding a stick which angles slightly towards the body.",
+    "kEH_Desc": "Man, seated, both knees up, with covered legs and arms, with a short bushy beard and short hair/wig, holding a stick which angles slightly towards the body.",
     "kEH_Func": "Classifier foreigner",
     "kEH_UniK": "A049",
-    "kEH_HG": "A49"
+    "kEH_JSesh": "A49"
   },
   "𓀻": {
     "kEH_Cat": "A-25-032",
@@ -625,7 +625,7 @@ unikemet = {
   "𓀾": {
     "kEH_Cat": "A-32-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy with a long curved beard, standing upright.",
+    "kEH_Desc": "A mummy with a long-curved beard, standing upright.",
     "kEH_Func": "Classifier image/statue/likeness",
     "kEH_UniK": "A053",
     "kEH_JSesh": "A53",
@@ -635,7 +635,7 @@ unikemet = {
   "𓀿": {
     "kEH_Cat": "A-32-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy with a long curved beard, lying horizontally.",
+    "kEH_Desc": "A mummy with a long-curved beard, lying horizontally.",
     "kEH_Func": "Classifier body/corpse/death",
     "kEH_UniK": "A054",
     "kEH_JSesh": "A54",
@@ -646,7 +646,7 @@ unikemet = {
   "𓁀": {
     "kEH_Cat": "A-32-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy with a long curved beard, lying horizontally on top of a bed.",
+    "kEH_Desc": "A mummy with a long-curved beard, lying horizontally on top of a bed.",
     "kEH_Func": "Logogram (to sleep/to spend the night)",
     "kEH_FVal": "sḏr",
     "kEH_UniK": "A055",
@@ -656,7 +656,7 @@ unikemet = {
   "𓁁": {
     "kEH_Cat": "A-12-047",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm raised in front, left arm in front of body, holding a stick which which rests against the left shoulder. ",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised in front, left arm in front of body, holding a stick which rests against the left shoulder. ",
     "kEH_Func": "Classifier enemy",
     "kEH_FVal": "ḫft.y",
     "kEH_UniK": "A056",
@@ -666,7 +666,7 @@ unikemet = {
   "𓁂": {
     "kEH_Cat": "A-29-029",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), both arms forwards, hands at the hight of the belly/waist, holding a loaf of bread on a reed mat (R4) horizontally.",
+    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), both arms forwards, hands at the height of the belly/waist, holding a loaf of bread on a reed mat (R4) horizontally.",
     "kEH_Func": "Logogram (an offering that the king gives)",
     "kEH_FVal": "ḥtp-dꞽ-n.y-sw.t",
     "kEH_UniK": "A057",
@@ -676,7 +676,7 @@ unikemet = {
   "𓁃": {
     "kEH_Cat": "A-12-012",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forward, both arms toward the front, holding a hoe with a rope connecting the two pieces (U6), with the forward piece at the level of the feet.",
+    "kEH_Desc": "Man, standing, back bent forward, both arms toward the front, holding a hoe with a rope connecting the two pieces (U6), with the forward piece at the level of the feet.",
     "kEH_Func": "Classifier hacking",
     "kEH_FVal": "ḫbs",
     "kEH_UniK": "A058",
@@ -698,7 +698,7 @@ unikemet = {
   "𓁅": {
     "kEH_Cat": "A-10-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal, handpalm upwards, left arm backwards, upper arm horizontal, forearm nearly vertical, handpalm inwards, with a dotted line running between the handpalms.",
+    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal, hand palm upwards, left arm backwards, upper arm horizontal, forearm nearly vertical, hand palm inwards, with a dotted line running between the hand palms.",
     "kEH_Func": "Logogram (to sprinkle, to scatter)",
     "kEH_FVal": "stꞽ",
     "kEH_UniK": "A060",
@@ -719,7 +719,7 @@ unikemet = {
   "𓁇": {
     "kEH_Cat": "A-02-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Foreign man, with a bushy beard, standing, wearing a long dress, with  the arms hanging at either side of the body.",
+    "kEH_Desc": "Foreign man, with a bushy beard, standing, wearing a long dress, with the arms hanging at either side of the body.",
     "kEH_Func": "Logogram (great one, chief)",
     "kEH_FVal": "wr",
     "kEH_UniK": "A062",
@@ -776,7 +776,7 @@ unikemet = {
   "𓁍": {
     "kEH_Cat": "A-16-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal at the hight of the waist, holding a knife (T30) at an forward angle, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal at the height of the waist, holding a knife (T30) at a forward angle, left arm hanging beside the body.",
     "kEH_Func": "Logogram (messenger)",
     "kEH_FVal": "wpw.ty",
     "kEH_UniK": "A068",
@@ -797,7 +797,7 @@ unikemet = {
   "𓁏": {
     "kEH_Cat": "C-13-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, raised arms at either side of the body, hands held vertically, with the handpalms inwards.",
+    "kEH_Desc": "Man, seated, right knee raised, raised arms at either side of the body, hands held vertically, with the hand palms inwards.",
     "kEH_Func": "Logogram (million, many)",
     "kEH_FVal": "ḥḥ",
     "kEH_UniK": "A070",
@@ -840,7 +840,7 @@ unikemet = {
   "𓁓": {
     "kEH_Cat": "B-09-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, pregnant, seated, both knees down, right arm forward, angling down towards the knee, left arm hanging beside the body, with 3 vertical lines coming from the legs.",
+    "kEH_Desc": "Woman, pregnant, seated, both knees down, right arm forward, angling down towards the knee, left arm hanging beside the body, with three vertical lines coming from the legs.",
     "kEH_Func": "Classifier birth",
     "kEH_FVal": "msꞽ",
     "kEH_UniK": "B004",
@@ -862,7 +862,7 @@ unikemet = {
     "kEH_Cat": "B-02-010",
     "kEH_Core": "C",
     "kEH_Desc": "Woman, seated, both knees down, with long hair and a band of cloth around the head, bound at the back, with two sticks forming a cross-like structure over the legs.",
-    "kEH_Func": "Logogram weaver or  nurse",
+    "kEH_Func": "Logogram weaver or nurse",
     "kEH_FVal": "? | mnḫ.t",
     "kEH_UniK": "B005A",
     "kEH_JSesh": "B104"
@@ -902,7 +902,7 @@ unikemet = {
   "𓁙": {
     "kEH_Cat": "B-08-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm extended forward, hand at the hight of the shoulder, holding a sistrum (Y18), vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm extended forward, hand at the height of the shoulder, holding a sistrum (Y18), vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (the musician)",
     "kEH_FVal": "ꞽḥ.yt",
     "kEH_UniK": "B009",
@@ -913,7 +913,7 @@ unikemet = {
   "𓁚": {
     "kEH_Cat": "C-24-002",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard and long wig/hair,  with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard and long wig/hair, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head.",
     "kEH_Func": "Logogram (Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "C001",
@@ -947,13 +947,15 @@ unikemet = {
     "kEH_Cat": "C-09-018",
     "kEH_Core": "L",
     "kEH_UniK": "C002B",
-    "kEH_IFAO": "62,10"
+    "kEH_IFAO": "62,10",
+    "kEH_AltSeq": "1305C 13440"
   },
   "𓁞": {
     "kEH_Cat": "C-09-030",
     "kEH_Core": "L",
     "kEH_UniK": "C002C",
-    "kEH_IFAO": "63,8"
+    "kEH_IFAO": "63,8",
+    "kEH_AltSeq": "1305B 13440"
   },
   "𓁟": {
     "kEH_Cat": "C-31-001",
@@ -1055,7 +1057,7 @@ unikemet = {
   "𓁨": {
     "kEH_Cat": "C-13-004",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on heel, right knee raised, with long curved beard and coif, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the handpalms inwards.",
+    "kEH_Desc": "God, seated on heel, right knee raised, with long-curved beard and coif, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the hand palms inwards.",
     "kEH_Func": "Logogram (million, many)",
     "kEH_FVal": "ḥḥ",
     "kEH_UniK": "C011",
@@ -1064,7 +1066,7 @@ unikemet = {
   "𓁩": {
     "kEH_Cat": "C-03-003",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (Amon)",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "C012",
@@ -1076,12 +1078,13 @@ unikemet = {
     "kEH_Cat": "C-03-010",
     "kEH_Core": "L",
     "kEH_UniK": "C013",
-    "kEH_IFAO": "58,6"
+    "kEH_IFAO": "58,6",
+    "kEH_AltSeq": "13069 13440"
   },
   "𓁫": {
     "kEH_Cat": "C-03-011",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a khopesh sword (T16A) vertically.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a khopesh sword (T16A) vertically.",
     "kEH_Func": "Logogram (Amon is his strength (sꜣ-rꜥ name Ramses VI))",
     "kEH_FVal": "ꞽmn-ḥr-ḫpš=f",
     "kEH_UniK": "C014",
@@ -1092,7 +1095,8 @@ unikemet = {
   "𓁬": {
     "kEH_Cat": "C-03-013",
     "kEH_Core": "L",
-    "kEH_UniK": "C015"
+    "kEH_UniK": "C015",
+    "kEH_AltSeq": "1306B 13440"
   },
   "𓁭": {
     "kEH_Cat": "A-30-004",
@@ -1115,7 +1119,7 @@ unikemet = {
   "𓁯": {
     "kEH_Cat": "C-30-002",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees down, with a long curved beard and long hair/wig, wearing a headdress consisting of two feathers on rams horns (S77).",
+    "kEH_Desc": "God, seated, both knees down, with a long-curved beard and long hair/wig, wearing a headdress consisting of two feathers on ram horns (S77).",
     "kEH_Func": "Classifier Tatenen",
     "kEH_FVal": "tꜣ-ṯnn",
     "kEH_UniK": "C018"
@@ -1123,7 +1127,7 @@ unikemet = {
   "𓁰": {
     "kEH_Cat": "C-23-016",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright on a platform, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically.",
+    "kEH_Desc": "God, in mummy form, standing upright on a platform, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically.",
     "kEH_Func": "Classifier Ptah",
     "kEH_FVal": "ptḥ",
     "kEH_UniK": "C019",
@@ -1134,7 +1138,7 @@ unikemet = {
   "𓁱": {
     "kEH_Cat": "C-23-023",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright on a platform, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, adorned with an ankh-sign (S34) and a djed-pillar (R11); inside a shrine supported by pillars resembling a stem of papyrus with a bud (M13).",
+    "kEH_Desc": "God, in mummy form, standing upright on a platform, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, adorned with an ankh-sign (S34) and a djed-pillar (R11); inside a shrine supported by pillars resembling a stem of papyrus with a bud (M13).",
     "kEH_Func": "Logogram (Ptah)",
     "kEH_FVal": "ptḥ",
     "kEH_UniK": "C020",
@@ -1166,7 +1170,7 @@ unikemet = {
   "𓁴": {
     "kEH_Cat": "C-36-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on her head.",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on her head.",
     "kEH_Func": "Logogram (Sekhmet)",
     "kEH_FVal": "sḫm.t",
     "kEH_UniK": "C023",
@@ -1454,7 +1458,7 @@ unikemet = {
   "𓂏": {
     "kEH_Cat": "D-13-004",
     "kEH_Core": "C",
-    "kEH_Desc": "The upper and lower lip of a human, with teeth.",
+    "kEH_Desc": "The upper and lower lips of a human, with teeth.",
     "kEH_Func": "Logogram (lips)",
     "kEH_FVal": "sp.ty",
     "kEH_UniK": "D025",
@@ -1465,7 +1469,7 @@ unikemet = {
   "𓂐": {
     "kEH_Cat": "D-14-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A human mouth, seen from the side, with a wavy downwards sloping line coming from the lips.",
+    "kEH_Desc": "A human mouth, seen from the side, with a wavy downward sloping line coming from the lips.",
     "kEH_Func": "Classifier blood",
     "kEH_FVal": "snf",
     "kEH_UniK": "D026",
@@ -1491,12 +1495,13 @@ unikemet = {
     "kEH_UniK": "D027A",
     "kEH_JSesh": "D27A",
     "kEH_HG": "D27A",
-    "kEH_IFAO": "102,12"
+    "kEH_IFAO": "102,12",
+    "kEH_AltSeq": "13091"
   },
   "𓂓": {
     "kEH_Cat": "D-18-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, handpalms inwards.",
+    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, hand palms inwards.",
     "kEH_Func": "Logogram (spirit, essence)",
     "kEH_FVal": "kꜣ",
     "kEH_UniK": "D028",
@@ -1507,7 +1512,7 @@ unikemet = {
   "𓂔": {
     "kEH_Cat": "D-18-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, handpalms inwards, on top of a standard used for carrying religious symbols (R12).",
+    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, hand palms inwards, on top of a standard used for carrying religious symbols (R12).",
     "kEH_Func": "Logogram (spirit, essence)",
     "kEH_FVal": "kꜣ",
     "kEH_UniK": "D029",
@@ -1517,7 +1522,7 @@ unikemet = {
   "𓂕": {
     "kEH_Cat": "D-18-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, raised, with the palms of the hands towards each other, written on it side, with a downwards curving line at the back.",
+    "kEH_Desc": "Two arms, raised, with the palms of the hands towards each other, written on it side, with a downward curving line at the back.",
     "kEH_Func": "Classifier Nehebkau",
     "kEH_FVal": "nḥb-kꜣ.w",
     "kEH_UniK": "D030",
@@ -1527,27 +1532,29 @@ unikemet = {
   "𓂖": {
     "kEH_Cat": "D-19-012",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, with the elbows bent outwards, and the palms of the hands facing towards each other (D32), with a club used by washer-men for beating laundry (U36) written between the arms.",
+    "kEH_Desc": "Two arms, lowered, with the elbows bent outwards, and the palms of the hands facing each other (D32), with a club used by washermen for beating laundry (U36) written between the arms.",
     "kEH_Func": "Logogram (mortuary priest)",
     "kEH_FVal": "ḥm-kꜣ",
     "kEH_UniK": "D031",
     "kEH_JSesh": "D31",
     "kEH_HG": "D31",
-    "kEH_IFAO": "106,15"
+    "kEH_IFAO": "106,15",
+    "kEH_AltSeq": "13098 1343B 1335B"
   },
   "𓂗": {
     "kEH_Cat": "D-18-072",
     "kEH_Core": "L",
-    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, handpalms inwards, with a club used by washer-men for beating laundry (U36), written between the arms.",
+    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, hand palms inwards, with a club used by washermen for beating laundry (U36), written between the arms.",
     "kEH_Func": "Logogram (mortuary priest)",
     "kEH_FVal": "ḥm-kꜣ",
     "kEH_UniK": "D031A",
-    "kEH_JSesh": "D31A"
+    "kEH_JSesh": "D31A",
+    "kEH_AltSeq": "13093 1343A 1335B"
   },
   "𓂘": {
     "kEH_Cat": "D-19-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, with the elbows bent outwards, and the palms of the hands facing towards each other.",
+    "kEH_Desc": "Two arms, lowered, with the elbows bent outwards, and the palms of the hands facing each other.",
     "kEH_Func": "Classifier enveloping, embracing, uniting",
     "kEH_UniK": "D032",
     "kEH_JSesh": "D32",
@@ -1568,7 +1575,7 @@ unikemet = {
   "𓂚": {
     "kEH_Cat": "D-21-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a shield as seen in profile, top curving inwards, other arm downwards, forearm vertical, holding a mace (T3) horizontally.",
+    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a shield as seen in profile, top curving inwards, the other arm downwards, forearm vertical, holding a mace (T3) horizontally.",
     "kEH_Func": "Logogram (to fight)",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "D034",
@@ -1577,7 +1584,7 @@ unikemet = {
   "𓂛": {
     "kEH_Cat": "D-21-002",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a rectangular shield with inward curving sides, other arm downwards, forearm vertical, holding a mace (T3) horizontally.",
+    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a rectangular shield with inward curving sides, the other arm downwards, forearm vertical, holding a mace (T3) horizontally.",
     "kEH_Func": "Logogram (to fight)",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "D034A",
@@ -1718,7 +1725,7 @@ unikemet = {
   "𓂨": {
     "kEH_Cat": "D-28-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A human hand with a forwards downwards line coming from the thumb.",
+    "kEH_Desc": "A human hand with a forward downward line coming from the thumb.",
     "kEH_Func": "Logogram (scent, perfume, dew)",
     "kEH_FVal": "ꞽd.t",
     "kEH_UniK": "D046A",
@@ -1727,7 +1734,7 @@ unikemet = {
   },
   "𓂩": {
     "kEH_Cat": "D-28-016",
-    "kEH_Core": "L",
+    "kEH_Core": "C",
     "kEH_Desc": "A human hand with the thumb upwards and the palm curved upwards.",
     "kEH_Func": "Classifier hand",
     "kEH_FVal": "ḏr.t",
@@ -1863,7 +1870,8 @@ unikemet = {
     "kEH_FVal": "sšm",
     "kEH_UniK": "D052A",
     "kEH_JSesh": "S125",
-    "kEH_IFAO": "381,11"
+    "kEH_IFAO": "381,11",
+    "kEH_AltSeq": "130B8 13436 132F4"
   },
   "𓂺": {
     "kEH_Cat": "D-31-007",
@@ -1910,7 +1918,7 @@ unikemet = {
   "𓂾": {
     "kEH_Cat": "D-35-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A leg with a bend knee.",
+    "kEH_Desc": "A leg with a bent knee.",
     "kEH_Func": "Classifier leg/foot",
     "kEH_FVal": "rd",
     "kEH_UniK": "D056",
@@ -1921,7 +1929,7 @@ unikemet = {
   "𓂿": {
     "kEH_Cat": "D-35-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A leg with a bend knee (D56), with a knife with a rounded blade and rounded handle (T30) written over it.",
+    "kEH_Desc": "A leg with a bent knee (D56), with a knife with a rounded blade and rounded handle (T30) written over it.",
     "kEH_Func": "Classifier damage, injury",
     "kEH_FVal": "nkn",
     "kEH_UniK": "D057",
@@ -1949,7 +1957,8 @@ unikemet = {
     "kEH_UniK": "D059",
     "kEH_JSesh": "D59",
     "kEH_HG": "D59",
-    "kEH_IFAO": "120,8"
+    "kEH_IFAO": "120,8",
+    "kEH_AltSeq": "1309D 13436 130C0"
   },
   "𓃂": {
     "kEH_Cat": "D-35-017",
@@ -1965,7 +1974,7 @@ unikemet = {
   "𓃃": {
     "kEH_Cat": "D-36-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised row of three toes, with the ovals at the left side.",
+    "kEH_Desc": "A stylized row of three toes, with the ovals at the left side.",
     "kEH_Func": "Phono-repeater",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "D061",
@@ -1976,7 +1985,7 @@ unikemet = {
   "𓃄": {
     "kEH_Cat": "D-36-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised row of three toes, with the ovals at the right side.",
+    "kEH_Desc": "A stylized row of three toes, with the ovals at the right side.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "D062",
@@ -1986,7 +1995,7 @@ unikemet = {
   "𓃅": {
     "kEH_Cat": "D-36-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised set of two toes, resembling a cloth wound on a pole, an emblem of divinity (R8), on top of a base with a loop at the far end.",
+    "kEH_Desc": "A stylized set of two toes, resembling a cloth wound on a pole, an emblem of divinity (R8), on top of a base with a loop at the far end.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "D063",
@@ -2164,7 +2173,7 @@ unikemet = {
   "𓃛": {
     "kEH_Cat": "E-05-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A newborn bubalis antilope, lying down, legs folded beneath the body, long tail downwards.",
+    "kEH_Desc": "A newborn bubalis antelope, lying down, legs folded beneath the body, long tail downwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽw",
     "kEH_UniK": "E009",
@@ -2305,7 +2314,7 @@ unikemet = {
   "𓃨": {
     "kEH_Cat": "E-06-022",
     "kEH_Core": "C",
-    "kEH_Desc": "A jackal, standing, tail down (E17), on top of a standard used for the carrying of religious symbols, with an uraeus and SdSd-pretuberance at the front of the standard, with a mace (T3) written horizontally over the vertical pole of the standard.",
+    "kEH_Desc": "A jackal, standing, tail down (E17), on top of a standard used for the carrying of religious symbols, with an uraeus and šdšd-protuberance at the front of the standard, with a mace (T3) written horizontally over the vertical pole of the standard.",
     "kEH_Func": "Classifier Wepwawet",
     "kEH_FVal": "wp-wꜣ.wt",
     "kEH_UniK": "E019",
@@ -2481,37 +2490,34 @@ unikemet = {
     "kEH_IFAO": "138,4"
   },
   "𓃹": {
-    "kEH_Cat": "E-16-001",
+    "kEH_Cat": "E-16-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A desert hare, lying down.",
+    "kEH_Desc": "A desert hare, lying down, with whiskers.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wn",
     "kEH_UniK": "E034",
-    "kEH_JSesh": "E34",
-    "kEH_HG": "E34",
-    "kEH_IFAO": "135,1"
+    "kEH_JSesh": "E34"
   },
   "𓃺": {
     "kEH_Cat": "E-16-005",
     "kEH_Core": "L",
     "kEH_UniK": "E034A",
-    "kEH_IFAO": "135,6"
+    "kEH_IFAO": "135,6",
+    "kEH_AltSeq": "130F9"
   },
   "𓃻": {
-    "kEH_Cat": "E-20-006",
+    "kEH_Cat": "E-20-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, hands on knees, tail folded under the rear.",
-    "kEH_Func": "Classifier monkey (divinity)",
-    "kEH_FVal": "wpt",
+    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, hands on knees, tail upwards.",
+    "kEH_Func": "Logogram (Thot)",
+    "kEH_FVal": "ḏḥwty",
     "kEH_UniK": "E036",
-    "kEH_JSesh": "E35",
-    "kEH_HG": "E35",
-    "kEH_IFAO": "138,6"
+    "kEH_JSesh": "US248E35VARA"
   },
   "𓃼": {
     "kEH_Cat": "E-20-033",
     "kEH_Core": "C",
-    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, hands on knees, tail folded under the rear (E35), in front of a sheath or receptacle with V shaped indentation at the top, bound at the top with a loop a the backside (V36G); on top of an alabaster basin with a diamond shaped inner marking (W3).",
+    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, hands on knees, tail upwards, in front of a sheath or receptacle with V shaped indentation at the top, bound at the top with a loop at the backside (V36G); on top of an alabaster basin with a diamond shaped inner marking (W3).",
     "kEH_Func": "Logogram (symbol of the cycle of time)",
     "kEH_FVal": "wnšb",
     "kEH_UniK": "E037",
@@ -2583,7 +2589,7 @@ unikemet = {
   "𓄃": {
     "kEH_Cat": "F-06-011",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a bubalis antilope.",
+    "kEH_Desc": "The head of a bubalis antelope.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šsꜣ",
     "kEH_UniK": "F005",
@@ -2594,7 +2600,7 @@ unikemet = {
   "𓄄": {
     "kEH_Cat": "F-06-009",
     "kEH_Core": "C",
-    "kEH_Desc": "The forepart of a bubalis antilope.",
+    "kEH_Desc": "The forepart of a bubalis antelope.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šsꜣ",
     "kEH_UniK": "F006",
@@ -2682,7 +2688,8 @@ unikemet = {
     "kEH_Cat": "F-11-003",
     "kEH_Core": "L",
     "kEH_UniK": "F013A",
-    "kEH_IFAO": "154,12"
+    "kEH_IFAO": "154,12",
+    "kEH_AltSeq": "1310B"
   },
   "𓄍": {
     "kEH_Cat": "F-11-006",
@@ -2742,7 +2749,7 @@ unikemet = {
   "𓄒": {
     "kEH_Cat": "F-15-004",
     "kEH_Core": "C",
-    "kEH_Desc": "The lower jaw-bone of a bovid (ox).",
+    "kEH_Desc": "The lower jawbone of a bovid (ox).",
     "kEH_Func": "Classifier jaw",
     "kEH_FVal": "ꜥr",
     "kEH_UniK": "F019",
@@ -2773,7 +2780,7 @@ unikemet = {
   "𓄕": {
     "kEH_Cat": "F-17-007",
     "kEH_Core": "C",
-    "kEH_Desc": "The ear of a bovid (ox), without internal detail, with two stokes on the base.",
+    "kEH_Desc": "The ear of a bovid (ox), without internal detail, with two strokes on the base.",
     "kEH_Func": "Logogram to hear, to listen",
     "kEH_UniK": "F021A",
     "kEH_JSesh": "Ff4"
@@ -2781,7 +2788,7 @@ unikemet = {
   "𓄖": {
     "kEH_Cat": "F-18-001",
     "kEH_Core": "C",
-    "kEH_Desc": "The hind-quarters of a seated lion or leopard.",
+    "kEH_Desc": "The hindquarters of a seated lion or leopard.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "pḥ",
     "kEH_UniK": "F022",
@@ -2809,7 +2816,8 @@ unikemet = {
     "kEH_UniK": "F024",
     "kEH_JSesh": "F24",
     "kEH_HG": "F24",
-    "kEH_IFAO": "159,11"
+    "kEH_IFAO": "159,11",
+    "kEH_AltSeq": "13117 13440"
   },
   "𓄙": {
     "kEH_Cat": "F-19-006",
@@ -2954,7 +2962,7 @@ unikemet = {
   "𓄦": {
     "kEH_Cat": "F-25-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A spine with four ribs, with a downwards curving loop at the end of the spine.",
+    "kEH_Desc": "A spine with four ribs, with a downward curving loop at the end of the spine.",
     "kEH_Func": "Classifier spine, vertebrae",
     "kEH_FVal": "ꞽꜣ.t",
     "kEH_UniK": "F037",
@@ -2990,7 +2998,7 @@ unikemet = {
   "𓄪": {
     "kEH_Cat": "F-25-033",
     "kEH_Core": "C",
-    "kEH_Desc": "A spine, with the spinal cord hanging out at the backside.",
+    "kEH_Desc": "A spine, with the spinal cord hanging out at the backside, with two blocks at the bottom.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽmꜣḫ",
     "kEH_UniK": "F039",
@@ -3093,7 +3101,8 @@ unikemet = {
     "kEH_UniK": "F046A",
     "kEH_JSesh": "F46A",
     "kEH_HG": "F46A",
-    "kEH_IFAO": "169,10"
+    "kEH_IFAO": "169,10",
+    "kEH_AltSeq": "13132 FE01"
   },
   "𓄴": {
     "kEH_Cat": "F-28-003",
@@ -3104,7 +3113,8 @@ unikemet = {
     "kEH_UniK": "F047",
     "kEH_JSesh": "F47",
     "kEH_HG": "F47",
-    "kEH_IFAO": "169,12"
+    "kEH_IFAO": "169,12",
+    "kEH_AltSeq": "13132 13440"
   },
   "𓄵": {
     "kEH_Cat": "F-28-005",
@@ -3114,7 +3124,8 @@ unikemet = {
     "kEH_FVal": "pẖr",
     "kEH_UniK": "F047A",
     "kEH_JSesh": "F47A",
-    "kEH_HG": "F47A"
+    "kEH_HG": "F47A",
+    "kEH_AltSeq": "13132 FE01 13440"
   },
   "𓄶": {
     "kEH_Cat": "F-28-006",
@@ -3135,7 +3146,8 @@ unikemet = {
     "kEH_FVal": "wḏb",
     "kEH_UniK": "F049",
     "kEH_JSesh": "F49",
-    "kEH_HG": "F49"
+    "kEH_HG": "F49",
+    "kEH_AltSeq": "13136 13440"
   },
   "𓄸": {
     "kEH_Cat": "F-28-013",
@@ -3145,7 +3157,8 @@ unikemet = {
     "kEH_FVal": "spẖr",
     "kEH_UniK": "F050",
     "kEH_JSesh": "F50",
-    "kEH_HG": "F50"
+    "kEH_HG": "F50",
+    "kEH_AltSeq": "13132 13436 132F4"
   },
   "𓄹": {
     "kEH_Cat": "F-29-003",
@@ -3164,7 +3177,8 @@ unikemet = {
     "kEH_Desc": "Three pieces of flesh, point towards the back, curving downwards, arranged horizontally.",
     "kEH_Func": "Classifier part of a body",
     "kEH_FVal": "ḥꜥ.w",
-    "kEH_UniK": "F051A"
+    "kEH_UniK": "F051A",
+    "kEH_AltSeq": "13139 13431 13139 13431 13139"
   },
   "𓄻": {
     "kEH_Cat": "F-29-010",
@@ -3172,14 +3186,16 @@ unikemet = {
     "kEH_Desc": "Three pieces of flesh, point towards the back, curving downwards, arranged vertically.",
     "kEH_Func": "Logogram (limbs, body)",
     "kEH_FVal": "ḥꜥ.w",
-    "kEH_UniK": "F051B"
+    "kEH_UniK": "F051B",
+    "kEH_AltSeq": "13139 13430 13139 13430 13139"
   },
   "𓄼": {
     "kEH_Cat": "F-29-011",
     "kEH_Core": "L",
     "kEH_UniK": "F051C",
     "kEH_JSesh": "F51A",
-    "kEH_HG": "F51A"
+    "kEH_HG": "F51A",
+    "kEH_AltSeq": "13139 FE01"
   },
   "𓄽": {
     "kEH_Cat": "F-30-001",
@@ -3233,7 +3249,8 @@ unikemet = {
     "kEH_UniK": "G003",
     "kEH_JSesh": "G3",
     "kEH_HG": "G3",
-    "kEH_IFAO": "388,8"
+    "kEH_IFAO": "388,8",
+    "kEH_AltSeq": "13333 13436 1313F"
   },
   "𓅂": {
     "kEH_Cat": "G-02-003",
@@ -3332,7 +3349,7 @@ unikemet = {
   "𓅋": {
     "kEH_Cat": "G-12-151",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5), on top of a moon-sickle shaped boat with an higher prow than stern, with a rudder, with the head of an antilope (F81) on top of the prow, facing inwards, with a downwards line with multiple horizontal lines written over it coming from the head, on top of a sledge (P60B).",
+    "kEH_Desc": "A falcon (G5), on top of a moon-sickle shaped boat with a higher prow than stern, with a rudder, with the head of an antelope (F81) on top of the prow, facing inwards, with a downward line with multiple horizontal lines written over it coming from the head, on top of a sledge (P60B).",
     "kEH_Func": "Classifier bark of Sokar",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "G010",
@@ -3370,7 +3387,7 @@ unikemet = {
   "𓅏": {
     "kEH_Cat": "G-15-012",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, wearing a headdress consisting F1E34of two plumes (S9).",
+    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, wearing a headdress consisting of two plumes (S9).",
     "kEH_Func": "Classifier falcon divinity",
     "kEH_FVal": "spd(.w)",
     "kEH_UniK": "G013",
@@ -3403,13 +3420,14 @@ unikemet = {
   "𓅒": {
     "kEH_Cat": "G-24-029",
     "kEH_Core": "L",
-    "kEH_Desc": "A griffon vulture (Gyps fulvus), on top of a wickerwork basket (V30), in front of a cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail (I12), upon a wickerwork basket (V30).",
+    "kEH_Desc": "A griffon vulture (Gyps fulvus), on top of a wickerwork basket (V30), in front of a cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail (I12), upon a wickerwork basket (V30).",
     "kEH_Func": "Logogram (the two ladies (i.e. Nekhbet and Wadjet)",
     "kEH_FVal": "nb.ty",
     "kEH_UniK": "G016",
     "kEH_JSesh": "G16",
     "kEH_HG": "G16",
-    "kEH_IFAO": "203,5"
+    "kEH_IFAO": "203,5",
+    "kEH_AltSeq": "13D04 13431 13D95"
   },
   "𓅓": {
     "kEH_Cat": "G-09-001",
@@ -3439,7 +3457,8 @@ unikemet = {
     "kEH_UniK": "G019",
     "kEH_JSesh": "G19",
     "kEH_HG": "G19",
-    "kEH_IFAO": "178,2"
+    "kEH_IFAO": "178,2",
+    "kEH_AltSeq": "13153 13436 1309E"
   },
   "𓅖": {
     "kEH_Cat": "G-09-008",
@@ -3450,7 +3469,8 @@ unikemet = {
     "kEH_UniK": "G020",
     "kEH_JSesh": "G20",
     "kEH_HG": "G20",
-    "kEH_IFAO": "177,2"
+    "kEH_IFAO": "177,2",
+    "kEH_AltSeq": "13153 13436 1309D"
   },
   "𓅗": {
     "kEH_Cat": "G-09-013",
@@ -3461,7 +3481,8 @@ unikemet = {
     "kEH_UniK": "G020A",
     "kEH_JSesh": "G90",
     "kEH_HG": "G90",
-    "kEH_IFAO": "177,8"
+    "kEH_IFAO": "177,8",
+    "kEH_AltSeq": "13153 13436 1308B"
   },
   "𓅘": {
     "kEH_Cat": "G-22-002",
@@ -3574,7 +3595,7 @@ unikemet = {
   "𓅢": {
     "kEH_Cat": "G-11-018",
     "kEH_Core": "C",
-    "kEH_Desc": "Three saddle-billed stork (Ephippiorhynchus senegalensis), overlapping each other, the first bird having a lappet.",
+    "kEH_Desc": "Three saddle-billed storks (Ephippiorhynchus senegalensis), overlapping each other, the first bird having a lappet.",
     "kEH_Func": "Logogram (souls)",
     "kEH_FVal": "bꜣ.w",
     "kEH_UniK": "G030",
@@ -3650,7 +3671,8 @@ unikemet = {
   "𓅩": {
     "kEH_Cat": "G-16-003",
     "kEH_Core": "L",
-    "kEH_UniK": "G036A"
+    "kEH_UniK": "G036A",
+    "kEH_AltSeq": "13168"
   },
   "𓅪": {
     "kEH_Cat": "G-16-013",
@@ -3666,7 +3688,8 @@ unikemet = {
   "𓅫": {
     "kEH_Cat": "G-16-014",
     "kEH_Core": "L",
-    "kEH_UniK": "G037A"
+    "kEH_UniK": "G037A",
+    "kEH_AltSeq": "1316A"
   },
   "𓅬": {
     "kEH_Cat": "G-08-001",
@@ -3741,7 +3764,8 @@ unikemet = {
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "tw",
     "kEH_UniK": "G043A",
-    "kEH_IFAO": "172,16"
+    "kEH_IFAO": "172,16",
+    "kEH_AltSeq": "13171 13433 133CF"
   },
   "𓅳": {
     "kEH_Cat": "G-03-003",
@@ -3763,7 +3787,8 @@ unikemet = {
     "kEH_UniK": "G045",
     "kEH_JSesh": "G45",
     "kEH_HG": "G45",
-    "kEH_IFAO": "172,1"
+    "kEH_IFAO": "172,1",
+    "kEH_AltSeq": "1309D 13436 13171"
   },
   "𓅵": {
     "kEH_Cat": "G-03-007",
@@ -3774,7 +3799,8 @@ unikemet = {
     "kEH_UniK": "G045A",
     "kEH_JSesh": "G247",
     "kEH_HG": "G247",
-    "kEH_IFAO": "172,13"
+    "kEH_IFAO": "172,13",
+    "kEH_AltSeq": "1309E 13436 13171"
   },
   "𓅶": {
     "kEH_Cat": "G-03-025",
@@ -3785,7 +3811,8 @@ unikemet = {
     "kEH_UniK": "G046",
     "kEH_JSesh": "G46",
     "kEH_HG": "G46",
-    "kEH_IFAO": "388,10"
+    "kEH_IFAO": "388,10",
+    "kEH_AltSeq": "13333 13436 13171"
   },
   "𓅷": {
     "kEH_Cat": "G-20-006",
@@ -3801,7 +3828,7 @@ unikemet = {
   "𓅸": {
     "kEH_Cat": "G-20-023",
     "kEH_Core": "C",
-    "kEH_Desc": "Three ducklings, with open beak, outstretched wings on either side of the body, and the legs drawn towards the body (G47), inside a nest.",
+    "kEH_Desc": "Three ducklings, with open beaks, outstretched wings on either side of the body, and the legs drawn towards the body (G47), inside a nest.",
     "kEH_Func": "Classifier nest",
     "kEH_FVal": "šš",
     "kEH_UniK": "G048",
@@ -4082,7 +4109,7 @@ unikemet = {
   "𓆓": {
     "kEH_Cat": "I-09-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja).",
+    "kEH_Desc": "A cobra in repose (Naja haje).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḏ",
     "kEH_UniK": "I010",
@@ -4093,7 +4120,7 @@ unikemet = {
   "𓆔": {
     "kEH_Cat": "I-09-013",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), with a feather (H6) on its back, angling backwards.",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), with a feather (H6) on its back, angling backwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḏfꜣ",
     "kEH_UniK": "I010A",
@@ -4104,7 +4131,7 @@ unikemet = {
   "𓆕": {
     "kEH_Cat": "I-09-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Two cobras in repose (Naja haja), overlapping each other.",
+    "kEH_Desc": "Two cobras in repose (Naja haje), overlapping each other.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḏḏ",
     "kEH_UniK": "I011",
@@ -4114,16 +4141,17 @@ unikemet = {
   "𓆖": {
     "kEH_Cat": "I-09-021",
     "kEH_Core": "L",
-    "kEH_Desc": "A half round loaf of bread (X1) above a a strip of land (17); written below a cobra in repose (Naja haja) (I10).",
+    "kEH_Desc": "A half round loaf of bread (X1) above a strip of land (N17); written below a cobra in repose (Naja haje) (I10).",
     "kEH_Func": "Logogram (eternity)",
     "kEH_FVal": "ḏ.t",
     "kEH_UniK": "I011A",
-    "kEH_IFAO": "216,7"
+    "kEH_IFAO": "216,7",
+    "kEH_AltSeq": "13193 13433 13437 133CF 13430 131FF 13438"
   },
   "𓆗": {
     "kEH_Cat": "I-11-049",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail.",
     "kEH_Func": "Classifier female divinity",
     "kEH_FVal": "nbw.t",
     "kEH_UniK": "I012",
@@ -4134,7 +4162,7 @@ unikemet = {
   "𓆘": {
     "kEH_Cat": "I-11-053",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail (I12), upon a wickerwork basket (V30).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail (I12), upon a wickerwork basket (V30).",
     "kEH_Func": "Classifier female divinity (Wadjet)",
     "kEH_FVal": "wꜣḏ.t",
     "kEH_UniK": "I013",
@@ -4155,7 +4183,7 @@ unikemet = {
   "𓆚": {
     "kEH_Cat": "I-13-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail, consisting of two coils.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail, consisting of two coils.",
     "kEH_Func": "Classifier snake/uraeus",
     "kEH_FVal": "ꞽꜥr.t",
     "kEH_UniK": "I015",
@@ -4279,7 +4307,8 @@ unikemet = {
     "kEH_Desc": "A sedge (M23) written above a half round loaf of bread (X1), in front of a bee (L2) written above a half round loaf of bread (X1).",
     "kEH_Func": "Logogram (King of UE and LE)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty",
-    "kEH_UniK": "L002A"
+    "kEH_UniK": "L002A",
+    "kEH_AltSeq": "131D3 13431 131A4 13430 133CF 13431 133CF"
   },
   "𓆦": {
     "kEH_Cat": "L-02-007",
@@ -4323,7 +4352,8 @@ unikemet = {
   "𓆪": {
     "kEH_Cat": "L-07-007",
     "kEH_Core": "L",
-    "kEH_UniK": "L006A"
+    "kEH_UniK": "L006A",
+    "kEH_AltSeq": "131A9 13440"
   },
   "𓆫": {
     "kEH_Cat": "L-06-005",
@@ -4365,7 +4395,8 @@ unikemet = {
     "kEH_UniK": "M001A",
     "kEH_JSesh": "M1A",
     "kEH_HG": "M1A",
-    "kEH_IFAO": "232,7"
+    "kEH_IFAO": "232,7",
+    "kEH_AltSeq": "131B1 13436 131AD"
   },
   "𓆯": {
     "kEH_Cat": "M-01-006",
@@ -4376,7 +4407,8 @@ unikemet = {
     "kEH_UniK": "M001B",
     "kEH_JSesh": "M1E M48",
     "kEH_HG": "M48",
-    "kEH_IFAO": "232,5"
+    "kEH_IFAO": "232,5",
+    "kEH_AltSeq": "13191 13436 131AD"
   },
   "𓆰": {
     "kEH_Cat": "M-03-001",
@@ -4408,7 +4440,8 @@ unikemet = {
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "m-ḫt",
     "kEH_UniK": "M003A",
-    "kEH_JSesh": "M3A"
+    "kEH_JSesh": "M3A",
+    "kEH_AltSeq": "13153 13436 131B1"
   },
   "𓆳": {
     "kEH_Cat": "M-05-001",
@@ -4455,7 +4488,7 @@ unikemet = {
   "𓆷": {
     "kEH_Cat": "M-06-023",
     "kEH_Core": "C",
-    "kEH_Desc": "A pool with lotus flowers, consisting of 3 flowers and two buds.",
+    "kEH_Desc": "A pool with lotus flowers, consisting of three flowers and two buds.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šꜣ",
     "kEH_UniK": "M008",
@@ -4498,7 +4531,7 @@ unikemet = {
   "𓆻": {
     "kEH_Cat": "M-10-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A lotus flower, facing forwards, with a long twisted stalk, which is folded under itself.",
+    "kEH_Desc": "A lotus flower, facing forwards, with a long-twisted stalk, which is folded under itself.",
     "kEH_Func": "Logogram (to offer)",
     "kEH_FVal": "wdn",
     "kEH_UniK": "M011",
@@ -4579,13 +4612,14 @@ unikemet = {
   "𓇆": {
     "kEH_Cat": "M-12-021",
     "kEH_Core": "L",
-    "kEH_Desc": "A cobra in repose (Naja haja, I10), written over a stem of papyrus with a bud (M13).",
+    "kEH_Desc": "A cobra in repose (Naja haje, I10), written over a stem of papyrus with a bud (M13).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wꜣḏ",
     "kEH_UniK": "M014",
     "kEH_JSesh": "M14",
     "kEH_HG": "M14",
-    "kEH_IFAO": "246,3"
+    "kEH_IFAO": "246,3",
+    "kEH_AltSeq": "13193 13436 131C5"
   },
   "𓇇": {
     "kEH_Cat": "M-13-018",
@@ -4664,7 +4698,7 @@ unikemet = {
   "𓇎": {
     "kEH_Cat": "M-14-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A flowering reed (M17) and a club used by washer-men for beating laundry as part of the cleaning process (U36), connected by a network consisting of four horizontal lines and three lines going from bottom corner to top corner.",
+    "kEH_Desc": "A flowering reed (M17) and a club used by washermen for beating laundry as part of the cleaning process (U36), connected by a network consisting of four horizontal lines and three lines going from bottom corner to top corner.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜥꜣb",
     "kEH_UniK": "M019",
@@ -4686,7 +4720,7 @@ unikemet = {
   "𓇐": {
     "kEH_Cat": "M-15-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A field of reeds with three flowering reeds and a downwards loop at the far end.",
+    "kEH_Desc": "A field of reeds with three flowering reeds and a downward loop at the far end.",
     "kEH_Func": "Logogram (herb, plant)",
     "kEH_FVal": "sm",
     "kEH_UniK": "M021",
@@ -4776,7 +4810,8 @@ unikemet = {
     "kEH_FVal": "šmꜥ.w",
     "kEH_UniK": "M027",
     "kEH_JSesh": "M27",
-    "kEH_HG": "M27"
+    "kEH_HG": "M27",
+    "kEH_AltSeq": "1309D 13436 131D7"
   },
   "𓇙": {
     "kEH_Cat": "M-16-056",
@@ -4869,7 +4904,8 @@ unikemet = {
     "kEH_FVal": "ꞽt",
     "kEH_UniK": "M033A",
     "kEH_JSesh": "M33A",
-    "kEH_HG": "M33A"
+    "kEH_HG": "M33A",
+    "kEH_AltSeq": "131E0 FE00 13440"
   },
   "𓇢": {
     "kEH_Cat": "M-20-006",
@@ -4877,7 +4913,8 @@ unikemet = {
     "kEH_Desc": "Three grains of corn, arranged in a triangular form, with a single grain at the bottom.",
     "kEH_Func": "Classifier grain, barley, corn",
     "kEH_FVal": "tbtb",
-    "kEH_UniK": "M033B"
+    "kEH_UniK": "M033B",
+    "kEH_AltSeq": "131E0"
   },
   "𓇣": {
     "kEH_Cat": "M-21-001",
@@ -5063,7 +5100,7 @@ unikemet = {
   "𓇴": {
     "kEH_Cat": "N-03-003",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun within a halo, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus).",
+    "kEH_Desc": "The sun within a halo, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus).",
     "kEH_Func": "Logogram (the sun, Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "N006",
@@ -5074,7 +5111,7 @@ unikemet = {
   "𓇵": {
     "kEH_Cat": "N-04-015",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun-disk upon a butchers block.",
+    "kEH_Desc": "The sun-disk upon a butcher's block.",
     "kEH_Func": "Logogram (course (of the day), daily requirements)",
     "kEH_FVal": "ẖr.t-hrw",
     "kEH_UniK": "N007",
@@ -5084,7 +5121,7 @@ unikemet = {
   "𓇶": {
     "kEH_Cat": "N-04-016",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with thee beams of sunlight coming from it.",
+    "kEH_Desc": "The sun, with three beams of sunlight coming from it.",
     "kEH_Func": "Classifier light, shining, rising",
     "kEH_FVal": "psḏ",
     "kEH_UniK": "N008"
@@ -5207,7 +5244,8 @@ unikemet = {
   "𓈂": {
     "kEH_Cat": "N-09-029",
     "kEH_Core": "L",
-    "kEH_UniK": "N018B"
+    "kEH_UniK": "N018B",
+    "kEH_AltSeq": "13200 13439 13283"
   },
   "𓈃": {
     "kEH_Cat": "N-09-012",
@@ -5290,7 +5328,8 @@ unikemet = {
     "kEH_Cat": "N-13-002",
     "kEH_Core": "L",
     "kEH_UniK": "N025A",
-    "kEH_IFAO": "272,9"
+    "kEH_IFAO": "272,9",
+    "kEH_AltSeq": "13209"
   },
   "𓈋": {
     "kEH_Cat": "N-13-014",
@@ -5406,7 +5445,8 @@ unikemet = {
     "kEH_Desc": "A slightly less broad ingot of metal.",
     "kEH_Func": "Logogram (metal)",
     "kEH_FVal": "bꞽꜣ",
-    "kEH_UniK": "N034A"
+    "kEH_UniK": "N034A",
+    "kEH_AltSeq": "13214"
   },
   "𓈖": {
     "kEH_Cat": "N-19-001",
@@ -5527,7 +5567,7 @@ unikemet = {
   "𓈡": {
     "kEH_Cat": "F-19-029",
     "kEH_Core": "C",
-    "kEH_Desc": "The tigh of a bovid (ox), on top of a standard used for the carrying of religious symbols (R12) on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "The thigh of a bovid (ox), on top of a standard used for the carrying of religious symbols (R12) on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (2nd nome of Lower Egypt)",
     "kEH_FVal": "ḫm/ḫpš/ꞽwꜥ",
     "kEH_UniK": "NL002",
@@ -5590,7 +5630,7 @@ unikemet = {
   "𓈨": {
     "kEH_Cat": "T-13-072",
     "kEH_Core": "C",
-    "kEH_Desc": "An one-barbed harpoon, with handle, written horizontally (T21), on top of a crescent moon shape, connected by three lines, in front of a spear made into a standard, with a circle on either side of the speartip, with a loop over the standard (Jsesh/Gardiner R15); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "An one-barbed harpoon, with handle, written horizontally (T21), on top of a crescent moon shape, connected by three lines, in front of a spear made into a standard, with a circle on either side of the spear tip, with a loop over the standard (Jsesh/Gardiner R15); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (8th nome of Lower Egypt)",
     "kEH_FVal": "wꜥ-m-ḥww-ꞽꜣb.ty",
     "kEH_UniK": "NL008",
@@ -5599,7 +5639,7 @@ unikemet = {
   "𓈩": {
     "kEH_Cat": "C-32-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Man/god, standing, with a double plume/feather headdress, right arm forward, hand at the hight of the shoulder, holding a crook (S38) of the size of the man, left arm hanging beside the body, holding a flagellum (S45) horizontally; on top of a standard used for the carrying of religious symbols (R12) on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "Man/god, standing, with a double plume/feather headdress, right arm forward, hand at the height of the shoulder, holding a crook (S38) of the size of the man, left arm hanging beside the body, holding a flagellum (S45) horizontally; on top of a standard used for the carrying of religious symbols (R12) on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (9th nome of UE)",
     "kEH_FVal": "ꜥnḏ.ty ",
     "kEH_UniK": "NL009",
@@ -5626,7 +5666,7 @@ unikemet = {
   "𓈬": {
     "kEH_Cat": "E-23-051",
     "kEH_Core": "C",
-    "kEH_Desc": "A newborn bubalis antilope, lying down, legs folded beneath the body, long tail downwards (E9), in front of a bovid (bull), standing (E1); on top of a standard used for the carrying of religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A newborn bubalis antelope, lying down, legs folded beneath the body, long tail downwards (E9), in front of a bovid (bull), standing (E1); on top of a standard used for the carrying of religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (12th nome of LE)",
     "kEH_FVal": "ṯb-nṯr",
     "kEH_UniK": "NL012",
@@ -5635,7 +5675,7 @@ unikemet = {
   "𓈭": {
     "kEH_Cat": "N-11-044",
     "kEH_Core": "C",
-    "kEH_Desc": "A double forked tool for the mending of nets, with a broad middle section (V26), written veritically, in front of a crook (S38); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A double forked tool for the mending of nets, with a broad middle section (V26), written vertically, in front of a crook (S38); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (13th Lower Egyptian nome)",
     "kEH_FVal": "ḥḳꜣ-ꜥnḏ.w",
     "kEH_UniK": "NL013",
@@ -5644,7 +5684,7 @@ unikemet = {
   "𓈮": {
     "kEH_Cat": "N-11-036",
     "kEH_Core": "C",
-    "kEH_Desc": "A schematic representation of three sealed water pots in a rack, without horizontal line at the bottom, with the downwards lines descending to the bottom (W17E), in front of a spear made into a standard, with a circle on either side of the speartip, with a loop over the standard (Jsesh R15); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A schematic representation of three sealed water pots in a rack, without horizontal line at the bottom, with the downward lines descending to the bottom (W17E), in front of a spear made into a standard, with a circle on either side of the spear tip, with a loop over the standard (Jsesh R15); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (14th upper Egyptian nome)",
     "kEH_FVal": "ḫnt.y-ꞽꜣb.ty",
     "kEH_UniK": "NL014",
@@ -5716,7 +5756,7 @@ unikemet = {
   "𓈷": {
     "kEH_Cat": "G-12-153",
     "kEH_Core": "C",
-    "kEH_Desc": "The pole of a balance, with the cross-bar resembling a feather (H6), written horizontally (U39D), in front of a falcon (G5); on top of a standard used for carrying religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "The pole of a balance, with the crossbar resembling a feather (H6), written horizontally (U39D), in front of a falcon (G5); on top of a standard used for carrying religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (Throne of Horus (Edfu, 2nd nome of UE))",
     "kEH_FVal": "wṯs-ḥr",
     "kEH_UniK": "NU002",
@@ -5725,7 +5765,7 @@ unikemet = {
   "𓈸": {
     "kEH_Cat": "S-09-044",
     "kEH_Core": "C",
-    "kEH_Desc": "Two feathers (H6), orientated outwards, on top of a plan of a prehistoric building at the town of Nekhen, written as a circle / A circle with two vertical strokes, arragned horizontally, written within it (O48); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "Two feathers (H6), orientated outwards, on top of a plan of a prehistoric building at the town of Nekhen, written as a circle / A circle with two vertical strokes, arranged horizontally, written within it (O48); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (3rd nome of Upper Egypt)",
     "kEH_FVal": "nḫn",
     "kEH_UniK": "NU003",
@@ -5788,7 +5828,7 @@ unikemet = {
   "𓈿": {
     "kEH_Cat": "I-09-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), with a feather (H6) on its back, angling backwards; on top of a standard used for carrying religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), with a feather (H6) on its back, angling backwards; on top of a standard used for carrying religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (Wadjet, 10th nome of UE)",
     "kEH_FVal": "wꜣḏ.t",
     "kEH_UniK": "NU010",
@@ -5797,7 +5837,7 @@ unikemet = {
   "𓉀": {
     "kEH_Cat": "I-09-023",
     "kEH_Core": "C",
-    "kEH_Desc": "A stem of papyrus with a bud (M13), in front of a half round loaf of bread (X1), written below a cobra in repose (Naja haja) (I10); on top of a standard used for carrying religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A stem of papyrus with a bud (M13), in front of a half round loaf of bread (X1), written below a cobra in repose (Naja haje) (I10); on top of a standard used for carrying religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (Wadjet, 10th nome of UE)",
     "kEH_FVal": "wꜣḏ.t",
     "kEH_UniK": "NU010A",
@@ -5833,7 +5873,7 @@ unikemet = {
   "𓉄": {
     "kEH_Cat": "N-11-040",
     "kEH_Core": "C",
-    "kEH_Desc": "A horned desert viper (Cerastes cerastes) (I9), written over a tree (M1), in front of a schematic representation of three sealed water pots in a rack, without horizontal line at the bottom, with the downwards lines descending to the bottom (W17E); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A horned desert viper (Cerastes cerastes) (I9), written over a tree (M1), in front of a schematic representation of three sealed water pots in a rack, without horizontal line at the bottom, with the downward lines descending to the bottom (W17E); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (13th Upper Egyptian nome)",
     "kEH_FVal": "nḏf.t-ḫnt.t",
     "kEH_UniK": "NU013",
@@ -5842,7 +5882,7 @@ unikemet = {
   "𓉅": {
     "kEH_Cat": "N-11-041",
     "kEH_Core": "C",
-    "kEH_Desc": "A horned desert viper (Cerastes cerastes) (I9), written over a tree (M1), in front of hind-quarters of a seated lion or leopard (F22) above a half round loaf of bread (X1); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A horned desert viper (Cerastes cerastes) (I9), written over a tree (M1), in front of hindquarters of a seated lion or leopard (F22) above a half round loaf of bread (X1); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (14th Upper Egyptian nome)",
     "kEH_FVal": "nḏf.t-pḥ.t",
     "kEH_UniK": "NU014",
@@ -5903,7 +5943,7 @@ unikemet = {
   "𓉌": {
     "kEH_Cat": "N-11-042",
     "kEH_Core": "C",
-    "kEH_Desc": "A tree (M1), in front of a schematic representation of three sealed water pots in a rack, without horizontal line at the bottom, with the downwards lines descending to the bottom (W17E); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A tree (M1), in front of a schematic representation of three sealed water pots in a rack, without horizontal line at the bottom, with the downward lines descending to the bottom (W17E); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (20th Upper Egyptian nome)",
     "kEH_FVal": "nꜥr.t-ḫnt.t",
     "kEH_UniK": "NU020",
@@ -5912,7 +5952,7 @@ unikemet = {
   "𓉍": {
     "kEH_Cat": "N-11-043",
     "kEH_Core": "C",
-    "kEH_Desc": "A tree (M1), in front of hind-quarters of a seated lion or leopard (F22) above a half round loaf of bread (X1); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A tree (M1), in front of hindquarters of a seated lion or leopard (F22) above a half round loaf of bread (X1); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (21th Upper Egyptian nome)",
     "kEH_FVal": "nꜥr.t-ph.t",
     "kEH_UniK": "NU021",
@@ -5951,23 +5991,25 @@ unikemet = {
     "kEH_Func": "Logogram (scriptorum, school (house of life))",
     "kEH_FVal": "pr-ꜥnḫ",
     "kEH_UniK": "O001A",
-    "kEH_IFAO": "280,5"
+    "kEH_IFAO": "280,5",
+    "kEH_AltSeq": "13250 1343B 132F9"
   },
   "𓉒": {
     "kEH_Cat": "O-01-047",
     "kEH_Core": "L",
-    "kEH_Desc": "A mace with a pear-shaped head, written vertically (T3), intruding with the top inside a a house or enclosure (O1).",
+    "kEH_Desc": "A mace with a pear-shaped head, written vertically (T3), intruding with the top inside a house or enclosure (O1).",
     "kEH_Func": "Logogram (treasury)",
     "kEH_FVal": "pr-ḥḏ",
     "kEH_UniK": "O002",
     "kEH_JSesh": "O2",
     "kEH_HG": "O2",
-    "kEH_IFAO": "281,14"
+    "kEH_IFAO": "281,14",
+    "kEH_AltSeq": "13250 1343B 13309"
   },
   "𓉓": {
     "kEH_Cat": "O-01-054",
     "kEH_Core": "C",
-    "kEH_Desc": "An oar, written vertically (P8), intruding with the top inside a a house or enclosure (O1), with a loaf of bread, without internal detail (X3) left of the oar, and a beer-jug (W22) right of the oar.",
+    "kEH_Desc": "An oar, written vertically (P8), intruding with the top inside a house or enclosure (O1), with a loaf of bread, without internal detail (X3) left of the oar, and a beer-jug (W22) right of the oar.",
     "kEH_Func": "Logogram (invocation offering)",
     "kEH_FVal": "pr.t-ḫrw",
     "kEH_UniK": "O003",
@@ -6002,7 +6044,8 @@ unikemet = {
     "kEH_UniK": "O005A",
     "kEH_JSesh": "O5U",
     "kEH_HG": "O5u",
-    "kEH_IFAO": "283,9"
+    "kEH_IFAO": "283,9",
+    "kEH_AltSeq": "13255 13440"
   },
   "𓉗": {
     "kEH_Cat": "O-03-005",
@@ -6060,7 +6103,8 @@ unikemet = {
     "kEH_UniK": "O007",
     "kEH_JSesh": "O7",
     "kEH_HG": "O7",
-    "kEH_IFAO": "284,12"
+    "kEH_IFAO": "284,12",
+    "kEH_AltSeq": "13257 1343A 133CF"
   },
   "𓉟": {
     "kEH_Cat": "O-03-044",
@@ -6070,7 +6114,8 @@ unikemet = {
     "kEH_FVal": "ḥw.t-ꜥꜣ.t",
     "kEH_UniK": "O008",
     "kEH_JSesh": "O8",
-    "kEH_IFAO": "285,6"
+    "kEH_IFAO": "285,6",
+    "kEH_AltSeq": "13257 1343A 133CF 13436 1327B"
   },
   "𓉠": {
     "kEH_Cat": "O-03-175",
@@ -6080,7 +6125,8 @@ unikemet = {
     "kEH_FVal": "nb.t-ḥw.t",
     "kEH_UniK": "O009",
     "kEH_JSesh": "O9",
-    "kEH_HG": "O9"
+    "kEH_HG": "O9",
+    "kEH_AltSeq": "13F60 13439 133CF"
   },
   "𓉡": {
     "kEH_Cat": "O-03-106",
@@ -6091,7 +6137,8 @@ unikemet = {
     "kEH_UniK": "O010",
     "kEH_JSesh": "O10",
     "kEH_HG": "O10",
-    "kEH_IFAO": "289,1"
+    "kEH_IFAO": "289,1",
+    "kEH_AltSeq": "13257 13439 13143"
   },
   "𓉢": {
     "kEH_Cat": "O-03-121",
@@ -6099,19 +6146,22 @@ unikemet = {
     "kEH_Desc": "A tie or strap, used with sandals (ankh-sign) (S34), written inside a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6).",
     "kEH_Func": "Logogram (mansion of life)",
     "kEH_FVal": "ḥw.t-ꜥnḫ",
-    "kEH_UniK": "O010A"
+    "kEH_UniK": "O010A",
+    "kEH_AltSeq": "13257 13439 132F9"
   },
   "𓉣": {
     "kEH_Cat": "O-03-105",
     "kEH_Core": "L",
     "kEH_UniK": "O010B",
-    "kEH_IFAO": "288,16"
+    "kEH_IFAO": "288,16",
+    "kEH_AltSeq": "13257 13439 131A4"
   },
   "𓉤": {
     "kEH_Cat": "O-09-013",
     "kEH_Core": "L",
     "kEH_UniK": "O010C",
-    "kEH_JSesh": "US248O10CEXTU"
+    "kEH_JSesh": "US248O10CEXTU",
+    "kEH_AltSeq": "1326C 13439 13077"
   },
   "𓉥": {
     "kEH_Cat": "O-04-007",
@@ -6133,12 +6183,13 @@ unikemet = {
     "kEH_UniK": "O012",
     "kEH_JSesh": "O12",
     "kEH_HG": "O12",
-    "kEH_IFAO": "293,9"
+    "kEH_IFAO": "293,9",
+    "kEH_AltSeq": "1309D 13436 13265"
   },
   "𓉧": {
     "kEH_Cat": "O-05-001",
     "kEH_Core": "C",
-    "kEH_Desc": "An enclosure wall with battlements on the front side and top, and on the vertial line of the opening.",
+    "kEH_Desc": "An enclosure wall with battlements on the front side and top, and on the vertical line of the opening.",
     "kEH_Func": "Classifier enfolding, enclosing, walling in",
     "kEH_FVal": "sbḫ",
     "kEH_UniK": "O013",
@@ -6187,7 +6238,7 @@ unikemet = {
   "𓉬": {
     "kEH_Cat": "O-09-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A shrine, seen from the side, with a downwards sloping roof.",
+    "kEH_Desc": "A shrine, seen from the side, with a downward sloping roof.",
     "kEH_Func": "Classifier shrine, chapel",
     "kEH_FVal": "kꜣr",
     "kEH_UniK": "O018",
@@ -6198,7 +6249,7 @@ unikemet = {
   "𓉭": {
     "kEH_Cat": "O-09-057",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic shrine, seen from the side, with a downwards sloping roof, with vertical poles in front of the shrine itself, connected to the shrine.",
+    "kEH_Desc": "An archaic shrine, seen from the side, with a downward sloping roof, with vertical poles in front of the shrine itself, connected to the shrine.",
     "kEH_Func": "Classifier shrine",
     "kEH_FVal": "pr-wr",
     "kEH_UniK": "O019",
@@ -6208,7 +6259,7 @@ unikemet = {
   "𓉮": {
     "kEH_Cat": "O-09-062",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic shrine, seen from the side, with a downwards sloping roof, with upwards curving lines coming from the roof, and short vertical lines in front of the shrine.",
+    "kEH_Desc": "An archaic shrine, seen from the side, with a downward sloping roof, with upward curving lines coming from the roof, and short vertical lines in front of the shrine.",
     "kEH_Func": "Logogram (shrine, row of shrines)",
     "kEH_FVal": "ꞽtr.t",
     "kEH_UniK": "O019A",
@@ -6231,7 +6282,8 @@ unikemet = {
     "kEH_Cat": "O-09-078",
     "kEH_Core": "L",
     "kEH_UniK": "O020A",
-    "kEH_IFAO": "307,9"
+    "kEH_IFAO": "307,9",
+    "kEH_AltSeq": "1326F"
   },
   "𓉱": {
     "kEH_Cat": "O-07-009",
@@ -6298,7 +6350,7 @@ unikemet = {
   "𓉷": {
     "kEH_Cat": "O-13-001",
     "kEH_Core": "C",
-    "kEH_Desc": "An obelisk of an Old Kingdom sun temple, with an circle (sun disk) on top of the obelisk.",
+    "kEH_Desc": "An obelisk of an Old Kingdom sun temple, with a circle (sun disk) on top of the obelisk.",
     "kEH_Func": "Classifier solar temple",
     "kEH_FVal": "nḫn-rꜥ",
     "kEH_UniK": "O025A",
@@ -6353,7 +6405,8 @@ unikemet = {
     "kEH_UniK": "O029A",
     "kEH_JSesh": "O29v",
     "kEH_HG": "O29v",
-    "kEH_IFAO": "315,14"
+    "kEH_IFAO": "315,14",
+    "kEH_AltSeq": "1327B FE00"
   },
   "𓉽": {
     "kEH_Cat": "O-16-026",
@@ -6370,7 +6423,8 @@ unikemet = {
   "𓉾": {
     "kEH_Cat": "O-16-028",
     "kEH_Core": "L",
-    "kEH_UniK": "O030A"
+    "kEH_UniK": "O030A",
+    "kEH_AltSeq": "1327D 13431 1327D 13431 1327D 13431 1327D"
   },
   "𓉿": {
     "kEH_Cat": "O-17-001",
@@ -6583,7 +6637,7 @@ unikemet = {
   "𓊕": {
     "kEH_Cat": "O-24-048",
     "kEH_Core": "C",
-    "kEH_Desc": "A plan of a prehistoric building at the town of Nekhen, written as a circle / A circle with two vertical strokes, arragned horizontally, written within it.",
+    "kEH_Desc": "A plan of a prehistoric building at the town of Nekhen, written as a circle / A circle with two vertical strokes, arranged horizontally, written within it.",
     "kEH_Func": "Logogram (time, occasion)",
     "kEH_FVal": "sp",
     "kEH_UniK": "O048",
@@ -6615,7 +6669,8 @@ unikemet = {
     "kEH_Cat": "O-24-052",
     "kEH_Core": "L",
     "kEH_UniK": "O050A",
-    "kEH_JSesh": "Ff8"
+    "kEH_JSesh": "Ff8",
+    "kEH_AltSeq": "13299 13440"
   },
   "𓊙": {
     "kEH_Cat": "O-24-051",
@@ -6652,7 +6707,7 @@ unikemet = {
   "𓊜": {
     "kEH_Cat": "P-01-017",
     "kEH_Core": "C",
-    "kEH_Desc": "An upside down boat/ship, resembling a crescent moon, on top of a rectangle representing water, with a carrying chair (Q2) inside the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "An upside-down boat/ship, resembling a crescent moon, on top of a rectangle representing water, with a carrying chair (Q2) inside the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Classifier to upset, to overturn",
     "kEH_FVal": "pnꜥ",
     "kEH_UniK": "P001A",
@@ -6671,7 +6726,7 @@ unikemet = {
   "𓊞": {
     "kEH_Cat": "P-01-061",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship with a vertical prow and a stern resembling the handle of a handle of a sickle (U1), on top of a rectangle resembling water, with an oval with rounded corners in the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "A boat/ship with a vertical prow and a stern resembling the handle of a sickle (U1), on top of a rectangle resembling water, with an oval with rounded corners in the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Classifier bark/boat",
     "kEH_FVal": "(m)skt.t",
     "kEH_UniK": "P003"
@@ -6684,7 +6739,7 @@ unikemet = {
   "𓊠": {
     "kEH_Cat": "P-04-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A fishersman's boat, on top of a rectangle representing water, with a net inside the boat, without internal detail.",
+    "kEH_Desc": "A fisherman's boat, on top of a rectangle representing water, with a net inside the boat, without internal detail.",
     "kEH_Func": "Logogram (to loosen, to explain)",
     "kEH_FVal": "wḥꜥ",
     "kEH_UniK": "P004",
@@ -6722,7 +6777,8 @@ unikemet = {
     "kEH_UniK": "P007",
     "kEH_JSesh": "P7",
     "kEH_HG": "P7",
-    "kEH_IFAO": "336,5"
+    "kEH_IFAO": "336,5",
+    "kEH_AltSeq": "1309D 13436 132A2 "
   },
   "𓊤": {
     "kEH_Cat": "P-08-001",
@@ -6743,7 +6799,8 @@ unikemet = {
     "kEH_FVal": "ḫrw=f(y)",
     "kEH_UniK": "P009",
     "kEH_JSesh": "P9",
-    "kEH_HG": "P9"
+    "kEH_HG": "P9",
+    "kEH_AltSeq": "13191 13436 132A4"
   },
   "𓊦": {
     "kEH_Cat": "P-09-001",
@@ -6846,7 +6903,7 @@ unikemet = {
   "𓊯": {
     "kEH_Cat": "R-01-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A loaf of bread (X3), a flat bottomed jar with handles (W23) and a round loaf of bread (X6), arranged horizontally on an one-legged table.",
+    "kEH_Desc": "A loaf of bread (X3), a flat-bottom jar with handles (W23) and a round loaf of bread (X6), arranged horizontally on an one-legged table.",
     "kEH_Func": "Classifier altar",
     "kEH_FVal": "ḫꜣ(w).t",
     "kEH_UniK": "R001",
@@ -6856,7 +6913,7 @@ unikemet = {
   "𓊰": {
     "kEH_Cat": "R-01-018",
     "kEH_Core": "C",
-    "kEH_Desc": "A one legged table with long upright loaves of bread, cut in halves.",
+    "kEH_Desc": "A one-legged table with long upright loaves of bread, cut in halves.",
     "kEH_Func": "Logogram (altar)",
     "kEH_FVal": "ḫꜣw.t",
     "kEH_UniK": "R002",
@@ -6867,7 +6924,7 @@ unikemet = {
   "𓊱": {
     "kEH_Cat": "R-01-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Three circular items, arranged horizontally, on a one legged table with a bowl-shaped surface.",
+    "kEH_Desc": "Three circular items, arranged horizontally, on a one-legged table with a bowl-shaped surface.",
     "kEH_Func": "Logogram (altar)",
     "kEH_FVal": "ḫꜣw.t",
     "kEH_UniK": "R002A",
@@ -6903,7 +6960,7 @@ unikemet = {
   "𓊵": {
     "kEH_Cat": "R-04-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A loaf of bread upon a reed mat.",
+    "kEH_Desc": "A loaf of bread on a reed mat.",
     "kEH_Func": "Logogram (offering)",
     "kEH_FVal": "ḥtp",
     "kEH_UniK": "R004",
@@ -6914,7 +6971,7 @@ unikemet = {
   "𓊶": {
     "kEH_Cat": "R-05-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A censer for fumigation, written horizontally, with a forwards, downwards line at the front.",
+    "kEH_Desc": "A censer for fumigation, written horizontally, with a forward, downward line at the front.",
     "kEH_Func": "Classifier fumigation/censing",
     "kEH_FVal": "kꜣp",
     "kEH_UniK": "R005",
@@ -6925,7 +6982,7 @@ unikemet = {
   "𓊷": {
     "kEH_Cat": "R-05-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A censer for fumigation, written horizontally, with a triangular shape at the front, with a backwards, downwards line at the back.",
+    "kEH_Desc": "A censer for fumigation, written horizontally, with a triangular shape at the front, with a backward, downward line at the back.",
     "kEH_Func": "Logogram (to fumigate, to cense)",
     "kEH_FVal": "kꜣp",
     "kEH_UniK": "R006",
@@ -6968,7 +7025,7 @@ unikemet = {
   "𓊻": {
     "kEH_Cat": "R-07-053",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written between a butchers block and a sandy hill slope (N29).",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written between a butcher's block and a sandy hill slope (N29).",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "R010",
@@ -6978,7 +7035,7 @@ unikemet = {
   "𓊼": {
     "kEH_Cat": "R-07-033",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over a butchers block, with the pole at the bottom of the block.",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over a butcher's block, with the pole at the bottom of the block.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "R010A"
@@ -7029,7 +7086,7 @@ unikemet = {
   "𓋁": {
     "kEH_Cat": "R-12-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A spear made into a standard, with a circle on either side of the speartip, with a loop over the standard.",
+    "kEH_Desc": "A spear made into a standard, with a circle on either side of the spear tip, with a loop over the standard.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜣb",
     "kEH_UniK": "R015",
@@ -7087,7 +7144,7 @@ unikemet = {
   "𓋇": {
     "kEH_Cat": "R-17-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A flower with a long stem, enclosed by the horns of a bovid, upside down.",
+    "kEH_Desc": "A flower with a long stem, enclosed by the horns of a bovid, upside-down.",
     "kEH_Func": "Logogram (Seshat (divinity))",
     "kEH_FVal": "sšꜣ.t",
     "kEH_UniK": "R020",
@@ -7098,7 +7155,7 @@ unikemet = {
   "𓋈": {
     "kEH_Cat": "R-17-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A flower with a long stem, enclosed by the horns of a bovid, upside down, with two plumes (S9) on top of the horns.",
+    "kEH_Desc": "A flower with a long stem, enclosed by the horns of a bovid, upside-down, with two plumes (S9) on top of the horns.",
     "kEH_Func": "Logogram (Seshat (divinity))",
     "kEH_FVal": "sšꜣ.t",
     "kEH_UniK": "R021",
@@ -7166,7 +7223,7 @@ unikemet = {
   "𓋏": {
     "kEH_Cat": "R-21-001",
     "kEH_Core": "C",
-    "kEH_Desc": "An emblem with a human face with cow ears, with two upwards line which curl inwards.",
+    "kEH_Desc": "An emblem with a human face with cow ears, with two upward lines which curl inwards.",
     "kEH_Func": "Logogram (Bat (7th nome of Upper Egypt))",
     "kEH_FVal": "bꜣ.t",
     "kEH_UniK": "R028",
@@ -7279,7 +7336,7 @@ unikemet = {
   "𓋚": {
     "kEH_Cat": "S-07-002",
     "kEH_Core": "C",
-    "kEH_Desc": "The Atef crown with rams horns and a sun disk.",
+    "kEH_Desc": "The Atef crown with ram horns and a sun disk.",
     "kEH_Func": "Logogram (Atef-crown)",
     "kEH_FVal": "ꜣtf",
     "kEH_UniK": "S008",
@@ -7338,7 +7395,8 @@ unikemet = {
     "kEH_UniK": "S013",
     "kEH_JSesh": "S13",
     "kEH_HG": "S13",
-    "kEH_IFAO": "375,5"
+    "kEH_IFAO": "375,5",
+    "kEH_AltSeq": "132DE 13436 130C0"
   },
   "𓋠": {
     "kEH_Cat": "T-01-052",
@@ -7349,7 +7407,8 @@ unikemet = {
     "kEH_UniK": "S014",
     "kEH_JSesh": "S14",
     "kEH_HG": "S14",
-    "kEH_IFAO": "412,15"
+    "kEH_IFAO": "412,15",
+    "kEH_AltSeq": "132DE 13436 13309"
   },
   "𓋡": {
     "kEH_Cat": "S-11-043",
@@ -7360,7 +7419,8 @@ unikemet = {
     "kEH_UniK": "S014A",
     "kEH_JSesh": "S14A",
     "kEH_HG": "S14A",
-    "kEH_IFAO": "375,9"
+    "kEH_IFAO": "375,9",
+    "kEH_AltSeq": "132DE 13436 13300"
   },
   "𓋢": {
     "kEH_Cat": "S-11-044",
@@ -7484,7 +7544,7 @@ unikemet = {
   "𓋮": {
     "kEH_Cat": "S-13-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A garment with downwards curving ties at both sides.",
+    "kEH_Desc": "A garment with downward curving ties at both sides.",
     "kEH_Func": "Classifier garment, mantle, kilt",
     "kEH_FVal": "mꜣs.t",
     "kEH_UniK": "S025",
@@ -7514,7 +7574,8 @@ unikemet = {
   "𓋱": {
     "kEH_Cat": "S-15-065",
     "kEH_Core": "L",
-    "kEH_UniK": "S026B"
+    "kEH_UniK": "S026B",
+    "kEH_AltSeq": "132F0"
   },
   "𓋲": {
     "kEH_Cat": "S-15-006",
@@ -7557,7 +7618,8 @@ unikemet = {
     "kEH_UniK": "S030",
     "kEH_JSesh": "S30",
     "kEH_HG": "S30",
-    "kEH_IFAO": "380,12"
+    "kEH_IFAO": "380,12",
+    "kEH_AltSeq": "13191 13436 132F4"
   },
   "𓋶": {
     "kEH_Cat": "S-15-024",
@@ -7568,7 +7630,8 @@ unikemet = {
     "kEH_UniK": "S031",
     "kEH_JSesh": "S31",
     "kEH_HG": "S31",
-    "kEH_IFAO": "380,9"
+    "kEH_IFAO": "380,9",
+    "kEH_AltSeq": "13333 13436 132F4"
   },
   "𓋷": {
     "kEH_Cat": "S-15-055",
@@ -7617,7 +7680,8 @@ unikemet = {
   "𓋻": {
     "kEH_Cat": "S-19-002",
     "kEH_Core": "L",
-    "kEH_UniK": "S035A"
+    "kEH_UniK": "S035A",
+    "kEH_AltSeq": "132FA"
   },
   "𓋼": {
     "kEH_Cat": "S-20-001",
@@ -7794,24 +7858,26 @@ unikemet = {
   "𓌌": {
     "kEH_Cat": "T-01-025",
     "kEH_Core": "L",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), written over a mace with a pear-shaped head, written vertically (T3).",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), written over a mace with a pear-shaped head, written vertically (T3).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥḏ",
     "kEH_UniK": "T005",
     "kEH_JSesh": "T5",
     "kEH_HG": "T5",
-    "kEH_IFAO": "411,10"
+    "kEH_IFAO": "411,10",
+    "kEH_AltSeq": "13193 13436 13309"
   },
   "𓌍": {
     "kEH_Cat": "T-01-032",
     "kEH_Core": "L",
-    "kEH_Desc": "Two cobras in repose (Naja haja) (I10), arranged vertically, written over a mace with a pear-shaped head, written vertically (T3).",
+    "kEH_Desc": "Two cobras in repose (Naja haje) (I10), arranged vertically, written over a mace with a pear-shaped head, written vertically (T3).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥḏḏ",
     "kEH_UniK": "T006",
     "kEH_JSesh": "T6",
     "kEH_HG": "T6",
-    "kEH_IFAO": "412,1"
+    "kEH_IFAO": "412,1",
+    "kEH_AltSeq": "13193 13433 13193 13436 13309"
   },
   "𓌎": {
     "kEH_Cat": "T-03-007",
@@ -7907,7 +7973,7 @@ unikemet = {
   "𓌗": {
     "kEH_Cat": "T-08-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A bow-string, coiled up, with a loop at the front end, and the back end angled downwards, with a loop on it.",
+    "kEH_Desc": "A bowstring, coiled up, with a loop at the front end, and the back end angled downwards, with a loop on it.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "rwḏ",
     "kEH_UniK": "T012",
@@ -7983,7 +8049,7 @@ unikemet = {
   "𓌞": {
     "kEH_Cat": "T-12-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A shepherds crook with a package lashed to it, with a tie above and below the package.",
+    "kEH_Desc": "A shepherd's crook with a package lashed to it, with a tie above and below the package.",
     "kEH_Func": "Logogram (follower, retainer)",
     "kEH_FVal": "šms.w",
     "kEH_UniK": "T018",
@@ -8027,7 +8093,7 @@ unikemet = {
   "𓌢": {
     "kEH_Cat": "T-13-048",
     "kEH_Core": "C",
-    "kEH_Desc": "A two-barbed arrow-head, with the point facing downwards.",
+    "kEH_Desc": "A two-barbed arrowhead, with the point facing downwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sn",
     "kEH_UniK": "T022",
@@ -8038,7 +8104,7 @@ unikemet = {
   "𓌣": {
     "kEH_Cat": "T-13-054",
     "kEH_Core": "C",
-    "kEH_Desc": "A rounded two-barbed arrow-head, with the point facing downwards.",
+    "kEH_Desc": "A rounded two-barbed arrowhead, with the point facing downwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sn",
     "kEH_UniK": "T023",
@@ -8146,7 +8212,8 @@ unikemet = {
     "kEH_UniK": "T032A",
     "kEH_JSesh": "S123",
     "kEH_HG": "S123",
-    "kEH_IFAO": "380,16"
+    "kEH_IFAO": "380,16",
+    "kEH_AltSeq": "1332B 13436 132F4"
   },
   "𓌮": {
     "kEH_Cat": "T-19-004",
@@ -8162,7 +8229,8 @@ unikemet = {
   "𓌯": {
     "kEH_Cat": "T-19-005",
     "kEH_Core": "L",
-    "kEH_UniK": "T033A"
+    "kEH_UniK": "T033A",
+    "kEH_AltSeq": "13333 13432 13079"
   },
   "𓌰": {
     "kEH_Cat": "T-19-001",
@@ -8226,7 +8294,8 @@ unikemet = {
     "kEH_UniK": "U003",
     "kEH_JSesh": "U3",
     "kEH_HG": "U3",
-    "kEH_IFAO": "388,13"
+    "kEH_IFAO": "388,13",
+    "kEH_AltSeq": "13333 13432 13079"
   },
   "𓌶": {
     "kEH_Cat": "U-01-007",
@@ -8236,7 +8305,8 @@ unikemet = {
     "kEH_FVal": "mꜣꜥ",
     "kEH_UniK": "U004",
     "kEH_JSesh": "U4",
-    "kEH_HG": "U4"
+    "kEH_HG": "U4",
+    "kEH_AltSeq": "13333 13432 13419"
   },
   "𓌷": {
     "kEH_Cat": "U-01-006",
@@ -8247,7 +8317,8 @@ unikemet = {
     "kEH_UniK": "U005",
     "kEH_JSesh": "U5",
     "kEH_HG": "U5",
-    "kEH_IFAO": "389,3"
+    "kEH_IFAO": "389,3",
+    "kEH_AltSeq": "13334 13432 13419"
   },
   "𓌸": {
     "kEH_Cat": "U-02-001",
@@ -8263,12 +8334,14 @@ unikemet = {
   "𓌹": {
     "kEH_Cat": "U-02-003",
     "kEH_Core": "L",
-    "kEH_UniK": "U006A"
+    "kEH_UniK": "U006A",
+    "kEH_AltSeq": "13338 FE03"
   },
   "𓌺": {
     "kEH_Cat": "U-02-004",
     "kEH_Core": "L",
-    "kEH_UniK": "U006B"
+    "kEH_UniK": "U006B",
+    "kEH_AltSeq": "13338 FE03 13440"
   },
   "𓌻": {
     "kEH_Cat": "U-02-006",
@@ -8279,7 +8352,8 @@ unikemet = {
     "kEH_UniK": "U007",
     "kEH_JSesh": "U7",
     "kEH_HG": "U7",
-    "kEH_IFAO": "389,15"
+    "kEH_IFAO": "389,15",
+    "kEH_AltSeq": "13338 FE06"
   },
   "𓌼": {
     "kEH_Cat": "U-02-010",
@@ -8295,7 +8369,7 @@ unikemet = {
   "𓌽": {
     "kEH_Cat": "U-03-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A grain measure, with a forwards and downwards line of grain coming from the front.",
+    "kEH_Desc": "A grain measure, with a forward and downward line of grain coming from the front.",
     "kEH_Func": "Classifier grain/barley",
     "kEH_FVal": "sšr",
     "kEH_UniK": "U009",
@@ -8305,7 +8379,7 @@ unikemet = {
   "𓌾": {
     "kEH_Cat": "U-03-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A grain measure, with a forwards and downwards line of grain coming from the front, with three grains of corn, arranged horizontally (M33), above the grain measure.",
+    "kEH_Desc": "A grain measure, with a forward and downward line of grain coming from the front, with three grains of corn, arranged horizontally (M33), above the grain measure.",
     "kEH_Func": "Logogram (harvest, crop)",
     "kEH_FVal": "šm.w",
     "kEH_UniK": "U010",
@@ -8315,7 +8389,7 @@ unikemet = {
   "𓌿": {
     "kEH_Cat": "U-03-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A grain measure, with a forwards and downwards line of grain coming from the front, with a hook on top of the measure, resembling a crook (S38).",
+    "kEH_Desc": "A grain measure, with a forward and downward line of grain coming from the front, with a hook on top of the measure, resembling a crook (S38).",
     "kEH_Func": "Logogram (bushel (a corn measure, 10 hin))",
     "kEH_FVal": "ḥḳꜣ.t",
     "kEH_UniK": "U011",
@@ -8325,7 +8399,7 @@ unikemet = {
   "𓍀": {
     "kEH_Cat": "U-03-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A grain measure, with a forwards and downwards line of grain coming from the front, with a vertical human finger (D50) on top of the measure.",
+    "kEH_Desc": "A grain measure, with a forward and downward line of grain coming from the front, with a vertical human finger (D50) on top of the measure.",
     "kEH_Func": "Logogram (bushel (a corn measure, 10 hin))",
     "kEH_FVal": "ḥḳꜣ.t",
     "kEH_UniK": "U012",
@@ -8335,7 +8409,7 @@ unikemet = {
   "𓍁": {
     "kEH_Cat": "U-05-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A plough, with a cross-bar and two vertical lines on the end of the long beam.",
+    "kEH_Desc": "A plough, with a crossbar and two vertical lines on the end of the long beam.",
     "kEH_Func": "Classifier plough/plowed material",
     "kEH_FVal": "skꜣ",
     "kEH_UniK": "U013",
@@ -8410,7 +8484,7 @@ unikemet = {
   "𓍈": {
     "kEH_Cat": "U-08-007",
     "kEH_Core": "C",
-    "kEH_Desc": "An adze without the downwards curve at the end of the handle.",
+    "kEH_Desc": "An adze without the downward curve at the end of the handle.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nw",
     "kEH_UniK": "U020",
@@ -8443,7 +8517,7 @@ unikemet = {
   "𓍋": {
     "kEH_Cat": "U-09-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A hair-pin or burin, with a horizontal line above and below the oval of the pin.",
+    "kEH_Desc": "A hairpin or burin, with a horizontal line above and below the oval of the pin.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜣb/mr",
     "kEH_UniK": "U023",
@@ -8454,7 +8528,7 @@ unikemet = {
   "𓍌": {
     "kEH_Cat": "U-09-026",
     "kEH_Core": "C",
-    "kEH_Desc": "A hair-pin or burin, without the horizontal line on the top.",
+    "kEH_Desc": "A hairpin or burin, without the horizontal line on the top.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mr",
     "kEH_UniK": "U023A",
@@ -8465,7 +8539,7 @@ unikemet = {
   "𓍍": {
     "kEH_Cat": "U-09-085",
     "kEH_Core": "C",
-    "kEH_Desc": "A drill, with a half-circle handle, with a backwards tick on top of the handle, with a forked drill-bit with a horizontal line on top of the forked drill-bit, with a short vertical stroke next to the drill, connected to the handle.",
+    "kEH_Desc": "A drill, with a half-circle handle, with a backward tick on top of the handle, with a forked drill-bit with a horizontal line on top of the forked drill-bit, with a short vertical stroke next to the drill, connected to the handle.",
     "kEH_Func": "Logogram (craftsman)",
     "kEH_FVal": "ḥmw.w",
     "kEH_UniK": "U024",
@@ -8495,7 +8569,7 @@ unikemet = {
   "𓍐": {
     "kEH_Cat": "U-09-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A drill for drilling holes in beads, with an rectangular handle, and a round drill bit.",
+    "kEH_Desc": "A drill for drilling holes in beads, with a rectangular handle, and a round drill bit.",
     "kEH_Func": "Classifier to open",
     "kEH_FVal": "wbꜣ",
     "kEH_UniK": "U027",
@@ -8527,13 +8601,14 @@ unikemet = {
   "𓍓": {
     "kEH_Cat": "U-10-006",
     "kEH_Core": "L",
-    "kEH_Desc": "A spiral, winding counter-clockwise away from its central point, ending at the right lower corner after about 1,5 turns (Z7), written behind a fire-drill in a piece of wood (U28).",
+    "kEH_Desc": "A spiral, winding counterclockwise away from its central point, ending at the right lower corner after about one and a half turns(Z7), written behind a fire-drill in a piece of wood (U28).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wḏꜣ",
     "kEH_UniK": "U029A",
     "kEH_JSesh": "U29A",
     "kEH_HG": "U29A",
-    "kEH_IFAO": "401,7"
+    "kEH_IFAO": "401,7",
+    "kEH_AltSeq": "13351 13436 133F2"
   },
   "𓍔": {
     "kEH_Cat": "U-11-005",
@@ -8549,7 +8624,7 @@ unikemet = {
   "𓍕": {
     "kEH_Cat": "U-20-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A bakers raker or two crossed castanet sticks.",
+    "kEH_Desc": "A baker's raker or two crossed castanet sticks.",
     "kEH_Func": "Classifier to restrain",
     "kEH_FVal": "rtḥ",
     "kEH_UniK": "U031",
@@ -8607,12 +8682,13 @@ unikemet = {
     "kEH_UniK": "U035",
     "kEH_JSesh": "U35",
     "kEH_HG": "U35",
-    "kEH_IFAO": "404,4"
+    "kEH_IFAO": "404,4",
+    "kEH_AltSeq": "13191 13436 13359"
   },
   "𓍛": {
     "kEH_Cat": "U-14-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A club used by washer-men for beating laundry.",
+    "kEH_Desc": "A club used by washermen for beating laundry.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥm",
     "kEH_UniK": "U036",
@@ -8784,7 +8860,7 @@ unikemet = {
   "𓍯": {
     "kEH_Cat": "V-01-029",
     "kEH_Core": "C",
-    "kEH_Desc": "A lasso, with a big loop at the front, with a tie at the front and a small loop at the back, with an upwards, downwards cuving line behind the loop.",
+    "kEH_Desc": "A lasso, with a big loop at the front, with a tie at the front and a small loop at the back, with an upward, downward curving line behind the loop.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wꜣ",
     "kEH_UniK": "V004",
@@ -8922,7 +8998,7 @@ unikemet = {
   "𓍽": {
     "kEH_Cat": "H-08-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A feather bend forward.",
+    "kEH_Desc": "A feather bent forward.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "dḳr",
     "kEH_UniK": "V012A",
@@ -8985,7 +9061,7 @@ unikemet = {
   "𓎃": {
     "kEH_Cat": "V-04-026",
     "kEH_Core": "C",
-    "kEH_Desc": "A rolled up herdsman's shelter of papyrus with an rectangle at either side of the loop.",
+    "kEH_Desc": "A rolled-up herdsman's shelter of papyrus with a rectangle at either side of the loop.",
     "kEH_Func": "Logogram (protection)",
     "kEH_FVal": "sꜣ",
     "kEH_UniK": "V017",
@@ -8996,7 +9072,7 @@ unikemet = {
   "𓎄": {
     "kEH_Cat": "V-04-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A rolled up herdsman's shelter of papyrus.",
+    "kEH_Desc": "A rolled-up herdsman's shelter of papyrus.",
     "kEH_Func": "Logogram (protection)",
     "kEH_FVal": "sꜣ",
     "kEH_UniK": "V018",
@@ -9101,7 +9177,7 @@ unikemet = {
   "𓎓": {
     "kEH_Cat": "V-04-055",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), written over a hobble for cattle without a crossbar (V20).",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), written over a hobble for cattle without a crossbar (V20).",
     "kEH_Func": "Logogram (stable)",
     "kEH_FVal": "mḏ.t",
     "kEH_UniK": "V021",
@@ -9205,12 +9281,13 @@ unikemet = {
     "kEH_UniK": "V028A",
     "kEH_JSesh": "V71",
     "kEH_HG": "V71",
-    "kEH_IFAO": "439,10"
+    "kEH_IFAO": "439,10",
+    "kEH_AltSeq": "1309D 13436 1339B"
   },
   "𓎝": {
     "kEH_Cat": "V-08-032",
     "kEH_Core": "C",
-    "kEH_Desc": "A swab made from a hank of fibre with two loops.",
+    "kEH_Desc": "A swab made from a hank of fiber with two loops.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wꜣḥ",
     "kEH_UniK": "V029",
@@ -9221,13 +9298,14 @@ unikemet = {
   "𓎞": {
     "kEH_Cat": "V-08-047",
     "kEH_Core": "L",
-    "kEH_Desc": "A swab made from a hank of fibre with two loops (V29), written over a wickerwork basket with a handle, orientated with the handle to the back (V31).",
+    "kEH_Desc": "A swab made from a hank of fiber with two loops (V29), written over a wickerwork basket with a handle, orientated with the handle to the back (V31).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sk",
     "kEH_UniK": "V029A",
     "kEH_JSesh": "V90",
     "kEH_HG": "V90",
-    "kEH_IFAO": "441,6"
+    "kEH_IFAO": "441,6",
+    "kEH_AltSeq": "133A1 13436 1339D"
   },
   "𓎟": {
     "kEH_Cat": "V-09-001",
@@ -9243,7 +9321,8 @@ unikemet = {
   "𓎠": {
     "kEH_Cat": "V-09-002",
     "kEH_Core": "L",
-    "kEH_UniK": "V030A"
+    "kEH_UniK": "V030A",
+    "kEH_AltSeq": "1339F"
   },
   "𓎡": {
     "kEH_Cat": "V-09-009",
@@ -9265,7 +9344,8 @@ unikemet = {
     "kEH_UniK": "V031A",
     "kEH_JSesh": "V31A",
     "kEH_HG": "V31A",
-    "kEH_IFAO": "442,4"
+    "kEH_IFAO": "442,4",
+    "kEH_AltSeq": "133A1 13440"
   },
   "𓎣": {
     "kEH_Cat": "V-11-003",
@@ -9343,7 +9423,7 @@ unikemet = {
   "𓎪": {
     "kEH_Cat": "V-15-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A basket-shaped bag with a tied of end at the front, resembling a loop / A uterus of a cow, tied of at the front.",
+    "kEH_Desc": "A basket-shaped bag with a tied off end at the front, resembling a loop / A uterus of a cow, tied off at the front.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽd",
     "kEH_UniK": "V037A",
@@ -9421,7 +9501,8 @@ unikemet = {
   "𓎲": {
     "kEH_Cat": "W-02-002",
     "kEH_Core": "L",
-    "kEH_UniK": "W003A"
+    "kEH_UniK": "W003A",
+    "kEH_AltSeq": "133B1"
   },
   "𓎳": {
     "kEH_Cat": "O-11-013",
@@ -9448,7 +9529,7 @@ unikemet = {
   "𓎵": {
     "kEH_Cat": "W-11-077",
     "kEH_Core": "C",
-    "kEH_Desc": "A flat bottomed cauldron with handles and an upstanding rim.",
+    "kEH_Desc": "A flat bottom cauldron with handles and an upstanding rim.",
     "kEH_Func": "Classifier cauldron",
     "kEH_FVal": "ḥw.t",
     "kEH_UniK": "W006",
@@ -9490,7 +9571,8 @@ unikemet = {
     "kEH_Cat": "W-03-008",
     "kEH_Core": "L",
     "kEH_UniK": "W009A",
-    "kEH_JSesh": "W9R"
+    "kEH_JSesh": "W9R",
+    "kEH_AltSeq": "133B8 13440"
   },
   "𓎺": {
     "kEH_Cat": "W-04-001",
@@ -9559,12 +9641,13 @@ unikemet = {
   "𓏀": {
     "kEH_Cat": "W-06-033",
     "kEH_Core": "L",
-    "kEH_UniK": "W014A"
+    "kEH_UniK": "W014A",
+    "kEH_AltSeq": "1339B 13431 133BF 13430 13283"
   },
   "𓏁": {
     "kEH_Cat": "W-06-018",
     "kEH_Core": "C",
-    "kEH_Desc": "A tall water pot, with a forwards, downwards line of liquid coming from the top of the vessel.",
+    "kEH_Desc": "A tall water pot, with a forward, downward line of liquid coming from the top of the vessel.",
     "kEH_Func": "Logogram (to be cool, to cool)",
     "kEH_FVal": "ḳbḥ",
     "kEH_UniK": "W015",
@@ -9574,7 +9657,7 @@ unikemet = {
   "𓏂": {
     "kEH_Cat": "W-06-032",
     "kEH_Core": "C",
-    "kEH_Desc": "A tall water pot with a spout at the back, with a forwards, downwards line of liquid coming from the top of the vessel; inside a ring-stand.",
+    "kEH_Desc": "A tall water pot with a spout at the back, with a forward, downward line of liquid coming from the top of the vessel; inside a ring-stand.",
     "kEH_Func": "Classifier libation water",
     "kEH_FVal": "ḳbḥ",
     "kEH_UniK": "W016",
@@ -9596,7 +9679,7 @@ unikemet = {
   "𓏄": {
     "kEH_Cat": "W-06-051",
     "kEH_Core": "C",
-    "kEH_Desc": "A schematic representation of three sealed water pots in a rack, without horizontal line at the bottom, with the downwards curving lines descending to the bottom.",
+    "kEH_Desc": "A schematic representation of three sealed water pots in a rack, without horizontal line at the bottom, with the downward curving lines descending to the bottom.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫnt",
     "kEH_UniK": "W017A",
@@ -9665,7 +9748,7 @@ unikemet = {
   "𓏋": {
     "kEH_Cat": "W-11-013",
     "kEH_Core": "C",
-    "kEH_Desc": "A flat bottomed jar with handles.",
+    "kEH_Desc": "A flat bottom jar with handles.",
     "kEH_Func": "Logogram (beer)",
     "kEH_FVal": "ḥnḳ.t",
     "kEH_UniK": "W023",
@@ -9687,7 +9770,8 @@ unikemet = {
   "𓏍": {
     "kEH_Cat": "W-11-027",
     "kEH_Core": "L",
-    "kEH_UniK": "W024A"
+    "kEH_UniK": "W024A",
+    "kEH_AltSeq": "133CC 13431 133CC 13431 133CC"
   },
   "𓏎": {
     "kEH_Cat": "W-11-023",
@@ -9762,7 +9846,7 @@ unikemet = {
   "𓏕": {
     "kEH_Cat": "X-05-001",
     "kEH_Core": "C",
-    "kEH_Desc": "An horizontal oval shape, with two upwards curving strokes added at the front short side.",
+    "kEH_Desc": "An horizontal oval shape, with two upward curving strokes added at the front short side.",
     "kEH_Func": "Phono-repeater",
     "kEH_FVal": "sn",
     "kEH_UniK": "X005",
@@ -9784,7 +9868,8 @@ unikemet = {
     "kEH_Cat": "X-06-005",
     "kEH_Core": "L",
     "kEH_UniK": "X006A",
-    "kEH_JSesh": "US1X6AEXTU"
+    "kEH_JSesh": "US1X6AEXTU",
+    "kEH_AltSeq": "133D6"
   },
   "𓏘": {
     "kEH_Cat": "X-08-001",
@@ -9818,7 +9903,7 @@ unikemet = {
   "𓏛": {
     "kEH_Cat": "Y-01-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A papyrus scroll, rolled up, tied and sealed, written horizontally, with ties.",
+    "kEH_Desc": "A papyrus scroll, rolled-up, tied and sealed, written horizontally, with ties.",
     "kEH_Func": "Classifier abstract words",
     "kEH_FVal": "sspd.w",
     "kEH_UniK": "Y001",
@@ -9829,18 +9914,19 @@ unikemet = {
   "𓏜": {
     "kEH_Cat": "Y-01-005",
     "kEH_Core": "L",
-    "kEH_Desc": "A papyrus scroll, rolled up, tied and sealed, written vertically, with ties.",
+    "kEH_Desc": "A papyrus scroll, rolled-up, tied and sealed, written vertically, with ties.",
     "kEH_Func": "Logogram (papyrus scroll, book)",
     "kEH_FVal": "mḏꜣ.t",
     "kEH_UniK": "Y001A",
     "kEH_JSesh": "Y1v",
     "kEH_HG": "Y1v",
-    "kEH_IFAO": "465,5"
+    "kEH_IFAO": "465,5",
+    "kEH_AltSeq": "133DB FE02"
   },
   "𓏝": {
     "kEH_Cat": "Y-01-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A papyrus scroll, rolled up, tied and sealed, written horizontally.",
+    "kEH_Desc": "A papyrus scroll, rolled-up, tied and sealed, written horizontally.",
     "kEH_Func": "Classifier writing, things written",
     "kEH_FVal": "mdw",
     "kEH_UniK": "Y002",
@@ -9868,7 +9954,8 @@ unikemet = {
     "kEH_UniK": "Y004",
     "kEH_JSesh": "Y4",
     "kEH_HG": "Y4",
-    "kEH_IFAO": "465,13"
+    "kEH_IFAO": "465,13",
+    "kEH_AltSeq": "133DE 13440"
   },
   "𓏠": {
     "kEH_Cat": "Y-03-002",
@@ -9905,7 +9992,7 @@ unikemet = {
   "𓏣": {
     "kEH_Cat": "Y-06-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A sistrum, with the top piece in the form of a shrine encosed by two curls.",
+    "kEH_Desc": "A sistrum, with the top piece in the form of a shrine encased by two curls.",
     "kEH_Func": "Classifier sistrum",
     "kEH_FVal": "sḫm",
     "kEH_UniK": "Y008",
@@ -9960,7 +10047,8 @@ unikemet = {
     "kEH_Func": "Classifier plural",
     "kEH_UniK": "Z002D",
     "kEH_JSesh": "Z2B",
-    "kEH_HG": "Z2B"
+    "kEH_HG": "Z2B",
+    "kEH_AltSeq": "133E8 FE01"
   },
   "𓏪": {
     "kEH_Cat": "Z-01-002",
@@ -9979,12 +10067,14 @@ unikemet = {
     "kEH_Func": "Classifier plural",
     "kEH_UniK": "Z003A",
     "kEH_JSesh": "Z3A",
-    "kEH_HG": "Z3A"
+    "kEH_HG": "Z3A",
+    "kEH_AltSeq": "133E5 FE00"
   },
   "𓏬": {
     "kEH_Cat": "Z-01-013",
     "kEH_Core": "L",
-    "kEH_UniK": "Z003B"
+    "kEH_UniK": "Z003B",
+    "kEH_AltSeq": "133E7 FE00"
   },
   "𓏭": {
     "kEH_Cat": "Z-01-008",
@@ -10000,7 +10090,7 @@ unikemet = {
   "𓏮": {
     "kEH_Cat": "Z-01-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Two vertical strokes, arranged horizontally.",
+    "kEH_Desc": "Two vertical strokes arranged horizontally.",
     "kEH_Func": "Logogram (2)",
     "kEH_FVal": "sn.w",
     "kEH_UniK": "Z004A",
@@ -10040,7 +10130,7 @@ unikemet = {
   "𓏲": {
     "kEH_Cat": "Z-07-005",
     "kEH_Core": "C",
-    "kEH_Desc": " A spiral, winding counter-clockwise away from its central point, ending at the right lower corner after about 1,5 turns.",
+    "kEH_Desc": " A spiral, winding counterclockwise away from its central point, ending at the right lower corner after about 1,5 turns.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "w",
     "kEH_UniK": "Z007",
@@ -10048,7 +10138,7 @@ unikemet = {
     "kEH_HG": "Z7"
   },
   "𓏳": {
-    "kEH_Cat": "Z06-001",
+    "kEH_Cat": "Z-06-001",
     "kEH_Core": "C",
     "kEH_Desc": "A short horizontal oval.",
     "kEH_Func": "Classifier round, oval",
@@ -10092,7 +10182,7 @@ unikemet = {
   "𓏷": {
     "kEH_Cat": "T-21-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Two short horizontal lines, arranged vertically, connected by a downwards, outwards sloping line. ",
+    "kEH_Desc": "Two short horizontal lines, arranged vertically, connected by a downward, outward sloping line. ",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥw",
     "kEH_UniK": "Z012",
@@ -10103,7 +10193,7 @@ unikemet = {
   "𓏸": {
     "kEH_Cat": "Z-05-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A  geometrical circle",
+    "kEH_Desc": "A geometrical circle.",
     "kEH_UniK": "Z013",
     "kEH_JSesh": "US1Z13EXTU",
     "kEH_IFAO": "471,13"
@@ -10185,6 +10275,7 @@ unikemet = {
     "kEH_Func": "Logogram (five)",
     "kEH_FVal": "dꞽw",
     "kEH_UniK": "Z015I",
+    "kEH_AltSeq": "133FE",
     "kEH_NoRotate": "Y"
   },
   "𓐄": {
@@ -10253,7 +10344,7 @@ unikemet = {
   "𓐍": {
     "kEH_Cat": "F-31-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A human placenta (a circle with lines written within horizontally).",
+    "kEH_Desc": "A human placenta (a circle with lines written horizontally).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫ",
     "kEH_UniK": "AA001",
@@ -10274,7 +10365,7 @@ unikemet = {
   "𓐏": {
     "kEH_Cat": "F-30-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A pustule or gland, with a forward, downwards line of fluid issuing forth.",
+    "kEH_Desc": "A pustule or gland, with a forward, downward line of fluid issuing forth.",
     "kEH_Func": "Classifier efflux, smell (i.e., excrement)",
     "kEH_FVal": "ḥs",
     "kEH_UniK": "AA003",
@@ -10294,7 +10385,7 @@ unikemet = {
   "𓐑": {
     "kEH_Cat": "P-11-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A part of the steering gear of ships, consisiting of two beams.",
+    "kEH_Desc": "A part of the steering gear of ships, consisting of two beams.",
     "kEH_Func": "Classifier oar",
     "kEH_FVal": "ḥpt",
     "kEH_UniK": "AA005",
@@ -10315,7 +10406,7 @@ unikemet = {
   "𓐓": {
     "kEH_Cat": "U-22-022",
     "kEH_Core": "C",
-    "kEH_Desc": "A vertical tool, with a upwards curved handle, with the handle towards the back.",
+    "kEH_Desc": "A vertical tool, with an upward curved handle, with the handle towards the back.",
     "kEH_Func": "Classifier to present",
     "kEH_FVal": "sḳ(r)",
     "kEH_UniK": "AA007",
@@ -10326,10 +10417,11 @@ unikemet = {
   "𓐔": {
     "kEH_Cat": "U-22-023",
     "kEH_Core": "L",
-    "kEH_Desc": "A vertical tool, with a upwards curved handle, with the handle towards the front.",
+    "kEH_Desc": "A vertical tool, with an upward curved handle, with the handle towards the front.",
     "kEH_Func": "Classifier to present",
     "kEH_FVal": "sḳ(r)",
-    "kEH_UniK": "AA007A"
+    "kEH_UniK": "AA007A",
+    "kEH_AltSeq": "13413 13440"
   },
   "𓐕": {
     "kEH_Cat": "F-19-008",
@@ -10493,7 +10585,8 @@ unikemet = {
     "kEH_UniK": "AA022",
     "kEH_JSesh": "Aa22",
     "kEH_HG": "AA22",
-    "kEH_IFAO": "478,2"
+    "kEH_IFAO": "478,2",
+    "kEH_AltSeq": "1309D 13436 13423"
   },
   "𓐥": {
     "kEH_Cat": "U-18-033",
@@ -10508,7 +10601,7 @@ unikemet = {
   "𓐦": {
     "kEH_Cat": "U-18-042",
     "kEH_Core": "C",
-    "kEH_Desc": "A warp, stretched between two poles resembling cup-like shapes with upwards ticks on them.",
+    "kEH_Desc": "A warp, stretched between two poles resembling cup-like shapes with upward ticks on them.",
     "kEH_Func": "Logogram (to press, to cling (to))",
     "kEH_FVal": "mḏd",
     "kEH_UniK": "AA024",
@@ -10656,7 +10749,7 @@ unikemet = {
   "𓑦": {
     "kEH_Cat": "A-01-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm raised, righ hand horizontal, handpalm upwards, left arm in front of body.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised, right hand horizontal, hand palm upwards, left arm in front of body.",
     "kEH_Func": "Classifier to conspire, to brood",
     "kEH_FVal": "wꜣ",
     "kEH_UniK": "HJ A426B",
@@ -10694,7 +10787,7 @@ unikemet = {
   "𓑪": {
     "kEH_Cat": "A-01-018",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm raised, hand held vertically, handpalm inwards, left arm hanging beside the body.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised, hand held vertically, hand palm inwards, left arm hanging beside the body.",
     "kEH_Func": "Classifier human being",
     "kEH_FVal": "ḥnmm.t?",
     "kEH_UniK": "A069A",
@@ -10714,7 +10807,7 @@ unikemet = {
   "𓑬": {
     "kEH_Cat": "A-01-021",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, both knees down, righ arm raised, hand held vertically, handpalm inwards, left arm held in front of the body, lower arm and hand horizontal, handpalm upwards.",
+    "kEH_Desc": "Man, seated, both knees down, right arm raised, hand held vertically, hand palm inwards, left arm held in front of the body, lower arm and hand horizontal, hand palm upwards.",
     "kEH_Func": "Logogram (first person singular)",
     "kEH_FVal": "ꞽ",
     "kEH_UniK": "HJ A072A",
@@ -10724,7 +10817,7 @@ unikemet = {
   "𓑭": {
     "kEH_Cat": "A-01-023",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, both knees down, one arm visible, raised in front, hand at the hight of the shoulder.",
+    "kEH_Desc": "Man, seated on heel, both knees down, one arm visible, raised in front, hand at the height of the shoulder.",
     "kEH_Func": "Classifier sitting",
     "kEH_FVal": "ḥ(m)sꞽ",
     "kEH_UniK": "A003D"
@@ -10765,7 +10858,7 @@ unikemet = {
   "𓑲": {
     "kEH_Cat": "A-01-033",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, rigth arm raised, hand vertical, handpalm towards the face, in front of the face, left arm hanging beside the body.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised, hand vertical, hand palm towards the face, in front of the face, left arm hanging beside the body.",
     "kEH_Func": "Classifier acclaim, speaking",
     "kEH_FVal": "nhm",
     "kEH_UniK": "A002H"
@@ -10798,7 +10891,7 @@ unikemet = {
   "𓑶": {
     "kEH_Cat": "A-01-042",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, back bent forward, both arm raised in front, handpalms outwards.",
+    "kEH_Desc": "Man, seated, right knee raised, back bent forward, both arms raised in front, hand palms outwards.",
     "kEH_Func": "Logogram (praise, worship)",
     "kEH_FVal": "dwꜣ",
     "kEH_UniK": "A004G"
@@ -10834,7 +10927,7 @@ unikemet = {
   "𓑺": {
     "kEH_Cat": "A-01-049",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, kneeling with both knees on the ground, back bend forwards, arms extended forwards, foreams horizontal at the hight of the waist, handpalms downwards.",
+    "kEH_Desc": "Man, kneeling with both knees on the ground, back bent forwards, arms extended forwards, forearms horizontal at the height of the waist, hand palms downwards.",
     "kEH_Func": "Classifier reverence",
     "kEH_FVal": "ḥfꜣ",
     "kEH_UniK": "A004I"
@@ -10842,7 +10935,7 @@ unikemet = {
   "𓑻": {
     "kEH_Cat": "A-01-051",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, head facing backwards, both arms raised at the back, hands vertical, handpalms outwards.",
+    "kEH_Desc": "Man, seated, right knee raised, head facing backwards, both arms raised at the back, hands vertical, hand palms outwards.",
     "kEH_Func": "Classifier enemies",
     "kEH_FVal": "twꜣ.w",
     "kEH_UniK": "HJ A075",
@@ -10852,7 +10945,7 @@ unikemet = {
   "𓑼": {
     "kEH_Cat": "A-01-052",
     "kEH_Core": "C",
-    "kEH_Desc": "Man (foreigner), seated on heel, right knee raised, head facing backwards, wearing a syrian clothing with long open sleeves, both arms raised towards the back, hands vertical, handpalms outwards.",
+    "kEH_Desc": "Man (foreigner), seated on heel, right knee raised, head facing backwards, wearing a Syrian clothing with long open sleeves, both arms raised towards the back, hands vertical, hand palms outwards.",
     "kEH_Func": "Classifier prisoner",
     "kEH_FVal": "sḳr-ꜥnḫ",
     "kEH_UniK": "A075A"
@@ -10870,7 +10963,7 @@ unikemet = {
   "𓑾": {
     "kEH_Cat": "A-01-060",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, right leg extended with foot in front of left leg, right arm angled in front of the body, left arm raised, hand held vertically, handpalm inwards (hnw gesture).",
+    "kEH_Desc": "Man, seated on heel, right leg extended with foot in front of left leg, right arm angled in front of the body, left arm raised, hand held vertically, hand palm inwards (hnw gesture).",
     "kEH_Func": "Classifier joy",
     "kEH_FVal": "hnw",
     "kEH_UniK": "A008A",
@@ -10879,7 +10972,7 @@ unikemet = {
   "𓑿": {
     "kEH_Cat": "A-01-061",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, both knees downward, right arm angled in front of the body, left arm raised, hand held vertically, handpalm inwards (hnw gesture).",
+    "kEH_Desc": "Man, seated on heel, both knees downwards, right arm angled in front of the body, left arm raised, hand held vertically, hand palm inwards (hnw gesture).",
     "kEH_Func": "Logogram (joy)",
     "kEH_FVal": "hnw",
     "kEH_UniK": "A008B"
@@ -10887,7 +10980,7 @@ unikemet = {
   "𓒀": {
     "kEH_Cat": "A-01-062",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, both knees downward, right arm sloping downward, left arm raised, hand held vertically, handpalm inwards.",
+    "kEH_Desc": "Man, seated, both knees downward, right arm sloping downwards, left arm raised, hand held vertically, hand palm inwards.",
     "kEH_Func": "Classifier making music",
     "kEH_FVal": "ḫnw",
     "kEH_UniK": "A008J"
@@ -10904,7 +10997,7 @@ unikemet = {
   "𓒂": {
     "kEH_Cat": "A-01-066",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm angled behind the back, left arm raised, hand held vertically, handpalm outwards.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm angled behind the back, left arm raised, hand held vertically, hand palm outwards.",
     "kEH_Func": "Classifier joy",
     "kEH_FVal": "hnw",
     "kEH_UniK": "A008I"
@@ -10931,7 +11024,7 @@ unikemet = {
   "𓒅": {
     "kEH_Cat": "A-01-070",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, with a hair-lock, arm raised in front, hand held horizontal, handpalm upwards.",
+    "kEH_Desc": "Man, seated, right knee raised, with a hair-lock, arm raised in front, hand held horizontal, hand palm upwards.",
     "kEH_Func": "Logogram (musician)",
     "kEH_FVal": "ḥs.w",
     "kEH_UniK": "HJ A426A",
@@ -10949,7 +11042,7 @@ unikemet = {
   "𓒇": {
     "kEH_Cat": "A-01-077",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, with arms raised at either side of the body, elbows bent, handpalms inwards.",
+    "kEH_Desc": "Man, seated, right knee raised, with arms raised at either side of the body, elbows bent, hand palms inwards.",
     "kEH_Func": "Classifier music",
     "kEH_FVal": "ꞽḥy",
     "kEH_UniK": "A073D"
@@ -10965,7 +11058,7 @@ unikemet = {
     "kEH_Cat": "A-02-005",
     "kEH_Core": "C",
     "kEH_Desc": "Man, standing, with the arms hanging at either side of the body.",
-    "kEH_Func": "Classifier  to totter",
+    "kEH_Func": "Classifier to totter",
     "kEH_FVal": "mss",
     "kEH_UniK": "HJ A078",
     "kEH_JSesh": "A78",
@@ -11045,7 +11138,7 @@ unikemet = {
   "𓒑": {
     "kEH_Cat": "A-02-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Naked man, standing, fallus erect, producing a line of liquid, right arm hanging downwards, hand above the fallus, left arm hanging beside the body.",
+    "kEH_Desc": "Naked man, standing, phallus erect, producing a line of liquid, right arm hanging downwards, hand above the phallus, left arm hanging beside the body.",
     "kEH_Func": "Logogram (to pour, to drain)",
     "kEH_FVal": "stꞽ",
     "kEH_UniK": "HJ A081B",
@@ -11077,7 +11170,7 @@ unikemet = {
   "𓒔": {
     "kEH_Cat": "A-02-023",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, bend slightly forward, right arm stretched in front at waist hight, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, bend slightly forward, right arm stretched in front at waist height, left arm hanging beside the body.",
     "kEH_Func": "Classifier old man",
     "kEH_FVal": "kḥkḥ",
     "kEH_UniK": "HJ A363",
@@ -11095,7 +11188,7 @@ unikemet = {
   "𓒖": {
     "kEH_Cat": "A-02-026",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm hanging beside the body, left arm raised, Hand on top of the head.",
+    "kEH_Desc": "Man, standing, right arm hanging beside the body, left arm raised, hand on top of the head.",
     "kEH_Func": "Classifier hair related",
     "kEH_FVal": "ꞽꜣs",
     "kEH_UniK": "A364B"
@@ -11132,7 +11225,7 @@ unikemet = {
   "𓒚": {
     "kEH_Cat": "A-02-034",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm raised with hand held vertical, handpalm outwards, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, right arm raised with hand held vertical, hand palm outwards, left arm hanging beside the body.",
     "kEH_Func": "Classifier official, noble",
     "kEH_FVal": "sr",
     "kEH_UniK": "HJ A366",
@@ -11153,7 +11246,7 @@ unikemet = {
   "𓒜": {
     "kEH_Cat": "A-02-037",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm raised in front, handpalm outwards, left arm at a 45° angle downwards at the front.",
+    "kEH_Desc": "Man, standing, right arm raised in front, hand palm outwards, left arm at a 45° angle downwards at the front.",
     "kEH_Func": "Logogram (to bend)",
     "kEH_FVal": "ḳꜥḥ",
     "kEH_UniK": "A083B",
@@ -11162,7 +11255,7 @@ unikemet = {
   "𓒝": {
     "kEH_Cat": "A-02-038",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms held in front, about waist hight.",
+    "kEH_Desc": "Man, standing, both arms held in front, about waist height.",
     "kEH_Func": "Classifier attacker",
     "kEH_FVal": "tkk",
     "kEH_UniK": "HJ A085",
@@ -11189,7 +11282,7 @@ unikemet = {
   "𓒠": {
     "kEH_Cat": "A-02-045",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with arms raised at either side of the body bent at a 90° angle, handpalms inwards.",
+    "kEH_Desc": "Man, standing, with arms raised at either side of the body bent at a 90° angle, hand palms inwards.",
     "kEH_UniK": "A028A",
     "kEH_IFAO": "5,12"
   },
@@ -11216,7 +11309,7 @@ unikemet = {
   "𓒣": {
     "kEH_Cat": "A-02-060",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm hanging beside the body, left arm raised, hand on the top of the head.",
+    "kEH_Desc": "Man, naked, standing, right arm hanging beside the body, left arm raised, hand on top of the head.",
     "kEH_Func": "Classifier bald",
     "kEH_FVal": "ꞽꜣs",
     "kEH_UniK": "A364C"
@@ -11232,7 +11325,7 @@ unikemet = {
   "𓒥": {
     "kEH_Cat": "A-04-002",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, bend forwards, both arms raised in front, handpalms outwards.",
+    "kEH_Desc": "Man, standing, bend forwards, both arms raised in front, hand palms outwards.",
     "kEH_Func": "Classifier adoration",
     "kEH_FVal": "ꞽꜣw",
     "kEH_UniK": "A016D",
@@ -11248,7 +11341,7 @@ unikemet = {
   "𓒧": {
     "kEH_Cat": "A-04-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Man standing, bend slightly forwards, both arms extended forwards, right hand at the hight of the shoulder, handpalm downwards, left arm below the right arm, handpalm downwards, as if to place the hands on something to leap over it.",
+    "kEH_Desc": "Man standing, bend slightly forwards, both arms extended forwards, right hand at the height of the shoulder, hand palm downwards, left arm below the right arm, hand palm downwards, as if to place the hands on something to leap over it.",
     "kEH_Func": "Classifier leaping, bounding",
     "kEH_FVal": "špw",
     "kEH_UniK": "A016G"
@@ -11296,7 +11389,7 @@ unikemet = {
   "𓒬": {
     "kEH_Cat": "A-04-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back slightly bend forwards, arms twisted together at the front on a downward angle, line angling forewards from the head (braid, hairlock).",
+    "kEH_Desc": "Man, standing, back slightly bend forwards, arms twisted together at the front on a downward angle, line angling forwards from the head (braid, hairlock).",
     "kEH_Func": "Classifier to twist",
     "kEH_FVal": "sps",
     "kEH_UniK": "HJ A090",
@@ -11307,7 +11400,7 @@ unikemet = {
   "𓒭": {
     "kEH_Cat": "A-04-020",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, on an incline line, one leg straight at the bottom, the other bend and raised, right arm holding the top of the incline, left arm haning beside the body at the back.",
+    "kEH_Desc": "Man, on an incline line, one leg straight at the bottom, the other bend and raised, right arm holding the top of the incline, left arm hanging beside the body at the back.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḳꞽs",
     "kEH_UniK": "A092C"
@@ -11322,7 +11415,7 @@ unikemet = {
   "𓒯": {
     "kEH_Cat": "A-04-023",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forwards, back horizontal, head slightly raised, arms hanging downwards, extended towards the front, fingers/hands at the same level as the feet.",
+    "kEH_Desc": "Man, standing, back bent forwards, back horizontal, head slightly raised, arms hanging downwards, extended towards the front, fingers/hands at the same level as the feet.",
     "kEH_Func": "Logogram (bowing down)",
     "kEH_FVal": "ḫꜣb/ksw ",
     "kEH_UniK": "HJ A372",
@@ -11356,7 +11449,7 @@ unikemet = {
   "𓒳": {
     "kEH_Cat": "A-05-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, prostracting, right leg extended, left leg bend and raised, both arms downwards, slightly bend, with the hands at the same level as the left knee and toes of the right leg.",
+    "kEH_Desc": "Man, prostrating, right leg extended, left leg bend and raised, both arms downwards, slightly bend, with the hands at the same level as the left knee and toes of the right leg.",
     "kEH_Func": "Classifier bowing/lowering to the ground",
     "kEH_UniK": "HJ A092",
     "kEH_JSesh": "A92",
@@ -11366,7 +11459,7 @@ unikemet = {
   "𓒴": {
     "kEH_Cat": "A-05-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, prostracting on a strip of land, right leg extended, left leg bend and raised, both arms downwards, slightly bend, with the hands at the same level as the left knee and toes of the right leg.",
+    "kEH_Desc": "Man, prostrating on a strip of land, right leg extended, left leg bend and raised, both arms downwards, slightly bend, with the hands at the same level as the left knee and toes of the right leg.",
     "kEH_UniK": "A092B"
   },
   "𓒵": {
@@ -11380,7 +11473,7 @@ unikemet = {
   "𓒶": {
     "kEH_Cat": "A-05-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, prostracting on a strip of land, with grains of sand written below it, right leg extended, left leg bend and raised, both arms downwards, slightly bend, with the hands at the same level as the left knee and toes of the right leg.",
+    "kEH_Desc": "Man, prostrating on a strip of land, with grains of sand written below it, right leg extended, left leg bend and raised, both arms downwards, slightly bend, with the hands at the same level as the left knee and toes of the right leg.",
     "kEH_Func": "Logogram (kissing the land)",
     "kEH_FVal": "sn-tꜣ",
     "kEH_UniK": "A092D",
@@ -11396,7 +11489,7 @@ unikemet = {
   "𓒸": {
     "kEH_Cat": "A-05-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, prostracting, right leg extended, left leg bend and raised, left arm downwards, slightly bend, with the hands at the same level as the left knee and toes of the right leg, right arm raised, handpalm outwards.",
+    "kEH_Desc": "Man, prostrating, right leg extended, left leg bend and raised, left arm downwards, slightly bend, with the hands at the same level as the left knee and toes of the right leg, right arm raised, hand palm outwards.",
     "kEH_Func": "classifier bowing, lowering to the ground",
     "kEH_FVal": "ksꞽ",
     "kEH_UniK": "A093A"
@@ -11404,7 +11497,7 @@ unikemet = {
   "𓒹": {
     "kEH_Cat": "A-05-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, written horizontally, facing downwards, with knees and hips bend, with arms hanging loosly on either side beside the body (i.e., a corpse lying on the ground).",
+    "kEH_Desc": "Man, written horizontally, facing downwards, with knees and hips bend, with arms hanging loosely on either side beside the body (i.e., a corpse lying on the ground).",
     "kEH_Func": "Classifier corpse",
     "kEH_FVal": "ẖꜣ.t",
     "kEH_UniK": "HJ A095",
@@ -11426,7 +11519,7 @@ unikemet = {
   "𓒻": {
     "kEH_Cat": "A-05-019",
     "kEH_Core": "C",
-    "kEH_Desc": "Man. naked, written horizontally, facing upwards, with the head looking downwards, with knees and hips bend, lower arm bend beside the body, elbow downwards, hand upwards, facing outwards, upper arm hanging loosely beside the body.",
+    "kEH_Desc": "Man, naked, written horizontally, facing upwards, with the head looking downwards, with knees and hips bend, lower arm bend beside the body, elbow downwards, hand upwards, facing outwards, upper arm hanging loosely beside the body.",
     "kEH_Func": "Classifier corpse",
     "kEH_UniK": "A097A"
   },
@@ -11444,7 +11537,7 @@ unikemet = {
   "𓒽": {
     "kEH_Cat": "A-05-021",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, written horizontally, facing downwards, one leg extended, one leg bend, top arm hanging beside the body, bottom arm bend, forearm written horizontally, handpalm downwards.",
+    "kEH_Desc": "Man, written horizontally, facing downwards, one leg extended, one leg bend, top arm hanging beside the body, bottom arm bend, forearm written horizontally, hand palm downwards.",
     "kEH_Func": "Classifier lying on one side",
     "kEH_FVal": "sḏr",
     "kEH_UniK": "HJ A374",
@@ -11508,7 +11601,7 @@ unikemet = {
   "𓓄": {
     "kEH_Cat": "A-05-031",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, written at a 45° angle forward, hips at a 90° angle, knees at an 90° angle legs slightly spread out, both arms forward, at a downwards angle, forearms separated, written inside a circle of wavy lines.",
+    "kEH_Desc": "Man, written at a 45° angle forward, hips at a 90° angle, knees at an 90° angle legs slightly spread out, both arms forwards, at a downward angle, forearms separated, written inside a circle of wavy lines.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nb",
     "kEH_UniK": "A101E"
@@ -11516,7 +11609,7 @@ unikemet = {
   "𓓅": {
     "kEH_Cat": "A-05-035",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, written at a 45° angle forward, both arms raised at either side of the body, handpalms outwards, inside an oval with a dotted line.",
+    "kEH_Desc": "Man, written at a 45° angle forward, both arms raised at either side of the body, hand palms outwards, inside an oval with a dotted line.",
     "kEH_Func": "Classifier swimming",
     "kEH_FVal": "nbꞽ",
     "kEH_UniK": "HJ A101D",
@@ -11590,7 +11683,7 @@ unikemet = {
   "𓓍": {
     "kEH_Cat": "A-06-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with a bend back, right arm forward, holding a staff/stick near the top, with the staff at an backwards angle, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, with a bend back, right arm forwards, holding a staff/stick near the top, with the staff at a backward angle, left arm hanging beside the body.",
     "kEH_Func": "Classifier wisdom",
     "kEH_FVal": "sbḳ",
     "kEH_UniK": "A019D"
@@ -11598,7 +11691,7 @@ unikemet = {
   "𓓎": {
     "kEH_Cat": "A-06-018",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing on top of the sky (N1), right arm forward, holding a stick/staff, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing on top of the sky (N1), right arm forwards, holding a stick/staff, left arm hanging beside the body.",
     "kEH_Func": "Logogram (elder of the court)",
     "kEH_FVal": "sms.w-hꜣy.t",
     "kEH_UniK": "HJ A113",
@@ -11628,7 +11721,7 @@ unikemet = {
   "𓓑": {
     "kEH_Cat": "A-06-027",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with a backwards line on the head, right arm in forward, holding a stick/staff, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, with a backward line on the head, right arm forwards, holding a stick/staff, left arm hanging beside the body.",
     "kEH_Func": "Logogram (great)",
     "kEH_FVal": "wr",
     "kEH_UniK": "HJ A109H",
@@ -11639,7 +11732,7 @@ unikemet = {
   "𓓒": {
     "kEH_Cat": "A-06-028",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing a long sash-kilt, with a backwards line on its head, right arm in front, holding a long stick/staff, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
+    "kEH_Desc": "Man, standing, wearing a long sash-kilt, with a backward line on its head, right arm in front, holding a long stick/staff, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
     "kEH_Func": "Logogram (great one, chief)",
     "kEH_FVal": "wr",
     "kEH_UniK": "A109I"
@@ -11716,7 +11809,7 @@ unikemet = {
   "𓓚": {
     "kEH_Cat": "A-06-046",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing a lion/leopard skin, tail between the legs, with two backwards curving lines on the head, right arm extended forwards, forearm on waist hight, holding a staff with a triangular shape below the right hand (point downwards), left arm raised towards the front hand at shoulder hight, holding a bookroll, held vertically.",
+    "kEH_Desc": "Man, standing, wearing a lion/leopard skin, tail between the legs, with two backward curving lines on the head, right arm extended forwards, forearm on waist height, holding a staff with a triangular shape below the right hand (pointing downwards), left arm raised towards the front hand at shoulder height, holding a book roll, held vertically.",
     "kEH_Func": "Classifier lector priest",
     "kEH_FVal": "ẖr.y-ḥb.t ḥr.y-tp",
     "kEH_UniK": "A112A"
@@ -11724,7 +11817,7 @@ unikemet = {
   "𓓛": {
     "kEH_Cat": "A-07-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm raised, holding a conical shape at the hight of the shoulder, angled forward, left arm in front of body.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised, holding a conical shape at the height of the shoulder, angled forward, left arm in front of body.",
     "kEH_Func": "Logogram (humankind, patricians)",
     "kEH_FVal": "pꜥ.t",
     "kEH_UniK": "HJ A114B",
@@ -11735,7 +11828,7 @@ unikemet = {
   "𓓜": {
     "kEH_Cat": "A-07-002",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm raised, holding a conical shape at the hight of the shoulder, angled forward, left arm hanging beside the body.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised, holding a conical shape at the height of the shoulder, angled forward, left arm hanging beside the body.",
     "kEH_Func": "Logogram (humankind, patricians)",
     "kEH_FVal": "pꜥ.t",
     "kEH_UniK": "HJ A114",
@@ -11746,7 +11839,7 @@ unikemet = {
   "𓓝": {
     "kEH_Cat": "A-07-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm raised, holding a cup or vessel, about the size of the hand, at the hight of the shoulder, left arm in front of the body.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised, holding a cup or vessel, about the size of the hand, at the height of the shoulder, left arm in front of the body.",
     "kEH_Func": "Logogram (to drink)",
     "kEH_FVal": "swr",
     "kEH_UniK": "HJ A116B",
@@ -11757,7 +11850,7 @@ unikemet = {
   "𓓞": {
     "kEH_Cat": "A-07-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm raised, holding a basin or wickerwork basket at the hight of the shoulder, left arm hanging beside the body. ",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised, holding a basin or wickerwork basket at the height of the shoulder, left arm hanging beside the body. ",
     "kEH_Func": "Classifier swallowing",
     "kEH_FVal": "sꜥm",
     "kEH_UniK": "HJ A115",
@@ -11786,7 +11879,7 @@ unikemet = {
   "𓓡": {
     "kEH_Cat": "A-07-012",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, right knee raised, with arms raised in front, hands horizontal, at the hight of the shoulder, handpalms upwards, holding a tray with  a pile of offerings, resembling a half circle.",
+    "kEH_Desc": "Man, seated on heel, right knee raised, with arms raised in front, hands horizontal, at the height of the shoulder, hand palms upwards, holding a tray with a pile of offerings, resembling a half circle.",
     "kEH_Func": "Classifier lifting/carrying",
     "kEH_FVal": "fꜣꞽ",
     "kEH_UniK": "A117E"
@@ -11794,7 +11887,7 @@ unikemet = {
   "𓓢": {
     "kEH_Cat": "A-07-018",
     "kEH_Core": "C",
-    "kEH_Desc": "The king, seated on heel, right knee raised, with long straight beard and ureaeus, with arms raised in front, hands horizontal at the hight of the shoulder, handpalms upwards, holding a tray with three circular items on top of it.",
+    "kEH_Desc": "The king, seated on heel, right knee raised, with long straight beard and uraeus, with arms raised in front, hands horizontal at the height of the shoulder, hand palms upwards, holding a tray with three circular items on top of it.",
     "kEH_Func": "Classifier lifting/carrying",
     "kEH_FVal": "fꜣꞽ",
     "kEH_UniK": "A057E"
@@ -11802,7 +11895,7 @@ unikemet = {
   "𓓣": {
     "kEH_Cat": "A-07-019",
     "kEH_Core": "C",
-    "kEH_Desc": "The king, seated on heel, right knee raised, with long straight beard and ureaeus, with arms raised in front, hands horizontal at the hight of the shoulder, handpalms upwards, holding a tray with five circular loafs of bread covered by vegetables.",
+    "kEH_Desc": "The king, seated on heel, right knee raised, with long straight beard and uraeus, with arms raised in front, hands horizontal at the height of the shoulder, hand palms upwards, holding a tray with five circular loafs of bread covered by vegetables.",
     "kEH_Func": "Classifier lifting/carrying",
     "kEH_FVal": "fꜣꞽ",
     "kEH_UniK": "A057F"
@@ -11810,7 +11903,7 @@ unikemet = {
   "𓓤": {
     "kEH_Cat": "A-07-020",
     "kEH_Core": "C",
-    "kEH_Desc": "The king, seated on heel, both knees down, upon a base, with uraeus on brow, long, straight beard and coif, arms extended to the front, carrying a loaf of bread upon a reed mat at the hight of the face.",
+    "kEH_Desc": "The king, seated on heel, both knees down, upon a base, with uraeus on brow, long, straight beard and coif, arms extended to the front, carrying a loaf of bread upon a reed mat at the height of the face.",
     "kEH_Func": "Pictogram kneeling making offering",
     "kEH_UniK": "HJ A057B",
     "kEH_JSesh": "A57B",
@@ -11881,7 +11974,7 @@ unikemet = {
   "𓓬": {
     "kEH_Cat": "A-07-033",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, a forearm, with the palm of the hand facing upwards (D36) on top of his head, right arm raised in front, hand horizontal, handpalm up, supporting the forearm, left arm hanging beside the body.",
+    "kEH_Desc": "Man, seated, right knee raised, a forearm, with the palm of the hand facing upwards (D36) on top of his head, right arm raised in front, hand horizontal, hand palm up, supporting the forearm, left arm hanging beside the body.",
     "kEH_Func": "Logogram (to lift the arm)",
     "kEH_FVal": "fꜣꞽ-ꜥ",
     "kEH_UniK": "HJ A401",
@@ -11925,7 +12018,7 @@ unikemet = {
   "𓓱": {
     "kEH_Cat": "A-07-042",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm raised in front, holding a loop of cord with the ties at the top, at the hight of the shoulder, left arm hanging beside the body.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised in front, holding a loop of cord with the ties at the top, at the height of the shoulder, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram (in snm.t, the island Biga)",
     "kEH_FVal": "snm",
     "kEH_UniK": "HJ A184",
@@ -11935,7 +12028,7 @@ unikemet = {
   "𓓲": {
     "kEH_Cat": "A-07-043",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, rigth knee raised, right arm raised in front, holding a round vessel with an upstanding rim (nw-vase, W24), at the hight of the shoulder, left arm hanging beside the body.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised in front, holding a round vessel with an upstanding rim (nw-vase, W24), at the height of the shoulder, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽwn",
     "kEH_UniK": "HJ A376",
@@ -11971,7 +12064,7 @@ unikemet = {
   "𓓶": {
     "kEH_Cat": "A-07-047",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm in front, right hand horrizontally, supporting a heart (F34), left arm in front of the body.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm in front, right hand horizontally, supporting a heart (F34), left arm in front of the body.",
     "kEH_Func": "Logogram (farmer/gardener)",
     "kEH_FVal": "ꞽb(w)",
     "kEH_UniK": "A512"
@@ -12005,7 +12098,7 @@ unikemet = {
   "𓓺": {
     "kEH_Cat": "A-07-056",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm raised in front, holding a sedge  (M23) at the top, left arm raised to the back, holding a sedge (M23) at the top.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm raised in front, holding a sedge (M23) at the top, left arm raised to the back, holding a sedge (M23) at the top.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nn",
     "kEH_UniK": "HJ A357",
@@ -12025,7 +12118,7 @@ unikemet = {
   "𓓼": {
     "kEH_Cat": "A-07-060",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, both knees down, both arms extended in front, supporting a child (A17: knees at 90°, both lower legs visible, slightly apart, right arm raised with hand to mouth, left arm hanging beside the body).",
+    "kEH_Desc": "Man, seated on heel, both knees down, both arms extended in front, supporting a child (A17: knees at 90° degree, both lower legs visible, slightly apart, right arm raised with hand to mouth, left arm hanging beside the body).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "f",
     "kEH_UniK": "HJ A131C",
@@ -12132,7 +12225,7 @@ unikemet = {
   "𓔇": {
     "kEH_Cat": "A-08-022",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with a child (A17: knees at 90°, both lower legs visible, slightly apart, right arm raised with hand to mouth, left arm hanging beside the body) on his head, arms raised at either side of the body, supporting the child.",
+    "kEH_Desc": "Man, standing, with a child (A17: knees at 90° degree, both lower legs visible, slightly apart, right arm raised with hand to mouth, left arm hanging beside the body) on his head, arms raised at either side of the body, supporting the child.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "f",
     "kEH_UniK": "A131B",
@@ -12141,7 +12234,7 @@ unikemet = {
   "𓔈": {
     "kEH_Cat": "A-08-025",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with a child (A17: knees at 90°, both lower legs visible, slightly apart, right arm raised with hand to mouth, left arm hanging beside the body) on his head, right arm raised, supporting the child, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, with a child (A17: knees at 90° degree, both lower legs visible, slightly apart, right arm raised with hand to mouth, left arm hanging beside the body) on his head, right arm raised, supporting the child, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "f",
     "kEH_UniK": "HJ A131A",
@@ -12152,7 +12245,7 @@ unikemet = {
   "𓔉": {
     "kEH_Cat": "A-08-029",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms towards the front, holding an key for a tumbler lock consisting of a slightly bend vertical line with two shorter horizontal lines attached to the top akin to a flag, pointing outwards. , as if to strike with it.",
+    "kEH_Desc": "Man, standing, both arms towards the front, holding an key for a tumbler lock consisting of a slightly bend vertical line with two shorter horizontal lines attached to the top akin to a flag, pointing outwards, as if to strike with it.",
     "kEH_UniK": "A338B"
   },
   "𓔊": {
@@ -12166,7 +12259,7 @@ unikemet = {
   "𓔋": {
     "kEH_Cat": "A-08-034",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, running, right arm raised in front, hand horizontal, handpalm upwards, holding a round vessel with an upstanding rim (W24), left arm over the body, holding a lotus flower at the stem, which rests against the shoulder, with the flower above the shoulder.",
+    "kEH_Desc": "Man, running, right arm raised in front, hand horizontal, hand palm upwards, holding a round vessel with an upstanding rim (W24), left arm over the body, holding a lotus flower at the stem, which rests against the shoulder, with the flower above the shoulder.",
     "kEH_Func": "Logogram (to bring)",
     "kEH_FVal": "ꞽnꞽ",
     "kEH_UniK": "A525"
@@ -12174,7 +12267,7 @@ unikemet = {
   "𓔌": {
     "kEH_Cat": "A-08-035",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, running, right arm raised in front, hand horizontal, handpalm upwards, holding a round vessel with an upstanding rim (W24), left arm over the body.",
+    "kEH_Desc": "Man, running, right arm raised in front, hand horizontal, hand palm upwards, holding a round vessel with an upstanding rim (W24), left arm over the body.",
     "kEH_Func": "Logogram (to bring)",
     "kEH_FVal": "ꞽnꞽ",
     "kEH_UniK": "A525A"
@@ -12190,7 +12283,7 @@ unikemet = {
   "𓔎": {
     "kEH_Cat": "A-08-041",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forward, right arm forward, holding a branch, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, back bent forward, right arm forward, holding a branch, left arm hanging beside the body.",
     "kEH_Func": "Classifier force/effort",
     "kEH_FVal": "nḫt",
     "kEH_UniK": "A399B"
@@ -12198,7 +12291,7 @@ unikemet = {
   "𓔏": {
     "kEH_Cat": "A-08-042",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, bend forwards, both arms forwards, holding a cup or vessel at the hight of the knees.",
+    "kEH_Desc": "Man, standing, bend forwards, both arms forwards, holding a cup or vessel at the height of the knees.",
     "kEH_Func": "Classifier death",
     "kEH_FVal": "mt",
     "kEH_UniK": "HJ A190",
@@ -12208,7 +12301,7 @@ unikemet = {
   "𓔐": {
     "kEH_Cat": "A-09-002",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, both arms raised towards the front, handpalms inwards.",
+    "kEH_Desc": "Man, seated, right knee raised, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, both arms raised towards the front, hand palms inwards.",
     "kEH_Func": "Logogram (pure, clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "A006P"
@@ -12216,7 +12309,7 @@ unikemet = {
   "𓔑": {
     "kEH_Cat": "A-09-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, right leg extended with the foot in front of the left knee, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, both arms raised towards the front, handpalms outwards.",
+    "kEH_Desc": "Man, seated on heel, right leg extended with the foot in front of the left knee, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, both arms raised towards the front, hand palms outwards.",
     "kEH_Func": "Logogram (pure, clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "A006R",
@@ -12225,7 +12318,7 @@ unikemet = {
   "𓔒": {
     "kEH_Cat": "A-09-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, both knees down, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, both arms raised towards the front, handpalms upwards.",
+    "kEH_Desc": "Man, seated, both knees down, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, both arms raised towards the front, hand palms upwards.",
     "kEH_Func": "Logogram (pure, clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "A006Y",
@@ -12234,7 +12327,7 @@ unikemet = {
   "𓔓": {
     "kEH_Cat": "A-09-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, right arm extended forwards, hand in the line of water, handpalm forwards, left arm hanging besides the body.",
+    "kEH_Desc": "Man, seated, right knee raised, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, right arm extended forwards, hand in the line of water, hand palm forwards, left arm hanging besides the body.",
     "kEH_Func": "Logogram (wab-priest)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "A006V"
@@ -12242,7 +12335,7 @@ unikemet = {
   "𓔔": {
     "kEH_Cat": "A-09-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, right arm extended forwards, hand in the line of water, handpalm forwards, left arm in front of the body.",
+    "kEH_Desc": "Man, seated, right knee raised, with a vase on its side, with liquid issuing from it (W54), orientated to the front, on his head, right arm extended forwards, hand in the line of water, hand palm forwards, left arm in front of the body.",
     "kEH_Func": "Logogram (wab-priest)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "A006W"
@@ -12264,7 +12357,7 @@ unikemet = {
   "𓔗": {
     "kEH_Cat": "A-09-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, both arms forward, holding a round vessel on its side, with liquid issuing from it, orientated to the front, at the hight of his head.",
+    "kEH_Desc": "Man, seated, right knee raised, both arms forward, holding a round vessel on its side, with liquid issuing from it, orientated to the front, at the height of his head.",
     "kEH_Func": "Logogram (pure, clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "A006C",
@@ -12275,7 +12368,7 @@ unikemet = {
   "𓔘": {
     "kEH_Cat": "A-09-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, both arms forward, holding a tall water pot (W14) on its side, with liquid issuing from it, orientated to the front, at the hight of his head.",
+    "kEH_Desc": "Man, seated, right knee raised, both arms forward, holding a tall water pot (W14) on its side, with liquid issuing from it, orientated to the front, at the height of his head.",
     "kEH_Func": "Logogram (pure, clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "A006D"
@@ -12294,7 +12387,7 @@ unikemet = {
   "𓔚": {
     "kEH_Cat": "A-09-021",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, both knees down, arms raised in front, holding a round vessel on its side, with liquid issuing from it, orientated to the back, going over the head, at the hight of the head.",
+    "kEH_Desc": "Man, seated on heel, both knees down, arms raised in front, holding a round vessel on its side, with liquid issuing from it, orientated to the back, going over the head, at the height of the head.",
     "kEH_Func": "Logogram (pure, clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "HJ A006E",
@@ -12320,7 +12413,7 @@ unikemet = {
   "𓔝": {
     "kEH_Cat": "A-09-031",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, right leg extended with the foot in front of the left knee, both arms extended forwards, one arm at the hight of the shoulder, one at the height of the of the chest, handpalms horizontal, handpalms upwards, inside a double dotted line running from two vessels with a small base and a broad rim (W77), in front and behind the man, with the double line of dots curving over the man.",
+    "kEH_Desc": "Man, seated on heel, right leg extended with the foot in front of the left knee, both arms extended forwards, one arm at the height of the shoulder, one at the height of the of the chest, hand palms horizontal, hand palms upwards, inside a double dotted line running from two vessels with a small base and a broad rim (W77), in front and behind the man, with the double line of dots curving over the man.",
     "kEH_Func": "Logogram (pure, clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "HJ A133B",
@@ -12348,7 +12441,7 @@ unikemet = {
   "𓔠": {
     "kEH_Cat": "A-10-002",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms forward, holding a tall water pot with a spout (W14A), with a forwards, downwards ripple of water coming from the spout.",
+    "kEH_Desc": "Man, standing, both arms forward, holding a tall water pot with a spout (W14A), with a forward, downward ripple of water coming from the spout.",
     "kEH_Func": "Classifier pouring",
     "kEH_FVal": "stꞽ",
     "kEH_UniK": "A135I"
@@ -12374,7 +12467,7 @@ unikemet = {
   "𓔣": {
     "kEH_Cat": "A-10-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms forward, holding a vessel at the hight of the waist, with a dotted line coming from the vessel.",
+    "kEH_Desc": "Man, standing, both arms forward, holding a vessel at the height of the waist, with a dotted line coming from the vessel.",
     "kEH_Func": "Logogram (to libate)?",
     "kEH_FVal": "ḳbḥ",
     "kEH_UniK": "HJ A135D",
@@ -12384,7 +12477,7 @@ unikemet = {
   "𓔤": {
     "kEH_Cat": "A-10-012",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms forward, right forearm above left forearm, with a riple of water (N35) written nearly horizontally above the right forearm and hand.",
+    "kEH_Desc": "Man, standing, both arms forward, right forearm above left forearm, with a ripple of water (N35) written nearly horizontally above the right forearm and hand.",
     "kEH_Func": "Classifier greeting",
     "kEH_FVal": "nꞽnꞽ",
     "kEH_UniK": "HJ A136",
@@ -12395,7 +12488,7 @@ unikemet = {
   "𓔥": {
     "kEH_Cat": "A-10-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal, handpalm upwards, left arm backwards, upper arm horizontal, forearm nearly vertical, handpalm inwards, with a curved line running between the handpalms, continuing downwards to the level of the feet.",
+    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal, hand palm upwards, left arm backwards, upper arm horizontal, forearm nearly vertical, hand palm inwards, with a curved line running between the hand palms, continuing downwards to the level of the feet.",
     "kEH_Func": "Classifier to sprinkle, to scatter",
     "kEH_FVal": "ntš",
     "kEH_UniK": "HJ A060A",
@@ -12406,7 +12499,7 @@ unikemet = {
   "𓔦": {
     "kEH_Cat": "A-10-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal, handpalm upwards, left arm backwards, upper arm horizontal, forearm nearly vertical, handpalm inwards, with a dotted line running between the handpalms, continuing downwards to the level of the feet.",
+    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal, hand palm upwards, left arm backwards, upper arm horizontal, forearm nearly vertical, hand palm inwards, with a dotted line running between the hand palms, continuing downwards to the level of the feet.",
     "kEH_Func": "Logogram (to sprinkle, to scatter)",
     "kEH_FVal": "stꞽ",
     "kEH_UniK": "A060B",
@@ -12415,7 +12508,7 @@ unikemet = {
   "𓔧": {
     "kEH_Cat": "A-11-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, both knees down, back straight, both arms raised in front, handpalms outwards, under a corner of a wall.",
+    "kEH_Desc": "Man, seated, both knees down, back straight, both arms raised in front, hand palms outwards, under a corner of a wall.",
     "kEH_Func": "Logogram (to hide)",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "A005C",
@@ -12424,7 +12517,7 @@ unikemet = {
   "𓔨": {
     "kEH_Cat": "A-11-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, both knees raised, feet flat, near its bottom both arms raised in front, hands horizontal, handpalms upwards, under a corner of a wall.",
+    "kEH_Desc": "Man, seated, both knees raised, feet flat, near its bottom both arms raised in front, hands horizontal, hand palms upwards, under a corner of a wall.",
     "kEH_Func": "Classifier hiding/hidden",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "A005H"
@@ -12432,7 +12525,7 @@ unikemet = {
   "𓔩": {
     "kEH_Cat": "A-11-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms raised in front, handpalms outwards, under a corner of a wall.",
+    "kEH_Desc": "Man, standing, both arms raised in front, hand palms outwards, under a corner of a wall.",
     "kEH_Func": "Classifier hiding/hidden",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "HJ A005B",
@@ -12442,7 +12535,7 @@ unikemet = {
   "𓔪": {
     "kEH_Cat": "A-11-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, back straight, both arms raised in front, handpalms outward, behind and below a clump of three papyrus flowers, which curve over the man.",
+    "kEH_Desc": "Man, seated, right knee raised, back straight, both arms raised in front, hand palms outward, behind and below a clump of several papyrus flowers, which curve over the man.",
     "kEH_Func": "Logogram (to hide)",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "A421A"
@@ -12461,7 +12554,7 @@ unikemet = {
   "𓔬": {
     "kEH_Cat": "A-12-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, right knee raised, right hand forward, holding the top of a horizontal drill of a bow-drill, with the point of the drill in a N25-like base, left arm in front of the body, holding the bow of the bow-drill.",
+    "kEH_Desc": "Man, seated on heel, left knee raised, right hand forward, holding the top of a horizontal drill of a bow-drill, with the point of the drill in a N25-like base, left arm in front of the body, holding the bow of the bow-drill.",
     "kEH_Func": "Logogram (overseer of the deserts)",
     "kEH_FVal": "ꞽm.y-r-s.t",
     "kEH_UniK": "HJ A142",
@@ -12471,6 +12564,7 @@ unikemet = {
   },
   "𓔭": {
     "kEH_Cat": "A-12-006",
+    "kEH_Desc": "Man, kneeling on both knees, toes down, back bent forwards, both arms downwards on top of a grindstone.",
     "kEH_Func": "Classifier grinding",
     "kEH_FVal": "nḏ",
     "kEH_UniK": "HJ A143",
@@ -12481,7 +12575,7 @@ unikemet = {
   "𓔮": {
     "kEH_Cat": "A-12-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, kneeling, right leg extended, left leg bend, foot at an angle, toes down, both arms forwards, extending downwards towards a grind-stone.",
+    "kEH_Desc": "Man, kneeling, right leg extended, left leg bend, foot at an angle, toes down, both arms forwards, extending downwards towards a grindstone.",
     "kEH_Func": "Classifier grinding",
     "kEH_FVal": "nḏ",
     "kEH_UniK": "A143C"
@@ -12489,7 +12583,7 @@ unikemet = {
   "𓔯": {
     "kEH_Cat": "A-12-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forwards, both arms downwards, holding a rectangular grain measure vessel.",
+    "kEH_Desc": "Man, standing, back bent forwards, both arms downwards, holding a rectangular grain measure vessel.",
     "kEH_Func": "Classifier (to measure)",
     "kEH_FVal": "ḫꜣꞽ",
     "kEH_UniK": "HJ A144",
@@ -12500,7 +12594,7 @@ unikemet = {
   "𓔰": {
     "kEH_Cat": "A-12-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forward, right arm forward, holding a bundle of grain stalks, left arm in front of the body, holding a sickle with the point at the base of the bundle of grain stalks.",
+    "kEH_Desc": "Man, standing, back bent forward, right arm forward, holding a bundle of grain stalks, left arm in front of the body, holding a sickle with the point at the base of the bundle of grain stalks.",
     "kEH_Func": "Classifier reaping/harvesting",
     "kEH_FVal": "ꜣsḫ",
     "kEH_UniK": "HJ A148",
@@ -12511,7 +12605,7 @@ unikemet = {
   "𓔱": {
     "kEH_Cat": "A-12-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forward, both arms toward the front, holding a hammer with a round head, above a spike or pointy pole.",
+    "kEH_Desc": "Man, standing, back bent forward, both arms toward the front, holding a hammer with a round head, above a spike or pointy pole.",
     "kEH_Func": "Logogram (to drive in the mooring post)",
     "kEH_FVal": "ḥwꞽ-mnꞽ.t",
     "kEH_UniK": "HJ A150",
@@ -12593,7 +12687,7 @@ unikemet = {
   "𓔺": {
     "kEH_Cat": "A-12-034",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on a chair, at a potters wheel with a vessel on top of it, both arms forward, near the top of the wheel, right leg extended, right foot at the base of the potters wheel.",
+    "kEH_Desc": "Man, seated on a chair, at a potter's wheel with a vessel on top of it, both arms forward, near the top of the wheel, right leg extended, right foot at the base of the potter's wheel.",
     "kEH_Func": "Logogram (to create, to shape)",
     "kEH_FVal": "nḥp",
     "kEH_UniK": "HJ A158",
@@ -12604,7 +12698,7 @@ unikemet = {
   "𓔻": {
     "kEH_Cat": "A-12-036",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing at a potters wheel with a lump of clay on top of it, right leg extended, right foot at the base of the potters wheel, both arms extended in front, right hand above the lumb of clay, left hand at the top of the potters wheel.",
+    "kEH_Desc": "Man, standing at a potter's wheel with a lump of clay on top of it, right leg extended, right foot at the base of the potter's wheel, both arms extended in front, right hand above the lump of clay, left hand at the top of the potter's wheel.",
     "kEH_Func": "Classifier to create, to shape",
     "kEH_FVal": "nḥp",
     "kEH_UniK": "HJ A158B",
@@ -12614,7 +12708,7 @@ unikemet = {
   "𓔼": {
     "kEH_Cat": "A-12-040",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, kneeling, right foot with the toes on the ground, left foot flat on the ground, back bend forwards, arms extended forward, hands at the rim of a vessel on a low hand operated potters wheel.",
+    "kEH_Desc": "Man, kneeling, right foot with the toes on the ground, left foot flat on the ground, back bent forwards, arms extended forward, hands at the rim of a vessel on a low hand operated potter's wheel.",
     "kEH_Func": "Classifier to create",
     "kEH_FVal": "ḳd",
     "kEH_UniK": "HJ A158D",
@@ -12624,7 +12718,7 @@ unikemet = {
   "𓔽": {
     "kEH_Cat": "A-12-041",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forwards, arms extended forward, hands at the rim of a vessel on a low hand operated potters wheel.",
+    "kEH_Desc": "Man, standing, back bent forwards, arms extended forward, hands at the rim of a vessel on a low hand operated potter's wheel.",
     "kEH_Func": "Classifier to create",
     "kEH_FVal": "ḳd",
     "kEH_UniK": "HJ A158F",
@@ -12634,7 +12728,7 @@ unikemet = {
   "𓔾": {
     "kEH_Cat": "A-12-044",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, arms at either side of the body, extended outward, with the hands at the hight of the waist, with a line running between the hands.",
+    "kEH_Desc": "Man, standing, arms at either side of the body, extended outward, with the hands at the height of the waist, with a line running between the hands.",
     "kEH_Func": "Logogram (to sieve, to press)",
     "kEH_FVal": "ꜥtḫ",
     "kEH_UniK": "HJ A036C",
@@ -12654,7 +12748,7 @@ unikemet = {
   "𓕀": {
     "kEH_Cat": "A-12-050",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, both kees down, back bend forwards, both arms extended forwards, hands at a brick or block which is at the level of the knees.",
+    "kEH_Desc": "Man, seated, both knees down, back bent forwards, both arms extended forwards, hands at a brick or block which is at the level of the knees.",
     "kEH_Func": "Classifier pot-stand/sideboard",
     "kEH_FVal": "ḫnt",
     "kEH_UniK": "HJ A143A",
@@ -12664,6 +12758,7 @@ unikemet = {
   "𓕁": {
     "kEH_Cat": "A-12-054",
     "kEH_Core": "C",
+    "kEH_Desc": "Man, standing, back bent forwards, arms raised on either side of the body, bent at the elbow, hands at the height of the shoulders, holding an oar with both hands at 45° with the blade downwards.",
     "kEH_Func": "classifier to punt/pole (a boat)",
     "kEH_FVal": "wdꞽ",
     "kEH_UniK": "A152A"
@@ -12671,7 +12766,7 @@ unikemet = {
   "𓕂": {
     "kEH_Cat": "A-12-056",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, back bend forward, both arms extended towards the front, forearms horizontal at the hight of the waist, holding a bib or garment (V60).",
+    "kEH_Desc": "Man, standing, back bent forward, both arms extended towards the front, forearms horizontal at the height of the waist, holding a bib or garment (V60).",
     "kEH_Func": "Uncertain, classifier?",
     "kEH_UniK": "HJ A398",
     "kEH_JSesh": "A398",
@@ -12695,7 +12790,7 @@ unikemet = {
   },
   "𓕅": {
     "kEH_Cat": "A-12-060",
-    "kEH_Desc": "Man, standing, back bend forward, both arms forward, hands inside a W10 type vessel, which is at the level of the feet.",
+    "kEH_Desc": "Man, standing, back bent forward, both arms forward, hands inside a W10 type vessel, which is at the level of the feet.",
     "kEH_UniK": "HJ A417",
     "kEH_JSesh": "A417",
     "kEH_HG": "A417"
@@ -12712,7 +12807,7 @@ unikemet = {
   "𓕇": {
     "kEH_Cat": "A-12-064",
     "kEH_Core": "C",
-    "kEH_Desc": "A man, seated, right knee raised, both arms forwards, holding a bookroll with the first page unrolled.",
+    "kEH_Desc": "A man, seated, right knee raised, both arms forwards, holding a book roll with the first page unrolled.",
     "kEH_Func": "Classifier to open (a scroll)",
     "kEH_FVal": "pg(ꜣ)",
     "kEH_UniK": "HJ A139A",
@@ -12746,7 +12841,7 @@ unikemet = {
   "𓕋": {
     "kEH_Cat": "A-12-076",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms forward, forearms at the hight of the waist, holding a stick, striking a wick of twisted flax.",
+    "kEH_Desc": "Man, standing, both arms forward, forearms at the height of the waist, holding a stick, striking a wick of twisted flax.",
     "kEH_Func": "Logogram (to strike)",
     "kEH_FVal": "ḥwꞽ",
     "kEH_UniK": "HJ A413",
@@ -12756,7 +12851,7 @@ unikemet = {
   "𓕌": {
     "kEH_Cat": "A-12-077",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing on top of a branch, back bend forwards, both arms forward, forearms at the hight of the waist, hands holding the branch which bend upwards.",
+    "kEH_Desc": "Man, standing on top of a branch, back bent forwards, both arms forward, forearms at the height of the waist, hands holding the branch which bend upwards.",
     "kEH_Func": "Logogram (to bend down)",
     "kEH_FVal": "wꜥf",
     "kEH_UniK": "HJ A418",
@@ -12913,12 +13008,12 @@ unikemet = {
     "kEH_HG": "A48"
   },
   "𓕝": {
-    "kEH_Cat": "A-13-032",
+    "kEH_Cat": "A-13-031",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, both knees up, with covered legs and arms, with a short bushy beard and short hair/wig, holding a stick which angles slightly towards the body.",
+    "kEH_Desc": "Man, seated, both knees up, with covered legs and arms, with a short bushy beard and long wig, holding a stick which angles slightly towards the body.",
     "kEH_Func": "Classifier foreigner",
     "kEH_UniK": "A049D",
-    "kEH_JSesh": "A49"
+    "kEH_HG": "A49"
   },
   "𓕞": {
     "kEH_Cat": "A-13-033",
@@ -12940,7 +13035,7 @@ unikemet = {
   "𓕠": {
     "kEH_Cat": "A-13-035",
     "kEH_Core": "C",
-    "kEH_Desc": "Man (foreign), seated, both knees up, with covered legs and arms, with a bushy beard, with a feather (H6) on his head angling backwards,  holding a feather (H6), angling forwards.",
+    "kEH_Desc": "Man (foreign), seated, both knees up, with covered legs and arms, with a bushy beard, with a feather (H6) on his head angling backwards, holding a feather (H6), angling forwards.",
     "kEH_Func": "Classifier bow-people, nomads",
     "kEH_FVal": "ꞽwn.tyw",
     "kEH_UniK": "HJ A462",
@@ -12950,7 +13045,7 @@ unikemet = {
   "𓕡": {
     "kEH_Cat": "A-13-037",
     "kEH_Core": "C",
-    "kEH_Desc": "Man (foreign), seated, both knees up, with covered legs and arms, with a bushy beard,  holding a feather (H6), angling forwards.",
+    "kEH_Desc": "Man (foreign), seated, both knees up, with covered legs and arms, with a bushy beard, holding a feather (H6), angling forwards.",
     "kEH_Func": "Classifier bow-people, nomads",
     "kEH_FVal": "ꞽwn.tyw",
     "kEH_UniK": "A462A"
@@ -13068,7 +13163,7 @@ unikemet = {
   "𓕮": {
     "kEH_Cat": "A-15-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms forward, left arm at the hight of the shoulder, right hand at the hight of the waist, holding a wick of twisted flax, consisting of a singular loop at the top (V28A).",
+    "kEH_Desc": "Man, standing, both arms forward, left arm at the height of the shoulder, right hand at the height of the waist, holding a wick of twisted flax, consisting of a singular loop at the top (V28A).",
     "kEH_Func": "Logogram (to protect)",
     "kEH_FVal": "ḥmꜣg",
     "kEH_UniK": "HJ A169",
@@ -13090,7 +13185,7 @@ unikemet = {
   "𓕰": {
     "kEH_Cat": "A-15-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, hand at the hight of the waist, left arm back, hand a the hight of the waist, holding a rope in both hands which is connected to a djed pillar (R11) written at 45° angle forward.",
+    "kEH_Desc": "Man, standing, right arm forward, hand at the height of the waist, left arm back, hand a the height of the waist, holding a rope in both hands which is connected to a djed pillar (R11) written at 45° angle forward.",
     "kEH_Func": "Logogram (to erect the Djed pillar)",
     "kEH_FVal": "sꜥḥꜥ-ḏd",
     "kEH_UniK": "HJ A171",
@@ -13101,7 +13196,7 @@ unikemet = {
   "𓕱": {
     "kEH_Cat": "A-15-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms forward, hand at the hight of the waist, hands touching a Djed pillar (R11) written horizontally.",
+    "kEH_Desc": "Man, standing, both arms forward, hand at the height of the waist, hands touching a Djed pillar (R11) written horizontally.",
     "kEH_Func": "Classifier erecting the djed-pillar (group classifier for sꜥḥꜥ-ḏd-ꞽn-ꞽr.yw-ḫt-n(y)-sw.t)",
     "kEH_FVal": "sꜥḥꜥ-ḏd-ꞽn-ꞽr.yw-ḫt-n(y)-sw.t",
     "kEH_UniK": "HJ A385",
@@ -13119,7 +13214,7 @@ unikemet = {
   "𓕳": {
     "kEH_Cat": "A-15-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, hand at the hight of the waist, holding the sign for longs and windpipe (F36) of the same size as the man, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, right arm forward, hand at the height of the waist, holding the sign for longs and windpipe (F36) of the same size as the man, left arm hanging beside the body.",
     "kEH_Func": "Logogram (elder)",
     "kEH_FVal": "smsw",
     "kEH_UniK": "HJ A174",
@@ -13138,7 +13233,7 @@ unikemet = {
   "𓕵": {
     "kEH_Cat": "A-15-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, head facing towards the back, right arm towards the front, hand held horizontally at the hight of the shoulder, holding a triangular object, left arm towards the front, left hand nearly vertically, between the triangle and the head.",
+    "kEH_Desc": "Man, standing, head facing towards the back, right arm towards the front, hand held horizontally at the height of the shoulder, holding a triangular object, left arm towards the front, left hand nearly vertically, between the triangle and the head.",
     "kEH_Func": "Logogram (myrrh)",
     "kEH_FVal": "ꜥnt.yw",
     "kEH_UniK": "HJ A176A",
@@ -13149,7 +13244,7 @@ unikemet = {
   "𓕶": {
     "kEH_Cat": "A-15-020",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing a lion/leopard skin, tail between the legs, right arm hanging beside the body, holding a scroll horizontally, left arm raised towards the front, left hand held horizontally at shoulder hight, handpalm upwards. ",
+    "kEH_Desc": "Man, standing, wearing a lion/leopard skin, tail between the legs, right arm hanging beside the body, holding a scroll horizontally, left arm raised towards the front, left hand held horizontally at shoulder height, hand palm upwards. ",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ꞽwn-mw.t=f",
     "kEH_UniK": "HJ A457",
@@ -13190,7 +13285,7 @@ unikemet = {
   "𓕺": {
     "kEH_Cat": "A-15-029",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, right hand held horizontally at the hight of the waist, holding an eye with the markings of the head of a falcon (D10), left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, right arm forward, right hand held horizontally at the height of the waist, holding an eye with the markings of the head of a falcon (D10), left arm hanging beside the body.",
     "kEH_Func": "Logogram (Onuris)",
     "kEH_FVal": "ꞽn-ḥr.t",
     "kEH_UniK": "HJ A182",
@@ -13201,6 +13296,7 @@ unikemet = {
   "𓕻": {
     "kEH_Cat": "A-15-030",
     "kEH_Core": "C",
+    "kEH_Desc": "Man, standing, left arm hanging beside the body, right arm forward, forearm horizontal, holding a sceptre.",
     "kEH_UniK": "HJ A183",
     "kEH_JSesh": "A183",
     "kEH_HG": "A183",
@@ -13209,7 +13305,7 @@ unikemet = {
   "𓕼": {
     "kEH_Cat": "A-15-031",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, right hand held horizontally at the hight of the waist, holding a loop of cord with the ties upward (V6), left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, right arm forwards, right hand held horizontally at the height of the waist, holding a loop of cord with the ties upwards (V6), left arm hanging beside the body.",
     "kEH_Func": "Logogram (prospector)",
     "kEH_FVal": "smn.ty",
     "kEH_UniK": "HJ A184A",
@@ -13227,7 +13323,7 @@ unikemet = {
   "𓕾": {
     "kEH_Cat": "A-15-034",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, arms extended at either side of the body, hands at the hight of the shoulders, holding a tenoned door (O31), written vertically, at the top tenon, door-leaf inwards, with the sky (N1) on top of the tenons.",
+    "kEH_Desc": "Man, standing, arms extended at either side of the body, hands at the height of the shoulders, holding a tenoned door (O31), written vertically, at the top tenon, door-leaf inwards, with the sky (N1) on top of the tenons.",
     "kEH_Func": "Logogram (the one who opens the two doors of the sky)",
     "kEH_FVal": "wn-ꜥꜣ.wy-(n.w)-p.t",
     "kEH_UniK": "A187B"
@@ -13246,7 +13342,7 @@ unikemet = {
   "𓖀": {
     "kEH_Cat": "A-15-037",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with a line coming from his back at the waist, going down to the feet, right arm in front, right hand held horizontally at the hight of the shoulders, holding D28 (two arms, raised upwards, with the forearms and hands vertical, handpalms inwards), left arm forwards, at a 45° degree downwards.",
+    "kEH_Desc": "Man, standing, with a line coming from his back at the waist, going down to the feet, right arm in front, right hand held horizontally at the height of the shoulders, holding D28 (two arms, raised upwards, with the forearms and hands vertical, hand palms inwards), left arm forwards, at a 45° degree downwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "m kꜣ",
     "kEH_UniK": "HJ A458",
@@ -13262,7 +13358,7 @@ unikemet = {
   "𓖂": {
     "kEH_Cat": "A-15-042",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm towards the front, hand held horizontally at the hight of the shoulder, holding two arms, raised upwards, with the forearms and hands vertical, handpalms inwards (D28); left arm towards the front, left hand nearly vertically, between the two arms and the head.",
+    "kEH_Desc": "Man, standing, right arm towards the front, hand held horizontally at the height of the shoulder, holding two arms, raised upwards, with the forearms and hands vertical, hand palms inwards (D28); left arm towards the front, left hand nearly vertically, between the two arms and the head.",
     "kEH_Func": "Logogram (to protect)",
     "kEH_FVal": "mkꞽ",
     "kEH_UniK": "A188A"
@@ -13270,7 +13366,7 @@ unikemet = {
   "𓖃": {
     "kEH_Cat": "A-15-044",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm extended forwards, arm horizontal,  holding a rectangular sail, on a mast of a ship with two prongs, connected by vertical lines (P6), written behind the sail (P5), left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, right arm extended forwards, arm horizontal, holding a rectangular sail, on a mast of a ship with two prongs, connected by vertical lines (P6), written behind the sail (P5), left arm hanging beside the body.",
     "kEH_Func": "Logogram (to raise the sail)",
     "kEH_FVal": "fꜣꞽ-ṯꜣw",
     "kEH_UniK": "HJ A189",
@@ -13280,7 +13376,7 @@ unikemet = {
   "𓖄": {
     "kEH_Cat": "A-15-045",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, bend slightly forwards, right arm towards the front, holding a round vessel with an upstanding rim (W24) at the hight of the shoulder, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, bend slightly forwards, right arm towards the front, holding a round vessel with an upstanding rim (W24) at the height of the shoulder, left arm hanging beside the body.",
     "kEH_Func": "Classifier presenting",
     "kEH_FVal": "sfsf",
     "kEH_UniK": "HJ A376A",
@@ -13290,7 +13386,7 @@ unikemet = {
   "𓖅": {
     "kEH_Cat": "A-15-046",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm towards the front, holding a round vessel with an upstanding rim (W24) at the hight of the shoulder, left arm over the body.",
+    "kEH_Desc": "Man, standing, right arm towards the front, holding a round vessel with an upstanding rim (W24) at the height of the shoulder, left arm over the body.",
     "kEH_Func": "Logogram (to bring)",
     "kEH_FVal": "ꞽnꞽ",
     "kEH_UniK": "A376B"
@@ -13308,7 +13404,7 @@ unikemet = {
   "𓖇": {
     "kEH_Cat": "A-15-052",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with a bulls tail, arms extended on either side of the body, arms horizontal at the hight of the shoulder, holding wings that angle downwards from the hands at a right angle.",
+    "kEH_Desc": "Man, standing, with a bulls tail, arms extended on either side of the body, arms horizontal at the height of the shoulder, holding wings that angle downwards from the hands at a right angle.",
     "kEH_Func": "Classifier to spread",
     "kEH_FVal": "p(s)š",
     "kEH_UniK": "HJ A340",
@@ -13362,7 +13458,7 @@ unikemet = {
   "𓖍": {
     "kEH_Cat": "A-15-074",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, holding the sun with rays of sunlight coming from it (N8) at the sun disk, at the hight of the shoulder, left arm is raised, upper arm horizontal, forearm vertical, left handpalm inwards.",
+    "kEH_Desc": "Man, standing, right arm forward, holding the sun with rays of sunlight coming from it (N8) at the sun disk, at the height of the shoulder, left arm is raised, upper arm horizontal, forearm vertical, left hand palm inwards.",
     "kEH_Func": "Logogram (to illuminate)",
     "kEH_FVal": "nms",
     "kEH_UniK": "A527"
@@ -13386,7 +13482,7 @@ unikemet = {
   "𓖐": {
     "kEH_Cat": "A-16-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal at the hight of the waist, holding a knife (T30A) at an forward angle, left arm hanging beside the body, holding a knife (T30A) horizontally.",
+    "kEH_Desc": "Man, standing, right arm forward, forearm horizontal at the height of the waist, holding a knife (T30A) at a forward angle, left arm hanging beside the body, holding a knife (T30A) horizontally.",
     "kEH_Func": "Logogram (messenger/killer)",
     "kEH_FVal": "hb.y",
     "kEH_UniK": "A199B",
@@ -13406,7 +13502,7 @@ unikemet = {
   "𓖒": {
     "kEH_Cat": "A-16-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, hand at the level of the wist, holding a knife vertically, left arm raised, forearm vertically, holding a knife nearly horizontally.",
+    "kEH_Desc": "Man, standing, right arm forward, hand at the level of the waist, holding a knife vertically, left arm raised, forearm vertically, holding a knife nearly horizontally.",
     "kEH_Func": "Classifier slayer",
     "kEH_FVal": "ḫꜣbb",
     "kEH_UniK": "A199D"
@@ -13414,7 +13510,7 @@ unikemet = {
   "𓖓": {
     "kEH_Cat": "A-16-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, holding an harpoon with the point down, diagonally over the body, from the tip of the right foot beyond the left shoulder, right arm lowered, right hand holding the harpoon between the waist and knee, left arm raised, holding the shaft near the end.",
+    "kEH_Desc": "Man, standing, holding a harpoon with the point down, diagonally over the body, from the tip of the right foot beyond the left shoulder, right arm lowered, right hand holding the harpoon between the waist and knee, left arm raised, holding the shaft near the end.",
     "kEH_Func": "Classifier (harpooner)",
     "kEH_FVal": "ꞽꜣwty",
     "kEH_UniK": "HJ A200",
@@ -13425,7 +13521,7 @@ unikemet = {
   "𓖔": {
     "kEH_Cat": "A-16-024",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, hand at the level of the wist, holding a stick vertically, left arm raised, forearm vertically, holding a stick nearly horizontally.",
+    "kEH_Desc": "Man, standing, right arm forward, hand at the level of the waist, holding a stick vertically, left arm raised, forearm vertically, holding a stick nearly horizontally.",
     "kEH_Func": "Classifier driving away",
     "kEH_FVal": "sḥrꞽ",
     "kEH_UniK": "HJ A059A",
@@ -13436,7 +13532,7 @@ unikemet = {
   "𓖕": {
     "kEH_Cat": "A-16-025",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, hand at the level of the wist, holding a curved rattle stick vertically, curving outwards, left arm raised, forearm vertically, holding a curved rattle stick nearly horizontally, curving upwards.",
+    "kEH_Desc": "Man, standing, right arm forward, hand at the level of the waist, holding a curved rattle stick vertically, curving outwards, left arm raised, forearm vertically, holding a curved rattle stick nearly horizontally, curving upwards.",
     "kEH_Func": "Classifier dancing",
     "kEH_FVal": "ꞽbꜣ",
     "kEH_UniK": "A059C"
@@ -13464,7 +13560,7 @@ unikemet = {
   "𓖘": {
     "kEH_Cat": "A-16-030",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, looking backwards, right arm forward, forearm and hand at the level of the waist, handpalm upwards, holding a star (N5), left arm raised, forearm vertically, holding a stick nearly horizontally.",
+    "kEH_Desc": "Man, standing, looking backwards, right arm forward, forearm and hand at the level of the waist, hand palm upwards, holding a star (N5), left arm raised, forearm vertically, holding a stick nearly horizontally.",
     "kEH_Func": "Classifier ?",
     "kEH_UniK": "A199E"
   },
@@ -13479,6 +13575,7 @@ unikemet = {
   "𓖚": {
     "kEH_Cat": "A-16-035",
     "kEH_Core": "C",
+    "kEH_Desc": "Man, standing, right arm forward, forearm and hand at the level of the waist, holding a shield angled backwards, left arm raised, forearm vertically, holding a mace with a pear shaped head, with the head of the mace above the head of the man.",
     "kEH_UniK": "HJ A206",
     "kEH_JSesh": "A206",
     "kEH_HG": "A206",
@@ -13487,6 +13584,7 @@ unikemet = {
   "𓖛": {
     "kEH_Cat": "A-16-041",
     "kEH_Core": "C",
+    "kEH_Desc": "Man, seated on heel, right leg extended with foot in front of the left leg, right arm forward, forearm horizontal, holding a shield, left arm in front of the body.",
     "kEH_UniK": "HJ A012C",
     "kEH_JSesh": "A12C",
     "kEH_HG": "A12C"
@@ -13512,7 +13610,7 @@ unikemet = {
   "𓖞": {
     "kEH_Cat": "A-16-044",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, upper body in profile, arms crossed in front of the chest, with a covered upper body resembling a circle.",
+    "kEH_Desc": "Man, standing, upper body in profile, with a covered upper body resembling a circle, hands sticking out.",
     "kEH_Func": "Classifier hiding/hidden",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "HJ A076C",
@@ -13522,7 +13620,7 @@ unikemet = {
   "𓖟": {
     "kEH_Cat": "A-16-046",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, arms in front of the body, forearms at waist hight, covered by cloth.",
+    "kEH_Desc": "Man, standing, arms in front of the body, forearms at waist height, covered by cloth.",
     "kEH_Func": "Classifier hiding/hidden",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "A076E"
@@ -13536,10 +13634,10 @@ unikemet = {
   "𓖡": {
     "kEH_Cat": "A-16-048",
     "kEH_Core": "C",
-    "kEH_Desc": "Man (foreign), standing, with a long dress, right arm forwards, holding a small, peanut shaped shield, seen from the back, with the top near the hight of the shoulder, left arm in front of the body, holding a spear which rests against the shoulder, speartip at the top, at the hight of the head, spearshaft continuing up to the hight of the shin, crossing over the body.",
+    "kEH_Desc": "Man (foreign), standing, with a long dress, right arm forwards, holding a small, peanut shaped shield, seen from the back, hand visible, with the top near the height of the shoulder, left arm in front of the body, holding a spear which rests against the shoulder, spear tip at the top, at the height of the head, spear shaft continuing up to the height of the shin, crossing over the body.",
     "kEH_Func": "Classifier runner (foreign)",
     "kEH_FVal": "pḥrr",
-    "kEH_UniK": "A221B"
+    "kEH_UniK": "A211B"
   },
   "𓖢": {
     "kEH_Cat": "A-16-049",
@@ -13560,7 +13658,7 @@ unikemet = {
   "𓖤": {
     "kEH_Cat": "A-16-052",
     "kEH_Core": "C",
-    "kEH_Desc": "Man (king) running, wearing the red crown (S3) right arm in front, hand at the hight of the waist, holding a vertical spear with the point at the top, left arm raised, forearm nearly vertical, holding a stick which runs from the head to slightly beyond the hand.",
+    "kEH_Desc": "Man (king) running, wearing the red crown (S3) right arm in front, hand at the height of the waist, holding a vertical spear with the point at the top, left arm raised, forearm nearly vertical, holding a stick which runs from the head to slightly beyond the hand.",
     "kEH_Func": "Classifier to trample",
     "kEH_FVal": "tꞽtꞽ",
     "kEH_UniK": "HJ A207A",
@@ -13603,7 +13701,7 @@ unikemet = {
   "𓖩": {
     "kEH_Cat": "A-17-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, right knee raised, right foot extending beyond the left knee; with two feathers (H6) on his head, arranged in a V shape, straight side inwards; right arm raised in fromnt, holding a vertical arrow with the fletching upwards and arrowhead downwards; left arm in front of the body, holding a bow which angles backwards, leaning against the shoulder.",
+    "kEH_Desc": "Man, seated on heel, right knee raised, right foot extending beyond the left knee; with two feathers (H6) on his head, arranged in a V shape, straight side inwards; right arm raised in front, holding a vertical arrow with the fletching upwards and arrowhead downwards; left arm in front of the body, holding a bow which angles backwards, leaning against the shoulder.",
     "kEH_Func": "Logogram (army)?",
     "kEH_FVal": "mšꜥ",
     "kEH_UniK": "A012N"
@@ -13611,7 +13709,7 @@ unikemet = {
   "𓖪": {
     "kEH_Cat": "A-17-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, right arm in front, forearm horizontal, holding a shield, left arm in front of the body, holding a mace (T3) which angles backwards, leaning against the shoulder, macehead above the shoulder.",
+    "kEH_Desc": "Man, seated, right knee raised, right arm in front, forearm horizontal, holding a shield, left arm in front of the body, holding a mace (T3) which angles backwards, leaning against the shoulder, mace head above the shoulder.",
     "kEH_Func": "Logogram (army)",
     "kEH_FVal": "mšꜥ",
     "kEH_UniK": "HJ A012A",
@@ -13652,7 +13750,7 @@ unikemet = {
   "𓖯": {
     "kEH_Cat": "A-18-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Man (enemy), seated on heel, both knees down, with a line of liquid coming from the top of the head, towards the front, curving downward, both arms behind the back, bound together with rope.",
+    "kEH_Desc": "Man (enemy), seated on heel, both knees down, with a line of liquid coming from the top of the head, towards the front, curving downwards, both arms behind the back, bound together with rope.",
     "kEH_Func": "Classifier rebel/enemy ",
     "kEH_UniK": "HJ A013A",
     "kEH_JSesh": "A13A",
@@ -13662,7 +13760,7 @@ unikemet = {
   "𓖰": {
     "kEH_Cat": "A-18-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, both knees down, with a line of liquid coming from the face/neck, towards the front, curving downward, both arms behind the back, bound together with rope.",
+    "kEH_Desc": "Man, seated on heel, both knees down, with a line of liquid coming from the face/neck, towards the front, curving downwards, both arms behind the back, bound together with rope.",
     "kEH_Func": "Classifier rebel",
     "kEH_FVal": "ẖꜥk-ꞽb",
     "kEH_UniK": "HJ A013B",
@@ -13673,14 +13771,14 @@ unikemet = {
   "𓖱": {
     "kEH_Cat": "A-18-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, both knees down, right arm forward, hanging beside the body, left arm hanging beside the body, with a knife (T30A) written at a 45° degrees over the elbow of the right arm, point at the groin, blade downwards.",
+    "kEH_Desc": "Man, seated on heel, both knees down, right arm forwards, hanging beside the body, left arm hanging beside the body, with a knife (T30A) written at a 45° degree over the elbow of the right arm, point at the groin, blade downwards.",
     "kEH_Func": "Classifier enemy?",
     "kEH_UniK": "A013Y"
   },
   "𓖲": {
     "kEH_Cat": "A-18-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, both knees down, right arm raised in front, hand at the hight of the face, left arm hanging beside the body, with a rope coming from the neck at the back, curving downwards.",
+    "kEH_Desc": "Man, seated on heel, both knees down, right arm raised in front, hand at the height of the face, left arm hanging beside the body, with a rope coming from the neck at the back, curving downwards.",
     "kEH_Func": "Classifier enemy",
     "kEH_FVal": "snn.t",
     "kEH_UniK": "A014P"
@@ -13688,7 +13786,7 @@ unikemet = {
   "𓖳": {
     "kEH_Cat": "A-18-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, arms behind the back, bound with rope, with a knife (T30A) with the point against the chest, handle at the hight of the face, blade downwards.",
+    "kEH_Desc": "Man, seated on heel, arms behind the back, bound with rope, with a knife (T30A) with the point against the chest, handle at the height of the face, blade downwards.",
     "kEH_Func": "Classifier enemy",
     "kEH_FVal": "twꜣ.t",
     "kEH_UniK": "A014Q"
@@ -13696,7 +13794,7 @@ unikemet = {
   "𓖴": {
     "kEH_Cat": "A-18-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, right knee raised, right foot in front of the left knee, with a line of liquid coming from the neck/chest, towards the front, curving downward, both arms behind the back, bound together with rope.",
+    "kEH_Desc": "Man, seated on heel, right knee raised, right foot in front of the left knee, with a line of liquid coming from the neck/chest, towards the front, curving downwards, both arms behind the back, bound together with rope.",
     "kEH_Func": "Classifier rebel",
     "kEH_FVal": "sbꞽ",
     "kEH_UniK": "A013Z"
@@ -13704,7 +13802,7 @@ unikemet = {
   "𓖵": {
     "kEH_Cat": "A-18-020",
     "kEH_Core": "C",
-    "kEH_Desc": "Man (foreigner), seated on heel, right knee raised, with a foreign headdress and bushy beard, arms behind the back, bound with rope, with a rope coming from the neck, at the front, curving upward, with a triangle at the end of the rope, at about the hight of the top of the head.",
+    "kEH_Desc": "Man (foreigner), seated on heel, right knee raised, with a foreign headdress and bushy beard, arms behind the back, bound with rope, with a rope coming from the neck, at the front, curving upward, with a triangle pointing downwards at the end of the rope, at about the height of the top of the head.",
     "kEH_Func": "Logogram (chiefs)",
     "kEH_FVal": "wr ",
     "kEH_UniK": "A014R"
@@ -13712,7 +13810,7 @@ unikemet = {
   "𓖶": {
     "kEH_Cat": "A-18-023",
     "kEH_Core": "C",
-    "kEH_Desc": "Man (foreigner), seated on heel, right knee raised, with foreign headdress and busyh beard, both arms behind the back, bound with rope. ",
+    "kEH_Desc": "Man (foreigner), seated on heel, right knee raised, with foreign headdress and bushy beard, both arms behind the back, bound with rope. ",
     "kEH_Func": "Classifier Syrian",
     "kEH_FVal": "ḫr.y",
     "kEH_UniK": "HJ A013E",
@@ -13816,7 +13914,7 @@ unikemet = {
   "𓗁": {
     "kEH_Cat": "A-18-052",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, both knees down, with a line of liquid coming from the neck/chest, towards the front, curving downward, both arms behind the back, bound together with rope, in front of a pole which is forked at the top, to which the man is bound.",
+    "kEH_Desc": "Man, seated on heel, both knees down, with a line of liquid coming from the neck/chest, towards the front, curving downwards, both arms behind the back, bound together with rope, in front of a pole which is forked at the top, to which the man is bound.",
     "kEH_Func": "Classifier rebel",
     "kEH_FVal": "sbꞽ",
     "kEH_UniK": "HJ A216D",
@@ -13888,7 +13986,7 @@ unikemet = {
   "𓗉": {
     "kEH_Cat": "A-18-061",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, both knees down, with a knife at 45°, with the tip on the thighs, blade down; both arms behind the back, bound together with rope, in front of a pole which is forked at the top, to which the man is bound.",
+    "kEH_Desc": "Man, seated on heel, both knees down, with a knife at 45° degree, with the tip on the thighs, blade down; both arms behind the back, bound together with rope, in front of a pole which is forked at the top, to which the man is bound.",
     "kEH_Func": "Classifier enemy",
     "kEH_FVal": "šnṯ",
     "kEH_UniK": "A216Q"
@@ -13927,7 +14025,7 @@ unikemet = {
   "𓗍": {
     "kEH_Cat": "A-18-072",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated on heel, right knee raised, right foot in front of the left knee, back bend forwards, both arms forward, holding an axe with the axeblade in the head of the man.",
+    "kEH_Desc": "Man, seated on heel, right knee raised, right foot in front of the left knee, back bent forwards, both arms forward, holding an axe with the axeblade in the head of the man.",
     "kEH_Func": "Logogram enemy",
     "kEH_FVal": "ḫft.y",
     "kEH_UniK": "A014N",
@@ -14013,7 +14111,7 @@ unikemet = {
   "𓗗": {
     "kEH_Cat": "A-18-098",
     "kEH_Core": "C",
-    "kEH_Desc": "Two men, standing, back to back, arms behind the back, bound to each other by the arms with rope.",
+    "kEH_Desc": "Two men, standing, back-to-back, arms behind the back, bound to each other by the arms with rope.",
     "kEH_Func": "Logogram (foreigner)",
     "kEH_FVal": "ḫꜣs.ty ",
     "kEH_UniK": "HJ A225",
@@ -14024,7 +14122,7 @@ unikemet = {
   "𓗘": {
     "kEH_Cat": "A-18-100",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, looking backwards,, both arms in front, upper arms nearly horizontal, bound with rope.",
+    "kEH_Desc": "Man, standing, looking backwards, both arms in front, upper arms nearly horizontal, bound with rope.",
     "kEH_Func": "Classifier to drive away",
     "kEH_FVal": "msn(ḥ)",
     "kEH_UniK": "A223K",
@@ -14033,7 +14131,7 @@ unikemet = {
   "𓗙": {
     "kEH_Cat": "A-18-105",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, running, with short wig/coif and uraeus, in front of a smaller naked man, running, both hands behind the back, bound with rope; larger man right arm forward, hand near the bound arms of the smaller man, left arm in font of the body, holding rope which connects to the rope binding the arms of the smaller man.",
+    "kEH_Desc": "Man, running, with short wig/coif and uraeus, in front of a smaller naked man, running, both hands behind the back, bound with rope; larger man right arm forward, hand near the bound arms of the smaller man, left arm in front of the body, holding rope which connects to the rope binding the arms of the smaller man.",
     "kEH_Func": "Logogram (to bend down, to subdue)",
     "kEH_FVal": "wꜥf",
     "kEH_UniK": "A226B"
@@ -14041,7 +14139,7 @@ unikemet = {
   "𓗚": {
     "kEH_Cat": "A-18-110",
     "kEH_Core": "C",
-    "kEH_Desc": "Man (foreigner) seated on heel, both knees down, with foreign headdress, with a rope around the neck, with the ends in the front, making one curl with 1 rope end towards the top, with triangular end, 2 rope ends downward.",
+    "kEH_Desc": "Man (foreigner) seated on heel, both knees down, with foreign headdress, with a rope around the neck, with the ends in the front, making one curl with one rope end towards the top, with triangular end, two ropes end downward.",
     "kEH_Func": "Classifier foreigner",
     "kEH_FVal": "mry",
     "kEH_UniK": "HJ A422",
@@ -14057,10 +14155,10 @@ unikemet = {
   "𓗜": {
     "kEH_Cat": "A-18-117",
     "kEH_Core": "C",
-    "kEH_Desc": "3 men, kneeling/walink on knees, gound together around the neck. First man, right knee before left knee, both arms raised in front, handpalms outward, second man, right knee just in front of left knee, both arms behind the back, as if bound, third man, right knee and foot in front of the left knee, left lower leg raised at 45°, right arm in front, hand against the head of the second man, left arm behind the back, hand visible in front of the waist. ",
+    "kEH_Desc": "3 men, kneeling/walking on knees, ground together around the neck. First man, right knee before left knee, both arms raised in front, hand palms outward, second man, right knee just in front of left knee, both arms behind the back, as if bound, third man, right knee and foot in front of the left knee, left lower leg raised at 45° degree, right arm in front, hand against the head of the second man, left arm behind the back, hand visible in front of the waist. ",
     "kEH_Func": "Classifier foreign people",
     "kEH_FVal": "ḫꜣs.wt nb.wt",
-    "kEH_UniK": "A527"
+    "kEH_UniK": "A538"
   },
   "𓗝": {
     "kEH_Cat": "A-18-118",
@@ -14068,12 +14166,12 @@ unikemet = {
     "kEH_Desc": "3 men, seated on heel, both knees down, arms behind the back, bound with rope, connected by the neck by a horizontal line (rope), which makes an upward tick at the front.",
     "kEH_Func": "Classifier weak, downcast",
     "kEH_FVal": "bdš.w",
-    "kEH_UniK": "A527A"
+    "kEH_UniK": "A538A"
   },
   "𓗞": {
     "kEH_Cat": "A-19-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, naked, dancing, right leg vertical, left leg raised, knee in front of the right leg, left foot behind the right leg, right arm raised in front, extended forward, hand at the hight of the head, left arm raised at the back, hand at the hight of the head.",
+    "kEH_Desc": "Man, naked, dancing, right leg vertical, left leg raised, knee in front of the right leg, left foot behind the right leg, right arm raised in front, extended forward, hand at the height of the head, left arm raised at the back, hand at the height of the head.",
     "kEH_Func": "classifier dancing",
     "kEH_FVal": "ḥpg",
     "kEH_UniK": "A032N",
@@ -14084,7 +14182,7 @@ unikemet = {
   "𓗟": {
     "kEH_Cat": "A-19-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, naked, dancing, right leg vertical, left leg raised, knee in front of the right leg, left foot behind the right leg, right arm towards the front, angling downwards towards the left knee, hand at the hight of the left knee, left arm raised at the back, hand at the hight of the head.",
+    "kEH_Desc": "Man, naked, dancing, right leg vertical, left leg raised, knee in front of the right leg, left foot behind the right leg, right arm towards the front, angling downwards towards the left knee, hand at the height of the left knee, left arm raised at the back, hand at the height of the head.",
     "kEH_Func": "Classifier joy, jubilation",
     "kEH_FVal": "hnw",
     "kEH_UniK": "HJ A032H",
@@ -14095,7 +14193,7 @@ unikemet = {
   "𓗠": {
     "kEH_Cat": "A-19-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, dancing, right leg straight, left knee in front of the right leg, left foot behind the right leg, lower leg horizontal, right arm in front of the body, left arm raised at the back, hand at the hight of the head.",
+    "kEH_Desc": "Man, dancing, right leg straight, left knee in front of the right leg, left foot behind the right leg, lower leg horizontal, right arm in front of the body, left arm raised at the back, hand at the height of the head.",
     "kEH_Func": "Classifier dancing",
     "kEH_FVal": "ꞽbꜣ",
     "kEH_UniK": "A032I",
@@ -14115,7 +14213,7 @@ unikemet = {
   "𓗢": {
     "kEH_Cat": "A-19-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, naked, dancing, right leg vertical, left leg forwards, thigh horizontal, lower leg bend downwards, right arm towards the front, angling downwards towards the left knee, hand at the hight of the left knee, left arm raised at the back, hand at the hight of the head.",
+    "kEH_Desc": "Man, naked, dancing, right leg vertical, left leg forwards, thigh horizontal, lower leg bend downwards, right arm towards the front, angling downwards towards the left knee, hand at the height of the left knee, left arm raised at the back, hand at the height of the head.",
     "kEH_Func": "Classifier dance",
     "kEH_FVal": "ꞽbꜣ",
     "kEH_UniK": "HJ A032D",
@@ -14137,7 +14235,7 @@ unikemet = {
   "𓗤": {
     "kEH_Cat": "A-19-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm in front of body, left arm raised in back, forearm vertical.",
+    "kEH_Desc": "Man, standing, right arm in front of body, left arm raised, forearm vertical.",
     "kEH_Func": "Classifier fear/veneration",
     "kEH_FVal": "hꜣ-snḏ",
     "kEH_UniK": "HJ A032G",
@@ -14159,7 +14257,7 @@ unikemet = {
   "𓗦": {
     "kEH_Cat": "A-19-021",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, dancing, knees bend as if seated on nothing, right arm forwards, angling downwards, left arm raised in back, hand at the hight of the neck.",
+    "kEH_Desc": "Man, dancing, knees bend as if seated on nothing, right arm forwards, angling downwards, left arm raised in back, hand at the height of the neck.",
     "kEH_Func": "Classifier dancing",
     "kEH_FVal": "ḫbꞽ",
     "kEH_UniK": "HJ A320",
@@ -14169,7 +14267,7 @@ unikemet = {
   "𓗧": {
     "kEH_Cat": "A-19-024",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, naked, face forwards, left leg backwards as if walking, right arm forwards, forearm horizontal at the hight of the waist, left arm raised in back, hand at the hight of the head.",
+    "kEH_Desc": "Man, naked, face forwards, left leg backwards as if walking, right arm forwards, forearm horizontal at the height of the waist, left arm raised in back, hand at the height of the head.",
     "kEH_Func": "Classifier dancing",
     "kEH_FVal": "ḫbꞽ",
     "kEH_UniK": "A082",
@@ -14178,7 +14276,7 @@ unikemet = {
   "𓗨": {
     "kEH_Cat": "A-19-025",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, naked, face backwards, left leg backwards as if walking, right arm forwards, forearm horizontal at the hight of the waist, left arm raised in back, hand at the hight of the head.",
+    "kEH_Desc": "Man, naked, face backwards, left leg backwards as if walking, right arm forwards, forearm horizontal at the height of the waist, left arm raised in back, hand at the height of the head.",
     "kEH_Func": "Classifier dancing",
     "kEH_FVal": "ḫbꞽ",
     "kEH_UniK": "A082A"
@@ -14186,7 +14284,7 @@ unikemet = {
   "𓗩": {
     "kEH_Cat": "A-19-027",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, dancing, right leg vertical, left knee in front of the right leg, left foot behind the right leg, right arm extended in front, forearm horizontal, handpalm upwards, left arm raised in back, left hand above the head, handpalm inwards, with a dotted line going from handpalm to handpalm.",
+    "kEH_Desc": "Man, dancing, right leg vertical, left knee in front of the right leg, left foot behind the right leg, right arm extended in front, forearm horizontal, hand palm upwards, left arm raised in back, left hand above the head, hand palm inwards, with a dotted line going from hand palm to hand palm.",
     "kEH_Func": "Classifier fear/veneration",
     "kEH_FVal": "hꜣ-snḏ",
     "kEH_UniK": "HJ A236",
@@ -14237,7 +14335,7 @@ unikemet = {
   "𓗯": {
     "kEH_Cat": "A-20-016",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, wearing the red crown (S3) and a long straight beard, right arm forward, on a 45° downward angle, left arm towards the front, left hand in front of the body, at the hight of the shoulder, holding a sceptre (S42).",
+    "kEH_Desc": "King, standing, wearing the red crown (S3) and a long straight beard, right arm forwards, on a 45° downward angle, left arm towards the front, left hand in front of the body, at the height of the shoulder, holding a sceptre (S42).",
     "kEH_Func": "Logogram (the King of Lower Egypt)",
     "kEH_FVal": "bꞽ.ty",
     "kEH_UniK": "HJ A302D",
@@ -14256,7 +14354,7 @@ unikemet = {
   "𓗱": {
     "kEH_Cat": "A-20-022",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing kilt, right arm extended in front, held horizontally, holding a sistrum (Y18), left arm forwards on a 45° degree angle, holding a bead-necklace with counterweight at the counterweight.",
+    "kEH_Desc": "Man, standing, wearing kilt, right arm extended in front, held horizontally, holding a sistrum (Y18), left arm forwards on a 45° degree angle, holding a bead-necklace with counterweight.",
     "kEH_Func": "Logogram (Ihy (divinity))",
     "kEH_FVal": "ꞽḥy",
     "kEH_UniK": "A239A",
@@ -14266,7 +14364,7 @@ unikemet = {
   "𓗲": {
     "kEH_Cat": "A-20-023",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, naked, with a side-lock, standing, right arm extended in front, held horizontally, holding a sistrum (Y18), left arm forwards on a 45° degree angle, holding a bead-necklace with counterweight at the counterweight.",
+    "kEH_Desc": "Child, naked, with a side-lock, standing, right arm extended in front, held horizontally, holding a sistrum (Y18), left arm forwards on a 45° degree angle, holding a bead-necklace with counterweight.",
     "kEH_Func": "Logogram (the musician)",
     "kEH_FVal": "ꞽḥy",
     "kEH_UniK": "A239S",
@@ -14276,7 +14374,7 @@ unikemet = {
   "𓗳": {
     "kEH_Cat": "A-20-024",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, naked, with a side-lock, standing, right arm extended in front, held horizontally, holding a sistrum (Y8), left arm forwards on a 45° degree angle, holding a bead-necklace with counterweight at the counterweight.",
+    "kEH_Desc": "Child, naked, with a side-lock, standing, right arm extended in front, held horizontally, holding a sistrum (Y8), left arm forwards on a 45° degree angle, holding a bead-necklace with counterweight.",
     "kEH_Func": "Logogram (the great god)",
     "kEH_FVal": "nṯr-ꜥꜣ",
     "kEH_UniK": "A239F"
@@ -14284,7 +14382,7 @@ unikemet = {
   "𓗴": {
     "kEH_Cat": "A-20-026",
     "kEH_Core": "C",
-    "kEH_Desc": "The king, wearing the white crown (S1),  standing, right arm in front, right hand at the hight of the shoulder, holding a sistrum (Y8), left arm hanging beside the body, holding a flagellum and crook (S38) horizontally.",
+    "kEH_Desc": "King, wearing the white crown (S1), standing, right arm in front, right hand at the height of the shoulder, holding a sistrum (Y8), left arm hanging beside the body, holding a flagellum and crook (S38) horizontally.",
     "kEH_Func": "Logogram (King of UE)",
     "kEH_FVal": "n(y)-sw.t",
     "kEH_UniK": "A239N"
@@ -14300,7 +14398,7 @@ unikemet = {
   "𓗶": {
     "kEH_Cat": "A-20-030",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, naked, with a side-lock and wearing the double-crown (S5), standing, left arm extended in front, held horizontally, holding a sistrum (Y8), right arm forward, below the left, holding a bead-necklace with counterweight at the counterweight.",
+    "kEH_Desc": "Child, naked, with a side-lock and wearing the double-crown (S5), standing, left arm extended in front, held horizontally, holding a sistrum (Y8), right arm forward, below the left, holding a bead-necklace with counterweight.",
     "kEH_Func": "Logogram (the great god)",
     "kEH_FVal": "nṯr-ꜥꜣ",
     "kEH_UniK": "A239O",
@@ -14334,7 +14432,7 @@ unikemet = {
   "𓗺": {
     "kEH_Cat": "A-20-048",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, naked, with side-lock and wearing the hmhm crown (S61), standing, right arm extended in front, held horizontally, holding a sistrum (Y18), left arm forwards on a 45° degree angle, holding a bead-necklace with counterweight at the counterweight.",
+    "kEH_Desc": "Child, naked, with side-lock and wearing the hmhm crown (S61), standing, right arm extended in front, held horizontally, holding a sistrum (Y18), left arm forwards on a 45° degree angle, holding a bead-necklace with counterweight.",
     "kEH_Func": "Logogram (Harsomtus)",
     "kEH_FVal": "ḥr-smꜣ-tꜣ.wy ",
     "kEH_UniK": "A239M"
@@ -14342,7 +14440,7 @@ unikemet = {
   "𓗻": {
     "kEH_Cat": "A-20-050",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing a long sash-kilt, both arms forward, holding a triangular harp (Y16) at the hight of the chest.",
+    "kEH_Desc": "Man, standing, wearing a long sash-kilt, both arms forward, holding a triangular harp (Y16) at the height of the chest.",
     "kEH_Func": "Logogram (to sing)",
     "kEH_FVal": "ḥsꞽ ",
     "kEH_UniK": "HJ A241",
@@ -14379,7 +14477,7 @@ unikemet = {
   "𓗿": {
     "kEH_Cat": "A-20-057",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, arms at either side of the body, holding a oval drum between the waist and the knees.",
+    "kEH_Desc": "Man, standing, arms at either side of the body, holding an oval drum between the waist and the knees.",
     "kEH_Func": "Classifier drum",
     "kEH_FVal": "mḳmḳ",
     "kEH_UniK": "HJ A245A",
@@ -14389,7 +14487,7 @@ unikemet = {
   "𓘀": {
     "kEH_Cat": "A-20-058",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm raised, hand horizontal at the hight of the shoulder, handpalm upwards, with a drum/tambourine slightly above the hand, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing, right arm raised, hand horizontal at the height of the shoulder, hand palm upwards, with a drum/tambourine slightly above the hand, left arm hanging beside the body.",
     "kEH_Func": "Classifier striking a drum",
     "kEH_FVal": "sr",
     "kEH_UniK": "HJ A245C",
@@ -14399,7 +14497,7 @@ unikemet = {
   "𓘁": {
     "kEH_Cat": "A-20-062",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, both arms extended forwards, holding a drum/tambourine at the hight of the shoulder.",
+    "kEH_Desc": "Man, seated, right knee raised, both arms extended forwards, holding a drum/tambourine at the height of the shoulder.",
     "kEH_Func": "Logogram (musician/percussionist)",
     "kEH_FVal": "ḫn.w",
     "kEH_UniK": "A245E"
@@ -14407,7 +14505,7 @@ unikemet = {
   "𓘂": {
     "kEH_Cat": "A-20-063",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms forwards, right  hand at the hight of the shoulder, holding a tambourine, left arm raised below it, as if to beat the tambourine.",
+    "kEH_Desc": "Man, standing, both arms forwards, right hand at the height of the shoulder, holding a tambourine, left arm raised below it, as if to beat the tambourine.",
     "kEH_Func": "Classifier beating, striking",
     "kEH_FVal": "dbdb",
     "kEH_UniK": "HJ A245D",
@@ -14417,7 +14515,7 @@ unikemet = {
   "𓘃": {
     "kEH_Cat": "A-20-066",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, arms at either side of the body, right ahand at the hight of the waist, left land at the hight of the head, playing a lute which crosses over the chest.",
+    "kEH_Desc": "Man, standing, arms at either side of the body, right hand at the height of the waist, left land at the height of the head, playing a lute which crosses over the chest.",
     "kEH_Func": "Classifier lute player",
     "kEH_FVal": "ṯnf",
     "kEH_UniK": "A528"
@@ -14516,7 +14614,7 @@ unikemet = {
   "𓘍": {
     "kEH_Cat": "A-21-018",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, right arm forward, holding a spear with the point downwards, left arm hanging beside the body, on top of an bovid, lying on the ground, legs folded under the body, tail down.",
+    "kEH_Desc": "Man, standing, right arm forward, holding a spear with the point downwards, left arm hanging beside the body, on top of a bovid, lying on the ground, legs folded under the body, tail down.",
     "kEH_Func": "Logogram (triomphator)",
     "kEH_FVal": "dwn.ty",
     "kEH_UniK": "HJ A251",
@@ -14553,7 +14651,7 @@ unikemet = {
   "𓘑": {
     "kEH_Cat": "A-21-022",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) upon his head, seated between the horns of a bull (bovid), standing; arms at either side of the child, holding the horns of the bull.",
+    "kEH_Desc": "Child, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) upon his head, seated between the horns of a bull (bovid), standing; arms at either side of the child, holding the horns of the bull.",
     "kEH_Func": "Logogram (part of the sꜣ-rꜥ nb ḫꜥ.w construction)",
     "kEH_FVal": "sꜣ-rꜥ-nb",
     "kEH_UniK": "HJ A254",
@@ -14572,7 +14670,7 @@ unikemet = {
   "𓘓": {
     "kEH_Cat": "A-21-025",
     "kEH_Core": "C",
-    "kEH_Desc": "The king, standing on top of a bovid, lying down, legs folded under the body, tail down; wearing the red crown (S3), right arm forward, holding a staff and a piece of rope which loops in front of the staf, connecting to the head of the bovid, left arm in front of the body, holding the flagellum and crook, resting against the left shoulder.",
+    "kEH_Desc": "The king, standing on top of a bovid, lying down, legs folded under the body, tail down; wearing the red crown (S3), right arm forward, holding a staff and a piece of rope which loops in front of the staff, connecting to the head of the bovid, left arm in front of the body, holding the flagellum and crook, resting against the left shoulder.",
     "kEH_Func": "Classifier?",
     "kEH_FVal": "wnty",
     "kEH_UniK": "HJ A428",
@@ -14593,7 +14691,7 @@ unikemet = {
   "𓘕": {
     "kEH_Cat": "A-21-028",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing behind a hippotamus, right arm forward, holding the tail of the hippotamus, left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing behind a hippopotamus, right arm forward, holding the tail of the hippopotamus, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram (lapis-lazuli)",
     "kEH_FVal": "ḫsbḏ",
     "kEH_UniK": "HJ A342",
@@ -14604,7 +14702,7 @@ unikemet = {
   "𓘖": {
     "kEH_Cat": "A-21-029",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing on top of a hippopotamus, right arm forward, holding a horizontal staff or spear (if spear, speartip down), left arm hanging beside the body.",
+    "kEH_Desc": "Man, standing on top of a hippopotamus, right arm forward, holding a horizontal staff or spear (if spear, spear tip down), left arm hanging beside the body.",
     "kEH_Func": "Logogram (triomphator)",
     "kEH_FVal": "dwn.ty",
     "kEH_UniK": "HJ A259",
@@ -14652,7 +14750,7 @@ unikemet = {
   "𓘛": {
     "kEH_Cat": "A-21-036",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, both arms forward, holding a fishing rod at 45°, fishing line vertical, connecting to a fish, between the fishing line and the toes of the man, slightly tilted upwards.",
+    "kEH_Desc": "Man, standing, both arms forward, holding a fishing rod at 45° degree, fishing line vertical, connecting to a fish, between the fishing line and the toes of the man, slightly tilted upwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wḥꜥ",
     "kEH_UniK": "HJ A430",
@@ -14680,7 +14778,7 @@ unikemet = {
   "𓘞": {
     "kEH_Cat": "A-23-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, seated on nothing, forelegs spread, right arm raised in front, hand vertical, handpalm outwards, left arm hanging beside the body.",
+    "kEH_Desc": "Child, seated on nothing, forelegs spread, right arm raised in front, hand vertical, hand palm outwards, left arm hanging beside the body.",
     "kEH_Func": "Classifier to sit, to be comfortable",
     "kEH_FVal": "snḏm",
     "kEH_UniK": "A275",
@@ -14743,7 +14841,7 @@ unikemet = {
   "𓘥": {
     "kEH_Cat": "A-23-023",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) upon his head, seated on nothing, forelegs spread, right arm raised in front with hand to mouth, left arm hanging beside the body.",
+    "kEH_Desc": "Child, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) upon his head, seated on nothing, forelegs spread, right arm raised in front with hand to mouth, left arm hanging beside the body.",
     "kEH_Func": "Logogram (Son of Re)",
     "kEH_FVal": "sꜣ-rꜥ",
     "kEH_UniK": "HJ A272",
@@ -14754,7 +14852,7 @@ unikemet = {
   "𓘦": {
     "kEH_Cat": "A-23-024",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) upon his head, seated on nothing, one leg visible, right arm raised in front with hand to mouth, left arm hanging beside the body.",
+    "kEH_Desc": "Child, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) upon his head, seated on nothing, one leg visible, right arm raised in front with hand to mouth, left arm hanging beside the body.",
     "kEH_Func": "Logogram (Son of Re)",
     "kEH_FVal": "sꜣ-rꜥ",
     "kEH_UniK": "A272B"
@@ -14762,7 +14860,7 @@ unikemet = {
   "𓘧": {
     "kEH_Cat": "A-23-025",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, with a cobra in repose (Naja haja), standing up (I80) on his head, seated on nothing, forelegs spread, right arm raised in front with hand to mouth, left arm hanging beside the body.",
+    "kEH_Desc": "Child, with a cobra in repose (Naja haje), standing up (I80) on his head, seated on nothing, forelegs spread, right arm raised in front with hand to mouth, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "r + ḫ",
     "kEH_UniK": "HJ A273",
@@ -14773,7 +14871,7 @@ unikemet = {
   "𓘨": {
     "kEH_Cat": "A-23-026",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, with the head of a cobra (Naja haja), standing up, with expanded hood (Uraeus) on his head, seated on nothing, forelegs spread, right arm raised in front with hand to mouth, left arm hanging beside the body.",
+    "kEH_Desc": "Child, with the head of a cobra (Naja haje), standing up, with expanded hood (Uraeus) on his head, seated on nothing, forelegs spread, right arm raised in front with hand to mouth, left arm hanging beside the body.",
     "kEH_Func": "Classifier child",
     "kEH_FVal": "nḫn.w",
     "kEH_UniK": "A273A"
@@ -14807,7 +14905,7 @@ unikemet = {
   "𓘬": {
     "kEH_Cat": "A-23-035",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, seated on nothing, forelegs spread, both arms forward, left arm angling downwards, holding a cone vertically at the hight of the waist, right arm raised, angled up, right hand above the cone, handpalm down.",
+    "kEH_Desc": "Child, seated on nothing, forelegs spread, both arms forward, left arm angling downwards, holding a cone vertically at the height of the waist, right arm raised, angled up, right hand above the cone, hand palm down.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫft-ḥr",
     "kEH_UniK": "A264A"
@@ -14815,7 +14913,7 @@ unikemet = {
   "𓘭": {
     "kEH_Cat": "A-23-036",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, seated on nothing, one leg visible, both arms forward, left arm angling downwards, holding a cone vertically at the hight of the waist, right arm raised, angled up, right hand above the cone, handpalm down.",
+    "kEH_Desc": "Child, seated on nothing, one leg visible, both arms forward, left arm angling downwards, holding a cone vertically at the height of the waist, right arm raised, angled up, right hand above the cone, hand palm down.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫft-ḥr",
     "kEH_UniK": "A264B"
@@ -14859,7 +14957,7 @@ unikemet = {
   "𓘲": {
     "kEH_Cat": "A-23-044",
     "kEH_Core": "C",
-    "kEH_Desc": "A god, with a long curved beard, seated on nothing, forelegs spread, rigth arm extended forwards, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the hight of the seated god, left arm hanging beside the body.",
+    "kEH_Desc": "A god, with a long-curved beard, seated on nothing, forelegs spread, right arm extended forwards, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the height of the seated god, left arm hanging beside the body.",
     "kEH_Func": "Classifier Orion",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "A491A"
@@ -14902,7 +15000,7 @@ unikemet = {
   "𓘷": {
     "kEH_Cat": "A-23-055",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, seated, both knees raised, feet horizontal, heels touching ties, right arm raised in front with hand to moth, left arm hanging beside the body; on top of a lotus flower, facing upwards, with a short stalk, and a bud at either side (M224A).",
+    "kEH_Desc": "Child, seated, both knees raised, feet horizontal, heels touching ties, right arm raised in front with hand to mouth, left arm hanging beside the body; on top of a lotus flower, facing upwards, with a short stalk, and a bud at either side (M224A).",
     "kEH_Func": "Logogram (crowns, appearances)",
     "kEH_FVal": "ḫꜥ.w",
     "kEH_UniK": "HJ A279",
@@ -14924,7 +15022,7 @@ unikemet = {
   "𓘹": {
     "kEH_Cat": "A-23-058",
     "kEH_Core": "C",
-    "kEH_Desc": "Child, naked, standing, right arm raised in front with hand to mouth, with a curved line running from the right wrist/elbow the the left foot, left arm hanging beside the body.",
+    "kEH_Desc": "Child, naked, standing, right arm raised in front with hand to mouth, with a curved line running from the right wrist/elbow the left foot, left arm hanging beside the body.",
     "kEH_Func": "Classifier child",
     "kEH_FVal": "sf(y)",
     "kEH_UniK": "A281A"
@@ -14938,7 +15036,7 @@ unikemet = {
   "𓘻": {
     "kEH_Cat": "A-23-065",
     "kEH_Core": "C",
-    "kEH_Desc": "Child seated on nothing, one leg visible, both arms raised in front, hands at the hight of the face, handpalms outwards.",
+    "kEH_Desc": "Child seated on nothing, one leg visible, both arms raised in front, hands at the height of the face, hand palms outwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫn",
     "kEH_UniK": "A531"
@@ -14990,7 +15088,7 @@ unikemet = {
   "𓙁": {
     "kEH_Cat": "A-25-011",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with long curved beard and long wig, seated on a block throne, both arms extended forwards, forearms horizontal, one above another, holding a flagellum (S45).",
+    "kEH_Desc": "God, with long-curved beard and long wig, seated on a block throne, both arms extended forwards, forearms horizontal, one above another, holding a flagellum (S45).",
     "kEH_Func": "Logogram (to be noble)",
     "kEH_FVal": "šps",
     "kEH_UniK": "HJ A051A",
@@ -15001,7 +15099,7 @@ unikemet = {
   "𓙂": {
     "kEH_Cat": "A-25-012",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with long curved beard and long wig, seated on a block throne, on top of a base, both arms extended forwards, forearms horizontal, one above another, holding a flagellum (S45); with a spear, with a straight shaft, topped with the head of a falcon, with a triangular spearhead above the head of the falcon, in front of the throne, on the base.",
+    "kEH_Desc": "God, with long-curved beard and long wig, seated on a block throne, on top of a base, both arms extended forwards, forearms horizontal, one above another, holding a flagellum (S45); with a spear, with a straight shaft, topped with the head of a falcon, with a triangular spearhead above the head of the falcon, in front of the throne, on the base.",
     "kEH_Func": "Logogram (the noble speech)",
     "kEH_FVal": "mdw-šps",
     "kEH_UniK": "A051Q"
@@ -15030,7 +15128,7 @@ unikemet = {
   "𓙅": {
     "kEH_Cat": "A-25-019",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with long curved beard and long wig, seated on a block throne, both arms extended forwards, forearms horizontal, one above another, holding a sceptre with a straight shaft, topped with the head of the Seth animal.",
+    "kEH_Desc": "God, with long-curved beard and long wig, seated on a block throne, both arms extended forwards, forearms horizontal, one above another, holding a sceptre with a straight shaft, topped with the head of the Seth animal.",
     "kEH_Func": "Logogram (noble, splendid)",
     "kEH_FVal": "šps",
     "kEH_UniK": "HJ A051D",
@@ -15041,7 +15139,7 @@ unikemet = {
   "𓙆": {
     "kEH_Cat": "A-25-021",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with a long curved beard and long wig, seated on a block throne, both arms extended forwards, forearms horizontal, one above the other, top hand holding a tie or strap, used with sandals (ankh-sign, S34) in one hand, horizontally, with the bottom hand opened with the palm facing upwards.",
+    "kEH_Desc": "God, with a long-curved beard and long wig, seated on a block throne, both arms extended forwards, forearms horizontal, one above the other, top hand holding a tie or strap, used with sandals (ankh-sign, S34) in one hand, horizontally, with the bottom hand opened with the palm facing upwards.",
     "kEH_Func": "Logogram (to be noble)",
     "kEH_FVal": "špsꞽ",
     "kEH_UniK": "A051H"
@@ -15049,7 +15147,7 @@ unikemet = {
   "𓙇": {
     "kEH_Cat": "A-25-022",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with a long curved beard and long wig, seated on a block throne, on top of a base, right arm extended forwards, hand at the hight of the waist, extended beyond the knee, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), and a tie or strap, used with sandals (ankh-sign, S34), at the loop, horizontally; left arm forward, hand above the lap, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop, horizontally.",
+    "kEH_Desc": "God, with a long-curved beard and long wig, seated on a block throne, on top of a base, right arm extended forwards, hand at the height of the waist, extended beyond the knee, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), and a tie or strap, used with sandals (ankh-sign, S34), at the loop, horizontally; left arm forward, hand above the lap, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop, horizontally.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ꞽtmw",
     "kEH_UniK": "A051R"
@@ -15075,7 +15173,7 @@ unikemet = {
   "𓙊": {
     "kEH_Cat": "A-25-034",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with long curved beard and uraeus on the forehead, seated on a block throne on a base, no arms visible, with a flagellum (S45) on top of its knee.",
+    "kEH_Desc": "God, with long-curved beard and uraeus on the forehead, seated on a block throne on a base, no arms visible, with a flagellum (S45) on top of its knee.",
     "kEH_Func": "Logogram (to be noble)",
     "kEH_FVal": "špsꞽ",
     "kEH_UniK": "A063C"
@@ -15083,7 +15181,7 @@ unikemet = {
   "𓙋": {
     "kEH_Cat": "A-25-035",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with long curved beard and uraeus on the forehead, seated on a block throne, both arms in front of the chest, right hand holding a crook (S38), opening inward, angled over the right shoulder, left hand holding a flagellum (S45), angled over the left shoulder.",
+    "kEH_Desc": "God, with long-curved beard and uraeus on the forehead, seated on a block throne, both arms in front of the chest, right hand holding a crook (S38), opening inward, angled over the right shoulder, left hand holding a flagellum (S45), angled over the left shoulder.",
     "kEH_UniK": "HJ A063B",
     "kEH_JSesh": "A63B",
     "kEH_HG": "A63B"
@@ -15102,7 +15200,7 @@ unikemet = {
   "𓙍": {
     "kEH_Cat": "A-25-037",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with long curved beard,seated on a chair, with a two feather headdress mounted on the horns of a ram on its head, both arms extended forwards, forearms horizontal, one above the other, holding a flagellum (S45) and crook, opening inwards (S38). ",
+    "kEH_Desc": "God, with long-curved beard, seated on a chair, with a two-feather headdress mounted on the horns of a ram on its head, both arms extended forwards, forearms horizontal, one above the other, holding a flagellum (S45) and crook, opening inwards (S38). ",
     "kEH_Func": "Logogram/phonemogram (costly offerings)",
     "kEH_FVal": "šps.w",
     "kEH_UniK": "HJ A288",
@@ -15151,7 +15249,7 @@ unikemet = {
   "𓙓": {
     "kEH_Cat": "A-26-009",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing a coif with uraeus.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing a coif with uraeus.",
     "kEH_UniK": "A041B"
   },
   "𓙔": {
@@ -15165,7 +15263,7 @@ unikemet = {
   "𓙕": {
     "kEH_Cat": "A-26-016",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long wig, holding a holding a flagellum (S45).",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long wig, holding a holding a flagellum (S45).",
     "kEH_Func": "Classifier divinity",
     "kEH_UniK": "A040B",
     "kEH_JSesh": "A40B",
@@ -15218,7 +15316,7 @@ unikemet = {
   "𓙛": {
     "kEH_Cat": "A-26-035",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long wig, holding a tie or strap, used with sandals (ankh-sign, S34), which angles forward.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long wig, holding a tie or strap, used with sandals (ankh-sign, S34), which angles forward.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ꞽtmw",
     "kEH_UniK": "A040E",
@@ -15238,7 +15336,7 @@ unikemet = {
   "𓙝": {
     "kEH_Cat": "A-26-038",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long wig, holding a knife (T30A), angled slightly forward.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long wig, holding a knife (T30A), angled slightly forward.",
     "kEH_Func": "Logogram (first person singular)",
     "kEH_FVal": "ꞽ",
     "kEH_UniK": "HJ A290",
@@ -15249,7 +15347,7 @@ unikemet = {
   "𓙞": {
     "kEH_Cat": "A-26-039",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long wig, holding a sceptre (S42) vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long wig, holding a sceptre (S42) vertically.",
     "kEH_Func": "Logogram (powerful one)",
     "kEH_FVal": "sḫm",
     "kEH_UniK": "HJ A291",
@@ -15260,7 +15358,7 @@ unikemet = {
   "𓙟": {
     "kEH_Cat": "A-26-040",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long wig, holding a club used by washer-men for beating laundry (U36) vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long wig, holding a club used by washermen for beating laundry (U36) vertically.",
     "kEH_Func": "Logogram (majesty)",
     "kEH_FVal": "ḥm",
     "kEH_UniK": "HJ A292",
@@ -15339,7 +15437,7 @@ unikemet = {
   "𓙧": {
     "kEH_Cat": "A-27-010",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) upon his head, with long curved beard and long wig, right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40); left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) upon his head, with long-curved beard and long wig, right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40); left arm hanging beside the body.",
     "kEH_Func": "Logogram (noble, splendid)",
     "kEH_FVal": "šps",
     "kEH_UniK": "HJ C261",
@@ -15402,7 +15500,7 @@ unikemet = {
   "𓙮": {
     "kEH_Cat": "A-27-031",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, with uraeus on the forehead, both arms raised in front, hands held vertically, handpalms outwards.",
+    "kEH_Desc": "Man, standing, with uraeus on the forehead, both arms raised in front, hands held vertically, hand palms outwards.",
     "kEH_Func": "Classifier praying, worshipping",
     "kEH_FVal": "smnḥ",
     "kEH_UniK": "A030A"
@@ -15411,14 +15509,14 @@ unikemet = {
     "kEH_Cat": "A-28-003",
     "kEH_Core": "C",
     "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the white crown (S1).",
-    "kEH_Func": "Classsifier king",
+    "kEH_Func": "Classifier king",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "A043N"
   },
   "𓙰": {
     "kEH_Cat": "A-28-004",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing the white crown (S1).",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing the white crown (S1).",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "kꜣ-ḥtp",
     "kEH_UniK": "A043X",
@@ -15428,7 +15526,7 @@ unikemet = {
     "kEH_Cat": "A-28-006",
     "kEH_Core": "C",
     "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the white crown with uraeus (S1A), holding a tie or strap, used with sandals (ankh-sign, S34) vertically.",
-    "kEH_Func": "Classsifier king",
+    "kEH_Func": "Classifier king",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "A043U",
     "kEH_JSesh": "A43A",
@@ -15438,7 +15536,7 @@ unikemet = {
   "𓙲": {
     "kEH_Cat": "A-28-009",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing the white crown (S1), holding a flagellum (S45).",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing the white crown (S1), holding a flagellum (S45).",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḫnt.y-ꞽmn.tyw",
     "kEH_UniK": "A043Q",
@@ -15448,7 +15546,7 @@ unikemet = {
     "kEH_Cat": "A-28-011",
     "kEH_Core": "C",
     "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the white crown with uraeus (S1A), holding a flagellum (S45).",
-    "kEH_Func": "Classsifier king",
+    "kEH_Func": "Classifier king",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "HJ A043B",
     "kEH_JSesh": "A43B",
@@ -15458,7 +15556,7 @@ unikemet = {
     "kEH_Cat": "A-28-012",
     "kEH_Core": "C",
     "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the white crown (S1), holding a crook (S38) vertically, with the opening inwards.",
-    "kEH_Func": "Classsifier king",
+    "kEH_Func": "Classifier king",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "A043R",
     "kEH_IFAO": "42,8"
@@ -15466,7 +15564,7 @@ unikemet = {
   "𓙵": {
     "kEH_Cat": "A-28-013",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing the white crown with uraeus (S1A), holding a crook vertically, with the opening inwards.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing the white crown with uraeus (S1A), holding a crook vertically, with the opening inwards.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "nṯr",
     "kEH_UniK": "HJ A043C",
@@ -15489,7 +15587,7 @@ unikemet = {
     "kEH_Cat": "A-28-015",
     "kEH_Core": "C",
     "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the white crown (S1), holding a crook (S38) vertically, with the opening outwards.",
-    "kEH_Func": "Classsifier king",
+    "kEH_Func": "Classifier king",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "A043S"
   },
@@ -15497,7 +15595,7 @@ unikemet = {
     "kEH_Cat": "A-28-018",
     "kEH_Core": "C",
     "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the white crown with uraeus (S1A), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
-    "kEH_Func": "Classsifier king",
+    "kEH_Func": "Classifier king",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "HJ A043D",
     "kEH_JSesh": "A43D",
@@ -15507,7 +15605,7 @@ unikemet = {
   "𓙹": {
     "kEH_Cat": "A-28-020",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing the white crown (S1), holding a flagellum (S45) and crook (S38), with the opening inwards.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing the white crown (S1), holding a flagellum (S45) and crook (S38), with the opening inwards.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḫnt.y-ꞽmn.tyw",
     "kEH_UniK": "HJ A043L",
@@ -15518,7 +15616,7 @@ unikemet = {
   "𓙺": {
     "kEH_Cat": "A-28-021",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing the white crown with uraeus (S1A), holding a flagellum (S45) and crook (S38), with the opening inwards.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing the white crown with uraeus (S1A), holding a flagellum (S45) and crook (S38), with the opening inwards.",
     "kEH_Func": "Logogram (king of UE)",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "HJ A043E",
@@ -15529,7 +15627,7 @@ unikemet = {
   "𓙻": {
     "kEH_Cat": "A-28-024",
     "kEH_Core": "C",
-    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straigth beard, wearing the white crown with uraeus (S1A), holding a flagellum (S45) and mace (T3).",
+    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the white crown with uraeus (S1A), holding a flagellum (S45) and mace (T3).",
     "kEH_Func": "Logogram (king of UE)",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "HJ A043I",
@@ -15539,7 +15637,7 @@ unikemet = {
   "𓙼": {
     "kEH_Cat": "A-28-025",
     "kEH_Core": "C",
-    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straigth beard, wearing the white crown with uraeus (S1A), holding a sedge (M23), with the tip curving outwards.",
+    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the white crown with uraeus (S1A), holding a sedge (M23), with the tip curving outwards.",
     "kEH_Func": "Logogram (king of UE)",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "HJ A043F",
@@ -15550,7 +15648,7 @@ unikemet = {
   "𓙽": {
     "kEH_Cat": "A-28-026",
     "kEH_Core": "C",
-    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straigth beard, wearing the white crown with uraeus (S1A), holding a club used by washer-men for beating laundry (U36) vertically.",
+    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the white crown with uraeus (S1A), holding a club used by washermen for beating laundry (U36) vertically.",
     "kEH_Func": "Logogram (majesty)",
     "kEH_FVal": "ḥm",
     "kEH_UniK": "HJ A043G",
@@ -15577,7 +15675,7 @@ unikemet = {
   "𓚀": {
     "kEH_Cat": "A-28-031",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, foot flat on the ground, heels touching the tighs, with a long curved beard, wearing the white crown (S1), both arms forward, holding a flagellum (S45).",
+    "kEH_Desc": "God, seated, both knees up, foot flat on the ground, heels touching the thighs, with a long-curved beard, wearing the white crown (S1), both arms forward, holding a flagellum (S45).",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "wsꞽr",
     "kEH_UniK": "HJ A274A",
@@ -15587,7 +15685,7 @@ unikemet = {
   "𓚁": {
     "kEH_Cat": "A-28-033",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block throne, with a long curved beard, wearing the white crown (S1), no arms visible.",
+    "kEH_Desc": "God, seated on a block throne, with a long-curved beard, wearing the white crown (S1), no arms visible.",
     "kEH_Func": "Classifier Osiris",
     "kEH_FVal": "wsꞽr",
     "kEH_UniK": "A299G"
@@ -15596,7 +15694,7 @@ unikemet = {
     "kEH_Cat": "A-28-036",
     "kEH_Core": "C",
     "kEH_Desc": "King, seated on a block-throne, with a long straight beard, wearing the white crown (S1), no arms visible, with a flagellum on his knee.",
-    "kEH_Func": "Classsifier king",
+    "kEH_Func": "Classifier king",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "A299I",
     "kEH_IFAO": "43,13"
@@ -15604,7 +15702,7 @@ unikemet = {
   "𓚃": {
     "kEH_Cat": "A-28-037",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block-throne, with a long curved beard, wearing the white crown (S1), no arms visible, with a flagellum (S430 and the crook (S38), opening upwards, on his knee.",
+    "kEH_Desc": "God, seated on a block-throne, with a long-curved beard, wearing the white crown (S1), no arms visible, with a flagellum (S430 and the crook (S38), opening upwards, on his knee.",
     "kEH_UniK": "A299H"
   },
   "𓚄": {
@@ -15629,23 +15727,23 @@ unikemet = {
   "𓚆": {
     "kEH_Cat": "A-28-054",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, with a long straight beard, wearing the white crown (S1), right arm forward, holding a stem of papyrus with a flowering bud (M127), of the hight of the king, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
-    "kEH_Func": "Logogram (king of UE and land, when occuring together with king of LE forms n(.y)-sw.t-bꞽ.ty nb tꜣ.wy)",
+    "kEH_Desc": "King, standing, with a long straight beard, wearing the white crown (S1), right arm forward, holding a stem of papyrus with a flowering bud (M127), of the height of the king, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
+    "kEH_Func": "Logogram (king of UE and land, when occurring together with king of LE forms n(.y)-sw.t-bꞽ.ty nb tꜣ.wy)",
     "kEH_FVal": "n(.y)-sw.t & tꜣ",
     "kEH_UniK": "A300H"
   },
   "𓚇": {
     "kEH_Cat": "A-28-055",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, with a long straight beard, wearing the white crown (S1), right arm forward, holding a stem of papyrus with a flowering bud (M127), of the hight of the king, left arm hanging beside the body.",
-    "kEH_Func": "Logogram (king of UE and land when occuring together with red crown wearing variant forms n(.y)-sw.t-bꞽ.ty nb tꜣ.wy)",
+    "kEH_Desc": "King, standing, with a long straight beard, wearing the white crown (S1), right arm forward, holding a stem of papyrus with a flowering bud (M127), of the height of the king, left arm hanging beside the body.",
+    "kEH_Func": "Logogram (king of UE and land when occurring together with red crown wearing variant forms n(.y)-sw.t-bꞽ.ty nb tꜣ.wy)",
     "kEH_FVal": "n(.y)-sw.t & tꜣ",
     "kEH_UniK": "A300I"
   },
   "𓚈": {
     "kEH_Cat": "A-28-056",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, with a long straight beard, wearing the white crown (S1), right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the hight of the king, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
+    "kEH_Desc": "King, standing, with a long straight beard, wearing the white crown (S1), right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the height of the king, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
     "kEH_Func": "Logogram (King of UE)",
     "kEH_FVal": "n(.y)-sw.t",
     "kEH_UniK": "A300J"
@@ -15653,7 +15751,7 @@ unikemet = {
   "𓚉": {
     "kEH_Cat": "A-28-057",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright on a platform, with a long curved beard, wearing the white crown (S1), both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, with a tie or strap, used with sandals (ankh-sign, S34), on the middle of the headpiece of the staff, angled forwards.",
+    "kEH_Desc": "God, in mummy form, standing upright on a platform, with a long-curved beard, wearing the white crown (S1), both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, with a tie or strap, used with sandals (ankh-sign, S34), on the middle of the headpiece of the staff, angled forwards.",
     "kEH_Func": "Logogram (Osiris)",
     "kEH_FVal": "wsꞽr",
     "kEH_UniK": "A521"
@@ -15692,7 +15790,7 @@ unikemet = {
   "𓚍": {
     "kEH_Cat": "A-29-012",
     "kEH_Core": "C",
-    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the red crown with (S3), holding  a crook (S38) vertically, with the opening inwards.",
+    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the red crown with (S3), holding a crook (S38) vertically, with the opening inwards.",
     "kEH_Func": "Logogram (king of LE)",
     "kEH_FVal": "bꞽ.ty",
     "kEH_UniK": "HJ A045D",
@@ -15703,7 +15801,7 @@ unikemet = {
   "𓚎": {
     "kEH_Cat": "A-29-013",
     "kEH_Core": "C",
-    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the red crown with (S3), holding  a crook (S38) vertically, with the opening outwards.",
+    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the red crown with (S3), holding a crook (S38) vertically, with the opening outwards.",
     "kEH_Func": "Logogram (king of LE)",
     "kEH_FVal": "bꞽ.ty",
     "kEH_UniK": "A045G"
@@ -15711,7 +15809,7 @@ unikemet = {
   "𓚏": {
     "kEH_Cat": "A-29-014",
     "kEH_Core": "C",
-    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the red crown with (S3), holding  a tie or strap, used with sandals (ankh-sign, S34) vertically.",
+    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the red crown with (S3), holding a tie or strap, used with sandals (ankh-sign, S34) vertically.",
     "kEH_Func": "Classifier king",
     "kEH_FVal": "n(y)-sw.t",
     "kEH_UniK": "HJ A045E",
@@ -15721,7 +15819,7 @@ unikemet = {
   "𓚐": {
     "kEH_Cat": "A-29-017",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), right arm forward, right hand at the hight of the shoulder, holding a sceptre (S42), left arm forward, left hand at the hight of the waist, holding a stick/staff which runs from the right toe to the left hand, and a mace (T3), angled forward.",
+    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), right arm forward, right hand at the height of the shoulder, holding a sceptre (S42), left arm forward, left hand at the height of the waist, holding a stick/staff which runs from the right toe to the left hand, and a mace (T3), angled forward.",
     "kEH_Func": "Logogram (king of LE)",
     "kEH_FVal": "bꞽ.ty",
     "kEH_UniK": "HJ A302B",
@@ -15754,23 +15852,23 @@ unikemet = {
   "𓚓": {
     "kEH_Cat": "A-29-022",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), right arm forward, holding a stem of papyrus with a bud (M131), of the hight of the king, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
-    "kEH_Func": "Logogram (King of LE and land, when occuring together with King of UE forms n(.y)-sw.t-bꞽ.ty nb tꜣ.wy)",
+    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), right arm forward, holding a stem of papyrus with a bud (M131), of the height of the king, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
+    "kEH_Func": "Logogram (King of LE and land, when occurring together with King of UE forms n(.y)-sw.t-bꞽ.ty nb tꜣ.wy)",
     "kEH_FVal": "bꞽ.ty tꜣ",
     "kEH_UniK": "A302H"
   },
   "𓚔": {
     "kEH_Cat": "A-29-023",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), right arm forward, holding a stem of papyrus with a bud (M131), of the hight of the king, left arm hanging beside the body.",
-    "kEH_Func": "Logogram (King of LE and land, when occuring together with a white crown variant forms n(.y)-sw.t-bꞽ.ty nb tꜣ.wy)",
+    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), right arm forward, holding a stem of papyrus with a bud (M131), of the height of the king, left arm hanging beside the body.",
+    "kEH_Func": "Logogram (King of LE and land, when occurring together with a white crown variant forms n(.y)-sw.t-bꞽ.ty nb tꜣ.wy)",
     "kEH_FVal": "bꞽ.ty tꜣ",
     "kEH_UniK": "A302I"
   },
   "𓚕": {
     "kEH_Cat": "A-29-024",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the hight of the king, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
+    "kEH_Desc": "King, standing, with a long straight beard, wearing the red crown (S3), right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the height of the king, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
     "kEH_Func": "Logogram (King of UE)",
     "kEH_FVal": "n(.y)-sw.t",
     "kEH_UniK": "A302J"
@@ -15778,7 +15876,7 @@ unikemet = {
   "𓚖": {
     "kEH_Cat": "A-29-027",
     "kEH_Core": "C",
-    "kEH_Desc": "King, running, with a long straight beard, wearing the red crown (S3), right arm extended forwards, hand at the hight of the shoulder, holding a vertical hourglass-shaped shaped document holder (R88), left arm in front of the body.",
+    "kEH_Desc": "King, running, with a long straight beard, wearing the red crown (S3), right arm extended forwards, hand at the height of the shoulder, holding a vertical hourglass-shaped shaped document holder (R88), left arm in front of the body.",
     "kEH_Func": "Logogram (to run)",
     "kEH_FVal": "pḥrr",
     "kEH_UniK": "A303A"
@@ -15839,7 +15937,7 @@ unikemet = {
   "𓚜": {
     "kEH_Cat": "A-30-007",
     "kEH_Core": "C",
-    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the double crown (S5), holding a club used by washer-men for beating laundry (U36) vertically.",
+    "kEH_Desc": "King, seated, both knees up, with covered legs and arms, with a long straight beard, wearing the double crown (S5), holding a club used by washermen for beating laundry (U36) vertically.",
     "kEH_Func": "Classifier king/divinity",
     "kEH_FVal": "pꜣ-nṯr-mnḫ",
     "kEH_UniK": "HJ A304D",
@@ -15850,7 +15948,7 @@ unikemet = {
   "𓚝": {
     "kEH_Cat": "A-30-008",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing the double crown (S5), holding a crook (S38) vertically, with the opening inward.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing the double crown (S5), holding a crook (S38) vertically, with the opening inward.",
     "kEH_Func": "Classifier king/divinity",
     "kEH_FVal": "pꜣ-nṯr-mnḫ",
     "kEH_UniK": "HJ A304E",
@@ -15860,7 +15958,7 @@ unikemet = {
   "𓚞": {
     "kEH_Cat": "A-30-009",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing the double crown (S5), holding a flagellum (S45).",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing the double crown (S5), holding a flagellum (S45).",
     "kEH_Func": "Logogram (Atum)",
     "kEH_FVal": "ꞽtmw",
     "kEH_UniK": "HJ A304F",
@@ -15902,7 +16000,7 @@ unikemet = {
   "𓚢": {
     "kEH_Cat": "A-30-021",
     "kEH_Core": "C",
-    "kEH_Desc": "King, standing, with a long straight beard, wearing the double crown (S5), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the king, vertically, left arm hanging beside the body holding a flagellum (S45) horizontally.",
+    "kEH_Desc": "King, standing, with a long straight beard, wearing the double crown (S5), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the king, vertically, left arm hanging beside the body holding a flagellum (S45) horizontally.",
     "kEH_Func": "Logogram (king of ULE)",
     "kEH_FVal": "n(y)-sw.t-bꞽ.ty",
     "kEH_UniK": "A310E"
@@ -15917,15 +16015,15 @@ unikemet = {
   "𓚤": {
     "kEH_Cat": "A-30-027",
     "kEH_Core": "C",
-    "kEH_Desc": "The king, wearing the blue crown, prostrating on a base, right knee forward, left leg nearly horizontal, arm forward, holding a vessel with a pellet of incence upon it.",
-    "kEH_Func": "Pictogram prostate offering a vase of myrrh",
+    "kEH_Desc": "The king, wearing the blue crown, prostrating on a base, right knee forward, left leg nearly horizontal, arm forward, holding a vessel with a pellet of incense upon it.",
+    "kEH_Func": "Pictogram prostrate offering a vase of myrrh",
     "kEH_UniK": "A307A",
     "kEH_JSesh": "US1A22VARA"
   },
   "𓚥": {
     "kEH_Cat": "A-30-038",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on rams horns, right arm forward, holding a staff/stick that angles towards the man, left arm hanging besides the body.",
+    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on ram horns, right arm forward, holding a staff/stick that angles towards the man, left arm hanging besides the body.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.y",
     "kEH_UniK": "HJ A311",
@@ -15936,7 +16034,7 @@ unikemet = {
   "𓚦": {
     "kEH_Cat": "A-30-042",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on rams horns, right arm forward, holding a crook (S38) of the size of the man, vertically, left arm hanging besides the body, holding a flagellum (S45) horizontally.",
+    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on ram horns, right arm forward, holding a crook (S38) of the size of the man, vertically, left arm hanging besides the body, holding a flagellum (S45) horizontally.",
     "kEH_Func": "Classifier sovereign",
     "kEH_FVal": "ꞽt.y",
     "kEH_UniK": "HJ A311A",
@@ -15947,7 +16045,7 @@ unikemet = {
   "𓚧": {
     "kEH_Cat": "A-30-043",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on rams horns, right arm forward, holding a staff/stick that angles towards the man, left arm hanging besides the body, holding a flagellum (S45) horizontally.",
+    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on ram horns, right arm forward, holding a staff/stick that angles towards the man, left arm hanging besides the body, holding a flagellum (S45) horizontally.",
     "kEH_Func": "Classifier sovereign",
     "kEH_FVal": "ꞽt.y",
     "kEH_UniK": "HJ A311B",
@@ -15964,7 +16062,7 @@ unikemet = {
   "𓚩": {
     "kEH_Cat": "A-30-045",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on rams horns, right arm forward, holding a staff/stick that angles towards the man, left arm hanging besides the body, holding a mace with a pear-shaped head (T3) horizontally, mace-head sticking out in front of the legs.",
+    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on ram horns, right arm forward, holding a staff/stick that angles towards the man, left arm hanging besides the body, holding a mace with a pear-shaped head (T3) horizontally, mace-head sticking out in front of the legs.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.y",
     "kEH_UniK": "HJ A311C",
@@ -15974,7 +16072,7 @@ unikemet = {
   "𓚪": {
     "kEH_Cat": "A-30-046",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on rams horns, right arm forward, holding a crook (S38) of the size of the man, vertically, left arm hanging besides the body.",
+    "kEH_Desc": "Man, standing, wearing headdress consisting of a double plume mounted on ram horns, right arm forward, holding a crook (S38) of the size of the man, vertically, left arm hanging besides the body.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.y",
     "kEH_UniK": "HJ A311E",
@@ -15990,7 +16088,7 @@ unikemet = {
   "𓚬": {
     "kEH_Cat": "A-30-049",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing upon a standard used for carrying religious symbols (R12), wearing headdress consisting of a double plume mounted on rams horns, right arm forward, holding a crook (S38) of the size of the man, vertically, left arm hanging besides the body.",
+    "kEH_Desc": "Man, standing upon a standard used for carrying religious symbols (R12), wearing headdress consisting of a double plume mounted on ram horns, right arm forward, holding a crook (S38) of the size of the man, vertically, left arm hanging besides the body.",
     "kEH_Func": "Logogram/phonemogram (in ꜥnḏ.ty (Busiris))",
     "kEH_FVal": "ꜥnḏ",
     "kEH_UniK": "HJ A466",
@@ -16000,7 +16098,7 @@ unikemet = {
   "𓚭": {
     "kEH_Cat": "A-30-050",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, standing on a standard used for carrying religious symbols (R12), wearing headdress consisting of a double plume mounted on rams horns, right arm forward, holding a staff/stick that angles towards the man, left arm hanging besides the body.",
+    "kEH_Desc": "Man, standing on a standard used for carrying religious symbols (R12), wearing headdress consisting of a double plume mounted on ram horns, right arm forward, holding a staff/stick that angles towards the man, left arm hanging besides the body.",
     "kEH_Func": "Logogram (9th nome of UE)",
     "kEH_FVal": "ꜥnḏ.ty",
     "kEH_UniK": "HJ A466A",
@@ -16009,7 +16107,6 @@ unikemet = {
   },
   "𓚮": {
     "kEH_Cat": "A-30-055",
-    "kEH_Core": "C",
     "kEH_Desc": "God (Shu) seated, both knees up, with covered legs and arms, with a long, curved beard, with a feather (H6) on the head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Classifier majesty (specifically referring to Shu)",
     "kEH_FVal": "ḥm",
@@ -16067,7 +16164,7 @@ unikemet = {
   "𓚵": {
     "kEH_Cat": "A-32-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy with a long curved beard, wearing the white crown (S1), standing upright.",
+    "kEH_Desc": "A mummy with a long-curved beard, wearing the white crown (S1), standing upright.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "wsꞽr",
     "kEH_UniK": "HJ A341",
@@ -16077,7 +16174,7 @@ unikemet = {
   "𓚶": {
     "kEH_Cat": "A-32-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy with a long curved beard, wearing the white crown (S1), standing upright, covered arms crossed in front of the chest.",
+    "kEH_Desc": "A mummy with a long-curved beard, wearing the white crown (S1), standing upright, covered arms crossed in front of the chest.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḫnt.y-ꞽmn.tyw",
     "kEH_UniK": "A341A"
@@ -16085,7 +16182,7 @@ unikemet = {
   "𓚷": {
     "kEH_Cat": "A-32-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy with a long curved beard, standing upright, both arms forward, forearms horizontally, one above another.",
+    "kEH_Desc": "A mummy with a long-curved beard, standing upright, both arms forward, forearms horizontally, one above another.",
     "kEH_Func": "Classifier creation/form",
     "kEH_FVal": "ꞽr.w",
     "kEH_UniK": "HJ A053A",
@@ -16095,7 +16192,7 @@ unikemet = {
   "𓚸": {
     "kEH_Cat": "A-32-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy with a long curved beard, lying horizontally (A54) on top of a bed, with a leonid head, legs and tail (Q19), with the head towards the front.",
+    "kEH_Desc": "A mummy with a long-curved beard, lying horizontally (A54) on top of a bed, with a leonid head, legs and tail (Q19), with the head towards the front.",
     "kEH_Func": "Classifier to sleep/to spend the night",
     "kEH_FVal": "sḏr",
     "kEH_UniK": "HJ A055A",
@@ -16145,7 +16242,7 @@ unikemet = {
   "𓚾": {
     "kEH_Cat": "A-33-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A statue of a mummy with a long curved beard, standing upright on a base, with a support at the back.",
+    "kEH_Desc": "A statue of a mummy with a long-curved beard, standing upright on a base, with a support at the back.",
     "kEH_Func": "Classifier statue",
     "kEH_FVal": "mnw",
     "kEH_UniK": "HJ A336",
@@ -16165,7 +16262,7 @@ unikemet = {
   "𓛀": {
     "kEH_Cat": "A-33-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A god, with a long curved beard and short hair/wig, with a forwards and backwards curving line on the head, recumbent on a rectangular carrying chair, covered by cloth.",
+    "kEH_Desc": "A god, with a long-curved beard and short hair/wig, with a forwards and backwards curving line on the head, recumbent on a rectangular carrying chair, covered by cloth.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ꜥḳ.t-m-rw.ty",
     "kEH_UniK": "A450A"
@@ -16173,7 +16270,7 @@ unikemet = {
   "𓛁": {
     "kEH_Cat": "A-33-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A statue of a woman,  wearing a long dress, standing on a base, with a support at the back, with the left arm vertically over the body.",
+    "kEH_Desc": "A statue of a woman, wearing a long dress, standing on a base, with a support at the back, with the left arm vertically over the body.",
     "kEH_Func": "Classifier statue",
     "kEH_FVal": "smn",
     "kEH_UniK": "A536"
@@ -16181,7 +16278,7 @@ unikemet = {
   "𓛂": {
     "kEH_Cat": "A-33-018",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy, with a long curved beard, standing on a platform in front of an obelisk.",
+    "kEH_Desc": "A mummy, with a long-curved beard, standing on a platform in front of an obelisk.",
     "kEH_Func": "Logogram (monument)?",
     "kEH_FVal": "mn.w",
     "kEH_UniK": "A066B",
@@ -16191,6 +16288,7 @@ unikemet = {
   "𓛃": {
     "kEH_Cat": "A-34-003",
     "kEH_Core": "C",
+    "kEH_Desc": "A cursive form of a man, standing, bent forwards, one arm forward, carrying a stick with a bundle or a mat over his shoulders, bundle behind the back.",
     "kEH_UniK": "HJ A033C",
     "kEH_JSesh": "A33C",
     "kEH_HG": "A33C"
@@ -16218,6 +16316,7 @@ unikemet = {
   "𓛆": {
     "kEH_Cat": "A-34-007",
     "kEH_Core": "C",
+    "kEH_Desc": "A naked man, lying face down, arms extended in front of him, on top of a bed with leonid legs and tail.",
     "kEH_Func": "Classifier",
     "kEH_FVal": "ẖꜣ.t",
     "kEH_UniK": "A104D"
@@ -16225,7 +16324,7 @@ unikemet = {
   "𓛇": {
     "kEH_Cat": "A-34-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy with a long straight beard and ureaus, lying belly down, head raised, on top of a bed, with a leonid legs and tail.",
+    "kEH_Desc": "A mummy with a long straight beard and uraeus, lying belly down, head raised on top of a bed, with a leonid legs and tail.",
     "kEH_Func": "Classifier corpse",
     "kEH_FVal": "ẖꜣ.t",
     "kEH_UniK": "A104C"
@@ -16233,7 +16332,7 @@ unikemet = {
   "𓛈": {
     "kEH_Cat": "A-34-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A man, mummyform, without beard, lying on a bed with short triangular bed-posts, facing upwards.",
+    "kEH_Desc": "A man, mummy form, without beard, lying on a bed with short triangular bedposts, facing upwards.",
     "kEH_Func": "Classifier to sleep",
     "kEH_FVal": "sḏr",
     "kEH_UniK": "HJ A104B",
@@ -16253,7 +16352,7 @@ unikemet = {
   "𓛊": {
     "kEH_Cat": "A-34-011",
     "kEH_Core": "C",
-    "kEH_Desc": "The king, seated on heel, both knees down, with a long straight beard, uraeus and coif/long wig, back bend forward, arm forward, hand  at the hight of the  waist, holding a cup or vessel (W10).",
+    "kEH_Desc": "The king, seated on heel, both knees down, with a long straight beard, uraeus and coif/long wig, back bent forward, arm forward, hand at the height of the waist, holding a cup or vessel (W10).",
     "kEH_Func": "Classifier wine",
     "kEH_FVal": "ꞽrp",
     "kEH_UniK": "HJ A153A",
@@ -16263,7 +16362,7 @@ unikemet = {
   "𓛋": {
     "kEH_Cat": "A-34-012",
     "kEH_Core": "C",
-    "kEH_Desc": "The king, seated on heel, right knee raised, with long straight beard and ureaeus, with arms raised in front of him, hand-palms facing outwards.",
+    "kEH_Desc": "The king, seated on heel, right knee raised, with long straight beard and uraeus, with arms raised in front of him, hand-palms facing outwards.",
     "kEH_Func": "Logogram (to venerate)",
     "kEH_FVal": "dwꜣ",
     "kEH_UniK": "A153B"
@@ -16271,7 +16370,7 @@ unikemet = {
   "𓛌": {
     "kEH_Cat": "A-34-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Man/king, seated, right knee raised, arms raised at either side of the body, right hand holding a tie or strap, used with sandals (ankh-sign, S34) of the same hight as the man, left hand holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) in the left hand.",
+    "kEH_Desc": "Man/king, seated, right knee raised, arms raised at either side of the body, right hand holding a tie or strap, used with sandals (ankh-sign, S34) of the same height as the man, left hand holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) in the left hand.",
     "kEH_Func": "Phonemogram/logogram (million/many)",
     "kEH_FVal": "ḥḥ",
     "kEH_UniK": "A537"
@@ -16279,7 +16378,7 @@ unikemet = {
   "𓛍": {
     "kEH_Cat": "A-34-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Two men, standing, facing each other, arms extended forwards, hands at the hight of the waist, holding one side of a loop of cord with the ends upwards (V6).",
+    "kEH_Desc": "Two men, standing, facing each other, arms extended forwards, hands at the height of the waist, holding one side of a loop of cord with the ends upwards (V6).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "š",
     "kEH_UniK": "HJ A432",
@@ -16289,7 +16388,7 @@ unikemet = {
   "𓛎": {
     "kEH_Cat": "A-34-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Two men, standing, both facing forward, back bend forward, arms down at either side of the body, holding a rope at he hight of the knees, which curves downward at either end.",
+    "kEH_Desc": "Two men, standing, both facing forwards, back bent forwards, arms down at either side of the body, holding a rope at the height of the knees, which curves downwards at either end.",
     "kEH_UniK": "HJ A433",
     "kEH_JSesh": "A433",
     "kEH_HG": "A433"
@@ -16327,7 +16426,7 @@ unikemet = {
   "𓛒": {
     "kEH_Cat": "A-34-021",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, seated, right knee raised, arms extended forwards, handpalms forwards, facing another man in the same position, hands touching. ",
+    "kEH_Desc": "Man, seated, right knee raised, arms extended forwards, hand palms forwards, facing another man in the same position, hands touching. ",
     "kEH_Func": "Classifier playing",
     "kEH_FVal": "ḥꜥb",
     "kEH_UniK": "A470A"
@@ -16335,7 +16434,7 @@ unikemet = {
   "𓛓": {
     "kEH_Cat": "A-34-028",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long wig, with two heads with long curved beard and long wig written overlapping behind the head.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long wig, with two heads with long-curved beard and long wig written overlapping behind the head.",
     "kEH_Func": "Logogram (gods)",
     "kEH_FVal": "nṯr.w",
     "kEH_UniK": "HJ A488",
@@ -16356,7 +16455,7 @@ unikemet = {
   "𓛕": {
     "kEH_Cat": "B-01-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees up, with covered legs and arms, with long hair, holding a club used by washer-men for beating laundry (U36) vertically.",
+    "kEH_Desc": "Woman, seated, both knees up, with covered legs and arms, with long hair, holding a club used by washermen for beating laundry (U36) vertically.",
     "kEH_Func": "Logogram (majesty)",
     "kEH_FVal": "ḥm.t",
     "kEH_UniK": "HJ B001B",
@@ -16367,7 +16466,7 @@ unikemet = {
     "kEH_Cat": "B-01-009",
     "kEH_Core": "C",
     "kEH_Desc": "Woman, seated, both knees up, with covered legs and arms, with long hair, wearing a diadem.",
-    "kEH_Func": "Logogram (femine first person singular)",
+    "kEH_Func": "Logogram (feminine first person singular)",
     "kEH_FVal": "ꞽ",
     "kEH_UniK": "HJ B007C",
     "kEH_JSesh": "B7C",
@@ -16377,7 +16476,7 @@ unikemet = {
   "𓛗": {
     "kEH_Cat": "B-01-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees up, with covered legs and arms, with long hair, wearing a diadem and ureaus.",
+    "kEH_Desc": "Woman, seated, both knees up, with covered legs and arms, with long hair, wearing a diadem and uraeus.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "n.t",
     "kEH_UniK": "B007O"
@@ -16391,7 +16490,7 @@ unikemet = {
   "𓛙": {
     "kEH_Cat": "B-01-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees up, with covered legs and arms, with long hair, wearing a diadem and ureaus, holding a tie or strap, used with sandals (ankh-sign, S34), which angles forward.",
+    "kEH_Desc": "Woman, seated, both knees up, with covered legs and arms, with long hair, wearing a diadem and uraeus, holding a tie or strap, used with sandals (ankh-sign, S34), which angles forward.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "tfn.t",
     "kEH_UniK": "B007P"
@@ -16582,7 +16681,7 @@ unikemet = {
   "𓛭": {
     "kEH_Cat": "B-01-053",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees up, with covered legs, with long hair, with a cup/vessel (W10) on her head, rigth arm forward, supporting the cup/vessel at the front, left arm hanging beside the body.",
+    "kEH_Desc": "Woman, seated, both knees up, with covered legs, with long hair, with a cup/vessel (W10) on her head, right arm forward, supporting the cup/vessel at the front, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "f",
     "kEH_UniK": "HJ B054",
@@ -16592,7 +16691,7 @@ unikemet = {
   "𓛮": {
     "kEH_Cat": "B-01-054",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees up, with covered legs, with long hair, arms raised in front, hands near the hight of the face, handpalms outwards.",
+    "kEH_Desc": "Woman, seated, both knees up, with covered legs, with long hair, arms raised in front, hands near the height of the face, hand palms outwards.",
     "kEH_Func": "Classifier woman",
     "kEH_FVal": "ḥm.t",
     "kEH_UniK": "HJ B018A",
@@ -16630,7 +16729,7 @@ unikemet = {
   "𓛲": {
     "kEH_Cat": "B-02-006",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down, no arms visible, with a lotus bud and stem on the knee, which curves upwards, with the bud pointing upwards at the hight of the face.",
+    "kEH_Desc": "Woman, seated, both knees down, no arms visible, with a lotus bud and stem on the knee, which curves upwards, with the bud pointing upwards at the height of the face.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ṯ",
     "kEH_UniK": "HJ B008B",
@@ -16687,7 +16786,7 @@ unikemet = {
   "𓛸": {
     "kEH_Cat": "B-03-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down, with long hair, arm raised in front , hand at the hight of the face, hand horizontal, hand palm up.",
+    "kEH_Desc": "Woman, seated, both knees down, with long hair, arm raised in front , hand at the height of the face, hand horizontal, hand palm up.",
     "kEH_Func": "Phonemogram (to form mr.ty (the two eyes))",
     "kEH_FVal": "mrt",
     "kEH_UniK": "HJ B065",
@@ -16697,7 +16796,7 @@ unikemet = {
   "𓛹": {
     "kEH_Cat": "B-03-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down, with long hair, arms extended forwards, towards the knees, handpalms upwards, with a riple of water (N35) above the hands.",
+    "kEH_Desc": "Woman, seated, both knees down, with long hair, arms extended forwards, towards the knees, hand palms upwards, with a ripple of water (N35) above the hands.",
     "kEH_Func": "Classifier to welcome",
     "kEH_FVal": "nyny",
     "kEH_UniK": "HJ B016",
@@ -16708,7 +16807,7 @@ unikemet = {
   "𓛺": {
     "kEH_Cat": "B-03-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down, with long hair, arms raised in front, hands vertical, handpalms outwards.",
+    "kEH_Desc": "Woman, seated, both knees down, with long hair, arms raised in front, hands vertical, hand palms outwards.",
     "kEH_Func": "Classifier to praise",
     "kEH_FVal": "dwꜣ",
     "kEH_UniK": "HJ B015",
@@ -16719,7 +16818,7 @@ unikemet = {
   "𓛻": {
     "kEH_Cat": "B-03-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down, with long hair, arm raised in front, hand at the face, handpalm inwards.",
+    "kEH_Desc": "Woman, seated, both knees down, with long hair, arm raised in front, hand at the face, hand palm inwards.",
     "kEH_Func": "Classifier (mourner)",
     "kEH_FVal": "ḥꜣ.t",
     "kEH_UniK": "HJ B059",
@@ -16756,7 +16855,7 @@ unikemet = {
   "𓛿": {
     "kEH_Cat": "B-03-020",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down, arms raised in front, upper arms horizontal, hands in a clapping motion; on top of a cover of a quiver without a loop on top.",
+    "kEH_Desc": "Woman, seated, both knees down, arms raised in front, upper arms horizontal, hands in a clapping motion, on top of a cover of a quiver without a loop on top.",
     "kEH_Func": "Classifier to clap & phonemogram",
     "kEH_FVal": "dḫn & s",
     "kEH_UniK": "B120"
@@ -16805,7 +16904,7 @@ unikemet = {
   "𓜄": {
     "kEH_Cat": "B-04-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated on a chair, with long hair, lower legs separated, no arms visible, with a flower on the knee, which curves forward, flower hanging downwards near the knee.",
+    "kEH_Desc": "Woman, seated on a chair, with long hair, lower legs separated, no arms visible, with a flower on the knee, which curves forwards, flower hanging downwards near the knee.",
     "kEH_Func": "Logogram (noblewoman)",
     "kEH_FVal": "šps.t",
     "kEH_UniK": "B021H",
@@ -16890,7 +16989,7 @@ unikemet = {
   "𓜎": {
     "kEH_Cat": "B-04-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A girl, with long hair, seated on nothing, forelegs separated, right arm raised with hand to mouth, left arm hanging beside the body.",
+    "kEH_Desc": "Girl, with long hair, seated on nothing, forelegs separated, right arm raised with hand to mouth, left arm hanging beside the body.",
     "kEH_Func": "classifier youth",
     "kEH_FVal": "rnpꞽ",
     "kEH_UniK": "HJ B078",
@@ -16907,7 +17006,7 @@ unikemet = {
   "𓜐": {
     "kEH_Cat": "B-05-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, back slightly bend forwards, arms extended forwards, hands at the hight of the waist, handpalms upwards, with a riple of water (N35) above the hands.",
+    "kEH_Desc": "Woman, standing, back slightly bend forwards, arms extended forwards, hands at the height of the waist, hand palms upwards, with a ripple of water (N35) above the hands.",
     "kEH_Func": "Classifier to welcome",
     "kEH_FVal": "nyny",
     "kEH_UniK": "HJ B027",
@@ -16918,7 +17017,7 @@ unikemet = {
   "𓜑": {
     "kEH_Cat": "B-05-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, wearing a diadem, back slightly bend forwards, arms extended forwards, hands at the hight of the waist, handpalms upwards, with a riple of water (N35) above both hands.",
+    "kEH_Desc": "Woman, standing, wearing a diadem, back slightly bend forwards, arms extended forwards, hands at the height of the waist, hand palms upwards, with a ripple of water (N35) above both hands.",
     "kEH_Func": "Classifier to welcome",
     "kEH_FVal": "nyny",
     "kEH_UniK": "B027B"
@@ -16931,7 +17030,7 @@ unikemet = {
   "𓜓": {
     "kEH_Cat": "B-05-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, arms raised in front, hands to the face, handpalms outwards.",
+    "kEH_Desc": "Woman, standing, with long hair, arms raised in front, hands to the face, hand palms outwards.",
     "kEH_Func": "Classifier mourners",
     "kEH_FVal": "ḥ(ꜣ)y.t",
     "kEH_UniK": "B028",
@@ -16940,7 +17039,7 @@ unikemet = {
   "𓜔": {
     "kEH_Cat": "B-05-012",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, arms raised in front, hand to mouth.",
+    "kEH_Desc": "Woman, standing, with long hair, arm raised in front, hand to mouth.",
     "kEH_Func": "classifier (screamers, mourners)",
     "kEH_FVal": "sgb.wt",
     "kEH_UniK": "HJ B088",
@@ -16960,7 +17059,7 @@ unikemet = {
   "𓜖": {
     "kEH_Cat": "B-05-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the hight of the waist, left arm over the body, left hand on the waist.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the height of the waist, left arm over the body, left hand on the waist.",
     "kEH_Func": "Classifier relationship",
     "kEH_FVal": "ḫnms.t",
     "kEH_UniK": "HJ B024A",
@@ -16970,7 +17069,7 @@ unikemet = {
   "𓜗": {
     "kEH_Cat": "B-05-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, arms raised at either side of the body, hands horizontal at the hight of the top of the head, handpalms upwards.",
+    "kEH_Desc": "Woman, standing, with long hair, arms raised at either side of the body, hands horizontal at the height of the top of the head, hand palms upwards.",
     "kEH_Func": "Classifier to raise/to support",
     "kEH_FVal": "ḫy",
     "kEH_UniK": "HJ B064",
@@ -16980,7 +17079,7 @@ unikemet = {
   "𓜘": {
     "kEH_Cat": "B-05-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, arm in front, hand horizontal at the hight of the face, handpalm upwards.",
+    "kEH_Desc": "Woman, standing, with long hair, arm in front, hand horizontal at the height of the face, hand palm upwards.",
     "kEH_Func": "Classifier singing",
     "kEH_FVal": "šmꜥ",
     "kEH_UniK": "HJ B065A",
@@ -16990,7 +17089,7 @@ unikemet = {
   "𓜙": {
     "kEH_Cat": "B-05-021",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the hight of the waist, holding a sedge (M23) of the hight of the woman, with the tip curving forward, left arm hanging beside the body.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the height of the waist, holding a sedge (M23) of the height of the woman, with the tip curving forward, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sw",
     "kEH_UniK": "HJ B034",
@@ -17001,7 +17100,7 @@ unikemet = {
   "𓜚": {
     "kEH_Cat": "B-05-022",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the hight of the waist, holding a crook (S38) of the hight of the woman, with the opening outward, left arm hanging beside the body.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the height of the waist, holding a crook (S38) of the height of the woman, with the opening outward, left arm hanging beside the body.",
     "kEH_Func": "Logogram (to rule)",
     "kEH_FVal": "ḥḳꜣ",
     "kEH_UniK": "HJ B035",
@@ -17030,7 +17129,7 @@ unikemet = {
   "𓜝": {
     "kEH_Cat": "B-05-026",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, arms raised at either side of the body, hands horizontal at the hight of the top of the head, handpalms upwards, holding up the sky (N1).",
+    "kEH_Desc": "Woman, standing, with long hair, arms raised at either side of the body, hands horizontal at the height of the top of the head, hand palms upwards, holding up the sky (N1).",
     "kEH_UniK": "HJ B058",
     "kEH_JSesh": "B58",
     "kEH_HG": "B58"
@@ -17046,7 +17145,7 @@ unikemet = {
   "𓜟": {
     "kEH_Cat": "B-05-031",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm forward, holding a stick/staff, left arm hanging beside the body, holding a flagellum (S45) horizotally.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm forward, holding a stick/staff, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.yt",
     "kEH_UniK": "B049B"
@@ -17054,7 +17153,7 @@ unikemet = {
   "𓜠": {
     "kEH_Cat": "B-05-032",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "w",
     "kEH_UniK": "HJ B072",
@@ -17064,7 +17163,7 @@ unikemet = {
   "𓜡": {
     "kEH_Cat": "B-05-034",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the hight of the shoulder, holding a long staff or pole with a two-pronged end piece for holding down snakes (U116), left arm hanging beside the body.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the height of the shoulder, holding a long staff or pole with a two-pronged end piece for holding down snakes (U116), left arm hanging beside the body.",
     "kEH_Func": "Logogram (to be old, old age)",
     "kEH_FVal": "ꞽꜣwꞽ",
     "kEH_UniK": "HJ B068",
@@ -17074,7 +17173,7 @@ unikemet = {
   "𓜢": {
     "kEH_Cat": "B-05-035",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (noble lady)",
     "kEH_FVal": "rpy.t",
     "kEH_UniK": "B106"
@@ -17082,7 +17181,7 @@ unikemet = {
   "𓜣": {
     "kEH_Cat": "B-05-036",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.yt",
     "kEH_UniK": "B122"
@@ -17090,7 +17189,7 @@ unikemet = {
   "𓜤": {
     "kEH_Cat": "B-05-037",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the hight of the waist, holding a A palm branch, stripped of leaves, with multiple sharp notches (M4A), tip curving outwards, notches towards the body, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Woman, standing, with long hair, right arm forward, hand at the height of the waist, holding a palm branch, stripped of leaves, with multiple sharp notches (M4A), tip curving outwards, notches towards the body, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Phonemogram (cryptography)",
     "kEH_FVal": "t; r",
     "kEH_UniK": "HJ B070",
@@ -17100,7 +17199,7 @@ unikemet = {
   "𓜥": {
     "kEH_Cat": "B-05-039",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, back bend froward, with a line coming from the head, curving forward, arms extended forward, forearms horizontal at the hight of the waist.",
+    "kEH_Desc": "Woman, standing, back bent forward, with a line coming from the head, curving forward, arms extended forward, forearms horizontal at the height of the waist.",
     "kEH_Func": "Classifier mourner",
     "kEH_FVal": "ḥꜣy.t",
     "kEH_UniK": "HJ B077",
@@ -17118,7 +17217,7 @@ unikemet = {
   "𓜧": {
     "kEH_Cat": "B-05-042",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, wearing a diadem, both arms raised at either side of the body, hands a the hight of the face, holding a stick in each hands, which is angled inwards.",
+    "kEH_Desc": "Woman, standing, with long hair, wearing a diadem, both arms raised at either side of the body, hands a the height of the face, holding a stick in each hands, which is angled inwards.",
     "kEH_Func": "Classifier danceress",
     "kEH_FVal": "ꞽhb.t",
     "kEH_UniK": "HJ B079",
@@ -17128,7 +17227,7 @@ unikemet = {
   "𓜨": {
     "kEH_Cat": "B-05-043",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman standing, arms extended forwars, holding a child, with the arms and child covered in a cloth, only the head of the child visible.",
+    "kEH_Desc": "Woman standing, arms extended forwards, holding a child, with the arms and child covered in a cloth, only the head of the child visible.",
     "kEH_Func": "Classifier nursing, rearing",
     "kEH_FVal": "ꜣṯ",
     "kEH_UniK": "HJ B083",
@@ -17138,7 +17237,7 @@ unikemet = {
   "𓜩": {
     "kEH_Cat": "B-05-045",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, arms extended in front, hands at the hight of the shoulder, with a vertical line descending from each hand, which end at the hight of the bottom of the dress.",
+    "kEH_Desc": "Woman, standing, with long hair, arms extended in front, hands at the height of the shoulder, with a vertical line descending from each hand, which end at the height of the bottom of the dress.",
     "kEH_Func": "Classifier",
     "kEH_FVal": "ꜥtꜣ",
     "kEH_UniK": "B031A"
@@ -17153,7 +17252,7 @@ unikemet = {
   "𓜫": {
     "kEH_Cat": "B-06-002",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees up, with covered arms and legs, with long hair, wearing a headdress consisting of a sundisk in horns, with two plumes on top of the sundisk (S65) and a vulture headdress, holding a stem of papyrus with a bud (M131) or flower vertically.",
+    "kEH_Desc": "Woman, seated, both knees up, with covered arms and legs, with long hair, wearing a headdress consisting of a sun disk in horns, with two plumes on top of the sun disk (S65) and a vulture headdress, holding a stem of papyrus with a bud (M131) or flower vertically.",
     "kEH_Func": "Classifier royal sister",
     "kEH_FVal": "sn.t",
     "kEH_UniK": "HJ B038A",
@@ -17187,7 +17286,7 @@ unikemet = {
   "𓜯": {
     "kEH_Cat": "B-07-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, wearing the white crown (S1), right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the size of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Woman, standing, wearing the white crown (S1), right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the size of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (king of UE)",
     "kEH_FVal": "n.y-sw.t",
     "kEH_UniK": "HJ B043",
@@ -17208,13 +17307,13 @@ unikemet = {
   "𓜱": {
     "kEH_Cat": "B-07-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, both arms forward, hands at the hight of the shoulder, holding a plan of a crossroads in a village (O49).",
+    "kEH_Desc": "Woman, standing, with long hair, both arms forward, hands at the height of the shoulder, holding a plan of a crossroads in a village (O49).",
     "kEH_UniK": "B045D"
   },
   "𓜲": {
     "kEH_Cat": "B-08-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, both arms forward, hands at the hight of the shoulder, holding a tambourine.",
+    "kEH_Desc": "Woman, standing, with long hair, both arms forward, hands at the height of the shoulder, holding a tambourine.",
     "kEH_Func": "Logogram (rejoicing)",
     "kEH_FVal": "nhm",
     "kEH_UniK": "HJ B045",
@@ -17225,7 +17324,7 @@ unikemet = {
   "𓜳": {
     "kEH_Cat": "B-08-002",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, both arms forward, hands at the hight of the shoulder, with a circle (tambourine?) floating above the hands.",
+    "kEH_Desc": "Woman, standing, with long hair, both arms forward, hands at the height of the shoulder, with a circle (tambourine?) floating above the hands.",
     "kEH_Func": "Classifier (to rejoice)",
     "kEH_FVal": "nhm",
     "kEH_UniK": "HJ B045B",
@@ -17235,7 +17334,7 @@ unikemet = {
   "𓜴": {
     "kEH_Cat": "B-08-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seatead, both knees down, with long hair, both arms forward, holding a tambourine.",
+    "kEH_Desc": "Woman, seated, both knees down, with long hair, both arms forward, holding a tambourine.",
     "kEH_Func": "Classifier jubilation",
     "kEH_FVal": "sꜣ-tꜣ",
     "kEH_UniK": "HJ B045A",
@@ -17246,7 +17345,7 @@ unikemet = {
   "𓜵": {
     "kEH_Cat": "B-08-006",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down, wearing a diadem, right arm extended forward, held horizontally, holding a a tie or strap, used with sandals (ankh-sign, S34) vertically, left arm extended forwards, between the legs and the right arm, holding a bead-necklace with counterweight at the counterweight.",
+    "kEH_Desc": "Woman, seated, both knees down, wearing a diadem, right arm extended forward, held horizontally, holding a tie or strap, used with sandals (ankh-sign, S34) vertically, left arm extended forwards, between the legs and the right arm, holding a bead-necklace with counterweight.",
     "kEH_Func": "Classifier sistrum player",
     "kEH_FVal": "sḫm.y(t)",
     "kEH_UniK": "HJ B057",
@@ -17256,7 +17355,7 @@ unikemet = {
   "𓜶": {
     "kEH_Cat": "B-08-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, with long hair, both arms forward, hands at the hight of the forehead, nearly horizontal, hands as if clapping.",
+    "kEH_Desc": "Woman, standing, with long hair, both arms forward, hands at the height of the forehead, nearly horizontal, hands as if clapping.",
     "kEH_Func": "Classifier female rhythm maker",
     "kEH_FVal": "dḫn.t",
     "kEH_UniK": "B045C"
@@ -17274,7 +17373,7 @@ unikemet = {
   "𓜸": {
     "kEH_Cat": "B-09-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, pregnant, seated, both knees down, right arm forward, angling down towards the knee, left arm hanging beside the body, with 3 lines coming from the legs, central one vertical, the outer two curving from the same point as the central line.",
+    "kEH_Desc": "Woman, pregnant, seated, both knees down, right arm forward, angling down towards the knee, left arm hanging beside the body, with three lines coming from the legs, central one vertical, the outer two curving from the same point as the central line.",
     "kEH_Func": "Classifier nurse",
     "kEH_FVal": "ꜣṯ.(y)t",
     "kEH_UniK": "HJ B003A",
@@ -17336,7 +17435,7 @@ unikemet = {
   "𓜿": {
     "kEH_Cat": "B-09-018",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down wearing a the red crown (S3), nursing a child, seated on her lap, left arm forward, hand over the chest of the woman, right arm hanging beside the body; right arm forward, embracing/holding the child, left arm over the chest.",
+    "kEH_Desc": "Woman, seated, both knees down wearing a red crown (S3), nursing a child, seated on her lap, left arm forward, hand over the chest of the woman, right arm hanging beside the body; right arm forward, embracing/holding the child, left arm over the chest.",
     "kEH_Func": "Logogram (nurse)",
     "kEH_FVal": "ḫnm.t",
     "kEH_UniK": "HJ B005B",
@@ -17347,7 +17446,7 @@ unikemet = {
   "𓝀": {
     "kEH_Cat": "B-09-019",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down wearing a the white crown (S1), nursing a child, seated on her lap, left arm forward, hand over the chest of the woman, right arm hanging beside the body; right arm forward, embracing/holding the child, left arm over the chest.",
+    "kEH_Desc": "Woman, seated, both knees down wearing a white crown (S1), nursing a child, seated on her lap, left arm forward, hand over the chest of the woman, right arm hanging beside the body; right arm forward, embracing/holding the child, left arm over the chest.",
     "kEH_Func": "Logogram (nurse)",
     "kEH_FVal": "ḫnm.t",
     "kEH_UniK": "HJ B005C",
@@ -17393,7 +17492,7 @@ unikemet = {
   "𓝅": {
     "kEH_Cat": "B-10-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, bend forward arms extended forward, hands towards an rectangular object in front of the feet.",
+    "kEH_Desc": "Woman, standing, bend forward arms extended forward, hands towards a rectangular object in front of the feet.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nḏ",
     "kEH_UniK": "HJ B036A",
@@ -17409,7 +17508,7 @@ unikemet = {
   "𓝇": {
     "kEH_Cat": "B-10-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, standing, bend forwards, back  horizontal, hair hanging forwards in front of the face, arms extended towards the ground,  hands horizontal at the hight of the middle of the shins, handpalms downwards.",
+    "kEH_Desc": "Woman, standing, bend forwards, back horizontal, hair hanging forwards in front of the face, arms extended towards the ground, hands horizontal at the height of the middle of the shins, hand palms downwards.",
     "kEH_Func": "Classifier moving back and forth",
     "kEH_FVal": "wnwn",
     "kEH_UniK": "B067A"
@@ -17417,7 +17516,7 @@ unikemet = {
   "𓝈": {
     "kEH_Cat": "B-10-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, with both knees down, with the head and arms of a child coming from the legs, both arms raised at either side of the body, hands at the hight of the top of the head, supporting a duck or goose (G38-G39) on each hand, looking outwards, with a half round loaf of bread (X1) over the shoulder of each bird.",
+    "kEH_Desc": "Woman, seated, with both knees down, with the head and arms of a child coming from the legs, both arms raised at either side of the body, hands at the height of the top of the head, supporting a duck or goose (G38-G39) on each hand, looking outwards, with a half round loaf of bread (X1) over the shoulder of each bird.",
     "kEH_Func": "Phonemogram (cryptography)",
     "kEH_FVal": "st.y-m",
     "kEH_UniK": "HJ B085",
@@ -17427,7 +17526,7 @@ unikemet = {
   "𓝉": {
     "kEH_Cat": "C-01-002",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long hair/wig, with a crescent moon with the entire moon disk (N62) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long hair/wig, with a crescent moon with the entire moon disk (N62) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (in combination with C268B)",
     "kEH_FVal": "rꜥ-nb",
     "kEH_UniK": "HJ C118A",
@@ -17438,7 +17537,7 @@ unikemet = {
   "𓝊": {
     "kEH_Cat": "C-01-003",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long hair/wig, with a crescent moon with the entire moon disk (N62) on its head.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long hair/wig, with a crescent moon with the entire moon disk (N62) on its head.",
     "kEH_Func": "Classifier moon",
     "kEH_FVal": "ꞽꜥḥ",
     "kEH_UniK": "HJ C118",
@@ -17448,7 +17547,7 @@ unikemet = {
   "𓝋": {
     "kEH_Cat": "C-01-004",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long hair/wig, with a crescent moon with the entire moon disk (N62) on its head, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long hair/wig, with a crescent moon with the entire moon disk (N62) on its head, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward.",
     "kEH_Func": "Classifier moon/light (together with Re, representing the sun and the moon as the two lights)",
     "kEH_FVal": "ḥꜣy.ty",
     "kEH_UniK": "C118B"
@@ -17462,7 +17561,7 @@ unikemet = {
   "𓝍": {
     "kEH_Cat": "C-01-008",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, with a uraeus on his forehead, with a star upon his head (N14).",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, with a uraeus on his forehead, with a star upon his head (N14).",
     "kEH_Func": "Logogram (Geb)",
     "kEH_FVal": "gbb",
     "kEH_UniK": "HJ C119B",
@@ -17472,7 +17571,7 @@ unikemet = {
   "𓝎": {
     "kEH_Cat": "C-01-009",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, with a uraeus on his forehead, with a star upon his head (N14), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, with a uraeus on his forehead, with a star upon his head (N14), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (Geb)",
     "kEH_FVal": "gbb",
     "kEH_UniK": "C119",
@@ -17482,7 +17581,7 @@ unikemet = {
   "𓝏": {
     "kEH_Cat": "C-01-011",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, with an eye (D4) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, with an eye (D4) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (the earthmaker (divinity))",
     "kEH_FVal": "ꞽr-tꜣ",
     "kEH_UniK": "HJ C121",
@@ -17500,7 +17599,7 @@ unikemet = {
   "𓝑": {
     "kEH_Cat": "C-01-013",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, with an elephants tusk (F18) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, with an elephant tusk (F18) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (the utterance, divinity)",
     "kEH_FVal": "ḥw",
     "kEH_UniK": "HJ C123",
@@ -17511,7 +17610,7 @@ unikemet = {
   "𓝒": {
     "kEH_Cat": "C-01-014",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with long curved beard and long wig, with an elephants tusk (F18) upon his head, right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (S40); left arm hanging beside the body, holding tie or strap, used with sandals (ankh-sign S34) at the loop.",
+    "kEH_Desc": "God, standing, with long-curved beard and long wig, with an elephant tusk (F18) upon his head, right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (S40); left arm hanging beside the body, holding tie or strap, used with sandals (ankh-sign S34) at the loop.",
     "kEH_Func": "Logogram (the utterance, divinity)",
     "kEH_FVal": "ḥw",
     "kEH_UniK": "C340"
@@ -17519,7 +17618,7 @@ unikemet = {
   "𓝓": {
     "kEH_Cat": "C-01-016",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, with a rectangular piece of cloth, with fringes on one of its short sides (S32) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, with a rectangular piece of cloth, with fringes on one of its short sides (S32) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (perception/knowledge (divinity)",
     "kEH_FVal": "sꞽꜣ",
     "kEH_UniK": "C124B"
@@ -17527,7 +17626,7 @@ unikemet = {
   "𓝔": {
     "kEH_Cat": "C-01-017",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with long curved beard and long wig, with a rectangular piece of cloth, with fringes on one of its short sides (S32) upon his head, right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (S40); left arm hanging beside the body, holding tie or strap, used with sandals (ankh-sign S34) at the loop.",
+    "kEH_Desc": "God, standing, with long-curved beard and long wig, with a rectangular piece of cloth, with fringes on one of its short sides (S32) upon his head, right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (S40); left arm hanging beside the body, holding tie or strap, used with sandals (ankh-sign S34) at the loop.",
     "kEH_Func": "Logogram (perception/knowledge (divinity))",
     "kEH_FVal": "sꞽꜣ",
     "kEH_UniK": "C341"
@@ -17556,7 +17655,7 @@ unikemet = {
   "𓝘": {
     "kEH_Cat": "C-01-029",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, wearing the hmhm crown (S61), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, wearing the hmhm crown (S61), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (first person singular, for Harsomtus)",
     "kEH_FVal": "ꞽ",
     "kEH_UniK": "C129B"
@@ -17564,7 +17663,7 @@ unikemet = {
   "𓝙": {
     "kEH_Cat": "C-01-032",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, with a dung beetle (scarab (L1)) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, with a dung beetle (scarab (L1)) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Classifier Khepri (divinity)",
     "kEH_UniK": "HJ C132",
     "kEH_JSesh": "C132",
@@ -17574,7 +17673,7 @@ unikemet = {
   "𓝚": {
     "kEH_Cat": "C-01-033",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, with two arms, raised, with the palms of the hands towards each other (D28) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, with two arms, raised, with the palms of the hands towards each other (D28) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (spirit)",
     "kEH_FVal": "kꜣ",
     "kEH_UniK": "HJ C133",
@@ -17585,7 +17684,7 @@ unikemet = {
   "𓝛": {
     "kEH_Cat": "C-01-037",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, with the hind-quarters of a seated lion or leopard (F22) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, with the hindquarters of a seated lion or leopard (F22) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (god)",
     "kEH_FVal": "nṯr",
     "kEH_UniK": "HJ C136",
@@ -17596,7 +17695,7 @@ unikemet = {
   "𓝜": {
     "kEH_Cat": "C-01-038",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and short hair/wig, with a cobra in repose (Naja haja (I10)) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and short hair/wig, with a cobra in repose (Naja haje (I10)) upon his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Classifier divinity (Chay)",
     "kEH_FVal": "šꜣy",
     "kEH_UniK": "HJ C262A",
@@ -17606,7 +17705,7 @@ unikemet = {
   "𓝝": {
     "kEH_Cat": "C-01-042",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard and long hair/wig, with an uraeus on the forehead, wearing a headdress consisting of two feathers and a sun-disk on rams horns, with an uraeus at either side of the feathers; holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard and long hair/wig, with an uraeus on the forehead, wearing a headdress consisting of two feathers and a sun-disk on ram horns, with an uraeus at either side of the feathers; holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "tꜣ-ṯnn",
     "kEH_UniK": "C342"
@@ -17656,7 +17755,7 @@ unikemet = {
   "𓝣": {
     "kEH_Cat": "C-03-001",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back.",
     "kEH_Func": "Logogram (Amon)",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "HJ C012A",
@@ -17667,7 +17766,7 @@ unikemet = {
   "𓝤": {
     "kEH_Cat": "C-03-002",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the double-plume headdress (S72A).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the double-plume headdress (S72A).",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ꞽn-ḥr-šw",
     "kEH_UniK": "HJ C012K",
@@ -17678,7 +17777,7 @@ unikemet = {
   "𓝥": {
     "kEH_Cat": "C-03-005",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a feather (H6).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a feather (H6).",
     "kEH_Func": "Logogram (Maat and Amon)",
     "kEH_FVal": "mꜣꜥ.t & ꞽmn ",
     "kEH_UniK": "HJ C012B",
@@ -17689,7 +17788,7 @@ unikemet = {
   "𓝦": {
     "kEH_Cat": "C-03-006",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a tie or strap, used with sandals (ankh-sign, S34), vertically.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a tie or strap, used with sandals (ankh-sign, S34), vertically.",
     "kEH_Func": "Logogram (Amon)",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "HJ C012C",
@@ -17700,7 +17799,7 @@ unikemet = {
   "𓝧": {
     "kEH_Cat": "C-03-007",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the double-plume headdress (S72A), holding a tie or strap, used with sandals (ankh-sign, S34), vertically.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the double-plume headdress (S72A), holding a tie or strap, used with sandals (ankh-sign, S34), vertically.",
     "kEH_Func": "Logogram (Amon)",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "HJ C012L",
@@ -17711,7 +17810,7 @@ unikemet = {
   "𓝨": {
     "kEH_Cat": "C-03-008",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a sceptre (S42).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a sceptre (S42).",
     "kEH_Func": "Logogram (living image of Amon)",
     "kEH_FVal": "sḫm-ꜥnḫ-n-ꞽmn",
     "kEH_UniK": "HJ C012D",
@@ -17722,7 +17821,7 @@ unikemet = {
   "𓝩": {
     "kEH_Cat": "C-03-009",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a tie or strap, used with sandals (ankh-sign, S34), written over a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the double-plume headdress (S72A), with a line running from the crown down the back, holding a tie or strap, used with sandals (ankh-sign, S34), written over a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram divinity",
     "kEH_FVal": "ꞽr-ṯꜥw",
     "kEH_UniK": "HJ C012E",
@@ -17745,7 +17844,7 @@ unikemet = {
   "𓝬": {
     "kEH_Cat": "C-03-021",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block throne on a base, with a ong curved beard, wearing the double plume headdress (S72A), with a line running from the crown down the back, with a child seated on the his lap, facing the god, both arms down; both arms forward, right arm behind the child, left arm in front of the child.",
+    "kEH_Desc": "God, seated on a block throne on a base, with a long-curved beard, wearing the double plume headdress (S72A), with a line running from the crown down the back, with a child seated on his lap, facing the god, both arms down; both arms forward, right arm behind the child, left arm in front of the child.",
     "kEH_Func": "Classifier nursing, rearing",
     "kEH_FVal": "rnn",
     "kEH_UniK": "C311A"
@@ -17753,7 +17852,7 @@ unikemet = {
   "𓝭": {
     "kEH_Cat": "C-03-022",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with a long curved beard, wearing the double plume headdress (S72A), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with a long-curved beard, wearing the double plume headdress (S72A), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (Amon)",
     "kEH_FVal": "ꞽmn",
     "kEH_UniK": "HJ C012I",
@@ -17801,7 +17900,7 @@ unikemet = {
   "𓝲": {
     "kEH_Cat": "C-04-011",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on heel, right knee raised, with the head of a jackal, right arm angled in front of the body, left arm raised, hand held verically, handpalm inwards (hnw gesture).",
+    "kEH_Desc": "God, seated on heel, right knee raised, with the head of a jackal, right arm angled in front of the body, left arm raised, hand held vertically, hand palm inwards (hnw gesture).",
     "kEH_Func": "Classifier jubilation",
     "kEH_FVal": "hnw",
     "kEH_UniK": "C021B",
@@ -17812,7 +17911,7 @@ unikemet = {
   "𓝳": {
     "kEH_Cat": "C-04-013",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the hight of the face, left arm raised at the back, forearm vertical, holding a stick.",
+    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the height of the face, left arm raised at the back, forearm vertical, holding a stick.",
     "kEH_Func": "Logogram (to drive away)",
     "kEH_FVal": "sḥrꞽ",
     "kEH_UniK": "HJ C022B",
@@ -17841,7 +17940,7 @@ unikemet = {
   "𓝶": {
     "kEH_Cat": "C-04-018",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the hight of the shoulder, holding a shield/buckler resembling a half circle, left arm raised at the back, forearm vertical, holding a knife with a triangular blade and straight handle (T30A) horizontally, blade downwards.",
+    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the height of the shoulder, holding a shield/buckler resembling a half circle, left arm raised at the back, forearm vertical, holding a knife with a triangular blade and straight handle (T30A) horizontally, blade downwards.",
     "kEH_Func": "Logogram (to drive away)",
     "kEH_FVal": "sḥrꞽ",
     "kEH_UniK": "C022P"
@@ -17849,7 +17948,7 @@ unikemet = {
   "𓝷": {
     "kEH_Cat": "C-04-019",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the hight of the shoulder, holding a knife (T30A) vertically, left arm raised at the back, forearm vertical, holding a stick.",
+    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the height of the shoulder, holding a knife (T30A) vertically, left arm raised at the back, forearm vertical, holding a stick.",
     "kEH_Func": "Logogram (to drive away)",
     "kEH_FVal": "sḥrꞽ ",
     "kEH_UniK": "HJ C022C",
@@ -17860,7 +17959,7 @@ unikemet = {
   "𓝸": {
     "kEH_Cat": "C-04-021",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the hight of the shoulder, holding a stick vertically, running from the hand to the knee, left arm raised at the back, forearm vertical, holding a stick.",
+    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the height of the shoulder, holding a stick vertically, running from the hand to the knee, left arm raised at the back, forearm vertical, holding a stick.",
     "kEH_Func": "Classifier driving away",
     "kEH_FVal": "sḥrꞽ",
     "kEH_UniK": "C023B",
@@ -17882,7 +17981,7 @@ unikemet = {
   "𓝺": {
     "kEH_Cat": "C-04-023",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (to be strong)",
     "kEH_FVal": "wsr",
     "kEH_UniK": "HJ C025",
@@ -17893,7 +17992,7 @@ unikemet = {
   "𓝻": {
     "kEH_Cat": "C-04-024",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with the head of a jackal, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the goddess, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with the head of a jackal, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the goddess, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.yt",
     "kEH_UniK": "C025B"
@@ -17901,7 +18000,7 @@ unikemet = {
   "𓝼": {
     "kEH_Cat": "C-04-025",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the hight of the shoulder, holding the top of a staff, which angles towards the body, left arm hanging beside the body",
+    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the height of the shoulder, holding the top of a staff, which angles towards the body, left arm hanging beside the body",
     "kEH_Func": "Logogram (Anubis)",
     "kEH_FVal": "ꞽnpw",
     "kEH_UniK": "HJ C025A",
@@ -17912,7 +18011,7 @@ unikemet = {
   "𓝽": {
     "kEH_Cat": "C-04-026",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, both arms forward, right hand at the hight of the shoulder, left hand at the hight of the waist, both holding a knife (T30A).",
+    "kEH_Desc": "God, standing, with the head of a jackal, both arms forward, right hand at the height of the shoulder, left hand at the height of the waist, both holding a knife (T30A).",
     "kEH_Func": "Classifier messenger",
     "kEH_FVal": "wpw.ty",
     "kEH_UniK": "HJ C026",
@@ -17923,7 +18022,7 @@ unikemet = {
   "𓝾": {
     "kEH_Cat": "C-04-028",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the hight of the shoulder, holding a knife (T30A), left arm hanging beside the body, holding a knife horizontally.",
+    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the height of the shoulder, holding a knife (T30A), left arm hanging beside the body, holding a knife horizontally.",
     "kEH_Func": "Logogram (messenger)",
     "kEH_FVal": "wpw.ty",
     "kEH_UniK": "C026C",
@@ -17932,7 +18031,7 @@ unikemet = {
   "𓝿": {
     "kEH_Cat": "C-04-029",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the hight of the waist, holding a knife (T30A), left arm raised at the back, forearm vertical, holding a knife (T30A) with the blade upwards.",
+    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the height of the waist, holding a knife (T30A), left arm raised at the back, forearm vertical, holding a knife (T30A) with the blade upwards.",
     "kEH_Func": "Logogram (to drive away)",
     "kEH_FVal": "sḥrꞽ",
     "kEH_UniK": "C027E",
@@ -17941,7 +18040,7 @@ unikemet = {
   "𓞀": {
     "kEH_Cat": "C-04-031",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the hight of the waist, holding an oval shield, left arm raised at the back, forearm vertical, holding a stick horizontally.",
+    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the height of the waist, holding an oval shield, left arm raised at the back, forearm vertical, holding a stick horizontally.",
     "kEH_Func": "Logogram (to drive away)",
     "kEH_FVal": "sḥrꞽ",
     "kEH_UniK": "HJ C027A",
@@ -17974,12 +18073,12 @@ unikemet = {
     "kEH_Desc": "God, seated, right knee raised, with the head of a jackal, right arm forward, forearm horizontal, hand in front of the chest, left arm raised, forearm vertical, holding a stick which extends over the head.",
     "kEH_Func": "Logogram (to drive away)",
     "kEH_FVal": "sḥrꞽ",
-    "kEH_UniK": "C22P"
+    "kEH_UniK": "C022P"
   },
   "𓞅": {
     "kEH_Cat": "C-04-043",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the hight of the shoulder, holding a knife (T30A) vertically, left arm raised at the back, forearm vertical, holding a knife (T30A) with the blade downwards.",
+    "kEH_Desc": "God, seated on nothing, with the head of a jackal and tail, right arm forwards, hand at the height of the shoulder, holding a knife (T30A) vertically, left arm raised at the back, forearm vertical, holding a knife (T30A) with the blade downwards.",
     "kEH_Func": "Logogram",
     "kEH_FVal": "šmꜣ.y",
     "kEH_UniK": "HJ C022H",
@@ -17989,7 +18088,7 @@ unikemet = {
   "𓞆": {
     "kEH_Cat": "C-04-044",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the hight of the waist, holding a knife (T30A), left arm raised at the back, forearm vertical, left hand as a fist.",
+    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the height of the waist, holding a knife (T30A), left arm raised at the back, forearm vertical, left hand as a fist.",
     "kEH_Func": "Classifier",
     "kEH_FVal": "nb.w-nr.w",
     "kEH_UniK": "HJ C027B",
@@ -18013,7 +18112,7 @@ unikemet = {
   "𓞉": {
     "kEH_Cat": "C-04-050",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, right arm extended forwards, holding a stick  with a bundle or a mat at a slight angle over his shoulder, bundle behind the back, with the ties at the top, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with the head of a jackal, right arm extended forwards, holding a stick with a bundle or a mat at a slight angle over his shoulder, bundle behind the back, with the ties at the top, left arm hanging beside the body.",
     "kEH_Func": "Logogram (decease deamon)",
     "kEH_FVal": "šmꜣ.y",
     "kEH_UniK": "C250B"
@@ -18021,7 +18120,7 @@ unikemet = {
   "𓞊": {
     "kEH_Cat": "C-04-054",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the hight of the waist, holding a stick, left arm raised at the back, forearm vertical, holding a stick.",
+    "kEH_Desc": "God, standing, with the head of a jackal, right arm forward, hand at the height of the waist, holding a stick, left arm raised at the back, forearm vertical, holding a stick.",
     "kEH_Func": "Logogram (decease deamon)",
     "kEH_FVal": "šmꜣ.yt",
     "kEH_UniK": "HJ C027",
@@ -18031,7 +18130,7 @@ unikemet = {
   "𓞋": {
     "kEH_Cat": "C-04-057",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, foot flat on the ground, with the head of a jackal, both arms raised at either side of the body, forearms vertical, handpalms inwards.",
+    "kEH_Desc": "God, seated, both knees up, foot flat on the ground, with the head of a jackal, both arms raised at either side of the body, forearms vertical, hand palms inwards.",
     "kEH_Func": "Logogram (to drive away)",
     "kEH_FVal": "sḥrꞽ",
     "kEH_UniK": "C022Q"
@@ -18039,7 +18138,7 @@ unikemet = {
   "𓞌": {
     "kEH_Cat": "C-04-058",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a jackal, arms hanging on either side of the body, standing behind a mummy with a long curved beard, lying horizontally (A54) on top of a bed, with a leonid head, legs and tail (Q19), with the head towards the front (A55A).",
+    "kEH_Desc": "God, standing, with the head of a jackal, arms hanging on either side of the body, standing behind a mummy with a long-curved beard, lying horizontally (A54) on top of a bed, with a leonid head, legs and tail (Q19), with the head towards the front (A55A).",
     "kEH_Func": "Logogram (burial)",
     "kEH_FVal": "ḳrs.t",
     "kEH_UniK": "HJ Q044",
@@ -18075,7 +18174,7 @@ unikemet = {
   "𓞐": {
     "kEH_Cat": "C-05-005",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a bovid, right arm forward, hand at the hight of the shoulder, holding a knife (T30A), left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with the head of a bovid, right arm forward, hand at the height of the shoulder, holding a knife (T30A), left arm hanging beside the body.",
     "kEH_Func": "Classifier protector",
     "kEH_FVal": "mnw-n(y)-sw.t-m-nḫ.t=f",
     "kEH_UniK": "HJ C272",
@@ -18085,7 +18184,7 @@ unikemet = {
   "𓞑": {
     "kEH_Cat": "C-05-006",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a bovid, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with the head of a bovid, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wp",
     "kEH_UniK": "HJ C280",
@@ -18101,7 +18200,7 @@ unikemet = {
   "𓞓": {
     "kEH_Cat": "C-08-002",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, with a feather (H6) on his head.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, with a feather (H6) on his head.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "w",
     "kEH_UniK": "C104X",
@@ -18110,7 +18209,7 @@ unikemet = {
   "𓞔": {
     "kEH_Cat": "C-08-005",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, with a feather (H6) on his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, with a feather (H6) on his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (Shu)",
     "kEH_FVal": "šw",
     "kEH_UniK": "C104Y",
@@ -18119,7 +18218,7 @@ unikemet = {
   "𓞕": {
     "kEH_Cat": "C-08-009",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, with a feather (H6) on his head, holding a feather (H6), vertically.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, with a feather (H6) on his head, holding a feather (H6), vertically.",
     "kEH_Func": "Logogram (son/child of)",
     "kEH_FVal": "sꜣ",
     "kEH_UniK": "HJ C104D",
@@ -18140,7 +18239,7 @@ unikemet = {
   "𓞗": {
     "kEH_Cat": "C-09-003",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on heel, right knee raised, with the head of a falcon, right arm angled in front of the body, left arm raised, hand held verically, handpalm inwards (hnw gesture).",
+    "kEH_Desc": "God, seated on heel, right knee raised, with the head of a falcon, right arm angled in front of the body, left arm raised, hand held vertically, hand palm inwards (hnw gesture).",
     "kEH_Func": "Classifier joy",
     "kEH_FVal": "hnw",
     "kEH_UniK": "HJ C040",
@@ -18173,7 +18272,7 @@ unikemet = {
   "𓞚": {
     "kEH_Cat": "C-09-010",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, holding a club used by washer-men for beating laundry (U36) vertically.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, holding a club used by washermen for beating laundry (U36) vertically.",
     "kEH_Func": "Logogram (majesty)",
     "kEH_FVal": "ḥm",
     "kEH_UniK": "HJ C039D",
@@ -18205,7 +18304,7 @@ unikemet = {
   "𓞝": {
     "kEH_Cat": "C-09-020",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head.",
     "kEH_Func": "Logogram (Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "HJ C268A",
@@ -18227,7 +18326,7 @@ unikemet = {
   "𓞟": {
     "kEH_Cat": "C-09-024",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "HJ C268B",
@@ -18238,7 +18337,7 @@ unikemet = {
   "𓞠": {
     "kEH_Cat": "C-09-028",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding a harpoon head made of bone, with one curl (T19), with the curl facing forward.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding a harpoon head made of bone, with one curl (T19), with the curl facing forward.",
     "kEH_Func": "Logogram (day)",
     "kEH_FVal": "hrw",
     "kEH_UniK": "HJ C268C",
@@ -18249,7 +18348,7 @@ unikemet = {
   "𓞡": {
     "kEH_Cat": "C-09-031",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward. ",
     "kEH_Func": "Logogram (Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "HJ C268",
@@ -18270,6 +18369,7 @@ unikemet = {
   "𓞣": {
     "kEH_Cat": "C-09-036",
     "kEH_Core": "C",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding an eye, with the markings of the head of a falcon (wdꜣ.t) on top of a basket.",
     "kEH_UniK": "C002M"
   },
   "𓞤": {
@@ -18296,7 +18396,7 @@ unikemet = {
   "𓞦": {
     "kEH_Cat": "C-09-040",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre (S42) vertically.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre (S42) vertically.",
     "kEH_Func": "Logogram (Re and image)",
     "kEH_FVal": "rꜥ & sḫm",
     "kEH_UniK": "HJ C268D",
@@ -18307,7 +18407,7 @@ unikemet = {
   "𓞧": {
     "kEH_Cat": "C-09-043",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding an eye, with the markings of the head of a falcon (wdA.t, D10).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding an eye, with the markings of the head of a falcon (wdꜣ.t, D10).",
     "kEH_Func": "Logogram (the eye of Re)",
     "kEH_FVal": "ꞽr.t-rꜥ",
     "kEH_UniK": "HJ C268G",
@@ -18318,7 +18418,7 @@ unikemet = {
   "𓞨": {
     "kEH_Cat": "C-09-047",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding a round vessel with an upstanding rim (W24).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding a round vessel with an upstanding rim (W24).",
     "kEH_Func": "Logogram (of Re)",
     "kEH_FVal": "n rꜥ",
     "kEH_UniK": "C268L"
@@ -18326,7 +18426,7 @@ unikemet = {
   "𓞩": {
     "kEH_Cat": "C-09-048",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding an egg (H8).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding an egg (H8).",
     "kEH_Func": "Logogram (Son of Re)",
     "kEH_FVal": "sꜣ-rꜥ",
     "kEH_UniK": "C268M"
@@ -18367,7 +18467,7 @@ unikemet = {
   "𓞭": {
     "kEH_Cat": "C-09-056",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, wearing the double crown (S5), holding an eye, with the markings of the head of a falcon (wdA.t, D10).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, wearing the double crown (S5), holding an eye, with the markings of the head of a falcon (wdꜣ.t, D10).",
     "kEH_Func": "Logogram (eye of Horus)",
     "kEH_FVal": "ꞽr.t-ḥr ",
     "kEH_UniK": "HJ C043C",
@@ -18389,7 +18489,7 @@ unikemet = {
   "𓞯": {
     "kEH_Cat": "C-09-059",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, wearing the double crown (S5), holding a club used by washer-men for beating laundry (U36) vertically.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, wearing the double crown (S5), holding a club used by washermen for beating laundry (U36) vertically.",
     "kEH_Func": "Logogram (majesty)",
     "kEH_FVal": "ḥm",
     "kEH_UniK": "HJ C043E",
@@ -18495,7 +18595,7 @@ unikemet = {
   "𓞺": {
     "kEH_Cat": "C-09-081",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, wearing a headdress consisting of two plumes with a sun disk on rams horns, with an uraeus with a sun disk on its head, at either side of the plumes (S75). ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, wearing a headdress consisting of two plumes on a pair of ram horns, each ram horn supporting a uraeus with a sun disk on its head (S75). ",
     "kEH_Func": "Logogram (first person singular)",
     "kEH_FVal": "ꞽ",
     "kEH_UniK": "C017F"
@@ -18554,7 +18654,7 @@ unikemet = {
   "𓟁": {
     "kEH_Cat": "C-09-093",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with the hind-quarters of a seated lion or leopard (F22) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with the hindquarters of a seated lion or leopard (F22) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Logogram (god)",
     "kEH_FVal": "nṯr",
     "kEH_UniK": "HJ C052A",
@@ -18565,7 +18665,7 @@ unikemet = {
   "𓟂": {
     "kEH_Cat": "C-09-094",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with the hind-quarters of a seated lion or leopard (F22) on its head, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with the hindquarters of a seated lion or leopard (F22) on its head, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward. ",
     "kEH_Func": "Logogram (in the ꜥnḫ-nṯr-nfr construction)",
     "kEH_FVal": "ꜥnḫ-nṯr",
     "kEH_UniK": "HJ C052B",
@@ -18576,7 +18676,7 @@ unikemet = {
   "𓟃": {
     "kEH_Cat": "C-09-096",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with the hind-quarters of a seated lion or leopard (F22) on its head, holding a A cobra (Naja haja), standing up, with expanded hood (Uraeus, I64).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with the hindquarters of a seated lion or leopard (F22) on its head, holding a cobra (Naja haje), standing up, with expanded hood (Uraeus, I64).",
     "kEH_Func": "Logogram (god and goddess)",
     "kEH_FVal": "nṯr nṯr.t",
     "kEH_UniK": "HJ C052D",
@@ -18586,7 +18686,7 @@ unikemet = {
   "𓟄": {
     "kEH_Cat": "C-09-097",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with the hind-quarters of a seated lion or leopard (F22) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically, upon a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a falcon, with the hindquarters of a seated lion or leopard (F22) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically, upon a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (god)",
     "kEH_FVal": "nṯr",
     "kEH_UniK": "C344"
@@ -18594,7 +18694,7 @@ unikemet = {
   "𓟅": {
     "kEH_Cat": "C-09-100",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block throne, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the lenght of the god, left arm forward, hand on the knee, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward.   ",
+    "kEH_Desc": "God, seated on a block throne, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the length of the god, left arm forward, hand on the knee, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward.",
     "kEH_Func": "Logogram (Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "HJ C053B",
@@ -18605,7 +18705,7 @@ unikemet = {
   "𓟆": {
     "kEH_Cat": "C-09-104",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block throne, with the head of a falcon, with the sun rising over a sand covered mountain over the edge of the cultivated areas (N27) on its head , right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the lenght of the god, left arm forward, hand on the knee.",
+    "kEH_Desc": "God, seated on a block throne, with the head of a falcon, with the sun rising over a sand covered mountain over the edge of the cultivated areas (N27) on its head , right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the length of the god, left arm forward, hand on the knee.",
     "kEH_Func": "Logogram (the one of the horizon)",
     "kEH_FVal": "ꜣḫ.ty",
     "kEH_UniK": "C054A"
@@ -18613,7 +18713,7 @@ unikemet = {
   "𓟇": {
     "kEH_Cat": "C-09-106",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block throne on a base, with the head of a falcon, wearing the double crown (S5), right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the lenght of the god, left arm forward, hand on the knee.",
+    "kEH_Desc": "God, seated on a block throne on a base, with the head of a falcon, wearing the double crown (S5), right arm forward, holding a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (wAs, S40) of the length of the god, left arm forward, hand on the knee.",
     "kEH_Func": "Logogram (Horus, Behedety)",
     "kEH_FVal": "ḥr-bḥd.ty",
     "kEH_UniK": "C055A",
@@ -18622,7 +18722,7 @@ unikemet = {
   "𓟈": {
     "kEH_Cat": "C-09-109",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block throne on a base, with the head of a falcon, wearing the double crown (S5), right arm forward, hand a the hight of the face, holding a tie or strap, used with sandals (ankh-sign, S34) horizontally at the base, left arm forward, hand at the knee, holding a tie or strap, used with sandals (ankh-sign, S34) horizontally at the loop.",
+    "kEH_Desc": "God, seated on a block throne on a base, with the head of a falcon, wearing the double crown (S5), right arm forward, hand a the height of the face, holding a tie or strap, used with sandals (ankh-sign, S34) horizontally at the base, left arm forward, hand at the knee, holding a tie or strap, used with sandals (ankh-sign, S34) horizontally at the loop.",
     "kEH_Func": "Logogram (Horus)",
     "kEH_FVal": "ḥr",
     "kEH_UniK": "C056B",
@@ -18653,7 +18753,7 @@ unikemet = {
   "𓟌": {
     "kEH_Cat": "C-10-002",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34) vertically at the loop.",
+    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34) vertically at the loop.",
     "kEH_Func": "Logogram (the one of the horizon)",
     "kEH_FVal": "ꜣḫ.ty",
     "kEH_UniK": "HJ C058",
@@ -18664,7 +18764,7 @@ unikemet = {
   "𓟍": {
     "kEH_Cat": "C-10-004",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34) vertically at the loop.",
+    "kEH_Desc": "God, standing, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34) vertically at the loop.",
     "kEH_Func": "Logogram (Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "HJ C059C",
@@ -18675,7 +18775,7 @@ unikemet = {
   "𓟎": {
     "kEH_Cat": "C-10-009",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, right arm forward, hand at the hight of the waist, holding a spear made into a standard (R15A), left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34) vertically at the loop.",
+    "kEH_Desc": "God, standing, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, right arm forward, hand at the height of the waist, holding a spear made into a standard (R15A), left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34) vertically at the loop.",
     "kEH_Func": "Logogram (Horus of the east)",
     "kEH_FVal": "ḥr-ꞽꜣb.ty",
     "kEH_UniK": "C345"
@@ -18690,7 +18790,7 @@ unikemet = {
   "𓟐": {
     "kEH_Cat": "C-10-011",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, with a headdress consisting of two plumes and a sun disk (S63A/S70) and an uraeus at the front on its head, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with the head of a falcon, with a headdress consisting of two plumes and a sun disk (S63A/S70) and an uraeus at the front on its head, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (strength, power)",
     "kEH_FVal": "pḥ.ty",
     "kEH_UniK": "HJ C061A",
@@ -18700,7 +18800,7 @@ unikemet = {
   "𓟑": {
     "kEH_Cat": "C-10-014",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, with the sun rising over a sand covered mountain over the edge of the cultivated areas (N27) on its head, arms raised at either side of the body, hands at the hight of the shoulders, holding a stick/staff topped with a sand covered mountain over the edge of the cultivated areas (N26) sign.",
+    "kEH_Desc": "God, standing, with the head of a falcon, with the sun rising over a sand covered mountain over the edge of the cultivated areas (N27) on its head, arms raised at either side of the body, hands at the height of the shoulders, holding a stick/staff topped with a sand covered mountain over the edge of the cultivated areas (N26) sign.",
     "kEH_Func": "Logogram (eternity)",
     "kEH_FVal": "nḥḥ",
     "kEH_UniK": "HJ C064",
@@ -18711,14 +18811,14 @@ unikemet = {
   "𓟒": {
     "kEH_Cat": "C-10-015",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, with the sun rising over a sand covered mountain over the edge of the cultivated areas (N27) on its head, arms extended at either side of the body, hands at the hight of the waist, holding a wick of twisted flax, consisting of three loops (V28), below the third loop.",
+    "kEH_Desc": "God, standing, with the head of a falcon, with the sun rising over a sand covered mountain over the edge of the cultivated areas (N27) on its head, arms extended at either side of the body, hands at the height of the waist, holding a wick of twisted flax, consisting of three loops (V28), below the third loop.",
     "kEH_Func": "Logogram nHH (eternity)",
     "kEH_UniK": "C064C"
   },
   "𓟓": {
     "kEH_Cat": "C-10-016",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, arms raised at either side of the body, hands at the hight of the shoulders, holding a stick/staff topped with a sand covered mountain over the edge of the cultivated areas (N26) sign.",
+    "kEH_Desc": "God, standing, with the head of a falcon, arms raised at either side of the body, hands at the height of the shoulders, holding a stick/staff topped with a sand covered mountain over the edge of the cultivated areas (N26) sign.",
     "kEH_Func": "Logogram (eternity)",
     "kEH_FVal": "nḥḥ",
     "kEH_UniK": "HJ C064A",
@@ -18729,7 +18829,7 @@ unikemet = {
   "𓟔": {
     "kEH_Cat": "C-10-017",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, with a sun disk (N5) on its head, arms raised at either side of the body, hands at the hight of the shoulders, holding a stick/staff topped with a sand covered mountain over the edge of the cultivated areas (N26) sign.",
+    "kEH_Desc": "God, standing, with the head of a falcon, with a sun disk (N5) on its head, arms raised at either side of the body, hands at the height of the shoulders, holding a stick/staff topped with a sand covered mountain over the edge of the cultivated areas (N26) sign.",
     "kEH_Func": "Logogram (eternity)",
     "kEH_FVal": "nḥḥ",
     "kEH_UniK": "C064B",
@@ -18738,7 +18838,7 @@ unikemet = {
   "𓟕": {
     "kEH_Cat": "C-10-018",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forward, hand at the hight of the waist, holding a spear/harpoon of the same size as the god, vertically, point towards the top, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forward, hand at the height of the waist, holding a spear/harpoon of the same size as the god, vertically, point towards the top, left arm hanging beside the body.",
     "kEH_Func": "Logogram (the sole one, unique)",
     "kEH_FVal": "wꜥ.ty",
     "kEH_UniK": "HJ C066",
@@ -18749,7 +18849,7 @@ unikemet = {
   "𓟖": {
     "kEH_Cat": "C-10-019",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, right arm forward, hand at the hight of the waist, holding a spear/harpoon of the same size as the god, vertically, point towards the top, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with the head of a falcon, right arm forward, hand at the height of the waist, holding a spear/harpoon of the same size as the god, vertically, point towards the top, left arm hanging beside the body.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ꞽn-ḥr.t",
     "kEH_UniK": "HJ C065",
@@ -18760,8 +18860,8 @@ unikemet = {
   "𓟗": {
     "kEH_Cat": "C-10-020",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
-    "kEH_Func": "Logogram (lord of the two lands, when used in connection with a seth headed figure)",
+    "kEH_Desc": "God, standing, with the head of a falcon, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
+    "kEH_Func": "Logogram (lord of the two lands, when used in connection with a Seth headed figure)",
     "kEH_FVal": "nb-tꜣ.wy",
     "kEH_UniK": "HJ C065A",
     "kEH_JSesh": "C65A",
@@ -18770,7 +18870,7 @@ unikemet = {
   "𓟘": {
     "kEH_Cat": "C-10-021",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, holding an harpoon with the point down, diagonally over the body, from the tip of the right foot beyond the left shoulder, right arm lowered, right hand holding the harpoon between the waist and knee, left arm raised, holding the shaft near the end.",
+    "kEH_Desc": "God, standing, with the head of a falcon, holding a harpoon with the point down, diagonally over the body, from the tip of the right foot beyond the left shoulder, right arm lowered, right hand holding the harpoon between the waist and knee, left arm raised, holding the shaft near the end.",
     "kEH_Func": "Classifier harpooner",
     "kEH_FVal": "ꞽ(ꜣ)w.ty",
     "kEH_UniK": "HJ C067",
@@ -18788,7 +18888,7 @@ unikemet = {
   "𓟚": {
     "kEH_Cat": "C-10-025",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm extended forwards, arm horizontal, holding a scimitar (khopesh), written vertically, blade curving forwards, with the head of a falcon with a sun-disk (N5) on top of it, left arm forwards, hand at the hight of the waist, holding a tie or strap, used with sandals (ankh-sign, S34) at an downwards angle at the loop.",
+    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm extended forwards, arm horizontal, holding a scimitar (khopesh), written vertically, blade curving forwards, with the head of a falcon with a sun-disk (N5) on top of it, left arm forwards, hand at the height of the waist, holding a tie or strap, used with sandals (ankh-sign, S34) at an downward angle at the loop.",
     "kEH_Func": "Logogram (valour, strength)",
     "kEH_FVal": "ḳn.t",
     "kEH_UniK": "HJ C069",
@@ -18826,7 +18926,7 @@ unikemet = {
   "𓟞": {
     "kEH_Cat": "C-10-031",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, with the sign for the hill country over the edge of the cultivated areas (N25) on its head, arms hanging downwards on either side of the body, holding a cobra in repose (Naja haja (I10)), with the horizontal part of the body at the hight of the waist.",
+    "kEH_Desc": "God, standing, with the head of a falcon, with the sign for the hill country over the edge of the cultivated areas (N25) on its head, arms hanging downwards on either side of the body, holding a cobra in repose (Naja haje (I10)), with the horizontal part of the body at the height of the waist.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥr",
     "kEH_UniK": "C293A"
@@ -18834,7 +18934,7 @@ unikemet = {
   "𓟟": {
     "kEH_Cat": "C-11-001",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, right arm forward, holding a spear with the point downwards, left arm hanging beside the body, on top of an bovid, lying on the ground, legs folded under the body, tail down.",
+    "kEH_Desc": "God, standing, with the head of a falcon, right arm forwards, holding a spear with the point downwards, left arm hanging beside the body, on top of a bovid, lying on the ground, legs folded under the body, tail down.",
     "kEH_Func": "Logogram (Wenty)",
     "kEH_FVal": "wnty",
     "kEH_UniK": "HJ C071",
@@ -18845,7 +18945,7 @@ unikemet = {
   "𓟠": {
     "kEH_Cat": "C-11-003",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically , left arm hanging beside the body, on top of an bovid, lying on the ground, legs folded under the body, tail down.",
+    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically , left arm hanging beside the body, on top of a bovid, lying on the ground, legs folded under the body, tail down.",
     "kEH_Func": "Logogram (Wenty)",
     "kEH_FVal": "wnty",
     "kEH_UniK": "HJ C072",
@@ -18863,7 +18963,7 @@ unikemet = {
   "𓟢": {
     "kEH_Cat": "C-11-005",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forward, holding a spear with the point downwards, left arm hanging beside the body, on top of an bovid, lying on the ground, legs folded under the body, tail down.",
+    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forwards, holding a spear with the point downwards, left arm hanging beside the body, on top of a bovid, lying on the ground, legs folded under the body, tail down.",
     "kEH_Func": "Logogram (Wenty)",
     "kEH_FVal": "wnty",
     "kEH_UniK": "C071B",
@@ -18872,7 +18972,7 @@ unikemet = {
   "𓟣": {
     "kEH_Cat": "C-11-006",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, right arm forward, holding a spear with the point downwards, left arm hanging beside the body, on top of an crocodile (I3).",
+    "kEH_Desc": "God, standing, with the head of a falcon, right arm forwards, holding a spear with the point downwards, left arm hanging beside the body, on top of a crocodile (I3).",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "wnty",
     "kEH_UniK": "HJ C073",
@@ -18883,7 +18983,7 @@ unikemet = {
   "𓟤": {
     "kEH_Cat": "C-11-008",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), holding an harpoon with the point down, diagonally over the body, from the tip of the right foot beyond the left shoulder, right arm lowered, right hand holding the harpoon between the waist and knee, left arm raised, holding the shaft near the end, on top of an crocodile, head looking backwards (I3E).",
+    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), holding a harpoon with the point down, diagonally over the body, from the tip of the right foot beyond the left shoulder, right arm lowered, right hand holding the harpoon between the waist and knee, left arm raised, holding the shaft on top of a crocodile, head looking backwards (I3E).",
     "kEH_Func": "Classifier harpooner",
     "kEH_FVal": "(ꞽ)ꜣ(w).ty",
     "kEH_UniK": "HJ C076",
@@ -18894,7 +18994,7 @@ unikemet = {
   "𓟥": {
     "kEH_Cat": "C-11-009",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), holding an harpoon with the point down, diagonally over the body, from the tip of the right foot beyond the left shoulder, right arm lowered, right hand holding the harpoon between the waist and knee, left arm raised, holding the shaft near the end, on top of an crocodile (I3).",
+    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), holding a harpoon with the point down, diagonally over the body, from the tip of the right foot beyond the left shoulder, right arm lowered, right hand holding the harpoon between the waist and knee, left arm raised, holding the shaft near the end, on top of a crocodile (I3).",
     "kEH_Func": "Logogram (harpooner) or Logogram (Wenty)",
     "kEH_FVal": "ꞽꜣw.ty | wnty",
     "kEH_UniK": "HJ C076A",
@@ -18905,7 +19005,7 @@ unikemet = {
   "𓟦": {
     "kEH_Cat": "C-11-010",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forward, holding a spear with the point downwards, left arm hanging beside the body, on top of an crocodile (I3).",
+    "kEH_Desc": "God, standing, with the head of a falcon, wearing the double crown (S5), right arm forwards, holding a spear with the point downwards, left arm hanging beside the body, on top of a crocodile (I3).",
     "kEH_Func": "Logogram (Wenty)",
     "kEH_FVal": "wnty",
     "kEH_UniK": "HJ C074",
@@ -18916,7 +19016,7 @@ unikemet = {
   "𓟧": {
     "kEH_Cat": "C-12-001",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long curved beard, wearing a headdress consisting of a combination of the Atef crown and the red crown (S53vara?), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
+    "kEH_Desc": "God, seated, both knees up, with covered legs and arms, with a long-curved beard, wearing a headdress consisting of a combination of the Atef crown and the red crown (S53vara?), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically.",
     "kEH_Func": "Classifier divinity (Geb)",
     "kEH_FVal": "gbb",
     "kEH_UniK": "HJ C077",
@@ -18927,7 +19027,7 @@ unikemet = {
   "𓟨": {
     "kEH_Cat": "C-13-002",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, right knee raised, with long curved beard and long wig, raised arms at either side of the body, hands held vertically, with the handpalms inwards.",
+    "kEH_Desc": "God, seated, right knee raised, with long-curved beard and long wig, raised arms at either side of the body, hands held vertically, with the hand palms inwards.",
     "kEH_Func": "Logogram (million, many)",
     "kEH_FVal": "ḥḥ",
     "kEH_UniK": "A073C"
@@ -18935,7 +19035,7 @@ unikemet = {
   "𓟩": {
     "kEH_Cat": "C-13-005",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, right knee raised, with long curved beard and long wig, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the handpalms inwards.",
+    "kEH_Desc": "God, seated, right knee raised, with long-curved beard and long wig, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the hand palms inwards.",
     "kEH_Func": "Logogram (million, many)",
     "kEH_FVal": "ḥḥ",
     "kEH_UniK": "C011M"
@@ -18943,7 +19043,7 @@ unikemet = {
   "𓟪": {
     "kEH_Cat": "C-13-006",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, right knee raised, with long curved beard and coif, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the handpalms outwards.",
+    "kEH_Desc": "God, seated, right knee raised, with long-curved beard and coif, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the hand palms outwards.",
     "kEH_Func": "Logogram (million, many)",
     "kEH_FVal": "ḥḥ",
     "kEH_UniK": "C011N"
@@ -18951,7 +19051,7 @@ unikemet = {
   "𓟫": {
     "kEH_Cat": "C-13-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Man/god, seated on heel, right knee raised, with coif/short hair, without beard, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the handpalms inwards.",
+    "kEH_Desc": "Man/god, seated on heel, right knee raised, with coif/short hair, without beard, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the hand palms inwards.",
     "kEH_Func": "Logogram (million, many)",
     "kEH_FVal": "ḥḥ",
     "kEH_UniK": "C011A",
@@ -18961,7 +19061,7 @@ unikemet = {
   "𓟬": {
     "kEH_Cat": "C-13-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Man/god, seated on heel, both knees down, with coif/short hair, without beard, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the handpalms inwards.",
+    "kEH_Desc": "Man/god, seated on heel, both knees down, with coif/short hair, without beard, with a palm branch, stripped of leaves and notched on his head (M4), notch forward, raised arms at either side of the body, hands held vertically, with the hand palms inwards.",
     "kEH_Func": "Logogram (million, many)",
     "kEH_FVal": "ḥḥ",
     "kEH_UniK": "HJ C011L",
@@ -18972,7 +19072,7 @@ unikemet = {
   "𓟭": {
     "kEH_Cat": "C-13-011",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, right knee raised, with long curved beard and long wig, with a tie or strap, used with sandals (ankh-sign, S34) vertically on its head, raised arms at either side of the body, hands held vertically, with the handpalms inwards.",
+    "kEH_Desc": "God, seated, right knee raised, with long-curved beard and long wig, with a tie or strap, used with sandals (ankh-sign, S34) vertically on its head, raised arms at either side of the body, hands held vertically, with the hand palms inwards.",
     "kEH_Func": "Logogram (millions of years)",
     "kEH_FVal": "ḥḥ (n) ꜥnḫ",
     "kEH_UniK": "C110"
@@ -19057,7 +19157,7 @@ unikemet = {
   "𓟷": {
     "kEH_Cat": "C-13-027",
     "kEH_Core": "C",
-    "kEH_Desc": "Man/god, seated on heel, right knee raised, with coif/short hair, without beard, with a sun disk (N5) on his head, raised arms at either side of the body, hands held vertically, with the handpalms inwards.",
+    "kEH_Desc": "Man/god, seated on heel, right knee raised, with coif/short hair, without beard, with a sun disk (N5) on his head, raised arms at either side of the body, hands held vertically, with the hand palms inwards.",
     "kEH_Func": "Logogram Heh (million, many)",
     "kEH_FVal": "ḥḥ",
     "kEH_UniK": "HJ C078",
@@ -19202,6 +19302,7 @@ unikemet = {
   "𓠇": {
     "kEH_Cat": "C-14-009",
     "kEH_Core": "C",
+    "kEH_Desc": "Child, naked, wearing the double crown, right arm raised, hand in front of the mouth, with a line running from the wrist to the left ankle, left arm hanging beside the body.",
     "kEH_UniK": "C338"
   },
   "𓠈": {
@@ -19277,7 +19378,7 @@ unikemet = {
   "𓠏": {
     "kEH_Cat": "C-15-012",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a ram, with a headdress consisting of two feathers with a sun disk on rams horns, with an uraeus at either side of the feathers; holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a ram, with a headdress consisting of two feathers with a sun disk on ram horns, with an uraeus at either side of the feathers; holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (Khnum)",
     "kEH_FVal": "ẖnm.w",
     "kEH_UniK": "C004K"
@@ -19285,7 +19386,7 @@ unikemet = {
   "𓠐": {
     "kEH_Cat": "C-15-013",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a ram, with a headdress consisting of two feathers with a sun disk on rams horns; holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a ram, with a headdress consisting of two feathers with a sun disk on ram horns; holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (Khnum)",
     "kEH_FVal": "ẖnm.w",
     "kEH_UniK": "C004L"
@@ -19293,7 +19394,7 @@ unikemet = {
   "𓠑": {
     "kEH_Cat": "C-15-015",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a ram, with a headdress consisting of two plumes with a sun disk on rams horns, with an uraeus at either side of the plumes; holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a ram, with a headdress consisting of two plumes with a sun disk on ram horns, with an uraeus at either side of the plumes; holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (Khnum)",
     "kEH_FVal": "ẖnm.w",
     "kEH_UniK": "C004M"
@@ -19337,7 +19438,7 @@ unikemet = {
   "𓠖": {
     "kEH_Cat": "C-15-026",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block, with the head of a ram with horizontal twisted horns, in front of a potters wheel with a vessel on it, right arm forward, hand inside the vessel, left arm forward, hand at the potters wheel.",
+    "kEH_Desc": "God, seated on a block, with the head of a ram with horizontal twisted horns, in front of a potter's wheel with a vessel on it, both arm forwards, right hand inside the vessel, left hand at the wheel.",
     "kEH_Func": "Logogram (creator)",
     "kEH_FVal": "nḥp",
     "kEH_UniK": "HJ C035",
@@ -19348,7 +19449,7 @@ unikemet = {
   "𓠗": {
     "kEH_Cat": "C-15-028",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block throne on a base, with the head of a ram with horizontal twisted horns, in front of a potters wheel with a lump of clay on it, right leg forward, with the foot at the base of the potters wheel, right arm forward, hand on top of the lump of clay, left arm forward, hand at the potters wheel.",
+    "kEH_Desc": "God, seated on a block throne on a base, with the head of a ram with horizontal twisted horns, in front of a potter's wheel with a lump of clay on it, right leg forward, with the foot at the base of the potter's wheel, both arm forwards, hands at the vessel.",
     "kEH_Func": "Logogram (creator)",
     "kEH_FVal": "nḥp",
     "kEH_UniK": "C348",
@@ -19357,7 +19458,7 @@ unikemet = {
   "𓠘": {
     "kEH_Cat": "C-15-030",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with the head of a ram with horizontal twisted horns, standing at a potters wheel with a round vessel with an upstanding rim (W24) on it, right leg extended, right foot at the base of the potters wheel, both arms extended in front, right hand above the vessel, left hand at the top of the potters wheel.",
+    "kEH_Desc": "God, with the head of a ram with horizontal twisted horns, standing at a potter's wheel with a round vessel with an upstanding rim (W24) on it, right leg extended, right foot at the base of the potter's wheel, both arm forwards, right hand above the vessel, left hand at the wheel.",
     "kEH_Func": "Logogram (to build, to create)",
     "kEH_FVal": "ḳd",
     "kEH_UniK": "C349"
@@ -19365,7 +19466,7 @@ unikemet = {
   "𓠙": {
     "kEH_Cat": "C-15-032",
     "kEH_Core": "C",
-    "kEH_Desc": "God, with the head of a ram with horizontal twisted horns, with a sun disk (N5) on its head, seated on nothing, in front of a potters wheel with a lump of clay on it, right leg extended, right foot at the base of the potters wheel, both arms extended in front, right hand above the lump of clay, left hand at the top of the potters whieel.",
+    "kEH_Desc": "God, with the head of a ram with horizontal twisted horns, with a sun disk (N5) on its head, seated on nothing, in front of a potter's wheel with a lump of clay on it, right leg extended, right foot at the base of the potter's wheel, both arms extended in front, right hand above the lump of clay, left hand at the top of the potter's wheel.",
     "kEH_Func": "Logogram (to create, to form)",
     "kEH_FVal": "nḥp",
     "kEH_UniK": "C336A"
@@ -19373,7 +19474,7 @@ unikemet = {
   "𓠚": {
     "kEH_Cat": "C-15-034",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a ram with forwards curving horns, both arms raised in front, touching a vertically written wall with battlements near the top, left leg raised, touching the wall near the bottom.",
+    "kEH_Desc": "God, standing, with the head of a ram with forward curving horns, both arms raised in front, touching a vertically written wall with battlements near the top, left leg raised, touching the wall near the bottom.",
     "kEH_Func": "Logogram (to build)",
     "kEH_FVal": "ẖnm",
     "kEH_UniK": "C036A"
@@ -19456,7 +19557,7 @@ unikemet = {
   "𓠤": {
     "kEH_Cat": "C-19-006",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees down, with a long curved beard and long wig/hair, with a clump of three papyrus flowers (M16A) on its head, both arms forward, hands at the hight of the chest, holding a tray or reed mat, with a tall water-pot, with spout, with line of fluid coming from the spout (W15A) on top of it, with the spout at the front.",
+    "kEH_Desc": "God with breast, seated, both knees down, with a long-curved beard and long wig/hair, with a clump of three papyrus flowers (M16A) on its head, both arms forward, hands at the height of the chest, holding a tray or reed mat, with a tall water-pot, with spout, with line of fluid coming from the spout (W15A) on top of it, with the spout at the front.",
     "kEH_Func": "Logogram (the flood)",
     "kEH_FVal": "hꜥpy",
     "kEH_UniK": "HJ C091A",
@@ -19466,7 +19567,7 @@ unikemet = {
   "𓠥": {
     "kEH_Cat": "C-19-007",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees down, with a long curved beard and long wig/hair, with a clump of three papyrus flowers (M16A) on its head, both arms forward, hands at the hight of the chest, holding a tray or reed mat, with a tall water-pot, with spout, with line of fluid coming from the spout (W15A) on top of it, with the spout at the front, with a lotus flower and stem (M9/rotated M133) written over the water pot.",
+    "kEH_Desc": "God with breast, seated, both knees down, with a long-curved beard and long wig/hair, with a clump of three papyrus flowers (M16A) on its head, both arms forward, hands at the height of the chest, holding a tray or reed mat, with a tall water-pot, with spout, with line of fluid coming from the spout (W15A) on top of it, with the spout at the front, with a lotus flower and stem (M9/rotated M133) written over the water pot.",
     "kEH_Func": "Logogram (the flood)",
     "kEH_FVal": "hꜥpy",
     "kEH_UniK": "HJ C091B",
@@ -19477,7 +19578,7 @@ unikemet = {
   "𓠦": {
     "kEH_Cat": "C-19-008",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees down, with a long curved beard and long wig/hair, with a clump of three papyrus flowers (M16A) on its head, both arms forward, hands at the hight of the waist, holding a tall waterpot (W14).",
+    "kEH_Desc": "God with breast, seated, both knees down, with a long-curved beard and long wig/hair, with a clump of three papyrus flowers (M16A) on its head, both arms forward, hands at the height of the waist, holding a tall waterpot (W14).",
     "kEH_Func": "Logogram (the Nile/the flood)",
     "kEH_FVal": "hꜥpy ",
     "kEH_UniK": "HJ C092",
@@ -19488,7 +19589,7 @@ unikemet = {
   "𓠧": {
     "kEH_Cat": "C-19-009",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees down, with a long curved beard and long wig/hair, with a clump of three papyrus flowers (M16A) on its head, both arms forward, hands at the hight of the waist, holding a tall waterpot, with spout, with line of fluid coming from the spout (W15A), spout at the front.",
+    "kEH_Desc": "God with breast, seated, both knees down, with a long-curved beard and long wig/hair, with a clump of three papyrus flowers (M16A) on its head, both arms forward, hands at the height of the waist, holding a tall waterpot, with spout, with line of fluid coming from the spout (W15A), spout at the front.",
     "kEH_Func": "Logogram (the Nile/the flood)",
     "kEH_FVal": "hꜥpy",
     "kEH_UniK": "HJ C092B",
@@ -19506,7 +19607,7 @@ unikemet = {
   "𓠩": {
     "kEH_Cat": "C-19-015",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with a long curved beard and long wig/hair, with a clump of three papyrus flowers, with two buds bent down (M15) on its head, both arms forward, hands at the hight of the waist, holding a tray or reed mat, with two tall waterpots (W14) on it.",
+    "kEH_Desc": "God with breast, standing, with a long-curved beard and long wig/hair, with a clump of three papyrus flowers, with two buds bent down (M15) on its head, both arms forward, hands at the height of the waist, holding a tray or reed mat, with two tall waterpots (W14) on it.",
     "kEH_Func": "Logogram (the Nile/the flood)",
     "kEH_FVal": "hꜥpy",
     "kEH_UniK": "C094C"
@@ -19514,13 +19615,13 @@ unikemet = {
   "𓠪": {
     "kEH_Cat": "C-19-017",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with a long curved beard and long wig/hair, with a clump of three papyrus flowers, with two buds bent down (M15) on its head, both arms forward, hands at the hight of the waist, holding a tray or reed mat, with two tall waterpots (W14) on it, with a lotus flower and stem (M9/rotated M133) written over the water pot, with the stem of the flower extending beyond the mat, with a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (S40) between the two pots, with the lower half of the sceptre extending below the mat.",
+    "kEH_Desc": "God with breast, standing, with a long-curved beard and long wig/hair, with a clump of three papyrus flowers, with two buds bent down (M15) on its head, both arms forward, hands at the height of the waist, holding a tray or reed mat, with two tall waterpots (W14) on it, with a lotus flower and stem (M9/rotated M133) written over the water pot, with the stem of each flower extending beyond the mat, with a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (S40) between the two pots, with the lower half of the sceptre extending below the mat.",
     "kEH_UniK": "C339"
   },
   "𓠫": {
     "kEH_Cat": "C-20-001",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing a headdress consisting of four plumes on rams horns (S68), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing a headdress consisting of four plumes on ram horns (S68), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (Onuris)",
     "kEH_FVal": "ꞽn-ḥr.t",
     "kEH_UniK": "HJ C095",
@@ -19538,7 +19639,7 @@ unikemet = {
   "𓠭": {
     "kEH_Cat": "C-20-004",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing a headdress consisting of two plumes on rams horns (S62).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing a headdress consisting of two plumes on ram horns (S62).",
     "kEH_Func": "Logogram (Onuris)",
     "kEH_FVal": "ꞽn-ḥr.t",
     "kEH_UniK": "C095B"
@@ -19546,7 +19647,7 @@ unikemet = {
   "𓠮": {
     "kEH_Cat": "C-21-002",
     "kEH_Core": "C",
-    "kEH_Desc": "God, walking, looking backwards, with a long curved beard and long hair/wig, right arm forward, hand at the hight of the waist, holding a stick/staff, left arm backwards, hand at the hight of the shoulder, holding a star (N14).",
+    "kEH_Desc": "God, walking, looking backwards, with a long-curved beard and long hair/wig, right arm forward, hand at the height of the waist, holding a stick/staff, left arm backwards, hand at the height of the shoulder, holding a star (N14).",
     "kEH_Func": "Logogram (Orion)",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "C097A"
@@ -19564,7 +19665,7 @@ unikemet = {
   "𓠰": {
     "kEH_Cat": "C-22-001",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the Atef crown without horns (S8A).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the Atef crown without horns (S8A).",
     "kEH_Func": "Classifier Osiris",
     "kEH_FVal": "wsꞽr",
     "kEH_UniK": "HJ C098A",
@@ -19575,7 +19676,7 @@ unikemet = {
   "𓠱": {
     "kEH_Cat": "C-22-003",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the Atef crown without horns (S8A), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the Atef crown without horns (S8A), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (Osiris)",
     "kEH_FVal": "wsꞽr",
     "kEH_UniK": "HJ C098",
@@ -19593,7 +19694,7 @@ unikemet = {
   "𓠳": {
     "kEH_Cat": "C-22-008",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard, wearing the Atef crown without horns (S8A), holding a flagellum (S45) and a crook (S38), opening inwards.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard, wearing the Atef crown without horns (S8A), holding a flagellum (S45) and a crook (S38), opening inwards.",
     "kEH_Func": "Logogram (one who belongs to Seth)",
     "kEH_FVal": "stẖ.y",
     "kEH_UniK": "HJ C098B",
@@ -19610,14 +19711,14 @@ unikemet = {
   "𓠵": {
     "kEH_Cat": "C-22-016",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block throne on a base, with a long curved beard, wearing the Atef crown without rams horns (S8A), both arms in front of the chest, right hand holding a crook (S38), opening inward, angled over the right shoulder, left hand holding a flagellum (S45), angled over the left shoulder; on top of a base.",
+    "kEH_Desc": "God, seated on a block throne on a base, with a long-curved beard, wearing the Atef crown without ram horns (S8A), both arms in front of the chest, right hand holding a crook (S38), opening inward, angled over the right shoulder, left hand holding a flagellum (S45), angled over the left shoulder, on top of a base.",
     "kEH_Func": "Classifier Osiris",
     "kEH_UniK": "C098G"
   },
   "𓠶": {
     "kEH_Cat": "C-22-017",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated on a block throne on a base, with a long curved beard, wearing the Atef crown with rams horns (S8), both arms in front of the chest, right hand holding a crook (S38), opening inward, angled over the right shoulder, left hand holding a flagellum (S45), angled over the left shoulder; on top of a base.",
+    "kEH_Desc": "God, seated on a block throne on a base, with a long-curved beard, wearing the Atef crown with ram horns (S8), both arms in front of the chest, right hand holding a crook (S38), opening inward, angled over the right shoulder, left hand holding a flagellum (S45), angled over the left shoulder, on top of a base.",
     "kEH_Func": "Classifier Osiris",
     "kEH_FVal": "wsꞽr",
     "kEH_UniK": "C098H"
@@ -19625,7 +19726,7 @@ unikemet = {
   "𓠷": {
     "kEH_Cat": "C-22-019",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright, with a long curved beard, wearing the Atef crown with rams horns (S8), both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically.",
+    "kEH_Desc": "God, in mummy form, standing upright, with a long-curved beard, wearing the Atef crown with ram horns (S8), both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically.",
     "kEH_Func": "Classifier Osiris",
     "kEH_FVal": "ḫnt.y-ꞽmn.tyw",
     "kEH_UniK": "C101",
@@ -19634,7 +19735,7 @@ unikemet = {
   "𓠸": {
     "kEH_Cat": "C-22-021",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright on a platform, with a long curved beard, wearing the Atef crown without rams horns (S8A), both arms in front of the chest, right hand holding a flagellum (S45), angled over the right shoulder, left hand holding a crook (S38), opening inward, angled over the left shoulder.",
+    "kEH_Desc": "God, in mummy form, standing upright on a platform, with a long-curved beard, wearing the Atef crown without ram horns (S8A), both arms in front of the chest, right hand holding a flagellum (S45), angled over the right shoulder, left hand holding a crook (S38), opening inward, angled over the left shoulder.",
     "kEH_Func": "Logogram (Osiris)",
     "kEH_FVal": "wsꞽr",
     "kEH_UniK": "HJ C101A",
@@ -19684,7 +19785,7 @@ unikemet = {
   "𓠽": {
     "kEH_Cat": "C-23-013",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, adorned with an ankh-sign (S34) and a djed-pillar (R11).",
+    "kEH_Desc": "God, in mummy form, standing upright, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, adorned with an ankh-sign (S34) and a djed-pillar (R11).",
     "kEH_Func": "Logogram (Ptah)",
     "kEH_FVal": "ptḥ",
     "kEH_UniK": "HJ C019A",
@@ -19695,7 +19796,7 @@ unikemet = {
   "𓠾": {
     "kEH_Cat": "C-23-017",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically.",
+    "kEH_Desc": "God, in mummy form, standing upright, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically.",
     "kEH_Func": "Logogram (divine, godly)",
     "kEH_FVal": "nṯr.y",
     "kEH_UniK": "HJ C019C",
@@ -19706,7 +19807,7 @@ unikemet = {
   "𓠿": {
     "kEH_Cat": "C-23-018",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright on a platform, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, inside a shrine without the pillar at the front.",
+    "kEH_Desc": "God, in mummy form, standing upright on a platform, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, inside a shrine without the pillar at the front.",
     "kEH_Func": "Logogram (Ptah)",
     "kEH_FVal": "ptḥ",
     "kEH_UniK": "C020C",
@@ -19715,7 +19816,7 @@ unikemet = {
   "𓡀": {
     "kEH_Cat": "C-23-021",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright on a platform, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, adorned with an ankh-sign (S34) and a djed-pillar (R11); inside the facade of a shrine (O21), inside a shrine supported by pillars resembling a stem of papyrus with a bud (M13).",
+    "kEH_Desc": "God, in mummy form, standing upright on a platform, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, adorned with an ankh-sign (S34) and a djed-pillar (R11); inside the facade of a shrine (O21), inside a shrine supported by pillars resembling a stem of papyrus with a bud (M13).",
     "kEH_Func": "Logogram (divine, godly)",
     "kEH_FVal": "nṯr.y",
     "kEH_UniK": "HJ C020A",
@@ -19742,7 +19843,7 @@ unikemet = {
   "𓡃": {
     "kEH_Cat": "C-24-001",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard and long wig/hair, with a sun-disk (N5) on his head.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard and long wig/hair, with a sun-disk (N5) on his head.",
     "kEH_Func": "Logogram (Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "HJ C001D",
@@ -19753,7 +19854,7 @@ unikemet = {
   "𓡄": {
     "kEH_Cat": "C-24-003",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard and long wig/hair,  with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard and long wig/hair, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Classifier King of UE",
     "kEH_FVal": "n(.y)-sw.t",
     "kEH_UniK": "HJ C001A",
@@ -19764,7 +19865,7 @@ unikemet = {
   "𓡅": {
     "kEH_Cat": "C-24-004",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard and long wig/hair, with a sun-disk (N5) on his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard and long wig/hair, with a sun-disk (N5) on his head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "HJ C001B",
@@ -19774,7 +19875,7 @@ unikemet = {
   "𓡆": {
     "kEH_Cat": "C-24-005",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard and long wig/hair, with a sun-disk (N5) on his head, holding a dung-beetle (scarab, L1).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard and long wig/hair, with a sun-disk (N5) on his head, holding a dung-beetle (scarab, L1).",
     "kEH_Func": "Logogram (Khepri)",
     "kEH_FVal": "ḫprꞽ",
     "kEH_UniK": "C001F"
@@ -19782,7 +19883,7 @@ unikemet = {
   "𓡇": {
     "kEH_Cat": "C-24-006",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard and long wig/hair,  with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre (S42).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard and long wig/hair, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre (S42).",
     "kEH_Func": "Logogram (powerful one)",
     "kEH_FVal": "sḫm",
     "kEH_UniK": "C001G"
@@ -19860,7 +19961,7 @@ unikemet = {
   "𓡐": {
     "kEH_Cat": "C-26-019",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright, with the head of a donkey/ass, with a knife (T30A) at the face, blade downwards.",
+    "kEH_Desc": "God, in mummy form, standing upright, with the head of a donkey/ass, with a knife (T30A) at the face, blade downwards.",
     "kEH_Func": "Classifier creation, form",
     "kEH_FVal": "ꞽr.w",
     "kEH_UniK": "HJ C264",
@@ -19892,7 +19993,7 @@ unikemet = {
   "𓡓": {
     "kEH_Cat": "C-27-005",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a crocodile, with rams horns and a N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of a crocodile, with ram horns and a N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Phonemogram (first person for sbk-šmꜥ-nfr)",
     "kEH_FVal": "ꞽ ",
     "kEH_UniK": "C107B"
@@ -19916,7 +20017,7 @@ unikemet = {
   "𓡖": {
     "kEH_Cat": "C-28-001",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic image of a falcon, with a thorn, point upwards in front of it.",
+    "kEH_Desc": "An archaic image of a falcon, with a thorn, pointing upwards in front of it.",
     "kEH_Func": "Logogram (Sopdu)",
     "kEH_FVal": "spd.w",
     "kEH_UniK": "HJ C108A",
@@ -19955,7 +20056,7 @@ unikemet = {
   "𓡚": {
     "kEH_Cat": "C-29-007",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright, with the head of a baboon/monkey.",
+    "kEH_Desc": "God, in mummy form, standing upright, with the head of a baboon/monkey.",
     "kEH_Func": "Logogram (Hapy)",
     "kEH_FVal": "ḥp.y",
     "kEH_UniK": "HJ C112",
@@ -19966,7 +20067,7 @@ unikemet = {
   "𓡛": {
     "kEH_Cat": "C-30-004",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard and long hair/wig, wearing a headdress consisting of two feathers on rams horns (S77).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard and long hair/wig, wearing a headdress consisting of two feathers on ram horns (S77).",
     "kEH_Func": "Logogram (Tatenen)",
     "kEH_FVal": "tꜣ-ṯnn",
     "kEH_UniK": "HJ C018F",
@@ -19976,7 +20077,7 @@ unikemet = {
   "𓡜": {
     "kEH_Cat": "C-30-005",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard and long hair/wig, wearing a headdress consisting of two feathers on rams horns (S77), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard and long hair/wig, wearing a headdress consisting of two feathers on ram horns (S77), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (Tatenen)",
     "kEH_FVal": "tꜣ-ṯnn",
     "kEH_UniK": "C018A",
@@ -19986,7 +20087,7 @@ unikemet = {
   "𓡝": {
     "kEH_Cat": "C-30-006",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long curved beard and long hair/wig, wearing a headdress consisting of two feathers on rams horns (S77), holding a pestle (U33), vertically, top curving outwards.",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with a long-curved beard and long hair/wig, wearing a headdress consisting of two feathers on ram horns (S77), holding a pestle (U33), vertically, top curving outwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ṯn.tꞽ",
     "kEH_UniK": "C018I"
@@ -19994,7 +20095,7 @@ unikemet = {
   "𓡞": {
     "kEH_Cat": "C-30-010",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees down, with a long curved beard and long hair/wig, wearing a headdress consisting of two feathers on rams horns (S77), both arms forward, holding a flagellum (S45).",
+    "kEH_Desc": "God, seated, both knees down, with a long-curved beard and long hair/wig, wearing a headdress consisting of two feathers on ram horns (S77), both arms forward, holding a flagellum (S45).",
     "kEH_Func": "Classifier Tatenen",
     "kEH_FVal": "tꜣ-ṯnn",
     "kEH_UniK": "HJ C018C",
@@ -20005,7 +20106,7 @@ unikemet = {
   "𓡟": {
     "kEH_Cat": "C-30-011",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees down, with a long curved beard and long hair/wig, wearing a headdress consisting of two feathers on rams horns, with a uraeus at either side of the feathers; both arms forward, holding a flagellum (S45).",
+    "kEH_Desc": "God, seated, both knees down, with a long-curved beard and long hair/wig, wearing a headdress consisting of two feathers on ram horns, with a uraeus at either side of the feathers; both arms forward, holding a flagellum (S45).",
     "kEH_Func": "Logogram (Tatenen)",
     "kEH_FVal": "tꜣ-ṯnn",
     "kEH_UniK": "HJ C018E",
@@ -20015,7 +20116,7 @@ unikemet = {
   "𓡠": {
     "kEH_Cat": "C-30-013",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees down, with a long curved beard and long hair/wig, wearing a headdress consisting of two feathers and a sun disk on rams horns, with a uraeus with a sun disk on the head at either side of the feathers; both arms forward, holding a flagellum (S45) and a crook (S38), opening inwards.",
+    "kEH_Desc": "God, seated, both knees down, with a long-curved beard and long hair/wig, wearing a headdress consisting of two feathers and a sun disk on ram horns, with a uraeus with a sun disk on the head at either side of the feathers; both arms forward, holding a flagellum (S45) and a crook (S38), opening inwards.",
     "kEH_Func": "Logogram (Tatenen)",
     "kEH_FVal": "tꜣ-ṯnn",
     "kEH_UniK": "C018J"
@@ -20023,7 +20124,7 @@ unikemet = {
   "𓡡": {
     "kEH_Cat": "C-30-014",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, both knees down, with a long curved beard and long hair/wig, wearing a headdress consisting of two feathers on rams horns (S77), both arms forward, holding a flagellum (S45) and a crook (S38), opening inwards.",
+    "kEH_Desc": "God, seated, both knees down, with a long-curved beard and long hair/wig, wearing a headdress consisting of two feathers on ram horns (S77), both arms forward, holding a flagellum (S45) and a crook (S38), opening inwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ṯn(w)",
     "kEH_UniK": "HJ C018D",
@@ -20034,7 +20135,7 @@ unikemet = {
   "𓡢": {
     "kEH_Cat": "C-30-018",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, wearing a headdress consisting of two feathers and a sun disk on rams horns (S73), right arm forward, forearm horizontal, holding a sedge plant (M23), which curves towards the front, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, wearing a headdress consisting of two feathers and a sun disk on ram horns (S73), right arm forward, forearm horizontal, holding a sedge plant (M23), which curves towards the front, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sw",
     "kEH_UniK": "C283A"
@@ -20042,7 +20143,7 @@ unikemet = {
   "𓡣": {
     "kEH_Cat": "C-30-019",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright, with a long curved beard, wearing a headdress consisting of two feathers and a sun disk on rams horns (S73).",
+    "kEH_Desc": "God, in mummy form, standing upright, with a long-curved beard, wearing a headdress consisting of two feathers and a sun disk on ram horns (S73).",
     "kEH_Func": "Logogram (Tatenen)",
     "kEH_FVal": "tꜣ-ṯnn",
     "kEH_UniK": "C350"
@@ -20061,7 +20162,7 @@ unikemet = {
   "𓡥": {
     "kEH_Cat": "C-31-006",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, with knees up, feet flat on the ground, with the head of an ibis, arm forward, forearm following the angle of the upper leg, hand on the knee, horizontally, handpalm up, supporting a human face (D2).",
+    "kEH_Desc": "God, seated, with knees up, feet flat on the ground, with the head of an ibis, arm forward, forearm following the angle of the upper leg, hand on the knee, horizontally, hand palm up, supporting a human face (D2).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥr.y-ꞽb",
     "kEH_UniK": "C003E"
@@ -20102,7 +20203,7 @@ unikemet = {
   "𓡪": {
     "kEH_Cat": "C-31-017",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of an ibis, wearing the Atef crown with ram's horns, without sun disk, holding holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of an ibis, wearing the Atef crown with ram's horns, without sun disk, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḥkꜣ.w",
     "kEH_UniK": "C295A"
@@ -20110,7 +20211,7 @@ unikemet = {
   "𓡫": {
     "kEH_Cat": "C-31-019",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of an ibis, wearing the Atef crown without rams horns (S8A), holding a human face (D2).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of an ibis, wearing the Atef crown without ram horns (S8A), holding a human face (D2).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥr.y-ꞽb",
     "kEH_UniK": "C322A"
@@ -20118,7 +20219,7 @@ unikemet = {
   "𓡬": {
     "kEH_Cat": "C-31-020",
     "kEH_Core": "C",
-    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of an ibis, wearing the Atef crown without rams horns (S8A), holding a heart (F34).",
+    "kEH_Desc": "God, seated, knees up, with covered legs and arms, with the head of an ibis, wearing the Atef crown without ram horns (S8A), holding a heart (F34).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥr.y-ꞽb",
     "kEH_UniK": "C322B"
@@ -20126,7 +20227,7 @@ unikemet = {
   "𓡭": {
     "kEH_Cat": "C-31-021",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a ibis, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with the head of an ibis, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram/phonemogram (to be great)",
     "kEH_FVal": "wr",
     "kEH_UniK": "HJ C116",
@@ -20144,7 +20245,7 @@ unikemet = {
   "𓡯": {
     "kEH_Cat": "C-31-023",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a ibis, arms hanging at either side of the body.",
+    "kEH_Desc": "God, standing, with the head of an ibis, arms hanging at either side of the body.",
     "kEH_Func": "Logogram (Thot)",
     "kEH_FVal": "ḏhwty",
     "kEH_UniK": "HJ C116B",
@@ -20161,7 +20262,7 @@ unikemet = {
   "𓡱": {
     "kEH_Cat": "C-32-001",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with a long sash-kilt, no beard and short hair/wig, wearing a headdress consisting of four plumes and a sun disk, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "God, standing, with a long sash-kilt, no beard and short hair/wig, wearing a headdress consisting of four plumes and a sun disk, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (Son of Re)",
     "kEH_FVal": "sꜣ-rꜥ",
     "kEH_UniK": "HJ C285",
@@ -20181,7 +20282,7 @@ unikemet = {
   "𓡳": {
     "kEH_Cat": "C-32-003",
     "kEH_Core": "C",
-    "kEH_Desc": "God/man, standing on a base, with coif/short hair, without beard, with a palm branch, stripped of leaves and notched on his head, notch and curve backwards, arms raised at eithere side of the body, hands above the hight of the head, handpalms inwards.",
+    "kEH_Desc": "God/man, standing on a base, with coif/short hair, without beard, with a palm branch, stripped of leaves and notched on his head, notch and curve backwards, arms raised at either side of the body, hands above the height of the head, hand palms inwards.",
     "kEH_Func": "Logogram (eternity)",
     "kEH_FVal": "nḥḥ",
     "kEH_UniK": "HJ C286",
@@ -20191,7 +20292,7 @@ unikemet = {
   "𓡴": {
     "kEH_Cat": "C-32-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Man/god, with the legs replaced by a star, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Man/god, with the legs replaced by a star, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "dwꜣ.t",
     "kEH_UniK": "HJ C307",
@@ -20201,7 +20302,7 @@ unikemet = {
   "𓡵": {
     "kEH_Cat": "C-32-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Man/god, standing, with a sand covered mountain over the edge of the cultivated areas (N26) on his head, right arm forward, hand at the hight of the waist, holding a cobra in repose (Naja haja), standing up (I80), left arm hanging beside the body.",
+    "kEH_Desc": "Man/god, standing, with a sand covered mountain over the edge of the cultivated areas (N26) on his head, right arm forward, hand at the height of the waist, holding a cobra in repose (Naja haje), standing up (I80), left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥnꜥ",
     "kEH_UniK": "C351"
@@ -20266,7 +20367,7 @@ unikemet = {
   "𓡼": {
     "kEH_Cat": "C-34-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a snake, holding a knife (T30A) at an forward angle.",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a snake, holding a knife (T30A) at a forward angle.",
     "kEH_Func": "Classifier divinity?",
     "kEH_UniK": "HJ C138C",
     "kEH_JSesh": "C138C",
@@ -20327,7 +20428,7 @@ unikemet = {
   "𓢂": {
     "kEH_Cat": "C-35-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a headdress of bovine horns with a sun disk (F102), holding a club used by washer-men for beating laundry (U36) vertically.",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a headdress of bovine horns with a sun disk (F102), holding a club used by washermen for beating laundry (U36) vertically.",
     "kEH_Func": "Logogram (majesty)",
     "kEH_FVal": "ḥm.t",
     "kEH_UniK": "HJ C009D",
@@ -20391,7 +20492,7 @@ unikemet = {
   "𓢉": {
     "kEH_Cat": "C-35-022",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a headdress of bovine horns with a sun disk (F102), holding  sistrum, with horizontal wavy lines over the top piece (Y18).",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a headdress of bovine horns with a sun disk (F102), holding sistrum, with horizontal wavy lines over the top piece (Y18).",
     "kEH_Func": "Logogram (mistress of the sistrum)",
     "kEH_FVal": "nb.t-sšš.t",
     "kEH_UniK": "C009R"
@@ -20415,7 +20516,7 @@ unikemet = {
   "𓢌": {
     "kEH_Cat": "C-35-028",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, both knees down, with a headdress of bovine horns with a sun disk (F102), both arms forward, right hand at the hight of the shoulder, holding a tambourine, left hand on the tambourine.",
+    "kEH_Desc": "Goddess, seated, both knees down, with a headdress of bovine horns with a sun disk (F102), both arms forward, right hand at the height of the shoulder, holding a tambourine, left hand on the tambourine.",
     "kEH_Func": "Logogram (rejoicing)",
     "kEH_FVal": "nhm ",
     "kEH_UniK": "HJ C151",
@@ -20426,7 +20527,7 @@ unikemet = {
   "𓢍": {
     "kEH_Cat": "C-35-029",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddes, standing, with a headdress of bovine horns with a sun disk (F102), both arms forward, right hand at the hight of the shoulder, holding a tambourine, left hand on the tambourine.",
+    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), both arms forward, right hand at the height of the shoulder, holding a tambourine, left hand on the tambourine.",
     "kEH_Func": "Logogram (rejoicing)",
     "kEH_FVal": "nhm",
     "kEH_UniK": "HJ C151A",
@@ -20446,7 +20547,7 @@ unikemet = {
   "𓢏": {
     "kEH_Cat": "C-35-032",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman, seated, both knees down wearing a headdress consisting of a sundisk between bovid-horns, with a seat on top of the sun disk; nursing a child, seated on her lap, left arm forward, hand over the chest of the woman, right arm hanging beside the body; right arm forward, embracing/holding the child, left arm over the chest.",
+    "kEH_Desc": "Woman, seated, both knees down wearing a headdress consisting of a sun disk between bovid-horns, with a seat on top of the sun disk; nursing a child, seated on her lap, left arm forward, hand over the chest of the woman, right arm hanging beside the body; right arm forward, embracing/holding the child, left arm over the chest.",
     "kEH_Func": "Logogram (to nurse, to rear (from rnn))",
     "kEH_FVal": "rr",
     "kEH_UniK": "C152B"
@@ -20454,7 +20555,7 @@ unikemet = {
   "𓢐": {
     "kEH_Cat": "C-35-033",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (Hathor)",
     "kEH_FVal": "ḥw.t-ḥr",
     "kEH_UniK": "HJ C153",
@@ -20465,7 +20566,7 @@ unikemet = {
   "𓢑": {
     "kEH_Cat": "C-35-034",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (gold)",
     "kEH_FVal": "nbw",
     "kEH_UniK": "HJ C228",
@@ -20475,7 +20576,7 @@ unikemet = {
   "𓢒": {
     "kEH_Cat": "C-35-036",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the hight of the waist, holding a crook (S38) of the size of the king vertically, opening outwards, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the height of the waist, holding a crook (S38) of the size of the king vertically, opening outwards, left arm hanging beside the body.",
     "kEH_Func": "Logogram (ruler)",
     "kEH_FVal": "ḥḳꜣ.t",
     "kEH_UniK": "C228A"
@@ -20483,7 +20584,7 @@ unikemet = {
   "𓢓": {
     "kEH_Cat": "C-35-038",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), with a seat (Q1) on the sun disk, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), with a seat (Q1) on the sun disk, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (the heavens/sky)",
     "kEH_FVal": "p.t",
     "kEH_UniK": "C299A"
@@ -20501,7 +20602,7 @@ unikemet = {
   "𓢕": {
     "kEH_Cat": "C-35-043",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), right arm forward, hand ad the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee.",
+    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee.",
     "kEH_Func": "Logogram (Hathor)",
     "kEH_FVal": "ḥw.t-ḥr",
     "kEH_UniK": "C154B"
@@ -20509,7 +20610,7 @@ unikemet = {
   "𓢖": {
     "kEH_Cat": "C-35-046",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne with a base, with a seat (Q1) on her head, right arm forward, hand ad the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee.",
+    "kEH_Desc": "Goddess, seated on a block throne with a base, with a seat (Q1) on her head, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee.",
     "kEH_Func": "Logogram (Isis)",
     "kEH_FVal": "ꜣs.t",
     "kEH_UniK": "C315A"
@@ -20517,7 +20618,7 @@ unikemet = {
   "𓢗": {
     "kEH_Cat": "C-35-047",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), with a seat (Q1) on the sun disk, right arm forward, hand at the hight of the shoulder, holding a tie or strap, used with sandals (ankh-sign, S34), horizontally at the base, left arm forward, hand upon the knee, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), with a seat (Q1) on the sun disk, right arm forward, hand at the height of the shoulder, holding a tie or strap, used with sandals (ankh-sign, S34), horizontally at the base, left arm forward, hand upon the knee, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (Isis)",
     "kEH_FVal": "ꜣs.t",
     "kEH_UniK": "C155E",
@@ -20533,7 +20634,7 @@ unikemet = {
   "𓢙": {
     "kEH_Cat": "C-35-051",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), with a seat (Q1) on the sun disk, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), with a seat (Q1) on the sun disk, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (Isis)",
     "kEH_FVal": "ꜣs.t",
     "kEH_UniK": "C154A",
@@ -20549,7 +20650,7 @@ unikemet = {
   "𓢛": {
     "kEH_Cat": "C-35-054",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the hight of the shoulder, holding a tie or strap, used with sandals (ankh-sign, S34), horizontally at the base, left arm forward, hand upon the knee, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the height of the shoulder, holding a tie or strap, used with sandals (ankh-sign, S34), horizontally at the base, left arm forward, hand upon the knee, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ꞽp.t-wr.t",
     "kEH_UniK": "C155F"
@@ -20557,7 +20658,7 @@ unikemet = {
   "𓢜": {
     "kEH_Cat": "C-35-057",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), right arm forward, hand ad the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand above the hight of the bud of the papyrus, holding a tie or strap, used with sandals (ankh-sign, S34), horizontally at the base. ",
+    "kEH_Desc": "Goddess, seated on a block throne with a base, wearing a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand above the height of the bud of the papyrus, holding a tie or strap, used with sandals (ankh-sign, S34), horizontally at the base. ",
     "kEH_Func": "Logogram (Hathor)",
     "kEH_FVal": "ḥw.t-ḥr",
     "kEH_UniK": "C155X"
@@ -20607,7 +20708,7 @@ unikemet = {
   "𓢡": {
     "kEH_Cat": "C-35-068",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a seat (Q1) on her head, holding a two-barbed arrow-head, with the point facing downwards, in the ground, with only the barbs visible (T22A).",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a seat (Q1) on her head, holding a two-barbed arrowhead, with the point facing downwards, in the ground, with only the barbs visible (T22A).",
     "kEH_Func": "Classifier mourner",
     "kEH_FVal": "ḥꜣy.t",
     "kEH_UniK": "HJ C159E",
@@ -20629,7 +20730,7 @@ unikemet = {
   "𓢤": {
     "kEH_Cat": "C-35-071",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a seat (Q1) on her head, holding a",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a seat (Q1) on her head, holding a sceptre with a straight shaft, topped with the head of the Seth animal.",
     "kEH_UniK": "C159J"
   },
   "𓢥": {
@@ -20657,7 +20758,7 @@ unikemet = {
   "𓢧": {
     "kEH_Cat": "C-35-080",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, both knees down, back bend forward, with a seat (Q1) on her head, and a band of cloth around her forehead, both arms forward, hands at the hight of the waist.",
+    "kEH_Desc": "Goddess, seated, both knees down, back bent forward, with a seat (Q1) on her head, and a band of cloth around her forehead, both arms forward, hands at the height of the waist.",
     "kEH_Func": "Logogram (the widow)",
     "kEH_FVal": "šntꜣy.t",
     "kEH_UniK": "HJ C260",
@@ -20667,7 +20768,7 @@ unikemet = {
   "𓢨": {
     "kEH_Cat": "C-35-083",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (Isis)",
     "kEH_FVal": "ꜣs.t",
     "kEH_UniK": "HJ C161",
@@ -20678,7 +20779,7 @@ unikemet = {
   "𓢩": {
     "kEH_Cat": "C-35-084",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, wearing a vulture headdress, with a seat (Q3) on her head, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, standing, wearing a vulture headdress, with a seat (Q3) on her head, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (lord)",
     "kEH_FVal": "nb",
     "kEH_UniK": "C161B"
@@ -20686,7 +20787,7 @@ unikemet = {
   "𓢪": {
     "kEH_Cat": "C-35-087",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a sun disk (N5) on her head, arms covered by wings, right arm raised in front, hand at the hight of the shoulder, holding a feather (H6), left arm extended forward, hand at the hight of the waist, holding a feather (H6).",
+    "kEH_Desc": "Goddess, standing, with a sun disk (N5) on her head, arms covered by wings, right arm raised in front, hand at the height of the shoulder, holding a feather (H6), left arm extended forward, hand at the height of the waist, holding a feather (H6).",
     "kEH_Func": "Logogram (to protect)",
     "kEH_FVal": "ḫwꞽ",
     "kEH_UniK": "HJ C163",
@@ -20697,7 +20798,7 @@ unikemet = {
   "𓢫": {
     "kEH_Cat": "C-35-088",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a sun disk (N5) on her head, arms covered by wings, right arm raised in front, hand at the hight of the shoulder, holding a feather (H6), left arm extended forward, hand at the hight of the waist, holding a flagellum (S45) outwards.",
+    "kEH_Desc": "Goddess, standing, with a sun disk (N5) on her head, arms covered by wings, right arm raised in front, hand at the height of the shoulder, holding a feather (H6), left arm extended forward, hand at the height of the waist, holding a flagellum (S45) outwards.",
     "kEH_Func": "Logogram (to protect)",
     "kEH_FVal": "ḫwꞽ",
     "kEH_UniK": "HJ C163A",
@@ -20708,7 +20809,7 @@ unikemet = {
   "𓢬": {
     "kEH_Cat": "C-35-090",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34); on top of a collar of beads (S12).",
+    "kEH_Desc": "Goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34); on top of a collar of beads (S12).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "snṯ-ꞽnbw",
     "kEH_UniK": "HJ C310",
@@ -20748,8 +20849,8 @@ unikemet = {
   "𓢰": {
     "kEH_Cat": "C-36-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, holdign a flagellum (S45).",
-    "kEH_Func": "Classifie leonid divinity (female)",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, holding a flagellum (S45).",
+    "kEH_Func": "Classifier leonid divinity (female)",
     "kEH_FVal": "sḫm.t",
     "kEH_UniK": "HJ C164B",
     "kEH_JSesh": "C164B",
@@ -20809,7 +20910,7 @@ unikemet = {
   "𓢷": {
     "kEH_Cat": "C-36-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on her head, holding a stem of papyrus with a bud (M13).",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on her head, holding a stem of papyrus with a bud (M13).",
     "kEH_Func": "Classifier leonid divinity (female)",
     "kEH_FVal": "sḫm.t",
     "kEH_UniK": "HJ C165A",
@@ -20828,7 +20929,7 @@ unikemet = {
   "𓢹": {
     "kEH_Cat": "C-36-020",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on her head, holding a tie or strap, used with sandals (ankh-sign, S34), angled forwards.",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on her head, holding a tie or strap, used with sandals (ankh-sign, S34), angled forwards.",
     "kEH_Func": "Logogram (Sekhmet)",
     "kEH_FVal": "sḫm.t",
     "kEH_UniK": "HJ C165D",
@@ -20838,7 +20939,7 @@ unikemet = {
   "𓢺": {
     "kEH_Cat": "C-36-021",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on her head, holding a holding a stem of papyrus with a bud (M131) or flower vertically. ",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on her head, holding a holding a stem of papyrus with a bud (M131) or flower vertically. ",
     "kEH_Func": "Classifier leonid divinity (female)",
     "kEH_FVal": "sḫm.t",
     "kEH_UniK": "C165E",
@@ -20918,7 +21019,7 @@ unikemet = {
   "𓣃": {
     "kEH_Cat": "C-36-036",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness,  with the head of a cobra on her head.",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with the head of a lion/lioness, with the head of a cobra on her head.",
     "kEH_Func": "Classifier leonid divinity (female)",
     "kEH_FVal": "sḫm.t",
     "kEH_UniK": "C166B"
@@ -20926,7 +21027,7 @@ unikemet = {
   "𓣄": {
     "kEH_Cat": "C-36-039",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with the head of a lion/lioness, arms hanging on either side of the body, handpalms towards the back.",
+    "kEH_Desc": "Goddess, standing, with the head of a lion/lioness, arms hanging on either side of the body, hand palms towards the back.",
     "kEH_Func": "Classifier leonid divinity (female)",
     "kEH_FVal": "bꜣs.tt",
     "kEH_UniK": "C360"
@@ -20934,7 +21035,7 @@ unikemet = {
   "𓣅": {
     "kEH_Cat": "C-36-040",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on her head, right arm raised in front, hand at the hight of the face, handpalm outwards, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on her head, right arm raised in front, hand at the height of the face, hand palm outwards, left arm hanging beside the body.",
     "kEH_Func": "Logogram (vocative interjection)",
     "kEH_FVal": "ꞽ",
     "kEH_UniK": "C353"
@@ -20942,7 +21043,7 @@ unikemet = {
   "𓣆": {
     "kEH_Cat": "C-36-041",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on her head, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, standing, with the head of a lion/lioness, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on her head, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (daughter of Re)",
     "kEH_FVal": "sꜣ.t-rꜥ",
     "kEH_UniK": "C354"
@@ -20950,7 +21051,7 @@ unikemet = {
   "𓣇": {
     "kEH_Cat": "C-36-042",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a lion, , right arm extended forward, right hand at the hight of the shoulder, holding a sealed perfume jar with handles, and strings (W27), left arm forward, hand at the hight of the waist, holding a sealed ointment jar without ties (W2)",
+    "kEH_Desc": "God, standing, with the head of a lion, right arm extended forward, right hand at the height of the shoulder, holding a sealed perfume jar with handles, and strings (W27), left arm forward, hand at the height of the waist, holding a sealed ointment jar without ties (W2).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šms",
     "kEH_UniK": "C355"
@@ -21022,7 +21123,7 @@ unikemet = {
   "𓣎": {
     "kEH_Cat": "C-37-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, arms hanging beside the body, handpalms towards the back.",
+    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, arms hanging beside the body, hand palms towards the back.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "mꜣꜥ.t",
     "kEH_UniK": "C175B"
@@ -21030,7 +21131,7 @@ unikemet = {
   "𓣏": {
     "kEH_Cat": "C-37-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34).",
+    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34).",
     "kEH_Func": "Classifier truth",
     "kEH_FVal": "mꜥꜣ.t",
     "kEH_UniK": "HJ C175",
@@ -21041,8 +21142,8 @@ unikemet = {
   "𓣐": {
     "kEH_Cat": "C-37-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34); on top of a canal (N36).",
-    "kEH_Func": "Logogram/phonemogram  (whom truth/Maat loves)",
+    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34); on top of a canal (N36).",
+    "kEH_Func": "Logogram/phonemogram (whom truth/Maat loves)",
     "kEH_FVal": "mr(.y)-mꜣꜥ.t",
     "kEH_UniK": "HJ C175A",
     "kEH_JSesh": "C175A",
@@ -21051,7 +21152,7 @@ unikemet = {
   "𓣑": {
     "kEH_Cat": "C-37-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34); on top of a platform (Aa11).",
+    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34); on top of a platform (Aa11).",
     "kEH_Func": "Logogram (Maat)",
     "kEH_FVal": "mꜣꜥ.t",
     "kEH_UniK": "C176A"
@@ -21059,7 +21160,7 @@ unikemet = {
   "𓣒": {
     "kEH_Cat": "C-37-019",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the hight of the waist, holding the head and neck of a canine animal (F12) of the length of the figure, vertically, left arm forward, hand on the knee, holding a tie or strap, used with sandals (ankh-sign, S34), angled forwards.",
+    "kEH_Desc": "Goddess, seated on a block throne, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the height of the waist, holding the head and neck of a canine animal (F12) of the length of the figure, vertically, left arm forward, hand on the knee, holding a tie or strap, used with sandals (ankh-sign, S34), angled forwards.",
     "kEH_Func": "Logogram (in name Ramses II)",
     "kEH_FVal": "wsr-mꜣꜥ.t",
     "kEH_UniK": "C177A",
@@ -21068,7 +21169,7 @@ unikemet = {
   "𓣓": {
     "kEH_Cat": "C-37-020",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the hight of the waist, holding the head and neck of a canine animal (F12) of the length of the figure, vertically, left arm forward, hand on the knee, holding a tie or strap, used with sandals (ankh-sign, S34), horizontally at the loop.",
+    "kEH_Desc": "Goddess, seated on a block throne, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the height of the waist, holding the head and neck of a canine animal (F12) of the length of the figure, vertically, left arm forward, hand on the knee, holding a tie or strap, used with sandals (ankh-sign, S34), horizontally at the loop.",
     "kEH_Func": "Logogram (in name Ramses II)",
     "kEH_FVal": "wsr-mꜣꜥ.t",
     "kEH_UniK": "HJ C177",
@@ -21079,7 +21180,7 @@ unikemet = {
   "𓣔": {
     "kEH_Cat": "C-37-022",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the hight of the waist, holding the head and neck of a canine animal (F12) of the length of the figure, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a cloth band around her head, with a feather (H6) on her head, right arm forward, hand at the height of the waist, holding the head and neck of a canine animal (F12) of the length of the figure, left arm hanging beside the body.",
     "kEH_Func": "Logogram (in name Ramses II)",
     "kEH_FVal": "wsr-mꜣꜥ.t",
     "kEH_UniK": "HJ C178A",
@@ -21111,7 +21212,7 @@ unikemet = {
   "𓣗": {
     "kEH_Cat": "C-38-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, both knees down, with long hair, with a clump of three papyrus flowers (M16A) on her head, arms raised in front, hand horizontally at the hight of the shoulder, hand palm up.",
+    "kEH_Desc": "Goddess, seated, both knees down, with long hair, with a clump of three papyrus flowers (M16A) on her head, arms raised in front, hand horizontally at the height of the shoulder, hand palm up.",
     "kEH_Func": "Logogram (Meret)",
     "kEH_FVal": "mr.t",
     "kEH_UniK": "C180",
@@ -21121,7 +21222,7 @@ unikemet = {
   "𓣘": {
     "kEH_Cat": "C-38-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, both knees down, with long hair, with a clump of three papyrus flowers, with two buds bent down (M15) on her head, arms raised in front, hand horizontally at the hight of the shoulder, hand palm up.",
+    "kEH_Desc": "Goddess, seated, both knees down, with long hair, with a clump of three papyrus flowers, with two buds bent down (M15) on her head, arms raised in front, hand horizontally at the height of the shoulder, hand palm up.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "mr.t",
     "kEH_UniK": "HJ C276",
@@ -21132,7 +21233,7 @@ unikemet = {
   "𓣙": {
     "kEH_Cat": "C-38-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, one knee raised, with long hair, with a clump of three papyrus flowers, with two buds bent down (M15) on her head, arms raised in front, hand horizontally at the hight of the shoulder, hand palm up.",
+    "kEH_Desc": "Goddess, seated, one knee raised, with long hair, with a clump of three papyrus flowers, with two buds bent down (M15) on her head, arms raised in front, hand horizontally at the height of the shoulder, hand palm up.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "mr.t",
     "kEH_UniK": "C276A"
@@ -21140,7 +21241,7 @@ unikemet = {
   "𓣚": {
     "kEH_Cat": "C-38-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, both knees down, with long hair, with a clump of three papyrus flowers (M16A) on her head, both arm raised in front, handpalms outwards.",
+    "kEH_Desc": "Goddess, seated, both knees down, with long hair, with a clump of three papyrus flowers (M16A) on her head, both arms raised in front, hand palms outwards.",
     "kEH_Func": "Classifier divinity/musician",
     "kEH_FVal": "nb.tyw",
     "kEH_UniK": "HJ C180B",
@@ -21156,7 +21257,7 @@ unikemet = {
   "𓣜": {
     "kEH_Cat": "C-38-012",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with long hair, with a clump of three papyrus flowers (M16A) on her head, arms raised in front, hand horizontally at the hight of the shoulder, hand palm up.",
+    "kEH_Desc": "Goddess, standing, with long hair, with a clump of three papyrus flowers (M16A) on her head, arms raised in front, hand horizontally at the height of the shoulder, hand palm up.",
     "kEH_Func": "Logogram (Meret)",
     "kEH_FVal": "mr.t",
     "kEH_UniK": "HJ C182",
@@ -21167,7 +21268,7 @@ unikemet = {
   "𓣝": {
     "kEH_Cat": "C-38-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with long hair, with a clump of three papyrus flowers (M16A) on her head, arms raised in front, hand horizontally at the hight of the shoulder, hand palm up; on top of a collar of beads (S12).",
+    "kEH_Desc": "Goddess, standing, with long hair, with a clump of three papyrus flowers (M16A) on her head, arms raised in front, hand horizontally at the height of the shoulder, hand palm up; on top of a collar of beads (S12).",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "mr.ty",
     "kEH_UniK": "HJ C182A",
@@ -21203,7 +21304,7 @@ unikemet = {
   "𓣡": {
     "kEH_Cat": "C-39-006",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, wearing the double crown (S5), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34)",
+    "kEH_Desc": "Goddess, standing, wearing the double crown (S5), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34)",
     "kEH_Func": "Logogram (Mut)",
     "kEH_FVal": "mw.t",
     "kEH_UniK": "C184A"
@@ -21211,7 +21312,7 @@ unikemet = {
   "𓣢": {
     "kEH_Cat": "C-39-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, wearing the double crown (S5), right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, standing, wearing the double crown (S5), right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (Hathor)",
     "kEH_FVal": "ḥw.t-ḥr",
     "kEH_UniK": "HJ C224",
@@ -21222,7 +21323,7 @@ unikemet = {
   "𓣣": {
     "kEH_Cat": "C-39-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne on a base, wearing the double crown (S5) and vulture headdress, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), which has a horizontal tie or strap, used with sandals (ankh-sign, S34) at the head of the sceptre; left arm forward, hand on knee.",
+    "kEH_Desc": "Goddess, seated on a block throne on a base, wearing the double crown (S5) and vulture headdress, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), which has a horizontal tie or strap, used with sandals (ankh-sign, S34) at the head of the sceptre; left arm forward, hand on knee.",
     "kEH_Func": "Logogram (Hathor, giving life)",
     "kEH_FVal": "ḥw.t-ḥr-dꞽ-ꜥnḫ",
     "kEH_UniK": "C356"
@@ -21230,7 +21331,7 @@ unikemet = {
   "𓣤": {
     "kEH_Cat": "C-39-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne on a base, wearing the double crown (S5) and vulture headdress, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm forward, hand on knee.",
+    "kEH_Desc": "Goddess, seated on a block throne on a base, wearing the double crown (S5) and vulture headdress, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm forward, hand on knee.",
     "kEH_Func": "Logogram (Hathor)",
     "kEH_FVal": "ḥw.t-ḥr",
     "kEH_UniK": "C357"
@@ -21269,7 +21370,7 @@ unikemet = {
   "𓣨": {
     "kEH_Cat": "C-40-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated on a block throne on a base, wearing the red crown (S3), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), left arm forward, hand on knee.",
+    "kEH_Desc": "Goddess, seated on a block throne on a base, wearing the red crown (S3), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), left arm forward, hand on knee.",
     "kEH_Func": "Logogram (Neith)",
     "kEH_FVal": "n.t",
     "kEH_UniK": "C185G"
@@ -21277,7 +21378,7 @@ unikemet = {
   "𓣩": {
     "kEH_Cat": "C-40-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, wearing the red crown (S3), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically, with one arrow, fletching upwards in front of the sceptre, and two arrows, fletching upward behind the scepter.",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, wearing the red crown (S3), holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically, with one arrow, fletching upwards in front of the sceptre, and two arrows, fletching upwards behind the scepter.",
     "kEH_Func": "Logogram (Neith)",
     "kEH_FVal": "n.t",
     "kEH_UniK": "C185H"
@@ -21285,7 +21386,7 @@ unikemet = {
   "𓣪": {
     "kEH_Cat": "C-40-013",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, wearing the red crown, left arm forward, forearm horizontal, hand at the hight of the waist, holding an eye with the markings of the head of a falcon (D10), right arm forward, hand above the eye.",
+    "kEH_Desc": "Goddess, standing, wearing the red crown, left arm forward, forearm horizontal, hand at the height of the waist, holding an eye with the markings of the head of a falcon (D10), right arm forward, hand above the eye.",
     "kEH_Func": "(cryptography) Phonemogram",
     "kEH_FVal": "wn",
     "kEH_UniK": "HJ C306",
@@ -21295,7 +21396,7 @@ unikemet = {
   "𓣫": {
     "kEH_Cat": "C-40-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, wearing the red crown (S3), right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, wearing the red crown (S3), right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "n(.t)",
     "kEH_UniK": "HJ C188",
@@ -21306,7 +21407,7 @@ unikemet = {
   "𓣬": {
     "kEH_Cat": "C-40-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, wearing the red crown (S3), right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, standing, wearing the red crown (S3), right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (king of LE)",
     "kEH_FVal": "bꞽ.ty",
     "kEH_UniK": "C188Y",
@@ -21315,7 +21416,7 @@ unikemet = {
   "𓣭": {
     "kEH_Cat": "C-40-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, wearing the red crown (S3), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34).",
+    "kEH_Desc": "Goddess, standing, wearing the red crown (S3), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nt",
     "kEH_UniK": "HJ C188B",
@@ -21334,7 +21435,7 @@ unikemet = {
   "𓣯": {
     "kEH_Cat": "C-40-022",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, wearing the red crown, right arm forward, hand at the hight of the waist, holding a griffon vulture (Gyps fulvus, G14), left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34).",
+    "kEH_Desc": "Goddess, standing, wearing the red crown, right arm forward, hand at the height of the waist, holding a griffon vulture (Gyps fulvus, G14), left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wnn",
     "kEH_UniK": "C188D"
@@ -21371,7 +21472,7 @@ unikemet = {
   "𓣳": {
     "kEH_Cat": "C-42-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, holding a two-barbed arrow-head, with the point facing downwards, in the ground, with only the barbs visible (T22A).",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, holding a two-barbed arrowhead, with the point facing downwards, in the ground, with only the barbs visible (T22A).",
     "kEH_Func": "Classifier mourner",
     "kEH_FVal": "ḥꜣy.t",
     "kEH_UniK": "HJ C190D",
@@ -21424,7 +21525,7 @@ unikemet = {
   "𓣸": {
     "kEH_Cat": "C-43-006",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with round vessel with upstanding rim (W24) on her head, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, standing, with round vessel with upstanding rim (W24) on her head, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram (the heavens/sky)",
     "kEH_FVal": "p.t",
     "kEH_UniK": "HJ C196",
@@ -21443,7 +21544,7 @@ unikemet = {
   "𓣺": {
     "kEH_Cat": "C-43-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a  plan of a crossroads in a village (O49) on her head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a plan of a crossroads in a village (O49) on her head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (city, village)",
     "kEH_FVal": "nꞽw.t",
     "kEH_UniK": "HJ C197A",
@@ -21454,7 +21555,7 @@ unikemet = {
   "𓣻": {
     "kEH_Cat": "C-43-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a  plan of a crossroads in a village (O49) on her head.",
+    "kEH_Desc": "Goddess, seated, knees up, with covered legs and arms, with a plan of a crossroads in a village (O49) on her head.",
     "kEH_Func": "Logogram (city, village)",
     "kEH_FVal": "nꞽw.t",
     "kEH_UniK": "C197C"
@@ -21462,7 +21563,7 @@ unikemet = {
   "𓣼": {
     "kEH_Cat": "C-43-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, back horizontal, arms vertical, hands  at the same hight as the toes, head between the two arms.",
+    "kEH_Desc": "Goddess, standing, back horizontal, arms vertical, hands at the same height as the toes, head between the two arms.",
     "kEH_Func": "Logogram (the sky)",
     "kEH_FVal": "gb.t",
     "kEH_UniK": "HJ C199",
@@ -21473,7 +21574,7 @@ unikemet = {
   "𓣽": {
     "kEH_Cat": "C-43-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, back horizontal, arms vertical, hands  at the same hight as the toes.",
+    "kEH_Desc": "Goddess, standing, back horizontal, arms vertical, hands at the same height as the toes.",
     "kEH_Func": "Logogram (the heavens/sky)",
     "kEH_FVal": "p.t",
     "kEH_UniK": "HJ C199A",
@@ -21483,7 +21584,7 @@ unikemet = {
   "𓣾": {
     "kEH_Cat": "C-43-021",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, back horizontal, arms vertical, hands  at the same hight as the toes, on top of an a strip of land (N17), with a child, seated on nothing, forelegs separated, right arm raised with hand to mouth, left arm hanging beside the body (A17) beside a sun disk with rays of sunlight coming forth from it (N8), written between the arms and legs.",
+    "kEH_Desc": "Goddess, standing, back horizontal, arms vertical, hands at the same height as the toes, on top of an a strip of land (N17), with a child, seated on nothing, forelegs separated, right arm raised with hand to mouth, left arm hanging beside the body (A17) beside a sun disk with rays of sunlight coming forth from it (N8), written between the arms and legs.",
     "kEH_Func": "Logogram/phonemogram (to shine)",
     "kEH_FVal": "psḏ",
     "kEH_UniK": "C204B",
@@ -21518,7 +21619,7 @@ unikemet = {
   "𓤂": {
     "kEH_Cat": "C-45-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a flower enclosed by two horns (R20) on her head, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a flower enclosed by two horns (R20) on her head, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (Seshat)",
     "kEH_FVal": "sšꜣ.t",
     "kEH_UniK": "HJ C207",
@@ -21529,7 +21630,7 @@ unikemet = {
   "𓤃": {
     "kEH_Cat": "C-45-006",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a flower enclosed by two horns (R20) on her head, right arm forward, hand at the hight of the waist, holding a club, angled forward, with the head of the club on top a vertical stick held by the left hand.",
+    "kEH_Desc": "Goddess, standing, with a flower enclosed by two horns (R20) on her head, right arm forward, hand at the height of the waist, holding a club, angled forward, with the head of the club on top a vertical stick held by the left hand.",
     "kEH_Func": "Logogram (Seshat)",
     "kEH_FVal": "sšꜣ.t",
     "kEH_UniK": "HJ C208",
@@ -21540,7 +21641,7 @@ unikemet = {
   "𓤄": {
     "kEH_Cat": "C-45-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a flower enclosed by two horns (R20) on her head, right arm forward, hand at the hight of the waist, holding a club, angled forward, with the head of the club on top a vertical stick held by the left hand, facing a god, standing, with a long curved beard, wearing the Atef crown with horns,  right arm forward, hand at the hight of the waist, holding a club, angled forward, with the head of the club on top a vertical stick held by the left hand, both sticks within an oval of rope.",
+    "kEH_Desc": "Goddess, standing, with a flower enclosed by two horns (R20) on her head, right arm forward, hand at the height of the waist, holding a club, angled forward, with the head of the club on top a vertical stick held by the left hand, facing a god, standing, with a long-curved beard, wearing the Atef crown with horns, right arm forward, hand at the height of the waist, holding a club, angled forward, with the head of the club on top a vertical stick held by the left hand, both sticks within an oval of rope.",
     "kEH_Func": "Logogram (stretching the rope)",
     "kEH_FVal": "pḏ-šsr",
     "kEH_UniK": "HJ C209",
@@ -21580,7 +21681,7 @@ unikemet = {
   "𓤈": {
     "kEH_Cat": "C-47-002",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with the head of a bovid, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
+    "kEH_Desc": "Goddess, standing, with the head of a bovid, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop.",
     "kEH_Func": "Logogram/phonemogram (lord)",
     "kEH_FVal": "nb",
     "kEH_UniK": "C352"
@@ -21588,7 +21689,7 @@ unikemet = {
   "𓤉": {
     "kEH_Cat": "C-47-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered arms and legs, with the pole of a balance, resembling a column with a base, with a tenon at the top (O28B), with a plummet resembling a heart (F34) hanging from the cross-beam (U39N) on her head.",
+    "kEH_Desc": "Goddess, seated, knees up, with covered arms and legs, with the pole of a balance, resembling a column with a base, with a tenon at the top (O28B), with a plummet resembling a heart (F34) hanging from the crossbeam (U39N) on her head.",
     "kEH_Func": "Logogram (the throne (Edfu))",
     "kEH_FVal": "wṯs.t",
     "kEH_UniK": "HJ C214",
@@ -21599,7 +21700,7 @@ unikemet = {
   "𓤊": {
     "kEH_Cat": "C-47-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on rams horns (S77) on her head, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on ram horns (S77) on her head, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.yt",
     "kEH_UniK": "HJ B080",
@@ -21609,7 +21710,7 @@ unikemet = {
   "𓤋": {
     "kEH_Cat": "C-47-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on rams horns (S77) on her head, right arm forward, hand at the hight of the waist, holding stick of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on ram horns (S77) on her head, right arm forward, hand at the height of the waist, holding stick of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.yt",
     "kEH_UniK": "HJ B080A",
@@ -21620,7 +21721,7 @@ unikemet = {
   "𓤌": {
     "kEH_Cat": "C-47-012",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on rams horns (S77) on her head, right arm forward, hand at the hight of the waist, holding stick of the hight of the woman, vertically, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
+    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on ram horns (S77) on her head, right arm forward, hand at the height of the waist, holding stick of the height of the woman, vertically, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.yt",
     "kEH_UniK": "B080B"
@@ -21628,7 +21729,7 @@ unikemet = {
   "𓤍": {
     "kEH_Cat": "C-47-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on rams horns (S77) on her head, right arm forward, hand at the hight of the waist, holding crook (S38) of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on ram horns (S77) on her head, right arm forward, hand at the height of the waist, holding crook (S38) of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (ruler)",
     "kEH_FVal": "ḥḳꜣ.t",
     "kEH_UniK": "B080C"
@@ -21636,7 +21737,7 @@ unikemet = {
   "𓤎": {
     "kEH_Cat": "C-47-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on rams horns (S77) on her head, right arm forward, hand at the hight of the waist, holding crook (S38) of the hight of the woman, vertically, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
+    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers on ram horns (S77) on her head, right arm forward, hand at the height of the waist, holding crook (S38) of the height of the woman, vertically, left arm hanging beside the body, holding a flagellum (S45) horizontally.",
     "kEH_Func": "Logogram (sovereign)",
     "kEH_FVal": "ꞽt.yt",
     "kEH_UniK": "B080D"
@@ -21644,7 +21745,7 @@ unikemet = {
   "𓤏": {
     "kEH_Cat": "C-47-016",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers with a sun disk on rams horns (S73) on her head, right arm forward, hand at the hight of the waist, holding crook (S38) of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a headdress consisting of two feathers with a sun disk on ram horns (S73) on her head, right arm forward, hand at the height of the waist, holding crook (S38) of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Logogram (ruler)",
     "kEH_FVal": "ḥḳꜣ.t",
     "kEH_UniK": "B080E"
@@ -21682,7 +21783,7 @@ unikemet = {
   "𓤓": {
     "kEH_Cat": "C-47-027",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with the head of a desert hare, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with the head of a desert hare, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wn",
     "kEH_UniK": "HJ C234",
@@ -21693,7 +21794,7 @@ unikemet = {
   "𓤔": {
     "kEH_Cat": "C-47-028",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with the head of a desert hare, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34).",
+    "kEH_Desc": "Goddess, standing, with the head of a desert hare, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wn",
     "kEH_UniK": "C234A"
@@ -21785,7 +21886,7 @@ unikemet = {
   "𓤝": {
     "kEH_Cat": "C-47-049",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a palm branch, stripped of leaves and notched on her head (M4), notch forward, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the hight of the woman, vertically, left arm hanging beside the body.",
+    "kEH_Desc": "Goddess, standing, with a palm branch, stripped of leaves and notched on her head (M4), notch forward, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the height of the woman, vertically, left arm hanging beside the body.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "r",
     "kEH_UniK": "HJ C298",
@@ -21795,7 +21896,7 @@ unikemet = {
   "𓤞": {
     "kEH_Cat": "C-47-054",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered arms and legs, with long hair, with a crescent moon with the entire moon disk (N62) on her head .",
+    "kEH_Desc": "Goddess, seated, knees up, with covered arms and legs, with long hair, with a crescent moon with the entire moon disk (N62) on her head.",
     "kEH_Func": "Logogram (moon)?",
     "kEH_FVal": "ꞽꜥḥ",
     "kEH_UniK": "HJ C222B",
@@ -21805,7 +21906,7 @@ unikemet = {
   "𓤟": {
     "kEH_Cat": "C-47-057",
     "kEH_Core": "C",
-    "kEH_Desc": "Woman/goddess, standing, right arm forward, hand at the hight of the waist, holding a duck or goose at the wings, left arm hanging beside the body.",
+    "kEH_Desc": "Woman/goddess, standing, right arm forward, hand at the height of the waist, holding a duck or goose at the wings, left arm hanging beside the body.",
     "kEH_Func": "Classifier (Sekhet, goddes of the marshlands)",
     "kEH_FVal": "sḫ.t",
     "kEH_UniK": "HJ C229",
@@ -21815,7 +21916,7 @@ unikemet = {
   "𓤠": {
     "kEH_Cat": "C-47-059",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered arms and legs, with long hair, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on her head.",
+    "kEH_Desc": "Goddess, seated, knees up, with covered arms and legs, with long hair, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on her head.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḏd.t",
     "kEH_UniK": "HJ C255B",
@@ -21825,7 +21926,7 @@ unikemet = {
   "𓤡": {
     "kEH_Cat": "C-47-060",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered arms and legs, with long hair, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on her head, holding a stem of papyrus with a bud (M13).",
+    "kEH_Desc": "Goddess, seated, knees up, with covered arms and legs, with long hair, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on her head, holding a stem of papyrus with a bud (M13).",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "wr.t-šꜥ.t",
     "kEH_UniK": "HJ C255C",
@@ -21835,7 +21936,7 @@ unikemet = {
   "𓤢": {
     "kEH_Cat": "C-47-062",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, seated, knees up, with covered arms an legs, with long hair, with a rectangular piece of cloth, with fringes on one of the short sides (S32) on her head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
+    "kEH_Desc": "Goddess, seated, knees up, with covered arms and legs, with long hair, with a rectangular piece of cloth, with fringes on one of the short sides (S32) on her head, holding a sceptre with a straight shaft, topped with the head of the Seth animal vertically. ",
     "kEH_Func": "Logogram (perception/knowledge)",
     "kEH_FVal": "sꞽꜣ.t",
     "kEH_UniK": "C313A"
@@ -21843,7 +21944,7 @@ unikemet = {
   "𓤣": {
     "kEH_Cat": "C-48-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arm forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arm forward; both goddesses have one hand above and one hand below a sun disk with rays of sunlight coming forth from it (N8), with a star written below the arms.",
+    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arms forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arms forward; both goddesses have one hand above and one hand below a sun disk with rays of sunlight coming forth from it (N8), with a star written below the arms.",
     "kEH_Func": "Logogram (morning)",
     "kEH_FVal": "dwꜣ.w",
     "kEH_UniK": "HJ C239",
@@ -21861,7 +21962,7 @@ unikemet = {
   "𓤥": {
     "kEH_Cat": "C-48-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arm forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arm forward; both goddesses have one hand above and one hand below a sun disk with rays of sunlight coming forth from it (N8).",
+    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arms forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arms forward; both goddesses have one hand above and one hand below a sun disk with rays of sunlight coming forth from it (N8).",
     "kEH_Func": "Logogram (morning)",
     "kEH_FVal": "dwꜣ.w",
     "kEH_UniK": "C240A"
@@ -21869,7 +21970,7 @@ unikemet = {
   "𓤦": {
     "kEH_Cat": "C-48-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arm forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arm forward; both goddesses have one hand above and one hand below a sun disk with rays of sunlight coming forth from it (N8), with a spear made into a standard (R15) written below the arms.",
+    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arms forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arms forward; both goddesses have one hand above and one hand below a sun disk with rays of sunlight coming forth from it (N8), with a spear made into a standard (R15) written below the arms.",
     "kEH_Func": "Logogram (morning)",
     "kEH_FVal": "dwꜣ.w",
     "kEH_UniK": "C241A"
@@ -21877,7 +21978,7 @@ unikemet = {
   "𓤧": {
     "kEH_Cat": "C-48-006",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arm forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arm forward; both goddesses have one hand above and one hand below a sun disk (N5).",
+    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arms forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arms forward; both goddesses have one hand above and one hand below a sun disk (N5).",
     "kEH_Func": "Logogram (morning)",
     "kEH_FVal": "dwꜣ.w",
     "kEH_UniK": "HJ C238",
@@ -21888,7 +21989,7 @@ unikemet = {
   "𓤨": {
     "kEH_Cat": "C-48-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arm forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arm forward; one hand below a sun disk (N5), one hand lower, with a horizontal line.",
+    "kEH_Desc": "Goddess, standing, with a seat (Q3) on her head, both arms forward, facing a goddess, standing, with a basket (V30) on top of a plan of a rectangular enclosure, with an internal rectangle in the lower corner away from the reading direction (O6) on her head, both arms forward; one hand below a sun disk (N5), one hand lower, with a horizontal line.",
     "kEH_Func": "Logogram (morning)",
     "kEH_FVal": "dwꜣ.w",
     "kEH_UniK": "C238A"
@@ -21918,7 +22019,7 @@ unikemet = {
   "𓤫": {
     "kEH_Cat": "C-48-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddesss, seated on a block throne, wearing a headdress consisting of the double crown on horns with a feather in the front, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee; facing a god, seated on a block throne, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on his head, right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), of the length of the seated figure, vertically, left arm forward, hand upon the knee; both on top of a base.",
+    "kEH_Desc": "Goddess, seated on a block throne, wearing a headdress consisting of the double crown on horns with a feather in the front, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee; facing a god, seated on a block throne, with the head of a falcon, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on his head, right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), of the length of the seated figure, vertically, left arm forward, hand upon the knee; both on top of a base.",
     "kEH_Func": "Logogram (Hathor)",
     "kEH_FVal": "ḥw.t-ḥr",
     "kEH_UniK": "C358"
@@ -21926,7 +22027,7 @@ unikemet = {
   "𓤬": {
     "kEH_Cat": "C-48-018",
     "kEH_Core": "C",
-    "kEH_Desc": "Goddesss, seated on a block throne, wearing a headdress consisting of the double crown on horns, right arm forward, hand at the hight of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee; facing a god, seated on a block throne, with the head of a falcon, wearing the double crown (S5), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), of the length of the seated figure, vertically, left arm forward, hand upon the knee; both on top of a base.",
+    "kEH_Desc": "Goddess, seated on a block throne, wearing a headdress consisting of the double crown on horns, right arm forward, hand at the height of the waist, holding a stem of papyrus with a bud (M131) or flower, of the length of the seated figure, vertically, left arm forward, hand upon the knee; facing a god, seated on a block throne, with the head of a falcon, wearing the double crown (S5), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), of the length of the seated figure, vertically, left arm forward, hand upon the knee; both on top of a base.",
     "kEH_Func": "Logogram (Hathor)",
     "kEH_FVal": "ḥw.t-ḥr",
     "kEH_UniK": "C359"
@@ -21972,7 +22073,7 @@ unikemet = {
   "𓤱": {
     "kEH_Cat": "D-01-012",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human man, seen in profile, with the  uterus of a cow (F45) on his head.",
+    "kEH_Desc": "The head of a human man, seen in profile, with the uterus of a cow (F45) on his head.",
     "kEH_Func": "Classifier birthplace",
     "kEH_FVal": "msḫn.t",
     "kEH_UniK": "HJ D068",
@@ -22027,7 +22128,7 @@ unikemet = {
   "𓤷": {
     "kEH_Cat": "D-03-001",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of human male in profile, with two arms, on raised in front, forarm at 45°, hand at the hight of the face, handpalm outwards, other arm with the hand below the head.",
+    "kEH_Desc": "The head of human male in profile, with two arms, on raised in front, forearm at 45° degree, hand at the height of the face, hand palm outwards, other arm with the hand below the head.",
     "kEH_Func": "Classifier human being",
     "kEH_FVal": "tm.yw",
     "kEH_UniK": "HJ D077",
@@ -22038,7 +22139,7 @@ unikemet = {
   "𓤸": {
     "kEH_Cat": "D-03-002",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of human male in profile, with two arms, on raised in front, forarm at 45°, hand at the hight of the face, other arm with the hand below the head, both hands as fists.",
+    "kEH_Desc": "The head of human male in profile, with two arms, on raised in front, forearm at 45° degree, hand at the height of the face, other arm with the hand below the head, both hands as fists.",
     "kEH_Func": "Classifier occupation",
     "kEH_FVal": "sr",
     "kEH_UniK": "D077B"
@@ -22046,7 +22147,7 @@ unikemet = {
   "𓤹": {
     "kEH_Cat": "D-03-003",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of human male in profile, with two arms, on raised in front, hand at the hight of the forehead, handpalm outwards, other arm hanging downwards.",
+    "kEH_Desc": "The head of human male in profile, with two arms, on raised in front, hand at the height of the forehead, hand palm outwards, other arm hanging downwards.",
     "kEH_Func": "Classifier calling",
     "kEH_FVal": "nꞽs",
     "kEH_UniK": "D077A"
@@ -22054,7 +22155,7 @@ unikemet = {
   "𓤺": {
     "kEH_Cat": "D-03-004",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of human woman in profile, with two arms, on raised in front, hand at the hight of the forehead, handpalm outwards, other arm hanging downwards.",
+    "kEH_Desc": "The head of human woman in profile, with two arms, on raised in front, hand at the height of the forehead, hand palm outwards, other arm hanging downwards.",
     "kEH_Func": "Classifier calling",
     "kEH_FVal": "ḏsw",
     "kEH_UniK": "HJ D124",
@@ -22075,7 +22176,7 @@ unikemet = {
   "𓤽": {
     "kEH_Cat": "D-03-007",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one raised in front, hand to mouth, other arm hanging downwards, handpalm facing outwards.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one raised in front, hand to mouth, other arm hanging downwards, hand palm facing outwards.",
     "kEH_Func": "Classifier eating",
     "kEH_FVal": "wnm",
     "kEH_UniK": "D082A"
@@ -22091,7 +22192,7 @@ unikemet = {
   "𓤿": {
     "kEH_Cat": "D-03-009",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with a sidelock, with two arms, one raised in front, hand to mouth, other arm hanging downwards, handpalm facing outwards.",
+    "kEH_Desc": "The head of a human male in profile, with a sidelock, with two arms, one raised in front, hand to mouth, other arm hanging downwards, hand palm facing outwards.",
     "kEH_Func": "Classifier child/small one",
     "kEH_FVal": "ḥwn",
     "kEH_UniK": "HJ D123",
@@ -22101,7 +22202,7 @@ unikemet = {
   "𓥀": {
     "kEH_Cat": "D-03-010",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one hanging downwards in front, handpalm inwards, other arm with the hand below the head, handpalm upwards.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one hanging downwards in front, hand palm inwards, other arm with the hand below the head, hand palm upwards.",
     "kEH_Func": "Classifier nursing",
     "kEH_FVal": "mnꜥ",
     "kEH_UniK": "HJ D086",
@@ -22122,8 +22223,8 @@ unikemet = {
   "𓥂": {
     "kEH_Cat": "D-03-012",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, both arms forward, hands horizontal at the hight of the face, handpalms inwards.",
-    "kEH_Func": "Classsifier (to bow, to attack)",
+    "kEH_Desc": "The head of a human male in profile, with two arms, both arms forward, hands horizontal at the height of the face, hand palms inwards.",
+    "kEH_Func": "Classifier (to bow, to attack)",
     "kEH_FVal": "ꞽkꞽ",
     "kEH_UniK": "HJ D084",
     "kEH_JSesh": "D84",
@@ -22133,7 +22234,7 @@ unikemet = {
   "𓥃": {
     "kEH_Cat": "D-03-014",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, both arms extended forwards, at a downwards angle.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, both arms extended forwards, at a downward angle.",
     "kEH_Func": "Classifier to fall",
     "kEH_FVal": "sḫr",
     "kEH_UniK": "HJ D085",
@@ -22144,7 +22245,7 @@ unikemet = {
   "𓥄": {
     "kEH_Cat": "D-03-016",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with one arm, raised in front, forearm vertical, hand horizontal, handpalm upwards.",
+    "kEH_Desc": "The head of a human male in profile, with one arm, raised in front, forearm vertical, hand horizontal, hand palm upwards.",
     "kEH_Func": "Classifier to call",
     "kEH_FVal": "nꞽs",
     "kEH_UniK": "D078A"
@@ -22152,7 +22253,7 @@ unikemet = {
   "𓥅": {
     "kEH_Cat": "D-03-017",
     "kEH_Core": "C",
-    "kEH_Desc": "The head on a human male in profile, with one arm, raised at the back, forearm vertical, handpalm inwards.",
+    "kEH_Desc": "The head on a human male in profile, with one arm, raised at the back, forearm vertical, hand palm inwards.",
     "kEH_Func": "Classifier to rejoice",
     "kEH_FVal": "hnꞽ",
     "kEH_UniK": "HJ D079",
@@ -22162,7 +22263,7 @@ unikemet = {
   "𓥆": {
     "kEH_Cat": "D-03-018",
     "kEH_Core": "C",
-    "kEH_Desc": "The head on a human male in profile, with two arms, raised at the back, forearm vertical, handpalm inwards.",
+    "kEH_Desc": "The head on a human male in profile, with two arms, raised at the back, forearm vertical, hand palm inwards.",
     "kEH_Func": "classifier turning around",
     "kEH_FVal": "nꜥw",
     "kEH_UniK": "HJ D080",
@@ -22199,8 +22300,8 @@ unikemet = {
   "𓥊": {
     "kEH_Cat": "D-03-022",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, arms raised at either side, upper arms horizontal, upside down.",
-    "kEH_Func": "Classifier upside down",
+    "kEH_Desc": "The head of a human male in profile, with two arms, arms raised at either side, upper arms horizontal, upside-down.",
+    "kEH_Func": "Classifier upside-down",
     "kEH_FVal": "sḫdḫd",
     "kEH_UniK": "HJ D116",
     "kEH_JSesh": "D116",
@@ -22210,7 +22311,7 @@ unikemet = {
   "𓥋": {
     "kEH_Cat": "D-03-024",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one raisde in front, hand at the hight of the shoulder, upper arm of the other on top of an horizontal line, facing backwards.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one raised in front, hand at the height of the shoulder, upper arm of the other on top of an horizontal line, facing backwards.",
     "kEH_Func": "Classifier to swim",
     "kEH_FVal": "mḥꞽ",
     "kEH_UniK": "D121",
@@ -22240,7 +22341,7 @@ unikemet = {
   "𓥏": {
     "kEH_Cat": "D-03-029",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forward, forearm horizontal, holding a stick, other arm arm hanging downwards.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards, forearm horizontal, holding a stick, other arm hanging downwards.",
     "kEH_Func": "Logogram (to be great)",
     "kEH_FVal": "wr",
     "kEH_UniK": "HJ D096",
@@ -22251,7 +22352,7 @@ unikemet = {
   "𓥐": {
     "kEH_Cat": "D-03-030",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forward, hand at the hight of the shoulder, holding a feather (H6), other arm hanging downwards.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards, hand at the height of the shoulder, holding a feather (H6), the other arm hanging downwards.",
     "kEH_Func": "Classifier herald",
     "kEH_FVal": "ḥww.ty",
     "kEH_UniK": "HJ D100",
@@ -22261,7 +22362,7 @@ unikemet = {
   "𓥑": {
     "kEH_Cat": "D-03-031",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forward, hand at the hight of the shoulder, holding a sceptre (S42), other arm hanging downwards, holding a basket at the handle.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards, hand at the height of the shoulder, holding a sceptre (S42), the other arm hanging downwards, holding a basket at the handle.",
     "kEH_Func": "Classifier to carry away, to take",
     "kEH_FVal": "ḫn(f)",
     "kEH_UniK": "HJ D101",
@@ -22271,7 +22372,7 @@ unikemet = {
   "𓥒": {
     "kEH_Cat": "D-03-033",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forward, hand at the hight of the shoulder, holding a feather (H6) three triangles of skin with a tail (F27A), other arm hanging downwards.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards, hand at the height of the shoulder, holding a feather (H6) three triangles of skin with a tail (F27A), the other arm hanging downwards.",
     "kEH_Func": "Classifier herald",
     "kEH_FVal": "ḥww.ty",
     "kEH_UniK": "HJ D394",
@@ -22287,7 +22388,7 @@ unikemet = {
   "𓥔": {
     "kEH_Cat": "D-03-035",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forward, hand at the hight of the shoulder, holding a staff or pole with a two-pronged end piece for holding down snakes (U116), other arm hanging downwards.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards, hand at the height of the shoulder, holding a staff or pole with a two-pronged end piece for holding down snakes (U116), other arm hanging downwards.",
     "kEH_Func": "Classifier elder/official",
     "kEH_FVal": "sr",
     "kEH_UniK": "HJ D113",
@@ -22297,7 +22398,7 @@ unikemet = {
   "𓥕": {
     "kEH_Cat": "D-03-036",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with a long curved beard an coif, one arm forward, hand at the hight of the shoulder, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), other arm hanging downwards.",
+    "kEH_Desc": "The head of a human male in profile, with a long-curved beard an coif, one arm forwards, hand at the height of the shoulder, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40), other arm hanging downwards.",
     "kEH_Func": "Classifier Orion",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "HJ D114",
@@ -22307,7 +22408,7 @@ unikemet = {
   "𓥖": {
     "kEH_Cat": "D-03-037",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forward, hand to mouth, with a dotted line coming from the mouth, angling downwards, other arm hanging downwards, handpalm outwards.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards, hand to mouth, with a dotted line coming from the mouth, angling downwards, other arm hanging downwards, hand palm outwards.",
     "kEH_Func": "Classifier to spit, to spew",
     "kEH_FVal": "bšꞽ",
     "kEH_UniK": "HJ D087",
@@ -22317,7 +22418,7 @@ unikemet = {
   "𓥗": {
     "kEH_Cat": "D-03-038",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with a vessel on his head, with two arms, one arm forward, hand at the vessel, other arm hanging downwards.",
+    "kEH_Desc": "The head of a human male in profile, with a vessel on his head, with two arms, one arm forwards, hand at the vessel, other arm hanging downwards.",
     "kEH_Func": "Classifier to lift, to carry",
     "kEH_FVal": "fꜣꞽ",
     "kEH_UniK": "HJ D103",
@@ -22337,7 +22438,7 @@ unikemet = {
   "𓥙": {
     "kEH_Cat": "D-03-041",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards,forearm backwards, hand under the head, other arm raised at the back, forearm vertical, holding a stick.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards, forearm backwards, hand under the head, other arm raised at the back, forearm vertical, holding a stick.",
     "kEH_Func": "Classifier to oppose, to rebel",
     "kEH_FVal": "ḫsbꞽ",
     "kEH_UniK": "HJ D088",
@@ -22348,7 +22449,7 @@ unikemet = {
   "𓥚": {
     "kEH_Cat": "D-03-042",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forward, angling downwards, holding a phallus with a scrotum (D52) horizontally, other arm extended towards the back, forearm upwards.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards, angling downwards, holding a phallus with a scrotum (D52) horizontally, other arm extended towards the back, forearm upwards.",
     "kEH_Func": "Classifier to extend",
     "kEH_FVal": "sꜣwꞽ",
     "kEH_UniK": "HJ D097",
@@ -22359,7 +22460,7 @@ unikemet = {
   "𓥛": {
     "kEH_Cat": "D-03-044",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm extended forwards, forearm horizontal, handpalm upwards, other raised in back, forearm vertical, handpalm inwards, with a dotted line between the hands.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm extended forwards, forearm horizontal, hand palm upwards, other raised in back, forearm vertical, hand palm inwards, with a dotted line between the hands.",
     "kEH_Func": "Classifier to scatter",
     "kEH_FVal": "sṯꞽ",
     "kEH_UniK": "HJ D117",
@@ -22385,7 +22486,7 @@ unikemet = {
   "𓥞": {
     "kEH_Cat": "D-03-047",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with one arm, extended forward, hand at the hight of the shoulder, holding some type of weapon/mace/stick.",
+    "kEH_Desc": "The head of a human male in profile, with one arm, extended forward, hand at the height of the shoulder, holding some type of weapon/mace/stick.",
     "kEH_Func": "Classifier guarding, protecting",
     "kEH_FVal": "sꜣw",
     "kEH_UniK": "HJ D093",
@@ -22396,7 +22497,7 @@ unikemet = {
   "𓥟": {
     "kEH_Cat": "D-03-048",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with one arm, extended forward, hand at the hight of the shoulder, holding a vessel horizontally to the mouth.",
+    "kEH_Desc": "The head of a human male in profile, with one arm, extended forward, hand at the height of the shoulder, holding a vessel horizontally to the mouth.",
     "kEH_Func": "Classifier drinking",
     "kEH_FVal": "swr",
     "kEH_UniK": "HJ D118",
@@ -22452,7 +22553,7 @@ unikemet = {
   "𓥥": {
     "kEH_Cat": "D-03-055",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forward, upper arm horizontal, hand on top of a lump of clay on a potters wheel, other arm forward, hand at the potters wheel.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, one arm forwards, upper arm horizontal, hand on top of a lump of clay on a potter's wheel, other arm forward, hand at the potter's wheel.",
     "kEH_Func": "Classifier potter",
     "kEH_FVal": "ḳd.w",
     "kEH_UniK": "HJ D119",
@@ -22472,7 +22573,7 @@ unikemet = {
   "𓥧": {
     "kEH_Cat": "D-03-057",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a human male in profile, with two arms, both arm forward, holding a reed pipe ending in a tuyère at his mouth.",
+    "kEH_Desc": "The head of a human male in profile, with two arms, both arms forward, holding a reed pipe ending in a tuyère at his mouth.",
     "kEH_Func": "Classifier (to melt, to cast)",
     "kEH_FVal": "nbꞽ",
     "kEH_UniK": "HJ D107",
@@ -22590,7 +22691,7 @@ unikemet = {
     "kEH_Core": "C",
     "kEH_Desc": "Two eyes, as seen from the front.",
     "kEH_Func": "Logogram (to see)",
-    "kEH_FVal": "Mꜥꜥ",
+    "kEH_FVal": "mꜥꜥ",
     "kEH_UniK": "D004B",
     "kEH_IFAO": "97,2"
   },
@@ -22677,7 +22778,7 @@ unikemet = {
   "𓥼": {
     "kEH_Cat": "D-06-018",
     "kEH_Core": "C",
-    "kEH_Desc": "An closed eye.",
+    "kEH_Desc": "A closed eye.",
     "kEH_Func": "Classifier sleep",
     "kEH_FVal": "ḳd",
     "kEH_UniK": "HJ D141",
@@ -22687,7 +22788,7 @@ unikemet = {
   "𓥽": {
     "kEH_Cat": "D-06-019",
     "kEH_Core": "C",
-    "kEH_Desc": "An eye with and eyebrow above it, upside down.",
+    "kEH_Desc": "An eye with an eyebrow above it, upside-down.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜥntyw",
     "kEH_UniK": "D007G",
@@ -22746,7 +22847,7 @@ unikemet = {
   "𓦄": {
     "kEH_Cat": "D-06-032",
     "kEH_Core": "C",
-    "kEH_Desc": "An eye with an eyebrow above it, upside down, inside an oval.",
+    "kEH_Desc": "An eye with an eyebrow above it, upside-down, inside an oval.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜥn",
     "kEH_UniK": "D008C",
@@ -22756,7 +22857,7 @@ unikemet = {
   "𓦅": {
     "kEH_Cat": "D-06-035",
     "kEH_Core": "C",
-    "kEH_Desc": "An eye, with with two vertical lines below it, each starting at the white of the eye.",
+    "kEH_Desc": "An eye, with two vertical lines below it, each starting at the white of the eye.",
     "kEH_Func": "Logogram (to wake)",
     "kEH_FVal": "rs",
     "kEH_UniK": "D434"
@@ -22865,7 +22966,7 @@ unikemet = {
   "𓦐": {
     "kEH_Cat": "D-10-002",
     "kEH_Core": "C",
-    "kEH_Desc": "The hearpiece of human.",
+    "kEH_Desc": "The earpiece of a human.",
     "kEH_Func": "Classifier backside",
     "kEH_FVal": "mḥꜣ",
     "kEH_UniK": "HJ D076",
@@ -22938,7 +23039,7 @@ unikemet = {
   "𓦘": {
     "kEH_Cat": "D-13-005",
     "kEH_Core": "C",
-    "kEH_Desc": "The upper and lower lip of a human, with teeth, represented as a half circle.",
+    "kEH_Desc": "The upper and lower lips of a human, with teeth, represented as a half circle.",
     "kEH_Func": "Logogram (lips)",
     "kEH_FVal": "sp.ty",
     "kEH_UniK": "D025A"
@@ -22946,7 +23047,7 @@ unikemet = {
   "𓦙": {
     "kEH_Cat": "D-14-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A mouth with a downwards sloping dotted line above the front short end.",
+    "kEH_Desc": "A mouth with a downward sloping dotted line above the front short end.",
     "kEH_Func": "Classifier spit",
     "kEH_FVal": "ꞽšš",
     "kEH_UniK": "HJ D154",
@@ -22957,7 +23058,7 @@ unikemet = {
   "𓦚": {
     "kEH_Cat": "D-14-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A mouth with a downwards sloping line above the front short end.",
+    "kEH_Desc": "A mouth with a downward sloping line above the front short end.",
     "kEH_Func": "Logogram (breakfast (washing the mouth))",
     "kEH_FVal": "ꞽꜥ.w-r",
     "kEH_UniK": "D154B"
@@ -22965,7 +23066,7 @@ unikemet = {
   "𓦛": {
     "kEH_Cat": "D-14-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A mouth with a downwards sloping line at the front short end.",
+    "kEH_Desc": "A mouth with a downward sloping line at the front short end.",
     "kEH_Func": "Classifier spit",
     "kEH_FVal": "nš/nẖ",
     "kEH_UniK": "HJ D152",
@@ -22975,7 +23076,7 @@ unikemet = {
   "𓦜": {
     "kEH_Cat": "D-14-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A human mouth, seen from the side, with a downwards sloping line coming from the lips.",
+    "kEH_Desc": "A human mouth, seen from the side, with a downward sloping line coming from the lips.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "p",
     "kEH_UniK": "HJ D026B",
@@ -22986,7 +23087,7 @@ unikemet = {
   "𓦝": {
     "kEH_Cat": "D-14-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A human mouth, seen from the side, with a dotted downwards sloping line coming from the lips.",
+    "kEH_Desc": "A human mouth, seen from the side, with a dotted downward sloping line coming from the lips.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "p",
     "kEH_UniK": "HJ D026A",
@@ -23027,7 +23128,7 @@ unikemet = {
   "𓦡": {
     "kEH_Cat": "D-18-007",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, unconnected, raised upwards, with the forearms and hands vertical, handpalms inwards.",
+    "kEH_Desc": "Two arms, unconnected, raised upwards, with the forearms and hands vertical, hand palms inwards.",
     "kEH_UniK": "HJ D028A",
     "kEH_JSesh": "D28A",
     "kEH_HG": "D28A",
@@ -23036,7 +23137,7 @@ unikemet = {
   "𓦢": {
     "kEH_Cat": "D-18-036",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, handpalms inwards, on top of a base, which might represent a torso.",
+    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, hand palms inwards, on top of a base, which might represent a torso.",
     "kEH_Func": "Logogram (spirit, essence)",
     "kEH_FVal": "kꜣ",
     "kEH_UniK": "D441"
@@ -23044,7 +23145,7 @@ unikemet = {
   "𓦣": {
     "kEH_Cat": "D-18-042",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, handpalms inwards, with a sedge (M23) written between the arms, upon a standard used for carrying religious symbols (R12).",
+    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, hand palms inwards, with a sedge (M23) written between the arms, upon a standard used for carrying religious symbols (R12).",
     "kEH_Func": "Logogram (royal spirit/essence)",
     "kEH_FVal": "kꜣ-n(.y)-sw.t",
     "kEH_UniK": "HJ D176",
@@ -23055,7 +23156,7 @@ unikemet = {
   "𓦤": {
     "kEH_Cat": "D-18-049",
     "kEH_Core": "C",
-    "kEH_Desc": "A roll of bread, with oval lines within it (HG X4A), written horizontally with two forearms coming from the top of the bread, forearms and hands vertical, handpalms inwards, with a vertical stroke (Z1) written between the arms.",
+    "kEH_Desc": "A roll of bread, with oval lines within it (HG X4A), written horizontally with two forearms coming from the top of the bread, forearms and hands vertical, hand palms inwards, with a vertical stroke (Z1) written between the arms.",
     "kEH_Func": "Logogram (food, provisions)",
     "kEH_FVal": "kꜣ",
     "kEH_UniK": "D177B"
@@ -23063,7 +23164,7 @@ unikemet = {
   "𓦥": {
     "kEH_Cat": "D-18-050",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, handpalms inwards, on top of a roll of bread without internal detail.",
+    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, hand palms inwards, on top of a roll of bread without internal detail.",
     "kEH_Func": "Logogram (food, provisions)",
     "kEH_FVal": "kꜣ",
     "kEH_UniK": "D177C"
@@ -23071,7 +23172,7 @@ unikemet = {
   "𓦦": {
     "kEH_Cat": "D-19-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, arms straight, handpalms facing towards each other.",
+    "kEH_Desc": "Two arms, lowered, arms straight, hand palms facing each other.",
     "kEH_Func": "Logogram (negative relative adjective)",
     "kEH_FVal": "ꞽw.ty",
     "kEH_UniK": "HJ D032B",
@@ -23100,7 +23201,7 @@ unikemet = {
   "𓦩": {
     "kEH_Cat": "D-19-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, arms straight, handpalm oriented outwards.",
+    "kEH_Desc": "Two arms, lowered, arms straight, hand palm oriented outwards.",
     "kEH_Func": "Phono-repeater",
     "kEH_FVal": "ḫm",
     "kEH_UniK": "HJ D032C",
@@ -23111,7 +23212,7 @@ unikemet = {
   "𓦪": {
     "kEH_Cat": "D-19-019",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, with the elbows bent outwards, and the palms of the hands facing towards each other (D32), with a stool made out of reed matting (Q3) written between the hands.",
+    "kEH_Desc": "Two arms, lowered, with the elbows bent outwards, and the palms of the hands facing each other (D32), with a stool made out of reed matting (Q3) written between the hands.",
     "kEH_Func": "Phono-repeater (kidney)",
     "kEH_FVal": "sḫn",
     "kEH_UniK": "HJ D194",
@@ -23121,7 +23222,7 @@ unikemet = {
   "𓦫": {
     "kEH_Cat": "D-19-023",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, with the elbows bent outwards, and the palms of the hands facing towards each other (D32), with a vertical line of dots written between the arms.",
+    "kEH_Desc": "Two arms, lowered, with the elbows bent outwards, and the palms of the hands facing each other (D32), with a vertical line of dots written between the arms.",
     "kEH_Func": "Classifier to embrace",
     "kEH_FVal": "ḥpt",
     "kEH_UniK": "D198A"
@@ -23129,7 +23230,7 @@ unikemet = {
   "𓦬": {
     "kEH_Cat": "D-19-024",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, not connected at the shoulders, with the elbows bent outwards, the palms of the handds facing towards each other.",
+    "kEH_Desc": "Two arms, lowered, not connected at the shoulders, with the elbows bent outwards, the palms of the hands facing each other.",
     "kEH_Func": "Logogram (to embrace)",
     "kEH_FVal": "ḥpt",
     "kEH_UniK": "HJ D197",
@@ -23140,7 +23241,7 @@ unikemet = {
   "𓦭": {
     "kEH_Cat": "D-19-027",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, not connected at the shoulders, with the elbows bent outwards, the palms of the handds facing towards each other (D197), with a line of angled strokes between the arms.",
+    "kEH_Desc": "Two arms, lowered, not connected at the shoulders, with the elbows bent outwards, the palms of the hands facing each other (D197), with a line of angled strokes between the arms.",
     "kEH_Func": "Classifier (in ẖꜣm-(ꞽ)ḫ.t)",
     "kEH_FVal": "ẖꜥm",
     "kEH_UniK": "HJ D200",
@@ -23151,7 +23252,7 @@ unikemet = {
   "𓦮": {
     "kEH_Cat": "D-19-031",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, not connected at the shoulders, with the elbows bent outwards, the palms of the handds facing towards each other (D197), with a club used by washer-men for beating laundry (U36) written between the arms. ",
+    "kEH_Desc": "Two arms, lowered, not connected at the shoulders, with the elbows bent outwards, the palms of the hands facing each other (D197), with a club used by washermen for beating laundry (U36) written between the arms. ",
     "kEH_Func": "Logogram (mortuary priest)",
     "kEH_FVal": "ḥm-kꜣ",
     "kEH_UniK": "HJ D405",
@@ -23162,7 +23263,7 @@ unikemet = {
   "𓦯": {
     "kEH_Cat": "D-19-043",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, lowered, not connected at the shoulders, elbows bent inwards, connected by a horizontal line, arms making a X shape, handpalms inwards.",
+    "kEH_Desc": "Two arms, lowered, not connected at the shoulders, elbows bent inwards, connected by a horizontal line, arms making a X shape, hand palms inwards.",
     "kEH_UniK": "D330A"
   },
   "𓦰": {
@@ -23215,7 +23316,7 @@ unikemet = {
   "𓦵": {
     "kEH_Cat": "D-20-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A forearm, with the palm of the hand facing upwards, with an oar at an backwards angle, with a oval blade, written with the handle over the hand.",
+    "kEH_Desc": "A forearm, with the palm of the hand facing upwards, with an oar at a backwards angle, with an oval blade, written with the handle over the hand.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ẖn",
     "kEH_UniK": "D033G"
@@ -23223,7 +23324,7 @@ unikemet = {
   "𓦶": {
     "kEH_Cat": "D-20-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A forearm, with the palm of the hand facing upwards, with an oar at an forwards angle, with a rectangular blade, written with the handle over the hand.",
+    "kEH_Desc": "A forearm, with the palm of the hand facing upwards, with an oar at a forward angle, with a rectangular blade, written with the handle over the hand.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ẖn",
     "kEH_UniK": "D033H"
@@ -23231,7 +23332,7 @@ unikemet = {
   "𓦷": {
     "kEH_Cat": "D-21-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a round topped shield, other arm downwards, forearm vertical, holding a mace (T3) horizontally.",
+    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a round topped shield, the other arm downwards, forearm vertical, holding a mace (T3) horizontally.",
     "kEH_Func": "Logogram (to fight)",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "D034D",
@@ -23240,7 +23341,7 @@ unikemet = {
   "𓦸": {
     "kEH_Cat": "D-21-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a triangular shield with rounded top, other arm downwards, forearm angled slightly forwards, holding a mace (T3) at an upwards angle.",
+    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a triangular shield with rounded top, the other arm downwards, forearm angled slightly forwards, holding a mace (T3) at an upward angle.",
     "kEH_Func": "Logogram (to fight)",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "HJ D034C",
@@ -23251,7 +23352,7 @@ unikemet = {
   "𓦹": {
     "kEH_Cat": "D-21-004",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a triangular shield with rounded top, other arm downwards, forearm angled slightly forwards, holding a mace (T3) horizontally.",
+    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a triangular shield with rounded top, the other arm downwards, forearm angled slightly forwards, holding a mace (T3) horizontally.",
     "kEH_Func": "Logogram (to fight)",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "D034F"
@@ -23259,7 +23360,7 @@ unikemet = {
   "𓦺": {
     "kEH_Cat": "D-21-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a shield as seen in profile, top curving inwards, other arm downwards, forearm vertical, holding a mace with a pear-shaped head, with a round blade attached to the mace-head (T3C), horizontally, blade upwards.",
+    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a shield as seen in profile, top curving inwards, the other arm downwards, forearm vertical, holding a mace with a pear-shaped head, with a round blade attached to the mace-head (T3C), horizontally, blade upwards.",
     "kEH_Func": "Logogram (to fight)",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "D034G"
@@ -23274,7 +23375,7 @@ unikemet = {
   "𓦼": {
     "kEH_Cat": "D-21-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding a oval shield with a cross-type internal decoration, other arm downwards, forearm angled slightly forwards, holding a lance or spear.",
+    "kEH_Desc": "Two arms, connected at the shoulders, one arm forwards, with a horizontal forearm, holding an oval shield with a cross-type internal decoration, the other arm downwards, forearm angled slightly forwards, holding a lance or spear.",
     "kEH_Func": "Logogram (to fight) (in ꜥḥꜣ.t (fighter (female))",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "D034H",
@@ -23289,7 +23390,7 @@ unikemet = {
   "𓦾": {
     "kEH_Cat": "D-21-018",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulder, one arm forward, forearm straight, holding a mace (T3), other arm downwards, forearm at 90° of the upper arm, holding a stick.",
+    "kEH_Desc": "Two arms, connected at the shoulder, one arm forwards, forearm straight, holding a mace (T3), the other arm downwards, forearm at 90° of the upper arm, holding a stick.",
     "kEH_Func": "Logogram (to fight) (in ꜥḥꜣ.t (fighter (female))",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "HJ D369",
@@ -23299,7 +23400,7 @@ unikemet = {
   "𓦿": {
     "kEH_Cat": "D-21-019",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulder, one arm forward, forearm horizontal, holing a wand or brush, other arm downwards, forearm at 90° of the upper arm, holding a sceptre (S42).",
+    "kEH_Desc": "Two arms, connected at the shoulder, one arm forwards, forearm horizontal, holding a wand or brush, the other arm downwards, forearm at 90° of the upper arm, holding a sceptre (S42).",
     "kEH_Func": "Logogram (to fight)",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "HJ D371",
@@ -23309,7 +23410,7 @@ unikemet = {
   "𓧀": {
     "kEH_Cat": "D-21-020",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, connected at the shoulder, one arm forward, holding a round shield, seen in profile, other arm downwards, forearm at 90° of the upper arm, holding a mace (T3) vertically.",
+    "kEH_Desc": "Two arms, connected at the shoulder, one arm forwards, holding a round shield, seen in profile, other arm downwards, forearm at 90° of the upper arm, holding a mace (T3) vertically.",
     "kEH_Func": "Logogram (to fight)",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "HJ D372",
@@ -23319,7 +23420,7 @@ unikemet = {
   "𓧁": {
     "kEH_Cat": "D-21-024",
     "kEH_Core": "C",
-    "kEH_Desc": "The torso of a man, right arm forwards, forearm horizontal, holing a bow, left arm in front of the body, forearm horizontal, holding an arrow at the fletching which lies with the arrowhead on top of the right hand.",
+    "kEH_Desc": "The torso of a man, right arm forwards, forearm horizontal, holding a bow, left arm in front of the body, forearm horizontal, holding an arrow at the fletching which lies with the arrowhead on top of the right hand.",
     "kEH_Func": "Logogram (to fight)",
     "kEH_FVal": "ꜥḥꜣ",
     "kEH_UniK": "D421"
@@ -23357,7 +23458,7 @@ unikemet = {
   "𓧅": {
     "kEH_Cat": "D-24-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Two forearms with the hand holding a conical loaf of bread (X8), overlapping each other.",
+    "kEH_Desc": "Two forearms with the hands holding a conical loaf of bread (X8), overlapping each other.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "dd",
     "kEH_UniK": "D037A"
@@ -23426,7 +23527,7 @@ unikemet = {
   "𓧌": {
     "kEH_Cat": "D-25-024",
     "kEH_Core": "C",
-    "kEH_Desc": "A forearm with the hand holding two arms, raised upwards, with the forearms and hands vertical, handpalms inwards (D28).",
+    "kEH_Desc": "A forearm with the hand holding two arms, raised upwards, with the forearms and hands vertical, hand palms inwards (D28).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mk",
     "kEH_UniK": "HJ D217",
@@ -23448,7 +23549,7 @@ unikemet = {
   "𓧎": {
     "kEH_Cat": "D-25-026",
     "kEH_Core": "C",
-    "kEH_Desc": "A forearm with the hand holding the sun upon a butchers block (N7).",
+    "kEH_Desc": "A forearm with the hand holding the sun upon a butcher's block (N7).",
     "kEH_Func": "Logogram (course (of the day); daily requirements)",
     "kEH_FVal": "ẖr.t-hrw",
     "kEH_UniK": "HJ D219",
@@ -23458,7 +23559,7 @@ unikemet = {
   "𓧏": {
     "kEH_Cat": "D-25-027",
     "kEH_Core": "C",
-    "kEH_Desc": "A forearm with the hand holding the sun, with thee beams of sunlight coming from it (N8E).",
+    "kEH_Desc": "A forearm with the hand holding the sun, with three beams of sunlight coming from it (N8E).",
     "kEH_Func": "Logogram (course (of the day); daily requirements)",
     "kEH_FVal": "ẖr.t-hrw",
     "kEH_UniK": "D219A",
@@ -23511,7 +23612,7 @@ unikemet = {
   "𓧕": {
     "kEH_Cat": "D-25-037",
     "kEH_Core": "C",
-    "kEH_Desc": "A forearm, with the palm of the hand facing upwards, with a forward downwards angling line coming from the hand.",
+    "kEH_Desc": "A forearm, with the palm of the hand facing upwards, with a forward downward angling line coming from the hand.",
     "kEH_Func": "Logogram (to wash)",
     "kEH_FVal": "ꞽꜥꞽ",
     "kEH_UniK": "D212B"
@@ -23519,7 +23620,7 @@ unikemet = {
   "𓧖": {
     "kEH_Cat": "D-25-038",
     "kEH_Core": "C",
-    "kEH_Desc": "A forearm, hand angled downwards, with the palm of the hand facing upwards, with a downwards curved line over the hand.",
+    "kEH_Desc": "A forearm, hand angled downwards, with the palm of the hand facing upwards, with a downward curved line over the hand.",
     "kEH_Func": "Logogram (to wash)",
     "kEH_FVal": "ꞽꜥꞽ",
     "kEH_UniK": "D212C"
@@ -23527,7 +23628,7 @@ unikemet = {
   "𓧗": {
     "kEH_Cat": "D-25-039",
     "kEH_Core": "C",
-    "kEH_Desc": "A forearm with the palm of the hand facing upwards, with a downwards curving wavy line above the arm, with the lower end ending in the hand-palm.",
+    "kEH_Desc": "A forearm with the palm of the hand facing upwards, with a downward curving wavy line above the arm, with the lower end ending in the hand-palm.",
     "kEH_Func": "Logogram (to wash)",
     "kEH_FVal": "ꞽꜥꞽ",
     "kEH_UniK": "D212D"
@@ -23541,6 +23642,7 @@ unikemet = {
   "𓧙": {
     "kEH_Cat": "D-25-044",
     "kEH_Core": "C",
+    "kEH_Desc": "A forearm, with the palm of the hand downwards, with a wide cup below the hand.",
     "kEH_UniK": "HJ D261",
     "kEH_JSesh": "D261",
     "kEH_HG": "D261"
@@ -23558,7 +23660,7 @@ unikemet = {
   "𓧛": {
     "kEH_Cat": "D-26-001",
     "kEH_Core": "C",
-    "kEH_Desc": "An arm, bend at the elbow, hand horizontal, handpalm upwards.",
+    "kEH_Desc": "An arm, bend at the elbow, hand horizontal, hand palm upwards.",
     "kEH_Func": "Classifier washing",
     "kEH_FVal": "ꞽꜥꞽ",
     "kEH_UniK": "HJ D234",
@@ -23569,7 +23671,7 @@ unikemet = {
   "𓧜": {
     "kEH_Cat": "D-26-002",
     "kEH_Core": "C",
-    "kEH_Desc": "An arm, bend at the elbow, hand horizontal, handpalm upwards, with a forward, downwards angling dotted line coming from the hand.",
+    "kEH_Desc": "An arm, bend at the elbow, hand horizontal, hand palm upwards, with a forward, downward angling dotted line coming from the hand.",
     "kEH_Func": "Logogram (to wash)",
     "kEH_FVal": "ꞽꜥꞽ",
     "kEH_UniK": "HJ D236A",
@@ -23580,7 +23682,7 @@ unikemet = {
   "𓧝": {
     "kEH_Cat": "D-26-004",
     "kEH_Core": "C",
-    "kEH_Desc": "An arm, bend at the elbow, hand horizontal, handpalm downwards.",
+    "kEH_Desc": "An arm, bend at the elbow, hand horizontal, hand palm downwards.",
     "kEH_Func": "Classifier stretching out",
     "kEH_FVal": "hn",
     "kEH_UniK": "HJ D235",
@@ -23599,7 +23701,7 @@ unikemet = {
   "𓧟": {
     "kEH_Cat": "D-26-006",
     "kEH_Core": "C",
-    "kEH_Desc": "An arm, bend at the elbow, upper arm horizontal, handpalm outwards.",
+    "kEH_Desc": "An arm, bend at the elbow, upper arm horizontal, hand palm outwards.",
     "kEH_Func": "Classifier to rejoice",
     "kEH_FVal": "nḥrḥr",
     "kEH_UniK": "HJ D263",
@@ -23609,7 +23711,7 @@ unikemet = {
   "𓧠": {
     "kEH_Cat": "D-26-007",
     "kEH_Core": "C",
-    "kEH_Desc": "An arm, bend at the elbow, upper arm horizontal, hand held horizontal, handpalm upwards.",
+    "kEH_Desc": "An arm, bend at the elbow, upper arm horizontal, hand held horizontal, hand palm upwards.",
     "kEH_Func": "Classifier to call",
     "kEH_FVal": "nꞽs",
     "kEH_UniK": "HJ D264",
@@ -23721,7 +23823,7 @@ unikemet = {
   "𓧬": {
     "kEH_Cat": "D-26-032",
     "kEH_Core": "C",
-    "kEH_Desc": "An arm, bend at the elbow, in a V shape, hand holding a stick  at the top.",
+    "kEH_Desc": "An arm, bend at the elbow, in a V shape, hand holding a stick at the top.",
     "kEH_Func": "Classifier to write, to inscribe",
     "kEH_FVal": "spẖr",
     "kEH_UniK": "D245",
@@ -23762,7 +23864,7 @@ unikemet = {
   "𓧰": {
     "kEH_Cat": "D-27-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, elbows bend, upper arms overlapping, in a V shape, forearms separated, handpalms outwards.",
+    "kEH_Desc": "Two arms, elbows bend, upper arms overlapping, in a V shape, forearms separated, hand palms outwards.",
     "kEH_Func": "Classifier adoration",
     "kEH_FVal": "dwꜣ",
     "kEH_UniK": "HJ D260",
@@ -23847,7 +23949,7 @@ unikemet = {
   "𓧸": {
     "kEH_Cat": "D-28-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A human hand with a forwards downwards line of dots coming from the thumb.",
+    "kEH_Desc": "A human hand with a forward downward line of dots coming from the thumb.",
     "kEH_Func": "Logogram (scent, perfume, dew)",
     "kEH_FVal": "ꞽd.t",
     "kEH_UniK": "D046F",
@@ -23858,7 +23960,7 @@ unikemet = {
   "𓧹": {
     "kEH_Cat": "D-28-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A spiral, winding counter-clockwise away from its central point, ending at the right lower corner after about 1,5 turns (Z7), written over a human hand (D46).",
+    "kEH_Desc": "A spiral, winding counterclockwise away from its central point, ending at the right lower corner after about one and a half turns(Z7), written over a human hand (D46).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wd",
     "kEH_UniK": "D443"
@@ -23874,7 +23976,7 @@ unikemet = {
   "𓧻": {
     "kEH_Cat": "D-28-020",
     "kEH_Core": "C",
-    "kEH_Desc": "A human hand with the thumb upwards and the palm curved upwards, with a forwards, downwards line of dots coming from the handpalm.",
+    "kEH_Desc": "A human hand with the thumb upwards and the palm curved upwards, with a forward, downward line of dots coming from the hand palm.",
     "kEH_Func": "Logogram (scent, perfume, dew)",
     "kEH_FVal": "ꞽd.t",
     "kEH_UniK": "HJ D047A",
@@ -24060,6 +24162,7 @@ unikemet = {
   "𓨎": {
     "kEH_Cat": "D-32-005",
     "kEH_Core": "C",
+    "kEH_Desc": "A vulva with the top line formed by two half circles.",
     "kEH_UniK": "D446",
     "kEH_HG": "N104",
     "kEH_IFAO": "279,9"
@@ -24110,7 +24213,7 @@ unikemet = {
   "𓨓": {
     "kEH_Cat": "D-34-005",
     "kEH_Core": "C",
-    "kEH_Desc": "Legs in a walking posture, rotated 90° forward, feet towards the bottom.",
+    "kEH_Desc": "Legs in a walking posture, rotated roughly 90° forward, feet towards the bottom.",
     "kEH_Func": "Classifier to fall",
     "kEH_FVal": "ḫr",
     "kEH_UniK": "HJ D287",
@@ -24140,8 +24243,8 @@ unikemet = {
   "𓨖": {
     "kEH_Cat": "D-34-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Legs in a walking posture, upside down, toes towards the reading direction.",
-    "kEH_Func": "Classifier to be upside down",
+    "kEH_Desc": "Legs in a walking posture, upside-down, toes towards the reading direction.",
+    "kEH_Func": "Classifier to be upside-down",
     "kEH_FVal": "sḫd",
     "kEH_UniK": "HJ D292",
     "kEH_JSesh": "D292",
@@ -24173,7 +24276,7 @@ unikemet = {
   "𓨙": {
     "kEH_Cat": "D-35-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A leg with a bend knee, with the upper leg written horizontally.",
+    "kEH_Desc": "A leg with a bent knee, with the upper leg written horizontally.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wꜥr",
     "kEH_UniK": "D056A"
@@ -24181,7 +24284,7 @@ unikemet = {
   "𓨚": {
     "kEH_Cat": "D-35-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A leg with a bend knee (D56), with a knife with a triangular blade and straight handle (T30A) written over it, blade downwards.",
+    "kEH_Desc": "A leg with a bent knee (D56), with a knife with a triangular blade and straight handle (T30A) written over it, blade downwards.",
     "kEH_Func": "Logogram (to transgress)",
     "kEH_FVal": "thꞽ",
     "kEH_UniK": "D057E"
@@ -24189,7 +24292,7 @@ unikemet = {
   "𓨛": {
     "kEH_Cat": "D-35-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A leg with a bend knee (D56), written with the upper leg over a knife with a triangular blade and straight handle, orientated with the blade upwards and the handle forwards, at a slight angle.",
+    "kEH_Desc": "A leg with a bent knee (D56), written with the upper leg over a knife with a triangular blade and straight handle, orientated with the blade upwards and the handle forwards, at a slight angle.",
     "kEH_Func": "Classifier to disappear",
     "kEH_FVal": "snk",
     "kEH_UniK": "HJ D057C",
@@ -24200,7 +24303,7 @@ unikemet = {
   "𓨜": {
     "kEH_Cat": "D-35-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A leg with a bend knee (D56), written with the upper leg over a knife with a triangular blade and straight handle, orientated with the blade downwards and the handle forwards, at a slight angle.",
+    "kEH_Desc": "A leg with a bent knee (D56), written with the upper leg over a knife with a triangular blade and straight handle, orientated with the blade downwards and the handle forwards, at a slight angle.",
     "kEH_Func": "Logogram (transgression)",
     "kEH_FVal": "th",
     "kEH_UniK": "HJ D057D",
@@ -24210,7 +24313,7 @@ unikemet = {
   "𓨝": {
     "kEH_Cat": "D-35-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A human foot and lower leg (D58), with a forward, downwards dotted line coming from the top.",
+    "kEH_Desc": "A human foot and lower leg (D58), with a forward, downward dotted line coming from the top.",
     "kEH_Func": "Logogram (to be pure, to be clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "HJ D300",
@@ -24221,7 +24324,7 @@ unikemet = {
   "𓨞": {
     "kEH_Cat": "D-35-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A human foot and lower leg (D58), with a backwards, downwards dotted line coming from the top.",
+    "kEH_Desc": "A human foot and lower leg (D58), with a backward, downward dotted line coming from the top.",
     "kEH_Func": "Logogram (to be pure, to be clean)",
     "kEH_FVal": "wꜥb",
     "kEH_UniK": "D300A"
@@ -24247,7 +24350,7 @@ unikemet = {
   "𓨡": {
     "kEH_Cat": "D-36-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised set of two toes, resembling a cloth wound on a pole, an emblem of divinity (R8), on top of a base resembling a tusk of an elephant (F18), with two lines connecting the two emblems, the top line horizontal, the bottom line at an angle, connecting to the top line at the second emblem.",
+    "kEH_Desc": "A stylized set of two toes, resembling a cloth wound on a pole, an emblem of divinity (R8), on top of a base resembling a tusk of an elephant (F18), with two lines connecting the two emblems, the top line horizontal, the bottom line at an angle, connecting to the top line at the second emblem.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "D063H"
@@ -24255,7 +24358,7 @@ unikemet = {
   "𓨢": {
     "kEH_Cat": "D-36-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised set of two toes, resembling a harpoon-head with two horizontal strokes and a single curl on top of the point (HG T19), on top of base resembling the left side of the sky (mirror N44).",
+    "kEH_Desc": "A stylized set of two toes, resembling a harpoon-head with two horizontal strokes and a single curl on top of the point (HG T19), on top of base resembling the left side of the sky (mirror N44).",
     "kEH_Func": "Phonemogram (Orion)",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "HJ D063C",
@@ -24265,7 +24368,7 @@ unikemet = {
   "𓨣": {
     "kEH_Cat": "D-36-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised set of two toes, resembling a harpoon-head with two horizontal strokes and a single curl on top of the point (HG T19), on top of base resembling the right side of the sky (N44).",
+    "kEH_Desc": "A stylized set of two toes, resembling a harpoon-head with two horizontal strokes and a single curl on top of the point (HG T19), on top of base resembling the right side of the sky (N44).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "HJ D063A",
@@ -24275,7 +24378,7 @@ unikemet = {
   "𓨤": {
     "kEH_Cat": "D-36-011",
     "kEH_Core": "C",
-    "kEH_Desc": " stylised set of two toes, resembling a harpoon-head with two horizontal strokes and a two angled strokes as point (T19A), on top of base resembling the right side of the sky (N44).",
+    "kEH_Desc": " stylized set of two toes, resembling a harpoon-head with two horizontal strokes and a two angled strokes as point (T19A), on top of base resembling the right side of the sky (N44).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "HJ D063F",
@@ -24284,7 +24387,7 @@ unikemet = {
   },
   "𓨥": {
     "kEH_Cat": "D-36-012",
-    "kEH_Desc": "A stylised set of two toes, resembling a harpoon-head with two horizontal strokes and a single curl on top of the point (HG T19), on top of a base with a loop at the back end.",
+    "kEH_Desc": "A stylized set of two toes, resembling a harpoon-head with two horizontal strokes and a single curl on top of the point (HG T19), on top of a base with a loop at the back end.",
     "kEH_UniK": "HJ D063G",
     "kEH_JSesh": "D63G",
     "kEH_HG": "D63G",
@@ -24293,7 +24396,7 @@ unikemet = {
   "𓨦": {
     "kEH_Cat": "D-36-013",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised set of two toes, resembling a harpoon-head with two horizontal strokes on top, and triangular point (T79), on top of a base with a loop at the back end.",
+    "kEH_Desc": "A stylized set of two toes, resembling a harpoon-head with two horizontal strokes on top, and triangular point (T79), on top of a base with a loop at the back end.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "D063I"
@@ -24301,7 +24404,7 @@ unikemet = {
   "𓨧": {
     "kEH_Cat": "D-36-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised set of two toes, resembling a harpoon-head with two horizontal strokes on top, and triangular point (T79), on top of base resembling the right side of the sky (N44).",
+    "kEH_Desc": "A stylized set of two toes, resembling a harpoon-head with two horizontal strokes on top, and triangular point (T79), on top of base resembling the right side of the sky (N44).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "gn",
     "kEH_UniK": "HJ D063B",
@@ -24312,7 +24415,7 @@ unikemet = {
   "𓨨": {
     "kEH_Cat": "D-36-020",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised set of two toes, resembling a harpoon-head with two horizontal strokes and two angled strokes on top of the point (T19C), on top of base resembling the right side of the sky (N44).",
+    "kEH_Desc": "A stylized set of two toes, resembling a harpoon-head with two horizontal strokes and two angled strokes on top of the point (T19C), on top of base resembling the right side of the sky (N44).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "gn",
     "kEH_UniK": "HJ D063E",
@@ -24323,7 +24426,7 @@ unikemet = {
   "𓨩": {
     "kEH_Cat": "D-36-024",
     "kEH_Core": "C",
-    "kEH_Desc": " stylised set of two toes, resembling a harpoon-head with two horizontal strokes and a two angled strokes as point (T19A), on top of base resembling the sky (N1), with a star (N14) written between the two harpoon-heads.",
+    "kEH_Desc": " stylized set of two toes, resembling a harpoon-head with two horizontal strokes and a two angled strokes as point (T19A), on top of base resembling the sky (N1), with a star (N14) written between the two harpoon-heads.",
     "kEH_Func": "Logogram (Orion)",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "HJ D322B",
@@ -24334,7 +24437,7 @@ unikemet = {
   "𓨪": {
     "kEH_Cat": "D-36-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised set of two toes, resembling a harpoon-head with two horizontal strokes and a single curl on top of the point (HG T19), on top of base resembling a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A).",
+    "kEH_Desc": "A stylized set of two toes, resembling a harpoon-head with two horizontal strokes and a single curl on top of the point (HG T19), on top of base resembling a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "HJ D319",
@@ -24345,7 +24448,7 @@ unikemet = {
   "𓨫": {
     "kEH_Cat": "D-36-026",
     "kEH_Core": "C",
-    "kEH_Desc": "A stylised set of three toes, resembling a harpoon-head with two horizontal strokes on top, and triangular point (T79), on top of base resembling the right side of the sky (N44).",
+    "kEH_Desc": "A stylized set of three toes, resembling a harpoon-head with two horizontal strokes on top, and triangular point (T79), on top of base resembling the right side of the sky (N44).",
     "kEH_Func": "Phonemogram/logogram (annals)",
     "kEH_FVal": "gn.wt",
     "kEH_UniK": "HJ D323A",
@@ -24798,6 +24901,7 @@ unikemet = {
   "𓩝": {
     "kEH_Cat": "E-03-008",
     "kEH_Core": "C",
+    "kEH_Desc": "An oryx, standing, on top of a standard used for the carrying of religious symbols on top of a parcel of land with irrigation ditches.",
     "kEH_Func": "Logogram (Oryx nome, 16th nome of Upper Egypt",
     "kEH_FVal": "mꜣ-ḥḏ",
     "kEH_UniK": "HJ E198",
@@ -24829,7 +24933,7 @@ unikemet = {
   "𓩠": {
     "kEH_Cat": "E-03-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A gazelle, lying down, 3 legs folded under the body, right front leg extended forwards.",
+    "kEH_Desc": "A gazelle, lying down, three legs folded under the body, right front leg extended forwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽw",
     "kEH_UniK": "HJ E078A",
@@ -24858,7 +24962,7 @@ unikemet = {
   "𓩣": {
     "kEH_Cat": "E-03-026",
     "kEH_Core": "C",
-    "kEH_Desc": "An oryx, lying on its back, tail in front, legs held to the belly, head looking forwards, with a knife with a triangular blade and straight handle at the back, blade towards the back..",
+    "kEH_Desc": "An oryx, lying on its back, tail in front, legs held to the belly, head looking forwards, with a knife with a triangular blade and straight handle at the back, blade towards the back.",
     "kEH_Func": "Classifier roarer",
     "kEH_FVal": "hmhm.t(y)",
     "kEH_UniK": "E073D"
@@ -24918,7 +25022,7 @@ unikemet = {
   "𓩩": {
     "kEH_Cat": "E-04-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, with a beard, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on top of the horns.",
+    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, with a beard, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on top of the horns.",
     "kEH_Func": "Logogram (Son of Re)",
     "kEH_FVal": "sꜣ-rꜥ",
     "kEH_UniK": "E180B"
@@ -24937,7 +25041,7 @@ unikemet = {
   "𓩫": {
     "kEH_Cat": "E-04-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, with a beard, with a cobra (Naja haja), standing up, with expanded hood (Uraeus, I64) on its horns.",
+    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, with a beard, with a cobra (Naja haje), standing up, with expanded hood (Uraeus, I64) on its horns.",
     "kEH_Func": "Phonemogram (in bꜣ-n-rꜥ-mr.y-ꞽmn)",
     "kEH_FVal": "bꜣ",
     "kEH_UniK": "HJ E191",
@@ -24967,7 +25071,7 @@ unikemet = {
   "𓩮": {
     "kEH_Cat": "E-04-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, without a beard, with a cobra (Naja haja), standing up, with expanded hood (Uraeus)(I64) on its head, with the wings of a bird on its back, spread in a v-shape.",
+    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, without a beard, with a cobra (Naja haje), standing up, with expanded hood (Uraeus)(I64) on its head, with the wings of a bird on its back, spread in a V-shape.",
     "kEH_Func": "Logogram (to the north of)",
     "kEH_FVal": "mḥ",
     "kEH_UniK": "HJ E226",
@@ -25015,19 +25119,20 @@ unikemet = {
   "𓩳": {
     "kEH_Cat": "E-04-029",
     "kEH_Core": "C",
+    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, with a beard, with a flagellum on its back; on top of a standard used for carrying religious symbols, with the vertical stick at the far side.",
     "kEH_UniK": "E193A"
   },
   "𓩴": {
     "kEH_Cat": "E-04-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, with a beard, with a headdress consisting of two feathers and a sun-disk (S76) on top of the horns, with a flagellum (S45) on its back; in front of a A ram (Ovis longipes palaeo-aegyptiacus), standing, with a beard, with a flagellum (S45) on its back; on top of a standard used for carrying religious symbols (R12).",
+    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, with a beard, with a headdress consisting of two feathers and a sun-disk (S76) on top of the horns, with a flagellum (S45) on its back; in front of a ram (Ovis longipes palaeo-aegyptiacus), standing, with a beard, with a flagellum (S45) on its back; on top of a standard used for carrying religious symbols (R12).",
     "kEH_Func": "?",
     "kEH_UniK": "E310"
   },
   "𓩵": {
     "kEH_Cat": "E-05-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A bubalis antilope, standing, head looking backwards.",
+    "kEH_Desc": "A bubalis antelope, standing, head looking backwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜣms",
     "kEH_UniK": "HJ E103A",
@@ -25038,7 +25143,7 @@ unikemet = {
   "𓩶": {
     "kEH_Cat": "E-05-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A bubalis antilope, standing, head looking forwards.",
+    "kEH_Desc": "A bubalis antelope, standing, head looking forwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "š",
     "kEH_UniK": "HJ E103",
@@ -25048,7 +25153,7 @@ unikemet = {
   "𓩷": {
     "kEH_Cat": "E-05-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A bubalis antilope, standing, head looking forwards (E103), with a cobra in repose (Naja haja), with its tail coiled up, in a single coil (I80A).",
+    "kEH_Desc": "A bubalis antelope, standing, head looking forwards (E103), with a cobra in repose (Naja haje), with its tail coiled up, in a single coil (I80A).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šsr",
     "kEH_UniK": "HJ E104",
@@ -25059,7 +25164,7 @@ unikemet = {
   "𓩸": {
     "kEH_Cat": "E-05-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A bubalis antilope, standing, head looking backwards (E103A), with an African sacred ibis (Threskiornis aethiopicus) (G26A) on its back.",
+    "kEH_Desc": "A bubalis antelope, standing, head looking backwards (E103A), with an African sacred ibis (Threskiornis aethiopicus) (G26A) on its back.",
     "kEH_Func": "Logogram/Phonemogram (to make glad, to be glad)",
     "kEH_FVal": "ꜣms-ꞽb",
     "kEH_UniK": "HJ E105",
@@ -25077,7 +25182,7 @@ unikemet = {
   "𓩺": {
     "kEH_Cat": "E-05-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A newborn bubalis antilope, lying down, three legs folded beneath the body, right front leg extended forwards.",
+    "kEH_Desc": "A newborn bubalis antelope, lying down, three legs folded beneath the body, right front leg extended forwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽw",
     "kEH_UniK": "E009D",
@@ -25088,7 +25193,7 @@ unikemet = {
   "𓩻": {
     "kEH_Cat": "E-05-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A newborn bubalis antilope, lying down, legs folded beneath the body, short tail upwards.",
+    "kEH_Desc": "A newborn bubalis antelope, lying down, legs folded beneath the body, short tail upwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽw",
     "kEH_UniK": "HJ E009C",
@@ -25138,7 +25243,7 @@ unikemet = {
   "𓪀": {
     "kEH_Cat": "E-06-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A desert plant with two branches, with a downwards hanging flower at the top, written over a jackal, standing, tail down (E17).",
+    "kEH_Desc": "A desert plant with two branches, with a downward hanging flower at the top, written over a jackal, standing, tail down (E17).",
     "kEH_Func": "Logogram (jackal of Upper Egypt)",
     "kEH_FVal": "sꜣb šmꜥ.w",
     "kEH_UniK": "HJ E294",
@@ -25148,7 +25253,7 @@ unikemet = {
   "𓪁": {
     "kEH_Cat": "E-06-013",
     "kEH_Core": "C",
-    "kEH_Desc": "A flowering sedge (M23A), written ovar a jackal, standing, tail down (E17); on top of a standard used for carrying religious symbols (R12).",
+    "kEH_Desc": "A flowering sedge (M23A), written over a jackal, standing, tail down (E17); on top of a standard used for carrying religious symbols (R12).",
     "kEH_Func": "Logogram (Wepwawet of Upper Egypt)",
     "kEH_FVal": "wp-wꜣ.wt-šmꜥ.w",
     "kEH_UniK": "E294A"
@@ -25173,7 +25278,7 @@ unikemet = {
   "𓪄": {
     "kEH_Cat": "E-06-020",
     "kEH_Core": "C",
-    "kEH_Desc": "A jackal, standing, tail down (E17), on top of a standard used for the carrying of religious symbols, with an uraeus and SdSd-pretuberance at the front of the standard.",
+    "kEH_Desc": "A jackal, standing, tail down (E17), on top of a standard used for the carrying of religious symbols, with an uraeus and šdšd-protuberance at the front of the standard.",
     "kEH_Func": "Logogram (Wepwawet)?",
     "kEH_FVal": "wp-wꜣ.wt",
     "kEH_UniK": "E019B",
@@ -25182,7 +25287,7 @@ unikemet = {
   "𓪅": {
     "kEH_Cat": "E-06-024",
     "kEH_Core": "C",
-    "kEH_Desc": "Three jackals, standing, tail down, overlapping each other, bound with rope to a boat/ship with a prow and stern resembling the handle of a handle of a sickle (U1), on top of a rectangle resembling water, with an oar/rudder at the back (P28); with a god, seated, knees up, with covered legs and arms, with the head of a falcon, with a sun disk (N5) on its head, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward (C2) within it.",
+    "kEH_Desc": "Three jackals, standing, tail down, overlapping each other, bound with rope to a boat/ship with a prow and stern resembling the handle of a sickle (U1), on top of a rectangle resembling water, with an oar/rudder at the back (P28); with a god, seated, knees up, with covered legs and arms, with the head of a falcon, with a sun disk (N5) on its head, holding a tie or strap, used with sandals (ankh-sign, S34), angling forward (C2) within it.",
     "kEH_Func": "Logogram (those who conduct the bark of Re)",
     "kEH_FVal": "sb.yw-wꞽꜣ-n-rꜥ",
     "kEH_UniK": "HJ E228",
@@ -25223,7 +25328,7 @@ unikemet = {
   "𓪉": {
     "kEH_Cat": "E-07-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A jackal, lying down, tail downwards, on top of a platform, with a dagger with a rounded tip (T8) angled forward on its front paw.",
+    "kEH_Desc": "A jackal, lying down, tail downwards, on top of a platform, with a dagger with a rounded tip (T8) angled forwards on its front paw.",
     "kEH_Func": "Logogram (the primary (secret) image (of a god))",
     "kEH_FVal": "sštꜣ-tp(.y)",
     "kEH_UniK": "HJ E204",
@@ -25313,7 +25418,7 @@ unikemet = {
   "𓪓": {
     "kEH_Cat": "E-07-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A jackal, lying down, tail down (E15), on top of a standard used for the carrying of religious symbols, with an uraeus and SdSd-pretuberance at the front of the standard, with a mace (T3) written horizontally over the vertical pole of the standard, macehead towards the back.",
+    "kEH_Desc": "A jackal, lying down, tail down (E15), on top of a standard used for the carrying of religious symbols, with an uraeus and šdšd-protuberance at the front of the standard, with a mace (T3) written horizontally over the vertical pole of the standard, mace head towards the back.",
     "kEH_Func": "Classifier canine divinity",
     "kEH_FVal": "wp-wꜣ.wt",
     "kEH_UniK": "E019C"
@@ -25376,7 +25481,7 @@ unikemet = {
   "𓪚": {
     "kEH_Cat": "E-08-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A cat, seated, tail curled over the body towards the back, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on top of its head.",
+    "kEH_Desc": "A cat, seated, tail curled over the body towards the back, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on top of its head.",
     "kEH_Func": "Logogram (like Re)",
     "kEH_FVal": "mꞽ-rꜥ",
     "kEH_UniK": "HJ E086A",
@@ -25397,7 +25502,7 @@ unikemet = {
   "𓪜": {
     "kEH_Cat": "E-08-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A cat, seated, tail curled over the body towards the back, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on top of its head, with a tie or strap, used with sandals (ankh-sign, S34), angling forward on top of its front paw.",
+    "kEH_Desc": "A cat, seated, tail curled over the body towards the back, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on top of its head, with a tie or strap, used with sandals (ankh-sign, S34), angling forward on top of its front paw.",
     "kEH_Func": "Logogram (given life like Re)",
     "kEH_FVal": "dꞽ-ꜥnḫ-mꞽ-rꜥ ",
     "kEH_UniK": "HJ E232",
@@ -25407,6 +25512,7 @@ unikemet = {
   "𓪝": {
     "kEH_Cat": "E-08-012",
     "kEH_Core": "C",
+    "kEH_Desc": "A cat, seated, tail curled over the body towards the back, with a knife with a triangular blade and straight angle at the front paw of the cat, angled forwards, sharp edge towards the front.",
     "kEH_UniK": "E013F"
   },
   "𓪞": {
@@ -25458,7 +25564,7 @@ unikemet = {
   "𓪣": {
     "kEH_Cat": "E-08-024",
     "kEH_Core": "C",
-    "kEH_Desc": "A cat, standing, tail down, on top of a shepherds crook with a package lashed to it, with a tie above and below the package (T18), written horizontally.",
+    "kEH_Desc": "A cat, standing, tail down, on top of a shepherd's crook with a package lashed to it, with a tie above and below the package (T18), written horizontally.",
     "kEH_UniK": "HJ E091",
     "kEH_JSesh": "E91",
     "kEH_HG": "E91"
@@ -25555,8 +25661,8 @@ unikemet = {
   "𓪮": {
     "kEH_Cat": "E-13-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A griffin with the head of a jackal.",
-    "kEH_Func": "Logogram (griffin)",
+    "kEH_Desc": "A griffin.",
+    "kEH_Func": "Classifier griffin",
     "kEH_FVal": "ꜥḫḫ",
     "kEH_UniK": "HJ E080A",
     "kEH_JSesh": "E80A",
@@ -25566,8 +25672,8 @@ unikemet = {
   "𓪯": {
     "kEH_Cat": "E-13-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A griffin.",
-    "kEH_Func": "Classifier griffin",
+    "kEH_Desc": "A griffin  with the head of a jackal. ",
+    "kEH_Func": "Logogram (griffin)",
     "kEH_FVal": "ꜥḫḫ",
     "kEH_UniK": "HJ E080",
     "kEH_JSesh": "E80",
@@ -25604,7 +25710,7 @@ unikemet = {
   "𓪳": {
     "kEH_Cat": "E-14-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A hippopotamus (Hippopotamus amphibius), with a forwards, downwards line of liquid coming from the mouth, with a knife with a triangular blade and straight handle (T30A) vertically on its back, blade forwards.",
+    "kEH_Desc": "A hippopotamus (Hippopotamus amphibius), with a forward, downward line of liquid coming from the mouth, with a knife with a triangular blade and straight handle (T30A) vertically on its back, blade forwards.",
     "kEH_Func": "Classifier hippopotamus",
     "kEH_FVal": "ḫꜣb",
     "kEH_UniK": "HJ E132A",
@@ -25637,7 +25743,7 @@ unikemet = {
   "𓪶": {
     "kEH_Cat": "E-14-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A hippopotamus, with the limbs of a feline, head and tail of a crocodile, standing on its hind legs, front leg extended forwards (E134), upon a rolled up herdsman's shelter of papyrus (V17).",
+    "kEH_Desc": "A hippopotamus, with the limbs of a feline, head and tail of a crocodile, standing on its hind legs, front leg extended forwards (E134), upon a rolled-up herdsman's shelter of papyrus (V17).",
     "kEH_Func": "Phonemogram/logogram (in ꞽp.t-sw.t)",
     "kEH_FVal": "ꞽp.t",
     "kEH_UniK": "HJ E134A",
@@ -25648,7 +25754,7 @@ unikemet = {
   "𓪷": {
     "kEH_Cat": "E-14-021",
     "kEH_Core": "C",
-    "kEH_Desc": "A hippopotamus, with the limbs of a feline, head and tail of a crocodile, standing on its hind legs, front leg extended forwards (E134), with a headdress consisting of two plumes and a sun-disk (S63A), paw upon a rolled up herdsman's shelter of papyrus (V17).",
+    "kEH_Desc": "A hippopotamus, with the limbs of a feline, head and tail of a crocodile, standing on its hind legs, front leg extended forwards (E134), with a headdress consisting of two plumes and a sun-disk (S63A), paw upon a rolled-up herdsman's shelter of papyrus (V17).",
     "kEH_Func": "Logogram/Phonemogram (great one (female))",
     "kEH_FVal": "wr.t",
     "kEH_UniK": "HJ E137",
@@ -25659,7 +25765,7 @@ unikemet = {
   "𓪸": {
     "kEH_Cat": "E-14-024",
     "kEH_Core": "C",
-    "kEH_Desc": "A hippopotamus, with the limbs of a feline, head and tail of a crocodile, standing on its hind legs, front leg extended forwards (E134), with a headdress of bovine horns with a sun disk (F102), paw upon a rolled up herdsman's shelter of papyrus (V17).",
+    "kEH_Desc": "A hippopotamus, with the limbs of a feline, head and tail of a crocodile, standing on its hind legs, front leg extended forwards (E134), with a headdress of bovine horns with a sun disk (F102), paw upon a rolled-up herdsman's shelter of papyrus (V17).",
     "kEH_Func": "Logogram/Phonemogram (great one (female))",
     "kEH_FVal": "wr.t ",
     "kEH_UniK": "E298"
@@ -25676,7 +25782,7 @@ unikemet = {
     "kEH_Cat": "E-14-030",
     "kEH_Core": "C",
     "kEH_Desc": "A hippopotamus, with the limbs of a feline, head and tail of a crocodile, standing on its hind legs, front leg extended forwards, holding a knife with a triangular blade and straight handle (T30A), blade forwards.",
-    "kEH_Func": "Logogram (first person signular, referring to Nut)",
+    "kEH_Func": "Logogram (first person singular, referring to Nut)",
     "kEH_FVal": "ꞽ",
     "kEH_UniK": "HJ E283",
     "kEH_JSesh": "E283",
@@ -25703,19 +25809,21 @@ unikemet = {
   "𓪽": {
     "kEH_Cat": "E-16-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A desert hare, lying down, with a upwards tail with a forked end.",
+    "kEH_Desc": "A desert hare, lying down, with an upward tail with a forked end.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wn",
     "kEH_UniK": "E034G",
     "kEH_IFAO": "135,3"
   },
   "𓪾": {
-    "kEH_Cat": "E-16-006",
+    "kEH_Cat": "E-16-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A desert hare, lying down, with whiskers.",
+    "kEH_Desc": "A desert hare, lying down.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wn",
-    "kEH_UniK": "E034H"
+    "kEH_UniK": "E034H",
+    "kEH_HG": "E34",
+    "kEH_IFAO": "135,1"
   },
   "𓪿": {
     "kEH_Cat": "E-16-009",
@@ -25864,7 +25972,7 @@ unikemet = {
   "𓫎": {
     "kEH_Cat": "E-17-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, standing, tail downwards (E22), with the headpiece of a sistrum resembling a shrine on top of a hathorian face, on top of its back.",
+    "kEH_Desc": "A lion, standing, tail downwards (E22), with the headpiece of a sistrum resembling a shrine on top of a Hathorian face, on top of its back.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "pẖr",
     "kEH_UniK": "HJ E114",
@@ -25875,7 +25983,7 @@ unikemet = {
   "𓫏": {
     "kEH_Cat": "E-17-026",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, standing, tail downwards (E22), on top of a shepherds crook with a package lashed to it, with a tie above and below the package (T18), written horizontally. ",
+    "kEH_Desc": "A lion, standing, tail downwards (E22), on top of a shepherd's crook with a package lashed to it, with a tie above and below the package (T18), written horizontally. ",
     "kEH_Func": "Logogram (to present)",
     "kEH_FVal": "šms",
     "kEH_UniK": "HJ E109",
@@ -25896,7 +26004,7 @@ unikemet = {
   "𓫑": {
     "kEH_Cat": "E-17-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, standing, tail downwards (E22), with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head.",
+    "kEH_Desc": "A lion, standing, tail downwards (E22), with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head.",
     "kEH_Func": "Logogram (in the construction sꜣ-rꜥ nb ḫꜥ.w)",
     "kEH_FVal": "rꜥ + nb",
     "kEH_UniK": "E116A"
@@ -25904,7 +26012,7 @@ unikemet = {
   "𓫒": {
     "kEH_Cat": "E-17-032",
     "kEH_Core": "C",
-    "kEH_Desc": "A lioness, lying down, with a stick with an circular inset (P11A) on its back.",
+    "kEH_Desc": "A lioness, lying down, with a stick with a circular inset (P11A) on its back.",
     "kEH_Func": "Logogram (Mehyt, divinity)",
     "kEH_FVal": "mḥ.yt",
     "kEH_UniK": "HJ E240",
@@ -25924,7 +26032,7 @@ unikemet = {
   "𓫔": {
     "kEH_Cat": "E-17-039",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, lying down, tail curled over the body towards the back, with a forwards, downwards line of liquid coming from the mouth.",
+    "kEH_Desc": "A lion, lying down, tail curled over the body towards the back, with a forward, downward line of liquid coming from the mouth.",
     "kEH_Func": "Phonemogram tf and phonemogram r",
     "kEH_FVal": "tf & r",
     "kEH_UniK": "HJ E117",
@@ -25943,7 +26051,7 @@ unikemet = {
   "𓫖": {
     "kEH_Cat": "E-17-043",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, standing, tail in the form of a cobra (Naja haja), standing up, with expanded hood (Uraeus).",
+    "kEH_Desc": "A lion, standing, tail in the form of a cobra (Naja haje), standing up, with expanded hood (Uraeus).",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "twtw",
     "kEH_UniK": "E312"
@@ -25992,7 +26100,7 @@ unikemet = {
   "𓫛": {
     "kEH_Cat": "E-17-052",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, lying down, tail curled over the body towards the back, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head, with a wide cup (W10) on the front paw.",
+    "kEH_Desc": "A lion, lying down, tail curled over the body towards the back, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head, with a wide cup (W10) on the front paw.",
     "kEH_Func": "Logogram (Re)",
     "kEH_FVal": "rꜥ",
     "kEH_UniK": "HJ E120A",
@@ -26018,7 +26126,7 @@ unikemet = {
   "𓫞": {
     "kEH_Cat": "E-17-058",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, lying down, tail curled over the body towards the back, rear half enclosed in an rectangle which is open at the front.",
+    "kEH_Desc": "A lion, lying down, tail curled over the body towards the back, rear half enclosed in a rectangle which is open at the front.",
     "kEH_Func": "Logogram (door-bolt)",
     "kEH_FVal": "ḥkn",
     "kEH_UniK": "HJ E125",
@@ -26057,7 +26165,7 @@ unikemet = {
   "𓫢": {
     "kEH_Cat": "E-17-065",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, standing, tail down, on some structure resembling the letter I with downwards sloping extentions at the top.",
+    "kEH_Desc": "A lion, standing, tail down, on some structure resembling the letter I with downward sloping extensions at the top.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "rdꞽ",
     "kEH_UniK": "E313"
@@ -26065,7 +26173,7 @@ unikemet = {
   "𓫣": {
     "kEH_Cat": "E-17-066",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, standing on its hind legs, foreleg extended forwards, holding a a knife with a triangular blade and straight handle (T30A).",
+    "kEH_Desc": "A lion, standing on its hind legs, foreleg extended forwards, holding a knife with a triangular blade and straight handle (T30A).",
     "kEH_Func": "Logogram (to make holy)",
     "kEH_FVal": "ḏsr",
     "kEH_UniK": "E314"
@@ -26100,19 +26208,21 @@ unikemet = {
   "𓫧": {
     "kEH_Cat": "E-19-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A pig, standing on its hind legs, with a forwards, downwards angling dotted line coming from the mouth, ending in a human mouth, seen from the side; on top of a sand covered mountain over the edge of the cultivated areas (N26).",
+    "kEH_Desc": "A pig, standing on its hind legs, with a forward, downward angling dotted line coming from the mouth, ending in a human mouth, seen from the side; on top of a sand covered mountain over the edge of the cultivated areas (N26).",
     "kEH_Func": "Logogram (Tefrer, geographical location)",
     "kEH_FVal": "tfrr",
     "kEH_UniK": "E282A"
   },
   "𓫨": {
-    "kEH_Cat": "E-20-007",
+    "kEH_Cat": "E-20-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, hands on knees, tail upwards.",
-    "kEH_Func": "Logogram (Thot)",
-    "kEH_FVal": "ḏḥwty",
+    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, hands on knees, tail folded under the rear.",
+    "kEH_Func": "Classifier monkey (divinity)",
+    "kEH_FVal": "wpt",
     "kEH_UniK": "E035A",
-    "kEH_JSesh": "US248E35VARA"
+    "kEH_JSesh": "E35",
+    "kEH_HG": "E35",
+    "kEH_IFAO": "138,6"
   },
   "𓫩": {
     "kEH_Cat": "E-20-010",
@@ -26139,7 +26249,7 @@ unikemet = {
     "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, arms forward, holding a bowl for incense with smoke rising from the bowl (R7).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "bsꜣ",
-    "kEH_UniK": "HJ E037",
+    "kEH_UniK": "E037B",
     "kEH_JSesh": "E37",
     "kEH_HG": "E37",
     "kEH_IFAO": "138,10"
@@ -26147,7 +26257,7 @@ unikemet = {
   "𓫬": {
     "kEH_Cat": "E-20-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, arms forward, holding a bowl for incense, with two pellets of incence, with smoke rising from the bowl (R7C).",
+    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, arms forward, holding a bowl for incense, with two pellets of incense, with smoke rising from the bowl (R7C).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "bsꜣ",
     "kEH_UniK": "HJ E037A",
@@ -26269,7 +26379,7 @@ unikemet = {
   "𓫹": {
     "kEH_Cat": "E-20-037",
     "kEH_Core": "C",
-    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, hands on knees, tail folded under the rear (E35), in front of an long, cup-shaped object with a vertical line of dots inside it, on top of a rectangular base. ",
+    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, hands on knees, tail folded under the rear (E35), in front of a long, cup-shaped object with a vertical line of dots inside it, on top of a rectangular base. ",
     "kEH_Func": "Logogram (symbol of the cycle of time)",
     "kEH_FVal": "wnšb",
     "kEH_UniK": "HJ E046A",
@@ -26279,7 +26389,7 @@ unikemet = {
   "𓫺": {
     "kEH_Cat": "E-20-038",
     "kEH_Core": "C",
-    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, wearing the red crown (S3), arms forward, handpalm upwards.",
+    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, wearing the red crown (S3), arms forward, hand palm upwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽn",
     "kEH_UniK": "HJ E047",
@@ -26312,7 +26422,7 @@ unikemet = {
   "𓫾": {
     "kEH_Cat": "E-20-042",
     "kEH_Core": "C",
-    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64) on its head.",
+    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64) on its head.",
     "kEH_Func": "Logogram (lady of writing)",
     "kEH_FVal": "nb.t-sš",
     "kEH_UniK": "HJ E194",
@@ -26322,7 +26432,7 @@ unikemet = {
   "𓫿": {
     "kEH_Cat": "E-20-045",
     "kEH_Core": "C",
-    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, arms forward, holding a spiral, winding counter-clockwise away from its central point, ending at the right lower corner after about 1,5 turns (Z7).",
+    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), seated, arms forward, holding a spiral, winding counterclockwise away from its central point, ending at the right lower corner after about one and a half turns(Z7).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "t",
     "kEH_UniK": "E301"
@@ -26330,7 +26440,7 @@ unikemet = {
   "𓬀": {
     "kEH_Cat": "E-20-046",
     "kEH_Core": "C",
-    "kEH_Desc": "A baboon, standing on it hind legs, tail down, arms raised in front, forearms nearly vertical, handpalms outwards.",
+    "kEH_Desc": "A baboon, standing on it hind legs, tail down, arms raised in front, forearms nearly vertical, hand palms outwards.",
     "kEH_Func": "Logogram (to be good)",
     "kEH_FVal": "nfr",
     "kEH_UniK": "HJ E051",
@@ -26341,7 +26451,7 @@ unikemet = {
   "𓬁": {
     "kEH_Cat": "E-20-047",
     "kEH_Core": "C",
-    "kEH_Desc": "A monkey, standing on its hind legs, tail down, arms raised in front, forearms nearly vertical, handpalms outwards.",
+    "kEH_Desc": "A monkey, standing on its hind legs, tail down, arms raised in front, forearms nearly vertical, hand palms outwards.",
     "kEH_Func": "Logogram (to be good)",
     "kEH_FVal": "nfr",
     "kEH_UniK": "E051B",
@@ -26350,7 +26460,7 @@ unikemet = {
   "𓬂": {
     "kEH_Cat": "E-20-048",
     "kEH_Core": "C",
-    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), standing on its hind legs, tail down, arms raised in front, forearms nearly vertical, handpalms outwards.",
+    "kEH_Desc": "A hamadryas baboon (Papio hamadryas), standing on its hind legs, tail down, arms raised in front, forearms nearly vertical, hand palms outwards.",
     "kEH_Func": "Classifier baboon",
     "kEH_FVal": "bꜣ.w-ꞽꜣb.tyw",
     "kEH_UniK": "HJ E051A",
@@ -26361,7 +26471,7 @@ unikemet = {
   "𓬃": {
     "kEH_Cat": "E-20-050",
     "kEH_Core": "C",
-    "kEH_Desc": "A baboon, standing on its hind legs, tail down, arms downwards, hands at the hight of the waist, handpalms downwards.",
+    "kEH_Desc": "A baboon, standing on its hind legs, tail down, arms downwards, hands at the height of the waist, hand palms downwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nfr",
     "kEH_UniK": "HJ E053",
@@ -26408,7 +26518,7 @@ unikemet = {
   "𓬈": {
     "kEH_Cat": "E-20-059",
     "kEH_Core": "C",
-    "kEH_Desc": "A baboon, standing on its hind legs, tail down, arms extended forwards, left forearm horizontal, holding a palm branch, stripped of leaves and notched with a sharp notch (M4B), with the notch inwards, right hand between the head and the palm brance, handpalm outwards..",
+    "kEH_Desc": "A baboon, standing on its hind legs, tail down, arms extended forwards, left forearm horizontal, holding a palm branch, stripped of leaves and notched with a sharp notch (M4B), with the notch inwards, right hand between the head and the palm branch, hand palm outwards.",
     "kEH_Func": "Logogram (good year)",
     "kEH_FVal": "rnp.t-nfr.t",
     "kEH_UniK": "HJ E060",
@@ -26443,7 +26553,7 @@ unikemet = {
   "𓬌": {
     "kEH_Cat": "E-20-064",
     "kEH_Core": "C",
-    "kEH_Desc": "Two baboon, standing on its hind legs, tail down, facing each other, arms extended forwards, left forearm horizontal, holding the same windpipe and heart, with a single horizontal stroke at the top (F35), with the right arm angled upwards with the hand near the tops stroke.",
+    "kEH_Desc": "Two baboon, standing on their hind legs, tail down, facing each other, arms extended forwards, left forearm horizontal, holding the same windpipe and heart, with a single horizontal stroke at the top (F35), with the right arm angled upwards with the hand near the tops stroke.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nfr.w",
     "kEH_UniK": "E063B"
@@ -26462,7 +26572,7 @@ unikemet = {
   "𓬎": {
     "kEH_Cat": "E-20-066",
     "kEH_Core": "C",
-    "kEH_Desc": "A baboon, standing on its hind legs, tail down, arms extended forwards, forearm horizontal, hand horizontal, handpalm upwards, holding a windpipe and heart, with a single horizontal stroke at the top (F35).",
+    "kEH_Desc": "A baboon, standing on its hind legs, tail down, arms extended forwards, forearm horizontal, hand horizontal, hand palm upwards, holding a windpipe and heart, with a single horizontal stroke at the top (F35).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nfr",
     "kEH_UniK": "E063C"
@@ -26488,7 +26598,7 @@ unikemet = {
   "𓬑": {
     "kEH_Cat": "E-20-072",
     "kEH_Core": "C",
-    "kEH_Desc": "A baboon, standing on its hind legs, tail down, right arem extended forwards, forearm horizontal, handpalm upwards, holding a column imitating a bundle of stalks tied together (R11), with a folded piece of cloth, short section outwards below the right hand; left arm extended backwards, hand at the hight of the shoulder, handpalm upwards, supporting a quail chick (G43).",
+    "kEH_Desc": "A baboon, standing on its hind legs, tail down, right arm extended forwards, forearm horizontal, hand palm upwards, holding a column imitating a bundle of stalks tied together (R11), with a folded piece of cloth, short section outwards below the right hand; left arm extended backwards, hand at the height of the shoulder, hand palm upwards, supporting a quail chick (G43).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḏd + s + r",
     "kEH_UniK": "HJ E068",
@@ -26538,7 +26648,7 @@ unikemet = {
   "𓬖": {
     "kEH_Cat": "E-22-003",
     "kEH_Core": "C",
-    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uaeus on its forehead.",
+    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uraeus on its forehead.",
     "kEH_Func": "Logogram (lord)",
     "kEH_FVal": "nb",
     "kEH_UniK": "HJ E151",
@@ -26549,7 +26659,7 @@ unikemet = {
   "𓬗": {
     "kEH_Cat": "E-22-006",
     "kEH_Core": "C",
-    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)) on its head. ",
+    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)) on its head. ",
     "kEH_Func": "Logogram rꜥ and nb (in sꜣ-rꜥ nb ḫꜥ.w)",
     "kEH_FVal": "rꜥ nb",
     "kEH_UniK": "HJ E153",
@@ -26560,7 +26670,7 @@ unikemet = {
   "𓬘": {
     "kEH_Cat": "E-22-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, lying down, with the face of a man, with a long, curved beard and coif, with the sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side (N6B), on its head.",
+    "kEH_Desc": "A lion, lying down, with the face of a man, with a long, curved beard and coif, with the sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side (N6B), on its head.",
     "kEH_Func": "Logogram (King of UE and LE, lord)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty-nb",
     "kEH_UniK": "HJ E156",
@@ -26570,7 +26680,7 @@ unikemet = {
   "𓬙": {
     "kEH_Cat": "E-22-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A lion, lying down, with the face of a man, with a long, curved beard and coif, wearing the double crown (S6) and with ureaus on the forehead.",
+    "kEH_Desc": "A lion, lying down, with the face of a man, with a long, curved beard and coif, wearing the double crown (S6) and with uraeus on the forehead.",
     "kEH_Func": "Logogram (lord of the two lands)",
     "kEH_FVal": "nb-tꜣ.wy",
     "kEH_UniK": "HJ E154",
@@ -26592,7 +26702,7 @@ unikemet = {
   "𓬛": {
     "kEH_Cat": "E-22-013",
     "kEH_Core": "C",
-    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uaeus on its forehead (E151), with a tie or strap, used with sandals (ankh-sign, S34) on its front paw.",
+    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uraeus on its forehead (E151), with a tie or strap, used with sandals (ankh-sign, S34) on its front paw.",
     "kEH_Func": "Logogram (living image)",
     "kEH_FVal": "šsp-ꜥnḫ",
     "kEH_UniK": "HJ E157",
@@ -26612,7 +26722,7 @@ unikemet = {
   "𓬝": {
     "kEH_Cat": "E-22-016",
     "kEH_Core": "C",
-    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uaeus on its forehead (E151), with a two-barbed harpoon, with a handle on the shaft (T21A), vertically on its front paw, handle outwards.",
+    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uraeus on its forehead (E151), with a two-barbed harpoon, with a handle on the shaft (T21A), vertically on its front paw, handle outwards.",
     "kEH_Func": "Logogram (the sole/unique lord)",
     "kEH_FVal": "nb-wꜥ",
     "kEH_UniK": "HJ E158",
@@ -26638,7 +26748,7 @@ unikemet = {
   "𓬠": {
     "kEH_Cat": "E-22-024",
     "kEH_Core": "C",
-    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uaeus on its forehead (E151), with a vessel on its front paw.",
+    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uraeus on its forehead (E151), with a vessel on its front paw.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "m",
     "kEH_UniK": "E276A"
@@ -26654,7 +26764,7 @@ unikemet = {
   "𓬢": {
     "kEH_Cat": "E-22-029",
     "kEH_Core": "C",
-    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uaeus on its forehead, on top of a base, front paw holding a sealed ointment jar, without ties (W2) in its front paw, with the jar resting on the base.",
+    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uraeus on its forehead, on top of a base, front paw holding a sealed ointment jar, without ties (W2) in its front paw, with the jar resting on the base.",
     "kEH_Func": "Logogram (presenting myrrh)",
     "kEH_FVal": "šms ꜥntyw",
     "kEH_UniK": "HJ E159B",
@@ -26665,8 +26775,8 @@ unikemet = {
   "𓬣": {
     "kEH_Cat": "E-22-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A cult image of a lion, lying down, on a base, with the head of a man, with a long curved beard and coif, with an uraeus on its forehead, wearing the double crown (S5).",
-    "kEH_Func": "Logogram (image, refering to the king)",
+    "kEH_Desc": "A cult image of a lion, lying down, on a base, with the head of a man, with a long-curved beard and coif, with an uraeus on its forehead, wearing the double crown (S5).",
+    "kEH_Func": "Logogram (image, referring to the king)",
     "kEH_FVal": "šsp",
     "kEH_UniK": "HJ E154A",
     "kEH_JSesh": "E154A",
@@ -26682,7 +26792,7 @@ unikemet = {
   "𓬥": {
     "kEH_Cat": "E-22-033",
     "kEH_Core": "C",
-    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uaeus on its forehead (E151), on top of a shrine.",
+    "kEH_Desc": " A lion, lying down, with the face of a man, with a long, curved beard and coif, with an uraeus on its forehead (E151), on top of a shrine.",
     "kEH_Func": "Logogram (image)",
     "kEH_FVal": "šsp",
     "kEH_UniK": "HJ E152",
@@ -26710,7 +26820,7 @@ unikemet = {
   "𓬨": {
     "kEH_Cat": "E-22-042",
     "kEH_Core": "C",
-    "kEH_Desc": "Two foreparts of sphinxes, connected back to back.",
+    "kEH_Desc": "Two foreparts of sphinxes, connected back-to-back.",
     "kEH_Func": "Classifier Divinity Aker",
     "kEH_FVal": "ꜣkr",
     "kEH_UniK": "HJ C274B",
@@ -26765,7 +26875,7 @@ unikemet = {
   "𓬮": {
     "kEH_Cat": "E-23-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A bovid (bull), stanidng, with the red crown (S3) between the horns.",
+    "kEH_Desc": "A bovid (bull), standing, with the red crown (S3) between the horns.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "n-nb",
     "kEH_UniK": "HJ E169",
@@ -26787,7 +26897,7 @@ unikemet = {
   "𓬰": {
     "kEH_Cat": "E-23-020",
     "kEH_Core": "C",
-    "kEH_Desc": "A bovid (bull), standing, with a forwards, downwards line coming from the mouth.",
+    "kEH_Desc": "A bovid (bull), standing, with a forward, downward line coming from the mouth.",
     "kEH_Func": "Classifier bovid (steer, ox, cattle, male animal)",
     "kEH_FVal": "ꞽwꜣ",
     "kEH_UniK": "E001F"
@@ -27028,7 +27138,7 @@ unikemet = {
   "𓭉": {
     "kEH_Cat": "E-23-073",
     "kEH_Core": "C",
-    "kEH_Desc": "A bovid, standing, tail down, with the sundisk (N5) between the horns.",
+    "kEH_Desc": "A bovid, standing, tail down, with the sun disk (N5) between the horns.",
     "kEH_Func": "Logogram (lady)",
     "kEH_FVal": "nb.t",
     "kEH_UniK": "HJ E095",
@@ -27038,7 +27148,7 @@ unikemet = {
   "𓭊": {
     "kEH_Cat": "E-23-076",
     "kEH_Core": "C",
-    "kEH_Desc": "A bovid, standing, tail down, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)), between the horns, with the uraeus occuring in front of the horns. ",
+    "kEH_Desc": "A bovid, standing, tail down, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)), between the horns, with the uraeus occurring in front of the horns. ",
     "kEH_Func": "Logogram (Re and lord (in sꜣ-rꜥ nb ḫꜥ.w))",
     "kEH_FVal": "rꜥ nb",
     "kEH_UniK": "E095C"
@@ -27081,7 +27191,7 @@ unikemet = {
   "𓭏": {
     "kEH_Cat": "E-23-087",
     "kEH_Core": "C",
-    "kEH_Desc": "A bovid, lying down, legs folded beneath the body, with N6 (The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus)), between the horns, with the uraeus occuring in front of the horns. ",
+    "kEH_Desc": "A bovid, lying down, legs folded beneath the body, with N6 (The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus)), between the horns, with the uraeus occurring in front of the horns. ",
     "kEH_Func": "Logogram (Re and lord (in sꜣ-rꜥ nb ḫꜥ.w))",
     "kEH_FVal": "rꜥ nb",
     "kEH_UniK": "E102D"
@@ -27139,7 +27249,7 @@ unikemet = {
   "𓭖": {
     "kEH_Cat": "E-23-097",
     "kEH_Core": "C",
-    "kEH_Desc": "A newborn bubalis antilope, lying down, legs folded beneath the body, long tail downwards (E9), in front of a bovid (bull), standing (E1); on top of a standard used for the carrying of religious symbols (R12).",
+    "kEH_Desc": "A newborn bubalis antelope, lying down, legs folded beneath the body, long tail downwards (E9), in front of a bovid (bull), standing (E1); on top of a standard used for the carrying of religious symbols (R12).",
     "kEH_Func": "Logogram (12th nome of LE)",
     "kEH_FVal": "ṯb-nṯr",
     "kEH_UniK": "HJ E254",
@@ -27159,9 +27269,9 @@ unikemet = {
   "𓭘": {
     "kEH_Cat": "E-25-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A bovid (bull), legs bound together, tail downwards.",
+    "kEH_Desc": "A bovid (bull), without horns, legs bound together, tail downwards.",
     "kEH_Func": "Logogram (bull, beef)",
-    "kEH_FVal": "Kꜥ/ꞽḥ",
+    "kEH_FVal": "kꜥ/ꞽḥ",
     "kEH_UniK": "E268A"
   },
   "𓭙": {
@@ -27177,7 +27287,7 @@ unikemet = {
   "𓭚": {
     "kEH_Cat": "E-26-002",
     "kEH_Core": "C",
-    "kEH_Desc": "An mythological animal with the head of a crocodile, the foreparts of a lion, and the hindquarters of a hippopotamus.",
+    "kEH_Desc": "A mythological animal with the head of a crocodile, the foreparts of a lion, and the hindquarters of a hippopotamus.",
     "kEH_Func": "Classifier Ammet",
     "kEH_FVal": "ꜥmm.t",
     "kEH_UniK": "HJ E178",
@@ -27223,6 +27333,7 @@ unikemet = {
   "𓭟": {
     "kEH_Cat": "F-01-007",
     "kEH_Core": "C",
+    "kEH_Desc": "The forepart of a donkey, ears in a V-shape, lower leg bend backwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "hrw",
     "kEH_UniK": "HJ F054",
@@ -27321,7 +27432,7 @@ unikemet = {
   "𓭩": {
     "kEH_Cat": "F-02-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Four heads of rams (Ovis longipes palaeo-aegyptiacus) with necks, connected two-by-two to each other, vorming an cross-shape.",
+    "kEH_Desc": "Four heads of rams (Ovis longipes palaeo-aegyptiacus) with necks, connected two-by-two to each other, forming a cross-shape.",
     "kEH_Func": "Logogram (the eight primordial gods)",
     "kEH_FVal": "ẖnmwy",
     "kEH_UniK": "HJ F058",
@@ -27350,7 +27461,7 @@ unikemet = {
   "𓭬": {
     "kEH_Cat": "F-03-006",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a bovid (bull), angled forward as if to attack with a cobra (Naja haja), standing up, with expanded hood (Uraeus), between its horns.",
+    "kEH_Desc": "The head of a bovid (bull), angled forward as if to attack with a cobra (Naja haje), standing up, with expanded hood (Uraeus), between its horns.",
     "kEH_Func": "Classifier rage/aggression",
     "kEH_FVal": "ḏnd",
     "kEH_UniK": "HJ F002A",
@@ -27360,7 +27471,7 @@ unikemet = {
   "𓭭": {
     "kEH_Cat": "F-03-007",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a bovid (ox), with a forwards, downwards line coming from the mouth.",
+    "kEH_Desc": "The head of a bovid (ox), with a forward, downward line coming from the mouth.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šsmw",
     "kEH_UniK": "HJ F061",
@@ -27389,8 +27500,8 @@ unikemet = {
   "𓭰": {
     "kEH_Cat": "F-03-011",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a bovid (ox), cnnected to a foreleg of an bovid (ox), hoof orientated away from the reading direction (F24).",
-    "kEH_Func": "Classifier Ursa Major constelation",
+    "kEH_Desc": "The head of a bovid (ox), connected to a foreleg of a bovid (ox), hoof orientated away from the reading direction (F24).",
+    "kEH_Func": "Classifier Ursa Major constellation",
     "kEH_FVal": "msḫt.yw",
     "kEH_UniK": "HJ F116",
     "kEH_JSesh": "F116",
@@ -27494,7 +27605,7 @@ unikemet = {
   "𓭻": {
     "kEH_Cat": "F-04-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A mace (T3) written horizontally over the neck of a head of a jackal, looking backwards, with the neck curving towards the back, with the macehead towards the back.",
+    "kEH_Desc": "A mace (T3) written horizontally over the neck of a head of a jackal, looking backwards, with the neck curving towards the back, with the mace head towards the back.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "stꜣ",
     "kEH_UniK": "F068C"
@@ -27502,7 +27613,7 @@ unikemet = {
   "𓭼": {
     "kEH_Cat": "F-04-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A mace (T3), written over the neck of a head of a jackal, neck curving forwards, macehead towards the back.",
+    "kEH_Desc": "A mace (T3), written over the neck of a head of a jackal, neck curving forwards, mace head towards the back.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "stꜣ",
     "kEH_UniK": "HJ F068B",
@@ -27530,7 +27641,7 @@ unikemet = {
   "𓭿": {
     "kEH_Cat": "F-04-015",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a jackal on a cup-like base, with two arms, raised in front, handpalms forwards.",
+    "kEH_Desc": "The head of a jackal on a cup-like base, with two arms, raised in front, hand palms forwards.",
     "kEH_Func": "Logogram (Ennead)",
     "kEH_FVal": "psḏ.t",
     "kEH_UniK": "HJ F070",
@@ -27604,7 +27715,7 @@ unikemet = {
   "𓮇": {
     "kEH_Cat": "F-06-001",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of an antilope.",
+    "kEH_Desc": "The head of an antelope.",
     "kEH_Func": "Logogram (gazelle)",
     "kEH_FVal": "gḥs",
     "kEH_UniK": "HJ F081",
@@ -27615,7 +27726,7 @@ unikemet = {
   "𓮈": {
     "kEH_Cat": "F-06-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A mouth (D21), written over the neck of the head of an antilope (F81).",
+    "kEH_Desc": "A mouth (D21), written over the neck of the head of an antelope (F81).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šsr",
     "kEH_UniK": "HJ F082",
@@ -27626,7 +27737,7 @@ unikemet = {
   "𓮉": {
     "kEH_Cat": "F-06-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A representation of two ribs, written parallel (Aa15), written over the neck of the head of an antilope (F81).",
+    "kEH_Desc": "A representation of two ribs, written parallel (Aa15), written over the neck of the head of an antelope (F81).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šsm",
     "kEH_UniK": "HJ F083",
@@ -27648,7 +27759,7 @@ unikemet = {
   "𓮋": {
     "kEH_Cat": "F-06-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A mouth (D21), written over the neck of the head of a bubalis antilope.",
+    "kEH_Desc": "A mouth (D21), written over the neck of the head of a bubalis antelope.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šsr",
     "kEH_UniK": "HJ F086",
@@ -27709,8 +27820,8 @@ unikemet = {
   "𓮑": {
     "kEH_Cat": "F-08-010",
     "kEH_Core": "C",
-    "kEH_Desc": "The forepart of a lion, lying down (F4), wearing a headdress consisting of two feathers on top of the horns of a ram, with a cobra (Naja haja), standing up, with expanded hood (Uraeus), with sun disks its head on either side of the feathers, orientated outwards (S74).",
-    "kEH_Func": "Logogram (to distinguish) and  (beginning, front)",
+    "kEH_Desc": "The forepart of a lion, lying down (F4), wearing a headdress consisting of two feathers on top of the horns of a ram, with a cobra (Naja haje), standing up, with expanded hood (Uraeus), with sun disks its head on either side of the feathers, orientated outwards (S74).",
+    "kEH_Func": "Logogram (to distinguish) and (beginning, front)",
     "kEH_FVal": "ṯnꞽ ḥꜣ.t",
     "kEH_UniK": "HJ F092",
     "kEH_JSesh": "F92",
@@ -27731,7 +27842,7 @@ unikemet = {
   "𓮓": {
     "kEH_Cat": "F-08-014",
     "kEH_Core": "C",
-    "kEH_Desc": "Two foreparts of lions, lying down, connected back to back.",
+    "kEH_Desc": "Two foreparts of lions, lying down, connected back-to-back.",
     "kEH_Func": "Classifier Haker festival",
     "kEH_FVal": "hꜣkr",
     "kEH_UniK": "HJ E128",
@@ -27742,7 +27853,7 @@ unikemet = {
   "𓮔": {
     "kEH_Cat": "F-08-015",
     "kEH_Core": "C",
-    "kEH_Desc": "Two foreparts of lions, lying down, connected back to back, with a sun-disk (N5) on their back.",
+    "kEH_Desc": "Two foreparts of lions, lying down, connected back-to-back, with a sun-disk (N5) on their back.",
     "kEH_Func": "Logogram (Khonsu)",
     "kEH_FVal": "ḫnsw",
     "kEH_UniK": "HJ E129",
@@ -27875,7 +27986,7 @@ unikemet = {
   "𓮢": {
     "kEH_Cat": "F-10-002",
     "kEH_Core": "C",
-    "kEH_Desc": "Head of an Hyena.",
+    "kEH_Desc": "Head of a hyena.",
     "kEH_Func": "Classifier hyena",
     "kEH_FVal": "ḥṯ.t",
     "kEH_UniK": "HJ F080",
@@ -27939,7 +28050,7 @@ unikemet = {
   "𓮩": {
     "kEH_Cat": "F-11-037",
     "kEH_Core": "C",
-    "kEH_Desc": "The horns of a bovid (ox), upside down, enclosing a fire-drill in a piece of wood (U28).",
+    "kEH_Desc": "The horns of a bovid (ox), upside-down, enclosing a fire-drill in a piece of wood (U28).",
     "kEH_Func": "Logogram (the one who awakes whole)",
     "kEH_FVal": "rs-wḏꜣ",
     "kEH_UniK": "F190"
@@ -28009,7 +28120,7 @@ unikemet = {
   "𓮲": {
     "kEH_Cat": "F-15-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A lower jaw-bone of an animal with pointed teeth.",
+    "kEH_Desc": "A lower jawbone of an animal with pointed teeth.",
     "kEH_Func": "Classifier jaw",
     "kEH_FVal": "ꜥr",
     "kEH_UniK": "HJ F019B",
@@ -28020,7 +28131,7 @@ unikemet = {
   "𓮳": {
     "kEH_Cat": "F-16-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A tongue, with the stroke at the back vertical.",
+    "kEH_Desc": "A tongue, with the stroke at the back pointing upwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ns",
     "kEH_UniK": "HJ F020B",
@@ -28061,7 +28172,7 @@ unikemet = {
   "𓮷": {
     "kEH_Cat": "F-18-002",
     "kEH_Core": "C",
-    "kEH_Desc": "The hind-quarters of a seated lion or leopard, on top of a standard used for carrying religious symbols (R12).",
+    "kEH_Desc": "The hindquarters of a seated lion or leopard, on top of a standard used for carrying religious symbols (R12).",
     "kEH_Func": "Logogram (magic)",
     "kEH_FVal": "ḥkꜣ.w",
     "kEH_UniK": "HJ F178",
@@ -28097,7 +28208,7 @@ unikemet = {
   },
   "𓮻": {
     "kEH_Cat": "F-19-012",
-    "kEH_Desc": "The tigh of a bovid (ox).",
+    "kEH_Desc": "The thigh of a bovid (ox).",
     "kEH_UniK": "HJ F119",
     "kEH_JSesh": "F119",
     "kEH_HG": "F119",
@@ -28146,7 +28257,7 @@ unikemet = {
   "𓯀": {
     "kEH_Cat": "F-19-023",
     "kEH_Core": "C",
-    "kEH_Desc": "A schematic representation of a lions paw.",
+    "kEH_Desc": "A schematic representation of a lion's paw.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "kꜣp (gb)",
     "kEH_UniK": "F118E",
@@ -28162,7 +28273,7 @@ unikemet = {
   "𓯂": {
     "kEH_Cat": "F-19-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A lions paw and foreleg, horizontally.",
+    "kEH_Desc": "A lion's paw and foreleg, horizontally.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "kꜣp",
     "kEH_UniK": "HJ F118C",
@@ -28173,7 +28284,7 @@ unikemet = {
   "𓯃": {
     "kEH_Cat": "F-19-026",
     "kEH_Core": "C",
-    "kEH_Desc": "A lions paw.",
+    "kEH_Desc": "A lion's paw.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "kꜣp",
     "kEH_UniK": "HJ F118A",
@@ -28184,7 +28295,7 @@ unikemet = {
   "𓯄": {
     "kEH_Cat": "F-19-028",
     "kEH_Core": "C",
-    "kEH_Desc": "The tigh of a bovid (ox), on top of a standard used for the carrying of religious symbols (R12).",
+    "kEH_Desc": "The thigh of a bovid (ox), on top of a standard used for the carrying of religious symbols (R12).",
     "kEH_Func": "Logogram (Letopolis)",
     "kEH_FVal": "ḫm",
     "kEH_UniK": "HJ F158A",
@@ -28234,7 +28345,7 @@ unikemet = {
   "𓯉": {
     "kEH_Cat": "F-20-010",
     "kEH_Core": "C",
-    "kEH_Desc": "The skin of a cow, with downwards ties at the sides, with the tail angled forwards.",
+    "kEH_Desc": "The skin of a cow, with downward ties at the sides, with the tail angled forwards.",
     "kEH_Func": "Classifier animal",
     "kEH_FVal": "ꜥw.t",
     "kEH_UniK": "F027C"
@@ -28242,7 +28353,7 @@ unikemet = {
   "𓯊": {
     "kEH_Cat": "F-20-013",
     "kEH_Core": "C",
-    "kEH_Desc": "The skin of an leopard.",
+    "kEH_Desc": "The skin of a leopard.",
     "kEH_Func": "Classifier leopard skin",
     "kEH_FVal": "bꜣ",
     "kEH_UniK": "HJ F125",
@@ -28326,7 +28437,7 @@ unikemet = {
   "𓯒": {
     "kEH_Cat": "F-20-034",
     "kEH_Core": "C",
-    "kEH_Desc": "A water skin with an carying strap.",
+    "kEH_Desc": "A water skin with a carrying strap.",
     "kEH_Func": "Logogram (skin, water skin)",
     "kEH_FVal": "šd.w",
     "kEH_UniK": "F030C"
@@ -28363,7 +28474,7 @@ unikemet = {
   "𓯖": {
     "kEH_Cat": "F-22-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A simpliefied form of the tail of an animal.",
+    "kEH_Desc": "A simplified form of the tail of an animal.",
     "kEH_Func": "Phono-repeater",
     "kEH_FVal": "sd",
     "kEH_UniK": "HJ F033B",
@@ -28385,7 +28496,7 @@ unikemet = {
   "𓯘": {
     "kEH_Cat": "F-23-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A heart with downwards hanging loops on either side.",
+    "kEH_Desc": "A heart with downward hanging loops on either side.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mꜣ",
     "kEH_UniK": "HJ F132",
@@ -28423,7 +28534,7 @@ unikemet = {
   "𓯜": {
     "kEH_Cat": "F-23-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A heart, with two downwards hanging bands coming from the top.",
+    "kEH_Desc": "A heart, with two downward hanging bands coming from the top.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mꜣṯ",
     "kEH_UniK": "HJ F132A",
@@ -28472,7 +28583,7 @@ unikemet = {
   "𓯡": {
     "kEH_Cat": "F-24-024",
     "kEH_Core": "C",
-    "kEH_Desc": "A windpipe and lungs (F36), with a wide cup on each side of the lungs, from which two flowers come, one vertical, the other crossing the windpipe, to angle downwards on top of the vertical flower on the other side.",
+    "kEH_Desc": "A windpipe and lungs (F36), with a wide cup on each side of the lungs, from which two flowers, simple buds on the left, flowering buds on the right, one vertical, the other crossing the windpipe, come to angle downwards on top of the vertical flower on the other side.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "smꜣ",
     "kEH_UniK": "R026D",
@@ -28494,7 +28605,7 @@ unikemet = {
   "𓯣": {
     "kEH_Cat": "F-25-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A vertebra with a tall spine on top, seen lenghtwise.",
+    "kEH_Desc": "A vertebra with a tall spine on top, seen lengthwise.",
     "kEH_Func": "Classifier (backbone)",
     "kEH_FVal": "psḏ",
     "kEH_UniK": "HJ F172",
@@ -28598,7 +28709,7 @@ unikemet = {
   "𓯮": {
     "kEH_Cat": "F-25-049",
     "kEH_Core": "C",
-    "kEH_Desc": "A spine with the spinal cord hanging out at eiter side, the vertebrae represented as a rectangle.",
+    "kEH_Desc": "A spine with the spinal cord hanging out at either side, the vertebrae represented as a rectangle.",
     "kEH_Func": "Logogram (to be long, to stretch out)",
     "kEH_FVal": "ꜣwꞽ",
     "kEH_UniK": "HJ F040E",
@@ -28620,7 +28731,7 @@ unikemet = {
   "𓯰": {
     "kEH_Cat": "F-26-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A stack of ribs, on top of an upside down cone.",
+    "kEH_Desc": "A stack of ribs, on top of an upside-down cone.",
     "kEH_Func": "Classifier rib (offering)",
     "kEH_FVal": "spr",
     "kEH_UniK": "HJ F041C",
@@ -28631,7 +28742,7 @@ unikemet = {
   "𓯱": {
     "kEH_Cat": "F-26-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A stack of ribs, written over an upside down cone.",
+    "kEH_Desc": "A stack of ribs, written over an upside-down cone.",
     "kEH_Func": "Logogram (slaughter, evil)",
     "kEH_FVal": "šꜥ.t",
     "kEH_UniK": "HJ F041B",
@@ -28642,7 +28753,7 @@ unikemet = {
   "𓯲": {
     "kEH_Cat": "F-26-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A stack of ribs, written behind an upside down cone.",
+    "kEH_Desc": "A stack of ribs, written behind an upside-down cone.",
     "kEH_Func": "Logogram (slaughter, evil)",
     "kEH_FVal": "šꜥ.t",
     "kEH_UniK": "HJ F041A",
@@ -28664,6 +28775,7 @@ unikemet = {
   "𓯴": {
     "kEH_Cat": "F-26-011",
     "kEH_Core": "C",
+    "kEH_Desc": "A vertebrae.",
     "kEH_UniK": "F043A"
   },
   "𓯵": {
@@ -28711,6 +28823,7 @@ unikemet = {
   "𓯹": {
     "kEH_Cat": "F-27-009",
     "kEH_Core": "C",
+    "kEH_Desc": "A leg bone with heat, angled with the bone forward, with a piece of meat missing at the front.",
     "kEH_UniK": "HJ F141",
     "kEH_JSesh": "F141",
     "kEH_HG": "F141",
@@ -28792,7 +28905,7 @@ unikemet = {
   "𓰁": {
     "kEH_Cat": "F-30-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A pustule or gland, with a forward, downwards dotted line of fluid issuing forth.",
+    "kEH_Desc": "A pustule or gland, with a forward, downward dotted line of fluid issuing forth.",
     "kEH_Func": "Classifier scent",
     "kEH_FVal": "stꞽ",
     "kEH_UniK": "HJ AA003A",
@@ -28803,7 +28916,7 @@ unikemet = {
   "𓰂": {
     "kEH_Cat": "F-30-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A pustule or gland without blobs at the side, with a forward, downwards dotted line of fluid issuing forth.",
+    "kEH_Desc": "A pustule or gland without blobs at the side, with a forward, downward dotted line of fluid issuing forth.",
     "kEH_Func": "Classifier scent",
     "kEH_FVal": "stꞽ",
     "kEH_UniK": "HJ AA003B",
@@ -28857,7 +28970,7 @@ unikemet = {
   "𓰈": {
     "kEH_Cat": "F-32-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A vertebra, seen lenghtwise.",
+    "kEH_Desc": "A vertebra, seen lengthwise.",
     "kEH_Func": "Classifier spine",
     "kEH_FVal": "bḳs.w",
     "kEH_UniK": "HJ F139",
@@ -28867,7 +28980,7 @@ unikemet = {
   "𓰉": {
     "kEH_Cat": "F-32-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Some type of mat or bag, or woven material, representing a oval with two vertical lines coming from the top, which curve downwards.",
+    "kEH_Desc": "Some type of mat or bag, or woven material, representing an oval with two vertical lines coming from the top, which curve downwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "tmꜣ",
     "kEH_UniK": "HJ AA052",
@@ -29062,7 +29175,7 @@ unikemet = {
   "𓰝": {
     "kEH_Cat": "G-05-019",
     "kEH_Core": "C",
-    "kEH_Desc": " A feather (H6), in front of a greater white-fronted goose (Anser albifrons), alighting or flying up, with both wings behind the body (G41), on top of a strip of land, with three grains of sand written beneath it, arranged horizontally, and a tongue  of land (N21) written on either side of the grains of sand (N16A).",
+    "kEH_Desc": " A feather (H6), in front of a greater white-fronted goose (Anser albifrons), alighting or flying up, with both wings behind the body (G41), on top of a strip of land, with three grains of sand written beneath it, arranged horizontally, and a tongue of land (N21) written on either side of the grains of sand (N16A).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫntš",
     "kEH_UniK": "G075B"
@@ -29077,7 +29190,7 @@ unikemet = {
   "𓰟": {
     "kEH_Cat": "G-05-021",
     "kEH_Core": "C",
-    "kEH_Desc": "Three ducks or geese, without wings, standing, overlapping each other vertically, rotated 90°",
+    "kEH_Desc": "Three ducks or geese, without wings, standing, overlapping each other vertically, rotated 90° degree.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥtr",
     "kEH_UniK": "HJ G076A",
@@ -29088,7 +29201,7 @@ unikemet = {
   "𓰠": {
     "kEH_Cat": "G-05-023",
     "kEH_Core": "C",
-    "kEH_Desc": "Three ducks or geese, both wings above the body, standing, overlapping each other vertically, rotated 90°",
+    "kEH_Desc": "Three ducks or geese, both wings above the body, standing, overlapping each other vertically, rotated 90° degree.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥtr",
     "kEH_UniK": "HJ G078",
@@ -29099,7 +29212,7 @@ unikemet = {
   "𓰡": {
     "kEH_Cat": "G-06-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), alighting or flying up, with both wings behind the body (G41), with a downwards angling rope around the neck, connected to a pole resembling a throwing-stick, or a club used by foreign people (T14).",
+    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), alighting or flying up, with both wings behind the body (G41), with a downward angling rope around the neck, connected to a pole resembling a throwing-stick, or a club used by foreign people (T14).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḳmꜣ",
     "kEH_UniK": "HJ G081",
@@ -29110,7 +29223,7 @@ unikemet = {
   "𓰢": {
     "kEH_Cat": "G-06-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), standing, wings behind the body (G74), with a downwards angling rope around the neck, connected to a pole resembling a throwing-stick, or a club used by foreign people (T14).",
+    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), standing, wings behind the body (G74), with a downward angling rope around the neck, connected to a pole resembling a throwing-stick, or a club used by foreign people (T14).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḳmꜣ",
     "kEH_UniK": "HJ G082",
@@ -29121,7 +29234,7 @@ unikemet = {
   "𓰣": {
     "kEH_Cat": "G-06-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), standing (G38), with a downwards angling rope around the neck, connected to a pole resembling a throwing-stick, or a club used by foreign people (T14).",
+    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), standing (G38), with a downward angling rope around the neck, connected to a pole resembling a throwing-stick, or a club used by foreign people (T14).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḳmꜣ",
     "kEH_UniK": "HJ G083",
@@ -29139,7 +29252,7 @@ unikemet = {
   "𓰥": {
     "kEH_Cat": "G-08-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), with an protruding feather at the back of the bird.",
+    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), with a protruding feather at the back of the bird.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḏfꜣ",
     "kEH_UniK": "G172",
@@ -29177,7 +29290,7 @@ unikemet = {
   "𓰩": {
     "kEH_Cat": "G-08-013",
     "kEH_Core": "C",
-    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), with an protruding feather on top of the head.",
+    "kEH_Desc": "A greater white-fronted goose (Anser albifrons), with a protruding feather on top of the head.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḏb",
     "kEH_UniK": "HJ G174",
@@ -29227,7 +29340,7 @@ unikemet = {
   "𓰮": {
     "kEH_Cat": "G-09-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A schematic representation of an owl, legs drawn towards the body, with the head replaced by two upwards lines.",
+    "kEH_Desc": "A schematic representation of an owl, legs drawn towards the body, with the head replaced by two upward lines.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mr (ꞽm.y-r)",
     "kEH_UniK": "HJ G017A",
@@ -29248,7 +29361,7 @@ unikemet = {
   "𓰰": {
     "kEH_Cat": "G-09-033",
     "kEH_Core": "C",
-    "kEH_Desc": "A schematic representation of an owl, legs drawn towards the body, with the head represented by a blob with two upwards lines.",
+    "kEH_Desc": "A schematic representation of an owl, legs drawn towards the body, with the head represented by a blob with two upward lines.",
     "kEH_Func": "Phonemogram/phono-repeater",
     "kEH_FVal": "ꞽb",
     "kEH_UniK": "G017F",
@@ -29335,7 +29448,7 @@ unikemet = {
   "𓰺": {
     "kEH_Cat": "G-11-019",
     "kEH_Core": "C",
-    "kEH_Desc": "Three saddle-billed stork (Ephippiorhynchus senegalensis), overlapping each other, without lappets.",
+    "kEH_Desc": "Three saddle-billed storks (Ephippiorhynchus senegalensis), overlapping each other, without lappets.",
     "kEH_Func": "Logogram (might, power)",
     "kEH_FVal": "bꜣ.w",
     "kEH_UniK": "HJ G030A",
@@ -29375,6 +29488,7 @@ unikemet = {
   "𓰿": {
     "kEH_Cat": "G-11-027",
     "kEH_Core": "C",
+    "kEH_Desc": "A cattle egret (Bubulus ibis), legs drawn towards the body, with a line ending in an upwards curl coming horizontally from the back, the curl extending to the level of the tail.",
     "kEH_UniK": "G299B"
   },
   "𓱀": {
@@ -29492,7 +29606,7 @@ unikemet = {
   "𓱌": {
     "kEH_Cat": "G-11-053",
     "kEH_Core": "C",
-    "kEH_Desc": "Three gray herons (Ardea cinerea), overlapping each other.",
+    "kEH_Desc": "Three gray herons (Ardea cinerea) with lappets, overlapping each other.",
     "kEH_Func": "Logogram/phonemogram (in ḥw.t-bꜣ.w (room in the Esna temple))",
     "kEH_FVal": "bꜣ.w",
     "kEH_UniK": "HJ G211A",
@@ -29619,7 +29733,7 @@ unikemet = {
   "𓱙": {
     "kEH_Cat": "G-11-076",
     "kEH_Core": "C",
-    "kEH_Desc": "A gray heron (Ardea cinerea) with a single feather on its head and a lappet.",
+    "kEH_Desc": "A gray heron (Ardea cinerea) with a single feather on its head.",
     "kEH_Func": "Classifier heron",
     "kEH_FVal": "bnw",
     "kEH_UniK": "HJ G031B",
@@ -29630,7 +29744,7 @@ unikemet = {
   "𓱚": {
     "kEH_Cat": "G-11-077",
     "kEH_Core": "C",
-    "kEH_Desc": "A gray heron (Ardea cinerea) with two feather on its head.",
+    "kEH_Desc": "A gray heron (Ardea cinerea) with a downward curve tip at the beak and two feathers on its head.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "tꜣ",
     "kEH_UniK": "G321"
@@ -29638,7 +29752,7 @@ unikemet = {
   "𓱛": {
     "kEH_Cat": "G-11-082",
     "kEH_Core": "C",
-    "kEH_Desc": "A crested ibis (Ibis comata), with a spiral, winding counter-clockwise away from its central point, ending at the right lower corner after about 1,5 turns (Z7) on its claws.",
+    "kEH_Desc": "A crested ibis (Ibis comata), with a spiral, winding counterclockwise away from its central point, ending at the right lower corner after about one and a half turns(Z7) on its claws.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜣḫw",
     "kEH_UniK": "HJ G190",
@@ -29649,7 +29763,7 @@ unikemet = {
   "𓱜": {
     "kEH_Cat": "G-11-087",
     "kEH_Core": "C",
-    "kEH_Desc": "An African sacred ibis (Threskiornis aethiopicus) (G26A), with a flagellum (S45) on its shoulder; on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "An African sacred ibis (Threskiornis aethiopicus) (G26A), with a flagellum (S45) on its shoulder, on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (god)",
     "kEH_FVal": "nṯr",
     "kEH_UniK": "HJ G026C",
@@ -29810,7 +29924,7 @@ unikemet = {
   "𓱬": {
     "kEH_Cat": "G-12-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5), with a cobra (Naja haja), standing up, with expanded hood (Uraeus), wearing the white crown (I55) at its toe.",
+    "kEH_Desc": "A falcon (G5), with a cobra (Naja haje), standing up, with expanded hood (Uraeus), wearing the white crown (I55) at its toe.",
     "kEH_Func": "Logogram (Horus)",
     "kEH_FVal": "ḥr",
     "kEH_UniK": "HJ G285",
@@ -29820,7 +29934,7 @@ unikemet = {
   "𓱭": {
     "kEH_Cat": "G-12-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5) with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on its head.",
+    "kEH_Desc": "A falcon (G5) with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on its head.",
     "kEH_Func": "Logogram (Re-Hor (usually in rꜥ-ḥr-ꜣḫ.ty)",
     "kEH_FVal": "rꜥ-ḥr",
     "kEH_UniK": "HJ G009A",
@@ -29831,7 +29945,7 @@ unikemet = {
   "𓱮": {
     "kEH_Cat": "G-12-018",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5) with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on its head, with a flagellum (S45) on its shoulder.",
+    "kEH_Desc": "A falcon (G5) with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on its head, with a flagellum (S45) on its shoulder.",
     "kEH_Func": "Logogram (Re-Hor (usually in rꜥ-ḥr-ꜣḫ.ty)",
     "kEH_FVal": "rꜥ-ḥr",
     "kEH_UniK": "HJ G286",
@@ -29841,7 +29955,7 @@ unikemet = {
   "𓱯": {
     "kEH_Cat": "G-12-022",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5) with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on its head, with a tie or strap, used with sandals (ankh-sign, S34) angled forwards, on its toe.",
+    "kEH_Desc": "A falcon (G5) with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on its head, with a tie or strap, used with sandals (ankh-sign, S34) angled forwards, on its toe.",
     "kEH_Func": "Logogram (Re-Hor (usually in rꜥ-ḥr-ꜣḫ.ty)",
     "kEH_FVal": "rꜥ-ḥr",
     "kEH_UniK": "HJ G105",
@@ -29924,7 +30038,7 @@ unikemet = {
   "𓱸": {
     "kEH_Cat": "G-12-038",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5), wearing a headdress consisiting of a sun-disk between the horns of a bovid, with two plumes on top of the sun-disk (S65/S65A).",
+    "kEH_Desc": "A falcon (G5), wearing a headdress consisting of a sun-disk between the horns of a bovid, with two plumes on top of the sun-disk (S65/S65A).",
     "kEH_Func": "Logogram (the female Horus)",
     "kEH_FVal": "ḥr.t",
     "kEH_UniK": "HJ G108",
@@ -29935,7 +30049,7 @@ unikemet = {
   "𓱹": {
     "kEH_Cat": "G-12-041",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5), wearing a headdress consisiting of the horns of a ram with two plumes on top of it (S62).",
+    "kEH_Desc": "A falcon (G5), wearing a headdress consisting of the horns of a ram with two plumes on top of it (S62).",
     "kEH_Func": "Logogram (Horus)",
     "kEH_FVal": "ḥr",
     "kEH_UniK": "HJ G109",
@@ -29991,7 +30105,7 @@ unikemet = {
   "𓱿": {
     "kEH_Cat": "G-12-054",
     "kEH_Core": "C",
-    "kEH_Desc": "A feather (H6), in front of a falcon (G5), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A).  ",
+    "kEH_Desc": "A feather (H6), in front of a falcon (G5), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (west)",
     "kEH_FVal": "ꞽmn.t",
     "kEH_UniK": "G264C"
@@ -30041,7 +30155,7 @@ unikemet = {
   "𓲄": {
     "kEH_Cat": "G-12-065",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5), wearing a headdress consisting of a sun-disk between the horns of a bovid (F102), with a flagellum (S45) on the shoulder; on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "A falcon (G5), wearing a headdress consisting of a sun-disk between the horns of a bovid (F102), with a flagellum (S45) on the shoulder, on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (goddess)",
     "kEH_FVal": "nṯr.t",
     "kEH_UniK": "G114A"
@@ -30059,7 +30173,7 @@ unikemet = {
   "𓲆": {
     "kEH_Cat": "G-12-074",
     "kEH_Core": "C",
-    "kEH_Desc": "A  tie or strap, used with sandals (ankh-sign, S34), written vertically, in front of a falcon (G5); on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "A tie or strap, used with sandals (ankh-sign, S34), written vertically, in front of a falcon (G5); on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (May he live, the god)",
     "kEH_FVal": "ꜥnḫ-nṯr",
     "kEH_UniK": "HJ G120",
@@ -30070,7 +30184,7 @@ unikemet = {
   "𓲇": {
     "kEH_Cat": "G-12-075",
     "kEH_Core": "C",
-    "kEH_Desc": "A club used by washer-men for beating laundry (U36), in front of a falcon (G5); on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "A club used by washermen for beating laundry (U36), in front of a falcon (G5); on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (majesty)",
     "kEH_FVal": "ḥm",
     "kEH_UniK": "HJ G121",
@@ -30081,7 +30195,7 @@ unikemet = {
   "𓲈": {
     "kEH_Cat": "G-12-076",
     "kEH_Core": "C",
-    "kEH_Desc": "A club used by washer-men for beating laundry (U36), in front of a falcon (G5), with a flagellum (S45) on its shoulder; on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "A club used by washermen for beating laundry (U36), in front of a falcon (G5), with a flagellum (S45) on its shoulder, on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (majesty)",
     "kEH_FVal": "ḥm",
     "kEH_UniK": "HJ G121A",
@@ -30109,7 +30223,7 @@ unikemet = {
   "𓲋": {
     "kEH_Cat": "G-12-083",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5), with a flagellum (S45) on its shoulder; on top of a windpipe and lungs (F36), with a stem of papyrus with a flowering bud (M127) left of the windpipe and a stem of papyrus with a bud (M13) right of the windpipe, both beneath the horizontal bar.",
+    "kEH_Desc": "A falcon (G5), with a flagellum (S45) on its shoulder, on top of a windpipe and lungs (F36), with a stem of papyrus with a flowering bud (M127) left of the windpipe and a stem of papyrus with a bud (M13) right of the windpipe, both beneath the horizontal bar.",
     "kEH_Func": "Logogram (Harsomtus)",
     "kEH_FVal": "ḥr-smꜣ-tꜣ.wy",
     "kEH_UniK": "HJ G125A",
@@ -30139,7 +30253,7 @@ unikemet = {
   "𓲎": {
     "kEH_Cat": "G-12-098",
     "kEH_Core": "C",
-    "kEH_Desc": "The pole of a balance, with the pole resembling a seat (Q1), with a plummet resembling a heart (F34) hanging from the cross-beam (U39F), in front of a falcon (G5); on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "The pole of a balance, with the pole resembling a seat (Q1), with a plummet resembling a heart (F34) hanging from the crossbeam (U39F), in front of a falcon (G5); on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram (Throne of Horus (Edfu))",
     "kEH_FVal": "wṯs-ḥr",
     "kEH_UniK": "G127E"
@@ -30147,7 +30261,7 @@ unikemet = {
   "𓲏": {
     "kEH_Cat": "G-12-101",
     "kEH_Core": "C",
-    "kEH_Desc": "A pole of a balance, with the pole resembling a seat (U39A), in front of a falcon (G5), with a flagellum (S45) on its shoulder; on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "A pole of a balance, with the pole resembling a seat (U39A), in front of a falcon (G5), with a flagellum (S45) on its shoulder, on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram (Throne of Horus (Edfu))",
     "kEH_FVal": "wṯs-ḥr",
     "kEH_UniK": "G127F",
@@ -30301,7 +30415,7 @@ unikemet = {
   "𓲟": {
     "kEH_Cat": "G-12-130",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5), on top of a long upside down cone.",
+    "kEH_Desc": "A falcon (G5), on top of a long upside-down cone.",
     "kEH_Func": "Logogram (lord)",
     "kEH_FVal": "nb",
     "kEH_UniK": "G134A"
@@ -30346,7 +30460,7 @@ unikemet = {
   "𓲤": {
     "kEH_Cat": "G-12-145",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5), with a flagellum (S45) on its shoulder; on top of a wickerwork basket (V30).",
+    "kEH_Desc": "A falcon (G5), with a flagellum (S45) on its shoulder, on top of a wickerwork basket (V30).",
     "kEH_Func": "Logogram (lord)",
     "kEH_FVal": "nb",
     "kEH_UniK": "HJ G139A",
@@ -30367,7 +30481,7 @@ unikemet = {
   "𓲦": {
     "kEH_Cat": "G-12-150",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon (G5), with a flagellum (S45) on its shoulder; on top of a collar of beads, without detail (S12A).",
+    "kEH_Desc": "A falcon (G5), with a flagellum (S45) on its shoulder, on top of a collar of beads, without detail (S12A).",
     "kEH_Func": "Logogram (golden Horus)",
     "kEH_FVal": "ḥr-nbw",
     "kEH_UniK": "HJ G008B",
@@ -30495,7 +30609,7 @@ unikemet = {
   "𓲴": {
     "kEH_Cat": "G-13-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon, with spread wings that angle downwards and spread legs, head looking towards the reading direction, with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on its head; claws on top of cartouches in a round form (V9), with one handed fans (S37) going from the claw over the wing, at an outwards angle, the head of the fan above the wing, fan curving outwards.",
+    "kEH_Desc": "A falcon, with spread wings that angle downwards and spread legs, head looking towards the reading direction, with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on its head; claws on top of cartouches in a round form (V9), with one handed fans (S37) going from the claw over the wing, at an outwards angle, the head of the fan above the wing, fan curving outwards.",
     "kEH_Func": "Logogram (many-coloured of plumage)",
     "kEH_FVal": "sꜣb-šw.t",
     "kEH_UniK": "HJ G152A",
@@ -30517,7 +30631,7 @@ unikemet = {
   "𓲶": {
     "kEH_Cat": "G-13-019",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon, with horizontally spread wings and spread legs, head looking towards the reading direction, with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on its head; claws on top of cartouches in a round form (V9), with one handed fans (S37) going from the claw over the wing, at an outwards angle, the head of the fan above the wing, fan curving outwards; on top of a sand covered mountain over the edge of the cultivated areas (N26).",
+    "kEH_Desc": "A falcon, with horizontally spread wings and spread legs, head looking towards the reading direction, with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on its head; claws on top of cartouches in a round form (V9), with one handed fans (S37) going from the claw over the wing, at an outwards angle, the head of the fan above the wing, fan curving outwards; on top of a sand covered mountain over the edge of the cultivated areas (N26).",
     "kEH_Func": "Logogram (many-coloured of plumage, who goes forth in/from the horizon)",
     "kEH_FVal": "sꜣb-šw.t-pr-m-ꜣḫ.t",
     "kEH_UniK": "HJ G153",
@@ -30528,7 +30642,7 @@ unikemet = {
   "𓲷": {
     "kEH_Cat": "G-13-020",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon, with spread wings that angle downwards and spread legs, head looking towards the reading direction, with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on its head; claws on top of cartouches in a round form (V9), with one handed fans (S37) going from the claw over the wing, at an outwards angle, the head of the fan above the wing, fan curving outwards; written inside the sun-disk of the sun rising over a sand covered mountain over the edge of the cultivated areas (N27). ",
+    "kEH_Desc": "A falcon, with spread wings that angle downwards and spread legs, head looking towards the reading direction, with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on its head; claws on top of cartouches in a round form (V9), with one handed fans (S37) going from the claw over the wing, at an outwards angle, the head of the fan above the wing, fan curving outwards; written inside the sun-disk of the sun rising over a sand covered mountain over the edge of the cultivated areas (N27). ",
     "kEH_Func": "Logogram (many-coloured of plumage, who goes forth in/from the horizon)",
     "kEH_FVal": "sꜣb-šw.t-pr-m-ꜣḫ.t",
     "kEH_UniK": "HJ G153A",
@@ -30585,7 +30699,7 @@ unikemet = {
   "𓲾": {
     "kEH_Cat": "G-13-031",
     "kEH_Core": "C",
-    "kEH_Desc": "A falcon, seen from the side, one wing forward, horizontal, other wing forward, at a 45° downwards angle, one claw visible below the lower wing.",
+    "kEH_Desc": "A falcon, seen from the side, one wing forwards, horizontal, other wing forwards, at a 45° downward angle, one claw visible below the lower wing.",
     "kEH_Func": "Logogram (to protect)",
     "kEH_FVal": "mkꞽ/ḫwꞽ",
     "kEH_UniK": "HJ G293",
@@ -30638,7 +30752,7 @@ unikemet = {
   "𓳃": {
     "kEH_Cat": "G-15-005",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, with a counter weight of a necklace (S18A) on its back.",
+    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, with a counterweight of a necklace (S18A) on its back.",
     "kEH_Func": "Logogram (Horus)",
     "kEH_FVal": "ḥr",
     "kEH_UniK": "HJ G161",
@@ -30649,7 +30763,7 @@ unikemet = {
   "𓳄": {
     "kEH_Cat": "G-15-006",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, with a counter weight of a necklace (S18A) and a flagellum (S45) on its back.",
+    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, with a counterweight of a necklace (S18A) and a flagellum (S45) on its back.",
     "kEH_Func": "Classifier cult image",
     "kEH_FVal": "ꜥẖm",
     "kEH_UniK": "HJ G161A",
@@ -30670,7 +30784,7 @@ unikemet = {
   "𓳆": {
     "kEH_Cat": "G-15-008",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, wearing the white crown (S1), with a counter weight of a necklace (S18A) on its back.",
+    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, wearing the white crown (S1), with a counterweight of a necklace (S18A) on its back.",
     "kEH_Func": "Logogram (Haroeris)",
     "kEH_FVal": "ḥr-wr",
     "kEH_UniK": "G162C"
@@ -30686,7 +30800,7 @@ unikemet = {
   "𓳈": {
     "kEH_Cat": "G-15-011",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, wearing the white crown (S1), with a counter weight of a necklace (S18A) and a flagellum (S45) on its back.",
+    "kEH_Desc": "An archaic image of a falcon/cult image of a falcon, wearing the white crown (S1), with a counterweight of a necklace (S18A) and a flagellum (S45) on its back.",
     "kEH_Func": "Logogram (Haroeris)",
     "kEH_FVal": "ḥr-wr",
     "kEH_UniK": "G162E"
@@ -30763,7 +30877,7 @@ unikemet = {
   "𓳑": {
     "kEH_Cat": "G-16-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A house sparrow (Passer domesticus niloticus), with upwards curling line coming from the tail.",
+    "kEH_Desc": "A house sparrow (Passer domesticus niloticus), with upward curling line coming from the tail.",
     "kEH_Func": "Classifier negative, bad",
     "kEH_FVal": "ꞽw.ty",
     "kEH_UniK": "G037C",
@@ -30913,7 +31027,7 @@ unikemet = {
   "𓳢": {
     "kEH_Cat": "G-20-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A duck, beak closed, outstretched wingsd above the body, legs drawn towards the body.",
+    "kEH_Desc": "A duck, beak closed, outstretched wings above the body, legs drawn towards the body.",
     "kEH_Func": "Logogram (water fowl)",
     "kEH_FVal": "rꜣ",
     "kEH_UniK": "HJ G306",
@@ -31085,6 +31199,7 @@ unikemet = {
   "𓳳": {
     "kEH_Cat": "G-22-005",
     "kEH_Core": "C",
+    "kEH_Desc": "A Saharan helmeted guinea fowl chick (Numida m. meleagris), standing, with a lappet, without the two protruding feathers on its head.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nḥ",
     "kEH_UniK": "G021D"
@@ -31151,7 +31266,7 @@ unikemet = {
   "𓳺": {
     "kEH_Cat": "G-23-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A lapwing (Vanellus cristatus), legs drawn towards the body, wings extended above the body, with two human arms, extending from the breast, raised, with handpalms outwards.",
+    "kEH_Desc": "A lapwing (Vanellus cristatus), legs drawn towards the body, wings extended above the body, with two human arms, extending from the breast, raised, with hand palms outwards.",
     "kEH_Func": "Logogram (common folk, subjects, people)",
     "kEH_FVal": "rḫ.yt",
     "kEH_UniK": "HJ G024A",
@@ -31162,7 +31277,7 @@ unikemet = {
   "𓳻": {
     "kEH_Cat": "G-23-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A lapwing (Vanellus cristatus), standing, wings extended above the body, with two human arms, extending from the breast, raised, with handpalms outwards.",
+    "kEH_Desc": "A lapwing (Vanellus cristatus), standing, wings extended above the body, with two human arms, extending from the breast, raised, with hand palms outwards.",
     "kEH_Func": "Logogram (common folk, subjects, people)",
     "kEH_FVal": "rḫ.yt",
     "kEH_UniK": "HJ G024B",
@@ -31248,7 +31363,7 @@ unikemet = {
     "kEH_Cat": "G-24-028",
     "kEH_Core": "C",
     "kEH_Desc": "A griffon vulture (Gyps fulvus), on top of a wickerwork basket (V30).",
-    "kEH_Func": "Classifier divinity  (Nekhbet)",
+    "kEH_Func": "Classifier divinity (Nekhbet)",
     "kEH_FVal": "nḫb.t",
     "kEH_UniK": "HJ G016A",
     "kEH_JSesh": "G16A",
@@ -31296,7 +31411,7 @@ unikemet = {
   "𓴉": {
     "kEH_Cat": "G-25-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A griffon vulture (Gyps fulvus), with the wings extended forward, as if to envellop someone or something.",
+    "kEH_Desc": "A griffon vulture (Gyps fulvus), with the wings extended forward, as if to envelop someone or something.",
     "kEH_Func": "Logogram/phonemogram (to protect)",
     "kEH_FVal": "mkꞽ",
     "kEH_UniK": "HJ G186",
@@ -31307,7 +31422,7 @@ unikemet = {
   "𓴊": {
     "kEH_Cat": "G-25-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A griffon vulture (Gyps fulvus), with the wings extended forward, as if to envellop someone or something, without internal detail.",
+    "kEH_Desc": "A griffon vulture (Gyps fulvus), with the wings extended forward, as if to envelop someone or something, without internal detail.",
     "kEH_Func": "Logogram/phonemogram (to protect)",
     "kEH_FVal": "mkꞽ",
     "kEH_UniK": "HJ G186D",
@@ -31318,7 +31433,7 @@ unikemet = {
   "𓴋": {
     "kEH_Cat": "G-25-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A griffon vulture (Gyps fulvus), with the wings extended forward, as if to envellop someone or something, with a flagellum (S45) on its back.",
+    "kEH_Desc": "A griffon vulture (Gyps fulvus), with the wings extended forward, as if to envelop someone or something, with a flagellum (S45) on its back.",
     "kEH_Func": "Logogram/phonemogram (to protect)",
     "kEH_FVal": "mkꞽ",
     "kEH_UniK": "G186F"
@@ -31358,7 +31473,7 @@ unikemet = {
   "𓴐": {
     "kEH_Cat": "H-01-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A staff, with a straight shaft, topped with the head of a falcon, with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on top of the head.",
+    "kEH_Desc": "A staff, with a straight shaft, topped with the head of a falcon, with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on top of the head.",
     "kEH_Func": "Logogram (staff)",
     "kEH_FVal": "mdw",
     "kEH_UniK": "HJ H013",
@@ -31369,7 +31484,7 @@ unikemet = {
   "𓴑": {
     "kEH_Cat": "H-01-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A staff, with a straight shaft and forked end, topped with the head of a falcon, with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on top of the head.",
+    "kEH_Desc": "A staff, with a straight shaft and forked end, topped with the head of a falcon, with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on top of the head.",
     "kEH_Func": "Classifier staff",
     "kEH_FVal": "mdw",
     "kEH_UniK": "H014B",
@@ -31393,7 +31508,7 @@ unikemet = {
   "𓴔": {
     "kEH_Cat": "H-01-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A spear, with a straight shaft and forked end, topped with the head of a falcon, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) on top of the head, tail descending behind the head; with a triangular spearhead above the snake.",
+    "kEH_Desc": "A spear, with a straight shaft and forked end, topped with the head of a falcon, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) on top of the head, tail descending behind the head; with a triangular spearhead above the snake.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mdw",
     "kEH_UniK": "HJ H014",
@@ -31501,7 +31616,7 @@ unikemet = {
   "𓴞": {
     "kEH_Cat": "H-04-002",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a crested ibis (Ibis comata), with a beak with a downwards angled tip, with a crest of two long feathers on the head, neck curving backwards,",
+    "kEH_Desc": "The head of a crested ibis (Ibis comata), with a beak with a downward angled tip, with a crest of two long feathers on the head, neck curving backwards,",
     "kEH_Func": "Phonemogram/logogram (spirits)",
     "kEH_FVal": "ꜣḫ",
     "kEH_UniK": "HJ H002A",
@@ -31563,7 +31678,7 @@ unikemet = {
   "𓴥": {
     "kEH_Cat": "H-08-017",
     "kEH_Core": "C",
-    "kEH_Desc": "Two feathers, connected back to back.",
+    "kEH_Desc": "Two feathers, connected back-to-back.",
     "kEH_Func": "Classifier double feather",
     "kEH_FVal": "šw.ty",
     "kEH_UniK": "HJ H041",
@@ -31696,7 +31811,7 @@ unikemet = {
   "𓴳": {
     "kEH_Cat": "I-03-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A cult image of a crocodile, wearing a headdress consisting of two feathers, connected back to back (H41) on its head.",
+    "kEH_Desc": "A cult image of a crocodile, wearing a headdress consisting of two feathers, connected back-to-back (H41) on its head.",
     "kEH_Func": "Logogram (Sobek (divinity))",
     "kEH_FVal": "sbk",
     "kEH_UniK": "I005C"
@@ -31723,7 +31838,7 @@ unikemet = {
   "𓴶": {
     "kEH_Cat": "I-03-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus), with a feather (H6), angled forwards, on its head, with an spear, arrow without fletching or a harpoon without handle, written vertically, tip downwards on its back; on top of a standard used for carrying religious symbols, with a short vertical pole, with a loop under the horizontal beam, running over the vertical pole (R56).",
+    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus), with a feather (H6), angled forwards, on its head, with a spear, arrow without fletching or a harpoon without handle, written vertically, tip downwards on its back; on top of a standard used for carrying religious symbols, with a short vertical pole, with a loop under the horizontal beam, running over the vertical pole (R56).",
     "kEH_Func": "Logogram (Iqer, 6th nome of UE)",
     "kEH_FVal": "ꞽḳr",
     "kEH_UniK": "I106B"
@@ -31810,7 +31925,7 @@ unikemet = {
   "𓴿": {
     "kEH_Cat": "I-03-033",
     "kEH_Core": "C",
-    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus), with its head facing backwards, with a two-barbed harpoon, with a handle on the shaft, written vertically (T21A),on its head. ",
+    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus), with its head facing backwards, with a two-barbed harpoon, with a handle on the shaft, written vertically (T21A), on its head. ",
     "kEH_Func": "Logogram (crocodile)",
     "kEH_FVal": "mg(ꜣ)",
     "kEH_UniK": "HJ I003J",
@@ -31830,7 +31945,7 @@ unikemet = {
   "𓵁": {
     "kEH_Cat": "I-03-041",
     "kEH_Core": "C",
-    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus) with its tail curved forward, below the body, with a two-barbed harpoon, with a handle on the shaft, written vertically (T21A),on its head and its back, near the hip.",
+    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus) with its tail curved forward, below the body, with a two-barbed harpoon, with a handle on the shaft, written vertically (T21A), on its head and its back, near the hip.",
     "kEH_Func": "Logogram (to gather)",
     "kEH_FVal": "sꜣḳ",
     "kEH_UniK": "HJ I005B",
@@ -31849,7 +31964,7 @@ unikemet = {
   "𓵃": {
     "kEH_Cat": "I-03-045",
     "kEH_Core": "C",
-    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus) on top of a shrine (I4), with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on top of its head.  ",
+    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus) on top of a shrine (I4), with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on top of its head. ",
     "kEH_Func": "Logogram (Sobek-Re (divinity))",
     "kEH_FVal": "sbk-rꜥ",
     "kEH_UniK": "I004C"
@@ -31865,7 +31980,7 @@ unikemet = {
   "𓵅": {
     "kEH_Cat": "I-03-047",
     "kEH_Core": "C",
-    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus), wearing a headdress consisting of two feathers on top of the horns of a ram, with a cobra (Naja haja), standing up, with expanded hood (Uraeus), with sun disks its head on either side of the feathers, orientated outwards.",
+    "kEH_Desc": "A Nile crocodile (Crocodylus niloticus), wearing a headdress consisting of two feathers on top of the horns of a ram, with a cobra (Naja haje), standing up, with expanded hood (Uraeus), with sun disks its head on either side of the feathers, orientated outwards.",
     "kEH_Func": "Logogram (Sobek (divinity))",
     "kEH_FVal": "sbk",
     "kEH_UniK": "HJ I018C",
@@ -31890,7 +32005,7 @@ unikemet = {
   "𓵈": {
     "kEH_Cat": "I-03-053",
     "kEH_Core": "C",
-    "kEH_Desc": " Nile crocodile (Crocodylus niloticus), on a base, with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on top of its head.   ",
+    "kEH_Desc": " Nile crocodile (Crocodylus niloticus), on a base, with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on top of its head.",
     "kEH_Func": "Logogram (Sobek-Re (divinity))",
     "kEH_FVal": "sbk-rꜥ",
     "kEH_UniK": "I018H"
@@ -32194,7 +32309,7 @@ unikemet = {
   "𓵧": {
     "kEH_Cat": "I-09-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), with its tail curved forward below the body.",
+    "kEH_Desc": "A cobra in repose (Naja haje), with its tail curved forward below the body.",
     "kEH_Func": "Phonemogram/logogram (eternity)",
     "kEH_FVal": "ḏ.t",
     "kEH_UniK": "HJ I123",
@@ -32205,7 +32320,7 @@ unikemet = {
   "𓵨": {
     "kEH_Cat": "I-09-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), with human arms, extended forwards, one arm horizontal, holding a vessel with something in it, other arm above the vessel.",
+    "kEH_Desc": "A cobra in repose (Naja haje), with human arms, extended forwards, one arm horizontal, holding a vessel with something in it, other arm above the vessel.",
     "kEH_Func": "Logogram (eternity)",
     "kEH_FVal": "ḏ.t",
     "kEH_UniK": "HJ I030",
@@ -32216,7 +32331,7 @@ unikemet = {
   "𓵩": {
     "kEH_Cat": "I-09-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), with a feather (H6) on its back, angling backwards; on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), with a feather (H6) on its back, angling backwards; on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḳbḥ.wt",
     "kEH_UniK": "HJ I031C",
@@ -32226,7 +32341,7 @@ unikemet = {
   "𓵪": {
     "kEH_Cat": "I-09-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), with a feather (H6) on its back, angling backwards; on top of a standard used for carrying religious symbols (R12).",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), with a feather (H6) on its back, angling backwards; on top of a standard used for carrying religious symbols (R12).",
     "kEH_Func": "Logogram/phonemogram (boundry, cliff)",
     "kEH_FVal": "ṯn.w",
     "kEH_UniK": "HJ I031A",
@@ -32236,7 +32351,7 @@ unikemet = {
   "𓵫": {
     "kEH_Cat": "I-09-019",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), upon a rounded stick and a ?stela?, with a feather (H6) on its back, angled backwards.",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), upon a rounded stick and a ?stela?, with a feather (H6) on its back, angled backwards.",
     "kEH_Func": "Logogram (boundry, cliff)",
     "kEH_FVal": "ṯn.w",
     "kEH_UniK": "HJ I121",
@@ -32246,7 +32361,7 @@ unikemet = {
   "𓵬": {
     "kEH_Cat": "I-09-020",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), upon a standard resembling a folded piece of cloth (S29), with a feather (H6) vertically on its back, in line with the standard.",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), upon a standard resembling a folded piece of cloth (S29), with a feather (H6) vertically on its back, in line with the standard.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḳbḥ.wt",
     "kEH_UniK": "HJ I119",
@@ -32256,7 +32371,7 @@ unikemet = {
   "𓵭": {
     "kEH_Cat": "I-09-028",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), written below a cobra in repose (Naja haja) (I10); on top of standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), written below a cobra in repose (Naja haje) (I10); on top of standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram (the two mountain ranges of the Nile valley)",
     "kEH_FVal": "ṯn.wy",
     "kEH_UniK": "HJ I122",
@@ -32266,7 +32381,7 @@ unikemet = {
   "𓵮": {
     "kEH_Cat": "I-09-029",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), written below a cobra in repose (Naja haja) (I10) with a feather (H6) on its back, angling backwards (I31); on top of standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), written below a cobra in repose (Naja haje) (I10) with a feather (H6) on its back, angling backwards (I31); on top of standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram (the two mountain ranges of the Nile valley)",
     "kEH_FVal": "ṯn.wy",
     "kEH_UniK": "HJ I124",
@@ -32277,7 +32392,7 @@ unikemet = {
   "𓵯": {
     "kEH_Cat": "I-09-033",
     "kEH_Core": "C",
-    "kEH_Desc": "A mummy with a long curved beard, standing upright (A53), encircled by a cobra in repose (Naja Haja), with its head above the head of the mummy, with the tip of the tail in front of the mummy.",
+    "kEH_Desc": "A mummy with a long-curved beard, standing upright (A53), encircled by a cobra in repose (Naja haje), with its head above the head of the mummy, with the tip of the tail in front of the mummy.",
     "kEH_Func": "Logogram (eternity)",
     "kEH_FVal": "ḏ.t",
     "kEH_UniK": "HJ I033",
@@ -32287,7 +32402,7 @@ unikemet = {
   "𓵰": {
     "kEH_Cat": "I-09-034",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), wearing the red crown (S3).",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), wearing the red crown (S3).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "nt",
     "kEH_UniK": "HJ I099",
@@ -32297,7 +32412,7 @@ unikemet = {
   "𓵱": {
     "kEH_Cat": "I-09-043",
     "kEH_Core": "C",
-    "kEH_Desc": "A house or enclosure (O1), with two long vertical lines on top of it, with a cobra in repose (Naja haja) (I10) written over the two vertical lines.",
+    "kEH_Desc": "A house or enclosure (O1), with two long vertical lines on top of it, with a cobra in repose (Naja haje) (I10) written over the two vertical lines.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mḏ",
     "kEH_UniK": "HJ I120",
@@ -32307,7 +32422,7 @@ unikemet = {
   "𓵲": {
     "kEH_Cat": "I-09-044",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), written over the white crown (S1), with a sun disk (N5) written between the crown and the vertical section of the tail of the cobra.",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), written over the white crown (S1), with a sun disk (N5) written between the crown and the vertical section of the tail of the cobra.",
     "kEH_Func": "Phonemogram (in ḥḏ-tꜣ, dawn, daybreak)",
     "kEH_FVal": "ḥḏ",
     "kEH_UniK": "I151"
@@ -32315,7 +32430,7 @@ unikemet = {
   "𓵳": {
     "kEH_Cat": "I-10-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), with its tail curved forward below the body, with a forwards downwards line of liquid coming from the mouth, which ends in a vessel in front of the tip of the tail.",
+    "kEH_Desc": "A cobra in repose (Naja haje), with its tail curved forwards below the body, with a forward downward line of liquid coming from the mouth, which ends in a vessel in front of the tip of the tail.",
     "kEH_Func": "Logogram (cavern)",
     "kEH_FVal": "ḳr.t",
     "kEH_UniK": "HJ I040",
@@ -32326,7 +32441,7 @@ unikemet = {
   "𓵴": {
     "kEH_Cat": "I-10-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), with a forwards downwards line of liquid coming from the mouth, which ends in a vessel.",
+    "kEH_Desc": "A cobra in repose (Naja haje), with a forward downward line of liquid coming from the mouth, which ends in a vessel.",
     "kEH_Func": "Logogram (cavern)",
     "kEH_FVal": "ḳr.t",
     "kEH_UniK": "I040H"
@@ -32334,7 +32449,7 @@ unikemet = {
   "𓵵": {
     "kEH_Cat": "I-10-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), with its tail curved forward below the body, with a vessel in front of the tip of its tail.",
+    "kEH_Desc": "A cobra in repose (Naja haje), with its tail curved forwards below the body, with a vessel in front of the tip of its tail.",
     "kEH_Func": "Logogram (cavern)",
     "kEH_FVal": "ḳr.t",
     "kEH_UniK": "HJ I040F",
@@ -32345,7 +32460,7 @@ unikemet = {
   "𓵶": {
     "kEH_Cat": "I-10-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), tail facing forward, with a forwards, downwards line of liquid issuing from the mouth, on top of the right side of the sky (N44).",
+    "kEH_Desc": "A cobra in repose (Naja haje), tail facing forwards, with a forward, downward line of liquid issuing from the mouth, on top of the right side of the sky (N44).",
     "kEH_Func": "Logogram (cavern)",
     "kEH_FVal": "ḳr.t",
     "kEH_UniK": "HJ I040C",
@@ -32356,7 +32471,7 @@ unikemet = {
   "𓵷": {
     "kEH_Cat": "I-10-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), tail facing forward, with a forwards, downwards line of liquid issuing from the mouth, on top of the left side of the sky (N44-mirror).",
+    "kEH_Desc": "A cobra in repose (Naja haje), tail facing forward, with a forward, downward line of liquid issuing from the mouth, on top of the left side of the sky (N44-mirror).",
     "kEH_Func": "Logogram (cavern)",
     "kEH_FVal": "ḳr.t",
     "kEH_UniK": "HJ I040D",
@@ -32367,7 +32482,7 @@ unikemet = {
   "𓵸": {
     "kEH_Cat": "I-10-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), tail facing forward, with a forwards, downwards line of liquid issuing from the mouth, on top of the right side of the sky (N44), facing its mirror, with the two lines of liquid ending in a vessel which sits between the two signs.",
+    "kEH_Desc": "A cobra in repose (Naja haje), tail facing forwards, with a forward, downward line of liquid issuing from the mouth, on top of the right side of the sky (N44), facing its mirror, with the two lines of liquid ending in a vessel which sits between the two signs.",
     "kEH_Func": "Logogram (the two holes, the two caverns)",
     "kEH_FVal": "ḳr.ty",
     "kEH_UniK": "HJ I041",
@@ -32378,7 +32493,7 @@ unikemet = {
   "𓵹": {
     "kEH_Cat": "I-11-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus).",
     "kEH_Func": "Classifier female divinity",
     "kEH_UniK": "HJ I064",
     "kEH_JSesh": "I64",
@@ -32388,7 +32503,7 @@ unikemet = {
   "𓵺": {
     "kEH_Cat": "I-11-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), on top of a wickerwork basket (V30).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), on top of a wickerwork basket (V30).",
     "kEH_Func": "Logogram (lady (in nb.ty))",
     "kEH_FVal": "nb.t",
     "kEH_UniK": "HJ I013A",
@@ -32398,7 +32513,7 @@ unikemet = {
   "𓵻": {
     "kEH_Cat": "I-11-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), with a forward, downwards dotted line coming from the mouth.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), with a forward, downward dotted line coming from the mouth.",
     "kEH_Func": "Logogram (fire, flame)",
     "kEH_FVal": "nsr.t",
     "kEH_UniK": "HJ I043",
@@ -32409,7 +32524,7 @@ unikemet = {
   "𓵼": {
     "kEH_Cat": "I-11-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), with three forward, downwards lines coming from the mouth.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), with three forward, downward lines coming from the mouth.",
     "kEH_Func": "Logogram (fire, flame)",
     "kEH_FVal": "nsr.t",
     "kEH_UniK": "I043A"
@@ -32417,7 +32532,7 @@ unikemet = {
   "𓵽": {
     "kEH_Cat": "I-11-008",
     "kEH_Core": "C",
-    "kEH_Desc": "Two cobras (Naja haja), standing up, with expanded hood (Uraeus) (I64), overlapping each other.",
+    "kEH_Desc": "Two cobras (Naja haje), standing up, with expanded hood (Uraeus) (I64), overlapping each other.",
     "kEH_Func": "Classifier the two Udjat eyes",
     "kEH_FVal": "wḏꜣ.ty",
     "kEH_UniK": "HJ I044",
@@ -32428,7 +32543,7 @@ unikemet = {
   "𓵾": {
     "kEH_Cat": "I-11-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Three cobras (Naja haja), standing up, with expanded hood (Uraeus) (I64), overlapping each other.",
+    "kEH_Desc": "Three cobras (Naja haje), standing up, with expanded hood (Uraeus) (I64), overlapping each other.",
     "kEH_Func": "Logogram (goddesses)",
     "kEH_FVal": "nṯr.wt",
     "kEH_UniK": "HJ I045",
@@ -32439,7 +32554,7 @@ unikemet = {
   "𓵿": {
     "kEH_Cat": "I-11-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Nine cobras (Naja haja), standing up, with expanded hood (Uraeus), in a row, with overlapping bodies.",
+    "kEH_Desc": "Nine cobras (Naja haje), standing up, with expanded hood (Uraeus), in a row, with overlapping bodies.",
     "kEH_Func": "Classifier Ennead",
     "kEH_FVal": "psḏ.t",
     "kEH_UniK": "HJ I046",
@@ -32463,7 +32578,7 @@ unikemet = {
   "𓶂": {
     "kEH_Cat": "I-11-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (goddess)",
     "kEH_FVal": "nṯr.t",
     "kEH_UniK": "HJ I050",
@@ -32474,7 +32589,7 @@ unikemet = {
   "𓶃": {
     "kEH_Cat": "I-11-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), in front of a half round loaf of bread (X1) above an egg (H8); on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), in front of a half round loaf of bread (X1) above an egg (H8); on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (goddess)",
     "kEH_FVal": "nṯr.t",
     "kEH_UniK": "HJ I105",
@@ -32484,7 +32599,7 @@ unikemet = {
   "𓶄": {
     "kEH_Cat": "I-11-018",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), on top of standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), on top of standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram (goddess)",
     "kEH_FVal": "nṯr.t",
     "kEH_UniK": "HJ I050A",
@@ -32507,7 +32622,7 @@ unikemet = {
   "𓶇": {
     "kEH_Cat": "I-11-027",
     "kEH_Core": "C",
-    "kEH_Desc": "Three cobras (Naja haja), standing up, with expanded hood (Uraeus) (I64), overlapping each other, on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "Three cobras (Naja haje), standing up, with expanded hood (Uraeus) (I64), overlapping each other, on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (goddesses)",
     "kEH_FVal": "nṯr.wt",
     "kEH_UniK": "I053B"
@@ -32515,7 +32630,7 @@ unikemet = {
   "𓶈": {
     "kEH_Cat": "I-11-029",
     "kEH_Core": "C",
-    "kEH_Desc": " A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), wearing the white crown (S1).",
+    "kEH_Desc": " A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), wearing the white crown (S1).",
     "kEH_Func": "Classifier uraeus snake",
     "kEH_FVal": "wꜣḏ.t",
     "kEH_UniK": "HJ I055",
@@ -32526,7 +32641,7 @@ unikemet = {
   "𓶉": {
     "kEH_Cat": "I-11-030",
     "kEH_Core": "C",
-    "kEH_Desc": " A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), wearing the white crown (S1), on top of a wickerwork basket (V30).",
+    "kEH_Desc": " A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), wearing the white crown (S1), on top of a wickerwork basket (V30).",
     "kEH_Func": "Logogram (lady (in nb.ty))",
     "kEH_FVal": "nb.t",
     "kEH_UniK": "HJ I056",
@@ -32537,7 +32652,7 @@ unikemet = {
   "𓶊": {
     "kEH_Cat": "I-11-033",
     "kEH_Core": "C",
-    "kEH_Desc": " A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), wearing the red crown (S3).",
+    "kEH_Desc": " A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), wearing the red crown (S3).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "n",
     "kEH_UniK": "HJ I058",
@@ -32548,7 +32663,7 @@ unikemet = {
   "𓶋": {
     "kEH_Cat": "I-11-034",
     "kEH_Core": "C",
-    "kEH_Desc": " A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), wearing the red crown (S3), on top of a wickerwork basket (V30).",
+    "kEH_Desc": " A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), wearing the red crown (S3), on top of a wickerwork basket (V30).",
     "kEH_Func": "Logogram (lady (in nb.ty))",
     "kEH_FVal": "nb.t",
     "kEH_UniK": "HJ I059",
@@ -32559,7 +32674,7 @@ unikemet = {
   "𓶌": {
     "kEH_Cat": "I-11-035",
     "kEH_Core": "C",
-    "kEH_Desc": "Two cobras (Naja haja), standing up, with expanded hood (Uraeus) (I64), overlapping each other, the first cobra wearing the white crown (S1), the second cobra wearing the red crown (S3).",
+    "kEH_Desc": "Two cobras (Naja haje), standing up, with expanded hood (Uraeus) (I64), overlapping each other, the first cobra wearing the white crown (S1), the second cobra wearing the red crown (S3).",
     "kEH_Func": "Classifier the two uraeus snakes",
     "kEH_FVal": "wꜣḏ.ty",
     "kEH_UniK": "HJ I060",
@@ -32570,7 +32685,7 @@ unikemet = {
   "𓶍": {
     "kEH_Cat": "I-11-042",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), wearing a headdress consisting of a sun-disk between the horns of a bovid (F102).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), wearing a headdress consisting of a sun-disk between the horns of a bovid (F102).",
     "kEH_Func": "Logogram (Hathor)",
     "kEH_FVal": "ḥw.t-ḥr",
     "kEH_UniK": "HJ I062",
@@ -32581,7 +32696,7 @@ unikemet = {
   "𓶎": {
     "kEH_Cat": "I-11-043",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), wearing a headdress consisting of a sun-disk between the horns of a bovid (F102), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), wearing a headdress consisting of a sun-disk between the horns of a bovid (F102), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A). ",
     "kEH_Func": "Logogram (goddess)",
     "kEH_FVal": "nṯr.t",
     "kEH_UniK": "I062A"
@@ -32589,7 +32704,7 @@ unikemet = {
   "𓶏": {
     "kEH_Cat": "I-11-045",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), wearing a headdress consisting of two plumes (S9).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), wearing a headdress consisting of two plumes (S9).",
     "kEH_Func": "Logogram (Renenoutet)",
     "kEH_FVal": "rnn.wtt",
     "kEH_UniK": "HJ I063",
@@ -32600,7 +32715,7 @@ unikemet = {
   "𓶐": {
     "kEH_Cat": "I-11-050",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail, resembling a sideways number 8.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail, resembling a sideways number 8.",
     "kEH_Func": "Phonemogram/logogram (to encircle with)",
     "kEH_FVal": "mḥn",
     "kEH_UniK": "I012B"
@@ -32608,7 +32723,7 @@ unikemet = {
   "𓶑": {
     "kEH_Cat": "I-11-051",
     "kEH_Core": "C",
-    "kEH_Desc": "Two cobras (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail (I12), overlapping each other.",
+    "kEH_Desc": "Two cobras (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail (I12), overlapping each other.",
     "kEH_Func": "Classifier snake, uraeus",
     "kEH_FVal": "ꞽꜥr.ty",
     "kEH_UniK": "I012A"
@@ -32616,7 +32731,7 @@ unikemet = {
   "𓶒": {
     "kEH_Cat": "I-11-054",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail (I12), written over a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (S40), angling forwards, with a cartouche in a round form (V9) with the loop around the staff.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail (I12), written over a sceptre with a straight shaft, a forked base, topped with the head of the Seth animal (S40), angling forwards, with a cartouche in a round form (V9) with the loop around the staff.",
     "kEH_Func": "Logogram (Wadjet (divinity)",
     "kEH_FVal": "wꜣḏ.t",
     "kEH_UniK": "HJ I065",
@@ -32627,7 +32742,7 @@ unikemet = {
   "𓶓": {
     "kEH_Cat": "I-11-057",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail (I12), wearing the red crown (S3), upon a wickerwork basket (V30).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail (I12), wearing the red crown (S3), upon a wickerwork basket (V30).",
     "kEH_Func": "Logogram (lady (in nb.ty))",
     "kEH_FVal": "nb.t",
     "kEH_UniK": "HJ I067",
@@ -32638,7 +32753,7 @@ unikemet = {
   "𓶔": {
     "kEH_Cat": "I-11-058",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail (I12), wearing the red crown (S3), with a flagellum (S45) on its back; upon a wickerwork basket (V30).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail (I12), wearing the red crown (S3), with a flagellum (S45) on its back; upon a wickerwork basket (V30).",
     "kEH_Func": "Classifier uraeus",
     "kEH_FVal": "wr.t",
     "kEH_UniK": "I059A"
@@ -32646,7 +32761,7 @@ unikemet = {
   "𓶕": {
     "kEH_Cat": "I-11-060",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail (I12), wearing the white crown (S1), upon a wickerwork basket (V30).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail (I12), wearing the white crown (S1), upon a wickerwork basket (V30).",
     "kEH_Func": "Logogram (lady (in nb.ty))",
     "kEH_FVal": "nb.t",
     "kEH_UniK": "HJ I068",
@@ -32657,7 +32772,7 @@ unikemet = {
   "𓶖": {
     "kEH_Cat": "I-11-063",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail (I12), wearing a headdress consisting of two plumes (S9).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail (I12), wearing a headdress consisting of two plumes (S9).",
     "kEH_Func": "Logogram (Renenoutet)",
     "kEH_FVal": "rnn.wtt",
     "kEH_UniK": "I069A"
@@ -32665,7 +32780,7 @@ unikemet = {
   "𓶗": {
     "kEH_Cat": "I-11-064",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with its tail going forwards, over its head.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with its tail going forwards, over its head.",
     "kEH_Func": "Logogram (uraeus)",
     "kEH_FVal": "mḥn.t",
     "kEH_UniK": "HJ I070",
@@ -32676,7 +32791,7 @@ unikemet = {
   "𓶘": {
     "kEH_Cat": "I-11-067",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with its tail coiled in an elaborate pattern.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with its tail coiled in an elaborate pattern.",
     "kEH_Func": "Classifier coil (of a snake)",
     "kEH_FVal": "mḥn",
     "kEH_UniK": "I070E"
@@ -32684,7 +32799,7 @@ unikemet = {
   "𓶙": {
     "kEH_Cat": "I-11-070",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with its tail coiled, one coil horizontally, with the tail going forwards, over the head after this coil.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with its tail coiled, one coil horizontally, with the tail going forwards, over the head after this coil.",
     "kEH_Func": "Logogram (uraeus)",
     "kEH_FVal": "mḥn.t",
     "kEH_UniK": "I070A",
@@ -32694,7 +32809,7 @@ unikemet = {
   "𓶚": {
     "kEH_Cat": "I-11-071",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with its tail coiled, with two coils, with the tail going forwards, over the head after the second coil.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with its tail coiled, with two coils, with the tail going forwards, over the head after the second coil.",
     "kEH_Func": "Logogram (uraeus)",
     "kEH_FVal": "mḥn.t",
     "kEH_UniK": "I070B",
@@ -32704,7 +32819,7 @@ unikemet = {
   "𓶛": {
     "kEH_Cat": "I-11-073",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with its tail going backwards, over its head.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with its tail going backwards, over its head.",
     "kEH_Func": "Logogram (uraeus)",
     "kEH_FVal": "mḥn.t",
     "kEH_UniK": "HJ I071",
@@ -32722,7 +32837,7 @@ unikemet = {
   "𓶝": {
     "kEH_Cat": "I-11-081",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail, consisting of three horizontal coils, arranged vertically.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail, consisting of three horizontal coils, arranged vertically.",
     "kEH_Func": "Logogram (uraeus)",
     "kEH_FVal": "mḥn.t",
     "kEH_UniK": "HJ I074",
@@ -32845,7 +32960,7 @@ unikemet = {
   "𓶪": {
     "kEH_Cat": "I-11-101",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), with a forward, downwards dotted line coming from the mouth (I43), on top of the corner of a wall (O38); facing its mirror.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), with a forward, downward dotted line coming from the mouth (I43), on top of the corner of a wall (O38); facing its mirror.",
     "kEH_Func": "Logogram (the two caverns)",
     "kEH_FVal": "ḳr.ty",
     "kEH_UniK": "I152"
@@ -32853,7 +32968,7 @@ unikemet = {
   "𓶫": {
     "kEH_Cat": "I-12-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), standing up.",
+    "kEH_Desc": "A cobra in repose (Naja haje), standing up.",
     "kEH_Func": "Classifier snake",
     "kEH_UniK": "HJ I080",
     "kEH_JSesh": "I80",
@@ -32870,7 +32985,7 @@ unikemet = {
   "𓶭": {
     "kEH_Cat": "I-12-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja), with its tail coiled up, in a single coil.",
+    "kEH_Desc": "A cobra in repose (Naja haje), with its tail coiled up, in a single coil.",
     "kEH_Func": "Classifier snake",
     "kEH_UniK": "HJ I080A",
     "kEH_JSesh": "I80A",
@@ -32911,7 +33026,7 @@ unikemet = {
   "𓶲": {
     "kEH_Cat": "I-13-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A horned viper (Cerastes cerastes) with a coiled tail, consisting of two coils that are of the same hight as the head.",
+    "kEH_Desc": "A horned viper (Cerastes cerastes) with a coiled tail, consisting of two coils that are of the same height as the head.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "f",
     "kEH_UniK": "I089A"
@@ -32952,7 +33067,7 @@ unikemet = {
   "𓶷": {
     "kEH_Cat": "I-13-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus), with a coiled tail, consisting of three coils.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus), with a coiled tail, consisting of three coils.",
     "kEH_Func": "Logogram (Shai (divinity))",
     "kEH_FVal": "šꜣw",
     "kEH_UniK": "HJ I015B",
@@ -33014,7 +33129,7 @@ unikemet = {
   "𓶽": {
     "kEH_Cat": "I-13-024",
     "kEH_Core": "C",
-    "kEH_Desc": "A snake with a coiled tail, consisting of three coils, head downwards, with a knife with a triangular blade (T30A) written on each coil of the tail, at an forwards angle, blade down.",
+    "kEH_Desc": "A snake with a coiled tail, consisting of three coils, head downwards, with a knife with a triangular blade (T30A) written on each coil of the tail, at a forward angle, blade down.",
     "kEH_Func": "Classifier snake/enemy",
     "kEH_FVal": "bṯw",
     "kEH_UniK": "I086J",
@@ -33023,7 +33138,7 @@ unikemet = {
   "𓶾": {
     "kEH_Cat": "I-13-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A snake with a coiled tail, consisting of three coils, head upward, with a knife with a triangular blade (T30A) written on each coil of the tail, at an forwards angle, blade down.",
+    "kEH_Desc": "A snake with a coiled tail, consisting of three coils, head upward, with a knife with a triangular blade (T30A) written on each coil of the tail, at a forward angle, blade down.",
     "kEH_Func": "Classifier snake/enemy (Apophis)",
     "kEH_FVal": "ꜥꜣpp",
     "kEH_UniK": "I086K"
@@ -33123,7 +33238,7 @@ unikemet = {
   "𓷊": {
     "kEH_Cat": "I-15-001",
     "kEH_Core": "C",
-    "kEH_Desc": "Two cobras (Naja haja), standing up, with expanded hood (Uraeus), facing outwards, tails coiled together, with a child, seated on nothing, forelegs separated, right arm raised with hand to mouth, left arm hanging beside the body (A17) written between the two heads.",
+    "kEH_Desc": "Two cobras (Naja haje), standing up, with expanded hood (Uraeus), facing outwards, tails coiled together, with a child, seated on nothing, forelegs separated, right arm raised with hand to mouth, left arm hanging beside the body (A17) written between the two heads.",
     "kEH_Func": "Logogram (the north wind)",
     "kEH_FVal": "mḥy.t",
     "kEH_UniK": "HJ I109",
@@ -33171,7 +33286,7 @@ unikemet = {
     "kEH_Desc": "A fish with two small fins above and below the body, and one small fin on its side, near the head.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽn",
-    "kEH_UniK": "K04C",
+    "kEH_UniK": "K004C",
     "kEH_IFAO": "227,3"
   },
   "𓷐": {
@@ -33305,7 +33420,7 @@ unikemet = {
   "𓷝": {
     "kEH_Cat": "K-02-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A fish without head, with a tail-fin with a triangular shape.",
+    "kEH_Desc": "A fish without a head, with a tail-fin with a triangular shape.",
     "kEH_Func": "Logogram (to be angry)",
     "kEH_FVal": "špt",
     "kEH_UniK": "K023B",
@@ -33421,7 +33536,7 @@ unikemet = {
   "𓷪": {
     "kEH_Cat": "L-01-021",
     "kEH_Core": "C",
-    "kEH_Desc": "A dung beetle, scarab (scarabaeus sacer), with upwards pointing outstretched wings, holding a circle in its front legs.",
+    "kEH_Desc": "A dung beetle, scarab (scarabaeus sacer), with upward pointing outstretched wings, holding a circle in its front legs.",
     "kEH_Func": "Logogram (the winged scarab)",
     "kEH_FVal": "ꜥpy",
     "kEH_UniK": "L015A",
@@ -33518,7 +33633,7 @@ unikemet = {
   "𓷴": {
     "kEH_Cat": "L-06-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A scorpion (L19), on top of an arrow-head, point facing downwards, in the ground, resembling a cartouche in the round form (T22D).",
+    "kEH_Desc": "A scorpion (L19), on top of an arrowhead, point facing downwards, in the ground, resembling a cartouche in the round form (T22D).",
     "kEH_Func": "Classifier Serket/Selkis",
     "kEH_FVal": "srḳ.t",
     "kEH_UniK": "HJ L025",
@@ -33617,7 +33732,7 @@ unikemet = {
   "𓷿": {
     "kEH_Cat": "M-01-019",
     "kEH_Core": "C",
-    "kEH_Desc": "A tree (M1), written over a horned desert viper (Cerastes cerastes) (I9), in front of the hind-quarters of a seated lion or leopard (F22); on top of a standard used for carrying religious symbols (R12).",
+    "kEH_Desc": "A tree (M1), written over a horned desert viper (Cerastes cerastes) (I9), in front of the hindquarters of a seated lion or leopard (F22); on top of a standard used for carrying religious symbols (R12).",
     "kEH_Func": "Logogram (14th nome of UE)",
     "kEH_FVal": "nḏf.t-pḥ.t",
     "kEH_UniK": "HJ N113A",
@@ -33682,7 +33797,7 @@ unikemet = {
   "𓸆": {
     "kEH_Cat": "M-01-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A tree without foliage, or a branch with many side branches.-",
+    "kEH_Desc": "A tree without foliage, or a branch with many side branches.",
     "kEH_Func": "classifier wood",
     "kEH_FVal": "mr.t",
     "kEH_UniK": "M001H"
@@ -33690,7 +33805,7 @@ unikemet = {
   "𓸇": {
     "kEH_Cat": "M-01-032",
     "kEH_Core": "C",
-    "kEH_Desc": "A branch or tree with three vertically arranged clumbs of branches.",
+    "kEH_Desc": "A branch or tree with three vertically arranged clumps of branches.",
     "kEH_Func": "Classifier wood",
     "kEH_FVal": "ꜥš",
     "kEH_UniK": "M001E"
@@ -33709,7 +33824,7 @@ unikemet = {
   "𓸉": {
     "kEH_Cat": "M-02-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A dom palm tree (Hyphaene thebaica) with sprouts a the bottom, with dom palm dates haning from the top. ",
+    "kEH_Desc": "A dom palm tree (Hyphaene thebaica) with sprouts a the bottom, with dom palm dates hanging from the top. ",
     "kEH_Func": "Classifier dom-palm",
     "kEH_FVal": "mꜣmꜣ",
     "kEH_UniK": "M055A"
@@ -33727,7 +33842,7 @@ unikemet = {
   "𓸋": {
     "kEH_Cat": "M-03-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A herb, with three flowers or leaves, curving upwards, all flowers/leafs at the same hight.",
+    "kEH_Desc": "A herb, with three flowers or leaves, curving upwards, all flowers/leaves at the same height.",
     "kEH_Func": "Logogram (true of voice)",
     "kEH_FVal": "mꜣꜥ-ḫrw",
     "kEH_UniK": "M002C",
@@ -33772,7 +33887,7 @@ unikemet = {
   "𓸐": {
     "kEH_Cat": "M-04-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A dead tree or a branch, vertically written,  with multiple side-branches on either side.",
+    "kEH_Desc": "A dead tree or a branch, vertically written, with multiple side-branches on either side.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫr",
     "kEH_UniK": "M003G"
@@ -34135,14 +34250,14 @@ unikemet = {
   "𓸸": {
     "kEH_Cat": "M-07-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A lotus bud, on a tree pronged stalk, with a emty stalk below and above the bud, and the main long stalk folded under itself.",
+    "kEH_Desc": "A lotus bud, on a tree pronged stalk, with a empty stalk below and above the bud, and the main long stalk folded under itself.",
     "kEH_Func": "?",
     "kEH_UniK": "M010B"
   },
   "𓸹": {
     "kEH_Cat": "M-07-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A lotus bud with a long twisted stalk, which is folded under itself.",
+    "kEH_Desc": "A lotus bud with a long-twisted stalk, which is folded under itself.",
     "kEH_Func": "Classifier offering",
     "kEH_FVal": "wdn",
     "kEH_UniK": "HJ M072A",
@@ -34234,7 +34349,7 @@ unikemet = {
   "𓹃": {
     "kEH_Cat": "M-08-022",
     "kEH_Core": "C",
-    "kEH_Desc": "A flower with 7 petals, on top of a long stalk.",
+    "kEH_Desc": "A flower with seven petals, on top of a long stalk.",
     "kEH_Func": "Classifier plant/phono-repeater",
     "kEH_FVal": "hdn",
     "kEH_UniK": "HJ M237",
@@ -34254,7 +34369,7 @@ unikemet = {
   "𓹅": {
     "kEH_Cat": "M-08-024",
     "kEH_Core": "C",
-    "kEH_Desc": "A lotus flower with internal detail, facing forwards, with a long twisted stalk, which is folded under itself.",
+    "kEH_Desc": "A lotus flower with internal detail, facing forwards, with a long-twisted stalk, which is folded under itself.",
     "kEH_Func": "Classifier joy",
     "kEH_FVal": "ꜣw-ꞽb",
     "kEH_UniK": "M009D"
@@ -34269,7 +34384,7 @@ unikemet = {
   "𓹇": {
     "kEH_Cat": "M-08-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A lotus flower with a extended central point/a papyrus flower, facing forwards, with a long stalk, folded under itself.",
+    "kEH_Desc": "A lotus flower with an extended central point/a papyrus flower, facing forwards, with a long stalk, folded under itself.",
     "kEH_Func": "Classifier joy",
     "kEH_FVal": "rš(.w)",
     "kEH_UniK": "HJ M009A",
@@ -34279,7 +34394,7 @@ unikemet = {
   "𓹈": {
     "kEH_Cat": "M-08-031",
     "kEH_Core": "C",
-    "kEH_Desc": "A flower, seen seen from above, with seven distinct petals visible inside a wavy circle.",
+    "kEH_Desc": "A flower, seen from above, with seven distinct petals visible inside a wavy circle.",
     "kEH_Func": "Classifier flower",
     "kEH_FVal": "ḥrr(.t)",
     "kEH_UniK": "HJ M086B",
@@ -34435,7 +34550,7 @@ unikemet = {
   "𓹙": {
     "kEH_Cat": "M-10-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A plant with a bud, facing forwards, with a crossbar behind the bud, with a long twisted stalk, which is folded under itself.",
+    "kEH_Desc": "A plant with a bud, facing forwards, with a crossbar behind the bud, with a long-twisted stalk, which is folded under itself.",
     "kEH_Func": "Logogram (to offer)",
     "kEH_FVal": "wdn",
     "kEH_UniK": "HJ M011A",
@@ -34477,7 +34592,7 @@ unikemet = {
   "𓹝": {
     "kEH_Cat": "M-11-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A leaf, stem and root of a lotus plant, with a forwards, downwards line coming from the leaf.",
+    "kEH_Desc": "A leaf, stem and root of a lotus plant, with a forward, downward line coming from the leaf.",
     "kEH_Func": "Phonemogram ḫꜣ? (in the verb ḫꜣḫꜣ, to winnow, to scatter)",
     "kEH_FVal": "ḫꜣ",
     "kEH_UniK": "HJ M102",
@@ -34628,7 +34743,7 @@ unikemet = {
   "𓹬": {
     "kEH_Cat": "M-12-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), on top of a stem of papyrus with a bud (M13), with the tail curling around the stem.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), on top of a stem of papyrus with a bud (M13), with the tail curling around the stem.",
     "kEH_Func": "Logogram (uraeus)",
     "kEH_FVal": "wꜣḏ.t",
     "kEH_UniK": "HJ M117",
@@ -34639,7 +34754,7 @@ unikemet = {
   "𓹭": {
     "kEH_Cat": "M-12-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), wearing the white crown (S1), on top of a stem of papyrus with a bud (M13), with the tail curling around the stem.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), wearing the white crown (S1), on top of a stem of papyrus with a bud (M13), with the tail curling around the stem.",
     "kEH_Func": "Logogram (uraeus)",
     "kEH_FVal": "wꜣḏ.t",
     "kEH_UniK": "HJ M118",
@@ -34650,7 +34765,7 @@ unikemet = {
   "𓹮": {
     "kEH_Cat": "M-12-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), wearing the red crown (S3), on top of a stem of papyrus with a bud (M13), with the tail curling around the stem.",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), wearing the red crown (S3), on top of a stem of papyrus with a bud (M13), with the tail curling around the stem.",
     "kEH_Func": "Logogram (uraeus)",
     "kEH_FVal": "wꜣḏ.t",
     "kEH_UniK": "HJ M119",
@@ -34729,7 +34844,7 @@ unikemet = {
   "𓹶": {
     "kEH_Cat": "M-13-013",
     "kEH_Core": "C",
-    "kEH_Desc": "A stem of papyrus with a bud (M13), with a downwards hanging flower coming from the bottom of the bud, on either side of the stem.",
+    "kEH_Desc": "A stem of papyrus with a bud (M13), with a downward hanging flower coming from the bottom of the bud, on either side of the stem.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜣḫ",
     "kEH_UniK": "HJ M097",
@@ -34840,7 +34955,7 @@ unikemet = {
   "𓺁": {
     "kEH_Cat": "M-13-033",
     "kEH_Core": "C",
-    "kEH_Desc": "A clump of three papyrus flowers, with the flowers at the side orientated to the sides, with an upwards bud at either side of the group of three flowers; on a base.",
+    "kEH_Desc": "A clump of three papyrus flowers, with the flowers at the side orientated to the sides, with an upward bud at either side of the group of three flowers; on a base.",
     "kEH_Func": "Classifier plants",
     "kEH_FVal": "rnp.wt",
     "kEH_UniK": "M262"
@@ -34848,7 +34963,7 @@ unikemet = {
   "𓺂": {
     "kEH_Cat": "M-13-036",
     "kEH_Core": "C",
-    "kEH_Desc": "A flower with a long stem, making a curve turning the flower upside down, between two stems of papyrus with a bud (M13) on top of a circle.",
+    "kEH_Desc": "A flower with a long stem, making a curve turning the flower upside-down, between two stems of papyrus with a bud (M13) on top of a circle.",
     "kEH_Func": "Logogram (Lower Egypt)",
     "kEH_FVal": "mḥ.w",
     "kEH_UniK": "HJ M232",
@@ -34886,7 +35001,7 @@ unikemet = {
   "𓺆": {
     "kEH_Cat": "M-14-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A flowering reed (M17) and a club used by washer-men for beating laundry as part of the cleaning process (U36), connected by a network consisting of three horizontal lines and three lines going from top corner to bottom corner.",
+    "kEH_Desc": "A flowering reed (M17) and a club used by washermen for beating laundry as part of the cleaning process (U36), connected by a network consisting of three horizontal lines and three lines going from top corner to bottom corner.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜥꜣb",
     "kEH_UniK": "M148B",
@@ -34895,7 +35010,7 @@ unikemet = {
   "𓺇": {
     "kEH_Cat": "M-14-018",
     "kEH_Core": "C",
-    "kEH_Desc": "A club used by washer-men for beating laundry as part of the cleaning process (U36) and a flowering reed (M17), connected by a network consisting of four horizontal lines and three lines going from top corner to bottom corner.",
+    "kEH_Desc": "A club used by washermen for beating laundry as part of the cleaning process (U36) and a flowering reed (M17), connected by a network consisting of four horizontal lines and three lines going from top corner to bottom corner.",
     "kEH_Func": "Logogram offering",
     "kEH_FVal": "ꜥꜣb.t",
     "kEH_UniK": "HJ M148",
@@ -35023,6 +35138,7 @@ unikemet = {
   "𓺔": {
     "kEH_Cat": "M-16-025",
     "kEH_Core": "C",
+    "kEH_Desc": "A sedge, written on top of a hobble for cattle without a crossbar.",
     "kEH_UniK": "HJ M157",
     "kEH_JSesh": "M157",
     "kEH_HG": "M157",
@@ -35042,7 +35158,7 @@ unikemet = {
   "𓺖": {
     "kEH_Cat": "M-16-041",
     "kEH_Core": "C",
-    "kEH_Desc": "A sedge (M23), writen on top of a human placenta (a circle with lines written within horizontally) (Aa1).",
+    "kEH_Desc": "A sedge (M23), written on top of a human placenta (a circle with lines written within horizontally) (Aa1).",
     "kEH_Func": "Logogram (custodian of the property of the king)",
     "kEH_FVal": "ꞽr.y-(ꞽ)ḫ.t-n(.y)-sw.t",
     "kEH_UniK": "HJ M163",
@@ -35129,7 +35245,7 @@ unikemet = {
     "kEH_Cat": "M-18-006",
     "kEH_Core": "C",
     "kEH_Desc": "A root, with the point curving backwards, with a loop horizontally at the front.",
-    "kEH_Func": "Classifier succesfull, fortunate",
+    "kEH_Func": "Classifier succesful, fortunate",
     "kEH_FVal": "mꜥr",
     "kEH_UniK": "HJ M171A",
     "kEH_JSesh": "M171A",
@@ -35459,7 +35575,7 @@ unikemet = {
   "𓻂": {
     "kEH_Cat": "N-01-002",
     "kEH_Core": "C",
-    "kEH_Desc": "The sky, upside down.",
+    "kEH_Desc": "The sky, upside-down.",
     "kEH_Func": "Classifier lower sky",
     "kEH_FVal": "nn.t",
     "kEH_UniK": "HJ N050",
@@ -35592,7 +35708,7 @@ unikemet = {
   "𓻏": {
     "kEH_Cat": "N-01-029",
     "kEH_Core": "C",
-    "kEH_Desc": "The sky, with ribbled lines of water coming from it.",
+    "kEH_Desc": "The sky, with rippled lines of water coming from it.",
     "kEH_Func": "Logogram (dew, scent, rain)",
     "kEH_FVal": "ꞽꜣd.t",
     "kEH_UniK": "HJ N004G",
@@ -35603,7 +35719,7 @@ unikemet = {
   "𓻐": {
     "kEH_Cat": "N-01-030",
     "kEH_Core": "C",
-    "kEH_Desc": "The sky, with three lines coming from it resembling a wick of twisted flax, consisting of 3 loops (V28).",
+    "kEH_Desc": "The sky, with three lines coming from it resembling a wick of twisted flax, consisting of three loops (V28).",
     "kEH_Func": "Classifier cloud/storm/moisture/rain",
     "kEH_FVal": "ꞽgp",
     "kEH_UniK": "HJ N004B",
@@ -35623,7 +35739,7 @@ unikemet = {
   },
   "𓻒": {
     "kEH_Cat": "N-02-011",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus), written inside it, with a tie or strap, used with sandals (ankh-sign) (S34) written below the sun.",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus), written inside it, with a tie or strap, used with sandals (ankh-sign) (S34) written below the sun.",
     "kEH_Func": "Classifier time",
     "kEH_FVal": "nḥḥ",
     "kEH_UniK": "HJ N122",
@@ -35633,7 +35749,7 @@ unikemet = {
   "𓻓": {
     "kEH_Cat": "N-03-004",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus), head below the sun-disk, with a tie or strap, used with sandals (ankh-sign, S34) with the loop around the body of the cobra, in front of the sun-disk.",
+    "kEH_Desc": "The sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus), head below the sun-disk, with a tie or strap, used with sandals (ankh-sign, S34) with the loop around the body of the cobra, in front of the sun-disk.",
     "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḥr",
     "kEH_UniK": "HJ N006A",
@@ -35644,7 +35760,7 @@ unikemet = {
   "𓻔": {
     "kEH_Cat": "N-03-008",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side.",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side.",
     "kEH_Func": "Logogram (King of UE and LE)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty",
     "kEH_UniK": "HJ N006B",
@@ -35655,7 +35771,7 @@ unikemet = {
   "𓻕": {
     "kEH_Cat": "N-03-010",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side, with the left cobra wearing the red crown (S3) and the right cobra wearing the white crown (S1).",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side, with the left cobra wearing the red crown (S3) and the right cobra wearing the white crown (S1).",
     "kEH_Func": "Logogram (King of UE and LE)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty",
     "kEH_UniK": "HJ N051",
@@ -35666,7 +35782,7 @@ unikemet = {
   "𓻖": {
     "kEH_Cat": "N-03-011",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side, with a tie or strap, used with sandals (ankh-sign, S34) with the loop around the body of the cobras.",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side, with a tie or strap, used with sandals (ankh-sign, S34) with the loop around the body of the cobras.",
     "kEH_Func": "Logogram (King of UE and LE)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty",
     "kEH_UniK": "HJ N006C",
@@ -35677,7 +35793,7 @@ unikemet = {
   "𓻗": {
     "kEH_Cat": "N-03-012",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side, with a tie or strap, used with sandals (ankh-sign, S34) with the loop around the body of the cobras, with the left cobra wearing the white crown (S1), and the right cobra wearing the red crown (S3).",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side, with a tie or strap, used with sandals (ankh-sign, S34) with the loop around the body of the cobras, with the left cobra wearing the white crown (S1), and the right cobra wearing the red crown (S3).",
     "kEH_Func": "Logogram (King of UE and LE)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty",
     "kEH_UniK": "HJ N051A",
@@ -35688,7 +35804,7 @@ unikemet = {
   "𓻘": {
     "kEH_Cat": "N-03-013",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk.",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk.",
     "kEH_Func": "Logogram (King of UE and LE)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty",
     "kEH_UniK": "HJ N006D",
@@ -35699,7 +35815,7 @@ unikemet = {
   "𓻙": {
     "kEH_Cat": "N-03-016",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun with three straight lines of sunlight coming from it (N8), with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk, with the left cobra wearing the red crown (S3) and the right cobra wearing the white crown (S1).",
+    "kEH_Desc": "The sun with three straight lines of sunlight coming from it (N8), with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk, with the left cobra wearing the red crown (S3) and the right cobra wearing the white crown (S1).",
     "kEH_Func": "Logogram (King of UE and LE)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty",
     "kEH_UniK": "HJ N052",
@@ -35710,7 +35826,7 @@ unikemet = {
   "𓻚": {
     "kEH_Cat": "N-03-017",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk, with the left cobra wearing the red crown (S3) and the right cobra wearing the white crown (S1).",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk, with the left cobra wearing the red crown (S3) and the right cobra wearing the white crown (S1).",
     "kEH_Func": "Logogram (King of UE and LE)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty",
     "kEH_UniK": "HJ N142",
@@ -35757,7 +35873,7 @@ unikemet = {
   "𓻟": {
     "kEH_Cat": "N-04-011",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, within a halo, with three beams of sunlight coming from it, resemling lines of triangles.",
+    "kEH_Desc": "The sun, within a halo, with three beams of sunlight coming from it, resembling lines of triangles.",
     "kEH_Func": "Classifier light, shining, rising",
     "kEH_FVal": "ḥḏḏ.wt",
     "kEH_UniK": "N008D",
@@ -35767,7 +35883,7 @@ unikemet = {
   "𓻠": {
     "kEH_Cat": "N-04-012",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with three beams of sunlight coming from it, resemling lines of triangles.",
+    "kEH_Desc": "The sun, with three beams of sunlight coming from it, resembling lines of triangles.",
     "kEH_Func": "classifier sunfolk",
     "kEH_FVal": "ḥnmm.t",
     "kEH_UniK": "HJ N008A",
@@ -35809,7 +35925,7 @@ unikemet = {
   "𓻤": {
     "kEH_Cat": "N-04-024",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with two short horizontalal strokes on either side of the sun-disk, on top of an irrigation canal (N23).",
+    "kEH_Desc": "The sun, with two short horizontal strokes on either side of the sun-disk, on top of an irrigation canal (N23).",
     "kEH_Func": "Classifier solar period",
     "kEH_FVal": "rnp.t",
     "kEH_UniK": "N116A"
@@ -35842,7 +35958,7 @@ unikemet = {
   "𓻨": {
     "kEH_Cat": "N-05-004",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side (N6B), with the fully extended wing of a bird (H5) on either side, arranged horizontally.",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side (N6B), with the fully extended wing of a bird (H5) on either side, arranged horizontally.",
     "kEH_Func": "Logogram (the winged scarab/sundisk)",
     "kEH_FVal": "ꜥpy",
     "kEH_UniK": "HJ N058A",
@@ -35853,7 +35969,7 @@ unikemet = {
   "𓻩": {
     "kEH_Cat": "N-05-007",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side (N6B), with the fully extended wing of a bird (H5) on either side, arranged horizontally; with the horns of a ram on top of the sun disk, with the white crown (S1), facing left to right, overlapping the red crown (S3), facing right to left, on top of the horns.",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side (N6B), with the fully extended wing of a bird (H5) on either side, arranged horizontally; with the horns of a ram on top of the sun disk, with the white crown (S1), facing left to right, overlapping the red crown (S3), facing right to left, on top of the horns.",
     "kEH_Func": "Classifier Horus of Edfu",
     "kEH_FVal": "bḥd.ty",
     "kEH_UniK": "N133C",
@@ -35874,7 +35990,7 @@ unikemet = {
     "kEH_Cat": "N-05-015",
     "kEH_Core": "C",
     "kEH_Desc": "A sun-disk with wings at a 90° angle.",
-    "kEH_Func": "Classsifier divinity",
+    "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḏḥwty",
     "kEH_UniK": "HJ N060",
     "kEH_JSesh": "N60",
@@ -35885,7 +36001,7 @@ unikemet = {
     "kEH_Cat": "N-05-018",
     "kEH_Core": "C",
     "kEH_Desc": "A sun-disk with wings at a 90° angle, with an uraeus coming from the sun-disk, filling the space between the two wings.",
-    "kEH_Func": "Classsifier divinity",
+    "kEH_Func": "Classifier divinity",
     "kEH_FVal": "ḏḥwty",
     "kEH_UniK": "HJ N060A",
     "kEH_JSesh": "N60A",
@@ -35905,7 +36021,7 @@ unikemet = {
   "𓻮": {
     "kEH_Cat": "N-05-020",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk (N6D), with wings, angled downwards.",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk (N6D), with wings, angled downwards.",
     "kEH_Func": "Logogram (King of UE and LE)",
     "kEH_FVal": "n(.y)-sw.t-bꞽ.ty",
     "kEH_UniK": "HJ N133",
@@ -35916,7 +36032,7 @@ unikemet = {
   "𓻯": {
     "kEH_Cat": "N-05-022",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with three beams of sunlight coming from it, resemling lines of triangles (N8A), with wings, angled downwards.",
+    "kEH_Desc": "The sun, with three beams of sunlight coming from it, resembling lines of triangles (N8A), with wings, angled downwards.",
     "kEH_Func": "Logogram (to rise, to shine)",
     "kEH_FVal": "wbn",
     "kEH_UniK": "HJ N132B",
@@ -35938,7 +36054,7 @@ unikemet = {
   "𓻱": {
     "kEH_Cat": "N-05-024",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk (N6D), with a broad beam of light coming from below, between the cobras; with wings, angled downwards.",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side, heads below the sun-disk (N6D), with a broad beam of light coming from below, between the cobras; with wings, angled downwards.",
     "kEH_Func": "Logogram (to rise, to shine)",
     "kEH_FVal": "wbn",
     "kEH_UniK": "HJ N133B",
@@ -35948,7 +36064,7 @@ unikemet = {
   "𓻲": {
     "kEH_Cat": "N-05-027",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun, with a cobra (Naja haja), standing up, with expanded hood (Uraeus) at either side (N6B), with wings, angled downwards.",
+    "kEH_Desc": "The sun, with a cobra (Naja haje), standing up, with expanded hood (Uraeus) at either side (N6B), with wings, angled downwards.",
     "kEH_Func": "Logogram (to rise, to shine)",
     "kEH_FVal": "wbn",
     "kEH_UniK": "N132D"
@@ -35956,7 +36072,7 @@ unikemet = {
   "𓻳": {
     "kEH_Cat": "N-06-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A crescent moon, upside down, with the full moon disk upon it.",
+    "kEH_Desc": "A crescent moon, upside-down, with the full moon disk upon it.",
     "kEH_Func": "Logogram (in rꜥ-nb)",
     "kEH_FVal": "ꞽꜥḥ",
     "kEH_UniK": "HJ N062",
@@ -36049,7 +36165,7 @@ unikemet = {
   "𓻽": {
     "kEH_Cat": "N-09-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A strip of land, with three grains of sand written beneath it, arranged horizontally, and a tongue  of land (N21) written on either side of the grains of sand.",
+    "kEH_Desc": "A strip of land, with three grains of sand written beneath it, arranged horizontally, and a tongue of land (N21) written on either side of the grains of sand.",
     "kEH_Func": "Logogram (land)",
     "kEH_FVal": "tꜣ",
     "kEH_UniK": "HJ N016A",
@@ -36059,7 +36175,7 @@ unikemet = {
   "𓻾": {
     "kEH_Cat": "N-09-032",
     "kEH_Core": "C",
-    "kEH_Desc": "A strip of land, with three grains of sand written beneath it, arranged as a triangle, with one grain at the top, and a tongue  of land (N21) written on either side of the grains of sand.",
+    "kEH_Desc": "A strip of land, with three grains of sand written beneath it, arranged as a triangle, with one grain at the top, and a tongue of land (N21) written on either side of the grains of sand.",
     "kEH_Func": "Logogram (land)",
     "kEH_FVal": "tꜣ",
     "kEH_UniK": "HJ N016B",
@@ -36069,7 +36185,7 @@ unikemet = {
   "𓻿": {
     "kEH_Cat": "N-09-033",
     "kEH_Core": "C",
-    "kEH_Desc": "A strip of land, with three grains of sand written beneath it, arranged as a triangle, with one grain at the bottom, and a tongue  of land (N21) written on either side of the grains of sand.",
+    "kEH_Desc": "A strip of land, with three grains of sand written beneath it, arranged as a triangle, with one grain at the bottom, and a tongue of land (N21) written on either side of the grains of sand.",
     "kEH_Func": "Logogram (land)",
     "kEH_FVal": "tꜣ",
     "kEH_UniK": "HJ N016C",
@@ -36105,7 +36221,7 @@ unikemet = {
   "𓼃": {
     "kEH_Cat": "N-11-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A parcel of land with irrigation ditches, consisiting of three horizontal lines.",
+    "kEH_Desc": "A parcel of land with irrigation ditches, consisting of three horizontal lines.",
     "kEH_Func": "Classifier garden",
     "kEH_FVal": "ḥsp",
     "kEH_UniK": "HJ N024B",
@@ -36137,7 +36253,7 @@ unikemet = {
   "𓼆": {
     "kEH_Cat": "N-11-013",
     "kEH_Core": "C",
-    "kEH_Desc": "A parcel of land with irrigation ditches, consisting of three by three lines, extending beyond each other.",
+    "kEH_Desc": "A parcel of land with irrigation ditches, consisting of three-by-three lines, extending beyond each other.",
     "kEH_Func": "Logogram (nome, district)",
     "kEH_FVal": "spꜣ.t",
     "kEH_UniK": "HJ N024D",
@@ -36172,7 +36288,7 @@ unikemet = {
   "𓼊": {
     "kEH_Cat": "N-11-022",
     "kEH_Core": "C",
-    "kEH_Desc": "A parcel of land with irrigation ditches, consisiting of four horizontal lines of blocks.",
+    "kEH_Desc": "A parcel of land with irrigation ditches, consisting of four horizontal lines of blocks.",
     "kEH_Func": "Classifier garden",
     "kEH_FVal": "ḥsp",
     "kEH_UniK": "HJ N024E",
@@ -36212,7 +36328,7 @@ unikemet = {
   "𓼎": {
     "kEH_Cat": "N-11-028",
     "kEH_Core": "C",
-    "kEH_Desc": "A forearm, with the palm of the hand facing upwards (D36), holding a loop of cord with the ends downwards (V7); written over a tree (M1);  on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A forearm, with the palm of the hand facing upwards (D36), holding a loop of cord with the ends downwards (V7); written over a tree (M1); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (20-21st nome of UE)",
     "kEH_FVal": "nꜥr.t",
     "kEH_UniK": "HJ N111",
@@ -36222,7 +36338,7 @@ unikemet = {
   "𓼏": {
     "kEH_Cat": "N-11-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A tree (M1), in front of a piece of flesh, point down, curving forwardswards (F51), in front of hind-quarters of a seated lion or leopard (F22); arranged horizontally; on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A tree (M1), in front of a piece of flesh, point down, curving forwards (F51), in front of hindquarters of a seated lion or leopard (F22); arranged horizontally; on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (14th Upper Egyptian nome)",
     "kEH_FVal": "nḏf.t-pḥ.t",
     "kEH_UniK": "HJ N113",
@@ -36232,7 +36348,7 @@ unikemet = {
   "𓼐": {
     "kEH_Cat": "N-11-031",
     "kEH_Core": "C",
-    "kEH_Desc": "A tree (M1), in front of hind-quarters of a seated lion or leopard (F22); arranged horizontally; on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A tree (M1), in front of hindquarters of a seated lion or leopard (F22); arranged horizontally; on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (21th Upper Egyptian nome)",
     "kEH_FVal": "nꜥr.t-pḥ.t",
     "kEH_UniK": "HJ N113B",
@@ -36242,7 +36358,7 @@ unikemet = {
   "𓼑": {
     "kEH_Cat": "N-11-032",
     "kEH_Core": "C",
-    "kEH_Desc": "A horned desert viper (Cerastes cerastes) (I9), written over a tree (M1), in front of hind-quarters of a seated lion or leopard (F22); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A horned desert viper (Cerastes cerastes) (I9), written over a tree (M1), in front of hindquarters of a seated lion or leopard (F22); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (14th Upper Egyptian nome)",
     "kEH_FVal": "nḏf.t-pḥ.t",
     "kEH_UniK": "HJ N113C",
@@ -36263,7 +36379,7 @@ unikemet = {
     "kEH_Cat": "N-11-037",
     "kEH_Core": "C",
     "kEH_Desc": "Child, wearing the white crown (S1), seated on nothing, forelegs spread, right arm raised in front with hand to mouth, left arm hanging beside the body (A274); in front of the head of a bovid (cow), without horns, with an ear (F63), on top of a half round loaf of bread (X1); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
-    "kEH_Func": "Logogram (18th Lower Egyptain nome (Pelusium))",
+    "kEH_Func": "Logogram (18th Lower Egyptian nome (Pelusium))",
     "kEH_FVal": "ꞽm.ty-ḫnt.y",
     "kEH_UniK": "HJ A337",
     "kEH_JSesh": "A337",
@@ -36420,7 +36536,7 @@ unikemet = {
   "𓼣": {
     "kEH_Cat": "N-15-016",
     "kEH_Core": "C",
-    "kEH_Desc": "The sun rising over a sand covered mountain over the edge of the cultivated areas, with three beams of sunlight coming from it, resemling lines of triangles.",
+    "kEH_Desc": "The sun rising over a sand covered mountain over the edge of the cultivated areas, with three beams of sunlight coming from it, resembling lines of triangles.",
     "kEH_Func": "Logogram (eternity)",
     "kEH_FVal": "nḥḥ",
     "kEH_UniK": "HJ N137",
@@ -36474,7 +36590,7 @@ unikemet = {
   "𓼩": {
     "kEH_Cat": "N-18-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A oval road, with three shrubs resembling flowers written over it, with the middle flower oriented with the flower downwards.",
+    "kEH_Desc": "an oval road, with three shrubs resembling flowers written over it, with the middle flower oriented with the flower downwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥr",
     "kEH_UniK": "HJ N031H",
@@ -36542,7 +36658,7 @@ unikemet = {
   "𓼰": {
     "kEH_Cat": "N-19-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A downwards curving rippled line.",
+    "kEH_Desc": "A downward curving rippled line.",
     "kEH_Func": "Classifier decay, rot",
     "kEH_FVal": "ꜥwꜣ",
     "kEH_UniK": "N035D",
@@ -36649,7 +36765,7 @@ unikemet = {
   "𓼻": {
     "kEH_Cat": "N-20-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A folded piece of cloth (S29), mirrored, written over a canal (N36), with the base of the cloth and the base of the canal being at the same hight.",
+    "kEH_Desc": "A folded piece of cloth (S29), mirrored, written over a canal (N36), with the base of the cloth and the base of the canal being at the same height.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "s-m",
     "kEH_UniK": "N152"
@@ -36713,6 +36829,7 @@ unikemet = {
   "𓽂": {
     "kEH_Cat": "N-20-036",
     "kEH_Core": "C",
+    "kEH_Desc": "A rectangular pool, with two diagonal strokes written inside, angling forwards, on top of legs in a walking posture, feet orientated towards the reading direction.",
     "kEH_UniK": "N040A",
     "kEH_JSesh": "N40A"
   },
@@ -36781,7 +36898,7 @@ unikemet = {
   "𓽊": {
     "kEH_Cat": "N-22-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A lightning bolt, represented by ha horizontal line with arrows at each end.",
+    "kEH_Desc": "A lightning bolt, represented by a horizontal line with arrows at each end.",
     "kEH_Func": "Classifier (lightning bolt)",
     "kEH_FVal": "ḥnb.w",
     "kEH_UniK": "HJ N057",
@@ -36808,7 +36925,7 @@ unikemet = {
   "𓽍": {
     "kEH_Cat": "O-01-053",
     "kEH_Core": "C",
-    "kEH_Desc": "An oar, written vertically (P8), intruding with the top inside a a house or enclosure (O1).",
+    "kEH_Desc": "An oar, written vertically (P8), intruding with the top inside a house or enclosure (O1).",
     "kEH_Func": "Logogram (invocation offering)",
     "kEH_FVal": "pr.t-ḫrw",
     "kEH_UniK": "HJ O070",
@@ -36867,7 +36984,7 @@ unikemet = {
   "𓽓": {
     "kEH_Cat": "O-02-005",
     "kEH_Core": "C",
-    "kEH_Desc": "An enclosrue wall without battlements, with an enclosed square in the bottom right corner.",
+    "kEH_Desc": "An enclosure wall without battlements, with an enclosed square in the bottom right corner.",
     "kEH_Func": "Logogram (court)",
     "kEH_FVal": "wsḫ.t",
     "kEH_UniK": "HJ O004B",
@@ -37022,7 +37139,7 @@ unikemet = {
   "𓽤": {
     "kEH_Cat": "O-04-003",
     "kEH_Core": "C",
-    "kEH_Desc": "a wall of the palace, without the ornamental chevaux de frise on top of the wall, with internal decoration of two rectangles, with an angled line inside, both angling downwards towards the back.",
+    "kEH_Desc": "A wall of the palace, without the ornamental chevaux de frise on top of the wall, with internal decoration of two rectangles, with an angled line inside, both angling downwards towards the back.",
     "kEH_UniK": "O012G"
   },
   "𓽥": {
@@ -37062,7 +37179,7 @@ unikemet = {
   "𓽩": {
     "kEH_Cat": "O-04-027",
     "kEH_Core": "C",
-    "kEH_Desc": "A wall of the placace, with ornamental chevaux de frise on top of the wall, in two sections, the front section with internal decoration, with a cloth wound on a pole, an emblem of divinity (R8) written inside the second section.",
+    "kEH_Desc": "A wall of the palace, with ornamental chevaux de frise on top of the wall, in two sections, the front section with internal decoration, with a cloth wound on a pole, an emblem of divinity (R8) written inside the second section.",
     "kEH_Func": "Classifier divine",
     "kEH_FVal": "nṯrꞽ",
     "kEH_UniK": "HJ O260",
@@ -37114,6 +37231,7 @@ unikemet = {
   "𓽯": {
     "kEH_Cat": "O-05-026",
     "kEH_Core": "C",
+    "kEH_Desc": "A house or enclosure, with battlements on the front, back and top.",
     "kEH_UniK": "HJ O303",
     "kEH_JSesh": "O303",
     "kEH_HG": "O303"
@@ -37157,7 +37275,7 @@ unikemet = {
   "𓽴": {
     "kEH_Cat": "O-05-101",
     "kEH_Core": "C",
-    "kEH_Desc": "A wall, with multiple battlements on its long sides, written at a forward angle, with a forwards, downwards line coming from the top.",
+    "kEH_Desc": "A wall, with multiple battlements on its long sides, written at a forward angle, with a forward, downward line coming from the top.",
     "kEH_Func": "Classifier overthrow, demolish",
     "kEH_FVal": "sšn",
     "kEH_UniK": "HJ O118",
@@ -37210,6 +37328,7 @@ unikemet = {
   "𓽺": {
     "kEH_Cat": "O-05-120",
     "kEH_Core": "C",
+    "kEH_Desc": "A wall, written vertically, with multiple battlements on the long sides, in front of a mace with a pear-shaped head, written vertically, in front of a plan of a crossroads in a village; written on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole, written on top of a parcel of land with irrigation ditches.",
     "kEH_UniK": "HJ O121B",
     "kEH_JSesh": "O121B",
     "kEH_HG": "O121B"
@@ -37283,7 +37402,7 @@ unikemet = {
   "𓾂": {
     "kEH_Cat": "O-06-042",
     "kEH_Core": "C",
-    "kEH_Desc": "Two eyes, with the markings of the head of a falcon (D10), arranged horizontally, mirroring each other,w ritten inside a wall of the palace, with internal detail in the lower half.",
+    "kEH_Desc": "Two eyes, with the markings of the head of a falcon (D10), arranged horizontally, mirroring each other, written inside a wall of the palace, with internal detail in the lower half.",
     "kEH_Func": "Logogram (chapel)",
     "kEH_FVal": "ḥḏ",
     "kEH_UniK": "HJ O132",
@@ -37304,7 +37423,7 @@ unikemet = {
   "𓾄": {
     "kEH_Cat": "O-06-052",
     "kEH_Core": "C",
-    "kEH_Desc": "A façade of a palace or tomb, simplyified to a horizontal line with a short crossbar in the middle, and three vertical lines at the bottom.",
+    "kEH_Desc": "A façade of a palace or tomb, simplified to a horizontal line with a short crossbar in the middle, and three vertical lines at the bottom.",
     "kEH_Func": "Logogram (serekh (palace) façade)",
     "kEH_FVal": "srḫ",
     "kEH_UniK": "O033T"
@@ -37531,7 +37650,7 @@ unikemet = {
   "𓾜": {
     "kEH_Cat": "O-09-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A shrine, seen from the side, with a downwards sloping roof, on top of a sledge.",
+    "kEH_Desc": "A shrine, seen from the side, with a downward sloping roof, on top of a sledge.",
     "kEH_Func": "Classifier funerary chapel, cenotaph",
     "kEH_FVal": "mꜥḥꜥ.t",
     "kEH_UniK": "HJ O018B",
@@ -37542,7 +37661,7 @@ unikemet = {
   "𓾝": {
     "kEH_Cat": "O-09-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A shrine, seen from the side, with a downwards sloping roof, with an uraeus at the front of the roof.",
+    "kEH_Desc": "A shrine, seen from the side, with a downward sloping roof, with an uraeus at the front of the roof.",
     "kEH_Func": "Classifier chapel",
     "kEH_FVal": "ḥḏ",
     "kEH_UniK": "HJ O018A",
@@ -37553,7 +37672,7 @@ unikemet = {
   "𓾞": {
     "kEH_Cat": "O-09-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A shrine, seen from the side, with a downwards sloping roof, with an uraeus at the front of the roof, with a rectangle attached to the front.",
+    "kEH_Desc": "A shrine, seen from the side, with a downward sloping roof, with an uraeus at the front of the roof, with a rectangle attached to the front.",
     "kEH_Func": "Logogram (sanctuary of Upper Egypt)",
     "kEH_FVal": "pr-wr",
     "kEH_UniK": "O018F"
@@ -37561,7 +37680,7 @@ unikemet = {
   "𓾟": {
     "kEH_Cat": "O-09-020",
     "kEH_Core": "C",
-    "kEH_Desc": "God, in mummyform, standing upright on a platform, with a long straight beard, wearing a cap, both arms forward, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically (C19); written inside a shrine, seen from the side, with a downwards sloping roof (O18). ",
+    "kEH_Desc": "God, in mummy form, standing upright on a platform, with a long straight beard, wearing a cap, both arms forwards, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the god, vertically (C19); written inside a shrine, seen from the side, with a downward sloping roof (O18). ",
     "kEH_Func": "Logogram (to be divine)",
     "kEH_FVal": "nṯrꞽ",
     "kEH_UniK": "HJ O148",
@@ -37617,7 +37736,7 @@ unikemet = {
   "𓾥": {
     "kEH_Cat": "O-09-053",
     "kEH_Core": "C",
-    "kEH_Desc": "A shrine, seen from the side, with a downwards sloping roof, with an uraeus at the front of the roof (O18A), with a horizontal line over it.",
+    "kEH_Desc": "A shrine, seen from the side, with a downward sloping roof, with an uraeus at the front of the roof (O18A), with a horizontal line over it.",
     "kEH_Func": "Classifier shrine",
     "kEH_FVal": "ḥḏ-šps",
     "kEH_UniK": "HJ O153C",
@@ -37628,7 +37747,7 @@ unikemet = {
   "𓾦": {
     "kEH_Cat": "O-09-060",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic shrine, seen from the side, with a downwards sloping roof, with two vertical poles forming the front, with horizontal lines extending from the top of the roof, with short vertical lines in front of the poles.",
+    "kEH_Desc": "An archaic shrine, seen from the side, with a downward sloping roof, with two vertical poles forming the front, with horizontal lines extending from the top of the roof, with short vertical lines in front of the poles.",
     "kEH_Func": "Classifier shrine",
     "kEH_FVal": "pr-wr",
     "kEH_UniK": "HJ O019C",
@@ -37650,7 +37769,7 @@ unikemet = {
   "𓾨": {
     "kEH_Cat": "O-09-068",
     "kEH_Core": "C",
-    "kEH_Desc": "The head of a bovid, coming from an cone, with a forwards, downwards line of liquid coming grom the mouth, on top of a base.",
+    "kEH_Desc": "The head of a bovid, coming from an cone, with a forward, downward line of liquid coming from the mouth, on top of a base.",
     "kEH_Func": "Logogram (Ennead)",
     "kEH_FVal": "psḏ.t",
     "kEH_UniK": "HJ O275",
@@ -37660,7 +37779,7 @@ unikemet = {
   "𓾩": {
     "kEH_Cat": "O-09-071",
     "kEH_Core": "C",
-    "kEH_Desc": "An archaic shrine, seen from the side, with a downwards sloping roof, with vertical poles in front of the shrine itself, connected to the shrine (O19), on top of a sledge.",
+    "kEH_Desc": "An archaic shrine, seen from the side, with a downward sloping roof, with vertical poles in front of the shrine itself, connected to the shrine (O19), on top of a sledge.",
     "kEH_Func": "Classifier shrine",
     "kEH_FVal": "s.t=f-wr.t",
     "kEH_UniK": "HJ O157",
@@ -37678,7 +37797,7 @@ unikemet = {
   "𓾫": {
     "kEH_Cat": "O-09-075",
     "kEH_Core": "C",
-    "kEH_Desc": "A low shrine with a round roof, with two vertical lines enclosing the top, on top of a broad base, with a vertical line on either side of the shrine, with three horziontal strokes over it.",
+    "kEH_Desc": "A low shrine with a round roof, with two vertical lines enclosing the top, on top of a broad base, with a vertical line on either side of the shrine, with three horizontal strokes over it.",
     "kEH_Func": "Logogram (sanctuary of Sokar)",
     "kEH_FVal": "šṯy.t",
     "kEH_UniK": "HJ O160",
@@ -37748,7 +37867,7 @@ unikemet = {
   "𓾳": {
     "kEH_Cat": "O-09-103",
     "kEH_Core": "C",
-    "kEH_Desc": "A pronaos or kiosk, with a rounded roof, supported on two colums with a flower-like capital on the outside of the lower walls.",
+    "kEH_Desc": "A pronaos or kiosk, with a rounded roof, supported on two columns with a flower-like capital on the outside of the lower walls.",
     "kEH_Func": "Logogram (portal, portico)",
     "kEH_FVal": "hꜣy,t",
     "kEH_UniK": "HJ O184",
@@ -37759,7 +37878,7 @@ unikemet = {
   "𓾴": {
     "kEH_Cat": "O-09-105",
     "kEH_Core": "C",
-    "kEH_Desc": "A pronaos or kiosk, with a rounded roof, supported on four colums with a flower-like capital, connected to the lower walls.",
+    "kEH_Desc": "A pronaos or kiosk, with a rounded roof, supported on four columns with a flower-like capital, connected to the lower walls.",
     "kEH_Func": "Logogram (ceiling, heaven)",
     "kEH_FVal": "hꜣy.t",
     "kEH_UniK": "HJ O185",
@@ -37862,7 +37981,7 @@ unikemet = {
   "𓾿": {
     "kEH_Cat": "O-10-040",
     "kEH_Core": "C",
-    "kEH_Desc": "An open booth supported by a pole with an circular inset (P11A).",
+    "kEH_Desc": "An open booth supported by a pole with a circular inset (P11A).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜥrḳ",
     "kEH_UniK": "HJ O180",
@@ -37883,7 +38002,7 @@ unikemet = {
   "𓿁": {
     "kEH_Cat": "O-11-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A carrying chair (Q2), written inside a booth or pavillion, with two columns resembing a stem of papyrus with a bud (M13), with a curved roof.",
+    "kEH_Desc": "A carrying chair (Q2), written inside a booth or pavilion, with two columns resembling a stem of papyrus with a bud (M13), with a curved roof.",
     "kEH_Func": "Classifier throne dais",
     "kEH_FVal": "ṯnṯꜣ.t",
     "kEH_UniK": "HJ O023B",
@@ -37997,7 +38116,7 @@ unikemet = {
   "𓿍": {
     "kEH_Cat": "O-11-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A booth with a round roof, supported by three columns, with the outer two having a flower-like capital, with the middle column resembling a rolled up herdsman's shelter of papyrus (V18); on top of an alabaster basin with a diamond shaped inner marking (W3).",
+    "kEH_Desc": "A booth with a round roof, supported by three columns, with the outer two having a flower-like capital, with the middle column resembling a rolled-up herdsman's shelter of papyrus (V18); on top of an alabaster basin with a diamond shaped inner marking (W3).",
     "kEH_Func": "Logogram (festival)",
     "kEH_FVal": "ḥb",
     "kEH_UniK": "O023V"
@@ -38095,7 +38214,7 @@ unikemet = {
   "𓿗": {
     "kEH_Cat": "O-11-056",
     "kEH_Core": "C",
-    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, without a beard (E11), with a round vessel with an upstanding rim (W24) above its back; written inside a booth consisiting of the sky (N1), supported by two columns resembling a stem of papyrus with a bud (M13), with an abacus; on top of a base (O210A); on a broad base.",
+    "kEH_Desc": "A ram (Ovis longipes palaeo-aegyptiacus), standing, without a beard (E11), with a round vessel with an upstanding rim (W24) above its back; written inside a booth consisting of the sky (N1), supported by two columns resembling a stem of papyrus with a bud (M13), with an abacus; on top of a base (O210A); on a broad base.",
     "kEH_Func": "Phonemogram/Logogram",
     "kEH_FVal": "ḥꜣy.t n bꜣ",
     "kEH_UniK": "HJ O283",
@@ -38188,7 +38307,7 @@ unikemet = {
   "𓿠": {
     "kEH_Cat": "O-16-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A column with a base, with a tenon at the top, with a spiral, winding counter-clockwise away from its central point, ending at the right lower corner after about 1,5 turns (Z7) attached to the top, towards the front.",
+    "kEH_Desc": "A column with a base, with a tenon at the top, with a spiral, winding counterclockwise away from its central point, ending at the right lower corner after about one and a half turns(Z7) attached to the top, towards the front.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wṯs",
     "kEH_UniK": "O028E"
@@ -38454,7 +38573,7 @@ unikemet = {
   "𓿽": {
     "kEH_Cat": "O-21-020",
     "kEH_Core": "C",
-    "kEH_Desc": "A fence, consisiting of three forwards angled lines with a bulb at the end, on top of a horizontal base.",
+    "kEH_Desc": "A fence, consisting of three forward angled lines with a bulb at the end, on top of a horizontal base.",
     "kEH_Func": "Logogram (field, arable land)",
     "kEH_FVal": "ꜣḥ.t",
     "kEH_UniK": "HJ O043A",
@@ -38465,7 +38584,7 @@ unikemet = {
   "𓿾": {
     "kEH_Cat": "O-21-021",
     "kEH_Core": "C",
-    "kEH_Desc": "A fence, consisiting of four forwards angled lines with a bulb at the end, on top of a horizontal base.",
+    "kEH_Desc": "A fence, consisting of four forward angled lines with a bulb at the end, on top of a horizontal base.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šsp",
     "kEH_UniK": "HJ O043B",
@@ -38560,7 +38679,7 @@ unikemet = {
   "𔀈": {
     "kEH_Cat": "O-24-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A tower of a fortress, with battlements on the top resembling a sand covered mountain over the edge of the cultivated areas (N26), with a forwards, downwards line coming from the front.",
+    "kEH_Desc": "A tower of a fortress, with battlements on the top resembling a sand covered mountain over the edge of the cultivated areas (N26), with a forward, downward line coming from the front.",
     "kEH_Func": "Classifier tower",
     "kEH_FVal": "swn.w",
     "kEH_UniK": "O233B"
@@ -38610,7 +38729,7 @@ unikemet = {
   "𔀍": {
     "kEH_Cat": "O-24-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A domed building, in the form of a quarter of a circle, with a smaller quarter circle inside the corner away from the reading direction, with an extended pole at the back, with multipe perpendicular lines on top of the curved line. ",
+    "kEH_Desc": "A domed building, in the form of a quarter of a circle, with a smaller quarter circle inside the corner away from the reading direction, with an extended pole at the back, with multiple perpendicular lines on top of the curved line. ",
     "kEH_Func": "Classifier Harim, inner chamber",
     "kEH_FVal": "ꞽp.t",
     "kEH_UniK": "O045A"
@@ -38626,7 +38745,7 @@ unikemet = {
   "𔀏": {
     "kEH_Cat": "O-24-027",
     "kEH_Core": "C",
-    "kEH_Desc": "A bird trap, with two vertical poles at the back, with a line running from the front to the vertical poles, with multipe perpendicular lines on top of the curved line.",
+    "kEH_Desc": "A bird trap, with two vertical poles at the back, with a line running from the front to the vertical poles, with multiple perpendicular lines on top of the curved line.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽp.t",
     "kEH_UniK": "T026K",
@@ -38671,7 +38790,7 @@ unikemet = {
   "𔀔": {
     "kEH_Cat": "O-24-047",
     "kEH_Core": "C",
-    "kEH_Desc": "A rectangular stone slab or brick, on top of two stone slaps or bricks, arragned horizontally, with a  bit of space between them.",
+    "kEH_Desc": "A rectangular stone slab or brick, on top of two stone slaps or bricks, arranged horizontally, with a bit of space between them.",
     "kEH_Func": "Classifier part of a building",
     "kEH_FVal": "sꜣw",
     "kEH_UniK": "HJ O231",
@@ -38715,7 +38834,7 @@ unikemet = {
   "𔀙": {
     "kEH_Cat": "O-24-079",
     "kEH_Core": "C",
-    "kEH_Desc": "An arial view of a platform with a stairway/walkway attached to the left side.",
+    "kEH_Desc": "An aerial view of a platform with a stairway/walkway attached to the left side.",
     "kEH_Func": "Classifier stair",
     "kEH_UniK": "O380"
   },
@@ -38743,7 +38862,7 @@ unikemet = {
   "𔀜": {
     "kEH_Cat": "P-01-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship with a upwards curved prow and a horizontal stern, with a low cone shape inside the boat/ship; on top of a base of two blocks, on a longer horizontal line.",
+    "kEH_Desc": "A boat/ship with an upwards curved prow and a horizontal stern, with a low cone shape inside the boat/ship; on top of a base of two blocks, on a longer horizontal line.",
     "kEH_Func": "Logogram (ship, boat, bark)",
     "kEH_FVal": "wꞽꜣ",
     "kEH_UniK": "HJ P016",
@@ -38786,7 +38905,7 @@ unikemet = {
   "𔀠": {
     "kEH_Cat": "P-01-012",
     "kEH_Core": "C",
-    "kEH_Desc": "An upside down boat/ship, resembling a crescent moon, on top of a rectangle representing water, with a vertical rectangle inside the boat/ship.",
+    "kEH_Desc": "An upside-down boat/ship, resembling a crescent moon, on top of a rectangle representing water, with a vertical rectangle inside the boat/ship.",
     "kEH_Func": "Classifier to upset, to overturn",
     "kEH_FVal": "pnꜥ",
     "kEH_UniK": "P017R"
@@ -38832,7 +38951,7 @@ unikemet = {
   "𔀥": {
     "kEH_Cat": "P-01-027",
     "kEH_Core": "C",
-    "kEH_Desc": "An upside down boat/ship, resembling a crescent moon, with an oar/rudder at the back.",
+    "kEH_Desc": "An upside-down boat/ship, resembling a crescent moon, with an oar/rudder at the back.",
     "kEH_Func": "Classifier (to capsize)",
     "kEH_FVal": "ꜥḳw",
     "kEH_UniK": "HJ P024",
@@ -38974,7 +39093,7 @@ unikemet = {
   "𔀴": {
     "kEH_Cat": "P-01-050",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship with a prow and stern resembling the handle of a handle of a sickle (U1), on top of a rectangle resembling water, with a low cone shape inside the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "A boat/ship with a prow and stern resembling the handle of a sickle (U1), on top of a rectangle resembling water, with a low cone shape inside the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Classifier bark/boat",
     "kEH_FVal": "(m)sk.t",
     "kEH_UniK": "HJ P004A",
@@ -38995,7 +39114,7 @@ unikemet = {
   "𔀶": {
     "kEH_Cat": "P-01-052",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship with a vertical prow with a forwards, downwards rope coming from it, with a vertical stern, on top of a rectangle resembling water, with a low cone shape inside the boat/ship.",
+    "kEH_Desc": "A boat/ship with a vertical prow with a forward, downward rope coming from it, with a vertical stern, on top of a rectangle resembling water, with a low cone shape inside the boat/ship.",
     "kEH_Func": "Classifier bark/boat",
     "kEH_FVal": "ḥbꜣ",
     "kEH_UniK": "HJ P071A",
@@ -39072,7 +39191,7 @@ unikemet = {
   "𔀿": {
     "kEH_Cat": "P-02-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship, resembling a crescent moon, on top of a rectangle of water, with a sail, with a cross-bar over the mast, with the mast supported by ropes on either side, with an oar/rudder at the back.",
+    "kEH_Desc": "A boat/ship, resembling a crescent moon, on top of a rectangle of water, with a sail, with a crossbar over the mast, with the mast supported by ropes on either side, with an oar/rudder at the back.",
     "kEH_Func": "Logogram (to go south (sailing upstream))",
     "kEH_FVal": "ḫntꞽ",
     "kEH_UniK": "HJ P002H",
@@ -39093,7 +39212,7 @@ unikemet = {
   "𔁁": {
     "kEH_Cat": "P-02-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship, resembling a crescent moon, with a sail, with a cross-bar over the mast.",
+    "kEH_Desc": "A boat/ship, resembling a crescent moon, with a sail, with a crossbar over the mast.",
     "kEH_Func": "Logogram (to go south (sailing upstream))",
     "kEH_FVal": "ḫntꞽ",
     "kEH_UniK": "HJ P002B",
@@ -39137,7 +39256,7 @@ unikemet = {
   "𔁅": {
     "kEH_Cat": "P-03-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship with a prow and stern resembling the handle of a sickle (U1), on top of a rectangle resembling water, with a shrine, seen from the side, with a downwards sloping roof, with an uraeus at the front of the roof (O18A) inside the boat/ship.",
+    "kEH_Desc": "A boat/ship with a prow and stern resembling the handle of a sickle (U1), on top of a rectangle resembling water, with a shrine, seen from the side, with a downward sloping roof, with an uraeus at the front of the roof (O18A) inside the boat/ship.",
     "kEH_Func": "Classifier bark/boat",
     "kEH_FVal": "nšm.t",
     "kEH_UniK": "HJ P037",
@@ -39147,7 +39266,7 @@ unikemet = {
   "𔁆": {
     "kEH_Cat": "P-03-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship with a prow and stern resembling the handle of a sickle (U1), on top of a canal (N36), with a shrine, seen from the side, with a downwards sloping roof, with an uraeus at the front of the roof (O18A) inside the boat/ship.",
+    "kEH_Desc": "A boat/ship with a prow and stern resembling the handle of a sickle (U1), on top of a canal (N36), with a shrine, seen from the side, with a downward sloping roof, with an uraeus at the front of the roof (O18A) inside the boat/ship.",
     "kEH_Func": "Logogram/classifier (bark/boat)",
     "kEH_FVal": "wꞽꜣ",
     "kEH_UniK": "P037A"
@@ -39162,7 +39281,7 @@ unikemet = {
   "𔁈": {
     "kEH_Cat": "P-03-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship, resembling a crescent moon, with the head of a falcon, with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on top of the head, on top of the prow and stern, on top of a rectangle of water, with a shrine, seen from the side, with a downwards sloping roof, with an uraeus at the front of the roof (O18A) inside the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "A boat/ship, resembling a crescent moon, with the head of a falcon, with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on top of the head, on top of the prow and stern, on top of a rectangle of water, with a shrine, seen from the side, with a downward sloping roof, with an uraeus at the front of the roof (O18A) inside the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Classifier boat/ship",
     "kEH_FVal": "wṯs-nfr.w",
     "kEH_UniK": "HJ P039",
@@ -39173,7 +39292,7 @@ unikemet = {
   "𔁉": {
     "kEH_Cat": "P-03-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship, resembling a crescent moon, with the head of a falcon, with the sun, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6) on top of the head, on top of the prow and stern, prow lower than the stern, on top of a rectangle of water, with a shrine, seen from the side, with a downwards sloping roof, with an uraeus at the front of the roof (O18A) inside the boat/ship, with an animal (leonid?) standing, wearing headgear resembling two feathers on top of goat horns, on top of a standard used for carrying religious symbols (R12) in front of the shrine, with a god with the head of a falcon, standing in front of the rudders, controlling the rudders with a horizontal rope with an ureaus at the front.",
+    "kEH_Desc": "A boat/ship, resembling a crescent moon, with the head of a falcon, with the sun, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6) on top of the head, on top of the prow and stern, prow lower than the stern, on top of a rectangle of water, with a shrine, seen from the side, with a downward sloping roof, with an uraeus at the front of the roof (O18A) inside the boat/ship, with an animal (leonid?) standing, wearing headgear resembling two feathers on top of goat horns, on top of a standard used for carrying religious symbols (R12) in front of the shrine, with a god with the head of a falcon, standing in front of the rudders, controlling the rudders with a horizontal rope with an uraeus at the front.",
     "kEH_Func": "Classifier boat/ship",
     "kEH_FVal": "wṯs-nfr(.w)",
     "kEH_UniK": "HJ P040",
@@ -39271,7 +39390,7 @@ unikemet = {
   "𔁔": {
     "kEH_Cat": "P-03-042",
     "kEH_Core": "C",
-    "kEH_Desc": "A boat/ship with a vertical prow and stern, on top of a rectangle representing water, with a shepherds crook with a package lashed to it, with a tie above and below the package (T18) inside the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "A boat/ship with a vertical prow and stern, on top of a rectangle representing water, with a shepherd's crook with a package lashed to it, with a tie above and below the package (T18) inside the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Classifier bark/boat",
     "kEH_FVal": "(m)skt.t",
     "kEH_UniK": "HJ P046",
@@ -39326,7 +39445,7 @@ unikemet = {
   "𔁚": {
     "kEH_Cat": "P-03-056",
     "kEH_Core": "C",
-    "kEH_Desc": "Man, running, wearing the white crown (S1), looking backwards, right arm extended in front, forearm nearly horizontal, hand at the hight of the waist, left arm raised at the back, forearm nearly veritcal, handpalm inwards; with a star (N14) written above the right arm, at the hight of the head; inside a boat/ship with a prow and stern resembling the handle of a sickle (U1) (P106), with an oar/rudder at the back.",
+    "kEH_Desc": "Man, running, wearing the white crown (S1), looking backwards, right arm extended in front, forearm nearly horizontal, hand at the height of the waist, left arm raised at the back, forearm nearly vertical, hand palm inwards; with a star (N14) written above the right arm, at the height of the head; inside a boat/ship with a prow and stern resembling the handle of a sickle (U1) (P106), with an oar/rudder at the back.",
     "kEH_Func": "Logogram (Orion (constellation))",
     "kEH_FVal": "sꜣḥ",
     "kEH_UniK": "P108A"
@@ -39340,7 +39459,7 @@ unikemet = {
   "𔁜": {
     "kEH_Cat": "P-03-060",
     "kEH_Core": "C",
-    "kEH_Desc": "God, standing, with the head of a falcon, with with a sun-disk (N5) on his head, facing towards the back, both arms raised in front, hands held vertically, handpalms outwards, in front of a goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the hight of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop (C228); inside a boat/ship with a prow and stern resembling the handle of a sickle (U1), on top of a canal (N36).",
+    "kEH_Desc": "God, standing, with the head of a falcon, with a sun-disk (N5) on his head, facing towards the back, both arms raised in front, hands held vertically, hand palms outwards, in front of a goddess, standing, with a headdress of bovine horns with a sun disk (F102), right arm forward, hand at the height of the waist, holding a sceptre with a straight shaft, forked bottom and head of the Seth animal (S40) of the same size as the woman, left arm hanging beside the body, holding a tie or strap, used with sandals (ankh-sign, S34), at the loop (C228); inside a boat/ship with a prow and stern resembling the handle of a sickle (U1), on top of a canal (N36).",
     "kEH_Func": "Classifier bark",
     "kEH_FVal": "wꞽꜣ",
     "kEH_UniK": "HJ P054",
@@ -39351,6 +39470,7 @@ unikemet = {
   "𔁝": {
     "kEH_Cat": "P-03-062",
     "kEH_Core": "C",
+    "kEH_Desc": "A boat/ship, resembling a crescent moon, on top of a rectangle of water, with a sail, with a point at the bottom angling backwards, with a distinctive beam at the top, with rigging; with a god, standing behind the sail on a platform, with the head of a falcon, wearing the double crown, arms forward, holding the ropes of a net which is under the front of the boat in his lower hand, and with an harpoon with the head of a falcon in his upper hand, the point of the harpoon in the net; with a goddess, kneeling in front of the sail on a platform, with a seat on her head, both arms forwards, holding the ropes of a net.",
     "kEH_UniK": "HJ P055",
     "kEH_JSesh": "P55",
     "kEH_HG": "P55",
@@ -39387,7 +39507,7 @@ unikemet = {
   "𔁡": {
     "kEH_Cat": "P-03-068",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mnḫ.t",
     "kEH_UniK": "V047B"
@@ -39395,7 +39515,7 @@ unikemet = {
   "𔁢": {
     "kEH_Cat": "P-03-070",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher stern than prow, with the head of an antilope (F81) on top of the stern, on top of a rectangle representing water, with loop of cord with the ends upwards (V6) writen inside the boat.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher stern than prow, with the head of an antelope (F81) on top of the stern, on top of a rectangle representing water, with loop of cord with the ends upwards (V6) written inside the boat.",
     "kEH_Func": "Logogram (cloth, clothing)",
     "kEH_FVal": "mnḫ.t",
     "kEH_UniK": "HJ V047A",
@@ -39405,7 +39525,7 @@ unikemet = {
   "𔁣": {
     "kEH_Cat": "P-03-071",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher stern than prow, with the head of an antilope (F81) on top of the stern, with a low cone shape inside the boat/ship.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher stern than prow, with the head of an antelope (F81) on top of the stern, with a low cone shape inside the boat/ship.",
     "kEH_Func": "Logogram (cloth, clothing)",
     "kEH_FVal": "mnḫ.t",
     "kEH_UniK": "P058A"
@@ -39420,7 +39540,7 @@ unikemet = {
   "𔁥": {
     "kEH_Cat": "P-03-076",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow, on top of a rectangle representing water, with a falcon (G5) standing on top of a façade of a shrine with a flat roof, with oblique sides, with a large doorway (O21B), inside the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow, on top of a rectangle representing water, with a falcon (G5) standing on top of a façade of a shrine with a flat roof, with oblique sides, with a large doorway (O21B), inside the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Logogram ḥnw (Henu-bark of Sokar) or phonemogram skr",
     "kEH_FVal": "ḥnw | skr",
     "kEH_UniK": "HJ P059B",
@@ -39431,7 +39551,7 @@ unikemet = {
   "𔁦": {
     "kEH_Cat": "P-03-077",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow, on top of a rectangle with a broad base, with a falcon (G5) standing on top of a low cone shape, written inside the boat/ship.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow, on top of a rectangle with a broad base, with a falcon (G5) standing on top of a low cone shape, written inside the boat/ship.",
     "kEH_Func": "Logogram (Henu-bark of Sokar)",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "HJ P059A",
@@ -39442,7 +39562,7 @@ unikemet = {
   "𔁧": {
     "kEH_Cat": "P-03-078",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow, on top of a rectangle representing water, with a falcon (G5) standing on top of a tall cone shape, inside the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow, on top of a rectangle representing water, with a falcon (G5) standing on top of a tall cone shape, inside the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Logogram (Henu-bark of Sokar)",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "P059D",
@@ -39451,7 +39571,7 @@ unikemet = {
   "𔁨": {
     "kEH_Cat": "P-03-083",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow, on top of a sledge with two vertical internal strokes, with a falcon (G5) staninding on top of a rectangular shrine, inside the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow, on top of a sledge with two vertical internal strokes, with a falcon (G5) standing on top of a rectangular shrine, inside the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Classifier bark of Sokar",
     "kEH_FVal": "ḥny",
     "kEH_UniK": "HJ P115",
@@ -39462,7 +39582,7 @@ unikemet = {
   "𔁩": {
     "kEH_Cat": "P-03-085",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow, on top of a sledge with two vertical internal strokes, with a falcon (G5) staninding on top of a low cone shape, inside the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow, on top of a sledge with two vertical internal strokes, with a falcon (G5) standing on top of a low cone shape, inside the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Classifier bark of Sokar",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "HJ P060A",
@@ -39473,7 +39593,7 @@ unikemet = {
   "𔁪": {
     "kEH_Cat": "P-03-086",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with a rudder, with the head of an antilope (F81) on top of the prow, facing inwards, with a downwards line with multiple horizontal lines written over it coming from the head, on top of a sledge.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with a rudder, with the head of an antelope (F81) on top of the prow, facing inwards, with a downward line with multiple horizontal lines written over it coming from the head, on top of a sledge.",
     "kEH_Func": "Classifier bark of Sokar",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "HJ P060B",
@@ -39484,7 +39604,7 @@ unikemet = {
   "𔁫": {
     "kEH_Cat": "P-03-089",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher stern than prow, with the head of an antilope (F81) on top of the stern, on top of a rectangle representing water, with a tall shrine with a round roof, with two vertical lines enclosing the top, on a base, without internal decoration (GID O20D), written inisde the boat/ship.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher stern than prow, with the head of an antelope (F81) on top of the stern, on top of a rectangle representing water, with a tall shrine with a round roof, with two vertical lines enclosing the top, on a base, without internal decoration (GID O20D), written inside the boat/ship.",
     "kEH_Func": "Logogram (Henu-bark of Sokar)",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "P063",
@@ -39494,7 +39614,7 @@ unikemet = {
   "𔁬": {
     "kEH_Cat": "P-03-092",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher stern than prow, with the head of an antilope (F81) on top of the stern, with lines crossing the prow, on top of a sledge with two vertical internal strokes, with a tall shrine with a round roof, with two vertical lines enclosing the top, on a base, without internal decoration (GID O20D), written inisde the boat/ship.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher stern than prow, with the head of an antelope (F81) on top of the stern, with lines crossing the prow, on top of a sledge with two vertical internal strokes, with a tall shrine with a round roof, with two vertical lines enclosing the top, on a base, without internal decoration (GID O20D), written inside the boat/ship.",
     "kEH_Func": "Classifier bark of Sokar",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "HJ P068",
@@ -39514,7 +39634,7 @@ unikemet = {
   "𔁮": {
     "kEH_Cat": "P-03-100",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow, on top of a rectangle representing water, with a falcon (G5) standing on top of a low cone shape inside the boat/ship, with an oar/rudder at the back.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow, on top of a rectangle representing water, with a falcon (G5) standing on top of a low cone shape inside the boat/ship, with an oar/rudder at the back.",
     "kEH_Func": "Logogram (Henu-bark of Sokar)",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "HJ P066A",
@@ -39525,7 +39645,7 @@ unikemet = {
   "𔁯": {
     "kEH_Cat": "P-03-101",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher stern than prow, with the head of an antilope (F81) on top of the stern, on top of a rectangle representing water, with a falcon (G5) standing on top of a low cone shape inside the boat/ship, with an oar/rudder at the front.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher stern than prow, with the head of an antelope (F81) on top of the stern, on top of a rectangle representing water, with a falcon (G5) standing on top of a low cone shape inside the boat/ship, with an oar/rudder at the front.",
     "kEH_Func": "Logogram (Henu-bark of Sokar)",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "HJ P066",
@@ -39536,7 +39656,7 @@ unikemet = {
   "𔁰": {
     "kEH_Cat": "P-03-103",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with a rudder, with the head of an antilope (F81) on top of the prow, facing inwards, with a downwards line with multiple horizontal lines written over it coming from the head, on top of a sledge, with a falcon (G5), standing on top of a rectangular shrine, with vertical lines as internal detail, written inside the boat/ship.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with a rudder, with the head of an antelope (F81) on top of the prow, facing inwards, with a downward line with multiple horizontal lines written over it coming from the head, on top of a sledge, with a falcon (G5), standing on top of a rectangular shrine, with vertical lines as internal detail, written inside the boat/ship.",
     "kEH_Func": "Logogram (Sokar)",
     "kEH_FVal": "skr",
     "kEH_UniK": "HJ P116",
@@ -39547,7 +39667,7 @@ unikemet = {
   "𔁱": {
     "kEH_Cat": "P-03-107",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher stern than prow, with the head of an antilope (F81) on top of the stern, on top of a block shaped shrine or table, with a falcon (G5) standing on top of a low cone shape inside the boat/ship, with an oar/rudder at the front.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher stern than prow, with the head of an antelope (F81) on top of the stern, on top of a block shaped shrine or table, with a falcon (G5) standing on top of a low cone shape inside the boat/ship, with an oar/rudder at the front.",
     "kEH_Func": "Logogram (Sokar)",
     "kEH_FVal": "skr",
     "kEH_UniK": "P069A"
@@ -39562,7 +39682,7 @@ unikemet = {
   "𔁳": {
     "kEH_Cat": "P-03-112",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow, on top of a rectangle representing water, with a falcon with spread wings, on top of a low cone shape inside the boat/ship, embracing the cone with its wings, with an oar/rudder at the back.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow, on top of a rectangle representing water, with a falcon with spread wings, on top of a low cone shape inside the boat/ship, embracing the cone with its wings, with an oar/rudder at the back.",
     "kEH_Func": "Logogram (Henu-bark of Sokar)",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "HJ P066B",
@@ -39572,7 +39692,7 @@ unikemet = {
   "𔁴": {
     "kEH_Cat": "P-03-113",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow, on top of a sledge represented by four vertical lines between two horizontal lines, with a falcon with spread wings, on top of a low cone shape inside the boat/ship, embracing the cone with its wings, with an oar/rudder at the back.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow, on top of a sledge represented by four vertical lines between two horizontal lines, with a falcon with spread wings, on top of a low cone shape inside the boat/ship, embracing the cone with its wings, with an oar/rudder at the back.",
     "kEH_Func": "Logogram (Henu-bark of Sokar)",
     "kEH_FVal": "ḥnw",
     "kEH_UniK": "HJ P097A",
@@ -39582,7 +39702,7 @@ unikemet = {
   "𔁵": {
     "kEH_Cat": "P-03-114",
     "kEH_Core": "C",
-    "kEH_Desc": "A moon-sickle shaped boat with an higher prow than stern, with the head of an antilope (F81) on top of the prow, with a downwards line with multiple horizontal lines written over it coming from the head, on top of a sledge represented by four vertical lines between two horizontal lines, with a falcon with spread wings, on top of a low cone shape inside the boat/ship, embracing the cone with its wings, with an oar/rudder at the back.",
+    "kEH_Desc": "A moon-sickle shaped boat with a higher prow than stern, with the head of an antelope (F81) on top of the prow, with a downward line with multiple horizontal lines written over it coming from the head, on top of a sledge represented by four vertical lines between two horizontal lines, with a falcon with spread wings, on top of a low cone shape inside the boat/ship, embracing the cone with its wings, with an oar/rudder at the back.",
     "kEH_Func": "Logogram (Sokar)",
     "kEH_FVal": "skr",
     "kEH_UniK": "HJ P097C",
@@ -39592,7 +39712,7 @@ unikemet = {
   "𔁶": {
     "kEH_Cat": "P-04-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A fishersman's boat, with a net inside the boat, with internal detail.",
+    "kEH_Desc": "A fisherman's boat, with a net inside the boat, with internal detail.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wꜣḥ",
     "kEH_UniK": "P004F",
@@ -39601,7 +39721,7 @@ unikemet = {
   "𔁷": {
     "kEH_Cat": "P-04-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A fishersman's boat, with a net inside the boat, without internal detail.",
+    "kEH_Desc": "A fisherman's boat, with a net inside the boat, without internal detail.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wḥꜥ",
     "kEH_UniK": "HJ P004B",
@@ -39612,7 +39732,7 @@ unikemet = {
   "𔁸": {
     "kEH_Cat": "P-04-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A fishersman's boat, on top of a rectangle representing water, with a net inside the boat, with internal detail.",
+    "kEH_Desc": "A fisherman's boat, on top of a rectangle representing water, with a net inside the boat, with internal detail.",
     "kEH_Func": "Logogram (to loosen, to explain)",
     "kEH_FVal": "wḥꜥ",
     "kEH_UniK": "HJ P004C",
@@ -39671,7 +39791,7 @@ unikemet = {
   "𔁾": {
     "kEH_Cat": "P-06-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A sail resembling a half circle, with the mast over the sail, with mulitple lines of rigging coming from the top beam of the sail to the mast.",
+    "kEH_Desc": "A sail resembling a half circle, with the mast over the sail, with multiple lines of rigging coming from the top beam of the sail to the mast.",
     "kEH_Func": "Logogram (wind, breath, air)",
     "kEH_FVal": "ṯꜣw",
     "kEH_UniK": "HJ P005F",
@@ -39745,7 +39865,7 @@ unikemet = {
   "𔂆": {
     "kEH_Cat": "P-06-035",
     "kEH_Core": "C",
-    "kEH_Desc": "A rectangular sail, with the mast over the sail, with a cross-beam over the sail, with rigging coming from the top of the sail to the mast.",
+    "kEH_Desc": "A rectangular sail, with the mast over the sail, with a crossbeam over the sail, with rigging coming from the top of the sail to the mast.",
     "kEH_Func": "Logogram (wind, breath, air)",
     "kEH_FVal": "ṯꜣw",
     "kEH_UniK": "HJ P005H",
@@ -39763,7 +39883,7 @@ unikemet = {
   "𔂈": {
     "kEH_Cat": "P-06-045",
     "kEH_Core": "C",
-    "kEH_Desc": "A sail, with a point at the bottom, angling backwards, with a distinct beam at the top, with a mast in front of the sail, with a cross-beam over the mast, with rigging coming from the top of the sail to the mast.",
+    "kEH_Desc": "A sail, with a point at the bottom, angling backwards, with a distinct beam at the top, with a mast in front of the sail, with a crossbeam over the mast, with rigging coming from the top of the sail to the mast.",
     "kEH_Func": "Logogram (wind, breath, air)",
     "kEH_FVal": "ṯꜣw",
     "kEH_UniK": "P005Y",
@@ -39772,7 +39892,7 @@ unikemet = {
   "𔂉": {
     "kEH_Cat": "P-06-046",
     "kEH_Core": "C",
-    "kEH_Desc": "A sail, with a point at the bottom, angling forwards, with a distinct beam at the top, with a mast in front of the sail, with a cross-beam over the mast.",
+    "kEH_Desc": "A sail, with a point at the bottom, angling forwards, with a distinct beam at the top, with a mast in front of the sail, with a crossbeam over the mast.",
     "kEH_Func": "Classifier wind, breath, air",
     "kEH_FVal": "mḥy.t",
     "kEH_UniK": "HJ P005L",
@@ -39804,7 +39924,7 @@ unikemet = {
   "𔂌": {
     "kEH_Cat": "P-07-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A mast of a ship, with two prongs,  resembling a sceptre (S42).",
+    "kEH_Desc": "A mast of a ship, with two prongs, resembling a sceptre (S42).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜥḥꜥ",
     "kEH_UniK": "P006C",
@@ -39838,7 +39958,7 @@ unikemet = {
   "𔂐": {
     "kEH_Cat": "P-07-028",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), written over a mast of a ship with two prongs, connected by vertical lines (P6).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), written over a mast of a ship with two prongs, connected by vertical lines (P6).",
     "kEH_Func": "Logogram (snake divinity)",
     "kEH_FVal": "ꜥḥꜥ.w",
     "kEH_UniK": "HJ P083",
@@ -39861,7 +39981,7 @@ unikemet = {
   "𔂓": {
     "kEH_Cat": "P-09-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A stilistic representation of an arm holding an oar.",
+    "kEH_Desc": "A stylistic representation of an arm holding an oar.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ẖn",
     "kEH_UniK": "HJ P086",
@@ -39872,7 +39992,7 @@ unikemet = {
   "𔂔": {
     "kEH_Cat": "P-10-010",
     "kEH_Core": "C",
-    "kEH_Desc": "An upwards bent line, with the ends broadening.",
+    "kEH_Desc": "An upward bent line, with the ends broadening.",
     "kEH_Func": "Classifier (ferries/bridges)",
     "kEH_FVal": "mꜣḏw",
     "kEH_UniK": "HJ P090",
@@ -39900,7 +40020,7 @@ unikemet = {
   "𔂗": {
     "kEH_Cat": "P-11-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A part of the steering gear of ships, consisiting of one beam.",
+    "kEH_Desc": "A part of the steering gear of ships, consisting of one beam.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥp",
     "kEH_UniK": "HJ AA005B",
@@ -40152,7 +40272,7 @@ unikemet = {
   "𔂲": {
     "kEH_Cat": "Q-05-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A chest with a downwards sloping lid, with legs.",
+    "kEH_Desc": "A chest with a downward sloping lid, with legs.",
     "kEH_Func": "Classifier box",
     "kEH_FVal": "hn(w)",
     "kEH_UniK": "HJ Q027",
@@ -40163,7 +40283,7 @@ unikemet = {
   "𔂳": {
     "kEH_Cat": "Q-05-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A wide cup (W10), with two maces with a pear-shaped head (T3), and a stick/staff with a cone on top with a crosbar below the cone.",
+    "kEH_Desc": "A wide cup (W10), with two maces with a pear-shaped head (T3), and a stick/staff with a cone on top with a crossbar below the cone.",
     "kEH_Func": "Logogram (requirements, needs)",
     "kEH_FVal": "dbḥ.w",
     "kEH_UniK": "Q028B"
@@ -40272,7 +40392,7 @@ unikemet = {
   },
   "𔂾": {
     "kEH_Cat": "Q-05-036",
-    "kEH_Desc": "A rectangular coffin with a rounded lid, and upstanding sides, with legs at the side, with the top piece of a sistrum in the form of a shrine encosed by two curls on top of the lid.",
+    "kEH_Desc": "A rectangular coffin with a rounded lid, and upstanding sides, with legs at the side, with the top piece of a sistrum in the form of a shrine encased by two curls on top of the lid.",
     "kEH_UniK": "HJ Q035",
     "kEH_JSesh": "Q35",
     "kEH_HG": "Q35",
@@ -40281,7 +40401,7 @@ unikemet = {
   "𔂿": {
     "kEH_Cat": "Q-05-037",
     "kEH_Core": "C",
-    "kEH_Desc": "A box or shrine, with a rounded lid and upstanding edges, with the head of a bubalis antilope on top of the lid.",
+    "kEH_Desc": "A box or shrine, with a rounded lid and upstanding edges, with the head of a bubalis antelope on top of the lid.",
     "kEH_Func": "Logogram (crocodopolis)",
     "kEH_FVal": "šd.t",
     "kEH_UniK": "HJ Q047",
@@ -40437,7 +40557,7 @@ unikemet = {
   "𔃏": {
     "kEH_Cat": "R-01-001",
     "kEH_Core": "C",
-    "kEH_Desc": "An one legged table.",
+    "kEH_Desc": "An one-legged table.",
     "kEH_Func": "Classifier altar",
     "kEH_FVal": "ḫꜣ(w).t",
     "kEH_UniK": "HJ R001E",
@@ -40448,7 +40568,7 @@ unikemet = {
   "𔃐": {
     "kEH_Cat": "R-01-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Four circular items, arranged horizontally, on a one legged table with a bowl-shaped surface.",
+    "kEH_Desc": "Four circular items, arranged horizontally, on a one-legged table with a bowl-shaped surface.",
     "kEH_Func": "Logogram (altar)",
     "kEH_FVal": "ḫꜣw.t",
     "kEH_UniK": "HJ R001H",
@@ -40592,7 +40712,7 @@ unikemet = {
   "𔃡": {
     "kEH_Cat": "R-02-060",
     "kEH_Core": "C",
-    "kEH_Desc": "A cluster of offerings, consisiting of a conical loaf (X8), two oval loafs (X4), a round loaf (X6), a piece of flesh (F51), a wide cup (W10) and two circular items, arranged on top of a table with an inwards incline of the legs, with a horizontal beam connecting the legs, with a vertical beam connecting the surface and horizontal beam, with a cone at the far side.",
+    "kEH_Desc": "A cluster of offerings, consisting of a conical loaf (X8), two oval loafs (X4), a round loaf (X6), a piece of flesh (F51), a wide cup (W10) and two circular items, arranged on top of a table with an inwards incline of the legs, with a horizontal beam connecting the legs, with a vertical beam connecting the surface and horizontal beam, with a cone at the far side.",
     "kEH_Func": "Classifier altar",
     "kEH_FVal": "wḏḥ.w",
     "kEH_UniK": "R003AM"
@@ -40640,7 +40760,7 @@ unikemet = {
   "𔃦": {
     "kEH_Cat": "R-02-075",
     "kEH_Core": "C",
-    "kEH_Desc": "A cluster of offerings, consisting of a horziontal oval loaf of bread on top of two round loafs of bread, between two vertical oval loafs of bread, with a conical loaf of bread behind the vertical oval loaf, with a head of lettuce on top of the horizontal loaf; on top of a table with an inwards incline of the legs, with a horizontal beam directly under the surface, with a cone at the back.",
+    "kEH_Desc": "A cluster of offerings, consisting of a horizontal oval loaf of bread on top of two round loafs of bread, between two vertical oval loafs of bread, with a conical loaf of bread behind the vertical oval loaf, with a head of lettuce on top of the horizontal loaf; on top of a table with an inwards incline of the legs, with a horizontal beam directly under the surface, with a cone at the back.",
     "kEH_Func": "Logogram (offerings)",
     "kEH_FVal": "ḥtp(.w)",
     "kEH_UniK": "R003AO"
@@ -40689,7 +40809,7 @@ unikemet = {
   "𔃬": {
     "kEH_Cat": "R-03-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A one legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26).",
+    "kEH_Desc": "A one-legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26).",
     "kEH_Func": "Logogram (altar)",
     "kEH_FVal": "ḫꜣw.t",
     "kEH_UniK": "HJ R037",
@@ -40700,7 +40820,7 @@ unikemet = {
   "𔃭": {
     "kEH_Cat": "R-03-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A one legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26), with smoke/flame coming from the surface.",
+    "kEH_Desc": "A one-legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26), with smoke/flame coming from the surface.",
     "kEH_Func": "Logogram (altar)",
     "kEH_FVal": "ḫꜣw.t",
     "kEH_UniK": "HJ R036B",
@@ -40711,7 +40831,7 @@ unikemet = {
   "𔃮": {
     "kEH_Cat": "R-03-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A one legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26), with smoke/flame coming from the surface, with a pellet of incense at either side of the flame.",
+    "kEH_Desc": "A one-legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26), with smoke/flame coming from the surface, with a pellet of incense at either side of the flame.",
     "kEH_Func": "Classifier altar",
     "kEH_FVal": "ḳdf",
     "kEH_UniK": "R036D",
@@ -40720,7 +40840,7 @@ unikemet = {
   "𔃯": {
     "kEH_Cat": "R-03-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A one legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26), with a flame in the middle, with a pellet of insence at either side of the flame, with an oval shape, angling inwards at the tips of the table surface.",
+    "kEH_Desc": "A one-legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26), with a flame in the middle, with a pellet of incense at either side of the flame, with an oval shape, angling inwards at the tips of the table surface.",
     "kEH_Func": "Logogram (altar)",
     "kEH_FVal": "ḫꜣw.t",
     "kEH_UniK": "HJ R001I",
@@ -40730,7 +40850,7 @@ unikemet = {
   "𔃰": {
     "kEH_Cat": "R-03-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A one legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26), with a flame in the middle, with a pellet of insence at either side of the flame.",
+    "kEH_Desc": "A one-legged offering table with surface resembling a sand covered mountain over the edge of the cultivated areas (N26), with a flame in the middle, with a pellet of incense at either side of the flame.",
     "kEH_Func": "Classifier altar",
     "kEH_FVal": "ḳdf",
     "kEH_UniK": "R036E"
@@ -40738,7 +40858,7 @@ unikemet = {
   "𔃱": {
     "kEH_Cat": "R-03-013",
     "kEH_Core": "C",
-    "kEH_Desc": "An one legged offering table, with upstanding rims, resembling a bowl, with multiple pellets of incense inside the bowl.",
+    "kEH_Desc": "An one-legged offering table, with upstanding rims, resembling a bowl, with multiple pellets of incense inside the bowl.",
     "kEH_Func": "Logogram (altar)",
     "kEH_FVal": "ḫꜣw.t",
     "kEH_UniK": "HJ R038A",
@@ -40756,7 +40876,7 @@ unikemet = {
   "𔃳": {
     "kEH_Cat": "R-05-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A diamond shaped censer for fumigation, written horizontally, with a forwards, downwards line at the front. ",
+    "kEH_Desc": "A diamond shaped censer for fumigation, written horizontally, with a forward, downward line at the front. ",
     "kEH_Func": "Classifier fumigation/censing",
     "kEH_FVal": "kꜣp",
     "kEH_UniK": "R006B",
@@ -40855,7 +40975,7 @@ unikemet = {
   "𔃿": {
     "kEH_Cat": "R-07-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), connected at the base of a cloth wound on a pole, an emblem of divinity (R8).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), connected at the base of a cloth wound on a pole, an emblem of divinity (R8).",
     "kEH_Func": "Logogram (god and goddess)",
     "kEH_FVal": "nṯr-nṯr.t",
     "kEH_UniK": "HJ R045",
@@ -40866,7 +40986,7 @@ unikemet = {
   "𔄀": {
     "kEH_Cat": "R-07-010",
     "kEH_Core": "C",
-    "kEH_Desc": "Three times a cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), connected at the base of a cloth wound on a pole, an emblem of divinity (R8), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A).",
+    "kEH_Desc": "Three times a cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), connected at the base of a cloth wound on a pole, an emblem of divinity (R8), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A).",
     "kEH_Func": "Logogram (gods and goddesses)",
     "kEH_FVal": "nṯr.w-nṯr.wt",
     "kEH_UniK": "HJ R046",
@@ -40877,7 +40997,7 @@ unikemet = {
   "𔄁": {
     "kEH_Cat": "R-07-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), connected at the base of a cloth wound on a pole, an emblem of divinity (R8), in front of three vertical strokes in a triangular orientation with one stroke a the top (Z2A); on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), connected at the base of a cloth wound on a pole, an emblem of divinity (R8), in front of three vertical strokes in a triangular orientation with one stroke a the top (Z2A); on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A).",
     "kEH_Func": "Logogram (gods and goddesses)",
     "kEH_FVal": "nṯr.w-nṯr.wt",
     "kEH_UniK": "HJ R107",
@@ -40887,7 +41007,7 @@ unikemet = {
   "𔄂": {
     "kEH_Cat": "R-07-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra (Naja haja), standing up, with expanded hood (Uraeus) (I64), connected at the base of a cloth wound on a pole, an emblem of divinity (R8), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A).",
+    "kEH_Desc": "A cobra (Naja haje), standing up, with expanded hood (Uraeus) (I64), connected at the base of a cloth wound on a pole, an emblem of divinity (R8), on top of a standard used for the carrying of religious symbols with the vertical stick at the far side (R92A).",
     "kEH_Func": "Logogram (god and goddess)",
     "kEH_FVal": "nṯr-nṯr.t",
     "kEH_UniK": "HJ R107A",
@@ -40912,7 +41032,7 @@ unikemet = {
   "𔄅": {
     "kEH_Cat": "R-07-028",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over a butchers block with a rounded bottom, and a broad horizontal line on top, with the pole at the bottom of the block.",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over a butcher's block with a rounded bottom, and a broad horizontal line on top, with the pole at the bottom of the block.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "HJ R049",
@@ -40923,7 +41043,7 @@ unikemet = {
   "𔄆": {
     "kEH_Cat": "R-07-031",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over a butchers block with a broad base, with the pole at the bottom of the block.",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over a butcher's block with a broad base, with the pole at the bottom of the block.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "HJ R050",
@@ -40934,7 +41054,7 @@ unikemet = {
   "𔄇": {
     "kEH_Cat": "R-07-032",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written on top of a butchers block (T28).",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written on top of a butcher's block (T28).",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "R010I"
@@ -40949,7 +41069,7 @@ unikemet = {
   "𔄉": {
     "kEH_Cat": "R-07-040",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over top of a butchers block, with the pole at the bottom of the block, at the back of a rectangular base, with a feather (H6), angled forwards on the tip of the base.",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over top of a butcher's block, with the pole at the bottom of the block, at the back of a rectangular base, with a feather (H6), angled forwards on the tip of the base.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "HJ R010D",
@@ -40960,7 +41080,7 @@ unikemet = {
   "𔄊": {
     "kEH_Cat": "R-07-044",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over top of a butchers block, with the pole at the bottom of the block, on top of a rectangular base, with a feather (H6), angled forwards on the tip of the base and a sandy hill slope (N29) behind the butchers block.",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written over top of a butcher's block, with the pole at the bottom of the block, on top of a rectangular base, with a feather (H6), angled forwards on the tip of the base and a sandy hill slope (N29) behind the butcher's block.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "HJ R010G",
@@ -40971,7 +41091,7 @@ unikemet = {
   "𔄋": {
     "kEH_Cat": "R-07-046",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written between a sandy hill slope (N29) and a butchers block.",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written between a sandy hill slope (N29) and a butcher's block.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "R010J"
@@ -40979,7 +41099,7 @@ unikemet = {
   "𔄌": {
     "kEH_Cat": "R-07-047",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written between a butchers block and a sandy hill slope (N29), with a feather (H6), angled forwards at the front tip of the butchers block.",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written between a butcher's block and a sandy hill slope (N29), with a feather (H6), angled forwards at the front tip of the butcher's block.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "R010K"
@@ -40987,7 +41107,7 @@ unikemet = {
   "𔄍": {
     "kEH_Cat": "R-07-048",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written between a butchers block and a sandy hill slope (N29), with a feather (H6) on the butchers block and hill.",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), written between a butcher's block and a sandy hill slope (N29), with a feather (H6) on the butcher's block and hill.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "R010L"
@@ -40995,7 +41115,7 @@ unikemet = {
   "𔄎": {
     "kEH_Cat": "R-07-049",
     "kEH_Core": "C",
-    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), connected at the back of the hill country over the edge of the cultivated areas (N25), with a feather (H6) on the first hill, and a butchers block on the second hill.",
+    "kEH_Desc": "A cloth wound on a pole, an emblem of divinity (R8), connected at the back of the hill country over the edge of the cultivated areas (N25), with a feather (H6) on the first hill, and a butcher's block on the second hill.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "R010M"
@@ -41010,7 +41130,7 @@ unikemet = {
   "𔄐": {
     "kEH_Cat": "R-07-055",
     "kEH_Core": "C",
-    "kEH_Desc": "A feather (H6), angled forwards on top of a butchers block, on the front of a base, with a cloth wound on a pole, an emblem of divinity (R8) at the back of the base, with a half round loaf of bread (X1), above the hill country over the edge of the cultivated areas (N25), written between the butchers block and the emblem of divinity.",
+    "kEH_Desc": "A feather (H6), angled forwards on top of a butcher's block, on the front of a base, with a cloth wound on a pole, an emblem of divinity (R8) at the back of the base, with a half round loaf of bread (X1), above the hill country over the edge of the cultivated areas (N25), written between the butcher's block and the emblem of divinity.",
     "kEH_Func": "Logogram (necropolis)",
     "kEH_FVal": "ẖr.t-nṯr",
     "kEH_UniK": "R010E"
@@ -41028,7 +41148,7 @@ unikemet = {
   "𔄒": {
     "kEH_Cat": "R-08-003",
     "kEH_Core": "C",
-    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, handpalms inwards (D28), written over a column imitating a bundle of stalks tied together (R11), supporting a ripple of water (N35), written within an oval (N102).",
+    "kEH_Desc": "Two arms, raised upwards, with the forearms and hands vertical, hand palms inwards (D28), written over a column imitating a bundle of stalks tied together (R11), supporting a ripple of water (N35), written within an oval (N102).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḏd-kꜣ-ꞽmn",
     "kEH_UniK": "HJ R055",
@@ -41049,7 +41169,7 @@ unikemet = {
   "𔄔": {
     "kEH_Cat": "R-08-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A head-dress consisting of a sun disk with two feathers on top of the horns of a ram (S73), on top of a column imitating a bundle of stalks tied together (R11).",
+    "kEH_Desc": "A headdress consisting of a sun disk with two feathers on top of the horns of a ram (S73), on top of a column imitating a bundle of stalks tied together (R11).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḏd",
     "kEH_UniK": "R140"
@@ -41149,7 +41269,7 @@ unikemet = {
   "𔄞": {
     "kEH_Cat": "R-09-039",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), upon a pole, with a feather (H6) vertically on its back, in line with the standard, on top of a base with a cone at the far side.",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), upon a pole, with a feather (H6) vertically on its back, in line with the standard, on top of a base with a cone at the far side.",
     "kEH_Func": "Logogram (border, boundry)",
     "kEH_FVal": "ṯnw",
     "kEH_UniK": "HJ R061",
@@ -41263,7 +41383,7 @@ unikemet = {
   "𔄪": {
     "kEH_Cat": "R-12-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A spear made into a standard, resembling a fire-drill in a piece of wood (U28),  with outwards angled lines coming from the tip of the pole.",
+    "kEH_Desc": "A spear made into a standard, resembling a fire-drill in a piece of wood (U28), with outwards angled lines coming from the tip of the pole.",
     "kEH_Func": "Radicogram (left eye)",
     "kEH_FVal": "ꞽꜣb.t",
     "kEH_UniK": "R015C",
@@ -41328,7 +41448,7 @@ unikemet = {
   "𔄱": {
     "kEH_Cat": "R-12-038",
     "kEH_Core": "C",
-    "kEH_Desc": "A spear made into a standard, with a circle on either side of the speartip, with a backwards curving loop over the standard.",
+    "kEH_Desc": "A spear made into a standard, with a circle on either side of the spear tip, with a backwards curving loop over the standard.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽꜣb",
     "kEH_UniK": "R015J"
@@ -41336,7 +41456,7 @@ unikemet = {
   "𔄲": {
     "kEH_Cat": "R-12-040",
     "kEH_Core": "C",
-    "kEH_Desc": "A spear made into a standard, resembling a fire-drill in a piece of wood (U28), with a floating dot at eithere side of the cone, with two ties or bands of cloth at the far side of the pole.",
+    "kEH_Desc": "A spear made into a standard, resembling a fire-drill in a piece of wood (U28), with a floating dot at either side of the cone, with two ties or bands of cloth at the far side of the pole.",
     "kEH_Func": "Radicogram (left eye)",
     "kEH_FVal": "ꞽꜣb.t",
     "kEH_UniK": "R141"
@@ -41384,7 +41504,7 @@ unikemet = {
   "𔄸": {
     "kEH_Cat": "R-14-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A wig without a fillet, with a headdress consisting of two plumes (S9), with a cobra (Naja haja), standing up, with expanded hood (Uraeus) written behind the wig, upon a pole.",
+    "kEH_Desc": "A wig without a fillet, with a headdress consisting of two plumes (S9), with a cobra (Naja haje), standing up, with expanded hood (Uraeus) written behind the wig, upon a pole.",
     "kEH_Func": "Logogram (Abydos)",
     "kEH_FVal": "ꜣbḏw",
     "kEH_UniK": "HJ R018A",
@@ -41402,7 +41522,7 @@ unikemet = {
   "𔄺": {
     "kEH_Cat": "R-14-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A wig without a fillet, with a headdress consisting of two plumes (S9), with a cobra (Naja haja), standing up, with expanded hood (Uraeus) written behind the wig, upon a pole (R18A), on top of a sand covered mountain over the edge of the cultivated areas (N26).",
+    "kEH_Desc": "A wig without a fillet, with a headdress consisting of two plumes (S9), with a cobra (Naja haje), standing up, with expanded hood (Uraeus) written behind the wig, upon a pole (R18A), on top of a sand covered mountain over the edge of the cultivated areas (N26).",
     "kEH_Func": "Logogram (Abydos)",
     "kEH_FVal": "ꜣbḏw",
     "kEH_UniK": "HJ R018B",
@@ -41413,7 +41533,7 @@ unikemet = {
   "𔄻": {
     "kEH_Cat": "R-14-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A wig without a fillet, with a headdress consisting of two plumes (S9), with a cobra (Naja haja), standing up, with expanded hood (Uraeus) written behind the wig, upon a pole (R18A), on top of the hill country over the edge of the cultivated areas (N25).",
+    "kEH_Desc": "A wig without a fillet, with a headdress consisting of two plumes (S9), with a cobra (Naja haje), standing up, with expanded hood (Uraeus) written behind the wig, upon a pole (R18A), on top of the hill country over the edge of the cultivated areas (N25).",
     "kEH_Func": "Logogram (Abydos)",
     "kEH_FVal": "ꜣbḏw",
     "kEH_UniK": "HJ R018D",
@@ -41423,7 +41543,7 @@ unikemet = {
   "𔄼": {
     "kEH_Cat": "R-14-018",
     "kEH_Core": "C",
-    "kEH_Desc": "A wig without a fillet, with a headdress consisting of two plumes (S9), with a cobra (Naja haja), standing up, with expanded hood (Uraeus) written behind the wig, upon a pole (R18A), on top of a standard used for carrying religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A wig without a fillet, with a headdress consisting of two plumes (S9), with a cobra (Naja haje), standing up, with expanded hood (Uraeus) written behind the wig, upon a pole (R18A), on top of a standard used for carrying religious symbols (R12), on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (Abydos)",
     "kEH_FVal": "ꜣbḏw",
     "kEH_UniK": "R018H"
@@ -41495,7 +41615,7 @@ unikemet = {
   "𔅄": {
     "kEH_Cat": "R-17-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A flower, enclosed by the horns of a bovid, upside down.",
+    "kEH_Desc": "A flower, enclosed by the horns of a bovid, upside-down.",
     "kEH_Func": "Logogram (Seshat (divinity))",
     "kEH_FVal": "sšꜣ.t",
     "kEH_UniK": "HJ R020A",
@@ -41612,7 +41732,7 @@ unikemet = {
   "𔅑": {
     "kEH_Cat": "S-01-008",
     "kEH_Core": "C",
-    "kEH_Desc": "The white crown of Upper Egypt, witn an uraeus (S1A), on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "The white crown of Upper Egypt, with an uraeus (S1A), on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram (Tatenen (divinity))",
     "kEH_FVal": "tꜣ-ṯnn",
     "kEH_UniK": "S047D"
@@ -41835,7 +41955,7 @@ unikemet = {
   "𔅨": {
     "kEH_Cat": "S-07-004",
     "kEH_Core": "C",
-    "kEH_Desc": "The Atef crown with rams horns and a sun disk, with a circle on top of the split top of the Atef crown.",
+    "kEH_Desc": "The Atef crown with ram horns and a sun disk, with a circle on top of the split top of the Atef crown.",
     "kEH_Func": "Logogram (Atef-crown)",
     "kEH_FVal": "ꜣtf",
     "kEH_UniK": "S008B",
@@ -41861,7 +41981,7 @@ unikemet = {
   "𔅫": {
     "kEH_Cat": "S-08-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A crown, consisting on three horizontally arranged Atef crowns with a round bulb at the top, and the sun-disk at the base, on top of the horns of a ram, with an uraeus, with a sun disk on the head, facing outwards, at either side of the crown, with two ureai hanging downwards from the horns at either side.",
+    "kEH_Desc": "A crown, consisting of three horizontally arranged Atef crowns with a round bulb at the top, and the sun-disk at the base, on top of the horns of a ram, with an uraeus, with a sun disk on the head, facing outwards, at either side of the crown, with two ureai hanging downwards from the horns at either side.",
     "kEH_Func": "Logogram (Hemhem-crown)",
     "kEH_FVal": "hmhm",
     "kEH_UniK": "HJ S061",
@@ -41872,7 +41992,7 @@ unikemet = {
   "𔅬": {
     "kEH_Cat": "S-08-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A crown, consisting on three horizontally arranged Atef crowns with a round bulb at the top, and the sun-disk at the base, on top of the horns of a ram, with an uraeus, with a sun disk on the head, facing outwards, at either side of the crown.",
+    "kEH_Desc": "A crown, consisting of three horizontally arranged Atef crowns with a round bulb at the top, and the sun-disk at the base, on top of the horns of a ram, with an uraeus, with a sun disk on the head, facing outwards, at either side of the crown.",
     "kEH_Func": "Logogram (Hemhem-crown)",
     "kEH_FVal": "hmhm",
     "kEH_UniK": "HJ S061A",
@@ -41883,7 +42003,7 @@ unikemet = {
   "𔅭": {
     "kEH_Cat": "S-08-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A crown, consisting on three horizontally arranged Atef crowns, on top of the horns of a ram, with an uraeus, facing outwards, at either side of the crown.",
+    "kEH_Desc": "A crown, consisting of three horizontally arranged Atef crowns, on top of the horns of a ram, with an uraeus, facing outwards, at either side of the crown.",
     "kEH_Func": "Logogram (Hemhem-crown)",
     "kEH_FVal": "hmhm",
     "kEH_UniK": "S061D"
@@ -41989,7 +42109,7 @@ unikemet = {
   "𔅸": {
     "kEH_Cat": "S-09-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A headdress consisting of two feathers on top of the horns of a ram, with a sun-disk between the feathers, with a cobra (Naja haja), standing up, with expanded hood (Uraeus), with sun disks its head on either side of the feathers, orientated outwards.",
+    "kEH_Desc": "A headdress consisting of two feathers on top of the horns of a ram, with a sun-disk between the feathers, with a cobra (Naja haje), standing up, with expanded hood (Uraeus), with sun disks its head on either side of the feathers, orientated outwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ṯn",
     "kEH_UniK": "HJ S075",
@@ -42000,7 +42120,7 @@ unikemet = {
   "𔅹": {
     "kEH_Cat": "S-09-026",
     "kEH_Core": "C",
-    "kEH_Desc": "A headdress consisting of two feathers on top of the horns of a ram, with a cobra (Naja haja), standing up, with expanded hood (Uraeus), with sun disks its head on either side of the feathers, orientated outwards.",
+    "kEH_Desc": "A headdress consisting of two feathers on top of the horns of a ram, with a cobra (Naja haje), standing up, with expanded hood (Uraeus), with sun disks its head on either side of the feathers, orientated outwards.",
     "kEH_Func": "Logogram (Elkab)",
     "kEH_FVal": "nḫb",
     "kEH_UniK": "HJ S074",
@@ -42011,7 +42131,7 @@ unikemet = {
   "𔅺": {
     "kEH_Cat": "S-09-027",
     "kEH_Core": "C",
-    "kEH_Desc": "A head-dress consisting of a sun disk with two feathers on top of the horns of a ram.",
+    "kEH_Desc": "A headdress consisting of a sun disk with two feathers on top of the horns of a ram.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ṯn",
     "kEH_UniK": "HJ S073",
@@ -42022,7 +42142,7 @@ unikemet = {
   "𔅻": {
     "kEH_Cat": "S-09-028",
     "kEH_Core": "C",
-    "kEH_Desc": "A head-dress consisting of a sun disk with two feathers.",
+    "kEH_Desc": "A headdress consisting of a sun disk with two feathers.",
     "kEH_Func": "Classifier crown",
     "kEH_FVal": "ḥp.t",
     "kEH_UniK": "HJ S076",
@@ -42044,7 +42164,7 @@ unikemet = {
   "𔅽": {
     "kEH_Cat": "S-09-034",
     "kEH_Core": "C",
-    "kEH_Desc": "Two feathers without quil, on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "Two feathers without quill, on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram (3rd nome of Upper Egypt)",
     "kEH_FVal": "nḫn",
     "kEH_UniK": "S079B"
@@ -42053,7 +42173,7 @@ unikemet = {
     "kEH_Cat": "S-09-037",
     "kEH_Core": "C",
     "kEH_Desc": "A headdress consisting of two feathers on a short vertical line.",
-    "kEH_Func": "Classifier two halfs",
+    "kEH_Func": "Classifier two halves",
     "kEH_FVal": "p(s)š.ty",
     "kEH_UniK": "HJ S078A",
     "kEH_JSesh": "S78A",
@@ -42063,7 +42183,7 @@ unikemet = {
   "𔅿": {
     "kEH_Cat": "S-09-040",
     "kEH_Core": "C",
-    "kEH_Desc": "A headdress consisting of two feathers on top of the horns of a ram, with a sun-disk between the feathers, with a cobra (Naja haja), standing up, with expanded hood (Uraeus), on either side of the feathers, orientated outwards; on top of a half-circle shaped base.",
+    "kEH_Desc": "A headdress consisting of two feathers on top of the horns of a ram, with a sun-disk between the feathers, with a cobra (Naja haje), standing up, with expanded hood (Uraeus), on either side of the feathers, orientated outwards; on top of a half-circle shaped base.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ṯn",
     "kEH_UniK": "HJ S075A",
@@ -42102,7 +42222,7 @@ unikemet = {
   "𔆃": {
     "kEH_Cat": "S-10-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A band of cloth, used as a fillet, with an ureaus at the front, and a loop and string at the back.",
+    "kEH_Desc": "A band of cloth, used as a fillet, with an uraeus at the front, and a loop and string at the back.",
     "kEH_Func": "Logogram (wreath, garland)",
     "kEH_FVal": "mꜣḥ",
     "kEH_UniK": "HJ S082",
@@ -42124,7 +42244,7 @@ unikemet = {
   "𔆅": {
     "kEH_Cat": "S-10-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A band of cloth, used as a filltet, decorated with flowers on the band.",
+    "kEH_Desc": "A band of cloth, used as a fillet, decorated with flowers on the band.",
     "kEH_Func": "Logogram (wreath, garland)",
     "kEH_FVal": "mꜣḥ",
     "kEH_UniK": "HJ S084",
@@ -42203,7 +42323,7 @@ unikemet = {
   "𔆍": {
     "kEH_Cat": "S-11-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A necklace, consisting of a deep loop, with 7 beads or scircles on the loop, with the two top beads connected with a line with a bead in the center, with the ends of the loops curving outwards and downwards, with flower-like end-pieces, the left one a lotus bud and the right one a flowering lotus bud.",
+    "kEH_Desc": "A necklace, consisting of a deep loop, with seven beads or circles on the loop, with the two top beads connected with a line with a bead in the center, with the ends of the loops curving outwards and downwards, with flower-like end-pieces, the left one a lotus bud and the right one a flowering lotus bud.",
     "kEH_Func": "Classifier collar",
     "kEH_FVal": "bb",
     "kEH_UniK": "HJ S091",
@@ -42214,7 +42334,7 @@ unikemet = {
   "𔆎": {
     "kEH_Cat": "S-11-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A necklace, consisting of a deep loop with three horizontal lines over it, with the capital of a column, in the form of the face of a human female, with hair in two curling sidelocks, with the ears of a bovid (O215) at the bottom of the loop, connected with a rectangle to the lowest horizontal line; with ornamental terminals resembling the same capital (O215), with outwards and downwards curving strings with flower-like end-pieces coming from the terminals.",
+    "kEH_Desc": "A necklace, consisting of a deep loop with three horizontal lines over it, with the capital of a column, in the form of the face of a human female, with hair in two curling sidelocks, with the ears of a bovid (O215) at the bottom of the loop, connected with a rectangle to the lowest horizontal line; with ornamental terminals resembling the same capital (O215), with outward and downward curving strings with flower-like end-pieces coming from the terminals.",
     "kEH_Func": "Classifier collar",
     "kEH_FVal": "bb",
     "kEH_UniK": "S092A",
@@ -42345,7 +42465,7 @@ unikemet = {
   "𔆜": {
     "kEH_Cat": "S-11-060",
     "kEH_Core": "C",
-    "kEH_Desc": "A pectoral consisting of a big rectangle with six strands of glace or faience beads.",
+    "kEH_Desc": "A pectoral consisting of a big rectangle with six strands of glass or faience beads.",
     "kEH_Func": "Logogram (to be bright)",
     "kEH_FVal": "ṯḥn",
     "kEH_UniK": "HJ N004D",
@@ -42389,7 +42509,7 @@ unikemet = {
   "𔆡": {
     "kEH_Cat": "S-11-075",
     "kEH_Core": "C",
-    "kEH_Desc": "A bead necklace with a counterweight, written horizontally, with a loop at the front, with the head of woman, with a headdress of bovine horns with a sun disk (F102) and the vulture headdres on top of the counterweight.",
+    "kEH_Desc": "A bead necklace with a counterweight, written horizontally, with a loop at the front, with the head of woman, with a headdress of bovine horns with a sun disk (F102) and the vulture headdress on top of the counterweight.",
     "kEH_Func": "Logogram (menit necklace)",
     "kEH_FVal": "mnꞽ.t",
     "kEH_UniK": "HJ S098",
@@ -42400,7 +42520,7 @@ unikemet = {
   "𔆢": {
     "kEH_Cat": "S-11-076",
     "kEH_Core": "C",
-    "kEH_Desc": "A bead necklace with a counterweight, written horizontally, with the head of woman, with a headdress of bovine horns with a sun disk (F102) and the vulture headdres on top of the counterweight.",
+    "kEH_Desc": "A bead necklace with a counterweight, written horizontally, with the head of woman, with a headdress of bovine horns with a sun disk (F102) and the vulture headdress on top of the counterweight.",
     "kEH_Func": "Classifier necklace",
     "kEH_FVal": "mnꞽ.t",
     "kEH_UniK": "S098A"
@@ -42425,7 +42545,7 @@ unikemet = {
   "𔆥": {
     "kEH_Cat": "S-11-085",
     "kEH_Core": "C",
-    "kEH_Desc": "An amulet resembling a shrine with a flat roof, with a rectangle on the roof, with two outwards, downwards curving ties at the top, with an uraeus at either side of the base, with the front uraeus wearing the white crown (S1), and the back uraeus wearing the red crown (S3).",
+    "kEH_Desc": "An amulet resembling a shrine with a flat roof, with a rectangle on the roof, with two outward, downward curving ties at the top, with an uraeus at either side of the base, with the front uraeus wearing the white crown (S1), and the back uraeus wearing the red crown (S3).",
     "kEH_Func": "Classifier amulet",
     "kEH_FVal": "wḏꜣ(.w)",
     "kEH_UniK": "S101D"
@@ -42433,7 +42553,7 @@ unikemet = {
   "𔆦": {
     "kEH_Cat": "S-11-087",
     "kEH_Core": "C",
-    "kEH_Desc": "An amulet resembling a shrine with a flat roof, with a rectangle on the roof, with two outwards, downwards curving ties at the top, with flower-like end-pieces.",
+    "kEH_Desc": "An amulet resembling a shrine with a flat roof, with a rectangle on the roof, with two outward, downward curving ties at the top, with flower-like end-pieces.",
     "kEH_Func": "Classifier amulet",
     "kEH_FVal": "wḏꜣ.(w)",
     "kEH_UniK": "S101C"
@@ -42489,7 +42609,7 @@ unikemet = {
   "𔆬": {
     "kEH_Cat": "S-13-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A horizontal rectangular garment (bracelet, armband), with downwards curving ties at both sides. ",
+    "kEH_Desc": "A horizontal rectangular garment (bracelet, armband), with downward curving ties at both sides. ",
     "kEH_Func": "Classifier cloth/garment",
     "kEH_FVal": "nfr.t",
     "kEH_UniK": "HJ S105",
@@ -42500,7 +42620,7 @@ unikemet = {
   "𔆭": {
     "kEH_Cat": "S-13-016",
     "kEH_Core": "C",
-    "kEH_Desc": "An curved rectangular garment (bracelet, armband), with downwards cuving ties at both sides, with triangular end-pieces at the ties.",
+    "kEH_Desc": "An curved rectangular garment (bracelet, armband), with downward curving ties at both sides, with triangular end-pieces at the ties.",
     "kEH_Func": "Classifier bracelet, anklet",
     "kEH_FVal": "mnf(r).ty",
     "kEH_UniK": "S105A",
@@ -42788,7 +42908,7 @@ unikemet = {
   "𔇌": {
     "kEH_Cat": "S-20-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A sun shade, made of a staff which holds feathers at the top,  resembling a half circle, without internal detail, with an additional short staff.",
+    "kEH_Desc": "A sun shade, made of a staff which holds feathers at the top, resembling a half circle, without internal detail, with an additional short staff.",
     "kEH_Func": "Logogram (shadow, shade)",
     "kEH_FVal": "šw.t",
     "kEH_UniK": "HJ S036A",
@@ -42799,7 +42919,7 @@ unikemet = {
   "𔇍": {
     "kEH_Cat": "S-20-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A sun shade, made of a staff which holds feathers at the top, resembling a half circle, without internal detail, with strokes on top of the feahers, with an additional short staff.",
+    "kEH_Desc": "A sun shade, made of a staff which holds feathers at the top, resembling a half circle, without internal detail, with strokes on top of the feathers, with an additional short staff.",
     "kEH_Func": "Phono-repeater/classifier (in ḥp.ty (extreme limits))",
     "kEH_FVal": "ḥp",
     "kEH_UniK": "HJ S036C",
@@ -42828,7 +42948,7 @@ unikemet = {
   "𔇐": {
     "kEH_Cat": "S-21-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A one handed fan, with a handle consisting of a bowl-shaped section with a vertical downwards line at either side, with a straight handle section.",
+    "kEH_Desc": "A one handed fan, with a handle consisting of a bowl-shaped section with a vertical downward line at either side, with a straight handle section.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫw",
     "kEH_UniK": "HJ S037D",
@@ -42960,7 +43080,7 @@ unikemet = {
   "𔇞": {
     "kEH_Cat": "S-25-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A sceptre, with a short handle with a crosbar, with a long oval shape above the handle.",
+    "kEH_Desc": "A sceptre, with a short handle with a crossbar, with a long oval shape above the handle.",
     "kEH_Func": "Logogram (Hetes-staff, baton)",
     "kEH_FVal": "ḥts",
     "kEH_UniK": "HJ S168",
@@ -43067,7 +43187,7 @@ unikemet = {
   "𔇩": {
     "kEH_Cat": "S-28-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A type of ornament, with a tie and a loop at the  top, and fringes at the bottom.",
+    "kEH_Desc": "A type of ornament, with a tie and a loop at the top, and fringes at the bottom.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜥpr",
     "kEH_UniK": "HJ AA020B",
@@ -43088,7 +43208,7 @@ unikemet = {
   "𔇫": {
     "kEH_Cat": "S-28-013",
     "kEH_Core": "C",
-    "kEH_Desc": "A type of ornament, with two ties at the  top, and fringes at the bottom.",
+    "kEH_Desc": "A type of ornament, with two ties at the top, and fringes at the bottom.",
     "kEH_Func": "Logogram (counterweight)",
     "kEH_FVal": "mꜥnḫ.t",
     "kEH_UniK": "HJ AA020C",
@@ -43109,7 +43229,7 @@ unikemet = {
   "𔇭": {
     "kEH_Cat": "S-28-021",
     "kEH_Core": "C",
-    "kEH_Desc": "A cone-shaped object with two ties at the top, with a forwards, downwards dotted line coming from the top",
+    "kEH_Desc": "A cone-shaped object with two ties at the top, with a forward, downward dotted line coming from the top",
     "kEH_Func": "Classifier to spit, to expel",
     "kEH_FVal": "nšꞽ/nẖꞽ",
     "kEH_UniK": "AA020D"
@@ -43180,7 +43300,7 @@ unikemet = {
   "𔇵": {
     "kEH_Cat": "S-29-009",
     "kEH_Core": "C",
-    "kEH_Desc": "An necklace, resembling the sun, with thee beams of sunlight coming from it, with an arm at either side, holding a staff or line at an outwards angle, connected to a base, with the head of a canine on the front staff.",
+    "kEH_Desc": "An necklace, resembling the sun, with three beams of sunlight coming from it, with an arm at either side, holding a staff or line at an outwards angle, connected to a base, with the head of a canine on the front staff.",
     "kEH_Func": "Classifier dignity, rank",
     "kEH_FVal": "sꜥḥ",
     "kEH_UniK": "HJ S104",
@@ -43249,7 +43369,7 @@ unikemet = {
   "𔇽": {
     "kEH_Cat": "T-01-020",
     "kEH_Core": "C",
-    "kEH_Desc": "A coil of rope (V1), written behind the macehead of a mace with a pear-shaped head, written vertically (T3).",
+    "kEH_Desc": "A coil of rope (V1), written behind the mace head of a mace with a pear-shaped head, written vertically (T3).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wḏ",
     "kEH_UniK": "HJ T117",
@@ -43295,7 +43415,7 @@ unikemet = {
   "𔈂": {
     "kEH_Cat": "T-02-004",
     "kEH_Core": "C",
-    "kEH_Desc": "An round shield with a boss in the center, with a veritcal line dividing the two halves of the shield.",
+    "kEH_Desc": "A round shield with a boss in the center, with a vertical line dividing the two halves of the shield.",
     "kEH_Func": "Classifier shield",
     "kEH_FVal": "ꞽkm",
     "kEH_UniK": "HJ T049",
@@ -43306,7 +43426,7 @@ unikemet = {
   "𔈃": {
     "kEH_Cat": "T-02-006",
     "kEH_Core": "C",
-    "kEH_Desc": "An oval shield with a boss in the center, with a vertical line dividing the two halfs of the shield.",
+    "kEH_Desc": "An oval shield with a boss in the center, with a vertical line dividing the two halves of the shield.",
     "kEH_Func": "Logogram (shield)",
     "kEH_FVal": "ꞽkm",
     "kEH_UniK": "T049A"
@@ -43368,7 +43488,7 @@ unikemet = {
   "𔈉": {
     "kEH_Cat": "T-06-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A bow, written horizontally, with a small rectangle in the middle, with the two limbs angling downwards, with upwards coiled tips. ",
+    "kEH_Desc": "A bow, written horizontally, with a small rectangle in the middle, with the two limbs angling downwards, with upward coiled tips. ",
     "kEH_Func": "Logogram/phonemogram (to stretch out)",
     "kEH_FVal": "pḏ",
     "kEH_UniK": "HJ T009B",
@@ -43437,7 +43557,7 @@ unikemet = {
   "𔈐": {
     "kEH_Cat": "T-07-014",
     "kEH_Core": "C",
-    "kEH_Desc": "An hexagon, with a loop at each corner.",
+    "kEH_Desc": "A hexagon, with a loop at each corner.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sṯ/st",
     "kEH_UniK": "HJ T058A",
@@ -43556,7 +43676,7 @@ unikemet = {
   "𔈝": {
     "kEH_Cat": "T-07-040",
     "kEH_Core": "C",
-    "kEH_Desc": "A shield with a rounded top, with two arrows crossed over it, fletching upwards",
+    "kEH_Desc": "A shield with a rounded top, with two arrows crossed over it, fletching upwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥms.t",
     "kEH_UniK": "HJ T062",
@@ -43601,7 +43721,7 @@ unikemet = {
   "𔈢": {
     "kEH_Cat": "T-07-058",
     "kEH_Core": "C",
-    "kEH_Desc": "A cover of a quiver, with the rope cuving into a loop.",
+    "kEH_Desc": "A cover of a quiver, with the rope curving into a loop.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sꜣ",
     "kEH_UniK": "AA017B"
@@ -43609,7 +43729,7 @@ unikemet = {
   "𔈣": {
     "kEH_Cat": "T-07-061",
     "kEH_Core": "C",
-    "kEH_Desc": "The cover of a quiver, with a rectangular inset with vertical lines inside, with the rope on top making an sharp corner.",
+    "kEH_Desc": "The cover of a quiver, with a rectangular inset with vertical lines inside, with the rope on top making a sharp corner.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "s",
     "kEH_UniK": "AA018D"
@@ -43617,7 +43737,7 @@ unikemet = {
   "𔈤": {
     "kEH_Cat": "T-08-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A bow-string, coiled up, with both ends angling downwards.",
+    "kEH_Desc": "A bowstring, coiled up, with both ends angling downwards.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "dmꜣ",
     "kEH_UniK": "HJ T067",
@@ -43628,7 +43748,7 @@ unikemet = {
   "𔈥": {
     "kEH_Cat": "T-08-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A bow-string, coiled up, with both ends angling downwards, with a large loop at the ends.",
+    "kEH_Desc": "A bowstring, coiled up, with both ends angling downwards, with a large loop at the ends.",
     "kEH_Func": "Phonemogram/logogram (mother)",
     "kEH_FVal": "tmꜣ(.t)",
     "kEH_UniK": "HJ T067A",
@@ -43639,7 +43759,7 @@ unikemet = {
   "𔈦": {
     "kEH_Cat": "T-08-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A bow-string, coiled up, with both ends angling downwards, with a small round loop with a short piece of rope continuing at the ends.",
+    "kEH_Desc": "A bowstring, coiled up, with both ends angling downwards, with a small round loop with a short piece of rope continuing at the ends.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "rwḏ",
     "kEH_UniK": "HJ T012A",
@@ -43650,7 +43770,7 @@ unikemet = {
   "𔈧": {
     "kEH_Cat": "T-08-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A bow-string, coiled up, with both ends angling downwards, with a small round loop with a short piece of rope continuing at end at the back.",
+    "kEH_Desc": "A bowstring, coiled up, with both ends angling downwards, with a small round loop with a short piece of rope continuing at end at the back.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "rwḏ",
     "kEH_UniK": "HJ T012B",
@@ -43661,7 +43781,7 @@ unikemet = {
   "𔈨": {
     "kEH_Cat": "T-08-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A bow-string, coiled up, with both ends angling downwards, with cone-shaped loops at the ends.",
+    "kEH_Desc": "A bowstring, coiled up, with both ends angling downwards, with cone-shaped loops at the ends.",
     "kEH_Func": "Phono-repeater",
     "kEH_FVal": "rd",
     "kEH_UniK": "T012D"
@@ -43690,7 +43810,7 @@ unikemet = {
   "𔈫": {
     "kEH_Cat": "T-09-018",
     "kEH_Core": "C",
-    "kEH_Desc": "A band of string or fabric, which coils at the front, written over three throwing-sticks, or a clubs used by foreign people (T14), arranged horizontally.",
+    "kEH_Desc": "A band of string or fabric, which coils at the front, written over three throwing-sticks, or clubs used by foreign people (T14), arranged horizontally.",
     "kEH_Func": "Phonemogram/logogram (strife)",
     "kEH_FVal": "šnt.t",
     "kEH_UniK": "HJ T072",
@@ -43707,7 +43827,7 @@ unikemet = {
   "𔈭": {
     "kEH_Cat": "T-09-020",
     "kEH_Core": "C",
-    "kEH_Desc": "Two throwing-sticks, or a clubs used by foreign people (T14), arranged horizontally, on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "Two throwing-sticks, or clubs used by foreign people (T14), arranged horizontally, on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram/phonemogram (meter canal)",
     "kEH_FVal": "mtr",
     "kEH_UniK": "T142"
@@ -43744,7 +43864,7 @@ unikemet = {
   "𔈱": {
     "kEH_Cat": "T-10-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A scimitar (khopesh), written vertically, blade curving inwards, with the head of a falcon with he sun within a halo, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6); on top of the head.",
+    "kEH_Desc": "A scimitar (khopesh), written vertically, blade curving inwards, with the head of a falcon with he sun within a halo, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6); on top of the head.",
     "kEH_Func": "Logogram (Khopesh sword/scimitar)",
     "kEH_FVal": "ḫpš",
     "kEH_UniK": "HJ T073A",
@@ -43755,7 +43875,7 @@ unikemet = {
   "𔈲": {
     "kEH_Cat": "T-10-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A scimitar (khopesh), written vertically, blade curving forwards, with the head of a falcon with he sun within a halo, encircled by a cobra (Naja haja), standing up, with expanded hood (Uraeus) (N6); on top of the head.",
+    "kEH_Desc": "A scimitar (khopesh), written vertically, blade curving forwards, with the head of a falcon with he sun within a halo, encircled by a cobra (Naja haje), standing up, with expanded hood (Uraeus) (N6); on top of the head.",
     "kEH_Func": "Classifier to be strong, brave, capable",
     "kEH_FVal": "ḳn",
     "kEH_UniK": "T073C"
@@ -43781,7 +43901,7 @@ unikemet = {
   "𔈵": {
     "kEH_Cat": "T-12-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A shepherds crook with a package lashed to it, with the top tie replaced by a knife (T30A).",
+    "kEH_Desc": "A shepherd's crook with a package lashed to it, with the top tie replaced by a knife (T30A).",
     "kEH_Func": "Logogram (to follow)",
     "kEH_FVal": "šms",
     "kEH_UniK": "HJ T074",
@@ -43792,7 +43912,7 @@ unikemet = {
   "𔈶": {
     "kEH_Cat": "T-12-004",
     "kEH_Core": "C",
-    "kEH_Desc": "A shepherds crook with a package lashed to it, with a tie above the package.",
+    "kEH_Desc": "A shepherd's crook with a package lashed to it, with a tie above the package.",
     "kEH_Func": "Logogram (follower, retainer)",
     "kEH_FVal": "šms.w",
     "kEH_UniK": "HJ T018A",
@@ -43803,7 +43923,7 @@ unikemet = {
   "𔈷": {
     "kEH_Cat": "T-12-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A shepherds crook with a package lashed to it, with the top tie replaced by a knife (T30A), on top of legs in a walking posture, feet orientated towards the reading direction (D54)",
+    "kEH_Desc": "A shepherd's crook with a package lashed to it, with the top tie replaced by a knife (T30A), on top of legs in a walking posture, feet orientated towards the reading direction (D54)",
     "kEH_Func": "Logogram (to follow)",
     "kEH_FVal": "šms",
     "kEH_UniK": "HJ T075",
@@ -43853,7 +43973,7 @@ unikemet = {
   "𔈼": {
     "kEH_Cat": "T-13-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A harpoon-head with two horizontal strokes on top and a single curl on top of the point .",
+    "kEH_Desc": "A harpoon-head with two horizontal strokes on top and a single curl on top of the point.",
     "kEH_Func": "Phono-repeater",
     "kEH_FVal": "twr",
     "kEH_UniK": "T019E",
@@ -43863,7 +43983,7 @@ unikemet = {
   "𔈽": {
     "kEH_Cat": "T-13-013",
     "kEH_Core": "C",
-    "kEH_Desc": "A harpoon-head with two horizontal strokes on top and two curls on top of the point .",
+    "kEH_Desc": "A harpoon-head with two horizontal strokes on top and two curls on top of the point.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "msn",
     "kEH_UniK": "T019F",
@@ -43940,7 +44060,7 @@ unikemet = {
   "𔉅": {
     "kEH_Cat": "T-13-027",
     "kEH_Core": "C",
-    "kEH_Desc": "A two-barbed harpoon, with a rectangle and and angled line on the shaft, written horizontally.",
+    "kEH_Desc": "A two-barbed harpoon, with a rectangle and angled line on the shaft, written horizontally.",
     "kEH_Func": "Logogram (one, sole)",
     "kEH_FVal": "wꜥ",
     "kEH_UniK": "T021G",
@@ -43949,7 +44069,7 @@ unikemet = {
   "𔉆": {
     "kEH_Cat": "T-13-029",
     "kEH_Core": "C",
-    "kEH_Desc": "A two-barbed harpoon, with a rectangle and and a curl on the shaft, curling towards the shaft, written vertically.",
+    "kEH_Desc": "A two-barbed harpoon, with a rectangle and a curl on the shaft, curling towards the shaft, written vertically.",
     "kEH_Func": "Logogram (one, sole)",
     "kEH_FVal": "wꜥ",
     "kEH_UniK": "HJ T021C",
@@ -43971,7 +44091,7 @@ unikemet = {
   "𔉈": {
     "kEH_Cat": "T-13-039",
     "kEH_Core": "C",
-    "kEH_Desc": "An spear, arrow without fletching or a harpoon without handle, written vertically, tip upwards.",
+    "kEH_Desc": "A spear, arrow without fletching or a harpoon without handle, written vertically, tip upwards.",
     "kEH_Func": "Logogram (one, sole)",
     "kEH_FVal": "wꜥ",
     "kEH_UniK": "HJ T080",
@@ -43982,7 +44102,7 @@ unikemet = {
   "𔉉": {
     "kEH_Cat": "T-13-040",
     "kEH_Core": "C",
-    "kEH_Desc": "An spear, arrow without fletching or a harpoon without handle, written horizontally.",
+    "kEH_Desc": "A spear, arrow without fletching or a harpoon without handle, written horizontally.",
     "kEH_Func": "Classifier lance, spear",
     "kEH_FVal": "nꞽw.y",
     "kEH_UniK": "HJ T080B",
@@ -43993,7 +44113,7 @@ unikemet = {
   "𔉊": {
     "kEH_Cat": "T-13-051",
     "kEH_Core": "C",
-    "kEH_Desc": "A two-barbed arrow-head, with the point facing downwards, in the ground, resembled by a half-circle.",
+    "kEH_Desc": "A two-barbed arrowhead, with the point facing downwards, in the ground, resembled by a half-circle.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sn",
     "kEH_UniK": "T022E"
@@ -44001,7 +44121,7 @@ unikemet = {
   "𔉋": {
     "kEH_Cat": "T-13-052",
     "kEH_Core": "C",
-    "kEH_Desc": "A two-barbed arrow-head, with the point facing downwards, in the ground, resembling a half-circle, with only the barbs visible.",
+    "kEH_Desc": "A two-barbed arrowhead, with the point facing downwards, in the ground, resembling a half-circle, with only the barbs visible.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sn",
     "kEH_UniK": "HJ T022A",
@@ -44012,7 +44132,7 @@ unikemet = {
   "𔉌": {
     "kEH_Cat": "T-13-053",
     "kEH_Core": "C",
-    "kEH_Desc": "An two-barbed arrow-head, point facing downwards, in the ground, resembling a cartouche in the round form (V9), with only the barbs visible.",
+    "kEH_Desc": "A two-barbed arrowhead, point facing downwards, in the ground, resembling a cartouche in the round form (V9), with only the barbs visible.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sn",
     "kEH_UniK": "HJ T022B",
@@ -44023,7 +44143,7 @@ unikemet = {
   "𔉍": {
     "kEH_Cat": "T-13-056",
     "kEH_Core": "C",
-    "kEH_Desc": "An arrow-head, point facing downwards, in the ground, resembling a cartouche in the round form (V9).",
+    "kEH_Desc": "An arrowhead, point facing downwards, in the ground, resembling a cartouche in the round form (V9).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "šn",
     "kEH_UniK": "HJ T022D",
@@ -44048,7 +44168,7 @@ unikemet = {
   "𔉐": {
     "kEH_Cat": "T-13-064",
     "kEH_Core": "C",
-    "kEH_Desc": "An spear, arrow without fletching or a harpoon without handle, written horizontally, on top of a  boat/ship, resembling a crescent moon, with an oar/rudder at the back, connected by three lines; on a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "A spear, arrow without fletching or a harpoon without handle, written horizontally, on top of a boat/ship, resembling a crescent moon, with an oar/rudder at the back, connected by three lines; on a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram (7-8th nome of Lower Egypt)",
     "kEH_FVal": "wꜥ-m-ḥww",
     "kEH_UniK": "T083C",
@@ -44057,7 +44177,7 @@ unikemet = {
   "𔉑": {
     "kEH_Cat": "T-13-066",
     "kEH_Core": "C",
-    "kEH_Desc": "An spear, arrow without fletching or a harpoon without handle, written horizontally, on top of a crescent moon shape, connected by three lines, point towards the front; on a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
+    "kEH_Desc": "A spear, arrow without fletching or a harpoon without handle, written horizontally, on top of a crescent moon shape, connected by three lines, point towards the front; on a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole (R12A).",
     "kEH_Func": "Logogram (7-8th nome of Lower Egypt)",
     "kEH_FVal": "wꜥ-m-ḥww",
     "kEH_UniK": "T083D"
@@ -44071,7 +44191,7 @@ unikemet = {
   "𔉓": {
     "kEH_Cat": "T-13-068",
     "kEH_Core": "C",
-    "kEH_Desc": "An spear, arrow without fletching or a harpoon without handle, written horizontally, on top of a crescent moon shape, connected by four lines, with the point towards the back, in front of a feather (H6), angled forwards on top of a standard with a round top, with outwards angled lines coming from the tip of the pole (R14B), on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole.",
+    "kEH_Desc": "A spear, arrow without fletching or a harpoon without handle, written horizontally, on top of a crescent moon shape, connected by four lines, with the point towards the back, in front of a feather (H6), angled forwards on top of a standard with a round top, with outwards angled lines coming from the tip of the pole (R14B), on top of a standard used for carrying religious symbols, with a loop under the horizontal beam, running over the vertical pole.",
     "kEH_Func": "Logogram (7th nome of Lower Egypt)",
     "kEH_FVal": "wꜥ-m-ḥww-ꞽmn.ty",
     "kEH_UniK": "HJ T084B",
@@ -44093,7 +44213,7 @@ unikemet = {
   "𔉖": {
     "kEH_Cat": "T-13-075",
     "kEH_Core": "C",
-    "kEH_Desc": "An spear, arrow without fletching or a harpoon without handle, written horizontally, on top of a crescent moon shape, connected by four lines, in front of a feather (H6), angled forwards on top of a standard with a round top, with outwards angled lines coming from the tip of the pole (R14B); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
+    "kEH_Desc": "A spear, arrow without fletching or a harpoon without handle, written horizontally, on top of a crescent moon shape, connected by four lines, in front of a feather (H6), angled forwards on top of a standard with a round top, with outwards angled lines coming from the tip of the pole (R14B); on top of a standard used for carrying religious symbols (R12), written on top of a parcel of land with irrigation ditches (N24).",
     "kEH_Func": "Logogram (7th nome of Lower Egypt)",
     "kEH_FVal": "wꜥ-m-ḥww-ꞽmn.ty",
     "kEH_UniK": "HJ T084A",
@@ -44159,7 +44279,7 @@ unikemet = {
   "𔉝": {
     "kEH_Cat": "T-14-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A long, oval net  with internal netting, which widens towards the back, with two loops at the front, and a downwards curving rope at the back.",
+    "kEH_Desc": "A long, oval net with internal netting, which widens towards the back, with two loops at the front, and a downward curving rope at the back.",
     "kEH_Func": "Logogram (net)",
     "kEH_FVal": "ꜥḥ/ꞽḥ",
     "kEH_UniK": "HJ T088A",
@@ -44282,7 +44402,7 @@ unikemet = {
   "𔉪": {
     "kEH_Cat": "T-16-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A bird trap, with two vertical poles at the back, with a net running from the front to the vertical poles, with two upwards ticks at the front of the net.",
+    "kEH_Desc": "A bird trap, with two vertical poles at the back, with a net running from the front to the vertical poles, with two upward ticks at the front of the net.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sḫt",
     "kEH_UniK": "T026M",
@@ -44302,7 +44422,7 @@ unikemet = {
   "𔉬": {
     "kEH_Cat": "T-16-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A bird trap, with two vertical poles at the back, with a line running from the front to the vertical poles, with two upwards ticks at the front of the line.",
+    "kEH_Desc": "A bird trap, with two vertical poles at the back, with a line running from the front to the vertical poles, with two upward ticks at the front of the line.",
     "kEH_Func": "Phono-repeater",
     "kEH_FVal": "sḫt",
     "kEH_UniK": "HJ T026A",
@@ -44411,7 +44531,7 @@ unikemet = {
   "𔉷": {
     "kEH_Cat": "T-18-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), written at an forward angle, blade forwards, on top of an oval.",
+    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), written at a forward angle, blade forwards, on top of an oval.",
     "kEH_Func": "Logogram (to carve, to enscribe, to engrave)",
     "kEH_FVal": "ḫtꞽ",
     "kEH_UniK": "HJ T095",
@@ -44422,7 +44542,7 @@ unikemet = {
   "𔉸": {
     "kEH_Cat": "T-18-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), written at an forward angle, blade forwards, on top of an oval with three angled lines inside the oval.",
+    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), written at a forward angle, blade forwards, on top of an oval with three angled lines inside the oval.",
     "kEH_Func": "Logogram (to carve, to enscribe, to engrave)",
     "kEH_FVal": "ḫtꞽ",
     "kEH_UniK": "HJ T095B",
@@ -44440,7 +44560,7 @@ unikemet = {
   "𔉺": {
     "kEH_Cat": "T-18-024",
     "kEH_Core": "C",
-    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), on top of a round-topped butchers block, with a base with upstanding edges.",
+    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), on top of a round-topped butcher's block, with a base with upstanding edges.",
     "kEH_Func": "Classifier place of execution",
     "kEH_FVal": "ḫb.t",
     "kEH_UniK": "HJ T102",
@@ -44451,7 +44571,7 @@ unikemet = {
   "𔉻": {
     "kEH_Cat": "T-18-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), on top of a round-topped butchers block, with netting as internal decoration, with a base with upstanding edges.",
+    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), on top of a round-topped butcher's block, with netting as internal decoration, with a base with upstanding edges.",
     "kEH_Func": "Logogram (place of execution)",
     "kEH_FVal": "ḫb.t",
     "kEH_UniK": "HJ T102A",
@@ -44461,7 +44581,7 @@ unikemet = {
   "𔉼": {
     "kEH_Cat": "T-18-026",
     "kEH_Core": "C",
-    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), on top of a butchers block, with the base of the block resembling the hill country over the edge of the cultivated areas (N25).",
+    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), on top of a butcher's block, with the base of the block resembling the hill country over the edge of the cultivated areas (N25).",
     "kEH_Func": "Logogram (place of slaughter)",
     "kEH_FVal": "nm.t",
     "kEH_UniK": "HJ N078",
@@ -44481,7 +44601,7 @@ unikemet = {
   "𔉾": {
     "kEH_Cat": "T-18-033",
     "kEH_Core": "C",
-    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), with the tip of the knife on top of stack of ribs, on top of an upside down cone (F41C), angling forwards, blade upwards.",
+    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), with the tip of the knife on top of stack of ribs, on top of an upside-down cone (F41C), angling forwards, blade upwards.",
     "kEH_Func": "Logogram (butchery, slaughter)",
     "kEH_FVal": "šꜥt",
     "kEH_UniK": "HJ T103A",
@@ -44492,7 +44612,7 @@ unikemet = {
   "𔉿": {
     "kEH_Cat": "T-18-035",
     "kEH_Core": "C",
-    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), on top of a round-topped butchers block, with the vertical lines of the base extending to the same hight as the top of the butcher's block.",
+    "kEH_Desc": "A knife with a triangular blade and a straight handle (T30A), on top of a round-topped butcher's block, with the vertical lines of the base extending to the same height as the top of the butcher's block.",
     "kEH_Func": "Logogram (place of execution)",
     "kEH_FVal": "nm.t/ḫb.t",
     "kEH_UniK": "T146"
@@ -44603,7 +44723,7 @@ unikemet = {
   "𔊌": {
     "kEH_Cat": "T-21-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A loop of cord with muliple lines with fishhooks hanging from it. ",
+    "kEH_Desc": "A loop of cord with multiple lines with fishhooks hanging from it. ",
     "kEH_Func": "Classifier hooks",
     "kEH_FVal": "snꜥḥ.t",
     "kEH_UniK": "HJ T087",
@@ -44694,7 +44814,7 @@ unikemet = {
   "𔊖": {
     "kEH_Cat": "U-03-014",
     "kEH_Core": "C",
-    "kEH_Desc": "A half-round vessel on its side, with three forward, downwards lines of grain coming from the front.",
+    "kEH_Desc": "A half-round vessel on its side, with three forward, downward lines of grain coming from the front.",
     "kEH_Func": "Classifier harvest, crop",
     "kEH_FVal": "šm(.w)",
     "kEH_UniK": "HJ U050A",
@@ -44704,7 +44824,7 @@ unikemet = {
   "𔊗": {
     "kEH_Cat": "U-03-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A half-round vessel on its side, with a forward, downwards lines of grain coming from the front.",
+    "kEH_Desc": "A half-round vessel on its side, with a forward, downward line of grain coming from the front.",
     "kEH_Func": "Classifier grain/barley",
     "kEH_FVal": "npt",
     "kEH_UniK": "U050B",
@@ -44713,9 +44833,9 @@ unikemet = {
   "𔊘": {
     "kEH_Cat": "U-03-019",
     "kEH_Core": "C",
-    "kEH_Desc": "A grain measure, resembling a horizontal stick, with a bulb at the front, with a vertical line on top of the horizontal stick, with an upwards stroke behind the vertical line.",
+    "kEH_Desc": "A grain measure, resembling a horizontal stick, with a bulb at the front, with a vertical line on top of the horizontal stick, with an upward stroke behind the vertical line.",
     "kEH_Func": "Classifier grain",
-    "kEH_FVal": "Mh.w",
+    "kEH_FVal": "mh.w",
     "kEH_UniK": "HJ U055A",
     "kEH_JSesh": "U55A",
     "kEH_HG": "U55A",
@@ -44724,16 +44844,16 @@ unikemet = {
   "𔊙": {
     "kEH_Cat": "U-03-022",
     "kEH_Core": "C",
-    "kEH_Desc": "A grain measure, resembling a horizontal stick, with a downwards hanging bulb at the front, with a vertical line on top of the horizontal stick, with an upwards stroke behind the vertical line.",
+    "kEH_Desc": "A grain measure, resembling a horizontal stick, with a downward hanging bulb at the front, with a vertical line on top of the horizontal stick, with an upward stroke behind the vertical line.",
     "kEH_Func": "Classifier grain",
-    "kEH_FVal": "Mh.w | šmꜥ.w | wꜣḥ.yt",
+    "kEH_FVal": "mh.w | šmꜥ.w | wꜣḥ.yt",
     "kEH_UniK": "U054B",
     "kEH_IFAO": "391,12"
   },
   "𔊚": {
     "kEH_Cat": "U-03-027",
     "kEH_Core": "C",
-    "kEH_Desc": "A grain measure, resembling a horizontal stick, with a downwards hanging bulb at the front, with a rectangle on top, with a upwards stroke behind the rectangle.",
+    "kEH_Desc": "A grain measure, resembling a horizontal stick, with a downward hanging bulb at the front, with a rectangle on top, with an upward stroke behind the rectangle.",
     "kEH_Func": "Classifier grain",
     "kEH_FVal": "np(r)",
     "kEH_UniK": "HJ U054",
@@ -44751,7 +44871,7 @@ unikemet = {
   "𔊜": {
     "kEH_Cat": "U-05-001",
     "kEH_Core": "C",
-    "kEH_Desc": "A plough, with a cross-bar and two vertical lines on the long beam, without a circle at the front of the long beam.",
+    "kEH_Desc": "A plough, with a crossbar and two vertical lines on the long beam, without a circle at the front of the long beam.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "hb",
     "kEH_UniK": "HJ U013A",
@@ -44762,7 +44882,7 @@ unikemet = {
   "𔊝": {
     "kEH_Cat": "U-05-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A plough, with a cross-bar and two vertical lines on the long beam, with the long beam curving upwards at the front.",
+    "kEH_Desc": "A plough, with a crossbar and two vertical lines on the long beam, with the long beam curving upwards at the front.",
     "kEH_Func": "Phono-repeater",
     "kEH_FVal": "hb",
     "kEH_UniK": "HJ U013C",
@@ -44780,7 +44900,7 @@ unikemet = {
   "𔊟": {
     "kEH_Cat": "U-05-011",
     "kEH_Core": "C",
-    "kEH_Desc": "A plough with a cross-bar, with two vertical lines on the tip of the top beam.",
+    "kEH_Desc": "A plough with a crossbar, with two vertical lines on the tip of the top beam.",
     "kEH_Func": "Phono-repeater",
     "kEH_FVal": "hb",
     "kEH_UniK": "HJ U013B",
@@ -44797,7 +44917,7 @@ unikemet = {
   "𔊡": {
     "kEH_Cat": "U-05-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A plough, without a cross-bar and two vertical lines on the end of the long beam.",
+    "kEH_Desc": "A plough, without a crossbar and two vertical lines on the end of the long beam.",
     "kEH_Func": "Logogram (fruit)",
     "kEH_FVal": "pr.t",
     "kEH_UniK": "HJ U013D",
@@ -44807,7 +44927,7 @@ unikemet = {
   "𔊢": {
     "kEH_Cat": "U-05-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A hoe without a rope connecting the two pieces, with a downwards, backwards line of grains coming from the bottom piece.",
+    "kEH_Desc": "A hoe without a rope connecting the two pieces, with a downward, backward line of grains coming from the bottom piece.",
     "kEH_Func": "Logogram (fruit)",
     "kEH_FVal": "pr.t",
     "kEH_UniK": "HJ U117",
@@ -44825,7 +44945,7 @@ unikemet = {
   "𔊤": {
     "kEH_Cat": "U-06-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A sledge, with a broad downwards loop at the front, with two forwards angled lines on top of the loop.",
+    "kEH_Desc": "A sledge, with a broad downward loop at the front, with two forward angled lines on top of the loop.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "tm",
     "kEH_UniK": "HJ U015A",
@@ -44853,7 +44973,7 @@ unikemet = {
   "𔊧": {
     "kEH_Cat": "U-06-015",
     "kEH_Core": "C",
-    "kEH_Desc": "A rectangular coffin with a rounded lid, and upstanding sides, with a three by three block internal decoration, on top of a sledge.",
+    "kEH_Desc": "A rectangular coffin with a rounded lid, and upstanding sides, with a three-by-three block internal decoration, on top of a sledge.",
     "kEH_Func": "Classifier burial",
     "kEH_FVal": "ḳrs.t",
     "kEH_UniK": "HJ U122",
@@ -44908,8 +45028,7 @@ unikemet = {
   },
   "𔊭": {
     "kEH_Cat": "U-08-008",
-    "kEH_Core": "C",
-    "kEH_Desc": "An adze without the downwards curve at the end of the handle, with three blades.",
+    "kEH_Desc": "An adze without the downward curve at the end of the handle, with three blades.",
     "kEH_Func": "Logogram (nail)",
     "kEH_FVal": "ꜥn.t",
     "kEH_UniK": "U020A"
@@ -44939,7 +45058,7 @@ unikemet = {
   "𔊰": {
     "kEH_Cat": "U-08-025",
     "kEH_Core": "C",
-    "kEH_Desc": "An adze, with an attached triangular blade at the front, bound at the upwards piece of the handle, in a piece of wood, with the end handle ending at the hight of the wood.",
+    "kEH_Desc": "An adze, with an attached triangular blade at the front, bound at the upward piece of the handle, in a piece of wood, with the end handle ending at the height of the wood.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "stp",
     "kEH_UniK": "HJ U065",
@@ -44993,7 +45112,7 @@ unikemet = {
   "𔊵": {
     "kEH_Cat": "U-09-018",
     "kEH_Core": "C",
-    "kEH_Desc": "A drill for drilling holes in beads, with a handle resembling an upside down pawn, with a vertical line as drill-bit, on top of a horizontal rectangle.",
+    "kEH_Desc": "A drill for drilling holes in beads, with a handle resembling an upside-down pawn, with a vertical line as drill-bit, on top of a horizontal rectangle.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "w",
     "kEH_UniK": "HJ U128",
@@ -45010,7 +45129,7 @@ unikemet = {
   "𔊷": {
     "kEH_Cat": "U-09-021",
     "kEH_Core": "C",
-    "kEH_Desc": "A hair-pin or burin, with a horizontal line above and below the circle of the pin.",
+    "kEH_Desc": "A hairpin or burin, with a horizontal line above and below the circle of the pin.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜣb",
     "kEH_UniK": "HJ U023B",
@@ -45021,7 +45140,7 @@ unikemet = {
   "𔊸": {
     "kEH_Cat": "U-09-024",
     "kEH_Core": "C",
-    "kEH_Desc": "A hair-pin or burin, with a horizontal line under the oval of the pin, and a triangular shape on top of the oval.",
+    "kEH_Desc": "A hairpin or burin, with a horizontal line under the oval of the pin, and a triangular shape on top of the oval.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜣb",
     "kEH_UniK": "HJ U023E",
@@ -45032,7 +45151,7 @@ unikemet = {
   "𔊹": {
     "kEH_Cat": "U-09-027",
     "kEH_Core": "C",
-    "kEH_Desc": "A hair pin or burin, resembling a vase on a table.",
+    "kEH_Desc": "A hairpin or burin, resembling a vase on a table.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꜣb",
     "kEH_UniK": "U023F"
@@ -45040,7 +45159,7 @@ unikemet = {
   "𔊺": {
     "kEH_Cat": "U-09-028",
     "kEH_Core": "C",
-    "kEH_Desc": "A hair-pin or burin, with a straight vertical line as pin, with a round head with a triangular top.",
+    "kEH_Desc": "A hairpin or burin, with a straight vertical line as pin, with a round head with a triangular top.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mr",
     "kEH_UniK": "U023G",
@@ -45049,7 +45168,7 @@ unikemet = {
   "𔊻": {
     "kEH_Cat": "U-09-040",
     "kEH_Core": "C",
-    "kEH_Desc": "A drill, consisting of a upside down conical handle which tapers out into the drill-bit.",
+    "kEH_Desc": "A drill, consisting of a upside-down conical handle which tapers out into the drill-bit.",
     "kEH_Func": "Classifier drilling",
     "kEH_FVal": "htꞽ",
     "kEH_UniK": "HJ U072",
@@ -45081,7 +45200,7 @@ unikemet = {
   "𔊾": {
     "kEH_Cat": "U-09-052",
     "kEH_Core": "C",
-    "kEH_Desc": "A drill, with a half-circle handle, with a curl towards the front on top of the handle, with a round drill-bit with a horizontal line on top of the circle, with a forwards curl coming from the horizontal line.",
+    "kEH_Desc": "A drill, with a half-circle handle, with a curl towards the front on top of the handle, with a round drill-bit with a horizontal line on top of the circle, with a forward curl coming from the horizontal line.",
     "kEH_Func": "Logogram (to open)",
     "kEH_FVal": "wbꜣ",
     "kEH_UniK": "U025D"
@@ -45200,7 +45319,7 @@ unikemet = {
   "𔋋": {
     "kEH_Cat": "U-09-077",
     "kEH_Core": "C",
-    "kEH_Desc": "A drill, with a round handle with a horizontal line on top, with a forwards, upwards line at the front of the circle, with a round drill-bit with a horizontal line over it. ",
+    "kEH_Desc": "A drill, with a round handle with a horizontal line on top, with a forward, upward line at the front of the circle, with a round drill-bit with a horizontal line over it. ",
     "kEH_Func": "Logogram (craftsman)",
     "kEH_FVal": "ḥmw.w",
     "kEH_UniK": "U025F"
@@ -45242,7 +45361,7 @@ unikemet = {
   "𔋐": {
     "kEH_Cat": "U-09-083",
     "kEH_Core": "C",
-    "kEH_Desc": "A drill, with a half-circle handle, with a forwards angled loop and a backwards tick on top of the handle, with a round drill-bit, with a horizontal line above and below the drill-bit.",
+    "kEH_Desc": "A drill, with a half-circle handle, with a forward angled loop and a backwards tick on top of the handle, with a round drill-bit, with a horizontal line above and below the drill-bit.",
     "kEH_Func": "Logogram (craftsman)",
     "kEH_FVal": "ḥmw.w",
     "kEH_UniK": "HJ U024B",
@@ -45268,7 +45387,7 @@ unikemet = {
   "𔋓": {
     "kEH_Cat": "U-09-097",
     "kEH_Core": "C",
-    "kEH_Desc": "A drill, with a rectangular handle with a forwards curving line on it, with a forked drill-bit with a horizontal line over it. ",
+    "kEH_Desc": "A drill, with a rectangular handle with a forward curving line on it, with a forked drill-bit with a horizontal line over it. ",
     "kEH_Func": "Logogram (craftsman)",
     "kEH_FVal": "ḥmw.w",
     "kEH_UniK": "U024T",
@@ -45419,7 +45538,7 @@ unikemet = {
   "𔋣": {
     "kEH_Cat": "U-16-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A balance, with the pole resembling a column with a base, with a tenon at the top (O28B), with a plummet, resembing a heart (F34).",
+    "kEH_Desc": "A balance, with the pole resembling a column with a base, with a tenon at the top (O28B), with a plummet, resembling a heart (F34).",
     "kEH_Func": "Logogram (balance; in mḫꜣ.t-tꜣ.wy)",
     "kEH_FVal": "mḫꜣ.t",
     "kEH_UniK": "HJ U038C",
@@ -45464,7 +45583,7 @@ unikemet = {
   "𔋨": {
     "kEH_Cat": "U-16-016",
     "kEH_Core": "C",
-    "kEH_Desc": "The pole of a balance, with the pole resembling a seat (Q1), with a plummet resembling a heart (F34) hanging from the cross-beam.",
+    "kEH_Desc": "The pole of a balance, with the pole resembling a seat (Q1), with a plummet resembling a heart (F34) hanging from the crossbeam.",
     "kEH_Func": "Classifier lifting, carrying",
     "kEH_FVal": "wṯs",
     "kEH_UniK": "HJ U039F",
@@ -45475,7 +45594,7 @@ unikemet = {
   "𔋩": {
     "kEH_Cat": "U-16-017",
     "kEH_Core": "C",
-    "kEH_Desc": "The pole of a balance, with the pole resembling a seat (Q1), with a plummet resembling a heart (F34) hanging from a forwards, downwards curving line.",
+    "kEH_Desc": "The pole of a balance, with the pole resembling a seat (Q1), with a plummet resembling a heart (F34) hanging from a forward, downward curving line.",
     "kEH_Func": "Logogram (to lift, to carry)",
     "kEH_FVal": "wṯs",
     "kEH_UniK": "HJ U039O",
@@ -45486,7 +45605,7 @@ unikemet = {
   "𔋪": {
     "kEH_Cat": "U-16-020",
     "kEH_Core": "C",
-    "kEH_Desc": "The pole of a balance, resembling a column with a base, with a tenon at the top (O28B), with an upwards angling cross-beam.",
+    "kEH_Desc": "The pole of a balance, resembling a column with a base, with a tenon at the top (O28B), with an upward angling crossbeam.",
     "kEH_Func": "Logogram (to lift, to carry)",
     "kEH_FVal": "wṯs",
     "kEH_UniK": "U039S",
@@ -45495,7 +45614,7 @@ unikemet = {
   "𔋫": {
     "kEH_Cat": "U-16-021",
     "kEH_Core": "C",
-    "kEH_Desc": "The pole of a balance, resembling a column with a base, with a tenon at the top (O28B), with a plummet resembling a heart (F34) hanging from the cross-beam.",
+    "kEH_Desc": "The pole of a balance, resembling a column with a base, with a tenon at the top (O28B), with a plummet resembling a heart (F34) hanging from the crossbeam.",
     "kEH_Func": "Logogram (to lift, to carry)",
     "kEH_FVal": "wṯs",
     "kEH_UniK": "HJ U039N",
@@ -45534,7 +45653,7 @@ unikemet = {
   "𔋯": {
     "kEH_Cat": "U-16-031",
     "kEH_Core": "C",
-    "kEH_Desc": "A tool, represented as a veritical line with a horizontal line at the front, with a line with a plummet resembling a heart (F34) hanging from the horizontal line.",
+    "kEH_Desc": "A tool, represented as a vertical line with a horizontal line at the front, with a line with a plummet resembling a heart (F34) hanging from the horizontal line.",
     "kEH_Func": "Classifier measuring tool?",
     "kEH_FVal": "ḫꜥ.y",
     "kEH_UniK": "HJ U039H",
@@ -45564,7 +45683,7 @@ unikemet = {
   "𔋲": {
     "kEH_Cat": "U-16-036",
     "kEH_Core": "C",
-    "kEH_Desc": "The pole of a balance, with the cross-bar resembling a feather (H6), written horizontally.",
+    "kEH_Desc": "The pole of a balance, with the crossbar resembling a feather (H6), written horizontally.",
     "kEH_Func": "Phonemogram (ꞽn wṯs-ḥr)",
     "kEH_FVal": "wṯs",
     "kEH_UniK": "HJ U039D",
@@ -45603,7 +45722,7 @@ unikemet = {
   "𔋶": {
     "kEH_Cat": "U-16-043",
     "kEH_Core": "C",
-    "kEH_Desc": "An astronomical instrument to measure the movements of the stars, consisting of a square block coming from a long horizontal base, with a vertical line going over the middle of the square block, decending below the block, with a plummet in the shape of a heart (F34) hanging below the base.",
+    "kEH_Desc": "An astronomical instrument to measure the movements of the stars, consisting of a square block coming from a long horizontal base, with a vertical line going over the middle of the square block, descending below the block, with a plummet in the shape of a heart (F34) hanging below the base.",
     "kEH_Func": "Logogram (service, task)",
     "kEH_FVal": "wnw.t",
     "kEH_UniK": "HJ U096",
@@ -45614,7 +45733,7 @@ unikemet = {
   "𔋷": {
     "kEH_Cat": "U-16-044",
     "kEH_Core": "C",
-    "kEH_Desc": "An astronomical instrument to measure the movements of the stars, consisting of two vertical ovals at the front of a long horizontal base, with a plummet in the shape of a heart (F34) hanging below the base, connected to a vertical line between the two ovals, with an upwards dot in the middle of the horizontal base.",
+    "kEH_Desc": "An astronomical instrument to measure the movements of the stars, consisting of two vertical ovals at the front of a long horizontal base, with a plummet in the shape of a heart (F34) hanging below the base, connected to a vertical line between the two ovals, with an upward dot in the middle of the horizontal base.",
     "kEH_Func": "Classifier astronomical instrument",
     "kEH_FVal": "mrḫ.t",
     "kEH_UniK": "U096A",
@@ -45631,7 +45750,7 @@ unikemet = {
   "𔋹": {
     "kEH_Cat": "U-16-048",
     "kEH_Core": "C",
-    "kEH_Desc": "A level, consisting of three beams in a A shape, with a vertical line with a plummet coming from the top corner.",
+    "kEH_Desc": "A level, consisting of three beams in the shape of an A, with a vertical line with a plummet coming from the top corner.",
     "kEH_Func": "Classifier length, width",
     "kEH_FVal": "sḫḫ",
     "kEH_UniK": "HJ U097",
@@ -45685,7 +45804,7 @@ unikemet = {
   "𔋾": {
     "kEH_Cat": "U-17-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A flat bottomed jar without handles, with a broad rim, on top of a low potter's wheel.",
+    "kEH_Desc": "A flat bottom jar without handles, with a broad rim, on top of a low potter's wheel.",
     "kEH_Func": "Classifier potter",
     "kEH_FVal": "ḳd.w",
     "kEH_UniK": "U099H"
@@ -45701,8 +45820,8 @@ unikemet = {
   "𔌀": {
     "kEH_Cat": "U-17-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A potters wheel.",
-    "kEH_Func": "Classifier potters wheel",
+    "kEH_Desc": "A potter's wheel.",
+    "kEH_Func": "Classifier potter's wheel",
     "kEH_FVal": "nḥb",
     "kEH_UniK": "U143"
   },
@@ -45722,7 +45841,7 @@ unikemet = {
   "𔌃": {
     "kEH_Cat": "U-18-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A wine press, consisiting of two rectangular forked poles, with a slightly curved line between the poles, on which a basket hangs, connected by three lines to the curved line.",
+    "kEH_Desc": "A wine press, consisting of two rectangular forked poles, with a slightly curved line between the poles, on which a basket hangs, connected by three lines to the curved line.",
     "kEH_Func": "Logogram (Chesemu (divinity))",
     "kEH_FVal": "šsmw",
     "kEH_UniK": "HJ AA023R",
@@ -45733,7 +45852,7 @@ unikemet = {
   "𔌄": {
     "kEH_Cat": "U-18-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A wine press, consisiting of two rectangular forked poles, with a horizontal line just below the forks, extending beyond the poles, with two vertical lines of 3 dots coming from the middle of the horizontal line.",
+    "kEH_Desc": "A wine press, consisting of two rectangular forked poles, with a horizontal line just below the forks, extending beyond the poles, with two vertical lines of 3 dots coming from the middle of the horizontal line.",
     "kEH_Func": "Logogram (Chesemu (divinity))",
     "kEH_FVal": "šsmw",
     "kEH_UniK": "HJ AA023D",
@@ -45811,6 +45930,7 @@ unikemet = {
   "𔌍": {
     "kEH_Cat": "U-18-027",
     "kEH_Core": "C",
+    "kEH_Desc": "A wine press, consisting of two rectangular forked poles, with two horizontal lines at the top of the two poles.",
     "kEH_UniK": "AA023Z"
   },
   "𔌎": {
@@ -45921,7 +46041,7 @@ unikemet = {
   "𔌙": {
     "kEH_Cat": "U-22-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A diamond shaped plummet of a balance with an backwards and downwards curving string / A diamond shaped brazier with a flame rising from it, flame angling towards the front.",
+    "kEH_Desc": "A diamond shaped plummet of a balance with an backward and downward curving string / A diamond shaped brazier with a flame rising from it, flame angling towards the front.",
     "kEH_Func": "Classifier flame",
     "kEH_UniK": "HJ U098",
     "kEH_JSesh": "U98",
@@ -45950,8 +46070,8 @@ unikemet = {
   "𔌜": {
     "kEH_Cat": "U-22-009",
     "kEH_Core": "C",
-    "kEH_Desc": "Upright of an ladder.",
-    "kEH_Func": "Classifier (upright of an ladder)",
+    "kEH_Desc": "Upright of a ladder.",
+    "kEH_Func": "Classifier (upright of a ladder)",
     "kEH_FVal": "mꜥꜣꜥ",
     "kEH_UniK": "HJ U107",
     "kEH_JSesh": "U107",
@@ -46041,7 +46161,7 @@ unikemet = {
   "𔌥": {
     "kEH_Cat": "V-03-003",
     "kEH_Core": "C",
-    "kEH_Desc": "An oval cartouche, written vertially, with two horizontal lines inside the cartouche.",
+    "kEH_Desc": "An oval cartouche, written vertically, with two horizontal lines inside the cartouche.",
     "kEH_Func": "Logogram (name)",
     "kEH_FVal": "rn",
     "kEH_UniK": "V129A"
@@ -46114,7 +46234,7 @@ unikemet = {
   "𔌭": {
     "kEH_Cat": "V-04-028",
     "kEH_Core": "C",
-    "kEH_Desc": "A rolled up herdsman's shelter of papyrus, with an rectangle at either side and the top of the loop.",
+    "kEH_Desc": "A rolled-up herdsman's shelter of papyrus, with a rectangle at either side and the top of the loop.",
     "kEH_Func": "Logogram (protection)",
     "kEH_FVal": "sꜣ",
     "kEH_UniK": "V017C",
@@ -46123,7 +46243,7 @@ unikemet = {
   "𔌮": {
     "kEH_Cat": "V-04-029",
     "kEH_Core": "C",
-    "kEH_Desc": "A rolled up herdsman's shelter of papyrus, with an rectangle at either side of the loop, and a cross on top of the loop.",
+    "kEH_Desc": "A rolled-up herdsman's shelter of papyrus, with a rectangle at either side of the loop, and a cross on top of the loop.",
     "kEH_Func": "Logogram (protection)",
     "kEH_FVal": "sꜣ",
     "kEH_UniK": "HJ V017B",
@@ -46133,7 +46253,7 @@ unikemet = {
   "𔌯": {
     "kEH_Cat": "V-04-054",
     "kEH_Core": "C",
-    "kEH_Desc": "A cobra in repose (Naja haja) (I10), written over a hobble for cattle without a crossbar (V20).",
+    "kEH_Desc": "A cobra in repose (Naja haje) (I10), written over a hobble for cattle without a crossbar (V20).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mḏ",
     "kEH_UniK": "HJ V021A",
@@ -46248,7 +46368,7 @@ unikemet = {
   "𔌻": {
     "kEH_Cat": "V-08-024",
     "kEH_Core": "C",
-    "kEH_Desc": "A swap made from a hank of fibre, with three loops, with a horizontal forward line coming from the top loop.",
+    "kEH_Desc": "A swap made from a hank of fiber, with three loops, with a horizontal forward line coming from the top loop.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sk",
     "kEH_UniK": "V084B",
@@ -46257,7 +46377,7 @@ unikemet = {
   "𔌼": {
     "kEH_Cat": "V-08-025",
     "kEH_Core": "C",
-    "kEH_Desc": "A swap made from a hank of fibre, with two loops, with a forward tick and a small loop on top of the top loop.",
+    "kEH_Desc": "A swap made from a hank of fiber, with two loops, with a forward tick and a small loop on top of the top loop.",
     "kEH_Func": "Classifier to dispel, to drive away",
     "kEH_FVal": "ḫsr",
     "kEH_UniK": "V084A"
@@ -46273,7 +46393,7 @@ unikemet = {
   "𔌾": {
     "kEH_Cat": "V-08-034",
     "kEH_Core": "C",
-    "kEH_Desc": "A swap made from a hank of fibre, with three loops, with three strokes on the top loop.",
+    "kEH_Desc": "A swap made from a hank of fiber, with three loops, with three strokes on the top loop.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wꜣḥ",
     "kEH_UniK": "V028G"
@@ -46281,7 +46401,7 @@ unikemet = {
   "𔌿": {
     "kEH_Cat": "V-08-039",
     "kEH_Core": "C",
-    "kEH_Desc": "A swab made from a hank of fibre with two loops, with fringes on the wide top-piece.",
+    "kEH_Desc": "A swab made from a hank of fiber with two loops, with fringes on the wide top-piece.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wꜣḥ",
     "kEH_UniK": "V029B",
@@ -46292,7 +46412,7 @@ unikemet = {
   "𔍀": {
     "kEH_Cat": "V-08-040",
     "kEH_Core": "C",
-    "kEH_Desc": "A swab made from a hank of fibre with three loops.",
+    "kEH_Desc": "A swab made from a hank of fiber with three loops.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wꜣḥ",
     "kEH_UniK": "HJ V091",
@@ -46303,7 +46423,7 @@ unikemet = {
   "𔍁": {
     "kEH_Cat": "V-08-046",
     "kEH_Core": "C",
-    "kEH_Desc": "A swap made from a hank of fibre, with two loops, with ties at the top and bottom.",
+    "kEH_Desc": "A swap made from a hank of fiber, with two loops, with ties at the top and bottom.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "wꜣḥ",
     "kEH_UniK": "HJ V089",
@@ -46314,7 +46434,7 @@ unikemet = {
   "𔍂": {
     "kEH_Cat": "V-08-053",
     "kEH_Core": "C",
-    "kEH_Desc": "A wick of twisted flax, orentated on its side, curving upwards.",
+    "kEH_Desc": "A wick of twisted flax, orientated on its side, curving upwards.",
     "kEH_Func": "Classifier (wick)",
     "kEH_FVal": "ḥꜥ.t",
     "kEH_UniK": "V148"
@@ -46467,7 +46587,7 @@ unikemet = {
   "𔍒": {
     "kEH_Cat": "V-15-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A basket-shaped bag with a tied of end at the front / A uterus of a cow, tied of at the front.",
+    "kEH_Desc": "A basket-shaped bag with a tied off end at the front / A uterus of a cow, tied off at the front.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "sṯꞽ",
     "kEH_UniK": "HJ F143",
@@ -46478,7 +46598,7 @@ unikemet = {
   "𔍓": {
     "kEH_Cat": "V-15-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A basket-shaped bag with a tied of end at the front, with a split end / A uterus of a cow, tied of at the front, with a split end.",
+    "kEH_Desc": "A basket-shaped bag with a tied off end at the front, with a split end / A uterus of a cow, tied off at the front, with a split end.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫnm",
     "kEH_UniK": "HJ V131",
@@ -46488,7 +46608,7 @@ unikemet = {
   "𔍔": {
     "kEH_Cat": "V-15-012",
     "kEH_Core": "C",
-    "kEH_Desc": "A basket-shaped bag with a tied of end at the front, resembling a loop, with a upwards stroke at the back / A uterus of a cow, tied of at the front, with an upwards stroke at the back.",
+    "kEH_Desc": "A basket-shaped bag with a tied off end at the front, resembling a loop, with an upwards stroke at the back / A uterus of a cow, tied off at the front, with an upward stroke at the back.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḥm",
     "kEH_UniK": "HJ F143C",
@@ -46498,7 +46618,7 @@ unikemet = {
   "𔍕": {
     "kEH_Cat": "V-15-013",
     "kEH_Core": "C",
-    "kEH_Desc": "The womb of a cow, with falopian tubes.",
+    "kEH_Desc": "The womb of a cow, with fallopian tubes.",
     "kEH_Func": "Logogram/phonemogram (womb)",
     "kEH_FVal": "kꜣ.t",
     "kEH_UniK": "HJ V132",
@@ -46611,7 +46731,7 @@ unikemet = {
   "𔍠": {
     "kEH_Cat": "W-01-017",
     "kEH_Core": "C",
-    "kEH_Desc": "An ointment jar witout seal.",
+    "kEH_Desc": "An ointment jar without seal.",
     "kEH_Func": "Classifier oil, unguent",
     "kEH_FVal": "ḥꜣ.t(y)t",
     "kEH_UniK": "HJ W030",
@@ -46644,7 +46764,7 @@ unikemet = {
   "𔍣": {
     "kEH_Cat": "W-02-003",
     "kEH_Core": "C",
-    "kEH_Desc": "An alabaster basin with a diamond shaped inner marking, with additional internal decoration / A wickework basket with a diamond shaped inner marking and with the wickerwork structure visible.",
+    "kEH_Desc": "An alabaster basin with a diamond shaped inner marking, with additional internal decoration / A wickerwork basket with a diamond shaped inner marking and with the wickerwork structure visible.",
     "kEH_Func": "Logogram (lord)",
     "kEH_FVal": "nb",
     "kEH_UniK": "W003C",
@@ -46670,7 +46790,7 @@ unikemet = {
   "𔍦": {
     "kEH_Cat": "W-02-013",
     "kEH_Core": "C",
-    "kEH_Desc": "An alabaster basin with a diamond shaped inner marking (W3), with two forearms coming from the top the basin, forearms and hands vertical, handpalms inwards, with a forearm, with the palm of the hand facing upwards (D36) written over the arms.",
+    "kEH_Desc": "An alabaster basin with a diamond shaped inner marking (W3), with two forearms coming from the top the basin, forearms and hands vertical, hand palms inwards, with a forearm, with the palm of the hand facing upwards (D36) written over the arms.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "kꜣw",
     "kEH_UniK": "HJ W039",
@@ -46772,7 +46892,7 @@ unikemet = {
   "𔍰": {
     "kEH_Cat": "W-06-016",
     "kEH_Core": "C",
-    "kEH_Desc": "A tall water pot with a spout, with a forwards, downwards line of liquid coming from the top of the vessel.",
+    "kEH_Desc": "A tall water pot with a spout, with a forward, downward line of liquid coming from the top of the vessel.",
     "kEH_Func": "Classifier to be cool, to cool",
     "kEH_FVal": "ḳbḥ",
     "kEH_UniK": "HJ W015B",
@@ -46783,7 +46903,7 @@ unikemet = {
   "𔍱": {
     "kEH_Cat": "W-06-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A tall water pot with a spout, with a backwards, downwards line of liquid coming from the top of the vessel.",
+    "kEH_Desc": "A tall water pot with a spout, with a backward, downward line of liquid coming from the top of the vessel.",
     "kEH_Func": "Logogram (cool water/libation water)",
     "kEH_FVal": "ḳbḥ.w",
     "kEH_UniK": "W015D"
@@ -46791,7 +46911,7 @@ unikemet = {
   "𔍲": {
     "kEH_Cat": "W-06-021",
     "kEH_Core": "C",
-    "kEH_Desc": "A tall water pot, written at a 45° forward angle, with a forwards, downwards dotted line coming from the top.",
+    "kEH_Desc": "A tall water pot, written at a 45° forward angle, with a forward, downward dotted line coming from the top.",
     "kEH_Func": "Classifier to pour, to sprinkle",
     "kEH_FVal": "sṯ(ꞽ)",
     "kEH_UniK": "HJ W045",
@@ -46802,7 +46922,7 @@ unikemet = {
   "𔍳": {
     "kEH_Cat": "W-06-023",
     "kEH_Core": "C",
-    "kEH_Desc": "A tall water pot, with a forwards, downwards line of liquid coming from the top of the vessel, with the line ending on top of a canal (N36).",
+    "kEH_Desc": "A tall water pot, with a forward, downward line of liquid coming from the top of the vessel, with the line ending on top of a canal (N36).",
     "kEH_Func": "Logogram (to be cool, to cool)",
     "kEH_FVal": "ḳbḥ",
     "kEH_UniK": "W099A"
@@ -46829,7 +46949,7 @@ unikemet = {
   "𔍶": {
     "kEH_Cat": "W-06-028",
     "kEH_Core": "C",
-    "kEH_Desc": "A tall water pot with a spout, with a line of liquid coming from the spout (W15), on top of a  plan of a crossroads in a village (O49).",
+    "kEH_Desc": "A tall water pot with a spout, with a line of liquid coming from the spout (W15), on top of a plan of a crossroads in a village (O49).",
     "kEH_Func": "Phonemogram/logogram (in ḳbḥ.wy (the two sources, i.e., Egypt))",
     "kEH_FVal": "ḳbḥ",
     "kEH_UniK": "HJ W048",
@@ -46840,7 +46960,7 @@ unikemet = {
   "𔍷": {
     "kEH_Cat": "W-06-030",
     "kEH_Core": "C",
-    "kEH_Desc": "A tall water pot with a spout, with a line of liquid coming from the spout (W15), in front of its mirror, with the lines of water ending on top of a  plan of a crossroads in a village (O49).",
+    "kEH_Desc": "A tall water pot with a spout, with a line of liquid coming from the spout (W15), in front of its mirror, with the lines of water ending on top of a plan of a crossroads in a village (O49).",
     "kEH_Func": "Logogram (the two sources, i.e. Egypt)",
     "kEH_FVal": "ḳbḥ.wy",
     "kEH_UniK": "HJ W048A",
@@ -46873,7 +46993,7 @@ unikemet = {
   "𔍺": {
     "kEH_Cat": "W-06-043",
     "kEH_Core": "C",
-    "kEH_Desc": "A schematic representation of three sealed water pots in a rack, with the downwards curving lines connecting to the base.",
+    "kEH_Desc": "A schematic representation of three sealed water pots in a rack, with the downward curving lines connecting to the base.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ḫnt",
     "kEH_UniK": "W017C",
@@ -46923,7 +47043,7 @@ unikemet = {
   "𔍿": {
     "kEH_Cat": "W-07-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A milk jar in a carrying sling, with upwards lines above the vessel, resembling the horns of a bovid (F13).",
+    "kEH_Desc": "A milk jar in a carrying sling, with upward lines above the vessel, resembling the horns of a bovid (F13).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mꞽ",
     "kEH_UniK": "W019A"
@@ -46964,7 +47084,7 @@ unikemet = {
   "𔎄": {
     "kEH_Cat": "W-08-002",
     "kEH_Core": "C",
-    "kEH_Desc": "A tall milk jug in a carrying sling, with upwards lines above the vessel, resembling the horns of a bovid (F13).",
+    "kEH_Desc": "A tall milk jug in a carrying sling, with upward lines above the vessel, resembling the horns of a bovid (F13).",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "mꞽ",
     "kEH_UniK": "HJ W053",
@@ -46975,7 +47095,7 @@ unikemet = {
   "𔎅": {
     "kEH_Cat": "W-08-003",
     "kEH_Core": "C",
-    "kEH_Desc": "A situla which widens at the base, with a triangular stand, with a carrying loop, with two upwards lines coming from the rim.",
+    "kEH_Desc": "A situla which widens at the base, with a triangular stand, with a carrying loop, with two upward lines coming from the rim.",
     "kEH_Func": "Classifier vessel (situla?)",
     "kEH_FVal": "wšb",
     "kEH_UniK": "HJ W053A",
@@ -47006,7 +47126,7 @@ unikemet = {
   "𔎈": {
     "kEH_Cat": "W-09-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A vase with a broad rim, written at a 45° forward angle, with a forwards line of liquid coming from the vase.",
+    "kEH_Desc": "A vase with a broad rim, written at a 45° forward angle, with a forward line of liquid coming from the vase.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "rd",
     "kEH_UniK": "HJ W056",
@@ -47113,7 +47233,7 @@ unikemet = {
   "𔎓": {
     "kEH_Cat": "W-11-010",
     "kEH_Core": "C",
-    "kEH_Desc": "A flat bottomed jug with a rounded top, with a small upwards rim.",
+    "kEH_Desc": "A flat bottom jug with a rounded top, with a small upward rim.",
     "kEH_Func": "Classifier jug",
     "kEH_FVal": "nms.t",
     "kEH_UniK": "W125A",
@@ -47371,7 +47491,7 @@ unikemet = {
   "𔎮": {
     "kEH_Cat": "W-11-095",
     "kEH_Core": "C",
-    "kEH_Desc": "A flat bottomed jar without handles, with a broad rim and a small neck.",
+    "kEH_Desc": "A flat bottom jar without handles, with a broad rim and a small neck.",
     "kEH_Func": "Logogram (some type of vessel)",
     "kEH_FVal": "ḏwꞽ.w",
     "kEH_UniK": "HJ W125",
@@ -47390,7 +47510,7 @@ unikemet = {
   "𔎰": {
     "kEH_Cat": "W-11-100",
     "kEH_Core": "C",
-    "kEH_Desc": "A round vessel with a broad rim, with a downwards line at either side of the neck.",
+    "kEH_Desc": "A round vessel with a broad rim, with a downward line at either side of the neck.",
     "kEH_Func": "Classifier vessel (which might be some type of oil)",
     "kEH_FVal": "bꜥ/bꜥꜥ",
     "kEH_UniK": "W131"
@@ -47489,7 +47609,7 @@ unikemet = {
   "𔎻": {
     "kEH_Cat": "W-11-124",
     "kEH_Core": "C",
-    "kEH_Desc": "A rectangualar basin with a trianglular shape on top, with two feet inside the basin.",
+    "kEH_Desc": "A rectangular basin with a triangular shape on top, with two feet inside the basin.",
     "kEH_Func": "Classifier basin for washing feet",
     "kEH_FVal": "mꜥ",
     "kEH_UniK": "HJ W098",
@@ -47548,7 +47668,7 @@ unikemet = {
   "𔏁": {
     "kEH_Cat": "X-03-005",
     "kEH_Core": "C",
-    "kEH_Desc": "A loaf of bread, with a curved inprint at both long sides.",
+    "kEH_Desc": "A loaf of bread, with a curved imprint at both long sides.",
     "kEH_Func": "Classifier bread",
     "kEH_FVal": "t-ḥḏ",
     "kEH_UniK": "HJ X003B",
@@ -47559,7 +47679,7 @@ unikemet = {
   "𔏂": {
     "kEH_Cat": "X-03-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A conical loaf of bread, with an curved inprint on the sides and the bottom.",
+    "kEH_Desc": "A conical loaf of bread, with an curved imprint on the sides and the bottom.",
     "kEH_Func": "Classifier bread/food",
     "kEH_FVal": "t",
     "kEH_UniK": "X003D"
@@ -47625,7 +47745,7 @@ unikemet = {
   "𔏉": {
     "kEH_Cat": "X-05-002",
     "kEH_Core": "C",
-    "kEH_Desc": "An horizontal oval shape, with two upwards curving strokes added at the front short side (X5), on top of legs in a walking posture, feet orientated towards the reading direction (D54).",
+    "kEH_Desc": "An horizontal oval shape, with two upward curving strokes added at the front short side (X5), on top of legs in a walking posture, feet orientated towards the reading direction (D54).",
     "kEH_Func": "Logogram (to pass by)",
     "kEH_FVal": "sn",
     "kEH_UniK": "HJ X005A",
@@ -47642,7 +47762,7 @@ unikemet = {
   "𔏋": {
     "kEH_Cat": "X-06-009",
     "kEH_Core": "C",
-    "kEH_Desc": "A round loaf with an half circle finger mark at the bottom.",
+    "kEH_Desc": "A round loaf with a half circle finger mark at the bottom.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "pꜣ.t",
     "kEH_UniK": "X006G",
@@ -47679,7 +47799,7 @@ unikemet = {
   "𔏏": {
     "kEH_Cat": "Y-01-007",
     "kEH_Core": "C",
-    "kEH_Desc": "A papyrus scroll, rolled up, tied and sealed, written horizontally, with one tie at the front of the seal.",
+    "kEH_Desc": "A papyrus scroll, rolled-up, tied and sealed, written horizontally, with one tie at the front of the seal.",
     "kEH_Func": "Classifier abstract words",
     "kEH_FVal": "gr",
     "kEH_UniK": "Y001B",
@@ -47708,7 +47828,7 @@ unikemet = {
   "𔏒": {
     "kEH_Cat": "Y-02-008",
     "kEH_Core": "C",
-    "kEH_Desc": "A scribe's kit, consisting of a palette, ink or paint pouch and a  simplified reed pen.",
+    "kEH_Desc": "A scribe's kit, consisting of a palette, ink or paint pouch and a simplified reed pen.",
     "kEH_Func": "Logogram (scribe)",
     "kEH_FVal": "sš",
     "kEH_UniK": "HJ Y003C",
@@ -47755,7 +47875,7 @@ unikemet = {
   "𔏗": {
     "kEH_Cat": "Y-02-014",
     "kEH_Core": "C",
-    "kEH_Desc": "An writing tablet with a round top, with a vertical line at either side of the tablet.",
+    "kEH_Desc": "A writing tablet with a round top, with a vertical line at either side of the tablet.",
     "kEH_Func": "Classifier writing tablet",
     "kEH_FVal": "ꜥn",
     "kEH_UniK": "HJ Y027",
@@ -47891,7 +48011,7 @@ unikemet = {
   "𔏥": {
     "kEH_Cat": "Y-06-017",
     "kEH_Core": "C",
-    "kEH_Desc": "A sistrum, with the top piece in the form of a shrine encosed by two curls, with the human face on the handle having hair.",
+    "kEH_Desc": "A sistrum, with the top piece in the form of a shrine encased by two curls, with the human face on the handle having hair.",
     "kEH_Func": "Logogram (sistrum)",
     "kEH_FVal": "sšš.t",
     "kEH_UniK": "Y008B"
@@ -47919,13 +48039,14 @@ unikemet = {
   "𔏨": {
     "kEH_Cat": "Z-01-033",
     "kEH_Core": "C",
+    "kEH_Desc": "Four horizontal strokes arranged vertically.",
     "kEH_UniK": "Z015J",
     "kEH_NoRotate": "Y"
   },
   "𔏩": {
     "kEH_Cat": "Z-02-006",
     "kEH_Core": "C",
-    "kEH_Desc": "A horizontal stroke overlaping a vertical stroke, both strokes of the same length.",
+    "kEH_Desc": "A horizontal stroke overlapping a vertical stroke, both strokes of the same length.",
     "kEH_Func": "Phonemogram",
     "kEH_FVal": "ꞽm.y",
     "kEH_UniK": "HJ Z011A",
@@ -48009,25 +48130,28 @@ unikemet = {
   "𔏳": {
     "kEH_Cat": "Z-07-008",
     "kEH_Core": "C",
+    "kEH_Desc": "An oval dot.",
     "kEH_UniK": "Z049",
     "kEH_JSesh": "Ff100"
   },
   "𔏴": {
     "kEH_Cat": "Z-07-009",
     "kEH_Core": "C",
+    "kEH_Desc": "An horizontal line with a small downwards line at the front.",
     "kEH_UniK": "Z050",
     "kEH_JSesh": "Ff101"
   },
   "𔏵": {
     "kEH_Cat": "Z-07-010",
     "kEH_Core": "C",
+    "kEH_Desc": "An horizontal line with a small downwards line at the front, followed by a short horizontal line with an upwards curving half-circle line on the back of the line after a small bit of space",
     "kEH_UniK": "Z051",
     "kEH_JSesh": "Ff110"
   },
   "𔏶": {
     "kEH_Cat": "Z-07-011",
     "kEH_Core": "C",
-    "kEH_Desc": "Verse-point",
+    "kEH_Desc": "Verse-point.",
     "kEH_UniK": "Z052"
   },
   "𔏷": {

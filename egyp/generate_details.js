@@ -169,6 +169,7 @@ function makeListFromChars (chars) {
                     if (unikemet[ch].kEH_JSesh) out += `<tr><th>kEH_JSesh</th><td>${ unikemet[ch].kEH_JSesh }</td></tr>`
                     if (unikemet[ch].kEH_HG) out += `<tr><th>kEH_HG</th><td>${ unikemet[ch].kEH_HG }</td></tr>`
                     if (unikemet[ch].kEH_IFAO) out += `<tr><th>kEH_IFAO</th><td>${ unikemet[ch].kEH_IFAO }</td></tr>`
+                    if (unikemet[ch].kEH_AltSeq) out += `<tr><th>kEH_AltSeq</th><td>${ unikemet[ch].kEH_AltSeq }</td></tr>`
                     if (unikemet[ch].kEH_NoMirror) out += `<tr><th>kEH_NoMirror</th><td>${ unikemet[ch].kEH_NoMirror }</td></tr>`
                     if (unikemet[ch].kEH_NoRotate) out += `<tr><th>kEH_NoRotate</th><td>${ unikemet[ch].kEH_NoRotate }</td></tr>`
                     out += `</table>`
