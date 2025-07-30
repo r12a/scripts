@@ -62,7 +62,7 @@ function setContentPrompts () {
         
         //{node:document.querySelector('#vletter h4'), text:"What characters are used that have the general category of letter?"},
 
-        {node:document.querySelector('#standalone h4'), text:"How does the orthography handle vowels that are not preceded by a consonant?"},
+        {node:document.querySelector('.tbd #standalone h4'), text:"How does the orthography handle vowels that are not preceded by a consonant?"},
 
         {node:document.querySelector('.tbd #vlength h4'), text:"How does the orthography handle differences in vowel length?"},
 
