@@ -118,6 +118,13 @@ reflist = {
 },
 
 
+"ssp": {
+"authors": "Sony Salma Priyadarshini",
+"title":"The_Worlds_Writing_Systems",
+"date": "2014",
+"url":"https://dsource.in/dcontent/idc-archive/assets/projects/doc/sony-s-priyadarshini-drs-report.pdf",
+"reviewed":true
+},
 
 }
 

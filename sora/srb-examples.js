@@ -25,15 +25,15 @@ autoExpandExamples.srb = `
 @ https://en.wiktionary.org/wiki/Category:Sora_lemmas
 
 
-𑃐𑃚𑃝|the Sora language||savara
+𑃐𑃚𑃝|the Sora language|s§oː§raː|savara
 𑃛𑃥𑃝𑃝|heart||purara
 
 
 
 @ http://sealang.net/sala/archives/pdf8/zide1999three.pdf
 
-𑃢𑃖𑃙|arrow|amən|aamn
-𑃒𑃥𑃡𑃢𑃗|brother|bʊɲaŋ
+𑃢𑃖𑃙|arrow|a§mə§n|aamn
+𑃒𑃥𑃡𑃢𑃗|brother|b§ʊ§ɲ§a§ŋ|
 
 
 
