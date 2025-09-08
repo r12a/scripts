@@ -1890,6 +1890,8 @@ function replaceStuff (node) {
             }
 
         if (ipa.length > 0) {
+            //if (context === "soundSummary" && ipa[i]) listIPA += `<span class="listIPA" onclick="showDetailsForSummaryPhone(${ ipa[i] })">${ ipa[i] }</span>`
+            //else 
             if (ipa[i]) listIPA += '<span class="listIPA">'+ipa[i]+'</span>'
             else listIPA += ' '
             }
@@ -2276,6 +2278,9 @@ function showCharDetailsForSummary (evt) {
     console.log('ipaNodes',ipaNodes.length)
     for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
     }
+
+
+
 
 
 
@@ -2830,11 +2835,23 @@ function showTransliterations (yes) {
 
 
 
+
 function showIPAPhoneEvt (evt) { 
 	// look for a Wikipedia page that describes the phoneme input
-    
+
+
+    // figure out whether this phone is inside a summary table
+    var context = null
+    if (evt.target.closest('.soundSummary')) context = 'soundSummary'
+
+
     if (typeof IPAsymbols === 'undefined') {
         console.log('Quitting show IPA symbols because no data.')
+        return
+        }
+    
+    if (context == 'soundSummary') {
+        window.location = `#map${ evt.target.textContent.replace(/-/g,'') }`
         return
         }
     
