@@ -107,6 +107,15 @@ reflist = {
 "reviewed":true
 },
 
+"as": {
+"authors": "Ariq Syauqi, Sarwit Sarwono",
+"title":"Review on the Rejang Unicode Range A930–A95F",
+"date": "2025",
+"url":"https://www.unicode.org/L2/L2025/25162-rejang-review.pdf",
+"reviewed":false
+},
+
+
 }
 
 
