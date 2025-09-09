@@ -2851,7 +2851,7 @@ function showIPAPhoneEvt (evt) {
         }
     
     if (context == 'soundSummary') {
-        window.location = `#map${ evt.target.textContent.replace(/-/g,'') }`
+        window.location = `#map${ evt.target.textContent.replace(/-/g,'').replace(/ /g,'') }`
         return
         }
     
