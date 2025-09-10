@@ -3276,7 +3276,7 @@ function copyIntroInfo () {
         var paras = document.querySelectorAll('.addToVowels')
         console.log("Copying",paras.length,"paragraphs to Vowel section.")
         for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
-        //if (document.getElementById('vowel_mappings')) out += `<p class="instructions">For a mapping of sounds to graphemes see <a class="secref" href="#vowel_mappings">Vowel sounds to characters</a>.</p>`
+        if (document.getElementById('vowel_mappings')) out += `<aside class="instructions" style="margin:4rem;">The summary table just below gives a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.</aside>`
         if (out !== '') document.getElementById('vowel_description').innerHTML = out
         }
     
@@ -3286,7 +3286,7 @@ function copyIntroInfo () {
         var paras = document.querySelectorAll('.addToConsonants')
         console.log("Copying",paras.length,"paragraphs to Consonant section.")
         for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
-        //if (document.getElementById('consonant_mappings')) out += `<p class="instructions">For a mapping of sounds to graphemes see <a class="secref" href="#consonant_mappings">Consonant sounds to characters</a>.</p>`
+        if (document.getElementById('consonant_mappings')) out += `<aside class="instructions" style="margin:4rem;">The summary table just below gives a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.</aside>`
         if (out !== '') document.getElementById('consonant_description').innerHTML = out
         }
 
