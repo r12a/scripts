@@ -243,6 +243,10 @@ autoExpandExamples.lep = `
 ᰒᰶ|narrate|fla|flâ
 ᰒᰧᰭᰶ|separate|fliʔk̚|flík
 ᰛᰩᰵᰛᰧᰵᰶ|Róng language|roŋriŋ|róngríng
+ᰎᰪᰰᰈᰬᰵ|iron|pɯn.§d͡ʒeŋ|punjeng|
+
+
+
 
 @ https://scholarlypublications.universiteitleiden.nl/access/item%3A2964716/view
 
