@@ -58,7 +58,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->12 September, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->16 September, 2025<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -74,7 +74,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->12-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->16-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -1255,7 +1255,6 @@ alveolar</th>
 <span id="vlength"></span>
 <span id="nasalisation"></span>
 <span id="tones"></span>
-<span id="novowel"></span>
 <span id="extendedC"></span>
 <span id="onsets"></span>
 <span id="finals"></span>
@@ -1462,13 +1461,7 @@ alveolar</th>
 <p>The inherent vowel is not usually pronounced at the end of a word.</p>
 
 
-
-
-<section id="novowel">
-<h4>Inherent vowel suppression</h4>
-
-<p>The suppression of the inherent vowel in a syllable coda is indicated using the <span class="ch">𑜫</span> diacritic (see the examples above).</p>
-</section>
+<p>Since XXXXXX consonants normally include an inherent vowel, the orthography has ways to indicate a consonant that is not followed by a vowel sound. See <a class="secref">novowel</a>.</p>
 </section>
 
 
@@ -1583,27 +1576,42 @@ alveolar</th>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">𑐶</figure>
 
-<p>The short <span class="ipa">i</span> sound is written using <span class="codepoint" translate="no"><span lang="new">&#x11436;</span> [<a href="/scripts/newa/block#char11436"><span class="uname">U+11436 NEWA VOWEL SIGN I</span></a>]</span>, which appears to the left of the base consonant letter or cluster.</p>
+<p class="vowelSignExample">
+    <bdi lang="new">&#x1140E;&#x11436;</bdi>
+    <span class="ipa">ki</span>
+    <span><span class="uname">U+1140E NEWA LETTER KA</span> + <span class="uname">U+11436 NEWA VOWEL SIGN I</span></span>
+    </p>
 
-<figure id="fig_prebase" class="sideCaption">
-<img src="rej/fig_prebase.png" class="ex" lang="rej" alt="ꤱꥉ" data-notes="200px Noto Sans Rejang" style="height:7rem; margin-inline:2rem;">
-<figcaption>A pre-base vowel sign (highlighted). It is positioned to the left of the consonant after which it is typed, stored, and pronounced.</figcaption>
+<figure class="characterBox auto hidden" data-cols="ipa,trans,transc">𑐶</figure>
+
+<p>The vowel sign <span class="ch">𑐶</span> appears to the left of the base consonant letter or cluster, eg.</p>
+
+<p><span class="eg" lang="new">𑐎𑐶𑐳𑐶</span></p>
+
+<p class="info">This is a combining mark that is always typed and stored after the base consonant(s), ie. the codepoints follow the order in which the items are pronounced. The rendering process places the glyph before the base consonant without changing the code points. The following shows the sequence of code points that make up the word just above.</p>
+
+<table class="sequenceTable">
+<tr data-notes="KA,I,SA,I"
+    data-type="uname,uname,uname,uname"
+    data-prefix=",+,+,+,+"
+    ><td>𑐎␣𑐶␣𑐳␣𑐶</td></tr>
+</table>
+
+
+<p>The vowel sign is actually placed before the start of a conjunct. In the illustration just below, the sequence of glyphs for the orthographic syllable is rendered VCC, whereas the pronunciation is CCV. In conjuncts with 3 consonants, it will still be rendered before all the consonants, eg.</p>
+
+<p><span class="eg" lang="new">𑐀𑐩𑑂𑐥𑐶</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="mpi,MA,virama,PA,I"
+    data-type="ipa,uname,uname,uname,uname"
+    data-prefix=",→,+,+,+,+"
+    ><td>𑐩𑑂𑐥𑐶␣𑐩␣𑑂␣𑐥␣𑐶</td></tr>
+</table>
+
+<figure id="fig_prebase_vowel" class="sideCaption">
+<img src="img/prebase_vowel.png" class="ex" alt="" style="font:72px Noto Sans Newa">
+<figcaption>The combination <span class="ch">𑐎𑐶</span> produces a pre-base positioned glyph.</figcaption>
 </figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="rej">ꤷꥉꤼꥉꤿ꥓</span></p></details>
-
-<p class="info">This combining mark is always typed and stored after the base consonant. The rendering process places the glyph before the base consonant at the time of display.</p>
-
-<p>When an orthographic syllable begins with a consonant cluster that is rendered as a conjunct, the vowel sign is rendered before the start of the <em>syllable</em>, eg. here are 3 sets of consonant clusters, each followed by <span class="ipa">i</span> when spoken, but the vowel sign appears to the left of each cluster.<span class="charExample" translate="no"><span class="ex" lang="new">𑐗𑑂𑐏𑐶 𑐳𑑂𑐟𑐶 𑐧𑑂𑐬𑐶</span> <span class="transc">jkhi sti bri</span></span></p>
-
-
-<p>When an orthographic syllable begins with a consonant cluster, the vowel sign is actually placed before the start of the onset, ie. to the left of the <em>syllable</em> as a whole. See <a class="figref">fig_prebase</a>.</p>
-
-
-<figure id="fig_prebase" class="sideCaption">
-<img src="cjm/fig_prebase.png" alt="ꨚꨴꨯꨱꩃ" class="ex" lang="cjm" data-notes="Noto Sans Cham" style="height: 9rem;">
-<figcaption>A pre-base vowel glyph (light highlight colour) placed before both consonants in an onset cluster, rather than just before the consonant pronounced immediately before it.</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="cjm">ꨚꨴꨯꨱꩃ</span></p></details>
 
 <p>However, note that if the cluster is split by a visible virama, this creates two orthographic syllables and the pre-base vowel sign appears after the consonant with the virama.</p>
 </section>
@@ -1619,24 +1627,50 @@ alveolar</th>
 <p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
 
 <p class="vowelSignExample">
-    <bdi lang="ban">&#x1B13;&#x1B40;</bdi>
+    <bdi lang="bn">&#x0995;&#x09CB;</bdi>
     <span class="ipa">ko</span>
-    <span><span class="uname">U+1B13 BALINESE LETTER KA</span> + <span class="uname">U+1B40 BALINESE VOWEL SIGN TALING TEDUNG</span></span>
+    <span><span class="uname">U+0995 BENGALI KA</span> + <span class="uname">U+09CB VOWEL SIGN O</span></span>
 </p>
 
-<p>Five vowel signs are usually produced by a single combining character with visually separate parts, that appear on  different sides of the consonant onset.</p>
+<figure class="characterBox auto small"  data-cols="ipa,trans,transc">ো␣ ␣ৌ</figure>
 
-<figure class="characterBox auto small" data-cols="ipa,trans,transc">ᭀ␣ᭃ␣ᭁ␣ᬻ␣ᬼ␣ᬽ</figure>
+<p>Two vowels  are represented by circumgraphs, producing glyphs on  opposite sides of the consonant onset. These are combining marks that are always stored after the base consonant. The rendering process places the glyphs around the base consonant, as needed</p>
 
-<p class="instructions">This section includes some vowel signs described in the section <a class="secref">vocalics</a>.</p>
+<p><span class="eg" lang="bn">বোন</span></p>
+<p><span class="eg" lang="bn">নৌকো</span></p>
 
-<p>Like pre-base glyphs, these are combining marks that are always stored after the base consonant. When rendered, the single code point produces multiple glyphs, which are placed on different sides of the base consonant. Click on <a class="figref">fig_circumgraphs</a> to see the sequence of characters in storage.</p>
 
-<figure id="fig_circumgraphs" class="sideCaption">
-<img src="rej/fig_circumgraphs.png" alt="ꤷꥇꥆꥋꥆ" data-notes="200px Noto Sans Rejang" class="ex" lang="rej" style="height: 8rem; margin-inline:2rem;">
-<figcaption>A circumgraph. The vowel stored after the consonant as a single character in memory is rendered with separate glyphs on 2 sides of the base.</figcaption>
+<p>Like pre-base glyphs, these  do not split a conjunct, but instead they treat the conjunct as a single unit and place glyphs either side of it, eg,</p>
+
+<p><span class="eg" lang="bn">প্রৌঢ়</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="ˈpɾou̯,PA,hasant,RA,AU" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+,+"><td>প্রৌ␣প␣্␣র␣ৌ</td></tr>
+</table>
+
+
+
+<figure id="fig_circumgraph" class="sideCaption">
+<img src="images/fig_circumgraph.svg" alt="অক্টোবর" class="ex" lang="bn" data-notes="Noto Serif Bengali 2138 × 686" style="height: 7rem;">
+<figcaption>The circumgraph <span class="uname">U+09CB BENGALI VOWEL SIGN O</span> is rendered on two sides of the consonant stack.</figcaption>
 </figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="rej">ꤷꥇꥆꥋꥆ</span></p></details>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="bn">অক্টোবর</span></p></details>
+
+
+<!--figure id="fig_circumgraph">
+<img src="images/circumgraph.svg" alt="অক্টোবর" class="ex" lang="bn" data-notes="Noto Serif Bengali 2138 × 686">
+<figcaption>The single code point representing the vowel sign in <span class="hx">0995 09CC</span> is rendered on two sides of the base character.</figcaption>
+</figure-->
+
+<p>These circumgraph vowel signs are normally a single code point, but in decomposed text the base consonant can be followed by   two code points , eg. compare the following equivalent ways of writing <span class="ipa">ko</span>: </p>
+
+<figure id="fig_circumgraph_nfd" class="sideCaption">
+<div>
+<p><span class="codepoint" translate="no"><bdi lang="bn" style="font-size: 3rem;">&#x0995;&#x09CB;</bdi> <a href="/scripts/bengali/block#char0995"><span class="uname">U+0995 LETTER KA</span></a> + <a href="/scripts/bengali/block#char09CB"><span class="uname">U+09CB VOWEL SIGN O​</span></a></span></p>
+<p>&nbsp;</p>
+<p><span class="codepoint" translate="no"><bdi lang="bn" style="font-size: 3rem;">&#x0995;&#x09C7;&#x09BE;</bdi> <a href="/scripts/bengali/block#char0995"><span class="uname">U+0995 LETTER KA</span></a> + <a href="/scripts/bengali/block#char09C7"><span class="uname">U+09C7 VOWEL SIGN E​</span></a> + <a href="/scripts/bengali/block#char09BE"><span class="uname">U+09BE VOWEL SIGN AA​</span></a></span></p>
+</div>
+<figcaption>An example of precomposed (top) and decomposed (bottom) approaches to circumgraph vowels.</figcaption>
+</figure>
 
 <p>Glyphs can appear on up to 3 sides of the base. Some of the glyphs merge with the base character's glyph (see <a class="secref">context</a>).</p>
 
@@ -1914,6 +1948,184 @@ alveolar</th>
 
 
 
+
+<section id="novowel">
+<h2>Vowel absence</h2>
+
+
+<p>Since this is an alphabet, the absence of vowel sounds in consonant clusters or after codas is marked simply by an absence of vowel letters. There is no special shaping or mark to indicate a consonant cluster. Examples:</p>
+
+<p><span class="eg" lang="el">άσπρος</span></p>
+<p><span class="eg" lang="el">σπρώχνω</span></p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="novowel">
+<h2>Vowel absence</h2>
+
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.  The absence of a vowel sound can be visually indicated in one of the following ways.</p>
+
+<ol>
+<li>Create a <mark><a href="#clusters">conjunct</a></mark>. There are a number of possibilities here:<ol style="margin: 0;">
+
+    <li><mark><a href="#halfforms">Half-forms</a></mark>: Reduce the shape of all consonants in the cluster except the last to a 'half-form' by removing the vertical stroke.</li>
+
+    <li><mark><a href="#verticalcombinations">Stacking</a></mark>: Reduce a non-initial consonant in size and shape and position it below the first.</li>
+
+    <li><mark><a href="#ligatedconjuncts">Special ligation</a></mark>: Create a fusion of the two shapes, where one or other of the components may not be easily recognisable.</li>
+
+    <li>The <mark><a href="#rconjuncts">letter <span class="trans">ra</span></a></mark> has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
+    </ol></li>
+
+<li>Show a <mark><a href="#visiblevirama">visible virama</a></mark> above the consonant with no following vowel.</li>
+
+<li><mark><a href="#coda_diacritics">Medial consonants</a></mark>. Dedicated combining marks are used for non-initial consonants in onset clusters, killing the vowel of the previous consonant.</li>
+
+<li><mark><a href="#coda_diacritics">Coda diacritics</a></mark>. Some Hindi codas can be written using combining marks. (Note that onset medials are written using conjuncts.)</li>
+
+<li><mark><a href="#absent_vowel">Unmarked vowel absence</a></mark>, for which there are usually generalised pronunciation rules that allow readers to spot these locations.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+<section id="clusters">
+<h3>Conjuncts</h3>
+
+<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
+<p id="def-conjunct" class="explanatoryintro definitionStub"></p>
+
+
+<p>In Unicode, the conjunct formation is achieved by adding <span class="codepoint" translate="no"><span lang="or">&#x0B4D;</span> [<a href="/scripts/oriya/block#char0B4D"><span class="uname">U+0B4D ORIYA SIGN VIRAMA</span></a>]</span>  between the consonants. The font hides the virama glyph automatically when a conjunct is formed.</p>
+<p>See also <a class="secref">finals</a> and <a class="secref">gemination</a>.</p>
+
+
+
+
+<section id="stacking">
+<h4>Stacking</h4>
+
+<p>tbd</p>
+<figure id="fig_stacked_first"> </figure>
+</section>
+
+
+
+
+
+<section id="preceding_ra">
+<h4>Initial RA  in clusters</h4>
+
+<p>tbd</p>
+</section>
+
+
+
+<section id="ligated">
+<h4>Ligated forms<span class="name"></span></h4>
+
+<p>tbd</p>
+</section>
+
+
+
+
+<section id="conjoined">
+<h4>Conjoined consonants or a visible halanta</h4>
+
+<p>tbd</p>
+</section>
+
+
+
+
+
+
+<section id="triple_clusters">
+<h4>Triple-consonant clusters</h4>
+
+<p>tbd</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="visible_virama">
+<h3>Visible virama</h3>
+
+         
+<p>Bengali uses <span class="hx">09CD</span> (called <span class="charExample inline" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="transc">hasant</span> <span class="ipa">hɔsonto</span></span> in Bengali) to indicate that the inherent vowel is not pronounced after a consonant. When the virama is  used it may be because the font doesn't have a particular conjunct ligature, but it may also be visible in places where the phonology is unusual, eg. 
+<span class="eg" lang="bn">ফ্‌ল্যাট</span>
+<span class="eg" lang="bn">লান্‌চ</span>
+although these may also be spelled with conjuncts, eg.
+<span class="eg" lang="bn">ফ্ল্যাট</span>
+</p>
+<p>It is also quite common to see it used to distinguish words such as the following, which are etymologically related, but phonetically distinct:<span class="charExample" translate="no"><span class="ex" lang="bn">উদ্‌যাপন</span> <span class="trans">ụd͓‌ýɑpn</span></span><span class="charExample" translate="no"><span class="ex" lang="bn">উদ্যান</span> <span class="trans">ụd͓ýɑn</span></span></p>
+<p>If a visible virama is wanted but not what the font does by default, it is possible to force it by inserting a <span class="uname">ZWNJ</span> character after the virama (see <a class="secref">formatting</a>).</p>
+
+
+
+<figure class="characterBox auto hidden" data-cols="">্</figure>
+
+<p>The <span class="name">hasant</span> is also used  in expository or educational situations where, for example, <span class="ch">ক্</span> explicitly represents just the sound <span class="ipa">k</span>.</p>
+</section>
+
+
+
+
+
+
+
+
+<section id="absent_vowel">
+<h3>Unmarked vowel absence</h3>
+
+<p>The inherent vowel is not always pronounced. For example in Hindi it is not usually pronounced at the end of a word,
+although a ghost echo may appear after a word-final cluster of consonants, eg.
+<span class="eg" lang="hi">योग्य</span>
+<span class="eg" lang="hi">राष्ट्र</span>
+</p>
+
+<p>In addition Hindi has a general rule that when a word has three or more syllables and ends in a vowel other than the inherent <span class="trans">a</span>, the penultimate vowel is not pronounced, eg. compare<span class="charExample" translate="no"><span class="ex" lang="hi">समझ</span> <span class="trans">smjʱ</span> <span class="ipa">səməɟʱ</span></span>  <span class="charExample" translate="no"><span class="ex" lang="hi">समझा</span> <span class="trans">smjʱā</span> <span class="ipa">səmɟʱaː</span></span>and<span class="charExample" translate="no"><span class="ex" lang="hi">रहन</span> <span class="trans">rhn</span> <span class="ipa">rəhən</span></span>  <span class="charExample" translate="no"><span class="ex" lang="hi">रहना</span> <span class="trans">rhnā</span> <span class="ipa">rəhnaː</span></span></p>
+
+<p>(For a number of reasons, however, this rule does not always hold.)</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="consonants">
 <h2>Consonants</h2>
 
@@ -2074,104 +2286,9 @@ alveolar</th>
 
 
 <section id="finals">
-<h3>Finals</h3>
+<h3>Codas</h3>
 
 <p>tbd</p>
-</section>
-
-
-
-
-
-
-<section id="clusters">
-<h3>Consonant clusters</h3>
-
-<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
-<p id="def-conjunct" class="explanatoryintro definitionStub"></p>
-
-<p>The absence of a vowel sound between two or more consonants is visually indicated in one of the following ways.</p>
-<ol>
-    <li>Create a conjunct. There are a number of possibilities here:<ol style="margin: 0;">
-<li>
-<mark>Stacking</mark>
-: Reduce a non-initial consonant in size and shape and position it below the first.</li>
-<li>
-<mark>Conjoining</mark>
-: The two consonants sit side by side, but the second consonant has a special shape.</li>
-<li>
-<mark>Ligation</mark>
-: Create a fusion of the letter shapes, where it may be difficult to identify one or more of the components.</li>
-<li>The 
-<mark>letter <span class="trans">ra</span></mark> 
-has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
-</ol></li>
-<li>Show a <mark>visible virama</mark> below the non-final consonants in the cluster.</li>
-<li>Use the 
-<mark>anusvara</mark>
-.</li>
-<!--li>No indication, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li-->
-</ol>
-
-
-
-<p>In Unicode, the conjunct formation is achieved by adding <span class="codepoint" translate="no"><span lang="or">&#x0B4D;</span> [<a href="/scripts/oriya/block#char0B4D"><span class="uname">U+0B4D ORIYA SIGN VIRAMA</span></a>]</span>  between the consonants. The font hides the virama glyph automatically when a conjunct is formed.</p>
-<p>See also <a class="secref">finals</a> and <a class="secref">gemination</a>.</p>
-
-
-
-
-<section id="stacking">
-<h4>Stacking</h4>
-
-<p>tbd</p>
-<figure id="fig_stacked_first"> </figure>
-</section>
-
-
-
-
-
-<section id="preceding_ra">
-<h4>Initial RA  in clusters</h4>
-
-<p>tbd</p>
-</section>
-
-
-
-<section id="ligated">
-<h4>Ligated forms<span class="name"></span></h4>
-
-<p>tbd</p>
-</section>
-
-
-
-
-<section id="conjoined">
-<h4>Conjoined consonants or a visible halanta</h4>
-
-<p>tbd</p>
-</section>
-
-
-
-
-
-
-<section id="triple_clusters">
-<h4>Triple-consonant clusters</h4>
-
-<p>tbd</p>
-</section>
-
-
-<section id="visible_virama">
-<h4>Visible vowel-killer</h4>
-
-<p>tbd</p>
-</section>
 </section>
 
 
