@@ -61,7 +61,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->9 September, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->15 September, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -83,7 +83,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Javanese Orthography Notes, <!-- #BeginDate format:En2 -->09-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/java/jv">https://r12a.github.io/scripts/java/jv</a></small></p>
+<p class="refLine"><small>Richard Ishida, Javanese Orthography Notes, <!-- #BeginDate format:En2 -->15-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/java/jv">https://r12a.github.io/scripts/java/jv</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -811,52 +811,7 @@ alveolar</th>
 <li>The first letter of a word normally has the <span class="ipa">ɔ</span> vowel, unless it precedes two other letters without diacritics, in which case the first letter has the <span class="ipa">a</span> vowel.</li>
 </ul>
 
-
-
-
-
-
-
-<section id="novowel">
-<h4>Inherent vowel suppression</h4>
-
-<p class="vowelSignExample">
-    <bdi lang="jv">&#xA98F;&#xA9C0;</bdi>
-    <span class="ipa">k</span>
-    <span><span class="uname">U+A98F JAVANESE LETTER KA</span> + <span class="uname">U+A9C0 JAVANESE PANGKON</span></span>
-    </p>
-
-
-
-<p>Where no letter follows a consonant and the vowel is silent (for example at the end of a sentence or isolated word, or before a number) a visible <span class="hx">A9C0</span> is used to indicate that the inherent vowel is suppressed, eg. <span class="ch">ꦏ꧀</span> explicitly represents just the sound <span class="ipa">k</span>, as can be seen at the end of the following word:</p>
-
-<p><span class="eg" lang="jv">ꦏꦼꦧꦏ꧀</span></p>
-
-<figure class="characterBox auto hidden" data-cols="">꧀</figure>
-
-<p>The <span class="name">pangkon</span> is also used to produce conjunct forms for consonant clusters (stacking or conjoined shapes), in which case it is invisible (see <a class="sectionref">clusters</a>).  Because Javanese commonly combines the last character of one word and the first of another into a conjunct, the <span class="name">pangkon</span> is often not visible after words that end with a consonant but that occur within a sentence.</p>
-
-
-<figure id="fig_pangkon" class="sideCaption">
-<img src="images/fig_pangkon.svg" class="ex" lang="jv" alt="ꦏꦿꦸꦥꦸꦏ꧀" data-notes="Yogyakarta" style="height:8rem;">
-<figcaption>A visible pangkon at the end of a word.</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="jv">ꦏꦿꦸꦥꦸꦏ꧀</span></p></details>
-
-
-
-<!--figure>
-<img lang="jv" class="ex" src="images/visible_pangkon.png" alt="ꦏꦿꦸꦥꦸꦏ꧀" data-notes="62px yogyakarta">
-<figcaption>A visible pangkon at the end of a word.</figcaption>
-</figure-->
-
-<p>There are some exceptions, especially where the <span class="name">pangkon</span> may be used to disambiguate words, eg.
-<span class="eg transc" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span>
-</p>
-
-<p>No <span class="name">pangkon</span> is needed between an onset consonant and a medial consonant, or after a dedicated final consonant.</p>
-</section>
-
+<p>Since Javanese consonants normally include an inherent vowel, the orthography has ways to indicate a consonant that is not followed by a vowel sound. See <a class="secref">novowel</a>.</p>
 </section>
 
 
@@ -1367,6 +1322,328 @@ alveolar</th>
 
 
 
+
+<section id="novowel">
+<h2>Vowel absence</h2>
+
+<p class="vowelSignExample">
+    <bdi lang="jv">&#xA98F;&#xA9C0;</bdi>
+    <span class="ipa">k</span>
+    <span><span class="uname">U+A98F JAVANESE LETTER KA</span> + <span class="uname">U+A9C0 JAVANESE PANGKON</span></span>
+    </p>
+
+   
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.  The absence of a vowel sound can be visually indicated in one of the following ways.</p>
+
+<ol>
+
+<li>A <mark><a href="#pangkon">visible <i>pangkon</i></a></mark>.</li>
+
+<li>A <mark><a href="#clusters">conjunct</a></mark>. There are 2 possibilities here:<ol style="margin: 0;">
+
+    <li><mark><a href="#stacking">Stacked</a></mark> consonants, where the non-initial (<mark class="newterm">subjoined</mark>) consonant appears below the initial, often with a different shape from normal.</li>
+
+    <li><mark><a href="#conjoined">Conjoined</a></mark> consonants, where consonants sit side-by-side but the non-initial consonant has a slightly different form than usual.</li>
+    </ol></li>
+
+<li>A regular initial consonant followed by a dedicated <mark><a href="#onsets">medial consonant mark</a></mark>.</li>
+
+<li>A dedicated <mark><a href="#fcMarks">final consonant mark</a></mark> followed by a regular consonant.</li>
+</ol>
+
+<p><span class="leadin">Word boundaries.</span> Conjuncts span word boundaries. Because there are no spaces between words, consonants with no following vowel at the end of one word and a consonant at the beginning of the next  create a cluster.</p>
+
+<p>Stacks and conjoined sequences are  not  normally split at line ends (see <a class="secref">word</a> and <a class="secref">linebreak</a> for the ramifications of this). It means that some words cannot be wrapped at word boundaries.</p>
+
+<!--figure>
+<img lang="jv" class="ex" src="images/conjuncts.png" alt="ꦲꦏ꧀ꦲꦏ꧀ꦏꦁꦥꦝ" data-notes="62px yogyakarta">
+<figcaption>In the sequence  <span class="trans">hak-hak-kang-pa-da</span> the combination <span class="trans">k-h</span> is conjoined, and <span class="trans">k-k</span> is stacked.</figcaption>
+</figure-->
+
+
+<figure id="fig_conjuncts">
+<img src="images/fig_conjuncts.svg" class="ex" lang="jv" alt="ꦲꦏ꧀ꦲꦏ꧀ꦏꦁꦥꦝ" data-notes="Yogyakarta" style="height:9rem;">
+<figcaption>In the sequence  <span class="trans">hak-hak-kang-pa-da</span> the combination <span class="trans">k-h</span> is conjoined, and <span class="trans">k-k</span> is stacked.</figcaption>
+</figure>
+
+
+
+
+
+
+
+
+<section id="pangkon">
+<h3>Visible <span class="name">pangkon</span></h3>
+
+
+<p>Where no letter follows a consonant and the vowel is silent (for example at the end of a sentence or isolated word, or before a number) a visible <span class="hx">A9C0</span> is used to indicate that the inherent vowel is suppressed, eg. <span class="ch">ꦏ꧀</span> explicitly represents just the sound <span class="ipa">k</span>, as can be seen at the end of the following word:</p>
+
+<p><span class="eg" lang="jv">ꦏꦼꦧꦏ꧀</span></p>
+
+<figure class="characterBox auto hidden" data-cols="">꧀</figure>
+
+<p>The same <span class="name">pangkon</span> is also used to produce conjunct forms for consonant clusters (stacking or conjoined shapes), in which case it is invisible (see <a class="sectionref">clusters</a>).  Because Javanese commonly combines the last character of one word and the first of another into a conjunct, the <span class="name">pangkon</span> is often not visible after words that end with a consonant but that occur within a sentence.</p>
+
+
+<figure id="fig_pangkon" class="sideCaption">
+<img src="images/fig_pangkon.svg" class="ex" lang="jv" alt="ꦏꦿꦸꦥꦸꦏ꧀" data-notes="Yogyakarta" style="height:8rem;">
+<figcaption>A visible pangkon at the end of a word.</figcaption>
+</figure>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="jv">ꦏꦿꦸꦥꦸꦏ꧀</span></p></details>
+
+
+
+<!--figure>
+<img lang="jv" class="ex" src="images/visible_pangkon.png" alt="ꦏꦿꦸꦥꦸꦏ꧀" data-notes="62px yogyakarta">
+<figcaption>A visible pangkon at the end of a word.</figcaption>
+</figure-->
+
+<p>There are some exceptions, especially where the <span class="name">pangkon</span> may be used to disambiguate words, eg.
+<span class="eg transc" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span>
+</p>
+
+<p>No <span class="name">pangkon</span> is needed between an onset consonant and a medial consonant, or after a dedicated final consonant.</p>
+
+
+<p class="info">The Javanese section of the Unicode Standard doesn't indicate how to force the <span class="name">pangkon</span> to remain visible, but the Balinese section recommends the use of <span class="hx img">200C</span> (ZWNJ) after the <span class="name">adeg-adeg</span> in order to prevent conjunct formation. However, not many people understand the function of ZWNJ or can access it easily from the keypad. It also doesn't introduce line-break opportunities. A better solution may be to use <span class="hx img">200B</span> (ZWSP). This character is needed anyway on most systems in order to allow line-breaking, and it appears to work equally well for this.</p>
+</section>
+
+
+
+
+
+<section id="clusters">
+<h3>Conjuncts</h3>
+
+<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
+<p id="def-conjunct" class="explanatoryintro definitionStub"></p>
+
+
+
+
+<section id="conjuncts">
+<h4>Conjunct formation</h4>
+
+<figure class="characterBox auto hidden"  data-cols="trans">&#xA9C0;</figure>
+
+<p>In Unicode, the stacking and conjoining behaviour is achieved by adding <span class="hx">A9C0</span> between consonants. The font hides the glyph automatically when a stacked conjunct is formed.</p>
+
+<table class="sequenceTable" style="line-height: 2.5">
+<tr data-notes="SA,pangkon,TA,sta"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,→"><td>ꦱ␣꧀␣ꦠ␣ꦱ꧀ꦠ</td></tr>
+</table>
+
+<p class="linkToApp"><a target="_blank" href="../apps/conjunct_generator/?preset=java">See a table of 2-consonant clusters.</a><br>The table allows you to test results for various fonts.</p>
+</section>
+
+
+
+<section id="stacking">
+<h4>Stacking</h4>
+<p>To represent consonants without intervening vowels, the non-initial consonant is typically drawn below the initial consonant. </p>
+<p>Many of the subjoined forms are just slightly smaller versions of the original, some with small additions, but several have very different shapes altogether, most of which ligate with the cluster initial consonant by joining strokes.　</p>
+<!--p>There can be up to 3 consonants combined in this way, and the third consonant must be one of <span class="name">ya</span>, <span class="name">ra</span>, <span class="name">la</span> or <span class="name">wa</span>.</p-->
+
+
+<figure id="fig_stacked" class="sideCaption">
+<table class="sequenceTable" style="line-height: 3;">
+<tr 
+    data-notes="NA,adeg adeg,DA,nd"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ꦤ␣꧀␣ꦢ␣ꦤ꧀ꦢ</td></tr>
+<tr 
+    data-notes="SA,adeg adeg,NA,sn"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ꦱ␣꧀␣ꦤ␣ꦱ꧀ꦤ</td></tr>
+<tr 
+    data-notes="SA,adeg adeg,KA,sk"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ꦱ␣꧀␣ꦏ␣ꦱ꧀ꦏ</td></tr>
+</table>
+<figcaption>Examples of stacked conjuncts.</figcaption>
+</figure>
+
+
+
+
+
+<p>Three consonants can be combined in a cluster, but the third consonant may be one of the medial <span class="name">ya</span> or <span class="name">ra</span> medial combining marks, eg.</p>
+
+<figure id="fig_stacked3" class="sideCaption" style="margin-inline-end: 10rem;">
+<table class="sequenceTable" style="line-height: 3;">
+<tr 
+    data-notes="MA,adeg adeg,BA,adeg adeg,LA,mbl"
+    data-type="uname,uname,uname,uname,uname,ipa"
+    data-prefix=",+,+,+,+,→"
+    ><td>ꦩ␣꧀␣ꦧ␣꧀␣ꦭ␣ꦩ꧀ꦧ꧀ꦭ</td></tr>
+<tr 
+    data-notes="NA,adeg adeg,DA,CAKRA,ndr"
+    data-type="uname,uname,uname,uname,uname,ipa"
+    data-prefix=",+,+,+,+,→"
+    ><td>ꦤ␣꧀␣ꦢ␣ꦿ␣ꦤ꧀ꦢꦿ</td></tr>
+</table>
+<figcaption>Stacked conjuncts with 3 components.</figcaption>
+</figure>
+
+
+
+<details>
+<summary class="instructions">Show consonants in their normal and subjoined forms</summary>
+
+<p>Shows the same consonant before and after a <span class="name">pangkon</span>.</p>
+
+<div class="characterBoxTitle">basic (nglegéna) glyphs</div>
+<figure class="counterstylesBox auto bicameral noindex" data-ipa="b,t,d,ʈ,ɖ,k,ɡ,t͡ʃ,d͡ʒ,m,n,ɲ,ŋ,w,r,l,j" data-cols="">ꦧ꧀ꦧ␣ꦠ꧀ꦠ␣ꦢ꧀ꦢ␣ꦛ꧀ꦛ␣ꦝ꧀ꦝ␣ꦏ꧀ꦏ␣ꦒ꧀ꦒ␣ꦕ꧀ꦕ␣ꦗ꧀ꦗ␣ꦩ꧀ꦩ␣ꦤ꧀ꦤ␣ꦚ꧀ꦚ␣ꦔ꧀ꦔ␣ꦮ꧀ꦮ␣ꦫ꧀ꦫ␣ꦭ꧀ꦭ␣ꦪ꧀ꦪ</figure>
+
+<div class="characterBoxTitle">murda glyphs</div>
+<figure class="counterstylesBox auto bicameral noindex" data-ipa="b,t,k,ɡ,t͡ʃ,s,n,ɲ,r" data-cols="">ꦨ꧀ꦨ␣ꦡ꧀ꦡ␣ꦑ꧀ꦑ␣ꦓ꧀ꦓ␣ꦖ꧀ꦖ␣ꦯ꧀ꦯ␣ꦟ꧀ꦟ␣ꦘ꧀ꦘ␣ꦬ꧀ꦬ</figure>
+
+<div class="characterBoxTitle">mahaprana glyphs</div>
+<figure class="counterstylesBox auto bicameral noindex" data-ipa="d,ʈ,ɖ,d͡ʒ,s" data-cols="">ꦣ꧀ꦣ␣ꦜ꧀ꦜ␣ꦞ꧀ꦞ␣ꦙ꧀ꦙ</figure>
+</details>
+</section>
+
+
+
+
+
+
+
+
+<section id="conjoined">
+<h4>Conjoined consonants</h4>
+
+<p>In conjoined clusters, the consonant glyphs remain side by side, but the non-initial consonant is reduced on the left side.  <a class="figref">fig_conjoined_p</a> shows an example in the word
+<span class="eg inline transc" lang="jv">ꦱꦩ꧀ꦥꦸꦤ꧀</span>.
+</p>
+
+<!--figure id="fig_conjoined_p">
+<img class="ex" lang="jv" src="images/conjoined_p.png" alt="ꦱꦩ꧀ꦥꦸꦤ꧀">
+<figcaption>The left side of <span class="codepoint noindex" translate="no"><span lang="jv">&#xA9A5;</span> [<a href="/scripts/javanese/block#charA9A5"><span class="uname">U+A9A5 JAVANESE LETTER PA</span></a>]</span> is reduced when conjoined.</figcaption>
+</figure-->
+
+
+<figure id="fig_conjoined_p" class="sideCaption">
+<img src="images/fig_conjoined_p.svg" class="ex" lang="jv" alt="ꦱꦩ꧀ꦥꦸꦤ꧀" data-notes="Yogyakarta" style="height:9rem;">
+<figcaption>The left side of <span class="hx">A9A5</span> is reduced when conjoined.</figcaption>
+</figure>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="jv">ꦱꦩ꧀ꦥꦸꦤ꧀</span></p></details>
+
+
+
+<figure id="fig_conjoined" class="sideCaption">
+<table class="sequenceTable" style="line-height: 3;">
+<tr 
+    data-notes="SA,adeg adeg,PA,sp"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ꦩ␣꧀␣ꦥ␣ꦩ꧀ꦥ</td></tr>
+<tr 
+    data-notes="KA,adeg adeg,SA,ks"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ꦏ␣꧀␣ꦱ␣ꦏ꧀ꦱ</td></tr>
+<tr 
+    data-notes="LA,adeg adeg,HA,lh"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ꦭ␣꧀␣ꦲ␣ꦭ꧀ꦲ</td></tr>
+</table>
+<figcaption>Examples of conjoined conjuncts.</figcaption>
+</figure>
+
+
+
+
+
+
+<p>The conjoined <span class="hx">A9B1</span> is unusual in that it also adds a glyph (resembling the vowel sign <span class="hx">A9B8</span>) below the initial consonant. This helps distinguish it from the conjoined <span class="trans">p</span>. See <a class="figref">fig_conjoined_s</a> for an example in the word <span class="eg inline transc" lang="jv">ꦲꦏ꧀ꦱꦫ</span>.</p>
+
+<!--figure id="fig_conjoined_s">
+<img class="ex" lang="jv" src="images/conjoined_s.png" alt="ꦲꦏ꧀ꦱꦫ">
+<figcaption><span class="codepoint" translate="no"><span lang="jv">&#xA9B1;</span> [<a href="/scripts/javanese/block#charA9B1"><span class="uname">U+A9B1 JAVANESE LETTER SA</span></a>]</span> when conjoined  not only loses some of its left side but also adds a glyph below the initial consonant.</figcaption>
+</figure-->
+
+
+<figure id="fig_conjoined_s" class="sideCaption">
+<img src="images/fig_conjoined_s.svg" class="ex" lang="jv" alt="ꦲꦏ꧀ꦱꦫ" data-notes="Yogyakarta" style="height:9rem;">
+<figcaption><span class="hx">A9B1</span> when conjoined  not only loses some of its left side but also adds a glyph below the initial consonant.</figcaption>
+</figure>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="jv">ꦲꦏ꧀ꦱꦫ</span></p></details>
+
+
+
+
+<!--p class="instructions">Again, some fonts may produce more conjoined pairs than others. Use the control behind the vertical blue bar to apply a different font.</p-->
+
+
+
+
+<details>
+<summary class="instructions">Show consonants in their normal and subjoined forms</summary>
+
+<p>Shows the same consonant before and after a <span class="name">pangkon</span>.</p>
+
+
+<div class="characterBoxTitle">basic (nglegéna) glyphs</div>
+<figure class="counterstylesBox auto bicameral noindex" data-ipa="p,s,h,rə" data-cols="">ꦥ꧀ꦥ␣ꦱ꧀ꦱ␣ꦲ꧀ꦲ␣ꦉ꧀ꦉ</figure>
+
+<div class="characterBoxTitle">murda glyphs</div>
+<figure class="counterstylesBox auto bicameral noindex" data-ipa="p" data-cols="">ꦦ꧀ꦦ</figure>
+
+<div class="characterBoxTitle">mahaprana glyphs</div>
+<figure class="counterstylesBox auto bicameral noindex" data-ipa="s" data-cols="">ꦰ꧀ꦰ</figure>
+</details>
+</section>
+
+
+
+
+
+
+
+
+<!--<section id="final_medial_mark_clusters">
+<h4>Dedicated medial &amp; final marks</h4>
+<p>Javanese represents some final consonants using <a href="#finals">dedicated marks</a>. There are also <a href="#onsets">dedicated marks</a> for medial consonants. Such  marks are preceded and/or followed by ordinary consonant shapes in consonant clusters. There is no visual indication of missing vowel sounds other than the use of the mark itself.</p>
+
+<figure id="fig_final_mark" class="sideCaption">
+<img src="images/fig_final_mark.svg" class="ex" lang="jv" alt="ꦣꦂꦩ" data-notes="Yogyakarta" style="height:8rem;">
+<figcaption>A cluster involving  a dedicated final mark doesn't form a conjunct</figcaption>
+</figure>
+<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="jv">ꦣꦂꦩ</span></p></details>
+</section>-->
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="consonants">
 <h2>Consonants</h2>
 
@@ -1664,7 +1941,7 @@ alveolar</th>
 
 
 <section id="finals">
-<h3>Finals</h3>
+<h3>Codas</h3>
 
 <p>Word-final consonant sounds with no following consonant may be represented by ordinary consonant characters, followed by a visible <span class="hx">A9C0</span> character, eg.</p>
 
@@ -1711,260 +1988,7 @@ alveolar</th>
 
 
 
-<section id="clusters">
-<h3>Consonant clusters</h3>
 
-<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
-<p id="def-conjunct" class="explanatoryintro definitionStub"></p>
-   
-<p>The absence of a vowel sound after a letter (ie. not involving medial or final consonant diacritics) is shown visually in the script in one of the following ways:</p>
-<ol>
-<li><mark><a href="#stacking">Stacked</a></mark> consonants, where the non-initial (<mark class="newterm">subjoined</mark>) consonant appears below the initial, often with a different shape from normal.</li>
-
-<li><mark><a href="#conjoined">Conjoined</a></mark> consonants, where consonants sit side-by-side but the non-initial consonant has a slightly different form than usual.</li>
-
-<li>A <mark><a href="#pangkon">visible <i>pangkon</i></a></mark> following the initial consonant.</li>
-
-<li>A dedicated <mark><a href="#final_medial_mark_clusters">final consonant mark</a></mark> followed by a regular consonant.</li>
-
-<li>A regular initial consonant followed by a dedicated <mark><a href="#final_medial_mark_clusters">medial consonant mark</a></mark>.</li>
-</ol>
-
-<p><span class="leadin">Word boundaries.</span> Conjuncts span word boundaries. Because there are no spaces between words, consonants with no following vowel at the end of one word and a consonant at the beginning of the next  create a cluster.</p>
-
-<p>Stacks and conjoined sequences are  not  normally split at line ends (see <a class="secref">word</a> and <a class="secref">linebreak</a> for the ramifications of this). It means that some words cannot be wrapped at word boundaries.</p>
-
-<!--figure>
-<img lang="jv" class="ex" src="images/conjuncts.png" alt="ꦲꦏ꧀ꦲꦏ꧀ꦏꦁꦥꦝ" data-notes="62px yogyakarta">
-<figcaption>In the sequence  <span class="trans">hak-hak-kang-pa-da</span> the combination <span class="trans">k-h</span> is conjoined, and <span class="trans">k-k</span> is stacked.</figcaption>
-</figure-->
-
-
-<figure id="fig_conjuncts">
-<img src="images/fig_conjuncts.svg" class="ex" lang="jv" alt="ꦲꦏ꧀ꦲꦏ꧀ꦏꦁꦥꦝ" data-notes="Yogyakarta" style="height:9rem;">
-<figcaption>In the sequence  <span class="trans">hak-hak-kang-pa-da</span> the combination <span class="trans">k-h</span> is conjoined, and <span class="trans">k-k</span> is stacked.</figcaption>
-</figure>
-
-
-
-
-
-
-
-<section id="conjuncts">
-<h4>Conjunct formation</h4>
-
-<figure class="characterBox auto hidden"  data-cols="trans">&#xA9C0;</figure>
-
-<p>In Unicode, the stacking and conjoining behaviour is achieved by adding <span class="hx">A9C0</span> between the consonants. The font hides the glyph automatically when a stacked conjunct is formed. However, in some cases the glyph needs to remain visible.</p>
-
-<table class="sequenceTable" style="line-height: 2.5">
-<tr data-notes="SA,pangkon,TA,sta"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,→"><td>ꦱ␣꧀␣ꦠ␣ꦱ꧀ꦠ</td></tr>
-</table>
-
-<p class="linkToApp"><a target="_blank" href="../apps/conjunct_generator/?preset=java">See a table of 2-consonant clusters.</a><br>The table allows you to test results for various fonts.</p>
-</section>
-
-
-
-<section id="stacking">
-<h4>Stacking</h4>
-<p>To represent consonants without intervening vowels, the non-initial consonant is typically drawn below the initial consonant. </p>
-<p>Many of the subjoined forms are just slightly smaller versions of the original, some with small additions, but several have very different shapes altogether, most of which ligate with the cluster initial consonant by joining strokes.　</p>
-<!--p>There can be up to 3 consonants combined in this way, and the third consonant must be one of <span class="name">ya</span>, <span class="name">ra</span>, <span class="name">la</span> or <span class="name">wa</span>.</p-->
-
-
-<figure id="fig_stacked" class="sideCaption">
-<table class="sequenceTable" style="line-height: 3;">
-<tr 
-    data-notes="NA,adeg adeg,DA,nd"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ꦤ␣꧀␣ꦢ␣ꦤ꧀ꦢ</td></tr>
-<tr 
-    data-notes="SA,adeg adeg,NA,sn"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ꦱ␣꧀␣ꦤ␣ꦱ꧀ꦤ</td></tr>
-<tr 
-    data-notes="SA,adeg adeg,KA,sk"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ꦱ␣꧀␣ꦏ␣ꦱ꧀ꦏ</td></tr>
-</table>
-<figcaption>Examples of stacked conjuncts.</figcaption>
-</figure>
-
-
-
-
-
-<p>Three consonants can be combined in a cluster, but the third consonant may be one of the medial <span class="name">ya</span> or <span class="name">ra</span> medial combining marks, eg.</p>
-
-<figure id="fig_stacked3" class="sideCaption" style="margin-inline-end: 10rem;">
-<table class="sequenceTable" style="line-height: 3;">
-<tr 
-    data-notes="MA,adeg adeg,BA,adeg adeg,LA,mbl"
-    data-type="uname,uname,uname,uname,uname,ipa"
-    data-prefix=",+,+,+,+,→"
-    ><td>ꦩ␣꧀␣ꦧ␣꧀␣ꦭ␣ꦩ꧀ꦧ꧀ꦭ</td></tr>
-<tr 
-    data-notes="NA,adeg adeg,DA,CAKRA,ndr"
-    data-type="uname,uname,uname,uname,uname,ipa"
-    data-prefix=",+,+,+,+,→"
-    ><td>ꦤ␣꧀␣ꦢ␣ꦿ␣ꦤ꧀ꦢꦿ</td></tr>
-</table>
-<figcaption>Stacked conjuncts with 3 components.</figcaption>
-</figure>
-
-
-
-<details>
-<summary class="instructions">Show consonants in their normal and subjoined forms</summary>
-
-<p>Shows the same consonant before and after a <span class="name">pangkon</span>.</p>
-
-<div class="characterBoxTitle">basic (nglegéna) glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="b,t,d,ʈ,ɖ,k,ɡ,t͡ʃ,d͡ʒ,m,n,ɲ,ŋ,w,r,l,j" data-cols="">ꦧ꧀ꦧ␣ꦠ꧀ꦠ␣ꦢ꧀ꦢ␣ꦛ꧀ꦛ␣ꦝ꧀ꦝ␣ꦏ꧀ꦏ␣ꦒ꧀ꦒ␣ꦕ꧀ꦕ␣ꦗ꧀ꦗ␣ꦩ꧀ꦩ␣ꦤ꧀ꦤ␣ꦚ꧀ꦚ␣ꦔ꧀ꦔ␣ꦮ꧀ꦮ␣ꦫ꧀ꦫ␣ꦭ꧀ꦭ␣ꦪ꧀ꦪ</figure>
-
-<div class="characterBoxTitle">murda glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="b,t,k,ɡ,t͡ʃ,s,n,ɲ,r" data-cols="">ꦨ꧀ꦨ␣ꦡ꧀ꦡ␣ꦑ꧀ꦑ␣ꦓ꧀ꦓ␣ꦖ꧀ꦖ␣ꦯ꧀ꦯ␣ꦟ꧀ꦟ␣ꦘ꧀ꦘ␣ꦬ꧀ꦬ</figure>
-
-<div class="characterBoxTitle">mahaprana glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="d,ʈ,ɖ,d͡ʒ,s" data-cols="">ꦣ꧀ꦣ␣ꦜ꧀ꦜ␣ꦞ꧀ꦞ␣ꦙ꧀ꦙ</figure>
-</details>
-</section>
-
-
-
-
-
-
-
-
-<section id="conjoined">
-<h4>Conjoined consonants</h4>
-
-<p>In conjoined clusters, the consonant glyphs remain side by side, but the non-initial consonant is reduced on the left side.  <a class="figref">fig_conjoined_p</a> shows an example in the word
-<span class="eg inline transc" lang="jv">ꦱꦩ꧀ꦥꦸꦤ꧀</span>.
-</p>
-
-<!--figure id="fig_conjoined_p">
-<img class="ex" lang="jv" src="images/conjoined_p.png" alt="ꦱꦩ꧀ꦥꦸꦤ꧀">
-<figcaption>The left side of <span class="codepoint noindex" translate="no"><span lang="jv">&#xA9A5;</span> [<a href="/scripts/javanese/block#charA9A5"><span class="uname">U+A9A5 JAVANESE LETTER PA</span></a>]</span> is reduced when conjoined.</figcaption>
-</figure-->
-
-
-<figure id="fig_conjoined_p" class="sideCaption">
-<img src="images/fig_conjoined_p.svg" class="ex" lang="jv" alt="ꦱꦩ꧀ꦥꦸꦤ꧀" data-notes="Yogyakarta" style="height:9rem;">
-<figcaption>The left side of <span class="hx">A9A5</span> is reduced when conjoined.</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="jv">ꦱꦩ꧀ꦥꦸꦤ꧀</span></p></details>
-
-
-
-<figure id="fig_conjoined" class="sideCaption">
-<table class="sequenceTable" style="line-height: 3;">
-<tr 
-    data-notes="SA,adeg adeg,PA,sp"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ꦩ␣꧀␣ꦥ␣ꦩ꧀ꦥ</td></tr>
-<tr 
-    data-notes="KA,adeg adeg,SA,ks"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ꦏ␣꧀␣ꦱ␣ꦏ꧀ꦱ</td></tr>
-<tr 
-    data-notes="LA,adeg adeg,HA,lh"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ꦭ␣꧀␣ꦲ␣ꦭ꧀ꦲ</td></tr>
-</table>
-<figcaption>Examples of conjoined conjuncts.</figcaption>
-</figure>
-
-
-
-
-
-
-<p>The conjoined <span class="hx">A9B1</span> is unusual in that it also adds a glyph (resembling the vowel sign <span class="hx">A9B8</span>) below the initial consonant. This helps distinguish it from the conjoined <span class="trans">p</span>. See <a class="figref">fig_conjoined_s</a> for an example in the word <span class="eg inline transc" lang="jv">ꦲꦏ꧀ꦱꦫ</span>.</p>
-
-<!--figure id="fig_conjoined_s">
-<img class="ex" lang="jv" src="images/conjoined_s.png" alt="ꦲꦏ꧀ꦱꦫ">
-<figcaption><span class="codepoint" translate="no"><span lang="jv">&#xA9B1;</span> [<a href="/scripts/javanese/block#charA9B1"><span class="uname">U+A9B1 JAVANESE LETTER SA</span></a>]</span> when conjoined  not only loses some of its left side but also adds a glyph below the initial consonant.</figcaption>
-</figure-->
-
-
-<figure id="fig_conjoined_s" class="sideCaption">
-<img src="images/fig_conjoined_s.svg" class="ex" lang="jv" alt="ꦲꦏ꧀ꦱꦫ" data-notes="Yogyakarta" style="height:9rem;">
-<figcaption><span class="hx">A9B1</span> when conjoined  not only loses some of its left side but also adds a glyph below the initial consonant.</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="jv">ꦲꦏ꧀ꦱꦫ</span></p></details>
-
-
-
-
-<!--p class="instructions">Again, some fonts may produce more conjoined pairs than others. Use the control behind the vertical blue bar to apply a different font.</p-->
-
-
-
-
-<details>
-<summary class="instructions">Show consonants in their normal and subjoined forms</summary>
-
-<p>Shows the same consonant before and after a <span class="name">pangkon</span>.</p>
-
-
-<div class="characterBoxTitle">basic (nglegéna) glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="p,s,h,rə" data-cols="">ꦥ꧀ꦥ␣ꦱ꧀ꦱ␣ꦲ꧀ꦲ␣ꦉ꧀ꦉ</figure>
-
-<div class="characterBoxTitle">murda glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="p" data-cols="">ꦦ꧀ꦦ</figure>
-
-<div class="characterBoxTitle">mahaprana glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="s" data-cols="">ꦰ꧀ꦰ</figure>
-</details>
-</section>
-
-
-
-
-
-
-
-
-<section id="pangkon">
-<h4>Visible <span class="name">pangkon</span></h4>
-
-<p>Occasionally <span class="hx">A9C0</span> may be desirable to keep the <span class="name">pangkon</span> visible in the middle of a word, eg.</p>
-
-<p><span class="eg" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span></p>
-
-<p class="info">The Javanese section of the Unicode Standard doesn't indicate how to force the <span class="name">pangkon</span> to remain visible, but the Balinese section recommends the use of <span class="hx img">200C</span> (ZWNJ) after the <span class="name">adeg-adeg</span> in order to prevent conjunct formation. However, not many people understand the function of ZWNJ or can access it easily from the keypad. It also doesn't introduce line-break opportunities. A better solution may be to use <span class="hx img">200B</span> (ZWSP). This character is needed anyway on most systems in order to allow line-breaking, and it appears to work equally well for this.</p>
-</section>
-
-
-
-
-
-
-
-
-<!--<section id="final_medial_mark_clusters">
-<h4>Dedicated medial &amp; final marks</h4>
-<p>Javanese represents some final consonants using <a href="#finals">dedicated marks</a>. There are also <a href="#onsets">dedicated marks</a> for medial consonants. Such  marks are preceded and/or followed by ordinary consonant shapes in consonant clusters. There is no visual indication of missing vowel sounds other than the use of the mark itself.</p>
-
-<figure id="fig_final_mark" class="sideCaption">
-<img src="images/fig_final_mark.svg" class="ex" lang="jv" alt="ꦣꦂꦩ" data-notes="Yogyakarta" style="height:8rem;">
-<figcaption>A cluster involving  a dedicated final mark doesn't form a conjunct</figcaption>
-</figure>
-<details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="jv">ꦣꦂꦩ</span></p></details>
-</section>-->
-</section>
 
 
 

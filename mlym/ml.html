@@ -61,7 +61,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->8 September, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 September, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -80,7 +80,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Malayalam Orthography Notes, <!-- #BeginDate format:En2 -->08-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mlym/ml">https://r12a.github.io/scripts/mlym/ml</a></small></p>
+<p class="refLine"><small>Richard Ishida, Malayalam Orthography Notes, <!-- #BeginDate format:En2 -->14-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mlym/ml">https://r12a.github.io/scripts/mlym/ml</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -874,24 +874,7 @@ alveolar</th>
 <tr data-notes="KA,NA,TA,virama,TA" data-type="uname,uname,uname,uname,uname,uname" data-prefix=",,,,"><td>ക␣ന␣ത␣്␣ത</td></tr>
 </table>
 
-
-
- 
-<section id="novowel">
-<h4>Vowel absence</h4>
-
-<p class="vowelSignExample">
-    <bdi lang="ml">ക്</bdi>
-    <span class="ipa">k</span>
-    <span><span class="uname">U+0D15 MALAYALAM LETTER KA</span> + <span class="uname">U+0D4D MALAYALAM SIGN VIRAMA​</span></span>
-    </p>
-
-<p>Malayalam uses <span class="hx">0D4D</span> (in Malayalam called <span class="eg inline" lang="ml">ചന്ദ്രക്കല</span>) to kill the inherent vowel after a consonant, eg. <span class="ch">ക്</span> explicitly represents just the sound <span class="ipa">k</span>.</p>
-
-<p>However, in modern text,  <span class="hx">0D4D</span> may also represent the sound <span class="ipa">ə̆</span> or <span class="ipa">ɨ̆</span>, depending on dialect, see <a class="secref">halfu</a>).</p>
-
-<p>Word-final consonants are typically written using <span class="name">chillu</span> characters, rather than using the virama (see <a class="secref">finals</a>), and in <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjuncts</a> the virama is hidden (see <a class="secref">clusters</a>).</p>
-</section>
+<p>Since Malayalam consonants normally include an inherent vowel, the orthography has ways to indicate a consonant that is not followed by a vowel sound. See <a class="secref">novowel</a>.</p>
 </section>
 
 
@@ -1418,29 +1401,40 @@ alveolar</th>
 
 
 
-<section id="consonants">
-<h2>Consonants</h2>
-
-
-
-<p>
-<span id="extendedC"></span>
-</p>
-
-<aside class="sectionAside">
-<p>This orthography has no special features with respect to the following.</p>
-
-<ul>
-<li>Repertoire extensions to cover loan words, etc.</li>
-<li>Onset clusters.</li>
-<li>Gemination or consonant lengthening.</li>
-</ul>
-</aside>
 
 
 
 
-<div id="consonant_description"></div>
+ 
+<section id="novowel">
+<h2>Vowel absence</h2>
+
+
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel. The absence of a vowel sound can be visually indicated in one of the following ways.</p>
+
+<ol>
+<li>A <mark><a href="#chandrakkala">visible <span class="name">chandrakkala</span></a></mark> character above the top right  of the initial consonant.</li>
+
+<li><mark><a href="#chillus">Chillu characters</a></mark> are designed to indicate consonants with no following vowel sound, and .</li>
+
+<li><mark><a href="#clusters">Conjuncts</a></mark>. There are a number of possibilities here.
+    
+    <ol style="margin:0;">
+    <li><mark><a href="#stacking">Stacked consonants</a></mark>, where the following consonant appears below the initial, usually with a reduced or ligated form.</li>
+    
+    <li><mark><a href="#conjoined">Conjoined consonants</a></mark>, where consonants sit side-by-side but with some ligation or different forms than usual.</li>
+    
+    <li><mark><a href="#initialclusters">Chillu-style initials</a></mark>, a special case of conjoined consonants.</li>
+
+    <li><mark>Special RA forms</mark> : The letter <span class="uname">RA</span> has its own idiosyncratic ways of combining with other consonants, whether it precedes or follows them. See <a class="secref">initial_ra</a>, <a class="secref">noninitial_ra</a>, and <a class="secref">rra_conjuncts</a>.</li>
+    </ol>
+    
+<li><mark><a href="#anusvara_visarga">Combining marks for codas</a></mark> carry no following vowel sound.</li>
+</li>
+</ol>
+
+
+<p>If the font supports it, <span class="hx img">200C</span> (ZWNJ) and <span class="hx img">200D</span> (ZWJ) can be used to control the shaping of conjuncts. See <a class="secref">joiner</a>.</p>
 
 
 
@@ -1448,298 +1442,56 @@ alveolar</th>
 
 
 
-<section id="consonantSummary">
-<h3>Consonant summary table</h3>
-
-<p>This table summarises only basic consonant to character assignments. Click on the phonetic transcriptions for more detail.</p>
-
-<p class="instructions">For additional details see <a class="secref">vowel_mappings</a>.</p>
-
-<!--p class="instructions highlight">The left column is lowercase, and the right uppercase.</p-->
 
 
 
-<table class="soundSummary">
-<thead>
-<tr>
-<th>&nbsp;</th>
-<th>onsets &amp; codas</th>
-<th>coda only</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th rowspan="6">Onsets&nbsp;</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">പ␣ബ␣ത␣ദ␣ട␣ഡ␣ക␣ഗ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="-k">ൿ</figure></td>
-</tr>
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ഫ␣ഭ␣ഥ␣ധ␣ഠ␣ഢ␣ഖ␣ഘ</figure></td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="t͡ʃ,d͡ʒ,,t͡ʃʰ,d͡ʒʰ">ച␣ജ␣ ␣ഛ␣ഝ</figure></td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="ʋ,s,ʂ,ʃ~ɕ,ɦ">വ␣സ␣ഷ␣ശ␣ഹ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-ɦ">ഃ</figure></td>
-</tr>
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">മ␣ന␣ണ␣ഞ␣ങ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-m,-n,-ɳ">ം␣ൻ␣ൺ</figure></td>
-</tr>
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="r̪,r,ɻ,l,ɭ,j">ര␣റ␣ഴ␣ല␣ള␣യ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-r,-l,-ɭ">ർ␣ൽ␣ൾ</figure></td>
-</tr>
 
-<!--<tr>
-<th rowspan="4">Finals:</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ൿ␣ ␣ൔ␣ൕ␣ൖ</figure></td>
-</tr>
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ഃ</figure></td>
-</tr>
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ം␣ൻ␣ൺ</figure></td>
-</tr>
-<tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ർ␣ൽ␣ൾ</figure></td>
-</tr>-->
-</tbody>
-</table>
+
+
+
+
+<section id="chandrakkala">
+<h3>Visible chandrakkala</h3>
+
+<p class="vowelSignExample">
+    <bdi lang="ml">ക്</bdi>
+    <span class="ipa">k</span>
+    <span><span class="uname">U+0D15 MALAYALAM LETTER KA</span> + <span class="uname">U+0D4D MALAYALAM SIGN VIRAMA​</span></span>
+    </p>
+
+
+
+
+
+<p>Malayalam uses <span class="hx">0D4D</span> (in Malayalam called <span class="eg inline" lang="ml">ചന്ദ്രക്കല</span>) to kill the inherent vowel after a consonant, eg. <span class="ch">ക്</span> explicitly represents just the sound <span class="ipa">k</span>.</p>
+
+<p>This  was promoted as the default by the orthographic reforms of the 1970s. It is also the fallback if the font doesn't contain conjunct forms for a particular cluster of consonants.</p>
+
+<p>However, in modern text,  <span class="hx">0D4D</span> may also represent the sound <span class="ipa">ə̆</span> or <span class="ipa">ɨ̆</span>, depending on dialect (see <a class="secref">halfu</a>).</p>
+
+<p>Word-final consonants are typically written using <span class="name">chillu</span> characters, rather than using the virama (see <a class="secref">finals</a>), and in <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjuncts</a> the virama is hidden (see <a class="secref">clusters</a>).</p>
+
+<p>Examples include:</p>
+<p><span class="eg" lang="ml">ആഴ്ച</span></p>
+<p><span class="eg" lang="ml">ഗുല്ഫം</span></p>
+<p><span class="eg" lang="ml">നമസ്തേ</span></p>
 </section>
 
 
 
 
 
-
-
-
-
-<section id="basicC">
-<h3>Basic  consonants</h3>
-
-<p>The basic consonant sounds in Malayalam are written using the following letters.</p>
-
-
-<p class="instructions">Click on each letter for more details and for examples of usage, especially where more than one sound is indicated.</p>
-
-
-<figure class="characterBox auto" data-cols="trans,transc" data-ipa="p b,f pʰ,b,bʰ,t̪ d̪,t̪ʰ,d̪,d̪ʰ,ʈ ɖ,ʈʰ,ɖ,ɖʰ,k ɡ,kʰ,ɡ,ɡʰ,t͡ʃ d͡ʒ,t͡ʃʰ,d͡ʒ,d͡ʒʰ,ʋ,s,ʂ,ɕ~ʃ,ɦ,m,n̪~n,ɳ,ɲ,ŋ,r̪,r tt,ɻ,l,ɭ,j">പ␣ഫ␣ബ␣ഭ␣ത␣ഥ␣ദ␣ധ␣ട␣ഠ␣ഡ␣ഢ␣ക␣ഖ␣ഗ␣ഘ␣ച␣ഛ␣ജ␣ഝ␣വ␣സ␣ഷ␣ശ␣ഹ␣മ␣ന␣ണ␣ഞ␣ങ␣ര␣റ␣ഴ␣ല␣ള␣യ</figure>
-
-
-<p>The conjunct <span class="ch">ക്ഷ</span>  <span class="ipa">kʂ</span>  is conventionally regarded as an additional letter in the Malayalam alphabet.<tt>d,420</tt></p>
-
-<p><span class="ch">റ</span> has some complicated mappings to sounds. See <a class="secref">rra_conjuncts</a>.</p>
-
-
-
-
-
-
-
-
-<div class="btw">
-<section id="other_consonants">
-<h4>Other consonants</h4>
-
-<p>Two other letters, <span class="ch">ഩ</span> and <span class="ch">ഺ</span> are historic and used rarely in scholarly texts to represent alveolar sounds. In ordinary texts, <span class="ch">ന</span> and <span class="ch">റ</span> are used instead.<tt>ws</tt></p>
-
-<!--<figure class="archaicBox auto" data-cols="ipa,trans,transc">ഩ␣ഺ</figure>-->
-</section>
-</div>
-</section>
-
-
-
-
-
-
-
-
-
-<section id="onsets">
-<h3>Onsets</h3>
-
-<p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Malayalam, and are typically handled as described in the section <a class="secref">clusters</a>. Examples:</p>
-
-<p><span class="eg" lang="ml">വ്യക്തി</span></p>
-<p><span class="eg" lang="ml">സ്വാഗതം</span></p>
-
-<p>A medial <span class="uname">RA</span> is rendered to the left of an initial consonant or conjunct (see <a class="secref">noninitial_ra</a>).</p>
-
-<p><span class="eg" lang="ml">ഗ്രാമ്പൂ</span></p>
-
-<p>In some cases, a medial consonant is represented using a vocalic vowel sign, rather than a consonant, eg.</p>
-<p><span class="eg" lang="ml">കൢപ്തം</span></p>
-
-
-
-
-
-
-<section id="noninitial_ra">
-<h4>Medial RA</h4>
-
-<p><span class="ch">ര</span> when non-initial  in a cluster is displayed to the left of the other consonant(s) in the reformed orthography. This transposition is done during the font rendering – the typed and stored order remains the same as the spoken order.</p>
-
-<p><span class="eg" lang="ml">ചക്രം</span></p>
-
-
-<!--<table class="sequenceTable breakdown">
-<tr data-notes="KA,virama,RA,kr̪a" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക␣്␣ര␣ക്ര</td></tr>
-</table>-->
-
-<table class="sequenceTable breakdown">
-<tr data-notes="kr̪a,KA,virama,RA" data-type="ipa,uname,uname,uname" data-prefix=",→,+,+"><td>ക്ര␣ക␣്␣ര</td></tr>
-</table>
-
-
-<p>When <span class="uname">RA</span> follows more than one consonant, it is displayed to the left of any <em>conjunct</em>, not just to the left of the preceding consonant, eg.</p>
-
-<p><span class="eg" lang="ml">ചന്ദ്രക്കല</span></p>
-
-
-<table class="sequenceTable breakdown">
-<tr data-notes="nd̪r̪a,NA,virama,DA,virama,RA" data-type="ipa,uname,uname,uname,uname,uname" data-prefix=",→,+,+,+,+"><td>ന്ദ്ര␣ന␣്␣ദ␣്␣ര</td></tr>
-</table>
-
-
-<!--<table class="sequenceTable breakdown">
-<tr data-notes="NA,virama,DA,virama,RA,nd̪r̪a" data-type="uname,uname,uname,uname,uname,ipa" data-prefix=",+,+,+,+,→"><td>ന␣്␣ദ␣്␣ര␣ന്ദ്ര</td></tr>
-</table>-->
-</section>
-</section>
-
-
-
-
-
-
-
-<section id="finals">
-<h3>Finals</h3>
-
-<p>Malayalam words can end with a consonant sound or an inherent vowel, and the difference is usually marked. However, unlike many other Brahmi-derived scripts, the virama (<span class="name">chandrakkala</span>) is not normally used to kill the inherent vowel at the end of a word. This is because, in Malayalam, the <span class="name">chandrakkala</span> actually can indicate a short vowel sound (see <a class="secref">halfu</a>).  Instead, Malayalam uses a set of special characters, called <span class="name">chillus</span>, that don't have a following vowel, or a final-consonant diacritic.</p>
-
-<p>The <span class="name">chillu</span> characters can also appear as word-medial syllable codas, but often these codas are written using either a <span class="name">chandrakkala</span> or a conjunct (see <a class="secref">clusters</a>).</p>
-
-<p>Codas can also be written using a couple of diacritics, described below.</p>
-
-
-<section id="chillus">
-<h4>Chillus</h4>
-
-
-<p>Contemporary <span class="name">chillu</span> (or <span class="name">cillakṣaram</span>) characters include the following.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ൿ␣ൻ␣ൺ␣ർ␣ൽ␣ൾ</figure>
-
-<p><span class="ch">ൿ</span> is relatively rare in modern texts.<tt>u16,#G701512</tt></p>
-
-<p>Examples:</p>
-
-<p><span class="eg" lang="ml">അപ്പൻ</span></p>
-<p><span class="eg" lang="ml">തിങ്കൾ</span></p>
-<p><span class="eg" lang="ml">ഉറ്റോർ</span></p>
-
-<p>Although they represent 'dead' consonants, chillu forms can sometimes be followed by a virama and subjoined consonant, although this is only likely to occur in modern texts in the combination <span class="ch">ൻ്റ</span> (see <a class="secref">rra_conjuncts</a>).</p>
-
-
-<div class="btw">
-<p>The Unicode Standard <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/#G739017" target="_blank">lists</a> a small number of other, historical combinations of a chillu consonant as part of a stack.</p>
-</div>
-
-
-<div class="btw">
-<p>Unicode v9 introduced 3 more chillu letters, <span class="ch">ൔ</span>, <span class="ch">ൕ</span>, and <span class="ch">ൖ</span>, which are only found in historical texts.<tt>u16,#G701512</tt></p>
-<figure class="characterBox auto" data-cols="ipa">ൔ␣ൕ␣ൖ</figure>
-</div>
-
-<p class="info">In older Unicode text chillus were written by following the consonant with <span class="hx img split">0d4d 200d</span>, but since the introduction of the chillu characters in Unicode v5.1 the use of the atomic characters is recommended, instead.<tt>u16,#G705612</tt></p>
-</section>
-
-
-
-
-
-
-
-<section id="initial_ra">
-<h4>RA coda</h4>
-
-<p>Malayalam has 3 ways of writing an <span class="ipa">r</span> coda before a following consonant.<tt>u16,#G708363</tt></p>
-
-<p><span class="leadin">Chillu form</span> Since the orthographic reform, this has been written as <span class="ch">ർ</span> followed by the next consonant in the cluster, eg.</p>
-<p><span class="eg" lang="ml">നേർത്ത</span></p>
-<p><span class="eg" lang="ml">ഈർപ്പമുള്ള</span></p>
-
-<p><span class="leadin">Special form</span> The form <span class="ch">ര്യ</span> is only used before <span class="ch">യ</span><tt>u16,#G708363</tt>, eg.</p>
-<p><span class="eg" lang="ml">സൗന്ദര്യം</span></p>
-<p><span class="eg" lang="ml">ഭാര്യ</span></p>
-
-<p><span class="leadin">Dot reph</span> Before the 1970s, a dot or small vertical stroke was used over the following consonant, in a similar way to the <span class="name">repha</span> in other Indic scripts. It may still be in use by people educated before that time. The character <span class="hx">0D4E</span> is used to reproduce this, eg. compare:</p>
-<p><span class="eg" lang="ml">തൎക്കം</span></p>
-<p><span class="eg" lang="ml">തർക്കം</span></p>
-
-<p class="info">The <span class="name">reph</span> dot is not a combining character; it has the general category of <code class="kw" translate="no">letter</code>. It is typed and stored in the same place as you would expect to find  the <span class="uname">RA + VIRAMA</span>, ie. <em>before</em> the consonant it appears over, and then the font needs to  position the glyph over the consonant that follows it.</p>
-</section>
-
-
-
-
-
-<section id="anusvara_visarga">
-<h4>Anusvara &amp; visarga</h4>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ം␣ഃ</figure>
-
-<p>Malayalam also uses the <span class="name">anusvara</span> and <span class="name">visarga</span> as syllable-final characters, eg. the following word contains both:</p>
-
-<p><span class="eg" lang="ml">ദുഃഖം</span></p>
-
-<p>The <span class="name">anusvara</span> normally represents the sound <span class="ipa">m</span>, but may be assimilated to another nasal consonant.</p>
-
-<p>It can also be used multiple times after a vowel, for emphasis<tt>u16,#G706689</tt> eg.</p>
-<p><span class="charExample" translate="no"><span class="ex" lang="ml">ഈംംംം</span> <span class="trans">ị̄m̽m̽m̽m̽</span></span></p>
-</section>
-</section>
 
 
 
 
 
 <section id="clusters">
-<h3>Consonant clusters</h3>
+<h3>Conjuncts</h3>
 
 <p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
 <p id="def-conjunct" class="explanatoryintro definitionStub"></p>
 
-<p>The absence of a vowel sound between two or more consonants is visually indicated in one of the following ways.</p>
-
-<ol>
-<li>A <mark><a href="#chandrakkala">visible <span class="name">chandrakkala</span></a></mark> character above the top right  of the initial consonant.</li>
-
-<li><mark><a href="#conjuncts">Conjuncts</a></mark>. There are a number of possibilities here.
-    
-    <ol style="margin:0;">
-    <li><mark><a href="#stacking">Stacked consonants</a></mark>, where the non-initial consonant appears below the initial, usually with a reduced or ligated form.</li>
-    
-    <li><mark><a href="#conjoined">Conjoined consonants</a></mark>, where consonants sit side-by-side but with some ligation or different forms than usual.</li>
-    
-    <li><mark><a href="#initialclusters">Special 'chillu' shapes</a></mark> for the initial consonant (a special case of conjoined consonants).</li>
-
-    <li><mark>Special RA forms</mark> : The letter <span class="uname">RA</span> has its own idiosyncratic ways of combining with other consonants, whether it precedes or follows them. See <a class="secref">initial_ra</a>, <a class="secref">noninitial_ra</a>, and <a class="secref">rra_conjuncts</a>.</li>
-    </ol>
-</li>
-</ol>
-
-<p>See also <mark><a href="#finals">syllable-final consonants</a></mark>, which may be followed by a regular consonant.</p>
-
-<p>If the font supports it, <span class="hx img">200C</span> (ZWNJ) and <span class="hx img">200D</span> (ZWJ) can be used to control the shaping of conjuncts. See <a class="secref">joiner</a>.</p>
 
 
 
@@ -1793,18 +1545,6 @@ The number of conjuncts is 129 and 219+156, respectively.</p>
 
 
 
-
-
-
-<section id="chandrakkala">
-<h4>Visible chandrakkala</h4>
-			<p>This  was promoted as the default by the orthographic reforms of the 1970s. It is also the fallback if the font doesn't contain conjunct forms for a particular cluster of consonants.</p>
-<p>Examples include 
-<span class="eg" lang="ml">ആഴ്ച</span>
-<span class="eg" lang="ml">ഗുല്ഫം</span>
-<span class="eg" lang="ml">നമസ്തേ</span>
-</p>
-</section>
 
 
 
@@ -2062,6 +1802,309 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 </table>
 
 <p class="info">Authors should also avoid the sequence <span class="ch">ൻ്‍റ</span>, since it conflicts with the legacy representation of the side-by-side form.<tt>u16,#G742668</tt></p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="consonants">
+<h2>Consonants</h2>
+
+
+
+<p>
+<span id="extendedC"></span>
+</p>
+
+<aside class="sectionAside">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Repertoire extensions to cover loan words, etc.</li>
+<li>Onset clusters.</li>
+<li>Gemination or consonant lengthening.</li>
+</ul>
+</aside>
+
+
+
+
+<div id="consonant_description"></div>
+
+
+
+
+
+
+
+<section id="consonantSummary">
+<h3>Consonant summary table</h3>
+
+<p>This table summarises only basic consonant to character assignments. Click on the phonetic transcriptions for more detail.</p>
+
+<p class="instructions">For additional details see <a class="secref">vowel_mappings</a>.</p>
+
+<!--p class="instructions highlight">The left column is lowercase, and the right uppercase.</p-->
+
+
+
+<table class="soundSummary">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>onsets &amp; codas</th>
+<th>coda only</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th rowspan="6">Onsets&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">പ␣ബ␣ത␣ദ␣ട␣ഡ␣ക␣ഗ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="-k">ൿ</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ഫ␣ഭ␣ഥ␣ധ␣ഠ␣ഢ␣ഖ␣ഘ</figure></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="t͡ʃ,d͡ʒ,,t͡ʃʰ,d͡ʒʰ">ച␣ജ␣ ␣ഛ␣ഝ</figure></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="ʋ,s,ʂ,ʃ~ɕ,ɦ">വ␣സ␣ഷ␣ശ␣ഹ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-ɦ">ഃ</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">മ␣ന␣ണ␣ഞ␣ങ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-m,-n,-ɳ">ം␣ൻ␣ൺ</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="r̪,r,ɻ,l,ɭ,j">ര␣റ␣ഴ␣ല␣ള␣യ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-r,-l,-ɭ">ർ␣ൽ␣ൾ</figure></td>
+</tr>
+
+<!--<tr>
+<th rowspan="4">Finals:</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ൿ␣ ␣ൔ␣ൕ␣ൖ</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ഃ</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ം␣ൻ␣ൺ</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ർ␣ൽ␣ൾ</figure></td>
+</tr>-->
+</tbody>
+</table>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="basicC">
+<h3>Basic  consonants</h3>
+
+<p>The basic consonant sounds in Malayalam are written using the following letters.</p>
+
+
+<p class="instructions">Click on each letter for more details and for examples of usage, especially where more than one sound is indicated.</p>
+
+
+<figure class="characterBox auto" data-cols="trans,transc" data-ipa="p b,f pʰ,b,bʰ,t̪ d̪,t̪ʰ,d̪,d̪ʰ,ʈ ɖ,ʈʰ,ɖ,ɖʰ,k ɡ,kʰ,ɡ,ɡʰ,t͡ʃ d͡ʒ,t͡ʃʰ,d͡ʒ,d͡ʒʰ,ʋ,s,ʂ,ɕ~ʃ,ɦ,m,n̪~n,ɳ,ɲ,ŋ,r̪,r tt,ɻ,l,ɭ,j">പ␣ഫ␣ബ␣ഭ␣ത␣ഥ␣ദ␣ധ␣ട␣ഠ␣ഡ␣ഢ␣ക␣ഖ␣ഗ␣ഘ␣ച␣ഛ␣ജ␣ഝ␣വ␣സ␣ഷ␣ശ␣ഹ␣മ␣ന␣ണ␣ഞ␣ങ␣ര␣റ␣ഴ␣ല␣ള␣യ</figure>
+
+
+<p>The conjunct <span class="ch">ക്ഷ</span>  <span class="ipa">kʂ</span>  is conventionally regarded as an additional letter in the Malayalam alphabet.<tt>d,420</tt></p>
+
+<p><span class="ch">റ</span> has some complicated mappings to sounds. See <a class="secref">rra_conjuncts</a>.</p>
+
+
+
+
+
+
+
+
+<div class="btw">
+<section id="other_consonants">
+<h4>Other consonants</h4>
+
+<p>Two other letters, <span class="ch">ഩ</span> and <span class="ch">ഺ</span> are historic and used rarely in scholarly texts to represent alveolar sounds. In ordinary texts, <span class="ch">ന</span> and <span class="ch">റ</span> are used instead.<tt>ws</tt></p>
+
+<!--<figure class="archaicBox auto" data-cols="ipa,trans,transc">ഩ␣ഺ</figure>-->
+</section>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="onsets">
+<h3>Onsets</h3>
+
+<p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Malayalam, and are typically handled as described in the section <a class="secref">clusters</a>. Examples:</p>
+
+<p><span class="eg" lang="ml">വ്യക്തി</span></p>
+<p><span class="eg" lang="ml">സ്വാഗതം</span></p>
+
+<p>A medial <span class="uname">RA</span> is rendered to the left of an initial consonant or conjunct (see <a class="secref">noninitial_ra</a>).</p>
+
+<p><span class="eg" lang="ml">ഗ്രാമ്പൂ</span></p>
+
+<p>In some cases, a medial consonant is represented using a vocalic vowel sign, rather than a consonant, eg.</p>
+<p><span class="eg" lang="ml">കൢപ്തം</span></p>
+
+
+
+
+
+
+<section id="noninitial_ra">
+<h4>Medial RA</h4>
+
+<p><span class="ch">ര</span> when non-initial  in a cluster is displayed to the left of the other consonant(s) in the reformed orthography. This transposition is done during the font rendering – the typed and stored order remains the same as the spoken order.</p>
+
+<p><span class="eg" lang="ml">ചക്രം</span></p>
+
+
+<!--<table class="sequenceTable breakdown">
+<tr data-notes="KA,virama,RA,kr̪a" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക␣്␣ര␣ക്ര</td></tr>
+</table>-->
+
+<table class="sequenceTable breakdown">
+<tr data-notes="kr̪a,KA,virama,RA" data-type="ipa,uname,uname,uname" data-prefix=",→,+,+"><td>ക്ര␣ക␣്␣ര</td></tr>
+</table>
+
+
+<p>When <span class="uname">RA</span> follows more than one consonant, it is displayed to the left of any <em>conjunct</em>, not just to the left of the preceding consonant, eg.</p>
+
+<p><span class="eg" lang="ml">ചന്ദ്രക്കല</span></p>
+
+
+<table class="sequenceTable breakdown">
+<tr data-notes="nd̪r̪a,NA,virama,DA,virama,RA" data-type="ipa,uname,uname,uname,uname,uname" data-prefix=",→,+,+,+,+"><td>ന്ദ്ര␣ന␣്␣ദ␣്␣ര</td></tr>
+</table>
+
+
+<!--<table class="sequenceTable breakdown">
+<tr data-notes="NA,virama,DA,virama,RA,nd̪r̪a" data-type="uname,uname,uname,uname,uname,ipa" data-prefix=",+,+,+,+,→"><td>ന␣്␣ദ␣്␣ര␣ന്ദ്ര</td></tr>
+</table>-->
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="finals">
+<h3>Codas</h3>
+
+<p>Malayalam words can end with a consonant sound or an inherent vowel, and the difference is usually marked. However, unlike many other Brahmi-derived scripts, the virama (<span class="name">chandrakkala</span>) is not normally used to kill the inherent vowel at the end of a word. This is because, in Malayalam, the <span class="name">chandrakkala</span> actually can indicate a short vowel sound (see <a class="secref">halfu</a>).  Instead, Malayalam uses a set of special characters, called <span class="name">chillus</span>, that don't have a following vowel, or a final-consonant diacritic.</p>
+
+<p>The <span class="name">chillu</span> characters can also appear as word-medial syllable codas, but often these codas are written using either a <span class="name">chandrakkala</span> or a conjunct (see <a class="secref">clusters</a>).</p>
+
+<p>Codas can also be written using a couple of diacritics, described below.</p>
+
+
+<section id="chillus">
+<h4>Chillus</h4>
+
+
+<p>Contemporary <span class="name">chillu</span> (or <span class="name">cillakṣaram</span>) characters include the following.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ൿ␣ൻ␣ൺ␣ർ␣ൽ␣ൾ</figure>
+
+<p><span class="ch">ൿ</span> is relatively rare in modern texts.<tt>u16,#G701512</tt></p>
+
+<p>Examples:</p>
+
+<p><span class="eg" lang="ml">അപ്പൻ</span></p>
+<p><span class="eg" lang="ml">തിങ്കൾ</span></p>
+<p><span class="eg" lang="ml">ഉറ്റോർ</span></p>
+
+<p>Although they represent 'dead' consonants, chillu forms can sometimes be followed by a virama and subjoined consonant, although this is only likely to occur in modern texts in the combination <span class="ch">ൻ്റ</span> (see <a class="secref">rra_conjuncts</a>).</p>
+
+
+<div class="btw">
+<p>The Unicode Standard <a href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/#G739017" target="_blank">lists</a> a small number of other, historical combinations of a chillu consonant as part of a stack.</p>
+</div>
+
+
+<div class="btw">
+<p>Unicode v9 introduced 3 more chillu letters, <span class="ch">ൔ</span>, <span class="ch">ൕ</span>, and <span class="ch">ൖ</span>, which are only found in historical texts.<tt>u16,#G701512</tt></p>
+<figure class="characterBox auto" data-cols="ipa">ൔ␣ൕ␣ൖ</figure>
+</div>
+
+<p class="info">In older Unicode text chillus were written by following the consonant with <span class="hx img split">0d4d 200d</span>, but since the introduction of the chillu characters in Unicode v5.1 the use of the atomic characters is recommended, instead.<tt>u16,#G705612</tt></p>
+</section>
+
+
+
+
+
+
+
+<section id="initial_ra">
+<h4>RA coda</h4>
+
+<p>Malayalam has 3 ways of writing an <span class="ipa">r</span> coda before a following consonant.<tt>u16,#G708363</tt></p>
+
+<p><span class="leadin">Chillu form</span> Since the orthographic reform, this has been written as <span class="ch">ർ</span> followed by the next consonant in the cluster, eg.</p>
+<p><span class="eg" lang="ml">നേർത്ത</span></p>
+<p><span class="eg" lang="ml">ഈർപ്പമുള്ള</span></p>
+
+<p><span class="leadin">Special form</span> The form <span class="ch">ര്യ</span> is only used before <span class="ch">യ</span><tt>u16,#G708363</tt>, eg.</p>
+<p><span class="eg" lang="ml">സൗന്ദര്യം</span></p>
+<p><span class="eg" lang="ml">ഭാര്യ</span></p>
+
+<p><span class="leadin">Dot reph</span> Before the 1970s, a dot or small vertical stroke was used over the following consonant, in a similar way to the <span class="name">repha</span> in other Indic scripts. It may still be in use by people educated before that time. The character <span class="hx">0D4E</span> is used to reproduce this, eg. compare:</p>
+<p><span class="eg" lang="ml">തൎക്കം</span></p>
+<p><span class="eg" lang="ml">തർക്കം</span></p>
+
+<p class="info">The <span class="name">reph</span> dot is not a combining character; it has the general category of <code class="kw" translate="no">letter</code>. It is typed and stored in the same place as you would expect to find  the <span class="uname">RA + VIRAMA</span>, ie. <em>before</em> the consonant it appears over, and then the font needs to  position the glyph over the consonant that follows it.</p>
+</section>
+
+
+
+
+
+<section id="anusvara_visarga">
+<h4>Anusvara &amp; visarga</h4>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ം␣ഃ</figure>
+
+<p>Malayalam also uses the <span class="name">anusvara</span> and <span class="name">visarga</span> as syllable-final characters, eg. the following word contains both:</p>
+
+<p><span class="eg" lang="ml">ദുഃഖം</span></p>
+
+<p>The <span class="name">anusvara</span> normally represents the sound <span class="ipa">m</span>, but may be assimilated to another nasal consonant.</p>
+
+<p>It can also be used multiple times after a vowel, for emphasis<tt>u16,#G706689</tt> eg.</p>
+<p><span class="charExample" translate="no"><span class="ex" lang="ml">ഈംംംം</span> <span class="trans">ị̄m̽m̽m̽m̽</span></span></p>
+</section>
 </section>
 </section>
 

@@ -57,7 +57,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->9 September, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->15 September, 2025<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -77,7 +77,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Oriya (Odia) Orthography Notes, <!-- #BeginDate format:En2 -->09-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/orya/or">https://r12a.github.io/scripts/orya/or</a></small></p>
+<p class="refLine"><small>Richard Ishida, Oriya (Odia) Orthography Notes, <!-- #BeginDate format:En2 -->15-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/orya/or">https://r12a.github.io/scripts/orya/or</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -809,24 +809,7 @@ alveolar</th>
 
 <p><span class="eg" lang="or">ଗରମ</span></p>
 
-
-
-
-
-<section id="novowel">
-<h4>Inherent vowel suppression</h4>
-
-<figure class="characterBox auto invisible" data-cols="">୍</figure>
-
-<p>Odia uses &nbsp;<span class="hx">0B4D</span>, called <span class="name">halant</span>, (the Odia equivalent of the Sanskrit virama) to indicate that the inherent vowel is not pronounced after a consonant, eg. <span class="ch">କ୍</span> explicitly represents just the sound <span class="ipa">k</span>.</p>
-
-<p>Word-final consonants without a following inherent vowel use the <span class="name">halant</span>, If there is no <span class="name">halant</span>, the vowel is pronounced, eg. compare
-<span class="eg" lang="or">ଫୁଲ</span>
-<span class="eg" lang="or">ଇ-ମେଲ୍</span>
-</p>
-
-<p>Consonant clusters that are represented by conjunct forms use the <span class="name">halant</span> between consonants to invoke the shape changes. If the font has the glyphs needed to produce the conjunct, the <span class="name">halant</span> is hidden (see <a class="secref">clusters</a>).</p>
-</section>
+<p>Since Odia consonants normally include an inherent vowel, the orthography has ways to indicate a consonant that is not followed by a vowel sound. See <a class="secref">novowel</a>.</p>
 </section>
 
 
@@ -1402,327 +1385,45 @@ alveolar</th>
 
 
 
-<section id="consonants">
-<h2>Consonants</h2>
 
+<section id="novowel">
+<h2>Vowel absence</h2>
 
-<p>
-<!--span id="clength"></span-->
-</p>
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel. The following are possibilities.</p>
 
-<aside class="sectionAside">
-<p>This orthography has no special features with respect to the following.</p>
+<ol>
+<li>Create a <mark><a href="#clusters">conjunct</a></mark>. There are a number of possibilities here:
+    <ol style="margin: 0;">
+    <li><mark><a href="#stacking">Stacking</a></mark>: Reduce a non-initial consonant in size and shape and position it below the first.</li>
+    
+    <li><mark><a href="#conjoined">Conjoining</a></mark>: Two consonants sit side by side, but the second consonant has a special shape.</li>
+    
+    <li><mark><a href="#ligated">Ligation</a></mark>: Create a fusion of adjacent letter shapes, where it may be difficult to identify one or more of the components.</li>
+    
+    <li>The <mark><a href="#rclusters">letter RA</a></mark> has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
+    </ol></li>
 
-<ul>
-<li>Onset clusters.</li>
-</ul>
-</aside>
+<li>Show a <mark><a href="#visible_virama">visible virama</a></mark> below the consonant with no following vowel sound.</li>
 
+<li>Use <mark><a href="#coda_marks">combining marks for codas</a></mark>.</li>
+</ol>
 
 
 
-<div id="consonant_description"></div>
 
 
-
-
-
-
-
-<section id="consonantSummary">
-<h3>Consonant summary table</h3>
-
-<p>This table summarises only basic consonant to character assignments. Click on the phonetic transcriptions for more detail.</p>
-
-<p class="instructions highlight">Normal letters are used as final consonants, but the right-hand column lists some additional, dedicated finals.</p>
-
-<table class="soundSummary">
-<!--<thead>
-<tr>
-<th>&nbsp;</th>
-<th>Onsets &amp; codas</th>
-<th>Codas only</th>
-</tr>
-</thead>
---><tbody>
-<tr>
-<th>Stops</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ପ␣ବ␣ତ␣ଦ␣ଟ␣ଡ␣କ␣ଗ</figure></td>
-</tr>
-<tr>
-<th>Aspirated</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ଫ␣ଭ␣ଥ␣ଧ␣ଠ␣ଢ␣ଖ␣ଘ</figure></td>
-</tr>
-<tr>
-<th>Affricates</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ଚ␣ଜ␣ଯ␣ ␣ଛ␣ଝ</figure></td>
-</tr>
-<tr>
-<th>Fricatives</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="s,s,s,ɦ,-h">ସ␣ଷ␣ଶ␣ହ␣ଃ</figure></td>
-</tr>
-<tr>
-<th>Nasals</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="m,n,ɲ,ɳ,ŋ,-ŋ">ମ␣ନ␣ଞ␣ଣ␣ଙ␣ଂ</figure></td>
-</tr>
-<tr>
-<th>Other</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ୱ␣ଵ␣ର␣ଡ଼␣ଢ଼␣ଲ␣ଳ␣ୟ</figure></td>
-</tr>
-</tbody>
-</table>
-
-
-<p class="instructions">For additional details see <a class="secref">vowel_mappings</a>.</p>
-</section>
-
-
-
-
-
-
-
-
-
-<section id="basicC">
-<h3>Basic consonants</h3>
-
-<p>Basic consonant sounds in Oriya are written using the following letters. The letters are highly phonetic.</p>
-
-
-<p class="instructions">Click on each letter for more details and for examples of usage, especially where more than one sound is indicated.</p>
-
-
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ପ␣ବ␣ଫ␣ଭ␣ତ␣ଦ␣ଥ␣ଧ␣ଟ␣ଡ␣ଠ␣ଢ␣କ␣ଗ␣ଖ␣ଘ␣ଚ␣ଛ␣ଜ␣ଝ␣ଯ␣ସ␣ଷ␣ଶ␣ହ␣ମ␣ନ␣ଞ␣ଣ␣ଙ␣ୱ␣ଵ␣ର␣ଲ␣ଳ␣ୟ</figure>
-
-<p>The letters <span class="hx">0B71</span> and <span class="hx">0B35</span> typically occur in subjoined form as medial sounds (see <a class="secref">wava</a>).</p>
-
-<p>The velar and palatal nasals only occur in homorganic clusters.<tt>d,406</tt></p>
-<p><span class="ch">କ୍ଷ</span> is regarded as a letter of the alphabet.</p>
-</section>
-
-
-
-
-
-
-
-
-
-<section id="extendedC">
-<h3>Repertoire extension using nukta</h3>
-
-
-  <p>The sounds <span class="ipa">ɽ</span> and <span class="ipa">ɽʰ</span> are written by combining <span class="hx">0B3C</span>  with an existing consonant.</p>
-
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ଡ଼␣ଢ଼</figure>
-
-<p class="info">The <span class="name">nukta</span> should always be typed and stored immediately after the consonant it modifies, and before any combining vowels or diacritics.</p>
-<p class="info">Unicode  also has precomposed forms of these letters, but they decompose under <a class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</a> (NFC). Therefore, the Unicode Standard recommends the use of the decomposed sequence.</p>
-
-<figure class="auxiliaryBox auto"  data-cols="ipa,trans,transc">&#x0B5C;␣&#x0B5D;</figure>
-
-<p>The nukta may also be used to produce other non-native sounds. Wiktionary describes the following:</p>
-<ul>
-<li><span class="hx">0B15 0B3C</span> for <span class="ipa">q</span>.</li>
-<li><span class="hx">0B16 0B3C</span> for <span class="ipa">x</span>.</li>
-<li><span class="hx">0B1D 0B3C</span> for <span class="ipa">ʒ</span>.</li>
-<li><span class="hx">0B37 0B3C</span> for <span class="ipa">ɻ</span>.</li>
-</ul>
-</section>
-
-
-
-
-
-
-
-<section id="onsets">
-<h3>Onsets</h3>
-
-<p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Odia, and they are handled as described in the section <a class="secref">clusters</a>.</p>
-
-<p>Special behaviours include handling of <span class="uname">RA</span> at the beginning of an orthographic syllable (see <a class="secref">rconjuncts</a>).</p>
-
-
-<section id="medial_ra">
-<h4>Medial RA</h4>
-
-<p>A trailing RA in a conjunct has a fairly regular appearance as a subjoined glyph below the preceding consonant, although that line may join with the preceding letter shape, and therefore cause a slight change to it.</p>
-
-<p><span class="eg" lang="or">ବିକ୍ରୀ</span></p>
-<table class="sequenceTable breakdown">
-<tr 
-    data-notes="kri,KA,virama,RA,I"
-    data-type="ipa,uname,uname,uname,uname"
-    data-prefix=",→,+,+,+"
-    ><td>କ୍ରୀ␣କ␣୍␣ର␣ୀ</td></tr>
-</table>
-
-
-<!--<figure id="fig_rt_trailing" class="sideCaption">
-<div class="figure_matrix">
-	<div class="figure_row" style="align-self: center; ">
-	<img src="img/rt_trailing.png" class="ex" alt="କର→କ୍ର" style="font: 64px 'Oriya MN'; padding: .1em;">
-	<div class="figure_annotation"><span class="ipa">krɔ</span></div>
-	</div>
-</div>
-<figcaption>A trailing RA in a cluster is rendered as a subjoined glyph.</figcaption>
-</figure>-->
-
-
-
-
-
-
-
-<section id="wava">
-<h4><span class="uname">WA</span> and <span class="uname">VA</span> medials</h4>
-
-<p>The letters <span class="hx">0B71</span> and <span class="hx">0B35</span> were added to Unicode version 4, and typically occur as medial sounds. The subjoined forms of these characters may look the same. (For a discussion of the possible historical relationship between these characters see <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2525.pdf">Everson/Stone</a><tt class="more">e02</tt>). Examples of use:</p>
-
-<p><span class="eg" lang="or">ଦ୍ୱାର</span></p>
-<p><span class="eg" lang="or">ଦ୍ଵୀପ</span></p>
-
-<p class="observation"><span class="leadin">Observation:</span> The Library of Congress transcription page says that when <span class="codepoint" translate="no">
-<bdi lang="or">&#x0B2C;</bdi>
-[<a href="/scripts/oriya/block#char0B2C"><span class="uname">U+0B2C ORIYA LETTER BA</span></a>]</span> occurs as the second consonant of a  consonant cluster (except when geminated), it is transliterated <span class="ipa">v</span><tt>loc</tt>. It appears, however, that it also keeps the <span class="ipa">b</span> sound after the letters <span class="trans">m</span> and <span class="trans">r</span>.</p>
-
-<p><span class="hx">0B35</span> is described by Wiktionary as  &quot;used sporadically for the phonetic Va/Wa as an alternative for the officially recognised letter ୱ, but has not gained widespread acceptance&quot;.</p>
-</section>
-</section>
-</section>
-
-
-
-
-
-<section id="finals">
-<h3>Finals</h3>
-
-<p>Syllable codas are commonly written using ordinary letters, but there are also a few dedicated symbols in Oriya. At the end of a word, a coda usually has a visible virama attached.</p>
-
-<p>Some special rendering rules apply for a syllable ending in <span class="ipa">r</span> when it is part of a consonant cluster. See <a class="secref">ra_coda</a>.</p>
-
-<p>Two diacritics represent syllable-final consonant sounds.</p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ଂ␣ଃ</figure>
-
-
-
-<section id="ra_coda">
-<h4>RA  coda</h4>
-
-<p>Like many other Indian scripts, <span class="hx">0B30</span> at the <em>beginning</em> of a cluster is represented idiosyncratically, and appears as a small, superscript glyph over the top right of the following consonant, eg.</p>
-
-<p><span class="eg" lang="or">ବର୍ଷା</span></p>
-<table class="sequenceTable breakdown">
-<tr 
-    data-notes="BA,RA,virama,SSA,AA"
-    data-type="uname,uname,uname,uname,uname"
-    data-prefix=",+,+,+,+"
-    ><td>ବ␣ର␣୍␣ଷ␣ା</td></tr>
-</table>
-
-
-<!--<figure id="fig_ra_conjunct" class="sideCaption">
-<div class="figure_matrix">
-	<div class="figure_row" style="align-self: center; ">
-	<img src="img/ra_conjunct.png" class="ex" alt="ରକ→ର୍କ" style="font: 64px 'Oriya MN'; padding: .1em;">
-	<div class="figure_annotation"><span class="ipa">rkɔ</span></div>
-	</div>
-</div>
-<figcaption>An initial RA in a cluster is rendered as a superscript over the following consonant.</figcaption>
-</figure>-->
-
-<p class="observation"><span class="leadin">Observation:</span> Unlike Devanagari, it appears that the RA doesn't move over a following vowel sign, such as <span class="codepoint noindex" translate="no"><span lang="or">&#x0B3E;</span> [<a href="/scripts/oriya/block#char0B3E"><span class="uname">U+0B3E ORIYA VOWEL SIGN AA</span></a>]</span>.</p>
-</section>
-
-
-
-
-
-
-
-<section id="coda_marks">
-<h4>Coda diacritics</h4>
-
-<p>According to the Unicode Standard, a nasal coda at the beginning of a consonant cluster can optionally be written as part of a conjunct or using <span class="hx">0B02</span><tt>u16,#G36854</tt>, eg.</p>
-
-<p><span class="eg" lang="or">ଅଙ୍କ</span></p>
-<table class="sequenceTable breakdown">
-<tr 
-    data-notes="A,NGA,virama,KA"
-    data-type="uname,uname,uname,uname"
-    data-prefix=",+,+,+"
-    ><td>ଅ␣ଙ␣୍␣କ</td></tr>
-</table>
-
-<p><span class="eg" lang="or">ଅଂକ</span></p>
-<table class="sequenceTable breakdown">
-<tr 
-    data-notes="A,anusvara,KA"
-    data-type="uname,uname,uname"
-    data-prefix=",+,+"
-    ><td>ଅ␣ଂ␣କ</td></tr>
-</table>
-
-<p>However, in Wiktionary a distinction is consistently made between the two spellings, and <span class="hx">0B02</span> is always transcribed as vowel nasalisation, rather than as a nasal consonant, eg.</p>
-
-<p><span class="eg" lang="or">ଇଂଲଣ୍ଡ</span></p>
-<table class="sequenceTable breakdown">
-<tr 
-    data-notes="I,anusvara,LA,NNA,virama,DDA"
-    data-type="uname,uname,uname,uname,uname,uname"
-    data-prefix=",+,+,+,+,+"
-    ><td>ଇ␣ଂ␣ଲ␣ଣ␣୍␣ଡ</td></tr>
-</table>
-
-
-<!--<figure id="fig_anusvara" class="sideCaption">
-<img src="img/anusvara.png" class="ex" alt="ଅଙ୍କ	ଅଂକ" data-notes="64px Oriya MN">
-<figcaption>The sound <span class="ipa">ɔŋkɔ</span> written using a conjunct (top) and using anusvara followed by <span class="uname">KA</span> (bottom).</figcaption>
-</figure>-->
-
-
-
-<p>According to Nakanishi<tt>n,54</tt>, a word-final <span class="ipa">h</span> consonant can also be written using <span class="hx">0B03</span>. In the middle of a word, it causes the following consonant to become lengthened.</p>
-
-<p class="observation"><span class="leadin">Observation:</span> According to Wikipedia, that sound is a <span class="ipa">h</span>, but according to Nakanishi it is a glottal stop. There are no Wiktionary lemma entries with this character.</p>
-</section>
-</section>
 
 
 
 
 
 <section id="clusters">
-<h3>Consonant clusters</h3>
+<h3>Conjuncts</h3>
 
 <p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
 <p id="def-conjunct" class="explanatoryintro definitionStub"></p>
 
-<p>The absence of a vowel sound between two or more consonants is visually indicated in one of the following ways.</p>
-
-<ol>
-<li>Create a <mark><a href="#conjuncts">conjunct</a></mark>. There are a number of possibilities here:
-    <ol style="margin: 0;">
-    <li><mark><a href="#stacking">Stacking</a></mark> : Reduce a non-initial consonant in size and shape and position it below the first.</li>
-    
-    <li><mark><a href="#conjoined">Conjoining</a></mark> : The two consonants sit side by side, but the second consonant has a special shape.</li>
-    
-    <li><mark><a href="#ligated">Ligation</a></mark> : Create a fusion of the letter shapes, where it may be difficult to identify one or more of the components.</li>
-    
-    <li>The <mark><a href="#rclusters">letter RA</a></mark> has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
-    </ol></li>
-
-<li>Show a <mark><a href="#conjoined">visible virama</a></mark> below the non-final consonants in the cluster.</li>
-
-<li>Use the <mark>anusvara</mark>.</li>
-<!--li>No indication, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li-->
-</ol>
-
-<p>See also <a class="secref">finals</a> and <a class="secref">clength</a>.</p>
+<p>Consonant clusters that are represented by conjunct forms use the <span class="name">halant</span> between consonants to invoke the shape changes. If the font has the glyphs needed to produce the conjunct, the <span class="name">halant</span> is hidden (see <a class="secref">clusters</a>).</p>
 
 
 
@@ -2003,7 +1704,365 @@ alveolar</th>
 <tr data-notes="n̪d̪ɾɔ,NA,virama,DA,virama,RA" data-type="ipa,uname,uname,uname,uname,uname" data-prefix=",→,+,+,+,+"><td>ନ୍ଦ୍ର␣ନ␣୍␣ଦ␣୍␣ର</td></tr>
 </table>
 </section>
+
+
+
+
+
+
+
+<section id="joiner">
+<h4>Using ZWJ &amp; ZWNJ</h4>
+
+<p>It's possible to prevent the formation of conjuncts, and force a visible virama, using <span class="hx img">200C</span> ( ZWNJ ).</p>
+
+
+<figure class="sideCaption">
+<table class="sequenceTable">
+<tr data-notes="KA,virama,KA,,kk" data-type="uname,uname,uname,,ipa" data-prefix=",+,+,,→"><td>କ␣୍␣କ␣␣କ୍କ</td></tr>
+
+<tr data-notes="KA,virama,ZWNJ,KA,kk" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→"><td>କ␣୍␣‌␣କ␣କ୍‌କ</td></tr>
+</table>
+<figcaption>Use of ZWNJ and ZWJ to control conjunct rendering.</figcaption>
+</figure>
 </section>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="visible_virama">
+<h3>Visible virama</h3>
+
+
+<figure class="characterBox auto invisible" data-cols="">୍</figure>
+
+<p>Odia uses &nbsp;<span class="hx">0B4D</span>, called <span class="name">halant</span>, (the Odia equivalent of the Sanskrit virama) to indicate that the inherent vowel is not pronounced after a consonant, eg. <span class="ch">କ୍</span> explicitly represents just the sound <span class="ipa">k</span>.</p>
+
+<p>Word-final consonants without a following inherent vowel use the <span class="name">halant</span>, If there is no <span class="name">halant</span>, the vowel is pronounced, eg. compare</p>
+<p><span class="eg" lang="or">ଫୁଲ</span></p>
+<p><span class="eg" lang="or">ଇ-ମେଲ୍</span></p>
+
+<p>A visible virama may also appear if the font doesn't contain the necessary glyphs to support a conjunct (see <a class="secref">conjoined</a>).</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="consonants">
+<h2>Consonants</h2>
+
+
+<p>
+<!--span id="clength"></span-->
+</p>
+
+<aside class="sectionAside">
+<p>This orthography has no special features with respect to the following.</p>
+
+<ul>
+<li>Onset clusters.</li>
+</ul>
+</aside>
+
+
+
+
+<div id="consonant_description"></div>
+
+
+
+
+
+
+
+<section id="consonantSummary">
+<h3>Consonant summary table</h3>
+
+<p>This table summarises only basic consonant to character assignments. Click on the phonetic transcriptions for more detail.</p>
+
+<p class="instructions highlight">Normal letters are used as final consonants, but the right-hand column lists some additional, dedicated finals.</p>
+
+<table class="soundSummary">
+<!--<thead>
+<tr>
+<th>&nbsp;</th>
+<th>Onsets &amp; codas</th>
+<th>Codas only</th>
+</tr>
+</thead>
+--><tbody>
+<tr>
+<th>Stops</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ପ␣ବ␣ତ␣ଦ␣ଟ␣ଡ␣କ␣ଗ</figure></td>
+</tr>
+<tr>
+<th>Aspirated</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ଫ␣ଭ␣ଥ␣ଧ␣ଠ␣ଢ␣ଖ␣ଘ</figure></td>
+</tr>
+<tr>
+<th>Affricates</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ଚ␣ଜ␣ଯ␣ ␣ଛ␣ଝ</figure></td>
+</tr>
+<tr>
+<th>Fricatives</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="s,s,s,ɦ,-h">ସ␣ଷ␣ଶ␣ହ␣ଃ</figure></td>
+</tr>
+<tr>
+<th>Nasals</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="m,n,ɲ,ɳ,ŋ,-ŋ">ମ␣ନ␣ଞ␣ଣ␣ଙ␣ଂ</figure></td>
+</tr>
+<tr>
+<th>Other</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ୱ␣ଵ␣ର␣ଡ଼␣ଢ଼␣ଲ␣ଳ␣ୟ</figure></td>
+</tr>
+</tbody>
+</table>
+
+
+<p class="instructions">For additional details see <a class="secref">vowel_mappings</a>.</p>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="basicC">
+<h3>Basic consonants</h3>
+
+<p>Basic consonant sounds in Oriya are written using the following letters. The letters are highly phonetic.</p>
+
+
+<p class="instructions">Click on each letter for more details and for examples of usage, especially where more than one sound is indicated.</p>
+
+
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ପ␣ବ␣ଫ␣ଭ␣ତ␣ଦ␣ଥ␣ଧ␣ଟ␣ଡ␣ଠ␣ଢ␣କ␣ଗ␣ଖ␣ଘ␣ଚ␣ଛ␣ଜ␣ଝ␣ଯ␣ସ␣ଷ␣ଶ␣ହ␣ମ␣ନ␣ଞ␣ଣ␣ଙ␣ୱ␣ଵ␣ର␣ଲ␣ଳ␣ୟ</figure>
+
+<p>The letters <span class="hx">0B71</span> and <span class="hx">0B35</span> typically occur in subjoined form as medial sounds (see <a class="secref">wava</a>).</p>
+
+<p>The velar and palatal nasals only occur in homorganic clusters.<tt>d,406</tt></p>
+<p><span class="ch">କ୍ଷ</span> is regarded as a letter of the alphabet.</p>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="extendedC">
+<h3>Repertoire extension using nukta</h3>
+
+
+  <p>The sounds <span class="ipa">ɽ</span> and <span class="ipa">ɽʰ</span> are written by combining <span class="hx">0B3C</span>  with an existing consonant.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ଡ଼␣ଢ଼</figure>
+
+<p class="info">The <span class="name">nukta</span> should always be typed and stored immediately after the consonant it modifies, and before any combining vowels or diacritics.</p>
+<p class="info">Unicode  also has precomposed forms of these letters, but they decompose under <a class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</a> (NFC). Therefore, the Unicode Standard recommends the use of the decomposed sequence.</p>
+
+<figure class="auxiliaryBox auto"  data-cols="ipa,trans,transc">&#x0B5C;␣&#x0B5D;</figure>
+
+<p>The nukta may also be used to produce other non-native sounds. Wiktionary describes the following:</p>
+<ul>
+<li><span class="hx">0B15 0B3C</span> for <span class="ipa">q</span>.</li>
+<li><span class="hx">0B16 0B3C</span> for <span class="ipa">x</span>.</li>
+<li><span class="hx">0B1D 0B3C</span> for <span class="ipa">ʒ</span>.</li>
+<li><span class="hx">0B37 0B3C</span> for <span class="ipa">ɻ</span>.</li>
+</ul>
+</section>
+
+
+
+
+
+
+
+<section id="onsets">
+<h3>Onsets</h3>
+
+<p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Odia, and they are handled as described in the section <a class="secref">clusters</a>.</p>
+
+<p>Special behaviours include handling of <span class="uname">RA</span> at the beginning of an orthographic syllable (see <a class="secref">rconjuncts</a>).</p>
+
+
+<section id="medial_ra">
+<h4>Medial RA</h4>
+
+<p>A trailing RA in a conjunct has a fairly regular appearance as a subjoined glyph below the preceding consonant, although that line may join with the preceding letter shape, and therefore cause a slight change to it.</p>
+
+<p><span class="eg" lang="or">ବିକ୍ରୀ</span></p>
+<table class="sequenceTable breakdown">
+<tr 
+    data-notes="kri,KA,virama,RA,I"
+    data-type="ipa,uname,uname,uname,uname"
+    data-prefix=",→,+,+,+"
+    ><td>କ୍ରୀ␣କ␣୍␣ର␣ୀ</td></tr>
+</table>
+
+
+<!--<figure id="fig_rt_trailing" class="sideCaption">
+<div class="figure_matrix">
+	<div class="figure_row" style="align-self: center; ">
+	<img src="img/rt_trailing.png" class="ex" alt="କର→କ୍ର" style="font: 64px 'Oriya MN'; padding: .1em;">
+	<div class="figure_annotation"><span class="ipa">krɔ</span></div>
+	</div>
+</div>
+<figcaption>A trailing RA in a cluster is rendered as a subjoined glyph.</figcaption>
+</figure>-->
+
+
+
+
+
+
+
+<section id="wava">
+<h4><span class="uname">WA</span> and <span class="uname">VA</span> medials</h4>
+
+<p>The letters <span class="hx">0B71</span> and <span class="hx">0B35</span> were added to Unicode version 4, and typically occur as medial sounds. The subjoined forms of these characters may look the same. (For a discussion of the possible historical relationship between these characters see <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2525.pdf">Everson/Stone</a><tt class="more">e02</tt>). Examples of use:</p>
+
+<p><span class="eg" lang="or">ଦ୍ୱାର</span></p>
+<p><span class="eg" lang="or">ଦ୍ଵୀପ</span></p>
+
+<p class="observation"><span class="leadin">Observation:</span> The Library of Congress transcription page says that when <span class="codepoint" translate="no">
+<bdi lang="or">&#x0B2C;</bdi>
+[<a href="/scripts/oriya/block#char0B2C"><span class="uname">U+0B2C ORIYA LETTER BA</span></a>]</span> occurs as the second consonant of a  consonant cluster (except when geminated), it is transliterated <span class="ipa">v</span><tt>loc</tt>. It appears, however, that it also keeps the <span class="ipa">b</span> sound after the letters <span class="trans">m</span> and <span class="trans">r</span>.</p>
+
+<p><span class="hx">0B35</span> is described by Wiktionary as  &quot;used sporadically for the phonetic Va/Wa as an alternative for the officially recognised letter ୱ, but has not gained widespread acceptance&quot;.</p>
+</section>
+</section>
+</section>
+
+
+
+
+
+<section id="finals">
+<h3>Codas</h3>
+
+<p>Syllable codas are commonly written using ordinary letters, but there are also a few dedicated symbols in Oriya. At the end of a word, a coda usually has a visible virama attached.</p>
+
+<p>Some special rendering rules apply for a syllable ending in <span class="ipa">r</span> when it is part of a consonant cluster. See <a class="secref">ra_coda</a>.</p>
+
+<p>Two diacritics represent syllable-final consonant sounds.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ଂ␣ଃ</figure>
+
+
+
+<section id="ra_coda">
+<h4>RA  coda</h4>
+
+<p>Like many other Indian scripts, <span class="hx">0B30</span> at the <em>beginning</em> of a cluster is represented idiosyncratically, and appears as a small, superscript glyph over the top right of the following consonant, eg.</p>
+
+<p><span class="eg" lang="or">ବର୍ଷା</span></p>
+<table class="sequenceTable breakdown">
+<tr 
+    data-notes="BA,RA,virama,SSA,AA"
+    data-type="uname,uname,uname,uname,uname"
+    data-prefix=",+,+,+,+"
+    ><td>ବ␣ର␣୍␣ଷ␣ା</td></tr>
+</table>
+
+
+<!--<figure id="fig_ra_conjunct" class="sideCaption">
+<div class="figure_matrix">
+	<div class="figure_row" style="align-self: center; ">
+	<img src="img/ra_conjunct.png" class="ex" alt="ରକ→ର୍କ" style="font: 64px 'Oriya MN'; padding: .1em;">
+	<div class="figure_annotation"><span class="ipa">rkɔ</span></div>
+	</div>
+</div>
+<figcaption>An initial RA in a cluster is rendered as a superscript over the following consonant.</figcaption>
+</figure>-->
+
+<p class="observation"><span class="leadin">Observation:</span> Unlike Devanagari, it appears that the RA doesn't move over a following vowel sign, such as <span class="codepoint noindex" translate="no"><span lang="or">&#x0B3E;</span> [<a href="/scripts/oriya/block#char0B3E"><span class="uname">U+0B3E ORIYA VOWEL SIGN AA</span></a>]</span>.</p>
+</section>
+
+
+
+
+
+
+
+<section id="coda_marks">
+<h4>Coda diacritics</h4>
+
+<p>According to the Unicode Standard, a nasal coda at the beginning of a consonant cluster can optionally be written as part of a conjunct or using <span class="hx">0B02</span><tt>u16,#G36854</tt>, eg.</p>
+
+<p><span class="eg" lang="or">ଅଙ୍କ</span></p>
+<table class="sequenceTable breakdown">
+<tr 
+    data-notes="A,NGA,virama,KA"
+    data-type="uname,uname,uname,uname"
+    data-prefix=",+,+,+"
+    ><td>ଅ␣ଙ␣୍␣କ</td></tr>
+</table>
+
+<p><span class="eg" lang="or">ଅଂକ</span></p>
+<table class="sequenceTable breakdown">
+<tr 
+    data-notes="A,anusvara,KA"
+    data-type="uname,uname,uname"
+    data-prefix=",+,+"
+    ><td>ଅ␣ଂ␣କ</td></tr>
+</table>
+
+<p>However, in Wiktionary a distinction is consistently made between the two spellings, and <span class="hx">0B02</span> is always transcribed as vowel nasalisation, rather than as a nasal consonant, eg.</p>
+
+<p><span class="eg" lang="or">ଇଂଲଣ୍ଡ</span></p>
+<table class="sequenceTable breakdown">
+<tr 
+    data-notes="I,anusvara,LA,NNA,virama,DDA"
+    data-type="uname,uname,uname,uname,uname,uname"
+    data-prefix=",+,+,+,+,+"
+    ><td>ଇ␣ଂ␣ଲ␣ଣ␣୍␣ଡ</td></tr>
+</table>
+
+
+<!--<figure id="fig_anusvara" class="sideCaption">
+<img src="img/anusvara.png" class="ex" alt="ଅଙ୍କ	ଅଂକ" data-notes="64px Oriya MN">
+<figcaption>The sound <span class="ipa">ɔŋkɔ</span> written using a conjunct (top) and using anusvara followed by <span class="uname">KA</span> (bottom).</figcaption>
+</figure>-->
+
+
+
+<p>According to Nakanishi<tt>n,54</tt>, a word-final <span class="ipa">h</span> consonant can also be written using <span class="hx">0B03</span>. In the middle of a word, it causes the following consonant to become lengthened.</p>
+
+<p class="observation"><span class="leadin">Observation:</span> According to Wikipedia, that sound is a <span class="ipa">h</span>, but according to Nakanishi it is a glottal stop. There are no Wiktionary lemma entries with this character.</p>
+</section>
+</section>
+
+
+
+
+
 
 
 
@@ -2025,28 +2084,6 @@ alveolar</th>
 <p><span class="eg" lang="or">ଦୁଃଖ</span></p>
 
 <p class="observation"><span class="leadin">Observation:</span> There are no instances of this in the term list.</p>
-</section>
-
-
-
-
-
-
-
-<section id="joiner">
-<h3>Using ZWJ &amp; ZWNJ</h3>
-
-<p>It's possible to prevent the formation of conjuncts, and force a visible virama, using <span class="hx img">200C</span> ( ZWNJ ).</p>
-
-
-<figure class="sideCaption">
-<table class="sequenceTable">
-<tr data-notes="KA,virama,KA,,kk" data-type="uname,uname,uname,,ipa" data-prefix=",+,+,,→"><td>କ␣୍␣କ␣␣କ୍କ</td></tr>
-
-<tr data-notes="KA,virama,ZWNJ,KA,kk" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→"><td>କ␣୍␣‌␣କ␣କ୍‌କ</td></tr>
-</table>
-<figcaption>Use of ZWNJ and ZWJ to control conjunct rendering.</figcaption>
-</figure>
 </section>
 
 

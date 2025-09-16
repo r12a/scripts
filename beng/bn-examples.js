@@ -1805,7 +1805,7 @@ autoExpandExamples.bn = `
 কড়ে আঙ্গুল||
 কণা||␣|
 কণ্ঠ্য||␣|
-কত|how much|ˈkɔ§t̪o
+কত|how much|ˈkɔ§t̪o|koto
 কথন||␣|
 কথা||␣
 কথাবার্তা||␣
@@ -2463,7 +2463,7 @@ autoExpandExamples.bn = `
 গয়না||␣|
 গর-||
 গরজ||␣|
-গরম|warm, hot|ɡɔ§ɾo§m§/ɡɔɽom|ɡôrôm
+গরম|warm, hot|ɡɔ§ɽo§m§/ɡɔɾom|ɡôrôm
 গরমকাল||␣|
 গরিলা|gorilla|ɡɔɾila||ɡɔɹila
 গরীব||␣|
@@ -4357,7 +4357,7 @@ autoExpandExamples.bn = `
 পর্নো||␣
 পর্নোগ্রাফি||
 পর্নোগ্রাফিক||
-পর্বত|mountain|pɔrbɔt
+পর্বত|mountain|pɔ§r§bɔ§t|pôrbôt
 পর্বতমালা||
 পর্যটন||␣|
 পর্যন্ত||␣
@@ -7653,7 +7653,7 @@ autoExpandExamples.bn = `
 ʼপরে|above||ʼpôre||x
 কʼরে|after||kôʼre||x
 বাঙালী|Bengali (person)|bɑ§ŋɡɑ§liː
-
+গড়ান|to roll||gɔɽɑnô|
 
 
 

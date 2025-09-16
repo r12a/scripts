@@ -59,7 +59,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->10 September, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->15 September, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
   
@@ -77,7 +77,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Khmer (Cambodian) Orthography Notes, <!-- #BeginDate format:En2 -->10-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/khmr/km">https://r12a.github.io/scripts/khmr/km</a></small></p>
+<p class="refLine"><small>Richard Ishida, Khmer (Cambodian) Orthography Notes, <!-- #BeginDate format:En2 -->15-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/khmr/km">https://r12a.github.io/scripts/khmr/km</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -1282,40 +1282,7 @@ and
 <span class="codepoint" translate="no"><span style="display:none;" lang="km">&#x17B5;</span><img src="../../c/Khmer/large/17B5.png" alt="KIVAA" style="vertical-align:middle; height:2rem;"> <a href="/scripts/khmer/block#char17B5"><span class="uname">U+17B5 KHMER VOWEL INHERENT AA</span></a></span>
 were originally intended to <q>represent a phonetic difference not expressed by the spelling, so as to assist in phonetic sorting</q>, however, the Unicode Standard considers them <q>insufficient for that purpose</q> and <q>errors in the encoding</q>, and they should not be used.<tt>u,677</tt></p>
 
-
-
-
-
-
-
-<section id="novowel">
-<h4>Silent vowels &amp; consonants</h4>
-
-<p>Inherent vowels are not pronounced after syllable final consonants.</p>
-
-<p>Vowels are  not pronounced between stacked consonants. The first character in the list below, <span class="hx">17D2</span>,  is used to create those consonant stacks. It is never visible when part of a cluster. (When rendered alone or without a following consonant, fonts do however apply a visible form.) See  <a class="secref">clusters</a>.</p>
-
-<p>Khmer also has other diacritics that silence vowels or parts of the text.</p>
-
-<figure class="characterBox auto" data-cols="trans">្␣៍␣៌␣៑␣៝</figure>
-
-<p>The following two diacritics are used to silence written characters. </p>
-
-<p><span class="hx">17CD</span> is used over a consonant, particularly in loan words, to silence it and any attached vowels or subscripts.</p>
-<p><span class="eg ipalist" lang="km">សប្ដាហ៍</span></p>
-<p><span class="eg ipalist" lang="km">រេហ៍ពល</span></p>
-<p><span class="eg ipalist" lang="km">កេរ្តិ៍</span></p>
-
-<p><span class="hx">17CC</span> is not very common and word-medially may  produce <span class="ipa">rə</span> before the consonant it sits on. When it appears word-finally, it may  silence the final consonant (and may also  affect vowel sounds).</p>
-<p><span class="eg ipalist" lang="km">បរិបូណ៌</span></p>
-
-<p><span class="hx">17D1</span>, the sanskrit virama, is sometimes used in Sanskrit words to indicate that a final consonant has no vowel sound.</p>
-<p><span class="eg ipalist" lang="km">អាត្មន៑</span></p>
-
-<p><span class="hx">17DD</span>, on the other hand, is a rarely used sign that indicates that a final consonant <em>retains</em> its inherent vowel sound.</p>
-
-<p class="instructions">(Check the detailed information for each of the above marks, since this section only looks at the use for silencing sounds.)</p>
-</section>
+<p>Since Khmer consonants normally include an inherent vowel, the orthography has ways to indicate a consonant that is not followed by a vowel sound. See <a class="secref">novowel</a>.</p>
 </section>
 
 
@@ -2976,6 +2943,321 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 
 
+
+
+
+
+
+
+<section id="novowel">
+<h2>Vowel absence &amp; sound silencers</h2>
+
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.  The absence of a vowel sound can be visually indicated in one of the following ways.</p>
+
+
+<ol>
+<li><mark><a href="#clusters">Conjuncts</a></mark>. Khmer conjuncts are all stacks.</li>
+
+<li><mark><a href="#absent_vowel">Unmarked vowel absence</a></mark>, especially after syllable final consonants.</li>
+
+<li><mark><a href="#coda_marks">Coda diacritics</a></mark>. Some Khmer codas can be written using combining marks.</li>
+
+<li><mark><a href="#silencers">Silencer marks</a></mark>. These can cancel sounds of vowels and consonants.</li>
+</ol>
+
+<p>The Khmer equivalent of the <span class="name">virama</span> is called <span class="name">coeng</span>, and is never visible.</p>
+
+
+
+
+
+
+<section id="clusters">
+<h3>Conjunct stacks</h3>
+
+<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
+<p id="def-conjunct" class="explanatoryintro definitionStub"></p>
+ 
+<p>In Khmer, word-internal clusters are very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word. </p>
+
+<p>The absence of a vowel sound between two or more consonants is visually indicated by <b class="newterm">stacked</b> consonants (only), where the non-initial consonant appears below the initial, typically with a different shape from normal.</p>
+
+<p><span class="leadin">Word boundaries.</span> Clusters do not span word boundaries. Consonant clusters formed by the end of one word and the beginning of the next do not lead to stacking in Khmer.</p>
+
+
+
+
+
+
+<section id="conjuncts">
+<h4>Conjunct formation</h4>
+
+<figure class="characterBox auto hidden"  data-cols="trans">&#x17D2;</figure>
+
+<p class="info">In Unicode, the stacking  behaviour is achieved by adding <span class="hx">17D2</span> between the consonants. This character has no visual representation in normal Khmer text, however most fonts render it as a small cross when used alone or without a following consonant. It is never visible when used in consonant clusters.</p>
+
+<table class="sequenceTable" style="line-height: 2.5">
+<tr data-notes="SA,coeng,PA,sp"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,→"><td>ស␣្␣ព␣ស្ព</td></tr>
+</table>
+
+<p class="linkToApp"><a target="_blank" href="../apps/conjunct_generator/index.html?preset=java">See a table of 2-consonant clusters.</a><br>The table allows you to test results for various fonts.</p>
+</section>
+
+
+
+
+
+
+
+<section id="subscript_consonants">
+<h4>Stacking</h4>
+
+<p>Subscript consonant forms are called <span class="eg inline" lang="km">ជើងអក្សរ</span> (or  'coeng', pronounced <span class="ipa">cəːŋ</span>). </p>
+
+<p>Cambodians see these subscripts as distinct letter forms, but, unlike Tibetan, they are produced in Unicode by inserting <span class="hx">17D2</span> before the consonant that will become a subscript. This character, which has no visual form in Cambodian, is called the <span class="name">coeng</span> in Unicode, although it should rightly be called the <span class="name">coeng generator</span>.</p>
+
+<p>All the shapes are simplified and reduced in size compared to the non-subscript form. Many have significantly different shapes. </p>
+
+<p>Examples:</p>
+
+
+
+<figure id="fig_stacked" class="sideCaption">
+<table class="sequenceTable" style="line-height: 3;">
+<tr 
+    data-notes="MO,coeng,PHA,mpʰ"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ម␣្␣ផ␣ម្ផ</td></tr>
+<tr 
+    data-notes="SA,coeng,NO,sn"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ស␣្␣ន␣ស្ន</td></tr>
+<tr 
+    data-notes="DO,coeng,TTHO,ttʰ"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ឌ␣្␣ឍ␣ឌ្ឍ</td></tr>
+<tr 
+    data-notes="TA,coeng,RO,tr"
+    data-type="uname,uname,uname,ipa"
+    data-prefix=",+,+,+,→"
+    ><td>ត␣្␣រ␣ត្រ</td></tr>
+</table>
+<figcaption>Examples of stacked conjuncts.</figcaption>
+</figure>
+
+
+<p>As can be seen in <a class="figref">fig_stacked</a>, <span class="hx">179A</span> produces a subjoined form that wraps <em>to the left</em> and under the preceding consonant. Several others wrap below and to the right of the consonant. <span class="hx">17A1</span> doesn't normally appear in subscript form.</p>
+
+
+
+<details style="margin-block:2rem;">
+<summary class="instructions">Show consonants in their normal and subjoined forms</summary>
+
+<p>Shows the same consonant before and after a <span class="name">coeng</span>.</p>
+
+<div class="characterBoxTitle">Class <span class="trans">ɑː</span> consonants</div>
+
+<figure class="counterstylesBox auto noindex" data-ipa="pʰ-p,ɓ-p,t,tʰ-t,tʰ-t,ɗ-t,k-k,kʰ-k,ʔ,c-c,cʰ,s-h,h,l" data-cols="">ផ្ផ␣ប្ប␣ត្ត␣ថ្ថ␣ឋ្ឋ␣ដ្ដ␣ក្ក␣ខ្ខ␣អ្អ␣ច្ច␣ឆ្ឆ␣ស្ស␣ហ្ហ␣ឡ្ឡ</figure>
+
+<div class="characterBoxTitle">Class <span class="trans">ɔː</span> consonants</div>
+
+<figure class="counterstylesBox auto noindex" data-ipa="p-p,pʰ-p,t-t,tʰ-t,tʰ-t,ɗ-t,k-k,kʰ-k,c-c,cʰ,ʋ-w,m-m,n-n,n-n,ɲ-ɲ,ŋ-ŋ,r,l-l,j-iː" data-cols="">ព្ព␣ភ្ភ␣ទ្ទ␣ធ្ធ␣ឍ្ឍ␣ឌ្ឌ␣គ្គ␣ឃ្ឃ␣ជ្ជ␣ឈ្ឈ␣វ្វ␣ម្ម␣ន្ន␣ណ្ណ␣ញ្ញ␣ង្ង␣រ្រ␣ល្ល␣យ្យ</figure>
+</details>
+
+
+<p>Some subscripts change the sound of the preceding consonant. </p>
+
+<p>Stacks commonly occur in  multisyllabic words. A medial cluster will typically contain a final consonant for the first syllable and the initial consonant of the next syllable. Vowel signs never split conjuncts, but instead treat them as a single unit.</p>
+
+<p><span class="eg" lang="km">ចង្កើះ</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="cɑ,ŋ.,coeng,ˈk,aə,h"
+    data-type="ipa,ipa,uname,ipa,ipa"
+    data-prefix=",,,,,"><td>ច␣ង␣្␣ក␣ើ␣ះ</td></tr>
+</table>
+
+<p>Some clusters involve two subscripts. These are, with 3 exceptions, composed of a final nasal, followed by a stop and r.</p>
+
+<p><span class="eg ipalist" lang="km" data-ipa="kɑː§n.§t§raj§∅">កន្ត្រៃ</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="kɑː,n.,coeng,t,coeng,r,aj"
+    data-type="ipa,ipa,uname,ipa,uname,ipa,ipa"
+    data-prefix=",,,,,,,,"><td>ក␣ន␣្␣ត␣្␣រ␣ៃ</td></tr>
+</table>
+
+<p><span class="eg ipalist" lang="km" data-ipa="kɑ§ɲ.§c§reː§ŋ">កញ្ជ្រេង</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="kɑ,ɲ.,coeng,c,coeng,r,eː,ŋ"
+    data-type="ipa,ipa,uname,ipa,uname,ipa,ipa,ipa"
+    data-prefix=",,,,,,,,"><td>ក␣ញ␣្␣ជ␣្␣រ␣េ␣ង</td></tr>
+</table>
+
+
+<p>The 3 exceptions are loan words.</p>
+<p><span class="eg ipalist" lang="km" data-ipa="ʔɑ§ŋ.§k§leː§h§∅">អង្គ្លេស</span></p>
+<p><span class="eg ipalist" lang="km" data-ipa="sɑ§ŋ.§s§k§re§t">សងស្ក្រិត</span></p>
+<p><span class="eg ipalist" lang="km" data-ipa="sɑ.§s§t§raː.§caː§∅§∅">សាស្ត្រាចារ្យ</span></p>
+ 
+<p>Subscript consonants that appear at the end of a word, are silent.</p>
+
+<p><span class="eg ipalist" lang="km" data-ipa="pei§t§∅">ពេទ្យ</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="p,ei,t,coeng,∅"
+    data-type="ipa,ipa,ipa,uname,,"
+    data-prefix=",,,,,,"><td>ព␣េ␣ទ␣្␣យ</td></tr>
+</table>
+
+<p><span class="eg ipalist" lang="km" data-ipa="rɔa§t§∅">រដ្ឋ</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="rɔa,t,coeng,∅"
+    data-type="ipa,ipa,uname,,"
+    data-prefix=",,,,,"><td>រ␣ដ␣្␣ឋ</td></tr>
+</table>
+</section>
+
+
+
+
+<section id="stack_register">
+<h4>Stacks and registers</h4> 
+
+<p>Where the two consonants involved in the cluster are in different classes or registers, the pronunciation of any following vowel is normally determined by the register of the subscript consonant. For the following exceptions, however, the vowel pronunciation is determined by the register of the <em>first</em> consonant (all <span class="name">ɔ</span>-class):</p>
+
+<figure class="characterBox auto" data-cols="">ង␣ញ␣ន␣ម␣យ␣រ␣ល␣វ</figure>
+
+</section>
+
+
+
+
+<section id="stack_vowels">
+<h4>Combining characters &amp; stacks</h4> 
+
+<p>Most vowels that are pronounced after a consonant stack are displayed as if they were attached to the consonant at the top of the stack (including pre-base vowel signs and circumgraphs).</p>
+<p class="instructions">Click on the examples to see the underlying sequence more clearly.</p>
+<p><span class="eg ipalist" lang="km" dir="ltr">ក្លិន</span></p>
+<p><span class="eg ipalist" lang="km" dir="ltr">ឆ្វេង</span></p>
+<p><span class="eg ipalist" lang="km" dir="ltr">ភ្លៀង</span></p>
+
+<p>This can also lead to ligation between the top consonant in the stack and a vowel sign, unless the subjoined consonant is right-spacing.</p>
+<p><span class="eg ipalist" lang="km" dir="ltr">ក្ដារ</span></p>
+<p><span class="eg ipalist" lang="km" dir="ltr">ក្រាក់</span></p>
+<p><span class="eg ipalist" lang="km" dir="ltr">ក្បាល</span></p>
+
+<p>The exceptions are the vowel signs that appear below the consonant; these appear below the last subjoined form, unless the subjoined form is left-spacing.</p>
+<p><span class="eg ipalist" lang="km" dir="ltr">ខ្ពុរ</span></p>
+<p><span class="eg ipalist" lang="km" dir="ltr">ត្រុំ</span></p>
+
+<p>Other diacritics are treated in a similar fashion. This can lead to ambiguity if a diacritic could modify either consonant in a stack.</p>
+</section>
+
+
+
+
+<section id="subscript_with_vowel">
+<h4>Subscript consonants after vowels</h4>
+
+<p>It is rare but possible to find subscripts used after independent vowels. One common word spelled this way is <span class="eg" lang="km">ឲ្យ</span></p>
+
+<p>It is also possible to find subscript forms of independent vowels. Four of these are named sequences in Unicode.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="absent_vowel">
+<h3>Unmarked vowel absence</h3>
+
+<p>While many consonant clusters are represented by conjunct stacks, it is not difficult to find words where the vowel absence is not marked, particularly after syllable codas. For example:</p>
+
+<p><span class="eg" lang="km">កកកុញ</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="kɑː,ʔ,ˈko,ɲ"
+    data-type="ipa,ipa,ipa,ipa,uname"
+    data-prefix=",+,+,+,+,+"
+    ><td>ក␣ក␣កុ␣ញ</td></tr>
+</table>
+
+<p>Note the ambiguity in the spelling. There is nothing to indicate that the first two characters in the word above are pronounced <span class="ipa">kaːʔ</span>, rather than <span class="ipa">ka.kaː</span>, as in</p>
+
+<p><span class="eg" lang="km">កករ</span></p>
+
+<p>Inherent vowels are not usually pronounced after syllable final consonants at the end of a word, eg.</p>
+
+<p><span class="eg" lang="km">កាល</span></p>
+<p><span class="eg" lang="km">កំពុក</span></p>
+
+<p>However, there are exceptions, such as</p>
+
+<p><span class="eg" lang="km">កលហ</span></p>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="silencers">
+<h3>Silencers</h3>
+
+<p>Khmer has diacritics that silence vowels or parts of the text.</p>
+
+<figure class="characterBox auto" data-cols="trans">៍␣៌␣៑␣៝</figure>
+
+<p>The following two diacritics are used to silence written characters. </p>
+
+<p><span class="hx">17CD</span> is used over a consonant, particularly in loan words, to silence it and any attached vowels or subscripts.</p>
+<p><span class="eg ipalist" lang="km">សប្ដាហ៍</span></p>
+<p><span class="eg ipalist" lang="km">រេហ៍ពល</span></p>
+<p><span class="eg ipalist" lang="km">កេរ្តិ៍</span></p>
+
+<p><span class="hx">17CC</span> is not very common and word-medially may  produce <span class="ipa">rə</span> before the consonant it sits on. When it appears word-finally, it may  silence the final consonant (and may also  affect vowel sounds).</p>
+<p><span class="eg ipalist" lang="km">បរិបូណ៌</span></p>
+
+<p><span class="hx">17D1</span>, the sanskrit virama, is sometimes used in Sanskrit words to indicate that a final consonant has no vowel sound.</p>
+<p><span class="eg ipalist" lang="km">អាត្មន៑</span></p>
+
+<p><span class="hx">17DD</span>, on the other hand, is a rarely used sign that indicates that a final consonant <em>retains</em> its inherent vowel sound.</p>
+
+<p class="instructions">(Checks are needed for the detailed information for each of the above marks, since this section only looks at the use for silencing sounds.)</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>
 <span id="clength"></span>
 </p>
@@ -3185,7 +3467,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 
 <section id="finals">
-<h3>Finals</h3>
+<h3>Codas</h3>
 
 <p>Not all Khmer consonants can appear in syllable-final position. The most common syllable codas include the following:</p>
 
@@ -3232,208 +3514,6 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <p>The  2 following sequences are regarded as letters in the Khmer alphabet. They are not encoded separately in Unicode (but they are named sequences).</p>
 
 <figure class="characterBox auto small" data-cols="ipa,trans">ាំ␣ុំ</figure>
-</section>
-</section>
-
-
-
-
-
-
-
-<section id="clusters">
-<h3>Consonant clusters</h3>
-
-<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
-<p id="def-conjunct" class="explanatoryintro definitionStub"></p>
- 
-<p>In Khmer, word-internal clusters are very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word. </p>
-
-<p>The absence of a vowel sound between two or more consonants is visually indicated by <b class="newterm">stacked</b> consonants (only), where the non-initial consonant appears below the initial, typically with a different shape from normal.</p>
-
-<p><span class="leadin">Word boundaries.</span> Clusters do not span word boundaries. Consonant clusters formed by the end of one word and the beginning of the next do not lead to stacking in Khmer.</p>
-
-
-
-
-
-
-<section id="conjuncts">
-<h4>Conjunct formation</h4>
-
-<figure class="characterBox auto hidden"  data-cols="trans">&#x17D2;</figure>
-
-<p class="info">In Unicode, the stacking  behaviour is achieved by adding <span class="hx">17D2</span> between the consonants. This character has no visual representation in normal Khmer text, however most fonts render it as a small cross when used alone or without a following consonant. It is never visible when used in consonant clusters.</p>
-
-<table class="sequenceTable" style="line-height: 2.5">
-<tr data-notes="SA,coeng,PA,sp"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,→"><td>ស␣្␣ព␣ស្ព</td></tr>
-</table>
-
-<p class="linkToApp"><a target="_blank" href="../apps/conjunct_generator/index.html?preset=java">See a table of 2-consonant clusters.</a><br>The table allows you to test results for various fonts.</p>
-</section>
-
-
-
-
-
-
-
-<section id="subscript_consonants">
-<h4>Stacking</h4>
-
-<p>Subscript consonant forms are called <span class="eg inline" lang="km">ជើងអក្សរ</span> (or  'coeng', pronounced <span class="ipa">cəːŋ</span>). </p>
-
-<p>Cambodians see these subscripts as distinct letter forms, but, unlike Tibetan, they are produced in Unicode by inserting <span class="hx">17D2</span> before the consonant that will become a subscript. This character, which has no visual form in Cambodian, is called the <span class="name">coeng</span> in Unicode, although it should rightly be called the <span class="name">coeng generator</span>.</p>
-
-<p>All the shapes are simplified and reduced in size compared to the non-subscript form. Many have significantly different shapes. </p>
-
-<p>Examples:</p>
-
-
-
-<figure id="fig_stacked" class="sideCaption">
-<table class="sequenceTable" style="line-height: 3;">
-<tr 
-    data-notes="MO,coeng,PHA,mpʰ"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ម␣្␣ផ␣ម្ផ</td></tr>
-<tr 
-    data-notes="SA,coeng,NO,sn"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ស␣្␣ន␣ស្ន</td></tr>
-<tr 
-    data-notes="DO,coeng,TTHO,ttʰ"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ឌ␣្␣ឍ␣ឌ្ឍ</td></tr>
-<tr 
-    data-notes="TA,coeng,RO,tr"
-    data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,+,→"
-    ><td>ត␣្␣រ␣ត្រ</td></tr>
-</table>
-<figcaption>Examples of stacked conjuncts.</figcaption>
-</figure>
-
-
-<p>As can be seen in <a class="figref">fig_stacked</a>, <span class="hx">179A</span> produces a subjoined form that wraps <em>to the left</em> and under the preceding consonant. Several others wrap below and to the right of the consonant. <span class="hx">17A1</span> doesn't normally appear in subscript form.</p>
-
-
-
-<details style="margin-block:2rem;">
-<summary class="instructions">Show consonants in their normal and subjoined forms</summary>
-
-<p>Shows the same consonant before and after a <span class="name">coeng</span>.</p>
-
-<div class="characterBoxTitle">Class <span class="trans">ɑː</span> consonants</div>
-
-<figure class="counterstylesBox auto noindex" data-ipa="pʰ-p,ɓ-p,t,tʰ-t,tʰ-t,ɗ-t,k-k,kʰ-k,ʔ,c-c,cʰ,s-h,h,l" data-cols="">ផ្ផ␣ប្ប␣ត្ត␣ថ្ថ␣ឋ្ឋ␣ដ្ដ␣ក្ក␣ខ្ខ␣អ្អ␣ច្ច␣ឆ្ឆ␣ស្ស␣ហ្ហ␣ឡ្ឡ</figure>
-
-<div class="characterBoxTitle">Class <span class="trans">ɔː</span> consonants</div>
-
-<figure class="counterstylesBox auto noindex" data-ipa="p-p,pʰ-p,t-t,tʰ-t,tʰ-t,ɗ-t,k-k,kʰ-k,c-c,cʰ,ʋ-w,m-m,n-n,n-n,ɲ-ɲ,ŋ-ŋ,r,l-l,j-iː" data-cols="">ព្ព␣ភ្ភ␣ទ្ទ␣ធ្ធ␣ឍ្ឍ␣ឌ្ឌ␣គ្គ␣ឃ្ឃ␣ជ្ជ␣ឈ្ឈ␣វ្វ␣ម្ម␣ន្ន␣ណ្ណ␣ញ្ញ␣ង្ង␣រ្រ␣ល្ល␣យ្យ</figure>
-</details>
-
-
-<p>Some subscripts change the sound of the preceding consonant. </p>
-
-<p>Stacks commonly occur in  multisyllabic words. A medial cluster will typically contain a final consonant for the first syllable and the initial consonant of the next syllable. Vowel signs never split conjuncts, but instead treat them as a single unit.</p>
-
-<p><span class="eg" lang="km">ចង្កើះ</span></p>
-<table class="sequenceTable breakdown">
-<tr data-notes="cɑ,ŋ.,coeng,ˈk,aə,h"
-    data-type="ipa,ipa,uname,ipa,ipa"
-    data-prefix=",,,,,"><td>ច␣ង␣្␣ក␣ើ␣ះ</td></tr>
-</table>
-
-<p>Some clusters involve two subscripts. These are, with 3 exceptions, composed of a final nasal, followed by a stop and r.</p>
-
-<p><span class="eg ipalist" lang="km" data-ipa="kɑː§n.§t§raj§∅">កន្ត្រៃ</span></p>
-<table class="sequenceTable breakdown">
-<tr data-notes="kɑː,n.,coeng,t,coeng,r,aj"
-    data-type="ipa,ipa,uname,ipa,uname,ipa,ipa"
-    data-prefix=",,,,,,,,"><td>ក␣ន␣្␣ត␣្␣រ␣ៃ</td></tr>
-</table>
-
-<p><span class="eg ipalist" lang="km" data-ipa="kɑ§ɲ.§c§reː§ŋ">កញ្ជ្រេង</span></p>
-<table class="sequenceTable breakdown">
-<tr data-notes="kɑ,ɲ.,coeng,c,coeng,r,eː,ŋ"
-    data-type="ipa,ipa,uname,ipa,uname,ipa,ipa,ipa"
-    data-prefix=",,,,,,,,"><td>ក␣ញ␣្␣ជ␣្␣រ␣េ␣ង</td></tr>
-</table>
-
-
-<p>The 3 exceptions are loan words.</p>
-<p><span class="eg ipalist" lang="km" data-ipa="ʔɑ§ŋ.§k§leː§h§∅">អង្គ្លេស</span></p>
-<p><span class="eg ipalist" lang="km" data-ipa="sɑ§ŋ.§s§k§re§t">សងស្ក្រិត</span></p>
-<p><span class="eg ipalist" lang="km" data-ipa="sɑ.§s§t§raː.§caː§∅§∅">សាស្ត្រាចារ្យ</span></p>
- 
-<p>Subscript consonants that appear at the end of a word, are silent.</p>
-
-<p><span class="eg ipalist" lang="km" data-ipa="pei§t§∅">ពេទ្យ</span></p>
-<table class="sequenceTable breakdown">
-<tr data-notes="p,ei,t,coeng,∅"
-    data-type="ipa,ipa,ipa,uname,,"
-    data-prefix=",,,,,,"><td>ព␣េ␣ទ␣្␣យ</td></tr>
-</table>
-
-<p><span class="eg ipalist" lang="km" data-ipa="rɔa§t§∅">រដ្ឋ</span></p>
-<table class="sequenceTable breakdown">
-<tr data-notes="rɔa,t,coeng,∅"
-    data-type="ipa,ipa,uname,,"
-    data-prefix=",,,,,"><td>រ␣ដ␣្␣ឋ</td></tr>
-</table>
-</section>
-
-
-
-
-<section id="stack_register">
-<h4>Stacks and registers</h4> 
-
-<p>Where the two consonants involved in the cluster are in different classes or registers, the pronunciation of any following vowel is normally determined by the register of the subscript consonant. For the following exceptions, however, the vowel pronunciation is determined by the register of the <em>first</em> consonant (all <span class="name">ɔ</span>-class):</p>
-
-<figure class="characterBox auto" data-cols="">ង␣ញ␣ន␣ម␣យ␣រ␣ល␣វ</figure>
-
-</section>
-
-
-
-
-<section id="stack_vowels">
-<h4>Combining characters &amp; stacks</h4> 
-
-<p>Most vowels that are pronounced after a consonant stack are displayed as if they were attached to the consonant at the top of the stack (including pre-base vowel signs and circumgraphs).</p>
-<p class="instructions">Click on the examples to see the underlying sequence more clearly.</p>
-<p><span class="eg ipalist" lang="km" dir="ltr">ក្លិន</span></p>
-<p><span class="eg ipalist" lang="km" dir="ltr">ឆ្វេង</span></p>
-<p><span class="eg ipalist" lang="km" dir="ltr">ភ្លៀង</span></p>
-
-<p>This can also lead to ligation between the top consonant in the stack and a vowel sign, unless the subjoined consonant is right-spacing.</p>
-<p><span class="eg ipalist" lang="km" dir="ltr">ក្ដារ</span></p>
-<p><span class="eg ipalist" lang="km" dir="ltr">ក្រាក់</span></p>
-<p><span class="eg ipalist" lang="km" dir="ltr">ក្បាល</span></p>
-
-<p>The exceptions are the vowel signs that appear below the consonant; these appear below the last subjoined form, unless the subjoined form is left-spacing.</p>
-<p><span class="eg ipalist" lang="km" dir="ltr">ខ្ពុរ</span></p>
-<p><span class="eg ipalist" lang="km" dir="ltr">ត្រុំ</span></p>
-
-<p>Other diacritics are treated in a similar fashion. This can lead to ambiguity if a diacritic could modify either consonant in a stack.</p>
-</section>
-
-
-
-
-<section id="subscript_with_vowel">
-<h4>Subscript consonants after vowels</h4>
-
-<p>It is rare but possible to find subscripts used after independent vowels. One common word spelled this way is <span class="eg" lang="km">ឲ្យ</span></p>
-
-<p>It is also possible to find subscript forms of independent vowels. Four of these are named sequences in Unicode.</p>
 </section>
 </section>
 
