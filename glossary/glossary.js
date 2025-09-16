@@ -11,7 +11,7 @@ defList={
 
 "multipartvowel": 'See <a href="#compositevowel">Composite Vowel Sign</a>.',
 
-"conjunct": 'A <a class="termref" target="_blank" href="../glossary/index.html#conjunct">conjunct</a> is a consonant cluster where the lack of intervening vowels is indicated by one or more of stacking, changing and merging the shapes of the constituent letter forms (usually in abugidas). Not all consonant clusters are displayed as conjuncts.',
+"conjunct": 'A <a class="termref" target="_blank" href="../glossary/index.html#conjunct">conjunct</a> is a consonant cluster where the lack of intervening vowels is indicated by one or more of stacking, changing, and/or merging the shapes of the constituent letter forms (usually in abugidas). Not all consonant clusters are displayed as conjuncts.',
 
 "consonantcluster": 'A consonant cluster is a sequence of consonant sounds with no intervening vowels.',
 
@@ -34,6 +34,8 @@ defList={
 "letterspacing": 'Unlike justification, which fits text within a fixed space, letter-spacing adds regular amounts of space between letters, and the resulting length is a by-product of that.',
 
 "livedead": 'A \'dead\' syllable ends with the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or a short vowel (which in some languages may include a glottal stop <span class="ipa">-ʔ</span>). A \'live\' syllable ends with sonorants <span class="ipa">m</span>, <span class="ipa">n</span>, <span class="ipa">ŋ</span>, <span class="ipa">w</span>, <span class="ipa">j</span>, or a long vowel.</p>',
+
+"medialconsonant": `A medial consonant appears after the first consonant in an onset, and is often one of <span class="ipa">-w</span>, <span class="ipa">-r</span>, or <span class="ipa">-l</span>. Sometimes an onset may have multiple medials, such as <span class="ipa">-rj</span>. Some scripts have dedicated combining marks for medial consonants.`,
 
 "prebase": 'The glyph of a pre-base (or prescript) vowel sign is displayed to the left of the consonant or orthographic syllable after which it is pronounced. It is still typed and stored, however, in pronunciation order.',
 
