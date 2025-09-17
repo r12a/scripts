@@ -44,7 +44,7 @@ autoExpandExamples.kkh = `
 ᨩ᩠ᨿᨦᨲᩩᨦ|Kentung|␣
 ᨩᩭ᩵|help|cɔːj⁴
 ᨪᩨ᩶|buy|sɯː⁶
-ᨯᩬᨠᨾᩱ᩶||␣||
+ᨯᩬᨠᨾᩱ᩶|flower|dɔː§k˨˨.§maj˦˩||
 ᨯᩭ||␣||
 ᨯᩱ᩶|did|daj⁵
 ᨲᩕᩯ|bugle|tʰɛː¹
