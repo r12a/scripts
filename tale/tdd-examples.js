@@ -53,7 +53,7 @@ autoExpandExamples.tdd = `
 ᥓᥣᥭᥰ|man||tsäay
 ᥓᥪ|name|t͡s§ɯ|tsue
 ᥓᥬᥴ||
-ᥔᥒᥴ||
+ᥔᥒᥴ|what?||sáng
 ᥔᥣᥛᥴ||
 ᥔᥣᥝᥴ|girl||sáaw
 ᥔᥤᥙᥴ|ten||síp
@@ -119,7 +119,7 @@ autoExpandExamples.tdd = `
 ᥛᥫᥒᥰ|city, country|m§ə§ŋ§˥|möeng
 ᥛᥬᥰ|you (s)||mäue
 ᥛᥬᥱ|new||mǎue
-ᥜᥒᥰ||
+ᥜᥒᥰ|to listen|fa§ŋ§˥|fäng
 ᥜᥒᥱ||
 ᥜᥒᥴ|to bury||fáng
 ᥜᥒ́|to bury||fáng
