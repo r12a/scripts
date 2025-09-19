@@ -121,7 +121,7 @@ autoExpandExamples.sat = `
 ᱡᱷᱚᱛᱚᱦᱚᱲ ᱠᱚ||␣||
 ᱡᱷᱚᱨᱠᱟ||␣||
 ᱢᱚᱬᱮ|five|m§ɔ§ɳ§e|môṇe
-ᱢᱚᱱᱛᱨᱤ||␣||
+ᱢᱚᱱᱛᱨᱤ|minister|m§ɔ§n§t§r§i|môntri|
 ᱢᱟᱦᱟᱸ|day|mahã|mahã|
 ᱢᱟᱨᱟᱝ ᱢᱚᱱᱛᱨᱤ||␣||
 ᱢᱟᱨᱟᱝ|big|maraŋ|maraṅ
