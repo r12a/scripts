@@ -314,7 +314,7 @@ autoExpandExamples.mn = `
 ᠰᠢᠳᠦ|tooth|ʃud|shüd|шүд
 ᠰᠢᠷᠡᠭᠡ|table|ʃ§i§r§–§–§e|shiree|ширээ
 ᠰᠣᠨᠢᠨ|news|sœ.nəŋ|sɔnin|сонин
-ᠰᠣᠨᠤᠰᠬᠤ|to hear|sɔnsəx|sonsokh|сонсох
+ᠰᠣᠨᠤᠰᠬᠤ|to hear|s§ɔ§n§–§sə§x§–|sonsokh|сонсох
 ᠰᠤᠮᠤ||␣
 ᠰᠥ᠋ᠨ᠋ᠢ|night|ʃɵn|shönö|шөнө
 ᠰᠦᠨ|milk|suː|süü|сүү
