@@ -91,7 +91,7 @@ autoExpandExamples.osa = `
 𐓧𐓘͘𐓵𐓟|big, great|l§ɑ̃§ð§ɛ
 𐓧𐓘͘𐓵𐓟|large|l§ɑ̃́§ð§ɛ
 𐓧𐓘𐓬𐓸𐓘͘𐓤𐓟|mosquito|l§ɑ§p§x§ɑ̃́ː§k§ɛ
-𐓧𐓟𐓜𐓛|hands|l§ɛ§b§ɹ§ə
+𐓧𐓟𐓜𐓛|hands|l§ɛ§bɹ§ə
 𐓧𐓣͘𐓤𐓘|sit down|l§ĩ́ː§k§ɑ
 𐓧𐓪͘|thunder|l§ṍː
 𐓧𐓪͘𐓵𐓟|drunk|l§õ§ð§ɛ
