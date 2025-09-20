@@ -2419,7 +2419,7 @@ slavî||
 sol||
 sond||
 sondname||
-sondxwarî||
+sondxwarî|ally|s§oː§n§d§xʷ§‹§ɑː§ˈɾ§iː|
 sondxwer|swearer|s§oː§n§d§ˈxʷ§‹§ɛ§ɾ
 sone||
 sor||
