@@ -50,7 +50,7 @@ a dɔ ra||␣
 a dɔ rɔ||␣
 abada|forever|a§b§a§d§a
 abarika||␣
-abarka||␣
+abarka|thanks!|à§b§a§r§k§a|abarka
 adamadenya||␣
 adamaden||␣
 aderenalini||␣
