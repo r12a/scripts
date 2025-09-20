@@ -11,6 +11,7 @@
 <script src="../common29/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
+<script src="../apps/ipa_analyser/propertylist.js"></script>
 
 <script src="../../shared/scriptdb/latn-wo.js"> </script>
 <script src="wo-details.html"> </script>
@@ -60,7 +61,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->2 May, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->20 September, 2025<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -83,7 +84,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Wolof (Latin) Orthography Notes, <!-- #BeginDate format:En2 -->02-May-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/latn/wo">https://r12a.github.io/scripts/latn/wo</a></small></p>
+<p class="refLine"><small>Richard Ishida, Wolof (Latin) Orthography Notes, <!-- #BeginDate format:En2 -->20-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/latn/wo">https://r12a.github.io/scripts/latn/wo</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -611,11 +612,6 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <h4>Nasalisation</h4>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 </section>
-
-<section id="novowel">
-<h4>Vowel absence</h4>
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
 </details></aside>
 
 
@@ -625,18 +621,83 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<!--section id="basicV">
+<section id="basicV">
 <h3>Vowel summary table</h3>
 
 
-<p>The following table summarises the main vowel to character assigments.</p>
+<p>This table summarises only basic vowel to character assignments. Click on the phonetic transcriptions for more detail.</p>
 
-<p class="instructions highlight">ⓘ represents the inherent vowel. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here).</p>
-</section-->
+<!--<p class="instructions highlight">Lowercase on the left, uppercase to the right.</p>-->
+
+<p class="caseHeading">Lowercase</p>
+
+<table class="soundSummary">
+<tbody>
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="i,iː,,u,uː">i␣ii␣ ␣u␣uu</figure></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="e,eː,eː,,o,oː,oː">é␣ée␣éé␣ ␣ó␣óo␣óó</figure></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ə,əː">ë␣ëë</figure></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ɛ,ɛː,,ɔ,ɔː">e␣ee␣ ␣o␣oo</figure></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="a,aː">a␣aa</figure></td>
+</tr>
+</tbody></table>
 
 
 
-<div id="basicV"></div>
+<details>
+<summary class="caseHeading">Show uppercase</summary>
+<table class="soundSummary">
+<tbody>
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="i,iː,,u,uː">I␣Ii␣ ␣U␣Uu</figure></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="e,eː,eː,,o,oː,oː">É␣Ée␣Éé␣ ␣Ó␣Óo␣Óó</figure></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ə,əː">Ë␣Ëë</figure></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ɛ,ɛː,,ɔ,ɔː">E␣Ee␣ ␣O␣Oo</figure></td>
+</tr>
+
+<tr>
+<th>&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="a,aː">A␣Aa</figure></td>
+</tr>
+</tbody></table>
+</details>
+
+
+
+<p class="instructions">For additional details see <a class="secref">vowel_mappings</a>.</p>
+</section>
+
+
 
 
 
@@ -756,7 +817,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <div id="mapv_high" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">i</span></div>
+<div class="phone"><span class="ipa" id="mapi">i</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">I</span></span>
@@ -766,7 +827,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">iː</span></div>
+<div class="phone"><span class="ipa" id="mapiː">iː</span></div>
 <div class="map_detail">
 <p class="map_row"><span class="posn">long vowel</span>
 <span class="ch">ii</span> <b></b></p>
@@ -774,7 +835,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">u</span></div>
+<div class="phone"><span class="ipa" id="mapu">u</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">U</span></span>
@@ -784,10 +845,10 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">uː</span></div>
+<div class="phone"><span class="ipa" id="mapuː">uː</span></div>
 <div class="map_detail">
 <p class="map_row"><span class="posn">vowel</span>
-<span class="ch">U</span> <b></b></p>
+<span class="ch">uu</span> <b></b></p>
 </div>
 </div>
 </div>
@@ -800,7 +861,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <div id="mapv_hmid" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">e</span></div>
+<div class="phone"><span class="ipa" id="mape">e</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">É</span></span>
@@ -810,7 +871,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">eː</span></div>
+<div class="phone"><span class="ipa" id="mapeː">eː</span></div>
 <div class="map_detail">
 <p class="map_row"><span class="posn">long vowel</span>
 <span class="ch">ée</span> <b></b></p>
@@ -821,7 +882,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">o</span></div>
+<div class="phone"><span class="ipa" id="mapo">o</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">Ó</span></span>
@@ -831,7 +892,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">oː</span></div>
+<div class="phone"><span class="ipa" id="mapoː">oː</span></div>
 <div class="map_detail">
 <p class="map_row"><span class="posn">vowel</span>
 <span class="ch">óo</span> <b></b></p>
@@ -851,7 +912,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <div id="mapv_mid" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ə</span></div>
+<div class="phone"><span class="ipa" id="mapə">ə</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">Ë</span></span>
@@ -861,7 +922,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">əː</span></div>
+<div class="phone"><span class="ipa" id="mapəː">əː</span></div>
 <div class="map_detail">
 <p class="map_row"><span class="posn">long vowel</span>
 <span class="ch">ëë</span> <b></b></p>
@@ -879,7 +940,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <div id="mapv_lmid" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ɛ</span></div>
+<div class="phone"><span class="ipa" id="mapɛ">ɛ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">E</span></span>
@@ -889,7 +950,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ɛː</span></div>
+<div class="phone"><span class="ipa" id="mapɛː">ɛː</span></div>
 <div class="map_detail">
 <p class="map_row"><span class="posn">long vowel</span>
 <span class="ch">ee</span> <b></b></p>
@@ -897,7 +958,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ɔ</span></div>
+<div class="phone"><span class="ipa" id="mapɔ">ɔ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">O</span></span>
@@ -907,7 +968,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ɔː</span></div>
+<div class="phone"><span class="ipa" id="mapɔː">ɔː</span></div>
 <div class="map_detail">
 <p class="map_row"><span class="posn">long vowel</span>
 <span class="ch">oo</span> <b></b></p>
@@ -922,7 +983,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <div id="mapv_low" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">a</span></div>
+<div class="phone"><span class="ipa" id="mapa">a</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">A</span></span>
@@ -932,7 +993,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">aː</span></div>
+<div class="phone"><span class="ipa" id="mapaː">aː</span></div>
 <div class="map_detail">
 <p class="map_row"><span class="posn">long vowel</span>
 <span class="ch">aa</span> <b></b></p>
@@ -948,6 +1009,38 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </section>
 
 
+
+
+
+
+
+
+
+
+
+
+<section id="novowel">
+<h2>Vowel absence</h2>
+
+
+<p>Since this is an alphabet, the absence of vowel sounds in consonant clusters or after codas is marked simply by an absence of vowel letters. There is no special shaping or mark to indicate a consonant cluster. Examples:</p>
+
+<p><span class="eg" lang="wo">ferñent</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="f,ɛ,r,ɲ,ɛ,n,t"
+    data-type="ipa,ipa,ipa,ipa,ipa,ipa,ipa"
+    data-prefix=",+,+,+,+,+,+"
+    ><td>f␣e␣r␣ñ␣e␣n␣t</td></tr>
+</table>
+
+<p><span class="eg" lang="wo">gaynde</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="ɡ,a,j,ⁿd,e"
+    data-type="ipa,ipa,ipa,ipa,ipa,ipa"
+    data-prefix=",+,+,+,+,+"
+    ><td>g␣a␣y␣nd␣e</td></tr>
+</table>
+</section>
 
 
 
@@ -1012,12 +1105,74 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<!--section id="consonantSummary">
-<h4>Consonant summary table</h4>
 
-<p>The following table summarises the main consonant to character assigments.</p>
 
-<p class="instructions highlight">The left column is lowercase, and the right uppercase.</p-->
+
+
+<section id="consonantSummary">
+<h3>Consonant summary table</h3>
+
+<p>This table summarises only basic consonant to character assignments. Click on the phonetic transcriptions for more detail.</p>
+
+<p class="instructions highlight">The right column shows letters used in loan words and foreign pronunciations (especially Arabic), but not usually used for native Fula text.</p>
+
+
+<p class="caseHeading">Lowercase</p>
+<table class="soundSummary">
+<tbody>
+<tr>
+<th rowspan="5">&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="p,b,t,d,c,ɟ,k,ɡ,q">p␣b␣t␣d␣c␣j␣k␣g␣q</figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ᵐb,ⁿd,ᶮɟ,ᵑɡ">mb␣nd␣nj␣ng</figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="f~ɸ,s,z,x,χ">f␣s␣z␣x␣x</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="m,n,ɲ,ŋ">m␣n␣ñ␣ŋ</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="w,r,l,j">w␣r␣l␣y</figure></td>
+</tr>
+</tbody>
+</table>
+
+
+
+<details>
+<summary class="caseHeading">Show uppercase</summary>
+<table class="soundSummary">
+<tbody>
+<tr>
+<th rowspan="5">&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ipa="p,b,t,d,c,ɟ,k,ɡ,q">P␣B␣T␣D␣C␣J␣K␣G␣Q</figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ᵐb,ⁿd,ᶮɟ,ᵑɡ">Mb␣Nd␣Nj␣Ng</figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="f~ɸ,s,z,x,χ">F␣S␣Z␣X␣X</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="m,n,ɲ,ŋ">M␣N␣Ñ␣Ŋ</figure></td>
+</tr>
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="w,r,l,j">W␣R␣L␣Y</figure></td>
+</tr>
+</tbody>
+</table>
+</details>
+
+
+
+<p class="instructions">For additional details see <a class="secref">consonant_mappings</a>.</p>
+</section>
 
 
 
@@ -1122,7 +1277,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 <div id="map_plosives" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">p</span></div>
+<div class="phone"><span class="ipa" id="mapp">p</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">P</span></span>
@@ -1132,7 +1287,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">b</span></div>
+<div class="phone"><span class="ipa" id="mapb">b</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">B</span></span>
@@ -1142,7 +1297,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ᵐb</span></div>
+<div class="phone"><span class="ipa" id="mapᵐb">ᵐb</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">MB</span></span>
@@ -1152,7 +1307,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">t</span></div>
+<div class="phone"><span class="ipa" id="mapt">t</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">T</span></span>
@@ -1162,7 +1317,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">d</span></div>
+<div class="phone"><span class="ipa" id="mapd">d</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">D</span></span>
@@ -1172,7 +1327,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ⁿd</span></div>
+<div class="phone"><span class="ipa" id="mapⁿd">ⁿd</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">ND</span></span>
@@ -1182,7 +1337,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">c</span></div>
+<div class="phone"><span class="ipa" id="mapc">c</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">C</span></span>
@@ -1192,7 +1347,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ɟ</span></div>
+<div class="phone"><span class="ipa" id="mapɟ">ɟ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">J</span></span>
@@ -1202,7 +1357,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ᶮɟ</span></div>
+<div class="phone"><span class="ipa" id="mapᶮɟ">ᶮɟ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">NJ</span></span>
@@ -1212,7 +1367,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">k</span></div>
+<div class="phone"><span class="ipa" id="mapk">k</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">K</span></span>
@@ -1222,7 +1377,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ɡ</span></div>
+<div class="phone"><span class="ipa" id="mapɡ">ɡ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">G</span></span>
@@ -1232,7 +1387,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ᵑɡ</span></div>
+<div class="phone"><span class="ipa" id="mapᵑɡ">ᵑɡ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">NG</span></span>
@@ -1242,7 +1397,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">q</span></div>
+<div class="phone"><span class="ipa" id="mapq">q</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">Q</span></span>
@@ -1252,7 +1407,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ʔ</span></div>
+<div class="phone"><span class="ipa" id="mapʔ">ʔ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="posn">consonant</span>
@@ -1272,7 +1427,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 <div id="map_fricatives" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">f ɸ</span></div>
+<div class="phone"><span class="ipa" id="mapf~ɸ">f~ɸ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">F</span></span>
@@ -1282,7 +1437,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">s</span></div>
+<div class="phone"><span class="ipa" id="maps">s</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">S</span></span>
@@ -1292,7 +1447,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem uncommon">
-<div class="phone"><span class="ipa">z</span></div>
+<div class="phone"><span class="ipa" id="mapz">z</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">Z</span></span>
@@ -1302,7 +1457,17 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">x χ</span></div>
+<div class="phone"><span class="ipa" id="mapx">x</span></div>
+<div class="map_detail">
+<p class="map_row">
+<span class="shaping" lang="wo"><span class="ch noname">X</span></span>
+<span class="posn">consonant</span>
+<span class="ch">x</span> <b></b></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa" id="mapχ">χ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">X</span></span>
@@ -1321,7 +1486,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 <div id="map_nasals" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">m</span></div>
+<div class="phone"><span class="ipa" id="mapm">m</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">M</span></span>
@@ -1331,7 +1496,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">n</span></div>
+<div class="phone"><span class="ipa" id="mapn">n</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">N</span></span>
@@ -1341,7 +1506,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ɲ</span></div>
+<div class="phone"><span class="ipa" id="mapɲ">ɲ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">Ñ</span></span>
@@ -1351,7 +1516,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">ŋ</span></div>
+<div class="phone"><span class="ipa" id="mapŋ">ŋ</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">Ŋ</span></span>
@@ -1369,7 +1534,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 <div id="map_other" class="map">
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">w</span></div>
+<div class="phone"><span class="ipa" id="mapw">w</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">W</span></span>
@@ -1379,7 +1544,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">r</span></div>
+<div class="phone"><span class="ipa" id="mapr">r</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">R</span></span>
@@ -1389,7 +1554,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">l</span></div>
+<div class="phone"><span class="ipa" id="mapl">l</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">L</span></span>
@@ -1399,7 +1564,7 @@ data-ipa="p,b,t,d,c,ɟ -c,k,ɡ -k,q,f,s,x,m,n,ɲ,ŋ,w,r,l,j"
 </div>
 
 <div class="mapItem">
-<div class="phone"><span class="ipa">j</span></div>
+<div class="phone"><span class="ipa" id="mapj">j</span></div>
 <div class="map_detail">
 <p class="map_row">
 <span class="shaping" lang="wo"><span class="ch noname">Y</span></span>
