@@ -41,7 +41,7 @@ autoExpandExamples.aii = `
 ܐܒܘ ܛܒܝܐ||␣||
 ܐܒܘ||␣||
 ܐܒܝܫܐ||␣||
-ܐܒܪܗܡ||␣||
+ܐܲܒ݂ܪܵܗܵܡ|Abraham|ʔa§v.§rɑ§ˈhɑ§m|aḇrāhām|ܐܒܪܗܡ|ܐܒܪܗܡ
 ܐܒܪܡ||␣||
 ܐܓܘܣܛܘܣ||␣||
 ܐܓܪܐ||␣||
@@ -2422,7 +2422,7 @@ autoExpandExamples.aii = `
 ܡܬܬܚܝܒܢܐ||␣||
 ܡܲܐܟ݂ܸܠ|to feed|ma§ʔ.§xə§l|māʾḳil|ܡܐܟܠ|Urm:maːxəl|ܡܐܟܠ
 ܡܲܕܒ̄ܚܵܐ|altar|ma§ð§bᵊ§ħɑ§–|maḏbəḥā|ܡܕܒܚܐ||ܡܕܒܚܐ
-ܡܲܕܢ̱ܚܵܐ|East|ma.§də§n.§xɑː§–|mādnḳa|ܡܕܢܚܐ||ܡܕܢܚܐ
+ܡܲܕ݂ܢ̱ܚܵܐ|east|ma§ð.§nə§xɑː§–|maḏnḥā|ܡܕܢܚܐ||ܡܕܢܚܐ
 ܡܲܘܕܹܐ|to admit|moː§‹§deː§–|mawdē|ܡܘܕܐ||ܡܘܕܐ
 ܡܲܘܡܼܬܵܐ|oath|ma§w§mɑ§θɑ§(ʔ)||ܡܘܡܬܐ|was mo§‹§mi§tɑ§–|ܡܘܡܬܐ
 ܡܲܟܬܵܒ݂ܬܵܐ|desk|ma§k.§toː§‹§tɑ§–|māktawta|ܡܟܬܒܬܐ|Urm:mat͡ʃ.tɑvːtɑ; Nin:mak.θɑwːθɑ|ܡܟܬܒܬܐ
@@ -2540,7 +2540,7 @@ autoExpandExamples.aii = `
 ܢܬܪ||␣||
 ܢܵܫܹܐ|to forget|naː§ʃe§–|naše|ܢܫܐ||ܢܫܐ
 ܢܵܬܵܐ|ear|ˈnä.§tʰä§–|nātā|ܢܬܐ||ܢܬܐ
-ܢܸܫܡ̱ܬܵܐ|breath, spirit|nᵊ§ʃa§mᵊ§θɑ§–||ܢܫܡܬܐ|was niʃmmtɑ|ܢܫܡܬܐ
+ܢܸܫܡ̱ܬܵܐ|breath, spirit|nə§ʃa§mᵊ§θɑː§–||ܢܫܡܬܐ|was niʃmmtɑ|ܢܫܡܬܐ
 ܣܐܘ ܬܘܡܐ ܘܦܪܝܢܣܝܦܐ||␣||
 ܣܐܡ ܐܝܕܐ||␣||
 ܣܐܡ ܒܠܐ||␣||
@@ -2956,7 +2956,7 @@ autoExpandExamples.aii = `
 ܦܪܫܬܐ||␣||
 ܦܪܬ||␣||
 ܦܪܬܘܟ|bullrush, reed||pirtūk|ܦܪܬܘܟ||ܦܪܬܘܟ
-ܦܪܲܢܓܝܼܵܐ|France|p§rā§n§ɡ§ja§–|prāngya|ܦܪܢܓܝܐ||ܦܪܢܓܝܐ
+ܦܪܲܢܓܝܼܵܐ|France|ˈp§ra§ŋ.§ɡə§jɑː§–|prāngya|ܦܪܢܓܝܐ||ܦܪܢܓܝܐ
 ܦܪܲܢܓܵܝܵܐ|French|p§rā§n§ɡa§ja§–|prāngya|ܦܪܢܓܝܐ||ܦܪܢܓܝܐ
 ܦܪܵܣܚܸܙܘܵܐ|television|p§ra§s.§xə§zz§wa§–|prasḳizwa|ܦܪܣܚܙܘܐ|Urm:pras.xəzːva; Nin:pras.ħəzːwa|ܦܪܣܚܙܘܐ
 ܦܪܵܣܡܲܠܵܠܵܐ|pager, walkie-talkie|p§rɑ§ss§ma§l.lɑː§lɑ§–|prasmālala|ܦܪܣܡܠܠܐ||ܦܪܣܡܠܠܐ
