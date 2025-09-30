@@ -556,7 +556,8 @@ function showCharDetailsInPanel (evt) {
 
     // get the insertion point
     if (evt.target.closest('figure')) insertPoint = evt.target.closest('figure')
-    else insertPoint = evt.target.closest('p, table, div, li')
+    else if (evt.target.closest('table')) insertPoint = evt.target.closest('table')
+    else insertPoint = evt.target.closest('p, div, li')
 
 
 	// find the language
