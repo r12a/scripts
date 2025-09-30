@@ -22,7 +22,7 @@ autoExpandExamples.ja = `
 
 すべて|everything|su§be§te
 人間|human|nin§gen
-日本語|Japanese (lang)|ni§hoŋ§go
+日本語|Japanese language|ni§hoŋ§go|
 テキスト|text|te§kⁱ§s§t
 です|to be (existential)|de§s
 集まります|to collect|atsu§ma§ri§ma§s

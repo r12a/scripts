@@ -16,6 +16,8 @@ access = {
 
 function addPageFeatures () {
      //console.log('Globals(','blockDirectoryName:',window.blockDirectoryName, 'langTag:',window.langTag, 'scriptSummaryTableName:',window.scriptSummaryTableName, 'orthogFilePath:',window.orthogFilePath,')')
+     
+     addUsageHistory()
 
     //set accessibility defaults
     if (localStorage['docsAccess']) access = JSON.parse(localStorage['docsAccess']) 
@@ -44,7 +46,7 @@ function addPageFeatures () {
 
     expandCharMarkup() // Expand spans with ch classes to full character markup
     
-    addExamples(langTag)  // Convert all .eg items to full markup. (egcode.js)
+    //addExamples(langTag)  // Convert all .eg items to full markup. (egcode.js)
     
     initialiseShowNames(document, blockDirectoryName, '') // Add onclick function to all .ex elements to display in panel
 
@@ -52,12 +54,14 @@ function addPageFeatures () {
     // create translit data in autoTranslitArray
     makeAutoTranslitArray (langTag)
 
-console.log('scriptSummaryTableName',scriptSummaryTableName)
+    console.log('scriptSummaryTableName',scriptSummaryTableName)
     initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath)
     //autoTransliterate(langTag)
     checkParameters()
     
-    
+        
+    addExamples(langTag)  // Convert all .eg items to full markup. (egcode.js)
+
     // autogenerate the index
     makeIndexObject()
     makeMarkupForSection('index_letters')
@@ -121,6 +125,42 @@ console.log('scriptSummaryTableName',scriptSummaryTableName)
 
 
 
+
+function addUsageHistory () {
+    out = ''
+        
+   if (typeof summaryExists !== 'undefined') {
+        // Make the origin side panel
+        out += `<p style="margin-block-end:1.5em;">Origins of the ${ scriptInfo.script } script, ${ scriptInfo.dates }.</p>`
+        lineageArray = scriptInfo.lineage.trim().split('>')
+        lineageText = ''
+        if (lineageArray.length > 0) {
+            for (i=0;i<lineageArray.length;i++) {
+                lineageText += `<p style="`
+                if (i == lineageArray.length-1 && lineageArray.length > 1) lineageText += `font-weight:bold; `
+                if (i>0) lineageText += `margin-inline-start:${ i }em;">\u2514 `
+                else lineageText += `">`
+                lineageText += lineageArray[i]
+                lineageText += `</p>`
+                }
+            out += lineageText
+            }
+        siblingsArray = scriptInfo.siblings.trim().split(',')
+        siblingsText = ''
+        if (siblingsArray.length > 0 && siblingsArray[0] !== '') {
+            for (s=0;s<siblingsArray.length;s++) {
+                siblingsText += `<p style="margin-inline-start:${ i }em;">+ `
+                siblingsText += siblingsArray[s]
+                siblingsText += `</p>`
+                }
+            out += siblingsText
+            }
+
+        
+        
+        document.getElementById('ancestry').innerHTML = out
+        }
+    }
 
 
 
@@ -1321,15 +1361,22 @@ function makeSidePanel () {
 <!-- ----------------------------------------------------------------------------- --> 
 <!-- NEW STUFF -->
 
-
+    
         
     else {  // this is a script-based summary
-        out = '<table>'
+    
+        out = ''
+         console.log("LANGS",langs.langTag)
+        // Create the script name    
+        if (typeof summaryExists !== 'undefined') out += `<p style="margin-inline:2rem; text-align: start; margin-block-end:2rem;"><span class="eg inline" lang="${ langTag }">${ langs[oid].local }</span></p>`
+
+        out += '<table>'
         out += '<tbody id="featureTableBody">'
         out += `<tr><th>Script code</th><td>${ sid }</td></tr>`
         out += `<tr><th>Language code</th><td>${ oid }</td></tr>`
 
-        scriptType = langs[sid].type
+        if (typeof summaryExists !== 'undefined') scriptType = scriptInfo[sid].type
+        else scriptType = langs[sid].type
         scriptType = scriptType.replace(/alpha/,'alphabet')
         scriptType = scriptType.replace(/abug/,'abugida')
         scriptType = scriptType.replace(/abjad/,'abjad')
@@ -1346,7 +1393,7 @@ function makeSidePanel () {
         
         out += '<tr><th>Script type</th><td class="tableHighlight">'+scriptType+'</td></tr>'
 	
-        out += '<tr><th>Origin</th><td>'+langs[sid].region+'</td></tr>'
+        out += '<tr><th>Origin</th><td>'+scriptInfo[sid].region+'</td></tr>'
 
         out += '<tr><th>Native speakers</th><td>'+parseInt(langs[oid].speakers.replace(/~/g,'')).toLocaleString()+'</td></tr>'
 
@@ -1388,7 +1435,7 @@ function makeSidePanel () {
 
         out += '<tr><th>Possible other</th><td>'+aux+'</td></tr>'
 
-        out += `<tr><th>Unicode blocks</th><td>${ langs[sid].blocks }</td></tr>`
+        out += `<tr><th>Unicode blocks</th><td>${ scriptInfo[sid].blocks }</td></tr>`
 
 
 
@@ -1403,52 +1450,52 @@ function makeSidePanel () {
         //out += '<tr><th>Script code</th><td>'+langs[id].script+'</td></tr>'
 
         out += '<tr><th>Text direction</th><td'
-        if (langs[sid].direction !== "ltr") out += ' class="tableHighlight"'
-        out += `>${ langs[sid].direction }`
-        if (langs[sid].rtlnumbers) out += ` \u2014 including <br> numbers`
+        if (scriptInfo[sid].direction !== "ltr") out += ' class="tableHighlight"'
+        out += `>${ scriptInfo[sid].direction }`
+        if (scriptInfo[sid].rtlnumbers) out += ` \u2014 including <br> numbers`
         out += `</td></tr>`
 
 
-        /*if (langs[sid].direction !== "ltr") out += ' class="tableHighlight">'
-        out += `${ langs[sid].direction }`
-        out += `>${ langs[sid].direction }</td></tr>`
+        /*if (scriptInfo[sid].direction !== "ltr") out += ' class="tableHighlight">'
+        out += `${ scriptInfo[sid].direction }`
+        out += `>${ scriptInfo[sid].direction }</td></tr>`
         out += `</td></tr>`*/
 
 
-        if (langs[sid].voweltype) {
+        if (scriptInfo[sid].voweltype) {
             out += '<tr><th>Post-consonant vowels</th><td class="tableHighlight">'
             
-            if (langs[sid].voweltype.inherent !== 0) {
-                if (langs[sid].voweltype.inherent === 1) out += `1 inherent vowel<br>`
-                else out += `${ langs[sid].voweltype.inherent } inherent vowels<br>`
+            if (scriptInfo[sid].voweltype.inherent !== 0) {
+                if (scriptInfo[sid].voweltype.inherent === 1) out += `1 inherent vowel<br>`
+                else out += `${ scriptInfo[sid].voweltype.inherent } inherent vowels<br>`
                 }
             
-            if (langs[sid].voweltype.letters) out += `letters<br>`
+            if (scriptInfo[sid].voweltype.letters) out += `letters<br>`
             
-            if (langs[sid].voweltype.marks) out += `marks<br>`
+            if (scriptInfo[sid].voweltype.marks) out += `marks<br>`
             
-            if (langs[sid].voweltype.hidden) out += `hides vowels<br>`
+            if (scriptInfo[sid].voweltype.hidden) out += `hides vowels<br>`
             
-            if (langs[sid].voweltype.vocalics) out += `vocalics<br>`
+            if (scriptInfo[sid].voweltype.vocalics) out += `vocalics<br>`
             
-            if (langs[sid].voweltype.vcomposite) out += `composite vowels<br>`
+            if (scriptInfo[sid].voweltype.vcomposite) out += `composite vowels<br>`
              
-            if (langs[sid].voweltype.prebase) out += `pre-base marks<br>`
+            if (scriptInfo[sid].voweltype.prebase) out += `pre-base marks<br>`
             
-            if (langs[sid].voweltype.visorder) out += `pre-base letters<br>`
+            if (scriptInfo[sid].voweltype.visorder) out += `pre-base letters<br>`
             
-            if (langs[sid].voweltype.circum) out += `circumgraphs<br>`
+            if (scriptInfo[sid].voweltype.circum) out += `circumgraphs<br>`
 
             out += '</td></tr>'
             }
 
 
-        if (langs[sid].voweltype) {
+        if (scriptInfo[sid].voweltype) {
             out += '<tr><th>Standalone vowels</th><td class="tableHighlight">'
             
-            if (langs[sid].voweltype.ivowels) out += `letters<br>`
+            if (scriptInfo[sid].voweltype.ivowels) out += `letters<br>`
             
-            if (langs[sid].voweltype.vbase) out += `carrier ${ langs[sid].voweltype.vbase }<br>`
+            if (scriptInfo[sid].voweltype.vbase) out += `carrier ${ scriptInfo[sid].voweltype.vbase }<br>`
 
             out += '</td></tr>'
             }
@@ -1456,77 +1503,77 @@ function makeSidePanel () {
 
         
         out += '<tr><th>Case distinction</th><td'
-        if (langs[sid].case) out += ' class="tableHighlight"'
+        if (scriptInfo[sid].case) out += ' class="tableHighlight"'
         out += '>'
-        out += langs[sid].case ? 'yes' : 'no'
+        out += scriptInfo[sid].case ? 'yes' : 'no'
         out += '</td></tr>'
         
         out += '<tr><th>Cursive script</th><td'
-        if (langs[sid].cursive) out += ' class="tableHighlight"'
+        if (scriptInfo[sid].cursive) out += ' class="tableHighlight"'
         out += '>'
-        out += langs[sid].cursive ? 'yes' : 'no'
+        out += scriptInfo[sid].cursive ? 'yes' : 'no'
         out += '</td></tr>'
 
         out += '<tr><th>Combining  marks</th><td'
-        if (langs[sid].mcchars) out += ' class="tableHighlight"'
+        if (scriptInfo[sid].mcchars) out += ' class="tableHighlight"'
         out += '>'
-        if (langs[sid].mcchars === true) out += 'yes'
-        else if (langs[sid].mcchars === 'm') out += '>1 per base'
+        if (scriptInfo[sid].mcchars === true) out += 'yes'
+        else if (scriptInfo[sid].mcchars === 'm') out += '>1 per base'
         else out += 'no'
-        //out += langs[sid].mcchars ? 'yes' : 'no'
+        //out += scriptInfo[sid].mcchars ? 'yes' : 'no'
         out += '</td></tr>'
 
         out += '<tr><th>Clusters marked</th><td'
-        if (langs[sid].conjuncts) out += ' class="tableHighlight"'
+        if (scriptInfo[sid].conjuncts) out += ' class="tableHighlight"'
         out += '>'
-        out += langs[sid].conjuncts ? 'yes' : 'no'
+        out += scriptInfo[sid].conjuncts ? 'yes' : 'no'
         out += '</td></tr>'
 
 
-        if (langs[sid].medials !== '') {
+        if (scriptInfo[sid].medials !== '') {
             out += '<tr><th>Dedicated medials</th><td class="tableHighlight">'
             
-            if (langs[sid].medials.includes('cm')) out += `marks<br>`  
+            if (scriptInfo[sid].medials.includes('cm')) out += `marks<br>`  
             
-            if (langs[sid].medials.includes('let')) out += `letters<br>`
+            if (scriptInfo[sid].medials.includes('let')) out += `letters<br>`
             
-            if (langs[sid].medials.includes('sj')) out += `uses subjoined chars<br>`
+            if (scriptInfo[sid].medials.includes('sj')) out += `uses subjoined chars<br>`
 
             out += '</td></tr>'
             }
 
-        if (langs[sid].finals !== '') {
+        if (scriptInfo[sid].finals !== '') {
             out += '<tr><th>Dedicated finals</th><td class="tableHighlight">'
             
-            if (langs[sid].finals.includes('cm')) out += `marks<br>`  
+            if (scriptInfo[sid].finals.includes('cm')) out += `marks<br>`  
             
-            if (langs[sid].finals.includes('let')) out += `letters<br>`
+            if (scriptInfo[sid].finals.includes('let')) out += `letters<br>`
             
-            if (langs[sid].finals.includes('vk')) out += `vowel killer<br>`
+            if (scriptInfo[sid].finals.includes('vk')) out += `vowel killer<br>`
             
-            if (langs[sid].finals.includes('ss')) out += `superscripts<br>`
+            if (scriptInfo[sid].finals.includes('ss')) out += `superscripts<br>`
 
             out += '</td></tr>'
             }
 
-        if (langs[sid].conjuncts !== false) {
+        if (scriptInfo[sid].conjuncts !== false) {
             out += '<tr><th>Consonant<br>Clusters</th><td class="tableHighlight">'
             
-            if (langs[sid].clusters.ligation) out += `ligated glyphs<br>`
+            if (scriptInfo[sid].clusters.ligation) out += `ligated glyphs<br>`
             
-            if (langs[sid].clusters.stacks) out += `stacks<br>`
+            if (scriptInfo[sid].clusters.stacks) out += `stacks<br>`
             
-            if (langs[sid].clusters.touch) out += `touching glyphs<br>`
+            if (scriptInfo[sid].clusters.touch) out += `touching glyphs<br>`
             
-            if (langs[sid].clusters.conjoined) out += `conjoined glyphs<br>`
+            if (scriptInfo[sid].clusters.conjoined) out += `conjoined glyphs<br>`
             
-            if (langs[sid].clusters.subjoinedcp) out += `subjoined cps<br>`
+            if (scriptInfo[sid].clusters.subjoinedcp) out += `subjoined cps<br>`
             
-            if (langs[sid].clusters.visviram) out += `visual killer<br>`
+            if (scriptInfo[sid].clusters.visviram) out += `visual killer<br>`
              
-            if (langs[sid].clusters.diacritic) out += `diacritics<br>`
+            if (scriptInfo[sid].clusters.diacritic) out += `diacritics<br>`
             
-            if (langs[sid].clusters.killer !== '') out += `killer type: ${ langs[sid].clusters.killer }<br>`
+            if (scriptInfo[sid].clusters.killer !== '') out += `killer type: ${ scriptInfo[sid].clusters.killer }<br>`
 
             out += '</td></tr>'
             }
@@ -1534,96 +1581,96 @@ function makeSidePanel () {
 
 
         out += '<tr><th>Other ligatures</th><td'
-        if (langs[sid].ligs) out += ' class="tableHighlight"'
+        if (scriptInfo[sid].ligs) out += ' class="tableHighlight"'
         out += '>'
-        out += langs[sid].ligs ? 'yes' : 'no'
+        out += scriptInfo[sid].ligs ? 'yes' : 'no'
         out += '</td></tr>'
 
 
 
-        if (langs[sid].wordsep !== '') {
+        if (scriptInfo[sid].wordsep !== '') {
             out += '<tr><th>Word separator</th><td'
             
-            if (langs[sid].wordsep !== 'space') out += ` class="tableHighlight"`
+            if (scriptInfo[sid].wordsep !== 'space') out += ` class="tableHighlight"`
             out += '>'
             
-            if (langs[sid].wordsep.includes('space')) out += `space<br>`  
+            if (scriptInfo[sid].wordsep.includes('space')) out += `space<br>`  
             
-            if (langs[sid].wordsep.includes('ws')) out += `word space<br>`
+            if (scriptInfo[sid].wordsep.includes('ws')) out += `word space<br>`
             
-            if (langs[sid].wordsep.includes('no')) out += `no separation<br>`
+            if (scriptInfo[sid].wordsep.includes('no')) out += `no separation<br>`
             
-            if (langs[sid].wordsep.includes('syllables')) out += `space separates syllables<br>`
+            if (scriptInfo[sid].wordsep.includes('syllables')) out += `space separates syllables<br>`
             
-            if (langs[sid].wordsep.includes('sb')) out += `glyph separates syllables<br>`
+            if (scriptInfo[sid].wordsep.includes('sb')) out += `glyph separates syllables<br>`
 
             out += '</td></tr>'
             }
 
-        if (langs[sid].linebreak !== '') {
+        if (scriptInfo[sid].linebreak !== '') {
             out += '<tr><th>Wraps at</th><td'
             
-            if (langs[sid].linebreak !== 'word') out += ` class="tableHighlight"`
+            if (scriptInfo[sid].linebreak !== 'word') out += ` class="tableHighlight"`
             out += '>'
             
-            if (langs[sid].linebreak.includes('word')) out += `word<br>`  
+            if (scriptInfo[sid].linebreak.includes('word')) out += `word<br>`  
             
-            if (langs[sid].linebreak.includes('syllable')) out += `syllable<br>`
+            if (scriptInfo[sid].linebreak.includes('syllable')) out += `syllable<br>`
             
-            if (langs[sid].linebreak.includes('char')) out += `after any character<br>`
+            if (scriptInfo[sid].linebreak.includes('char')) out += `after any character<br>`
 
             out += '</td></tr>'
             }
 
 
-        if (langs[sid].hyphen !== '') {
-            out += `<tr><th>Hyphenation</th><td class="tableHighlight">${ langs[sid].hyphen }</td></tr>`
+        if (scriptInfo[sid].hyphen !== '') {
+            out += `<tr><th>Hyphenation</th><td class="tableHighlight">${ scriptInfo[sid].hyphen }</td></tr>`
             }
 
-        if (langs[sid].wordspan) {
+        if (scriptInfo[sid].wordspan) {
             out += `<tr><th>Conjuncts</th><td class="tableHighlight">span word boundaries</td></tr>`
             }
 
 
         out += '<tr><th>G Clusters OK?</th><td'
-        if (langs[sid].gc === false) out += ' class="tableHighlight"'
+        if (scriptInfo[sid].gc === false) out += ' class="tableHighlight"'
         out += '>'
-        out += langs[sid].gc ? 'yes' : 'no'
+        out += scriptInfo[sid].gc ? 'yes' : 'no'
         out += '</td></tr>'
 
 
-        if (langs[sid].justification !== '') {
+        if (scriptInfo[sid].justification !== '') {
             out += '<tr><th>Justification</th><td'
             
-            if (langs[sid].justification !== 'sp') out += ` class="tableHighlight"`
+            if (scriptInfo[sid].justification !== 'sp') out += ` class="tableHighlight"`
             out += '>'
             
-            if (langs[sid].justification.includes('sp')) out += `spaces<br>`  
+            if (scriptInfo[sid].justification.includes('sp')) out += `spaces<br>`  
             
-            if (langs[sid].justification.includes('ic')) out += `inter-character<br>`
+            if (scriptInfo[sid].justification.includes('ic')) out += `inter-character<br>`
             
-            if (langs[sid].justification.includes('ig')) out += `between graphemes<br>`
+            if (scriptInfo[sid].justification.includes('ig')) out += `between graphemes<br>`
             
-            if (langs[sid].justification.includes('str')) out += `baseline stretching<br>`  
+            if (scriptInfo[sid].justification.includes('str')) out += `baseline stretching<br>`  
             
-            if (langs[sid].justification.includes('sw')) out += `swashes<br>`
+            if (scriptInfo[sid].justification.includes('sw')) out += `swashes<br>`
             
-            if (langs[sid].justification.includes('pad')) out += `line-end padding<br>`
+            if (scriptInfo[sid].justification.includes('pad')) out += `line-end padding<br>`
             
-            if (langs[sid].justification.includes('none')) out += `none<br>`
+            if (scriptInfo[sid].justification.includes('none')) out += `none<br>`
             
-            if (langs[sid].justification === '?') out += `?`
+            if (scriptInfo[sid].justification === '?') out += `?`
 
             out += '</td></tr>'
             }
 
-        if (langs[sid].baseline !== '') {
+        if (scriptInfo[sid].baseline !== '') {
             out += '<tr><th>Baseline</th><td'
             
-            if (langs[sid].baseline !== 'romn') out += ` class="tableHighlight"`
+            if (scriptInfo[sid].baseline !== 'romn') out += ` class="tableHighlight"`
             out += '>'
 
-            out += `${ langs[sid].baseline }</td></tr>`
+            out += `${ scriptInfo[sid].baseline }</td></tr>`
            }
 	
 
@@ -3435,8 +3482,8 @@ function listSectionCharacters (section) {
     charElems = document.getElementById(section).querySelectorAll('.listItem')
     charList = ''
     for (i=0;i<charElems.length;i++) {
-        if (charElems[i].className === 'listItem' && ! charElems[i].closest('figure').classList.contains('noindex'))  charList += charElems[i].textContent
-        else if (charElems[i].closest('.codepoint') && charElems[i].closest('.codepoint').classList !== null && ! charElems[i].closest('.codepoint').classList.contains('noindex'))  charList += charElems[i].textContent
+        if (charElems[i].className === 'listItem' && ! charElems[i].closest('figure').classList.contains('nolist'))  charList += charElems[i].textContent
+        else if (charElems[i].closest('.codepoint') && charElems[i].closest('.codepoint').classList !== null && ! charElems[i].closest('.codepoint').classList.contains('nolist'))  charList += charElems[i].textContent
         }
     charList = charList.replace(/\u25CC/g,'')
     charList = charList.replace(/\u200D/g,'')

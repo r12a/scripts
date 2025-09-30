@@ -80,7 +80,8 @@ autoExpandExamples.bsq = `
 
 
 
-
+@ https://en.wikipedia.org/wiki/Bassa_Vah_alphabet
+𖫔𖫧𖫳𖫒𖫨𖫰𖫨𖫱 𖫣𖫧𖫱|Bassa Vah||ɓǎsɔ́ɔ̀ và
 
 
 

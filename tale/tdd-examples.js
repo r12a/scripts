@@ -157,7 +157,8 @@ autoExpandExamples.tdd = `
 
 
 
-
+@ https://en.wikipedia.org/wiki/Tai_Nuea_language
+ᥖᥭᥰ ᥢᥫᥴ|Tai Nüa|t§ɑi§˥˧.§§n§ə§˥|
 
 
 

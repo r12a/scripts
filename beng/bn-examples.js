@@ -7655,7 +7655,7 @@ autoExpandExamples.bn = `
 বাঙালী|Bengali (person)|bɑ§ŋɡɑ§liː
 গড়ান|to roll||gɔɽɑnô|
 
-
+বাংলা লিপি|Bengali script|ˈbʌŋ§lə§ §li§pi|
 
 
 

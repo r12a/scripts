@@ -99,6 +99,16 @@ reflist = {
 },
 
 
+"eth": {
+"authors": "Eberhard, David M., Gary F. Simons, and Charles D. Fennig (eds.)",
+"title":"Ethnologue: Languages of the World. Twenty-sixth edition",
+"sub": "Ahom",
+"retr": "Sep 2025",
+"publisher":"SIL International",
+"url":"https://www.ethnologue.com/language/syl/",
+"reviewed":true
+},
+
 
 
 

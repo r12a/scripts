@@ -1,10 +1,3 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
@@ -15,18 +8,9 @@ letter:"ߊߋߌߍߎߏߐߑߒߓߔߕߖߗߘߙߚߛߜߝߞߟߠߡߢߣߤߥߦߧߴߵߺ", mar
 orth:`[N’Ko] &nbsp; This is a written, rather than spoken, language. Used as a koiné by speakers of Maninka, Bambara, Dyula and related dialects. <a href="../scripts/nko" target="_blank">Details</a>`,
 linked:"nkoo/nqo", picker:"nko", font:"", 
 },
+// this is replicated in app-charuse/langs
 
 
-"nkoo": {name:"N’Ko", region:"afr", type:"alpha", 
-blocks:1, chars:62, bletter:36, bmark:10, bnumber:10, bpunctuation:3, bsymbol:3, bother:0, 
-direction:"rtl", rtlnumbers:Y,
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
-case:N, cursive:Y, mcchars:"m", conjuncts:N, ligs:N, 
-medials:"", finals:"",
-clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:Y, killer:""},
-wordsep:"space",
-linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp str", gc:Y, baseline:"romn", 
-},
 
 
 }

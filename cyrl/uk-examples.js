@@ -9995,6 +9995,11 @@ autoExpandExamples.uk = `
 
 
 
+
+@ 
+
+українська мова|Ukrainian language|ʊ§k§r§ɐ§ˈji§nʲ§sʲ§‹§k§ɐ§ §ˈm§ɔ§w§ɐ|
+
 `
 
 

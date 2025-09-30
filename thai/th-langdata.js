@@ -1,10 +1,3 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
@@ -15,17 +8,8 @@ letter:"กขคฆงจฉชซฌญฎฏฐฑฒณดตถทธนบ
 orth:`Thai. &nbsp; <a href="../scripts/thai/" target="_blank">Details</a>.`,
 linked:"thai/th", picker:"thai", font:"Noto Serif Thai", 
 },
+// this is replicated in app-charuse/langs
 
 
-"thai": {name:"Thai", region:"seasia", type:"abug", 
-blocks:1, chars:87, bletter:57, bmark:16, bnumber:10, bpunctuation:3, bsymbol:1, bother:0, 
-direction:"ltr", rtlnumbers:N,
-voweltype: { inherent:3, letters:Y, marks:Y, hidden:N, visorder:Y, vocalics:Y, ivowels:N, vbase:"O อ", vcomposite:Y, prebase:N, circum:N, },
-case:N, cursive:N, mcchars:"m", conjuncts:N, ligs:N, 
-medials:"", finals:"",
-clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
-wordsep:"no",
-linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
-},
 
 }

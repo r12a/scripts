@@ -1693,6 +1693,7 @@ shari'a|Sharia|ʃ§‹§a§r§i§ʔ§a|||Pular (Arab), #sariya#|x
 sariya|Sharia|ʃ§a§r§i§ʔ§a|||Pular (Arab)|x
 shukru|thanks|ʃ§‹§u§k§r§u|||Pular (Arab)|x
 
+Fula|Fula language|ˈfuːlə|
 
 
 @ https://www.academia.edu/14789815/Contrastive_Analysis_Fulfulde_and_English_Languages

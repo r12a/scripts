@@ -36,7 +36,7 @@ A ye à fɔ.|He said it.||||x
 A y’à fɔ.|He said it.||||x
 Ala||␣
 Bamakɔ||
-Bamanankan||
+Bamanankan|Bamanam language|b§a§m§a§n§ã§‹§k§ã§‹|
 Bamanan||
 Farafinna||
 Fulakan||

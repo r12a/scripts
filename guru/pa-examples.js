@@ -1353,7 +1353,7 @@ autoExpandExamples.pa = `
 ਪੰਜ ਪਿਆਰੇ||␣|
 ਪੰਜ|five|␣|pañj
 ਪੰਜਾਬ||␣
-ਪੰਜਾਬੀ||␣
+ਪੰਜਾਬੀ|Punjabi|pəɲ.§d͡ʒäː.§biː|pañjābī
 ਪੰਜਾਬੀਅਤ||␣|
 ਪੰਤ|feather||pant
 ਪੰਦਰਾਂ||

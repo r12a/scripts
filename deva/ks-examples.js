@@ -461,7 +461,7 @@ autoExpandExamples.ks = `
 
 
 
-
+देवनागरी|Devanagari|d̪eː§ʋ.§nɑː§ɡ.§ɾiː
 
 
 

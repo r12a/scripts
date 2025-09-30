@@ -157,6 +157,11 @@ autoExpandExamples.nnp = `
 𞋒𞋀𞋉𞋃𞋕 𞋈𞋀𞋜𞋐𞋜|Wancho script|w§a§n§t͡ʃ§ɔ§ §l§a§i§d͡ʒ§a
 
 
+@ https://en.wikipedia.org/wiki/Wancho_language
+
+𞋒𞋀𞋉𞋃𞋕|Wancho language|w§a§n§t͡ʃ§ɔ|
+
+
 
 
 

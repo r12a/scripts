@@ -2172,6 +2172,7 @@ babban dutse|mountain|
 hayaƙi|smoke|
 kuma|and|
 
+Harshe Hausa|Hausa language|h§á§ɽ.§ʃ§‹§è§ §h§á§u.§s§á|
 
 
 

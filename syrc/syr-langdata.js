@@ -1,10 +1,3 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
@@ -14,17 +7,7 @@ region:"wasia", countries:"Turkey, Iraq, Syria", script:"syrc", speakers:"0",
 letter:"ـܐܒܓܕܗܘܙܚܛܝܞܟܠܡܢܣܤܥܦܨܩܪܫܬ", mark:"̣̭̮݂̄̇̈݀݁", markaux:"̤̥̱݄݈̊݃݇݉݊", number:"", punctuation:"،؛؟܀܁܂܃܄܅܆܇܈܉܊", punctuationaux:"܋܌܍", symbol:"♰♱", other:"\u{061C}\u{070F}\u{200C}\u{200D}\u{200E}\u{200F}\u{202A}\u{202B}\u{202C}\u{2066}\u{2067}\u{2068}\u{2069}", aux:"[]«»ʼ̠̰̃͏​‑–—‘’“”…‹›⁠", 
 linked:"syrc/syr", picker:"syrc-syr", font:"", 
 },
+// this is replicated in app-charuse/langs
 
-
-"syrc": {name:"Classical Syriac", region:"wasia", type:"abjad", 
-blocks:2, chars:88, bletter:45, bmark:28, bnumber:0, bpunctuation:14, bsymbol:0, bother:1, 
-direction:"rtl", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
-case:N, cursive:Y, mcchars:"m", conjuncts:N, ligs:Y, 
-medials:"", finals:"",
-clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
-wordsep:"space",
-linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
-},
 
 }

@@ -1773,7 +1773,7 @@ autoExpandExamples.shn = `
 ၵႂ်ႈပွင်း||␣||
 ၵႂၢင်|deer|kwaːŋ˨˦|
 ၵႂၢင်ႈ|wide|kwaaŋ˧˧˨
-ၵႂၢမ်းတႆး||␣||
+ၵႂၢမ်းတႆး|Shan language|kwaːm˥.taj˥|kwáam tái|
 ၵႂၢၼ်း|smoke|kwaan˥
 ၵႂၢႆး|water buffalo|kwaːj˥|
 ၵႂႃႇ|to go

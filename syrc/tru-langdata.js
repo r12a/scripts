@@ -1,10 +1,3 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
@@ -18,18 +11,8 @@ ISO 15924 has a general script code for Syriac (syrc), and another (syrn) for th
 related:`Macrolanguage is Syriac [syr].`,
 linked:"syrc/tru", picker:"syrc-tru", font:"'Noto Sans Syriac Western'", 
 },
+// this is replicated in app-charuse/langs
 
-
-"syrj": {name:"Eastern Syriac", region:"wasia", type:"alpha", 
-blocks:2, chars:88, bletter:45, bmark:28, bnumber:0, bpunctuation:14, bsymbol:0, bother:1, 
-direction:"rtl", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"ʔ ܐ", vcomposite:N, prebase:N, circum:N, },
-case:N, cursive:Y, mcchars:"m", conjuncts:N, ligs:Y, 
-medials:"", finals:"",
-clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
-wordsep:"space",
-linebreak:"word", hyphen:"?", wordspan:N, justification:U, gc:Y, baseline:"romn", 
-},
 
 
 }

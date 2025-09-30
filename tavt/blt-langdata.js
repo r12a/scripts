@@ -1,10 +1,3 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
@@ -18,18 +11,8 @@ also:
 "blt-latn | latn | "],
 linked:"tavt/blt", picker:"tavt", font:"Noto Sans Tai Viet", 
 },
+// this is replicated in app-charuse/langs
 
-
-"tavt": {name:"Tai Viet", region:"seasia", type:"alpha", 
-blocks:1, chars:72, bletter:61, bmark:9, bnumber:0, bpunctuation:2, bsymbol:0, bother:0, 
-direction:"ltr", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:Y, hidden:N, visorder:Y, vocalics:N, ivowels:N, vbase:"O ꪮ ꪯ", vcomposite:Y, prebase:N, circum:N, },
-case:N, cursive:N, mcchars:Y, conjuncts:N, ligs:N, 
-medials:"", finals:"let",
-clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
-wordsep:"space",
-linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
-},
 
 
 }

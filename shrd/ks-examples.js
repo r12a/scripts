@@ -50,7 +50,7 @@ autoExpandExamples.ks = `
 𑆯𑇀𑆮𑆒𑆶𑆫|Venus (planet)|ʃ§ɔ§kʰu§r|śvakhura|श्वखुर شۆکُر
 𑆱𑆷𑆠𑇀𑆪𑇀|with (dative)||sụ̄t'|
 𑆱𑆿𑆫𑇀|Saturn|sɑw§r|saur|सौर
-𑆯𑆳𑆫𑆢𑆳|Sharada|ʃaːrɐdaː|śāradā|||x
+𑆯𑆳𑆫𑆢𑆳|Sharada|ʃaː§rɐ§daː|śāradā|||x
 
 
 

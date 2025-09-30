@@ -1,14 +1,7 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
-"ha": { name:"Hausa (boko)", local:"Harshen Hausa", localtrans:"", silcode:"hau", 
+"ha": { name:"Hausa (boko)", local:"Harshe Hausa", localtrans:"", silcode:"hau", 
 source:"cldr_ha,udhr_hau_NE,udhr_hau_NG", 
 region:"afr", countries:"Nigeria, Niger, Côte d'Ivoire, Benin, Chad, Sudan", script:"latn", speakers:"43928100", 
 letter:"ƁƊƘƙƳƴɓɗʼ", letteraux:"ÀÁÂÈÉÊÌÍÎÒÓÔÙÚÛàáâèéêìíîòóôùúû", mark:"", markaux:"̀́̂", number:"", punctuation:"‘’“”…", symbol:"", other:"", aux:"[]«»‑–—‰‹›", 
@@ -19,19 +12,8 @@ also:
 "ha-arab | arab | Not standardised. The used mostly by muslim communities. Typically written with Warsh forms in the Kano style."],
 linked:"latn/ha", picker:"latn-ha", font:"", 
 },
+// this is replicated in app-charuse/langs
 
-
-
-"latn": {name:"Latin", region:"afr", type:"alpha", 
-blocks:14, chars:1551, bletter:1427, bmark:0, bnumber:26, bpunctuation:53, bsymbol:41, bother:3, 
-direction:"ltr", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
-case:Y, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
-medials:"", finals:"",
-clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
-wordsep:"space",
-linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp", gc:Y, baseline:"romn", 
-},
 
 
 }

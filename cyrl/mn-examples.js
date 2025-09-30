@@ -5370,7 +5370,9 @@ Cүхбаатар|Sükhbaatar|s§ʊ§x§b§aː§‹§t§–§r
 
 
 
+@ https://en.wikipedia.org/wiki/Mongolian_language
 
+Монгол хэл|Mongolian language|ˈm§ɔ§ɴ§ɢ§ə§ɮ§ §x§i§ɮ|mongol khel
 
 
 

@@ -12166,7 +12166,7 @@ autoExpandExamples.th = `
 อักษรสาสน์||␣
 อักษรสาส์น||␣
 อักษรสูง||␣
-อักษรไทย|Thai script|ʔak̚˨˩ sɔːn˩˩˦ tʰaj˧ £££££ ʔà§k̚.§sɔ̌ː§n.§›§tʰaj§‹
+อักษรไทย|Thai script|ʔak̚˨˩ sɔːn˩˩˦ tʰaj˧|
 อักเสบ||␣
 อัคคี||␣|
 อัคคีภัย||␣|
@@ -16499,6 +16499,9 @@ autoExpandExamples.th = `
 สนง.ตปท.|Office of the Royal Thai Police|
 
 
+@ https://en.wikipedia.org/wiki/Thai_language
+
+ภาษาไทย|Thai language|pʰāːsǎːtʰāj|phasa thai
 
 
 

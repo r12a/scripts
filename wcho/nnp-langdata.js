@@ -1,10 +1,3 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
@@ -18,17 +11,8 @@ also:
 "nnp-latn | latn | Latin orthography."],
 linked:"wcho/nnp", picker:"wcho-nnp", font:"Noto Sans Wancho", 
 },
+// this is replicated in app-charuse/langs
 
 
-"wcho": {name:"Wancho", region:"sasia", type:"alpha", 
-blocks:1, chars:59, bletter:44, bmark:4, bnumber:10, bpunctuation:0, bsymbol:1, bother:0, 
-direction:"ltr", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
-case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
-medials:"let", finals:"",
-clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
-wordsep:"space",
-linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
-},
 
 }

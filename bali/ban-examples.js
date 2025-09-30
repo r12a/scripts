@@ -620,8 +620,9 @@ autoExpandExamples.ban = `
 
 
 
-
-
+@ https://en.wikipedia.org/wiki/Balinese_language
+ᬪᬵᬱᬩᬮᬶ|Balinese language|ˈbasə ˈbali|
+ᬩᬲᬩᬮᬶ|Balinese language|ˈbasə ˈbali|
 
 
 

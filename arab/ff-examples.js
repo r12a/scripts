@@ -191,6 +191,7 @@ autoExpandExamples.ff = `
 ڢُو|all||fuu
 
 
+ڢُلْڢُلْدٜ|Fulfulde language|fʊlfʊlde|
 
 
 

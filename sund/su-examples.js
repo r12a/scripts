@@ -520,9 +520,9 @@ autoExpandExamples.su = `
 
 
 
+@ https://en.wikipedia.org/wiki/Sundanese_language
 
-
-
+ᮘᮞ ᮞᮥᮔ᮪ᮓ|Sundanese language|ba§sa§ §sʊ§n§da|basa sunda
 
 
 

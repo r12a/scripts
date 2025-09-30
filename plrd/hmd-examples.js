@@ -44,6 +44,9 @@ autoExpandExamples.hmd = `
 
 
 
+@ https://en.wikipedia.org/wiki/Pollard_script
+
+𖽃𖽔𖾐 𖼄𖽑𖽻𖾐|A-Hmao||
 
 `
 

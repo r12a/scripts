@@ -5,7 +5,8 @@
 var linkDB = { 
 
 
-deva:{ script:"Devanagari", code:"Deva", name:"", type:"Abugida",
+deva:{
+script:"Devanagari", code:"Deva", name:"", type:"Abugida",
 origin:"South Asia",
 info:{ wikipedia:"Devanagari", omniglot:"devanagari" },
 charts: [ ["Devanagari", "0900"], ["Devanagari Extended", "A8E0"], ["Devanagari Extended-A", "11B00"], ["Vedic Extensions", "1CD0"] ],
@@ -27,7 +28,8 @@ layout: [
 },
 
 
-ahom:{ script:"Ahom", code:"Ahom", name:"", type:"Abugida",
+ahom:{ 
+script:"Ahom", code:"Ahom", name:"", type:"Abugida",
 origin:"South Asia",
 info:{ wikipedia:"Ahom_alphabet", omniglot:"ahom", endalpha:"ahom" },
 local: [ ], layout: [ ],
@@ -44,7 +46,8 @@ usedfor: "Ahom [aho]",
 },
 
 
-adlm:{ script:"Adlam", code:"Adlm", name:"", type:"Alphabet, cased, RTL",
+adlm:{ 
+script:"Adlam", code:"Adlm", name:"", type:"Alphabet, cased, RTL",
 origin:"Africa",
 info:{ wikipedia:"Adlam_script", omniglot:"adlam", endalpha:"adlam" },
 local: [ ], layout: [ ],
@@ -63,7 +66,8 @@ layout:[/*{ name:"Adlam Layout Requirements", url:"https://www.w3.org/TR/adlm-lr
 },
 
 
-arab:{ script:"Arabic", code:"Arab", name:"", type:"Abjad, RTL",
+arab:{ 
+script:"Arabic", code:"Arab", name:"", type:"Abjad, RTL",
 info:{ wikipedia:"Arabic_script", omniglot:"arabic" },
 local: [ { name:"Arabic Homographs", url:"arab/homographs" } ], 
 layout: [ 
@@ -88,7 +92,8 @@ usedfor: "Fulfulde, Adamawa [fub], Adyghe [ady], Arabic, Algerian [arq], Andaand
 },
 
 
-armn:{ script:"Armenian", code:"Armn", name:"", type:"alphabet, cased",
+armn:{
+script:"Armenian", code:"Armn", name:"", type:"alphabet, cased",
 origin:"Europe",
 info:{ wikipedia:"Armenian_script", omniglot:"armenian" },
 local: [ ], layout: [ ],
@@ -138,7 +143,8 @@ usedfor: "Ancient Greek [grc], Minoan [omn]",
 },
 
 
-cyrl:{ script:"Cyrillic", code:"Cyrl", name:"", type:"Alphabet, cased",
+cyrl:{
+script:"Cyrillic", code:"Cyrl", name:"", type:"Alphabet, cased",
 origin:"Europe",
 info:{ wikipedia:"Cyrillic_script", omniglot:"cyrillic" },
 charts: [ ["Cyrillic", "0400"], ["Cyrillic Supplement", "0500"], ["Cyrillic Extended-A", "2DE0"], ["Cyrillic Extended-B", "A640"], ["Cyrillic Extended-C", "1C80"], ["Cyrillic Extended-D", "1E030"] ],
@@ -185,7 +191,8 @@ usedfor: "Albanian [sq]",
 },
 
 
-geor:{ script:"Georgian", code:"Geor", name:"", type:"Alphabet",
+geor:{
+script:"Georgian", code:"Geor", name:"", type:"Alphabet",
 origin:"Europe",
 info:{ wikipedia:"Georgian_script", omniglot:"georgian" },
 charts: [ ["Georgian", "10A0"], ["Georgian Extended", "1C90"], ["Georgian Supplement", "2D00"] ],
@@ -238,7 +245,8 @@ usedfor: "Gothic [got]",
 },
 
 
-grek:{ script:"Greek", code:"Grek", name:"", type:"Alphabet, cased",
+grek:{
+script:"Greek", code:"Grek", name:"", type:"Alphabet, cased",
 origin:"Europe",
 info:{ wikipedia:"Greek_alphabet", omniglot:"greek" },
 charts: [ ["Greek and Coptic", "0370"], ["Greek Extended", "1F00"], ["Ancient Greek Numbers", "10140"] ],
@@ -259,7 +267,8 @@ layout: [
 },
 
 
-latn:{ script:"Latin", code:"Latn", name:"", type:"Alphabet, cased",
+latn:{
+script:"Latin", code:"Latn", name:"", type:"Alphabet, cased",
 dates:"BCE 7thC – today", start:"-700", end:"", current_usage:"",
 status:"",
 origin:"Europe",
@@ -419,7 +428,8 @@ usedfor: "English [en]",
 },
 
 
-bamu:{ script:"Bamum", code:"Bamu", name:"", type:"Syllabary",
+bamu:{
+script:"Bamum", code:"Bamu", name:"", type:"Syllabary",
 origin:"Africa",
 info:{ wikipedia:"Bamum_script", omniglot:"bamum", endalpha:"bamum" },
 local: [ ], layout: [ ],
@@ -438,7 +448,8 @@ layout: [
 },
 
 
-bass:{ script:"Bassa Vah", code:"Bass", name:"", type:"Alphabet",
+bass:{
+script:"Bassa Vah", code:"Bass", name:"", type:"Alphabet",
 origin:"Africa",
 info:{ wikipedia:"Bassa_Vah", omniglot:"bassa", endalpha:"bassa-vah" },
 local: [ ], layout: [ ],
@@ -487,7 +498,8 @@ usedfor: "Egyptian [egy]",
 
 
 
-ethi:{ script:"Ethiopic", code:"Ethi", name:"", type:"Featural syllabary",
+ethi:{
+script:"Ethiopic", code:"Ethi", name:"", type:"Featural syllabary",
 origin:"Africa",
 info:{ wikipedia:"Ge'ez_script", omniglot:"ethiopic" },
 charts: [ ["Ethiopic", "1200"], ["Ethiopic Supplement", "1380"], ["Ethiopic Extended", "2D80"], ["Ethiopic Extended-A", "AB00"], ["Ethiopic Extended-B", "1E7E0"] ],
@@ -525,7 +537,8 @@ usedfor: "Mende [men]",
 },
 
 
-merc:{ script:"Meroitic Cursive", code:"Merc", name:"", type:"Abugida",
+merc:{
+script:"Meroitic Cursive", code:"Merc", name:"", type:"Abugida",
 dates:"BCE 3rdC – 4thC CE", start:"-300", end:"400", current_usage:"",
 status:"",
 origin:"Africa",
@@ -561,7 +574,8 @@ usedfor: "Meroitic [xmr]",
 },
 
 
-nkoo:{ script:"N’Ko", code:"Nkoo", name:"", type:"Alphabet, RTL, Cursive",
+nkoo:{
+script:"N’Ko", code:"Nkoo", name:"", type:"Alphabet, RTL, Cursive",
 dates:"1949 – today", start:"1949", end:"", current_usage:"",
 status:"Used in Guinea and Côte d'Ivoire as well as Mali, for publications relating to indigenous knowledge, including descriptions of medical rituals, traditional poetry, and philosophical works, as well as textbooks and a transcription of the Qur'an.",
 origin:"Africa",
@@ -599,7 +613,8 @@ usedfor: "Somali [so]",
 },
 
 
-tfng:{ script:"Tifinagh", code:"Tfng", name:"", type:"Alphabet",
+tfng:{
+script:"Tifinagh", code:"Tfng", name:"", type:"Alphabet",
 dates:"BCE 3rdC – today", start:"-300", end:"", current_usage:"",
 status:"Used to write Berber languages spoken in North Africa. In Morocco, taught to approximately 300,000 pupils in 10,000 schools, mostly primary, and three Moroccan universities offer Berber courses in the Tifinagh script leading to a Master’s degree.",
 origin:"Africa",
@@ -618,7 +633,8 @@ usedfor: "Tamazight, Central Atlas [tzm], Kabyle [kab], Tamazight, Standard Moro
 },
 
 
-vaii:{ script:"Vai", code:"Vaii", name:"", type:"Syllabary",
+vaii:{
+script:"Vai", code:"Vaii", name:"", type:"Syllabary",
 dates:"1830 – today", start:"1830", end:"", current_usage:"",
 status:"Used for the Vai language, spoken in coastal areas of western Liberia and eastern Sierra  Leone. The Institute for Liberian Languages publishes in the script. It is also widely used in commerce, as well as for newspapers, tombstones and in traditional rituals.",
 origin:"Africa",
@@ -725,7 +741,8 @@ usedfor: "Uncoded languages [mis]",
 },
 
 
-hebr:{ script:"Hebrew", code:"Hebr", name:"", type:"Abjad, RTL",
+hebr:{
+script:"Hebrew", code:"Hebr", name:"", type:"Abjad, RTL",
 origin:"West Asia",
 info:{ wikipedia:"Hebrew_script", omniglot:"hebrew" },
 charts: [ ["Hebrew", "0590"], ["Alphabetic Presentation Forms", "FB00"] ],
@@ -778,7 +795,8 @@ usedfor: "Lydian [xld]",
 },
 
 
-mand:{ script:"Mandaic", code:"Mand", name:"", type:"Alphabet, RTL",
+mand:{
+script:"Mandaic", code:"Mand", name:"", type:"Alphabet, RTL",
 dates:"2ndC – today", start:"100", end:"", current_usage:"liturgical, endangered",
 status:"War over a long period has reduced the language to a severely endangered level. There may be 200 or less first language speakers of Mandaic.",
 origin:"West Asia",
@@ -953,7 +971,8 @@ usedfor: "Samaritan Aramaic [sam], Samaritan Hebrew [smp]",
 },
 
 
-syrc:{ script:"Syriac", code:"Syrc", name:"", type:"Abjad, RTL",
+syrc:{
+script:"Syriac", code:"Syrc", name:"", type:"Abjad, RTL",
 dates:"6thC – today", start:"500", end:"", current_usage:"",
 status:"The script used for several Assyrian communities, and for liturgical use by the Syrian church.",
 origin:"West Asia",
@@ -1025,7 +1044,8 @@ usedfor: "Ardhamāgadhī Prākrit [pka], Eastern Magar [mgp], Sauraseni Prākrit
 },
 
 
-cakm:{ script:"Chakma", code:"Cakm", name:"", type:"Abugida",
+cakm:{
+script:"Chakma", code:"Cakm", name:"", type:"Abugida",
 dates:"8thC – today", start:"700", end:"", current_usage:"uptake",
 status:"Almost extinct, but introduced to non-governmental schools in Bangladesh, and Indian schools in Mizoram and from 2012 Tripura. Most young Chakma speakers use Bengali or Latin.",
 origin:"South Asia",
@@ -1059,7 +1079,8 @@ usedfor: "Old Tamil [oty], Sanskrit [sa]",
 },
 
 
-gujr:{ script:"Gujarati", code:"Gujr", name:"", type:"Abugida",
+gujr:{
+script:"Gujarati", code:"Gujr", name:"", type:"Abugida",
 origin:"South Asia",
 info:{ wikipedia:"Gujarati_alphabet", omniglot:"gujarati" },
 local: [ 
@@ -1086,7 +1107,8 @@ layout: [
 },
 
 
-guru:{ script:"Gurmukhi", code:"Guru", name:"", type:"Abugida",
+guru:{
+script:"Gurmukhi", code:"Guru", name:"", type:"Abugida",
 origin:"South Asia",
 info:{ wikipedia:"Gurmukhi_alphabet", omniglot:"punjabi" },
 layout: [ ],
@@ -1190,7 +1212,8 @@ usedfor: "Sindhi [sd]",
 },
 
 
-lepc:{ script:"Lepcha", code:"Lepc", name:"Lepcha (Róng)", type:"Abugida",
+lepc:{
+script:"Lepcha", code:"Lepc", name:"Lepcha (Róng)", type:"Abugida",
 dates:"1720 – today", start:"1720", end:"", current_usage:"community",
 status:"The writing system for the Lepcha language, spoken in Sikkim and in the Darjeeling district of the West Bengal state of India by around 53,000 people.",
 origin:"South Asia",
@@ -1212,7 +1235,8 @@ layout: [
 },
 
 
-limb:{ script:"Limbu", code:"Limb", name:"", type:"Abugida",
+limb:{
+script:"Limbu", code:"Limb", name:"", type:"Abugida",
 dates:"19thC – today", start:"1800", end:"", current_usage:"community",
 status:"Used alongside Devanagari by about 2-400,000 people for writing the Limbu language spoken in Nepal and northern India.",
 origin:"South Asia",
@@ -1249,7 +1273,8 @@ usedfor: "Eastern Punjabi [pa], Hindi [hi], Marwari [mwr], Western Punjabi [lah]
 },
 
 
-mlym:{ script:"Malayalam", code:"Mlym", name:"", type:"Abugida",
+mlym:{
+script:"Malayalam", code:"Mlym", name:"", type:"Abugida",
 dates:"13thC – today", start:"1200", end:"", current_usage:"",
 status:"The script used for the Malayalam language, with around 35,000,000 speakers, and a number of other minority languages.",
 origin:"South Asia",
@@ -1321,7 +1346,8 @@ usedfor: "Marathi [mar], Old Marathi [omr]",
 },
 
 
-mroo:{ script:"Mro", code:"Mroo", name:"Mro, Mru", type:"Alphabet",
+mroo:{
+script:"Mro", code:"Mroo", name:"Mro, Mru", type:"Alphabet",
 dates:"1980s – today", start:"1980", end:"", current_usage:"community",
 status:"Used for Mro language, spoken by 30-50,000 people in the Chittagong Hill Tracts of Bangladesh. Taught in schools, and literacy is over 80% in Mru speakers.",
 origin:"South Asia",
@@ -1358,7 +1384,8 @@ usedfor: "Saraiki [skr]",
 },
 
 
-olck:{ script:"Ol Chiki", code:"Olck", name:"Ol Chiki (Ol Cemet', Ol, Santali)", type:"Alphabet",
+olck:{
+script:"Ol Chiki", code:"Olck", name:"Ol Chiki (Ol Cemet', Ol, Santali)", type:"Alphabet",
 dates:"1920s – today", start:"1920", end:"", current_usage:"",
 status:"Used for the Santali language, which has around 6,000,000 speakers, as a proposed replacement for Devanagari, Bengali, Odia, and Latin. Mostly used by the southern dialect speakers.",
 origin:"South Asia",
@@ -1380,7 +1407,8 @@ layout: [
 },
 
 
-orya:{ script:"Oriya", code:"Orya", name:"Oriya (Odia)", type:"Abugida",
+orya:{
+script:"Oriya", code:"Orya", name:"Oriya (Odia)", type:"Abugida",
 dates:"1051 – today", start:"1051", end:"", current_usage:"",
 status:"The script for the Odia language, with around 40,000,000 speakers, and several minority languages.",
 origin:"South Asia",
@@ -1419,7 +1447,8 @@ usedfor: "Saurashtra [saz]",
 },
 
 
-shrd:{ script:"Sharada", code:"Shrd", name:"", type:"Abugida",
+shrd:{
+script:"Sharada", code:"Shrd", name:"", type:"Abugida",
 dates:"8thC – 20thC", start:"700", end:"2000", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -1454,7 +1483,8 @@ usedfor: "Sanskrit [san]",
 },
 
 
-sinh:{ script:"Sinhala", code:"Sinh", name:"", type:"Abugida",
+sinh:{
+script:"Sinhala", code:"Sinh", name:"", type:"Abugida",
 dates:"BCE 3rdC – today", start:"-300", end:"", current_usage:"",
 status:"The script used for the Sinhala language, with around 16,000,000 speakers, and also for Sanskrit and Pali.",
 origin:"South Asia",
@@ -1473,7 +1503,8 @@ usedfor: "Pali [pli], Sanskrit [sa], Sinhala [sin]",
 },
 
 
-sora:{ script:"Sora Sompeng", code:"Sora", name:"", type:"Abugida",
+sora:{
+script:"Sora Sompeng", code:"Sora", name:"", type:"Abugida",
 dates:"1936 – today", start:"1936", end:"", current_usage:"liturgical",
 status:"Used in religious contexts, and published in a variety of printed materials.",
 origin:"South Asia",
@@ -1492,7 +1523,8 @@ usedfor: "Sora [srb]",
 },
 
 
-sylo:{ script:"Syloti Nagri", code:"Sylo", name:"", type:"Abugida",
+sylo:{ 
+script:"Syloti Nagri", code:"Sylo", name:"", type:"Abugida",
 dates:"14thC – today", start:"1300", end:"", current_usage:"endangered",
 status:"The script began to decline after the Partition of India in 1947, and by 1970 had fallen almost entirely from use, in favour of Bengali.",
 origin:"South Asia",
@@ -1522,7 +1554,8 @@ usedfor: "Chambeali [cdh], Dogri [doi], Gaddi [gbk], Gahri [bfu], Jaunsari [jns]
 },
 
 
-taml:{ script:"Tamil", code:"Taml", name:"", type:"Abugida",
+taml:{
+script:"Tamil", code:"Taml", name:"", type:"Abugida",
 dates:"7thC – today", start:"600", end:"", current_usage:"",
 status:"The script used for the Tamil language, with around 65,000,000 speakers, and for several minority languages.",
 origin:"South Asia",
@@ -1547,7 +1580,8 @@ layout: [
 },
 
 
-telu:{ script:"Telugu", code:"Telu", name:"", type:"Abugida",
+telu:{
+script:"Telugu", code:"Telu", name:"", type:"Abugida",
 dates:"13thC – today", start:"1200", end:"", current_usage:"",
 status:"The script used for the Telugu language, with around 70,000,000 speakers, and several other minority languages.",
 origin:"South Asia",
@@ -1571,7 +1605,8 @@ layout: [
 },
 
 
-thaa:{ script:"Thaana", code:"Thaa", name:"", type:"Alphabet, RTL",
+thaa:{
+script:"Thaana", code:"Thaa", name:"", type:"Alphabet, RTL",
 dates:"18thC – today", start:"1700", end:"", current_usage:"",
 status:"The script used for the Dhivehi language, with around 370,000 speakers, in the Maldives.",
 origin:"South Asia",
@@ -1639,7 +1674,8 @@ usedfor: "Manichaean Middle Persian [xmn], Sogdian [sog]",
 },
 
 
-mong:{ script:"Mongolian", code:"Mong", name:"", type:"Alphabet, Vertical-LTR",
+mong:{
+script:"Mongolian", code:"Mong", name:"", type:"Alphabet, Vertical-LTR",
 dates:"13thC – today", start:"1200", end:"", current_usage:"",
 status:"Used alongside Cyrillic for the Mongolian language in Mongolia and China, around 6,500,000 speakers, as well as for a number of other languages.",
 origin:"Central Asia",
@@ -1709,7 +1745,8 @@ usedfor: "Classical Mongolian [cmg]",
 },
 
 
-tibt:{ script:"Tibetan", code:"Tibt", name:"", type:"Abugida",
+tibt:{
+script:"Tibetan", code:"Tibt", name:"", type:"Abugida",
 dates:"6thC – today", start:"500", end:"", current_usage:"",
 status:"The script used for the Tibetan, Dzongka, and several other languages, in the Himalayas and India. Language speakers number around 6,000,000.",
 origin:"Central Asia",
@@ -1749,7 +1786,8 @@ usedfor: "Tibetan [bo], Sanskrit [sa]",
 },
 
 
-cham:{ script:"Cham", code:"Cham", name:"", type:"Abugida",
+cham:{
+script:"Cham", code:"Cham", name:"", type:"Abugida",
 dates:"10thC – today", start:"900", end:"", current_usage:"",
 status:"Primary orthography for the Eastern Cham language, which has around 130,000 speakers in southern Vietnam. Historically learned by males but not females.",
 origin:"Southeast Asia",
@@ -1768,7 +1806,8 @@ usedfor: "Eastern Cham [cjm], Western Cham [cja]",
 },
 
 
-kali:{ script:"Kayah Li", code:"Kali", name:"", type:"Alphabet",
+kali:{
+script:"Kayah Li", code:"Kali", name:"", type:"Alphabet",
 dates:"1962 – today", start:"1962", end:"", current_usage:"",
 status:"No usage data. The Kayah languages are spoken by around 500,000 people.",
 origin:"Southeast Asia",
@@ -1790,7 +1829,8 @@ layout: [
 },
 
 
-khmr:{ script:"Khmer", code:"Khmr", name:"", type:"abugida",
+khmr:{
+script:"Khmer", code:"Khmr", name:"", type:"abugida",
 dates:"6thC – today", start:"500", end:"", current_usage:"",
 status:"The script for the Khmer (Cambodian) language, which has around 16,000,000 speakers, and for several minority languages.",
 origin:"Southeast Asia",
@@ -1813,7 +1853,8 @@ layout: [
 },
 
 
-laoo:{ script:"Lao", code:"Laoo", name:"", type:"Alphabet",
+laoo:{
+script:"Lao", code:"Laoo", name:"", type:"Alphabet",
 origin:"Southeast Asia",
 info:{ wikipedia:"Lao_script", omniglot:"lao" },
 charts: [ ["Lao", "0E80"] ],
@@ -1834,7 +1875,8 @@ layout: [
 },
 
 
-tayo:{ script:"Tai Yo", code:"Tayo", name:"", type:"Abugida",
+tayo:{
+script:"Tai Yo", code:"Tayo", name:"", type:"Abugida",
 origin:"Southeast Asia",
 info:{ wikipedia:"Tai_Yo_script", omniglot:"" },
 charts: [ ["Tai Yo", ""] ],
@@ -1852,7 +1894,8 @@ layout: [ 	],
 },
 
 
-mymr:{ script:"Myanmar", code:"Mymr", name:"Myanmar (Burmese)", type:"Abugida",
+mymr:{
+script:"Myanmar", code:"Mymr", name:"Myanmar (Burmese)", type:"Abugida",
 dates:"11thC – today", start:"1000", end:"", current_usage:"",
 status:"The language used for the Burmese language, with around 40,000,000 speakers, but also for a number of other languages, which also have sizeable numbers of speakers, such as Shan, with around 4,500,000.",
 origin:"Southeast Asia",
@@ -1876,7 +1919,8 @@ layout: [
 },
 
 
-talu:{ script:"New Tai Lue", code:"Talu", name:"", type:"Alphabet",
+talu:{
+script:"New Tai Lue", code:"Talu", name:"", type:"Alphabet",
 dates:"1950s – today", start:"1900", end:"", current_usage:"",
 status:"A script used to write the Lü language in China, which has around 280,000 speakers.",
 origin:"Southeast Asia",
@@ -1928,7 +1972,8 @@ usedfor: "Tedim Chin [ctd]",
 },
 
 
-tale:{ script:"Tai Le", code:"Tale", name:"", type:"Abugida",
+tale:{
+script:"Tai Le", code:"Tale", name:"", type:"Abugida",
 dates:"1954 – today", start:"1954", end:"", current_usage:"",
 status:"Used mainly for the Tai Nüa language, which has around 700,000 speakers.",
 origin:"Southeast Asia",
@@ -1948,7 +1993,8 @@ usedfor: "Blang [blr], Shan [shn], Tai Nüa [tdd]",
 
 
 
-lana:{ script:"Tai Tham", code:"Lana", name:"Tai Tham (Lanna)", type:"Abugida",
+lana:{
+script:"Tai Tham", code:"Lana", name:"Tai Tham (Lanna)", type:"Abugida",
 dates:"13thC – today", start:"1200", end:"", current_usage:"",
 status:"Used principally to write Tai Khün, with relatively high literacy for around 100,000 speakers, and Northern Thai, with around 6,000,000 speakers but low literacy in the Tham script. Northern Thai is also written in the Thai script, and Lü is also written in New Tai Lue.",
 origin:"Southeast Asia",
@@ -1970,7 +2016,8 @@ layout: [
 },
 
 
-tavt:{ script:"Tai Viet", code:"Tavt", name:"", type:"Abugida",
+tavt:{
+script:"Tai Viet", code:"Tavt", name:"", type:"Abugida",
 dates:"16thC – today", start:"1500", end:"", current_usage:"",
 status:"Used principally to write Tai Dam, Tai Dón, and Tai Song, with around 1,300,000 speakers in total.",
 origin:"Southeast Asia",
@@ -1989,7 +2036,8 @@ usedfor: "Tai Daeng [tyr], Tai Dam [blt], Tai Dón [twh], Tày Tac [tyt], Thai S
 },
 
 
-thai:{ script:"Thai", code:"Thai", name:"", type:"Abugida",
+thai:{
+script:"Thai", code:"Thai", name:"", type:"Abugida",
 origin:"Southeast Asia",
 info:{ wikipedia:"Thai_alphabet", omniglot:"thai" },
 charts: [ ["Thai", "0E00"] ],
@@ -2011,7 +2059,8 @@ layout: [
 },
 
 
-bali:{ script:"Balinese", code:"Bali", name:"", type:"Abugida",
+bali:{
+script:"Balinese", code:"Bali", name:"", type:"Abugida",
 origin:"Indonesia & Oceania",
 info:{ wikipedia:"Balinese_script", omniglot:"balinese", endalpha:"balinese" },
 local: [ ], layout: [ ],
@@ -2031,7 +2080,8 @@ layout: [
 },
 
 
-batk:{ script:"Batak", code:"Batk", name:"", type:"Abugida",
+batk:{
+script:"Batak", code:"Batk", name:"", type:"Abugida",
 dates:"14thC – today", start:"1300", end:"", current_usage:"uptake",
 status:"Taught in schools mainly for cultural purposes, and used on some signs for shops and government offices.",
 origin:"Indonesia & Oceania",
@@ -2050,7 +2100,8 @@ usedfor: "Batak Angkola [akb], Batak Dairi [btd], Batak Karo [btx], Batak Mandai
 },
 
 
-bugi:{ script:"Buginese", code:"Bugi", name:"", type:"Abugida, Defective",
+bugi:{
+script:"Buginese", code:"Bugi", name:"", type:"Abugida, Defective",
 origin:"Indonesia & Oceania",
 info:{ wikipedia:"Buginese_script", omniglot:"lontara", endalpha:"lontara" },
 local: [ ], layout: [ ],
@@ -2067,7 +2118,8 @@ usedfor: "Bugis [bug], Makasar [mak], Mamuju [mqx], Mandar [mdr], Wotu [wtw]",
 },
 
 
-buhd:{ script:"Buhid", code:"Buhd", name:"", type:"Abugida",
+buhd:{
+script:"Buhid", code:"Buhd", name:"", type:"Abugida",
 dates:"18thC – today", start:"1700", end:"", current_usage:"uptake, community",
 status:"Used to write the Buhid language, which has about 8,000 speakers, in the Mindoro region of the Philippines. The primary script for the language is Latin.",
 origin:"Indonesia & Oceania",
@@ -2086,7 +2138,8 @@ usedfor: "Buhid [bku]",
 },
 
 
-hano:{ script:"Hanunoo", code:"Hano", name:"Hanunó’o", type:"Abugida, Defective, Vertical-bt+horizontal",
+hano:{
+script:"Hanunoo", code:"Hano", name:"Hanunó’o", type:"Abugida, Defective, Vertical-bt+horizontal",
 dates:"18thC – today", start:"1700", end:"", current_usage:"community",
 status:"Used to write the Hanunoo language, which has around 25,000 speakers, and which unusually hasn't resorted to the Latin script. Often written on bamboo.",
 origin:"Indonesia & Oceania",
@@ -2105,7 +2158,8 @@ usedfor: "Hanunoo [hnn]",
 },
 
 
-java:{ script:"Javanese", code:"Java", name:"", type:"Abugida",
+java:{
+script:"Javanese", code:"Java", name:"", type:"Abugida",
 dates:"17thC – today", start:"1600", end:"", current_usage:"endangered",
 status:"Currently, no newspapers or magazines are being printed in the script, although it is still taught in most elementary schools and some junior high schools in Javanese speaking areas.",
 origin:"Indonesia & Oceania",
@@ -2128,7 +2182,8 @@ layout: [
 },
 
 
-rjng:{ script:"Rejang", code:"Rjng", name:"Rejang (Redjang, Kaganga)", type:"Abugida",
+rjng:{
+script:"Rejang", code:"Rjng", name:"Rejang (Redjang, Kaganga)", type:"Abugida",
 dates:"18thC – today", start:"1700", end:"", current_usage:"community",
 status:"Used by the approximately 200,000 speakers of Rejang dialects, who have 50% literacy. The traditional corpus consists chiefly of ritual texts, medical incantations, and poetry.",
 origin:"Indonesia & Oceania",
@@ -2147,7 +2202,8 @@ usedfor: "Kerinci [kvr], Lampung Api [ljp], Lampung Nyo [abl], Rejang [rej]",
 },
 
 
-sund:{ script:"Sundanese", code:"Sund", name:"", type:"Abugida",
+sund:{
+script:"Sundanese", code:"Sund", name:"", type:"Abugida",
 dates:"14thC – today", start:"1300", end:"", current_usage:"",
 status:"As of 1996, the official script for the Sundanese language, which has around 25,000,000 speakers on the island of Java. Sundanese is also written in the Latin script. It is currently taught in schools and used for public signage.",
 origin:"Indonesia & Oceania",
@@ -2184,7 +2240,8 @@ usedfor: "Filipino [fil], Ilocano [ilo], Tagalog [tl]",
 },
 
 
-tagb:{ script:"Tagbanwa", code:"Tagb", name:"", type:"Abugida, Defective",
+tagb:{
+script:"Tagbanwa", code:"Tagb", name:"", type:"Abugida, Defective",
 dates:"18thC – today", start:"1700", end:"", current_usage:"uptake, community",
 status:"Used for the Tagbanwa language, which has around 8,000 speakers, in the Palawan region of the Philippines. Younger generations prefer to use Tagalog, so the script is in decline.",
 origin:"Indonesia & Oceania",
@@ -2243,7 +2300,8 @@ layout: [
 
 
 
-hang:{ script:"Hangul", code:"Hang", name:"", type:"Featural syllabary",
+hang:{
+script:"Hangul", code:"Hang", name:"", type:"Featural syllabary",
 origin:"East Asia",
 info:{ wikipedia:"Hangul", omniglot:"korean" },
 charts: [ ["Hangul Syllables", "AC00"], ["Hangul Jamo", "1100"], ["Hangul Compatibility Jamo", "3130"], ["Hangul Jamo Extended-A", "A960"], ["Hangul Jamo Extended-B", "D7B0"] ],
@@ -2262,7 +2320,8 @@ layout: [
 },
 
 
-jpan:{ script:"Japanese", code:"Jpan", name:"Japanese", type:"Logosyllabary + 2 Syllabic scripts",
+jpan:{
+script:"Japanese", code:"Jpan", name:"Japanese", type:"Logosyllabary + 2 Syllabic scripts",
 dates:"8thC – today", start:"700", end:"", current_usage:"",
 status:"Used to write the Japanese language. The Kanji, Hiragana, Katakana, and Latin characters are all mixed together in a sentence.",
 origin:"East Asia",
@@ -2286,7 +2345,8 @@ layout: [
 },
 
 
-lisu:{ script:"Lisu", code:"Lisu", name:"Lisu (Fraser)", type:"Alphabet",
+lisu:{
+script:"Lisu", code:"Lisu", name:"Lisu (Fraser)", type:"Alphabet",
 dates:"1915 – today", start:"1915", end:"", current_usage:"",
 status:"Used to write the Lisu language, which has 980,000 speakers in China, Myanmar, Thailand, and India. About 360,000 are thought to be literate in the script.",
 origin:"East Asia",
@@ -2305,7 +2365,8 @@ usedfor: "Lakkia [lbc], Lipo [lpo], Lisu [lis], Naxi [nxq], Zaiwa [atb]",
 },
 
 
-plrd:{ script:"Miao", code:"Plrd", name:"Miao (Pollard)", type:"Abugida",
+plrd:{
+script:"Miao", code:"Plrd", name:"Miao (Pollard)", type:"Abugida",
 dates:"1904 – today", start:"1904", end:"", current_usage:"",
 status:"Used to write Miao dialects, as well as Yi and Lisu. There are 2 variants of the script.",
 origin:"East Asia",
@@ -2354,7 +2415,8 @@ usedfor: "Eastern Nisu [nos], Mantsi [nty], Nuosu [iii], Samatao [ysd], Samei [s
 },
 
 
-cher:{ script:"Cherokee", code:"Cher", name:"", type:"Syllabary",
+cher:{
+script:"Cherokee", code:"Cher", name:"", type:"Syllabary",
 origin:"Americas",
 info:{ wikipedia:"Cherokee_script", omniglot:"cherokee", endalpha:"cherokee" },
 local: [ ], layout: [ ],
@@ -2386,7 +2448,8 @@ usedfor: "English [en]",
 },
 
 
-cans:{ script:"UCAS", code:"Cans", name:"Unified Canadian Aboriginal Syllabics", type:"Syllabary",
+cans:{
+script:"UCAS", code:"Cans", name:"Unified Canadian Aboriginal Syllabics", type:"Syllabary",
 origin:"Americas",
 info:{ wikipedia:"Canadian_Aboriginal_syllabics", omniglot:"ucas", endalpha:"canadian-aboriginal-syllabics" },
 local: [ ], layout: [ ],
@@ -2403,7 +2466,8 @@ usedfor: "Beaver [bea], Blackfoot [bla], Carrier [crx], Carrier, Southern [caf],
 },
 
 
-osge:{ script:"Osage", code:"Osge", name:"", type:"Alphabet",
+osge:{
+script:"Osage", code:"Osge", name:"", type:"Alphabet",
 dates:"2006 – today", start:"2006", end:"", current_usage:"community",
 status:"A new orthography promoted by the Osage Nation since 2006. Work is under way to educate people in the script, but the number of users is still low, in an ethnic population of 11,000.",
 origin:"Americas",
@@ -2422,7 +2486,8 @@ usedfor: "Osage [osa]",
 },
 
 
-newa:{ script:"Newa", code:"Newa", name:"Newa (Newar, Newari, Nepāla lipi)", type:"Abugida",
+newa:{
+script:"Newa", code:"Newa", name:"Newa (Newar, Newari, Nepāla lipi)", type:"Abugida",
 dates:"10thC – today", start:"900", end:"", current_usage:"uptake",
 status:"Largely eclipsed by Devanagari nowadays, this script is used especially for writing the Newar language, but also others. Currently little used, but receiving interest for revival.",
 origin:"South Asia",
@@ -2548,7 +2613,8 @@ usedfor: "Dogri [dgo]",
 },
 
 
-rohg:{ script:"Hanifi Rohingya", code:"Rohg", name:"", type:"Abugida, RTL",
+rohg:{
+script:"Hanifi Rohingya", code:"Rohg", name:"", type:"Abugida, RTL",
 dates:"1980s – today", start:"1900", end:"", current_usage:"uptake",
 status:"Used for the publication of books and newspapers, both hand-written and printed.",
 origin:"Southeast Asia",
@@ -2649,7 +2715,8 @@ usedfor: "White Hmong, Green Hmong [hnj]",
 },
 
 
-wcho:{ script:"Wancho", code:"Wcho", name:"", type:"Alphabet",
+wcho:{
+script:"Wancho", code:"Wcho", name:"", type:"Alphabet",
 dates:"2001 – today", start:"2001", end:"", current_usage:"community",
 status:"Used for Wancho,  a  Sino-Tibetan language with around 50,000 speakers. Taught in some schools, and one book known.",
 origin:"West Asia",
@@ -2819,7 +2886,8 @@ usedfor: "Kawi [kaw], Sanskrit [sa]",
 },
 
 
-nagm:{ script:"Nag Mundari", code:"Nagm", name:"Nag Mundari, Mundari Bani", type:"Alphabet",
+nagm:{
+script:"Nag Mundari", code:"Nagm", name:"Nag Mundari, Mundari Bani", type:"Alphabet",
 dates:"1982 – today", start:"1982", end:"", current_usage:"",
 status:"Invented and published in late 1980 by community elder and author Rohidas Singh Nag. It has seen limited but increasing use in literature, education, and computing.",
 origin:"S Asia",
@@ -2841,7 +2909,8 @@ layout: [
 },
 
 
-sunu:{ script:"Sunuwar", code:"Sunu", name:"", type:"Alphabet",
+sunu:{
+script:"Sunuwar", code:"Sunu", name:"", type:"Alphabet",
 dates:"1942 – today", start:"1942", end:"", current_usage:"uptake",
 status:"Invented and published in 1942 by Krishna Bahadur Jentich. It has seen limited but increasing use in literature, education, and computing in Nepal. Also used for the Sikkim Herald.",
 origin:"S Asia",
@@ -2862,7 +2931,8 @@ usedfor: "Sunuwar [suz]",
 
 
 
-gara:{ script:"Garay", code:"Gara", name:"", type:"Alphabet", 
+gara:{
+script:"Garay", code:"Gara", name:"", type:"Alphabet", 
 dates:"1961 – today", start:"1961", end:"", current_usage:"community", 
 status: "Taught informally for over fifty years since its invention by Assane Faye in Senegal. Manuscripts include textbooks, folktales, and maps, and a Quran with interlinear translations into Wolof. The user community for Garay is small.",
 origin:"Africa",
@@ -2941,7 +3011,8 @@ usedfor:"Gurung [gvr]",
 
 
 
-krai:{ script:"Kirat Rai", code:"Krai", name:"Kirat Rai, Khambu Rai Lipi", type:"Abugida", 
+krai:{
+script:"Kirat Rai", code:"Krai", name:"Kirat Rai, Khambu Rai Lipi", type:"Abugida", 
 origin:"South Asia",
 info:{ wikipedia:"Kirat_Rai", omniglot:"kiratrai" }, 
 local: [	],
@@ -2979,7 +3050,8 @@ usedfor:"Bhumij [snd]",
 
 
 
-tols:{ script:"Tolong Siki", code:"Tols", name:"", type:"Alphabet", 
+tols:{
+script:"Tolong Siki", code:"Tols", name:"", type:"Alphabet", 
 origin:"South Asia",
 info:{ wikipedia:"Tolong_Siki", omniglot:"ahom" }, 
 local: [	],
@@ -2997,7 +3069,8 @@ usedfor:"Kurukh [kru]",
 },
 
 
-berf:{ script:"Beria Erfe", code:"berf", name:"", type:"Alphabet", 
+berf:{
+script:"Beria Erfe", code:"berf", name:"", type:"Alphabet", 
 origin:"Africa",
 info:{ wikipedia:"Zaghawa_alphabet", omniglot:"ahom" }, 
 local: [	],

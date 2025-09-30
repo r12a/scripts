@@ -1,14 +1,7 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
-"ff": { name:"Fula (Fulani, Fulfulde, Fulah)", local:"Fula / Fulfulde", localtrans:"", silcode:"ful", 
+"ff": { name:"Fula (Fulani, Fulfulde, Fulah)", local:"Fula", localtrans:"ˈfuːlə", silcode:"ful", scriptname:"", scriptnametrans:"", 
 source:"2175c4f5eeb22d1c5d1c299445a11ffe23e00a2f", 
 region:"afr", countries:"Benin, Burkina Faso, Cameroon, Chad, Gambia, Ghana, Guinea, Liberia, Mali, Mauritania, Niger, Nigeria, Senegal, Sierra Leone", script:"latn", speakers:"24000000", 
 letter:"ÑñŊŋƁƊƝƳƴɓɗɲʼ", mark:"", number:"", punctuation:"‘’“”…", symbol:"", other:"", aux:"[]«»Ɠɠ‑–—‰‹›", 
@@ -20,17 +13,8 @@ related:`ff is a macrolanguage that encompasses the following more specific prim
 There is no indicated equivalence between one of the latter subtags and the macrolanguage subtag.`,
 linked:"latn/ff", picker:"latn-ff", font:"", 
 },
+// this is replicated in app-charuse/langs
 
 
-"latn": {name:"Latin", region:"afr", type:"alpha", 
-blocks:14, chars:1551, bletter:1427, bmark:0, bnumber:26, bpunctuation:53, bsymbol:41, bother:3, 
-direction:"ltr", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
-case:Y, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
-medials:"", finals:"",
-clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
-wordsep:"space",
-linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp", gc:Y, baseline:"romn", 
-},
 
 }

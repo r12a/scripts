@@ -1,32 +1,14 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
-"km": { name:"Khmer (Cambodian)", local:"ខ្មែរ‎", localtrans:"(khmer)", silcode:"khm", 
+"km": { name:"Khmer (Cambodian)", local:"ខ្មែរ", localtrans:"kʰmae", silcode:"khm", scriptname:"", scriptnametrans:"", 
 source:"cldr_km,udhr_khm,7f422cd6f0781ddbcb488b785f4f0d3a5883c93b", 
 region:"seasia", countries:"Cambodia, Vietnam", script:"khmr", speakers:"16000000", 
 letter:"កខគឃងចឆជឈញដឋណតថទធនបផពភមយរលវសហឡអឥឦឧឩឪឫឭឯឰឱឲឳៗ", letteraux:"ឌឍឬឮ", mark:"ាិីឹឺុូួើឿៀេែៃោៅំះៈ៉៊់៌៍៎៏័៑្៝", number:"០១២៣៤៥៦៧៨៩", punctuation:"។៕៖៙៚‘’“”", punctuationaux:"៘", symbol:"៛", other:"\u200B\u200C\u200D", 
 orth:`Khmer. &nbsp; <a href="../scripts/khmer" target="_blank">Details</a>.`,
 linked:"khmr/km", picker:"khmr", font:"", 
 },
-
-
-"khmr": {name:"Khmer", region:"seasia", type:"abug", 
-blocks:2, chars:146, bletter:54, bmark:33, bnumber:20, bpunctuation:6, bsymbol:33, bother:0, 
-direction:"ltr", rtlnumbers:N,
-voweltype: { inherent:2, letters:N, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"QA អ", vcomposite:Y, prebase:Y, circum:Y, },
-case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:Y, 
-medials:"", finals:"",
-clusters:{ ligation:N, stacks:Y, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:"i"},
-wordsep:"no",
-linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:N, baseline:"romn", 
-},
+// this is replicated in app-charuse/langs
 
 
 }

@@ -247,7 +247,7 @@ autoExpandExamples.new = `
 𑐣𑐸𑐐𑑅||␣||नुगः||नुगः
 𑐣𑐸𑐐𑑅𑐡𑑂𑐫𑑅|soul|nu§ɡəː§d§jəː|nuga:dya:|नुगःद्यः||नुगःद्यः
 §|two|ne|ne|ने||ने
-𑐣𑐾𑐰𑐵𑑅||␣||नेवाः||नेवाः
+𑐣𑐾𑐰𑐵𑑅|Nepal|newaː|newā:|नेवाः||नेवाः
 §|five|nja|nyā|न्या||न्या
 𑐣𑑂𑐫𑐵𑐎𑐸𑑄||␣||न्याकुं||न्याकुं
 𑐣𑑂𑐰𑐎𑐹|wedge|n§wɔ§kuː|nwakū|न्वकू||न्वकू
@@ -461,6 +461,7 @@ autoExpandExamples.new = `
 𑐩𑐶𑐳𑐵|woman|misæ|||x
 𑐩𑐵𑐖𑐵𑑅|woman|mæɟæː|||x
 
+𑐣𑐾𑐰𑐵𑑅 𑐨𑐵𑐫𑑂|Newar language|newaː bʱæː|newā: bhæ|नेवाः||नेवाः
 
 `
 

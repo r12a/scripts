@@ -50,6 +50,9 @@ autoExpandExamples.rhg = `
 𐴉𐴟𐴌𐴝𐴕|old||furan
 
 
+@ https://en.wikipedia.org/wiki/Rohingya_language
+
+𐴌𐴟𐴇𐴥𐴝𐴚𐴒𐴙𐴝|Rohingya language|r§ʊ§›§ˈɜi§ɲ§‹§ɟ§ə| ruáingga
 
 
 

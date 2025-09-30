@@ -12576,7 +12576,7 @@ autoExpandExamples.ka = `
 ქართულად ვლაპარაკობ||
 ქართული ენა||
 ქართული იცით||
-ქართული||
+ქართული|Georgian language|kʰ§a§ɾ§tʰ§u§l§i|kartuli
 ქარი|wind|kʰ§ɑ§r§i|kari
 ქარიანი||
 ქარიზმა||

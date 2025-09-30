@@ -103,7 +103,7 @@ autoExpandExamples.lis = `
 @ https://en.wikipedia.org/wiki/Fraser_script
 
 ꓡꓬꓮꓳ ꓩꓷꓠ|jelly|l§i̯§ɛ§w§ §f§ə§n||凉粉
-
+ꓡꓲ-ꓢꓴ|Lisu language|l§i§§s§u|
 
 
 

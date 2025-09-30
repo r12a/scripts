@@ -106,7 +106,9 @@ autoExpandExamples.kkh = `
 
 
 
+@ https://en.wikipedia.org/wiki/Kh%C3%BCn_language
 
+ᨴᩱ᩠ᨿᨡᩨ᩠ᨶ|Tai Khün language|ta§j˧.§kʰɯː§n˧˨˥|
 
 
 

@@ -6355,6 +6355,7 @@ autoExpandExamples.ur = `
 
 
 کہہ|say|kɛ§ɦ§–||||x
+اُردُو|Urdu language|ˈʊɾduː|urdū
 
 
 

@@ -561,7 +561,7 @@ autoExpandExamples.khb = `
 ᦉᦲᧇᧈ|ten|ɕ§i§p§˧˥|
 ᦔᦞᦎᦲᦰ|news|pa§wa§t§i§ʔ²
 
-
+ᦅᧄᦺᦑᦟᦹᧉ|Tai Lü|kâ§m.§›§tâj.§l§ɯ̀§‹|
 
 
 

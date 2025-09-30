@@ -1705,7 +1705,8 @@ autoExpandExamples.chr = `
 
 
 
-
+@ https://en.wikipedia.org/wiki/Cherokee_language
+ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ|Cherokee language|t͡sa.§lɑ.§ki §ɡa§wó§ni§hi§s§ˈdî|tsalagi gawonihisdi
 
 
 

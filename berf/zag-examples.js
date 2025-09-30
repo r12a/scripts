@@ -132,7 +132,7 @@ autoExpandExamples.zag = `
 @ https://en.wikipedia.org/wiki/Zaghawa_alphabet
 𖺼𖺾𖻌𖻂𖺻 𖺾𖻌𖺿𖺾𖺾|Beria Erfe|b§e§r§i§a§ §e§r§f§e§‹
 𖺡𖺾𖻌𖻂𖺻 𖺣𖻌𖺿𖺾𖺾|Beria Erfe|b§e§r§i§a§ §e§r§f§e§‹
-
+𖺡𖺾𖻌𖻂𖺻|Zaghawa language|b§e§r§i§a|beṛia
 
 
 @ https://www.lingref.com/cpp/acal/44/paper3136.pdf

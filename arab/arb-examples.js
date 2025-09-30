@@ -21159,7 +21159,8 @@ autoExpandExamples.ar = `
 خاط|to sew|xaː.tˤa|ḵāṭa|خَاطَ
 خاف|to fear|xaː.fa|ḵāfa|خَافَ
 
-
+ألأبجدية ٱلعربية‎|Arabic alphabet|ʔalʔabd͡ʒadiːjaʰ lʕarabiːjaʰ‎|
+العَرَبِيَّة‎|Arabic|ʔalʕarabiːjaʰ‎|
 
 
 

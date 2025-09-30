@@ -388,6 +388,10 @@ autoExpandExamples.ru = `
 
 
 
+@ https://en.wikipedia.org/wiki/Russian_language
+
+русский язык|Russian language|ˈr§u§s§‹§kʲ§ɪ§j§ §j§ɪ§ˈz§ɨ§k|
+
 
 
 `

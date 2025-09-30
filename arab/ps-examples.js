@@ -1169,7 +1169,7 @@ autoExpandExamples.ps = `
 پړانګ||␣|||
 پړسوب||␣|||
 پښتنه|Pashtun|pa§ʂ.§t̪a.§n§a|pax̌tana||
-پښتو||␣|||
+پښتو|Pashto language|pəxˈt̪o|pax̌to||
 پښتون||␣|||
 پښه||␣|||
 پکان||␣|||
@@ -1445,6 +1445,9 @@ autoExpandExamples.ps = `
 نور ولولئ|read more
 
 
+@ unknown
+
+پښتوالفبې|Pashto alphabet||pəx̌tó alfbâye
 
 
 

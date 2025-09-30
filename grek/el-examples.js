@@ -7157,7 +7157,7 @@ autoExpandExamples.el = `
 ελκύστηκα||␣|
 ελκύω||␣|
 ελλήνων||␣|
-ελληνικά||␣|
+ελληνικά|Greek language|e§l§‹§i§n§i§ˈk§a|elliniká
 ελληνικός||␣|
 ελληνοαλβανικός||␣|
 ελληνοαμερικανικός||␣|
@@ -19101,7 +19101,6 @@ autoExpandExamples.el = `
 φάση|phase|ˈf§a§s§i|
 γκάμα|range|ˈɡ§‹§a§m§a|
 δεν πάω|I am not going|ð§e§m§ §b§a.§o
-
 
 
 

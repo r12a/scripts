@@ -285,7 +285,9 @@ autoExpandExamples.ike = `
 
 
 
+@ https://en.wikipedia.org/wiki/Inuktitut
 
+ᐃᓄᒃᑎᑐᑦ|Inuktitut language|inuktiˈtut|
 
 
 

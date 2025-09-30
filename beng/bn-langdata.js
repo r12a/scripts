@@ -1,10 +1,5 @@
 // this should always be updated when app-charuse/langs.js is updated
 
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
@@ -17,16 +12,7 @@ also:
 ["bn-newa | newa | No longer in use."],
 linked:"beng/bn", picker:"beng", font:"", 
 },
+// this is replicated in app-charuse/langs
 
-"beng": {name:"Bengali", region:"sasia", type:"abug", 
-blocks:1, chars:96, bletter:55, bmark:20, bnumber:16, bpunctuation:1, bsymbol:4, bother:0, 
-direction:"ltr", rtlnumbers:N,
-voweltype: { inherent:2, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:Y, circum:Y, },
-case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:Y, 
-medials:"cm let", finals:"cm let",
-clusters:{ ligation:Y, stacks:Y, touch:N, conjoined:Y, subjoinedcp:N, visviram:N, diacritic:N, killer:"v"},
-wordsep:"space",
-linebreak:"word", hyphen:"(yes) -", wordspan:N, justification:"sp", gc:N, baseline:"hang", 
-},
 
 }

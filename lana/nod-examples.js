@@ -315,7 +315,7 @@ autoExpandExamples.nod = `
 
 @ https://en.wikipedia.org/wiki/Tai_Tham_(Unicode_block)
 ᨻᩩᨴ᩠ᨵ|Buddha|pu§t.§thaʔ|
-ᨣᩴᩤᨾᩮᩬᩨᨦ|Northern Thai language|kam˧.§mɯːə§ŋ˧
+ᨣᩴᩤᨾᩮᩬᩨᨦ|Northern Thai language|kam˧.§mɯːə§ŋ˧|
 
 
 
