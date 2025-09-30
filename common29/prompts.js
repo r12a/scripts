@@ -331,7 +331,7 @@ out += `
 if (window.location.href.includes('block')) out += `
         <p class="instructions"><span class="leadin">Character names.</span> The names of characters in codepoint markup drop the initial ${ script.toUpperCase() } label (purely to reduce the length of the examples). In other places the full name can be found.</p>
 
-        <p class="instructions"><span class="leadin">Fonts.</span> The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon to toggle the large characters between font glyphs and graphics.</p>
+        <p class="instructions"><span class="leadin">Fonts.</span> The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common29/showImages.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon to toggle the large characters between font glyphs and graphics.</p>
 
         <p class="instructions"><span class="leadin">Navigation.</span> The <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon takes you to the top of the page.</p>
 `
