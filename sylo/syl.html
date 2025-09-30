@@ -222,6 +222,7 @@ if (summaryExists) {
 <li>independent vowel letters may be combined with a following consonant letter using the virama</li>
 <li>diphthongs can be written using a vowel sign followed by an independent vowel, or may involve a special diacritic for diphthongs ending in <span class="ipa">-i</span></li>
 <li>page ordering may be right to left, although the text direction remains left to right.</li>
+<li>some texts use 'false conjuncts' that require typed characters to not match pronunciation order.</li>
 </ul>
 </section>
 </section>
@@ -1185,7 +1186,7 @@ alveolar</th>
 <div>
 <p>This section maps Sylheti vowel sounds to common graphemes in the Syloti Nagri orthography.</p>
 
-<p class="instructions highlight">Important notes.</p>
+<!--<p class="instructions highlight">Important notes.</p>-->
 
 <p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc. <span style="color:tan">Light coloured</span> characters occur infrequently.</p>
 </div>
@@ -1465,7 +1466,7 @@ alveolar</th>
 
 <figure class="characterBox auto hidden"  data-cols="">꠆</figure>
 
-<p>To produce a conjunct, <span class="ch">꠆</span> is added between the consonants in the cluster. When a conjunct is formed, the virama itself is not displayed. For example:</p>
+<p>To produce a conjunct, <span class="ch circle">꠆</span> is added between the consonants in the cluster. When a conjunct is formed, the virama itself is not displayed. For example:</p>
 
 
 <table class="sequenceTable">
@@ -1621,7 +1622,7 @@ alveolar</th>
 <section id="hasant">
 <h4>Hasant</h4>
 
-<p>The <span class="name">hasant</span>, <span class="ch">꠆</span>, appears as a fallback when a font doesn't contain conjunct glyphs for a consonant cluster. However, because fonts may only contain a small number of conjuncts for Syloti Nagri, it may also appear in certain words as a visible mark (such as in the examples below). It wasn't widely introduced to the orthography until the mid 20th century.</p>
+<p>The <span class="name">hasant</span>, <span class="ch circle">꠆</span>, appears as a fallback when a font doesn't contain conjunct glyphs for a consonant cluster. However, because fonts may only contain a small number of conjuncts for Syloti Nagri, it may also appear in certain words as a visible mark (such as in the examples below). It wasn't widely introduced to the orthography until the mid 20th century.</p>
 
 <p><span class="eg" lang="syl">ꠚꠣꠟ꠆ꠇꠥꠘ</span></p>
 <table class="sequenceTable breakdown">
@@ -1654,7 +1655,7 @@ alveolar</th>
 <section id="althasant">
 <h4>Word-final hasant</h4>
 
-<p>Word-final consonants are normally not followed by an inherent vowel sound.  However, occasionally an author wants to make it explicit that the inherent vowel is dropped. Because, in some fonts, <span class="ch">꠆</span> when rendered would project too far beyond the final coda, authors may instead use a mark below the coda, shaped like the Bengali <span class="name">hasant</span>. <span class="ch">꠬</span> is designed for this purpose. Its use is rare.<tt>lpe</tt></p>
+<p>Word-final consonants are normally not followed by an inherent vowel sound.  However, occasionally an author wants to make it explicit that the inherent vowel is dropped. Because, in some fonts, <span class="ch circle">꠆</span> when rendered would project too far beyond the final coda, authors may instead use a mark below the coda, shaped like the Bengali <span class="name">hasant</span>. <span class="ch circle">꠬</span> is designed for this purpose. Its use is rare.<tt>lpe</tt></p>
 
 <p>This hasant is never used for consonant clusters, and therefore never creates conjuncts. It is always visible. For example:</p>
 
@@ -1899,7 +1900,7 @@ alveolar</th>
 <div>
 <p>This section maps Sylheti consonant sounds to common graphemes in the Syloti Nagri orthography.</p>
 
-<p class="instructions highlight">Important notes.</p>
+<!--<p class="instructions highlight">Important notes.</p>-->
 
 <p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc. <span style="color:tan">Light coloured</span> characters occur infrequently.</p>
 </div>
@@ -2182,7 +2183,7 @@ alveolar</th>
 <div class="phone"><span class="ipa" id="mapɽ">ɽ</span></div>
 <div class="map_detail">
 <p class="map_row"><span class="posn"></span>
-<span class="ch">ꠠ</span> <b></b></p>
+<span class="ch">ꠠ</span> <b>In ordinary speech this is often pronounced <span class="ipa">ɾ</span>.</b></p>
 </div>
 </div>
 
@@ -2594,10 +2595,6 @@ alveolar</th>
 <aside class="sectionAside">
 <p>This orthography has no special features with respect to the following.</p>
 <ul>
-<li>Cursive/joined up text (eg.like Arabic).</li>
-<li>Context-based shaping (letters do not interact).</li>
-<li>Context-based positioning (no combining marks).</li>
-<li>Multiple combining marks on a single base.</li>
 <li>Case distinction, or special transforms to convert between characters.</li>
 </ul>
 
@@ -2608,10 +2605,6 @@ alveolar</th>
 <section id="writingstyles">
 <h4>Writing styles</h4>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
-</section>
-
-<section id="cursive">
-<h4>Cursive or joining letters</h4>
 </section>
 
 <section id="fontstyle">
@@ -2643,22 +2636,17 @@ alveolar</th>
 <section id="context">
 <h3>Context-sensitive shaping &amp; positioning</h3>
 
-<p>Wancho letters don't interact, so no special shaping is needed.</p>
-
-<p>Base characters carry only a single combining mark.</p>
-
-<p>Some small adjustments may be needed for the placement of tone marks relative to the base letter, but these are mostly horizontal, since Wancho letters tend to have the same height. <a class="figref">fig_gpos</a> shows adjustments to the horizontal position of the tone mark, depending on the shape of the base character.  It also shows kerning of the letters.</p>
+<p>Syloti Nagri requires both context-sensitive shaping and positioning. Multiple combining marks can attach to a single base letter.</p>
+</section>
 
 
 
 
 
-<p>Bengali fonts need to adapt glyphs based on their context.</p>
+<section id="cursive">
+<h3>Cursive or joining letters</h3>
 
-<p>Principal areas where context-sensitive shaping is required include conjunct formation and vowel ligation. Positioning of glyphs is also sometimes context-sensitive, particularly where multiple diacritics are applied to a single base.</p>
-
-<p>The rest of this section provides examples of context-sensitive shaping and positioning.</p>
-
+<p>The script is not cursive in the sense that Arabic is, but the top bar above each consonant letter joins with those on either side.  This can have an impact for highlighting strokes, or for letter-spacing.</p>
 </section>
 </section>
 
@@ -2733,52 +2721,6 @@ alveolar</th>
 <details class="tbd">
 <summary>Sections to be added ...</summary>
 
-<section id="quotations">
-<h4>Quotations &amp; citations</h4>
-
-<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/67" target="_blank">type samples</a>.</p>
-
-<figure class="characterBox auto small"  data-cols="trans,transc">“␣”␣‘␣’</figure>
-
-<p>Adlam texts use the following  punctuation around quotations. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks.</p>
-
-
-<table class="character_list">
-<thead>
-<tr>
-<th>&nbsp;</th>
-<th>start</th>
-<th>end</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row">initial</th>
-<td>
-<p><span class="ch">“</span></p>
-</td>
-<td>
-<p><span class="ch">”</span></p>
-</td>
-</tr>
-<tr>
-<th scope="row">nested</th>
-<td>
-<p><span class="ch">‘</span></p>
-</td>
-<td>
-<p><span class="ch">’</span></p>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>The row labelled 'initial' indicates the usual default quote marks. When an additional quote is embedded within the first, the quote marks are those in the 'nested' row.</p>
-
-<p>Note that these characters are <em>not</em> mirrored during display in RTL text. This means that <span class="uname">LEFT</span> indicates use on the left, and <span class="uname">RIGHT</span> indicates use on the right, unlike other types of paired punctuation. That is why, in the table above, the 'start' and 'end' columns in the table above are ordered as they are.</p-->
-</section>
-
 <section id="emphasis">
 <h4>Emphasis</h4>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
@@ -2813,7 +2755,7 @@ alveolar</th>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 
 
-<figure class="characterBox auto hide"  data-cols="trans,transc">,␣:␣;␣.␣?␣!␣।␣॥␣—</figure>
+<figure class="characterBox auto hide">,␣:␣;␣.␣?␣!␣।␣॥␣꠨␣꠩␣꠪␣꠫␣⁕</figure>
 
 <p>For normal text, Syloti Nagri uses mostly ASCII punctuation marks, but includes dandas from the Devanagari block. Poetry uses some additional, Syloti Nagri specific, punctuation.</p>
 
@@ -2890,6 +2832,55 @@ alveolar</th>
 </tbody>
 </table>
 </section>
+</section>
+
+
+
+
+
+<section id="quotations">
+<h3>Quotations &amp; citations</h3>
+
+<!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/67" target="_blank">type samples</a>.</p>-->
+
+<figure class="characterBox auto hide"  data-cols="trans,transc">“␣”␣‘␣’</figure>
+
+<p>Lloyd-Williams et al indicates that Syloti Nagri uses quotation marks like the following. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks.</p>
+
+
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">initial</th>
+<td>
+<p><span class="ch">“</span></p>
+</td>
+<td>
+<p><span class="ch">”</span></p>
+</td>
+</tr>
+<!--<tr>
+<th scope="row">nested</th>
+<td>
+<p><span class="ch">‘</span></p>
+</td>
+<td>
+<p><span class="ch">’</span></p>
+</td>
+</tr>-->
+</tbody>
+</table>
+
+
+<!--<p>The row labelled 'initial' indicates the usual default quote marks. When an additional quote is embedded within the first, the quote marks are those in the 'nested' row.</p>
+-->
 </section>
 </section>
  
@@ -3005,7 +2996,7 @@ alveolar</th>
 <h3>Text alignment &amp; justification</h3>
 <!--p class="seeSamples">See <a href="https://github.com/r12a/typesamples/issues/34" target="_blank">type samples</a>.</p-->
 
-<p>It is traditional for Syloti Nagri texts to be fully justified.</p>
+<p>It is traditional for Syloti Nagri texts to be fully justified.<tt>d</tt></p>
 </section>
 </section>
  
