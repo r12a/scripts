@@ -1,10 +1,3 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
@@ -15,19 +8,8 @@ type:"ideogr", cs:"no", gpos:"no", gsub:"no", cursive:"no", wordsep:"no", baseli
 vowels:"syl:3026", 
 linked:"han", fonts:"/pickers/hani/", 
 },
+// this is replicated in app-charuse/langs
 
-
-
-"hani": {name:"Han", region:"eur", type:"ideo", 
-blocks:17, chars:99110, bletter:98706, bmark:3, bnumber:4, bpunctuation:1, bsymbol:396, bother:0, 
-direction:"ltr tbrl", rtlnumbers:N,
-voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
-case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
-medials:"", finals:"",
-clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
-wordsep:"no",
-linebreak:"char", hyphen:"no ", wordspan:N, justification:"ic", gc:Y, baseline:"ideo", 
-},
 
 
 }

@@ -2275,7 +2275,8 @@ usedfor: "Chinese [zho], Eastern Qiandong Miao [hmq], Ge [hmj], Hmong [hmn], Min
 },
 
 
-hani:{ script:"Han", code:"Hani", name:"Han (Hanzi, Kanji, Hanja)", type:"Logosyllabary",
+hani:{
+script:"Han", code:"Hani", name:"Han (Hanzi, Kanji, Hanja)", type:"Logosyllabary",
 dates:"1stC – today", start:"100", end:"", current_usage:"",
 status:"Used for Chinese, and a number of related languages.",
 origin:"East Asia",
