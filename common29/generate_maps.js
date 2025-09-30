@@ -64,6 +64,8 @@ function gatherData () {
     unwanted = new Set(['d','u','o','a'])
     var status, shape, hex
     
+    
+    
     for (row in spreadsheetRows) {
         if (spreadsheetRows[row][cols.ipaLoc]) {
             //console.log(spreadsheetRows[row][cols.ipaLoc])
@@ -72,6 +74,9 @@ function gatherData () {
             
             // lowercase the IPA
             spreadsheetRows[row][cols.ipaLoc] = spreadsheetRows[row][cols.ipaLoc].toLowerCase()
+            
+            // replace ~ with a space
+            spreadsheetRows[row][cols.ipaLoc] = spreadsheetRows[row][cols.ipaLoc].replace(/~/g,' ')
             
             // make ipaData array: each unique ipa value points to characters
             items = spreadsheetRows[row][cols.ipaLoc].split(' ')
