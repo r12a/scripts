@@ -224,16 +224,17 @@ function makeIndexIntro (node) {
     
     out += `<div id="index_intro">
     <div class="index_intro_column">
-    <p class="instructions">The index points to locations where a character is mentioned in this page, and indicates whether it is used by the ${orthog} orthography described here.</p>
+    <!--p class="instructions">The index points to locations where a character is mentioned in this page, and indicates whether it is used by the ${orthog} orthography described here.</p-->
+    <p class="instructions">Click on a character or its name to create links at the bottom of the window; those point to sections where that character is mentioned. Click on the code point value to see details about that character.</p>
     
     <p class="instructions"><a href="#" onclick="listAllIndexCharacters('arab','arab-fa'); document.getElementById('charCountList').style.display='block'; return false;">Manage characters</a>.</p>
     </div>
     <div class="index_intro_column" id="orthoLinks"></div>
     `
 
-    
-	out += `<div id="orthoLinkSwitch" onmouseover="document.getElementById('orthoLinkPopup').style.display='block'"  
-    onmouseout="document.getElementById('orthoLinkPopup').style.display='none'"><img src="../common/icons/transfer.png" alt="External links">
+    out += `<div style="border:1px solid chocolate; border-radius:1em; padding:.5rem; white-space: nowrap;" onmouseover="document.getElementById('orthoLinkPopup').style.display='block'"  
+    onmouseout="document.getElementById('orthoLinkPopup').style.display='none'">`
+	out += `<div id="orthoLinkSwitch"><img src="../common29/icons/transfer.svg" style="height:2rem;" alt="External links">
 
     <div id="orthoLinkPopup">
     <ul>`
@@ -263,8 +264,13 @@ function makeIndexIntro (node) {
     </div>
     </div>
 
-    <div id="orthoLinkInstructions">
+    <!--div id="orthoLinkInstructions">
     <p>Click on the image to the left to view all the 'main' and 'infrequent' characters in the index in various groupings or open related apps.</p>
+    </div-->
+
+    <div id="orthoLinkInstructions">
+    <p>Export to other apps</p>
+    </div>
     </div>
 	`
     
