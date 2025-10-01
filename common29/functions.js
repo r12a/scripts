@@ -2341,6 +2341,9 @@ function showCharDetailsEvent (evt) {
 	//if (evt.target.closest('.noexpansion')) return
     
 	if (typeof charDetails === 'undefined') return
+    
+    // don't show details for section character lists in right margin
+    if (evt.target.closest('.sectionCharacterList')) return 
 
 	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
     
@@ -2750,10 +2753,10 @@ function makeSafeRegex (str) {
 
 
 function makeFootnoteIndex (charVal) {
-    if (traceSet.has('makeFootnoteIndex')) console.log('makeFootnoteIndex(','charVal='+charVal,')')
-	// when you click on a character in a .listItem or .codepoint this creates a set of links at the bottom
-    // of the page to other locations where that character is mentioned
-    // it also highlights those instances
+    // console.log('makeFootnoteIndex(','charVal='+this.textContent,')')
+	// when you click on a character in a .listItem or .codepoint this
+    // creates a set of links at the bottom of the page to other locations
+    // where that character is mentioned; it also highlights those instances
 
 	// create a regex of the character(s) being looked up
     var incomingValue, itemToFind
@@ -2761,9 +2764,9 @@ function makeFootnoteIndex (charVal) {
     // this creation of itemToFind regex seems unnecessary, and .test was failing 
     // to locate all instances.  Replaced the latter with .includes
     // seems to work: wait a while to ensure it's a good fix, then delete the following
-    if (typeof charVal === 'string') incomingValue = charVal.replace(/◌/g,'')
-    else if (this.querySelector('img')) incomingValue = this.querySelector('img').alt.replace(/◌/g,'')
-    else incomingValue = this.textContent.replace(/◌/g,'')
+    if (typeof charVal === 'string') incomingValue = charVal.replace(/\u25CC/g,'')
+    else if (this.querySelector('img')) incomingValue = this.querySelector('img').alt.replace(/\u25CC/g,'')
+    else incomingValue = this.textContent.replace(/\u25CC/g,'')
     //itemToFind = new RegExp(makeSafeRegex(incomingValue), 'g')
     //console.log('search for:',incomingValue)
     
@@ -2774,7 +2777,6 @@ function makeFootnoteIndex (charVal) {
 	var possibleMatches = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
 	var counter = 0
 	var links = []
-    //for (x=0;x<possibleMatches.length;x++) if (traceSet.has('makeFootnoteIndex')) console.log('possibleMatch:',possibleMatches[x].textContent)
     
     // clear any existing highlights
 	for (var k=0;k<possibleMatches.length;k++) {
@@ -2788,13 +2790,12 @@ function makeFootnoteIndex (charVal) {
         if (possibleMatches[i].querySelector('img')) possibleMatchValue = possibleMatches[i].querySelector('img').alt
         else possibleMatchValue = possibleMatches[i].textContent
         
-        //if (traceSet.has('makeFootnoteIndex')) console.log('Seeking possibleMatch in:',possibleMatchValue)
+        //console.log('Seeking possibleMatch in:',possibleMatchValue)
         
         // if this is a span around a character name, ignore it
         // otherwise check whether the possible match matches the thing we're looking for
         if (possibleMatches[i].parentNode.nodeName !== 'A' && 
-       // itemToFind.test(possibleMatches[i].textContent)) {
-        possibleMatchValue.includes(incomingValue)) {
+            possibleMatchValue.includes(incomingValue)) {
             possibleMatches[i].style.backgroundColor = '#ffa442ad'
             possibleMatches[i].style.borderRadius = '5px'
             possibleMatches[i].style.paddingInline = '.25rem'
@@ -2808,12 +2809,12 @@ function makeFootnoteIndex (charVal) {
             }
 		}
 
-    //if (traceSet.has('makeFootnoteIndex')) console.log('links',links)
+    // console.log('links',links)
 
 	// remove redundancy from the links array
 	const uniqueLinks = new Set(links)
 	var leanLinks = [...uniqueLinks]
-	//if (traceSet.has('makeFootnoteIndex')) console.log(leanLinks)
+	// console.log(leanLinks)
 	
 	// report the results
 	if (document.getElementById('phoneLinks')) {
@@ -2823,14 +2824,13 @@ function makeFootnoteIndex (charVal) {
                 console.log('*** Undefined leanLinks in makeFootnoteIndex')
                 continue
                 }
-            if (i>0) out += ' • '
+            if (i>0) out += ' \u2022 '
             out += `<a href="#${ leanLinks[i] }"`
             // open the index, if necessary
             if (leanLinks[i].startsWith('index')) {
                 out += ` onclick = "var indexSections = document.getElementById('index').querySelectorAll('details'); for (i=0;i<indexSections.length;i++) indexSections[i].open = true"`
                 }
             out += `>${ leanLinks[i] }</a> `
-            //out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
             }
         out += ` \u2022 <a href="${ langTag }_vocab.html?q=${ incomingValue }" target="terms">terms list</a>`
 		document.getElementById('phoneLinks').style.display = 'block'
@@ -2841,6 +2841,9 @@ function makeFootnoteIndex (charVal) {
 		else alert('No matches found.')
 		}
 	}
+
+
+
 
 
 
@@ -3471,6 +3474,7 @@ function addCharacterLists () {
 
     if (document.getElementById('vowels') && document.getElementById('vowels').querySelector('aside') !== null) listSectionCharacters('vowels')
     if (document.getElementById('consonants') && document.getElementById('consonants').querySelector('aside') !== null)listSectionCharacters('consonants')
+    if (document.getElementById('novowel') && document.getElementById('novowel').querySelector('aside') !== null)listSectionCharacters('novowel')
     if (document.getElementById('inline') && document.getElementById('inline').querySelector('aside') !== null)listSectionCharacters('inline')
     
     }
@@ -3505,12 +3509,20 @@ function listSectionCharacters (section) {
     `
     
     replaceStuff(document.getElementById(section).querySelector('figure'))
-    listItems = document.getElementById(section).querySelectorAll('.listItem')
+    //listItems = document.getElementById(section).querySelectorAll('.listItem')
+    listItems = document.getElementById(section).querySelector('aside').querySelectorAll('.listItem')
+    //console.log('section',section)
+    //console.log('listitems',listItems)
 	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
     
-    console.log('charlist',charList)
+    
+    //console.log('charlist',charList)
     document.getElementById(section).querySelector('aside').innerHTML += `<p class="instructions" style="text-align:end;"><a href="../apps/listcategories/index.html?chars=${ charList.replace(/\u2423/g,'') }" target="_blank">Triage by General Category</a></p>`
     }
+
+
+
+
 
 
 
