@@ -131,7 +131,7 @@ reflist = {
 
 
 scriptLanguageList = {
-syl:{name:"Sylheti", url:"sylo/syl"},
+syl:{name:"Sylheti", url:"syl.html"},
 }
 
 
