@@ -4,221 +4,82 @@
 
 
 function getData (script) {
+    console.log('>> getData( ', script, ')')
 	var out, lc, norm, temp
 	
+    //console.log(window.scriptInfo)
 	script = script.toLowerCase()
-    if (! linkDB[script]) return '<p>No data found.</p>'
+    //if (linkDB === '') return '<p>No data found.</p>'
+    if (typeof scriptInfo === 'undefined') return '<p>No data found.</p>'
     
-	record = linkDB[script]
+	record = scriptInfo
+    // console.log('RECORD', record)
 	lc = script.toLowerCase()
-	if (record.script) norm = linkDB[script].script.toLowerCase().replace(/ /g,'_')
+	if (record.script) norm = scriptInfo.script.toLowerCase().replace(/ /g,'_')
     
-    //    'cans':'Eastern Canadian Inuktitut, Plains Cree',  
-
-    
-// temporary code to capture db fields for integration
-
-if (! record.ssHistory) {
-    if (record.charts) {
-        oldcharts = record.charts
-        record.charts = []
-        for (c=0;c<oldcharts.length;c++) {
-            pair = []
-            pair.push(oldcharts[c])
-            pair.push(blockStart[oldcharts[c].toLowerCase().replace(/ /g,'_')])
-            record.charts.push(pair)
-            }
-        console.log(record.charts)
-        }
-    
-    if (scriptNotes[record.code.toLowerCase()]) {
-        record.scriptNotes = scriptNotes[record.code.toLowerCase()]
-        console.log('scriptNotes', record.scriptNotes)
-        }
-    else console.log('No scriptnotes for', record.code)
-    
-    if (charNotesList[record.code.toLowerCase()]) {
-        record.charNotesList = charNotesList[record.code.toLowerCase()]
-        console.log('charNotesList', record.charNotesList)
-        }
-    else console.log('No scriptNotes for', record.code)
-    
-    if (orthoChart[record.code.toLowerCase()]) {
-        record.orthoChart = orthoChart[record.code.toLowerCase()]
-        console.log('orthoChart', record.orthoChart)
-        }
-    else console.log('No orthoChart for', record.code)
-    
-    if (ssHistory[record.code.toLowerCase()]) {
-        record.ssHistory = ssHistory[record.code.toLowerCase()]
-        console.log('ssHistory', record.ssHistory)
-        }
-    else console.log('No ssHistory for', record.code)
-    
-    if (chapters[record.code.toLowerCase()]) {
-        record.chapters = chapters[record.code.toLowerCase()]
-        console.log('chapters', record.chapters)
-        }
-    else console.log('No chapters for', record.code)
-    
-    if (blockStart[record.script.toLowerCase().replace(/ /g,'_')]) {
-        record.blockStart = blockStart[record.script.toLowerCase().replace(/ /g,'_')]
-        console.log('blockStart', record.blockStart)
-        }
-    else console.log('No blockStart for', record.script.toLowerCase().replace(/ /g,'_'))
-    
-    
-    }
-
-outcode = `${lc}:{ script:"${record.script}", code:"${record.code}", name:"${record.name}", type:"${record.type}",
-dates:"${record.dates}", start:"${record.start}", end:"${record.end}", current_usage:"${record.current_usage}",
-status:"${record.status}",
-origin:"${record.origin}",
-info:{ wikipedia:"${record.info.wikipedia}", omniglot:"${record.info.omniglot}" },
-local: [ ], layout: [ ],
-charts: [ `
-for (c=0;c<record.charts.length;c++) {
-    outcode += '["'+record.charts[c][0]+'", "'+record.charts[c][1]+'"]'
-    if (c<record.charts.length-1) outcode += ', '
-    }
-outcode += ` ],
-`
-if (record.scriptNotes) {
-    outcode += `scriptNotes: [`
-    for (n=0;n<record.scriptNotes.length;n++) {
-        outcode += '["'+record.scriptNotes[n][0]+'", "'+record.scriptNotes[n][1]+'"]'
-        if (n<record.scriptNotes.length-1) outcode += ', ' 
-        }
-    outcode += `],
-`
-    }
-if (record.charNotesList) {
-    outcode += `charNotesList:[`
-    if (record.charNotesList.length > 0) outcode += `"${record.charNotesList[0]}", "${record.charNotesList[1]}"`
-    outcode += `],
-`
-    }
-outcode += `orthoChart: "${record.orthoChart}",
-ssHistory: "${record.ssHistory}",
-chapters: "${record.chapters}",
-usedfor: "${record.usedfor}",
-},
-`
-
-/*
-outcode = `${lc}:{ script:"${record.script}", code:"${record.code}", name:"${record.name}", type:"${record.type}",
-dates:"${record.dates}", start:"${record.start}", end:"${record.end}", current_usage:"${record.current_usage}",
-status:"${record.status}",
-origin:"${record.origin}",
-info:{ wikipedia:"${record.info.wikipedia}", omniglot:"${record.info.omniglot}" },
-local: [ ], layout: [ ],
-charts: [ `
-for (c=0;c<record.charts.length;c++) {
-    outcode += '["'+record.charts[c]+'", "'+blockStart[record.charts[c].toLowerCase().replace(/ /g,'_')]+'"]'
-    if (c<record.charts.length-1) outcode += ', '
-    }
-outcode += ` ],
-scriptNotes: [`
-notes = scriptNotes[record.code.toLowerCase()]
-cnotes = charNotesList[record.code.toLowerCase()]
-console.log(notes)
-for (n=0;n<notes.length;n++) {
-    outcode += '["'+notes[n][0]+'", "'+notes[n][1]+'"]'
-    if (n<notes.length-1) outcode += ', ' 
-    }
-outcode += `],
-charNotesList:["${cnotes[0]}", "${cnotes[1]}"],
-orthoChart: "${orthoChart[record.code.toLowerCase()]}",
-ssHistory: "${ssHistory[record.code.toLowerCase()]}",
-chapter: "${chapters[record.code.toLowerCase()]}", blockStart: "${blockStart[record.script.toLowerCase().replace(/ /g,'_')]}",
-usedfor: "${record.usedfor}",
-},
-`
-*/
-
-
 
 	// title
 	if ( record.name ) out = '<h2>'+record.name+'</h2>'
 	else out = '<h2>'+record.script+'</h2>'
 
-    if (scriptSummaries[lc]) document.getElementById('scriptIntro').innerHTML = scriptSummaries[lc].history+'<br><br>'+scriptSummaries[lc].description+'<br><br>'+scriptSummaries[lc].unicode
+    // add descriptions to the right column
+    document.getElementById('scriptIntro').innerHTML = record.history+'<br><br>'+record.description+'<br><br>'+record.unicode
 
-/*
-    if (scriptSummaries[lc].description) {
-        out += `<p class="intro">${ scriptSummaries[lc].description }</p>`
-        }
-*/
 
-    out += '<table class="links"><tbody>'
+    out += `<table class=""><tbody>`
 
 	// script code
-	out += '<tr><th>Script code:</th><td>'
-	out += lc
-	out += '</td></tr>'
+	out += `<tr><td><b>Script code:</b><p>${ record.code.toLowerCase() }</p></td>`
 
-/*
+
+	// type
+	if (record.type) {
+		out += '<td><b>Type:</b>'
+		out += '<p class="scripttype">'+record.type+'</p>'
+        out += '</td>'
+		}
+
 	// chronology
-	if (record.dates) {
 		temp = ''
-		temp += '<tr><th>Chronology:</th><td>'
+		temp += '<td><b>Chronology:</b>'
 		temp += '<p>'
-		if (record.end) temp+= 'Historic script <span style="font-size:80%;">('+record.dates+')</span>'
-		else if (record.current_usage) temp += record.dates+ ', <span style="font-size:80%">but with limited usage ('+record.current_usage+')</span>'
-		else temp += record.dates
+		temp += record.dates
 		temp += '</p>'
 		if (record.status) {
 			temp += '<p class="status">'+record.status+'</p>'
 			}
 		temp += '</td></tr>'
 		out += temp
-		}
-*/
+	out += `</tbody></table>`
 
-	// chronology
-	if (scriptSummaries[lc]) {
-		temp = ''
-		temp += '<tr><th>Chronology:</th><td>'
-		temp += '<p>'
-		temp += scriptSummaries[lc].dates
-		temp += '</p>'
-		if (scriptSummaries[lc].status) {
-			temp += '<p class="status">'+scriptSummaries[lc].status+'</p>'
-			}
-		temp += '</td></tr>'
-		out += temp
-		}
-
-
-	// type
-	if (record.type) {
-		out += '<tr><th>Type:</th><td>'
-		out += '<p class="scripttype">'+record.type+'</p>'
-        out += '</td>'
-		}
+    out += `<table class="links"><thead><tr>
+    <th style="width:50%;">&nbsp;</th>
+    <th style="width:50%;">&nbsp;</th>
+    </tr></thead><tbody>`
 
 
 	// orthography descriptions
-	if (record.scriptNotes) {
-        out += '<tr><th>Orthography descriptions:</th><td style="font-size:1.2em;">'
+	if (record.scriptNotes && record.scriptNotes.length > 0) {
+        out += '<tr><td><b>Orthography descriptions:</b><p style="font-size:1.2em;">'
 		if (record.scriptNotes && record.scriptNotes.length > 0) {
             for (let n=0;n<record.scriptNotes.length;n++) {
-                out += '<p><a href="'+record.scriptNotes[n][1]+'" target="_blank">'+record.scriptNotes[n][0]+'</a>'
+                out += '<p style="font-size:1.2em;"><a href="'+record.scriptNotes[n][1]+'" target="_blank">'+record.scriptNotes[n][0]+'</a>'
                 if (clickthrough && [...clickthrough].length < 2) out += `<span class="clickthrough"><a href="${ record.scriptNotes[n][1] }?showIndex#index${ clickthrough }" target="_blank">find ${ clickthrough }</a></span>`
                 out += '</p>'
                 }
             }
-		out += '</td></tr>'
+		out += '</td>'
 		}
 
 
 
+
 	// pickers 
-	if (record.pickers) {
-        out += '<tr><th>Pickers:</th><td style="font-size:1.1em;">'
+	if (record.pickers && record.pickers.length > 0) {
+        out += '<td><b>Pickers:</b>'
 		if (record.pickers && record.pickers.length > 0) {
             for (let n=0;n<record.pickers.length;n++) {
-                out += '<p><a href="../pickers/'+record.pickers[n][1]+'/index.html" target="_blank">'+record.pickers[n][0]+'</a>'
+                out += '<p style="font-size:1.1em;"><a href="../pickers/'+record.pickers[n][1]+'/index.html" target="_blank">'+record.pickers[n][0]+'</a>'
                 if (clickthrough) out += `<span class="clickthrough"><a href="${ record.pickers[n][1] }?showIndex#index${ clickthrough }" target="_blank">find ${ clickthrough }</a></span>`
                 out += '</p>'
                 }
@@ -227,19 +88,14 @@ usedfor: "${record.usedfor}",
 		}
 
 
-	// pickers OLD
-	/*temp = ''
-	temp += '<tr><th>Pickers:</th><td>'
-	for (let p=0;p<plist.length;p++) {
-		if (plist[p].tag === script) {
-            temp += '<p><a href="../pickers/'+plist[p].url+'" target="_blank">'+plist[p].name+'</a>'
-            if (clickthrough) temp += `<span class="clickthrough"><a href="../pickers/${ plist[p].url }?text=${ clickthrough }" target="_blank">add ${ clickthrough }</a></span>`
-            temp += '</p>'
-            }
-		}
-	temp += '</td></tr>'
-	if (temp !== '<tr><th>Pickers:</th><td></td></tr>') out += temp
-    */
+
+
+	// term lists
+	if (record.terms && record.terms.length > 0) {
+        out += '<tr><td><b>Term lists:</b>'
+        for (let n=0;n<record.terms.length;n++) out += '<p><a href="'+record.terms[n][1]+'" target="_blank">'+record.terms[n][0]+'</a></p>'
+ 		out += '</td>'
+        }
 
 
 
@@ -254,43 +110,39 @@ usedfor: "${record.usedfor}",
 			}
 		}
 	if (temp !== '') {
-		out += '<tr><th>Character usage:</th><td>'
+		out += '<td><b>Character usage:</b><p>'
 		out += temp
-		out += '</td></tr>'
+		out += '</p></td></tr>'
 		}
-
-
-
-
-	// term lists
-	if (record.terms) {
-        out += '<tr><th>Term lists:</th><td>'
-        for (let n=0;n<record.terms.length;n++) out += '<p><a href="'+record.terms[n][1]+'" target="_blank">'+record.terms[n][0]+'</a></p>'
- 		out += '</td></tr>'
-        }
-
 
 
 
 	// general info
 	if (record.info) {
-		out += '<tr><th>General info:</th><td>'
-		if (record.htmlchapter) out += `<p><a target="_blank" href="https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-${ record.htmlchapter }">Unicode</a></p>`
-		else out += `<p><a target="_blank" href="http://www.unicode.org/versions/latest/ch${ record.chapters }.pdf">Unicode</a></p>`
-		out += `<p><a target="_blank" href="http://scriptsource.org/scr/${ record.code }">Scriptsource</a></p>`
-		if (record.info.wikipedia) out += '<p><a target="_blank" href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'">Wikipedia</a></p>'
+		out += '<tr><td><b>General info:</b>'
+		if (record.htmlchapter) out += 
+            `<p><a target="_blank" href="https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-${ record.htmlchapter }">Unicode</a></p>`
+		else out += 
+            `<p><a target="_blank" href="http://www.unicode.org/versions/latest/ch${ record.chapters }.pdf">Unicode</a></p>`
+		out += 
+            `<p><a target="_blank" href="http://scriptsource.org/scr/${ record.code }">Scriptsource</a></p>`
+		if (record.info.wikipedia) out += 
+            '<p><a target="_blank" href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'">Wikipedia</a></p>'
 		if (record.info.omniglot) {
-			if ( record.info.omniglot.match('http') ) out += '<p><a target="_blank" href="'+record.info.omniglot+'">Omniglot</a></p>'
-			else out += '<p><a target="_blank" href="http://www.omniglot.com/writing/'+record.info.omniglot+'.htm">Omniglot</a></p>'
+			if ( record.info.omniglot.match('http') ) out += 
+                '<p><a target="_blank" href="'+record.info.omniglot+'">Omniglot</a></p>'
+			else out += 
+                '<p><a target="_blank" href="http://www.omniglot.com/writing/'+record.info.omniglot+'.htm">Omniglot</a></p>'
 			}
-		if (record.info.endalpha) out += '<p><a target="_blank" href="https://www.endangeredalphabets.net/alphabets/'+record.info.endalpha+'">Endangered alphabets</a></p>'
+		if (record.info.endalpha) out += 
+            '<p><a target="_blank" href="https://www.endangeredalphabets.net/alphabets/'+record.info.endalpha+'">Endangered alphabets</a></p>'
         
-        if (record.orthoChart) out += '<p><a href="script-features/index.html" target="_blank">Script comparison table</a></p></td></tr>'
+        if (record.orthoChart) out += 
+            '<p><a href="script-features/index.html" target="_blank">Script comparison table</a></p></td>'
 
-		//if (record.info.endangered[lc]) out += '<p><a target="_blank" href="https://www.endangeredalphabets.net/alphabets/'+endangered[lc]+'">Endangered alphabets</a></p>'
-		// ?
-		for (let r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" >'+record.info[r].name+'</a></p>'
-		out += '</td></tr>'
+		// Add any other local documents
+		//for (let r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" >'+record.info[r].name+'</a></p>'
+		//out += '</td></tr>'
 		}
 
 
@@ -300,7 +152,7 @@ usedfor: "${record.usedfor}",
 
 	// character detail
 	if (record.charNotesList && record.charNotesList.length > 0 || record.ssHistory) {
-		out += '<tr><th>Character detail:</th><td>'
+		out += '<td><b>Character detail:</b>'
 		out += '<p><a href="http://scriptsource.org/entry/'+record.ssHistory+'" target="_blank">Unicode historical documents</a></p>'
 		
         if (record.scriptNotes && record.scriptNotes.length > 0) {
@@ -323,7 +175,7 @@ usedfor: "${record.usedfor}",
 	// other info
 	if ((record.local && record.local.length > 0) || (record.layout && record.layout.length > 0) || record.orthoChart) {
 		var temp = ''
-        temp += '<tr><th>Other info:</th><td>'
+        temp += '<tr><td colspan="2"><b>Other info:</b>'
 		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" target="_blank">'+record.local[r].name+'</a></p>'
 		if (record.layout && record.layout.length > 0) {
             for (let n=0;n<record.layout.length;n++) temp += '<p><a href="'+record.layout[n].url+'" target="_blank">'+record.layout[n].name+'</a></p>'
@@ -331,27 +183,17 @@ usedfor: "${record.usedfor}",
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>Other info:</th><td></td></tr>') out += temp
 		}
-		
-		
-
-
-    // charts table
-	if (record.charts) {
-		out += '<tr><th>Charts:</th><td><table><tbody>'
-		for (var r=0;r<record.charts.length;r++) out += '<tr><td>'+record.charts[r][0]+'</td><td><a href="../uniview/index.html?block='+record.charts[r][0].toLowerCase().replace(/ /g,'_')+'" target="_blank">UniView</a></td><td><a href="http://www.unicode.org/charts/PDF/U'+record.charts[r][1]+'.pdf" target="_blank">Unicode</a></td></tr>'
-		out += '</tbody></table></td></tr>'
-		}
 
 
 
 	//  fonts
 	temp = ''
 	if (sampleScriptsIndex[lc] && sampleScriptsIndex[lc].font) {
-		temp = '<tr><th>Fonts:</th><td>'
+		temp = '<tr><td><b>Fonts:</b>'
 		for (let i=0;i<sampleScriptsIndex[lc].font.length;i++) temp += '<p><a href="fontlist/index.html?script='+sampleScriptsIndex[lc].font[i]+'" target="_blank">'+sampleScriptsIndex[lc].font[i]+'</a></p>'
 		}
-	temp += '</td></tr>'
-	if (temp !== '<tr><th>Fonts:</th><td></td></tr>') out += temp
+	temp += '</td>'
+	if (temp !== '<tr><th>Fonts:</th><td></td>') out += temp
 
 
 
@@ -360,7 +202,7 @@ usedfor: "${record.usedfor}",
 	// phrases
 	temp = ''
 	if ((phrasesList[lc] || sampleScriptsIndex[lc])) {
-		temp = '<tr><th>Samples:</th><td>'
+		temp = '<td><b>Samples:</b>'
 		if (sampleScriptsIndex[lc]) {
 			temp += '<p><a href="samples/index.html?script='+lc+'" target="_blank">Sample DB</a> ('
 			for (let i=0;i<sampleScriptsIndex[lc].langs.length;i++) {
@@ -373,6 +215,16 @@ usedfor: "${record.usedfor}",
 		}
 	temp += '</td></tr>'
 	if (temp !== '<tr><th>Samples:</th><td></td></tr>') out += temp
+		
+		
+
+
+    // charts table
+	if (record.charts) {
+		out += '<tr><td colspan="2"><b>Charts:</b><table><tbody>'
+		for (var r=0;r<record.charts.length;r++) out += '<tr><td colspan="3">'+record.charts[r][0]+'</td><td><a href="../uniview/index.html?block='+record.charts[r][0].toLowerCase().replace(/ /g,'_')+'" target="_blank">UniView</a></td><td><a href="http://www.unicode.org/charts/PDF/U'+record.charts[r][1]+'.pdf" target="_blank">Unicode</a></td></tr>'
+		out += '</tbody></table></td></tr>'
+		}
   
 
 
@@ -381,7 +233,7 @@ usedfor: "${record.usedfor}",
     // used for
 	if (record.usedfor) {
 		var temp = ''
-		temp += '<tr><th>Used for:</th><td>'
+		temp += '<tr><td colspan="2"><b>Used for:</b>'
 		temp += '<p class="usedfor">'+record.usedfor.replace(/],/g,'],&nbsp;&nbsp;&nbsp;')+'</p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>Used for:</th><td></td></tr>') out += temp
@@ -392,17 +244,17 @@ usedfor: "${record.usedfor}",
 
 
     // lineage & siblings
-	if (scriptSummaries[lc] && scriptSummaries[lc].lineage) {
+	if (record.lineage) {
 		var temp = ''
-		temp += '<tr><th>Lineage:</th><td>'
-		temp += `<p class="lineage">${ scriptSummaries[lc].lineage.replace(/>/g,' → ') }</p>`
+		temp += '<tr><td colspan="2"><b>Lineage:</b>'
+		temp += `<p class="lineage">${ record.lineage.replace(/>/g,' → ') }</p>`
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>Lineage:</th><td></td></tr>') out += temp
 		}
-	if (scriptSummaries[lc] && scriptSummaries[lc].siblings) {
+	if (record.siblings) {
 		var temp = ''
-		temp += '<tr><th>Siblings:</th><td>'
-		temp += `<p class="siblings">${ scriptSummaries[lc].siblings }</p>`
+		temp += '<tr><td colspan="2"><b>Siblings:</b>'
+		temp += `<p class="siblings">${ record.siblings }</p>`
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>Lineage:</th><td></td></tr>') out += temp
 		}
@@ -567,8 +419,8 @@ function getScriptCode (script) {
 	script = script.replace(/%20/g, ' ')
     script = script.toLowerCase()
     
-    for (record in linkDB) {
-		if (linkDB[record].script.toLowerCase() === script) {
+    for (record in scriptInfo) {
+		if (scriptInfo[record].script.toLowerCase() === script) {
 			code = linkDB[record].code
 			found = true
 			break
