@@ -153,7 +153,9 @@ function getData (script) {
 	// character detail
 	if (record.charNotesList && record.charNotesList.length > 0 || record.ssHistory) {
 		out += '<td><b>Character detail:</b>'
-		out += '<p><a href="http://scriptsource.org/entry/'+record.ssHistory+'" target="_blank">Unicode historical documents</a></p>'
+		//out += '<p><a href="http://scriptsource.org/entry/'+record.ssHistory+'" target="_blank">Unicode historical documents</a></p>'
+		
+		out += '<p><a href="https://writingsystems.info/scrlang/unicode/'+record.code.toLowerCase()+'-unicode/" target="_blank">Unicode historical documents</a></p>'
 		
         if (record.scriptNotes && record.scriptNotes.length > 0) {
             out += '<p>'
