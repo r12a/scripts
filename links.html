@@ -8,18 +8,43 @@
 <link rel="stylesheet" href="linkdata/menu.css" />
 <link rel="stylesheet" href="linkdata/scriptlinks.css" />
 
+<script src="linkdata/linksfunctions.js"></script>
+<script>
+// pull in the right script data file
+var script = ''
+var isoCode = ''
+var scriptparameter = ''
+var clickthrough = ''
+var parameters = location.search.split('&')
+parameters[0] = parameters[0].substring(1)
+for (var p=0;p<parameters.length;p++) {  
+	var pairs = parameters[p].split('=')
+	if (pairs[0] == 'script') { script = pairs[1] }
+	if (pairs[0] == 'iso') { isoCode = pairs[1] }
+	if (pairs[0] == 'clickthrough') { clickthrough = decodeURI(pairs[1]) }
+	}
+
+// load the appropriate db file	
+var db = document.createElement('script')
+db.src = `../shared/scriptinfo/${ isoCode.toLowerCase() }.js`
+db.async = false
+document.head.appendChild(db)
+
+linkDB = ''
+</script>
+
 <script src="../shared/code/boilerplate.js"></script>
-<script src="linkdata/linkdb.js"></script>
+<!--<script src="linkdata/linkdb.js"></script>-->
 <script src="../pickers/pickerlistdb.js"></script>
 <script src="../scripts/phraseslist.js"></script>
 <script src="../app-charuse/langs.js"></script>
-<script src="linkdata/linksfunctions.js"></script>
 <!--script src="linksfunctions.js"></script-->
 <script src="../shared/phrasedb/samplescripts.js"> </script>
-<script src="../shared/scriptdb/script_summaries.js"> </script>
+<!--<script src="../shared/scriptdb/script_summaries.js"> </script>-->
+
 </head>
 
-<body>
+<body onLoad="getData(isoCode.toLowerCase())">
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../shared/images/world.gif','docs');</script>
 
@@ -301,17 +326,17 @@ invented after ~1900</label></p>
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2025-05-12  7:25<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2025-10-01  14:37<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
 <script>
 var options = document.getElementsByTagName('a')
-var script = ''
+/*var script = ''
 var isoCode = ''
 var scriptparameter = ''
 var clickthrough = ''
-var parameters = location.search.split('&')
+*//*var parameters = location.search.split('&')
 parameters[0] = parameters[0].substring(1)
 for (var p=0;p<parameters.length;p++) {  
 	var pairs = parameters[p].split('=')
@@ -321,6 +346,8 @@ for (var p=0;p<parameters.length;p++) {
 	}
 if (script !== '') { getData(getScriptCode(script)) }
 if (isoCode !== '') { getData(isoCode) }
+*/
+
 </script>
 </body>
 </html>
