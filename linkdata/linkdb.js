@@ -113,7 +113,8 @@ layout: [
 },
 
 
-aghb:{ script:"Caucasian Albanian", code:"Aghb", name:"", type:"alphabet",
+aghb:{
+script:"Caucasian Albanian", code:"Aghb", name:"", type:"alphabet",
 dates:"5thC – 12thC", start:"400", end:"1100", current_usage:"",
 status:"",
 origin:"Europe",
@@ -128,7 +129,8 @@ usedfor: "Lezgi [lez]",
 },
 
 
-cprt:{ script:"Cypriot", code:"Cprt", name:"", type:"Syllabary, RTL",
+cprt:{
+script:"Cypriot", code:"Cprt", name:"", type:"Syllabary, RTL",
 dates:"BCE 11thC – BCE 3rdC", start:"-1100", end:"-300", current_usage:"",
 status:"",
 origin:"Europe",
@@ -176,7 +178,8 @@ layout: [ ],
 },
 
 
-elba:{ script:"Elbasan", code:"Elba", name:"", type:"Alphabet",
+elba:{
+script:"Elbasan", code:"Elba", name:"", type:"Alphabet",
 dates:"1761 – ?", start:"1761", end:"?", current_usage:"",
 status:"",
 origin:"Europe",
@@ -213,7 +216,8 @@ layout: [
 },
 
 
-glag:{ script:"Glagolitic", code:"Glag", name:"", type:"Alphabet",
+glag:{
+script:"Glagolitic", code:"Glag", name:"", type:"Alphabet",
 dates:"862 – 1893", start:"862", end:"1893", current_usage:"",
 status:"",
 origin:"Europe",
@@ -229,7 +233,8 @@ usedfor: "Church Slavonic [cu], Chakavian [ckm]",
 },
 
 
-goth:{ script:"Gothic", code:"Goth", name:"", type:"Alphabet",
+goth:{
+script:"Gothic", code:"Goth", name:"", type:"Alphabet",
 dates:"4thC – 9thC", start:"300", end:"900", current_usage:"",
 status:"",
 origin:"Europe",
@@ -291,7 +296,8 @@ layout: [
 },
 
 
-lina:{ script:"Linear A", code:"Lina", name:"", type:"Syllabary & ideographic?",
+lina:{
+script:"Linear A", code:"Lina", name:"", type:"Syllabary & ideographic?",
 dates:"BCE 18thC – BCE 15thC", start:"-1800", end:"-1500", current_usage:"",
 status:"",
 origin:"Europe",
@@ -306,7 +312,8 @@ usedfor: "Minoan [omn], Linear A [lab]",
 },
 
 
-linb:{ script:"Linear B", code:"Linb", name:"", type:"Syllabary",
+linb:{
+script:"Linear B", code:"Linb", name:"", type:"Syllabary",
 dates:"BCE 14thC – BCE 12thC", start:"-1400", end:"-1200", current_usage:"",
 status:"",
 origin:"Europe",
@@ -321,7 +328,8 @@ usedfor: "Mycenian Greek [gmy], Ancient Greek [grc]",
 },
 
 
-ogam:{ script:"Ogham", code:"Ogam", name:"", type:"Alphabet",
+ogam:{
+script:"Ogham", code:"Ogam", name:"", type:"Alphabet",
 dates:"5thC – 7thC", start:"400", end:"700", current_usage:"",
 status:"",
 origin:"Europe",
@@ -336,7 +344,8 @@ usedfor: "Primitive Irish [pgl], Old Irish [sga], Irish [gle]",
 },
 
 
-hung:{ script:"Old Hungarian", code:"Hung", name:"", type:"Alphabet",
+hung:{
+script:"Old Hungarian", code:"Hung", name:"", type:"Alphabet",
 dates:"9thC – today", start:"800", end:"", current_usage:"uptake",
 status:"Since 1915 various attempts have been made to revive the script, especially tied to a nationalist subculture and young people. Publications exist in books, magazines, teaching materials, etc, and it is used on road signage in Budapest.",
 origin:"Europe",
@@ -351,7 +360,8 @@ usedfor: "Old Hungarian [ohu], Hungarian [hu]",
 },
 
 
-ital:{ script:"Old Italic", code:"Ital", name:"", type:"Alphabet",
+ital:{
+script:"Old Italic", code:"Ital", name:"", type:"Alphabet",
 dates:"BCE 8thC – BCE 1stC", start:"800", end:"-100", current_usage:"",
 status:"",
 origin:"Europe",
@@ -366,7 +376,8 @@ usedfor: "Etruscan [ett], Oscan [osc], Paelignian [pgn], Umbrian [xum], Venetic 
 },
 
 
-perm:{ script:"Old Permic", code:"Perm", name:"", type:"Alphabet",
+perm:{
+script:"Old Permic", code:"Perm", name:"", type:"Alphabet",
 dates:"1376 – 17thC", start:"1376", end:"1700", current_usage:"",
 status:"",
 origin:"Europe",
@@ -396,7 +407,8 @@ usedfor: "",
 },
 
 
-runr:{ script:"Runic", code:"Runr", name:"", type:"Alphabet, LTR+boustrophedon",
+runr:{
+script:"Runic", code:"Runr", name:"", type:"Alphabet, LTR+boustrophedon",
 dates:"BCE 1stC – 19thC", start:"100", end:"1900", current_usage:"",
 status:"",
 origin:"Europe",
@@ -413,7 +425,8 @@ usedfor: "Old Norse [non], German [deu], Old English [ang]",
 },
 
 
-shaw:{ script:"Shavian", code:"Shaw", name:"", type:"Alphabet",
+shaw:{
+script:"Shavian", code:"Shaw", name:"", type:"Alphabet",
 dates:"1960s – today", start:"1960", end:"", current_usage:"uptake",
 status:"Used to publish one book in 1962, but remains of some current interest.",
 origin:"Europe",
@@ -466,7 +479,8 @@ usedfor: "Bassa [bsq]",
 },
 
 
-copt:{ script:"Coptic", code:"Copt", name:"", type:"Alphabet",
+copt:{
+script:"Coptic", code:"Copt", name:"", type:"Alphabet",
 dates:"4thC – 14thC", start:"300", end:"1400", current_usage:"liturgical",
 status:"",
 origin:"Africa",
@@ -481,7 +495,8 @@ usedfor: "Egyptian [egy], Andaandi [dgl], Coptic [cop], Mattokki [xnz], Nobiin [
 },
 
 
-egyp:{ script:"Egyptian Hieroglyphs", code:"Egyp", name:"", type:"Logography",
+egyp:{
+script:"Egyptian Hieroglyphs", code:"Egyp", name:"", type:"Logography",
 dates:"BCE 30thC – 1stC CE", start:"-3000", end:"100", current_usage:"",
 status:"",
 origin:"Africa",
@@ -521,7 +536,8 @@ layout: [
 },
 
 
-mend:{ script:"Mende Kikakui", code:"Mend", name:"", type:"Syllabary, RTL",
+mend:{
+script:"Mende Kikakui", code:"Mend", name:"", type:"Syllabary, RTL",
 dates:"1920 – today", start:"1920", end:"", current_usage:"endangered",
 status:"Used by perhaps less than 500 people, in Sierra Leone.",
 origin:"Africa",
@@ -598,7 +614,8 @@ layout: [
 },
 
 
-osma:{ script:"Osmanya", code:"Osma", name:"", type:"Alphabet",
+osma:{
+script:"Osmanya", code:"Osma", name:"", type:"Alphabet",
 dates:"1920 – 1973", start:"1920", end:"1973", current_usage:"",
 status:"",
 origin:"Africa",
@@ -653,7 +670,8 @@ usedfor: "Vai [vai]",
 },
 
 
-hluw:{ script:"Anatolian Hieroglyphs", code:"Hluw", name:"Anatolian (Luwian/Hittite) hieroglyphs", type:"Logographic",
+hluw:{
+script:"Anatolian Hieroglyphs", code:"Hluw", name:"Anatolian (Luwian/Hittite) hieroglyphs", type:"Logographic",
 dates:"BCE 15thC – BCE 7thC", start:"-1500", end:"-700", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -668,7 +686,8 @@ usedfor: "Luwian [hlu]",
 },
 
 
-armi:{ script:"Aramaic", code:"Armi", name:"", type:"Abjad",
+armi:{
+script:"Aramaic", code:"Armi", name:"", type:"Abjad",
 origin:"West Asia",
 info:{ wikipedia:"Aramaic_alphabet", omniglot:"aramaic" },
 local: [ ], layout: [ ],
@@ -682,7 +701,8 @@ usedfor: "Official Aramaic [arc], Western Neo-Aramaic [amw]",
 },
 
 
-avst:{ script:"Avestan", code:"Avst", name:"", type:"Alphabet, RTL",
+avst:{
+script:"Avestan", code:"Avst", name:"", type:"Alphabet, RTL",
 origin:"West Asia",
 info:{ wikipedia:"Avestan_alphabet", omniglot:"avestan" },
 local: [ ], layout: [ ],
@@ -695,7 +715,8 @@ usedfor: "Avestan [ave]",
 },
 
 
-cari:{ script:"Carian", code:"Cari", name:"", type:"alphabet, RTL+LTR",
+cari:{
+script:"Carian", code:"Cari", name:"", type:"alphabet, RTL+LTR",
 dates:"BCE 7thC – BCE 3rdC", start:"-700", end:"-300", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -710,7 +731,8 @@ usedfor: "Carian [xcr]",
 },
 
 
-xsux:{ script:"Cuneiform", code:"Xsux", name:"", type:"Logo-syllabary",
+xsux:{
+script:"Cuneiform", code:"Xsux", name:"", type:"Logo-syllabary",
 dates:"BCE 29thC – 1stC CE", start:"-2900", end:"100", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -725,7 +747,8 @@ usedfor: "Akkadian [akk], Hittite [hit]",
 },
 
 
-hatr:{ script:"Hatran", code:"Hatr", name:"", type:"Abjad, RTL",
+hatr:{
+script:"Hatran", code:"Hatr", name:"", type:"Abjad, RTL",
 dates:"BCE 98 – 240 CE", start:"-98", end:"240", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -763,7 +786,8 @@ layout: [
 },
 
 
-lyci:{ script:"Lycian", code:"Lyci", name:"", type:"Alphabet",
+lyci:{
+script:"Lycian", code:"Lyci", name:"", type:"Alphabet",
 dates:"BCE 5thC – BCE 3rdC", start:"-500", end:"-300", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -779,7 +803,8 @@ usedfor: "Lycian [xlc]",
 },
 
 
-lydi:{ script:"Lydian", code:"Lydi", name:"", type:"Alphabet, RTL+LTR",
+lydi:{ 
+script:"Lydian", code:"Lydi", name:"", type:"Alphabet, RTL+LTR",
 dates:"BCE 8thC – BCE 3rdC", start:"-800", end:"-300", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -815,7 +840,8 @@ usedfor: "Classical Mandaic [myz], Mandaic [mid]",
 },
 
 
-nbat:{ script:"Nabataean", code:"Nbat", name:"", type:"Abjad, RTL",
+nbat:{
+script:"Nabataean", code:"Nbat", name:"", type:"Abjad, RTL",
 dates:"BCE 2ndC – 4thC CE", start:"-200", end:"400", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -831,7 +857,8 @@ usedfor: "Official Aramaic [arc]",
 },
 
 
-narb:{ script:"Old North Arabian", code:"Narb", name:"", type:"Abjad",
+narb:{
+script:"Old North Arabian", code:"Narb", name:"", type:"Abjad",
 dates:"BCE 550 – 4thC CE", start:"-550", end:"400", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -846,7 +873,8 @@ usedfor: "Ancient North Arabian [xna]",
 },
 
 
-xpeo:{ script:"Old Persian", code:"Xpeo", name:"", type:"Alphabet",
+xpeo:{
+script:"Old Persian", code:"Xpeo", name:"", type:"Alphabet",
 dates:"BCE 525 – 4thC CE", start:"-525", end:"400", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -861,7 +889,8 @@ usedfor: "Old Persian [peo]",
 },
 
 
-sarb:{ script:"Old South Arabian", code:"Sarb", name:"", type:"Abjad, RTL",
+sarb:{
+script:"Old South Arabian", code:"Sarb", name:"", type:"Abjad, RTL",
 dates:"BCE 8thC – 7thC CE", start:"-800", end:"700", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -876,7 +905,8 @@ usedfor: "Sabaean [xsa]",
 },
 
 
-phli:{ script:"Inscriptional Pahlavi", code:"Phli", name:"", type:"Abjad, RTL",
+phli:{
+script:"Inscriptional Pahlavi", code:"Phli", name:"", type:"Abjad, RTL",
 dates:"2ndC – 5thC", start:"100", end:"500", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -893,7 +923,8 @@ usedfor: "Pahlavi [pal]",
 
 
 
-phlp:{ script:"Psalter Pahlavi", code:"Phlp", name:"", type:"Abjad, RTL",
+phlp:{
+script:"Psalter Pahlavi", code:"Phlp", name:"", type:"Abjad, RTL",
 dates:"6thC – 7thC", start:"500", end:"700", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -908,7 +939,8 @@ usedfor: "Pahlavi [pal]",
 },
 
 
-palm:{ script:"Palmyrene", code:"Palm", name:"", type:"Abjad, RTL",
+palm:{
+script:"Palmyrene", code:"Palm", name:"", type:"Abjad, RTL",
 dates:"BCE 1stC – 3rdC CE", start:"-100", end:"200", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -924,7 +956,8 @@ usedfor: "Official Aramaic [arc]",
 },
 
 
-prti:{ script:"Inscriptional Parthian", code:"Prti", name:"", type:"Abjad, RTL",
+prti:{
+script:"Inscriptional Parthian", code:"Prti", name:"", type:"Abjad, RTL",
 dates:"2ndC – 292", start:"100", end:"292", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -940,7 +973,8 @@ usedfor: "Parthian [xpr]",
 },
 
 
-phnx:{ script:"Phoenician", code:"Phnx", name:"", type:"Abjad, RTL",
+phnx:{
+script:"Phoenician", code:"Phnx", name:"", type:"Abjad, RTL",
 dates:"BCE 12thC – BCE 2ndC", start:"1200", end:"200", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -956,7 +990,8 @@ usedfor: "Moabite [obm], Phoenician [phn]",
 },
 
 
-samr:{ script:"Samaritan", code:"Samr", name:"", type:"Abjad, RTL",
+samr:{ 
+script:"Samaritan", code:"Samr", name:"", type:"Abjad, RTL",
 dates:"BCE 3rdC – today", start:"-300", end:"", current_usage:"liturgical",
 status:"Used in small communities in Israel and the Palestinian Territories, primarily for religious purposes.",
 origin:"West Asia",
@@ -992,7 +1027,8 @@ usedfor: "Arabic [ara], Neo-Aramaic, Assyrian [aii], Neo-Aramaic, Barzani Jewish
 
 
 
-ugar:{ script:"Ugaritic", code:"Ugar", name:"", type:"Abjad",
+ugar:{
+script:"Ugaritic", code:"Ugar", name:"", type:"Abjad",
 dates:"BCE 14thC – BCE 12thC", start:"-1400", end:"-1200", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -1008,7 +1044,8 @@ usedfor: "Ugaritic [uga]",
 },
 
 
-beng:{ script:"Bengali", code:"Beng", name:"", type:"Abugida",
+beng:{
+script:"Bengali", code:"Beng", name:"", type:"Abugida",
 origin:"South Asia",
 info:{ wikipedia:"Bengali_alphabet", omniglot:"bengali" },
 charts: [ ["Bengali", "0980"] ],
@@ -1029,7 +1066,8 @@ layout: [
 },
 
 
-brah:{ script:"Brahmi", code:"Brah", name:"", type:"Abugida",
+brah:{
+script:"Brahmi", code:"Brah", name:"", type:"Abugida",
 dates:"BCE 3rdC – 10thC CE", start:"-300", end:"1000", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -1064,7 +1102,8 @@ usedfor: "Chakma [ccp], Tangchangya [tnv]",
 },
 
 
-gran:{ script:"Grantha", code:"Gran", name:"", type:"Abugida",
+gran:{
+script:"Grantha", code:"Gran", name:"", type:"Abugida",
 dates:"7thC – today", start:"700", end:"", current_usage:"liturgical",
 status:"Still taught and used in Gūrūkuls, residential Hindu schools. Used used by Tamil-speaking Hindus for a child's name during the naming ceremony, for the Sanskrit portion of wedding invitations, and for announcements of a person's last rites",
 origin:"South Asia",
@@ -1132,7 +1171,8 @@ layout: [
 },
 
 
-kthi:{ script:"Kaithi", code:"Kthi", name:"", type:"Abugida",
+kthi:{
+script:"Kaithi", code:"Kthi", name:"", type:"Abugida",
 dates:"16thC – 20thC", start:"1500", end:"2000", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -1147,7 +1187,8 @@ usedfor: "Bhojpuri [bho], Maithili [mai], Panchpargania [tdb]",
 },
 
 
-knda:{ script:"Kannada", code:"Knda", name:"", type:"Abugida",
+knda:{
+script:"Kannada", code:"Knda", name:"", type:"Abugida",
 dates:"1500 – today", start:"1500", end:"", current_usage:"",
 status:"The script used for the Kannada language, with around 35,000,000 speakers, and also for other minority languages, some of which have millions of speakers also.",
 origin:"South Asia",
@@ -1167,7 +1208,8 @@ layout: [
 },
 
 
-khar:{ script:"Kharoshthi", code:"Khar", name:"", type:"Abugida, RTL",
+khar:{
+script:"Kharoshthi", code:"Khar", name:"", type:"Abugida, RTL",
 dates:"BCE 7thC – 3rdC CE", start:"-700", end:"300", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -1182,7 +1224,8 @@ usedfor: "Gāndhārī [pdg], Prakrit languages [pra]",
 },
 
 
-khoj:{ script:"Khojki", code:"Khoj", name:"", type:"Abugida",
+khoj:{
+script:"Khojki", code:"Khoj", name:"", type:"Abugida",
 dates:"16thC – today", start:"1500", end:"", current_usage:"liturgical",
 status:"Used by the Nizari Ismaili community of South Asia for recording  religious  literature. Manuscripts and  books are used in Ismaili  ceremonies not only in South Asia, but in east and south Africa",
 origin:"South Asia",
@@ -1197,7 +1240,8 @@ usedfor: "Eastern Punjabi [pan], Gujarati [gu], Saraiki [skr], Sindhi [snd], Wes
 },
 
 
-sind:{ script:"Khudawadi", code:"Sind", name:"Khudawadi (Sindhi)", type:"Abugida",
+sind:{
+script:"Khudawadi", code:"Sind", name:"Khudawadi (Sindhi)", type:"Abugida",
 dates:"1868 – 20thC", start:"1868", end:"2000", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -1258,7 +1302,8 @@ layout: [
 },
 
 
-mahj:{ script:"Mahajani", code:"Mahj", name:"", type:"Alphabet",
+mahj:{
+script:"Mahajani", code:"Mahj", name:"", type:"Alphabet",
 dates:"19thC – 20thC", start:"1800", end:"2000", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -1298,7 +1343,8 @@ layout: [
 },
 
 
-gonm:{ script:"Masaram Gondi", code:"Gonm", name:"", type:"Abugida",
+gonm:{
+script:"Masaram Gondi", code:"Gonm", name:"", type:"Abugida",
 dates:"20thC – today", start:"1900", end:"", current_usage:"uptake",
 status:"Some use for handwritten and printed materials, as an alternative to Devanagari and Telugu, and but seemingly less interest than for Gunjala Gondi.",
 origin:"South Asia",
@@ -1313,7 +1359,8 @@ usedfor: "Adilabad Gondi [wsg], Aheri Gondi [esg], Northern Gondi [gon]",
 },
 
 
-mtei:{ script:"Meetei Mayek", code:"Mtei", name:"Meetei Mayek (Meithei, Meitei)", type:"Abugida",
+mtei:{
+script:"Meetei Mayek", code:"Mtei", name:"Meetei Mayek (Meithei, Meitei)", type:"Abugida",
 dates:"11thC – today", start:"1000", end:"", current_usage:"uptake",
 status:"Used to write Manipuri, spoken by about 1,400,000 people in India, primarily in the state of Manipur, in Bangladesh, and in Myanmar. Growing in popularity as a replacement for Bengali script.",
 origin:"South Asia",
@@ -1331,7 +1378,8 @@ layout: [
 },
 
 
-modi:{ script:"Modi", code:"Modi", name:"", type:"Abugida",
+modi:{
+script:"Modi", code:"Modi", name:"", type:"Abugida",
 dates:"17thC – today", start:"1600", end:"", current_usage:"endangered",
 status:"Since the 1950s, mostly historical, apart from limited personal correspondence.",
 origin:"South Asia",
@@ -1369,7 +1417,8 @@ layout: [
 },
 
 
-mult:{ script:"Multani", code:"Mult", name:"", type:"Abjad",
+mult:{
+script:"Multani", code:"Mult", name:"", type:"Abjad",
 dates:"16thC – 20thC", start:"1500", end:"2000", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -1432,7 +1481,8 @@ layout: [
 },
 
 
-saur:{ script:"Saurashtra", code:"Saur", name:"", type:"Abugida",
+saur:{
+script:"Saurashtra", code:"Saur", name:"", type:"Abugida",
 dates:"19thC – today", start:"1800", end:"", current_usage:"community",
 status:"An alternative to Tamil, Telugu, or Devanagari to write the Saurashtra language, spoken by 130,000 people in southern India. Usage may be declining.",
 origin:"South Asia",
@@ -1468,7 +1518,8 @@ usedfor: "Kashmiri [ks], Sanskrit [sa]",
 },
 
 
-sidd:{ script:"Siddham", code:"Sidd", name:"", type:"Abugida",
+sidd:{
+script:"Siddham", code:"Sidd", name:"", type:"Abugida",
 dates:"7thC – today", start:"600", end:"", current_usage:"liturgical",
 status:"Today, mainly used for ceremonial and ritualistic purposes associated with esoteric Buddhist practices in Japan, where it is called Bonji.",
 origin:"South Asia",
@@ -1543,7 +1594,8 @@ usedfor: "Sylheti [syl]",
 },
 
 
-takr:{ script:"Takri", code:"Takr", name:"", type:"Abugida",
+takr:{
+script:"Takri", code:"Takr", name:"", type:"Abugida",
 dates:"17thC – 20thC", start:"1600", end:"2000", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -1629,7 +1681,8 @@ usedfor: "Maldivian [dv]",
 },
 
 
-tirh:{ script:"Tirhuta", code:"Tirh", name:"", type:"Abugida",
+tirh:{
+script:"Tirhuta", code:"Tirh", name:"", type:"Abugida",
 dates:"13thC – today", start:"1200", end:"", current_usage:"endangered",
 status:"Now almost completely replaced by Devanagari, Tirhuta is still sometimes used by religious pundits for writing ceremonial letters and documents. Since the 1950s literary societies, such as the Maithili Akademi and Chetna Samiti, have been publishing literary, educational, and linguistic materials, and it is also used for signage in districts  of  north  Bihar.",
 origin:"South Asia",
@@ -1644,7 +1697,8 @@ usedfor: "Maithili [mai]",
 },
 
 
-wara:{ script:"Warang Citi", code:"Wara", name:"Warang Citi (Varang Kshiti)", type:"Abugida",
+wara:{ 
+script:"Warang Citi", code:"Wara", name:"Warang Citi (Varang Kshiti)", type:"Abugida",
 dates:"1950s – today", start:"1950", end:"", current_usage:"uptake",
 status:"Used alongside Devanagari and Odia to write the Ho language, which has around 1,420,000 speakers in Odisha and Jharkhand. The Unicode Standard mentiones a yearly magazine and a biweekly publication.",
 origin:"South Asia",
@@ -1663,7 +1717,8 @@ layout: [
 },
 
 
-mani:{ script:"Manichaean", code:"Mani", name:"", type:"Abjad, RTL",
+mani:{
+script:"Manichaean", code:"Mani", name:"", type:"Abjad, RTL",
 dates:"3rdC – 10thC", start:"200", end:"1000", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -1704,7 +1759,8 @@ layout: [
 },
 
 
-orkh:{ script:"Old Turkic", code:"Orkh", name:"Old Turkic, Orkhon Runic", type:"Alphabet, RTL",
+orkh:{
+script:"Old Turkic", code:"Orkh", name:"Old Turkic, Orkhon Runic", type:"Alphabet, RTL",
 dates:"8thC – 9thC", start:"700", end:"900", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -1719,7 +1775,8 @@ usedfor: "Old Turkish [otk]",
 },
 
 
-phag:{ script:"Phags-Pa", code:"Phag", name:"", type:"Abugida, Vertical-RTL",
+phag:{
+script:"Phags-Pa", code:"Phag", name:"", type:"Abugida, Vertical-RTL",
 dates:"1260 – 1368", start:"1260", end:"1368", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -1734,7 +1791,8 @@ usedfor: "Tibetan [bo], Chinese [zh], Halh Mongolian [mn], Peripheral Mongolian 
 },
 
 
-soyo:{ script:"Soyombo", code:"Soyo", name:"", type:"Abugida",
+soyo:{
+script:"Soyombo", code:"Soyo", name:"", type:"Abugida",
 dates:"17thC", start:"1600", end:"1600", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -1775,7 +1833,8 @@ layout: [
 },
 
 
-zanb:{ script:"Zanabazar Square", code:"Zanb", name:"", type:"Abugida",
+zanb:{
+script:"Zanabazar Square", code:"Zanb", name:"", type:"Abugida",
 dates:"17thC", start:"1700", end:"1800", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -1946,7 +2005,8 @@ layout: [
 },
 
 
-hmng:{ script:"Pahawh Hmong", code:"Hmng", name:"", type:"Inverted abugida",
+hmng:{ 
+script:"Pahawh Hmong", code:"Hmng", name:"", type:"Inverted abugida",
 dates:"1959 – today", start:"1959", end:"", current_usage:"",
 status:"A script used alongside Latin to write several Hmong dialects, in Laos, Thailand, Australia, and the United States.",
 origin:"Southeast Asia",
@@ -1961,7 +2021,8 @@ usedfor: "Hmong Daw [mww], Hmong Njua [hnj], Hmong [hmn], Large Flowery Miao [hm
 },
 
 
-pauc:{ script:"Pau Cin Hau", code:"Pauc", name:"", type:"Alphabet",
+pauc:{
+script:"Pau Cin Hau", code:"Pauc", name:"", type:"Alphabet",
 dates:"1902 – today", start:"1902", end:"", current_usage:"liturgical",
 status:"Liturgical script created to convey the teachings of Pau Cin Hau, who founded the Laipian tradition. Its use declined with that of the Laipian religion.",
 origin:"Southeast Asia",
@@ -2229,7 +2290,8 @@ layout: [
 },
 
 
-tglg:{ script:"Tagalog", code:"Tglg", name:"Tagalog (Baybayin, Alibata)", type:"Abugida",
+tglg:{
+script:"Tagalog", code:"Tglg", name:"Tagalog (Baybayin, Alibata)", type:"Abugida",
 dates:"15thC – 18thC", start:"1500", end:"1800", current_usage:"",
 status:"",
 origin:"Indonesia & Oceania",
@@ -2264,7 +2326,8 @@ usedfor: "Calamian Tagbanwa [tbk], Tagbanwa [tbw]",
 },
 
 
-bopo:{ script:"Bopomofo", code:"Bopo", name:"", type:"Syllabary",
+bopo:{
+script:"Bopomofo", code:"Bopo", name:"", type:"Syllabary",
 dates:"1911 – today", start:"1911", end:"", current_usage:"",
 status:"Used by books, newspapers and journals in Taiwan, to annotate Chinese Han characters or spell out Taiwanese words for which no character exists. Primary script for writing some of Taiwan's minority languages including Atayal, Taroko, Paiwan and Yami.",
 origin:"East Asia",
@@ -2390,7 +2453,8 @@ usedfor: "Aluo [yna], Gepo [ygp], Hmong Daw [mww], Hmong Njua [hnj], Kaduo [ktp]
 },
 
 
-nshu:{ script:"Nushu", code:"Nshu", name:"Nüshu", type:"Logosyllabary",
+nshu:{
+script:"Nushu", code:"Nshu", name:"Nüshu", type:"Logosyllabary",
 dates:"19thC – today", start:"1800", end:"", current_usage:"endangered",
 status:"By the late twentieth century, very few women fluent in the script were still alive. National and  international attention around  Nüshu led to active efforts to study and preserve the script.",
 origin:"East Asia",
@@ -2405,7 +2469,8 @@ usedfor: "Chinese [zhx], Xiang Chinese [hsn], Yang Zhuang [zyg]",
 },
 
 
-yiii:{ script:"Yi", code:"Yiii", name:"", type:"Logosyllabary",
+yiii:{
+script:"Yi", code:"Yiii", name:"", type:"Logosyllabary",
 dates:"7thC – today", start:"600", end:"", current_usage:"",
 status:"Used for writing the Nuoso language, with about 2,000,000 speakers, and other languages of the Yi tribes in China.",
 origin:"East Asia",
@@ -2438,7 +2503,8 @@ usedfor: "Cherokee [chr]",
 },
 
 
-dsrt:{ script:"Deseret", code:"Dsrt", name:"", type:"Alphabet",
+dsrt:{
+script:"Deseret", code:"Dsrt", name:"", type:"Alphabet",
 dates:"1850 – 1869", start:"1850", end:"1869", current_usage:"",
 status:"",
 origin:"Americas",
@@ -2514,7 +2580,8 @@ layout: [
 },
 
 
-bhks:{ script:"Bhaiksuki", code:"Bhks", name:"", type:"Abugida",
+bhks:{
+script:"Bhaiksuki", code:"Bhks", name:"", type:"Abugida",
 dates:"11thC – 12thC", start:"1000", end:"1200", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -2529,7 +2596,8 @@ usedfor: "",
 },
 
 
-marc:{ script:"Marchen", code:"Marc", name:"", type:"Abugida",
+marc:{
+script:"Marchen", code:"Marc", name:"", type:"Abugida",
 dates:"16thC – 20thC", start:"1500", end:"2000", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -2544,7 +2612,8 @@ usedfor: "Tibetan [bo]",
 },
 
 
-tang:{ script:"Tangut", code:"Tang", name:"", type:"Logosyllabary",
+tang:{
+script:"Tangut", code:"Tang", name:"", type:"Logosyllabary",
 dates:"1036 – 16thC", start:"1036", end:"1600", current_usage:"",
 status:"",
 origin:"East Asia",
@@ -2559,7 +2628,8 @@ usedfor: "Tangut [txg]",
 },
 
 
-medf:{ script:"Medefaidrin", code:"Medf", name:"", type:"Alphabet, cased",
+medf:{
+script:"Medefaidrin", code:"Medf", name:"", type:"Alphabet, cased",
 dates:"1930s – today", start:"1930", end:"", current_usage:"liturgical",
 status:"Only used by the Oberi Okaime church, in the Cross-River State of Nigeria, for Sunday school lessons and prayers or meditation.",
 origin:"Africa",
@@ -2574,7 +2644,8 @@ usedfor: "Medefaidrin [dmf]",
 },
 
 
-sogo:{ script:"Old Sogdian", code:"Sogo", name:"", type:"Abjad, RTL",
+sogo:{
+script:"Old Sogdian", code:"Sogo", name:"", type:"Abjad, RTL",
 dates:"3rdC – 6thC", start:"200", end:"600", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -2588,7 +2659,8 @@ htmlchapter: "14/#G49463",
 usedfor: "Sogdian [sog]",
 },
 
-sogd:{ script:"Sogdian", code:"Sogd", name:"", type:"Abjad, RTL",
+sogd:{ 
+script:"Sogdian", code:"Sogd", name:"", type:"Abjad, RTL",
 dates:"7thC – 14thC", start:"600", end:"1400", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -2603,7 +2675,8 @@ usedfor: "Sogdian [sog], Northern Uzbek [uz]",
 },
 
 
-dogr:{ script:"Dogra", code:"Dogr", name:"", type:"Abugida",
+dogr:{
+script:"Dogra", code:"Dogr", name:"", type:"Abugida",
 dates:"15thC – 20thC", start:"1400", end:"2000", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -2642,7 +2715,8 @@ layout: [
 },
 
 
-gong:{ script:"Gunjala Gondi", code:"Gong", name:"", type:"Abugida",
+gong:{
+script:"Gunjala Gondi", code:"Gong", name:"", type:"Abugida",
 dates:"18thC", start:"1700", end:"", current_usage:"uptake",
 status:"Interest growing in revitalisation after discovery of historical documents in Gunjala village in 2010. Some publications, and teaching materials used in some villages with high Gondi population.",
 origin:"South Asia",
@@ -2657,7 +2731,8 @@ usedfor: "Adilabad Gondi [wsg]",
 },
 
 
-maka:{ script:"Makasar", code:"Maka", name:"", type:"",
+maka:{
+script:"Makasar", code:"Maka", name:"", type:"",
 dates:"18thC – 20thC", start:"1700", end:"2000", current_usage:"",
 status:"",
 origin:"Indonesia & Oceania",
@@ -2674,7 +2749,8 @@ usedfor: "Makasar [mak]",
 },
 
 
-nand:{ script:"Nandinagari", code:"Nand", name:"", type:"Abugida",
+nand:{
+script:"Nandinagari", code:"Nand", name:"", type:"Abugida",
 dates:"8thC – 18thC", start:"800", end:"1800", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -2689,7 +2765,8 @@ usedfor: "Kannada [kn], Sanskrit [sa]",
 },
 
 
-elym:{ script:"Elymaic", code:"Elym", name:"", type:"Abjad, RTL",
+elym:{
+script:"Elymaic", code:"Elym", name:"", type:"Abjad, RTL",
 dates:"BCE 5thC – BCE 3rdC", start:"-500", end:"-300", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -2705,7 +2782,8 @@ usedfor: "Elymian [xly]",
 },
 
 
-hmnp:{ script:"Nyiakeng Puachue Hmong", code:"Hmnp", name:"", type:"Alphabet",
+hmnp:{
+script:"Nyiakeng Puachue Hmong", code:"Hmnp", name:"", type:"Alphabet",
 dates:"1980s – today", start:"1980", end:"", current_usage:"liturgical",
 status:"Used by members of the United Christians Liberty Evangelical church in America for more than 25 years, in printed material and videos.",
 origin:"Southeast Asia",
@@ -2740,7 +2818,8 @@ usedfor: "Wanch Naga [nnp]",
 },
 
 
-chrs:{ script:"Chorasmian", code:"Chrs", name:"", type:"Abjad, RTL",
+chrs:{
+script:"Chorasmian", code:"Chrs", name:"", type:"Abjad, RTL",
 dates:"2ndC – 12thC", start:"100", end:"1200", current_usage:"",
 status:"",
 origin:"West Asia",
@@ -2755,7 +2834,8 @@ usedfor: "Chorasmian [xco]",
 },
 
 
-yezi:{ script:"Yezidi", code:"Yezi", name:"", type:"Alphabet, RTL",
+yezi:{
+script:"Yezidi", code:"Yezi", name:"", type:"Alphabet, RTL",
 dates:"? – today", start:"?", end:"", current_usage:"liturgical",
 status:"In revival by the Spiritual Council of Yezidis in Georgia since 2013, mainly for liturgical use in Kurmanji.",
 origin:"West Asia",
@@ -2771,7 +2851,8 @@ usedfor: "Kurdish [kur]",
 },
 
 
-diak:{ script:"Dives Akuru", code:"Diak", name:"", type:"Abugida",
+diak:{
+script:"Dives Akuru", code:"Diak", name:"", type:"Abugida",
 dates:"12thC — 18thC", start:"1100", end:"1800", current_usage:"",
 status:"",
 origin:"South Asia",
@@ -2786,7 +2867,8 @@ usedfor: "Maldivian [dv]",
 },
 
 
-kits:{ script:"Khitan Small Script", code:"Kits", name:"", type:"Logosyllabary",
+kits:{
+script:"Khitan Small Script", code:"Kits", name:"", type:"Logosyllabary",
 dates:"925 – 1191", start:"925", end:"1191", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -2801,7 +2883,8 @@ usedfor: "Khitan [zkt]",
 },
 
 
-vith:{ script:"Vithkuqi", code:"Vith", name:"", type:"Alphabet",
+vith:{
+script:"Vithkuqi", code:"Vith", name:"", type:"Alphabet",
 dates:"1825 – 1845", start:"1825", end:"1845", current_usage:"endangered",
 status:"",
 origin:"Europe",
@@ -2816,7 +2899,8 @@ usedfor: "Albanian [sq]",
 },
 
 
-ougr:{ script:"Old Uyghur", code:"Ougr", name:"", type:"Abjad, RTL",
+ougr:{
+script:"Old Uyghur", code:"Ougr", name:"", type:"Abjad, RTL",
 dates:"8thC – 18thC", start:"700", end:"1700", current_usage:"",
 status:"",
 origin:"Central Asia",
@@ -2831,7 +2915,8 @@ usedfor: "Old Uighur [oui]",
 },
 
 
-cpmn:{ script:"Cypro-Minoan", code:"Cpmn", name:"", type:"Syllabary, undeciphered",
+cpmn:{
+script:"Cypro-Minoan", code:"Cpmn", name:"", type:"Syllabary, undeciphered",
 dates:"1550 – 1050 BC", start:"-1600", end:"-1100", current_usage:"",
 status:"",
 origin:"Europe",
@@ -2846,7 +2931,8 @@ usedfor: "",
 },
 
 
-tnsa:{ script:"Tangsa", code:"Tnsa", name:"", type:"Alphabet",
+tnsa:{
+script:"Tangsa", code:"Tnsa", name:"", type:"Alphabet",
 dates:"1990 – today", start:"1990", end:"", current_usage:"uptake",
 status:"Invented in 1990 by Lakhum Mossang, it has seen limited use among members of the Mossang community and received support from the government of Arunachal Pradesh",
 origin:"Southeast Asia",
@@ -2861,7 +2947,8 @@ usedfor: "Tangshang Naga [nst]",
 },
 
 
-toto:{ script:"Toto", code:"Toto", name:"", type:"Alphabet",
+toto:{
+script:"Toto", code:"Toto", name:"", type:"Alphabet",
 dates:"2015 – Today", start:"2015", end:"", current_usage:"community",
 status:"Developed for the language by community elder and author Dhaniram Toto in 2015. Has seen limited but increasing use in literature, education, and computing.",
 origin:"S Asia",
@@ -2876,7 +2963,8 @@ usedfor: "Toto [txo]",
 },
 
 
-kawi:{ script:"Kawi", code:"Kawi", name:"", type:"Abugida",
+kawi:{
+script:"Kawi", code:"Kawi", name:"", type:"Abugida",
 dates:"8thC — 16thC", start:"700", end:"1500", current_usage:"",
 status:"",
 origin:"SE Asia",
@@ -2959,7 +3047,8 @@ usedfor:"Wolof [wo]",
 
 
 
-todr:{ script:"Todhri", code:"Todr", name:"", type:"Alphabet", 
+todr:{
+script:"Todhri", code:"Todr", name:"", type:"Alphabet", 
 dates:"1795 – 1805", start:"1795", end:"1805", current_usage:"", 
 status: "",
 origin:"Europe",
@@ -2978,7 +3067,8 @@ usedfor:"Albanian [sq]",
 
 
 
-tutg:{ script:"Tulu-Tigalari", code:"Tutg", name:"Tulu-Tigalari, Tigalari, Arya Ezhuttu, Tulu Lipi", type:"Abugida", 
+tutg:{
+script:"Tulu-Tigalari", code:"Tutg", name:"Tulu-Tigalari, Tigalari, Arya Ezhuttu, Tulu Lipi", type:"Abugida", 
 dates:"1300 – today", start:"1300", end:"", current_usage:"uptake", 
 status: "Originally used for Sanskrit Vedic texts, but the Karnataka Govt. has recently added it to the school curriculum in Mangalore and Udupi districts.",
 origin:"South Asia",
@@ -2997,7 +3087,8 @@ usedfor:"Tulu [tcy]",
 
 
 
-gukh:{ script:"Gurung Khema", code:"Ahom", name:"Gurung Khema, Khema", type:"Abugida", 
+gukh:{
+script:"Gurung Khema", code:"Ahom", name:"Gurung Khema, Khema", type:"Abugida", 
 dates:"1995 – today", start:"1995", end:"", current_usage:"uptake", 
 status: "Official script for Gurung, according to the Nepal Language Commission, taught in primary schools in Sikkim and Nepal.",
 origin:"South Asia",
@@ -3036,7 +3127,8 @@ usedfor:"Bantawa [bap]",
 
 
 
-onao:{ script:"Ol Onal", code:"Onao", name:"Ol Onal, Bhumij Lipi, Bhumij Onal", type:"Abugida", 
+onao:{
+script:"Ol Onal", code:"Onao", name:"Ol Onal, Bhumij Lipi, Bhumij Onal", type:"Abugida", 
 dates:"1992 – today", start:"1992", end:"", current_usage:"community", 
 status: "Used to write the Bhumij language, which is endangered.",
 origin:"South Asia",
@@ -3093,7 +3185,8 @@ usedfor:"Zaghawa [zag]",
 },
 
 
-sidt:{ script:"Sidetic", code:"Sidt", name:"", type:"Alphabet", 
+sidt:{
+script:"Sidetic", code:"Sidt", name:"", type:"Alphabet", 
 origin:"Europe",
 info:{ wikipedia:"Sidetic_language", omniglot:"" }, 
 local: [	],
@@ -3111,7 +3204,8 @@ usedfor:"Sidetic [xsd]",
 },
 
 
-chis:{ script:"Chisoi", code:"chis", name:"", type:"Alphabet", 
+chis:{
+script:"Chisoi", code:"chis", name:"", type:"Alphabet", 
 origin:"Europe",
 info:{ wikipedia:"Kurmali_language", omniglot:"" }, 
 local: [	],
