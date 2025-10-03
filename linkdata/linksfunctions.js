@@ -124,10 +124,12 @@ function getData (script) {
             `<p><a target="_blank" href="https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-${ record.htmlchapter }">Unicode</a></p>`
 		else out += 
             `<p><a target="_blank" href="http://www.unicode.org/versions/latest/ch${ record.chapters }.pdf">Unicode</a></p>`
-		out += 
-            `<p><a target="_blank" href="http://scriptsource.org/scr/${ record.code }">Scriptsource</a></p>`
+		//out += 
+        //    `<p><a target="_blank" href="http://scriptsource.org/scr/${ record.code }">Scriptsource</a></p>`
 		if (record.info.wikipedia) out += 
             '<p><a target="_blank" href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'">Wikipedia</a></p>'
+		out += 
+            `<p><a target="_blank" href="https://writingsystems.info/scrlang/scripts/${ record.code.toLowerCase() }/">SIL</a></p>`
 		if (record.info.omniglot) {
 			if ( record.info.omniglot.match('http') ) out += 
                 '<p><a target="_blank" href="'+record.info.omniglot+'">Omniglot</a></p>'
