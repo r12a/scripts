@@ -19,12 +19,27 @@ function getData (script) {
     
 
 	// title
-	if ( record.name ) out = '<h2>'+record.name+'</h2>'
-	else out = '<h2>'+record.script+'</h2>'
+	//if ( record.name ) out = '<h2>'+record.name+'</h2>'
+	//else out = '<h2>'+record.script+'</h2>'
+	out = '<h2>'+record.script+'</h2>'
 
-    // add descriptions to the right column
-    document.getElementById('scriptIntro').innerHTML = record.history+'<br><br>'+record.description+'<br><br>'+record.unicode
+    // add descriptions to the right column    
+    var sidebar = ''
+    
+    sidebar += record.history+'<br><br>'+record.description+'<br><br>'+record.unicode
 
+    if (record.name !== '') {
+        sidebar += `<p style="margin-block:3rem;"><i>Alternate names:</i><br><span style="color:chocolate">`
+        var names = record.name.split(',')
+        for (i=0;i<names.length;i++) sidebar += names[i]+'<br>'
+        sidebar += `</span></p>`
+        }
+
+    document.getElementById('scriptIntro').innerHTML = sidebar
+    
+    
+    
+    
 
     out += `<table class=""><tbody>`
 
