@@ -304,6 +304,7 @@ function getData (script) {
 
 
 function highlight (classNm, checkboxNode) {
+    console.log('>> highlight( ',classNm,checkboxNode,' )')
 	// clear the other checkboxes
 	var checkboxes = document.getElementById('usage').querySelectorAll('input')
 	for (let i=0;i<checkboxes.length; i++) checkboxes[i].checked = false
@@ -312,7 +313,85 @@ function highlight (classNm, checkboxNode) {
 	// fade everything first
 	var scripts = document.querySelectorAll('.script')
 	for (let i=0;i<scripts.length;i++) scripts[i].style.color = '#ccc'
-	
+
+
+	// highlight the chosen few
+	if (classNm === 'active') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('today')) scripts[s].style.color = 'brown'
+			}
+		}
+
+	if (classNm === 'historic') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('historic')) scripts[s].style.color = 'brown'
+			}
+		}
+
+	if (classNm === 'established') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('established')) scripts[s].style.color = 'brown'
+			}
+		}
+
+	if (classNm === 'limited') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('limited')) scripts[s].style.color = 'brown'
+			}
+		}
+
+
+
+	if (classNm === 'recent') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('recent') || scripts[s].classList.contains('vrecent')) scripts[s].style.color = 'brown'
+			}
+		}
+
+	if (classNm === 'vrecent') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('vrecent')) scripts[s].style.color = 'brown'
+			}
+		}
+
+	if (classNm === 'rtl') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('rtl')) scripts[s].style.color = 'brown'
+			}
+		}
+
+
+
+
+	if (classNm === 'alpha') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('alpha')) scripts[s].style.color = 'brown'
+			}
+		}
+
+	if (classNm === 'abjad') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('abjad')) scripts[s].style.color = 'brown'
+			}
+		}
+
+	if (classNm === 'abug') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('abug')) scripts[s].style.color = 'brown'
+			}
+		}
+
+	if (classNm === 'syll') {
+		for (let s=0; s<scripts.length; s++) {
+			if (scripts[s].classList.contains('syll')) scripts[s].style.color = 'brown'
+			}
+		}
+
+
+
+
+
+/*	
 	// highlight the chosen few
 	if (classNm === 'active') {
 		for (let s=0; s<scripts.length; s++) {
@@ -401,6 +480,7 @@ function highlight (classNm, checkboxNode) {
 			if (linkDB[scripts[s].id.toLowerCase()].type && linkDB[scripts[s].id.toLowerCase()].type.includes('syllabary')) scripts[s].style.color = 'brown'
 			}
 		}
+        */
 	}
 
 
