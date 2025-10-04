@@ -33,6 +33,7 @@ function addExamples (langFilter) {
     inline      don't make into a separate, large text block
     transc      used to force display of the transcription rather than the IPA
     alt         displays the IPA/transcription with the special transcription (eg. vowelled version or other orthography than Latin)
+    narrow      displays the narrow IPA if there is one in the penultimate field
     vertical    applies a vertical writing mode, eg. for Mongolian
     
     [LOCALS]
@@ -86,6 +87,7 @@ function addExamples (langFilter) {
             var transc = termdata[3]
             var notes = termdata[4]
             var alt = termdata[4]
+            var narrow = termdata[5]
             
             // choose the source pointer field depending on whether alt has been used
             var source
@@ -159,6 +161,11 @@ function addExamples (langFilter) {
                 out += ' <bdi class="transc"'
                 if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
                 out += `>${ transc }</bdi>`
+                }
+            
+            // add a narrow phonetic transcription if requested & available
+            if (nodes[n].classList.contains('narrow')) {
+                out += ` <bdi class="ipa narrow">${ narrow }</bdi>`
                 }
 
 			// meaning
