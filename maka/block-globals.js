@@ -1,0 +1,11 @@
+langTag = 'mak'
+window.version = 'v29'
+window.scriptName = 'Makasar'
+window.ghDirectory = 'maka'
+window.blockDirectory = 'maka'
+window.languageList = ['mak'] // lang tags for each orthography handled
+window.detailsfileList = ['mak'] // first part of xx-details for each orthography
+window.scriptISO = 'maka'
+window.webfonts = ["Noto Serif Makasar WF"]
+window.defaultSize = '24px'
+hideBlockName = "MAKASAR"
