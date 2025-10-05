@@ -43,6 +43,7 @@ function addPageFeatures () {
     
     makeTables(langTag)  // Create the lists of characters in yellow, etc. boxes
     makeSequenceTables()
+    addCharacterLists()
 
     expandCharMarkup() // Expand spans with ch classes to full character markup
     
@@ -119,7 +120,6 @@ function addPageFeatures () {
     //for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = true
     for (i=0;i<summaryNodes.length;i++) if (summaryNodes[i].parentNode.parentNode.id !== 'page') summaryNodes[i].open = true
     
-    addCharacterLists()
     }
 
 
