@@ -1,10 +1,3 @@
-// this should always be updated when app-charuse/langs.js is updated
-
-    const Y = true
-    const N = false
-    const P = 'partial'
-    const U = '?'
-
 
 var langs = {
 
@@ -20,21 +13,7 @@ type:"abugida", cs:"no", gpos:"yes", gsub:"yes", cursive:"no", wordsep:"space", 
 vowels:"inh:1 vs:11 ind:12 pre:1 voc:1",  clusters:"inv stk cnj lig rax",  finals:"cm:2 let:y", 
 linked:"devanagari", fonts:"/pickers/deva-hi/", 
 },
-
-
-
-"ahom": { name:"Ahom", region:"seasia",
-blocks:1, chars:65, bletter:34, bmark:15, bnumber:12, bpunctuation:3, bsymbol:1, bother:0, 
-direction: "ltr", rtlnumbers:N,
-type:"abug", 
-voweltype: { inherent:0, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"A 𑜒", vcomposite:N, prebase:Y, circum:N },
-case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:U,
-medials:"cm", finals:"",
-clusters: { ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:Y, diacritic:N, killer:"" },
-wordsep: "space",
-linebreak:"word", hyphen:U, justification:U, wordspan:N, gc:Y,
-baseline: "romn",
-},
+// this is replicated in app-charuse/langs
 
 
 }
