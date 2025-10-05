@@ -883,7 +883,7 @@ function makeXXCharacterPage () {
         <dialog id="copyNotice">Copied !</dialog>
         
         <nav id="top">
-            <img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()">
+            <img src="../common29/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()">
             <br>
             <a href="#site-navigation"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."></a>
             <br>
