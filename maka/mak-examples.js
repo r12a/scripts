@@ -858,8 +858,8 @@ autoExpandExamples.mak = `
 
 
 @ wikipedia
-𑻪𑻢𑻪𑻢|Makasar|ja§ŋaŋ-§ja§ŋaŋ|jangang-jangang|
-𑻤𑻰𑻥𑻠𑻰𑻭|Makassarese language|ɓa§sa §mãŋ§ˈkʰa§sa§raʔ|basa makasar|
+𑻱𑻴𑻠𑻳𑻭𑻳𑻪𑻢𑻪𑻢|Makasar|u§ki§riʔ ja§ŋaŋ-§ja§ŋaŋ|ukiri′ jangang-jangang|
+𑻤𑻰𑻥𑻠𑻰𑻭|Makassarese language|ɓa§sa §mãŋ§ˈkʰa§sa§raʔ|basa mangkasara′|
 𑻱𑻶𑻭𑻰|heavy|ˈo.§ra.§saʔ|órasaʼ|
 
 `
