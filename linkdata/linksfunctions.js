@@ -252,11 +252,37 @@ function getData (script) {
     // used for
 	if (record.usedfor) {
 		var temp = ''
+        var usedforArray = record.usedfor.split(',')
+        
+		//temp += '<tr><td colspan="2"><b>Used for:</b>'
+        if (usedforArray.length > 0) {
+            temp += `<tr><td colspan="2"><b>Used for:</b> &nbsp; <small>${ usedforArray.length } languages</small>`
+            temp += '<p class="usedfor">'
+
+            for (let i=0;i<usedforArray.length;i++) {
+                ltag = usedforArray[i].trim().split('[')
+                link = ''
+                if (ltag && typeof ltag[1] !== 'undefined') link = `<span class="ethlink">${ ltag[0] } [<a href="https://www.ethnologue.com/language/${ ltag[1].replace(/\]/,'') }/" target="_blank">${ ltag[1].replace(/\]/,'') }</a>],&nbsp;&nbsp;&nbsp;</span> `
+                else link = `${ ltag[0] }, `
+                temp += `${ link }`
+                }
+            temp += '</p></td></tr>'
+            }
+            if (temp !== '') out += temp
+		}
+  
+
+
+
+
+    // used for
+	/*if (record.usedfor) {
+		var temp = ''
 		temp += '<tr><td colspan="2"><b>Used for:</b>'
-		temp += '<p class="usedfor">'+record.usedfor.replace(/],/g,'],&nbsp;&nbsp;&nbsp;')+'</p>'
+		temp += '<p class="usedfor"><a href="https://www.ethnologue.com/language/gon/" target="_blank">'+record.usedfor.replace(/],/g,'],record.usedfor&nbsp;&nbsp;&nbsp;')+'</p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>Used for:</th><td></td></tr>') out += temp
-		}
+		}*/
   
 
 

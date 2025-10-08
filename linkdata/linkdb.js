@@ -106,7 +106,7 @@ orthoChart: true,
 ssHistory: "z35gwmg4ft",
 chapters: "07",
 htmlchapter: "7/#G3334",
-usedfor: "Armenian [hy], Kurdish [kur], Kurdish, Northern [kmr], Armenian, Western [hyw]",
+usedfor: "Armenian [hye], Kurdish [kur], Kurdish, Northern [kmr], Armenian, Western [hyw]",
 layout: [ 
     { name:"Armenian Counter Styles", url:"https://www.w3.org/TR/predefined-counter-styles/#armenian-styles"},
     ],
@@ -190,7 +190,7 @@ orthoChart: false,
 ssHistory: "fum3p8xz6v",
 htmlchapter: "8/#G27032",
 chapters: "08",
-usedfor: "Albanian [sq]",
+usedfor: "Albanian [sqi]",
 },
 
 
@@ -207,7 +207,7 @@ orthoChart: true,
 ssHistory: "rbr2wkvu4m",
 chapters: "07",
 htmlchapter: "7/#G3360",
-usedfor: "Abkhaz [abk], Georgian [ka], Laz [lzz], Mingrelian [xmf], Old Avar [oav], Ossetian [oss], Svan [sva]",
+usedfor: "Abkhaz [abk], Georgian [kat], Laz [lzz], Mingrelian [xmf], Old Avar [oav], Ossetian [oss], Svan [sva]",
 local: [ ], 
 layout: [ 
 	/*{ name:"Georgian Layout Requirements", url:"https://www.w3.org/TR/geor-lreq/"},*/
@@ -229,7 +229,7 @@ orthoChart: false,
 ssHistory: "lbhv6e4efr",
 chapters: "07",
 htmlchapter: "7/#G15862",
-usedfor: "Church Slavonic [cu], Chakavian [ckm]",
+usedfor: "Church Slavonic [chu], Chakavian [ckm]",
 },
 
 
@@ -356,7 +356,7 @@ orthoChart: false,
 ssHistory: "fx7n7tnxzt",
 chapters: "08",
 htmlchapter: "8/#G33926",
-usedfor: "Old Hungarian [ohu], Hungarian [hu]",
+usedfor: "Old Hungarian [ohu], Hungarian [hun]",
 },
 
 
@@ -437,7 +437,7 @@ orthoChart: false,
 ssHistory: "gj5fewb8ed",
 chapters: "08",
 htmlchapter: "8/#G27260",
-usedfor: "English [en]",
+usedfor: "English [eng]",
 },
 
 
@@ -626,7 +626,7 @@ orthoChart: false,
 ssHistory: "hg53222b9b",
 chapters: "19",
 htmlchapter: "19/#G16914",
-usedfor: "Somali [so]",
+usedfor: "Somali [som]",
 },
 
 
@@ -1057,7 +1057,7 @@ orthoChart: true,
 ssHistory: "f8jrlqwbac",
 chapters: "12",
 htmlchapter: "12/#G664195",
-usedfor: "Assamese [as], Bengali [bn], Bishnupriya [bpy], Bodo (India) [brx], Chakma [ccp], Chiru [cdf], Chittagonian [ctg], Naga, Chothe [nct], Deori [der], Dimasa [dis], Chin, Falam [cfm], Garo [grt], Hajong [haj], Khasi [kha], Koch [kdq], Koda [cdz], Kok Borok [trp], Kudmali [kyw], Lushai [lus], Manipuri [mni], Naga, Maring [nng], Mising [mrg], Naga, Moyon [nmo], Munda [unx], Mundari [unr], Nyishi [njz], Nyishi [njz], Sadri, Oraon [sdr], Panchpargania [tdb], Puroik [suv], Rabha [rah], Rangpuri [rkt], Sadri [sck], Santali [sat], Sauria Paharia [mjt], Sylheti [syl], Naga, Thangal [nki], Tippera [tpe], Tiwa [lax], Toto [txo], Usui [usi]",
+usedfor: "Assamese [asm], Bengali [ben], Bishnupriya [bpy], Bodo (India) [brx], Chakma [ccp], Chiru [cdf], Chittagonian [ctg], Naga, Chothe [nct], Deori [der], Dimasa [dis], Chin, Falam [cfm], Garo [grt], Hajong [haj], Khasi [kha], Koch [kdq], Koda [cdz], Kok Borok [trp], Kudmali [kyw], Lushai [lus], Manipuri [mni], Naga, Maring [nng], Mising [mrg], Naga, Moyon [nmo], Munda [unx], Mundari [unr], Nyishi [njz], Nyishi [njz], Sadri, Oraon [sdr], Panchpargania [tdb], Puroik [suv], Rabha [rah], Rangpuri [rkt], Sadri [sck], Santali [sat], Sauria Paharia [mjt], Sylheti [syl], Naga, Thangal [nki], Tippera [tpe], Tiwa [lax], Toto [txo], Usui [usi]",
 local: [ ],
 layout: [ 
     { name:"Introduction to Indic Scripts", url:"indic-overview"},
@@ -1114,7 +1114,7 @@ orthoChart: false,
 ssHistory: "qzhwzbsvm7",
 chapters: "15",
 htmlchapter: "15/#G81052",
-usedfor: "Old Tamil [oty], Sanskrit [sa]",
+usedfor: "Old Tamil [oty], Sanskrit [san]",
 },
 
 
@@ -1236,7 +1236,7 @@ orthoChart: false,
 ssHistory: "r9e56hvyut",
 chapters: "15",
 htmlchapter: "15/#G81423",
-usedfor: "Eastern Punjabi [pan], Gujarati [gu], Saraiki [skr], Sindhi [snd], Western Punjabi [lah]",
+usedfor: "Eastern Punjabi [pan], Gujarati [guj], Saraiki [skr], Sindhi [snd], Western Punjabi [lah]",
 },
 
 
@@ -1252,7 +1252,7 @@ orthoChart: false,
 ssHistory: "fykru6vn8h",
 chapters: "15",
 htmlchapter: "15/#G80879",
-usedfor: "Sindhi [sd]",
+usedfor: "Sindhi [snd]",
 },
 
 
@@ -1314,7 +1314,7 @@ orthoChart: false,
 ssHistory: "kuegm6qedh",
 chapters: "15",
 htmlchapter: "15/#G89564",
-usedfor: "Eastern Punjabi [pa], Hindi [hi], Marwari [mwr], Western Punjabi [lah]",
+usedfor: "Eastern Punjabi [pan], Hindi [hin], Marwari [mwr], Western Punjabi [lah]",
 },
 
 
@@ -1514,7 +1514,7 @@ orthoChart: false,
 ssHistory: "spnpfarl4t",
 chapters: "15",
 htmlchapter: "15/#G81154",
-usedfor: "Kashmiri [ks], Sanskrit [sa]",
+usedfor: "Kashmiri [kas], Sanskrit [san]",
 },
 
 
@@ -1550,7 +1550,7 @@ orthoChart: true,
 ssHistory: "sbwtu85wbv",
 chapters: "13",
 htmlchapter: "13/#G26561",
-usedfor: "Pali [pli], Sanskrit [sa], Sinhala [sin]",
+usedfor: "Pali [pli], Sanskrit [san], Sinhala [sin]",
 },
 
 
@@ -1625,7 +1625,7 @@ orthoChart: true,
 ssHistory: "zw5nedjarb",
 chapters: "12",
 htmlchapter: "12/#G10162",
-usedfor: "Badaga [bfq], Betta Kurumba [xub], Irula [iru], Kannada Kurumba [kfi], Kota (India) [kfe], Muthuvan [muv], Paniya [pcg], Saurashtra [saz], Tamil [ta], Toda [tcx], Vaagri Booli [vaa], Wayanad Chetti [ctt]",
+usedfor: "Badaga [bfq], Betta Kurumba [xub], Irula [iru], Kannada Kurumba [kfi], Kota (India) [kfe], Muthuvan [muv], Paniya [pcg], Saurashtra [saz], Tamil [tam], Toda [tcx], Vaagri Booli [vaa], Wayanad Chetti [ctt]",
 local: [ 
     { name:"Introduction to Indic Scripts", url:"indic-overview/index.html"},
     ],
@@ -1677,7 +1677,7 @@ orthoChart: true,
 ssHistory: "n2tj49rr2n",
 chapters: "13",
 htmlchapter: "13/#G26451",
-usedfor: "Maldivian [dv]",
+usedfor: "Maldivian [div]",
 },
 
 
@@ -1787,7 +1787,7 @@ orthoChart: false,
 ssHistory: "y22gh9p8g2",
 chapters: "14",
 htmlchapter: "14/#G40430",
-usedfor: "Tibetan [bo], Chinese [zh], Halh Mongolian [mn], Peripheral Mongolian [mvf], Sanskrit [sa]",
+usedfor: "Tibetan [bod], Chinese [zho], Halh Mongolian [khk], Peripheral Mongolian [mvf], Sanskrit [san]",
 },
 
 
@@ -1845,7 +1845,7 @@ orthoChart: false,
 ssHistory: "j7rr9jgtyl",
 chapters: "14",
 htmlchapter: "14/#G41935",
-usedfor: "Tibetan [bo], Sanskrit [sa]",
+usedfor: "Tibetan [bod], Sanskrit [san]",
 },
 
 
@@ -2238,7 +2238,7 @@ orthoChart: true,
 ssHistory: "db9724gea9",
 chapters: "17",
 htmlchapter: "17/#G27153",
-usedfor: "Bali [ban], Javanese [jv], Osing [osi], Sunda [sun], Tengger [tes]",
+usedfor: "Bali [ban], Javanese [jav], Osing [osi], Sunda [sun], Tengger [tes]",
 local: [ ],
 layout: [ 
     /*{ name:"Hangul Layout Requirements", url:"http://w3c.github.io/klreq/"},*/
@@ -2302,7 +2302,7 @@ orthoChart: false,
 ssHistory: "76d3376b7c",
 chapters: "17",
 htmlchapter: "17/#G26433",
-usedfor: "Filipino [fil], Ilocano [ilo], Tagalog [tl]",
+usedfor: "Filipino [fil], Ilocano [ilo], Tagalog [tgl]",
 },
 
 
@@ -2379,7 +2379,7 @@ orthoChart: true,
 ssHistory: "umfm3ftrny",
 chapters: "18",
 htmlchapter: "18/#G31028",
-usedfor: "Cia-cia [cia], Jejueo [jje], Korean [ko]",
+usedfor: "Cia-cia [cia], Jejueo [jje], Korean [kor]",
 local: [ ],
 layout: [ 
     { name:"Hangul Layout Requirements", url:"http://w3c.github.io/klreq/"},
@@ -2402,7 +2402,7 @@ orthoChart: true,
 ssHistory: "lrnzlkagyq",
 chapters: "18",
 htmlchapter: "18/#G22462",
-usedfor: "Japanese [ja]",
+usedfor: "Japanese [jpn]",
 local: [ 
     { name:"Jukugo ruby (blog)", url:"https://r12a.github.io/blog/201002.html#20100924"},
     ],
@@ -2515,7 +2515,7 @@ orthoChart: false,
 ssHistory: "tdjlnarc8y",
 chapters: "20",
 htmlchapter: "20/#G27507",
-usedfor: "English [en]",
+usedfor: "English [eng]",
 },
 
 
@@ -2572,7 +2572,7 @@ orthoChart: true,
 ssHistory: "y53lggbts6",
 chapters: "13",
 htmlchapter: "13/#G31609",
-usedfor: "Bengali [bn], Hindi [hi], Maithili [mai], Newar [new], Sanskrit [sa]",
+usedfor: "Bengali [ben], Hindi [hin], Maithili [mai], Newar [new], Sanskrit [san]",
 local: [ ],
 layout: [ 
     { name:"Newa counter styles", url:"https://www.w3.org/TR/predefined-counter-styles/#newa-styles"},
@@ -2608,7 +2608,7 @@ orthoChart: false,
 ssHistory: "h6ln54mufu",
 chapters: "14",
 htmlchapter: "14/#G38187",
-usedfor: "Tibetan [bo]",
+usedfor: "Tibetan [bod]",
 },
 
 
@@ -2671,7 +2671,7 @@ orthoChart: false,
 ssHistory: "xjh6av9y5z",
 chapters: "14",
 htmlchapter: "14/#G49476",
-usedfor: "Sogdian [sog], Northern Uzbek [uz]",
+usedfor: "Sogdian [sog], Northern Uzbek [uzn]",
 },
 
 
@@ -2759,7 +2759,7 @@ orthoChart: false,
 ssHistory: "pn37qqd7m4",
 chapters: "15",
 htmlchapter: "15/#G106413",
-usedfor: "Kannada [kn], Sanskrit [sa]",
+usedfor: "Kannada [kan], Sanskrit [san]",
 },
 
 
@@ -2861,7 +2861,7 @@ orthoChart: false,
 ssHistory: "zd8qnsls7x",
 chapters: "15",
 htmlchapter: "15/#G108027",
-usedfor: "Maldivian [dv]",
+usedfor: "Maldivian [div]",
 },
 
 
@@ -2893,7 +2893,7 @@ orthoChart: false,
 ssHistory: "temwtnc7ry",
 chapters: "08",
 htmlchapter: "8/#G40863",
-usedfor: "Albanian [sq]",
+usedfor: "Albanian [sqi]",
 },
 
 
@@ -2974,7 +2974,7 @@ orthoChart: false,
 ssHistory: "flxwepg4jd",
 chapters: "17",
 htmlchapter: "17/#G40419",
-usedfor: "Kawi [kaw], Sanskrit [sa]",
+usedfor: "Kawi [kaw], Sanskrit [san]",
 },
 
 
@@ -3040,7 +3040,7 @@ orthoChart: true,
 ssHistory: "e8q47hg9gl",
 chapters: "19",
 htmlchapter: "19/#G746355",
-usedfor:"Wolof [wo]",
+usedfor:"Wolof [wol]",
 },
 
 
@@ -3061,7 +3061,7 @@ orthoChart: false,
 ssHistory: "h78tyll9g2",
 chapters: "",
 htmlchapter: "8/#G746332",
-usedfor:"Albanian [sq]",
+usedfor:"Albanian [sqi]",
 },
 
 
