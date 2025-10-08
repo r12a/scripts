@@ -108,7 +108,7 @@ function gatherData () {
                 if (status.includes('r') || status.includes('l')) out += ' uncommon'
                 out += `">\n`
                 
-                out += `<div class="phone"><span class="ipa">${ phone.toLowerCase() }</span></div>\n`
+                out += `<div class="phone"><span class="ipa" id="map${ phone.toLowerCase() }">${ phone.toLowerCase() }</span></div>\n`
 
                 out += `<div class="map_detail">\n`
                 }
