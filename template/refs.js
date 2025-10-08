@@ -40,9 +40,9 @@ reflist = {
 
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 16.0",
-"sub":"Chapter 11.5: Cuneiform and Hieroglyphs, Meroitic Cursive",
-"url":"https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-11/#G26726",
+"title":"The Unicode Standard, Version 17.0",
+"sub":"Chapter 13.20: South and Central Asia II, Other Modern Scripts, Tangsa",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/#G51897",
 "reviewed": false
 },
 
@@ -81,11 +81,11 @@ reflist = {
 },
 
 "sil": {
-"authors": "Lorna Priest",
-"title":"Unicode Status (Rejang)",
-"retr": "Feb 2024",
+"authors": "SIL Writing Systems Technical Resources",
+"title":"Unicode Status for Tangsa",
+"retr": "Oct 2025",
 "publisher":"SIL International",
-"url":"https://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=72d3ce3834",
+"url":"https://writingsystems.info/scrlang/unicode/tnsa-unicode/",
 "reviewed":true
 },
 
