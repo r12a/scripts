@@ -612,6 +612,18 @@ linebreak:"syllable", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"
 },
 
 
+"maka": {name:"Makasar", region:"seasia", type:"abug", 
+blocks:1, chars:25, bletter:19, bmark:4, bnumber:0, bpunctuation:2, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:N, vbase:"A", vcomposite:N, prebase:Y, circum:N, },
+case:N, cursive:N, mcchars:"m", conjuncts:N, ligs:N, 
+medials:"", finals:"",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"no",
+linebreak:"syllable", hyphen:"no ", wordspan:N, justification:U, gc:"?", baseline:"romn", 
+},
+
+
 "mand": {name:"Mandaic", region:"wasia", type:"abjad", 
 blocks:1, chars:29, bletter:25, bmark:3, bnumber:0, bpunctuation:1, bsymbol:0, bother:0, 
 direction:"rtl", rtlnumbers:N,
@@ -852,6 +864,18 @@ linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn
 },
 
 
+"sylo": {name:"Syloti Nagri", region:"sasia", type:"abug", 
+blocks:1, chars:45, bletter:32, bmark:9, bnumber:0, bpunctuation:0, bsymbol:4, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:Y, 
+medials:"", finals:"cm vk",
+clusters:{ ligation:N, stacks:Y, touch:N, conjoined:Y, subjoinedcp:N, visviram:N, diacritic:N, killer:"kv"},
+wordsep:"space",
+linebreak:"word", hyphen:"? ", wordspan:N, justification:"sp", gc:"?", baseline:"romn", 
+},
+
+
 "syrc": {name:"Classical Syriac", region:"wasia", type:"abjad", 
 blocks:2, chars:88, bletter:45, bmark:28, bnumber:0, bpunctuation:14, bsymbol:0, bother:1, 
 direction:"rtl", rtlnumbers:N,
@@ -1028,6 +1052,18 @@ direction:"ltr", rtlnumbers:N,
 voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"ʼ", vcomposite:N, prebase:N, circum:N, },
 case:N, cursive:N, mcchars:"m", conjuncts:N, ligs:N, 
 medials:"cm", finals:"cm",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
+wordsep:"space",
+linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
+},
+
+
+"tnsa": {name:"Tangsa", region:"seasia", type:"alpha", 
+blocks:1, chars:89, bletter:79, bmark:0, bnumber:10, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:0, letters:Y, marks:N, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:N, conjuncts:N, ligs:N, 
+medials:"", finals:"cm",
 clusters:{ ligation:N, stacks:N, touch:N, conjoined:N, subjoinedcp:N, visviram:N, diacritic:N, killer:""},
 wordsep:"space",
 linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:Y, baseline:"romn", 
