@@ -1,0 +1,11 @@
+langTag = 'nst'
+window.version = 'v29'
+window.scriptName = 'Tangsa'
+window.ghDirectory = 'tnsa'
+window.blockDirectory = 'tnsa'
+window.languageList = ['nst'] // lang tags for each orthography handled
+window.detailsfileList = ['nst'] // first part of xx-details for each orthography
+window.scriptISO = 'tnsa'
+window.webfonts = ["Noto Sans Tangsa WF"]
+window.defaultSize = '24px'
+hideBlockName = "TANGSA"
