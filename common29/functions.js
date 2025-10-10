@@ -41,7 +41,7 @@ function addPageFeatures () {
     
     makeIndexIntro(document.getElementById('index_intro')) // write page intro
     
-    makeTables(langTag)  // Create the lists of characters in yellow, etc. boxes
+    makeTables(langTag)  // Create the lists of characterBoxes
     makeSequenceTables()
     addCharacterLists()
 
@@ -1700,7 +1700,7 @@ function makeSidePanel () {
 
 
 function makeTables (lang) {
-    if (traceSet.has('makeTables') || traceSet.has('all')) console.log('makeTables(',lang,') Create the lists of characters in yellow, etc. boxes')
+    // console.log('makeTables(',lang,') Create the lists of characters in yellow, etc. boxes')
 
     if (typeof window.spreadsheet == 'undefined') {
 		console.log("Spreadsheet undefined.")
@@ -1795,8 +1795,20 @@ function replaceStuff (node) {
         font = ` style="font-family: ${ node.dataset.font }"`
         }
 
-    if (typeof node.dataset.cols === 'undefined') var info = ''
-    else info = node.dataset.cols
+    var info = ''
+    if (node.dataset.ipa === 'all') {
+        var info = 'ipa'
+        node.dataset.ipa = ''
+        }
+    if (typeof node.dataset.cols !== 'undefined') info += ','
+    if (typeof node.dataset.cols !== 'undefined') info += node.dataset.cols
+    
+    
+    
+    
+    //if (typeof node.dataset.cols === 'undefined') var info = ''
+    //else if (typeof node.dataset.cols === 'undefined' && node.dataset.ipa === 'ipa') var info = 'ipa'
+    //else info = node.dataset.cols
     if (node.className.includes('noexpansion')) noexpansion = true // don't show the curved arrow
     if (node.className.includes('nolist')) nolist = true // don't show the total+arrow
     if (node.className.includes('bicameral')) bicameral = true // note: phase this out in favour of data-select=last
