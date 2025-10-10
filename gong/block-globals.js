@@ -1,0 +1,11 @@
+langTag = 'wsg'
+window.version = 'v29'
+window.scriptName = 'Gunjala Gondi'
+window.ghDirectory = 'gong'
+window.blockDirectory = 'gong'
+window.languageList = ['wsg'] // lang tags for each orthography handled
+window.detailsfileList = ['wsg'] // first part of xx-details for each orthography
+window.scriptISO = 'gong'
+window.webfonts = ["Noto Sans Gunjala Gondi WF"]
+window.defaultSize = '24px'
+hideBlockName = "GUNJALA GONDI"

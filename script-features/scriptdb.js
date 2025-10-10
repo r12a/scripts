@@ -346,6 +346,19 @@ linebreak:"word", hyphen:"yes -", wordspan:N, justification:"sp", gc:Y, baseline
 
 
 
+"gong": {name:"Gunjala Gondi", region:"sasia", type:"abug", 
+blocks:1, chars:63, bletter:41, bmark:12, bnumber:10, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:N, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:Y, 
+medials:"", finals:"cm",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:Y, subjoinedcp:N, visviram:N, diacritic:N, killer:"i"},
+wordsep:"space",
+linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:"?", baseline:"hang", 
+},
+
+
+
 "grek": {name:"Greek", region:"eur", type:"alpha", 
 blocks:3, chars:417, bletter:318, bmark:0, bnumber:59, bpunctuation:2, bsymbol:38, bother:0, 
 direction:"ltr", rtlnumbers:N,
