@@ -359,6 +359,19 @@ linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:"?", baseline:"ha
 
 
 
+"gonm": {name:"Masaram Gondi", region:"sasia", type:"abug", 
+blocks:1, chars:75, bletter:48, bmark:17, bnumber:10, bpunctuation:0, bsymbol:0, bother:0, 
+direction:"ltr", rtlnumbers:N,
+voweltype: { inherent:1, letters:N, marks:Y, hidden:N, visorder:N, vocalics:Y, ivowels:Y, vbase:"", vcomposite:N, prebase:N, circum:N, },
+case:N, cursive:N, mcchars:"m", conjuncts:Y, ligs:N, 
+medials:"cm", finals:"cm vk",
+clusters:{ ligation:N, stacks:N, touch:N, conjoined:Y, subjoinedcp:N, visviram:N, diacritic:N, killer:"ki"},
+wordsep:"space",
+linebreak:"word", hyphen:"? ", wordspan:N, justification:U, gc:"?", baseline:"romn", 
+},
+
+
+
 "grek": {name:"Greek", region:"eur", type:"alpha", 
 blocks:3, chars:417, bletter:318, bmark:0, bnumber:59, bpunctuation:2, bsymbol:38, bother:0, 
 direction:"ltr", rtlnumbers:N,
