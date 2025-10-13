@@ -1,0 +1,11 @@
+langTag = 'gon'
+window.version = 'v29'
+window.scriptName = 'Masaram Gondi'
+window.ghDirectory = 'gonm'
+window.blockDirectory = 'gonm'
+window.languageList = ['gon'] // lang tags for each orthography handled
+window.detailsfileList = ['gon'] // first part of xx-details for each orthography
+window.scriptISO = 'gonm'
+window.webfonts = ["Noto Sans Masaram Gondi WF"]
+window.defaultSize = '24px'
+hideBlockName = "MASARAM GONDI"
