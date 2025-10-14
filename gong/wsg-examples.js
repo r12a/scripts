@@ -73,6 +73,72 @@ autoExpandExamples.wsg = `
 𑵶𑶍𑶕𑶀𑵵𑶊 𑵶𑶓𑶕𑶂𑶋 𑵵𑶋𑶅𑶋|Gunjala Gondi script|ɡuŋ§d͡ʒa§laː§ §ɡo:ŋ§ɖi§ §li§pi|guṇjalā gōṇḍī lipi
 
 
+@ https://www.gondwana.in/en/gondi-dictionary  from Devanagari !
+
+𑵺𑶓𑶉𑶗𑵱𑶊|yam|noː§s§kaː|nōskā
+𑵵𑶓𑵱𑶍𑵵𑶗𑵱|people|loː§ku§l§k|lōkulk|
+𑵰𑶕𑶂|shelter|maɳ§ɖaː|maṇḍā
+𑶇𑶓𑵭𑶗𑵭𑶓𑶈|salt|hoː§v§voː§r|hōvvōr|
+𑶇𑶐𑶈𑶅𑶍𑵰|sandal|heː§ra§pu§m|hērapum
+𑵮𑶎𑶀𑶐𑶕𑵶𑶊|peanuts|buː§d͡ʒeːŋ§gaː|būjēṅgā
+𑵱𑶓𑶈𑶓𑶅|buttermilk|koː§roː§p|kōrōp|कोरोप|
+𑵠𑵽𑶗𑵽𑶍𑶂𑶍|to cook|a§ʈ§ʈu§ɖu|aṭṭuḍu|अट्टुडु
+𑵠𑵵𑵮𑵽|custom|a§la§ba§ʈ|alabaṭ|अलबट
+𑵠𑶕𑵻𑶎|edge|aŋt͡ʃuː|aṇcū|अंचू
+𑵡𑶈𑶕𑵬𑵰|forest|aː§ra§ɳ§ja§m|āraṇyam|अंचू
+𑵢𑵶𑶗𑵶𑶐|here|i§ɡ§ɡe|iggē|इग्गे
+𑶉𑶊𑵣|ink|saː§iː|sā'ī|साई
+𑵣𑵸𑵰𑶈|swim|iː§da§ma§ɽ|īdamar|ईदमड़
+𑵤𑶈𑶗𑶈𑶌|rat trap|u§r§riː|urrī|उर्री
+𑵤𑵳𑶗𑵳𑵸𑶐|unnecessary|u§t§ta§de|uttadē|उत्तदे
+𑵥𑶉𑶍𑶂𑶍|comb|uː§su§ɖu|ūsuḍu|ऊसुडु
+𑵨𑶈𑶐𑵺 𑵠𑶈𑵱𑶊|clay pot|ai§re§n§ §a§ɽa§kaː|airēn aṛakā|ऐरेन अड़का
+𑵪𑶂𑶗𑶂𑶎|embankment|oː§ɖ§ɖuː|ōḍḍū|ओड्डू
+𑵱𑶐𑵭𑶗𑵱|ear|keː§v§k|kēvk|केव्क
+𑶅𑶓𑶄𑵰𑶈|overflow|poː§ŋa§ma§ɽ|pōṅamaṛ|पोङमड़
+𑵮𑶐𑶕𑵻|desk|beːɲ§t͡ʃ|bēn̄c|बेंच
+𑵺𑶊𑶈𑶊𑶀|displeased|naː§raː§d͡ʒ|nārāj|नाराज
+𑶀𑶊𑶈𑶊|evidence|d͡ʒaː§ɽaː|jāṛā|जाड़ा
+𑵽𑶓𑶅𑶌|hat|ʈoː§piː|ṭōpī|टोपी
+𑵱𑶈𑶕𑵽|hat|ka§raŋ§ʈ|karaṇṭ|करंट
+𑶉𑶋𑶕𑵶𑶋𑶂|rainbow|siŋ§ɡi§ɖ|siṅgiḍ|सिंगिड
+𑵭𑶊𑵳𑶊𑵭𑶈𑶄𑵰|atmosphere|vaː§taː§va§ra§ɳa§m|vātāvaraṇam|वातावरणम|
+𑵳𑶐𑵵𑶗𑵭𑶋𑵳𑶐|awake|teː§l§vi§teː|tēl‍vitē|तेल्विते|
+𑵶𑵰𑶗𑵰𑵳|happiness|ɡa§m§ma§t|gam'mat|गम्मत|
+𑶀𑶐𑵮|pocket|d͡ʒeː§b|jēb|जेब
+𑶈𑶎𑶅𑶊𑵬|rupee|ruː§paː§j|rūpāy|रूपाय
+𑶈𑶓𑶕𑶂𑶋|ham|roːŋ§ɖi|rūpāy|रोंडि
+𑵺𑵱𑶗𑶉𑶊|map|na§k§ʃaː|nak‍śā|नक्शा
+𑶉𑶊𑶅𑶊|mat|saː§paː|sāpā|सापा
+𑶇𑵭𑶗𑵭𑶌|meat|ha§v§viː|hav‍vī|हव्वी
+𑵺𑶐𑶇𑶊|to put in|neː§ha|nēha|नेह
+𑵱𑶐𑶂𑶊 𑵭𑶐𑶈𑵱𑵵|tiger|keː§ɖaː§§veː§ra§ka§ɭ|kēḍā vērakaḷ|केडा वेरकळ
+𑶇𑶓𑵵𑶗𑶉𑵰𑶈|to leave|hoː§ɭ§sa§ma§ɽ|hōḷ‍samaṛ|होळ्समड़
+𑵺𑶍𑵱𑶗𑶉𑶊𑵺|destruction|nu§ksaː§n|nuksān|नुक्सान
+𑵺𑵱𑶗𑶉𑶊|drawing|na§ksaː|naksā|नक्सा
+𑵤𑵳𑶗𑶈𑵰|letter|u§tra§m|utram|उत्रम
+𑵮𑶎𑵶𑶓𑵵𑶉𑶉𑶗𑵳𑶗𑶈𑵰|geography|buː§ɡoː§la§ʃaː§s§tra§m|būgōlaśās‍tram|बूगोलशास्त्रम
+𑶅𑶑𑶅𑶎|pipework|pai§puː|paipū|पैपू
+𑵰𑶑𑵸𑵰|beeswax|mai§da§m|maidam|मैदम
+𑵶𑶔𑵤𑵺|petticoat|ɡau.§u§n|gau'un|गौउन
+𑶅𑶔𑶂𑵰|nose jewellery|pau§ɖa§m|pauḍam|पौडम
+𑶅𑵳𑶕𑵶|kite|pa§taŋ§ɡ|pataṅg|पतंग
+𑵱𑶍𑶕𑵳𑶓𑶂|lame|kuɳ§ʈoː§ɖ|kuṇṭōḍ|कुंटोड
+??|manganese|mæ§ɡa§ni§d͡ʒ|mĕganij|मॅगनिज
+??|potassium|poː§ʈæ§ʃi§ja§m|pōṭĕśiyam|पोटॅशियम
+??|carbon dioxide|kɔ§r§ba§na§ɖaː§jaː§ksaː§i§ɖ| kŏrbanaḍāyāksā'iḍ |कॉर्बनडायाक्साइड
+𑵱𑶈𑶗𑶀|outstanding|ka§r§d͡ʒ|ka§r§j|कर्ज
+𑶅𑶋𑶈𑶗𑶈𑶍|rain|pi§r§ru|pirru|पिर्रु
+𑵠𑶈𑶗𑶈𑶊|room|a§r§raː|arrā|अर्रा
+𑶅𑶓𑶈𑶗𑵱𑶊|sapling|poː§r§kaː|pōrkā|पोर्का
+𑵶𑶓𑶈𑶗𑶈𑶐|sheep|ɡoː§r§reː|gōrrē|गोर्रे
+𑵺𑶋𑵸𑶗𑶈𑶊|sleep|ni§draː|nidrā|निद्रा
+𑵶𑶓𑶕𑶂𑶗𑶈𑶍𑵰𑶗𑵰𑶈|snore|ɡoːɳ§ɖrum§ma§ɽ|gōṇḍrummaṛ|गोंड्रुंमड़
+𑶉𑶍𑵱𑶗𑵱𑶗𑶈𑶊𑶈𑵰|Friday|su§k§kraː§ra§m|sukkrāram|सुक्क्रारम
+𑵭𑶋𑶉𑵰|poison|vi§ʂa§m|viṣam|विषम
+𑵱𑶓𑵬𑶊 𑵮𑶊𑶉𑶊|Gondi language|koː§jaː§ §baː§ʂaː|kōyā bāṣā|कोया बाषा
+
+
 
 
 `
@@ -85,10 +151,11 @@ autoExpandExamples.wsg = `
 termLists = [
 
 {
-"title":"Wiktionary, Eastern Cham lemmas",
-"url":"https://en.wiktionary.org/wiki/Category:Eastern_Cham_lemmas",
+"title":"Gonds of Gondwana",
+"url":"https://www.gondwana.in/en/gondi-dictionary",
+"notes":"English, Hindi, Telugu (no Gondi script)"
 },
-
+/*
 {
 "title":"Austronesian Basic Vocabulary Database, Phan Rang Cham (Eastern Cham)",
 "url":"https://abvd.eva.mpg.de/austronesian/language.php?id=371&sort=item",
@@ -100,6 +167,7 @@ termLists = [
 "url":"https://livingdictionaries.app/sora/entries/list",
 "notes":"No native script.",
 },
+*/
 
 ]
 
