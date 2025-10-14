@@ -5,10 +5,10 @@
 <title>Malayalam orthography notes</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common29/local.css" />
+<link rel="stylesheet" href="../common30/local.css" />
 <link rel="stylesheet" href="ml.css" />
 
-<script src="../common29/debug.js"></script>
+<script src="../common30/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../apps/ipa_analyser/propertylist.js"></script>
@@ -19,12 +19,12 @@
 
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common29/functions.js"></script>
-<script src="../common29/transliterate.js"></script>
-<script src="../common29/prompts.js"> </script>
+<script src="../common30/functions.js"></script>
+<script src="../common30/transliterate.js"></script>
+<script src="../common30/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../common29/egcode.js"></script>
-<script src="../common29/references.js"></script>
+<script src="../common30/egcode.js"></script>
+<script src="../common30/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="ml-langdata.js"></script>
@@ -62,7 +62,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 September, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 October, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -81,7 +81,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Malayalam Orthography Notes, <!-- #BeginDate format:En2 -->29-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mlym/ml">https://r12a.github.io/scripts/mlym/ml</a></small></p>
+<p class="refLine"><small>Richard Ishida, Malayalam Orthography Notes, <!-- #BeginDate format:En2 -->14-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mlym/ml">https://r12a.github.io/scripts/mlym/ml</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -201,11 +201,18 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
 <p class="addToConsonants">Malayalam uses <a class="seclink" href="#basicC">36 basic consonant letters</a>.</p> 
 
-<p class="addToConsonants"><a class="seclink" href="#clusters">Consonant clusters</a> are typically indicated in modern Malayalam using the visible <span class="name">chandrakkala</span> mark (<a class="termref" href="../glossary/index.html#virama">virama</a>), which indicates that no vowel follows a consonant. <a class="termref" href="../glossary/index.html#conjunct">Conjunct forms</a> are also expressed using  stacked consonants, and conjoined consonants, where the <span class="name">chandrakkala</span> is still used but hidden, and special chillu shapes.</p>
+<p class="addToConsonants">Medial consonants are handled as other conjuncts, except that <span class="uname">RA</span> is displayed to the left of the base. Codas are handled via chillu forms, special forms for <span class="uname">RA</span>, and 2 combining marks.</p> 
 
-<p class="addToConsonants">As part of a cluster, RA has  special forms. As a medial consonant in the modern orthography it appears as a simple glyph to the left of the letters spoken before it. When initial in the cluster its glyph includes a cillu hook at the top right. There are also special rules involving clusters of multiple RA letters.</p>
 
-<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final consonant</a> sounds may be represented by 2 dedicated combining marks (anusvara &amp; visarga), but are generally ordinary consonants with <span class="name">chandrakkala</span>, or 6 chillu forms. The word-final virama  sometimes represents a <span class="name">half-u</span> sound, rather than completely killing the inherent vowel. Because of this, Malayalam uses a set of syllable-final consonants called <span class="name">chillus</span> that have no vowel sound associated with them.</p>
+
+
+<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
+
+<p class="addToNovowel"><a class="seclink" href="#clusters">Consonant clusters</a> are typically indicated in modern Malayalam using the visible <span class="name">chandrakkala</span> mark (<a class="termref" href="../glossary/index.html#virama">virama</a>), which indicates that no vowel follows a consonant. <a class="termref" href="../glossary/index.html#conjunct">Conjunct forms</a> are also expressed using  stacked consonants, and conjoined consonants, where the <span class="name">chandrakkala</span> is still used but hidden, and special chillu shapes.</p>
+
+<p class="addToNovowel">As part of a cluster, RA has  special forms. As a medial consonant in the modern orthography it appears as a simple glyph to the left of the letters spoken before it. When initial in the cluster its glyph includes a cillu hook at the top right. There are also special rules involving clusters of multiple RA letters.</p>
+
+<p class="addToNovowel"><a class="seclink" href="#finals">Syllable-final consonant</a> sounds may be represented by 2 dedicated combining marks (anusvara &amp; visarga), but are generally ordinary consonants with <span class="name">chandrakkala</span>, or 6 chillu forms. The word-final virama  sometimes represents a <span class="name">half-u</span> sound, rather than completely killing the inherent vowel. Because of this, Malayalam uses a set of syllable-final consonants called <span class="name">chillus</span> that have no vowel sound associated with them.</p>
 
 
 
@@ -246,32 +253,32 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="index_letters_consonants">
 <h4>Basic consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="">പ␣ബ␣ത␣ദ␣ട␣ഡ␣ക␣ഗ␣ഫ␣ഭ␣ഥ␣ധ␣ഠ␣ഢ␣ഖ␣ഘ␣ച␣ജ␣ഛ␣ഝ␣സ␣ഷ␣ശ␣ഹ␣മ␣ന␣ണ␣ഞ␣ങ␣വ␣ര␣റ␣ഴ␣ല␣ള␣യ</figure>
+<figure class="characterBox noindex indexline">പ,ബ,ത,ദ,ട,ഡ,ക,ഗ,ഫ,ഭ,ഥ,ധ,ഠ,ഢ,ഖ,ഘ,ച,ജ,ഛ,ഝ,സ,ഷ,ശ,ഹ,മ,ന,ണ,ഞ,ങ,വ,ര,റ,ഴ,ല,ള,യ</figure>
 </section>
 
 <section id="index_letters_vowels">
 <h4>Vowels</h4>
 
-<figure class="characterBox noindex indexline" data-cols="">ഇ␣ഈ␣ഉ␣ഊ␣എ␣ഏ␣ഒ␣ഓ␣അ␣ആ␣ഐ␣ഔ</figure>
+<figure class="characterBox noindex indexline">ഇ,ഈ,ഉ,ഊ,എ,ഏ,ഒ,ഓ,അ,ആ,ഐ,ഔ</figure>
 </section>
 
 <section id="index_letters_vocalics">
 <h4>Vocalics</h4>
-<figure class="characterBox noindex indexline" data-cols="">ഋ␣ൠ␣ഌ␣ൡ</figure>
+<figure class="characterBox noindex indexline">ഋ,ൠ,ഌ,ൡ</figure>
 </section>
 
 
 <section id="index_letters_finals">
 <h4>Dead consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="">ൿ␣ൺ␣ൻ␣ർ␣ൽ␣ൾ␣ൔ␣ൕ␣ൖ</figure>
+<figure class="characterBox noindex indexline">ൿ,ൺ,ൻ,ർ,ൽ,ൾ,ൔ,ൕ,ൖ</figure>
 </section>
 
 
 <section id="index_letters_unused">
 <h4>Not used for modern Malayalam</h4>
-<figure class="unusedBox noindex indexline" data-cols="">ഩ␣ഺ</figure>
+<figure class="unusedBox noindex indexline">ഩ,ഺ</figure>
 
-<!--figure class="otherBox noindex indexline" data-cols="">ഄ␣ഽ␣ൔ␣ൕ␣ൖ␣ൟ</figure-->
+<!--figure class="otherBox noindex indexline">ഄ,ഽ,ൔ,ൕ,ൖ,ൟ</figure-->
 </section>
 </details>
 </section>
@@ -286,35 +293,35 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="index_cchars_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox noindex indexline" data-cols="">െ␣േ␣ൈ␣ൊ␣ോ␣ി␣ീ␣ു␣ൂ␣ാ␣ൗ</figure>
-<figure class="unusedBox noindex indexline" data-cols="">ൌ</figure>
+<figure class="characterBox noindex indexline">െ,േ,ൈ,ൊ,ോ,ി,ീ,ു,ൂ,ാ,ൗ</figure>
+<figure class="unusedBox noindex indexline">ൌ</figure>
 </section>
 
 <section id="index_cchars_vocalics">
 <h4>Vocalics</h4>
-<figure class="characterBox noindex indexline" data-cols="">ൃ</figure>
-<figure class="unusedBox noindex indexline" data-cols="">ൄ␣ൢ␣ൣ</figure>
+<figure class="characterBox noindex indexline">ൃ</figure>
+<figure class="unusedBox noindex indexline">ൄ,ൢ,ൣ</figure>
 </section>
 
 <section id="index_cchars_bindu">
 <h4>Bindu</h4>
-<figure class="characterBox noindex indexline" data-cols="">ം</figure>
+<figure class="characterBox noindex indexline">ം</figure>
 </section>
 
 <section id="index_cchars_virama">
 <h4>Virama</h4>
-<figure class="characterBox noindex indexline" data-cols="">്</figure>
+<figure class="characterBox noindex indexline">്</figure>
 </section>
 
 <section id="index_cchars_visarga">
 <h4>Visarga</h4>
-<figure class="characterBox noindex indexline" data-cols="">ഃ</figure>
+<figure class="characterBox noindex indexline">ഃ</figure>
 </section>
 
 <section id="index_cchars_unused">
 <h4>Not used for modern Malayalam</h4>
-<figure class="unusedBox noindex indexline" data-cols="">ൎ</figure>
-<!--figure class="otherBox noindex indexline"  data-cols="">ഀ␣ഁ␣഻␣഼␣ൄ␣ൢ␣ൣ</figure-->
+<figure class="unusedBox noindex indexline">ൎ</figure>
+<!--figure class="otherBox noindex indexline" >ഀ,ഁ,഻,഼,ൄ,ൢ,ൣ</figure-->
 </section>
 </details>
 </section>
@@ -328,11 +335,11 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="auxiliaryBox noindex indexline" data-cols="">൦␣൧␣൨␣൩␣൪␣൫␣൬␣൭␣൮␣൯</figure>
+<figure class="auxiliaryBox noindex indexline">൦,൧,൨,൩,൪,൫,൬,൭,൮,൯</figure>
 
 <section id="index_numbers_unused">
 <h4>Not used for modern Malayalam</h4>
-<figure class="unusedBox noindex indexline" data-cols="">൰␣൱␣൲␣൳␣൴␣൵␣൘␣൙␣൚␣൛␣൜␣൝␣൞␣൶␣൷␣൸␣꠰␣꠱␣꠲</figure>
+<figure class="unusedBox noindex indexline">൰,൱,൲,൳,൴,൵,൘,൙,൚,൛,൜,൝,൞,൶,൷,൸,꠰,꠱,꠲</figure>
 </section>
 </details>
 </section>
@@ -345,12 +352,12 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="unusedBox noindex indexline" data-cols="">।␣॥</figure>
+<figure class="unusedBox noindex indexline">।,॥</figure>
 
 
 <section id="index_punctuation_ascii">
 <h4>ASCII</h4>
-<figure class="characterBox noindex indexline" data-cols="">‘␣’␣“␣”␣(␣)␣,␣.␣:␣;␣?␣!</figure>
+<figure class="characterBox noindex indexline">‘,’,“,”,(,),,,.,:,;,?,!</figure>
 </section>
 </details>
 </section>
@@ -364,11 +371,11 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="auxiliaryBox noindex indexline" data-cols="">൹</figure>
+<figure class="auxiliaryBox noindex indexline">൹</figure>
 
 <section id="index_symbols_unused">
 <h4>Not used for modern Malayalam</h4>
-<figure class="unusedBox noindex indexline"  data-cols="">൏</figure>
+<figure class="unusedBox noindex indexline" >൏</figure>
 </section>
 </details>
 </section>
@@ -383,13 +390,13 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <summary class="instructions">Show</summary>
 
 
-<figure class="characterBox noindex indexline" data-cols="" data-notes="<img src='../../c/General_Punctuation/large/200C.png' alt='ZWNJ' style='vertical-align:middle; height:2rem;'>,<img src='../../c/General_Punctuation/large/200D.png' alt='ZWJ' style='vertical-align:middle; height:2rem;'>" data-links="">&#x200C;␣&#x200D;</figure>
+<figure class="characterBox noindex indexline" data-notes="<img src='../../c/General_Punctuation/large/200C.png' alt='ZWNJ' style='vertical-align:middle; height:2rem;'>,<img src='../../c/General_Punctuation/large/200D.png' alt='ZWJ' style='vertical-align:middle; height:2rem;'>" data-links="">&#x200C;,&#x200D;</figure>
 
 
 
 <section id="index_other_tbc">
 <h4>To be investigated</h4>
-<figure class="tbcBox noindex indexline" data-cols="">%␣[␣]␣§␣«␣»␣ʼ␣͏␣ഀ␣ഁ␣഻␣഼␣ഽ␣​␣‑␣–␣—␣†␣‡␣…␣‰␣′␣″␣‹␣›␣⁠</figure>
+<figure class="tbcBox noindex indexline">%,[,],§,«,»,ʼ,͏,ഀ,ഁ,഻,഼,ഽ,​,‑,–,—,†,‡,…,‰,′,″,‹,›,⁠</figure>
 </section>
 </details>
 </section>
@@ -688,14 +695,14 @@ alveolar</th>
 </tr>
 <tr>
 <th></th>
-<td class="mouth"><a href="../common29/mouth/mouth_labial.png" target="_blank"><img src="../common29/mouth/mouth_small_labial.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_dental.png" target="_blank"><img src="../common29/mouth/mouth_small_dental.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_alveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_postalveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_retroflex.png" target="_blank"><img src="../common29/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_palatal.png" target="_blank"><img src="../common29/mouth/mouth_small_palatal.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_velar.png" target="_blank"><img src="../common29/mouth/mouth_small_velar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_glottal.png" target="_blank"><img src="../common29/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_labial.png" target="_blank"><img src="../common30/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_dental.png" target="_blank"><img src="../common30/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_alveolar.png" target="_blank"><img src="../common30/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_postalveolar.png" target="_blank"><img src="../common30/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_retroflex.png" target="_blank"><img src="../common30/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_palatal.png" target="_blank"><img src="../common30/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_velar.png" target="_blank"><img src="../common30/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_glottal.png" target="_blank"><img src="../common30/mouth/mouth_small_glottal.png" alt=" "/></a></td>
 </tr>
 </tbody>
 </table>
@@ -806,32 +813,32 @@ alveolar</th>
 <tbody>
 <tr>
 <th rowspan="4">Plain:</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ി␣ീ␣ു␣ൂ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ഇ␣ഈ␣ഉ␣ഊ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ി,ീ,ു,ൂ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ഇ,ഈ,ഉ,ഊ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">െ␣േ␣ൊ␣ോ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">എ␣ഏ␣ഒ␣ഓ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">െ,േ,ൊ,ോ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">എ,ഏ,ഒ,ഓ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="ə">്</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="ə">എ്</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="ə">്</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="ə">എ്</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="a,aː">ⓘ␣ാ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">അ␣ആ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="a,aː">ⓘ,ാ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">അ,ആ</figure></td>
 </tr>
 
 <tr>
 <th>Diphthongs:</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ൈ␣ൗ␣ൌ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ഐ␣ഔ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ൈ,ൗ,ൌ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ഐ,ഔ</figure></td>
 </tr>
 
 <tr>
 <th>Vocalics:</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ൃ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ഋ␣ൠ␣ഌ␣ൡ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ൃ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ഋ,ൠ,ഌ,ൡ</figure></td>
 </tr>
 </tbody>
 </table>
@@ -854,16 +861,16 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="ml">&#x0D15;</bdi>
     <span class="ipa">ka</span>
-    <span><span class="uname">U+0D15 MALAYALAM LETTER KA</span></span>
 </p>
 
 <p id="def-inherentvowel" class="explanatoryintro definitionStub"></p>
 
-<p>The inherent vowel for Malayalam is pronounced <span class="ipa">ɐ</span>, so <span class="ipa">kɐ</span> is written by simply using the consonant letter, eg.</p>
+<p>The inherent vowel for Malayalam is pronounced <span class="ipa">ɐ</span>, so <span class="ipa">kɐ</span> is written by simply using the consonant letter.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">കനത്ത</span></p>
 <table class="sequenceTable breakdown">
-<tr data-notes="KA,NA,TA,virama,TA" data-type="uname,uname,uname,uname,uname,uname" data-prefix=",,,,"><td>ക␣ന␣ത␣്␣ത</td></tr>
+<tr data-notes="KA,NA,TA,virama,TA" data-type="uname,uname,uname,uname,uname,uname" data-prefix=",,,,"><td>ക,ന,ത,്,ത</td></tr>
 </table>
 
 <p>Since Malayalam consonants normally include an inherent vowel, the orthography has ways to indicate a consonant that is not followed by a vowel sound. See <a class="secref">novowel</a>.</p>
@@ -910,12 +917,11 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="ml">&#x0D15;&#x0D3F;</bdi>
     <span class="ipa">ki</span>
-    <span><span class="uname">U+0D15 MALAYALAM LETTER KA</span> + <span class="uname">U+0D3F MALAYALAM VOWEL SIGN I</span></span>
 </p>
 
 <p>Malayalam uses the following dedicated combining marks for plain vowel sounds.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ി␣ീ␣ു␣ൂ␣െ␣േ␣ൊ␣ോ␣ാ</figure>
+<figure class="characterBox auto">ി,ീ,ു,ൂ,െ,േ,ൊ,ോ,ാ</figure>
 
 <p>In the older orthography, the <span class="trans">u</span> and <span class="trans">ū</span> vowel signs, and to some extent the <span class="trans">i</span> and <span class="trans">ī</span> signs, tend to form ligatures with the base consonant.  The shape of the <span class="ipa">u</span> vowel sign has also changed recently, to avoid the complications of the older ligated forms. See <a class="secref">uvowels</a>.</p>
 </section>
@@ -932,14 +938,24 @@ alveolar</th>
 <h4>Half-U</h4>
 
 <p>Although it normally represents the virama, at the end of a word in modern Malayalam text the combination <span class="ch">ക്</span> may also represent the sound <span class="ipa">kə̆</span> or <span class="ipa">kɨ̆</span> (depending on dialect). The transcription for this is usually <span class="trans">ŭ</span>, and it is called <span class="name">half-u</span>.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">കഴുക്</span></p>
 
-<p>In older documents the <span class="name">half-u</span> was typically written with a <span class="trans">u</span> vowel sign plus <span class="name">chandrakkala</span>, which is not ambiguous. It is unusual for a virama to occur after a vowel sign, like this. <span class="eg" lang="ml">പാലു്</span></p>
+<p>In older documents the <span class="name">half-u</span> was typically written with a <span class="trans">u</span> vowel sign plus <span class="name">chandrakkala</span>, which is not ambiguous. It is unusual for a virama to occur after a vowel sign, like this.</p>
 
-<p>The Unicode Standard provides examples of <span class="name">half-u</span> occurring in positions that are not word-final, such as before <span class="ch">ം</span>, eg.</p>
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="ml">പാലു്</span></p>
+
+<p>The Unicode Standard provides examples of <span class="name">half-u</span> occurring in positions that are not word-final, such as before <span class="ch">ം</span>.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">ഐശീല്ം</span></p>
 
-<p>In another example, the <span class="name">chandrakkala</span> is attached to an independent vowel letter, and overrides the sound of that letter, eg. <span class="eg" lang="ml">എ്ന്നാ</span></p>
+<p>In another example, the <span class="name">chandrakkala</span> is attached to an independent vowel letter, and overrides the sound of that letter.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="ml">എ്ന്നാ</span></p>
 
 <p class="info">The <span class="name">chandrakkala</span> is always written after any vowel sign<!-- and before any final consonant (such as anusvara)-->.</p>
 </section>
@@ -957,7 +973,7 @@ alveolar</th>
 
 <p>Two Malayalam diphthongs are also written using vowel signs.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ൈ␣ൗ␣ൌ</figure>
+<figure class="characterBox auto">ൈ,ൗ,ൌ</figure>
 
 <p>Although it was originally just an indicator of vowel length, <span class="ch">ൗ</span> has been used for some time as the normal way to write the sound <span class="ipa">au̯</span>. Previously, that sound was represented by a vowel sign that surrounded the base character. If you want to use that form in your text you should use <span class="ch">ൌ</span>, however some fonts still hide the left-hand part from display.</p>
 </section>
@@ -975,7 +991,7 @@ alveolar</th>
 
 <p>Composite vowels only occur in decomposed text, where the glyphs in circumgraphs are split into separate code points.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ൊ␣ോ␣ൌ</figure>
+<figure class="characterBox auto">ൊ,ോ,ൌ</figure>
 
 <p>An unusual feature of Malayalam is that there are circumstances where a decomposed circumgraph has to be used. See <a class="secref">ra_clusters</a>.</p>
 </section>
@@ -994,13 +1010,13 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="ml">കെ</bdi>
     <span class="ipa">ke</span>
-    <span><span class="uname">U+0D15 MALAYALAM LETTER KA</span> + <span class="uname">U+0D46 MALAYALAM VOWEL SIGN E</span></span>
 </p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">െ␣േ␣ ␣ൈ</figure>
+<figure class="characterBox auto">െ,േ, ,ൈ</figure>
 
-<p>Three vowel signs appear to the left of the base consonant letter or cluster, eg.</p>
+<p>Three vowel signs appear to the left of the base consonant letter or cluster.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">കെട്ട്</span></p>
 <p><span class="eg" lang="ml">കേട്</span></p>
 <p><span class="eg" lang="ml">കൈപ്പ്</span></p>
@@ -1016,15 +1032,16 @@ alveolar</th>
 <p class="info">These are combining marks that are always typed and stored after the base consonant(s), ie. the codepoints follow the order in which the items are pronounced. The rendering process places the glyph before the base consonant without changing the code points. The following shows the sequence of code points that make up the first word just above.</p>
 
 <table class="sequenceTable">
-<tr data-notes="KA,E,TTA,virama,TTA,virama" data-type="uname,uname,uname,uname,uname,uname" data-prefix=",,,,,"><td>ക␣െ␣ട␣്␣ട␣്</td></tr>
+<tr data-notes="KA,E,TTA,virama,TTA,virama" data-type="uname,uname,uname,uname,uname,uname" data-prefix=",,,,,"><td>ക,െ,ട,്,ട,്</td></tr>
 </table>
 
-<p>These vowel signs do not split a <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct</a>. This means that a word with a consonant cluster at the start separates the pre-base vowel from the  position where it is pronounced by more than one consonant character, eg.
+<p>These vowel signs do not split a <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct</a>. This means that a word with a consonant cluster at the start separates the pre-base vowel from the  position where it is pronounced by more than one consonant character.
 </p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">ഡ്രൈവ്</span></p>
 <table class="sequenceTable breakdown">
-<tr data-notes="ɖrɐi̯,DDA,virama,RA,AI" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ഡ്രൈ␣ഡ␣്␣ര␣ൈ</td></tr>
+<tr data-notes="ɖrɐi̯,DDA,virama,RA,AI" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ഡ്രൈ,ഡ,്,ര,ൈ</td></tr>
 </table>
 
 
@@ -1053,24 +1070,25 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="ml">കൊ</bdi>
     <span class="ipa">ko</span>
-    <span><span class="uname">U+0D15 MALAYALAM LETTER KA</span> + <span class="uname">U+0D4A MALAYALAM VOWEL SIGN O</span></span>
 </p>
 
 <p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
 
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ൊ␣ോ␣ ␣ൌ</figure>
+<figure class="characterBox auto">ൊ,ോ, ,ൌ</figure>
 
-<p>Three vowels  are produced by a single combining character with visually separate parts, that appear on opposite sides of the consonant onset, eg.</p>
+<p>Three vowels  are produced by a single combining character with visually separate parts, that appear on opposite sides of the consonant onset.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">ഒരൊറ്റ</span></p>
 <p><span class="eg" lang="ml">ആഗോള</span></p>
 
-<p>As for pre-base vowel signs, these do not split a conjunct, but instead they treat the conjunct as a single unit and place glyphs either side of it, eg.</p>
+<p>As for pre-base vowel signs, these do not split a conjunct, but instead they treat the conjunct as a single unit and place glyphs either side of it.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">ക്രോധം</span></p>
 <table class="sequenceTable breakdown">
-<tr data-notes="kroː, KA,virama,RA,OO" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ക്രോ␣ക␣്␣ര␣ോ</td></tr>
+<tr data-notes="kroː, KA,virama,RA,OO" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ക്രോ,ക,്,ര,ോ</td></tr>
 </table>
 
 <figure id="fig_circumgraph" class="sideCaption">
@@ -1080,11 +1098,12 @@ alveolar</th>
 <details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="ml">കൊച്ച്</span></p></details>
 
 
-<p>In modern text, <span class="hx">0D57</span> has become a dominant way to write the vowel <span class="ipa">au̯</span>, rather than <span class="hx">0D4C</span>, eg.</p>
+<p>In modern text, <span class="hx">0D57</span> has become a dominant way to write the vowel <span class="ipa">au̯</span>, rather than <span class="hx">0D4C</span>.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">സൗന്ദര്യം</span></p>
 <table class="sequenceTable breakdown">
-<tr data-notes="sɐu, SA,length mark,SA,AU" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,≣,+"><td>സൗ␣സ␣ൗ␣സ␣ൌ</td></tr>
+<tr data-notes="sɐu, SA,length mark,SA,AU" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,≣,+"><td>സൗ,സ,ൗ,സ,ൌ</td></tr>
 </table>
 
 
@@ -1119,9 +1138,9 @@ alveolar</th>
 
 <p>Malayalam represents standalone vowels using a set of independent vowel letters.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ഇ␣ഈ␣ഉ␣ഊ␣എ␣ഏ␣ഒ␣ഓ␣അ␣ആ␣ ␣ഐ␣ഔ</figure>
+<figure class="characterBox auto">ഇ,ഈ,ഉ,ഊ,എ,ഏ,ഒ,ഓ,അ,ആ, ,ഐ,ഔ</figure>
 
-<p>For example:</p>
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">എല്ലാ</span></p>
 <p><span class="eg" lang="ml">ഓടുക</span></p>
 <p><span class="eg" lang="ml">സിമേഈ</span></p>
@@ -1368,16 +1387,16 @@ alveolar</th>
 
 <p>The modern orthography generally only uses the following.<tt>u16,#G697705</tt></p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ൃ␣ഋ</figure>
+<figure class="characterBox auto">ൃ,ഋ</figure>
 
-<p>Examples:</p>
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">മൃഗം</span></p>
 <p><span class="eg" lang="ml">ഋഷി</span></p>
 
 <div class="btw">
 <p>The  items in the list below are rare and typically used only to write Sanskrit in Malayalam.<tt>u16,#G697705</tt></p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ൄ␣ൠ␣ൢ␣ഌ␣ൣ␣ൡ</figure>
+<figure class="characterBox auto">ൄ,ൠ,ൢ,ഌ,ൣ,ൡ</figure>
 </div>
 </section>
 
@@ -1402,7 +1421,16 @@ alveolar</th>
 <h2>Vowel absence</h2>
 
 
-<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel. The absence of a vowel sound can be visually indicated in one of the following ways.</p>
+<aside class="sectionAside"></aside>
+
+<p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
+
+<div id="novowel_description"></div>
+
+<p>Follow these links for more information.</p>
+
+
+
 
 <ol>
 <li>A <mark><a href="#chandrakkala">visible <span class="name">chandrakkala</span></a></mark> character above the top right  of the initial consonant.</li>
@@ -1448,14 +1476,13 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="ml">ക്</bdi>
     <span class="ipa">k</span>
-    <span><span class="uname">U+0D15 MALAYALAM LETTER KA</span> + <span class="uname">U+0D4D MALAYALAM SIGN VIRAMA​</span></span>
     </p>
 
 
 
 
 
-<p>Malayalam uses <span class="hx">0D4D</span> (in Malayalam called <span class="eg inline" lang="ml">ചന്ദ്രക്കല</span>) to kill the inherent vowel after a consonant, eg. <span class="ch">ക്</span> explicitly represents just the sound <span class="ipa">k</span>.</p>
+<p>Malayalam uses <span class="hx">0D4D</span> (in Malayalam called <span class="eg inline" lang="ml">ചന്ദ്രക്കല</span>) to kill the inherent vowel after a consonant, eg. <span class="ch noindex">ക്</span> explicitly represents just the sound <span class="ipa">k</span>.</p>
 
 <p>This  was promoted as the default by the orthographic reforms of the 1970s. It is also the fallback if the font doesn't contain conjunct forms for a particular cluster of consonants.</p>
 
@@ -1463,7 +1490,7 @@ alveolar</th>
 
 <p>Word-final consonants are typically written using <span class="name">chillu</span> characters, rather than using the virama (see <a class="secref">finals</a>), and in <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjuncts</a> the virama is hidden (see <a class="secref">clusters</a>).</p>
 
-<p>Examples include:</p>
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">ആഴ്ച</span></p>
 <p><span class="eg" lang="ml">ഗുല്ഫം</span></p>
 <p><span class="eg" lang="ml">നമസ്തേ</span></p>
@@ -1493,22 +1520,20 @@ alveolar</th>
 <section id="conjuncts">
 <h4>Conjunct formation</h4>
 
-<figure class="characterBox auto hidden"  data-cols="trans">&#x0D4D;</figure>
-
 <p>In Unicode, the stacking and conjoining behaviour is achieved by adding <span class="hx">0D4D</span>  between the consonants. The font hides the glyph automatically.</p>
 
 
 <table class="sequenceTable">
-<tr data-notes="NYA,virama,CA,ɲt͡ʃ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ഞ␣്␣ച␣ഞ്ച</td></tr>
+<tr data-notes="NYA,virama,CA,ɲt͡ʃ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ഞ,്,ച,ഞ്ച</td></tr>
 </table>
 
 <p>The rendered shape of the conjunct may also vary from font to font. Traditional fonts have more ligatures than modern ones. For example, compare the sequences below which are identical except that Noto Serif Malayalam is used for the top row, and Manjari is used for the bottom row.</p>
 
 
 <table class="sequenceTable">
-<tr data-notes="PA,virama,TA,pt̪" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→" data-font="Noto Serif Malayalam WF"><td>പ␣്␣ത␣പ്ത</td></tr>
+<tr data-notes="PA,virama,TA,pt̪" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→" data-font="Noto Serif Malayalam WF"><td>പ,്,ത,പ്ത</td></tr>
 
-<tr data-notes="PA,virama,TA,pt̪" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→" data-font="Manjari WF"><td>പ␣്␣ത␣പ്ത</td></tr>
+<tr data-notes="PA,virama,TA,pt̪" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→" data-font="Manjari WF"><td>പ,്,ത,പ്ത</td></tr>
 </table>
 
 
@@ -1549,11 +1574,11 @@ The number of conjuncts is 129 and 219+156, respectively.</p>
 
 <figure id="fig_stacks" class="sideCaption">
 <table class="sequenceTable">
-<tr data-notes="KA,virama,LA,kl" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക␣്␣ല␣ക്ല</td></tr>
+<tr data-notes="KA,virama,LA,kl" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക,്,ല,ക്ല</td></tr>
 
-<tr data-notes="YA,virama,YA,jj" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>യ␣്␣യ␣യ്യ</td></tr>
+<tr data-notes="YA,virama,YA,jj" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>യ,്,യ,യ്യ</td></tr>
 
-<tr data-notes="SA,virama,RRA,virama,RRA,st(t)" data-type="uname,uname,uname,uname,uname,ipa" data-prefix=",+,+,+,+,→"><td>സ␣്␣റ␣്␣റ␣സ്റ്റ</td></tr>
+<tr data-notes="SA,virama,RRA,virama,RRA,st(t)" data-type="uname,uname,uname,uname,uname,ipa" data-prefix=",+,+,+,+,→"><td>സ,്,റ,്,റ,സ്റ്റ</td></tr>
 </table>
 <figcaption>Examples of conjuncts formed by subjoining non-initial consonants.</figcaption>
 </figure>
@@ -1568,7 +1593,7 @@ The number of conjuncts is 129 and 219+156, respectively.</p>
 <details>
 <summary class="instructions">Show stacked conjuncts in the Noto Serif Malayalam font</summary>
 
-<figure class="characterBox auto noindex small" data-cols="" data-ignore="&#x0D4D;" data-translit="k͓ʈ␣k͓l␣g͓g␣c͓c␣c͓cʰ␣ʈ͓ʈ␣ɖ͓ɖ␣ɖ͓ɖʰ␣ɳ͓ɳ␣t͓l␣d͓d␣p͓p␣p͓l␣b͓d␣b͓dʰ␣b͓b␣b͓l␣m͓l␣ṙ͓ṙ␣y͓y␣l͓p␣l͓l␣l͓ʋ␣ʋ͓ʋ␣ʃ͓l␣ʃ͓ʃ␣s͓l␣s͓s␣ʂ͓ʈ␣h͓l"  data-font="Noto Serif Malayalam WF">ക്ട␣ക്ല␣ഗ്ഗ␣ച്ച␣ച്ഛ␣ട്ട␣ഡ്ഡ␣ഡ്ഢ␣ണ്ണ␣ത്ല␣ദ്ദ␣പ്പ␣പ്ല␣ബ്ബ␣ബ്ല␣മ്ല␣റ്റ␣യ്യ␣ല്പ␣ല്ല␣ല്വ␣വ്വ␣ശ്ല␣ശ്ശ␣സ്ല␣സ്സ␣ഹ്ല</figure>
+<figure class="characterBox auto noindex small" data-ignore="&#x0D4D;" data-latin="k͓ʈ,k͓l,g͓g,c͓c,c͓cʰ,ʈ͓ʈ,ɖ͓ɖ,ɖ͓ɖʰ,ɳ͓ɳ,t͓l,d͓d,p͓p,p͓l,b͓d,b͓dʰ,b͓b,b͓l,m͓l,ṙ͓ṙ,y͓y,l͓p,l͓l,l͓ʋ,ʋ͓ʋ,ʃ͓l,ʃ͓ʃ,s͓l,s͓s,ʂ͓ʈ,h͓l"  data-font="Noto Serif Malayalam WF">ക്ട,ക്ല,ഗ്ഗ,ച്ച,ച്ഛ,ട്ട,ഡ്ഡ,ഡ്ഢ,ണ്ണ,ത്ല,ദ്ദ,പ്പ,പ്ല,ബ്ബ,ബ്ല,മ്ല,റ്റ,യ്യ,ല്പ,ല്ല,ല്വ,വ്വ,ശ്ല,ശ്ശ,സ്ല,സ്സ,ഹ്ല</figure>
 </details>
 </section>
 
@@ -1583,13 +1608,13 @@ The number of conjuncts is 129 and 219+156, respectively.</p>
 
 <figure id="fig_conjoined" class="sideCaption">
 <table class="sequenceTable">
-<tr data-notes="KA,virama,SSA,kʂ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക␣്␣ഷ␣ക്ഷ</td></tr>
+<tr data-notes="KA,virama,SSA,kʂ" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക,്,ഷ,ക്ഷ</td></tr>
 
-<tr data-notes="TA,virama,TA,t̪t̪" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ത␣്␣ത␣ത്ത</td></tr>
+<tr data-notes="TA,virama,TA,t̪t̪" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ത,്,ത,ത്ത</td></tr>
 
-<tr data-notes="NA,virama,TA,nt̪" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ന␣്␣ത␣ന്ത</td></tr>
+<tr data-notes="NA,virama,TA,nt̪" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ന,്,ത,ന്ത</td></tr>
 
-<tr data-notes="MA,virama,MA,mm" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>മ␣്␣മ␣മ്മ</td></tr>
+<tr data-notes="MA,virama,MA,mm" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>മ,്,മ,മ്മ</td></tr>
 </table>
 <figcaption>Examples of conjuncts formed by conjoining consonants.</figcaption>
 </figure>
@@ -1600,11 +1625,11 @@ The number of conjuncts is 129 and 219+156, respectively.</p>
 
 <figure id="fig_conjoined_special" class="sideCaption">
 <table class="sequenceTable">
-<tr data-notes="KA,virama,YA,kj" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക␣്␣യ␣ക്യ</td></tr>
+<tr data-notes="KA,virama,YA,kj" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക,്,യ,ക്യ</td></tr>
 
-<tr data-notes="KA,virama,LA,kl" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക␣്␣വ␣ക്വ</td></tr>
+<tr data-notes="KA,virama,LA,kl" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക,്,വ,ക്വ</td></tr>
 
-<tr data-notes="KA,virama,RA,kr" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക␣്␣ര␣ക്ര</td></tr>
+<tr data-notes="KA,virama,RA,kr" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക,്,ര,ക്ര</td></tr>
 </table>
 <figcaption>Standard shaping for 3 conjoined pairs.</figcaption>
 </figure>
@@ -1622,7 +1647,7 @@ The number of conjuncts is 129 and 219+156, respectively.</p>
 
 
 <table class="sequenceTable">
-<tr data-notes="YA,virama,YA,jj" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>യ␣്␣യ␣യ്യ</td></tr>
+<tr data-notes="YA,virama,YA,jj" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>യ,്,യ,യ്യ</td></tr>
 </table>
 
 
@@ -1630,7 +1655,7 @@ The number of conjuncts is 129 and 219+156, respectively.</p>
 <details>
 <summary class="instructions">Show conjoined conjuncts in the Noto Serif Malayalam font</summary>
 
-<figure class="counterstylesBox auto noindex" data-cols="" data-ignore="&#x0D4D;" data-translit="k͓k␣k͓ʂ␣g͓d␣g͓n␣g͓m␣ŋ͓k␣ŋ͓ŋ␣j͓j␣j͓ɲ␣ɲ͓c␣ɲ͓cʰ␣ɲ͓ɲ␣ɳ͓ʈ␣ɳ͓ɖ␣ɳ͓ɖʰ␣ɳ͓m␣t͓t␣t͓tʰ␣t͓n␣t͓bʰ␣t͓m␣t͓s␣d͓dʰ␣n͓t␣n͓tʰ␣n͓d␣n͓dʰ␣n͓n␣n͓m␣m͓p␣m͓m␣ʃ͓c␣ʃ͓cʰ␣s͓tʰ␣h͓n␣h͓m" data-font="Noto Serif Malayalam WF">ക്ക␣ക്ഷ␣ഗ്ദ␣ഗ്ന␣ഗ്മ␣ങ്ക␣ങ്ങ␣ജ്ജ␣ജ്ഞ␣ഞ്ച␣ഞ്ഞ␣ണ്ട␣ണ്ഡ␣ണ്മ␣ത്ത␣ത്ഥ␣ത്ന␣ത്ഭ␣ത്മ␣ത്സ␣ദ്ധ␣ന്ത␣ന്ഥ␣ന്ദ␣ന്ധ␣ന്ന␣ന്മ␣മ്പ␣മ്മ␣ശ്ച␣സ്ഥ␣ഹ്ന␣ഹ്മ</figure>
+<figure class="counterstylesBox auto noindex" data-ignore="&#x0D4D;" data-latin="k͓k,k͓ʂ,g͓d,g͓n,g͓m,ŋ͓k,ŋ͓ŋ,j͓j,j͓ɲ,ɲ͓c,ɲ͓cʰ,ɲ͓ɲ,ɳ͓ʈ,ɳ͓ɖ,ɳ͓ɖʰ,ɳ͓m,t͓t,t͓tʰ,t͓n,t͓bʰ,t͓m,t͓s,d͓dʰ,n͓t,n͓tʰ,n͓d,n͓dʰ,n͓n,n͓m,m͓p,m͓m,ʃ͓c,ʃ͓cʰ,s͓tʰ,h͓n,h͓m" data-font="Noto Serif Malayalam WF">ക്ക,ക്ഷ,ഗ്ദ,ഗ്ന,ഗ്മ,ങ്ക,ങ്ങ,ജ്ജ,ജ്ഞ,ഞ്ച,ഞ്ഞ,ണ്ട,ണ്ഡ,ണ്മ,ത്ത,ത്ഥ,ത്ന,ത്ഭ,ത്മ,ത്സ,ദ്ധ,ന്ത,ന്ഥ,ന്ദ,ന്ധ,ന്ന,ന്മ,മ്പ,മ്മ,ശ്ച,സ്ഥ,ഹ്ന,ഹ്മ</figure>
 </details>
 </section>
 
@@ -1646,7 +1671,7 @@ The number of conjuncts is 129 and 219+156, respectively.</p>
 
 <p>In the Thoolika Traditional Unicode font this applies to the following consonants in initial position. </p>
 
-<figure class="characterBox auto" data-cols="" data-ignore="&#x0D4D;" data-translit="k͓ʃ␣ɳ͓ʃ␣n͓ʃ␣r͓ʃ␣l͓ʃ␣ɭ͓ʃ">ക␣ണ␣ന␣ര␣ല␣ള</figure>
+<figure class="characterBox auto" data-ignore="&#x0D4D;" data-latin="k͓ʃ,ɳ͓ʃ,n͓ʃ,r͓ʃ,l͓ʃ,ɭ͓ʃ">ക,ണ,ന,ര,ല,ള</figure>
 
 <p><a class="figref">conjunct_chillus</a> shows the same sequence of characters in the Thoolika Traditional Unicode font. Note how the shape of the second consonant remains the same as normal - there is no ligation or repositioning. The examples in <a class="figref">conjunct_chillus</a> all use <span class="uname">SHA</span> in the second position.  Note that the chillu code points are not used here – this is just font styling on normal consonants.</p>
 
@@ -1684,18 +1709,20 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 <section id="rra_conjuncts">
 <h4>Clusters with RRA</h4>
 
-<p>The conjunct <span class="ch">റ്റ</span> is always pronounced <span class="ipa">tt</span>, eg.</p>
+<p>The conjunct <span class="ch">റ്റ</span> is always pronounced <span class="ipa">tt</span>.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">പാറ്റ</span></p>
 <p><span class="eg" lang="ml">ഉറ്റോർ</span></p>
 
 <table class="sequenceTable breakdown">
-<tr data-notes="ttoː,RRA,virama,RRA,O" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>റ്റോ␣റ␣്␣റ␣ോ</td></tr>
+<tr data-notes="ttoː,RRA,virama,RRA,O" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>റ്റോ,റ,്,റ,ോ</td></tr>
 </table>
 
 
-<p>Until the 1960s, the geminated <span class="ipa">tt</span> was generally written using just two side-by-side <span class="uname">RRA</span> letters, although circumgraphs and pre-base vowel signs would span the digraph <em>as if it were a single unit</em>. For example:</p>
+<p>Until the 1960s, the geminated <span class="ipa">tt</span> was generally written using just two side-by-side <span class="uname">RRA</span> letters, although circumgraphs and pre-base vowel signs would span the digraph <em>as if it were a single unit</em>.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">പാററ</span></p>
 
 <p>This is problematic in 2 ways:</p>
@@ -1706,14 +1733,14 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <p><span class="eg" lang="ml">മാറെറാലി</span></p>
 <table class="sequenceTable breakdown" style="margin-inline-start: calc(7.5% + 1rem);">
-<tr data-notes="tto,RRA,E,RRA,A" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>റെറാ␣റ␣െ␣റ␣ാ</td></tr>
+<tr data-notes="tto,RRA,E,RRA,A" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>റെറാ,റ,െ,റ,ാ</td></tr>
 </table>
 </li>
 <li><p>the digraph sometimes represents two separate consonants followed by vowel sounds, making the sequence ambiguous, eg.</p>
 
 <p><span class="eg" lang="ml">ടെംപററി</span></p>
 <table class="sequenceTable breakdown" style="margin-inline-start: calc(7.5% + 1rem);">
-<tr data-notes="rari,RRA,RRA,I" data-type="ipa,uname,uname,uname" data-prefix=",→,+,+"><td>ററി␣റ␣റ␣ി</td></tr>
+<tr data-notes="rari,RRA,RRA,I" data-type="ipa,uname,uname,uname" data-prefix=",→,+,+"><td>ററി,റ,റ,ി</td></tr>
 </table>
 </li>
 </ol>
@@ -1728,15 +1755,15 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <p><span class="leadin">Use for <span class="ipa">nda</span>.</span> When stacked, <span class="ch">ൻ്റ</span> is always pronounced <span class="ipa">nda</span>. That is the preferred spelling, according to the Unicode Standard<tt>u16,#G701512</tt>, however a number of fonts don't yet render that correctly, so the combination is often spelled <span class="ch">ന്റ</span>, where some magic is applied to convert the shape of <span class="uname">NA</span> to look like a chillu form. Font support for these sequences varies.</p>
 
-<p>Examples:</p>
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">കലൻ്റർ</span></p>
 <table class="sequenceTable breakdown" style="margin-inline-start: calc(7.5% + 6rem);">
-<tr data-notes="ndɐ,chillu NA,virama,RRA" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ൻ്റ␣ൻ␣്␣റ</td></tr>
+<tr data-notes="ndɐ,chillu NA,virama,RRA" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ൻ്റ,ൻ,്,റ</td></tr>
 </table>
 
 <p><span class="eg" lang="ml">കലന്റർ</span></p>
 <table class="sequenceTable breakdown" style="margin-inline-start: calc(7.5% + 6rem);">
-<tr data-notes="ndɐ,NA,virama,RRA" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ന്റ␣ന␣്␣റ</td></tr>
+<tr data-notes="ndɐ,NA,virama,RRA" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ന്റ,ന,്,റ</td></tr>
 </table>
 
 <style>
@@ -1790,13 +1817,13 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <p><span class="charExample" translate="no"><span class="ex" lang="ml">ആൻേറാ</span> <span class="trans">ận̽ēṙā</span> <span class="ipa">aːndoː</span></span></p>
 <table class="sequenceTable breakdown" style="margin-inline-start: calc(7.5% + 6rem);">
-<tr data-notes="ndoː,chillu NA,EE,RRA,AA" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ൻേറാ␣ൻ␣േ␣റ␣ാ</td></tr>
+<tr data-notes="ndoː,chillu NA,EE,RRA,AA" data-type="ipa,uname,uname,uname,uname" data-prefix=",→,+,+,+"><td>ൻേറാ,ൻ,േ,റ,ാ</td></tr>
 </table>
 
 <p class="info">Authors should also avoid the sequence <span class="ch">ൻ്‍റ</span>, since it conflicts with the legacy representation of the side-by-side form.<tt>u16,#G742668</tt></p>
 </section>
 </section>
-
+</section>
 
 
 
@@ -1861,42 +1888,42 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 <tbody>
 <tr>
 <th rowspan="6">Onsets&nbsp;</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">പ␣ബ␣ത␣ദ␣ട␣ഡ␣ക␣ഗ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="-k">ൿ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">പ,ബ,ത,ദ,ട,ഡ,ക,ഗ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-k">ൿ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ഫ␣ഭ␣ഥ␣ധ␣ഠ␣ഢ␣ഖ␣ഘ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ഫ,ഭ,ഥ,ധ,ഠ,ഢ,ഖ,ഘ</figure></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="t͡ʃ,d͡ʒ,,t͡ʃʰ,d͡ʒʰ">ച␣ജ␣ ␣ഛ␣ഝ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="t͡ʃ,d͡ʒ,,t͡ʃʰ,d͡ʒʰ">ച,ജ, ,ഛ,ഝ</figure></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="ʋ,s,ʂ,ʃ~ɕ,ɦ">വ␣സ␣ഷ␣ശ␣ഹ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="ʋ,s,ʂ,ʃ~ɕ,ɦ">വ,സ,ഷ,ശ,ഹ</figure></td>
 <td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-ɦ">ഃ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">മ␣ന␣ണ␣ഞ␣ങ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-m,-n,-ɳ">ം␣ൻ␣ൺ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">മ,ന,ണ,ഞ,ങ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-m,-n,-ɳ">ം,ൻ,ൺ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="r̪,r,ɻ,l,ɭ,j">ര␣റ␣ഴ␣ല␣ള␣യ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-r,-l,-ɭ">ർ␣ൽ␣ൾ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="r̪,r,ɻ,l,ɭ,j">ര,റ,ഴ,ല,ള,യ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="-r,-l,-ɭ">ർ,ൽ,ൾ</figure></td>
 </tr>
 
 <!--<tr>
 <th rowspan="4">Finals:</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ൿ␣ ␣ൔ␣ൕ␣ൖ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ൿ, ,ൔ,ൕ,ൖ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ഃ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ഃ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ം␣ൻ␣ൺ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ം,ൻ,ൺ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ർ␣ൽ␣ൾ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ർ,ൽ,ൾ</figure></td>
 </tr>-->
 </tbody>
 </table>
@@ -1919,7 +1946,7 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 <p class="instructions">Click on each letter for more details and for examples of usage, especially where more than one sound is indicated.</p>
 
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ipa="p b,f pʰ,b,bʰ,t̪ d̪,t̪ʰ,d̪,d̪ʰ,ʈ ɖ,ʈʰ,ɖ,ɖʰ,k ɡ,kʰ,ɡ,ɡʰ,t͡ʃ d͡ʒ,t͡ʃʰ,d͡ʒ,d͡ʒʰ,ʋ,s,ʂ,ɕ~ʃ,ɦ,m,n̪~n,ɳ,ɲ,ŋ,r̪,r tt,ɻ,l,ɭ,j">പ␣ഫ␣ബ␣ഭ␣ത␣ഥ␣ദ␣ധ␣ട␣ഠ␣ഡ␣ഢ␣ക␣ഖ␣ഗ␣ഘ␣ച␣ഛ␣ജ␣ഝ␣വ␣സ␣ഷ␣ശ␣ഹ␣മ␣ന␣ണ␣ഞ␣ങ␣ര␣റ␣ഴ␣ല␣ള␣യ</figure>
+<figure class="characterBox auto" data-ipa="p b,f pʰ,b,bʰ,t̪ d̪,t̪ʰ,d̪,d̪ʰ,ʈ ɖ,ʈʰ,ɖ,ɖʰ,k ɡ,kʰ,ɡ,ɡʰ,t͡ʃ d͡ʒ,t͡ʃʰ,d͡ʒ,d͡ʒʰ,ʋ,s,ʂ,ɕ~ʃ,ɦ,m,n̪~n,ɳ,ɲ,ŋ,r̪,r tt,ɻ,l,ɭ,j">പ,ഫ,ബ,ഭ,ത,ഥ,ദ,ധ,ട,ഠ,ഡ,ഢ,ക,ഖ,ഗ,ഘ,ച,ഛ,ജ,ഝ,വ,സ,ഷ,ശ,ഹ,മ,ന,ണ,ഞ,ങ,ര,റ,ഴ,ല,ള,യ</figure>
 
 
 <p>The conjunct <span class="ch">ക്ഷ</span>  <span class="ipa">kʂ</span>  is conventionally regarded as an additional letter in the Malayalam alphabet.<tt>d,420</tt></p>
@@ -1939,7 +1966,7 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <p>Two other letters, <span class="ch">ഩ</span> and <span class="ch">ഺ</span> are historic and used rarely in scholarly texts to represent alveolar sounds. In ordinary texts, <span class="ch">ന</span> and <span class="ch">റ</span> are used instead.<tt>ws</tt></p>
 
-<!--<figure class="archaicBox auto" data-cols="ipa,trans,transc">ഩ␣ഺ</figure>-->
+<!--<figure class="archaicBox auto">ഩ,ഺ</figure>-->
 </section>
 </div>
 </section>
@@ -1955,16 +1982,20 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 <section id="onsets">
 <h3>Onsets</h3>
 
-<p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Malayalam, and are typically handled as described in the section <a class="secref">clusters</a>. Examples:</p>
+<p>Clusters of consonant letters at the beginning of an orthographic syllable occur in Malayalam, and are typically handled as described in the section <a class="secref">clusters</a>:</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">വ്യക്തി</span></p>
 <p><span class="eg" lang="ml">സ്വാഗതം</span></p>
 
 <p>A medial <span class="uname">RA</span> is rendered to the left of an initial consonant or conjunct (see <a class="secref">noninitial_ra</a>).</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">ഗ്രാമ്പൂ</span></p>
 
-<p>In some cases, a medial consonant is represented using a vocalic vowel sign, rather than a consonant, eg.</p>
+<p>In some cases, a medial consonant is represented using a vocalic vowel sign, rather than a consonant.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">കൢപ്തം</span></p>
 
 
@@ -1977,30 +2008,32 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <p><span class="ch">ര</span> when non-initial  in a cluster is displayed to the left of the other consonant(s) in the reformed orthography. This transposition is done during the font rendering – the typed and stored order remains the same as the spoken order.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">ചക്രം</span></p>
 
 
 <!--<table class="sequenceTable breakdown">
-<tr data-notes="KA,virama,RA,kr̪a" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക␣്␣ര␣ക്ര</td></tr>
+<tr data-notes="KA,virama,RA,kr̪a" data-type="uname,uname,uname,ipa" data-prefix=",+,+,→"><td>ക,്,ര,ക്ര</td></tr>
 </table>-->
 
 <table class="sequenceTable breakdown">
-<tr data-notes="kr̪a,KA,virama,RA" data-type="ipa,uname,uname,uname" data-prefix=",→,+,+"><td>ക്ര␣ക␣്␣ര</td></tr>
+<tr data-notes="kr̪a,KA,virama,RA" data-type="ipa,uname,uname,uname" data-prefix=",→,+,+"><td>ക്ര,ക,്,ര</td></tr>
 </table>
 
 
-<p>When <span class="uname">RA</span> follows more than one consonant, it is displayed to the left of any <em>conjunct</em>, not just to the left of the preceding consonant, eg.</p>
+<p>When <span class="uname">RA</span> follows more than one consonant, it is displayed to the left of any <em>conjunct</em>, not just to the left of the preceding consonant.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">ചന്ദ്രക്കല</span></p>
 
 
 <table class="sequenceTable breakdown">
-<tr data-notes="nd̪r̪a,NA,virama,DA,virama,RA" data-type="ipa,uname,uname,uname,uname,uname" data-prefix=",→,+,+,+,+"><td>ന്ദ്ര␣ന␣്␣ദ␣്␣ര</td></tr>
+<tr data-notes="nd̪r̪a,NA,virama,DA,virama,RA" data-type="ipa,uname,uname,uname,uname,uname" data-prefix=",→,+,+,+,+"><td>ന്ദ്ര,ന,്,ദ,്,ര</td></tr>
 </table>
 
 
 <!--<table class="sequenceTable breakdown">
-<tr data-notes="NA,virama,DA,virama,RA,nd̪r̪a" data-type="uname,uname,uname,uname,uname,ipa" data-prefix=",+,+,+,+,→"><td>ന␣്␣ദ␣്␣ര␣ന്ദ്ര</td></tr>
+<tr data-notes="NA,virama,DA,virama,RA,nd̪r̪a" data-type="uname,uname,uname,uname,uname,ipa" data-prefix=",+,+,+,+,→"><td>ന,്,ദ,്,ര,ന്ദ്ര</td></tr>
 </table>-->
 </section>
 </section>
@@ -2027,12 +2060,11 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <p>Contemporary <span class="name">chillu</span> (or <span class="name">cillakṣaram</span>) characters include the following.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ൿ␣ൻ␣ൺ␣ർ␣ൽ␣ൾ</figure>
+<figure class="characterBox auto">ൿ,ൻ,ൺ,ർ,ൽ,ൾ</figure>
 
 <p><span class="ch">ൿ</span> is relatively rare in modern texts.<tt>u16,#G701512</tt></p>
 
-<p>Examples:</p>
-
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">അപ്പൻ</span></p>
 <p><span class="eg" lang="ml">തിങ്കൾ</span></p>
 <p><span class="eg" lang="ml">ഉറ്റോർ</span></p>
@@ -2047,7 +2079,7 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <div class="btw">
 <p>Unicode v9 introduced 3 more chillu letters, <span class="ch">ൔ</span>, <span class="ch">ൕ</span>, and <span class="ch">ൖ</span>, which are only found in historical texts.<tt>u16,#G701512</tt></p>
-<figure class="characterBox auto" data-cols="ipa">ൔ␣ൕ␣ൖ</figure>
+<figure class="characterBox auto">ൔ,ൕ,ൖ</figure>
 </div>
 
 <p class="info">In older Unicode text chillus were written by following the consonant with <span class="hx img split">0d4d 200d</span>, but since the introduction of the chillu characters in Unicode v5.1 the use of the atomic characters is recommended, instead.<tt>u16,#G705612</tt></p>
@@ -2064,11 +2096,15 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <p>Malayalam has 3 ways of writing an <span class="ipa">r</span> coda before a following consonant.<tt>u16,#G708363</tt></p>
 
-<p><span class="leadin">Chillu form</span> Since the orthographic reform, this has been written as <span class="ch">ർ</span> followed by the next consonant in the cluster, eg.</p>
+<p><span class="leadin">Chillu form</span> Since the orthographic reform, this has been written as <span class="ch">ർ</span> followed by the next consonant in the cluster.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">നേർത്ത</span></p>
 <p><span class="eg" lang="ml">ഈർപ്പമുള്ള</span></p>
 
-<p><span class="leadin">Special form</span> The form <span class="ch">ര്യ</span> is only used before <span class="ch">യ</span><tt>u16,#G708363</tt>, eg.</p>
+<p><span class="leadin">Special form</span> The form <span class="ch">ര്യ</span> is only used before <span class="ch">യ</span><tt>u16,#G708363</tt>.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">സൗന്ദര്യം</span></p>
 <p><span class="eg" lang="ml">ഭാര്യ</span></p>
 
@@ -2086,7 +2122,7 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 <section id="anusvara_visarga">
 <h4>Anusvara &amp; visarga</h4>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ം␣ഃ</figure>
+<figure class="characterBox auto">ം,ഃ</figure>
 
 <p>Malayalam also uses the <span class="name">anusvara</span> and <span class="name">visarga</span> as syllable-final characters, eg. the following word contains both:</p>
 
@@ -2094,7 +2130,9 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <p>The <span class="name">anusvara</span> normally represents the sound <span class="ipa">m</span>, but may be assimilated to another nasal consonant.</p>
 
-<p>It can also be used multiple times after a vowel, for emphasis<tt>u16,#G706689</tt> eg.</p>
+<p>It can also be used multiple times after a vowel, for emphasis.<tt>u16,#G706689</tt></p>
+
+<div class="egIntro">eg.</div>
 <p><span class="charExample" translate="no"><span class="ex" lang="ml">ഈംംംം</span> <span class="trans">ị̄m̽m̽m̽m̽</span></span></p>
 </section>
 </section>
@@ -2110,10 +2148,14 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 <h3>Consonant length</h3>
 
 <p>Gemination/consonant lengthening is very common in Malayalam. It is usually indicated by doubling the consonant, in the same way as for consonant clusters (see <a class="secref">clusters</a>).</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">അപ്പൻ</span></p>
 <p><span class="eg" lang="ml">അടുത്ത്</span></p>
 
 <p>The sound <span class="ipa">tt</span> is unusual in that it can be written <span class="ch">റ്റ</span> (see <a class="secref">rra_conjuncts</a>).</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">പാറ്റ</span></p>
 <p><span class="eg" lang="ml">മാറ്റം</span></p>
 </section>
@@ -2740,18 +2782,18 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <p>There is a set of Malayalam digits, but they are not in use for modern texts. </p>
 
-<figure class="auxiliaryBox auto"  data-cols="trans,transc" data-extra="0,1,2,3,4,5,6,7,8,9">൦␣൧␣൨␣൩␣൪␣൫␣൬␣൭␣൮␣൯</figure>
+<figure class="auxiliaryBox auto"  data-cols="" data-notes="0,1,2,3,4,5,6,7,8,9">൦,൧,൨,൩,൪,൫,൬,൭,൮,൯</figure>
 
 <div class="btw">
 <p>Older texts also used the following additional numeric characters.</p>
 
-<figure class="archaicBox auto"  data-cols="trans">൰␣൱␣൲␣൳␣൴␣൵␣൘␣൙␣൚␣൛␣൜␣൝␣൞␣൶␣൷␣൸</figure>
+<figure class="archaicBox auto"  data-cols="">൰,൱,൲,൳,൴,൵,൘,൙,൚,൛,൜,൝,൞,൶,൷,൸</figure>
 
 <p><span class="ch">൏</span> was used historically to measure rice.</p>
 
 <p>According to the  Unicode Standard, Malayalam also used the following characters in the Common Indic Number Forms block.<tt>u16,#G697504</tt></p>
 
-<figure class="otherBox auto" data-translit="¼␣½␣¾" data-cols="">꠰␣꠱␣꠲</figure>
+<figure class="otherBox auto" data-translit="¼,½,¾" data-cols="">꠰,꠱,꠲</figure>
 </div>
 
 
@@ -2762,8 +2804,9 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 <section id="ordinals">
 <h4>Ordinals</h4>
 
-<p><span class="ch">ം</span> may be attached to digits to indicate ordinal numbers<tt>u16,#G706689</tt>, eg. </p>
+<p><span class="ch">ം</span> may be attached to digits to indicate ordinal numbers<tt>u16,#G706689</tt>.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="ml">355ാം</span></p>
 </section>
 </section>
@@ -2773,8 +2816,6 @@ text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5
 
 <section id="dates">
 <h3>Dates</h3>
-
-<figure class="auxiliaryBox auto"  data-cols="">&#x0D79;</figure>
 
 <p><span class="ch">൹</span> can be used like the 'th' in English dates, but it use is fading in modern text. <tt>u16,#G697526</tt></p>
 </section>
@@ -2888,11 +2929,11 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 
 <p>The list below shows traditional forms for each of the basic consonants with <span class="ch">ു</span>. The top line shows the traditional form, and the line just below (in the darker colour) shows the modern version.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc"  data-lang="ml-x-traditional" data-ipa="pu,pʰu,bu,bʰu,tu,tʰu,du,dʰu,ʈu,ʈʰu,ɖu,ɖʰu,ku,kʰu,gu,gʰu,,cu,cʰu,ju,jʰu,,ʋu,su,ʂu,ʃu,hu,,mu,nu,ɳu,ɲu,ŋu,,ru,ṙu,ɻu,lu,ɭu,yu" data-extra="പു␣ഫു␣ബു␣ഭു␣തു␣ഥു␣ദു␣ധു␣ടു␣ഠു␣ഡു␣ഢു␣കു␣ഖു␣ഗു␣ഘു␣ ␣ചു␣ഛു␣ജു␣ഝു␣ ␣വു␣സു␣ഷു␣ശു␣ഹു␣ ␣മു␣നു␣ണു␣ഞു␣ങു␣ ␣രു␣റു␣ഴു␣ലു␣ളു␣യു">പു␣ഫു␣ബു␣ഭു␣തു␣ഥു␣ദു␣ധു␣ടു␣ഠു␣ഡു␣ഢു␣കു␣ഖു␣ഗു␣ഘു␣ ␣ചു␣ഛു␣ജു␣ഝു␣ ␣വു␣സു␣ഷു␣ശു␣ഹു␣ ␣മു␣നു␣ണു␣ഞു␣ങു␣ ␣രു␣റു␣ഴു␣ലു␣ളു␣യു</figure>
+<figure class="characterBox auto"  data-lang="ml-x-traditional" data-ipa="pu,pʰu,bu,bʰu,tu,tʰu,du,dʰu,ʈu,ʈʰu,ɖu,ɖʰu,ku,kʰu,gu,gʰu,,cu,cʰu,ju,jʰu,,ʋu,su,ʂu,ʃu,hu,,mu,nu,ɳu,ɲu,ŋu,,ru,ṙu,ɻu,lu,ɭu,yu" data-extra="പു,ഫു,ബു,ഭു,തു,ഥു,ദു,ധു,ടു,ഠു,ഡു,ഢു,കു,ഖു,ഗു,ഘു, ,ചു,ഛു,ജു,ഝു, ,വു,സു,ഷു,ശു,ഹു, ,മു,നു,ണു,ഞു,ങു, ,രു,റു,ഴു,ലു,ളു,യു">പു,ഫു,ബു,ഭു,തു,ഥു,ദു,ധു,ടു,ഠു,ഡു,ഢു,കു,ഖു,ഗു,ഘു, ,ചു,ഛു,ജു,ഝു, ,വു,സു,ഷു,ശു,ഹു, ,മു,നു,ണു,ഞു,ങു, ,രു,റു,ഴു,ലു,ളു,യു</figure>
 
 <p>This next list shows the same, but the consonant is followed by <span class="ch">ൂ</span>.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc"  data-lang="ml-x-traditional" data-ipa="puː,pʰuː,buː,bʰuː,tuː,tʰuː,duː,dʰuː,ʈuː,ʈʰuː,ɖuː,ɖʰuː,kuː,kʰuː,guː,gʰuː,,cuː,cʰuː,juː,jʰuː,,ʋuː,suː,ʂuː,ʃuː,huː,,muː,nuː,ɳuː,ɲuː,ŋuː,,ruː,ṙuː,ɻuː,luː,ɭuː,yuː" data-extra="പൂ␣ഫൂ␣ബൂ␣ഭൂ␣തൂ␣ഥൂ␣ദൂ␣ധൂ␣ടൂ␣ഠൂ␣ഡൂ␣ഢൂ␣കൂ␣ഖൂ␣ഗൂ␣ഘൂ␣␣ചൂ␣ഛൂ␣ജൂ␣ഝൂ␣␣വൂ␣സൂ␣ഷൂ␣ശൂ␣ഹൂ␣␣മൂ␣നൂ␣ണൂ␣ഞൂ␣ങൂ␣␣രൂ␣റൂ␣ഴൂ␣ലൂ␣ളൂ␣യൂ␣">പൂ␣ഫൂ␣ബൂ␣ഭൂ␣തൂ␣ഥൂ␣ദൂ␣ധൂ␣ടൂ␣ഠൂ␣ഡൂ␣ഢൂ␣കൂ␣ഖൂ␣ഗൂ␣ഘൂ␣␣ചൂ␣ഛൂ␣ജൂ␣ഝൂ␣␣വൂ␣സൂ␣ഷൂ␣ശൂ␣ഹൂ␣␣മൂ␣നൂ␣ണൂ␣ഞൂ␣ങൂ␣␣രൂ␣റൂ␣ഴൂ␣ലൂ␣ളൂ␣യൂ</figure>
+<figure class="characterBox auto"  data-lang="ml-x-traditional" data-ipa="puː,pʰuː,buː,bʰuː,tuː,tʰuː,duː,dʰuː,ʈuː,ʈʰuː,ɖuː,ɖʰuː,kuː,kʰuː,guː,gʰuː,,cuː,cʰuː,juː,jʰuː,,ʋuː,suː,ʂuː,ʃuː,huː,,muː,nuː,ɳuː,ɲuː,ŋuː,,ruː,ṙuː,ɻuː,luː,ɭuː,yuː" data-extra="പൂ,ഫൂ,ബൂ,ഭൂ,തൂ,ഥൂ,ദൂ,ധൂ,ടൂ,ഠൂ,ഡൂ,ഢൂ,കൂ,ഖൂ,ഗൂ,ഘൂ,,ചൂ,ഛൂ,ജൂ,ഝൂ,,വൂ,സൂ,ഷൂ,ശൂ,ഹൂ,,മൂ,നൂ,ണൂ,ഞൂ,ങൂ,,രൂ,റൂ,ഴൂ,ലൂ,ളൂ,യൂ,">പൂ,ഫൂ,ബൂ,ഭൂ,തൂ,ഥൂ,ദൂ,ധൂ,ടൂ,ഠൂ,ഡൂ,ഢൂ,കൂ,ഖൂ,ഗൂ,ഘൂ,,ചൂ,ഛൂ,ജൂ,ഝൂ,,വൂ,സൂ,ഷൂ,ശൂ,ഹൂ,,മൂ,നൂ,ണൂ,ഞൂ,ങൂ,,രൂ,റൂ,ഴൂ,ലൂ,ളൂ,യൂ</figure>
 
 <p class="linkToApp"><a target="_blank" href="../apps/vowel_signs/index.html?preset=mlym">See a table of all consonants and all vowel signs.</a><br>The table allows you to test results for various fonts.</p>
 </section>
@@ -2919,11 +2960,11 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 <!--<img src="images/zwnj.png" alt="" data-notes="Large characters are Noto Serif 72px. Left side is screen grab of text.">-->
 
 <table class="sequenceTable">
-<tr data-notes="KA,virama,RA,,krɐ" data-type="uname,uname,uname,,ipa" data-prefix=",+,+,+,→" data-font="Manjari WF"><td>ക␣്␣ര␣␣ക്ര</td></tr>
+<tr data-notes="KA,virama,RA,,krɐ" data-type="uname,uname,uname,,ipa" data-prefix=",+,+,+,→" data-font="Manjari WF"><td>ക,്,ര,,ക്ര</td></tr>
 
-<tr data-notes="KA,virama,ZWNJ,RA,krɐ" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→" data-font="Manjari WF"><td>ക␣്␣‌␣ര␣ക്‌ര</td></tr>
+<tr data-notes="KA,virama,ZWNJ,RA,krɐ" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→" data-font="Manjari WF"><td>ക,്,‌,ര,ക്‌ര</td></tr>
 
-<tr data-notes="KA,ZWNJ,virama,RA,krɐ" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→" data-font="Noto Sans Serif WF"><td>ക␣‌␣്␣ര␣ക്ര</td></tr>
+<tr data-notes="KA,ZWNJ,virama,RA,krɐ" data-type="uname,uname,uname,uname,ipa" data-prefix=",+,+,+,→" data-font="Noto Sans Serif WF"><td>ക,‌,്,ര,ക്ര</td></tr>
 </table>
 <figcaption>Uses of ZWNJ (zero-width non-joiner) in Malayalam where,  by default, the font produces a ligature for the sequence pronounced <span class="ipa">krɐ</span>.</figcaption>
 </figure>
@@ -2985,7 +3026,10 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 
 <p>Spaces are often used between words, but it is not uncommon for writers to use spacing to indicate phonological pauses, rather than lexical boundaries.<tt>ws</tt></p>
-<p>Sequences of characters between spaces are often quite long in Malayalam, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">അറിയപ്പെടുന്നുവെങ്കിലും</span><span class="trans">ạ̄ṙiyp͓peʈun͓nuʋeŋ͓kilum̽</span></span></p>
+<p>Sequences of characters between spaces are often quite long in Malayalam.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="charExample" translate="no"><span class="ex" lang="ml">അറിയപ്പെടുന്നുവെങ്കിലും</span><span class="trans">ạ̄ṙiyp͓peʈun͓nuʋeŋ͓kilum̽</span></span></p>
 </section>
 
 
@@ -3172,7 +3216,6 @@ which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
-<figure class="characterBox auto small"  data-cols="trans,transc">!␣,␣:␣;␣.␣।␣॥␣?</figure>
 <p>Malayalam uses western punctuation.</p>
 
 
@@ -3210,7 +3253,6 @@ which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</
 <section id="bracketing">
 <h4>Bracketed text</h4>
 
-<figure class="characterBox auto small"  data-cols="trans,transc">(␣)</figure>
 
 <p>Malayalam commonly uses ASCII parentheses to insert parenthetical information into text.</p>
 
@@ -3243,7 +3285,6 @@ which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</
 <section id="quotations">
 <h3>Quotations &amp; citations</h3>
 
-<figure class="characterBox auto small"  data-cols="trans,transc">‘␣’␣“␣”</figure>
 
 <p>Malayalam texts  use  quotation marks around quotations. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks.</p>
 
@@ -3420,10 +3461,10 @@ which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</
 <section id="cs_numeric">
 <h4>Numeric</h4>
 <p>The <span class="kw" translate="no">malayalam</span> numeric style  is decimal-based and  uses these  digits.<tt>rmcs</tt></p>
-<figure class="characterBox auto" data-cols="trans,transc" data-notes="1,2,3,4,5,6,7,8,9,0">൧␣൨␣൩␣൪␣൫␣൬␣൭␣൮␣൯␣൦</figure>
+<figure class="characterBox auto" data-notes="1,2,3,4,5,6,7,8,9,0">൧,൨,൩,൪,൫,൬,൭,൮,൯,൦</figure>
 
-<p>Examples:</p>
-<figure class="auto counterstylesBox" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">൧␣൨␣൩␣൪␣൧൧␣൨൨␣൩൩␣൪൪␣൧൧൧␣൨൨൨␣൩൩൩␣൪൪൪</figure>
+<div class="egIntro">eg.</div>
+<figure class="auto counterstylesBox" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">൧,൨,൩,൪,൧൧,൨൨,൩൩,൪൪,൧൧൧,൨൨൨,൩൩൩,൪൪൪</figure>
 </section>
 
 
@@ -3433,8 +3474,6 @@ which has an Indic Syllabic Category of <code class="kw" translate="no">Virama</
 <h4>Prefixes and suffixes</h4>
 
 <p>Malayalam commonly uses a full stop + space as a suffix.</p>
-
-<p>Examples:</p>
 
 
 <figure id="fig_cs_separators" style="margin-top: 0">
