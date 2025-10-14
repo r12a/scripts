@@ -1877,6 +1877,12 @@ function replaceStuff (node) {
             }
         else char = chars[i]
         
+        // convert § to comma
+        //console.log('CHARS[i]',chars[i])
+        //if (chars[i] === '\u2423') console.log('FOUND IT')
+        if (chars[i] === '\u2423') chars[i] = ','
+        //console.log(chars[i])
+        
         // create an id attribute for the listPairs in the index
         if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
         else indexId = ''
@@ -3435,6 +3441,7 @@ function addCharacterLists () {
 
 
 function listSectionCharacters (section) {
+    console.log('listSectionCharacters(',section,')')
     charElems = document.getElementById(section).querySelectorAll('.listItem, .codepoint bdi')
     charList = ''
     for (i=0;i<charElems.length;i++) {
@@ -3449,6 +3456,9 @@ function listSectionCharacters (section) {
     charList = charList.replace(/\u0020/g,'')
     charList = charList.replace(/\u00A0/g,'')
     charList = charList.replace(/\u24D8/g,'')
+
+    // take care of , masquerading as ?
+    charList = charList.replace(/,/g,'\u2423')
         
     charArray = [... charList]
     uniqueSet = new Set(charArray)
