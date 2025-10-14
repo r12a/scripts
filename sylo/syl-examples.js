@@ -745,7 +745,8 @@ autoExpandExamples.syl = `
 ꠢꠥꠞꠥ||␣||
 ꠢꠥꠞꠥꠔꠣ||␣||
 ꠢꠦ||␣||
-
+ꠔꠣꠟ|rhythm|t̪a§l|tal|
+ꠕꠣꠟ|plate|t̪a\u0301§l|tá|
 
 
 @ https://www.unicode.org/L2/L2002/02388-syloti-proposal.pdf
