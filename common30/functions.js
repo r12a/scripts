@@ -1,4 +1,4 @@
-// provide values for trace variables in the debug.js file
+ï»¿// provide values for trace variables in the debug.js file
 if (typeof traceSet === 'undefined') traceSet = new Set([])
 
 
@@ -1877,7 +1877,7 @@ function replaceStuff (node) {
             }
         else char = chars[i]
         
-        // convert § to comma
+        // convert ï¿½ to comma
         //console.log('CHARS[i]',chars[i])
         //if (chars[i] === '\u2423') console.log('FOUND IT')
         if (chars[i] === '\u2423') chars[i] = ','
@@ -3428,6 +3428,7 @@ function addResources () {
 
 
 function addCharacterLists () {
+    console.log('>>> addCharacterLists')
     // adds the lists of characters in selected sections to the right hand column
 
     if (document.getElementById('vowels') && document.getElementById('vowels').querySelector('aside') !== null) listSectionCharacters('vowels')
@@ -3435,13 +3436,16 @@ function addCharacterLists () {
     if (document.getElementById('novowel') && document.getElementById('novowel').querySelector('aside') !== null)listSectionCharacters('novowel')
     if (document.getElementById('inline') && document.getElementById('inline').querySelector('aside') !== null)listSectionCharacters('inline')
     
+    listItems = document.querySelectorAll('.sectionCharacterList .listItem')
+    console.log('listitems',listItems)
+	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
     }
 
 
 
 
 function listSectionCharacters (section) {
-    console.log('listSectionCharacters(',section,')')
+    console.log('>>> listSectionCharacters(',section,')')
     charElems = document.getElementById(section).querySelectorAll('.listItem, .codepoint bdi')
     charList = ''
     for (i=0;i<charElems.length;i++) {
@@ -3475,10 +3479,10 @@ function listSectionCharacters (section) {
     
     replaceStuff(document.getElementById(section).querySelector('figure'))
     //listItems = document.getElementById(section).querySelectorAll('.listItem')
-    listItems = document.getElementById(section).querySelector('aside').querySelectorAll('.listItem')
+    //listItems = document.getElementById(section).querySelector('aside').querySelectorAll('.listItem')
     //console.log('section',section)
     //console.log('listitems',listItems)
-	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
+	//for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
     
     
     //console.log('charlist',charList)
