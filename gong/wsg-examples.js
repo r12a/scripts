@@ -85,7 +85,7 @@ autoExpandExamples.wsg = `
 𑵠𑵽𑶗𑵽𑶍𑶂𑶍|to cook|a§ʈ§ʈu§ɖu|aṭṭuḍu|अट्टुडु
 𑵠𑵵𑵮𑵽|custom|a§la§ba§ʈ|alabaṭ|अलबट
 𑵠𑶕𑵻𑶎|edge|aŋt͡ʃuː|aṇcū|अंचू
-𑵡𑶈𑶕𑵬𑵰|forest|aː§ra§ɳ§ja§m|āraṇyam|अंचू
+𑵡𑶈𑶕𑵬𑵰|forest|aː§raɳ§ja§m|āraṇyam|अंचू
 𑵢𑵶𑶗𑵶𑶐|here|i§ɡ§ɡe|iggē|इग्गे
 𑶉𑶊𑵣|ink|saː§iː|sā'ī|साई
 𑵣𑵸𑵰𑶈|swim|iː§da§ma§ɽ|īdamar|ईदमड़
