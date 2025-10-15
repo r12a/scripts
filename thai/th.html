@@ -5,10 +5,10 @@
 <title>Thai orthography notes</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common29/local.css" />
+<link rel="stylesheet" href="../common30/local.css" />
 <link rel="stylesheet" href="th.css" />
 
-<script src="../common29/debug.js"></script>
+<script src="../common30/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../apps/ipa_analyser/propertylist.js"></script>
@@ -19,12 +19,12 @@
 
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common29/functions.js"></script>
-<script src="../common29/transliterate.js"></script>
-<script src="../common29/prompts.js"> </script>
+<script src="../common30/functions.js"></script>
+<script src="../common30/transliterate.js"></script>
+<script src="../common30/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../common29/egcode.js"></script>
-<script src="../common29/references.js"></script>
+<script src="../common30/egcode.js"></script>
+<script src="../common30/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="th-langdata.js"></script>
@@ -60,7 +60,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->30 September, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->15 October, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -80,7 +80,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Thai Orthography Notes, <!-- #BeginDate format:En2 -->30-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/thai/th">https://r12a.github.io/scripts/thai/th</a></small></p>
+<p class="refLine"><small>Richard Ishida, Thai Orthography Notes, <!-- #BeginDate format:En2 -->15-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/thai/th">https://r12a.github.io/scripts/thai/th</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -174,7 +174,13 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
 <p class="addToConsonants">Modern Thai uses <a class="seclink" href="#basicC">41 basic consonant letters</a>. Each onset consonant is associated with a high, mid, or low class related to tone.</p> 
 
-<p class="addToConsonants">No <a class="termref" href="../glossary/index.html#conjunct">conjuncts</a> are used for consonant clusters. <a class="seclink" href="#onsets">Syllable-initial clusters</a> and <a class="seclink" href="#finals">syllable-final consonant</a> sounds are all written with ordinary consonant letters. It can therefore be difficult to algorithmically detect syllable boundaries.</p>
+<p class="addToConsonants"><a class="seclink" href="#onsets">Syllable-initial clusters</a> and <a class="seclink" href="#finals">syllable-final consonant</a> sounds are all written with ordinary consonant letters. It can therefore be difficult to algorithmically detect syllable boundaries.</p>
+
+
+
+<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography normally needs a way to indicate when a consonant is <em>not</em> followed by a vowel, but Thai doesn't.</p>
+
+<p class="addToNovowel">Thai doesn't have <a class="termref" href="../glossary/index.html#conjunct">conjuncts</a>, or any way of generally indicating where an inherent vowel is cancelled. As described in <a class="secref">finals</a>, this can lead to ambiguous parsing of text, since it's not clear whether a consonant represents a syllable coda or a new syllable with inherent vowel.</p>
 
 
 
@@ -243,29 +249,29 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 <section id="index_letters_consonants">
 <h4>Consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="">ผ␣ถ␣ฐ␣ข␣ป␣บ␣ต␣ด␣ฏ␣ฎ␣ก␣อ␣พ␣ภ␣ท␣ธ␣ฑ␣ฒ␣ค␣ฆ␣ฉ␣จ␣ช␣ฌ␣ฝ␣ส␣ศ␣ษ␣ห␣ฟ␣ซ␣ฮ␣ม␣น␣ณ␣ง␣ว␣ร␣ล␣ฬ␣ย␣ญ</figure>
+<figure class="characterBox noindex indexline">ผ,ถ,ฐ,ข,ป,บ,ต,ด,ฏ,ฎ,ก,อ,พ,ภ,ท,ธ,ฑ,ฒ,ค,ฆ,ฉ,จ,ช,ฌ,ฝ,ส,ศ,ษ,ห,ฟ,ซ,ฮ,ม,น,ณ,ง,ว,ร,ล,ฬ,ย,ญ</figure>
 </section>
 
 <section id="index_letters_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox noindex indexline" data-cols="">เ␣แ␣ใ␣ไ␣โ␣ะ␣า␣ำ</figure>
+<figure class="characterBox noindex indexline">เ,แ,ใ,ไ,โ,ะ,า,ำ</figure>
 </section>
 
 <section id="index_letters_vocalics">
 <h4>Vocalics</h4>
-<figure class="characterBox noindex indexline" data-cols="">ฤ␣ฦ␣ๅ</figure>
+<figure class="characterBox noindex indexline">ฤ,ฦ,ๅ</figure>
 </section>
 
 
 <section id="index_letters_other">
 <h4>Other</h4>
-<figure class="characterBox noindex indexline" data-cols="">ฯ␣ๆ</figure>
+<figure class="characterBox noindex indexline">ฯ,ๆ</figure>
 </section>
 
 
 <section id="index_letters_unused">
 <h4>Not used</h4>
-<figure class="unusedBox noindex indexline" data-cols="">ฃ␣ฅ</figure>
+<figure class="unusedBox noindex indexline">ฃ,ฅ</figure>
 </section>
 </details>
 </section>
@@ -280,30 +286,30 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 <section id="index_cchars_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox noindex indexline" data-cols="">ิ␣ี␣ึ␣ื␣ุ␣ู␣ั␣็</figure>
+<figure class="characterBox noindex indexline">ิ,ี,ึ,ื,ุ,ู,ั,็</figure>
 </section>
 
 
 <section id="index_cchars_bindu">
 <h4>Bindu</h4>
-<figure class="characterBox noindex indexline" data-cols="">ํ</figure>
+<figure class="characterBox noindex indexline">ํ</figure>
 </section>
 
 <section id="index_cchars_tone">
 <h4>Tones</h4>
-<figure class="characterBox noindex indexline" data-cols="">่␣้␣๊␣๋</figure>
+<figure class="characterBox noindex indexline">่,้,๊,๋</figure>
 </section>
 
 <section id="index_cchars_consonant_killer">
 <h4>Consonant killer</h4>
-<figure class="characterBox noindex indexline" data-cols="">์</figure>
+<figure class="characterBox noindex indexline">์</figure>
 </section>
 
 <section id="index_cchars_unused">
 <h4>Not used for Thai</h4>
-<figure class="unusedBox noindex indexline" data-cols="">๎</figure>
+<figure class="unusedBox noindex indexline">๎</figure>
 
-<!--figure class="otherBox noindex indexline" data-cols="" data-links="#otherletters,">ฺ</figure-->
+<!--figure class="otherBox noindex indexline" data-links="#otherletters,">ฺ</figure-->
 </section>
 </details>
 </section>
@@ -317,7 +323,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-cols="">๐␣๑␣๒␣๓␣๔␣๕␣๖␣๗␣๘␣๙</figure>
+<figure class="characterBox noindex indexline">๐,๑,๒,๓,๔,๕,๖,๗,๘,๙</figure>
 </details>
 </section>
 
@@ -330,11 +336,11 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-cols="">“␣”␣‘␣’␣๚␣๛␣๏␣–␣—␣…</figure>
+<figure class="characterBox noindex indexline">“,”,‘,’,๚,๛,๏,–,—,…</figure>
 
 <section id="index_punctuation_ascii">
 <h4>ASCII</h4>
-<figure class="characterBox noindex indexline" data-links="#phrase,#phrase,#phrase,#phrase,#phrase,#bracketing,#bracketing" data-cols="">,␣:␣.␣?␣!␣(␣)</figure>
+<figure class="characterBox noindex indexline" data-links="#phrase,#phrase,#phrase,#phrase,#phrase,#bracketing,#bracketing">,,:,.,?,!,(,)</figure>
 </section>
 </details>
 </section>
@@ -348,7 +354,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-links="#currency" data-cols="">฿</figure>
+<figure class="characterBox noindex indexline" data-links="#currency">฿</figure>
 </details>
 </section>
 
@@ -361,13 +367,13 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline"  data-cols="" data-notes="<img src='../../c/General_Punctuation/large/200B.png' alt='ZWSP' style='vertical-align:middle; height:2rem;'>,<img src='../../c/General_Punctuation/large/2060.png' alt='WJ' style='vertical-align:middle; height:2rem;'>" data-links="#zwsp #wrap #justify,#zwsp #wrap">​␣⁠</figure>
+<figure class="characterBox noindex indexline"  data-notes="<img src='../../c/General_Punctuation/large/200B.png' alt='ZWSP' style='vertical-align:middle; height:2rem;'>,<img src='../../c/General_Punctuation/large/2060.png' alt='WJ' style='vertical-align:middle; height:2rem;'>">​,⁠</figure>
 
 
 
 <section id="index_other_tbc">
 <h4>To be investigated</h4>
-<figure class="tbcBox noindex indexline" data-cols="">%␣;␣[␣]␣§␣«␣»␣ʼ␣͏␣ ␣‌␣‍␣‑␣†␣‡␣‰␣′␣″␣‹␣›</figure>
+<figure class="tbcBox noindex indexline">%,;,[,],§,«,»,ʼ,͏, ,‌,‍,‑,†,‡,‰,′,″,‹,›</figure>
 </section>
 </details>
 </section>
@@ -946,13 +952,13 @@ alveolar</th>
 </tr>
 <tr>
 <th></th>
-<td class="mouth"><a href="../common29/mouth/mouth_labial.png" target="_blank"><img src="../common29/mouth/mouth_small_labial.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_dental.png" target="_blank"><img src="../common29/mouth/mouth_small_dental.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_alveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_postalveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_palatal.png" target="_blank"><img src="../common29/mouth/mouth_small_palatal.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_velar.png" target="_blank"><img src="../common29/mouth/mouth_small_velar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_glottal.png" target="_blank"><img src="../common29/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_labial.png" target="_blank"><img src="../common30/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_dental.png" target="_blank"><img src="../common30/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_alveolar.png" target="_blank"><img src="../common30/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_postalveolar.png" target="_blank"><img src="../common30/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_palatal.png" target="_blank"><img src="../common30/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_velar.png" target="_blank"><img src="../common30/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_glottal.png" target="_blank"><img src="../common30/mouth/mouth_small_glottal.png" alt=" "/></a></td>
 </tr>
 </tbody>
 </table>
@@ -1262,37 +1268,37 @@ alveolar</th>
 <table class="soundSummary" style="line-height: 3;">
 <tr>
 <th rowspan="4">Simple</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="◌" data-cols="trans,transc" data-ipa="i,iː,,ɯ,ɯː,ɯː,,u,uː">◌ิ␣◌ี␣ ␣◌ึ␣◌ื␣◌ือ␣ ␣◌ุ␣◌ู</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="◌" data-ipa="i,iː,,ɯ,ɯː,ɯː,,u,uː">◌ิ,◌ี, ,◌ึ,◌ื,◌ือ, ,◌ุ,◌ู</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ipa="e,-e-,eː,,ɤː,ɤː,ɤ,,o,o,-o-,oː" data-ignore="◌" data-cols="trans,transc">เ◌ะ␣เ◌็␣เ◌␣ ␣เ◌ิ␣เ◌อ␣เ◌อะ␣ ␣ⓘ␣โ◌ะ␣◌็อ␣โ◌</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="e,-e-,eː,,ɤː,ɤː,ɤ,,o,o,-o-,oː" data-ignore="◌">เ◌ะ,เ◌็,เ◌, ,เ◌ิ,เ◌อ,เ◌อะ, ,ⓘ,โ◌ะ,◌็อ,โ◌</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ipa="ɛ,-ɛ-,ɛː,,ɔː,ɔː,ɔ" data-ignore="◌" data-cols="trans,transc">แ◌ะ␣แ◌็␣แ◌␣ ␣◌็␣อ␣เ◌าะ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ɛ,-ɛ-,ɛː,,ɔː,ɔː,ɔ" data-ignore="◌">แ◌ะ,แ◌็,แ◌, ,◌็,อ,เ◌าะ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ipa="a,a,-a-,aː" data-ignore="◌" data-cols="trans,transc">ⓘ␣◌ะ␣◌ั␣◌า</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="a,a,-a-,aː" data-ignore="◌">ⓘ,◌ะ,◌ั,◌า</figure></td>
 </tr>
 
 
 <tr>
 <th>Diphthongs</th>
-<td><figure class="summaryBox auto noexpansion" data-ipa="iːə,iə,,ɯːə,ɯə,,uːə,uə" data-ignore="◌" data-cols="trans,transc">เ◌ีย␣เ◌ียะ␣ ␣เ◌ือ␣เ◌ือะ␣ ␣◌ัว␣◌ัวะ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="iːə,iə,,ɯːə,ɯə,,uːə,uə" data-ignore="◌">เ◌ีย,เ◌ียะ, ,เ◌ือ,เ◌ือะ, ,◌ัว,◌ัวะ</figure></td>
 </tr>
 
 
 <tr>
 <th>Vocalics</th>
-<td><figure class="summaryBox auto noexpansion" data-cols="trans,transc" data-ipa="rɯ,ri,lɯ,rɯː,lɯː">ฤ␣ฤ␣ฦ␣ฤๅ␣ฦๅ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="rɯ,ri,lɯ,rɯː,lɯː">ฤ,ฤ,ฦ,ฤๅ,ฦๅ</figure></td>
 </tr>
 
 
 <tr>
 <th>Standalone</th>
-<td><figure class="summaryBox auto noexpansion" data-ipa="ɔː,a,carrier" data-cols="trans,transc">อ␣อ␣อ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ɔː,a,carrier">อ,อ,อ</figure></td>
 </tr>
 </table>
 
@@ -1316,8 +1322,7 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="th">&#x0E01;</bdi>
     <span class="ipa">ko ~ ka ~ kɔː</span>
-    <span><span class="uname">U+0E01 THAI CHARACTER KO KAI</span></span>
-</p>
+    </p>
 
 <p id="def-inherentvowel" class="explanatoryintro definitionStub"></p>
 
@@ -1327,18 +1332,19 @@ alveolar</th>
 <table class="sequenceTable breakdown">
 <tr data-notes="tʰà.,nǒ,n"
     data-type="ipa,ipa,ipa"
-    data-prefix=",,"><td>ถ␣น␣น</td></tr>
+    data-prefix=",,"><td>ถ,น,น</td></tr>
 </table>
 
-<p>A third inherent vowel, <span class="ipa">ɔː</span>, occurs before a syllable-final <span class="uname">RA</span> (which is pronounced <span class="ipa">n</span>), eg.</p>
+<p>A third inherent vowel, <span class="ipa">ɔː</span>, occurs before a syllable-final <span class="uname">RA</span> (which is pronounced <span class="ipa">n</span>).</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">ศร</span></p>
 
 <p><span class="eg" lang="th">นคร</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="ná,kʰɔ̄ː,n"
     data-type="ipa,ipa,ipa"
-    data-prefix=",,"><td>น␣ค␣ร</td></tr>
+    data-prefix=",,"><td>น,ค,ร</td></tr>
 </table>
 
 <p>Since Thai consonants normally include an inherent vowel, the orthography would be expected to have ways to indicate a consonant that is not followed by a vowel sound. For Thai, this is not the case. See <a class="secref">novowel</a>.</p>
@@ -1361,8 +1367,7 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="th">&#x0E01;&#x0E34;</bdi>
     <span class="ipa">ki</span>
-    <span><span class="uname">U+0E01 THAI CHARACTER KO KAI</span> + <span class="uname">U+0E34 THAI CHARACTER SARA I</span></span>
-</p>
+    </p>
 
 
 <p>Post-consonant vowel sounds are represented using combining marks, and vowel letters, including 4 consonants, very often combined into <a class="termref" href="../glossary/index.html#compositevowel">composite vowels</a>. This page lists 37 composite vowels (including diphthongs), which can involve up to 4 glyphs (plus a tone mark) at a time, and can surround the base consonant(s) on up to 3 sides simultaneously.</p>
@@ -1387,19 +1392,19 @@ alveolar</th>
 
 <p>Plain vowels are written using the following characters.</p>
 
-<figure class="characterBox auto" data-cols="ipa, trans,transc" data-ignore="◌">ร␣ิ␣ี␣ึ␣ื␣ุ␣ู␣เ␣โ␣แ␣็␣ะ␣า␣อ␣ั</figure>
+<figure class="characterBox auto" data-ignore="◌">ร,ิ,ี,ึ,ื,ุ,ู,เ,โ,แ,็,ะ,า,อ,ั</figure>
 
 
 <p>Some vowels are written differently in open syllables and closed syllables.</p>
 
 <p>The following panel lists monophthongs in open syllables. The dotted circle shows the location of adjacent consonants.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="i,iː,ɯ,ɯː,u,uː,e,eː,ɤ,ɤː,o,oː,ɛ,ɛː,ɔ,ɔː,a,aː">◌ิ␣◌ี␣◌ึ␣◌ือ␣◌ุ␣◌ู␣เ◌ะ␣เ◌␣เ◌อะ␣เ◌อ␣โ◌ะ␣โ◌␣แ◌ะ␣แ◌␣เ◌าะ␣อ␣◌ะ␣◌า</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="i,iː,ɯ,ɯː,u,uː,e,eː,ɤ,ɤː,o,oː,ɛ,ɛː,ɔ,ɔː,a,aː">◌ิ,◌ี,◌ึ,◌ือ,◌ุ,◌ู,เ◌ะ,เ◌,เ◌อะ,เ◌อ,โ◌ะ,โ◌,แ◌ะ,แ◌,เ◌าะ,อ,◌ะ,◌า</figure>
 
 
 <p>The next panel shows how the same vowels are normally written in closed syllables.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="i,iː,ɯ,ɯː,u,uː,e,eː,ɤ,ɤː,o,oː,ɛ,ɛː,ɔ,ɔː,a,a,aː">◌ิ◌␣◌ี◌␣◌ึ◌␣◌ื◌␣◌ุ◌␣◌ู◌␣เ◌็◌␣เ◌◌␣เ◌ิ◌␣เ◌ิ◌␣◌␣โ◌◌␣แ◌็◌␣แ◌◌␣◌็อ◌␣◌อ◌␣◌ั◌␣◌รร◌␣◌า◌</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="i,iː,ɯ,ɯː,u,uː,e,eː,ɤ,ɤː,o,oː,ɛ,ɛː,ɔ,ɔː,a,a,aː">◌ิ◌,◌ี◌,◌ึ◌,◌ื◌,◌ุ◌,◌ู◌,เ◌็◌,เ◌◌,เ◌ิ◌,เ◌ิ◌,◌,โ◌◌,แ◌็◌,แ◌◌,◌็อ◌,◌อ◌,◌ั◌,◌รร◌,◌า◌</figure>
 
 <p>The consonant <span class="hx">0E2D</span> can also be pronounced as the vowel <span class="ipa">ɔː</span> when it appears alone after a base consonant. It is also used as a vowel carrier for standalone vowels (see <a class="secref">standalone</a>).</p>
 
@@ -1419,23 +1424,23 @@ alveolar</th>
 
 <p>Vowels in this section are written using the following characters.</p>
 
-<figure class="characterBox auto" data-cols="ipa, trans,transc" data-ignore="◌">ว␣ร␣ย␣ิ␣ี␣ึ␣ื␣ุ␣ู␣เ␣โ␣แ␣็␣ะ␣า␣ำ␣ใ␣ไ␣อ␣ั</figure>
+<figure class="characterBox auto" data-ignore="◌">ว,ร,ย,ิ,ี,ึ,ื,ุ,ู,เ,โ,แ,็,ะ,า,ำ,ใ,ไ,อ,ั</figure>
 
 <p>Thai complex vowels are complicated and numerous. The way they are written also varies according to whether they appear in an open or a closed syllable.  The following panel shows open syllable.</p>
 
 <p>Most complex Thai vowels involve adding a final <span class="ipa">-j</span> or <span class="ipa">-w</span> glide after a vowel. The following panel shows combinations that don't follow that pattern. Except for <span class="ipa">uə̯</span>, they are spelled the same whether the syllable is open or closed. However, there are 2 ways of spelling each diphthong in open syllables.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="iə̯,iə̯,ɯə̯,ɯə̯,uə̯,uə̯,uə̯">เ◌ีย␣เ◌ียะ␣เ◌ือ␣เ◌ือะ␣◌ัวะ␣◌ัว␣◌ว◌</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="iə̯,iə̯,ɯə̯,ɯə̯,uə̯,uə̯,uə̯">เ◌ีย,เ◌ียะ,เ◌ือ,เ◌ือะ,◌ัวะ,◌ัว,◌ว◌</figure>
 
 <p>This next panel shows diphthongs and triphthongs that are produced using a following glide. Nearly all of these simply tack <span class="ch">ย</span> or <span class="ch">ว</span> onto the end of the vowel. Each of the items shown here constitutes a complete syllabic rhyme.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="iw,iəw,ɯj,ɯəj,uj,uːj,uəj,uaːj,ew,eːw,ɤːj,oːj,ɛːw,ɔj,ɔːj,aj,aj,aj,aj,aːj,aːj,aːj,aw,aːw">◌ิว␣เ◌ียว␣◌ึย␣เ◌ือย␣◌ุย␣◌ูย␣◌วย␣◌วาย␣เ◌็ว␣เ◌ว␣เ◌ย␣โ◌ย␣แ◌ว␣◌อย␣◌อย␣ไ◌␣ใ◌␣◌ัย␣ไ◌ย␣ไ◌␣ใ◌␣◌าย␣เ◌า␣◌าว</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="iw,iəw,ɯj,ɯəj,uj,uːj,uəj,uaːj,ew,eːw,ɤːj,oːj,ɛːw,ɔj,ɔːj,aj,aj,aj,aj,aːj,aːj,aːj,aw,aːw">◌ิว,เ◌ียว,◌ึย,เ◌ือย,◌ุย,◌ูย,◌วย,◌วาย,เ◌็ว,เ◌ว,เ◌ย,โ◌ย,แ◌ว,◌อย,◌อย,ไ◌,ใ◌,◌ัย,ไ◌ย,ไ◌,ใ◌,◌าย,เ◌า,◌าว</figure>
 
 <p>Note that the above set includes 2 single code points that represent diphthongs: <span class="ch">ไ</span> and <span class="ch">ใ</span>.</p>
 
 <p>The final panel in this section shows some complete Thai rhymes that have special spellings.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="am,an">◌ำ␣◌รร</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="am,an">◌ำ,◌รร</figure>
 </section>
 
 
@@ -1449,13 +1454,19 @@ alveolar</th>
 <section id="doubleRA">
 <h4>Doubled RA</h4>
 
-<p>The consonant <span class="hx">0E23</span> is pronounced as a vowel <span class="ipa">a</span> when doubled medially, eg.</p>
+<p>The consonant <span class="hx">0E23</span> is pronounced as a vowel <span class="ipa">a</span> when doubled medially.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">ธรรม</span></p>
 
-<p>When doubled at the end of a syllable it is pronounced <span class="ipa">an</span>, eg.</p>
+<p>When doubled at the end of a syllable it is pronounced <span class="ipa">an</span>.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">กรรไกร</span></p>
 
-<p>Note, however, that this may also constitute the end and beginning of two syllables, eg.</p>
+<p>Note, however, that this may also constitute the end and beginning of two syllables.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">ภรรยา</span></p>
 </section>
 
@@ -1478,7 +1489,7 @@ alveolar</th>
 
 <p>Thai uses the following combining characters for vowels.</p>
 
-<figure class="characterBox auto" data-ignore="◌"  data-cols="ipa,trans,transc">◌ิ␣◌ี␣◌ึ␣◌ื␣◌ุ␣◌ู␣◌็␣◌ั␣◌ํ</figure>
+<figure class="characterBox auto" data-ignore="◌">◌ิ,◌ี,◌ึ,◌ื,◌ุ,◌ู,◌็,◌ั,◌ํ</figure>
 
 
 <p>For <span class="ch">ํ</span> see <a class="secref">nikhahit</a>.</p>
@@ -1505,12 +1516,14 @@ alveolar</th>
 <li><span class="ex" lang="th">แ&#x25cc;</span> <span class="ipa">ɛː</span> becomes <span class="ex" lang="th">แ&#x25cc;็&#x25cc;</span> <span class="ipa">ɛ</span> (not very common). </li>
 </ul>
 
-<p>Examples:</p>
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">เด็ก</span></p>
 <p><span class="eg" lang="th" dir="ltr">ซ็อกเก็ต</span></p>
 <p><span class="eg" lang="th" dir="ltr">น้ำแข็ง</span></p>
 
 <p>It is also used for the diphthong <span class="ipa">ew</span> <span class="ex" lang="th">เ&#x25cc;็ว</span> (<span class="ipa">eːw</span> &gt; <span class="ipa">ew</span>).</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">เร็ว</span></p>
 <!--/details-->
 </section>
@@ -1538,7 +1551,7 @@ alveolar</th>
 <p>The following  vowel-specific characters are ordinary spacing characters, with the general category of 'letter'. They are typed and stored around the base in visual order, and can appear alone or as part of a composite vowel. The dotted circles indicate the location of the syllable-initial consonant.</p>
 
 
-<figure class="characterBox auto" data-ignore="◌"  data-cols="ipa,trans,transc">เ◌␣โ◌␣แ◌␣◌ะ␣◌า␣ ␣ไ◌␣ใ◌␣◌ำ</figure>
+<figure class="characterBox auto" data-ignore="◌">เ◌,โ◌,แ◌,◌ะ,◌า, ,ไ◌,ใ◌,◌ำ</figure>
 </section-->
 
 
@@ -1549,8 +1562,9 @@ alveolar</th>
 <section id="nikhahit">
 <h4>Sara AM &amp; nikhahit</h4>
 
-<p><span class="hx circle">0E33</span> is classed as a vowel, but also contains the final consonant <span class="ipa">m</span>, represented by a built-in <span class="name">nikhahit</span>, eg.</p>
+<p><span class="hx circle">0E33</span> is classed as a vowel, but also contains the final consonant <span class="ipa">m</span>, represented by a built-in <span class="name">nikhahit</span>.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">น้ำ</span></p>
 
 <p>Used in Pali and Sanskrit, <span class="hx circle">0E4D</span> is not commonly used alone in Thai, except that when letter-spacing Thai text it is necessary to add the space between the circle and the remainder of <span class="hx circle">0E33</span>. See <a class="secref">inter_character_spacing</a>.</p>
@@ -1575,7 +1589,7 @@ alveolar</th>
 
 <p>The following are also used to create vowel sounds, either alone or as part of a composite vowel.</p>
 
-<figure class="characterBox auto" data-ipa="- ɔː,-j,-w,-a- -an" data-cols="trans,transc">อ␣ย␣ว␣รร</figure>
+<figure class="characterBox auto" data-ipa="- ɔː,-j,-w,-a- -an">อ,ย,ว,รร</figure>
 
 
 <p>The consonant <span class="hx">0E2D</span> can also be pronounced as the vowel <span class="ipa">ɔː</span> when it appears alone after a base consonant. It is also used as a vowel carrier for standalone vowels (see <a class="secref">standalone</a>).</p>
@@ -1607,20 +1621,20 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="th">&#x0E42;&#x0E01;</bdi>
     <span class="ipa">koː</span>
-    <span><span class="uname">U+0E42 THAI CHARACTER SARA O</span> + <span class="uname">U+0E01 THAI CHARACTER KO KAI</span></span>
-</p>
+    </p>
 
 <p>Five vowel glyphs appear to the left of the onset consonant(s).</p>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">เ␣แ␣ใ␣ไ␣โ</figure>
+<figure class="characterBox auto">เ,แ,ใ,ไ,โ</figure>
 
-<p>Since Thai uses a <em>visual encoding</em> model, these  are not combining marks. They are <em>typed and stored before the base</em>, eg.</p>
+<p>Since Thai uses a <em>visual encoding</em> model, these  are not combining marks. They are <em>typed and stored before the base</em>.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">ไข่</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="AI,KHO"
     data-type="uname,uname"
-    data-prefix=",,"><td>ไ␣ข่</td></tr>
+    data-prefix=",,"><td>ไ,ข่</td></tr>
 </table>
 
 
@@ -1629,13 +1643,14 @@ alveolar</th>
 <figcaption>Two pre-base glyphs, rendered 2 characters earlier than their pronounced location due to onset clusters.</figcaption>
 </figure-->
 
-<p>These vowel characters are actually placed before the start of the <em>syllable</em>. This means that a word with a consonant cluster at the start separates the pre-base vowel from any post-base vowels by more than one consonant character, eg.</p>
+<p>These vowel characters are actually placed before the start of the <em>syllable</em>. This means that a word with a consonant cluster at the start separates the pre-base vowel from any post-base vowels by more than one consonant character.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">เปล่า</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="E,PO,LO,AA"
     data-type="uname,uname,uname,uname"
-    data-prefix=",,,"><td>เ␣ป␣ล่␣า</td></tr>
+    data-prefix=",,,"><td>เ,ป,ล่,า</td></tr>
 </table>
 
 <p><a class="figref">fig_prebase</a> graphically illustrates the arrangement of glyphs for the word <span class="meaning">program</span>.</p>
@@ -1659,7 +1674,7 @@ alveolar</th>
 
 <p>In common with other languages,  <span class="ipa">i</span>, <span class="ipa">ɯ</span>, <span class="ipa">u</span>, and <span class="ipa">a</span> vowels have dedicated characters for long and short sounds. But many <a href="#compositeV">composite vowels</a> use  <span class="hx">0E30</span> or <span class="hx circle">0E47</span> as shorteners. The following provides one example of the general pattern.</p>
 
-<figure class="characterBox auto small" data-ignore="◌" data-cols="" data-ipa="eː,-e,-e-">เ◌␣เ◌ะ␣เ◌็◌</figure>
+<figure class="characterBox auto small" data-ignore="◌" data-ipa="eː,-e,-e-">เ◌,เ◌ะ,เ◌็◌</figure>
 
 <p>This can be seen clearly by comparing the long and short vowels in <a class="secref">vowel_mappings</a>. </p>
 </section>
@@ -1690,8 +1705,7 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="th">เกียะ</bdi>
     <span class="ipa">kiəʔ</span>
-    <span><span class="uname">U+0E40 SARA E</span> + <span class="uname">U+0E01 KO KA</span> + <span class="uname">U+0E35 SARA II</span> + <span class="uname">U+0E22 YO YAK</span> + <span class="uname">U+0E30 SARA A</span></span>
-</p>
+    </p>
 
 <p id="def-compositevowel" class="explanatoryintro definitionStub"></p>
 
@@ -1714,26 +1728,26 @@ alveolar</th>
 
 <p>Some represent plain vowel sounds:</p>
 
-<figure class="characterBox auto vowelcluster"  data-cols="ipa,trans,transc">ือ␣เ◌ะ␣เ◌็␣เ◌ิ␣เ◌อ␣เ◌อะ␣โ◌ะ␣็อ␣แ◌ะ␣แ◌็␣เ◌าะ</figure>
+<figure class="characterBox auto vowelcluster">ือ,เ◌ะ,เ◌็,เ◌ิ,เ◌อ,เ◌อะ,โ◌ะ,็อ,แ◌ะ,แ◌็,เ◌าะ</figure>
 
 <p>The other composite vowels represent diphthongs, which generally end in one of <span class="ipa">ə̯</span>, <span class="ipa">i</span>, or <span class="ipa">w</span>.</p>
 
 <p>For some, the spelling isn't completely obvious.</p>
-<figure class="characterBox auto vowelcluster"  data-cols="ipa,trans,transc">เ◌ีย␣เ◌ียะ␣เ◌ือ␣เ◌ือะ␣ัว␣ัวะ</figure>
+<figure class="characterBox auto vowelcluster">เ◌ีย,เ◌ียะ,เ◌ือ,เ◌ือะ,ัว,ัวะ</figure>
 
 <p>In many other cases, a semivowel is simply added after one of the vowels seen earlier. See <a class="secref">diphthongsz</a> for a list.</p>
 
-<!--figure class="characterBox auto vowelcluster"  data-cols="ipa,trans,transc">ิว␣ูย␣ุย␣เ-ว␣เ-็ว␣เ-ย␣แ-ว␣โ-ย␣อย␣็อย␣าย␣ัย␣ไ-ย␣าว␣เ-า␣ ␣เ-ียว␣เ-ือย␣วย</figure-->
+<!--figure class="characterBox auto vowelcluster">ิว,ูย,ุย,เ-ว,เ-็ว,เ-ย,แ-ว,โ-ย,อย,็อย,าย,ัย,ไ-ย,าว,เ-า, ,เ-ียว,เ-ือย,วย</figure-->
 
 <p>Finally, the two vocalic letters can be lengthened using an additional, special character (see <a class="secref">vocalics</a>).</p>
 
-<figure class="characterBox auto vowelcluster"  data-cols="ipa,trans,transc">ฤๅ␣ฦๅ</figure>
+<figure class="characterBox auto vowelcluster">ฤๅ,ฦๅ</figure>
 
 
 
 <p>Characters that don't appear in the combinations:</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ร␣ำ␣ึ␣ใ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ร,ำ,ึ,ใ</figure>
 
 
 
@@ -1745,27 +1759,27 @@ alveolar</th>
 <tbody>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E30;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ะ␣โ◌ะ␣แ◌ะ␣เ◌าะ␣เ◌อะ␣ ␣เ◌ียะ␣เ◌ือะ␣◌ัวะ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ะ,โ◌ะ,แ◌ะ,เ◌าะ,เ◌อะ, ,เ◌ียะ,เ◌ือะ,◌ัวะ</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E31;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌ัย␣ ␣◌ัวะ␣◌ัว</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌ัย, ,◌ัวะ,◌ัว</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E32;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌าะ␣ ␣◌าย␣ ␣◌าว␣เ◌า</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌าะ, ,◌าย, ,◌าว,เ◌า</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E34;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ิ␣ ␣◌ิว</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ิ, ,◌ิว</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E35;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ีย␣เ◌ียะ␣ ␣เ◌ียว</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ีย,เ◌ียะ, ,เ◌ียว</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E37;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌ือ␣ ␣เ◌ือ␣เ◌ือะ␣ ␣เ◌ือย</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌ือ, ,เ◌ือ,เ◌ือะ, ,เ◌ือย</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E38;</figure></td>
@@ -1777,15 +1791,15 @@ alveolar</th>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E40;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ะ␣เ◌็␣เ◌อ␣เ◌ิ␣เ◌าะ␣เ◌อะ␣ ␣เ◌ือ␣เ◌ีย␣เ◌ียะ␣เ◌ือะ␣ ␣เ◌ย␣เ◌ือย␣ ␣เ◌ว␣เ◌า␣เ◌็ว␣เ◌ียว</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ะ,เ◌็,เ◌อ,เ◌ิ,เ◌าะ,เ◌อะ, ,เ◌ือ,เ◌ีย,เ◌ียะ,เ◌ือะ, ,เ◌ย,เ◌ือย, ,เ◌ว,เ◌า,เ◌็ว,เ◌ียว</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E41;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">แ◌ะ␣แ◌็␣ ␣แ◌ว</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">แ◌ะ,แ◌็, ,แ◌ว</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E42;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">โ◌ะ␣ ␣โ◌ย</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">โ◌ะ, ,โ◌ย</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E44;</figure></td>
@@ -1793,23 +1807,23 @@ alveolar</th>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E47;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌็อ␣เ◌็␣แ◌็␣ ␣◌็อย␣ ␣เ◌็ว</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌็อ,เ◌็,แ◌็, ,◌็อย, ,เ◌็ว</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E2D;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌ือ␣◌็อ␣เ◌อ␣เ◌อะ␣ ␣เ◌ือ␣เ◌ือะ␣ ␣◌อย␣◌็อย␣เ◌ือย</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌ือ,◌็อ,เ◌อ,เ◌อะ, ,เ◌ือ,เ◌ือะ, ,◌อย,◌็อย,เ◌ือย</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E22;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ีย␣เ◌ียะ␣ ␣◌ัย␣◌าย␣◌อย␣◌ุย␣◌ูย␣◌วย␣เ◌ย␣โ◌ย␣ไ◌ย␣◌็อย␣เ◌ือย␣ ␣เ◌ียว</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ◌ีย,เ◌ียะ, ,◌ัย,◌าย,◌อย,◌ุย,◌ูย,◌วย,เ◌ย,โ◌ย,ไ◌ย,◌็อย,เ◌ือย, ,เ◌ียว</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E27;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌ัว␣◌ัวะ␣ ␣◌วย␣ ␣◌ิว␣◌าว␣เ◌ว␣แ◌ว␣เ◌็ว␣เ◌ียว</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌ัว,◌ัวะ, ,◌วย, ,◌ิว,◌าว,เ◌ว,แ◌ว,เ◌็ว,เ◌ียว</figure></td>
 </tr>
 <tr>
 <td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E23;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌รร◌␣◌รร</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">◌รร◌,◌รร</figure></td>
 </tr>
 </tbody>
 </table>
@@ -1874,12 +1888,18 @@ alveolar</th>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">อ</figure>
 
-<p>Thai uses <span class="hx">0E2D</span> as a base for vowel signs, eg.</p>
+<p>Thai uses <span class="hx">0E2D</span> as a base for vowel signs.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">อิ่ม</span></p>
 <p><span class="eg" lang="th">เออออ</span></p>
 <p><span class="eg" lang="th">สะอาด</span></p>
 
-<p><span class="ch">อ</span> on its own represents the same sound as the inherent vowel, eg. <span class="eg" lang="th">อเมริกา</span></p>
+<p><span class="ch">อ</span> on its own represents the same sound as the inherent vowel.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="th">อเมริกา</span></p>
+
 <p>There are no <a class="termref" href="../glossary/index.html#independentvowel">independent vowel</a> letters in Thai, </p>
 </section>
 
@@ -1903,7 +1923,7 @@ alveolar</th>
 
 <p>Tone is also affected by the use of the following combining marks on live syllables, however in 2 cases the result of their use is also  context-dependent, due to historical linguistic changes. (For example, <span class="hx circle">0E48</span> can produce either a low tone or a falling tone, depending on the class of the onset.)</p>
 
-<figure class="characterBox auto"  data-cols="trans">่␣้␣๊␣๋</figure>
+<figure class="characterBox auto" data-cols="" data-ignore="◌">◌่,◌้,◌๊,◌๋</figure>
 
 
 
@@ -2120,7 +2140,10 @@ alveolar</th>
 
 <p class="info">The expected typing and storage position for tone marks is immediately after the base consonant of the syllable, or after a superscript or subscript vowel mark if there is one. </p>
 
-<p class="info">The tone mark should be typed before <span class="ch circle">ำ</span>, but should be displayed above the <span class="name">nikhahit</span> by the application, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ก่ำ</span></span></p>
+<p class="info">The tone mark should be typed before <span class="ch circle">ำ</span>, but should be displayed above the <span class="name">nikhahit</span> by the application.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="charExample" translate="no"><span class="ex" lang="th">ก่ำ</span></span></p>
 </section>
 </section>
 
@@ -2134,7 +2157,7 @@ alveolar</th>
 
 <p>Vowel absence after syllable-final consonants is not normally marked in any way. Nor is it marked in syllable-initial clusters.</p>
 
-<figure class="characterBox auto" data-cols="">์</figure>
+<figure class="characterBox auto">์</figure>
 
 <p><span class="hx circle">0E4C</span> can be used  above a consonant or syllable when it is not pronounced (usually at the end of a syllable).</p>
 <p class="instructions">Click on the words to see the pronunciation more clearly.</p>
@@ -2917,12 +2940,13 @@ alveolar</th>
 
 <p id="def-vocalic" class="explanatoryintro definitionStub"></p>
 
-<figure class="characterBox auto"  data-cols="ipa,trans">ฤ␣ฦ␣ๅ</figure>
+<figure class="characterBox auto">ฤ,ฦ,ๅ</figure>
 
 <p>In Wiktionary all the words that are written with <span class="ch">ฦ</span> are described as obsolete spellings.</p>
 
 <p>The long forms of both are created using <span class="ch">ๅ</span>. That character is only used in this context.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th" dir="ltr">ฤตู</span></p>
 <p><span class="eg" lang="th" dir="ltr">อังกฤษ</span></p>
 <p><span class="eg" lang="th" dir="ltr">ฤๅษี</span></p>
@@ -2943,11 +2967,12 @@ alveolar</th>
 <section id="novowel">
 <h2>Vowel absence</h2>
 
-<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
-<p id="def-conjunct" class="explanatoryintro definitionStub"></p>
+<aside class="sectionAside"></aside>
 
+<p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
 
-<p>Thai doesn't have conjuncts, or any way of generally indicating where an inherent vowel is cancelled. As described in <a class="secref">finals</a>, this can lead to ambiguous parsing of text, since it's not clear whether a consonant represents a syllable coda or a new syllable with inherent vowel.</p>
+<div id="novowel_description"></div>
+
 
 <p class="btw"><span class="hx circle noindex">0E3A</span> is used as a virama when writing Pali. It is not used in modern Thai.</p>
 
@@ -3014,44 +3039,44 @@ alveolar</th>
 <tbody>
 <tr>
 <th rowspan="5">Onsets</th>
-<td><figure class="summaryBox auto noexpansion" data-ipa="pʰ,tʰ,tʰ,kʰ" data-cols="trans,transc">ผ␣ถ␣ฐ␣ข</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ipa="p,b,t,t,d,d,k" data-cols="trans,transc">ป␣บ␣ต␣ฏ␣ด␣ฎ␣ก</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ipa="pʰ,pʰ,tʰ,tʰ,tʰ,kʰ,kʰ" data-cols="trans,transc">พ␣ภ␣ท␣ฑ␣ฒ␣ค␣ฆ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="pʰ,tʰ,tʰ,kʰ">ผ,ถ,ฐ,ข</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="p,b,t,t,d,d,k">ป,บ,ต,ฏ,ด,ฎ,ก</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="pʰ,pʰ,tʰ,tʰ,tʰ,kʰ,kʰ">พ,ภ,ท,ฑ,ฒ,ค,ฆ</figure></td>
 </tr>
 
 <tr>
 <td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">ฉ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ipa="t͡ɕ" data-cols="trans,transc">จ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ipa="t͡ɕʰ,t͡ɕʰ" data-cols="trans,transc">ช␣ฌ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="t͡ɕ">จ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="t͡ɕʰ,t͡ɕʰ">ช,ฌ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ipa="f,s,s,s,h" data-cols="trans,transc">ฝ␣ส␣ศ␣ษ␣ห</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="f,s,s,s,h">ฝ,ส,ศ,ษ,ห</figure></td>
 <td>&nbsp;</td>
-<td><figure class="summaryBox auto noexpansion" data-ipa="f,s,h" data-cols="trans,transc">ฟ␣ซ␣ฮ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="f,s,h">ฟ,ซ,ฮ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">หม␣หน␣หง</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">หม,หน,หง</figure></td>
 <td>&nbsp;</td>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">ม␣น␣ณ␣ง</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">ม,น,ณ,ง</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">หว␣หร␣หล␣หย␣หญ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-cols="ipa,trans,transc">หว,หร,หล,หย,หญ</figure></td>
 <td>&nbsp;</td>
-<td><figure class="summaryBox auto noexpansion" data-ipa="w,r,l,l,j,j" data-cols="trans,transc">ว␣ร␣ล␣ฬ␣ย␣ญ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="w,r,l,l,j,j">ว,ร,ล,ฬ,ย,ญ</figure></td>
 </tr>
 
 <tr>
 <th rowspan="3">Codas</th>
-<td colspan="3"><figure class="summaryBox auto noexpansion" data-ipa="p,p,p,p,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,k,k,k,k,k,k" data-cols="trans,transc">ป␣พ␣ภ␣บ␣ถ␣ฐ␣ต␣ฏ␣ท␣ธ␣ฑ␣ฒ␣ด␣ฎ␣ถ␣ฐ␣ต␣ฏ␣ท␣ธ␣ฑ␣ฒ␣ด␣ฎ␣จ␣ช␣ส␣ศ␣ษ␣ซ␣ข␣ก␣ค␣ฆ</figure></td>
+<td colspan="3"><figure class="summaryBox auto noexpansion" data-ipa="p,p,p,p,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,k,k,k,k,k,k">ป,พ,ภ,บ,ถ,ฐ,ต,ฏ,ท,ธ,ฑ,ฒ,ด,ฎ,ถ,ฐ,ต,ฏ,ท,ธ,ฑ,ฒ,ด,ฎ,จ,ช,ส,ศ,ษ,ซ,ข,ก,ค,ฆ</figure></td>
 </tr>
 <tr>
-<td colspan="3"><figure class="summaryBox auto noexpansion" data-ipa="m,n,n,n,n,n,n,ŋ" data-cols="trans,transc">ม␣น␣ณ␣ร␣ล␣ฬ␣ญ␣ง</figure></td>
+<td colspan="3"><figure class="summaryBox auto noexpansion" data-ipa="m,n,n,n,n,n,n,ŋ">ม,น,ณ,ร,ล,ฬ,ญ,ง</figure></td>
 </tr>
 <tr>
-<td colspan="3"><figure class="summaryBox auto noexpansion" data-ipa="w,j" data-cols="trans,transc">ว␣ย</figure></td>
+<td colspan="3"><figure class="summaryBox auto noexpansion" data-ipa="w,j">ว,ย</figure></td>
 </tr>
 </tbody>
 </table>
@@ -3074,20 +3099,20 @@ alveolar</th>
 
 <!--<p class="instructions">In the following lists, the class of each consonant is shown just below the IPA data. If a dash appears after the IPA transcription, it indicates the pronunciation in syllable-initial position; before indicates the pronunciation for syllable codas.</p>
 -->
-<!--<figure class="characterBox auto" data-notes="ʰⁱᵍʰ,ᵐⁱᵈ,ˡᵒʷ,ˡᵒʷ,ᵐⁱᵈ,,ʰⁱᵍʰ,ʰⁱᵍʰ,ᵐⁱᵈ,ᵐⁱᵈ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ᵐⁱᵈ,ᵐⁱᵈ,,ʰⁱᵍʰ,ᵐⁱᵈ,ˡᵒʷ,ˡᵒʷ,,ʰⁱᵍʰ,ᵐⁱᵈ,ˡᵒʷ,ˡᵒʷ,,ʰⁱᵍʰ,ˡᵒʷ,ʰⁱᵍʰ,ʰⁱᵍʰ,ʰⁱᵍʰ,ˡᵒʷ,ʰⁱᵍʰ,ˡᵒʷ,,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ" data-cols="ipa,trans,transc">ผ␣ป␣พ␣ภ␣บ␣ ␣ถ␣ฐ␣ต␣ฏ␣ท␣ธ␣ฑ␣ฒ␣ด␣ฎ␣ ␣ข␣ก␣ค␣ฆ␣ ␣ฉ␣จ␣ช␣ฌ␣ ␣ฝ␣ฟ␣ส␣ศ␣ษ␣ซ␣ห␣ฮ␣ ␣ม␣น␣ณ␣ง␣ ␣ว␣ร␣ล␣ฬ␣ย␣ญ</figure>
+<!--<figure class="characterBox auto" data-notes="ʰⁱᵍʰ,ᵐⁱᵈ,ˡᵒʷ,ˡᵒʷ,ᵐⁱᵈ,,ʰⁱᵍʰ,ʰⁱᵍʰ,ᵐⁱᵈ,ᵐⁱᵈ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ᵐⁱᵈ,ᵐⁱᵈ,,ʰⁱᵍʰ,ᵐⁱᵈ,ˡᵒʷ,ˡᵒʷ,,ʰⁱᵍʰ,ᵐⁱᵈ,ˡᵒʷ,ˡᵒʷ,,ʰⁱᵍʰ,ˡᵒʷ,ʰⁱᵍʰ,ʰⁱᵍʰ,ʰⁱᵍʰ,ˡᵒʷ,ʰⁱᵍʰ,ˡᵒʷ,,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ,ˡᵒʷ" data-cols="ipa,trans,transc">ผ,ป,พ,ภ,บ, ,ถ,ฐ,ต,ฏ,ท,ธ,ฑ,ฒ,ด,ฎ, ,ข,ก,ค,ฆ, ,ฉ,จ,ช,ฌ, ,ฝ,ฟ,ส,ศ,ษ,ซ,ห,ฮ, ,ม,น,ณ,ง, ,ว,ร,ล,ฬ,ย,ญ</figure>
 -->
 
 <p class="instructions">Click on the letters below for more detailed information and examples of use. If no dash appears with the IPA transcription, it indicates the pronunciation in syllable-initial position; a dash before indicates the pronunciation for syllable codas.</p>
 
 
 <p class="leadin" style="margin-block-end:-1rem;">high</p>
-<figure class="characterBox auto" data-cols="ipa,transc">ผ␣ถ␣ฐ␣ข␣ฉ␣ฝ␣ส␣ศ␣ษ␣ห</figure>
+<figure class="characterBox auto" data-cols="ipa,transc">ผ,ถ,ฐ,ข,ฉ,ฝ,ส,ศ,ษ,ห</figure>
 
 <p class="leadin" style="margin-block-end:-1rem;">mid</p>
-<figure class="characterBox auto" data-cols="ipa,transc">ป␣บ␣ต␣ฏ␣ด␣ฎ␣ก␣จ</figure>
+<figure class="characterBox auto" data-cols="ipa,transc">ป,บ,ต,ฏ,ด,ฎ,ก,จ</figure>
 
 <p class="leadin" style="margin-block-end:-1rem;">low</p>
-<figure class="characterBox auto" data-cols="ipa,transc">พ␣ภ␣ท␣ธ␣ฑ␣ฒ␣ค␣ฆ␣ช␣ฌ␣ฟ␣ซ␣ฮ␣ม␣น␣ณ␣ง␣ว␣ร␣ล␣ฬ␣ย␣ญ</figure>
+<figure class="characterBox auto" data-cols="ipa,transc">พ,ภ,ท,ธ,ฑ,ฒ,ค,ฆ,ช,ฌ,ฟ,ซ,ฮ,ม,น,ณ,ง,ว,ร,ล,ฬ,ย,ญ</figure>
 
 
 
@@ -3099,8 +3124,10 @@ alveolar</th>
 <h4>High class nasals &amp; liquids with HO</h4>
 
 <p>A silent  <span class="ch">ห</span> is added before the  characters in the list below to make their default tonal class high.</p>
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">หม␣หน␣หง␣หว␣หร␣หล␣หย␣หญ</figure>
-<p>Examples: <span class="eg" lang="th">หมา</span><span class="eg" lang="th">หยุด</span></p>
+<figure class="characterBox auto">หม,หน,หง,หว,หร,หล,หย,หญ</figure>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="th">หมา</span><span class="eg" lang="th">หยุด</span></p>
 
 <p>See <a class="secref">onsets</a> for further details about how these are presented.</p>
 </section>
@@ -3116,9 +3143,13 @@ alveolar</th>
 <figure class="characterBox auto" data-notes="ᵐ" data-cols="ipa,trans,transc">อ</figure>
 
 <p><span class="ch">อ</span> represents a glottal stop or is silent when used as a base for vowels at the beginning of a syllable (see <a class="secref">standalone</a>).</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">อ่าง</span></p>
 
 <p>When it appears alone after a base consonant it becomes the vowel <span class="ipa">ɔː</span> (see <a class="secref">otherV</a>).</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">พอง</span></p>
 
 <p>It is also used in combination with other characters to produce additional vowel sounds (see <a class="secref">compositeV</a>).</p>
@@ -3134,12 +3165,16 @@ alveolar</th>
 
 <p>These consonants are now regarded as obsolete.</p>
 
-<figure class="characterBox auto" data-notes="ʰⁱᵍʰ,ˡᵒʷ" data-cols="ipa,trans,transc">ฃ␣ฅ</figure>
+<figure class="characterBox auto" data-notes="ʰⁱᵍʰ,ˡᵒʷ" data-cols="ipa,trans,transc">ฃ,ฅ</figure>
 
 <p><span class="hx">0E03</span> is replaced by <span class="hx">0E02</span>.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg alt" lang="th">ฃวา</span></p>
 
 <p><span class="hx">0E05</span> is replaced by <span class="hx">0E04</span>.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg alt" lang="th">ฅน</span></p>
 </section>
 </section>
@@ -3149,7 +3184,7 @@ alveolar</th>
 <!--section>
 <h3 id="basic_consonants">Basic consonants</h3>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ก␣ข␣ฃ␣ค␣ฆ␣ฅ␣ง␣จ␣ฉ␣ช␣ฌ␣ฏ␣ฐ␣ฑ␣ฒ␣ฎ␣ณ␣ต␣ถ␣ท␣ธ␣ด␣น␣ป␣ผ␣พ␣ภ␣บ␣ม␣ย␣ญ␣ล␣ฬ␣ร␣ว␣ห␣ฮ␣ส␣ศ␣ษ␣ซ␣ฝ␣ฟ␣อ</figure>
+<figure class="characterBox auto">ก,ข,ฃ,ค,ฆ,ฅ,ง,จ,ฉ,ช,ฌ,ฏ,ฐ,ฑ,ฒ,ฎ,ณ,ต,ถ,ท,ธ,ด,น,ป,ผ,พ,ภ,บ,ม,ย,ญ,ล,ฬ,ร,ว,ห,ฮ,ส,ศ,ษ,ซ,ฝ,ฟ,อ</figure>
 
 
 
@@ -3168,7 +3203,7 @@ alveolar</th>
 <tr><th>Low</th><td class="exlist" lang="th">ค ฆ ฅ ช ฌ ฑ ฒ ณ ท ธ น พ ภ ม ย ญ ล ฬ ร ว ฮ ซ ฝ ฟ</td></tr>
 </table>
 <p>A silent  <span class="codepoint" translate="no"><span lang="th">&#x0E2B;</span> [<a href="/scripts/thai/block#char0E2B"><span class="uname">U+0E2B THAI CHARACTER HO HIP</span></a>]</span> can be added before the following characters to make their default tonal class high, eg. <span class="eg" lang="th">หมา</span>, <span class="eg" lang="th">หยุด</span>.</p>
-<figure class="auto"  data-cols="trans,transc">ง␣ญ␣น␣ม␣ย␣ร␣ล␣ว</figure>
+<figure class="auto" >ง,ญ,น,ม,ย,ร,ล,ว</figure>
 
 <p class="ednote">Does tone mark appear over second consonant?</p>
 </section-->
@@ -3189,6 +3224,8 @@ alveolar</th>
 <h4>Medial glides</h4>
 
 <p>An initial stop may be followed by one of <span class="ipa">-r-</span>, <span class="ipa">-l-</span>, or <span class="ipa">-w-</span>. These sounds can be represented using the normal letters,  <span class="hx">0E23</span>, <span class="hx">0E25</span>, and <span class="hx">0E27</span>.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">ประฏัก</span></p>
 <p><span class="eg" lang="th">ปลา</span></p>
 <p><span class="eg" lang="th">ควาย</span></p>
@@ -3207,9 +3244,13 @@ alveolar</th>
 <h4>Tone markers</h4>
 
 <p>The silent <span class="hx">0E2B</span>is used to affect tonal values (see <a class="secref">highclass</a>).</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">หมา</span></p>
 
 <p>Similarly, a silent <span class="hx">0E2D</span> is used before an initial  <span class="hx">0E22</span> in 4 words to change the tone of the syllable to low.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">อย่าง</span></p>
 </section>
 
@@ -3222,6 +3263,8 @@ alveolar</th>
 <h4>Initial <span class="ipa">s</span></h4>
 
 <p>The word-initial combination <span class="hx">0E17 0E23</span> is pronounced <span class="ipa">s</span>.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">ทราย</span></p>
 </section>
 
@@ -3234,10 +3277,14 @@ alveolar</th>
 <h4>Tone &amp; vowel positioning</h4>
 
 <p>Tone marks and/or super-/subscript vowel marks  are attached to the second consonant.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">เปลี่ยน</span></p>
 <p><span class="eg" lang="th" dir="ltr">กรุงเทพฯ</span></p>
 
 <p>Pre-base vowel glyphs are placed before the first consonant in the cluster, ie. at the start of the <em>syllable</em>, eg. (where this occurs twice):</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">โปรแกรม</span></p>
 </section>
 </section>
@@ -3253,21 +3300,28 @@ alveolar</th>
 <p>Only the phonemes <span class="ipa">p, t, k, m, n, ŋ</span> occur at the end of a syllable, however many more consonant letters can appear in final position. </p>
 <p>The following consonant letters are pronounced differently in syllable-initial and syllable-final positions.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">จ␣ช␣ศ␣ษ␣ส␣ร␣ล␣ญ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">จ,ช,ศ,ษ,ส,ร,ล,ญ</figure>
 
 <p>For example,<span class="hx">0E25</span> in:</p>
 <p><span class="eg" lang="th">ลิง</span> </p>
 <p><span class="eg" lang="th">ตำบล</span></p>
 
-<p>Consonants at the end of a syllable use ordinary code points, eg.</p>
+<p>Consonants at the end of a syllable use ordinary code points.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">ตื่น</span></p>
 
 <p>This can create some ambiguity, since there is no distinction between the sequence in the previous example and one where <span class="charExampleInline"><span class="ex" lang="th">น</span></span> is a new syllable with an inherent vowel.</p>
 
-<p>The one exception is the character that is normally regarded as a vowel but that in fact represents a rhyme: <span class="hx circle">0E33</span>, which includes the final <span class="ipa">-m</span> sound, eg.</p>
+<p>The one exception is the character that is normally regarded as a vowel but that in fact represents a rhyme: <span class="hx circle">0E33</span>, which includes the final <span class="ipa">-m</span> sound.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="th">ห้องน้ำ</span></p>
 
-<p>However, a final <span class="ipa">-m</span> is not always represented using <span class="name">sara am</span>) eg. <span class="eg" lang="th">ห้าม</span></p>
+<p>However, a final <span class="ipa">-m</span> is not always represented using <span class="name">sara am</span>).</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="th">ห้าม</span></p>
 
 
  
@@ -3284,7 +3338,7 @@ alveolar</th>
 <table class="sequenceTable breakdown">
 <tr data-notes="pʰí,t̚.sà.,dāː,n"
     data-type="ipa,ipa,ipa,ipa"
-    data-prefix=",,,"><td>พิ␣ส␣ดา␣ร</td></tr>
+    data-prefix=",,,"><td>พิ,ส,ดา,ร</td></tr>
 </table>
 
 <p>Or <span class="ch">ล</span> in</p>
@@ -3293,12 +3347,12 @@ alveolar</th>
 <table class="sequenceTable breakdown">
 <tr data-notes="tɕu,n.la.,tʰa,t,–"
     data-type="ipa,ipa,ipa,ipa,"
-    data-prefix=",,,,"><td>จุ␣ล␣ทั␣ศ␣น์</td></tr>
+    data-prefix=",,,,"><td>จุ,ล,ทั,ศ,น์</td></tr>
 </table>
 
 <p>Only the following set of   consonants  behave in this way.</p>
 
-<figure class="otherBox auto" data-cols="ipa,trans,transc">จ␣ช␣ศ␣ษ␣ส␣ล</figure>
+<figure class="otherBox auto" data-cols="ipa,trans,transc">จ,ช,ศ,ษ,ส,ล</figure>
 </section>
 </section>
 
@@ -4081,7 +4135,12 @@ alveolar</th>
 
 <p><span class="hx circle">0E4C</span> can be used  above a consonant or syllable when it is not pronounced (usually at the end of a syllable).</p>
 <p class="instructions">Click on the words to see the pronunciation more clearly.</p>
-<p><span class="eg" lang="th">รถเมล์</span><span class="eg" lang="th">ศักดิ์สิทธิ์</span> It is often used for foreign loan words, eg. <span class="eg" lang="th">คอมพิวเตอร์</span> <span class="eg" lang="th">โปสการ์ด</span> <span class="eg" lang="th">สแตมป์</span></p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="th">รถเมล์</span><span class="eg" lang="th">ศักดิ์สิทธิ์</span> It is often used for foreign loan words.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="th">คอมพิวเตอร์</span> <span class="eg" lang="th">โปสการ์ด</span> <span class="eg" lang="th">สแตมป์</span></p>
 </section>
 </section>
 
@@ -4179,7 +4238,7 @@ alveolar</th>
 <h2>Numbers, dates, currency, etc.</h2>
 <p>Thai has a set of decimal digits, that  are used regularly.</p>
  
- <figure class="characterBox auto"  data-cols="trans">๐␣๑␣๒␣๓␣๔␣๕␣๖␣๗␣๘␣๙</figure>
+ <figure class="characterBox auto"  data-cols="" data-notes="0,1,2,3,4,5,6,7,8,9">๐,๑,๒,๓,๔,๕,๖,๗,๘,๙</figure>
  
 <p>The CLDR standard-decimal pattern is <code style="white-space: nowrap;">#,##,##0.###</code>. The standard-percent pattern is <code style="white-space: nowrap;">#,##,##0%</code>.<tt>cldr</tt></p>
  
@@ -4187,7 +4246,7 @@ alveolar</th>
  <h3>Currency</h3>
 <p>The currency symbol for baht is encoded in the Unicode Thai block.</p>
 
- <figure class="characterBox auto"  data-cols="trans">฿</figure>
+ <figure class="characterBox auto"  data-cols="">฿</figure>
 <p>The CLDR standard format for currency is <code style="white-space: nowrap;">¤#,##0.00</code>.<tt>cldr</tt></p>
  </section>
  
@@ -4408,7 +4467,20 @@ alveolar</th>
 </figure>
 
 <p>The variation may be related to the operation being performed on the text (eg. line breaking in narrow newsprint columns, vs. double-click selection, vs. cursor movement, etc.), or it may just   be down to personal preference,</p>
-<p>The  difference may also be contextually dependent. Wirote Aroonmanakun describes how <span class="eg" lang="th">คนขับรถ</span> should be viewed as a single word in the context <span class="eg" lang="th">คนขับรถนั่งคอยอยู่ในรถ</span>, whereas in the phrase <span class="eg" lang="th">คนขับรถผ่านแยกนี้ไม่มากนัก</span> it would be viewed as 3 words, referring to anyone who is driving.<tt>at</tt></p>
+<p>The  difference may also be contextually dependent. Wirote Aroonmanakun describes how</p>
+
+<p><span class="eg" lang="th">คนขับรถ</span></p>
+
+<p>should be viewed as a single word in the context</p>
+
+<p><span class="eg" lang="th">คนขับรถนั่งคอยอยู่ในรถ</span></p>
+
+<p>whereas in the phrase</p>
+
+<p><span class="eg" lang="th">คนขับรถผ่านแยกนี้ไม่มากนัก</span></p>
+
+<p>it would be viewed as 3 words, referring to anyone who is driving.<tt>at</tt></p>
+
 <p>Proper names, which are composed from multiple words, are also problematic, especially because there are no capital letters to distinguish them from other pieces of text.<tt>g2455,#issuecomment-375162188</tt></p>
 </section>
 
@@ -4605,7 +4677,6 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
-<figure class="characterBox auto small"  data-cols="trans">,␣:␣.␣?␣!␣๚␣๛</figure>
 <p>Thai uses space as a phrase marker, rather than to delimit words, often in places where English text would use commas or periods. Latin-based  punctuation  such  as  comma,  period,  and  colon  are  also used  in  text,  particularly  in  conjunction  with  Latin  letters  or  in  formatting  numbers, addresses, and so forth.</p>
 
 <table class="character_list">
@@ -4641,7 +4712,7 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 <p><span class="ch">๛</span> marks the end of a chapter or document, where it always follows the <span class="charExampleInline"><span class="ex" lang="th">๚ะ</span></span> combination.<tt>u,625</tt></p>
 
 <p>Dashes include</p>
-<figure class="characterBox auto"  data-cols="trans">‐␣–␣—</figure>
+<figure class="characterBox auto"  data-cols="">‐,–,—</figure>
 
 
 
@@ -4670,8 +4741,6 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 <section id="bracketing">
 <h4>Bracketed text</h4>
 
-<figure class="characterBox auto small"  data-cols="trans">(␣)</figure>
-
 <p>Thai  commonly uses ASCII parentheses to insert parenthetical information into text.</p>
 
 <table class="character_list">
@@ -4699,8 +4768,6 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
   
 <section id="quotations">
 <h3>Quotations &amp; citations</h3>
-
-<figure class="characterBox auto small"  data-cols="trans">“␣”␣‘␣’</figure>
 
 <p>Thai texts  use  quotation marks around quotations. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks.</p>
 
@@ -4740,9 +4807,15 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 <section id="repetition">
 <h4>Repetition</h4>
 
-<figure class="characterBox auto small"  data-cols="trans">ๆ</figure>
+<p><span class="ch">ๆ</span> is used to mark repetition of preceding letters.<tt>u,625</tt> It is typically preceded and followed by a space.</p>
 
-<p><span class="ch">ๆ</span> is used to mark repetition of preceding letters.<tt>u,625</tt> It is typically preceded and followed by a space, eg. <span class="eg" lang="th">ทุกวัน ๆ</span> However, some publishers prefer to publish without a leading space,<tt>g19,#issuecomment-579378205</tt> ie. <span class="charExample" translate="no"><span class="ex" lang="th">ทุกวันๆ</span></span></p>
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="th">ทุกวัน ๆ</span></p>
+
+<p>However, some publishers prefer to publish without a leading space,<tt>g19,#issuecomment-579378205</tt></p>
+
+<div class="egIntro">ie.</div>
+<p><span class="charExample" translate="no"><span class="ex" lang="th">ทุกวันๆ</span></span></p>
 <p>This character shouldn't be wrapped to the beginning of a new line on its own, and should be kept not far from the preceding text that it duplicates during justification.<tt>g19,#issuecomment-579378205</tt></p>
 </section>
 
@@ -4751,8 +4824,6 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 
 <section id="abbreviation">
 <h4>Abbreviation</h4>
-
-<figure class="characterBox auto small"  data-cols="trans">ฯ</figure>
 
 <p><span class="ch">ฯ</span> is used to indicate elision or abbreviation of letters; it  is    viewed  as  a  kind  of  letter,  however,  and  is  used  with  considerable  frequency because of its appearance in such words as the Thai name for Bangkok.</p>
 
@@ -4771,10 +4842,16 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 <section id="ellipsis">
 <h4>Ellipsis</h4>
 
-<figure class="characterBox auto small"  data-cols="trans">ฯ␣…</figure>
-
 <p><span class="name">Paiyannoi</span> is also used  in  the combination <span class="charExampleInline" translate="no"><span class="ex" lang="th">ฯลฯ</span></span>  to  create  a  construct  called   <span class="name">paiyanyai</span> , which means “et cetera, and so forth.”<tt>u,625</tt></p>
-<p>Some abbreviations are written using a full stop, eg. <span class="charExample" translate="no"><span class="ex" lang="th">สนง.ตปท.</span> <span class="trans">sṉŋ̱.t̯p̯ṯʰ.</span> <span class="meaning">Office of the Royal Thai Police</span></span> which is short for <span class="charExample" translate="no"><span class="ex" lang="th">สำนักงานตำรวจแห่งชาติ</span> <span class="trans">saᵐṉäk̯ŋ̱āṉt̯aᵐṟw̱c̯ɛh¹ŋ̱c̱ʰāt̯i</span></span></p>
+<p>Some abbreviations are written using a full stop.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="charExample" translate="no"><span class="ex" lang="th">สนง.ตปท.</span> <span class="trans">sṉŋ̱.t̯p̯ṯʰ.</span> <span class="meaning">Office of the Royal Thai Police</span></span></p>
+
+<p>which is short for</p>
+
+<p><span class="charExample" translate="no"><span class="ex" lang="th">สำนักงานตำรวจแห่งชาติ</span> <span class="trans">saᵐṉäk̯ŋ̱āṉt̯aᵐṟw̱c̯ɛh¹ŋ̱c̱ʰāt̯i</span></span></p>
+
 <p>CLDR indicates that <span class="ch">…</span> is also used for ellipsis.</p>
 </section>
 </section>
@@ -4795,8 +4872,6 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 <h4>Other punctuation</h4>
 
 <p>CLDR indicates that the following are also used:</p>
-
-<figure class="characterBox auto noindex"  data-cols="trans">&#x0E4E;</figure>
 
 <p class="btw"><span class="hx circle noindex">0E4E</span> is an ancient punctuation mark used to mark clusters, such as in <span class="charExample" translate="no"><span class="ex" lang="th">พ๎ราห๎มณ</span> <span class="trans">p̱ʰ๎ṟāh๎m̱ṇ̱</span> <span class="ipa">pʰraːmǒn</span></span></p>
 </section>
@@ -5021,9 +5096,10 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 <section id="cs_numeric">
 <h4>Numeric</h4>
 <p>The <span class="kw" translate="no">thai</span> numeric style  is decimal-based and uses the  digits shown below.</p>
-<figure class="auto" data-cols="trans,transc">๐␣๑␣๒␣๓␣๔␣๕␣๖␣๗␣๘␣๙</figure>
-<p>Examples:</p>
-<figure class="auto noindex counterstylesBox" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">๑␣๒␣๓␣๔␣๑๑␣๒๒␣๓๓␣๔๔␣๑๑๑␣๒๒๒␣๓๓๓␣๔๔๔</figure>
+<figure class="auto" data-cols="" data-notes="0,1,2,3,4,5,6,7,8,9">๐,๑,๒,๓,๔,๕,๖,๗,๘,๙</figure>
+
+<div class="egIntro">eg.</div>
+<figure class="auto noindex counterstylesBox" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">๑,๒,๓,๔,๑๑,๒๒,๓๓,๔๔,๑๑๑,๒๒๒,๓๓๓,๔๔๔</figure>
 </section>
 
 
@@ -5032,11 +5108,11 @@ Gecko, WebKit and Blink browsers all wrap on grapheme cluster boundaries.</p>
 <section id="cs_alphabetic">
 <h4>Alphabetic</h4>
 <p>The <span class="kw">thai-alphabetic</span> style   uses the  letters shown below. </p>
-<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41"
-data-cols="">ก␣ข␣ค␣ง␣จ␣ฉ␣ช␣ซ␣ฌ␣ญ␣ฎ␣ฏ␣ฐ␣ฑ␣ฒ␣ณ␣ด␣ต␣ถ␣ท␣ธ␣น␣บ␣ป␣ผ␣ฝ␣พ␣ฟ␣ภ␣ม␣ย␣ร␣ล␣ว␣ศ␣ษ␣ส␣ห␣ฬ␣อ␣ฮ</figure>
+<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41">ก,ข,ค,ง,จ,ฉ,ช,ซ,ฌ,ญ,ฎ,ฏ,ฐ,ฑ,ฒ,ณ,ด,ต,ถ,ท,ธ,น,บ,ป,ผ,ฝ,พ,ฟ,ภ,ม,ย,ร,ล,ว,ศ,ษ,ส,ห,ฬ,อ,ฮ</figure>
 </section>
-<p>Examples:</p>
-<figure class="auto noindex counterstylesBox" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">ก␣ข␣ค␣ง␣ฎ␣น␣ล␣กค␣ขภ␣จด␣ซจ␣ญว</figure>
+
+<div class="egIntro">eg.</div>
+<figure class="auto noindex counterstylesBox" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">ก,ข,ค,ง,ฎ,น,ล,กค,ขภ,จด,ซจ,ญว</figure>
 </section>
 
 
