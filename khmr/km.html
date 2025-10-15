@@ -6,10 +6,10 @@
 <title>Khmer orthography notes</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css">
-<link rel="stylesheet" href="../common29/local.css">
+<link rel="stylesheet" href="../common30/local.css">
 <link rel="stylesheet" href="km.css">
 
-<script src="../common29/debug.js"></script>
+<script src="../common30/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../apps/ipa_analyser/propertylist.js"></script>
@@ -20,12 +20,12 @@
 
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common29/functions.js"></script>
-<script src="../common29/transliterate.js"></script>
-<script src="../common29/prompts.js"> </script>
+<script src="../common30/functions.js"></script>
+<script src="../common30/transliterate.js"></script>
+<script src="../common30/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../common29/egcode.js"></script>
-<script src="../common29/references.js"></script>
+<script src="../common30/egcode.js"></script>
+<script src="../common30/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="km-langdata.js"></script>
@@ -60,7 +60,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 September, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->15 October, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
   
@@ -78,7 +78,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Khmer (Cambodian) Orthography Notes, <!-- #BeginDate format:En2 -->29-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/khmr/km">https://r12a.github.io/scripts/khmr/km</a></small></p>
+<p class="refLine"><small>Richard Ishida, Khmer (Cambodian) Orthography Notes, <!-- #BeginDate format:En2 -->15-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/khmr/km">https://r12a.github.io/scripts/khmr/km</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -177,7 +177,15 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p class="addToConsonants">Each <a class="seclink" href="#onsets">onset consonant</a> is associated with a high or low class related to pronunciation (there is no tone). Khmer has more vowel sounds than ways to write them, so the choice of <a class="seclink" href="#consonant_registers">consonant class</a> indicates different sounds for the same written vowel. Other factors may also affect the  sound, such as stress, vowel harmony, and diacritics.</p>
 
-<p class="addToConsonants">Word-internal <a class="seclink" href="#clusters">clusters</a> are very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word (though the 2nd consonant at the word end is usually not pronounced). Clusters are indicated by stacked consonants. Subjoined forms are created using an invisible <span class="name">coeng</span> character. Stacks do not span word boundaries.</p>
+
+
+<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
+
+<p class="addToNovowel">Word-internal <a class="seclink" href="#clusters">clusters</a> are very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word (though the 2nd consonant at the word end is usually not pronounced). Clusters are indicated by stacked consonants. Subjoined forms are created using an invisible <span class="name">coeng</span> character. Stacks do not span word boundaries.</p>
+
+<p class="addToNovowel">The Khmer equivalent of the <span class="name">virama</span> is called <span class="name">coeng</span>, and is never visible.</p>
+
+
 
 <p class="addToConsonants"><a class="seclink" href="#finals">Word-final consonant</a> sounds (typically 8 consonants and characters) use ordinary code points without an inherent vowel. Because there are no spaces or other word dividers, it is difficult to detect boundaries algorithmically. Two word-final sounds (<span class="trans">m</span> and <span class="trans">h</span>) can be produced using combining marks.</p>
 
@@ -242,32 +250,32 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="index_letters_consonants">
 <h4>Basic consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">ផ␣ប␣ត␣ថ␣ឋ␣ដ␣ច␣ឆ␣ក␣ខ␣អ␣ព␣ភ␣ទ␣ធ␣ឍ␣ឌ␣ជ␣ឈ␣គ␣ឃ␣វ␣ស␣ហ␣ម␣ន␣ណ␣ញ␣ង␣រ␣ឡ␣ល␣យ</figure>
+<figure class="characterBox noindex indexline">ផ,ប,ត,ថ,ឋ,ដ,ច,ឆ,ក,ខ,អ,ព,ភ,ទ,ធ,ឍ,ឌ,ជ,ឈ,គ,ឃ,វ,ស,ហ,ម,ន,ណ,ញ,ង,រ,ឡ,ល,យ</figure>
 </section>
 
 <section id="index_letters_independent">
 <h4>Independent vowels</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">ឥ␣ឦ␣ឪ␣ឧ␣ឩ␣ឯ␣ឰ␣ឱ␣ឳ␣ឲ</figure>
+<figure class="characterBox noindex indexline">ឥ,ឦ,ឪ,ឧ,ឩ,ឯ,ឰ,ឱ,ឳ,ឲ</figure>
 </section>
 
 <section id="index_letters_vocalic">
 <h4>Vocalics</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">ឫ␣ឬ␣ឭ␣ឮ</figure>
+<figure class="characterBox noindex indexline">ឫ,ឬ,ឭ,ឮ</figure>
 
 </section>
 
 <section id="index_letters_other">
 <h4>Other</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="#otherletters #repetition,">ៗ</figure>
+<figure class="characterBox noindex indexline">ៗ</figure>
 </section>
 
 <section id="index_letters_unused">
 <h4>Not used for contemporary Khmer</h4>
-<figure class="unusedBox noindex indexline" data-cols="" data-links="">ឣ␣ឤ</figure>
+<figure class="unusedBox noindex indexline">ឣ,ឤ</figure>
 
-<figure class="unusedBox noindex indexline" data-cols="" data-links="">ឨ␣ឝ␣ឞ</figure>
+<figure class="unusedBox noindex indexline">ឨ,ឝ,ឞ</figure>
 
-<figure class="unusedBox noindex indexline" data-cols="" data-links="">ៜ</figure>
+<figure class="unusedBox noindex indexline">ៜ</figure>
 </section>
 </details>
 </section>
@@ -284,16 +292,16 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <h4>Vowel signs</h4>
 
 </section>
-<figure class="characterBox noindex indexline" data-cols="">េ␣ែ␣ៃ␣ៀ␣ឿ␣ើ␣ោ␣ៅ␣ួ␣ុ␣ូ␣ិ␣ី␣ឹ␣ឺ␣ៈ␣ា␣័␣៏␣ំ␣ះ</figure>
+<figure class="characterBox noindex indexline">េ,ែ,ៃ,ៀ,ឿ,ើ,ោ,ៅ,ួ,ុ,ូ,ិ,ី,ឹ,ឺ,ៈ,ា,័,៏,ំ,ះ</figure>
 
 <section id="index_cchars_other">
 <h4>Other</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">្␣៍␣់␣៉␣៊␣៑␣៌␣៝␣៎</figure>
+<figure class="characterBox noindex indexline">្,៍,់,៉,៊,៑,៌,៝,៎</figure>
 </section>
 
 <section id="index_cchars_unused">
 <h4>Not used for  Khmer</h4>
-<figure class="unusedBox noindex indexline" data-cols="" data-links="">឴␣឵</figure>
+<figure class="unusedBox noindex indexline">឴,឵</figure>
 </section>
 </details>
 </section>
@@ -307,11 +315,11 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-cols="" data-links="">០␣១␣២␣៣␣៤␣៥␣៦␣៧␣៨␣៩</figure>
+<figure class="characterBox noindex indexline">០,១,២,៣,៤,៥,៦,៧,៨,៩</figure>
 
 <!--section id="index_numbers_unused">
 <h4>Not used for Khmer</h4>
-<figure class="otherBox noindex indexline" data-cols="" data-links="">៰␣៱␣៲␣៳␣៴␣៵␣៶␣៷␣៸␣៹</figure>
+<figure class="otherBox noindex indexline">៰,៱,៲,៳,៴,៵,៶,៷,៸,៹</figure>
 </section-->
 </details>
 </section>
@@ -325,16 +333,16 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-cols="" data-links="">“␣”␣‘␣’␣៖␣។␣៕␣៙␣៚</figure>
+<figure class="characterBox noindex indexline">“,”,‘,’,៖,។,៕,៙,៚</figure>
 
 <section id="index_punctuation_ascii">
 <h4>ASCII</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">(␣)␣,␣-␣.␣?␣!</figure>
+<figure class="characterBox noindex indexline">(,),,,-,.,?,!</figure>
 </section>
 
 <section id="index_punctuation_unused">
 <h4>Not used for Khmer</h4>
-<figure class="unusedBox noindex indexline" data-cols="" data-links="">៘</figure>
+<figure class="unusedBox noindex indexline">៘</figure>
 </section>
 </details>
 </section>
@@ -348,7 +356,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-links="#currency" data-cols="">៛</figure>
+<figure class="characterBox noindex indexline">៛</figure>
 </details>
 </section>
 
@@ -363,13 +371,13 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-cols="" data-notes="<img src='../../c/General_Punctuation/large/200B.png' alt='ZWSP' style='vertical-align:middle; height:2rem;'>,<img src='../../c/General_Punctuation/large/200C.png' alt='ZWNJ' style='vertical-align:middle; height:2rem;'>,<img src='../../c/General_Punctuation/large/200D.png' alt='ZWJ' style='vertical-align:middle; height:2rem;'>" data-links="">&#x200B;␣&#x200C;␣&#x200D;</figure>
+<figure class="characterBox noindex indexline" data-notes="<img src='../../c/General_Punctuation/large/200B.png' alt='ZWSP' style='vertical-align:middle; height:2rem;'>,<img src='../../c/General_Punctuation/large/200C.png' alt='ZWNJ' style='vertical-align:middle; height:2rem;'>,<img src='../../c/General_Punctuation/large/200D.png' alt='ZWJ' style='vertical-align:middle; height:2rem;'>">&#x200B;,&#x200C;,&#x200D;</figure>
 
 
 
 <section id="index_other_tbc">
 <h4>To be investigated</h4>
-<figure class="tbcBox noindex indexline" data-cols="">%␣:␣;␣[␣]␣§␣«␣»␣ʼ␣͏␣‑␣–␣—␣†␣‡␣…␣‰␣′␣″␣‹␣›␣⁠</figure>
+<figure class="tbcBox noindex indexline">%,:,;,[,],§,«,»,ʼ,͏,‑,–,—,†,‡,…,‰,′,″,‹,›,⁠</figure>
 </section>
 </details>
 </section>
@@ -898,13 +906,13 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </tr>
 <tr>
 <th></th>
-<td class="mouth"><a href="../common29/mouth/mouth_labial.png" target="_blank"><img src="../common29/mouth/mouth_small_labial.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_dental.png" target="_blank"><img src="../common29/mouth/mouth_small_dental.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_alveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_retroflex.png" target="_blank"><img src="../common29/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_palatal.png" target="_blank"><img src="../common29/mouth/mouth_small_palatal.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_velar.png" target="_blank"><img src="../common29/mouth/mouth_small_velar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_glottal.png" target="_blank"><img src="../common29/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_labial.png" target="_blank"><img src="../common30/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_dental.png" target="_blank"><img src="../common30/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_alveolar.png" target="_blank"><img src="../common30/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_retroflex.png" target="_blank"><img src="../common30/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_palatal.png" target="_blank"><img src="../common30/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_velar.png" target="_blank"><img src="../common30/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_glottal.png" target="_blank"><img src="../common30/mouth/mouth_small_glottal.png" alt=" "/></a></td>
 </tr>
 </tbody>
 </table>
@@ -1089,30 +1097,30 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <tr>
 <th rowspan="5">Simple:</th>
 <td>&nbsp;</td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="i,iː,,ɨ,ɨː,,u,u,uː">ិ␣ី␣ ␣ឹ␣ឺ␣ ␣ុ␣់␣ូ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ɨ,u,uː">ឥ␣ឧ␣ឩ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="i,iː,,ɨ,ɨː,,u,u,uː">ិ,ី, ,ឹ,ឺ, ,ុ,់,ូ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ɨ,u,uː">ឥ,ឧ,ឩ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="e,,o">ិ␣ ␣ុ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="eː,,oː">េ␣ ␣ោ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="o">ឧ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="e,,o">ិ, ,ុ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="eː,,oː">េ, ,ោ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="o">ឧ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ə,ə">ិ␣ឹ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="əː">ើ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ə">ឥ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ə,ə">ិ,ឹ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="əː">ើ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ə">ឥ</figure></td>
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ɛː,,ɔː">ែ␣ ␣ⓘ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ɛː,,ɔː">ែ, ,ⓘ</figure></td>
 <td>&nbsp;</td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="a,aʔ,aː,,ɑ,ɑː,ɑː">័␣ៈ␣ា␣ ␣់␣ⓘ␣៏</figure></td>
+<td><figure class="summaryBox auto" data-ignore="◌" data-ipa="a,aʔ,aː,,ɑ,ɑː,ɑː">័,ៈ,ា, ,់,ⓘ,៏</figure></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
@@ -1120,33 +1128,33 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <tr>
 <th rowspan="5">Complex:</th>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="iə,,ɨə">ៀ␣ ␣ឿ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="iə,iə,ih,ih,,ɨə,ɨj,ɨj,ɨw,ɨw,,uə,uə̆,uə̆h,uh,um,um">ា␣ៀ␣ិះ␣េះ␣ ␣ឿ␣ៃ␣័យ␣ៅ␣ូវ␣ ␣ួ␣់␣ោះ␣ុះ␣ុំ␣ំ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="iə,,ɨə">ៀ, ,ឿ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="iə,iə,ih,ih,,ɨə,ɨj,ɨj,ɨw,ɨw,,uə,uə̆,uə̆h,uh,um,um">ា,ៀ,ិះ,េះ, ,ឿ,ៃ,័យ,ៅ,ូវ, ,ួ,់,ោះ,ុះ,ុំ,ំ</figure></td>
 <td>&nbsp;</td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ei,eh,eh,eh,,ou,oh,om">េ␣ិះ␣េះ␣ែះ␣ ␣ូ␣ុះ␣ុំ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="eə̆ʔ,eə̆,eə̆,eə̆h,eə̆ŋ,,oə̆,oə̆,oə̆m">ៈ␣័␣ា◌់␣ះ␣ាំង␣ ␣័␣ា◌់␣ាំ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ou">ឩ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ei,eh,eh,eh,,ou,oh,om">េ,ិះ,េះ,ែះ, ,ូ,ុះ,ុំ</figure></td>
+<td><figure class="summaryBox auto" data-ignore="◌" data-ipa="eə̆ʔ,eə̆,eə̆,eə̆h,eə̆ŋ,,oə̆,oə̆,oə̆m">ៈ,័,ា◌់,ះ,ាំង, ,័,ា◌់,ាំ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ou">ឩ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="əj,əɨ,eə̆,əh,əh,əw">ី␣ឺ␣័␣ឹះ␣ើះ␣ូវ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="əj">ិយ</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="əj,əj,əw">ឥ␣ឦ␣ឪ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="əj,əɨ,eə̆,əh,əh,əw">ី,ឺ,័,ឹះ,ើះ,ូវ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="əj">ិយ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="əj,əj,əw">ឥ,ឦ,ឪ</figure></td>
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ɔə">័រ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ɔə">័រ</figure></td>
 <td>&nbsp;</td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ao,ae,aə,aj,aj,aw,ah,ah,am,ɑm,ɑŋ">ោ␣ែ␣ើ␣ៃ␣័យ␣ៅ␣ះ␣ោះ␣ាំ␣ំ␣ាំង</figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa=""></figure></td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="ae,ao,ao,ao,aj,aw">ឯ␣ឧ␣ឱ␣ឲ␣ឰ␣ឳ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ao,ae,aə,aj,aj,aw,ah,ah,am,ɑm,ɑŋ">ោ,ែ,ើ,ៃ,័យ,ៅ,ះ,ោះ,ាំ,ំ,ាំង</figure></td>
+<td><figure class="summaryBox auto" data-ipa=""></figure></td>
+<td><figure class="summaryBox auto" data-ipa="ae,ao,ao,ao,aj,aw">ឯ,ឧ,ឱ,ឲ,ឰ,ឳ</figure></td>
 </tr>
 
 
@@ -1154,7 +1162,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <th>Vocalics:</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><figure class="summaryBox auto" data-cols="trans,transc" data-ipa="rɨ,rɨ,lɨ,lɨ">ឫ␣ឬ␣ឭ␣ឮ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="rɨ,rɨ,lɨ,lɨ">ឫ,ឬ,ឭ,ឮ</figure></td>
 </tr>
 </tbody>
 </table>
@@ -1218,11 +1226,12 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 			
 <p> In two-syllable words, where the second syllable begins with one of the following sonorant consonants the vowel class of the second syllable is the same as that of the first.</p>
 
-<figure class="otherBox auto noindex" data-cols="ipa,transc,trans">ង␣ញ␣ណ␣ន␣ម␣យ␣ឡ␣ល␣រ␣វ</figure>
+<figure class="otherBox auto noindex">ង,ញ,ណ,ន,ម,យ,ឡ,ល,រ,វ</figure>
 
-<p>For example, in the following word the second syllable starts with an <span class="name">ɔ</span>-class consonant but the class of the preceding syllable turns the vowel to an <span class="name">ɑ</span>-class sound. There are, however, exceptions to this rule.
-<span class="eg" lang="km">ប្រយ័ត្ន</span>
-</p>
+<p>For example, in the following word the second syllable starts with an <span class="name">ɔ</span>-class consonant but the class of the preceding syllable turns the vowel to an <span class="name">ɑ</span>-class sound. There are, however, exceptions to this rule.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="km">ប្រយ័ត្ន</span></p>
 </section>
 
 
@@ -1237,12 +1246,10 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p class="vowelSignExample">
     <bdi lang="km">&#x1780;</bdi>
     <span class="ipa">kɑː</span>
-    <span><span class="uname">U+1780 KHMER LETTER KA</span></span>
 </p>
 <p class="vowelSignExample">
     <bdi lang="km">&#x1782;</bdi>
     <span class="ipa">kɔː</span>
-    <span><span class="uname">U+1782 KHMER LETTER KO</span></span>
 </p>
 
 <p id="def-inherentvowel" class="explanatoryintro definitionStub"></p>
@@ -1251,19 +1258,19 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>The class of the consonant will initially dictate which sound is appropriate, eg. <span class="hx">1780</span> (an <span class="name">ɑ</span>-class consonant) is pronounced <span class="ipa">kɑː</span> whereas <span class="hx">1782</span> (an <span class="name">ɔ</span>-class consonant) is pronounced <span class="ipa">kɔː</span>, but see also <a class="secref">vowel_harmony</a>.</p>
 
-<p>Examples:</p>
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">កមល</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="kaʔ.,ˈmɑ,l"
     data-type="ipa,ipa,ipa"
-    data-prefix=",,,"><td>ក␣ម␣ល</td></tr>
+    data-prefix=",,,"><td>ក,ម,ល</td></tr>
 </table>
 
 <p><span class="eg" lang="km">ពពក</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="pɔ.,ˈpɔː,ʔ"
     data-type="ipa,ipa,ipa"
-    data-prefix=",,,"><td>ព␣ព␣ក</td></tr>
+    data-prefix=",,,"><td>ព,ព,ក</td></tr>
 </table>
 
 <p class="btw">The invisible characters 
@@ -1287,8 +1294,6 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <section id="dependentV">
 <h3>Post-consonant vowels</h3>
-
-<!--figure class="characterBox auto" data-cols="trans,transc" data-ipa="i,i,u,u,e,o,ɔ,æ,æ,æ,a">ি␣ী␣ু␣ূ␣ে␣ো␣ো␣্যা␣্য␣া␣া</figure-->
 
 <p>Other vowels that follow consonants are written using 21 vowel sign or other combining marks and 2 glide consonant letters. Two additional diacritics are used to change the register of a syllable.</p>
 
@@ -1321,17 +1326,17 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <table class="sequenceTable breakdown">
 <tr data-notes="KA,I,RO,I,YO,AA"
     data-type="uname,uname,uname,uname,uname,uname"
-    data-prefix=",,,,,"><td>ក␣ិ␣រ␣ិ␣យ␣ា</td></tr>
+    data-prefix=",,,,,"><td>ក,ិ,រ,ិ,យ,ា</td></tr>
 </table>
 
 <p>The following panel lists basic monophthongs following <span class="name">ɑ</span>-class consonants.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="e,o,ə,a,aʔ,aː,ɑ,ɑː">ិ␣ុ␣ឹ␣័␣ៈ␣ា␣់␣៏</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="e,o,ə,a,aʔ,aː,ɑ,ɑː">ិ,ុ,ឹ,័,ៈ,ា,់,៏</figure>
 
 
 <p>The next panel shows vowels following <span class="name">ɔ</span>-class consonants. In several cases the same vowel sign is used, but with a different pronunciation.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="i,iː,ɨ,ɨː,u,u,uː,eː,oː,əː,ɛː,ɔː">ិ␣ី␣ឹ␣ឺ␣ុ␣់␣ូ␣េ␣ោ␣ើ␣ែ</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="i,iː,ɨ,ɨː,u,u,uː,eː,oː,əː,ɛː,ɔː">ិ,ី,ឹ,ឺ,ុ,់,ូ,េ,ោ,ើ,ែ</figure>
 
 <p><span class="hx">17C8</span> is a 20th century addition to the Khmer repertoire. It is used as a vowel after consonants that are pronounced as stressed syllables at the end of a word, or preceding an internal juncture in compounds.</p>
 
@@ -1354,16 +1359,18 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>The following panel lists basic diphthongs following <span class="name">ɑ</span>-class consonants. In some cases the alternative may be a diphthong, so compare this also with the items in <a class="secref">monophthongs</a>.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="iə,ɨə,ei,ou,əj,əɨ,eə̆,əw,ao,ae,aə,aj,aj,aw">ៀ␣ឿ␣េ␣ូ␣ី␣ឺ␣័␣ូវ␣ោ␣ែ␣ើ␣ៃ␣័យ␣ៅ</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="iə,ɨə,ei,ou,əj,əɨ,eə̆,əw,ao,ae,aə,aj,aj,aw">ៀ,ឿ,េ,ូ,ី,ឺ,័,ូវ,ោ,ែ,ើ,ៃ,័យ,ៅ</figure>
 
 
 <p>The next panel shows vowels following <span class="name">ɔ</span>-class consonants. In several cases the same vowel sign is used, but with a different pronunciation.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="iə,iə,ɨə,ɨj,ɨj,ɨw,ɨw,uə,uə̆,eə̆,eə̆,eə̆,oə̆,oə̆,əj,ɔə">ា␣ៀ␣ឿ␣ៃ␣័យ␣ៅ␣ូវ␣ួ␣់␣ៈ␣័␣ា◌់␣័␣ា◌់␣ិយ␣័រ</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="iə,iə,ɨə,ɨj,ɨj,ɨw,ɨw,uə,uə̆,eə̆,eə̆,eə̆,oə̆,oə̆,əj,ɔə">ា,ៀ,ឿ,ៃ,័យ,ៅ,ូវ,ួ,់,ៈ,័,ា◌់,័,ា◌់,ិយ,័រ</figure>
 
 <p>Khmer diphthongs generally end with <span class="ipa">-j</span>, <span class="ipa">-w</span>, or <span class="ipa">ə</span>, but there are a few others that don't. It is noteworthy, also, that not all diphthongs ending with <span class="ipa">-j</span> or <span class="ipa">-w</span> use <span class="ch">យ</span> or <span class="ch">វ</span>.</p>
 
 <p><span class="hx">179A</span> is usually silent in syllable-final position, but the combination <span class="hx">17D0 179A</span> produces the sound <span class="ipa">ɔə</span>.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">ជ័រ</span></p>
 </section>
 
@@ -1381,12 +1388,12 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>The following panel lists basic diphthongs following <span class="name">ɑ</span>-class consonants. The dotted circle shows the location of adjacent consonants.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="eh,eh,eh,oh,om,əh,əh,ah,ah,am,am,aŋ">ិះ␣េះ␣ែះ␣ុះ␣ុំ␣ឹះ␣ើះ␣ះ␣ោះ␣ាំ␣ំ␣ាំង</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="eh,eh,eh,oh,om,əh,əh,ah,ah,am,am,aŋ">ិះ,េះ,ែះ,ុះ,ុំ,ឹះ,ើះ,ះ,ោះ,ាំ,ំ,ាំង</figure>
 
 
 <p>The next panel shows vowels following ɔ-class consonants. In several cases the same vowel sign is used, but with a different pronunciation.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="ih,ih,uə̆h,uh,um,um,eə̆h,eə̆ŋ,oə̆m">ិះ␣េះ␣ោះ␣ុះ␣ុំ␣ំ␣ះ␣ាំង␣ាំ</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="ih,ih,uə̆h,uh,um,um,eə̆h,eə̆ŋ,oə̆m">ិះ,េះ,ោះ,ុះ,ុំ,ំ,ះ,ាំង,ាំ</figure>
 
 </section-->
 
@@ -1417,7 +1424,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Where 2 possible pronunciations are shown in the list below, the left is for <span class="name">ɑ</span>-class consonants, and the right for 0-class.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ិ␣ី␣ឹ␣ឺ␣ុ␣ូ␣េ␣ោ␣ែ␣ៈ␣ា␣៏␣ ␣ៀ␣ឿ␣ួ␣ើ␣ៃ␣ៅ␣័</figure>
+<figure class="characterBox auto">ិ,ី,ឹ,ឺ,ុ,ូ,េ,ោ,ែ,ៈ,ា,៏, ,ៀ,ឿ,ួ,ើ,ៃ,ៅ,័</figure>
 <p><span class="hx">17C8</span> is a 20th century addition to the Khmer repertoire. It is used as a vowel after consonants that are pronounced as stressed syllables at the end of a word, or preceding an internal juncture in compounds.</p>
 
 <p><span class="hx">17CF</span> is used over just two words: <span class="eg" lang="km">ក៏</span> <span class="eg" lang="km">ដ៏</span></p>
@@ -1435,7 +1442,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <section id="nikahit_reahmuk">
 <h4>Nikahit and reahmuk</h4>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ំ␣ះ</figure>
+<figure class="characterBox auto">ំ,ះ</figure>
 
 <p>The descendants of the anusvara and the visarga, <span class="hx">17C6</span> called <span lang="km">និគ្គហិត</span> <span class="ipa">niʔkəhət,</span> and <span class="hx">17C7</span>, called <span lang="km">រះមុខ</span> <span class="ipa">reə̆hmuk</span>, are regarded as vowels in Khmer, even though they represent the sounds <span class="ipa">-m</span> and <span class="ipa">-h</span>, respectively.</p>
 
@@ -1454,13 +1461,16 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <h4>Vowel modifier marks</h4>
 
 
-<figure class="characterBox auto" data-cols="">័␣់</figure>
+<figure class="characterBox auto" data-cols="">័,់</figure>
 
-<p><span class="hx">17D0</span> is used in some Pali and Sanskrit loan words (although alternative spellings exist) and indicates that the syllable has a particular vowel (click on the character in the box for more details), eg.</p>
+<p><span class="hx">17D0</span> is used in some Pali and Sanskrit loan words (although alternative spellings exist) and indicates that the syllable has a particular vowel (click on the character in the box for more details).</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">ស័ក</span></p>
 <p><span class="eg" lang="km">ល័ខ</span></p>
 
 <p><span class="hx">17CB</span> is always placed above the final consonant, and basically shortens the preceding vowel, eg. compare</p>
+
 <p><span class="eg" lang="km">ខាត</span></p>
 <p><span class="eg" lang="km">ខាត់</span></p>
 </section>
@@ -1480,7 +1490,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>The following produce glides or <span class="ipa">iː</span> when used in syllable-final position.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans">វ␣យ</figure>
+<figure class="characterBox auto">វ,យ</figure>
 
 <p>See <a class="secref">compositeV</a> for the few instances where these are used.</p>
 
@@ -1502,10 +1512,11 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p id="def-prebase" class="explanatoryintro definitionStub"></p>
 
-<figure class="characterBox auto small" data-cols="ipa,trans,transc">េ␣ែ␣ៃ</figure>
+<figure class="characterBox auto small">េ,ែ,ៃ</figure>
 
-<p>Three combining marks are displayed to the left of the onset consonant(s), eg.</p>
+<p>Three combining marks are displayed to the left of the onset consonant(s).</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">គេ</span></p>
 <p><span class="eg" lang="km">កែ</span></p>
 <p><span class="eg" lang="km">កៃ</span></p>
@@ -1515,7 +1526,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <table class="sequenceTable">
 <tr data-notes="k,eː"
     data-type="ipa,ipa"
-    data-prefix=","><td>គ␣េ</td></tr>
+    data-prefix=","><td>គ,េ</td></tr>
 </table>
 
 
@@ -1526,13 +1537,14 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 </figure>
 <details class="figureSub"><summary>show composition</summary><p><span class="eg" lang="km">កែងដៃ</span></p></details>
 
-<p>These vowel signs do not split a <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct</a>. This means that a word with a consonant cluster at the start separates the pre-base vowel from the  position where it is pronounced by more than one consonant character, eg.</p>
+<p>These vowel signs do not split a <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct</a>. This means that a word with a consonant cluster at the start separates the pre-base vowel from the  position where it is pronounced by more than one consonant character.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">អង្គ្លេស</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="ʔɑ,ŋ.,k,l,eː,h"
     data-type="ipa,ipa,ipa,ipa,ipa,ipa"
-    data-prefix=",,,,,,,,,"><td>អ␣ង្␣គ្␣ល␣េ␣ស</td></tr>
+    data-prefix=",,,,,,,,,"><td>អ,ង្,គ្,ល,េ,ស</td></tr>
 </table>
 
 
@@ -1559,25 +1571,27 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
 
-<figure class="characterBox auto small" data-cols="ipa,trans,transc">ៀ␣ឿ␣ើ␣ោ␣ៅ</figure>
+<figure class="characterBox auto small">ៀ,ឿ,ើ,ោ,ៅ</figure>
 
-<p>Five vowel or vocalic sounds are represented by a vowel sign that is a single code point in memory, but when displayed it has visually separate parts that appear on different sides of the preceding consonant or cluster, eg.</p>
+<p>Five vowel or vocalic sounds are represented by a vowel sign that is a single code point in memory, but when displayed it has visually separate parts that appear on different sides of the preceding consonant or cluster.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">តៀប</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="t,iə,p"
     data-type="ipa,ipa,ipa"
-    data-prefix=",,"><td>ត␣ៀ␣ប</td></tr>
+    data-prefix=",,"><td>ត,ៀ,ប</td></tr>
 </table>
 
 
-<p class="info">Like pre-base glyphs, these are combining marks that are always stored after the base consonant or conjunct. The rendering process places the glyphs around the base consonant(s), as needed, eg.</p>
+<p class="info">Like pre-base glyphs, these are combining marks that are always stored after the base consonant or conjunct. The rendering process places the glyphs around the base consonant(s), as needed.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">គ្រឿង</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="k,r,ɨə,ŋ"
     data-type="ipa,ipa,ipa,ipa"
-    data-prefix=",,,"><td>គ្␣រ␣ឿ␣ង</td></tr>
+    data-prefix=",,,"><td>គ្,រ,ឿ,ង</td></tr>
 </table>
 
 
@@ -1600,7 +1614,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Vowels represented by combinations of the above characters (not including  decomposed versions of the 2 <a href="#circumgraphs">circumgraphs</a> described below):</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans">ាំ␣ុំ␣ុះ␣េះ␣ោះ␣ា␣ាំង␣ិះ␣ឹះ␣ូវ␣ើះ␣ែះ␣័រ␣ិយ␣័យ</figure>
+<figure class="characterBox auto">ាំ,ុំ,ុះ,េះ,ោះ,ា,ាំង,ិះ,ឹះ,ូវ,ើះ,ែះ,័រ,ិយ,័យ</figure>
 
 <details>
 <summary class="instructions" style="margin-block-start: 4em;margin-block-end: 3em;">Show which combinations contain a given character:</summary>
@@ -1608,71 +1622,71 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <table class="graphemeTable">
 <tbody>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17B6;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ា់␣ាំង␣ាំ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17B6;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ា់,ាំង,ាំ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17B7;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ិយ␣ិះ</figure></td></tr>
+<td><figure style="margin: 0" class="otherBox auto">&#x17B7;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ិយ,ិះ</figure></td></tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17B9;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ឹះ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17B9;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ឹះ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17BB;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ុះ␣ុំ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17BB;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ុះ,ុំ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17BC;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ូវ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17BC;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ូវ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17BE;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ើះ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17BE;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ើះ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C1;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">េះ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17C1;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">េះ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C2;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ែះ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17C2;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ែះ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C4;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ោះ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17C4;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ោះ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C6;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ុំ␣ាំង␣ាំ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17C6;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ុំ,ាំង,ាំ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C7;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ោះ␣ិះ␣េះ␣ុះ␣ែះ␣ឹះ␣ើះ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17C7;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ោះ,ិះ,េះ,ុះ,ែះ,ឹះ,ើះ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17CB;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ា់</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17CB;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ា់</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17D0;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">័យ␣័រ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x17D0;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">័យ,័រ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1799;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ិយ␣័យ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x1799;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ិយ,័យ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1784;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ាំង</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x1784;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ាំង</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x179A;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">័រ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x179A;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">័រ</figure></td>
 </tr>
 <tr>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x179C;</figure></td>
-<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ូវ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">&#x179C;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto">ូវ</figure></td>
 </tr>
 </tbody>
 </table>
@@ -1706,7 +1720,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Characters that don't appear in the combinations:</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ី␣ឺ␣ួ␣ឿ␣ៀ␣ៃ␣ៈ␣ៅ</figure>
+<figure class="characterBox auto">ី,ឺ,ួ,ឿ,ៀ,ៃ,ៈ,ៅ</figure>
 </section>
 
 
@@ -1739,13 +1753,16 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <h3>Standalone vowels</h3>           
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
-<p>Most of the time, vowels that appear to be standalone are actually pronounced and written after a glottal stop. These use the consonant <span class="hx">17A2</span> for <span class="name">ɑ</span>-class vowels, or <span class="hx">17A2 17CA</span> for <span class="name">ɔ</span>-class vowels.  They are usually followed by a vowel sign, but when used alone they represent the sound of the inherent vowel, eg.</p>
+<p>Most of the time, vowels that appear to be standalone are actually pronounced and written after a glottal stop. These use the consonant <span class="hx">17A2</span> for <span class="name">ɑ</span>-class vowels, or <span class="hx">17A2 17CA</span> for <span class="name">ɔ</span>-class vowels.  They are usually followed by a vowel sign, but when used alone they represent the sound of the inherent vowel.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">អូ</span></p>
 <p><span class="eg" lang="km">អ៊ូ</span></p>
 <p><span class="eg ipalist" lang="km" dir="ltr">ចង្អូរ</span></p>
 
-<p>The combination of <span class="hx">17A2</span> and a vowel sign can also occur as a subscript below a consonant onset or final consonant, eg.</p>
+<p>The combination of <span class="hx">17A2</span> and a vowel sign can also occur as a subscript below a consonant onset or final consonant.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">ក្អាត់</span></p>
 <p><span class="eg" lang="km" dir="ltr">ចង្អៀត</span></p>
 
@@ -1757,7 +1774,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>The most common way is to add  a vowel sign to the glottal consonant character <span class="codepoint"><span lang="km">&#x17A2;</span> <a href="/scripts/khmer/block#char17A2">[<span class="uname">U+17A2 KHMER LETTER QA</span>]</a></span>, eg. <span class="ex" lang="km">អី</span> <span class="ipa">ʔəj</span>.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">អិ␣អី␣អឹ␣អឺ␣អុ␣អូ␣អេ␣អោ␣អែ␣អៈ␣អា␣អៀ␣អឿ␣អួ␣អើ␣អៃ␣អៅ</figure>
+<figure class="characterBox auto">អិ,អី,អឹ,អឺ,អុ,អូ,អេ,អោ,អែ,អៈ,អា,អៀ,អឿ,អួ,អើ,អៃ,អៅ</figure>
 </section-->
 
 
@@ -1768,13 +1785,14 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Khmer also has independent vowel letters that can be used to represent some of these sounds, but unlike most South Asian scripts, there are fewer independent vowels than vowel sounds, and some do not have direct correspondences with a simple vowel sign. For example, <span class="hx">17AA</span> corresponds phonetically to the multipart vowel <span class="hx">17A2 17BC 179C</span>. (See also <a class="sectionref">vocalics</a>.)</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ឥ␣ឦ␣ឪ␣ឧ␣ឩ␣ឯ␣ឰ␣ឱ␣ឳ␣ឲ</figure>
+<figure class="characterBox auto">ឥ,ឦ,ឪ,ឧ,ឩ,ឯ,ឰ,ឱ,ឳ,ឲ</figure>
 
-<p>Whether a vowel sound is represented using an independent vowel letter or the glottal consonant plus vowel sign varies from word to word. In Cambodian orthography the two are not interchangeable. The independent vowel letters appear in relatively few words, but some of those words are quite common, eg.
-<span class="eg ipalist" lang="km">ឪពុក</span>
-<span class="eg ipalist" lang="km">ឲ្យ</span>
-<span class="eg ipalist" lang="km">ឮ</span>
-</p>
+<p>Whether a vowel sound is represented using an independent vowel letter or the glottal consonant plus vowel sign varies from word to word. In Cambodian orthography the two are not interchangeable. The independent vowel letters appear in relatively few words, but some of those words are quite common.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg ipalist" lang="km">ឪពុក</span></p>
+<p><span class="eg ipalist" lang="km">ឲ្យ</span></p>
+<p><span class="eg ipalist" lang="km">ឮ</span></p>
 </section>
 
 
@@ -1784,13 +1802,13 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <div class="btw">
 <p>The Unicode Khmer block contains 3 more independent vowels that are either obsolete or strongly deprecated.</p>
 
-<figure class="archaicBox auto" data-cols="ipa">ឨ</figure>
+<figure class="archaicBox auto">ឨ</figure>
 </div>
 
 <div class="btw">
 <p>The Unicode Standard regards the following 2 characters as errors in the encoding.</p>
 
-<figure class="deprecatedBox auto" data-cols="">ឣ␣ឤ</figure>
+<figure class="deprecatedBox auto" data-cols="">ឣ,ឤ</figure>
 </div>
 </section>
 </section>
@@ -2914,7 +2932,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p> Khmer represents vocalics only as independent vowel letters.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans">ឫ␣ឬ␣ឭ␣ឮ</figure>
+<figure class="characterBox auto">ឫ,ឬ,ឭ,ឮ</figure>
 
 <p>The following words shown examples of them in use.</p>
 
@@ -2942,7 +2960,13 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <section id="novowel">
 <h2>Vowel absence &amp; sound silencers</h2>
 
-<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.  The absence of a vowel sound can be visually indicated in one of the following ways.</p>
+<aside class="sectionAside"></aside>
+
+<p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
+
+<div id="novowel_description"></div>
+
+<p>Follow these links for more information.</p>
 
 
 <ol>
@@ -2954,8 +2978,6 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <li><mark><a href="#silencers">Silencer marks</a></mark>. These can cancel sounds of vowels and consonants.</li>
 </ol>
-
-<p>The Khmer equivalent of the <span class="name">virama</span> is called <span class="name">coeng</span>, and is never visible.</p>
 
 
 
@@ -2982,14 +3004,12 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <section id="conjuncts">
 <h4>Conjunct formation</h4>
 
-<figure class="characterBox auto hidden"  data-cols="trans">&#x17D2;</figure>
-
 <p class="info">In Unicode, the stacking  behaviour is achieved by adding <span class="hx">17D2</span> between the consonants. This character has no visual representation in normal Khmer text, however most fonts render it as a small cross when used alone or without a following consonant. It is never visible when used in consonant clusters.</p>
 
 <table class="sequenceTable" style="line-height: 2.5">
 <tr data-notes="SA,coeng,PA,sp"
     data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,→"><td>ស␣្␣ព␣ស្ព</td></tr>
+    data-prefix=",+,+,→"><td>ស,្,ព,ស្ព</td></tr>
 </table>
 
 <p class="linkToApp"><a target="_blank" href="../apps/conjunct_generator/index.html?preset=java">See a table of 2-consonant clusters.</a><br>The table allows you to test results for various fonts.</p>
@@ -3020,22 +3040,22 @@ were originally intended to <q>represent a phonetic difference not expressed by 
     data-notes="MO,coeng,PHA,mpʰ"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ម␣្␣ផ␣ម្ផ</td></tr>
+    ><td>ម,្,ផ,ម្ផ</td></tr>
 <tr 
     data-notes="SA,coeng,NO,sn"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ស␣្␣ន␣ស្ន</td></tr>
+    ><td>ស,្,ន,ស្ន</td></tr>
 <tr 
     data-notes="DO,coeng,TTHO,ttʰ"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ឌ␣្␣ឍ␣ឌ្ឍ</td></tr>
+    ><td>ឌ,្,ឍ,ឌ្ឍ</td></tr>
 <tr 
     data-notes="TA,coeng,RO,tr"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ត␣្␣រ␣ត្រ</td></tr>
+    ><td>ត,្,រ,ត្រ</td></tr>
 </table>
 <figcaption>Examples of stacked conjuncts.</figcaption>
 </figure>
@@ -3052,11 +3072,11 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <div class="characterBoxTitle">Class <span class="trans">ɑː</span> consonants</div>
 
-<figure class="counterstylesBox auto noindex" data-ipa="pʰ-p,ɓ-p,t,tʰ-t,tʰ-t,ɗ-t,k-k,kʰ-k,ʔ,c-c,cʰ,s-h,h,l" data-cols="">ផ្ផ␣ប្ប␣ត្ត␣ថ្ថ␣ឋ្ឋ␣ដ្ដ␣ក្ក␣ខ្ខ␣អ្អ␣ច្ច␣ឆ្ឆ␣ស្ស␣ហ្ហ␣ឡ្ឡ</figure>
+<figure class="counterstylesBox auto noindex" data-ipa="pʰ-p,ɓ-p,t,tʰ-t,tʰ-t,ɗ-t,k-k,kʰ-k,ʔ,c-c,cʰ,s-h,h,l">ផ្ផ,ប្ប,ត្ត,ថ្ថ,ឋ្ឋ,ដ្ដ,ក្ក,ខ្ខ,អ្អ,ច្ច,ឆ្ឆ,ស្ស,ហ្ហ,ឡ្ឡ</figure>
 
 <div class="characterBoxTitle">Class <span class="trans">ɔː</span> consonants</div>
 
-<figure class="counterstylesBox auto noindex" data-ipa="p-p,pʰ-p,t-t,tʰ-t,tʰ-t,ɗ-t,k-k,kʰ-k,c-c,cʰ,ʋ-w,m-m,n-n,n-n,ɲ-ɲ,ŋ-ŋ,r,l-l,j-iː" data-cols="">ព្ព␣ភ្ភ␣ទ្ទ␣ធ្ធ␣ឍ្ឍ␣ឌ្ឌ␣គ្គ␣ឃ្ឃ␣ជ្ជ␣ឈ្ឈ␣វ្វ␣ម្ម␣ន្ន␣ណ្ណ␣ញ្ញ␣ង្ង␣រ្រ␣ល្ល␣យ្យ</figure>
+<figure class="counterstylesBox auto noindex" data-ipa="p-p,pʰ-p,t-t,tʰ-t,tʰ-t,ɗ-t,k-k,kʰ-k,c-c,cʰ,ʋ-w,m-m,n-n,n-n,ɲ-ɲ,ŋ-ŋ,r,l-l,j-iː">ព្ព,ភ្ភ,ទ្ទ,ធ្ធ,ឍ្ឍ,ឌ្ឌ,គ្គ,ឃ្ឃ,ជ្ជ,ឈ្ឈ,វ្វ,ម្ម,ន្ន,ណ្ណ,ញ្ញ,ង្ង,រ្រ,ល្ល,យ្យ</figure>
 </details>
 
 
@@ -3064,27 +3084,29 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Stacks commonly occur in  multisyllabic words. A medial cluster will typically contain a final consonant for the first syllable and the initial consonant of the next syllable. Vowel signs never split conjuncts, but instead treat them as a single unit.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">ចង្កើះ</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="cɑ,ŋ.,coeng,ˈk,aə,h"
     data-type="ipa,ipa,uname,ipa,ipa"
-    data-prefix=",,,,,"><td>ច␣ង␣្␣ក␣ើ␣ះ</td></tr>
+    data-prefix=",,,,,"><td>ច,ង,្,ក,ើ,ះ</td></tr>
 </table>
 
 <p>Some clusters involve two subscripts. These are, with 3 exceptions, composed of a final nasal, followed by a stop and r.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg ipalist" lang="km" data-ipa="kɑː§n.§t§raj§∅">កន្ត្រៃ</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="kɑː,n.,coeng,t,coeng,r,aj"
     data-type="ipa,ipa,uname,ipa,uname,ipa,ipa"
-    data-prefix=",,,,,,,,"><td>ក␣ន␣្␣ត␣្␣រ␣ៃ</td></tr>
+    data-prefix=",,,,,,,,"><td>ក,ន,្,ត,្,រ,ៃ</td></tr>
 </table>
 
 <p><span class="eg ipalist" lang="km" data-ipa="kɑ§ɲ.§c§reː§ŋ">កញ្ជ្រេង</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="kɑ,ɲ.,coeng,c,coeng,r,eː,ŋ"
     data-type="ipa,ipa,uname,ipa,uname,ipa,ipa,ipa"
-    data-prefix=",,,,,,,,"><td>ក␣ញ␣្␣ជ␣្␣រ␣េ␣ង</td></tr>
+    data-prefix=",,,,,,,,"><td>ក,ញ,្,ជ,្,រ,េ,ង</td></tr>
 </table>
 
 
@@ -3095,18 +3117,19 @@ were originally intended to <q>represent a phonetic difference not expressed by 
  
 <p>Subscript consonants that appear at the end of a word, are silent.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg ipalist" lang="km" data-ipa="pei§t§∅">ពេទ្យ</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="p,ei,t,coeng,∅"
     data-type="ipa,ipa,ipa,uname,,"
-    data-prefix=",,,,,,"><td>ព␣េ␣ទ␣្␣យ</td></tr>
+    data-prefix=",,,,,,"><td>ព,េ,ទ,្,យ</td></tr>
 </table>
 
 <p><span class="eg ipalist" lang="km" data-ipa="rɔa§t§∅">រដ្ឋ</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="rɔa,t,coeng,∅"
     data-type="ipa,ipa,uname,,"
-    data-prefix=",,,,,"><td>រ␣ដ␣្␣ឋ</td></tr>
+    data-prefix=",,,,,"><td>រ,ដ,្,ឋ</td></tr>
 </table>
 </section>
 
@@ -3118,7 +3141,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Where the two consonants involved in the cluster are in different classes or registers, the pronunciation of any following vowel is normally determined by the register of the subscript consonant. For the following exceptions, however, the vowel pronunciation is determined by the register of the <em>first</em> consonant (all <span class="name">ɔ</span>-class):</p>
 
-<figure class="characterBox auto" data-cols="">ង␣ញ␣ន␣ម␣យ␣រ␣ល␣វ</figure>
+<figure class="characterBox auto" data-cols="">ង,ញ,ន,ម,យ,រ,ល,វ</figure>
 
 </section>
 
@@ -3130,16 +3153,22 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Most vowels that are pronounced after a consonant stack are displayed as if they were attached to the consonant at the top of the stack (including pre-base vowel signs and circumgraphs).</p>
 <p class="instructions">Click on the examples to see the underlying sequence more clearly.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg ipalist" lang="km" dir="ltr">ក្លិន</span></p>
 <p><span class="eg ipalist" lang="km" dir="ltr">ឆ្វេង</span></p>
 <p><span class="eg ipalist" lang="km" dir="ltr">ភ្លៀង</span></p>
 
 <p>This can also lead to ligation between the top consonant in the stack and a vowel sign, unless the subjoined consonant is right-spacing.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg ipalist" lang="km" dir="ltr">ក្ដារ</span></p>
 <p><span class="eg ipalist" lang="km" dir="ltr">ក្រាក់</span></p>
 <p><span class="eg ipalist" lang="km" dir="ltr">ក្បាល</span></p>
 
 <p>The exceptions are the vowel signs that appear below the consonant; these appear below the last subjoined form, unless the subjoined form is left-spacing.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg ipalist" lang="km" dir="ltr">ខ្ពុរ</span></p>
 <p><span class="eg ipalist" lang="km" dir="ltr">ត្រុំ</span></p>
 
@@ -3169,22 +3198,24 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <section id="absent_vowel">
 <h3>Unmarked vowel absence</h3>
 
-<p>While many consonant clusters are represented by conjunct stacks, it is not difficult to find words where the vowel absence is not marked, particularly after syllable codas. For example:</p>
+<p>While many consonant clusters are represented by conjunct stacks, it is not difficult to find words where the vowel absence is not marked, particularly after syllable codas.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">កកកុញ</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="kɑː,ʔ,ˈko,ɲ"
     data-type="ipa,ipa,ipa,ipa,uname"
     data-prefix=",+,+,+,+,+"
-    ><td>ក␣ក␣កុ␣ញ</td></tr>
+    ><td>ក,ក,កុ,ញ</td></tr>
 </table>
 
 <p>Note the ambiguity in the spelling. There is nothing to indicate that the first two characters in the word above are pronounced <span class="ipa">kaːʔ</span>, rather than <span class="ipa">ka.kaː</span>, as in</p>
 
 <p><span class="eg" lang="km">កករ</span></p>
 
-<p>Inherent vowels are not usually pronounced after syllable final consonants at the end of a word, eg.</p>
+<p>Inherent vowels are not usually pronounced after syllable final consonants at the end of a word.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">កាល</span></p>
 <p><span class="eg" lang="km">កំពុក</span></p>
 
@@ -3206,19 +3237,25 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Khmer has diacritics that silence vowels or parts of the text.</p>
 
-<figure class="characterBox auto" data-cols="trans">៍␣៌␣៑␣៝</figure>
+<figure class="characterBox auto" data-cols="">៍,៌,៑,៝</figure>
 
 <p>The following two diacritics are used to silence written characters. </p>
 
 <p><span class="hx">17CD</span> is used over a consonant, particularly in loan words, to silence it and any attached vowels or subscripts.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg ipalist" lang="km">សប្ដាហ៍</span></p>
 <p><span class="eg ipalist" lang="km">រេហ៍ពល</span></p>
 <p><span class="eg ipalist" lang="km">កេរ្តិ៍</span></p>
 
 <p><span class="hx">17CC</span> is not very common and word-medially may  produce <span class="ipa">rə</span> before the consonant it sits on. When it appears word-finally, it may  silence the final consonant (and may also  affect vowel sounds).</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg ipalist" lang="km">បរិបូណ៌</span></p>
 
 <p><span class="hx">17D1</span>, the sanskrit virama, is sometimes used in Sanskrit words to indicate that a final consonant has no vowel sound.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg ipalist" lang="km">អាត្មន៑</span></p>
 
 <p><span class="hx">17DD</span>, on the other hand, is a rarely used sign that indicates that a final consonant <em>retains</em> its inherent vowel sound.</p>
@@ -3292,48 +3329,48 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <tbody>
 <tr>
 <th rowspan="6">Onsets</th>
-<td><figure class="summaryBox auto" data-ipa="p,t,c,k,ɡ,ʔ,,ɓ,ɗ" data-cols="trans,transc">ប៉␣ត␣ច␣ក␣ហ្គ␣អ</figure></td>
-<td><figure class="summaryBox auto" data-ipa="p,t,c,k,ɡ,,ɗ" data-cols="trans,transc">ព␣ទ␣ជ␣គ␣ហ្គ៊</figure></td>
+<td><figure class="summaryBox auto" data-ipa="p,t,c,k,ɡ,ʔ,,ɓ,ɗ">ប៉,ត,ច,ក,ហ្គ,អ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="p,t,c,k,ɡ,,ɗ">ព,ទ,ជ,គ,ហ្គ៊</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto" data-ipa="ɓ,ɗ" data-cols="trans,transc">ប␣ដ</figure></td>
-<td><figure class="summaryBox auto" data-ipa="ɗ" data-cols="trans,transc">ឌ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ɓ,ɗ">ប,ដ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="ɗ">ឌ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto" data-ipa="pʰ,tʰ,tʰ,cʰ,kʰ" data-cols="trans,transc">ផ␣ថ␣ឋ␣ឆ␣ខ</figure></td>
-<td><figure class="summaryBox auto" data-ipa="pʰ,tʰ,tʰ,cʰ,kʰ" data-cols="trans,transc">ភ␣ធ␣ឍ␣ឈ␣ឃ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="pʰ,tʰ,tʰ,cʰ,kʰ">ផ,ថ,ឋ,ឆ,ខ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="pʰ,tʰ,tʰ,cʰ,kʰ">ភ,ធ,ឍ,ឈ,ឃ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto" data-ipa="f,s,ʒ z,h" data-cols="trans,transc">ហ្វ␣ស␣ហ្ស␣ហ</figure></td>
-<td><figure class="summaryBox auto" data-ipa="f,ʋ,s,ʒ z" data-cols="trans,transc">ហ្វ៊␣វ␣ហ្ស៊</figure></td>
+<td><figure class="summaryBox auto" data-ipa="f,s,ʒ z,h">ហ្វ,ស,ហ្ស,ហ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="f,ʋ,s,ʒ z">ហ្វ៊,វ,ហ្ស៊</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto" data-ipa="m,n,n" data-cols="trans,transc">ហ្ម␣ណ␣ហ្ន</figure></td>
-<td><figure class="summaryBox auto" data-ipa="m,n,ɲ,ŋ" data-cols="trans,transc">ម␣ន␣ញ␣ង</figure></td>
+<td><figure class="summaryBox auto" data-ipa="m,n,n">ហ្ម,ណ,ហ្ន</figure></td>
+<td><figure class="summaryBox auto" data-ipa="m,n,ɲ,ŋ">ម,ន,ញ,ង</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto" data-ipa="l" data-cols="trans,transc">ហ្ល</figure></td>
-<td><figure class="summaryBox auto" data-ipa="r,l,l,j" data-cols="trans,transc">រ␣ឡ␣ល␣យ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="l">ហ្ល</figure></td>
+<td><figure class="summaryBox auto" data-ipa="r,l,l,j">រ,ឡ,ល,យ</figure></td>
 </tr>
 
 <tr>
 <th>Cluster<br>initial</th>
-<td><figure class="summaryBox auto" data-ipa="p-,p-,p-,t-,t-,t-,t-,ɗ-,kʰ-,kʰ-,k-,k-" data-cols="trans,transc">ប␣ផ␣ត␣ដ␣ថ␣ឋ␣ក␣ដ␣ខ</figure></td>
-<td><figure class="summaryBox auto" data-ipa="p-,p-,p-,ɗ- t-,t-,t-,t-,kʰ-,kʰ-,k-,k-" data-cols="trans,transc">ព␣ភ␣ទ␣ឌ␣ធ␣ឍ␣គ␣ឃ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="p-,p-,p-,t-,t-,t-,t-,ɗ-,kʰ-,kʰ-,k-,k-">ប,ផ,ត,ដ,ថ,ឋ,ក,ដ,ខ</figure></td>
+<td><figure class="summaryBox auto" data-ipa="p-,p-,p-,ɗ- t-,t-,t-,t-,kʰ-,kʰ-,k-,k-">ព,ភ,ទ,ឌ,ធ,ឍ,គ,ឃ</figure></td>
 </tr>
 
 <tr>
 <th rowspan="4">Codas</th>
-<td colspan="2"><figure class="summaryBox auto" data-ipa="-p,-p,-p,-p,-t,-t,-t,-t,-t,-t,-t,-k,-k,-k,-k" data-cols="trans,transc">ព␣ប␣ផ␣ភ␣ទ␣ដ␣ឌ␣ថ␣ឋ␣ធ␣ឍ␣ក␣គ␣ខ␣ឃ</figure></td>
+<td colspan="2"><figure class="summaryBox auto" data-ipa="-p,-p,-p,-p,-t,-t,-t,-t,-t,-t,-t,-k,-k,-k,-k">ព,ប,ផ,ភ,ទ,ដ,ឌ,ថ,ឋ,ធ,ឍ,ក,គ,ខ,ឃ</figure></td>
 </tr>
 <tr>
-<td colspan="2"><figure class="summaryBox auto" data-ipa="-c,-c" data-cols="trans,transc">ច␣ជ</figure></td>
+<td colspan="2"><figure class="summaryBox auto" data-ipa="-c,-c">ច,ជ</figure></td>
 </tr>
 <tr>
-<td colspan="2"><figure class="summaryBox auto" data-ipa="-m,-n,-n,-ɲ,-ŋ" data-cols="trans,transc">ម␣ណ␣ន␣ញ␣ង</figure></td>
+<td colspan="2"><figure class="summaryBox auto" data-ipa="-m,-n,-n,-ɲ,-ŋ">ម,ណ,ន,ញ,ង</figure></td>
 </tr>
 <tr>
-<td colspan="2"><figure class="summaryBox auto" data-ipa="-w,-∅,-l,-iː" data-cols="trans,transc">វ␣រ␣ល␣យ</figure></td>
+<td colspan="2"><figure class="summaryBox auto" data-ipa="-w,-∅,-l,-iː">វ,រ,ល,យ</figure></td>
 </tr>
 </tbody>
 </table>
@@ -3364,19 +3401,19 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <p class="instructions">Where pronunciation differs, forms such as <span class="ipa">p-</span> indicate the sound at the start of a consonant cluster, and <span class="ipa">-p</span>  at the end of a syllable.</p>
 
 <p class="leadin" style="margin-block-end:-1rem;"><span class="name">ɑ-class</span></p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ព␣ភ␣ទ␣ឌ␣ធ␣ឍ␣គ␣ឃ␣ជ␣ឈ␣ម␣ន␣ញ␣ង␣វ␣រ␣ឡ␣ល␣យ</figure>
+<figure class="characterBox auto">ព,ភ,ទ,ឌ,ធ,ឍ,គ,ឃ,ជ,ឈ,ម,ន,ញ,ង,វ,រ,ឡ,ល,យ</figure>
 
 <p class="leadin" style="margin-block-end:-1rem;"><span class="name">ɔ-class</span></p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ប␣ផ␣ត␣ដ␣ថ␣ឋ␣ក␣ខ␣អ␣ច␣ឆ␣ស␣ហ␣ណ</figure>
+<figure class="characterBox auto">ប,ផ,ត,ដ,ថ,ឋ,ក,ខ,អ,ច,ឆ,ស,ហ,ណ</figure>
 
 
-<!--<figure class="characterBox auto" data-cols="ipa,trans,transc" data-notes="ᵓ,ᵃ,ᵃ,ᵓ,ᵃ,ᵓ,ᵃ,ᵓ,ᵃ,ᵃ,ᵓ,ᵓ,ᵃ,ᵓ,ᵃ,ᵓ,ᵃ,,ᵃ,ᵓ,ᵃ,ᵓ,,ᵓ,ᵃ,ᵃ,,ᵓ,ᵓ,ᵃ,ᵓ,ᵓ,,ᵓ,ᵓ,ᵓ,ᵓ">ព␣ប␣ផ␣ភ␣ត␣ទ␣ដ␣ឌ␣ថ␣ឋ␣ធ␣ឍ␣ក␣គ␣ខ␣ឃ␣អ␣ ␣ច␣ជ␣ឆ␣ឈ␣ ␣វ␣ស␣ហ␣ ␣ម␣ន␣ណ␣ញ␣ង␣ ␣រ␣ឡ␣ល␣យ</figure>-->
+<!--<figure class="characterBox auto" data-notes="ᵓ,ᵃ,ᵃ,ᵓ,ᵃ,ᵓ,ᵃ,ᵓ,ᵃ,ᵃ,ᵓ,ᵓ,ᵃ,ᵓ,ᵃ,ᵓ,ᵃ,,ᵃ,ᵓ,ᵃ,ᵓ,,ᵓ,ᵃ,ᵃ,,ᵓ,ᵓ,ᵃ,ᵓ,ᵓ,,ᵓ,ᵓ,ᵓ,ᵓ">ព,ប,ផ,ភ,ត,ទ,ដ,ឌ,ថ,ឋ,ធ,ឍ,ក,គ,ខ,ឃ,អ, ,ច,ជ,ឆ,ឈ, ,វ,ស,ហ, ,ម,ន,ណ,ញ,ង, ,រ,ឡ,ល,យ</figure>-->
 
 
 
 <div class="btw">
 <p>The following 3 consonants are obsolete, and used only for Pali/Sanskrit transliteration.</p>
-<figure class="archaicBox auto" data-cols="ipa,trans">ឝ␣ឞ␣ៜ</figure>
+<figure class="archaicBox auto">ឝ,ឞ,ៜ</figure>
 </div>
 </section>
 
@@ -3391,7 +3428,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Special combinations are used to represent non-native sounds in loan words, especially from French and Thai. These include the following, most of which involve a stack beginning with <span class="ch">ហ</span>.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc" data-notes="ᵃ,ᵃ,ᵓ,ᵃ,ᵓ,ᵃ,ᵓ">ប៉␣ហ្គ␣ហ្គ៊␣ហ្វ␣ហ្វ៊␣ហ្ស␣ហ្ស៊</figure>
+<figure class="characterBox auto" data-notes="ᵃ,ᵃ,ᵓ,ᵃ,ᵓ,ᵃ,ᵓ">ប៉,ហ្គ,ហ្គ៊,ហ្វ,ហ្វ៊,ហ្ស,ហ្ស៊</figure>
 
 </section>
 
@@ -3406,17 +3443,19 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>There are not enough individual Khmer consonant letters to be able to assign a unique character for each <span class="name">ɑ</span>-class and <span class="name">ɔ</span>-class register. Khmer extends the number of letters as follows to close this gap.</p>
 
-<figure class="characterBox auto" data-cols="">&#x17C9;␣&#x17CA;</figure>
+<figure class="characterBox auto" data-cols="">&#x17C9;,&#x17CA;</figure>
 
 <p>Two diacritics, <span class="hx">17C9</span> and <span class="hx">17CA</span>, are used to <em>change</em> the class of a consonant. These are particularly useful when a given sound has only one character associated with it, such as the letters <span class="ex" lang="km">ម</span>, <span class="ex" lang="km">យ</span> and <span class="ex" lang="km">ស</span>  etc.</p>
 
-<p><span class="hx">17C9</span> changes the register of a consonant from <span class="name">ɔː</span> to <span class="name">ɑː</span>, affecting the inherent vowel and any other vowel following the consonant, eg.</p>
+<p><span class="hx">17C9</span> changes the register of a consonant from <span class="name">ɔː</span> to <span class="name">ɑː</span>, affecting the inherent vowel and any other vowel following the consonant.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">មក</span></p>
 <p><span class="eg" lang="km">ម៉ប</span></p>
 
-<p><span class="hx">17CA</span> changes the register of a consonant from <span class="name">ɑː</span> to <span class="name">ɔː</span>, affecting the inherent vowel and any other vowel following the consonant, eg.</p>
+<p><span class="hx">17CA</span> changes the register of a consonant from <span class="name">ɑː</span> to <span class="name">ɔː</span>, affecting the inherent vowel and any other vowel following the consonant.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">បែង</span></p>
 <p><span class="eg" lang="km">ប៊ែន</span></p>
 
@@ -3426,7 +3465,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>A small number of <span class="name">ɔ</span>-class consonants are transformed into <span class="name">ɑ</span>-class consonants by preceding them with <span class="hx">17A0</span>, rather than using the above diacritics. They include the following.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc" data-notes="ᵃ,ᵃ,ᵃ">ហ្ម␣ហ្ន␣ហ្ល</figure>
+<figure class="characterBox auto" data-notes="ᵃ,ᵃ,ᵃ">ហ្ម,ហ្ន,ហ្ល</figure>
 </section>
 
 
@@ -3439,8 +3478,9 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <section id="onsets">
 <h3>Onsets</h3>
 
-<p>Word-initial consonant clusters are relatively common in Khmer. These include sounds commonly referred to as medials, such as <span class="ipa">-r</span> and <span class="ipa">-l</span>, but also a wider assortment of consonant clusters. For example:</p>
+<p>Word-initial consonant clusters are relatively common in Khmer. These include sounds commonly referred to as medials, such as <span class="ipa">-r</span> and <span class="ipa">-l</span>, but also a wider assortment of consonant clusters.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="km">ក្ដារ</span></p>
 <p><span class="eg" lang="km">ឆ្កែ</span></p>
 <p><span class="eg" lang="km">ធ្មេញ</span></p>
@@ -3461,7 +3501,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Not all Khmer consonants can appear in syllable-final position. The most common syllable codas include the following:</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ipa="-p,-t,-k,-m,-n,-ŋ,-ŋ,-l">ប␣ត␣ក␣ម␣ន␣ញ␣ង␣ល</figure>
+<figure class="characterBox auto" data-ipa="-p,-t,-k,-m,-n,-ŋ,-ŋ,-l">ប,ត,ក,ម,ន,ញ,ង,ល</figure>
 
 <p>The pronunciation of the consonant in final position may differ from it's normal pronunciation, but it is not followed by a vowel sound.</p>
 
@@ -3478,7 +3518,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <section id="coda_marks">
 <h4>Coda diacritics</h4>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ំ␣ះ</figure>
+<figure class="characterBox auto">ំ,ះ</figure>
 
 <p>In principle, the descendants of the anusvara and the visarga, <span class="hx">17C6</span> called <span lang="km">និគ្គហិត</span> <span class="ipa">niʔkəhət,</span> and <span class="hx">17C7</span>, called <span lang="km">រះមុខ</span> <span class="ipa">reə̆hmuk</span> produce a rhyme with the coda sounds <span class="ipa" style="white-space: nowrap;">-m</span> and <span class="ipa" style="white-space: nowrap;">-h</span>, respectively. But they also have an impact on the vowel in the syllable, and are regarded as vowels in Cambodia.</p>
 
@@ -3494,16 +3534,16 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>The following panel lists rhymes following <span class="name">ɑ</span>-class consonants.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="eh,eh,eh,oh,om,əh,əh,ah,ah,am,am,aŋ">ិះ␣េះ␣ែះ␣ុះ␣ុំ␣ឹះ␣ើះ␣ះ␣ោះ␣ាំ␣ំ␣ាំង</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="eh,eh,eh,oh,om,əh,əh,ah,ah,am,am,aŋ">ិះ,េះ,ែះ,ុះ,ុំ,ឹះ,ើះ,ះ,ោះ,ាំ,ំ,ាំង</figure>
 
 
 <p>The next panel shows rhymes following <span class="name">ɔ</span>-class consonants. In several cases the same vowel sign is used, but with a different pronunciation.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc" data-ignore="◌" data-ipa="ih,ih,uə̆h,uh,um,um,eə̆h,eə̆ŋ,oə̆m">ិះ␣េះ␣ោះ␣ុះ␣ុំ␣ំ␣ះ␣ាំង␣ាំ</figure>
+<figure class="characterBox auto" data-ignore="◌" data-ipa="ih,ih,uə̆h,uh,um,um,eə̆h,eə̆ŋ,oə̆m">ិះ,េះ,ោះ,ុះ,ុំ,ំ,ះ,ាំង,ាំ</figure>
 
 <p>The  2 following sequences are regarded as letters in the Khmer alphabet. They are not encoded separately in Unicode (but they are named sequences).</p>
 
-<figure class="characterBox auto small" data-cols="ipa,trans">ាំ␣ុំ</figure>
+<figure class="characterBox auto small">ាំ,ុំ</figure>
 </section>
 </section>
 
@@ -4644,7 +4684,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 <p>Khmer has its own set of decimal digits, although western digits are also used sometimes.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc">០␣១␣២␣៣␣៤␣៥␣៦␣៧␣៨␣៩</figure>
+<figure class="characterBox auto" data-cols="" data-notes="0,1,2,3,4,5,6,7,8,9">០,១,២,៣,៤,៥,៦,៧,៨,៩</figure>
 
 
 <p>The thousands separator is <span class="ch">.</span>, and decimal separator is <span class="ch">,</span>.</p>
@@ -4673,14 +4713,14 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <p>The Unicode Khmer block contains a set of numeric symbols for divination lore.</p>
 
 
-<figure class="otherBox auto noindex" data-cols="">៰␣៱␣៲␣៳␣៴␣៵␣៶␣៷␣៸␣៹</figure>
+<figure class="otherBox auto noindex" data-cols="">៰,៱,៲,៳,៴,៵,៶,៷,៸,៹</figure>
 
 <p>Use of <span class="hx">17D3</span> is discouraged in favor of the complete set of lunar date symbols.</p>
 
 <p>The Khmer Symbols block is entirely composed of Lunar date symbols.</p>
 
 
-<figure class="otherBox auto noindex" data-cols="">᧠␣᧡␣᧢␣᧣␣᧤␣᧥␣᧦␣᧧␣᧨␣᧩␣᧪␣᧫␣᧬␣᧭␣᧮␣᧯␣᧰␣᧱␣᧲␣᧳␣᧴␣᧵␣᧶␣᧷␣᧸␣᧹␣᧺␣᧻␣᧼␣᧽␣᧾␣᧿</figure>
+<figure class="otherBox auto noindex" data-cols="">᧠,᧡,᧢,᧣,᧤,᧥,᧦,᧧,᧨,᧩,᧪,᧫,᧬,᧭,᧮,᧯,᧰,᧱,᧲,᧳,᧴,᧵,᧶,᧷,᧸,᧹,᧺,᧻,᧼,᧽,᧾,᧿</figure>
 
 </section>
 </section>
@@ -4902,11 +4942,11 @@ See <a class="figref">fig_posn_muse</a>.</p>
 
 <p><span>The Unicode Standard<tt>u,647</tt> gives the impression that both of these diacritics are moved below the consonant any time a vowel appears over that consonant. However, in reality only certain consonants cause this behaviour</span><span>.</span> The behaviour varies a little by font, but in general the <span class="uname">MUUSIKATOAN</span> diacritic is lowered for the following  letters:</p>
 
-<figure class="otherBox auto" data-cols="trans,transc">ប␣វ␣ម␣ន␣ញ␣ង␣រ␣ល␣យ</figure>
+<figure class="otherBox auto" data-cols="">ប,វ,ម,ន,ញ,ង,រ,ល,យ</figure>
 
 <p><span class="uname">TRIISAP</span> is lowered for these characters.</p>
 
-<figure class="otherBox auto" data-cols="trans,transc">ស␣ហ␣អ</figure>
+<figure class="otherBox auto" data-cols="">ស,ហ,អ</figure>
 
 <p>For more details, see <a href="https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">this SIL document</a>.<tt>sil</tt></p>
 
@@ -5029,7 +5069,9 @@ and separate phrases with a wider space such as <span class="hx img">2003</span>
 <section id="p_names">
 <h4>Names</h4>
 
-<p><span class="ch">-</span> (called <span class="charExample inline" translate="no"><span class="ex" lang="km">សហសញ្ញា</span> <span class="ipa">sɑːhɑː sɑːɲɲiə</span></span>) is  used between the parts of a person's name. Typically the family name (written first) and following names, but often all names for Chinese Cambodians, eg.</p>
+<p><span class="ch">-</span> (called <span class="charExample inline" translate="no"><span class="ex" lang="km">សហសញ្ញា</span> <span class="ipa">sɑːhɑː sɑːɲɲiə</span></span>) is  used between the parts of a person's name. Typically the family name (written first) and following names, but often all names for Chinese Cambodians.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="charExample" translate="no"><span class="ex" lang="km">ញ៉ុក-ថែម</span> <span class="ipa">ɲok tʰaem</span></span></p>
 <p><span class="charExample" translate="no"><span class="ex" lang="km">លី-ធាម-តេង</span> <span class="ipa">liː tʰiəm teiŋ</span></span></p>
 </section>
@@ -5216,8 +5258,6 @@ Gecko and Blink set break opportunities based on orthographic syllables. WebKit 
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
-<figure class="characterBox auto" data-cols="">៖␣។␣?␣!␣៎␣៕␣៙␣៚</figure>
-
 <p>Khmer uses mostly native punctuation marks, but also a couple of ASCII punctuation.</p>
 
 <table class="character_list">
@@ -5281,7 +5321,12 @@ Gecko and Blink set break opportunities based on orthographic syllables. WebKit 
 
 <p><b id="question" class="leadin">Question &amp; exclamation marks.</b> Khmer uses Western punctuation marks, eg. <span class="ex" lang="km">ហេត៊អ្វី?</span> <span class="ipa">haetʰ aʋəi</span>, and  <span class="ex" lang="km">កុំ!</span> <span class="ipa">kom</span>.</p>
 
-<p>Very rarely, the combining character <span class="hx">17CE</span> can be used over the final consonant of a word like an exclamation mark, to convey excited emphasis, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ណែ៎</span> <span class="ipa">nɛː</span> <span class="meaning">Hey!</span></span> <span class="charExample" translate="no"><span class="ex" lang="km">នុ៎ះន៎</span> <span class="ipa">nuhnɔː</span> <span class="meaning">Over there!</span></span></p>
+<p>Very rarely, the combining character <span class="hx">17CE</span> can be used over the final consonant of a word like an exclamation mark, to convey excited emphasis.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="charExample" translate="no"><span class="ex" lang="km">ណែ៎</span> <span class="ipa">nɛː</span> <span class="meaning">Hey!</span></span></p>
+
+<p><span class="charExample" translate="no"><span class="ex" lang="km">នុ៎ះន៎</span> <span class="ipa">nuhnɔː</span> <span class="meaning">Over there!</span></span></p>
 
 <p><b id="sections" class="leadin">Section boundaries.</b> <span class="ch">៕</span> can be used to close a chapter, or an entire text.</p>
 
@@ -5293,8 +5338,6 @@ Gecko and Blink set break opportunities based on orthographic syllables. WebKit 
 
 <section id="bracketing">
 <h4>Bracketed text</h4>
-
-<figure class="characterBox auto small" data-cols="">(␣)</figure>
 
 <p>Khmer  commonly uses ASCII parentheses to insert parenthetical information into text.</p>
 
@@ -5322,8 +5365,6 @@ Gecko and Blink set break opportunities based on orthographic syllables. WebKit 
 
 <section id="quotations">
 <h3>Quotations &amp; citations</h3>
-
-<figure class="characterBox auto" data-cols="">“␣”␣‘␣’</figure>
 
 <p>Khmer texts typically use  quotation marks around quotations. Of course, due to keyboard design, quotations may also be surrounded by ASCII double and single quote marks.</p>
 
@@ -5358,9 +5399,11 @@ Gecko and Blink set break opportunities based on orthographic syllables. WebKit 
 <section id="emphasis">
 <h3>Emphasis</h3>
 
-<figure class="auto characterBox" data-cols="">៎</figure>
+<p><span class="hx">17CE</span> is very rare, but is used over the final consonant of a word like an exclamation mark, to convey excited emphasis.</p>
 
-<p><span class="hx">17CE</span> is very rare, but is used over the final consonant of a word like an exclamation mark, to convey excited emphasis, eg. <span class="eg" lang="km">ណែ៎</span> <span class="eg" lang="km">នុ៎ះន៎</span></p>
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="km">ណែ៎</span> <span class="eg" lang="km">នុ៎ះន៎</span></p>
+
 <p>Emphasis may also be conveyed by repeating words (see <a class="secref">repetition</a>).</p>
 </section>
 
@@ -5393,21 +5436,27 @@ Gecko and Blink set break opportunities based on orthographic syllables. WebKit 
 
 
 
+
+
+
 <section id="repetition">
 <h4>Repetition</h4>
 
-<figure class="auto characterBox" data-cols="">ៗ</figure>
+<p> It is common to repeat words or sometimes phrases in Khmer, particularly to provide emphasis. <span class="ch">ៗ</span> (called <span class="charExample inline" translate="no"><span class="ex" lang="km">លេខទោ</span> <span class="ipa">leːktoː</span></span>) can be used for this.</p>
 
-<p> It is common to repeat words or sometimes phrases in Khmer, particularly to provide emphasis. <span class="ch">ៗ</span> (called <span class="charExample inline" translate="no"><span class="ex" lang="km">លេខទោ</span> <span class="ipa">leːktoː</span></span>) can be used for this, eg. 
-<span class="charExample" translate="no"><span class="ex" lang="km">ខ្លាំង ៗ</span> <span class="ipa">klaŋklaŋ</span> <span class="meaning">very strong</span></span>
-<span class="charExample" translate="no"><span class="ex" lang="km">គាត់មានផ្ទះថ្មី ៗ</span> <span class="ipa">kaːtʰ miən pʰteə̯h tʰməitʰməi</span> <span class="meaning">he has a brand new house</span></span>
-</p>
+<div class="egIntro">eg.</div>
+<p><span class="charExample" translate="no"><span class="ex" lang="km">ខ្លាំង ៗ</span> <span class="ipa">klaŋklaŋ</span> <span class="meaning">very strong</span></span></p>
+<p><span class="charExample" translate="no"><span class="ex" lang="km">គាត់មានផ្ទះថ្មី ៗ</span> <span class="ipa">kaːtʰ miən pʰteə̯h tʰməitʰməi</span> <span class="meaning">he has a brand new house</span></span></p>
 
-<p>Sometimes this sign repeats a phrase rather than a word, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បន្តិចម្ដង ៗ</span> <span class="ipa">ɓɑntecmɗɑːŋ ɓɑntecmɗɑːŋ</span> <span class="meaning">little by little</span></span></p>
+<p>Sometimes this sign repeats a phrase rather than a word.</p>
 
-<p>It is also occasionally used to repeat the word at the end of a sentence for the beginning of a new sentence<tt>h</tt>, eg.
-<span class="charExample" translate="no"><span class="ex" lang="km">ខ្ញុំទៅផ្ទះខ្ញុំ ៗ នៅជិតផ្សារ</span> <span class="ipa">kɲomtɨwpteə̆hkɲom  pteə̆hkɲom nɨwcɨtpsaː</span></span>
-</p>
+<div class="egIntro">eg.</div>
+<p><span class="charExample" translate="no"><span class="ex" lang="km">បន្តិចម្ដង ៗ</span> <span class="ipa">ɓɑntecmɗɑːŋ ɓɑntecmɗɑːŋ</span> <span class="meaning">little by little</span></span></p>
+
+<p>It is also occasionally used to repeat the word at the end of a sentence for the beginning of a new sentence<tt>h</tt>.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="charExample" translate="no"><span class="ex" lang="km">ខ្ញុំទៅផ្ទះខ្ញុំ ៗ នៅជិតផ្សារ</span> <span class="ipa">kɲomtɨwpteə̆hkɲom  pteə̆hkɲom nɨwcɨtpsaː</span></span></p>
 
 <p>The sign is usually separated from the text by a space.</p>
 </section>
@@ -5615,10 +5664,10 @@ is always preceded by space, however it should not wrap to the next line on its 
 <section id="cs_numeric">
 <h4>Numeric</h4>
 <p>The <span class="kw" translate="no">khmer</span> numeric style  is decimal-based and  uses these  digits.<tt>rmcs</tt></p>
-<figure class="auto characterBox" data-cols="trans,transc" data-notes="1,2,3,4,5,6,7,8,9,0">០␣១␣២␣៣␣៤␣៥␣៦␣៧␣៨␣៩</figure>
+<figure class="auto characterBox" data-cols="" data-notes="1,2,3,4,5,6,7,8,9,0">០,១,២,៣,៤,៥,៦,៧,៨,៩</figure>
 
-<p>Examples:</p>
-<figure class="auto counterstylesBox noindex" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">១␣២␣៣␣៤␣១១␣២២␣៣៣␣៤៤␣១១១␣២២២␣៣៣៣␣៤៤៤</figure>
+<div class="egIntro">eg.</div>
+<figure class="auto counterstylesBox noindex" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">១,២,៣,៤,១១,២២,៣៣,៤៤,១១១,២២២,៣៣៣,៤៤៤</figure>
 </section>
 
 
@@ -5629,10 +5678,10 @@ is always preceded by space, however it should not wrap to the next line on its 
 <h4>Alphabetic</h4>
 <p>The <span class="kw" translate="no">cambodian-consonant</span> alphabetic style for the Khmer language  uses these  letters. </p>
 <figure class="auto characterBox" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41"
-data-cols="">ក␣ខ␣គ␣ឃ␣ង␣ច␣ឆ␣ជ␣ឈ␣ញ␣ដ␣ឋ␣ឌ␣ឍ␣ណ␣ត␣ថ␣ទ␣ធ␣ន␣ប␣ផ␣ព␣ភ␣ម␣យ␣រ␣ល␣វ␣ស␣ហ␣ឡ␣អ</figure>
+data-cols="">ក,ខ,គ,ឃ,ង,ច,ឆ,ជ,ឈ,ញ,ដ,ឋ,ឌ,ឍ,ណ,ត,ថ,ទ,ធ,ន,ប,ផ,ព,ភ,ម,យ,រ,ល,វ,ស,ហ,ឡ,អ</figure>
 
-<p>Examples:</p>
-<figure class="auto counterstylesBox noindex" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">ក␣ខ␣គ␣ឃ␣ដ␣ផ␣អ␣កដ␣គឋ␣ចភ␣ញគ␣ឌណ</figure>
+<div class="egIntro">eg.</div>
+<figure class="auto counterstylesBox noindex" data-cols="" data-notes="1,2,3,4,11,22,33,44,111,222,333,444">ក,ខ,គ,ឃ,ដ,ផ,អ,កដ,គឋ,ចភ,ញគ,ឌណ</figure>
 </section>
 
 
