@@ -5,10 +5,10 @@
 <title>Javanese orthography notes</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common29/local.css" />
+<link rel="stylesheet" href="../common30/local.css" />
 <link rel="stylesheet" href="jv.css" />
 
-<script src="../common29/debug.js"></script>
+<script src="../common30/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../apps/ipa_analyser/propertylist.js"></script>
@@ -19,12 +19,12 @@
 
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common29/functions.js"></script>
-<script src="../common29/transliterate.js"></script>
-<script src="../common29/prompts.js"> </script>
+<script src="../common30/functions.js"></script>
+<script src="../common30/transliterate.js"></script>
+<script src="../common30/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../common29/egcode.js"></script>
-<script src="../common29/references.js"></script>
+<script src="../common30/egcode.js"></script>
+<script src="../common30/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="jv-langdata.js"></script>
@@ -62,7 +62,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->29 September, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->15 October, 2025<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -84,7 +84,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Javanese Orthography Notes, <!-- #BeginDate format:En2 -->29-Sep-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/java/jv">https://r12a.github.io/scripts/java/jv</a></small></p>
+<p class="refLine"><small>Richard Ishida, Javanese Orthography Notes, <!-- #BeginDate format:En2 -->15-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/java/jv">https://r12a.github.io/scripts/java/jv</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -180,9 +180,17 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
 <p class="addToConsonants">The <a class="seclink" href="#basicC">20 consonant letters</a> used for pure Javanese words are supplemented by <a class="seclink" href="#murda">10 more</a> which are used as honorifics, a little like capital letters, and <a class="seclink" href="#mahaprana">5 more </a>used in Sanskrit words. Repertoire extensions for <a class="seclink" href="#extendedC">8 non-native sounds</a> are achieved by applying the <span class="name">cecak telu</span> diacritic to  characters.</p>
 
-<p class="addToConsonants"><a class="seclink" href="#clusters">Consonant clusters</a> are  represented by stacked consonants (many subjoined consonants have alternative shapes) or conjoined pairs. Occasionally, a visible <span class="name">pangkon</span> (<a class="termref" href="../glossary/index.html#virama">virama</a>) is used.</p>
 
-<p class="addToConsonants">Stacked consonants and conjoined pairs span word boundaries.</p>
+
+
+<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
+
+<p class="addToNovowel"><a class="seclink" href="#clusters">Consonant clusters</a> are  represented by stacked consonants (many subjoined consonants have alternative shapes) or conjoined pairs. Occasionally, a visible <span class="name">pangkon</span> (<a class="termref" href="../glossary/index.html#virama">virama</a>) is used. There are dedicated code points for medial consonants and codas.</p>
+
+<p class="addToNovowel">Stacked consonants and conjoined pairs <mark>span word boundaries</mark>.</p>
+
+
+
 
 <p class="addToConsonants"><a class="seclink" href="#onsets">Syllable-initial clusters</a> use 3 dedicated combining marks for the second consonant.</p>
 
@@ -241,39 +249,39 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="index_letters_basic">
 <h4>Basic consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">ꦥ␣ꦧ␣ꦠ␣ꦢ␣ꦛ␣ꦝ␣ꦏ␣ꦒ␣ꦕ␣ꦗ␣ꦱ␣ꦲ␣ꦩ␣ꦤ␣ꦚ␣ꦔ␣ꦮ␣ꦫ␣ꦭ␣ꦪ</figure>
+<figure class="characterBox noindex indexline">ꦥ,ꦧ,ꦠ,ꦢ,ꦛ,ꦝ,ꦏ,ꦒ,ꦕ,ꦗ,ꦱ,ꦲ,ꦩ,ꦤ,ꦚ,ꦔ,ꦮ,ꦫ,ꦭ,ꦪ</figure>
 </section>
 
 <section id="index_letters_murda">
 <h4>Murda consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">ꦦ␣ꦨ␣ꦡ␣ꦑ␣ꦓ␣ꦖ␣ꦟ␣ꦘ␣ꦯ</figure>
+<figure class="characterBox noindex indexline">ꦦ,ꦨ,ꦡ,ꦑ,ꦓ,ꦖ,ꦟ,ꦘ,ꦯ</figure>
 </section>
 
 <section id="index_letters_mahaphrana">
 <h4>mahapranas</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">ꦣ␣ꦜ␣ꦞ␣ꦙ␣ꦰ</figure>
+<figure class="characterBox noindex indexline">ꦣ,ꦜ,ꦞ,ꦙ,ꦰ</figure>
 </section>
 
 <section id="index_letters_independent">
 <h4>Independent vowels</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">ꦆ␣ꦈ␣ꦌ␣ꦎ␣ꦄ</figure>
+<figure class="characterBox noindex indexline">ꦆ,ꦈ,ꦌ,ꦎ,ꦄ</figure>
 </section>
 
 
 <section id="index_letters_vocalics">
 <h4>Vocalic</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="#vocalics #archaic_vocalics,#vocalics,">ꦉ␣ꦊ</figure>
+<figure class="characterBox noindex indexline">ꦉ,ꦊ</figure>
 </section>
 
 
 <section id="index_letters_other">
 <h4>Other</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="#repetition,">ꧏ</figure>
+<figure class="characterBox noindex indexline">ꧏ</figure>
 </section>
 
 <section id="index_letters_unused">
 <h4>Not used for modern Javanese</h4>
-<figure class="unusedBox noindex indexline" data-cols="" data-links="">ꦇ␣ꦅ␣ꦍ␣ꦋ␣ꦐ␣ꦬ</figure>
+<figure class="unusedBox noindex indexline">ꦇ,ꦅ,ꦍ,ꦋ,ꦐ,ꦬ</figure>
 </section>
 </details>
 </section>
@@ -288,27 +296,27 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="index_cchars_vowels">
 <h4>Vowel signs</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">ꦺ␣ꦶ␣ꦸ␣ꦼ␣ꦴ</figure>
+<figure class="characterBox noindex indexline">ꦺ,ꦶ,ꦸ,ꦼ,ꦴ</figure>
 </section>
 
 <section id="index_letters_medial">
 <h4>Medial consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">ꦿ␣ꦽ␣ꦾ</figure>
+<figure class="characterBox noindex indexline">ꦿ,ꦽ,ꦾ</figure>
 </section>
 
 <section id="index_letters_finals">
 <h4>Final consonants</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="#finals,#finals,#finals,#finals,">ꦃ␣ꦀ␣ꦁ␣ꦂ</figure>
+<figure class="characterBox noindex indexline">ꦃ,ꦀ,ꦁ,ꦂ</figure>
 </section>
 
 <section id="index_cchars_other">
 <h4>Other</h4>
-<figure class="characterBox noindex indexline" data-cols="" data-links="">꧀␣꦳</figure>
+<figure class="characterBox noindex indexline">꧀,꦳</figure>
 </section>
 
 <section id="index_cchars_unused">
 <h4>Not used for modern Javanese</h4>
-<figure class="unusedBox noindex indexline" data-cols="" data-links="">ꦻ␣ꦵ␣ꦷ␣ꦹ</figure>
+<figure class="unusedBox noindex indexline">ꦻ,ꦵ,ꦷ,ꦹ</figure>
 </section>
 </details>
 </section>
@@ -322,7 +330,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-links="" data-cols="">꧐␣꧑␣꧒␣꧓␣꧔␣꧕␣꧖␣꧗␣꧘␣꧙</figure>
+<figure class="characterBox noindex indexline">꧐,꧑,꧒,꧓,꧔,꧕,꧖,꧗,꧘,꧙</figure>
 </details>
 </section>
 
@@ -335,9 +343,9 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-cols="">꧊␣꧋␣꧌␣꧍␣꧈␣꧉␣꧇␣꧁␣꧂␣꧅␣꧄␣꧃␣꧆</figure>
+<figure class="characterBox noindex indexline">꧊,꧋,꧌,꧍,꧈,꧉,꧇,꧁,꧂,꧅,꧄,꧃,꧆</figure>
 
-<figure class="characterBox noindex indexline" data-cols="">꧞␣꧟</figure>
+<figure class="characterBox noindex indexline">꧞,꧟</figure>
 </details>
 </section>
 
@@ -351,13 +359,13 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox noindex indexline" data-cols="" data-notes="<img src='../../c/General_Punctuation/large/200B.png' alt='ZWSP' style='vertical-align:middle; height:2em;'>,<img src='../../c/General_Punctuation/large/200C.png' alt='ZWNJ' style='vertical-align:middle; height:2em;'>" data-links="">&#x200B;␣&#x200C;</figure>
+<figure class="characterBox noindex indexline" data-notes="<img src='../../c/General_Punctuation/large/200B.png' alt='ZWSP' style='vertical-align:middle; height:2em;'>,<img src='../../c/General_Punctuation/large/200C.png' alt='ZWNJ' style='vertical-align:middle; height:2em;'>">&#x200B;,&#x200C;</figure>
 
 
 
 <section id="index_other_tbc">
 <h4>To be investigated</h4>
-<figure class="tbcBox noindex indexline" data-cols="">%␣-␣§␣ʼ␣͏␣‌␣‍␣‑␣‒␣–␣—␣†␣‡␣‰␣′␣″␣⁠</figure>
+<figure class="tbcBox noindex indexline">%,-,§,ʼ,͏,‌,‍,‑,‒,–,—,†,‡,‰,′,″,⁠</figure>
 </section>
 </details>
 </section>
@@ -587,14 +595,14 @@ alveolar</th>
 </tr>
 <tr>
 <th></th>
-<td class="mouth"><a href="../common29/mouth/mouth_labial.png" target="_blank"><img src="../common29/mouth/mouth_small_labial.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_dental.png" target="_blank"><img src="../common29/mouth/mouth_small_dental.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_alveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_postalveolar.png" target="_blank"><img src="../common29/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_retroflex.png" target="_blank"><img src="../common29/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_palatal.png" target="_blank"><img src="../common29/mouth/mouth_small_palatal.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_velar.png" target="_blank"><img src="../common29/mouth/mouth_small_velar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common29/mouth/mouth_glottal.png" target="_blank"><img src="../common29/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_labial.png" target="_blank"><img src="../common30/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_dental.png" target="_blank"><img src="../common30/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_alveolar.png" target="_blank"><img src="../common30/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_postalveolar.png" target="_blank"><img src="../common30/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_retroflex.png" target="_blank"><img src="../common30/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_palatal.png" target="_blank"><img src="../common30/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_velar.png" target="_blank"><img src="../common30/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common30/mouth/mouth_glottal.png" target="_blank"><img src="../common30/mouth/mouth_small_glottal.png" alt=" "/></a></td>
 </tr>
 </tbody>
 </table>
@@ -616,9 +624,10 @@ alveolar</th>
 
 <p>Syllable-initial consonant clusters usually have either <span class="ipa">r</span> or <span class="ipa">j</span> in the second position, or may have both.</p>
 
-<p>According to Comrie, word-initial consonant clusters may involve prenasalised sounds such as <span class="trans">mb</span>, <span class="trans">nd</span>, <span class="trans">ndh</span>, <span class="trans">nj</span> or <span class="trans">nng</span>, which appear to be written using unconnected consonants side by side,<tt>c</tt> eg. 
-<span class="eg" lang="jv">ꦩꦧꦸꦫꦸ</span>
-</p>
+<p>According to Comrie, word-initial consonant clusters may involve prenasalised sounds such as <span class="trans">mb</span>, <span class="trans">nd</span>, <span class="trans">ndh</span>, <span class="trans">nj</span> or <span class="trans">nng</span>, which appear to be written using unconnected consonants side by side.<tt>c</tt></p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="jv">ꦩꦧꦸꦫꦸ</span></p>
 
 <p>Syllable-final consonants are usually a single sound.<!--ul>
 <li>C is a consonant (or consonant + <span class="hx">A9B3</span>), </li>
@@ -727,30 +736,30 @@ alveolar</th>
 <tbody>
 <tr>
 <th rowspan="5">Plain:</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦶ␣ꦸ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦲꦶ␣ꦆ␣ꦲꦸ␣ꦈ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦶ,ꦸ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦲꦶ,ꦆ,ꦲꦸ,ꦈ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="" data-ipa="e,o">◌ꦺ␣◌ꦺꦴ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="e,e,o,o">ꦲꦺ␣ꦌ␣ꦲꦺꦴ␣ꦎ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="e,o">◌ꦺ,◌ꦺꦴ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="e,e,o,o">ꦲꦺ,ꦌ,ꦲꦺꦴ,ꦎ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦼ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦲꦼ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦼ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦲꦼ</figure></td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="" data-ipa="ɛ,ɔ,ɔ">◌ꦺ◌␣ⓘ␣◌ꦺꦴ◌</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="ɛ,ɔ,ɔ">◌ꦺ◌,ⓘ,◌ꦺꦴ◌</figure></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="" data-ipa="a">ⓘ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="" data-ipa="a,a">ꦲ␣ꦄ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="a">ⓘ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="a,a">ꦲ,ꦄ</figure></td>
 </tr>
 
 <tr>
 <th>Vocalics:</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦽ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦉ␣ꦊ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦽ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦉ,ꦊ</figure></td>
 </tr>
 </tbody>
 </table>
@@ -770,26 +779,26 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="jv">&#xA98F;</bdi>
     <span class="ipa">ka ~ kɔ</span>
-    <span><span class="uname">U+A98F JAVANESE LETTER KA</span></span>
-</p>
+    </p>
 
 
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
 <p>Javanese has two possible inherent vowel sounds: <span class="ipa">a</span> and <span class="ipa">ɔ</span>. The choice of inherent vowel can depend on the speaker's dialect: speakers of Western Javanese dialects tend to pronounce the inherent vowel as <span class="ipa">a</span>, while those of Eastern Javanese prefer <span class="ipa">ɔ</span>.<tt>ws,#Form</tt> So  <span class="ipa">ka/kɔ</span> is written by simply using the consonant letter.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦒꦒꦤ</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="ɡa,ɡɔ,nɔ"
     data-type="ipa,ipa,ipa"
-    data-prefix=",,,"><td>ꦒ␣ꦒ␣ꦤ</td></tr>
+    data-prefix=",,,"><td>ꦒ,ꦒ,ꦤ</td></tr>
 </table>
 
 <p><span class="eg" lang="jv">ꦥꦩꦭꦶ</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="pa,ma,l,i"
     data-type="ipa,ipa,ipa,ipa"
-    data-prefix=",,,"><td>ꦥ␣ꦩ␣ꦭ␣ꦶ</td></tr>
+    data-prefix=",,,"><td>ꦥ,ꦩ,ꦭ,ꦶ</td></tr>
 </table>
 
 
@@ -816,7 +825,7 @@ alveolar</th>
 <section id="dependentV">
 <h3>Post-consonant vowels</h3>
 
-<!--figure class="characterBox auto" data-cols="trans,transc" data-ipa="i,i,u,u,e,o,ɔ,æ,æ,æ,a">ি␣ী␣ু␣ূ␣ে␣ো␣ো␣্যা␣্য␣া␣া</figure-->
+<!--figure class="characterBox auto" data-cols="trans,transc" data-ipa="i,i,u,u,e,o,ɔ,æ,æ,æ,a">ি,ী,ু,ূ,ে,ো,ো,্যা,্য,া,া</figure-->
 
 <p>Vowels that follow a consonant are written using 5 vowel signs, all combining marks. It is mandatory for 2 of the consonant+vowel sequences to be written using vocalics, rather than vowel signs.</p>
 
@@ -841,20 +850,22 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="jv">&#xA98F;&#xA9B6;</bdi>
     <span class="ipa">ki</span>
-    <span><span class="uname">U+A98F JAVANESE LETTER KA</span> + <span class="uname">U+A9B6 JAVANESE VOWEL SIGN WULU</span></span>
     </p>
 
 
 <p>Javanese uses the following dedicated combining marks for vowels.  They may be used on their own, or in combination with others (see <a class="secref">compositeV</a>).</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ꦶ␣ꦸ␣ꦺ␣ꦼ␣ꦴ</figure>
+<figure class="characterBox auto">ꦶ,ꦸ,ꦺ,ꦼ,ꦴ</figure>
 
 <p class="instructions">Additional information about archaic forms and variants of these characters and others mentioned below can be found in the <a href="block">character notes</a> document.</p>
 <p><span class="hx">A9B4</span> was originally a length mark, but in modern Javanese it is only used in the combination described in the section <a class="secref">compositeV</a>.</p>
-<p>Modern Javanese doesn't write the sounds <span class="ipa">rə</span> and <span class="ipa">lə</span> using the consonant+vowel combinations <span class="codepoint" translate="no"><span lang="jv">*&#xA9AB;&#xA9BC;</span> <a href="/scripts/javanese/block#charA9AB"><span class="uname">U+A9AB  LETTER RA</span></a> + <a href="/scripts/javanese/block#charA9BC"><span class="uname">U+A9BC  VOWEL SIGN PEPET</span></a></span> or <span class="codepoint" translate="no"><span lang="jv">*&#xA9AD;&#xA9BC;</span> <a href="/scripts/javanese/block#charA9AD"><span class="uname">U+A9AD  LETTER LA</span></a> + <a href="/scripts/javanese/block#charA9BC"><span class="uname">U+A9BC  VOWEL SIGN PEPET</span></a></span>. <a href="#vocalics">Vocalic letters</a> are used instead,<tt>ws,#Swara</tt>  eg.
-<span class="eg transc" lang="jv">ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀</span>
-</p>
+<p>Modern Javanese doesn't write the sounds <span class="ipa">rə</span> and <span class="ipa">lə</span> using the consonant+vowel combinations <span class="codepoint" translate="no"><span lang="jv">*&#xA9AB;&#xA9BC;</span> <a href="/scripts/javanese/block#charA9AB"><span class="uname">U+A9AB  LETTER RA</span></a> + <a href="/scripts/javanese/block#charA9BC"><span class="uname">U+A9BC  VOWEL SIGN PEPET</span></a></span> or <span class="codepoint" translate="no"><span lang="jv">*&#xA9AD;&#xA9BC;</span> <a href="/scripts/javanese/block#charA9AD"><span class="uname">U+A9AD  LETTER LA</span></a> + <a href="/scripts/javanese/block#charA9BC"><span class="uname">U+A9BC  VOWEL SIGN PEPET</span></a></span>. <a href="#vocalics">Vocalic letters</a> are used instead.<tt>ws,#Swara</tt></p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg transc" lang="jv">ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀</span></p>
+
 <p>When a vowel sign follows a subjoined consonant it appears above the stack.</p>
+
 <figure>
 <img lang="jv" class="ex" src="images/vs_above_cluster.png" alt="ꦤ꧀ꦛꦶ" data-notes="62px yogyakarta">
 <figcaption>The word <span class="trans">kanthi</span>, where the <span class="trans">i</span> appears above the <span class="trans">n</span>.</figcaption>
@@ -863,7 +874,7 @@ alveolar</th>
 <div class="btw">
 <p>Four more vowel signs are not used in modern Javanese.</p>
 
-<figure class="archaicBox auto" data-cols="ipa,trans,transc">ꦷ␣ꦹ␣ꦵ␣ꦻ</figure>
+<figure class="archaicBox auto">ꦷ,ꦹ,ꦵ,ꦻ</figure>
 </div>
 
 <p>See also <a class="sectionref">vocalics</a>.</p>
@@ -881,7 +892,7 @@ alveolar</th>
 
 <p id="def-compositevowel" class="explanatoryintro definitionStub"></p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ꦺꦴ</figure>
+<figure class="characterBox auto">ꦺꦴ</figure>
 
 <p>In Javanese, unlike many other scripts, including Balinese, when a vowel is represented by multiple glyphs either side of a base character two separate combining marks need to be added to the base. Javanese has no circumgraphs (ie. a single code point that places glyphs around the base).</p>
 
@@ -922,7 +933,7 @@ alveolar</th>
 <p>A number of archaic vowels are also represented by combinations of the basic vowel signs, but are not used in modern Javanese.</p>
 
 
-<figure class="archaicBox auto" data-cols="ipa,trans,transc">ꦻꦴ␣ꦼꦵ␣ꦼꦴ</figure>
+<figure class="archaicBox auto">ꦻꦴ,ꦼꦵ,ꦼꦴ</figure>
 </div>
 
 
@@ -953,10 +964,11 @@ alveolar</th>
 <section id="prebase">
 <h4>Pre-base vowel sign</h4>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ꦺ</figure>
+<figure class="characterBox auto">ꦺ</figure>
 
-<p>One vowel sign appears to the left of the base consonant letter or cluster in modern Javanese, eg.</p>
+<p>One vowel sign appears to the left of the base consonant letter or cluster in modern Javanese.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦲꦔꦺꦭ꧀</span></p>
 
 <p class="info">This is a combining mark that is always typed and stored after the base consonant(s), ie. the codepoints follow the order in which the items are pronounced. The rendering process places the glyph before the base consonant without changing the code points. The following shows the sequence of code points that make up the word just above.</p>
@@ -964,16 +976,17 @@ alveolar</th>
 <table class="sequenceTable">
 <tr data-notes="a,ŋ,ɛ,l,adeg adeg"
     data-type="ipa,ipa,ipa,ipa,uname"
-    data-prefix=",,,,,"><td>ꦲ␣ꦔ␣ꦺ␣ꦭ␣꧀</td></tr>
+    data-prefix=",,,,,"><td>ꦲ,ꦔ,ꦺ,ꦭ,꧀</td></tr>
 </table>
 
-<p>These vowel signs do not split a <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct</a>. This means that a word with a consonant cluster at the start separates the pre-base vowel from the  position where it is pronounced by more than one consonant character, eg.</p>
+<p>These vowel signs do not split a <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct</a>. This means that a word with a consonant cluster at the start separates the pre-base vowel from the  position where it is pronounced by more than one consonant character.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦒꦿꦺꦗ</span></p>
 <table class="sequenceTable breakdown">
 <tr data-notes="g,r,e,d͡ʒa"
     data-type="ipa,ipa,ipa,ipa"
-    data-prefix=",,,,"><td>ꦒ␣ꦿ␣ꦺ␣ꦗ</td></tr>
+    data-prefix=",,,,"><td>ꦒ,ꦿ,ꦺ,ꦗ</td></tr>
 </table>
 
 
@@ -986,7 +999,7 @@ alveolar</th>
 
 <div class="btw">
 <p>A similar vowel sign is no longer used.</p>
-<figure class="archaicBox auto" data-cols="ipa,trans,transc">ꦻ</figure>
+<figure class="archaicBox auto">ꦻ</figure>
 </div>
 </section>
 </section>
@@ -1010,20 +1023,24 @@ alveolar</th>
 
 <section id="standalone_vowelsigns">
 <h4>Vowel signs</h4>
-<figure class="characterBox auto" data-cols="trans,transc" data-ipa="i,u,e,ə,a">ꦲꦶ␣ꦲꦸ␣ꦲꦺ␣ꦲꦼ␣ꦲ</figure>
+<figure class="characterBox auto" data-cols="trans,transc" data-ipa="i,u,e,ə,a">ꦲꦶ,ꦲꦸ,ꦲꦺ,ꦲꦼ,ꦲ</figure>
 
-<p>The normal approach combines a vowel sign with <span class="hx">A9B2</span>, eg.</p>
+<p>The normal approach combines a vowel sign with <span class="hx">A9B2</span>.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦲꦶꦏꦶ</span></p>
 <p><span class="eg" lang="jv">ꦧꦲꦸꦱꦱ꧀ꦠꦿ</span></p>
 <p><span class="eg" lang="jv">ꦩꦲꦺꦴꦱ꧀</span></p>
 
-<p>Without a vowel sign the letter <span class="hx">A9B2</span> represents <span class="ipa">a</span>, eg.
-<span class="eg" lang="jv">ꦲꦕꦫ</span>
-</p>
-<p>However, it may alternatively represent the sound <span class="ipa">ha</span>. The reading is ambiguous, eg. compare the previous example with this:
-<span class="eg" lang="jv">ꦲꦤꦕꦫꦏ</span>
-</p>
+<p>Without a vowel sign the letter <span class="hx">A9B2</span> represents <span class="ipa">a</span>.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="jv">ꦲꦕꦫ</span></p>
+
+<p>However, it may alternatively represent the sound <span class="ipa">ha</span>. The reading is ambiguous, eg. compare the previous example with this:</p>
+
+<p><span class="eg" lang="jv">ꦲꦤꦕꦫꦏ</span></p>
+
 <p>The same applies for other combinations of this base letter and vowel sign.</p>
 </section>
 
@@ -1032,17 +1049,19 @@ alveolar</th>
 
 <section id="standalone_independent">
 <h4>Independent vowels</h4>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ꦆ␣ꦈ␣ꦌ␣ꦎ␣ꦄ</figure>
+<figure class="characterBox auto">ꦆ,ꦈ,ꦌ,ꦎ,ꦄ</figure>
 
-<p>There are 8 independent vowel letters in the Javanese block, of which 5 are used in modern text, eg.</p>
+<p>There are 8 independent vowel letters in the Javanese block, of which 5 are used in modern text.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ</span></p>
 <p><span class="eg" lang="jv">ꦄꦫꦶꦱ꧀ꦠꦺꦴꦠꦼꦭꦼꦱ꧀</span></p>
 
-<p>The independent vowel <em>letters</em> are used in Javanese to distinguish proper nouns or foreign words from ordinary words<tt>u</tt>, eg.  compare the following two words, which include an adjective and a personal name (both have the same pronunciation):
-<span class="eg" lang="jv">ꦲꦪꦸ</span>
-<span class="eg" lang="jv">ꦄꦪꦸ</span>
-</p>
+<p>The independent vowel <em>letters</em> are used in Javanese to distinguish proper nouns or foreign words from ordinary words<tt>u</tt>, eg.  compare the following two words, which include an adjective and a personal name (both have the same pronunciation):</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="jv">ꦲꦪꦸ</span></p>
+<p><span class="eg" lang="jv">ꦄꦪꦸ</span></p>
 </section>
 
 
@@ -1053,7 +1072,7 @@ alveolar</th>
 <div class="btw" style="margin-left: 7.5%">
 <p>Modern Javanese only uses short vowels. Other characters or sequences of characters  were used for long vowels and diphthongs in the past or for other languages.</p>
 
-<figure class="archaicBox auto" data-cols="ipa,trans,transc">ꦇ␣ꦅ␣ꦈꦴ␣ꦄꦴ␣ ␣ꦍ␣ꦎꦴ</figure>
+<figure class="archaicBox auto">ꦇ,ꦅ,ꦈꦴ,ꦄꦴ, ,ꦍ,ꦎꦴ</figure>
 
 <p>Three of the above use <span class="hx">A9B4</span> to produce long sounds.</p>
 </div>
@@ -1271,16 +1290,20 @@ alveolar</th>
 <h2>Vocalic letters</h2>
 <p id="def-vocalic" class="explanatoryintro definitionStub"></p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ꦉ␣ꦊ</figure>
+<figure class="characterBox auto">ꦉ,ꦊ</figure>
 
-<p>These characters are treated as vowels in other scripts, such as Balinese, but as consonants in Javanese. Examples:</p>
+<p>These characters are treated as vowels in other scripts, such as Balinese, but as consonants in Javanese.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦉꦱꦶ</span></p>
 <p><span class="eg" lang="jv">ꦧꦉꦁ</span></p>
 <p><span class="eg" lang="jv">ꦊꦱ꧀ꦠꦫꦶ</span></p>
 <p><span class="eg" lang="jv">ꦧ꧀ꦊꦢꦸꦒ꧀</span></p>
 
-<p>They represent the sounds <span class="ipa">rə</span> and <span class="ipa">lə</span>. Javanese doesn't use the consonant+vowel combinations <span class="codepoint" translate="no"><span lang="jv">*&#xA9AB;&#xA9BC;</span> <a href="/scripts/javanese/block#charA9AB"><span class="uname">U+A9AB  LETTER RA</span></a> + <a href="/scripts/javanese/block#charA9BC"><span class="uname">U+A9BC  VOWEL SIGN PEPET</span></a></span> or <span class="codepoint" translate="no"><span lang="jv">*&#xA9AD;&#xA9BC;</span> <a href="/scripts/javanese/block#charA9AD"><span class="uname">U+A9AD  LETTER LA</span></a> + <a href="/scripts/javanese/block#charA9BC"><span class="uname">U+A9BC  VOWEL SIGN PEPET</span></a></span> for those sounds,<tt>d</tt> but uses these vocalic letters instead, <tt>ws,#Swara</tt> eg. <span class="eg" lang="jv">ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀</span></p>
+<p>They represent the sounds <span class="ipa">rə</span> and <span class="ipa">lə</span>. Javanese doesn't use the consonant+vowel combinations <span class="codepoint" translate="no"><span lang="jv">*&#xA9AB;&#xA9BC;</span> <a href="/scripts/javanese/block#charA9AB"><span class="uname">U+A9AB  LETTER RA</span></a> + <a href="/scripts/javanese/block#charA9BC"><span class="uname">U+A9BC  VOWEL SIGN PEPET</span></a></span> or <span class="codepoint" translate="no"><span lang="jv">*&#xA9AD;&#xA9BC;</span> <a href="/scripts/javanese/block#charA9AD"><span class="uname">U+A9AD  LETTER LA</span></a> + <a href="/scripts/javanese/block#charA9BC"><span class="uname">U+A9BC  VOWEL SIGN PEPET</span></a></span> for those sounds,<tt>d</tt> but uses these vocalic letters instead. <tt>ws,#Swara</tt></p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="jv">ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀</span></p>
 
 <p>Javanese vocalics have no corresponding vowel signs. They do, however, have conjoined forms, used in consonant clusters.</p>
 
@@ -1293,7 +1316,7 @@ alveolar</th>
 <div class="btw">
 <p>Two more vocalic letters or sequences are not used in modern Javanese, but are used for writing Kawi and Sanskrit.<tt>ws,#Swara</tt></p>
 
-<figure class="otherBox auto" data-cols="ipa,trans,transc">ꦉꦴ␣ꦋ</figure>
+<figure class="otherBox auto">ꦉꦴ,ꦋ</figure>
 </div>
 </section>
 </section>
@@ -1318,11 +1341,16 @@ alveolar</th>
 <p class="vowelSignExample">
     <bdi lang="jv">&#xA98F;&#xA9C0;</bdi>
     <span class="ipa">k</span>
-    <span><span class="uname">U+A98F JAVANESE LETTER KA</span> + <span class="uname">U+A9C0 JAVANESE PANGKON</span></span>
     </p>
 
-   
-<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.  The absence of a vowel sound can be visually indicated in one of the following ways.</p>
+<aside class="sectionAside"></aside>
+
+<p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
+
+<div id="novowel_description"></div>
+
+<p>Follow these links for more information.</p>
+
 
 <ol>
 
@@ -1370,8 +1398,6 @@ alveolar</th>
 
 <p><span class="eg" lang="jv">ꦏꦼꦧꦏ꧀</span></p>
 
-<figure class="characterBox auto hidden" data-cols="">꧀</figure>
-
 <p>The same <span class="name">pangkon</span> is also used to produce conjunct forms for consonant clusters (stacking or conjoined shapes), in which case it is invisible (see <a class="sectionref">clusters</a>).  Because Javanese commonly combines the last character of one word and the first of another into a conjunct, the <span class="name">pangkon</span> is often not visible after words that end with a consonant but that occur within a sentence.</p>
 
 
@@ -1388,9 +1414,10 @@ alveolar</th>
 <figcaption>A visible pangkon at the end of a word.</figcaption>
 </figure-->
 
-<p>There are some exceptions, especially where the <span class="name">pangkon</span> may be used to disambiguate words, eg.
-<span class="eg transc" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span>
-</p>
+<p>There are some exceptions, especially where the <span class="name">pangkon</span> may be used to disambiguate words.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg transc" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span></p>
 
 <p>No <span class="name">pangkon</span> is needed between an onset consonant and a medial consonant, or after a dedicated final consonant.</p>
 
@@ -1414,14 +1441,12 @@ alveolar</th>
 <section id="conjuncts">
 <h4>Conjunct formation</h4>
 
-<figure class="characterBox auto hidden"  data-cols="trans">&#xA9C0;</figure>
-
 <p>In Unicode, the stacking and conjoining behaviour is achieved by adding <span class="hx">A9C0</span> between consonants. The font hides the glyph automatically when a stacked conjunct is formed.</p>
 
 <table class="sequenceTable" style="line-height: 2.5">
 <tr data-notes="SA,pangkon,TA,sta"
     data-type="uname,uname,uname,ipa"
-    data-prefix=",+,+,→"><td>ꦱ␣꧀␣ꦠ␣ꦱ꧀ꦠ</td></tr>
+    data-prefix=",+,+,→"><td>ꦱ,꧀,ꦠ,ꦱ꧀ꦠ</td></tr>
 </table>
 
 <p class="linkToApp"><a target="_blank" href="../apps/conjunct_generator/?preset=java">See a table of 2-consonant clusters.</a><br>The table allows you to test results for various fonts.</p>
@@ -1442,17 +1467,17 @@ alveolar</th>
     data-notes="NA,adeg adeg,DA,nd"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ꦤ␣꧀␣ꦢ␣ꦤ꧀ꦢ</td></tr>
+    ><td>ꦤ,꧀,ꦢ,ꦤ꧀ꦢ</td></tr>
 <tr 
     data-notes="SA,adeg adeg,NA,sn"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ꦱ␣꧀␣ꦤ␣ꦱ꧀ꦤ</td></tr>
+    ><td>ꦱ,꧀,ꦤ,ꦱ꧀ꦤ</td></tr>
 <tr 
     data-notes="SA,adeg adeg,KA,sk"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ꦱ␣꧀␣ꦏ␣ꦱ꧀ꦏ</td></tr>
+    ><td>ꦱ,꧀,ꦏ,ꦱ꧀ꦏ</td></tr>
 </table>
 <figcaption>Examples of stacked conjuncts.</figcaption>
 </figure>
@@ -1469,12 +1494,12 @@ alveolar</th>
     data-notes="MA,adeg adeg,BA,adeg adeg,LA,mbl"
     data-type="uname,uname,uname,uname,uname,ipa"
     data-prefix=",+,+,+,+,→"
-    ><td>ꦩ␣꧀␣ꦧ␣꧀␣ꦭ␣ꦩ꧀ꦧ꧀ꦭ</td></tr>
+    ><td>ꦩ,꧀,ꦧ,꧀,ꦭ,ꦩ꧀ꦧ꧀ꦭ</td></tr>
 <tr 
     data-notes="NA,adeg adeg,DA,CAKRA,ndr"
     data-type="uname,uname,uname,uname,uname,ipa"
     data-prefix=",+,+,+,+,→"
-    ><td>ꦤ␣꧀␣ꦢ␣ꦿ␣ꦤ꧀ꦢꦿ</td></tr>
+    ><td>ꦤ,꧀,ꦢ,ꦿ,ꦤ꧀ꦢꦿ</td></tr>
 </table>
 <figcaption>Stacked conjuncts with 3 components.</figcaption>
 </figure>
@@ -1487,13 +1512,13 @@ alveolar</th>
 <p>Shows the same consonant before and after a <span class="name">pangkon</span>.</p>
 
 <div class="characterBoxTitle">basic (nglegéna) glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="b,t,d,ʈ,ɖ,k,ɡ,t͡ʃ,d͡ʒ,m,n,ɲ,ŋ,w,r,l,j" data-cols="">ꦧ꧀ꦧ␣ꦠ꧀ꦠ␣ꦢ꧀ꦢ␣ꦛ꧀ꦛ␣ꦝ꧀ꦝ␣ꦏ꧀ꦏ␣ꦒ꧀ꦒ␣ꦕ꧀ꦕ␣ꦗ꧀ꦗ␣ꦩ꧀ꦩ␣ꦤ꧀ꦤ␣ꦚ꧀ꦚ␣ꦔ꧀ꦔ␣ꦮ꧀ꦮ␣ꦫ꧀ꦫ␣ꦭ꧀ꦭ␣ꦪ꧀ꦪ</figure>
+<figure class="counterstylesBox auto noindex" data-ipa="b,t,d,ʈ,ɖ,k,ɡ,t͡ʃ,d͡ʒ,m,n,ɲ,ŋ,w,r,l,j">ꦧ꧀ꦧ,ꦠ꧀ꦠ,ꦢ꧀ꦢ,ꦛ꧀ꦛ,ꦝ꧀ꦝ,ꦏ꧀ꦏ,ꦒ꧀ꦒ,ꦕ꧀ꦕ,ꦗ꧀ꦗ,ꦩ꧀ꦩ,ꦤ꧀ꦤ,ꦚ꧀ꦚ,ꦔ꧀ꦔ,ꦮ꧀ꦮ,ꦫ꧀ꦫ,ꦭ꧀ꦭ,ꦪ꧀ꦪ</figure>
 
 <div class="characterBoxTitle">murda glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="b,t,k,ɡ,t͡ʃ,s,n,ɲ,r" data-cols="">ꦨ꧀ꦨ␣ꦡ꧀ꦡ␣ꦑ꧀ꦑ␣ꦓ꧀ꦓ␣ꦖ꧀ꦖ␣ꦯ꧀ꦯ␣ꦟ꧀ꦟ␣ꦘ꧀ꦘ␣ꦬ꧀ꦬ</figure>
+<figure class="counterstylesBox auto noindex" data-ipa="b,t,k,ɡ,t͡ʃ,s,n,ɲ,r">ꦨ꧀ꦨ,ꦡ꧀ꦡ,ꦑ꧀ꦑ,ꦓ꧀ꦓ,ꦖ꧀ꦖ,ꦯ꧀ꦯ,ꦟ꧀ꦟ,ꦘ꧀ꦘ,ꦬ꧀ꦬ</figure>
 
 <div class="characterBoxTitle">mahaprana glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="d,ʈ,ɖ,d͡ʒ,s" data-cols="">ꦣ꧀ꦣ␣ꦜ꧀ꦜ␣ꦞ꧀ꦞ␣ꦙ꧀ꦙ</figure>
+<figure class="counterstylesBox auto noindex" data-ipa="d,ʈ,ɖ,d͡ʒ,s">ꦣ꧀ꦣ,ꦜ꧀ꦜ,ꦞ꧀ꦞ,ꦙ꧀ꦙ</figure>
 </details>
 </section>
 
@@ -1531,17 +1556,17 @@ alveolar</th>
     data-notes="SA,adeg adeg,PA,sp"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ꦩ␣꧀␣ꦥ␣ꦩ꧀ꦥ</td></tr>
+    ><td>ꦩ,꧀,ꦥ,ꦩ꧀ꦥ</td></tr>
 <tr 
     data-notes="KA,adeg adeg,SA,ks"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ꦏ␣꧀␣ꦱ␣ꦏ꧀ꦱ</td></tr>
+    ><td>ꦏ,꧀,ꦱ,ꦏ꧀ꦱ</td></tr>
 <tr 
     data-notes="LA,adeg adeg,HA,lh"
     data-type="uname,uname,uname,ipa"
     data-prefix=",+,+,+,→"
-    ><td>ꦭ␣꧀␣ꦲ␣ꦭ꧀ꦲ</td></tr>
+    ><td>ꦭ,꧀,ꦲ,ꦭ꧀ꦲ</td></tr>
 </table>
 <figcaption>Examples of conjoined conjuncts.</figcaption>
 </figure>
@@ -1580,13 +1605,13 @@ alveolar</th>
 
 
 <div class="characterBoxTitle">basic (nglegéna) glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="p,s,h,rə" data-cols="">ꦥ꧀ꦥ␣ꦱ꧀ꦱ␣ꦲ꧀ꦲ␣ꦉ꧀ꦉ</figure>
+<figure class="counterstylesBox auto noindex" data-ipa="p,s,h,rə">ꦥ꧀ꦥ,ꦱ꧀ꦱ,ꦲ꧀ꦲ,ꦉ꧀ꦉ</figure>
 
 <div class="characterBoxTitle">murda glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="p" data-cols="">ꦦ꧀ꦦ</figure>
+<figure class="counterstylesBox auto noindex" data-ipa="p">ꦦ꧀ꦦ</figure>
 
 <div class="characterBoxTitle">mahaprana glyphs</div>
-<figure class="counterstylesBox auto bicameral noindex" data-ipa="s" data-cols="">ꦰ꧀ꦰ</figure>
+<figure class="counterstylesBox auto noindex" data-ipa="s">ꦰ꧀ꦰ</figure>
 </details>
 </section>
 
@@ -1690,39 +1715,39 @@ alveolar</th>
 <tbody>
 <tr>
 <th rowspan="5">Onsets</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦥ␣ꦧ␣ꦠ␣ꦢ␣ꦛ␣ꦝ␣ꦏ␣ꦒ␣ꦔ꦳</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦦ␣ꦨ␣ꦡ␣ꦑ␣ꦓ␣ ␣ꦣ␣ꦜ␣ꦞ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦥ,ꦧ,ꦠ,ꦢ,ꦛ,ꦝ,ꦏ,ꦒ,ꦔ꦳</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦦ,ꦨ,ꦡ,ꦑ,ꦓ, ,ꦣ,ꦜ,ꦞ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦕ␣ꦗ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">꧀ꦖ␣ ␣ꦙ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦕ,ꦗ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">꧀ꦖ, ,ꦙ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦥ꦳␣ꦢ꦳␣ꦱ␣ꦗ꦳␣ꦱ꦳␣ꦏ꦳␣ꦒ꦳␣ꦲ꦳␣ꦲ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦯ␣ ␣ꦰ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦥ꦳,ꦢ꦳,ꦱ,ꦗ꦳,ꦱ꦳,ꦏ꦳,ꦒ꦳,ꦲ꦳,ꦲ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦯ, ,ꦰ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦩ␣ꦤ␣ꦚ␣ꦔ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦟ␣ꦘ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦩ,ꦤ,ꦚ,ꦔ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦟ,ꦘ</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦮ␣ꦫ␣ꦭ␣ꦪ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦮ,ꦫ,ꦭ,ꦪ</figure></td>
 <td>&nbsp;</td>
 </tr>
 
 <tr>
 <th>Medials</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦿ␣ꦽ␣ꦾ</figure><td>&nbsp;</td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦿ,ꦽ,ꦾ</figure><td>&nbsp;</td>
 </td>
 </tr>
 
 <tr>
 <th>Finals</th>
-<td><figure class="summaryBox auto" data-ignore="-" data-cols="ipa,trans,transc">ꦃ␣ꦀ␣ꦁ␣ꦂ</figure></td>
+<td><figure class="summaryBox auto" data-ignore="-">ꦃ,ꦀ,ꦁ,ꦂ</figure></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
@@ -1748,35 +1773,35 @@ alveolar</th>
 <tbody>
 <tr>
 <th rowspan="5">Onsets</th>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦥ␣ꦧ␣ꦠ␣ꦢ␣ꦛ␣ꦝ␣ꦏ␣ꦒ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦦ␣ꦨ␣ꦡ␣ꦑ␣ꦓ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦜ␣ꦣ␣ꦞ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦔ꦳</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦥ,ꦧ,ꦠ,ꦢ,ꦛ,ꦝ,ꦏ,ꦒ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦦ,ꦨ,ꦡ,ꦑ,ꦓ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦜ,ꦣ,ꦞ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦔ꦳</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦕ␣ꦗ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">꧀ꦖ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦙ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦕ,ꦗ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">꧀ꦖ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦙ</figure></td>
 <td>&nbsp;</td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="s,h">ꦱ␣ꦲ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦯ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦰ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦥ꦳␣ꦢ꦳␣ꦗ꦳␣ꦱ꦳␣ꦏ꦳␣ꦒ꦳␣ꦲ꦳</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="trans,transc" data-ipa="s,h">ꦱ,ꦲ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦯ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦰ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦥ꦳,ꦢ꦳,ꦗ꦳,ꦱ꦳,ꦏ꦳,ꦒ꦳,ꦲ꦳</figure></td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦩ␣ꦤ␣ꦚ␣ꦔ</figure></td>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦟ␣ꦘ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦩ,ꦤ,ꦚ,ꦔ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦟ,ꦘ</figure></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 
 <tr>
-<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦮ␣ꦫ␣ꦭ␣ꦪ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-">ꦮ,ꦫ,ꦭ,ꦪ</figure></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1784,13 +1809,13 @@ alveolar</th>
 
 <tr>
 <th>Medials</th>
-<td colspan="4"><figure class="summaryBox auto noexpansion" data-ignore="-" data-cols="ipa,trans,transc">ꦿ␣ꦽ␣ꦾ</figure>
+<td colspan="4"><figure class="summaryBox auto noexpansion" data-ignore="-">ꦿ,ꦽ,ꦾ</figure>
 </td>
 </tr>
 
 <tr>
 <th>Finals</th>
-<td colspan="4"><figure class="summaryBox auto" data-ignore="-" data-cols="ipa,trans,transc">ꦃ␣ꦀ␣ꦁ␣ꦂ</figure></td>
+<td colspan="4"><figure class="summaryBox auto" data-ignore="-">ꦃ,ꦀ,ꦁ,ꦂ</figure></td>
 </tr>
 </tbody>
 </table>
@@ -1812,7 +1837,7 @@ alveolar</th>
 <p>The characters listed here and in the following sections also have conjoined and/or subjoined forms, which may differ significantly from those shown here. See <a class="secref">clusters</a> for a list of glyph shapes.</p>
 
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ꦥ␣ꦧ␣ꦠ␣ꦢ␣ꦛ␣ꦝ␣ꦏ␣ꦒ␣ꦕ␣ꦗ␣ꦱ␣ꦲ␣ꦩ␣ꦤ␣ꦚ␣ꦔ␣ꦮ␣ꦫ␣ꦭ␣ꦪ</figure>
+<figure class="characterBox auto">ꦥ,ꦧ,ꦠ,ꦢ,ꦛ,ꦝ,ꦏ,ꦒ,ꦕ,ꦗ,ꦱ,ꦲ,ꦩ,ꦤ,ꦚ,ꦔ,ꦮ,ꦫ,ꦭ,ꦪ</figure>
 
 
 
@@ -1834,7 +1859,7 @@ alveolar</th>
 <p>Highly respected names may be all 'capitalized' to the extent that the corresponding murda are available.</p>
 
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ꦦ␣ꦨ␣ꦡ␣ꦑ␣ꦓ␣ꦖ␣ꦯ␣ꦟ␣ꦘ</figure>
+<figure class="characterBox auto">ꦦ,ꦨ,ꦡ,ꦑ,ꦓ,ꦖ,ꦯ,ꦟ,ꦘ</figure>
 
 
 <p><span class="hx">A996</span> is only attested as a subjoined form, <span class="charExample" translate="no"><span class="ex" lang="jv">꧀ꦖ</span></span> The non-subjoined form shown just above list is a modern-day reinvention.<tt>ws,#Wyanjana</tt></p>
@@ -1860,12 +1885,12 @@ alveolar</th>
 
 <p>These are letters that are not basic forms, nor are repurposed as murda consonants.</p>
  
-<figure class="auxiliaryBox auto" data-cols="ipa,trans,transc">ꦣ␣ꦜ␣ꦞ␣ꦙ␣ꦰ</figure>
+<figure class="auxiliaryBox auto">ꦣ,ꦜ,ꦞ,ꦙ,ꦰ</figure>
 
 
 <p>Mahaprana forms were originally aspirated consonants used in Sanskrit and Kawi transliterations (mahaprana means <span class="meaning">aspirated</span>). They are rarely, if ever, found in modern text.</p>
 
-<p>Examples:</p>
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦒꦼꦣꦺꦴꦁ</span></p>
 <p><span class="eg" lang="jv">ꦧ꧀ꦊꦣꦸꦒ꧀</span></p>
 </section>
@@ -1882,10 +1907,11 @@ alveolar</th>
 
 <p>The following combinations, called <span class="name">aksara rékan</span> (<span lang="jv">ꦲꦏ꧀ꦱꦫꦫꦺꦏꦤ꧀</span>), are used to represent foreign sounds. There may be some variance around which combinations produce which sounds.<tt>ws,#R%C3%A9kan</tt></p>
 
-<figure class="otherBox auto" data-cols="ipa,trans,transc" data-notes="ق,ع,ف,ذ,ز,ش,خ,غ,ح">ꦐ␣ꦔ꦳␣ꦥ꦳␣ꦢ꦳␣ꦗ꦳␣ꦱ꦳␣ꦏ꦳␣ꦒ꦳␣ꦲ꦳</figure>
+<figure class="otherBox auto" data-notes="ق,ع,ف,ذ,ز,ش,خ,غ,ح">ꦐ,ꦔ꦳,ꦥ꦳,ꦢ꦳,ꦗ꦳,ꦱ꦳,ꦏ꦳,ꦒ꦳,ꦲ꦳</figure>
 
-<p>Javanese uses <span class="hx">A9B3</span> with a similar consonant to represent most foriegn sounds, initially those from Arabic, but then also those from Dutch, Indonesian, and English, eg.</p>
+<p>Javanese uses <span class="hx">A9B3</span> with a similar consonant to represent most foriegn sounds, initially those from Arabic, but then also those from Dutch, Indonesian, and English.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦗ꦳ꦏꦠ꧀</span></p>
 <p><span class="eg" lang="jv">ꦥ꦳ꦗꦂ</span></p>
 
@@ -1909,11 +1935,11 @@ alveolar</th>
     
     <p>Three dedicated combining characters  represent medial consonants (<span class="name">wyanjana</span>), making it easy to tell that the  consonant is part of a syllable-initial cluster and not the start of a new syllable.</p>
    
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ꦿ␣ꦽ␣ꦾ</figure>
+<figure class="characterBox auto">ꦿ,ꦽ,ꦾ</figure>
 
 
 
-<p>Examples of use include:</p>
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦏꦿꦥꦾꦏ꧀</span></p>
 <p><span class="eg" lang="jv">ꦱꦽꦔꦺꦔꦺ</span></p>
 <p><span class="eg" lang="jv">ꦧꦒꦾ</span></p>
@@ -1932,15 +1958,17 @@ alveolar</th>
 <section id="finals">
 <h3>Codas</h3>
 
-<p>Word-final consonant sounds with no following consonant may be represented by ordinary consonant characters, followed by a visible <span class="hx">A9C0</span> character, eg.</p>
+<p>Word-final consonant sounds with no following consonant may be represented by ordinary consonant characters, followed by a visible <span class="hx">A9C0</span> character.</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦕꦼꦝꦏ꧀</span> </p>
 <p><span class="eg" lang="jv">ꦏꦔꦼꦤ꧀</span></p>
 
 <p>If another word or consonant <em>does</em> follow the word-final consonant, the <span class="name">pangkon</span> is still used,  but becomes invisible and results in the stacking of the two consonants. (See <a class="secref">clusters</a>.)</p>
 
-<p>If the consonant is followed by another consonant, either in the middle or at the end of a word, the <span class="name">adeg adeg</span> code point remains, but becomes invisible as the consonant shapes combine vertically or horizontally (see <a class="secref">clusters</a>), eg.</p>
+<p>If the consonant is followed by another consonant, either in the middle or at the end of a word, the <span class="name">adeg adeg</span> code point remains, but becomes invisible as the consonant shapes combine vertically or horizontally (see <a class="secref">clusters</a>).</p>
 
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦏ꧀ꦭꦩ꧀ꦧꦶ</span></p>
 <p><span class="eg" lang="jv"></span></p>
 <p><span class="eg" lang="jv"></span></p>
@@ -1957,15 +1985,17 @@ alveolar</th>
 <p>There is also a set of dedicated combining characters (<span class="name">seisigeg</span>) that dispense with the need for the <span class="name">pangkan</span>.</p>
 <p>Four syllable-final consonant sounds  are represented using combining characters.</p>
    
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ꦃ␣ꦀ␣ꦁ␣ꦂ</figure>
+<figure class="characterBox auto">ꦃ,ꦀ,ꦁ,ꦂ</figure>
 
 
-<p>Examples:</p>
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦱꦼꦏꦺꦴꦭꦃ</span></p>
 <p><span class="eg" lang="jv">ꦤꦂꦥ</span></p>
 <p><span class="eg" lang="jv">ꦥꦼꦠꦼꦁ</span></p>
 
-<p>When both a vowel sign and one of these marks appear above the same base, they are positioned side by side, eg.</p>
+<p>When both a vowel sign and one of these marks appear above the same base, they are positioned side by side.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">ꦏꦼꦂꦠ</span></p>
 <p><span class="eg" lang="jv">ꦏꦚ꧀ꦕꦶꦁ</span></p>
 <p><span class="eg" lang="jv"></span></p>
@@ -2573,7 +2603,7 @@ Bottom_And_Right
 
 <p>Javanese uses native digits, which are decimal-based and used in the same way as European numerals.</p>
 
-<figure class="characterBox auto" data-cols="trans,transc">꧐␣꧑␣꧒␣꧓␣꧔␣꧕␣꧖␣꧗␣꧘␣꧙</figure>
+<figure class="characterBox auto" data-cols="" data-notes="0,1,2,3,4,5,6,7,8,9">꧐,꧑,꧒,꧓,꧔,꧕,꧖,꧗,꧘,꧙</figure>
 
 
 
@@ -2589,7 +2619,9 @@ Bottom_And_Right
 <figcaption>Pada pangkat used to indicate numbers.</figcaption>
 </figure-->
 
-<p>Several of the digits are identical to letters of the alphabet, so  <span class="hx">A9C7</span> is often used around numbers, eg.</p>
+<p>Several of the digits are identical to letters of the alphabet, so  <span class="hx">A9C7</span> is often used around numbers.</p>
+
+<div class="egIntro">eg.</div>
 <p><span class="eg" lang="jv">꧇꧑꧕꧇ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ꧇꧒꧐꧑꧒꧇</span></p>
 
 
@@ -3069,7 +3101,6 @@ Bottom_And_Right
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
-<figure class="characterBox auto" data-cols="trans,transc">꧈␣꧇␣꧉␣꧋␣꧊</figure>
 
 <p>Javanese uses a set of native punctuation marks.</p>
 
@@ -3119,7 +3150,7 @@ Bottom_And_Right
 <section id="letter_boundaries">
 <h4>Letters</h4>
 
-<figure class="characterBox auto" data-cols="trans,transc">꧋␣꧆␣꧅␣꧄␣꧃␣꧉</figure>
+<figure class="characterBox auto" data-cols="">꧋,꧆,꧅,꧄,꧃,꧉</figure>
 
 <p>Letters may begin with <span class="charExample"><span class="ex" lang="jv">꧋꧆꧋</span></span> if the writer doesn't want to indicate a distinction regarding age or rank between themselves and the reader. Otherwise, for more formal letters, they can choose one of three alternatives provided as single characters in the Javanese Unicode block. </p>
 <ul>
@@ -3136,7 +3167,7 @@ The difference between these three is the height of the swash to the far left.</
 
 <section id="poetry_boundaries">
 <h4>Poetry</h4>
-<figure class="characterBox auto" data-cols="trans,transc">ꦆ␣ꦕ␣ꦖ␣ꦟ␣ꦢ␣ꦧ␣ꦿ␣꧀␣꧅␣꧉</figure>
+<figure class="characterBox auto" data-cols="">ꦆ,ꦕ,ꦖ,ꦟ,ꦢ,ꦧ,ꦿ,꧀,꧅,꧉</figure>
 <p>In poetry <span class="charExample"><span class="ex" lang="jv">꧅ꦧ꧀ꦖ꧅</span></span> or <span class="charExample"><span class="ex" lang="jv">꧅ꦧ꧀ꦕ꧅</span></span> (<span class="name">purwapada</span>) introduces a poem; <span class="charExample"><span class="ex" lang="jv">꧅ꦟ꧀ꦢꦿ꧅</span></span> (<span class="name">madyapada</span>) introduces a new song within a poem; and <span class="charExample"><span class="ex" lang="jv">꧅ꦆ꧅</span></span> (wasanapada) indicates the end of a poem.</p>
   <p>Optionally, <span class="hx">A9C9</span> can be added to the above with some space around it. The spaces should be non-breaking, since there should be no line-breaks between the constituent parts<tt>e</tt>, eg.<br>
 <span class="charExample"><span class="ex" lang="jv" style="white-space: nowrap">꧅ ꧉ ꦧ꧀ꦖ ꧉ ꧅</span></span></p>
@@ -3146,7 +3177,7 @@ The difference between these three is the height of the swash to the far left.</
 
 <section id="title_boundaries">
 <h4>Titles</h4>
-<figure class="characterBox auto" data-cols="trans,transc">꧁␣꧂</figure>
+
 <p>Titles may be marked by a pair of <span class="trans">rerenggan</span> characters,  ie. <span class="charExample"><span class="ex" lang="jv">꧁...꧂</span></span> The glyphs for these characters may vary substantially.</p>
 </section>
 
@@ -3156,8 +3187,6 @@ The difference between these three is the height of the swash to the far left.</
 
 <section id="bracketing">
 <h4>Bracketed text</h4>
-
-<figure class="characterBox auto small" data-cols="trans,transc">꧊␣꧌␣꧍</figure>
 
 <p>Javanese  commonly uses native punctuation to insert parenthetical information into text.</p>
 
@@ -3193,8 +3222,6 @@ The difference between these three is the height of the swash to the far left.</
 <section id="quotations">
 <h3>Quotations &amp; citations</h3>
 
-<figure class="characterBox auto small" data-cols="trans,transc">꧊␣꧌␣꧍</figure>
-
 <p>As for parentheses, Javanese text may use <span class="hx">A9CA</span> for quotation marks.<span class="charExample"><span class="ex" lang="hy"></span></span></p>
 
 <table class="character_list">
@@ -3228,8 +3255,6 @@ The difference between these three is the height of the swash to the far left.</
 <section id="emphasis">
 <h3>Emphasis</h3>
 
-<figure class="characterBox auto small" data-cols="trans,transc">꧊␣꧌␣꧍</figure>
-
 <p>To draw attention to text Javanese may use the same characters as are used for parentheses and quotations, ie. a paired set of <span class="charExample"><span class="ex" lang="hy"></span></span><span class="hx">A9CA</span> characters around the relevant text, or the two characters <span class="hx">A9CC</span> and <span class="hx">A9CD</span> can be used similarly.</p>
 <p>Sometimes just <span class="hx">A9CC</span> is repeated.</p>
 </section>
@@ -3242,13 +3267,18 @@ The difference between these three is the height of the swash to the far left.</
 <section id="abbr">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 
-<figure class="characterBox auto small" data-cols="trans,transc">꧈␣ꧏ␣꧉</figure>
-
 <section id="abbreviation">
 <h4>Abbreviation</h4>
 
-<p>According to Everson <span class="hx">A9C8</span> is used for acronyms, eg. <span class="eg" lang="jv">꧈ꦢꦺ꧈ꦲ꧈ꦌꦭ꧀꧈</span></p>
-<p>It is also used after initials in a name,<tt>e</tt> eg. <span class="eg" lang="jv">ꦫ꧈ꦩ꧈ꦯꦸꦭꦂꦠ</span></p>
+<p>According to Everson <span class="hx">A9C8</span> is used for acronyms.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="jv">꧈ꦢꦺ꧈ꦲ꧈ꦌꦭ꧀꧈</span></p>
+
+<p>It is also used after initials in a name.<tt>e</tt></p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="jv">ꦫ꧈ꦩ꧈ꦯꦸꦭꦂꦠ</span></p>
 </section>
 
 
@@ -3256,7 +3286,12 @@ The difference between these three is the height of the swash to the far left.</
 <section id="repetition">
 <h4>Repetition</h4>
 
-<p>A repeated syllable can be represented by <span class="hx">A9CF</span>, which is derived from the arabic-indic digit for 2, eg. <span class="charExample"><span class="ex" lang="jv">ꦧꦸꦏꦸꧏ</span> <span class="trans">buku-buku</span> <span class="meaning">books</span></span> It can be transcribed as <span class="trans">buku2</span>.</p>
+<p>A repeated syllable can be represented by <span class="hx">A9CF</span>, which is derived from the arabic-indic digit for 2.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="charExample"><span class="ex" lang="jv">ꦧꦸꦏꦸꧏ</span> <span class="trans">buku-buku</span> <span class="meaning">books</span></span></p>
+
+<p>It can be transcribed as <span class="trans">buku2</span>.</p>
 
 <p>For 'ditto' marks in vertical lists, Javanese uses <span class="hx">A9C9</span>&nbsp;.<span class="charExample"><span class="ex" lang="hy"></span></span></p>
 </section>
@@ -3268,8 +3303,6 @@ The difference between these three is the height of the swash to the far left.</
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-
-<figure class="characterBox auto small" data-cols="trans,transc">꧟␣꧞</figure>
 
 <section id="correction">
 <h4>Correction marks</h4>
