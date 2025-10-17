@@ -32,7 +32,7 @@ reflist = {
 "authors": "Michael Everson, Martin Hosken, Peter Constable",
 "title":"Revised proposal for encoding the Lanna script in the BMP of the UCS",
 "url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf",
-"lang": new Set(['nod']),
+"lang": new Set(['nod','kkh']),
 },
 
 "h": {
