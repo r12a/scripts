@@ -3434,6 +3434,7 @@ function addCharacterLists () {
     if (document.getElementById('vowels') && document.getElementById('vowels').querySelector('aside') !== null) listSectionCharacters('vowels')
     if (document.getElementById('consonants') && document.getElementById('consonants').querySelector('aside') !== null)listSectionCharacters('consonants')
     if (document.getElementById('novowel') && document.getElementById('novowel').querySelector('aside') !== null)listSectionCharacters('novowel')
+    if (document.getElementById('numbers') && document.getElementById('numbers').querySelector('aside') !== null)listSectionCharacters('numbers')
     if (document.getElementById('inline') && document.getElementById('inline').querySelector('aside') !== null)listSectionCharacters('inline')
     
     listItems = document.querySelectorAll('.sectionCharacterList .listItem')
