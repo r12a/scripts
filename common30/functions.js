@@ -3445,7 +3445,8 @@ function addCharacterLists () {
 
 
 function listSectionCharacters (section) {
-    console.log('>>> listSectionCharacters(',section,')')
+    //console.log('>>> listSectionCharacters(',section,')  Produce lists of characters used in a section, sorted by index titles.)
+
     charElems = document.getElementById(section).querySelectorAll('.listItem, .codepoint bdi')
     charList = ''
     for (i=0;i<charElems.length;i++) {
@@ -3468,67 +3469,60 @@ function listSectionCharacters (section) {
     uniqueSet = new Set(charArray)
     charArray = [...uniqueSet]
     charArray.sort()
-    charList = charArray.join(',')
+    charList = charArray.join(',')    
     
-    document.getElementById(section).querySelector('aside').innerHTML += `
-    <div class="sectionCharacterList">
-    <p>Characters described in this section</p>
-    <figure class="characterBox auto noexpansion small" data-cols="">${ charList }</figure>
-    </div>
-    `
-    
-    replaceStuff(document.getElementById(section).querySelector('figure'))
-    //listItems = document.getElementById(section).querySelectorAll('.listItem')
-    //listItems = document.getElementById(section).querySelector('aside').querySelectorAll('.listItem')
-    //console.log('section',section)
-    //console.log('listitems',listItems)
-	//for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
-    
-    
-    //console.log('charlist',charList)
-    document.getElementById(section).querySelector('aside').innerHTML += `<p class="instructions" style="text-align:end;"><a href="../apps/listcategories/index.html?chars=${ charList.replace(/,/g,'') }" target="_blank">Triage by General Category</a></p>`
-    }
+    chartList = new Set(charList)
 
+    indexListItems = document.getElementById('index').querySelectorAll('.listItem')
 
-
-
-function listSectionCharactersX (section) {
-    charElems = document.getElementById(section).querySelectorAll('.listItem')
-    charList = ''
-    for (i=0;i<charElems.length;i++) {
-        if (charElems[i].className === 'listItem' && ! charElems[i].closest('figure').classList.contains('nolist'))  charList += charElems[i].textContent
-        else if (charElems[i].closest('.codepoint') && charElems[i].closest('.codepoint').classList !== null && ! charElems[i].closest('.codepoint').classList.contains('nolist'))  charList += charElems[i].textContent
+    inputLines = []
+    for (i=0;i<indexListItems.length;i++) {
+        if (chartList.has(indexListItems[i].textContent)) {
+            title = indexListItems[i].textContent+' '+indexListItems[i].closest('section').querySelector('h3,h4').textContent
+            console.log(title)
+            inputLines.push(title)
+            }
         }
-    charList = charList.replace(/\u25CC/g,'')
-    charList = charList.replace(/\u200D/g,'')
-    charList = charList.replace(/\u0020/g,'')
-    charList = charList.replace(/\u00A0/g,'')
-    charList = charList.replace(/\u24D8/g,'')
-        
-    charArray = [... charList]
-    uniqueSet = new Set(charArray)
-    charArray = [...uniqueSet]
-    charArray.sort()
-    charList = charArray.join(',')
-    
-    document.getElementById(section).querySelector('aside').innerHTML += `
+    console.log("INPUTLINES",inputLines)
+   
+    // Group characters by title
+    const titleMap = {}
+
+    inputLines.forEach(line => {
+      const [char, ...titleParts] = line.split(' ')
+      const title = titleParts.join(' ')
+      if (!titleMap[title]) {
+        titleMap[title] = []
+        }
+        titleMap[title].push(char)
+        })
+
+    // Generate HTML markup
+    out = `
     <div class="sectionCharacterList">
     <p>Characters described in this section</p>
-    <figure class="characterBox auto noexpansion small" data-cols="">${ charList }</figure>
-    </div>
     `
     
-    replaceStuff(document.getElementById(section).querySelector('figure'))
-    //listItems = document.getElementById(section).querySelectorAll('.listItem')
-    listItems = document.getElementById(section).querySelector('aside').querySelectorAll('.listItem')
-    //console.log('section',section)
-    //console.log('listitems',listItems)
-	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
+    for (const [title, chars] of Object.entries(titleMap)) {
+      const charList = chars.join(',')
+      out += `<div style="font-size:80%;">${title}</div><figure class="characterBox auto noexpansion small" data-cols="">${charList}</figure>`
+    }
+
+    out += `
+    </div>
+    `
+    document.getElementById(section).querySelector('aside').innerHTML += out
+
+    figures = document.getElementById(section).querySelector('aside').querySelectorAll('figure')
+    for (f=0;f<figures.length;f++) replaceStuff(figures[f])
     
-    
-    //console.log('charlist',charList)
     document.getElementById(section).querySelector('aside').innerHTML += `<p class="instructions" style="text-align:end;"><a href="../apps/listcategories/index.html?chars=${ charList.replace(/,/g,'') }" target="_blank">Triage by General Category</a></p>`
     }
+
+
+
+
+
 
 
 
