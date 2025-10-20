@@ -1,4 +1,4 @@
-window.version = 'v29'
+window.version = 'v30'
 window.scriptName = 'Tai Le'
 window.ghDirectory = 'taile'
 window.blockDirectory = 'taile'
