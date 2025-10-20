@@ -112,27 +112,64 @@ autoExpandExamples.btk = `
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 `
+
+
+
+
+// automatically creates Online Resources section, if markup is uncommented in xx.html
+
+termLists = [
+
+{
+"title":"Wiktionary, Simalungun",
+"url":"https://en.wiktionary.org/wiki/Category:Simalungun_Batak_lemmas",
+"notes":"Latin only",
+},
+
+{
+"title":"Wiktionary, Mandailing",
+"url":"https://en.wiktionary.org/wiki/Category:Mandailing_Batak_lemmas",
+"notes":"Latin only",
+},
+
+{
+"title":"Wiktionary, Toba",
+"url":"https://en.wiktionary.org/wiki/Category:Toba_Batak_lemmas",
+"notes":"Latin mostly",
+},
+
+{
+"title":"Wiktionary, Karo",
+"url":"https://en.wiktionary.org/wiki/Category:Karo_Batak_lemmas",
+"notes":"Latin except for 2 entries",
+},
+
+{
+"title":"Austronesian Basic Vocabulary Database, Toba Batak",
+"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=188",
+"notes":"Latin only",
+},
+
+{
+"title":"Austronesian Basic Vocabulary Database, Mandailing",
+"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=1655",
+"notes":"Latin only",
+},
+
+{
+"title":"Austronesian Basic Vocabulary Database, Karo Batak",
+"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=661",
+"notes":"Latin only",
+},
+
+/*
+{
+"title":"Living Dictionaries",
+"url":"https://livingdictionaries.app/sora/entries/list",
+"notes":"No native script.",
+},
+*/
+]
+
 

@@ -43,7 +43,7 @@ reflist = {
 "authors": "Michael Everson and Uli Kozok",
 "title":"Proposal for encoding the Batak script in the UCS",
 "date": "2008",
-"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3320.pdf",
+"url":"https://www.unicode.org/L2/L2008/08011r-n3320r-batak.pdf",
 "reviewed":false
 },
 
@@ -55,13 +55,27 @@ reflist = {
 "reviewed":false
 },
 
+"nl2": {
+"authors": "Norbert Lindenbert",
+"title":"Line breaking at orthographic syllable boundaries",
+"date": "2022",
+"url":"https://www.unicode.org/L2/L2022/22080r2-line-break-ortho-bnd.pdf",
+"reviewed":false
+},
+
+"nl3": {
+"authors": "Norbert Lindenbert",
+"title":"Reordering virama",
+"date": "2023",
+"url":"https://www.unicode.org/L2/L2023/23205-reordering-virama.pdf",
+"reviewed":false
+},
+
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 14.0",
-"sub":"Chapter 17.6: Indonesia and Oceania",
-"pages":"718-719",
-"isbn":"978-1-936213-29-0",
-"url":"https://www.unicode.org/versions/Unicode14.0.0/ch17.pdf",
+"title":"The Unicode Standard, Version 17.0",
+"sub":"Southeast Asia-II, Indonesia and the Philippines, 17.6 Batak",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-17/#G27226",
 "reviewed": true
 },
 
@@ -85,6 +99,14 @@ reflist = {
 "title":"Batak script",
 "retr": "Apr 2022",
 "url":"https://en.wikipedia.org/wiki/Batak_script",
+"reviewed":true
+},
+
+"us": {
+"authors": "SIL",
+"title":"Writing Systems Technical Resources, Unicode Status for Batak",
+"retr": "Oct 2025",
+"url":"https://writingsystems.info/scrlang/unicode/batk-unicode/",
 "reviewed":true
 },
 
