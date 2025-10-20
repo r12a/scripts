@@ -3428,17 +3428,18 @@ function addResources () {
 
 
 function addCharacterLists () {
-    console.log('>>> addCharacterLists')
+    // console.log('>>> addCharacterLists()')
     // adds the lists of characters in selected sections to the right hand column
 
     if (document.getElementById('vowels') && document.getElementById('vowels').querySelector('aside') !== null) listSectionCharacters('vowels')
     if (document.getElementById('consonants') && document.getElementById('consonants').querySelector('aside') !== null)listSectionCharacters('consonants')
     if (document.getElementById('novowel') && document.getElementById('novowel').querySelector('aside') !== null)listSectionCharacters('novowel')
+    if (document.getElementById('symbols') && document.getElementById('symbols').querySelector('aside') !== null)listSectionCharacters('symbols')
     if (document.getElementById('numbers') && document.getElementById('numbers').querySelector('aside') !== null)listSectionCharacters('numbers')
     if (document.getElementById('inline') && document.getElementById('inline').querySelector('aside') !== null)listSectionCharacters('inline')
     
     listItems = document.querySelectorAll('.sectionCharacterList .listItem')
-    console.log('listitems',listItems)
+    // console.log('listitems',listItems)
 	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
     }
 
@@ -3480,11 +3481,9 @@ function listSectionCharacters (section) {
     for (i=0;i<indexListItems.length;i++) {
         if (chartList.has(indexListItems[i].textContent)) {
             title = indexListItems[i].textContent+' '+indexListItems[i].closest('section').querySelector('h3,h4').textContent
-            console.log(title)
             inputLines.push(title)
             }
         }
-    console.log("INPUTLINES",inputLines)
    
     // Group characters by title
     const titleMap = {}
