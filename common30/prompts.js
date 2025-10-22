@@ -289,7 +289,7 @@ function makeIndexIntro (node) {
 
 function addPageIntro (script, orthogName, iso, picker, page) {
 	// Add a para to the intro & add accessibility controls
-    console.log('>> addPageIntro(',script, orthogName, iso, picker, page,')')
+    // console.log('>> addPageIntro(',script, orthogName, iso, picker, page,')')
     var draft = ''
     var fonts = ''
     
@@ -297,7 +297,7 @@ function addPageIntro (script, orthogName, iso, picker, page) {
     if (document.querySelector('#fontWarning')) fonts = `<p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">Fonts:</strong> ${ document.querySelector('#fontWarning').innerHTML }</p>`
    
     // Add a line to mention this is a draft if 'draft' appears in h1
-    if (document.querySelector('h1').textContent.includes('draft')) draft = `<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>`
+    if (document.querySelector('.orthographyLine').textContent.includes('draft')) draft = `<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>`
 
 
     var out = ''
@@ -306,12 +306,8 @@ function addPageIntro (script, orthogName, iso, picker, page) {
     out += `<p onclick="toc=document.getElementById('tocPanel'); if (toc.style.display === 'block') toc.style.display = 'none'; else toc.style.display = 'block';" id="tocTab" title="Open/close the table of contents.">&nbsp;</p>
     <p id="tocTabClickArea" onclick="toc=document.getElementById('tocPanel'); if (toc.style.display === 'block') toc.style.display = 'none'; else toc.style.display = 'block';">Click to toggle Table of Contents.</p>
     `
-    
-    if (script !== '') {
-        out += `
-        ${ draft }
 
-        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:90%;">Phonological transcriptions</strong> should be treated as a guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
+/*        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:90%;">Phonological transcriptions</strong> should be treated as a guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
 `
 
 if (window.location.href.includes('block')) out += `
@@ -321,6 +317,7 @@ if (window.location.href.includes('block')) out += `
 else out += `
         <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on the following to reveal detailed information and examples for each character: <strong>(a)</strong> <span class="ex" style="font-size:1em;">coloured characters</span> in examples and lists; <strong>(b)</strong> <span style="color:teal;">link text</span> on character names. If your browser supports it, your cursor will change to look like <img src="../common30/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
 `
+*/
 
 
 out += `
@@ -331,28 +328,35 @@ out += `
         <div id="about">
 
         <details class="supportdocs noprint">
-        <summary class="instructions">More about using this page</a></summary>
+        <summary class="instructions">Conventions and features for this page</a></summary>
+
+		<div style="line-height:1.4; font-style:italic; font-size:.9rem;">
+        <p><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on the following to reveal detailed information and examples for each character: <strong>(a) <span class="ex" style="font-size:1em;">coloured characters</span></strong> in examples and lists; <strong>(b) <span style="color:teal;">link text on character names</span></strong>. If your browser supports it, your cursor will change to look like <img src="../common30/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.<br><br>
+        Clicking on a coloured character also produces a coloured bar at the bottom of the page with links to places in the page that refer to that character. The character is highlighted in each of those places. This can be dismissed by clicking on the X in the coloured bar.<br><br>
+        Clicking on phonological transcriptions produces a pop up that lists the symbols used, describes them, and links to detailed descriptions of each in Wikipedia. The pop up can be closed by hitting the ESC key.</p>
+
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:90%;">Phonological transcriptions</strong> should be treated as a guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
 `
 
 if (window.location.href.includes('block')) out += `
-        <p class="instructions"><span class="leadin">Character names.</span> The names of characters in codepoint markup drop the initial ${ script.toUpperCase() } label (purely to reduce the length of the examples). In other places the full name can be found.</p>
+        <p><span class="leadin">Character names.</span> The names of characters in codepoint markup drop the initial ${ script.toUpperCase() } label (purely to reduce the length of the examples). In other places the full name can be found.</p>
 
-        <p class="instructions"><span class="leadin">Fonts.</span> The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common30/showImages.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon to toggle the large characters between font glyphs and graphics.</p>
+        <p><span class="leadin">Fonts.</span> The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common30/showImages.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon to toggle the large characters between font glyphs and graphics.</p>
 
-        <p class="instructions"><span class="leadin">Navigation.</span> The <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon takes you to the top of the page.</p>
+        <p><span class="leadin">Navigation.</span> The <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon takes you to the top of the page.</p>
 `
 else out += `
-        <p class="instructions"><span class="leadin">Character names.</span> The names of characters in codepoint markup drop the initial ${ script.toUpperCase() } label (purely to reduce the length of the examples). In other places the full name can be found.</p>
+        <p><span class="leadin">Character names.</span> The names of characters in codepoint markup drop the initial ${ script.toUpperCase() } label (purely to reduce the length of the examples). In other places the full name can be found.</p>
 
-        <p class="instructions"><span class="leadin">Navigation.</span> The <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon opens the table of contents in a popup window. Dismiss it by clicking on the X alongside it, or by hitting the ESC key.</p>
+        <p><span class="leadin">Table of contents.</span> The table of contents can be opened in a popup window by clicking on or near the vertical brown line to the right of the page. You can also click on the <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon. To dismiss the table of contents, click again near the vertical brown line, or on the triangle, or on the X alongside the pop up, or hit the ESC key.</p>
 
-        <p class="instructions"><span class="leadin">Detailed character notes.</span> Clicking on coloured characters in lists or on character names opens panels that give detailed information about each character. This information is taken from the companion document, <a target="_blank" href="block.html">${ script } Character Notes</a>. (Those panels can be dismissed by pressing on the ESC key.)</p>
+        <p><span class="leadin">Detailed character notes.</span> Clicking on coloured characters in lists or on character names opens panels that give detailed information about each character. This information can also be seen in the companion documents, <a target="_blank" href="../${ orthogFilePath }-characters.html">${ script } DB</a> and <a target="_blank" href="block.html">${ script } Block Notes</a>. (Those panels can be dismissed by pressing on the ESC key.)</p>
 `
 out += `
-        <p class="instructions"><span class="leadin">Transcriptions &amp; transliterations.</span> Phonological transcriptions are surrounded by <span style="white-space:nowrap;">⌈corner brackets⌋</span>, to indicate that they vary between narrow, [phonetic] and broad, /phonemic/ transcriptions.<br>
-        Latin <a href="../glossary/index.html#transcription" class="termref">transcriptions</a> between <span style="white-space:nowrap;">&lt;angle brackets&gt;</span>, represent the letters as commonly written in the Latin script.<br>
-        A <em><a href="../glossary/index.html#transliteration" class="termref">transliteration</a></em> has also been developed especially for this orthography, and is generally based on the sound of a letter where possible, but where a letter has multiple pronunciations, the transliteration represents only one.<br>
-        Transliterations provide perfect round-trip conversion between the native script and Latin, whereas Latin transcriptions rarely do.<br>
+        <p><span class="leadin">Transcriptions &amp; transliterations.</span> Phonological transcriptions vary between narrow, <span class="ipa narrow">phonetic</span> and broad, <span class="ipa narrow">phonemic</span> transcriptions, depending on what is available in the sources.
+        Latin <a href="../glossary/index.html#transcription" class="termref">transcriptions</a> between <span class="transc">angle brackets</span>, represent the letters as commonly written in the Latin script.<br><br>
+        A <em><a href="../glossary/index.html#transliteration" class="termref">transliteration</a></em> has also been developed especially for this orthography, and is generally based on the sound of a letter where possible, but where a letter has multiple pronunciations, the transliteration represents only one.<br><br>
+        Transliterations provide perfect round-trip conversion between the native script and Latin, whereas Latin transcriptions rarely do.<br><br>
         When you click on an example to see its composition, the top of the panel that opens contains a transliteration, followed by the native text, then (if available) an IPA transcription.</p>
         
         <!--p class="instructions noprint"><span class="leadin">Show characters.</span><button onclick="document.getElementById('characterDump').textContent = allchars;">GO</button></p>
@@ -367,6 +371,7 @@ if (window.location.href.includes('block')) out += `
     document.getElementById('charsListed').innerHTML = chList
 " style="color: #CC6600; font-style: italic; margin-right: 1em; font-size: 70%; font-weight:bold;">Show all characters listed here</summary>
     <p id="charsListed"></p>
+	</div>
     </details>
 `
 
@@ -379,8 +384,13 @@ out += `
         
         <dialog id="copyNotice">Copied !</dialog>
         `
-        }
     
+    if (script !== '') {
+        out += `
+        ${ draft }
+`
+        }
+
 if (! window.location.href.includes('block')) out += `
     <div id="topRightControls" 
         style="    position: fixed;
@@ -522,8 +532,6 @@ function addUsageAdvice (script, iso, picker) {
         out += `
         <p>See a list of <a href="index.html#languages" target="_blank">languages using the ${ orthogName } script</a>.</p>
 
-        ${ draft }
-
         <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:90%;">Phonological transcriptions</strong> should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
 
         <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) <span class="ex">coloured characters</span> in examples and lists. If your browsers supports it, your cursor will change to look like <img src="../common30/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items. (b) <span style="color:teal;">link text</span> on character names. You can show details as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.</p>
@@ -539,6 +547,8 @@ function addUsageAdvice (script, iso, picker) {
         <summary class="instructions">More about using this page</a></summary>
 
         <p class="instructions"><span class="leadin">Transcriptions.</span> Transcriptions in <span style="white-space:nowrap;">⌈corner brackets⌋</span> are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available (which is why corner brackets are used rather than the usual /phonemic/ and [phonetic] indicators). Transcriptions between <span style="white-space:nowrap;">&lt;angle brackets&gt;</span>, represent the letters as commonly written in the Latin script. When you click on an example to see its composition, the letters in the panel that opens are a <em><a href="../glossary/#transliteration" class="termref">transliteration</a></em>, rather than a <a href="../glossary/#transcription" class="termref">transcription</a>: the difference being that a transliteration provides perfect round-trip conversion between the native and Latin, whereas transcriptions rarely do.  The transliteration has been developed especially for this page, and is generally based on the sound of a letter where possible, but where a letter has multiple pronunciations, the transliteration represents only one.</p>
+
+        ${ draft }
 
         <p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
 
