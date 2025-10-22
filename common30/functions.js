@@ -1896,7 +1896,12 @@ function replaceStuff (node) {
         listItem += `" ${ font }`
         if (node.dataset.lang) listItem += ` lang="${ node.dataset.lang }"`
         else listItem += ` lang="${ window.langTag }"`
-        listItem += `${ dirn }>${ chars[i] }</span>`
+        
+        // get the uname for the title
+        var title = ''
+        if (window.spreadsheetRows[chars[i]] && window.spreadsheetRows[chars[i]][cols.ucsName] ) title = window.spreadsheetRows[chars[i]][cols.ucsName]
+
+        listItem += `${ dirn } title="${ title }">${ chars[i] }</span>`
 
         // leave a blank where a space is used
         //if (chars[i] === ' ') {
