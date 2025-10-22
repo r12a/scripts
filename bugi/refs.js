@@ -1,5 +1,21 @@
 reflist = {
 
+/*
+"auth_initials": {
+"authors": "Sort_by_family_name_of_first_contributor",
+"title":"The_Worlds_Writing_Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "Feb 2024",
+"publisher":"Oxford_University_Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+*/
+
 
 "e": {
 "url":"http://www.unicode.org/L2/L2003/03320-n2633-lontara.pdf",
@@ -20,12 +36,19 @@ reflist = {
 },
 
 "u": {
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch19.pdf",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-17/#G26727",
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
-"sub":"Chapter 17.2: Indonesia and Oceania, Buginese",
-"pages":"689-690",
-"isbn":"978-1-936213-16-0.",
+"title":"The Unicode Standard, Version 17.0",
+"sub":"Southeast Asia-II, Indonesia and the Philippines, 17.2 Buginese",
+},
+
+"m": {
+"authors": "Christopher Miller",
+"title":"Indonesian and Philippine Scripts and extensions not yet encoded or proposed for encoding in Unicode as of version 6.0",
+"date": "2011",
+"pages": "35 ff",
+"url":"https://www.unicode.org/notes/tn35/indonesian-philippine.pdf",
+"reviewed":false
 },
 
 "ul": {
