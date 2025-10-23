@@ -54,7 +54,7 @@ function addPageFeatures () {
     // create translit data in autoTranslitArray
     makeAutoTranslitArray (langTag)
 
-    console.log('scriptSummaryTableName',scriptSummaryTableName)
+    //console.log('scriptSummaryTableName',scriptSummaryTableName)
     initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath)
     //autoTransliterate(langTag)
     checkParameters()
@@ -574,7 +574,7 @@ function listAllIndexCharacters (scriptISO, pickerName) {
     // get block file entries
     var blockChars = []
     for (ch in charDetails) blockChars.push(ch)
-    console.log('block chars', blockChars)
+    //console.log('block chars', blockChars)
 
 
 
@@ -1134,7 +1134,7 @@ function removeEditorNotes () {
 
 
 function makeSidePanel () {
-    console.log('>> makeSidePanel()')
+    // console.log('>> makeSidePanel()')
     
 	if (typeof langs === 'undefined') return
     
@@ -1366,7 +1366,7 @@ function makeSidePanel () {
     else {  // this is a script-based summary
     
         out = ''
-         console.log("LANGS",langs.langTag)
+        // console.log("LANGS",langs.langTag)
         // Create the script name    
         if (typeof summaryExists !== 'undefined') out += `<p style="margin-inline:2rem; text-align: start; margin-block-end:2rem;"><span class="eg inline" lang="${ langTag }">${ langs[oid].local }</span></p>`
 
@@ -2073,118 +2073,145 @@ function getStatusForIndex (token) {
 
 
 
-function makeIndexLine (node) {
-
-
-    var showLast = false
-    var showFirst = false
-    //console.log(node)
-
-    // populate the chars array with characters & gather additional info
-    //chars = node.dataset.chars.split('␣')
-    //chars = node.textContent.split('␣')
-    chars = node.textContent.split(',')
+function makeIndexLine(node) {   // Optimised by CoPilot
+    // console.log(`>>> makeIndexLine(`, node, ').   Creates the markup for a given characterBox in the index.')
+    // node is the characterBox figure
     
-    if (typeof node.dataset.cols === 'undefined') var info = ''
-    else info = node.dataset.cols
-   
-    if (node.dataset.notes) {
-        var notes = node.dataset.notes.split(',')
+    // Guard: require a node with textContent
+    if (!node || !node.textContent) {
+        node && (node.innerHTML = '')
+        return
         }
-    else notes = []
 
+    // Local references to globals for faster repeated access
+    const ssRows = window.spreadsheetRows || {}
+    const colDefs = typeof cols !== 'undefined' ? cols : {}
+    const langDefault = window.langTag || 'und'
 
-    var out = ''
+    // Helper: normalise a token (trim whitespace)
+    //const norm = s => (s == null ? '' : s.trim())
 
-    // make the summary count link
-    //if (chars.length > 1) {
-        var length = chars.length
-        for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
-        out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')">list '
-        if (length === 2) out += 'both'
-        else if (length > 2) out += 'all '+length
-        out += '</div>'
-        //}
-
-    // start building the listArray
-    out += '<div class="listArray">'
-
-    // for each item ...
-    for (let i=0;i<chars.length;i++) {
-        //console.log('makeIndexLine',chars[i])
-        char = chars[i]
-        
-        if (typeof window.spreadsheetRows[char] === 'undefined') {
-            console.log('%c' + 'Cannot find '+char+' in the spreadsheet (makeIndexLine). Index building needs attention.', 'color:' + 'orange' + ';font-weight:bold;')
-            continue
-            }
-
-        // create an id attribute for the listPairs in the index
-        if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
-        else indexId = ''
-
-        // check for status
-        if (window.spreadsheetRows[char][cols.status] && window.spreadsheetRows[char][cols.status] !== '0') status = getStatusForIndex(window.spreadsheetRows[char][cols.status]).replace(/\./,'')
-        else status = ''
-
-        if (node.dataset.lang) out += `<div class="listPair ${ status }"${ indexId }><span class="listItem" lang="${ node.dataset.lang }" onclick="makeFootnoteIndex(charVal)">${ chars[i] }</span>`
-        else out += `<div class="listPair ${ status }"${ indexId }><span class="listItem" lang="${ window.langTag }" onclick="makeFootnoteIndex('${ chars[i] }')">${ chars[i] }</span>`
-
-
-
-        if (notes.length > 0) {
-            if (notes[i]) ch = notes[i]
-            else ch = '&nbsp;'
-            out += '<span class="listMeaning">'+ch+'</span>'
-            }
-
-
-        // print the code point values
-        out += '<span class="listUnum">'
-        charList = [... chars[i]]
-        for (let z=0;z<charList.length;z++) {
-            var hex = charList[z].codePointAt(0)
-            hex = hex.toString(16).toUpperCase()
-            while (hex.length < 4) hex = '0'+hex
-
-            out += '<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">'+hex+'</span>'
-            if (charList.length>1 && z<charList.length-1) out += '<br/>'
-            }
-        out += '</span>'
-
-
-        // add any links
-        out += '<div class="index_details">'
-        if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ucsName]) {
-            var uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
-            //if (window.spreadsheetRows[char][cols.status] && window.spreadsheetRows[char][cols.status] !== '0') {
-                //status = getStatusForIndex(window.spreadsheetRows[char][cols.status]).replace(/\./,'')
-                //out += `<span class="index_uname index_${ status }" onclick="makeFootnoteIndex('${ chars[i] }')">(${ status }) &nbsp;&nbsp; ${ uname }</span>`
-                //}
-            if (status) out += `<span class="index_uname" onclick="makeFootnoteIndex('${ chars[i] }')">(${ status.replace(/index_/,'') }) &nbsp;&nbsp; ${ uname }</span>`
-            else out += `<span class="index_uname" onclick="makeFootnoteIndex('${ chars[i] }')">${uname}</span>`          
-            }
-        else uname = "NAME UNKNOWN"
-
-        //out += `<span class="index_uname" onclick="makeFootnoteIndex('${ chars[i] }')">${uname}</span>`
-        if (window.spreadsheetRows[char]) {
-            out += `<span class="indexLineData" onclick="makeFootnoteIndex('${ chars[i] }')">`
-            if (window.spreadsheetRows[char][cols.typeLoc]) out += `<span class="typeLoc">${ window.spreadsheetRows[char][cols.typeLoc] }</span> `
-            if (window.spreadsheetRows[char][cols.statusLoc]) out += `<span class="statusLoc">${ window.spreadsheetRows[char][cols.statusLoc] }</span> `
-            if (window.spreadsheetRows[char][cols.ipaLoc]) out += `<span class="ipa">${ window.spreadsheetRows[char][cols.ipaLoc].toLowerCase() }</span> `
-            if (window.spreadsheetRows[char][cols.transcription] && window.spreadsheetRows[char][cols.transcription] !== '0') out += `<span class="transc">${ window.spreadsheetRows[char][cols.transcription] }</span> `
-            out += '</span>'
-            }
-        out += '</span>'
-        out += '</div>'
-
-
-
-        out += '</div>'
+    // normalize token: convert visible-space glyph to comma, then trim; return empty string for null/undefined
+    const norm = s => {
+        if (s == null) return ''
+        return String(s).replace(/␣/g, ',').trim()
         }
-    out += '</div>'
 
-    node.innerHTML = out
+    // Helper: convert a single JS string character to padded uppercase hex
+    const cpHex = ch => {
+        const hex = ch.codePointAt(0).toString(16).toUpperCase()
+        return hex.padStart(4, '0')
+        }
+
+    // Split visible text into tokens by comma and filter empty tokens
+    const chars = node.textContent.split(',').map(norm).filter(Boolean)
+
+    // Read optional metadata from dataset
+    const info = typeof node.dataset.cols === 'undefined' ? '' : node.dataset.cols
+    const notes = node.dataset.notes ? node.dataset.notes.split(',').map(norm) : []
+
+    // Build the output in parts (arrays) and join at the end — faster than repeated string concat
+    const outParts = []
+
+    // Build the "list all" control: count non-space tokens
+    const visibleCount = chars.reduce((n, c) => (c === ' ' ? n : n + 1), 0)
+    outParts.push(
+        `<div class="listAll" onClick="listAll(this, '${langDefault}')">list ${
+          visibleCount === 2 ? 'both' : visibleCount > 2 ? 'all ' + visibleCount : ''
+        }</div>`
+        )
+
+    // Begin container for list items
+    outParts.push('<div class="listArray">')
+
+    // Process each token
+    for (let i=0; i<chars.length; i++) {
+        const token = chars[i]
+        if (!token) continue // defensive
+
+    // Lookup spreadsheet row once per token
+    const row = ssRows[token]
+    if (!row) {
+        // Warn once per missing token and skip
+        console.warn(
+        `Cannot find ${token} in the spreadsheet (makeIndexLine). Index building needs attention.`
+        )
+        continue
+        }
+
+    // If node is inside the main index container, create an id attribute
+    const indexId = node.closest && node.closest('#index') ? ` id="index${token}"` : '';
+
+    // Determine status (normalise as before)
+    const statusVal =
+      row[colDefs.status] && row[colDefs.status] !== '0'
+        ? getStatusForIndex(row[colDefs.status]).replace(/\./, '')
+        : ''
+
+    // language for the listItem span
+    const itemLang = node.dataset.lang || langDefault
+
+    // listPair open + character span with click handler (passes token)
+    outParts.push(
+        `<div class="listPair ${statusVal}"${indexId}><span class="listItem" lang="${itemLang}" onclick="makeFootnoteIndex('${token}')">${token}</span>`
+        )
+
+    // optional note corresponding to this token
+    if (notes.length > 0) {
+        const noteText = notes[i] || '&nbsp;';
+        outParts.push(`<span class="listMeaning">${noteText}</span>`)
+        }
+
+    // codepoint hex listing — decompose token into codepoints
+    outParts.push('<span class="listUnum">')
+    const cps = [...token]; // spreads into codepoint-aware array
+    for (let z = 0; z < cps.length; z++) {
+        outParts.push(
+            `<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">${ cpHex(cps[z]) }</span>`)
+        if (cps.length > 1 && z < cps.length - 1) outParts.push('<br/>')
+        }
+    outParts.push('</span>')
+
+    // details area: unicode name and extra metadata if present
+    outParts.push('<div class="index_details">')
+
+    if (row[colDefs.ucsName]) {
+        // strip leading "U+xxxx: " if present and show status + name
+        const uname = row[colDefs.ucsName].replace(/U\+[^:]+: /, '')
+        if (statusVal) {
+            outParts.push(
+            `<span class="index_uname" onclick="makeFootnoteIndex('${ token }')">(${ statusVal.replace(
+            /index_/, '') }) &nbsp;&nbsp; ${ uname }</span>`
+            )
+        }
+    else {
+        outParts.push(
+            `<span class="index_uname" onclick="makeFootnoteIndex('${token}')">${uname}</span>`
+            )
+            }
+        }
+    else {
+        // keep behavior consistent: name unknown
+        outParts.push(`<span class="index_uname" onclick="makeFootnoteIndex('${token}')">NAME UNKNOWN</span>`)
+        }
+
+    // additional inline metadata: type, statusLoc, ipa, transcription
+    outParts.push(`<span class="indexLineData" onclick="makeFootnoteIndex('${token}')">`)
+    if (row[colDefs.typeLoc]) outParts.push(`<span class="typeLoc">${row[colDefs.typeLoc]}</span> `)
+    if (row[colDefs.statusLoc]) outParts.push(`<span class="statusLoc">${row[colDefs.statusLoc]}</span> `)
+    if (row[colDefs.ipaLoc]) outParts.push(`<span class="ipa">${String(row[colDefs.ipaLoc]).toLowerCase()}</span> `)
+    if (row[colDefs.transcription] && row[colDefs.transcription] !== '0')
+        outParts.push(`<span class="transc">${row[colDefs.transcription]}</span> `)
+    outParts.push('</span>')
+
+    // close details and listPair wrappers
+    outParts.push('</div>') // .index_details
+    outParts.push('</div>') // .listPair
+    }
+
+    // close listArray and set innerHTML once
+    outParts.push('</div>')
+    node.innerHTML = outParts.join('')
     }
 
 
@@ -2197,7 +2224,7 @@ function makeIndexLine (node) {
 
 
 function initialiseShowNames (node, base, target) {
-    console.log('initialiseShowNames(',node, base, target,') Add onclick function to all .ex elements to display in panel')
+    // console.log('initialiseShowNames(',node, base, target,')\nAdd onclick function to all .ex elements to display in panel')
     // function will display character by character names for example in the panel
     // base (string), path for link to character detail
 
@@ -3066,82 +3093,235 @@ function showTransliterationsEvt (evt) {
 
 
 // MAKE INDEX DATA
-function makeIndexObject () {
-    var charArray = []
-	chars = document.querySelectorAll('.codepoint, .listItem')
-	for (i=0;i<chars.length;i++) {
-        if (chars[i].textContent.trim() === '') continue
-        if (chars[i].classList.contains('noindex') || chars[i].parentNode.parentNode.parentNode.classList.contains('noindex')) continue
-        
-        //console.log('Processing:',chars[i].textContent)
-        if (chars[i].firstChild == null) console.log('No content found for',chars[i].parentNode.textContent)
-        cell = chars[i].firstChild.textContent
-        
-        // get the heading
-		ptr = chars[i]
-		while (ptr.nodeName != 'SECTION' && ptr.nodeName != 'HTML') {
-			ptr = ptr.parentNode
-			}
-		section = ptr.id
-        //console.log(cell, section)
-        if (section.includes('index_')) continue
-        if (section.includes('_map')) continue
-        if (section.includes('map_')) continue
-      
-        
-        // get the status
-        var status = ''
-        if (chars[i].classList.contains('listItem')) {
-            listHead = chars[i].parentNode.parentNode.parentNode
-            if (listHead.classList.contains('otherBox')) status = 'other'
-            //else if (listHead.classList.contains('characterBox') || listHead.classList.contains('mainBox')) status = 'main'
-            //else if (listHead.classList.contains('auxiliaryBox') || listHead.classList.contains('auxBox')) status = 'aux'
-            else if (listHead.classList.contains('characterBox') || listHead.classList.contains('mainBox')) status = 'character'
-            else if (listHead.classList.contains('auxiliaryBox') || listHead.classList.contains('auxBox')) status = 'auxiliary'
-            else if (listHead.classList.contains('deprecatedBox')) status = 'deprecated'
-            else if (listHead.classList.contains('archaicBox')) status = 'archaic'
-            //console.log(cell, status)
-            }
-        
-        // create an object for each item in the cell
-        cellList = [...cell]
-        for (j=0;j<cellList.length;j++) {
-            charArray.push(new Object)
-            charArray[charArray.length-1].codepoint = cellList[j]
-            charArray[charArray.length-1].section = section
-            if (status !== '') charArray[charArray.length-1].status = status
-            }
-		}
-	//console.log('charArray',charArray)
+function makeIndexObject () { // copilot optimised
+  // collect characters temporarily
+  const charArray = []
 
-	allchars = '' // makes a list of all characters for sorting later
-    
-    // create entries in the index array, avoiding duplicate entries per section
-    for (j=0;j<charArray.length;j++) {
-        indexChar = charArray[j].codepoint
-        // stop duplicates within the same section
-        if (index[indexChar] && index[indexChar].section.includes(charArray[j].section)) {
-            if (charArray[j].status) index[indexChar].status = charArray[j].status
-            continue
+  // select nodes once
+  const chars = document.querySelectorAll('.codepoint, .listItem')
+
+  // iterate with indexed for to avoid creating iterators for every loop
+  for (let i=0, len=chars.length; i<len; i++) {
+    const node = chars[i]
+
+    // skip empty text nodes quickly
+    const text = node.textContent && node.textContent.trim()
+    if (!text && ! node.querySelector('img')) continue
+
+    // skip nodes explicitly excluded via .noindex anywhere up the tree
+    if (node.closest('.noindex')) continue
+
+    // get the text to use from the node's first meaningful child
+    // - if the first child contains an <img>, use that image's alt text
+    // - otherwise fall back to the child's textContent
+    // - logs a warning and continues when nothing meaningful is found
+    const getFirstChildTextOrImgAlt = el => {
+        if (!el) return ''
+
+        // prefer the first child node that has non-empty textContent or contains an <img>
+        for (let n = 0; n < el.childNodes.length; n++) {
+            const c = el.childNodes[n]
+            if (!c) continue
+
+            // if child is an element, check for an <img> inside it first
+            if (c.nodeType === Node.ELEMENT_NODE) {
+                const img = c.querySelector && c.querySelector('img')
+                if (img && img.alt && img.alt.trim() !== '') {
+                    return img.alt.trim()
+                    }
+                // if no suitable img, use element's textContent if it has visible text
+                const t = (c.textContent || '').trim()
+                if (t !== '') return t
+                }
+            else {
+                // for text nodes, return non-empty trimmed text
+                const t = (c.textContent || '').trim()
+                if (t !== '') return t
+                }
             }
-		if (index[indexChar]) {
-            index[indexChar].section += ' #'+charArray[j].section
-            if (charArray[j].status) index[indexChar].status = charArray[j].status
-            }
-		else {
-            index[indexChar] = new Object
-			index[indexChar].section = '#'+charArray[j].section
-            if (charArray[j].status) index[indexChar].status = charArray[j].status
-			allchars += indexChar
-			}
-		}
-	//console.log('index',index)
-    
-    // sort the allchars string
-    sortedAllChars = [...allchars].sort()
-    allchars = sortedAllChars.join('')
-	//document.getElementById('allchars').value = allchars
-	}
+
+        // nothing meaningful found
+        return ''
+        }
+
+
+    // get the character
+    const cell = getFirstChildTextOrImgAlt(node)
+    if (!cell) {
+        console.log('No content found for', node.parentNode && node.parentNode.textContent)
+        continue
+        }
+
+
+    // find enclosing section id; use closest('section') for clarity and robustness
+    const sectionEl = node.closest('section')
+    const section = sectionEl ? sectionEl.id : ''
+
+    // ignore index/map sections as before
+    if (!section || section.includes('index_') || section.includes('_map') || section.includes('map_')) continue
+
+    // determine status only for list items
+    let status = ''
+    if (node.classList.contains('listItem')) {
+      const listHead = node.parentNode && node.parentNode.parentNode && node.parentNode.parentNode.parentNode
+      if (listHead) {
+        if (listHead.classList.contains('otherBox')) status = 'other'
+        else if (listHead.classList.contains('characterBox') || listHead.classList.contains('mainBox')) status = 'character'
+        else if (listHead.classList.contains('auxiliaryBox') || listHead.classList.contains('auxBox')) status = 'auxiliary'
+        else if (listHead.classList.contains('deprecatedBox')) status = 'deprecated'
+        else if (listHead.classList.contains('archaicBox')) status = 'archaic'
+      }
+    }
+
+    // expand cell string into characters and push compact objects
+    for (const ch of [...cell]) {
+      const obj = { codepoint: ch, section }
+      if (status) obj.status = status
+      charArray.push(obj)
+    }
+  }
+
+  // build index in place. assume `index` is a global or outer-scope object
+  // use let/const to avoid implicit globals
+  if (typeof index === 'undefined') window.index = {} // create if missing
+  const idx = index
+
+  // accumulate characters for sorting
+  window.allchars = ''
+
+  // iterate charArray once and build index entries
+  for (let j=0, L=charArray.length; j<L; j++) {
+    const entry = charArray[j]
+    const c = entry.codepoint
+    const secTag = '#' + entry.section
+
+    // if entry exists and already lists this section, update status if provided
+    if (idx[c] && idx[c].section.includes(entry.section)) {
+      if (entry.status) idx[c].status = entry.status
+      continue
+    }
+
+    // if entry exists but section is new, append
+    if (idx[c]) {
+      idx[c].section += ' ' + secTag
+      if (entry.status) idx[c].status = entry.status
+    } else {
+      // new entry
+      idx[c] = { section: secTag }
+      if (entry.status) idx[c].status = entry.status
+      allchars += c
+    }
+  }
+
+  // produce sorted allchars string
+  allchars = [...allchars].sort().join('')
+  // optional: store or return allchars if needed
+  return { index: idx, allchars }
+}
+
+
+
+
+
+
+
+function makeIndexObjectX () { // copilot optimised
+  // collect characters temporarily
+  const charArray = []
+
+  // select nodes once
+  const chars = document.querySelectorAll('.codepoint, .listItem')
+
+  // iterate with indexed for to avoid creating iterators for every loop
+  for (let i=0, len=chars.length; i<len; i++) {
+    const node = chars[i]
+
+    // skip empty text nodes quickly
+    const text = node.textContent && node.textContent.trim()
+    if (!text) {
+        continue
+        }
+
+    // skip nodes explicitly excluded via .noindex anywhere up the tree
+    if (node.closest('.noindex')) continue
+
+    // grab the first child's text (preserve original behaviour)
+    const first = node.firstChild
+    if (!first) {
+      console.log('No content found for', node.parentNode && node.parentNode.textContent)
+      continue
+    }
+    const cell = first.textContent
+
+    // find enclosing section id; use closest('section') for clarity and robustness
+    const sectionEl = node.closest('section')
+    const section = sectionEl ? sectionEl.id : ''
+
+    // ignore index/map sections as before
+    if (!section || section.includes('index_') || section.includes('_map') || section.includes('map_')) continue
+
+    // determine status only for list items
+    let status = ''
+    if (node.classList.contains('listItem')) {
+      const listHead = node.parentNode && node.parentNode.parentNode && node.parentNode.parentNode.parentNode
+      if (listHead) {
+        if (listHead.classList.contains('otherBox')) status = 'other'
+        else if (listHead.classList.contains('characterBox') || listHead.classList.contains('mainBox')) status = 'character'
+        else if (listHead.classList.contains('auxiliaryBox') || listHead.classList.contains('auxBox')) status = 'auxiliary'
+        else if (listHead.classList.contains('deprecatedBox')) status = 'deprecated'
+        else if (listHead.classList.contains('archaicBox')) status = 'archaic'
+      }
+    }
+
+    // expand cell string into characters and push compact objects
+    for (const ch of [...cell]) {
+      const obj = { codepoint: ch, section }
+      if (status) obj.status = status
+      charArray.push(obj)
+    }
+  }
+
+  // build index in place. assume `index` is a global or outer-scope object
+  // use let/const to avoid implicit globals
+  if (typeof index === 'undefined') window.index = {} // create if missing
+  const idx = index
+
+  // accumulate characters for sorting
+  window.allchars = ''
+
+  // iterate charArray once and build index entries
+  for (let j=0, L=charArray.length; j<L; j++) {
+    const entry = charArray[j]
+    const c = entry.codepoint
+    const secTag = '#' + entry.section
+
+    // if entry exists and already lists this section, update status if provided
+    if (idx[c] && idx[c].section.includes(entry.section)) {
+      if (entry.status) idx[c].status = entry.status
+      continue
+    }
+
+    // if entry exists but section is new, append
+    if (idx[c]) {
+      idx[c].section += ' ' + secTag
+      if (entry.status) idx[c].status = entry.status
+    } else {
+      // new entry
+      idx[c] = { section: secTag }
+      if (entry.status) idx[c].status = entry.status
+      allchars += c
+    }
+  }
+
+  // produce sorted allchars string
+  allchars = [...allchars].sort().join('')
+  // optional: store or return allchars if needed
+  return { index: idx, allchars }
+}
+
+
+
+
 
 
 
@@ -3171,43 +3351,73 @@ function makeMarkup () {
 
 
 
-function makeMarkupForSection (sectionName) {
-    // rewrite the index for a given section in the index
-    // new versions makes markup changes in place
+function makeMarkupForSection(sectionName) {  // copilot optimised
+    //console.log(`>>> makeMarkupForSection(',sectionName,')   Convert the index's characterBox lists to markup.`)
     // sectionName is the id of a section in the index
     // global: index, contains the mappings of character to section
     
-    if (document.getElementById(sectionName) === null) {
-        console.log('ℹ no ',sectionName,'section found (makeMarkupForSection)')
-        return
+    // find the section element once; return early if not present
+    const sectionEl = document.getElementById(sectionName)
+    if (!sectionEl) return
+
+    // ensure an index object exists and use a local reference for faster lookups
+    if (typeof index === 'undefined') window.index = {}
+    const idx = index
+
+    // gather figures into an array to avoid re-querying a live NodeList
+    const figures = Array.from(sectionEl.querySelectorAll('figure'))
+
+    // small helper: convert special visible-space glyph to actual comma
+    const normalize = ch => (ch === '␣' ? ',' : ch)
+
+    // process each figure once
+    for (const fig of figures) {
+        // read text content once and guard empty/whitespace-only figures
+        const raw = (fig.textContent || '').trim()
+        if (!raw) {
+            fig.dataset.links = ''
+            makeIndexLine(fig) // preserve existing behaviour for empty figures
+            continue
+            }
+
+        // split by comma, trim each token and drop empty tokens
+        const tokens = raw.split(',').map(s => s.trim()).filter(Boolean)
+
+        // accumulate section strings and record characters not found in index
+        const outSections = []
+        const missing = []
+
+        for (const token of tokens) {
+            // normalise token and lookup in index
+            const ch = normalize(token)
+            const entry = idx[ch]
+
+
+            if (!entry) {
+                if (! fig.classList.contains('tbcBox')) missing.push(ch) // character not in index
+                }
+            else outSections.push(entry.section) // collect the section string, unless this is in the To be Investigated list
+            }
+
+        // report missing characters once per figure (keeps console output compact)
+        if (missing.length) console.warn(`While creating markup for the section <${ sectionName }> in the index, the following characters were not found in the global {index} object, indicating that they were in the index but not found in the text:\n`, missing)
+
+        // set dataset.links — join sections with commas; add trailing comma only if desired
+        fig.dataset.links = outSections.length ? outSections.join(',') + ',' : ''
+
+        // call existing function to convert dataset.links into markup
+        makeIndexLine(fig)
         }
 
-    var i, j, k
-    
-    var indexList = document.getElementById(sectionName)
-    var indexFigures = indexList.querySelectorAll('figure')
-    for (i=0;i<indexFigures.length;i++) {
-        var allCharsArray = indexFigures[i].textContent.split(',')
-        //var allCharsArray = indexFigures[i].textContent.split('␣')
-        //console.log('allCharsArray',allCharsArray)
-                
-        var out = ''
-        var missing = []
-        for (k=0;k<allCharsArray.length;k++) {
-            if (typeof index[allCharsArray[k]] === 'undefined') missing.push(allCharsArray[k])
-            else out += index[allCharsArray[k]].section + ','
-            }
-        if (missing.length > 0) {
-            console.log('INFO: in makeMarkupForSection, the following characters were not found in the global index object (meaning that they don\'t appear in the text)')
-            for (var j=0;j<missing.length;j++) console.log(missing[j])
-            }
-        //console.log('out',out)
-        
-        indexFigures[i].dataset.links = out
-        //replaceStuff(indexFigures[i])
-        makeIndexLine(indexFigures[i])
+    // return useful results for testing or further processing
+    return {
+        index: idx,
+        figuresProcessed: figures.length
         }
-	}
+    }
+
+
+
 
 
 
@@ -3277,7 +3487,7 @@ function copyIntroInfo () {
     if (document.getElementById('vowel_description')) {
         var out = ''
         var paras = document.querySelectorAll('.addToVowels')
-        console.log("Copying",paras.length,"paragraphs to Vowel section.")
+        // console.log("Copying",paras.length,"paragraphs to Vowel section.")
         for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
         if (document.getElementById('vowel_mappings')) out += `<aside class="instructions" style="margin:4rem;">The summary table just below gives a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.</aside>`
         if (out !== '') document.getElementById('vowel_description').innerHTML = out
@@ -3287,7 +3497,7 @@ function copyIntroInfo () {
     if (document.getElementById('consonant_description')) {
         var out = ''
         var paras = document.querySelectorAll('.addToConsonants')
-        console.log("Copying",paras.length,"paragraphs to Consonant section.")
+        // console.log("Copying",paras.length,"paragraphs to Consonant section.")
         for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
         if (document.getElementById('consonant_mappings')) out += `<aside class="instructions" style="margin:4rem;">The summary table just below gives a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.</aside>`
         if (out !== '') document.getElementById('consonant_description').innerHTML = out
@@ -3298,7 +3508,7 @@ function copyIntroInfo () {
     if (document.getElementById('novowel_description')) {
         var out = ''
         var paras = document.querySelectorAll('.addToNovowel')
-        console.log("Copying",paras.length,"paragraphs to Novowel section.")
+        // console.log("Copying",paras.length,"paragraphs to Novowel section.")
         for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
         if (out !== '') document.getElementById('novowel_description').innerHTML = out
         }
@@ -3308,7 +3518,7 @@ function copyIntroInfo () {
     if (document.getElementById('diacritic_description')) {
         var out = ''
         var paras = document.querySelectorAll('.addToDiacritics')
-        console.log("Copying",paras.length,"paragraphs to Diacritics section.")
+        // console.log("Copying",paras.length,"paragraphs to Diacritics section.")
         for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
         if (out !== '') document.getElementById('diacritic_description').innerHTML = out
         }
@@ -3387,7 +3597,7 @@ function createtocPanel (maxlevel) {
                                 hhh.appendChild(aaa)
                                 hhh.className = 'toc3'
                                 }
-                                console.log(h2)
+                                // console.log(h2)
                                 if (! h2.includes('index')) hh.appendChild(hhh)
                             }
 						}
