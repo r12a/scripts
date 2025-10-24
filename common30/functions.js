@@ -1960,7 +1960,7 @@ function replaceStuff (node) {
         else out += listItem + listIPA
 
         if (latin.length > 0) {
-        console.log('LATIN',latin)
+            // console.log('LATIN',latin)
             if (latin[i]) out += '<span class="listLatin">'+latin[i]+'</span>'
             else out += '&nbsp;'
             }
@@ -3400,7 +3400,8 @@ function makeMarkupForSection(sectionName) {  // copilot optimised
             }
 
         // report missing characters once per figure (keeps console output compact)
-        if (missing.length) console.warn(`While creating markup for the section <${ sectionName }> in the index, the following characters were not found in the global {index} object, indicating that they were in the index but not found in the text:\n`, missing)
+        //if (missing.length) console.warn(`While creating markup for the section <${ sectionName }> in the index, the following characters were not found in the global {index} object, indicating that they were in the index but not found in the text:\n`, missing)
+        if (missing.length) console.warn('%cIndex characters not in the text!', 'color:darkorange;font-weight:bold;',`See section <${ sectionName }>. (Missing from the global {index} object.)\n`, missing)
 
         // set dataset.links — join sections with commas; add trailing comma only if desired
         fig.dataset.links = outSections.length ? outSections.join(',') + ',' : ''
@@ -3647,6 +3648,7 @@ function addCharacterLists () {
     // adds the lists of characters in selected sections to the right hand column
 
     if (document.getElementById('vowels') && document.getElementById('vowels').querySelector('aside') !== null) listSectionCharacters('vowels')
+    if (document.getElementById('vocalics') && document.getElementById('vocalics').querySelector('aside') !== null) listSectionCharacters('vocalics')
     if (document.getElementById('consonants') && document.getElementById('consonants').querySelector('aside') !== null)listSectionCharacters('consonants')
     if (document.getElementById('novowel') && document.getElementById('novowel').querySelector('aside') !== null)listSectionCharacters('novowel')
     if (document.getElementById('symbols') && document.getElementById('symbols').querySelector('aside') !== null)listSectionCharacters('symbols')
