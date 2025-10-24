@@ -19,9 +19,9 @@ function makeAutoTranslitArray (lang) {
     // suck out the relevant data into the chars array
     for (var line in spreadsheetRows) {
 		if (line.length === 1 && spreadsheetRows[line][cols.transLoc] === '') {
-            errmsg = `Warning! Empty translit column in makeAutoTranslitArray for ${ spreadsheetRows[line][cols.ucsName] }`
+            errmsg = `Empty translit column in spreadsheet for ${ spreadsheetRows[line][cols.ucsName] }`
             //console.log('Empty translit column in makeAutoTranslitArray for ',spreadsheetRows[line][cols.ucsName])
-            console.log('%c'+errmsg, 'color:orange;font-weight:bold;')
+            console.warn('%c'+errmsg, 'color:orange;font-weight:bold;')
             continue		
 			}
 
