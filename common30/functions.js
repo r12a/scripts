@@ -166,9 +166,465 @@ function addUsageHistory () {
 
 
 
-
 function expandCharMarkup () {
-    if (traceSet.has('expandCharMarkup') || traceSet.has('all')) console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
+    // console.log('expandCharMarkup() Convert char markup to .codepoint spans (has to be done before the indexing)')
+    // Purpose: convert .hex/.hx (hex codepoint lists) and .ch (literal characters)
+    // into <span class="codepoint"> markup containing glyph(s) and Unicode name(s).
+    // This must run before any indexing that depends on .codepoint spans.
+
+    
+    // High-level notes:
+    // - .hx/.hex elements contain one or more hex codepoints separated by spaces.
+    // - .ch elements contain one or more literal characters.
+    // - Supported modifier classes (applied to the source element) control output:
+    //     split     -> insert " + " between successive items and break BDI wrappers
+    //     svg       -> render item as an SVG image sourced from the corpus
+    //     img       -> render item as a PNG image (large folder)
+    //     init/medi/fina -> add ZERO WIDTH JOINER (ZWJ) to form positional cursive shapes
+    //     skip      -> insert ZWJ after a diacritic (used to visually separate mark + base)
+    //     circle    -> prepend dotted circle (U+25CC) before combining marks
+    //     coda      -> append dotted circle after the item (used for closed syllables)
+    //     noname    -> suppress rendering of the Unicode name link
+    //     noindex   -> mark output with noindex class to exclude from index
+    //     uncommon  -> mark <bdi> with class="uncommon" for styling
+    //
+    // - The function consults `spreadsheetRows` and `cols` (global data) to look up
+    //   character metadata such as Unicode names. If a character is not found in the
+    //   database, an error marker is inserted.
+    //
+    // - Generated markup:
+    //   <span class="codepoint[ noindex]">
+    //     <bdi [class="uncommon"] lang="{lang}">[glyphs and markers]</bdi>
+    //     <a href="javascript:void(0)"><span class="uname">Unicode Name(s)</span></a>
+    //   </span>
+    //
+    // Globals used by this function:
+    // - spreadsheetRows: mapping from character to row data (contains ucsName)
+    // - cols: mapping of column names to numeric indices (cols['ucsName'])
+    // - getScriptGroup(dec, boolean): utility that returns script block name for images
+    // - window.langTag: default language tag for generated <bdi>
+    // - window.hideBlockName: optional pattern to remove block names from name output
+    // - blockDirection: used to optionally set dir="rtl" on output (if needed)
+
+
+
+    // Helper: read the presence of modifier classes on an element and return
+    // a compact flags object used by the renderer.
+    function readFlags(el) {
+        return {
+            split: el.classList.contains('split'),
+            svg: el.classList.contains('svg'),
+            img: el.classList.contains('img'),
+            initial: el.classList.contains('init'),
+            medial: el.classList.contains('medi'),
+            final: el.classList.contains('fina'),
+            skipDiacritic: el.classList.contains('skip'),
+            circle: el.classList.contains('circle'),
+            coda: el.classList.contains('coda'),
+            noname: el.classList.contains('noname'),
+            noindex: el.classList.contains('noindex'),
+            uncommon: el.classList.contains('uncommon')
+        }
+    }
+
+    // Helper: language for output <bdi> (element.lang or global default)
+    function getLanguage(el) {
+        return (el.lang && el.lang !== '') ? el.lang : window.langTag
+    }
+
+    // Helper: return HTML for a single codepoint depending on flags (svg/img/text)
+    function glyphHtmlForCodepoint(dec, hex, ch, flags) {
+        if (flags.svg) {
+            const block = getScriptGroup(dec, false)
+            return `<img src="../../c/${ block }/${ hex }.svg" alt="${ ch }" style="height:2rem;">`
+        }
+        if (flags.img) {
+            const block = getScriptGroup(dec, false)
+            return `<img src="../../c/${ block }/large/${ hex }.png" alt="${ ch }" style="height:2rem;">`
+        }
+        return `&#x${ hex };`
+    }
+
+    // Helper: escape optional class attributes for <bdi>
+    function bdiUncommonAttr(flags) {
+        return flags.uncommon ? ' class="uncommon"' : ''
+    }
+
+    // Shared renderer for both .hx/.hex and .ch elements.
+    // tokens: array of items where each token is {dec, hex, ch} (dec may be null for missing/invalid)
+    function renderTokens(tokens, flags, language) {
+        let unicodeNames = ''
+        let unicodeChars = ''
+        // positional forms: add ZWJ before or after as required
+        if (flags.final || flags.medial) unicodeChars += '\u200D' // leading ZWJ for medial/final
+        if (flags.circle) unicodeChars = '\u25CC' + unicodeChars // dotted circle prefix
+
+        tokens.forEach((token, idx) => {
+            const { dec, hex, ch, missing } = token
+
+            // If missing in DB or token invalid, append visible marker and continue.
+            if (missing) {
+                unicodeNames += `<span style="color:red">${ ch } NOT IN DB! (expandCharMarkup)</span>`
+                unicodeChars += ch
+                console.error(`%cNot in DB: ${ ch }`, 'color:red;font-weight:bold;')
+                return
+                }
+
+            // Build name string (skip dotted circle sentinel U+25CC for name output)
+            if (hex !== '25CC') {
+                if (unicodeNames) unicodeNames += ' + '
+                unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
+                }
+
+            // If split requested, close previous <bdi>, insert " + ", and open a new one.
+            if (flags.split && idx > 0) unicodeChars += `</bdi> + <bdi${ bdiUncommonAttr(flags) } lang="${ language }">`
+
+            // Append glyph HTML or literal depending on flags.
+            unicodeChars += glyphHtmlForCodepoint(dec, hex, ch, flags)
+
+            // If skipDiacritic (skip) is set and this is the first token, insert ZWJ after it.
+            if (flags.skipDiacritic && idx === 0) unicodeChars += '\u200D'
+            })
+
+        // trailing ZWJ/space for initial/medial
+        if (flags.initial || flags.medial) unicodeChars += '\u200D '
+
+        // coda appends dotted circle; represent as visible character when requested
+        const codaStr = flags.coda ? '◌' : ''
+
+        // Final composed markup for this element
+        const noindexClass = flags.noindex ? ' noindex' : ''
+        const bdiAttr = `${ bdiUncommonAttr(flags) } lang="${ language }"`
+        let out = `<span class="codepoint${ noindexClass }" translate="no"><bdi ${ bdiAttr }`
+        if (flags.img || flags.svg) out += ' style="margin:0;"'
+        out += `>${ unicodeChars }${ codaStr }</bdi>`
+        if (!flags.noname) out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>`
+        out += `</span>`
+
+        // Optionally hide block names if a global pattern is set
+        if (window.hideBlockName) {
+            let re = new RegExp(window.hideBlockName, 'g')
+            out = out.replace(re,'')
+            }
+        return out
+        }
+
+    // Small utility: normalise hex string to 4+ uppercase digits
+    function normaliseHex(dec) {
+        let hex = dec.toString(16).toUpperCase()
+        while (hex.length < 4) hex = '0' + hex
+        return hex
+        }
+
+    // Process .hex/.hx elements (space-separated hex code points)
+    const hexElements = document.querySelectorAll('.hex, .hx')
+    hexElements.forEach(el => {
+        const flags = readFlags(el)
+        const language = getLanguage(el)
+
+        // Tokenise on whitespace; ignore empty tokens
+        const rawTokens = el.textContent.trim().split(/\s+/).filter(t => t !== '')
+        if (rawTokens.length === 0) return
+
+        // Build token objects: parse hex -> dec -> char, check DB presence
+        const tokens = rawTokens.map(tok => {
+            const dec = parseInt(tok, 16)
+            if (Number.isNaN(dec)) {
+                console.error('%c' + 'The link text "' + el.textContent + '" is not a number!.', 'color:red;font-weight:bold;')
+                return { dec: null, hex: tok, ch: tok, missing: true }
+            }
+            const ch = String.fromCodePoint(dec)
+            // If character not in spreadsheetRows DB, flag as missing so renderer can annotate
+            if (!spreadsheetRows[ch]) return { dec, hex: tok, ch, missing: true }
+            return { dec, hex: tok, ch, missing: false }
+            })
+
+        // Render and replace the original element
+        el.outerHTML = renderTokens(tokens, flags, language)
+        })
+
+    // Process .ch elements (literal characters). Use spread operator to iterate code points.
+    const chElements = document.querySelectorAll('.ch')
+    chElements.forEach(el => {
+        const flags = readFlags(el)
+        const language = getLanguage(el)
+
+        // Spread into an array of Unicode code points (handles surrogate pairs correctly).
+        const chars = [...el.textContent]
+        if (chars.length === 0) return
+
+        // Build token objects from characters
+        const tokens = chars.map(ch => {
+            const dec = ch.codePointAt(0)
+            const hex = normaliseHex(dec)
+            if (!spreadsheetRows[ch]) return { dec, hex, ch, missing: true }
+            return { dec, hex, ch, missing: false }
+            })
+
+        // Render and replace the original element
+        el.outerHTML = renderTokens(tokens, flags, language)
+        })
+    }
+
+
+
+function expandCharMarkupZ () {
+    // Entry log for debugging when the function runs.
+    // Purpose: convert character markup (.hex, .hx, .ch) into rendered
+    // <span class="codepoint"> elements that include a visible glyph
+    // (character, image, or SVG) and a Unicode name link for indexing.
+    // This must run before any indexing code that relies on .codepoint spans.
+    console.log('expandCharMarkup() Convert char markup to .codepoint spans (has to be done before the indexing)')
+    
+    // High-level notes:
+    // - .hx/.hex elements contain one or more hex codepoints separated by spaces.
+    // - .ch elements contain one or more literal characters.
+    // - Supported modifier classes (applied to the source element) control output:
+    //     split     -> insert " + " between successive items and break BDI wrappers
+    //     svg       -> render item as an SVG image sourced from the corpus
+    //     img       -> render item as a PNG image (large folder)
+    //     init/medi/fina -> add ZERO WIDTH JOINER (ZWJ) to form positional cursive shapes
+    //     skip      -> insert ZWJ after a diacritic (used to visually separate mark + base)
+    //     circle    -> prepend dotted circle (U+25CC) before combining marks
+    //     coda      -> append dotted circle after the item (used for closed syllables)
+    //     noname    -> suppress rendering of the Unicode name link
+    //     noindex   -> mark output with noindex class to exclude from index
+    //     uncommon  -> mark <bdi> with class="uncommon" for styling
+    //
+    // - The function consults `spreadsheetRows` and `cols` (global data) to look up
+    //   character metadata such as Unicode names. If a character is not found in the
+    //   database, an error marker is inserted.
+    //
+    // - Generated markup:
+    //   <span class="codepoint[ noindex]">
+    //     <bdi [class="uncommon"] lang="{lang}">[glyphs and markers]</bdi>
+    //     <a href="javascript:void(0)"><span class="uname">Unicode Name(s)</span></a>
+    //   </span>
+    //
+    // Globals used by this function:
+    // - spreadsheetRows: mapping from character to row data (contains ucsName)
+    // - cols: mapping of column names to numeric indices (cols['ucsName'])
+    // - getScriptGroup(dec, boolean): utility that returns script block name for images
+    // - window.langTag: default language tag for generated <bdi>
+    // - window.hideBlockName: optional pattern to remove block names from name output
+    // - blockDirection: used to optionally set dir="rtl" on output (if needed)
+
+     // local state variables used across both .hx and .ch processing loops
+     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname, coda, noindex, uncommon
+     
+     // Short behavioural notes for the flags:
+     // - split: places " + " between items and breaks BDI wrappers
+     // - init/medi/fina: add ZWJ for cursive joining (initial/medial/final positional forms)
+     // - skip: insert ZWJ after a diacritic to separate it from the following consonant
+     // - circle: prepend dotted circle (◌) before the item (typical for combining marks)
+     // - coda: append dotted circle after the item (used to show closed syllables)
+     // - noname: do not produce the Unicode name link
+     
+   
+    // -------------------------
+    // Process .hx and .hex elements
+    // -------------------------
+    // These elements contain hexadecimal code points (e.g. "0915 093F") separated by spaces.
+    charMarkup = document.querySelectorAll('.hex, .hx')
+    for (i=0;i<charMarkup.length;i++) {
+        // Read modifier classes and set boolean/attribute flags used later when generating output.
+        // Use ternary style assignment to ensure variables are boolean or string as expected.
+        charMarkup[i].classList.contains('split')? split=true: split=false
+        charMarkup[i].classList.contains('svg')? svg=true: svg=false
+        charMarkup[i].classList.contains('img')? img=true: img=false
+        charMarkup[i].classList.contains('init')? initial=true: initial=false
+        charMarkup[i].classList.contains('medi')? medial=true: medial=false
+        charMarkup[i].classList.contains('fina')? final=true: final=false
+        charMarkup[i].classList.contains('skip')? skipDiacritic=true: skipDiacritic=false
+        charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
+        charMarkup[i].classList.contains('noname')? noname=true: noname=false
+        charMarkup[i].classList.contains('noindex')? noindex=' noindex': noindex=''
+        charMarkup[i].classList.contains('uncommon')? uncommon=' class="uncommon"': uncommon=''
+
+        // Determine language for generated <bdi>. If the source element has no lang,
+        // fall back to the global window.langTag.
+        if (charMarkup[i].lang === '') var language = window.langTag
+        else language = charMarkup[i].lang
+        
+        // Split the text content into hex code tokens (space separated).
+        charlist = charMarkup[i].textContent.trim().split(' ')
+        // If the element was empty or had only whitespace, skip it.
+        if (charlist[0] === '') continue
+        unicodeNames = ''
+        unicodeChars = ''
+
+        out = ''
+        // For medial/final positional markers we add a ZWJ to the glyph sequence.
+        // Note: Some renderers (Safari) require an actual space before/after the ZWJ for expected
+        // visual behaviour; the original code comments note this.
+        if (final || medial) unicodeChars += '\u200D' // ZERO WIDTH JOINER
+        // If circle flag is set, prepend dotted circle (U+25CC) before the glyphs.
+        if (circle) unicodeChars = '\u25CC' + unicodeChars
+        // Iterate through each hex code in the token list and build glyph + name strings.
+        for (c=0;c<charlist.length;c++) {
+            hex = charlist[c]
+            dec = parseInt(hex,16)
+            // Validate the hex token parsed to a number.
+            if (Number.isNaN(dec)) { 
+                console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandCharMarkup)', 'color:' + 'red' + ';font-weight:bold;')
+                continue
+            }
+            // Convert codepoint to JS string (may be surrogate pair for > U+FFFF).
+            ch = String.fromCodePoint(dec)
+
+            // Look up character metadata in the spreadsheetRows database.
+            if (! spreadsheetRows[ch]) {
+                // If not found, highlight as missing and append raw character to glyph output.
+                unicodeNames += `<span style="color:red">${ ch } NOT IN DB! (expandCharMarkup)</span>`
+                unicodeChars += ch
+                console.error(`%cNot in DB: ${ ch }`, 'color:red;font-weight:bold;')
+                continue
+            }
+            
+            // For name display, if this hex is not the dotted circle sentinel 25CC,
+            // append a " + " separator between multiple names.
+            if (hex !== '25CC') {
+                if (c > 0) unicodeNames += ' + '
+                // spreadsheetRows[ch][cols['ucsName']] expected to contain the canonical name.
+                // Remove any colon inserted in the name with replace.
+                unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
+            }
+         
+            // If split is requested, break BDI wrappers and insert a " + " between items.
+            if (split && c > 0) unicodeChars += `</bdi> + <bdi ${ uncommon } lang="${ language }">`
+            // Render glyph as SVG or PNG image if requested, otherwise emit numeric character reference.
+            if (svg) {
+                block = getScriptGroup(dec, false)
+                unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ ch }" style="height:2rem;">`
+            }
+            else if (img) {
+                block = getScriptGroup(dec, false)
+                unicodeChars += `<img src="../../c/${ block }/large/${ hex }.png" alt="${ ch }" style="height:2rem;">`
+            }
+            else unicodeChars += `&#x${ hex };` // numeric character reference (hex)
+            // If skipDiacritic is set and this is the first token, insert a ZWJ after it.
+            if (skipDiacritic && c == 0) unicodeChars += '&#x200D;'
+        }
+            
+        // If initial or medial forms were requested, append a trailing ZWJ and space.
+        if (initial || medial) unicodeChars += '\u200D '
+
+        // Build the final markup. Wrap glyph(s) in a <bdi> for isolation with optional class.
+        out += `<span class="codepoint${ noindex }" translate="no"><bdi ${ uncommon } lang="${ language }"`
+        // If images are used, remove any extra margin for a tighter layout.
+        if (img || svg) out += ' style="margin:0;" '
+        out += `>${ unicodeChars }${ coda }</bdi>`
+        // If noname was not specified, append the Unicode name link for UX/indexing.
+        if (noname) {}
+        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        
+        // Optionally remove or mask block names in the generated name string if
+        // window.hideBlockName contains a regex/string to remove.
+        if (window.hideBlockName) {
+            let re = new RegExp(window.hideBlockName, 'g')
+            charMarkup[i].outerHTML = out.replace(re,'')
+        }
+        else charMarkup[i].outerHTML = out
+    }
+
+
+
+
+    // -------------------------
+    // Process .ch elements (literal characters)
+    // -------------------------
+    // These elements contain literal characters; iterate over each code point in the text.
+    charMarkup = document.querySelectorAll('.ch')
+    for (i=0;i<charMarkup.length;i++) {
+        // Read modifier classes into flags as above.
+        charMarkup[i].classList.contains('split')? split=true: split=false
+        charMarkup[i].classList.contains('svg')? svg=true: svg=false
+        charMarkup[i].classList.contains('img')? img=true: img=false
+        charMarkup[i].classList.contains('init')? initial=true: initial=false
+        charMarkup[i].classList.contains('medi')? medial=true: medial=false
+        charMarkup[i].classList.contains('fina')? final=true: final=false
+        charMarkup[i].classList.contains('circle')? circle=true: circle=false
+        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
+        charMarkup[i].classList.contains('noname')? noname=true: noname=false
+        charMarkup[i].classList.contains('noindex')? noindex=' noindex': noindex=''
+        charMarkup[i].classList.contains('uncommon')? uncommon=' class="uncommon"': uncommon=''
+        
+        // Language selection for the output BDI.
+        if (charMarkup[i].lang === '') var language = window.langTag
+        else language = charMarkup[i].lang
+
+        // Spread the element text into an array of characters, but be mindful:
+        // Using [...str] correctly iterates by Unicode code points (handles surrogate pairs).
+        charlist = [... charMarkup[i].textContent]
+        unicodeNames = ''
+        unicodeChars = ''
+        
+        out = ''
+        // For final/medial positionalization, prepend a space then a ZWJ to the glyphs.
+        if (final || medial) unicodeChars += ' \u200D'
+        // Walk each character (code point) in the source element.
+        for (c=0;c<charlist.length;c++) {
+            dec = charlist[c].codePointAt(0)
+            hex = dec.toString(16).toUpperCase()
+            // Ensure hex is at least 4 digits for consistent resource lookups (e.g. file names).
+            while (hex.length < 4) hex = '0'+hex
+
+            // If the character is not in the spreadsheetRows DB, mark it and continue.
+            if (! spreadsheetRows[charlist[c]]) {
+                unicodeChars += charlist[c]
+                unicodeNames += `<span style="color:red"> ${ charlist[c] } NOT IN DB!</span> `
+                continue
+            }
+            
+            // Append " + " separator between multiple names.
+            if (c > 0) unicodeNames += ' + '
+            unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
+
+            // If split is set, inject closures/openings of BDI wrappers and a " + " separator.
+            if (split && c > 0) unicodeChars += `</bdi> + <bdi ${ uncommon } lang="${ language }">`
+            
+            // Render either SVG/PNG image or the literal character depending on flags.
+            if (svg) {
+                block = getScriptGroup(dec, false)
+                unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ charlist[c] }" style="height:2rem;">`
+            }
+            else if (img) {
+                block = getScriptGroup(dec, false)
+                unicodeChars += `<img src="../../c/${ block }/large/${ hex }.png" alt="${ charlist[c] }" style="height:2rem;">`
+            }
+            else unicodeChars += charlist[c]
+        }
+            
+        // If initial/medial forms requested, append trailing ZWJ + space.
+        if (initial || medial) unicodeChars += '\u200D '
+        // If circle flag set, prepend dotted circle to the glyph string (for combining marks).
+        if (circle) unicodeChars = '\u25CC' + unicodeChars
+
+        // Compose the final output span similar to the .hx processing above.
+        out += `<span class="codepoint${ noindex }" translate="no"><bdi ${ uncommon } lang="${ language }"`
+        if (blockDirection === 'rtl') out += ` dir="rtl"`
+        if (img || svg) out += ' style="margin:0;" '
+        out += `>${ unicodeChars }${ coda }</bdi>`
+        if (noname) {}
+        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
+        
+        // Apply optional block name hiding; then replace the source element with generated HTML.
+        if (window.hideBlockName) {
+            let re = new RegExp(window.hideBlockName, 'g')
+            charMarkup[i].outerHTML = out.replace(re,'')
+        }
+        else charMarkup[i].outerHTML = out
+    }
+}
+
+
+
+
+
+
+function expandCharMarkupX () {
+    console.log('expandCharMarkup() Convert char markup to .codepoint spans (has to be done before the indexing)')
      // convert char markup to .codepoint spans (has to be done before the indexing)
      // the .ch and .hx classes should only be used for characters in the
      // spreadsheet.  For other characters, generate the markup in a picker
@@ -225,6 +681,7 @@ function expandCharMarkup () {
             if (! spreadsheetRows[ch]) {
                 unicodeNames += `<span style="color:red">${ ch } NOT IN DB! (expandCharMarkup)</span>`
                 unicodeChars += ch
+                console.error(`%cNot in DB: ${ ch }`, 'color:red;font-weight:bold;')
                continue
                 }
             
@@ -1703,7 +2160,7 @@ function makeTables (lang) {
     // console.log('makeTables(',lang,') Create the lists of characters in yellow, etc. boxes')
 
     if (typeof window.spreadsheet == 'undefined') {
-		console.log("Spreadsheet undefined.")
+		console.error("Spreadsheet undefined.")
 		return
 		}
     
@@ -1757,7 +2214,456 @@ function getStatus (token) {
 
 
 
-function replaceStuff (node) {
+function replaceStuff (node) {  // Copilot optimised
+   // console.log('>>> replaceStuff( ',node,')')
+  // Build character boxes and replace source node content with generated HTML.
+  // Behaviour preserved from original: handles .index context, dataset flags,
+  // optional images/fonts, IPA/latin/meaning display, status, links, and codepoints.
+
+  // Quick guards
+  if (!node) return
+
+  // Helper: boolean class/dataset checks
+  const hasClass = (el, name) => el.classList.contains(name)
+  const ds = node.dataset || {}
+
+  // Context detection: where the rendered list appears (affects order)
+  const context = node.closest('.soundSummary') ? 'soundSummary'
+    : node.closest('.sectionCharacterList') ? 'sectionCharacterList'
+    : null
+
+  // Index line detection
+  const indexline = hasClass(node, 'indexline')
+
+  // Split the source characters by comma exactly as original did
+  // Keep original empty items where present; trim not used to preserve spaces
+  const chars = node.textContent.split(',')
+
+  // Build ignore set from data-ignore (comma separated)
+  const ignoreset = new Set((ds.ignore || '').split(',').filter(Boolean))
+
+  // Optional font style
+  const fontAttr = ds.font ? ` style="font-family: ${ ds.font }"` : ''
+
+  // Determine which info columns to show (default behaviour preserved)
+  let info = ''
+  if (typeof ds.ipa === 'undefined' && typeof ds.latin === 'undefined' && typeof ds.cols === 'undefined') {
+    info = 'ipa'
+  }
+  if (typeof ds.cols !== 'undefined') info += ds.cols
+
+  // Flags from classes / dataset
+  const noexpansion = hasClass(node, 'noexpansion')
+  const showLast = ds.select === 'last'
+  const showFirst = !showLast && !!ds.select
+  const ipaplusClass = hasClass(node, 'ipaplus')
+
+  // Parse datasets into arrays where applicable (preserve index alignment)
+  const notes = (ds.notes ? ds.notes.split(',') : [])
+  let extra = (ds.extra ? ds.extra.split(',') : [])
+  const extraLang = extra.length ? extra[extra.length - 1] : ''
+  if (extra.length) extra = extra.slice(0, -1)
+  const ipa = (ds.ipa ? ds.ipa.split(',') : [])
+  const latin = (ds.latin ? ds.latin.split(',') : [])
+  const links = (ds.links ? ds.links.split(',') : [])
+  const highlights = (ds.highlight ? ds.highlight.split(',') : [])
+  const dirn = ds.dir ? ` dir="${ ds.dir }"` : ''
+
+  // Helper: safe lookup of spreadsheetRows and cols with graceful fallback
+  const sheet = window.spreadsheetRows || {}
+  const cols = window.cols || {}
+
+  // Precompute whether status column should be shown (scan characters)
+  let showStatus = false
+  for (let c = 0; c < chars.length; c++) {
+    const ch = chars[c]
+    if (sheet[ch] && cols.status !== undefined && sheet[ch][cols.status]) {
+        if (String(sheet[ch][cols.status]).trim() !== '') { showStatus = true; break }
+        }
+    }
+
+  // Helper: return status HTML (delegates to global getStatus if present)
+  const getStatusHtml = (ch) => {
+    if (sheet[ch] && cols.status !== undefined && sheet[ch][cols.status]) {
+        return (typeof window.getStatus === 'function') ? window.getStatus(sheet[ch][cols.status]) : sheet[ch][cols.status]
+        }
+    return '&nbsp;'
+    }
+
+  // Helper: normalise hex string for codepoint filenames (4+ uppercase)
+  const normaliseHex = (dec) => {
+    let h = dec.toString(16).toUpperCase()
+    while (h.length < 4) h = '0' + h
+    return h
+    }
+
+  // Start composing output
+  let out = ''
+
+  // Summary / listAll block: count visible items (ignore plain spaces)
+  const visibleCount = chars.reduce((acc, x) => acc + (x === ' ' ? 0 : 1), 0)
+  out += `<div class="listAll" onClick="listAll(this, '${ window.langTag }')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>`
+  out += (visibleCount === 2) ? 'both' : (visibleCount > 2 ? visibleCount : '')
+  out += `</div>`
+
+  // Expansion control if allowed
+  if (!noexpansion) {
+    out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; margin-inline-end:1rem;"></div>`
+    }
+
+  // listArray container
+  out += `<div class="listArray">`
+
+  // Loop through each source entry and build a listPair
+  for (let i = 0; i < chars.length; i++) {
+    // Determine the effective character for lookups depending on showFirst/showLast
+    const raw = chars[i]
+    
+    // Convert U+2423 placeholder to comma
+    const src = (raw === '\u2423') ? ',' : raw
+
+    // Determine char used for DB lookups; if showLast/showFirst, split codepoints
+    let charForLookup = src
+    if (showLast || showFirst) {
+        const splitList = [...src]
+        charForLookup = showLast ? (splitList[1] || splitList[0] || '') : (splitList[0] || '')
+        }
+
+    // Build index id only if inside #index element (preserve behaviour)
+    const indexId = node.closest('#index') ? ` id="index${ src }"` : ''
+
+    // Start listPair wrapper
+    out += `<div class="listPair"${ indexId }>`
+
+    // IPA handling:
+    // - If explicit ipa dataset provided, use those values
+    // - Else if info includes ipa, try to build from spreadsheet (including ipaplus)
+    let listIPAHtml = ''
+    if (ipa.length > 0) listIPAHtml = ipa[i] ? `<span class="listIPA">${ ipa[i] }</span>` : ' '
+    else if (info.includes('ipa')) {
+        // ipaplus support: append spreadsheet ipaPlus if class ipaplus present
+        let ipaplus = ''
+        if (ipaplusClass && sheet[charForLookup] && cols.ipaPlus !== undefined && sheet[charForLookup][cols.ipaPlus]) ipaplus = String(sheet[charForLookup][cols.ipaPlus]).toLowerCase()
+        // ipaLoc may contain multiple parts separated by spaces; append ipaplus between parts
+        let ipaLoc = '&nbsp;'
+        if (sheet[charForLookup] && cols.ipaLoc !== undefined && sheet[charForLookup][cols.ipaLoc]) {
+            const parts = String(sheet[charForLookup][cols.ipaLoc]).toLowerCase().split(' ')
+            ipaLoc = parts.map(p => p + ipaplus).join(' ').trim()
+            }
+        listIPAHtml = ipaLoc === '&nbsp;' ? '<span>&nbsp;</span>' : `<span class="listIPA">${ ipaLoc }</span>`
+        }
+
+    // Order glyph + IPA reversed for soundSummary context
+    if (context === 'soundSummary') out += listIPAHtml
+
+    // Build primary glyph span with optional highlight, font, lang, dir and title
+    const highlightClass = highlights[i] ? ' highlight' : ''
+    const langAttr = ds.lang ? ` lang="${ ds.lang }"` : ` lang="${ window.langTag }"`
+    const title = (sheet[src] && cols.ucsName !== undefined) ? sheet[src][cols.ucsName] : ''
+    out += `<span class="listItem${ highlightClass }"${ fontAttr }${ dirn }${ langAttr } title="${ title }">${ src }</span>`
+
+    // Extra second-row characters (preserve alignment)
+    if (extra.length > 0) {
+        out += extra[i] ? `<span class="listExtra" lang="${ extraLang }">${ extra[i] }</span>` : `<span>&nbsp;</span>`
+        }
+
+    // Status column if required
+    if (showStatus) {
+        const statusHtml = getStatusHtml(charForLookup)
+        out += `<span class="listItemType">${ statusHtml }</span>`
+        }
+
+    // Order glyph + IPA reversed for soundSummary context
+    if (context !== 'soundSummary') out += listIPAHtml
+
+    // Latin transcription (explicit dataset takes precedence)
+    if (latin.length > 0) out += latin[i] ? `<span class="listLatin">${ latin[i] }</span>` : '&nbsp;'
+    else if (info.includes('latin')) {
+        const trans = (sheet[charForLookup] && cols.transcription !== undefined) ? sheet[charForLookup][cols.transcription] : '&nbsp;'
+        out += `<span class="listLatin">${ trans }</span>`
+        }
+
+    // Meaning / gloss (info-driven) and notes dataset
+    if (info.includes('meaning')) {
+        const meaning = (sheet[charForLookup] && cols.meaning !== undefined) ? sheet[charForLookup][cols.meaning] : '&nbsp;'
+        out += `<span class="listMeaning">${ meaning }</span>`
+        }
+    if (notes.length > 0) out += notes[i] ? `<span class="listMeaning">${ notes[i] }</span>` : `<span class="listMeaning">&nbsp;</span>`
+
+    // Code point values block (skipped for space or when class noCodePoints present)
+    if (!hasClass(node, 'noCodePoints') && src !== ' ') {
+      out += '<span class="listUnum">'
+      const charList = [...src] // iterate code points correctly
+      for (let z = 0; z < charList.length; z++) {
+        if (ignoreset.has(charList[z])) continue
+        const dec = charList[z].codePointAt(0)
+        const hex = normaliseHex(dec)
+        out += `<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">${ hex }</span>`
+        if (charList.length > 1 && z < charList.length - 1) out += '<br/>'
+        }
+      out += '</span>'
+      }
+
+    // Links block (preserve indexline wrapping and arrow symbol)
+    if (links.length > 0) {
+      if (links[i]) {
+        const linkList = links[i].split(' ').filter(Boolean)
+        if (indexline) out += '<div class="index_details">'
+        const uname = (sheet[charForLookup] && cols.ucsName !== undefined) ? String(sheet[charForLookup][cols.ucsName]).replace(/U\+[^:]+: /,'') : 'NAME UNKNOWN'
+        if (indexline) out += `<span class="index_uname">${ uname }</span>`
+        out += `<span class="links">`
+        linkList.forEach(l => { out += `<a href="${ l }">\u2193</a>` })
+        out += `</span>`
+        if (indexline) out += `</div>`
+        }
+      else out += '<span>&nbsp;</span>'
+      }
+
+    // Now insert IPA/html in correct position if not already added for soundSummary
+    //if (context === 'soundSummary') out += listIPAHtml + `<span class="listItemType"></span>` // maintain spacing/structure
+    //else out += listIPAHtml
+
+    // Insert IPA and glyph in the correct order, only once
+    //if (context === 'soundSummary') out += listIPAHtml + listItemHtml /* primary glyph/html already built earlier as listItemHtml */
+    //else out += listItemHtml + listIPAHtml
+
+    // Close listPair
+    out += `</div>`
+    }
+
+  // Close listArray and write output back into node
+  out += `</div>`
+  node.innerHTML = out
+  }
+
+
+
+
+
+
+function replaceStuffZ (node) {  // Copilot optimised
+  // Build character boxes and replace source node content with generated HTML.
+  // Behaviour preserved from original: handles .index context, dataset flags,
+  // optional images/fonts, IPA/latin/meaning display, status, links, and codepoints.
+
+  // Quick guards
+  if (!node) return
+
+  // Helper: boolean class/dataset checks
+  const hasClass = (el, name) => el.classList.contains(name)
+  const ds = node.dataset || {}
+
+  // Context detection: where the rendered list appears (affects order)
+  const context = node.closest('.soundSummary') ? 'soundSummary'
+    : node.closest('.sectionCharacterList') ? 'sectionCharacterList'
+    : null
+
+  // Index line detection
+  const indexline = hasClass(node, 'indexline')
+
+  // Split the source characters by comma exactly as original did
+  // Keep original empty items where present; trim not used to preserve spaces
+  const chars = node.textContent.split(',')
+
+  // Build ignore set from data-ignore (comma separated)
+  const ignoreset = new Set((ds.ignore || '').split(',').filter(Boolean))
+
+  // Optional font style
+  const fontAttr = ds.font ? ` style="font-family: ${ ds.font }"` : ''
+
+  // Determine which info columns to show (default behaviour preserved)
+  let info = ''
+  if (typeof ds.ipa === 'undefined' && typeof ds.latin === 'undefined' && typeof ds.cols === 'undefined') {
+    info = 'ipa'
+  }
+  if (typeof ds.cols !== 'undefined') info += ds.cols
+
+  // Flags from classes / dataset
+  const noexpansion = hasClass(node, 'noexpansion')
+  const showLast = ds.select === 'last'
+  const showFirst = !showLast && !!ds.select
+  const ipaplusClass = hasClass(node, 'ipaplus')
+
+  // Parse datasets into arrays where applicable (preserve index alignment)
+  const notes = (ds.notes ? ds.notes.split(',') : [])
+  let extra = (ds.extra ? ds.extra.split(',') : [])
+  const extraLang = extra.length ? extra[extra.length - 1] : ''
+  if (extra.length) extra = extra.slice(0, -1)
+  const ipa = (ds.ipa ? ds.ipa.split(',') : [])
+  const latin = (ds.latin ? ds.latin.split(',') : [])
+  const links = (ds.links ? ds.links.split(',') : [])
+  const highlights = (ds.highlight ? ds.highlight.split(',') : [])
+  const dirn = ds.dir ? ` dir="${ ds.dir }"` : ''
+
+  // Helper: safe lookup of spreadsheetRows and cols with graceful fallback
+  const sheet = window.spreadsheetRows || {}
+  const cols = window.cols || {}
+
+  // Precompute whether status column should be shown (scan characters)
+  let showStatus = false
+  for (let c = 0; c < chars.length; c++) {
+    const ch = chars[c]
+    if (sheet[ch] && cols.status !== undefined && sheet[ch][cols.status]) {
+        if (String(sheet[ch][cols.status]).trim() !== '') { showStatus = true; break }
+        }
+    }
+
+  // Helper: return status HTML (delegates to global getStatus if present)
+  const getStatusHtml = (ch) => {
+    if (sheet[ch] && cols.status !== undefined && sheet[ch][cols.status]) {
+        return (typeof window.getStatus === 'function') ? window.getStatus(sheet[ch][cols.status]) : sheet[ch][cols.status]
+        }
+    return '&nbsp;'
+    }
+
+  // Helper: normalise hex string for codepoint filenames (4+ uppercase)
+  const normaliseHex = (dec) => {
+    let h = dec.toString(16).toUpperCase()
+    while (h.length < 4) h = '0' + h
+    return h
+    }
+
+  // Start composing output
+  let out = ''
+
+  // Summary / listAll block: count visible items (ignore plain spaces)
+  const visibleCount = chars.reduce((acc, x) => acc + (x === ' ' ? 0 : 1), 0)
+  out += `<div class="listAll" onClick="listAll(this, '${ window.langTag }')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>`
+  out += (visibleCount === 2) ? 'both' : (visibleCount > 2 ? visibleCount : '')
+  out += `</div>`
+
+  // Expansion control if allowed
+  if (!noexpansion) {
+    out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; margin-inline-end:1rem;"></div>`
+    }
+
+  // listArray container
+  out += `<div class="listArray">`
+
+  // Loop through each source entry and build a listPair
+  for (let i = 0; i < chars.length; i++) {
+    // Determine the effective character for lookups depending on showFirst/showLast
+    const raw = chars[i]
+    // Convert U+2423 placeholder to comma as original did
+    const src = (raw === '\u2423') ? ',' : raw
+
+    // Determine char used for DB lookups; if showLast/showFirst, split codepoints
+    let charForLookup = src
+    if (showLast || showFirst) {
+        const splitList = [...src]
+        charForLookup = showLast ? (splitList[1] || splitList[0] || '') : (splitList[0] || '')
+        }
+
+    // Build index id only if inside #index element (preserve behaviour)
+    const indexId = node.closest('#index') ? ` id="index${ src }"` : ''
+
+    // Start listPair wrapper
+    out += `<div class="listPair"${ indexId }>`
+
+    // Build primary glyph span with optional highlight, font, lang, dir and title
+    const highlightClass = highlights[i] ? ' highlight' : ''
+    const langAttr = ds.lang ? ` lang="${ ds.lang }"` : ` lang="${ window.langTag }"`
+    const title = (sheet[src] && cols.ucsName !== undefined) ? sheet[src][cols.ucsName] : ''
+    out += `<span class="listItem${ highlightClass }"${ fontAttr }${ dirn }${ langAttr } title="${ title }">${ src }</span>`
+
+    // Extra second-row characters (preserve alignment)
+    if (extra.length > 0) {
+        out += extra[i] ? `<span class="listExtra" lang="${ extraLang }">${ extra[i] }</span>` : `<span>&nbsp;</span>`
+        }
+
+    // Status column if required
+    if (showStatus) {
+        const statusHtml = getStatusHtml(charForLookup)
+        out += `<span class="listItemType">${ statusHtml }</span>`
+        }
+
+    // IPA handling:
+    // - If explicit ipa dataset provided, use those values
+    // - Else if info includes ipa, try to build from spreadsheet (including ipaplus)
+    let listIPAHtml = ''
+    if (ipa.length > 0) listIPAHtml = ipa[i] ? `<span class="listIPA">${ ipa[i] }</span>` : ' '
+    else if (info.includes('ipa')) {
+        // ipaplus support: append spreadsheet ipaPlus if class ipaplus present
+        let ipaplus = ''
+        if (ipaplusClass && sheet[charForLookup] && cols.ipaPlus !== undefined && sheet[charForLookup][cols.ipaPlus]) ipaplus = String(sheet[charForLookup][cols.ipaPlus]).toLowerCase()
+        // ipaLoc may contain multiple parts separated by spaces; append ipaplus between parts
+        let ipaLoc = '&nbsp;'
+        if (sheet[charForLookup] && cols.ipaLoc !== undefined && sheet[charForLookup][cols.ipaLoc]) {
+            const parts = String(sheet[charForLookup][cols.ipaLoc]).toLowerCase().split(' ')
+            ipaLoc = parts.map(p => p + ipaplus).join(' ').trim()
+            }
+        listIPAHtml = ipaLoc === '&nbsp;' ? '<span>&nbsp;</span>' : `<span class="listIPA">${ ipaLoc }</span>`
+        }
+
+    // Order glyph + IPA reversed for soundSummary context
+    if (context === 'soundSummary') out += listIPAHtml + '' // filled in below
+    // Append IPA (deferred to after list item ordering logic below)
+
+    // Latin transcription (explicit dataset takes precedence)
+    if (latin.length > 0) out += latin[i] ? `<span class="listLatin">${ latin[i] }</span>` : '&nbsp;'
+    else if (info.includes('latin')) {
+        const trans = (sheet[charForLookup] && cols.transcription !== undefined) ? sheet[charForLookup][cols.transcription] : '&nbsp;'
+        out += `<span class="listLatin">${ trans }</span>`
+        }
+
+    // Meaning / gloss (info-driven) and notes dataset
+    if (info.includes('meaning')) {
+        const meaning = (sheet[charForLookup] && cols.meaning !== undefined) ? sheet[charForLookup][cols.meaning] : '&nbsp;'
+        out += `<span class="listMeaning">${ meaning }</span>`
+        }
+    if (notes.length > 0) out += notes[i] ? `<span class="listMeaning">${ notes[i] }</span>` : `<span class="listMeaning">&nbsp;</span>`
+
+    // Code point values block (skipped for space or when class noCodePoints present)
+    if (!hasClass(node, 'noCodePoints') && src !== ' ') {
+      out += '<span class="listUnum">'
+      const charList = [...src] // iterate code points correctly
+      for (let z = 0; z < charList.length; z++) {
+        if (ignoreset.has(charList[z])) continue
+        const dec = charList[z].codePointAt(0)
+        const hex = normaliseHex(dec)
+        out += `<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">${ hex }</span>`
+        if (charList.length > 1 && z < charList.length - 1) out += '<br/>'
+        }
+      out += '</span>'
+      }
+
+    // Links block (preserve indexline wrapping and arrow symbol)
+    if (links.length > 0) {
+      if (links[i]) {
+        const linkList = links[i].split(' ').filter(Boolean)
+        if (indexline) out += '<div class="index_details">'
+        const uname = (sheet[charForLookup] && cols.ucsName !== undefined) ? String(sheet[charForLookup][cols.ucsName]).replace(/U\+[^:]+: /,'') : 'NAME UNKNOWN'
+        if (indexline) out += `<span class="index_uname">${ uname }</span>`
+        out += `<span class="links">`
+        linkList.forEach(l => { out += `<a href="${ l }">\u2193</a>` })
+        out += `</span>`
+        if (indexline) out += `</div>`
+        }
+      else out += '<span>&nbsp;</span>'
+      }
+
+    // Now insert IPA/html in correct position if not already added for soundSummary
+    //if (context === 'soundSummary') out += listIPAHtml + `<span class="listItemType"></span>` // maintain spacing/structure
+    //else out += listIPAHtml
+
+    // Insert IPA and glyph in the correct order, only once
+    if (context === 'soundSummary') out += listIPAHtml + listItemHtml /* primary glyph/html already built earlier as listItemHtml */
+    else out += listItemHtml + listIPAHtml
+
+    // Close listPair
+    out += `</div>`
+    }
+
+  // Close listArray and write output back into node
+  out += `</div>`
+  node.innerHTML = out
+  }
+
+
+
+
+
+function replaceStuffX (node) {
     //console.log('>>> replaceStuff( ', node, ')  Build the characterboxes')
 
     var showLast = false
@@ -2368,6 +3274,71 @@ function showCharDetailsForSummary (evt) {
 
 
 function showCharDetailsEvent (evt) {
+    // opens a panel to display character notes details
+    
+	//if (evt.target.closest('.noexpansion')) return
+    
+	if (typeof charDetails === 'undefined') return
+    
+    // don't show details for section character lists in right margin
+    if (evt.target.closest('.sectionCharacterList')) return 
+
+	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
+    
+    if (evt.target.closest('.soundSummary')) { showCharDetailsForSummary(evt); return }
+	
+    if (evt.target.closest('.cased')) { showCharDetailsForCased(evt); return }
+	
+    // remove any dotted circles
+    const searchStr = evt.target.textContent.replace(/◌/g,'')
+    
+    // find out whether there's already something being displayed
+	detailsTable = evt.target.closest('figure').querySelector('table')
+    displayedItem = ''
+    displayedItems = []
+    if (detailsTable !== null) displayedItems = detailsTable.querySelectorAll('th .ex')
+    for (i=0;i<displayedItems.length;i++) displayedItem += displayedItems[i].textContent
+    
+    // if clicked item and detailsTable are about the same thing, just close detailsTable
+    if (displayedItem && displayedItem === searchStr) { 
+        detailsTable.parentNode.removeChild(detailsTable)
+        return
+        }
+    
+    // clear any existing detailsTable
+	if (detailsTable !== null) detailsTable.parentNode.removeChild(detailsTable)
+	
+    // make a new detailsTable
+	var detailsTable = document.createElement('table')
+	detailsTable.className = 'charDetails'
+	detailsTable.innerHTML = makeDetails(searchStr, evt.target.lang)
+    
+	evt.target.parentNode.parentNode.parentNode.appendChild(detailsTable)
+	
+	expandCharMarkup()
+	addExamples(evt.target.lang)
+	convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = detailsTable.querySelectorAll('.codepoint a, .codepoint code')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(detailsTable, window.blockDirectoryName, 'c')
+    
+    // set event trigger on all .ipa elements - opens description box on click
+    var ipaNodes = document.querySelectorAll(".ipa")
+    console.log('ipaNodes',ipaNodes.length)
+    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+    }
+
+
+
+
+
+
+
+
+
+
+function showCharDetailsEventX (evt) {
     // opens a panel to display character notes details
     
 	//if (evt.target.closest('.noexpansion')) return
@@ -3394,7 +4365,9 @@ function makeMarkupForSection(sectionName) {  // copilot optimised
 
 
             if (!entry) {
-                if (! fig.classList.contains('tbcBox')) missing.push(ch) // character not in index
+                // if character is not in index object add to missing
+                // unless it's a To be investigated character, or an index entry that is more than one character long
+                if (! fig.classList.contains('tbcBox') && ch.length === 1) missing.push(ch)
                 }
             else outSections.push(entry.section) // collect the section string, unless this is in the To be Investigated list
             }
@@ -3663,7 +4636,119 @@ function addCharacterLists () {
 
 
 
-function listSectionCharacters (section) {
+
+function listSectionCharacters (section) {  // documented by Copilot
+	// Collect all inline glyph sources in the given section:
+	// - .listItem elements (primary glyph spans created by replaceStuff)
+	// - <bdi> inside .codepoint (the visual glyph container)
+	// We'll use these to build a unique sorted list of characters used in the section.
+
+	charElems = document.getElementById(section).querySelectorAll('.listItem, .codepoint bdi')
+
+	// Aggregate raw character text from the collected elements
+	charList = ''
+	for (i=0;i<charElems.length;i++) {
+		// If this is a .listItem and it is not inside a figure marked noindex, use its textContent
+		if (charElems[i].className === 'listItem' && ! charElems[i].closest('figure').classList.contains('noindex'))  charList += charElems[i].textContent
+		// Otherwise, if the current element is inside a .codepoint and that .codepoint is not noindex,
+		// prefer any embedded <img alt="…"> text (SVG/PNG alt) so images contribute the character,
+		// otherwise use the element's textContent.
+		else if (charElems[i].closest('.codepoint') && charElems[i].closest('.codepoint').classList !== null && ! charElems[i].closest('.codepoint').classList.contains('noindex')) {
+			if (charElems[i].querySelector('img')) charList += charElems[i].querySelector('img').alt
+			else charList += charElems[i].textContent
+		    }
+	    }
+
+	// Clean up invisible/auxiliary characters used in rendering:
+	// - dotted circle U+25CC, ZERO WIDTH JOINER U+200D, normal and non-breaking spaces,
+	//   information symbol U+24D8 used as decoration in some workflows
+	charList = charList.replace(/\u25CC/g,'')
+	charList = charList.replace(/\u200D/g,'')
+	charList = charList.replace(/\u0020/g,'')
+	charList = charList.replace(/\u00A0/g,'')
+	charList = charList.replace(/\u24D8/g,'')
+
+	// The text U+2423 (open box) was used as a stand-in for commas in some content;
+	// restore that mapping so commas are preserved as characters rather than separators.
+	charList = charList.replace(/,/g,'\u2423')
+
+	// Convert the string of characters into an array of code points
+	// [...charList] iterates by Unicode code points (handles surrogate pairs)
+	charArray = [... charList]
+
+	// Remove duplicates by creating a Set then back to array
+	uniqueSet = new Set(charArray)
+	charArray = [...uniqueSet]
+
+	// Sort characters in Unicode code point order (string sort is acceptable for single code points)
+	charArray.sort()
+
+	// Join the unique sorted characters into a comma-separated list for later use
+	charList = charArray.join(',')
+
+	// Create a Set from that CSV (fast membership tests)
+	chartList = new Set(charList)
+
+	// Find index list items (global index area) so we can map characters back to index titles
+	indexListItems = document.getElementById('index').querySelectorAll('.listItem')
+
+	// Build an array of "char + title" strings for characters present in the index
+	inputLines = []
+	for (i=0;i<indexListItems.length;i++) {
+		// If this index entry's glyph is one of the characters in our character set,
+		// compose "char + sectionTitle" and push for grouping.
+		if (chartList.has(indexListItems[i].textContent)) {
+			title = indexListItems[i].textContent+' '+indexListItems[i].closest('section').querySelector('h3,h4').textContent
+			inputLines.push(title)
+		    }
+	    }
+
+	// Group characters by the index title they belong to.
+	// titleMap will be { titleString: [char1, char2, ...], ... }
+	const titleMap = {}
+	inputLines.forEach(line => {
+		// Split the line at first space: the first token is the character, the rest is the title.
+		const [char, ...titleParts] = line.split(' ')
+		const title = titleParts.join(' ')
+		if (!titleMap[title]) {
+			titleMap[title] = []
+		    }
+		titleMap[title].push(char)
+	    })
+
+	// Generate HTML: a small section that lists "Characters described in this section"
+	// and a figure.characterBox for each index title containing its characters.
+	out = `
+	<div class="sectionCharacterList">
+	<p>Characters described in this section</p>
+	`
+
+	for (const [title, chars] of Object.entries(titleMap)) {
+		// Join the group's characters with commas to create a figure suitable for replaceStuff()
+		let charList = chars.join(',')
+        charList = charList.replace(',,,',',\u2423,') // shield replaceStuff from ,,,
+        charList = charList.replace(',,','\u2423,') // shield replaceStuff from ,,
+        if (charList !== ',') out += `<div style="font-size:80%;">${title}</div><figure class="characterBox auto noexpansion small" data-cols="">${charList}</figure>`
+	    }
+
+	out += `
+	</div>
+	`
+
+	// Append the generated markup to the section's aside (preserve existing aside content)
+	document.getElementById(section).querySelector('aside').innerHTML += out
+
+	// After inserting figures, call replaceStuff on each figure so they are rendered
+	figures = document.getElementById(section).querySelector('aside').querySelectorAll('figure')
+	for (f=0;f<figures.length;f++) replaceStuff(figures[f])
+
+	// Add a short triage link using the concatenation of characters (remove commas for URL)
+	document.getElementById(section).querySelector('aside').innerHTML += `<p class="instructions" style="text-align:end;"><a href="../apps/listcategories/index.html?chars=${ charList.replace(/,/g,'') }" target="_blank">Triage by General Category</a></p>`
+    }
+
+
+
+function listSectionCharactersX (section) {
     //console.log('>>> listSectionCharacters(',section,')  Produce lists of characters used in a section, sorted by index titles.)
 
     charElems = document.getElementById(section).querySelectorAll('.listItem, .codepoint bdi')
