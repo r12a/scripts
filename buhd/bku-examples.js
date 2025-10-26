@@ -45,7 +45,7 @@ autoExpandExamples.bku = `
 ᝅᝒᝉᝓ|tooth|ˈŋi§fon|nífon
 ᝐᝉ|stream|ˈsa§fa|sáfa
 ᝑᝆ|to come|ˈhas§taj|hástay
-ᝄᝋ|hand/thread|ga§ˈmʌt/ˈɡʌ§mʌs|gamʌ́t/gʌ́mʌs
+ᝄᝋ|hand ~ thread|ga§ˈmʌt§ ~ ˈɡʌ§mʌs|gamʌ́t/gʌ́mʌs
 ᝊᝓᝑᝄᝓ|proud|bu§ˈha§ɣod|búhagod
 ᝋᝋᝒᝄᝓ|bathe|ma§ˈme§ɣus|mamégus
 ᝈᝓᝋᝍᝓ|tomorrow|nu§ma§ˈrum|numarúm
@@ -55,7 +55,7 @@ autoExpandExamples.bku = `
 ᝋᝂ|eat|ˈmaŋ§on|máŋon||not entirely sure of segmentation
 ᝎᝒᝎᝋᝓ|woman's garment|li§ˈlaɡ§mon|lilágmon
 ᝍᝒᝍᝓ|write|ˈri§rok|rírok
-ᝏᝐ|axe/for|wa§ˈsaj/wa§ˈsaɡ|wasáy/waság
+ᝏᝐ|axe ~ for|wa§ˈsaj§ ~ wa§ˈsaɡ|wasáy/waság
 ᝇᝓᝏ|two|ˈdu§waʔ|dúwaʔ
 ᝄᝓᝈ|flood|ˈɡu§naw|gúnaw
 ᝌᝉᝓ|supper|ˈja§fon|yáfon
