@@ -41,11 +41,9 @@ reflist = {
 
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 15.0",
-"sub":"Chapter 17.1: Philippine Scripts",
-"pages":"710-712",
-"isbn":"978-1-936213-16-0.",
-"url":"https://www.unicode.org/versions/Unicode15.0.0/ch17.pdf",
+"title":"The Unicode Standard, Version 17.0",
+"sub":"Southeast Asia-II, Indonesia and the Philippines, 17.1: Philippine Scripts: Tagalog, Hanunóo, Buhid, and Tagbanwa",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-17/#G26433",
 "reviewed": true
 },
 

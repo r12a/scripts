@@ -265,26 +265,36 @@ autoExpandExamples.hnn = `
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 `
+https://en.wiktionary.org/w/index.php?title=Category:Hanunoo_terms_with_IPA_pronunciation
+
+
+
+
+
+// automatically creates Online Resources section, if markup is uncommented in xx.html
+
+termLists = [
+
+{
+"title":"Wiktionary, Hanunoo lemmas with IPA",
+"url":"https://en.wiktionary.org/w/index.php?title=Category:Hanunoo_terms_with_IPA_pronunciation",
+"notes":"Mostly Latin."
+},
+
+/*
+{
+"title":"Austronesian Basic Vocabulary Database, Phan Rang Cham (Eastern Cham)",
+"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=371&sort=item",
+"notes":"Latin only",
+},
+
+{
+"title":"Living Dictionaries",
+"url":"https://livingdictionaries.app/sora/entries/list",
+"notes":"No native script.",
+},
+*/
+]
+
 
