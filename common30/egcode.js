@@ -436,7 +436,7 @@ function showCharDetailsInline (chars, clang, base, target, panel, list, transli
 
 
     // if this article is already open, close it
-    console.log('insertPoint',insertPoint,'next',insertPoint.nextElementSibling)
+    //console.log('insertPoint',insertPoint,'next',insertPoint.nextElementSibling)
     ptr = insertPoint.nextElementSibling
     //console.log('tagname',ptr.tagName, 'title',ptr.title)
     if (ptr !== null && ptr.tagName === 'ARTICLE' && ptr.title === chars) {
