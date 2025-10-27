@@ -29,12 +29,11 @@ reflist = {
 },
 
 "u": {
-"url":"https://www.unicode.org/versions/Unicode15.0.0/ch18.pdf",
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 15.0",
-"sub":"Chapter 18.9: East Asia, Lisu",
-"pages":"782-784",
-"isbn":"978-1-936213-16-0.",
+"title":"The Unicode Standard, Version 17.0",
+"sub":"Chapter 18: East Asia, Lisu",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-18/#G44587",
+"reviewed": true
 },
 
 "ul": {

@@ -28,6 +28,17 @@ autoExpandExamples.lis = `
 ꓔꓲꓹ|to dye|t§ǐ§‹
 ꓞꓽ ꓐꓳꓺ|salt|tsʰà§‹ §b§o§‹
 ꓠꓴꓻ|you|n§u§‹
+ꓚꓳ-ꓗꓴꓷꓼ|China|t͡ɕ§o˦˦.§k§u§ə˧˩|tʃo-kù̱ɤ
+ꓐꓵꓺ|to owe|by̠³³|by̱
+ꓒꓵꓽ|pumpkin|pʰ§y˧˩|pʰỳ
+ꓡꓲ-ꓢꓴ|Lisu language|l§i§§s§u|li̱-su̱
+ꓡꓲꓺ-ꓢꓴꓺ|Lisu language|l§i§§s§u|li̱-su̱
+ꓥꓪ|I, me|ŋ§wɑ|ŋwɑ
+ꓥꓳꓽ|language|ŋ§o˧˩|ŋò
+ꓦ ꓐꓻ|moon|hã˦˦.§ba˧˧|h̃ɑ bɑ
+ꓬꓲꓻ|water|ʑ§i˧˧|ji
+
+
 
 
 @ Handbook of the Lisu language – Lisu text is generated from transcription; IPA is generated from Lisu text
@@ -89,6 +100,8 @@ autoExpandExamples.lis = `
 ꓪꓴꓸ ꓖꓳꓽ ꓡꓳ|pillow|w§ú§‹§ §ɡ§ò§‹§ §l§o||wu1 gaw6 law3
 
 
+
+
 @ Unicode Lisu proposal http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3317.pdf
 
 ꓠꓴ ꓙꓰꓻˍ ꓥꓳꓻ|you will go|n§u§ §d͡ʑ§ḛ§‹§à§ §ŋ§o̰§‹
@@ -103,7 +116,6 @@ autoExpandExamples.lis = `
 @ https://en.wikipedia.org/wiki/Fraser_script
 
 ꓡꓬꓮꓳ ꓩꓷꓠ|jelly|l§i̯§ɛ§w§ §f§ə§n||凉粉
-ꓡꓲ-ꓢꓴ|Lisu language|l§i§§s§u|
 
 
 

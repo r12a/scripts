@@ -75,7 +75,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Ishida R, Lisu Block Notes, <!-- #BeginDate format:En2 -->27-Dec-2024<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/lisu/block">https://r12a.github.io/scripts/lisu/block</a></small></p>
+<p class="refLine"><small>Ishida R, Lisu Block Notes, <!-- #BeginDate format:En2 -->27-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/lisu/block">https://r12a.github.io/scripts/lisu/block</a></small></p>
 </details>
 
 
@@ -127,26 +127,24 @@
 
 
 <script>
-//addDetails (LanguageName, langClass, lang, dir, spreadsheet, cols) {
+// write the basic character framework, then add notes below
+// langTag is for codepoint names in descriptions of normalisation etc - choose something general
+// dir is direction
 addBasics('lis','ltr')
 </script>
 
-<script src="../../shared/scriptdb/lisu.js">  </script>
-<script src="lis-details.html">  </script>
-<script src="lis-globals.js"></script>
+
+<script src="../../shared/scriptdb/lisu.js">/* declares spreadsheet */</script>
+<script src="lis-details.html">/* has the actual note data */</script>
+<script src="lis-globals.js">/* global variables */</script>
 <script>
-addDetails (languageName, letterClassName, blockLangtag, blockDirection, spreadsheet, cols)
+addDetails(languageName, letterClassName, blockLangtag, blockDirection, spreadsheet, cols)
+makeAutoTranslitArray(blockLangtag)
 addExamples(letterClassName)
 convertTranscriptionData(blockLangtag)
 setMarks()
+expandCharMarkup()
 </script>
-
-
-<script>
-convertTranscriptionData()
-</script>
-
-
 
 
 
