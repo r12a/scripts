@@ -118,8 +118,8 @@ function addPageFeatures () {
     // show all sections to be added
     summaryNodes = document.querySelectorAll('.sectionAside details')
     //for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = true
-    for (i=0;i<summaryNodes.length;i++) if (summaryNodes[i].parentNode.parentNode.id !== 'page') summaryNodes[i].open = true
-    
+    //for (i=0;i<summaryNodes.length;i++) if (summaryNodes[i].parentNode.parentNode.id !== 'page') summaryNodes[i].open = true
+    for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = false
     }
 
 
