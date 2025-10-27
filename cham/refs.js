@@ -32,12 +32,10 @@ reflist = {
 
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 15.0",
-"sub":"Chapter 16.10: Southeast Asia-I, Cham",
-"pages":"701-702",
-"isbn":"978-1-936213-16-0.",
-"url":"https://www.unicode.org/versions/Unicode15.1.0/ch16.pdf",
-"reviewed": false
+"title":"The Unicode Standard, Version 17.0",
+"sub":"Southeast Asia-I, Thailand, Laos, Myanmar, Cambodia, Vietnam, 16.10: Cham",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/#G55659",
+"reviewed": true
 },
 
 "wl": {
@@ -80,10 +78,10 @@ reflist = {
 },
 
 "ss": {
-"authors": "SIL ScriptSource",
-"title":"Historical Unicode documents about Cham",
-"retr": "Feb 2024",
-"url":"https://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=c4yzafta3f",
+"authors": "SIL",
+"title":"Writing Systems Technical Resources, Cham",
+"retr": "Oct 2025",
+"url":"https://writingsystems.info/scrlang/scripts/cham/",
 "reviewed":false
 },
 
@@ -98,6 +96,14 @@ reflist = {
 "authors": "Alexander Smith",
 "title":"A grammatical sketch of Eastern Cham",
 "url":"https://www.academia.edu/12033399/A_grammatical_sketch_of_Eastern_Cham",
+"reviewed":false
+},
+
+"ssh": {
+"authors": "SIL",
+"title":"Writing Systems Technical Resources, Unicode Status for Cham",
+"retr": "Oct 2025",
+"url":"https://writingsystems.info/scrlang/unicode/cham-unicode/",
 "reviewed":false
 },
 
