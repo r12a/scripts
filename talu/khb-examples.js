@@ -99,7 +99,7 @@ autoExpandExamples.khb = `
 ᦈᧁᧉ||␣
 ᦉ|to wash|saʔ˧˥|ṡ
 ᦉᦏᦱᧇ|snow, frost|sa.§tʰ§aː§p̚˧˥|ṡṫhaab
-ᦉᦏᦱᧇᦡᦱᧂᧉ||␣
+ᦉᦏᦱᧇᦡᦱᧂᧉ|ice (in a frozen lake)|sa.§tʰ§aː§p̚˧˥.§d§aː§ŋ§˩˧|ṡṫhaabḋaang²
 ᦉᦛᧃ|heaven|sa.§va§n˥|ṡv̇an
 ᦉᦛᧆᦌᦤᦲ|greeting||ṡv̇adsdii
 ᦉᦡᦹ||␣
@@ -150,7 +150,7 @@ autoExpandExamples.khb = `
 ᦋᦱᧂᧉ||␣
 ᦋᦲᦞᦲᧆ||
 ᦋᦲᧃᧉ|meat|t͡ɕ§i§n§˩|tsiin²
-ᦋᦲᧉᦩᦱᧈ||␣
+ᦋᦲᧉᦩᦱᧈ|chrysanthemum|t͡ɕ§iː§˩.§xʷ§aː§˧|tsii²xwaa¹
 ᦋᦸᧃᧈᦋᦱᧈ||␣
 ᦋᦸᧃᧉ||␣
 ᦋᦻ||␣
@@ -563,7 +563,7 @@ autoExpandExamples.khb = `
 
 ᦅᧄᦺᦑᦟᦹᧉ|Tai Lü|kâ§m.§›§tâj.§l§ɯ̀§‹|
 
-
+ᦶᦟᦰ|and|lɛʔ
 
 
 
