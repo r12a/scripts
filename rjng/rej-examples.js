@@ -31,6 +31,7 @@ autoExpandExamples.rej = `
 ꥆꤲꥇꥐ|wind||angin
 ꥆꤼꥉꤶ꥓|smoke||asep
 ꥆꥀꥐ|cloud||awan
+ꤳꤾꥍꤼ꥓|yam||taleus|||taleus
 
 
 

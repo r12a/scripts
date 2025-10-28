@@ -30,11 +30,10 @@ reflist = {
 
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 15.0",
-"sub":"Chapter 17.5: Southeast Asia II",
-"pages":"724",
-"url":"https://www.unicode.org/versions/Unicode15.1.0/ch17.pdf",
-"reviewed": false
+"title":"The Unicode Standard, Version 17.0",
+"sub":"17.5: Southeast Asia-II, Indonesia and the Philippine, Rejang",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/#G27208",
+"reviewed": true
 },
 
 "ws": {
@@ -72,11 +71,11 @@ reflist = {
 },
 
 "ss": {
-"authors": "ScriptSource",
-"title":"Rejang (Redjang, Kaganga)Rjng",
-"retr": "Feb 2024",
-"url":"https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Rjng",
-"reviewed":false
+"authors": "SIL",
+"title":"Writing Systems Technical Resources, Rejang (Redjang, Kaganga)",
+"retr": "Oct 2025",
+"url":"https://writingsystems.info/scrlang/scripts/rjng/",
+"reviewed":true
 },
 
 
@@ -99,11 +98,10 @@ reflist = {
 },
 
 "sil": {
-"authors": "Lorna Priest",
-"title":"Unicode Status (Rejang)",
-"retr": "Feb 2024",
-"publisher":"SIL International",
-"url":"https://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=72d3ce3834",
+"authors": "SIL",
+"title":"Writing Systems Technical Resources, Unicode Status for Rejang",
+"retr": "Oct 2025",
+"url":"https://writingsystems.info/scrlang/unicode/rjng-unicode/",
 "reviewed":true
 },
 
@@ -115,6 +113,13 @@ reflist = {
 "reviewed":false
 },
 
+"asss": {
+"authors": "Ariq Syauqi, Sarwit Sarwono",
+"title":"Review on the Rejang Unicode Range A930–A95F",
+"date": "2025",
+"url":"https://www.unicode.org/L2/L2025/25162-rejang-review.pdf",
+"reviewed":false
+},
 
 }
 
