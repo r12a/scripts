@@ -358,7 +358,7 @@ function closeDialogEsc (e) {
 
 
 function addSearchEtc () {
-    document.getElementById('top').innerHTML = `<img src="../common29/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>`
+    document.getElementById('top').innerHTML = `<img src="../common30/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>`
     }   
 
 
@@ -1238,7 +1238,7 @@ if (node.innerHTML == '') {
 
     <p class="instructions"><span class="leadin">Fonts.</span> To view this page as intended, you need ${ script } fonts.  The page comes with a webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.</p>
 
-    <p class="instructions">The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common29/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+    <p class="instructions">The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common30/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
 
     <p class="instructions"><span class="leadin">Language usage lists.</span> Information about languages that use these characters is taken from the list maintained for the <a href="../../app-charuse/index.html">Character usage lookup</a> app. The list is not exhaustive.</p>
 
