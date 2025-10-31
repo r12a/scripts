@@ -758,7 +758,7 @@ function addBasicMarkup (section, title) {
             `
 
 	var charList = [... section.textContent]
-	console.log(out, charList)
+	//console.log(out, charList)
 
 	for (var i=0;i<charList.length;i++) {
         hex = charList[i].codePointAt(0).toString(16).toUpperCase()
@@ -789,8 +789,7 @@ function addBasicMarkup (section, title) {
 	   // check for decomposable characters
 		if (cchar.normalize('NFD') != cchar) {
 			out += '<p class="decomposition">'
-			//out += 'Decomposes to '+makeCharacterLink(cchar.normalize('NFD'), window.languageList[0], dir)
-			out += `Decomposes to <span class="ch split">${ cchar.normalize('NFD') }`
+			out += `Decomposes to <span class="ch split">${ cchar.normalize('NFD') }</span>`
 			if (cchar.normalize('NFD') === cchar.normalize('NFC')) out += '<br><strong>The NFC normalised form of this character is the decomposed sequence!</strong>'
 			out += '</p>'
 			}
