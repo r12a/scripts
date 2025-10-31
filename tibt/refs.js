@@ -58,12 +58,10 @@ reflist = {
 },
 
 "u": {
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch13.pdf",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/#G31615",
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
-"sub":"Chapter 13.4: South and Central Asia-II, Tibetan",
-"pages":"526-536",
-"isbn":"978-1-936213-16-0.",
+"title":"The Unicode Standard, Version 17.0",
+"sub":"13.4: South and Central Asia-II, Other Modern Scripts, Tibetan",
 },
 
 "ul": {
