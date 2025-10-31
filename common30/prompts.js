@@ -297,7 +297,7 @@ function addPageIntro (script, orthogName, iso, picker, page) {
     if (document.querySelector('#fontWarning')) fonts = `<p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">Fonts:</strong> ${ document.querySelector('#fontWarning').innerHTML }</p>`
    
     // Add a line to mention this is a draft if 'draft' appears in h1
-    if (document.querySelector('.orthographyLine').textContent.includes('draft')) draft = `<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>`
+    if (document.querySelector('.orthographyLine') && document.querySelector('.orthographyLine').textContent.includes('draft')) draft = `<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>`
 
 
     var out = ''
