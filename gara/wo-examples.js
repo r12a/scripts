@@ -336,7 +336,7 @@ lujum|vegetable|l§u§ɟ§u§m
 làkk|speak incomprehensibly|l§aː§k§k
 làmb||
 làmmiñ||
-𐵸𐵍𐵍𐵎𐵴𐵍𐵍𐵎𐵾|hippopotamus|l§eː§‹§‹§b§eː§‹§‹§r|léebéer|léebéer||léebéer
+𐵸𐵩𐵍𐵎𐵴𐵍𐵍𐵎𐵾|hippopotamus|l§eː§‹§b§eː§‹§‹§r|léebéer|léebéer||léebéer
 léegi||
 lëg||
 lóriye|laurel|l§o§r§i§j§e
@@ -707,7 +707,6 @@ yóor||
 ñàmbi||
 ñëw||
 óom|knee|oː§‹§m
-𐵐𐵌𐵶𐵽𐵩𐵾𐵩𐵸𐵋𐵼𐵊|Australia|›§ɔ§s§tɛ§rɛ§l§i§y§a
 𐵼𐵍𐵌𐵳𐵪𐵋𐵯|to jog|j§u§‹§kk§i§jukki|yukki-yukki
 
 
@@ -724,19 +723,8 @@ yóor||
 
 @ other 
 
-𐵗𐵌𐵸𐵌𐶀/Wolof/w§ɔ§l§ɔ§f/wolof/wolof
-
-
-
-
-
-
-
-
-
-
-
-
+𐵗𐵌𐵸𐵌𐶀|Wolof|w§ɔ§l§ɔ§f|wolof|wolof
+𐵐𐵌𐵶𐵽𐵩𐵾𐵩𐵸𐵋𐵼𐵊|Australia|›§ɔ§s§tɛ§rɛ§l§i§j§a
 
 
 
@@ -756,3 +744,29 @@ yóor||
 
 `
 
+
+
+
+
+// automatically creates Online Resources section, if markup is uncommented in xx.html
+
+termLists = [
+
+{
+"title":"Livre de Contes, by Assane Faye",
+"url":"https://catalogingafricana.files.wordpress.com/2016/03/fayems3.pdf",
+},
+/*
+{
+"title":"Austronesian Basic Vocabulary Database, Phan Rang Cham (Eastern Cham)",
+"url":"https://abvd.eva.mpg.de/austronesian/language.php?id=371&sort=item",
+"notes":"Latin only",
+},
+
+{
+"title":"Living Dictionaries",
+"url":"https://livingdictionaries.app/sora/entries/list",
+"notes":"No native script.",
+},
+*/
+]

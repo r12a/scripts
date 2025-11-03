@@ -27,6 +27,24 @@ reflist = {
 },
 
 
+"u": {
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 17.0",
+"sub":"Chapter 19.11: Africa, Garay",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/#G746355",
+"reviewed": false
+},
+
+
+"sil": {
+"authors": "SIL Writing Systems Technical Resources",
+"title":"Unicode Status for Garay",
+"retr": "Oct 2025",
+"publisher":"SIL International",
+"url":"https://writingsystems.info/scrlang/unicode/gara-unicode/",
+"reviewed":true
+},
+
 
 }
 
