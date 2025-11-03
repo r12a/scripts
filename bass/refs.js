@@ -1,5 +1,22 @@
 reflist = {
 
+
+/*
+"auth_initials": {
+"authors": "Sort_by_family_name_of_first_contributor",
+"title":"The_Worlds_Writing_Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "Feb 2024",
+"publisher":"Oxford_University_Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+*/
+
 "b": {
 "authors": "Jana Bertkau",
 "title":"A Phonology of Bassa",
@@ -65,11 +82,10 @@ reflist = {
 
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
-"sub":"Chapter 19.7: Africa, Bassa Vah",
-"pages":"781",
-"isbn":"978-1-936213-16-0.",
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch19.pdf",
+"title":"The Unicode Standard, Version 17.0",
+"sub":"19.7: Africa, Bassa Vah",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/#G54402",
+"reviewed": true
 },
 
 "ws": {
@@ -79,6 +95,14 @@ reflist = {
 "reviewed":true
 },
 
+"silh": {
+"authors": "SIL",
+"title":"Unicode Status for Bassa Vah",
+"sub": "Writing Systems Technical Resources",
+"retr": "Nov 2025",
+"url":"https://writingsystems.info/scrlang/unicode/bass-unicode/",
+"reviewed":false
+},
 
 }
 

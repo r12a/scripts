@@ -94,9 +94,38 @@ autoExpandExamples.bsq = `
 
 
 
-
-
-
-
 `
+
+
+
+
+
+
+// automatically creates Online Resources section, if markup is uncommented in xx.html
+
+termLists = [
+
+{
+"title":"Wiktionary, Bassa lemmas",
+"url":"https://en.wiktionary.org/wiki/Category:Bassa_lemmas",
+"notes":"Latin only",
+},
+
+{
+"title":"Bassa-English Dictionary (Latin orthography)",
+"url":"https://web.archive.org/web/20140221125121/http://cefliberia.org/extras/BassaDict.html",
+"notes":"Latin only",
+},
+
+/*
+{
+"title":"Living Dictionaries",
+"url":"https://livingdictionaries.app/sora/entries/list",
+"notes":"No native script.",
+},
+*/
+]
+
+
+
 
