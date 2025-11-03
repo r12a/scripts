@@ -60,7 +60,7 @@ autoExpandExamples.xmr = `
 𐦯𐦴|foot|sa§ta|st
 𐦯𐦵|tutor, mother|sa§tə|ste
 𐦱𐦨|wife|sə§ma|sem
-𐦲𐦢𐦯𐦫𐦢|Caesar|kisari|kisri
+𐦲𐦢𐦯𐦫𐦢|Caesar|k§i§sa§r§i|kisri
 𐦲𐦷𐦢|woman|ka§ɾ§i|kdi
 𐦲𐦷𐦢𐦵|sister|ka§ɾ§i§t§–|kdite
 𐦲𐦷𐦲𐦡|candace, queen|kan§da§k§ə|kdke
