@@ -33,7 +33,7 @@ var currentDoc = ''
 function showDoc (url) {
     // if this is a change to the section, check which doc displayed
     if (url === '' && currentDoc !== '') url = currentDoc
-    else if (url === '') url = 'top'
+    else if (url === '') url = ''
     
     if (url !== '') {
         document.getElementById('out').src = url + document.getElementById('fragid').value
@@ -111,16 +111,23 @@ function highlight (type) {
 <select id="selectpage" onChange="showDoc(this.value)">
 <option value="">By script</option>
 <optgroup label="Adlam">
-<option value="adlm/fuf.html?showIndex">Pular</option>
+<option value="adlm/fuf.html?showIndex">Fula</option>
+</optgroup>
+<optgroup label="Ahom">
+<option value="ahom/aho.html?showIndex">Ahom</option>
 </optgroup>
 <optgroup label="Arabic">
 <option value="arab/ff.html?showIndex">Adamawa Fulfulde</option>
 <option value="arab/arb.html?showIndex">Arabic (Modern Standard)</option>
 <option value="arab/ha.html?showIndex">Hausa</option>
 <option value="arab/ks.html?showIndex">Kashmiri</option>
+<option value="arab/ps.html?showIndex">Pashto</option>
 <option value="arab/pes.html?showIndex">Persian</option>
-<option value="arab/ur.html?showIndex">Urdu</option>
+<option value="arab/skr.html?showIndex">Saraiki</option>
+<option value="arab/sd.html?showIndex">Sindhi</option>
+<option value="arab/ckb.html?showIndex">Sorani</option>
 <option value="arab/ug.html?showIndex">Uighur</option>
+<option value="arab/ur.html?showIndex">Urdu</option>
 <option value="arab/wo.html?showIndex">Wolof</option>
 </optgroup>
 <optgroup label="Armenian">
@@ -139,13 +146,22 @@ function highlight (type) {
 <option value="batk/btk.html?showIndex">Batak</option>
 </optgroup>
 <optgroup label="Bengali">
-<option value="beng/bn.html?showIndex">Bangla</option>
+<option value="beng/bn.html?showIndex">Bangla/Bengali</option>
+</optgroup>
+<optgroup label="Beria Erfe">
+<option value="berf/zag.html?showIndex">Zaghawa</option>
 </optgroup>
 <optgroup label="Buginese">
 <option value="bugi/bug.html?showIndex">Buginese</option>
 </optgroup>
 <optgroup label="Buhid">
 <option value="buhd/bku.html?showIndex">Buhid</option>
+</optgroup>
+<optgroup label="Chakma">
+<option value="cakm/ccp.html?showIndex">Chakma</option>
+</optgroup>
+<optgroup label="Cham">
+<option value="cham/cjm.html?showIndex">Cham</option>
 </optgroup>
 <optgroup label="Cherokee">
 <option value="cher/chr.html?showIndex">Cherokee</option>
@@ -177,6 +193,9 @@ function highlight (type) {
 <optgroup label="Gujarati">
 <option value="gujr/gu.html?showIndex">Gujarati</option>
 </optgroup>
+<optgroup label="Gunjala Gondi">
+<option value="gong/wsg.html?showIndex">Gondi</option>
+</optgroup>
 <optgroup label="Gurmukhi">
 <option value="guru/pa.html?showIndex">Punjabi</option>
 </optgroup>
@@ -201,6 +220,9 @@ function highlight (type) {
 <optgroup label="Khmer">
 <option value="khmr/km.html?showIndex">Cambodian</option>
 </optgroup>
+<optgroup label="Kirat Rai">
+<option value="krai/bap.html?showIndex">Bantawa</option>
+</optgroup>
 <optgroup label="Korean">
 <option value="kore/ko.html?showIndex">Korean</option>
 </optgroup>
@@ -211,6 +233,7 @@ function highlight (type) {
 <option value="latn/bm.html?showIndex">Bamanan</option>
 <option value="latn/ff.html?showIndex">Fula</option>
 <option value="latn/ha.html?showIndex">Hausa</option>
+<option value="latn/kmr.html?showIndex">Kurmanji</option>
 <option value="latn/wo.html?showIndex">Wolof</option>
 </optgroup>
 <optgroup label="Lepcha">
@@ -222,11 +245,23 @@ function highlight (type) {
 <optgroup label="Lisu">
 <option value="lisu/lis.html?showIndex">Lisu</option>
 </optgroup>
+<optgroup label="Makasar">
+<option value="maka/mak.html?showIndex">Makassarese</option>
+</optgroup>
 <optgroup label="Malayalam">
 <option value="mlym/ml.html?showIndex">Malayalam</option>
 </optgroup>
 <optgroup label="Mandaic">
 <option value="mand/mid.html?showIndex">Neo-Mandaic</option>
+</optgroup>
+<optgroup label="Masaram Gondi">
+<option value="gonm/gon.html?showIndex">Gondi</option>
+</optgroup>
+<optgroup label="Meroitic Cursive">
+<option value="merc/xmr.html?showIndex">Meroitic</option>
+</optgroup>
+<optgroup label="Maio">
+<option value="plrd/hmd.html?showIndex">A-Hmao</option>
 </optgroup>
 <optgroup label="Mongolian">
 <option value="mong/mn.html?showIndex">Mongolian</option>
@@ -244,29 +279,41 @@ function highlight (type) {
 <optgroup label="Nag Mundari">
 <option value="nagm/unr.html?showIndex">Mundari</option>
 </optgroup>
-<optgroup label="Newa">
-<option value="newa/new.html?showIndex">Newar</option>
-</optgroup>
 <optgroup label="New Tai Lü">
 <option value="talu/khb.html?showIndex">Tai Lü</option>
 </optgroup>
-<optgroup label="Oriya">
-<option value="orya/or.html?showIndex">Odia</option>
+<optgroup label="Newa">
+<option value="newa/new.html?showIndex">Newar</option>
 </optgroup>
 <optgroup label="Ol Chiki">
 <option value="olck/sat.html?showIndex">Santali</option>
 </optgroup>
+<optgroup label="Oriya">
+<option value="orya/or.html?showIndex">Odia</option>
+</optgroup>
 <optgroup label="Osage">
 <option value="osge/osa.html?showIndex">Osage</option>
 </optgroup>
+<optgroup label="Rejang">
+<option value="rjng/rej.html?showIndex">Rejang</option>
+</optgroup>
+<optgroup label="Sharada">
+<option value="shrd/ks.html?showIndex">Kashmiri/Sanskrit</option>
+</optgroup>
 <optgroup label="Sinhala">
 <option value="sinh/si.html?showIndex">Sinhala</option>
+</optgroup>
+<optgroup label="Sora Sompeng">
+<option value="sora/srb.html?showIndex">Sora</option>
 </optgroup>
 <optgroup label="Sundanese">
 <option value="sund/su.html?showIndex">Sundanese</option>
 </optgroup>
 <optgroup label="Sunuwar">
 <option value="sunu/suz.html?showIndex">Sunuwar</option>
+</optgroup>
+<optgroup label="Syloti Nagri">
+<option value="sylo/syl.html?showIndex">Syloti Nagri</option>
 </optgroup>
 <optgroup label="Syriac">
 <option value="syrc/aii.html?showIndex">Assyrian Neo-Aramaic</option>
@@ -286,8 +333,14 @@ function highlight (type) {
 <optgroup label="Tai Viet">
 <option value="tavt/blt.html?showIndex">Tai Dam</option>
 </optgroup>
+<optgroup label="Tai Yo">
+<option value="tayo/tyj.html?showIndex">Tai Yo</option>
+</optgroup>
 <optgroup label="Tamil">
 <option value="taml/ta.html?showIndex">Tamil</option>
+</optgroup>
+<optgroup label="Tangsa">
+<option value="tnsa/nst.html?showIndex">Tangsa</option>
 </optgroup>
 <optgroup label="Telugu">
 <option value="telu/te.html?showIndex">Telugu</option>
@@ -304,6 +357,9 @@ function highlight (type) {
 <optgroup label="Tifinagh">
 <option value="tfng/zgh.html?showIndex">Std Moroccan Tamazight</option>
 </optgroup>
+<optgroup label="Tolong Siki">
+<option value="tols/kru.html?showIndex">Kurukh</option>
+</optgroup>
 <optgroup label="UCAS">
 <option value="cans/ike.html?showIndex">East Canadian Inuktitut</option>
 <option value="cans/crk.html?showIndex">Plains Cree</option>
@@ -311,127 +367,158 @@ function highlight (type) {
 <optgroup label="Vai">
 <option value="vaii/vai.html?showIndex">Vai</option>
 </optgroup>
+<optgroup label="Wancho">
+<option value="wcho/nnp.html?showIndex">Wancho</option>
+</optgroup>
 </select></label>
+
+
+
+
+
+
 
 
 
 
 <select id="orthtype" onChange="showDoc(this.value)">
 <option value="">By type</option>
-<optgroup label="Abugida: SAsia">
-<option value="ahom/aho.html?showIndex">Ahom</option>
-<option value="beng/bn.html?showIndex">Bangla</option>
+<optgroup label="Abugida: combining vowel signs">
+<option value="ahom/aho.html?showIndex">Ahom, Ahom</option>
+<option value="bali/ban.html?showIndex">Balinese</option>
+<option value="batk/btk.html?showIndex">Batak</option>
+<option value="beng/bn.html?showIndex">Bengali, Bangla</option>
+<option value="bugi/bug.html?showIndex">Buginese, Bugis</option>
+<option value="buhd/bku.html?showIndex">Buhid</option>
+<option value="cakm/ccp.html?showIndex">Chakma</option>
+<option value="cham/cjm.html?showIndex">Cham, Western</option>
+<option value="deva/hi.html?showIndex">Devanagari, Hindi</option>
+<option value="deva/ks.html?showIndex">Devanagari, Kashmiri</option>
 <option value="gujr/gu.html?showIndex">Gujarati</option>
 <option value="gong/wsg.html?showIndex">Gunjala Gondi</option>
-<option value="deva/hi.html?showIndex">Hindi</option>
-<option value="deva/ks.html?showIndex">Kashmiri</option>
-<option value="krai/bap.html?showIndex">Kirat Rai</option>
+<option value="guru/pa.html?showIndex">Gurmukhi, Punjabi</option>
+<option value="hano/hnn.html?showIndex">Hanunoo</option>
+<option value="java/jv.html?showIndex">Javanese</option>
+<option value="khmr/km.html?showIndex">Khmer, Cambodian</option>
 <option value="lepc/lep.html?showIndex">Lepcha</option>
 <option value="limb/lif.html?showIndex">Limbu</option>
+<option value="maka/mak.html?showIndex">Makasar, Makassarese</option>
 <option value="mlym/ml.html?showIndex">Malayalam</option>
 <option value="gonm/gon.html?showIndex">Masaram Gondi</option>
-<option value="newa/new.html?showIndex">Newar</option>
-<option value="orya/or.html?showIndex">Odia</option>
-<option value="guru/pa.html?showIndex">Punjabi</option>
+<option value="mymr/my.html?showIndex">Myanmar, Burmese</option>
+<option value="mymr/shn.html?showIndex">Myanmar, Shan</option>
+<option value="newa/new.html?showIndex">Newa, Newar</option>
+<option value="orya/or.html?showIndex">Orya, Odia</option>
+<option value="rjng/rej.html?showIndex">Rejang</option>
+<option value="shrd/ks.html?showIndex">Sharada</option>
 <option value="sinh/si.html?showIndex">Sinhala</option>
-<option value="sora/srb.html?showIndex">Sora Sompeng</option>
 <option value="sylo/syl.html?showIndex">Syloti Nagri</option>
+<option value="sund/su.html?showIndex">Sundanese</option>
+<option value="tagb/tbw.html?showIndex">Tagbanwa</option>
+<option value="tayo/tyj.html?showIndex">Tai Yo</option>
 <option value="taml/ta.html?showIndex">Tamil</option>
 <option value="telu/te.html?showIndex">Telugu</option>
 <option value="tibt/bo.html?showIndex">Tibetan</option>
-<option value="tols/kru.html?showIndex">Tolong Siki</option>
 </optgroup>
-<optgroup label="Abugida: SEAsia">
-<option value="bali/ban.html?showIndex">Balinese</option>
-<option value="batk/btk.html?showIndex">Batak</option>
-<option value="bugi/bug.html?showIndex">Buginese</option>
-<option value="mymr/my.html?showIndex">Burmese</option>
-<option value="buhd/bku.html?showIndex">Buhid</option>
-<option value="khmr/km.html?showIndex">Cambodian</option>
-<option value="hano/hnn.html?showIndex">Hanunoo</option>
-<option value="java/jv.html?showIndex">Javanese</option>
+
+
+<optgroup label="Abugida: letters">
+<option value="krai/bap.html?showIndex">Kirat Rai, Bantawa</option>
 <option value="lisu/lis.html?showIndex">Lisu</option>
-<option value="maka/mak.html?showIndex">Makasar</option>
-<option value="lana/nod.html?showIndex">Northern Thai</option>
-<option value="mymr/shn.html?showIndex">Shan</option>
-<option value="rjng/rej.html?showIndex">Rejang</option>
-<option value="shrd/ks.html?showIndex">Sharada</option>
-<option value="sund/su.html?showIndex">Sundanese</option>
-<option value="tagb/tbw.html?showIndex">Tagbanwa</option>
-<option value="lana/kkh.html?showIndex">Tai Khün</option>
-<option value="talu/khb.html?showIndex">Tai Lü</option>
-<option value="tale/tdd.html?showIndex">Tai Nüa</option>
-<option value="tayo/tyj.html?showIndex">Tai Yo</option>
+<option value="merc/xmr.html?showIndex">Meroitic Cursive</option>
+<option value="talu/khb.html?showIndex">New Tai Lü, Tai Lü</option>
+<option value="sora/srb.html?showIndex">Sora Sompeng, Sora</option>
+<option value="tale/tdd.html?showIndex">Tai Le, Tai Nüa</option>
+<option value="tols/kru.html?showIndex">Tolong Siki, Kurukh</option>
+</optgroup>
+
+
+<optgroup label="Abugida: letter & combining mark composites">
+<option value="lana/nod.html?showIndex">Tai Tham, Northern Thai</option>
+<option value="lana/kkh.html?showIndex">Tai Tham, Tai Khün</option>
 <option value="thai/th.html?showIndex">Thai</option>
 </optgroup>
-<optgroup label="Abugida: Other">
-<option value="merc/xmr.html?showIndex">Meroitic Cursive</option>
-</optgroup>
+
+
+
+
 <optgroup label="Abjad">
-<option value="arab/arb.html?showIndex">Arabic (Modern Standard)</option>
+<option value="arab/arb.html?showIndex">Arabic, MSA (Arab)</option>
+<option value="arab/ps.html?showIndex">Arabic,Pashto</option>
+<option value="arab/pes.html?showIndex">Arabic, Persian</option>
+<option value="arab/skr.html?showIndex">Arabic, Saraiki</option>
+<option value="arab/sd.html?showIndex">Arabic, Sindhi</option>
+<option value="arab/ur.html?showIndex">Arabic, Urdu</option>
 <option value="hebr/he.html?showIndex">Hebrew</option>
-<option value="arab/ps.html?showIndex">Pashto</option>
-<option value="arab/pes.html?showIndex">Persian</option>
-<option value="arab/sd.html?showIndex">Sindhi</option>
-<option value="arab/skr.html?showIndex">Saraiki</option>
-<option value="syrc/syr.html?showIndex">Syriac</option>
-<option value="arab/ur.html?showIndex">Urdu</option>
+<option value="syrc/syr.html?showIndex">Syriac, Classical</option>
 </optgroup>
+
+
+
 <optgroup label="Alphabet: letters">
+<option value="adlm/fuf.html?showIndex">Adlam, Fula</option>
+<option value="olck/sat.html?showIndex">Arabic, Sorani</option>
+<option value="arab/ug.html?showIndex">Arabic, Uighur</option>
 <option value="armn/hy.html?showIndex">Armenian</option>
-<option value="bass/bsq.html?showIndex">Bassa</option>
-<option value="berf/zag.html?showIndex">Beria Erfe</option>
+<option value="bass/bsq.html?showIndex">Bassa Vah, Bassa</option>
+<option value="berf/zag.html?showIndex">Beria Erfe, Zagawa</option>
+<option value="cyrl/mn.html?showIndex">Cyrillic, Mongolian</option>
+<option value="cyrl/ru.html?showIndex">Cyrillic, Russian</option>
+<option value="cyrl/uk.html?showIndex">Cyrillic, Ukrainian</option>
+<option value="gara/wo.html?showIndex">Garay, Wolof</option>
 <option value="geor/ka.html?showIndex">Georgian</option>
 <option value="grek/el.html?showIndex">Greek</option>
-<option value="cyrl/mn.html?showIndex">Mongolian (Cyrl)</option>
-<option value="mong/mn.html?showIndex">Mongolian (Hudum)</option>
-<option value="mroo/mro.html?showIndex">Mru</option>
-<option value="nagm/unr.html?showIndex">Mundari</option>
+<option value="rohg/rhg.html?showIndex">Hanifi Rohingya</option>
+<option value="mong/mn.html?showIndex">Hudum, Mongolian</option>
+<option value="kali/kyu.html?showIndex">Kayah Li, Western Kayah</option>
+<option value="mroo/mro.html?showIndex">Mro, Mru</option>
+<option value="nagm/unr.html?showIndex">Nag Mundari, Mundari</option>
 <option value="nkoo/nqo.html?showIndex">N’Ko</option>
 <option value="osge/osa.html?showIndex">Osage</option>
-<option value="adlm/fuf.html?showIndex">Pular</option>
-<option value="rohg/rhg.html?showIndex">Rohingya</option>
-<option value="cyrl/ru.html?showIndex">Russian</option>
 <option value="olck/sat.html?showIndex">Santali</option>
-<option value="tfng/zgh.html?showIndex">Std Moroccan Tamazight</option>
+<option value="tfng/zgh.html?showIndex">Tifinagh, Std Moroccan Tamazight</option>
 <option value="sunu/suz.html?showIndex">Sunuwar</option>
 <option value="tnsa/nst.html?showIndex">Tangsa</option>
-<option value="arab/ug.html?showIndex">Uighur</option>
-<option value="cyrl/uk.html?showIndex">Ukrainian</option>
 <option value="wcho/nnp.html?showIndex">Wancho</option>
-<option value="gara/wo.html?showIndex">Wolof (Garay)</option>
 </optgroup>
-<optgroup label="Alphabet: diacritics">
-<option value="arab/ff.html?showIndex">Adamawa Fulfulde</option>
-<option value="syrc/aii.html?showIndex">Assyrian Neo-Aramaic</option>
-<option value="thaa/dv.html?showIndex">Dhivehi</option>
-<option value="arab/ha.html?showIndex">Hausa</option>
-<option value="arab/ks.html?showIndex">Kashmiri</option>
-<option value="plrd/hmd.html?showIndex">Miao</option>
-<option value="mand/mid.html?showIndex">Neo-Mandaic</option>
-<option value="syrc/tru.html?showIndex">Turoyo</option>
-<option value="arab/wo.html?showIndex">Wolof</option>
+
+<optgroup label="Alphabet: combining marks">
+<option value="arab/ff.html?showIndex">Arabic, Adamawa Fulfulde</option>
+<option value="arab/ha.html?showIndex">Arabic, Hausa</option>
+<option value="arab/ks.html?showIndex">Arabic, Kashmiri</option>
+<option value="arab/wo.html?showIndex">Arabic, Wolof</option>
+<option value="mand/mid.html?showIndex">Mandaic, Neo-Mandaic</option>
+<option value="plrd/hmd.html?showIndex">Miao, A-Hmao</option>
+<option value="syrc/aii.html?showIndex">Syriac, Assyrian Neo-Aramaic</option>
+<option value="syrc/tru.html?showIndex">Syriac, Turoyo</option>
+<option value="thaa/dv.html?showIndex">Thaana, Dhivehi</option>
 </optgroup>
-<optgroup label="Alphabet: vowelsigns">
-<option value="kali/kyu.html?showIndex">Western Kayah</option>
+
+<optgroup label="Alphabet: letters & combining marks">
 <option value="laoo/lo.html?showIndex">Lao</option>
-<option value="tavt/blt.html?showIndex">Tai Dam</option>
+<option value="tavt/blt.html?showIndex">Tai Viet, Tai Dam</option>
 </optgroup>
+
+
 <optgroup label="Syllabic: featural">
-<option value="ethi/am.html?showIndex">Amharic</option>
-<option value="cans/ike.html?showIndex">East Canadian Inuktitut</option>
+<option value="ethi/am.html?showIndex">Ethiopic, Amharic</option>
 <option value="kore/ko.html?showIndex">Korean</option>
-<option value="cans/crk.html?showIndex">Plains Cree</option>
+<option value="cans/ike.html?showIndex">UCAS, East Canadian Inuktitut</option>
+<option value="cans/crk.html?showIndex">UCAS, Plains Cree</option>
 </optgroup>
+
 <optgroup label="Syllabic: simple">
-<option value="bamu/bax.html?showIndex">Bamoun</option>
+<option value="bamu/bax.html?showIndex">Bamum, Bamoun</option>
 <option value="cher/chr.html?showIndex">Cherokee</option>
 <option value="vaii/vai.html?showIndex">Vai</option>
 </optgroup>
+
 <optgroup label="Syllabic: CJ">
 <option value="hani/zh.html?showIndex">Chinese</option>
 <option value="jpan/ja.html?showIndex">Japanese</option>
 </optgroup>
+
+
 <optgroup label="Latin">
 <option value="latn/bm.html?showIndex">Bamanan</option>
 <option value="latn/ff.html?showIndex">Fula</option>
@@ -487,13 +574,22 @@ function highlight (type) {
 <option value="vowel_mappings">Vowels mapped to characters</option>
 </optgroup>
 
+<option value="vocalics">Vocalics</option>
+
+<optgroup label="Vowel absence">
+<option value="consonants">Consonants</option>
+<option value="basicC">Unmarked</option>
+<option value="extendedC">Conjuncts</option>
+<option value="onsets">Visible virama</option>
+<option value="finals">Codas</option>
+</optgroup>
+
 <optgroup label="Consonants">
 <option value="consonants">Consonants</option>
 <option value="basicC">Basic consonants</option>
 <option value="extendedC">Repertoire extension</option>
-<option value="onsets">Onset consonants</option>
-<option value="finals">Final consonants</option>
-<option value="clusters">Consonant clusters</option>
+<option value="onsets">Onsets</option>
+<option value="finals">Codas</option>
 <option value="clength">Consonant length</option>
 <option value="consonant_mappings">Consonants mapped to characters</option>
 </optgroup>
@@ -508,31 +604,26 @@ function highlight (type) {
 <option value="clusters">Consonant clusters &amp; geminates</option>
 </optgroup>
 
-<optgroup label="Other features & characters">
-<option value="novowel">Marking silence</option>
-<option value="vocalics">— Vocalics</option>
-<option value="diacritics">— Diacritics</option>
-<option value="formatting">— Formatting</option>
 <option value="symbols">Symbols</option>
-</optgroup>
-
 <option value="encoding">Encoding choices</option>
 <option value="numbers">Numbers</option>
 
 <optgroup label="Rendering">
 <option value="direction">Text direction</option>
-<option value="writing_styles">Font styles</option>
+<option value="writing_styles">Writing styles</option>
 <option value="shaping">Glyph shaping &amp; positioning</option>
 <option value="cursive">Cursive joining</option>
 <option value="context">Context-based shaping &amp; positioning</option>
 <option value="fontstyle">Letterform slopes, weights, &amp; italics</option>
+</optgroup>
+
+<optgroup label="Typographic units">
+<option value="word">Word boundaries</option>
 <option value="graphemes">Graphemes</option>
 </optgroup>
 
 <optgroup label="Punctuation &amp; inline features">
-<option value="word">Word boundaries</option>
 <option value="phrase">Phrase &amp; section boundaries</option>
-<option value="bracketing">Bracketed text</option>
 <option value="quotations">Quotations &amp; citations</option>
 <option value="emphasis">Emphasis</option>
 <option value="abbrev">Abbreviation, ellipsis &amp; repetition</option>
