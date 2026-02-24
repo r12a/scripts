@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CCS Finder</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 1rem 2rem; }
+  textarea { width: 100%; height: 8rem; }
+  #output { margin-top: 1rem; }
+  .cluster {
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    text-decoration: underline 1px tan;
+    text-underline-offset: 0%;
+    text-decoration-skip: none;
+  }
+  #processBtn { font-size: 1.6rem; }
+  #collections { border: 1px solid #eee; }
+</style>
+</head>
+<body>
+
+<h1>Combining character sequence finder</h1>
+
+<p style="color:#ccc">Find all CCS's in a text or file. Output sorted.</p>
+
+<p>
+  <label>Virama (character or U+code): 
+    <input type="text" id="viramaInput" placeholder="eg. ◌് or 0D4D">
+  </label>
+</p>
+
+<p>
+  <label>Font-family for output: 
+    <input type="text" id="fontInput" placeholder="e.g. Noto Sans Balinese">
+  </label>
+</p>
+
+<p>
+  <label>Language tag for output (lang attribute): 
+    <input type="text" id="langInput" placeholder="e.g. ban">
+  </label>
+</p>
+
+<p>
+  <label>Load a /scripts/xxx/xx-examples.js file:
+    <input type="file" id="fileInput" accept=".js">
+  </label>
+</p>
+
+<p>
+  <label>Or paste text here:</label><br>
+  <textarea id="textInput"></textarea>
+</p>
+
+<p>
+  <button id="processBtn">Find combinations</button>
+</p>
+
+<h2>Combinations found <span id="comboCount"></span></h2>
+<div id="output"></div>
+
+<p style="margin-block: 3rem;">
+  <label>Click on combinations above to add them here:</label><br>
+  <textarea id="collections"></textarea>
+</p>
+
+<script>
+function parseVirama(input) {
+  input = input.trim()
+  if (!input) return null
+  const m = input.match(/^U\+([0-9A-Fa-f]+)$/);
+  const m2 = input.match(/^0x([0-9A-Fa-f]+)$/);
+  if (m || m2) {
+    const hex = (m ? m[1] : m2[1]);
+    return String.fromCodePoint(parseInt(hex, 16))
+  }
+  return input[0];
+}
+
+function isCombining(ch) {
+  return /\p{M}/u.test(ch);
+}
+
+
+
+
+function extractClusters(text, viramaChar) {
+  // Normalize to NFD so combining marks are separate code points
+  text = text.normalize("NFD");
+
+  // Convert to array of full Unicode characters (handles surrogate pairs)
+  const chars = [...text];
+  const clusters = new Set();
+
+  for (let i = 0; i < chars.length; i++) {
+    const ch = chars[i];
+
+    // Clusters must start with a letter
+    if (!/\p{L}/u.test(ch)) continue;
+
+    let cluster = ch;
+    let j = i + 1;
+
+    while (j < chars.length) {
+      const next = chars[j];
+
+      // 1. VIRAMA FIRST (because virama is also Mn)
+      if (viramaChar && next === viramaChar) {
+        cluster += next;  // add virama
+        j++;
+
+        if (j < chars.length) {
+          cluster += chars[j];  // add next char, whatever it is
+          j++;
+        }
+        continue;
+      }
+
+      // 2. Combining marks (Mn, Mc, Me)
+      if (/\p{M}/u.test(next)) {
+        cluster += next;
+        j++;
+        continue;
+      }
+
+      // 3. Otherwise stop
+      break;
+    }
+
+    clusters.add(cluster);
+  }
+
+  return clusters;
+}
+
+
+
+function extractClustersDEBUG(text, viramaChar) {
+  text = text.normalize("NFD");
+  const clusters = new Set();
+
+  console.log("=== INPUT (NFD) ===");
+  console.log([...text].map(ch => ch + " (U+" + ch.codePointAt(0).toString(16).toUpperCase() + ")").join(" "));
+
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+
+    // Must start with a letter
+    if (!/\p{L}/u.test(ch)) {
+      console.log(`Skipping non-letter at index ${i}: ${ch}`);
+      continue;
+    }
+
+    console.log(`\n--- NEW CLUSTER starting at index ${i}: ${ch} ---`);
+    let cluster = ch;
+    let j = i + 1;
+
+    while (j < text.length) {
+      const next = text[j];
+
+      // Combining mark
+      if (/\p{M}/u.test(next)) {
+        console.log(`  Adding combining mark at ${j}: ${next}`);
+        cluster += next;
+        j++;
+        continue;
+      }
+
+      // Virama + next char
+      if (viramaChar && next === viramaChar) {
+        console.log(`  Adding virama at ${j}: ${next}`);
+        cluster += next;
+        j++;
+
+        if (j < text.length) {
+          console.log(`  Adding char after virama at ${j}: ${text[j]}`);
+          cluster += text[j];
+          j++;
+        }
+        continue;
+      }
+
+      // Otherwise stop
+      console.log(`  Stopping cluster at index ${j}: next char = ${next}`);
+      break;
+    }
+
+    console.log(`FINAL CLUSTER: ${cluster}`);
+    clusters.add(cluster);
+  }
+
+  console.log("\n=== ALL CLUSTERS ===");
+  console.log([...clusters].join(" | "));
+
+  return clusters;
+}
+
+
+
+function codePointsString(str) {
+  const cps = [];
+  for (const ch of str) {
+    cps.push("U+" + ch.codePointAt(0).toString(16).toUpperCase().padStart(4, "0"));
+  }
+  return cps.join(" ");
+}
+
+function extractAutoExpandBlock(jsText) {
+  const re = /autoExpandExamples\.[A-Za-z0-9_]+\s*=\s*`([\s\S]*?)`/
+  const m = jsText.match(re)
+  return m ? m[1] : ""
+  }
+
+function processText (rawText, viramaChar) {
+  const lines = rawText.split(/\r?\n/)
+  const allClusters = new Set()
+
+  for (const line of lines) {
+    const trimmed = line.trim()
+    if (!trimmed || trimmed.startsWith("@")) continue
+    const firstField = trimmed.split("|", 1)[0]
+    if (!firstField) continue
+    const clusters = extractClusters(firstField, viramaChar)
+    for (const c of clusters) allClusters.add(c)
+    }
+
+  const sorted = [...allClusters].sort((a, b) =>
+    a.codePointAt(0) - b.codePointAt(0)
+    )
+
+  const out = document.getElementById("output")
+  const countSpan = document.getElementById("comboCount")
+
+  out.innerHTML = ""
+  countSpan.textContent = `(${sorted.length})`
+
+  const lang = document.getElementById("langInput").value.trim()
+  if (lang) out.setAttribute("lang", lang)
+
+  const font = document.getElementById("fontInput").value.trim()
+  if (font) out.style.fontFamily = font
+
+  for (const c of sorted) {
+    const span = document.createElement("span")
+    span.className = "cluster"
+    span.textContent = c
+    span.title = codePointsString(c)
+
+    // clicking a cluster appends it + space to the textInput box
+    span.addEventListener("click", () => {
+      const textarea = document.getElementById("collections")
+      textarea.value += c + " "
+      textarea.focus()
+      });
+
+    out.appendChild(span);
+    }
+  }
+
+
+
+document.getElementById("processBtn").addEventListener("click", () => {
+  const viramaChar = parseVirama(document.getElementById("viramaInput").value || "");
+  const textAreaValue = document.getElementById("textInput").value;
+
+  if (textAreaValue.trim()) {
+    const block = extractAutoExpandBlock(textAreaValue) || textAreaValue;
+    processText(block, viramaChar);
+    } 
+  else {
+    const file = document.getElementById("fileInput").files[0];
+    if (!file) {
+      alert("Paste text or choose a .js file first.");
+      return;
+      }
+    const reader = new FileReader()
+    reader.onload = e => {
+      const jsText = e.target.result
+      const block = extractAutoExpandBlock(jsText)
+      if (!block) {
+        alert("Could not find autoExpandExamples.* = `...` in this file.")
+        return
+        }
+      processText(block, viramaChar)
+      };
+    reader.readAsText(file, "utf-8")
+    }
+  })
+</script>
+
+</body>
+</html>

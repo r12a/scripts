@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Font Previewer</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    margin: 1rem;
+    display: flex;
+    gap: 2rem;
+  }
+  #left {
+    width: 40%;
+  }
+  #right {
+    width: 60%;
+    border-left: 2px solid #ccc;
+    padding-left: 1.5rem;
+    font-size: 2rem;
+  }
+  textarea {
+    width: 100%;
+    height: 6rem;
+  }
+  .line {
+    /*margin-block-end: 1rem;*/
+    text-decoration: underline 1px tan;
+    text-underline-offset: 0%;
+    text-decoration-skip: none;
+    }
+.fontLabel {
+  font-size: 0.9rem;
+  color: #666;
+  margin-block-end: 1.2rem;
+  margin-block-start: 0;
+  }
+#copyNotice {
+    position: fixed;
+    top: 40%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    }
+</style>
+</head>
+
+
+
+
+<body onLoad="getParameters()">
+
+<dialog id="copyNotice">Copied !</dialog>
+
+<div id="left">
+  <h2>Inputs</h2>
+
+  <p><strong>1. Text to display:</strong><br>
+    <textarea id="textInput" placeholder="Enter text here"></textarea>
+  </p>
+
+  <p><strong>2. Fonts (one per line or comma-separated):</strong><br>
+    <textarea id="fontList" placeholder="e.g.&#10;Noto Sans&#10;Arial&#10;Times New Roman"></textarea>
+  </p>
+
+  <p><strong>3. Extra CSS for output:</strong><br>
+    <textarea id="cssInput" placeholder="e.g. font-size: 2rem; color: darkred;" oninput="renderOutput()"></textarea>
+  </p>
+
+  <p><strong>4. Language tag (optional):</strong><br>
+    <input type="text" id="langInput" placeholder="e.g. ar, ban, hi" style="width:100%;">
+  </p>
+
+  <p><button id="renderBtn" style="font-size:2rem;">Render</button></p>
+  
+  <p style="font-size:70%;">Note: Text will only render in the right font if that font is on your system. For WebKit browsers, only preinstalled fonts will render.</p>
+  
+  <p><button onClick="snapshot()">Snapshot to URL</button></p>
+</div>
+
+<div id="right">
+  <h2>Output</h2>
+  <div id="output"></div>
+</div>
+
+<script>
+function renderOutput() {
+  const text = document.getElementById("textInput").value
+  const fonts = document.getElementById("fontList").value
+                  .split(/\r?\n|,/)
+                  .map(f => f.trim())
+                  .filter(f => f.length > 0)
+  const extraCSS = document.getElementById("cssInput").value.trim()
+  const lang = document.getElementById("langInput").value.trim()
+
+  const out = document.getElementById("output")
+  out.innerHTML = ""
+
+  if (lang) out.setAttribute("lang", lang)
+  else out.removeAttribute("lang")
+
+  fonts.forEach(font => {
+    // Styled text line
+    const div = document.createElement("div")
+    div.className = "line"
+    div.textContent = text
+    div.style.fontFamily = font
+    if (extraCSS) div.style.cssText += ";" + extraCSS
+    out.appendChild(div)
+
+    // Font name label
+    const label = document.createElement("div")
+    label.className = "fontLabel"
+    label.textContent = font
+    out.appendChild(label)
+    })
+  }
+
+// Existing button handler now just calls the function
+document.getElementById("renderBtn").addEventListener("click", renderOutput)
+
+
+
+function snapshot () {
+  // Build the URL
+  let base = new URL(".", location.href).href;
+  let url = `${base}index.html?`;
+
+  const text = document.getElementById('textInput').value.trim();
+  const fonts = document.getElementById('fontList').value.trim().replace(/\n/g, ',');
+  const css = document.getElementById('cssInput').value.trim().replace(/\n/g, '');
+  const lang = document.getElementById('langInput').value.trim();
+
+  if (text)  url += `text=${encodeURIComponent(text)}`;
+  if (fonts) url += `&fonts=${encodeURIComponent(fonts)}`;
+  if (css)   url += `&css=${encodeURIComponent(css)}`;
+  if (lang)  url += `&lang=${encodeURIComponent(lang)}`;
+
+  // Try modern clipboard API *only if it exists*
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url)
+      .then(showCopyNotice)
+      .catch(() => { fallbackCopy(url); showCopyNotice(); });
+  } else {
+    // Clipboard API not available (common on localhost or file:///)
+    fallbackCopy(url);
+    showCopyNotice();
+  }
+}
+
+function fallbackCopy(text) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.position = "fixed";
+  ta.style.opacity = "0";
+  document.body.appendChild(ta);
+  ta.select();
+  document.execCommand("copy");
+  ta.remove();
+}
+
+function showCopyNotice() {
+  const notice = document.getElementById('copyNotice');
+  notice.style.display = 'block';
+  setTimeout(() => { notice.style.display = 'none'; }, 500);
+}
+
+
+
+function getParameters () {
+// check for parameters and take appropriate action
+	parameters = location.search.split('&')
+	parameters[0] = parameters[0].substring(1)
+	for (var p=0;p<parameters.length;p++) {
+		pairs = parameters[p].split('=')
+		if (pairs[0] === 'text') { 
+			if (pairs[1]) document.getElementById('textInput').value = decodeURIComponent(pairs[1])
+			}
+		if (pairs[0] === 'fonts') { 
+			document.getElementById('fontList').value = decodeURIComponent(pairs[1]).replace(/,/g,'\n')
+			}
+		if (pairs[0] === 'css') { 
+			document.getElementById('cssInput').value = decodeURIComponent(pairs[1])
+			}
+		if (pairs[0] === 'lang') { 
+			document.getElementById('langInput').value = decodeURIComponent(pairs[1])
+			}
+		}
+    if (pairs[0]) renderOutput()
+    }
+</script>
+
+</body>
+</html>
