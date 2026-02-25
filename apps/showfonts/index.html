@@ -24,10 +24,10 @@
     height: 6rem;
   }
   .line {
-    /*margin-block-end: 1rem;*/
+    /*margin-block-end: 1rem;
     text-decoration: underline 1px tan;
     text-underline-offset: 0%;
-    text-decoration-skip: none;
+    text-decoration-skip-ink: none;*/
     }
 .fontLabel {
   font-size: 0.9rem;
@@ -57,11 +57,11 @@
   <h2>Inputs</h2>
 
   <p><strong>1. Text to display:</strong><br>
-    <textarea id="textInput" placeholder="Enter text here"></textarea>
+    <textarea id="textInput" placeholder="Enter text here" oninput="renderOutput()"></textarea>
   </p>
 
   <p><strong>2. Fonts (one per line or comma-separated):</strong><br>
-    <textarea id="fontList" placeholder="e.g.&#10;Noto Sans&#10;Arial&#10;Times New Roman"></textarea>
+    <textarea id="fontList" placeholder="e.g.&#10;Noto Sans&#10;Arial&#10;Times New Roman" oninput="renderOutput()"></textarea>
   </p>
 
   <p><strong>3. Extra CSS for output:</strong><br>
@@ -123,31 +123,31 @@ document.getElementById("renderBtn").addEventListener("click", renderOutput)
 
 
 function snapshot () {
-  // Build the URL
-  let base = new URL(".", location.href).href;
-  let url = `${base}index.html?`;
+    // Build the URL
+    let base = new URL(".", location.href).href
+    let url = `${base}index.html?`
 
-  const text = document.getElementById('textInput').value.trim();
-  const fonts = document.getElementById('fontList').value.trim().replace(/\n/g, ',');
-  const css = document.getElementById('cssInput').value.trim().replace(/\n/g, '');
-  const lang = document.getElementById('langInput').value.trim();
+    const text = document.getElementById('textInput').value.trim()
+    const fonts = document.getElementById('fontList').value.trim().replace(/\n/g, ',')
+    const css = document.getElementById('cssInput').value.trim().replace(/\n/g, '')
+    const lang = document.getElementById('langInput').value.trim()
 
-  if (text)  url += `text=${encodeURIComponent(text)}`;
-  if (fonts) url += `&fonts=${encodeURIComponent(fonts)}`;
-  if (css)   url += `&css=${encodeURIComponent(css)}`;
-  if (lang)  url += `&lang=${encodeURIComponent(lang)}`;
+    if (text)  url += `text=${ encodeURIComponent(text.trim()) }`
+    if (fonts) url += `&fonts=${ encodeURIComponent(fonts.replace(/,\s/g,',').trim()) }`
+    if (css)   url += `&css=${encodeURIComponent(css.replace(/;\s/g,';').trim())}`
+    if (lang)  url += `&lang=${encodeURIComponent(lang.trim())}`
 
-  // Try modern clipboard API *only if it exists*
-  if (navigator.clipboard && navigator.clipboard.writeText) {
+    // Try modern clipboard API *only if it exists*
+    if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(url)
       .then(showCopyNotice)
       .catch(() => { fallbackCopy(url); showCopyNotice(); });
-  } else {
+    } else {
     // Clipboard API not available (common on localhost or file:///)
     fallbackCopy(url);
     showCopyNotice();
-  }
-}
+    }
+    }
 
 function fallbackCopy(text) {
   const ta = document.createElement("textarea");
@@ -181,7 +181,7 @@ function getParameters () {
 			document.getElementById('fontList').value = decodeURIComponent(pairs[1]).replace(/,/g,'\n')
 			}
 		if (pairs[0] === 'css') { 
-			document.getElementById('cssInput').value = decodeURIComponent(pairs[1])
+			document.getElementById('cssInput').value = decodeURIComponent(pairs[1]).replace(/;/g,';\n')
 			}
 		if (pairs[0] === 'lang') { 
 			document.getElementById('langInput').value = decodeURIComponent(pairs[1])
