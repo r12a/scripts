@@ -1840,19 +1840,19 @@ function makeSidePanel () {
         scriptType = scriptType.replace(/syll/,'syllabary')
         scriptType = scriptType.replace(/feat/,'featural syllabary')
         
-        /*switch (langs[sid].type) {
-            case 'alpha': scriptType = 'alphabet'; break  
-            case 'abug': scriptType = 'abugida'; break  
-            case 'abjad': scriptType = 'abjad'; break  
-            case 'feat': scriptType = 'featural syllabary'; break  
-            case 'syll': scriptType = 'syllabary'; break  
-            }*/
-        
         out += '<tr><th>Script type</th><td class="tableHighlight">'+scriptType+'</td></tr>'
 	
         out += '<tr><th>Origin</th><td>'+scriptInfo[sid].region+'</td></tr>'
+        
+        
+        let raw = parseInt(langs[oid].speakers.replace(/~/g,''))
+        let speakerCount = Number.isNaN(raw) ? '?' : raw.toLocaleString()
+        out += `<tr><th>Native speakers</th><td>${ speakerCount }</td></tr>`
 
-        out += '<tr><th>Native speakers</th><td>'+parseInt(langs[oid].speakers.replace(/~/g,'')).toLocaleString()+'</td></tr>'
+
+        
+        // Character counts
+        out += '<tr><th colspan="2" style="padding-block-start:.8rem;">Character counts<br>( for orthography, excluding ASCII )</td></tr>'
 
 
         // get character counts in a way that works around surrogates
@@ -1874,7 +1874,6 @@ function makeSidePanel () {
         total = letters + marks + punctuation + symbols + others + numbers 
 
 
-        out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
 
         out += `<tr><th>Total characters</th><td class="tableHighlight" style="font-size: 150%;">${ total }</td></tr>`
         
@@ -1896,31 +1895,17 @@ function makeSidePanel () {
 
 
 
-        out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
 
 
-        out += '<tr><th colspan="2">Character counts above are for this<br>orthography but exclude ASCII.</td></tr>'
-
-        out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
-
-        
-        //out += '<tr><th>Script code</th><td>'+langs[id].script+'</td></tr>'
-
-        out += '<tr><th>Text direction</th><td'
-        if (scriptInfo[sid].direction !== "ltr") out += ' class="tableHighlight"'
-        out += `>${ scriptInfo[sid].direction }`
-        if (scriptInfo[sid].rtlnumbers) out += ` \u2014 including <br> numbers`
-        out += `</td></tr>`
 
 
-        /*if (scriptInfo[sid].direction !== "ltr") out += ' class="tableHighlight">'
-        out += `${ scriptInfo[sid].direction }`
-        out += `>${ scriptInfo[sid].direction }</td></tr>`
-        out += `</td></tr>`*/
+        // Composition
+        out += '<tr><th colspan="2" style="padding-block-start:.8rem;">Composition</td></tr>'
+
 
 
         if (scriptInfo[sid].voweltype) {
-            out += '<tr><th>Post-consonant vowels</th><td class="tableHighlight">'
+            out += '<tr><th>Post-consonant<br>vowels</th><td class="tableHighlight">'
             
             if (scriptInfo[sid].voweltype.inherent !== 0) {
                 if (scriptInfo[sid].voweltype.inherent === 1) out += `1 inherent vowel<br>`
@@ -1948,7 +1933,7 @@ function makeSidePanel () {
 
 
         if (scriptInfo[sid].voweltype) {
-            out += '<tr><th>Standalone vowels</th><td class="tableHighlight">'
+            out += '<tr><th>Standalone<br>vowels</th><td class="tableHighlight">'
             
             if (scriptInfo[sid].voweltype.ivowels) out += `letters<br>`
             
@@ -1959,18 +1944,6 @@ function makeSidePanel () {
 
 
         
-        out += '<tr><th>Case distinction</th><td'
-        if (scriptInfo[sid].case) out += ' class="tableHighlight"'
-        out += '>'
-        out += scriptInfo[sid].case ? 'yes' : 'no'
-        out += '</td></tr>'
-        
-        out += '<tr><th>Cursive script</th><td'
-        if (scriptInfo[sid].cursive) out += ' class="tableHighlight"'
-        out += '>'
-        out += scriptInfo[sid].cursive ? 'yes' : 'no'
-        out += '</td></tr>'
-
         out += '<tr><th>Combining  marks</th><td'
         if (scriptInfo[sid].mcchars) out += ' class="tableHighlight"'
         out += '>'
@@ -2014,7 +1987,7 @@ function makeSidePanel () {
             }
 
         if (scriptInfo[sid].conjuncts !== false) {
-            out += '<tr><th>Consonant<br>Clusters</th><td class="tableHighlight">'
+            out += '<tr><th>Consonant clusters</th><td class="tableHighlight">'
             
             if (scriptInfo[sid].clusters.ligation) out += `ligated glyphs<br>`
             
@@ -2043,6 +2016,31 @@ function makeSidePanel () {
         out += scriptInfo[sid].ligs ? 'yes' : 'no'
         out += '</td></tr>'
 
+
+
+
+
+        // Typography
+        out += '<tr><th colspan="2" style="padding-block-start:.8rem;">Layout</td></tr>'
+
+        out += '<tr><th>Text direction</th><td'
+        if (scriptInfo[sid].direction !== "ltr") out += ' class="tableHighlight"'
+        out += `>${ scriptInfo[sid].direction }`
+        if (scriptInfo[sid].rtlnumbers) out += ` \u2014 including <br> numbers`
+        out += `</td></tr>`
+
+
+        out += '<tr><th>Case distinction</th><td'
+        if (scriptInfo[sid].case) out += ' class="tableHighlight"'
+        out += '>'
+        out += scriptInfo[sid].case ? 'yes' : 'no'
+        out += '</td></tr>'
+        
+        out += '<tr><th>Cursive script</th><td'
+        if (scriptInfo[sid].cursive) out += ' class="tableHighlight"'
+        out += '>'
+        out += scriptInfo[sid].cursive ? 'yes' : 'no'
+        out += '</td></tr>'
 
 
         if (scriptInfo[sid].wordsep !== '') {
@@ -4455,6 +4453,60 @@ function makeCharDataObj () {
 
 
 function copyIntroInfo () {
+    // console.log('copyIntroInfo()\n\tCopy paragraphs from the brief summary to the top of various sections')
+    
+    basicFeatures = document.getElementById('type')
+    if (!basicFeatures) return
+    
+    // do the vowels
+    if (document.getElementById('vowel_description')) {
+        var out = ''
+        var paras = basicFeatures.querySelectorAll('.addToVowels')
+        // console.log("Copying",paras.length,"paragraphs to Vowel section.")
+        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
+        if (document.getElementById('vowel_mappings')) out += `<aside class="instructions" style="margin:4rem;">The summary table just below gives a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.</aside>`
+        if (out !== '') document.getElementById('vowel_description').innerHTML = out
+        }
+    
+    // do the consonants
+    if (document.getElementById('consonant_description')) {
+        var out = ''
+        var paras = basicFeatures.querySelectorAll('.addToConsonants')
+        // console.log("Copying",paras.length,"paragraphs to Consonant section.")
+        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
+        if (document.getElementById('consonant_mappings')) out += `<aside class="instructions" style="margin:4rem;">The summary table just below gives a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.</aside>`
+        if (out !== '') document.getElementById('consonant_description').innerHTML = out
+        }
+
+    
+    // do novowel
+    if (document.getElementById('novowel_description')) {
+        var out = ''
+        var paras = basicFeatures.querySelectorAll('.addToNovowel')
+        // console.log("Copying",paras.length,"paragraphs to Novowel section.")
+        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
+        if (out !== '') document.getElementById('novowel_description').innerHTML = out
+        }
+
+    
+    // do diacritics
+    if (document.getElementById('diacritic_description')) {
+        var out = ''
+        var paras = basicFeatures.querySelectorAll('.addToDiacritics')
+        // console.log("Copying",paras.length,"paragraphs to Diacritics section.")
+        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
+        if (out !== '') document.getElementById('diacritic_description').innerHTML = out
+        }
+    }
+
+
+
+
+
+
+
+
+function copyIntroInfoX () {
     // console.log('copyIntroInfo()\n\tCopy paragraphs from the brief summary to the top of various sections')
     
     // do the vowels
