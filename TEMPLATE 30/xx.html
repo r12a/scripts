@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->29 October, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->2 March, 2026<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -75,7 +75,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->29-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Bangla (Bengali) Orthography Notes, <!-- #BeginDate format:En2 -->02-Mar-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -426,44 +426,105 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>, ie. each consonant contains an inherent vowel sound. See the table to the right for a brief overview of features for the modern ZZZZ orthography.</p>
-<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a>, ie. consonants and vowels are written separately.  See the table to the right for a brief overview of features  for the ZZZZ language.</p>
-<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a>, ie. short vowels are not normally written.  See the table to the right for a brief overview of features  for the ZZZZ language.</p>
+
+<!-- ABUGIDA -->
 
 
-
-<p>Text runs <a href="#direction" class="seclink">left to right</a> in horizontal lines, but pages may run right to left. There is no case distinction. Words are separated by spaces.</p>
-
-
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">Syloti Nagri represents native consonant sounds using <a href="#basicC" class="seclink">27 basic letters</a>, which include <a href="#basicC" class="seclink">10 duplicates</a> to indicate tone. Each consonant has a top bar that joins with those alongside. There are no dedicated <span class="addToNovowel"><a href="../glossary/index.html#medialconsonant" class="termref" target="terms">medial consonants</a></span>. Syllable <a href="#finals" class="seclink">codas</a> are written using ordinary letters or the <span class="name">anusvara</span> combining mark. A special vowel killer is encoded to indicate word-final codas. </p>
-
-
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel">The inherent vowel is killed by an invisible virama in consonant clusters, but a different, always visible, combining mark in word-final codas. <span class="uname">RA</span> has special code points for medials and codas in addition to the forms created by the virama. There are no dedicated <a href="../glossary/index.html#medialconsonant" class="termref" target="terms">medial consonants</a>. Codas can also be written using <span class="name">anusvara</span> and <span class="name">visarga</span>. The orthography also has 3 atomic codepoints that represent consonant clusters.</p>
-
-
-
+<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
+<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#alphabet" target="terms">alphabet</a>, ie. consonants and vowels are written separately.</p>
+<p>The XXXX script  is an <a class="termref" href="https://www.unicode.org/glossary/#abjad" target="terms">abjad</a>, ie. short vowels are not normally written.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The <a class="seclink" href="#inherent">inherent vowel</a> for Syloti Nagri is pronounced <span class="ipa">ɔ</span>.</p>
+<p class="addToVowels"><span class="leadin">Vowels@@</span> The <a class="seclink" href="#inherent">inherent vowel</a> is generally pronounced <span class="ipa">a</span>, but <span class="ipa">ə</span> when word-final or in some affixes.</p>
 
-<p class="addToVowels">Plain <a class="seclink" href="#combiningV">post-consonant vowels</a> are written using 9 combining vowel signs, which includes 2 diphthongs. There are no <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel signs</a>.  There are no <a href="../glossary/index.html#prebase" class="termref" target="terms">pre-base vowel signs</a> or <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>.</p>
+<p class="addToVowels">@@<a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#plainV">combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>).</p>
+
+<p class="addToVowels">@@There are <a class="seclink" href="#prebase">2 pre-base glyphs</a> and <a class="seclink" href="#circumgraphs">6 circumgraphs</a>. In principle, Balinese has no <a class="seclink" href="#compositeV">composite vowel signs</a>, however the 6 circumgraphs  can also be decomposed into 2 parts. Those can involve up to 2 glyphs, and glyphs can surround the base consonant(s) on  up to 3 sides.</p>
+
+<p class="addToVowels">@@There are no <a href="../glossary/index.html#prebase" class="termref" target="terms">pre-base glyphs</a>, <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>, or <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel signs</a>.</p>
+
+<p class="addToVowels">@@<a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using <a class="termref" href="../glossary/index.html#independentvowel" target="terms">independent vowel letters</a> at the beginning of a word. Inside a word they are written using <span class="ch">ᬳ</span> with an attached vowel sign.</p>
 
 
-<p class="addToVowels"><a class="seclink" href="#standalone">Standalone</a> vowels are written using one of 5 independent vowel letters. In some texts, these vowel letters can carry a virama and combine with a following consonant.</p>
-
-<p>Sylheti has a high <a class="seclink" href="#tones">tone</a>, which is indicated by the consonant letter chosen.</p>
+<p class="addToVowels">@@Balinese has <a class="seclink" href="#vocalics">vocalics</a>, and their use is required for certain consonant-vowel combinations.</p>
 
 
 
-<p>Sylheti  uses  <a href="#numbers" class="seclink">Bengali digits</a>. <a href="#phrase" class="seclink">Punctuation marks</a> are mostly ASCII, but include the Devanagari danda and a small number of native symbols for poetry.</p>
 
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">@@Consonants</span> Hindi has <a class="seclink" href="#basicC">33 basic consonant letters</a>. <span class="hx">093C</span> can be used to represent <a class="seclink" href="#extendedC">8 more</a> non-native sounds.</p>
+
+
+
+
+<p><span class="leadin">@@Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is indicated using <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a>, a visible combining mark, or dedicated syllable-final combining marks. There are no dedicated <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonant</a> characters.</p>
+
+<p>@@<span class="hx">XXXX</span> is used to kill the inherent vowel and to form conjuncts. Usually the <span class="name">adeg adeg</span> is invisible, but it is rendered visibly when no other consonant follows, or occasionally in special circumstances, when it can be forced to appear using an invisible formatting character.</p>
+
+<p>@@<a class="seclink" href="#clusters">Conjunct forms</a> occur as stacked consonants or conjoined pairs.  The shape of many subjoined consonant glyphs differs from the normal shape.</p>
+
+<p class="addToConsonants">@@<a class="seclink" href="#onsets">Medial consonants</a> are written using <span class="hx circle">1B44</span> followed by one of 4 ordinary consonants or a special vocalic combining mark.</p>
+
+<p class="addToConsonants">@@<a class="seclink" href="#finals">Syllable codas</a> are most commonly written using an ordinary consonant followed by <span class="hx circle">1B44</span>. If another consonant follows, the consonant shapes are combined into a conjunct form — even if the consonants represent the end of one word and the beginning of another ! Alternatively, three codas may be represented by one of <a class="seclink" href="#finals">3 diacritics</a>, two of which only occur word-finally.</p>
+
+
+
+
+
+
+<p><span class="leadin">@@Numbers</span> Balinese has a set of <a class="seclink" href="#numbers">native digits</a>.</p>
+
+
+
+<p><span class="leadin">@@Layout</span> Balinese text runs <a class="seclink" href="#direction">left to right</a> in horizontal lines. Words are not separated by spaces, however syllables may be separated by <abbr title="Zero width space"><a class="seclink" href="#word"><abbr title="Zero width space">ZWSP</abbr></a></abbr>, as long as they don't fall inside a stack.  There is no case distinction.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is mostly ASCII, but dandas are used for sentence and verse final punctuation.</p>
+
+<p>@@Stacked consonants and conjoined pairs <a class="seclink" href="#word">span word boundaries</a>. This means that text must be <a class="seclink" href="#linebreak">wrapped</a> at orthographic syllable boundaries, and not at word boundaries. <a class="seclink" href="#pameneng">Hyphenation</a> occurs, using <span class="hx">1B60</span> at the line end to indicate the break.</p>
+
+
+
+
+
+
+<!-- ABJAD -->
+
+<p>The Arabic script  is an <a class="termref" href="https://www.unicode.org/glossary/#abjad" target="terms">abjad</a>, ie. short vowels are not normally written. This approach is helped by the strong emphasis on consonant patterns in Semitic languages (however the Arabic script is also adapted for use with other kinds of language, such as  Urdu, Uighur. and African ajami, not all of which are abjads).</p>
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels"><span class="leadin">Vowels</span>   Vowels are written using a mixture of combining marks and letters in vocalised text but, because the orthography for the Arabic language  is  an <a class="termref" href="../glossary/index.html#abjad">abjad</a>,  the combining mark diacritics are not normally used (and so it is difficult to accurately read the text unless you recognise the consonant patterns). However these diacritics and other phonetic information <em>can</em> be written where needed, and are regularly used for Qur'anic texts, dictionaries, educational materials, and where the pronunciation needs to be made clear.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels:</a> In vowelled text, the Arabic language uses <a class="seclink" href="#harakat">3 basic vowel diacritics,</a> but <a class="seclink" href="#combiningV">4 more</a> and <a class="seclink" href="#alefmaksura">1 letter </a>are occasionally also used. Long vowel locations are marked by <a class="seclink" href="#matres">matres lectionis</a> (consonants indicating vowel locations). Only the latter survive in text that is unvowelled.</p>
+
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds in word-initial position are usually written following or using <span class="ch">ا</span>. </p>
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span>Modern Standard Arabic has <a class="seclink" href="#basicC">28 letters</a> in its alphabet, but regularly uses <a class="seclink" href="#supplementary">8 more</a>. Most of those involve representations of the <a class="seclink" href="#hamza">hamza</a>, for which the usage is complicated. This page also lists <a class="seclink" href="extendedC">3 letters for foriegn sounds</a>, and <a class="seclink" href="#otherletters">6 others</a> which are used infrequently..</p>
+
+<p class="addToConsonants">A mandatory ligature has to be used for combinations of <span class="trans">lam + alif</span>.</p>
+
+<p class="addToConsonants">The diacritic <span class="hx circle">0651</span> indicates <a class="seclink" href="#clength">gemination</a> in vowelled text.</p>
+
+
+
+
+<p><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is indicated in normal Arabic text by simply using a sequence of consonant letters, and nothing indicates that there is no vowel sound after a word-final coda. When text is vowelled, <span class="hx circle">0652</span> can be used over a consonant to indicate that it is not followed by a vowel sound. Like other vowel diacritics, this is typically not used in modern text, unless it is necessary to clarify pronunciation.</p>
+
+<p><span class="leadin">Numbers</span>Arabic uses both <a class="seclink" href="#numbers">ASCII and native digits</a>.</p>
+
+
+
+<p><span class="leadin">Layout</span> Arabic text runs <a class="seclink" href="#direction">right-to-left</a> in horizontal lines, but numbers and embedded Latin text are read left-to-right. Words are  separated by spaces (except for some very short, usually 1-letter conjunctions and prepositions, which attach to the following word).  There is no case distinction.</p>
+
+<p>The script is <a class="seclink" href="#cursive">cursive</a>, and some basic letter shapes change radically, depending on what they join to. It is also very common for adjacent characters to ligate and to stretch to fill available space. Many of the characters share a common base form, and are distinguished by the number and location of dots or other small diacritics, called <span class="foreigntext"><span class="trans"><a class="termref" href="../glossary/index.html#ijam">i'jam</a></span></span>. For example, <bdi class="ex" lang="ar">س ‎ش ‎ݜ ‎ ݰ ‎ݽ ‎ݾ ‎ڛ ‎ښ ‎ڜ ‎ۺ</bdi>.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is a mixture of ASCII and local forms.</p>
 
 
 
@@ -1586,7 +1647,7 @@ alveolar</th>
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 
