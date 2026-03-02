@@ -71,8 +71,8 @@ autoExpandExamples.gon = `
 
 @ https://en.wikipedia.org/wiki/Gondi_writing
 
-𑴤𑴫𑴦𑴱𑴤 𑴎𑴽𑵀𑴘𑴳|Masaram Gondi script|masaraːm ɡondiː|
-𑴤𑴫𑴦𑴱𑴤𑵄|Masaram|masaraːm|
+𑴤𑴫𑴦𑴱𑴤 𑴎𑴽𑵀𑴘𑴳|Masaram Gondi script|ma§sa§raː§m§ §ɡo§n§diː|
+𑴤𑴫𑴦𑴱𑴤𑵄|Masaram|ma§sa§raː§m|
 
 
 
