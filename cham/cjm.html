@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->27 October, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->26 February, 2026<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -76,7 +76,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Eastern Cham Orthography Notes, <!-- #BeginDate format:En2 -->27-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cham/cjm">https://r12a.github.io/scripts/cham/cjm</a></small></p>
+<p class="refLine"><small>Richard Ishida, Eastern Cham Orthography Notes, <!-- #BeginDate format:En2 -->26-Feb-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/cham/cjm">https://r12a.github.io/scripts/cham/cjm</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -146,26 +146,50 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The Cham script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>, ie. each consonant contains an inherent vowel sound. See the table to the right for a brief overview of features for the Eastern Cham orthography.</p>
+<p>The Cham script is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
-<p>Cham text runs <a href="#direction" class="seclink">left-to-right</a> in horizontal lines. There is no case distinction. Words are separated by spaces.</p>
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels"><span class="leadin">Vowels</span> Cham has <a class="seclink" href="#inherent">2 inherent vowel sounds</a>, usually pronounced <span class="ipa">a</span> but by default pronounced <span class="ipa">ɨ</span> after nasals. An extra set of nasal consonant letters is available to write a syllable with an inherent <span class="ipa">a</span> vowel (each having a special stroke below the main glyph), and an <span class="ipa">ɨ</span> vowel sign is available to represent that sound after non-nasals.</p>
+
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using one or more of 10 <a class="seclink" href="#plainV">combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>) per consonant.</p>
+
+<p class="addToVowels">There is 1 <a class="seclink" href="#prebase">pre-base glyph</a> and no <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a> (although composite vowel signs may add glyphs to more than one side of the base). In this page we identify 7 <a class="seclink" href="#compositeV">composite vowel signs</a>.</p>
+
+<p class="addToVowels"><a class="seclink" href="#standalone">Six standalone vowel</a> sounds can be written using <a class="termref" href="../glossary/index.html#independentvowel" target="terms">independent vowel letters</a>, and more sounds can be written using <span class="hx">AA00</span> with an attached vowel sign.</p>
+
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-
-<p class="addToConsonants">Cham represents native consonant sounds using <a href="#basicC" class="seclink">35 basic letters</a>. The orthography has <a class="seclink" href="#onsets">4 medial consonants</a>,  some of which can be combined. Syllable codas are written using one of <a class="seclink" href="#finals">15 final letters</a> (distinguished from the original by a lengthened stroke to the right), or  one of <a class="seclink" href="#finals">3 combining marks</a>.</p>
-
-<p class="addToConsonants">Consonant clusters only occur when a syllable with a coda is followed by another syllable, and there are no conjunct forms or stacking involved.</p>
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">Cham has <a class="seclink" href="#inherent">2 inherent vowel sounds</a>, usually pronounced <span class="ipa">a</span> but by default pronounced <span class="ipa">ɨ</span> after nasals. An extra set of nasal consonant letters is available to write a syllable with an inherent <span class="ipa">a</span> vowel (each having a special stroke below the main glyph), and an <span class="ipa">ɨ</span> vowel sign is available to represent that sound after non-nasals.</p>
-
-<p class="addToVowels">Other vowels are written using one or more of <a href="#plainV" class="seclink">10 combining vowel signs</a> per consonant (this page lists <a class="seclink" href="#compositeV">7 composite vowel signs</a>). There is <a href="#prebase" class="seclink">1 pre-base vowel</a>, but no circumgraphs (although composite vowel signs may add glyphs to more than one side of the base).</p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> 35 <a class="seclink" href="#basicC">consonant letters</a> are used for native consonant sounds.</p>
 
 
-<p>Standalone vowels are written in one of 2 ways. The orthography has <a class="seclink" href="#standalone">6 independent vowel letters</a>, and any other vowels are written by appending a vowel sign to the letter <span class="hx">AA00</span><span class="hx"></span>.</p>
-<p>Cham  uses  <a href="#numbers" class="seclink">native digits</a>, although ASCII digits are also used. There are <a href="#phrase" class="seclink">4 native punctuation marks</a> in addition to ASCII punctuation.</p>
+
+
+
+<p><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> only occurs before a medial consonant in an onset, or after a dedicated coda consonant. There is no code point to kill the inherent vowel, and no <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a> or stacking are involved.</p>
+
+<p class="addToConsonants"><a class="seclink" href="#onsets">Medial consonants</a> are written using 4 dedicated combining marks, some of which can be combined.</p>
+
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> are written using one of 15 <a class="seclink" href="#finals">dedicated letters</a> (distinguished from the original by a lengthened stroke to the right), or one of 3 <a class="seclink" href="#finals">combining marks</a>.</p>
+
+
+
+
+
+
+<p><span class="leadin">Numbers</span> Cham uses <a href="#numbers" class="seclink">native digits</a>, although ASCII digits are also used.</p>
+
+
+
+<p><span class="leadin">Layout</span> Cham text runs left to right in horizontal lines. Words are separated by spaces.  There is no case distinction.</p>
+
+<p>There are <a href="#phrase" class="seclink">4 native punctuation marks</a> in addition to ASCII punctuation.</p>
+
+
+
 
 
 
@@ -879,7 +903,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 

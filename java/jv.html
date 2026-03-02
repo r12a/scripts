@@ -62,7 +62,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->24 October, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->27 February, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -84,7 +84,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Javanese Orthography Notes, <!-- #BeginDate format:En2 -->24-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/java/jv">https://r12a.github.io/scripts/java/jv</a></small></p>
+<p class="refLine"><small>Richard Ishida, Javanese Orthography Notes, <!-- #BeginDate format:En2 -->27-Feb-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/java/jv">https://r12a.github.io/scripts/java/jv</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -173,37 +173,55 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>Javanese is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>, ie. consonants carry an inherent vowel sound that is overridden, where needed, using <a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>.    See the table to the right for a brief overview of features of the modern Javanese orthography.</p>
-
-<p>Javanese text runs left to right in horizontal lines. Words are <a class="seclink" href="#word">not separated by spaces</a>, however syllables may be separated by <abbr title="Zero width space">ZWSP</abbr>, as long as they don't fall inside a stack. Spaces may be used to separate phrases.</p>
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">The <a class="seclink" href="#basicC">20 consonant letters</a> used for pure Javanese words are supplemented by <a class="seclink" href="#murda">10 more</a> which are used as honorifics, a little like capital letters, and <a class="seclink" href="#mahaprana">5 more </a>used in Sanskrit words. Repertoire extensions for <a class="seclink" href="#extendedC">8 non-native sounds</a> are achieved by applying the <span class="name">cecak telu</span> diacritic to  characters.</p>
+<p>The Javanese script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
 
-
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel"><a class="seclink" href="#clusters">Consonant clusters</a> are  represented by stacked consonants (many subjoined consonants have alternative shapes) or conjoined pairs. Occasionally, a visible <span class="name">pangkon</span> (<a class="termref" href="../glossary/index.html#virama">virama</a>) is used. There are dedicated code points for medial consonants and codas.</p>
-
-<p class="addToNovowel">Stacked consonants and conjoined pairs <mark>span word boundaries</mark>.</p>
-
-
-
-
-<p class="addToConsonants"><a class="seclink" href="#onsets">Syllable-initial clusters</a> use 3 dedicated combining marks for the second consonant.</p>
-
-<p class="addToConsonants"><a class="seclink" href="#finals">Word-final consonant</a> sounds may be represented by 4 dedicated combining marks. Otherwise, if nothing follows, they  are ordinary consonants followed by  a visible <span class="hx">A9C0</span>.</p>
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The Javanese orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with <a class="seclink" href="#inherent">2 inherent vowels</a>. Other post-consonant vowels are written using <a class="seclink" href="#plainV">5 vowel signs, </a>all combining marks. It is mandatory for 2 of the consonant+vowel sequences  to be written using vocalics, rather than vowel signs.</p>
+<p class="addToVowels"><span class="leadin">Vowels</span> Javanese has 2 <a class="seclink" href="#inherent">inherent vowels, </a>pronounced <span class="ipa">a</span> or <span class="ipa">ɔ</span>.</p>
 
-<p class="addToVowels">There is <a class="seclink" href="#prebase">1 pre-base glyph</a> and no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>. Only one multipart vowel is used in modern Javanese orthography, although more exist when writing Sanskrit or Kawi in this script. The <a class="seclink" href="#compositeV">multipart vowel</a> used in modern Javanese involves only 2 vowel signs, and places glyphs on either side of the base consonant(s).</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#plainV">5 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>). It is mandatory for 2 of the consonant+vowel sequences to be written using vocalics, rather than vowel signs.</p>
 
-<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a> when there is a need to distinguish normal words from proper nouns or foreign words. The normal approach for standalone vowels is to apply vowel signs to <span class="hx">A9B2</span>.</p>
+<p class="addToVowels">There is <a class="seclink" href="#prebase">1 pre-base glyph</a> and no <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>, or <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel signs</a>.  Only one <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel sign</a> is used in modern Javanese orthography, although more exist when writing Sanskrit or Kawi in this script. The <a class="seclink" href="#compositeV">composite vowel sign</a> used in modern Javanese involves only 2 vowel signs, and places glyphs on either side of the base consonant(s).</p>
+
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are normally written written using <span class="hx">A9B2</span> with a vowel sign attached. 5 <a class="termref" href="../glossary/index.html#independentvowel" target="terms">independent vowel letters</a>  can be used when there is a need to distinguish normal words from proper nouns or foreign words.</p>
+
 
 <p class="addToVowels">Javanese has, and regularly uses, <a class="seclink" href="#vocalics">vocalics</a>.</p>
+
+
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> Javanese uses <a class="seclink" href="#basicC">20 basic consonant letters</a>. Another <a class="seclink" href="#murda">9 letters</a> are used as honorifics, a little like capital letters, and <a class="seclink" href="#mahaprana">5 more </a>used in Sanskrit words. Repertoire extensions for <a class="seclink" href="#extendedC">9 non-native sounds</a> are achieved by applying the <span class="name">cecak telu</span> diacritic to  characters.</p>
+
+
+
+<p class="addToNovowel"><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is indicated using <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a>, or occasionally, a visible <span class="name">pangkon</span> (<a class="termref" href="../glossary/index.html#virama">virama</a>), especially at the end of a word ending with a coda and not followed by another word. There are  dedicated characters for <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonants</a> and codas.</p>
+
+<p><span class="hx">A9C0</span> is used to kill the inherent vowel and to form conjuncts. Usually the <span class="name">pangkon</span> is invisible, but it is rendered visibly when no other consonant follows, or occasionally in special circumstances, when it can be forced to appear using an invisible formatting character.</p>
+
+<p><a class="seclink" href="#clusters">Conjunct forms</a> occur as stacked consonants or conjoined pairs.</p>
+
+<p class="addToConsonants"><a class="seclink" href="#onsets">Medial consonants</a> are written using one of 3 dedicated combining marks.</p>
+
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> are most commonly written using an ordinary consonant followed by <span class="hx">A9C0</span>. If another consonant follows, the consonant shapes are combined into a conjunct form — even if the consonants represent the end of one word and the beginning of another ! Alternatively,  codas may be written using one of <a class="seclink" href="#finals">4 dedicated diacritics</a>.</p>
+
+
+
+
+
+
+<p><span class="leadin">Numbers</span> <span class="addToConsonants">Javanese</span> has a set of <a class="seclink" href="#numbers">native digits</a>.</p>
+
+
+
+<p><span class="leadin">Layout</span> Javanese text runs left to right in horizontal lines. Words are <a class="seclink" href="#word">not separated by spaces</a>, however syllables may be separated by <abbr title="Zero width space">ZWSP</abbr>, as long as they don't fall inside a stack. Spaces may be used to separate phrases.  There is no case distinction.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is mostly native.</p>
+
+<p>Stacked consonants and conjoined pairs <a class="seclink" href="#word">span word boundaries</a>. This means that text must be <a class="seclink" href="#linebreak">wrapped</a> at orthographic syllable boundaries, and not at word boundaries. A kind of <a class="seclink" href="#pameneng">hyphenation</a> occurs, using <span class="hx">A9BA</span> at the line end and new line start.</p>
 
 
 
@@ -819,7 +837,7 @@ alveolar</th>
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 <!--figure class="characterBox auto" data-cols="trans,transc" data-ipa="i,i,u,u,e,o,ɔ,æ,æ,æ,a">ি,ী,ু,ূ,ে,ো,ো,্যা,্য,া,া</figure-->
@@ -1347,6 +1365,8 @@ alveolar</th>
 <aside class="sectionAside"></aside>
 
 <p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
+
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
 
 <div id="novowel_description"></div>
 

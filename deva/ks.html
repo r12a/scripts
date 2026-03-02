@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 October, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->27 February, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -75,7 +75,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, (Devanagari) (Kashmiri) Orthography Notes, <!-- #BeginDate format:En2 -->22-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/deva/ks">https://r12a.github.io/scripts/deva/ks</a></small></p>
+<p class="refLine"><small>Richard Ishida, (Devanagari) (Kashmiri) Orthography Notes, <!-- #BeginDate format:En2 -->27-Feb-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/deva/ks">https://r12a.github.io/scripts/deva/ks</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -151,50 +151,73 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>Devanagari is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>. Consonant letters have an inherent vowel sound. Combining vowel signs are attached to the consonant to indicate that a different vowel follows the consonant.   See the table in the right-hand column for a brief overview of features for the modern Kashmiri orthography using the Devanagari script.</p>
+<p>The Devanagari script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
 <p>Kashmiri uses fewer consonants than Hindi, but has more vowels. The orthography includes some Kashmiri-specific characters.</p>
 
-<p>Devanagari text runs left-to-right in horizontal lines.</p>
 
-<p>Orthographic syllables (as opposed to phonetic syllables) play a significant role in Devanagari text. An orthographic syllable starts at the beginning of any cluster of consonants and incorporates the whole cluster plus any following vowels and diacritics.</p>
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels"><span class="leadin">Vowels</span> The <a class="seclink" href="#inherent">inherent vowel</a> is pronounced <span class="ipa">ə</span>.</p>
+
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#plainV">16 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>) in the initial 2009 orthography reform. Two vowel signs and letters represent diphthongs. A single Unicode character is used per base consonant.</p>
+
+<p class="addToVowels">Some organisations use the characters <span class="ch circle">ॅ</span>, <span class="ch circle">ॉ</span>, <span class="ch">ॲ</span>, and <span class="ch">ऑ</span> to represent the sounds <span class="ipa">ɔ</span> and <span class="ipa">ɔː</span>.</p>
+
+<p class="addToVowels">Vowels may be <a class="seclink" href="#nasalisation">nasalised</a>, using the <span class="name">candrabindu</span> diacritic.</p>
+
+<p class="addToVowels">There is <a class="seclink" href="#prebase">1 pre-base glyph</a> but there are no <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>, or <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel signs</a>.</p>
+
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using <a class="termref" href="../glossary/index.html#independentvowel" target="terms">17 independent vowel letters</a>, one for each vowel sound, including the inherent vowel.</p>
+
+
+<p class="addToVowels">This orthography has <a class="seclink" href="#vocalics">vocalics</a>, however of the four vocalic letters in the script (plus their 4 vowel signs) only 1 is in use for contemporary text.</p>
+
+
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">The 27 basic consonant sounds of Kashmiri are represented using <a class="seclink" href="#basicC">24 basic consonant letters</a> and <a class="seclink" href="#extendedC">3 combinations</a> of letters plus the <span class="name">nukta</span> diacritic. Kashmiri also commonly indicates palatalisation of consonants, using <span class="ch">य</span>.</p> 
+<p class="addToConsonants"><span class="leadin">Consonants</span> Kashmiri has <a class="seclink" href="#basicC">24 basic consonant letters</a>. <span class="hx circle">093C</span> can be used to represent <a class="seclink" href="#nukta_encoding">3 more</a> sounds. Kashmiri also commonly indicates <a class="seclink" href="#palatalisation">palatalisation</a> of consonants, using <span class="ch">य</span>.</p>
 
 <p class="addToConsonants"><a class="seclink" href="#extendedC">Eleven more letters</a> are used to represent unassimilated Sanskrit spellings in words. Phonetically, Kashmiri has only three forms of plosive, illustrated here with the bilabial stop: unvoiced  <span class="ipa">p</span>, voiced <span class="ipa">b</span>, aspirated <span class="ipa">pʰ</span>. The murmured <span class="ipa">bʱ</span> is not used, although these letters may crop up in Sanskrit or Hindi loan words. It also has a set of retroflex consonants. Kashmiri normally uses only one letter for <span class="name">m</span> and one for <span class="name">n</span>, although other nasals may occur in words borrowed from Sanskrit.</p>
 
-<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final nasals</a>  are most commonly represented by <span class="hx circle">0902</span>.</p>
-
-
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel"><a class="seclink" href="#clusters">Consonant clusters</a> are commonly not marked, but can be indicated (especially for palatalisation) using the <span class="name"><a class="termref" href="../glossary/index.html#virama">virama</a></span> between consonants. Conjunct forms are expressed using the common Devanagari half-forms, stacked consonants, and ligated glyphs.</p>
-
-<p class="addToNovowel">As part of a cluster, RA has  special forms, but a palatalised RA at the beginning of a word needs special treatment to avoid <span class="name">repha</span> formation.</p>
 
 
 
 
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The Kashmiri <a class="termref" href="../glossary/index.html#abugida">abugida</a> has one <a class="seclink" href="#inherent">inherent vowel</a>. The initial 2009 orthography reform represents other vowels using <a class="seclink" href="#combiningV">16 vowel signs</a>.  All vowel signs are combining marks. There are no <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a> and no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>. There is <a class="seclink" href="#prebase">1 pre-base</a> vowel sign.</p>
+<p class="addToNovowel"><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is commonly not marked, but may be indicated using <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a>  (especially for palatalisation) or a visible combining mark for nasal codas. There are no dedicated <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonant</a> characters.</p>
 
-<p class="addToVowels">All <a class="seclink" href="#standalone">standalone vowel</a> sounds are written using one of 17 <a class="termref" href="../glossary/index.html#independentvowel">independent vowel</a> letters. One <a class="termref" href="../glossary/index.html#vocalic">vocalic</a> letter is also used.</p>
+<p class="addToNovowel"><span class="hx circle">094D</span> is used to kill the inherent vowel and to form conjuncts. Usually it is invisible, but it is rendered visibly when a word ends with a palatalisation marker.</p>
 
-<p class="addToVowels">Two vowel signs and letters represent diphthongs.</p>
+<p class="addToNovowel"><a class="seclink" href="#clusters">Conjunct forms</a> occur as half-forms, stacked consonants, and ligated glyphs.  Half-forms typically remove the vertical stroke from the basic glyph.</p>
 
-<p class="addToVowels">Some organisations use the characters <span class="ch circle">ॅ</span>, <span class="ch circle">ॉ</span>, <span class="ch">ॲ</span>, and <span class="ch">ऑ</span> to represent the sounds <span class="ipa">ɔ</span> and <span class="ipa">ɔː</span>.</p>
+<p class="addToNovowel">As part of a cluster, <span class="ch">र</span> has special forms. When initial in an orthographic syllable it appears as a hook at the top right of the  whole syllable. When non-initial it appears as one of 2 special marks applied to the other consonants. A palatalised RA at the beginning of a word needs special treatment to avoid <span class="name">repha</span> formation.</p>
 
-<p class="addToVowels">Vowels may be <a class="seclink" href="#nasalisation">nasalised</a>, using the diacritic <span class="ch circle">ँ</span>.</p>
+<p class="addToNovowel addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> are written using ordinary consonant letters. Nasal codas are most commonly written using <span class="hx circle">0902</span>.</p>
 
-<p><a class="seclink" href="#numbers">Native digits</a> are used. <a class="seclink" href="#phrase">Punctuation</a> is mostly ASCII, but <span class="name">dandas</span> may be used for phrase boundaries.</p>
+
+
+
+
+<!--<p><span class="leadin">Numbers</span> Devanagari has a set of <a class="seclink" href="#numbers">native digits</a>.</p>-->
+
+
+
+
+<p><span class="leadin">Layout</span> Devanagari text runs left to right in horizontal lines. Words are separated by spaces.  There is no case distinction.</p>
+
+<p>It uses mostly ASCII <a class="seclink" href="#inline">punctuation</a>, but dandas may be used for phrase boundaries.</p>
+
+<p><a class="termref" href="../glossary/index.html#orthographicsyllable">Orthographic syllables</a> (as opposed to phonetic syllables) play a significant role in Devanagari. An orthographic syllable starts at the beginning of any cluster of consonants and incorporates the whole cluster plus any following vowels and diacritics.</p>
+
+<p>Glyphs 'hang' from a top bar (<span class="name">shiroreka</span>) that runs across a word, and which can sometimes be treated as a baseline.</p>
 </section>
    
-    
-      
+
+
+
+
+
 
 
 <section id="index">
@@ -1101,8 +1124,8 @@ Affricate </th>
 
 
 
-<section id="dependentV">
-<h3>Vowels after  consonants</h3>
+<section id="postConsonantV">
+<h3>Post-consonant vowels</h3>
 
 <!--figure class="characterBox auto" data-ipa="i,i,u,u,e,o,ɔ,æ,æ,æ,a">ি,ী,ু,ূ,ে,ো,ো,্যা,্য,া,া</figure-->
 
@@ -1823,6 +1846,8 @@ Affricate </th>
 
 <p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
 
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
+
 <div id="novowel_description"></div>
 
 <p>Follow these links for more information.</p>
@@ -1832,7 +1857,7 @@ Affricate </th>
 <ol>
 <li><mark><a href="#noconjunct">Unmarked vowel absence</a></mark>. </li>
 
-<li>Create a <mark><a href="#clusters">conjunct</a></mark>. There are a number of possibilities here:<ol style="margin: 0;">
+<li><mark><a href="#clusters">Conjuncts</a></mark>. There are a number of possibilities here:<ol style="margin: 0;">
 
 <li><mark><a href="#halfforms">Half-forms</a></mark> : Reduce the shape of all consonants in the cluster except the last to a 'half-form' by removing the vertical stroke.</li>
 

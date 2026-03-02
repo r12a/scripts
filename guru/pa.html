@@ -65,7 +65,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->23 October, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->27 February, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -88,7 +88,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Gurmukhi (Punjabi)) Orthography Notes, <!-- #BeginDate format:En2 -->23-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/guru/pa">https://r12a.github.io/scripts/guru/pa</a></small></p>
+<p class="refLine"><small>Richard Ishida, Gurmukhi (Punjabi)) Orthography Notes, <!-- #BeginDate format:En2 -->27-Feb-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/guru/pa">https://r12a.github.io/scripts/guru/pa</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -171,50 +171,51 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The Gurmukhi script is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>, ie. consonants carry an inherent vowel sound that is overridden using <a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>. See the table to the right for a brief overview of features for the modern Panjabi orthography.</p>
-
-<p>Gurmukhi text runs left to right in horizontal lines.</p>
-
-<p>Words are separated by spaces. There is no case distinction.</p>
-
-
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">Gujarati uses <a class="seclink" href="#basicC">32 consonant letters</a>. The repertoire can be extended by applying the <span class="name">nukta</span> diacritic to <a class="seclink" href="#extendedC">5 characters</a>, to represent foreign sounds, particularly for words from Persian.</p>
-
-<p class="addToConsonants">A <a class="seclink" href="#finals">final <span class="trans">h</span></a> can be indicated using the <span class="name">visarga</span>, but otherwise final consonants are written using ordinary characters.</p>
-
-
-
-
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel">Although <a class="seclink" href="#clusters">consonant clusters</a> are frequent, there are very few conjuncts, mostly just <span class="trans">r</span> and <span class="trans">h</span>, which are subjoined. This leads to difficulties for automatic transcription.</p>
-
-<p class="addToNovowel">Gurmukhi can use <span class="ch circle">੍</span> (called <span class="name">halant</span> in Punjabi) to kill the inherent vowel after a consonant, but it is rarely seen. It isn't used at the end of a word, and is normally only used in modern Punjabi for subjoined <span class="trans">r</span>, <span class="trans">ʋ</span> (rare), and <span class="trans">h</span>, in which cases it is invisible.</p>
-
-<p class="addToNovowel">The virama may also be used occasionally to suppress the vowel in Sanskritised text, or in dictionaries for extra phonetic information.</p>
-
-<p class="addToConsonants">Consonant <a class="seclink" href="#clength">gemination</a> is indicated, unusually for an Indian script, by a special diacritic that appears before the letter being lengthened.</p>
+<p>The Gurmukhi script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">This orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with one <a class="seclink" href="#inherent">inherent vowel</a>. It represents other vowels using <a class="seclink" href="#plainV">9 vowel signs</a>, which are all  combining marks. The inherent vowel is usually not pronounced at the end of a word, however there is often a ghost <span class="ipa">ᵊ</span>.</p>
+<p class="addToVowels"><span class="leadin">Vowels</span> The <a class="seclink" href="#inherent">inherent vowel</a> is pronounced <span class="ipa">ə</span>. It is usually not pronounced at the end of a word, however there may be a ghost <span class="ipa">ᵊ</span>.</p>
 
-<p class="addToVowels">Punjabi has 1 <a class="seclink" href="#prebase">pre-base vowel</a> and no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>. A single Unicode character is used per base consonant, so there are no multipart vowels.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#plainV">9 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>). There is only one vowel sign per consonant.</p>
 
-<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are represented by 10 <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, one for each vowel sound, including the inherent vowel. There are no unique shapes for independent vowels. Instead vowel signs are added to one of three consonants that are used only as vowel carriers, however Unicode provides separate code points for all the combinations and deprecates the use of 2 of the carriers.</p>
+<p class="addToVowels">There is <a class="seclink" href="#prebase">1 pre-base glyph</a> and no <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>, or <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel signs</a>.</p>
 
-<p class="addToVowels">There are two diacritics for <a class="seclink" href="#nasalisation">nasalisation</a>, <span class="trans">tippi</span> and <span class="trans">bindi</span>, each used in different phonetic contexts.</p>
+<p class="addToVowels">There are two diacritics for vowel <a class="seclink" href="#nasalisation">nasalisation</a>, <span class="trans">tippi</span> and <span class="trans">bindi</span>, each used in different phonetic contexts.</p>
 
 <p class="addToVowels">Punjabi is a <a class="seclink" href="#tones">tonal language</a>. Tones are normally indicated by the use of certain consonants, rather than diacritics.</p>
 
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using <a class="termref" href="../glossary/index.html#independentvowel" target="terms">10 independent vowels</a>, which can be visually analysed as vowel signs added to one of three vowel carriers. However, Unicode provides separate code points for all the combinations and deprecates the use of 2 of the carriers.</p>
 
-<p>Gurmukhi has its own set of <a class="seclink" href="#numbers">native digits</a>, however modern text tends to use ASCII digits.</p>
 
-<p><a class="seclink" href="#phrase">Punctuation</a> is mostly western, but dandas are used for sentence and verse final punctuation.</p>
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> Punjabi has <a class="seclink" href="#basicC">32 basic consonant letters</a>. <span class="hx">0A3C</span> can be used to represent <a class="seclink" href="#extendedC">5 more</a> non-native sounds, particularly for words from Persian.</p>
+
+
+
+<p><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is typically not marked, but <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a> do occur for subjoined <span class="name">r</span> and <span class="name">h</span>, and there is one dedicated syllable-final combining mark. There are no dedicated <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonant</a> characters.</p>
+
+<p><span class="hx">0A4D</span> (called <span class="name">halant</span> in Punjabi) is used to form conjuncts, but is rarely seen.  It isn't used at the end of a word, and is normally only used in modern Punjabi for subjoined <span class="trans">r</span>, <span class="trans">ʋ</span> (rare), and <span class="trans">h</span>, in which cases it is invisible. However, the virama may also be used occasionally to suppress the vowel in Sanskritised text, or in dictionaries for extra phonetic information.</p>
+
+<p><a class="seclink" href="#clusters">Conjunct forms</a> occur as stacked consonants.</p>
+
+<p class="addToConsonants">Consonant <a class="seclink" href="#clength">gemination</a> is indicated, unusually for an Indian script, by a special diacritic that appears before the letter being lengthened.</p>
+
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> are written using an ordinary consonant. However, a final <span class="name">h</span> may be indicated using the <span class="name">visarga</span>.</p>
+
+
+
+
+<p><span class="leadin">Numbers</span> Punjabi has a set of <a class="seclink" href="#numbers">native digits</a>, however modern text tends to use ASCII digits.</p>
+
+
+
+<p><span class="leadin">Layout</span> Gurmkukhi text runs left to right in horizontal lines. Words are separated by spaces.  There is no case distinction.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is mostly ASCII, but dandas are used for sentence and verse final punctuation.</p>
 </section>
 
 
@@ -838,7 +839,7 @@ alveolar</th>
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 <p>Punjabi represents other vowels using 9 vowel signs, which are all combining marks. The inherent vowel is usually not pronounced at the end of a word, however there is often a ghost ᵊ.</p>
@@ -1386,6 +1387,8 @@ alveolar</th>
 <aside class="sectionAside"></aside>
 
 <p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
+
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is not followed by a vowel.</p>
 
 <div id="novowel_description"></div>
 

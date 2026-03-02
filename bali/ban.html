@@ -60,7 +60,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 October, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 February, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -74,7 +74,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Balinese Orthography Notes, <!-- #BeginDate format:En2 -->24-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/bali/ban">https://r12a.github.io/scripts/bali/ban</a></small></p>
+<p class="refLine"><small>Richard Ishida, Balinese Orthography Notes, <!-- #BeginDate format:En2 -->26-Feb-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/bali/ban">https://r12a.github.io/scripts/bali/ban</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -168,49 +168,56 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>. See the table to the right for a brief overview of features for the Balinese language.</p>
-
-<p>Balinese text runs <a class="seclink" href="#direction">left to right</a> in horizontal lines.</p>
-
-<p>Words are not separated by spaces, however syllables may be separated by <abbr title="Zero width space"><a class="seclink" href="#word"><abbr title="Zero width space">ZWSP</abbr></a></abbr>, as long as they don't fall inside a stack.</p>
-
-<p>Stacked consonants and conjoined pairs <a class="seclink" href="#word">span word boundaries</a>. This means that text must be <a class="seclink" href="#linebreak">wrapped</a> at orthographic syllable boundaries, and not at word boundaries. <a class="seclink" href="#pameneng">Hyphenation</a> occurs, using <span class="hx">1B60</span> at the line end to indicate the break.</p>
-
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants"><a class="seclink" href="#basicC">18 consonant letters</a> are used for pure Balinese words, supplemented by <a class="seclink" href="#honorific">15 more</a> used for Sanskrit and Kawi loanwords. Some of these letters are used as honorifics, a little like capital letters in English proper nouns.</p>
-
-<p class="addToConsonants">The second (or occasionally third) consonant in a <a class="seclink" href="#onsets">syllable-initial cluster</a> is written using <span class="hx circle">1B44</span> followed by one of 4 ordinary  consonants or using a special vocalic combining mark.</p>
-
-<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final consonant</a> sounds are most commonly written using an ordinary consonant followed by <span class="hx circle">1B44</span>. If another consonant follows, the consonant shapes are combined into a conjunct form — even if the consonants represent the end of one word and the beginning of another! Alternatively, three syllable-final consonants may be represented by one of <a class="seclink" href="#finals">3 final-consonant diacritics</a>, two of which only occur word-finally.</p>
-
-
-
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel"><a class="seclink" href="#clusters">Consonant clusters</a> are  represented by conjunct forms that are either stacked consonants or conjoined pairs. The shape of many subjoined consonant glyphs differs from the normal shape. The shaping is produced by adding <span class="hx circle">1B44</span> between consonant code points.</p>
-
-<p class="addToNovowel">Usually the <span class="name">adeg adeg</span> is invisible, but it is rendered visibly when no other consonant follows, or occasionally in special circumstances, when it can be forced to appear using an invisible formatting character.</p>
-
-
+<p>The Balinese script is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The Balinese orthography is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with one <a class="seclink" href="#inherent">inherent vowel</a><a class="termref" href="../glossary/index.html#inherentvowel"></a>, generally pronounced <span class="ipa">a</span>, but <span class="ipa">ə</span> when word-final or in some affixes. </p>
+<p class="addToVowels"><span class="leadin">Vowels</span> The <a class="seclink" href="#inherent">inherent vowel</a> is generally pronounced <span class="ipa">a</span>, but <span class="ipa">ə</span> when word-final or in some affixes.</p>
 
-<p class="addToVowels">Other post-consonant vowels are written using <a class="seclink" href="#plainV">11 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>). There are <a class="seclink" href="#prebase">2 pre-base glyphs</a> and <a class="seclink" href="#circumgraphs">6 circumgraphs</a>.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#plainV">11 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>).</p>
 
-<p class="addToVowels">In principle, Balinese has no <a class="seclink" href="#compositeV">multipart vowels</a>, however the 6 circumgraphs  can also be decomposed into 2 parts. Those can involve up to 2 glyphs, and glyphs can surround the base consonant(s) on  up to 3 sides.</p>
+<p class="addToVowels">There are <a class="seclink" href="#prebase">2 pre-base glyphs</a> and <a class="seclink" href="#circumgraphs">6 circumgraphs</a>. In principle, Balinese has no <a class="seclink" href="#compositeV">composite vowel signs</a>, however the 6 circumgraphs  can also be decomposed into 2 parts. Those can involve up to 2 glyphs, and glyphs can surround the base consonant(s) on  up to 3 sides.</p>
 
-<p class="addToVowels"><a class="termref" href="../glossary/index.html#independentvowel">Independent vowels</a> are used at the beginning of a word for <a class="seclink" href="#standalone">standalone vowel</a> sounds. Inside a word these are written using vowel signs applied to <span class="ch">ᬳ</span>.</p>
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a> at the beginning of a word. Inside a word they are written using <span class="ch">ᬳ</span> with an attached vowel sign.</p>
 
-<p class="addToVowels">The <a class="seclink" href="#novowel">inherent vowel is suppressed</a> using <span class="ch">᭄</span>, which is invisible in consonant clusters, but is visible elsewhere, and is used word-finally.</p>
 
 <p class="addToVowels">Balinese has <a class="seclink" href="#vocalics">vocalics</a>, and their use is required for certain consonant-vowel combinations.</p>
 
-<p>Balinese has a set of <a class="seclink" href="#numbers">native digits</a>, and uses <a class="seclink" href="#inline">native punctuation marks</a>.</p>
+
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> <a class="seclink" href="#basicC">18 consonant letters</a> are used for pure Balinese words, supplemented by <a class="seclink" href="#honorific">15 more</a> used for Sanskrit and Kawi loanwords. Some of these letters are used as honorifics, a little like capital letters in English proper nouns.</p>
+
+
+
+
+<p class="addToNovowel"><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is indicated using <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a>, a visible <span class="ch">᭄</span>, or dedicated syllable-final characters. There are no dedicated <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonant</a> characters.</p>
+
+<p class="addToNovowel"><span class="ch">᭄</span> is used to kill the inherent vowel and to form conjuncts. Usually the <span class="name">adeg adeg</span> is invisible, but it is rendered visibly when no other consonant follows, or occasionally in special circumstances, when it can be forced to appear using an invisible formatting character.</p>
+
+<p class="addToNovowel"><a class="seclink" href="#clusters">Conjunct forms</a> occur as stacked consonants or conjoined pairs.  The shape of many subjoined consonant glyphs differs from the normal shape.<!-- <span class="ch">᭄</span> is used to create conjuncts. --></p>
+
+<p class="addToNovowel addToConsonants"><a class="seclink" href="#onsets">Medial consonants</a> are written using <span class="hx circle">1B44</span> followed by one of 4 ordinary consonants or a special vocalic combining mark.</p>
+
+<p class="addToNovowel addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> are most commonly written using an ordinary consonant followed by <span class="hx circle">1B44</span>. If another consonant follows, the consonant shapes are combined into a conjunct form — even if the consonants represent the end of one word and the beginning of another ! Alternatively, three codas may be represented by one of <a class="seclink" href="#finals">3 diacritics</a>, two of which only occur word-finally.</p>
+
+
+
+
+
+
+<p><span class="leadin">Numbers</span> Balinese has a set of <a class="seclink" href="#numbers">native digits</a>.</p>
+
+
+
+<p><span class="leadin">Layout</span> Balinese text runs <a class="seclink" href="#direction">left to right</a> in horizontal lines. Words are not separated by spaces, however syllables may be separated by <abbr title="Zero width space"><a class="seclink" href="#word"><abbr title="Zero width space">ZWSP</abbr></a></abbr>, as long as they don't fall inside a stack.  There are no case distinctions.</p>
+
+<p>It uses <a class="seclink" href="#inline">native punctuation marks</a>.</p>
+
+<p>Stacked consonants and conjoined pairs <a class="seclink" href="#word">span word boundaries</a>. This means that text must be <a class="seclink" href="#linebreak">wrapped</a> at orthographic syllable boundaries, and not at word boundaries. <a class="seclink" href="#pameneng">Hyphenation</a> occurs, using <span class="hx">1B60</span> at the line end to indicate the break.</p>
 
 
 
@@ -880,7 +887,7 @@ alveolar</th>
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Vowels after  consonants</h3>
 
 <!--figure class="characterBox auto" data-ipa="i,i,u,u,e,o,ɔ,æ,æ,æ,a">ি,ী,ু,ূ,ে,ো,ো,্যা,্য,া,া</figure-->
@@ -1546,13 +1553,15 @@ alveolar</th>
 
 <p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
 
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
+
 <div id="novowel_description"></div>
 
 <p>Follow these links for more information.</p>
 
 
 <ol>
-<li>Create a <mark><a href="#clusters">conjunct</a></mark>. There are a couple of possibilities here:
+<li><mark><a href="#clusters">Conjuncts</a></mark>. There are a couple of possibilities here:
 
 <ol style="margin: 0;">
     <li><mark><a href="#stacking">Stacked</a></mark> consonants, where the non-initial (<mark>subjoined</mark>) consonant appears below the initial, often with a different shape from normal.</li>

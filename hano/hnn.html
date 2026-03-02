@@ -60,7 +60,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->27 October, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->27 February, 2026<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -76,7 +76,7 @@
 
 <details>
 <summary class="instructions">Citing this document</summary>
-<p class="refLine"><small>Richard Ishida, Hanunó’o Orthography Notes, <!-- #BeginDate format:En2 -->27-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/hano/hnn">https://r12a.github.io/scripts/hano/hnn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Hanunó’o Orthography Notes, <!-- #BeginDate format:En2 -->27-Feb-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/hano/hnn">https://r12a.github.io/scripts/hano/hnn</a></small></p>
 </details>
 
 <p class="instructions"><span style="font-size:120%; font-weight: bold; font-style: italic;">Note:</span> Given the difficulty in finding term lists in written in the Hanunó’o orthography, the Hanunó’o script examples cited here were derived by manually applying the rules of the orthography to Latin transcriptions. Hanunó’o is a simple enough script that these should be reliable.</p>
@@ -170,21 +170,54 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The Hanunó’o script is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>. Consonants carry an inherent vowel which can be modified by appending vowel signs to the consonant.  See the table to the right for a brief overview of features for the modern Hanunó’o orthography.</p>
-
-<p>Hanunó’o text runs left-to-right in horizontal lines, and is unicameral.</p>
-
-
-
-<!--p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p-->
-<p class="addToConsonants">Hanunó’o has  <a class="seclink" href="#basicC">15 consonant  letters</a>. Onsets are a simple consonant, no clusters. <a class="seclink" href="#finals">Syllable codas</a> are  written in modern texts, followed by <span class="hx">1734</span>, which was added to the orthography in the 1950s.</p>
+<p>The Hanunó’o script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The Hanunó’o orthography is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with one <a class="seclink" href="#inherent">inherent vowel</a>, generally pronounced <span class="ipa">a</span>. Other vowels are written using one of only <a class="seclink" href="#combiningV">2 vowel signs</a> (for 4 sounds).</p>
+<p class="addToVowels"><span class="leadin">Vowels</span> The <a class="seclink" href="#inherent">inherent vowel</a> is pronounced <span class="ipa">a</span>.</p>
 
-<p class="addToVowels">Hanunó’o has <a class="seclink" href="#standalone">3 independent vowels</a>, used for vowels that are preceded by a glottal stop. These may occur word-initially or word-medially.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using one of just <a class="seclink" href="#plainV">2 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>), for 4 vowel sounds.</p>
+
+<p class="addToVowels">There are no <a href="../glossary/index.html#prebase" class="termref" target="terms">pre-base glyphs</a>, <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>, or <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel signs</a>.</p>
+
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using <a class="termref" href="../glossary/index.html#independentvowel" target="terms">3 independent vowel letters</a>. They may occur word-initially or word-medially.</p>
+
+
+
+
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> Hanunó’o has <a class="seclink" href="#basicC">15 basic consonant letters</a>.</p>
+
+
+
+<p><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is indicated using a visible combining mark. There are no conjuncts.</p>
+
+<p><span class="hx">1734</span> is used to kill the inherent vowel. It was added to the orthography in the 1950s.</p>
+
+<p class="addToConsonants">Onsets are a simple consonant, no clusters. <a class="seclink" href="#finals">Syllable codas</a> are written in modern texts, using ordinary consonant letters, and followed by <span class="hx">1734</span>.</p>
+
+
+
+
+
+
+<p><span class="leadin">Numbers</span> The Hanunó’o Unicode block doesn't have a set of native digits.</p>
+
+
+
+<p><span class="leadin">Layout</span> Hanunó’o text runs <a class="seclink" href="#direction">left to right</a> in horizontal lines. Words are separated by spaces.  There is no case distinction.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is traditionally limited to 2 dandas, used to indicate pauses.</p>
+
+
+
+
+
+
 
 
 
@@ -673,7 +706,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="combiningV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 <p>Post-consonant vowels are written using only 2 combining marks (for 4 sounds). The two marks are identical and are distinguished only by position relative to the base.</p>

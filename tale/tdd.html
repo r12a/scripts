@@ -64,7 +64,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 October, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->2 March, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -85,7 +85,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Tai Nüa (Tai Le) Orthography Notes, <!-- #BeginDate format:En2 -->20-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/tale/tdd">https://r12a.github.io/scripts/tale/tdd</a></small></p>
+<p class="refLine"><small>Richard Ishida, Tai Nüa (Tai Le) Orthography Notes, <!-- #BeginDate format:En2 -->02-Mar-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/tale/tdd">https://r12a.github.io/scripts/tale/tdd</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -171,31 +171,48 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The Tai Le script is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>, ie. consonants carry an inherent vowel sound that is overridden using <a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>. In Tai Le, consonants carry an inherent vowel  <span class="ipa">a</span>. See the table to the right for a brief overview of features for the modern Tai Nüa orthography.</p>
-
-<p>Tai Le text runs left to right in horizontal lines. <a class="seclink" href="#word">Words are not separated</a> by spaces.</p>
-
+<p>The Tai Le script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 <p>The key  distinguishing feature of Tai Le is its regularity and simplicity compared to other Tai scripts. The sequence of characters is C(V)(C)(T). Tones always go after any other characters in the syllable.</p>
 
 
 
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">Tai Le's <a class="seclink" href="#basicC">19 consonants</a> are straightforward. There is no duplication for tone support, no stacking or other conjunct behaviour, etc.</p>
-
-<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final consonant sounds</a> use ordinary code points without an inherent vowel. Parsing syllables is usually straightforward because each syllable-final consonant is  folllowed by a tone mark.</p>
-
-
-
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The Tai Le orthography has an <a class="seclink" href="#inherent">inherent vowel</a>, pronounced <span class="ipa">a</span>.</p>
+<p class="addToVowels"><span class="leadin">Vowels</span> The <a class="seclink" href="#inherent">inherent vowel</a> is  pronounced <span class="ipa">a</span>.</p>
 
-<p class="addToVowels">Other  vowels are written using <a class="seclink" href="#vletter">10 dedicated vowel letters</a>. All vowel signs are ordinary spacing characters (no combining marks), and are stored  and displayed after the base character. A rhyme can also end with a <span class="ipa">-j</span> or <span class="ipa">-w</span> glide. There is a dedicated letter for the former, and the letter <span class="transc">w</span> doubles for the latter.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#plainV">10 dedicated vowel letters</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>).  All vowel signs are ordinary spacing characters (no combining marks), and are stored  and displayed after the base character.</p>
+<p class="addToVowels">There are no <a href="../glossary/index.html#prebase" class="termref" target="terms">pre-base glyphs</a>, <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>, or <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel signs</a>.</p>
 
-<p class="addToVowels">There are no <a class="termref" href="../glossary/index.html#prebase">pre-base vowels</a>, <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>, or <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a>.</p>
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written  after the vowel carrier <span class="ch">ᥟ</span>. On its own, it represents the sound of the inherent vowel.</p>
+
 
 <p class="addToVowels">Tones are written using <a class="seclink" href="#tones">5 spacing characters</a> after the final character in a syllable, however they were written using 5 combining marks until 1988.</p>
 
-<p>Tai Nüa <a class="seclink" href="#numbers">numbers</a> use ASCII digits, but may also use Myanmar digits with some shape changes.</p>
+
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> Tai Le has <a class="seclink" href="#basicC">19 basic consonant letters</a>. There is no duplication for tone support, no stacking or other conjunct behaviour, etc.</p>
+
+
+
+
+<p><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is not indicated. There are no <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjuncts</a> for consonant clusters, no vowel killer, and  no dedicated <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonant</a> characters.</p>
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> use ordinary code points without an inherent vowel. Parsing syllables is usually straightforward because each syllable-final consonant is  folllowed by a tone mark. <span class="addToVowels"> A rhyme can also end with a <span class="ipa">-j</span> or <span class="ipa">-w</span> glide. There is a dedicated letter for the former, and the letter <span class="transc">w</span> doubles for the latter.</span></p>
+
+
+
+
+
+
+<p><span class="leadin">Numbers</span>Tai Nüa <a class="seclink" href="#numbers">numbers</a> use ASCII digits, but may also use Myanmar digits with some shape changes.</p>
+
+
+
+<p><span class="leadin">Layout</span> Tai Le text runs left to right in horizontal lines. Words are not separated by spaces.  There is no case distinction.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is ASCII and fullwidth Chinese.</p>
+
 
 
 
@@ -1085,7 +1102,7 @@ alveolar</th>
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 <p>Post-consonant vowels are written using 10 dedicated vowel letters. All vowel signs are ordinary spacing characters (no combining marks), and are stored and displayed after the base character.</p>

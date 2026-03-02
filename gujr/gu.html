@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 October, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->27 February, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -79,7 +79,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Gujarati Orthography Notes, <!-- #BeginDate format:En2 -->22-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/gujr/gu">https://r12a.github.io/scripts/gujr/gu</a></small></p>
+<p class="refLine"><small>Richard Ishida, Gujarati Orthography Notes, <!-- #BeginDate format:En2 -->27-Feb-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/gujr/gu">https://r12a.github.io/scripts/gujr/gu</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -162,49 +162,60 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The script  is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>. Consonants carry an <a class="termref" href="../glossary/index.html#inherentvowel">inherent vowel</a> which can be modified by appending <a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a> to the consonant.  See the table to the right for a brief overview of features of the modern Gujarati orthography.</p>
-
-<p>Gujarati text runs left to right in horizontal lines.</p>
-
-<p>Words are separated by spaces. There is no uppercase and lowercase distinction.</p>
-
-
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">Gujarati uses <a class="seclink" href="#basicC">34 consonant letters</a>. The repertoire <a class="seclink" href="#extendedC">can be extended</a> by applying the <span class="name">nukta</span> diacritic to  characters, or with additional characters, but these are used for Arabic and Avestan transliterations, rather than current Gujarati text. Gujarati doesn't use a shiroreka (top line) like its close relative Devanagari.</p>
-
-<p class="addToConsonants"><a class="seclink" href="#finals">Final consonant</a> sounds may be represented by 2 dedicated combining marks (<span class="name">anusvara</span> &amp; <span class="name">visarga</span>), but are generally ordinary consonants that are not marked by a virama.</p>
-
-
-
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel"><a class="seclink" href="#clusters">Consonant clusters</a> can be indicated using the <a class="termref" href="../glossary/index.html#virama"><span class="name">virama</span></a> between consonants and include  half-forms, stacked consonants, and ligated glyphs. Occasionally, a visible <span class="name">virama</span> is used. In addition, participating consonants may just be moved together. Gujarati is also unusual in that components in clusters sometimes used Devanagari glyphs for one or more Gujarati characters. Word-final codas are generally unmarked consonants, but may be a combining <span class="name">anusvara</span> or <span class="name">visarga</span>.</p>
-
-
-
+<p>The Gujarati script is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The Gujarati orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with one <a class="seclink" href="#inherent">inherent vowel</a>, pronounced <span class="ipa">ə</span>. Other post-consonant vowels are written using <a class="seclink" href="#combiningV">11 vowel signs</a>, all combining marks, and only one per consonant.</p>
+<p class="addToVowels"><span class="leadin">Vowels</span> The <a class="seclink" href="#inherent">inherent vowel</a> is pronounced <span class="ipa">ə</span>.</p>
 
-<p class="addToVowels">Gujarati has one <a class="seclink" href="#prebase">pre-base vowel</a>, but there are no <a class="termref" href="../glossary/index.html#compositevowel">multipart vowels</a> nor <a class="termref" href="../glossary/index.html#circumgraphs">circumgraphs</a>.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#plainV">11 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>). Two vowel signs represent diphthongs. A single Unicode character is used per base consonant.</p>
 
 <p>There are separate vowel signs for the historical short and long variants, but length is no longer distinctive in modern pronunciation. It is only found in metrical structures of verse.<tt>ws,#Overview</tt></p>
 
-<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowels</a>  are written using 12 <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, one for each vowel sound, including the inherent vowel. Some vowel signs can be visually analysed into subcomponents, but Unicode usage involves only one combining character per consonant.</p>
-
 <p class="addToVowels">Vowels may be <a class="seclink" href="#nasalisation">nasalised</a>, using the <span class="name">anusvara</span> diacritic.</p>
 
-<p class="addToVowels">The <a class="seclink" href="#novowel">absence of the inherent vowel</a> is not always indicated. It is generally not pronounced at the end of a word, but also it is sometimes elided without indications  within a word.</p>
-<p>Two <a class="seclink" href="#vocalics">vocalics</a> are used in current text. Others were used historically.</p>
+<p class="addToVowels">There is <a class="seclink" href="#prebase">1 pre-base glyph</a> but there are no <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>, or <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel signs</a>.</p>
+
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using <a class="termref" href="../glossary/index.html#independentvowel" target="terms">12 independent vowel letters</a>, one for each vowel sound, including the inherent vowel. Some vowel signs can be visually analysed into subcomponents, but Unicode usage involves only one combining character per consonant.</p>
+
+
+<p class="addToVowels">This orthography has <a class="seclink" href="#vocalics">vocalics</a>, however of the four vocalic letters in the script (plus their 4 vowel signs) only 1 is in use for contemporary text.</p>
 
 
 
 
-<p>Gujarati has a set of <a class="seclink" href="#numbers">native digits</a>. <a class="seclink" href="#phrase">Punctuation</a> includes mostly ASCII but may also include dandas.</p>
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> Gujarati has <a class="seclink" href="#basicC">34 basic consonant letters</a>. <span class="hx circle">0ABC</span> and <a class="seclink" href="#arabic_ext">6 more combining marks</a> can be used to represent Arabic and Avestan transliterations.</p>
+
+
+
+
+
+
+<p class="addToNovowel"><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is commonly not marked. The inherent vowel is generally not pronounced at the end of a word, but also it is sometimes elided without indications  within a word. But it may also be indicated using <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a> or a visible combining mark for codas.  In addition, participating consonants may just be moved together. There are no dedicated <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonant</a> characters.</p>
+
+<p class="addToNovowel"><span class="hx circle">0ACD</span> is used to kill the inherent vowel and to form conjuncts. Usually it is invisible.</p>
+
+<p class="addToNovowel"><a class="seclink" href="#clusters">Conjunct forms</a> occur as half-forms, stacked consonants, and ligated glyphs.  Half-forms typically remove the vertical stroke from the basic glyph. Gujarati is also unusual in that components in clusters sometimes used Devanagari glyphs for one or more Gujarati characters.</p>
+
+<p class="addToNovowel addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> are written using ordinary consonant letters. Codas can also be written using 2 dedicated combining marks (<span class="name">anusvara</span> &amp; <span class="name">visarga</span>).</p>
+
+
+
+
+
+<p><span class="leadin">Numbers</span> Gujarati has a set of <a class="seclink" href="#numbers">native digits</a>.</p>
+
+
+
+
+<p><span class="leadin">Layout</span> Gujarati text runs left to right in horizontal lines. Words are separated by spaces.  There is no case distinction.</p>
+
+<p>It uses mostly ASCII <a class="seclink" href="#inline">punctuation</a>, but dandas may be used for phrase boundaries.</p>
+
+<p>Gujarati doesn't use a <span class="name">shiroreka</span> (top line), unlike its close relative Devanagari.</p>
 </section>
    
     
@@ -820,7 +831,7 @@ alveolar</th>
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 <!--figure class="characterBox auto" data-ipa="i,i,u,u,e,o,ɔ,æ,æ,æ,a">ি,ী,ু,ূ,ে,ো,ো,্যা,্য,া,া</figure-->
@@ -1303,6 +1314,8 @@ alveolar</th>
 
 <p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
 
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
+
 <div id="novowel_description"></div> 
 
 <p>Follow these links for more information.</p>
@@ -1310,7 +1323,7 @@ alveolar</th>
 
 
 <ol>
-<li>Create a <mark><a href="#conjuncts">conjunct</a></mark>. There are a number of possibilities here:
+<li><mark><a href="#conjuncts">Conjuncts</a></mark>. There are a number of possibilities here:
     <ol style="margin:0;">
     <li><mark><a href="#halfforms">Half-forms</a></mark> : Reduce the shape of all consonants in the cluster except the last to a 'half-form'. </li>
 

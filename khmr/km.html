@@ -60,7 +60,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 October, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->27 February, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
   
@@ -78,7 +78,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Khmer (Cambodian) Orthography Notes, <!-- #BeginDate format:En2 -->24-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/khmr/km">https://r12a.github.io/scripts/khmr/km</a></small></p>
+<p class="refLine"><small>Richard Ishida, Khmer (Cambodian) Orthography Notes, <!-- #BeginDate format:En2 -->27-Feb-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/khmr/km">https://r12a.github.io/scripts/khmr/km</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -166,43 +166,57 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The script is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>, ie. like most Brahmi-influenced scripts, each consonant carries with it an inherent vowel. See the table to the right for a brief overview of features for the modern Khmer orthography.</p>
-
-<p>Khmer text runs left to right in horizontal lines. Words are <a class="seclink" href="#word">not separated by spaces</a>, however words may be separated by <abbr title="Zero width space">ZWSP</abbr>. Spaces are used as phrase separators.</p>
-
-
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">Modern Khmer uses <a class="seclink" href="#basicC">33 basic consonants</a>, and <a class="seclink" href="#extendedC">10 special character </a>combinations are used for foreign sounds.</p>
-
-<p class="addToConsonants">Each <a class="seclink" href="#onsets">onset consonant</a> is associated with a high or low class related to pronunciation (there is no tone). Khmer has more vowel sounds than ways to write them, so the choice of <a class="seclink" href="#consonant_registers">consonant class</a> indicates different sounds for the same written vowel. Other factors may also affect the  sound, such as stress, vowel harmony, and diacritics.</p>
-
-
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel">Word-internal <a class="seclink" href="#clusters">clusters</a> are very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word (though the 2nd consonant at the word end is usually not pronounced). Clusters are indicated by stacked consonants. Subjoined forms are created using an invisible <span class="name">coeng</span> character. Stacks do not span word boundaries.</p>
-
-<p class="addToNovowel">The Khmer equivalent of the <span class="name">virama</span> is called <span class="name">coeng</span>, and is never visible.</p>
-
-
-
-<p class="addToConsonants"><a class="seclink" href="#finals">Word-final consonant</a> sounds (typically 8 consonants and characters) use ordinary code points without an inherent vowel. Because there are no spaces or other word dividers, it is difficult to detect boundaries algorithmically. Two word-final sounds (<span class="trans">m</span> and <span class="trans">h</span>) can be produced using combining marks.</p>
+<p>The Khmer script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The Khmer orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with <a class="seclink" href="#inherent">2 inherent vowels</a> (for example, using the two symbols for the sound <span class="ipa">k</span>, <span class="ex" lang="km">ក</span> is <span class="ipa">kɑː</span> <span class="meaning">neck</span>, and <span class="ex" lang="km">គ</span> is <span class="ipa">kɔː</span> <span class="meaning">mute</span>).</p>
+<p class="addToVowels"><span class="leadin">Vowels</span> Khmer has <a class="seclink" href="#inherent">2 inherent vowels</a>, pronounced <span class="ipa">ɑː</span> and <span class="ipa">ɔː</span>, that are associated with the register of the syllable.</p>
 
-<p class="addToVowels">Other post-consonant vowels are written using <a class="seclink" href="#plainV">21 vowel sign or other combining marks</a> and 2 glide consonant letters. Two additional diacritics are used to change the register of a syllable.</p>
-
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#plainV">21 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs and others</a>), and 2  consonant letters used for glides. Two additional diacritics are used to change the register of a syllable.</p>
 <p class="addToVowels">Khmer has more vowel sounds than ways to write them. Therefore, a written vowel can have different pronunciations, depending on the class of the base consonant. (There is no tone in Khmer, so classes are specially designed for vowel selection.)  Additional factors include whether this is an unstressed vowel, vowel harmony, and whether any of the special diacritics have been used to change the sound. For an in-depth treatment of pronunciation see <a href="#refs">Huffman</a> in the sources section.</p>
 
-<p class="addToVowels">There are <a class="seclink" href="#prebase">3 pre-base glyphs</a> and    <a class="seclink" href="#circumgraphs">5 circumgraphs</a>, 2 of which can decompose into multipart vowels. This page lists <a class="seclink" href="#compositeV">15 multipart vowels</a> (made from 9 vowel signs, and 8 consonants/diacritics), not counting decompositions. Multipart vowels can involve up to 3 glyphs, but  only surround the base consonant(s) on 2 sides, eg.<span class="charExample" translate="no"><span class="ex" lang="km">កោះ</span> <span class="transc">koh̽</span></span></p>
+<p class="addToVowels">There are <a class="seclink" href="#prebase">3 pre-base glyphs</a> and <a class="seclink" href="#circumgraphs">5 circumgraphs</a>, 2 of which can decompose into composite vowel signs.  This page lists <a class="seclink" href="#compositeV">15 composite vowel signs</a> (made from 9 vowel signs, and 8 consonants/diacritics), not counting decompositions. Composite vowel signs  can involve up to 3 glyphs, but  only surround the base consonant(s) on 2 sides</p>
 
-<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are typically written using vowel signs applied to <span class="hx">17A2</span>, but there is also an incomplete set of <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>.</p>
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are normally written using <span class="hx">17A2</span> with an attached vowel sign.  However, there is also an incomplete set of <a class="termref" href="../glossary/index.html#independentvowel" target="terms">independent vowel letters</a>.</p>
 
+
+
+
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> Modern Khmer has <a class="seclink" href="#basicC">33 basic consonant letters</a>, and <a class="seclink" href="#extendedC">10 special character </a>combinations are used for foreign sounds.</p>
+<p class="addToConsonants">Each <a class="seclink" href="#onsets">onset consonant</a> is associated with a high or low class related to pronunciation (there is no tone). Khmer has more vowel sounds than ways to write them, so the choice of <a class="seclink" href="#consonant_registers">consonant class</a> indicates different sounds for the same written vowel. Other factors may also affect the  sound, such as stress, vowel harmony, and diacritics.</p>
+
+
+
+
+
+<p><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is indicated using <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a>,  or dedicated syllable-final combining marks. There are no dedicated <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonant</a> characters.</p>
+
+<p><span class="hx">17D2</span> is used to  form conjuncts. It is never visible.</p>
+
+<p><a class="seclink" href="#clusters">Conjunct forms</a> occur as stacked consonants.  <span class="addToNovowel">Word-internal <a class="seclink" href="#clusters">clusters</a> are very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word (though the 2nd consonant at the word end is usually not pronounced).</span></p>
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable codas</a>  (typically 8 consonants and characters) are most commonly written using an ordinary consonant without an inherent vowel. Because there are no spaces or other word dividers, it is difficult to detect boundaries algorithmically. Two word-final sounds (<span class="trans">m</span> and <span class="trans">h</span>) can be produced using combining marks.</p>
+
+
+
+
+
+
+<p><span class="leadin">Numbers</span> Khmer has a set of <a class="seclink" href="#numbers">native digits</a>.</p>
+
+
+
+<p><span class="leadin">Layout</span> Khmer text runs left to right in horizontal lines. Words are not separated by spaces. Spaces are used as phrase separators.  There is no case distinction.</p>
 <p>Modern Khmer has  a number of distinct <a class="seclink" href="#writing_styles">font styles</a>, including <em>slanted</em> (called <span class="ex" lang="km">អក្សរច្រៀង</span>), which has an upright variant, and <em>round</em> (called <span class="ex" lang="km">អក្សរឈរ</span>). The round style includes more ligated forms. The upright style is used here.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is mostly native, but some ASCII punctuation is also used.</p>
+
+<p>Although words are not delimited by spaces, Khmer lines wrap at word boundaries.</p>
+
 
 
 
@@ -1292,7 +1306,7 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 <p>Other vowels that follow consonants are written using 21 vowel sign or other combining marks and 2 glide consonant letters. Two additional diacritics are used to change the register of a syllable.</p>
@@ -2967,6 +2981,8 @@ were originally intended to <q>represent a phonetic difference not expressed by 
 <aside class="sectionAside"></aside>
 
 <p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
+
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
 
 <div id="novowel_description"></div>
 

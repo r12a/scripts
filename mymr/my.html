@@ -62,7 +62,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 October, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->1 March, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -80,7 +80,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Myanmar (Burmese) Orthography Notes, <!-- #BeginDate format:En2 -->24-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mymr/my">https://r12a.github.io/scripts/mymr/my</a></small></p>
+<p class="refLine"><small>Richard Ishida, Myanmar (Burmese) Orthography Notes, <!-- #BeginDate format:En2 -->01-Mar-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/mymr/my">https://r12a.github.io/scripts/mymr/my</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -164,42 +164,53 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The script is an <a class="termref" href="../glossary/index.html#abugida">abugida</a>, ie. consonants carry an inherent vowel sound that is overridden, where needed, using <a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>.  See the table to the right for a brief overview of features for the modern Burmese orthography.</p>
-
-<p>Myanmar text runs left to right in horizontal lines. <a class="seclink" href="#words">Spaces  separate phrases</a>, rather than words.</p>
-
-
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">The<a class="seclink" href="#basicC"> 26 consonant letters</a> used for pure Burmese words are supplemented by <a class="seclink" href="#extendedC">9 more</a> which are used in Pali loan words.</p> 
-
-
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel"><a class="seclink" href="#clusters">Consonant stacking</a> is used in multi-syllabic words (mostly derived from Pali) to indicate doubled  or homorganic consonant clusters. Subjoined (subscripted) forms are produced using a dedicated, invisible <span class="name"><a class="termref" href="../glossary/index.html#virama">virama</a></span> character. Conjuncts do not span word boundaries. There are dedicated code points for medial consonants, and codas are followed with a visible vowel killer.</p>
-
-
-
-
-<p class="addToConsonants"><a class="seclink" href="#onsets">Syllable-initial clusters</a> use 4 dedicated  combining marks
-for the medial. Aspirated onset consonants are common: some have dedicated letters, others are indicated with a subjoined <span class="trans">h</span>.</p>
-
-<p class="addToConsonants"><a class="seclink" href="#finals">Syllable-final consonant</a> sounds use ordinary characters with an always visible mark called <span class="name">asat</span> to indicate that the inherent vowel is killed. There is also one dedicated final consonant (the anusvara).</p>
+<p>The Myanmar script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The Burmese orthography is an <a class="termref" href="../glossary/index.html#abugida">abugida</a> with <a class="seclink" href="#inherent">4 inherent vowels</a>: one for open syllables, and that plus 3 more for closed syllables. </p>
-<p class="addToVowels">Non-inherent  vowel sounds that follow a consonant are written using plainV (mostly <a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>), 2 consonants, and the <span class="name">asat</span> diacritic.</p>
+<p class="addToVowels"><span class="leadin">Vowels</span> There are <a class="seclink" href="#inherent">4 inherent vowels</a>: one for open syllables, and that plus 3 more for closed syllables.</p>
 
-<p class="addToVowels">Several plain vowels and diphthongs are written using <a class="seclink" href="#compositeV">6 composite vowel signs</a>. They can involve up to 3 glyphs, and glyphs can surround the base consonant(s) on up to 2 sides.  There is  <a class="seclink" href="#prebase">1 pre-base glyph</a>, and no <a class="termref" href="../glossary.html#circumgraph">circumgraphs</a>.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using combining marks (mostly vowel signs), 2 consonants, and the <span class="name">asat</span> diacritic. The pronunciation of some vowel graphemes may vary in open and closed syllables.</p>
 
-<p class="addToVowels">The pronunciation of some vowel graphemes may vary in open and closed syllables.</p>
-
-<p class="addToVowels">Burmese doesn't have true <a class="seclink" href="#standalone">standalone vowels</a>, since syllables begin with a consonant, including the glottal stop.  The latter can be  written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="my">&#x1021;</span> [<a href="/scripts/myanmar/block#char1021"><span class="uname">U+1021 MYANMAR LETTER A</span></a>], but </span>may also be represented by an incomplete set of  <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, mostly used for Pali or Sanskrit words.</p>
-
+<p class="addToVowels">There is <a class="seclink" href="#prebase">1 pre-base glyph</a> and no <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>. <a class="seclink" href="#compositeV">6 composite vowel signs</a> are used for  plain vowels and diphthongs. They can involve up to 3 glyphs, and glyphs can surround the base consonant(s) on up to 2 sides.</p>
 <p class="addToVowels">Burmese has <a class="seclink" href="#tones">4 tones</a>, one of which is used exclusively in closed syllables. The tone of an open syllable can be indicated by the vowel used, or by combining a vowel and one of 2 combining marks.  In a couple of instances an <span class="name">asat</span> is used to indicate tone information, rather than attaching a tone mark.</p>
+
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="my">&#x1021;</span> [<a href="/scripts/myanmar/block#char1021"><span class="uname">U+1021 MYANMAR LETTER A</span></a>], but </span>may also be represented by an incomplete set of <a class="termref" href="../glossary/index.html#independentvowel">independent vowels</a>, mostly used for Pali or Sanskrit words.</p>
+
+
+
+
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> Pure Burmese words use  <a class="seclink" href="#basicC">26 basic consonant letters</a>, supplemented by <a class="seclink" href="#extendedC">9 more</a> which are used in Pali loan words.</p>
+
+
+
+
+<p class="addToNovowel"><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is indicated most commonly using the always-visible <span class="hx">103A</span>, but also using <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a>, and dedicated combining marks for <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonants</a> and codas. </p>
+
+<p class="addToNovowel"><span class="hx">1039</span> is used to  form conjuncts. It is always invisible.</p>
+
+<p class="addToNovowel"><a class="seclink" href="#clusters">Conjunct forms</a> occur as stacked consonants in multi-syllabic words (mostly derived from Pali) to indicate doubled  or homorganic consonant clusters.  Conjuncts do not span word boundaries.</p>
+
+<p class="addToNovowel addToConsonants"><a class="seclink" href="#onsets">Medial consonants</a> use 4 dedicated  combining marks. Aspirated onset consonants are also common: some have dedicated letters, others are indicated with a subjoined <span class="trans">h</span>.</p>
+
+<p class="addToNovowel addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> are most commonly written using  ordinary characters with an always visible mark called <span class="name">asat</span> to indicate that the inherent vowel is killed. There is also one dedicated final consonant (the anusvara).</p>
+
+
+
+
+
+
+<p><span class="leadin">Numbers</span> Burmese has a set of <a class="seclink" href="#numbers">native digits</a>.</p>
+
+
+
+<p><span class="leadin">Layout</span> Burmese text runs left to right in horizontal lines.  <a class="seclink" href="#words">Spaces  separate phrases</a>, rather than words.  There is no case distinction.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is a mixture of ASCII and native punctuation.</p>
 
 
 
@@ -1226,7 +1237,7 @@ alveolar</th>
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 
@@ -3187,6 +3198,9 @@ only used nowadays to indicate different tones. For example, compare the tones i
 
 <p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
 
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
+
+
 <div id="novowel_description"></div>
 
 <p>Follow these links for more information.</p>
@@ -3446,7 +3460,7 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
 <p class="instructions">Click on each letter for more details and for examples of usage, especially where more than one sound is indicated.</p>
 
 
-<figure class="characterBox auto"ပ,ဖ,ဗ,ဘ,တ,ထ,ဒ,က,ခ,ဂ,အ,သ,ဿ,စ,ဆ,ဇ,ဟ,မ,န,ည,ဉ,င,ဝ,ရ,လ,ယ</figure>
+<figure class="characterBox auto">ပ,ဖ,ဗ,ဘ,တ,ထ,ဒ,က,ခ,ဂ,အ,သ,ဿ,စ,ဆ,ဇ,ဟ,မ,န,ည,ဉ,င,ဝ,ရ,လ,ယ</figure>
 </section>
  
  

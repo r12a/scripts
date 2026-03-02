@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->24 October, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->1 March, 2026<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -75,7 +75,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Syloti Nagri (Sylheti) Orthography Notes, <!-- #BeginDate format:En2 -->24-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/sylo/syl">https://r12a.github.io/scripts/sylo/syl</a></small></p>
+<p class="refLine"><small>Richard Ishida, Syloti Nagri (Sylheti) Orthography Notes, <!-- #BeginDate format:En2 -->01-Mar-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/sylo/syl">https://r12a.github.io/scripts/sylo/syl</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -179,40 +179,51 @@ if (summaryExists) {
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The Syloti Nagri script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>, ie. each consonant contains an inherent vowel sound. See the table to the right for a brief overview of features for the Syloti Nagri script.</p>
+<p>The Syloti Nagri script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
-
-<p>Text runs <a href="#direction" class="seclink">left to right</a> in horizontal lines, but pages may run right to left. There is no case distinction. Words are separated by spaces.</p>
-
-
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">Syloti Nagri represents native consonant sounds using <a href="#basicC" class="seclink">27 basic letters</a>, which include <a href="#basicC" class="seclink">10 duplicates</a> to indicate tone. Each consonant has a top bar that joins with those alongside. Syllable <a href="#finals" class="seclink">codas</a> are written using ordinary letters or the <span class="name">anusvara</span> combining mark. A special vowel killer is encoded to indicate word-final codas. There are no dedicated medial consonants.</p>
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel">Consonant clusters may be unmarked (the Syloti Nagri Noto font only produces a few conjuncts) , or they may form <a href="#clusters" class="seclink">conjuncts</a>, or they may be indicated using a <a href="#visiblevirama" class="seclink">visible virama</a>.  The approach taken is very fluid, and may depend on the font or author preference. Conjuncts may be stacked or conjoined, but are the same height as normal letters. Inherent vowels are typically dropped at the end of a word, and the <span class="name">anusvara</span> is used for nasal codas.</p>
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The <a class="seclink" href="#inherent">inherent vowel</a> for Syloti Nagri is pronounced <span class="ipa">ɔ</span>.</p>
+<p class="addToVowels"><span class="leadin">Vowels</span> The <a class="seclink" href="#inherent">inherent vowel</a> is generally pronounced <span class="ipa">ɔ</span>.</p>
 
-<p class="addToVowels">Plain <a class="seclink" href="#combiningV">post-consonant vowels</a> are written using 5 combining vowel signs. A recent addition to these is a vowel that can indicate the inherent vowel sound when word-final. There are no composite vowel signs. <a class="seclink" href="#diphthongz">Diphthongs</a> are commonly written using a vowel sign followed by an independent vowel or, alternatively for those ending in <span class="ipa">-i</span>, a dedicated combining mark can be used alone to represent <span class="ipa">ɔi</span> or after a vowel sign for other diphthongs. There are no pre-base vowel signs or circumgraphs.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#plainV">5 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>). A recent addition to these is a vowel that can indicate the inherent vowel sound when word-final.  <a class="seclink" href="#diphthongV">Diphthongs</a> are commonly written using a vowel sign followed by an independent vowel or, alternatively for those ending in <span class="ipa">-i</span>, a dedicated combining mark can be used alone to represent <span class="ipa">ɔi</span> or after a vowel sign for other diphthongs. </p>
+<p class="addToVowels">There are no <a href="../glossary/index.html#prebase" class="termref" target="terms">pre-base glyphs</a>, <a href="../glossary/index.html#circumgraph" class="termref" target="terms">circumgraphs</a>, or <a href="../glossary/index.html#compositevowel" class="termref" target="terms">composite vowel signs</a>.</p>
 
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using <a class="termref" href="../glossary/index.html#independentvowel" target="terms">5 independent vowel letters</a>. These vowel letters can carry a virama and combine with a following consonant.</p>
 
-<p class="addToVowels"><a class="seclink" href="#standalone">Standalone</a> vowels are written using one of 5 independent vowel letters. In some texts, these vowel letters can carry a virama and combine with a following consonant.</p>
 
 <p>Sylheti has a high <a class="seclink" href="#tones">tone</a>, which is indicated by the consonant letter chosen.</p>
 
 
 
-<p>Sylheti  uses  <a href="#numbers" class="seclink">Bengali digits</a>. <a href="#phrase" class="seclink">Punctuation marks</a> are mostly ASCII, but include the Devanagari danda and a small number of native symbols for poetry.</p>
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> Syloti Nagri has <a href="#basicC" class="seclink">27 basic letters</a>, which include <a href="#basicC" class="seclink">10 duplicates</a> to indicate tone.</p>
+
+
+<p class="addToNovowel"><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> <span>may be unmarked (the Syloti Nagri Noto font only produces a few conjuncts) , or they may form <a href="#clusters" class="seclink">conjuncts</a>, or they may be indicated using a <a href="#visible_virama" class="seclink">visible virama</a>.  The approach taken is very fluid, and may depend on the font or author preference. Inherent vowels are typically dropped at the end of a word, and the <span class="name">anusvara</span> is used for nasal codas</span>. There are no dedicated <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonant</a> characters.</p>
+
+<p class="addToNovowel"><span class="hx">A806</span> is used to  form conjuncts, in which case it <span class="name"></span> is usually invisible, but if there is no font support for the conjunct, may be rendered visibly. At the end of a word, the always visible <span class="hx">A82C</span> may occasionally be used.</p>
+
+<p class="addToNovowel"><a class="seclink" href="#clusters">Conjunct forms</a> occur as   stacked or conjoined consonants, but are the same height as normal letters.</p>
+
+<p class="addToNovowel addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> are  written ordinary letters or the <span class="name">anusvara</span> combining mark. A special vowel killer is encoded to indicate word-final codas.</p>
 
 
 
 
 
 
+<p><span class="leadin">Numbers</span>Sylheti  uses <a href="#numbers" class="seclink">Bengali digits</a>.</p>
+
+
+
+<p><span class="leadin">Layout</span> Balinese text runs left to right in horizontal lines, but <a class="seclink" href="#direction">pages may run right to left</a>. Words are  separated by spaces.  There is no case distinction.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is mostly ASCII, but but includes the Devanagari danda and a small number of native symbols for poetry.</p>
+
+<p><span class="addToConsonants">Each consonant has a top bar that joins with those alongside.</span></p>
 <section id="notable">
 <h3>Notable features</h3>
 
@@ -905,7 +916,7 @@ alveolar</th>
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 
@@ -1416,6 +1427,8 @@ alveolar</th>
 
 
 <p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
+
+<p>Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
 
 <div id="novowel_description"></div>
 

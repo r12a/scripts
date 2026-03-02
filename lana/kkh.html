@@ -64,7 +64,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->17 October, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->2 March, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -86,7 +86,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Lanna, Tai Khün Orthography Notes, <!-- #BeginDate format:En2 -->17-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/lana/kkh">https://r12a.github.io/scripts/lana/kkh</a></small></p>
+<p class="refLine"><small>Richard Ishida, Lanna, Tai Khün Orthography Notes, <!-- #BeginDate format:En2 -->02-Mar-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/lana/kkh">https://r12a.github.io/scripts/lana/kkh</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -184,39 +184,60 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
  <section id="type">
 <h2>Basic features</h2>
 
-<p>The Tai Tham script is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In Khün, consonants carry an inherent vowel, pronounced <span class="ipa">a</span>. See the table to the right for a brief overview of features of the modern Tai Khün orthography.</p>
-
-
-<p>Tai Tham text runs left to right in horizontal lines. Words are not separated by spaces, however syllables may be separated by <abbr title="Zero width space">ZWSP</abbr>, as long as they don't fall inside a stack.</p>
-
-<p>Each onset consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.</p> 
+<p>The Tai Tham script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida" target="terms">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
+<p>Northern Thai and Khün not only use a slightly different set of characters, but  a number of characters have consistently divergeant shapes.</p>
 
 
 
-<!--p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p-->
-<p class="addToConsonants">Tai Tham has stacked consonants, but these do not necessarily indicate consonant clusters. The script is unusual in that any consonant in a stack can retain its inherent vowel, or be associated with a vowel-sign. The <span class="name">sakot</span>, which produces stacks, is never visible.</p>
+<!--<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>-->
+<p class="addToVowels"><span class="leadin">Vowels</span> The <a class="seclink" href="#inherent">inherent vowel</a> is generally pronounced <span class="ipa">a</span>.</p>
 
-<p class="addToConsonants">Stacks can  span word boundaries.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#combiningV">18 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign" target="terms">vowel signs</a>)  and <a class="seclink" href="#otherV">3 consonant letters</a> (2 of which as subjoined forms). Unlike Thai and Lao, all vowel signs are combining marks, and are stored after the base character.</p>
 
-<p class="addToConsonants">Syllable-initial clusters use 2 dedicated code points for the medial <span class="trans">l</span>, and a subjoined letter for medial <span class="trans">w</span>.</p>
+<span class="addToVowels">Vowels are typically written differently when they appear in a closed vs. open syllable. Short and long versions of a vowel are also written differently.</span>
 
-<p class="addToConsonants">Syllable-final consonant sounds can be written using 7 special diacritics, but otherwise use ordinary letters, which may or may not be subjoined depending on the context.</p>
+<p class="addToVowels">There are <a class="seclink" href="#prebase">4 pre-base glyphs</a> but no <a class="termref" href="../glossary/index.html/#circumgraph">circumgraphs</a>. This page lists <a class="seclink" href="#compositeV">25 composite vowel signs</a> (made from 13 combining marks, and 3 consonants/diacritics).  Composite vowel signs can involve up  to 5 glyphs,  which can surround the base consonant(s) on up to 4 sides.</p>
 
-
-
-<!--p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p-->
-<p class="addToVowels">The Tai Khün orthography is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with one inherent vowel, and represents vowels using 18 vowel-signs (including 4 prescripts), and 3 consonants. All vowel-signs are combining marks, and are stored after the base character.  Vowels are often written differently when they appear in a closed vs. open syllable.</p>
-
-<p class="addToVowels">There is an incomplete set of independent vowels, and standalone vowel sounds are typically written using  vowel-signs applied to <span class="ch">ᩋ</span>.</p>
-
-<p class="addToVowels">This page lists 25 composite vowels (made from 13 vowel-signs, and 3 consonants/diacritics).  Composite vowels can involve up  to 5 glyphs,  which can surround the base consonant(s) on up to 4 sides.</p>
 
 <div class="egIntro">eg.</div>
 <p><span class="charExample" translate="no"><span class="ex" lang="kkh">ᩮᨠᩬᩨᩡ᩠ᨿ</span> <span class="transc">ēkɔ̄ɯ̄a˖y̱</span></span></p>
 
-<p>Northern Thai and Khün not only use a slightly different set of characters, but  a number of characters have consistently divergeant shapes.</p>
 
-<p class="instructions">Dashes are used to indicate the location of a consonant or consonant cluster. Prescript vowel-signs have been stored before the hyphen because of the limitations of the font, but in reality all vowel-signs should occur after the consonant they modify.</p>
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written  using <span class="ch">ᩋ</span> with an attached vowel sign, but there is also an incomplete set of <a class="termref" href="../glossary/index.html/#independentvowel">independent vowels</a>.</p>
+
+<p class="addToVowels"><a class="seclink" href="#tones">Tone</a> is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.</p>
+
+
+<!--<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>-->
+<p class="addToConsonants"><span class="leadin">Consonants</span> Tai Khün has <a class="seclink" href="#basicC">42 basic consonant letters</a>. Each onset consonant is associated with a high, mid, or low class related to tone.</p>
+
+
+
+
+<p><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> can be indicated using <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a>, but <span class="addToConsonants">these do not necessarily indicate consonant clusters. The script is unusual in that any consonant in a stack can retain its <a class="termref" href="../glossary/index.html/#inherentvowel">inherent vowel</a>, or be associated with a <a class="termref" href="../glossary/index.html/#vowelsign">vowel sign</a></span>.</p>
+
+<p><span class="hx circle">1A60</span> is used to form conjunct stacks. It is never visible.</p>
+
+<p><a class="seclink" href="#clusters">Conjunct forms</a> occur as stacked consonants. <span class="addToConsonants">Stacks can  span word boundaries.</span></p>
+
+<p class="addToConsonants"><a class="seclink" href="#onsets">Medial consonants</a> are written using 2 dedicated code points for the medial <span class="trans">l</span>, and a subjoined letter for medial <span class="trans">w</span>.</p>
+
+<p class="addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> can be written using 7 special diacritics, but otherwise use ordinary letters, which may or may not be subjoined depending on the context.</p>
+
+
+
+
+
+
+<p><span class="leadin">Numbers</span> Two sets of <a class="seclink" href="#numbers">digits</a> are in common use: a secular set (Hora) and an ecclesiastical set (Tham). European digits are also found in books.</p>
+
+
+
+<p><span class="leadin">Layout</span> Tai Khün text runs left to right in horizontal lines. <a class="seclink" href="#word">Words</a> are not separated by spaces, however syllables may be separated by <abbr title="Zero width space">ZWSP</abbr>, as long as they don't fall inside a stack.  There is no case distinction.</p>
+
+<p><a class="seclink" href="#inline">Punctuation</a> is native.</p>
+
+<p>Stacked consonants and conjoined pairs <a class="seclink" href="#word">span word boundaries</a>. This means that text must be <a class="seclink" href="#linebreak">wrapped</a> at orthographic syllable boundaries, and not at word boundaries.</p>
 </section>
 
 	
@@ -919,7 +940,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 <p>Vowels following consonants using 18 vowel-signs (including 4 prescripts), and 3 consonants. All vowel-signs are combining marks, and are stored after the base character. Vowels are often written differently when they appear in a closed vs. open syllable.</p>

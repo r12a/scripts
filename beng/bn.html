@@ -61,7 +61,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 October, 2025<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 February, 2026<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -74,7 +74,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Bengali (Bangla) Orthography Notes, <!-- #BeginDate format:En2 -->22-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
+<p class="refLine"><small>Richard Ishida, Bengali (Bangla) Orthography Notes, <!-- #BeginDate format:En2 -->26-Feb-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/beng/bn">https://r12a.github.io/scripts/beng/bn</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -170,45 +170,52 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2 id="h_type">Basic features</h2>
 
-<p>The Bengali script  is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>. Consonants carry an inherent vowel which can be modified by appending vowel signs to the consonant.  See the table to the right for a brief overview of features for Bangla.</p>
 
-<p>The orthographic letters of the Bengali script are derived from Sanskrit, and in some cases don't quite fit the needs of modern Bangla (eg. lack of simple vowels for the sounds <span class="ipa">ɛ</span> and <span class="ipa">æ</span>, letters for only 2  of many diphthongs, long and short letters where pronunciation no longer distinguishes those sounds, etc.)</p>
-
-<p>Bengali runs <a class="seclink" href="#direction">left to right</a> in horizontal lines. Words are separated by spaces. There are no case distinctions.</p>
-
-
-
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">The <a class="seclink" href="#basicC">33 consonant letters</a> used for Bangla are supplemented by repertoire extensions for <a class="seclink" href="#extendedC">3 more</a> sounds  by applying the <span class="name">nukta</span> diacritic to  characters.</p> 
-
-
-
-
-<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
-
-<p class="addToNovowel"><a class="seclink" href="#clusters">Consonant clusters</a> at any location are normally indicated using a <a class="termref" href="../glossary/index.html#virama">virama</a> (<span class="name">hasant</span>) between consonants. This results in a large number of <a class="termref" href="../glossary/index.html#conjunct">conjunct</a> forms expressed using stacked consonants, conjoined consonants, and ligated glyphs. Bengali stacked conjuncts are usually the same height as ordinary letters. Conjuncts often have different pronunciations than might be expected from the letters involved, and in particular gemination is very common. Occasionally, a visible virama is used, however, clusters are often not marked at all.</p>
-
-<p class="addToNovowel"><a class="seclink" href="#finals">Syllable-final consonant</a> sounds may be represented by a special letter, <span class="ex" lang="bn">ৎ</span>, or by 2 dedicated combining marks (anusvara &amp; visarga), but are generally ordinary consonants that are not marked by a virama.</p>
-
-
-
+<p>The Bengali script is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a>, ie. each consonant contains an inherent vowel sound.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels">The Bangla orthography is an <a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a> with <a class="seclink" href="#inherent">2 inherent vowels</a>, pronounced <span class="ipa">ɔ</span> and <span class="ipa">o</span>. Other post-consonant vowels are written using <a class="seclink" href="#combiningV">9 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>) and a <a class="seclink" href="#otherV">specialised use</a> of the <span class="trans">y</span> consonant letter.</p>
+<p class="addToVowels"><span class="leadin">Vowels</span> There are two <a class="seclink" href="#inherent">inherent vowels</a>, pronounced <span class="ipa">ɔ</span> and <span class="ipa">o</span>.</p>
 
-<p class="addToVowels"><a class="seclink" href="#vowelharmonydesc">Vowel harmony</a> plays a significant role in the pronunciation of vowel-related code points.</p>
+<p class="addToVowels"><a class="seclink" href="#postConsonantV">Post-consonant vowels</a> are written using <a class="seclink" href="#combiningV">9 combining marks</a> (<a class="termref" href="../glossary/index.html#vowelsign">vowel signs</a>) and a <a class="seclink" href="#otherV">specialised use</a> of <span class="ch">য</span>.</p>
+
+<p>The orthographic letters of the Bengali script are derived from Sanskrit, and in some cases don't quite fit the needs of modern Bangla (eg. lack of simple vowels for the sounds <span class="ipa">ɛ</span> and <span class="ipa">æ</span>, letters for only 2  of many diphthongs, long and short letters where pronunciation no longer distinguishes those sounds, etc.)</p>
+
+<p class="addToVowels"><a class="seclink" href="#vowelharmonydesc">Vowel harmony</a> also plays a significant role in the pronunciation of vowel-related code points.</p>
 
 <p class="addToVowels">Vowels may be <a class="seclink" href="#nasalisation">nasalised</a>, using <span class="ch">ঁ</span>.</p>
 
-<p class="addToVowels">There are <a class="seclink" href="#prebase">3 pre-base</a> and <a class="seclink" href="#circumgraphs">2 circumgraph</a> vowel signs. In principle, there are <a class="seclink" href="#compositeV">no multipart</a> vowels,  however in decomposed text the 2 circumgraphs split into 2 parts each.</p>
+<p class="addToVowels">There are <a class="seclink" href="#prebase">3 pre-base glyphs</a> and <a class="seclink" href="#circumgraphs">2 circumgraphs</a>. In principle, Bengali has no <a class="seclink" href="#compositeV">composite vowel signs</a>, however the 2 circumgraphs  can also be decomposed into 2 parts.</p>
 
-<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowels</a> are written using 10 <a class="termref" href="../glossary/index.html#independentvowel">independent vowel</a> letters, one for each vowel sound, including the inherent vowel and 2 diphthongs. The final sound of numerous diphthongs is also represented using independent vowels.</p>
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are written using 10 <a class="termref" href="../glossary/index.html#independentvowel">independent vowel letters</a>, one for each vowel sound, including the inherent vowel and 2 diphthongs. The final sound of numerous diphthongs is also represented using independent vowels.</p>
 
 
 
-<p>Bengali has <a class="seclink" href="#numbers">native digits</a>.</p>
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
+<p class="addToConsonants"><span class="leadin">Consonants</span> <a class="seclink" href="#basicC">33 consonant letters</a> are supplemented by repertoire extensions for <a class="seclink" href="#extendedC">3 more</a> sounds by applying the <span class="name">nukta</span> diacritic to  characters.</p>
+
+
+
+
+<p class="addToNovowel"><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is indicated using <a href="../glossary/index.html#conjunct" class="termref" target="terms">conjunct forms</a>, or dedicated syllable-final characters. However, consonant clusters are often not marked at all. There are no dedicated <a href="../glossary/index.html#medials" class="termref" target="terms">medial consonant</a> characters.</p>
+
+<p class="addToNovowel"><span class="ch">্</span> is used to kill the inherent vowel and to form conjuncts. Usually it is invisible, but it is rendered visibly when no other consonant follows, when a font doesn't have glyphs for a consonant cluster, and occasionally with intention.</p>
+
+<p class="addToNovowel"><a class="seclink" href="#clusters">Conjunct forms</a> occur as vertically fused stacks, conjoined pairs, or ligated forms.  There are many conjunct forms — in particular gemination is very common — and they often have different pronunciations than might be expected from the letters involved. Bengali stacked conjuncts are usually the same height as ordinary letters.</p>
+
+<p class="addToNovowel addToConsonants"><a class="seclink" href="#finals">Syllable codas</a> may be represented by a special letter, <span class="ch">ৎ</span>, or by one of 2 dedicated combining marks (anusvara &amp; visarga), but they are generally ordinary consonants that are not marked by a virama.</p>
+
+
+
+
+<p><span class="leadin">Numbers</span> Bengali has a set of <a class="seclink" href="#numbers">native digits</a>.</p>
+
+
+
+<p><span class="leadin">Layout</span> Bengali text runs <a class="seclink" href="#direction">left to right</a> in horizontal lines. Words are separated by spaces.  There are no case distinctions.</p>
+
 </section>
 
 
@@ -1088,7 +1095,7 @@ class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 <p class="vowelSignExample">
@@ -1978,6 +1985,8 @@ Vowel harmony plays a significant role in the pronunciation of vowel-related cod
 
 
 <p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
+
+<p class="addToNovowel">Given that consonants normally include an inherent vowel, the orthography needs a way to indicate when a consonant is <em>not</em> followed by a vowel.</p>
 
 <div id="novowel_description"></div>
 
