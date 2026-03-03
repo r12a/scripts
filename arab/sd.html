@@ -58,7 +58,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->17 October, 2025<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->3 March, 2026<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -74,7 +74,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Sindhi (Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->17-Oct-2025<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/sd">https://r12a.github.io/scripts/arab/sd</a></small></p>
+<p class="refLine"><small>Richard Ishida, Sindhi (Arabic) Orthography Notes, <!-- #BeginDate format:En2 -->03-Mar-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/sd">https://r12a.github.io/scripts/arab/sd</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -159,38 +159,60 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="type">
 <h2>Basic features</h2>
 
-<p>The Arabic script  is an <a class="termref" href="../glossary/index.html#abjad">abjad</a>, ie. short vowels are not normally written.  See the table to the right for a brief overview of features  for the Sindhi language.</p>
-
+<p>The Arabic script  is an <a class="termref" href="https://www.unicode.org/glossary/#abjad" target="terms">abjad</a>, ie. short vowels are not normally written.</p>
 
 <p>The Sindhi Arabic orthography is derived from the Arabic/Persian  abjads, where  in normal use the script  represents long vowel sounds using <a class="termref" href="../glossary/index.html#materlectionis">matres lectionis</a>. However, the script has been adapted in this orthography in order to cope with the many more vowels sounds in  Sindhi; there are many unique letters<a class="termref" href="../glossary/index.html#alphabet"></a>, and the use of letters for vowels is a distinguisher of vowel quality, rather than length.</p>
 
-<p>Sindhi text runs <a href="#direction" class="seclink">right to left</a> in horizontal lines, but numbers and embedded Latin text are read left-to-right. There is no case distinction. Words are separated by spaces.</p>
+
+
+<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+<p class="addToVowels"><span class="leadin">Vowels</span>The Sindhi <a class="termref" href="../glossary/index.html#abjad">abjad</a> indicates the location of 7 vowel sounds  using <a href="#vletter" class="seclink">4 letters</a>.  Three more sounds are not normally written.</p>
+<p class="addToVowels">When needed, all vowels can be unambiguously represented using the letters and <a href="#combiningV" class="seclink">3 combining marks</a>. <a class="seclink" href="#postConsonantV">Post-consonant vowel</a> sounds are  written using the same code points, regardless of the position within a word.</p>
+<p class="addToVowels"><a href="#nasalisation" class="seclink">Nasalisation</a> is indicated using <span class="ch">ن</span>. Vowel absence is not normally marked. Even in vowelled text, the sukun is infrequently used.</p>
+<p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowel</a> sounds are preceded by or attached to a letter that varies according to whether it occurs at the beginning of a word or word-medially, and in some cases word-finally. These carrier letters are <span class="hx">0627</span>, <span class="hx">0626</span>, and <span class="hx">0621</span>, respectively.</p>
 
 
 
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants">Sindhi represents  consonant sounds using <a href="#basicC" class="seclink">49 basic letters</a> and <a href="#aspiration" class="seclink">7 more  digraphs</a> for aspirated sounds. A number of consonant sounds can be written with alternative consonant letters since the original  spelling is retained for many words. But there are also 15-20 letters that are only used for Sindhi.</p>
+<p class="addToConsonants"><span class="leadin">Consonants</span>Sindhi represents  consonant sounds using <a href="#basicC" class="seclink">49 basic letters</a> and <a href="#aspiration" class="seclink">7 more  digraphs</a> for aspirated sounds. A number of consonant sounds can be written with alternative consonant letters since the original  spelling is retained for many words. But there are also 15-20 letters that are only used for Sindhi.</p>
 <p class="addToConsonants">Dedicated letters are available for some <a class="seclink" href="#aspiration">aspirated consonant</a> sounds, but others are represented using the aformentioned digraphs.</p>
-
 <p class="addToConsonants">Sindhi uses <a class="seclink" href="#heh">3 code points</a> for sounds related to <span class="ipa">h</span>, but they are used very inconsistently in the wild, creating difficulties for searching and other operations. Unicode experts recommend specific roles for each of the letters, but in some joining contexts there is no difference in appearance, which makes mistakes possible.</p>
-<p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
+
+<p class="addToConsonants">A mandatory ligature has to be used for combinations of <span class="trans">lam + alif</span>.</p>
+<p><span class="leadin">Vowel absence</span> <a class="seclink" href="#novowel">Vowel absence</a> is not normally indicated in Sindhi using any mark to indicate a consonant cluster or consonant without a following vowel. A cluster is simply written as a sequence of consonants. Vowelled text may use <span class="hx">0652</span>, but it is rare.</p>
+
+<p><span class="leadin">Numbers</span> Sindhi uses the set of <a class="seclink" href="#digits">native digits</a> in the Unicode Arabic block known as Eastern Arabic-Indic digits.</p>
 
 
 
+<p><span class="leadin">Layout</span> Sindhi text runs <a class="seclink" href="#direction">right-to-left</a> in horizontal lines, but numbers and embedded Latin text are read left-to-right. Words are  separated by spaces.  There is no case distinction.</p>
 
+<p>The script is <a class="seclink" href="#cursive">cursive</a>, and some basic letter shapes change radically, depending on what they join to. It is also very common for adjacent characters to ligate and to stretch to fill available space. Many of the characters share a common base form, and are distinguished by the number and location of dots or other small diacritics, called <span class="foreigntext"><span class="trans"><a class="termref" href="../glossary/index.html#ijam">i'jam</a></span></span>. For example, <bdi class="ex" lang="ar">س ‎ش ‎ݜ ‎ ݰ ‎ݽ ‎ݾ ‎ڛ ‎ښ ‎ڜ ‎ۺ</bdi>.</p>
 
-<p class="addToVowels">The Sindhi <a class="termref" href="../glossary/index.html#abjad">abjad</a>  indicates the location of 7 vowel sounds  using   <a href="#vletter" class="seclink">4 letters</a>.  Three more sounds are not normally written.</p>
+<p><a class="seclink" href="#inline">Punctuation</a> is a mixture of ASCII and Arabic code points for  <a href="#phrase" class="seclink">punctuation marks</a>, but uses reversed comma and semicolon punctuation marks.</p>
+<section id="joining_forms">
+<h3 style="margin-inline:0;">Joining forms</h3>
 
-<p class="addToVowels">When needed, all vowels can be unambiguously represented using the letters and <a href="#combiningV" class="seclink">3 combining marks</a>. Post-consonant vowel sounds are  written using the same code points, regardless of the position within a word.</p>
+<p>Because the Arabic script is 'cursive' (ie. joined-up) writing, letters tend to have different shapes depending on whether they join with adjacent letters or not (see <a class="secref">cursive</a>). In addition, vowels can be represented using different characters, depending on where in a word they appear.</p>
 
-<p class="addToVowels">On the other hand, <a class="seclink" href="#standalone">standalone</a> vowels are preceded by or attached to a letter that varies according to whether it occurs at the beginning of a word or word-medially, and in some cases word-finally. These carrier letters are <span class="hx">0627</span>, <span class="hx">0626</span>, and <span class="hx">0621</span>, respectively.</p>
+<p>In scripts such as Arabic, several characters have no left-joining form. In what follows we'll use the characters <span class="ch">ي</span> and <span class="ch">د</span> to illustrate shapes. The former can join on both sides, but the latter can only join on the right.</p>
 
-<p class="addToVowels"><a href="#nasalisation" class="seclink">Nasalisation</a> is indicated using <span class="ch">ن</span>. Vowel absence is not normally marked. Even in vowelled text, the sukun is infrequently used.</p>
+<p>Left-joining glyphs are commonly called <span class="name">initial</span>; dual-joining are called <span class="name">medial</span>; and right-joining are called <span class="name">final</span>. Glyphs that don't join on either side are called <span class="name">isolated</span>. However, these glyph shapes can be found in various places within a single word.</p>
 
+<p><span class="leadin">Word-initial characters</span> usually have <span class="name">initial</span> glyph shapes (eg. <span class="hx init noname">064A</span> ). However, characters that only join to the right will use an isolated glyph shape (eg. <span class="hx noname noindex">062F</span> ).
+Furthermore, words beginning with a vowel are always preceded by a vowel carrier, which is normally <span class="ch">ا</span>
+(eg. <span class="hex init noname noindex">0627 06CC</span> or <span class="hex noname">0627 064E</span> ).</p>
 
+<p><span class="leadin">Word-medial characters</span> will typically join on both sides
+(eg. <span class="hx medi noname noindex">064A</span> ) but those that only join to the right will use a <span class="name">final</span> glyph (eg. <span class="hx fina noname noindex">062F</span> ).
+However, if either of those is preceded by another character that only joins to the right, the glyph shapes rendered will be <span class="name">initial</span> (eg. <span class="hx init noname noindex">064A</span> )
+and <span class="name">isolated</span> (eg. <span class="hx noname noindex">062F</span> ), respectively.</p>
 
+<p><span class="leadin">Word-final characters</span> will typically use a <span class="name">final</span> glyph shape (eg. <span class="hx fina noname noindex">064A</span> and <span class="hx fina noname">062F</span> ).
+However, if the previous character joins only to the right, they will use isolated glyph shapes (eg.<span class="hx noname noindex">064A</span> and <span class="hx noname">062F</span> ).</p>
 
-<p>Kashmiri  uses  <a href="#numbers" class="seclink">native digits</a>, and a mixture of ASCII and Arabic code points for  <a href="#phrase" class="seclink">punctuation marks</a>, but uses reversed comma and semicolon punctuation marks.</p>
+<p>In all this contextual glyph shaping the basic shapes used for a character can vary significantly in a script like Arabic. This also includes some characters that only have <span class="name">ijam</span> dots in certain contexts.</p>
+</section>
 </section>
    
     
@@ -945,7 +967,7 @@ alveolar</th>
 
 
 
-<section id="dependentV">
+<section id="postConsonantV">
 <h3>Post-consonant vowels</h3>
 
 
