@@ -286,7 +286,7 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 				if (fontDB[r].system.has('goog')) out += `<b title="Click to show only Noto fonts." onclick="showOnly('noto', '${ script }')">N</b> `
 				if (fontDB[r].system.has('sil')) out += `<b title="Click to show only SIL fonts." onclick="showOnly('sil', '${ script }')">S</b> `
 				}
-			out += ' <span class="fontname">'+fontDB[r].name
+			out += ' <span class="fontname"><span class="theName">'+fontDB[r].name+'</span>'
 			out += ' <span style="color:#ccc; font-size:80%; margin: 0 1em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = \'none\'">X</span> '
 			//if (fontDB[r].notes) out += '<span class="infoIcon">🛈 '+fontDB[r].notes+'</span>'
             fontInfoKey = fontDB[r].name.toLowerCase()
@@ -328,6 +328,41 @@ function showFontInfo (font) {
     document.getElementById('fontInfoContent').innerHTML = fontInfoDB[font.toLowerCase()].replace(/\n/g,'<br><br>')
     document.getElementById('fontInfo').style.display = 'block'
     }
+
+
+
+function copyFontList() {
+  // 1. Collect all font names
+  const names = Array.from(document.querySelectorAll("span.theName"))
+                     .map(el => el.textContent.trim());
+
+  // 2. Make a comma‑separated list
+  const list = names.join(", ");
+
+  // 3. Copy to clipboard
+  navigator.clipboard.writeText(list).then(() => {
+
+    // 4. Create a temporary notification dialog
+    const note = document.createElement("div");
+    note.textContent = "Font list copied to clipboard.";
+    note.style.position = "fixed";
+    note.style.top = "20px";
+    note.style.left = "50%";
+    note.style.transform = "translateX(-50%)";
+    note.style.background = "rgba(0,0,0,0.85)";
+    note.style.color = "white";
+    note.style.padding = "1em 1.5em";
+    note.style.borderRadius = "6px";
+    note.style.fontSize = "1rem";
+    note.style.zIndex = "9999";
+
+    document.body.appendChild(note);
+
+    // 5. Remove after 3 seconds
+    setTimeout(() => note.remove(), 3000);
+  });
+}
+
 
 
 
@@ -639,6 +674,7 @@ function showActiveFontFilters() {
 </div>
 
 
+
 <div style="font-size: 90%;">
 <div style="font-weight: bold;">Change font display size:<br><input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="45" oninput="changeFontSize(this.value)" style="width:50%;"> <span id="sizeIndicator" style="font-size:80%;">45px</span></div>
 
@@ -667,6 +703,12 @@ function showActiveFontFilters() {
 </div>
 
 
+
+
+
+<button onclick="copyFontList()" style="margin-block:3rem;">Copy font list to clipboard</button>
+
+
 <!--div class="noprint">
 <h2 class="notoc" style="font-size: 150%;"><a id="links">Related</a></h2>
 <p style="line-height: 1.3em"><a href="/scripts/featurelist/" target="_blank">Script features by language</a></p>
@@ -678,7 +720,7 @@ function showActiveFontFilters() {
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->4 March, 2026<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->6 March, 2026<!-- #EndDate -->
 <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
@@ -1016,289 +1058,6 @@ function showActiveFontFilters() {
 
 
 
-<!-- OLD
-<p><span style="font-weight: bold;">Choose a script:</span><br>
-<a class="trigger" href="index.html?script=adlm">adlam</a> • 
-
-<span class="trigger" onclick="getResult('adlm')">adlam</span> • 
-
-<span class="trigger" onclick="getResult('ahom')">ahom</span> • 
-
-<span class="trigger" onclick="getResult('hluw')">anatolian hieroglyphs</span> • 
-
-<span class="trigger" onclick="getResult('arab')">arabic</span> •
-
-<span class="trigger" onclick="getResult('armi')">aramaic</span> • 
-
-<span class="trigger" onclick="getResult('armn')">armenian</span> • 
-
-<span class="trigger" onclick="getResult('avst')">avestan</span> • 
-
-<span class="trigger" onclick="getResult('bhks')">bhaiksuki</span> • 
-
-<span class="trigger" onclick="getResult('bali')">balinese</span> • 
-
-<span class="trigger" onclick="getResult('bamu')">bamum</span> • 
-
-<span class="trigger" onclick="getResult('bass')">bassa vah</span> • 
-
-<span class="trigger" onclick="getResult('batk')">batak</span> • 
-
-<span class="trigger" onclick="getResult('beng')">bengali</span> • 
-
-<span class="trigger" onclick="getResult('brah')">brahmi</span> • 
-
-<span class="trigger" onclick="getResult('bugi')">buginese</span> • 
-
-<span class="trigger" onclick="getResult('buhd')">buhid</span> • 
-
-<span class="trigger" onclick="getResult('cans')">canadian syllabics</span> • 
-
-<span class="trigger" onclick="getResult('cari')">carian</span> • 
-
-<span class="trigger" onclick="getResult('aghb')">caucasian albanian</span> • 
-
-<span class="trigger" onclick="getResult('cakm')">chakma</span> • 
-
-<span class="trigger" onclick="getResult('cham')">cham</span> • 
-
-<span class="trigger" onclick="getResult('cher')">cherokee</span> • 
-
-<span class="trigger" onclick="getResult('hans')">chinese, simplified</span> • 
-
-<span class="trigger" onclick="getResult('hant')">chinese, traditional</span> • 
-
-<span class="trigger" onclick="getResult('chrs')">chorasmian</span> • 
-
-<span class="trigger" onclick="getResult('copt')">coptic</span> • 
-
-<span class="trigger" onclick="getResult('xsux')">cuneiform</span> • 
-
-<span class="trigger" onclick="getResult('cpmn')">cypro minoan</span> • 
-
-<span class="trigger" onclick="getResult('cprt')">cypriot syllabary</span> • 
-
-<span class="trigger" onclick="getResult('cyrl')">cyrillic</span> • 
-
-<span class="trigger" onclick="getResult('dsrt')">deseret</span> • 
-
-<span class="trigger" onclick="getResult('deva')">devanagari</span> • 
-
-<span class="trigger" onclick="getResult('diak')">dives akuru</span> • 
-
-<span class="trigger" onclick="getResult('dogr')">dogra</span> • 
-
-<span class="trigger" onclick="getResult('egyp')">egyptian hieroglyphs</span> • 
-
-<span class="trigger" onclick="getResult('elba')">elbasan</span> • 
-
-<span class="trigger" onclick="getResult('elym')">elymaic</span> • 
-
-<span class="trigger" onclick="getResult('ethi')">ethiopic</span> • 
-
-<span class="trigger" onclick="getResult('geor')">georgian</span> • 
-
-<span class="trigger" onclick="getResult('glag')">glagolitic</span> • 
-
-<span class="trigger" onclick="getResult('goth')">gothic</span> • 
-
-<span class="trigger" onclick="getResult('gran')">grantha</span> • 
-
-<span class="trigger" onclick="getResult('grek')">greek</span> • 
-
-<span class="trigger" onclick="getResult('gujr')">gujarati</span> • 
-
-<span class="trigger" onclick="getResult('gong')">gunjala gondi</span> • 
-
-<span class="trigger" onclick="getResult('guru')">gurmukhi</span> • 
-
-<span class="trigger" onclick="getResult('rohg')">hanifi rohingya</span> • 
-
-<span class="trigger" onclick="getResult('hano')">hanunoo</span> • 
-
-<span class="trigger" onclick="getResult('hatr')">hatran</span> • 
-
-<span class="trigger" onclick="getResult('hebr')">hebrew</span> • 
-
-<span class="trigger" onclick="getResult('jpan')">japanese</span> • 
-
-<span class="trigger" onclick="getResult('java')">javanese</span> • 
-
-<span class="trigger" onclick="getResult('kthi')">kaithi</span> • 
-
-<span class="trigger" onclick="getResult('knda')">kannada</span> • 
-
-<span class="trigger" onclick="getResult('kali')">kayah li</span> • 
-
-<span class="trigger" onclick="getResult('khar')">kharoshthi</span> • 
-
-<span class="trigger" onclick="getResult('khmr')">khmer</span> • 
-
-<span class="trigger" onclick="getResult('khoj')">khojki</span> • 
-
-<span class="trigger" onclick="getResult('sind')">khudawadi</span> • 
-
-<span class="trigger" onclick="getResult('krai')">kirat rai</span> • 
-
-<span class="trigger" onclick="getResult('kore')">korean</span> • 
-
-<span class="trigger" onclick="getResult('laoo')">lao</span> • 
-
-<span class="trigger" onclick="getResult('latn')">latin</span> • 
-
-<span class="trigger" onclick="getResult('lepc')">lepcha</span> • 
-
-<span class="trigger" onclick="getResult('limb')">limbu</span> • 
-
-<span class="trigger" onclick="getResult('linb')">linear b</span> • 
-
-<span class="trigger" onclick="getResult('lisu')">lisu</span> • 
-
-<span class="trigger" onclick="getResult('lyci')">lycian</span> • 
-
-<span class="trigger" onclick="getResult('lydi')">lydian</span> • 
-
-<span class="trigger" onclick="getResult('mahj')">mahajani</span> • 
-
-<span class="trigger" onclick="getResult('maka')">makassarese</span> • 
-
-<span class="trigger" onclick="getResult('mlym')">malayalam</span> • 
-
-<span class="trigger" onclick="getResult('mand')">mandaic</span> •
-
-<span class="trigger" dir="rtl" onclick="getResult('mani')">manichaean</span> •
-
-<span class="trigger" dir="rtl" onclick="getResult('marc')">marchen</span> •
-
-<span class="trigger" onclick="getResult('gonm')">masaram gondi</span> •
-
-<span class="trigger" onclick="getResult('mend')">mende kikakui</span> •
-
-<span class="trigger" onclick="getResult('mtei')">meetei mayek</span> •
-
-<span class="trigger" onclick="getResult('plrd')">miao</span> • 
-
-<span class="trigger" onclick="getResult('modi')">modi</span> • 
-
-<span class="trigger" onclick="getResult('mong')">mongolian</span> • 
-
-<span class="trigger" onclick="getResult('mroo')">mro</span> • 
-
-<span class="trigger" dir="ltr" onclick="getResult('mult')">multani</span> •
-
-<span class="trigger" onclick="getResult('mymr')">myanmar</span> • 
-
-<span class="trigger" onclick="getResult('nbat')">nabataean</span> • 
-
-<span class="trigger" onclick="getResult('talu')">new tai lue</span> • 
-
-<span class="trigger" onclick="getResult('newa')">newa</span> • 
-
-<span class="trigger" onclick="getResult('nkoo')">n'ko</span> • 
-
-<span class="trigger" onclick="getResult('hmnp')">nyiakeng puachue hmong</span> • 
-
-<span class="trigger" onclick="getResult('ogam')">ogham</span> • 
-
-<span class="trigger" onclick="getResult('olck')">ol&nbsp;chiki</span> • 
-
-<span class="trigger" dir="rtl" onclick="getResult('hung')">old hungarian</span> • 
-
-<span class="trigger" dir="rtl" onclick="getResult('xpeo')">old persian</span> • 
-
-<span class="trigger" onclick="getResult('sarb')">old south arabian</span> • 
-
-<span class="trigger" onclick="getResult('orkh')">old turkic</span> • 
-
-<span class="trigger" onclick="getResult('orya')">oriya</span> • 
-
-<span class="trigger" onclick="getResult('osge')">osage</span> • 
-
-<span class="trigger" onclick="getResult('osma')">osmanya</span> • 
-
-<span class="trigger" onclick="getResult('hmng')">pahawh hmong</span> • 
-
-<span class="trigger" onclick="getResult('phli')">pahlavi</span> • 
-
-<span class="trigger" onclick="getResult('palm')">palmyrene</span> • 
-
-<span class="trigger" onclick="getResult('prti')">parthian</span> • 
-
-<span class="trigger" onclick="getResult('phag')">phags-pa</span> • 
-
-<span class="trigger" dir="rtl" onclick="getResult('phnx')">phoenician</span> •
-
-<span class="trigger" onclick="getResult('rjng')">rejang</span> • 
-
-<span class="trigger" onclick="getResult('runr')">runic</span> • 
-
-<span class="trigger" onclick="getResult('samr')">samaritan</span> • 
-
-<span class="trigger" onclick="getResult('saur')">saurashtra</span> • 
-
-<span class="trigger" dir="rtl" onclick="getResult('shrd')">sharada</span> •
-
-<span class="trigger" onclick="getResult('shaw')">shavian</span> • 
-
-<span class="trigger" dir="rtl" onclick="getResult('sidd')">siddham</span> •
-
-<span class="trigger" onclick="getResult('sinh')">sinhala</span> • 
-
-<span class="trigger" onclick="getResult('sund')">sundanese</span> • 
-
-<span class="trigger" onclick="getResult('sora')">sora sompeng</span> • 
-
-<span class="trigger" dir="rtl" onclick="getResult('soyo')">soyombo</span> •
-
-<span class="trigger" onclick="getResult('sylo')">syloti nagri</span> • 
-
-<span class="trigger" onclick="getResult('syrc')">syriac</span> • 
-
-<span class="trigger" onclick="getResult('tale')">tai le</span> • 
-
-<span class="trigger" onclick="getResult('tglg')">tagalog</span> • 
-
-<span class="trigger" onclick="getResult('tagb')">tagbanwa</span> • 
-
-<span class="trigger" onclick="getResult('lana')">tai tham</span> • 
-
-<span class="trigger" onclick="getResult('tavt')">tai viet</span> • 
-
-<span class="trigger" dir="rtl" onclick="getResult('takr')">takri</span> •
-
-<span class="trigger" onclick="getResult('taml')">tamil</span> • 
-
-<span class="trigger" onclick="getResult('telu')">telugu</span> • 
-
-<span class="trigger" onclick="getResult('thaa')">thaana</span> • 
-
-<span class="trigger" onclick="getResult('thai')">thai</span> • 
-<a class="trigger" href="index.html?script=thai">thai</a> • 
-
-<span class="trigger" onclick="getResult('tibt')">tibetan</span> • 
-
-<span class="trigger" onclick="getResult('tfng')">tifinagh</span> • 
-
-<span class="trigger" dir="rtl" onclick="getResult('tirh')">tirhuta</span> •
-
-<span class="trigger" dir="rtl" onclick="getResult('ugar')">ugaritic</span> •
-
-<span class="trigger" onclick="getResult('vaii')">vai</span> • 
-
-<span class="trigger" onclick="getResult('wcho')">wancho</span> • 
-
-<span class="trigger" onclick="getResult('wara')">warang citi</span> • 
-
-<span class="trigger" onclick="getResult('yezi')">yezidi</span> • 
-
-<span class="trigger" onclick="getResult('yiii')">yi</span>  •
-
-<span class="trigger" dir="rtl" onclick="getResult('zanb')">zanabazar square</span>
-</p>
--->
-
-
-
 
 
 
@@ -1484,6 +1243,7 @@ function showActiveFontFilters() {
 
 <script>
 //document.getElementById('fontInfo').style.display = 'block'
+
 
 
 // set the settings UI to match the localStorage data
