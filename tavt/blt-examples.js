@@ -27,7 +27,7 @@ autoExpandExamples.blt = `
 ꪀꪫꪱꪉ|deer|k§ʷ§aː§ŋ˨
 ꪀꪱ||␣||
 ꪀꪳ꪿||␣||
-ꪀꪷꪵꪀ||␣||
+ꪀꪷꪵꪀ|pigeon|kɔː˨.§›§kɛː˨|co ke|
 ꪀꪾꪚ||␣
 ꪀ꪿ꪱ||␣||
 ꪁꪫꪱꪣ|word, language|k§ʷ§aː§m˥
@@ -118,7 +118,7 @@ autoExpandExamples.blt = `
 ꪙꪲ꫁ꪫ||␣||
 ꪙꪳ꪿ꪉ||␣
 ꪙꪾ꫁|water|nam˧˩ˀ
-ꪙꪾ꫁ꪹꪚꪸ꫁||␣||
+ꪙꪾ꫁ꪹꪚꪸ꫁|ocean, sea|nam˧˩ˀ.§›§beː˨˩ˀ|ꞌnặm bể|
 ꪙꪾꫂ||␣
 ꪙ꫁ꪮꪥ||␣||
 ꪚꪮꪀ||␣||
@@ -196,7 +196,7 @@ autoExpandExamples.blt = `
 ꪮꪮꪀ|to go out|ʔ§ɔ§ʔ²
 ꪮꪮꪙꫀꪙꪮꪥꫂ||␣
 ꪮꪱꪚ||␣||
-ꪮꪲꪒ||␣||
+ꪮꪲꪒ|grape|ʔit̚˦˥|it|
 ꪮ꪿ꪮꪙꪙ꫁ꪮꪥ|baby|ʔ§ɔ§n˦˥.§n§ɔ§j˧˩ˀ
 ꪮ꪿ꪱꪉ|basin, tub|ʔaː§‹§ŋ²
 ꪵꪀ꪿ꪙ|seed|›§kɛ§n²
@@ -206,7 +206,7 @@ autoExpandExamples.blt = `
 ꪵꪄꪫ|green|›§xɛ§w˨
 ꪵꪋ||␣||
 ꪵꪒꪙ||␣||
-ꪵꪒꪙꪒꪲꪙ||␣||
+ꪵꪒꪙꪒꪲꪙ|boundary|dɛ§n˨.§di§n˨|đen đin|
 ꪵꪔꪣꫂ||␣||
 ꪵꪔ꫁ꪣ||␣||
 ꪵꪚ꪿ꪉꪼꪔ||␣||

@@ -29,12 +29,11 @@ reflist = {
 },
 
 "u": {
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch16.pdf",
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
-"sub":"Chapter 16.8: Southeast Asia, Tai Viet",
-"pages":"673-675",
-"isbn":"978-1-936213-16-0.",
+"title":"The Unicode Standard, Version 17.0",
+"sub":"Chapter 16.8: Southeast Asia-I, Thailand, Laos, Myanmar, Cambodia, Vietnam, Tai Viet",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/#G59747",
+"reviewed": false
 },
 
 "ul": {
@@ -58,6 +57,15 @@ reflist = {
 "reviewed":true
 },
 
+
+"sil": {
+"authors": "SIL Writing Systems Technical Resources",
+"title":"Unicode Status for Tai Viet",
+"retr": "Nov 2025",
+"publisher":"SIL International",
+"url":"https://writingsystems.info/scrlang/unicode/tavt-unicode/",
+"reviewed":true
+},
 
 }
 
