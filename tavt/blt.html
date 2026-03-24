@@ -5,10 +5,10 @@
 <title>Tai Dam orthography notes</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common30/local.css" />
+<link rel="stylesheet" href="../common31/local.css" />
 <link rel="stylesheet" href="blt.css" />
 
-<script src="../common30/debug.js"></script>
+<script src="../common31/debug.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../apps/ipa_analyser/propertylist.js"></script>
@@ -19,12 +19,12 @@
 
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common30/functions.js"></script>
-<script src="../common30/transliterate.js"></script>
-<script src="../common30/prompts.js"> </script>
+<script src="../common31/functions.js"></script>
+<script src="../common31/transliterate.js"></script>
+<script src="../common31/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../common30/egcode.js"></script>
-<script src="../common30/references.js"></script>
+<script src="../common31/egcode.js"></script>
+<script src="../common31/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="blt-langdata.js"></script>
@@ -61,7 +61,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->5 March, 2026<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->24 March, 2026<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -81,7 +81,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Tai Viet (Tai Dam) Orthography Notes, <!-- #BeginDate format:En2 -->05-Mar-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/tavt/blt">https://r12a.github.io/scripts/tavt/blt</a></small></p>
+<p class="refLine"><small>Richard Ishida, Tai Viet (Tai Dam) Orthography Notes, <!-- #BeginDate format:En2 -->24-Mar-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/tavt/blt">https://r12a.github.io/scripts/tavt/blt</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -170,18 +170,32 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <h2>Basic features</h2>
 
 <p>The Tai Viet script  is an <a class="termref" href="https://www.unicode.org/glossary/#alphabet" target="terms">alphabet</a>, ie.  all vowels are written explicitly, alongside consonants; there is no inherent vowel in a consonant (abugidas),  certain vowels are not systematically dropped (abjads), and consonant and vowel are not combined in the same character (syllabaries).</p>
+
 <p>The Tai Viet script is heavily syllable-based, with exceptions being a very small number of unstressed initial syllables, and loan words.</p>
+
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">basicV</a></span></p>
-<p class="addToVowels"><span class="leadin">Vowels</span>Vowels  are written using a mixture of <a class="seclink" href="#postConsonantV">13 ordinary spacing characters</a> (of which <a class="seclink" href="#postConsonantV">5 are also consonants</a>) and <a class="seclink" href="#postConsonantV">7 combining marks</a>.</p>
-<p class="addToVowels">There are <a class="seclink" href="#prebase">5 pre-base vowel glyphs</a> (all letters), but no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>. </p>
+
+<p class="addToVowels"><span class="leadin">Vowels</span> Vowel sounds following a consonant  are written using a mixture of <a class="seclink" href="#postConsonantV">13 ordinary spacing characters</a> (of which <a class="seclink" href="#postConsonantV">5 are also consonants</a>) and <a class="seclink" href="#postConsonantV">7 combining marks</a>.</p>
+
+<p class="addToVowels">There are <a class="seclink" href="#prebase">5 pre-base vowel glyphs</a> (all letters), but no <a class="termref" href="../glossary/index.html#circumgraph">circumgraphs</a>.</p>
+
+<p class="addToVowels">This page lists 6 <a href="#compositeV">composite vowel signs</a>, made from 6 vowel signs and 3 consonants. Composite vowel signs can involve up to 3 glyphs, though usually only 2, and glyphs can surround the base consonant(s) on 2 sides.</p>
+
 <p class="addToVowels">Tai Viet uses <em>visual placement</em>: only the vowel components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are <em>typed in the order seen</em>.</p>
 
 <p class="addToVowels"><a class="seclink" href="#standalone">Standalone vowels</a> are written using a vowel sign attached to <span class="ch">ꪮ</span> or <span class="ch">ꪯ</span>. There are no <a class="termref" href="../glossary/index.html#independentvowel">independent vowels.</a></p>
+
 <p class="addToVowels"><a class="seclink" href="#tones">Tone</a> can be indicated either by diacritics or  ordinary spacing characters. Both are a recent innovation. Combining tone marks always follow the root consonant and any combining vowels,  ie. they come before any post-base vowel. Spacing tone marks always come at the very end of the syllable.</p>
 
+
+
 <p><span class="dropFromSection">❯&nbsp;<a class="secref" title="Read more.">consonantSummary</a></span></p>
-<p class="addToConsonants"><span class="leadin">Consonants</span> Tai Dam has <a class="seclink" href="#basicC">42 basic consonant</a> letters, all neatly divided into 2 classes. Each consonant is associated with a high or low class to indicate tone. .</p>
-<p><span class="leadin">Vowel absence</span>There are no conjuncts or subjoined consonants. <span class="addToConsonants">The only <a class="seclink" href="#onsets">syllable-initial cluster</a> involves labialisation, using <span class="charExample inline" translate="no"><span class="ex" lang="blt">ꪫ</span> <span class="transc">w</span></span>.</span></p>
+
+<p class="addToConsonants"><span class="leadin">Consonants</span> Tai Dam has <a class="seclink" href="#basicC">42 basic consonant</a> letters, all neatly divided into 2 classes. Each consonant is associated with a high or low class to indicate tone.</p>
+
+<p><span class="leadin">Vowel absence</span>There are no conjuncts or subjoined consonants.</p>
+
+<p class="addToConsonants">The only <a class="seclink" href="#onsets">syllable-initial cluster</a> involves labialisation, using <span class="charExample inline" translate="no"><span class="ex" lang="blt">ꪫ</span> <span class="transc">w</span></span>.</p>
 
 <p class="addToConsonants"><a class="seclink" href="#finals">Coda</a> sounds use a subset of 8 ordinary consonant letters, but since there is no inherent vowel, it is still simple to detect syllable boundaries. Syllable-final consonant sounds are also built into 6 vowel-consonant graphemes.</p>
 
@@ -189,7 +203,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p><span class="leadin">Numbers</span> There are no native Tai Viet digits. ASCII digits are used.</p>
 
 
-<p><span class="leadin">Layout</span> <span class="addToConsonants">Tai Dam</span> text runs left to right in horizontal lines. Words are separated by spaces, although this  is a recent innovation.  Letters have no case distinction.</p>
+<p><span class="leadin">Layout</span> Tai Dam text runs left to right in horizontal lines. Words are separated by spaces, although this  is a recent innovation.  Letters have no case distinction.</p>
 <p>The visual forms of letters don't usually interact.</p>
 
 <p><a class="seclink" href="#inline">Punctuation</a> is  mostly ASCII, with some native.</p>
@@ -197,14 +211,12 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <h3>Notable features</h3>
 
 <ul>
-<li>high tone is indicated by a duplicate set of consonant letters</li>
-<li>word-final vowel absence is not usually marked, but can be marked using a special, additional vowel killer</li>
-<li>not all consonant clusters are marked</li>
-<li>a vowel sign was recently added to indicate that a word-final consonant is followed by an inherent vowel sound</li>
-<li>independent vowel letters may be combined with a following consonant letter using the virama</li>
-<li>diphthongs can be written using a vowel sign followed by an independent vowel, or may involve a special diacritic for diphthongs ending in <span class="ipa">-i</span></li>
-<li>page ordering may be right to left, although the text direction remains left to right.</li>
-<li>some texts use 'false conjuncts' that require typed characters to not match pronunciation order.</li>
+<li>tone notation is based on a complete set of duplicate consonants for high and low tone</li>
+<li>tone can be indicated using either diacritics or letters</li>
+<li>most native words are monosyllabic</li>
+<li>vowels are indicated using both combining marks and letters</li>
+<li>Tai Viet uses visual placement: vowel glyphs to the left of the base are standalone letters</li>
+<li>there are no independent vowels</li>
 </ul>
 </section>
 </section>
@@ -669,7 +681,84 @@ alveolar</th>
 <section id="tone">
 <h3>Tone</h3>
 
-<p>tbd</p>
+ 
+<p id="def-checked" class="explanatoryintro definitionStub"></p>
+
+
+<p>The Tai Dam language has 6 tones: 3 level pitch tones, and 3 <a class="termref" target="_blank" href="../glossary/index.html#contourtonelanguage">contour tones</a>.</p>
+
+<p>The 2nd and 5th tones are the only tones used in checked syllables, but they can also appear in unchecked syllables, too.</p>
+
+
+<style>
+#toneDescription td { text-align: center; }
+#toneDescription td:nth-child(2) { text-align: start; }
+</style>
+
+<table id="toneDescription">
+<thead>
+<tr>
+<th>IPA</th>
+<th>Name</th>
+<th>Digit</th>
+<th>Unchecked</th>
+<!--<th>Accent</th>-->
+<th>Checked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="ipa large">˨</span></td>
+<td>low-mid level</td>
+<td class="tonedesc">1</td>
+<td class="tonedesc">✓</td>
+<!--<td><span class="trans large">a</span></td>-->
+<td class="tonedesc">&nbsp;</td>
+</tr>
+<tr>
+<td><span class="ipa large">˦˥</span></td>
+<td>high rising</td>
+<td class="tonedesc">2</td>
+<td class="tonedesc">✓</td>
+<!--<td><span class="trans large">á</span></td>-->
+<td class="tonedesc">✓</td>
+</tr>
+<tr>
+<td><span class="ipa large">˨˩</span></td>
+<td>low falling</td>
+<td class="tonedesc">3</td>
+<td class="tonedesc">✓</td>
+<!--<td><span class="trans large">a</span></td>-->
+<td class="tonedesc">&nbsp;</td>
+</tr>
+<tr>
+<td><span class="ipa large">˥</span></td>
+<td>high level</td>
+<td class="tonedesc">4</td>
+<td class="tonedesc">✓</td>
+<!--<td><span class="trans large">a̰</span></td>-->
+<td class="tonedesc">&nbsp;</td>
+</tr>
+<tr>
+<td><span class="ipa large">˦</span></td>
+<td>mid-high level</td>
+<td class="tonedesc">5</td>
+<td class="tonedesc">✓</td>
+<!--<td><span class="trans large">a̰</span></td>-->
+<td class="tonedesc">✓</td>
+</tr>
+<tr>
+<td><span class="ipa large">˧˩</span></td>
+<td>mid falling</td>
+<td class="tonedesc">6</td>
+<td class="tonedesc">✓</td>
+<!--<td><span class="trans large">à</span></td>-->
+<td class="tonedesc">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p>See <a href="#tones">how tones are written</a>.</p>
 </section>
 
 
@@ -682,24 +771,13 @@ alveolar</th>
 <h3>Structure</h3>
 
 <p>The Tai languages are almost exclusively monosyllabic. A very small number of words have an unstressed initial syllable, and loan words may be polysyllabic.<tt>b</tt></p>
-<p>The essential character sequence of a Tai Viet syllable is:</p>
-<p><code>pre-base vowel?, root consonant(s), combining vowel?, post-base vowel?, final consonant?</code></p>
 
-<p>The root consonant(s) may be a cluster involving labialisation. Any combining vowel goes after the root consonant(s).</p>
+<p>Syllables follow the pattern <code>C (w) V (C)</code></p>
 
-<p class="info">Tone marks expressed as combining characters always follow the root consonant(s) and any combining vowels, which means that they come before any post-base vowel.</p>
 
-<p class="info">Tone marks expressed as spacing characters always come at the very end.</p>
+<p>Syllable onsets are normally simple, but may have a medial <span class="ipa">-w-</span>.</p>
 
-<p class="info"><span class="leadin">-ap.</span> One other sequence occurs when  writing the vowel-final consonant combination <span class="trans">-ap</span>, which is written with a vowel placed over the final low-series <span class="trans">b</span>, rather than over the initial consonant.</p>
-
-<div class="egIntro">eg.</div>
-<p><span class="charExample" translate="no"><span class="ex" lang="blt">ꪁꪚꪾ</span> <span class="ipa">kap</span></span>
-</p>
-
-<p class="info">The sequence is: <code>root consonant(s)</code> + <span class="codepoint" translate="no"><span lang="blt">&#xAA9A;&#xAABE;</span> <a href="/scripts/taiviet/block#charAA9A"><span class="uname">U+AA9A LETTER LOW BO</span></a> + <a href="/scripts/taiviet/block#charAABE"><span class="uname">U+AABE VOWEL AM</span></a></span></p>
-
-<p>See <a class="secref">writing_styles</a>, however, for a font variant setting that allows you to store the code points in the normal order, but still display the AM over the BO.</p>
+<p>Syllable codas include <span class="ipa">-p -t -k -ʔ</span>, which create 'checked' syllables, and otherwise <span class="ipa">-m, -n, -ŋ</span>, as well as the glides <span class="ipa">-j, -w</span>.</p>
 </section>
 </section>
 
@@ -757,21 +835,65 @@ alveolar</th>
 
 
 
-<div id="vowel_description"></div>
 
 
 
-
+<!--
 <section id="basicV">
 <h3>Vowel summary table</h3>
 
 
 <p>This table summarises only basic vowel to character assignments. Click on the phonetic transcriptions for more detail.</p>
 
+-->
+
+
 <!--p class="instructions highlight">ⓘ represents the inherent vowel. Diacritics are added to the vowels to indicate <a href="#nasalisation">nasalisation</a> (not shown here).</p-->
 
 
+
 <table class="soundSummary">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>Plain</th>
+<th>Complex</th>
+<th>Standalone carriers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th rowspan="5">&nbsp;</th>
+<td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="i,ɨ,,u">ꪲ,ꪳ,,ꪴ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="iə,,ɨə,,uə" data-ignore="◌">ꪸ, ,ꪹ◌, ,ꪺ◌</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ʔ,ʔ">ꪮ,ꪯ</figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="e,,o" data-ignore="◌">ꪹ◌ꪸ, ,ꪶ◌</figure></td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ə" data-ignore="◌">ꪹ◌ꪷ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="əw" data-ignore="◌">ꪻ◌</figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto noexpansion" data-ipa="ɛ,,ɔ,ɔ,ɔ" data-ignore="◌">ꪵ◌, ,ꪷ,ꪮ,ꪯ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ignore="◌" data-ipa="ʷɛ,ʷɛ">ꪵ◌ꪫ,ꪵ◌ꪫꪥ</figure></td>
+</tr>
+
+<tr>
+<td><figure class="summaryBox auto noexpansion">ꪰ,ꪱ</figure></td>
+<td><figure class="summaryBox auto noexpansion" data-ipa="aj,aːw,am,an,ap" data-ignore="◌">ꪼ◌,ꪹ◌ꪱ,ꪾ,ꪽ,ꪚꪾ</figure></td>
+</tr>
+</tbody></table>
+
+
+
+
+<!--<table class="soundSummary">
 <tr>
 <th rowspan="5">Plain</th>
 <td><figure class="summaryBox auto noexpansion" data-ignore="-" data-ipa="i,ɨ,,u">ꪲ,ꪳ,,ꪴ</figure></td>
@@ -816,16 +938,15 @@ alveolar</th>
 <th rowspan="4">Standalone</th>
 <td><figure class="summaryBox auto noexpansion" data-ipa="ʔ,ʔ">ꪮ,ꪯ</figure></td>
 </tr>
-</table>
+</table>-->
 
 
-<p class="instructions">For additional details see <a class="secref">vowel_mappings</a>.</p>
-</section>
-
+<!--<p class="instructions">For additional details see <a class="secref">vowel_mappings</a>.</p>-->
 
 
 
 
+<div id="vowel_description"></div>
 
 
 
@@ -836,16 +957,12 @@ alveolar</th>
 <h3>Post-consonant vowels</h3>
 
 
-<p>Vowels are written using a mixture of 13 ordinary spacing characters (of which 5 are also consonants) and 7 combining marks.</p>
+<!--<p>Vowel sounds following a consonant are written using a mixture of 13 ordinary spacing characters (of which 5 are also consonants) and 7 combining marks.</p>
 
-<p>Tai Viet uses visual placement: only the vowel components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are typed in the order seen.</p>
-
-<p>This page lists 6 composite vowel signs, made from 6 vowel signs and 3 consonants. Composite vowel signs can involve up to 3 glyphs, though usually only 2, and glyphs can surround the base consonant(s) on 2 sides.</p>
-
-<p>There are 5 pre-base vowel glyphs (all letters), but no circumgraphs.</p>
+<p><strong>Tai Viet uses visual placement:</strong> only the vowel components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are typed in the order seen.</p>
 
 
-<p>All vowel signs are typed and stored after the base consonant, whether or not they precede it when displayed. The glyph rendering system takes care of the positioning at display time.  Consonant clusters are treated as indivisible units when it comes to rendering vowel signs, meaning that pre-base vowel signs are rendered before the conjunct as a whole (see <a class="secref">prebase</a>).</p>
+<p>There are 5 pre-base vowel glyphs (all letters), but no circumgraphs.</p>-->
 
 <p>None of the combining marks are <a class="termref" href="../glossary/index.html#spacingmark">spacing marks</a> (meaning that none of them consume horizontal space when added to a base consonant).</p>
 
@@ -861,10 +978,12 @@ alveolar</th>
 <p class="vowelSignExample">
 <bdi lang="blt">&#xAA81;&#xAAB2;</bdi>
     <span class="ipa">ki</span>
-    </p>
+</p>
 
 
-<p>The basic Tai Viet vowel sounds are written as follows. The dotted circle indicates the position of the consonant(s) relative to the vowel sign, rather than a combining mark. The list includes both letters and combining marks, and sometimes combinations of both. See <a class="secref">componentV</a>.</p>
+<p>The basic Tai Viet vowel sounds are written as follows. The list includes both letters and combining marks, and sometimes combinations of both. See <a class="secref">componentV</a>.</p>
+
+<p class="instructions">The dotted circle indicates the position of the consonant(s) relative to the vowel sign, rather than indicating a combining mark.</p>
 
 <figure class="characterBox auto" data-ignore="◌" data-ipa="i,ɨ,u,e,o,ə,ɛ,ɔ,ɔ,ɔ,a,aː">ꪲ,ꪳ,ꪴ,ꪹ◌ꪸ,ꪶ◌,ꪹ◌ꪷ,ꪵ◌,ꪷ,ꪮ,ꪯ,ꪰ,ꪱ,</figure>
 
@@ -927,7 +1046,7 @@ alveolar</th>
 <p class="vowelSignExample">
 <bdi lang="blt">&#xAA81;&#xAAB2;</bdi>
     <span class="ipa">ki</span>
-    </p>
+</p>
 
 
 <p>Tai Viet writes a number of dipthongs and rhymes as follows.</p>
@@ -940,6 +1059,23 @@ alveolar</th>
 <p><span class="eg" lang="blt">ꪜꪺ</span></p>
 <p><span class="eg" lang="blt">ꪵꪁꪫꪥ</span></p>
 <p><span class="eg" lang="blt">ꪙꪾ꫁ꪹꪚꪸ꫁</span></p>
+
+
+
+<p class="info"><span class="leadin">-ap.</span> The last item in the list above is rather unusual. Some dialects use the combination <span class="ch">ꪚꪾ</span> for the rhyme <span class="ipa">-ap</span>, where the vowel is placed over the final, low-series <span class="trans">b</span>, rather than over the initial consonant.</p>
+
+<div class="egIntro">eg.</div>
+<p><span class="eg" lang="blt">ꪀꪚꪾ</span></p>
+<table class="sequenceTable breakdown">
+<tr data-notes="KO,BO,AM"
+    data-type="uname,uname,uname,uname,uname,uname,uname"
+    data-prefix=",+,+,+,+,+,+,+"
+    ><td>ꪀ,ꪚ,ꪾ</td></tr>
+</table>
+
+
+<p>See <a class="secref">writing_styles</a>, however, for a font variant setting that allows you to store the code points in the normal order, but still displays the AM over the BO.</p>
+
 </section>
 
 
@@ -960,7 +1096,9 @@ alveolar</th>
 <figure class="characterBox auto" >ꪲ,ꪳ,ꪴ,ꪷ,ꪰ,ꪸ,ꪾ</figure>
 
 
-<p>The following are <mark>dedicated vowel letters</mark>. Five of these are typed and stored <em>before</em> the onset consonant (see <a class="secref">prebase</a>), and only 3 appear after. The dotted circle indicates the location of the base consonant. These are typed and stored in visual order (see <a class="secref">prebase</a>).</p>
+<p>The following are <mark>dedicated vowel letters</mark>. Five of these are typed and stored <em>before</em> the onset consonant (see <a class="secref">prebase</a>), and only 3 appear after.</p>
+
+<p class="instructions">The dotted circle indicates the location of the base consonant — these are not combining marks. They are typed and stored in visual order (see <a class="secref">prebase</a>).</p>
 
 <figure class="characterBox auto" data-ignore="◌" data-ipa="o,ɛ,aː,ɨə,uə,əw,aj,an">ꪶ◌,ꪵ◌,◌ꪱ,ꪹ◌,◌ꪺ,ꪻ◌,ꪼ◌,◌ꪽ</figure>
 
@@ -1065,12 +1203,12 @@ can represent vowels on their own. The following word in fact shows the same cha
 <section id="prebase">
 <h4>Pre-base vowel signs</h4>
 
-<p class="vowelSignExample">
+<!--<p class="vowelSignExample">
 <bdi lang="blt">&#xAAB6;&#xAA81;</bdi>
     <span class="ipa">ko</span>
-    </p>
-
-<p>Five vowel signs appear to the left of the onset consonant after which they are pronounced.</p>
+</p>
+-->
+<p>Five CV combinations are written using vowel signs that appear to the left of the onset consonant.</p>
 
 <figure class="characterBox auto">ꪹ,ꪶ,ꪵ,ꪻ,ꪼ</figure>
 
@@ -1087,7 +1225,7 @@ can represent vowels on their own. The following word in fact shows the same cha
 </table>
 
 
-<p>These vowel signs are placed before the start of the <em>syllable onset</em>. This means that in a word with more than one consonant at the start (ie. a labialised consonant) the pre-base vowel is placed to the left of the syllable-initial consonant, rather than to the left of the consonant after which it is pronounced.</p>
+<p>In fact, these vowel signs are placed before the start of the <em>syllable onset</em>. This means that in a word that begins with more than one consonant letter (ie. in labialised consonants) the pre-base vowel is placed to the left of the syllable-initial consonant, rather than to the left of the consonant after which it is actually pronounced.</p>
 
 <p><a class="figref">fig_prebase</a> shows an example to graphically illustrate the relationships between the characters.</p>
 
@@ -1110,29 +1248,22 @@ can represent vowels on their own. The following word in fact shows the same cha
 
 <p id="def-compositevowel" class="explanatoryintro definitionStub"></p>
 
-<p class="vowelSignExample">
+<!--<p class="vowelSignExample">
 <bdi lang="blt">&#xAAB9;&#xAA81;&#xAAB8;</bdi>
     <span class="ipa">ke</span>
-    </p>
-
+</p>
+-->
 <p>Vowels represented by combinations of the above characters include the following, which mostly add glyphs to different sides of the base:</p>
 
 <!--figure class="characterBox auto vowelcluster">ꪹ-ꪱ,ꪹ-ꪸ,ꪹ-ꪷ,ꪵ-ꪫ,ꪵ-ꪫꪥ,-ꪚꪾ</figure-->
 
 <figure class="characterBox auto vowelcluster" data-ignore="◌" data-ipa="aːw,e,ə,ʷɛ,ʷɛ,ap">ꪹ◌ꪱ,ꪹ◌ꪸ,ꪹ◌ꪷ,ꪵ◌ꪫ,ꪵ◌ꪫꪥ,◌ꪚꪾ</figure>
 
-<figure class="characterBox auto vowelcluster">ꪹꪱ,ꪹꪸ,ꪹꪷ,ꪵꪫ,ꪵꪫꪥ,ꪚꪾ</figure>
+<!--<figure class="characterBox auto vowelcluster">ꪹꪱ,ꪹꪸ,ꪹꪷ,ꪵꪫ,ꪵꪫꪥ,ꪚꪾ</figure>-->
 
 <p>Pre-base and post-base vowel glyphs are split around the syllable onset, which may be more than a single character. <a class="figref">fig_prebase</a> shows an example.</p>
 
 <p><span class="ch">ꪫ</span> in the combination <span class="ch">ꪵ◌ꪫ</span> can be ambiguous in this combination unless there is a tone mark. The sequence <span class="codepoint" translate="no"><span lang="blt">&#xAAB5;–&#xAAAB;&#xAAA5;</span> <a href="/scripts/taiviet/block#charAAB5"><span class="uname">U+AAB5 VOWEL E</span></a> + <a href="/scripts/taiviet/block#charAAAB"><span class="uname">U+AAAB LETTER HIGH VO</span></a> + <a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 LETTER HIGH YO</span></a></span> is sometimes used to remove that ambiguity. For details, see <a class="secref">onsets</a>.</p>
-
-<p>The last item in the list is rather unusual. Some dialects use the combination <span class="ch">ꪚꪾ</span> to make <span class="ipa">-ap</span>.<tt>b,7</tt>.</p>
-
-<div class="egIntro">eg.</div>
-<p><span class="eg" lang="blt">ꪀꪚꪾ</span></p>
-
-<p>There are 2 possible code point orders that can be used for this: see <a class="secref">structure</a>.</p>
 
 
 
@@ -1236,65 +1367,116 @@ can represent vowels on their own. The following word in fact shows the same cha
 
 <section id="tones">
 <h3>Tones</h3>
- 
-<p id="def-checked" class="explanatoryintro definitionStub"></p>
+
+
+<p>See also <a class="secref">tone</a>.</p>
 
 <p>Until the latter part of the 20th century Tai Viet didn't mark tones other than by the consonant class. Since then, however, 2 methods have developed.</p>
-<p>Tai Dam speakers in the United States and speakers of the Song language borrowed combining tone marks from Lao/Thai.</p>
 
-<figure class="characterBox auto" data-cols="">꪿,꫁,</figure>
-
-<p>These tone marks are typed and stored immediately after any combining vowel sign, if there is one, otherwise after the initial consonant(s).</p>
-<p>The Tai community in Vietnam developed an alternative approach, where tone is marked by ordinary spacing characters that are typed and stored after all other elements in the syllable.</p>
+<p><span class="leadin">Vietnam</span> The Tai community in Vietnam developed an  approach where tone is marked by ordinary spacing characters that are typed and stored after all other elements in the syllable.</p>
 
 <figure class="characterBox auto" data-cols="">ꫀ,ꫂ</figure>
 
-<p>The following chart shows how to tell which tones are associated with a syllable. </p>
-<table width="200" border="0">
+<p><span class="leadin">Diaspora</span> Tai Dam speakers in the United States and speakers of the Song language borrowed combining tone marks from Lao/Thai. These tone marks are typed and stored immediately after any combining vowel sign, if there is one, otherwise after the initial consonant(s).</p>
+
+<figure class="characterBox auto" data-cols="">꪿,꫁,</figure>
+
+
+
+
+
+
+
+<p>The following illustrates the different positioning for diacritic and letter tone marks, used for the same word, <span class="ipa">pɔm˦</span> <span class="meaning">apple</span>.</p>
+
+<table class="sequenceTable breakdown" style="margin-block:1.4rem;">
+<tr data-notes="p,ɔ,m,˦"
+    data-type="ipa,ipa,ipa,ipa,ipa,ipa,ipa,ipa"
+    data-prefix=",+,+,+,+,+,+,+,+"
+    ><td>ꪝ,ꪮ,ꪣ,ꫀ</td></tr>
+</table>
+
+
+<table class="sequenceTable breakdown">
+<tr data-notes="p˦,ɔ,m"
+    data-type="ipa,ipa,ipa,ipa,ipa,ipa,ipa,ipa"
+    data-prefix=",+,+,+,+,+,+,+,+"
+    ><td>ꪝ꪿,ꪮ,ꪣ</td></tr>
+</table>
+
+
+
+
+
+<p><span class="leadin">Writing tones</span> The following chart shows how to tell which tones are associated with a syllable. </p>
+
+<style>#toneTable td { white-space: nowrap; }</style>
+
+<table style="border:0; line-height: 2.4;" id="toneTable">
+<!--<table id="toneTable" style="#toneTable { border:0; line-height: 2.4; }
+#toneTable td { white-space: nowrap; color:red; }">-->
 <tbody>
 <tr>
 <th scope="col">Consonant</th>
 <th scope="col">Checked?</th>
 <th scope="col">Tone&nbsp;mark</th>
 <th scope="col">Tone</th>
-</tr>
-<tr>
-<td rowspan="4">high</td>
-<td>checked</td>
-<td>-</td>
-<td><strong>5</strong></td>
-</tr>
-<tr>
-<td rowspan="3">open</td>
-<td> -</td>
-<td><strong>4</strong></td>
-</tr>
-<tr>
-<td>꪿ or ꫀ</td>
-<td><strong>5</strong></td>
-</tr>
-<tr>
-<td>꫁ or ꫂ</td>
-<td><strong>6</strong></td>
+<th scope="col">Digit</th>
+<th scope="col">Example</th>
 </tr>
 <tr>
 <td rowspan="4">low</td>
-<td>checked</td>
-<td>-</td>
-<td><strong>2</strong></td>
-</tr>
-<tr>
-<td rowspan="3">open</td>
-<td>-</td>
+<td rowspan="3">unchecked</td>
+<td>—</td>
+<td><span class="ipa large">˨</span></td>
 <td><strong>1</strong></td>
+<td><span class="eg inline" lang="blt" dir="ltr">ꪀꪱ</span></td>
 </tr>
 <tr>
-<td>꪿ or ꫀ</td>
+<td><span class="ch noname">ꫀ</span> or <span class="ch circle noname">꪿</span></td>
+<td><span class="ipa large">˦˥</span></td>
 <td><strong>2</strong></td>
+<td><span class="eg inline" lang="blt">ꪎꪲꫀ / ꪎꪲ꪿</span></td>
 </tr>
 <tr>
-<td>꫁ or ꫂ</td>
+<td><span class="ch noname">ꫂ</span> or <span class="ch circle noname">꫁</span></td>
+<td><span class="ipa large">˨˩</span></td>
 <td><strong>3</strong></td>
+<td><span class="eg inline" lang="blt">ꪐꪱꫂ / ꪐ꫁ꪱ</span></td>
+</tr>
+<tr>
+<td>checked</td>
+<td>—</td>
+<td><span class="ipa large">˦˥</span></td>
+<td><strong>2</strong></td>
+<td><span class="eg inline" lang="blt">ꪎꪲꪚ</span></td>
+</tr>
+<tr>
+<td rowspan="4">high</td>
+<td rowspan="3">unchecked</td>
+<td>—</td>
+<td><span class="ipa large">˥</span></td>
+<td><strong>4</strong></td>
+<td><span class="eg inline" lang="blt">ꪉꪴ</span></td>
+</tr>
+<tr>
+<td><span class="ch noname">ꫀ</span> or <span class="ch circle noname">꪿</span></td>
+<td><span class="ipa large">˦</span></td>
+<td><strong>5</strong></td>
+<td><span class="eg inline" lang="blt">ꪝꪮꪣꫀ / ꪝ꪿ꪮꪣ</span></td>
+</tr>
+<tr>
+<td><span class="ch noname">ꫂ</span> or <span class="ch circle noname">꫁</span></td>
+<td><span class="ipa large">˧˩</span></td>
+<td><strong>6</strong></td>
+<td><span class="eg inline" lang="blt">ꪡꪱꫂ / ꪡ꫁ꪱ</span></td>
+</tr>
+<tr>
+<td>checked</td>
+<td>—</td>
+<td><span class="ipa large">˦</span></td>
+<td><strong>5</strong></td>
+<td><span class="eg inline" lang="blt">ꪩꪴꪀ</span></td>
 </tr>
 </tbody>
 </table>
@@ -1584,17 +1766,13 @@ can represent vowels on their own. The following word in fact shows the same cha
 <section id="novowel">
 <h2>Vowel absence</h2>
 
+<p class="instructions">Vowel absence principally occurs either when a consonant is a syllable coda, or when a consonant is part of a consonant cluster.</p>
+
+<p>Consonant clusters involve no special characters or viramas. There are no conjunct forms or subjoined consonants.</p>
+
 <p>Syllable codas generally use a selection of ordinary letters, but some characters represent rhymes that include the syllable coda. See <a class="secref">finals</a>.</p>
 
-<p>Consonant clusters occur in the following circumstances:</p>
-
-<ul>
-<li>When  an initial consonant is labialised, see <a class="secref">onsets</a>.</li>
-
-<li>Where a syllable ends with a consonant and another syllable begins.</li>
-</ul>
-
-<p>No special characters or viramas are involved, in any of those. There are no conjunct forms or subjoined consonants.</p>
+<p>Syllable-initial consonant clusters are limited to labialisation, which is written using separated letters (see <a class="secref">onsets</a>).</p>
 </section>
 
 
@@ -1645,25 +1823,14 @@ can represent vowels on their own. The following word in fact shows the same cha
 
 
 
-<div id="consonant_description"></div>
-
-
-
-
-<section id="consonantSummary">
-<h3>Consonant summary table</h3>
-
-<p>This table summarises only basic consonant to character assignments. Click on the phonetic transcriptions for more detail.</p>
-
-<p class="instructions highlight">For initial consonants, the left column shows high class consonants, and the right low class.</p>
 
 
 <table class="soundSummary">
 <thead>
 <tr>
 <th>&nbsp;</th>
-<th>high class</th>
-<th>low class</th>
+<th>High class</th>
+<th>Low class</th>
 </tr>
 </thead>
 <tbody>
@@ -1714,8 +1881,15 @@ can represent vowels on their own. The following word in fact shows the same cha
 </table>
 
 
-<p class="instructions">For additional details see <a class="secref">consonant_mappings</a>.</p>
-</section>
+
+
+
+
+
+
+<div id="consonant_description"></div>
+
+
 
 
 
@@ -1729,9 +1903,16 @@ can represent vowels on their own. The following word in fact shows the same cha
 
 <p class="instructions">Click on each letter for more details and for examples of usage, especially where more than one sound is indicated.</p>
 
-<p class="instructions">The letters ʰ and ˡ below each character indicate whether the class is high or low.</p>
 
-<figure class="characterBox auto" data-notes="ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ,ʰ,ʰ,ˡ,ʰ,ˡ,ʰ,ˡ">ꪝ,ꪜ,ꪛ,ꪚ,ꪕ,ꪔ,ꪓ,ꪒ,ꪁ,ꪀ,ꪇ,ꪆ,ꪯ,ꪮ,ꪗ,ꪖ,ꪋ,ꪊ,ꪡ,ꪠ,ꪫ,ꪪ,ꪏ,ꪎ,ꪅ,ꪄ,ꪭ,ꪬ,ꪣ,ꪢ,ꪙ,ꪘ,ꪑ,ꪐ,ꪉ,ꪈ,ꪫ,ꪧ,ꪦ,ꪩ,ꪨ,ꪥ,ꪤ</figure>
+
+<p class="leadin" style="margin-block-end:-1rem;">low</p>
+<figure class="characterBox auto" data-cols="ipa,transc">ꪜ,ꪚ,ꪔ,ꪒ,ꪀ,ꪆ,ꪮ,ꪖ,ꪊ,ꪠ,ꪪ,ꪎ,ꪄ,ꪬ,ꪢ,ꪘ,ꪐ,ꪈ,ꪦ,ꪨ,ꪤ</figure>
+
+<p class="leadin" style="margin-block-end:-1rem;">high</p>
+<figure class="characterBox auto" data-cols="ipa,transc">ꪝ,ꪛ,ꪕ,ꪓ,ꪁ,ꪇ,ꪯ,ꪗ,ꪋ,ꪡ,ꪫ,ꪏ,ꪅ,ꪭ,ꪣ,ꪙ,ꪑ,ꪉ,ꪫ,ꪧ,ꪩ,ꪥ</figure>
+
+
+
 
 </section>
 
@@ -1792,12 +1973,12 @@ can represent vowels on their own. The following word in fact shows the same cha
 <h3>Codas</h3>
 
 <p>Syllable-final plosives are written using the following low class consonants. These create 'checked' syllables.</p>
-<figure class="characterBox auto" data-ipa="-k -ʔ,-p,-t">ꪀ,ꪚ,ꪒ</figure>
+<figure class="characterBox auto" data-ipa="-p,-t,-k -ʔ">ꪚ,ꪒ,ꪀ</figure>
 
 <p>For open syllables ending with nasals or glides, the following high class consonants are used.</p>
-<figure class="characterBox auto" data-ipa="-m,-n,-ŋ,-y,-w">ꪣ,ꪙ,ꪉ,ꪥ,ꪫ</figure>
+<figure class="characterBox auto" data-ipa="-m,-n,-ŋ,-j,-w">ꪣ,ꪙ,ꪉ,ꪥ,ꪫ</figure>
 
-<p>In addition, Tai Dam has ways of writing several rhyme, where a vowel sign represents a vowel sound followed by a final consonant. See <a class="secref">vowels</a>. These include:</p>
+<p>In addition, Tai Dam has ways of writing several rhymes, where a vowel sign represents a vowel sound followed by a final consonant. See <a class="secref">vowels</a>. These include:</p>
 <figure class="characterBox auto" data-ipa="-am,-an,-ap,-aw,-aj,-əw" data-ignore="-">ꪾ,ꪽ,-ꪜꪾ,ꪹ-ꪱ,ꪼ,ꪻ</figure>
 </section>
  
@@ -2378,7 +2559,7 @@ can represent vowels on their own. The following word in fact shows the same cha
 
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 
-<p>Unlike many other Tai scripts, Tai Viet uses spaces between words.<tt>b</tt> However, this is a fairly recent innovation. </p>
+<p>Unlike many other Tai scripts, Tai Viet uses spaces between words.<tt>b</tt> However, this is a fairly recent innovation. Polysyllabic words may be written without space between the syllables.<tt>u</tt></p>
 
 <p>Brase provides some algorithmic detail for handling older texts without spacing.<tt class="more">btd</tt></p>
 </section>

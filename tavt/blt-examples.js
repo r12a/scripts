@@ -23,9 +23,9 @@ autoExpandExamples.blt = `
 @ wiktionary
 
 
-ꪀꪚꪾ|with, and|k§ap²
+ꪀꪚꪾ|with, and|k§ap̚˦˥|cắp||kap²
 ꪀꪫꪱꪉ|deer|k§ʷ§aː§ŋ˨
-ꪀꪱ||␣||
+ꪀꪱ|crow|k§aː˨|ca|
 ꪀꪳ꪿||␣||
 ꪀꪷꪵꪀ|pigeon|kɔː˨.§›§kɛː˨|co ke|
 ꪀꪾꪚ||␣
@@ -75,10 +75,11 @@ autoExpandExamples.blt = `
 ꪎꪱꪀ||␣||
 ꪎꪱꪡ꫁ꪮꪉ||␣
 ꪎꪱꪣ||␣
-ꪎꪲꪚ|ten|si§p̚˦˥
+ꪎꪲꪚ|ten|si§p̚˦˥|síp
 ꪎꪲꪫ||␣||
-ꪎꪲ꪿||␣
-ꪎꪲꫀ||␣
+ꪎꪲ꪿|four|siː§˦˥|sí|
+ꪎꪲꫀ|four|siː§˦˥|sí|
+ꪎꪲꫀ / ꪎꪲ꪿|four|siː§˦˥|sí|
 ꪎꪴꪉ||␣
 ꪎꪴꪥ||␣||
 ꪎꪺꪉꫂ|trousers|s§uə§ŋ§³
@@ -88,6 +89,7 @@ autoExpandExamples.blt = `
 ꪏꪳ꫁|to buy|sɨː˧˩ˀ
 ꪐꪱꫂ||␣
 ꪐ꫁ꪱ|grass|ɲ§aː˨˩ˀ
+ꪐꪱꫂ / ꪐ꫁ꪱ|grass|ɲ§aː˨˩ˀ
 ꪑꪱꪣ|time|ɲ§aː§m˥
 ꪑꪲꪚ|to sew|ɲi§p̚˦
 ꪑ꫁ꪮꪣ||␣||
@@ -98,7 +100,7 @@ autoExpandExamples.blt = `
 ꪒꪲꪙ||␣
 ꪒꪴꪀ||␣||
 ꪒꪾꪚ||␣
-ꪔꪰꪒ|to cut|ta§t²
+ꪔꪰꪒ|to cut|ta§t̚˦˥|tắt||tat²
 ꪔꪱꪥ|to die|t§aː§j˨
 ꪔꪲꪫ|to whistle|tʰi§w¹
 ꪔꪴ||␣||
@@ -117,7 +119,7 @@ autoExpandExamples.blt = `
 ꪙꪲ꫁||␣||
 ꪙꪲ꫁ꪫ||␣||
 ꪙꪳ꪿ꪉ||␣
-ꪙꪾ꫁|water|nam˧˩ˀ
+ꪙꪾ꫁|water|nam˧˩ˀ|nặm
 ꪙꪾ꫁ꪹꪚꪸ꫁|ocean, sea|nam˧˩ˀ.§›§beː˨˩ˀ|ꞌnặm bể|
 ꪙꪾꫂ||␣
 ꪙ꫁ꪮꪥ||␣||
@@ -136,6 +138,7 @@ autoExpandExamples.blt = `
 ꪝꪴ||␣||
 ꪝꪷ|enough|pɔ⁴
 ꪝ꪿ꪮꪣ|apple|p§ɔ§m˦
+ꪝꪮꪣꫀ / ꪝ꪿ꪮꪣ|apple|p§ɔ§m˦
 ꪠꪰꪉ||␣||
 ꪠꪱ||␣||
 ꪠꪴ꫁||␣||
@@ -143,6 +146,7 @@ autoExpandExamples.blt = `
 ꪠ꫁ꪱ||␣||
 ꪡꪱꫂ||␣
 ꪡ꫁ꪱ|sky|f§aː˧˩ˀ
+ꪡꪱꫂ / ꪡ꫁ꪱ|sky|f§aː˧˩ˀ
 ꪢꪮꪙ||␣||
 ꪢꪱ|dog|m§aː˨
 ꪢꪱꪀ||␣||
@@ -154,7 +158,7 @@ autoExpandExamples.blt = `
 ꪣꪳ||␣
 ꪣꪳꪉ||␣||
 ꪣꪳ꫁ꪝꪴꪀ||␣||
-ꪣꪸ|wife|miə⁴
+ꪣꪸ|wife|miə̯˥|||miə⁴
 ꪣ꫁ꪱ||␣||
 ꪤꪱ|medecine|j§aː˨|da|
 ꪤ꫁ꪱꪙ|to be afraid, fear|j§aː§n˨˩ˀ|dản|
@@ -198,7 +202,7 @@ autoExpandExamples.blt = `
 ꪮꪱꪚ||␣||
 ꪮꪲꪒ|grape|ʔit̚˦˥|it|
 ꪮ꪿ꪮꪙꪙ꫁ꪮꪥ|baby|ʔ§ɔ§n˦˥.§n§ɔ§j˧˩ˀ
-ꪮ꪿ꪱꪉ|basin, tub|ʔaː§‹§ŋ²
+ꪮ꪿ꪱꪉ|basin, tub|ʔaː§‹§ŋ˦˥|||ʔaːŋ²
 ꪵꪀ꪿ꪙ|seed|›§kɛ§n²
 ꪵꪁꪫꪥ|cinnamon|›§kʷɛ²§‹§‹‹
 ꪵꪄꪀ||␣||
@@ -219,8 +223,8 @@ autoExpandExamples.blt = `
 ꪵꪮꪀ||␣||
 ꪵꪮꪚ|to learn|›§ʔɛ§p̚˦˥
 ꪶꪀꪚ||␣||
-ꪶꪁꪙ|to stir|›§ko§n⁴
-ꪶꪄꪙ|fur, feather|›§xo§n¹
+ꪶꪁꪙ|to stir|›§ko§n˥|ꞌcốn||kon⁴
+ꪶꪄꪙ|fur, feather|›§xo§n˨|||xon¹
 ꪶꪊꪚ||␣
 ꪶꪔꪒ||␣
 ꪶꪙꪀ||␣
@@ -247,7 +251,7 @@ autoExpandExamples.blt = `
 ꪹꪎ꫁||␣
 ꪹꪎꫂ||␣
 ꪹꪐ꫁||␣||
-ꪹꪔꪸꪣ|full|›§te§m¹
+ꪹꪔꪸꪣ|full|›§te§m˨
 ꪹꪚꪙ|moon|›§bɨə̯§n˨
 ꪹꪚꪱꫀ||␣
 ꪹꪚ꪿ꪱ|not|›§baw˦˥§‹
@@ -265,12 +269,12 @@ autoExpandExamples.blt = `
 ꪹꪭ||␣||
 ꪻꪊ||␣
 ꪻꪋ꫁||␣
-ꪻꪐ꪿|large, big|›§ɲəw²
+ꪻꪐ꪿|large, big|›§ɲaɰ˦˥|nháư||ɲəw²
 ꪻꪐꫀ||␣
 ꪻꪚ||␣||
 ꪻꪚꪼꪣ꫁|leaf|›§baɰ˨.§›§maj˧˩ˀ
 ꪻꪚꪼꪣꫂ||␣
-ꪼꪀ꪿||␣
+ꪼꪀ꪿|chicken|›§kaj˦˥|cáy||tone2
 ꪼꪀꫀ||␣
 ꪼꪅ꫁||␣||
 ꪼꪒ꫁|to attain|›§daj³
