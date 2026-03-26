@@ -66,7 +66,7 @@ autoExpandExamples.my = `
 ကင်မရွန်း||␣|
 ကင်း||␣|
 ကင်းခြေများ||␣|
-ကင်းစီး|kinzi|kɪ́§ɴ.§zí
+ကင်းစီး|kinzi|kɪ́§N.§zí
 ကင်းထောက်လေယာဉ်||␣|
 ကင်းပုံ||␣|
 ကင်းမြီးကောက်||␣|
@@ -122,7 +122,7 @@ autoExpandExamples.my = `
 ကန့်လန့်||␣|
 ကန့်လန့်ကာ||␣|
 ကန္တာရ||␣|
-ကန်|lake|kà§ɴ|kan
+ကန်|lake|kà§N|kan
 ကန်စွန်း||␣|
 ကန်စွန်းဥ||␣|
 ကန်တော့||␣|kantau.
@@ -234,7 +234,7 @@ autoExpandExamples.my = `
 ကိတ်||␣|kit
 ကိတ်ဗာဒီ||␣|
 ကိတ်မုန့်||␣|
-ကိန္နရာ|kinnara|kèɪ§ɴ§nə§jà|kinna.ra
+ကိန္နရာ|kinnara|kèɪ§N§nə§jà|kinna.ra
 ကိန္နရီ||␣|
 ကိန်း||␣|
 ကိန်းရှင်||␣|
@@ -248,7 +248,7 @@ autoExpandExamples.my = `
 ကိုကိုး||␣|
 ကိုက်|to bite|kai§ʔ|kuik
 ကိုက်လန်||␣|
-ကိုင်|to hold|kài§ɴ|kuing
+ကိုင်|to hold|kài§N|kuing
 ကိုင်ရို||␣|
 ကိုင်း||␣|
 ကိုဆိုဗို||␣|
@@ -358,7 +358,7 @@ autoExpandExamples.my = `
 ကေသာ||␣|
 ကော||␣|kau:
 ကောက်||␣|kauk
-ကောက်ညှင်း|sticky rice|kaʊ§ʔ.§ɲ̥ɪ́§ɴ
+ကောက်ညှင်း|sticky rice|kaʊ§ʔ.§ɲ̥ɪ́§N
 ကောက်ညှင်းပေါင်း||␣|
 ကောက်ညှင်းမှုန့်||␣|
 ကောက်ရိုး||␣|
@@ -371,7 +371,7 @@ autoExpandExamples.my = `
 ကောင်မ||␣|
 ကောင်မငယ်||␣|
 ကောင်မလေး||␣|
-ကောင်း|good|káu§ɴ|kaung:
+ကောင်း|good|káu§N|kaung:
 ကောင်းကင်||␣|kaung:kang
 ကောင်းကင်ကြိုး||␣|
 ကောင်းကင်တမန်||␣|
@@ -422,8 +422,8 @@ autoExpandExamples.my = `
 ကျင်ချောင်း||␣|
 ကျင်စွယ်||␣|
 ကျင်း||␣|
-ကျဉ်း|narrow|tɕí§ɴ|kyany:
-ကျဉ်းကျပ်|narrow|tɕí§ɴ§tɕa§ʔ|kyany:kyap
+ကျဉ်း|narrow|tɕí§N|kyany:
+ကျဉ်းကျပ်|narrow|tɕí§N§tɕa§ʔ|kyany:kyap
 ကျည်||␣|
 ကျည်ကပ်||␣|
 ကျည်ဖူး||␣|
@@ -438,7 +438,7 @@ autoExpandExamples.my = `
 ကျပ်သား||␣|kyapsa:
 ကျမ||␣|kya.ma.
 ကျယ်|wide|tɕɛ̀§|kyai
-ကျယ်ဝန်း|wide|tɕɛ§̀wú§ɴ|kyaiwan:
+ကျယ်ဝန်း|wide|tɕɛ§̀wú§N|kyaiwan:
 ကျာပွတ်||␣|
 ကျား|tiger|tɕá
 ကျားကျားလျားလျား||␣|
@@ -489,7 +489,7 @@ autoExpandExamples.my = `
 ကျောက်မီး||␣|
 ကျောက်မီးသွေး||␣|
 ကျောက်သင်ပုန်း||␣|
-ကျောင်း|school|tɕáʊ§ɴ
+ကျောင်း|school|tɕáʊ§N
 ကျောင်းဆရာ||␣|
 ကျောင်းဆောင်||␣|
 ကျောင်းတက်||␣|
@@ -521,7 +521,7 @@ autoExpandExamples.my = `
 ကျွန်မ မြန်မာပါ||␣|
 ကျွန်မ||␣|kywanma.
 ကျွန်မတို့|(female) we|tɕə.§–§ma̰.§do̰
-ကျွန်ုပ်|first person singular|tɕʊ̀§ɴ.noʊ§ʔ
+ကျွန်ုပ်|first person singular|tɕʊ̀§N.noʊ§ʔ
 ကျွန်း||␣|kywan:
 ကျွန်းကလေး||␣|
 ကျွန်းကိုင်းမှီကိုင်းကျွန်းမှီ||␣|
@@ -553,7 +553,7 @@ autoExpandExamples.my = `
 ကြက်သီးမွေးညင်းထ||␣|
 ကြက်သွန်||␣|
 ကြက်သွန်နီ||␣|
-ကြက်သွန်ဖြူ|garlic|tɕɛ§ʔ.§θʊ̀§ɴ.§bjù
+ကြက်သွန်ဖြူ|garlic|tɕɛ§ʔ.§θʊ̀§N.§bjù
 ကြက်သွန်မြိတ်||␣|
 ကြက်ဟင်းခါးသီး||␣|
 ကြက်အူချောင်း||␣|
@@ -607,8 +607,8 @@ autoExpandExamples.my = `
 ကြေညာ||␣|
 ကြေညာချက်||␣|
 ကြောက်|to fear|tɕauʔ|krauk
-ကြောင့်|because|dʑa̰uɴ|kraung.
-ကြောင်|cat|dʑàʊ§ɴ
+ကြောင့်|because|dʑa̰uN|kraung.
+ကြောင်|cat|dʑàʊ§N
 ကြောင်ကလေး||␣|
 ကြောင်ထီး||␣|
 ကြောင်မ||␣|
@@ -626,7 +626,7 @@ autoExpandExamples.my = `
 ကြေးစည်||␣|
 ကြေးနန်း||␣|
 ကြေးနီ||␣|
-ကြေးမုံ|mirror|t͡ɕé§mòʊɴ|kre:mum
+ကြေးမုံ|mirror|t͡ɕé§mòʊN|kre:mum
 ကြေးဝါ||␣|
 ကြေးအိုး||␣|
 ကြံ||␣|kram
@@ -669,7 +669,7 @@ autoExpandExamples.my = `
 ကွမ်းမွှေး||␣|
 ကွမ်းယာ||␣|
 ကွမ်းရွက်ပင်||␣|
-ကွယ်လွန်|to die|kwɛ̀lùɴ|kwailwan
+ကွယ်လွန်|to die|kwɛ̀lùN|kwailwan
 ကွာစေ့||␣|
 ကွာရှင်း||␣|
 ကွာလာလမ်ပူ||␣|
@@ -781,7 +781,7 @@ autoExpandExamples.my = `
 ခေါက်ဆွဲသုပ်‌|||hkaukhcwai:sup‌
 ခေါက်မုန့်||␣|
 ခေါင်||␣|
-ခေါင်း|head|kʰáʊ§ɴ
+ခေါင်း|head|kʰáʊ§N
 ခေါင်းကိုက်||␣|
 ခေါင်းဆောင်||␣|
 ခေါင်းပေါင်း||␣|hkaung:paung:
@@ -793,7 +793,7 @@ autoExpandExamples.my = `
 ခေါ်||␣|
 ခေး||␣|
 ခဲ|to freeze|kʰɛ́|hkai:
-ခဲတံ|pencil|kʰɛ́.§dàɴ
+ခဲတံ|pencil|kʰɛ́.§dàN
 ခဲဖျက်||␣|
 ခဲယဉ်း||␣|hkai:yany:
 ခဲယမ်းမီးကျောက်||␣|
@@ -834,7 +834,7 @@ autoExpandExamples.my = `
 ချပါတီ||␣|
 ချပုတ်|||hkya.put
 ချပ်||␣|hkyap
-ချမ်း|cold|tɕʰáɴ|hkyam:
+ချမ်း|cold|tɕʰáN|hkyam:
 ချမ်းသာ||␣|
 ချယ်|cook|tɕʰɛ̀§ʔ
 ချယ်ရီ||␣|
@@ -874,8 +874,8 @@ autoExpandExamples.my = `
 ချဲ့||␣|
 ချဲ့ချဲ့||␣|
 ချွတ်||␣|
-ချွန်|sharp (as a knife)|tɕʰùɴ|hkywan
-ချွန်ထက်|sharp (as a knife)|tɕʰùɴtʰɛʔ|hkywanhtak
+ချွန်|sharp (as a knife)|tɕʰùN|hkywan
+ချွန်ထက်|sharp (as a knife)|tɕʰùNtʰɛʔ|hkywanhtak
 ချွေး||␣|
 ချွေးမ||␣|hkywe:ma.
 ချွံချွံ||␣|
@@ -935,7 +935,7 @@ autoExpandExamples.my = `
 ဂင်းနီဗစ်ဆော||␣|
 ဂင်္ဂါ||␣|gangga
 ဂင်္ဂါမြစ်|||gangga-mrac
-ဂဏန်း|crab|ga̰.§ná§ɴ
+ဂဏန်း|crab|ga̰.§ná§N
 ဂဏန်းတွက်စက်||␣|
 ဂန္ထဗေဒ||␣|
 ဂန္ထဝင်||␣|
@@ -955,7 +955,7 @@ autoExpandExamples.my = `
 ဂရု||␣|
 ဂရုစိုက်||␣|
 ဂလင်း||␣|
-ဂဠုန်|Garuda|gəlòʊɴ
+ဂဠုန်|Garuda|gəlòʊN
 ဂါထာ||␣|
 ဂါနာ||␣|
 ဂါဘွန်||␣|
@@ -1013,7 +1013,7 @@ autoExpandExamples.my = `
 ဂျင်း||␣|
 ဂျင်းဘောင်းဘီ||␣|
 ဂျစ်ကား||␣|
-ဂျပန်|Japan|dʑə.§pà§ɴ
+ဂျပန်|Japan|dʑə.§pà§N
 ဂျမေကာ||␣|
 ဂျလေဘီ||␣|
 ဂျာနယ်||␣|
@@ -1135,7 +1135,7 @@ autoExpandExamples.my = `
 စကားဝှက်||␣|
 စကော့တလန်||␣|
 စကေး||␣|
-စက္ကန့်|second (time)|sɛ§ʔ§ka̰§ɴ|cakkan.
+စက္ကန့်|second (time)|sɛ§ʔ§ka̰§N|cakkan.
 စက္ကရီတေရီ||␣|
 စက္ကူ|paper|sɛ§ʔ.§kù
 စက်||␣|
@@ -1143,7 +1143,7 @@ autoExpandExamples.my = `
 စက်ခေါင်း||␣|
 စက်ဆရာ||␣|
 စက်ဆုပ်||␣|
-စက်တင်ဘာ|September|sɛ§ʔ.§tɪ̀§ɴ.§bà|caktangbha
+စက်တင်ဘာ|September|sɛ§ʔ.§tɪ̀§N.§bà|caktangbha
 စက်တော်ခေါ်||␣|
 စက်ဘီး||␣|
 စက်မှု||␣|
@@ -1163,7 +1163,7 @@ autoExpandExamples.my = `
 စင်ကာပူ||␣|
 စင်စင်||␣|
 စင်တီမီတာ||␣|
-စင်း|straight|síɴ|cang:
+စင်း|straight|síN|cang:
 စင်္ကာပူ||␣|
 စင်္ကြံ||␣|
 စစ်||␣|cac
@@ -1189,7 +1189,7 @@ autoExpandExamples.my = `
 စစ်အေး||␣|
 စစ်အေးတိုက်ပွဲ||␣|
 စဉ်||␣|
-စဉ်းစား|to think|síɴzá|cany:ca:
+စဉ်းစား|to think|síNzá|cany:ca:
 စဉ်းဝါး||␣|
 စည့်||␣|
 စည်||␣|
@@ -1333,9 +1333,9 @@ autoExpandExamples.my = `
 စိန်တစ်လုံး||␣|
 စိန်ပန်း||␣|
 စိန်ဖြူ||␣|
-စိမ့်|to seep, ooze|sḛɪɴ|cim.
+စိမ့်|to seep, ooze|sḛɪN|cim.
 စိမ်||␣|
-စိမ်း|green|séiɴ|cim:
+စိမ်း|green|séiN|cim:
 စိမ်းစားဥ||␣|
 စို|wet|sò|cui
 စိုက်||␣|
@@ -1384,7 +1384,7 @@ autoExpandExamples.my = `
 စော||␣|cau:
 စောက်||␣|
 စောင့်||␣|
-စောင့်တယ်|to wait|sa̰ʊ§ɴ.§d§ɛ̀
+စောင့်တယ်|to wait|sa̰ʊ§N.§d§ɛ̀
 စောင်||␣|caung
 စောင်း||␣|
 စောင်းကောက်||␣|
@@ -1537,7 +1537,7 @@ autoExpandExamples.my = `
 ဆိုက်ကား||␣|
 ဆိုက်ပရပ်စ်|Cyprus|sʰaɪ§ʔ§pə§ɹa§ʔ§s|hcuikpa.rapc
 ဆိုက်ဘေးရီးယား||␣|
-ဆိုင်|store|sʰàɪ§ɴ|hcuing
+ဆိုင်|store|sʰàɪ§N|hcuing
 ဆိုင်ရှင်||␣|
 ဆိုင်း||␣|
 ဆိုင်းထိုး||␣|
@@ -1584,7 +1584,7 @@ autoExpandExamples.my = `
 ဆုတ်||␣|
 ဆုလာဘ်||␣|
 ဆုံ||␣|
-ဆုံး|to die|sʰóuɴ|hcum:
+ဆုံး|to die|sʰóuN|hcum:
 ဆုံးပါး||␣|
 ဆုံးဖြတ်||␣|
 ဆုံးမ||␣|
@@ -1602,7 +1602,7 @@ autoExpandExamples.my = `
 ဆောင်း||␣|hcaung:
 ဆောင်းပါး||␣|
 ဆောင်းရာသီ||␣|
-ဆောင်းဦး|Autumn|sʰáʊ§ɴ§ʔú|hcaung:u:
+ဆောင်းဦး|Autumn|sʰáʊ§N§ʔú|hcaung:u:
 ဆောင်းဦးရာသီ||␣|
 ဆောတလျင်|||hcau:ta.lyang
 ဆောရီး||␣|
@@ -1620,13 +1620,13 @@ autoExpandExamples.my = `
 ဆေးပေါ့လိပ်||␣|
 ဆေးပြင်းလိပ်||␣|
 ဆေးဘဲဥ||␣|
-ဆေးရုံ|hospital|sʰé.§jòʊɴ
+ဆေးရုံ|hospital|sʰé.§jòʊN
 ဆေးရှဲ||␣|
 ဆေးလိပ်||␣|
 ဆေးလိပ်မသောက်ရ||␣|
 ဆေးလုံး||␣|
 ဆဲ||␣|
-ဆံ|hair|sʰàɴ|hcam or ဆံပင်
+ဆံ|hair|sʰàN|hcam or ဆံပင်
 ဆံကျင်တာရာ||␣|
 ဆံခြည်||␣|
 ဆံတော်ချ||␣|
@@ -1713,7 +1713,7 @@ autoExpandExamples.my = `
 ဇေယျာပူရ||␣|
 ဇော်ဂျီ||␣|
 ဇွန်||␣|jwan
-ဇွန်း|spoon|zʊ́§ɴ
+ဇွန်း|spoon|zʊ́§N
 ဈမျဉ်းဆွဲ||␣|
 ဈာန်||␣|
 ဈာပန||␣|
@@ -1829,7 +1829,7 @@ autoExpandExamples.my = `
 တစ်စုံ||␣|
 တစ်စုံတစ်ခု||␣|
 တစ်စုံတစ်ယောက်||␣|
-တစ်စုံတစ်ရာ|something (lit.)|tə§§zòʊɴ§tə§§jà|taccumtacra
+တစ်စုံတစ်ရာ|something (lit.)|tə§§zòʊN§tə§§jà|taccumtacra
 တစ်စုံတစ်ဦး||␣|
 တစ်ဆယ်|ten|tə§ʔ.§sʰ§ɛ̀
 တစ်ထောင်||␣|
@@ -1838,7 +1838,7 @@ autoExpandExamples.my = `
 တစ်ယောက်ယောက်||␣|
 တစ်ရာ||␣|
 တစ်လ||␣|
-တစ်သိန်း|hundred thousand|tə.§–§θéɪ§ɴ
+တစ်သိန်း|hundred thousand|tə.§–§θéɪ§N
 တဆယ်||␣|ta.hcai
 တဆေး||␣|
 တညင်း||␣|
@@ -1948,8 +1948,8 @@ autoExpandExamples.my = `
 တိန်းညက်||␣|
 တိပိဋက||␣|
 တိပ်ခွေ||␣|
-တိမ်|cloud|tèiɴ|tim
-တိရစ္ဆာန်|animal|təɹeiʔsʰàɴ|ti.rachcan
+တိမ်|cloud|tèiN|tim
+တိရစ္ဆာန်|animal|təɹeiʔsʰàN|ti.rachcan
 တိရစ္ဆာန်ရုံ||␣|ti.rachcanrum
 တိရစ္ဆာန်ဥယျာဉ်||␣|
 တို|short|tò|tui
@@ -1987,7 +1987,7 @@ autoExpandExamples.my = `
 တိဿ||␣|
 တိဿဘုရား||␣|
 တီ||␣|
-တီကောင်|worm|tìɡàuɴ|tikaung
+တီကောင်|worm|tìɡàuN|tikaung
 တီကေ့||␣|
 တီချယ်||␣|
 တီထွင်||␣|
@@ -2006,7 +2006,7 @@ autoExpandExamples.my = `
 တုတ်မီး||␣|
 တုန်း||␣|
 တုသိတာ||␣|
-တုံး|dull (as a knife)|tóuɴ|tum:
+တုံး|dull (as a knife)|tóuN|tum:
 တူ|chopsticks|tù
 တူညီဝတ်စုံ||␣|
 တူနစ်စ်|Tunis|tù§nɪ§ʔ§s|tunacc
@@ -2026,7 +2026,7 @@ autoExpandExamples.my = `
 တောက်ပ||␣|
 တောကြက်မောက်||␣|
 တောခွေး||␣|
-တောင်|mountain|tàuɴ|taung
+တောင်|mountain|tàuN|taung
 တောင်ကိုရီးယား||␣|
 တောင်ကြား||␣|taungkra:
 တောင်ကြီး||␣|
@@ -2034,7 +2034,7 @@ autoExpandExamples.my = `
 တောင်ငူ||␣|
 တောင်ဆူဒန်||␣|
 တောင်ပိုင်းသမုဒ္ဒရာ||␣|
-တောင်ပံ|wing|tàuɴbàɴ|taungpam
+တောင်ပံ|wing|tàuNbàN|taungpam
 တောင်ဖက်ဝန်း||␣|
 တောင်သလဲ||␣|
 တောင်သူ||␣|
@@ -2071,7 +2071,7 @@ autoExpandExamples.my = `
 တံခါးဗိုလ်||␣|
 တံခွန်||␣|
 တံခွန်တိုင်||␣|
-တံဂါ|fisherman|təɴ.§gà
+တံဂါ|fisherman|təN.§gà
 တံငါ||␣|
 တံငါတာရာ||␣|
 တံစဉ်||␣|
@@ -2090,10 +2090,10 @@ autoExpandExamples.my = `
 တြိဂံ||␣|
 တြိပူရ||␣|
 တွက်||␣|twak
-တွင်|in|twìɴ|twang
-တွင်း|in|twíɴ|twang:
+တွင်|in|twìN|twang
+တွင်း|in|twíN|twang:
 တွတ်||␣|
-တွန်း|to push|túɴ|twan:
+တွန်း|to push|túN|twan:
 တွပ်||␣|
 တွယ်||␣|
 တွားသွားကောင်||␣|twa:swa:kaung
@@ -2104,7 +2104,7 @@ autoExpandExamples.my = `
 တွဲ||␣|
 ထက်||␣|
 ထက်ဝယ်ဖွဲ့ခွေ||␣|
-ထင်|to think|tʰìɴ|htang
+ထင်|to think|tʰìN|htang
 ထင်စား||␣|
 ထင်း||␣|
 ထဆင်ထူး||␣|
@@ -2116,12 +2116,12 @@ autoExpandExamples.my = `
 ထပ်|again|tʰaʔ|htap
 ထပ်တစ်ရာ||␣|
 ထဘီ||␣|
-ထမင်း|cooked rice|tʰə§mɪ́§ɴ|hta.mang:
+ထမင်း|cooked rice|tʰə§mɪ́§N|hta.mang:
 ထမင်းကြော်||␣|
 ထမင်းချက်||␣|
 ထမင်းချဉ်||␣|
 ထမင်းချိုး||␣|
-ထမင်းဆိုင်|restaurant|tʰa̰§mɪ́§ɴ§zàɪ§ɴ
+ထမင်းဆိုင်|restaurant|tʰa̰§mɪ́§N§zàɪ§N
 ထမင်းသုပ်||␣|
 ထမင်း‌ကြော်||␣|
 ထမနဲ||␣|
@@ -2149,13 +2149,13 @@ autoExpandExamples.my = `
 ထိမ်း||␣|
 ထိမ်းမြား||␣|
 ထို|that|tʰò|htui
-ထိုင်|to sit|tʰàiɴ|htuing
+ထိုင်|to sit|tʰàiN|htuing
 ထိုင်ခုံ||␣|
 ထိုင်ပေ||␣|
 ထိုင်မသိမ်း||␣|
 ထိုင်ဝမ်||␣|
 ထိုင်း||␣|
-ထိုင်းနိုင်ဂံ|Thailand|tʰáɪ§ɴ.§nàɪ§ɴ.§gàɴ
+ထိုင်းနိုင်ဂံ|Thailand|tʰáɪ§N.§nàɪ§N.§gàN
 ထိုမှာ|there|tʰòm̥à|htuihma
 ထိုး|to stab|tʰó|htui:
 ထိုးကွင်း||␣|
@@ -2304,7 +2304,7 @@ autoExpandExamples.my = `
 ဒူလာ||␣|
 ဒူဝါ||␣|
 ဒူး|knee|dú|du:
-ဒူးခေါင်း|knee|dúɡáuɴ|du:hkaung:
+ဒူးခေါင်း|knee|dúɡáuN|du:hkaung:
 ဒူးထောက်||␣|
 ဒူးရင်း||␣|
 ဒူးရင်းယို||␣|
@@ -2404,9 +2404,9 @@ autoExpandExamples.my = `
 နဂါးလှည့်||␣|
 နဂိုရှိမှ နဂိုင်းထွက်||␣|
 နငယ်||␣|
-နင်|you sg|nì§ɴ|nang
+နင်|you sg|nì§N|nang
 နင်ကိုငါချစ်တယ်|||nangkui-ngahkyactai
-နင်တို့|you pl|nìɴdo̰|nangtui.
+နင်တို့|you pl|nìNdo̰|nangtui.
 နင်း||␣|nang:
 နစ်||␣|
 နည်း|few|nɛ́|nany:
@@ -2451,7 +2451,7 @@ autoExpandExamples.my = `
 နဖူးစာ||␣|
 နမီးဘီးယား||␣|
 နမူနာ||␣|
-နမ်း|to smell|náɴ|nam:
+နမ်း|to smell|náN|nam:
 နယ||␣|
 နယုန်||␣|
 နယူးဇီလန်||␣|
@@ -2503,7 +2503,7 @@ autoExpandExamples.my = `
 နားကြပ်||␣|
 နားကွင်း||␣|
 နားထင်||␣|
-နားထောင်|listen|ná.§tʰàʊ§ɴ|na:htaung
+နားထောင်|listen|ná.§tʰàʊ§N|na:htaung
 နားရွက်|ear|nəjwɛʔ|na:rwak
 နားလည်||␣|
 နိကာယ||␣|
@@ -2625,7 +2625,7 @@ autoExpandExamples.my = `
 နံ့သာပု||␣|
 နျူကလိယ||␣|
 နွပ်ချောက်||␣|
-နွမ်း|exhausted|nʊ́§ɴ
+နွမ်း|exhausted|nʊ́§N
 နွယ်||␣|
 နွယ်ချို||␣|
 နွယ်တာ||␣|
@@ -2643,12 +2643,12 @@ autoExpandExamples.my = `
 နွေး|warm|nwé|nwe:
 နွံ||␣|
 နွှဲ||␣|
-နှင့်|and|n̥ḭɴ|hnang.
-နှင့်တကွ|with|n̥ḭɴdəɡwa̰|hnang.ta.kwa.
-နှင်း|snow|n̥íɴ|hnang:
+နှင့်|and|n̥ḭN|hnang.
+နှင့်တကွ|with|n̥ḭNdəɡwa̰|hnang.ta.kwa.
+နှင်း|snow|n̥íN|hnang:
 နှင်းကျ||␣|
 နှင်းကျားသစ်||␣|
-နှင်းခဲ|snow|n̥íɴɡɛ́|hnang:hkai:
+နှင်းခဲ|snow|n̥íNɡɛ́|hnang:hkai:
 နှင်းဆီ||␣|
 နှင်းပွင့်||␣|
 နှင်းလျှောစီး||␣|
@@ -2669,13 +2669,13 @@ autoExpandExamples.my = `
 နှစ်သစ်ကူး မင်္ဂလာပါ||␣|
 နှပ်||␣|hnap
 နှမ||␣|
-နှမ်း|sesame|n̥á§ɴ
+နှမ်း|sesame|n̥á§N
 နှမ်းစေ့||␣|
 နှမ်းဆီ||␣|
-နှလုံး|heart|n̥əlóuɴ|hna.lum:
+နှလုံး|heart|n̥əlóuN|hna.lum:
 နှလုံးရောဂါ||␣|
 နှာ|nose|n̥à
-နှာခေါင်း|nose|n̥əkʰáuɴ|hnahkaung:
+နှာခေါင်း|nose|n̥əkʰáuN|hnahkaung:
 နှာခေါင်းပေါက်||␣|
 နှာဘူး||␣|
 နှာမောင်း||␣|
@@ -2715,7 +2715,7 @@ autoExpandExamples.my = `
 ပင်ပန်း||␣|
 ပင်ပေါင်||␣|
 ပင်မှည့်||␣|
-ပင်လယ်|sea|pìɴlɛ̀|panglai
+ပင်လယ်|sea|pìNlɛ̀|panglai
 ပင်လယ်ကနစို||␣|
 ပင်လယ်ဆား||␣|
 ပင်လယ်ဓားပြ||␣|
@@ -2738,7 +2738,7 @@ autoExpandExamples.my = `
 ပဉ္စဂံ||␣|
 ပဉ္စင်တူရိယာ||␣|
 ပဉ္စင်း||␣|panycang:
-ပဉ္စမ|fifth|pɪ̀§ɴ.§za̰.§ma̰
+ပဉ္စမ|fifth|pɪ̀§N.§za̰.§ma̰
 ပဉ္စရူပ||␣|
 ပဉ္စလက်||␣|
 ပဉ္စသီလ||␣|
@@ -2789,7 +2789,7 @@ autoExpandExamples.my = `
 ပန်ကာ||␣|
 ပန်တျာ||␣|
 ပန်ထွာ||␣|
-ပန်း|flower|pá§ɴ
+ပန်း|flower|pá§N
 ပန်းကန်||␣|
 ပန်းခုနစ်မည်||␣|
 ပန်းချီ||␣|
@@ -2817,7 +2817,7 @@ autoExpandExamples.my = `
 ပန်းရန်||␣|
 ပန်းရွဲ||␣|
 ပန်းဝတ်ရည်||␣|
-ပန်းသီး|apple|pá§ɴ.§ðí
+ပန်းသီး|apple|pá§N.§ðí
 ပန်းသေရောဂါ||␣|
 ပန်းသေး||␣|
 ပန်းသေးခေါက်ဆွဲ||␣|
@@ -2900,7 +2900,7 @@ autoExpandExamples.my = `
 ပိတောက်||␣|
 ပိတ်||␣|pit
 ပိန္နဲ||␣|
-ပိန္နဲသီး|jackfruit|pèɪ§ɴ.§nɛ́.§dʰí
+ပိန္နဲသီး|jackfruit|pèɪ§N.§nɛ́.§dʰí
 ပိန်းဥ||␣|
 ပိန်းဥမုန့်||␣|
 ပိမ့်||␣|
@@ -2909,7 +2909,7 @@ autoExpandExamples.my = `
 ပိုကာ||␣|
 ပိုက်||␣|
 ပိုက်ကွက်||␣|
-ပိုက်ဆံ|money|paɪ§ʔ.§sʰàɴ
+ပိုက်ဆံ|money|paɪ§ʔ.§sʰàN
 ပိုက်ဆံအိတ်||␣|
 ပိုက်သမား||␣|
 ပိုင်||␣|
@@ -2949,7 +2949,7 @@ autoExpandExamples.my = `
 ပီလောပီနံ||␣|
 ပု|short|pṵ|pu.
 ပုခက်||␣|
-ပုဂံ|Pagan/Bagan|bə.§gà§ɴ
+ပုဂံ|Pagan/Bagan|bə.§gà§N
 ပုဂ္ဂလိက||␣|
 ပုဂ္ဂိုလ်||␣|
 ပုစဉ်း||␣|
@@ -3022,7 +3022,7 @@ autoExpandExamples.my = `
 ပေါက်စီ||␣|
 ပေါက်တူး||␣|pauktu:
 ပေါက်ဖော်||␣|
-ပေါင်|thigh|pàʊ§ɴ
+ပေါင်|thigh|pàʊ§N
 ပေါင်ဒါ||␣|
 ပေါင်မုန့်||␣|
 ပေါင်မုန့်ပူတင်း||␣|
@@ -3104,7 +3104,7 @@ autoExpandExamples.my = `
 ပျော်|happy|pjɔ̀||||pjɔ̀
 ပျော်တယ်|to be happy|pjɔ̀.§d§ɛ̀
 ပျော်ပျော်||␣|
-ပျံ|to fly|pjàɴ|pyam
+ပျံ|to fly|pjàN|pyam
 ပျံကျ||␣|
 ပျံတော်မူ||␣|
 ပြ||␣|
@@ -3132,7 +3132,7 @@ autoExpandExamples.my = `
 ပြည်ထောင်စု||␣|
 ပြည်ထောင်စုတော်လှန်ရေးကောင်စီအဖွဲ့||␣|
 ပြည်ထောင်စုနေ့||␣|
-ပြည်ထောင်စုမြန်မာနိုင်ငံတော်|Union of Myanmar|pjìdàʊɴzṵ mjàɴmà nàɪɴŋàɴdɔ̀/nàɪɴɡàɴdɔ̀|pranyhtaungcu. mranma nuingngamtau
+ပြည်ထောင်စုမြန်မာနိုင်ငံတော်|Union of Myanmar|pjìdàʊNzṵ mjàNmà nàɪNŋàNdɔ̀/nàɪNɡàNdɔ̀|pranyhtaungcu. mranma nuingngamtau
 ပြည်ထောင်စုလွှတ်တော်||␣|
 ပြည်နယ်||␣|
 ပြည်သူ||␣|
@@ -3144,7 +3144,7 @@ autoExpandExamples.my = `
 ပြည်သူ့ဆိုင်||␣|
 ပြည်သူ့လွှတ်တော်||␣|
 ပြဌာန်း||␣|
-ပြတင်းပေါက်|window|bədɪ́ɴbaʊʔ|pra.tang:pauk
+ပြတင်းပေါက်|window|bədɪ́Nbaʊʔ|pra.tang:pauk
 ပြတိုက်||␣|pra.tuik
 ပြဒါး||␣|
 ပြဒါးချိန်||␣|
@@ -3189,7 +3189,7 @@ autoExpandExamples.my = `
 ပြောက်ကျားစစ်||␣|
 ပြောင်||␣|
 ပြောင်း||␣|
-ပြောင်းဖူး|corn|pjáʊ§ɴ.§bú
+ပြောင်းဖူး|corn|pjáʊ§N.§bú
 ပြောင်းလဲ||␣|
 ပြေး||␣|pre:
 ပြွတ်||␣|
@@ -3271,7 +3271,7 @@ autoExpandExamples.my = `
 ဖီဂျီ||␣|
 ဖီးကြမ်း||␣|
 ဖုတ်||␣|
-ဖုန်|dust|pʰòuɴ|hpun
+ဖုန်|dust|pʰòuN|hpun
 ဖုန်စုပ်စက်||␣|
 ဖုန်း||␣|
 ဖုန်းနံပါတ်||␣|
@@ -3324,7 +3324,7 @@ autoExpandExamples.my = `
 ဖြေ||␣|
 ဖြေဖျောက်||␣|
 ဖြေရှင်း||␣|
-ဖြောင့်|straight|pʰja̰uɴ|hpraung.
+ဖြောင့်|straight|pʰja̰uN|hpraung.
 ဖြောဖြော||␣|
 ဖြော်ဖြော်||␣|
 ဖွင့်||␣|hpwang.
@@ -3472,7 +3472,7 @@ autoExpandExamples.my = `
 ဘယက်||␣|
 ဘယာ||␣|
 ဘယ်|how, where, which|b§ɛ̀|bhai
-ဘယ်တုန်းက|when|bɛ̀dóuɴɡa̰|bhaitun:ka.
+ဘယ်တုန်းက|when|bɛ̀dóuNɡa̰|bhaitun:ka.
 ဘယ်တော့|when|bɛ̀dɔ̰|bhaitau.
 ဘယ်တော့မှ||␣|
 ဘယ်နှ||␣|
@@ -3649,7 +3649,7 @@ autoExpandExamples.my = `
 မဂ္ဂဇင်း||␣|
 မင့်စ်||␣|
 မင်||␣|
-မင်း|you sg|míɴ|mang:
+မင်း|you sg|míN|mang:
 မင်းကြီး||␣|
 မင်းကွတ်||␣|
 မင်းဆက်||␣|
@@ -3709,7 +3709,7 @@ autoExpandExamples.my = `
 မနောကံ||␣|
 မနေ့က||␣|
 မန္တန်||␣|
-မန္တလေး|Mandalay|mà§ɴ.§da̰.§lé
+မန္တလေး|Mandalay|mà§N.§da̰.§lé
 မန်ကျည်း||␣|
 မန်နေဂျာ||␣|
 မန်း||␣|
@@ -3724,7 +3724,7 @@ autoExpandExamples.my = `
 မယ်သီလ||␣|
 မရဏ||␣|ma.ra.na.
 မရန်း||␣|
-မရမန်|muslin|mə§ɹə§mà§ɴ|ma.ra.man
+မရမန်|muslin|mə§ɹə§mà§N|ma.ra.man
 မရမာ||␣|
 မရမာကြီး||␣|
 မရီး||␣|
@@ -3811,7 +3811,7 @@ autoExpandExamples.my = `
 မိန့်တော်မူ||␣|
 မိန်||␣|
 မိန်းကလေး||␣|
-မိန်းမ|woman|méiɴma̰|min:ma.9
+မိန်းမ|woman|méiNma̰|min:ma.9
 မိန်းမလျာ||␣|
 မိဖုရား||␣|
 မိဘ||␣|
@@ -3915,7 +3915,7 @@ autoExpandExamples.my = `
 မုန့်ခဲဘွယ်||␣|
 မုန့်စကြာ||␣|
 မုန့်စလင်းထောင်||␣|
-မုန့်ဆိုင်|bakery|mo̰ʊ§ɴ.§zàɪ§ɴ
+မုန့်ဆိုင်|bakery|mo̰ʊ§N.§zàɪ§N
 မုန့်ညက်||␣|
 မုန့်တိုဇံ||␣|
 မုန့်တီ||␣|
@@ -3936,7 +3936,7 @@ autoExpandExamples.my = `
 မုန်လာခဲ||␣|
 မုန်လာထုပ်||␣|
 မုန်လာဥ||␣|
-မုန်လာဥနီ|carrots|mòʊ§ɴ.§là.§ʔṵ.§nì
+မုန်လာဥနီ|carrots|mòʊ§N.§là.§ʔṵ.§nì
 မုန်လာဥဝါ||␣|
 မုန်း||␣|
 မုရား||␣|
@@ -4066,7 +4066,7 @@ autoExpandExamples.my = `
 မြက်ခုတ်ဓား||␣|
 မြက်ခြောက်||␣|
 မြင့်||␣|mrang.
-မြင်|to see|mjìɴ|mrang
+မြင်|to see|mjìN|mrang
 မြင်း||␣|mrang:
 မြင်းကလေး||␣|
 မြင်းကျား||␣|
@@ -4123,7 +4123,7 @@ autoExpandExamples.my = `
 မြေစာ||␣|
 မြေနင်းခွာစိုက်||␣|
 မြေနုကျွန်းပေါ်||␣|
-မြေပုံ|map|mjè§bòʊɴ
+မြေပုံ|map|mjè§bòʊN
 မြေပုံဆွဲပညာ||␣|
 မြေပုံသီး||␣|
 မြေပဲ||␣|
@@ -4191,7 +4191,7 @@ autoExpandExamples.my = `
 မှတ်တိုင်||␣|
 မှတ်ပုံတင်||␣|
 မှတ်မိ||␣|
-မှန်|correct|m̥àɴ|hman
+မှန်|correct|m̥àN|hman
 မှန်စာ||␣|
 မှန်စီရွှေချ||␣|
 မှန်တော့||␣|
@@ -4222,7 +4222,7 @@ autoExpandExamples.my = `
 ယစ်ထုတ်|drunk, drunkard|jɪʔtʰoʊʔ|yachtut
 ယဇ် ပလ္လင်||␣|
 ယဇ်||␣|
-ယဉ်|cultured, gentle|jɪ̀ɴ|yany
+ယဉ်|cultured, gentle|jɪ̀N|yany
 ယဉ်ကျေးမှု||␣|yanykye:hmu.
 ယတြာ||␣|
 ယနေ့||␣|
@@ -4325,7 +4325,7 @@ autoExpandExamples.my = `
 ရက်သတ္တပတ်||␣|
 ရခိုင်||␣|
 ရင့်||␣|
-ရင်|if|jì§ɴ|rang15
+ရင်|if|jì§N|rang15
 ရင်ခံ||␣|
 ရင်ခွဲရုံ||␣|ranghkwai:rum
 ရင်ထိုးတံဆိပ်||␣|
@@ -4333,7 +4333,7 @@ autoExpandExamples.my = `
 ရင်ပြင်||␣|
 ရင်ဖုံး||␣|
 ရင်ဖုံးအင်္ကျီ||␣|
-ရင်ဘတ်|breast|jìɴbaʔ|rangbhat
+ရင်ဘတ်|breast|jìNbaʔ|rangbhat
 ရင်း||␣|
 ရင်းရဲ||␣|
 ရစ်|pheasant|jɪ§ʔ
@@ -4354,10 +4354,10 @@ autoExpandExamples.my = `
 ရနံ့||␣|
 ရန်||␣|
 ရန်ကင်း||␣|
-ရန်ကုန်|Rangoon|jà§ɴ.§gòʊ§ɴ
+ရန်ကုန်|Rangoon|jà§N.§gòʊ§N
 ရန်ပြု||␣|
 ရန်ဖက်|||ranhpak
-ရန်ဖြစ်|to fight|jàɴpʰjiʔ|ranhprac
+ရန်ဖြစ်|to fight|jàNpʰjiʔ|ranhprac
 ရန်သူ||␣|
 ရန်သူမျိုးငါးပါး||␣|
 ရန်း||␣|
@@ -4523,7 +4523,7 @@ autoExpandExamples.my = `
 ရောဂန္တရကပ်||␣|
 ရောဂါ||␣|
 ရောဂါဗေဒ||␣|
-ရောင်|to swell|jàuɴ|raung
+ရောင်|to swell|jàuN|raung
 ရောင်ခြည်||␣|
 ရောင်း||␣|raung:
 ရောမ||␣|
@@ -4589,7 +4589,7 @@ autoExpandExamples.my = `
 ရှ||␣|
 ရှက်||␣|
 ရှင့်||␣|
-ရှင်|to live|ʃìɴ|hrang
+ရှင်|to live|ʃìN|hrang
 ရှင်ကိုချစ်တယ်|||hrangkuihkyactai
 ရှင်တို့||␣|
 ရှင်ပြု||␣|
@@ -4711,7 +4711,7 @@ autoExpandExamples.my = `
 လခြမ်းဆိုင်း||␣|
 လငယ်||␣|
 လင့်||␣|
-လင်|husband|lìɴ|lang12
+လင်|husband|lìN|lang12
 လင်ကောင်ပိုး||␣|
 လင်ငယ်||␣|
 လင်ပန်း||␣|
@@ -4739,7 +4739,7 @@ autoExpandExamples.my = `
 လည်ချောင်း||␣|
 လည်စည်း||␣|
 လည်ဆွဲ||␣|
-လည်ပင်း|neck|lɛ̀bíɴ|lanypang:
+လည်ပင်း|neck|lɛ̀bíN|lanypang:
 လည်ပင်းကြီးရောဂါ||␣|
 လည်လိမ်နာ||␣|
 လည်း||␣|
@@ -4757,7 +4757,7 @@ autoExpandExamples.my = `
 လပြည့်ဝန်း||␣|
 လမု||␣|
 လမုန့်||␣|
-လမ်း|road|lá§ɴ|lam:
+လမ်း|road|lá§N|lam:
 လမ်းကြား||␣|
 လမ်းကြောင်း||␣|
 လမ်းဆုံ||␣|
@@ -4765,7 +4765,7 @@ autoExpandExamples.my = `
 လမ်းပြ||␣|
 လမ်းဘေးစာ||␣|
 လမ်းဘေးဆိုင်||␣|
-လမ်းလျှောက်|to take a walk|láɴʃaʊʔ|lam:hlyauk
+လမ်းလျှောက်|to take a walk|láNʃaʊʔ|lam:hlyauk
 လမ်းသရဲ||␣|
 လမွတ်||␣|
 လယ||␣|
@@ -4832,10 +4832,10 @@ autoExpandExamples.my = `
 လုပ်သား||␣|
 လုပ်အား||␣|lup-a:
 လုမ္ဗိနီ||␣|
-လုံချည်|longyi|lòʊɴ§d͡ʑì§–|lumhkyany
+လုံချည်|longyi|lòʊN§d͡ʑì§–|lumhkyany
 လုံခြုံရေး||␣|
 လုံ့လ||␣|
-လုံး|round|lóuɴ|lum:
+လုံး|round|lóuN|lum:
 လုံးကြီးတင်||␣|
 လုံးကြီးတင်ဆန်ခတ်||␣|
 လုံးလုံး||␣|
@@ -4888,7 +4888,7 @@ autoExpandExamples.my = `
 လေဖုတ်||␣|
 လေဖြတ်ရောဂါ||␣|
 လေမုန်တိုင်း||␣|
-လေယာဉ်|airplane|lè.§ja§ɴ
+လေယာဉ်|airplane|lè.§ja§N
 လေယာဉ်ပျံ||␣|
 လေယာဉ်မယ်||␣|
 လေယာဉ်မောင်||␣|
@@ -4908,7 +4908,7 @@ autoExpandExamples.my = `
 လောကဝတ်||␣|
 လောကီ||␣|
 လောက်||␣|
-လောင်|to burn|làuɴ|laung
+လောင်|to burn|làuN|laung
 လောင်စာ||␣|
 လောင်း||␣|
 လောင်းကုတ်အင်္ကျီ||␣|
@@ -4927,7 +4927,7 @@ autoExpandExamples.my = `
 လေးညှင်းပွင့်||␣|
 လေးထောင့်||␣|
 လေးလ||␣|
-လေးလံ|heavy|lélàɴ|le:lam
+လေးလံ|heavy|lélàN|le:lam
 လဲ||␣|
 လဲ့လဲ့||␣|
 လံဗား||␣|
@@ -4935,10 +4935,10 @@ autoExpandExamples.my = `
 လျက်||␣|
 လျင်||␣|
 လျားလျား||␣|
-လျောင်း|to lie (as in a bed)|ljáuɴ|lyaung:
+လျောင်း|to lie (as in a bed)|ljáuN|lyaung:
 လျောင်းစက်||␣|
 လျော့||␣|
-လျှင်|if (lit.)|l̥jɪ̀§ɴ|hlyang
+လျှင်|if (lit.)|l̥jɪ̀§N|hlyang
 လျှပ်||␣|
 လျှပ်စစ်||␣|
 လျှပ်စစ်ကား||␣|
@@ -4956,7 +4956,7 @@ autoExpandExamples.my = `
 လွတ်လပ်|independent|lʊ§ʔ.§la§ʔ
 လွတ်လပ်ခွင့်||␣|lwatlaphkwang.
 လွတ်လပ်ရေးနေ့||␣|
-လွန်|rope|lùɴ|lwan
+လွန်|rope|lùN|lwan
 လွန်ဆွဲ||␣|
 လွန်း||␣|
 လွမ်း||␣|
@@ -5022,7 +5022,7 @@ autoExpandExamples.my = `
 ဝက်အူချောင်း||␣|
 ဝက်အူလှည့်||␣|
 ဝဂ်||␣|
-ဝင်|enter|wɪ̀§ɴ
+ဝင်|enter|wɪ̀§N
 ဝင်ကုန်||␣|
 ဝင်ကြေး||␣|
 ဝင်ငွေ||␣|
@@ -5050,7 +5050,7 @@ autoExpandExamples.my = `
 ဝတ်လုံ||␣|
 ဝနာ||␣|
 ဝန်||␣|wan
-ဝန်ကြီး|minister|wʊ̀§ɴ.§tɕí
+ဝန်ကြီး|minister|wʊ̀§N.§tɕí
 ဝန်ကြီးချုပ်||␣|
 ဝန်ကြီးချုပ်ကတော်||␣|
 ဝန်ကြီးဌာန||␣|
@@ -5138,7 +5138,7 @@ autoExpandExamples.my = `
 ဝိုက်ချ||␣|
 ဝိုင်||␣|wuing
 ဝိုင်ယာကြိုး||␣|
-ဝိုင်း|round|wáiɴ|wuing:
+ဝိုင်း|round|wáiN|wuing:
 ဝိုးဝင်း||␣|
 ဝီကီပိဒိယ||␣|wikipi.di.ya.
 ဝီကီပီးဒီးယား||␣|
@@ -5247,7 +5247,7 @@ autoExpandExamples.my = `
 သစ်တို||␣|
 သစ်တော|forest|θiʔtɔ́|sactau:
 သစ်နက်||␣|
-သစ်ပင်|tree|θiʔpìɴ|sacpang
+သစ်ပင်|tree|θiʔpìN|sacpang
 သစ်ပုပ်||␣|
 သစ်ဖြူ||␣|
 သစ်မန်ကျည်း||␣|
@@ -5265,7 +5265,7 @@ autoExpandExamples.my = `
 သည်းခြေ|gall, bile|θí§–§d͡ʑè|sany:hkre
 သဏ္ဌာန်||␣|
 သတင်း||␣|
-သတင်းစာ|farmer|θə.§dɪ́§ɴ.§zà
+သတင်းစာ|farmer|θə.§dɪ́§N.§zà
 သတင်းစာဆရာ||␣|
 သတင်းထောက်||␣|
 သတင်းပို့||␣|
@@ -5303,11 +5303,11 @@ autoExpandExamples.my = `
 သန့်ရှင်း||␣|
 သန့်ရှင်းရေးသမား||␣|
 သန္တာ||␣|
-သန္ဓေ|pregnancy|θà§ɴ§dè|sandhe
+သန္ဓေ|pregnancy|θà§N§dè|sandhe
 သန္ဓေဗေဒ||␣|
 သန္ဓေသား||␣|
 သန်||␣|
-သန်ကောင်|worm|θàɴɡàuɴ|sankaung
+သန်ကောင်|worm|θàNɡàuN|sankaung
 သန်တူ||␣|
 သန်ဘက်||␣|
 သန်ဘက်ခါ||␣|
@@ -5315,8 +5315,8 @@ autoExpandExamples.my = `
 သန်လျင်||␣|
 သန်လျင်း||␣|
 သန်လျင်းချိတ်||␣|
-သန်း|louse|θáɴ|san:
-သန်းခေါင်|midnight|də.§–§gàʊ§ɴ
+သန်း|louse|θáN|san:
+သန်းခေါင်|midnight|də.§–§gàʊ§N
 သန်းခေါင်ယံ||␣|
 သပိတ်||␣|
 သပ်||␣|
@@ -5435,7 +5435,7 @@ autoExpandExamples.my = `
 သိပ္ပံဘွဲ့||␣|
 သိပ်|very|θeɪ§ʔ
 သိမ်||␣|
-သိမ်း|save|θéɪ§ɴ
+သိမ်း|save|θéɪ§N
 သိရှိ|to know|θḭʃḭ|si.hri.
 သိဝ||␣|
 သိဟ်||␣|
@@ -5445,7 +5445,7 @@ autoExpandExamples.my = `
 သို့မဟုတ်||␣|
 သို့ရာတွင်||␣|
 သို့သော်||␣|
-သိုး|three|θóʊɴ||||θóʊɴ
+သိုး|three|θóʊN||||θóʊN
 သိုးကလေး||␣|
 သိုးဆောင်း||␣|
 သိုးထိန်း||␣|
@@ -5512,7 +5512,7 @@ autoExpandExamples.my = `
 သုဝဏ္ဏ||␣|
 သုဝဏ္ဏဘူမိ||␣|
 သုသာန်||␣|su.san
-သုံး|three|θóuɴ|sum:
+သုံး|three|θóuN|sum:
 သုံးစွဲ||␣|
 သုံးစွဲသူ||␣|
 သုံးဆယ်||␣|sum:hcai
@@ -5701,7 +5701,7 @@ autoExpandExamples.my = `
 ဟင်းခါး||␣|
 ဟင်းချို||␣|
 ဟင်းချ့||␣|
-ဟင်းနုနွယ်|amaranth|hɪ́§ɴ.§nṵ§n.w§ɛ̀
+ဟင်းနုနွယ်|amaranth|hɪ́§N.§nṵ§n.w§ɛ̀
 ဟင်းရည်||␣|
 ဟင်းသီးဟင်းရွက်||␣|
 ဟင်းသောက်ဇွန်း|||hang:saukjwan:
@@ -5755,7 +5755,7 @@ autoExpandExamples.my = `
 ဟောက်||␣|
 ဟောင်||␣|
 ဟောင်ကောင်||␣|
-ဟောင်း|old|háuɴ|haung:
+ဟောင်း|old|háuN|haung:
 ဟော်||␣|
 ဟော်ကီ||␣|
 ဟော်တယ်||␣|
@@ -5793,7 +5793,7 @@ autoExpandExamples.my = `
 အက်တီနီယမ်|||aktiniyam
 အက်ရှ်ဂါဘတ်||␣|
 အကျဉ်း||␣|
-အကျဉ်းထောင်|prison|ʔa̰.§dʑɪ́§ɴ.§dàʊ§ɴ
+အကျဉ်းထောင်|prison|ʔa̰.§dʑɪ́§N.§dàʊ§N
 အကျဉ်းသား||␣|
 အကျည်း||␣|
 အကျည်းတန်||␣|
@@ -5889,7 +5889,7 @@ autoExpandExamples.my = `
 အင်ဒိုနီးရှား||␣|
 အင်ဒိုရာ||␣|
 အင်ပါယာ||␣|
-အင်း|lake|ʔíɴ|ang:
+အင်း|lake|ʔíN|ang:
 အင်းကျီ||␣|
 အင်းစိန်||␣|
 အင်းဆက်||␣|ang:hcak
@@ -5901,14 +5901,14 @@ autoExpandExamples.my = `
 အင်္ကျီတို||␣|
 အင်္ကျီရှည်||␣|
 အင်္ဂတေ||␣|
-အင်္ဂလန်|England|ʔɪ̀§ɴ.§gə̰.§là§ɴ
+အင်္ဂလန်|England|ʔɪ̀§N.§gə̰.§là§N
 အင်္ဂလိပ်||␣|angga.lip
 အင်္ဂလိပ်စကား|||angga.lipca.ka:
 အင်္ဂလိပ်ဘာသာ|||angga.lipbhasa
-အင်္ဂါ|Mars|ʔɪ̀§ɴ§ɡà|angga
+အင်္ဂါ|Mars|ʔɪ̀§N§ɡà|angga
 အင်္ဂါဂြိုဟ်||␣|
 အင်္ဂါဇာတ်||␣|
-အငြိမ့်|Burmese-style entertainment|ʔə§ɲḛɪ§ɴ|a.ngrim.
+အငြိမ့်|Burmese-style entertainment|ʔə§ɲḛɪ§N|a.ngrim.
 အငြိမ့်တီးမျိုး||␣|
 အငွေ့|steam, fumes|ʔa̰§ŋwḛ|a.ngwe.
 အငှါးကား||␣|
@@ -5991,12 +5991,12 @@ autoExpandExamples.my = `
 အဏုမြူ||␣|
 အဏုမြူဗုံး||␣|
 အဏုမြူလက်နက်||␣|
-အဏ္ဏဝါ|sea|ʔà§ɴ§nə§wà|anna.wa
+အဏ္ဏဝါ|sea|ʔà§N§nə§wà|anna.wa
 အဏ္ဏဝါဗေဒ||␣|
 အတင်း||␣|
 အတည်||␣|
 အတည်ပြု||␣|
-အတန်း|class|ʔa̰.§tá§ɴ
+အတန်း|class|ʔa̰.§tá§N
 အတာ||␣|
 အတာအိုး||␣|
 အတားအဆီး||␣|
@@ -6010,7 +6010,7 @@ autoExpandExamples.my = `
 အတု||␣|
 အတူ||␣|
 အတူတူ||␣|
-အတောင်|feather|ʔətàuɴ|a.taung
+အတောင်|feather|ʔətàuN|a.taung
 အတော်||␣|
 အတ္တ||␣|
 အတ္တဒဿီ||␣|
@@ -6084,9 +6084,9 @@ autoExpandExamples.my = `
 အနောမဒဿီဘုရား||␣|
 အနော်ရထာ||␣|
 အနံ့||␣|
-အန္တရာယ်|danger|ʔà§ɴ§›§də§je
+အန္တရာယ်|danger|ʔà§N§›§də§je
 အန္တာတိက||␣|
-အန်|to vomit|ʔàɴ|an
+အန်|to vomit|ʔàN|an
 အန်ကယ်||␣|
 အန်ကူးမုန့်||␣|
 အန်တီ||␣|
@@ -6107,7 +6107,7 @@ autoExpandExamples.my = `
 အပူ||␣|
 အပေါက်||␣|
 အပေါက်ဝ||␣|
-အပေါင်|leg|ʔəpàuɴ|a.paung
+အပေါင်|leg|ʔəpàuN|a.paung
 အပေါင်းလက္ခဏာ||␣|
 အပေါ့||␣|
 အပေါ့သွား||␣|
@@ -6131,9 +6131,9 @@ autoExpandExamples.my = `
 အပြိုင်||␣|
 အပြီးသတ်||␣|
 အပြုအမူ||␣|
-အပြုံး|smile|ʔə.§pjóʊɴ|a.prum:
+အပြုံး|smile|ʔə.§pjóʊN|a.prum:
 အပြော||␣|
-အပွင့်|flower|ʔəpwḭɴ|a.pwang.
+အပွင့်|flower|ʔəpwḭN|a.pwang.
 အဖ|father|ʔəpʰa̰|a.hpa.14
 အဖတ်||␣|
 အဖန်ခြောက်||␣|
@@ -6159,7 +6159,7 @@ autoExpandExamples.my = `
 အဗ္ဗုဒ||␣|
 အဘ||␣|
 အဘယဋ္ဌာန||␣|
-အဘိဓာန်|dictionary|ʔa̰.§bḭ.§da§ɴ
+အဘိဓာန်|dictionary|ʔa̰.§bḭ.§da§N
 အဘိုး||␣|a.bhui:
 အဘိုးကြီး||␣|
 အဘီ||␣|
@@ -6184,7 +6184,7 @@ autoExpandExamples.my = `
 အမေ|mother|ʔə§mè|a.me
 အမေရိက||␣|a.meri.ka.
 အမေရိကန်||␣|
-အမေရိကန်ပြည်ထောင်စု|USA|ʔəmèɹḭkàɴpjìdàʊɴzṵ|a.meri.kanpranyhtaungcu.
+အမေရိကန်ပြည်ထောင်စု|USA|ʔəmèɹḭkàNpjìdàʊNzṵ|a.meri.kanpranyhtaungcu.
 အမေရိကန်ပြည်ထောင်စုသမတနိုင်ငံ|||a.meri.kan pranyhtaungcu. sa.ma.ta.nuingngam
 အမေလိုး||␣|
 အမေး||␣|
@@ -6229,7 +6229,7 @@ autoExpandExamples.my = `
 အမွေခံ||␣|
 အမွေခွဲ||␣|
 အမွေအနှစ်||␣|
-အမွေး|hair|sʰəbìɴ|a.mwe:
+အမွေး|hair|sʰəbìN|a.mwe:
 အမွှေး||␣|
 အမွှေးတိုင်||␣|
 အမှတ်||␣|
@@ -6379,7 +6379,7 @@ autoExpandExamples.my = `
 အသင်္ချေ||␣|
 အသစ်||␣|
 အသည်း|liver|ʔəθɛ́|a.sany:
-အသည်းနှလုံး|heart|ʔəθɛ́n̥əlóuɴ|a.sany:hna.lum:
+အသည်းနှလုံး|heart|ʔəθɛ́n̥əlóuN|a.sany:hna.lum:
 အသတ်||␣|
 အသရေ||␣|
 အသား|meat|ʔəθá|a.sa:
@@ -6483,9 +6483,9 @@ autoExpandExamples.my = `
 အားဖြင့်|||a:hprang.
 အားလပ်||␣|
 အားလပ်ရက်||␣|
-အားလုံး|all|ʔálóuɴ|a:lum:
+အားလုံး|all|ʔálóuN|a:lum:
 အိတ်|bag|ʔeɪ§ʔ
-အိန္ဒိယ|India|ʔèɪ§ɴ.§dḭ.§ja̰
+အိန္ဒိယ|India|ʔèɪ§N.§dḭ.§ja̰
 အိန္ဒိယနိုင်ငံ|||indi.ya.nuingngam
 အိန္ဒိယသမုဒ္ဒရာ||␣|
 အိန္ဒြာ||␣|
@@ -6496,7 +6496,7 @@ autoExpandExamples.my = `
 အိပ်မက်မက်||␣|
 အိပ်ရာ||␣|ip-ra
 အိပ်ရာလိပ်||␣|
-အိမ်|house, home|ʔèɪ§ɴ|im
+အိမ်|house, home|ʔèɪ§N|im
 အိမ်စာ||␣|
 အိမ်တက်မင်္ဂလာ||␣|
 အိမ်ထောင်||␣|
@@ -6504,7 +6504,7 @@ autoExpandExamples.my = `
 အိမ်ထောင်ရေး||␣|
 အိမ်နီးချင်း||␣|
 အိမ်ဖြူတော်||␣|
-အိမ်မြှောင်|compass|ʔèɪ§ɴ.§m̥jàʊ§ɴ|imhmraung
+အိမ်မြှောင်|compass|ʔèɪ§N.§m̥jàʊ§N|imhmraung
 အိမ်မှုကိစ္စ||␣|
 အိမ်ရှင်မ||␣|
 အိမ်ရှေ့မင်း||␣|
@@ -6547,7 +6547,7 @@ autoExpandExamples.my = `
 အီရန်||␣|
 အီရီထရီးယား||␣|
 အီလက်ထရွန်||␣|
-အီလက်ထရွန်နစ်|electronics|ʔìlɛʔtʰəɹʊ̀ɴnɪʔ|ilakhta.rwannac
+အီလက်ထရွန်နစ်|electronics|ʔìlɛʔtʰəɹʊ̀Nnɪʔ|ilakhta.rwannac
 အီလက်ထရွန်နစ်ပညာ|||ilakhta.rwannacpa.nya
 အီသီယိုးပီးယား||␣|
 အီး||␣|
@@ -6563,7 +6563,7 @@ autoExpandExamples.my = `
 အုန်းနို့||␣|
 အုန်းနို့ခေါက်ဆွဲ||␣|un:nui.hkaukhcwai:
 အုန်းမှန်ကူ||␣|
-အုန်းသီး|coconut|ʔóʊ§ɴ.§dʰí
+အုန်းသီး|coconut|ʔóʊ§N.§dʰí
 အုန်းသီးမှုန့်||␣|
 အုပ်||␣|
 အုပ်ချုပ်||␣|
@@ -6616,7 +6616,7 @@ autoExpandExamples.my = `
 အံဆွဲ||␣|
 ဣန္ဒါ||␣|
 ဣန္ဒာ||␣|
-ဣန္ဒြေ|India|ʔḭ§ɴ.§djè
+ဣန္ဒြေ|India|ʔḭ§N.§djè
 ဣရိယာပုတ်||␣|
 ဤ|this|ʔì|i|||ʔì
 ဥ|egg|ʔṵ
@@ -6706,7 +6706,7 @@ autoExpandExamples.my = `
 ဩရိဿ||␣|
 ဩသဓ||␣|
 ၌|at|n̥aiʔ|hnai.
-၎င်း|afore|lə.ɡàu§ɴ
+၎င်း|afore|lə.ɡàu§N
 
 
 
