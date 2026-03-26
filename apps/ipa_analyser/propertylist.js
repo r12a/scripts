@@ -218,7 +218,7 @@
     '\u0306':'Extra short§Breve',
 
     
-    
+    'N':'Placeless nasal archiphoneme',
     
     
     
