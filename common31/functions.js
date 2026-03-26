@@ -4470,23 +4470,22 @@ function copyIntroInfo () {
         const target = document.getElementById("vowel_description")
         
         // describe the table
-        const p = document.createElement("p")
-        p.className = "instructions"
-        p.style.marginBlockEnd = "4rem"
-        p.innerHTML = `The summary table just above gives only a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table <a href="#vowel_mappings">Vowel sounds to characters</a> at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.`
+        if (document.querySelector('#basicV .soundSummary')) {
+            const p = document.createElement("p")
+            p.className = "instructions"
+            p.style.marginBlockEnd = "4rem"
+            p.innerHTML = `The summary table just above gives only a rough idea of how sounds map to characters. Detailed information about usage and context follows, including the table <a href="#vowel_mappings">Vowel sounds to characters</a> at the end of the section. Clicking on the IPA labels in the table above will take you to that table so you can check for more information about a given sound. For detailed information about a specific character, click on the character.`
 
-        // Insert before the div
-        target.before(p)
-
+            // Insert before the div
+            target.before(p)
+            }
 
 
         out = `<section id="vowel_summary">`
         out += `<h3>Summary</h3>`
 
         var paras = basicFeatures.querySelectorAll('.addToVowels')
-        // console.log("Copying",paras.length,"paragraphs to Vowel section.")
         for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
-        //if (out !== '') document.getElementById('vowel_description').innerHTML = out
         out += `</section>`
         
         target.outerHTML += out
@@ -4500,14 +4499,15 @@ function copyIntroInfo () {
         const target = document.getElementById("consonant_description")
         
         // describe the table
-        const p = document.createElement("p")
-        p.className = "instructions"
-        p.style.marginBlockEnd = "4rem"
-        p.innerHTML = `The summary table just above gives only a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table <a href="#consonant_mappings">Consonant sounds to characters</a> at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.`
+        if (document.querySelector('#consonantSummary .soundSummary')) {
+            const p = document.createElement("p")
+            p.className = "instructions"
+            p.style.marginBlockEnd = "4rem"
+            p.innerHTML = `The summary table just above gives only a rough idea of how sounds map to characters. Detailed information about usage and context follows, including the table <a href="#consonant_mappings">Consonant sounds to characters</a> at the end of the section. Clicking on the IPA labels in the table above will take you to that table so you can check for more information about a given sound. For detailed information about a specific character, click on the character.`
 
-        // Insert before the div
-        target.before(p)
-
+            // Insert before the div
+            target.before(p)
+            }
 
         out = `<section id="consonant_summary">`
         out += `<h3>Summary</h3>`
@@ -5317,9 +5317,16 @@ function wrapToneLettersInBdi() {
     }
 
 
+    
+    
+function showUpperCaseRows () {
+    const rows = document.querySelectorAll('.soundSummary .uc_row')
 
-
-
+    rows.forEach(row => {
+        const isHidden = getComputedStyle(row).display === 'none'
+        row.style.display = isHidden ? 'table-row' : 'none'
+        })
+    }
 
 
 
