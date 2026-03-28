@@ -35,7 +35,7 @@ autoExpandExamples.blt = `
 ꪁꪫ꪿ꪱ||␣||
 ꪁꪮꪉꫂ||␣
 ꪁꪲꪣ||␣
-ꪁꪳꪒ||␣
+ꪁꪳꪒ|to think|kɨt̚˦|ꞌcựt
 ꪁꪾ|gold|kam⁴
 ꪁ꪿ꪱ||␣||
 ꪁ꫁ꪮꪉ||␣
@@ -51,8 +51,8 @@ autoExpandExamples.blt = `
 ꪄꪳ꫁ꪙ||␣
 ꪄꪴꪙꫀ|dust|xun²
 ꪄꪴ꪿ꪙ|dust|xu§n²
-ꪄꪷ||␣||
-ꪄꪷꪄꪫ꪿ꪱ||␣||
+ꪄꪷ|hook|xɔː˨|kho|
+ꪄꪷꪄꪫ꪿ꪱ|key|xɔː˨.§x§ʷ§aː˦˥|kho khoá|
 ꪄ꫁ꪮꪥ|I, me|x§ɔ§j˨˩ˀ
 ꪄ꫁ꪱ||␣
 ꪅꪺꪀ|tadpole|x§uə̯§ʔ˦|ꞌkhuạk
@@ -87,13 +87,14 @@ autoExpandExamples.blt = `
 ꪎ꫁ꪺꪉ|trousers|s§uə§ŋ³
 ꪏꪱꪥ||␣||
 ꪏꪳ꫁|to buy|sɨː˧˩ˀ
+ꪏꪳꫂ|to buy|sɨː˧˩ˀ
 ꪐꪱꫂ||␣
 ꪐ꫁ꪱ|grass|ɲ§aː˨˩ˀ
 ꪐꪱꫂ / ꪐ꫁ꪱ|grass|ɲ§aː˨˩ˀ
 ꪑꪱꪣ|time|ɲ§aː§m˥
 ꪑꪲꪚ|to sew|ɲi§p̚˦
 ꪑ꫁ꪮꪣ||␣||
-ꪒꪚꪾ|to extinguish|d§ap̚˦˥
+ꪒꪚꪾ|to extinguish|d§ap̚˦˥|đắp
 ꪒꪱꪫ||␣||
 ꪒꪲ||␣||
 ꪒꪲꪒ||␣||
@@ -108,7 +109,7 @@ autoExpandExamples.blt = `
 ꪕꪮꪉꫂ||␣
 ꪕ꫁ꪮꪉ|stomach|t§ɔ§ŋ˧˩ˀ
 ꪖꪲ꫁ꪣ|to discard, drop|tʰi§m˨˩ˀ
-ꪖꪾ꫁||␣||
+ꪖꪾ꫁|cave, tunnel|tʰam˨˩ˀ|thẳm|ꪖꪾꫂ
 ꪘꪮꪉꪨꪺꪉ|sea|nɔŋ˨.luə̯ŋ˨
 ꪘꪰꪉ|skin, leather|na§ŋ˨
 ꪘꪱꫂ||␣
@@ -116,16 +117,18 @@ autoExpandExamples.blt = `
 ꪙꪮꪙ||␣
 ꪙꪰꪉꫀ||␣
 ꪙꪰ꪿ꪉ|to sit|na§ŋ˦
-ꪙꪲ꫁||␣||
+ꪙꪲ꫁|this|niː˧˩ˀ|ꞌnị|
+ꪙꪲꫂ|this|niː˧˩ˀ|ꞌnị|
 ꪙꪲ꫁ꪫ||␣||
-ꪙꪳ꪿ꪉ||␣
+ꪙꪳ꪿ꪉ|one|nɨŋ˦|nưng
+ꪙꪳꪉꫀ|one|nɨŋ˦|nưng
 ꪙꪾ꫁|water|nam˧˩ˀ|nặm
 ꪙꪾ꫁ꪹꪚꪸ꫁|ocean, sea|nam˧˩ˀ.§›§beː˨˩ˀ|ꞌnặm bể|
 ꪙꪾꫂ||␣
 ꪙ꫁ꪮꪥ||␣||
 ꪚꪮꪀ||␣||
 ꪚꪲꪙ||␣||
-ꪚꪺ||␣||
+ꪚꪺ|lotus|b§uə̯˨|bua|
 ꪛꪱꪜꪺ|queen|b§aː˥.§p§uə̯˨
 ꪜꪱ||␣
 ꪜꪱꪀ||␣
@@ -142,7 +145,7 @@ autoExpandExamples.blt = `
 ꪠꪰꪉ||␣||
 ꪠꪱ||␣||
 ꪠꪴ꫁||␣||
-ꪠꪽ||␣||
+ꪠꪽ|to dream|fan˨||
 ꪠ꫁ꪱ||␣||
 ꪡꪱꫂ||␣
 ꪡ꫁ꪱ|sky|f§aː˧˩ˀ
@@ -155,8 +158,8 @@ autoExpandExamples.blt = `
 ꪢ꫁ꪱ||␣||
 ꪣꪱ||␣
 ꪣꪲ||␣
-ꪣꪳ||␣
-ꪣꪳꪉ||␣||
+ꪣꪳ|hand|mɨː˥|ꞌmứ
+ꪣꪳꪉ|you|mɨŋ˥|mứng|
 ꪣꪳ꫁ꪝꪴꪀ||␣||
 ꪣꪸ|wife|miə̯˥|||miə⁴
 ꪣ꫁ꪱ||␣||
@@ -172,9 +175,9 @@ autoExpandExamples.blt = `
 ꪩꪺꪉ||␣||
 ꪪꪱꪙ|sweet|vaːn˨||
 ꪪꪲ||␣||
-ꪫꪱꪉ||␣||
+ꪫꪱꪉ|to leave|v§aː§ŋ˥||ꞌváng
 ꪫꪸꪀ|work, job|viə̯§ʔ˦
-ꪫꪸ꫁ꪒꪙꪱꪣ||␣||
+ꪫꪸ꫁ꪒꪙꪱꪣ|Vietnam|viə̯§t̚˦.§n§aː§m˥||ꞌViệt ꞌNám
 ꪫꪽ||␣||
 ꪬꪮꪀ||␣||
 ꪬꪮꪣ||␣||
@@ -202,18 +205,19 @@ autoExpandExamples.blt = `
 ꪮꪱꪚ||␣||
 ꪮꪲꪒ|grape|ʔit̚˦˥|it|
 ꪮ꪿ꪮꪙꪙ꫁ꪮꪥ|baby|ʔ§ɔ§n˦˥.§n§ɔ§j˧˩ˀ
+ꪮꪮꪙꫀꪙꪮꪥꫂ|baby|ʔ§ɔ§n˦˥.§n§ɔ§j˧˩ˀ
 ꪮ꪿ꪱꪉ|basin, tub|ʔaː§‹§ŋ˦˥|||ʔaːŋ²
 ꪵꪀ꪿ꪙ|seed|›§kɛ§n²
 ꪵꪁꪫꪥ|cinnamon|›§kʷɛ²§‹§‹‹
 ꪵꪄꪀ||␣||
 ꪵꪄꪉ||␣
 ꪵꪄꪫ|green|›§xɛ§w˨
-ꪵꪋ||␣||
+ꪵꪋ|tea|›§t͡ɕɛː˥||
 ꪵꪒꪙ||␣||
 ꪵꪒꪙꪒꪲꪙ|boundary|dɛ§n˨.§di§n˨|đen đin|
 ꪵꪔꪣꫂ||␣||
 ꪵꪔ꫁ꪣ||␣||
-ꪵꪚ꪿ꪉꪼꪔ||␣||
+ꪵꪚ꪿ꪉꪼꪔ|bread|bɛŋ˦˥.taj˨|béng tay|
 ꪵꪜꪒ||␣
 ꪵꪝꪀ||␣||
 ꪵꪣꪫ|cat|›§mɛ§w˥
@@ -225,7 +229,7 @@ autoExpandExamples.blt = `
 ꪶꪀꪚ||␣||
 ꪶꪁꪙ|to stir|›§ko§n˥|ꞌcốn||kon⁴
 ꪶꪄꪙ|fur, feather|›§xo§n˨|||xon¹
-ꪶꪊꪚ||␣
+ꪶꪊꪚ|hoe|›§t͡ɕo§p̚˦˥|chốp
 ꪶꪔꪒ||␣
 ꪶꪙꪀ||␣
 ꪶꪙꪣ||␣
@@ -240,13 +244,13 @@ autoExpandExamples.blt = `
 ꪹꪁꪷ||␣||
 ꪹꪄꪸꪣ||␣||
 ꪹꪄ꫁ꪱ||␣
-ꪹꪄ꫁ꪱꪻꪊ||␣
+ꪹꪄ꫁ꪱꪻꪊ|to understand|›§xaw˨˩ˀ.§‹§›§t͡ɕaɰ˨|khảu chaư
 ꪹꪉꪱ|reflection|›§ŋaːw¹§‹
-ꪹꪉꪷꪙ||␣||
+ꪹꪉꪷꪙ|silver, money|ŋən˥||
 ꪹꪊꪱꫂ||␣
 ꪹꪊꪸꪒ||␣
 ꪹꪊ꫁ꪱ||␣
-ꪹꪋꪷ||␣
+ꪹꪋꪷ|time, o'clock|t͡ɕəː˥|ꞌchớ
 ꪹꪎ|tiger|›§sia¹
 ꪹꪎ꫁||␣
 ꪹꪎꫂ||␣
@@ -266,20 +270,20 @@ autoExpandExamples.blt = `
 ꪹꪬꪷꪉ|long|›§hə§ŋ¹
 ꪹꪬꪸꪙ||␣
 ꪹꪬ꪿||␣||
-ꪹꪭ||␣||
-ꪻꪊ||␣
+ꪹꪭ|boat|hɨə̯˥|ꞌhứa|
+ꪻꪊ|heart, feeling|t͡ɕaɰ˨|chaư
 ꪻꪋ꫁||␣
 ꪻꪐ꪿|large, big|›§ɲaɰ˦˥|nháư||ɲəw²
 ꪻꪐꫀ||␣
 ꪻꪚ||␣||
 ꪻꪚꪼꪣ꫁|leaf|›§baɰ˨.§›§maj˧˩ˀ
-ꪻꪚꪼꪣꫂ||␣
+ꪻꪚꪼꪣꫂ|leaf|›§baɰ˨.§›§maj˧˩ˀ
 ꪼꪀ꪿|chicken|›§kaj˦˥|cáy||tone2
 ꪼꪀꫀ||␣
 ꪼꪅ꫁||␣||
 ꪼꪒ꫁|to attain|›§daj³
 ꪼꪕ||␣
-ꪼꪕꪒꪾ|Tai Dam|›§taj§dam
+ꪼꪕꪒꪾ|Tai Dam|›§taj˥.§dam˨|ꞌTáy Đăm
 ꪼꪜ||␣
 ꪼꪡ||␣
 ꪼꪡꪡ꫁ꪱ|electricity|›§faj˥.§f§aː˧˩ˀ
