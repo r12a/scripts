@@ -120,6 +120,9 @@ function addPageFeatures () {
     //for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = true
     //for (i=0;i<summaryNodes.length;i++) if (summaryNodes[i].parentNode.parentNode.id !== 'page') summaryNodes[i].open = true
     for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = false
+    
+    // lighten colour of any tone letters in examples
+    wrapToneLettersInBdi()
     }
 
 
@@ -3273,7 +3276,7 @@ function showCharDetailsForSummary (evt) {
 
 function showCharDetailsEvent (evt) {
     // opens a panel to display character notes details
-    
+    console.log('showCharDetailsEvent ('+evt+')')
 	//if (evt.target.closest('.noexpansion')) return
     
 	if (typeof charDetails === 'undefined') return
@@ -3305,7 +3308,7 @@ function showCharDetailsEvent (evt) {
     
     // clear any existing detailsTable
 	if (detailsTable !== null) detailsTable.parentNode.removeChild(detailsTable)
-	
+	console.log('hello')
     // make a new detailsTable
 	var detailsTable = document.createElement('table')
 	detailsTable.className = 'charDetails'
@@ -3313,10 +3316,13 @@ function showCharDetailsEvent (evt) {
     
 	evt.target.parentNode.parentNode.parentNode.appendChild(detailsTable)
 	
+    console.log(evt.target.parentNode.parentNode.parentNode)
+    
 	expandCharMarkup()
 	addExamples(evt.target.lang)
 	convertTranscriptionData(evt.target)
 	setFootnoteRefs()
+    wrapToneLettersInBdi()
     var links = detailsTable.querySelectorAll('.codepoint a, .codepoint code')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
     initialiseShowNames(detailsTable, window.blockDirectoryName, 'c')
@@ -3325,6 +3331,7 @@ function showCharDetailsEvent (evt) {
     var ipaNodes = document.querySelectorAll(".ipa")
     console.log('ipaNodes',ipaNodes.length)
     for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+    
     }
 
 
@@ -5247,6 +5254,27 @@ function copyCharToClipboard (textToCopy) {
 function showMenuText () {} // dummies so we can use the same code as for pickers
 function hideMenuText () {}
 
+
+
+
+
+function wrapToneLettersInBdi() {
+    // Select all elements with class "ipa"
+    const ipaElements = document.querySelectorAll('.ipa')
+
+    // Regex for one or more tone letter characters or glottal superscript
+    const toneSeq = /[\u02E5-\u02E9\u02C0]+/g
+
+    ipaElements.forEach(el => {
+        // If this element already contains a <bdi>, skip it entirely
+        if (el.querySelector('bdi')) return
+
+        // Replace each sequence with a <bdi> wrapper
+        el.innerHTML = el.innerHTML.replace(toneSeq, match => {
+            return `<bdi>${match}</bdi>`
+            })
+        })
+    }
 
 
 

@@ -741,7 +741,7 @@ function closeArticle (node) {
 
 function showCharDetailsInPanel (evt) {
 	var lang, chars, insetPoint, panel, table, ipaNodes
-    //console.log(`showCharDetailsInPanel (${evt })`)
+    console.log(`showCharDetailsInPanel (${evt }) (in egcode.js)`)
     
 	if (typeof charDetails === 'undefined') return
 
@@ -796,6 +796,7 @@ function showCharDetailsInPanel (evt) {
 	expandCharMarkup()
 	addExamples(lang)
 	//convertTranscriptionData(evt.target)
+    wrapToneLettersInBdi()
 	setFootnoteRefs()
     var links = table.querySelectorAll('.codepoint a, .codepoint code')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
