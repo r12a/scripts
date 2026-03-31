@@ -1445,6 +1445,16 @@ autoExpandExamples.ps = `
 نور ولولئ|read more
 
 
+@ Daniels, p751
+انځر|fig|ind͡zər|
+اينځر|fig|ind͡zər|
+دِ|your|de
+دې|your|de
+ګل|flower|ɡul
+ګول|flower|ɡul
+
+
+
 @ unknown
 
 پښتوالفبې|Pashto alphabet||pəx̌tó alfbâye
