@@ -319,6 +319,7 @@ else out += `
 `
 */
 
+document.querySelector('.refLine').closest('details').style.display = 'none'
 
 out += `
 
@@ -326,6 +327,18 @@ out += `
 
 
         <div id="about">
+
+
+
+<p class="instructions">Click on <span style="color:chocolate; font-weight:bold;">coloured</span> characters or <span style="color:teal; font-size:80%;">CHARACTER NAMES</span> for detailed information and examples of use. Click on <span style="color:chocolate; font-weight:bold;">coloured text</span> to see its composition. Click on /ipa/ text for a description of sounds.</p>
+
+
+
+<details>
+<summary class="instructions">Referencing this document</summary>
+<p class="refLine">${ document.querySelector('.refLine').innerHTML }</p>
+</details>
+
 
         <details class="supportdocs noprint">
         <summary class="instructions">Conventions and features for this page</a></summary>
@@ -378,7 +391,6 @@ if (window.location.href.includes('block')) out += `
 
 out += `
         </details>
-
         </div>
         
         
