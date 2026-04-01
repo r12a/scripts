@@ -16,7 +16,26 @@ access = {
 
 function addPageFeatures () {
      //console.log('Globals(','blockDirectoryName:',window.blockDirectoryName, 'langTag:',window.langTag, 'scriptSummaryTableName:',window.scriptSummaryTableName, 'orthogFilePath:',window.orthogFilePath,')')
-     
+    
+    
+    
+    // add invisible headings to basicV and consonantSummary
+    const vsection = document.getElementById("basicV")
+    if (vsection) {
+        let heading = document.createElement('h3')
+        heading.textContent = 'Vowel summary table'
+        vsection.prepend(heading)
+        }
+
+    csection = document.getElementById("consonantSummary")
+    if (csection) {
+        let heading = document.createElement('h3')
+        heading.textContent = 'Consonant summary table'
+        csection.prepend(heading)
+        }
+
+
+
      addUsageHistory()
 
     //set accessibility defaults
@@ -123,6 +142,10 @@ function addPageFeatures () {
     
     // lighten colour of any tone letters in examples
     wrapToneLettersInBdi()
+    
+    
+
+
     }
 
 
@@ -4460,11 +4483,13 @@ function makeCharDataObj () {
 
 
 function copyIntroInfo () {
-    // console.log('copyIntroInfo()\n\tCopy paragraphs from the brief summary to the top of various sections')
+    //console.log('copyIntroInfo()\n\tCopy paragraphs from the brief summary to the top of various sections')
     
     basicFeatures = document.getElementById('type')
     if (!basicFeatures) return
-    
+
+  
+
     // do the vowels
     if (document.getElementById('vowel_description')) {
         const target = document.getElementById("vowel_description")
