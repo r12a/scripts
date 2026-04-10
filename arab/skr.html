@@ -58,7 +58,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->26 March, 2026<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->2 April, 2026<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -76,7 +76,7 @@
 
 <details>
 <summary class="instructions">Referencing this document</summary>
-<p class="refLine"><small>Richard Ishida, Arabic (Saraiki) orthography notes, <!-- #BeginDate format:En2 -->26-Mar-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/skr">https://r12a.github.io/scripts/arab/skr</a></small></p>
+<p class="refLine"><small>Richard Ishida, Arabic (Saraiki) orthography notes, <!-- #BeginDate format:En2 -->02-Apr-2026<!-- #EndDate -->, <a href="https://r12a.github.io/scripts/arab/skr">https://r12a.github.io/scripts/arab/skr</a></small></p>
 </details>
 
 <p id="usage"></p>
@@ -190,7 +190,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p><span class="leadin">Layout</span> Saraiki text runs <a class="seclink" href="#direction">right-to-left</a> in horizontal lines, but numbers and embedded Latin text are read left-to-right. Words are  separated by spaces.  There is no case distinction.</p>
 <p>Saraiki is  written using the nasta'liq style of Arabic writing. Glyphs are more drawn out,  the baseline tends to be sloping from word to word,  and there are significant extensions of ascenders and descenders. The nastaliq styling tends to reduce clarity about where one letter ends and the next starts. (The dots and other diacritics associated with letters become particularly useful for the reader.)</p>
 
-<p>The script is <a class="seclink" href="#cursive">cursive</a>, and some basic letter shapes change radically, depending on what they join to. It is also very common for adjacent characters to ligate and to stretch to fill available space. Many of the characters share a common base form, and are distinguished by the number and location of dots or other small diacritics, called <span class="foreigntext"><span class="trans"><a class="termref" href="../glossary/index.html#ijam">i'jam</a></span></span>. For example, <bdi class="ex" lang="ar">س ‎ش ‎ݜ ‎ ݰ ‎ݽ ‎ݾ ‎ڛ ‎ښ ‎ڜ ‎ۺ</bdi>.</p>
+<p>The script is <a class="seclink" href="#cursive">cursive</a>, and some basic letter shapes change radically, depending on what they join to. It is also very common for adjacent characters to ligate and to stretch to fill available space.</p>
 
 <p><a class="seclink" href="#inline">Punctuation</a> is a mixture of ASCII and local forms.</p>
 
@@ -225,8 +225,29 @@ However, if the previous character joins only to the right, they will use isolat
 
 <p>In all this contextual glyph shaping the basic shapes used for a character can vary significantly in a script like Arabic. This also includes some characters that only have <span class="name">ijam</span> dots in certain contexts.</p>
 </section>
+
+
+
+
+
+<section id="ijam">
+<h3 style="margin-inline:0;">Ijam &amp; tashkil</h3>
+
+<p>Many Arabic characters share a common base form, and are distinguished by the number and location of dots or other small diacritics, called <span class="foreigntext"><span class="trans"><a class="termref" href="../glossary/index.html#ijam">i'jam</a></span></span>.</p>
+
+
+<figure id="fig_ijam">
+<img src="images/fig_ijam.jpg" alt="س ش ݜ  ݰ ݽ ݾ ڛ ښ ڜ ۺ" style="width:30em;">
+<figcaption>A variety of characters, from various orthographies, that differ only by the ijam associated with the basic shape.</figcaption>
+</figure>
+
+<p>An <span class="name">ijam</span> is a diacritic in the Arabic script that is considered to be an integral part of a basic letter form. Unicode encodes letter+<span class="name">ijam</span> combinations as <strong>atomic characters</strong>, which are never given equivalent decompositions in the standard.</p>
+
+<p>Other diacritics in the Arabic script mark indicate vocalization of text or other types of phonetic guide that indicate pronunciation.  These are referred to as <span class="name"><a href="../glossary/index.html#tashkil" class="termref" target="terms">tashkil</a></span>, and a basic Arabic letter plus any of these types of marks is never encoded as an atomic, precomposed character, but must always be represented as a <strong>sequence</strong> of letter plus a separate combining mark.</p>
+
+<p>For more information, see <a href="homographs.html">Arabic script homographs</a>.</p>
 </section>
-   
+</section>   
     
       
 
@@ -943,7 +964,7 @@ However, if the previous character joins only to the right, they will use isolat
 </tbody>
 </table>
 
-<p class="instructions highlight">Vowel diacritics are  shown in this table; in normal text these diacritics do not appear. The hyphens on the IPA show whether this is an initial (-x), medial (-x-), or final (x-) form. It's not clear how to represent the sound <span class="ipa">ɛ</span>.</p>
+<p class="instructions highlight">Vowel diacritics are  shown in this table; in normal text these diacritics do not appear. The hyphens on the IPA show whether this is an initial (-x), medial (-x-), or final (x-) form. It's not clear how to represent the sound <span class="ipa">ɛ</span>. The glyphs shown are illustrative; alternative shapes may occur (see <a class="secref">joining_forms</a>).</p>
 
 
 <div id="vowel_description"></div>
@@ -1007,8 +1028,28 @@ However, if the previous character joins only to the right, they will use isolat
 
 <div class="egIntro">eg.</div>
 <p><span class="eg" dir="rtl" lang="skr">سر</span></p>
+<table class="sequenceTable breakdown" dir="rtl">
+<tr data-notes="sɪ,ɾ"
+    data-type="ipa,ipa,ipa,ipa,ipa,ipa,ipa,ipa"
+    data-prefix=",+,+,+,+,+,+,+,+"
+    ><td>س,ر</td></tr>
+</table>
+
 <p><span class="eg" dir="rtl" lang="skr">ککڑ</span></p>
+<table class="sequenceTable breakdown" dir="rtl">
+<tr data-notes="kʊk,kʊ,ɽ"
+    data-type="ipa,ipa,ipa,ipa,ipa,ipa,ipa,ipa"
+    data-prefix=",+,+,+,+,+,+,+,+"
+    ><td>ک,ک,ڑ</td></tr>
+</table>
+
 <p><span class="eg" dir="rtl" lang="skr">تپ</span></p>
+<table class="sequenceTable breakdown" dir="rtl">
+<tr data-notes="t̪ə,p"
+    data-type="ipa,ipa,ipa,ipa,ipa,ipa,ipa,ipa"
+    data-prefix=",+,+,+,+,+,+,+,+"
+    ><td>ت,پ</td></tr>
+</table>
 
 </section>
 
@@ -2378,7 +2419,7 @@ However, if the previous character joins only to the right, they will use isolat
 <h2>Numbers</h2>
 
 
-
+<aside class="sectionAside"></aside>
 
 
 <section id="digits">
