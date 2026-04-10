@@ -5,6 +5,8 @@ if (typeof traceSet === 'undefined') traceSet = new Set([])
 // GLOBALS   -  see also the manifest file under /shared
 var index = {}  // holds information needed to build index; used by makeIndexObject, makeMarkupForSection
 
+//window.addEventListener('DOMContentLoaded', includeHTML)
+//window.addEventListener('onload', createtoc(3))
 
 
 // set accessibility defaults
@@ -18,6 +20,9 @@ function addPageFeatures () {
      //console.log('Globals(','blockDirectoryName:',window.blockDirectoryName, 'langTag:',window.langTag, 'scriptSummaryTableName:',window.scriptSummaryTableName, 'orthogFilePath:',window.orthogFilePath,')')
     
     
+    // pull in any shared HTML code
+    //includeHTML()
+    
     
     // add invisible headings to basicV and consonantSummary
     const vsection = document.getElementById("basicV")
@@ -27,7 +32,7 @@ function addPageFeatures () {
         vsection.prepend(heading)
         }
 
-    csection = document.getElementById("consonantSummary")
+    const csection = document.getElementById("consonantSummary")
     if (csection) {
         let heading = document.createElement('h3')
         heading.textContent = 'Consonant summary table'
@@ -4506,7 +4511,7 @@ function copyIntroInfo () {
             }
 
 
-        out = `<section id="vowel_summary">`
+        out = `<section id="vowel_text_summary">`
         out += `<h3>Summary</h3>`
 
         var paras = basicFeatures.querySelectorAll('.addToVowels')
@@ -4534,7 +4539,7 @@ function copyIntroInfo () {
             target.before(p)
             }
 
-        out = `<section id="consonant_summary">`
+        out = `<section id="consonant_text_summary">`
         out += `<h3>Summary</h3>`
 
         var paras = basicFeatures.querySelectorAll('.addToConsonants')
@@ -5354,4 +5359,85 @@ function showUpperCaseRows () {
     }
 
 
+
+
+function includeHTMLX() {
+    // pull external HTML into a location with a data-include attribute
+    // the attribute points to the file with the HTML to be included
+    
+  document.querySelectorAll('[data-include]').forEach(el => {
+    const file = el.getAttribute('data-include')
+    fetch(file)
+      .then(response => {
+        if (!response.ok) throw new Error(`Include not found: ${file}`)
+        return response.text()
+      })
+      .then(html => {
+        el.innerHTML = html
+      })
+      .catch(err => {
+        el.innerHTML = `<p style="color:red;">${err.message}</p>`
+      })
+  })
+}
+
+
+
+function includeHTMLX() {
+  document.querySelectorAll('[data-include]').forEach(el => {
+    const file = el.getAttribute('data-include');
+
+    fetch(file, { mode: 'no-cors' })
+      .then(response => response.text())
+      .then(html => el.innerHTML = html)
+      .catch(err => {
+        console.warn('Include failed:', file, err);
+      })
+  })
+}
+
+
+
+
+function includeHTMLX() {
+    // pull external HTML into a location with a data-include attribute
+    // the attribute points to the file with the HTML to be included
+    // uses XMLHttpRequest instead of fetch, so that local files work
+    
+  document.querySelectorAll('[data-include]').forEach(el => {
+    const file = el.getAttribute('data-include')
+    const xhr = new XMLHttpRequest()
+
+    xhr.onload = () => {
+      el.innerHTML = xhr.responseText
+      }
+
+    xhr.onerror = () => {
+      console.warn('Include failed:', file)
+      }
+
+    xhr.open('GET', file, true)
+    xhr.send()
+    })
+  }
+
+
+
+
+function includeHTML() {
+  document.querySelectorAll('[data-include]').forEach((el, i) => {
+    const file = el.getAttribute('data-include');
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = file;
+
+    iframe.addEventListener('load', () => {
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      el.innerHTML = doc.body.innerHTML;
+      iframe.remove(); // clean up
+    });
+
+    document.body.appendChild(iframe);
+  });
+}
 
