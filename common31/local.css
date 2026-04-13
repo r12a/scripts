@@ -232,10 +232,10 @@ rb {
 
 section { clear: left; }
 
-.ipa    { cursor: pointer; }
+.ipa, .phoneme    { cursor: pointer; }
 .ipa.large { font-size: 1.6em; white-space: nowrap; }
 .trans.large { font-size: 1.6em; white-space: nowrap; }
-.ipa, .listIPA { 
+.ipa, .phoneme, .listIPA { 
 	font-family: ExtendedLatinWF, doulosipa,"Gentium Plus", "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica", sans-serif; 
 	font-size: 110%;
     /*font-style: italic;*/
@@ -255,6 +255,8 @@ section { clear: left; }
     background: chocolate;
     color: white;
     }
+
+/* IPA WITH CORNER BRACKETS */
 /*.ipa:before { 
 	content: '⌈'; 
 	font-family: ExtendedLatinWF, "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif; 
@@ -269,20 +271,39 @@ section { clear: left; }
 	margin-left: 1.5px;  
 	color: #aaa; 
 	}*/
-.ipa:before { 
+
+/* IPA WITH PHONEMIC BRACKETS */
+.phoneme:before { 
 	content: '/'; 
 	font-family: ExtendedLatinWF; 
 	margin-right: 0px; 
 	margin-left: 0.2em; 
 	color: #ccc; 
 	}
-.ipa:after { 
+.phoneme:after { 
 	content: '/'; 
 	font-family: ExtendedLatinWF; 
 	margin-right: 0.2em; 
 	margin-left: 0px;  
 	color: #ccc; 
 	}
+
+/* IPA WITH PHONETIC BRACKETS */
+.ipa:before { 
+	content: '[\00A0'; 
+	font-family: ExtendedLatinWF; 
+	margin-right: 0px; 
+	margin-left: 0.2em; 
+	color: #ccc; 
+	}
+.ipa:after { 
+	content: '\00A0]'; 
+	font-family: ExtendedLatinWF; 
+	margin-right: 0.2em; 
+	margin-left: 0px;  
+	color: #ccc; 
+	}
+
 .ipa.narrow:before { 
 	content: '['; 
 	font-family: ExtendedLatinWF; 
@@ -3025,7 +3046,7 @@ table.sequenceTable {
 
 
 
-.ipa bdi { color: #bbb; } /* for tone letters */
+.ipa bdi, .phoneme bdi { color: #bbb; } /* for tone letters */
 
 
 
@@ -3093,7 +3114,19 @@ table.sequenceTable {
     }
 
 
-
+/* For more information see ... */
+.xref {
+    width: 30%;
+    float: inline-end;
+    font-size: 90%;
+    line-height: 1.4;
+    }
+.xref p {
+    margin-inline: 3rem;
+    margin-block: .5rem;
+    text-align: start;
+    font-style: italic;
+    }
 
 
 

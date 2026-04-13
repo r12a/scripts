@@ -128,7 +128,7 @@ function addPageFeatures () {
     
     
     // set event trigger on all .ipa elements - opens description box on click
-    var ipaNodes = document.querySelectorAll(".ipa, .listIPA, .allophone")
+    var ipaNodes = document.querySelectorAll(".ipa, .listIPA, .allophone, .phoneme")
     for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
 
     // set event listener on TOC links to close the TOC
