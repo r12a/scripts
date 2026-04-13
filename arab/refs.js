@@ -669,6 +669,16 @@ reflist = {
 },
 
 
+"ipa": {
+"authors": "International Phonetic Association",
+"title":"Handbook of the IPA",
+"date": "1999",
+"url":"https://ia801006.us.archive.org/6/items/intonation-practice/Handbook_of_the_IPA.pdf",
+"lang": new Set(['ha']),
+"reviewed":false
+},
+
+
 }
 
 /*

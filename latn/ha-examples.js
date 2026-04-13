@@ -2179,6 +2179,64 @@ Harshe Hausa|Hausa language|h§á§ɽ.§ʃ§‹§è§ §h§á§u.§s§á|
 
 
 
+@ IPA Handbook
+sanho|basket|sə§ŋ.§h§o:˩
+sanƙo|baldness|s§ə§ŋ.§kʼ§o:
+kanwa|potash|k§ə§ŋ§w§a:
+wannan|this one|w§ə§n§n§ə§ŋ˩
+mutum|person|m§ʊ˩.§t§ʊ˥˩§ŋ
+aya|Koranic verse|ʔa:§j§a:˩
+kora|ringworm|kʷ§o:.§ɽ§a:
+kishi|jealousy|kʲ§i:§ʃ§i:˩
+goro|kola nut|ɡʷ§o:§r§oʔ˩
+bara|last year|b§a:˩.§ɽ§a
+bara|to peel|ɓ§a:.§ɽ§a:˩
+mara|belly|m§a:.§ɽ§a:˩
+fara|to begin|ɸ§a:.§ɽ§a:˩
+wara|to pick out|w§a:§ɽ§a:˩
+tara|to gather|t§a:.§ɽ§a:˩
+dara|to laugh|d§a:.§ɽ§a:˩
+tsʼara|to arrange|t͡sʼ§‹§‹§a:.§ɽ§a:˩
+ɗana|to measure|ɗ§a:.§n§a:˩
+nama|meat|n§a:.§m§a:˩
+sara|to excavate|s§a:.§ɽ§a:˩
+zana|to draw|z§a:.§n§a:˩
+rada|to flog|r§a:.§ɗ§a:˩
+rana|sun|ɽ§a:.§n§a:
+laka|mud|l§a:.§k§a:
+cara|crowing|t͡ʃ§a:.§ɽ§a:
+jari|assets|d͡ʒ§a:.§r§i:˩
+tshʼada|expensive|t͡ʃʼ§‹§‹§‹§‹§a:˩.§d§a:
+shara|sweeping|ʃ§‹§a:˩.§ɽ§a:
+ʼyaʼya|offspring|›§jʼ§a:.§›§jʼ§a:
+ʼyaʼya|offspring|›§ʔʲ§a:.§›§ʔʲ§a:
+kara|to screen off|k§a:.§ɽ§a:˩
+gara|wedding gifts|ɡ§a:.§ɽ§a:
+ƙara|to increase|kʼ§a:.§ɽ§a:˩
+kyawu|goodness|k§ʲ§a:.§w§u:˩
+gyara|to repair|ɡ§ʲ§a:.§ɽ§a:˩
+ƙyara|grass|kʲʼ§‹§a:.§ɽ§a:
+kwara|too pour much|k§ʷ§a:.§ɽ§a:˩
+gwano|stink ant|ɡ§ʷ§a:˩.§n§o:
+ƙwara|shea nuts|kʷʼ§‹§a:.§ɽ§a:˩
+saʼa|time|s§a:.§ʔ§a:˩
+haja|goods|h§a:.§d͡ʒ§a:˩
+fi|to exceed|ɸ§i
+bara|begging|b§ə.§r§a:˩
+bara|servant|b§ə.§ɽ§a:˩
+ya rarrabke shi|he flogged him|j§a:§ §r§ə§r§r§ə˩§b§k§e:§ §ʃ§i
+sharrare|swept|ʃ§‹§a:˩.§r§ə§ɽ.§ɽ§e:
+
+ƙira|forging|kʲ§i:.§ɽ§a:˩
+ƙera|to forge|kʲ§e:.§ɽ§a:˩
+ƙara|to increase|kʼ§a:§ɽ§a:˩
+kora|to chase|kʷ§o:.§r§a:˩
+kura|dust|kʷ§u:˩.§ɽ§a:
+kira|calling|kʲ§i.§ɽ§a:˩
+tare|together|t§a:˩.§ɽ§e
+kara|stalk|k§a.§ɽ§a:
+ƙura|to stare|kʷʼ§u.§ɽ§a:˩
+
 
 
 
