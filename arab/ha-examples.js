@@ -86,8 +86,13 @@ autoExpandExamples.ha = `
 
 
 
-
-
+@ unicode proposal
+ࣃُودَ||| ɡwada|
+ࣃُمْࢽَ|governer|ɡʷa§m.˥§naː˩|gwamna|
+ࣄُورَیْ|||ƙwarai|
+ࣄُثٜىٰ|||ƙwace|
+ࣄُیَا|||ƙyuya|
+ࣄَالّٜىٰ|||ƙyalle|
 
 
 
