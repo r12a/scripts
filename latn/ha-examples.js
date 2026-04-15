@@ -1904,6 +1904,7 @@ usur|whistle|ʔú.§s§ù§r
 uwa|mother|ʔú.§w§áː
 uzuri|excuse|ʔú.§z§ù.§r§íː
 uƙuba|misery, anguish|ʔù.§kʼ§úː.§b§àː
+uƙuba|misery, anguish|ʔu˩.§kʼ§uː˥.§b§aː˩
 wa'adi||␣||
 wa'azi||␣||
 wada||␣

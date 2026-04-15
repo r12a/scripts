@@ -210,6 +210,14 @@ reflist = {
 },
 
 
+"whl": {
+"authors": "Wikipedia",
+"title":"Hausa language",
+"url":"https://en.wikipedia.org/wiki/Hausa_language",
+"lang": new Set(['ha']),
+},
+
+
 "wmt": {
 "authors": "W. M. Thackston",
 "title":"Kurmanji Kurdish",
@@ -270,6 +278,16 @@ reflist = {
 "reviewed":false
 },
 
+
+
+"ipa": {
+"authors": "International Phonetic Association",
+"title":"Handbook of the IPA",
+"date": "1999",
+"url":"https://ia801006.us.archive.org/6/items/intonation-practice/Handbook_of_the_IPA.pdf",
+"lang": new Set(['ha']),
+"reviewed":false
+},
 
 
 
