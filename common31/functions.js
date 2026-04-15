@@ -3,7 +3,8 @@ if (typeof traceSet === 'undefined') traceSet = new Set([])
 
 
 // GLOBALS   -  see also the manifest file under /shared
-var index = {}  // holds information needed to build index; used by makeIndexObject, makeMarkupForSection
+index = {}  // holds information needed to build index; used by makeIndexObject, makeMarkupForSection
+window.spreadsheetRows = {}
 
 //window.addEventListener('DOMContentLoaded', includeHTML)
 //window.addEventListener('onload', createtoc(3))
@@ -40,8 +41,9 @@ function addPageFeatures () {
         }
 
 
-
+    // create the right column aside for script origins
      addUsageHistory()
+
 
     //set accessibility defaults
     if (localStorage['docsAccess']) access = JSON.parse(localStorage['docsAccess']) 
@@ -61,12 +63,33 @@ function addPageFeatures () {
     document.getElementById('accessFontsize').value = access.fontsize
     //console.log(access.fontsize,document.getElementById('accessFontsize').value)
 
+
 	doHeadersFooters(window.orthogFilePath) // links at page top/bottom
     
     makeIndexIntro(document.getElementById('index_intro')) // write page intro
     
+    
+    // create the spreadsheetRows global variable
+    if (typeof window.spreadsheet !== 'undefined') {
+        const temp = window.spreadsheet.split('\n')
+        spreadsheet = ''
+        for (var x=0; x<temp.length; x++) {
+            if (temp[x].trim() == '') continue
+            var items = temp[x].split('\t')
+            if (items[0] === '') continue
+
+            window.spreadsheetRows[items[0]] = ['0']
+            for (let i=1;i<items.length;i++) window.spreadsheetRows[items[0]].push(items[i])
+            }
+        //console.log(spreadsheetRows) 
+		}
+    else alert("Spreadsheet undefined. [makeTables]")
+
+    
+    
     makeTables(langTag)  // Create the lists of characterBoxes
-    makeSequenceTables()
+    
+    makeSequenceTables() // Converts simple markup for breakdown tables full tables
 
     expandCharMarkup() // Expand spans with ch classes to full character markup
     
@@ -2188,27 +2211,7 @@ function makeSidePanel () {
 function makeTables (lang) {
     // console.log('makeTables(',lang,') Create the lists of characters in yellow, etc. boxes')
 
-    if (typeof window.spreadsheet == 'undefined') {
-		console.error("Spreadsheet undefined.")
-		return
-		}
-    
-    // make an object from the spreadsheet
-    var temp = window.spreadsheet.split('\n')
-    spreadsheet = ''
-    window.spreadsheetRows = {}
-    for (var x=0; x<temp.length; x++) {
-        if (temp[x].trim() == '') continue
-        var items = temp[x].split('\t')
-        if (items[0] === '') continue
-
-        window.spreadsheetRows[items[0]] = ['0']
-        for (let i=1;i<items.length;i++) window.spreadsheetRows[items[0]].push(items[i])
-        }
-    //console.log(spreadsheetRows) 
-
-
-    var tables, node, chars, info, showLast, out, char, indexline
+    let tables, node, chars, info, showLast, out, char, indexline
     
     tables = document.querySelectorAll('.auto')
 
@@ -2257,9 +2260,12 @@ function replaceStuff (node) {  // Copilot optimised
   const ds = node.dataset || {}
 
   // Context detection: where the rendered list appears (affects order)
-  const context = node.closest('.soundSummary') ? 'soundSummary'
-    : node.closest('.sectionCharacterList') ? 'sectionCharacterList'
-    : null
+  // if inside a soundSummary section, the IPA goes above
+  // if data-ipaPosn=top, IPA goes above
+    if (node.hasAttribute('data-ipaAbove'))  context = 'soundSummary'
+    else if (node.closest('.soundSummary')) context = 'soundSummary'
+    else if (node.closest('.sectionCharacterList')) context = 'sectionCharacterList'
+    else context = null
 
   // Index line detection
   const indexline = hasClass(node, 'indexline')
@@ -2286,6 +2292,7 @@ function replaceStuff (node) {  // Copilot optimised
   const showLast = ds.select === 'last'
   const showFirst = !showLast && !!ds.select
   const ipaplusClass = hasClass(node, 'ipaplus')
+  const showComponents = hasClass(node, 'showComponents')
 
   // Parse datasets into arrays where applicable (preserve index alignment)
   const notes = (ds.notes ? ds.notes.split(',') : [])
@@ -2329,16 +2336,24 @@ function replaceStuff (node) {  // Copilot optimised
   // Start composing output
   let out = ''
 
+  out += `<div class="listAllOptions" style="">`
   // Summary / listAll block: count visible items (ignore plain spaces)
   const visibleCount = chars.reduce((acc, x) => acc + (x === ' ' ? 0 : 1), 0)
-  out += `<div class="listAll" onClick="listAll(this, '${ window.langTag }')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>`
+  out += `<div class="listAll" onClick="listAllCL(this, '${ window.langTag }')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>`
   out += (visibleCount === 2) ? 'both' : (visibleCount > 2 ? visibleCount : '')
   out += `</div>`
 
   // Expansion control if allowed
   if (!noexpansion) {
-    out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; margin-inline-end:1rem;"></div>`
+    out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; /*margin-inline-end:1rem;*/"></div>`
     }
+
+  // Show unique components
+  if (showComponents) {
+    out += `<div class="listAll" onclick="listAllCL(this, '${ window.langTag }', 'unique')" title="Show all unique items in this list."><span style="cursor:pointer; font-size:1.2em; color: chocolate;">#</span> ${ countUniqueChars(chars) }</div>`
+    }
+
+  out += `</div>` // ends listAllOptions
 
   // listArray container
   out += `<div class="listArray">`
@@ -2464,6 +2479,344 @@ function replaceStuff (node) {  // Copilot optimised
   out += `</div>`
   node.innerHTML = out
   }
+
+
+function countUniqueChars(chars) {
+  // Flatten the array into a single string
+  const combined = chars.join('')
+
+  // Extract unique characters
+  const unique = [...new Set(combined)]
+
+  // Unicode combining marks: \p{M}
+  const combiningMark = /\p{M}/u
+
+  // Prefix combining marks with U+25CC
+  const processed = unique.map(ch =>
+    combiningMark.test(ch) ? '\u25CC' + ch : ch
+  )
+
+  // Return comma-separated string
+  return processed.length
+  }
+
+
+
+/*function getUniqueChars(chars) {
+  // Flatten the array into a single string
+  const combined = chars.join('');
+
+  // Extract unique characters
+  const unique = [...new Set(combined)];
+
+  // Unicode combining marks: \p{M}
+  const combiningMark = /\p{M}/u;
+
+  // Prefix combining marks with U+25CC
+  const processed = unique.map(ch =>
+    combiningMark.test(ch) ? '\u25CC' + ch : ch
+  );
+
+  // Return comma-separated string
+  return processed.join(', ');
+}
+
+
+
+function showUniqueCharsPopover(uniqueCharsString) {
+  // Count items by splitting on commas
+  const count = uniqueCharsString
+    ? uniqueCharsString.split(',').length
+    : 0;
+
+  let html = `
+    <strong>${count} unique characters</strong><br>
+  `;
+  
+  const chars = uniqueCharsString.split(',')
+  for (i=0;i<chars.length;i++) {
+    html += `<span lang="ha" style="margin-inline:.5rem;">${ chars[i] }</span> `
+    }
+
+  const pop = document.getElementById('uniqueCharsPopover');
+  pop.innerHTML = html;
+  pop.showPopover();
+}
+*/
+
+
+
+
+
+
+function listAllCL (node, lang, unique) {
+    const itemlist = node.closest('figure').querySelectorAll('.listItem')
+    const ipalist = node.closest('figure').querySelectorAll('.listIPA')
+    const direction = node.closest('figure').dataset.dir ? ' dir="rtl"' : ''
+    let out = ''
+    let ipa = ''
+
+    // Build the raw string
+    for (let i = 0; i < itemlist.length; i++) {
+        out += itemlist[i].textContent + ' '
+        }
+
+    // Remove unwanted characters
+    out = out.replace(/-/g, '')
+    out = out.replace(/•/g, '')
+
+    // If 'unique' is defined, convert 'out' to a space-separated list of unique characters
+    if (unique) {
+        out = out.replace(/\u25CC/g, '')
+        const chars = [...out]                  // split into characters
+        const uniqueChars = [...new Set(chars)] // remove duplicates
+            .filter(ch => ch.trim() !== '')     // remove spaces/newlines
+
+        out = uniqueChars.join(' ')
+        }
+    else { // create a list of IPA equivalents
+        for (let i = 0; i < ipalist.length; i++) {
+            ipa += ipalist[i].textContent + '§'
+            }
+        }
+
+    showCLNameDetails(out, lang, window.blockDirectory, 'c', document.getElementById('panel'), 'list', '',ipa, direction)
+    }
+
+
+
+
+
+
+function showCLNameDetails (chars, clang, base, target, panel, list, translit, ipa, direction) {
+    console.log('showNameDetails (',chars, clang, base, target, panel, list, translit, ipa,')\n\tGet the list of characters for an example and display their names')
+    
+    // called by onclick created by shownames_setOnclick & shownames_setImgOnclick & listAll
+    // chars (string), alt text of example
+    // clang (string), lang attribute value of example img
+    // base (string), path for link to character detail
+    // target (string), name of the window to display results in, usually 'c' or ''; given the latter, link goes to same window
+    // list (string), if not null, indicates that spaces and nbsp should be ignored
+    // local out charArray chardiv charimg thename thelink hex dec blockname blockfile c
+    // global charData pickerDir
+    // calls getScriptGroup
+
+    // to show per-grapheme ipa the ipa transcriptions should have § as grapheme separator (and syllables should be separated by '.'). Unpronounced segments are represented by – (en hyphen).  Monosyllabic words don't need any extra stuff.
+    // កន្ត្រៃ|scissors|kɑː§n.§t§raj§–
+
+    // locals
+    var dir, characterList, graphemes, ptr, transcriptions, gloss, charArray
+	var chardiv, charimg, thename, thelink, hex, dec, blockname, blockfile
+
+
+	// check whether the calling page has set a base and target window: if not base, point to UniView
+	if(typeof base === 'undefined' || base === '') { base = '../../uniview/index.html?char=' }
+	if(typeof target === 'undefined') { target = 'c' }
+	if(typeof list === 'undefined') { list = null }
+	if(typeof translit === 'undefined') { translit = '' }
+	  
+	// clear and show the panel
+	panel.innerHTML = ''
+	panel.style.display = 'block'
+    dir = ''
+    if (typeof window.direction === 'string') dir = window.direction
+    else if (typeof template !== 'undefined' && typeof template.direction === 'string') dir = template.direction
+    
+    
+	let out = '<div id="ruby">'
+	
+    // get any IPA data provided - should be pre-separated for graphemes by §
+    if (typeof ipa === 'string' && ipa !== '') ipa = ipa.split('§')
+    else ipa = false
+    
+    
+	// add the example to the panel as a title
+    //characterList = [...chars]
+    graphemes = chars.split(' ')
+    /*ptr = -1
+    for (var c=0;c<characterList.length;c++) {
+        if (window.marks && window.marks.has(characterList[c]) && c !== 0) graphemes[ptr] += characterList[c]
+        else {
+            ptr++
+            graphemes[ptr] = characterList[c]
+            }
+        }*/
+
+    transcriptions = []
+    for (var t=0;t<graphemes.length;t++) {
+        transcriptions[t] = transliteratePanel(graphemes[t], clang)
+        }
+    
+    console.log('graphemes: ',graphemes)
+    console.log('transcriptions: ',transcriptions)
+    console.log('ipa: ',ipa)
+
+
+    // draw the glosses
+    iconURL = '../common30/icons/copytiny.svg'
+    gloss = '<div class="multilineGlossedText">'
+    for (t=-1;t<graphemes.length;t++) {
+        if (t===-1) {
+            gloss += `<div class="stack"><span class="rt translitGloss" lang="und-fonipa" title="Transliteration of the text."><img src="${ iconURL }" class="copyIcon" onclick="copyPanelText('.translitGloss')" title="Copy the transliteration." alt="Copy transliteration"></span><span class="rb"><img src="${ iconURL }" onclick="copyPanelText('.rb')" class="copyIcon" title="Copy the text." alt="Copy text"></span>`
+            if (ipa !== false) {
+                if (ipa[t+1]) gloss += `<span class="rt IPAGloss" lang="und-fonipa" title="IPA transcription of the text."><img class="copyIcon" src="${ iconURL }" onclick="copyPanelText('.IPAGloss')" title="Copy the IPA transcription." alt="Copy IPA"></span>`
+                else gloss += `<span class="rt">&nbsp;</span>`
+                }
+            gloss += `</div>`
+            }
+        else {
+            gloss += ` <div class="stack"><span class="rt translitGloss" lang="und-fonipa">${ transcriptions[t] }</span><span class="rb"${ direction }>${ graphemes[t] }</span>`
+            if (ipa !== false) {
+                if (ipa[t]) gloss += `<span class="rt IPAGloss" lang="und-fonipa">${ ipa[t] }</span>`
+                else gloss += `<span class="rt">&nbsp;</span>`
+                }
+            gloss += `</div>`
+            }
+        }
+    gloss += '</div>'
+
+	//out += `<div dir="${ dir }" class="ex" lang="${ clang }" id="title">${ gloss }</div>`
+    // removing the alternating direction so that IPA reads better
+	//out += `<div dir="${ window.blockDirection }" class="ex" lang="${ clang }" id="title">${ gloss }</div>`
+	out += `<div dir="ltr" class="glossContainer" lang="${ clang }" id="title">${ gloss }</div>`
+    
+        
+    
+    // add instructions line
+	out += '<p id="advice" style="line-height:1;">Glossed lines are transliteration/text/IPA.<br>Click on character names below for detailed information.</p>'
+	
+	// create a list of characters
+	if (list) chars = chars.replace(/ /g,'').replace(/\u00A0/g,'') // remove spaces if list
+    charArray = [...chars]
+    
+    if (traceSet.has('showNameDetails')) console.log('charArray: ',charArray)
+
+    out += '<div id="listOfCharacters">'
+	for (var c=0; c<charArray.length; c++) { 
+        dec = charArray[c].codePointAt(0)
+        hex = dec.toString(16)
+        while (hex.length < 4) { hex = '0'+hex }
+        hex = hex.toUpperCase()
+ 
+        //if (traceSet.has('showNameDetails')) console.log('charData: ',charData)
+        //if (traceSet.has('showNameDetails')) console.log('charArray[c]: ',charArray[c])
+
+		if (charData[charArray[c]]) {
+            blockname = getScriptGroup(dec, false)
+            blockfile = getScriptGroup(dec, true)
+            //console.log(dec,blockfile)
+            isInBlock = spreadsheetRows[charArray[c]]?true:false
+            //isInBlock = spreadsheetRows[charArray[c]]?spreadsheetRows[charArray[c]][cols['block']]:''
+
+            out += '<div class="panelCharacter">'
+			//if (blockfile) {
+			if (isInBlock) {
+				//out += `<a target="${ target }" href="`
+                // undoing this change which put characters in the list because imgs are needed in order to make the list to copy to clipboard
+                // out += `<span style="display:inline-block; font-size:1.5rem; min-width: 2rem;">${ charArray[c] }</span>`
+                
+                // copy character to clipboard
+                out += `<img title="Copy U+${ hex } ${ charData[charArray[c]] } to clipboard." onclick="copyCharToClipboard('U+${ hex } ${ charData[charArray[c]] }');" 
+                src="../../pickers/shared29/images/toprow/copytiny.svg" 
+                style="float:right; height: 1rem; border:0; border-radius:unset; margin-inline:.4em;" alt="Copy" 
+                onmouseover="showMenuText(this.title,'tan');" onmouseout="hideMenuText()">`
+                
+                // copy character name to clipboard
+                out += `<img title="Copy ${ charArray[c] } to clipboard." onclick="copyCharToClipboard('${ charArray[c] }');" 
+                src="../../pickers/shared29/images/toprow/copytiny.svg" 
+                style="float:right; height: 1rem; border:0; border-radius:unset;" alt="Copy" 
+                onmouseover="showMenuText(this.title,'tan');" onmouseout="hideMenuText()">`
+                
+                out += `<img class="pcImg" src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }" style="height:2rem;">`
+                
+                // FOR ORTHOGRAPHY NOTES
+                if (document.querySelector('.useBlockExamples')) {
+                    out += `<a href="javascript:void(0)" onclick="showCharDetailsInPanel(event)"> U+${ hex } ${ charData[charArray[c]] }</a>`
+                    }
+                
+                // FOR TERMS LISTS
+                else if (document.querySelector('.termListApp')) {
+                    out += `<a target="c" href="../../scripts/${ blockfile }/${ terms.language }-characters.html#char${ hex }"> U+${ hex } ${ charData[charArray[c]] }</a>`
+                    console.log('blockfile',terms.language )
+                    }
+
+                // FOR PICKERS
+                /*else if (location.toString().includes('picker')) {
+                    out += `<a target="c" href="../../scripts/${ blockfile }/${ factoryDefaults.language }-characters.html#char${ hex }"> U+${ hex } ${ charData[charArray[c]] }</a>`
+                    console.log('blockfile',factoryDefaults.language )
+                    }*/
+
+                else if (location.toString().includes('picker')) {
+                    out += `<a href="javascript:void(0);"
+                        onclick="
+                            document.getElementById('notesDisplayIframe').style.display = 'block'; 
+                            document.getElementById('notesDisplayIframe').src = '../../scripts/${ blockfile }/character.html?q=${ charArray[c] }&amp;showX#${ factoryDefaults.language }';
+                            "
+                        > U+${ hex } ${ charData[charArray[c]] }</a>`
+                    console.log('blockfile',factoryDefaults.language )
+                    }
+
+                else {
+                    out += `<a target="c" href="`
+                    //if (base === '../../uniview/index.html?char=') out += base+hex
+                    //else out += '../../scripts/'+blockfile+'/block.html#char'+hex useBlockExamples
+                    out += '../../scripts/'+blockfile+'/block.html#char'+hex
+                    out += '">'
+                    //out += '<img src="'+'../../c/'+blockname+"/"+hex+'.png'+'" alt="'+charArray[c]+'">'
+                    out += ' U+'+hex + ' '+charData[charArray[c]]
+                    out += '</a>\n'
+                    }
+				}
+			else {
+				out += '<img src="'+'../../c/'+blockname+"/large/"+hex+'.png'+'" alt="'+charArray[c]+'" style="height:2rem;">'
+				out += ' U+'+hex+' '+charData[charArray[c]]+'\n'
+				}
+			}
+		else {
+			//out += `<a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/Basic_Latin/005F.png" alt="U+${ hex }"> U+${ hex } No data for this character</a>`
+			out += `<div class="panelCharacter"><a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }"> U+${ hex } No data for this character</a></div>`
+			}
+		out += '</div>'
+		}
+	out += '</div>'
+	
+    
+	// write out the bottom line
+	out += '<p style="text-align:left; margin-block-start: 1em; line-height:2rem;" id="panelSharingLine">'
+    //out += '<button onclick="document.getElementById(\'panelShare\').style.display=\'block\'">Export</button> \u00A0 '
+    out += '<button onclick="copyPanelList()" style="cursor:copy;">Copy list</button> \u00A0 '
+	
+    out += `<button onclick="openExportWindow('../../app-analysestring/index.html?chars=${ chars }')">Details</button> \u00A0 `
+	
+    out += `<button onclick="openExportWindow('../../uniview/index.html?charlist=${ chars }')">UniView</button> \u00A0 `
+	
+    out += `<button onclick="openExportWindow('../../scripts/apps/graphemes/index.html?gc=${ chars }')">Graphemes</button> \u00A0 `
+	
+    if (window.pickerDir) {
+        out += `<button onclick="openExportWindow('../../pickers/${ window.pickerDir }/index.html?text=${ chars }')">Character App</button> \u00A0 `
+	   }
+
+    // add a link to the _vocab page
+    if (typeof window.languageName === 'undefined') var fragid = ''
+    else fragid = '#'+window.languageName
+
+    // figure out where to find the url for the _vocab page
+    var url
+    if (typeof template !== 'undefined' && typeof template.vocablocation === 'string')  url = `../../scripts/${ template.vocablocation }.html`
+    
+    else url = `${ window.langTag }_vocab`
+    
+    if (typeof window.removeVowels === 'function') chars = removeVowels(chars)
+
+    out += `<button onclick="openExportWindow('${ url }?q=${ chars }')">Terms</button> \u00A0 `
+	
+	
+	// add a close button
+	out += '<p id="character_panel_close_button" '
+	out += ' onclick="document.getElementById(\'panel\').style.display = \'none\'"'
+	out += '>X</p>'
+	panel.innerHTML = out
+	}
 
 
 
