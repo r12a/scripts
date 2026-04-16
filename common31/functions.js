@@ -2292,7 +2292,7 @@ function replaceStuff (node) {  // Copilot optimised
   const showLast = ds.select === 'last'
   const showFirst = !showLast && !!ds.select
   const ipaplusClass = hasClass(node, 'ipaplus')
-  const showComponents = hasClass(node, 'showComponents')
+  const showUnique = hasClass(node, 'showUnique')
 
   // Parse datasets into arrays where applicable (preserve index alignment)
   const notes = (ds.notes ? ds.notes.split(',') : [])
@@ -2343,14 +2343,22 @@ function replaceStuff (node) {  // Copilot optimised
   out += (visibleCount === 2) ? 'both' : (visibleCount > 2 ? visibleCount : '')
   out += `</div>`
 
+  // Show unique components
+  /*if (showUnique) {
+    out += `<div class="listAll" onclick="listAllCL(this, '${ window.langTag }', 'unique')" title="Show all unique items in this list."><span style="cursor:pointer; font-size:1.2em; color: chocolate;">#</span> ${ countUniqueChars(chars) }</div>`
+    }*/
+
+  if (showUnique) {
+    out += `<div class="listAll" style="line-height:1; margin-block:.5rem;" onclick="listAllCL(this, '${ window.langTag }', 'unique')" title="Show all unique items in this list."><span style="cursor:pointer; font-size:1.8em; color: chocolate;">\u29C8</span><br>${ countUniqueChars(chars) }</div>`
+    }
+
+  /*if (showUnique) {
+    out += `<div class="listAll" style="line-height:1; margin-block:.5rem;" onclick="listAllCL(this, '${ window.langTag }', 'unique')" title="Show all unique items in this list.">Unique<br>${ countUniqueChars(chars) }</div>`
+    }*/
+
   // Expansion control if allowed
   if (!noexpansion) {
     out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; /*margin-inline-end:1rem;*/"></div>`
-    }
-
-  // Show unique components
-  if (showComponents) {
-    out += `<div class="listAll" onclick="listAllCL(this, '${ window.langTag }', 'unique')" title="Show all unique items in this list."><span style="cursor:pointer; font-size:1.2em; color: chocolate;">#</span> ${ countUniqueChars(chars) }</div>`
     }
 
   out += `</div>` // ends listAllOptions
@@ -2383,7 +2391,12 @@ function replaceStuff (node) {  // Copilot optimised
     // - If explicit ipa dataset provided, use those values
     // - Else if info includes ipa, try to build from spreadsheet (including ipaplus)
     let listIPAHtml = ''
-    if (ipa.length > 0) listIPAHtml = ipa[i] ? `<span class="listIPA">${ ipa[i] }</span>` : ' '
+    
+    if (ipa.length > 0) {
+        // change [ ] to bdi for allophones etc
+        ipa[i] = ipa[i].replace(/\[/g,'<bdi>').replace(/\]/g,'</bdi>')
+        listIPAHtml = ipa[i] ? `<span class="listIPA">${ ipa[i] }</span>` : ' '
+        }
     else if (info.includes('ipa')) {
         // ipaplus support: append spreadsheet ipaPlus if class ipaplus present
         let ipaplus = ''
