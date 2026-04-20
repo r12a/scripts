@@ -2394,7 +2394,7 @@ function replaceStuff (node) {  // Copilot optimised
     
     if (ipa.length > 0) {
         // change [ ] to bdi for allophones etc
-        ipa[i] = ipa[i].replace(/\[/g,'<bdi>').replace(/\]/g,'</bdi>')
+        if (ipa[i]) ipa[i] = ipa[i].replace(/\[/g,'<bdi>').replace(/\]/g,'</bdi>')
         listIPAHtml = ipa[i] ? `<span class="listIPA">${ ipa[i] }</span>` : ' '
         }
     else if (info.includes('ipa')) {
@@ -2496,7 +2496,7 @@ function replaceStuff (node) {  // Copilot optimised
 
 function countUniqueChars(chars) {
   // Flatten the array into a single string
-  const combined = chars.join('')
+  const combined = chars.join('').replace(/\u25CC/g,'')
 
   // Extract unique characters
   const unique = [...new Set(combined)]
