@@ -405,10 +405,10 @@ out += `
 
 if (! window.location.href.includes('block')) out += `
     <div id="topRightControls" 
-        style="    position: fixed;
+        style="position: fixed;
         top: 0px;
         right: 0;
-        width: 150px;
+        width: 160px;
         background-color: #fff5e6;
         background-color: white;
         display: flex;
@@ -422,6 +422,12 @@ if (! window.location.href.includes('block')) out += `
         padding-block-end: 0.2rem;
         line-height: 1;
         ">
+
+	<img id="clearDialogs" src="../img/icons/esc.jpg" alt="TOC." title="Clear all popups." style="height: 1.9rem; width: 1.9rem; cursor:pointer;"
+	onclick="document.getElementById('dialogBox').open = false
+        document.getElementById('ipaDialogBox').open = false
+        document.getElementById('panel').style.display = 'none'
+        document.getElementById('tocPanel').style.display = 'none'">
 
     <img id="showTOC2" src="../../shared/images/up.png" alt="TOC." title="Show the table of contents." onclick="document.getElementById('tocPanel').style.display = 'block'" style="height: 1.9rem; width: 1.9rem;">
     
