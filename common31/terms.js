@@ -492,9 +492,30 @@ function findWords (reg) {
 
         // add a link icon if there's a Wiktionary entry
         if (source) {
-            if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
-            else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM].trim() }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
-            }
+            if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') 
+                //out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ itemArray[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition"></a>`
+                out += `<span class="imageA" style="cursor:pointer;"
+                      onclick="document.getElementById('w${ itemArray[TERM].trim() }').textContent='✓';
+                        openCombinedWindowForTerm(
+                        '${ itemArray[WIKI].trim() }',
+                        '${ terms.wiktionaryLink }',
+                        '${ terms.picker }'
+                      )">
+                        <img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition">
+                        </span>
+                        `
+                
+            else out +=  `<span class="imageA" style="cursor:pointer;"
+                      onclick="document.getElementById('w${ itemArray[TERM].trim() }').textContent='✓';
+                        openCombinedWindowForTerm(
+                        '${ itemArray[TERM].trim() }',
+                        '${ terms.wiktionaryLink }',
+                        '${ terms.picker }'
+                      )">
+                        <img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition">
+                        </span>
+                        `
+                    }
 
         out += '</td>'
         
@@ -580,6 +601,7 @@ function findWords (reg) {
             out += `<td class="markupCol">`
             //if (i===0) out += `get markup<br>`
             out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
+            out += `</td>`
             }
 
         out += '</tr>\n'
@@ -785,14 +807,453 @@ function hideMenuText () {}
 
 
 
+async function fetchTermDataAndGetPickerURL(term, language, picker) {
+  console.log('>> fetchTermDataAndGetPickerURL(', term, language, picker, ")");
+
+  const params = new URLSearchParams({
+    action: "parse",
+    page: term,
+    prop: "wikitext",
+    format: "json",
+    origin: "*"
+  });
+
+  const url = "https://en.wiktionary.org/w/api.php?" + params.toString();
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!data.parse || !data.parse.wikitext) {
+    return buildPickerURL(`${term}|||`, picker, "");
+  }
+
+  const text = data.parse.wikitext["*"];
+
+  // Extract language section
+  const langSplit = text.split(`==${language}==`);
+  if (langSplit.length < 2) {
+    return buildPickerURL(`${term}|||`, picker, "");
+  }
+
+  let section = langSplit[1];
+
+  // IPA
+  const ipa = await extractIPAWithFallback(term, language, section);
+
+  // Meanings
+  const meanings = section
+    .split("\n")
+    .filter(line => /^# [^#]/.test(line))
+    .map(line =>
+      line
+        .replace(/^# /, "")
+        .replace(/\{\{[^}]+\}\}/g, "")
+        .replace(/\[\[[^\]|]+\|([^\]]+)\]\]/g, "$1")
+        .replace(/\[\[|\]\]/g, "")
+        .trim()
+    );
+
+  const meaningJoined = meanings.join(", ");
+
+  // Base result
+  const result = `${term}|${meaningJoined}|${ipa}|`;
+
+  // NEW: Extract transliteration from HTML
+  const translit = await extractTransliteration(term);
+
+  return buildPickerURL(result, picker, translit);
+}
+
+
+
+
+
+function buildPickerURLXX(text, picker) {
+  const { base, notation } = processIPAInBaseText(text);
+
+  // Build full payload with placeholder 'notes'
+  let full = base + "transc|otherTransc|notes|wAlt";
+
+  // Replace 'notes' with notation if we have one
+  if (notation) {
+    full = full.replace("notes", notation);
+  }
+
+  const encoded = encodeURIComponent(full);
+  return `../../pickers/${picker}/index.html?text=${encoded}`;
+}
+
+
+
+function buildPickerURL(text, picker, translit) {
+  // Process IPA first
+  const { base, notation } = processIPAInBaseText(text);
+
+  // Build full payload with placeholder 'transc'
+  let full = base + "transc|otherTransc|notes|wAlt";
+
+  // Replace 'notes' with IPA notation (if any)
+  if (notation) {
+    full = full.replace("notes", notation);
+  }
+
+  // Replace 'transc' ONLY if transliteration exists
+  if (translit && translit.trim() !== "") {
+    full = full.replace("transc", translit);
+  }
+
+  const encoded = encodeURIComponent(full);
+  return `../../pickers/${picker}/index.html?text=${encoded}`;
+}
 
 
 
 
 
 
+async function openCombinedWindowForTerm(term, language, picker) {
+  const wiktionaryURL =
+    `https://en.wiktionary.org/wiki/${term}#${language}`;
+
+  const pickerURL =
+    await fetchTermDataAndGetPickerURL(term, language, picker);
+
+  openCombinedWindow(wiktionaryURL, pickerURL);
+}
 
 
+
+
+async function extractTransliteration(term) {
+  const params = new URLSearchParams({
+    action: "parse",
+    page: term,
+    prop: "text",
+    format: "json",
+    origin: "*"
+  });
+
+  const url = "https://en.wiktionary.org/w/api.php?" + params.toString();
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!data.parse || !data.parse.text) return "";
+
+  const html = data.parse.text["*"];
+
+  // Look for <span class="headword-tr">...</span>
+  const match = html.match(
+    /<span[^>]*class="[^"]*\bheadword-tr\b[^"]*"[^>]*>([^<]+)<\/span>/i
+  );
+
+  if (match) {
+    return match[1].trim();
+  }
+
+  return "";
+}
+
+
+
+
+
+function extractAllIPAFromWikitext(section) {
+  // Match {{IPA|mn|/foo/|[bar]}}
+  const templateMatch = section.match(/\{\{IPA\|[^}]+\}\}/i);
+  if (!templateMatch) return "";
+
+  const template = templateMatch[0];
+
+  // Extract all /.../ and all [...]
+  const phonemic = [...template.matchAll(/\/([^\/]+)\//g)].map(m => "/" + m[1] + "/");
+  const phonetic = [...template.matchAll(/\[([^\]]+)\]/g)].map(m => "[" + m[1] + "]");
+
+  return [...phonemic, ...phonetic].join("");
+}
+
+
+
+
+
+function processIPAInBaseText(text) {
+  const parts = text.split("|");
+  if (parts.length < 4) return { base: text, notation: "" };
+
+  // IPAsegment is 3rd field
+  let ipa = parts[2];
+  let notation = "";
+
+  // Add space between '/[' if present
+  ipa = ipa.replace(/\/\[/g, "/ [");
+
+  const hasBrackets = /\[.*?\]/.test(ipa);
+  const hasSlashes  = /\/.*?\//.test(ipa);
+
+  if (hasBrackets && hasSlashes) {
+    notation = "/../ [..]";
+  } else if (hasSlashes) {
+    notation = "/../";
+  } else if (hasBrackets) {
+    notation = "[..]";
+  }
+
+  // Remove [ ] and / from IPAsegment
+  ipa = ipa.replace(/[\[\]\/]/g, "");
+
+  // Put cleaned IPA back
+  parts[2] = ipa;
+
+  const base = parts.join("|");
+  return { base, notation };
+}
+
+
+
+
+
+function processIPAInPickerTextX(text) {
+  // 1. Split into fields
+  const parts = text.split("|");
+
+  if (parts.length < 4) return text; // nothing to do
+
+  // IPAsegment is between 2nd and 3rd |
+  let ipa = parts[2];
+  let notation = "";
+
+  // 2. Insert space between '/[' if present
+  ipa = ipa.replace(/\/\[/g, "/ [");
+
+  // 3. Detect phonetic brackets [ ]
+  const hasBrackets = /\[.*?\]/.test(ipa);
+
+  // 4. Detect phonemic slashes / /
+  const hasSlashes = /\/.*?\//.test(ipa);
+
+  // 5. Build notation string
+  if (hasBrackets && hasSlashes) {
+    notation = "/../ [..]";
+  } else if (hasSlashes) {
+    notation = "/../";
+  } else if (hasBrackets) {
+    notation = "[..]";
+  }
+
+  // 6. Remove [ ] and / / from the IPAsegment
+  ipa = ipa.replace(/[\[\]\/]/g, "");
+
+  // 7. Put the cleaned IPA back into the parts array
+  parts[2] = ipa;
+
+  // 8. Reassemble the text
+  let rebuilt = parts.join("|");
+
+  // 9. Replace the literal 'notes' with notation (if any)
+  if (notation) {
+    rebuilt = rebuilt.replace("notes", notation);
+  }
+
+  return rebuilt;
+}
+
+
+
+
+// ===================================================================================
+
+async function fetchTermDataAndOpen(term, language, picker) {
+  // Fetch wikitext
+  console.log('>> fetchTermDataAndOpen(',term, language,picker,")")
+  const params = new URLSearchParams({
+    action: "parse",
+    page: term,
+    prop: "wikitext",
+    format: "json",
+    origin: "*"
+  });
+
+  const url = "https://en.wiktionary.org/w/api.php?" + params.toString();
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!data.parse || !data.parse.wikitext) {
+    const result = `${term}|||`;
+    openResult(result);
+    return;
+  }
+
+  const text = data.parse.wikitext["*"];
+
+  // --- Extract language section ---
+  const langSplit = text.split(`==${language}==`);
+  if (langSplit.length < 2) {
+    const result = `${term}|||`;
+    openResult(result);
+    return;
+  }
+
+  let section = langSplit[1];
+
+  // --- Extract IPA ---
+  //const ipaMatch = section.match(/\{\{IPA[^|}]*\|([^}]+)\}\}/i);
+  //const ipa = ipaMatch ? ipaMatch[1].trim() : "";
+  //const ipa = extractIPA(section);
+  const ipa = await extractIPAWithFallback(term, language, section);
+
+  
+
+  // --- Extract ALL meanings ---
+  const meanings = section
+    .split("\n")
+    .filter(line => /^# [^#]/.test(line))
+    .map(line =>
+      line
+        .replace(/^# /, "")
+        .replace(/\{\{[^}]+\}\}/g, "")                // remove templates
+        .replace(/\[\[[^\]|]+\|([^\]]+)\]\]/g, "$1")  // [[foo|bar]] → bar
+        .replace(/\[\[|\]\]/g, "")                    // remove [[ ]]
+        .trim()
+    );
+
+  const meaningJoined = meanings.join(", ");
+
+  // --- Final output ---
+  const result = `${term}|${meaningJoined}|${ipa}|`;
+
+  openResult(result, picker);
+}
+
+// ------------------------------------------------------------
+// Open encoded result in new window
+// ------------------------------------------------------------
+function openResult(text, picker) {
+    const encoded = encodeURIComponent(text)
+    console.log('XXXX', `../../pickers/${ picker }/index.html?text=${encoded}`)
+    const url = `../../pickers/${ picker }/index.html?text=${encoded}`
+    window.open(url, "wiktionaryData")
+    }
+
+
+
+function extractIPA(section) {
+  console.log('>> extractIPA(',section,')')
+  // Match ANY template whose name contains IPA / ipa / pron / phon
+  const templateMatch = section.match(/\{\{[^}]*?(IPA|ipa|pron|phon)[^}]*\}\}/i);
+
+  if (!templateMatch) return "";
+
+  // Split template into parts: {{template|arg1|arg2|...}}
+  const parts = templateMatch[0]
+    .replace(/^\{\{|\}\}$/g, "")   // remove {{ }}
+    .split("|")
+    .map(s => s.trim());
+
+  // Remove the template name (first element)
+  parts.shift();
+
+  // Find the first argument that looks like IPA
+  // IPA usually contains: /slashes/ or [brackets] or phonetic symbols
+  const ipaCandidate = parts.find(p =>
+    /[\/\[\]ːɑɡɲʃʒθðŋɴɯɨəɛɔɤɢɡ]/.test(p)
+  );
+
+  return ipaCandidate || "";
+}
+
+
+
+async function extractIPAWithFallback(term, language, section) {
+  // 1. Try wikitext-based extraction first
+  const ipaFromWikitext = extractAllIPAFromWikitext(section)
+  if (ipaFromWikitext) {
+    console.log(`extractIPA returned ${ipaFromWikitext}`)
+    return ipaFromWikitext
+    }
+
+  // 2. Fallback: fetch rendered HTML
+  const params = new URLSearchParams({
+    action: "parse",
+    page: term,
+    prop: "text",
+    format: "json",
+    origin: "*"
+  });
+
+  const url = "https://en.wiktionary.org/w/api.php?" + params.toString();
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!data.parse || !data.parse.text) return "";
+
+  const html = data.parse.text["*"];
+
+  // 3. Extract IPA from HTML
+  //const spanMatch = html.match(/<span[^>]*class="IPA"[^>]*>([^<]+)<\/span>/i);
+  //if (spanMatch) return spanMatch[1].trim();
+    // 3. Extract IPA from HTML
+    const spanMatch = html.match(
+      /<span[^>]*class="[^"]*\bIPA\b[^"]*"[^>]*>([^<]+)<\/span>/i
+      );
+    if (spanMatch) {
+        console.log("%c✓ IPA found in HTML page", "color: #0a0; font-weight:bold;")
+        return spanMatch[1].trim()
+        }
+
+  console.log("%c❌ IPA NOT found in API or HTML page", "color: red; font-weight:bold;");
+  return ""
+}
+
+
+
+
+
+
+function getPickerURL(term, language, picker) {
+  const encoded = encodeURIComponent(`${term}|${language}|`);
+  return `../../pickers/${picker}/index.html?text=${encoded}`;
+}
+
+
+
+
+
+
+function openCombinedWindow(wiktionaryURL, pickerURL) {
+    // opens a separate window that displays the Wiktionary page and the picker, one above the other
+  const win = window.open("", "wiktionaryCombined", "width=1200,height=900");
+
+  if (!win) {
+    console.error("Popup blocked");
+    return;
+  }
+
+  win.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Wiktionary + Picker</title>
+      <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          overflow: hidden;
+        }
+        .frame {
+          width: 100%;
+          height: 50%;
+          border: none;
+        }
+      </style>
+    </head>
+    <body>
+      <iframe class="frame" src="${pickerURL}"></iframe>
+      <iframe class="frame" src="${wiktionaryURL}"></iframe>
+    </body>
+    </html>
+  `);
+
+  win.document.close();
+}
 
 
 
