@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wordlist character search</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 1rem;
+    }
+    label {
+      display: block;
+      margin-top: 0.5rem;
+    }
+    input[type="text"] {
+      width: 18rem;
+      padding: 0.25rem;
+      margin-right: 0.5rem;
+    }
+    button {
+      padding: 0.25rem 0.75rem;
+      margin-top: 0.5rem;
+    }
+    #status {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    #results {
+      margin-top: 1rem;
+      white-space: pre-wrap;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    .result-line {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-direction: row-reverse;
+    }
+    .result-term {
+      flex: 1;
+    }
+    .result-link {
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wordlist character search</h1>
+  
+<label>
+  Select language:
+  <select id="languageSelect">
+    <option value="">-- choose a language --</option>
+  </select>
+</label>
+
+  <div>
+    <label>
+      Language tag (for <code>&lt;lang&gt;-wordlist.txt</code>):
+      <input type="text" id="langTag" placeholder="e.g. mn, ja, en" />
+    </label>
+
+    <label>
+      Picker filename (without <code>.html</code>):
+      <input type="text" id="pickerName" placeholder="e.g. mongolianPicker" />
+    </label>
+
+    <label>
+      Wikipedia language name (eg. Mongolian):
+      <input type="text" id="wikiName" placeholder="e.g. Mongolian" />
+    </label>
+
+    <button id="loadBtn">Load wordlist</button>
+
+    <div id="status"></div>
+
+    <label>
+      Character(s) to search for:
+      <input type="text" id="charInput" placeholder="character or sequence" />
+    </label>
+
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <h2>Matches</h2>
+  <div id="results"></div>
+
+
+
+
+
+
+
+
+<script>
+
+const langInputField   = document.getElementById("langTag");
+const pickerInputField = document.getElementById("pickerName");
+const wikiInputField   = document.getElementById("wikiName");
+const languageSelect = document.getElementById("languageSelect");
+
+async function loadPickerList() {
+  try {
+    const resp = await fetch("pickerlist.json", { cache: "no-cache" });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+
+    const text = await resp.text();
+    const json = JSON.parse(text.replace(/'/g, '"'));
+
+    // populate dropdown
+    for (const label of Object.keys(json)) {
+      const opt = document.createElement("option");
+      opt.value = label;
+      opt.textContent = label;
+      languageSelect.appendChild(opt);
+    }
+
+    window.PICKER_LIST = json;
+  } catch (err) {
+    console.error("Failed to load pickerlist.json:", err);
+  }
+}
+
+loadPickerList();
+
+languageSelect.addEventListener("change", () => {
+  const key = languageSelect.value;
+  if (!key || !window.PICKER_LIST) return;
+
+  const entry = window.PICKER_LIST[key];
+
+  // just fill the three inputs, nothing else
+  langInputField.value   = entry.langtag || "";
+  pickerInputField.value = entry.picker  || "";
+  wikiInputField.value   = entry.wikiname || "";
+});
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    let wordlist = [];
+
+    const langInput = document.getElementById("langTag");
+    const pickerInput = document.getElementById("pickerName");
+    const wikilangInput = document.getElementById("wikiName");
+    const charInput = document.getElementById("charInput");
+    const loadBtn = document.getElementById("loadBtn");
+    const searchBtn = document.getElementById("searchBtn");
+    const statusEl = document.getElementById("status");
+    const resultsEl = document.getElementById("results");
+
+    loadBtn.addEventListener("click", async () => {
+      const lang = (langInput.value || "").trim();
+      if (!lang) {
+        statusEl.textContent = "Please enter a language tag.";
+        return;
+      }
+
+      const filename = `${lang}-wordlist.txt`;
+      statusEl.textContent = `Loading ${filename}...`;
+      resultsEl.textContent = "";
+      wordlist = [];
+
+      try {
+        const resp = await fetch(filename, { cache: "no-cache" });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+
+        const text = await resp.text();
+        wordlist = text
+          .split(/\r?\n/)
+          .map(line => line.trim())
+          .filter(line => line.length > 0);
+
+        statusEl.textContent = `Loaded ${wordlist.length} entries from ${filename}.`;
+      } catch (err) {
+        statusEl.textContent = `Failed to load ${filename}: ${err.message}`;
+      }
+    });
+
+    searchBtn.addEventListener("click", () => {
+      const query = (charInput.value || "").trim();
+      resultsEl.textContent = "";
+
+      if (!wordlist.length) {
+        statusEl.textContent = "No wordlist loaded. Load a wordlist first.";
+        return;
+      }
+      if (!query) {
+        statusEl.textContent = "Please enter character(s) to search for.";
+        return;
+      }
+
+      const matches = wordlist.filter(term => term.includes(query));
+      statusEl.textContent = `Found ${matches.length} match(es).`;
+
+      resultsEl.innerHTML = "";
+      matches.forEach(term => {
+        const line = document.createElement("div");
+        line.className = "result-line";
+
+        const termSpan = document.createElement("span");
+        termSpan.className = "result-term";
+        termSpan.textContent = term.replace(/\|/g,'').replace(/␣/,'');
+
+        const link = document.createElement("a");
+        link.href = "#";
+        link.className = "result-link";
+        link.textContent = "↗";
+        link.title = `Open details for ${term}`;
+        link.addEventListener("click", ev => {
+          ev.preventDefault();
+
+          const language = (langInput.value || "").trim();
+          const picker = (pickerInput.value || "").trim();
+          const wikiLang = (wikilangInput.value || "").trim();
+
+          if (!language) {
+            alert("Please enter a language tag.");
+            return;
+          }
+          if (!picker) {
+            alert("Please enter a picker filename.");
+            return;
+          }
+
+          openCombinedWindowForTerm(term.replace(/\|\|␣\|/g,""), wikiLang, picker);
+          });
+
+
+        line.appendChild(termSpan);
+        line.appendChild(link);
+        resultsEl.appendChild(line);
+      });
+    });
+
+
+
+
+
+
+async function openCombinedWindowForTerm(term, language, picker) {
+  const wiktionaryURL =
+    `https://en.wiktionary.org/wiki/${term}#${language}`;
+
+  const pickerURL =
+    await fetchTermDataAndGetPickerURL(term, language, picker);
+
+  openCombinedWindow(wiktionaryURL, pickerURL);
+}
+
+
+
+
+
+async function fetchTermDataAndGetPickerURL(term, language, picker) {
+  console.log('>> fetchTermDataAndGetPickerURL(', term, language, picker, ")");
+
+  const params = new URLSearchParams({
+    action: "parse",
+    page: term,
+    prop: "wikitext",
+    format: "json",
+    origin: "*"
+  });
+
+  const url = "https://en.wiktionary.org/w/api.php?" + params.toString();
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!data.parse || !data.parse.wikitext) {
+    return buildPickerURL(`${term}|||`, picker, "");
+  }
+
+  const text = data.parse.wikitext["*"];
+
+  // Extract language section
+  const langSplit = text.split(`==${language}==`);
+  if (langSplit.length < 2) {
+    return buildPickerURL(`${term}|||`, picker, "");
+  }
+
+  let section = langSplit[1];
+
+  // IPA
+  const ipa = await extractIPAWithFallback(term, language, section);
+
+  // Meanings
+  const meanings = section
+    .split("\n")
+    .filter(line => /^# [^#]/.test(line))
+    .map(line =>
+      line
+        .replace(/^# /, "")
+        .replace(/\{\{[^}]+\}\}/g, "")
+        .replace(/\[\[[^\]|]+\|([^\]]+)\]\]/g, "$1")
+        .replace(/\[\[|\]\]/g, "")
+        .trim()
+    );
+
+  const meaningJoined = meanings.join(", ");
+
+  // Base result
+  const result = `${term}|${meaningJoined}|${ipa}|`;
+
+  // NEW: Extract transliteration from HTML
+  const translit = await extractTransliteration(term);
+
+  return buildPickerURL(result, picker, translit);
+}
+
+
+
+
+
+async function extractTransliteration(term) {
+  const params = new URLSearchParams({
+    action: "parse",
+    page: term,
+    prop: "text",
+    format: "json",
+    origin: "*"
+  });
+
+  const url = "https://en.wiktionary.org/w/api.php?" + params.toString();
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!data.parse || !data.parse.text) return "";
+
+  const html = data.parse.text["*"];
+
+  // Look for <span class="headword-tr">...</span>
+  const match = html.match(
+    /<span[^>]*class="[^"]*\bheadword-tr\b[^"]*"[^>]*>([^<]+)<\/span>/i
+  );
+
+  if (match) {
+    return match[1].trim();
+  }
+
+  return "";
+}
+
+
+
+
+
+function buildPickerURL(text, picker, translit) {
+  // Process IPA first
+  const { base, notation } = processIPAInBaseText(text);
+
+  // Build full payload with placeholder 'transc'
+  let full = base + "transc|otherTransc|notes|wAlt";
+
+  // Replace 'notes' with IPA notation (if any)
+  if (notation) {
+    full = full.replace("notes", notation);
+  }
+
+  // Replace 'transc' ONLY if transliteration exists
+  if (translit && translit.trim() !== "") {
+    full = full.replace("transc", translit);
+  }
+
+  const encoded = encodeURIComponent(full);
+  return `../../../pickers/${picker}/index.html?text=${encoded}`;
+}
+
+
+
+
+
+function processIPAInBaseText(text) {
+  const parts = text.split("|");
+  if (parts.length < 4) return { base: text, notation: "" };
+
+  // IPAsegment is 3rd field
+  let ipa = parts[2];
+  let notation = "";
+
+  // Add space between '/[' if present
+  ipa = ipa.replace(/\/\[/g, "/ [");
+
+  const hasBrackets = /\[.*?\]/.test(ipa);
+  const hasSlashes  = /\/.*?\//.test(ipa);
+
+  if (hasBrackets && hasSlashes) {
+    notation = "/../ [..]";
+  } else if (hasSlashes) {
+    notation = "/../";
+  } else if (hasBrackets) {
+    notation = "[..]";
+  }
+
+  // Remove [ ] and / from IPAsegment
+  ipa = ipa.replace(/[\[\]\/]/g, "");
+
+  // Put cleaned IPA back
+  parts[2] = ipa;
+
+  const base = parts.join("|");
+  return { base, notation };
+}
+
+
+
+
+
+function extractAllIPAFromWikitext(section) {
+  // Match {{IPA|mn|/foo/|[bar]}}
+  const templateMatch = section.match(/\{\{IPA\|[^}]+\}\}/i);
+  if (!templateMatch) return "";
+
+  const template = templateMatch[0];
+
+  // Extract all /.../ and all [...]
+  const phonemic = [...template.matchAll(/\/([^\/]+)\//g)].map(m => "/" + m[1] + "/");
+  const phonetic = [...template.matchAll(/\[([^\]]+)\]/g)].map(m => "[" + m[1] + "]");
+
+  return [...phonemic, ...phonetic].join("");
+}
+
+
+
+
+
+
+function openCombinedWindow(wiktionaryURL, pickerURL) {
+    // opens a separate window that displays the Wiktionary page and the picker, one above the other
+  const win = window.open("", "wiktionaryCombined", "width=1200,height=900");
+
+  if (!win) {
+    console.error("Popup blocked");
+    return;
+  }
+
+  win.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Wiktionary + Picker</title>
+      <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          overflow: hidden;
+        }
+        .frame {
+          width: 100%;
+          height: 50%;
+          border: none;
+        }
+      </style>
+    </head>
+    <body>
+      <iframe class="frame" src="${pickerURL}"></iframe>
+      <iframe class="frame" src="${wiktionaryURL}"></iframe>
+    </body>
+    </html>
+  `);
+
+  win.document.close();
+}
+
+
+
+
+
+async function extractIPAWithFallback(term, language, section) {
+  // 1. Try wikitext-based extraction first
+  const ipaFromWikitext = extractAllIPAFromWikitext(section)
+  if (ipaFromWikitext) {
+    console.log(`extractIPA returned ${ipaFromWikitext}`)
+    return ipaFromWikitext
+    }
+
+  // 2. Fallback: fetch rendered HTML
+  const params = new URLSearchParams({
+    action: "parse",
+    page: term,
+    prop: "text",
+    format: "json",
+    origin: "*"
+  });
+
+  const url = "https://en.wiktionary.org/w/api.php?" + params.toString();
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!data.parse || !data.parse.text) return "";
+
+  const html = data.parse.text["*"];
+
+  // 3. Extract IPA from HTML
+  //const spanMatch = html.match(/<span[^>]*class="IPA"[^>]*>([^<]+)<\/span>/i);
+  //if (spanMatch) return spanMatch[1].trim();
+    // 3. Extract IPA from HTML
+    const spanMatch = html.match(
+      /<span[^>]*class="[^"]*\bIPA\b[^"]*"[^>]*>([^<]+)<\/span>/i
+      );
+    if (spanMatch) {
+        console.log("%c✓ IPA found in HTML page", "color: #0a0; font-weight:bold;")
+        return spanMatch[1].trim()
+        }
+
+  console.log("%c❌ IPA NOT found in API or HTML page", "color: red; font-weight:bold;");
+  return ""
+}
+
+
+
+
+
+
+
+
+
+
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+  </script>
+</body>
+</html>
