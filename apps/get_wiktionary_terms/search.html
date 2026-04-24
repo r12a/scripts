@@ -49,7 +49,20 @@
 </head>
 <body>
   <h1>Wordlist character search</h1>
-  
+
+<details style="float:inline-end;">
+<summary style="cursor: pointer;">Help</summary>
+<p>Examples of regular expression searches:</p>
+<ul>
+	<li>^a → terms starting with “a”</li>
+	<li>ing\b → terms ending in “ing”</li>
+	<li>[aeiou]{2} → terms containing two vowels in a row</li>
+	<li>^.{1,3}$ → terms of length 1–3</li>
+	<li>.*foo.*bar → terms containing “foo” then “bar”</li>
+    </ul>
+</details>
+
+
 <label>
   Select language:
   <select id="languageSelect">
@@ -210,7 +223,18 @@ languageSelect.addEventListener("change", () => {
         return;
       }
 
-      const matches = wordlist.filter(term => term.includes(query));
+      //const matches = wordlist.filter(term => term.includes(query));
+      let regex;
+        try {
+            // User enters raw regex syntax, e.g.  ^a|b$,  [aeiou],  .+?,  etc.
+            regex = new RegExp(query);
+        } catch (e) {
+            statusEl.textContent = "Invalid regular expression.";
+            return;
+        }
+
+        const matches = wordlist.filter(term => regex.test(term));
+
       statusEl.textContent = `Found ${matches.length} match(es).`;
 
       resultsEl.innerHTML = "";
