@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wiktionary Term Extractor</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    line-height: 1.6;
+  }
+  input, button {
+    font-size: 16px;
+    padding: 6px 10px;
+    margin: 4px 0;
+  }
+  #progressBar {
+    width: 100%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  #progressFill {
+    height: 100%;
+    width: 0%;
+    background: #4caf50;
+    border-radius: 4px;
+  }
+  #log {
+    white-space: pre-wrap;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 4px;
+    height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+
+<h1>Wiktionary Term Extractor</h1>
+
+<label>Category Language (e.g., Central_Kurdish)</label><br>
+<input id="categoryLang" style="width:100%"><br><br>
+
+<label>Language Tag (e.g., ckb, ug, ru)</label><br>
+<input id="langTag" style="width:100%"><br><br>
+
+<button id="startBtn">Start</button>
+<button id="exportBtn" disabled>Export Wordlist</button>
+
+<div id="progressBar"><div id="progressFill"></div></div>
+
+<div id="status"></div>
+
+<h3>Log</h3>
+<div id="log"></div>
+
+<script>
+// ------------------------------------------------------------
+// Logging
+// ------------------------------------------------------------
+function log(msg) {
+  const el = document.getElementById("log");
+  el.textContent += msg + "\n";
+  el.scrollTop = el.scrollHeight;
+}
+
+function setStatus(msg) {
+  document.getElementById("status").textContent = msg;
+}
+
+// ------------------------------------------------------------
+// Rate-limited fetch
+// ------------------------------------------------------------
+let lastRequest = 0;
+const MIN_DELAY = 700;
+
+async function fetchJSON(url, attempt = 1) {
+  const now = Date.now();
+  const wait = Math.max(0, lastRequest + MIN_DELAY - now);
+  if (wait > 0) await new Promise(r => setTimeout(r, wait));
+  lastRequest = Date.now();
+
+  const res = await fetch(url);
+  const text = await res.text();
+
+  if (text.trim().startsWith("<")) {
+    const backoff = Math.min(5000 * attempt, 30000);
+    log(`Rate limited. Waiting ${backoff}ms...`);
+    await new Promise(r => setTimeout(r, backoff));
+    return fetchJSON(url, attempt + 1);
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch {
+    log("Non-JSON response: " + text.slice(0, 200));
+    return null;
+  }
+}
+
+// ------------------------------------------------------------
+// Fetch titles only
+// ------------------------------------------------------------
+async function fetchTitles(category) {
+  const titles = [];
+  let cont = null;
+
+  while (true) {
+    const params = new URLSearchParams({
+      action: "query",
+      list: "categorymembers",
+      cmtitle: category,
+      cmprop: "title",
+      cmlimit: "max",
+      format: "json",
+      origin: "*"
+    });
+
+    if (cont) params.set("cmcontinue", cont);
+
+    const url = "https://en.wiktionary.org/w/api.php?" + params.toString();
+    const data = await fetchJSON(url);
+    if (!data) continue;
+
+    data.query.categorymembers.forEach(item => titles.push(item.title));
+
+    if (!data.continue) break;
+    cont = data.continue.cmcontinue;
+  }
+
+  return titles;
+}
+
+// ------------------------------------------------------------
+// Main
+// ------------------------------------------------------------
+let results = [];
+
+async function runExtractor() {
+  const categoryLang = document.getElementById("categoryLang").value.trim();
+  const category = `Category:${categoryLang}_terms_with_IPA_pronunciation`;
+
+  setStatus("Fetching titles...");
+  log("Fetching titles...");
+
+  const titles = await fetchTitles(category);
+  log(`Fetched ${titles.length} titles.`);
+
+  results = titles;
+
+  document.getElementById("progressFill").style.width = "100%";
+  setStatus("Done.");
+  document.getElementById("exportBtn").disabled = false;
+}
+
+// ------------------------------------------------------------
+// UI Buttons
+// ------------------------------------------------------------
+document.getElementById("startBtn").onclick = () => {
+  runExtractor();
+};
+
+document.getElementById("exportBtn").onclick = () => {
+  const langTag = document.getElementById("langTag").value.trim();
+  const filename = `${langTag}-wordlist.txt`;
+
+  const text = results.map(t => t + "||␣|").join("\n");
+
+  const blob = new Blob([text], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+
+  URL.revokeObjectURL(url);
+};
+</script>
+
+</body>
+</html>
