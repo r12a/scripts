@@ -879,7 +879,7 @@ function buildPickerURLXX(text, picker) {
   }
 
   const encoded = encodeURIComponent(full);
-  return `../../pickers/${picker}/index.html?text=${encoded}`;
+  return `../../pickers/${picker}/index.html?text=${encoded}&term`;
 }
 
 
@@ -902,7 +902,7 @@ function buildPickerURL(text, picker, translit) {
   }
 
   const encoded = encodeURIComponent(full);
-  return `../../pickers/${picker}/index.html?text=${encoded}`;
+  return `../../pickers/${picker}/index.html?text=${encoded}&term`;
 }
 
 
@@ -1127,8 +1127,8 @@ async function fetchTermDataAndOpen(term, language, picker) {
 // ------------------------------------------------------------
 function openResult(text, picker) {
     const encoded = encodeURIComponent(text)
-    console.log('XXXX', `../../pickers/${ picker }/index.html?text=${encoded}`)
-    const url = `../../pickers/${ picker }/index.html?text=${encoded}`
+    console.log('XXXX', `../../pickers/${ picker }/index.html?text=${encoded}&term`)
+    const url = `../../pickers/${ picker }/index.html?text=${encoded}&term`
     window.open(url, "wiktionaryData")
     }
 
@@ -1209,7 +1209,7 @@ async function extractIPAWithFallback(term, language, section) {
 
 function getPickerURL(term, language, picker) {
   const encoded = encodeURIComponent(`${term}|${language}|`);
-  return `../../pickers/${picker}/index.html?text=${encoded}`;
+  return `../../pickers/${picker}/index.html?text=${encoded}&term`;
 }
 
 
