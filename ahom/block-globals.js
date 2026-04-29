@@ -1,5 +1,5 @@
 langTag = 'aho'
-window.version = 'v29'
+window.version = 'v32'
 window.scriptName = 'Ahom'
 window.ghDirectory = 'ahom'
 window.blockDirectory = 'ahom'
