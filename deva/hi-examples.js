@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -23,7 +23,7 @@ autoExpandExamples.hi = `
 
 @ wiktionary
 
-*पञ्जाब|Punjab|§pə§n.§d͡ʒɑː§b|pañjāb
+*पञ्जाब|Punjab|,pə,n.,d͡ʒɑː,b|pañjāb
 -अक||
 -आऊ||
 -आतु||
@@ -77,7 +77,7 @@ autoExpandExamples.hi = `
 अँकवैया||
 अँगड़ाई||
 अँगरेज़||
-अँगरेज़ी|English|əŋ.§ɡ§ɾeː.§ziː|aṅgrezī
+अँगरेज़ी|English|əŋ.,ɡ,ɾeː.,ziː|aṅgrezī
 अँगहीन||
 अँगिया||
 अँगीठी||
@@ -183,7 +183,7 @@ autoExpandExamples.hi = `
 अंतर्निहित||
 अंतर्राष्ट्रीय ध्वन्यात्मक लिपि||
 अंतर्राष्ट्रीय ध्वन्यात्मक वर्णमाला||
-अंतर्राष्ट्रीय|international|ən.§t̪ə§ɾ.§ɾɑː§ʂ.§ʈ§ɾiː.§jᵊ|antarrāṣṭrīya
+अंतर्राष्ट्रीय|international|ən.,t̪ə,ɾ.,ɾɑː,ʂ.,ʈ,ɾiː.,jᵊ|antarrāṣṭrīya
 अंतर्वासी||
 अंताक्षरी||
 अंतिम||
@@ -229,9 +229,9 @@ autoExpandExamples.hi = `
 अकर्मक क्रिया||
 अकर्मक||
 अकर्मण्यता||
-अकस्मात्|suddenly, abruptly|ə.§kə§s.§mɑː§t̪
+अकस्मात्|suddenly, abruptly|ə.,kə,s.,mɑː,t̪
 अक़्ल का दुश्मन||
-अक़्ल|understanding, wisdom|ə§q§l§/ə§k§l|aqla
+अक़्ल|understanding, wisdom|ə,q,l,/ə,k,l|aqla
 अक़्लमंद||
 अक़्लमंदी||
 अकाज||
@@ -279,7 +279,7 @@ autoExpandExamples.hi = `
 अखिल||
 अखिलेश||
 अगणित||
-अगर|if|ə.§ɡə§ɾ|agar
+अगर|if|ə.,ɡə,ɾ|agar
 अगरचे||
 अगरतला||
 अगरबत्ती||
@@ -722,9 +722,9 @@ autoExpandExamples.hi = `
 अफ़सोसनाक||
 अफ़ीम||
 अफ़ीमची||
-अफ़्ग़ानिस्तान|Afghanistan|ə§f.§ɣɑː.§nɪ§s.§t̪ɑː§n|afġānistān
+अफ़्ग़ानिस्तान|Afghanistan|ə,f.,ɣɑː.,nɪ,s.,t̪ɑː,n|afġānistān
 अफ़्गानिस्तान||
-अफ़्रीका|Africa|ə§f.§ɾiː.§kɑː|afrīkā
+अफ़्रीका|Africa|ə,f.,ɾiː.,kɑː|afrīkā
 अफ़्रीकी||
 अफ़्साना||
 अफ़्सोस||
@@ -1365,7 +1365,7 @@ autoExpandExamples.hi = `
 आदम||
 आदमियत||
 आदमी हो या चूहा||
-आदमी|man (adult male)|ɑː§d̪.§miː|ādmī
+आदमी|man (adult male)|ɑː,d̪.,miː|ādmī
 आदर करना||
 आदर||
 आदरणीय||
@@ -1677,7 +1677,7 @@ autoExpandExamples.hi = `
 इंद्रमानभंग||
 इंद्रिय||
 इंफाल||
-इंसान|mankind|ɪn.§sɑː§n
+इंसान|mankind|ɪn.,sɑː,n
 इंसानी||
 इंस्पेक्टर||
 इक-||
@@ -1716,7 +1716,7 @@ autoExpandExamples.hi = `
 इजमाली||
 इज़हार||
 इज़ाफ़ा||
-इज़्ज़त|honour, respect|ɪ§z.§zə§t̪|izzat
+इज़्ज़त|honour, respect|ɪ,z.,zə,t̪|izzat
 इजाजत||
 इजाज़त देना||
 इजाज़त||
@@ -1837,7 +1837,7 @@ autoExpandExamples.hi = `
 इस्लामी||
 इह||
 ईंट|brick|iːnʈ
-ईंधन|fuel|iːn.§d̪ʱə§n
+ईंधन|fuel|iːn.,d̪ʱə,n
 ईक्वाडोर||
 ईख||
 ईजियन||
@@ -1864,7 +1864,7 @@ autoExpandExamples.hi = `
 ईसा||
 ईसाइयत||
 ईसाई धर्म||
-ईसाई|christian|iː.§sɑː.§iː
+ईसाई|christian|iː.,sɑː.,iː
 ईसाईयत||
 ईस्टर||
 ई॰पू॰||
@@ -1875,7 +1875,7 @@ autoExpandExamples.hi = `
 उंडुकपुच्छ||
 उंस||
 उइग़ुर||
-उकसाना|to incite, inflame|ʊ§k.§sɑː.§nɑː|uksānā
+उकसाना|to incite, inflame|ʊ,k.,sɑː.,nɑː|uksānā
 उक़ाब||
 उक्त||
 उक्ति||
@@ -1912,7 +1912,7 @@ autoExpandExamples.hi = `
 उठाना||
 उड़ती चिड़िया के पर पहचानना||
 उड़द||
-उड़ना|to fly|ʊ§ɽ.§nɑː
+उड़ना|to fly|ʊ,ɽ.,nɑː
 उड़ान||
 उड़ाना||
 उड़िया||
@@ -2125,7 +2125,7 @@ autoExpandExamples.hi = `
 उर्वशी||
 उलझन||
 उलझना||
-उलझा|entangled|ʊ§l.§d͡ʒʱaː|uljhā
+उलझा|entangled|ʊ,l.,d͡ʒʱaː|uljhā
 उलझाना||
 उलटना||
 उलटा||
@@ -2193,7 +2193,7 @@ autoExpandExamples.hi = `
 ऊना||
 ऊनी||
 ऊपर जाना||
-ऊपर|above|uː.§pə§ɾ
+ऊपर|above|uː.,pə,ɾ
 ऊपरवाला||
 ऊपरी||
 ऊफ़ा||
@@ -2212,17 +2212,17 @@ autoExpandExamples.hi = `
 ऊसर||
 ऊह||
 ऋग्वेद||
-ऋण|debt, loss|ɾɪ§ɳ|ŕṇ
+ऋण|debt, loss|ɾɪ,ɳ|ŕṇ
 ऋणदाता||
 ऋणमुक्त||
 ऋणाग्र||
 ऋणायन||
-ऋणी|indebted|ɾɪ.§ɳiː|ŕṇī
-ऋतु|season|ɾɪ.§t̪uː|ŕtu
+ऋणी|indebted|ɾɪ.,ɳiː|ŕṇī
+ऋतु|season|ɾɪ.,t̪uː|ŕtu
 ऋद्धि||
 ऋषि||
 ऋषिकेश||
-ऍल्युमिनियम|aluminium|æ§l§jʊ§mɪ§nɪ§jə§m
+ऍल्युमिनियम|aluminium|æ,l,jʊ,mɪ,nɪ,jə,m
 एंड्रॉइड||
 एंबुलेंस||
 एक एक करके||
@@ -2231,7 +2231,7 @@ autoExpandExamples.hi = `
 एक साथ||
 एक हाथ से ताली नहीं बजती||
 एक-एक||
-एक|one|eː§k
+एक|one|eː,k
 एकक||
 एककोशिकीय||
 एकघातीय||
@@ -2268,7 +2268,7 @@ autoExpandExamples.hi = `
 एडी||
 एड्ज़|AIDS|eːɖd͡ʒ, eːɖz
 एड्रियाटिक सागर||
-एड्स|AIDS|eː§ɖ§s
+एड्स|AIDS|eː,ɖ,s
 एतबार||
 एतराज़||
 एथेंस||
@@ -2311,7 +2311,7 @@ autoExpandExamples.hi = `
 ऐरन||
 ऐलान||
 ऐश करना||
-ऐश|lifestyle|ɛː§ʃ
+ऐश|lifestyle|ɛː,ʃ
 ऐश्वर्य||
 ऐसा||
 ऐसी तैसी करना||
@@ -2319,9 +2319,9 @@ autoExpandExamples.hi = `
 ऐसे||
 ऐहतियातन||
 ऑकलैंड||
-ऑक्सफ़ोर्ड|Oxford|ɔ§k§s.§foː§ɾ§ɖ
+ऑक्सफ़ोर्ड|Oxford|ɔ,k,s.,foː,ɾ,ɖ
 ऑक्साइड||
-ऑफ़िस|office|ɔ.§fɪ§s§/ɔ.pʰɪs
+ऑफ़िस|office|ɔ.,fɪ,s,/ɔ.pʰɪs
 ऑब||
 ऑर्थोडॉक्सी||
 ऑस्ट्रिया||
@@ -2354,7 +2354,7 @@ autoExpandExamples.hi = `
 ओलिंपियाड||
 ओशिआनिया||
 ओष्ठ्य||
-ओस|dew|oː§s
+ओस|dew|oː,s
 ओसाका||
 ओहदा||
 ओहायो||
@@ -2371,7 +2371,7 @@ autoExpandExamples.hi = `
 औपस्थ्य||
 और|and||aur
 औरंगाबाद||
-औरत|woman|ɔː.§ɾə§t̪|aurat
+औरत|woman|ɔː.,ɾə,t̪|aurat
 औलाद||
 औलिया||
 औषध||
@@ -2437,7 +2437,7 @@ autoExpandExamples.hi = `
 कजावा||
 कटना||
 कटहल||
-कटाई|harvesting|kə.§ʈɑː.§iː
+कटाई|harvesting|kə.,ʈɑː.,iː
 कटाक्ष||
 कटार||
 कटि||
@@ -2532,7 +2532,7 @@ autoExpandExamples.hi = `
 कम||
 कमज़ोर||
 कमज़ोरी||
-कमबख़्त|unfortunate, miserable|kə§m.§bə§x§t̪|kambaxt
+कमबख़्त|unfortunate, miserable|kə,m.,bə,x,t̪|kambaxt
 कमर तोड़ना||
 कमर||
 कमरबंद||
@@ -2667,8 +2667,8 @@ autoExpandExamples.hi = `
 कसेरा||
 कसैला||
 कसौटी||
-कह|say!|kə§ɦ
-कहना|to say|kɛ§ɦɛ§naː|kahnā
+कह|say!|kə,ɦ
+कहना|to say|kɛ,ɦɛ,naː|kahnā
 कहनी||
 कहर||
 कहलाना||
@@ -2709,7 +2709,7 @@ autoExpandExamples.hi = `
 क़रीब||
 क़रीबन||
 क़र्ज़||
-क़लम|pen|qə.§lə§m
+क़लम|pen|qə.,lə,m
 क़ल्ब||
 क़व्वाल||
 क़व्वाली||
@@ -3032,7 +3032,7 @@ autoExpandExamples.hi = `
 कुट्टार||
 कुतरना||
 कुतिया||
-कुत्ता|dog|kʊ§t̪.§t̪ɑː
+कुत्ता|dog|kʊ,t̪.,t̪ɑː
 कुत्ती||
 कुत्र||
 कुत्रापि||
@@ -3088,7 +3088,7 @@ autoExpandExamples.hi = `
 कूटना||
 कूटनीति||
 कूटनीतिक||
-कूटनीतिज्ञ|diplomat|kuː§ʈ.§niː.§t̪ɪ§ɡ.§jᵊ
+कूटनीतिज्ञ|diplomat|kuː,ʈ.,niː.,t̪ɪ,ɡ.,jᵊ
 कूड़ा||
 कूड़ेदान||
 कूत||
@@ -3212,7 +3212,7 @@ autoExpandExamples.hi = `
 कॉफी||
 कॉमनवेल्थ||
 कॉमेडियन||
-कॉमेडी|comedy|kɔ.§meː.§ɖiː
+कॉमेडी|comedy|kɔ.,meː.,ɖiː
 कॉलरा||
 को||
 कोंकण||
@@ -3235,7 +3235,7 @@ autoExpandExamples.hi = `
 कोठा||
 कोठारी||
 कोठी||
-कोड|code|koː§d
+कोड|code|koː,d
 कोड़ा||
 कोड़ी||
 कोढ़||
@@ -3248,7 +3248,7 @@ autoExpandExamples.hi = `
 कोप||
 कोपचा||
 कोफ़ी||
-कोफ़्ता|kofta (meat dish)|koː§f.§t̪ɑː|koftā
+कोफ़्ता|kofta (meat dish)|koː,f.,t̪ɑː|koftā
 कोमल गांधार||
 कोमल||
 कोमोरोस||
@@ -3307,7 +3307,7 @@ autoExpandExamples.hi = `
 क्या मैं फ़ारसी बोल रहा हूँ||
 क्या वक़्त है||
 क्या हाल है||
-क्या|what|k§jɑː|kyā
+क्या|what|k,jɑː|kyā
 क्यीव||
 क्यूँ||
 क्यूबा||
@@ -3381,7 +3381,7 @@ autoExpandExamples.hi = `
 क्षय||
 क्षयरोग||
 क्षार||
-क्षारातु|sodium|k§ʂɑː.§ɾɑː.§t̪uː
+क्षारातु|sodium|k,ʂɑː.,ɾɑː.,t̪uː
 क्षारीय||
 क्षालन||
 क्षालित||
@@ -3529,7 +3529,7 @@ autoExpandExamples.hi = `
 ख़ामोशी||
 ख़ारिज||
 ख़ारिश||
-ख़ारीदारी|shopping|xaː.§riː.§daː.§ri
+ख़ारीदारी|shopping|xaː.,riː.,daː.,ri
 ख़ाला||
 ख़ालिक़||
 ख़ालिस||
@@ -3580,7 +3580,7 @@ autoExpandExamples.hi = `
 ख़ून पीना||
 ख़ून सूखना||
 ख़ून-ख़राबा||
-ख़ून|blood|xuː§n
+ख़ून|blood|xuː,n
 ख़ूनी||
 ख़ूब||
 ख़ूबसूरत||
@@ -3619,7 +3619,7 @@ autoExpandExamples.hi = `
 खाद्यतन्तु||
 खान-पान||
 खान||
-खाना|to eat|kʰɑː.§nɑː
+खाना|to eat|kʰɑː.,nɑː
 खानि||
 खाप||
 खारा पानी||
@@ -3787,7 +3787,7 @@ autoExpandExamples.hi = `
 गरुड़द्वार||
 गरेबान||
 गर्द||
-गर्दन|neck|ɡə§ɾ.§d̪ə§n
+गर्दन|neck|ɡə,ɾ.,d̪ə,n
 गर्दिश||
 गर्भ||
 गर्भधारण||
@@ -3860,7 +3860,7 @@ autoExpandExamples.hi = `
 ग़ैर||
 ग़ैरक़ानूनी||
 ग़ैरमौजूदगी||
-ग़ोता|diving|ɣoː.§t̪ɑː
+ग़ोता|diving|ɣoː.,t̪ɑː
 ग़ोताख़ोर||
 ग़ौरतलब||
 गाँजा||
@@ -3888,7 +3888,7 @@ autoExpandExamples.hi = `
 गाड़ना||
 गाड़ा||
 गाड़ी||
-गाढ़ा|thick|ɡɑː.§ɽʱɑː
+गाढ़ा|thick|ɡɑː.,ɽʱɑː
 गाण्डू||
 गात्र||
 गान करना||
@@ -4192,7 +4192,7 @@ autoExpandExamples.hi = `
 घाना||
 घायल||
 घाव||
-घास|grass|ɡʱaː§s
+घास|grass|ɡʱaː,s
 घिन||
 घिरना||
 घी||
@@ -4423,7 +4423,7 @@ autoExpandExamples.hi = `
 चायदान||
 चायदानी||
 चायवाला||
-चार|four|t͡ʃɑː§ɾ|cār
+चार|four|t͡ʃɑː,ɾ|cār
 चारदीवारी||
 चारपाई||
 चारा||
@@ -4800,7 +4800,7 @@ autoExpandExamples.hi = `
 छोटा कुत्ता||
 छोटा हाज़िरी||
 छोटा-मोटा||
-छोटा|small, short|t͡ʃʰoː.§ʈɑː|choṭā
+छोटा|small, short|t͡ʃʰoː.,ʈɑː|choṭā
 छोटी हाज़िरी||
 छोटू||
 छोड़ देना||
@@ -4816,7 +4816,7 @@ autoExpandExamples.hi = `
 जंग||
 जंगजू||
 जंगम||
-जंगल|forest|d͡ʒəŋ.§ɡə§l|jaṅgal
+जंगल|forest|d͡ʒəŋ.,ɡə,l|jaṅgal
 जंगला||
 जंगली सूअर||
 जंगली||
@@ -5030,7 +5030,7 @@ autoExpandExamples.hi = `
 ज़लज़ला||
 ज़हन||
 ज़हमत||
-ज़हर|poison, venom|zə.§ɦə§ɾ
+ज़हर|poison, venom|zə.,ɦə,ɾ
 ज़हरीला||
 ज़हरीली||
 ज़हेनसीब||
@@ -5113,7 +5113,7 @@ autoExpandExamples.hi = `
 जानना|to know||jānnā
 जानबूझकर||
 जानलेवा||
-जानवर|animal|d͡ʒɑː§n.§ʋə§ɾ
+जानवर|animal|d͡ʒɑː,n.,ʋə,ɾ
 जाना-पहचाना||
 जाना||
 जानी||
@@ -5284,7 +5284,7 @@ autoExpandExamples.hi = `
 ज्ञाता||
 ज्ञातृत्व||
 ज्ञान बाटना||
-ज्ञान|knowledge|ɡ§jɑː§n
+ज्ञान|knowledge|ɡ,jɑː,n
 ज्ञानकोष||
 ज्ञानमीमांसा||
 ज्ञानवर्धन||
@@ -5327,7 +5327,7 @@ autoExpandExamples.hi = `
 झल्ला||
 झल्लाना||
 झ़||
-झ़ूझ़|porcupine|ʒuː§ʒ
+झ़ूझ़|porcupine|ʒuː,ʒ
 झा||
 झाँकना||
 झाँझ||
@@ -5347,7 +5347,7 @@ autoExpandExamples.hi = `
 झिझकना||
 झींगा||
 झींगुर||
-झील|lake|d͡ʒʱiː§l
+झील|lake|d͡ʒʱiː,l
 झुक जाना||
 झुकना||
 झुकाव||
@@ -5398,7 +5398,7 @@ autoExpandExamples.hi = `
 टाँग||
 टाँगना||
 टांकण||
-टांग|knee, leg|ʈɑːŋ§ɡ
+टांग|knee, leg|ʈɑːŋ,ɡ
 टाइम क्या है||
 टाइम||
 टापना||
@@ -5466,7 +5466,7 @@ autoExpandExamples.hi = `
 टोक्यो||
 टोना||
 टोप||
-टोपी|hat|ʈoː.§piː
+टोपी|hat|ʈoː.,piː
 टोफ़ू||
 टोरंटो||
 टोरी||
@@ -5478,14 +5478,14 @@ autoExpandExamples.hi = `
 ट्रक||
 ट्राइटियम||
 ट्राम||
-ट्रॅक्टर|tractor|ʈ§ɾæ§k.§ʈə§ɾ
+ट्रॅक्टर|tractor|ʈ,ɾæ,k.,ʈə,ɾ
 ट्रेन||
 ट्रॉय||
 ट्वीट करना||
 ट्वीट||
 ठंड||
 ठंडक||
-ठंडा|cold|ʈʰən.§ɖɑː
+ठंडा|cold|ʈʰən.,ɖɑː
 ठक||
 ठकुराई||
 ठग||
@@ -5565,7 +5565,7 @@ autoExpandExamples.hi = `
 डाका||
 डाकू||
 डाक्टर||
-डाब|green coconut|ɖɑː§b
+डाब|green coconut|ɖɑː,b
 डाबर||
 डायन||
 डायनासोर||
@@ -5639,7 +5639,7 @@ autoExpandExamples.hi = `
 ढिशूम||
 ढीठ||
 ढील||
-ढीला|loose, relaxed|ɖʱiː.§lɑː
+ढीला|loose, relaxed|ɖʱiː.,lɑː
 ढूँढना||
 ढूँढ़ना||
 ढूंढ||
@@ -5948,7 +5948,7 @@ autoExpandExamples.hi = `
 तीज||
 तीतर||
 तीन कठिया||
-तीन|three|t̪iː§n
+तीन|three|t̪iː,n
 तीर||
 तीरंदाज़||
 तीरंदाज़ी||
@@ -5986,7 +5986,7 @@ autoExpandExamples.hi = `
 तुर्क||
 तुर्कमेनिस्तान||
 तुर्किस्तान||
-तुर्की|Turkish language|t̪ʊ§ɾ.§kiː|turkī
+तुर्की|Turkish language|t̪ʊ,ɾ.,kiː|turkī
 तुलना||
 तुलनात्मक||
 तुलसी||
@@ -6078,7 +6078,7 @@ autoExpandExamples.hi = `
 त्रिकोण||
 त्रिकोणमिति||
 त्रिकोणमितीय||
-त्रिज्या|radius|t̪§ɾɪ§d͡ʒ.§jɑː
+त्रिज्या|radius|t̪,ɾɪ,d͡ʒ.,jɑː
 त्रिनिदाद और टोबैगो||
 त्रिपाठी||
 त्रिपुरा||
@@ -6093,7 +6093,7 @@ autoExpandExamples.hi = `
 त्रिशूल||
 त्रुटि||
 त्रुटिपूर्ण||
-त्वचा|skin|t̪§ʋə.§t͡ʃɑː
+त्वचा|skin|t̪,ʋə.,t͡ʃɑː
 त्वरण||
 त्वरित परिवहन||
 त्वरित||
@@ -6139,7 +6139,7 @@ autoExpandExamples.hi = `
 थोड़ा थोड़ा||
 थोड़ा-थोड़ा||
 थोड़ा-बहुत||
-थोड़ा|few|t̪ʰoː.§ɽɑː|thoṛā
+थोड़ा|few|t̪ʰoː.,ɽɑː|thoṛā
 थोपना||
 दंग||
 दंगल||
@@ -6184,7 +6184,7 @@ autoExpandExamples.hi = `
 दफ़न||
 दफ़नाना||
 दफ़ा||
-दफ़्तर|office, bureau|d̪ə§f.§t̪ə§ɾ|daftar
+दफ़्तर|office, bureau|d̪ə,f.,t̪ə,ɾ|daftar
 दफ़्तरशाह||
 दबंग||
 दबदबा||
@@ -6278,7 +6278,7 @@ autoExpandExamples.hi = `
 दही भल्ला||
 दही||
 दहेज़||
-दाँत|tooth|d̪ɑ̃ː§t̪
+दाँत|tooth|d̪ɑ̃ː,t̪
 दाँव||
 दांत||
 दाई||
@@ -6353,7 +6353,7 @@ autoExpandExamples.hi = `
 दिगंबर||
 दिग्गज||
 दिन भर||
-दिन|day|dɪ§n
+दिन|day|dɪ,n
 दिनचर्या||
 दिनभर||
 दिनांकित||
@@ -6372,7 +6372,7 @@ autoExpandExamples.hi = `
 दिली||
 दिलेरी||
 दिल्ली अभी दूर है||
-दिल्ली|Delhi|d̪ɪ§l.§liː
+दिल्ली|Delhi|d̪ɪ,l.,liː
 दिल्लीवाला||
 दिवस||
 दिवसीय||
@@ -6407,7 +6407,7 @@ autoExpandExamples.hi = `
 दीवार||
 दु-||
 दुःख|grief|d̪ʊkʰ
-दुःखी|sad, depressed|d̪ʊ(ɦ).§kʰiː
+दुःखी|sad, depressed|d̪ʊ(ɦ).,kʰiː
 दुःस्वप्न|nightmare|d̪ʊ(ɦ).sʋəp.nə, d̪ʊs.ʋəp.nə
 दुअन्नी||
 दुआ||
@@ -6510,7 +6510,7 @@ autoExpandExamples.hi = `
 देवता||
 देवदार||
 देवदूत||
-देवनागरी|Devanagari|d̪eː§ʋ.§nɑː§ɡ.§ɾiː
+देवनागरी|Devanagari|d̪eː,ʋ.,nɑː,ɡ.,ɾiː
 देवभाषा||
 देवर||
 देवल||
@@ -6690,7 +6690,7 @@ autoExpandExamples.hi = `
 धूम्र||
 धूम्रपान||
 धूर्तता||
-धूल|dust|d̪ʱuː§l
+धूल|dust|d̪ʱuː,l
 धूलि||
 धूसर||
 धैर्य||
@@ -6892,10 +6892,10 @@ autoExpandExamples.hi = `
 नाईं||
 नाक कटना||
 नाक पर मक्खी न बैठने देना||
-नाक|nose|nɑː§k
+नाक|nose|nɑː,k
 नाकाम||
 नाकों चने चबवाना||
-नाख़ुन|fingernail|nɑː.§xuː§n|nāxun
+नाख़ुन|fingernail|nɑː.,xuː,n|nāxun
 नाख़ून||
 नाखुन||
 नाखून||
@@ -7315,7 +7315,7 @@ autoExpandExamples.hi = `
 पंचायती||
 पंछी||
 पंजा||
-पंजाब|Punjab|pən.§d͡ʒɑː§b|pañjāb
+पंजाब|Punjab|pən.,d͡ʒɑː,b|pañjāb
 पंजाबी||
 पंजीकरण||
 पंजीकृत||
@@ -7328,7 +7328,7 @@ autoExpandExamples.hi = `
 पकड़||
 पकड़ना|to hold||pakaṛnā
 पकना||
-पकवान|food dish|pə§k§waː§n
+पकवान|food dish|pə,k,waː,n
 पकाना||
 पकोड़ा||
 पक्का||
@@ -7418,7 +7418,7 @@ autoExpandExamples.hi = `
 पत्थर|stone||patthar
 पत्थरबाज़||
 पत्थरबाज़ी||
-पत्नी|wife|pə§t̪.§niː|patnī
+पत्नी|wife|pə,t̪.,niː|patnī
 पत्र||
 पत्रकार||
 पत्रवाहक||
@@ -7612,7 +7612,7 @@ autoExpandExamples.hi = `
 पवित्रता||
 पशु||
 पशुपालक||
-पश्चात्|afterwards|pə§ʃ.§t͡ʃɑː§t̪
+पश्चात्|afterwards|pə,ʃ.,t͡ʃɑː,t̪
 पश्चिम गोदावरी||
 पश्चिम बंगाल||
 पश्चिम||
@@ -7863,7 +7863,7 @@ autoExpandExamples.hi = `
 पुत्रजया||
 पुत्री||
 पुदीना||
-पुनः|again|pʊ.§nə(ɦ)
+पुनः|again|pʊ.,nə(ɦ)
 पुनःप्रवेश|re-entry|pʊ.nə(ɦ).pɾə.ʋeːʃ
 पुनरुत्थान||
 पुनर्-||
@@ -7992,7 +7992,7 @@ autoExpandExamples.hi = `
 पेठा||
 पेड||
 पेड़-पौधे||
-पेड़|tree|peː§ɽ|peṛ
+पेड़|tree|peː,ɽ|peṛ
 पेड़ा||
 पेन||
 पेन्सिल||
@@ -8186,7 +8186,7 @@ autoExpandExamples.hi = `
 प्रत्यर्पित||
 प्रत्याशा||
 प्रत्याशी||
-प्रत्येक|each, every|p§ɾə§t̪.§jeː§k|pratyek
+प्रत्येक|each, every|p,ɾə,t̪.,jeː,k|pratyek
 प्रथम||
 प्रथमतः||
 प्रथमा विभक्ति||
@@ -8576,7 +8576,7 @@ autoExpandExamples.hi = `
 फूफी||
 फूल गोभी||
 फूल चढ़ाना||
-फूल|flower|pʰuː§l
+फूल|flower|pʰuː,l
 फूलदान||
 फूलना||
 फेंक||
@@ -8704,7 +8704,7 @@ autoExpandExamples.hi = `
 बड़बड़ाना||
 बड़हंस सारंग||
 बड़ा दिन||
-बड़ा|big|bə.§ɽɑː|baṛā
+बड़ा|big|bə.,ɽɑː|baṛā
 बड़ाई||
 बड़ो||
 बडा||
@@ -8978,7 +8978,7 @@ autoExpandExamples.hi = `
 बाड़||
 बाड़ी||
 बाढ़||
-बाण|arrow|bɑː§ɳ
+बाण|arrow|bɑː,ɳ
 बात करना||
 बात||
 बातचीत||
@@ -9011,7 +9011,7 @@ autoExpandExamples.hi = `
 बारहखड़ी||
 बारात||
 बारिक||
-बारिश|rain|bɑː.§ɾɪ§ʃ
+बारिश|rain|bɑː.,ɾɪ,ʃ
 बारी||
 बारीक||
 बारूत||
@@ -9225,7 +9225,7 @@ autoExpandExamples.hi = `
 बेजान||
 बेजिंग||
 बेझिझक||
-बेटा|son|beː.§ʈɑː
+बेटा|son|beː.,ʈɑː
 बेटी||
 बेड़ा||
 बेत||
@@ -9467,7 +9467,7 @@ autoExpandExamples.hi = `
 भारतीय||
 भारा||
 भारी-भरकम||
-भारी|heavy|bʱɑː.§ɾiː
+भारी|heavy|bʱɑː.,ɾiː
 भारोत्तोलक||
 भारोत्तोलन||
 भारोपीय||
@@ -9482,7 +9482,7 @@ autoExpandExamples.hi = `
 भावमय||
 भावुक||
 भावुकता||
-भाषण|speaking, saying|bʱɑː.§ʂə§ɳ
+भाषण|speaking, saying|bʱɑː.,ʂə,ɳ
 भाषा-परिवार||
 भाषा||
 भाषांतर||
@@ -9693,7 +9693,7 @@ autoExpandExamples.hi = `
 मक्का||
 मक्कार||
 मक्खन लगाना||
-मक्खन|butter|mə§k.§kʰə§n
+मक्खन|butter|mə,k.,kʰə,n
 मक्खनफल||
 मक्खी||
 मक्खीचूस||
@@ -9711,7 +9711,7 @@ autoExpandExamples.hi = `
 मच्छर||
 मच्छरदानी||
 मच्छी||
-मछली|fish|mə§t͡ʃʰ.§liː
+मछली|fish|mə,t͡ʃʰ.,liː
 मछलीपालन||
 मछुआ||
 मछुआरा||
@@ -10053,7 +10053,7 @@ autoExpandExamples.hi = `
 माटी||
 माण्डलिक||
 मातम||
-माता-पिता|parents|mɑː.§t̪ɑː.§–§pɪ.§t̪ɑː
+माता-पिता|parents|mɑː.,t̪ɑː.,–,pɪ.,t̪ɑː
 माता|mother||mātā
 मातापिता||
 मातृ भाषा||
@@ -10253,7 +10253,7 @@ autoExpandExamples.hi = `
 मुँडेर||
 मुँह काला करना||
 मुँह मीठा करना||
-मुँह|mouth|mʊ̃§ɦ|mũh
+मुँह|mouth|mʊ̃,ɦ|mũh
 मुँहतोड़ जवाब||
 मुँहतोड़||
 मुँहमाँगा||
@@ -10317,7 +10317,7 @@ autoExpandExamples.hi = `
 मुग्ध||
 मुजरिम||
 मुजस्समा||
-मुज़फ़्फ़रगढ़|Muzaffargarh (Pakistan)|mʊ.§zə§f.§fə§ɾ.§ɡə§ɽʱ|muzaffargaṛh
+मुज़फ़्फ़रगढ़|Muzaffargarh (Pakistan)|mʊ.,zə,f.,fə,ɾ.,ɡə,ɽʱ|muzaffargaṛh
 मुज़फ़्फ़रपुर||
 मुज़फ़्फ़राबाद||
 मुजाहिदीन||
@@ -10665,7 +10665,7 @@ autoExpandExamples.hi = `
 यह मुँह और मसूर की दाल||
 यह|he, she, it, this|jəɦ, jeː|yah
 यहाँ-वहाँ||
-यहाँ|here|jə.§ɦɑ̃ː|yahā̃
+यहाँ|here|jə.,ɦɑ̃ː|yahā̃
 यहां||
 यही||
 यहीं||
@@ -10762,7 +10762,7 @@ autoExpandExamples.hi = `
 योगदान||
 योगिनी||
 योगी||
-योग्य|deserving, capable|joː§ɡ.§jᵊ
+योग्य|deserving, capable|joː,ɡ.,jᵊ
 योग्यकार्ता||
 योग्यता||
 योग्यत्व||
@@ -10905,7 +10905,7 @@ autoExpandExamples.hi = `
 रस्म||
 रस्सा||
 रस्सी|rope||rassī
-रहना|to stay, remain|ɾə§ɦ.§nɑː
+रहना|to stay, remain|ɾə,ɦ.,nɑː
 रहनुमा||
 रहम||
 रहमान||
@@ -10969,7 +10969,7 @@ autoExpandExamples.hi = `
 राज्यपाल||
 राज्यवार||
 राज्यानुसार||
-रात|night|ɾɑː§t̪|rāt
+रात|night|ɾɑː,t̪|rāt
 राता||
 रातोंरात||
 रात्रि||
@@ -11001,7 +11001,7 @@ autoExpandExamples.hi = `
 राशन||
 राशि||
 राशिफल||
-राष्ट्र|nation|ɾɑː§ʂ.§ʈ§ɾᵊ
+राष्ट्र|nation|ɾɑː,ʂ.,ʈ,ɾᵊ
 राष्ट्रगान||
 राष्ट्रपति||
 राष्ट्रपिता||
@@ -11049,7 +11049,7 @@ autoExpandExamples.hi = `
 रिहा||
 रिहाई||
 रीछ||
-रीट्वीट|retweet (web)|ɾiː§ʈ.§ʋiː§ʈ
+रीट्वीट|retweet (web)|ɾiː,ʈ.,ʋiː,ʈ
 रीढ़||
 रीत||
 रीता||
@@ -11061,14 +11061,14 @@ autoExpandExamples.hi = `
 रुख़सत||
 रुख़सार||
 रुग्ण||
-रुग्णालय|hospital|ɾʊ§ɡ.§ɳɑː.§lə§j
+रुग्णालय|hospital|ɾʊ,ɡ.,ɳɑː.,lə,j
 रुचि||
 रुचिरा||
 रुझान||
 रुत||
 रुद्रवीणा||
 रुद्राक्ष||
-रुपया|rupee|ɾʊ§p.§jɑː
+रुपया|rupee|ɾʊ,p.,jɑː
 रुलवाना||
 रुलाना||
 रुसी||
@@ -11321,7 +11321,7 @@ autoExpandExamples.hi = `
 लापसी||
 लाफा||
 लाबु||
-लाभ-हानि|profit-loss|lɑː§bʱ.§–§ɦɑː.§niː
+लाभ-हानि|profit-loss|lɑː,bʱ.,–,ɦɑː.,niː
 लाभ||
 लाभकारक||
 लाभदायक||
@@ -11332,7 +11332,7 @@ autoExpandExamples.hi = `
 लाल बत्ती||
 लाल मिर्च||
 लाल सागर||
-लाल|red|lɑː§l|lāl
+लाल|red|lɑː,l|lāl
 लालच||
 लालची||
 लालटेन||
@@ -11346,7 +11346,7 @@ autoExpandExamples.hi = `
 लाश||
 लाहौर||
 लिंग वृद्धि||
-लिंग|gender|lɪŋ§ɡ
+लिंग|gender|lɪŋ,ɡ
 लिंगन||
 लिंगपूजक||
 लिंगवाद||
@@ -11359,7 +11359,7 @@ autoExpandExamples.hi = `
 लिखावट||
 लिखित||
 लिख्टेंश्टाइन||
-लिङ्ग|gender (alt.)|lɪ§ŋ§ɡ
+लिङ्ग|gender (alt.)|lɪ,ŋ,ɡ
 लिथुआनिया||
 लिपटना||
 लिपि||
@@ -11577,7 +11577,7 @@ autoExpandExamples.hi = `
 वसीयत||
 वसूल||
 वस्तु रूप में||
-वस्तु|item|ʋə§s§tu
+वस्तु|item|ʋə,s,tu
 वस्त्र||
 वह बेहोश है||
 वह|he, she, it, that|ʋəɦ, ʋoː|vah
@@ -11920,7 +11920,7 @@ autoExpandExamples.hi = `
 वीरान||
 वीर्य||
 वृक||
-वृक्ष|tree|ʋɾɪ§k§ʂ
+वृक्ष|tree|ʋɾɪ,k,ʂ
 वृत्त||
 वृत्तांत||
 वृत्तान्त||
@@ -11990,7 +11990,7 @@ autoExpandExamples.hi = `
 व्यंजन||
 व्यंजनाक्षर||
 व्यक्त||
-व्यक्ति|person|ʋ§jə§k.§t̪iː|vyakti
+व्यक्ति|person|ʋ,jə,k.,t̪iː|vyakti
 व्यक्तिक||
 व्यक्तिगत||
 व्यक्तित्व||
@@ -12030,7 +12030,7 @@ autoExpandExamples.hi = `
 व्युत्पत्ति||
 व्युत्पन्न||
 व्यूहरचना||
-व्रत|fast|ʋ§rʌ§t
+व्रत|fast|ʋ,rʌ,t
 व्लादिमीर||
 व्लादिवोस्तोक||
 व्हिस्की||
@@ -12043,7 +12043,7 @@ autoExpandExamples.hi = `
 शकरकंद||
 शक्कर||
 शक्की||
-शक्ति|energy|ʃə§k§ti
+शक्ति|energy|ʃə,k,ti
 शक्तिशाली||
 शक्तिहीन||
 शक्य||
@@ -12453,7 +12453,7 @@ autoExpandExamples.hi = `
 संगतराश||
 संगम||
 संगमरमर||
-संगीत|music|səŋ.§ɡiː§t̪
+संगीत|music|səŋ.,ɡiː,t̪
 संगीतकार||
 संगीन||
 संगोष्ठी||
@@ -12516,7 +12516,7 @@ autoExpandExamples.hi = `
 संबंध कारक||
 संबंध||
 संबंधित||
-संबंधी|relative, relation|səm.§bən.§d̪ʱiː
+संबंधी|relative, relation|səm.,bən.,d̪ʱiː
 संबोधन विभक्ति||
 संबोधन||
 संबोधित||
@@ -12611,7 +12611,7 @@ autoExpandExamples.hi = `
 सगाई||
 सघन||
 सघोष||
-सङ्गीत|music (alt.)|sə§ŋ.§ɡiː§t̪
+सङ्गीत|music (alt.)|sə,ŋ.,ɡiː,t̪
 सच||
 सचमुच||
 सचाई||
@@ -12712,7 +12712,7 @@ autoExpandExamples.hi = `
 सफ़र||
 सफ़रनामा||
 सफ़ाई||
-सफ़ेद|white|sə.§feː§d̪
+सफ़ेद|white|sə.,feː,d̪
 सफ़ेदी||
 सफेद||
 सब|all||sab
@@ -12739,7 +12739,7 @@ autoExpandExamples.hi = `
 समकोण||
 समक्ष||
 समग्र||
-समझ|understanding|sə.§mə§d͡ʒʱ|samajh
+समझ|understanding|sə.,mə,d͡ʒʱ|samajh
 समझदार||
 समझना||
 समझाना||
@@ -13007,7 +13007,7 @@ autoExpandExamples.hi = `
 साँई||
 साँझ||
 साँड़||
-साँप|snake|sɑ̃ː§p|sā̃p
+साँप|snake|sɑ̃ː,p|sā̃p
 साँवला||
 साँस लेना|to breathe||sā̃s lenā
 साँस||
@@ -13017,7 +13017,7 @@ autoExpandExamples.hi = `
 सांड||
 सांडा||
 सांद्रता||
-सांप|snake|sɑːm§p
+सांप|snake|sɑːm,p
 सांप्रदायिक||
 सांप्रदायिकता||
 सांबर|sambar|sɑːm.bəɾ
@@ -13200,7 +13200,7 @@ autoExpandExamples.hi = `
 सिपास||
 सिपाही||
 सिफ़त||
-सिफ़र|zero|sɪ.§fə§ɾ
+सिफ़र|zero|sɪ.,fə,ɾ
 सिफ़ारत||
 सिफ़ारतख़ाना||
 सिफ़ारिश||
@@ -13355,7 +13355,7 @@ autoExpandExamples.hi = `
 सुसंस्कृत||
 सुसज्जित||
 सुस्त-दिमाग़||
-सुस्त|lazy|sʊ§s§t
+सुस्त|lazy|sʊ,s,t
 सुस्ताना||
 सुस्ती||
 सुस्वादु||
@@ -13392,7 +13392,7 @@ autoExpandExamples.hi = `
 सूतिकागार||
 सूतिकागृह||
 सूती||
-सूत्र|thread, sutra, formula|suː§t̪.§ɾᵊ
+सूत्र|thread, sutra, formula|suː,t̪.,ɾᵊ
 सूद||
 सूना||
 सूनू||
@@ -13675,7 +13675,7 @@ autoExpandExamples.hi = `
 स्वास्थ्य||
 स्वाहा||
 स्वाहिली||
-स्विट्ज़रलैंड|Switzerland|s§ʋɪ§ʈ.§zə§ɾ.§lɛːɳ§ɖ
+स्विट्ज़रलैंड|Switzerland|s,ʋɪ,ʈ.,zə,ɾ.,lɛːɳ,ɖ
 स्विट्ज़रलैण्ड||
 स्विन्न||
 स्वीकार करना||
@@ -13833,7 +13833,7 @@ autoExpandExamples.hi = `
 हवन||
 हवलदार||
 हवस||
-हवा|wind|ɦə.§ʋɑː
+हवा|wind|ɦə.,ʋɑː
 हवाई अड्डा||
 हवाई जहाज़||
 हवाई||
@@ -13872,15 +13872,15 @@ autoExpandExamples.hi = `
 हाथ जोड़ना||
 हाथ पाँव चलना||
 हाथ में होना||
-हाथ|hand|ɦɑː§t̪ʰ|hāth
+हाथ|hand|ɦɑː,t̪ʰ|hāth
 हाथापाई||
 हाथी||
 हादसा||
 हानि||
 हानिकारक||
 हाफ़ पैंट||
-हाफ़िज़|guardian|ɦɑː.§fɪ.§z
-हाफ़िज़ा|memory, recollection|ɦɑː.§fɪ.§zɑː
+हाफ़िज़|guardian|ɦɑː.,fɪ.,z
+हाफ़िज़ा|memory, recollection|ɦɑː.,fɪ.,zɑː
 हामी||
 हाय||
 हार चढ़ाना||
@@ -13916,7 +13916,7 @@ autoExpandExamples.hi = `
 हिंदको||
 हिंदचीन||
 हिंदवी||
-हिंदी|Hindi|ɦɪn.§d̪iː
+हिंदी|Hindi|ɦɪn.,d̪iː
 हिंदुत्व||
 हिंदुत्ववादी||
 हिंदुस्तान||
@@ -13941,7 +13941,7 @@ autoExpandExamples.hi = `
 हिन्द||
 हिन्दचीन||
 हिन्दवी||
-हिन्दी|Hindi|ɦɪ§n.§d̪iː
+हिन्दी|Hindi|ɦɪ,n.,d̪iː
 हिन्दुस्तान||
 हिन्दुस्तानी||
 हिन्दू धर्म||
@@ -14028,7 +14028,7 @@ autoExpandExamples.hi = `
 हैरान||
 हैरानी||
 हैलोवीन||
-हैवान|animal|ɦɛː.§ʋɑː§n
+हैवान|animal|ɦɛː.,ʋɑː,n
 हैवानियत||
 हैसियत||
 हॉकी|hockey|ɦɔ.kiː
@@ -14060,7 +14060,7 @@ autoExpandExamples.hi = `
 ह्रीति||
 ह्वेल||
 ॐ|Om|oːm
-ऒन|blind|o§n
+ऒन|blind|o,n
 
 
 
