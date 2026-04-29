@@ -7,8 +7,4 @@
 
 
 var collections = [
-{ symbol:'Ⓒ', desc:'Consonants', chars:'[ᝃᝄᝅᝆᝇᝈᝉᝊᝋᝌᝍᝎᝏᝐᝑ]' },
-{ symbol:'ⓥ', desc:'Dependent vowels', chars:'[\u1752\u1753]' },
-{ symbol:'Ⓥ', desc:'Independent vowels', chars:'[ᝀᝁᝂ]' },
-{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D]' },
 ]

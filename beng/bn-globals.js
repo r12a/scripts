@@ -7,7 +7,7 @@ blockDirection=''  // ltr/rtl or '' for ltr; used by block.html
 
 blockDirectoryName='beng'  // folder name where block file is found, no slash
 orthogFilePath='beng/bn'  // path below /scripts, including filename, but no extension, eg. lana/nod
-pickerDir='beng-bn'  // directory name for picker, no slash at end
+pickerDir='beng'  // directory name for picker, no slash at end
 orthogSummaryTableName='bn'  // id used for langs record in xx-langdata.js; used to make summary table
 scriptSummaryTableName='beng'  // id used for langs record in xx-langdata.js; used to make summary table
 charUsageBCP='bn'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only

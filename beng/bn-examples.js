@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -93,7 +93,7 @@ autoExpandExamples.bn = `
 অকরণ||␣|
 অকরণীয় ঘর||␣|
 অকরুণ||␣|
-অকর্তা|passive, inactive|ˈɔ§kɔ§ɹ§t̪a|okorta
+অকর্তা|passive, inactive|ˈɔ,kɔ,ɹ,t̪a|okorta
 অকর্মণ্য||␣|
 অকর্মা||␣|
 অকর্মিষ্ঠ||␣|
@@ -249,7 +249,7 @@ autoExpandExamples.bn = `
 অক্কা||␣|
 অক্কাপ্রাপ্তি||␣|
 অক্টোপাস||␣|
-অক্টোবর|October|ɔ§k.§ʈo.§bɔ§ɾ
+অক্টোবর|October|ɔ,k.,ʈo.,bɔ,ɾ
 অক্ত||␣|
 অক্রম||␣|
 অক্রমিক||␣|
@@ -554,7 +554,7 @@ autoExpandExamples.bn = `
 অগ্রিয়||␣|
 অগ্রীয়||␣|
 অগ্রে||␣|
-অগ্র্য|former, previous|ˈɔ§ɡ§ɾɔ§e̯o|ôgrô|||অগ্র‍্য
+অগ্র্য|former, previous|ˈɔ,ɡ,ɾɔ,e̯o|ôgrô|||অগ্র‍্য
 অঘ||␣|
 অঘটন||␣|
 অঘটনঘটনপটিয়সী||␣|
@@ -584,7 +584,7 @@ autoExpandExamples.bn = `
 অঘোষবর্ণ||␣|
 অঘ্রাত||␣|
 অঘ্রান||␣|
-অঙ্ক|mathematics|ɔ§ŋ§ko
+অঙ্ক|mathematics|ɔ,ŋ,ko
 অঙ্কগত||␣|
 অঙ্কদেশ||␣|
 অঙ্কন||␣|
@@ -633,7 +633,7 @@ autoExpandExamples.bn = `
 অজগর||␣
 অজুহাত||␣|
 অজ্ঞাত||␣|
-অঞ্চল|region|ɔ§n§t͡ʃɔ§l
+অঞ্চল|region|ɔ,n,t͡ʃɔ,l
 অঞ্জলি||␣|
 অটল||␣|
 অড়হর||␣|
@@ -671,7 +671,7 @@ autoExpandExamples.bn = `
 অনন্যা||␣|
 অনবচ্ছিন্ন||
 অনল||␣|
-অনলাইন|online|ɔ§n.§la§i̯§n
+অনলাইন|online|ɔ,n.,la,i̯,n
 অনস্বীকার্য||␣|
 অনাঘ্রাত||␣|
 অনাঘ্রাতা||␣|
@@ -687,7 +687,7 @@ autoExpandExamples.bn = `
 অনুবাদ||␣
 অনুবাদক|translator|ɔnubad̪ɔk
 অনুভব করা||
-অনুভব|feeling, perception|o§nu§bʱɔ§b|onubhob
+অনুভব|feeling, perception|o,nu,bʱɔ,b|onubhob
 অনুভূতি||␣|
 অনুমতি||␣
 অনুযায়ী||␣|
@@ -754,7 +754,7 @@ autoExpandExamples.bn = `
 অভি-||
 অভিজ্ঞ||␣|
 অভিজ্ঞতা||␣|
-অভিধান|dictionary|ɔ§bʱi§dʱa§n
+অভিধান|dictionary|ɔ,bʱi,dʱa,n
 অভিনেতা||␣|
 অভিনেত্রী||␣|
 অভিপ্রায়||␣|
@@ -837,9 +837,9 @@ autoExpandExamples.bn = `
 অহর্নিশি||␣|
 অ্যাঁ||␣|
 অ্যাঙ্গোলা||
-অ্যাটর্নি|attorney|ɔ§æ§ʈo§r§ni
+অ্যাটর্নি|attorney|ɔ,æ,ʈo,r,ni
 অ্যাদ্দিন||␣|
-অ্যানথ্রাক্স|anthrax|æ§‹§n§t̪ʰ§ɾɑ§k§s
+অ্যানথ্রাক্স|anthrax|æ,‹,n,t̪ʰ,ɾɑ,k,s
 অ্যানিমে||␣
 অ্যানিমেশন||␣|
 অ্যান্টার্কটিকা||␣|
@@ -902,7 +902,7 @@ autoExpandExamples.bn = `
 আকাদেমি||␣|
 আকাম||␣|
 আকালী||␣|
-আকাশ|sky|a§ka§ʃ|akaś
+আকাশ|sky|a,ka,ʃ|akaś
 আকাশি||␣|
 আকুল||␣|
 আক্কল||␣|
@@ -1017,7 +1017,7 @@ autoExpandExamples.bn = `
 আতস||␣|
 আতা||␣
 আত্মরতিমূলক ব্যক্তিত্ব ব্যাধি||␣|
-আত্মহত্যা|suicide|a§›§t.to.§ɦo§›§t.ta|attohotta
+আত্মহত্যা|suicide|a,›,t.to.,ɦo,›,t.ta|attohotta
 আত্মা||␣|
 আত্মীয়||␣|
 আদত||␣|
@@ -1151,7 +1151,7 @@ autoExpandExamples.bn = `
 আম্মে||␣
 আয়তক্ষেত্র||
 আয়না||␣
-আয়রন|iron|a§e̯.§rɔ§n
+আয়রন|iron|a,e̯.,rɔ,n
 আয়াতুল্লাহ||␣|
 আয়ারল্যান্ড||
 আয়ু||␣|
@@ -1224,7 +1224,7 @@ autoExpandExamples.bn = `
 আলোচনা||␣
 আল্লাহ||␣
 আল্লাহু আকবার||␣
-আল্লাহ্|Allah|a§›§lːa§–
+আল্লাহ্|Allah|a,›,lːa,–
 আশখাস||
 আশমান জমিন ফারাক||
 আশমান-জমিন ফারাক||
@@ -1247,7 +1247,7 @@ autoExpandExamples.bn = `
 আশ্বিন||␣
 আশ্রম||␣|
 আশ্রয়||␣|
-আষাঢ়|June-July|ɑ§ʃɑ§ɽ
+আষাঢ়|June-July|ɑ,ʃɑ,ɽ
 আষ্ট||␣
 আসগর||␣|
 আসবাব||␣|
@@ -1269,7 +1269,7 @@ autoExpandExamples.bn = `
 আস্তাবল||␣|
 আস্তিন||
 আস্তে||␣|
-আস্থা|trust|ɑ§ʃ§tʰɑ
+আস্থা|trust|ɑ,ʃ,tʰɑ
 আস্পদ্দা||␣|
 আহওয়াল||
 আহনাফ||␣|
@@ -1284,9 +1284,9 @@ autoExpandExamples.bn = `
 আহ্মেদ||
 ই||␣
 ইঁচা||
-ইঁদুর|mouse, rat|ĩ§du§r
+ইঁদুর|mouse, rat|ĩ,du,r
 ইংরেজ সাম্রাজ্য||␣|
-ইংরেজ|English|iŋ§re§d͡ʒ
+ইংরেজ|English|iŋ,re,d͡ʒ
 ইংরেজি ভাষা||␣
 ইংরেজি|English|iŋɾed͡ʒi
 ইংল্যান্ড||␣|
@@ -1335,7 +1335,7 @@ autoExpandExamples.bn = `
 ইদানীং||␣|
 ইন||␣
 ইনকার||␣|
-ইনকিলাব|revolution|i§n.§ki.§la§b
+ইনকিলাব|revolution|i,n.,ki.,la,b
 ইনকিলাবি|revolutionary|in.ki.la.bi
 ইনকিলাবী||␣
 ইনপুট||
@@ -1414,12 +1414,12 @@ autoExpandExamples.bn = `
 ইহানত||
 ইহুদি ধর্ম||␣
 ইহুদি||
-ঈগল|eagle|i§ɡɔ§l
+ঈগল|eagle|i,ɡɔ,l
 ঈদ মুবারক||
 ঈদ মুবারাক||
 ঈদ মোবারক||
 ঈদ মোবারাক||
-ঈদ|Eid|iː§d
+ঈদ|Eid|iː,d
 ঈদগাহ||␣|
 ঈদুল আজহা||␣|
 ঈদুল ফিতর||␣|
@@ -1430,7 +1430,7 @@ autoExpandExamples.bn = `
 ঈশ্বর||␣|
 ঈসা||␣|
 ঈস্ট||␣|
-উঁচু|height|ũ§t͡ʃu
+উঁচু|height|ũ,t͡ʃu
 উইকিঅভিধান||␣|
 উইকিপিডিয়া||␣
 উইল||␣|
@@ -1445,12 +1445,12 @@ autoExpandExamples.bn = `
 উঙ্ঘানো||␣|
 উচিত||␣|
 উচ্চাকাঙ্ক্ষী||␣|
-উচ্চারণ|pronunciation|u§t͡ʃ§t͡ʃɑ§rɔ§n
-উচ্চারন|pronunciation|u§t͡ʃ§t͡ʃɑ§rɔ§n
+উচ্চারণ|pronunciation|u,t͡ʃ,t͡ʃɑ,rɔ,n
+উচ্চারন|pronunciation|u,t͡ʃ,t͡ʃɑ,rɔ,n
 উচ্ছব||␣|
 উচ্ছিষ্ট||␣|
 উচ্ছ্বাস||␣|
-উচ্‌চারণ|pronunciation|u§t͡ʃ§§t͡ʃɑ§rɔ§n
+উচ্‌চারণ|pronunciation|u,t͡ʃ,,t͡ʃɑ,rɔ,n
 উছব||␣|
 উজবেক ভাষা||
 উজবেকিস্তান||
@@ -1458,7 +1458,7 @@ autoExpandExamples.bn = `
 উজির||␣
 উজিরে আজম||
 উজ্জ্বল||␣|
-উট|camel|u§ʈ
+উট|camel|u,ʈ
 উঠান||␣|
 উড়া||␣|
 উড়িষ্যা||␣|
@@ -1500,7 +1500,7 @@ autoExpandExamples.bn = `
 উনি||␣
 উনিশ||
 উন্দূর|mouse|und̪uɾ
-উন্মত্ত|insane|u§n§mɔ§t§to
+উন্মত্ত|insane|u,n,mɔ,t,to
 উন্মত্ততা||␣|
 উপ-||␣
 উপকার||␣|
@@ -1559,7 +1559,7 @@ autoExpandExamples.bn = `
 উৎপত্তি|origin, source|ut̪pɔt̪ːi
 উৎপল|water lily|ut̪ˈpɔˑl
 উৎস||␣
-উৎসব|festival|u§t§ʃɔ§b
+উৎসব|festival|u,t,ʃɔ,b
 উৎসর্গ||␣|
 উৎসাহ||␣|
 উৎসাহহীনতা||␣|
@@ -1573,7 +1573,7 @@ autoExpandExamples.bn = `
 ঋক্ষ||␣|
 ঋগ্বেদ||␣|
 ঋণ||␣|
-ঋতু|season|ɾi§t̪u
+ঋতু|season|ɾi,t̪u
 ঋষি||␣|
 এ|this||e
 এঁকে||␣
@@ -1597,18 +1597,18 @@ autoExpandExamples.bn = `
 একজিবিশন||␣
 একজিবিসন||
 একটা কিছু||
-একটু|a little|e§k§ʈu
+একটু|a little|e,k,ʈu
 একতা||␣|
 একতিরিশ||
 একত্রিশ||␣|
 একদম||␣|
 একনায়ক||
-একবার|once|æ§k§bɑ§r
+একবার|once|æ,k,bɑ,r
 একরকম||
 একলব্য||␣|
 একলা||␣
 একষট্টি||
-একাউন্ট|account|æ.§ka§u̯§n§ʈ
+একাউন্ট|account|æ.,ka,u̯,n,ʈ
 একাকী||␣|
 একাডেমি||␣|
 একাডেমী||
@@ -1633,7 +1633,7 @@ autoExpandExamples.bn = `
 এগুলা||␣
 এগুলো||
 এঙ্গল||␣|
-এছাড়াও|also|e.§t͡ʃʰa.§ra§o̯
+এছাড়াও|also|e.,t͡ʃʰa.,ra,o̯
 এজাজতনামা||␣
 এটা||␣
 এটি||␣
@@ -1695,8 +1695,8 @@ autoExpandExamples.bn = `
 এস্রাজ||␣|
 এহরাম||
 এহসান||
-এ্যাডভোকেট|advocate|e§æ§ɖ§bʰo§ke§ʈ
-ঐতিহাসিক|historical|oi§t̪i§ɦɑ§si§k
+এ্যাডভোকেট|advocate|e,æ,ɖ,bʰo,ke,ʈ
+ঐতিহাসিক|historical|oi,t̪i,ɦɑ,si,k
 ঐনকা||␣
 ঐরাবত||␣|
 ও|and, that||o
@@ -1708,7 +1708,7 @@ autoExpandExamples.bn = `
 ওঁর||␣
 ওঁরা||␣
 ওই পারে||␣
-ওই|demonstrative|o§i̯
+ওই|demonstrative|o,i̯
 ওইগুলা||
 ওইগুলো||
 ওইটা||
@@ -1721,7 +1721,7 @@ autoExpandExamples.bn = `
 ওগুলা||
 ওগুলো||
 ওগো||␣|
-ওজন|weight|o§d͡ʒo§n
+ওজন|weight|o,d͡ʒo,n
 ওজর||␣|
 ওজু||␣|
 ওজুদ||
@@ -1730,11 +1730,11 @@ autoExpandExamples.bn = `
 ওটি||
 ওঠা|to rise|ˈoʈʰa
 ওড়না||␣|
-ওড়া|to fly|o§ɽɑ|oṛa
+ওড়া|to fly|o,ɽɑ|oṛa
 ওড়িয়া ভাষা||␣
 ওড়িশা||␣
 ওতফ||␣|
-ওদিকে|in that direction|o§di§ke
+ওদিকে|in that direction|o,di,ke
 ওদের||␣
 ওফাত||␣
 ওম||␣|
@@ -1749,7 +1749,7 @@ autoExpandExamples.bn = `
 ওয়াজ||␣|
 ওয়াজিব||␣|
 ওয়াতন||␣|
-ওয়াদা|promise|w§a§da
+ওয়াদা|promise|w,a,da
 ওয়ারশ||␣|
 ওয়ারিস||␣|
 ওয়ালিমা||
@@ -1772,14 +1772,14 @@ autoExpandExamples.bn = `
 ওলি||␣|
 ওশেনিয়া||␣|
 ওষুধ||␣|
-ওষ্ঠ্য|labial (phon.)|ˈo§ʃ§ttʰo§‹|ōśṭṭho
+ওষ্ঠ্য|labial (phon.)|ˈo,ʃ,ttʰo,‹|ōśṭṭho
 ওসমান||␣|
-ওস্তাদ|teacher|o§s§t̪a§d̪
+ওস্তাদ|teacher|o,s,t̪a,d̪
 ওহাইও||␣
 ওহে||
 ঔঁ||␣|
 ঔষধ||␣
-ঔষুধ|medecine|ou̯§ʃu§dʰ
+ঔষুধ|medecine|ou̯,ʃu,dʰ
 কংগ্রেস||␣|
 কই||␣
 কওম||
@@ -1788,7 +1788,7 @@ autoExpandExamples.bn = `
 কক্ষপথ||
 কক্সবাজার জেলা||
 কক্সবাজার||␣|
-কখন|when|kɒ.§kʰɒ§n|kôkhôn
+কখন|when|kɒ.,kʰɒ,n|kôkhôn
 কখনও||␣
 কখনো সখনো||
 কখনো||␣|
@@ -1800,12 +1800,12 @@ autoExpandExamples.bn = `
 কটা||␣|
 কঠিন|hard, difficult|kɔʈʰin
 কঠোর||␣|
-কড়া|strict|kɔ§ɽa§/kɔɾa
+কড়া|strict|kɔ,ɽa,/kɔɾa
 কড়াই||␣|
 কড়ে আঙ্গুল||
 কণা||␣|
 কণ্ঠ্য||␣|
-কত|how much|ˈkɔ§t̪o|koto
+কত|how much|ˈkɔ,t̪o|koto
 কথন||␣|
 কথা||␣
 কথাবার্তা||␣
@@ -1841,7 +1841,7 @@ autoExpandExamples.bn = `
 কম্পাস||␣|
 কম্পিউটার||␣
 কম্পিউটিং||␣
-কম্প্যাক্ট ডিস্ক|compact disk|ˈkɔ§m§p§æ§k§ʈ§‿§ɖi§s§k|komppakṭo ḍisko
+কম্প্যাক্ট ডিস্ক|compact disk|ˈkɔ,m,p,æ,k,ʈ,‿,ɖi,s,k|komppakṭo ḍisko
 কম্বল||␣
 কম্বোডিয়া||
 কয়||␣|
@@ -1855,14 +1855,14 @@ autoExpandExamples.bn = `
 কয়েথ||␣|
 কয়েদ|bondage|kɔe̯ed̪
 কয়েদখানা|jail, prison|kɔe̯ed̪kʰana
-করছ|doing|ko§r§cʰo
+করছ|doing|ko,r,cʰo
 করঞ্জ||␣
-করতাল|cymbal|kɔ§r§tɑ§l
+করতাল|cymbal|kɔ,r,tɑ,l
 করতে||␣|
-করবী|oleander|kɔ§ɾɔ§bi
+করবী|oleander|kɔ,ɾɔ,bi
 করবেন||␣|
 করলা||␣
-করা|to do|kɔ§ɾa§/kɔɹa/kɔɽa
+করা|to do|kɔ,ɾa,/kɔɹa/kɔɽa
 করাত||␣|
 করানো||␣
 করার||
@@ -1880,12 +1880,12 @@ autoExpandExamples.bn = `
 কর্পূর||␣|
 কর্বুর||␣|
 কর্ম||␣
-কর্মকর্তা|official, officer|ˈkɔ§ɹ§mɔ§kɔ§ɹ§t̪a|kormokorta
+কর্মকর্তা|official, officer|ˈkɔ,ɹ,mɔ,kɔ,ɹ,t̪a|kormokorta
 কর্মসূচি||␣|
 কলকাতা|Kolkata|ˈkolˌkat̪a
 কলজে|liver||kôlje
 কলব||
-কলম|pen|kɔ§lo§m|kolom
+কলম|pen|kɔ,lo,m|kolom
 কলম্বিয়া||
 কলহ||␣|
 কলা|banana|ˈkɔ.läˑ
@@ -1945,7 +1945,7 @@ autoExpandExamples.bn = `
 কাজী||␣
 কাজু বাদাম||
 কাজেই||
-কাটা|to cut|kɑ§ʈɑ|kaṭa
+কাটা|to cut|kɑ,ʈɑ|kaṭa
 কাটুয়া||␣
 কাঠ||␣
 কাঠি পোকা||
@@ -2005,7 +2005,7 @@ autoExpandExamples.bn = `
 কারখানা|factory, workshop|karkʰana
 কারণ|because|␣|karôn
 কারবার||
-কারসাজি|trickery|kɑ§r§ʃɑ§d͡ʒi
+কারসাজি|trickery|kɑ,r,ʃɑ,d͡ʒi
 কারিগর|artisan|kariɡɔr
 কারিগরি||␣
 কারো||␣|
@@ -2054,7 +2054,7 @@ autoExpandExamples.bn = `
 কিনা||
 কিনার|shore|kinar
 কিনারা||␣|
-কিন্তু|but|ki§n§t̪u|kintu
+কিন্তু|but|ki,n,t̪u|kintu
 কিপটা||␣|
 কিবোর্ড||␣|
 কিভাবে|how|kibʱabe/kivabe
@@ -2120,14 +2120,14 @@ autoExpandExamples.bn = `
 কুয়েত||
 কুরআন||␣
 কুরসি||␣|
-কুর্তা|Indian shirt|ku§r§tɑ
+কুর্তা|Indian shirt|ku,r,tɑ
 কুল||
 কুলখানি||␣|
 কুলাঙ্গার||␣
 কুশিয়ার|sugarcane|kuʃijaɾ
 কুষ্টিয়া জেলা||
 কুষ্টিয়া||␣|
-কুষ্ঠ|leprosy|ˈku§ʃ§tʰo|kuśṭho
+কুষ্ঠ|leprosy|ˈku,ʃ,tʰo|kuśṭho
 কুসকুস||␣|
 কুসুম|flower|kuʃum
 কুস্তি|wrestling|kust̪i
@@ -2153,7 +2153,7 @@ autoExpandExamples.bn = `
 কেঁচো||␣|
 কেউ একটা||
 কেউ না||
-কেউ|somebody|ke§u̯
+কেউ|somebody|ke,u̯
 কেউটে সাপ||
 কেউটে||
 কেও||␣|
@@ -2170,7 +2170,7 @@ autoExpandExamples.bn = `
 কেতকী||␣|
 কেতা||␣
 কেদারা|chair|ˈke.d̪ä.ɾäˑ
-কেন|why|kæ.§noː
+কেন|why|kæ.,noː
 কেননা||
 কেনা||␣
 কেনানো||␣
@@ -2180,7 +2180,7 @@ autoExpandExamples.bn = `
 কেন্দ্ৰ|centre|ken̪.d̪ɾɔ̝ˑ
 কেপ ভার্দ||
 কেবল||␣|
-কেমন|how|kæ§mɔ§n|kemôn
+কেমন|how|kæ,mɔ,n|kemôn
 কেয়া||␣
 কেয়ামত||␣|
 কেরদানী||
@@ -2198,7 +2198,7 @@ autoExpandExamples.bn = `
 কেষ্ট||␣|
 কেষ্টবিষ্টু||␣|
 কৈ||␣
-কোকিল|cuckoo|ku§ki§l
+কোকিল|cuckoo|ku,ki,l
 কোটি|crore|ˈko.ʈ̟iˑ
 কোঠা||␣|
 কোণ||␣|
@@ -2235,8 +2235,8 @@ autoExpandExamples.bn = `
 কৌলিক||␣
 কৌশল||␣|
 কৌশিক||␣|
-ক্যম্পাস|campus|k§yæ§m§pa§s
-ক্যম্‌পাস|campus|k§yæ§m§§pa§s
+ক্যম্পাস|campus|k,yæ,m,pa,s
+ক্যম্‌পাস|campus|k,yæ,m,,pa,s
 ক্যা||␣
 ক্যাঁ||␣|
 ক্যাঁচাল||␣|
@@ -2260,7 +2260,7 @@ autoExpandExamples.bn = `
 ক্লম||␣|
 ক্লান্তি||␣|
 ক্লাস||␣|
-ক্ষণ|moment|k§ʃo§n
+ক্ষণ|moment|k,ʃo,n
 ক্ষত||␣|
 ক্ষতি||␣|
 ক্ষতিকর||␣
@@ -2274,7 +2274,7 @@ autoExpandExamples.bn = `
 ক্ষার||␣|
 ক্ষারমৃত্তিকা||␣|
 ক্ষীর||␣|
-ক্ষুদ্র|small|kʰu§‹§d§ro
+ক্ষুদ্র|small|kʰu,‹,d,ro
 ক্ষুদ্রান্ত্র||␣
 ক্ষুধা||␣|
 ক্ষুধার্ত||␣|
@@ -2296,7 +2296,7 @@ autoExpandExamples.bn = `
 খদ্দর||␣|
 খন||
 খন্দকার||␣|
-খবর|news|kʰɔ§bo§r
+খবর|news|kʰɔ,bo,r
 খবরদার||␣
 খবিশ|fiend, ghost|ˈkʰɔ̝.biˑs̠
 খবীস||␣
@@ -2338,7 +2338,7 @@ autoExpandExamples.bn = `
 খান||␣
 খানকি||␣
 খানদান||␣
-খাননা|not eat|kʰɑ§n§nɑ
+খাননা|not eat|kʰɑ,n,nɑ
 খানা||␣|
 খাবার||␣|
 খামচান||␣|
@@ -2375,7 +2375,7 @@ autoExpandExamples.bn = `
 খুশবু||␣|
 খুশি|joyous|kʰuʃi
 খুষি||␣|
-খূব|very|kʰu§b
+খূব|very|kʰu,b
 খেঁচা||␣|
 খেই||␣|
 খেজুর|date (fruit)|kʰed͡ʒur
@@ -2407,7 +2407,7 @@ autoExpandExamples.bn = `
 খ্বাইশ||␣|
 খ্বাব||␣|
 খ্যামা||␣|
-খ্রিষ্টান|christian|kʰ§ri§ʂ§ʈa§n
+খ্রিষ্টান|christian|kʰ,ri,ʂ,ʈa,n
 খ্রিস্ট ধর্ম||
 খ্রিস্ট||␣|
 খ্রিস্টধর্ম||␣|
@@ -2444,7 +2444,7 @@ autoExpandExamples.bn = `
 গণিত||␣
 গণেশ||␣|
 গণ্ডার||␣
-গতকাল|yesterday|ɡɔ§to§kɑ§l
+গতকাল|yesterday|ɡɔ,to,kɑ,l
 গতি||␣|
 গতিবেগ||␣|
 গদ্দার||␣|
@@ -2456,21 +2456,21 @@ autoExpandExamples.bn = `
 গন্ধতৃণ||␣
 গন্ধভাদাল||␣
 গন্ধরস||␣|
-গপ|gossip|ɡɔ§p
+গপ|gossip|ɡɔ,p
 গভীর||␣|
 গভীরভাবে||␣|
 গম||␣
 গয়না||␣|
 গর-||
 গরজ||␣|
-গরম|warm, hot|ɡɔ§ɽo§m§/ɡɔɾom|ɡôrôm
+গরম|warm, hot|ɡɔ,ɽo,m,/ɡɔɾom|ɡôrôm
 গরমকাল||␣|
 গরিলা|gorilla|ɡɔɾila||ɡɔɹila
 গরীব||␣|
 গরু||␣
 গরুড়||␣|
 গরুর দুধ||
-গর্ত|hole|ɡɔ§ɾ§t̪o|gɔrtô
+গর্ত|hole|ɡɔ,ɾ,t̪o|gɔrtô
 গর্দভ||␣|
 গর্দান|neck|ɡɔɾ.d̪an
 গর্ভধারণ||
@@ -2568,7 +2568,7 @@ autoExpandExamples.bn = `
 গুয়াতেমালা||
 গুরু||␣|
 গুরুত্ব||␣|
-গুরুত্বপূর্ণ|important|ɡu§ru§t§tɔ§pu§r§nɔ
+গুরুত্বপূর্ণ|important|ɡu,ru,t,tɔ,pu,r,nɔ
 গুল||␣|
 গুলজার||␣|
 গুলদাস্তা||␣|
@@ -2641,10 +2641,10 @@ autoExpandExamples.bn = `
 গ্রন্থি||␣
 গ্রহ||␣|
 গ্রানাডা||
-গ্রাম|village|ɡ§ra§m
+গ্রাম|village|ɡ,ra,m
 গ্রিক ভাষা||
 গ্রিস||␣
-গ্রীষ্ম|summer|ɡ§ɾi§ʃʃo§‹|griśśõ
+গ্রীষ্ম|summer|ɡ,ɾi,ʃʃo,‹|griśśõ
 গ্রেট ব্রিটেন ও উত্তর আয়ারল্যান্ড যুক্তরাজ্য||␣
 গ্রেপ্তার|arrest|ɡɾept̪aɾ
 গ্রেফতার|arrest|ɡɾeft̪aɾ
@@ -2658,7 +2658,7 @@ autoExpandExamples.bn = `
 ঘণ্টা||␣
 ঘনিষ্ঠ||␣|
 ঘর পোড়া গরু সিঁদুরে মেঘ দেখে ডরায়||
-ঘর|house, building|ɡʱɔ§ɾ
+ঘর|house, building|ɡʱɔ,ɾ
 ঘষা|to rub|␣|ɡhôśa
 ঘাঁটা||␣|
 ঘাড়|neck|ɡʱaɽ
@@ -2694,7 +2694,7 @@ autoExpandExamples.bn = `
 চকলেট||␣
 চকোর||
 চক্কর||␣|
-চক্র|wheel|t͡ʃɔ§k§ro
+চক্র|wheel|t͡ʃɔ,k,ro
 চক্রবর্তী||␣|
 চচ্চড়ি||␣|
 চঞ্চলতা||␣|
@@ -2912,7 +2912,7 @@ autoExpandExamples.bn = `
 ছাড়া||␣
 ছাড়ান||␣|
 ছাড়ানো||␣|
-ছাতা|umbrella|t͡ʃʰɑ§tɑ
+ছাতা|umbrella|t͡ʃʰɑ,tɑ
 ছাত্র|student|tʃʰat̪ɾo
 ছাদ||␣|
 ছানা||␣|
@@ -2975,7 +2975,7 @@ autoExpandExamples.bn = `
 জখম||␣|
 জগ||␣|
 জগন্নাথ||␣|
-জগৎ|world|d͡ʒɔ§ɡo§t
+জগৎ|world|d͡ʒɔ,ɡo,t
 জঘন্য||␣|
 জঙ||␣|
 জঙলি||␣|
@@ -2997,10 +2997,10 @@ autoExpandExamples.bn = `
 জনম||␣|
 জনসংখ্যা||␣|
 জন্তু|animal|␣|jôntu
-জন্ম|birth|ˈdʑɔ§n§mo|jonmo
+জন্ম|birth|ˈdʑɔ,n,mo|jonmo
 জন্মদিন|birthday|ˈd͡ʒɔnmoˌd̪in
 জন্মস্থান||␣|
-জন্য|for|d͡ʒɔ§nno§‹
+জন্য|for|d͡ʒɔ,nno,‹
 জন্যে||␣
 জপ||␣|
 জপা||␣|
@@ -3147,7 +3147,7 @@ autoExpandExamples.bn = `
 জিলাপির প্যাঁচ||␣|
 জিষ্ণু||␣|
 জিহবা|tongue (organ)||jihba
-জিহ্বা|tongue|d͡ʒiu̯§›§bʱa§/d͡ʒiu̯βa
+জিহ্বা|tongue|d͡ʒiu̯,›,bʱa,/d͡ʒiu̯βa
 জিৎ||␣|
 জীন||␣|
 জীবন|life|d͡ʒibɔn
@@ -3208,10 +3208,10 @@ autoExpandExamples.bn = `
 জোরাজুরি||␣|
 জোরে||␣|
 জোস|cool|d͡ʒos/d͡ʒoʃ
-জ্ঞান|knowledge|ɡ§æ§n
+জ্ঞান|knowledge|ɡ,æ,n
 জ্ঞানতত্ত্ব||␣
 জ্ঞানী||␣|
-জ্বর|fever|d͡ʒɔ§‹§r
+জ্বর|fever|d͡ʒɔ,‹,r
 জ্বলন||␣|
 জ্বলন্ত||␣|
 জ্বাল||␣|
@@ -3234,7 +3234,7 @@ autoExpandExamples.bn = `
 ঝগড়া||␣
 ঝঙ্কার||␣|
 ঝটকা||␣|
-ঝড়|storm|d͡ʒʰɔ§ɽ
+ঝড়|storm|d͡ʒʰɔ,ɽ
 ঝড়ি||␣
 ঝনঝন||␣|
 ঝরনা||␣|
@@ -3249,12 +3249,12 @@ autoExpandExamples.bn = `
 ঝালকাঠি জেলা||
 ঝালফ্রেজী||
 ঝি||␣|
-ঝিঙা|ridge gourd|ɟʱi§ŋa
+ঝিঙা|ridge gourd|ɟʱi,ŋa
 ঝিঙ্গা||␣
 ঝিনাইদহ জেলা||
 ঝিনাইদহ||␣|
 ঝিনুক||␣|
-ঝিল্লি|grasshopper|d͡ʒʰi§l§li
+ঝিল্লি|grasshopper|d͡ʒʰi,l,li
 ঝুট||␣
 ঝুমকা||␣|
 ঝুলা||␣
@@ -3278,7 +3278,7 @@ autoExpandExamples.bn = `
 টাউট||␣|
 টাক||␣|
 টাকলা||␣|
-টাকা|money, wealth|ʈɑ§kɑ
+টাকা|money, wealth|ʈɑ,kɑ
 টাকাপয়সা||␣|
 টাঙ||
 টাঙ্গাইল জেলা||
@@ -3327,7 +3327,7 @@ autoExpandExamples.bn = `
 ঠাকুরগাঁও জেলা||
 ঠাকুরগাঁও||␣|
 ঠাকুরঘর||␣|
-ঠাণ্ডা|cold|ʈʰɑ§n§ɖɑ|ṭhanḍa
+ঠাণ্ডা|cold|ʈʰɑ,n,ɖɑ|ṭhanḍa
 ঠান্ডা||␣|
 ঠিক|correct|␣|ṭhik
 ঠিকানা||␣|
@@ -3355,7 +3355,7 @@ autoExpandExamples.bn = `
 ডাকনাম||␣|
 ডাকা||␣|
 ডাকানো||␣|
-ডাক্তার|doctor|ɖa§k§t̪a§ɾ
+ডাক্তার|doctor|ɖa,k,t̪a,ɾ
 ডাক্তারখানা||␣|
 ডাগর||␣|
 ডাঙর||␣
@@ -3376,7 +3376,7 @@ autoExpandExamples.bn = `
 ডিকশনারি||
 ডিকশনারী||
 ডিফ্র্যাগমেন্ট করা||
-ডিভিডি|DVD|ɖi§bʱi§ɖi|ḍibhiḍi
+ডিভিডি|DVD|ɖi,bʱi,ɖi|ḍibhiḍi
 ডিম|egg|ɖim|ḍim
 ডিলডো||␣
 ডিল্ডো||␣
@@ -3404,7 +3404,7 @@ autoExpandExamples.bn = `
 ঢাকনা||␣|
 ঢাকা জেলা||␣
 ঢাকা বিভাগ||
-ঢাকা|Dhaka|ˈɖʱa§ka
+ঢাকা|Dhaka|ˈɖʱa,ka
 ঢাল||␣|
 ঢালা||␣|
 ঢালিউড||␣|
@@ -3416,13 +3416,13 @@ autoExpandExamples.bn = `
 ঢুকানো||
 ঢুপি||
 ঢেঁড়স|okra|ɖʱæ̃ɽoʃ
-ঢেউ|wave|ɖʰe§u̯
+ঢেউ|wave|ɖʰe,u̯
 ঢোকা||␣
 ঢোকানো||␣
 ঢোল||␣
 ণই||␣|
 তওবা||␣|
-তওবার|repentance|tɔ§o̯.§ba§r
+তওবার|repentance|tɔ,o̯.,ba,r
 তকবীর||␣|
 তকলিফ||
 তকসিম||
@@ -3431,7 +3431,7 @@ autoExpandExamples.bn = `
 তখন||␣
 তখনই||␣|
 তছু||␣|
-তটিনী|river|to§ʈi§ni
+তটিনী|river|to,ʈi,ni
 তড়িৎ|electricity, lightning|ˈt̪ɔɽit̪
 ততদিন||␣|
 তত্ত্ব||␣|
@@ -3506,7 +3506,7 @@ autoExpandExamples.bn = `
 তাড়াতাড়ি||␣|
 তাড়ানো||␣|
 তাণ্ডব||␣|
-তাথৈ|there|ta.§tʰoi||terị
+তাথৈ|there|ta.,tʰoi||terị
 তাদের||
 তানজানিয়া||
 তানভির||
@@ -3531,7 +3531,7 @@ autoExpandExamples.bn = `
 তার||␣
 তারপর||
 তারপরে||
-তারা|star|tɑ§rɑ
+তারা|star|tɑ,rɑ
 তারিপ||␣
 তারিফ||␣
 তালব্য||␣|
@@ -3604,7 +3604,7 @@ autoExpandExamples.bn = `
 তেতো||
 তেত্রিশ||
 তেপায়া|tripod|ˈt̪e.pa.jaˑ
-তেরই|thirteen|tæ.§ro§i̯
+তেরই|thirteen|tæ.,ro,i̯
 তেরো||␣
 তেল|oil|t̪el
 তেলবাজ||␣|
@@ -3615,7 +3615,7 @@ autoExpandExamples.bn = `
 তেলুগু ভাষা||
 তেলেঙ্গানা||␣|
 তেষট্টি||
-তৈরি|to make|toi̯§ri
+তৈরি|to make|toi̯,ri
 তৈল||␣|
 তো||␣|
 তোকমা||␣|
@@ -3641,7 +3641,7 @@ autoExpandExamples.bn = `
 তৌফিক||
 তৌরাত||␣|
 ত্বক||␣
-ত্যাগ|leave|t§ɛ§ɡ
+ত্যাগ|leave|t,ɛ,ɡ
 ত্রিকোণমিতি||␣|
 ত্রিচক্রযান||␣|
 ত্রিনিদাদ ও টোবাগো||
@@ -3661,7 +3661,7 @@ autoExpandExamples.bn = `
 থানকুনি|pennywort|tʰankuni
 থানা||␣
 থাম||
-থামা|to stop|tʰɑ§mɑ
+থামা|to stop|tʰɑ,mɑ
 থার্মোমিটার||␣|
 থাল||
 থালা||␣|
@@ -3706,7 +3706,7 @@ autoExpandExamples.bn = `
 দরবেশ||␣|
 দরশন||␣|
 দরাজ||␣|
-দরিয়া|sea|d̪o§ri§ja
+দরিয়া|sea|d̪o,ri,ja
 দরুন||
 দরূদ||␣|
 দর্জি||␣|
@@ -3739,7 +3739,7 @@ autoExpandExamples.bn = `
 দাওয়া||␣|
 দাওয়াই||␣
 দাওয়াখানা||␣|
-দাওয়াত|invitation|d̪a§wa§‹§t̪
+দাওয়াত|invitation|d̪a,wa,‹,t̪
 দাখিল|submit|d̪akʰil
 দাগ||␣
 দাড়ি|beard|daɽi
@@ -3747,7 +3747,7 @@ autoExpandExamples.bn = `
 দাদ||
 দাদখানি||
 দাদা||␣
-দাদী|grandmother|dɑ§diː
+দাদী|grandmother|dɑ,diː
 দান||␣|
 দানা||␣|
 দান্দান||␣
@@ -3810,8 +3810,8 @@ autoExpandExamples.bn = `
 দীয়া||␣|
 দীর্ঘ||␣|
 দু||␣|
-দুঃখ|sorrow, grief|du§kˈkʰo
-দুঃখও|sadness|du§k.kʰo§o̯
+দুঃখ|sorrow, grief|du,kˈkʰo
+দুঃখও|sadness|du,k.kʰo,o̯
 দুঃস্বপ্ন||␣|
 দুআ||
 দুই|two|␣|dui̯
@@ -3941,7 +3941,7 @@ autoExpandExamples.bn = `
 ধনিয়া|coriander|dʱonia
 ধনী||␣|
 ধনে|coriander|dʱone
-ধন্যবাদ|thank you|dʰo§n§jo§bɑ§d
+ধন্যবাদ|thank you|dʰo,n,jo,bɑ,d
 ধমক||␣|
 ধরণী||␣|
 ধরন||
@@ -3994,7 +3994,7 @@ autoExpandExamples.bn = `
 ধোওয়া||
 ধোনি||␣|
 ধোয়া|to wash|␣|dhoẏa
-ধৌত|wash|dʰou̯.§to
+ধৌত|wash|dʰou̯.,to
 ধ্বংস||␣|
 ধ্বজা||␣|
 ধ্বনি||␣|
@@ -4031,7 +4031,7 @@ autoExpandExamples.bn = `
 নতুন|new|nɔt̪un|nôtun
 নতুনত্ব||
 নদিয়া||␣|
-নদী|river|no§d̪i|nôdi
+নদী|river|no,d̪i|nôdi
 ননদ||␣|
 নফরৎ||␣|
 নফসানিয়াত||␣|
@@ -4053,7 +4053,7 @@ autoExpandExamples.bn = `
 নমাজ||␣
 নমায||␣|
 নমুনা||␣|
-নম্বর|number|nɔ§m§bo§r
+নম্বর|number|nɔ,m,bo,r
 নয়||␣
 নয়ন||␣|
 নয়া দিল্লি||
@@ -4116,7 +4116,7 @@ autoExpandExamples.bn = `
 নামজাদা||␣|
 নামহীন|nameless|ˈnamɦin
 নামা||␣|
-নামাজ|prayers|na§ma§z
+নামাজ|prayers|na,ma,z
 নামানো||␣|
 নামিবিয়া||
 নার||
@@ -4138,7 +4138,7 @@ autoExpandExamples.bn = `
 নাৎজিবাদ||␣|
 নাৎসিবাদ||␣|
 নিঃ-||␣|
-নিঃশব্দ|silence|ni§ʃʃɔ§b§do
+নিঃশব্দ|silence|ni,ʃʃɔ,b,do
 নিঃশ্বসন||␣|
 নিউক্লিয়াস||␣|
 নিউজিল্যান্ড||
@@ -4242,14 +4242,14 @@ autoExpandExamples.bn = `
 নৈরাশ্য||␣|
 নৈশভোজ||␣|
 নৈসর্গিক||
-নোংরা|foul|nʊŋ§ra||noŋra
+নোংরা|foul|nʊŋ,ra||noŋra
 নোঈর||
 নোড়া||␣|
 নোয়াখাইল্লা||␣|
 নোয়াখালী জেলা||
 নোয়াখালী||␣|
 নৌকা||␣
-নৌকো|boat|nou̯§ko
+নৌকো|boat|nou̯,ko
 ন্যাংটা||␣|
 ন্যাটো||␣|
 ন্যায়||␣|
@@ -4290,11 +4290,11 @@ autoExpandExamples.bn = `
 পত্নী||␣|
 পত্র||␣|
 পত্রিকা||␣|
-পথ|path, road|pɔ§tʰ|pôth
+পথ|path, road|pɔ,tʰ|pôth
 পদ||␣|
 পদার্থ||
 পদার্থবিজ্ঞান||
-পদ্ম|lotus|pɔ§d̪§dɔ
+পদ্ম|lotus|pɔ,d̪,dɔ
 পদ্মা||␣|
 পদ্মাসন||␣|
 পনীর||␣
@@ -4357,7 +4357,7 @@ autoExpandExamples.bn = `
 পর্নো||␣
 পর্নোগ্রাফি||
 পর্নোগ্রাফিক||
-পর্বত|mountain|pɔ§r§bɔ§t|pôrbôt
+পর্বত|mountain|pɔ,r,bɔ,t|pôrbôt
 পর্বতমালা||
 পর্যটন||␣|
 পর্যন্ত||␣
@@ -4399,13 +4399,13 @@ autoExpandExamples.bn = `
 পাইথন||␣|
 পাউরা||␣|
 পাওয়া||␣
-পাকস্থলী|stomach|pa§kɔ§s§tʰo§li
+পাকস্থলী|stomach|pa,kɔ,s,tʰo,li
 পাকা||␣
 পাকিস্তান||␣
 পাখ||␣
 পাখা|wing|␣|pakha
 পাখি|bird|pakʰi|pakhi
-পাখিই|birds|pa.§kʰi§i̯
+পাখিই|birds|pa.,kʰi,i̯
 পাখী||␣
 পাঙ্গা||␣|
 পাঙ্গাশ||␣|
@@ -4465,13 +4465,13 @@ autoExpandExamples.bn = `
 পার-||␣|
 পারদ||␣
 পারপত্র||␣|
-পারফিউম|perfume|pa§r.§fi§u̯§m
+পারফিউম|perfume|pa,r.,fi,u̯,m
 পারভেজ||␣|
 পারমাণবিক||␣|
 পারা|to be able to|paɾa/paɹa/paɽa
 পারিজাত||␣|
 পারিবারিক||␣
-পারেই|maybe|pa.§re§i̯
+পারেই|maybe|pa.,re,i̯
 পার্কিং||␣|
 পার্টি||
 পার্থ||␣|
@@ -4733,23 +4733,23 @@ autoExpandExamples.bn = `
 প্রোটন||
 প্রোস্টেট গ্রন্থি||
 প্রোস্টেট||
-প্রৌঢ়|adult|ˈp§ɾou̯§ɹoˑ|prōuṛh
+প্রৌঢ়|adult|ˈp,ɾou̯,ɹoˑ|prōuṛh
 প্লাজমা||
 প্লাটিনাম||␣|
 প্লাস্টিক||␣
-প্লিজ|please|p§li§z
-প্লীজ|please|p§li§z
+প্লিজ|please|p,li,z
+প্লীজ|please|p,li,z
 প্লুটো||␣|
 প্লেটিনাম||␣|
 প্ল্যাটিনাম||␣|
-প্‌লিজ|please|p§–§li§z
+প্‌লিজ|please|p,–,li,z
 ফকিন্নি||␣|
 ফকির||␣
 ফকীর||␣|
 ফখরুদ্দিন||␣|
 ফজর||␣|
 ফজল||␣|
-ফটো|photo|pfo§ʈo
+ফটো|photo|pfo,ʈo
 ফটোগ্রাফ||␣
 ফটোগ্রাফি||
 ফটোগ্রাফী||
@@ -4806,7 +4806,7 @@ autoExpandExamples.bn = `
 ফাল্গুন||␣|
 ফাস||␣|
 ফাহাদ||␣|
-ফাহ্মী|surname|fa§ɦ§mi|phahmi
+ফাহ্মী|surname|fa,ɦ,mi|phahmi
 ফিকির||
 ফিজি||␣
 ফিতা||␣|
@@ -4827,7 +4827,7 @@ autoExpandExamples.bn = `
 ফুটপাথ||␣|
 ফুটপোথ||␣|
 ফুটবল||␣
-ফুটি|melon|pʰu§ʈi
+ফুটি|melon|pʰu,ʈi
 ফুটো||␣|
 ফুফু||␣|
 ফুয়া||␣|
@@ -4875,14 +4875,14 @@ autoExpandExamples.bn = `
 ফ্রেশ||␣
 ফ্লপি|floppy|pʰlɔpi/flɔpi
 ফ্ল্যাগ||␣
-ফ্ল্যাট|flat|pʰ§l§æ§ʈ
-ফ্‌ল্যাট|flat|pʰ§–§l§æ§ʈ
+ফ্ল্যাট|flat|pʰ,l,æ,ʈ
+ফ্‌ল্যাট|flat|pʰ,–,l,æ,ʈ
 বঁইচ||
 বঁইচি||
 বঁধু||␣|
 বংশ||␣|
 বংশধর||␣|
-বই|book|bo§i̯
+বই|book|bo,i̯
 বইন||
 বউ|wife|␣|bôu
 বওয়া||
@@ -4909,7 +4909,7 @@ autoExpandExamples.bn = `
 বজ্র|thunder, lightning|bɔɟɾɔ
 বট||␣|
 বড||␣|
-বড়|big, large|ˈbɔ§ɽo|bôṛ|ˈbɔɹo
+বড়|big, large|ˈbɔ,ɽo|bôṛ|ˈbɔɹo
 বড়দিন||␣|
 বড়ি||␣|
 বতসোয়ানা||
@@ -4963,7 +4963,7 @@ autoExpandExamples.bn = `
 বরিশাল জেলা||
 বরিশাল বিভাগ||
 বর্গি||␣|
-বর্ণ|colour|bɔ§r§no
+বর্ণ|colour|bɔ,r,no
 বর্ণনা||␣
 বর্ণমালা||␣|
 বর্তমান||␣|
@@ -5024,9 +5024,9 @@ autoExpandExamples.bn = `
 বাঁশরী||␣|
 বাঁশি|flute|bãʃi
 বাংলা খারু||
-বাংলা ভাষা|Bengali language|ˈbaŋ§la§ §ˈbʱa§ʃa
-বাংলা|Bengali, Bangla (language)|ˈbaŋ§la
-বাংলাদেশ|Bangladesh|ˈbaŋ§laˌ§d̪e§ʃ
+বাংলা ভাষা|Bengali language|ˈbaŋ,la, ,ˈbʱa,ʃa
+বাংলা|Bengali, Bangla (language)|ˈbaŋ,la
+বাংলাদেশ|Bangladesh|ˈbaŋ,laˌ,d̪e,ʃ
 বাংলাদেশি||
 বাংলাদেশী||␣
 বাংলাদেশে||␣|
@@ -5042,7 +5042,7 @@ autoExpandExamples.bn = `
 বাইরে||
 বাইশ||
 বাউল||␣
-বাকি|left over|ba§ki
+বাকি|left over|ba,ki
 বাকী||␣
 বাক্য||␣|
 বাক্স||␣|
@@ -5115,7 +5115,7 @@ autoExpandExamples.bn = `
 বাবলা||␣|
 বাবা|dad|baba
 বাবু||␣|
-বাবুই|baby|ba.§bu§i̯
+বাবুই|baby|ba.,bu,i̯
 বাবুর্চি|cook, chef|baburtʃi
 বাবেল||
 বাম||␣|
@@ -5134,7 +5134,7 @@ autoExpandExamples.bn = `
 বার্বাডোস||
 বার্মা||␣|
 বাল||␣
-বালতি|bucket|ˈba§l.§t̪iˑ
+বালতি|bucket|ˈba,l.,t̪iˑ
 বালি|sand|␣|bali
 বালিশ|pillow|baliʃ
 বালু||
@@ -5179,11 +5179,11 @@ autoExpandExamples.bn = `
 বিজলী||␣|
 বিজেপি||␣|
 বিজ্ঞ||␣|
-বিজ্ঞান|science|bi§ɡ§ɡæ§n
+বিজ্ঞান|science|bi,ɡ,ɡæ,n
 বিজ্ঞানী||␣
 বিজ্ঞাপন|advert|biɡjapɔn
-বিড়াল|cat|be§ɽɑ§l
-বিড়ি|cigarette|bi§ɽi
+বিড়াল|cat|be,ɽɑ,l
+বিড়ি|cigarette|bi,ɽi
 বিদায়||␣
 বিদেশ|foriegn land|bid̪eʃ
 বিদেশি|foreign|bid̪eʃi
@@ -5256,7 +5256,7 @@ autoExpandExamples.bn = `
 বিশেষজ্ঞ||␣|
 বিশেষণ||␣|
 বিশেষ্য||␣
-বিশ্ব|universe|bi§ʃ§ʃo
+বিশ্ব|universe|bi,ʃ,ʃo
 বিশ্বকোষ||␣|
 বিশ্বপরিক্রমা||␣|
 বিশ্ববিদ্যালয়||␣|
@@ -5276,7 +5276,7 @@ autoExpandExamples.bn = `
 বিষয়ে||␣|
 বিষুবীয় গিনি||
 বিষ্টু||␣|
-বিষ্ণু|Vishnu|bi§ʃ§nu
+বিষ্ণু|Vishnu|bi,ʃ,nu
 বিষ্ণুপ্রিয়া মণিপুরী||␣|
 বিষ্যুদবার||␣|
 বিসমিল্লাহ||␣
@@ -5292,12 +5292,12 @@ autoExpandExamples.bn = `
 বীজঘ্ন||␣|
 বীজাণু||␣|
 বীণা||␣|
-বীর|hero|biː§r
+বীর|hero|biː,r
 বীর্য নিক্ষেপ||
 বীর্য||
 বীর্যপাত||
 বীর্যস্খলন||
-বুক|breast, chest|bu§k
+বুক|breast, chest|bu,k
 বুকপাটা||␣|
 বুকু||␣|
 বুখারেস্ট||
@@ -5309,7 +5309,7 @@ autoExpandExamples.bn = `
 বুড় পাড়া||
 বুড়||␣
 বুড়া আঙ্গুল||
-বুড়ো|old man|bu§ɽo
+বুড়ো|old man|bu,ɽo
 বুত||␣|
 বুদাপেস্ট||␣|
 বুদ্ধ||␣
@@ -5343,7 +5343,7 @@ autoExpandExamples.bn = `
 বৃহদান্ত্র||
 বৃহস্পতি||␣|
 বৃহস্পতিবার||␣
-বৃহৎ|huge|bri§hɔ§t
+বৃহৎ|huge|bri,hɔ,t
 বে-||
 বে||␣|
 বেঁকা||
@@ -5352,11 +5352,11 @@ autoExpandExamples.bn = `
 বেইজিং||␣
 বেওয়াকেফ||␣|
 বেকুব|idiot|bekub
-বেগ|speed|be§ɡ
+বেগ|speed|be,ɡ
 বেগম||␣
 বেগানা||
 বেগায়রত||␣|
-বেগুন|eggplant|be§ɡu§n
+বেগুন|eggplant|be,ɡu,n
 বেগুনি||
 বেগুনী||
 বেঙ্গালুরু||
@@ -5390,7 +5390,7 @@ autoExpandExamples.bn = `
 বেল||␣
 বেলজিয়াম||
 বেলফাস্ট||␣|
-বেলা|time of day|bæ§lɑ
+বেলা|time of day|bæ,lɑ
 বেলারুশ||␣
 বেলি||␣|
 বেলিজ||
@@ -5415,7 +5415,7 @@ autoExpandExamples.bn = `
 বৈশিষ্ট্য||␣
 বৈশ্য||␣|
 বৈষ্ণব||␣|
-বোকা|fool|bɔ§kɑ
+বোকা|fool|bɔ,kɑ
 বোকাচোদা||␣
 বোজা||␣|
 বোঝা|to understand|bod͡ʒʱɑ/bod͡ʒɑ/bozɑ
@@ -5424,7 +5424,7 @@ autoExpandExamples.bn = `
 বোতাম||␣|
 বোধ||␣|
 বোধোদিত||␣|
-বোন|sister|bo§n
+বোন|sister|bo,n
 বোবা||␣|
 বোমা||␣|
 বোম্বাই||␣|
@@ -5433,13 +5433,13 @@ autoExpandExamples.bn = `
 বোষ্টম||␣|
 বোস||␣
 বৌদ্ধ||␣|
-ব্যক্তি|person|b§æ§k§t̪i
+ব্যক্তি|person|b,æ,k,t̪i
 ব্যক্তিগত কম্পিউটার||
 ব্যক্তিগত||
 ব্যক্তিত্ব||␣
 ব্যঞ্জন||␣|
-ব্যঞ্জনধ্বনি|consonant|b§æ§n§dʒɔ§n§d̪ʱo§‹§ni|bênjonddhoni
-ব্যথা|pain|b§æ§tʰɑ
+ব্যঞ্জনধ্বনি|consonant|b,æ,n,dʒɔ,n,d̪ʱo,‹,ni|bênjonddhoni
+ব্যথা|pain|b,æ,tʰɑ
 ব্যবসা||␣|
 ব্যবস্থা||␣
 ব্যবহার করা||
@@ -5450,10 +5450,10 @@ autoExpandExamples.bn = `
 ব্যাংক|bank|bæŋk
 ব্যাক||␣
 ব্যাকরণ|grammar|bækɔɾon/bækɔɽon
-ব্যাখ্যা|explanation|b§æ§kkʰ§a
+ব্যাখ্যা|explanation|b,æ,kkʰ,a
 ব্যাগ||␣|
 ব্যাঘ্র|tiger|bæɡʱɾɔ
-ব্যাঙ্ক|bank|b§æ§ŋ§k
+ব্যাঙ্ক|bank|b,æ,ŋ,k
 ব্যাঙ্কক||␣|
 ব্যাটারি||␣
 ব্যাদ||␣|
@@ -5499,15 +5499,15 @@ autoExpandExamples.bn = `
 ভবিষ্যতে||␣|
 ভবিষ্যদ্বাণী||␣|
 ভবিষ্যৎ||␣|
-ভয়|fear, dread|bʱɔ§e̯
+ভয়|fear, dread|bʱɔ,e̯
 ভরতনাট্যম||␣|
 ভরসা||␣|
 ভরা|full|␣|bhôra
 ভর্তা||␣
-ভস্ম|ashes|bʰɔ̃§ʃ§ʃo
+ভস্ম|ashes|bʰɔ̃,ʃ,ʃo
 ভাঁপ||␣|
 ভাং||␣|
-ভাই|brother|bʱa§i̯
+ভাই|brother|bʱa,i̯
 ভাইয়া||␣
 ভাইরাস||␣|
 ভাগ||␣|
@@ -5534,7 +5534,7 @@ autoExpandExamples.bn = `
 ভাবনা||␣|
 ভাবা|to think|␣|bhaba
 ভাবে||␣|
-ভারত|India|ˈbʱa.§ɾɔ§t̪
+ভারত|India|ˈbʱa.,ɾɔ,t̪
 ভারতীয় প্রজাতন্ত্র||␣|
 ভারতীয় ময়ূর||
 ভারতীয়||␣
@@ -5542,13 +5542,13 @@ autoExpandExamples.bn = `
 ভারী|heavy||bhari
 ভার্চুয়াল||␣
 ভার্যা||␣|
-ভাল|good|bʱɑ§lo||vɑlo
+ভাল|good|bʱɑ,lo||vɑlo
 ভালবাসা||␣
 ভালভা||␣
 ভালা||␣
 ভালাপাওয়া||␣|
 ভালুক|bear|bʱaluk||valuk
-ভালো|good|bʱɑ§lo||vɑlo
+ভালো|good|bʱɑ,lo||vɑlo
 ভালোনাম||␣|
 ভালোবাসা||␣
 ভালোভাবে||␣|
@@ -5571,7 +5571,7 @@ autoExpandExamples.bn = `
 ভিত্তিপ্রস্তর||␣|
 ভিন||␣|
 ভিন্ন||␣|
-ভিয়েতনাম|Vietnam|vi§je§t̪§na§m
+ভিয়েতনাম|Vietnam|vi,je,t̪,na,m
 ভিয়েতনামীয় ভাষা||␣
 ভিসা||␣|
 ভিসি||␣
@@ -5650,7 +5650,7 @@ autoExpandExamples.bn = `
 মজলিস||␣
 মজলুম||␣
 মজা||␣|
-মজার|funny|mɔ§d͡ʒɑ§r
+মজার|funny|mɔ,d͡ʒɑ,r
 মজুমদার||␣|
 মজুর||␣|
 মজ্জা||␣|
@@ -5743,7 +5743,7 @@ autoExpandExamples.bn = `
 মরোক্কো||
 মর্ত||␣|
 মর্তমান||␣|
-মর্ত্ত্য|mortal (alt.)|ˈmɔ§ɹ§t̪§t̪§t̪o|morttto
+মর্ত্ত্য|mortal (alt.)|ˈmɔ,ɹ,t̪,t̪,t̪o|morttto
 মর্ত্য||␣|
 মর্দ||␣|
 মর্দনী||␣|
@@ -5864,7 +5864,7 @@ autoExpandExamples.bn = `
 মানিক||␣|
 মানিকগঞ্জ জেলা||
 মানু||␣
-মানুষ|person, man|ma§nu§ʃ|manuś
+মানুষ|person, man|ma,nu,ʃ|manuś
 মানুহ||␣|
 মানে|meaning|mane
 মান্দার||␣|
@@ -5892,7 +5892,7 @@ autoExpandExamples.bn = `
 মাল||␣
 মালওয়্যার||
 মালদা||␣|
-মালদ্বীপ|Maldives|ma§l§›§d̪i§p|maldip
+মালদ্বীপ|Maldives|ma,l,›,d̪i,p|maldip
 মালয়ালম ভাষা||
 মালয়েশিয়া||␣
 মালা||␣
@@ -5978,7 +5978,7 @@ autoExpandExamples.bn = `
 মুক্তি||␣|
 মুক্তিযুদ্ধ||␣
 মুক্তো||␣|
-মুখ|face, mouth|mu§kʰ|mukh
+মুখ|face, mouth|mu,kʰ|mukh
 মুখপাত্র||␣|
 মুখবিবর||
 মুখর||␣
@@ -6053,7 +6053,7 @@ autoExpandExamples.bn = `
 মূর্খতা||
 মূর্তি||␣|
 মূর্ধন্য||␣|
-মূল|root|muː§l
+মূল|root|muː,l
 মূল্য|price, cost|ˈmulːɔ̝
 মূল্যবান||␣|
 মূল্যহীন||
@@ -6090,7 +6090,7 @@ autoExpandExamples.bn = `
 মেথী||␣
 মেম||␣|
 মেয়াদ||␣|
-মেয়ে|girl, daughter|ˈme.§e
+মেয়ে|girl, daughter|ˈme.,e
 মেয়েবাজ||␣|
 মেয়েমানুষ|woman|mɛə.mɜː.nʊʃ
 মেরা||␣
@@ -6174,7 +6174,7 @@ autoExpandExamples.bn = `
 ম্লেচ্ছ||␣|
 যকৃৎ||
 যক্ষ্মা||␣|
-যখন|when|d͡ʒɔ§kʰo§n
+যখন|when|d͡ʒɔ,kʰo,n
 যজ্ঞ||␣|
 যতন||␣|
 যত্ন||␣|
@@ -6195,14 +6195,14 @@ autoExpandExamples.bn = `
 যশোর||␣|
 য়||␣
 যা||␣
-যাওয়া|to go|ˈd͡ʒa§u̯§a
+যাওয়া|to go|ˈd͡ʒa,u̯,a
 যাকাত||␣|
 যাচ্ছিল||␣|
 যাচ্ছেতাই||␣|
 যাচ্ঞা||␣|
 যাতনা||␣|
 যাতে||␣|
-যাত্রা|journey|d͡ʒɑ§t§rɑ
+যাত্রা|journey|d͡ʒɑ,t,rɑ
 যাদুঘর||␣|
 যান্ত্রিক||␣
 যাপন||␣|
@@ -6224,13 +6224,13 @@ autoExpandExamples.bn = `
 যুগ||␣|
 যুগল||␣|
 যুগোস্লাভিয়া||␣|
-যুদ্ধ|war|d͡ʒu§d§dʰo
+যুদ্ধ|war|d͡ʒu,d,dʰo
 যুবক|young (men)|d͡ʒubɔk
 যুবতী|young (women)|d͡ʒubɔt̪i
 যুযু||␣
 যুলফিকার||␣|
 যে||␣|
-যেকেউ|anyone|d͡ʒe.§ke§u̯
+যেকেউ|anyone|d͡ʒe.,ke,u̯
 যেখান||␣|
 যেতে||␣|
 যেন||␣|
@@ -6256,7 +6256,7 @@ autoExpandExamples.bn = `
 রইদ||␣
 রউন||␣
 রওনা||␣
-রওয়া|to remain|ro§‹§wɑ
+রওয়া|to remain|ro,‹,wɑ
 রওয়ানা||␣
 রওশন||␣
 রকম||␣
@@ -6272,7 +6272,7 @@ autoExpandExamples.bn = `
 রক্তহীন||
 রক্তাক্ত||
 রক্ষা||␣|
-রঙ|colour|rɔ§ŋ
+রঙ|colour|rɔ,ŋ
 রচনা||␣
 রজত||␣|
 রজনীগন্ধা||␣|
@@ -6367,15 +6367,15 @@ autoExpandExamples.bn = `
 রাশি||␣|
 রাশিয়া||␣
 রাশেদ||␣|
-রাষ্ট্র|state, country|ˈra§ʃ§t§ɹo|raśṭro
+রাষ্ট্র|state, country|ˈra,ʃ,t,ɹo|raśṭro
 রাষ্ট্রপতি||␣|
 রাসেল||␣|
-রাস্তা|road, street|ɾa§s§t̪a|raśta
+রাস্তা|road, street|ɾa,s,t̪a|raśta
 রাহমান||
 রাহা||␣|
 রাহুল||␣|
 রিকর্ড||␣|
-রিকশা|rickshaw|ri§k.§ʃɑ
+রিকশা|rickshaw|ri,k.,ʃɑ
 রিচার্ড||
 রিজ়||␣|
 রিজিক||␣|
@@ -6385,7 +6385,7 @@ autoExpandExamples.bn = `
 রিসালত||␣|
 রীতি|method, habit|ɾit̪i/ɽit̪i
 রুইতন||
-রুগী|ill, sick|ru§ɡiː
+রুগী|ill, sick|ru,ɡiː
 রুজি||␣|
 রুট||␣|
 রুটি||␣
@@ -6399,7 +6399,7 @@ autoExpandExamples.bn = `
 রুয়ান্ডা||
 রুশ ভাষা||
 রুশ||␣|
-রূপ|figure, form|ruː§p
+রূপ|figure, form|ruː,p
 রূপকথা||␣|
 রূমী||␣|
 রূহ||␣
@@ -6446,15 +6446,15 @@ autoExpandExamples.bn = `
 রোয়াইঙ্গা||␣|
 রোহিত||␣|
 রৌশনী||␣
-লওয়া|to take|lɔ§o̯§wɑ
+লওয়া|to take|lɔ,o̯,wɑ
 লকার||␣|
 লক্ষ||␣|
 লক্ষ্মণ||␣|
-লক্ষ্মী|Lakshmi|lo§kkʰi§‹§‹|lokkhi
+লক্ষ্মী|Lakshmi|lo,kkʰi,‹,‹|lokkhi
 লক্ষ্মীপুর জেলা||
-লক্ষ্মীপেঁচা|barn owl|lo§k§kʰ§i§pæ̃§ca
+লক্ষ্মীপেঁচা|barn owl|lo,k,kʰ,i,pæ̃,ca
 লক্ষ্মীফল||␣
-লক্ষ্য|goal, intent|lo§k§kʰo§‹|lôkkhô
+লক্ষ্য|goal, intent|lo,k,kʰo,‹|lôkkhô
 লখা||␣|
 লঙ্কা||␣|
 লজেন্স||␣|
@@ -6484,7 +6484,7 @@ autoExpandExamples.bn = `
 লাইব্রেরি||␣|
 লাইব্রেরী|library|lai̯bɾeɾi
 লাইলাতুল ইলেকশন||␣|
-লাউ|gourd|la§u̯
+লাউ|gourd|la,u̯
 লাও||␣
 লাওস||
 লাকান||␣
@@ -6508,14 +6508,14 @@ autoExpandExamples.bn = `
 লাতভিয়া||
 লাতিন ভাষা||
 লাথি||␣|
-লান্‌চ|lunch|lɑ§n§–§t͡ʃ
+লান্‌চ|lunch|lɑ,n,–,t͡ʃ
 লাফ||␣|
 লাফানো||␣|
 লাভ|benefit|labʱ
 লাভা||␣|
 লায়লা-মজনু||␣|
 লায়লা-মজনুঁ||␣|
-লাল|red|la§l|lal
+লাল|red|la,l|lal
 লালন||␣|
 লালা||␣
 লালি||␣|
@@ -6630,7 +6630,7 @@ autoExpandExamples.bn = `
 শান্তনু||␣
 শান্তি||␣|
 শান্তিনিকেতন||␣
-শাপ|curse|ʃɑ§p
+শাপ|curse|ʃɑ,p
 শাফা||␣
 শাবাশ|good job!|ʃabaʃ
 শামসুজ্জামান||␣|
@@ -6642,7 +6642,7 @@ autoExpandExamples.bn = `
 শায়ের||
 শারমেন্দাগী||␣
 শারীরিক||␣|
-শার্ট|shirt|ʃa§ɹ§t|śarṭo
+শার্ট|shirt|ʃa,ɹ,t|śarṭo
 শাল||␣|
 শালগম|turnip|ʃalɡɔm
 শালা||␣|
@@ -6674,7 +6674,7 @@ autoExpandExamples.bn = `
 শিক্ষক||␣
 শিক্ষা করা||
 শিক্ষা দেওয়া||
-শিক্ষা|learning, education|ʃi§k§kʰɑ
+শিক্ষা|learning, education|ʃi,k,kʰɑ
 শিক্ষাপ্রাপ্ত||
 শিক্ষামন্ত্রক||␣|
 শিক্ষামূলক|educational|ʃikːʰamulɔk
@@ -6722,7 +6722,7 @@ autoExpandExamples.bn = `
 শুগার||
 শুদ্ধ||␣|
 শুদ্র||␣|
-শুধু|only|ʃu§dʰu
+শুধু|only|ʃu,dʰu
 শুনে||␣|
 শুভ জন্মদিন||␣
 শুভ সন্ধ্যা||␣|
@@ -6734,7 +6734,7 @@ autoExpandExamples.bn = `
 শুয়ে পড়া||
 শুয়োর||␣|
 শুরু করা||␣|
-শুরু|start, beginning|ʃu§ɾu
+শুরু|start, beginning|ʃu,ɾu
 শুলফা|dill|ʃulpʰa
 শুষ্ক||␣|
 শূন্য||␣
@@ -6767,8 +6767,8 @@ autoExpandExamples.bn = `
 শ্বাস|breathing|s̠äːs̠
 শ্বাসাঘাত||␣|
 শ্বেত||␣|
-শ্মশান|cremation|ʃo§‹§ʃɐ§n|śmôśanô
-শ্মশ্রু|beard|ʃ§wɔ§ʃ§ɾu||ʃõsʃɾu
+শ্মশান|cremation|ʃo,‹,ʃɐ,n|śmôśanô
+শ্মশ্রু|beard|ʃ,wɔ,ʃ,ɾu||ʃõsʃɾu
 শ্যাম||␣|
 শ্যামদেশ||␣|
 শ্যাম্পু||␣|
@@ -6787,7 +6787,7 @@ autoExpandExamples.bn = `
 শ্ৰদ্ধা||␣|
 ষড়ঋতু||␣|
 ষড়ভুজ||␣
-ষড়যন্ত্র|conspiracy|ʃɔ§ɽo§d͡ʒɔ§n§t§ro
+ষড়যন্ত্র|conspiracy|ʃɔ,ɽo,d͡ʒɔ,n,t,ro
 ষাঁড়||␣|
 ষাট||
 সং||␣|
@@ -6818,7 +6818,7 @@ autoExpandExamples.bn = `
 সওয়ার||␣|
 সওয়াল||␣
 সকল||␣|
-সকাল|morning|ʃɔ§kɑ§l
+সকাল|morning|ʃɔ,kɑ,l
 সখা||␣|
 সখী||␣|
 সঙ্কেত||␣|
@@ -6866,10 +6866,10 @@ autoExpandExamples.bn = `
 সন্তুষ্ট||␣|
 সন্দেশ||␣|
 সন্দেহ||␣|
-সন্ধ্যা|evening|ʃo§n§ddʰ§a
+সন্ধ্যা|evening|ʃo,n,ddʰ,a
 সপ্তাহ||␣
 সফটওয়্যার||␣
-সফর|travel|sɔ§fo§r||ʃɔpʰor
+সফর|travel|sɔ,fo,r||ʃɔpʰor
 সফল||␣
 সফেদ||␣
 সব জায়গা||
@@ -6909,7 +6909,7 @@ autoExpandExamples.bn = `
 সমান||
 সমানে||
 সমালোচনা||␣|
-সমীরণ|wind, air|ʃo§mi§ɾɔ§n
+সমীরণ|wind, air|ʃo,mi,ɾɔ,n
 সমুখ||
 সমুদ্র|sea|␣|śômudr
 সমৃদ্ধ||␣|
@@ -6921,7 +6921,7 @@ autoExpandExamples.bn = `
 সম্পাদিকা||␣
 সম্পূর্ণ||␣|
 সম্প্রচার||
-সম্বন্ধে|about|ʃɔ§m§mɔ§n§dʰe
+সম্বন্ধে|about|ʃɔ,m,mɔ,n,dʰe
 সম্ভব||␣|
 সম্ভাবনা||
 সম্মতি||␣|
@@ -6996,7 +6996,7 @@ autoExpandExamples.bn = `
 সাঁতার কাটা||␣
 সাঁতার||␣
 সাং||␣|
-সাংঘাতিক|terrible|ʃɑŋ§ɡʰɑ§ti§k
+সাংঘাতিক|terrible|ʃɑŋ,ɡʰɑ,ti,k
 সাংস্কৃতিক||␣
 সাইকিল||␣|
 সাইকেল||␣|
@@ -7013,7 +7013,7 @@ autoExpandExamples.bn = `
 সাখী||␣|
 সাগর|sea|ʃaɡɔɾ
 সাগু||␣|
-সাঙঘাতিক|terrible|ʃɑ§ŋ§ɡʰɑ§ti§k
+সাঙঘাতিক|terrible|ʃɑ,ŋ,ɡʰɑ,ti,k
 সাচা||␣|
 সাচ্চা||␣|
 সাজদা||␣|
@@ -7200,7 +7200,7 @@ autoExpandExamples.bn = `
 সুস্বাদু||␣|
 সূচী||␣|
 সূরা||␣
-সূর্য|sun|ʃu§r§d͡ʒo|śurjô
+সূর্য|sun|ʃu,r,d͡ʒo|śurjô
 সূর্যগ্রহণ||
 সূর্য্য||␣|
 সৃষ্টি||␣
@@ -7287,7 +7287,7 @@ autoExpandExamples.bn = `
 স্নান||␣
 স্নিগ্ধ||␣|
 স্নিগ্ধা||␣|
-স্নেহ|affection|ˈs§ne§ɦo
+স্নেহ|affection|ˈs,ne,ɦo
 স্পর্শ||␣|
 স্পষ্ট||␣|
 স্পেন||
@@ -7312,7 +7312,7 @@ autoExpandExamples.bn = `
 স্বাধীনতার যুদ্ধ||
 স্বাভাবিক||
 স্বামিনী||␣
-স্বামী|husband|ˈs̠§ä.§miˑ
+স্বামী|husband|ˈs̠,ä.,miˑ
 স্বামীস্ত্রী||␣|
 স্বার্থ||
 স্বার্থপর||
@@ -7324,7 +7324,7 @@ autoExpandExamples.bn = `
 স্বীকৃত||
 স্বীকৃতি||
 স্মরণ||␣|
-স্মৃতি|memory|s§ri§ti
+স্মৃতি|memory|s,ri,ti
 স্মৃতিচারণ||␣|
 স্যর||␣|
 স্যাটানিজম||
@@ -7337,7 +7337,7 @@ autoExpandExamples.bn = `
 স্লোভাকিয়া||
 স্লোভেনিয়া||
 সৎ|honest|ˈsɔt̪
-সৎমা|step-mother|ʃɔ§t§mɑ
+সৎমা|step-mother|ʃɔ,t,mɑ
 হংকং||␣
 হইতে||␣
 হউর||␣
@@ -7358,8 +7358,8 @@ autoExpandExamples.bn = `
 হজ্জ্ব||␣|
 হজ্ব||␣|
 হজ্য||␣|
-হঠাত্|suddenly|ɦɔ§ʈʰa§t̪
-হঠাৎ|suddenly|hɔ§ʈʰɑ§t
+হঠাত্|suddenly|ɦɔ,ʈʰa,t̪
+হঠাৎ|suddenly|hɔ,ʈʰɑ,t
 হড়কানো||␣
 হত||␣|
 হতাশা|depression, disappointment|ɦɔt̪ɑʃɑ
@@ -7393,7 +7393,7 @@ autoExpandExamples.bn = `
 হরা||␣
 হরি||␣|
 হরিজন||␣
-হরিণ|deer|ho§ri§n
+হরিণ|deer|ho,ri,n
 হরিদ্বার||␣|
 হরিয়ানা||␣
 হরীতকী||␣
@@ -7401,7 +7401,7 @@ autoExpandExamples.bn = `
 হরুলা||␣|
 হর্ম্য||␣|
 হর্ষ||␣|
-হল|(student) hall|hɔ§l
+হল|(student) hall|hɔ,l
 হলদে||␣|
 হলুদ কামিলা||
 হলুদ|yellow|␣|hôlud
@@ -7424,7 +7424,7 @@ autoExpandExamples.bn = `
 হাঁড়ী||␣|
 হাঁতরানো||␣
 হাঁতার||␣
-হাঁপান|to pant|hɑ̃§pɑ§n
+হাঁপান|to pant|hɑ̃,pɑ,n
 হাঁর||
 হাঁস||␣
 হাঁসী||
@@ -7461,7 +7461,7 @@ autoExpandExamples.bn = `
 হাত পা||␣
 হাত মারা||
 হাত-পা|limbs|ɦat̪pa
-হাত|hand|ɦa§t̪
+হাত|hand|ɦa,t̪
 হাতবোমা||
 হাতি|elephant|ɦɑt̪i
 হাতিচোক||
@@ -7599,7 +7599,7 @@ autoExpandExamples.bn = `
 হুসেইন||
 হৃদপিণ্ড||␣|
 হৃদপিন্ড||␣|
-হৃদয়|heart|hri§dɔ§j|hridôẏ
+হৃদয়|heart|hri,dɔ,j|hridôẏ
 হৃৎপিণ্ড||␣|
 হৃৎপিন্ড||␣
 হে||␣
@@ -7631,7 +7631,7 @@ autoExpandExamples.bn = `
 হোটেল||␣
 হোম||␣|
 হোয়া||␣
-হোয়াটসঅ্যাপ|WhatsApp|ho§yɑ§ʈʃ§ɔ§æ§p
+হোয়াটসঅ্যাপ|WhatsApp|ho,yɑ,ʈʃ,ɔ,æ,p
 হোয়াদ||␣
 হোরা||␣
 হোল||␣
@@ -7639,7 +7639,7 @@ autoExpandExamples.bn = `
 হোসেন||␣
 হ্ণ||
 হ্ব||␣|
-হ্যাঁ|yes|h§æ̃ː
+হ্যাঁ|yes|h,æ̃ː
 হ্যাডম||␣|
 হ্যানয়||␣|
 হ্যারিকেন||␣|
@@ -7652,10 +7652,10 @@ autoExpandExamples.bn = `
 
 ʼপরে|above||ʼpôre||x
 কʼরে|after||kôʼre||x
-বাঙালী|Bengali (person)|bɑ§ŋɡɑ§liː
+বাঙালী|Bengali (person)|bɑ,ŋɡɑ,liː
 গড়ান|to roll||gɔɽɑnô|
 
-বাংলা লিপি|Bengali script|ˈbʌŋ§lə§ §li§pi|
+বাংলা লিপি|Bengali script|ˈbʌŋ,lə, ,li,pi|
 
 
 

@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -23,79 +23,79 @@ autoExpandExamples.ban = `
 @ https://en.wiktionary.org/wiki/Category:Balinese_terms_with_IPA_pronunciation
 
 
-ᬅᬃᬘᬵ|statue|ar.§t͡ʃə|arca
+ᬅᬃᬘᬵ|statue|ar.,t͡ʃə|arca
 ᬅᬃᬚ||␣|
-ᬅᬃᬚᬸᬦ|male given name|ar.§d͡ʒu.§nə|Arjuna
-ᬅᬃᬣ|wealth|ar§tə|arta
-ᬅᬓ᭄ᬱᬭ|letter, alphabet|a§k.§sa.§rə|akśara|aksara
-ᬅᬗᬶᬦ᭄|wind|a.§ŋi§n|angin
-ᬅᬗ᭄ᬕᬭ|Tuesday|a§ŋ§ɡa§rə|anggara
-ᬅᬗ᭄ᬰ|inheritance|a§ŋ§sə|angsa
-ᬅᬡ᭄ᬥ|egg|a§n§də|anda
+ᬅᬃᬚᬸᬦ|male given name|ar.,d͡ʒu.,nə|Arjuna
+ᬅᬃᬣ|wealth|ar,tə|arta
+ᬅᬓ᭄ᬱᬭ|letter, alphabet|a,k.,sa.,rə|akśara|aksara
+ᬅᬗᬶᬦ᭄|wind|a.,ŋi,n|angin
+ᬅᬗ᭄ᬕᬭ|Tuesday|a,ŋ,ɡa,rə|anggara
+ᬅᬗ᭄ᬰ|inheritance|a,ŋ,sə|angsa
+ᬅᬡ᭄ᬥ|egg|a,n,də|anda
 ᬅᬣᬯᬵ|or|atawa|atawa
 ᬅᬤ᭄ᬭᬶ||␣|
-ᬅᬥᬶ|main, principal|a§di
-ᬅᬦ᭄ᬤ|sickness|a§n§də|anda
-ᬅᬦ᭄ᬥ|blind|a§n§də
-ᬅᬭᬶ|ending, enemy|a§ri
-ᬅᬯᬢᬵᬭ|avatar|a§wa§ta§rə
-ᬅᬱ᭄ᬝ|eight|a§s§tə|asta
-ᬅᬲ᭄ᬢ|to be|a§s§tə
-ᬅᬲ᭄ᬣ|bone|a§s§tə|asta
-ᬆᬃᬬ|noble|ar.§jə|arya
+ᬅᬥᬶ|main, principal|a,di
+ᬅᬦ᭄ᬤ|sickness|a,n,də|anda
+ᬅᬦ᭄ᬥ|blind|a,n,də
+ᬅᬭᬶ|ending, enemy|a,ri
+ᬅᬯᬢᬵᬭ|avatar|a,wa,ta,rə
+ᬅᬱ᭄ᬝ|eight|a,s,tə|asta
+ᬅᬲ᭄ᬢ|to be|a,s,tə
+ᬅᬲ᭄ᬣ|bone|a,s,tə|asta
+ᬆᬃᬬ|noble|ar.,jə|arya
 ᬆᬕᬫ|religion||agama
 ᬆᬘᬵᬭ|rule||acara
-ᬆᬤᬶ|first|a§di|adi
+ᬆᬤᬶ|first|a,di|adi
 ᬆᬲᬦ||␣|
 ᬇᬥᭂᬧ᭄|thinking||idep
 ᬇᬦ᭄ᬤ᭄ᬭ||␣|
-ᬇᬦ᭄ᬤ᭄ᬭᬬ|sense|i§n§d§ri§ja|indria
-ᬉᬓᬶᬃ|the third|u§kir|ukir
+ᬇᬦ᭄ᬤ᭄ᬭᬬ|sense|i,n,d,ri,ja|indria
+ᬉᬓᬶᬃ|the third|u,kir|ukir
 ᬉᬢ᭄ᬢᬭ||␣|
-ᬉᬱᬥ|traditional medecine|u§sa§də|usada
-ᬋᬤᬶᬢᬾ|Sunday|rə§di§te|rədite
-ᬋᬱᬶ|holy man|rə§si|resi
-ᬍᬫᬄ|ground, soil|lə.§mah|lemah
+ᬉᬱᬥ|traditional medecine|u,sa,də|usada
+ᬋᬤᬶᬢᬾ|Sunday|rə,di,te|rədite
+ᬋᬱᬶ|holy man|rə,si|resi
+ᬍᬫᬄ|ground, soil|lə.,mah|lemah
 ᬏᬓ|one||éka
 ᬐᬃᬱᬡ᭄ᬬ|northeast||airsania
-ᬑᬱᬥᬶ|medicinal herb|o§sa§di|osadi
+ᬑᬱᬥᬶ|medicinal herb|o,sa,di|osadi
 ᬑᬱ᭄ᬞ᭄ᬬ|labial (ling.)||oṣthya
 ᬒᬁᬱᬦ᭄ᬢᬶ᭞ᬱᬦ᭄ᬢᬶ᭞ᬱᬦ᭄ᬢᬶ᭞ᬒᬁ|May peace be everywhere||omsanti,santi,santi,om
 ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ|God bless you||om swastiastu
-ᬓᬃᬬ|work|kar.§jə|karya
+ᬓᬃᬬ|work|kar.,jə|karya
 ᬓᬓᬯᬶᬦ᭄||␣|
 ᬓᬗᬶᬦ᭄||
-ᬓᬗᭂᬦ᭄|desirous, eager|ˈka.§ŋə§n
+ᬓᬗᭂᬦ᭄|desirous, eager|ˈka.,ŋə,n
 ᬓᬘ||␣|
-ᬓᬚ|towards the mountain|ka§ˈdʒə
-ᬓᬝᬄ|many, much|ka.§tah|katah
+ᬓᬚ|towards the mountain|ka,ˈdʒə
+ᬓᬝᬄ|many, much|ka.,tah|katah
 ᬓᬤᬰ||␣|
 ᬓᬤᬲ||␣|
-ᬓᬦ|bracelet|ka§nə
-ᬓᬦᬵ|girl|ka§nə|kana
+ᬓᬦ|bracelet|ka,nə
+ᬓᬦᬵ|girl|ka,nə|kana
 ᬓᬧᬮ᭄|ship||kapal
 ᬓᬩᬬᬦ᭄||␣|
 ᬓᬬᬗᬦ᭄|paradise||kayangan
 ᬓᬬᬸ|wood||kayu
-ᬓᬭ|finger|ka§rə
+ᬓᬭ|finger|ka,rə
 ᬓᬭᬡ||␣|
 ᬓᬭ᭄ᬬ|work||karya
-ᬓᬮ|time|ka§lə
-ᬓᬮᬵ|snare|ka§lə
+ᬓᬮ|time|ka,lə
+ᬓᬮᬵ|snare|ka,lə
 ᬓᬯᬶ||␣|
 ᬓᬲ||␣|
-ᬓᬵᬭ|act, action|ka§rə
+ᬓᬵᬭ|act, action|ka,rə
 ᬓᬵᬭᬡ||␣|
-ᬓᬵᬮ|Kala (demon)|ka§lə|kala
+ᬓᬵᬮ|Kala (demon)|ka,lə|kala
 ᬓᬶᬚ||
-ᬓᬸᬘᬶᬢ᭄|piglet|ˈku§t͡ʃɪ§t̚|kucit
+ᬓᬸᬘᬶᬢ᭄|piglet|ˈku,t͡ʃɪ,t̚|kucit
 ᬓᬸᬡ᭄ᬥ||␣|
 ᬓᬸᬦᬶᬂ|yellow||kuning
-ᬓᬸᬧᬶᬂ|ear|ku.§pɪŋ|kuping
+ᬓᬸᬧᬶᬂ|ear|ku.,pɪŋ|kuping
 ᬓᬸᬮ||␣|
 ᬓᬸᬮᬯᬃᬕ|family||kulawarga
 ᬓᬸᬮᬸᬓ᭄||␣
-ᬓᬹᬝ|fort|ku§tə
+ᬓᬹᬝ|fort|ku,tə
 ᬓᭀᬧᬶ||
 ᬓᭂᬚᭂᬧ᭄|eyebrow raise, eye twinkle||kejep
 ᬓᭂᬜᬂ|taut, tight||kenyang
@@ -104,49 +104,49 @@ autoExpandExamples.ban = `
 ᬓ᭄ᬭᬸᬦ|word||kruna
 ᬓ᭄ᬱᬶᬢᬶ||␣|
 ᬕᬂ|alleyway||gang
-ᬕᬕ|field|ɡa§ɡə
+ᬕᬕ|field|ɡa,ɡə
 ᬕᬗ᭄ᬲ||␣|
-ᬕᬡ|count, group|ɡa§nə|gana
-ᬕᬢ|gone|ɡa§tə
-ᬕᬦ|sky|ɡa§nə|gana
+ᬕᬡ|count, group|ɡa,nə|gana
+ᬕᬢ|gone|ɡa,tə
+ᬕᬦ|sky|ɡa,nə|gana
 ᬕᬭᬸᬥ||␣|
-ᬕᬮᬸᬄ|princess|ga.§luh|galuh
-ᬕᬵᬕᬵ|crow|ɡa§ɡə
-ᬕᬵᬦ|song|ɡa§nə
+ᬕᬮᬸᬄ|princess|ga.,luh|galuh
+ᬕᬵᬕᬵ|crow|ɡa,ɡə
+ᬕᬵᬦ|song|ɡa,nə
 ᬕᬷᬢ||
 ᬕᬸᬡ||␣|
-ᬕᭀᬭ|gold|ɡo§rə
-ᬕᭂᬢᬶᬄ|blood|ɡə§tih|getih
+ᬕᭀᬭ|gold|ɡo,rə
+ᬕᭂᬢᬶᬄ|blood|ɡə,tih|getih
 ᬕᭂᬤᬂ|papaya||gedang
 ᬕᭂᬤᬾ||
-ᬕᭂᬤᭀᬂ|building|ɡə§doŋ|gedong
-ᬕᭂᬦᬶ|fire|ɡə§ni
-ᬕᭂᬮᬃ|order, regulation|ɡə.§lar|gelar
+ᬕᭂᬤᭀᬂ|building|ɡə,doŋ|gedong
+ᬕᭂᬦᬶ|fire|ɡə,ni
+ᬕᭂᬮᬃ|order, regulation|ɡə.,lar|gelar
 ᬕᭂᬮᬸᬢ᭄||␣|
-ᬖᬝ|pot|ɡa§tə
-ᬖᬦ|cloud|ɡa§nə
-ᬖᭀᬭ|giant|ɡo§rə|gora
+ᬖᬝ|pot|ɡa,tə
+ᬖᬦ|cloud|ɡa,nə
+ᬖᭀᬭ|giant|ɡo,rə|gora
 ᬗᬾᬮᬄ|to own||ngélah
 ᬗ᭄ᬕᬶᬄ|yes (to 'superiors')||nggih
 ᬘᬓ᭄ᬭ|disk||cakra
-ᬘᬡ᭄ᬟᬶ|stone or wood pillar|t͡ʃa§n§di|candi
-ᬘᬦᬂ|betel|t͡ʃa§naŋ|canang
+ᬘᬡ᭄ᬟᬶ|stone or wood pillar|t͡ʃa,n,di|candi
+ᬘᬦᬂ|betel|t͡ʃa,naŋ|canang
 ᬘᬭᬓ||␣|
-ᬘᬭᬶᬓ᭄|boundary, line|t͡ʃa§ri§k|carik
+ᬘᬭᬶᬓ᭄|boundary, line|t͡ʃa,ri,k|carik
 ᬘᬶ||␣|
 ᬘᬶᬘᬶᬂ|dog||cicing
-ᬘᬾᬮᬾᬂ|pig|ˈt͡ʃɛ§lɛŋ|céléng
+ᬘᬾᬮᬾᬂ|pig|ˈt͡ʃɛ,lɛŋ|céléng
 ᬘᭀᬓᭀᬃ|foot, leg||cokor
-ᬘᭀᬓᭀᬢ᭄|to grab|t͡ʃɔ.§kɔ§t|cokot
-ᬘᭂᬍᬂ|pig, pork|ˈt͡ʃə§ləŋ|celeng
-ᬘᭂᬝ᭄ᬝ|to guess|t͡ʃə.§tə|ceta
-ᬘᭂᬦᬶᬓ᭄|small|tʃə§ni§k|cenik
+ᬘᭀᬓᭀᬢ᭄|to grab|t͡ʃɔ.,kɔ,t|cokot
+ᬘᭂᬍᬂ|pig, pork|ˈt͡ʃə,ləŋ|celeng
+ᬘᭂᬝ᭄ᬝ|to guess|t͡ʃə.,tə|ceta
+ᬘᭂᬦᬶᬓ᭄|small|tʃə,ni,k|cenik
 ᬘᭂᬦᬶᬓ᭄ᬘᭂᬦᬶᬓ᭄|children||cenik-cenik
 ᬘᭂᬦᬶᬮ᭄||
 ᬘᭂᬭᬶᬓ᭄||
 ᬘᭂᬮᬓ᭄||␣|
 ᬚᬕ||␣|
-ᬚᬗᬦ᭄|vegetable|d͡ʒa§ŋa§n|jangan
+ᬚᬗᬦ᭄|vegetable|d͡ʒa,ŋa,n|jangan
 ᬚᬤ᭄ᬫ|people (polite)||jatma
 ᬚᬬ||␣|
 ᬚᬮ||␣|
@@ -157,8 +157,8 @@ autoExpandExamples.ban = `
 ᬚᬶᬯ||␣
 ᬚᬶᬯᬲ᭄||
 ᬚᬸᬓᬸᬢ᭄||
-ᬚᭀᬕᬾᬤ᭄|dance|d͡ʒo.§ɡe§t|jogét
-ᬚᭂᬍᬫ|people, human|d͡ʒə§lə§ma|jelema
+ᬚᭀᬕᬾᬤ᭄|dance|d͡ʒo.,ɡe,t|jogét
+ᬚᭂᬍᬫ|people, human|d͡ʒə,lə,ma|jelema
 ᬚᭂᬭᭀ||
 ᬚ᭄ᬮᭂᬫ||␣|
 ᬜᬸᬄ|coconut|ɲuh|nyuh
@@ -166,23 +166,23 @@ autoExpandExamples.ban = `
 ᬢᬓ᭄ᬲᬸ||␣|
 ᬢᬚᬾᬦ᭄||
 ᬢᬢᬩᬦ᭄||
-ᬢᬦ᭄ᬤᬸᬓ᭄|horn|ta§n.§dʊ§k|tanduk
-ᬢᬧᭂᬮ᭄|mask|ta.§pə§l|tapel
+ᬢᬦ᭄ᬤᬸᬓ᭄|horn|ta,n.,dʊ,k|tanduk
+ᬢᬧᭂᬮ᭄|mask|ta.,pə,l|tapel
 ᬢᬫᬸ||␣|
-ᬢᬭ|extra|ta§rə
-ᬢᬭᬵ|star|ta§rə|tara
+ᬢᬭ|extra|ta,rə
+ᬢᬭᬵ|star|ta,rə|tara
 ᬢᬭᬸᬡ||␣|
-ᬢᬮᬸᬄ|egg|ta.§luh|taluh
+ᬢᬮᬸᬄ|egg|ta.,luh|taluh
 ᬢᬲᬶᬓ᭄||
 ᬢᬳᬸ|to know, perceive||tahu
 ᬢᬶᬢᬶ||␣|
 ᬢᬶᬢᬶᬬᬂ|I, me||titiang
-ᬢᬶᬣᬶ|a day in the lunar month|ti.§ti|titi
+ᬢᬶᬣᬶ|a day in the lunar month|ti.,ti|titi
 ᬢᬶᬫᬄ|tin||timah
 ᬢᬶᬫᬄᬧᬸᬢᬶᬄ|tin||timah putih
-ᬢᬶᬫ᭄ᬧᬮ᭄|friend|ti§m§pa§l|timpal
+ᬢᬶᬫ᭄ᬧᬮ᭄|friend|ti,m,pa,l|timpal
 ᬢᬶᬬᬂ|I, me||tiang
-ᬢᬷᬃᬢ|holy water|tir§tə|tirta
+ᬢᬷᬃᬢ|holy water|tir,tə|tirta
 ᬢᬸᬃ|again|tur|tur
 ᬢᬸᬓᬤ᭄||
 ᬢᬸᬗ᭄ᬓᬲ᭄||␣|
@@ -191,59 +191,59 @@ autoExpandExamples.ban = `
 ᬢᬸᬲᬶᬂ|no, not||tusing
 ᬢᬹᬃ|knee|tur|tur
 ᬢᬺᬱ᭄ᬡ|love||tresna
-ᬢᭀᬕᭀᬕ᭄|statue|to§ɡo§ɡ
-ᬢᭀᬬ|water|to§jə
+ᬢᭀᬕᭀᬕ᭄|statue|to,ɡo,ɡ
+ᬢᭀᬬ|water|to,jə
 ᬢᭂᬓ||
 ᬢᭂᬤᬸᬂ||␣|
-ᬢᭂᬤᭀᬂ|diacritic sign|tə.§doŋ|tedong
-ᬢᭂᬥᬸᬂ|umbrella|tə.§dʊŋ|tedung
+ᬢᭂᬤᭀᬂ|diacritic sign|tə.,doŋ|tedong
+ᬢᭂᬥᬸᬂ|umbrella|tə.,dʊŋ|tedung
 ᬣᬦᬶ|farmer||tani
-ᬤᬍᬫ᭄|deep|da§lə§m|dalem
+ᬤᬍᬫ᭄|deep|da,lə,m|dalem
 ᬤᬓ᭄ᬱᬶᬡ|south||daksina
 ᬤᬢ||␣|
 ᬤᬢᬸ||␣|
 ᬤᬤᭀᬂ|grandmother||dadong
-ᬤᬦ|sick|da§nə
-ᬤᬦ᭄ᬢ|tooth|da§n§tə
-ᬤᬯᬸᬄ|west|da§wuh|dauh / dawuh
-ᬤᬰ|ten|da§sə
-ᬤᬰᬶ|ten|da§si
-ᬤᬲᬶ|servant|da§si
-ᬤᬵᬦ|alms, giving|da§nə
-ᬤᬵᬦ᭄ᬢ|soft|da§n§tə
-ᬤᬵᬰ|fisherman|da§sə
-ᬤᬵᬲ|slave|da§sə
-ᬤᬶᬦ|day|di§nə
-ᬤᬶᬧ|king|di§pə
-ᬤᬷᬃᬖ|long|dir.§ɡə|dirga
-ᬤᬷᬦ|miserable|di§nə
-ᬤᬸᬃᬚᬦ|scoundrel|dur.§d͡ʒa.§nə|durjana
+ᬤᬦ|sick|da,nə
+ᬤᬦ᭄ᬢ|tooth|da,n,tə
+ᬤᬯᬸᬄ|west|da,wuh|dauh / dawuh
+ᬤᬰ|ten|da,sə
+ᬤᬰᬶ|ten|da,si
+ᬤᬲᬶ|servant|da,si
+ᬤᬵᬦ|alms, giving|da,nə
+ᬤᬵᬦ᭄ᬢ|soft|da,n,tə
+ᬤᬵᬰ|fisherman|da,sə
+ᬤᬵᬲ|slave|da,sə
+ᬤᬶᬦ|day|di,nə
+ᬤᬶᬧ|king|di,pə
+ᬤᬷᬃᬖ|long|dir.,ɡə|dirga
+ᬤᬷᬦ|miserable|di,nə
+ᬤᬸᬃᬚᬦ|scoundrel|dur.,d͡ʒa.,nə|durjana
 ᬤᬸᬧ||
 ᬤᬸᬯᭂᬕ᭄|smart, clever||dueg
 ᬤᬸᬱ᭄ᬝ|lie||duṣṭa
 ᬤᬸᬲᬸᬦ᭄||␣|
 ᬤᬾᬦ᭄ᬧᬲᬃ|Denpasar||denpasar
-ᬤᬾᬯ|god|de§wa
-ᬤᬾᬰ|village|de§sə|desa
+ᬤᬾᬯ|god|de,wa
+ᬤᬾᬰ|village|de,sə|desa
 ᬤᬿᬢ᭄ᬬ|giant||daitya
-ᬤᭀᬦ᭄|leaf|do§n
-ᬤᭂᬫᭂᬦ᭄|fond|ˈd̪ə.§mə§n|demen
-ᬥᬃᬫ|dharma, religion|dar§mə|darma
-ᬥᬦ|wealth|da§nə|dana
-ᬥᬯᬸᬄ|time|da§wu§h|dawuh
+ᬤᭀᬦ᭄|leaf|do,n
+ᬤᭂᬫᭂᬦ᭄|fond|ˈd̪ə.,mə,n|demen
+ᬥᬃᬫ|dharma, religion|dar,mə|darma
+ᬥᬦ|wealth|da,nə|dana
+ᬥᬯᬸᬄ|time|da,wu,h|dawuh
 ᬥᬵᬢᬸ||␣|
 ᬥᬵᬦ||␣
-ᬥᬷᬧ|lamp, torch|di§pə
-ᬦᬗ᭄ᬓ|jackfruit|na§ŋ§ka
-ᬦᬢᬃ|backyard|ˈna§tar|natar
-ᬦᬦ|head|na§na
-ᬦᬦᬄ|pus|na.§nah|nanah
-ᬦᬦᬵ|broken|na§na
-ᬦᬭ|person|na§rə|nara
+ᬥᬷᬧ|lamp, torch|di,pə
+ᬦᬗ᭄ᬓ|jackfruit|na,ŋ,ka
+ᬦᬢᬃ|backyard|ˈna,tar|natar
+ᬦᬦ|head|na,na
+ᬦᬦᬄ|pus|na.,nah|nanah
+ᬦᬦᬵ|broken|na,na
+ᬦᬭ|person|na,rə|nara
 ᬦᬵᬕᬭ||␣
-ᬦᬵᬝ|dance|na§tə|nata
-ᬦᬵᬣ|lord, master|na§tə
-ᬦᬵᬭ|water|na§rə
+ᬦᬵᬝ|dance|na,tə|nata
+ᬦᬵᬣ|lord, master|na,tə
+ᬦᬵᬭ|water|na,rə
 ᬦᬶᬃᬛᬭ|pond||nirjhara
 ᬦᬶᬓ||
 ᬦᬷᬢᬶ||␣|
@@ -251,61 +251,61 @@ autoExpandExamples.ban = `
 ᬧᬃᬯ||␣|
 ᬧᬓ᭄ᬭᬫᬦ᭄|membership||pakraman
 ᬧᬓ᭄ᬲ|force||paksa
-ᬧᬓ᭄​ᬭᬫᬦ᭄|Mr Raman|pa§k.§–§ra.§ma§n|Pak Raman
+ᬧᬓ᭄​ᬭᬫᬦ᭄|Mr Raman|pa,k.,–,ra.,ma,n|Pak Raman
 ᬧᬓ᭄‌ᬭᬫᬦ᭄|Mr Raman||Pak Raman
 ᬧᬚᭂᬕ᭄||␣|
-ᬧᬢᬶ|death|pa§ti
+ᬧᬢᬶ|death|pa,ti
 ᬧᬢᬶᬂᬕᬶ||␣|
-ᬧᬢ᭄ᬢᬶ|army|pa§ti
+ᬧᬢ᭄ᬢᬶ|army|pa,ti
 ᬧᬢ᭄ᬧᬢ᭄|four||patpat
-ᬧᬤ|earth|pa§də|pada
+ᬧᬤ|earth|pa,də|pada
 ᬧᬤᬂ|grass, herb||padang
-ᬧᬥ|same|pa§də
+ᬧᬥ|same|pa,də
 ᬧᬦᬓ᭄|child||panak
 ᬧᬦ᭄ᬢᭂᬲ᭄||␣|
 ᬧᬬᬸᬓ᭄||
 ᬧᬭᭀ||␣|
-ᬧᬮ|arm|pa§lə
+ᬧᬮ|arm|pa,lə
 ᬧᬯᭀᬗᬦ᭄||␣|
 ᬧᬲᬃ|market||pasar
 ᬧᬲᬾᬩᬦ᭄||␣|
-ᬧᬵᬤ|foot|pa§də
+ᬧᬵᬤ|foot|pa,də
 ᬧᬵᬤᬸᬓ||
-ᬧᬵᬮ|herdsman|pa§lə
+ᬧᬵᬮ|herdsman|pa,lə
 ᬧᬶᬧᬶᬲ᭄|money||pipis
 ᬧᬸᬜᬦ᭄|tree||punyan
 ᬧᬸᬦᬶᬓ||
-ᬧᬸᬧᬸ|result|pu§pu
+ᬧᬸᬧᬸ|result|pu,pu
 ᬧᬸᬧᬸᬢᬦ᭄||␣|
-ᬧᬸᬧᬹ|thigh|pu§pu
+ᬧᬸᬧᬹ|thigh|pu,pu
 ᬧᬸᬭ||␣
 ᬧᬸᬭᬶ||
-ᬧᬸᬮᭀ|island|pu§lo
+ᬧᬸᬮᭀ|island|pu,lo
 ᬧᬸᬯᬓ᭄||␣|
-ᬧᬹᬃᬯ᭄ᬯ|beginning, origin|pur.§›§wə|purwa
+ᬧᬹᬃᬯ᭄ᬯ|beginning, origin|pur.,›,wə|purwa
 ᬧᬾᬘᬾᬂ|blind in one eye||peceng
-ᬧᬾᬜ᭄ᬚᭀᬃ|decorated bamboo pole|pe§ɲ§d͡ʒor|penjor
-ᬧᭂᬓᭂᬦ᭄|market|pə§kə§n
-ᬧᭂᬢᭂᬂ|dark|pə.§təŋ|peteng
+ᬧᬾᬜ᭄ᬚᭀᬃ|decorated bamboo pole|pe,ɲ,d͡ʒor|penjor
+ᬧᭂᬓᭂᬦ᭄|market|pə,kə,n
+ᬧᭂᬢᭂᬂ|dark|pə.,təŋ|peteng
 ᬧᭂᬮᬶᬓ᭄||␣|
-ᬧ᭄ᬭᬣᬫ|first|pra.§ta.§mə|pratama
+ᬧ᭄ᬭᬣᬫ|first|pra.,ta.,mə|pratama
 ᬧ᭄ᬭᬤ||␣|
-ᬧ᭄ᬭᬩᭂᬓᭂᬮ᭄|village head|pə§r§bəˈ§kə§l|prabekel
+ᬧ᭄ᬭᬩᭂᬓᭂᬮ᭄|village head|pə,r,bəˈ,kə,l|prabekel
 ᬧ᭄ᬭᬪᬸ||␣|
 ᬧ᭄ᬭᬵᬲᬵᬤ||␣|
-ᬨᬮ|result|pa§lə|pala
+ᬨᬮ|result|pa,lə|pala
 ᬩᬓ᭄||␣|
 ᬩᬗ᭄ᬲ||␣|
-ᬩᬜᬸ|water|ba§ɲu|banyu
+ᬩᬜᬸ|water|ba,ɲu|banyu
 ᬩᬢᬶᬲ᭄|foot, leg||batis
 ᬩᬢᬸ||
 ᬩᬦ᭄ᬢᭂᬦ᭄|offering||banten
-ᬩᬧ|father|ba§pə
+ᬩᬧ|father|ba,pə
 ᬩᬬᬸ||
-ᬩᬭᬄ|swollen|ba.§rah|barah
+ᬩᬭᬄ|swollen|ba.,rah|barah
 ᬩᬭᭀᬂ||␣|
 ᬩᬮ||␣|
-ᬩᬮᬶ|Bali|ba.§li|bali
+ᬩᬮᬶ|Bali|ba.,li|bali
 ᬩᬮᬶᬕ᭄ᬭᬧ᬴ᬶ|Balinese calligraphy||baligrafi
 ᬩᬮᬶ᭞᭓᭞ᬚᬸᬮᬶ᭞᭑᭙᭘᭒᭟|Bali, 3 July 1982|
 ᬩᬮᬸᬂ|bone||balung
@@ -315,77 +315,77 @@ autoExpandExamples.ban = `
 ᬩᬲ||␣|
 ᬩᬲᬂ|stomach||basang
 ᬩᬳᬲ᭄||␣|
-ᬩᬳᬸ|many, much|ba.§hu|bahu
-ᬩᬳᬸᬂ|pig-shaped spirit|ba§uŋ|baung
+ᬩᬳᬸ|many, much|ba.,hu|bahu
+ᬩᬳᬸᬂ|pig-shaped spirit|ba,uŋ|baung
 ᬩᬵᬳᬸ||␣|
-ᬩᬶᬤᬂ|sheet|bi.§daŋ|bidang
+ᬩᬶᬤᬂ|sheet|bi.,daŋ|bidang
 ᬩᬶᬬᬸ||
 ᬩᬸᬓᬸ||␣
 ᬩᬸᬗ||
-ᬩᬸᬢ|blind|bu§tə
+ᬩᬸᬢ|blind|bu,tə
 ᬩᬸᬢᬸᬄ||␣|
 ᬩᬸᬤ᭄ᬥ||␣|
 ᬩᬸᬮᬦ᭄||
-ᬩᬸᬯᬄ|fruit|bu§ah|buah
+ᬩᬸᬯᬄ|fruit|bu,ah|buah
 ᬩᬾᬤ||
 ᬩᬾᬩᬾᬓ᭄||
-ᬩᭂᬍᬕᬜ᭄ᬚᬸᬃ|type of gamelan music|bə.§lə.§ɡa§ɲ.§d͡ʒur|beleganjur
-ᬩᭂᬓᭂᬮ᭄|provision|bə.§kə§l|bekel
+ᬩᭂᬍᬕᬜ᭄ᬚᬸᬃ|type of gamelan music|bə.,lə.,ɡa,ɲ.,d͡ʒur|beleganjur
+ᬩᭂᬓᭂᬮ᭄|provision|bə.,kə,l|bekel
 ᬩᭂᬓ᭄||␣|
 ᬩᭂᬘᬶᬓ᭄||
 ᬩᭂᬜ᭄ᬘᬦ|disaster|bəɲt͡ʃanə|bencana
-ᬩᭂᬦ᭄ᬤᬾᬰ|village chief|bə§n§de§sə|bendesa
+ᬩᭂᬦ᭄ᬤᬾᬰ|village chief|bə,n,de,sə|bendesa
 ᬩᭂᬭᬲ᭄||␣|
 ᬩᭂᬮᬶ||␣|
 ᬩᭂᬮᬸᬲ᭄||
 ᬩᭂᬮᭀᬕ᭄|stupid, ignorant||belog
-ᬩ᭄ᬭᬸᬯᬂ|bear|b§ru§aŋ|bruang
+ᬩ᭄ᬭᬸᬯᬂ|bear|b,ru,aŋ|bruang
 ᬩ᭄ᬭ᭄ᬬᬕ᭄|laughter||bryag
-ᬪᬓ᭄ᬢᬶ|respect, piety|ba§k§ti|batki/bhakti
+ᬪᬓ᭄ᬢᬶ|respect, piety|ba,k,ti|batki/bhakti
 ᬪᬬ||␣|
 ᬪᬵᬕ᭄ᬬ|happy||bagia
 ᬪᬵᬱ||␣|
-ᬪᬵᬱᬵ|language|ba§sa|basa
+ᬪᬵᬱᬵ|language|ba,sa|basa
 ᬪᬶᬱᬫ||␣|
 ᬪᬷᬫ||␣|
 ᬪᬸᬯᬦ||␣|
-ᬪᬹᬢ|wicked spirit|bu§tə
+ᬪᬹᬢ|wicked spirit|bu,tə
 ᬪᬹᬧᬢᬶ|king, regent||bupati
 ᬪᬹᬫᬶ||␣|
 ᬪᬹᬱᬡ||␣|
 ᬫᬁ|holy letter||mang
-ᬫᬃᬕ|road|mar§ɡə
+ᬫᬃᬕ|road|mar,ɡə
 ᬫᬡᬷᬓ᭄|bead||manik
-ᬫᬢ|eye|ma§tə
-ᬫᬢ᭄ᬢ|furious|ma§tə
-ᬫᬣ|love|ma§tə
+ᬫᬢ|eye|ma,tə
+ᬫᬢ᭄ᬢ|furious|ma,tə
+ᬫᬣ|love|ma,tə
 ᬫᬥ᭄ᬬ||␣|
-ᬫᬦᬯ|if|ma§na§wə|manawa
+ᬫᬦᬯ|if|ma,na,wə|manawa
 ᬫᬦᬶᬓ᭄||
 ᬫᬦᬸᬲ||
-ᬫᬭ|new, recent|ma§rə
+ᬫᬭ|new, recent|ma,rə
 ᬫᬲ||␣|
-ᬫᬵᬃᬕ|road|mar§ɡə|marga
+ᬫᬵᬃᬕ|road|mar,ɡə|marga
 ᬫᬵᬗ᭄ᬲ||␣|
-ᬫᬵᬦᬯ|human|ma§na§wə|manawa
-ᬫᬵᬬ|supernatural|ma§jə
-ᬫᬵᬬᬵ|shadow|ma§jə
-ᬫᬵᬭ|danger|ma§rə
+ᬫᬵᬦᬯ|human|ma,na,wə|manawa
+ᬫᬵᬬ|supernatural|ma,jə
+ᬫᬵᬬᬵ|shadow|ma,jə
+ᬫᬵᬭ|danger|ma,rə
 ᬫᬵᬲ||␣|
-ᬫᬶᬢ᭄ᬭ|secondary lover|mi§t§rə|mitra
+ᬫᬶᬢ᭄ᬭ|secondary lover|mi,t,rə|mitra
 ᬫᬶᬲᬶ||
-ᬫᬸᬗ᭄ᬕᬄ|to go up, raise|ˈmʊ§ŋ.§ɡʌh|munggah
+ᬫᬸᬗ᭄ᬕᬄ|to go up, raise|ˈmʊ,ŋ.,ɡʌh|munggah
 ᬫᬸᬤ||␣|
 ᬫᬹᬥ||␣|
 ᬫᬾᬚ|table||meja
 ᬫᬾᬤ᭄||␣|
 ᬫᬾᬦᬓ᭄||␣|
 ᬫᬾᬭᬸ||
-ᬫᭀᬖ|soon|mo§ɡə
-ᬫᭀᬖᬵ|in the end|mo§ɡə
+ᬫᭀᬖ|soon|mo,ɡə
+ᬫᭀᬖᬵ|in the end|mo,ɡə
 ᬫᭂᬤ᭄||␣|
-ᬬᬸᬤ᭄ᬥ|war|yu§də|yuda
-ᬬᬸᬥ|weapon|yu§də|yuda
+ᬬᬸᬤ᭄ᬥ|war|yu,də|yuda
+ᬬᬸᬥ|weapon|yu,də|yuda
 ᬬᬸᬬᬸ|crab|juju|yuyu
 ᬬᬾᬄ||
 ᬬᬾᬦᬶᬂ|if||yéning
@@ -393,206 +393,206 @@ autoExpandExamples.ban = `
 ᬭᬓ||
 ᬭᬓ᭄ᬱ||␣|
 ᬭᬓ᭄ᬱᬲ||
-ᬭᬕ|body|ra§ɡə
-ᬭᬚ|king|ra§d͡ʒə
+ᬭᬕ|body|ra,ɡə
+ᬭᬚ|king|ra,d͡ʒə
 ᬭᬡ||␣|
-ᬭᬢ|flat|ra§tə
+ᬭᬢ|flat|ra,tə
 ᬭᬢᬸ||␣|
-ᬭᬢ᭄ᬦ|kind of flower|ra§t§nə|ratna
-ᬭᬣ|carriage|ra§tə
-ᬭᬯᬸᬄ|to come|ra.§ʊh|rauh
+ᬭᬢ᭄ᬦ|kind of flower|ra,t,nə|ratna
+ᬭᬣ|carriage|ra,tə
+ᬭᬯᬸᬄ|to come|ra.,ʊh|rauh
 ᬭᬰ᭄ᬫᬶ||␣|
-ᬭᬳᬶᬦ|day|ra§hi§nə|rahina
-ᬭᬵᬕ|lust, love|ra§ɡə
-ᬭᬵᬚ|rain|ra§d͡ʒə|raja
-ᬭᬵᬣ|love|ra§sə
+ᬭᬳᬶᬦ|day|ra,hi,nə|rahina
+ᬭᬵᬕ|lust, love|ra,ɡə
+ᬭᬵᬚ|rain|ra,d͡ʒə|raja
+ᬭᬵᬣ|love|ra,sə
 ᬭᬵᬫ||␣|
-ᬭᬵᬲ|taste|ra§sə
+ᬭᬵᬲ|taste|ra,sə
 ᬭᬶᬗ᭄ᬕᬶᬢ᭄||␣|
 ᬭᬶᬧ᭄ᬢ||␣|
 ᬭᬸᬗᬸ||␣|
 ᬭ᭄ᬬᬦ᭄ᬢᬸᬓ᭄|because||ryantuk
 ᬮᬓ᭄ᬱᬡ||␣|
 ᬮᬗ᭄ᬖᬦ||␣|
-ᬮᬦᬂ|male|laː§naːŋ|lanang
+ᬮᬦᬂ|male|laː,naːŋ|lanang
 ᬮᬬᬸ||␣|
 ᬮᬬᬹ||␣|
-ᬮᬭ|sick|la§rə
+ᬮᬭ|sick|la,rə
 ᬮᬮᬶᬦ᭄ᬢᬄ||
 ᬮᬯᬦ᭄||␣|
-ᬮᬶᬫ|five|li§mə
-ᬮᬸᬭᬄ|chief, leader|lu.§rah|lurah
+ᬮᬶᬫ|five|li,mə
+ᬮᬸᬭᬄ|chief, leader|lu.,rah|lurah
 ᬮᬸᬯᬄ||␣|
 ᬮᬸᬯᭂᬲ᭄||␣|
 ᬮᭀᬢ᭄||␣|
-ᬯᬓᬸᬮ᭄|basket|wa§ku§l|wakul
+ᬯᬓᬸᬮ᭄|basket|wa,ku,l|wakul
 ᬯᬗ᭄ᬰ||␣|
 ᬯᬘ||␣|
 ᬯᬘᬦ||
 ᬯᬘᬶᬓ||
-ᬯᬢᬂ|trunk|wa§taŋ|watang
+ᬯᬢᬂ|trunk|wa,taŋ|watang
 ᬯᬢᬸ||
 ᬯᬤᬸᬓ᭄||
 ᬯᬤᬸᬓ᭄ᬩᭂᬋᬭᭀᬂ|name of a statue||waduk bererong
 ᬯᬦ||␣|
 ᬯᬦ᭄ᬤ||␣|
-ᬯᬬᬄ|old|wa.§jah|wayah
-ᬯᬭ|superior|wa§rə
+ᬯᬬᬄ|old|wa.,jah|wayah
+ᬯᬭ|superior|wa,rə
 ᬯᬭᬶᬄ||␣|
 ᬯᬮᬓ||
 ᬯᬮᬶ||␣|
-ᬯᬮᬸ|widow|wa§lu
-ᬯᬮᬹ|pumpkin, gourd|wa§lu
+ᬯᬮᬸ|widow|wa,lu
+ᬯᬮᬹ|pumpkin, gourd|wa,lu
 ᬯᬯᬶᬤᬗᬦ᭄||␣|
-ᬯᬰ|power, authority|wa§sə
+ᬯᬰ|power, authority|wa,sə
 ᬯᬲ᭄ᬢ||
 ᬯᬳᬦ||␣|
-ᬯᬵᬢᬂ|cause|wa§taŋ|watang
-ᬯᬵᬭ|day|wa§rə
-ᬯᬵᬲ|staying|wa§sə
+ᬯᬵᬢᬂ|cause|wa,taŋ|watang
+ᬯᬵᬭ|day|wa,rə
+ᬯᬵᬲ|staying|wa,sə
 ᬯᬶᬚᬬ||␣|
 ᬯᬶᬢ᭄||␣|
-ᬯᬶᬤᬂ|area|wi.§daŋ|widang
+ᬯᬶᬤᬂ|area|wi.,daŋ|widang
 ᬯᬷᬚ||␣|
 ᬯᬸᬓᬸ||␣
-ᬯᬸᬯᬸᬲ᭄|speak|ʋu§ʋu§s§/wuwus
+ᬯᬸᬯᬸᬲ᭄|speak|ʋu,ʋu,s,/wuwus
 ᬯᬾᬤᬂ|coffee||wédang
 ᬯᬾᬦ᭄ᬢᭂᬦ᭄||␣|
 ᬯᭀᬂ|people|ˈwɔŋ|wong
 ᬯᭀᬄ|fruit|woh|woh
 ᬯ᭄ᬬᬜ᭄ᬚᬦ|consonant||wyanjana
-ᬯ᭄ᬯᬭ|present, available|wa§rə|wara
+ᬯ᭄ᬯᬭ|present, available|wa,rə|wara
 ᬰᬓ||␣
 ᬰᬓ᭄ᬢᬶ|able, mystic||sakti
-ᬰᬢ|hundred|sa§tə
-ᬰᬦ᭄ᬢᬶ|peace, tranquility|sa§n§ti|santi
-ᬰᬧ|curse|sa§pə
-ᬰᬩ᭄ᬤ|word, speech|sa§p.§də|sabda
-ᬰᬭ|arrow|sa§rə
-ᬰᬭᬢ᭄|Spring|sa§ra§t
+ᬰᬢ|hundred|sa,tə
+ᬰᬦ᭄ᬢᬶ|peace, tranquility|sa,n,ti|santi
+ᬰᬧ|curse|sa,pə
+ᬰᬩ᭄ᬤ|word, speech|sa,p.,də|sabda
+ᬰᬭ|arrow|sa,rə
+ᬰᬭᬢ᭄|Spring|sa,ra,t
 ᬰᬭᬷᬭ|body|␣|sarira
 ᬰᬰᬶ|moon, month||sasi
 ᬰᬵᬓᬵ|branch|sakə
 ᬰᬵᬧ||␣|
-ᬰᬵᬲ᭄ᬢ᭄ᬭ|writing|sa§s§t§rə|sastra
-ᬰᬶᬓᬶ|peacock|si§ki
-ᬰᬶᬭᬄ|head|si.§rah|sirah|
-ᬰᬶᬮ|conduct|si§lə
-ᬰᬶᬮᬵ|stone|si§lə
+ᬰᬵᬲ᭄ᬢ᭄ᬭ|writing|sa,s,t,rə|sastra
+ᬰᬶᬓᬶ|peacock|si,ki
+ᬰᬶᬭᬄ|head|si.,rah|sirah|
+ᬰᬶᬮ|conduct|si,lə
+ᬰᬶᬮᬵ|stone|si,lə
 ᬰᬶᬱ᭄ᬬ||
 ᬰᬸᬘᬶ||␣|
 ᬰᬸᬤ᭄ᬥ||␣|
 ᬰᬸᬤ᭄ᬥᬶ||␣|
-ᬰᬸᬪ|good, auspicious|su§bə
+ᬰᬸᬪ|good, auspicious|su,bə
 ᬰᬹᬤ᭄ᬭ||␣|
-ᬰᬹᬭ|brave, hero|su§rə
-ᬰᬹᬮ|weapon|su§lə
-ᬰᭀᬘ|clean|so§t͡ʃə
-ᬰ᭄ᬯ|dog|s§wə§/swa
-ᬰ᭄ᬯᬭ|prime, major|s§wa§rə
-ᬲᬓ|pillar|sa§kə
+ᬰᬹᬭ|brave, hero|su,rə
+ᬰᬹᬮ|weapon|su,lə
+ᬰᭀᬘ|clean|so,t͡ʃə
+ᬰ᭄ᬯ|dog|s,wə,/swa
+ᬰ᭄ᬯᬭ|prime, major|s,wa,rə
+ᬲᬓ|pillar|sa,kə
 ᬲᬗᬸ||␣|
-ᬲᬗ᭄ᬕ|to support|sa§ŋ§ɡə
+ᬲᬗ᭄ᬕ|to support|sa,ŋ,ɡə
 ᬲᬗ᭄ᬕᬄ||␣|
-ᬲᬗ᭄ᬖ|group|sa§ŋ§ɡə|sangga
-ᬲᬢ|bird|sa§tə
-ᬲᬧ|who|sa§pə
+ᬲᬗ᭄ᬖ|group|sa,ŋ,ɡə|sangga
+ᬲᬢ|bird|sa,tə
+ᬲᬧ|who|sa,pə
 ᬲᬩᬸᬦ᭄|soap||sabun
-ᬲᬫᬭ|battle|sa§ma§rə
-ᬲᬫᬵᬥᬶ|semadhi|sə§ma§di|semadi
+ᬲᬫᬭ|battle|sa,ma,rə
+ᬲᬫᬵᬥᬶ|semadhi|sə,ma,di|semadi
 ᬲᬫ᭄ᬧᬶ|cow||sampi
 ᬲᬫ᭄ᬧᬸᬦ᭄|already, very||sampun
-ᬲᬭ|water|sa§rə
-ᬲᬭᬢ᭄|weight|sa§ra§t
-ᬲᬭᬶ|milk|sa§ri
-ᬲᬭᬸᬂ|sarong|sa§rʊŋ|sarung
-ᬲᬵᬕᬭ|sea|sə§ɡa§rə|segara
+ᬲᬭ|water|sa,rə
+ᬲᬭᬢ᭄|weight|sa,ra,t
+ᬲᬭᬶ|milk|sa,ri
+ᬲᬭᬸᬂ|sarong|sa,rʊŋ|sarung
+ᬲᬵᬕᬭ|sea|sə,ɡa,rə|segara
 ᬲᬵᬥᬸ|best||sadu
 ᬲᬵᬦᬓ᭄||␣|
 ᬲᬵᬫᬬ||␣|
-ᬲᬵᬭ|power|sa§rə
-ᬲᬵᬭᬶ|flower|sa§ri
-ᬲᬵᬲ᭄ᬢ᭄ᬭ|arrow|sa§s§t§rə|sastra
-ᬲᬶᬓᬶ|one|si§ki
-ᬲᬶᬤ|wound|si§də
-ᬲᬶᬤ᭄ᬥ|accomplished|si§də
+ᬲᬵᬭ|power|sa,rə
+ᬲᬵᬭᬶ|flower|sa,ri
+ᬲᬵᬲ᭄ᬢ᭄ᬭ|arrow|sa,s,t,rə|sastra
+ᬲᬶᬓᬶ|one|si,ki
+ᬲᬶᬤ|wound|si,də
+ᬲᬶᬤ᭄ᬥ|accomplished|si,də
 ᬲᬶᬬ|nine||siya
 ᬲᬶᬬᬧ᭄|chicken||siap
-ᬲᬶᬭᬄ|head|si.§rah|sirah
-ᬲᬶᬮ|cross-legged|si§lə
+ᬲᬶᬭᬄ|head|si.,rah|sirah
+ᬲᬶᬮ|cross-legged|si,lə
 ᬲᬶᬲ᭄ᬬ|student||sisya
-ᬲᬸᬢ|son|su§tə
-ᬲᬸᬢᬵ|daughter|su§tə
-ᬲᬸᬩ|already|su§bə
-ᬲᬸᬭ|deity|su§rə
-ᬲᬸᬭᬵ|liquor|su§rə
-ᬲᬸᬮ|sick|su§lə
-ᬲᬹᬢ|driver|su§tə
-ᬲᬾᬢ᭄ᬭ|graveyard, cemetery|se.§t§ra
+ᬲᬸᬢ|son|su,tə
+ᬲᬸᬢᬵ|daughter|su,tə
+ᬲᬸᬩ|already|su,bə
+ᬲᬸᬭ|deity|su,rə
+ᬲᬸᬭᬵ|liquor|su,rə
+ᬲᬸᬮ|sick|su,lə
+ᬲᬹᬢ|driver|su,tə
+ᬲᬾᬢ᭄ᬭ|graveyard, cemetery|se.,t,ra
 ᬲᬾᬧᬓ᭄||␣|
 ᬲᭀᬕᬢ||␣|
-ᬲᭀᬘ|gem|so§t͡ʃə
+ᬲᭀᬘ|gem|so,t͡ʃə
 ᬲᭂᬍᬫ᭄||␣|
 ᬲᭂᬓᬳ||␣|
 ᬲᭂᬕ||␣|
-ᬲᭂᬦ᭄ᬢᬦ|descendant|sə§n§ta§nə
+ᬲᭂᬦ᭄ᬢᬦ|descendant|sə,n,ta,nə
 ᬲᭂᬧᬓ||␣|
-ᬲ᭄ᬫᬭ|love|s§ma§rə§/səmarə|samara
-ᬲ᭄ᬯ|self|swə/s§wa
-ᬲ᭄ᬯᬭ|sound|s§wa§rə|suara
+ᬲ᭄ᬫᬭ|love|s,ma,rə,/səmarə|samara
+ᬲ᭄ᬯ|self|swə/s,wa
+ᬲ᭄ᬯᬭ|sound|s,wa,rə|suara
 ᬲ᭄ᬯᬵᬕᬢ||␣|
 ᬳᬂᬓ᭄ᬮᬸᬂ|English||angklung
 ᬳᬓᬾ||␣|
-ᬳᬓᬾᬄ|many|a.§keh|akéh
+ᬳᬓᬾᬄ|many|a.,keh|akéh
 ᬳᬗᬾᬮ᭄||␣|
 ᬳᬗᭂᬦ᭄||␣|
 ᬳᬗ᭄ᬕ||␣|
 ᬳᬗ᭄ᬲ||␣|
 ᬳᬚᬶ||␣|
-ᬳᬜᬃ|new|a§ɲar|anyar
+ᬳᬜᬃ|new|a,ɲar|anyar
 ᬳᬜ᭄ᬘᬗᬦ᭄|river, stone, etc. spirit||ancangan
-ᬳᬤ|to be, exist|a§da
-ᬳᬤᬦ᭄|name|a§da§n|adan
-ᬳᬤᬶ|sibling|a§di
+ᬳᬤ|to be, exist|a,da
+ᬳᬤᬦ᭄|name|a,da,n|adan
+ᬳᬤᬶ|sibling|a,di
 ᬳᬤᭂᬕ᭄||␣|
-ᬳᬤᭂᬕ᭄ᬳᬤᭂᬕ᭄|adeg-adeg|a.§də§k.§a.§də§k|adeg-adeg
+ᬳᬤᭂᬕ᭄ᬳᬤᭂᬕ᭄|adeg-adeg|a.,də,k.,a.,də,k|adeg-adeg
 ᬳᬦᬓ᭄|person||anak
-ᬳᬦᬘᬭᬓ|alphabet order|ha§na§ca§ka§ra§/anacakara
+ᬳᬦᬘᬭᬓ|alphabet order|ha,na,ca,ka,ra,/anacakara
 ᬳᬦᬾ||␣|
 ᬳᬦ᭄ᬤᬸᬲ᭄|smoke||andus
 ᬳᬧ|what|␣|apa
-ᬳᬧᬶ|fire|a§pi
+ᬳᬧᬶ|fire|a,pi
 ᬳᬫ᭄ᬩᬸ||␣|
 ᬳᬬᬸ||␣|
-ᬳᬭᬶ|younger sibling|a§ri
-ᬳᬮᬲ᭄|forest|a§la§s|alas
+ᬳᬭᬶ|younger sibling|a,ri
+ᬳᬮᬲ᭄|forest|a,la,s|alas
 ᬳᬮᬶᬢ᭄|small, young||alit
 ᬳᬮᬸᬲ᭄|fine, soft||alus
 ᬳᬯᬃᬳᬯᬃ|fig tree||awar-awar
 ᬳᬯᬦ᭄||␣|
 ᬳᬲᬸ|dog||asu
 ᬳᬲᭂᬧ᭄|smoke, incense||asep
-ᬳᬲ᭄ᬢ|hand|a§s§tə
+ᬳᬲ᭄ᬢ|hand|a,s,tə
 ᬳᬶᬕ|rib||higa
 ᬳᬶᬕᭂᬮ᭄|dance||igel
-ᬳᬶᬘ|grace, favour|i§t͡ʃə|ica
-ᬳᬶᬚᭀ|green|i.§d͡ʒo|ijo
-ᬳᬶᬩᬶ|yesterday|i.§bi|ibi
-ᬳᬸᬓᬶᬃ|to carve|u§kir|ukir
-ᬳᬸᬓᬸ|salt|u§ku|uku
+ᬳᬶᬘ|grace, favour|i,t͡ʃə|ica
+ᬳᬶᬚᭀ|green|i.,d͡ʒo|ijo
+ᬳᬶᬩᬶ|yesterday|i.,bi|ibi
+ᬳᬸᬓᬶᬃ|to carve|u,kir|ukir
+ᬳᬸᬓᬸ|salt|u,ku|uku
 ᬳᬸᬚᬦ᭄|rain||ujan
-ᬳᬸᬦ᭄ᬥᬂ|law|u§n.§daŋ|undang
-ᬳᬸᬫ|rice paddy|u§ma|uma
+ᬳᬸᬦ᭄ᬥᬂ|law|u,n.,daŋ|undang
+ᬳᬸᬫ|rice paddy|u,ma|uma
 ᬳᬸᬬᬄ|salt||uyah
-ᬳᬸᬯᬸᬲ᭄|already|u§ʋu§s/uwus
-ᬳᬾᬦᬓ᭄|delicious|ˈe§na§ʔ|enak|alt. form
-ᬳᬾᬫᬾᬤ᭄|to pull forcefully|e§me§t|éméd
-ᬳᭀᬃᬢ|news|or§ta|orta
-ᬳᭀᬃᬢᬶ|news|or§ti|orti
+ᬳᬸᬯᬸᬲ᭄|already|u,ʋu,s/uwus
+ᬳᬾᬦᬓ᭄|delicious|ˈe,na,ʔ|enak|alt. form
+ᬳᬾᬫᬾᬤ᭄|to pull forcefully|e,me,t|éméd
+ᬳᭀᬃᬢ|news|or,ta|orta
+ᬳᭀᬃᬢᬶ|news|or,ti|orti
 ᬳᭂᬫᬾᬤ᭄||␣|
 ᬳᭂᬫᭂᬤ᭄||␣|
-ᬳᭂᬫ᭄ᬧᬢ᭄|four|ə§m.§pa§t|empat
-ᬳ᭄ᬬᬂ​|goddess|ˈh§jaːŋ|hyang
+ᬳᭂᬫ᭄ᬧᬢ᭄|four|ə,m.,pa,t|empat
+ᬳ᭄ᬬᬂ​|goddess|ˈh,jaːŋ|hyang
 
 
 
@@ -612,7 +612,7 @@ autoExpandExamples.ban = `
 ᬢᬫ᭄ᬩ᭄ᬮᬂ|Tamblang||tamblang|village in Bali
 ᬩᬗ᭄ᬓᬸᬂ|pig||bangkung
 ᬱᬫ᭄ᬧᬶᬂ|side||samping
-ᬓᬃᬡ|ear|kar§na
+ᬓᬃᬡ|ear|kar,na
 ᬓᬵᬤᭂᬧ᭄|sold||kādĕp
 
 
