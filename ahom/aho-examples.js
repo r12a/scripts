@@ -28,7 +28,7 @@ autoExpandExamples.aho = `
 𑜀𑜃𑜫|together||kan|
 𑜀𑜄𑜫||||
 𑜀𑜟𑜨|ninth|krɔ|kro|
-𑜀𑜟𑜨 𑜏𑜢𑜆𑜫|twentieth|krɔ§ §si§p|kro sip|
+𑜀𑜟𑜨 𑜏𑜢𑜆𑜫|twentieth|krɔ, ,si§p|kro sip|
 𑜀𑜠||||
 𑜀𑜠𑜀𑜦𑜧|pigeon|ka§kɛː|kakē|
 𑜀𑜠𑜀𑜧||||
