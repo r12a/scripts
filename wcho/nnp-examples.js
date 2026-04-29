@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -29,7 +29,7 @@ autoExpandExamples.nnp = `
 𞋋𞋞|blunt|tù|||upper wancho
 𞋋𞋞𞋮|iron|tu|||upper wancho
 𞋋𞋞𞋯|see|tú|||upper wancho
-𞋋𞋞𞋫|thorn|t§u§ʔ|||upper wancho
+𞋋𞋞𞋫|thorn|t,u,ʔ|||upper wancho
 𞋔𞋀|legs apart|kà|||upper wancho
 𞋔𞋀𞋮|go|ka|||upper wancho
 𞋔𞋀𞋯|door|ká|||upper wancho
@@ -71,14 +71,14 @@ autoExpandExamples.nnp = `
 𞋔𞋁𞋞𞋫|give|kəuʔ
 
 𞋝𞋁𞋔|to look upwards|ŋək
-𞋝𞋀𞋔|banana leaf|ŋ§a§k
+𞋝𞋀𞋔|banana leaf|ŋ,a,k
 𞋅𞋤|sky|gə̀ŋ
-𞋅𞋣𞋔𞋣𞋮|shoulder|ɡ§àŋ§k§aŋ
+𞋅𞋣𞋔𞋣𞋮|shoulder|ɡ,àŋ,k,aŋ
 
 𞋂𞋀|gap|bà
 𞋂𞋀𞋮|tooth|ba
-𞋂𞋁𞋉|fire|b§ə̀§n
-𞋂𞋁𞋮𞋉|ten|b§ə§n
+𞋂𞋁𞋉|fire|b,ə̀,n
+𞋂𞋁𞋮𞋉|ten|b,ə,n
 𞋂𞋛|group|bè
 𞋂𞋛𞋮|pull|be
 𞋂𞋞|spicy hot|bù
@@ -87,7 +87,7 @@ autoExpandExamples.nnp = `
 𞋃𞋀𞋮|remainder|t͡ʃa
 𞋃𞋕|chest|t͡ʃɔ̀
 𞋃𞋕𞋮|summer|t͡ʃɔ
-𞋄𞋁𞋘|bamboo mat|d§à§m
+𞋄𞋁𞋘|bamboo mat|d,à,m
 𞋄𞋁𞋮𞋘|careless|dam
 𞋃𞋁𞋘|what|cə̀m
 𞋃𞋁𞋮𞋘|food|cəm
@@ -140,12 +140,12 @@ autoExpandExamples.nnp = `
 𞋃𞋞𞋮|bite|t͡ʃu
 𞋃𞋞|melt|t͡ʃù
 
-𞋃𞋀𞋫𞋉𞋞|tiger|tʃ§a§ʔ§n§ù
+𞋃𞋀𞋫𞋉𞋞|tiger|tʃ,a,ʔ,n,ù
 𞋌𞋀𞋫𞋉𞋞|tiger|tʰaʔnù
 𞋀𞋊𞋞|grandfather|apu
 𞋂𞋀𞋎𞋀|pineapple|basa
 𞋅𞋀𞋎𞋀|pineapple|gasa
-𞋄𞋥|neck|d§iŋ
+𞋄𞋥|neck|d,iŋ
 𞋑𞋥|neck|ziŋ
 𞋩𞋆𞋀|ox|ɲa
 𞋝𞋀𞋮|ox|ŋa
@@ -154,12 +154,12 @@ autoExpandExamples.nnp = `
 
 @ https://www.amazon.com/Wancho-Script-Banwang-Losu/dp/1482812517?asin=1482812517&revisionId=&format=4&depth=1
 
-𞋒𞋀𞋉𞋃𞋕 𞋈𞋀𞋜𞋐𞋜|Wancho script|w§a§n§t͡ʃ§ɔ§ §l§a§i§d͡ʒ§a
+𞋒𞋀𞋉𞋃𞋕 𞋈𞋀𞋜𞋐𞋜|Wancho script|w,a,n,t͡ʃ,ɔ, ,l,a,i,d͡ʒ,a
 
 
 @ https://en.wikipedia.org/wiki/Wancho_language
 
-𞋒𞋀𞋉𞋃𞋕|Wancho language|w§a§n§t͡ʃ§ɔ|
+𞋒𞋀𞋉𞋃𞋕|Wancho language|w,a,n,t͡ʃ,ɔ|
 
 
 
