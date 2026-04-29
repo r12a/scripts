@@ -91,7 +91,7 @@ function getData (script) {
 
 	// pickers 
 	if (record.pickers && record.pickers.length > 0) {
-        out += '<td><b>Pickers:</b>'
+        out += '<td><b>Character workbenches:</b>'
 		if (record.pickers && record.pickers.length > 0) {
             for (let n=0;n<record.pickers.length;n++) {
                 out += '<p style="font-size:1.1em;"><a href="../pickers/'+record.pickers[n][1]+'/index.html" target="_blank">'+record.pickers[n][0]+'</a>'
