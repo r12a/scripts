@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -69,7 +69,7 @@ Asiya||␣
 Attaura||␣
 Audu||␣
 Azumi||␣
-Aʼishatu|Aisha|ʔáː.§›§ʔì.§ʃ§‹§á.§t§ù
+Aʼishatu|Aisha|ʔáː.,›,ʔì.,ʃ,‹,á.,t,ù
 Baba||␣
 Badun||␣
 Bafilatani||␣
@@ -170,7 +170,7 @@ Jahun||␣
 Jamusanci||␣
 Jamus||␣
 Janairu||␣
-Japan|Japan|(d)ʒ§à.§p§â§n
+Japan|Japan|(d)ʒ,à.,p,â,n
 Jatau||␣
 Jega||␣
 Jibirilu||␣
@@ -333,32 +333,32 @@ Zazzau||␣
 Zubairu||␣
 Zulhajji||␣
 Zulƙida||␣
-abacada|alphabet|ʔàː.§b§àː.§t͡ʃ§àː.§d§âː
-abada|always|ʔà.§b§à.§d§âː
+abacada|alphabet|ʔàː.,b,àː.,t͡ʃ,àː.,d,âː
+abada|always|ʔà.,b,à.,d,âː
 abarba||␣
 abiyo||␣
 abjadi||␣
 aboka||␣
 aboki||␣
 abu||␣
-acca|fonio (plant)|ʔá§t.§t͡ʃ§àː
+acca|fonio (plant)|ʔá,t.,t͡ʃ,àː
 adabi||␣
 adabo||␣
 adadi||␣
 adawa||␣
 addaba||␣||
-addini|religion|ʔà§d.§d§íː.§n§ìː
+addini|religion|ʔà,d.,d,íː.,n,ìː
 addu'a||␣||
 adduʼa||
 adire||␣
-aduwa|date (fruit)|ʔá.§d§ú.§w§àː||Kano: ʔá.dʊ́.wàː
+aduwa|date (fruit)|ʔá.,d,ú.,w,àː||Kano: ʔá.dʊ́.wàː
 adu||␣||
 agade||␣
 agogo||␣
 agola||␣
 agushi||␣
 agwado||␣
-agwagwa|duck|ʔà§.ɡʷ§‹§àː.§ɡʷ§‹§áː
+agwagwa|duck|ʔà,.ɡʷ,‹,àː.,ɡʷ,‹,áː
 aibi||␣
 aibu||␣
 aidin||␣||
@@ -417,11 +417,11 @@ aljan||␣
 alkadari||␣
 alkali||␣
 alkama||␣
-alkarya|unwalled town|ʔà§l.§k§á§r.§j§àː
+alkarya|unwalled town|ʔà,l.,k,á,r.,j,àː
 alkawari||␣
-alkyabba|sign of authority|ʔà§l.§c§‹§á§b.§b§àː
+alkyabba|sign of authority|ʔà,l.,c,‹,á,b.,b,àː
 alli||␣||
-allura|needle, injection|ʔà§l.§l§úː.§r§àː
+allura|needle, injection|ʔà,l.,l,úː.,r,àː
 almajiri||␣
 almakashi||␣
 alwala||␣
@@ -431,7 +431,7 @@ alʼada||
 alʼajabi||
 alʼamari||
 alʼaura||
-alʼumma|nation, community|ʔà§l.§ʔ§ú§m.§m§àː
+alʼumma|nation, community|ʔà,l.,ʔ,ú,m.,m,àː
 amalanke||␣
 amale||␣
 amana||␣
@@ -441,16 +441,16 @@ ambaliya||␣||
 amfani||␣||
 amini||␣
 amin||␣
-amma|but|ʔà§m.§m§áː
+amma|but|ʔà,m.,m,áː
 amo||␣||
 amsa||␣
 anabi||␣
 anini||␣
 annabi||␣
 annoba||␣
-annuri|light, brightness|ʔà§n.§n§úː.§r§ìː
+annuri|light, brightness|ʔà,n.,n,úː.,r,ìː
 anta||␣
-arabiyya|Arabic language|ʔà.§r§à.§b§í§j.§j§àː
+arabiyya|Arabic language|ʔà.,r,à.,b,í,j.,j,àː
 aradu||␣
 arba'in||␣||
 arbaʼin||
@@ -470,10 +470,10 @@ asiri||␣
 aske||␣
 asubahi||␣
 asuba||␣
-atone-janar|attorney general|ʔà.§t§óː.§n§è.§§(d)ʒ§á.§n§à§r|Kano: ʔà.tóː.nɛ̀.d͡ʒə́.nàr
+atone-janar|attorney general|ʔà.,t,óː.,n,è.,,(d)ʒ,á.,n,à,r|Kano: ʔà.tóː.nɛ̀.d͡ʒə́.nàr
 attajiri||␣
-auduga|cotton|ʔá§u.§d§ù.§ɡ§áː
-aure|marriage|ʔá§u.§ɽ§éː
+auduga|cotton|ʔá,u.,d,ù.,ɡ,áː
+aure|marriage|ʔá,u.,ɽ,éː
 awaza||␣
 awa||␣
 ayaba||␣
@@ -492,13 +492,13 @@ aƙida||␣
 ba ...|not|
 ba'askare||␣||
 ba-||␣||
-baba|father|b§àː.§b§á
-babbar mota|truck, lorry|b§à§b.§b§á§r§ §m§óː.§t§àː
-babba|big|b§à§b.§b§á
+baba|father|b,àː.,b,á
+babbar mota|truck, lorry|b,à,b.,b,á,r, ,m,óː.,t,àː
+babba|big|b,à,b.,b,á
 babi||␣||
 babur||␣
 bado||␣
-baffa|paternal uncle|b§á§f.§f§à
+baffa|paternal uncle|b,á,f.,f,à
 bahar||␣
 bahasi||␣||
 bahili||␣
@@ -510,7 +510,7 @@ baiwa||␣
 bajau||␣
 bajo||␣
 baka||␣
-baki|mouth, beak|b§àː.§k§íː||Kano: bàː.cíː
+baki|mouth, beak|b,àː.,k,íː||Kano: bàː.cíː
 bakwai||␣
 bala'i||␣||
 balas||␣
@@ -537,18 +537,18 @@ bauta||␣
 bawa||␣
 bayani||␣||
 bayan||␣
-baya|back|b§áː.§j§áː
+baya|back|b,áː.,j,áː
 ba|to give|
-baƙi|black, dark|b§á.§kʼ§íː||Kano: bə́.cʼíː
+baƙi|black, dark|b,á.,kʼ,íː||Kano: bə́.cʼíː
 baʼaskare||
 bedi||␣
-bel|, seatbelt|b§é§l
+bel|, seatbelt|b,é,l
 bidi'a||␣||
 bidiʼa||
 bif||␣
 bika||␣
 bila haddin||␣
-bil|bill, invoice|b§î§l
+bil|bill, invoice|b,î,l
 bincike||␣||
 bindiga||␣
 bindi||␣
@@ -560,12 +560,12 @@ bishar̃a||␣||
 bishiya||␣
 bisimillahi||␣
 bisimilla||␣
-biyar|five|b§ì.§j§á§r||Kano: bɪ̀.jɛ́r
+biyar|five|b,ì.,j,á,r||Kano: bɪ̀.jɛ́r
 biyayya||␣||
 biya||␣
 biyer||␣
 biyu biyu||␣
-biyu|two|b§í.§j§ú||Kano: bɪ́.jʊ́
+biyu|two|b,í.,j,ú||Kano: bɪ́.jʊ́
 biza||␣
 boca||␣
 boka||␣||
@@ -580,15 +580,15 @@ budum-budum||␣
 budurwa||␣
 buga|to hit|
 buguzunzum||␣
-bukka|grass hut|b§ú§k.§k§àː
+bukka|grass hut|b,ú,k.,k,àː
 bura||␣
 buroka||␣
 burɗunɗun||␣
 busa|to blow|
-buta|kettle, teapot|b§úː.§t§àː
+buta|kettle, teapot|b,úː.,t,àː
 butsu-butsu||␣
 buƙata||␣||
-buƙwi|exposed, bare|b§ù.§kʷʼ§‹§íː
+buƙwi|exposed, bare|b,ù.,kʷʼ,‹,íː
 buɗa-baki||␣
 buɗu-buɗu||␣
 buɗuɗu||␣
@@ -610,37 +610,37 @@ cif||␣
 cigaba||␣||
 cikakke|full|
 cikin|in|
-ciki|stomach, belly|t͡ʃ§í.§k§ìː|Kano: t͡ʃɪ́.cɪ́
+ciki|stomach, belly|t͡ʃ,í.,k,ìː|Kano: t͡ʃɪ́.cɪ́
 cindo||␣
 ciroma||␣
 cir||␣
-citta|ginger root|t͡ʃ§ì§t.§t§á
+citta|ginger root|t͡ʃ,ì,t.,t,á
 ciwo||␣
 ciyawa|grass|
 ciza|to bite|
-ci|to eat|t͡ʃ§í
-coci|church|t͡ʃ§óː.§t͡ʃ§ì
-coi|very sweet|t͡ʃ§ó§ɪ́
-cokali|spoon|t͡ʃ§óː.§k§à.§l§íː
+ci|to eat|t͡ʃ,í
+coci|church|t͡ʃ,óː.,t͡ʃ,ì
+coi|very sweet|t͡ʃ,ó,ɪ́
+cokali|spoon|t͡ʃ,óː.,k,à.,l,íː
 cuku-cuku||␣
 cukun-cukun||␣
-cuku|cheese|t͡ʃ§ú.§k§úː||Kano: t͡ʃɪ́.kʷúː
-cukwi|table|t͡ʃ§ú.§kʷ§‹§íː||Kano: t͡ʃɪ́.kʷíː
+cuku|cheese|t͡ʃ,ú.,k,úː||Kano: t͡ʃɪ́.kʷúː
+cukwi|table|t͡ʃ,ú.,kʷ,‹,íː||Kano: t͡ʃɪ́.kʷíː
 cuna||␣
 cura||␣
 curi||␣
-cwai|very sweet|t͡ʃʷ§‹§á§i|alt. of coi
+cwai|very sweet|t͡ʃʷ,‹,á,i|alt. of coi
 da yawa|many|
 da'awa||␣||
 da'ira||␣||
-dabba|animal|d§á§b.§b§àː
+dabba|animal|d,á,b.,b,àː
 dabino||␣
-dabo|magic trick|d§á.§b§òː
-daddawa|sumbala condiment|d§à§d.§d§á.§w§áː
+dabo|magic trick|d,á.,b,òː
+daddawa|sumbala condiment|d,à,d.,d,á.,w,áː
 daftari||␣
 daga||␣
 dage||␣
-dahir|reality, truth|d§áː.§h§ì§r
+dahir|reality, truth|d,áː.,h,ì,r
 daimon||␣
 daina||␣
 dala||␣
@@ -672,9 +672,9 @@ da|and, with|
 daƙashi||␣
 daƙiƙa||␣
 daƙiƙi||␣
-daʼawa|allegation, claim|d§à.§ʔ§à.§w§áː
+daʼawa|allegation, claim|d,à.,ʔ,à.,w,áː
 daʼira||
-da’ira|circle|d§áː.§ʔ§ì.§r§áː
+da’ira|circle|d,áː.,ʔ,ì.,r,áː
 di'o||␣||
 diflomasiyya||␣
 diga||␣
@@ -690,10 +690,10 @@ dodon-koɖi||␣||
 dogara||␣
 dogari||␣
 dogon-yaro||␣||
-dogo|long|d§óː.§ɡ§óː||Kano: dóː.ɡʷóː
-dokin Allah|d§óː.§k§ì§n§ §ʔá§l.§l§àː§–|praying mantis
+dogo|long|d,óː.,ɡ,óː||Kano: dóː.ɡʷóː
+dokin Allah|d,óː.,k,ì,n, ,ʔá,l.,l,àː,–|praying mantis
 doki||␣
-dokta|doctor|d§ó§k.§t§àː||Kano: dɔ́k.tàː
+dokta|doctor|d,ó,k.,t,àː||Kano: dɔ́k.tàː
 domin||␣||
 don|because|
 dorina||␣
@@ -710,16 +710,16 @@ duna||␣
 duniya||␣
 duri||␣
 duros||␣
-dushi-dushi|difficult to see, hazy|d§ú.§ʃ§‹§í.§§d§ú.§ʃ§‹§í||Kano: dɪ́.ʃɪ́.dɪ́.ʃɪ́
-dutse|stone, mountain|d§úː.§(t)§sʼ§èː
-duʼaʼi|supplicatory prayer|d§ú.§ʔ§áː.§ʔ§ìː
-edita|editor|ʔé.§d§í.§t§à||Kano: ʔɛ́.dɪ́.tə̀
-eka|acre|ʔéː.§k§àː|
+dushi-dushi|difficult to see, hazy|d,ú.,ʃ,‹,í.,,d,ú.,ʃ,‹,í||Kano: dɪ́.ʃɪ́.dɪ́.ʃɪ́
+dutse|stone, mountain|d,úː.,(t),sʼ,èː
+duʼaʼi|supplicatory prayer|d,ú.,ʔ,áː.,ʔ,ìː
+edita|editor|ʔé.,d,í.,t,à||Kano: ʔɛ́.dɪ́.tə̀
+eka|acre|ʔéː.,k,àː|
 el'e||␣||
-elʼe|local authority|ʔé§l.§ʔ§êː
-emti|empty container|ʔé§m.§t§ìː||Kano: ʔɛ́m.tìː
+elʼe|local authority|ʔé,l.,ʔ,êː
+emti|empty container|ʔé,m.,t,ìː||Kano: ʔɛ́m.tìː
 en'e||␣||
-enʼe|native authority|ʔé§n.§ʔ§èː
+enʼe|native authority|ʔé,n.,ʔ,èː
 fa'ida||␣||
 faca-faca||␣
 fahami||␣
@@ -727,21 +727,21 @@ fahari||␣
 falsafa||␣
 fam||␣
 fangali||␣
-fanke|fried wheat cake|f§à§n.§k§éː||Kano: ɸɛ̀ɲ.céː
+fanke|fried wheat cake|f,à,n.,k,éː||Kano: ɸɛ̀ɲ.céː
 fanni||␣
 fara'a||␣||
 farali||␣
 fara||␣||
 faraʼa||
-farce|fingernail|f§á§ɽ.§t͡ʃ§èː||Kano: ɸáɽ.t͡ʃèː
+farce|fingernail|f,á,ɽ.,t͡ʃ,èː||Kano: ɸáɽ.t͡ʃèː
 farilla||␣
-fari|white|f§á.§ɽ§íː||Kano: ɸə́.ɽíː; fáː.ɽì is beginning, start
+fari|white|f,á.,ɽ,íː||Kano: ɸə́.ɽíː; fáː.ɽì is beginning, start
 farko||␣||
 fartanya||␣
 fasa'ofis||␣||
 fasali||␣
 fasaʼofis||
-fasfo|passport|f§à§s.§f§ó
+fasfo|passport|f,à,s.,f,ó
 fashe||␣
 fasinja||␣
 fasiƙi||␣
@@ -750,9 +750,9 @@ fata-fata||␣
 fatanya||␣
 fatau||␣
 fata|skin|
-fatsa|fishhook|f§á.§(t)§sʼ§á||Kano: ɸə́.sʼə́
+fatsa|fishhook|f,á.,(t),sʼ,á||Kano: ɸə́.sʼə́
 fatsi||␣
-fat|bright white|f§á§t
+fat|bright white|f,á,t
 fau||␣
 faƙiri||␣
 faɗa||␣||
@@ -760,8 +760,8 @@ faɗi|to fall|
 faʼida||
 feda||␣
 fensir||␣
-fes|very clean|f§é§s
-fetal|open space|f§èː.§t§á§l||Kano: ɸèː.tál
+fes|very clean|f,é,s
+fetal|open space|f,èː.,t,á,l||Kano: ɸèː.tál
 fetur̃||␣||
 fi'ili||␣||
 fida'u||␣||
@@ -783,7 +783,7 @@ fom||␣
 fula||␣||
 funkaso||␣
 fura||␣
-fure|flower|f§ù.§ɽ§éː||Kano: ɸʊ̀.ɽéː
+fure|flower|f,ù.,ɽ,éː||Kano: ɸʊ̀.ɽéː
 fururu||␣
 fusata||␣||
 fuɗu||␣||
@@ -800,7 +800,7 @@ gahawa||␣
 gaibi||␣
 gaira||␣
 gaiwa||␣
-gajere|short|ɡ§à.§(d)ʒ§éː.§ɽ§éː
+gajere|short|ɡ,à.,(d)ʒ,éː.,ɽ,éː
 gajimare|cloud|
 galadima||␣
 galala||␣
@@ -814,7 +814,7 @@ ganima||␣
 gani|to see|
 ganji||␣||
 ganuwa||␣||
-ganye|leaf|ɡ§á§n.§j§éː|Kano: ɡɛ́ɲ.jéː
+ganye|leaf|ɡ,á,n.,j,éː|Kano: ɡɛ́ɲ.jéː
 garafuni||␣||
 gari||␣||
 garkuwa||␣
@@ -830,7 +830,7 @@ gatsal-gatsal||␣
 gaula||␣
 gawasa||␣||
 gawa||␣
-gazet|gazette|ɡ§à.§z§é§t
+gazet|gazette|ɡ,à.,z,é,t
 gefin||␣||
 gemu||␣
 giginya||␣||
@@ -844,7 +844,7 @@ giwa||␣
 giya||␣
 giɗi-giɗi||␣
 goba||␣
-goge|one-stringed fiddle|ɡ§òː.§ɡ§éː||Kano: ɡʷòː.ɟéː
+goge|one-stringed fiddle|ɡ,òː.,ɡ,éː||Kano: ɡʷòː.ɟéː
 goma||␣
 gomiya||␣
 gona||␣
@@ -868,17 +868,17 @@ guru||␣
 gusa||␣
 gusum||␣
 guɗa||␣||
-gwaggo|paternal aunt|ɡʷ§‹§á§ɡ.§ɡ§ò
+gwaggo|paternal aunt|ɡʷ,‹,á,ɡ.,ɡ,ò
 gwaiba||␣
 gwal||␣
 gwamnati||␣
 gwamna||␣
-gwanda|papaya|ɡʷ§‹§á§n.§d§àː
+gwanda|papaya|ɡʷ,‹,á,n.,d,àː
 gwangwani||␣
 gwanjo||␣||
 gwanki||␣||
 gwaza||␣
-gwiwa|knee|ɡʷ§‹§íː.§w§àː
+gwiwa|knee|ɡʷ,‹,íː.,w,àː
 hadda||␣
 haddi||␣
 hadisi||␣
@@ -889,10 +889,10 @@ haila||␣
 hairan||␣
 haja||␣
 haji||␣
-hajji|hajj|h§á§(d).§(d)ʒ§ì
+hajji|hajj|h,á,(d).,(d)ʒ,ì
 hakimi||␣
 hakiya||␣
-hakkan|surely, truly|h§á§k.§k§à§n
+hakkan|surely, truly|h,á,k.,k,à,n
 hakki|a right|hák.kìː
 halaka||␣
 halal||␣
@@ -906,9 +906,9 @@ hama||␣
 hamdala||␣
 hamila||␣
 hamsin||␣
-hanci|nose|h§á§n.§t͡ʃ§ìː
+hanci|nose|h,á,n.,t͡ʃ,ìː
 hangum||␣
-hanhai|wide open|h§à§n.§h§á§i
+hanhai|wide open|h,à,n.,h,á,i
 hani'an||␣||
 haniya|road|
 hani||␣
@@ -916,13 +916,13 @@ haniʼan||
 hanji|guts|
 hankali||␣||
 hannu|hand|␣
-hanta|liver|h§á§n.§t§àː
+hanta|liver|h,á,n.,t,àː
 hanya||␣
 harafi||␣
 haraji||␣
 haram||␣
 harsashi||␣
-harshe|tongue, language|h§á§ɽ.§ʃ§‹§è
+harshe|tongue, language|h,á,ɽ.,ʃ,‹,è
 har||␣
 hasafi||␣
 hasara||␣
@@ -930,7 +930,7 @@ hasa||␣
 hassada||␣||
 hatimi||␣
 hatta||␣
-hausa|Hausa|h§á§u.§s§á
+hausa|Hausa|h,á,u.,s,á
 hau||␣
 hawa'i||␣||
 hawainiya||␣||
@@ -938,7 +938,7 @@ hawan-ƙaho||␣
 hawaʼi||
 hazbiya||␣||
 haziƙi||␣
-hazo|haze, mist|h§á.§z§óː
+hazo|haze, mist|h,á.,z,óː
 haƙa|to dig|
 haƙori|tooth|␣
 haɓa||␣
@@ -967,13 +967,13 @@ hula||␣
 humushi||␣
 humusi||␣
 huntu||␣
-hura|to blow, inflate|h§úː.§ɽ§àː
+hura|to blow, inflate|h,úː.,ɽ,àː
 hurriyya||␣||
 husufi||␣
 hutsu||␣
 hutu||␣
 huɗuba||␣
-huɗu|four|h§ú.§ɗ§ú
+huɗu|four|h,ú.,ɗ,ú
 ibada||␣
 ibilis||␣
 iblis||␣
@@ -981,7 +981,7 @@ ice||␣
 idan|if|␣
 idda||␣
 idi||␣
-ido|eye|ʔí.§d§òː
+ido|eye|ʔí.,d,òː
 igiya|rope|␣
 igwa||␣||
 ijara||␣
@@ -1001,7 +1001,7 @@ iri|seed|
 ishara||␣
 isha||␣
 ishe||␣
-iska|wind|ʔí§s.§k§àː
+iska|wind|ʔí,s.,k,àː
 istihara||␣
 itace|tree|
 ita||␣
@@ -1018,11 +1018,11 @@ jahadi||␣
 jahili||␣
 jaka||␣
 jaki||␣
-jale-jale|going hither and thither|(d)ʒ§à.§l§èː.§§(d)ʒ§á.§l§éː
+jale-jale|going hither and thither|(d)ʒ,à.,l,èː.,,(d)ʒ,á.,l,éː
 jam'iyya||␣||
 jam'i||␣||
 jama'a||␣||
-jamaʼa|public, community|(d)ʒ§à.§m§á.§ʔ§à
+jamaʼa|public, community|(d)ʒ,à.,m,á.,ʔ,à
 jamhuriya||␣
 jami'a||␣||
 jami'i||␣||
@@ -1036,14 +1036,14 @@ janar||␣
 janaʼiza||
 jandarma||␣
 jarida||␣
-jarrabawa|test, exam|d͡ʒ§á§r.§r§ə̀.§b§âː.§w§áː
+jarrabawa|test, exam|d͡ʒ,á,r.,r,ə̀.,b,âː.,w,áː
 jawabi||␣
 jawo||␣||
 jawur||␣
 jaza'i||␣||
 jazaʼi||
 jazur||␣
-ja|red|(d)ʒ§áː||Kano: d͡ʒáː
+ja|red|(d)ʒ,áː||Kano: d͡ʒáː
 jefa|to throw|
 jeri||␣||
 jidali||␣
@@ -1059,7 +1059,7 @@ jimina||␣
 jimla||␣
 jim||␣
 jimɓirɓir||␣
-jini|blood|(d)ʒ§í.§n§íː||Kano: d͡ʒɪ́.níː
+jini|blood|(d)ʒ,í.,n,íː||Kano: d͡ʒɪ́.níː
 jinjimi||␣||
 jinsi||␣
 jirgin ruwa||␣
@@ -1089,10 +1089,10 @@ kafiri||␣
 kafur||␣
 kaf||␣
 kahuhu||␣
-kaidi|limit, restriction|k§á§i.§d§ìː
+kaidi|limit, restriction|k,á,i.,d,ìː
 kaigama||␣
 kaiwa||␣
-kai|you (singular)|k§á§i||Kano: kéi
+kai|you (singular)|k,á,i||Kano: kéi
 kakaki||␣
 kaka||␣
 kalami||␣
@@ -1100,7 +1100,7 @@ kallo||␣||
 kalma||␣
 kaltibeta||␣
 kam-kam||␣
-kamala|decency, dignity|k§à.§m§áː.§l§àː
+kamala|decency, dignity|k,à.,m,áː.,l,àː
 kambi||␣
 kamfas||␣
 kamili||␣
@@ -1120,11 +1120,11 @@ karahiya||␣
 karama||␣
 karanta||␣
 karce|to scratch|
-kare|dog|k§à.§ɽ§éː||also kàː.rêː square
+kare|dog|k,à.,ɽ,éː||also kàː.rêː square
 karimi||␣
 karkanda||␣
 karuwa||␣
-kasat|cassette|k§áː.§s§à§t
+kasat|cassette|k,áː.,s,à,t
 kasa|earth|
 kashe|to kill|
 kasko||␣
@@ -1148,27 +1148,27 @@ keso||␣
 kibiya||␣
 kifa||␣
 kife||␣
-kifi|fish|k§íː.§f§íː||Kano: cíː.ɸíː
-kikyu-kikyu|standing alert|k§í.§c§‹§úː.§§k§ì.§c§‹§ùː
+kifi|fish|k,íː.,f,íː||Kano: cíː.ɸíː
+kikyu-kikyu|standing alert|k,í.,c,‹,úː.,,k,ì.,c,‹,ùː
 kilishi||␣
 kili||␣
 kimsa||␣
 kindirmo||␣
 kirtif||␣
 kishiya||␣||
-kishi|jealousy|c§iː§ʃ§‹§iː
+kishi|jealousy|c,iː,ʃ,‹,iː
 kissa||␣
 kiyama||␣
 kofi||␣
 kofur||␣
-kogi|river|k§òː.§ɡ§íː||Kano: kʷòː.ɟíː
+kogi|river|k,òː.,ɡ,íː||Kano: kʷòː.ɟíː
 koka||␣
 koko||␣
 kolo||␣
 koma||␣
 komi||␣
 komo||␣
-kore|green|k§óː.§r§èː||Kano: kʷóː.rèː
+kore|green|k,óː.,r,èː||Kano: kʷóː.rèː
 kori||␣
 kos||␣
 kotu||␣
@@ -1177,7 +1177,7 @@ kowa||␣||
 kubbi||␣
 kucaki||␣
 kudaku||␣
-kudu|south|k§ú.§d§ù||Kano: kʷʊ́.dɪ̀
+kudu|south|k,ú.,d,ù||Kano: kʷʊ́.dɪ̀
 kufai||␣
 kuge||␣
 kujera||␣||
@@ -1189,10 +1189,10 @@ kumbura|to swell|
 kunama||␣
 kuni||␣
 kunkuru||␣||
-kunne|ear|k§û§n.§n§éː||Kano: kʷʊ̂n.néː
+kunne|ear|k,û,n.,n,éː||Kano: kʷʊ̂n.néː
 kunya||␣
 kurkuku||␣
-kurma|deaf person|k§ú§ɽ.§m§áː||Kano: kʷʊ́ɽ.máː
+kurma|deaf person|k,ú,ɽ.,m,áː||Kano: kʷʊ́ɽ.máː
 kurmi||␣
 kurwa||␣
 kusa da|near|
@@ -1206,20 +1206,20 @@ kwala||␣
 kwalekwale||␣
 kwal||␣
 kwamanda||␣||
-kwamfyuta|computer|kʷ§‹§à§m.§fʲ§‹§úː.§t§àː||Kano: kʷàm.ɸʲúː.tàː
+kwamfyuta|computer|kʷ,‹,à,m.,fʲ,‹,úː.,t,àː||Kano: kʷàm.ɸʲúː.tàː
 kwana||␣||
-kwano|corrugated iron|kʷ§‹§áː.§n§òː
+kwano|corrugated iron|kʷ,‹,áː.,n,òː
 kwanta|to lie (bed)|
-kwaram|suddenly|kʷ§‹§á.§ɽ§à§m
+kwaram|suddenly|kʷ,‹,á.,ɽ,à,m
 kwarkwa|louse|
 kwata-kwata||␣
 kwatsam||␣
-kwaɗo|frog, toad|kʷ§‹§àː.§ɗ§óː
-kyaftin|captain (rank)|c§‹§á§f.§t§ì§n
-kyanwa|cat|c§‹§â§n.§w§áː
-kyat|cake|c§‹§â§t
+kwaɗo|frog, toad|kʷ,‹,àː.,ɗ,óː
+kyaftin|captain (rank)|c,‹,á,f.,t,ì,n
+kyanwa|cat|c,‹,â,n.,w,áː
+kyat|cake|c,‹,â,t
 kyauro||␣||
-kyau|good|c§‹§â§u||Kano: cɛ̂u
+kyau|good|c,‹,â,u||Kano: cɛ̂u
 la'ada||␣||
 la'alla||␣||
 la'asariyya||␣||
@@ -1227,9 +1227,9 @@ la'asar||␣||
 la'ifi||␣||
 labarin ƙasa||␣
 labari||␣
-laba|pound (weight)|l§áː.§b§àː
+laba|pound (weight)|l,áː.,b,àː
 labudda||␣
-lacca|lecture|l§á§t.§t͡ʃ§àː
+lacca|lecture|l,á,t.,t͡ʃ,àː
 ladabi||␣
 ladani||␣
 ladan||␣
@@ -1238,7 +1238,7 @@ lafazi||␣
 lafiya||␣
 lafi||␣
 laifi||␣
-laima|tent, umbrella|l§á§i.§m§àː
+laima|tent, umbrella|l,á,i.,m,àː
 laita||␣
 laka||␣
 lakile||␣
@@ -1250,7 +1250,7 @@ lambu||␣
 lamiri||␣
 lam||␣
 lardi||␣
-larura|necessity|l§à.§r§úː.§r§àː||Kano: lə̀.rúː.ràː
+larura|necessity|l,à.,r,úː.,r,àː||Kano: lə̀.rúː.ràː
 lasin||␣
 lasisi||␣
 laskofur||␣
@@ -1259,20 +1259,20 @@ launi||␣
 lauya||␣
 lawur||␣
 laya||␣
-lazza|pleasant taste|l§á§z.§z§àː
+lazza|pleasant taste|l,á,z.,z,àː
 laʼada||
 laʼalla||
 laʼasariyya||
 laʼasar||
 laʼifi||
-lemo|orange, soft drink|l§èː.§m§óː
+lemo|orange, soft drink|l,èː.,m,óː
 lif||␣
 likita||␣
 limam||␣
 liman||␣
 linzami||␣
 lisha||␣
-lissafi|maths, counting|l§ì§s.§s§áː.§f§ìː
+lissafi|maths, counting|l,ì,s.,s,áː.,f,ìː
 littafi||␣
 loga||␣
 lokaci-lokaci||␣
@@ -1285,15 +1285,15 @@ lumana||␣
 luwaɗi||␣
 luwul||␣
 lu||␣
-luƙwi|finely ground|l§ú.§kʷʼ§‹§íː
+luƙwi|finely ground|l,ú.,kʷʼ,‹,íː
 ma sha Allahu||␣||
 ma'aikata||␣||
 ma'amala||␣||
 ma'ana||␣||
 ma-||␣||
 mabiyi||␣
-mace|woman|m§à.§t͡ʃ§èː||Kano: mə̀.t͡ʃèː
-maciji|snake|m§á.§t͡ʃ§ìː.§(d)ʒ§íː
+mace|woman|m,à.,t͡ʃ,èː||Kano: mə̀.t͡ʃèː
+maciji|snake|m,á.,t͡ʃ,ìː.,(d)ʒ,íː
 madaidaici|correct|
 madubi||␣
 mafaka||␣||
@@ -1306,7 +1306,7 @@ magariba||␣
 magini||␣
 mago||␣
 mahalli||␣
-mahawara|debate, discussion|m§à.§h§áː.§w§á.§r§àː
+mahawara|debate, discussion|m,à.,h,áː.,w,á.,r,àː
 mai dauɗa|dirty|
 mai da’ira|round|
 mai faɗi|wide|
@@ -1322,7 +1322,7 @@ mai ɗumi|warm|
 maina||␣
 maiso||␣
 maita||␣
-mai|oil, fat|m§â§i
+mai|oil, fat|m,â,i
 majalisa||␣
 majami'a||␣||
 majamiʼa||
@@ -1382,7 +1382,7 @@ mashi||␣
 masinja||␣
 matalauci||␣
 matala||␣
-mata|wife|m§àː.§t§áː
+mata|wife|m,àː.,t,áː
 matsala||␣||
 matsa|to squeeze|
 matukar̃||␣||
@@ -1412,7 +1412,7 @@ mesa||␣
 mesin||␣
 metso||␣||
 me|what, interrogative|
-miji|husband|m§í.§(d)ʒ§ìː||Kano: mɪ́.d͡ʒìː
+miji|husband|m,í.,(d)ʒ,ìː||Kano: mɪ́.d͡ʒìː
 mim||␣
 minista||␣
 minti||␣
@@ -1429,12 +1429,12 @@ mota||␣
 mowa||␣
 mu'amala||␣||
 mu'ujiza||␣||
-mubazzari|spendthrift|m§ù.§b§á§z.§z§à.§ríː
+mubazzari|spendthrift|m,ù.,b,á,z.,z,à.,ríː
 muddin||␣
 mugun dawa||␣
-mugu|bad, evil|m§úː.§ɡ§ùː||Kano: múː.ɡʷùː
+mugu|bad, evil|m,úː.,ɡ,ùː||Kano: múː.ɡʷùː
 muhibba||␣
-muhimmi|important|m§ù.§h§í§m.§m§ìː
+muhimmi|important|m,ù.,h,í,m.,m,ìː
 muhuri||␣
 mujaddadi||␣
 mujalla||␣
@@ -1458,13 +1458,13 @@ mushe||␣
 mushiriki||␣
 mussa||␣
 musulmi||␣
-mutum|man|m§ù.§t§û§m||Kano: mʊ̀.tɪ̂ŋ
+mutum|man|m,ù.,t,û,m||Kano: mʊ̀.tɪ̂ŋ
 mutunci||␣||
 mutuwa||␣||
-mutu|to die|m§ú.§t§ù||Kano: mʊ́.tɪ̀
+mutu|to die|m,ú.,t,ù||Kano: mʊ́.tɪ̀
 muzi||␣
 muzuru||␣
-mu|we|m§úː
+mu|we|m,úː
 muƙami||␣||
 muʼamala||
 muʼujiza||
@@ -1476,7 +1476,7 @@ nahawu||␣
 nahiya||␣
 naira||␣
 nakiya||␣||
-nama|meat|n§áː.§m§àː
+nama|meat|n,áː.,m,àː
 nan|here|
 nasaba||␣
 nasara||␣
@@ -1488,29 +1488,29 @@ nauʼi||
 nazari||␣
 naʼam||
 naʼibi||
-naʼura|machine, computer|n§àː.§ʔ§úː.§r§àː
+naʼura|machine, computer|n,àː.,ʔ,úː.,r,àː
 nesa||␣
 ni'ima||␣||
-nim|neem tree|n§î§m
+nim|neem tree|n,î,m
 nisa||␣||
 nishaɗi||␣
 ni|I|níː
 niʼima||
-nono|milk|n§óː.§n§òː
+nono|milk|n,óː.,n,òː
 notis||␣
 noti||␣
 nukus||␣
 nuna||␣||
 nun||␣
-obin|oven|ʔóː.§b§ì§n
-ofis|office|ʔóː.§f§ì§s
-oga|boss, supervisor|ʔò.§ɡ§áː
-omo|detergent, soap powder|ʔóː.§m§òː
-oza|ounce|ʔóː.§z§àː
-parmi|driver's licence|p§à§r.§m§îː||Niger. Nigeria is lasin.
-pasaje|passenger|p§à.§s§à.§(d)ʒ§êː||Niger. Nigeria has fasinja.
-pil|battery|p§î§l||Niger. Nigeria has batir.
-po|children's toilet|p§ôː
+obin|oven|ʔóː.,b,ì,n
+ofis|office|ʔóː.,f,ì,s
+oga|boss, supervisor|ʔò.,ɡ,áː
+omo|detergent, soap powder|ʔóː.,m,òː
+oza|ounce|ʔóː.,z,àː
+parmi|driver's licence|p,à,r.,m,îː||Niger. Nigeria is lasin.
+pasaje|passenger|p,à.,s,à.,(d)ʒ,êː||Niger. Nigeria has fasinja.
+pil|battery|p,î,l||Niger. Nigeria has batir.
+po|children's toilet|p,ôː
 ra'ayi||␣||
 ra'i||␣||
 raba|to split|
@@ -1520,7 +1520,7 @@ ragama||␣
 rahama||␣
 rahusa||␣
 rairai||␣
-rairayi|sand|ɽ§à§i.§ɽ§à.§j§íː||Kano: ɽèi.ɽɛ̀.jíː
+rairayi|sand|ɽ,à,i.,ɽ,à.,j,íː||Kano: ɽèi.ɽɛ̀.jíː
 rai||␣
 raka'a||␣||
 rakaʼa||
@@ -1530,13 +1530,13 @@ rama||␣
 rami||␣
 ramɓasɓas||␣
 rana-rana||␣
-rana|day, sun|ɽ§áː.§n§áː
+rana|day, sun|ɽ,áː.,n,áː
 randa||␣
 rashawa||␣
 rawani||␣
-rawaya|yellow|ɽ§àː.§w§á.§j§àː||Kano: ɽàː.wɛ́.jàː
+rawaya|yellow|ɽ,àː.,w,á.,j,àː||Kano: ɽàː.wɛ́.jàː
 raƙumi||␣
-raɓa|dew|ɽ§áː.§ɓ§áː
+raɓa|dew|ɽ,áː.,ɓ,áː
 raɓe-raɓe||␣
 raɗau||␣
 raʼayi||
@@ -1575,7 +1575,7 @@ ruwan-azurfa||␣
 ruwan-hoda||␣
 ruwan-toka||␣
 ruwan-ƙasa||␣
-ruwa|water|ɽ§ú.§w§áː||Kano: ɽʊ́.wáː
+ruwa|water|ɽ,ú.,w,áː||Kano: ɽʊ́.wáː
 ruɓaɓɓe|rotten|
 ruʼuya||
 sa'a||␣||
@@ -1584,7 +1584,7 @@ saba'in||␣||
 sababi||␣
 sabaʼin||
 saboda||␣||
-sabo|new|s§áː.§b§óː
+sabo|new|s,áː.,b,óː
 sadaka||␣
 sadaki||␣
 sada||␣
@@ -1619,7 +1619,7 @@ salla||␣
 salo||␣||
 samame||␣||
 samanja||␣
-sama|sky|s§á.§m§à||Kano: sə́.mə̀
+sama|sky|s,á.,m,à||Kano: sə́.mə̀
 samɓal||␣
 samɓalɓal||␣
 sana'a||␣||
@@ -1627,10 +1627,10 @@ sanar̃wa||␣||
 sanata||␣
 sanaʼa||
 sandal||␣
-sanda|stick|s§à§n.§d§á
+sanda|stick|s,à,n.,d,á
 sanduƙi||␣
 saniya||␣
-sani|to know|s§á.§n§ìː
+sani|to know|s,á.,n,ìː
 sanka||␣
 sannu-sannu||␣
 sannu||␣
@@ -1669,7 +1669,7 @@ shai'an||␣||
 shaihi||␣
 shaiɗan||␣
 shaiʼan||
-shapo|hat|ʃ§‹§à.§p§ôː||Niger.
+shapo|hat|ʃ,‹,à.,p,ôː||Niger.
 sharaɗi||␣
 sharhi||␣
 shari'a||␣||
@@ -1680,14 +1680,14 @@ sharo||␣
 sharri||␣
 sharu||␣
 shata||␣||
-shat|shirt|ʃ§‹§â§t
+shat|shirt|ʃ,‹,â,t
 shawar̃a||␣||
 shayi||␣
-sha|to drink|ʃ§‹§á
+sha|to drink|ʃ,‹,á
 shaʼani||
 shehi||␣
 shehu||␣
-shekara|year|ʃ§‹§èː.§k§á.§ɽ§àː
+shekara|year|ʃ,‹,èː.,k,á.,ɽ,àː
 sheƙeƙe||␣
 shida||␣
 shifta||␣
@@ -1708,7 +1708,7 @@ shuɗi||␣
 shuʼumi||
 sifiri||␣
 siga||␣
-siket|skirt|s§ì.§k§é§t
+siket|skirt|s,ì.,k,é,t
 sila||␣
 silin||␣
 sili||␣
@@ -1716,7 +1716,7 @@ sin||␣
 sirdi||␣
 siriri|thin|
 sista||␣
-sitampi|postage stamp|s§ì.§t§á§m.§p§ìː
+sitampi|postage stamp|s,ì.,t,á,m.,p,ìː
 sitam||␣
 sitira||␣
 sito||␣
@@ -1730,9 +1730,9 @@ soka|to stab|
 sol||␣
 somi||␣
 soso||␣
-soye|fried meat|s§òː.§j§éː
+soye|fried meat|s,òː.,j,éː
 sufana||␣
-sujjada|prostration (prayer)|s§ù§(d).§(d)ʒ§á.§d§àː
+sujjada|prostration (prayer)|s,ù,(d).,(d)ʒ,á.,d,àː
 sukari||␣
 sukuku||␣
 sulhu||␣||
@@ -1740,12 +1740,12 @@ suma|hair|
 sumul||␣
 sum||␣
 sunan yanka||␣
-suna|name|s§úː.§n§áː
+suna|name|s,úː.,n,áː
 sunduƙi||␣
 sunna||␣
 sura||␣
 suya||␣
-su|slithering|s§ùː
+su|slithering|s,ùː
 ta'adda||␣||
 tabarau||␣
 tabarma||␣
@@ -1759,7 +1759,7 @@ tafiya||␣||
 tafki||␣
 tafsiri||␣
 taga||␣
-tagomashi|popularity|t§á.§ɡ§óː.§m§à.§ʃ§‹§íː
+tagomashi|popularity|t,á.,ɡ,óː.,m,à.,ʃ,‹,íː
 taguwa||␣
 taimako||␣||
 tajiri||␣
@@ -1809,14 +1809,14 @@ tatul||␣
 taubashi||␣
 tauhidi||␣
 tauna||␣
-tauraro|star|t§à§u.§ɽ§áː.§ɽ§òː
+tauraro|star|t,à,u.,ɽ,áː.,ɽ,òː
 taure||␣
-tausa|massage|t§à§u.§s§áː
+tausa|massage|t,à,u.,s,áː
 tautau||␣
 tawada||␣
 taɓo||␣
 tef||␣
-teku|ocean, sea|t§èː.§k§ú||Kano: tèː.kʷʊ́
+teku|ocean, sea|t,èː.,k,ú||Kano: tèː.kʷʊ́
 tela||␣
 tifa||␣
 tif||␣
@@ -1832,18 +1832,18 @@ titi||␣
 ti||␣
 tiƙis||␣
 tofa|to spit|␣
-toka|ashes|t§òː.§k§áː
-ton|ton|t§ó§n
+toka|ashes|t,òː.,k,áː
+ton|ton|t,ó,n
 toshiya||␣
 tozali||␣
 tozo||␣
 tsabga||␣
 tsada||␣
-tsaf|neatly, completely|(t)sʼ§‹§á§p||Kano: sʼáp
+tsaf|neatly, completely|(t)sʼ,‹,á,p||Kano: sʼáp
 tsagagi||␣||
 tsai||␣
 tsakani||␣||
-tsaka|type of gecko|(t)sʼ§‹§á.§k§áː|Kano: sʼə́.káː
+tsaka|type of gecko|(t)sʼ,‹,á.,k,áː|Kano: sʼə́.káː
 tsakiya||␣||
 tsalala||␣
 tsamiya||␣||
@@ -1857,11 +1857,11 @@ tsawo||␣||
 tsaya|to stand|
 tsere||␣
 tsibiri||␣
-tsigi|type of bird|(t)sʼ§‹§íː.§ɡ§íː
+tsigi|type of bird|(t)sʼ,‹,íː.,ɡ,íː
 tsila||␣
 tsintsiya||␣
 tsit||␣
-tsoho|old|(t)sʼ§‹§óː.§h§óː|Kano: sʼóː.hóː
+tsoho|old|(t)sʼ,‹,óː.,h,óː|Kano: sʼóː.hóː
 tsokana||␣||
 tsoka||␣||
 tsololo||␣
@@ -1869,7 +1869,7 @@ tsoro|to fear|
 tsotsa|to suck|
 tsundum||␣
 tsuntsun Maka||␣
-tsuntsu|bird|(t)sʼ§‹§ú§n.§(t)sʼ§‹§úː||Kano: sʼɪ́n.sʼúː
+tsuntsu|bird|(t)sʼ,‹,ú,n.,(t)sʼ,‹,úː||Kano: sʼɪ́n.sʼúː
 tsutsa|worm|
 tubali||␣
 tubarkalla||␣
@@ -1890,21 +1890,21 @@ tusa||␣
 tuta||␣
 tutu||␣
 tuwo||␣
-tuɓur-tuɓur|large & round|t§ú.§ɓ§ú§r.§§t§ù.§ɓ§ù§r
-uba|father|ʔù.§b§áː
+tuɓur-tuɓur|large & round|t,ú.,ɓ,ú,r.,,t,ù.,ɓ,ù,r
+uba|father|ʔù.,b,áː
 uda||␣
-uku|three|ʔú.§k§ù
+uku|three|ʔú.,k,ù
 ulu||␣
 umra||␣
 ungozoma||␣
 ungulu||␣
 ushira||␣
 ushiri||␣
-usur|whistle|ʔú.§s§ù§r
-uwa|mother|ʔú.§w§áː
-uzuri|excuse|ʔú.§z§ù.§r§íː
-uƙuba|misery, anguish|ʔù.§kʼ§úː.§b§àː
-uƙuba|misery, anguish|ʔu˩.§kʼ§uː˥.§b§aː˩
+usur|whistle|ʔú.,s,ù,r
+uwa|mother|ʔú.,w,áː
+uzuri|excuse|ʔú.,z,ù.,r,íː
+uƙuba|misery, anguish|ʔù.,kʼ,úː.,b,àː
+uƙuba|misery, anguish|ʔu˩.,kʼ,uː˥.,b,aː˩
 wa'adi||␣||
 wa'azi||␣||
 wada||␣
@@ -1941,7 +1941,7 @@ wasali||␣
 wasa||␣
 wasiyya||␣
 wasiƙa||␣
-wata|moon|w§á.§t§àː
+wata|moon|w,á.,t,àː
 watsal-watsal||␣
 wau||␣
 waziri||␣
@@ -1961,11 +1961,11 @@ wuni-wuni||␣
 wuridi||␣
 wurin|at|
 wuski||␣
-wuta|fire|w§ú.§t§áː
+wuta|fire|w,ú.,t,áː
 wutsiya|tail|
-wuya|neck|w§ú.§j§àː
+wuya|neck|w,ú.,j,àː
 wuƙa||␣
-wuƙi-wuƙi|children fidgeting|w§ù.§kʼ§ìː.§§w§ú.§kʼ§íː||Kano: wʊ̀.cʼìː.wʊ́.cʼíː
+wuƙi-wuƙi|children fidgeting|w,ù.,kʼ,ìː.,,w,ú.,kʼ,íː||Kano: wʊ̀.cʼìː.wʊ́.cʼíː
 yabirbira||␣||
 yadda||␣
 yallaɓai||␣
@@ -1974,17 +1974,17 @@ yamma||␣||
 yanka|to cut|
 yanki||␣
 yanzu||␣||
-yarima|prince|j§à.§r§íː.§m§à
-yarinya|girl|j§áː.§ɽ§í§n.§j§àː
+yarima|prince|j,à.,r,íː.,m,à
+yarinya|girl|j,áː.,ɽ,í,n.,j,àː
 yari||␣
-yaro|boy|j§áː.§ɽ§òː
+yaro|boy|j,áː.,ɽ,òː
 yatsa||␣
 yaushe|when, interrogative|
 yautai||␣
 yawanci||␣||
 yawa||␣||
 yaya|how, interrogative|
-yayyafi|drizzle, light rain|j§á§j.§j§á.§f§íː
+yayyafi|drizzle, light rain|j,á,j.,j,á.,f,íː
 yaƙi||␣||
 yi amai|to vomit|
 yi barci|to sleep|
@@ -2033,8 +2033,8 @@ zina||␣
 zira'i||␣||
 ziraʼi||
 zi||␣
-zololo|tall and thin|z§òː.§l§òː.§l§òː
-zomo|hare|z§óː.§m§óː
+zololo|tall and thin|z,òː.,l,òː.,l,òː
+zomo|hare|z,óː.,m,óː
 zo|to come|
 zuciya|heart|
 zuma||␣||
@@ -2061,8 +2061,8 @@ zuwa||␣||
 ƙabila||␣
 ƙadangare||␣
 ƙaddara||␣
-ƙafa|foot, leg|kʼ§á.§f§àː||Kano: kʼə́.ɸàː
-ƙaho|horn|kʼ§à.§h§óː||Kano: kʼə̀.hóː
+ƙafa|foot, leg|kʼ,á.,f,àː||Kano: kʼə́.ɸàː
+ƙaho|horn|kʼ,à.,h,óː||Kano: kʼə̀.hóː
 ƙala||␣
 ƙal||␣
 ƙamus||␣
@@ -2070,12 +2070,12 @@ zuwa||␣||
 ƙandas||␣
 ƙanƙane||␣
 ƙanƙara|snow|
-ƙarami|small|kʼ§à.§ɽ§á.§m§íː
-ƙara|to increase|kʼ§aː§ɽ§aː
+ƙarami|small|kʼ,à.,ɽ,á.,m,íː
+ƙara|to increase|kʼ,aː,ɽ,aː
 ƙarni||␣
 ƙarƙaf||␣
 ƙasa||␣
-ƙashi|bone|kʼ§à.§ʃ§‹§íː
+ƙashi|bone|kʼ,à.,ʃ,‹,íː
 ƙasida||␣
 ƙas||␣
 ƙato||␣
@@ -2092,18 +2092,18 @@ zuwa||␣||
 ƙififiya||␣
 ƙiri-ƙiri||␣
 ƙirin||␣
-ƙirji|chest (body)|kʼ§ì§ɽ.§(d)ʒ§íː||Kano: cʼɪ̀ɽ.d͡ʒíː
+ƙirji|chest (body)|kʼ,ì,ɽ.,(d)ʒ,íː||Kano: cʼɪ̀ɽ.d͡ʒíː
 ƙissa||␣
 ƙiyasi||␣
 ƙiƙam||␣
-ƙoda|kidney|kʼ§óː.§d§àː
+ƙoda|kidney|kʼ,óː.,d,àː
 ƙone|to burn|
 ƙorama||␣
 ƙosai||␣
-ƙoƙari|effort|kʼ§òː.§kʼ§á.§ɽ§í
+ƙoƙari|effort|kʼ,òː.,kʼ,á.,ɽ,í
 ƙoƙiƙoƙi||␣
-ƙube|traditional cap|kʼ§úː.§b§è
-ƙugiya|hook|kʼ§úː.§ɡ§ì.§j§áː||Kano: kʷʼúː.ɟɪ̀.jáː
+ƙube|traditional cap|kʼ,úː.,b,è
+ƙugiya|hook|kʼ,úː.,ɡ,ì.,j,áː||Kano: kʷʼúː.ɟɪ̀.jáː
 ƙuli-ƙuli||␣
 ƙulumi||␣
 ƙumba||␣
@@ -2116,29 +2116,29 @@ zuwa||␣||
 ƙurungu||␣
 ƙut||␣
 ƙuƙut||␣
-ƙwai|egg|kʷʼ§‹§á§i||Kano: kʷʼéi
-ƙwal-ƙwal|smooth-shaved head|kʷʼ§‹§á§l.§kʷʼ§‹§á§l
+ƙwai|egg|kʷʼ,‹,á,i||Kano: kʷʼéi
+ƙwal-ƙwal|smooth-shaved head|kʷʼ,‹,á,l.,kʷʼ,‹,á,l
 ƙwaro||␣||
-ƴar|a little bit|j̰§á§r|
-ƴa|daughter|j̰§áː
-ƴaƴa|children|j̰§a§j̰§a|
+ƴar|a little bit|j̰,á,r|
+ƴa|daughter|j̰,áː
+ƴaƴa|children|j̰,a,j̰,a|
 ɓaga-ɓaga||␣
-ɓakutu|neckless clay pot|ɓ§áː.§k§ú.§t§ú
-ɓal-ɓal|sth. thick boiling|ɓ§à§l.§§ɓ§à§l
-ɓalo-ɓalo|large, round liquid container|ɓ§á.§l§óː.§§ɓ§à.§l§òː
-ɓangwalgwal|solid, round & fleshy|ɓ§à§n.§ɡʷ§‹§à§l.§ɡʷ§‹§à§l
-ɓarawo|thief|ɓ§à.§ɽ§áː.§w§òː
+ɓakutu|neckless clay pot|ɓ,áː.,k,ú.,t,ú
+ɓal-ɓal|sth. thick boiling|ɓ,à,l.,,ɓ,à,l
+ɓalo-ɓalo|large, round liquid container|ɓ,á.,l,óː.,,ɓ,à.,l,òː
+ɓangwalgwal|solid, round & fleshy|ɓ,à,n.,ɡʷ,‹,à,l.,ɡʷ,‹,à,l
+ɓarawo|thief|ɓ,à.,ɽ,áː.,w,òː
 ɓauna||␣||
-ɓaure|fig|ɓ§á§u.§ɽ§éː
+ɓaure|fig|ɓ,á,u.,ɽ,éː
 ɓawon itace|bark (tree)|
-ɓelele|wide-mouthed laughter|ɓ§èː.§l§èː.§l§èː
-ɓulla|to appear suddenly|ɓ§ù§l.§l§á
-ɓurma|rat trap|ɓ§ú§ɽ.§m§á
+ɓelele|wide-mouthed laughter|ɓ,èː.,l,èː.,l,èː
+ɓulla|to appear suddenly|ɓ,ù,l.,l,á
+ɓurma|rat trap|ɓ,ú,ɽ.,m,á
 ɗa'a||␣||
 ɗabi'a||␣||
 ɗabiʼa||
 ɗalibi||␣
-ɗan Adam|man (human being)|ɗ§á§n§ §ʔá.§d§à§m||Kano: ɗáŋ ʔá.dàŋ
+ɗan Adam|man (human being)|ɗ,á,n, ,ʔá.,d,à,m||Kano: ɗáŋ ʔá.dàŋ
 ɗan sanda||␣
 ɗan shayi||␣
 ɗanye||␣
@@ -2148,7 +2148,7 @@ zuwa||␣||
 ɗaura|to tie|
 ɗawafi||␣
 ɗawisu||␣
-ɗaya|one|ɗ§á.§j§á||dʼaja
+ɗaya|one|ɗ,á.,j,á||dʼaja
 ɗa||␣
 ɗaʼa||
 ɗefi||␣
@@ -2157,9 +2157,9 @@ zuwa||␣||
 ɗinka|to sew|
 ɗungum||␣
 ɗu||␣
-ʼyar|a little bit|j̰§á§r|ʼyar̃
-ʼya|daughter|j̰§áː|ƴā
-ʼyaʼya|children|›§j̰§a§›§j̰§a|
+ʼyar|a little bit|j̰,á,r|ʼyar̃
+ʼya|daughter|j̰,áː|ƴā
+ʼyaʼya|children|›,j̰,a,›,j̰,a|
 ’ya’yan itace|fruit||
 
 
@@ -2173,7 +2173,7 @@ babban dutse|mountain|
 hayaƙi|smoke|
 kuma|and|
 
-Harshe Hausa|Hausa language|h§á§ɽ.§ʃ§‹§è§ §h§á§u.§s§á|
+Harshe Hausa|Hausa language|h,á,ɽ.,ʃ,‹,è, ,h,á,u.,s,á|
 
 
 
@@ -2181,62 +2181,62 @@ Harshe Hausa|Hausa language|h§á§ɽ.§ʃ§‹§è§ §h§á§u.§s§á|
 
 
 @ IPA Handbook
-sanho|basket|sə§ŋ.§h§o:˩
-sanƙo|baldness|s§ə§ŋ.§kʼ§o:
-kanwa|potash|k§ə§ŋ§w§a:
-wannan|this one|w§ə§n§n§ə§ŋ˩
-mutum|person|m§ʊ˩.§t§ʊ˥˩§ŋ
-aya|Koranic verse|ʔa:§j§a:˩
-kora|ringworm|kʷ§o:.§ɽ§a:
-kishi|jealousy|kʲ§i:§ʃ§i:˩
-goro|kola nut|ɡʷ§o:§r§oʔ˩
-bara|last year|b§a:˩.§ɽ§a
-bara|to peel|ɓ§a:.§ɽ§a:˩
-mara|belly|m§a:.§ɽ§a:˩
-fara|to begin|ɸ§a:.§ɽ§a:˩
-wara|to pick out|w§a:§ɽ§a:˩
-tara|to gather|t§a:.§ɽ§a:˩
-dara|to laugh|d§a:.§ɽ§a:˩
-tsʼara|to arrange|t͡sʼ§‹§‹§a:.§ɽ§a:˩
-ɗana|to measure|ɗ§a:.§n§a:˩
-nama|meat|n§a:.§m§a:˩
-sara|to excavate|s§a:.§ɽ§a:˩
-zana|to draw|z§a:.§n§a:˩
-rada|to flog|r§a:.§ɗ§a:˩
-rana|sun|ɽ§a:.§n§a:
-laka|mud|l§a:.§k§a:
-cara|crowing|t͡ʃ§a:.§ɽ§a:
-jari|assets|d͡ʒ§a:.§r§i:˩
-tshʼada|expensive|t͡ʃʼ§‹§‹§‹§‹§a:˩.§d§a:
-shara|sweeping|ʃ§‹§a:˩.§ɽ§a:
-ʼyaʼya|offspring|›§jʼ§a:.§›§jʼ§a:
-ʼyaʼya|offspring|›§ʔʲ§a:.§›§ʔʲ§a:
-kara|to screen off|k§a:.§ɽ§a:˩
-gara|wedding gifts|ɡ§a:.§ɽ§a:
-ƙara|to increase|kʼ§a:.§ɽ§a:˩
-kyawu|goodness|k§ʲ§a:.§w§u:˩
-gyara|to repair|ɡ§ʲ§a:.§ɽ§a:˩
-ƙyara|grass|kʲʼ§‹§a:.§ɽ§a:
-kwara|too pour much|k§ʷ§a:.§ɽ§a:˩
-gwano|stink ant|ɡ§ʷ§a:˩.§n§o:
-ƙwara|shea nuts|kʷʼ§‹§a:.§ɽ§a:˩
-saʼa|time|s§a:.§ʔ§a:˩
-haja|goods|h§a:.§d͡ʒ§a:˩
-fi|to exceed|ɸ§i
-bara|begging|b§ə.§r§a:˩
-bara|servant|b§ə.§ɽ§a:˩
-ya rarrabke shi|he flogged him|j§a:§ §r§ə§r§r§ə˩§b§k§e:§ §ʃ§i
-sharrare|swept|ʃ§‹§a:˩.§r§ə§ɽ.§ɽ§e:
+sanho|basket|sə,ŋ.,h,o:˩
+sanƙo|baldness|s,ə,ŋ.,kʼ,o:
+kanwa|potash|k,ə,ŋ,w,a:
+wannan|this one|w,ə,n,n,ə,ŋ˩
+mutum|person|m,ʊ˩.,t,ʊ˥˩,ŋ
+aya|Koranic verse|ʔa:,j,a:˩
+kora|ringworm|kʷ,o:.,ɽ,a:
+kishi|jealousy|kʲ,i:,ʃ,i:˩
+goro|kola nut|ɡʷ,o:,r,oʔ˩
+bara|last year|b,a:˩.,ɽ,a
+bara|to peel|ɓ,a:.,ɽ,a:˩
+mara|belly|m,a:.,ɽ,a:˩
+fara|to begin|ɸ,a:.,ɽ,a:˩
+wara|to pick out|w,a:,ɽ,a:˩
+tara|to gather|t,a:.,ɽ,a:˩
+dara|to laugh|d,a:.,ɽ,a:˩
+tsʼara|to arrange|t͡sʼ,‹,‹,a:.,ɽ,a:˩
+ɗana|to measure|ɗ,a:.,n,a:˩
+nama|meat|n,a:.,m,a:˩
+sara|to excavate|s,a:.,ɽ,a:˩
+zana|to draw|z,a:.,n,a:˩
+rada|to flog|r,a:.,ɗ,a:˩
+rana|sun|ɽ,a:.,n,a:
+laka|mud|l,a:.,k,a:
+cara|crowing|t͡ʃ,a:.,ɽ,a:
+jari|assets|d͡ʒ,a:.,r,i:˩
+tshʼada|expensive|t͡ʃʼ,‹,‹,‹,‹,a:˩.,d,a:
+shara|sweeping|ʃ,‹,a:˩.,ɽ,a:
+ʼyaʼya|offspring|›,jʼ,a:.,›,jʼ,a:
+ʼyaʼya|offspring|›,ʔʲ,a:.,›,ʔʲ,a:
+kara|to screen off|k,a:.,ɽ,a:˩
+gara|wedding gifts|ɡ,a:.,ɽ,a:
+ƙara|to increase|kʼ,a:.,ɽ,a:˩
+kyawu|goodness|k,ʲ,a:.,w,u:˩
+gyara|to repair|ɡ,ʲ,a:.,ɽ,a:˩
+ƙyara|grass|kʲʼ,‹,a:.,ɽ,a:
+kwara|too pour much|k,ʷ,a:.,ɽ,a:˩
+gwano|stink ant|ɡ,ʷ,a:˩.,n,o:
+ƙwara|shea nuts|kʷʼ,‹,a:.,ɽ,a:˩
+saʼa|time|s,a:.,ʔ,a:˩
+haja|goods|h,a:.,d͡ʒ,a:˩
+fi|to exceed|ɸ,i
+bara|begging|b,ə.,r,a:˩
+bara|servant|b,ə.,ɽ,a:˩
+ya rarrabke shi|he flogged him|j,a:, ,r,ə,r,r,ə˩,b,k,e:, ,ʃ,i
+sharrare|swept|ʃ,‹,a:˩.,r,ə,ɽ.,ɽ,e:
 
-ƙira|forging|kʲ§i:.§ɽ§a:˩
-ƙera|to forge|kʲ§e:.§ɽ§a:˩
-ƙara|to increase|kʼ§a:§ɽ§a:˩
-kora|to chase|kʷ§o:.§r§a:˩
-kura|dust|kʷ§u:˩.§ɽ§a:
-kira|calling|kʲ§i.§ɽ§a:˩
-tare|together|t§a:˩.§ɽ§e
-kara|stalk|k§a.§ɽ§a:
-ƙura|to stare|kʷʼ§u.§ɽ§a:˩
+ƙira|forging|kʲ,i:.,ɽ,a:˩
+ƙera|to forge|kʲ,e:.,ɽ,a:˩
+ƙara|to increase|kʼ,a:,ɽ,a:˩
+kora|to chase|kʷ,o:.,r,a:˩
+kura|dust|kʷ,u:˩.,ɽ,a:
+kira|calling|kʲ,i.,ɽ,a:˩
+tare|together|t,a:˩.,ɽ,e
+kara|stalk|k,a.,ɽ,a:
+ƙura|to stare|kʷʼ,u.,ɽ,a:˩
 
 
 

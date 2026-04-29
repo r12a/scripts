@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -44,7 +44,7 @@ autoExpandExamples.kkh = `
 ᨩ᩠ᨿᨦᨲᩩᨦ|Kentung|␣
 ᨩᩭ᩵|help|cɔːj⁴
 ᨪᩨ᩶|buy|sɯː⁶
-ᨯᩬᨠᨾᩱ᩶|flower|dɔː§k˨˨.§maj˦˩||
+ᨯᩬᨠᨾᩱ᩶|flower|dɔː,k˨.,maj˦˩||
 ᨯᩭ||␣||
 ᨯᩱ᩶|did|daj⁵
 ᨲᩕᩯ|bugle|tʰɛː¹
@@ -108,7 +108,7 @@ autoExpandExamples.kkh = `
 
 @ https://en.wikipedia.org/wiki/Kh%C3%BCn_language
 
-ᨴᩱ᩠ᨿᨡᩨ᩠ᨶ|Tai Khün language|ta§j˧.§kʰɯː§n˧˨˥|
+ᨴᩱ᩠ᨿᨡᩨ᩠ᨶ|Tai Khün language|ta,j˧.,kʰɯː,n˧˨˥|
 
 
 

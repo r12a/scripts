@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -36,7 +36,7 @@ A ye à fɔ.|He said it.||||x
 A y’à fɔ.|He said it.||||x
 Ala||␣
 Bamakɔ||
-Bamanankan|Bamanam language|b§a§m§a§n§ã§‹§k§ã§‹|
+Bamanankan|Bamanam language|b,a,m,a,n,ã,‹,k,ã,‹|
 Bamanan||
 Farafinna||
 Fulakan||
@@ -48,13 +48,13 @@ Zanga||␣
 a dɔ la||␣
 a dɔ ra||␣
 a dɔ rɔ||␣
-abada|forever|a§b§a§d§a
+abada|forever|a,b,a,d,a
 abarika||␣
-abarka|thanks!|à§b§a§r§k§a|abarka
+abarka|thanks!|à,b,a,r,k,a|abarka
 adamadenya||␣
 adamaden||␣
 aderenalini||␣
-adɛrɛsi|address|á§d§ɛ§r§ɛ§s§i
+adɛrɛsi|address|á,d,ɛ,r,ɛ,s,i
 alalandi||
 alamisa||␣
 ale||␣
@@ -62,21 +62,21 @@ alijɛnɛ||
 alikuranɛ||␣
 alikɔli||␣
 alimɛti||␣
-amiina|amen|à§m§iː§‹§n§a|àmiina
+amiina|amen|à,m,iː,‹,n,a|àmiina
 anw||
 an||␣
 aw||
 ayiwa||
 ayi||␣
 a|he, she, it|a|a||x
-baana|rich, wealthy|b§aː§‹§n§a|
+baana|rich, wealthy|b,aː,‹,n,a|
 baarakalan|learning to work|
-baara|work|b§áː§‹§r§a
+baara|work|b,áː,‹,r,a
 babili|bridge|
 babɛlɛ||
 bacɛncɛn||
 badaa|forever|
-badingɛ|riverbed|b§á§d§ĩ§‹§g§ɛ|bádingɛ||bádingɛ
+badingɛ|riverbed|b,á,d,ĩ,‹,g,ɛ|bádingɛ||bádingɛ
 bafaarɔ|manatee|
 bagangɛnna||
 baganmara||
@@ -87,32 +87,32 @@ bakuruba||
 balansan||
 baliku||
 balimakɛ||
-balimamuso|sister|b§a§l§i§m§a§m§u§s§o
+balimamuso|sister|b,a,l,i,m,a,m,u,s,o
 balima||
-bama|crocodile|b§à§m§a|bàma
+bama|crocodile|b,à,m,a|bàma
 banakisɛ||
-bananku|cassava, manioc|b§a§n§ã§‹§k§u
+bananku|cassava, manioc|b,a,n,ã,‹,k,u
 banan||
 banayɛlɛmata||
-bana|disease|b§à§n§a|bàna
+bana|disease|b,à,n,a|bàna
 bange||
 banji||
-ban|to finish|b§ã́§‹
+ban|to finish|b,ã́,‹
 baradaa|kettle, teapot|
 baranda||
-barika|thanks|b§a§r§i§k§a
-barìka|strength, power|b§a§r§ì§k§a|||barika
+barika|thanks|b,a,r,i,k,a
+barìka|strength, power|b,a,r,ì,k,a|||barika
 base||
 bawo||
 bawɔlɔ||
-ba|river|b§á|ba|see also §bà, bá, bǎ§|ba
+ba|river|b,á|ba|see also ,bà, bá, bǎ,|ba
 bere||
 bilali||
 binkannikɛla||
 bintu||
 bi||
 biɲɛkisɛ||
-biɲɛ|liver|b§i§ɲ§ɛ|biɲɛ
+biɲɛ|liver|b,i,ɲ,ɛ|biɲɛ
 boloci||
 bolofɛn||
 bolokala||
@@ -130,22 +130,22 @@ buru||␣
 buyaki||
 bàanan|||baanan
 bàsi|||basi
-bà|thousand|b§à|ba|see also §bà,bá,bǎ§|ba
+bà|thousand|b,à|ba|see also ,bà,bá,bǎ,|ba
 bàá|dad||baa||x
-bá|river, stream|b§á|ba|see also §bà,bá,bǎ§|ba
+bá|river, stream|b,á|ba|see also ,bà,bá,bǎ,|ba
 bín|||bin
 bírinka|||birinka
-bǎ|goat|b§àá|ba|see also §bà, bá, bǎ§|ba
+bǎ|goat|b,àá|ba|see also ,bà, bá, bǎ,|ba
 bɔgɔlanfini||
 bɔgɔ||
 bɔlɔn||
 bɔ||
 bɔ̀nɛ|||bɔnɛ
 bɛna||
-bɛnba|ancestor|b§ɛ̃§‹§b§a
+bɛnba|ancestor|b,ɛ̃,‹,b,a
 bɛnɛ||
 bɛ||
-bɛɛ|all, every|b§ɛː§‹
+bɛɛ|all, every|b,ɛː,‹
 cibɔ||
 ciden||
 cikɛla||
@@ -155,10 +155,10 @@ cáman|||caman
 cáya|||caya
 cɔnkɔ||␣
 cɛmancɛrɔbana||
-cɛncɛn|sand|c§ɛ̃§‹§̀c§ɛ̃§‹§|cɛ̀ncɛn
+cɛncɛn|sand|c,ɛ̃,‹,̀c,ɛ̃,‹,|cɛ̀ncɛn
 cɛrɔ||␣
 cɛ||
-cɛ́mà|among|c§ɛ§́§mǎ|cɛma
+cɛ́mà|among|c,ɛ,́,mǎ|cɛma
 dabamuso||
 dabɔlɔ||
 dafalen||
@@ -170,23 +170,23 @@ dajɛ||
 dakumu||
 dakun||
 dalasi||
-damadɔ|some|d§a§m§a§d§ɔ
+damadɔ|some|d,a,m,a,d,ɔ
 dama||
 daminɛ||
 danbe|dignity, honour||dànbe
 dancɛ||
-danfara|difference|d§ã̀§‹§f§a§r§a
+danfara|difference|d,ã̀,‹,f,a,r,a
 danga||
 dankana||
 dan||␣
 dayɛlɛ||
-da|mouth|d§áà|dáà|see also §dâ§
-dee|child|d§ẽ́§ẽ̀
+da|mouth|d,áà|dáà|see also ,dâ,
+dee|child|d,ẽ́,ẽ̀
 degeden||
-dege|to learn|d§è§g§e|dège||dège
+dege|to learn|d,è,g,e|dège||dège
 denbaya||
 denbo||
-denkɛ|son|d§ẽ§‹§k§ɛ
+denkɛ|son|d,ẽ,‹,k,ɛ
 denmuso||
 denso||
 den||
@@ -195,21 +195,21 @@ de||␣
 dibi||
 dimi||
 dimɔgɔ||
-dingɛ|the hole|d§ĩ̀§‹§ɡ§ɛ̀ꜜɛ̀|dìngɛ
+dingɛ|the hole|d,ĩ̀,‹,ɡ,ɛ̀ꜜɛ̀|dìngɛ
 disi||
 diya||
 di||␣
 diɲɛ||
-dolen|fishhook|d§ó§l§ẽẽ§‹̀
+dolen|fishhook|d,ó,l,ẽẽ,‹̀
 dolokulu||
-donso|hunter|d§õ§‹§z§o|dònso||dònso
+donso|hunter|d,õ,‹,z,o|dònso||dònso
 don||␣
-doolen|fishhook|d§óː§‹§l§ẽẽ̀§‹|doolen||dóolen
+doolen|fishhook|d,óː,‹,l,ẽẽ̀,‹|doolen||dóolen
 do||␣
 duguba||
 dugujɛ||
 dugutigi||
-dugu|town|d§ù§g§u
+dugu|town|d,ù,g,u
 duminiba||
 dumuni||
 dunan||
@@ -217,16 +217,16 @@ dunun||
 dun||␣
 duuru|five||||x
 du||␣
-dá-ji|saliva||d§a§-§j§i
+dá-ji|saliva||d,a,-,j,i
 dáyɛlɛlan|||dayɛ
-dâ|mouth|d§áà|dáà|see also §da§|da
+dâ|mouth|d,áà|dáà|see also ,da,|da
 dúuru|||duuru
-dɔgɔkun|week|d§ɔ́§g§ɔ§k§ũ§‹|dɔ́gɔkun||dɔ́gɔkun
+dɔgɔkun|week|d,ɔ́,g,ɔ,k,ũ,‹|dɔ́gɔkun||dɔ́gɔkun
 dɔnko||
 dɔnni||
 dɔn||␣
 dɔrɔn||
-dɔɔnin|a little|d§ɔː§‹§n§ĩ§‹
+dɔɔnin|a little|d,ɔː,‹,n,ĩ,‹
 dɔ̀lɔ|||dɔlɔ
 dɔ̀nkɔri|||dɔnkɔri
 dɔ́nni|||dɔnni
@@ -234,11 +234,11 @@ dɛn||␣
 dɛnɛ||
 dɛ||␣
 dɛ̀bɛn|||dɛbɛn
-dɛ̀mɛ|help, assistance|d§ɛ̀§m§ɛ|dɛmɛ
+dɛ̀mɛ|help, assistance|d,ɛ̀,m,ɛ|dɛmɛ
 dɛ̀ɲɛ|||dɛɲɛ
 dɛ́bɛ|||dɛbɛ
 fakɛ||
-falenfɛnw|flora, vegetation|f§a§l§ẽ§‹§f§ɛ̃§‹§u
+falenfɛnw|flora, vegetation|f,a,l,ẽ,‹,f,ɛ̃,‹,u
 fali||
 fana||
 fanga||
@@ -247,13 +247,13 @@ farafin||
 farajɛ||
 farama||
 faso||
-fila|two|f§i§l§a|fila||fìla
+fila|two|f,i,l,a|fila||fìla
 filɛli||
 filɛ||
 fin||
 firifiri||␣
 fiɲɛ||
-fogonfogon|lung|f§ó§g§ṍ§‹§f§ò§g§ṍ§‹|fógonfògon
+fogonfogon|lung|f,ó,g,ṍ,‹,f,ò,g,ṍ,‹|fógonfògon
 folon||
 foroko||
 foro||
@@ -262,13 +262,13 @@ furakɛla||
 furalan||
 furancɛ||
 fura||
-furufɛn|dowry|f§u§r§u§f§ɛ̃§‹
+furufɛn|dowry|f,u,r,u,f,ɛ̃,‹
 furunafolo||
 furu||
 fàgali|||fagali
 fàri|||fari
 fára|||fara
-fìla|two|f§i§l§a|fila
+fìla|two|f,i,l,a|fila
 fòrobafanga|||forobafanga
 fòrokiya|||forokiya
 fɔli||
@@ -282,17 +282,17 @@ gasi||
 gato||
 geji||
 gele||
-gwɛsɛ|toothbrush|gʷ§‹§ɛ§s§ɛ|gwɛsɛ||x
+gwɛsɛ|toothbrush|gʷ,‹,ɛ,s,ɛ|gwɛsɛ||x
 gèsedala|||gesedala
 gɔmɛ||␣
-gɔngɔrɔ|pebble, stone|g§ɔ̃§‹§g§ɔ§r§ɔ
+gɔngɔrɔ|pebble, stone|g,ɔ̃,‹,g,ɔ,r,ɔ
 gɔsi||
-gɛlɛn|hard, difficult|j§ɛ̀§l§ɛ̃|jɛ̀lɛ̃
+gɛlɛn|hard, difficult|j,ɛ̀,l,ɛ̃|jɛ̀lɛ̃
 gɛlɛ||
 gɛnna||
 gɛn||
-gɛsɛ|toothbrush|gʷ§ɛ§s§ɛ|gɛsɛ||x
-habada|never|h§á§b§a§d§a
+gɛsɛ|toothbrush|gʷ,ɛ,s,ɛ|gɛsɛ||x
+habada|never|h,á,b,a,d,a
 hadamaden|human|␣|hádamàden
 hakilila||
 hakilinan||
@@ -300,7 +300,7 @@ hakili||
 hakɛ||
 háwusakala|||hawusakala
 hɔrɔnya||
-hɛrɛ|peace|h§ɛ§r§ɛ
+hɛrɛ|peace|h,ɛ,r,ɛ
 i bɛ angilekan men wa||
 i||
 jaabi|response, answer|
@@ -308,7 +308,7 @@ jago||
 jakuma||
 jalamugu||
 jala||
-jankamu|black scorpion|j§ã̌§‹§k§à§m§ù|jànkàmu||x
+jankamu|black scorpion|j,ã̌,‹,k,à,m,ù|jànkàmu||x
 jankaro||
 jan||␣
 jele||␣
@@ -337,9 +337,9 @@ jɔyɔrɔ||
 jɔ̀nya||jɔnya
 jɛgɛ||␣
 jɛnɛ||
-jɛ|white|j§ɛ̀|jɛ̀||x
-jɛ̀|assembly, union|j§ɛ
-jɛ́|white; a plain|j§ɛ
+jɛ|white|j,ɛ̀|jɛ̀||x
+jɛ̀|assembly, union|j,ɛ
+jɛ́|white; a plain|j,ɛ
 kabako||
 kafo||
 kalanni||
@@ -348,9 +348,9 @@ kalan||␣
 kalata||
 kalili||
 kalo||
-kamafura|wing||k§à§m§à§f§u§r§a
+kamafura|wing||k,à,m,à,f,u,r,a
 kamakun||
-kamalen|young man|k§á§m§á§l§ẽ́§‹|kámalen||x
+kamalen|young man|k,á,m,á,l,ẽ́,‹|kámalen||x
 kanntanya||
 kanuya||
 kan||␣
@@ -401,23 +401,23 @@ kába|||kaba
 kálo|||kalo
 kènde|||kende
 kòlonkala|||kolonkala
-kòlon|mortar (grinding)|kòlon|k§o§l§o§n
+kòlon|mortar (grinding)|kòlon|k,o,l,o,n
 kòori|circle, surround||koori||x
-kólon|worn out|k§ó§l§o§n|kolon
+kólon|worn out|k,ó,l,o,n|kolon
 kósɔ̀n|||kosɔn
 kóya|||koya
-kùnnasìri|to be ashamed|k§ũ̀§‹§n§á§s§ì§r§ì|kunnasiri||x
+kùnnasìri|to be ashamed|k,ũ̀,‹,n,á,s,ì,r,ì|kunnasiri||x
 kùntigi|||kuntigi
 kú|||ku
 kɔli||␣
 kɔlɔ||␣
 kɔlɛ||␣
-kɔn|do first, precede|k§ɔ̌§n|kɔ̌n||x
+kɔn|do first, precede|k,ɔ̌,n|kɔ̌n||x
 kɔnɔntɔn|nine||kɔ̀nɔ̀ntɔn||x
 kɔnɔ||
 kɔra||
 kɔrɔmuso||
-kɔrɔn|east|k§ɔ́§r§ɔ̃§‹|kɔ́rɔn||kɔ́rɔn
+kɔrɔn|east|k,ɔ́,r,ɔ̃,‹|kɔ́rɔn||kɔ́rɔn
 kɔrɔ||␣
 kɔɔri|cotton|
 kɔ̀gɔjida|||kɔgɔjida
@@ -438,11 +438,11 @@ kɛnɛ||
 kɛrɛ||
 kɛ||
 kɛɲɛ||
-laada|custom, tradition|l§àː§‹§d§a|làada
+laada|custom, tradition|l,àː,‹,d,a|làada
 laadilikan|advice|
 laadi|to advise|
 labalo||
-labilali|permission|l§á§b§i§l§a§l§i|lábilali||lábilali
+labilali|permission|l,á,b,i,l,a,l,i|lábilali||lábilali
 labɛnni||
 ladamu||
 lajɛba||
@@ -468,7 +468,7 @@ lásà|||lasa
 maana|story, tale|
 mabɛn||
 mago||
-majamu|to praise|m§a§j§a§m§u
+majamu|to praise|m,a,j,a,m,u
 makari||
 makɔnɔ||
 manje||
@@ -481,74 +481,74 @@ masaku||
 masaya||
 masa||
 ma||␣
-mburu|bread|m͡b§‹§ú§r§u||see also §nbuuru§|
+mburu|bread|m͡b,‹,ú,r,u||see also ,nbuuru,|
 minisiriɲɛmɔgɔ|prime minister|
 minkɛ||
 misali||
 misidaba||
-misi|cow|m§ì§s§í
-mpan|the sword|m͡p§‹§ã̀ꜜã̀§‹
+misi|cow|m,ì,s,í
+mpan|the sword|m͡p,‹,ã̀ꜜã̀,‹
 munna||
-muso|woman, wife|m§ù.§s§o|mùso
-màdòn|approach|m§ǎ§d§ò§n|madon||x
-màfára|separate|m§à§f§á§r§á|mafara||x
-màli|hippopotamus|m§à§l§i|mali
+muso|woman, wife|m,ù.,s,o|mùso
+màdòn|approach|m,ǎ,d,ò,n|madon||x
+màfára|separate|m,à,f,á,r,á|mafara||x
+màli|hippopotamus|m,à,l,i|mali
 màra|||mara
 màsa|||masa
 màá|person||maa||x
 mìn|||min
 mùgan|||mugan
 mɔgɔ||
-mɔ̀muso|grandmother|m§ɔ̀§m§u§s§o|mɔmuso||x
+mɔ̀muso|grandmother|m,ɔ̀,m,u,s,o|mɔmuso||x
 mɛn||
-mɛɛn|last a long time|m§ɛ̃ː§‹§‹‹|mɛɛn||x
-naani|four|n§áː§‹§n§i|náani||náani 
-nafolo|riches, wealth|n§à§f§o§l§o
+mɛɛn|last a long time|m,ɛ̃ː,‹,‹‹|mɛɛn||x
+naani|four|n,áː,‹,n,i|náani||náani 
+nafolo|riches, wealth|n,à,f,o,l,o
 naji||
 nakɔ||
 namasa||
 nanbara||
 na||␣
-nba|male reply to greeting|m͡b§‹§a|ǹba||x
+nba|male reply to greeting|m͡b,‹,a|ǹba||x
 nbuurufunun|yeast|
-nbuuru|bread|m͡b§‹§uː§‹§r§u||see also §mburu§|
-ncɔgɔn|yam|n͡ʃ§‹§ɔ̀§ɡ§ɔ̃ꜜɔ̃̀§‹|ncɔ̀gɔn
+nbuuru|bread|m͡b,‹,uː,‹,r,u||see also ,mburu,|
+ncɔgɔn|yam|n͡ʃ,‹,ɔ̀,ɡ,ɔ̃ꜜɔ̃̀,‹|ncɔ̀gɔn
 ndoro|dough, paste|
-nfirinfirin|butterfly|n§f§í§r§ĩ§‹§f§i§r§ĩĩ̀§‹
+nfirinfirin|butterfly|n,f,í,r,ĩ,‹,f,i,r,ĩĩ̀,‹
 ngɔni|lute|
-ngɔn|baboon||n§g§ɔ§̌n
-ngɔnɔ|dew|ŋ͡ɡ§‹§ɔ̀§n§ɔꜜɔ̀
+ngɔn|baboon||n,g,ɔ,̌n
+ngɔnɔ|dew|ŋ͡ɡ,‹,ɔ̀,n,ɔꜜɔ̀
 ninnu||
 ni||
 nka|but||nkà
 nkolonnin|antelope|
-nkɔli|grasshopper's hind leg|n§k§ɔ̀§l§iꜜì
+nkɔli|grasshopper's hind leg|n,k,ɔ̀,l,iꜜì
 nkɔsɔn|scorpion|
-nkɔyɔ|african eggplant||n§k§ɔ̀§y§ɔ
+nkɔyɔ|african eggplant||n,k,ɔ̀,y,ɔ
 nkɛɛrɛn|cricket|
-npan|sword|m͡p§‹§ã̀§‹
-npogotigi|girl, young woman||n§p§ò§g§ò§t§i§g§i
+npan|sword|m͡p,‹,ã̀,‹
+npogotigi|girl, young woman||n,p,ò,g,ò,t,i,g,i
 npògo|||npogo
-nsaajɛ|gum arabic tree|n͡z§‹§áː§‹§d͡ʒ§ɛ|nsáajɛ||nsáajɛ
+nsaajɛ|gum arabic tree|n͡z,‹,áː,‹,d͡ʒ,ɛ|nsáajɛ||nsáajɛ
 nsana|proverb||nsàna
-nsaransaranin|small fish|n§z§á§‹§r§ã§s§a§r§a§n§ĩ̀ː§‹
-nse|female reply to greeting|n͡z§‹§e|ǹse||x
+nsaransaranin|small fish|n,z,á,‹,r,ã,s,a,r,a,n,ĩ̀ː,‹
+nse|female reply to greeting|n͡z,‹,e|ǹse||x
 nsiranɛgɛ|bronze|
 nsɛrɛ|watermelon|
-ntilen|giraffe|n͡t§‹§i§l§e§n
-ntomi|tamarind|n͡t§‹§o§m§i
-ntori|frog, toad|n͡t§‹§ò§r§i|ntɔ̀ri
+ntilen|giraffe|n͡t,‹,i,l,e,n
+ntomi|tamarind|n͡t,‹,o,m,i
+ntori|frog, toad|n͡t,‹,ò,r,i|ntɔ̀ri
 ntura|bull|
-ntɔn|cricket|nt§‹§ɔ̃̀ꜜɔ̃̀§‹§|ntɔ̌n
+ntɔn|cricket|nt,‹,ɔ̃̀ꜜɔ̃̀,‹,|ntɔ̌n
 nugu||
 numu||
 nun||
-nya|eye|ɲ§‹§áà
+nya|eye|ɲ,‹,áà
 n||
 nàfa|||nafa
 nàra|||nara
 nàsira|||nasira
-nàámu|response when name is called|n§a§a§m§u|||x
+nàámu|response when name is called|n,a,a,m,u|||x
 náamu|iman's turban, rule||naamu
 nákɔ|||nakɔ
 núnwo|||nunwo
@@ -563,12 +563,12 @@ nɛrɛ||
 nɛ́gɛn|||nɛgɛn
 nɛ́gɛnɛgɛ|||nɛgɛnɛgɛ
 olu|they, them!||olu
-pan|jump, fly|p§ã́§‹
-peresidan|president|p§e§r§e§s§i§d§ã§‹
+pan|jump, fly|p,ã́,‹
+peresidan|president|p,e,r,e,s,i,d,ã,‹
 sabali||
 saba|three||sàba||x
 sagasi||
-saga|sheep|s§a§ɣ§a|sàga||x
+saga|sheep|s,a,ɣ,a|sàga||x
 saha!|thanks!||saha||x
 sama||
 samiya||
@@ -579,27 +579,27 @@ sankolo||
 sanni||
 sanpɛrɛn|lightning, thunder|
 saraka||
-sara|charm|s§á§r§aà|
+sara|charm|s,á,r,aà|
 sariya||
 saya||
 saɲɔ||
 sebaaya|lpower, means|
 sebe||
-seere|witness|s§eː§‹§r§e
+seere|witness|s,eː,‹,r,e
 segin|eight||||x
 seko||
 seleke||
 senfɛ||
-shinye|time|ʃ§‹§ì§ɲ§‹§ɛꜜɛ̀
-shu|cabbage|ʃ§‹§ù|shù
-shɔ̀|beans|ʃ§‹§ɔ̀|shɔ̀|variant of §sɔsɔ§|x
-shɛ|chicken|ʃ§‹§ɛ̌|shɛ̌|variant of §sise§, also spelled sɛ or syɛ|x
+shinye|time|ʃ,‹,ì,ɲ,‹,ɛꜜɛ̀
+shu|cabbage|ʃ,‹,ù|shù
+shɔ̀|beans|ʃ,‹,ɔ̀|shɔ̀|variant of ,sɔsɔ,|x
+shɛ|chicken|ʃ,‹,ɛ̌|shɛ̌|variant of ,sise,, also spelled sɛ or syɛ|x
 sigida||
 sigiyɔrɔ||
 sinin||␣
 sini||
 sira||
-sisɛ|chicken|s§ì§s§ɛ|sìsɛ||x
+sisɛ|chicken|s,ì,s,ɛ|sìsɛ||x
 situlu||
 siya||
 sogoba||
@@ -634,15 +634,15 @@ sɔgɔma||
 sɔgɔsɔgɔ||
 sɔrɔdasi||
 sɔsɔli|argument, debate|
-sɔsɔ|beans|s§ɔ̀§s§ɔ|sɔ̀sɔ||x
+sɔsɔ|beans|s,ɔ̀,s,ɔ|sɔ̀sɔ||x
 sɔ̀mɔ|||sɔmɔ
 sɔ̀ngɔ|||sɔngɔ
 sɛfan||
 sɛnɛ||
-sɛsi|chair|s§ɛ́§s§i|
+sɛsi|chair|s,ɛ́,s,i|
 sɛ|chicken, hen|
 sɛ́bɛn|||sɛbɛn
-taafan|direction|t§áː§‹§f§ã§‹|táafan||táafan
+taafan|direction|t,áː,‹,f,ã,‹|táafan||táafan
 tan|ten||||x
 tiga||
 tigɛ||
@@ -672,20 +672,20 @@ tɛ||
 u||
 walima||
 waraba||
-wari caaman|a LOT of money|w§a§r§i§ §c§aː§‹§m§a§n|wari caaman||x
+wari caaman|a LOT of money|w,a,r,i, ,c,aː,‹,m,a,n|wari caaman||x
 warijɛ||
-wari|money|w§a§r§i|||x
+wari|money|w,a,r,i|||x
 wa||␣
 wele||
 wolonfila|seven||||x
-wolonwula|seven|w§ó§l§ɔ̃§‹§w§u§l§a|wólonwula||wólonwula
-wolo|skin|w§ò§l§ó|wòló||x
+wolonwula|seven|w,ó,l,ɔ̃,‹,w,u,l,a|wólonwula||wólonwula
+wolo|skin|w,ò,l,ó|wòló||x
 woro||
 wotoro||
 wula||
 wulu||
 wòro|||woro
-wólonwulanan|seventh|w§ó§l§ɔ̃§‹§w§u§l§a§n§ã§‹|wolonwulanan
+wólonwulanan|seventh|w,ó,l,ɔ̃,‹,w,u,l,a,n,ã,‹|wolonwulanan
 wólo|||wolo
 wɔlɔsɔ||
 wɔlɔ||
@@ -699,32 +699,32 @@ yan||
 yen||
 ye||
 yiri||
-yoya|war|j§ó§j§a|yóya||yóya
+yoya|war|j,ó,j,a|yóya||yóya
 yàfa|||yafa
 yànfan|||yanfan
 yɔrɔ||
 yɛlɛma||
 yɛlɛnyɛlɛnnan||
 yɛrɛ||
-zaban|fruit|z§à§b§ã§‹|zàban||x
-zandarmu|policeman|z§ã́§‹§d§a§r§m§u|zándarmu||x
+zaban|fruit|z,à,b,ã,‹|zàban||x
+zandarmu|policeman|z,ã́,‹,d,a,r,m,u|zándarmu||x
 zɛrɛ|watermelon||||x
 àlikaama|wheat||alikaama
 àlisilamɛ||␣|alisilamɛ
 á|you|á|á||a'
-ŋana|tough|ŋ§à§n§aꜜà
-ŋaniya|intention, decision|ŋ§à§n§ì§j§a|ŋànìya
-ŋɔmɔ|bark (tree)|ŋ§ɔ̀§m§ɔꜜɔ̀
-ŋɛɲɛ|itch|ŋʷ§ɛ́§ɲ§ɛ|ŋɛ́ɲɛ||x
+ŋana|tough|ŋ,à,n,aꜜà
+ŋaniya|intention, decision|ŋ,à,n,ì,j,a|ŋànìya
+ŋɔmɔ|bark (tree)|ŋ,ɔ̀,m,ɔꜜɔ̀
+ŋɛɲɛ|itch|ŋʷ,ɛ́,ɲ,ɛ|ŋɛ́ɲɛ||x
 ɲaami|to mix, confuse|
-ɲaamɛ|camel|ɲ§aː§‹§m§ɛ
+ɲaamɛ|camel|ɲ,aː,‹,m,ɛ
 ɲin||
-ɲuman|good|ɲ§ù§m§a§n|ɲuman||ɲùman
-ɲùman|good|ɲ§ù§m§a§n|ɲuman||
+ɲuman|good|ɲ,ù,m,a,n|ɲuman||ɲùman
+ɲùman|good|ɲ,ù,m,a,n|ɲuman||
 ɲɔgɔmɛ||
 ɲɔgɔn||
 ɲɔ||
-ɲɛ-ji|tears|ɲ§ɛ§-§d͡ʒ§i|ɲɛ́-ji||ɲɛ́-ji
+ɲɛ-ji|tears|ɲ,ɛ,-,d͡ʒ,i|ɲɛ́-ji||ɲɛ́-ji
 ɲɛda||
 ɲɛmɔgɔ||
 ɲɛ|eye||ɲɛ́

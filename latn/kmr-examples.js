@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -31,7 +31,7 @@ aborînas||
 aborînasî||
 abring||
 abrîng||
-absans|absence|ɑː§b§ˈs§ɑː§n§s
+absans|absence|ɑː,b,ˈs,ɑː,n,s
 acer||
 aciz||
 aciz kirin||
@@ -57,7 +57,7 @@ afir||
 afirandin||
 afirmend||
 afirîner||
-afret|woman, lady|ɑː§f§ˈɾ§ɛ§t
+afret|woman, lady|ɑː,f,ˈɾ,ɛ,t
 afrîkansî||
 afrîkayî||
 afrîkî||
@@ -71,7 +71,7 @@ agadarî||
 agah||
 agahdar||
 agahdar kirin||
-agahdarî|information, knowledge|ɑː§ɡ§ɑː§h§d§ɑː§ˈɾ§iː
+agahdarî|information, knowledge|ɑː,ɡ,ɑː,h,d,ɑː,ˈɾ,iː
 agahî||
 ageh||
 agehdar||
@@ -92,7 +92,7 @@ agirperist||
 agonîzm||
 ah û zar||
 ah û zar kirin||
-aheng|tune, tone|ɑː§ˈh§ɛ§ŋ§ɡ
+aheng|tune, tone|ɑː,ˈh,ɛ,ŋ,ɡ
 ahengsazî||
 -ahî||
 ahûzarî||
@@ -220,22 +220,22 @@ anatoksîn||
 anatomî||
 anaxdar||
 ancax||
-ancax-ancax|only barely, scarcely|ɑː§n§d͡ʒ§ɑː§x§§ɑː§n§ˈd͡ʒ§ɑː§x
+ancax-ancax|only barely, scarcely|ɑː,n,d͡ʒ,ɑː,x,,ɑː,n,ˈd͡ʒ,ɑː,x
 andin||
 androlojî||
 androtomî||
 -ane||
 anemetî||
-angaşt|assertion, claim|ɑː§n§ˈɡ§ɑː§ʃ§t
+angaşt|assertion, claim|ɑː,n,ˈɡ,ɑː,ʃ,t
 ango||
 angot||
 angoşt||
 aniha||
 anika||
 anku||
-antagonîzm|antagonism|ɑː§n§t§ɑː§ɡ§oː§ˈn§iː§z§m
+antagonîzm|antagonism|ɑː,n,t,ɑː,ɡ,oː,ˈn,iː,z,m
 antonîm||
-antrenor|coach, trainer|ɑː§n§t§ɾ§ɛ§ˈn§oː§ɾ
+antrenor|coach, trainer|ɑː,n,t,ɾ,ɛ,ˈn,oː,ɾ
 antêx||
 antî-||
 antîhîstamîn||
@@ -276,7 +276,7 @@ arav||
 arbeşk||
 ard||
 Ardî||
-ardû|fuel|ɑː§ɾ§ˈd§uː
+ardû|fuel|ɑː,ɾ,ˈd,uː
 arehan||
 aren||
 arezo||
@@ -300,7 +300,7 @@ arpeş||
 arpeşk||
 arsaq||
 artêş||
-arvan|flour|ɑː§ɾ§ˈv§ɑː§n
+arvan|flour|ɑː,ɾ,ˈv,ɑː,n
 arvane||
 arwan||
 arwane||
@@ -526,7 +526,7 @@ başûr||
 bed||
 bedbext||
 bedenî||
-bedew|beautiful|b§ɛ§ˈd§ɛ§w
+bedew|beautiful|b,ɛ,ˈd,ɛ,w
 Bedirxan||
 behr||
 bej||
@@ -549,7 +549,7 @@ beran||
 beraz||
 berazê erdê||
 berazê kovî||
-berbijar|candidate|b§ɛ§ɾ§b§ɪ§ˈʒ§ɑː§ɾ
+berbijar|candidate|b,ɛ,ɾ,b,ɪ,ˈʒ,ɑː,ɾ
 berbilavî||
 berdan||
 berdan jêr||
@@ -594,7 +594,7 @@ bi ser xwe ve hatin||
 bi xatirê te||
 bi-||
 biala||
-biencam|resultful|b§ɪ§ɛ§n§ˈd͡ʒ§ɑː§m
+biencam|resultful|b,ɪ,ɛ,n,ˈd͡ʒ,ɑː,m
 biencamî||
 biguman||
 bigumanî||
@@ -614,10 +614,10 @@ bin||
 bin-||
 bindest||
 bindestî||
-binefş|violet|b§ɪ§ˈn§ɛ§f§ʃ
+binefş|violet|b,ɪ,ˈn,ɛ,f,ʃ
 binefşî||
 bingeh||
-binkom|subset|b§ɪ§n§ˈk§oː§m
+binkom|subset|b,ɪ,n,ˈk,oː,m
 binpêker||
 binpêkerî||
 binpêkirin||
@@ -671,7 +671,7 @@ bêcil||
 bêcilî||
 bêdilî||
 bêdiran||
-bêdê|motherless|b§eː§ˈd§eː
+bêdê|motherless|b,eː,ˈd,eː
 bêencam||
 bêencamî||
 bêfikaretî||
@@ -717,11 +717,11 @@ cade||
 cahil||
 cam||
 came||
-camedank|wardrobe|d͡ʒ§ɑː§m§ɛ§ˈd§ɑː§ŋ§k
+camedank|wardrobe|d͡ʒ,ɑː,m,ɛ,ˈd,ɑː,ŋ,k
 can||
 candar||
 Cano||
-carcaran|sometimes|d͡ʒ§ɑː§ɾ§d͡ʒ§ɑː§ˈɾ§ɑː§n
+carcaran|sometimes|d͡ʒ,ɑː,ɾ,d͡ʒ,ɑː,ˈɾ,ɑː,n
 carinan||
 casûs||
 ceh||
@@ -781,7 +781,7 @@ dabaş||
 dabilandin||
 dad||
 dadgeh||
-dadmend|right, just, fair|d§ɑː§d§ˈm§ɛ§n§d
+dadmend|right, just, fair|d,ɑː,d,ˈm,ɛ,n,d
 dadweriya deryayî||
 damezrandin||
 dan||
@@ -822,7 +822,7 @@ dem||
 demjimêrk||
 demokrasî||
 demokratîk||
-demsal|season|d§ɛ§m§ˈs§ɑː§l
+demsal|season|d,ɛ,m,ˈs,ɑː,l
 dendikî||
 dendrokronolojî||
 deng||
@@ -905,7 +905,7 @@ dikak||
 dil||
 dilgiran kirin||
 dilgiranî||
-dilop|drop|d§ɪ§ˈl§oː§p
+dilop|drop|d,ɪ,ˈl,oː,p
 dilsozî||
 diltengî||
 dilşewat||
@@ -949,7 +949,7 @@ dêl||
 dêlegur||
 dêm||
 dêr||
-dêw|demon, ogre|d§eː§w
+dêw|demon, ogre|d,eː,w
 Dîcle||
 dîk||
 dîl||
@@ -1027,7 +1027,7 @@ emerîkanî||
 emerîkî||
 emin||
 emirkanî||
-emrîkî|American|ɛ§m§ɾ§iː§ˈk§iː
+emrîkî|American|ɛ,m,ɾ,iː,ˈk,iː
 emîn||
 enbar||
 encam||
@@ -1038,7 +1038,7 @@ endezyariya elektrîkê||
 endezyariya nivîsbariyê||
 endezyariya qûtê||
 endezyarî||
-enextar|key|ɛ§n§ɛ§x§ˈt§ɑː§ɾ
+enextar|key|ɛ,n,ɛ,x,ˈt,ɑː,ɾ
 engizandin||
 enişk||
 Enqere||
@@ -1057,7 +1057,7 @@ eraq||
 erav||
 erd||
 erdhej||
-ereb|Arab|ɛ§ˈɾ§ɛ§b
+ereb|Arab|ɛ,ˈɾ,ɛ,b
 erebe||
 erebî||
 ereq||
@@ -1101,7 +1101,7 @@ ewrûpayî||
 ewrûpî||
 eyalet||
 eyb||
-eylo|eagle|ɛ§j§ˈl§oː
+eylo|eagle|ɛ,j,ˈl,oː
 ez||
 ez hez ji te dikim||
 ezman||
@@ -1118,9 +1118,9 @@ fehm||
 feqîr||
 Ferat||
 feraş||
-ferec|dawn, daybreak|f§ɛ§ˈɾ§ɛ§d͡ʒ
+ferec|dawn, daybreak|f,ɛ,ˈɾ,ɛ,d͡ʒ
 ferensayî||
-ferfûr|porcelain|f§ɛ§ɾ§ˈf§uː§ɾ
+ferfûr|porcelain|f,ɛ,ɾ,ˈf,uː,ɾ
 ferheng||
 ferhengok||
 ferhengvan||
@@ -1136,11 +1136,11 @@ fir||
 firaq||
 Firat||
 firavîn||
-fireh|wide, broad|f§ɪ§ˈɾ§ɛ§h
+fireh|wide, broad|f,ɪ,ˈɾ,ɛ,h
 firotin||
 firr||
 firrinde||
-firrîn|to fly|f§ɪ§ɾ§ˈɾ§iː§n
+firrîn|to fly|f,ɪ,ɾ,ˈɾ,iː,n
 firîn||
 fis||
 fistiq||
@@ -1190,10 +1190,10 @@ giran||
 giraniya atomê||
 girav||
 girrnij||
-girrnijîn|to smile|ɡ§ɪ§r§n§ɪ§ˈʒ§iː§n
+girrnijîn|to smile|ɡ,ɪ,r,n,ɪ,ˈʒ,iː,n
 girtin||
 girtî||
-girtîgeh|prison|ɡ§ɪ§ɾ§t§iː§ˈɡ§ɛ§h
+girtîgeh|prison|ɡ,ɪ,ɾ,t,iː,ˈɡ,ɛ,h
 girêdan||
 girîng||
 givîj||
@@ -1229,7 +1229,7 @@ guherîn||
 guhnelî||
 gul||
 gulan||
-guldank|vase|ɡ§ʊ§l§ˈd§ɑː§ŋ§k
+guldank|vase|ɡ,ʊ,l,ˈd,ɑː,ŋ,k
 Gulistan||
 gulwaz||
 guman||
@@ -1278,7 +1278,7 @@ hecer||
 hedef||
 hediye||
 hedîs||
-heft|seven|ħ§æ§f§t
+heft|seven|ħ,æ,f,t
 hefte||
 heftename||
 hefteyane||
@@ -1301,7 +1301,7 @@ henef||
 henek||
 heq||
 her||
-herherî|immortal|h§ɛ§ɾ§h§ɛ§ˈj§iː
+herherî|immortal|h,ɛ,ɾ,h,ɛ,ˈj,iː
 herheyî||
 herimandin||
 hermiş||
@@ -1315,7 +1315,7 @@ hesinger||
 hesingêr||
 hesinkar||
 hesinker||
-hesp|horse|h§ɛ§s§p
+hesp|horse|h,ɛ,s,p
 hest||
 hestiyê cênîkê||
 hestî||
@@ -1327,7 +1327,7 @@ hevalkar||
 hevaltî||
 hevalî||
 hevenav||
-hevirmiş|silk|h§ɛ§v§ɪ§ɾ§ˈm§ɪ§ʃ
+hevirmiş|silk|h,ɛ,v,ɪ,ɾ,ˈm,ɪ,ʃ
 hevirmîş||
 hevirmûş||
 hevok||
@@ -1352,7 +1352,7 @@ hewl||
 Hewlêr||
 hewq||
 hewş||
-heyam|a while|h§ɛ§ˈj§ɑː§m
+heyam|a while|h,ɛ,ˈj,ɑː,m
 heyf||
 heykel||
 heyranî||
@@ -1389,7 +1389,7 @@ hişk||
 hodax||
 hogir||
 hokar||
-hoker|adverb|h§oː§ˈk§ɛ§ɾ
+hoker|adverb|h,oː,ˈk,ɛ,ɾ
 hokera daxwaziyê||
 hokera neyînî||
 holendî||
@@ -1415,16 +1415,16 @@ Hêlîn||
 hêlîn||
 hênik||
 hêrs||
-hêrûg|plum, apricot|h§eː§ˈɾ§uː§ɡ
+hêrûg|plum, apricot|h,eː,ˈɾ,uː,ɡ
 hêrûng||
-hêsa|quiet, peaceful, calm|h§eː§ˈs§ɑː||ھێسا‎
+hêsa|quiet, peaceful, calm|h,eː,ˈs,ɑː||ھێسا‎
 hêsan||
 hêsanî||
 hêstir||
 hêvî||
 hêvî kirin||
 hêvîdar||
-hêz|strength, power|h§eː§z
+hêz|strength, power|h,eː,z
 hêzên bejayî||
 hîdro-||
 hîdrojen||
@@ -1442,13 +1442,13 @@ hîstamîn||
 hîsterotomî||
 hîv||
 hûn||
-ihtiyac|necessity|ɪ§h§t§ɪ§ˈj§ɑː§d͡ʒ
+ihtiyac|necessity|ɪ,h,t,ɪ,ˈj,ɑː,d͡ʒ
 ilm||
 imbar||
 inayet||
 incûr||
 inglîz||
-inglîzî|English (lang)|ɪ§ŋ§ɡ§l§iː§ˈz§iː
+inglîzî|English (lang)|ɪ,ŋ,ɡ,l,iː,ˈz,iː
 -istan||
 izin||
 janr||
@@ -1492,7 +1492,7 @@ jî||
 jîn||
 jîr||
 jîrî||
-jîyan|to live|ʒ§iː§ˈj§ɑː§n
+jîyan|to live|ʒ,iː,ˈj,ɑː,n
 jûdo||
 jûr||
 k'il||
@@ -1535,7 +1535,7 @@ Kawa||
 kaxçîn||
 kedî||
 kedî kirin||
-kef|foam|k§ɛ§f
+kef|foam|k,ɛ,f
 kefen||
 kel||
 kelandin||
@@ -1557,7 +1557,7 @@ kerguh||
 kerixandin||
 kerr||
 kesk||
-keskesor|rainbow|k§ɛ§s§k§ɛ§ˈs§oː§ɾ
+keskesor|rainbow|k,ɛ,s,k,ɛ,ˈs,oː,ɾ
 keskûala||
 ketamîn||
 ketin||
@@ -1570,14 +1570,14 @@ kevn||
 kevok||
 kevz||
 kevçî||
-kew|partridge|k§ɛ§w
+kew|partridge|k,ɛ,w
 kewandin||
 keç||
 keçik||
 keştî||
 kilox||
 kilîd||
-kilîl|key|k§ɪ§ˈl§iː§l
+kilîl|key|k,ɪ,ˈl,iː,l
 kin||
 kinif||
 kir||
@@ -1593,7 +1593,7 @@ kirêt||
 kirîn||
 kisl||
 kitik||
-kitêb|book|k§ɪ§ˈt§eː§b
+kitêb|book|k,ɪ,ˈt,eː,b
 kizir||
 klorîn||
 kojandin||
@@ -1645,18 +1645,18 @@ kurdmancî||
 kurdî||
 kurik||
 kurmancí||
-Kurmancî|Northern Kurdish|k§ʊ§ɾ§m§ɑː§n§ˈd͡ʒ§iː
-kurmancî|Northern Kurdish|k§ʊ§ɾ§m§ɑː§n§ˈd͡ʒ§iː
+Kurmancî|Northern Kurdish|k,ʊ,ɾ,m,ɑː,n,ˈd͡ʒ,iː
+kurmancî|Northern Kurdish|k,ʊ,ɾ,m,ɑː,n,ˈd͡ʒ,iː
 kurn||
 kurr||
 kurt||
 kurt kirin||
-kurtedaw|mini-skirt|k§ʊ§ɾ§t§ɛ§ˈd§ɑː§w
+kurtedaw|mini-skirt|k,ʊ,ɾ,t,ɛ,ˈd,ɑː,w
 kurtedawên||
 kurtenav||
 kurtetenore||
 kurteçîrok||
-kuxîn|to cough|k§u§χ§iː§n
+kuxîn|to cough|k,u,χ,iː,n
 kuç||
 kuş||
 kuştin||
@@ -1684,7 +1684,7 @@ leng||
 lepik||
 lewitandin||
 leystin||
-lezgîn|fast|l§ɛ§z§ˈɡ§iː§n
+lezgîn|fast|l,ɛ,z,ˈɡ,iː,n
 Lezgîn||
 leşker||
 leşî||
@@ -1697,7 +1697,7 @@ li pey||
 li ser||
 li xwe kirin||
 lijne||
-ling|leg, foot|l§ɪ§ŋ§ɡ
+ling|leg, foot|l,ɪ,ŋ,ɡ
 -lojî||
 loko||
 lokomotîv||
@@ -1709,10 +1709,10 @@ lê dan||
 lê gerîn||
 lê sor kirin||
 lê zêde kirin||
-lêgerîn|search|l§eː§ɡ§ɛ§ˈɾ§iː§n
+lêgerîn|search|l,eː,ɡ,ɛ,ˈɾ,iː,n
 lêker||
 lêkera alîkar||
-lêkolîn|investigation|l§eː§k§oː§ˈl§iː§n
+lêkolîn|investigation|l,eː,k,oː,ˈl,iː,n
 lêkolîner||
 lênûsk||
 lêpirsîn||
@@ -1762,7 +1762,7 @@ mehane||
 mehkeme||
 mehname||
 mehîn||
-mekok|space shuttle|m§ɛ§ˈk§oː§k
+mekok|space shuttle|m,ɛ,ˈk,oː,k
 mekteb||
 melexan||
 mentiq||
@@ -1773,7 +1773,7 @@ mereq||
 merg||
 merhele||
 merixandin||
-merov|human|m§ɛ§ˈɾ§oː§v
+merov|human|m,ɛ,ˈɾ,oː,v
 merr||
 meslek||
 mest||
@@ -1784,7 +1784,7 @@ mewîj||
 meygêr||
 meygêrr||
 meyxanevan||
-mezad|auction|m§ɛ§ˈz§ɑː§d
+mezad|auction|m,ɛ,ˈz,ɑː,d
 mezel||
 mezin||
 mezinahî||
@@ -1797,7 +1797,7 @@ mihafize||
 mihne||
 mij||
 mijar||
-mijmij|apricot|m§ɪ§ʒ§ˈm§ɪ§ʒ
+mijmij|apricot|m,ɪ,ʒ,ˈm,ɪ,ʒ
 mil||
 milîs||
 milûk||
@@ -1806,15 +1806,15 @@ minasib||
 mirar||
 mirin||
 mirov||
-mirovxwer|man-eater|m§ɪ§ɾ§oː§v§x§ˈw§ɛ§ɾ
+mirovxwer|man-eater|m,ɪ,ɾ,oː,v,x,ˈw,ɛ,ɾ
 mirqî||
 mirîd||
 mirîşk||
 misabiqe||
-misilman|muslim|m§ɪ§s§ɪ§lˈ§m§ɑː§n
+misilman|muslim|m,ɪ,s,ɪ,lˈ,m,ɑː,n
 mitleq||
 mitêl||
-mixdar|quantity, amount|m§ɪ§x§ˈd§ɑː§ɾ
+mixdar|quantity, amount|m,ɪ,x,ˈd,ɑː,ɾ
 mixenet||
 mizafer||
 mizakere||
@@ -1832,7 +1832,7 @@ moz||
 mozik||
 muhtac||
 muxtar||
-muçe|wage|m§ʊ§ˈt͡ʃ§ɛ
+muçe|wage|m,ʊ,ˈt͡ʃ,ɛ
 mêjîn||
 mêr||
 mêrg||
@@ -1841,7 +1841,7 @@ Mêrxas||
 mêtingeh||
 mêvan||
 mêvanxane||
-mêw|grapevine|m§eː§w
+mêw|grapevine|m,eː,w
 mêwe||
 mêwedar||
 mêze||
@@ -1877,12 +1877,12 @@ nas||
 nasname||
 nasyonalîst||
 nasyonalîzm||
-nasîn|to know|n§ɑː§ˈs§iː§n
+nasîn|to know|n,ɑː,ˈs,iː,n
 nav||
 navbendik||
 navdêr||
 navend||
-navendî|central|n§ɑː§v§ɛ§n§ˈd§iː
+navendî|central|n,ɑː,v,ɛ,n,ˈd,iː
 naverok||
 navgir||
 navneteweyî||
@@ -1988,11 +1988,11 @@ oksîd||
 oksîjen||
 okyanos||
 ol||
-olan|echo|oː§ˈl§ɑː§n
+olan|echo|oː,ˈl,ɑː,n
 operator||
 orgazm||
 ostralî||
-otomobîl|car|oː§t§oː§m§oː§ˈb§iː§l
+otomobîl|car|oː,t,oː,m,oː,ˈb,iː,l
 pal||
 palawî||
 paldank||
@@ -2014,9 +2014,9 @@ parêzer||
 parêzerî||
 parêzgeh||
 -patî||
-pay|share|p§ɑː§j
+pay|share|p,ɑː,j
 paydos||
-payiz|autumn|p§ɑː§ˈj§ɪ§z
+payiz|autumn|p,ɑː,ˈj,ɪ,z
 paytext||
 paş-||
 paşbendik||
@@ -2045,7 +2045,7 @@ Pergala Navneteweyî ya Pîvanê||
 pergala rojê||
 peroksîd||
 perr||
-perwerde|education|p§ɛ§ɾ§w§ɛ§ɾ§ˈd§ɛ
+perwerde|education|p,ɛ,ɾ,w,ɛ,ɾ,ˈd,ɛ
 perçe||
 perîn||
 pesin||
@@ -2095,7 +2095,7 @@ piv||
 pixêrîk||
 piyale||
 piyes||
-piço-piço|bit by bit|p§ɪ§t͡ʃ§oː§§p§ɪ§ˈt͡ʃ§oː
+piço-piço|bit by bit|p,ɪ,t͡ʃ,oː,,p,ɪ,ˈt͡ʃ,oː
 piçûk||
 pişt||
 piştgirî||
@@ -2123,7 +2123,7 @@ pêncşemb||
 pênivîs||
 pênûs||
 pêrar||
-pêxember|prophet|p§eː§x§ɛ§m§ˈb§ɛ§ɾ
+pêxember|prophet|p,eː,x,ɛ,m,ˈb,ɛ,ɾ
 pêçe||
 pêş||
 pêş-||
@@ -2152,11 +2152,11 @@ pîşe||
 pûnijîn||
 pûrt||
 pûşber||
-pûşper|June|p§uː§ʃ§ˈp§ɛ§ɾ
+pûşper|June|p,uː,ʃ,ˈp,ɛ,ɾ
 qad||
 Qahîre||
 qalib||
-qamûs|dictionary|q§aː§m§uː§s
+qamûs|dictionary|q,aː,m,uː,s
 qanûn||
 qareqar||
 qas||
@@ -2185,12 +2185,12 @@ qelb||
 qelem||
 qelen||
 qemî||
-qenaet|contentment|q§ɛ§n§ɑː§ˈɛ§t
+qenaet|contentment|q,ɛ,n,ɑː,ˈɛ,t
 qencî||
 qenepe||
 qepax||
 qer||
-qerargeh|headquarters|q§ɛ§ɾ§ɑː§ɾ§ˈɡ§ɛ§h
+qerargeh|headquarters|q,ɛ,ɾ,ɑː,ɾ,ˈɡ,ɛ,h
 qeresî||
 qerewil||
 qerf||
@@ -2198,7 +2198,7 @@ qertel||
 qesd||
 qesel||
 qesem||
-qesp|dates|q§ɛ§s§p
+qesp|dates|q,ɛ,s,p
 qesr||
 qetandin||
 qetran||
@@ -2210,14 +2210,14 @@ qezîya||
 qeşartin||
 qeşe||
 qicik||
-qirax|edge, border|q§ɪ§ˈɾ§ɑː§x
+qirax|edge, border|q,ɪ,ˈɾ,ɑː,x
 qire||
 qoltix||
 qomî||
 qonax||
 qor||
 qorzî||
-qozeqer|rainbow|q§oː§z§ɛ§ˈq§ɛ§ɾ
+qozeqer|rainbow|q,oː,z,ɛ,ˈq,ɛ,ɾ
 qulaç||
 qumrî||
 qurm||
@@ -2240,9 +2240,9 @@ rast||
 rastî||
 Rastî||
 rawestîn||
-ray|opinion|r§ɑː§j
+ray|opinion|r,ɑː,j
 re||
-reaktor|reactor|r§ɛ§ɑː§k§ˈt§oː§ɾ
+reaktor|reactor|r,ɛ,ɑː,k,ˈt,oː,ɾ
 reaktora dendikî||
 realîzm||
 red||
@@ -2250,7 +2250,7 @@ reftar||
 reh||
 rekeh||
 reng||
-rengdêr|adjective|r§ɛ§ŋ§ɡ§ˈd§eː§ɾ
+rengdêr|adjective|r,ɛ,ŋ,ɡ,ˈd,eː,ɾ
 rengîn||
 reqabet||
 reqem||
@@ -2292,12 +2292,12 @@ rusî||
 rê||
 rêbaz||
 rêbendan||
-rêber|guide, leader|r§eː§ˈb§ɛ§ɾ
+rêber|guide, leader|r,eː,ˈb,ɛ,ɾ
 rêgeh||
 Rênas||
 rêveber||
-rêvebir|director, manager|r§eː§v§ɛ§ˈb§ɪ§ɾ
-rêwî|traveller|ɾ§eː§ˈw§iː
+rêvebir|director, manager|r,eː,v,ɛ,ˈb,ɪ,ɾ
+rêwî|traveller|ɾ,eː,ˈw,iː
 rêxistin||
 rêz||
 Rêzan||
@@ -2314,7 +2314,7 @@ rûmet||
 rûnas||
 rûniştin||
 rûniştvan||
-rûpel|page|r§uː§ˈp§ɛ§l
+rûpel|page|r,uː,ˈp,ɛ,l
 rûqayim||
 rûreş||
 Rûsya||
@@ -2401,7 +2401,7 @@ sipas||
 sipsor||
 sirgûn||
 sirişt||
-sist|weak|s§ɪ§s§t
+sist|weak|s,ɪ,s,t
 sitar||
 sivor||
 sivore||
@@ -2419,14 +2419,14 @@ slavî||
 sol||
 sond||
 sondname||
-sondxwarî|ally|s§oː§n§d§xʷ§‹§ɑː§ˈɾ§iː|
-sondxwer|swearer|s§oː§n§d§ˈxʷ§‹§ɛ§ɾ
+sondxwarî|ally|s,oː,n,d,xʷ,‹,ɑː,ˈɾ,iː|
+sondxwer|swearer|s,oː,n,d,ˈxʷ,‹,ɛ,ɾ
 sone||
 sor||
 soranî||
 Soro||
 sorê sor||
-sorîçk|oesophagus|s§oː§ˈɾ§iː§t͡ʃ§k
+sorîçk|oesophagus|s,oː,ˈɾ,iː,t͡ʃ,k
 sosyalîst||
 sosyolojî||
 Spanya||
@@ -2467,9 +2467,9 @@ sînor||
 sîqilandin||
 sîr||
 sîtil||
-sîwan|umbrella|s§iː§ˈw§ɑː§n
+sîwan|umbrella|s,iː,ˈw,ɑː,n
 sîx||
-sîxur|porcupine|s§iː§ˈx§ʊ§ɾ
+sîxur|porcupine|s,iː,ˈx,ʊ,ɾ
 sör||
 sûk||
 sûl||
@@ -2581,7 +2581,7 @@ tixa||
 tixûb||
 tizbî||
 tizrûg||
-tişt|thing|t§ɪ§ʃ§t
+tişt|thing|t,ɪ,ʃ,t
 tiştanok||
 toksîn||
 tomar kirin||
@@ -2592,7 +2592,7 @@ torin||
 torincî||
 tov||
 trîptofan||
-tu|you|t§ʊ
+tu|you|t,ʊ
 tu tişt||
 tu çawa yî||
 tune kirin||
@@ -2619,7 +2619,7 @@ tûjahî||
 tûjayî||
 tûjî||
 tûrikê xwe vala kirin||
-umêd|hope|ʊ§ˈm§eː§d
+umêd|hope|ʊ,ˈm,eː,d
 umêdewar||
 unda||
 vagon||
@@ -2629,7 +2629,7 @@ valageh||
 valîn||
 -van||
 vazo||
-veavakirin|to rebuild|v§ɛ§ɑː§v§ɑː§k§ɪ§ˈɾ§ɪ§n
+veavakirin|to rebuild|v,ɛ,ɑː,v,ɑː,k,ɪ,ˈɾ,ɪ,n
 vegotin||
 vekirin||
 vexwarin||
@@ -2654,7 +2654,7 @@ wekheviya dîferensiyel||
 wekheviya kîmyewî||
 wekheviya întegral||
 wekhevî||
-welat|country|w§ɛ§ˈl§ɑː§t
+welat|country|w,ɛ,ˈl,ɑː,t
 welatparêz||
 welatparêzî||
 wer||
@@ -2669,7 +2669,7 @@ west||
 westan||
 westandin||
 wext||
-weza|weak|w§ɛ§ˈz§ɑː
+weza|weak|w,ɛ,ˈz,ɑː
 wezîr||
 wezîrê karûbarên derve||
 winda kirin||
@@ -2698,7 +2698,7 @@ xebatkar||
 xeber||
 xefnêr||
 xela||
-xelas|free, exempt|x§ɛ§ˈl§ɑː§s
+xelas|free, exempt|x,ɛ,ˈl,ɑː,s
 xelat||
 xelatgir||
 xelq||
@@ -2710,7 +2710,7 @@ xemsarî||
 xendek||
 xeniqîn||
 xerman||
-xerîb|stranger, foreigner|x§ɛ§ˈɾ§iː§b
+xerîb|stranger, foreigner|x,ɛ,ˈɾ,iː,b
 xerûze||
 xest||
 xet||
@@ -2733,7 +2733,7 @@ xizêm||
 xopan||
 xopanker||
 xort||
-xox|peach|x§oː§x
+xox|peach|x,oː,x
 xuda||
 xuhermend||
 xurek||
@@ -2750,7 +2750,7 @@ xwedî||
 xwedî kirin||
 xwedîmaf||
 xwegir||
-xwelî|ashes|xʷ§‹§ɛ§ˈl§iː
+xwelî|ashes|xʷ,‹,ɛ,ˈl,iː
 xwelîdank||
 xwen||
 xwenda||
@@ -2784,7 +2784,7 @@ xîç||
 yahodî||
 yan||
 yane||
-yani|that is to say|j§ɑː§ˈn§ɪ
+yani|that is to say|j,ɑː,ˈn,ɪ
 yanê||
 yanî||
 yaqût||
@@ -2792,16 +2792,16 @@ yarî||
 yasa||
 yazde||
 -yek||
-yek|one|j§ɛ§k
+yek|one|j,ɛ,k
 yekjimar||
 yekjimarr||
 yekîtî||
 yekşem||
 yemanet||
-yenî|that is to say|j§ɛʕ§ˈn§iː
+yenî|that is to say|j,ɛʕ,ˈn,iː
 Yewnanistan||
 yewnaniya kevn||
-yewnanî|Greek|j§ɛ§w§n§ɑː§ˈn§iː
+yewnanî|Greek|j,ɛ,w,n,ɑː,ˈn,iː
 Yonanistan||
 yonanî||
 YPG||
@@ -2814,7 +2814,7 @@ zagonî||
 zagonîtî||
 zalim||
 zang||
-zanist|science|z§ɑː§ˈn§ɪ§s§t
+zanist|science|z,ɑː,ˈn,ɪ,s,t
 zanista avê||
 zanista kompûterê||
 zanistvan||
@@ -2853,7 +2853,7 @@ ziman||
 zimankuj||
 zimankujî||
 zimanmalbat||
-zimannas|linguist|z§ɪ§m§ɑː§n§ˈn§ɑː§s
+zimannas|linguist|z,ɪ,m,ɑː,n,ˈn,ɑː,s
 zimannasî||
 zimanê bernamekirinê||
 zimanê fransî||
@@ -2900,7 +2900,7 @@ zû||
 Çarmihal û Bextiyarî||
 çarsem||
 çarîne||
-çarşem|Wednesday|t͡ʃ§ɑː§ɾ§ˈʃ§ɛ§m
+çarşem|Wednesday|t͡ʃ,ɑː,ɾ,ˈʃ,ɛ,m
 çarşev||
 çav||
 çavrî||
@@ -2913,7 +2913,7 @@ zû||
 çeka kîmyewî||
 çekdanîn||
 çekhilanîn||
-çekûç|hammer|t͡ʃ§ɛ§ˈk§uː§t͡ʃ
+çekûç|hammer|t͡ʃ,ɛ,ˈk,uː,t͡ʃ
 Çem||
 çem||
 çend||
@@ -2940,7 +2940,7 @@ zû||
 çok||
 çol||
 çortan||
-çoçik|small ladle|t͡ʃ§oː§ˈt͡ʃ§ɪ§k
+çoçik|small ladle|t͡ʃ,oː,ˈt͡ʃ,ɪ,k
 çêlek||
 çêlekew||
 çêr||
@@ -2968,7 +2968,7 @@ zû||
 êlo||
 êmin||
 êprax||
-êrîş|attack|eː§ˈɾ§iː§ʃ
+êrîş|attack|eː,ˈɾ,iː,ʃ
 êvar||
 êzdî||
 Êzidi||
@@ -2985,7 +2985,7 @@ zû||
 înan||
 înî||
 îprax||
-îqame|residence permit|iː§q§ɑː§ˈm§ɛ
+îqame|residence permit|iː,q,ɑː,ˈm,ɛ
 Îran||
 îro||
 Îslamabad||
@@ -3002,7 +3002,7 @@ zû||
 îzotop||
 îşaret||
 îşev||
-ûr|rumen|uː§ɾ
+ûr|rumen|uː,ɾ
 şadrewan||
 şahî||
 şalyar||
@@ -3018,7 +3018,7 @@ zû||
 şaxmat||
 şayîr||
 şe kirin||
-şebeq|dawn, daybreak|ʃ§ɛ§ˈb§ɛ§q
+şebeq|dawn, daybreak|ʃ,ɛ,ˈb,ɛ,q
 şeftalî||
 şehderevan||
 şeher||
@@ -3029,12 +3029,12 @@ zû||
 şekir||
 şembî||
 şemî||
-şer|war|ʃ§ɛ§ɾ
+şer|war|ʃ,ɛ,ɾ
 şer kirin||
 şeref||
 şerm||
 şermezar||
-şerr|war|ʃ§ɛ§ɾ
+şerr|war|ʃ,ɛ,ɾ
 şerê navxweyî||
 şetrenc||
 şev||
@@ -3050,7 +3050,7 @@ zû||
 şil kirin||
 şilor||
 şilêl||
-şimşûr|sword|ʃ§ɪ§m§ˈʃ§uː§ɾ
+şimşûr|sword|ʃ,ɪ,m,ˈʃ,uː,ɾ
 şip||
 şirket||
 şirîn||
@@ -3058,7 +3058,7 @@ zû||
 Şivan||
 şivan||
 şivdar||
-şiverê|rural road, path|ʃ§ɪ§v§ɛ§ˈɾ§eː
+şiverê|rural road, path|ʃ,ɪ,v,ɛ,ˈɾ,eː
 şiwît||
 şixtîk||
 şiyar kirin||

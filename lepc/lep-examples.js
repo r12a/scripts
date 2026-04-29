@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -26,13 +26,13 @@ autoExpandExamples.lep = `
 
 @ https://en.wiktionary.org/wiki/Category:Lepcha_lemmas
 
-ᰀᰀᰤᰭ|seven|kʌ§kjʌʔk̚|kakyak
+ᰀᰀᰤᰭ|seven|kʌ,kjʌʔk̚|kakyak
 ᰀᰊᰪᰭ|difficulty||katuk
 ᰀᰑᰤᰬᰳ ᰀᰫᰵ|tree||
 ᰁᰬᰭ|force, urge|kleʔk̚|klek
 ᰃᰪᰮ|to be||gum
 ᰅᰦᰲ|to slice, split|ŋar|ngár
-ᰊᰣᰤᰪ|woman|tə.§ʔjɯ|taʔyu
+ᰊᰣᰤᰪ|woman|tə.,ʔjɯ|taʔyu
 ᰌᰦᰲᰈᰫ|Darjeeling||dárjú
 ᰌᰶ|lake|d̪ʌ|dâ
 ᰍᰟᰦᰲ|boat|nʌ.var|navár
@@ -47,43 +47,43 @@ autoExpandExamples.lep = `
 ᰚᰩᰭ|yak||yók
 ᰛᰧᰱᰶ|flower|riʔp̚|rip
 ᰛᰬ|the||re
-ᰛᰬᰰᰈᰩᰵ|Sikkim|rɛn.§ʒɔŋ|renjóng
+ᰛᰬᰰᰈᰩᰵ|Sikkim|rɛn.,ʒɔŋ|renjóng
 ᰜᰧᰶ|house|li|li
 ᰝᰬᰵ|ginger|hɪŋ|heng
 ᰟᰧ|blood|vi|vi
 ᰠᰦᰮ|three|sam|sám
 ᰣᰦ-|grammatical marker|ʔa
-ᰣᰦᰀᰶ|hand|ʔa.§kʌ|ʔákâ
+ᰣᰦᰀᰶ|hand|ʔa.,kʌ|ʔákâ
 ᰣᰧᰳᰶ|to create|ʔiʔt̪̚|ʔít
 ᰣᰧᰭᰶ|still|ʔiʔk|ʔík
 ᰜᰬᰰ|than|lɛn|len
-ᰣᰦᰖᰬᰮ|face|ʔɑ.§mlɛm|ʔamlɛm
-ᰙᰦᰊᰧ|nutmeg|d͡zɑ§t̪i|záti
+ᰣᰦᰖᰬᰮ|face|ʔɑ.,mlɛm|ʔamlɛm
+ᰙᰦᰊᰧ|nutmeg|d͡zɑ,t̪i|záti
 ᰑᰭᰶ|scrape|fəʔk|fâk
 ᰟᰮᰶ|song|vəm|vâm
 ᰆᰴ|foster, nourish|cʌŋ
-ᰎᰊᰪᰵ|shoulder|pə§t̪ɯŋ|patung
-ᰣᰦᰍᰪᰮ|younger brother|ʔɑ§nɯm|ánum
+ᰎᰊᰪᰵ|shoulder|pə,t̪ɯŋ|patung
+ᰣᰦᰍᰪᰮ|younger brother|ʔɑ,nɯm|ánum
 ᰛᰪ|cane|rɯ|ru
-ᰣᰪᰯᰓᰫ|salesman, seller|ʔɨl§bu|ulbú
+ᰣᰪᰯᰓᰫ|salesman, seller|ʔɨl,bu|ulbú
 ᰌᰫ|umbrella|du|dú
-ᰀᰈᰫ|dog|kə§ʒu|kajú
+ᰀᰈᰫ|dog|kə,ʒu|kajú
 ᰋᰫᰭ|season|t̪ʰuʔk̚|thúk
 ᰣᰫᰳ|otter|ʔuʔt̪̚|ʔút
 ᰌᰨᰱ|burn|doʔp̚|dop
 ᰃᰨ|I|go|go
-ᰣᰨᰘᰩᰵ|that day|ʔo§t͡sʰɔŋ|?otshóng
-ᰣᰦᰍᰩᰮ|elder sister|ʔa§nɔm|ʔánóm
+ᰣᰨᰘᰩᰵ|that day|ʔo,t͡sʰɔŋ|?otshóng
+ᰣᰦᰍᰩᰮ|elder sister|ʔa,nɔm|ʔánóm
 ᰕᰩᰰ|pig|mɔn|món
 ᰕᰤᰩᰵ|experience|mjɔŋ|myóng
 ᰕᰤᰨᰰ|forget|mjɔn|myón
 ᰃᰩ|to be happy|gɔ|gó
 ᰣᰩᰳ|to pluck|ʔɔʔt̚|ʔót
 ᰃᰦᰰ|old, aged|gɑn|gán
-ᰃᰨᰛᰫᰵ|either|go§ruŋ|gorúng
-ᰃᰬᰭᰜᰦᰳ|birth|gʲek§laʔt̚|gek-lát
+ᰃᰨᰛᰫᰵ|either|go,ruŋ|gorúng
+ᰃᰬᰭᰜᰦᰳ|birth|gʲek,laʔt̚|gek-lát
 ᰃᰤᰫ|skill|gju|gyú
-ᰊᰃᰥᰤᰫ|cheek|tʌ§grjʌ|tagryú
+ᰊᰃᰥᰤᰫ|cheek|tʌ,grjʌ|tagryú
 ᰅᰦᰰ|to remain, sit|ŋan|ngán
 ᰅᰨᰯ|early|ŋol|ngol
 ᰣᰫᰵ|water|ʔuŋ|ʔúng
@@ -95,30 +95,30 @@ autoExpandExamples.lep = `
 ᰆᰧᰶ|grain liquor|ci|cí
 ᰇᰨ|book|cʰo|cho
 ᰇᰬᰳ|relate|cʰɛʔt̚|chet
-ᰆᰬᰇᰩᰭ|loveable|ce§cʰɔʔk̚|cechók
+ᰆᰬᰇᰩᰭ|loveable|ce,cʰɔʔk̚|cechók
 ᰉᰬᰳ|two|ɲeʔt̚|nyet
-ᰉᰧᰜᰨᰱ|earlobe|ɲi§loʔp̚|nyilop
+ᰉᰧᰜᰨᰱ|earlobe|ɲi,loʔp̚|nyilop
 ᰉᰩᰭ|delay|ɲɔʔk̚|nyók
 ᰉᰧᰰᰶ|milk|ɲin|nyín
-ᰊᰪᰭᰍᰩᰮ|nose|tɯʔk§nɔm|tuknóm
-ᰊᰧᰮᰛᰬ|respect|tim§re|tímre
+ᰊᰪᰭᰍᰩᰮ|nose|tɯʔk,nɔm|tuknóm
+ᰊᰧᰮᰛᰬ|respect|tim,re|tímre
 ᰊᰩᰲ|silk|tɔr|tór
-ᰊᰧᰳᰶᰛᰬᰎᰩᰳ|tamarind|tiʔt̚§re§pɔʔt̚|títrepót
+ᰊᰧᰳᰶᰛᰬᰎᰩᰳ|tamarind|tiʔt̚,re,pɔʔt̚|títrepót
 ᰊᰤᰫᰳ|scar|tjuʔt̚|tyút
-ᰣᰦᰝᰥᰬᰳ|bone|a§r̥ɛʔt̚|ʔáhret
-ᰋᰦᰮᰎᰩᰳ|fruit|tʰam§pɔʔt̚|thámpót
-ᰋᰧᰀᰫᰵ|great grandfather|tʰi§kuŋ|thikúng
+ᰣᰦᰝᰥᰬᰳ|bone|a,r̥ɛʔt̚|ʔáhret
+ᰋᰦᰮᰎᰩᰳ|fruit|tʰam,pɔʔt̚|thámpót
+ᰋᰧᰀᰫᰵ|great grandfather|tʰi,kuŋ|thikúng
 ᰋᰨᰱ|get|tʰoʔp̚|thop
 ᰋᰤᰩᰭ|shelter|tʰjɔʔk̚|thyók
 ᰌᰧ|to come|di|di
 ᰌᰧᰵᰶ|stand|diŋ|díng
-ᰠᰌᰪ|slowly|sə§dɯ
-ᰍᰶᰜᰦ|always|nʌ§la|nâlá
+ᰠᰌᰪ|slowly|sə,dɯ
+ᰍᰶᰜᰦ|always|nʌ,la|nâlá
 ᰍᰦᰮ|year|nam|nám
 ᰕᰰᰶ|meat|mʌn|mân
-ᰊᰃᰥᰧᰀᰪᰱ|boy|ta§gri§kɯʔp̚|tagrikup
-ᰀ᰷ᰥᰧᰰᰶᰇᰬᰰ|kindness|ʈin§cʰen|trínchen
-ᱍᰧᰰᰶᰇᰬᰰ|kindness|ʈin§cʰen|trínchen
+ᰊᰃᰥᰧᰀᰪᰱ|boy|ta,gri,kɯʔp̚|tagrikup
+ᰀ᰷ᰥᰧᰰᰶᰇᰬᰰ|kindness|ʈin,cʰen|trínchen
+ᱍᰧᰰᰶᰇᰬᰰ|kindness|ʈin,cʰen|trínchen
 ᰀ᰷ᰥᰩᰱ|winnow|ʈɔʔp̚|tróp
 ᱍᰩᰱ|winnow|ʈɔʔp̚|tróp
 ᰀ᰷ᰥᰬ|mule|ʈe|tre
@@ -137,7 +137,7 @@ autoExpandExamples.lep = `
 ᱏᰬ|demon|ɖe|dre
 ᰎᰬᰯ|to be tired|pɛl|pel
 ᰏᰭ|break|plɑʔk̚|plák
-ᰎᰍᰨ|king|pa§no|pano
+ᰎᰍᰨ|king|pa,no|pano
 ᰎᰧ|write|pi|pi
 ᰎᰨ|bamboo|po|po
 ᰐᰦᰮ|defeat|pʰam|phám
@@ -145,26 +145,26 @@ autoExpandExamples.lep = `
 ᰐᰧᰯ|to be distant|pʰil|phíl
 ᰑᰦ|swim|fɑ|fá
 ᰑᰧᰭᰶ|tear|fiʔk̚|fík
-ᰑᰪᰵᰑᰧᰵ|blue|fɯŋ§fiŋ|fungfing
+ᰑᰪᰵᰑᰧᰵ|blue|fɯŋ,fiŋ|fungfing
 ᰒᰬᰳ|wash one's face|flɛʔt̚|flet
 ᰑᰩᰭ|peel|flɔʔk̚|flók
 ᰑᰤᰬᰭ|sharpen|fjɛʔk̚|fyek
 ᰓᰦᰰ|knife|bɑn|bán
 ᰓᰧᰭᰶ|cow|biʔk̚|bík
-ᰣᰦᰓᰬᰭ|middle|ʔa§beʔk̚|ʔábek
+ᰣᰦᰓᰬᰭ|middle|ʔa,beʔk̚|ʔábek
 ᰕᰦᰭ|die|mɑʔk̚|mák
 ᰕᰧ|fire|mi|mi
 ᰖᰤᰦ|level, even|mlja|mlyá
-ᰣᰦᰛᰨᰮ|fear|ʔa§rom|ʔá§rom
+ᰣᰦᰛᰨᰮ|fear|ʔa,rom|ʔá,rom
 ᰗᰦᰮ|hold|t͡sɑm|tsám
 ᰗᰩᰳ|squeeze|t͡sɔʔt̚|tsót
 ᰗᰫᰭ|bite|t͡suʔk̚|tsúk
-ᰗᰪᰲᰗᰪᰲ|twinkle|t͡sɯr§t͡sɯr|tsurtsur
+ᰗᰪᰲᰗᰪᰲ|twinkle|t͡sɯr,t͡sɯr|tsurtsur
 ᰘᰩ|aim|t͡sʰɔ|tshó
-ᰘᰪᰭᰎᰩᰳ|word|t͡sʰɯk§pɔʔt̚|tshukpót
+ᰘᰪᰭᰎᰩᰳ|word|t͡sʰɯk,pɔʔt̚|tshukpót
 ᰘᰶᰜᰪᰮ|orange|t͡sʰʌ-lɯm|tshâlum
 ᰠᰨ|rain|so|so
-ᰠᰃᰥᰬᰭ|throat|sʌ§greʔk̚|sagrek
+ᰠᰃᰥᰬᰭ|throat|sʌ,greʔk̚|sagrek
 ᰠᰪᰵ|story|sɯŋ|sung
 ᰡᰭᰶ|louse|ʃʌʔk̚|shâk
 ᰡᰬᰲ|glass|ʃɛr|sher
@@ -175,8 +175,8 @@ autoExpandExamples.lep = `
 ᰈᰦᰮ|assemble|ʒɑm|jám
 ᰙᰶ|err|zʌ|zâ
 ᰙᰨᰭ|trickle|zoʔk̚|zok
-ᰙᰦᰌᰧᰵ|jug|d͡z/zɑ§diŋ|záding
-ᰣᰦᰙᰩᰮ|rice, food|ʔa§d͡z/zɔm|ʔázóm
+ᰙᰦᰌᰧᰵ|jug|d͡z/zɑ,diŋ|záding
+ᰣᰦᰙᰩᰮ|rice, food|ʔa,d͡z/zɔm|ʔázóm
 ᰕᰥᰤᰩᰮ|to creep||mryóm
 ᰛᰦᰮ|thunder|rɑm|rám
 ᰛᰨᰭ|read, study|roʔk̚|rok
@@ -187,12 +187,12 @@ autoExpandExamples.lep = `
 ᰝᰥᰤᰦᰮ|jerk|r̥jɑm|hryám
 ᰝᰥᰫᰰ|hot|r̥un|hrún
 ᰟᰩᰮ|salt|vɔm|vóm
-ᰣᰦᰟᰤᰨ|tibia|ʔa§vjo|ʔávyo
+ᰣᰦᰟᰤᰨ|tibia|ʔa,vjo|ʔávyo
 ᰟᰧᰭᰶ|soldier|viʔk̚|vík
 ᰟᰤᰬᰳ|ask, inquire|vjɛʔt̚|vyet
-ᰢᰨᰕᰫ|spindle|wo§mu|womú
-ᰢᰩᰕᰫ|jackal|wɔ§mu|wómú
-ᰢᰫᰲᰌᰨ|sling|wur§do|wúrdo
+ᰢᰨᰕᰫ|spindle|wo,mu|womú
+ᰢᰩᰕᰫ|jackal|wɔ,mu|wómú
+ᰢᰫᰲᰌᰨ|sling|wur,do|wúrdo
 ᰜᰩᰳ|repeat|lɔʔt̚|lót
 ᰜᰦᰱ|bury|laʔp̚|láp
 ᰜᰧᰳᰶ|sift|liʔt̚|lít
@@ -205,8 +205,8 @@ autoExpandExamples.lep = `
 ᰝᰦᰭ|carve|hɑʔk̚|hák
 ᰝᰦᰱ|shut|hɑʔp̚|háp
 ᰝᰧᰱᰶ|shave|hiʔp̚|híp
-ᰠᰨᰣᰮᰶ|summer|so§ʔəm|soʔâm
-ᰣᰦᰛᰬ|this|ʔa§re|ʔáre
+ᰠᰨᰣᰮᰶ|summer|so,ʔəm|soʔâm
+ᰣᰦᰛᰬ|this|ʔa,re|ʔáre
 ᰚᰨᰭ|top, summit|joʔk̚|yok
 ᰣᰤᰩᰭ|work, job|ʔjoʔk̚|ʔyók
 ᰚᰬᰯ|to know a language|jɛl|yel
@@ -219,12 +219,12 @@ autoExpandExamples.lep = `
 ᰣᰤᰬᰰ|last year|ʔjɛn|ʔyen
 ᰀᰂ|alphabet (ABC)||kakha
 ᰇᰨᰕᰧᰵᰶ|alphabet (written letters)||chomíng
-ᰕᰧᰵᰶᰙᰳᰶ|alphabet (treasure of letters)|miŋ§zat|mingzât
-ᰀᰆᰬᰲ|wheat|kʌ§cɛr|kacer
-ᰜᰫᰭᰣᰦᰯ|tomorrow|luk§ʔɑl|lúkʔál
+ᰕᰧᰵᰶᰙᰳᰶ|alphabet (treasure of letters)|miŋ,zat|mingzât
+ᰀᰆᰬᰲ|wheat|kʌ,cɛr|kacer
+ᰜᰫᰭᰣᰦᰯ|tomorrow|luk,ʔɑl|lúkʔál
 ᰀᰧᰳᰶ|snatch|kʲiʔt̚|kít
 ᰛᰦᰭ|search, examine|raʔk̚|rák
-ᰣᰦᰀᰥᰧᰮᰶ|bitter|ʔa§krim|ʔákrím
+ᰣᰦᰀᰥᰧᰮᰶ|bitter|ʔa,krim|ʔákrím
 ᰂᰬᰭ|freeze|kʰeʔk̚|khek
 ᰂᰦᰭ|choke|kʰɑʔk̚|khák
 ᰂᰫ|loaf of bread|kʰu|khú
@@ -243,7 +243,7 @@ autoExpandExamples.lep = `
 ᰒᰶ|narrate|fla|flâ
 ᰒᰧᰭᰶ|separate|fliʔk̚|flík
 ᰛᰩᰵᰛᰧᰵᰶ|Róng language|roŋriŋ|róngríng
-ᰎᰪᰰᰈᰬᰵ|iron|pɯn.§d͡ʒeŋ|punjeng|
+ᰎᰪᰰᰈᰬᰵ|iron|pɯn.,d͡ʒeŋ|punjeng|
 
 
 
