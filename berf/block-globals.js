@@ -1,5 +1,5 @@
 langTag = 'zag'
-window.version = 'v29'
+window.version = 'v32'
 window.scriptName = 'Beria Erfe'
 window.ghDirectory = 'berf'
 window.blockDirectory = 'berf'

@@ -1,5 +1,5 @@
 
-window.version = 'v29'
+window.version = 'v32'
 window.scriptName = 'Buginese'
 window.ghDirectory = 'buginese'
 window.blockDirectory = 'buginese'

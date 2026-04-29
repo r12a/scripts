@@ -1,4 +1,4 @@
-window.version = 'v29'
+window.version = 'v32'
 window.scriptName = 'Bengali'
 window.ghDirectory = 'bengali'
 window.blockDirectory = 'bengali'
