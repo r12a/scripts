@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -26,27 +26,27 @@ autoExpandExamples.wo = `
 @ wiktionary (via transcriptions of Latin orthography)
 
 aada||
-𐵰𐵊𐵎𐶀𐵋𐵼𐵊|peace|aː§‹§f§i§j§a|aafiya|aafiya||aafiya
-aajo|attention, consideration|ʔaː§‹§ɟ§ɔ
-aajowoo|to need|ʔaː§‹§ɟ§ɔ§w§ɔː
-aaju|to be necessary|ʔaː§‹§ɟ§u
-𐵰𐵊𐵳𐵊𐵾𐵊|bean cake|ʔ§a§k§a§r§a|akara
-aakimu|to take over|ʔaː§‹§k§i§m§u
-aal|bad mood|ʔaː§‹§l
+𐵰𐵊𐵎𐶀𐵋𐵼𐵊|peace|aː,‹,f,i,j,a|aafiya|aafiya||aafiya
+aajo|attention, consideration|ʔaː,‹,ɟ,ɔ
+aajowoo|to need|ʔaː,‹,ɟ,ɔ,w,ɔː
+aaju|to be necessary|ʔaː,‹,ɟ,u
+𐵰𐵊𐵳𐵊𐵾𐵊|bean cake|ʔ,a,k,a,r,a|akara
+aakimu|to take over|ʔaː,‹,k,i,m,u
+aal|bad mood|ʔaː,‹,l
 aala||
-aalim|scholar|ʔaː§‹§l§i§m
+aalim|scholar|ʔaː,‹,l,i,m
 aaluwa||
-aar|wash a linen piece for the first time|ʔaː§‹§r
-aareen|wrestling arena|ʔaː§‹§r§ɛː§‹§n
-aaréen|ground nut|ʔaː§‹§r§eː§‹§n
-𐵰𐵊𐵎𐵽𐵩𐵎𐵳𐵊𐵽|magistrate|ʔ§aː§‹§tɛː§‹§k§a§t
+aar|wash a linen piece for the first time|ʔaː,‹,r
+aareen|wrestling arena|ʔaː,‹,r,ɛː,‹,n
+aaréen|ground nut|ʔaː,‹,r,eː,‹,n
+𐵰𐵊𐵎𐵽𐵩𐵎𐵳𐵊𐵽|magistrate|ʔ,aː,‹,tɛː,‹,k,a,t
 -aay||
 ab||
-abal|to lend|ʔa§b§a§l
+abal|to lend|ʔa,b,a,l
 afeer||
 ag||
 ak||
-akara|bean cake|ʔa§k§a§r§a
+akara|bean cake|ʔa,k,a,r,a
 alaafiya||
 alaaji||
 Almaañ||
@@ -56,10 +56,10 @@ alxames||
 alxuraan||
 Amerik||
 amet||
-ana|where is?|ˈa.§n§a
+ana|where is?|ˈa.,n,a
 anaago||
 -andoo||
-Angale|English (lang.)|ˈa§ŋ§ɡ§a§l§ɛ
+Angale|English (lang.)|ˈa,ŋ,ɡ,a,l,ɛ
 are||
 areen||
 areet||
@@ -74,13 +74,13 @@ baaraam||
 baat||
 baatukaay||
 baax||
-baaxoñ|crow|ˈb§aː§‹§x§ɔ§ɲ
+baaxoñ|crow|ˈb,aː,‹,x,ɔ,ɲ
 baay||
 bakkan||
 bal||
-𐵴𐵊𐵸𐵊|before|ˈb§a§l§a|bala|bala||bala
-banaana|banana|ˈb§a§n§aː§‹§n§a|
-banjooli|ostrich|ˈb§a§n§ɟ§ɔː§‹§l§i
+𐵴𐵊𐵸𐵊|before|ˈb,a,l,a|bala|bala||bala
+banaana|banana|ˈb,a,n,aː,‹,n,a|
+banjooli|ostrich|ˈb,a,n,ɟ,ɔː,‹,l,i
 baraada||
 basaŋ||
 bataaxal||
@@ -89,21 +89,21 @@ Bawol-Bawol||
 baykat||
 baŋ||
 beeñ||
-benn|one|b§ɛ§n§n
+benn|one|b,ɛ,n,n
 beteraaw||
 bey||
 beykat||
 biir||
 bikk||
-bind|to write|b§i§n§d
+bind|to write|b,i,n,d
 bindakat||
-bisaab|roselle|b§i§s§aː§‹§p
+bisaab|roselle|b,i,s,aː,‹,p
 bokk||
 boroom||
 boroom kër||
 boroom njabot||
 bukki||
-bulo|blue|ˈb§u§l§ɔ
+bulo|blue|ˈb,u,l,ɔ
 bunt||
 bunta||
 butit||
@@ -116,25 +116,25 @@ bés||
 béy||
 bëgg||
 bër||
-𐵴𐵍𐵊𐵽|eye|b§ə§‹§t|bët
-𐵴𐵍𐵊𐵽𐵪|to pierce|b§ə§‹§ttᵊ|bëtt
+𐵴𐵍𐵊𐵽|eye|b,ə,‹,t|bët
+𐵴𐵍𐵊𐵽𐵪|to pierce|b,ə,‹,ttᵊ|bëtt
 bëy||
 bëër||
 bëñ||
 caabi||
 caaf||
-caaxoñ|gills|ˈc§aː§‹§x§ɔ§ɲ
+caaxoñ|gills|ˈc,aː,‹,x,ɔ,ɲ
 Camara||
-𐵱𐵩𐵎𐵴|rice|cɛː§‹§b|ceeb|ceeb||ceeb
+𐵱𐵩𐵎𐵴|rice|cɛː,‹,b|ceeb|ceeb||ceeb
 ceebu jën||
-cere|couscous|c§ɛ§r§ɛ
+cere|couscous|c,ɛ,r,ɛ
 ci saa si||
 ciiñ||
 coblet||
 coggal||
 coll||
-𐵱𐵌𐶁𐵱𐵌|elbow|c§ɔ§n§c§ɔ|conco|conco||conco
-coof|boyfriend|c§ɔː§‹§f
+𐵱𐵌𐶁𐵱𐵌|elbow|c,ɔ,n,c,ɔ|conco|conco||conco
+coof|boyfriend|c,ɔː,‹,f
 coro||
 cosaan||
 cubalo||
@@ -143,21 +143,21 @@ cuub||
 cuuraay||
 daaw||
 dajale||
-𐵺𐵊𐵵𐵩|to meet|ˈd§a§ɟɛ|daje|daje||daje
-𐵺𐵊𐵻𐵰𐵊𐵾|tamarind|d§a§qaː§‹§r|daqaar|daqaar||daqaar
+𐵺𐵊𐵵𐵩|to meet|ˈd,a,ɟɛ|daje|daje||daje
+𐵺𐵊𐵻𐵰𐵊𐵾|tamarind|d,a,qaː,‹,r|daqaar|daqaar||daqaar
 dara||
 darkasa||
 dayoo||
 def||
 dekka||
-𐵺𐵍𐵲|to go|d§ɛ§m|dem|dem||dem
+𐵺𐵍𐵲|to go|d,ɛ,m|dem|dem||dem
 der||
 dereet||
 deret||
 Desàmbar||
-dex|river|d§ɛ§x
+dex|river|d,ɛ,x
 dibéer||
-dimbal|help|d§i§m§b§a§l
+dimbal|help|d,i,m,b,a,l
 dinaa||
 dinga||
 diw||
@@ -166,25 +166,25 @@ doom||
 dox||
 doxantoondoo||
 doxantu||
-𐵺𐵍𐵌𐵹𐵍𐵌𐵴|millet|d§u§‹§ɡ§u§‹§b|dugub|dugub||dugub
+𐵺𐵍𐵌𐵹𐵍𐵌𐵴|millet|d,u,‹,ɡ,u,‹,b|dugub|dugub||dugub
 dun||
 duñoor||
 dàngin||
-déedéet|no|d§eː§‹§d§eː§‹§t
+déedéet|no|d,eː,‹,d,eː,‹,t
 déem||
 dégg||
-𐵺𐵍𐵍𐵷𐵩𐵍𐶁|next year|d§e§‹§we§‹§n|déwén|déwén||déwén
-dëj|funeral|d§ə§c
+𐵺𐵍𐵍𐵷𐵩𐵍𐶁|next year|d,e,‹,we,‹,n|déwén|déwén||déwén
+dëj|funeral|d,ə,c
 dëjj||
 dëkk||
 dëkkandoo||
 dënn||
 dërëm||
 -eel||
-𐵰𐵍𐵩𐵶𐵊𐵎𐶁𐵶|petrol|›§ˈɛ§s§aː§‹§n§s|esaans|esaans||esaans
-Estooni|Estonia|ˈɛ§s§t§ɔː§‹§n§i
+𐵰𐵍𐵩𐵶𐵊𐵎𐶁𐵶|petrol|›,ˈɛ,s,aː,‹,n,s|esaans|esaans||esaans
+Estooni|Estonia|ˈɛ,s,t,ɔː,‹,n,i
 faar||
-𐶀𐵊𐵵𐵊𐵾|dawn|f§a§ɟ§a§r|fajar|fajar||fajar
+𐶀𐵊𐵵𐵊𐵾|dawn|f,a,ɟ,a,r|fajar|fajar||fajar
 fajkat||
 fanweer||
 Faraas||
@@ -192,7 +192,7 @@ fas||
 fat||
 fatt||
 Feberiye||
-ferñent|spark|f§ɛ§r§ɲ§ɛ§n§t
+ferñent|spark|f,ɛ,r,ɲ,ɛ,n,t
 fey||
 fii||
 firnde||
@@ -210,7 +210,7 @@ gaawu||
 gan||
 ganaar||
 garab||
-gaynde|lion|ɡ§a§j§›§ⁿd§e
+gaynde|lion|ɡ,a,j,›,ⁿd,e
 geeta||
 gerte||
 giléem||
@@ -218,10 +218,10 @@ ginaar||
 Girees||
 gis||
 gobar||
-𐵹𐵌𐵸𐵌|monkey|ˈɡ§ɔ§l§ɔ|golo|golo||golo
+𐵹𐵌𐵸𐵌|monkey|ˈɡ,ɔ,l,ɔ|golo|golo||golo
 goro||
-gox|continent|ɡ§ɔ§x
-goŋ|baboon|ɡ§ɔ§ŋ
+gox|continent|ɡ,ɔ,x
+goŋ|baboon|ɡ,ɔ,ŋ
 guddi||
 gunóor||
 guy||
@@ -232,18 +232,18 @@ géer||
 gémmiñ||
 génn||
 géwal||
-géwél|griot|ɡ§e§w§e§l
-géwël|griot|ɡ§e§w§ə§l
+géwél|griot|ɡ,e,w,e,l
+géwël|griot|ɡ,e,w,ə,l
 gëléem||
 gëm||
-gëmm|to close one's eyes|ɡ§ə§m§m
+gëmm|to close one's eyes|ɡ,ə,m,m
 gënn||
 gët||
-𐵹𐵌𐵍𐵎𐵾|man|ɡ§oː§‹§‹§r|góor|góor||góor
+𐵹𐵌𐵍𐵎𐵾|man|ɡ,oː,‹,‹,r|góor|góor||góor
 góór-góórlu||
 -in||
-𐵰𐵋𐶁𐵰𐵶𐵊𐵎𐵸𐵊𐵎𐵻𐵍𐵌|God willing|›§i§n§›§ʃ§aː§‹§l§aː§‹§x§u§‹|inchaalaaxu|inchaalaaxu||inchaalaaxu
-𐵰𐵋𐶁𐵺𐵋|to bring|›§i§n§d§i|indi|indi||indi
+𐵰𐵋𐶁𐵰𐵶𐵊𐵎𐵸𐵊𐵎𐵻𐵍𐵌|God willing|›,i,n,›,ʃ,aː,‹,l,aː,‹,x,u,‹|inchaalaaxu|inchaalaaxu||inchaalaaxu
+𐵰𐵋𐶁𐵺𐵋|to bring|›,i,n,d,i|indi|indi||indi
 jaam||
 jaan||
 jaay||
@@ -268,7 +268,7 @@ jukk||
 jumbax||
 jumtukaay||
 junjuŋ||
-junni|thousand|j§u§n§n§i
+junni|thousand|j,u,n,n,i
 junqóob||
 jur||
 juróom||
@@ -280,13 +280,13 @@ jàmm||
 jàng||
 jàngal||
 jàngale||
-jàngalekat|teacher|ɟ§aː§›§ᵑɡ§a§l§e§k§a§t
+jàngalekat|teacher|ɟ,aː,›,ᵑɡ,a,l,e,k,a,t
 jëgg||
-𐵵𐵍𐵳𐵩𐵪𐵾|husband|ɟ§ə§kkə§r|jëkkër
-jën|fish|ɟ§ə§n|
+𐵵𐵍𐵳𐵩𐵪𐵾|husband|ɟ,ə,kkə,r|jëkkër
+jën|fish|ɟ,ə,n|
 jënd||
 jóg||
-𐵵𐵌𐵍𐵹𐵍|to come from (place)|ɟ§o§‹§ɡ§ɛ|jóge|jóge||jóge
+𐵵𐵌𐵍𐵹𐵍|to come from (place)|ɟ,o,‹,ɡ,ɛ|jóge|jóge||jóge
 kaabaab||
 kaani||
 kaani-salaat||
@@ -313,12 +313,12 @@ kuddu||
 kund||
 kuti||
 kuuy||
-𐵳𐵊𐵎𐵺𐵪𐵍𐵌|word, phrase|k§aː§‹§dd§u§‹|kàddu|kàddu||kàddu
+𐵳𐵊𐵎𐵺𐵪𐵍𐵌|word, phrase|k,aː,‹,dd,u,‹|kàddu|kàddu||kàddu
 kànja||
 kànje||
-𐵳𐵩𐵍𐵷𐵩𐵍𐵸|gazelle|ke§‹§we§‹§l|kéwél|kéwél||kéwél
+𐵳𐵩𐵍𐵷𐵩𐵍𐵸|gazelle|ke,‹,we,‹,l|kéwél|kéwél||kéwél
 këf||
-kër|house|k§ə§r
+kër|house|k,ə,r
 la||
 lal||
 leen||
@@ -327,22 +327,22 @@ leraw||
 lex||
 liir||
 liit||
-𐵸𐵋𐵲𐵌𐵹𐵫|lemon|l§i§m§o§ŋ|limoŋ|limoŋ||limoŋ
+𐵸𐵋𐵲𐵌𐵹𐵫|lemon|l,i,m,o,ŋ|limoŋ|limoŋ||limoŋ
 Lislaam||
 lonkoo||
 lor||
 loxo||
-lujum|vegetable|l§u§ɟ§u§m
-làkk|speak incomprehensibly|l§aː§k§k
+lujum|vegetable|l,u,ɟ,u,m
+làkk|speak incomprehensibly|l,aː,k,k
 làmb||
 làmmiñ||
-𐵸𐵩𐵍𐵎𐵴𐵍𐵍𐵎𐵾|hippopotamus|l§eː§‹§b§eː§‹§‹§r|léebéer|léebéer||léebéer
+𐵸𐵩𐵍𐵎𐵴𐵍𐵍𐵎𐵾|hippopotamus|l,eː,‹,b,eː,‹,‹,r|léebéer|léebéer||léebéer
 léegi||
 lëg||
-lóriye|laurel|l§o§r§i§j§e
+lóriye|laurel|l,o,r,i,j,e
 ma||
 maalo||
-𐵲𐵊𐵎𐵲|grandparent|m§aː§‹§m|maam|maam||maam
+𐵲𐵊𐵎𐵲|grandparent|m,aː,‹,m|maam|maam||maam
 maangi||
 maangiy||
 mag||
@@ -352,7 +352,7 @@ mar||
 Mars||
 mbaa||
 mbaal||
-𐵴𐵩𐵊𐵎𐵲|donkey, pig|ᵐb§aː§‹§m|mbaam
+𐵴𐵩𐵊𐵎𐵲|donkey, pig|ᵐb,aː,‹,m|mbaam
 mbaam-sëf||
 mbaam-xuux||
 mbaam-àll||
@@ -373,10 +373,10 @@ mburu||
 mbédd||
 mbër||
 Me||
-𐵲𐵍𐵎𐵷|milk|m§ɛː§‹§w|meew|meew||meew
+𐵲𐵍𐵎𐵷|milk|m,ɛː,‹,w|meew|meew||meew
 melax||
-metit|pain|ˈm§ɛ§t§i§t
-𐵲𐵩𐵿𐵩𐵪𐵎𐶀|fruit|mɛ§ññɛː§‹§f|meññeef
+metit|pain|ˈm,ɛ,t,i,t
+𐵲𐵩𐵿𐵩𐵪𐵎𐶀|fruit|mɛ,ññɛː,‹,f|meññeef
 miimara||
 minise||
 moom||
@@ -385,36 +385,36 @@ mungiy||
 muus||
 muxat||
 màndarin||
-𐵲𐵋𐵎𐵹𐵩𐵌|mango|m§aː§‹§ᵑɡ§ɔ|màngo
+𐵲𐵋𐵎𐵹𐵩𐵌|mango|m,aː,‹,ᵑɡ,ɔ|màngo
 móol||
 naa||
 naag||
 naaj||
 naaje||
 naajo||
-𐶁𐵊𐵎𐶁|to drink|n§aː§‹§n|naan|naan||naan
+𐶁𐵊𐵎𐶁|to drink|n,aː,‹,n|naan|naan||naan
 naana||
 naanaa||
 naat||
 nag||
-naka|how are?|ˈn§a§k§a
+naka|how are?|ˈn,a,k,a
 nan||
 nar||
 nawe||
 nawet||
 ndab||
-𐵺𐵩𐵋𐵲|victory|ⁿd§a§m|ndam
+𐵺𐵩𐵋𐵲|victory|ⁿd,a,m|ndam
 Ndar-Ndar||
 ndaw||
 ndax||
 ndaxte||
 ndey||
 ndobin||
-ndox|water|›§ⁿd§ɔ§x
+ndox|water|›,ⁿd,ɔ,x
 ndës||
 nekk||
 nelaw||
-𐵹𐵩𐵍𐵸𐵊𐵷|wind|ᵑɡ§ɛ§l§a§w|ngelaw|ngelaw||ngelaw
+𐵹𐵩𐵍𐵸𐵊𐵷|wind|ᵑɡ,ɛ,l,a,w|ngelaw|ngelaw||ngelaw
 ngoon||
 ngor||
 nguur||
@@ -422,7 +422,7 @@ ngénté||
 nijjaay||
 nit||
 njabot||
-𐵵𐵩𐵊𐵲𐵊𐵸𐵊|giraffe|ᶮj§a§m§a§l§a|njamala|njamala||njamala
+𐵵𐵩𐵊𐵲𐵊𐵸𐵊|giraffe|ᶮj,a,m,a,l,a|njamala|njamala||njamala
 njaxat||
 njiit||
 njomboor||
@@ -430,7 +430,7 @@ njong||
 njugub||
 nob||
 nopp||
-noppa|ear|ˈn§ɔ§p§p§a
+noppa|ear|ˈn,ɔ,p,p,a
 Nowàmbar||
 nu||
 nun||
@@ -440,17 +440,17 @@ nuyu||
 nëb||
 nëbb||
 Oktoobar||
-𐵰𐵌𐵍𐵎𐵲|knee|›§oː§‹§‹§m|óom|óom||óom
-𐵰𐵌𐵽𐵌|car, vehicle|›§ɔ§t§ɔ|oto|oto||oto
+𐵰𐵌𐵍𐵎𐵲|knee|›,oː,‹,‹,m|óom|óom||óom
+𐵰𐵌𐵽𐵌|car, vehicle|›,ɔ,t,ɔ|oto|oto||oto
 paaka||
 pampëlëmuus||
 papa||
 Pari||
 pataas||
 peel||
-𐶂𐵩𐶁𐵳𐵍𐵌|west|pɛ§n§k§u§‹|penku
+𐶂𐵩𐶁𐵳𐵍𐵌|west|pɛ,n,k,u,‹|penku
 pexe||
-𐶂𐵋𐵱𐵪|bird|p§i§cc|picc|picc||picc
+𐶂𐵋𐵱𐵪|bird|p,i,cc|picc|picc||picc
 pombiteer||
 pullóox||
 pàppa||
@@ -461,7 +461,7 @@ pëdd||
 pënd||
 përu||
 radi||
-𐵾𐵊𐶀𐵩𐵽|pretty|ˈr§a§fɛ§t|rafet|rafet||rafet
+𐵾𐵊𐶀𐵩𐵽|pretty|ˈr,a,fɛ,t|rafet|rafet||rafet
 rakk||
 ren||
 res||
@@ -480,7 +480,7 @@ sabar||
 safara||
 saku||
 salaan||
-salaat|salad|s§a§l§aː§‹§t
+salaat|salad|s,a,l,aː,‹,t
 samp||
 Samwiye||
 sanaanaa||
@@ -490,32 +490,32 @@ sanxal||
 sawat||
 segg||
 seku||
-Senegaal|Senegal|s§ɛ§n§ɛ§g§aː§‹§l
+Senegaal|Senegal|s,ɛ,n,ɛ,g,aː,‹,l
 seytaane||
 Siin-Siin||
 siiru||
-𐵶𐵋𐵎𐵶|chair|s§iː§‹§s|siis|siis||siis
+𐵶𐵋𐵎𐵶|chair|s,iː,‹,s|siis|siis||siis
 𐵶𐵋𐵳𐵩𐵪𐵽|billy goat|sikkɛt|sikket|sikket||sikket
-𐵶𐵋𐵳𐵪𐵋𐵲|beard, chin|s§i§kk§i§m
+𐵶𐵋𐵳𐵪𐵋𐵲|beard, chin|s,i,kk,i,m
 soble||
-𐵶𐵌𐵎𐶁|yellow|s§ɔː§‹§n|soon|soon||soon
+𐵶𐵌𐵎𐶁|yellow|s,ɔː,‹,n|soon|soon||soon
 soow||
 soppali||
 soppi||
-𐵶𐵌𐵾𐵊𐵎𐶁𐵶|orange|s§ɔ§r§aː§‹§n§s|soraans|soraans||soraans
+𐵶𐵌𐵾𐵊𐵎𐶁𐵶|orange|s,ɔ,r,aː,‹,n,s|soraans|soraans||soraans
 suba||
-𐵶𐵍𐵌𐶀𐵍𐵊𐵸𐵍𐵊𐵎𐵾|cauliflower|s§u§‹§f§ə§‹§l§əː§‹§‹§r|sufëlëer|sufëlëer||sufëlëer
+𐵶𐵍𐵌𐶀𐵍𐵊𐵸𐵍𐵊𐵎𐵾|cauliflower|s,u,‹,f,ə,‹,l,əː,‹,‹,r|sufëlëer|sufëlëer||sufëlëer
 sufólóor||
 sujeer||
 Sulye||
 suppome||
 suq||
-𐵶𐵍𐵌𐵎𐶀|sand|s§uː§‹§‹§f|suuf|suuf||suuf
+𐵶𐵍𐵌𐵎𐶀|sand|s,uː,‹,‹,f|suuf|suuf||suuf
 suuna||
 suur||
 Suweŋ||
-suññéel|hedgehog|s§u§ɲ§ɲ§eː§‹§l
-sàll|stallion|s§aː§l§l
+suññéel|hedgehog|s,u,ɲ,ɲ,eː,‹,l
+sàll|stallion|s,aː,l,l
 Sàttumbar||
 séex||
 sëriñ||
@@ -526,15 +526,15 @@ tagg||
 talaata||
 tali||
 tama||
-𐵽𐵊𐵲𐵊𐵎𐵽𐵩|tomato|t§a§m§aː§‹§tɛ|tamaate|tamaate||tamaate
+𐵽𐵊𐵲𐵊𐵎𐵽𐵩|tomato|t,a,m,aː,‹,tɛ|tamaate|tamaate||tamaate
 tan||
 taw||
-tayóor|tailor|t§a§j§oː§‹§r
+tayóor|tailor|t,a,j,oː,‹,r
 tef||
 tene||
 teraanga||
 teral||
-tiga-dege|peanut butter|t§i§g§a§ §d§ɛ§g§ɛ
+tiga-dege|peanut butter|t,i,g,a, ,d,ɛ,g,ɛ
 tiir||
 tijji||
 tilim||
@@ -562,36 +562,36 @@ tànk||
 tànta||
 téeméer||
 ténq||
-téére|book|t§eː§‹§r§ɛ
+téére|book|t,eː,‹,r,ɛ
 tëflit||
 tëgg||
 tëggkat||
 tëj||
 tëng||
-𐵰𐵍𐵌𐶂𐵪𐵍𐵌𐵳𐵊𐵎𐵼|fan|›§u§‹§pp§u§‹§k§aː§‹§j|uppukaay|uppukaay||uppukaay
+𐵰𐵍𐵌𐶂𐵪𐵍𐵌𐵳𐵊𐵎𐵼|fan|›,u,‹,pp,u,‹,k,aː,‹,j|uppukaay|uppukaay||uppukaay
 Ut||
 waa-jur||
-waajur|parent|w§aː§‹§ɟ§u§r
+waajur|parent|w,aː,‹,ɟ,u,r
 waakër||
 Waalo-Waalo||
-𐵷𐵊𐵎𐵷|yes|w§aː§‹§w|waaw|waaw||waaw
+𐵷𐵊𐵎𐵷|yes|w,aː,‹,w|waaw|waaw||waaw
 waawaaw||
 waañ||
 wajan||
 waliis||
-warga|tea|w§a§r§g§a
+warga|tea|w,a,r,g,a
 warugar||
 waxtaan||
 waxtu||
 weccit||
 ween||
 weer||
-weex|white|w§ɛː§‹§x
-wert|green|w§ɛ§r§t
+weex|white|w,ɛː,‹,x
+wert|green|w,ɛ,r,t
 wet||
 weñ||
-wisit|medical appointment|w§i§s§i§t
-Wolof|Wolof|w§ɔ§l§ɔ§f
+wisit|medical appointment|w,i,s,i,t
+Wolof|Wolof|w,ɔ,l,ɔ,f
 won||
 wonn||
 wulu||
@@ -609,32 +609,32 @@ xaalis||
 xaalu tubaab||
 xabaár||
 xaftaan||
-xaj|dog|x§a§ɟ
+xaj|dog|x,a,ɟ
 xalaat||
 xalam||
-xale|child|ˈx§a§l§ɛ
+xale|child|ˈx,a,l,ɛ
 xam-xam||
 xanaa||
 xant||
 xar||
 xare||
-xarit|friend|ˈx§a§r§i§t
+xarit|friend|ˈx,a,r,i,t
 xaru||
-xaxaar|ritual insult poem|ˈx§a§x§aː§‹§r
+xaxaar|ritual insult poem|ˈx,a,x,aː,‹,r
 xeer||
 xeet||
 xel||
 xet||
 xew||
-làmbi|arena|l§aː§›§ᵐb§i
-able|to lend|ʔa§b§l§ɛ
-xonq|red|x§ɔ§n§q
-yaax|kind of fish|j§aː§‹§x
-yoo|mosquito|j§ɔː§‹
-ñuul|black|ɲ§uː§‹§l
-ñuul kukk|black as night|ɲ§uː§‹§l§ §k§u§k§k
-𐵿𐵍𐵌𐵎𐵸𐵊𐵎𐵼|blackness|ˈɲ§uː§‹§‹§l§aː§‹§j|ñuulaay|ñuulaay||ñuulaay
-𐵹𐵫𐵊𐵶|measles|ŋ§a§s|ŋas|ŋas||ŋas
+làmbi|arena|l,aː,›,ᵐb,i
+able|to lend|ʔa,b,l,ɛ
+xonq|red|x,ɔ,n,q
+yaax|kind of fish|j,aː,‹,x
+yoo|mosquito|j,ɔː,‹
+ñuul|black|ɲ,uː,‹,l
+ñuul kukk|black as night|ɲ,uː,‹,l, ,k,u,k,k
+𐵿𐵍𐵌𐵎𐵸𐵊𐵎𐵼|blackness|ˈɲ,uː,‹,‹,l,aː,‹,j|ñuulaay|ñuulaay||ñuulaay
+𐵹𐵫𐵊𐵶|measles|ŋ,a,s|ŋas|ŋas||ŋas
 xibaar||
 xiif||
 xiimkat||
@@ -643,21 +643,21 @@ xob||
 xodd||
 xojox||
 xol||
-xomaag|rust|x§ɔ§m§aː§‹§k
+xomaag|rust|x,ɔ,m,aː,‹,k
 xool||
-𐵻𐵌𐵎𐵻|seed|x§ɔː§‹§x|xoox|xoox||xoox
+𐵻𐵌𐵎𐵻|seed|x,ɔː,‹,x|xoox|xoox||xoox
 xor||
 xorom||
 xuloo||
 xutba||
 xéewal||
 xët||
-𐵻𐵍𐵊𐵽𐵍𐵊𐵾|lung|x§ə§‹§t§ə§‹§r|xëtër|xëtër||xëtër
+𐵻𐵍𐵊𐵽𐵍𐵊𐵾|lung|x,ə,‹,t,ə,‹,r|xëtër|xëtër||xëtër
 yaakaar||
 yaangi||
 yaangiy||
 yaasa||
-𐵼𐵊𐵎𐵼|mother|j§aː§‹§j|yaay|yaay||yaay
+𐵼𐵊𐵎𐵼|mother|j,aː,‹,j|yaay|yaay||yaay
 yaram||
 yat||
 yax||
@@ -670,7 +670,7 @@ yoon||
 yoor-yoor||
 yow||
 yumpaañ||
-yumpit|2nd-hand clothing|j§u§m§p§i§t
+yumpit|2nd-hand clothing|j,u,m,p,i,t
 Yàlla||
 yàmbaa||
 yàpp||
@@ -706,25 +706,25 @@ yóor||
 ñungiy||
 ñàmbi||
 ñëw||
-óom|knee|oː§‹§m
-𐵼𐵍𐵌𐵳𐵪𐵋𐵯|to jog|j§u§‹§kk§i§jukki|yukki-yukki
+óom|knee|oː,‹,m
+𐵼𐵍𐵌𐵳𐵪𐵋𐵯|to jog|j,u,‹,kk,i,jukki|yukki-yukki
 
 
 @ Wollof - English Dictionary https://www.wolofonline.com/docs/w_d.pdf
-𐵰𐵍𐵊𐵸𐵪𐵍𐵊𐵳|tomorrow|›§ə§‹§‹§ll§ə§‹§k|ëllëk|ëllëk||
-𐵰𐵍𐵩𐵎𐵽𐵊|to carve|›§ɛː§‹§t§a|eeta|eeta||
-𐵰𐵌𐵎𐵳𐵊|to scratch|›§ɔː§‹§k§a|ooka|ooka||
-𐵰𐵍𐵩𐵍𐵎𐶀𐵊𐵾|pagan|›§eː§‹§‹§f§a§r|ééfar|ééfar||
-𐵰𐵌𐵍𐶂𐵪𐵊|too much|›§o§‹§‹§pp§a|óppa|óppa||
-𐵰𐵋𐵎𐵾|to cover|›§iː§‹§r|iir|iir||
+𐵰𐵍𐵊𐵸𐵪𐵍𐵊𐵳|tomorrow|›,ə,‹,‹,ll,ə,‹,k|ëllëk|ëllëk||
+𐵰𐵍𐵩𐵎𐵽𐵊|to carve|›,ɛː,‹,t,a|eeta|eeta||
+𐵰𐵌𐵎𐵳𐵊|to scratch|›,ɔː,‹,k,a|ooka|ooka||
+𐵰𐵍𐵩𐵍𐵎𐶀𐵊𐵾|pagan|›,eː,‹,‹,f,a,r|ééfar|ééfar||
+𐵰𐵌𐵍𐶂𐵪𐵊|too much|›,o,‹,‹,pp,a|óppa|óppa||
+𐵰𐵋𐵎𐵾|to cover|›,iː,‹,r|iir|iir||
 𐵰𐵍𐵌𐵎𐵺𐵍|cobbler|uːdɛ|uude|uude
 
 
 
 @ other 
 
-𐵗𐵌𐵸𐵌𐶀|Wolof|w§ɔ§l§ɔ§f|wolof|wolof
-𐵐𐵌𐵶𐵽𐵩𐵾𐵩𐵸𐵋𐵼𐵊|Australia|›§ɔ§s§tɛ§rɛ§l§i§j§a
+𐵗𐵌𐵸𐵌𐶀|Wolof|w,ɔ,l,ɔ,f|wolof|wolof
+𐵐𐵌𐵶𐵽𐵩𐵾𐵩𐵸𐵋𐵼𐵊|Australia|›,ɔ,s,tɛ,rɛ,l,i,j,a
 
 
 

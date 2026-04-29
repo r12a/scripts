@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -35,7 +35,7 @@ autoExpandExamples.ka = `
 -ვით||
 -ზე||
 -თან ერთად||
--თან|with|-§tʰ§ɑ§n|-tan
+-თან|with|-,tʰ,ɑ,n|-tan
 -თვის||
 -იან-||
 -იერი||
@@ -53,7 +53,7 @@ autoExpandExamples.ka = `
 -ფერი||
 -ღა||
 -შვილი||
--ში|at, in|-§ʃ§i|-ši
+-ში|at, in|-,ʃ,i|-ši
 -ხანა||
 ააბარგებს||
 ააგდებს||
@@ -169,7 +169,7 @@ autoExpandExamples.ka = `
 ადათი||
 ადამაშვილი||
 ადამი||
-ადამიანი|man (human being)|ɑ§d§ɑ§m§i§ɑ§n§i|adamiani
+ადამიანი|man (human being)|ɑ,d,ɑ,m,i,ɑ,n,i|adamiani
 ადამიანურად||
 ადამიანური||
 ადამის ვაშლი||
@@ -823,7 +823,7 @@ autoExpandExamples.ka = `
 აპრიორი||
 აპრიორული||
 არ ვიცი||
-არ|not|ɑ§r|ar
+არ|not|ɑ,r|ar
 არა უშავს||
 არა-||
 არა||
@@ -1254,7 +1254,7 @@ autoExpandExamples.ka = `
 აფხაზეთი||
 აფხაზი||
 აფხაზური||
-აქ|here|ɑ§kʰ|ak
+აქ|here|ɑ,kʰ|ak
 აქამდე||
 აქანა||
 აქანდაზი||
@@ -1405,7 +1405,7 @@ autoExpandExamples.ka = `
 ახალი ზელანდია||
 ახალი სამხრეთი უელსი||
 ახალი წელი||
-ახალი|new|ɑ§x§ɑ§l§i|axali
+ახალი|new|ɑ,x,ɑ,l,i|axali
 ახალმოდური||
 ახალსოფელი||
 ახალქალაქი||
@@ -1428,7 +1428,7 @@ autoExpandExamples.ka = `
 ახლანდელი||
 ახლახან||
 ახლებურად||
-ახლო|near|ɑ§x§l§ɔ|axlo
+ახლო|near|ɑ,x,l,ɔ|axlo
 ახლობელი||
 ახლომდებარე||
 ახლომხედველი||
@@ -1472,7 +1472,7 @@ autoExpandExamples.ka = `
 ბადრიჯანი||
 ბადრო||
 ბადურაშვილი||
-ბავშვი|child|b§ɑ§v§ʃ§v§i|bavšvi
+ბავშვი|child|b,ɑ,v,ʃ,v,i|bavšvi
 ბავშვობა||
 ბავშვურად||
 ბავშვური||
@@ -1505,7 +1505,7 @@ autoExpandExamples.ka = `
 ბალადა||
 ბალანსი||
 ბალასტი||
-ბალახი|grass|b§ɑ§l§ɑ§x§i|balaxi
+ბალახი|grass|b,ɑ,l,ɑ,x,i|balaxi
 ბალახიანი||
 ბალბა||
 ბალდახინი||
@@ -1591,7 +1591,7 @@ autoExpandExamples.ka = `
 ბასილისკო||
 ბასკი||
 ბასრად||
-ბასრი|sharp (as a knife)|b§ɑ§s§r§i|basri
+ბასრი|sharp (as a knife)|b,ɑ,s,r,i|basri
 ბასტიონი||
 ბატალიონი||
 ბატარეა||
@@ -1626,7 +1626,7 @@ autoExpandExamples.ka = `
 ბაჰამის კუნძულები||
 ბაჰარი||
 ბაჰრეინი||
-ბგერა|sound|b§g§e§r§a|bgɛra
+ბგერა|sound|b,g,e,r,a|bgɛra
 ბგერითი||
 ბე||
 ბებერა||
@@ -1650,7 +1650,7 @@ autoExpandExamples.ka = `
 ბედობა||
 ბედშავი||
 ბევრეთი||
-ბევრი|many|b§ɛ§v§r§i|bevri
+ბევრი|many|b,ɛ,v,r,i|bevri
 ბეზმენი||
 ბეირუთი||
 ბეისბოლი||
@@ -1921,7 +1921,7 @@ autoExpandExamples.ka = `
 ბრძენი||
 ბრძნულად||
 ბრძნული||
-ბრძოლა|battle|b§r§d͡z§o§l§a|brʒola
+ბრძოლა|battle|b,r,d͡z,o,l,a|brʒola
 ბრწყინავს||
 ბრწყინვალე||
 ბრწყინვალება||
@@ -2064,7 +2064,7 @@ autoExpandExamples.ka = `
 გადაადგილების თავისუფლება||
 გადაარქმევს||
 გადააღწევს||
-გადაგდება|to throw|ɡ§a§d§a§ɡ§d§e§b§a|gadagdeba
+გადაგდება|to throw|ɡ,a,d,a,ɡ,d,e,b,a|gadagdeba
 გადადის||
 გადათარგმნის||
 გადაიხდის||
@@ -2104,7 +2104,7 @@ autoExpandExamples.ka = `
 გადახოტრილი||
 გადახრილად||
 გადახრილი||
-გადიდება|to swell|ɡ§ɑ§d§i§d§ɛ§b§ɑ|gadideba
+გადიდება|to swell|ɡ,ɑ,d,i,d,ɛ,b,ɑ|gadideba
 გადის||
 გადმო-||
 გადმოდის||
@@ -2300,7 +2300,7 @@ autoExpandExamples.ka = `
 განზრახ||
 განზრახულად||
 განთიადი||
-განიერი|wide|ɡ§ɑ§n§i§e§r§i|ganieri|pʰɑrtʰɔ
+განიერი|wide|ɡ,ɑ,n,i,e,r,i|ganieri|pʰɑrtʰɔ
 განივ||
 განივად||
 განივი||
@@ -2376,7 +2376,7 @@ autoExpandExamples.ka = `
 გარეუბანი||
 გარეშე||
 გართულებული||
-გარიჟრაჟი|sunrise|ɡ§a§r§i§ʒ§r§a§ʒ§i|garižraži
+გარიჟრაჟი|sunrise|ɡ,a,r,i,ʒ,r,a,ʒ,i|garižraži
 გარკვევით||
 გარკვეული||
 გარნიზონი||
@@ -2427,14 +2427,14 @@ autoExpandExamples.ka = `
 გაფიცვა||
 გაფრენა||
 გაფუფუნებული||
-გაფუჭებული|rotten|ɡ§a§pʰ§u§t͡ʃʼ§e§b§u§l§i|gapuč̣ebuli
+გაფუჭებული|rotten|ɡ,a,pʰ,u,t͡ʃʼ,e,b,u,l,i|gapuč̣ebuli
 გაღება||
 გაღვიძება||
 გაღიზიანება||
 გაღიზიანებულად||
 გაღიმებული||
 გაყალბება||
-გაყინვა|to freeze|ɡ§ɑ§qʼ§i§n§v§ɑ|gaq̇inva
+გაყინვა|to freeze|ɡ,ɑ,qʼ,i,n,v,ɑ|gaq̇inva
 გაყოფადი||
 გაშეშებულად||
 გაშეშებული||
@@ -2527,7 +2527,7 @@ autoExpandExamples.ka = `
 გვალვიანობა||
 გვამი||
 გვანცა||
-გვარი|name|ɡ§v§ɑ§r§i|gvari
+გვარი|name|ɡ,v,ɑ,r,i|gvari
 გვარლი||
 გვარს არ დავასახელებ||
 გვარჯილა||
@@ -2535,7 +2535,7 @@ autoExpandExamples.ka = `
 გველგესლა||
 გველეშაპი||
 გველთევზა||
-გველი|snake|ɡ§v§ɛ§l§i|gveli
+გველი|snake|ɡ,v,ɛ,l,i|gveli
 გველის წიწილი||
 გველური||
 გვერდზე||
@@ -2554,7 +2554,7 @@ autoExpandExamples.ka = `
 გვირილა||
 გვის||
 გვრიტი||
-გზა|road|ɡ§z§ɑ|gza
+გზა|road|ɡ,z,ɑ|gza
 გზად||
 გზაზე||
 გზამკვლევი||
@@ -2606,7 +2606,7 @@ autoExpandExamples.ka = `
 გლიცერინი||
 გლობალური||
 გლუვად||
-გლუვი|smooth|ɡ§l§u§v§i|gluvi
+გლუვი|smooth|ɡ,l,u,v,i|gluvi
 გლუვლულიანი თოფი||
 გლუკოზა||
 გმადლობ||
@@ -2732,7 +2732,7 @@ autoExpandExamples.ka = `
 გრუხუნით||
 გრძედი||
 გრძელვადიანი||
-გრძელი|long|ɡ§r§d͡z§e§l§i|grʒeli
+გრძელი|long|ɡ,r,d͡z,e,l,i|grʒeli
 გრძელფეხა||
 გრძელცხვირა||
 გრძივად||
@@ -2779,7 +2779,7 @@ autoExpandExamples.ka = `
 გულდასაწყვეტად||
 გულდენი||
 გულთბილი||
-გული|heart|ɡ§u§l§i|guli
+გული|heart|ɡ,u,l,i|guli
 გულიაში||
 გულითადად||
 გულითადი||
@@ -2842,7 +2842,7 @@ autoExpandExamples.ka = `
 გუშინწინისწინ||
 და ა.შ.||
 და-||
-და|and|d§ɑ|da
+და|and|d,ɑ|da
 დააბნელებს||
 დააბრუნებს||
 დააგრძელებს||
@@ -3004,7 +3004,7 @@ autoExpandExamples.ka = `
 დამოუკიდებელ სახელმწიფოთა თანამეგობრობა||
 დამოუკიდებლად||
 დამოუკიდებლობა||
-დამპალი|rotten|d§ɑ§m§pʼ§ɑ§l§i|damṗali
+დამპალი|rotten|d,ɑ,m,pʼ,ɑ,l,i|damṗali
 დამპყრობელი||
 დამპყრობლური||
 დამრიგებელი||
@@ -3270,7 +3270,7 @@ autoExpandExamples.ka = `
 დეგენერატი||
 დეგრადაცია||
 დეგუსტატორი||
-დედა|mother|d§e§d§ɑ|deda
+დედა|mother|d,e,d,ɑ|deda
 დედააზრი||
 დედაარსი||
 დედაბოძი||
@@ -3420,7 +3420,7 @@ autoExpandExamples.ka = `
 დიდი მადლობა||
 დიდი მარხვა||
 დიდი სომხეთი||
-დიდი|big|d§i§d§i|didi
+დიდი|big|d,i,d,i|didi
 დიდმოწამე||
 დიდოსტატი||
 დიდოური||
@@ -3621,7 +3621,7 @@ autoExpandExamples.ka = `
 დუჩე||
 დღგ||
 დღე-ღამე||
-დღე|day|d§ɣ§e|dɣe
+დღე|day|d,ɣ,e|dɣe
 დღევანდელი||
 დღემდე||
 დღეობა||
@@ -3778,7 +3778,7 @@ autoExpandExamples.ka = `
 ემპირიულად||
 ემპირიული||
 ემულსია||
-ენა|tongue (organ)|ɛ§n§ɑ|ena
+ენა|tongue (organ)|ɛ,n,ɑ|ena
 ენაბლუ||
 ენაბლუობა||
 ენაგეთი||
@@ -3857,7 +3857,7 @@ autoExpandExamples.ka = `
 ერთთავად||
 ერთი ადგილი||
 ერთი ამბავი||
-ერთი|one|e§r§tʰ§i|erti
+ერთი|one|e,r,tʰ,i|erti
 ერთიანი||
 ერთიანობა||
 ერთმანეთი||
@@ -3899,7 +3899,7 @@ autoExpandExamples.ka = `
 ერქვანი||
 ერცჰერცოგი||
 ერწო-თიანეთი||
-ეს|this|ɛ§s|es
+ეს|this|ɛ,s|es
 ესე იგი||
 ესე||
 ესეთი||
@@ -4055,7 +4055,7 @@ autoExpandExamples.ka = `
 ვარია||
 ვარიანტი||
 ვარიაცია||
-ვარსკვლავი|star|v§ɑ§r§s§kʼ§v§l§ɑ§v§i|varsḳvlavi
+ვარსკვლავი|star|v,ɑ,r,s,kʼ,v,l,ɑ,v,i|varsḳvlavi
 ვარსკვლავური||
 ვარშავა||
 ვარშანიძე||
@@ -4173,7 +4173,7 @@ autoExpandExamples.ka = `
 ვილა||
 ვილნიუსი||
 ვიმპელი||
-ვინ|who (interrog.)|v§i§n|vin
+ვინ|who (interrog.)|v,i,n|vin
 ვინეგრეტი||
 ვინიეტი||
 ვინმე||
@@ -4207,7 +4207,7 @@ autoExpandExamples.ka = `
 ვიქტორია||
 ვიღაც||
 ვიჩინა||
-ვიწრო|narrow|v§i§t͡sʼ§r§o|vic̣ro
+ვიწრო|narrow|v,i,t͡sʼ,r,o|vic̣ro
 ვიწროდ||
 ვნახოთ||
 ვნება||
@@ -4405,15 +4405,15 @@ autoExpandExamples.ka = `
 ზურაბი||
 ზურაბიშვილი||
 ზურგზე||
-ზურგი|back|z§u§r§ɡ§i|zurgi
+ზურგი|back|z,u,r,ɡ,i|zurgi
 ზურგჩანთა||
 ზურმუხტი||
 ზურნა||
 ზუსტად||
-ზუსტი|correct|z§u§s§tʼ§i|zusṭi
+ზუსტი|correct|z,u,s,tʼ,i|zusṭi
 ზღაპარი||
 ზღარბი||
-ზღვა|sea|z§ɣ§v§ɑ|zɣva
+ზღვა|sea|z,ɣ,v,ɑ|zɣva
 ზღვარი||
 ზღვაში წვეთი||
 ზღვის გოჭი||
@@ -4455,7 +4455,7 @@ autoExpandExamples.ka = `
 თავდებობა||
 თავზარი||
 თავთავი||
-თავი|head|tʰ§ɑ§v§i|tavi
+თავი|head|tʰ,ɑ,v,i|tavi
 თავიდან||
 თავით||
 თავის ქალა||
@@ -4597,7 +4597,7 @@ autoExpandExamples.ka = `
 თბ.||
 თბილა||
 თბილად||
-თბილი|warm|tʰ§b§i§l§i|tbili
+თბილი|warm|tʰ,b,i,l,i|tbili
 თბილისი||
 თეატრალი||
 თეატრალურად||
@@ -4607,13 +4607,13 @@ autoExpandExamples.ka = `
 თებო||
 თევდორე||
 თევზაობა||
-თევზი|fish|tʰ§ɛ§v§z§i|tevzi
+თევზი|fish|tʰ,ɛ,v,z,i|tevzi
 თეზამი||
 თეზისი||
 თეთრეული||
 თეთრი რასა||
 თეთრი ჯუჯა||
-თეთრი|white|tʰ§ɛ§tʰ§r§i|tetri
+თეთრი|white|tʰ,ɛ,tʰ,r,i|tetri
 თეთრყვავილა||
 თეიზმი||
 თეირანი||
@@ -4658,7 +4658,7 @@ autoExpandExamples.ka = `
 თესავს||
 თესალონიკი||
 თესლდანთხევა||
-თესლი|seed|tʰ§ɛ§s§l§i|tesli
+თესლი|seed|tʰ,ɛ,s,l,i|tesli
 თეფში||
 თექვსმეტი||
 თეძო||
@@ -4666,7 +4666,7 @@ autoExpandExamples.ka = `
 თვალახვეული||
 თვალთახედვა||
 თვალთმაქცობა||
-თვალი|eye|tʰ§v§ɑ§l§i|tvali
+თვალი|eye|tʰ,v,ɑ,l,i|tvali
 თვალნათლივ||
 თვალწარმტაცი||
 თვარა||
@@ -4713,11 +4713,11 @@ autoExpandExamples.ka = `
 თიხა||
 თიხოვანი||
 თლის||
-თმა|hair|tʰ§m§ɑ|tma
+თმა|hair|tʰ,m,ɑ|tma
 თმიანი||
 თმიანობა||
 თმის საშრობი||
-თოვლი|snow|tʰ§ɔ§v§l§i|tovli
+თოვლი|snow|tʰ,ɔ,v,l,i|tovli
 თოვლიანი||
 თოვლის ბაბუა||
 თოვლის ლეოპარდი||
@@ -4725,7 +4725,7 @@ autoExpandExamples.ka = `
 თოვლჭყაპი||
 თოთხმეტი||
 თოიჩი||
-თოკი|rope|tʰ§ɔ§kʼ§i|toḳi
+თოკი|rope|tʰ,ɔ,kʼ,i|toḳi
 თოლია||
 თონე||
 თორემ||
@@ -4742,7 +4742,7 @@ autoExpandExamples.ka = `
 თოხლო||
 თოჯინა||
 თრგუნავს||
-თრევა|to pull|tʰ§r§ɛ§v§ɑ|treva
+თრევა|to pull|tʰ,r,ɛ,v,ɑ|treva
 თრთვილი||
 თრთოლა||
 თრიალეთი||
@@ -4750,7 +4750,7 @@ autoExpandExamples.ka = `
 თრომბი||
 თსუ||
 თუ შეიძლება||
-თუ|if|tʰ§u|tu
+თუ|if|tʰ,u|tu
 თუთა||
 თუთია||
 თუთიყუში||
@@ -4772,15 +4772,15 @@ autoExpandExamples.ka = `
 თუშეთი||
 თუშური||
 თუშფალანგი||
-თქვენ|you (plural)|tʰ§kʰ§v§ɛ§n|tkven
+თქვენ|you (plural)|tʰ,kʰ,v,ɛ,n|tkven
 თქვენთვის||
 თქვენი||
-თქმა|to say|tʰ§kʰ§m§ɑ|tkma
+თქმა|to say|tʰ,kʰ,m,ɑ|tkma
 თქმით||
 თქო||
 თხა||
 თხევადი||
-თხელი|thin|tʰ§x§ɛ§l§i|txeli
+თხელი|thin|tʰ,x,ɛ,l,i|txeli
 თხელკანიანი||
 თხემი||
 თხზავს||
@@ -5093,7 +5093,7 @@ autoExpandExamples.ka = `
 ირონია||
 ირონიულად||
 ირონიული||
-ის|he, that|i§s|is
+ის|he, that|i,s|is
 ისააკი||
 ისანი||
 ისარი||
@@ -5101,7 +5101,7 @@ autoExpandExamples.ka = `
 ისევ||
 ისევე||
 ისეთი||
-ისინი|they|i§s§i§n§i|isini
+ისინი|they|i,s,i,n,i|isini
 ისლამი||
 ისლამური||
 ისლანდია||
@@ -5144,7 +5144,7 @@ autoExpandExamples.ka = `
 იფანი||
 იფეთქავს||
 იფქლი||
-იქ|there|i§kʰ|ik
+იქ|there|i,kʰ|ik
 იქვე||
 იქიდან||
 იქით||
@@ -5285,7 +5285,7 @@ autoExpandExamples.ka = `
 კანაფი||
 კანდიდატი||
 კანდიდატურა||
-კანი|skin|kʼ§ɑ§n§i|ḳani
+კანი|skin|kʼ,ɑ,n,i|ḳani
 კანიბალიზმი||
 კანიბალური||
 კანიონი||
@@ -5345,7 +5345,7 @@ autoExpandExamples.ka = `
 კარგად||
 კარგავს||
 კარგი საქონელია||
-კარგი|good|kʼ§ɑ§r§ɡ§i|ḳargi
+კარგი|good|kʼ,ɑ,r,ɡ,i|ḳargi
 კარდინალი||
 კარები||
 კარი||
@@ -5405,7 +5405,7 @@ autoExpandExamples.ka = `
 კაშნე||
 კაშხალი||
 კაცთევზა||
-კაცი|man (adult male)|kʼ§a§t͡s§i|ḳaci
+კაცი|man (adult male)|kʼ,a,t͡s,i|ḳaci
 კაცობრიობა||
 კაცუნა||
 კაცური||
@@ -5416,11 +5416,11 @@ autoExpandExamples.ka = `
 კახეთი||
 კახი||
 კახპა||
-კბენა|to bite|kʼ§b§ɛ§n§ɑ|ḳbena
+კბენა|to bite|kʼ,b,ɛ,n,ɑ|ḳbena
 კბენს||
 კბილანა||
 კბილებიანი||
-კბილი|tooth|kʼ§b§i§l§i|ḳbili
+კბილი|tooth|kʼ,b,i,l,i|ḳbili
 კბილის პასტა||
 კბილისმიერი||
 კები||
@@ -5472,7 +5472,7 @@ autoExpandExamples.ka = `
 კერაკი||
 კერამიკა||
 კერამიკული||
-კერვა|to sew|kʼ§ɛ§r§v§ɑ|ḳerva
+კერვა|to sew|kʼ,ɛ,r,v,ɑ|ḳerva
 კერი||
 კერპი||
 კერტი||
@@ -5492,7 +5492,7 @@ autoExpandExamples.ka = `
 კვაზი-||
 კვაკერი||
 კვალი||
-კვამლი|smoke|kʼ§v§ɑ§m§l§i|ḳvamli
+კვამლი|smoke|kʼ,v,ɑ,m,l,i|ḳvamli
 კვამლსადენი||
 კვანძი||
 კვართი||
@@ -5512,7 +5512,7 @@ autoExpandExamples.ka = `
 კვერთხი||
 კვერი||
 კვერნა||
-კვერცხი|egg|kʼ§v§e§r§t͡s§x§i|ḳvercxi
+კვერცხი|egg|kʼ,v,e,r,t͡s,x,i|ḳvercxi
 კვესი||
 კვეცს||
 კვიეტიზმი||
@@ -5525,7 +5525,7 @@ autoExpandExamples.ka = `
 კვირისტავა||
 კვირტი||
 კვიცი||
-კვლა|to kill|kʼ§v§l§ɑ|ḳvla
+კვლა|to kill|kʼ,v,l,ɑ|ḳvla
 კვლავ||
 კვლიავი||
 კვნესა||
@@ -5577,7 +5577,7 @@ autoExpandExamples.ka = `
 კირქვა||
 კირჩხიბი||
 კისატი||
-კისერი|neck|kʼ§i§s§ɛ§r§i|ḳiseri
+კისერი|neck|kʼ,i,s,ɛ,r,i|ḳiseri
 კიტელი||
 კიტრი||
 კიშინოვი||
@@ -5943,7 +5943,7 @@ autoExpandExamples.ka = `
 კუბო||
 კუბური||
 კუდამოძუებული||
-კუდი|tail|kʼ§u§d§i|ḳudi
+კუდი|tail|kʼ,u,d,i|ḳudi
 კუდიანი||
 კუვი||
 კუზი||
@@ -6394,7 +6394,7 @@ autoExpandExamples.ka = `
 მალტა||
 მალულად||
 მალხაზ||
-მამა|father|m§ɑ§m§ɑ|mama
+მამა|father|m,ɑ,m,ɑ|mama
 მამათმავალი||
 მამათმავლობა||
 მამაილა||
@@ -6507,7 +6507,7 @@ autoExpandExamples.ka = `
 მარია||
 მარიამი||
 მარიამობა||
-მარილი|salt|m§ɑ§r§i§l§i|marili
+მარილი|salt|m,ɑ,r,i,l,i|marili
 მარილიანი||
 მარილიანობა||
 მარილწყალი||
@@ -6553,7 +6553,7 @@ autoExpandExamples.ka = `
 მარცვლეული||
 მარცვლიანი||
 მარცვლოვანი||
-მარცხენა|left|m§a§r§t͡s§x§e§n§a|marcxena
+მარცხენა|left|m,a,r,t͡s,x,e,n,a|marcxena
 მარცხი||
 მარცხნივ||
 მარწუხი||
@@ -6563,7 +6563,7 @@ autoExpandExamples.ka = `
 მარჯანი||
 მარჯვე||
 მარჯვედ||
-მარჯვენა|right|m§a§r§d͡ʒ§v§e§n§a|marǯvena
+მარჯვენა|right|m,a,r,d͡ʒ,v,e,n,a|marǯvena
 მარჯი||
 მას||
 მასალა||
@@ -6694,14 +6694,14 @@ autoExpandExamples.ka = `
 მდიდრულად||
 მდიდრული||
 მდივანი||
-მდინარე|river|m§d§i§n§ɑ§r§ɛ|mdinare
+მდინარე|river|m,d,i,n,ɑ,r,ɛ|mdinare
 მდოგვი||
 მდოვრე||
 მდუმარე||
 მდუმარედ||
 მე შენ მიყვარხარ||
 მე- -ე||
-მე|I (personal pronoun)|m§ɛ|me
+მე|I (personal pronoun)|m,ɛ|me
 მეაბრეშუმე||
 მეათე||
 მეალილოე||
@@ -7000,7 +7000,7 @@ autoExpandExamples.ka = `
 მზაკვრობა||
 მზარდად||
 მზარეული||
-მზე|sun|m§z§ɛ|mze
+მზე|sun|m,z,ɛ|mze
 მზერა||
 მზესუმზირა||
 მზიანად||
@@ -7013,7 +7013,7 @@ autoExpandExamples.ka = `
 მზის ჩასვლა||
 მზრუნველად||
 მზრუნველობა||
-მთა|mountain|m§tʰ§ɑ|mta
+მთა|mountain|m,tʰ,ɑ|mta
 მთაგრეხილი||
 მთავარანგელოზი||
 მთავარი გვერდი||
@@ -7026,7 +7026,7 @@ autoExpandExamples.ka = `
 მთაწმინდა||
 მთელად||
 მთელი||
-მთვარე|moon|m§tʰ§v§ɑ§r§ɛ|mtvare
+მთვარე|moon|m,tʰ,v,ɑ,r,ɛ|mtvare
 მთვარის დაბნელება||
 მთვარის სრული დაბნელება||
 მთვრალი|drunk||mtvrali
@@ -7197,11 +7197,11 @@ autoExpandExamples.ka = `
 მიშკოლცი||
 მიჩიგანი||
 მიც.||
-მიცემა|to give|m§i§t͡s§ɛ§m§ɑ|micema
+მიცემა|to give|m,i,t͡s,ɛ,m,ɑ|micema
 მიცემითი ბრუნვა||
 მიცემითი||
 მიძღვნა||
-მიწა|earth|m§i§t͡sʼ§ɑ|mic̣a
+მიწა|earth|m,i,t͡sʼ,ɑ|mic̣a
 მიწათმოქმედი||
 მიწათმოწყობა||
 მიწაყრილი||
@@ -7229,7 +7229,7 @@ autoExpandExamples.ka = `
 მკაცრად||
 მკაცრი||
 მკერდამდე||
-მკერდი|breast|m§kʼ§ɛ§r§d§i|mḳerdi
+მკერდი|breast|m,kʼ,ɛ,r,d,i|mḳerdi
 მკვდარი ზღვა||
 მკვდარი||
 მკვეთრად||
@@ -7330,7 +7330,7 @@ autoExpandExamples.ka = `
 მოკვალთული||
 მოკირავს||
 მოკლავს||
-მოკლე|short|m§ɔ§kʼ§l§ɛ|moḳle
+მოკლე|short|m,ɔ,kʼ,l,ɛ|moḳle
 მოკლედ||
 მოკლევადიანი||
 მოკრივე||
@@ -7472,7 +7472,7 @@ autoExpandExamples.ka = `
 მოსაჩვენებლად||
 მოსაწყენად||
 მოსახლეობა||
-მოსვლა|to come|m§ɔ§s§v§l§ɑ|mosvla
+მოსვლა|to come|m,ɔ,s,v,l,ɑ|mosvla
 მოსთხოვს||
 მოსკოვი||
 მოსპობს||
@@ -7595,7 +7595,7 @@ autoExpandExamples.ka = `
 მრავალჯერადი||
 მრავლისმთქმელად||
 მრავლობითი||
-მრგვალი|round|m§r§ɡ§v§ɑ§l§i|mrgvali
+მრგვალი|round|m,r,ɡ,v,ɑ,l,i|mrgvali
 მრგვლად||
 მრევლი||
 მრეწველი||
@@ -7631,7 +7631,7 @@ autoExpandExamples.ka = `
 მტაცებლური||
 მტევანი||
 მტერი||
-მტვერი|dust|m§tʼ§v§ɛ§r§i|mṭveri
+მტვერი|dust|m,tʼ,v,ɛ,r,i|mṭveri
 მტვერსასრუტი||
 მტვრიანა||
 მტვრიანი||
@@ -7714,7 +7714,7 @@ autoExpandExamples.ka = `
 მუშკი||
 მუშტარი||
 მუშტი||
-მუცელი|belly|m§u§t͡s§ɛ§l§i|muceli
+მუცელი|belly|m,u,t͡s,ɛ,l,i|muceli
 მუწუკი||
 მუჭი||
 მუხა||
@@ -7724,7 +7724,7 @@ autoExpandExamples.ka = `
 მუხანათი||
 მუხანათურად||
 მუხანათური||
-მუხლი|knee|m§u§x§l§i|muxli
+მუხლი|knee|m,u,x,l,i|muxli
 მუხლუხი||
 მუხრუჭი||
 მუხუდო||
@@ -7780,7 +7780,7 @@ autoExpandExamples.ka = `
 მშობლიური ენა||
 მშობლიური||
 მშრალად||
-მშრალი|dry|m§ʃ§r§ɑ§l§i|mšrali
+მშრალი|dry|m,ʃ,r,ɑ,l,i|mšrali
 მშრალხევი||
 მჩატე||
 მჩქეფარე||
@@ -7808,7 +7808,7 @@ autoExpandExamples.ka = `
 მძვინვარედ||
 მძივი||
 მძივისებრი||
-მძიმე|heavy|m§d͡z§i§m§ɛ|mʒime
+მძიმე|heavy|m,d͡z,i,m,ɛ|mʒime
 მძინარა||
 მძინარე||
 მძინარედ||
@@ -7826,10 +7826,10 @@ autoExpandExamples.ka = `
 მწვავე||
 მწვავედ||
 მწვანე შუქი||
-მწვანე|green|m§t͡sʼ§v§ɑ§n§ɛ|mc̣vane
+მწვანე|green|m,t͡sʼ,v,ɑ,n,ɛ|mc̣vane
 მწვანილი||
 მწვერვალი||
-მწვრთნელი|trainer|m§t͡sʼ§v§r§t§n§ɛ§l§i|mc̣vrtneli
+მწვრთნელი|trainer|m,t͡sʼ,v,r,t,n,ɛ,l,i|mc̣vrtneli
 მწიკვი||
 მწირად||
 მწირი||
@@ -7854,7 +7854,7 @@ autoExpandExamples.ka = `
 მჭიდროდ||
 მჭლე||
 მჭლედ||
-მჭრელი|sharp (as a knife)|m§t͡ʃʼ§r§ɛ§l§i|mč̣reli
+მჭრელი|sharp (as a knife)|m,t͡ʃʼ,r,ɛ,l,i|mč̣reli
 მხარბეჭიანი||
 მხარდაჭერა||
 მხარე||
@@ -7903,7 +7903,7 @@ autoExpandExamples.ka = `
 ნადი||
 ნადიმი||
 ნადირი||
-ნადირობა|to hunt|n§ɑ§d§i§r§ɔ§b§ɑ|nadiroba
+ნადირობა|to hunt|n,ɑ,d,i,r,ɔ,b,ɑ|nadiroba
 ნადირობს||
 ნაერთი||
 ნავაზი||
@@ -8078,7 +8078,7 @@ autoExpandExamples.ka = `
 ნაწილი||
 ნაწილობრივ||
 ნაწილობრივი||
-ნაწლავი|guts|n§ɑ§t͡sʼ§l§ɑ§v§i|nac̣lavi
+ნაწლავი|guts|n,ɑ,t͡sʼ,l,ɑ,v,i|nac̣lavi
 ნაწნავი||
 ნაწყვეტ-ნაწყვეტ||
 ნაჭრილობევი||
@@ -8096,7 +8096,7 @@ autoExpandExamples.ka = `
 ნახევრად||
 ნახევრადფენოვანი||
 ნახერხი||
-ნახვა|to see|n§ɑ§x§v§ɑ|naxva
+ნახვა|to see|n,ɑ,x,v,ɑ|naxva
 ნახვამდის||
 ნახველი||
 ნახვრეტი||
@@ -8227,7 +8227,7 @@ autoExpandExamples.ka = `
 ნისია||
 ნისკარტი||
 ნისლეული||
-ნისლი|fog|n§i§s§l§i|nisli
+ნისლი|fog|n,i,s,l,i|nisli
 ნისლიანი||
 ნისლოვანება||
 ნიტრატი||
@@ -8326,7 +8326,7 @@ autoExpandExamples.ka = `
 ოზონი||
 ოზურგეთი||
 ოთახი||
-ოთხი|four|ɔ§tʰ§x§i|otxi
+ოთხი|four|ɔ,tʰ,x,i|otxi
 ოთხკუთხა||
 ოთხკუთხედი||
 ოთხმაგი||
@@ -8443,7 +8443,7 @@ autoExpandExamples.ka = `
 ორთოპედია||
 ორთოპედიული||
 ორთქლი||
-ორი|two|ɔ§r§i|ori
+ორი|two|ɔ,r,i|ori
 ორიანი||
 ორიგინალი||
 ორიგინალობა||
@@ -8579,7 +8579,7 @@ autoExpandExamples.ka = `
 ოჯახობა||
 ოჯახური||
 ოჯახში||
-ოჰაიო|Ohio|o§h§a§i§o|ohaio
+ოჰაიო|Ohio|o,h,a,i,o|ohaio
 პაატა||
 პაგოდა||
 პადუა||
@@ -8725,7 +8725,7 @@ autoExpandExamples.ka = `
 პასუხისმგებლობით||
 პასუხობს||
 პასქა||
-პატარა|small|pʼ§ɑ§tʼ§ɑ§r§ɑ|ṗaṭara
+პატარა|small|pʼ,ɑ,tʼ,ɑ,r,ɑ|ṗaṭara
 პატარძალი||
 პატივი||
 პატივისცემა||
@@ -8875,7 +8875,7 @@ autoExpandExamples.ka = `
 პირდაპირ||
 პირდაპირად||
 პირდაპირი ობიექტი||
-პირდაპირი|straight|pʼ§i§r§d§ɑ§pʼ§i§r§i|ṗirdaṗiri
+პირდაპირი|straight|pʼ,i,r,d,ɑ,pʼ,i,r,i|ṗirdaṗiri
 პირდაპირობა||
 პირდაღებული||
 პირველადი||
@@ -8886,7 +8886,7 @@ autoExpandExamples.ka = `
 პირველობა||
 პირველყოფილი||
 პირველშობილი||
-პირი|mouth|pʼ§i§r§i|ṗiri
+პირი|mouth|pʼ,i,r,i|ṗiri
 პირისპირ||
 პირიტი||
 პირიქით||
@@ -9221,7 +9221,7 @@ autoExpandExamples.ka = `
 ჟაბო||
 ჟაკეტი||
 ჟალუზი||
-ჟამი|plague|ʒ§a§m§i|žami
+ჟამი|plague|ʒ,a,m,i|žami
 ჟანგავს||
 ჟანგბადი||
 ჟანგი||
@@ -9240,7 +9240,7 @@ autoExpandExamples.ka = `
 ჟვანია||
 ჟილეტი||
 ჟინი||
-ჟინჟღლი|drizzle|ʒ§i§n§ʒ§ɣ§l§i|žinžɣli
+ჟინჟღლი|drizzle|ʒ,i,n,ʒ,ɣ,l,i|žinžɣli
 ჟინჟღლიანი||
 ჟიპიტაური||
 ჟირაფი||
@@ -9262,12 +9262,12 @@ autoExpandExamples.ka = `
 ჟღმურტლი||
 რა თქმა უნდა||
 რა უშავს||
-რა|what (interrog)|r§ɑ|ra
+რა|what (interrog)|r,ɑ|ra
 რაბინი||
 რაგბი||
 რაგუ||
 რად||
-რადგან|because|r§ɑ§d§ɡ§ɑ§n|radgan
+რადგან|because|r,ɑ,d,ɡ,ɑ,n|radgan
 რადგანაც||
 რადიატორი||
 რადიაცია||
@@ -9299,7 +9299,7 @@ autoExpandExamples.ka = `
 რამ||
 რამდენადმე||
 რამდენი||
-რამდენიმე|some|r§ɑ§m§d§ɛ§n§i§m§ɛ|ramdenime
+რამდენიმე|some|r,ɑ,m,d,ɛ,n,i,m,ɛ|ramdenime
 რამდენიმედ||
 რამე||
 რამიშვილი||
@@ -9475,8 +9475,8 @@ autoExpandExamples.ka = `
 რეციდივიზმი||
 რეციდივისტი||
 რეცხავს||
-რეცხვა|to wash|r§ɛ§t͡s§x§v§ɑ|recxva
-რეჰანი|basil|r§e§h§a§n§i|rehani
+რეცხვა|to wash|r,ɛ,t͡s,x,v,ɑ|recxva
+რეჰანი|basil|r,e,h,a,n,i|rehani
 რვა||
 რვაკუთხედი||
 რვალი||
@@ -9534,7 +9534,7 @@ autoExpandExamples.ka = `
 რობერტ||
 რობერტი||
 რობოტი||
-როგორ|how|r§ɔ§ɡ§ɔ§r|rogor 
+როგორ|how|r,ɔ,ɡ,ɔ,r|rogor 
 როგორა ხარ||
 როგორი||
 როგორმე||
@@ -9542,7 +9542,7 @@ autoExpandExamples.ka = `
 როგორც||
 როდესაც||
 როდესმე||
-როდის|when?|r§ɔ§d§i§s|rodis 
+როდის|when?|r,ɔ,d,i,s|rodis 
 როდიუმი||
 როზგავს||
 როზგი||
@@ -9556,7 +9556,7 @@ autoExpandExamples.ka = `
 როკნროლი||
 როკფორი||
 როლი||
-რომ|if|r§o§m|tu
+რომ|if|r,o,m|tu
 რომაელი||
 რომანი||
 რომანისტი||
@@ -9587,7 +9587,7 @@ autoExpandExamples.ka = `
 როცა||
 როჯერი||
 რტო||
-რტყმა|to hit|r§tʼ§qʼ§m§ɑ|rṭq̇ma
+რტყმა|to hit|r,tʼ,qʼ,m,ɑ|rṭq̇ma
 რუ||
 რუანდა||
 რუბიდიუმი||
@@ -9619,7 +9619,7 @@ autoExpandExamples.ka = `
 რუტინული||
 რუქა||
 რუქი||
-რქა|horn|r§kʰ§ɑ|rka
+რქა|horn|r,kʰ,ɑ|rka
 რქაწითელი||
 რქების დადგმა||
 რქიანი||
@@ -9636,7 +9636,7 @@ autoExpandExamples.ka = `
 რწმუნებულები||
 რწმუნებული||
 რწყავს||
-რწყევა|to vomit|r§t͡sʼ§qʼ§ɛ§v§ɑ|rc̣q̇eva
+რწყევა|to vomit|r,t͡sʼ,qʼ,ɛ,v,ɑ|rc̣q̇eva
 რწყილი||
 რხევით||
 სა- -ო||
@@ -9709,7 +9709,7 @@ autoExpandExamples.ka = `
 საგულდაგულო||
 საგულდაგულოდ||
 საგურამო||
-სად|where?|s§ɑ§d|sad
+სად|where?|s,ɑ,d|sad
 სადა||
 სადად||
 სადავო||
@@ -9755,7 +9755,7 @@ autoExpandExamples.ka = `
 სავაჭრო პალატა||
 სავაჭრო||
 სავრცობი||
-სავსე|full|s§ɑ§v§s§ɛ|savse
+სავსე|full|s,ɑ,v,s,ɛ|savse
 საზამთრო||
 საზარდული||
 საზარლად||
@@ -9894,7 +9894,7 @@ autoExpandExamples.ka = `
 სამეფო||
 სამეცნიერო||
 სამზარეულო||
-სამი|three|s§ɑ§m§i|sami
+სამი|three|s,ɑ,m,i|sami
 სამკაულებიანი||
 სამკერდე||
 სამკერვალო||
@@ -10272,7 +10272,7 @@ autoExpandExamples.ka = `
 სახელგატეხილად||
 სახელდობრ||
 სახელზმნა||
-სახელი|name|s§ɑ§x§ɛ§l§i|saxeli
+სახელი|name|s,ɑ,x,ɛ,l,i|saxeli
 სახელმწიფო||
 სახელო||
 სახელობითი ბრუნვა||
@@ -10414,7 +10414,7 @@ autoExpandExamples.ka = `
 სვანი||
 სვანური||
 სვასტიკა||
-სველი|wet|s§v§ɛ§l§i|sveli
+სველი|wet|s,v,ɛ,l,i|sveli
 სვეტებიანი||
 სვეტი||
 სვეტიცხოველი||
@@ -10432,7 +10432,7 @@ autoExpandExamples.ka = `
 სიამოვნება||
 სიამოვნებით||
 სიანცე||
-სიარული|to walk|s§i§ɑ§r§u§l§i|siaruli
+სიარული|to walk|s,i,ɑ,r,u,l,i|siaruli
 სიასამური||
 სიაფანდი||
 სიაშკარავე||
@@ -10495,7 +10495,7 @@ autoExpandExamples.ka = `
 სიკომორო||
 სიკოჭლე||
 სიკოხტავე||
-სილა|sand|s§i§l§ɑ|sila
+სილა|sand|s,i,l,ɑ|sila
 სილაბური||
 სილამაზე||
 სილიციუმი||
@@ -10641,7 +10641,7 @@ autoExpandExamples.ka = `
 სისწორე||
 სისწრაფე||
 სისხამ დილით||
-სისხლი|blood|s§i§s§x§l§i|sisxli
+სისხლი|blood|s,i,s,x,l,i|sisxli
 სისხლიანი||
 სისხლის აღება||
 სისხლის აღრევა||
@@ -10700,7 +10700,7 @@ autoExpandExamples.ka = `
 სიცარიელე||
 სიცელქე||
 სიცივე||
-სიცილი|to laugh|s§i§t͡s§i§l§i|sicili
+სიცილი|to laugh|s,i,t͡s,i,l,i|sicili
 სიცილით||
 სიცოცხლე||
 სიცრუე||
@@ -10763,8 +10763,8 @@ autoExpandExamples.ka = `
 სლოვენია||
 სლოკინი||
 სმ||
-სმა|to drink|s§m§ɑ|sma
-სმენა|to hear|s§m§ɛ§n§ɑ|smena
+სმა|to drink|s,m,ɑ|sma
+სმენა|to hear|s,m,ɛ,n,ɑ|smena
 სმენადაკარგული||
 სმენადაქვეითებული||
 სმენადობა||
@@ -11003,7 +11003,7 @@ autoExpandExamples.ka = `
 სუნამო||
 სუნელი||
 სუნთქავს||
-სუნთქვა|to breathe|s§u§n§tʰ§kʰ§v§ɑ|suntkva
+სუნთქვა|to breathe|s,u,n,tʰ,kʰ,v,ɑ|suntkva
 სუნთქვითი||
 სუნი||
 სუნიანი||
@@ -11039,7 +11039,7 @@ autoExpandExamples.ka = `
 სფეროიდი||
 სფერული||
 სფინქსი||
-სქელი|thick|s§kʰ§ɛ§l§i|skeli
+სქელი|thick|s,kʰ,ɛ,l,i|skeli
 სქელკანიანი||
 სქემა||
 სქემატურად||
@@ -11074,7 +11074,7 @@ autoExpandExamples.ka = `
 სხალტბა||
 სხდომა||
 სხეული||
-სხვა|other|s§x§v§ɑ|sxva
+სხვა|other|s,x,v,ɑ|sxva
 სხვაგვარად||
 სხვადასხვა||
 სხვადასხვაგვარად||
@@ -11163,7 +11163,7 @@ autoExpandExamples.ka = `
 ტაძარი||
 ტახტი||
 ტაჯიკეთი||
-ტბა|lake|tʼ§b§ɑ|ṭba
+ტბა|lake|tʼ,b,ɑ|ṭba
 ტბორი||
 ტეგანი||
 ტევადი||
@@ -11211,7 +11211,7 @@ autoExpandExamples.ka = `
 ტერორიზმი||
 ტერორისტი||
 ტერტერა||
-ტერფი|foot|tʼ§ɛ§r§pʰ§i|ṭerpi
+ტერფი|foot|tʼ,ɛ,r,pʰ,i|ṭerpi
 ტეტანუსი||
 ტექნეციუმი||
 ტექნიკა||
@@ -11240,7 +11240,7 @@ autoExpandExamples.ka = `
 ტივტივით||
 ტიკი||
 ტიკინი||
-ტილი|louse|tʼ§i§l§i|ṭili
+ტილი|louse|tʼ,i,l,i|ṭili
 ტილიანი||
 ტილო||
 ტიმი||
@@ -11364,7 +11364,7 @@ autoExpandExamples.ka = `
 ტრაქტორი||
 ტრიადა||
 ტრიალებს||
-ტრიალი|to turn|tʼ§r§i§ɑ§l§i|ṭriali
+ტრიალი|to turn|tʼ,r,i,ɑ,l,i|ṭriali
 ტრიბუნა||
 ტრიბუნალი||
 ტრიბუნი||
@@ -11431,7 +11431,7 @@ autoExpandExamples.ka = `
 ტყაპანი||
 ტყაპანით||
 ტყაპუჭი||
-ტყე|forest|tʼ§qʼ§ɛ|ṭq̇e
+ტყე|forest|tʼ,qʼ,ɛ|ṭq̇e
 ტყევით||
 ტყემალი||
 ტყვარჩელი||
@@ -12106,7 +12106,7 @@ autoExpandExamples.ka = `
 ფარვატერი||
 ფართე||
 ფართედ||
-ფართო|wide|pʰ§ɑ§r§tʰ§ɔ|parto
+ფართო|wide|pʰ,ɑ,r,tʰ,ɔ|parto
 ფართობი||
 ფართოდ||
 ფარი||
@@ -12197,20 +12197,20 @@ autoExpandExamples.ka = `
 ფერმკრთალად||
 ფერმკრთალი||
 ფერსო||
-ფერფლი|ash|pʰ§ɛ§r§pʰ§l§i|perpli
+ფერფლი|ash|pʰ,ɛ,r,pʰ,l,i|perpli
 ფერფლისფერი||
 ფერშალი||
 ფერწერა||
 ფერწერულად||
 ფერწერული||
-ფესვი|root|pʰ§ɛ§s§v§i|pesvi
+ფესვი|root|pʰ,ɛ,s,v,i|pesvi
 ფესი||
 ფეტვი||
 ფეტიში||
 ფეტრი||
 ფეხბურთელი||
 ფეხბურთი||
-ფეხი|leg|pʰ§ɛ§x§i|pexi
+ფეხი|leg|pʰ,ɛ,x,i|pexi
 ფეხიფეხგადადებული||
 ფეხმარდად||
 ფეხმარდი||
@@ -12294,7 +12294,7 @@ autoExpandExamples.ka = `
 ფიფია||
 ფიფქი||
 ფიფქია||
-ფიქრი|to think|pʰ§i§kʰ§r§i|pikri
+ფიქრი|to think|pʰ,i,kʰ,r,i|pikri
 ფიქრიანად||
 ფიქრიანი||
 ფიქრიანობა||
@@ -12342,7 +12342,7 @@ autoExpandExamples.ka = `
 ფლუსი||
 ფოთი||
 ფოთლოვანი||
-ფოთოლი|leaf|pʰ§ɔ§tʰ§ɔ§l§i|potoli
+ფოთოლი|leaf|pʰ,ɔ,tʰ,ɔ,l,i|potoli
 ფოიე||
 ფოკი||
 ფოკუსი||
@@ -12429,12 +12429,12 @@ autoExpandExamples.ka = `
 ფრედი||
 ფრეზეთი||
 ფრეილინა||
-ფრენა|to fly|pʰ§r§ɛ§n§ɑ|prena
+ფრენა|to fly|pʰ,r,ɛ,n,ɑ|prena
 ფრენბურთი||
 ფრენკი||
 ფრენოლოგია||
 ფრესკა||
-ფრთა|feather, wing|pʰ§r§tʰ§ɑ|prta
+ფრთა|feather, wing|pʰ,r,tʰ,ɑ|prta
 ფრთაშესხმული||
 ფრთიანი||
 ფრთხილად||
@@ -12448,7 +12448,7 @@ autoExpandExamples.ka = `
 ფრიტრედერი||
 ფრონტალური||
 ფრონტონი||
-ფრჩხილი|fingernail|pʰ§r§t͡ʃ§x§i§l§i|prčxili
+ფრჩხილი|fingernail|pʰ,r,t͡ʃ,x,i,l,i|prčxili
 ფრცქვნის||
 ფსალმუნი||
 ფსევდო-||
@@ -12528,7 +12528,7 @@ autoExpandExamples.ka = `
 ქალაბიჭა||
 ქალაქი||
 ქალთევზა||
-ქალი|woman|kʰ§ɑ§l§i|kali
+ქალი|woman|kʰ,ɑ,l,i|kali
 ქალიშვილი||
 ქალიშვილობა||
 ქალიშვილობის გვარი||
@@ -12576,8 +12576,8 @@ autoExpandExamples.ka = `
 ქართულად ვლაპარაკობ||
 ქართული ენა||
 ქართული იცით||
-ქართული|Georgian language|kʰ§a§ɾ§tʰ§u§l§i|kartuli
-ქარი|wind|kʰ§ɑ§r§i|kari
+ქართული|Georgian language|kʰ,a,ɾ,tʰ,u,l,i|kartuli
+ქარი|wind|kʰ,ɑ,r,i|kari
 ქარიანი||
 ქარიზმა||
 ქარიზმატული||
@@ -12620,13 +12620,13 @@ autoExpandExamples.ka = `
 ქერი||
 ქერტლი||
 ქერუბიმი||
-ქერქი|bark (tree)|kʰ§ɛ§r§kʰ§i|kerki
+ქერქი|bark (tree)|kʰ,ɛ,r,kʰ,i|kerki
 ქერქიანი||
 ქერცლი||
 ქერცლიანი||
 ქეჩა||
 ქეჩო||
-ქვა|stone|kʰ§v§ɑ|kva
+ქვა|stone|kʰ,v,ɑ|kva
 ქვაბი||
 ქვაკუთხედი||
 ქვამარილი||
@@ -12708,7 +12708,7 @@ autoExpandExamples.ka = `
 ქლორი||
 ქლოროფილი||
 ქლოროფორმი||
-ქმარი|husband|kʰ§m§ɑ§r§i|kmari
+ქმარი|husband|kʰ,m,ɑ,r,i|kmari
 ქმედება||
 ქმერის რესპუბლიკა||
 ქმნილება||
@@ -12721,7 +12721,7 @@ autoExpandExamples.ka = `
 ქომაგობა||
 ქონდარი||
 ქონება||
-ქონი|fat (noun)|kʰ§ɔ§n§i|koni
+ქონი|fat (noun)|kʰ,ɔ,n,i|koni
 ქონიანად||
 ქონიანი||
 ქორაფი||
@@ -12801,7 +12801,7 @@ autoExpandExamples.ka = `
 ღალატი||
 ღალღა||
 ღამე ნებისა||
-ღამე|night|ɣ§ɑ§m§ɛ|ɣame
+ღამე|night|ɣ,ɑ,m,ɛ|ɣame
 ღამურა||
 ღანძილი||
 ღაჟღაჟა||
@@ -12846,7 +12846,7 @@ autoExpandExamples.ka = `
 ღვივის||
 ღვინო||
 ღვიძება||
-ღვიძლი|liver|ɣ§v§i§d͡z§l§i|ɣviʒli
+ღვიძლი|liver|ɣ,v,i,d͡z,l,i|ɣviʒli
 ღია||
 ღიად||
 ღივი||
@@ -12891,7 +12891,7 @@ autoExpandExamples.ka = `
 ღრმა||
 ღრმად||
 ღრუბელა||
-ღრუბელი|cloud|ɣ§r§u§b§ɛ§l§i|ɣrubeli
+ღრუბელი|cloud|ɣ,r,u,b,ɛ,l,i|ɣrubeli
 ღრუბლიანი||
 ღრძილი||
 ღუდუშაური||
@@ -12956,19 +12956,19 @@ autoExpandExamples.ka = `
 ყვავი||
 ყვავილებიანი||
 ყვავილედი||
-ყვავილი|flower|qʼ§v§ɑ§v§i§l§i|q̇vavili
+ყვავილი|flower|qʼ,v,ɑ,v,i,l,i|q̇vavili
 ყვავილოვანი||
 ყვავის||
 ყვაჭიჭა||
 ყველა||
 ყველაზე||
-ყველაფერი|all|qʼ§v§ɛ§l§ɑ§pʰ§ɛ§r§i|q̇velaperi
+ყველაფერი|all|qʼ,v,ɛ,l,ɑ,pʰ,ɛ,r,i|q̇velaperi
 ყველგან||
 ყველი||
 ყვერი||
 ყვერული||
 ყვითელი პრესა||
-ყვითელი|yellow|qʼ§v§i§tʰ§ɛ§l§i|q̇viteli
+ყვითელი|yellow|qʼ,v,i,tʰ,ɛ,l,i|q̇viteli
 ყვირილი||
 ყვლეფს||
 ყია||
@@ -12978,7 +12978,7 @@ autoExpandExamples.ka = `
 ყითა ნაწლავი||
 ყითა||
 ყინვა||
-ყინული|ice|qʼ§i§n§u§l§i|q̇inuli
+ყინული|ice|qʼ,i,n,u,l,i|q̇inuli
 ყირგიზეთი||
 ყირგიზეთის სსრ||
 ყირმიზი||
@@ -13037,7 +13037,7 @@ autoExpandExamples.ka = `
 ყურანი||
 ყურბელა||
 ყურე||
-ყური|ear|qʼ§u§r§i|q̇uri
+ყური|ear|qʼ,u,r,i|q̇uri
 ყურმილი||
 ყურსასმენი||
 ყურუმსაღი||
@@ -13053,7 +13053,7 @@ autoExpandExamples.ka = `
 შავი ზღვა||
 შავი ჭირი||
 შავი ხვრელი||
-შავი|black|ʃ§ɑ§v§i|šavi
+შავი|black|ʃ,ɑ,v,i|šavi
 შავლაშვილი||
 შავლეგი||
 შაიბა||
@@ -13219,7 +13219,7 @@ autoExpandExamples.ka = `
 შემწყნარებლურად||
 შემხე||
 შემხვედრი||
-შენ|you (s)|ʃ§ɛ§n|šen
+შენ|you (s)|ʃ,ɛ,n|šen
 შენაკადი||
 შენი ჭირიმე||
 შენი||
@@ -13429,7 +13429,7 @@ autoExpandExamples.ka = `
 შიფრი||
 შიშველი||
 შიშვლად||
-შიში|to fear|ʃ§i§ʃ§i|šiši
+შიში|to fear|ʃ,i,ʃ,i|šiši
 შიშით||
 შიშინა||
 შკივი||
@@ -13453,7 +13453,7 @@ autoExpandExamples.ka = `
 შონია||
 შორენა||
 შორეული||
-შორი|far|ʃ§ɔ§r§i|šori
+შორი|far|ʃ,ɔ,r,i|šori
 შორის||
 შორს||
 შორსმიმავალი||
@@ -13633,7 +13633,7 @@ autoExpandExamples.ka = `
 ჩეხს||
 ჩეხური||
 ჩვარი||
-ჩვენ|we|t͡ʃ§v§ɛ§n|čven
+ჩვენ|we|t͡ʃ,v,ɛ,n|čven
 ჩვენება||
 ჩვენებითი ნაცვალსახელი||
 ჩვენებური||
@@ -13663,7 +13663,7 @@ autoExpandExamples.ka = `
 ჩირქი||
 ჩირქოვანი||
 ჩიტბატონა||
-ჩიტი|bird|t͡ʃ§i§tʼ§i|čiṭi
+ჩიტი|bird|t͡ʃ,i,tʼ,i|čiṭi
 ჩიყვი||
 ჩიჩახვი||
 ჩიხი||
@@ -13713,7 +13713,7 @@ autoExpandExamples.ka = `
 ჩხიკვი||
 ჩხუბი||
 ჩხუბისთავი||
-ცა|sky|t͡s§ɑ|ca
+ცა|sky|t͡s,ɑ|ca
 ცაავა||
 ცათამბჯენი||
 ცაიში||
@@ -13778,7 +13778,7 @@ autoExpandExamples.ka = `
 ცერცვი||
 ცეცი||
 ცეცხლგამძლე||
-ცეცხლი|fire|t͡s§ɛ§t͡s§x§l§i|cecxli
+ცეცხლი|fire|t͡s,ɛ,t͡s,x,l,i|cecxli
 ცეცხლოვანი||
 ცეცხლოვნად||
 ცეცხლსატყორცნი||
@@ -13801,7 +13801,7 @@ autoExpandExamples.ka = `
 ცივა||
 ცივად||
 ცივი ყავა||
-ცივი|cold|t͡s§i§v§i|civi
+ცივი|cold|t͡s,i,v,i|civi
 ცივილიზაცია||
 ცივსისხლიანი||
 ციკლი||
@@ -13869,15 +13869,15 @@ autoExpandExamples.ka = `
 ცოდვიანობა||
 ცოდვილად||
 ცოდვილი||
-ცოდნა|to know|t͡s§ɔ§d§n§ɑ|codna
+ცოდნა|to know|t͡s,ɔ,d,n,ɑ|codna
 ცოკოლი||
-ცოლი|wife|t͡s§ɔ§l§i|coli
+ცოლი|wife|t͡s,ɔ,l,i|coli
 ცოლისძმა||
 ცოლქმრობა||
 ცომეული||
 ცომი||
 ცოტ-ცოტა||
-ცოტა|few|t͡s§ɔ§tʼ§ɑ|coṭa
+ცოტა|few|t͡s,ɔ,tʼ,ɑ|coṭa
 ცოტათი||
 ცოტამატა||
 ცოტაოდენი||
@@ -13897,9 +13897,9 @@ autoExpandExamples.ka = `
 ცრუმორწმუნედ||
 ცრურწმენა||
 ცუდად||
-ცუდი|bad|t͡s§u§d§i|cudi
+ცუდი|bad|t͡s,u,d,i|cudi
 ცურავს||
-ცურვა|to float, swim|t͡s§u§r§v§ɑ|curva
+ცურვა|to float, swim|t͡s,u,r,v,ɑ|curva
 ცური||
 ცხადად||
 ცხადი||
@@ -13919,17 +13919,17 @@ autoExpandExamples.ka = `
 ცხენოსნობა||
 ცხვარი||
 ცხვარიჭამია||
-ცხვირი|nose|t͡s§x§v§i§r§i|cxviri
+ცხვირი|nose|t͡s,x,v,i,r,i|cxviri
 ცხვირისმიერი||
 ცხვირპაჭუა||
 ცხვირსახოცი||
-ცხიმი|fat (noun)|t͡s§x§i§m§i|cximi
+ცხიმი|fat (noun)|t͡s,x,i,m,i|cximi
 ცხიმიანი||
 ცხიმოვანი||
 ცხინვალი||
 ცხლად||
-ცხოველი|animal|t͡s§x§ɔ§v§ɛ§l§i|cxoveli
-ცხოვრება|life, to live|t͡s§x§ɔ§v§r§ɛ§b§ɑ|cxovreba
+ცხოველი|animal|t͡s,x,ɔ,v,ɛ,l,i|cxoveli
+ცხოვრება|life, to live|t͡s,x,ɔ,v,r,ɛ,b,ɑ|cxovreba
 ცხოვრების სტილი||
 ცხოვრების წესი||
 ცხოვრობს||
@@ -13963,7 +13963,7 @@ autoExpandExamples.ka = `
 ძაფი||
 ძაღლი ახსენე და ჯოხი ხელში დაიჭირეო||
 ძაღლი ყეფს ქარავანი მიდის||
-ძაღლი|dog|d͡z§ɑ§ɣ§l§i|ʒaɣli
+ძაღლი|dog|d͡z,ɑ,ɣ,l,i|ʒaɣli
 ძაღლიშვილი||
 ძაღლუკა||
 ძაღლური||
@@ -13980,14 +13980,14 @@ autoExpandExamples.ka = `
 ძერსკი||
 ძეხვი||
 ძვ.||
-ძვალი|bone|d͡z§v§ɑ§l§i|ʒvali
+ძვალი|bone|d͡z,v,ɑ,l,i|ʒvali
 ძველად||
 ძველებრაული||
 ძველებური||
 ძველთაძველი||
 ძველი აღთქმა||
 ძველი ბიჭი||
-ძველი|old|d͡z§v§ɛ§l§i|ʒveli
+ძველი|old|d͡z,v,ɛ,l,i|ʒveli
 ძველმოდური||
 ძვირად||
 ძვირი||
@@ -14001,7 +14001,7 @@ autoExpandExamples.ka = `
 ძიება||
 ძილგუდა||
 ძილი ნებისა||
-ძილი|to sleep|d͡z§i§l§i|ʒili
+ძილი|to sleep|d͡z,i,l,i|ʒili
 ძირავს||
 ძირეულად||
 ძირეული||
@@ -14115,7 +14115,7 @@ autoExpandExamples.ka = `
 წევრი||
 წევრობა||
 წევს||
-წელი|year|t͡sʼ§ɛ§l§i|c̣eli
+წელი|year|t͡sʼ,ɛ,l,i|c̣eli
 წელიწადი||
 წელიწადის დრო||
 წერა||
@@ -14135,7 +14135,7 @@ autoExpandExamples.ka = `
 წესიერი||
 წესრიგი||
 წეწავს||
-წვა|to burn|t͡sʼ§v§ɑ|c̣va
+წვა|to burn|t͡sʼ,v,ɑ|c̣va
 წვავს||
 წვეთი||
 წვენი||
@@ -14146,7 +14146,7 @@ autoExpandExamples.ka = `
 წვეულება||
 წვივი||
 წვივსაკრავი||
-წვიმა|rain|t͡sʼ§v§i§m§ɑ|c̣vima
+წვიმა|rain|t͡sʼ,v,i,m,ɑ|c̣vima
 წვიმასაზომი||
 წვიმიანი||
 წვინტლი||
@@ -14168,7 +14168,7 @@ autoExpandExamples.ka = `
 წითელა||
 წითელი არმია||
 წითელი გიგანტი||
-წითელი|red|t͡sʼ§i§tʰ§ɛ§l§i|c̣iteli
+წითელი|red|t͡sʼ,i,tʰ,ɛ,l,i|c̣iteli
 წითელქუდა||
 წითური||
 წიკწიკი||
@@ -14233,7 +14233,7 @@ autoExpandExamples.ka = `
 წლიანი||
 წლისთავი||
 წმ.||
-წმენდს|to clean, mop|t͡sʼ§m§ɛ§n§d§s|c̣mends
+წმენდს|to clean, mop|t͡sʼ,m,ɛ,n,d,s|c̣mends
 წმიდა||
 წმინდა ომი||
 წმინდა||
@@ -14247,8 +14247,8 @@ autoExpandExamples.ka = `
 წოდებითი ბრუნვა||
 წოდებითი||
 წოდორეთი||
-წოვა|to suck|t͡sʼ§ɔ§v§ɑ|c̣ova
-წოლა|to lie (bed, state)|t͡sʼ§ɔ§l§ɑ|c̣ola 
+წოვა|to suck|t͡sʼ,ɔ,v,ɑ|c̣ova
+წოლა|to lie (bed, state)|t͡sʼ,ɔ,l,ɑ|c̣ola 
 წონა||
 წონასწორობა||
 წორო||
@@ -14281,7 +14281,7 @@ autoExpandExamples.ka = `
 წყალბადი||
 წყალგაუმტარი||
 წყალდიდობა||
-წყალი|water|t͡sʼ§qʼ§ɑ§l§i|c̣q̇ali
+წყალი|water|t͡sʼ,qʼ,ɑ,l,i|c̣q̇ali
 წყალიკრეფია||
 წყალმანკი||
 წყალმანკიანი||
@@ -14327,7 +14327,7 @@ autoExpandExamples.ka = `
 ჭალა||
 ჭალაკი||
 ჭალი||
-ჭამა|to eat|t͡ʃʼ§ɑ§m§ɑ|č̣ama
+ჭამა|to eat|t͡ʃʼ,ɑ,m,ɑ|č̣ama
 ჭამს||
 ჭანარი||
 ჭანგი||
@@ -14352,7 +14352,7 @@ autoExpandExamples.ka = `
 ჭედადი||
 ჭედადობა||
 ჭედავს||
-ჭერა|to hold|t͡ʃʼ§ɛ§r§ɑ|č̣era
+ჭერა|to hold|t͡ʃʼ,ɛ,r,ɑ|č̣era
 ჭერამი||
 ჭერი||
 ჭექა-ქუხილი||
@@ -14371,7 +14371,7 @@ autoExpandExamples.ka = `
 ჭვიშტარი||
 ჭვრეტითი||
 ჭი||
-ჭია|worm|t͡ʃʼ§i§ɑ|č̣ia
+ჭია|worm|t͡ʃʼ,i,ɑ|č̣ia
 ჭიაკოკონა||
 ჭიამაია||
 ჭიანაჭამი||
@@ -14415,7 +14415,7 @@ autoExpandExamples.ka = `
 ჭორი||
 ჭოროხი||
 ჭორფლი||
-ჭრა|to cut|t͡ʃʼ§r§ɑ|č̣ra
+ჭრა|to cut|t͡ʃʼ,r,ɑ|č̣ra
 ჭრაქი||
 ჭრაჭა-ჭრუჭი||
 ჭრელი||
@@ -14434,7 +14434,7 @@ autoExpandExamples.ka = `
 ჭუჭული||
 ჭუჭყი||
 ჭუჭყიანად||
-ჭუჭყიანი|dirty|t͡ʃʼ§u§t͡ʃʼ§qʼ§i§ɑ§n§i|č̣uč̣q̇iani
+ჭუჭყიანი|dirty|t͡ʃʼ,u,t͡ʃʼ,qʼ,i,ɑ,n,i|č̣uč̣q̇iani
 ჭყაპი||
 ჭყეტელა||
 ჭყეტელად||
@@ -14482,7 +14482,7 @@ autoExpandExamples.ka = `
 ხანმეტი||
 ხანმოკლე||
 ხანმოკლეობა||
-ხანძარი|blaze|x§ɑ§n§d͡z§ɑ§r§i|xanʒari
+ხანძარი|blaze|x,ɑ,n,d͡z,ɑ,r,i|xanʒari
 ხანჯალი||
 ხანჯლური||
 ხაო||
@@ -14525,7 +14525,7 @@ autoExpandExamples.ka = `
 ხახვი||
 ხბო||
 ხდება||
-ხე|tree|x§ɛ|xe
+ხე|tree|x,ɛ|xe
 ხედავს||
 ხედი||
 ხევი||
@@ -14548,7 +14548,7 @@ autoExpandExamples.ka = `
 ხელგაშლილი||
 ხელგაშლილობა||
 ხელთათმანი||
-ხელი|hand|x§ɛ§l§i|xeli
+ხელი|hand|x,ɛ,l,i|xeli
 ხელით||
 ხელისგული||
 ხელისუფალი||
@@ -14560,7 +14560,7 @@ autoExpandExamples.ka = `
 ხელმოწერა||
 ხელმძღვანელი||
 ხელმძღვანელობა||
-ხელმწიფე|king|x§e§l§m§t͡sʼ§i§pʰ§e|xelmc̣ipe
+ხელმწიფე|king|x,e,l,m,t͡sʼ,i,pʰ,e|xelmc̣ipe
 ხელნაწერი||
 ხელობა||
 ხელოვანი||
@@ -14623,7 +14623,7 @@ autoExpandExamples.ka = `
 ხიზანიშვილი||
 ხიზილალა||
 ხილვა||
-ხილი|fruit|x§i§l§i|xili
+ხილი|fruit|x,i,l,i|xili
 ხილული||
 ხილულობა||
 ხიმინჯი||
@@ -14672,7 +14672,7 @@ autoExpandExamples.ka = `
 ხორთუმი||
 ხორკლიანი||
 ხორუმი||
-ხორცი|meat|x§ɔ§r§t͡s§i|xorci
+ხორცი|meat|x,ɔ,r,t͡s,i|xorci
 ხორციანი||
 ხორციელი||
 ხორცსავსე||
@@ -14705,7 +14705,7 @@ autoExpandExamples.ka = `
 ხსნადი||
 ხსნადობა||
 ხსნის||
-ხუთი|five|x§u§tʰ§i|xuti
+ხუთი|five|x,u,tʰ,i|xuti
 ხუთკუთხა||
 ხუთკუთხედი||
 ხუთოცი||
@@ -14779,7 +14779,7 @@ autoExpandExamples.ka = `
 ჯაჭვური რეაქცია||
 ჯგუფი||
 ჯგუფური||
-ჯდომა|to sit|d͡ʒ§d§ɔ§m§ɑ|state 
+ჯდომა|to sit|d͡ʒ,d,ɔ,m,ɑ|state 
 ჯებირი||
 ჯეელი||
 ჯეილი||
@@ -14858,7 +14858,7 @@ autoExpandExamples.ka = `
 ჯორჯია||
 ჯოული||
 ჯოშუა||
-ჯოხი|stick|d͡ʒ§ɔ§x§i|ǯoxi
+ჯოხი|stick|d͡ʒ,ɔ,x,i|ǯoxi
 ჯოჯო||
 ჯოჯოხეთი||
 ჯოჯოხეთურად||
@@ -14920,7 +14920,7 @@ autoExpandExamples.ka = `
 ჰერმეტულად||
 ჰერმეტული||
 ჰეროინი||
-ჰერცი|hertz|h§e§r§t͡s§i|herci
+ჰერცი|hertz|h,e,r,t͡s,i|herci
 ჰერცოგი||
 ჰეტეროგენული||
 ჰეტეროსექსუალი||
@@ -14999,25 +14999,25 @@ autoExpandExamples.ka = `
 
 @ unknown source
 
-ბარვა|to dig|b§ɑ§r§v§ɑ|barva
-ბერვა|to blow|b§ɛ§r§v§ɑ|berva|
-ბიძგება|to push|b§i§d͡z§ɡ§ɛ§b§ɑ|biʒgeba|
-დაცემა|to fall|d§ɑ§t͡s§ɛ§m§ɑ|dacema|
-დაწოლა|to squeeze|d§ɑ§t͡sʼ§ɔ§l§ɑ|dac̣ola|
-დენა|to flow|d§ɛ§n§ɑ|dena|
-თამაშობა|to play|tʰ§ɑ§m§ɑ§ʃ§ɔ§b§ɑ|tamašoba|
-თვლა|to count|tʰ§v§l§ɑ|tvla|
-კვდომა|to die|kʼ§v§d§ɔ§m§ɑ|ḳvdoma|
-მტვრევა|to split|m§tʼ§v§r§ɛ§v§ɑ|mṭvreva|
-მღერა|to sing|m§ɣ§ɛ§r§ɑ|mɣera|
+ბარვა|to dig|b,ɑ,r,v,ɑ|barva
+ბერვა|to blow|b,ɛ,r,v,ɑ|berva|
+ბიძგება|to push|b,i,d͡z,ɡ,ɛ,b,ɑ|biʒgeba|
+დაცემა|to fall|d,ɑ,t͡s,ɛ,m,ɑ|dacema|
+დაწოლა|to squeeze|d,ɑ,t͡sʼ,ɔ,l,ɑ|dac̣ola|
+დენა|to flow|d,ɛ,n,ɑ|dena|
+თამაშობა|to play|tʰ,ɑ,m,ɑ,ʃ,ɔ,b,ɑ|tamašoba|
+თვლა|to count|tʰ,v,l,ɑ|tvla|
+კვდომა|to die|kʼ,v,d,ɔ,m,ɑ|ḳvdoma|
+მტვრევა|to split|m,tʼ,v,r,ɛ,v,ɑ|mṭvreva|
+მღერა|to sing|m,ɣ,ɛ,r,ɑ|mɣera|
 სხჳსი → სხვისი|others|||
-ფურთხვა|to spit|pʰ§u§r§tʰ§x§v§ɑ|purtxva|
-ფხაჭნა|to scratch|pʰ§x§ɑ§t͡ʃʼ§n§ɑ|pxač̣na|
+ფურთხვა|to spit|pʰ,u,r,tʰ,x,v,ɑ|purtxva|
+ფხაჭნა|to scratch|pʰ,x,ɑ,t͡ʃʼ,n,ɑ|pxač̣na|
 ქრისტჱ ~ ქრისტეჲ|Christ|||
-ყნოსვა|to smell|qʼ§n§ɔ§s§v§ɑ|q̇nosva|
-შეხვევა|to tie|ʃ§ɛ§x§v§ɛ§v§ɑ|šexveva|
-ჩარტყმა|to stab|t͡ʃ§ɑ§r§tʼ§qʼ§m§ɑ|čarṭq̇ma|
-ჩაცემა|to stab|t͡ʃ§ɑ§r§tʼ§qʼ§m§ɑ|čacema|
+ყნოსვა|to smell|qʼ,n,ɔ,s,v,ɑ|q̇nosva|
+შეხვევა|to tie|ʃ,ɛ,x,v,ɛ,v,ɑ|šexveva|
+ჩარტყმა|to stab|t͡ʃ,ɑ,r,tʼ,qʼ,m,ɑ|čarṭq̇ma|
+ჩაცემა|to stab|t͡ʃ,ɑ,r,tʼ,qʼ,m,ɑ|čacema|
 
 
 

@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -31,7 +31,7 @@ autoExpandExamples.pa = `
 -ਇਸਤਾਨ||
 -ਨਾ||␣|
 ਅ-||
-ਅਕਾਲ ਪੁਰਖ|God|ə§kaː§lə̆§‿§pʊ§ɾə§kʰə̆|akāl purakh|اکال پرکھ
+ਅਕਾਲ ਪੁਰਖ|God|ə,kaː,lə̆,‿,pʊ,ɾə,kʰə̆|akāl purakh|اکال پرکھ
 ਅਕਾਲੀ||
 ਅਕੇਲਾ||
 ਅਖਰੋਟ||␣|
@@ -49,7 +49,7 @@ autoExpandExamples.pa = `
 ਅਤਰ||␣|
 ਅਤੇ|and||atē
 ਅਦਬ||
-ਅਦਿੱਖ|invisible|a§dik§k
+ਅਦਿੱਖ|invisible|a,dik,k
 ਅਧਕ||␣|
 ਅਧਿਆਪਕ|teacher||adhiāpak
 ਅਧਿਕਾਰ||␣|
@@ -61,7 +61,7 @@ autoExpandExamples.pa = `
 ਅਨੰਦ||␣|
 ਅਪਰਾਧ||␣|
 ਅਫਸੋਸ||␣|
-ਅਫ਼ਗ਼ਾਨਿਸਤਾਨ|Afghanistan|ə§f§ˈɣä§nˑɪˌ§s§t̪äː§n|afġānistān|افغانستان
+ਅਫ਼ਗ਼ਾਨਿਸਤਾਨ|Afghanistan|ə,f,ˈɣä,nˑɪˌ,s,t̪äː,n|afġānistān|افغانستان
 ਅਫ਼ਗਾਨਿਸਤਾਨ||
 ਅਫ਼ਸਰ||
 ਅਬਰੋਲ||␣|
@@ -91,7 +91,7 @@ autoExpandExamples.pa = `
 ਅਸਾਮ||␣|
 ਅਸੀਂ|we (1pl)||asī̃
 ਅਸੁਰ||␣|
-ਅਹਾਰ|food|ə.§ɦäː˨§ɾə̆|ahāră|اہار
+ਅਹਾਰ|food|ə.,ɦäː˨,ɾə̆|ahāră|اہار
 ਅਹਿਣ||␣|
 ਅੈ||
 ਅੰਗ||
@@ -101,25 +101,25 @@ autoExpandExamples.pa = `
 ਅੰਗੂਰੀ||␣|
 ਅੰਚਲਾ||␣|
 ਅੰਜਲੀ||␣|
-ਅੰਞਾਣਾ|young|əɲ.§ɲaː.§ɳaː§ /ə§ɲ.d͡ʒaː.§ɳaː|ãñāṇā|انجاݨا / انیاݨا
+ਅੰਞਾਣਾ|young|əɲ.,ɲaː.,ɳaː, /ə,ɲ.d͡ʒaː.,ɳaː|ãñāṇā|انجاݨا / انیاݨا
 ਅੰਤੜੀ||
 ਅੰਨ੍ਹਾ||␣|
 ਅੰਬ||␣
-ਅੰਮ੍ਰਿਤਸਰ|Amritsar|əm.§m§ɾɪ§t̪.§sə§ɾ|ammritsar|ammritsar|امرتسر
+ਅੰਮ੍ਰਿਤਸਰ|Amritsar|əm.,m,ɾɪ,t̪.,sə,ɾ|ammritsar|ammritsar|امرتسر
 ਅੱਕਣਾ||␣|
-ਅੱਖ|eye|ə.§kkʰə̆|akkh|اَکّھ
+ਅੱਖ|eye|ə.,kkʰə̆|akkh|اَکّھ
 ਅੱਖਰ||␣
-ਅੱਗ|fire|ə§ɡ.ɡə̆|agg|اگّ
+ਅੱਗ|fire|ə,ɡ.ɡə̆|agg|اگّ
 ਅੱਗਾਯਾ||␣|
 ਅੱਗੋਂ||␣|
-ਅੱਛਾ|OK|ə§t.t͡ʃʰaː|acchā|اچھا
-ਅੱਜ ਕੱਲ੍ਹ|nowadays|ə§dd͡ʒːə̆§‿§kə˦§llə̆§‹‹|ajjă-kallhă|اج-کلھ
-ਅੱਜ-ਕੱਲ੍ਹ|nowadays|ə§dd͡ʒːə̆§‿§kə˦§llə̆§‹‹|ajjă-kallhă|اج-کلھ
-ਅੱਜ|today|ə§d͡ʒːᵊ|ajja|اج
+ਅੱਛਾ|OK|ə,t.t͡ʃʰaː|acchā|اچھا
+ਅੱਜ ਕੱਲ੍ਹ|nowadays|ə,dd͡ʒːə̆,‿,kə˦,llə̆,‹‹|ajjă-kallhă|اج-کلھ
+ਅੱਜ-ਕੱਲ੍ਹ|nowadays|ə,dd͡ʒːə̆,‿,kə˦,llə̆,‹‹|ajjă-kallhă|اج-کلھ
+ਅੱਜ|today|ə,d͡ʒːᵊ|ajja|اج
 ਅੱਠ||␣
 ਅੱਧ||␣|
 ਅੱਬਾ|father|␣|abbā
-ਅੱਭਯਾਗਤ|guest, visitor|ə§bə̀.§jɑː.§ɡə§t̪ᵊ
+ਅੱਭਯਾਗਤ|guest, visitor|ə,bə̀.,jɑː.,ɡə,t̪ᵊ
 ਅੱਲਾ||
 ਅੱਲਾਹ|Allah|␣|allāh
 ਅੱਲ੍ਹੜ||␣|
@@ -127,19 +127,19 @@ autoExpandExamples.pa = `
 ਆਂ||␣|
 ਆਂਡਾ||␣
 ਆਂਧਰਾ ਪ੍ਰਦੇਸ਼||␣|
-ਆਇੜਾ|2nd letter of alphabet|aː.§ɪ.§ɽaː|āiṛā
+ਆਇੜਾ|2nd letter of alphabet|aː.,ɪ.,ɽaː|āiṛā
 ਆਉਣਾ|to come||āuṇā
 ਆਓਤੇਆਰੋਆ|New Zealand||āoteāroā
 ਆਕਾਸ਼||␣
 ਆਖਣਾ|to say||ākhaṇā
 ਆਟਾ||␣
 ਆਥਣ||␣|
-ਆਦਮੀ|man|aː§d̪.§miː|ādmī|آدْمِی
+ਆਦਮੀ|man|aː,d̪.,miː|ādmī|آدْمِی
 ਆਦਿ||
 ਆਧਾਰ||
 ਆਨਾ||␣|
 ਆਪ||
-ਆਪਣਾ|own, personal|ə§p.§ɳɑː
+ਆਪਣਾ|own, personal|ə,p.,ɳɑː
 ਆਪਣੀ||␣|
 ਆਪਣੇ||␣|
 ਆਪਾਂ||␣|
@@ -165,7 +165,7 @@ autoExpandExamples.pa = `
 ਇਤਿਹਾਸ||
 ਇਨਸਾਨ|man (human being)||inasān
 ਇਰਾਨ||
-ਇਲਾਇਚੀ|cardamom|ɪ§laː§ɪ§t͡ʃiː|ilāicī|اِلائِچی
+ਇਲਾਇਚੀ|cardamom|ɪ,laː,ɪ,t͡ʃiː|ilāicī|اِلائِچی
 ਇਲਾਜ||␣|
 ਇਸ||
 ਇਸਟੋਨੀਆ||
@@ -174,20 +174,20 @@ autoExpandExamples.pa = `
 ਇਸ਼ਕ||␣
 ਇਸ਼ਾਰਾ||␣|
 ਇਸਾਈ||␣|
-ਇਹ|he, she, it, this|éː§‹|iha
-ਇਹਦਾ|his, hers, its|é§‹ː§d̪ɑː
+ਇਹ|he, she, it, this|éː,‹|iha
+ਇਹਦਾ|his, hers, its|é,‹ː,d̪ɑː
 ਇਹਨਾਂ||␣|
 ਇੰਗਾ|egg||iṅgā
 ਇੰਜ||
 ਇੰਦਰ||␣|
-ਇੰਨੂੰ|head cushion for carrying|ɪn§nũː|innū̃|اِنّوں
+ਇੰਨੂੰ|head cushion for carrying|ɪn,nũː|innū̃|اِنّوں
 ਇੱਕ|one|␣|ikka
 ਇੱਕੀ||␣
 ਇੱਜੜ||␣|
-ਇੱਥੇ|here|ɪ§t̪ʰːeː|itthe|اتھے
+ਇੱਥੇ|here|ɪ,t̪ʰːeː|itthe|اتھے
 ਇੱਥੋਂ||␣
 ਈ||␣|
-ਈਦ|feast, holiday|iː§d̪ᵊ|īd|عِید
+ਈਦ|feast, holiday|iː,d̪ᵊ|īd|عِید
 ਈਮਾਨ||␣|
 ਈਰਾਨ||
 ਈਸ਼ਵਰ||␣|
@@ -200,7 +200,7 @@ autoExpandExamples.pa = `
 ਉਡਣਾ||
 ਉਡਾਣ||␣|
 ਉਤਲਾ||␣|
-ਉਤਸੁਕ|curious|u§t§su§k
+ਉਤਸੁਕ|curious|u,t,su,k
 ਉਤਾਰਣਾ||␣|
 ਉਦਜਨ||
 ਉਦਾਸ||␣|
@@ -209,12 +209,12 @@ autoExpandExamples.pa = `
 ਉਪਸਮੂਹ||␣|
 ਉਮਡਣਾ||␣|
 ਉਮਰ||
-ਉਮੀਦ|hope, wish|ʊ§miː§d̪ə̆|umīd|اُمِید
+ਉਮੀਦ|hope, wish|ʊ,miː,d̪ə̆|umīd|اُمِید
 ਉਲਟੀ ਕਰਨਾ|to vomit||ulaṭī karnā
-ਉਸਤਤ|praise, admiration|ʊ§s.§t̪ə§t̪|ustat|استت
+ਉਸਤਤ|praise, admiration|ʊ,s.,t̪ə,t̪|ustat|استت
 ਉਸਤਰਾ||␣
 ਉਸਤਾਦ||␣
-ਉਸਰਈਆ|builder|ʊ§s.§ɾə§iː.§äː|usaraīā|اُسرئیا
+ਉਸਰਈਆ|builder|ʊ,s.,ɾə,iː.,äː|usaraīā|اُسرئیا
 ਉਹ|he, she, it, that|␣|uha
 ਉਹਨਾਂ||␣|
 ਉੱਖਲ||␣|
@@ -231,25 +231,25 @@ autoExpandExamples.pa = `
 ਉੱਪਲ||␣|
 ਉੱਲੂ||␣|
 ਉੱਸਰਨਾ||␣|
-ਊਠ|camel|uː§ʈʰᵊ|ūṭha|اُوٹھ
+ਊਠ|camel|uː,ʈʰᵊ|ūṭha|اُوٹھ
 ਊਠਣੀ||␣|
-ਊੜਾ ਐੜਾ|Gurmukhi script|uː.§ɽaː§ §ɛː.§ɽaː|ūṛā aiṛā
+ਊੜਾ ਐੜਾ|Gurmukhi script|uː.,ɽaː, ,ɛː.,ɽaː|ūṛā aiṛā
 ਊੜਾ||␣|
 ਏਕਤਾ|unity, oneness||ēkatā|ایکتا
 ਏਕਾ|unity, oneness||ēkā|ایکا
 ਏਸ||␣|
-ਐਤਵਾਰ|Sunday|ɛː§t̪ə̆§ʋaː§ɾə̆|aitavār|ایتوار
+ਐਤਵਾਰ|Sunday|ɛː,t̪ə̆,ʋaː,ɾə̆|aitavār|ایتوار
 ਐਧਰ ਓਧਰ||
 ਐਨਕ|glasses, spectacles||ainak
 ਐਲੇਸਟਰ||
-ਐਵੇਂ|fruitlessly, gratis|ɛː§ʋẽː|aivẽ|ایویں
+ਐਵੇਂ|fruitlessly, gratis|ɛː,ʋẽː|aivẽ|ایویں
 ਐੜਾ||␣|
-ਓਅੰਕਾਰ|God|oː§ə̃ŋ.§käː§ɾᵊ|oaṅkār|اونکار / اوانکار
+ਓਅੰਕਾਰ|God|oː,ə̃ŋ.,käː,ɾᵊ|oaṅkār|اونکار / اوانکار
 ਓਏ|hey!|␣|oē
 ਓਝ||␣|
 ਓਝਾ||␣|
 ਓਥੇ||␣|
-ਓਦਣ|on that day|oː.§d̪ə§ɳ|odaṇ|اودن
+ਓਦਣ|on that day|oː.,d̪ə,ɳ|odaṇ|اودن
 ਓਦਾਂ||␣
 ਓਦੋਂ||
 ਓਸ||␣|
@@ -257,10 +257,10 @@ autoExpandExamples.pa = `
 ਓਹਦਾ||␣|
 ਓਹਾਇਓ|Ohio||ohāio|اوہائیو
 ਓੜੀਸਾ||␣|
-ਔਖਾ|difficult|ɔː.§kʰäː|aukhā|اوکھا
+ਔਖਾ|difficult|ɔː.,kʰäː|aukhā|اوکھا
 ਔਜਲਾ||
 ਔਰਤ|woman||ōrat
-ਔਰੰਗਜ਼ੇਬ|male given name|ɔː§ɾəŋ§ɡᵊ§zeː§bᵊ|auraṅgzeb|اَوْرَنْگزیب
+ਔਰੰਗਜ਼ੇਬ|male given name|ɔː,ɾəŋ,ɡᵊ,zeː,bᵊ|auraṅgzeb|اَوْرَنْگزیب
 ਔਸਟ੍ਰੇਲੀਆ||
 ਕਈ||
 ਕਊਆ||␣|
@@ -307,12 +307,12 @@ autoExpandExamples.pa = `
 ਕਵਿਤਾ||
 ਕਸ਼ਟ||␣|
 ਕਸ਼ਤੀ||␣|
-ਕਹਾਣੀ|a story|kə.§ɦäː.§ɳiː|kahāṇīکہانی
-ਕਹਿਣਾ|to say|kɛː˦.§‹§ɳɑː|kahiṇā|کہݨا
+ਕਹਾਣੀ|a story|kə.,ɦäː.,ɳiː|kahāṇīکہانی
+ਕਹਿਣਾ|to say|kɛː˦.,‹,ɳɑː|kahiṇā|کہݨا
 ਕਹੀ||␣|
 ਕ਼||␣
 ਕ਼ਲਮ||
-ਕ਼ਿਸਮਤ|fate, destiny|qɪ§s.§mə§t̪|qismat|قسمت
+ਕ਼ਿਸਮਤ|fate, destiny|qɪ,s.,mə,t̪|qismat|قسمت
 ਕ਼ੁਰਬਾਨ||␣|
 ਕ਼ੁਸਤੁਨਤੁਨੀਆ||␣|
 ਕ਼ੌਮ|nation, people||qaum
@@ -321,9 +321,9 @@ autoExpandExamples.pa = `
 ਕਾਇਮ||
 ਕਾਇਰ||␣|
 ਕਾਉਣੀ||␣|
-ਕਾਓਂ|crow|kaː§õ|kāõ|کَاؤں
+ਕਾਓਂ|crow|kaː,õ|kāõ|کَاؤں
 ਕਾਕਾ||
-ਕਾਗ਼ਜ਼|paper|käː.§ɣə§z|kāġaz|کاغذ
+ਕਾਗ਼ਜ਼|paper|käː.,ɣə,z|kāġaz|کاغذ
 ਕਾਜ||␣|
 ਕਾਣਾ||␣|
 ਕਾਨੀ||␣|
@@ -339,7 +339,7 @@ autoExpandExamples.pa = `
 ਕਾਹਤੇ||
 ਕਾਹਦਾ||␣
 ਕਾਹਨੂੰ||
-ਕਾਹਲਾ|rapid, fast|kɑ˦.§‹§l̪ɑː˧|kāhlā|کاہلا
+ਕਾਹਲਾ|rapid, fast|kɑ˦.,‹,l̪ɑː˧|kāhlā|کاہلا
 ਕਾਹਲੋਂ||␣|
 ਕਾਹਵਾ||␣|
 ਕਾੱਨਾ||␣|
@@ -359,12 +359,12 @@ autoExpandExamples.pa = `
 ਕਿਵੇਂ|how|␣|kivē̃*
 ਕਿਸਮਤ||
 ਕਿਸ਼ਤੀ||
-ਕਿਸਾਨ|farmer|ki§sɑː§n|kisān
+ਕਿਸਾਨ|farmer|ki,sɑː,n|kisān
 ਕਿਹੋ ਜਿਹਾ||
-ਕਿਹੜਾ|who|keː˩˥.§‹§ɽaː|kihṛā|کیڑھا
+ਕਿਹੜਾ|who|keː˩˥.,‹,ɽaː|kihṛā|کیڑھا
 ਕਿੰਨਾ||␣
 ਕਿੱਤ||␣|
-ਕਿੱਥੇ|where|kɪ§tt̪ʰeː|kitthē|کتھے
+ਕਿੱਥੇ|where|kɪ,tt̪ʰeː|kitthē|کتھے
 ਕਿੱਥੋਂ||␣|
 ਕਿੱਦਾਂ||␣
 ਕੀ ਕੀ||
@@ -376,7 +376,7 @@ autoExpandExamples.pa = `
 ਕੁ-||␣|
 ਕੁ||␣|
 ਕੁਛ||␣|
-ਕੁਝ|something|kʊ.§d͡ʒ˩˥|kujh|کُجھ
+ਕੁਝ|something|kʊ.,d͡ʒ˩˥|kujh|کُجھ
 ਕੁਠਾਲੀ||␣|
 ਕੁਮਾਰ||␣|
 ਕੁਰਸੀ||
@@ -384,18 +384,18 @@ autoExpandExamples.pa = `
 ਕੁਰਾਹ||
 ਕੁਲਚਾ||␣
 ਕੁਹਾੜਾ||␣|
-ਕੁਹੀਰ|fog, mist|kʊ.§ɦiː.§ɾᵊ
-ਕੁਹੜਾ|leper|koː˩˥§‹§ɽɑ
+ਕੁਹੀਰ|fog, mist|kʊ.,ɦiː.,ɾᵊ
+ਕੁਹੜਾ|leper|koː˩˥,‹,ɽɑ
 ਕੁੜਮ||
 ਕੁੜੀ||␣
-ਕੁੰਗੂ|saffron|kʊŋ.§ɡuː|kuṅgū|کُنگُو
+ਕੁੰਗੂ|saffron|kʊŋ.,ɡuː|kuṅgū|کُنگُو
 ਕੁੰਜੀ||␣
 ਕੁੰਭ||␣|
 ਕੁੱਝ|some||kujjha
 ਕੁੱਟਣਾ||␣
-ਕੁੱਤਾ|dog|kʊ§ttaː|kuttā|کُتّا
+ਕੁੱਤਾ|dog|kʊ,ttaː|kuttā|کُتّا
 ਕੁੱਦਣਾ||␣|
-ਕੂਕਰ|dog|kuː§kə§ɾ|kūkar|کُوکَر
+ਕੂਕਰ|dog|kuː,kə,ɾ|kūkar|کُوکَر
 ਕੂਲ਼ਾ|smooth||kūḷā
 ਕੂੜ||␣
 ਕੇਂਦਰ||␣|
@@ -416,7 +416,7 @@ autoExpandExamples.pa = `
 ਕੋਠੜੀ||␣|
 ਕੋਡੀਨ||␣|
 ਕੋਰਾ||
-ਕੋਲ਼|near|koː§ɭɪ̆|koḷ
+ਕੋਲ਼|near|koː,ɭɪ̆|koḷ
 ਕੋਸ਼ਿਸ਼||
 ਕੋਸਾ||
 ਕੋਹਰਾ|fog||kohrā
@@ -429,18 +429,18 @@ autoExpandExamples.pa = `
 ਕੌਸ਼ਲ||␣|
 ਕ੍ਰਿਸਮਸ||␣|
 ਕ੍ਰੋਏਸ਼ੀਆ|Croatia||kroēśīā
-ਕ੍ਰੋਧ|anger, wrath|k§ɾoː˦.§d̪ə̆|krodh|کرودھ
+ਕ੍ਰੋਧ|anger, wrath|k,ɾoː˦.,d̪ə̆|krodh|کرودھ
 ਕੜਛੀ||␣|
 ਕੜਾ||␣|
-ਕੜਾਹ|halva|kə.§ɽäː˩˥§‹|kaṛāh|کڑاہ
+ਕੜਾਹ|halva|kə.,ɽäː˩˥,‹|kaṛāh|کڑاہ
 ਕੰਘਾ||␣|
-ਕੰਙਣ|bracelet, bangle|kəŋ§ŋə§ɳə̆|kãṅaṇ|کنگن
+ਕੰਙਣ|bracelet, bangle|kəŋ,ŋə,ɳə̆|kãṅaṇ|کنگن
 ਕੰਠ||
 ਕੰਡ||␣
 ਕੰਡਿਆਲ਼ਾ||
 ਕੰਢੀ||
 ਕੰਦੀਲ||␣|
-ਕੰਧ|wall|kə́n§d̪ɪ̆|kandh|کندھ
+ਕੰਧ|wall|kə́n,d̪ɪ̆|kandh|کندھ
 ਕੰਧਾਰੀ||␣|
 ਕੰਧੀ||
 ਕੰਨ|ear|␣|kann
@@ -457,8 +457,8 @@ autoExpandExamples.pa = `
 ਕੱਢਣਾ||␣|
 ਕੱਤਕ||␣|
 ਕੱਪਣਾ||␣|
-ਕੱਪੜਾ|clothing|kəp§pə̆§ɽaː
-ਕੱਲ੍ਹ|yesterday, tomorrow|kə́l§l§‹‹
+ਕੱਪੜਾ|clothing|kəp,pə̆,ɽaː
+ਕੱਲ੍ਹ|yesterday, tomorrow|kə́l,l,‹‹
 ਕੱਸਣਾ||␣|
 ਖਜੂਰ||␣|
 ਖਟੋਲੀ||␣|
@@ -479,7 +479,7 @@ autoExpandExamples.pa = `
 ਖ਼ਾਮੋਸ਼||
 ਖ਼ਾਲਸਤਾਨ||
 ਖ਼ਾਲਸਾ||
-ਖ਼ਾਲਿਸਤਾਨ|Punjab|xaː.§lɪ.§sə.§t̪aː.§nə|xālistān|خالصتان
+ਖ਼ਾਲਿਸਤਾਨ|Punjab|xaː.,lɪ.,sə.,t̪aː.,nə|xālistān|خالصتان
 ਖ਼ਾਲਿਸਤਾਨੀ||
 ਖ਼ਾਸ||
 ਖ਼ਿਲਾਫ਼||
@@ -497,9 +497,9 @@ autoExpandExamples.pa = `
 ਖਾਹਮਖਾਹ||
 ਖਾੜੀ||
 ਖਾੱਜਾ||␣|
-ਖਿਡੌਣਾ|toy|kʰɪ.§ɖɔː.§ɳäː|khiḍauṇā|کھڈونا
-ਖਿੜਕੀ|back door|kʰɪ§ɽ(ə).§kiː
-ਖਿੱਚਣਾ|to pull|kʰɪ.§tt͡ʃə̆§ɳäː|khiccaṇā|کچھنا
+ਖਿਡੌਣਾ|toy|kʰɪ.,ɖɔː.,ɳäː|khiḍauṇā|کھڈونا
+ਖਿੜਕੀ|back door|kʰɪ,ɽ(ə).,kiː
+ਖਿੱਚਣਾ|to pull|kʰɪ.,tt͡ʃə̆,ɳäː|khiccaṇā|کچھنا
 ਖਿੱਤੀ||␣|
 ਖਿੱਦੋ-ਛਿੱਕਾ||
 ਖੁਦਕੁਸ਼ੀ||␣|
@@ -511,7 +511,7 @@ autoExpandExamples.pa = `
 ਖੁਸ਼||
 ਖੁੰਢਾ|dull (as a knife)||khuṇḍhā
 ਖੇਉਣਾ||␣|
-ਖੇਡਣਾ|to play|kʰeː.§ɖə§̆ɳaː|kheḍăṇā
+ਖੇਡਣਾ|to play|kʰeː.,ɖə,̆ɳaː|kheḍăṇā
 ਖੇਵਾ||␣|
 ਖੈਰਾ||␣|
 ਖੋਖਰ||␣|
@@ -542,7 +542,7 @@ autoExpandExamples.pa = `
 ਗਨਰ||␣|
 ਗਰਜਣਾ||␣|
 ਗਰਦਨ|neck||gardan
-ਗਰਮ|warm|ɡə§ɾᵊ§mə̆|garam|گرم
+ਗਰਮ|warm|ɡə,ɾᵊ,mə̆|garam|گرم
 ਗਰਾਂ||␣|
 ਗਰਿਫ਼ਤਾਰ||␣|
 ਗਰੇਵਾਲ||
@@ -555,15 +555,15 @@ autoExpandExamples.pa = `
 ਗਿਆਨ||
 ਗਿਆਨਮੀਮਾਂਸਾ||
 ਗਿਆਨੀ||␣|
-ਗਿਆਰਾਂ|eleven|ɡɪ§aː§ɾãː|giārāṃ|گیاراں
+ਗਿਆਰਾਂ|eleven|ɡɪ,aː,ɾãː|giārāṃ|گیاراں
 ਗਿਣਨਾ|to count||giṇnā
 ਗਿਰਜਾ||␣|
 ਗਿੱਚੀ||
 ਗਿੱਝਣਾ||␣|
 ਗਿੱਲ||
 ਗੀਤ||
-ਗੁਆਂਢ|neigbourhood|ɡə.ʋ§ä̃ː˦ɳ§ɖə̆|gavāṇḍha|گوانڈھ
-ਗੁਆਉਣਾ|to fritter away|ɡʊ§aː§ʊ§ɳaː|guāuṇā
+ਗੁਆਂਢ|neigbourhood|ɡə.ʋ,ä̃ː˦ɳ,ɖə̆|gavāṇḍha|گوانڈھ
+ਗੁਆਉਣਾ|to fritter away|ɡʊ,aː,ʊ,ɳaː|guāuṇā
 ਗੁਜਰਾਂਵਾਲਾ||␣|
 ਗੁਜਰਾਤ||␣|
 ਗੁਟਕਾ||␣|
@@ -573,12 +573,12 @@ autoExpandExamples.pa = `
 ਗੁਰਦੁਆਰਾ||
 ਗੁਰਬਾਣੀ||␣
 ਗੁਰਮਤਾ||␣|
-ਗੁਰਮੁਖੀ|Gurmukhi|ɡʊ§ɾᵊ§mʊ§kʰiː|gurmukhī|گرمکھی
+ਗੁਰਮੁਖੀ|Gurmukhi|ɡʊ,ɾᵊ,mʊ,kʰiː|gurmukhī|گرمکھی
 ਗੁਰਸਿੱਖ||
 ਗੁਰੂ||␣
 ਗੁਲਸ਼ਨ||␣|
 ਗੁਸਾਈਂ||␣|
-ਗੁੰਝਲ਼ਦਾਰ|complex|ɡʊɳ.§d͡ʒə.§ɭə̆.§daː.§ɾə̆|guñjhḷadār|گنجھࣇدار
+ਗੁੰਝਲ਼ਦਾਰ|complex|ɡʊɳ.,d͡ʒə.,ɭə̆.,daː.,ɾə̆|guñjhḷadār|گنجھࣇدار
 ਗੁੰਡਾ||␣|
 ਗੁੰਬਦ||␣|
 ਗੁੱਮ||␣|
@@ -617,7 +617,7 @@ autoExpandExamples.pa = `
 ਗੱਲ||
 ਘਟਾਉਣਾ||␣|
 ਘਮੰਡ||␣|
-ਘਰ|house, home|kə̀§ɾə̆
+ਘਰ|house, home|kə̀,ɾə̆
 ਘਰੂੰਡਣਾ|to scratch||gharūṇḍṇā
 ਘਸਣਾ||␣|
 ਘਾਈ||␣|
@@ -626,18 +626,18 @@ autoExpandExamples.pa = `
 ਘਾਹ|grass|␣|ghāh
 ਘਾੱਟਾ||␣|
 ਘਾੱਟੀ||␣|
-ਘਿਉ|ghee|ɡ̊ɪ˥˩.§oː§ / ɡ̊joː˥˩|ghiu|گھیو
+ਘਿਉ|ghee|ɡ̊ɪ˥˩.,oː, / ɡ̊joː˥˩|ghiu|گھیو
 ਘਿਨਣਾ||␣|
 ਘੀਹ||␣|
 ਘੁਸਣਾ||␣|
 ਘੁੰਗਰੂ||␣|
-ਘੁੰਡ|veil, cover|kʊ̃˨ɳ§ɖə̆|ghuṇḍ|گھنڈ
+ਘੁੰਡ|veil, cover|kʊ̃˨ɳ,ɖə̆|ghuṇḍ|گھنڈ
 ਘੁੰਮਣ||␣|
 ਘੁੱਗੀ||
 ਘੇ||␣|
 ਘੋਟਣਾ||␣|
-ਘੋੜਾ|horse|koː˥˩.§ɽäː|ghoṛā|گھوڑا
-ਘੋੜੀ|mare|kòː§ɽi
+ਘੋੜਾ|horse|koː˥˩.,ɽäː|ghoṛā|گھوڑا
+ਘੋੜੀ|mare|kòː,ɽi
 ਘੋੱਟਾ||␣|
 ਘੌਣਾ||␣|
 ਘੰਟਾ||␣|
@@ -651,7 +651,7 @@ autoExpandExamples.pa = `
 ਚਚੇਰ||␣|
 ਚਚੇਰਾ||␣|
 ਚਨਾਬ||
-ਚਪੇੜ|slap, smack|t͡ʃə.§peː§ɽᵊ|capeṛ|چپیڑ
+ਚਪੇੜ|slap, smack|t͡ʃə.,peː,ɽᵊ|capeṛ|چپیڑ
 ਚਬਾਉਣਾ||␣|
 ਚਮੜਾ||␣|
 ਚਮੜੀ|skin||camṛī
@@ -665,11 +665,11 @@ autoExpandExamples.pa = `
 ਚਾਨਣ ਵਿਗਿਆਨ||
 ਚਾਨਣ||
 ਚਾਰ|four|␣|cār
-ਚਾਹ|tea|t͡ʃɑ́ː§‹
+ਚਾਹ|tea|t͡ʃɑ́ː,‹
 ਚਾਹਣਾ||
 ਚਾਹਲ||
 ਚਾਹਿਦਾ||
-ਚਾਹੀਦਾ|need, want|t͡ʃä́ː§j.§d̪äː§/t͡ʃä́ː.ɦiː.d̪äː
+ਚਾਹੀਦਾ|need, want|t͡ʃä́ː,j.,d̪äː,/t͡ʃä́ː.ɦiː.d̪äː
 ਚਾਹੁਣਾ||
 ਚਿਕਨਾ|smooth||ciknā
 ਚਿਕੜੀ||␣|
@@ -679,7 +679,7 @@ autoExpandExamples.pa = `
 ਚਿੜੀ-ਛਿੱਕਾ|badminton||ciṛī-chikkā
 ਚਿੜੀ||␣|
 ਚਿੰਦਾ||␣|
-ਚਿੱਟਾ|white|t͡ʃɪ§ʈʈäː|ciṭṭā|چِٹّا
+ਚਿੱਟਾ|white|t͡ʃɪ,ʈʈäː|ciṭṭā|چِٹّا
 ਚਿੱਠਾ||␣|
 ਚਿੱਠੀ||␣|
 ਚਿੱਤ||␣|
@@ -689,7 +689,7 @@ autoExpandExamples.pa = `
 ਚੀਮਾ||
 ਚੀਰ||
 ਚੁੱਕਣਾ||
-ਚੁੱਪ|silence|t͡ʃʊp§pə̆
+ਚੁੱਪ|silence|t͡ʃʊp,pə̆
 ਚੂਰਨਾ||␣|
 ਚੂਲ||␣|
 ਚੂਲਾ||␣|
@@ -716,11 +716,11 @@ autoExpandExamples.pa = `
 ਚੌਲਾ||␣|
 ਚੌਸਰ||␣|
 ਚੌੜਾ|wide|␣|cauṛā
-ਚੜ੍ਹ|climb|ʧə́§ɽ§‹
-ਚੜ੍ਹਦਾ|rising, ascending|t͡ʃə§ɽ˦.§‹§d̪äː|cáṛdā|چَڑھدا
-ਚੰਗਾ|good|t͡ʃəŋ.§ɡäː|caṅgā|چنگا
+ਚੜ੍ਹ|climb|ʧə́,ɽ,‹
+ਚੜ੍ਹਦਾ|rising, ascending|t͡ʃə,ɽ˦.,‹,d̪äː|cáṛdā|چَڑھدا
+ਚੰਗਾ|good|t͡ʃəŋ.,ɡäː|caṅgā|چنگا
 ਚੰਡੀਗੜ੍ਹ||␣
-ਚੰਦ|moon|t͡ʃən§d̪|cand|cand|چند
+ਚੰਦ|moon|t͡ʃən,d̪|cand|cand|چند
 ਚੰਦਨ||
 ਚੰਦਰਾ||
 ਚੰਨ||␣|
@@ -763,9 +763,9 @@ autoExpandExamples.pa = `
 ਛੱਡਣਾ||
 ਛੱਤ||␣
 ਛੱਤੀਸਗੜ੍ਹ||␣|
-ਛੱਲ|swell, surge|t͡ʃʰə§ll|chall|چھل
+ਛੱਲ|swell, surge|t͡ʃʰə,ll|chall|چھل
 ਜਗਦੀਸ਼||␣|
-ਜਗ੍ਹਾ|place|d͡ʒə́.§ɡ§äː
+ਜਗ੍ਹਾ|place|d͡ʒə́.,ɡ,äː
 ਜਚਾਉਣਾ||␣|
 ਜਤਾਉਣਾ||␣|
 ਜਥਾ||␣|
@@ -783,10 +783,10 @@ autoExpandExamples.pa = `
 ਜਰਮਨੀ||
 ਜਲੰਧਰ||
 ਜਵਾਈ||␣|
-ਜਵਾਬ|answer, response|dʒə§ʋaː§b|javāb|جواب
+ਜਵਾਬ|answer, response|dʒə,ʋaː,b|javāb|جواب
 ਜਹਾ||␣|
 ਜਹਾਜ਼||
-ਜ਼ਨਾਨੀ|woman|zə̆.§ˈnaːn.§niː|zanānī|زَنانِی
+ਜ਼ਨਾਨੀ|woman|zə̆.,ˈnaːn.,niː|zanānī|زَنانِی
 ਜ਼ਮੀਨ|earth|␣|zamīn
 ਜ਼ਰੂਰੀ||
 ਜ਼ਹਿਰ||␣|
@@ -812,23 +812,23 @@ autoExpandExamples.pa = `
 ਜਾਦੂਗਰ||␣|
 ਜਾਨ||␣|
 ਜਾਨਣਾ||
-ਜਾਨਵਰ|animal|d͡ʒaː§n.§ʋə§ɾə̆|jānvar|جانور
+ਜਾਨਵਰ|animal|d͡ʒaː,n.,ʋə,ɾə̆|jānvar|جانور
 ਜਾਮਣ||
 ਜਾਰੀ||␣|
-ਜਾਲ਼|net, trap|d͡ʒɑː.§ɭᵊ|jāḷ|جاࣇ / جال
+ਜਾਲ਼|net, trap|d͡ʒɑː.,ɭᵊ|jāḷ|جاࣇ / جال
 ਜਿਊਣਾ|to live||jiūṇā
 ਜਿਗਰ|liver||jigar
-ਜਿਨਸ|genus, species|gɛ§n§s
+ਜਿਨਸ|genus, species|gɛ,n,s
 ਜਿਸਮ||␣|
 ਜਿਹਾ||
 ਜਿੰਨਾ||
-ਜਿੱਤ|victory|d͡ʒɪt̪§t̪ə̆
+ਜਿੱਤ|victory|d͡ʒɪt̪,t̪ə̆
 ਜਿੱਤਣਾ||␣
 ਜੀ ਆਇਆ ਨੂੰ||
-ਜੀ ਆਇਆਂ ਨੂੰ|Welcome!|d͡ʒiː.§ §ɑː‿§ɪ§ɑ̃ː.§ §nũː
+ਜੀ ਆਇਆਂ ਨੂੰ|Welcome!|d͡ʒiː., ,ɑː‿,ɪ,ɑ̃ː., ,nũː
 ਜੀ||
 ਜੀਤ||␣|
-ਜੀਭ|tongue|d͡ʒiː§bᵊ˦|jībh|جِیبھ
+ਜੀਭ|tongue|d͡ʒiː,bᵊ˦|jībh|جِیبھ
 ਜੁੱਤੀ||␣
 ਜੁੱਧ||
 ਜੁੱਸਾ||␣|
@@ -847,7 +847,7 @@ autoExpandExamples.pa = `
 ਜੋੱਗਾ||␣|
 ਜੜਨਾ|to hit||jaṛnā
 ਜੜ੍ਹ|root||jaṛh
-ਜੰਗ|war|d͡ʒəŋ§ɡᵊ|jangă|جنگ
+ਜੰਗ|war|d͡ʒəŋ,ɡᵊ|jangă|جنگ
 ਜੰਗਲ|forest||jaṅgal
 ਜੰਞ||␣|
 ਜੰਞੂ||␣|
@@ -863,7 +863,7 @@ autoExpandExamples.pa = `
 ਝਲਾਂਗ|early morning||jhalāṅg|جھلانگ
 ਝਾਰਖੰਡ||␣|
 ਝਾੜੂ||␣|
-ਝਿੰਗਾ|shrimp|t͡ʃɪŋ˨.§ɡaː|jhiṅgā|جھِن٘گا
+ਝਿੰਗਾ|shrimp|t͡ʃɪŋ˨.,ɡaː|jhiṅgā|جھِن٘گا
 ਝੀਉਰ||␣|
 ਝੀਲ|lake||jhīl
 ਝੀਵਰ||␣|
@@ -879,11 +879,11 @@ autoExpandExamples.pa = `
 ਟਪਕਣਾ||
 ਟਮਾਟਰ||
 ਟਮਾਟਾ||
-ਟਰੱਕ|truck|ʈ§ɾə§kkᵊ|ṭarakka
+ਟਰੱਕ|truck|ʈ,ɾə,kkᵊ|ṭarakka
 ਟਾਪ||
 ਟਾਪੂ||
 ਟਾਹਣੀ||
-ਟਿਕਾਣਾ|place|tɪ§kɑː§nɑː|ṭikāṇā|ٹکانا
+ਟਿਕਾਣਾ|place|tɪ,kɑː,nɑː|ṭikāṇā|ٹکانا
 ਟਿੱਲਾ||
 ਟੀਂਡਾ||␣
 ਟੁਰਨਾ||␣
@@ -904,7 +904,7 @@ autoExpandExamples.pa = `
 ਟੱਟੀ||␣
 ਟੱਬਰ||␣
 ਠਹਿਰਨਾ||␣|
-ਠਾਕਣਾ|to prohibit|ʈʰäː§kə§̆ɳäː|ṭhākăṇāٹھاکنا
+ਠਾਕਣਾ|to prohibit|ʈʰäː,kə,̆ɳäː|ṭhākăṇāٹھاکنا
 ਠਾਕਰ||␣|
 ਠੀਕ||
 ਠੇਠ||␣|
@@ -915,7 +915,7 @@ autoExpandExamples.pa = `
 ਡਗ||␣|
 ਡਗਰ||␣|
 ਡਰ||␣|
-ਡਰਨਾ|to fear|ɖə§ɾ.§nɑː|ḍarnā|ڈرنا
+ਡਰਨਾ|to fear|ɖə,ɾ.,nɑː|ḍarnā|ڈرنا
 ਡਰਪੋਕ||␣|
 ਡਰਾਉਣਾ||␣|
 ਡਰਾਵਾ||␣|
@@ -923,7 +923,7 @@ autoExpandExamples.pa = `
 ਡਰੌਣਾ||␣|
 ਡਾਕ||
 ਡਾਕਖ਼ਾਨਾ||
-ਡਾਕਟਰ|doctor|ɖaː§kə§̆ʈə§ɾə̆|ḍākṭar|ڈاکٹر
+ਡਾਕਟਰ|doctor|ɖaː,kə,̆ʈə,ɾə̆|ḍākṭar|ڈاکٹر
 ਡਾਢ||␣|
 ਡਾੱਢਾ||␣|
 ਡਿੱਗਣਾ|to fall||ḍiggaṇā
@@ -949,8 +949,8 @@ autoExpandExamples.pa = `
 ਢਾਕ||␣|
 ਢਾਬਾ||
 ਢਾਲ||
-ਢਿੱਡ|belly|ʈɪ˨§ɖ.ɖə̆|ḍhiḍḍa|ڈھِڈّ
-ਢਿੱਡੀ|tummy|ʈɪ᷆ɖ§di
+ਢਿੱਡ|belly|ʈɪ˨,ɖ.ɖə̆|ḍhiḍḍa|ڈھِڈّ
+ਢਿੱਡੀ|tummy|ʈɪ᷆ɖ,di
 ਢਿੱਲੋਂ||
 ਢੀਠਾ||␣|
 ਢੱਠ||␣|
@@ -961,7 +961,7 @@ autoExpandExamples.pa = `
 ਤਖਤ||
 ਤਖ਼ਤ||
 ਤਜਰਬਾ||
-ਤਨਖ਼ਾਹ|pay, salary|t̪ə§n.§xɑː§ɦ|tanxāh|تنخواہ
+ਤਨਖ਼ਾਹ|pay, salary|t̪ə,n.,xɑː,ɦ|tanxāh|تنخواہ
 ਤਨਖ਼ਾਹੀਆ||
 ਤਬਲਾ||␣
 ਤਬੀਅਤ||
@@ -974,14 +974,14 @@ autoExpandExamples.pa = `
 ਤਲਵਾਰ||␣
 ਤਲ਼ਨਾ||␣|
 ਤਵਾ||
-ਤਵੀ|Tawi (river)|tə.§wiː|tawi|توی
+ਤਵੀ|Tawi (river)|tə.,wiː|tawi|توی
 ਤਸਵੀਰ||
 ਤਾਂ||␣
 ਤਾਂਬਾ||␣|
 ਤਾਕੀ||
 ਤਾਕੀਦ||␣|
 ਤਾਜ ਮਹਲ||
-ਤਾਜ ਮਹਿਲ|Taj Majal|t̪äː§d͡ʒə̆§‿§mɛ́ː§‹§lə̆
+ਤਾਜ ਮਹਿਲ|Taj Majal|t̪äː,d͡ʒə̆,‿,mɛ́ː,‹,lə̆
 ਤਾਮਬਾ||␣|
 ਤਾਮਿਲ ਨਾਡੂ||␣|
 ਤਾਰਨਾ|to float|␣|tārnā
@@ -997,21 +997,21 @@ autoExpandExamples.pa = `
 ਤਿਰਛਾ||␣|
 ਤਿਲ||
 ਤਿਹਾਰ||␣|
-ਤਿੰਨ|three|t̪ɪn̪§n̪ə̆|tinn
+ਤਿੰਨ|three|t̪ɪn̪,n̪ə̆|tinn
 ਤਿੱਨ||␣
 ਤੀਜਾ||
 ਤੀਵੀਂ||
-ਤੀਹ|thirty|tíː§‹
-ਤੁਫਾਨ|hurricane, typhoon|t̪u.§fäː.§nə̆§ / t̪ʊˈpʰäːnə̆|tuphānă|طوفان
+ਤੀਹ|thirty|tíː,‹
+ਤੁਫਾਨ|hurricane, typhoon|t̪u.,fäː.,nə̆, / t̪ʊˈpʰäːnə̆|tuphānă|طوفان
 ਤੁਰਕੀ||␣|
 ਤੁਰਣਾ||␣
-ਤੁਰਨਾ|to walk|t̪ʊ§ɾ.§nɑː|turnā|تُرنا
+ਤੁਰਨਾ|to walk|t̪ʊ,ɾ.,nɑː|turnā|تُرنا
 ਤੁਸਾਂ||␣|
 ਤੁਸੀਂ|you s.||tusī̃
 ਤੁਹਾਡਾ ਕੀ ਹਾਲ ਹੈ||
-ਤੁਹਾਡਾ|your|t̪ʊ.§(ɦ)ä́ː.ɖ§ɖäː
+ਤੁਹਾਡਾ|your|t̪ʊ.,(ɦ)ä́ː.ɖ,ɖäː
 ਤੁਹਾਥੋਂ||␣|
-ਤੁਹਾਨੂੰ|to you|t̪ʊ.§a˨.§nũː|tuhānū̃|تہانوں
+ਤੁਹਾਨੂੰ|to you|t̪ʊ.,a˨.,nũː|tuhānū̃|تہانوں
 ਤੁੱਛ||␣|
 ਤੂਫ਼ਾਨ||
 ਤੂੰ|you (2sg)|␣|tū̃*
@@ -1042,7 +1042,7 @@ autoExpandExamples.pa = `
 ਥਾਂ||␣
 ਥਾਣ||␣|
 ਥਾਪਰ||␣|
-ਥੁੱਕ|saliva|t̪ʰʊ§kkə̆|thukkă|تُھکّ
+ਥੁੱਕ|saliva|t̪ʰʊ,kkə̆|thukkă|تُھکّ
 ਥੁੱਕਣਾ|to spit||thukkaṇā
 ਥੇਹ||␣|
 ਥੋਕ||␣|
@@ -1058,22 +1058,22 @@ autoExpandExamples.pa = `
 ਦਫ਼ਾ ਹੋ ਜਾ||␣
 ਦਫ਼ਾ ਹੋ||␣
 ਦਫ਼ਾ||␣|
-ਦਰਖ਼ਤ|tree|d̪ə.§ɾə.§xə§t̪ᵊ|darxat|درخت
+ਦਰਖ਼ਤ|tree|d̪ə.,ɾə.,xə,t̪ᵊ|darxat|درخت
 ਦਰਜ||
 ਦਰਜ਼ੀ||␣|
 ਦਰਦ||
 ਦਰਬਾਰ||␣|
-ਦਰਵਾਜ਼ਾ|door|də§ɾᵊ.§ʋäː.§zäː|darvāzā|دروازہ
+ਦਰਵਾਜ਼ਾ|door|də,ɾᵊ.,ʋäː.,zäː|darvāzā|دروازہ
 ਦਰਸ਼ਨ||
 ਦਰਿਆ||
 ਦਰਿੱਦਰ||␣|
 ਦਰੁਸਤ||␣|
-ਦਰੱਖ਼ਤ|tree|d̪ə.§ɾə.§xə§t̪ᵊ|daraxxat
+ਦਰੱਖ਼ਤ|tree|d̪ə.,ɾə.,xə,t̪ᵊ|daraxxat
 ਦਲਾਲ||␣|
 ਦਲਿੱਦਰ||␣|
 ਦਵਾਖ਼ਾਨਾ||␣|
 ਦਵਾਤ||
-ਦਸ|ten|d̪ə§sə̆
+ਦਸ|ten|d̪ə,sə̆
 ਦਸਤਾਰ||␣
 ਦਸਵੰਧ||␣|
 ਦਸੰਬਰ||
@@ -1091,8 +1091,8 @@ autoExpandExamples.pa = `
 ਦਾੜ੍ਹੀ||
 ਦਿਓਰ||
 ਦਿਨ|day||din
-ਦਿਮਾਗ਼|brain|d̪ɪ.§mäː§ɣ§ / d̪ɪ.mäːɡə̆|dimāga|دماغ
-ਦਿਲ|heart|d̪ɪ§l|dil|دِل
+ਦਿਮਾਗ਼|brain|d̪ɪ.,mäː,ɣ, / d̪ɪ.mäːɡə̆|dimāga|دماغ
+ਦਿਲ|heart|d̪ɪ,l|dil|دِل
 ਦਿਵਾਨਾ||␣|
 ਦਿਵਾਲੀ||
 ਦਿੱਖ||␣|
@@ -1159,10 +1159,10 @@ autoExpandExamples.pa = `
 ਧੀਰ||␣|
 ਧੁੰਦ|fog||dhund
 ਧੂੜ|dust||dhūṛ
-ਧੂੰਆਂ|smoke|t̪ũː˨.§ä̃ː|dhū̃ā̃|دھواں
-ਧੋਣਾ|to wash|t̪ʰòː.§ɳɑː|dhoṇā
-ਧੋਬੀ|washerman|t̪òː.§biː
-ਧੰਨਵਾਦ|thank you|t̪ə̀n̪§n̪.§ʋɑː§d̪
+ਧੂੰਆਂ|smoke|t̪ũː˨.,ä̃ː|dhū̃ā̃|دھواں
+ਧੋਣਾ|to wash|t̪ʰòː.,ɳɑː|dhoṇā
+ਧੋਬੀ|washerman|t̪òː.,biː
+ਧੰਨਵਾਦ|thank you|t̪ə̀n̪,n̪.,ʋɑː,d̪
 ਧੱਕਣਾ|to push||dhakkaṇā
 ਧੱਧਾ||␣|
 ਨਈਂ||␣|
@@ -1178,16 +1178,16 @@ autoExpandExamples.pa = `
 ਨਨਾਣ||␣|
 ਨਮਸਕਾਰ||␣
 ਨਰੂਲਾ||␣|
-ਨਵਾਂ|new|nə.§ʋɑ̃ː|navā̃|نوَاں
+ਨਵਾਂ|new|nə.,ʋɑ̃ː|navā̃|نوَاں
 ਨਸਲ||
 ਨਸ਼ਾ||␣|
 ਨਸੀਹਤ||
-ਨਹੀਂ|no, not|nə˦§ĩː§ / nə˦.ɦĩː|nahī̃|نہیں
+ਨਹੀਂ|no, not|nə˦,ĩː, / nə˦.ɦĩː|nahī̃|نہیں
 ਨਹੁੰ||␣|
 ਨਾ|not|␣|nā
 ਨਾਂ||
 ਨਾਈ||␣
-ਨਾਗ|cobra|näː§ɡə̆|nāg|ناگ
+ਨਾਗ|cobra|näː,ɡə̆|nāg|ناگ
 ਨਾਗਾਲੈਂਡ||␣|
 ਨਾਥ||
 ਨਾਦ||
@@ -1234,23 +1234,23 @@ autoExpandExamples.pa = `
 ਨੱਚਣਾ||␣
 ਨੱਠਣਾ||
 ਨੱਸਣਾ||␣|
-ਪਖਾਣ|stone|pə§kʰaː§ɳə̆|pakhāṇ|پکھان
+ਪਖਾਣ|stone|pə,kʰaː,ɳə̆|pakhāṇ|پکھان
 ਪਖੰਡ||␣|
 ਪਗ||
-ਪਘਾਰਨਾ|to melt|pə§ɡa˥˩§r§nɑ
+ਪਘਾਰਨਾ|to melt|pə,ɡa˥˩,r,nɑ
 ਪਛਾਣ||␣|
 ਪਟੜੀ||␣|
 ਪਠਾਣ||␣|
 ਪਠਾਰ||␣|
-ਪਤਝੜ|autumn|pə.§t̪ə̆˦.§d͡ʒə.§ɽə̆|patjhaṛ|پتجھڑ
+ਪਤਝੜ|autumn|pə.,t̪ə̆˦.,d͡ʒə.,ɽə̆|patjhaṛ|پتجھڑ
 ਪਤਣੀ||␣|
 ਪਤਨੀ|wife||patnī
-ਪਤਲਾ|thin|pə§t̪.§lɑː|patlā|پتلا
+ਪਤਲਾ|thin|pə,t̪.,lɑː|patlā|پتلا
 ਪਤਾ|leaf||patā
 ਪਤੀ|husband||patī
 ਪਥ||␣|
 ਪਨਾਹ||
-ਪਰ|wing|pə§ɾ
+ਪਰ|wing|pə,ɾ
 ਪਰਤਣਾ||
 ਪਰਦਾ||␣|
 ਪਰਮ||␣|
@@ -1267,18 +1267,18 @@ autoExpandExamples.pa = `
 ਪਹਾਰਾ||
 ਪਹਾੜ|mountain|␣|pahāṛ
 ਪਹਿਰਾ||␣|
-ਪਹਿਲਾ|first|p§ɛ́(ɦ).§lɑː
+ਪਹਿਲਾ|first|p,ɛ́(ɦ).,lɑː
 ਪਹਿਲਾਂ||
 ਪਹੁੰਚਣਾ||
 ਪਾਂਡੂ||␣|
 ਪਾਉਣਾ||␣
-ਪਾਕਿਸਤਾਨ|Pakistan|ˈpäː.§kɪ§s.§t̪äː§n|pākistān|پاکستان
+ਪਾਕਿਸਤਾਨ|Pakistan|ˈpäː.,kɪ,s.,t̪äː,n|pākistān|پاکستان
 ਪਾਕਿਸਤਾਨੀ||
 ਪਾਗਲ||
 ਪਾਟਣਾ||
 ਪਾਠ||␣|
 ਪਾਠੀ||
-ਪਾਣੀ|water|päː.§ɳiː|pāṇī|پاݨِی
+ਪਾਣੀ|water|päː.,ɳiː|pāṇī|پاݨِی
 ਪਾਤ||␣|
 ਪਾਪੜ||␣|
 ਪਾਰਦਰਸ਼ੀ||
@@ -1288,14 +1288,14 @@ autoExpandExamples.pa = `
 ਪਿਆਰ||
 ਪਿਆਲਾ||␣|
 ਪਿਆਲੀ||␣|
-ਪਿਓ|father|pɪ.§oː§/pe.oː|pio
+ਪਿਓ|father|pɪ.,oː,/pe.oː|pio
 ਪਿਤਾ|father||pitā
 ਪਿਸਰ||␣
 ਪਿੰਡ||
 ਪਿੰਡੂ||␣|
 ਪਿੰਨਾ||␣|
 ਪਿੱਛੋਂ||
-ਪਿੱਠ|back|pɪ§ʈʰ|piṭṭha*
+ਪਿੱਠ|back|pɪ,ʈʰ|piṭṭha*
 ਪਿੱਤਲ਼||␣|
 ਪੀ||
 ਪੀਣਾ|to drink|␣|pīṇā
@@ -1308,7 +1308,7 @@ autoExpandExamples.pa = `
 ਪੁਰਾਣਾ|old||purāṇā
 ਪੁਰੀ||␣|
 ਪੁਲ||␣|
-ਪੁਲਿਸ|police|pʊ§ɭ§sə̆§/pʊɭɪsə̆
+ਪੁਲਿਸ|police|pʊ,ɭ,sə̆,/pʊɭɪsə̆
 ਪੁਲਿੰਗ||
 ਪੁਸਤਕ||
 ਪੁਸਤਕਾਲਾ||
@@ -1340,9 +1340,9 @@ autoExpandExamples.pa = `
 ਪੌਣਾ||␣|
 ਪ੍ਰਕਾਸ਼||␣|
 ਪ੍ਰਧਾਨ||
-ਪ੍ਰਬੰਧ|management|p§rə§bə́n§d̪
-ਪ੍ਰਬੰਧਕ|manager|p§ɾə.§bən˦.§d̪ə§kᵊ|prabandhak|پربندھک
-ਪ੍ਰਭੂ|lord, God|pə̆.§ɾə˩˥.§buː|prabhū|پربھ‬و
+ਪ੍ਰਬੰਧ|management|p,rə,bə́n,d̪
+ਪ੍ਰਬੰਧਕ|manager|p,ɾə.,bən˦.,d̪ə,kᵊ|prabandhak|پربندھک
+ਪ੍ਰਭੂ|lord, God|pə̆.,ɾə˩˥.,buː|prabhū|پربھ‬و
 ਪ੍ਰਾਂਗਾਰ|carbon||prāṅgār
 ਪ੍ਰਾਣਵਾਯੂ|oxygen||prāṇvāyū
 ਪ੍ਰੀਤ||
@@ -1353,14 +1353,14 @@ autoExpandExamples.pa = `
 ਪੰਜ ਪਿਆਰੇ||␣|
 ਪੰਜ|five|␣|pañj
 ਪੰਜਾਬ||␣
-ਪੰਜਾਬੀ|Punjabi|pəɲ.§d͡ʒäː.§biː|pañjābī
+ਪੰਜਾਬੀ|Punjabi|pəɲ.,d͡ʒäː.,biː|pañjābī
 ਪੰਜਾਬੀਅਤ||␣|
 ਪੰਤ|feather||pant
 ਪੰਦਰਾਂ||
 ਪੰਨਾ||␣|
-ਪੱਕੀ|ripe|pək§ki
+ਪੱਕੀ|ripe|pək,ki
 ਪੱਖ|wing||pakkha
-ਪੱਛ|armpit|kə§t̚t͡ʃᵊ|kaccha|کچھ
+ਪੱਛ|armpit|kə,t̚t͡ʃᵊ|kaccha|کچھ
 ਪੱਛਮੀ ਬੰਗਾਲ||␣|
 ਪੱਛੋਂ||␣|
 ਪੱਟ||
@@ -1377,10 +1377,10 @@ autoExpandExamples.pa = `
 ਫ਼ਤਿਹ||␣
 ਫ਼ਨਕਾਰ||
 ਫ਼ਰਕ||
-ਫ਼ਰਸ਼|floor|pʰə§ɾ§ʃə§̆/fəɾʃə̆
+ਫ਼ਰਸ਼|floor|pʰə,ɾ,ʃə,̆/fəɾʃə̆
 ਫ਼ਰਿਸਤ||
 ਫ਼ਰਿਸ਼ਤਾ||␣
-ਫ਼ਲਸਤੀਨ|Palestine|fə§lə§s§t̪iː§nə̆§ / pʰələs(ə̆)t̪iːnə̆|falastīnă|فلسطین
+ਫ਼ਲਸਤੀਨ|Palestine|fə,lə,s,t̪iː,nə̆, / pʰələs(ə̆)t̪iːnə̆|falastīnă|فلسطین
 ਫ਼ਲੂਦਾ||␣|
 ਫ਼ਾਕਾ||
 ਫ਼ਿਕਰ||␣|
@@ -1400,12 +1400,12 @@ autoExpandExamples.pa = `
 ਫੁਫੇਰਾ||␣|
 ਫੁੱਫੀ||␣|
 ਫੁੱਲ ਗੋਭੀ||␣|
-ਫੁੱਲ|flower|pʰʊ§lːə̆§ / fʊlːə̆|phullă|پھل
+ਫੁੱਲ|flower|pʰʊ,lːə̆, / fʊlːə̆|phullă|پھل
 ਫੂਕਣਾ|to blow||phūkṇā
 ਫੂਸੀ||␣|
 ਫੇਰ||␣|
 ਫੈਂਟਾ||
-ਫੜਨਾ|to hold|pʰə§ɽᵊ.§näː|phaṛnā|پھڑنا
+ਫੜਨਾ|to hold|pʰə,ɽᵊ.,näː|phaṛnā|پھڑنا
 ਫੰਬਾ||
 ਫੱਗਣ||␣|
 ਫੱਟ||
@@ -1415,7 +1415,7 @@ autoExpandExamples.pa = `
 ਬਖਾਨਣਾ||␣|
 ਬਗਲਾ||
 ਬਗ਼ੈਰ||
-ਬਘਿਆੜ|wolf|bə.§ɡĕj˥˩.§äː§ɽᵊ|baghiāṛa|بگھیاڑ
+ਬਘਿਆੜ|wolf|bə.,ɡĕj˥˩.,äː,ɽᵊ|baghiāṛa|بگھیاڑ
 ਬਚਾਉਣਾ||
 ਬਛੇਰਟਾ||␣|
 ਬਛੇਰਾ||␣|
@@ -1432,7 +1432,7 @@ autoExpandExamples.pa = `
 ਬਬੂਲ||␣|
 ਬਰਕਤ||
 ਬਰਤਾਨੀਆ||
-ਬਰਫ਼|ice, snow|bə˦.§ɾə§fᵊ|baraf|برف
+ਬਰਫ਼|ice, snow|bə˦.,ɾə,fᵊ|baraf|برف
 ਬਰਮਾ||
 ਬਰਸਾਤ||
 ਬਰਾਤ||␣|
@@ -1450,15 +1450,15 @@ autoExpandExamples.pa = `
 ਬਸੀਠ||␣|
 ਬਸੰਤ||␣|
 ਬਹਿਣਾ|to sit||bahiṇā
-ਬਹਿਲ|surname|bɛː˦.§‹§lə̆|bahil|بہل
-ਬਹੁਤ|many|bɔː˩˥.§t|bahut|بہت
+ਬਹਿਲ|surname|bɛː˦.,‹,lə̆|bahil|بہل
+ਬਹੁਤ|many|bɔː˩˥.,t|bahut|بہت
 ਬਹੁੜਨਾ||
 ਬਾਂ||␣|
 ਬਾਂਦਰ||␣|
-ਬਾਂਹ|arm|bä̃ː˦§‹|bā̃h|بانہہ
+ਬਾਂਹ|arm|bä̃ː˦,‹|bā̃h|بانہہ
 ਬਾਅਦ||
 ਬਾਗ਼||␣|
-ਬਾਘ|tiger|baː§ɡɡ˩˥|bāgh|باگھ
+ਬਾਘ|tiger|baː,ɡɡ˩˥|bāgh|باگھ
 ਬਾਜਵਾ||
 ਬਾਜਾਰ||␣|
 ਬਾਜੇ||␣|
@@ -1471,14 +1471,14 @@ autoExpandExamples.pa = `
 ਬਾਮ||
 ਬਾਰਸ਼||
 ਬਾਰਾਂ||␣
-ਬਾਰਿਸ਼|rain|baː.§ɾɪ§ʃ|bāriś|بارش
+ਬਾਰਿਸ਼|rain|baː.,ɾɪ,ʃ|bāriś|بارش
 ਬਾਰੀ||␣
 ਬਾਰੇ||
 ਬਾਲੜੀ||
 ਬਾਵਾ||␣|
 ਬਾਹਮਣ||␣|
 ਬਾਹਰ||␣|
-ਬਾਹਰੀ|a surname|bäː˦.§‹§ɾiː|bāhrī|باہری
+ਬਾਹਰੀ|a surname|bäː˦.,‹,ɾiː|bāhrī|باہری
 ਬਿਆਸ||
 ਬਿਗਾਨਾ||
 ਬਿਨ||
@@ -1487,7 +1487,7 @@ autoExpandExamples.pa = `
 ਬਿਰਛ||
 ਬਿਰਹਾ||
 ਬਿਲਕੁਲ||
-ਬਿਸਕੁਟ|biscuit|bɪ§s.§kʊ§ʈ|biskuṭ|بسکٹ
+ਬਿਸਕੁਟ|biscuit|bɪ,s.,kʊ,ʈ|biskuṭ|بسکٹ
 ਬਿਹਾਰ||␣|
 ਬਿੰਦਰਾ||␣|
 ਬਿੰਦੀ||␣
@@ -1506,7 +1506,7 @@ autoExpandExamples.pa = `
 ਬੁੱਧਵਾਰ||␣
 ਬੁੱਲ੍ਹ||
 ਬੂਟਾ||␣
-ਬੂਹਾ|door|buː.§ɦăː§/búː.ăː
+ਬੂਹਾ|door|buː.,ɦăː,/búː.ăː
 ਬੂੰਦੀ||␣|
 ਬੇਈਮਾਨ||
 ਬੇਗਮਪੁਰਾ||
@@ -1520,8 +1520,8 @@ autoExpandExamples.pa = `
 ਬੇੜੀ||␣
 ਬੈਂਗਣ||
 ਬੈਂਗਣੀ||␣|
-ਬੈਠਣਾ|to sit down|bɛː§ʈʰ.§nɑː|baiṭhaṇā|بیٹھنا
-ਬੋਲਣਾ|to speak, say|bō§lᵊ.§ɳɑː|bolṇā|بولݨا
+ਬੈਠਣਾ|to sit down|bɛː,ʈʰ.,nɑː|baiṭhaṇā|بیٹھنا
+ਬੋਲਣਾ|to speak, say|bō,lᵊ.,ɳɑː|bolṇā|بولݨا
 ਬੋਲੀ||
 ਬ੍ਰਹਮਦੇਸ਼||
 ਬ੍ਰਿਟਨ||
@@ -1548,26 +1548,26 @@ autoExpandExamples.pa = `
 ਭਤ੍ਰੀਯਾ||␣|
 ਭਨੋਟ||␣|
 ਭਰਜਾਈ||␣|
-ਭਰਾ|brother|p§ɾä̀ː
-ਭਰੋਸਾ|trust, confidence|pə˨.§ɾoː˨.§sɑː|bharosā|بھروسا
+ਭਰਾ|brother|p,ɾä̀ː
+ਭਰੋਸਾ|trust, confidence|pə˨.,ɾoː˨.,sɑː|bharosā|بھروسا
 ਭਲਕੇ||
 ਭਲ਼ਕ||
 ਭਲਾ||
 ਭਵਿੱਖ||
 ਭਸੂੜੀ||␣|
 ਭਾਂਡਾ||␣|
-ਭਾਈ|brother|pɑː˩˨.§iː|bhāī|بھائی
+ਭਾਈ|brother|pɑː˩˨.,iː|bhāī|بھائی
 ਭਾਜਪਾ||
 ਭਾਟੀਆ||␣|
 ਭਾਦੋਂ||␣|
 ਭਾਪਾ||
-ਭਾਰਤ|India|pàː§rə§t̪
-ਭਾਰਾ|heavy|bhɑ̀ː.§ɾɑː
+ਭਾਰਤ|India|pàː,rə,t̪
+ਭਾਰਾ|heavy|bhɑ̀ː.,ɾɑː
 ਭਾਰੀ|heavy||bhārī
 ਭਾਵੇਂ||␣|
 ਭਾਸ਼ਾ||
-ਭਿਖੵਾ|begging|pɪ̀§kkʰjaː
-ਭਿੰਡੀ|okra|pɪ̀ɳ.§ɖiː
+ਭਿਖੵਾ|begging|pɪ̀,kkʰjaː
+ਭਿੰਡੀ|okra|pɪ̀ɳ.,ɖiː
 ਭਿੱਜ|wet||bhijja
 ਭੀਡ਼ਾ|narrow||bhīṛā
 ਭੀੜ||
@@ -1579,16 +1579,16 @@ autoExpandExamples.pa = `
 ਭੇਂਟ||␣|
 ਭੇਡ|sheep||bheḍ
 ਭੇੱਜਾ||␣|
-ਭੈਣ|sister|pɛ˨.§ɳə̆|bhaiṇ|بھین
+ਭੈਣ|sister|pɛ˨.,ɳə̆|bhaiṇ|بھین
 ਭੈੜਾ||␣|
 ਭੋਂਯੇ||␣|
-ਭੋਏਂ|land|b̥oː˥˩§ẽː|bhoē̃|بھوئیں
-ਭੋਜਨ|food, meal|pòː.§d͡ʒə§nə̆
+ਭੋਏਂ|land|b̥oː˥˩,ẽː|bhoē̃|بھوئیں
+ਭੋਜਨ|food, meal|pòː.,d͡ʒə,nə̆
 ਭੰਗ||␣|
 ਭੰਗੜਾ||␣
 ਭੱਜ||␣
 ਭੱਜਣ||
-ਭੱਜਣਾ|to run|pə˨§d͡ʒːə̆§ɳaː|bhajjăṇā|بھجنا
+ਭੱਜਣਾ|to run|pə˨,d͡ʒːə̆,ɳaː|bhajjăṇā|بھجنا
 ਭੱਟੀ||␣|
 ਭੱਭਾ||␣|
 ਭੱਲਾ ਹੋਵੇ||␣|
@@ -1616,7 +1616,7 @@ autoExpandExamples.pa = `
 ਮਰੀ||␣|
 ਮਲ਼ਨਾ|to rub||maḷnā
 ਮਲੇਸ਼ੀਆ||
-ਮਸ਼ਹੂਰ|famous|mə§ʃᵊ§ɦuː§ɾ
+ਮਸ਼ਹੂਰ|famous|mə,ʃᵊ,ɦuː,ɾ
 ਮਸਾਲ||
 ਮਸੀਤ||␣
 ਮਸੀਹ||␣|
@@ -1625,7 +1625,7 @@ autoExpandExamples.pa = `
 ਮਸੇਰਾ||␣|
 ਮਹਾਰਾਜਾ||␣|
 ਮਹਿਲ||
-ਮਹਿੰਗਾ|expensive|m§ɛ́ːŋ§ɡaː|mahiṅgā|مہنگا
+ਮਹਿੰਗਾ|expensive|m,ɛ́ːŋ,ɡaː|mahiṅgā|مہنگا
 ਮਹਿੰਦਰੂ||␣|
 ਮਹੀਨਾ||␣|
 ਮਹੱਲ||
@@ -1659,8 +1659,8 @@ autoExpandExamples.pa = `
 ਮਾਹੀ||␣|
 ਮਿਆਂਮਾਰ||
 ਮਿਜ਼ੋਰਮ||␣|
-ਮਿਥੵੰਤ|deceiving|mɪ§t̪ʰjən̪§t̪ə
-ਮਿਨਟ|minute|mɪ§ɳ§ʈᵊ§/mɪ.nəʈ.ʈᵊ
+ਮਿਥੵੰਤ|deceiving|mɪ,t̪ʰjən̪,t̪ə
+ਮਿਨਟ|minute|mɪ,ɳ,ʈᵊ,/mɪ.nəʈ.ʈᵊ
 ਮਿਲਣਾ||
 ਮਿਹਨਤ||␣|
 ਮਿਹਰਬਾਨੀ||␣|
@@ -1671,7 +1671,7 @@ autoExpandExamples.pa = `
 ਮੀਆਂ||␣|
 ਮੀਆਂਮਾਰ||
 ਮੀਮਾਂਸਾ||␣|
-ਮੀਹ|rain|míː§‹
+ਮੀਹ|rain|míː,‹
 ਮੁਕਤੀ||␣|
 ਮੁਖ||␣
 ਮੁਖੀ||
@@ -1703,8 +1703,8 @@ autoExpandExamples.pa = `
 ਮੂਰਖ||␣|
 ਮੂਲੀ||␣|
 ਮੂਸਲ||␣|
-ਮੂੰਡਾ|boy|muɳ§ɖɑ
-ਮੂੰਹ|mouth|mũː§ɦ|mū̃h|مونہہ
+ਮੂੰਡਾ|boy|muɳ,ɖɑ
+ਮੂੰਹ|mouth|mũː,ɦ|mū̃h|مونہہ
 ਮੇਘਾਲਿਆ||␣|
 ਮੇਜ਼||␣|
 ਮੇਮਣਾ||
@@ -1740,7 +1740,7 @@ autoExpandExamples.pa = `
 ਮੱਖਣ||␣|
 ਮੱਘਰ||␣|
 ਮੱਛੀ|fish|␣|macchī
-ਮੱਝ|water buffalo|mə˩˥.§d͡ʒːᵊ|majjha|مجھ
+ਮੱਝ|water buffalo|mə˩˥.,d͡ʒːᵊ|majjha|مجھ
 ਮੱਥਾ||
 ਮੱਧ ਪ੍ਰਦੇਸ਼||␣|
 ਮੱਮਾ||␣|
@@ -1751,14 +1751,14 @@ autoExpandExamples.pa = `
 ਯਹੂਦੀ||␣|
 ਯਾਰ|friend, pal||yār
 ਯਿਸੂ||␣|
-ਯੁਨਾਨ|Greece|jʊ.§ˈnäː§nᵊ|yunān|یُنان
+ਯੁਨਾਨ|Greece|jʊ.,ˈnäː,nᵊ|yunān|یُنان
 ਯੁਵਰਾਜ||␣|
 ਯੂਕਰੇਨ||␣|
 ਯੂਨਾਈਟਡ ਕਿੰਗਡਮ||␣|
 ਯੂਨਾਨ||␣|
 ਯੱਯਾ||␣|
 ਰਕਤ|blood||rakat
-ਰਖੵਾ|protected|ɾə§kkʰjaː
+ਰਖੵਾ|protected|ɾə,kkʰjaː
 ਰਗ||
 ਰਜ਼ਾਮੰਦ||
 ਰਮਜ਼ਾਨ||
@@ -1768,12 +1768,12 @@ autoExpandExamples.pa = `
 ਰਸਤਾ||
 ਰਸੋਈ||␣
 ਰਹਾਉਣਾ||
-ਰਹਿਣਾ|to stay, remain|ɾ§ɛ́(ɦ).§ɳɑː§/ɾæ˦(ɦ).ɳɑː
+ਰਹਿਣਾ|to stay, remain|ɾ,ɛ́(ɦ).,ɳɑː,/ɾæ˦(ɦ).ɳɑː
 ਰਹਿਤ||␣|
 ਰਹੀਮ||␣|
 ਰਾਂਝਨ||
 ਰਾਂਝਾ||␣
-ਰਾਇ|prince, bard|ɾaː§ɪ|rāi
+ਰਾਇ|prince, bard|ɾaː,ɪ|rāi
 ਰਾਇਤ||␣|
 ਰਾਈਂ||␣|
 ਰਾਖ|ash||rākh
@@ -1813,27 +1813,27 @@ autoExpandExamples.pa = `
 ਰੁੱਦਰਾਖ||␣|
 ਰੁੱਪਾ||␣|
 ਰੂਪ||
-ਰੂਸ|Russia|ɾuː§s|rūs|روس
+ਰੂਸ|Russia|ɾuː,s|rūs|روس
 ਰੇਤ|sand||rēt
 ਰੇਲਗੱਡੀ||
 ਰੈਬਟਾ||
 ਰੋਕ||␣|
 ਰੋਜ਼||
 ਰੋਜ਼ਾ||
-ਰੌਲ਼ਾ|noise, uproar|ɾɔː.§ɭɑː|rauḷā|رَوࣇا
+ਰੌਲ਼ਾ|noise, uproar|ɾɔː.,ɭɑː|rauḷā|رَوࣇا
 ਰੜਕ||
 ਰੰਗ||␣
 ਰੰਗਾਵਲ||
 ਰੰਡੀ||␣|
 ਰੰਧਾਵਾ||
 ਰੱਖਣਾ||␣
-ਰੱਤ|blood|ratta|ɾə§t̪.t̪ə̆|رتّ
+ਰੱਤ|blood|ratta|ɾə,t̪.t̪ə̆|رتّ
 ਰੱਦ||␣|
 ਰੱਬ||␣
 ਰੱਬੀ||␣|
-ਰੱਸੀ|rope|ɾə§s.iː|rassī|رسّی
+ਰੱਸੀ|rope|ɾə,s.iː|rassī|رسّی
 ਲਈ||
-ਲਖਣਾ|to understand|lə§kʰə̆§ɳaː|lakhṇā|لکھنا
+ਲਖਣਾ|to understand|lə,kʰə̆,ɳaː|lakhṇā|لکھنا
 ਲਗ||␣|
 ਲਫ਼ਜ਼||␣|
 ਲਫ਼ਾਫ਼ਾ||
@@ -1858,7 +1858,7 @@ autoExpandExamples.pa = `
 ਲੁਧਿਆਣਾ||␣|
 ਲੁਹਾਰ||␣|
 ਲੂਣ|salt|␣|lūṇ
-ਲੂੰਬੜ|male fox|luːm§bə§ɽ|lūmbaṛ|لونبڑ
+ਲੂੰਬੜ|male fox|luːm,bə,ɽ|lūmbaṛ|لونبڑ
 ਲੂੰਬੜੀ||␣
 ਲੇਕਨ||
 ਲੇਕਿਨ||
@@ -1871,15 +1871,15 @@ autoExpandExamples.pa = `
 ਲੋਭ||␣|
 ਲੋੜ||␣
 ਲੌਂਗ||
-ਲ੍ਹਾਸਾ|Lhasa|laː§s˥˩.saː|lhāsā|لھاسہ
+ਲ੍ਹਾਸਾ|Lhasa|laː,s˥˩.saː|lhāsā|لھاسہ
 ਲੜਨਾ|to fight||laṛnā
 ਲੜਾਕਾ||␣
 ਲੰਗਰ||␣
 ਲੰਘਣਾ||␣|
-ਲੰਙਾ|lame|ləŋ§ŋaː|lãṅā
+ਲੰਙਾ|lame|ləŋ,ŋaː|lãṅā
 ਲੰਬਾ||
 ਲੰਮਾ|long||lammā
-ਲੰਮੀ|long|ləm§mi
+ਲੰਮੀ|long|ləm,mi
 ਲੱਖ||
 ਲੱਡੂ||␣|
 ਲੱਤ|leg||latta
@@ -1891,11 +1891,11 @@ autoExpandExamples.pa = `
 ਵਟਨਾ||␣|
 ਵਢਾਉਣਾ||␣|
 ਵਣ||
-ਵਣਜਾਰਾ|trader, peddlar|ʋə§ɳə̆§d͡ʒaː§ɾaː|vaṇjārā|ونجارا
+ਵਣਜਾਰਾ|trader, peddlar|ʋə,ɳə̆,d͡ʒaː,ɾaː|vaṇjārā|ونجارا
 ਵਣਜਾਰੀ||␣|
 ਵਤਨ||
-ਵਧਣਾ|to increase|ˈʋə˥§d̪ᵊ.§ɳä|vadhṇā|ودھنا
-ਵਧੀਆ|great, good|ˈʋə˩˥.§d̪i.j§aː|vadhīā|ودھیا
+ਵਧਣਾ|to increase|ˈʋə˥,d̪ᵊ.,ɳä|vadhṇā|ودھنا
+ਵਧੀਆ|great, good|ˈʋə˩˥.,d̪i.j,aː|vadhīā|ودھیا
 ਵਧੇਰਾ||
 ਵਰ||␣|
 ਵਰਕ||
@@ -1907,58 +1907,58 @@ autoExpandExamples.pa = `
 ਵਰਤੋਕਾਰ||
 ਵਰਾਛ||␣|
 ਵਲਾਇਤ||␣|
-ਵਸਤੂ|thing|bə§s§t̪|vastū
-ਵਹੁਟੀ|bride|ʋɔː˦.§‹§ʈiː|vahuṭī|وہٹی|wɔː˦.ʈiː
+ਵਸਤੂ|thing|bə,s,t̪|vastū
+ਵਹੁਟੀ|bride|ʋɔː˦.,‹,ʈiː|vahuṭī|وہٹی|wɔː˦.ʈiː
 ਵਾ||␣
 ਵਾਂ||␣|
 ਵਾਂਗ||
-ਵਾਂਙੁ|oil|ʋaːŋ§ŋʊ|vā̃ṅu|ونگ
+ਵਾਂਙੁ|oil|ʋaːŋ,ŋʊ|vā̃ṅu|ونگ
 ਵਾਅਦਾ||␣|
 ਵਾਇਦਾ||␣|
 ਵਾਪਸ|back||vāpas*
-ਵਾਰ|time, occasion|ʋɑ̈ː§ɾᵊ|vār
+ਵਾਰ|time, occasion|ʋɑ̈ː,ɾᵊ|vār
 ਵਾਰੀ||␣
-ਵਾਲ|hair|ʋɑː§ɭ|vāl|وال
+ਵਾਲ|hair|ʋɑː,ɭ|vāl|وال
 ਵਾਵਾ||␣|
 ਵਾਹ||␣
 ਵਾਹਗੁਰੂ||
 ਵਾਹਰ||␣|
 ਵਾਹਵਾ||␣|
 ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖ਼ਾਲਸਾ ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫ਼ਤਿਹ||␣|
-ਵਾਹਿਗੁਰੂ|God|ʋɑː§ǽ.§ɡʊ.§ruː
+ਵਾਹਿਗੁਰੂ|God|ʋɑː,ǽ.,ɡʊ.,ruː
 ਵਾੜ||␣|
 ਵਿਅਕਤੀ||
-ਵਿਅਸਤ|busy|ʋj§ə§s§t̪ᵊ|viasat|وئست
+ਵਿਅਸਤ|busy|ʋj,ə,s,t̪ᵊ|viasat|وئست
 ਵਿਆਕਰਨ||␣|
-ਵਿਆਹ|marriage|ʋɪ̆.§ä́ː§‹|viāha
+ਵਿਆਹ|marriage|ʋɪ̆.,ä́ː,‹|viāha
 ਵਿਕੀਪੀਡੀਆ||
 ਵਿਚ||
 ਵਿਚਕਾਰ||
 ਵਿਚਲਾ||
 ਵਿਚਾਰ||
 ਵਿਚਾਰਾ||␣|
-ਵਿਡਿਓ-ਗੇਮ|video game|ʋɪ§ɖɪ§oː.§§ɡeː§m|viḍio-gem|وڈیو-گیم
+ਵਿਡਿਓ-ਗੇਮ|video game|ʋɪ,ɖɪ,oː.,,ɡeː,m|viḍio-gem|وڈیو-گیم
 ਵਿਦਿਆਰਥੀ||
 ਵਿਰਕ||
 ਵਿਰਲੇ|few||virlē
 ਵਿਰੋਧ||
 ਵਿਸ਼ਨ||␣|
-ਵਿਸ਼ਾਣੂ|virus|ʋɪ.§ʃɑː§ɳuː|viśāṇū|viśāṇū|وِشاݨُو
+ਵਿਸ਼ਾਣੂ|virus|ʋɪ.,ʃɑː,ɳuː|viśāṇū|viśāṇū|وِشاݨُو
 ਵਿਹਲਾ||␣|
 ਵਿਹਾਜਣਾ||␣|
 ਵਿਹੁ||␣|
 ਵਿਹੂਣਾ||
 ਵਿਹੂੰ||␣|
-ਵਿੱਚ|in|ʋɪt§t͡ʃɪ̆|vicca
+ਵਿੱਚ|in|ʋɪt,t͡ʃɪ̆|vicca
 ਵਿੱਚੋਂ||␣
 ਵਿੱਸ||␣|
 ਵਿੱਸੂ||␣|
 ਵੀ||
 ਵੀਕਐਂਡ|weekend||vīkaaiṇḍa
 ਵੀਰਵਾਰ||␣
-ਵੀਰਾਨ|desolate|ʋiː§rɑː§nə̆|vīrān|ویران
+ਵੀਰਾਨ|desolate|ʋiː,rɑː,nə̆|vīrān|ویران
 ਵੀਹ||
-ਵੇਖਣਾ|to see|ʋeː§kʰə̆§ɳaː|vēkhṇā
+ਵੇਖਣਾ|to see|ʋeː,kʰə̆,ɳaː|vēkhṇā
 ਵੇਗ||
 ਵੇਦਨਾ||
 ਵੇਲ਼ਾ||␣|
@@ -1967,13 +1967,13 @@ autoExpandExamples.pa = `
 ਵੈਸਾਖ||␣|
 ਵੜਨਾ||␣|
 ਵੰਝਲੀ||␣
-ਵੰਞਣਾ|to go|ʋə̃ɲ.§d͡ʒə.§ɳaː|vãñṇā|وَن٘جݨا
+ਵੰਞਣਾ|to go|ʋə̃ɲ.,d͡ʒə.,ɳaː|vãñṇā|وَن٘جݨا
 ਵੰਡਣਾ||␣|
 ਵੱਖ||
 ਵੱਖਰਾ||
 ਵੱਡਾ|big||vaḍḍā
 ਵੱਢਣਾ|to bite||vaḍḍhaṇā
-ਵੱਢੀ|bribe|ʋə§ɖ̚ɖʱiː|vaḍḍhī|وَڈْھِی
+ਵੱਢੀ|bribe|ʋə,ɖ̚ɖʱiː|vaḍḍhī|وَڈْھِی
 ਵੱਧ||␣
 ਵੱਲ||␣
 ਵੱਲੋਂ||␣
@@ -1990,7 +1990,7 @@ autoExpandExamples.pa = `
 ਸਤਲੁਜ||
 ਸਤਾਰਾਂ||
 ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ||
-ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ|a greeting|sə§t̪§ §s§riː§ §ə§kɑː§l|sat srī akāl
+ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ|a greeting|sə,t̪, ,s,riː, ,ə,kɑː,l|sat srī akāl
 ਸਦਾ||
 ਸਦਾਉਣਾ||␣|
 ਸਦਿਸ਼ ਰਾਸ਼ੀ||␣|
@@ -2028,14 +2028,14 @@ autoExpandExamples.pa = `
 ਸਵਖਤਾ||
 ਸਵੇਰ||
 ਸਵੇਰਾ||␣|
-ਸਵੇਰੇ|at dawn|sə.§ʋeː.§ɾeː|savere|سویرے
+ਸਵੇਰੇ|at dawn|sə.,ʋeː.,ɾeː|savere|سویرے
 ਸਸਕਾਰ||␣|
 ਸਸਤਾ||␣
 ਸਹਾ||␣|
 ਸਹਿਗਲ||␣|
 ਸਹਿਤ||␣|
 ਸਹਿਰਾ||␣|
-ਸਹੀ|correct|sə.§í|sahī
+ਸਹੀ|correct|sə.,í|sahī
 ਸਹੁਰਾ||␣|
 ਸਹੁੰ||
 ਸ਼||␣
@@ -2052,12 +2052,12 @@ autoExpandExamples.pa = `
 ਸ਼ਰਾਬ||
 ਸ਼ਲਗਮ||␣
 ਸ਼ਹਾਦਤ||
-ਸ਼ਹਿਦ|honey|ʃ§ɛ́ː§d̪ə̆§/ʃə.ɦɪd̪ə̆
+ਸ਼ਹਿਦ|honey|ʃ,ɛ́ː,d̪ə̆,/ʃə.ɦɪd̪ə̆
 ਸ਼ਹਿਨਸ਼ਾਹ||␣|
-ਸ਼ਹਿਰ|city, town|ʃɛː˦§‹§ɾə̆|śahir|شہر
+ਸ਼ਹਿਰ|city, town|ʃɛː˦,‹,ɾə̆|śahir|شہر
 ਸ਼ਹੀਦ||
-ਸ਼ਾਂਤ|peaceful|ʃɑ̃§t|śānt
-ਸ਼ਾਂਤੀ|peace|ʃɑ̃ːn.§t̪iː|śāntī
+ਸ਼ਾਂਤ|peaceful|ʃɑ̃,t|śānt
+ਸ਼ਾਂਤੀ|peace|ʃɑ̃ːn.,t̪iː|śāntī
 ਸ਼ਾਇਦ||
 ਸ਼ਾਇਰ||␣|
 ਸ਼ਾਇਰੀ||␣|
@@ -2069,7 +2069,7 @@ autoExpandExamples.pa = `
 ਸ਼ਾਹ||␣|
 ਸ਼ਾਹਮੁਖੀ||␣
 ਸ਼ੀਂਹ||␣|
-ਸ਼ੁਕਰੀਆ|thank you|ʃʊ§k.§ɾi.j§aː|śukrīā|شکریہ
+ਸ਼ੁਕਰੀਆ|thank you|ʃʊ,k.,ɾi.j,aː|śukrīā|شکریہ
 ਸ਼ੁਰੂ||
 ਸ਼ੁੱਕਰਵਾਰ||␣
 ਸ਼ੇਖ||␣|
@@ -2085,8 +2085,8 @@ autoExpandExamples.pa = `
 ਸਾਈਕਲ||
 ਸਾਊ||␣|
 ਸਾਊਥਾਲ|Southall||sāūthāl
-ਸਾਊਦੀ ਅਰਬ|Saudi Arabia|saː§u.§diː§‿§ə.§ɾə.§b|sāūdī arab
-ਸਾਊਦੀ|Saudi|saː§u.§diː|sāūdī
+ਸਾਊਦੀ ਅਰਬ|Saudi Arabia|saː,u.,diː,‿,ə.,ɾə.,b|sāūdī arab
+ਸਾਊਦੀ|Saudi|saː,u.,diː|sāūdī
 ਸਾਝਰਾ||
 ਸਾਡਾ||
 ਸਾਣ||␣|
@@ -2103,13 +2103,13 @@ autoExpandExamples.pa = `
 ਸਾਲ|year||sāl
 ਸਾਲਾ||␣|
 ਸਾਵਣ||␣|
-ਸਾਵਾ|green|sɑː.§ʋɑː|sāvāساوا
+ਸਾਵਾ|green|sɑː.,ʋɑː|sāvāساوا
 ਸਾਹ ਲੈਣਾ|to breathe||sāh laiṇā
 ਸਾਹ||␣
 ਸਾਹਨ||
 ਸਾਹਨੀ||␣|
 ਸਾਹਬ||
-ਸਾਹਿਬ|master, owner|sáː.§ɦə§bᵊ
+ਸਾਹਿਬ|master, owner|sáː.,ɦə,bᵊ
 ਸਾੜਨਾ|to burn||sāṛnā
 ਸਿਆਪਾ||␣|
 ਸਿਆਹੀ||␣|
@@ -2121,9 +2121,9 @@ autoExpandExamples.pa = `
 ਸਿਤਾਰਾ||
 ਸਿਪਾਹੀ||␣|
 ਸਿਫ਼ਤ||
-ਸਿਫ਼ਰ|zero|sɪ.§fə.§ɾə̆|sifar|صِفر
+ਸਿਫ਼ਰ|zero|sɪ.,fə.,ɾə̆|sifar|صِفر
 ਸਿਮਰਨ||␣|
-ਸਿਰ|head|sɪ§ɾə̆|sir
+ਸਿਰ|head|sɪ,ɾə̆|sir
 ਸਿਰਫ਼||
 ਸਿਰਹਾਣਾ||␣
 ਸਿਲ||␣|
@@ -2139,7 +2139,7 @@ autoExpandExamples.pa = `
 ਸਿੱਧੂ||
 ਸਿੱਨਾਂ||␣|
 ਸੀਂ||␣|
-ਸੀਟ|seat|siː§ʈᵊ|sīṭ|سیٹ
+ਸੀਟ|seat|siː,ʈᵊ|sīṭ|سیٹ
 ਸੀਮਿੰਟ||
 ਸੀਸ||␣|
 ਸੁਆਗਤ||␣
@@ -2193,12 +2193,12 @@ autoExpandExamples.pa = `
 ਸੋਹੀ||
 ਸੌ|one hundred|sɔː|sau|سَو
 ਸੌਂਕਣ||
-ਸੌਂਫ|aniseed|sɔ̃ː§pʰə̆|saumph|سَوْن٘پھ
+ਸੌਂਫ|aniseed|sɔ̃ː,pʰə̆|saumph|سَوْن٘پھ
 ਸੌਂਹ||
 ਸੌਡ਼ਾ|narrow||sauṛā
 ਸੌਣਾ|to sleep||sauṇā
 ਸ੍ਰੀ||␣|
-ਸ੍ਵਰ|voice, sound|s§ʋə§ɾə̆|svar
+ਸ੍ਵਰ|voice, sound|s,ʋə,ɾə̆|svar
 ਸੜਕ|road||saṛak
 ਸੜਿਆ|rotten||saṛiā
 ਸੰਚਾ||␣|
@@ -2210,8 +2210,8 @@ autoExpandExamples.pa = `
 ਸੰਯੁਕਤ ਬਾਦਸ਼ਾਹੀ||␣|
 ਸੰਯੁਕਤ ਰਾਜ ਅਮਰੀਕਾ||
 ਸੰਯੁਕਤ||␣|
-ਸੰਸਾਰਸੵ|of the world|sən§saː§ɾə§sjə
-ਸੱਚ|truth|sə§t̪.t͡ʃᵊ|sacca|سچ
+ਸੰਸਾਰਸੵ|of the world|sən,saː,ɾə,sjə
+ਸੱਚ|truth|sə,t̪.t͡ʃᵊ|sacca|سچ
 ਸੱਚਾ||␣|
 ਸੱਜਾ|right||sajjā
 ਸੱਟ||␣
@@ -2219,11 +2219,11 @@ autoExpandExamples.pa = `
 ਸੱਤ||␣
 ਸੱਥ||
 ਸੱਦਣਾ||␣|
-ਸੱਪ|snake|sa§pp|sapp|سپ
+ਸੱਪ|snake|sa,pp|sapp|سپ
 ਸੱਸ||␣|
 ਸੱਸਾ||␣|
 ਹਉਕਾ||␣|
-ਹਉਮੈਂ|self, ego|ɦ§ɔː.§mːɛ̃ː§ / ɦəu.mːəĩː|haumaĩ|ہَؤمَیں
+ਹਉਮੈਂ|self, ego|ɦ,ɔː.,mːɛ̃ː, / ɦəu.mːəĩː|haumaĩ|ہَؤمَیں
 ਹਕੀਮ||␣
 ਹਕੂਮਤ||␣|
 ਹਜ਼ਰਤ||␣|
@@ -2244,11 +2244,11 @@ autoExpandExamples.pa = `
 ਹਰਾਮ||␣|
 ਹਰਿ||␣|
 ਹਰਿਆਣਾ||␣|
-ਹਰੀ|green|hə§ri
+ਹਰੀ|green|hə,ri
 ਹਲਦੀ||␣
 ਹਲਵਾਈ||␣|
 ਹਵਸ||␣|
-ਹਵਾ|wind|ɦə̀§ʋä̌ː|havā
+ਹਵਾ|wind|ɦə̀,ʋä̌ː|havā
 ਹਵਾਈ ਅੱਡਾ||
 ਹਵਾਈ ਜਹਾਜ਼||
 ਹਸਪਤਾਲ||
@@ -2265,14 +2265,14 @@ autoExpandExamples.pa = `
 ਹਿਮ||
 ਹਿਮਾਚਲ ਪ੍ਰਦੇਸ਼||␣|
 ਹਿਰਦਾ||␣|
-ਹਿਸਾਬ|account|hɪ§saː§bᵊ
+ਹਿਸਾਬ|account|hɪ,saː,bᵊ
 ਹਿੰਦ||␣
 ਹਿੰਦਵਾਣਾ||␣|
 ਹਿੰਦੀ||
 ਹਿੰਦੋਸਤਾਨ||
-ਹਿੰਮਤ|bravery, courage|ɦɪm.§mə§t̪|himmat|ہمت
+ਹਿੰਮਤ|bravery, courage|ɦɪm.,mə,t̪|himmat|ہمت
 ਹਿੰਸਾ||
-ਹਿੱਕ|chest, breast|bik§kᵊ
+ਹਿੱਕ|chest, breast|bik,kᵊ
 ਹੀ||
 ਹੀਆਂ||␣|
 ਹੀਰਾ||␣|
@@ -2295,7 +2295,7 @@ autoExpandExamples.pa = `
 ਹੋਰ||
 ਹੋਲਾ ਮਹੱਲਾ||␣|
 ਹੌਸਲਾ||␣|
-ਹੜ੍ਹ|flood|ɦə§ɽᵊ˦§‹|haṛh|ہڑھ
+ਹੜ੍ਹ|flood|ɦə,ɽᵊ˦,‹|haṛh|ہڑھ
 ਹੜੱਪਾ||␣|
 ਹੰਕਾਰ||␣|
 ਹੰਗਾਮਾ||
@@ -2305,7 +2305,7 @@ autoExpandExamples.pa = `
 ਹੱਜ||␣|
 ਹੱਟ||␣|
 ਹੱਡੀ|bone|␣|haḍḍī
-ਹੱਥ|hand|ɦə§t̪tʰə̆|hatthă|ہتھ
+ਹੱਥ|hand|ɦə,t̪tʰə̆|hatthă|ہتھ
 ਹੱਦ||
 ਹੱਸ||␣|
 ਹੱਸਣਾ|to laugh||hassaṇā
@@ -2317,7 +2317,7 @@ autoExpandExamples.pa = `
 
 @ unknown source
 
-ਸ੍ਵਰਗ|heaven|s§və§rə§g
+ਸ੍ਵਰਗ|heaven|s,və,rə,g
 
 
 

@@ -9,12 +9,12 @@
 // 🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉
 
 var collections = [
-{ symbol:'Ⓒ', desc:'Consonants', chars:'(𑴠|𑴡|𑴢|𑴣|𑴛|𑴜|𑴝|𑴞|𑴑|𑴒|𑴓|𑴔|𑴖|𑴗|𑴘|𑴙|𑴌|𑴍|𑴎|𑴏|𑴨|𑴫|𑴩|𑴪|𑴬|𑴤|𑴟|𑴚|𑴕|𑴐|𑴦|𑴧|𑴭|𑴥)' },
-{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(𑴲|𑴳|𑴴|𑴵|𑴺|𑴽|𑴱|𑴼|𑴿|𑴶)' },
-{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(𑴂|𑴃|𑴄|𑴅|𑴆|𑴉|𑴀|𑴁|𑴈|𑴋)' },
-{ symbol:'Ⓡ', desc:'R-repha & r-kara', chars:'(𑵆|𑵇)' },
-{ symbol:'Ⓕ', desc:'Finals', chars:'(𑵀|𑵁)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
-{ symbol:'🆅', desc:'Virama', chars:'(\u{11D45})' },
-{ symbol:'🅥', desc:'Vowel killer', chars:'(\u{11D44})' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'[𑴠𑴡𑴢𑴣𑴛𑴜𑴝𑴞𑴑𑴒𑴓𑴔𑴖𑴗𑴘𑴙𑴌𑴍𑴎𑴏𑴨𑴫𑴩𑴪𑴬𑴤𑴟𑴚𑴕𑴐𑴦𑴧𑴭𑴥]' },
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'[𑴲𑴳𑴴𑴵𑴺𑴽𑴱𑴼𑴿𑴶]' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'[𑴂𑴃𑴄𑴅𑴆𑴉𑴀𑴁𑴈𑴋]' },
+{ symbol:'Ⓡ', desc:'R-repha & r-kara', chars:'[𑵆𑵇]' },
+{ symbol:'Ⓕ', desc:'Finals', chars:'[𑵀𑵁]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D]' },
+{ symbol:'🆅', desc:'Virama', chars:'[\u{11D45}]' },
+{ symbol:'🅥', desc:'Vowel killer', chars:'[\u{11D44}]' },
 ]
