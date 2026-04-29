@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -46,14 +46,14 @@ autoExpandExamples.tdd = `
 ᥐᥤᥙᥴ||||
 ᥐᥤᥛᥰ||||
 ᥐᥤᥝᥱ||||
-ᥐᥤᥢ|to eat|k§i§n˧˧|kin
+ᥐᥤᥢ|to eat|k,i,n˧˧|kin
 ᥐᥤᥱ||||
 ᥐᥤᥲ||||
 ᥐᥥᥐ||
 ᥐᥥᥖᥱ||||
 ᥐᥥᥝᥱ||||
 ᥐᥦᥙᥱ||||
-ᥐᥦᥛᥲ|cheek|k§ɛ§m§˧˩|kàem|
+ᥐᥦᥛᥲ|cheek|k,ɛ,m,˧˩|kàem|
 ᥐᥦᥰ ᥐᥤᥰ||||
 ᥐᥧ||||
 ᥐᥧᥖᥴ||||
@@ -69,8 +69,8 @@ autoExpandExamples.tdd = `
 ᥐᥩᥒᥰᥛᥧᥰ||
 ᥐᥩᥒᥲ||||
 ᥐᥩᥭᥲ||||
-ᥐᥫ|salt|k§ə˧˧|koe|
-ᥐᥭᥱ|chicken|k§ai§˩˩|kǎy|
+ᥐᥫ|salt|k,ə˧˧|koe|
+ᥐᥭᥱ|chicken|k,ai,˩˩|kǎy|
 ᥑᥛᥰ||
 ᥑᥝᥱ||||
 ᥑᥝᥲ|rice||xàw
@@ -78,10 +78,10 @@ autoExpandExamples.tdd = `
 ᥑᥝᥴ|they, them||xáw
 ᥑᥣ||||
 ᥑᥣᥛᥰ|language||xäam
-ᥑᥣᥝᥱ|news, message|x§aː§w§˩˩|xǎaw
+ᥑᥣᥝᥱ|news, message|x,aː,w,˩˩|xǎaw
 ᥑᥣᥝᥴ|white||xáaw
 ᥑᥣᥭ||||
-ᥑᥣᥭᥰ|water buffalo|x§aː§j§˥|xäay
+ᥑᥣᥭᥰ|water buffalo|x,aː,j,˥|xäay
 ᥑᥣᥭᥱ||||
 ᥑᥣᥭᥴ||||
 ᥑᥣᥰ||
@@ -107,12 +107,12 @@ autoExpandExamples.tdd = `
 ᥑᥨᥢᥴ||||
 ᥑᥨᥭᥴ||||
 ᥑᥩᥢᥰ|smoke|xɔn˥˥|xöan|
-ᥑᥭᥲ|to want, wish|xa§j§˦˨|xày
+ᥑᥭᥲ|to want, wish|xa,j,˦˨|xày
 ᥒᥝᥰ|shadow||ngäw
 ᥒᥣᥰ||||
 ᥒᥦᥢᥰ||||
 ᥒᥦᥢᥲ||||
-ᥒᥧᥰ|snake|ŋ§u§˥˧|ngü
+ᥒᥧᥰ|snake|ŋ,u,˥˧|ngü
 ᥒᥩᥐ||||
 ᥓᥝᥲ||||
 ᥓᥣᥒ||||
@@ -129,7 +129,7 @@ autoExpandExamples.tdd = `
 ᥓᥨᥳ||||
 ᥓᥩᥛᥴ||||
 ᥓᥩᥢᥲ||||
-ᥓᥪ|name|t͡s§ɯ|tsue
+ᥓᥪ|name|t͡s,ɯ|tsue
 ᥓᥫᥝ||||
 ᥓᥬ|heart|t͡saɨ˧˧|tsaue|
 ᥓᥬᥴ||
@@ -152,12 +152,12 @@ autoExpandExamples.tdd = `
 ᥔᥧᥒᥴ||||
 ᥔᥧᥛᥰ||||
 ᥔᥧᥛᥱ||||
-ᥔᥧᥛᥳ|room||s§u§̇m
+ᥔᥧᥛᥳ|room||s,u,̇m
 ᥔᥧᥛᥴ||||
 ᥔᥧᥲ||||
 ᥔᥧᥴ||
 ᥔᥨᥙᥱ||||
-ᥔᥩᥒᥴ|two|s§ɔ§ŋ§˨˦|sóang
+ᥔᥩᥒᥴ|two|s,ɔ,ŋ,˨˦|sóang
 ᥔᥩᥖ||||
 ᥔᥩᥢᥴ||
 ᥔᥪᥢᥰ||||
@@ -169,9 +169,9 @@ autoExpandExamples.tdd = `
 ᥕᥒ||
 ᥕᥝᥳ||
 ᥕᥤᥒᥰ||
-ᥕᥧ̌|to be at|j§u§˩˩|yǔ
-ᥕᥧᥱ|to be at|j§u§˩˩|yǔ
-ᥕᥭᥰ|cicada|j§aj§˥˧|yäy
+ᥕᥧ̌|to be at|j,u,˩˩|yǔ
+ᥕᥧᥱ|to be at|j,u,˩˩|yǔ
+ᥕᥭᥰ|cicada|j,aj,˥˧|yäy
 ᥖᥒᥰ||||
 ᥖᥙ||||
 ᥖᥙᥴ||||
@@ -258,12 +258,12 @@ autoExpandExamples.tdd = `
 ᥘᥢᥰ||
 ᥘᥣᥐᥴ|heavy||lȧak
 ᥘᥣᥒᥰ|lady, mistress||läang
-ᥘᥣᥝ|star|l§aː§w˧˧|laaw|
+ᥘᥣᥝ|star|l,aː,w˧˧|laaw|
 ᥘᥣᥝᥞᥣᥒᥴ|comet|laːw⁶ haːŋ¹|láawhaang|
 ᥘᥣᥢᥰ||
 ᥘᥣᥭᥰ|dew|laːj˥˧|läay
 ᥘᥣᥰ||||
-ᥘᥤᥐ|book|l§i§k§˦˧|lik
+ᥘᥤᥐ|book|l,i,k,˦˧|lik
 ᥘᥥᥐᥱ|iron||lěk
 ᥘᥦ|agreement particle||lae
 ᥘᥦᥒ|red||laeng
@@ -277,7 +277,7 @@ autoExpandExamples.tdd = `
 ᥘᥩᥒ||||
 ᥘᥩᥢ||||
 ᥘᥩᥢᥴ||||
-ᥘᥩᥭ|mountain|l§ɔ§j˧˧|loay|
+ᥘᥩᥭ|mountain|l,ɔ,j˧˧|loay|
 ᥘᥪᥛᥴ||||
 ᥘᥫ||||
 ᥘᥫᥒ||||
@@ -310,13 +310,13 @@ autoExpandExamples.tdd = `
 ᥚᥧᥢᥴ||||
 ᥚᥧᥰ||||
 ᥚᥫᥐᥱ||||
-ᥚᥬᥴ|who|pʰ§aɯ§˨˦|pháue
+ᥚᥬᥴ|who|pʰ,aɯ,˨˦|pháue
 ᥛᥢᥰ||
-ᥛᥣᥰ|to come|m§aː§˥|mäa
-ᥛᥣᥱ|shoulder|m§aː§˩˩|mǎa
+ᥛᥣᥰ|to come|m,aː,˥|mäa
+ᥛᥣᥱ|shoulder|m,aː,˩˩|mǎa
 ᥛᥣᥲ|hemp|
 ᥛᥣᥳ|horse||mȧa
-ᥛᥣᥴ|dog|m§aː§˨˦|máa
+ᥛᥣᥴ|dog|m,aː,˨˦|máa
 ᥛᥤᥰ||
 ᥛᥥ|mother|
 ᥛᥥᥲ||||
@@ -329,14 +329,14 @@ autoExpandExamples.tdd = `
 ᥛᥨᥢᥱ||
 ᥛᥨᥭᥴ|frost|moi˨˦|móy|
 ᥛᥨᥱ||||
-ᥛᥩᥐᥱ|cloud|m§ɔ§k§˩˩|mǒak|
-ᥛᥫᥒᥰ|city, country|m§ə§ŋ§˥|möeng
+ᥛᥩᥐᥱ|cloud|m,ɔ,k,˩˩|mǒak|
+ᥛᥫᥒᥰ|city, country|m,ə,ŋ,˥|möeng
 ᥛᥫᥒᥰᥐᥨᥢᥰ|world|məŋ².kon²|möengkön|
 ᥛᥫᥰ|to return|mə˥˧|möe|
 ᥛᥬᥰ|you (s)||mäue
 ᥛᥬᥱ|new||mǎue
 ᥜᥒ́|to bury||fáng
-ᥜᥒᥰ|to listen|fa§ŋ§˥|fäng
+ᥜᥒᥰ|to listen|fa,ŋ,˥|fäng
 ᥜᥒᥱ||
 ᥜᥒᥴ|to bury||fáng
 ᥜᥣᥐᥱ||||
@@ -344,7 +344,7 @@ autoExpandExamples.tdd = `
 ᥜᥤᥒᥲ||||
 ᥜᥨᥖᥱ||||
 ᥜᥫᥐᥱ|to study, learn||fǒek
-ᥜᥭᥰ|fire|f§aj§⁴|fäy
+ᥜᥭᥰ|fire|f,aj,⁴|fäy
 ᥝᥢᥰ|day||wän
 ᥝᥣ||||
 ᥝᥣᥒᥰ||||
@@ -378,43 +378,43 @@ autoExpandExamples.tdd = `
 ᥞᥧᥐᥴ||||
 ᥞᥧᥒᥰ||||
 ᥞᥧᥴ|ear||hú
-ᥞᥨᥐᥱ|six|h§o§k§˩|hǒk
+ᥞᥨᥐᥱ|six|h,o,k,˩|hǒk
 ᥞᥨᥴ||||
 ᥞᥪᥴ||
 ᥞᥭ||||
 ᥞᥭᥴ||||
 ᥟᥛᥱ|not||ʼǎm
-ᥟᥝ|to read|a§w|ʼaw
+ᥟᥝ|to read|a,w|ʼaw
 ᥟᥣᥒᥱ|basin, bowl||ʼǎang
 ᥟᥣᥭ|smell|ai˧˧|ʼaay|
 ᥟᥥ||||
 ᥟᥥᥖᥱ||||
-ᥟᥦᥐᥱ|yoke|ʔ§ɛ§k̚§˩˩|ʼǎek|
+ᥟᥦᥐᥱ|yoke|ʔ,ɛ,k̚,˩˩|ʼǎek|
 ᥢᥛᥱ||
 ᥢᥣᥒᥰ|lady, mistress||näang
 
 
 @ ?
 ᥘᥩᥐᥳ|outside||||x
-ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ|Tai Nüa|t§aj§˥.§t§aɯ§˧˩.§x§o§ŋ§˥
-ᥖᥭᥰᥘᥫᥴ|Tai Le|ta§j§˦.§l§ə§˧˥
+ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ|Tai Nüa|t,aj,˥.,t,aɯ,˧˩.,x,o,ŋ,˥
+ᥖᥭᥰᥘᥫᥴ|Tai Le|ta,j,˦.,l,ə,˧˥
 
 
 @ with tone marks, rather than letters
-ᥛᥣ̈|to come|m§aː˥|mäa
+ᥛᥣ̈|to come|m,aː˥|mäa
 ᥘᥣᥐ́|heavy||lȧak
-ᥛᥣ́|dog|m§aː˨˦|máa
+ᥛᥣ́|dog|m,aː˨˦|máa
 ᥘᥩᥐ̇|outside||||x
 ᥛᥣ̇|horse||mȧa
 ᥛᥣ̀|hemp|
 ᥞᥨᥐ̌|six|hok⁵|hǒk
-ᥛᥣ̌|shoulder|m§aː˩˩|mǎa
-ᥑᥣᥝ̌|news, message|x§aː§w§˩˩|xǎaw
+ᥛᥣ̌|shoulder|m,aː˩˩|mǎa
+ᥑᥣᥝ̌|news, message|x,aː,w,˩˩|xǎaw
 
 
 
 @ https://en.wikipedia.org/wiki/Tai_Nuea_language
-ᥖᥭᥰ ᥢᥫᥴ|Tai Nüa|t§ɑi§˥˧.§§n§ə§˥|
+ᥖᥭᥰ ᥢᥫᥴ|Tai Nüa|t,ɑi,˥˧.,,n,ə,˥|
 
 
 

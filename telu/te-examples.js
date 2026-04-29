@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -101,7 +101,7 @@ autoExpandExamples.te = `
 అంగన్యాసము||␣
 అంగమర్దనం||
 అంగమర్దనము||␣
-అంగము|limb|aŋ§ga§mu|aṅgamu
+అంగము|limb|aŋ,ga,mu|aṅgamu
 అంగమొల||
 అంగరక్షకుడు||␣
 అంగలార్చు||
@@ -116,7 +116,7 @@ autoExpandExamples.te = `
 అంగారకుఁడు||
 అంగారకుడు||
 అంగారము||
-అంగాస్త్రము|man's vest|aŋ§ɡaː§s§t̪§ɾa§mu|aṅgāstramu
+అంగాస్త్రము|man's vest|aŋ,ɡaː,s,t̪,ɾa,mu|aṅgāstramu
 అంగి||
 అంగిక||
 అంగియ||
@@ -731,7 +731,7 @@ autoExpandExamples.te = `
 అనువాదకుడు||
 అనువాదము||
 అనువు||
-అనుష్ఠానము|an observation, practice|a§nu§ʂ§ʈʰaː§na§mu
+అనుష్ఠానము|an observation, practice|a,nu,ʂ,ʈʰaː,na,mu
 అనుసరించు||
 అనుసరింౘు||
 అనుస్వారం||
@@ -761,7 +761,7 @@ autoExpandExamples.te = `
 అన్నవరము||
 అన్నవస్త్రములు||
 అన్ని||
-అన్నీ|everything|a§n§ni|annī
+అన్నీ|everything|a,n,ni|annī
 అన్ను||␣
 అన్యదేశము||
 అన్యదేశస్థుడు||
@@ -1325,7 +1325,7 @@ autoExpandExamples.te = `
 ఆకాశసౌధం||
 ఆకాశసౌధము||␣
 ఆకాశానికి నిచ్చెన వేశేవాడు||
-ఆకు|leaf|aː§ku|āku
+ఆకు|leaf|aː,ku|āku
 ఆకుకూర​||␣||
 ఆకుచాటుపిందియ||␣
 ఆకుచాటుపిందె||␣
@@ -1378,8 +1378,8 @@ autoExpandExamples.te = `
 ఆచూకీ||
 ఆజాద్||
 ఆజానుబాహుడు||
-ఆజ్ఞ|command, order|aː§d͡ʒ§ɲa|ājña
-ఆజ్ఞాపించు|to command, order|aː§d͡ʑ§ɲaː§piɲ§t͡ɕu|ājñāpiñcu
+ఆజ్ఞ|command, order|aː,d͡ʒ,ɲa|ājña
+ఆజ్ఞాపించు|to command, order|aː,d͡ʑ,ɲaː,piɲ,t͡ɕu|ājñāpiñcu
 ఆట పట్టించు||
 ఆట||␣
 ఆటం||␣||
@@ -1414,7 +1414,7 @@ autoExpandExamples.te = `
 ఆడు|to play|␣|āḍu
 ఆడుగురి||␣
 ఆడుగుఱి||
-ఆడుబిడ్డ|little girl|aː§ɖu§bi§ɖ§ɖa|āḍubiḍḍa
+ఆడుబిడ్డ|little girl|aː,ɖu,bi,ɖ,ɖa|āḍubiḍḍa
 ఆడెలు||
 ఆడేలు||
 ఆడేవాడు||
@@ -1752,7 +1752,7 @@ autoExpandExamples.te = `
 ఇంధనం||
 ఇంధనము||
 ఇంధనవాయువు||
-ఇక్కడ|here|i§k§ka§ɖa|ikkaḍa
+ఇక్కడ|here|i,k,ka,ɖa|ikkaḍa
 ఇక్షువు||
 ఇగిరించు||
 ఇగిరింౘు||
@@ -1817,7 +1817,7 @@ autoExpandExamples.te = `
 ఇరవై నాలుగు||
 ఇరవై మూడు||
 ఇరవై రెండు||
-ఇరవై|twenty|i§ɾa§ʋaj|iravai
+ఇరవై|twenty|i,ɾa,ʋaj|iravai
 ఇరవైతొమ్మిదవ||
 ఇరవైతొమ్మిది||
 ఇరవైనాలుగవ||
@@ -1890,7 +1890,7 @@ autoExpandExamples.te = `
 ఈఁతకొట్టు||
 ఈఁదు||
 ఈఁదులాడు||
-ఈక|feather|iː§ka|īka
+ఈక|feather|iː,ka|īka
 ఈగ||␣
 ఈగపులి||␣
 ఈగు||
@@ -1920,7 +1920,7 @@ autoExpandExamples.te = `
 ఈరువు||␣
 ఈరేడు||␣
 ఈరోజు||␣||
-ఈర్ష్య|spite, envy|iː§r§ʂ§ja|īrṣya
+ఈర్ష్య|spite, envy|iː,r,ʂ,ja|īrṣya
 ఈర్ష్యపడు||
 ఈర్ష్యాళువు||
 ఈర్ష్యువు||
@@ -2190,7 +2190,7 @@ autoExpandExamples.te = `
 ఉమ్మడి||
 ఉమ్మి||␣
 ఉమ్మివేయు||␣
-ఉమ్ము|to spit|u§m§mu|ummu
+ఉమ్ము|to spit|u,m,mu|ummu
 ఉమ్మెత్త||
 ఉమ్మెత్తపువ్వు||
 ఉరం||
@@ -2257,7 +2257,7 @@ autoExpandExamples.te = `
 ఊడు||␣
 ఊడుచు||␣||
 ఊత||
-ఊదా|violet (colour)|uː§d̪aː|ūdā
+ఊదా|violet (colour)|uː,d̪aː|ūdā
 ఊదు|to blow (as wind)||ūdu
 ఊదుగొట్టము||
 ఊధస్సు||
@@ -2291,7 +2291,7 @@ autoExpandExamples.te = `
 ఊసు||␣||
 ఊసులాడు||␣||
 ఊసులు||␣||
-ఋక్కు|Rigveda|ɾu§k§ku|r̥kku
+ఋక్కు|Rigveda|ɾu,k,ku|r̥kku
 ఋగ్వేదం||
 ఋగ్వేదము||
 ఋజుత్వము||
@@ -2299,9 +2299,9 @@ autoExpandExamples.te = `
 ఋణం||␣||
 ఋణధ్రువం||
 ఋణధ్రువము||
-ఋణము|loan, debt|ɻ̍§ɳa§mu|r̥ṇamu|[ɾiɳamu]
+ఋణము|loan, debt|ɻ̍,ɳa,mu|r̥ṇamu|[ɾiɳamu]
 ఋణసంజ్ఞ||
-ఋతువు|season|ɾu§t̪u§ʋu|r̥tuvu
+ఋతువు|season|ɾu,t̪u,ʋu|r̥tuvu
 ఋతువులు||␣||
 ఋశ్యము||
 ఋశ్యశృంగుడు||
@@ -2325,7 +2325,7 @@ autoExpandExamples.te = `
 ఎందాక||␣
 ఎందు||
 ఎందుండి||
-ఎందుకంటే|because|en̪§d̪u§kaɳ§ʈeː|endukaṇṭē
+ఎందుకంటే|because|en̪,d̪u,kaɳ,ʈeː|endukaṇṭē
 ఎందుకు||␣
 ఎందుచేత||
 ఎందునుండి||
@@ -2333,7 +2333,7 @@ autoExpandExamples.te = `
 ఎందులో||
 ఎకరము||
 ఎకరా||␣
-ఎక్కడ|where|e§k§ka§ɖa|ekkaḍa
+ఎక్కడ|where|e,k,ka,ɖa|ekkaḍa
 ఎక్కలమ్మ||
 ఎక్కించు||
 ఎక్కింౘు||
@@ -2433,7 +2433,7 @@ autoExpandExamples.te = `
 ఎరుకులవాడు||
 ఎరుకులసాని||
 ఎరుగు|to know (a fact)|␣|erugu
-ఎరుపు|red|e§ɾu§pu|erupu
+ఎరుపు|red|e,ɾu,pu|erupu
 ఎరువు||
 ఎర్ర జెండా||
 ఎర్ర సముద్రం||
@@ -2552,7 +2552,7 @@ autoExpandExamples.te = `
 ఏము||␣
 ఏమో||␣||
 ఏరాలు||
-ఏరు|plough|eː§ɾu|ēru
+ఏరు|plough|eː,ɾu|ēru
 ఏరుగు||
 ఏరువాక||
 ఏర్పాటు||␣
@@ -2577,7 +2577,7 @@ autoExpandExamples.te = `
 ఐక్యరాజ్యసమితి||
 ఐదవ||␣
 ఐదింతలు||␣
-ఐదు|five|aj§d̪u|aidu
+ఐదు|five|aj,d̪u|aidu
 ఐదుగురు||
 ఐదునొకటి||
 ఐదువ||␣
@@ -2606,7 +2606,7 @@ autoExpandExamples.te = `
 ఒక||␣
 ఒకఁడు||
 ఒకటవ||␣
-ఒకటి|one|o§ka§ʈi|okaṭi
+ఒకటి|one|o,ka,ʈi|okaṭi
 ఒకటిగా||
 ఒకటిచేయు||
 ఒకటొకటిగా||
@@ -2667,7 +2667,7 @@ autoExpandExamples.te = `
 ఓటము||
 ఓటు||
 ఓటువేయు||␣
-ఓడ|ship, vessel|oː§ɖa|ōḍa
+ఓడ|ship, vessel|oː,ɖa|ōḍa
 ఓడరేవు||
 ఓడించు||
 ఓడింౘు||
@@ -2685,7 +2685,7 @@ autoExpandExamples.te = `
 ఓరణము||
 ఓరి||
 ఓర్పరి||
-ఓర్పు|patience|oː§ɾ§pu|ōrpu
+ఓర్పు|patience|oː,ɾ,pu|ōrpu
 ఓల||␣
 ఓలగము||
 ఓలపాట||␣||
@@ -2709,7 +2709,7 @@ autoExpandExamples.te = `
 ఔరసుఁడు||
 ఔరసుడు||␣
 ఔషధం||␣
-ఔషధము|medecine|au§ʂa§d̪ʱa§mu|auṣadhamu
+ఔషధము|medecine|au,ʂa,d̪ʱa,mu|auṣadhamu
 ఔషధీశుఁడు||
 ఔషధీశుడు||
 కం||
@@ -2848,7 +2848,7 @@ autoExpandExamples.te = `
 కడచు||␣||
 కడప||␣
 కడపటి||
-కడలి|sea|ka§ɖa§li|kaḍali
+కడలి|sea|ka,ɖa,li|kaḍali
 కడలికూతురు||
 కడలిరేడు||
 కడలివెన్న||
@@ -2901,7 +2901,7 @@ autoExpandExamples.te = `
 కథానాయకుడు||␣
 కథానాయకులు||␣||
 కథానాయిక||␣
-కథానిక|short story|ka§t̪ʰaː§ni§ka|kathānika
+కథానిక|short story|ka,t̪ʰaː,ni,ka|kathānika
 కథానికలు||␣||
 కథాసరిత్సాగరం||␣
 కథాసరిత్సాగరము||␣
@@ -2970,7 +2970,7 @@ autoExpandExamples.te = `
 కన్నియ||
 కన్నీరు||␣
 కన్ను మూస్తే కల||
-కన్ను|eye|ka§n̪§nu|kannu
+కన్ను|eye|ka,n̪,nu|kannu
 కన్నుకుట్టు||
 కన్నుగప్పు||
 కన్నుదోయి||
@@ -3791,7 +3791,7 @@ autoExpandExamples.te = `
 కృదంతము||
 కృశించు||
 కృషి||␣
-కృష్ణ|Krishna|kɾi§ʂ§ɳa|kr̥ṣṇa|kɻ̍ʂɳa
+కృష్ణ|Krishna|kɾi,ʂ,ɳa|kr̥ṣṇa|kɻ̍ʂɳa
 కృష్ణం||
 కృష్ణజన్మస్థలము||
 కృష్ణజన్మస్థానము||
@@ -3893,7 +3893,7 @@ autoExpandExamples.te = `
 కొండముచ్చు||␣
 కొండవీడు||␣
 కొండెక్కు||␣
-కొంత|some|kon̪§t̪a|konta
+కొంత|some|kon̪,t̪a|konta
 కొంతకాలము||
 కొంతమంది||
 కొందరు|some||kondaru
@@ -4095,7 +4095,7 @@ autoExpandExamples.te = `
 కౌగిలింపు||
 కౌనస్||
 కౌమారము||␣
-కౌముది|moonlight|kaw§mu§d̪i|kaumudi|kaumud̪i
+కౌముది|moonlight|kaw,mu,d̪i|kaumudi|kaumud̪i
 కౌరవ||
 కౌరవులు||
 కౌలాలంపూర్||
@@ -4197,7 +4197,7 @@ autoExpandExamples.te = `
 క్వ||
 క్ష||
 క్షమ||
-క్షమించు|to pardon|k§ʂa§miɲ§t͡ɕu|kṣamiñcu
+క్షమించు|to pardon|k,ʂa,miɲ,t͡ɕu|kṣamiñcu
 క్షయ||
 క్షయం||
 క్షయమాసము||
@@ -4221,7 +4221,7 @@ autoExpandExamples.te = `
 క్షీరాబ్ధితనయ||
 క్షీరోదకన్యాయము||
 క్షు||
-క్షురము|razor|k§ʂu.§ɾa.§mu|kṣuramu
+క్షురము|razor|k,ʂu.,ɾa.,mu|kṣuramu
 క్షే||
 క్షేత్రం||
 క్షేత్రగణితం||
@@ -4249,7 +4249,7 @@ autoExpandExamples.te = `
 ఖండించు||
 ఖండింౘు||
 ఖగం||
-ఖగము|bird|kʰa§ɡa§mu|khagamu
+ఖగము|bird|kʰa,ɡa,mu|khagamu
 ఖగోళశాస్త్రజ్ఞుడు||
 ఖజానాదారుడు||
 ఖటికము||
@@ -4297,7 +4297,7 @@ autoExpandExamples.te = `
 ఖో||
 ఖోఖో||␣
 ఖ్యాతి||␣
-గంగ|the Ganges|ɡãŋ§ɡa|gaṅga
+గంగ|the Ganges|ɡãŋ,ɡa|gaṅga
 గంగడోలు||
 గంగమ్మ||␣
 గంగరావి||
@@ -4439,11 +4439,11 @@ autoExpandExamples.te = `
 గత్యంతరము||
 గద||
 గదమాయించు||
-గది|room|ɡɐ§di
+గది|room|ɡɐ,di
 గదులు||␣||
 గద్ద||␣
 గద్దముక్కు||␣
-గద్ది|throne|ɡɐ§d§di
+గద్ది|throne|ɡɐ,d,di
 గద్దించు||
 గద్దింపు||
 గద్దియ||
@@ -4648,7 +4648,7 @@ autoExpandExamples.te = `
 గీతి||␣
 గీయు||␣
 గీర||
-గీరు|to scratch (an itch)|ɡiː§ɾu|gīru
+గీరు|to scratch (an itch)|ɡiː,ɾu|gīru
 గీరుడు||
 గీర్వాణము||
 గీర్వాణుడు||
@@ -4836,7 +4836,7 @@ autoExpandExamples.te = `
 గూడెము||
 గూఢం||␣
 గూఢచారి||␣
-గూఢము|a secret|ɡuː§ɖʱa§mu|gūḍhamu
+గూఢము|a secret|ɡuː,ɖʱa,mu|gūḍhamu
 గూఢసాక్షి||
 గూద||
 గూబ||
@@ -4890,7 +4890,7 @@ autoExpandExamples.te = `
 గొంతమ్మ కోరికలు||␣
 గొంతి||
 గొంతు||␣
-గొంతునొప్పి|sore throat|ɡon̪§t̪u§no§p§pi|gontunoppi
+గొంతునొప్పి|sore throat|ɡon̪,t̪u,no,p,pi|gontunoppi
 గొట్టపుబావి||
 గొట్టము||
 గొట్టు||␣||
@@ -4979,7 +4979,7 @@ autoExpandExamples.te = `
 గోమూత్రము||
 గోరింక||␣
 గోరింట||␣
-గోరు|fingernail|ɡoː§ɾu|gōru
+గోరు|fingernail|ɡoː,ɾu|gōru
 గోరుచుట్టు||␣
 గోరువెచ్చని||␣
 గోల||␣
@@ -5058,7 +5058,7 @@ autoExpandExamples.te = `
 గ్రుడ్లగూబ||
 గ్రొచ్చు||
 గ్రొప్పించు||
-ఘంట|bell|ɡʱaɳ§ʈa|ghaṇṭa
+ఘంట|bell|ɡʱaɳ,ʈa|ghaṇṭa
 ఘంటము||
 ఘంటసాల||
 ఘంటాపథము||␣
@@ -5111,7 +5111,7 @@ autoExpandExamples.te = `
 ఘ్రాణం||
 ఘ్రాణనాడి||
 ఘ్రాణము||
-ఘ్రాణించు|to smell|ɡʱ§ɾaː§ɳiɲ§t͡ɕu|ghrāṇiñcu
+ఘ్రాణించు|to smell|ɡʱ,ɾaː,ɳiɲ,t͡ɕu|ghrāṇiñcu
 ఘ్రాణేంద్రియం||
 ఘ్రాణేంద్రియము||
 చంక||
@@ -5168,7 +5168,7 @@ autoExpandExamples.te = `
 చక్కగా||
 చక్కదనము||␣
 చక్కన||␣
-చక్కని|beautiful|t͡ʃa§k§ka§ni|cakkani|t͡ɕakːani
+చక్కని|beautiful|t͡ʃa,k,ka,ni|cakkani|t͡ɕakːani
 చక్కెర||␣
 చక్రం||
 చక్రధరుఁడు||
@@ -5274,7 +5274,7 @@ autoExpandExamples.te = `
 చలనం||␣||
 చలనచిత్రం||
 చలనచిత్రము||
-చలనము|motion|t͡ʃʌ§lə§nə§mu|calanamu
+చలనము|motion|t͡ʃʌ,lə,nə,mu|calanamu
 చలమంచము||
 చలి||␣
 చలించు||
@@ -5341,7 +5341,7 @@ autoExpandExamples.te = `
 చాల||␣
 చాలనం||␣||
 చాలనము||␣||
-చాలా|many|t͡saː§laː|cālā
+చాలా|many|t͡saː,laː|cālā
 చాలించు||
 చాలు||␣
 చావడి||␣||
@@ -5486,7 +5486,7 @@ autoExpandExamples.te = `
 చిల్లి||␣||
 చివర||␣
 చివ్వున||
-చిహ్నము|sign|t͡ɕi§h§na§mu|cihnamu
+చిహ్నము|sign|t͡ɕi,h,na,mu|cihnamu
 చీ||␣
 చీకటి||␣
 చీకటిగది||
@@ -5606,7 +5606,7 @@ autoExpandExamples.te = `
 చెద||
 చెదపురుగు||
 చెన్నపట్నం||
-చెన్నై|Chennai|t͡ʃe§n§naj|cennai
+చెన్నై|Chennai|t͡ʃe,n,naj|cennai
 చెప్పని||␣
 చెప్పాను||␣||
 చెప్పించు||␣
@@ -5702,7 +5702,7 @@ autoExpandExamples.te = `
 చేబ్రోలు||␣||
 చేమ||
 చేమంతి||
-చేయి|hand|t͡ʃeː§ji|cēyi|t͡ɕeːji
+చేయి|hand|t͡ʃeː,ji|cēyi|t͡ɕeːji
 చేయించు||
 చేయింౘు||
 చేయికలుపు||␣||
@@ -5852,7 +5852,7 @@ autoExpandExamples.te = `
 జనించు||
 జనుఁడు||
 జనుడు||
-జనుము|jute plant|d͡ʒa§nu§mu|janumu|d͡ʑanumu
+జనుము|jute plant|d͡ʒa,nu,mu|janumu|d͡ʑanumu
 జనులు||
 జన్మ ధ్రువపత్రం||␣
 జన్మం||␣
@@ -5863,7 +5863,7 @@ autoExpandExamples.te = `
 జన్మదేశము||
 జన్మనిచ్చు||
 జన్మభూమి||␣
-జన్మము|birth|d͡ʑa§n§ma§mu|janmamu
+జన్మము|birth|d͡ʑa,n,ma,mu|janmamu
 జన్మమెత్తు||
 జన్మించు||
 జన్యము||
@@ -5965,7 +5965,7 @@ autoExpandExamples.te = `
 జాగారము||
 జాగిలము||
 జాగీరు||
-జాగు|delay|d͡zaː§gu|jāgu
+జాగు|delay|d͡zaː,gu|jāgu
 జాగ్రత||␣
 జాగ్రత్త||␣
 జాఘని||
@@ -6225,7 +6225,7 @@ autoExpandExamples.te = `
 జ్ఞానచక్షువు||
 జ్ఞానదృష్టి||
 జ్ఞానమీమాంస||
-జ్ఞానము|knowledge|d͡ʒ§ɲaː.§na.§mu|jñānamu
+జ్ఞానము|knowledge|d͡ʒ,ɲaː.,na.,mu|jñānamu
 జ్ఞాని||
 జ్ఞానేంద్రియం||
 జ్ఞానేంద్రియము||
@@ -6295,7 +6295,7 @@ autoExpandExamples.te = `
 టూకీ||␣
 టె||␣
 టెంక||
-టెంకాయ|coconut|ʈeŋ§kaː§ja|ṭeṅkāya
+టెంకాయ|coconut|ʈeŋ,kaː,ja|ṭeṅkāya
 టెక్కు||␣
 టెక్కెము||␣
 టెన్నిసు||␣
@@ -6548,7 +6548,7 @@ autoExpandExamples.te = `
 తరుణిమ||
 తరుము||
 తరులమెకము||
-తరువాత|afterwards, next|t̪a§ɾu§ʋaː§t̪a|taruvāta
+తరువాత|afterwards, next|t̪a,ɾu,ʋaː,t̪a|taruvāta
 తరువు||␣
 తరువుకాడు||
 తర్కం||
@@ -6876,7 +6876,7 @@ autoExpandExamples.te = `
 తృతీయము||
 తృతీయా విభక్తి||
 తృప్తము||
-తృప్తి|satisfaction|t̪ɾu§p§t̪i|tr̥pti|t̪ɻ̍pt̪i
+తృప్తి|satisfaction|t̪ɾu,p,t̪i|tr̥pti|t̪ɻ̍pt̪i
 తృష్ణ||
 తె||
 తెంచు||
@@ -6908,7 +6908,7 @@ autoExpandExamples.te = `
 తెలివిలేని||
 తెలుఁగు||␣
 తెలుంగు||␣
-తెలుగు|Telugu language|ˈtɛ.§lʊ.§ɡuː|telugu
+తెలుగు|Telugu language|ˈtɛ.,lʊ.,ɡuː|telugu
 తెలుగుచేయు||
 తెలుగుదనము||
 తెలుగుదేశం||
@@ -7347,7 +7347,7 @@ autoExpandExamples.te = `
 దాడి||␣
 దాణా||
 దాత||
-దాదాపు|close at hand|d̪aː§d̪aː§pu|dādāpu
+దాదాపు|close at hand|d̪aː,d̪aː,pu|dādāpu
 దాది||
 దానం||
 దానము||␣
@@ -7776,7 +7776,7 @@ autoExpandExamples.te = `
 ధరణిదేవుడు||
 ధరము||
 ధరాధరం||␣
-ధరాధరము|mountain|d̪ʱa§ɾaː§d̪ʱa§ɾa§mu|dharādharamu
+ధరాధరము|mountain|d̪ʱa,ɾaː,d̪ʱa,ɾa,mu|dharādharamu
 ధరావత్తు||
 ధరించు||␣
 ధరించుట||
@@ -8014,7 +8014,7 @@ autoExpandExamples.te = `
 నమీబియా||
 నములు||
 నమూదు||
-నమూనా|specimen|na.§muː.§naː|namūnā
+నమూనా|specimen|na.,muː.,naː|namūnā
 నమోదు||
 నమ్మకం||
 నమ్మకము||␣
@@ -8464,7 +8464,7 @@ autoExpandExamples.te = `
 నిర్మూలించు||
 నిర్యాణంబు||
 నిర్యాణము||
-నిర్లక్ష్య|careless|ni§ɾ§la§k§ʂ§ja|nirlakṣya|
+నిర్లక్ష్య|careless|ni,ɾ,la,k,ʂ,ja|nirlakṣya|
 నిర్లక్ష్యం||␣||
 నిర్వహణము||
 నిర్వహించు||
@@ -8669,7 +8669,7 @@ autoExpandExamples.te = `
 నేలమాళిగ||␣
 నై||
 నైఋతి వర్షవాయువు||
-నైఋతి|southwest|naj§ɾu§t̪i|nair̥ti|naiɻ̍t̪i
+నైఋతి|southwest|naj,ɾu,t̪i|nair̥ti|naiɻ̍t̪i
 నైఋతిమూల||␣||
 నైజీరియను||
 నైజీరియన్||
@@ -8824,7 +8824,7 @@ autoExpandExamples.te = `
 పక్షములు||
 పక్షవాతం||
 పక్షవాతము||
-పక్షి|bird|pa§k§ʂi|pakṣi
+పక్షి|bird|pa,k,ʂi|pakṣi
 పక్షిశాస్త్రము||
 పక్ష్మము||
 పగ||␣
@@ -9249,7 +9249,7 @@ autoExpandExamples.te = `
 పసిఫిక్కు||
 పసిరిక||␣
 పసివాడు||
-పసుపు|yellow|pa§su§pu|pasupu
+పసుపు|yellow|pa,su,pu|pasupu
 పసుపుచాయ||
 పసుపుతాడు||
 పసుపుపచ్చ||␣||
@@ -9285,7 +9285,7 @@ autoExpandExamples.te = `
 పాట్నా||
 పాఠం||
 పాఠము||
-పాఠశాల|school|paː§ʈʰa§ɕaː§la|pāṭhaśāla
+పాఠశాల|school|paː,ʈʰa,ɕaː,la|pāṭhaśāla
 పాఠ్యపుస్తకము||
 పాఠ్యము||
 పాడి||␣
@@ -9431,7 +9431,7 @@ autoExpandExamples.te = `
 పిచ్చుక||␣
 పిచ్ఛము||
 పిజ్జా||␣
-పిట్ట|small bird|pi§ʈ§ʈa|piṭṭa
+పిట్ట|small bird|pi,ʈ,ʈa|piṭṭa
 పిట్టకత||
 పిట్టకథ||␣
 పిట్టగూడు||
@@ -9584,7 +9584,7 @@ autoExpandExamples.te = `
 పుత్రుఁడు||
 పుత్రుడు||
 పుత్రోత్సవము||
-పునః|again|pu§naha|punaḥ
+పునః|again|pu,naha|punaḥ
 పునఃప్రతిష్ఠ||
 పునరుక్తము||
 పునరుక్తముగా||
@@ -9872,7 +9872,7 @@ autoExpandExamples.te = `
 పెలుచ||
 పెల్ల||
 పెళ్లమ్రాను||␣
-పెళ్ళాం|wife|pe§ɭ§ɭaːm̃|peḷḷāṃ
+పెళ్ళాం|wife|pe,ɭ,ɭaːm̃|peḷḷāṃ
 పెసర||
 పెసరచేను||
 పెసరట్టు||␣||
@@ -9922,7 +9922,7 @@ autoExpandExamples.te = `
 పైగా||
 పైజామా||
 పైట||
-పైడి|gold|paj§ɖi|paiḍi
+పైడి|gold|paj,ɖi|paiḍi
 పైడిరాజు||
 పైతృకనామం||
 పైతృకనామము||
@@ -10287,7 +10287,7 @@ autoExpandExamples.te = `
 ప్రశంస||␣
 ప్రశంసించు||
 ప్రశాంతి||␣
-ప్రశ్న|question, query|p§ra§ʃ.§na|praśna
+ప్రశ్న|question, query|p,ra,ʃ.,na|praśna
 ప్రశ్నార్థక సర్వనామము||
 ప్రశ్నార్థకం||
 ప్రశ్నార్థకము||
@@ -10434,7 +10434,7 @@ autoExpandExamples.te = `
 ఫలదీకరణము||
 ఫలపూరకము||
 ఫలపూరము||
-ఫలము|fruit|pʰa§la§mu|phalamu
+ఫలము|fruit|pʰa,la,mu|phalamu
 ఫలవంతము||
 ఫలానా||
 ఫలాహారము||
@@ -10670,7 +10670,7 @@ autoExpandExamples.te = `
 బాగ్దాదు||
 బాగ్దాద్||
 బాజా||␣
-బాట|road|baː§ʈa|bāṭa
+బాట|road|baː,ʈa|bāṭa
 బాటలు||␣||
 బాటసారి||␣
 బాడీ||
@@ -10855,7 +10855,7 @@ autoExpandExamples.te = `
 బూజు||
 బూటకము||␣
 బూటు||
-బూడిద|ash|buː§ɖi§d̪a|būḍida
+బూడిద|ash|buː,ɖi,d̪a|būḍida
 బూడిదరంగు||
 బూతు||␣
 బూమి||
@@ -10915,7 +10915,7 @@ autoExpandExamples.te = `
 బేరం||
 బేరమాడు||␣
 బేరము||␣
-బేరముచేయు|to bargain|beː§ɾa§mu§t͡ʃeː§ju|bēramucēyu|beːɾamut͡ɕeːju
+బేరముచేయు|to bargain|beː,ɾa,mu,t͡ʃeː,ju|bēramucēyu|beːɾamut͡ɕeːju
 బేరి||
 బేరియం క్లోరైడు||
 బేరియం క్లోరైడ్||
@@ -11082,7 +11082,7 @@ autoExpandExamples.te = `
 భరతనాట్యం||
 భరతుడు||
 భరించు||
-భర్త|husband|bʱa§ɾ§t̪a|bharta
+భర్త|husband|bʱa,ɾ,t̪a|bharta
 భర్తలు||␣||
 భల్లూకము||
 భళా||
@@ -11290,7 +11290,7 @@ autoExpandExamples.te = `
 మంచిరకము||
 మంచివాడు||
 మంచు తుఫాను||
-మంచు|snow|maɲ§t͡ɕu|mañcu
+మంచు|snow|maɲ,t͡ɕu|mañcu
 మంచుగడ్డ||␣||
 మంచూకో||
 మంచూరియా||
@@ -11703,7 +11703,7 @@ autoExpandExamples.te = `
 మహాసముద్రము||
 మహాసిర||
 మహి||
-మహిళ|woman|ma§hi§ɭa|mahiḷa
+మహిళ|woman|ma,hi,ɭa|mahiḷa
 మహేంద్రుడు||
 మహేశ్వరుడు||
 మహోత్సవం||
@@ -11854,7 +11854,7 @@ autoExpandExamples.te = `
 మార్పు||␣
 మాఱకం||␣||
 మాఱు||␣||
-మాఱుచు|to change|maː§ru§t͡ɕu|māṟucu|
+మాఱుచు|to change|maː,ru,t͡ɕu|māṟucu|
 మాఱుట||␣||
 మాఱుపు||␣||
 మాఱ్చు||␣||
@@ -12318,7 +12318,7 @@ autoExpandExamples.te = `
 మేషరాశి||
 మేషసంక్రాంతి||
 మేషి||
-మేస్త్రి|foreman|meː§s§t̪§ɾi|mēstri|
+మేస్త్రి|foreman|meː,s,t̪,ɾi|mēstri|
 మేస్త్రీ||
 మై||␣
 మైకం||
@@ -12327,7 +12327,7 @@ autoExpandExamples.te = `
 మైక్రోగ్రాము||
 మైక్రోమీటరు||
 మైక్రోలీటరు||␣
-మైత్రి|friendship|mai§t§ri|maitri
+మైత్రి|friendship|mai,t,ri|maitri
 మైత్రేయుఁడు||
 మైత్రేయుడు||
 మైథునము||
@@ -12525,7 +12525,7 @@ autoExpandExamples.te = `
 యాత్ర||
 యాత్రికుఁడు||
 యాత్రికుడు||
-యాభై|fifty|jaː§bʱai|yābhai|
+యాభై|fifty|jaː,bʱai|yābhai|
 యామిని||
 యార్క్||
 యాస||
@@ -12758,7 +12758,7 @@ autoExpandExamples.te = `
 రసికప్రియ||
 రసీదు||␣
 రస్తా||
-రహదారి|roadway|ɾa§ha§d̪aː§ɾi|rahadāri
+రహదారి|roadway|ɾa,ha,d̪aː,ɾi|rahadāri
 రహదారులు||␣||
 రహస్యం||
 రహస్యము||␣
@@ -13011,7 +13011,7 @@ autoExpandExamples.te = `
 రేడియోసినిమా||␣||
 రేడు||␣
 రేణుక||␣
-రేణువు|dust, atom|reː§ɳu§ʋu|rēṇuvu
+రేణువు|dust, atom|reː,ɳu,ʋu|rēṇuvu
 రేతస్సు||
 రేపు అనే రోజు వున్నదా||
 రేపు||␣
@@ -13039,7 +13039,7 @@ autoExpandExamples.te = `
 రొక్కము||␣
 రొడీషియా||
 రొమ్ము||␣
-రొమ్ముఎముక|breast bone|ɾo§m§mu§e§mu§ka|rommuemuka
+రొమ్ముఎముక|breast bone|ɾo,m,mu,e,mu,ka|rommuemuka
 రొమ్మునొప్పి||␣||
 రో||
 రోగం||
@@ -13134,14 +13134,14 @@ autoExpandExamples.te = `
 లక్ష్మణా||
 లక్ష్మణుఁడు||
 లక్ష్మణుడు||
-లక్ష్మి|Lakshmi|la§k§ʂ§mi|lakṣmi
+లక్ష్మి|Lakshmi|la,k,ʂ,mi|lakṣmi
 లక్ష్మీపతి||
 లక్ష్మీపురం||
 లక్ష్మీవారం||
 లక్ష్మీవారము||
 లక్ష్యం||
 లక్ష్యము||␣
-లగాం|bridle|la§gaːm
+లగాం|bridle|la,gaːm
 లగాయితు||
 లగ్నం||
 లగ్నకుడు||
@@ -13204,7 +13204,7 @@ autoExpandExamples.te = `
 లాలన||
 లాలస||
 లాలాజలం||
-లాలాజలము|saliva|laː§laː§d͡ʑa§la§mu|lālājalamu
+లాలాజలము|saliva|laː,laː,d͡ʑa,la,mu|lālājalamu
 లాలూచీ||
 లావణ్య||
 లావణ్యం||
@@ -13242,7 +13242,7 @@ autoExpandExamples.te = `
 లెంప||
 లెంపకాయ||
 లెక్క||␣
-లెక్కపెట్టు|to count|le§k§ka§pe§ʈ§ʈu|lekkapeṭṭu
+లెక్కపెట్టు|to count|le,k,ka,pe,ʈ,ʈu|lekkapeṭṭu
 లెక్కల||␣||
 లెక్కలు||␣||
 లెక్కించు|to count|␣|lekkincu
@@ -13401,7 +13401,7 @@ autoExpandExamples.te = `
 వచనంబు||
 వచనము||␣
 వచ్చిన||␣||
-వచ్చు|to come|ʋa§t͡ɕːu|vaccu
+వచ్చు|to come|ʋa,t͡ɕːu|vaccu
 వచ్చుబడి||␣
 వజ్రం||
 వజ్రము||
@@ -14131,7 +14131,7 @@ autoExpandExamples.te = `
 వు||␣
 వూ||
 వృ||
-వృంతము|stalk (flower)|ʋrin§ta§mu|vr̥ntamu
+వృంతము|stalk (flower)|ʋrin,ta,mu|vr̥ntamu
 వృకం||
 వృకము||␣
 వృక్ష-||
@@ -14221,7 +14221,7 @@ autoExpandExamples.te = `
 వెలకట్టు||␣
 వెలగ||␣
 వెలతక్కువ||␣||
-వెలతక్కువైన|cheap|ʋe§la§t̪a§k§ku§ʋai§na|velatakkuvaina|
+వెలతక్కువైన|cheap|ʋe,la,t̪a,k,ku,ʋai,na|velatakkuvaina|
 వెలది||␣
 వెలయాలు||␣
 వెలయెక్కువ||␣||
@@ -14823,7 +14823,7 @@ autoExpandExamples.te = `
 శైవము||
 శైవలము||␣
 శైవుడు||
-శైశవము|infancy, childhood|ʃaj§ʃa§ʋa§mu|śaiśavamu
+శైశవము|infancy, childhood|ʃaj,ʃa,ʋa,mu|śaiśavamu
 శొంఠి||␣
 శోకం||
 శోకంబు||
@@ -14950,7 +14950,7 @@ autoExpandExamples.te = `
 షా||
 షాంఘే||
 షాంఘై||
-షాంపూ|shampoo|ʂaːm§puː|ṣāmpū
+షాంపూ|shampoo|ʂaːm,puː|ṣāmpū
 షాడ్గుణ్యము||
 షావుకారు||
 షికారీ||
@@ -15289,7 +15289,7 @@ autoExpandExamples.te = `
 సరసాంగి||
 సరసోక్తి||
 సరస్వతి||
-సరస్సు|lake|sa§ra§s§su|sarassu
+సరస్సు|lake|sa,ra,s,su|sarassu
 సరాగము||
 సరాసరి||
 సరి||␣
@@ -16156,7 +16156,7 @@ autoExpandExamples.te = `
 హాలు||
 హాసం||
 హాసము||
-హాస్పిటల్|hospital|haː§s§pi§ʈa§l|hāspiṭal
+హాస్పిటల్|hospital|haː,s,pi,ʈa,l|hāspiṭal
 హాస్యం||
 హాస్యము||
 హిందీ||␣
@@ -16308,9 +16308,9 @@ autoExpandExamples.te = `
 @ ?
 సమృద్ధిగా|rich|
 తాగాను|I drank|taːgæːnu
-సింహ|lion|sim§ha
-గూర్చి|about|guː§r§t͡ʃi
-గూర్‍చి|about|guː§r§§t͡ʃi
+సింహ|lion|sim,ha
+గూర్చి|about|guː,r,t͡ʃi
+గూర్‍చి|about|guː,r,,t͡ʃi
 
 
 

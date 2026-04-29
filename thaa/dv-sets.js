@@ -7,7 +7,7 @@
 
 
 var collections = [
-{ symbol:'Ⓥ', desc:'Vowels', chars:'(ި|ީ|ު|ޫ|ެ|ޭ|ަ|ާ|ޮ|ޯ)' },
-{ symbol:'Ⓒ', desc:'Consonants', chars:'(ޕ|ބ|ތ|ދ|ޗ|ޖ|ޓ|ޑ|ކ|ގ|ފ|ވ|ސ|ޒ|ށ|ހ|މ|ނ|ޏ|ރ|ލ|ޅ|ޔ|އ|ޠ|ޟ|ޤ|ޘ|ޛ|ޞ|ޡ|ޝ|ޜ|ޚ|ޣ|ޙ|ޢ|ޥ)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
+{ symbol:'Ⓥ', desc:'Vowels', chars:'[ިީުޫެޭަާޮޯ]' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'[ޕބތދޗޖޓޑކގފވސޒށހމނޏރލޅޔއޠޟޤޘޛޞޡޝޜޚޣޙޢޥ]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D\u2067\u202B\u2066\u202A\u2068\u2069\u202C\u200F\u200E\u061C\u034F]' },
 ]

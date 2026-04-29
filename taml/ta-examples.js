@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -45,12 +45,12 @@ autoExpandExamples.ta = `
 -இருந்து||␣|
 -இல்||␣|
 -ஈர்||␣|
--உடன்|with|§u§ɖa§n|-uṭaṉ
+-உடன்|with|,u,ɖa,n|-uṭaṉ
 -உடைய||␣|
--உம்|and|§um|-um
+-உம்|and|,um|-um
 -உள்-||␣|
 -ஏன்||␣|
--ஓடு|with|§oː§ɖɯ|-ōṭu
+-ஓடு|with|,oː,ɖɯ|-ōṭu
 -ஓம்||␣|
 -காரன்||␣|
 -காரி||␣|
@@ -64,14 +64,14 @@ autoExpandExamples.ta = `
 -மை||␣|
 -வு||␣|
 -ஸ்தான்||␣|
-ஃஜிந்தகி|property|›§zi§n̪§d̪a§ɡi|zintaki||alt
-ஃபோன்|phone|›§foː§n|fōṉ
-அஃகடி|difficulty|ɐ§›§ʰɦɐ§ɖi|aḥkaṭi
-அஃகம்|grain, spring water|ə§›§ʰɦa§m|aḥkam
-அஃகு|oozing water|a§›§xɯ|aḥku
-அஃகேனம்|name of the letter ஃ|ɐ§ɦ§keː§nɐ§m|aḥkēṉam
-அஃது|that (archaic)|ɐ§ɦ§d̪ɯ|aḥtu
-அஃறிணை|irrational noun|ə§ɦ§rɪ§ɳəɪ̯|aḥṟiṇai
+ஃஜிந்தகி|property|›,zi,n̪,d̪a,ɡi|zintaki||alt
+ஃபோன்|phone|›,foː,n|fōṉ
+அஃகடி|difficulty|ɐ,›,ʰɦɐ,ɖi|aḥkaṭi
+அஃகம்|grain, spring water|ə,›,ʰɦa,m|aḥkam
+அஃகு|oozing water|a,›,xɯ|aḥku
+அஃகேனம்|name of the letter ஃ|ɐ,ɦ,keː,nɐ,m|aḥkēṉam
+அஃது|that (archaic)|ɐ,ɦ,d̪ɯ|aḥtu
+அஃறிணை|irrational noun|ə,ɦ,rɪ,ɳəɪ̯|aḥṟiṇai
 அகங்காரம்||␣
 அகங்கை||␣
 அகண்டன்||␣|
@@ -89,7 +89,7 @@ autoExpandExamples.ta = `
 அகப்பு||␣
 அகப்பை||␣
 அகமமரம்||␣
-அகம்|akam (poem), internal|a§ɡa§m|akam
+அகம்|akam (poem), internal|a,ɡa,m|akam
 அகம்படி||␣|
 அகரமுதலி||␣
 அகரம்||␣
@@ -97,7 +97,7 @@ autoExpandExamples.ta = `
 அகராதி||␣
 அகரு||␣
 அகற்சி||␣
-அகற்று|to remove|a§ɡa§t§rɯ|akaṟṟu
+அகற்று|to remove|a,ɡa,t,rɯ|akaṟṟu
 அகலம்||␣
 அகல்||␣|
 அகழி||␣
@@ -146,9 +146,9 @@ autoExpandExamples.ta = `
 அங்குத்தை||␣
 அங்குலி||␣
 அங்கூசம்||␣|
-அங்கே|there|a§ŋ§ɡeː|aṅkē
+அங்கே|there|a,ŋ,ɡeː|aṅkē
 அங்கோடிங்கோடு||␣
-அங்ஙனம்|there|a§ŋ§ŋa§na§m|aṅṅaṉam
+அங்ஙனம்|there|a,ŋ,ŋa,na,m|aṅṅaṉam
 அசமந்தம்||
 அசர்||␣
 அசர்த்து||␣
@@ -169,18 +169,18 @@ autoExpandExamples.ta = `
 அஞ்சல் நிலையம்||␣
 அஞ்சல்||␣|
 அஞ்சிக்கை||␣|
-அஞ்சு|to fear|a§ɲ§d͡ʑɯ|añcu
-அஞ்ஞானம்|fineness|a§ɲ§ɲaː§na§m|aññāṉam
+அஞ்சு|to fear|a,ɲ,d͡ʑɯ|añcu
+அஞ்ஞானம்|fineness|a,ɲ,ɲaː,na,m|aññāṉam
 அஞ்ஞை||␣
 அடக்கம்||␣|
 அடக்கு||␣
 அடங்கு||␣
 அடங்குதல்||␣|
 அடர்||␣|
-அடர்த்தி|crowdedness|a§ɖa§ɾ§t̪§t̪i|aṭartti
+அடர்த்தி|crowdedness|a,ɖa,ɾ,t̪,t̪i|aṭartti
 அடவி||␣
-அடி|foot, step|a§ɖi|aṭi
-அடிகள்|deity|a§ɖi§ɡa§ɭ|aṭikaḷ
+அடி|foot, step|a,ɖi|aṭi
+அடிகள்|deity|a,ɖi,ɡa,ɭ|aṭikaḷ
 அடிகேயா||␣
 அடிக்கடி||␣
 அடிக்கொருக்கால்||␣
@@ -265,7 +265,7 @@ autoExpandExamples.ta = `
 அதிர்ச்சி||␣
 அதிர்ஷ்டம்||␣|
 அதிவிடை||␣
-அது|that|a§d̪ʉ|atu
+அது|that|a,d̪ʉ|atu
 அதோள்||␣
 அத்தனை||␣
 அத்தன்||␣|
@@ -304,15 +304,15 @@ autoExpandExamples.ta = `
 அனைத்து||␣
 அனைத்துப்பாலீர்ப்ப||␣|
 அனைய||␣
-அனைவரும்|all (of people)|a§nai§ʋa§ɾu§m|aṉaivarum
+அனைவரும்|all (of people)|a,nai,ʋa,ɾu,m|aṉaivarum
 அன்ன||
 அன்னணம்||␣
 அன்னம்||␣
 அன்னவூர்தி||␣|
 அன்னாசி||␣|
-அன்னை|mother|a§n§nai|aṉṉai
+அன்னை|mother|a,n,nai|aṉṉai
 அன்பளிப்பு||␣
-அன்பு|love|a§n§bɯ|aṉpu
+அன்பு|love|a,n,bɯ|aṉpu
 அன்மொழித்தொகை||␣|
 அன்றியில்||␣
 அன்றியும்||␣
@@ -331,9 +331,9 @@ autoExpandExamples.ta = `
 அபிவிருத்தி||␣
 அபிஷேகம்||␣
 அப்படி||␣
-அப்பன்|father|a§p§pa§n|appaṉ
+அப்பன்|father|a,p,pa,n|appaṉ
 அப்பம்||␣
-அப்பா|father|a§p§paː|appā
+அப்பா|father|a,p,paː|appā
 அப்பால்||␣
 அப்புறம்||␣
 அப்பொழுது||␣
@@ -368,16 +368,16 @@ autoExpandExamples.ta = `
 அம்பு||␣
 அம்புலி||␣|
 அம்மன்||␣|
-அம்மா|mother|a§m§maː|ammā
+அம்மா|mother|a,m,maː|ammā
 அம்மான்||␣
 அம்மாய்||␣
-அம்மாள்|mummy|a§m§maː§ɭ|ammāḷ
+அம்மாள்|mummy|a,m,maː,ɭ|ammāḷ
 அம்மி||␣|
 அம்மை||␣|
 அயனமண்டலம்||␣
 அயனம்||␣
 அயர்||␣
-அயர்ச்சி|faintness|a§ja§ɾ§t͡ɕ§t͡ɕi|ayarcci
+அயர்ச்சி|faintness|a,ja,ɾ,t͡ɕ,t͡ɕi|ayarcci
 அயலான்||␣|
 அயல்||␣|
 அயிங்கிசை||␣
@@ -409,9 +409,9 @@ autoExpandExamples.ta = `
 அரவிந்தம்||␣
 அரா||␣|
 அராவாரம்||␣
-அரி|to cut|a§ɾi|aɾi
+அரி|to cut|a,ɾi|aɾi
 அரிசி||␣
-அரிச்சுவடி|alphabet, script|a§ɾi§t§t͡ɕu§ʋa§ɖi|ariccuvaṭi
+அரிச்சுவடி|alphabet, script|a,ɾi,t,t͡ɕu,ʋa,ɖi|ariccuvaṭi
 அரிமா||␣
 அரியணை||␣|
 அரியலூர்||␣|
@@ -421,7 +421,7 @@ autoExpandExamples.ta = `
 அருகதிகம்||␣
 அருகலை||␣|
 அருகல்||␣
-அருகில்|near|a§ɾu§ɡi§l|arukil
+அருகில்|near|a,ɾu,ɡi,l|arukil
 அருகு||␣
 அருக்கன்||␣
 அருக்கன்வீதி||␣
@@ -457,7 +457,7 @@ autoExpandExamples.ta = `
 அர்ப்பணிப்பு||␣|
 அறக்கட்டளை||␣
 அறம்||␣
-அறி|knowledge|a§ri|aṟi
+அறி|knowledge|a,ri|aṟi
 அறிகுறி||␣
 அறிக்கை||␣|
 அறிக்கைபண்ணு||␣
@@ -512,9 +512,9 @@ autoExpandExamples.ta = `
 அலைப்பு||␣
 அலைப்பேசி||␣
 அல்-||␣|
-அல்|night|a§l|al
+அல்|night|a,l|al
 அல்குல்||␣|
-அல்ல|not|a§l§la|alla
+அல்ல|not|a,l,la|alla
 அல்லது||␣
 அல்லதை||␣
 அல்லறம்||␣|
@@ -535,7 +535,7 @@ autoExpandExamples.ta = `
 அளேரியம்||␣
 அள்ளு||␣|
 அழகன்||␣|
-அழகு|beauty|a§ɻa§ɡɯ|aḻaku
+அழகு|beauty|a,ɻa,ɡɯ|aḻaku
 அழி||␣
 அழிஞ்சில்||␣
 அழிபு||␣
@@ -556,13 +556,13 @@ autoExpandExamples.ta = `
 அவதி||␣
 அவதூறு||␣|
 அவனி||␣|
-அவன்|he, that man|a§ʋa§n|avaṉ
+அவன்|he, that man|a,ʋa,n|avaṉ
 அவமதிப்பு||␣
 அவமானம்||␣|
 அவரை||␣
 அவரோகணம்||␣
 அவர்||␣
-அவர்கள்|they|a§ʋa§ɾ§ɡa§ɭ|avarkaḷ
+அவர்கள்|they|a,ʋa,ɾ,ɡa,ɭ|avarkaḷ
 அவல்||␣
 அவள்||␣
 அவா||␣|
@@ -577,9 +577,9 @@ autoExpandExamples.ta = `
 அவ்வண்ணம்||␣
 அவ்வது||␣
 அவ்வருகு||␣
-அவ்வழி|after that|a§ʋ§ʋa§ɻi|avvaḻi
+அவ்வழி|after that|a,ʋ,ʋa,ɻi|avvaḻi
 அவ்வாறு||␣
-அவ்விடம்|there|a§ʋ§ʋi§ɖa§m|avviṭam
+அவ்விடம்|there|a,ʋ,ʋi,ɖa,m|avviṭam
 அவ்வோ||␣
 அவ்வோன்||␣
 அஸர்||␣|
@@ -652,13 +652,13 @@ autoExpandExamples.ta = `
 ஆணையம்||␣
 ஆணையிடு||␣
 ஆண் குறி||␣
-ஆண்|man|aː§ɳ|āṇ
+ஆண்|man|aː,ɳ|āṇ
 ஆண்கள்||␣|
 ஆண்குறி||␣
 ஆண்டவன்||␣
 ஆண்டான்||␣|
 ஆண்டாள்||␣|
-ஆண்டு|year|ɑː§ɳ§ɖɯ|āṇṭu
+ஆண்டு|year|ɑː,ɳ,ɖɯ|āṇṭu
 ஆண்டுகள்ளடவு||␣
 ஆண்டை||
 ஆண்பால்||␣
@@ -688,7 +688,7 @@ autoExpandExamples.ta = `
 ஆன்மா||
 ஆன்மீகம்||␣
 ஆபகூக்||␣|
-ஆபத்து|danger|aː§ba§t̪§t̪ɯ|āpattu
+ஆபத்து|danger|aː,ba,t̪,t̪ɯ|āpattu
 ஆபரணம்||␣
 ஆபிச்||␣
 ஆபிரகாம்||␣|
@@ -738,11 +738,11 @@ autoExpandExamples.ta = `
 ஆர்ட்டின்||␣|
 ஆர்ட்டின்கள்||␣|
 ஆர்த்தி||␣
-ஆர்மதி|crab|aː§ɾ§ma§d̪i|ārmati
+ஆர்மதி|crab|aː,ɾ,ma,d̪i|ārmati
 ஆர்மீனியா||␣
 ஆர்வம்||␣
 ஆறாவது||␣
-ஆறு|river, six|ɑː§rɯ|āṟu
+ஆறு|river, six|ɑː,rɯ|āṟu
 ஆறுமணிப்பூ||␣
 ஆற்காடு||␣|
 ஆற்றங்கரை||␣|
@@ -768,7 +768,7 @@ autoExpandExamples.ta = `
 ஆளுநர்||␣
 ஆளுமை||␣|
 ஆளுவல்லி||␣
-ஆள்|man (human being)|aː§ɭ|āḷ
+ஆள்|man (human being)|aː,ɭ|āḷ
 ஆழம்||␣|
 ஆழி||␣|
 ஆழிப்பேரலை||␣
@@ -798,7 +798,7 @@ autoExpandExamples.ta = `
 இங்கு||␣
 இங்குத்தை||␣
 இங்குஷேத்தியா||␣
-இங்கே|here|i§ŋ§ɡeː|iṅkē
+இங்கே|here|i,ŋ,ɡeː|iṅkē
 இங்ஙனம்||␣
 இசக்கி||␣|
 இசக்கியம்மன்||␣|
@@ -815,14 +815,14 @@ autoExpandExamples.ta = `
 இச்சகம்||␣|
 இச்சை||␣
 இச்சையடக்கம்||␣|
-இஞ்சி|ginger|i§ɲ§d͡ʑi|iñci
+இஞ்சி|ginger|i,ɲ,d͡ʑi|iñci
 இஞ்சிமாங்காய்||␣
 இஞ்சீல்||␣
 இடக்கரடக்கல்||␣|
 இடக்கர்||␣|
 இடக்கு||␣|
 இடங்கர்||␣|
-இடது|left (side)|i§ɖa§d̪ɯ|iṭatu
+இடது|left (side)|i,ɖa,d̪ɯ|iṭatu
 இடபம்||␣|
 இடப்பு||␣
 இடப்பெயர்||␣
@@ -865,13 +865,13 @@ autoExpandExamples.ta = `
 இதழ்||␣
 இதிகாசம்||␣|
 இது என்ன விலை||␣
-இது|this|i§d̪ɯ|itu
+இது|this|i,d̪ɯ|itu
 இத்தனை||␣
 இத்தால்||␣
 இத்தினுவா||␣|
 இத்திஹாத்தான||␣
 இத்ரீஸ்||␣|
-இந்த|this|i§n̪§d̪a|inta
+இந்த|this|i,n̪,d̪a|inta
 இந்தி||␣
 இந்திய||␣|
 இந்தியப் பெருங்கடல்||␣|
@@ -910,7 +910,7 @@ autoExpandExamples.ta = `
 இபுதார்||␣
 இப்படி||␣
 இப்புறம்||␣|
-இப்பொழுது|this time, now|i§p§po§ɻu§d̪ɯ|ippoḻutu
+இப்பொழுது|this time, now|i,p,po,ɻu,d̪ɯ|ippoḻutu
 இப்போது||␣
 இப்ராஹிம்||␣|
 இமம்||␣
@@ -953,7 +953,7 @@ autoExpandExamples.ta = `
 இரணியம்||␣
 இரணை||␣|
 இரண்டாம் வேற்றுமை||␣
-இரண்டு|two|i§ɾa§ɳ§ɖɯ|iraṇṭu
+இரண்டு|two|i,ɾa,ɳ,ɖɯ|iraṇṭu
 இரண்டை||␣
 இரதம்||␣|
 இரத்தம்||␣|
@@ -964,7 +964,7 @@ autoExpandExamples.ta = `
 இரப்பை||␣|
 இரயில்||␣|
 இரவு வணக்கம்||␣|
-இரவு|night|i§ɾa§ʋɯ|iravu
+இரவு|night|i,ɾa,ʋɯ|iravu
 இராகம்||␣
 இராகவன்||␣|
 இராசகுமாரி||␣
@@ -984,7 +984,7 @@ autoExpandExamples.ta = `
 இராமானுசன்||␣
 இராமாயணம்||␣
 இராவுத்தன்||␣|
-இரு|to sit, be/exist|i§ɾɯ|iru
+இரு|to sit, be/exist|i,ɾɯ|iru
 இருக்கு வேதம்||␣
 இருக்கை||␣|
 இருட்டு||␣|
@@ -1015,11 +1015,11 @@ autoExpandExamples.ta = `
 இரை||␣
 இரைச்சல்||␣
 இரைப்பை||␣
-இற|to die|i§ra|ira
+இற|to die|i,ra|ira
 இறகர்||␣
-இறகு|feather|i§ra§ɡɯ|iṟaku
+இறகு|feather|i,ra,ɡɯ|iṟaku
 இறக்கு||␣|
-இறக்கை|wing|i§ra§k§kai|iṟakkai
+இறக்கை|wing|i,ra,k,kai|iṟakkai
 இறங்கு||␣|
 இறப்பு||␣
 இறால்||␣
@@ -1029,7 +1029,7 @@ autoExpandExamples.ta = `
 இறுதித்தேர்வு||
 இறுமாப்பு||␣
 இறை||␣|
-இறைச்சி|meat|i§rai§t͡ɕ§t͡ɕi|iṟaicci
+இறைச்சி|meat|i,rai,t͡ɕ,t͡ɕi|iṟaicci
 இறையியல்||␣|
 இறைவன்||␣|
 இறைவாக்கினர்||␣|
@@ -1043,7 +1043,7 @@ autoExpandExamples.ta = `
 இலக்கியம்||␣
 இலக்கு||␣
 இலக்குமி||␣
-இலங்கை|Sri Lanka|i§la§ŋ§ɡai|ilaṅkai
+இலங்கை|Sri Lanka|i,la,ŋ,ɡai|ilaṅkai
 இலட்சத்தீவுகள்||␣|
 இலட்சம்||␣
 இலட்சுமணன்||␣
@@ -1056,10 +1056,10 @@ autoExpandExamples.ta = `
 இலாபம்||␣
 இலுப்பை||␣
 இலுமு||␣
-இலை|leaf|i§lai|ilai
+இலை|leaf|i,lai|ilai
 இலைக்கறி||␣|
 இலையுதிர்||␣|
-இல்|house, home|i§l|il
+இல்|house, home|i,l|il
 இல்லகம்||␣
 இல்லக்கிழத்தி||␣
 இல்லத்தரசி||␣
@@ -1068,7 +1068,7 @@ autoExpandExamples.ta = `
 இல்லாக்காட்டில்||␣
 இல்லாள்||␣
 இல்லிடம்||␣|
-இல்லை|not|i§l§lai|illai
+இல்லை|not|i,l,lai|illai
 இள||␣
 இளங்காய்||␣|
 இளங்கோ||␣|
@@ -1098,7 +1098,7 @@ autoExpandExamples.ta = `
 இழிதகவு||␣
 இழிப்பு||␣
 இழிவு||␣
-இழு|to pull|i§ɻɯ|iḻu
+இழு|to pull|i,ɻɯ|iḻu
 இழுகு||␣
 இழுக்க||␣|
 இழுக்கம்||␣
@@ -1107,7 +1107,7 @@ autoExpandExamples.ta = `
 இழுதை||␣
 இழுப்பறை||␣
 இழை||␣|
-இவன்|he|i§ʋa§n|ivaṉ
+இவன்|he|i,ʋa,n|ivaṉ
 இவர்||␣|
 இவர்கள்||␣|
 இவறல்||
@@ -1116,7 +1116,7 @@ autoExpandExamples.ta = `
 இவை||␣|
 இவ்வாறு||␣|
 இஷ்டம்||␣|
-இஸ்திக்ஃபார்|asking forgiveness of god|i§s§t̪i§k§›§faː§ɾ|istikfār
+இஸ்திக்ஃபார்|asking forgiveness of god|i,s,t̪i,k,›,faː,ɾ|istikfār
 இஸ்திரி||␣|
 இஸ்துனுவர||␣|
 இஸ்துனுவா||␣|
@@ -1140,10 +1140,10 @@ autoExpandExamples.ta = `
 ஈமம்||␣
 ஈமான்||␣|
 ஈயம்||␣|
-ஈரமான|wet|iː§ɾa§maː§na|īramāṉa
+ஈரமான|wet|iː,ɾa,maː,na|īramāṉa
 ஈரம்||␣|
 ஈரர்||␣|
-ஈரல்|liver|iː§ɾa§l̪|īral
+ஈரல்|liver|iː,ɾa,l̪|īral
 ஈரோடு||␣|
 ஈர்||␣|
 ஈர்ப்பு||␣|
@@ -1152,10 +1152,10 @@ autoExpandExamples.ta = `
 ஈளை||␣|
 ஈழம்||␣
 ஈவு||␣|
-உஃப|Ufa (Russia)|u§›§fa|ufa
+உஃப|Ufa (Russia)|u,›,fa|ufa
 உகளம்||␣
 உகவர்||␣|
-உகிர்|fingernail|u§ɡi§ɾ|ukir
+உகிர்|fingernail|u,ɡi,ɾ|ukir
 உக்கம்பருத்தி||␣
 உசுபெக்கிசுத்தான்||␣
 உச்சரிப்பு||␣
@@ -1177,7 +1177,7 @@ autoExpandExamples.ta = `
 உடைமை||␣|
 உடையவன்||␣
 உட்கருத்து||␣
-உட்கார்|to sit|u§ʈ§kaː§ɾ|uṭkār
+உட்கார்|to sit|u,ʈ,kaː,ɾ|uṭkār
 உட்கொள்||␣|
 உட்கோட்டை||␣
 உட்டணம்||␣|
@@ -1190,7 +1190,7 @@ autoExpandExamples.ta = `
 உணர்வு||␣
 உணவகம்||␣|
 உணவு||␣
-உண்|to eat|u§ɳ|uṇ
+உண்|to eat|u,ɳ|uṇ
 உண்டா||␣
 உண்டாக||␣
 உண்டாக்கு||␣
@@ -1250,7 +1250,7 @@ autoExpandExamples.ta = `
 உபாயம்||␣
 உபோதம்||␣
 உப்பளம்||␣|
-உப்பு|salt|u§p§pɯ|uppu
+உப்பு|salt|u,p,pɯ|uppu
 உப்புமா||␣
 உப்புவாயு||␣
 உமரி||␣
@@ -1296,7 +1296,7 @@ autoExpandExamples.ta = `
 உருக்கு||␣|
 உருசியா||␣
 உருட்டு||␣
-உருண்ட|round|u§ɾu§ɳ§ɖa|uruṇṭa
+உருண்ட|round|u,ɾu,ɳ,ɖa|uruṇṭa
 உருது||␣|
 உருத்திரன்||␣
 உருத்திராக்கம்||␣|
@@ -1308,13 +1308,13 @@ autoExpandExamples.ta = `
 உருள்||␣|
 உருவம்||␣|
 உருவாக்கம்||␣|
-உரை|speaking, talk|u§ɾai|urai
+உரை|speaking, talk|u,ɾai|urai
 உரையாடல்||␣|
 உரோகிணி||␣|
 உரோமம்||␣
 உரோம்||␣
 உறக்கம்||␣
-உறங்கு|to sleep|u§ra§ŋ§ɡɯ|uṟaṅku
+உறங்கு|to sleep|u,ra,ŋ,ɡɯ|uṟaṅku
 உறப்பு||␣
 உறல்||␣
 உறழ்||␣|
@@ -1324,7 +1324,7 @@ autoExpandExamples.ta = `
 உறவு||␣
 உறி||␣|
 உறிஞ்சி||␣|
-உறிஞ்சு|to suck|u§ri§ɲ§d͡ʑɯ|uṟiñcu
+உறிஞ்சு|to suck|u,ri,ɲ,d͡ʑɯ|uṟiñcu
 உறு||␣|
 உறுகண்||␣
 உறுகோள்||␣
@@ -1339,7 +1339,7 @@ autoExpandExamples.ta = `
 உறுப்பினர்||␣|
 உறுப்பு||␣|
 உறுமு||␣|
-உறை|to freeze|u§rai|uṟai
+உறை|to freeze|u,rai|uṟai
 உறையுள்||␣|
 உறைவிடம்||␣|
 உற்சவம்||␣|
@@ -1350,7 +1350,7 @@ autoExpandExamples.ta = `
 உலகு||␣|
 உலங்கு||␣
 உலர்ச்சி||␣
-உலர்ந்தம்|stalk (bot.)|u§la§ɾ§n̪§d̪a§m|ularntam
+உலர்ந்தம்|stalk (bot.)|u,la,ɾ,n̪,d̪a,m|ularntam
 உலாவி||␣|
 உலுவம்||␣
 உலை||␣
@@ -1369,7 +1369,7 @@ autoExpandExamples.ta = `
 உள்ள||␣|
 உள்ளங்கை||␣
 உள்ளது||␣
-உள்ளம்|mind, heart|u§ɭ§ɭa§m|uḷḷam
+உள்ளம்|mind, heart|u,ɭ,ɭa,m|uḷḷam
 உள்ளா||␣
 உள்ளாடை||␣|
 உள்ளாடைகள்||␣|
@@ -1417,7 +1417,7 @@ autoExpandExamples.ta = `
 ஊதற்காற்று||␣|
 ஊதா||␣
 ஊதியம்||␣
-ஊது|to blow|uː§d̪ɯ|ūtu
+ஊது|to blow|uː,d̪ɯ|ūtu
 ஊதைக்காற்று||␣|
 ஊத்தப்பம்||␣
 ஊனம்||␣
@@ -1449,7 +1449,7 @@ autoExpandExamples.ta = `
 ஊழ்வினை||␣|
 ஊவா மாகாணம்||␣|
 ஊவா||␣|
-எஃகு|steel|e§›§xɯ|eḥku
+எஃகு|steel|e,›,xɯ|eḥku
 எகின்||␣
 எகிப்து||␣|
 எக்கச்சக்கம்||␣
@@ -1460,7 +1460,7 @@ autoExpandExamples.ta = `
 எங்கித்தை||␣
 எங்கு||␣
 எங்கும்||␣
-எங்கே|where|e§ŋ§ɡeː|eṅkē
+எங்கே|where|e,ŋ,ɡeː|eṅkē
 எசுத்தோனியா||␣
 எசேக்கியல்||␣|
 எச்சம்||␣
@@ -1472,7 +1472,7 @@ autoExpandExamples.ta = `
 எட்டப்பார்வை||␣
 எட்டு||␣
 எட்டுத்தொகை||␣|
-எண்|to count|e§ɳ|eṇ
+எண்|to count|e,ɳ|eṇ
 எண்கள்||␣|
 எண்கு||␣|
 எண்ணக்கரு||␣|
@@ -1518,7 +1518,7 @@ autoExpandExamples.ta = `
 எனைவர்||␣
 என்||␣
 என்கை||␣
-என்ன|what|e§n§na|eṉṉa
+என்ன|what|e,n,na|eṉṉa
 என்னணம்||␣
 என்னது||␣
 என்னதும்||␣
@@ -1539,23 +1539,23 @@ autoExpandExamples.ta = `
 என்றைக்கும்||␣
 எபிரேயம்||␣|
 எப்படி இருக்கீங்க||␣|
-எப்படி|how|e§p§pa§ɖi|eppaṭi
+எப்படி|how|e,p,pa,ɖi|eppaṭi
 எப்பேர்ப்பட்ட||␣
-எப்பொழுது|when|e§p§po§ɻu§d̪ɯ|eppoḻutu
+எப்பொழுது|when|e,p,po,ɻu,d̪ɯ|eppoḻutu
 எப்பொழுதும்||␣|
 எமன்||␣
 எம்||␣|
 எம்டன்||␣|
 எம்மை||␣|
 எய்||␣|
-எரி|to glow, burn|e§ɾi|eri
+எரி|to glow, burn|e,ɾi|eri
 எரிமலை||␣
 எருசலேம்||␣|
 எருது||␣
 எருமை||␣
 எரேமியா||␣|
 எர்ணாகுளம்||␣|
-எறி|to throw|e§ri|eṟi
+எறி|to throw|e,ri|eṟi
 எறும்பி||␣
 எறும்பு||␣
 எறுழி||␣|
@@ -1565,7 +1565,7 @@ autoExpandExamples.ta = `
 எற்றைக்கும்||␣
 எலி||␣
 எலுமிச்சை||␣|
-எலும்பு|bone|e§lu§m§bɯ|elumpu
+எலும்பு|bone|e,lu,m,bɯ|elumpu
 எல்||␣|
 எல்லாம்|all||ellām
 எல்லாரும்||
@@ -1600,7 +1600,7 @@ autoExpandExamples.ta = `
 எழுவு||␣|
 எவண்||␣
 எவன்||␣|
-எவர்|who|e§ʋa§ɾ|evar
+எவர்|who|e,ʋa,ɾ|evar
 எவர்கள்||␣|
 எவள்||␣|
 எவை||␣|
@@ -1628,7 +1628,7 @@ autoExpandExamples.ta = `
 ஏத்து||␣
 ஏந்திழை||␣|
 ஏனம்||␣
-ஏனென்றால்|because|eː§ne§n§draː§l|ēṉeṉṟāl
+ஏனென்றால்|because|eː,ne,n,draː,l|ēṉeṉṟāl
 ஏன்||␣
 ஏப்பம்||␣|
 ஏப்பியன்||␣|
@@ -1643,7 +1643,7 @@ autoExpandExamples.ta = `
 ஏமுறு||␣
 ஏரணம்||␣
 ஏராளம்||␣
-ஏரி|lake|eː§ɾi|ēri
+ஏரி|lake|eː,ɾi|ēri
 ஏற||␣
 ஏறக்குறைய||␣
 ஏறத்தாழ||␣|
@@ -1673,7 +1673,7 @@ autoExpandExamples.ta = `
 ஐசுவரியம்||␣|
 ஐதரசன்||␣
 ஐநூறு||␣
-ஐந்து|five|ai§n̪§d̪ɯ|aintu
+ஐந்து|five|ai,n̪,d̪ɯ|aintu
 ஐப்பசி||␣|
 ஐம்பது||␣
 ஐம்பத்தெட்டு||␣|
@@ -1709,7 +1709,7 @@ autoExpandExamples.ta = `
 ஒன்றன்பால்||␣|
 ஒன்றாக||␣
 ஒன்றியம்||␣|
-ஒன்று|one|o§n§drɯ|oṉṟu
+ஒன்று|one|o,n,drɯ|oṉṟu
 ஒபதியா||␣|
 ஒப்பந்தம்||␣
 ஒப்பம்||␣
@@ -1718,7 +1718,7 @@ autoExpandExamples.ta = `
 ஒப்புகை||␣
 ஒப்புமை||␣
 ஒப்புவி||␣|
-ஒரு|one|o§ɾɯ|oru
+ஒரு|one|o,ɾɯ|oru
 ஒருங்கிணைக்கப்பட்ட பன்னாட்டு நேரம்||␣|
 ஒருபாலீர்ப்பு||␣|
 ஒருமை||␣|
@@ -1747,7 +1747,7 @@ autoExpandExamples.ta = `
 ஒளிர்||␣|
 ஒழி||␣|
 ஒழிப்பு||␣|
-ஒழுகு|to flow, leak|o§ɻu§ɡɯ|oḻuku
+ஒழுகு|to flow, leak|o,ɻu,ɡɯ|oḻuku
 ஒழுக்கம்||␣
 ஒழுக்கு||␣|
 ஒழுங்கு||␣|
@@ -1758,7 +1758,7 @@ autoExpandExamples.ta = `
 ஓசை||␣|
 ஓச்சன்||␣
 ஓடன்||␣|
-ஓடம்|boat, barque|oː§ɖa§m|ōṭam
+ஓடம்|boat, barque|oː,ɖa,m|ōṭam
 ஓடு||␣
 ஓடை||␣
 ஓட்டம்||␣|
@@ -1786,13 +1786,13 @@ autoExpandExamples.ta = `
 ஓலை||␣|
 ஓவியம்||␣
 ஔகாரக்குறுக்கம்||␣|
-ஔடதம்|medecine|au§ɖa§d̪a§m|auṭatam
+ஔடதம்|medecine|au,ɖa,d̪a,m|auṭatam
 ஔவியம்||␣|
-ஔவை|female ascetic|au§ʋai|auvai
+ஔவை|female ascetic|au,ʋai|auvai
 ஔஷதம்||␣|
 ககனம்||␣
 கக்கம்||␣|
-கக்கு|to vomit|ka§k§kɯ|kakku
+கக்கு|to vomit|ka,k,kɯ|kakku
 கக்கூசு||
 கக்கூஸ்||␣|
 கங்காதரன்||␣
@@ -1804,7 +1804,7 @@ autoExpandExamples.ta = `
 கச்சான்||␣|
 கச்சு||␣
 கச்சேரி||␣|
-கஜம்|elephant|ɡa§d͡ʑa§m|kajam
+கஜம்|elephant|ɡa,d͡ʑa,m|kajam
 கஜானா||␣|
 கஞ்சா||␣
 கஞ்சாவை||␣
@@ -1828,14 +1828,14 @@ autoExpandExamples.ta = `
 கடலோன்||␣|
 கடல் நாய்||␣|
 கடல் யானை||␣|
-கடல்|ocean, sea|ka§ɖa§l|kaṭal
+கடல்|ocean, sea|ka,ɖa,l|kaṭal
 கடல்நீர்||␣
 கடவுச்சீட்டு||␣|
 கடவுச்சொற்கள்||␣|
 கடவுச்சொல்||␣|
 கடவுள்||␣
 கடாரம்||␣|
-கடி|garden|ka§ɖi|kaṭi
+கடி|garden|ka,ɖi|kaṭi
 கடிகாரம்||␣
 கடிக்கை||␣
 கடிதம்||␣
@@ -1854,7 +1854,7 @@ autoExpandExamples.ta = `
 கடையெழுத்து||␣|
 கடைவாய்ப்பல்||␣
 கட்கம்||␣
-கட்சி|party, faction|kə§ʈ§sɪ|kaṭci|/kaʈt͡ɕi/
+கட்சி|party, faction|kə,ʈ,sɪ|kaṭci|/kaʈt͡ɕi/
 கட்சியார்||␣
 கட்டடம்||␣
 கட்டமைப்பு||␣
@@ -1868,7 +1868,7 @@ autoExpandExamples.ta = `
 கட்டிமை||␣
 கட்டியடுப்பு||␣
 கட்டில்||␣
-கட்டு|to tie|ka§ʈ§ʈɯ|kaṭṭu
+கட்டு|to tie|ka,ʈ,ʈɯ|kaṭṭu
 கட்டுத்தறி||␣|
 கட்டுப்படு||␣
 கட்டுமரங்கள்||␣|
@@ -1881,9 +1881,9 @@ autoExpandExamples.ta = `
 கணக்கியல்||␣
 கணக்கு||␣
 கணக்குப்பிள்ளை||␣|
-கணபதி|Ganesh|ka§ɳa§ba§d̪i|kaṇapati
+கணபதி|Ganesh|ka,ɳa,ba,d̪i|kaṇapati
 கணம்||␣
-கணவன்|husband|ka§ɳa§ʋa§n|kaṇavaṉ
+கணவன்|husband|ka,ɳa,ʋa,n|kaṇavaṉ
 கணவாய்||␣|
 கணி||␣
 கணிகன்||␣
@@ -1896,7 +1896,7 @@ autoExpandExamples.ta = `
 கணுமருது||␣
 கணேசன்||␣
 கணையாழி||␣
-கண்|eye|ka§ɳ|kaṇ
+கண்|eye|ka,ɳ|kaṇ
 கண்காணம்||␣|
 கண்காணி||␣|
 கண்காணித்தல்||␣|
@@ -1959,10 +1959,10 @@ autoExpandExamples.ta = `
 கந்தோர்||␣
 கனடா||␣
 கனமழை||␣
-கனம்|heaviness, weight|ka§na§m|kaṉam
+கனம்|heaviness, weight|ka,na,m|kaṉam
 கனவு||␣
 கனா||␣|
-கனி|fruit|ka§ni|kaṉi
+கனி|fruit|ka,ni|kaṉi
 கனிமம்||␣
 கன்னட||␣|
 கன்னடம்||␣
@@ -1987,7 +1987,7 @@ autoExpandExamples.ta = `
 கப்பி||␣|
 கப்பு||␣|
 கமகம||␣|
-கமலம்|lotus|ka§ma§la§m|kamalam
+கமலம்|lotus|ka,ma,la,m|kamalam
 கமை||␣|
 கம்பம்||␣
 கம்பளம்||␣|
@@ -2002,7 +2002,7 @@ autoExpandExamples.ta = `
 கயல்விழி||␣|
 கயவாய்||␣
 கயிரவம்||␣
-கயிறு|rope|ka§ji§rɯ|kayiṟu
+கயிறு|rope|ka,ji,rɯ|kayiṟu
 கரடகம்||␣
 கரடி||␣
 கரண்டி||␣
@@ -2011,13 +2011,13 @@ autoExpandExamples.ta = `
 கரப்பான்||␣|
 கரம்||␣|
 கராசனம்||␣|
-கரி|charcoal|ka§ɾi|kari
+கரி|charcoal|ka,ɾi|kari
 கரிக்குருவி||␣
 கரிச்சலாசத்து||␣
 கரிமம்||␣
 கரியமிலவாயு||␣
 கரிவாளன்கோலா||␣
-கரு|black|ka§ɾɯ|karu
+கரு|black|ka,ɾɯ|karu
 கருக்கு||␣
 கருக்குவாய்ச்சி||␣
 கருங்கல்||␣
@@ -2036,7 +2036,7 @@ autoExpandExamples.ta = `
 கருப்பநீர்||␣
 கருப்பம்||␣|
 கருப்பிணி||␣|
-கருப்பு|black|ka§ɾu§p§pɯ|karuppu
+கருப்பு|black|ka,ɾu,p,pɯ|karuppu
 கருப்பை||␣
 கருமம்||␣
 கருமுட்டை||␣
@@ -2062,7 +2062,7 @@ autoExpandExamples.ta = `
 கர்வம்||␣|
 கறவு||␣
 கறவை||␣
-கறி|curry, meat|ka§ri|kaṟi
+கறி|curry, meat|ka,ri|kaṟi
 கறிக்கு||␣|
 கறிவேப்பிலை||␣
 கறு||␣|
@@ -2112,7 +2112,7 @@ autoExpandExamples.ta = `
 கலைச்சொல்||␣
 கலைஞர்||␣
 கலையுருக்காட்டி||␣|
-கல்|stone|ka§l|kal
+கல்|stone|ka,l|kal
 கல்செடி||␣|
 கல்முனை||␣|
 கல்யாணம்||␣
@@ -2151,8 +2151,8 @@ autoExpandExamples.ta = `
 கழுகு||␣|
 கழுதை||␣
 கழுதைப்புலி||␣
-கழுத்து|neck|ka§ɻu§t̪§t̪ɯ|kaḻuttu
-கழுவு|to wash|ka§ɻu§ʋɯ|kaḻuvu
+கழுத்து|neck|ka,ɻu,t̪,t̪ɯ|kaḻuttu
+கழுவு|to wash|ka,ɻu,ʋɯ|kaḻuvu
 கவனம்||␣|
 கவனி||␣|
 கவர்||␣|
@@ -2172,7 +2172,7 @@ autoExpandExamples.ta = `
 கஷாயம்||␣|
 கஷ்டங்கள்||␣|
 கஷ்டம்||␣
-கஸாயி|butcher|ka§saː§ji|kasāyi
+கஸாயி|butcher|ka,saː,ji|kasāyi
 கஸ்தூரிமஞ்சள்||␣
 கா||␣|
 காகம்||␣
@@ -2189,7 +2189,7 @@ autoExpandExamples.ta = `
 காசு||␣
 காசோலை||␣|
 காஞ்சிபுரம்||␣
-காடு|forest|kaː§ɖɯ|kāṭu
+காடு|forest|kaː,ɖɯ|kāṭu
 காடை||␣
 காடைக்கண்ணி||␣
 காட்சி||␣|
@@ -2211,7 +2211,7 @@ autoExpandExamples.ta = `
 காணி||␣|
 காணிக்கை||␣|
 காணொளி||␣|
-காண்|to see|kaː§ɳ|kāṇ
+காண்|to see|kaː,ɳ|kāṇ
 காண்டம்||␣
 காண்டாமிருகம்||␣
 காண்டீவம்||␣
@@ -2223,7 +2223,7 @@ autoExpandExamples.ta = `
 காதலர்||␣|
 காதலி||␣|
 காதல்||␣
-காது|ear|kaː§d̪ɯ|kātu
+காது|ear|kaː,d̪ɯ|kātu
 காதை||␣
 காத்தவராயன்||␣|
 காத்தியம்||␣|
@@ -2264,7 +2264,7 @@ autoExpandExamples.ta = `
 காரியம்||␣|
 காரீயக்கல்||␣
 காருண்யம்||␣|
-கார்|black|kaː§ɾ|kār
+கார்|black|kaː,ɾ|kār
 கார்ட்டர் பாம்பு||␣|
 கார்த்திகேயன்||␣|
 கார்த்திகை||␣
@@ -2278,7 +2278,7 @@ autoExpandExamples.ta = `
 காற்றழுத்தம்||␣
 காற்றாடி||␣|
 காற்றாலை||␣|
-காற்று|wind|kaː§›§trɯ|kāṟṟu
+காற்று|wind|kaː,›,trɯ|kāṟṟu
 காலணி||␣
 காலப்பெயர்||␣|
 காலம் பொன் போன்றது||␣|
@@ -2289,7 +2289,7 @@ autoExpandExamples.ta = `
 காலுறைகள்||␣|
 காலை வணக்கம்||␣|
 காலை||␣
-கால்|leg, foot|kɑː§l|kāl
+கால்|leg, foot|kɑː,l|kāl
 கால்நடை||␣
 காளன்||␣|
 காளவாய்||␣
@@ -2308,18 +2308,18 @@ autoExpandExamples.ta = `
 கிசில்||␣
 கிசுகிசு||␣|
 கிச்சு||␣
-கிட|to lie down|ki§ɖa|kiṭa
+கிட|to lie down|ki,ɖa|kiṭa
 கிடக்கை||␣
 கிடங்கு||␣|
 கிடப்பு||␣
 கிடை||␣
-கிட்ட|near|ki§ʈ§ʈa|kiṭṭa
+கிட்ட|near|ki,ʈ,ʈa|kiṭṭa
 கிட்டப்பார்வை||␣
 கிட்டி புள்||␣|
 கிட்டி||␣|
 கிட்டு||␣|
 கிணறு||␣
-கிணற்றாமை|indian black turtle|ki§ɳa§t§raː§mai|kiṇaṟṟāmai
+கிணற்றாமை|indian black turtle|ki,ɳa,t,raː,mai|kiṇaṟṟāmai
 கிணற்றுக்கட்டு||␣
 கிண்டி||␣|
 கிண்ணம்||␣|
@@ -2344,7 +2344,7 @@ autoExpandExamples.ta = `
 கிரயம்||␣|
 கிராமம்||␣|
 கிராம்பு||␣
-கிரி|mountain|ki§ɾi|kiri
+கிரி|mountain|ki,ɾi|kiri
 கிரீடம்||␣|
 கிரீடி||␣|
 கிருட்டிணன்||␣
@@ -2396,7 +2396,7 @@ autoExpandExamples.ta = `
 கிழவு||␣
 கிழி||␣
 கிழிப்பு||␣
-கிஸ்மத்|fate, kismet|ki§s§ma§t̪|kismat
+கிஸ்மத்|fate, kismet|ki,s,ma,t̪|kismat
 கீதம்||␣|
 கீரிப்பிள்ளை||
 கீரை||␣
@@ -2415,7 +2415,7 @@ autoExpandExamples.ta = `
 குங்குமம்||␣
 குசராத்||␣
 குசினி||␣|
-குச்சி|wooden stick|ku§t͡ɕ§t͡ɕi|kucci
+குச்சி|wooden stick|ku,t͡ɕ,t͡ɕi|kucci
 குச்சிப்புடி||␣|
 குஜல்||␣|
 குஞ்சி||␣
@@ -2424,12 +2424,12 @@ autoExpandExamples.ta = `
 குடகு||␣|
 குடங்கர்||␣|
 குடசப்பாலை||␣
-குடம்|jug, pot|ku§ɖa§m|kuṭam|kʊɖəm
+குடம்|jug, pot|ku,ɖa,m|kuṭam|kʊɖəm
 குடம்புளி||␣
-குடல்|guts|ku§ɖa§l|kuṭal
+குடல்|guts|ku,ɖa,l|kuṭal
 குடல்வால்||␣
 குடாரி||␣
-குடி|to drink|ku§ɖi|kuṭi
+குடி|to drink|ku,ɖi|kuṭi
 குடிசை||␣
 குடிநீர்||␣
 குடிமகன்||␣|
@@ -2441,9 +2441,9 @@ autoExpandExamples.ta = `
 குடும்பம்||␣
 குடுவை||␣
 குடை||␣
-குட்டி|offspring, child|ku§ʈ§ʈi|kuṭṭi
+குட்டி|offspring, child|ku,ʈ,ʈi|kuṭṭi
 குட்டு||␣|
-குட்டை|short|ku§ʈ§ʈai|kuṭṭai
+குட்டை|short|ku,ʈ,ʈai|kuṭṭai
 குணப்படு||␣|
 குணம்||␣
 குணிப்பு||␣
@@ -2457,13 +2457,13 @@ autoExpandExamples.ta = `
 குதிரைப்பந்தி||␣|
 குதிரைவாலி||␣
 குத்தகை||␣|
-குத்து|to stab|ku§t̪§t̪ɯ|kuttu
+குத்து|to stab|ku,t̪,t̪ɯ|kuttu
 குந்தம்||␣
 குனி||␣|
 குன்றம்||␣
 குன்றின்||␣
 குன்றிமணி||␣
-குன்று|mountain|ku§n§drɯ|kuṉṟu
+குன்று|mountain|ku,n,drɯ|kuṉṟu
 குபுர்||␣
 குபேரன்||␣
 குப்பம்||␣
@@ -2503,7 +2503,7 @@ autoExpandExamples.ta = `
 குருட்டுக்கொக்கு||␣
 குருட்டுத்தனம்||␣
 குருணாகல்||␣|
-குருதி|blood|ku§ɾu§d̪i|kuruti
+குருதி|blood|ku,ɾu,d̪i|kuruti
 குருத்து||␣
 குருத்துவம்||␣
 குருத்தெலும்பு||␣
@@ -2522,8 +2522,8 @@ autoExpandExamples.ta = `
 குறிப்பு||␣
 குறியீடு||␣
 குறில்||␣|
-குறு|to diminish|ku§rɯ|kuṟu
-குறுகிய|narrow|ku§ru§ɡi§ja|kuṟukiya
+குறு|to diminish|ku,rɯ|kuṟu
+குறுகிய|narrow|ku,ru,ɡi,ja|kuṟukiya
 குறுகு||␣|
 குறுக்கம்||␣|
 குறுந்தொகை||␣|
@@ -2551,7 +2551,7 @@ autoExpandExamples.ta = `
 குலை||␣
 குலோத்துங்க||␣|
 குலோத்துங்கன்||␣|
-குல்ஃபி|kulfi|ɡu§l§›§fi|kulfi
+குல்ஃபி|kulfi|ɡu,l,›,fi|kulfi
 குல்லா||␣|
 குளம்||␣
 குளம்பி||␣|
@@ -2564,12 +2564,12 @@ autoExpandExamples.ta = `
 குளியாள்||␣
 குளிர்||␣
 குளிர்களி||␣|
-குளிர்ச்சி|cold (weather)|ku§ɭi§ɾ§t͡ɕ§t͡ɕi|kuḷircci
+குளிர்ச்சி|cold (weather)|ku,ɭi,ɾ,t͡ɕ,t͡ɕi|kuḷircci
 குளிர்ப்பு||␣
 குளிர்மை||␣
 குள்ளமான||␣|
 குள்ளம்||␣
-குழந்தை|child|ku§ɻa§n̪§d̪ai|kuḻantai
+குழந்தை|child|ku,ɻa,n̪,d̪ai|kuḻantai
 குழப்பம்||␣
 குழப்புதல்||␣|
 குழம்பு||␣
@@ -2595,7 +2595,7 @@ autoExpandExamples.ta = `
 கூக்குரல்||
 கூசு||␣|
 கூட||␣|
-கூடம்|hall|kuː§ɖa§m|kūṭam
+கூடம்|hall|kuː,ɖa,m|kūṭam
 கூடாரத்தில்||␣
 கூடாரம்||␣
 கூடு||␣
@@ -2622,7 +2622,7 @@ autoExpandExamples.ta = `
 கூரை||␣
 கூரைவீடு||␣
 கூர்மம்||␣|
-கூர்மை|sharp|kuː§ɾ§mai|kūrmai
+கூர்மை|sharp|kuː,ɾ,mai|kūrmai
 கூறு||␣
 கூறை||␣
 கூற்று||␣
@@ -2634,8 +2634,8 @@ autoExpandExamples.ta = `
 கூவிளம்||␣
 கெஞ்சு||␣|
 கெடா||␣|
-கெடு|deadline|ke§ɖɯ|keṭu
-கெட்ட|bad|ke§ʈ§ʈa|keṭṭa
+கெடு|deadline|ke,ɖɯ|keṭu
+கெட்ட|bad|ke,ʈ,ʈa|keṭṭa
 கெட்டம்||␣
 கெட்டி||␣
 கெட்டு||␣
@@ -2646,7 +2646,7 @@ autoExpandExamples.ta = `
 கெவி||␣|
 கேசரி||␣|
 கேசரியாசனம்||␣|
-கேடு|harm, danger|keː§ɖɯ|kēṭu
+கேடு|harm, danger|keː,ɖɯ|kēṭu
 கேதகை||␣
 கேதுரு||␣
 கேத்துல்||␣|
@@ -2654,7 +2654,7 @@ autoExpandExamples.ta = `
 கேய்||␣|
 கேரளம்||␣
 கேரளா||␣
-கேள்|to hear|keː§ɭ|kēḷ
+கேள்|to hear|keː,ɭ|kēḷ
 கேள்வி||␣|
 கேள்விகள்||␣|
 கேள்விக்குறி||␣|
@@ -2664,7 +2664,7 @@ autoExpandExamples.ta = `
 கை|hand|kai|kai
 கைக்கடிகாரம்||␣|
 கைக்கணினி||
-கைது|arrest|kai§d̪ɯ|kaitu
+கைது|arrest|kai,d̪ɯ|kaitu
 கைப்பிடி||␣|
 கைப்பு||␣
 கைப்பேசி||␣|
@@ -2682,14 +2682,14 @@ autoExpandExamples.ta = `
 கொக்குவில்||␣|
 கொங்கு||␣|
 கொசு||␣
-கொஞ்சம்|few|ko§ɲ§d͡ʑa§m|koñcam
+கொஞ்சம்|few|ko,ɲ,d͡ʑa,m|koñcam
 கொஞ்சு||␣|
 கொடி||␣
 கொடிக்கையான்||␣
 கொடிச்சீலை||␣
 கொடிப்பாசி||␣
 கொடிமுந்திரி||␣|
-கொடு|to give|ko§ɖɯ|koṭu
+கொடு|to give|ko,ɖɯ|koṭu
 கொடுந்தமிழ்||␣|
 கொடுந்தலைப்பொருவா||␣
 கொடுப்பு||␣|
@@ -2731,9 +2731,9 @@ autoExpandExamples.ta = `
 கொந்தளம்||␣|
 கொந்தளி||␣|
 கொம்பி||␣
-கொம்பு|horn|ko§m§bɯ|kompu
+கொம்பு|horn|ko,m,bɯ|kompu
 கொம்மட்டி||␣|
-கொய்|to cut|ko§j|koy
+கொய்|to cut|ko,j|koy
 கொய்யா||␣
 கொரோனா||␣
 கொர்ல||␣|
@@ -2744,7 +2744,7 @@ autoExpandExamples.ta = `
 கொற்றவை||␣|
 கொலுசு||␣|
 கொலை||␣|
-கொல்|to kill|ko§l|kol
+கொல்|to kill|ko,l|kol
 கொல்லன்||␣
 கொல்லன்பட்டடை||␣
 கொல்லன்பட்டரை||␣
@@ -2752,7 +2752,7 @@ autoExpandExamples.ta = `
 கொல்லறு||␣
 கொல்லற்றுவேலை||␣
 கொளுவி||␣
-கொள்|to hold|ko§ɭ|koḷ
+கொள்|to hold|ko,ɭ|koḷ
 கொள்கை||␣
 கொள்முதல்||␣|
 கொள்ள||␣
@@ -2763,7 +2763,7 @@ autoExpandExamples.ta = `
 கொழி||␣|
 கொழுக்கட்டை||␣|
 கொழுத்தமுரல்||␣
-கொழுப்பு|fat, grease|ko§ɻu§p§pɯ|koḻuppu
+கொழுப்பு|fat, grease|ko,ɻu,p,pɯ|koḻuppu
 கொழும்பு||␣
 கோ||␣
 கோசம்||␣|
@@ -2774,7 +2774,7 @@ autoExpandExamples.ta = `
 கோடாலி||␣
 கோடி||␣
 கோடிமுனை||␣
-கோடு|dash|koː§ɖɯ|kōṭu
+கோடு|dash|koː,ɖɯ|kōṭu
 கோடை||␣|
 கோட்டம்||␣
 கோட்டயம்||␣|
@@ -2814,7 +2814,7 @@ autoExpandExamples.ta = `
 கோலாலம்பூர்||␣|
 கோலுமை||␣
 கோலெழுத்து||␣|
-கோல்|rod, ruler|koː§l|kōl
+கோல்|rod, ruler|koː,l|kōl
 கோளாறு||␣
 கோள்||␣|
 கோழி||␣
@@ -2828,17 +2828,17 @@ autoExpandExamples.ta = `
 கோவிந்தன்||␣|
 கோவில்||␣|
 கோவைக்காய்||␣
-கௌதாரி|partridge|kau§d̪aː§ɾi|kautāri
+கௌதாரி|partridge|kau,d̪aː,ɾi|kautāri
 கௌதூகலம்||␣|
 கௌரவம்||␣|
 கௌளி||␣|
 க்ஷ||␣
-க்ஷணம்|moment, second|k§ʂa§ɳa§m|kṣaṇam
+க்ஷணம்|moment, second|k,ʂa,ɳa,m|kṣaṇam
 க்ஷிரஸமுத்ரம்||␣
-க்ஷீணம்|decay, weakness|k§ʂiː§ɳa§m|kṣīṇam
-க்ஷேத்திரம்|temple|k§ʂeː§t̪§t̪i§ɾa§m|kṣēttiram
-க்ஷேபம்|killing time|k§ʂeː§ba§m|kṣēpam
-க்ஷேமம்|well-being|k§ʂeː§ma§m|kṣēmam
+க்ஷீணம்|decay, weakness|k,ʂiː,ɳa,m|kṣīṇam
+க்ஷேத்திரம்|temple|k,ʂeː,t̪,t̪i,ɾa,m|kṣēttiram
+க்ஷேபம்|killing time|k,ʂeː,ba,m|kṣēpam
+க்ஷேமம்|well-being|k,ʂeː,ma,m|kṣēmam
 சகசரி||␣
 சகதி||␣
 சகந்நாதன்||␣|
@@ -2972,7 +2972,7 @@ autoExpandExamples.ta = `
 சரண்புகு||␣|
 சரபத்து||␣
 சரவாக்||␣|
-சரி|okay, fine|sa§ɾi|cari
+சரி|okay, fine|sa,ɾi|cari
 சரித்திரகாரன்||␣
 சரித்திரம்||␣
 சரிவு||␣
@@ -3042,7 +3042,7 @@ autoExpandExamples.ta = `
 சாமுவேல்||␣|
 சாம்பல் நிறம்||␣|
 சாம்பல்-தலை சிலம்பன்||␣|
-சாம்பல்|ash|saː§m§ba§l|cāmpal
+சாம்பல்|ash|saː,m,ba,l|cāmpal
 சாம்பார்||␣|
 சாம்ராச்சியம்||␣|
 சாம்ராஜ்யம்||␣|
@@ -3066,7 +3066,7 @@ autoExpandExamples.ta = `
 சாலக்கு||␣|
 சாலி||␣
 சாலியன்||␣
-சாலை|road, street|saː§lai|cālai
+சாலை|road, street|saː,lai|cālai
 சால்||␣|
 சாளம்||␣
 சாளரம்||␣
@@ -3077,7 +3077,7 @@ autoExpandExamples.ta = `
 சாவாமை||␣|
 சாவி||␣
 சாவிகள்||␣|
-சாவு|to die|saː§ʋɯ|cāvu
+சாவு|to die|saː,ʋɯ|cāvu
 சாஸனம்||␣|
 சாஸ்திரம்||␣|
 சிகப்பு||␣
@@ -3127,7 +3127,7 @@ autoExpandExamples.ta = `
 சினைப்பெயர்||␣|
 சினைப்பை||␣
 சின்டி||␣
-சின்ன|small|t͡ʃi§n§nə|ciṉṉa
+சின்ன|small|t͡ʃi,n,nə|ciṉṉa
 சின்னக்கரடி||␣
 சின்னம்||␣|
 சிபார்சு||␣|
@@ -3142,7 +3142,7 @@ autoExpandExamples.ta = `
 சிரபுஞ்சி||␣|
 சிரல்||
 சிராத்தம்||␣
-சிரி|to laugh|si§ɾi|ciri
+சிரி|to laugh|si,ɾi|ciri
 சிரித்தை||
 சிரிப்பு||␣
 சிருட்டி||␣|
@@ -3157,7 +3157,7 @@ autoExpandExamples.ta = `
 சிறப்புரிமை||␣|
 சிறிய||␣|
 சிறீதரன்||␣|
-சிறு|small|si§rɯ|ciṟu
+சிறு|small|si,rɯ|ciṟu
 சிறுகதை||␣
 சிறுகுறிஞ்சா||␣
 சிறுசெண்பகம்||␣
@@ -3177,7 +3177,7 @@ autoExpandExamples.ta = `
 சிற்றரத்தை||␣
 சிற்றுண்டி||␣
 சிற்றூர்||␣
-சில|some|si§la|cila
+சில|some|si,la|cila
 சிலந்தி||␣
 சிலப்பதிகாரம்||␣|
 சிலம்பு||␣|
@@ -3193,7 +3193,7 @@ autoExpandExamples.ta = `
 சிவகங்கை||␣|
 சிவந்தி||␣|
 சிவன்||␣|
-சிவப்பு|red|si§ʋa§p§pɯ|civappu
+சிவப்பு|red|si,ʋa,p,pɯ|civappu
 சிவப்புக்கல்||␣
 சிவப்புத்தலைக்கிளி||
 சிவப்புமரம்||␣
@@ -3432,7 +3432,7 @@ autoExpandExamples.ta = `
 செழித்தகல்||␣
 செழிப்பு||␣
 செழியன்||␣
-செவி|ear|se§ʋi|cevi
+செவி|ear|se,ʋi|cevi
 செவிகொடு||␣|
 செவிகொள்||␣|
 செவிக்குத்து||␣|
@@ -3528,7 +3528,7 @@ autoExpandExamples.ta = `
 சொந்த||␣
 சொந்தம்||␣|
 சொப்பனம்||␣|
-சொரி|to scratch|so§ɾi|cori
+சொரி|to scratch|so,ɾi|cori
 சொரிகொன்றை||␣
 சொருணை||␣|
 சொர்க்கம்||␣|
@@ -3539,7 +3539,7 @@ autoExpandExamples.ta = `
 சொற்புத்தி||␣
 சொற்பொழிவு||␣
 சொற்றொடர்||␣
-சொல்|to say|so§l|col
+சொல்|to say|so,l|col
 சொல்லாட்சி||␣
 சொல்லிக்கொடு||␣|
 சொல்லியல்||␣
@@ -3592,16 +3592,16 @@ autoExpandExamples.ta = `
 ஜலாயி||␣|
 ஜலுப்பு||␣|
 ஜவ்வரிசி||␣|
-ஜாஃப்னா தமிழ்|Jaffna dialect|d͡ʑaː§›§f§naː§ §t̪a§mi§ɻ|jāfṉā tamiḻ
-ஜாஃப்னா|Jaffna (Sri Lanka)|d͡ʑaː§›§f§naː|jāfṉā
+ஜாஃப்னா தமிழ்|Jaffna dialect|d͡ʑaː,›,f,naː, ,t̪a,mi,ɻ|jāfṉā tamiḻ
+ஜாஃப்னா|Jaffna (Sri Lanka)|d͡ʑaː,›,f,naː|jāfṉā
 ஜாஜ்வல்யம்||␣
 ஜாதகம்||␣|
 ஜாதி||␣|
 ஜாநு||␣
-ஜானகி|Janaki|d͡ʒɑː§nə§gɪˑ|dāṉaki
+ஜானகி|Janaki|d͡ʒɑː,nə,gɪˑ|dāṉaki
 ஜாஸ்தி||␣|
 ஜிகுஜிகு||␣|
-ஜிந்தகி|property|d͡ʑi§n̪§d̪a§ɡi|jintaki||obsolete
+ஜிந்தகி|property|d͡ʑi,n̪,d̪a,ɡi|jintaki||obsolete
 ஜிராக்ஸ்||␣|
 ஜிராயதி||␣
 ஜில்லா||␣|
@@ -3664,12 +3664,12 @@ autoExpandExamples.ta = `
 ஞமலி||␣|
 ஞாங்க||␣|
 ஞாஞ்சில்||␣|
-ஞாண்|rope|ɲaː§ɳ|ñāṇ
-ஞானம்|wisdom|ɲaː§na§m|ñāṉam
+ஞாண்|rope|ɲaː,ɳ|ñāṇ
+ஞானம்|wisdom|ɲaː,na,m|ñāṉam
 ஞானஸ்நானம்||␣|
 ஞான்று||␣|
 ஞாபகம்||␣|
-ஞாயிறு|sun, Sunday|ɲaː§ji§rɯ|ñāyiṟu
+ஞாயிறு|sun, Sunday|ɲaː,ji,rɯ|ñāyiṟu
 ஞாயிற்றுக்கிழமை||␣|
 ஞாலம்||␣|
 ஞிமிறு||␣
@@ -3716,11 +3716,11 @@ autoExpandExamples.ta = `
 தஞ்சம்||␣
 தஞ்சாவூர்||␣|
 தடங்காட்டி||␣|
-தடம்|bank,shore|t̪a§ɖa§m|taṭam
+தடம்|bank,shore|t̪a,ɖa,m|taṭam
 தடவு||␣|
 தடவை||␣|
-தடி|stick, cane|t̪a§ɖi|taṭi
-தடித்த|thick|t̪a§ɖi§t̪§t̪a|taṭitta
+தடி|stick, cane|t̪a,ɖi|taṭi
+தடித்த|thick|t̪a,ɖi,t̪,t̪a|taṭitta
 தடு||␣|
 தடுத்துவை||␣
 தடுப்பு ஊசி||␣|
@@ -3732,7 +3732,7 @@ autoExpandExamples.ta = `
 தட்டு||␣
 தட்டை||␣|
 தணல்||␣|
-தண்|coldness|t̪a§ɳ|taṇ
+தண்|coldness|t̪a,ɳ|taṇ
 தண்டனம்||␣|
 தண்டனை||␣
 தண்டம்||␣|
@@ -3745,11 +3745,11 @@ autoExpandExamples.ta = `
 தத்ரம்||␣|
 தந்தம்||␣|
 தந்திரவாயன்||␣
-தந்தை|father|t̪a§n̪§d̪ai|tantai
+தந்தை|father|t̪a,n̪,d̪ai|tantai
 தனஞ்சயன்||␣
 தனம்||␣|
 தனாக்||␣|
-தனி|seclusion|t̪a§ni|taṉi
+தனி|seclusion|t̪a,ni|taṉi
 தனிக்குறில்||␣|
 தனித்தமிழ்||␣|
 தனிநிலை||␣|
@@ -3785,14 +3785,14 @@ autoExpandExamples.ta = `
 தமிழோடு||␣|
 தமிழ் ஈழம்||␣
 தமிழ் நாடு||␣
-தமிழ்|Tamil|t̪a§mi§ɻ|tamiḻ|t̪əmɪɻ
+தமிழ்|Tamil|t̪a,mi,ɻ|tamiḻ|t̪əmɪɻ
 தமிழ்செல்வன்||␣|
 தமிழ்செல்வி||␣|
 தமிழ்நாடு||␣
 தம்||␣|
 தம்பதி||␣|
 தம்பம்||␣
-தம்பி|brother|t̪a§m§bi|tampi
+தம்பி|brother|t̪a,m,bi|tampi
 தம்பிரான்||␣|
 தம்புரா||␣
 தயவு||␣|
@@ -3846,7 +3846,7 @@ autoExpandExamples.ta = `
 தலம்||␣|
 தலாக்||␣
 தலால்||␣|
-தலை|head|t̪a§lai|talai
+தலை|head|t̪a,lai|talai
 தலைமறை||␣
 தலைமாடு||␣
 தலைமாறு||␣
@@ -3867,7 +3867,7 @@ autoExpandExamples.ta = `
 தளவாய்||␣|
 தளை||␣
 தள்ளாடு||␣|
-தள்ளு|to push|t̪a§ɭ§ɭɯ|taḷḷu
+தள்ளு|to push|t̪a,ɭ,ɭɯ|taḷḷu
 தள்ளை||␣
 தழுதணை||␣|
 தழும்பு||␣
@@ -3892,7 +3892,7 @@ autoExpandExamples.ta = `
 தாகெஸ்தான்||␣
 தாக்கம்||␣
 தாக்கீது||␣|
-தாங்கள்|they|t̪aː§ŋ§ɡa§ɭ|tāṅkaḷ
+தாங்கள்|they|t̪aː,ŋ,ɡa,ɭ|tāṅkaḷ
 தாங்கி||␣
 தாங்கு||␣
 தாச்சா||␣
@@ -3919,7 +3919,7 @@ autoExpandExamples.ta = `
 தாம்||␣|
 தாம்பூலம்||␣|
 தாயகம்||␣
-தாய்|mother|t̪aː§j|tāy
+தாய்|mother|t̪aː,j|tāy
 தாய்மாமன்||␣|
 தாய்மொழி||␣
 தாய்லாந்து||␣
@@ -3958,7 +3958,7 @@ autoExpandExamples.ta = `
 திக்காரம்||␣|
 திக்கு||␣
 திங்கட்கிழமை||␣|
-திங்கள்|moon, Monday|t̪i§ŋ§ɡa§ɭ|tiṅkaḷ
+திங்கள்|moon, Monday|t̪i,ŋ,ɡa,ɭ|tiṅkaḷ
 திசெம்பர்||␣|
 திசை||␣|
 திசைமானி||␣|
@@ -3979,7 +3979,7 @@ autoExpandExamples.ta = `
 திந்திரிவனம்||␣|
 தினந்தோறும்||␣
 தினம்||␣
-தின்|to eat|t̪i§n|tiṉ
+தின்|to eat|t̪i,n|tiṉ
 தின்னு||␣|
 திப்பலி||␣
 திமிங்கிலம்||␣|
@@ -4044,7 +4044,7 @@ autoExpandExamples.ta = `
 திருமுழுக்கு||␣|
 திரும்ப||␣|
 திரும்பவும்||␣
-திரும்பு|to turn|t̪i§ɾu§m§bɯ|tirumpu
+திரும்பு|to turn|t̪i,ɾu,m,bɯ|tirumpu
 திருவண்ணாமலை||␣|
 திருவனந்தபுரம்||␣
 திருவருட்சாதனம்||␣
@@ -4092,7 +4092,7 @@ autoExpandExamples.ta = `
 தீர்க்கதரிசி||␣|
 தீர்க்கம்||␣|
 தீர்த்தம்||␣|
-தீர்ப்பு|verdict|t̪iː§ɾ̪§p§pɯ|tīrppu|t̪iːɾ̪pːu
+தீர்ப்பு|verdict|t̪iː,ɾ̪,p,pɯ|tīrppu|t̪iːɾ̪pːu
 தீவி||␣|
 தீவினை||␣|
 தீவிய||␣
@@ -4109,7 +4109,7 @@ autoExpandExamples.ta = `
 துடவை||␣
 துடுபு||␣|
 துடுப்புக்காலி||␣|
-துடை|to wipe|t̪u§ɖai|tuṭai
+துடை|to wipe|t̪u,ɖai|tuṭai
 துடைப்பம்||␣|
 துட்டு||␣|
 துணி||␣
@@ -4132,7 +4132,7 @@ autoExpandExamples.ta = `
 துப்பம்||␣
 துப்பல்||␣
 துப்பாக்கி||␣
-துப்பு|vigour, zeal|t̪u§p§pɯ|tuppu
+துப்பு|vigour, zeal|t̪u,p,pɯ|tuppu
 தும்பி||␣|
 தும்பிக்கை||␣|
 தும்மல்||␣
@@ -4178,10 +4178,10 @@ autoExpandExamples.ta = `
 தூக்கணாங்குருவி||
 தூக்கம்||␣|
 தூக்கு||␣
-தூங்கு|to sleep|t̪uː§ŋ§ɡɯ|tūṅku
+தூங்கு|to sleep|t̪uː,ŋ,ɡɯ|tūṅku
 தூசரம்||␣
 தூசி||␣|
-தூசு|dust|t̪uː§sɯ|tūcu
+தூசு|dust|t̪uː,sɯ|tūcu
 தூண்||␣
 தூண்டில்||␣
 தூதன்||␣|
@@ -4213,7 +4213,7 @@ autoExpandExamples.ta = `
 தெய்வங்கள்||␣|
 தெய்வம்||␣|
 தெய்வயானை||␣|
-தெரி|to appear, seem|t̪e§ɾi|teri
+தெரி|to appear, seem|t̪e,ɾi|teri
 தெரிந்துணர்ச்சி||␣
 தெரிபடு||␣
 தெரிப்பு||␣
@@ -4258,7 +4258,7 @@ autoExpandExamples.ta = `
 தேன்கூடு||␣|
 தேன்மொழி||␣|
 தேம்பாவணி||␣|
-தேய்|to rub|t̪eː§j|tēy
+தேய்|to rub|t̪eː,j|tēy
 தேய்பிறை||␣|
 தேய்வாங்கு||␣|
 தேர்||␣
@@ -4326,7 +4326,7 @@ autoExpandExamples.ta = `
 தொண்டு||␣
 தொண்டை||␣|
 தொண்ணூறு||␣|
-தொந்தி|belly|t̪o§n̪§d̪i|tonti
+தொந்தி|belly|t̪o,n̪,d̪i|tonti
 தொனி||␣|
 தொன்னை||␣
 தொன்மங்கள்||␣|
@@ -4348,7 +4348,7 @@ autoExpandExamples.ta = `
 தொலைபேசி||␣
 தொலைப்பேசி||␣|
 தொலையியக்கி||␣|
-தொலைவு|far|t̪o§lai§ʋɯ|tholaivu
+தொலைவு|far|t̪o,lai,ʋɯ|tholaivu
 தொல்||␣|
 தொல்காப்பியம்||␣|
 தொல்லியல்||␣
@@ -4381,14 +4381,14 @@ autoExpandExamples.ta = `
 தோணிதள்ளு||␣|
 தோணித்துறை||␣
 தோண்டான்||␣
-தோண்டு|to dig|t̪oː§ɳ§ɖɯ|tōṇṭu
+தோண்டு|to dig|t̪oː,ɳ,ɖɯ|tōṇṭu
 தோத்திரம்||␣|
 தோன்று||␣|
 தோப்பி||␣
 தோம்||␣|
 தோற்றம்||␣|
 தோலியல்||␣
-தோல்|skin|t̪oː§l|tōl
+தோல்|skin|t̪oː,l|tōl
 தோல்வி||␣|
 தோள்||␣|
 தோழன்||␣|
@@ -4397,13 +4397,13 @@ autoExpandExamples.ta = `
 தோஷம்||␣|
 தௌலத்||␣|
 தௌலத்து||␣|
-நகம்|fingernail|n̪a§ɡa§m|nakam
+நகம்|fingernail|n̪a,ɡa,m|nakam
 நகரப்பதி||␣
 நகரமாந்தர்||␣
 நகரம்||␣
 நகர்||␣
 நகர்த்து||␣|
-நகை|jewel|n̪a§ɡai|nakai
+நகை|jewel|n̪a,ɡai|nakai
 நகைச்சுவை||␣
 நகோமி||␣|
 நக்க||␣|
@@ -4419,7 +4419,7 @@ autoExpandExamples.ta = `
 நச்சுயிரி||␣|
 நஞ்சு||␣|
 நஞ்சுக்கொடி||␣|
-நட|to walk|n̪a§ɖa|naṭa
+நட|to walk|n̪a,ɖa|naṭa
 நடக்கை||␣
 நடத்து||␣
 நடத்தை||␣
@@ -4472,7 +4472,7 @@ autoExpandExamples.ta = `
 நன்பு||␣
 நன்மை||␣
 நன்றாக||␣
-நன்றி|thank you|n̪a§n§dri|naṉṟi
+நன்றி|thank you|n̪a,n,dri|naṉṟi
 நபம்||␣
 நப்தலி||
 நப்பின்னை||␣|
@@ -4496,9 +4496,9 @@ autoExpandExamples.ta = `
 நற்றிணை||␣|
 நலம்||␣|
 நல்||␣
-நல்கு|to give|n̪a§l§ɡɯ|nalku
-நல்ல|good|n̪a§l§la|nalla
-நல்லது|good|n̪a§l§la§d̪ɯ|nallatu
+நல்கு|to give|n̪a,l,ɡɯ|nalku
+நல்ல|good|n̪a,l,la|nalla
+நல்லது|good|n̪a,l,la,d̪ɯ|nallatu
 நல்லவர்||␣
 நல்லா||␣|
 நல்லூழ்||␣|
@@ -4521,8 +4521,8 @@ autoExpandExamples.ta = `
 நாகம்||␣
 நாகரிகம்||␣
 நாகாலாந்து||␣|
-நாக்கு|tongue|n̪aː§k§kɯ|nākku
-நாங்கள்|we|n̪aː§ŋ§ɡa§ɭ|nāṅkaḷ
+நாக்கு|tongue|n̪aː,k,kɯ|nākku
+நாங்கள்|we|n̪aː,ŋ,ɡa,ɭ|nāṅkaḷ
 நாசம்||␣|
 நாசி||␣
 நாச்சிமார்||␣|
@@ -4553,19 +4553,19 @@ autoExpandExamples.ta = `
 நானூறு||␣|
 நான் தமிழ் அறியேன்||␣|
 நான் தொலஞ்சிட்டேன்||␣|
-நான்|I|n̪aː§n|nāṉ
+நான்|I|n̪aː,n|nāṉ
 நான்காம் வேற்றுமை||␣
-நான்கு|four|n̪aː§n§ɡɯ|nāṉku
+நான்கு|four|n̪aː,n,ɡɯ|nāṉku
 நான்முகன்||␣|
 நான்று||␣|
 நாமக்கல்||␣|
 நாமம்||␣
-நாம்|we|n̪aː§m|nām
+நாம்|we|n̪aː,m|nām
 நாயகன்||␣
 நாயகம்||␣
 நாயனார்||␣|
 நாயுருவி||␣
-நாய்|dog|n̪aː§j|nāy
+நாய்|dog|n̪aː,j|nāy
 நாய்க்குட்டி||␣
 நாராயணன்||␣
 நாரை||␣
@@ -4582,7 +4582,7 @@ autoExpandExamples.ta = `
 நாற்றுநடவு||␣
 நாற்றுப்பாத்தி||␣
 நாலு||␣|
-நால்|four|n̪aː§l|nāl
+நால்|four|n̪aː,l|nāl
 நால்கு||␣|
 நாளினுநாளும்||␣|
 நாளில்||␣|
@@ -4629,7 +4629,7 @@ autoExpandExamples.ta = `
 நித்திரை||␣
 நித்திலம்||␣
 நிந்தனை||␣|
-நினை|to think|n̪i§nai|niṉai
+நினை|to think|n̪i,nai|niṉai
 நினைப்பு||␣|
 நினைவகம்||␣
 நினைவு||␣
@@ -4670,7 +4670,7 @@ autoExpandExamples.ta = `
 நிறுப்பான்||␣|
 நிறுவனம்||␣|
 நிறுவு||␣|
-நிறை|full|n̪i§rai|niṟai
+நிறை|full|n̪i,rai|niṟai
 நிறைய||␣|
 நிறைவு||␣|
 நிறைவேறு||␣|
@@ -4681,13 +4681,13 @@ autoExpandExamples.ta = `
 நிலநடுக்கோடு||␣|
 நிலப்படவரைவியல்||␣|
 நிலப்பனை||␣
-நிலம்|earth, world|n̪i§la§m|nilam
+நிலம்|earth, world|n̪i,la,m|nilam
 நிலவரி||␣|
 நிலவியல்||␣|
 நிலவு||␣
 நிலவேம்பு||␣
 நிலவொளி||␣
-நிலா|moon|n̪i§laː|nilā
+நிலா|moon|n̪i,laː|nilā
 நிலாவெளிச்சம்||␣
 நிலை||␣
 நிலைகுலை||␣|
@@ -4695,7 +4695,7 @@ autoExpandExamples.ta = `
 நிலைப்பு||␣
 நிலைமை||␣|
 நிலையம்||␣
-நில்|to stand|n̪i§l|nil
+நில்|to stand|n̪i,l|nil
 நிழல்||␣
 நிவசதி||␣
 நிவப்பு||␣
@@ -4707,7 +4707,7 @@ autoExpandExamples.ta = `
 நீக்கல்||␣
 நீக்கு||␣|
 நீங்க||␣
-நீங்கள்|you (pl.)|n̪iː§ŋ§ɡa§ɭ|nīṅkaḷ
+நீங்கள்|you (pl.)|n̪iː,ŋ,ɡa,ɭ|nīṅkaḷ
 நீங்கு||␣|
 நீடி||␣|
 நீடு||␣
@@ -4727,7 +4727,7 @@ autoExpandExamples.ta = `
 நீதிமொழிகள்||␣|
 நீத்தம்||␣
 நீத்து||␣
-நீந்து|to swim|n̪iː§n̪§d̪ɯ|nīntu
+நீந்து|to swim|n̪iː,n̪,d̪ɯ|nīntu
 நீனு||␣|
 நீம்||␣|
 நீரகம்||␣
@@ -4736,7 +4736,7 @@ autoExpandExamples.ta = `
 நீரியம்||␣|
 நீரிழிவு||␣|
 நீரொழுக்கு||␣|
-நீர்|water|n̪iː§ɾ|nīr
+நீர்|water|n̪iː,ɾ|nīr
 நீர்கொழும்பு||␣|
 நீர்க்காகம்||␣|
 நீர்க்காக்கை||␣
@@ -4754,12 +4754,12 @@ autoExpandExamples.ta = `
 நீலம்||␣
 நீலிரும்பு||␣
 நீளமான||␣|
-நீளம்|long|n̪iː§ɭa§m|nīḷam
+நீளம்|long|n̪iː,ɭa,m|nīḷam
 நீளிப்பு||␣
 நீள்||␣
 நீவிர்||␣|
 நுகம்||␣|
-நுகர்|to smell|n̪u§ɡa§ɾ|nukar
+நுகர்|to smell|n̪u,ɡa,ɾ|nukar
 நுகர்ச்சி||␣
 நுகைவு||␣|
 நுங்கு||␣|
@@ -4821,7 +4821,7 @@ autoExpandExamples.ta = `
 நெருக்கு||␣|
 நெருங்கு||␣|
 நெருஞ்சி||␣
-நெருப்பு|fire|n̪e§ɾu§p§pɯ|neruppu
+நெருப்பு|fire|n̪e,ɾu,p,pɯ|neruppu
 நெறி||␣
 நெறிமுறை||␣|
 நெறிமுறைமை||␣
@@ -4854,14 +4854,14 @@ autoExpandExamples.ta = `
 நொறுக்கு||␣|
 நொறுங்கு||␣
 நோக்காடு||␣
-நோக்கு|to see|n̪oː§k§kɯ|nōkku
+நோக்கு|to see|n̪oː,k,kɯ|nōkku
 நோஞ்சான்||␣|
 நோண்டு||␣|
 நோன்பு||␣|
 நோய்||␣
 நௌ|boat|n̪aɯ|nau
-நௌகா|boat|n̪au§ɡaː|naukā
-பஃறி|coracle, boat|pɐ§ɦ§ri|paḥṟi
+நௌகா|boat|n̪au,ɡaː|naukā
+பஃறி|coracle, boat|pɐ,ɦ,ri|paḥṟi
 பகடி||␣
 பகடையாட்டம்||␣|
 பகதத்தன்||␣|
@@ -4870,7 +4870,7 @@ autoExpandExamples.ta = `
 பகர்||␣
 பகர்ச்சி||␣
 பகர்த்து||␣
-பகல்|day, daytime|pa§ɡa§l|pakal
+பகல்|day, daytime|pa,ɡa,l|pakal
 பகவத் கீதை||␣
 பகவான்||␣|
 பகாங்||␣|
@@ -4905,7 +4905,7 @@ autoExpandExamples.ta = `
 பசி||␣|
 பசியம்||␣
 பசியாறை||␣|
-பசு|green|pa§sɯ|pacu
+பசு|green|pa,sɯ|pacu
 பசுங்கோலா||␣
 பசுப்பு||␣
 பசுமுன்னை||␣
@@ -4914,7 +4914,7 @@ autoExpandExamples.ta = `
 பசை||␣|
 பச்சிலை||␣
 பச்சுளி||␣
-பச்சை|green|pa§t͡ɕ§t͡ɕai|paccai
+பச்சை|green|pa,t͡ɕ,t͡ɕai|paccai
 பச்சைக்கல்||␣
 பச்சோந்தி||␣|
 பச்சோந்திகள்||␣|
@@ -4937,7 +4937,7 @@ autoExpandExamples.ta = `
 படமிகள்||␣|
 படம்||␣
 படல்||␣
-படி|to read|pa§ɖi|paṭi
+படி|to read|pa,ɖi|paṭi
 படிக்காரம்||␣
 படிப்பறிவு||␣
 படிப்பி||␣|
@@ -4945,7 +4945,7 @@ autoExpandExamples.ta = `
 படிமம்||␣
 படிவம்||␣
 படிவுப் பாறை||␣
-படு|to experience, feel|pa§ɖɯ|paṭu
+படு|to experience, feel|pa,ɖɯ|paṭu
 படுகுழி||␣|
 படுகை||␣
 படுக்கை||␣|
@@ -4965,9 +4965,9 @@ autoExpandExamples.ta = `
 பட்டி||␣|
 பட்டிகை||␣|
 பட்டினி||␣|
-பட்டு|silk|pa§ʈ§ʈɯ|paṭṭu
+பட்டு|silk|pa,ʈ,ʈɯ|paṭṭu
 பட்டுப்பூச்சி||␣|
-பட்டை|tree bark|pa§ʈ§ʈai|paṭṭai
+பட்டை|tree bark|pa,ʈ,ʈai|paṭṭai
 பணப்பை||␣
 பணம்||␣
 பணவன்||␣
@@ -5036,7 +5036,7 @@ autoExpandExamples.ta = `
 பத்திரன்||␣|
 பத்திரம்||␣|
 பத்திராசனம்||␣|
-பத்து|ten|pa§t̪§t̪ɯ|pattu
+பத்து|ten|pa,t̪,t̪ɯ|pattu
 பத்துப்பாட்டு||␣|
 பத்தொன்பது||␣|
 பந்தனம்||␣|
@@ -5045,11 +5045,11 @@ autoExpandExamples.ta = `
 பந்தல்||␣|
 பந்தா||␣|
 பந்தி||␣|
-பந்து|ball|pa§n̪§d̪ɯ|pantu
+பந்து|ball|pa,n̪,d̪ɯ|pantu
 பந்துஸ்தான்||␣|
 பனாயிப்பு||␣
-பனி|to rain incessantly|pa§ni|paṉi
-பனிக்கட்டி|ice, snow, frost|pa§ni§k§ka§ʈ§ʈi|paṉikkaṭṭi
+பனி|to rain incessantly|pa,ni|paṉi
+பனிக்கட்டி|ice, snow, frost|pa,ni,k,ka,ʈ,ʈi|paṉikkaṭṭi
 பனிக்காற்று||␣|
 பனிக்கூழ்||␣|
 பனிமூட்டம்||␣
@@ -5149,13 +5149,13 @@ autoExpandExamples.ta = `
 பரோட்டா||␣
 பர்ணம்||␣
 பர்வதம்||␣
-பற|to fly|pa§ra|paṟa
+பற|to fly|pa,ra|paṟa
 பறக்கும்தட்டு||␣
 பறங்கிப்பாஷாணம்||␣|
 பறந்தலை||␣
 பறந்து||␣|
 பறப்பன்||␣
-பறவை|bird|pa§ra§ʋai|paṟavai
+பறவை|bird|pa,ra,ʋai|paṟavai
 பறவையியல்||␣
 பறி||␣|
 பறை||␣
@@ -5164,9 +5164,9 @@ autoExpandExamples.ta = `
 பற்பசை||␣|
 பற்றவை||␣|
 பற்றாக்குறை||␣|
-பற்றி|about|pa§t§ri|paṟṟi
+பற்றி|about|pa,t,ri|paṟṟi
 பற்று||␣|
-பல|many|pa§la|pala
+பல|many|pa,la|pala
 பலகை||␣|
 பலப்பம்||␣|
 பலம்||␣
@@ -5182,7 +5182,7 @@ autoExpandExamples.ta = `
 பலிகடா||␣|
 பலிபீடம்||␣|
 பலுக்கல்||␣
-பல்|tooth|pa§l|pal
+பல்|tooth|pa,l|pal
 பல்கலைக்கழகம்||␣
 பல்காலும்||␣
 பல்லக்கு||␣
@@ -5217,7 +5217,7 @@ autoExpandExamples.ta = `
 பழந்தின்னி வௌவால்||␣
 பழமை||␣
 பழமொழி||␣
-பழம்|fruit|pa§ɻa§m|paḻam
+பழம்|fruit|pa,ɻa,m|paḻam
 பழம்பாடம்||␣
 பழி||␣|
 பழிச்சு||␣
@@ -5226,7 +5226,7 @@ autoExpandExamples.ta = `
 பழுது||␣
 பழுப்பு||␣|
 பழுவம்||␣
-பழைய|old, ancient|pa§ɻai§ja|paḻaiya
+பழைய|old, ancient|pa,ɻai,ja|paḻaiya
 பவளங்கள்||␣|
 பவளப் பாறை||␣|
 பவளப் பாறைகள்||␣|
@@ -5240,9 +5240,9 @@ autoExpandExamples.ta = `
 பவ்வம்||␣
 பாகம்||␣
 பாகற்காய்||␣
-பாகு|share, portion|pɑː§ɡɯ|pāku
+பாகு|share, portion|pɑː,ɡɯ|pāku
 பாகுபடு||␣|
-பாசம்|affection|paː§sa§m|pācam
+பாசம்|affection|paː,sa,m|pācam
 பாசி||␣
 பாசுரம்||␣
 பாசை||␣
@@ -5252,7 +5252,7 @@ autoExpandExamples.ta = `
 பாடம்||␣
 பாடம்போற்று||␣
 பாடல்||␣
-பாடு|to sing|paː§ɖɯ|pāṭu
+பாடு|to sing|paː,ɖɯ|pāṭu
 பாட்டன்||␣|
 பாட்டாளி வருக்கம்||␣|
 பாட்டாளி||
@@ -5263,7 +5263,7 @@ autoExpandExamples.ta = `
 பாண்||␣|
 பாண்டிச்சேரி||␣|
 பாண்டியர்||␣|
-பாதம்|foot|paː§d̪a§m|pātam
+பாதம்|foot|paː,d̪a,m|pātam
 பாதலத்தாம்பி||␣
 பாதாம்||␣|
 பாதாளம்||␣
@@ -5285,10 +5285,10 @@ autoExpandExamples.ta = `
 பாப்பாத்தி||␣|
 பாம்பன்||␣|
 பாம்பாட்டி||␣
-பாம்பு|snake|pɑː§m§bɯ|pāmpu
+பாம்பு|snake|pɑː,m,bɯ|pāmpu
 பாயசம்||␣
 பாயா||␣|
-பாய்|carpet, mat|paː§j|pāy
+பாய்|carpet, mat|paː,j|pāy
 பாய்மரம்||␣|
 பாய்மா||␣|
 பாரசீகம்||␣|
@@ -5301,7 +5301,7 @@ autoExpandExamples.ta = `
 பாரிசவாதம்||␣
 பாரியை||␣|
 பாரிஸ்||␣
-பார்|world|paː§ɾ|pār
+பார்|world|paː,ɾ|pār
 பார்த்தசாரதி||␣|
 பார்லி||␣
 பார்வதிபுரம் மண்யம்||␣|
@@ -5428,7 +5428,7 @@ autoExpandExamples.ta = `
 பிஞ்செழுத்து||
 பிஞ்சை||
 பிடாரி||␣|
-பிடி|to grasp, hold|pi§di|piṭi
+பிடி|to grasp, hold|pi,di|piṭi
 பிடுங்கு||␣|
 பிட்கு||␣|
 பிட்குதல்||
@@ -5520,7 +5520,7 @@ autoExpandExamples.ta = `
 பின்லாந்து||␣
 பின்வயிறு||
 பின்வாங்கு||␣|
-பிப்ரவரி|February|pi§b§ɾa§ʋa§ɾi|pipravari
+பிப்ரவரி|February|pi,b,ɾa,ʋa,ɾi|pipravari
 பியொங்யாங்||␣|
 பிய்||␣|
 பிரகடனம்||␣|
@@ -5700,14 +5700,14 @@ autoExpandExamples.ta = `
 பிளிற்று||␣|
 பிளிற்றுதல்||
 பிளேக்கு||
-பிள்ளை|son|pi§ɭ§ɭai|piḷḷai
+பிள்ளை|son|pi,ɭ,ɭai|piḷḷai
 பிள்ளையாரெறும்பு||␣
 பிள்ளையார் சுழி||␣|
 பிள்ளையார்||␣|
 பிள்ளையார்பையன்||␣
 பிழக்கு||␣|
 பிழம்பு||␣|
-பிழி|to squeeze|pi§ɻi|piḻi
+பிழி|to squeeze|pi,ɻi|piḻi
 பிழை||␣
 பிழைப்பு||␣
 பீ||␣|
@@ -5717,7 +5717,7 @@ autoExpandExamples.ta = `
 பீசுகோலா||␣
 பீடி||␣
 பீடிப்பு||␣
-பீட்ரூட்|beetroot|piː§ʈ§ɾuː§ʈ|pīṭrūṭ
+பீட்ரூட்|beetroot|piː,ʈ,ɾuː,ʈ|pīṭrūṭ
 பீப்பா||␣|
 பீரிதம்||␣
 பீரோ||␣|
@@ -5734,7 +5734,7 @@ autoExpandExamples.ta = `
 புகு||␣|
 புகுது||␣|
 புகுத்து||␣|
-புகை|smoke|pu§ɡai|pukai
+புகை|smoke|pu,ɡai|pukai
 புகைப்படங்கள்||␣|
 புகைப்படம்||␣|
 புகைவண்டி||␣|
@@ -5767,7 +5767,7 @@ autoExpandExamples.ta = `
 புதினா||␣|
 புதிய||␣
 புது தில்லி||␣
-புது|new|pu§d̪ɯ|putu
+புது|new|pu,d̪ɯ|putu
 புதுக்கோட்டை||␣|
 புதுச்சேரி||␣
 புதுமர்||␣|
@@ -5807,7 +5807,7 @@ autoExpandExamples.ta = `
 புருவம்||␣
 புருஷன்||␣|
 புரூணை||␣|
-புறம்|back|pu§ra§m|puṟam
+புறம்|back|pu,ra,m|puṟam
 புறவு||␣
 புறா||␣
 புறாக்கள்||␣|
@@ -5823,17 +5823,17 @@ autoExpandExamples.ta = `
 புலவர்||␣
 புலி||␣
 புலிகள்||␣|
-புல்|grass|pu§l|pul
+புல்|grass|pu,l|pul
 புல்லாங்குழல்||␣|
 புல்லுத்தடுக்குஞ்சூரைச்செடி||␣
 புளி||␣
 புளிச்செவ்வந்தி||␣
 புள்||␣|
-புள்ளி|dot, virama|pu§ɭ§ɭi|puḷḷi
+புள்ளி|dot, virama|pu,ɭ,ɭi|puḷḷi
 புள்ளியியல்||␣|
 புள்ளுவம்||␣|
-புழு|worm|pu§ɻɯ|puḻu
-புழுதி|dust|pu§ɻu§d̪i|puḻuti
+புழு|worm|pu,ɻɯ|puḻu
+புழுதி|dust|pu,ɻu,d̪i|puḻuti
 புழுத்துளை||␣|
 புவனி||␣|
 புவி||␣|
@@ -5901,7 +5901,7 @@ autoExpandExamples.ta = `
 பெட்டை||␣|
 பெட்டையன்||␣|
 பெட்ரோல்||␣
-பெண்|woman|pe§ɳ|peṇ
+பெண்|woman|pe,ɳ|peṇ
 பெண்கரு||␣
 பெண்கள்||␣|
 பெண்குறி||␣
@@ -5918,7 +5918,7 @@ autoExpandExamples.ta = `
 பென்யமீன்||␣
 பெயரடை||␣|
 பெயரெச்சம்||␣
-பெயர்|name|pe§ja§ɾ|peyar
+பெயர்|name|pe,ja,ɾ|peyar
 பெயர்க்கு||␣
 பெயர்ச்சி||␣
 பெயர்ச்சொல்||␣|
@@ -5933,7 +5933,7 @@ autoExpandExamples.ta = `
 பெய்||␣
 பெய்துரை||␣
 பெரம்பலூர்||␣|
-பெரிய|big|pe§ɾi§ja|periya
+பெரிய|big|pe,ɾi,ja|periya
 பெரியதம்பிரான்||␣|
 பெரியப்பா||␣|
 பெரியவர்||␣|
@@ -5978,18 +5978,18 @@ autoExpandExamples.ta = `
 பேசி||␣|
 பேசு||␣
 பேச்சாளர்||␣
-பேச்சு|conversation|peː§t§t͡ɕu|pēccu
+பேச்சு|conversation|peː,t,t͡ɕu|pēccu
 பேச்சுவார்த்தை||␣
 பேஜார்||␣|
 பேஜோ||␣|
-பேடி|fear|peː§ɖi|pēṭi
+பேடி|fear|peː,ɖi|pēṭi
 பேண்||␣|
 பேதிமருந்து||␣
 பேதுரு||␣|
 பேதை||␣|
 பேனம்||␣|
 பேனா||␣
-பேன்|louse|peː§n|pēṉ
+பேன்|louse|peː,n|pēṉ
 பேய்||␣
 பேய்க்கணவாய்||␣|
 பேய்க்கருங்காலி||␣
@@ -6046,7 +6046,7 @@ autoExpandExamples.ta = `
 பொய்வளைவு||
 பொரி||␣|
 பொருட்பெயர்||␣
-பொருது|to fight|po§ɾu§d̪ɯ|porutu
+பொருது|to fight|po,ɾu,d̪ɯ|porutu
 பொருத்தம்||␣
 பொருத்து||␣
 பொருந்து||␣
@@ -6090,7 +6090,7 @@ autoExpandExamples.ta = `
 போபால்||␣
 போப்புதாச்சானை||␣|
 போயர்||␣|
-போராடு|to fight|poː§ɾaː§ɖɯ|pōrāṭu
+போராடு|to fight|poː,ɾaː,ɖɯ|pōrāṭu
 போராட்டம்||␣
 போராளி||␣|
 போர்||␣
@@ -6108,7 +6108,7 @@ autoExpandExamples.ta = `
 போல்||␣|
 பௌமம்||␣|
 பௌமஸ்நானம்||␣|
-ப்ரஜ்ஞா|female given name|p§ɾa§d͡ʑ§ɲaː|prajñā
+ப்ரஜ்ஞா|female given name|p,ɾa,d͡ʑ,ɲaː|prajñā
 மக||␣
 மகன்||␣
 மகப்பேறு||␣|
@@ -6141,7 +6141,7 @@ autoExpandExamples.ta = `
 மகோற்சவம்||␣|
 மக்கம்||␣
 மக்களாட்சி||␣
-மக்கள்|people|ma§k§ka§ɭ|makkaḷ
+மக்கள்|people|ma,k,ka,ɭ|makkaḷ
 மக்கு||␣
 மங்கனிறம்||␣|
 மங்கலியன்||␣
@@ -6159,7 +6159,7 @@ autoExpandExamples.ta = `
 மஞ்சட்சாமந்தி||␣
 மஞ்சட்டி||␣|
 மஞ்சன்||␣
-மஞ்சள்|turmeric, yellow|ma§ɲ§d͡ʑa§ɭ|mañcaḷ
+மஞ்சள்|turmeric, yellow|ma,ɲ,d͡ʑa,ɭ|mañcaḷ
 மஞ்சள்முள்ளங்கி||␣
 மஞ்சிகை||␣|
 மஞ்சிட்டி||␣|
@@ -6190,7 +6190,7 @@ autoExpandExamples.ta = `
 மணப்பெண்||␣|
 மணமகன்||␣|
 மணம்||␣|
-மணல்|sand|ma§ɳa§l|maṇal
+மணல்|sand|ma,ɳa,l|maṇal
 மணவாட்டி||␣|
 மணவாளன்||␣|
 மணவிலக்கு||␣|
@@ -6204,7 +6204,7 @@ autoExpandExamples.ta = `
 மணிமகுடம்||␣|
 மணிமேகலை||␣|
 மணை||␣|
-மண்|soil, earth|ma§ɳ|maṇ
+மண்|soil, earth|ma,ɳ|maṇ
 மண்டக்கம்||␣
 மண்டபம்||␣
 மண்டலம்||␣
@@ -6270,12 +6270,12 @@ autoExpandExamples.ta = `
 மனமாற்றம்||␣|
 மனம்||␣
 மனஸ்தாபம்||␣
-மனிதன்|human, person|ma§ni§d̪a§n|maṉitaṉ
+மனிதன்|human, person|ma,ni,d̪a,n|maṉitaṉ
 மனிதவளம்||␣
 மனிதவியல்||␣
 மனுஷன்||␣|
 மனை||␣
-மனைவி|wife|ma§nai§ʋi|maṉaivi
+மனைவி|wife|ma,nai,ʋi|maṉaivi
 மனோபாவம்||␣
 மன்||␣|
 மன்னன்||␣
@@ -6316,7 +6316,7 @@ autoExpandExamples.ta = `
 மரணம்||␣
 மரத்தக்காளி||␣
 மரபணு||␣|
-மரம்|tree|ma§ɾa§m|maram
+மரம்|tree|ma,ɾa,m|maram
 மரவள்ளி||␣
 மரி||␣|
 மரியாதை||␣
@@ -6351,22 +6351,22 @@ autoExpandExamples.ta = `
 மறுமொழி||␣|
 மறுரூபம்||␣
 மறை||␣
-மற்ற|other|ma§t§ɾa|maṟṟa
+மற்ற|other|ma,t,ɾa|maṟṟa
 மற்றப்படி||␣|
-மற்று|another|ma§t§rɯ|maṟṟu
-மற்றும்|and|ma§t§ɾu§m|maṟṟum
+மற்று|another|ma,t,rɯ|maṟṟu
+மற்றும்|and|ma,t,ɾu,m|maṟṟum
 மற்றை||␣
 மலக்கழிவு||␣
 மலக்கு||␣|
 மலச்சிக்கல்||␣
 மலப்புறம்||␣|
 மலம்||␣
-மலர்|flower, blossom|ma§la§ɾ|malar
+மலர்|flower, blossom|ma,la,ɾ|malar
 மலர்க்கடை||␣
 மலர்ச்சி||␣
 மலாக்கா||␣
 மலேசியா||␣
-மலை|mountain|ma§lai|malai
+மலை|mountain|ma,lai|malai
 மலைகலக்கி||␣
 மலைக்கொய்யா||␣
 மலைப்பாம்பு||␣
@@ -6381,7 +6381,7 @@ autoExpandExamples.ta = `
 மல்லிகை||␣|
 மழலை||␣|
 மழு||␣|
-மழை|rain|ma§ɻai|maḻai
+மழை|rain|ma,ɻai|maḻai
 மழைக்காலம்||␣
 மழைத்துளி||␣
 மழைநீர்||␣
@@ -6470,7 +6470,7 @@ autoExpandExamples.ta = `
 மார்க்கம்||␣|
 மார்ச்||␣|
 மார்பகம்||␣
-மார்பு|breast, chest|maː§ɾ§bɯ|mārpu
+மார்பு|breast, chest|maː,ɾ,bɯ|mārpu
 மாறு||␣|
 மாறுபாடு||␣
 மாற்றம்||␣
@@ -6502,7 +6502,7 @@ autoExpandExamples.ta = `
 மிஞ்சு||␣|
 மிடையீரர்||␣|
 மிட்டாய்||␣|
-மித|to float|mi§d̪a|mita
+மித|to float|mi,d̪a|mita
 மிதழ்||␣
 மிதவை||␣
 மிதியடி||␣
@@ -6546,7 +6546,7 @@ autoExpandExamples.ta = `
 மீக்கூர்||␣
 மீக்கூறல்||␣
 மீக்கூற்றம்||␣
-மீக்கோள்|ascent|miː§k§koː§ɭ|mīkkōḷ
+மீக்கோள்|ascent|miː,k,koː,ɭ|mīkkōḷ
 மீசு||␣
 மீசை||␣
 மீச்செலவு||␣
@@ -6559,7 +6559,7 @@ autoExpandExamples.ta = `
 மீனவர்||␣
 மீனாக்ஷி||␣|
 மீனாட்சி||␣|
-மீன்|fish|miː§n|mīṉ
+மீன்|fish|miː,n|mīṉ
 மீன்காரன்||␣
 மீன்சிறகு||␣
 மீன்வெட்டி||␣
@@ -6577,7 +6577,7 @@ autoExpandExamples.ta = `
 முகம்||␣
 முகர்||␣|
 முகவுரை||␣
-முகில்|cloud|mu§ɡi§l|mukil
+முகில்|cloud|mu,ɡi,l|mukil
 முகூர்த்தம்||␣|
 முகை||␣
 முக்கா||␣|
@@ -6590,7 +6590,7 @@ autoExpandExamples.ta = `
 முசு||␣|
 முச்சம்||␣
 முடக்கு||␣|
-முடி|crown, hair|mu§ɖi|muṭi
+முடி|crown, hair|mu,ɖi|muṭi
 முடிச்சு||␣|
 முடியாட்சி||␣
 முடிவிலி||␣|
@@ -6603,7 +6603,7 @@ autoExpandExamples.ta = `
 முட்டாள்||␣
 முட்டு||␣
 முட்டுக்கால்||␣
-முட்டை|egg|mu§ʈ§ʈai|muṭṭai
+முட்டை|egg|mu,ʈ,ʈai|muṭṭai
 முண்டகம்||␣
 முதன்மை||␣
 முதலாளி||␣
@@ -6611,12 +6611,12 @@ autoExpandExamples.ta = `
 முதலீடு||␣
 முதலுதவி||␣
 முதலை||␣
-முதல்|first|mu§d̪a§l|mutal
+முதல்|first|mu,d̪a,l|mutal
 முதல்நிலைத் திராவிட மொழி||␣
 முதல்வர்||␣|
 முதிர்||␣|
 முதிர்ச்சி||␣
-முதுகு|back|mu§d̪u§ɡɯ|mutuku
+முதுகு|back|mu,d̪u,ɡɯ|mutuku
 முதுகுநாணி||␣|
 முதுமை||␣
 முதுவேனில்||␣|
@@ -6688,7 +6688,7 @@ autoExpandExamples.ta = `
 முற்று||␣|
 முலாம்||␣|
 முலாம்பூசு||␣|
-முலை|breast|mu§lai|mulai
+முலை|breast|mu,lai|mulai
 முலைக்கச்சு||␣|
 முலையூட்டி||␣
 முல்லை||␣|
@@ -6716,7 +6716,7 @@ autoExpandExamples.ta = `
 முழங்கை||␣|
 முழம்||␣|
 முழி||␣|
-முழு|all, full|mu§ɻɯ|muḻu
+முழு|all, full|mu,ɻɯ|muḻu
 முழுங்கு||␣|
 முழுமதி||␣|
 முழுமை||␣
@@ -6727,7 +6727,7 @@ autoExpandExamples.ta = `
 முஸ்லீம்||␣
 மூக்கண்ணாடி||␣
 மூக்கன்||␣
-மூக்கு|nose|muː§k§kɯ|mūkku
+மூக்கு|nose|muː,k,kɯ|mūkku
 மூக்குக்கொம்பன்||␣|
 மூக்குத்தி||␣
 மூக்கை நோண்டு||␣|
@@ -6735,14 +6735,14 @@ autoExpandExamples.ta = `
 மூங்கா||␣
 மூங்கில்||␣
 மூச்சு||␣
-மூச்சுவிடு|to breathe|muː§t͡ɕ§t͡ɕu§ʋi§ɖɯ|moochuvidu
+மூச்சுவிடு|to breathe|muː,t͡ɕ,t͡ɕu,ʋi,ɖɯ|moochuvidu
 மூஞ்சி||␣|
 மூடி||␣|
 மூடு||␣
 மூடுபனி||␣
 மூடுவிழா||␣|
 மூட்டம்||␣
-மூட்டு|knee|muː§ʈ§ʈɯ|mūṭṭu
+மூட்டு|knee|muː,ʈ,ʈɯ|mūṭṭu
 மூட்டை||␣|
 மூட்டைப் பூச்சி||␣
 மூணு||␣|
@@ -6751,7 +6751,7 @@ autoExpandExamples.ta = `
 மூது||␣
 மூதுரை||␣
 மூத்திரம்||␣|
-மூன்று|three|muː§n§drɯ|mūṉṟu
+மூன்று|three|muː,n,drɯ|mūṉṟu
 மூர்ச்சனை||␣
 மூர்ச்சி||␣|
 மூர்ச்சை||␣|
@@ -6786,10 +6786,10 @@ autoExpandExamples.ta = `
 மெலிவு||␣|
 மெல்||␣
 மெல்லினம்||␣
-மெல்லிய|soft, thin, delicate|me§l§li§ja|melliya
+மெல்லிய|soft, thin, delicate|me,l,li,ja|melliya
 மெல்லெழுத்து||␣|
 மே||␣|
-மேகம்|cloud|meː§ɡa§m|mēkam
+மேகம்|cloud|meː,ɡa,m|mēkam
 மேகலை||␣|
 மேகாலயா||␣|
 மேசை||␣
@@ -6830,7 +6830,7 @@ autoExpandExamples.ta = `
 மேலால்||␣
 மேலிடு||␣
 மேலிமை||␣
-மேலும்|furthermore, also|meː§lu§m|mēlum
+மேலும்|furthermore, also|meː,lu,m|mēlum
 மேலே||␣|
 மேலோடி||␣|
 மேல் மாகாணம்||␣|
@@ -6853,7 +6853,7 @@ autoExpandExamples.ta = `
 மொய்||␣
 மொய்ம்பு||␣
 மொய்யற்சன்னி||␣
-மொழி|language, word|mo§ɻi|moḻi
+மொழி|language, word|mo,ɻi|moḻi
 மொழிபு||␣|
 மொழிபெயர்ப்பு||␣
 மொழியியல்||␣
@@ -6865,7 +6865,7 @@ autoExpandExamples.ta = `
 மோடம்||␣|
 மோடு||␣
 மோதிரம்||␣
-மோது|to collide with|moː§d̪ɯ|mōtu
+மோது|to collide with|moː,d̪ɯ|mōtu
 மோத்தை||␣|
 மோர்||␣|
 மோழல்||␣|
@@ -6882,14 +6882,14 @@ autoExpandExamples.ta = `
 யாண்டும்||
 யாது||␣|
 யானம்||␣
-யானை|elephant|jaː§nai|yāṉai
+யானை|elephant|jaː,nai|yāṉai
 யானைமதம்||␣|
 யான்||␣|
 யாப்பு||␣|
 யாமம்||␣
 யாம்||␣|
 யாரோ||␣|
-யார்|who|jaː§ɾ|yār
+யார்|who|jaː,ɾ|yār
 யாளி||␣|
 யாழ்||␣
 யாழ்ப்பாண அரசு||␣|
@@ -6919,7 +6919,7 @@ autoExpandExamples.ta = `
 யோவேல்||␣|
 ரகசியம்||␣
 ரகம்||␣|
-ரக்ஷகன்|protector, guardian|ɾa§k§ʂa§ɡa§n|rakṣakaṉ
+ரக்ஷகன்|protector, guardian|ɾa,k,ʂa,ɡa,n|rakṣakaṉ
 ரக்ஷி||␣|
 ரங்கநாதன்||␣
 ரங்கு||␣|
@@ -6995,7 +6995,7 @@ autoExpandExamples.ta = `
 லக்குவா||␣
 லக்சம்பர்க்||␣|
 லக்ஷணம்||␣|
-லக்ஷம்|lakh (100,000)|la§k§ʂa§m|lakṣam
+லக்ஷம்|lakh (100,000)|la,k,ʂa,m|lakṣam
 லக்ஷி||␣|
 லங்கர்||␣
 லஞ்சம்||␣
@@ -7073,7 +7073,7 @@ autoExpandExamples.ta = `
 வடுகு||␣|
 வடை||␣
 வடைப்பருப்பு||␣
-வட்டம்|round|ʋa§ʈ§ʈa§m|vaṭṭam
+வட்டம்|round|ʋa,ʈ,ʈa,m|vaṭṭam
 வட்டி||␣|
 வட்டில்||
 வட்டுக்கோட்டை||␣|
@@ -7081,11 +7081,11 @@ autoExpandExamples.ta = `
 வணக்கம்||␣
 வணங்கு||␣|
 வண்டற்படுகை||
-வண்டி|carriage|ʋa§ɳ§ɖi|vaṇṭi
+வண்டி|carriage|ʋa,ɳ,ɖi|vaṇṭi
 வண்டு||␣
 வண்ணத்துப்பூச்சி||␣
 வண்ணத்துப்பூச்சிகள்||␣|
-வண்ணம்|colour|ʋa§ɳ§ɳa§m|vaṇṇam
+வண்ணம்|colour|ʋa,ɳ,ɳa,m|vaṇṇam
 வண்ணாத்தான்||␣
 வண்ணாத்திப்பூச்சி||␣
 வதந்தி||␣|
@@ -7124,7 +7124,7 @@ autoExpandExamples.ta = `
 வரம்||␣
 வரம்பு||␣
 வரலாறு||␣
-வரலாற்று|historical|ʋa§ɾa§laː§t§rɯ|varalāṟṟu
+வரலாற்று|historical|ʋa,ɾa,laː,t,rɯ|varalāṟṟu
 வரவு||␣
 வரவேற்கிறேன்||␣
 வராகம்||␣|
@@ -7168,10 +7168,10 @@ autoExpandExamples.ta = `
 வற்றல்||␣
 வலங்கம்||␣
 வலசை||␣
-வலது|right (side)|ʋa§la§d̪ɯ|valatu
+வலது|right (side)|ʋa,la,d̪ɯ|valatu
 வலம்||␣
 வலாகம்||␣
-வலி|pain|ʋa§li|vali
+வலி|pain|ʋa,li|vali
 வலிப்பு||␣
 வலிமை||␣
 வலுப்பு||␣
@@ -7213,13 +7213,13 @@ autoExpandExamples.ta = `
 வளர்ப்பு||␣
 வளவன்||
 வளாகம்||␣|
-வளி|gas, air|ʋa§ɭi|vaḷi
+வளி|gas, air|ʋa,ɭi|vaḷi
 வளை||␣|
 வளையல்||␣
 வளைவு||␣|
 வள்ளம்||␣|
 வள்ளல்||␣|
-வள்ளி|Valli (female name)|ʋa§ɭ§ɭi|vaḷḷi
+வள்ளி|Valli (female name)|ʋa,ɭ,ɭi|vaḷḷi
 வழக்கமாய்||␣
 வழக்கம்||␣
 வழக்கறிஞர்||␣|
@@ -7229,7 +7229,7 @@ autoExpandExamples.ta = `
 வழங்கு||␣
 வழலிக்கை||␣
 வழவழப்பு||␣
-வழி|path|ʋa§ɻi|vaḻi
+வழி|path|ʋa,ɻi|vaḻi
 வழிகாட்டு||␣
 வழிச்செலவு||␣
 வழிஞ்சி||␣
@@ -7240,7 +7240,7 @@ autoExpandExamples.ta = `
 வழுக்கு||␣|
 வழுக்கை||␣|
 வழுதலை||␣|
-வழுவழுப்பு|smoothness|ʋa§ɻu§ʋa§ɻu§p§pɯ|vaḻuvaḻuppu
+வழுவழுப்பு|smoothness|ʋa,ɻu,ʋa,ɻu,p,pɯ|vaḻuvaḻuppu
 வழுவை||␣|
 வவுனியா||␣|
 வவ்வால்||␣|
@@ -7282,7 +7282,7 @@ autoExpandExamples.ta = `
 வாத்துக்கள்||␣|
 வாந்தி||␣
 வானகம்||␣|
-வானம்|sky|ʋaː§na§m|vāṉam
+வானம்|sky|ʋaː,na,m|vāṉam
 வானம்பாடி||␣
 வானவர்||␣|
 வானவில்||␣
@@ -7301,7 +7301,7 @@ autoExpandExamples.ta = `
 வாயின்மாடம்||␣
 வாயில்||␣
 வாயு||␣
-வாய்|mouth|ʋɑː§j|vāy
+வாய்|mouth|ʋɑː,j|vāy
 வாய்குமட்டல்||␣
 வாய்க்கால்||␣
 வாய்ச்சி||␣
@@ -7326,7 +7326,7 @@ autoExpandExamples.ta = `
 வார்ப்புரு||␣
 வாலாட்டிக்குருவி||
 வாலெலும்பு||␣
-வால்|tail|ʋaː§l|vāl
+வால்|tail|ʋaː,l|vāl
 வால்நட்சத்திரம்||␣|
 வால்மீன்||␣|
 வால்மீன்கள்||␣|
@@ -7337,7 +7337,7 @@ autoExpandExamples.ta = `
 வாழை||␣
 வாழைப்பழம்||␣
 வாழைப்பூ||␣|
-வாழ்|to live|ʋɑː§ɻ|vāḻ
+வாழ்|to live|ʋɑː,ɻ|vāḻ
 வாழ்க்கை||␣
 வாழ்ச்சி||␣
 வாழ்த்து||␣
@@ -7387,16 +7387,16 @@ autoExpandExamples.ta = `
 விட்டுணுப்பிரியம்||␣
 விண்கலம்||␣
 விண்ணுளவி||␣
-விண்மீன்|star|ʋi§ɳ§miː§n|viṇmīṉ
+விண்மீன்|star|ʋi,ɳ,miː,n|viṇmīṉ
 விண்வீழ்கொள்ளி||␣|
 விண்வீழ்கொள்ளிகள்||␣|
 விண்வெளி||␣
 விதவை||␣
 விதி||␣
-விதை|seed|ʋi§d̪ai|vitai
+விதை|seed|ʋi,d̪ai|vitai
 விதைப்பை||␣
 வித்தியாசம்||␣|
-வித்து|seed|ʋi§t̪§t̪ɯ|vittu
+வித்து|seed|ʋi,t̪,t̪ɯ|vittu
 விநாடி||␣
 விநாயக சதுர்த்தி||␣|
 விநாயகன்||␣|
@@ -7468,7 +7468,7 @@ autoExpandExamples.ta = `
 விலகு||␣|
 விலங்கி||␣
 விலங்கியல்||␣
-விலங்கு|animal|ʋi§la§ŋ§ɡɯ|vilaṅku
+விலங்கு|animal|ʋi,la,ŋ,ɡɯ|vilaṅku
 விலயம்||␣
 விலை||␣
 வில்||␣
@@ -7487,13 +7487,13 @@ autoExpandExamples.ta = `
 விளைஞர்||␣
 விளைநிலம்||␣
 விளைபொருள்||␣
-விளையாடு|to play|ʋi§ɭai§jaː§ɖɯ|viḷaiyāṭu
+விளையாடு|to play|ʋi,ɭai,jaː,ɖɯ|viḷaiyāṭu
 விளையாட்டு||␣
 விளைவி||␣|
 விளைவு||␣
 விழா||␣|
 விழி||␣|
-விழு|to fall|ʋi§ɻɯ|viḻu
+விழு|to fall|ʋi,ɻɯ|viḻu
 விழுக்காடு||␣
 விழுங்கு||␣
 விழுதி||␣
@@ -7515,8 +7515,8 @@ autoExpandExamples.ta = `
 விஷயம்||␣|
 விஷாதம்||␣
 விஷ்ணு||␣
-வீங்கு|to swell|ʋiː§ŋ§ɡɯ|vīṅku
-வீசு|to throw|ʋiː§sɯ|vīcu
+வீங்கு|to swell|ʋiː,ŋ,ɡɯ|vīṅku
+வீசு|to throw|ʋiː,sɯ|vīcu
 வீச்சு||␣
 வீடு||␣
 வீட்டில்||␣|
@@ -7531,7 +7531,7 @@ autoExpandExamples.ta = `
 வீராசனம்||␣|
 வெகுளி||␣
 வெகுவசனம்||␣
-வெக்கை|warm|ʋe§k§kai|vekkai
+வெக்கை|warm|ʋe,k,kai|vekkai
 வெங்கடாசலபதி||␣|
 வெங்கான்வெளி||␣
 வெங்காயம்||␣
@@ -7539,9 +7539,9 @@ autoExpandExamples.ta = `
 வெடிமருந்து||␣
 வெடியம்||␣
 வெட்கம்||␣|
-வெட்டு|to cut|ʋe§ʈ§ʈɯ|veṭṭu
+வெட்டு|to cut|ʋe,ʈ,ʈɯ|veṭṭu
 வெட்டுக்கிளி||␣
-வெண்|white|ʋe§ɳ|veṇ
+வெண்|white|ʋe,ɳ|veṇ
 வெண்கண்டல்||␣
 வெண்கலக் காலம்||␣
 வெண்கலம்||␣
@@ -7611,7 +7611,7 @@ autoExpandExamples.ta = `
 வேட்டம்||␣|
 வேட்டி||␣
 வேட்டை||␣|
-வேட்டையாடு|to hunt|ʋeː§ʈ§ʈai§jaː§ɖɯ|vēṭṭaiyāṭu
+வேட்டையாடு|to hunt|ʋeː,ʈ,ʈai,jaː,ɖɯ|vēṭṭaiyāṭu
 வேண்டி||␣
 வேண்டிய||␣
 வேண்டியமட்டும்||␣
@@ -7631,7 +7631,7 @@ autoExpandExamples.ta = `
 வேப்பமரம்||␣
 வேம்பு||␣
 வேய்||␣
-வேர்|root, foundation|ʋeː§ɾ|vēr
+வேர்|root, foundation|ʋeː,ɾ|vēr
 வேர்வை||␣
 வேறு||␣
 வேறுபாடு||␣
@@ -7678,10 +7678,10 @@ autoExpandExamples.ta = `
 ஶஸ்யம்||␣
 ஶாபம்||␣|
 ஶ்||␣|
-ஶ்ரீ ஜயவர்த்தனபுரம் கோட்டை|Sri Jayawardenepura Kotte|ɕ§ɾiː§ §d͡ʑa§ja§ʋa§ɾ§t̪§t̪a§na§bu§ɾa§m§ §koː§ʈ§ʈai|śrī jayavarttaṉapuram kōṭṭai
-ஶ்ரீ|holy, Lakshmi|ɕ§ɾiː|śrī
-ஶ்ரீகாகுளம்|Srikakulam (Andhra Pradesh)|s§ɾiː§kaː§ku§ɭɐ§m|śrīkākuḷam
-ஸ்ரீகாகுளம்|Srikakulam (Andhra Pradesh)|s§ɾiː§kaː§ku§ɭɐ§m|śrīkākuḷam||obsolete spelling
+ஶ்ரீ ஜயவர்த்தனபுரம் கோட்டை|Sri Jayawardenepura Kotte|ɕ,ɾiː, ,d͡ʑa,ja,ʋa,ɾ,t̪,t̪a,na,bu,ɾa,m, ,koː,ʈ,ʈai|śrī jayavarttaṉapuram kōṭṭai
+ஶ்ரீ|holy, Lakshmi|ɕ,ɾiː|śrī
+ஶ்ரீகாகுளம்|Srikakulam (Andhra Pradesh)|s,ɾiː,kaː,ku,ɭɐ,m|śrīkākuḷam
+ஸ்ரீகாகுளம்|Srikakulam (Andhra Pradesh)|s,ɾiː,kaː,ku,ɭɐ,m|śrīkākuḷam||obsolete spelling
 ஶ்வஶ்ரூ||␣|
 ஸங்கிரஹம்||␣|
 ஸாயகம்||␣
@@ -7695,16 +7695,16 @@ autoExpandExamples.ta = `
 ஸீமை||␣
 ஸ்டாலின்||␣|
 ஸ்தலம்||␣
-ஸ்தாபனம்|establishment, institution|s§t̪aː§ba§na§m|stāpaṉam
-ஸ்தாயி|musical pitch|s§t̪aː§ji|stāyi
+ஸ்தாபனம்|establishment, institution|s,t̪aː,ba,na,m|stāpaṉam
+ஸ்தாயி|musical pitch|s,t̪aː,ji|stāyi
 ஸ்துதி||␣|
 ஸ்தோத்திரங்கள்||␣|
 ஸ்தோத்திரம்||␣|
-ஸ்த்ரீ|woman, wife|s§t̪§ɾiː|strī
-ஸ்நானம்|bathing|s§n̪aː§na§m|snāṉam
-ஸ்பஷ்டம்|clarity|s§pa§ʂ§ʈa§m|spaṣṭam
-ஸ்ரீ|holy, Lakshmi|ɕ§ɾiː|śrī
-ஸ்வரம்|vowel|s§ʋa§ɾa§m|svaram
+ஸ்த்ரீ|woman, wife|s,t̪,ɾiː|strī
+ஸ்நானம்|bathing|s,n̪aː,na,m|snāṉam
+ஸ்பஷ்டம்|clarity|s,pa,ʂ,ʈa,m|spaṣṭam
+ஸ்ரீ|holy, Lakshmi|ɕ,ɾiː|śrī
+ஸ்வரம்|vowel|s,ʋa,ɾa,m|svaram
 ஸ்வர்ணம்||␣|
 ஸ்வேதம்||␣|
 ஹக்காசியா||␣
@@ -7712,38 +7712,38 @@ autoExpandExamples.ta = `
 ஹயக்ரீவன்||␣
 ஹரணம்||␣|
 ஹரிஜனம்||␣
-ஹாஜ்|the hajj|haː§d͡ʑ|hāj
+ஹாஜ்|the hajj|haː,d͡ʑ|hāj
 ஹிஜிரி||␣
 ஹிந்தி||␣|
 ஹைதராபாத்||␣|
 ஹொங்கொங்||␣
-ஹ்ரஸ்வம்|defect|h§ɾa§s§ʋa§m|hrasvam||obsolete
+ஹ்ரஸ்வம்|defect|h,ɾa,s,ʋa,m|hrasvam||obsolete
 
 
 
 
 
 @ ?
-ரெஃஸ்||re§›§x|
+ரெஃஸ்||re,›,x|
 கசக்கு|to squeeze|kasakku
-ஔகாரம்|sugar|aʊ§kaː§ra§m
-ஃஜிரொக்ஸ்|Xerox|›§zi§ro§k§s|ziroks
-ஃபோரியர்|Fourier|›§foː§ɾɪ§jə§r|fōriyar
+ஔகாரம்|sugar|aʊ,kaː,ra,m
+ஃஜிரொக்ஸ்|Xerox|›,zi,ro,k,s|ziroks
+ஃபோரியர்|Fourier|›,foː,ɾɪ,jə,r|fōriyar
 செங்கிஸ் ஃகான்|Gengis Khan||ceṅkis kāṉ
-ஃபீசு|fees|›§fiː§sɯ|fīcu
-கற்க|learn|kə§r§kə|kaṟka
+ஃபீசு|fees|›,fiː,sɯ|fīcu
+கற்க|learn|kə,r,kə|kaṟka
 அகலமான|wide||akalamāṉa
-அந்த ஆள்|he, that person|a§n̪§d̪a§ §aː§ɭ
+அந்த ஆள்|he, that person|a,n̪,d̪a, ,aː,ɭ
 அழுகிய|rotten (eg. log)||azhugiya
 அழுக்கான|dirty||azhukkāna
-இந்த ஆள்|he, this person|i§n̪§d̪a§ §aː§ɭ|[ʔɪn̪d̪ə ʔɑːɭ]
+இந்த ஆள்|he, this person|i,n̪,d̪a, ,aː,ɭ|[ʔɪn̪d̪ə ʔɑːɭ]
 இவ்விடம்|here||Ivvidam
-உய்ய|critical|ʷʊ§j§jə|uyya
+உய்ய|critical|ʷʊ,j,jə|uyya
 உலர்ந்த|dry (adjective)||ularntha
-உஷா|Usha|ʷʊ§ʂɑː|uṣā
+உஷா|Usha|ʷʊ,ʂɑː|uṣā
 எல்லோரும்|all||ellorum
-காமாக்ஷி|Kamakshi|kɑː§mɑː§k§ʂɪˑ|kāmākṣi
-கீரி|mongoose|kiː§ɾɪˑ|kīɾi
+காமாக்ஷி|Kamakshi|kɑː,mɑː,k,ʂɪˑ|kāmākṣi
+கீரி|mongoose|kiː,ɾɪˑ|kīɾi
 குக்கல்|dog||kukkal
 குள்ள|short||kuɭɭa
 சண்டையிடு|to fight||saṇdaiyidu
@@ -7754,16 +7754,16 @@ autoExpandExamples.ta = `
 மடங்கு|to turn (change direction)||madangu
 மழுங்கிய|dull (as a knife)||mazhungiya
 முறி|to cut||muri
-யுக்தி|tactical|jʉ§k§t̪ɪˑ|yukti
+யுக்தி|tactical|jʉ,k,t̪ɪˑ|yukti
 வந்தால்|if|ʋən̪d̪ɑːl|vantāl
-வந்தாள்|she|ʋə§n̪§d̪ɑː§ɭ|vantāḷ
+வந்தாள்|she|ʋə,n̪,d̪ɑː,ɭ|vantāḷ
 வல்லி|Valli|ʋəllɪˑ|valli
 விண்|sky||vin
-விற்பனை|sale|ʋɪ§r§pə§nəj|viṟpaṉai
-ஶிவா|Shiva|ʃɪ§ʋɑː|śivā
-ஸந்தியா|Sandya|sə§n̪§d̪ɪ§jɑː|santiyā
-ஹரி|Hari|ɦə§ɾɪˑ|hari
-தமிழ் அரிச்சுவடி|Tamil script|t̪a§mi§ɻ§ §a§ɾi§t§t͡ɕu§ʋa§ɖi
+விற்பனை|sale|ʋɪ,r,pə,nəj|viṟpaṉai
+ஶிவா|Shiva|ʃɪ,ʋɑː|śivā
+ஸந்தியா|Sandya|sə,n̪,d̪ɪ,jɑː|santiyā
+ஹரி|Hari|ɦə,ɾɪˑ|hari
+தமிழ் அரிச்சுவடி|Tamil script|t̪a,mi,ɻ, ,a,ɾi,t,t͡ɕu,ʋa,ɖi
 
 
 

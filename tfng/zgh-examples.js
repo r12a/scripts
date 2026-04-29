@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -35,7 +35,7 @@ autoExpandExamples.zgh = `
 ⴰⴱⴰⴱⴱⵓⵥ|bear|ababbuzˤ|ababbuẓ|ɑβɑ̝bːʊ̙̞zˤ
 ⴰⴱⴰⵏⴷⵓ||␣
 ⴰⴱⵅⵅⵓⵛ||␣
-ⴰⴱⵓⴱⴱⴰⵥ|bear|a§b§ʊ§b§b§a§zˁ
+ⴰⴱⵓⴱⴱⴰⵥ|bear|a,b,ʊ,b,b,a,zˁ
 ⴰⴱⵓⴱⴱⵓ||␣
 ⴰⴱⵔⴹⵓⴹ||␣
 ⴰⴱⵔⴽⴰⵏ||␣
@@ -86,7 +86,7 @@ autoExpandExamples.zgh = `
 ⴰⴽⴰⵍ||␣
 ⴰⴽⵙⵉⵍ||␣
 ⴰⴽⵙⵓⵎ||␣
-ⴰⴽⵯⴼⴰⵢ|milk|a§kʷ§‹§f§a§j
+ⴰⴽⵯⴼⴰⵢ|milk|a,kʷ,‹,f,a,j
 ⴰⵀⴰⴷ||␣
 ⴰⵀⵉⵜⵓⵔ||␣
 ⴰⵄⴱⴰⵏ||␣
@@ -107,7 +107,7 @@ autoExpandExamples.zgh = `
 ⴰⵊⵢ||␣
 ⴰⵍ||␣
 ⴰⵍⴰⵖⵎⵓ||␣
-ⴰⵍⴳⴳⵯⴰⵖ|smooth|a§l§ɡ§ɡʷ§‹§a§ɣ|alggʷaɣ|æləɡʷːɑ̝ʁ
+ⴰⵍⴳⴳⵯⴰⵖ|smooth|a,l,ɡ,ɡʷ,‹,a,ɣ|alggʷaɣ|æləɡʷːɑ̝ʁ
 ⴰⵍⵅⵉⵅ||␣
 ⴰⵍⵍ||␣
 ⴰⵍⵍⵏ||␣||
@@ -118,7 +118,7 @@ autoExpandExamples.zgh = `
 ⴰⵎⴰⵍⵓ||␣
 ⴰⵎⴰⵏ||␣
 ⴰⵎⴰⵖⵓⴷ||␣
-ⴰⵎⴰⵣⵉⵖ|Amazigh, Berber|a§m§a§z§i§ɣ|amaziɣ|æmæzɪ̙̞ʁ
+ⴰⵎⴰⵣⵉⵖ|Amazigh, Berber|a,m,a,z,i,ɣ|amaziɣ|æmæzɪ̙̞ʁ
 ⴰⵎⴳⵔⴹ||␣
 ⴰⵎⴷⴰ||␣
 ⴰⵎⴷⴷⴰⴽⴽⵯⵍ||␣
@@ -198,7 +198,7 @@ autoExpandExamples.zgh = `
 ⴰⵛⵛⵔ||␣
 ⴰⵛⵟⵟⵡⴰⵏ||␣
 ⴰⵜⴰⵢ||␣
-ⴰⵠⵓⵔⵖⵙ|grasshopper|a§v§u§r§ʁ§s
+ⴰⵠⵓⵔⵖⵙ|grasshopper|a,v,u,r,ʁ,s
 ⴰⵡⴰⵍ||␣
 ⴰⵡⴽⴽⵉⵡ||␣
 ⴰⵡⵏⴳⵉⵎ||␣
@@ -236,17 +236,17 @@ autoExpandExamples.zgh = `
 ⴱⴱⴰ||␣
 ⴱⴱⵢ||␣
 ⴱⴷⴷ||␣
-ⴱⴷⴷⵍ|to change|b§d§d§l|bddl
-ⴱⴻⵏⴰⴷⵎ|person|b§ə§n§a§d§m||alternative form of ⴱⵏⴰⴷⵎ
+ⴱⴷⴷⵍ|to change|b,d,d,l|bddl
+ⴱⴻⵏⴰⴷⵎ|person|b,ə,n,a,d,m||alternative form of ⴱⵏⴰⴷⵎ
 ⴱⵄⴷ||␣
-ⴱⵏⴰⴷⵎ|person|b§n§a§d§m|bnadm|βn̪æðm̩
-ⴱⵓⵢⵉⵙⴽ|rhinoceros|b§u§j§i§s§k
+ⴱⵏⴰⴷⵎ|person|b,n,a,d,m|bnadm|βn̪æðm̩
+ⴱⵓⵢⵉⵙⴽ|rhinoceros|b,u,j,i,s,k
 ⴱⵔⵔⵃ||␣
 ⴱⵔⵔⵎ||␣
 ⴱⵔⵛⵎ||␣
 ⴱⵣⵢ||␣
 ⴱⵣⵣⴰⴼ||␣
-ⴳⴰⵏⴳⴰ|drum|ɡ§a§n§ɡ§a
+ⴳⴰⵏⴳⴰ|drum|ɡ,a,n,ɡ,a
 ⴳⴰⵔ||␣
 ⴳⴳⴰⵍⵍ||␣
 ⴳⴳⵉⴷⵉ||␣
@@ -258,14 +258,14 @@ autoExpandExamples.zgh = `
 ⴳⵔ||␣
 ⴳⵔⵙ||␣
 ⴳⵣⵉⵍ||␣
-ⴳⵯⵜ|to hit, shoot|ɡʷ§‹§t|gʷt|ɣʷəθ
+ⴳⵯⵜ|to hit, shoot|ɡʷ,‹,t|gʷt|ɣʷəθ
 ⴷⴰⴷ||␣
 ⴷⴷⴰⵡ||␣
 ⴷⴷⵓ ⴷ||␣
 ⴷⴷⵓ||␣
 ⴷⴷⵓⴽⴽⵍ||␣||
 ⴷⴷⵔ||␣
-ⴷⴷⵣⴰⵢⵔ|Algeria|d§d§z§a§j§r|ddzayr
+ⴷⴷⵣⴰⵢⵔ|Algeria|d,d,z,a,j,r|ddzayr
 ⴷⴼⴼⵉⵔ||␣
 ⴷⴼⵄ||␣
 ⴷⵉⵏ||␣
@@ -278,7 +278,7 @@ autoExpandExamples.zgh = `
 ⴹⵔ||␣
 ⴹⵕ||␣
 ⴼⴰⴷ||␣
-ⴼⴰⴼⴰ|to wake up|f§a§f§a|fafa|fæfɑ
+ⴼⴰⴼⴰ|to wake up|f,a,f,a|fafa|fæfɑ
 ⴼⴼⵔ||␣||
 ⴼⴼⵖ||␣
 ⴼⴽ||␣
@@ -290,7 +290,7 @@ autoExpandExamples.zgh = `
 ⴼⵛ||␣
 ⴼⵜⵉⵙ||␣
 ⴽⴰⵀⵉⵏⴰ||␣
-ⴽⴰⵡⴽⴰⵡ|peanut|k§a§w§k§a§w
+ⴽⴰⵡⴽⴰⵡ|peanut|k,a,w,k,a,w
 ⴽⴳⴳ||␣
 ⴽⴹⵓ||␣
 ⴽⴼ||␣
@@ -327,7 +327,7 @@ autoExpandExamples.zgh = `
 ⵄⵛⵔⴰ||␣
 ⵄⵛⵔⵉⵏ||␣
 ⵅⴰⴹⵔ||␣
-ⵅⴷⵎ|to work|χ§dᵊ§m|xdm|ʁðm̩
+ⵅⴷⵎ|to work|χ,dᵊ,m|xdm|ʁðm̩
 ⵅⴼ||␣
 ⵅⵅⵓ||␣
 ⵅⵎⵎⵎ||␣
@@ -341,10 +341,10 @@ autoExpandExamples.zgh = `
 ⵇⵇⵙ||␣
 ⵇⵎⵔ||␣
 ⵇⵔⵔⴱ||␣
-ⵉⴱⵉⴱⴸ|hoopoe|i§b§i§b§ð
+ⵉⴱⵉⴱⴸ|hoopoe|i,b,i,b,ð
 ⵉⴱⵍⵉⵍⵍⵉ||␣
 ⵉⴳⴷⵉ||␣
-ⵉⴳⵉⴷⵓ|sand|i§ɡ§i§d§u
+ⵉⴳⵉⴷⵓ|sand|i,ɡ,i,d,u
 ⵉⴳⵉⴷⵔ||␣
 ⵉⴳⵍⴳⵉⵣ||␣
 ⵉⴳⵏⵏⴰ||␣
@@ -416,12 +416,12 @@ autoExpandExamples.zgh = `
 ⵍⵉⵎⴰⵎ||␣
 ⵍⵎⴷ||␣
 ⵍⵎⵖⵔⵉⴱ||␣
-ⵍⵓⵟⴰⵕ|lute|l§u§tˁ§a§rˤ
+ⵍⵓⵟⴰⵕ|lute|l,u,tˁ,a,rˤ
 ⵍⵙ||␣
 ⵍⵡⵉⵖ||␣
 ⵎ-||␣||
 ⵎⴰ||␣
-ⵎⴰⴳⵯⵔⵜⵏ|middle finger|m§a§ɡʷ§‹§r§t§n
+ⵎⴰⴳⵯⵔⵜⵏ|middle finger|m,a,ɡʷ,‹,r,t,n
 ⵎⴰⵏⵉ||␣
 ⵎⴰⵏⵜⵓⵔ||␣
 ⵎⴰⵢ||␣
@@ -436,7 +436,7 @@ autoExpandExamples.zgh = `
 ⵎⵎⵖ||␣
 ⵎⵎⵜ||␣
 ⵎⵓⵏ||␣
-ⵎⵔⴰⵡ|ten|m§r§a§w
+ⵎⵔⴰⵡ|ten|m,r,a,w
 ⵎⵔⵢ||␣
 ⵎⵔⵥⵎ||␣
 ⵎⵕⵥⵎ||␣
@@ -446,8 +446,8 @@ autoExpandExamples.zgh = `
 ⵎⵥⵉⵢ||␣
 ⵏⴳⵉ||␣
 ⵏⴹⵍ||␣
-ⵏⴻⵖⴷ|or|n§ə§ɣ§d|neɣd|nəɣdd
-ⵏⴻⵖⴷⴷ|or|n§ə§ɣ§d§d|nəɣd|alternative form
+ⵏⴻⵖⴷ|or|n,ə,ɣ,d|neɣd|nəɣdd
+ⵏⴻⵖⴷⴷ|or|n,ə,ɣ,d,d|nəɣd|alternative form
 ⵏⴽⴽ||␣
 ⵏⴽⵔ||␣
 ⵏⵇⵇⴱ||␣
@@ -468,10 +468,10 @@ autoExpandExamples.zgh = `
 ⵏⵜⵜⴰⵜ||␣
 ⵏⵡ||␣
 ⵏⵣⵖ||␣
-ⵒⵓⵎⴰⴷⴰ|ointment|p§u§m§a§d§a
-ⵒⵖⵉⵣ|electrical socket|p§r§i§z
+ⵒⵓⵎⴰⴷⴰ|ointment|p,u,m,a,d,a
+ⵒⵖⵉⵣ|electrical socket|p,r,i,z
 ⵓⴳⵍ||␣
-ⵓⴷⵎ|face|u§d§m
+ⵓⴷⵎ|face|u,d,m
 ⵓⴹ||␣
 ⵓⴼⵙ||␣
 ⵓⵀⵓ||␣
@@ -493,8 +493,8 @@ autoExpandExamples.zgh = `
 ⵓⵔⵖ||␣
 ⵓⵙⵉⴹⵏ||␣
 ⵓⵙⵎ||␣
-ⵓⵙⵎⴰⵏ|lightning|u§s§m§a§n
-ⵓⵛⵛⵏ|wolf|u§ʃ§ʃ§n
+ⵓⵙⵎⴰⵏ|lightning|u,s,m,a,n
+ⵓⵛⵛⵏ|wolf|u,ʃ,ʃ,n
 ⵓⵟⵟⵓⵏ||␣
 ⵓⵣⵎⵎⵓⵔ||␣
 ⵓⵣⵣⴰⵍ||␣
@@ -503,7 +503,7 @@ autoExpandExamples.zgh = `
 ⵔⴱⴱⴰ||␣
 ⵔⴱⵄⴰ||␣
 ⵔⴽⵓ||␣
-ⵔⵔⵉⴱⴰⴱ|ribab (musical instrument)|r§r§i§b§a§b
+ⵔⵔⵉⴱⴰⴱ|ribab (musical instrument)|r,r,i,b,a,b
 ⵔⵔⵉⵛ||␣
 ⵔⵔⵎⵍⴰ||␣
 ⵔⵖ||␣
@@ -533,15 +533,15 @@ autoExpandExamples.zgh = `
 ⵙⴽⴽⵔ||␣
 ⵙⴽⵏ||␣
 ⵙⵃⵓ||␣
-ⵙⵉⵏ ⵡⴰⴳⵏⴰⵔⵏ|forty|s§i§n§ §w§a§ɡ§n§a§r§n
-ⵙⵉⵏ|two|s§i§n
+ⵙⵉⵏ ⵡⴰⴳⵏⴰⵔⵏ|forty|s,i,n, ,w,a,ɡ,n,a,r,n
+ⵙⵉⵏ|two|s,i,n
 ⵙⵍ||␣
 ⵙⵍⵍ||␣
 ⵙⵎⵉⴹ||␣
-ⵙⵎⵎⵓⵙ|five|s§m§m§u§s
+ⵙⵎⵎⵓⵙ|five|s,m,m,u,s
 ⵙⵎⵓⵎ||␣
 ⵙⵏⴰⵜ||␣
-ⵙⵓⴷⴷⵎ|to flow|s§u§d§d§m|suddm
+ⵙⵓⴷⴷⵎ|to flow|s,u,d,d,m|suddm
 ⵙⵙ-||␣
 ⵙⵙⵇⵇⵏ||␣
 ⵙⵙⵉⵔⴷ||␣
@@ -557,7 +557,7 @@ autoExpandExamples.zgh = `
 ⵙⵜⵖ||␣
 ⵙⵜⵜⴰ||␣
 ⵙⵡ||␣
-ⵚⴹⵉⵚ|six|sˁ§dˁ§i§sˁ
+ⵚⴹⵉⵚ|six|sˁ,dˁ,i,sˁ
 ⵛⴰ||␣
 ⵛⴰⵡⵔ||␣
 ⵛⴳⴳ||␣
@@ -579,8 +579,8 @@ autoExpandExamples.zgh = `
 ⵜ- -ⵏⵜ||␣||
 ⵜ- -ⵜ||␣||
 ⵜⴰ- -ⵜ||␣||
-ⵜⴰⴱⵔⵓⵢⵜ|sheep|t§a§b§r§u§j§t|(?tahrujt, misspelled?)
-ⵜⴰⴱⵖⴰⵛⵜ|raspberry|t§a§b§ʁ§a§ʃ§t
+ⵜⴰⴱⵔⵓⵢⵜ|sheep|t,a,b,r,u,j,t|(?tahrujt, misspelled?)
+ⵜⴰⴱⵖⴰⵛⵜ|raspberry|t,a,b,ʁ,a,ʃ,t
 ⵜⴰⴳⴰⵏⵜ||␣
 ⵜⴰⴳⴳⵓⵔⵜ||␣||
 ⵜⴰⴳⴷⴰ||␣
@@ -594,44 +594,44 @@ autoExpandExamples.zgh = `
 ⵜⴰⴳⵯⵓⵜⵜ||␣
 ⵜⴰⴳⵯⵔⵉⵜⵜ||␣
 ⵜⴰⴷ||␣
-ⵜⴰⴷⴰⴱⵓⵜ|table|t§a§d§a§b§u§t
-ⵜⴰⴷⴰⵍⴰ|classroom|t§a§d§a§l§a
+ⵜⴰⴷⴰⴱⵓⵜ|table|t,a,d,a,b,u,t
+ⵜⴰⴷⴰⵍⴰ|classroom|t,a,d,a,l,a
 ⵜⴰⴷⴰⵡⵜ||␣
 ⵜⴰⴷⴷⴰⵔⵜ||␣
-ⵜⴰⴷⴷⵉⵅⴼⵜ|pillow|t§a§d§d§i§χ§f§t
-ⵜⴰⴷⴼⴼⴰⵙⵜ|shirt|t§a§d§f§f§a§s§t
-ⵜⴰⴷⴼⴼⵓⵢⵜ|apple|t§a§d§f§f§u§j§t
+ⵜⴰⴷⴷⵉⵅⴼⵜ|pillow|t,a,d,d,i,χ,f,t
+ⵜⴰⴷⴼⴼⴰⵙⵜ|shirt|t,a,d,f,f,a,s,t
+ⵜⴰⴷⴼⴼⵓⵢⵜ|apple|t,a,d,f,f,u,j,t
 ⵜⴰⴷⵓⵏⵜ||␣
 ⵜⴰⴷⵓⵡⵡⴰⵔⵜ||␣
 ⵜⴰⴼⴰⴷⴰ||␣
 ⵜⴰⴼⴰⵍⴰ||␣
 ⵜⴰⴼⵍⵙⴰⴼⵜ||␣
-ⵜⴰⴼⵓⴽⵜ|sun|t§a§f§u§k§t
+ⵜⴰⴼⵓⴽⵜ|sun|t,a,f,u,k,t
 ⵜⴰⴼⵓⵏⴰⵙⵜ||␣
 ⵜⴰⴼⵓⵛⵜ||␣
-ⵜⴰⵀⴷⴷⵓⵏⵜ|cloak|t§a§h§d§d§u§n§t
+ⵜⴰⵀⴷⴷⵓⵏⵜ|cloak|t,a,h,d,d,u,n,t
 ⵜⴰⵃⴱⵓⴱⵜ||␣
-ⵜⴰⵃⵔⵓⵢⵜ|sheet|t§a§ħ§r§u§j§t
+ⵜⴰⵃⵔⵓⵢⵜ|sheet|t,a,ħ,r,u,j,t
 ⵜⴰⵅⵅⵓⵢⵜ||␣
-ⵜⴰⵅⵉⵣⵣⵓⵜ|carrot|t§a§χ§i§z§z§u§t
-ⵜⴰⵅⵙⴰⵢⵜ ⵜⴰⵣⴳⵣⴰⵡⵜ|courgette|t§a§χ§s§a§j§t§ §t§a§z§ɡ§z§a§w§t
-ⵜⴰⵇⴰⵕⵉⴹⵜ|CD|t§a§q§a§rˤ§i§dˁ§t
-ⵜⴰⵍⴱⵉⵅⵜ|plaster (dressing)|t§a§l§b§i§χ§t
+ⵜⴰⵅⵉⵣⵣⵓⵜ|carrot|t,a,χ,i,z,z,u,t
+ⵜⴰⵅⵙⴰⵢⵜ ⵜⴰⵣⴳⵣⴰⵡⵜ|courgette|t,a,χ,s,a,j,t, ,t,a,z,ɡ,z,a,w,t
+ⵜⴰⵇⴰⵕⵉⴹⵜ|CD|t,a,q,a,rˤ,i,dˁ,t
+ⵜⴰⵍⴱⵉⵅⵜ|plaster (dressing)|t,a,l,b,i,χ,t
 ⵜⴰⵍⵍⴰⵙⵜ||␣
 ⵜⴰⵍⵍⵓⵏⵜ||␣
 ⵜⴰⵎ||␣
 ⵜⴰⵎⴰⵔⵜ||␣
-ⵜⴰⵎⴰⵣⵉⵖⵜ|Tamazight|t§a§m§a§ˈz§ɪ§ɣ§t|tamaziɣt|θæmæzɪ̙̞χθ
+ⵜⴰⵎⴰⵣⵉⵖⵜ|Tamazight|t,a,m,a,ˈz,ɪ,ɣ,t|tamaziɣt|θæmæzɪ̙̞χθ
 ⵜⴰⵎⴷⴷⵉⵜ||␣
-ⵜⴰⵎⵎⵏⵜ|honey|t§a§m§m§n§t|tammnt
+ⵜⴰⵎⵎⵏⵜ|honey|t,a,m,m,n,t|tammnt
 ⵜⴰⵎⵓⵔⵜ||␣
 ⵜⴰⵎⵟⵟⵓⵜⵜ||␣
-ⵜⴰⵎⵣⵣⵡⵓⵜ|towel|t§a§m§z§z§w§u§t
+ⵜⴰⵎⵣⵣⵡⵓⵜ|towel|t,a,m,z,z,w,u,t
 ⵜⴰⵎⵥⵍⴰ||␣
 ⵜⴰⵏ||␣
 ⵜⴰⵔⴰⴽⴰⵍⵜ||␣
 ⵜⴰⵔⴱⴰⵜⵜ||␣
-ⵜⴰⵔⵉⵃⵉⵜ|slippers|t§a§r§i§ħ§i§t
+ⵜⴰⵔⵉⵃⵉⵜ|slippers|t,a,r,i,ħ,i,t
 ⵜⴰⵖⴹⴼⵜ||␣
 ⵜⴰⵖⵔⵉⵜⵜ||␣
 ⵜⴰⵖⵔⵓⵛⵜ||␣
@@ -640,10 +640,10 @@ autoExpandExamples.zgh = `
 ⵜⴰⵙⵍⴹⵜ||␣
 ⵜⴰⵙⵏⵉⵍⵙⵜ||␣
 ⵜⴰⵛⵛⵍⵜ||␣
-ⵜⴰⵛⵛⵓⵎⵄⵉⵜ|candle|t§a§ʃ§ʃ§u§m§ʕ§i§t
+ⵜⴰⵛⵛⵓⵎⵄⵉⵜ|candle|t,a,ʃ,ʃ,u,m,ʕ,i,t
 ⵜⴰⵡⴰⵍⵉⵜ||␣
 ⵜⴰⵡⴰⵔⴳⵉⵜⵜ||␣
-ⵜⴰⵡⵏⵣⴰ|crown|t§a§w§n§z§a
+ⵜⴰⵡⵏⵣⴰ|crown|t,a,w,n,z,a
 ⵜⴰⵡⵔⵉⵇⵜ||␣
 ⵜⴰⵡⵡⵓⵔⵜ||␣||
 ⵜⴰⵢⵔⵉ||␣
@@ -653,14 +653,14 @@ autoExpandExamples.zgh = `
 ⵜⵉⴳⵏⵣⴰⵔ||␣
 ⵜⵉⴳⵔⵉ||␣
 ⵜⵉⴷⴷⵓⴽⴽⵍⴰ||␣
-ⵜⵉⴼⵉⴼⵍⵜ ⵉⵇⵇⵙⵏ|chili pepper|t§i§f§i§f§ɫ§t§ §i§q§q§s§n
-ⵜⵉⵀⵉⵔⵉⵜ|car|t§i§h§i§r§i§t
+ⵜⵉⴼⵉⴼⵍⵜ ⵉⵇⵇⵙⵏ|chili pepper|t,i,f,i,f,ɫ,t, ,i,q,q,s,n
+ⵜⵉⵀⵉⵔⵉⵜ|car|t,i,h,i,r,i,t
 ⵜⵉⵍⴳⴳⵡⵉⵜ||␣
 ⵜⵉⵍⴳⴳⵯⵉⵜ||␣
 ⵜⵉⵎⵉⴹⵉ||␣
 ⵜⵉⵏⴰⵡⵜ||␣
-ⵜⵉⵏⴳⴻⵍⵉⵣⵜ|English language|t§i§n§ɡ§ə§l§i§z§t
-ⵜⵉⵏⴳⵍⵉⵣⵜ|English language|t§i§n§ɡ§ə§l§i§z§t||alternative form
+ⵜⵉⵏⴳⴻⵍⵉⵣⵜ|English language|t,i,n,ɡ,ə,l,i,z,t
+ⵜⵉⵏⴳⵍⵉⵣⵜ|English language|t,i,n,ɡ,ə,l,i,z,t||alternative form
 ⵜⵉⵔⵎⵜ||␣
 ⵜⵉⵙⵍⵉⵜ||␣
 ⵜⵉⵙⵏⵜ||␣
@@ -669,8 +669,8 @@ autoExpandExamples.zgh = `
 ⵜⵉⵟⵟⴰⵡⵉⵏ||␣||
 ⵜⵉⵡⴷⵉ||␣
 ⵜⵉⵣⵉⵣⵡⵉⵜ||␣
-ⵜⵎⴻⵏⵢⴰ|eight|t§m§ə§n§j§a
-ⵜⵎⵏⵢⴰ|eight|t§mᵊ§n§j§a||alternative form
+ⵜⵎⴻⵏⵢⴰ|eight|t,m,ə,n,j,a
+ⵜⵎⵏⵢⴰ|eight|t,mᵊ,n,j,a||alternative form
 ⵜⵏⵣⵣⵓⵜ||␣
 ⵜⵓⴳⴰ||␣
 ⵜⵓⴳⴷⵓⵜ||␣
@@ -679,20 +679,20 @@ autoExpandExamples.zgh = `
 ⵜⵓⵖⵎⵙⵜ||␣
 ⵜⵓⵙⵏⴰⴽⵜ||␣
 ⵜⵓⵜⵍⴰⵢⵜ||␣
-ⵜⵙⵄⵓⴷ|nine|t§s§ʕ§u§d|tsɛud
+ⵜⵙⵄⵓⴷ|nine|t,s,ʕ,u,d|tsɛud
 ⵜⵜⵓⵜⵜⵢ||␣
 ⵜⵜⵔ||␣
 ⵜⵥⴰ||␣
 ⵟⵙ||␣
-ⵟⵟⴰⵊⵉⵏ|tagine|t§tˁ§a§ʒ§i§n
+ⵟⵟⴰⵊⵉⵏ|tagine|t,tˁ,a,ʒ,i,n
 ⵟⵟⴹ||␣
 ⵟⵟⴼ||␣
 ⵟⵟⵉⵇⵙ||␣
-ⵠⵉⵜⵉⵜⵉ|bicycle|v§i§t§i§t§i
+ⵠⵉⵜⵉⵜⵉ|bicycle|v,i,t,i,t,i
 ⵡⴰⴷ||␣
 ⵡⴰⵏ||␣
 ⵡⴰⵔⴳⴰ||␣
-ⵡⴰⵡⵊⴹⵎ|dandelion|w§a§w§ʒ§dˁ§m
+ⵡⴰⵡⵊⴹⵎ|dandelion|w,a,w,ʒ,dˁ,m
 ⵡⵍ||␣
 ⵡⵏⵥⵓⵍ||␣
 ⵡⵔⵉⵖ||␣
@@ -701,7 +701,7 @@ autoExpandExamples.zgh = `
 ⵢⴰⴹⵏ||␣
 ⵢⴰⴹⵏⵉⵏ||␣
 ⵢⴰⵀ||␣
-ⵢⴰⵏ|one|j§a§n
+ⵢⴰⵏ|one|j,a,n
 ⵢⵉⵎⴰⵣⵉⵖⵏ||␣||
 ⵢⵓⵏ||␣
 ⵢⵓⵏⵙ||␣
@@ -719,8 +719,8 @@ autoExpandExamples.zgh = `
 ⵥⵥⴰⴳ||␣
 
 
-ⵄⴰⴹⴹⵔ|to meet|ʕ§a§dˤ§dˤᵊ§rˤ
-ⵜⴱⵔⵔⵎⵏⵜ|you (fp) turned|t§bᵊ§rˤ§rˤᵊ§mᵊ§n§t
+ⵄⴰⴹⴹⵔ|to meet|ʕ,a,dˤ,dˤᵊ,rˤ
+ⵜⴱⵔⵔⵎⵏⵜ|you (fp) turned|t,bᵊ,rˤ,rˤᵊ,mᵊ,n,t
 
 
 

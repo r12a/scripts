@@ -9,9 +9,9 @@
 // 🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉
 
 var collections = [
-{ symbol:'Ⓒ', desc:'Consonants', chars:'(𖪧|𖪩|𖪪|𖪰|𖪯|𖪹|𖪸|𖪶|𖪵|𖪽|𖪱|𖪠|𖪡|𖪢|𖪻|𖪼|𖪤|𖪾|𖪴|𖪺|𖪷|𖪭|𖪫|𖪜|𖪟|𖪝|𖪞|𖪬|𖪳|𖪨|𖪣|𖪐|𖪦|𖪲|𖪮|𖪥)' },
-{ symbol:'Ⓥ', desc:'Vowels', chars:'(𖪀|𖪃|𖪁|𖪂|𖪌|𖪏|𖪍|𖪎|𖪄|𖪇|𖪅|𖪆|𖩼|𖩿|𖩽|𖩾|𖪔|𖪒|𖪗|𖪑|𖪕|𖪖|𖩰|𖩳|𖩱|𖩲|𖩸|𖩻|𖩹|𖩺|𖪈|𖪋|𖪓|𖪉|𖪊|𖩴|𖩷|𖩵|𖩶)' },
-{ symbol:'Ⓕ', desc:'Finals', chars:'(xxx)' },
-{ symbol:'Ⓣ', desc:'Tones', chars:'(xxx)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'[𖪧𖪩𖪪𖪰𖪯𖪹𖪸𖪶𖪵𖪽𖪱𖪠𖪡𖪢𖪻𖪼𖪤𖪾𖪴𖪺𖪷𖪭𖪫𖪜𖪟𖪝𖪞𖪬𖪳𖪨𖪣𖪐𖪦𖪲𖪮𖪥]' },
+{ symbol:'Ⓥ', desc:'Vowels', chars:'[𖪀𖪃𖪁𖪂𖪌𖪏𖪍𖪎𖪄𖪇𖪅𖪆𖩼𖩿𖩽𖩾𖪔𖪒𖪗𖪑𖪕𖪖𖩰𖩳𖩱𖩲𖩸𖩻𖩹𖩺𖪈𖪋𖪓𖪉𖪊𖩴𖩷𖩵𖩶]' },
+{ symbol:'Ⓕ', desc:'Finals', chars:'[xxx]' },
+{ symbol:'Ⓣ', desc:'Tones', chars:'[xxx]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D]' },
 ]

@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -23,15 +23,15 @@ autoExpandExamples.blt = `
 @ wiktionary
 
 
-ꪀꪚꪾ|with, and|k§ap̚˦˥|cắp||kap²
-ꪀꪫꪱꪉ|deer|k§ʷ§aː§ŋ˨
-ꪀꪱ|crow|k§aː˨|ca|
+ꪀꪚꪾ|with, and|k,ap̚˦˥|cắp||kap²
+ꪀꪫꪱꪉ|deer|k,ʷ,aː,ŋ˨
+ꪀꪱ|crow|k,aː˨|ca|
 ꪀꪳ꪿||␣||
-ꪀꪷꪵꪀ|pigeon|kɔː˨.§›§kɛː˨|co ke|
+ꪀꪷꪵꪀ|pigeon|kɔː˨.,›,kɛː˨|co ke|
 ꪀꪾꪚ||␣
 ꪀ꪿ꪱ||␣||
-ꪁꪫꪱꪣ|word, language|k§ʷ§aː§m˥
-ꪁꪫꪱꪥ|water buffalo|k§ʷ§aː§j˥
+ꪁꪫꪱꪣ|word, language|k,ʷ,aː,m˥
+ꪁꪫꪱꪥ|water buffalo|k,ʷ,aː,j˥
 ꪁꪫ꪿ꪱ||␣||
 ꪁꪮꪉꫂ||␣
 ꪁꪲꪣ||␣
@@ -40,118 +40,118 @@ autoExpandExamples.blt = `
 ꪁ꪿ꪱ||␣||
 ꪁ꫁ꪮꪉ||␣
 ꪁ꫁ꪱ||␣
-ꪄꪫꪱꪙ|axe|x§ʷ§aː§n˨
+ꪄꪫꪱꪙ|axe|x,ʷ,aː,n˨
 ꪄꪫ꪿ꪱ||␣||
 ꪄꪮꪥꫂ||␣
 ꪄꪱꪣ||␣
-ꪄꪱꪥ|to sell|x§aː§j˨
+ꪄꪱꪥ|to sell|x,aː,j˨
 ꪄꪱꫂ||␣
 ꪄꪲ꫁ꪹꪐ꫁||␣||
 ꪄꪳꪙꫂ||␣
 ꪄꪳ꫁ꪙ||␣
 ꪄꪴꪙꫀ|dust|xun²
-ꪄꪴ꪿ꪙ|dust|xu§n²
+ꪄꪴ꪿ꪙ|dust|xu,n²
 ꪄꪷ|hook|xɔː˨|kho|
-ꪄꪷꪄꪫ꪿ꪱ|key|xɔː˨.§x§ʷ§aː˦˥|kho khoá|
-ꪄ꫁ꪮꪥ|I, me|x§ɔ§j˨˩ˀ
+ꪄꪷꪄꪫ꪿ꪱ|key|xɔː˨.,x,ʷ,aː˦˥|kho khoá|
+ꪄ꫁ꪮꪥ|I, me|x,ɔ,j˨˩ˀ
 ꪄ꫁ꪱ||␣
-ꪅꪺꪀ|tadpole|x§uə̯§ʔ˦|ꞌkhuạk
-ꪅ꫁ꪽꪒꪷ|to be well|xa§n˧˩.§dɔː˨
+ꪅꪺꪀ|tadpole|x,uə̯,ʔ˦|ꞌkhuạk
+ꪅ꫁ꪽꪒꪷ|to be well|xa,n˧˩.,dɔː˨
 ꪉꪮꪀ|to sprout|ŋɔʔ˦
 ꪉꪴ|snake|ŋuː˥
 ꪉꪺ||␣||
 ꪉ꪿ꪱꪥ||␣||
-ꪊꪮꪚ|hoe|t͡ɕ§ɔ§p̚˦˥
+ꪊꪮꪚ|hoe|t͡ɕ,ɔ,p̚˦˥
 ꪊꪰꪀꪊ꪿ꪽ||␣||
-ꪊꪰ꪿ꪉ|so, then|t͡ɕa§ŋ˦˥|chắng
+ꪊꪰ꪿ꪉ|so, then|t͡ɕa,ŋ˦˥|chắng
 ꪋꪰꪉ||␣||
 ꪋꪱꪉꫂ||␣
 ꪋꪳ꪿||␣||
 ꪋ꪿ꪮꪥ||␣||
 ꪋ꫁ꪮꪉ||␣||
-ꪋ꫁ꪱꪉ|elephant|t͡ɕ§aː§ŋ˧˩ˀ
-ꪎꪮꪉ|two|s§ɔ§ŋ˨
+ꪋ꫁ꪱꪉ|elephant|t͡ɕ,aː,ŋ˧˩ˀ
+ꪎꪮꪉ|two|s,ɔ,ŋ˨
 ꪎꪮꪙ||␣
 ꪎꪱꪀ||␣||
 ꪎꪱꪡ꫁ꪮꪉ||␣
 ꪎꪱꪣ||␣
-ꪎꪲꪚ|ten|si§p̚˦˥|síp
+ꪎꪲꪚ|ten|si,p̚˦˥|síp
 ꪎꪲꪫ||␣||
-ꪎꪲ꪿|four|siː§˦˥|sí|
-ꪎꪲꫀ|four|siː§˦˥|sí|
-ꪎꪲꫀ / ꪎꪲ꪿|four|siː§˦˥|sí|
+ꪎꪲ꪿|four|siː,˦˥|sí|
+ꪎꪲꫀ|four|siː,˦˥|sí|
+ꪎꪲꫀ / ꪎꪲ꪿|four|siː,˦˥|sí|
 ꪎꪴꪉ||␣
 ꪎꪴꪥ||␣||
-ꪎꪺꪉꫂ|trousers|s§uə§ŋ§³
+ꪎꪺꪉꫂ|trousers|s,uə,ŋ,³
 ꪎ꪿ꪱꪫ||␣||
-ꪎ꫁ꪺꪉ|trousers|s§uə§ŋ³
+ꪎ꫁ꪺꪉ|trousers|s,uə,ŋ³
 ꪏꪱꪥ||␣||
 ꪏꪳ꫁|to buy|sɨː˧˩ˀ
 ꪏꪳꫂ|to buy|sɨː˧˩ˀ
 ꪐꪱꫂ||␣
-ꪐ꫁ꪱ|grass|ɲ§aː˨˩ˀ
-ꪐꪱꫂ / ꪐ꫁ꪱ|grass|ɲ§aː˨˩ˀ
-ꪑꪱꪣ|time|ɲ§aː§m˥
-ꪑꪲꪚ|to sew|ɲi§p̚˦
+ꪐ꫁ꪱ|grass|ɲ,aː˨˩ˀ
+ꪐꪱꫂ / ꪐ꫁ꪱ|grass|ɲ,aː˨˩ˀ
+ꪑꪱꪣ|time|ɲ,aː,m˥
+ꪑꪲꪚ|to sew|ɲi,p̚˦
 ꪑ꫁ꪮꪣ||␣||
-ꪒꪚꪾ|to extinguish|d§ap̚˦˥|đắp
+ꪒꪚꪾ|to extinguish|d,ap̚˦˥|đắp
 ꪒꪱꪫ||␣||
 ꪒꪲ||␣||
 ꪒꪲꪒ||␣||
 ꪒꪲꪙ||␣
 ꪒꪴꪀ||␣||
 ꪒꪾꪚ||␣
-ꪔꪰꪒ|to cut|ta§t̚˦˥|tắt||tat²
-ꪔꪱꪥ|to die|t§aː§j˨
-ꪔꪲꪫ|to whistle|tʰi§w¹
+ꪔꪰꪒ|to cut|ta,t̚˦˥|tắt||tat²
+ꪔꪱꪥ|to die|t,aː,j˨
+ꪔꪲꪫ|to whistle|tʰi,w¹
 ꪔꪴ||␣||
 ꪔ꪿ꪱꪉ||␣||
 ꪕꪮꪉꫂ||␣
-ꪕ꫁ꪮꪉ|stomach|t§ɔ§ŋ˧˩ˀ
-ꪖꪲ꫁ꪣ|to discard, drop|tʰi§m˨˩ˀ
+ꪕ꫁ꪮꪉ|stomach|t,ɔ,ŋ˧˩ˀ
+ꪖꪲ꫁ꪣ|to discard, drop|tʰi,m˨˩ˀ
 ꪖꪾ꫁|cave, tunnel|tʰam˨˩ˀ|thẳm|ꪖꪾꫂ
 ꪘꪮꪉꪨꪺꪉ|sea|nɔŋ˨.luə̯ŋ˨
-ꪘꪰꪉ|skin, leather|na§ŋ˨
+ꪘꪰꪉ|skin, leather|na,ŋ˨
 ꪘꪱꫂ||␣
 ꪘ꫁ꪱ|crossbow|naː˨˩ˀ|nả
 ꪙꪮꪙ||␣
 ꪙꪰꪉꫀ||␣
-ꪙꪰ꪿ꪉ|to sit|na§ŋ˦
+ꪙꪰ꪿ꪉ|to sit|na,ŋ˦
 ꪙꪲ꫁|this|niː˧˩ˀ|ꞌnị|
 ꪙꪲꫂ|this|niː˧˩ˀ|ꞌnị|
 ꪙꪲ꫁ꪫ||␣||
 ꪙꪳ꪿ꪉ|one|nɨŋ˦|nưng
 ꪙꪳꪉꫀ|one|nɨŋ˦|nưng
 ꪙꪾ꫁|water|nam˧˩ˀ|nặm
-ꪙꪾ꫁ꪹꪚꪸ꫁|ocean, sea|nam˧˩ˀ.§›§beː˨˩ˀ|ꞌnặm bể|
+ꪙꪾ꫁ꪹꪚꪸ꫁|ocean, sea|nam˧˩ˀ.,›,beː˨˩ˀ|ꞌnặm bể|
 ꪙꪾꫂ||␣
 ꪙ꫁ꪮꪥ||␣||
 ꪚꪮꪀ||␣||
 ꪚꪲꪙ||␣||
-ꪚꪺ|lotus|b§uə̯˨|bua|
-ꪛꪱꪜꪺ|queen|b§aː˥.§p§uə̯˨
+ꪚꪺ|lotus|b,uə̯˨|bua|
+ꪛꪱꪜꪺ|queen|b,aː˥.,p,uə̯˨
 ꪜꪱ||␣
 ꪜꪱꪀ||␣
 ꪜꪲ||␣||
 ꪜꪲꪀ||␣||
-ꪜꪳꪙ|arrow|pɨ§n¹
+ꪜꪳꪙ|arrow|pɨ,n¹
 ꪜꪴ||␣
-ꪜꪺ|king|p§uə̯˨
-ꪜ꫁ꪽ|to squeeze|p§an³
+ꪜꪺ|king|p,uə̯˨
+ꪜ꫁ꪽ|to squeeze|p,an³
 ꪝꪴ||␣||
 ꪝꪷ|enough|pɔ⁴
-ꪝ꪿ꪮꪣ|apple|p§ɔ§m˦
-ꪝꪮꪣꫀ / ꪝ꪿ꪮꪣ|apple|p§ɔ§m˦
+ꪝ꪿ꪮꪣ|apple|p,ɔ,m˦
+ꪝꪮꪣꫀ / ꪝ꪿ꪮꪣ|apple|p,ɔ,m˦
 ꪠꪰꪉ||␣||
 ꪠꪱ||␣||
 ꪠꪴ꫁||␣||
 ꪠꪽ|to dream|fan˨||
 ꪠ꫁ꪱ||␣||
 ꪡꪱꫂ||␣
-ꪡ꫁ꪱ|sky|f§aː˧˩ˀ
-ꪡꪱꫂ / ꪡ꫁ꪱ|sky|f§aː˧˩ˀ
+ꪡ꫁ꪱ|sky|f,aː˧˩ˀ
+ꪡꪱꫂ / ꪡ꫁ꪱ|sky|f,aː˧˩ˀ
 ꪢꪮꪙ||␣||
-ꪢꪱ|dog|m§aː˨
+ꪢꪱ|dog|m,aː˨
 ꪢꪱꪀ||␣||
 ꪢꪲ||␣||
 ꪢꪴ|pig|muː˨
@@ -163,21 +163,21 @@ autoExpandExamples.blt = `
 ꪣꪳ꫁ꪝꪴꪀ||␣||
 ꪣꪸ|wife|miə̯˥|||miə⁴
 ꪣ꫁ꪱ||␣||
-ꪤꪱ|medecine|j§aː˨|da|
-ꪤ꫁ꪱꪙ|to be afraid, fear|j§aː§n˨˩ˀ|dản|
-ꪨꪰꪉ|behind, after|la§ŋ˨
+ꪤꪱ|medecine|j,aː˨|da|
+ꪤ꫁ꪱꪙ|to be afraid, fear|j,aː,n˨˩ˀ|dản|
+ꪨꪰꪉ|behind, after|la,ŋ˨
 ꪨꪱꪥ||␣||
 ꪩꪲꪉ||␣||
 ꪩꪳꪣ||␣
-ꪩꪴꪀ|child|lu§ʔ˦
-ꪩꪴꪀꪋꪱꪥ|son|l§u§ʔ˦.§t͡ɕ§aː§j˥
-ꪩꪴꪀꪑꪲꪉ|daughter|lu§ʔ˦.§ɲi§ŋ˥
+ꪩꪴꪀ|child|lu,ʔ˦
+ꪩꪴꪀꪋꪱꪥ|son|l,u,ʔ˦.,t͡ɕ,aː,j˥
+ꪩꪴꪀꪑꪲꪉ|daughter|lu,ʔ˦.,ɲi,ŋ˥
 ꪩꪺꪉ||␣||
 ꪪꪱꪙ|sweet|vaːn˨||
 ꪪꪲ||␣||
-ꪫꪱꪉ|to leave|v§aː§ŋ˥||ꞌváng
-ꪫꪸꪀ|work, job|viə̯§ʔ˦
-ꪫꪸ꫁ꪒꪙꪱꪣ|Vietnam|viə̯§t̚˦.§n§aː§m˥||ꞌViệt ꞌNám
+ꪫꪱꪉ|to leave|v,aː,ŋ˥||ꞌváng
+ꪫꪸꪀ|work, job|viə̯,ʔ˦
+ꪫꪸ꫁ꪒꪙꪱꪣ|Vietnam|viə̯,t̚˦.,n,aː,m˥||ꞌViệt ꞌNám
 ꪫꪽ||␣||
 ꪬꪮꪀ||␣||
 ꪬꪮꪣ||␣||
@@ -187,53 +187,53 @@ autoExpandExamples.blt = `
 ꪬꪴ||␣||
 ꪬꪺ||␣||
 ꪬ꪿ꪱꪙ||␣||
-ꪬ꫁ꪱ|five|h§aː˨˩ˀ
+ꪬ꫁ꪱ|five|h,aː˨˩ˀ
 ꪭꪮꪀ||␣
 ꪭꪮꪉꫂ||␣
 ꪭꪮꪒ||␣
 ꪭꪮꪥꫂ||␣
-ꪭꪰꪀ|love|ha§k˥
+ꪭꪰꪀ|love|ha,k˥
 ꪭꪰꪉ||␣||
 ꪭꪴ||␣
-ꪭꪴꪒ|article|hu§t⁴
+ꪭꪴꪒ|article|hu,t⁴
 ꪭꪴ꫁||␣
 ꪭꪴꫂ||␣
-ꪭ꫁ꪮꪉ|to shout|h§ɔ§ŋ˧˩ˀ
-ꪭ꫁ꪮꪥ|hundred|h§ɔ§j˧˩ˀ
-ꪮꪮꪀ|to go out|ʔ§ɔ§ʔ²
+ꪭ꫁ꪮꪉ|to shout|h,ɔ,ŋ˧˩ˀ
+ꪭ꫁ꪮꪥ|hundred|h,ɔ,j˧˩ˀ
+ꪮꪮꪀ|to go out|ʔ,ɔ,ʔ²
 ꪮꪮꪙꫀꪙꪮꪥꫂ||␣
 ꪮꪱꪚ||␣||
 ꪮꪲꪒ|grape|ʔit̚˦˥|it|
-ꪮ꪿ꪮꪙꪙ꫁ꪮꪥ|baby|ʔ§ɔ§n˦˥.§n§ɔ§j˧˩ˀ
-ꪮꪮꪙꫀꪙꪮꪥꫂ|baby|ʔ§ɔ§n˦˥.§n§ɔ§j˧˩ˀ
-ꪮ꪿ꪱꪉ|basin, tub|ʔaː§‹§ŋ˦˥|||ʔaːŋ²
-ꪵꪀ꪿ꪙ|seed|›§kɛ§n²
-ꪵꪁꪫꪥ|cinnamon|›§kʷɛ²§‹§‹‹
+ꪮ꪿ꪮꪙꪙ꫁ꪮꪥ|baby|ʔ,ɔ,n˦˥.,n,ɔ,j˧˩ˀ
+ꪮꪮꪙꫀꪙꪮꪥꫂ|baby|ʔ,ɔ,n˦˥.,n,ɔ,j˧˩ˀ
+ꪮ꪿ꪱꪉ|basin, tub|ʔaː,‹,ŋ˦˥|||ʔaːŋ²
+ꪵꪀ꪿ꪙ|seed|›,kɛ,n²
+ꪵꪁꪫꪥ|cinnamon|›,kʷɛ²,‹,‹‹
 ꪵꪄꪀ||␣||
 ꪵꪄꪉ||␣
-ꪵꪄꪫ|green|›§xɛ§w˨
-ꪵꪋ|tea|›§t͡ɕɛː˥||
+ꪵꪄꪫ|green|›,xɛ,w˨
+ꪵꪋ|tea|›,t͡ɕɛː˥||
 ꪵꪒꪙ||␣||
-ꪵꪒꪙꪒꪲꪙ|boundary|dɛ§n˨.§di§n˨|đen đin|
+ꪵꪒꪙꪒꪲꪙ|boundary|dɛ,n˨.,di,n˨|đen đin|
 ꪵꪔꪣꫂ||␣||
 ꪵꪔ꫁ꪣ||␣||
 ꪵꪚ꪿ꪉꪼꪔ|bread|bɛŋ˦˥.taj˨|béng tay|
 ꪵꪜꪒ||␣
 ꪵꪝꪀ||␣||
-ꪵꪣꪫ|cat|›§mɛ§w˥
+ꪵꪣꪫ|cat|›,mɛ,w˥
 ꪵꪣ꪿||␣
 ꪵꪣꫀ||␣
 ꪵꪮ||␣
 ꪵꪮꪀ||␣||
-ꪵꪮꪚ|to learn|›§ʔɛ§p̚˦˥
+ꪵꪮꪚ|to learn|›,ʔɛ,p̚˦˥
 ꪶꪀꪚ||␣||
-ꪶꪁꪙ|to stir|›§ko§n˥|ꞌcốn||kon⁴
-ꪶꪄꪙ|fur, feather|›§xo§n˨|||xon¹
-ꪶꪊꪚ|hoe|›§t͡ɕo§p̚˦˥|chốp
+ꪶꪁꪙ|to stir|›,ko,n˥|ꞌcốn||kon⁴
+ꪶꪄꪙ|fur, feather|›,xo,n˨|||xon¹
+ꪶꪊꪚ|hoe|›,t͡ɕo,p̚˦˥|chốp
 ꪶꪔꪒ||␣
 ꪶꪙꪀ||␣
 ꪶꪙꪣ||␣
-ꪶꪠꪙ|rain|›§fo§n˨
+ꪶꪠꪙ|rain|›,fo,n˨
 ꪶꪣꪉ||␣||
 ꪶꪣꪒ||␣||
 ꪶꪩꪉ||␣
@@ -244,21 +244,21 @@ autoExpandExamples.blt = `
 ꪹꪁꪷ||␣||
 ꪹꪄꪸꪣ||␣||
 ꪹꪄ꫁ꪱ||␣
-ꪹꪄ꫁ꪱꪻꪊ|to understand|›§xaw˨˩ˀ.§‹§›§t͡ɕaɰ˨|khảu chaư
-ꪹꪉꪱ|reflection|›§ŋaːw¹§‹
+ꪹꪄ꫁ꪱꪻꪊ|to understand|›,xaw˨˩ˀ.,‹,›,t͡ɕaɰ˨|khảu chaư
+ꪹꪉꪱ|reflection|›,ŋaːw¹,‹
 ꪹꪉꪷꪙ|silver, money|ŋən˥||
 ꪹꪊꪱꫂ||␣
 ꪹꪊꪸꪒ||␣
 ꪹꪊ꫁ꪱ||␣
 ꪹꪋꪷ|time, o'clock|t͡ɕəː˥|ꞌchớ
-ꪹꪎ|tiger|›§sia¹
+ꪹꪎ|tiger|›,sia¹
 ꪹꪎ꫁||␣
 ꪹꪎꫂ||␣
 ꪹꪐ꫁||␣||
-ꪹꪔꪸꪣ|full|›§te§m˨
-ꪹꪚꪙ|moon|›§bɨə̯§n˨
+ꪹꪔꪸꪣ|full|›,te,m˨
+ꪹꪚꪙ|moon|›,bɨə̯,n˨
 ꪹꪚꪱꫀ||␣
-ꪹꪚ꪿ꪱ|not|›§baw˦˥§‹
+ꪹꪚ꪿ꪱ|not|›,baw˦˥,‹
 ꪹꪜꪸꪒ||␣
 ꪹꪜꪸꪙ||␣
 ꪹꪣꪉ||␣
@@ -266,27 +266,27 @@ autoExpandExamples.blt = `
 ꪹꪣꪉꪡ꫁ꪱ||␣
 ꪹꪣ꪿ꪥ||␣||
 ꪹꪫꪱꫂ||␣
-ꪹꪫ꫁ꪱ|to say, speak|›§vaw˧˩ˀ§‹
-ꪹꪬꪷꪉ|long|›§hə§ŋ¹
+ꪹꪫ꫁ꪱ|to say, speak|›,vaw˧˩ˀ,‹
+ꪹꪬꪷꪉ|long|›,hə,ŋ¹
 ꪹꪬꪸꪙ||␣
 ꪹꪬ꪿||␣||
 ꪹꪭ|boat|hɨə̯˥|ꞌhứa|
 ꪻꪊ|heart, feeling|t͡ɕaɰ˨|chaư
 ꪻꪋ꫁||␣
-ꪻꪐ꪿|large, big|›§ɲaɰ˦˥|nháư||ɲəw²
+ꪻꪐ꪿|large, big|›,ɲaɰ˦˥|nháư||ɲəw²
 ꪻꪐꫀ||␣
 ꪻꪚ||␣||
-ꪻꪚꪼꪣ꫁|leaf|›§baɰ˨.§›§maj˧˩ˀ
-ꪻꪚꪼꪣꫂ|leaf|›§baɰ˨.§›§maj˧˩ˀ
-ꪼꪀ꪿|chicken|›§kaj˦˥|cáy||tone2
+ꪻꪚꪼꪣ꫁|leaf|›,baɰ˨.,›,maj˧˩ˀ
+ꪻꪚꪼꪣꫂ|leaf|›,baɰ˨.,›,maj˧˩ˀ
+ꪼꪀ꪿|chicken|›,kaj˦˥|cáy||tone2
 ꪼꪀꫀ||␣
 ꪼꪅ꫁||␣||
-ꪼꪒ꫁|to attain|›§daj³
+ꪼꪒ꫁|to attain|›,daj³
 ꪼꪕ||␣
-ꪼꪕꪒꪾ|Tai Dam|›§taj˥.§dam˨|ꞌTáy Đăm
+ꪼꪕꪒꪾ|Tai Dam|›,taj˥.,dam˨|ꞌTáy Đăm
 ꪼꪜ||␣
 ꪼꪡ||␣
-ꪼꪡꪡ꫁ꪱ|electricity|›§faj˥.§f§aː˧˩ˀ
+ꪼꪡꪡ꫁ꪱ|electricity|›,faj˥.,f,aː˧˩ˀ
 ꪼꪣ꫁||␣
 ꪼꪣꫂ||␣
 ꪼꪬ꫁||␣

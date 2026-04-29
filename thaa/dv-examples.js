@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -27,7 +27,7 @@ autoExpandExamples.dv = `
 ހަށަނަރަ||␣||
 ހަށްޓި||␣||
 ހަނދި||␣||
-ހަނދު|moon|ha§ⁿ§du
+ހަނދު|moon|ha,ⁿ,du
 ހަނދުފަޅި ބިބީ||␣
 ހަނޑޫ||␣||
 ހަނު||␣||
@@ -66,7 +66,7 @@ autoExpandExamples.dv = `
 ހާ||␣||
 ހާނަނީ||␣||
 ހާއްޔޯ||␣||
-ހާސް|a thousand|həː§s̺|hās
+ހާސް|a thousand|həː,s̺|hās
 ހިހޫ||␣||
 ހިނދު||␣||
 ހިނގަނީ||␣||
@@ -77,7 +77,7 @@ autoExpandExamples.dv = `
 ހިންދުކަރަ||␣||
 ހިންދުކޮކާ ބިބީ||␣
 ހިންދުސްތާނު||␣||
-ހިންދޫދީން|hinduism|hi§n§d̪uː§d̪iː§n|hin̊dūdīn̊
+ހިންދޫދީން|hinduism|hi,n,d̪uː,d̪iː,n|hin̊dūdīn̊
 ހިރި||␣||
 ހިބަރު||␣
 ހިމާޗަލް ޕްރަދޭޝް||␣
@@ -125,7 +125,7 @@ autoExpandExamples.dv = `
 ހޯމަ ދުވަސް||␣
 ހޯމަ||␣
 ށަވިޔަނިނަށަނީ||␣||
-ނަން|name|n̪ə§n̪|nan̊
+ނަން|name|n̪ə,n̪|nan̊
 ނަންއިތުރު||␣||
 ނަރަކަ||␣||
 ނަރު||␣||
@@ -138,7 +138,7 @@ autoExpandExamples.dv = `
 ނަވައި||␣||
 ނަވާނަވައި||␣||
 ނަވާރަ||␣
-ނަވާވީސް|twenty-nine|nə§ʋəː§ʋiː§s̺|navāvīs
+ނަވާވީސް|twenty-nine|nə,ʋəː,ʋiː,s̺|navāvīs
 ނަމަ||␣||
 ނަމަވެސް||␣||
 ނަމާދު||␣||
@@ -191,15 +191,15 @@ autoExpandExamples.dv = `
 ނެތް||␣||
 ނޭވާ||␣||
 ނޭފަތުގެ ހިނދުރި||
-ނޭފަތް|nose|n̪eː§fə§jʔ|nēfat̊
+ނޭފަތް|nose|n̪eː,fə,jʔ|nēfat̊
 ނޭޕާލް||␣||
 ނޮވެމްބަރު||␣
 ނޯޓު||␣||
 ރަހާ||␣||
 ރަހިމު||
-ރަށަކީ|the island is|rə§ʂə§keː|||x
-ރަށެއް|an island|rə§ʂe§h|||x
-ރަށް|island|rə§ʔ|||x
+ރަށަކީ|the island is|rə,ʂə,keː|||x
+ރަށެއް|an island|rə,ʂe,h|||x
+ރަށް|island|rə,ʔ|||x
 ރަށްވެހި||␣||
 ރަނގަޅު||␣||
 ރަން||␣||
@@ -217,7 +217,7 @@ autoExpandExamples.dv = `
 ރަދުން||␣||
 ރަތ||
 ރަތޫ||␣||
-ރަތް|red|ɾæ§ʔ|rat̊
+ރަތް|red|ɾæ,ʔ|rat̊
 ރަތްވަނީ||␣||
 ރަސް||␣||
 ރަސްދޫ||␣||
@@ -236,12 +236,12 @@ autoExpandExamples.dv = `
 ރާދަ||␣||
 ރާތާ||␣||
 ރާގު||␣||
-ރާޖަސްތާން|Rajastan|ɾəː§d͡ʒə§s̺§t̪əː§n̪|rājastān̊
+ރާޖަސްތާން|Rajastan|ɾəː,d͡ʒə,s̺,t̪əː,n̪|rājastān̊
 ރިހަ||␣||
 ރިހި||␣||
 ރިހެނީ||␣||
 ރިޔަން||␣||
-ރިޔާޟިއްޔާތު|mathematics|ɾi.§jəː.§li§j.§jəː.§t̪u|riyāḋiyyātu|ɾi.jəː.dˤiʔ.jəː.t̪u
+ރިޔާޟިއްޔާތު|mathematics|ɾi.,jəː.,li,j.,jəː.,t̪u|riyāḋiyyātu|ɾi.jəː.dˤiʔ.jəː.t̪u
 ރިޕޯޓު||␣||
 ރީނދޫ||␣||
 ރީނދޫކުލަ||␣||
@@ -259,7 +259,7 @@ autoExpandExamples.dv = `
 ރޭ||␣||
 ރޭލު||␣||
 ރޭގަނޑު||␣||
-ރޭޑިއޯ|radio|ɾeː.§ɖi.§oː|rēḍiō|
+ރޭޑިއޯ|radio|ɾeː.,ɖi.,oː|rēḍiō|
 ރޮނގު||␣||
 ރޮނީ||␣||
 ރޮދި||␣||
@@ -283,7 +283,7 @@ autoExpandExamples.dv = `
 ބަބުރު||␣||
 ބަބުރުކަރަ||␣||
 ބަބުޅަނީ||␣||
-ބަޅު|dog|bə.§ɭu|baḷu
+ބަޅު|dog|bə.,ɭu|baḷu
 ބައި||␣||
 ބައިސްކަލު||␣||
 ބައިސްކޯފުގެ||␣||
@@ -291,7 +291,7 @@ autoExpandExamples.dv = `
 ބައްދަލު|meeting|baddalu|||x
 ބައްތި||␣||
 ބައްތިރީސް||␣||
-ބައްޓެއް|aubergine|bə§ʈ§ʈe§ʔ|||x
+ބައްޓެއް|aubergine|bə,ʈ,ʈe,ʔ|||x
 ބައްޕަ||␣||
 ބަމަ||␣||
 ބަދަލު ނަން||␣||
@@ -325,7 +325,7 @@ autoExpandExamples.dv = `
 ބިން||␣
 ބިރިކި||␣||
 ބިރު||␣||
-ބިބީ|butterfly fish|bi§biː|bibī
+ބިބީ|butterfly fish|bi,biː|bibī
 ބިސް||␣
 ބިސްރަވަ||
 ބީރު||␣||
@@ -343,7 +343,7 @@ autoExpandExamples.dv = `
 ބުއްދި||␣||
 ބުވަނަ||␣||
 ބުމަ||␣||
-ބުދަ ދުވަސް|Wednesday|bu§d̪ə§ §d̪u§ʋə§s̺|buda duvas
+ބުދަ ދުވަސް|Wednesday|bu,d̪ə, ,d̪u,ʋə,s̺|buda duvas
 ބުދަ||␣
 ބުދު||␣||
 ބޫޓާން||␣||
@@ -400,7 +400,7 @@ autoExpandExamples.dv = `
 ކަނދިލި||␣||
 ކަނދުރާ||␣||
 ކަނޑަނީ||␣||
-ކަނޑު|sea|ka§›§ⁿɖu
+ކަނޑު|sea|ka,›,ⁿɖu
 ކަނަހަތާ||␣||
 ކަނަހަތް||␣||
 ކަނީ||␣||
@@ -452,7 +452,7 @@ autoExpandExamples.dv = `
 ކަލޭގެފާނު||␣||
 ކަލޯ||␣||
 ކަސް||␣||
-ކަޑު|sea|ka§ⁿɖu
+ކަޑު|sea|ka,ⁿɖu
 ކާ||␣||
 ކާށި||␣||
 ކާށިދޫ||␣||
@@ -573,7 +573,7 @@ autoExpandExamples.dv = `
 ކޯ||␣||
 ކޯއްޓޭ||␣||
 ކޯޗު||␣||
-ކްރޯރް|ten million|k§roː§r|k̊rōr
+ކްރޯރް|ten million|k,roː,r|k̊rōr
 އަ||␣||
 އަހަނީ||␣||
 އަހަރު||␣||
@@ -585,7 +585,7 @@ autoExpandExamples.dv = `
 އަހް||␣||
 އަށާހި||␣||
 އަށާނަވައި||␣||
-އަށާރަ|eighteen|ə.§ʂə.§rə|aṣāra
+އަށާރަ|eighteen|ə.,ʂə.,rə|aṣāra
 އަށާޅީސް||␣||
 އަށާވީސް||␣
 އަށި||␣||
@@ -595,7 +595,7 @@ autoExpandExamples.dv = `
 އަށުތިރީސް||␣||
 އަށެއް||␣||
 އަށް||␣
-އަށްޑިހަ|eighty|a§›§ɖɖi§ha|||x
+އަށްޑިހަ|eighty|a,›,ɖɖi,ha|||x
 އަނބި||␣||
 އަނބު||␣||
 އަނބުރަނީ||␣||
@@ -654,17 +654,17 @@ autoExpandExamples.dv = `
 އަމުނަނީ||␣||
 އަމުރު||␣||
 އަފަ||␣||
-އަފްޣާނިސްތާން|Afghanistan|ə§f§ɣəː§n̪i§s̺§t̪əː§n̪|afġānistān̊|
+އަފްޣާނިސްތާން|Afghanistan|ə,f,ɣəː,n̪i,s̺,t̪əː,n̪|afġānistān̊|
 އަދަބިއްޔާތު||␣||
 އަދަދު||␣||
 އަދި||␣
 އަތިރި||␣||
 އަތުރަނީ||␣||
-އަތޮޅު|atoll|ə.§t̪o.§ɭu|atoḷu
+އަތޮޅު|atoll|ə.,t̪o.,ɭu|atoḷu
 އަތޮޅުވެރިޔާ||␣||
 އަތް||␣||
 އަތްތިލަ||␣||
-އަތްޕުޅު|hand|a§j§ppu§ɭu
+އަތްޕުޅު|hand|a,j,ppu,ɭu
 އަލަނާސި ބިބީ||␣
 އަލަނާސި||␣||
 އަލަވަންގު||␣||
@@ -690,7 +690,7 @@ autoExpandExamples.dv = `
 އާނެއި||␣||
 އާން||␣||
 އާއި||␣||
-އާއިލާ|family|əː§i§ləː|āilā
+އާއިލާ|family|əː,i,ləː|āilā
 އާއްޗާ||␣||
 އާއްޗީ||␣||
 އާމަނަކަ||␣||
@@ -718,7 +718,7 @@ autoExpandExamples.dv = `
 އިންތިޒާރު||␣||
 އިންތިޚާބް||␣||
 އިންސާނުން||
-އިންޑިއާ|India|i§n̪§ɖi§əː|in̊ḍiā
+އިންޑިއާ|India|i,n̪,ɖi,əː|in̊ḍiā
 އިންޑޮނޭޝިޔާ||␣||
 އިންޒާރު||␣||
 އިންޖިނޭރު||␣||
@@ -728,7 +728,7 @@ autoExpandExamples.dv = `
 އިރާގް||␣||
 އިރު||␣
 އިރުމަތީ ޓިމޯރު||␣||
-އިރުގައި|time|i§ru§gə§i|||x
+އިރުގައި|time|i,ru,gə,i|||x
 އިރުޝާދު||␣||
 އިބަ||␣||
 އިބަސުވާމީންގެ||␣||
@@ -746,12 +746,12 @@ autoExpandExamples.dv = `
 އިސްދޫ||␣||
 އިސްތިރި||␣||
 އިސްލާހު||␣||
-އިސްލާމް|islam|i§s§ləː§m|islām̊
+އިސްލާމް|islam|i,s,ləː,m|islām̊
 އިސްޓޭޝަން||␣||
 އިޤްތިޞާދު||␣||
 އީ||␣||
 އީސާގެފާނު||␣||
-އީޓު|tile|iː.§ʈu|īṭu|
+އީޓު|tile|iː.,ʈu|īṭu|
 އު||␣||
 އުނދުން||␣||
 އުނގެނެނީ||␣||
@@ -793,7 +793,7 @@ autoExpandExamples.dv = `
 އެނދު||␣||
 އެނގުން||␣||
 އެނގެނީ||␣||
-އެންމެ|only|e§m.§me
+އެންމެ|only|e,m.,me
 އެކަކު||␣||
 އެކަމަކު||␣||
 އެކާހައްޓި||␣||
@@ -812,7 +812,7 @@ autoExpandExamples.dv = `
 އެކުވެރިވަނީ||␣||
 އެކުވެރިޔާ||␣||
 އެކުގައި||␣||
-އެކެއް|one|e§ke§ʔ|ekek̊
+އެކެއް|one|e,ke,ʔ|ekek̊
 އެކޮޅަސް||␣||
 އެއާ||␣||
 އެއާރޕޯޓް||␣||
@@ -835,11 +835,11 @@ autoExpandExamples.dv = `
 އެގާރަ||␣||
 އެގްރިމެންޓް||␣||
 އެޕާޓްމަންޓު||␣||
-އެޕްރީލް|April|e§p§ɾi§l|eprīl
+އެޕްރީލް|April|e,p,ɾi,l|eprīl
 އެޖެންޓު||␣||
 އޭ||␣||
 އޭނާ||␣||
-އޭރު|then|eː.§ɾu|ēru|
+އޭރު|then|eː.,ɾu|ēru|
 އޭތި||␣||
 އޭޝިއާ||␣||
 އޮށަނި||␣||
@@ -857,7 +857,7 @@ autoExpandExamples.dv = `
 އޮރިއްސާ||␣
 އޮރެންޖުކުލަ||␣||
 އޮބަނީ||␣||
-އޮޅަނީ|to confuse|o.§ɭa.§n̪iː|oḷanī|
+އޮޅަނީ|to confuse|o.,ɭa.,n̪iː|oḷanī|
 އޮޅުދޫ||␣||
 އޮޅުދޫކަރަ||␣||
 އޮކްޓޫބަރު||␣
@@ -892,7 +892,7 @@ autoExpandExamples.dv = `
 ވަޅު||␣||
 ވަޅުކޮޓަރި||␣||
 ވަކިވެލަން||␣||
-ވައި|air, wind|ʋə§i|vai
+ވައި|air, wind|ʋə,i|vai
 ވައިކަރަދޫ||␣||
 ވައިގެބަނދަރު||␣||
 ވައްކަން||␣||
@@ -952,7 +952,7 @@ autoExpandExamples.dv = `
 ވޭރު||␣||
 ވޮށް||␣||
 މަ||␣
-މަހަންޝްރީ|minister|ma.§ha§n̪.§ʃ§ɾiː|mahan̊šrī|
+މަހަންޝްރީ|minister|ma.,ha,n̪.,ʃ,ɾiː|mahan̊šrī|
 މަހަލް||␣||
 މަހާ||␣||
 މަހާރާޝްތުރާ||␣
@@ -962,10 +962,10 @@ autoExpandExamples.dv = `
 މަނަސް||␣||
 މަނާ||␣||
 މަނިއްޕުޅު||␣||
-މަނިޕޫރު|Manipur|mə§n̪i§puː§ɾu|manipūru
+މަނިޕޫރު|Manipur|mə,n̪i,puː,ɾu|manipūru
 މަންތިރި||␣||
 މަރަދޫ||␣||
-މަރާޓީ|Marathi|mə.§ɾəː.§ʈiː|marāṭī
+މަރާޓީ|Marathi|mə.,ɾəː.,ʈiː|marāṭī
 މަރު||␣||
 މަރުކަޒު||␣||
 މަރުވަނީ||␣||
@@ -983,7 +983,7 @@ autoExpandExamples.dv = `
 މަދު||␣||
 މަދުރަސާ||␣||
 މަދޮށި||␣||
-މަދްޔަ ޕްރަދޭޝް|Madhya Pradesh|mə§d̪§jə§ §p§rə§d̪eː§ʃ|madya pradēšމަގު||
+މަދްޔަ ޕްރަދޭޝް|Madhya Pradesh|mə,d̪,jə, ,p,rə,d̪eː,ʃ|madya pradēšމަގު||
 މަތި||␣||
 މަތިކުރަނީ||␣||
 މަތިމަސް||␣||
@@ -1008,7 +1008,7 @@ autoExpandExamples.dv = `
 މަޖިލިސް||␣||
 މާ||␣||
 މާނު||␣||
-މާރޗް|March|məː§r§t͡ʃ|mārc
+މާރޗް|March|məː,r,t͡ʃ|mārc
 މާޅޮސް||␣||
 މާޅޮސްމަޑުލު އުތުރުބުރި||␣||
 މާޅޮސްމަޑުލު ދެކުނުބުރި||␣||
@@ -1037,7 +1037,7 @@ autoExpandExamples.dv = `
 މިރުސް||␣||
 މިއަންމާ||␣||
 މިއަދު||␣||
-މިއުޒިކް|music|mi§u§z̺i§k|miuzik̊
+މިއުޒިކް|music|mi,u,z̺i,k|miuzik̊
 މިވެނި||␣||
 މިތާ||␣||
 މިތުނަ||␣||
@@ -1048,12 +1048,12 @@ autoExpandExamples.dv = `
 މިލެނީ||␣||
 މިސްކިތް||␣
 މިޒޮރާމް||␣
-މިޔަރު|shark|mi.§jə.§ɾu|miyaru
+މިޔަރު|shark|mi.,jə.,ɾu|miyaru
 މިޞްރު||␣||
 މީހާ||␣||
 މީހުން||␣||
 މީނާ||␣||
-މީންޏަ|pisces|miː§ɲ§ɲə|mīn̊ña|
+މީންޏަ|pisces|miː,ɲ,ɲə|mīn̊ña|
 މީރު||␣||
 މީރުބަހަރު||␣||
 މީބަ||␣||
@@ -1097,14 +1097,14 @@ autoExpandExamples.dv = `
 މެނުވީ||␣||
 މެން||␣||
 މެންދުރު||␣||
-މެކްސިކޯ|Mexico|me§k§s̺i§koː|mek̊sikō
+މެކްސިކޯ|Mexico|me,k,s̺i,koː|mek̊sikō
 މެއި||␣
 މެދުއިރުމަތި||␣||
 މެލޭޝިޔާ||␣||
 މެގަލާޔާ||␣
 މޭދާ||␣||
 މޭސަ||␣||
-މޭޒު|table|meː.§z̺u|mēzu
+މޭޒު|table|meː.,z̺u|mēzu
 މޮސްކޯ||␣||
 މޮޑެނީ||␣||
 މޮޓަ||␣||
@@ -1117,7 +1117,7 @@ autoExpandExamples.dv = `
 ފަހުރު||␣||
 ފަހުމު||␣||
 ފަހެހް||
-ފަހެއް|five|fə§he§ʔ|fahek̊
+ފަހެއް|five|fə,he,ʔ|fahek̊
 ފަށަނީ||␣||
 ފަށަން||␣||
 ފަށައިގެން||␣||
@@ -1135,7 +1135,7 @@ autoExpandExamples.dv = `
 ފަންސަހައްޓި||␣||
 ފަންސަހަތްތެރި||␣||
 ފަންސަވަންނަ||␣||
-ފަންސަވީސް|twenty-five|fə§n§s̺ə§ʋi§s̺|fan̊savīs
+ފަންސަވީސް|twenty-five|fə,n,s̺ə,ʋi,s̺|fan̊savīs
 ފަންސަޔާހި||␣||
 ފަންސަޔާނަވައި||␣||
 ފަންސަޔާޅީސް||␣||
@@ -1230,12 +1230,12 @@ autoExpandExamples.dv = `
 ފެހިކުލަ||␣||
 ފެހުރިހި||␣
 ފެނަ||␣||
-ފެން|water|fe.§ŋ|fen̊
+ފެން|water|fe.,ŋ|fen̊
 ފެންނަނީ||␣||
 ފެންގަނޑު||␣||
 ފެރިދޫ||␣||
 ފެރޭތަ||␣||
-ފެބްރުއަރީ|February|fe§b§ru§ə§riː|februarī
+ފެބްރުއަރީ|February|fe,b,ru,ə,riː|februarī
 ފެލިދެ||␣||
 ފޭރު||␣||
 ފޮނަދޫ||␣||
@@ -1246,7 +1246,7 @@ autoExpandExamples.dv = `
 ފޮއި||␣||
 ފޮއް||␣||
 ފޮތި||␣||
-ފޮތް|book|fo§jʔ|fot̊
+ފޮތް|book|fo,jʔ|fot̊
 ފޮތްފިހާރަ||␣||
 ފޯންޗު||␣||
 ފޯއް||␣||
@@ -1291,15 +1291,15 @@ autoExpandExamples.dv = `
 ދިއްލީ||␣
 ދިއްލެނީ||␣||
 ދިވެހި||␣
-ދިވެހިރާއްޖެ|Maldives|d̪i.§ʋe.§hi.§ɾaː§ʔ.§d͡ʒe|divehirājje
+ދިވެހިރާއްޖެ|Maldives|d̪i.,ʋe.,hi.,ɾaː,ʔ.,d͡ʒe|divehirājje
 ދިވެހިރާއްޖޭގެ ޖުމްހޫރިއްޔާ||␣
-ދިވެހިބަސް|Dhivehi|d̪i§ʋe§hi§bə§s̺|divehibas
+ދިވެހިބަސް|Dhivehi|d̪i,ʋe,hi,bə,s̺|divehibas
 ދިވެސް އަކުރު||␣||
 ދިދަ ބިބީ||␣
 ދިދަ||␣||
 ދިދަމަސް ބިބީ||␣
 ދިލާވަރު||␣||
-ދިގު|long, tall|d̪i§ɡu|digu
+ދިގު|long, tall|d̪i,ɡu|digu
 ދިޔަ||␣||
 ދިޔާ||␣||
 ދިޔުން||␣||
@@ -1338,7 +1338,7 @@ autoExpandExamples.dv = `
 ދޮށި||␣||
 ދޮނަޅަ||␣||
 ދޮން ބިބީ||␣
-ދޮންކެޔޮ|banana|d̪o§n̪§ke§jo|don̊keyo
+ދޮންކެޔޮ|banana|d̪o,n̪,ke,jo|don̊keyo
 ދޮރު||␣||
 ދޮޅަސް||␣||
 ދޮޅި||␣||
@@ -1347,7 +1347,7 @@ autoExpandExamples.dv = `
 ދޯޅު||␣||
 ތަ||␣||
 ތަހުގީގު||␣||
-ތަށި|plate|t̪ə§ʂi|taṣi
+ތަށި|plate|t̪ə,ʂi|taṣi
 ތަށިމުށި||␣||
 ތަނބުރު||␣||
 ތަން||␣||
@@ -1387,7 +1387,7 @@ autoExpandExamples.dv = `
 ތިން ސަތޭކަ||␣||
 ތިން||␣
 ތިރީސް އެކެއް||␣
-ތިރީސް|thirty|t̪i§ɾiː§s̺|tirīs
+ތިރީސް|thirty|t̪i,ɾiː,s̺|tirīs
 ތިބެނީ||␣||
 ތިކި||␣||
 ތިމަން||␣||
@@ -1440,7 +1440,7 @@ autoExpandExamples.dv = `
 ލަނީ||␣||
 ލަންދޭސި||␣||
 ލަންޓަން||␣||
-ލަކްޝަދީބު|Lakshadweep|lə§k§ʃə§d̪iː§bu|lak̊šadību
+ލަކްޝަދީބު|Lakshadweep|lə,k,ʃə,d̪iː,bu|lak̊šadību
 ލައްބަ||␣||
 ލައްކަ||␣
 ލައްޓި||␣
@@ -1465,7 +1465,7 @@ autoExpandExamples.dv = `
 ލޮނު||␣||
 ލޮބަ||␣||
 ލޯ||␣||
-ލޯބި|love|loː§bi|lōbi
+ލޯބި|love|loː,bi|lōbi
 ލޯގަނޑު||␣||
 ގަހަ||␣||
 ގަހަނީ||␣||
@@ -1513,7 +1513,7 @@ autoExpandExamples.dv = `
 ގުނގުރު||␣||
 ގުނަ||␣||
 ގުނަނީ||␣||
-ގުރަހަ|planet|ɡu§ɾə§hə|guraha
+ގުރަހަ|planet|ɡu,ɾə,hə|guraha
 ގުރަނދަ||␣||
 ގުރީންލޭންޑު||␣
 ގުޅަ||␣||
@@ -1539,7 +1539,7 @@ autoExpandExamples.dv = `
 ގޮހޮރު||
 ގޮށް||␣||
 ގޮނބި||␣||
-ގޮނޑި|chair|ɡo.§›§ᶯɖi|goⁿḍi
+ގޮނޑި|chair|ɡo.,›,ᶯɖi|goⁿḍi
 ގޮރުނުދޯރު||␣||
 ގޮއިފުޅަފެހެންދޫ||␣||
 ގޮއްވަނީ||␣||
@@ -1574,7 +1574,7 @@ autoExpandExamples.dv = `
 ސައުރަޔާހި||␣||
 ސައުރަޔާނަވައި||␣||
 ސައުރަޔާޅީސް||␣||
-ސައުވީސް|twenty-four|s̺ə§u§ʋiː§s̺|sauvīs
+ސައުވީސް|twenty-four|s̺ə,u,ʋiː,s̺|sauvīs
 ސައްބީސް||␣
 ސައްވީސް||␣||
 ސައްޔިދު||␣||
@@ -1594,7 +1594,7 @@ autoExpandExamples.dv = `
 ސަތުހަތްތެރި||␣||
 ސަތުވަންނަ||␣||
 ސަތުތިރީސް||␣||
-ސަތޭކަ|a hundred|s̺ə§teː§kə|satēka
+ސަތޭކަ|a hundred|s̺ə,teː,kə|satēka
 ސަޔާހި||␣||
 ސަޔާނަވައި||␣||
 ސަޔާޅީސް||␣||
@@ -1612,7 +1612,7 @@ autoExpandExamples.dv = `
 ސިކުނޑި||
 ސިއްރު||␣||
 ސިއްކަ||␣||
-ސިއްކީމް|Sikkim|s̺i§–§kkiː§m|sikkīm̊
+ސިއްކީމް|Sikkim|s̺i,–,kkiː,m|sikkīm̊
 ސިއްދަ||␣||
 ސިދެ||␣||
 ސިސްޓެމް||␣||
@@ -1635,7 +1635,7 @@ autoExpandExamples.dv = `
 ސުލްޠާން||␣||
 ސެއްޅި||␣||
 ސެވޫނަރު||␣||
-ސެޕްޓެމްބަރު|September|se§p§ʈe§m§bə§ru|sepṭem̊baru
+ސެޕްޓެމްބަރު|September|se,p,ʈe,m,bə,ru|sepṭem̊baru
 ސޭބޫ||␣||
 ސޮޅިޔާ||␣||
 ސޯބުނު||␣||
@@ -1646,7 +1646,7 @@ autoExpandExamples.dv = `
 ޑަވިޔަނި||␣||
 ޑާކާ||␣||
 ޑިންގީ||␣||
-ޑިސެމްބަރު|December|ɖi§se§m§bə§ru|ḍisem̊baru
+ޑިސެމްބަރު|December|ɖi,se,m,bə,ru|ḍisem̊baru
 ޑެސްކު||␣||
 ޑޮކުޓަރު||␣||
 ޑޮލަރު||␣||
@@ -1669,7 +1669,7 @@ autoExpandExamples.dv = `
 ޓީޗަރު||␣||
 ޓުކުރި||␣||
 ޓެކްސީ||␣||
-ޓެމިލް ނާޑޫ|Tamil Nadu|ʈe§mi§l§ §nəː§ɖuː|ṭemil nāḍū
+ޓެމިލް ނާޑޫ|Tamil Nadu|ʈe,mi,l, ,nəː,ɖuː|ṭemil nāḍū
 ޓެލެވިޒަން||␣||
 ޓޯކިޔޯ||␣||
 ޔަމަން||␣||
@@ -1677,7 +1677,7 @@ autoExpandExamples.dv = `
 ޔުނައިޓެޑް ސްޓޭޓްސް އޮފް އެމެރިކާ||␣
 ޔޫރަޕު||␣||
 ޕަންސަމާ||␣||
-ޕަންޖާބު|Punjab|pə§n§d͡ʒəː§bu|pan̊jābu
+ޕަންޖާބު|Punjab|pə,n,d͡ʒəː,bu|pan̊jābu
 ޕަރަނަ||␣||
 ޕަރީ||␣||
 ޕަޅެ||␣||
@@ -1704,7 +1704,7 @@ autoExpandExamples.dv = `
 ޖަދު||␣||
 ޖަގު||␣||
 ޖަޕާނު||␣||
-ޖާނަވާރު|animal|d͡ʒəː§n̪ə§ʋəː§ru|jānavāru
+ޖާނަވާރު|animal|d͡ʒəː,n̪ə,ʋəː,ru|jānavāru
 ޖާފާނު||␣
 ޖާތް||␣||
 ޖާޑި||␣||
@@ -1714,7 +1714,7 @@ autoExpandExamples.dv = `
 ޖުމާދަލް އަޚިރް||␣||
 ޖުމްހޫރިއްޔާ||␣||
 ޖުމްލަ||␣||
-ޖުލައި|July|d͡ʒu§læː§‹|julai|d͡ʒulai|
+ޖުލައި|July|d͡ʒu,læː,‹|julai|d͡ʒulai|
 ޖޫން||␣
 ޖެނުއަރީ||␣
 ޖޯރު||␣||
@@ -1724,38 +1724,38 @@ autoExpandExamples.dv = `
 ޗާބީ||␣||
 ޗާލު||␣||
 ޗާޕު||␣||
-ޗިލީ|Chile|t͡ʃi§liː|chilī
+ޗިލީ|Chile|t͡ʃi,liː|chilī
 ޘާ||␣||
-ޙައްޖު|hajj|hə§d§d͡ʒu|ḥajju
+ޙައްޖު|hajj|hə,d,d͡ʒu|ḥajju
 ޙަމީދު||␣||
 ޙަސަން||␣||
 ޙާ||␣||
-ޚަބަރު|news|xa.§ba.§ɾu|xabaru|
+ޚަބަރު|news|xa.,ba.,ɾu|xabaru|
 ޚާ||␣||
 ޛާލު||␣||
 ޜާ||␣||
-ޝަހަރު|city|ʃə§hə§ɾu|šaharu
-ޝަރީޢަތް|shari'a|ʃə§ɾiː§ə§t̪|šarīʿat̊ |ʃəriːʕət̪
-ޝައްޥަލް|Shawwal (month)|ʃə§w.§wə§l|šawwal|
+ޝަހަރު|city|ʃə,hə,ɾu|šaharu
+ޝަރީޢަތް|shari'a|ʃə,ɾiː,ə,t̪|šarīʿat̊ |ʃəriːʕət̪
+ޝައްޥަލް|Shawwal (month)|ʃə,w.,wə,l|šawwal|
 ޝަދި||␣||
 ޝަޢުބަން||␣||
 ޝާހީ||␣||
 ޝީނު||␣||
-ޝުކުރިއްޔާ|thank you|ʃu.§ku.§ɾi§j.§jaː|šukuriyyā
+ޝުކުރިއްޔާ|thank you|ʃu.,ku.,ɾi,j.,jaː|šukuriyyā
 ޝްރީ||␣||
 ޞަފަރު||␣||
-ޞަފްޙާ|page|sˤa§f.§ħaː|şafḥā|
+ޞަފްޙާ|page|sˤa,f.,ħaː|şafḥā|
 ޞާދު||␣||
 ޟާދު||␣||
-ޠޫފާން|storm|tˤuː.§faː.§n̪u|ţūfān̊|
+ޠޫފާން|storm|tˤuː.,faː.,n̪u|ţūfān̊|
 ޠޮ||␣||
 ޡޮ||␣||
 ޢނު||␣||
-ޢަރަބި|Arabic (language)|ʕa.§ɾa.§bi|ʿarabi|
+ޢަރަބި|Arabic (language)|ʕa.,ɾa.,bi|ʿarabi|
 ޢައިނު||␣||
 ޢުމާން||␣||
 ޣނު||␣||
-ޤައުމީ|national|qa.§u.§miː|qaumī|
+ޤައުމީ|national|qa.,u.,miː|qaumī|
 ޤާނޫނު||␣||
 ޤާފު||␣||
 ޤާސިމް||␣||

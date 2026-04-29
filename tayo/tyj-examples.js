@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -24,122 +24,122 @@ autoExpandExamples.tyj = `
 
 @ https://www.unicode.org/L2/L2022/22152-yo-lai-tay-script.pdf
 
-𞛆𞛠𞛑|snake skin|c§aː§p|
-𞛛𞛠𞛀|root|h§aː§k|
-𞛖𞛠𞛋|birthmark|m§aː§t
-𞛏𞛠𞛖|thorn|n§aː§m
-𞛆𞛴|perched|c§ap|
-𞛛𞛲|love|h§ak|
-𞛖𞛳|vermin|m§at
-𞛏𞛱|water|n§am
-𞛖𞛣|hand|m§ɨ|
-𞛆𞛣|character|c§ɨ|
-𞛑𞛢𞛏|arrow|p§ɨ§n|
-𞛔𞛢𞛏|firewood|f§ɨ§n|
+𞛆𞛠𞛑|snake skin|c,aː,p|
+𞛛𞛠𞛀|root|h,aː,k|
+𞛖𞛠𞛋|birthmark|m,aː,t
+𞛏𞛠𞛖|thorn|n,aː,m
+𞛆𞛴|perched|c,ap|
+𞛛𞛲|love|h,ak|
+𞛖𞛳|vermin|m,at
+𞛏𞛱|water|n,am
+𞛖𞛣|hand|m,ɨ|
+𞛆𞛣|character|c,ɨ|
+𞛑𞛢𞛏|arrow|p,ɨ,n|
+𞛔𞛢𞛏|firewood|f,ɨ,n|
 𞛾|village, country|mɨəŋ|
-𞛅𞛮𞛩𞛏|root; reason|ŋw§iə§n
-𞛘𞛮𞛠𞛏|rebellion, chaos|lʷ§aː§n
+𞛅𞛮𞛩𞛏|root; reason|ŋw,iə,n
+𞛘𞛮𞛠𞛏|rebellion, chaos|lʷ,aː,n
 
 
 @ Ferlus https://www.persee.fr/doc/clao_0153-3320_1993_num_22_1_1432
 
-𞛄𞛥|boat|ɣ§ɛ
-𞛋𞛯|nose|ɗ§aŋ
-𞛏𞛯|skin|n§aŋ
-𞛘𞛯|roof|l§aŋ
-𞛔𞛯|to bury|f§aŋ
+𞛄𞛥|boat|ɣ,ɛ
+𞛋𞛯|nose|ɗ,aŋ
+𞛏𞛯|skin|n,aŋ
+𞛘𞛯|roof|l,aŋ
+𞛔𞛯|to bury|f,aŋ
 𞛂𞛦|rice|kʰau̯
 𞛘𞛦|alcohol|lau̯
 𞛚𞛦|knee|hau̯
 𞛆𞛩|paper|ciə̯
-𞛚𞛩|bamboo|h§iə̯
+𞛚𞛩|bamboo|h,iə̯
 𞛌𞛩𞛏|money|tiə̯n
 𞛑𞛮|to go|paj
 𞛀𞛮|chicken|kaj
-𞛂𞛮𞛡|buttonhole|kw§i
+𞛂𞛮𞛡|buttonhole|kw,i
 𞛇𞛬𞛅|two|soŋ
 𞛈𞛧𞛅|to sow|zoŋ
 𞛈𞛠𞛉|young man|zaːj
 𞛈𞛠𞛉|sand|saːj
 𞛉𞛠|grass|ɲaː
-𞛍𞛠𞛅|path|d§aː§n§/taːn
-𞛍𞛡𞛏|foot|t§i§n
-𞛍𞛧|body|d§o§/to
-𞛎𞛨𞛀|book|tʰ§e§k
-𞛎𞛢𞛀|male|tʰ§ɨ§k
-𞛎𞛠𞛏|carbon|tʰ§aː§n
-𞛐𞛬𞛀|flower|ɓ§ɔː§k
-𞛂𞛧𞛐|to bite|kʰ§o§p
-𞛓𞛧𞛖|hair|pʰ§o§m
-𞛓𞛫|husband|pʰ§uə̯
-𞛓𞛪|plough|pʰ§ɨə
-𞛓𞛢𞛅|bee|pʰ§ɨ§ŋ
-𞛕𞛰|to dream|v§an
+𞛍𞛠𞛅|path|d,aː,n,/taːn
+𞛍𞛡𞛏|foot|t,i,n
+𞛍𞛧|body|d,o,/to
+𞛎𞛨𞛀|book|tʰ,e,k
+𞛎𞛢𞛀|male|tʰ,ɨ,k
+𞛎𞛠𞛏|carbon|tʰ,aː,n
+𞛐𞛬𞛀|flower|ɓ,ɔː,k
+𞛂𞛧𞛐|to bite|kʰ,o,p
+𞛓𞛧𞛖|hair|pʰ,o,m
+𞛓𞛫|husband|pʰ,uə̯
+𞛓𞛪|plough|pʰ,ɨə
+𞛓𞛢𞛅|bee|pʰ,ɨ,ŋ
+𞛕𞛰|to dream|v,an
 𞛕𞛯|to hear|faŋ
-𞛗𞛠|tobacco|j§aː
-𞛗𞛠𞛅|opium|j§aː§ŋ
+𞛗𞛠|tobacco|j,aː
+𞛗𞛠𞛅|opium|j,aː,ŋ
 𞛗𞛮|shoe|jaj
-𞛗𞛴|to throw|j§ap
-𞛙𞛠|to speak|w§aː
-𞛙𞛩𞛀|work|w§iə̯§k
-𞛙𞛰|soul|w§an
-𞛙𞛡|comb|w§i
+𞛗𞛴|to throw|j,ap
+𞛙𞛠|to speak|w,aː
+𞛙𞛩𞛀|work|w,iə̯,k
+𞛙𞛰|soul|w,an
+𞛙𞛡|comb|w,i
 𞛜𞛦|to take|ʔau̯|
-𞛜𞛠𞛉|elder brother|ʔ§aː§j
-𞛜𞛬𞛀|to go out|ʔ§o§k
-𞛜𞛡𞛖|satiated|ʔ§i§m
-𞛑𞛤|mountain|p§u
-𞛏𞛤|breast|n§u
-𞛝𞛠𞛉|buffalo|kʷ§a§j
-𞛀𞛪|salt|k§ɨə
-𞛀𞛧𞛏|to say|k§o§n
-𞛀𞛫𞛅|in|k§uə̯§ŋ
-𞛂𞛬𞛉|I, me|k§ɔː§j
-𞛋𞛱|black|ɗ§am
-𞛋𞛥𞛅|red|ɗ§ɛ§ŋ
-𞛋𞛡|good, well|ɗ§i
-𞛌𞛭|under|t§ə
-𞛌𞛠𞛅|path|t§aː§ŋ
-𞛌𞛳|to cut|t§at
-𞛌𞛠𞛉|to die|t§aː§j
+𞛜𞛠𞛉|elder brother|ʔ,aː,j
+𞛜𞛬𞛀|to go out|ʔ,o,k
+𞛜𞛡𞛖|satiated|ʔ,i,m
+𞛑𞛤|mountain|p,u
+𞛏𞛤|breast|n,u
+𞛝𞛠𞛉|buffalo|kʷ,a,j
+𞛀𞛪|salt|k,ɨə
+𞛀𞛧𞛏|to say|k,o,n
+𞛀𞛫𞛅|in|k,uə̯,ŋ
+𞛂𞛬𞛉|I, me|k,ɔː,j
+𞛋𞛱|black|ɗ,am
+𞛋𞛥𞛅|red|ɗ,ɛ,ŋ
+𞛋𞛡|good, well|ɗ,i
+𞛌𞛭|under|t,ə
+𞛌𞛠𞛅|path|t,aː,ŋ
+𞛌𞛳|to cut|t,at
+𞛌𞛠𞛉|to die|t,aː,j
 𞛎𞛮|to work|tʰaj
-𞛏𞛧𞛀|bird|n§o§k
-𞛏𞛫𞛀|deaf|n§uə̯§k
-𞛐𞛪𞛏|month|ɓ§ɨə̯§n
-𞛐𞛭|leaf|ɓ§ə
-𞛐𞛳|to seize|ɓ§at
-𞛑𞛰|to share|p§an
-𞛑𞛡𞛀|wing|p§i§k
-𞛑𞛫|emperor|p§uə̯
-𞛔𞛧𞛏|rain|f§o§n
-𞛔𞛲|sheath|f§ak
-𞛔𞛡|fire|f§i
-𞛔𞛰|to cut|f§an
-𞛖𞛠𞛀|fruit|m§aː§k
-𞛖𞛰|oil|m§an
-𞛖𞛩|spouse|m§iə̯
-𞛘𞛢𞛀|son|l§ɨ§k
-𞛘𞛧𞛖|wind|l§o§m
-𞛘𞛨𞛀|iron|l§e§k
-𞛘𞛡𞛅|monkey|l§i§ŋ
-𞛇𞛬𞛀|to search for|s§ɔː§k
-𞛇𞛮|egg|s§aj
-𞛇𞛪|shirt|s§ɨə̯
-𞛚𞛧|laugh|h§o
-𞛚𞛥𞛙|tooth|h§ɛ§w
-𞛚𞛪𞛏|house|h§ɨə̯§n
-𞛚𞛠|thigh|h§aː
-𞛄𞛪𞛖|sabre|ɣ§ɨə§m
+𞛏𞛧𞛀|bird|n,o,k
+𞛏𞛫𞛀|deaf|n,uə̯,k
+𞛐𞛪𞛏|month|ɓ,ɨə̯,n
+𞛐𞛭|leaf|ɓ,ə
+𞛐𞛳|to seize|ɓ,at
+𞛑𞛰|to share|p,an
+𞛑𞛡𞛀|wing|p,i,k
+𞛑𞛫|emperor|p,uə̯
+𞛔𞛧𞛏|rain|f,o,n
+𞛔𞛲|sheath|f,ak
+𞛔𞛡|fire|f,i
+𞛔𞛰|to cut|f,an
+𞛖𞛠𞛀|fruit|m,aː,k
+𞛖𞛰|oil|m,an
+𞛖𞛩|spouse|m,iə̯
+𞛘𞛢𞛀|son|l,ɨ,k
+𞛘𞛧𞛖|wind|l,o,m
+𞛘𞛨𞛀|iron|l,e,k
+𞛘𞛡𞛅|monkey|l,i,ŋ
+𞛇𞛬𞛀|to search for|s,ɔː,k
+𞛇𞛮|egg|s,aj
+𞛇𞛪|shirt|s,ɨə̯
+𞛚𞛧|laugh|h,o
+𞛚𞛥𞛙|tooth|h,ɛ,w
+𞛚𞛪𞛏|house|h,ɨə̯,n
+𞛚𞛠|thigh|h,aː
+𞛄𞛪𞛖|sabre|ɣ,ɨə,m
 𞛄𞛠|to marry|ɣaː
-𞛁𞛧𞛏|man|ɡ§o§n
+𞛁𞛧𞛏|man|ɡ,o,n
 𞛁|neck|ɡɔ
-𞛁𞛱|but|ɡ§am
-𞛁𞛡|to eat|ɡ§i
-𞛁𞛢𞛏|night|ɡ§ɨ§n
-𞛕𞛠|cover|v§aː
-𞛒𞛠|to go|b§aː§/p§aː
-𞛒|father|pɔ§/bɔ
-𞛒𞛭|dark|b§ə/p§ə
+𞛁𞛱|but|ɡ,am
+𞛁𞛡|to eat|ɡ,i
+𞛁𞛢𞛏|night|ɡ,ɨ,n
+𞛕𞛠|cover|v,aː
+𞛒𞛠|to go|b,aː,/p,aː
+𞛒|father|pɔ,/bɔ
+𞛒𞛭|dark|b,ə/p,ə
 𞛛|family|hɔ
 𞛀|tree|kɔ
 𞛏|push|nɔ
