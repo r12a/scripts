@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -23,7 +23,7 @@ autoExpandExamples.rej = `
 
 @ https://en.wiktionary.org/wiki/Category:Rejang_lemmas
 
-ꤰꤱꤲ|the Rejang script|ka§ɡa§ŋa|kaganga
+ꤰꤱꤲ|the Rejang script|ka,ɡa,ŋa|kaganga
 ꤷꥇꤳꥏ|star||bitang
 ꤷꥇꥆꥋꥆ|water||bioa
 ꤷꥉꤼꥉꤿ꥓|iron||besey
@@ -42,8 +42,8 @@ autoExpandExamples.rej = `
 
 
 @ https://en.wikipedia.org/wiki/Rejang_alphabet
-ꥆꤰ꥓ꤼꤽ ꤽꥍꤺꥏ|Rejang script|a§k§sa§ra§ §rəu§ɟaŋ
-ꥆꤰ꥓ꤼꤽ|letter|a§k§sa§ra§
+ꥆꤰ꥓ꤼꤽ ꤽꥍꤺꥏ|Rejang script|a,k,sa,ra, ,rəu,ɟaŋ
+ꥆꤰ꥓ꤼꤽ|letter|a,k,sa,ra,
 
 
 @ https://abvd.eva.mpg.de/austronesian/language.php?id=114
