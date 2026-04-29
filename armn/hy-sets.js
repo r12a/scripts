@@ -7,7 +7,7 @@
 
 
 var collections = [
-{ symbol:'Ⓥ', desc:'Vowels', chars:'(ա|ե|է|ը|ի|ո|օ|և|Ա|Ե|Է|Ը|Ի|Ո|Օ)' },
-{ symbol:'Ⓒ', desc:'Consonants', chars:'(բ|գ|դ|զ|թ|ժ|լ|խ|ծ|կ|հ|ձ|ղ|ճ|մ|յ|ն|շ|չ|պ|ջ|ռ|ս|վ|տ|ր|ց|ւ|փ|ք|ֆ|Բ|Գ|Դ|Զ|Թ|Ժ|Լ|Խ|Ծ|Կ|Հ|Ձ|Ղ|Ճ|Մ|Յ|Ն|Շ|Չ|Պ|Ջ|Ռ|Ս|Վ|Տ|Ր|Ց|Ւ|Փ|Ք|Ֆ)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+{ symbol:'Ⓥ', desc:'Vowels', chars:'[աեէըիոօևԱԵԷԸԻՈՕ]' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'[բգդզթժլխծկհձղճմյնշչպջռսվտրցւփքֆԲԳԴԶԹԺԼԽԾԿՀՁՂՃՄՅՆՇՉՊՋՌՍՎՏՐՑՒՓՔՖ]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D]' },
 ]
