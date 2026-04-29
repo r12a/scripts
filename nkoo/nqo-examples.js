@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -31,8 +31,8 @@ autoExpandExamples.nqo = `
 
 @ https://en.wiktionary.org/wiki/Category:N%27Ko_terms_with_IPA_pronunciation
 
-ߛߊߓߊߙߌ|excuse me, sorry|s§a.§b§a.§.r§i||
-ߛߎ߬ߟߋ߬ߡߊ߬ߣߊ߬|male given name|s§ù§l§è§m§à§n§à|Sùlèmànà
+ߛߊߓߊߙߌ|excuse me, sorry|s,a.,b,a.,.r,i||
+ߛߎ߬ߟߋ߬ߡߊ߬ߣߊ߬|male given name|s,ù,l,è,m,à,n,à|Sùlèmànà
 
 
 @ https://en.wiktionary.org/wiki/Category:Dyula_lemmas
@@ -52,7 +52,7 @@ autoExpandExamples.nqo = `
 ߁߭|first||1̣³
 ߂߲|second||2̣˜
 ߊ߲ ߧߴߌ ߝߏ߬ ߟߊ߫ ߸ ߞߵߌ ߞߎߟߎ߲ߖߋ߲|We give you thanks.|ã ɲi fò lá,  ki kulũd͡ʒẽ|ã y’i fò lá,  k’i kulũjẽ
-ߓߐߗ߭ߎߙ. ߓߌߢߍ߲ ߝ߭ߋߣߎ߳.|Bonjour. Bien venue.|b§ɔ§ʒ§u§r§.§ §b§i‌§ɲ§ɛ̃§ §v§e§n§y|bɔʧ³ur. biɲɛ˜ f³enuˑ.
+ߓߐߗ߭ߎߙ. ߓߌߢߍ߲ ߝ߭ߋߣߎ߳.|Bonjour. Bien venue.|b,ɔ,ʒ,u,r,., ,b,i‌,ɲ,ɛ̃, ,v,e,n,y|bɔʧ³ur. biɲɛ˜ f³enuˑ.
 ߕߏ߲ߜߊ|litre||to˜gᵇa
 ߘߋ߲ߣߍ߲ ߠߎ߬ ߟߊ߫ ߓߋߟߋ߲ߠߊ|a speech from the children|dẽnɛ̃ łu la belẽła|
 ߛߌߘߐ|gram||sidɔ
@@ -101,8 +101,8 @@ autoExpandExamples.nqo = `
 ߜߍ߬ߟߍ߲߬|hard||ɡ͡bɛ̀lɛ̃
 ߜߏ߬ߟߏ|skin||ɡ͡bòló
 ߓߊ߭ߞߐ߬ߦߐ|herbaceous plant|bǎkɔ̀jɔ́|bǎkɔ̀yɔ́
-ߌ ߓߴߊ߬ ߝߐ߫|you say it|í§ §b§(ɛ́)§à§ §f§ɔ́|í bʼà fɔ́
-ߌ ߞߵߊ߬ ߝߐ߫|you said it|í§ §k§(à)§à§ §f§ɔ́|í kʼà fɔ́
+ߌ ߓߴߊ߬ ߝߐ߫|you say it|í, ,b,(ɛ́),à, ,f,ɔ́|í bʼà fɔ́
+ߌ ߞߵߊ߬ ߝߐ߫|you said it|í, ,k,(à),à, ,f,ɔ́|í kʼà fɔ́
 ߞߏ߲|do first, precede||kɔ̌n
 ߛߓߊ߬|three||sábá
 ߍߛߑߞߌߡߏߞߊ|eskimo||ɛskimoka
@@ -172,7 +172,7 @@ autoExpandExamples.nqo = `
 ߛߎ ߺ ߎ ߺ ߛߎ|every night||su-u-su
 ߛߌ ߺ ߌ ߺ ߛߌ|anyone||si _ i _ si
 ߡߐ߰ ߺ ߐ ߺ ߡߐ߰|everyone||mɔ⁶ _ ɔ _ mɔ⁶
-ߓߌߢߍ߲ ߝ߭ߋߣߎ߳|welcome|b§i‌§ɲ§ɛ̃§ §v§e§n§y
+ߓߌߢߍ߲ ߝ߭ߋߣߎ߳|welcome|b,i‌,ɲ,ɛ̃, ,v,e,n,y
 
 
 

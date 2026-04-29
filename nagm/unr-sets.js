@@ -7,6 +7,6 @@
 
 
 var collections = [
-{ symbol:'Ⓥ', desc:'Vowels', chars:'(𞓕|𞓤|𞓚|𞓐|𞓟)' },
-{ symbol:'Ⓒ', desc:'Consonants', chars:'(𞓠|𞓖|𞓞|𞓛|𞓧|𞓨|𞓘|𞓔|𞓥|𞓒|𞓣|𞓪|𞓙|𞓗|𞓡|𞓜|𞓦|𞓢|𞓑|𞓝|𞓩|𞓓)' },
+{ symbol:'Ⓥ', desc:'Vowels', chars:'[𞓕𞓤𞓚𞓐𞓟]' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'[𞓠𞓖𞓞𞓛𞓧𞓨𞓘𞓔𞓥𞓒𞓣𞓪𞓙𞓗𞓡𞓜𞓦𞓢𞓑𞓝𞓩𞓓]' },
 ]
