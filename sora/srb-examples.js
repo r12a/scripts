@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -25,15 +25,15 @@ autoExpandExamples.srb = `
 @ https://en.wiktionary.org/wiki/Category:Sora_lemmas
 
 
-𑃐𑃚𑃝|the Sora language|s§oː§raː|savara
+𑃐𑃚𑃝|the Sora language|s,oː,raː|savara
 𑃛𑃥𑃝𑃝|heart||purara
 
 
 
 @ http://sealang.net/sala/archives/pdf8/zide1999three.pdf
 
-𑃢𑃖𑃙|arrow|a§mə§n|aamn
-𑃒𑃥𑃡𑃢𑃗|brother|b§ʊ§ɲ§a§ŋ|
+𑃢𑃖𑃙|arrow|a,mə,n|aamn
+𑃒𑃥𑃡𑃢𑃗|brother|b,ʊ,ɲ,a,ŋ|
 
 
 

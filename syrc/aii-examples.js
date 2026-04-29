@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -41,7 +41,7 @@ autoExpandExamples.aii = `
 ܐܒܘ ܛܒܝܐ||␣||
 ܐܒܘ||␣||
 ܐܒܝܫܐ||␣||
-ܐܲܒ݂ܪܵܗܵܡ|Abraham|ʔa§v.§rɑ§ˈhɑ§m|aḇrāhām|ܐܒܪܗܡ|ܐܒܪܗܡ
+ܐܲܒ݂ܪܵܗܵܡ|Abraham|ʔa,v.,rɑ,ˈhɑ,m|aḇrāhām|ܐܒܪܗܡ|ܐܒܪܗܡ
 ܐܒܪܡ||␣||
 ܐܓܘܣܛܘܣ||␣||
 ܐܓܪܐ||␣||
@@ -102,7 +102,7 @@ autoExpandExamples.aii = `
 ܐܘܫܦܐ||␣||
 ܐܘܬܓ||␣||
 ܐܘܬܝ||␣||
-ܐܘܼܚܕܵܢܹ̈ܐ ܡܚܲܝܕܹ̈ܐ ܕܐܵܡܵܝܪܟܵܐ|USA|–§u§x.§dɑː§nɑː§–§‿§m§xeː§‹§de§–§‿§d§a§me§‹§r.§kɑː§–|uḳdane mḳayde d-amayrka|ܐܘܚܕܢܐ ܡܚܝܕܐ ܕܐܡܝܪܟܐ||ܐܘܚܕܢܐ ܡܚܝܕܐ ܕܐܡܝܪܟܐ
+ܐܘܼܚܕܵܢܹ̈ܐ ܡܚܲܝܕܹ̈ܐ ܕܐܵܡܵܝܪܟܵܐ|USA|–,u,x.,dɑː,nɑː,–,‿,m,xeː,‹,de,–,‿,d,a,me,‹,r.,kɑː,–|uḳdane mḳayde d-amayrka|ܐܘܚܕܢܐ ܡܚܝܕܐ ܕܐܡܝܪܟܐ||ܐܘܚܕܢܐ ܡܚܝܕܐ ܕܐܡܝܪܟܐ
 ܐܙܝܕܝܐ||␣||
 ܐܙܠ ܒܬܪ||␣||
 ܐܙܠ||␣||
@@ -165,11 +165,11 @@ autoExpandExamples.aii = `
 ܐܝܪܩܬܝܐ||␣||
 ܐܝܫܡܥܝܠ||␣||
 ܐܝܬ||␣||
-ܐܝܼܕ݂ܵܗ̇|her hand|–§i§ðɑ§–||||x
-ܐܝܼܛܵܠܝܼܵܐ|Italy|–§iː§tˤaː§l§ija§–|īṭaliya|ܐܝܛܠܝܐ||ܐܝܛܠܝܐ
-ܐܝܼܠܵܢܵܐ|tree|–§i§lɑ§nɑ§–||||x
-ܐܝܼܣܪܵܐܹܝܠ|Israel|–§i§s.§rɑː§ʔe§‹§l|īsraʾēl|ܐܝܣܪܐܝܠ||ܐܝܣܪܐܝܠ
-ܐܝܼܪܵܢ|Iran|–§iː§ra§n|īran|ܐܝܪܢ||ܐܝܪܢ
+ܐܝܼܕ݂ܵܗ̇|her hand|–,i,ðɑ,–||||x
+ܐܝܼܛܵܠܝܼܵܐ|Italy|–,iː,tˤaː,l,ija,–|īṭaliya|ܐܝܛܠܝܐ||ܐܝܛܠܝܐ
+ܐܝܼܠܵܢܵܐ|tree|–,i,lɑ,nɑ,–||||x
+ܐܝܼܣܪܵܐܹܝܠ|Israel|–,i,s.,rɑː,ʔe,‹,l|īsraʾēl|ܐܝܣܪܐܝܠ||ܐܝܣܪܐܝܠ
+ܐܝܼܪܵܢ|Iran|–,iː,ra,n|īran|ܐܝܪܢ||ܐܝܪܢ
 ܐܟ||␣||
 ܐܟܐ||␣||
 ܐܟܘܡܐ||␣||
@@ -340,42 +340,42 @@ autoExpandExamples.aii = `
 ܐܬܢܘܣ||␣||
 ܐܬܪܐ ܕܐܒܗܬܐ||␣||
 ܐܬܪܐ||␣||
-ܐܲܠܡܵܢܝܼܵܐ|Germany|a§l.§maː§n§i.ja§–|ālmaniya|ܐܠܡܢܝܐ||ܐܠܡܢܝܐ
-ܐܲܠܵܗܵܐ|God|æ§læ§hæ§–|allāhā|ܐܠܗܐ||ܐܠܗܐ
-ܐܲܡܝܼܪ̈ܘܵܬܹܐ ܥܲܪ̈ܒ݂ܵܝܵܬܹܐ ܡܚܲܝܕܵܬܹ̈ܐ‎|United Arab Emirates|ʔa.§m§i§rː§wɑː§teː§–§‿§ʕa§r.§wɑː§jɑː§teː§–§‿§mə§xa§j.§dɑː§teː§–|amirwātē ʿarḇāyātē mḥaydātē|ܐܡܝܪܘܬܐ ܥܪܒܝܬܐ ܡܚܝܕܬܐ||ܐܡܝܪܘܬܐ ܥܪܒܝܐ ܡܚܝܕܐ
-ܐܲܢܩܵܪܵܐ|Ankara|a§n.§qɑː§rɑː§–|Anqāra|ܐܢܩܪܐ||ܐܢܩܪܐ
-ܐܲܦܪܝܼܩܵܐ|Africa|ˈa.§p§r§iː§qa§–|Āfrīqa|ܐܦܪܝܩܐ||ܐܦܪܝܩܐ
-ܐܲܩܠܵܐ|foot|a§q§lɑ§–|aqlā|ܐܩܠܐ||ܐܩܠܐ
-ܐܲܪܒܥܵܐ|four|æ§r.§b§ʕɑː§–|ārbʿa|ܐܪܒܥܐ||ܐܪܒܥܐ
-ܐܲܪܒܲܥܣܲܪ|fourteen|ā§rː§bā§ʕː§sā§r|ārbāʿsār|ܐܪܒܥܣܪ||ܐܪܒܥܣܪ
-ܐܲܪܡܸܢܝܼܵܐ|Armenia|æ§rː§mi§nː§ja§–|ārminiya|ܐܪܡܢܝܐ||ܐܪܡܢܝܐ
-ܐܵܒ|August|a§bb|ab|ܐܒ||ܐܒ
-ܐܵܕܵܪ|March|aː§da§r|adar|ܐܕܪ||ܐܕܪ
-ܐܵܕ݂ܵܪ|March|aː§ða§r|adar|ܐܕܪ||ܐܕܪ
-ܐܵܗܵܐ|this|aː§haː§–|aha|ܐܗܐ||ܐܗܐ
-ܐܵܘܬܵܓ݂|room, study|ʔoː§‹§ta§ɣ|awtaḡ|ܐܘܬܓ||ܐܘܬܓ
-ܐܵܡܝܼܪ̈ܘܵܬܹܐ ܥܵܪ̈ܵܒܵܝܹܐ ܡܚܲܝܕܹ̈ܐ|United Arab Emirates|aː§m§i§r.§waː§te.§–§ §ʕaː§ra.§baː§je.§–§ §m§xeː§‹§de§–|amirwate ʿarabaye mḳayde|||x
-ܐܵܢܓܠܝܼܵܐ|England|ʔa§ŋ.§ɡ§l§iːja§–|anglia|ܐܢܓܠܝܐ||ܐܢܓܠܝܐ
-ܐܵܬܘܼܬܵܐ|letter, character|a§t.§ʊː§ta§–|atuta|ܐܬܘܬܐ||ܐܬܘܬܐ
-ܐܵܬܘܿܪ|Assyria|ɑː§t§ʊ§r|ātor|ܐܬܘܪ||ܐܬܘܪ
-ܐܵܬ݂ܘܿܪ|Assyria|ɑː§θ§ʊ§r|ātor|ܐܬܘܪ||ܐܬܘܪ
-ܐܸܓܲܪܬܵܐ|letter, message|i§ɡ.ɡa§rː§tɑː§–|iggārta|ܐܓܪܬܐ||ܐܓܪܬܐ
-ܐܸܕܝܵܘܡ|today|i§d.§j§u§mː|idyawm|ܐܕܝܘܡ||ܐܕܝܘܡ
-ܐܸܕܠܲܝܠܹܐ|tonight|i§d.§lɛː§‹§lɛ§–|idlayle|ܐܕܠܝܠܐ||ܐܕܠܝܠܐ
-ܐܸܕ݁ܠܲܝܠܹܐ|tonight|i§d.§lɛː§‹§lɛ§–|idlayle|ܐܕܠܝܠܐ||ܐܕܠܝܠܐ
-ܐܸܘܲܢܓܸܠܝܼܘܿܢ|Gospel|i§w.wa§nn§ɡi§lˈl§i.j§u§n|ʾiwāngiliyun|ܐܘܢܓܠܝܘܢ||ܐܘܢܓܠܝܘܢ
-ܐܸܣܦܵܢܝܼܵܐ|Spain|ə§s.§paː§n§i.jaː§–|ispaniya|ܐܣܦܢܝܐ||ܐܣܦܢܝܐ
-ܐܸܫܬܲܥܣܲܪ|sixteen|i§ʃː§tā§ʕː§sā§r|ištāʿsār|ܐܫܬܥܣܪ||ܐܫܬܥܣܪ
-ܐܸܫܬܵܐ|six|i§ʃ.§taː§–|išta|ܐܫܬܐ||ܐܫܬܐ
-ܐܹܝܠ|God|e§‹§l|el|ܐܝܠ||ܐܝܠ
-ܐ݇ܟܘܼܡܵܐ|black|–§k§uː§mɑː§–|kuma|ܐܟܘܡܐ||ܐܟܘܡܐ
-ܐ݇ܟ݂ܵܠ݇ܪܲܡܫܵܐ|dinner|–§xaː§–§ra§m.§ʃɑː§–|ḳarāmša|ܚܪܡܫܐ||ܚܪܡܫܐ
-ܐ݇ܬܹܐ ܠܵܗ̇|she came|–§te§–§ §lɑ§–||||x
+ܐܲܠܡܵܢܝܼܵܐ|Germany|a,l.,maː,n,i.ja,–|ālmaniya|ܐܠܡܢܝܐ||ܐܠܡܢܝܐ
+ܐܲܠܵܗܵܐ|God|æ,læ,hæ,–|allāhā|ܐܠܗܐ||ܐܠܗܐ
+ܐܲܡܝܼܪ̈ܘܵܬܹܐ ܥܲܪ̈ܒ݂ܵܝܵܬܹܐ ܡܚܲܝܕܵܬܹ̈ܐ‎|United Arab Emirates|ʔa.,m,i,rː,wɑː,teː,–,‿,ʕa,r.,wɑː,jɑː,teː,–,‿,mə,xa,j.,dɑː,teː,–|amirwātē ʿarḇāyātē mḥaydātē|ܐܡܝܪܘܬܐ ܥܪܒܝܬܐ ܡܚܝܕܬܐ||ܐܡܝܪܘܬܐ ܥܪܒܝܐ ܡܚܝܕܐ
+ܐܲܢܩܵܪܵܐ|Ankara|a,n.,qɑː,rɑː,–|Anqāra|ܐܢܩܪܐ||ܐܢܩܪܐ
+ܐܲܦܪܝܼܩܵܐ|Africa|ˈa.,p,r,iː,qa,–|Āfrīqa|ܐܦܪܝܩܐ||ܐܦܪܝܩܐ
+ܐܲܩܠܵܐ|foot|a,q,lɑ,–|aqlā|ܐܩܠܐ||ܐܩܠܐ
+ܐܲܪܒܥܵܐ|four|æ,r.,b,ʕɑː,–|ārbʿa|ܐܪܒܥܐ||ܐܪܒܥܐ
+ܐܲܪܒܲܥܣܲܪ|fourteen|ā,rː,bā,ʕː,sā,r|ārbāʿsār|ܐܪܒܥܣܪ||ܐܪܒܥܣܪ
+ܐܲܪܡܸܢܝܼܵܐ|Armenia|æ,rː,mi,nː,ja,–|ārminiya|ܐܪܡܢܝܐ||ܐܪܡܢܝܐ
+ܐܵܒ|August|a,bb|ab|ܐܒ||ܐܒ
+ܐܵܕܵܪ|March|aː,da,r|adar|ܐܕܪ||ܐܕܪ
+ܐܵܕ݂ܵܪ|March|aː,ða,r|adar|ܐܕܪ||ܐܕܪ
+ܐܵܗܵܐ|this|aː,haː,–|aha|ܐܗܐ||ܐܗܐ
+ܐܵܘܬܵܓ݂|room, study|ʔoː,‹,ta,ɣ|awtaḡ|ܐܘܬܓ||ܐܘܬܓ
+ܐܵܡܝܼܪ̈ܘܵܬܹܐ ܥܵܪ̈ܵܒܵܝܹܐ ܡܚܲܝܕܹ̈ܐ|United Arab Emirates|aː,m,i,r.,waː,te.,–, ,ʕaː,ra.,baː,je.,–, ,m,xeː,‹,de,–|amirwate ʿarabaye mḳayde|||x
+ܐܵܢܓܠܝܼܵܐ|England|ʔa,ŋ.,ɡ,l,iːja,–|anglia|ܐܢܓܠܝܐ||ܐܢܓܠܝܐ
+ܐܵܬܘܼܬܵܐ|letter, character|a,t.,ʊː,ta,–|atuta|ܐܬܘܬܐ||ܐܬܘܬܐ
+ܐܵܬܘܿܪ|Assyria|ɑː,t,ʊ,r|ātor|ܐܬܘܪ||ܐܬܘܪ
+ܐܵܬ݂ܘܿܪ|Assyria|ɑː,θ,ʊ,r|ātor|ܐܬܘܪ||ܐܬܘܪ
+ܐܸܓܲܪܬܵܐ|letter, message|i,ɡ.ɡa,rː,tɑː,–|iggārta|ܐܓܪܬܐ||ܐܓܪܬܐ
+ܐܸܕܝܵܘܡ|today|i,d.,j,u,mː|idyawm|ܐܕܝܘܡ||ܐܕܝܘܡ
+ܐܸܕܠܲܝܠܹܐ|tonight|i,d.,lɛː,‹,lɛ,–|idlayle|ܐܕܠܝܠܐ||ܐܕܠܝܠܐ
+ܐܸܕ݁ܠܲܝܠܹܐ|tonight|i,d.,lɛː,‹,lɛ,–|idlayle|ܐܕܠܝܠܐ||ܐܕܠܝܠܐ
+ܐܸܘܲܢܓܸܠܝܼܘܿܢ|Gospel|i,w.wa,nn,ɡi,lˈl,i.j,u,n|ʾiwāngiliyun|ܐܘܢܓܠܝܘܢ||ܐܘܢܓܠܝܘܢ
+ܐܸܣܦܵܢܝܼܵܐ|Spain|ə,s.,paː,n,i.jaː,–|ispaniya|ܐܣܦܢܝܐ||ܐܣܦܢܝܐ
+ܐܸܫܬܲܥܣܲܪ|sixteen|i,ʃː,tā,ʕː,sā,r|ištāʿsār|ܐܫܬܥܣܪ||ܐܫܬܥܣܪ
+ܐܸܫܬܵܐ|six|i,ʃ.,taː,–|išta|ܐܫܬܐ||ܐܫܬܐ
+ܐܹܝܠ|God|e,‹,l|el|ܐܝܠ||ܐܝܠ
+ܐ݇ܟܘܼܡܵܐ|black|–,k,uː,mɑː,–|kuma|ܐܟܘܡܐ||ܐܟܘܡܐ
+ܐ݇ܟ݂ܵܠ݇ܪܲܡܫܵܐ|dinner|–,xaː,–,ra,m.,ʃɑː,–|ḳarāmša|ܚܪܡܫܐ||ܚܪܡܫܐ
+ܐ݇ܬܹܐ ܠܵܗ̇|she came|–,te,–, ,lɑ,–||||x
 ܒ|by, at|b-|b|||x
 ܒܐܝܟܢܝܘܬ||␣||
 ܒܐܣ||␣||
 ܒܐܪ ܫܒܥ||␣||
-ܒܐܵܗܵܐ|by this|b§ɑ§hɑ§–|b-ʾāhāʾ|||x
+ܒܐܵܗܵܐ|by this|b,ɑ,hɑ,–|b-ʾāhāʾ|||x
 ܒܒܐ ܢܘܐܝܠ||␣||
 ܒܒܐ||␣||
 ܒܒܘܬܐ||␣||
@@ -507,7 +507,7 @@ autoExpandExamples.aii = `
 ܒܢܝܢܐ||␣||
 ܒܢܝܢܫܐ||␣||
 ܒܢܝܩܐ||␣||
-ܒܢܝܼ|build|b§n§i||||x
+ܒܢܝܼ|build|b,n,i||||x
 ܒܢܦܫܐ||␣||
 ܒܢܦܫܝܐ||␣||
 ܒܢܵܬܹ̈ܐ|girls|bnɑte||||x
@@ -581,8 +581,8 @@ autoExpandExamples.aii = `
 ܒܪܬ ܡܘܚܐ||␣||
 ܒܪܬ ܥܡܐ||␣||
 ܒܪܬܐ||␣||
-ܒܪܵܬܵܐ ܘܝܵـܠܵܐ|girl and boy|b§rɑ§tɑ§–§ §w§yɑ§–§lɑ§–||||x
-ܒܪܵܬܵܐ|daughter, girl|b§rɑː§tɑː§–|brata|ܒܪܬܐ||ܒܪܬܐ
+ܒܪܵܬܵܐ ܘܝܵـܠܵܐ|girl and boy|b,rɑ,tɑ,–, ,w,yɑ,–,lɑ,–||||x
+ܒܪܵܬܵܐ|daughter, girl|b,rɑː,tɑː,–|brata|ܒܪܬܐ||ܒܪܬܐ
 ܒܫܐ ܒܫܐ||␣||
 ܒܫܝܠܐ||␣||
 ܒܫܝܢܐ ܐܬܐ ܠܘܟ||␣||
@@ -607,23 +607,23 @@ autoExpandExamples.aii = `
 ܒܬܪܐ||␣||
 ܒܬܪܝܬܐ||␣||
 ܒܬܪܟܢ||␣||
-ܒܲܝܬܵܐ|house|ˈba§j.§tɑ§–|bāyta|ܒܝܬܐ|standard, Urmian:ˈbeːtɑ, Nineveh:beː§θɑ§–|ܒܝܬܐ
-ܒܲܟ݂ܬܵܐ|wife|ba§ħ§tɑ§–||||x
-ܒܵܒܝܼ|my father|bɑ§b§i||||x
+ܒܲܝܬܵܐ|house|ˈba,j.,tɑ,–|bāyta|ܒܝܬܐ|standard, Urmian:ˈbeːtɑ, Nineveh:beː,θɑ,–|ܒܝܬܐ
+ܒܲܟ݂ܬܵܐ|wife|ba,ħ,tɑ,–||||x
+ܒܵܒܝܼ|my father|bɑ,b,i||||x
 ܒܵܒܵܐ|father, dad|bɑːbɑː|baba|ܒܒܐ||ܒܒܐ
-ܒܵܚܪܹܝܢ|Bahrain|ba§xː§re§‹§n|baḳrēn|ܒܚܪܝܢ||ܒܚܪܝܢ
-ܒܵܪܹܟ|to kneel|ˈbɑː§rə§k|barek|ܒܪܟ|Urm:ˈbɒ.ɾɪk|ܒܪܟ|
-ܒܵܬܹ̈ܐ|houses|bɑ§tte§–|bāttē|ܒܬܐ||ܒܬܐ
-ܒܵܬ݇ܪ|after|ba§–§r|bar|ܒܬܪ|Nin:baːθər|ܒܬܪ
-ܒܹܝܬ ܟܪ̈ܝܼܗܹܐ|hospital|be§‹§tː§‿§k§r§iː§heː§–|bēt krīhē|ܒܝܬ ܟܪܝܗܐ|Urm:betː‿t͡ʃriːheː, Nineveh:beθː‿kriːheː|ܒܝܬ ܟܪܝܗܐ
-ܒܹܝܬ ܡܲܟ̰ܡܲܥܬܵܐ|fire station|be§‹§tt§‿§ma§t͡ʃ.§ma§ʕʕ§tɑː§–|bēt māčmāʿta|ܒܝܬ ܡܟ̰ܡܥܬܐ|Urm:betː‿mat͡ʃ.meːtɑː; Nin:beθː‿mat͡ʃ.maʕːθɑː|ܒܝܬ ܡܟ̰ܡܥܬܐ
-ܒܹܝܬ ܨܵܘܒܹ̈ܐ|university|be§tt§‿§sˤ§oː§beː§–|bēt ṣawbe|ܒܝܬ ܨܘܒܐ||ܒܝܬ ܨܘܒܐ
-ܒܹܝܬ݇ ܢܝܼ̈ܣܵܢܹܐ|Spring|biː§‹§–§‿§n§iː§sɑː§neː§–|bēy nīsānē|ܒܝܬ ܢܝܣܢܐ||ܒܝܬ ܢܝܣܢܐ
-ܒܹܬ݂ ـ ܟܪ̈ܝܼܗܹܐ|hospital|be§θ§§-§§k§r§i§he§–||ܒܝܬ ܟܪܝܗܐ||ܒܝܬ ܟܪܝܗܐ
-ܒ݁ܪܵܬܵ݁ܐ|daughter, girl|b§rɑː§tɑː§–|brata|ܒܪܬܐ||ܒܪܬܐ
+ܒܵܚܪܹܝܢ|Bahrain|ba,xː,re,‹,n|baḳrēn|ܒܚܪܝܢ||ܒܚܪܝܢ
+ܒܵܪܹܟ|to kneel|ˈbɑː,rə,k|barek|ܒܪܟ|Urm:ˈbɒ.ɾɪk|ܒܪܟ|
+ܒܵܬܹ̈ܐ|houses|bɑ,tte,–|bāttē|ܒܬܐ||ܒܬܐ
+ܒܵܬ݇ܪ|after|ba,–,r|bar|ܒܬܪ|Nin:baːθər|ܒܬܪ
+ܒܹܝܬ ܟܪ̈ܝܼܗܹܐ|hospital|be,‹,tː,‿,k,r,iː,heː,–|bēt krīhē|ܒܝܬ ܟܪܝܗܐ|Urm:betː‿t͡ʃriːheː, Nineveh:beθː‿kriːheː|ܒܝܬ ܟܪܝܗܐ
+ܒܹܝܬ ܡܲܟ̰ܡܲܥܬܵܐ|fire station|be,‹,tt,‿,ma,t͡ʃ.,ma,ʕʕ,tɑː,–|bēt māčmāʿta|ܒܝܬ ܡܟ̰ܡܥܬܐ|Urm:betː‿mat͡ʃ.meːtɑː; Nin:beθː‿mat͡ʃ.maʕːθɑː|ܒܝܬ ܡܟ̰ܡܥܬܐ
+ܒܹܝܬ ܨܵܘܒܹ̈ܐ|university|be,tt,‿,sˤ,oː,beː,–|bēt ṣawbe|ܒܝܬ ܨܘܒܐ||ܒܝܬ ܨܘܒܐ
+ܒܹܝܬ݇ ܢܝܼ̈ܣܵܢܹܐ|Spring|biː,‹,–,‿,n,iː,sɑː,neː,–|bēy nīsānē|ܒܝܬ ܢܝܣܢܐ||ܒܝܬ ܢܝܣܢܐ
+ܒܹܬ݂ ـ ܟܪ̈ܝܼܗܹܐ|hospital|be,θ,,-,,k,r,i,he,–||ܒܝܬ ܟܪܝܗܐ||ܒܝܬ ܟܪܝܗܐ
+ܒ݁ܪܵܬܵ݁ܐ|daughter, girl|b,rɑː,tɑː,–|brata|ܒܪܬܐ||ܒܪܬܐ
 ܓ̰ܘܪܒܐ||␣||
-ܓ̰ܘܼܢܵܐ|veil|d͡ʒ§u§nɑ§–||||x
-ܓ̰ܵܘܹܓ̰|to advance, walk|dʒɑː§wə§dʒ|jawej|ܓ̰ܘܓ̰||ܓ̰ܘܓ̰
+ܓ̰ܘܼܢܵܐ|veil|d͡ʒ,u,nɑ,–||||x
+ܓ̰ܵܘܹܓ̰|to advance, walk|dʒɑː,wə,dʒ|jawej|ܓ̰ܘܓ̰||ܓ̰ܘܓ̰
 ܓܐܒ||␣||
 ܓܐܙܒܪܐ||␣||
 ܓܐܫ||␣||
@@ -729,14 +729,14 @@ autoExpandExamples.aii = `
 ܓܪܫ||␣||
 ܓܫܪܐ ܬܠܝܐ||␣||
 ܓܫܪܐ||␣||
-ܓܲܙܵܐܝܼܪ|Algeria|ɡa.§zɑː§ʔ§i§rː|gāzaʾir|ܓܙܥܝܪ||ܓܙܥܝܪ
-ܓܲܢܬܵܐ|garden|ɡa§n.§tɑː§–|gānta|ܓܢܬܐ|Urm:d͡ʒan.tɑː; Nin:ɡan.θɑː|ܓܢܬܐ
+ܓܲܙܵܐܝܼܪ|Algeria|ɡa.,zɑː,ʔ,i,rː|gāzaʾir|ܓܙܥܝܪ||ܓܙܥܝܪ
+ܓܲܢܬܵܐ|garden|ɡa,n.,tɑː,–|gānta|ܓܢܬܐ|Urm:d͡ʒan.tɑː; Nin:ɡan.θɑː|ܓܢܬܐ
 ܓܵܘ ܐܸܡܵܐ|percent|ɡʊː əm.maː|go imma|ܓܘ ܐܡܐ||ܓܘ ܐܡܐ
-ܓܵܘ|inside|go§‹||||x
-ܓܵܘܙܵܐ|walnut|ɡɑ§w§zɑ§–|gāwzā|||x
-ܓܵܚܹܟ|to laugh|ɡɑː§xə§k|gaḳek|ܓܚܟ|Urm:d͡ʒɑːxət͡ʃ|ܓܚܟ
-ܓܵܢܵܐ|self, soul|ɡɑː§nɑː§–|gana|ܓܢܐ|Urm:d͡ʒɑːnɑː|ܓܢܐ
-ܓ݂ܵܠܹܒ|to overcome|ɣɑː§lə§b|ḡaleb|ܓ݂ܠܒ||ܓ݂ܠܒ
+ܓܵܘ|inside|go,‹||||x
+ܓܵܘܙܵܐ|walnut|ɡɑ,w,zɑ,–|gāwzā|||x
+ܓܵܚܹܟ|to laugh|ɡɑː,xə,k|gaḳek|ܓܚܟ|Urm:d͡ʒɑːxət͡ʃ|ܓܚܟ
+ܓܵܢܵܐ|self, soul|ɡɑː,nɑː,–|gana|ܓܢܐ|Urm:d͡ʒɑːnɑː|ܓܢܐ
+ܓ݂ܵܠܹܒ|to overcome|ɣɑː,lə,b|ḡaleb|ܓ݂ܠܒ||ܓ݂ܠܒ
 ܕ|of|d-||||x
 ܕܐܒܐ||␣||
 ܕܐܟܝ ܝܘܬ||␣||
@@ -778,8 +778,8 @@ autoExpandExamples.aii = `
 ܕܘܪܬܐ||␣||
 ܕܘܫ||␣||
 ܕܘܫܐ||␣||
-ܕܘܼܓܠܵܐ|lie|d§u§gg§lɑ§–||ܕܘܓܠܐ||ܕܘܓܠܐ
-ܕܘܼܟܵܢܵܐ|shop, store|d§u.§kɑː§nɑː§–|dukana|ܕܘܟܢܐ||ܕܘܟܢܐ
+ܕܘܼܓܠܵܐ|lie|d,u,gg,lɑ,–||ܕܘܓܠܐ||ܕܘܓܠܐ
+ܕܘܼܟܵܢܵܐ|shop, store|d,u.,kɑː,nɑː,–|dukana|ܕܘܟܢܐ||ܕܘܟܢܐ
 ܕܚܠܬ ܢܘܟܪܝܐ||␣||
 ܕܝܗ||␣||
 ܕܝܝ||␣||
@@ -847,17 +847,17 @@ autoExpandExamples.aii = `
 ܕܪܬܐ||␣||
 ܕܫܡܢ||␣||
 ܕܫܡܢܝܘܬܐ||␣||
-ܕܲܪܡܣܘܿܩ|Damascus|da§r§m.§s§ʊ§q|dārmsuq|ܕܪܡܣܘܩ||ܕܪܡܣܘܩ
-ܕܲܪܬܵܐ|courtyard|da§rr§tɑ§–||ܕܪܬܐ||ܕܪܬܐ
-ܕܲܫܬܵܐ|plain, field|da§ʃ§ta§–||ܕܫܬܐ||ܕܫܬܐ
-ܕܵܐܟ݂ܝܼܘܼܬܵܐ|quality|dɑː§–§x§iː§uː§tɑ§–|daḳīuta|ܕܐܟܝܘܬܐ|Nin:dɑːxiːuːθɑ|ܕܐܟܝܘܬܐ
-ܕܵܒܵܫܵܐ|honeybee|dɑ§bɑ§ʃɑ§–||ܕܒܫܐ||ܕܒܫܐ
-ܕܵܕܵܐ|uncle|dɑ§dɑ§–||ܕܕܐ||ܕܕܐ
-ܕܵܝܒܵܐ|demon|dɛ§‹§va§–||||x
-ܕܵܟ݂ܹܐ|to clean, purify|daː§xeː§–|daḳe|ܕܟܐ||ܕܟܐ
-ܕܵܫܢܵܐ ܠܲܒܪܵܬܵܐ|gift to the girl|dɑ§ʃ§nɑ§–§ §la§b§rɑ§tɑ§–||||x
-ܕܵ݁ܕܵ݁ܐ|uncle|dɑ§dɑ§–||ܕܕܐ||ܕܕܐ
-ܕ݁ܘܼܓ݁ܠܵܐ|lie|d§u§gg§lɑ§–||ܕܘܓܠܐ||ܕܘܓܠܐ
+ܕܲܪܡܣܘܿܩ|Damascus|da,r,m.,s,ʊ,q|dārmsuq|ܕܪܡܣܘܩ||ܕܪܡܣܘܩ
+ܕܲܪܬܵܐ|courtyard|da,rr,tɑ,–||ܕܪܬܐ||ܕܪܬܐ
+ܕܲܫܬܵܐ|plain, field|da,ʃ,ta,–||ܕܫܬܐ||ܕܫܬܐ
+ܕܵܐܟ݂ܝܼܘܼܬܵܐ|quality|dɑː,–,x,iː,uː,tɑ,–|daḳīuta|ܕܐܟܝܘܬܐ|Nin:dɑːxiːuːθɑ|ܕܐܟܝܘܬܐ
+ܕܵܒܵܫܵܐ|honeybee|dɑ,bɑ,ʃɑ,–||ܕܒܫܐ||ܕܒܫܐ
+ܕܵܕܵܐ|uncle|dɑ,dɑ,–||ܕܕܐ||ܕܕܐ
+ܕܵܝܒܵܐ|demon|dɛ,‹,va,–||||x
+ܕܵܟ݂ܹܐ|to clean, purify|daː,xeː,–|daḳe|ܕܟܐ||ܕܟܐ
+ܕܵܫܢܵܐ ܠܲܒܪܵܬܵܐ|gift to the girl|dɑ,ʃ,nɑ,–, ,la,b,rɑ,tɑ,–||||x
+ܕܵ݁ܕܵ݁ܐ|uncle|dɑ,dɑ,–||ܕܕܐ||ܕܕܐ
+ܕ݁ܘܼܓ݁ܠܵܐ|lie|d,u,gg,lɑ,–||ܕܘܓܠܐ||ܕܘܓܠܐ
 ܗܐ||␣||
 ܗܓܐ||␣||
 ܗܓܪ||␣||
@@ -922,8 +922,8 @@ autoExpandExamples.aii = `
 ܗܪܘܡܐ||␣||
 ܗܪܟܐ||␣||
 ܗܫ||␣||
-ܗܵܘܢܵܢܹ̈ܐ|wise|hɑ§w§na§ne§–||||x
-ܗܵܘܵܐ|air|hɑː§wɑː§–|hāwā|ܗܘܐ||ܗܘܐ
+ܗܵܘܢܵܢܹ̈ܐ|wise|hɑ,w,na,ne,–||||x
+ܗܵܘܵܐ|air|hɑː,wɑː,–|hāwā|ܗܘܐ||ܗܘܐ
 ܘ|and|w-||||x
 ܘܘ||␣||
 ܘܘܐ||␣||
@@ -942,8 +942,8 @@ autoExpandExamples.aii = `
 ܘܪܩܬܐ||␣||
 ܘܫܪܟܐ ܘܣܟܐ||␣||
 ܘܫܪܟܐ||␣||
-ܘܲܪܵܩܬܵܐ|document, playing card|wa.§ra§qq§tɑ§–|wāraqta|ܘܪܩܬܐ|Nineveh:wa.§ra§qq§θɑ§–|ܘܪܩܬܐ
-ܘܲܪܵܩܵܐ|paper, map|wæ.§raː§qaː§–|wāraqa|ܘܪܩܐ||ܘܪܩܐ
+ܘܲܪܵܩܬܵܐ|document, playing card|wa.,ra,qq,tɑ,–|wāraqta|ܘܪܩܬܐ|Nineveh:wa.,ra,qq,θɑ,–|ܘܪܩܬܐ
+ܘܲܪܵܩܵܐ|paper, map|wæ.,raː,qaː,–|wāraqa|ܘܪܩܐ||ܘܪܩܐ
 ܘܵܪܵܘܘܼܪܕ|attention||varavurd|||x
 ܙܐ||␣||
 ܙܐܥ||␣||
@@ -952,7 +952,7 @@ autoExpandExamples.aii = `
 ܙܓܘܓܝܬܐ||␣||
 ܙܓܝܪܐ||␣||
 ܙܓܪ||␣||
-ܙܓ݂ܘܼܓ݂ܝܼܬܵܐ|glass|z§ɣ§oː§ɣ§iː§tɑ§–|zḡoḡīta|ܙܓܘܓܝܬܐ|Nin:zɣoːɣiːθɑ|ܙܓܘܓܝܬܐ
+ܙܓ݂ܘܼܓ݂ܝܼܬܵܐ|glass|z,ɣ,oː,ɣ,iː,tɑ,–|zḡoḡīta|ܙܓܘܓܝܬܐ|Nin:zɣoːɣiːθɑ|ܙܓܘܓܝܬܐ
 ܙܕܘܥܬܐ||␣||
 ܙܕܝܩܐ||␣||
 ܙܕܥ||␣||
@@ -1017,10 +1017,10 @@ autoExpandExamples.aii = `
 ܙܪܝܦܬܐ||␣||
 ܙܪܩ||␣||
 ܙܪܩܐ||␣||
-ܙܵܒ݂ܹܢ|to buy|zɑː§wə§n|zawen|ܙܒܢ|Urm:zɑːvən|ܙܒܢ
-ܙܵܕܹܥ|to be afraid|zɑː§də§ʕ|zadeʿ|ܙܕܥ|Urm:zɑd.deʔ|ܙܕܥ
-ܙܵܘܕܵܐ|more|zɑ§w§dɑ§–|zāwdā|||x
-ܙܵܪܓܵܐ|yellow|zɑ§rr§ɡɑː§–|zarga|ܙܪܓܐ|Urm:zɑrːd͡ʒɑː, zæ§r.§de§–|ܙܪܓܐ
+ܙܵܒ݂ܹܢ|to buy|zɑː,wə,n|zawen|ܙܒܢ|Urm:zɑːvən|ܙܒܢ
+ܙܵܕܹܥ|to be afraid|zɑː,də,ʕ|zadeʿ|ܙܕܥ|Urm:zɑd.deʔ|ܙܕܥ
+ܙܵܘܕܵܐ|more|zɑ,w,dɑ,–|zāwdā|||x
+ܙܵܪܓܵܐ|yellow|zɑ,rr,ɡɑː,–|zarga|ܙܪܓܐ|Urm:zɑrːd͡ʒɑː, zæ,r.,de,–|ܙܪܓܐ
 ܚܐܛ||␣||
 ܚܐܟ||␣||
 ܚܐܦ||␣||
@@ -1030,7 +1030,7 @@ autoExpandExamples.aii = `
 ܚܐܪܘܬܐ||␣||
 ܚܐܪܬܐ||␣||
 ܚܐܫܐ||␣||
-ܚܐܵܛܵܐ|to sew|x§a§tˤa§–||||x
+ܚܐܵܛܵܐ|to sew|x,a,tˤa,–||||x
 ܚܒܘܟܝܐ||␣||
 ܚܒܘܫܐ||␣||
 ܚܒܝܒܐ||␣||
@@ -1096,10 +1096,10 @@ autoExpandExamples.aii = `
 ܚܘܪܡܠܐ||␣||
 ܚܘܪܬܐ||␣||
 ܚܘܫܒܢܐ||␣||
-ܚܘܵܪܵܐ|white|x§wɑː§rɑː§–|ḳwara|ܚܘܪܐ||ܚܘܪܐ
-ܚܘܼܘܵܐ|snake, serpent|ˈx§uː.§wä§–|xūwa|ܚܘܘܐ||ܚܘܘܐ
-ܚܘܼܘܹܐ|snake, serpent|ˈx§uː.§we§–|ḥuwē|ܚܘܘܐ||ܚܘܘܐ
-ܚܘܼܛܵܡܲܠܵܠܵܐ|telephone|x§uː§tˤɑː§ma§l.lɑː§lɑ§–|ḳuṭamālala|ܚܘܛܡܠܠܐ||ܚܘܛܡܠܠܐ
+ܚܘܵܪܵܐ|white|x,wɑː,rɑː,–|ḳwara|ܚܘܪܐ||ܚܘܪܐ
+ܚܘܼܘܵܐ|snake, serpent|ˈx,uː.,wä,–|xūwa|ܚܘܘܐ||ܚܘܘܐ
+ܚܘܼܘܹܐ|snake, serpent|ˈx,uː.,we,–|ḥuwē|ܚܘܘܐ||ܚܘܘܐ
+ܚܘܼܛܵܡܲܠܵܠܵܐ|telephone|x,uː,tˤɑː,ma,l.lɑː,lɑ,–|ḳuṭamālala|ܚܘܛܡܠܠܐ||ܚܘܛܡܠܠܐ
 ܚܙܐ||␣||
 ܚܙܘܐ||␣||
 ܚܙܘܢܐ||␣||
@@ -1213,17 +1213,17 @@ autoExpandExamples.aii = `
 ܚܬܡ||␣||
 ܚܬܡܐ||␣||
 ܚܬܢܐ||␣||
-ܚܲܕܸܥܣܲܪ|eleven|xāː§di§ʕʕ§sā§r|ḳādiʿsār|ܚܕܥܣܪ||ܚܕܥܣܪ
-ܚܲܕ݇ܒ݂ܫܵܒܵܐ|Sunday|xo.§–§‹‹§ʃɑː§bɑ§–|ḳāwšaba|ܚܕܒܫܒܐ|Urm:xo.ʃiːbɑ|ܚܕܒܫܒܐ
-ܚܲܡܫܲܥܣܲܪ|fifteen|xā§mm§ʃā§ʕʕ§sā§r||ܚܡܫܥܣܪ||ܚܡܫܥܣܪ
-ܚܲܡܫܵܐ|five|xɑ§m.§ʃɑː§–|ḳāmša|ܚܡܫܐ|Nin:ħɑm.ʃɑː|ܚܡܫܐ
-ܚܲܦ̮ܠܵܐ|party, celebration|ħa§f.§la§–|ḥafla|ܚܦܠܐ||ܚܦܠܐ
-ܚܲܪܕ̄ܠܵܐ|mustard|ħa§r§dᵊ§lɑ§–||ܚܪܕܠܐ||ܚܪܕܠܐ
-ܚܵܘܵܐ|Eve|xɑ§wɑ§–||||x
-ܚܵܬܵܐ ܕܲܒܪܵܬܵܐ|sister of girl|xɑ§tɑ§–§ §da§b§rɑ§tɑ§–||||x
+ܚܲܕܸܥܣܲܪ|eleven|xāː,di,ʕʕ,sā,r|ḳādiʿsār|ܚܕܥܣܪ||ܚܕܥܣܪ
+ܚܲܕ݇ܒ݂ܫܵܒܵܐ|Sunday|xo.,–,‹‹,ʃɑː,bɑ,–|ḳāwšaba|ܚܕܒܫܒܐ|Urm:xo.ʃiːbɑ|ܚܕܒܫܒܐ
+ܚܲܡܫܲܥܣܲܪ|fifteen|xā,mm,ʃā,ʕʕ,sā,r||ܚܡܫܥܣܪ||ܚܡܫܥܣܪ
+ܚܲܡܫܵܐ|five|xɑ,m.,ʃɑː,–|ḳāmša|ܚܡܫܐ|Nin:ħɑm.ʃɑː|ܚܡܫܐ
+ܚܲܦ̮ܠܵܐ|party, celebration|ħa,f.,la,–|ḥafla|ܚܦܠܐ||ܚܦܠܐ
+ܚܲܪܕ̄ܠܵܐ|mustard|ħa,r,dᵊ,lɑ,–||ܚܪܕܠܐ||ܚܪܕܠܐ
+ܚܵܘܵܐ|Eve|xɑ,wɑ,–||||x
+ܚܵܬܵܐ ܕܲܒܪܵܬܵܐ|sister of girl|xɑ,tɑ,–, ,da,b,rɑ,tɑ,–||||x
 ܚܸܢܓ̰ܵܠܵܘܣܵܐ|mandrake||ḥinjālāwsā|ܚܢܓ̰ܠܘܣܐ||ܚܢܓ̰ܠܘܣܐ
-ܚܹܐܪܘܼܬܵܐ|freedom, liberty|xi.§–§r§ʊː§ta§–|ḳēruta|ܚܐܪܘܬܐ|*|ܚܐܪܘܬܐ
-ܚܹܐܪܵܐ|free|xiː§–§ra§–|ḳēra|ܚܐܪܐ|*|ܚܐܪܐ
+ܚܹܐܪܘܼܬܵܐ|freedom, liberty|xi.,–,r,ʊː,ta,–|ḳēruta|ܚܐܪܘܬܐ|*|ܚܐܪܘܬܐ
+ܚܹܐܪܵܐ|free|xiː,–,ra,–|ḳēra|ܚܐܪܐ|*|ܚܐܪܐ
 ܛܐܒ||␣||
 ܛܐܠܢܐ||␣||
 ܛܐܠܢܬܐ||␣||
@@ -1253,7 +1253,7 @@ autoExpandExamples.aii = `
 ܛܘܪܐ ܐܟܘܡܐ||␣||
 ܛܘܪܝܐ||␣||
 ܛܘܪܩܝܐ||␣||
-ܛܘܼܪܟܝܼܵܐ|Türkiye|tˤ§u§rr§k§iːja§–|turkīyā|ܛܘܪܟܝܐ||ܛܘܪܟܝܐ
+ܛܘܼܪܟܝܼܵܐ|Türkiye|tˤ,u,rr,k,iːja,–|turkīyā|ܛܘܪܟܝܐ||ܛܘܪܟܝܐ
 ܛܝܒܘ ܕܝܢ ܠ-||␣||
 ܛܝܒܘ ܠܐܠܗܐ||␣||
 ܛܝܘܣܐ||␣||
@@ -1293,9 +1293,9 @@ autoExpandExamples.aii = `
 ܛܫܐ||␣||
 ܛܫܗܝܐ||␣||
 ܛܲܒܵܚ|August|tˤab.bax|ṭabbaḳ|ܛܒܚ|Nin:tˤab.baħ|ܛܒܚ
-ܛܲܪܦܵܐ|leaf|tˤa§rr§pɑ§–||ܛܪܦܐ||ܛܪܦܐ
-ܛܵܒ݂ܬܵܐ|goodness|tˤoː§‹§tɑː§–|ṭawta|ܛܒܬܐ|Urm:tˤɑvːtɑː; Nin:tˤɑwːθɑː|ܛܒܬܐ
-ܛܵܡܵܛܵܐ|tomato|tˤɑː§mɑː§tˤɑː§–|ṭamaṭa|ܛܡܛܐ||ܛܡܛܐ
+ܛܲܪܦܵܐ|leaf|tˤa,rr,pɑ,–||ܛܪܦܐ||ܛܪܦܐ
+ܛܵܒ݂ܬܵܐ|goodness|tˤoː,‹,tɑː,–|ṭawta|ܛܒܬܐ|Urm:tˤɑvːtɑː; Nin:tˤɑwːθɑː|ܛܒܬܐ
+ܛܵܡܵܛܵܐ|tomato|tˤɑː,mɑː,tˤɑː,–|ṭamaṭa|ܛܡܛܐ||ܛܡܛܐ
 ܝܐ||␣||
 ܝܐܐ||␣||
 ܝܐܒ||␣||
@@ -1347,7 +1347,7 @@ autoExpandExamples.aii = `
 ܝܘܬ||␣||
 ܝܘܬܝ||␣||
 ܝܘܬܪܢܐ||␣||
-ܝܘܼܪܕܢܵܢ|Jordan|j§u§r§dd§na§n|yurdnan|ܝܘܪܕܢܢ||ܝܘܪܕܢܢ
+ܝܘܼܪܕܢܵܢ|Jordan|j,u,r,dd,na,n|yurdnan|ܝܘܪܕܢܢ||ܝܘܪܕܢܢ
 ܝܟܛܐ||␣||
 ܝܠܕ||␣||
 ܝܠܕܐ||␣||
@@ -1409,18 +1409,18 @@ autoExpandExamples.aii = `
 ܝܬܝܪܘܬܐ||␣||
 ܝܬܪܐ||␣||
 ܝܬܪܝ ܩܠܐ||␣||
-ܝܲܪܘܿܩܵܐ|green|ja.§r§oː§qɑː§–|yāroqa|ܝܪܘܩܐ||ܝܪܘܩܐ
-ܝܵܘܡܵܐ|day|jʊː§‹§mɑː§–|yawma|ܝܘܡܐ||ܝܘܡܐ
-ܝܵܠܹ̈ܐ|boys|jɑ§le§–||||x
-ܝܵܡܵܢ|Yemen|jaː§ma§n|yaman|ܝܡܢ||ܝܡܢ
-ܝܸܡܵܐ|mother, mum|ji§m.mɑː§–|yimma|ܝܡܐ||ܝܡܐ
-ܟ̰ܝܼܟܵܠܹܬܹܐ|chocolate|ˈt͡ʃ§i.§ka.§leː§teː§–|čīkalete|ܟ̰ܝܟܠܬܐ||ܟ̰ܝܟܠܬܐ
-ܟ̰ܝܼܢܵܐ|China|tʃ§īː§na§–|čīna|ܟ̰ܝܢܐ||ܟ̰ܝܢܐ
-ܟ̰ܵܐܝ|tea|t͡ʃaː§–§j|čay|ܟ̰ܐܝ|also: t͡ʃaːʔi|ܟ̰ܐܝ
-ܟ̰ܵܝܹܕ|to invite|t͡ʃɑː§jə§d|čayed|ܟ̰ܝܕ||ܟ̰ܝܕ
-ܟ̰ܵܡܹܥ|to quench, extinguish|t͡ʃɑː§me§ʕʕ|čameʿ|ܟ̰ܡܥ|Urm:t͡ʃɑːmeʔː|ܟ̰ܡܥ
-ܟ̰ܸܠܲܝܩܵܐ|strawberry|tʃə§l.leː§‹§qaː§–|čillayqa|ܟ̰ܠܝܩܐ||ܟ̰ܠܝܩܐ
-ܟ̰ܹܟܡܲܟ̰ܵܐ|glove compartment|t͡ʃe§k.§ma.§t͡ʃɑː§–|čekmāča|ܟ̰ܟܡܟ̰ܐ||ܟ̰ܟܡܟ̰ܐ
+ܝܲܪܘܿܩܵܐ|green|ja.,r,oː,qɑː,–|yāroqa|ܝܪܘܩܐ||ܝܪܘܩܐ
+ܝܵܘܡܵܐ|day|jʊː,‹,mɑː,–|yawma|ܝܘܡܐ||ܝܘܡܐ
+ܝܵܠܹ̈ܐ|boys|jɑ,le,–||||x
+ܝܵܡܵܢ|Yemen|jaː,ma,n|yaman|ܝܡܢ||ܝܡܢ
+ܝܸܡܵܐ|mother, mum|ji,m.mɑː,–|yimma|ܝܡܐ||ܝܡܐ
+ܟ̰ܝܼܟܵܠܹܬܹܐ|chocolate|ˈt͡ʃ,i.,ka.,leː,teː,–|čīkalete|ܟ̰ܝܟܠܬܐ||ܟ̰ܝܟܠܬܐ
+ܟ̰ܝܼܢܵܐ|China|tʃ,īː,na,–|čīna|ܟ̰ܝܢܐ||ܟ̰ܝܢܐ
+ܟ̰ܵܐܝ|tea|t͡ʃaː,–,j|čay|ܟ̰ܐܝ|also: t͡ʃaːʔi|ܟ̰ܐܝ
+ܟ̰ܵܝܹܕ|to invite|t͡ʃɑː,jə,d|čayed|ܟ̰ܝܕ||ܟ̰ܝܕ
+ܟ̰ܵܡܹܥ|to quench, extinguish|t͡ʃɑː,me,ʕʕ|čameʿ|ܟ̰ܡܥ|Urm:t͡ʃɑːmeʔː|ܟ̰ܡܥ
+ܟ̰ܸܠܲܝܩܵܐ|strawberry|tʃə,l.leː,‹,qaː,–|čillayqa|ܟ̰ܠܝܩܐ||ܟ̰ܠܝܩܐ
+ܟ̰ܹܟܡܲܟ̰ܵܐ|glove compartment|t͡ʃe,k.,ma.,t͡ʃɑː,–|čekmāča|ܟ̰ܟܡܟ̰ܐ||ܟ̰ܟܡܟ̰ܐ
 ܟܐ||␣||
 ܟܐܒ ܐܠܥܐ||␣||
 ܟܐܒ ܐܪܝܐ||␣||
@@ -1474,10 +1474,10 @@ autoExpandExamples.aii = `
 ܟܘܬܐ||␣||
 ܟܘܬܩܐ||␣||
 ܟܘܬܪܐ||␣||
-ܟܘܵܝܬ|Kuwait|k§we§‹§t|kwet|ܟܘܝܬ||ܟܘܝܬ
-ܟܘܼܒܵܐ|thorn|k§u§b.bɑː§–|kubba|ܟܘܒܐ|Urm:t͡ʃub.bɑː|ܟܘܒܐ
-ܟܘܼܡܵܬܪܵܐ|pear|k§ʊː§mɑː§t§rɑː§–|kumatra|ܟܘܡܬܪܐ|Urm:tʃɑːmʊːtrɑː; Nin:kʊːmɑːθrɑː|ܟܘܡܬܪܐ
-ܟܘܼܣܝܼܬܵܐ|head covering, hat|k§ʊ.§s§iː§ta§–|kusīta|ܟܘܣܝܬܐ|Urm:tʃo.siːta|ܟܘܣܝܬܐ
+ܟܘܵܝܬ|Kuwait|k,we,‹,t|kwet|ܟܘܝܬ||ܟܘܝܬ
+ܟܘܼܒܵܐ|thorn|k,u,b.bɑː,–|kubba|ܟܘܒܐ|Urm:t͡ʃub.bɑː|ܟܘܒܐ
+ܟܘܼܡܵܬܪܵܐ|pear|k,ʊː,mɑː,t,rɑː,–|kumatra|ܟܘܡܬܪܐ|Urm:tʃɑːmʊːtrɑː; Nin:kʊːmɑːθrɑː|ܟܘܡܬܪܐ
+ܟܘܼܣܝܼܬܵܐ|head covering, hat|k,ʊ.,s,iː,ta,–|kusīta|ܟܘܣܝܬܐ|Urm:tʃo.siːta|ܟܘܣܝܬܐ
 ܟܝܒܘ||␣||
 ܟܝܕܢ||␣||
 ܟܝܘܝ||␣||
@@ -1494,8 +1494,8 @@ autoExpandExamples.aii = `
 ܟܝܣܬܐ||␣||
 ܟܝܦܙ||␣||
 ܟܝܪܐ||␣||
-ܟܝܵܢܵܐ|cyan|k§j.ɑː§nɑː§–|kyana|ܟܝܢܐ||ܟܝܢܐ
-ܟܝܼܘܝܼ|kiwi|k§iː§w§iː|kīwī|ܟܝܘܝ||ܟܝܘܝ
+ܟܝܵܢܵܐ|cyan|k,j.ɑː,nɑː,–|kyana|ܟܝܢܐ||ܟܝܢܐ
+ܟܝܼܘܝܼ|kiwi|k,iː,w,iː|kīwī|ܟܝܘܝ||ܟܝܘܝ
 ܟܟܐ||␣||
 ܟܟܚ||␣||
 ܟܟܚܐ||␣||
@@ -1581,16 +1581,16 @@ autoExpandExamples.aii = `
 ܟܬܝܒܐ||␣||
 ܟܬܝܬܐ||␣||
 ܟܬܪ||␣||
-ܟܲܒܝܼܪܵܐ|large, massive|ka§b.b§iː§rɑː§–|kābīra|ܟܒܝܪܐ|Urm:t͡ʃab.biːrɑː|ܟܒܝܪܐ
-ܟܲܠܒ݂ܵܐ|dog|kæ§l.§wɑ§–|kālwa|ܟܠܒܐ|Urm:tʃæl.bɑ; Nin:kal.bɑ|ܟܠܒܐ
-ܟܵܘܬܵܐ|window|k§oː§tɑ§–|kawta|ܟܘܬܐ|Nin:kawːθɑ|ܟܘܬܐ
-ܟܵܝܹܦ|to bow|kɑː§jə§p|kayep|ܟܝܦ||ܟܝܦ
-ܟܵܟ̰ܹܚ|to be tired|kɑː§t͡ʃə§xx|kačeḳ|ܟܟ̰ܚ||ܟܟ̰ܚ
-ܟܵܠܹܐ|to stop|kɑː§leː§–|kale|ܟܠܐ||ܟܠܐ
-ܟܵܢܘܿܢ|winter month|kaː§n§ʊ§n|kanon|ܟܢܘܢ|Urm:tʃaːnʊn|ܟܢܘܢ
-ܟܵܬܹܒ݂|to write|kaː§tʊ§–|katew|ܟܬܒ|Urm:tʃaːtɛv|ܟܬܒ
-ܟܹܐ|twenty-one|kiː§–|ke|ܟܐ|Urm:tʃiː|ܟܐ
-ܟ݁ܘܵܝܬ݁|Kuwait|k§we§‹§t|kwet|ܟܘܝܬ||ܟܘܝܬ
+ܟܲܒܝܼܪܵܐ|large, massive|ka,b.b,iː,rɑː,–|kābīra|ܟܒܝܪܐ|Urm:t͡ʃab.biːrɑː|ܟܒܝܪܐ
+ܟܲܠܒ݂ܵܐ|dog|kæ,l.,wɑ,–|kālwa|ܟܠܒܐ|Urm:tʃæl.bɑ; Nin:kal.bɑ|ܟܠܒܐ
+ܟܵܘܬܵܐ|window|k,oː,tɑ,–|kawta|ܟܘܬܐ|Nin:kawːθɑ|ܟܘܬܐ
+ܟܵܝܹܦ|to bow|kɑː,jə,p|kayep|ܟܝܦ||ܟܝܦ
+ܟܵܟ̰ܹܚ|to be tired|kɑː,t͡ʃə,xx|kačeḳ|ܟܟ̰ܚ||ܟܟ̰ܚ
+ܟܵܠܹܐ|to stop|kɑː,leː,–|kale|ܟܠܐ||ܟܠܐ
+ܟܵܢܘܿܢ|winter month|kaː,n,ʊ,n|kanon|ܟܢܘܢ|Urm:tʃaːnʊn|ܟܢܘܢ
+ܟܵܬܹܒ݂|to write|kaː,tʊ,–|katew|ܟܬܒ|Urm:tʃaːtɛv|ܟܬܒ
+ܟܹܐ|twenty-one|kiː,–|ke|ܟܐ|Urm:tʃiː|ܟܐ
+ܟ݁ܘܵܝܬ݁|Kuwait|k,we,‹,t|kwet|ܟܘܝܬ||ܟܘܝܬ
 ܠ|to|l-||||x
 ܠܐ ܕܩܪܐ||␣||
 ܠܐ ܝܠܗ ܗܕܟ||␣||
@@ -1686,16 +1686,16 @@ autoExpandExamples.aii = `
 ܠܬܒܝܐ||␣||
 ܠܬܚܬ ܡܢ||␣||
 ܠܬܚܬ||␣||
-ܠܲܝܠܹܐ|nighttime|leː§‹§leː§–|layle|ܠܝܠܐ||ܠܝܠܐ
-ܠܲܦܵܐ|wave|la§p.pɑː§–|lappā|ܠܦܐ||ܠܦܐ
-ܠܵܐܝ ܠܵܐܝ|lullaby|la§–§j§ §la§–§j|lāʾylāʾy|||x
+ܠܲܝܠܹܐ|nighttime|leː,‹,leː,–|layle|ܠܝܠܐ||ܠܝܠܐ
+ܠܲܦܵܐ|wave|la,p.pɑː,–|lappā|ܠܦܐ||ܠܦܐ
+ܠܵܐܝ ܠܵܐܝ|lullaby|la,–,j, ,la,–,j|lāʾylāʾy|||x
 ܠܵܘܵܫܵܐ|a flap of thin bread||lāwāšā|ܠܘܫܐ||ܠܘܫܐ
-ܠܸܒܢܵܢ|Lebanon|li§bb§na§n|libnan|ܠܒܢܢ||ܠܒܢܢ
-ܠܸܒ݂ܢܵܢ|name of a mountain range|ljuː§‹§na§n|liwnan|ܠܒܢܢ||ܠܒܢܢ
-ܠܸܫܵܢܵܐ|language|lə§ʃˈʃɑː§nɑː§–|lišana|ܠܫܢܐ|was lɪ§ʃa§na§–|ܠܫܢܐ
-ܠܹܘܒ݂ܹܐ|Libya|liː§uː§we§–|lewe|ܠܘܒܐ||ܠܘܒܐ
-ܡ̇ܢ|who|ma§n||ܡܢ||ܡܢ
-ܡ̣ܢ|from|mɪ§n||ܡܢ||ܡܢ
+ܠܸܒܢܵܢ|Lebanon|li,bb,na,n|libnan|ܠܒܢܢ||ܠܒܢܢ
+ܠܸܒ݂ܢܵܢ|name of a mountain range|ljuː,‹,na,n|liwnan|ܠܒܢܢ||ܠܒܢܢ
+ܠܸܫܵܢܵܐ|language|lə,ʃˈʃɑː,nɑː,–|lišana|ܠܫܢܐ|was lɪ,ʃa,na,–|ܠܫܢܐ
+ܠܹܘܒ݂ܹܐ|Libya|liː,uː,we,–|lewe|ܠܘܒܐ||ܠܘܒܐ
+ܡ̇ܢ|who|ma,n||ܡܢ||ܡܢ
+ܡ̣ܢ|from|mɪ,n||ܡܢ||ܡܢ
 ܡܐ ܐܝܬ ܒܘܟ||␣||
 ܡܐ ܐܝܬ ܠܘܟ||␣||
 ܡܐ ܐܝܬ||␣||
@@ -1863,8 +1863,8 @@ autoExpandExamples.aii = `
 ܡܘܫܟܠܐ||␣||
 ܡܘܬܐ||␣||
 ܡܘܬܢܐ||␣||
-ܡܘܼܫܟܸܠܵܐ|problem|m§ʊ§ʃʃ§ki.§la§–|muškila|ܡܘܫܟܠܐ||ܡܘܫܟܠܐ
-ܡܘܿܕܵܐ|bowl|m§o§dɑ§–||||x
+ܡܘܼܫܟܸܠܵܐ|problem|m,ʊ,ʃʃ,ki.,la,–|muškila|ܡܘܫܟܠܐ||ܡܘܫܟܠܐ
+ܡܘܿܕܵܐ|bowl|m,o,dɑ,–||||x
 ܡܙܒܢ||␣||
 ܡܙܓ||␣||
 ܡܙܕܒܢܢܐ||␣||
@@ -2001,7 +2001,7 @@ autoExpandExamples.aii = `
 ܡܝܬܐ||␣||
 ܡܝܬܒ||␣||
 ܡܝܬܪܐ||␣||
-ܡܝܼܫ̰|fog|m§iː§ʒ|miš|ܡܝܫ||ܡܝܫ
+ܡܝܼܫ̰|fog|m,iː,ʒ|miš|ܡܝܫ||ܡܝܫ
 ܡܟܐ||␣||
 ܡܟܒܪ||␣||
 ܡܟܘܝܢܝܬܐ||␣||
@@ -2046,7 +2046,7 @@ autoExpandExamples.aii = `
 ܡܠܘܦܐ||␣||
 ܡܠܘܫܐ||␣||
 ܡܠܘܬ||␣||
-ܡܠܘܿܐܵܐ|matter|m§l§o§ʔɑ§–||ܡܠܘܐܐ||ܡܠܘܐܐ
+ܡܠܘܿܐܵܐ|matter|m,l,o,ʔɑ,–||ܡܠܘܐܐ||ܡܠܘܐܐ
 ܡܠܚܡ||␣||
 ܡܠܚܡܢܝܬ ܗܘܐ||␣||
 ܡܠܚܡܢܝܬܐ||␣||
@@ -2420,22 +2420,22 @@ autoExpandExamples.aii = `
 ܡܬܬܒܪܢܐ||␣||
 ܡܬܬܕܪܟܢܐ||␣||
 ܡܬܬܚܝܒܢܐ||␣||
-ܡܲܐܟ݂ܸܠ|to feed|ma§ʔ.§xə§l|māʾḳil|ܡܐܟܠ|Urm:maːxəl|ܡܐܟܠ
-ܡܲܕܒ̄ܚܵܐ|altar|ma§ð§bᵊ§ħɑ§–|maḏbəḥā|ܡܕܒܚܐ||ܡܕܒܚܐ
-ܡܲܕ݂ܢ̱ܚܵܐ|east|ma§ð.§nə§xɑː§–|maḏnḥā|ܡܕܢܚܐ||ܡܕܢܚܐ
-ܡܲܘܕܹܐ|to admit|moː§‹§deː§–|mawdē|ܡܘܕܐ||ܡܘܕܐ
-ܡܲܘܡܼܬܵܐ|oath|ma§w§mɑ§θɑ§(ʔ)||ܡܘܡܬܐ|was mo§‹§mi§tɑ§–|ܡܘܡܬܐ
-ܡܲܟܬܵܒ݂ܬܵܐ|desk|ma§k.§toː§‹§tɑ§–|māktawta|ܡܟܬܒܬܐ|Urm:mat͡ʃ.tɑvːtɑ; Nin:mak.θɑwːθɑ|ܡܟܬܒܬܐ
-ܡܲܠܟܘܼܬܵܐ ܡܚܲܝܕܬܵܐ|United Kingdom|ma§l.§k§ʊː§ta§–§ §m§xɛː§‹§d.§ta§–|mālkuta mḳaydta|ܡܠܟܘܬܐ ܡܚܝܕܬܐ|Urm:mal.tʃʊːta mxɛːd.ta|ܡܠܟܘܬܐ ܡܚܝܕܬܐ
-ܡܲܠܟܘܼܬܵܐ ܥܵܪܵܒܵܝܬܵܐ ܣܵܥܘܼܕܵܝܬܵܐ|Saudi Arabia|ma§l.§k§uː§tɑː§–§‿§ʕɑː§rɑː§beː§‹§tɑː§–§‿§sɑː§ʕ§uː§deː§‹§tɑ§–|mālkuta ʿarabayta saʿudayta|ܡܠܟܘܬܐ ܥܪܒܝܬܐ ܣܥܘܕܝܬܐ|Urm:mal.t͡ʃuːtɑː‿ʔɑːrɑːbeːtɑː‿sɑːʕuːdeːtɑ; Nin:mal.kuːθɑː‿ʕɑːrɑːbajːθɑː‿sɑːʕuːdajːθɑ|ܡܠܟܘܬܐ ܥܪܒܝܬܐ ܣܥܘܕܝܬܐ
-ܡܲܠܟܵܐ|king|ma§l.§kɑː§–|mālka|ܡܠܟܐ|Urm:mal.t͡ʃɑː|ܡܠܟܐ
-ܡܲܠܟܹ̈ܐ|kings|ma§l.§ke§–||ܡܠܟܐ||ܡܠܟܐ
-ܡܲܥܪ̱ܒ݂ܵܐ|West|ma.§ʕə§r.§wɑː§–|māʿrwa|ܡܥܪܒܐ|Urm:ma.ʔər.vɑː|ܡܥܪܒܐ
-ܡܲܩܕ̄ܫܵܐ|sanctuary|ma§q§dᵊ§ʃɑ§–||||x
-ܡܵܪܵܟܸܫ|Morocco|maː§raː§ki§ʃ|marakiš|ܡܪܟܫ|also Marrakesh|ܡܪܟܫ
-ܡܵܪܹܐ|possessor of|ma§rɪ§–||||x
-ܡܵܬ݂ܘܵܬܹ̈ܐ|villages|mɑ§θ§wɑ§te§–||||x
-ܡܸܨܪܹܝܢ|Egypt|mi§sˤ.§riː§‹§n|miṣrēn|ܡܨܪܝܢ||ܡܨܪܝܢ
+ܡܲܐܟ݂ܸܠ|to feed|ma,ʔ.,xə,l|māʾḳil|ܡܐܟܠ|Urm:maːxəl|ܡܐܟܠ
+ܡܲܕܒ̄ܚܵܐ|altar|ma,ð,bᵊ,ħɑ,–|maḏbəḥā|ܡܕܒܚܐ||ܡܕܒܚܐ
+ܡܲܕ݂ܢ̱ܚܵܐ|east|ma,ð.,nə,xɑː,–|maḏnḥā|ܡܕܢܚܐ||ܡܕܢܚܐ
+ܡܲܘܕܹܐ|to admit|moː,‹,deː,–|mawdē|ܡܘܕܐ||ܡܘܕܐ
+ܡܲܘܡܼܬܵܐ|oath|ma,w,mɑ,θɑ,(ʔ)||ܡܘܡܬܐ|was mo,‹,mi,tɑ,–|ܡܘܡܬܐ
+ܡܲܟܬܵܒ݂ܬܵܐ|desk|ma,k.,toː,‹,tɑ,–|māktawta|ܡܟܬܒܬܐ|Urm:mat͡ʃ.tɑvːtɑ; Nin:mak.θɑwːθɑ|ܡܟܬܒܬܐ
+ܡܲܠܟܘܼܬܵܐ ܡܚܲܝܕܬܵܐ|United Kingdom|ma,l.,k,ʊː,ta,–, ,m,xɛː,‹,d.,ta,–|mālkuta mḳaydta|ܡܠܟܘܬܐ ܡܚܝܕܬܐ|Urm:mal.tʃʊːta mxɛːd.ta|ܡܠܟܘܬܐ ܡܚܝܕܬܐ
+ܡܲܠܟܘܼܬܵܐ ܥܵܪܵܒܵܝܬܵܐ ܣܵܥܘܼܕܵܝܬܵܐ|Saudi Arabia|ma,l.,k,uː,tɑː,–,‿,ʕɑː,rɑː,beː,‹,tɑː,–,‿,sɑː,ʕ,uː,deː,‹,tɑ,–|mālkuta ʿarabayta saʿudayta|ܡܠܟܘܬܐ ܥܪܒܝܬܐ ܣܥܘܕܝܬܐ|Urm:mal.t͡ʃuːtɑː‿ʔɑːrɑːbeːtɑː‿sɑːʕuːdeːtɑ; Nin:mal.kuːθɑː‿ʕɑːrɑːbajːθɑː‿sɑːʕuːdajːθɑ|ܡܠܟܘܬܐ ܥܪܒܝܬܐ ܣܥܘܕܝܬܐ
+ܡܲܠܟܵܐ|king|ma,l.,kɑː,–|mālka|ܡܠܟܐ|Urm:mal.t͡ʃɑː|ܡܠܟܐ
+ܡܲܠܟܹ̈ܐ|kings|ma,l.,ke,–||ܡܠܟܐ||ܡܠܟܐ
+ܡܲܥܪ̱ܒ݂ܵܐ|West|ma.,ʕə,r.,wɑː,–|māʿrwa|ܡܥܪܒܐ|Urm:ma.ʔər.vɑː|ܡܥܪܒܐ
+ܡܲܩܕ̄ܫܵܐ|sanctuary|ma,q,dᵊ,ʃɑ,–||||x
+ܡܵܪܵܟܸܫ|Morocco|maː,raː,ki,ʃ|marakiš|ܡܪܟܫ|also Marrakesh|ܡܪܟܫ
+ܡܵܪܹܐ|possessor of|ma,rɪ,–||||x
+ܡܵܬ݂ܘܵܬܹ̈ܐ|villages|mɑ,θ,wɑ,te,–||||x
+ܡܸܨܪܹܝܢ|Egypt|mi,sˤ.,riː,‹,n|miṣrēn|ܡܨܪܝܢ||ܡܨܪܝܢ
 ܢ-||␣||
 ܢܐ||␣||
 ܢܐܣ||␣||
@@ -2470,8 +2470,8 @@ autoExpandExamples.aii = `
 ܢܘܩܢܩܐ||␣||
 ܢܘܪܐ||␣||
 ܢܘܪܢܝܐ||␣||
-ܢܘܼܟ݂ܪ̈ܵܝܹܐ|foreign|n§u§x§ˈrɑ.§jɑ§–|nūḵrāyā|ܢܘܟܪܝܐ|was nuxrajɪ|ܢܘܟܪܝܐ
-ܢܘܼܢܵܐ|fish|n§ʊː§nɑː§–|nuna|ܢܘܢܐ||ܢܘܢܐ
+ܢܘܼܟ݂ܪ̈ܵܝܹܐ|foreign|n,u,x,ˈrɑ.,jɑ,–|nūḵrāyā|ܢܘܟܪܝܐ|was nuxrajɪ|ܢܘܟܪܝܐ
+ܢܘܼܢܵܐ|fish|n,ʊː,nɑː,–|nuna|ܢܘܢܐ||ܢܘܢܐ
 ܢܚܠܐ||␣||
 ܢܚܢܚܬܐ||␣||
 ܢܚܬ||␣||
@@ -2489,8 +2489,8 @@ autoExpandExamples.aii = `
 ܢܝܫܐ||␣||
 ܢܝܫܢܩܐ ܕܡܪܕܝܬܐ||␣||
 ܢܝܫܢܩܐ||␣||
-ܢܝܼܢܘܹܐ|Nineveh|n§i§nn§wɛ§–|nīnwē|ܢܝܢܘܐ|Urm:ninːvɛ|ܢܝܢܘܐ
-ܢܝܼܫܵܐ|aim, purpose|n§i§ʃa§–||ܢܝܫܐ||ܢܝܫܐ
+ܢܝܼܢܘܹܐ|Nineveh|n,i,nn,wɛ,–|nīnwē|ܢܝܢܘܐ|Urm:ninːvɛ|ܢܝܢܘܐ
+ܢܝܼܫܵܐ|aim, purpose|n,i,ʃa,–||ܢܝܫܐ||ܢܝܫܐ
 ܢܟܠ||␣||
 ܢܟܦ||␣||
 ܢܡܘܣܐ||␣||
@@ -2538,9 +2538,9 @@ autoExpandExamples.aii = `
 ܢܬܐ||␣||
 ܢܬܝܓܐ||␣||
 ܢܬܪ||␣||
-ܢܵܫܹܐ|to forget|naː§ʃe§–|naše|ܢܫܐ||ܢܫܐ
-ܢܵܬܵܐ|ear|ˈnä.§tʰä§–|nātā|ܢܬܐ||ܢܬܐ
-ܢܸܫܡ̱ܬܵܐ|breath, spirit|nə§ʃa§mᵊ§θɑː§–||ܢܫܡܬܐ|was niʃmmtɑ|ܢܫܡܬܐ
+ܢܵܫܹܐ|to forget|naː,ʃe,–|naše|ܢܫܐ||ܢܫܐ
+ܢܵܬܵܐ|ear|ˈnä.,tʰä,–|nātā|ܢܬܐ||ܢܬܐ
+ܢܸܫܡ̱ܬܵܐ|breath, spirit|nə,ʃa,mᵊ,θɑː,–||ܢܫܡܬܐ|was niʃmmtɑ|ܢܫܡܬܐ
 ܣܐܘ ܬܘܡܐ ܘܦܪܝܢܣܝܦܐ||␣||
 ܣܐܡ ܐܝܕܐ||␣||
 ܣܐܡ ܒܠܐ||␣||
@@ -2604,8 +2604,8 @@ autoExpandExamples.aii = `
 ܣܘܪܓܕܐ||␣||
 ܣܘܪܝܐ||␣||
 ܣܘܪܝܝܐ||␣||
-ܣܘܼܪܝܬ|Suret|ˈs§u:§r§ɪ§tʰ|||or ˈsu:rɪθ|x
-ܣܘܼܪܝܼܵܐ|Syria|s§uː§r§iːja§–|Suriya|ܣܘܪܝܐ||ܣܘܪܝܐ
+ܣܘܼܪܝܬ|Suret|ˈs,u:,r,ɪ,tʰ|||or ˈsu:rɪθ|x
+ܣܘܼܪܝܼܵܐ|Syria|s,uː,r,iːja,–|Suriya|ܣܘܪܝܐ||ܣܘܪܝܐ
 ܣܚܐ||␣||
 ܣܚܝܢܐ||␣||
 ܣܚܪܐ ܡܥܪܒܝܬܐ||␣||
@@ -2628,14 +2628,14 @@ autoExpandExamples.aii = `
 ܣܟ||␣||
 ܣܟܐ||␣||
 ܣܟܘܛܝܐ||␣||
-ܣܟܘܼܛܝܼܵܐ|Scotland|s§k§ʊ.§tˤ§iːja§–|skuṭiya|ܣܟܘܛܝܐ||ܣܟܘܛܝܐ
+ܣܟܘܼܛܝܼܵܐ|Scotland|s,k,ʊ.,tˤ,iːja,–|skuṭiya|ܣܟܘܛܝܐ||ܣܟܘܛܝܐ
 ܣܟܪ||␣||
 ܣܟܬܐ ܕܦܪܙܠܐ||␣||
 ܣܠܐ||␣||
 ܣܠܘܒܟܝܐ||␣||
 ܣܠܘܒܢܝܐ||␣||
 ܣܠܘܦܝܬܐ||␣||
-ܣܠܘܿܒ݂ܵܟܵܝܵܐ|Slovakia|s§l§o.§vaː§ki.§jaː§–|slovakaya|ܣܠܘܒܟܝܐ||ܣܠܘܒܟܝܐ
+ܣܠܘܿܒ݂ܵܟܵܝܵܐ|Slovakia|s,l,o.,vaː,ki.,jaː,–|slovakaya|ܣܠܘܒܟܝܐ||ܣܠܘܒܟܝܐ
 ܣܠܛܐ||␣||
 ܣܡܐ ܓܘܢܐ||␣||
 ܣܡܐ ܕܡܘܬܐ||␣||
@@ -2643,7 +2643,7 @@ autoExpandExamples.aii = `
 ܣܡܘܝܐ||␣||
 ܣܡܘܩܐ||␣||
 ܣܡܘܩܬܐ||␣||
-ܣܡܘܿܩܵܐ|red|s§m§ʊː§qaː§–|smoqa|ܣܡܘܩܐ|Nin:smoːqaː|ܣܡܘܩܐ
+ܣܡܘܿܩܵܐ|red|s,m,ʊː,qaː,–|smoqa|ܣܡܘܩܐ|Nin:smoːqaː|ܣܡܘܩܐ
 ܣܡܝܐ||␣||
 ܣܡܝܟܐ||␣||
 ܣܡܝܬܐ||␣||
@@ -2689,16 +2689,16 @@ autoExpandExamples.aii = `
 ܣܪܝܐ||␣||
 ܣܪܣܝܩܐ||␣||
 ܣܪܦ||␣||
-ܣܪܵܓ݂ܵܐ|lamp|ʃ§rɑ§ɣɑ§–||||x
+ܣܪܵܓ݂ܵܐ|lamp|ʃ,rɑ,ɣɑ,–||||x
 ܣܬܘܐ||␣||
 ܣܬܪܐ||␣||
-ܣܲܝܦܵܐ|sword|ˈseː§‹§pɑ§–|saypa|ܣܝܦܐ||ܣܝܦܐ
-ܣܲܡܲܐ|poison|sa§mma§–||ܣܡܐ||ܣܡܐ
-ܣܲܡܵܐ|poison|sa§mma§–||ܣܡܐ||ܣܡܐ
-ܣܵܒ݂ܵܐ|old man|sɑ§vɑ§–||ܣܡܐ||ܣܒܐ
-ܣܵܠܵܐ|basket|sɑ§lɑ§–||||x
-ܣܵܡܵܐ|portion|saː§ma§–||ܣܡܐ||ܣܡܐ
-ܣܵܥܘܼܕܝܼܵܐ|Saudi Arabia|sɑː§ʕ§uː§d§iːjɑ§–|saʿudiya|ܣܥܘܕܝܐ||ܣܥܘܕܝܐ
+ܣܲܝܦܵܐ|sword|ˈseː,‹,pɑ,–|saypa|ܣܝܦܐ||ܣܝܦܐ
+ܣܲܡܲܐ|poison|sa,mma,–||ܣܡܐ||ܣܡܐ
+ܣܲܡܵܐ|poison|sa,mma,–||ܣܡܐ||ܣܡܐ
+ܣܵܒ݂ܵܐ|old man|sɑ,vɑ,–||ܣܡܐ||ܣܒܐ
+ܣܵܠܵܐ|basket|sɑ,lɑ,–||||x
+ܣܵܡܵܐ|portion|saː,ma,–||ܣܡܐ||ܣܡܐ
+ܣܵܥܘܼܕܝܼܵܐ|Saudi Arabia|sɑː,ʕ,uː,d,iːjɑ,–|saʿudiya|ܣܥܘܕܝܐ||ܣܥܘܕܝܐ
 ܥܐ||␣||
 ܥܐܕ ܡܘܠܕܐ||␣||
 ܥܐܕܐ ܕܐܘܫܥܢܐ||␣||
@@ -2735,7 +2735,7 @@ autoExpandExamples.aii = `
 ܥܘܪܠܘܬܐ||␣||
 ܥܘܪܦܢܐ||␣||
 ܥܘܬܡܢܝܐ||␣||
-ܥܘܼܡܲܢ|Oman|ʕ§u.§mæː§n|ʿumān|ܥܘܡܢ||ܥܘܡܢ
+ܥܘܼܡܲܢ|Oman|ʕ,u.,mæː,n|ʿumān|ܥܘܡܢ||ܥܘܡܢ
 ܥܙܐ||␣||
 ܥܙܝܙ||␣||
 ܥܙܝܙܐ||␣||
@@ -2754,7 +2754,7 @@ autoExpandExamples.aii = `
 ܥܝܩܐ||␣||
 ܥܝܪܐ||␣||
 ܥܝܪܩ||␣||
-ܥܝܼܪܲܩ|Iraq|ʔ§īː§ræ§q|ʿīrāq|ܥܝܪܩ||ܥܝܪܩ
+ܥܝܼܪܲܩ|Iraq|ʔ,īː,ræ,q|ʿīrāq|ܥܝܪܩ||ܥܝܪܩ
 ܥܟܒܝܬܐ||␣||
 ܥܠ ܢܘܠܐ||␣||
 ܥܠ||␣||
@@ -2833,14 +2833,14 @@ autoExpandExamples.aii = `
 ܥܬܩ||␣||
 ܥܬܩܐ||␣||
 ܥܬܫܐ||␣||
-ܥܲܡ|with|ʕa§m||ܥܡ||ܥܡ
-ܥܵܪܵܒܝܼܵܐ|Arabia|ʕaː§raː§b§iːja§–|ʿarabiya|ܥܪܒܝܐ||ܥܪܒܝܐ
-ܥܵܪܵܒܵܝܵܐ|Arab|ʕaː§raː§baː§ja§–|ʿarabaya|ܥܪܒܝܐ||ܥܪܒܝܐ
-ܥܸܣܪܝܼ|twenty|ʕi§ss§r§ī|ʿisrī|ܥܣܪܝ||ܥܣܪܝ
-ܥܸܣܪܵܐ|ten|ʕi§ss§ra§–|ʿisra|ܥܣܪܐ||ܥܣܪܐ
-ܥܸܬܫܲܥܣܲܪ|nineteen|ʕi§t§ʃʃā§ʕʕ§sā§r|ʿitšāʿsār|ܥܬܫܥܣܪ||ܥܬܫܥܣܪ
-ܥܸܬܫܵܐ|nine|ʕiː§t§ʃa§–|itša|ܥܬܫܐ||ܥܬܫܐ
-ܦ̮ܵܠܵܣܛܝܼܢ|Palestine|faː§la§ss§tˤ§īː§n|falasṭīn|ܦ̮ܠܣܛܝܢ||ܦ̮ܠܣܛܝܢ
+ܥܲܡ|with|ʕa,m||ܥܡ||ܥܡ
+ܥܵܪܵܒܝܼܵܐ|Arabia|ʕaː,raː,b,iːja,–|ʿarabiya|ܥܪܒܝܐ||ܥܪܒܝܐ
+ܥܵܪܵܒܵܝܵܐ|Arab|ʕaː,raː,baː,ja,–|ʿarabaya|ܥܪܒܝܐ||ܥܪܒܝܐ
+ܥܸܣܪܝܼ|twenty|ʕi,ss,r,ī|ʿisrī|ܥܣܪܝ||ܥܣܪܝ
+ܥܸܣܪܵܐ|ten|ʕi,ss,ra,–|ʿisra|ܥܣܪܐ||ܥܣܪܐ
+ܥܸܬܫܲܥܣܲܪ|nineteen|ʕi,t,ʃʃā,ʕʕ,sā,r|ʿitšāʿsār|ܥܬܫܥܣܪ||ܥܬܫܥܣܪ
+ܥܸܬܫܵܐ|nine|ʕiː,t,ʃa,–|itša|ܥܬܫܐ||ܥܬܫܐ
+ܦ̮ܵܠܵܣܛܝܼܢ|Palestine|faː,la,ss,tˤ,īː,n|falasṭīn|ܦ̮ܠܣܛܝܢ||ܦ̮ܠܣܛܝܢ
 ܦܐܪܐ||␣||
 ܦܐܫ||␣||
 ܦܐܬܐ||␣||
@@ -2871,8 +2871,8 @@ autoExpandExamples.aii = `
 ܦܘܫܝܐ||␣||
 ܦܘܫܩ ܡܠܐ||␣||
 ܦܘܬܚܐ||␣||
-ܦܘܼܪܬܘܼܓܵܠ|Portugal|p§ʊ§r.§t§ʊ.§ɡaː§l|purtugal|ܦܘܪܬܘܓܠ||ܦܘܪܬܘܓܠ
-ܦܘܼܪܬܩܵܠܵܐ|orange|p§ʊ§r§t.§qa§la§–|purtqala|ܦܘܪܬܩܠܐ||ܦܘܪܬܩܠܐ
+ܦܘܼܪܬܘܼܓܵܠ|Portugal|p,ʊ,r.,t,ʊ.,ɡaː,l|purtugal|ܦܘܪܬܘܓܠ||ܦܘܪܬܘܓܠ
+ܦܘܼܪܬܩܵܠܵܐ|orange|p,ʊ,r,t.,qa,la,–|purtqala|ܦܘܪܬܩܠܐ||ܦܘܪܬܩܠܐ
 ܦܚܠܬܐ||␣||
 ܦܚܡܐ||␣||
 ܦܛܝܚܐ||␣||
@@ -2882,7 +2882,7 @@ autoExpandExamples.aii = `
 ܦܝܢܠܢܕܐ||␣||
 ܦܝܫ||␣||
 ܦܝܫܐ||␣||
-ܦܝܫܝ|become|pʰe§‹§ʃ§i||||x
+ܦܝܫܝ|become|pʰe,‹,ʃ,i||||x
 ܦܝܫܢܐ||␣||
 ܦܝܬܣܐ||␣||
 ܦܟܐ||␣||
@@ -2956,10 +2956,10 @@ autoExpandExamples.aii = `
 ܦܪܫܬܐ||␣||
 ܦܪܬ||␣||
 ܦܪܬܘܟ|bullrush, reed||pirtūk|ܦܪܬܘܟ||ܦܪܬܘܟ
-ܦܪܲܢܓܝܼܵܐ|France|ˈp§ra§ŋ.§ɡə§jɑː§–|prāngya|ܦܪܢܓܝܐ||ܦܪܢܓܝܐ
-ܦܪܲܢܓܵܝܵܐ|French|p§rā§n§ɡa§ja§–|prāngya|ܦܪܢܓܝܐ||ܦܪܢܓܝܐ
-ܦܪܵܣܚܸܙܘܵܐ|television|p§ra§s.§xə§zz§wa§–|prasḳizwa|ܦܪܣܚܙܘܐ|Urm:pras.xəzːva; Nin:pras.ħəzːwa|ܦܪܣܚܙܘܐ
-ܦܪܵܣܡܲܠܵܠܵܐ|pager, walkie-talkie|p§rɑ§ss§ma§l.lɑː§lɑ§–|prasmālala|ܦܪܣܡܠܠܐ||ܦܪܣܡܠܠܐ
+ܦܪܲܢܓܝܼܵܐ|France|ˈp,ra,ŋ.,ɡə,jɑː,–|prāngya|ܦܪܢܓܝܐ||ܦܪܢܓܝܐ
+ܦܪܲܢܓܵܝܵܐ|French|p,rā,n,ɡa,ja,–|prāngya|ܦܪܢܓܝܐ||ܦܪܢܓܝܐ
+ܦܪܵܣܚܸܙܘܵܐ|television|p,ra,s.,xə,zz,wa,–|prasḳizwa|ܦܪܣܚܙܘܐ|Urm:pras.xəzːva; Nin:pras.ħəzːwa|ܦܪܣܚܙܘܐ
+ܦܪܵܣܡܲܠܵܠܵܐ|pager, walkie-talkie|p,rɑ,ss,ma,l.lɑː,lɑ,–|prasmālala|ܦܪܣܡܠܠܐ||ܦܪܣܡܠܠܐ
 ܦܫܝܡܐ||␣||
 ܦܫܝܩܐ||␣||
 ܦܫܡ||␣||
@@ -2975,14 +2975,14 @@ autoExpandExamples.aii = `
 ܦܬܝܚܐ||␣||
 ܦܬܠ||␣||
 ܦܬܩܐ||␣||
-ܦܲܠܸܣܛܝܼܢܵܐ|Palestine (region)|pæː§li§ss§tˤ§īː§na§–|pālisṭīna|ܦܠܣܛܝܢܐ||ܦܠܣܛܝܢܐ
-ܦܲܢܟܵܐ|electric fan|pa§ŋ.§kɑː§–|pānka|ܦܢܟܐ||ܦܢܟܐ
-ܦܵܐܹܣ|become|pʰa§e§ʃ|paʿes|||x
-ܦܵܓܵܐ|stable|pɑ§gɑ§–||||x
-ܦܵܝܕܵܐ|benefit|pa§j§da§–||||x
-ܦܵܝܫܝܼ|become|pʰe§‹§ʃ§i||||x
+ܦܲܠܸܣܛܝܼܢܵܐ|Palestine (region)|pæː,li,ss,tˤ,īː,na,–|pālisṭīna|ܦܠܣܛܝܢܐ||ܦܠܣܛܝܢܐ
+ܦܲܢܟܵܐ|electric fan|pa,ŋ.,kɑː,–|pānka|ܦܢܟܐ||ܦܢܟܐ
+ܦܵܐܹܣ|become|pʰa,e,ʃ|paʿes|||x
+ܦܵܓܵܐ|stable|pɑ,gɑ,–||||x
+ܦܵܝܕܵܐ|benefit|pa,j,da,–||||x
+ܦܵܝܫܝܼ|become|pʰe,‹,ʃ,i||||x
 ܦܵܝܹܫ|to become|pɑːjəʃ|payeš|ܦܝܫ||ܦܝܫ
-ܦܵܪܹܥ|to pay|pɑː§rə§ʕʕ|pareʿ|ܦܪܥ|Urm:pɑ.reː|ܦܪܥ
+ܦܵܪܹܥ|to pay|pɑː,rə,ʕʕ|pareʿ|ܦܪܥ|Urm:pɑ.reː|ܦܪܥ
 ܨܐܕ||␣||
 ܨܐܡ||␣||
 ܨܐܢ||␣||
@@ -3007,7 +3007,7 @@ autoExpandExamples.aii = `
 ܨܘܪ||␣||
 ܨܘܪܬ ܙܠܓܐ||␣||
 ܨܘܪܬܐ||␣||
-ܨܘܼܢܵܡܝܼ|tsunami|sˤ§u.§nɑː§m§iː|ṣunamī|ܨܘܢܡܝ||ܨܘܢܡܝ
+ܨܘܼܢܵܡܝܼ|tsunami|sˤ,u.,nɑː,m,iː|ṣunamī|ܨܘܢܡܝ||ܨܘܢܡܝ
 ܨܚܨܐ||␣||
 ܨܚܨܝܬܐ||␣||
 ܨܚܬܝܢ||␣||
@@ -3018,7 +3018,7 @@ autoExpandExamples.aii = `
 ܨܝܦܪ||␣||
 ܨܝܦܪܝܐ||␣||
 ܨܝܪ||␣||
-ܨܝܼܦܵܪ|cipher|sˤ§iː§pa§r|ṣīpar|ܣܝܦܪ||ܣܝܦܪ
+ܨܝܼܦܵܪ|cipher|sˤ,iː,pa,r|ṣīpar|ܣܝܦܪ||ܣܝܦܪ
 ܨܟܐ||␣||
 ܨܠܐ ܘܒܢܐ||␣||
 ܨܠܐ||␣||
@@ -3051,8 +3051,8 @@ autoExpandExamples.aii = `
 ܨܪܦܐ ܒܪܩܝܐ||␣||
 ܨܪܦܐ||␣||
 ܨܪܦܘܬܐ||␣||
-ܨܵܘܸܠܬܵܐ|shoe|sˤaː§wi§l.§taː§–|ṣawīlta|ܨܘܠܬܐ||ܨܘܠܬܐ
-ܨܵܝܕܵܐ|pen, paintbrush|sˤa§j§da§–|sāydā|||x
+ܨܵܘܸܠܬܵܐ|shoe|sˤaː,wi,l.,taː,–|ṣawīlta|ܨܘܠܬܐ||ܨܘܠܬܐ
+ܨܵܝܕܵܐ|pen, paintbrush|sˤa,j,da,–|sāydā|||x
 ܩܐ ܕ-||␣||
 ܩܐ ܛܘܦܣܐ||␣||
 ܩܐ||␣||
@@ -3114,9 +3114,9 @@ autoExpandExamples.aii = `
 ܩܘܪܨܐ ܚܠܝܨܐ||␣||
 ܩܘܪܨܐ||␣||
 ܩܘܬܝܐ||␣||
-ܩܘܼܝܵܡܵܐܼ|subsistence|q§u§ja§ma§–|qûyamaʾ|||x
+ܩܘܼܝܵܡܵܐܼ|subsistence|q,u,ja,ma,–|qûyamaʾ|||x
 ܩܘܼܠܘܼܓ݂|service||k̭ullux|ܩܘܼܠܘܼܓ݂||ܩܘܼܠܘܼܓ݂
-ܩܘܼܦܬܵܐ|owl|q§ʊ§p§ta§–||||x
+ܩܘܼܦܬܵܐ|owl|q,ʊ,p,ta,–||||x
 ܩܙܩܣܛܢ||␣||
 ܩܛܘ||␣||
 ܩܛܘܡܐ||␣||
@@ -3207,16 +3207,16 @@ autoExpandExamples.aii = `
 ܩܫܝܫܐ||␣||
 ܩܫܬܐ||␣||
 ܩܬܐ||␣||
-ܩܲܝܛܵܐ|summer|qe§‹§tˤɑ§–|qayṭa|ܩܝܛܐ||ܩܝܛܐ
-ܩܵܛܵܪ|Qatar|qaː§tˤa§r|qaṭar|ܩܛܪ||ܩܛܪ
-ܩܵܝܵܐ|rock|qɑ§jɑ§–||||x
-ܩܸܢܵܐ|nest|qɪ§nnɑ§–||ܩܢܐ||ܩܢܐ
-ܪ̈ܵܡܹܐ|tall|raː§maː§–|rama|ܪܡܐ||ܪܡܐ
+ܩܲܝܛܵܐ|summer|qe,‹,tˤɑ,–|qayṭa|ܩܝܛܐ||ܩܝܛܐ
+ܩܵܛܵܪ|Qatar|qaː,tˤa,r|qaṭar|ܩܛܪ||ܩܛܪ
+ܩܵܝܵܐ|rock|qɑ,jɑ,–||||x
+ܩܸܢܵܐ|nest|qɪ,nnɑ,–||ܩܢܐ||ܩܢܐ
+ܪ̈ܵܡܹܐ|tall|raː,maː,–|rama|ܪܡܐ||ܪܡܐ
 ܪܐܐ||␣||
 ܪܐܚ||␣||
 ܪܐܡ||␣||
 ܪܐܩ||␣||
-ܪܐܵܫܵܐ|to awaken|r§a§ʃa§–||||x
+ܪܐܵܫܵܐ|to awaken|r,a,ʃa,–||||x
 ܪܒ ܚܝܠܐ||␣||
 ܪܒ||␣||
 ܪܒܐ ܓܗܐ||␣||
@@ -3307,8 +3307,8 @@ autoExpandExamples.aii = `
 ܪܩܡܐ||␣||
 ܪܫܡ||␣||
 ܪܬܚ||␣||
-ܪܲܡܫܵܐ|evening|ra§m§ʃɑː§–|rāmša|ܪܡܫܐ||ܪܡܫܐ
-ܪܹܫܵܐ|head|re§ʃɑ§–||ܪܝܫܐ||ܪܝܫܐ
+ܪܲܡܫܵܐ|evening|ra,m,ʃɑː,–|rāmša|ܪܡܫܐ||ܪܡܫܐ
+ܪܹܫܵܐ|head|re,ʃɑ,–||ܪܝܫܐ||ܪܝܫܐ
 ܫܐܕܢܐ||␣||
 ܫܐܘܠ||␣||
 ܫܐܝܠܐܝܬ||␣||
@@ -3415,7 +3415,7 @@ autoExpandExamples.aii = `
 ܫܠܦ||␣||
 ܫܠܨ||␣||
 ܫܠܩ||␣||
-ܫܠܵܡܵܐ|peace|ʃ§lɑː§mɑː§–|šlama|ܫܠܡܐ||ܫܠܡܐ
+ܫܠܵܡܵܐ|peace|ʃ,lɑː,mɑː,–|šlama|ܫܠܡܐ||ܫܠܡܐ
 ܫܡ ܣܘܥܪܢܐ||␣||
 ܫܡ||␣||
 ܫܡܐ ܕܐܠܗܐ||␣||
@@ -3483,15 +3483,15 @@ autoExpandExamples.aii = `
 ܫܬܠ||␣||
 ܫܬܩ||␣||
 ܫܬܩܕܝ||␣||
-ܫܲܒ݂ܥܵܐ|seven|ʃɒ§w.§ʕaː§–|šāwʿa|ܫܒܥܐ|Urm:ʃɒv.ʔaː|ܫܒܥܐ
-ܫܲܒ݂ܲܥܣܲܪ|seventeen|ʃɒː§wā§ʕʕ§sā§r|šāwāʿsār|ܫܒܥܣܪ||ܫܒܥܣܪ
-ܫܲܪܝܼܪܵܐ|true, honest|ʃa§r§iː§rɑː§–|šarīre|ܫܪܝܪܐ||ܫܪܝܪܐ
-ܫܲܪܝܼܪܹ̈ܐ|true, honest (pl.)|ʃa§r§iː§re§–|šarīre|ܫܪܝܪܐ||ܫܪܝܪܐ
-ܫܲܪܝܼܪܹ̈ܥ|true, honest (pl.)|ʃa§r§iː§re§–|šarīre|ܫܪܝܪܐ||ܫܪܝܪܐ
-ܫܸܡܫܵܐ|sun|ˈʃə§m.§ʃɑ§–|šimša|ܫܡܫܐ|was ʃɪ§m§ʃɑ§–|ܫܡܫܐ
-ܫܸܬܠܵܐ|young plant|ʃɪ§tt§lɑ§–||||x
-ܫܸܬ݁ܠܵܐ|young plant|ʃɪ§tt§lɑ§–||||x
-ܫܹܢ݇ܬܵܐ|year|ʃɪː§–§taː§–|šeta|ܫܢܬܐ|Nin:ʃaːtaː|ܫܢܬܐ
+ܫܲܒ݂ܥܵܐ|seven|ʃɒ,w.,ʕaː,–|šāwʿa|ܫܒܥܐ|Urm:ʃɒv.ʔaː|ܫܒܥܐ
+ܫܲܒ݂ܲܥܣܲܪ|seventeen|ʃɒː,wā,ʕʕ,sā,r|šāwāʿsār|ܫܒܥܣܪ||ܫܒܥܣܪ
+ܫܲܪܝܼܪܵܐ|true, honest|ʃa,r,iː,rɑː,–|šarīre|ܫܪܝܪܐ||ܫܪܝܪܐ
+ܫܲܪܝܼܪܹ̈ܐ|true, honest (pl.)|ʃa,r,iː,re,–|šarīre|ܫܪܝܪܐ||ܫܪܝܪܐ
+ܫܲܪܝܼܪܹ̈ܥ|true, honest (pl.)|ʃa,r,iː,re,–|šarīre|ܫܪܝܪܐ||ܫܪܝܪܐ
+ܫܸܡܫܵܐ|sun|ˈʃə,m.,ʃɑ,–|šimša|ܫܡܫܐ|was ʃɪ,m,ʃɑ,–|ܫܡܫܐ
+ܫܸܬܠܵܐ|young plant|ʃɪ,tt,lɑ,–||||x
+ܫܸܬ݁ܠܵܐ|young plant|ʃɪ,tt,lɑ,–||||x
+ܫܹܢ݇ܬܵܐ|year|ʃɪː,–,taː,–|šeta|ܫܢܬܐ|Nin:ʃaːtaː|ܫܢܬܐ
 ܬܐ||␣||
 ܬܐܓܘܪܬܐ||␣||
 ܬܐܓܘܪܬܢܝܐ||␣||
@@ -3534,8 +3534,8 @@ autoExpandExamples.aii = `
 ܬܘܪܬܐ||␣||
 ܬܘܫܥܐ||␣||
 ܬܘܬܐ||␣||
-ܬܘܼܢܸܣܝܼܵܐ|Tunisia|t§uː§niː§s§īːja§–|tunisiya|ܬܘܢܣܝܐ||ܬܘܢܣܝܐ
-ܬܘܼܪܟܝܼܵܐ|Türkiye|t§u§r.§k§iːja§–|turkīyā| ܬܘܪܟܝܐ || ܬܘܪܟܝܐ
+ܬܘܼܢܸܣܝܼܵܐ|Tunisia|t,uː,niː,s,īːja,–|tunisiya|ܬܘܢܣܝܐ||ܬܘܢܣܝܐ
+ܬܘܼܪܟܝܼܵܐ|Türkiye|t,u,r.,k,iːja,–|turkīyā| ܬܘܪܟܝܐ || ܬܘܪܟܝܐ
 ܬܙܐ||␣||
 ܬܙܘܬܐ||␣||
 ܬܚܒܪܬܐ||␣||
@@ -3594,8 +3594,8 @@ autoExpandExamples.aii = `
 ܬܡܣܝܚܐ||␣||
 ܬܡܪܐ ܗܢܕܘܝܐ||␣||
 ܬܡܪܐ||␣||
-ܬܡܲܢܝܵܐ|eight|t§māː§n§ja§–|tmānya|ܬܡܢܝܐ||ܬܡܢܝܐ
-ܬܡܲܢܝܵܥܣܲܪ|eighteen|t§mā§nn§jā§ʕʕ§sā§r|tmānyāʿsār|ܬܡܢܝܥܣܪ||ܬܡܢܝܥܣܪ
+ܬܡܲܢܝܵܐ|eight|t,māː,n,ja,–|tmānya|ܬܡܢܝܐ||ܬܡܢܝܐ
+ܬܡܲܢܝܵܥܣܲܪ|eighteen|t,mā,nn,jā,ʕʕ,sā,r|tmānyāʿsār|ܬܡܢܝܥܣܪ||ܬܡܢܝܥܣܪ
 ܬܢܐ||␣||
 ܬܢܓܝܓܠܐ||␣||
 ܬܢܘܪܐ||␣||
@@ -3641,8 +3641,8 @@ autoExpandExamples.aii = `
 ܬܪܩ||␣||
 ܬܪܬܝܢ||␣||
 ܬܪܬܥܣܪܐ||␣||
-ܬܪܸܥܣܲܪ|twelve|t§ri§ʕʕ§sā§r|triʿsār|ܬܪܥܣܪ||ܬܪܥܣܪ
-ܬܪܹܝ|two|t§reː§‹|tre|ܬܪܝ||ܬܪܝ
+ܬܪܸܥܣܲܪ|twelve|t,ri,ʕʕ,sā,r|triʿsār|ܬܪܥܣܪ||ܬܪܥܣܪ
+ܬܪܹܝ|two|t,reː,‹|tre|ܬܪܝ||ܬܪܝ
 ܬܫܕ||␣||
 ܬܫܘܝܬܐ||␣||
 ܬܫܝܥܝܐ||␣||
@@ -3663,10 +3663,10 @@ autoExpandExamples.aii = `
 ܬܫܪܝܢ ܩܕܡܝܐ||␣||
 ܬܫܪܝܢ ܬܪܝܢܐ||␣||
 ܬܫܪܝܢ||␣||
-ܬܲܠܓܵܐ|snow|ta§l.§ɡɑː§–|tālga|ܬܠܓܐ|Urm:tal.d͡ʒɑː; Nin:θal.ɡɑː|ܬܠܓܐ
-ܬܸܠܬܲܥܣܲܪ|thirteen|ti§ll§tā§ʕʕ§sā§r|tltaʿsār|ܬܠܬܥܣܪ||ܬܠܬܥܣܪ
-ܬܸܦ̮ܠܵܐ|infant|tɪ§ff§lɑː§–||||x
-ܬܸܫܪ̈ܝܹܐ|autumn|tə§ʃ.§riː§je§–|tishriye|ܬܫܪܝܐ|Urm:tʃə.riːje|ܬܫܪܝܐ
+ܬܲܠܓܵܐ|snow|ta,l.,ɡɑː,–|tālga|ܬܠܓܐ|Urm:tal.d͡ʒɑː; Nin:θal.ɡɑː|ܬܠܓܐ
+ܬܸܠܬܲܥܣܲܪ|thirteen|ti,ll,tā,ʕʕ,sā,r|tltaʿsār|ܬܠܬܥܣܪ||ܬܠܬܥܣܪ
+ܬܸܦ̮ܠܵܐ|infant|tɪ,ff,lɑː,–||||x
+ܬܸܫܪ̈ܝܹܐ|autumn|tə,ʃ.,riː,je,–|tishriye|ܬܫܪܝܐ|Urm:tʃə.riːje|ܬܫܪܝܐ
 
 
 

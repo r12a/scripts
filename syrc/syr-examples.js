@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -26,12 +26,12 @@ autoExpandExamples.syr = `
 ܐܐܪ||␣|||
 ܐܒ||␣|||
 ܐܒܐ||␣|||
-ܐܒܓܕ|alphabet, abjad|ˈʔa§b.§ɡa§d|ʾabgad||
+ܐܒܓܕ|alphabet, abjad|ˈʔa,b.,ɡa,d|ʾabgad||
 ܐܒܕܢܐ||␣|||
 ܐܒܗܐ||␣||
 ܐܒܗܬܐ||␣||
 ܐܒܘ ܒܟܪ||␣||
-ܐܒܘܒܐ|reed, flute|ʔa§bˈb§u.§vɑ§–|||
+ܐܒܘܒܐ|reed, flute|ʔa,bˈb,u.,vɑ,–|||
 ܐܒܙܪܐ||␣|||
 ܐܒܝܕܘܬܐ||␣|||
 ܐܒܟܐ||␣|||
@@ -44,7 +44,7 @@ autoExpandExamples.syr = `
 ܐܒܪܐ||␣|||
 ܐܒܪܗܡ||␣|||
 ܐܒܪܬܐ||␣|||
-ܐܓܘܓܐ|aqueduct|ʔa§ɡˈɡ§o.§ɣɑ§–|ʾaggōḡā||
+ܐܓܘܓܐ|aqueduct|ʔa,ɡˈɡ,o.,ɣɑ,–|ʾaggōḡā||
 ܐܓܘܢܐ||␣|||
 ܐܓܘܢܝܣܛܐ||␣|||
 ܐܓܘܢܣܛܐ|||||
@@ -100,7 +100,7 @@ autoExpandExamples.syr = `
 ܐܘܪܗܝ||␣|||
 ܐܘܪܘܣ||␣|||
 ܐܘܪܙܓܐ||␣|||
-ܐܘܪܚܐ|road, way|ʔ§u§r§ħɑ§(ʔ)|||
+ܐܘܪܚܐ|road, way|ʔ,u,r,ħɑ,(ʔ)|||
 ܐܘܪܝܐ||␣|||
 ܐܘܪܝܙܘܢ||␣|||
 ܐܘܪܝܬܐ||␣|||
@@ -109,11 +109,11 @@ autoExpandExamples.syr = `
 ܐܘܪܩܥܬܐ||␣|||
 ܐܘܪܫܠܡ||␣|||
 ܐܘܫܢܐ||␣|||
-ܐܘܫܥܢܐ|hosanna|ʔ§o§ʃa§ʕ§nɑ§–|ʾōšaʿnā||
+ܐܘܫܥܢܐ|hosanna|ʔ,o,ʃa,ʕ,nɑ,–|ʾōšaʿnā||
 ܐܙܒܐ||␣|||
 ܐܙܒܪܟܐ||␣|||
 ܐܙܓܐ||␣|||
-ܐܙܠܐ|departure|ʔɛ§z§lɑ§(ʔ)|||
+ܐܙܠܐ|departure|ʔɛ,z,lɑ,(ʔ)|||
 ܐܚܐ||␣|||
 ܐܚܕ||␣|||
 ܐܚܝܢܐ||␣|||
@@ -128,7 +128,7 @@ autoExpandExamples.syr = `
 ܐܝܕܥܬܐ|||||
 ܐܝܙܓܕܐ||␣|||
 ܐܝܙܓܕܘܬܐ||␣|||
-ܐܝܟ|like, such as|ʔa§j§k|ʾāḵ||
+ܐܝܟ|like, such as|ʔa,j,k|ʾāḵ||
 ܐܝܠ||␣|||
 ܐܝܠܐ||␣|||
 ܐܝܠܘܠ||␣|||
@@ -136,8 +136,8 @@ autoExpandExamples.syr = `
 ܐܝܠܬܐ||␣|||
 ܐܝܡܡܐ||␣|||
 ܐܝܣܘܢ||␣|||
-ܐܝܣܚܩ|Isaac|ʔ§i§s§ˈħɑ§q|īsḳaq||
-ܐܝܣܪܐܝܠ|Israel|ʔ§ī§s§rɑ§(ʔ)§e§l|ʾīsrāʾel||
+ܐܝܣܚܩ|Isaac|ʔ,i,s,ˈħɑ,q|īsḳaq||
+ܐܝܣܪܐܝܠ|Israel|ʔ,ī,s,rɑ,(ʔ),e,l|ʾīsrāʾel||
 ܐܝܣܪܐܝܠܝ|Israelite||||
 ܐܝܩܐ||␣|||
 ܐܝܩܘܢܐ||␣|||
@@ -146,7 +146,7 @@ autoExpandExamples.syr = `
 ܐܝܪ||␣|||
 ܐܝܪܐܢ||␣|||
 ܐܝܫܝ||␣|||
-ܐܝܫܠܐ|rope|ʔ§i§ʃ§lɑ§–|ʾīšlā||
+ܐܝܫܠܐ|rope|ʔ,i,ʃ,lɑ,–|ʾīšlā||
 ܐܝܬ||␣|||
 ܐܝܬܘܬܐ||␣|||
 ܐܝܬܝܐ||␣|||
@@ -178,7 +178,7 @@ autoExpandExamples.syr = `
 ܐܡܐ||␣|||
 ܐܡܒܘܢܐ||␣|||
 ܐܡܒܝܩܐ||␣|||
-ܐܡܒܪ|amber|ˈʔa§m.§ba§r|ʾambar||
+ܐܡܒܪ|amber|ˈʔa,m.,ba,r|ʾambar||
 ܐܡܒܪܐ||␣|||
 ܐܡܕ||␣|||
 ܐܡܗܐ||␣||
@@ -213,7 +213,7 @@ autoExpandExamples.syr = `
 ܐܢܩܬ ܐܝܠܐ|||||
 ܐܢܩܬܐ||␣|||
 ܐܢܫܐ||␣|||
-ܐܢܬ|you|ʔa§n§t|||
+ܐܢܬ|you|ʔa,n,t|||
 ܐܢܬܘܢ||␣|||
 ܐܢܬܝ||␣|||
 ܐܢܬܝܢ||␣|||
@@ -227,7 +227,7 @@ autoExpandExamples.syr = `
 ܐܣܛܠܐ||␣|||
 ܐܣܛܪܘܠܘܓܝܐ||␣|||
 ܐܣܛܪܘܢܘܡܝܐ||␣|||
-ܐܣܛܪܛ|street|ʔɛ§s.§tˤ(ə.)§ˈrɑ§tˤ§–|East:ˈʔɪs.tˤrɑtˤ; West:ʔesˈtˤrɑtˤ||
+ܐܣܛܪܛ|street|ʔɛ,s.,tˤ(ə.),ˈrɑ,tˤ,–|East:ˈʔɪs.tˤrɑtˤ; West:ʔesˈtˤrɑtˤ||
 ܐܣܛܪܛܝܐ||␣|||
 ܐܣܛܪܛܝܘܛܐ||␣|||
 ܐܣܝܐ||␣|||
@@ -239,7 +239,7 @@ autoExpandExamples.syr = `
 ܐܣܦܘܩܠܛܪܐ||␣|||
 ܐܣܦܝܪܐ||␣|||
 ܐܣܦܢܝܐ||␣||
-ܐܣܦܣ|snake, tortoise|ˈʔɛ§s.§pɛ§s|ʾespes||
+ܐܣܦܣ|snake, tortoise|ˈʔɛ,s.,pɛ,s|ʾespes||
 ܐܣܦܪܓܠܐ||␣|||
 ܐܣܦܪܝܕܐ||␣|||
 ܐܣܦܪܝܣܐ||␣|||
@@ -319,14 +319,14 @@ autoExpandExamples.syr = `
 ܐܫܬܩܕ||␣|||
 ܐܫܬܩܕܝ||␣|||
 ܐܬܐ||␣|||
-ܐܬܘ̈ܬܐ|letters (pl.)|ʔɑ§θ§wɑ§θɑ§(ʔ)|ˀāṯūṯā
+ܐܬܘ̈ܬܐ|letters (pl.)|ʔɑ,θ,wɑ,θɑ,(ʔ)|ˀāṯūṯā
 ܐܬܘܢܐ||␣|||
 ܐܬܘܪܝ||␣|||
 ܐܬܘܪܝܐ||␣||
-ܐܬܘܬܐ|letter, alphabet|ʔɑ§θ§u§θɑ§(ʔ)|ˀāṯūṯā
+ܐܬܘܬܐ|letter, alphabet|ʔɑ,θ,u,θɑ,(ʔ)|ˀāṯūṯā
 ܐܬܝܠܕ||␣||
 ܐܬܟܦܪ||␣||
-ܐܬܠܝܐ|dragon|ʔɑ§ˈθa§l.§jɑ§–|or ʔɑˈθɛl.jɑ or ʔaθˈli.jɑ||
+ܐܬܠܝܐ|dragon|ʔɑ,ˈθa,l.,jɑ,–|or ʔɑˈθɛl.jɑ or ʔaθˈli.jɑ||
 ܐܬܠܝܛܐ||␣|||
 ܐܬܢܐ||␣|||
 ܐܬܪܐ||␣|||
@@ -343,13 +343,13 @@ autoExpandExamples.syr = `
 ܒܒܠ||␣||
 ܒܒܥܘ||␣|||
 ܒܒܪܐ|||||
-ܒܒܬܐ|pupil (eye)|ˈbɑ§v.§tɑ§–|East:ˈbɑw.tɑ; West:ˈbow.to||
-ܒܓܐ|garden|bɑ§ɣɑ§(ʔ)|||
+ܒܒܬܐ|pupil (eye)|ˈbɑ,v.,tɑ,–|East:ˈbɑw.tɑ; West:ˈbow.to||
+ܒܓܐ|garden|bɑ,ɣɑ,(ʔ)|||
 ܒܓܕܟܦܬ||␣|||
 ܒܓܠܐ||␣|||
 ܒܓܠܬܐ||␣|||
 ܒܕܘܠ||␣|||
-ܒܗܡܘܬ|behemoth|be§h§m§o§θ|||
+ܒܗܡܘܬ|behemoth|be,h,m,o,θ|||
 ܒܗܪܐ||␣|||
 ܒܗܬ|||||
 ܒܗܬܬܐ||␣|||
@@ -465,10 +465,10 @@ autoExpandExamples.syr = `
 ܒܪܝܟ ܨܦܪܐ||␣|||
 ܒܪܝܟ ܪܡܫܐ||␣|||
 ܒܪܝܬܐ||␣|||
-ܒܪܟ|to bend, kneel|b(ə).§ˈra§x|or b(ə.)ˈrɛx; East:ˈbrɪx; West:ˈbrex||
+ܒܪܟ|to bend, kneel|b(ə).,ˈra,x|or b(ə.)ˈrɛx; East:ˈbrɪx; West:ˈbrex||
 ܒܪܟܐ||␣|||
 ܒܪܠܝܢ||␣||
-ܒܪܢܓ|rice|ˈba§r.ra§n§ɡ|barrang||
+ܒܪܢܓ|rice|ˈba,r.ra,n,ɡ|barrang||
 ܒܪܩܐ||␣|||
 ܒܪܩܩܐ||␣|||
 ܒܪܬ||␣||
@@ -502,7 +502,7 @@ autoExpandExamples.syr = `
 ܓܘܒܐ||␣|||
 ܓܘܒܝܐ||␣|||
 ܓܘܓ||␣||
-ܓܘܓܝ|spider|ɡ(ə).§ˈwɑ.§ɣa§j|gəwāḡay||
+ܓܘܓܝ|spider|ɡ(ə).,ˈwɑ.,ɣa,j|gəwāḡay||
 ܓܘܕܐ||␣|||
 ܓܘܕܦܐ||␣|||
 ܓܘܙܐ||␣|||
@@ -540,7 +540,7 @@ autoExpandExamples.syr = `
 ܓܙܪܬܐ ܝܒܫܢܝܬܐ||␣|||
 ܓܙܪܬܐ||␣|||
 ܓܙܬܐ||␣|||
-ܓܚܟ|to laugh|ɡ(ə)§ħa§x||or ɡ(ə)ħɛx|
+ܓܚܟ|to laugh|ɡ(ə),ħa,x||or ɡ(ə)ħɛx|
 ܓܛܐ||␣|||
 ܓܝܒܐ||␣|||
 ܓܝܓܠܐ||␣|||
@@ -567,7 +567,7 @@ autoExpandExamples.syr = `
 ܓܡܘܫܐ||␣|||
 ܓܡܝܫܐ||␣|||
 ܓܡܠ ܢܡܪܐ||␣|||
-ܓܡܠܐ|camel|ɡa§m§lɑ§–|gamlā||
+ܓܡܠܐ|camel|ɡa,m,lɑ,–|gamlā||
 ܓܡܠܘܬܐ||␣||
 ܓܡܠܢܐ||␣||
 ܓܡܠܢܡܪܐ|||||
@@ -624,7 +624,7 @@ autoExpandExamples.syr = `
 ܕܓܠܐ||␣|||
 ܕܓܢܐ||␣|||
 ܕܕܐ||␣|||
-ܕܕܪܐ|oak, elm|da§ð§rɑ§–|or daddɑrɑ||
+ܕܕܪܐ|oak, elm|da,ð,rɑ,–|or daddɑrɑ||
 ܕܕܬܐ||␣|||
 ܕܗܒܐ||␣|||
 ܕܗܘܠ|||||
@@ -685,7 +685,7 @@ autoExpandExamples.syr = `
 ܕܪܒܐ||␣|||
 ܕܪܓܐ||␣|||
 ܕܪܓܘܫܬܐ||␣|||
-ܕܪܕܐ|vulture|da§r§dɑ§–|||
+ܕܪܕܐ|vulture|da,r,dɑ,–|||
 ܕܪܕܪܐ||␣|||
 ܕܪܝܟܘܢܐ||␣||
 ܕܪܟܡܐ||␣||
@@ -722,7 +722,7 @@ autoExpandExamples.syr = `
 ܗܝܡܢܘܬܐ||␣|||
 ܗܟܝܠ||␣|||
 ܗܠܝܢ||␣|||
-ܗܠܟ|to walk|ha§llɛ§x|||
+ܗܠܟ|to walk|ha,llɛ,x|||
 ܗܠܟܐ||␣|||
 ܗܠܟܬܐ||␣|||
 ܗܡܢ||␣|||
@@ -734,14 +734,14 @@ autoExpandExamples.syr = `
 ܗܢܝܢ||␣|||
 ܗܢܝܢܐ||␣|||
 ܗܪܓܐ||␣|||
-ܗܪܗܪܐ|mirage|ha§r§hɑ§rɑ§(ʔ)|||
+ܗܪܗܪܐ|mirage|ha,r,hɑ,rɑ,(ʔ)|||
 ܗܪܡܝܣ||␣|||
 ܗܪܡܣܐ||␣|||
 ܘ-||␣|||
 ܘܐܙܐ|||||
 ܘܐܙܬܐ|||||
 ܘܐܠܐ|||||
-ܘܙܐ|goose|wa§zzɑ§(ʔ)|wazzā||
+ܘܙܐ|goose|wa,zzɑ,(ʔ)|wazzā||
 ܘܙܝܪܐ||␣|||
 ܘܙܬܐ||␣|||
 ܘܝܠܐ||␣|||
@@ -775,7 +775,7 @@ autoExpandExamples.syr = `
 ܙܘܓܐ||␣|||
 ܙܘܓܠܐ||␣|||
 ܙܘܘܓܐ||␣|||
-ܙܘܙܐ|coin|z§u§zɑ§–|zūzā||
+ܙܘܙܐ|coin|z,u,zɑ,–|zūzā||
 ܙܘܝܚܐ||␣|||
 ܙܘܝܬܐ||␣|||
 ܙܘܠܒܢܐ||␣|||
@@ -820,7 +820,7 @@ autoExpandExamples.syr = `
 ܙܩܐ||␣|||
 ܙܩܘܪܐ||␣|||
 ܙܩܝܦܐ||␣|||
-ܙܩܦ|to crucify|z(ə)§qa§f|zqap||
+ܙܩܦ|to crucify|z(ə),qa,f|zqap||
 ܙܩܦܐ||␣|||
 ܙܩܪܐ||␣|||
 ܙܩܪܝܬܐ||␣||
@@ -866,7 +866,7 @@ autoExpandExamples.syr = `
 ܚܘܕܪܐ||␣|||
 ܚܘܕܬܐ||␣|||
 ܚܘܘܝܬܐ||␣|||
-ܚܘܚܐ|thorn|ħ§o§ħɑ§–|ḥōḥā||
+ܚܘܚܐ|thorn|ħ,o,ħɑ,–|ḥōḥā||
 ܚܘܛܐ||␣|||
 ܚܘܛܪܐ||␣|||
 ܚܘܝܐ||␣|||
@@ -1006,7 +1006,7 @@ autoExpandExamples.syr = `
 ܛܐܒܐ|||||
 ܛܐܝܘܐܢ||␣||
 ܛܐܠܪܐ|||||
-ܛܒܐ|good, pleasant|tˤɑ§vɑ§–|||
+ܛܒܐ|good, pleasant|tˤɑ,vɑ,–|||
 ܛܒܚܐ||␣|||
 ܛܒܚܘܬܐ||␣|||
 ܛܒܚܬܐ||␣|||
@@ -1069,7 +1069,7 @@ autoExpandExamples.syr = `
 ܛܪܢܐ||␣|||
 ܛܪܦܐ||␣|||
 ܛܪܦܢܣܐ||␣|||
-ܝܒܝܫܘܬܐ|dryness, drought|ja§bb§i§ʃ§u§θɑ§(ʔ)|||
+ܝܒܝܫܘܬܐ|dryness, drought|ja,bb,i,ʃ,u,θɑ,(ʔ)|||
 ܝܒܝܫܬܐ||␣|||
 ܝܒܠܐ||␣|||
 ܝܒܡܐ||␣|||
@@ -1176,7 +1176,7 @@ autoExpandExamples.syr = `
 ܟܒܪܝܬܐ||␣|||
 ܟܒܫܐ||␣|||
 ܟܕܒܐ||␣|||
-ܟܕܘ|enough, already|ka§dd§u|||
+ܟܕܘ|enough, already|ka,dd,u|||
 ܟܗܢܐ||␣|||
 ܟܗܢܘܬܐ||␣|||
 ܟܘܐ||␣||
@@ -1355,9 +1355,9 @@ autoExpandExamples.syr = `
 ܠܟ||␣||
 ܠܟܝ||␣||
 ܠܟܣܝܩܘܢ||␣|||
-ܠܠܝܐ|night|le§l§jɑ§–|lēlyā|ܠܹܠܝܵܐ|
+ܠܠܝܐ|night|le,l,jɑ,–|lēlyā|ܠܹܠܝܵܐ|
 ܠܡܐܝܢܐ|||||
-ܠܡܐܢܐ|port, harbour|l(ə)§me§(ʔ)§nɑ§(ʔ)|||
+ܠܡܐܢܐ|port, harbour|l(ə),me,(ʔ),nɑ,(ʔ)|||
 ܠܣܛܐ||␣|||
 ܠܣܛܝܐ||␣|||
 ܠܥܙܐ||␣|||
@@ -1366,8 +1366,8 @@ autoExpandExamples.syr = `
 ܠܦܬܐ||␣|||
 ܠܩܚܐ||␣|||
 ܠܩܢܐ||␣|||
-ܠܫܢܐ|tongue, language|lɛ§ʃˈʃɑ.§nɑ§–|leššānā|East:lɪʃˈʃɑ.nɑ; West:leˈʃo.no|
-ܠܹܠܝܵܐ|night|le§l§jɑ§–|lēlyā||ܠܠܝܐ
+ܠܫܢܐ|tongue, language|lɛ,ʃˈʃɑ.,nɑ,–|leššānā|East:lɪʃˈʃɑ.nɑ; West:leˈʃo.no|
+ܠܹܠܝܵܐ|night|le,l,jɑ,–|lēlyā||ܠܠܝܐ
 ܡܐܐ||␣|||
 ܡܐܟܘܠܝܬܐ||␣||
 ܡܐܟܘܠܬܐ||␣|||
@@ -1375,7 +1375,7 @@ autoExpandExamples.syr = `
 ܡܐܟܠܬܐ||␣||
 ܡܐܟܢܐ||␣|||
 ܡܐܠܝ||␣||
-ܡܐܡܪܐ|speech|me§(ʔ)§m§rɑ§(ʔ)|||
+ܡܐܡܪܐ|speech|me,(ʔ),m,rɑ,(ʔ)|||
 ܡܐܢܐ||␣|||
 ܡܐܢܝ||␣||
 ܡܐܣܐܬܐ|||||
@@ -1404,13 +1404,13 @@ autoExpandExamples.syr = `
 ܡܕܝܪܐ||␣|||
 ܡܕܟܐ||␣|||
 ܡܕܟܘܢܐ||␣||
-ܡܕܡ|thing|ˈmɛ§d.dɛ§m|meddem||
+ܡܕܡ|thing|ˈmɛ,d.dɛ,m|meddem||
 ܡܕܡܟܐ||␣|||
 ܡܕܢܐ||␣|||
 ܡܕܢܚܐ||␣|||
 ܡܕܥܐ||␣|||
 ܡܕܩܬܐ||␣|||
-ܡܕܪܐ|soil|mɛ§ð§rɑ§(ʔ)|||
+ܡܕܪܐ|soil|mɛ,ð,rɑ,(ʔ)|||
 ܡܕܪܫܬܐ||␣|||
 ܡܗܓܪܐ||␣|||
 ܡܗܪܐ||␣|||
@@ -1639,7 +1639,7 @@ autoExpandExamples.syr = `
 ܢܘܡܐ||␣|||
 ܢܘܡܪܐ||␣|||
 ܢܘܡܬܐ||␣|||
-ܢܘܢܐ|fish|n§u§nɑ§(ʔ)|nūnā||
+ܢܘܢܐ|fish|n,u,nɑ,(ʔ)|nūnā||
 ܢܘܣܐ||␣|||
 ܢܘܨܦܐ||␣|||
 ܢܘܩܙܐ||␣|||
@@ -1687,7 +1687,7 @@ autoExpandExamples.syr = `
 ܢܥܠܐ||␣|||
 ܢܥܡܐ||␣|||
 ܢܥܡܢ||␣||
-ܢܥܢܥ|mint (plant)|ˈna§ʕ.§na§ʕ|||
+ܢܥܢܥ|mint (plant)|ˈna,ʕ.,na,ʕ|||
 ܢܦܛܐ||␣|||
 ܢܦܛܝܪܐ||␣|||
 ܢܦܠ||␣|||
@@ -1813,7 +1813,7 @@ autoExpandExamples.syr = `
 ܣܢܝܐ||␣|||
 ܣܢܝܐܘܬܐ|||||
 ܣܢܝܘܬܐ||␣|||
-ܣܣܐ|moth, worm|ˈsɑ.§sɑ§–|sāsā|West:ˈso.so|
+ܣܣܐ|moth, worm|ˈsɑ.,sɑ,–|sāsā|West:ˈso.so|
 ܣܥܘܕܝܐ||␣|||
 ܣܥܪܐ||␣|||
 ܣܥܪܬܐ||␣|||
@@ -1904,8 +1904,8 @@ autoExpandExamples.syr = `
 ܥܙܪܪܬܐ||␣|||
 ܥܛܡܐ||␣|||
 ܥܛܡܬܐ||␣||
-ܥܛܦ|to return|ʕ(ə)§tˤa§f|||
-ܥܛܪܐ|vapour, steam|ʕɛ§tˤ§rɑ§(ʔ)|||
+ܥܛܦ|to return|ʕ(ə),tˤa,f|||
+ܥܛܪܐ|vapour, steam|ʕɛ,tˤ,rɑ,(ʔ)|||
 ܥܛܪܢܐ||␣||
 ܥܛܫܐ||␣|||
 ܥܝܒܐ||␣|||
@@ -1999,8 +1999,8 @@ autoExpandExamples.syr = `
 ܦܓܢܐ|||||
 ܦܓܥܐ||␣|||
 ܦܓܪܐ||␣|||
-ܦܕܢܐ|plough|pa§dda§na§–|paddānā||
-ܦܗܕܐ|panther, snow leopard|pa§h§dɑ§(ʔ)|||
+ܦܕܢܐ|plough|pa,dda,na,–|paddānā||
+ܦܗܕܐ|panther, snow leopard|pa,h,dɑ,(ʔ)|||
 ܦܘܓܠܐ||␣|||
 ܦܘܕܐ||␣|||
 ܦܘܚܐ||␣|||
@@ -2059,7 +2059,7 @@ autoExpandExamples.syr = `
 ܦܠܢܝܬܐ||␣|||
 ܦܠܣܛܝܢ||␣||
 ܦܠܥܐ||␣|||
-ܦܠܦܠܐ|pepper|pɛ§l§p(ə)§lɑ§(ʔ)|||
+ܦܠܦܠܐ|pepper|pɛ,l,p(ə),lɑ,(ʔ)|||
 ܦܢܐ||␣|||
 ܦܢܕܩܐ||␣|||
 ܦܢܝܟܣ|||||
@@ -2069,7 +2069,7 @@ autoExpandExamples.syr = `
 ܦܣܘܩܐ||␣|||
 ܦܣܡܐ||␣|||
 ܦܣܣܐ||␣|||
-ܦܣܦܣܐ|pebble|pɛ§s§p(ə)§sɑ§(ʔ)|||
+ܦܣܦܣܐ|pebble|pɛ,s,p(ə),sɑ,(ʔ)|||
 ܦܣܩܝܬܐ||␣|||
 ܦܣܬܐ||␣|||
 ܦܥܠܐ||␣|||
@@ -2088,7 +2088,7 @@ autoExpandExamples.syr = `
 ܦܪܘܩܐ||␣|||
 ܦܪܘܫܐ||␣|||
 ܦܪܙܠܐ||␣|||
-ܦܪܚ|to fly|p(ə)§ra§ħ|peraḥ||
+ܦܪܚ|to fly|p(ə),ra,ħ|peraḥ||
 ܦܪܚܕܘܕܐ||␣|||
 ܦܪܚܬܐ||␣|||
 ܦܪܝܣܬܐ||␣|||
@@ -2097,13 +2097,13 @@ autoExpandExamples.syr = `
 ܦܪܣܐ||␣|||
 ܦܪܣܬܩܐ||␣|||
 ܦܪܥܘܢ||␣|||
-ܦܪܨܘܦܐ|face, countenance|p˭a§r§ˈsˤ§o.§p˭ɑ§–|||
+ܦܪܨܘܦܐ|face, countenance|p˭a,r,ˈsˤ,o.,p˭ɑ,–|||
 ܦܪܩܬܐ||␣|||
 ܦܪܫܐ||␣|||
 ܦܫܝܛܐ|||||
 ܦܫܝܛܬܐ|||||
 ܦܫܟܐ||␣|||
-ܦܫܦܫܐ|bedbug|pɛ§ʃ§p(ə)§ʃɑ§(ʔ)|||
+ܦܫܦܫܐ|bedbug|pɛ,ʃ,p(ə),ʃɑ,(ʔ)|||
 ܦܫܪܐ||␣|||
 ܦܫܪܬܐ||␣|||
 ܦܬܐ||␣|||
@@ -2159,7 +2159,7 @@ autoExpandExamples.syr = `
 ܨܨܠܐ||␣|||
 ܨܨܪܐ||␣|||
 ܨܪܘܝܐ||␣|||
-ܨܪܨܘܪܐ|grub, locust|sˤa§r§sˤ§u§rɑ§(ʔ)|||
+ܨܪܨܘܪܐ|grub, locust|sˤa,r,sˤ,u,rɑ,(ʔ)|||
 ܨܬܪܐ||␣|||
 ܩܐܛܐ||␣|||
 ܩܐܣܛܘܪ|||||
@@ -2215,7 +2215,7 @@ autoExpandExamples.syr = `
 ܩܘܫܝܐ||␣|||
 ܩܘܫܪܐ||␣|||
 ܩܘܫܬܐ||␣|||
-ܩܙ|silk|ˈqa§z|qaz||
+ܩܙ|silk|ˈqa,z|qaz||
 ܩܙܙܐ||␣|||
 ܩܛܐ||␣|||
 ܩܛܐܒܢ||␣|||
@@ -2226,7 +2226,7 @@ autoExpandExamples.syr = `
 ܩܛܝܢܬܐ||␣|||
 ܩܛܝܣܦܘܢ||␣||
 ܩܛܝܪܐ||␣|||
-ܩܛܝܪܩܐ|quiver|qɑ§tˤ§e§r§qɑ§(ʔ)|||
+ܩܛܝܪܩܐ|quiver|qɑ,tˤ,e,r,qɑ,(ʔ)|||
 ܩܛܠ||␣|||
 ܩܛܠܐ||␣|||
 ܩܛܡܐ||␣|||
@@ -2274,7 +2274,7 @@ autoExpandExamples.syr = `
 ܩܣܛܘܪ||␣|||
 ܩܣܪ||␣|||
 ܩܥܬܐ||␣|||
-ܩܦܘܦܐ|large owl, crow|qa§pp§u§fɑ§(ʔ)|||
+ܩܦܘܦܐ|large owl, crow|qa,pp,u,fɑ,(ʔ)|||
 ܩܦܝܐ||␣|||
 ܩܦܠܐ||␣|||
 ܩܦܠܐܘܢ||␣|||
@@ -2315,7 +2315,7 @@ autoExpandExamples.syr = `
 ܪܒܝܐ||␣|||
 ܪܒܝܥܐ||␣|||
 ܪܒܝܬܐ||␣|||
-ܪܒܨܐ|rvasa mark|r(ə)§vɑ§sˤɑ§(ʔ)|||
+ܪܒܨܐ|rvasa mark|r(ə),vɑ,sˤɑ,(ʔ)|||
 ܪܓܠܐ||␣|||
 ܪܓܡ||␣|||
 ܪܓܡܐ||␣|||
@@ -2324,7 +2324,7 @@ autoExpandExamples.syr = `
 ܪܕ||␣||
 ܪܕܘܦܝܐ||␣|||
 ܪܕܝܐ||␣|||
-ܪܕܦ|to pursue|r(ə)§ða§f|||
+ܪܕܦ|to pursue|r(ə),ða,f|||
 ܪܕܦܐ||␣|||
 ܪܗܛܐ||␣|||
 ܪܘܒܐ||␣|||
@@ -2358,7 +2358,7 @@ autoExpandExamples.syr = `
 ܪܝܚܐ||␣|||
 ܪܝܡܐ||␣|||
 ܪܝܩܐ||␣|||
-ܪܝܪܐ|saliva|r§i§rɑ§(ʔ)|||
+ܪܝܪܐ|saliva|r,i,rɑ,(ʔ)|||
 ܪܝܫܐ||␣|||
 ܪܝܫܢܐ||␣|||
 ܪܝܫܢܘܬܐ||␣|||
@@ -2374,7 +2374,7 @@ autoExpandExamples.syr = `
 ܪܡܫܘܬܐ||␣||
 ܪܡܬܐ||␣|||
 ܪܢܝܐ||␣|||
-ܪܣܘܓ|weasel|rɑˈ§s§u§ɣ|rāsūḡ||
+ܪܣܘܓ|weasel|rɑˈ,s,u,ɣ|rāsūḡ||
 ܪܣܘܠܐ||␣|||
 ܪܥܘܬܐ||␣||
 ܪܥܝܐ||␣|||
@@ -2398,7 +2398,7 @@ autoExpandExamples.syr = `
 ܫܐܕܐ||␣|||
 ܫܐܕܢܐ||␣|||
 ܫܐܕܢܝܬܐ||␣|||
-ܫܐܘ|bill, banknote|ʃa§(ʔ)§w|šaʾw||
+ܫܐܘ|bill, banknote|ʃa,(ʔ),w|šaʾw||
 ܫܐܠ||␣|||
 ܫܐܪܐ||␣|||
 ܫܒܒܐ||␣|||
@@ -2453,7 +2453,7 @@ autoExpandExamples.syr = `
 ܫܘܥܐ||␣|||
 ܫܘܦܐ||␣|||
 ܫܘܦܝܐ||␣|||
-ܫܘܦܢܝܢܐ|turtle dove|ʃ§u§f§n§i§nɑ§–|||
+ܫܘܦܢܝܢܐ|turtle dove|ʃ,u,f,n,i,nɑ,–|||
 ܫܘܦܢܝܢܬܐ||␣|||
 ܫܘܦܪܐ||␣|||
 ܫܘܩܐ||␣|||
@@ -2465,7 +2465,7 @@ autoExpandExamples.syr = `
 ܫܘܫܐ||␣|||
 ܫܘܫܡܐ||␣|||
 ܫܘܫܡܢܐ||␣|||
-ܫܘܫܢܬܐ|lily|ʃ§u§ʃa§n§tɑ§(ʔ)||or ʃawʃantɑ(ʔ)|
+ܫܘܫܢܬܐ|lily|ʃ,u,ʃa,n,tɑ,(ʔ)||or ʃawʃantɑ(ʔ)|
 ܫܘܫܦܐ||␣|||
 ܫܘܬܦܐ||␣|||
 ܫܘܬܦܘܬܐ||␣|||
@@ -2552,7 +2552,7 @@ autoExpandExamples.syr = `
 ܫܬܝܐ|||||
 ܫܬܩܐ||␣|||
 ܬ܏ܫܒܘ|||||
-ܬܐܒܝܠ|world, earth|te§ˈv§e§̝l|tēḇêl|East:ˈte.wel; West:teˈwel|
+ܬܐܒܝܠ|world, earth|te,ˈv,e,̝l|tēḇêl|East:ˈte.wel; West:teˈwel|
 ܬܐܒܠ|||||
 ܬܐܓܐ|||||
 ܬܐܓܪܘܡܬܐ||␣|||
@@ -2606,7 +2606,7 @@ autoExpandExamples.syr = `
 ܬܘܫܐ||␣|||
 ܬܘܬܐ||␣|||
 ܬܘܬܒܐ||␣|||
-ܬܘܬܪܐ|excess|ta§w§tɑ§rɑ§(ʔ)|||
+ܬܘܬܪܐ|excess|ta,w,tɑ,rɑ,(ʔ)|||
 ܬܚܘܡܐ||␣|||
 ܬܚܦܝܬܐ||␣|||
 ܬܛܠܝܠܐ||␣|||
@@ -2651,7 +2651,7 @@ autoExpandExamples.syr = `
 ܬܪܓܡܢܐ||␣|||
 ܬܪܘܕܐ||␣|||
 ܬܪܘܢܘܣ||␣|||
-ܬܪܘܢܝܘܢ|seat, chair|t(ə.)§r§o§n§ˈj§o§n|tərōnyōn||
+ܬܪܘܢܝܘܢ|seat, chair|t(ə.),r,o,n,ˈj,o,n|tərōnyōn||
 ܬܪܘܨܐ||␣|||
 ܬܪܝܢ||␣|||
 ܬܪܝܢܒܫܒܐ||␣|||
@@ -2662,7 +2662,7 @@ autoExpandExamples.syr = `
 ܬܪܢܓܘܠܬܐ||␣|||
 ܬܪܢܓܠܐ||␣|||
 ܬܪܥܐ||␣|||
-ܬܪܨ|to straighten|t(ə)§ra§sˤ|teraṣ||
+ܬܪܨ|to straighten|t(ə),ra,sˤ|teraṣ||
 ܬܫܒܘܚܬܐ||␣|||
 ܬܫܒܚܬܐ||␣||
 ܬܫܡܫܬܐ||␣|||
