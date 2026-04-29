@@ -59,6 +59,9 @@
 	<li>[aeiou]{2} → terms containing two vowels in a row</li>
 	<li>^.{1,3}$ → terms of length 1–3</li>
 	<li>.*foo.*bar → terms containing “foo” then “bar”</li>
+	<li>([пбтдкгцчшщфвсзжхмнрлй])\1 → terms a doubled letter</li>
+	<li>\p{M} → finds terms with a combining mark</li>
+	<li>\p{sc=Javanese} → finds terms using the Javanese script</li>
     </ul>
 </details>
 
@@ -227,7 +230,7 @@ languageSelect.addEventListener("change", () => {
       let regex;
         try {
             // User enters raw regex syntax, e.g.  ^a|b$,  [aeiou],  .+?,  etc.
-            regex = new RegExp(query);
+            regex = new RegExp(query, "u");
         } catch (e) {
             statusEl.textContent = "Invalid regular expression.";
             return;
@@ -407,7 +410,7 @@ function buildPickerURL(text, picker, translit) {
   }
 
   const encoded = encodeURIComponent(full);
-  return `../../../pickers/${picker}/index.html?text=${encoded}`;
+  return `../../../pickers/${picker}/index.html?text=${encoded}&term`;
 }
 
 
