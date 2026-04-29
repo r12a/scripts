@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -31,21 +31,21 @@ autoExpandExamples.or = `
 -ମାନ||␣|
 -ମାନେ||␣
 -ରେ||␣|
-ଅଂଶ|part, share|ɔ̃§sɔ|aṁśa|
-ଅଂହ୍ରି|one quarter|ɔ̃§h§ɾi|aṁhri|
+ଅଂଶ|part, share|ɔ̃,sɔ|aṁśa|
+ଅଂହ୍ରି|one quarter|ɔ̃,h,ɾi|aṁhri|
 ଅକଉଡ଼ିଆ||␣|
 ଅକ୍ଟୋବର||␣|
 ଅକ୍ଷି||␣|
 ଅଖ||␣|
 ଅଖରୋଟ||␣
-ଅଖାତ|bay, lake|ɔ§kʰa§t̪ɔ|akhāta
+ଅଖାତ|bay, lake|ɔ,kʰa,t̪ɔ|akhāta
 ଅଗଣା||␣|
 ଅଗଷ୍ଟ||␣|
 ଅଗୌଣ||␣|
 ଅଗ୍ନି||␣
 ଅଙ୍କିତ||␣|
 ଅଙ୍ଗଠି||␣|
-ଅଙ୍ଗାରକ|carbon|ɔ§ŋ§ɡa§ɾɔ§kɔ|aṅgāraka
+ଅଙ୍ଗାରକ|carbon|ɔ,ŋ,ɡa,ɾɔ,kɔ|aṅgāraka
 ଅଞ୍ଚଳ||␣|
 ଅଞ୍ଚଳା||␣|
 ଅଞ୍ଜନ||␣|
@@ -66,7 +66,7 @@ autoExpandExamples.or = `
 ଅଣତିରିଶ||␣|
 ଅଣଷଠି||␣|
 ଅଣୁ||␣|
-ଅଣ୍ଡା|egg|ɔ§ɳ§ɖa|aṇḍā
+ଅଣ୍ଡା|egg|ɔ,ɳ,ɖa|aṇḍā
 ଅଣ୍ଡିରା||␣
 ଅତର||␣|
 ଅତିରେକ||␣|
@@ -76,20 +76,20 @@ autoExpandExamples.or = `
 ଅଧା||␣
 ଅଧିକ||␣|
 ଅଧିକରଣ||␣|
-ଅଧିକାଂଶ|many|ɔ§d̪ʱi§kã§sɔ|adhikāṁśa|
+ଅଧିକାଂଶ|many|ɔ,d̪ʱi,kã,sɔ|adhikāṁśa|
 ଅଧିକାର||␣
 ଅଧୁନା||␣|
 ଅଧ୍ୟାପକ||␣|
 ଅନୁନାସିକ||␣|
 ଅନୁସ୍ୱାର||␣|
-ଅନେକ|many|ɔ§n̪e§kɔ|ɔn̪ekɔ
-ଅନ୍ତ|guts|ɔ§n̪§t̪ɔ|anta
+ଅନେକ|many|ɔ,n̪e,kɔ|ɔn̪ekɔ
+ଅନ୍ତ|guts|ɔ,n̪,t̪ɔ|anta
 ଅନ୍ତି||␣|
 ଅନ୍ତେ||␣|
 ଅନ୍ତ୍||␣|
 ଅନ୍ଧ||␣
-ଅନ୍ଧାର|dark|ɔ§n̪§d̪ʱa§ɾɔ|andhāra
-ଅନ୍ୟ|other|ɔ§n̪§jɔ|anya
+ଅନ୍ଧାର|dark|ɔ,n̪,d̪ʱa,ɾɔ|andhāra
+ଅନ୍ୟ|other|ɔ,n̪,jɔ|anya
 ଅପସରିବା||␣|
 ଅପାଦାନ||␣|
 ଅପେକ୍ଷା||␣|
@@ -97,79 +97,79 @@ autoExpandExamples.or = `
 ଅଫିମ||␣
 ଅଫିସ୍||␣|
 ଅବଗ୍ରହ||␣|
-ଅବଟ|hole, pit|ɔ§bɔ§ʈɔ|abaṭa
+ଅବଟ|hole, pit|ɔ,bɔ,ʈɔ|abaṭa
 ଅବଶ୍ୟ||␣|
 ଅବାଚିକା||␣|
 ଅଭିମନ୍ୟୁ||␣|
 ଅଭିଷେକ||␣|
 ଅଭ୍ୟୁଦୟ||␣|
-ଅମୃତଭଣ୍ଡା|papaya|ɔ§mɾu§t̪ɔ§bʱɔ§ɳ§ɖa|amrutabhaṇḍā
-ଅମ୍ଳଜାନ|oxygen|ɔ§m§ɭɔ§d͡ʒa§n̪ɔ|amḷajāna
+ଅମୃତଭଣ୍ଡା|papaya|ɔ,mɾu,t̪ɔ,bʱɔ,ɳ,ɖa|amrutabhaṇḍā
+ଅମ୍ଳଜାନ|oxygen|ɔ,m,ɭɔ,d͡ʒa,n̪ɔ|amḷajāna
 ଅଲାବୁ||␣
 ଅଳତା||␣|
 ଅଳାଇଚ||␣|
 ଅଳେଇଚ||␣|
-ଅଳ୍ପ|short, few|ɔ§ɭ§pɔ|aḷpa
+ଅଳ୍ପ|short, few|ɔ,ɭ,pɔ|aḷpa
 ଅଶି||␣|
 ଅଶ୍ରୁ||␣
 ଅଷ୍ଟ୍ରେଲିଆ||␣|
-ଅସନା|dirty|ɔ§sɔ§n̪a|asanā
-ଅସ୍ଥି|bone|ɔ§s§t̪ʰi|asthi
+ଅସନା|dirty|ɔ,sɔ,n̪a|asanā
+ଅସ୍ଥି|bone|ɔ,s,t̪ʰi|asthi
 ଅୟନ||␣|
 ଆଇନା||␣|
 ଆଇବା||␣|
-ଆଈ|grandmother|a§i|āi
-ଆଉ|and|a§u|āu
+ଆଈ|grandmother|a,i|āi
+ଆଉ|and|a,u|āu
 ଆଉରି||␣|
-ଆକାଶ|sky|a§ka§sɔ|ākāśa
+ଆକାଶ|sky|a,ka,sɔ|ākāśa
 ଆକ୍ରମଣ||␣
 ଆଖର||␣|
-ଆଖି|eye|a§kʰi|ākhi
+ଆଖି|eye|a,kʰi|ākhi
 ଆଖୁ||␣
 ଆଗ||␣|
 ଆଗୁଁ||␣|
 ଆଗୁଳିବା||␣|
 ଆଙ୍କିବା||␣|
 ଆଙ୍ଗୁଠି||␣
-ଆଙ୍ଗୁଳି|finger, toe|a§ŋ§ɡu§ɭi|aṅguḷi
-ଆଜି|today|a§d͡ʒi|āji
+ଆଙ୍ଗୁଳି|finger, toe|a,ŋ,ɡu,ɭi|aṅguḷi
+ଆଜି|today|a,d͡ʒi|āji
 ଆଜ୍ଞା||␣|
 ଆଞ୍ଜୁଳା||␣|
-ଆଠ|eight|a§ʈʰɔ|āṭha
+ଆଠ|eight|a,ʈʰɔ|āṭha
 ଆଡ଼||␣|
 ଆଣିବା||␣|
-ଆଣ୍ଠୁ|knee|a§ɳ§ʈʰu|āṇṭhu
+ଆଣ୍ଠୁ|knee|a,ɳ,ʈʰu|āṇṭhu
 ଆଣ୍ଠେଇବା||␣|
-ଆତ୍ମା|soul, spirit|a§t̪§ma|ātmā
+ଆତ୍ମା|soul, spirit|a,t̪,ma|ātmā
 ଆଥ||␣
 ଆଧିକ୍ୟ||␣|
 ଆଧୁନିକ||␣|
-ଆପଣ|oneself|a§pɔ§ɳɔ|āpaṇa
+ଆପଣ|oneself|a,pɔ,ɳɔ|āpaṇa
 ଆପେ||␣|
-ଆମେ|we|a§me|āme
-ଆମ୍ବ|mango|a§m§bɔ|āmba
-ଆମ୍ବିଳିଆ|sour|a§m§bi§ɭi§a|āmbiḷiā
+ଆମେ|we|a,me|āme
+ଆମ୍ବ|mango|a,m,bɔ|āmba
+ଆମ୍ବିଳିଆ|sour|a,m,bi,ɭi,a|āmbiḷiā
 ଆରବୀ||␣
 ଆରମ୍ଭ||␣
 ଆର୍ମାନୀ||␣|
 ଆଲୋକ||␣
 ଆଲୋଚନ||␣|
 ଆଳୁ||␣
-ଆସିବା|to come|a§si§ba|āsibā
+ଆସିବା|to come|a,si,ba|āsibā
 ଆସ୍ତେ||␣|
 ଆହୁରି||␣|
 ଆୟୁ||␣
 ଇ||␣||
-ଇଂରାଜ|English (language)|ĩ§ɾa§d͡ʒɔ|iṁrāja|
-ଇଂଲଣ୍ଡ|England|ĩ§lɔ§ɳ§ɖɔ|iṁlaṇḍa|
-ଇଗଲ|eagle|i§ɡɔ§lɔ|igala
-ଇଟା|brick, block|i§ʈa|iṭā
+ଇଂରାଜ|English (language)|ĩ,ɾa,d͡ʒɔ|iṁrāja|
+ଇଂଲଣ୍ଡ|England|ĩ,lɔ,ɳ,ɖɔ|iṁlaṇḍa|
+ଇଗଲ|eagle|i,ɡɔ,lɔ|igala
+ଇଟା|brick, block|i,ʈa|iṭā
 ଇଣ୍ଟରନେଟ||␣
 ଇଣ୍ଡା||␣|
 ଇନ୍ଦୁର||␣
 ଇନ୍ଦ୍ର||␣
 ଇନ୍ଧନ||␣
-ଇନ୍ସ୍ପେକ୍ଟର୍|inspector|i§n̪§s§pe§k§ʈɔ§ɾ|inspekṭar|
+ଇନ୍ସ୍ପେକ୍ଟର୍|inspector|i,n̪,s,pe,k,ʈɔ,ɾ|inspekṭar|
 ଇବା||␣|
 ଇବ୍||␣|
 ଇମାନ୍||␣|
@@ -177,22 +177,22 @@ autoExpandExamples.or = `
 ଈ||␣||
 ଈଶ୍ୱର||␣|
 ଉଇଁବା||␣|
-ଉଇକିପିଡ଼ିଆ|Wikipedia|u§i§ki§pi§ɽi§a|uikipiṛia
+ଉଇକିପିଡ଼ିଆ|Wikipedia|u,i,ki,pi,ɽi,a|uikipiṛia
 ଉକୁଣି||␣|
 ଉଖଳ||␣|
 ଉଚିତ||␣|
-ଉଚ୍ଚ|high|u§t§t͡ʃɔ|ucca
+ଉଚ୍ଚ|high|u,t,t͡ʃɔ|ucca
 ଉଚ୍ଚତା||␣|
 ଉଚ୍ଚାରିତ||␣|
 ଉଚ୍ଚାରିବା||␣|
 ଉଞ୍ଚାଇବା||␣|
-ଉଟ|leaf|u§ʈɔ|uʈɔ
-ଉଟଜ|cottage, hut|u§ʈɔ§d͡ʒɔ|uṭaja
+ଉଟ|leaf|u,ʈɔ|uʈɔ
+ଉଟଜ|cottage, hut|u,ʈɔ,d͡ʒɔ|uṭaja
 ଉଠାଇବା||␣|
 ଉଠିବା||␣
-ଉଡ଼ିବା|to fly|u§ɽi§ba|uṛibā
-ଉଡାଣ|flight|u§ɖa§ɳɔ|uḍāṇa
-ଉଣେଇଶ|nineteen|u§ɳe§i§sɔ|uṇeiśa
+ଉଡ଼ିବା|to fly|u,ɽi,ba|uṛibā
+ଉଡାଣ|flight|u,ɖa,ɳɔ|uḍāṇa
+ଉଣେଇଶ|nineteen|u,ɳe,i,sɔ|uṇeiśa
 ଉତରିବା||␣|
 ଉତାରିବା||␣|
 ଉତ୍କୃଷ୍ଟ||␣|
@@ -210,11 +210,11 @@ autoExpandExamples.or = `
 ଉପାଡ଼ିବା||␣|
 ଉଭା||␣|
 ଉଭୟ||␣|
-ଉର୍ବୀ|earth|u§ɾ§bi|urbi
-ଉଲ|wool|u§lɔ|ula
+ଉର୍ବୀ|earth|u,ɾ,bi|urbi
+ଉଲ|wool|u,lɔ|ula
 ଉଲଙ୍ଗ||␣|
 ଉଷ୍ଣ||␣|
-ଏକ|one|e§kɔ|eka
+ଏକ|one|e,kɔ|eka
 ଏକଚାଳିଶ||␣|
 ଏକତିରିଶ||␣|
 ଏକଦମ୍||␣|
@@ -224,36 +224,36 @@ autoExpandExamples.or = `
 ଏକାବନ||␣|
 ଏକୁଟିଆ||␣|
 ଏକୋଇଶ||␣|
-ଏଗାର|eleven|e§ɡa§ɾɔ|egāra
-ଏଠାରେ|here|e§ʈʰa§ɾe|eṭhāre
+ଏଗାର|eleven|e,ɡa,ɾɔ|egāra
+ଏଠାରେ|here|e,ʈʰa,ɾe|eṭhāre
 ଏପିଡେମିକ୍||␣
-ଏବଂ|and|e§bɔ̃|ebaṁ|
+ଏବଂ|and|e,bɔ̃|ebaṁ|
 ଏହା|this||eha
 ଐଶ୍ୱର୍ଯ୍ୟ||␣|
 ଓ|and|o|o
 ଓଝା||␣|
-ଓଟ|camel|o§ʈɔ|oṭa
+ଓଟ|camel|o,ʈɔ|oṭa
 ଓଟାରିବା||␣|
-ଓଠ|lip|o§ʈʰɔ|oṭha
-ଓଡ଼ିଆ|Oriya|o§ɽi§a|oṛiā
+ଓଠ|lip|o,ʈʰɔ|oṭha
+ଓଡ଼ିଆ|Oriya|o,ɽi,a|oṛiā
 ଓଡ଼ିଶା||␣|
-ଓଦା|wet|o§d̪a|odā
+ଓଦା|wet|o,d̪a|odā
 ଓଧ||␣|
-ଓଲଟେଇବା|to turn|o§lɔ§ʈe§i§ba|olaṭeibā
+ଓଲଟେଇବା|to turn|o,lɔ,ʈe,i,ba|olaṭeibā
 ଓଷା||␣|
 ଓଷ୍ଠ୍ୟ||␣|
 ଓସାର||␣|
-ଓସାରିଆ|wide|o§sa§ɾi§a|osāriā
+ଓସାରିଆ|wide|o,sa,ɾi,a|osāriā
 ଓସାରିବା||␣|
 ଓହ୍ଲାଇବା||␣|
-ଔଷଧ|medecine|ɔu̯§sɔ§dʱɔ|aushadha
+ଔଷଧ|medecine|ɔu̯,sɔ,dʱɔ|aushadha
 କଅଁଣ||␣|
 କଅଁଳ||␣|
 କଅଁଳିବା||␣|
 କଇଥ||␣|
 କଉଡ଼ିଆ||␣|
 କଖାରୁ||␣
-କଙ୍କାଳ|skeleton|kɔ§ŋ§ka§ɭɔ|kaṅkāḷa
+କଙ୍କାଳ|skeleton|kɔ,ŋ,ka,ɭɔ|kaṅkāḷa
 କଙ୍ଗ୍ରେସ୍||␣|
 କଚାଡ଼ିବା||␣|
 କଚିରି||␣|
@@ -282,8 +282,8 @@ autoExpandExamples.or = `
 କମିବା||␣|
 କମେଡ଼ି||␣|
 କମ୍||␣|
-କମ୍ପ୍ୟୁଟର|computer|kɔ§m§p§ju§ʈɔ§ɾɔ|kampyuṭara
-କମ୍ବଳ|blanket, rug|kɔ§m§bɔ§ɭɔ|kambaḷa
+କମ୍ପ୍ୟୁଟର|computer|kɔ,m,p,ju,ʈɔ,ɾɔ|kampyuṭara
+କମ୍ବଳ|blanket, rug|kɔ,m,bɔ,ɭɔ|kambaḷa
 କରଣ||␣|
 କରଣି ଅକ୍ଷର||␣|
 କରଣି||␣|
@@ -298,12 +298,12 @@ autoExpandExamples.or = `
 କଲମ||␣|
 କଲା||␣
 କଲିକତା||␣
-କଲିଜା|liver|kɔ§li§d͡ʒa|kalijā
-କଳା|black|kɔ§ɭa|kaḷā
+କଲିଜା|liver|kɔ,li,d͡ʒa|kalijā
+କଳା|black|kɔ,ɭa|kaḷā
 କଳାହାଣ୍ଡି||␣|
 କଳିଙ୍ଗ||␣
 କଳ୍ପନା||␣|
-କହିବା|to say|kɔ§hi§ba|kahibā
+କହିବା|to say|kɔ,hi,ba|kahibā
 କହୁଣି||␣|
 କ଼||␣
 କାଇଦା||␣|
@@ -315,22 +315,22 @@ autoExpandExamples.or = `
 କାଚ||␣
 କାଚରା||␣|
 କାଛା||␣|
-କାଟିବା|to cut|ka§ʈi§ba|kāṭibā
+କାଟିବା|to cut|ka,ʈi,ba|kāṭibā
 କାଠ||␣
 କାଠି||␣|
 କାଠିପୋକ||␣
 କାଠୁରିଆ||␣|
 କାଣ୍ଡ||␣|
-କାନ|ear|ka§n̪ɔ|kāna
+କାନ|ear|ka,n̪ɔ|kāna
 କାନୁନ୍ଗୋ||␣|
 କାନ୍ଦଣା||␣|
 କାନ୍ଦିବା||␣|
 କାନ୍ହ||␣|
 କାମ||␣
-କାମୁଡ଼ିବା|to bite|ka§mu§ɽi§ba|kāmuṛibā
+କାମୁଡ଼ିବା|to bite|ka,mu,ɽi,ba|kāmuṛibā
 କାମେରା||␣|
 କାରକ||␣|
-କାରଣ|because|ka§ɾɔ§ɳɔ|kāraṇa
+କାରଣ|because|ka,ɾɔ,ɳɔ|kāraṇa
 କାର୍ତ୍ତିକେୟ||␣|
 କାଲି||␣
 କାଶିବା||␣|
@@ -346,10 +346,10 @@ autoExpandExamples.or = `
 କିମ୍ଭୀର||␣|
 କିଲୋମିଟର||␣|
 କିସ||␣|
-କୀଟ|worm|ki§ʈɔ|kiṭa
+କୀଟ|worm|ki,ʈɔ|kiṭa
 କୁ||␣|
 କୁକୁଡ଼ା||␣|
-କୁକୁର|dog|ku§ku§ɾɔ|kukura
+କୁକୁର|dog|ku,ku,ɾɔ|kukura
 କୁଟିବା||␣|
 କୁଡ଼ାଲ||␣|
 କୁଦ||␣|
@@ -362,11 +362,11 @@ autoExpandExamples.or = `
 କୁରାନ୍||␣|
 କୁଶ||␣|
 କୁଶୀଦ||␣|
-କୁହୁଡ଼ି|fog|ku§hu§ɽi|kuhuṛi
+କୁହୁଡ଼ି|fog|ku,hu,ɽi|kuhuṛi
 କୁହୁଳିବା||␣|
 କୁହେଳିକା||␣|
-କୃମି|worm|kru§mi|krumi
-କୃଷ୍ଣ|Krishna|kɾu§s§ɳɔ|krushṇa
+କୃମି|worm|kru,mi|krumi
+କୃଷ୍ଣ|Krishna|kɾu,s,ɳɔ|krushṇa
 କୃଷ୍ଣସାର||␣|
 କେ||␣|
 କେଉଁଝର||␣|
@@ -374,11 +374,11 @@ autoExpandExamples.or = `
 କେଛୁ||␣|
 କେତକୀ||␣|
 କେତେ||␣|
-କେତେବେଲେ|when|ke§t̪e§be§le|ketebele
+କେତେବେଲେ|when|ke,t̪e,be,le|ketebele
 କେନ୍ଦୁଝର||␣|
 କେନ୍ଦ୍ର||␣|
 କେବଳ||␣|
-କେଶ|hair|ke§sɔ|keśa
+କେଶ|hair|ke,sɔ|keśa
 କୋଇଲା||␣
 କୋଇଲି||␣|
 କୋଉ||␣|
@@ -386,7 +386,7 @@ autoExpandExamples.or = `
 କୋଠରି||␣|
 କୋଠା||␣|
 କୋଠି||␣|
-କୋଡ଼ିଏ|twenty|ko§ɽi§e|koṛie
+କୋଡ଼ିଏ|twenty|ko,ɽi,e|koṛie
 କୋଷାତକ||␣
 କୌଣସି||␣|
 କ୍ଷମା||␣|
@@ -394,7 +394,7 @@ autoExpandExamples.or = `
 ଖଚ୍ଚର||␣|
 ଖଜା||␣|
 ଖଜୁର||␣|
-ଖଟ|bed|kʰɔ§ʈɔ|khaṭa
+ଖଟ|bed|kʰɔ,ʈɔ|khaṭa
 ଖଟଣି||␣|
 ଖଟା||␣|
 ଖଟିଆ||␣|
@@ -408,10 +408,10 @@ autoExpandExamples.or = `
 ଖବର||␣|
 ଖବରକାଗଜ||␣|
 ଖରାଟି||␣|
-ଖରାପ|bad|kʰɔ§ɾa§pɔ|kharāpa
+ଖରାପ|bad|kʰɔ,ɾa,pɔ|kharāpa
 ଖସିବା||␣|
 ଖ଼||␣
-ଖାଇବା|to eat|kʰa§i§ba|khāibā
+ଖାଇବା|to eat|kʰa,i,ba|khāibā
 ଖାତା||␣|
 ଖାଦ୍ୟ||␣|
 ଖାଲି||␣|
@@ -423,25 +423,25 @@ autoExpandExamples.or = `
 ଖୁବ୍||␣|
 ଖୁସି||␣|
 ଖେଞ୍ଚିବା||␣|
-ଖେଳିବା|to play|kʰe§ɭi§ba|kheḷibā
-ଖୋଇ|habit|kʰo§i|khoi
+ଖେଳିବା|to play|kʰe,ɭi,ba|kheḷibā
+ଖୋଇ|habit|kʰo,i|khoi
 ଖୋଜାଖୋଜି||␣|
 ଖୋଜିବା||␣|
 ଖୋଡ଼||␣|
 ଖୋଡା||␣
 ଖୋଲିବା||␣|
-ଖୋଳିବା|to dig|kʰo§ɭi§ba|khoḷibā
+ଖୋଳିବା|to dig|kʰo,ɭi,ba|khoḷibā
 ଗଏଁଠ୍||␣|
-ଗଗନ|sky|ɡɔ§ɡɔ§n̪ɔ|gagana
+ଗଗନ|sky|ɡɔ,ɡɔ,n̪ɔ|gagana
 ଗଙ୍ଗା||␣|
-ଗଛ|tree|ɡɔ§t͡ʃʰɔ|gacha
+ଗଛ|tree|ɡɔ,t͡ʃʰɔ|gacha
 ଗଛାଇବା||␣|
 ଗଛିବା||␣|
-ଗଞ୍ଜା|cock, rooster|ɡɔ§n̪§d͡ʒa|gañjā
+ଗଞ୍ଜା|cock, rooster|ɡɔ,n̪,d͡ʒa|gañjā
 ଗଞ୍ଜାଇ||␣
 ଗଡ଼||␣|
 ଗଢ଼ିବା||␣|
-ଗଣିବା|to count|ɡɔ§ɳi§ba|gaṇibā
+ଗଣିବା|to count|ɡɔ,ɳi,ba|gaṇibā
 ଗଣ୍ଠି||␣|
 ଗତ||␣|
 ଗତକାଲି||␣
@@ -453,7 +453,7 @@ autoExpandExamples.or = `
 ଗମନ||␣|
 ଗରଜିବା||␣|
 ଗରମ ହେବା||␣|
-ଗରମ|warm|ɡɔ§ɾɔ§mɔ|garama
+ଗରମ|warm|ɡɔ,ɾɔ,mɔ|garama
 ଗର୍ଜନ||␣
 ଗଳା||␣|
 ଗଳିବା||␣|
@@ -461,8 +461,8 @@ autoExpandExamples.or = `
 ଗହୁଁ||␣|
 ଗ଼||␣
 ଗାଁ||␣
-ଗାଇବା|to sing|ɡa§i§ba|gāibā
-ଗାଈ|cow|ɡa§i|gāi
+ଗାଇବା|to sing|ɡa,i,ba|gāibā
+ଗାଈ|cow|ɡa,i|gāi
 ଗାଈଆଳ||␣|
 ଗାଜର||␣
 ଗାଜିବା||␣|
@@ -473,7 +473,7 @@ autoExpandExamples.or = `
 ଗାଧିବା||␣|
 ଗାଧେଇବା||␣|
 ଗାନ୍ଥିବା||␣|
-ଗିରି|mountain|ɡi§ɾi|giri
+ଗିରି|mountain|ɡi,ɾi|giri
 ଗିଲାସ||␣|
 ଗିଳିବା||␣|
 ଗୀତ||␣|
@@ -488,7 +488,7 @@ autoExpandExamples.or = `
 ଗୁରୁବାର||␣|
 ଗୁହ||␣|
 ଗୁହାଳ||␣|
-ଗୋଆ|Goa|ɡo§a|goā
+ଗୋଆ|Goa|ɡo,a|goā
 ଗୋଛା||␣|
 ଗୋଟା||␣|
 ଗୋଠ||␣|
@@ -498,7 +498,7 @@ autoExpandExamples.or = `
 ଗୋପାଳ||␣|
 ଗୋବର||␣|
 ଗୋରୁ||␣|
-ଗୋଲ|round|ɡo§lɔ|gola
+ଗୋଲ|round|ɡo,lɔ|gola
 ଗୋଲାପ||␣
 ଗୋଶାଳ||␣|
 ଗୋଶାଳା||␣|
@@ -507,23 +507,23 @@ autoExpandExamples.or = `
 ଘଟ||␣|
 ଘଟି||␣|
 ଘଟିବା||␣|
-ଘଟ୍ଟ|landing ghat|ɡʱɔ§ʈ§ʈɔ|ghaṭṭa
+ଘଟ୍ଟ|landing ghat|ɡʱɔ,ʈ,ʈɔ|ghaṭṭa
 ଘଡ଼ି||␣|
 ଘଣ୍ଟ||␣|
-ଘଣ୍ଟା|hour|ɡʱɔ§ɳ§ʈa|ghaṇṭā
+ଘଣ୍ଟା|hour|ɡʱɔ,ɳ,ʈa|ghaṇṭā
 ଘଣ୍ଟି||␣|
 ଘନ||␣|
-ଘର|house|ɡʱɔ§ɾɔ|ghara
+ଘର|house|ɡʱɔ,ɾɔ|ghara
 ଘରବାଲା||␣|
-ଘଷିବା|to rub|ɡʱɔ§si§ba|ghashibā
+ଘଷିବା|to rub|ɡʱɔ,si,ba|ghashibā
 ଘାଟ||␣|
 ଘାଟିଆ||␣|
 ଘାଟିବା||␣|
-ଘାସ|grass|ɡʱa§sɔ|ghāsa
+ଘାସ|grass|ɡʱa,sɔ|ghāsa
 ଘୁଷୁରି||␣|
 ଘେନିବା||␣|
 ଘୋଟିବା||␣|
-ଘୋଡ଼ା|horse|ɡʱo§ɽa|ghoṛā
+ଘୋଡ଼ା|horse|ɡʱo,ɽa|ghoṛā
 ଘୋଷ||␣|
 ଚଉକଠ||␣|
 ଚଉକି||␣|
@@ -538,17 +538,17 @@ autoExpandExamples.or = `
 ଚଉରାଳିଶ||␣|
 ଚକ||␣
 ଚଞ୍ଚଳ||␣|
-ଚଟିଆ|sparrow|t͡ʃɔ§ʈi§a|caṭiā
+ଚଟିଆ|sparrow|t͡ʃɔ,ʈi,a|caṭiā
 ଚଢ଼ାଇ||␣|
 ଚତୁର୍ମାସ||␣|
-ଚନ୍ଦ୍ର|moon|t͡ʃɔ§n̪§d§̪ɾɔ|candra
+ଚନ୍ଦ୍ର|moon|t͡ʃɔ,n̪,d,̪ɾɔ|candra
 ଚନ୍ଦ୍ରବିନ୍ଦୁ||␣
 ଚପିବା||␣|
 ଚବିଶି||␣|
 ଚମକିବା||␣|
-ଚମଡ଼ା|skin|t͡ʃɔ§mɔ§ɽa|camaṛā
+ଚମଡ଼ା|skin|t͡ʃɔ,mɔ,ɽa|camaṛā
 ଚମ୍ପା||␣|
-ଚର୍ବି|fat (noun)|t͡ʃɔ§ɾ§bi|carbi
+ଚର୍ବି|fat (noun)|t͡ʃɔ,ɾ,bi|carbi
 ଚର୍ମ||␣
 ଚଲାଇବା||␣|
 ଚଳାଇବା||␣|
@@ -563,48 +563,48 @@ autoExpandExamples.or = `
 ଚାବି||␣
 ଚାବିବା||␣|
 ଚାମଚ||␣
-ଚାରି|four|t͡ʃa§ɾi|cāri
+ଚାରି|four|t͡ʃa,ɾi|cāri
 ଚାଲି||␣|
-ଚାଲିବା|to walk|t͡ʃa§li§ba|cālibā
+ଚାଲିବା|to walk|t͡ʃa,li,ba|cālibā
 ଚାଳିବା||␣|
 ଚାଳିଶ||␣|
 ଚାହିଁବା||␣|
 ଚିକଣ||␣|
 ଚିକଣା||␣|
-ଚିକ୍କଣ|smooth|t͡ʃi§k§kɔ§ɳɔ|cikkaṇa
-ଚିଙ୍ଗୁଡ଼ି|prawn|t͡ʃi§ŋ§ɡu§ɽi|ciṅguṛi
+ଚିକ୍କଣ|smooth|t͡ʃi,k,kɔ,ɳɔ|cikkaṇa
+ଚିଙ୍ଗୁଡ଼ି|prawn|t͡ʃi,ŋ,ɡu,ɽi|ciṅguṛi
 ଚିଠା||␣|
 ଚିଠି||␣
 ଚିତା||␣
 ଚିନି||␣
 ଚିନିବା||␣|
 ଚିନ୍ତା||␣
-ଚିପିବା|to compress|t͡ʃi§pi§ba|cipibā
-ଚିପୁଡ଼ିବା|to squeeze out|t͡ʃi§pu§ɽi§ba|cipuṛibā
-ଚିରିବା|to split|t͡ʃi§ɾi§ba|ciribā
+ଚିପିବା|to compress|t͡ʃi,pi,ba|cipibā
+ଚିପୁଡ଼ିବା|to squeeze out|t͡ʃi,pu,ɽi,ba|cipuṛibā
+ଚିରିବା|to split|t͡ʃi,ɾi,ba|ciribā
 ଚିହ୍ନିବା||␣|
 ଚୀନ||␣
 ଚୁକିବା||␣|
-ଚୁଚୁମିବା|to suck|t͡ʃu§t͡ʃu§mi§ba|cucumibā
+ଚୁଚୁମିବା|to suck|t͡ʃu,t͡ʃu,mi,ba|cucumibā
 ଚୁଟି||␣|
 ଚୁନ୍ଦି||␣|
 ଚୁପ୍ ହେବା||␣|
-ଚୁମ୍ବିବା|to kiss|t͡ʃu§m§bi§ba|cumbibā
-ଚୁଷିବା|to suck|t͡ʃu§si§ba|cushibā
+ଚୁମ୍ବିବା|to kiss|t͡ʃu,m,bi,ba|cumbibā
+ଚୁଷିବା|to suck|t͡ʃu,si,ba|cushibā
 ଚୂନା||␣|
 ଚୂର||␣|
 ଚୂରିବା||␣|
 ଚୂଳ||␣|
 ଚୂଳା||␣|
 ଚୂଳି||␣|
-ଚେର|root|t͡ʃe§ɾɔ|cera
+ଚେର|root|t͡ʃe,ɾɔ|cera
 ଚୈତ୍ର||␣|
 ଚୋବାଇବା||␣|
 ଚୋର||␣
 ଚୋରାଇବା||␣
 ଚୋରି||␣
-ଚୌଦ|fourteen|t͡ʃɔu§d̪ɔ|cauda
-ଛଅ|six|t͡ʃʰɔ§ɔ|chaa
+ଚୌଦ|fourteen|t͡ʃɔu,d̪ɔ|cauda
+ଛଅ|six|t͡ʃʰɔ,ɔ|chaa
 ଛକୋଣି||␣
 ଛଣ||␣|
 ଛଣି||␣|
@@ -620,27 +620,27 @@ autoExpandExamples.or = `
 ଛାଇବା||␣|
 ଛାଞ୍ଚ||␣|
 ଛାଞ୍ଚିବା||␣|
-ଛାଟିବା|to throw|t͡ʃʰa§ʈi§ba|chāṭibā
+ଛାଟିବା|to throw|t͡ʃʰa,ʈi,ba|chāṭibā
 ଛାଡ଼ିବା||␣|
 ଛାତ||␣
-ଛାତି|breast, chest|t͡ʃʰa§t̪i|chāti
+ଛାତି|breast, chest|t͡ʃʰa,t̪i|chāti
 ଛାତ୍ର||␣|
 ଛାପା||␣|
 ଛାପାଖାନା||␣|
 ଛାପିବା||␣|
-ଛାଲ|skin|t͡ʃʰa§lɔ|chāla
+ଛାଲ|skin|t͡ʃʰa,lɔ|chāla
 ଛିଙ୍କିବା||␣|
 ଛିଦ୍ର||␣
 ଛିନ୍ଦିବା||␣|
-ଛୁଆ|child|t͡ʃʰu§a|chuā
+ଛୁଆ|child|t͡ʃʰu,a|chuā
 ଛୁଇଁବା||␣|
 ଛୁଛା||␣|
 ଛୁତି||␣
 ଛୁରୀ||␣
-ଛେପ ପକାଇବା|to spit|t͡ʃʰe§pɔ§ §pɔ§ka§i§ba|chepa pakāibā
-ଛେଲି|bark (of a tree)|t͡ʃʰe§li|cheli
+ଛେପ ପକାଇବା|to spit|t͡ʃʰe,pɔ, ,pɔ,ka,i,ba|chepa pakāibā
+ଛେଲି|bark (of a tree)|t͡ʃʰe,li|cheli
 ଛେଳି||␣|
-ଛୋଟ|short, small|t͡ʃʰo§ʈɔ|choṭa
+ଛୋଟ|short, small|t͡ʃʰo,ʈɔ|choṭa
 ଛୋଡ଼ିବା||␣|
 ଛୟାଳିଶ||␣|
 ଜଉ||␣|
@@ -652,24 +652,24 @@ autoExpandExamples.or = `
 ଜଡି||␣
 ଜଣ||␣|
 ଜଣାଇବା||␣|
-ଜନନୀ|mother|d͡ʒɔ§n̪ɔ§n̪i|janani
+ଜନନୀ|mother|d͡ʒɔ,n̪ɔ,n̪i|janani
 ଜନାଜା||␣|
 ଜନ୍ତୁ||␣|
-ଜନ୍ମ|birth|d͡ʒɔ§n̪§mɔ|janma
+ଜନ୍ମ|birth|d͡ʒɔ,n̪,mɔ|janma
 ଜନ୍ମଗ୍ରହଣ||␣|
 ଜମି||␣|
 ଜମିଦାର||␣|
-ଜମ୍ବୁ|mountain|d͡ʒɔ§m§bu|jambu
+ଜମ୍ବୁ|mountain|d͡ʒɔ,m,bu|jambu
 ଜଲଦି||␣|
 ଜଳ||␣
 ଜଳଚର||␣
-ଜଳିବା|to burn|d͡ʒɔ§ɭi§ba|jaḷibā
-ଜହ୍ନ|moonlight|d͡ʒɔ§h§nɔ|jahna
+ଜଳିବା|to burn|d͡ʒɔ,ɭi,ba|jaḷibā
+ଜହ୍ନ|moonlight|d͡ʒɔ,h,nɔ|jahna
 ଜ଼||␣
 ଜାଇଫଳ||␣|
 ଜାଗା||␣|
 ଜାଗିବା||␣|
-ଜାଣିବା|to know|d͡ʒa§ɳi§ba|jāṇibā
+ଜାଣିବା|to know|d͡ʒa,ɳi,ba|jāṇibā
 ଜାତ||␣|
 ଜାନୁଆରୀ||␣|
 ଜାମାଇକା||␣|
@@ -677,7 +677,7 @@ autoExpandExamples.or = `
 ଜାଳିବା||␣|
 ଜାଳେଣି||␣|
 ଜାହାଜ||␣|
-ଜିଭ|tongue (organ)|d͡ʒi§bʱɔ|jibha
+ଜିଭ|tongue (organ)|d͡ʒi,bʱɔ|jibha
 ଜୀଇବା||␣|
 ଜୀବ||␣
 ଜୀବନ||␣
@@ -691,16 +691,16 @@ autoExpandExamples.or = `
 ଜୋଡା||␣
 ଜୋତା||␣
 ଜୋର୍||␣|
-ଜ୍ଞାନ|knowledge|d͡ʒ§n̪a§n̪ɔ|jñāna
-ଜ୍ୱାଇଁ|son-in-law|d͡ʒ§wa§ĩ|jwāĩ
+ଜ୍ଞାନ|knowledge|d͡ʒ,n̪a,n̪ɔ|jñāna
+ଜ୍ୱାଇଁ|son-in-law|d͡ʒ,wa,ĩ|jwāĩ
 ଜୟ||␣|
 ଝଟ୍||␣|
 ଝଣ୍ଡା||␣|
 ଝରକା||␣|
 ଝରିବା||␣|
 ଝ଼||␣
-ଝାଡୁ|broom|d͡ʒʱa§ɖu|jhāḍu
-ଝିଅ|daughter|d͡ʒʱi§ɔ|jhia
+ଝାଡୁ|broom|d͡ʒʱa,ɖu|jhāḍu
+ଝିଅ|daughter|d͡ʒʱi,ɔ|jhia
 ଝିଙ୍କିବା||␣|
 ଝୁଟା||␣|
 ଝୁଲଣ||␣|
@@ -708,8 +708,8 @@ autoExpandExamples.or = `
 ଝୁଲିବା||␣|
 ଟଙ୍କା||␣|
 ଟା||␣|
-ଟାଣିବା|to pull|ʈa§ɳi§ba|ṭāṇibā
-ଟାପୁ|island|ʈa§pu|ṭāpu
+ଟାଣିବା|to pull|ʈa,ɳi,ba|ṭāṇibā
+ଟାପୁ|island|ʈa,pu|ṭāpu
 ଟି||␣|
 ଟିଏ||␣|
 ଟିକଟ||␣|
@@ -724,20 +724,20 @@ autoExpandExamples.or = `
 ଠାକୁରାଣୀ||␣|
 ଠାଣା||␣|
 ଠାରୁ||␣|
-ଠିଆ ହେବା|to stand|ʈʰi§a§ §he§ba|ṭhiā hebā
-ଠିକ|correct|ʈʰi§kɔ|ṭhika
+ଠିଆ ହେବା|to stand|ʈʰi,a, ,he,ba|ṭhiā hebā
+ଠିକ|correct|ʈʰi,kɔ|ṭhika
 ଠିକା||␣|
 ଠିକାଦାର୍||␣|
 ଠେକୁଆ||␣|
-ଠେଲିବା|to push|ʈʰe§li§ba|ṭhelibā
+ଠେଲିବା|to push|ʈʰe,li,ba|ṭhelibā
 ଠୋକ||␣|
 ଡକାଇବା||␣|
 ଡଙ୍କା||␣|
-ଡଙ୍ଗା|boat|ɖɔ§ŋ§ɡa|ḍaṅgā
+ଡଙ୍ଗା|boat|ɖɔ,ŋ,ɡa|ḍaṅgā
 ଡମରୁ||␣|
-ଡର|fear|ɖɔ§ɾɔ|ḍara
+ଡର|fear|ɖɔ,ɾɔ|ḍara
 ଡରାଣ||␣|
-ଡରିବା|to fear|ɖɔ§ɾi§ba|ḍaribā
+ଡରିବା|to fear|ɖɔ,ɾi,ba|ḍaribā
 ଡ଼||␣
 ଡାକ||␣|
 ଡାକବାଲା||␣|
@@ -745,13 +745,13 @@ autoExpandExamples.or = `
 ଡାକ୍ତର||␣|
 ଡାକ୍ତରଖାନା||␣|
 ଡାକ୍ତରି||␣|
-ଡାଲମା|dahl curry|ɖa§lɔ§ma|ḍālamā
-ଡାଳ|branch|ɖa§ɭɔ|ḍāḷa
-ଡାଳିମ୍ବ|pomegranate|ɖa§ɭi§m§bɔ|ḍāḷimba
-ଡାହାଣ|right|ɖa§ha§ɳɔ|ḍāhāṇa
+ଡାଲମା|dahl curry|ɖa,lɔ,ma|ḍālamā
+ଡାଳ|branch|ɖa,ɭɔ|ḍāḷa
+ଡାଳିମ୍ବ|pomegranate|ɖa,ɭi,m,bɔ|ḍāḷimba
+ଡାହାଣ|right|ɖa,ha,ɳɔ|ḍāhāṇa
 ଡେଇଁବା||␣|
 ଡେଙ୍ଗା||␣|
-ଡେଣା|wing|ɖe§ɳa|ḍeṇā
+ଡେଣା|wing|ɖe,ɳa|ḍeṇā
 ଡେରି||␣|
 ଢ଼||
 ଢାଙ୍କିବା||␣|
@@ -777,41 +777,41 @@ autoExpandExamples.or = `
 ତାଡ଼ିବା||␣|
 ତାତିବା||␣|
 ତାମଳି||␣|
-ତାରା|star|t̪a§ɾa|tārā
+ତାରା|star|t̪a,ɾa|tārā
 ତାଲବ୍ୟ||␣|
 ତାଲା||␣
 ତାଳ||␣|
 ତିଅଣ||␣|
 ତିଆରି||␣|
 ତିକ୍ତ||␣
-ତିନି|three|ti§ni|tini
-ତିନ୍ତା|wet|t̪i§n̪§t̪a|tintā
+ତିନି|three|ti,ni|tini
+ତିନ୍ତା|wet|t̪i,n̪,t̪a|tintā
 ତିରିଶ||␣|
 ତିଷ୍ଠିବା||␣|
 ତିହାର୍||␣|
-ତୀକ୍ଷ୍ଣ|sharp|t̪i§k§s§ɳɔ|tikshṇa|
+ତୀକ୍ଷ୍ଣ|sharp|t̪i,k,s,ɳɔ|tikshṇa|
 ତୁ|you (2sg)|t̪u|tu
 ତୁଟିବା||␣|
 ତୁଠ||␣|
 ତୁମଡ଼ୀ||␣
-ତୁମେ|you (2sg)|t̪u§me|tume
+ତୁମେ|you (2sg)|t̪u,me|tume
 ତୁରନ୍ତ||␣|
-ତୁଷାର|snow|t̪u§sa§ɾɔ|tushāra
-ତୃତୀୟାଂଶ|third|t̪ɾu§t̪i§jã§sɔ|trutiyāṁśa|
-ତୃଷା|thirst|t̪ɾu§sa|trushā
+ତୁଷାର|snow|t̪u,sa,ɾɔ|tushāra
+ତୃତୀୟାଂଶ|third|t̪ɾu,t̪i,jã,sɔ|trutiyāṁśa|
+ତୃଷା|thirst|t̪ɾu,sa|trushā
 ତେଇଶି||␣|
 ତେତିଶ||␣|
 ତେପନ||␣|
 ତେର||␣
-ତେଲ|oil|t̪e§lɔ|tela
+ତେଲ|oil|t̪e,lɔ|tela
 ତେଲି||␣|
 ତେୟାଳିଶ||␣|
-ତୈଳ|sesame oil|t̪ɔi§ɭɔ|taiḷa|
+ତୈଳ|sesame oil|t̪ɔi,ɭɔ|taiḷa|
 ତୋ||␣|
 ତୋଳ||␣|
 ତୋଳା||␣|
 ତୋଳିବା||␣|
-ଥଣ୍ଡା|cold|t̪ʰɔ§ɳ§ɖa|thaṇḍā
+ଥଣ୍ଡା|cold|t̪ʰɔ,ɳ,ɖa|thaṇḍā
 ଥନ||␣|
 ଥର||␣|
 ଥରିବା||␣|
@@ -827,7 +827,7 @@ autoExpandExamples.or = `
 ଦଉଡ଼ିବା||␣|
 ଦଉରା||␣|
 ଦକ୍ଷିଣ||␣|
-ଦଣ୍ଡାଜ୍ଞା|sentence, conviction|d̪ɔ§ɳ§ɖa§d͡ʒ§n̪a|daṇḍājñā
+ଦଣ୍ଡାଜ୍ଞା|sentence, conviction|d̪ɔ,ɳ,ɖa,d͡ʒ,n̪a|daṇḍājñā
 ଦଣ୍ଡୁଆସି||␣|
 ଦନ୍ତ୍ୟ||␣|
 ଦମିବା||␣|
@@ -836,29 +836,29 @@ autoExpandExamples.or = `
 ଦଳ||␣|
 ଦଶ||␣
 ଦାଗ||␣|
-ଦାଢ଼ି|beard|d̪a§ɽʱi|daṛhi
-ଦାନ୍ତ|tooth|d̪a§n̪§t̪ɔ|dānta
+ଦାଢ଼ି|beard|d̪a,ɽʱi|daṛhi
+ଦାନ୍ତ|tooth|d̪a,n̪,t̪ɔ|dānta
 ଦାରୁ||␣|
-ଦିନ|day|d̪i§n̪ɔ|dina
+ଦିନ|day|d̪i,n̪ɔ|dina
 ଦିଲ୍||␣|
 ଦିଲ୍ଲୀ||␣|
-ଦିସେମ୍ବର୍|December|d̪i§se§m§bɔ§ɾ|disembar
+ଦିସେମ୍ବର୍|December|d̪i,se,m,bɔ,ɾ|disembar
 ଦୀପ୍ତ||␣|
-ଦୀର୍ଘ|long|d̪i§ɾ§ɡʱɔ|dirgha
-ଦୁଇ|two|d̪u§i|dui
+ଦୀର୍ଘ|long|d̪i,ɾ,ɡʱɔ|dirgha
+ଦୁଇ|two|d̪u,i|dui
 ଦୁଧ||␣|
-ଦୁନିଆ|world|d̪u§n̪i§a|duniā
+ଦୁନିଆ|world|d̪u,n̪i,a|duniā
 ଦୁର୍ଗା||␣|
 ଦୁଷ୍ଟ||␣|
 ଦୁଷ୍ଟାମି||␣|
-ଦୂର|far|d̪u§ɾɔ|dura
+ଦୂର|far|d̪u,ɾɔ|dura
 ଦେଉ||␣|
 ଦେଖାଇବା||␣|
-ଦେଖିବା|to see|d̪e§kʰi§ba|dekhibā
+ଦେଖିବା|to see|d̪e,kʰi,ba|dekhibā
 ଦେଢ଼||␣|
 ଦେବ||␣
 ଦେବଦାରୁ||␣|
-ଦେବା|to give|d̪e§ba|debā
+ଦେବା|to give|d̪e,ba|debā
 ଦେବୀ||␣|
 ଦେଶ||␣
 ଦେଶୀ||␣|
@@ -871,8 +871,8 @@ autoExpandExamples.or = `
 ଦୌହତ୍ରୀ||␣
 ଦୌହିତ୍ର||␣
 ଦ୍ରୌପଦୀ||␣|
-ଦ୍ଵୀପ|island|d̪§ʋi§pɔ|dvipa
-ଦ୍ୱାର|door|d̪§wa§ɾɔ|dwāra
+ଦ୍ଵୀପ|island|d̪,ʋi,pɔ|dvipa
+ଦ୍ୱାର|door|d̪,wa,ɾɔ|dwāra
 ଦ୍ୱାରା||␣|
 ଦ୍ୱୟ||␣|
 ଧଉଳାଇବା||␣|
@@ -880,11 +880,11 @@ autoExpandExamples.or = `
 ଧଣ୍ଡା||␣|
 ଧଣ୍ଡି||␣|
 ଧନୀ||␣|
-ଧନ୍ୟବାଦ|thank you|d̪ʱɔ§n̪§jɔ§ba§d̪ɔ|dhanyabāda
-ଧନ୍ୟବାଦ୍|thank you|d̪ʱɔ§n̪§jɔ§ba§d̪ɔ|dhanyabāda
-ଧବଳ|white|d̪ʱɔ§bɔ§ɭɔ|dhabaḷa
+ଧନ୍ୟବାଦ|thank you|d̪ʱɔ,n̪,jɔ,ba,d̪ɔ|dhanyabāda
+ଧନ୍ୟବାଦ୍|thank you|d̪ʱɔ,n̪,jɔ,ba,d̪ɔ|dhanyabāda
+ଧବଳ|white|d̪ʱɔ,bɔ,ɭɔ|dhabaḷa
 ଧରାଧରି||␣|
-ଧରିବା|to hold|d̪ʱɔ§ɾi§ba|dharibā
+ଧରିବା|to hold|d̪ʱɔ,ɾi,ba|dharibā
 ଧର୍ମ||␣|
 ଧଳା||␣
 ଧାଇଁବା||␣|
@@ -896,27 +896,27 @@ autoExpandExamples.or = `
 ଧିଟ||␣|
 ଧୀବର||␣|
 ଧୀରେ||␣|
-ଧୂଆଁ|smoke|d̪ʱu§ã|dhuā̃
+ଧୂଆଁ|smoke|d̪ʱu,ã|dhuā̃
 ଧୂଲା||␣|
-ଧୂଳି|dust|d̪ʱu§ɭi|dhuḷi
+ଧୂଳି|dust|d̪ʱu,ɭi|dhuḷi
 ଧୂସର||␣|
 ଧୂସୁରିବା||␣|
-ଧୋଇବା|to wash|d̪ʱo§i§ba|dhoibā
+ଧୋଇବା|to wash|d̪ʱo,i,ba|dhoibā
 ଧୋବା||␣|
-ଧ୍ୱଂସ|decay, destruction|d̪ʱ§wɔ̃§sɔ|dhwaṁsa|
+ଧ୍ୱଂସ|decay, destruction|d̪ʱ,wɔ̃,sɔ|dhwaṁsa|
 ଧ୍ୱଜ||␣|
-ନଅ|nine|nɔ§ɔ|naa
+ନଅ|nine|nɔ,ɔ|naa
 ନଇଁବା||␣|
 ନକଲ||␣|
 ନକସା||␣|
-ନଖ|fingernail|n̪ɔ§kʰɔ|nakha
+ନଖ|fingernail|n̪ɔ,kʰɔ|nakha
 ନଗଦ||␣
 ନଗର||␣
 ନଜର||␣|
 ନଜରାନା||␣|
-ନଦୀ|river|n̪ɔ§d̪i|nadi
+ନଦୀ|river|n̪ɔ,d̪i|nadi
 ନବେ||␣|
-ନଭେମ୍ବର|November|n̪ɔ§bʱe§m§bɔ§ɾɔ|nabhembara
+ନଭେମ୍ବର|November|n̪ɔ,bʱe,m,bɔ,ɾɔ|nabhembara
 ନମସ୍ତେ||␣
 ନମୁନା||␣|
 ନର||␣
@@ -924,19 +924,19 @@ autoExpandExamples.or = `
 ନସିବା||␣|
 ନହରା||␣|
 ନାଆ||␣|
-ନାକ|nose|n̪a§kɔ|nāka
+ନାକ|nose|n̪a,kɔ|nāka
 ନାଖୁସ୍||␣|
 ନାଚିବା||␣|
 ନାଟକ||␣|
 ନାତି||␣
 ନାତୁଣୀ||␣
-ନାମ|name|n̪a§mɔ|nāma
+ନାମ|name|n̪a,mɔ|nāma
 ନାରଣ||␣|
 ନାରାୟଣ||␣|
-ନାରୀ|woman|n̪a§ɾi|nāri
-ନାଲି|red|n̪a§li|nāli
-ନିଆଁ|fire|n̪i§ã|niā̃
-ନିକଟ|near|n̪i§kɔ§ʈɔ|nikaṭa
+ନାରୀ|woman|n̪a,ɾi|nāri
+ନାଲି|red|n̪a,li|nāli
+ନିଆଁ|fire|n̪i,ã|niā̃
+ନିକଟ|near|n̪i,kɔ,ʈɔ|nikaṭa
 ନିକଟରେ||␣|
 ନିଗାଡ଼ିବା||␣|
 ନିଜ୍||␣|
@@ -948,12 +948,12 @@ autoExpandExamples.or = `
 ନିର୍ମିତ||␣|
 ନିଶ୍ଚେ||␣|
 ନିଶ୍ଚୟ||␣|
-ନିଶ୍ୱାସ ନେବା|to breathe|n̪i§s§wa§sɔ§ §n̪e§ba|niśwāsa nebā
+ନିଶ୍ୱାସ ନେବା|to breathe|n̪i,s,wa,sɔ, ,n̪e,ba|niśwāsa nebā
 ନିହାତି||␣|
 ନୁନି||␣|
 ନୁନ୍ନି||␣|
-ନୂଆ|new|n̪u§a|nuā
-ନୂତନ|new|n̪u§t̪ɔ§n̪ɔ|nutana
+ନୂଆ|new|n̪u,a|nuā
+ନୂତନ|new|n̪u,t̪ɔ,n̪ɔ|nutana
 ନେବା||␣|
 ନ୍ୟୂନ||␣|
 ପଇଁତିରିଶ||␣|
@@ -963,9 +963,9 @@ autoExpandExamples.or = `
 ପଇସା||␣|
 ପକାଇବା||␣|
 ପକେଟ୍||␣|
-ପକ୍ଷୀ|bird|pɔ§k§si|pakshi
+ପକ୍ଷୀ|bird|pɔ,k,si|pakshi
 ପଙ୍ଗପାଳ||␣|
-ପଚା|rotten|pɔ§t͡ʃa|pacā
+ପଚା|rotten|pɔ,t͡ʃa|pacā
 ପଚାରିବା||␣|
 ପଚାଶ||␣|
 ପଚିବା||␣|
@@ -979,27 +979,27 @@ autoExpandExamples.or = `
 ପଠାଣ||␣|
 ପଡ଼ାଇବା||␣|
 ପଡ଼ି ରହିବା||␣|
-ପଡ଼ିବା|to fall|pɔ§ɽi§ba|paṛibā
+ପଡ଼ିବା|to fall|pɔ,ɽi,ba|paṛibā
 ପଡିବା||␣
 ପଢ଼ାଇବା||␣|
 ପଢ଼ିବା||␣|
-ପଢିବା|to read|pɔ§ɖʱi§ba|paḍhibā
+ପଢିବା|to read|pɔ,ɖʱi,ba|paḍhibā
 ପଣିବା||␣|
 ପଣ୍ଡା||␣|
-ପତଳା|thin|pɔ§t̪ɔ§ɭa|pataḷā
+ପତଳା|thin|pɔ,t̪ɔ,ɭa|pataḷā
 ପତାକା||␣|
-ପତି|husband|pɔ§t̪i|pati
-ପତ୍ନୀ|wife|pɔ§t̪§n̪i|patni
-ପତ୍ର|leaf|pɔ§t̪§ɾɔ|patra
-ପଥର|stone|pɔ§t̪ʰɔ§ɾɔ|pathara
-ପଥିକ|traveller|pɔ§t̪ʰi§kɔ|pathika
+ପତି|husband|pɔ,t̪i|pati
+ପତ୍ନୀ|wife|pɔ,t̪,n̪i|patni
+ପତ୍ର|leaf|pɔ,t̪,ɾɔ|patra
+ପଥର|stone|pɔ,t̪ʰɔ,ɾɔ|pathara
+ପଥିକ|traveller|pɔ,t̪ʰi,kɔ|pathika
 ପଦ||␣
 ପନ୍ତାଡ଼||␣|
 ପନ୍ତାର||␣|
 ପନ୍ଦର||␣
-ପବନ|wind|pɔ§bɔ§n̪ɔ|pabana
-ପର|feather|pɔ§ɾɔ|para
-ପରଂବ୍ରହ୍ମ|the universal Brahma|pɔ§ɾɔ̃§b§ɾɔ§h§mɔ|parambrahma|
+ପବନ|wind|pɔ,bɔ,n̪ɔ|pabana
+ପର|feather|pɔ,ɾɔ|para
+ପରଂବ୍ରହ୍ମ|the universal Brahma|pɔ,ɾɔ̃,b,ɾɔ,h,mɔ|parambrahma|
 ପରଦା||␣|
 ପରମେଶ୍ୱର||␣|
 ପରସ୍ପର||␣|
@@ -1015,30 +1015,30 @@ autoExpandExamples.or = `
 ପର୍ବତ|mountain||parbata
 ପଲ||␣|
 ପଳାଇବା||␣|
-ପଶୁ|beast|pɔ§su|paśu
+ପଶୁ|beast|pɔ,su|paśu
 ପଶ୍ଚିମ||␣|
 ପସନ୍ଦ||␣|
 ପହଁରା||␣
-ପହଁରିବା|to swim|pɔ§hɔ̃§ɾi§ba|pahãribā
+ପହଁରିବା|to swim|pɔ,hɔ̃,ɾi,ba|pahãribā
 ପହଞ୍ଚିବା||␣|
 ପାଇଁ||␣|
 ପାଇଟାଳ||␣|
 ପାଇଟି||␣|
 ପାଇବା||␣|
-ପାଉଁଶ|ash|pa§ũ§sɔ|pāũśa
-ପାଖ|near|pa§kʰɔ|pākha
+ପାଉଁଶ|ash|pa,ũ,sɔ|pāũśa
+ପାଖ|near|pa,kʰɔ|pākha
 ପାଖରେ||␣|
 ପାଗଳ||␣|
 ପାଗଳାମି||␣|
 ପାଚିରୀ||␣|
-ପାଞ୍ଚ|five|pa§n̪§t͡ʃɔ|pāñca
+ପାଞ୍ଚ|five|pa,n̪,t͡ʃɔ|pāñca
 ପାଟ||␣|
 ପାଟରା||␣|
-ପାଟି|mouth|pa§ʈi|pāṭi
+ପାଟି|mouth|pa,ʈi|pāṭi
 ପାଠ||␣|
-ପାଣି|water|pa§ɳi|pāṇi
+ପାଣି|water|pa,ɳi|pāṇi
 ପାଣ୍ଡୁ||␣|
-ପାଦ|foot|pa§d̪ɔ|pāda
+ପାଦ|foot|pa,d̪ɔ|pāda
 ପାନ||␣|
 ପାପଡ଼||␣|
 ପାପଡ଼ା||␣|
@@ -1056,50 +1056,50 @@ autoExpandExamples.or = `
 ପିଅର||␣|
 ପିଆଜ||␣|
 ପିଆଲା||␣|
-ପିଇବା|to drink|pi§i§ba|piibā
+ପିଇବା|to drink|pi,i,ba|piibā
 ପିଉସୀ||␣|
-ପିଟିବା|to hit|pi§ʈi§ba|piṭibā
+ପିଟିବା|to hit|pi,ʈi,ba|piṭibā
 ପିଠା||␣|
-ପିଠି|back|pi§ʈʰi|piṭhi
-ପିତା|father|pi§t̪a|pitā
+ପିଠି|back|pi,ʈʰi|piṭhi
+ପିତା|father|pi,t̪a|pitā
 ପିତୃ||␣|
 ପିନି||␣|
-ପିନ୍ଧିବା|to wear|pi§n̪§d̪ʱi§ba|pindhibā|
+ପିନ୍ଧିବା|to wear|pi,n̪,d̪ʱi,ba|pindhibā|
 ପିବା||␣|
 ପିମ୍ପୁଡ଼ି||␣|
 ପିମ୍ପୁଡି||␣
-ପିଲା|child|pi§la|pilā
+ପିଲା|child|pi,la|pilā
 ପୁଂଲିଙ୍ଗ||␣|
-ପୁଅ|son|pu§ɔ|pua
+ପୁଅ|son|pu,ɔ|pua
 ପୁଛ||␣
 ପୁଛିବା||␣|
 ପୁଣ୍ଡ୍ର||␣
 ପୁରସ୍କାର||␣|
-ପୁରୁଣା|old|pu§ɾu§ɳa|puruṇā
-ପୁରୁଷ|man (adult male)|pu§ɾu§sɔ|purusha
-ପୁରୁଷୋତ୍ତମପୁର|Purusottampur (village name)|pu§ɾu§so§t§tɔ§mɔ§pu§ɾɔ|puruṣottômôpurô
+ପୁରୁଣା|old|pu,ɾu,ɳa|puruṇā
+ପୁରୁଷ|man (adult male)|pu,ɾu,sɔ|purusha
+ପୁରୁଷୋତ୍ତମପୁର|Purusottampur (village name)|pu,ɾu,so,t,tɔ,mɔ,pu,ɾɔ|puruṣottômôpurô
 ପୁଲିସ୍||␣|
-ପୁଲିସ୍ବାଲା|police officer|pu§li§s§ba§la|pulisbālā
+ପୁଲିସ୍ବାଲା|police officer|pu,li,s,ba,la|pulisbālā
 ପୂଜନ||␣
 ପୂଜା||␣
 ପୂରୁବ||␣|
-ପୂର୍ଣ୍ଣ|full|pu§ɾ§ɳ§ɳɔ|purṇṇa
+ପୂର୍ଣ୍ଣ|full|pu,ɾ,ɳ,ɳɔ|purṇṇa
 ପୂର୍ଣ୍ଣଚ୍ଛେଦ||␣|
-ପୂର୍ବୀୟ|eastern|pu§ɾ§bi§jɔ|purbiya
-ପୃଥିବୀ|Earth|pɾu§tʰi§bi|pruthibi
-ପୃଥ୍ୱୀ|soil, earth|pɾu§t̪ʰ§wi|pruthwi
+ପୂର୍ବୀୟ|eastern|pu,ɾ,bi,jɔ|purbiya
+ପୃଥିବୀ|Earth|pɾu,tʰi,bi|pruthibi
+ପୃଥ୍ୱୀ|soil, earth|pɾu,t̪ʰ,wi|pruthwi
 ପେଚା||␣
-ପେଟ|belly|pe§ʈɔ|peṭa
+ପେଟ|belly|pe,ʈɔ|peṭa
 ପେଣ୍ଠା||␣|
 ପେନ୍ଥା||␣|
 ପେନ୍ଦି||␣|
-ପୋକ|worm|po§kɔ|poka
+ପୋକ|worm|po,kɔ|poka
 ପୋଖରୀ||␣|
-ପୋଛିବା|to wipe|po§t͡ʃʰi§ba|pochibā
-ପୋଡ଼ିବା|to burn|po§ɽi§ba|poṛibā
-ପୋଲ|bridge|po§lɔ|pola
+ପୋଛିବା|to wipe|po,t͡ʃʰi,ba|pochibā
+ପୋଡ଼ିବା|to burn|po,ɽi,ba|poṛibā
+ପୋଲ|bridge|po,lɔ|pola
 ପୋଷାକ||␣|
-ପୌତ୍ର|grandson|pɔu̯§t§ɾɔ|pôutrô
+ପୌତ୍ର|grandson|pɔu̯,t,ɾɔ|pôutrô
 ପୌତ୍ରୀ||␣
 ପ୍ରକାଶ||␣|
 ପ୍ରଜାପତି||␣|
@@ -1112,14 +1112,14 @@ autoExpandExamples.or = `
 ପ୍ରଫେସର୍||␣|
 ପ୍ରବେଶ||␣|
 ପ୍ରଶସ୍ତ||␣|
-ପ୍ରଶ୍ନ|question|p§ɾɔ§s§n̪ɔ|praśna
+ପ୍ରଶ୍ନ|question|p,ɾɔ,s,n̪ɔ|praśna
 ପ୍ରସାର||␣|
-ପ୍ରସିଦ୍ଧି|fame|p§ɾɔ§si§d̪§d̪ʱi|prasiddhi
-ପ୍ରହାର କରିବା|to strike, beat|p§ɾɔ§ha§ɾɔ§ §kɔ§ɾi§ba|prahāra karibā
+ପ୍ରସିଦ୍ଧି|fame|p,ɾɔ,si,d̪,d̪ʱi|prasiddhi
+ପ୍ରହାର କରିବା|to strike, beat|p,ɾɔ,ha,ɾɔ, ,kɔ,ɾi,ba|prahāra karibā
 ପ୍ରାଚୀନ||␣
 ପ୍ରାଚୀର||␣|
 ପ୍ରାଣ||␣
-ପ୍ରାଣଦଣ୍ଡାଜ୍ଞା|death sentence|p§ɾa§ɳɔ§d̪ɔ§ɳ§ɖa§d͡ʒ§n̪a|prāṇadaṇḍājñā
+ପ୍ରାଣଦଣ୍ଡାଜ୍ଞା|death sentence|p,ɾa,ɳɔ,d̪ɔ,ɳ,ɖa,d͡ʒ,n̪a|prāṇadaṇḍājñā
 ପ୍ରାନ୍ତ||␣|
 ପ୍ରାପ୍ତ||␣|
 ପ୍ରାପ୍ତି||␣|
@@ -1129,25 +1129,25 @@ autoExpandExamples.or = `
 ଫନସ||␣|
 ଫରାସ||␣|
 ଫରାସୀ||␣|
-ଫଳ|fruit|pʰɔ§ɭɔ|phaḷa
+ଫଳ|fruit|pʰɔ,ɭɔ|phaḷa
 ଫଳା||␣|
 ଫ଼||␣
 ଫାଟିବା||␣
-ଫାଡ଼ିବା|to split|pʰa§ɽi§ba|phāṛibā
+ଫାଡ଼ିବା|to split|pʰa,ɽi,ba|phāṛibā
 ଫାଣି||␣|
 ଫାର||␣|
 ଫାଳ||␣|
-ଫୁଙ୍କିବା|to blow|pʰu§ŋ§ki§ba|phuṅkibā
-ଫୁଟ୍ବଲ୍|football|pʰu§ʈ§bɔ§l|phuṭbal
-ଫୁଲ|flower|pʰu§lɔ|phulô
-ଫୁଲିବା|to swell|pʰu§li§ba|phulibā
+ଫୁଙ୍କିବା|to blow|pʰu,ŋ,ki,ba|phuṅkibā
+ଫୁଟ୍ବଲ୍|football|pʰu,ʈ,bɔ,l|phuṭbal
+ଫୁଲ|flower|pʰu,lɔ|phulô
+ଫୁଲିବା|to swell|pʰu,li,ba|phulibā
 ଫେଣ||␣|
 ଫେବ୍ରୁଆରି||␣|
 ଫେରିବା||␣|
 ଫେରେ||␣|
 ଫୋପାଡ଼ିବା||␣|
 ବଇଁଶୀ||␣|
-ବକଳ|bark (tree)|bɔ§kɔ§ɭɔ|bakaḷa
+ବକଳ|bark (tree)|bɔ,kɔ,ɭɔ|bakaḷa
 ବଖାଣ||␣|
 ବଗିଚା||␣|
 ବଙ୍ଗଳାଦେଶ||␣|
@@ -1156,10 +1156,10 @@ autoExpandExamples.or = `
 ବଜାର||␣|
 ବଞ୍ଚିବା||␣|
 ବଡ||␣
-ବଡ଼|big|bɔ§ɽɔ|baṛa
+ବଡ଼|big|bɔ,ɽɔ|baṛa
 ବଡ଼ପଣ||␣|
 ବଢ଼ିବା||␣|
-ବଣ|forest|bɔ§ɳɔ|baṇa
+ବଣ|forest|bɔ,ɳɔ|baṇa
 ବଣିଜାର||␣|
 ବତକ||␣
 ବତାଇବା||␣|
@@ -1173,18 +1173,18 @@ autoExpandExamples.or = `
 ବନ୍ଦାଣ||␣|
 ବନ୍ଦିବା||␣|
 ବବୁର||␣|
-ବରଫ|ice|bɔ§ɾɔ§pʰɔ|barapha
+ବରଫ|ice|bɔ,ɾɔ,pʰɔ|barapha
 ବର୍ଗ||␣
-ବର୍ଷ|year|bɔ§ɾ§sɔ|barsha
-ବର୍ଷା|rain|bɔ§ɾ§sa|barshā
-ବଲ୍ଲରି|sprout, shoot|bɔ§l§lɔ§ɾi|ballari
+ବର୍ଷ|year|bɔ,ɾ,sɔ|barsha
+ବର୍ଷା|rain|bɔ,ɾ,sa|barshā
+ବଲ୍ଲରି|sprout, shoot|bɔ,l,lɔ,ɾi|ballari
 ବଳରାମ||␣|
 ବସନ୍ତ||␣
-ବସିବା|to sit|bɔ§si§ba|basibā
+ବସିବା|to sit|bɔ,si,ba|basibā
 ବସ୍ତା||␣|
 ବହି||␣
 ବହିଣୀ||␣|
-ବହିବା|to flow|bɔ§hi§ba|bahibā
+ବହିବା|to flow|bɔ,hi,ba|bahibā
 ବହିର୍ଗମନ||␣|
 ବହୁ||␣|
 ବହୁବଚନ||␣|
@@ -1193,53 +1193,53 @@ autoExpandExamples.or = `
 ବାଇଶି||␣|
 ବାଉଁଶ||␣|
 ବାକ୍ସ||␣|
-ବାଘ|tiger|ba§ɡʱɔ|bāgha
+ବାଘ|tiger|ba,ɡʱɔ|bāgha
 ବାଛରା||␣|
 ବାଛିବା||␣|
 ବାଞ୍ଝ||␣|
-ବାଟ|road|ba§ʈɔ|bāṭa
+ବାଟ|road|ba,ʈɔ|bāṭa
 ବାଟଣ||␣|
 ବାଟୁଆ||␣|
 ବାଡ଼େଇବା||␣|
 ବାଢ଼ିବା||␣|
 ବାତ||␣
 ବାଦାମ||␣
-ବାନ୍ତି କରିବା|to vomit|ba§n̪§t̪i§ §kɔ§ɾi§ba|bānti karibā
-ବାନ୍ଧିବା|to tie|ba§n̪§d̪ʱi§ba|bāndhibā
-ବାପା|father|ba§pa|bāpā
+ବାନ୍ତି କରିବା|to vomit|ba,n̪,t̪i, ,kɔ,ɾi,ba|bānti karibā
+ବାନ୍ଧିବା|to tie|ba,n̪,d̪ʱi,ba|bāndhibā
+ବାପା|father|ba,pa|bāpā
 ବାବୁ||␣|
-ବାମ|left|ba§mɔ|bāma
+ବାମ|left|ba,mɔ|bāma
 ବାମୁଣ||␣|
 ବାର||␣
-ବାରଂବାର|again and again|ba§ɾɔ̃§ba§ɾɔ|bārambāra|
+ବାରଂବାର|again and again|ba,ɾɔ̃,ba,ɾɔ|bārambāra|
 ବାରାଣସୀ||␣|
 ବାରୁ||␣
 ବାଲଟି||␣|
-ବାଲି|sand|ba§li|bāli
+ବାଲି|sand|ba,li|bāli
 ବାଲୁକା||␣
-ବାଳ|hair|ba§ɭɔ|bāḷa
+ବାଳ|hair|ba,ɭɔ|bāḷa
 ବାଳକ||␣|
 ବାଳିକା||␣|
 ବାହାରିବା||␣|
-ବାୟୁ|wind|ba§ju|bāyu
+ବାୟୁ|wind|ba,ju|bāyu
 ବି||␣|
 ବିକାଳି||␣|
 ବିକିବା||␣|
-ବିକ୍ରୀ|sold|bi§k§ɾi|bikri|
+ବିକ୍ରୀ|sold|bi,k,ɾi|bikri|
 ବିଚାର||␣
 ବିଛଣା||␣|
 ବିଜୁଳି||␣
-ବିଜ୍ଞାନ|science|bi§d͡ʒ§n̪a§n̪ɔ|bijñāna
-ବିଜ୍ଞାନୀ|scientist|bi§d͡ʒ§n̪a§n̪i|bijñāni
+ବିଜ୍ଞାନ|science|bi,d͡ʒ,n̪a,n̪ɔ|bijñāna
+ବିଜ୍ଞାନୀ|scientist|bi,d͡ʒ,n̪a,n̪i|bijñāni
 ବିଞ୍ଚଣା||␣|
 ବିଞ୍ଚିବା||␣|
-ବିଦ୍ୟାଳୟ|school|bi§d̪§ja§ɭɔ§jɔ|bidyāḷaya
+ବିଦ୍ୟାଳୟ|school|bi,d̪,ja,ɭɔ,jɔ|bidyāḷaya
 ବିପୁଳ||␣|
 ବିପୁଳା||␣|
 ବିବାହିତ||␣|
 ବିଭକ୍ତି||␣|
 ବିଭୂତି||␣|
-ବିଭ୍ରାଟ|confusion|bi§bʱ§ɾa§ʈɔ|bibhrāṭa
+ବିଭ୍ରାଟ|confusion|bi,bʱ,ɾa,ʈɔ|bibhrāṭa
 ବିଲାତ୍||␣|
 ବିଲେଇ||␣
 ବିଲ୍କୁଲ୍||␣|
@@ -1266,7 +1266,7 @@ autoExpandExamples.or = `
 ବୃଷ୍ଟି||␣|
 ବେ-||␣|
 ବେ||␣|
-ବେକ|neck|be§kɔ|beka
+ବେକ|neck|be,kɔ|beka
 ବେଗି||␣|
 ବେଙ୍ଗାଳୁରୁ||␣
 ବେଜି||␣|
@@ -1276,23 +1276,23 @@ autoExpandExamples.or = `
 ବେଢ଼||␣|
 ବେଢ଼ା||␣|
 ବେଣୁ||␣|
-ବେମାରିଆ|ill|be§ma§ɾi§a|bemāriā
+ବେମାରିଆ|ill|be,ma,ɾi,a|bemāriā
 ବେଲ||␣
 ବେଳ||␣|
 ବେଳାଭୂମି||␣|
 ବେଳେ||␣|
 ବେଶି||␣|
 ବେଷ୍ଟନ||␣|
-ବୋଉ|mother|bo§u|bou
+ବୋଉ|mother|bo,u|bou
 ବୋଧ ହୁଏ||␣|
 ବୋଧେ||␣|
-ବୋଲି|because|bo§li|boli
+ବୋଲି|because|bo,li|boli
 ବୋଲିବା||␣|
 ବୋହିବା||␣|
 ବ୍ରହ୍ମପୁତ୍ର||␣|
-ବ୍ରାହ୍ମଣ|brahmin m.|b§ɾa§h§mɔ§ɳɔ|brāhmaṇa
-ବ୍ରାହ୍ମଣୀ|brahmin f.|b§ɾa§h§mɔ§ɳi|brāhmaṇi
-ବ୍ୟକ୍ତି|man (human being)|b§jɔ§k§t̪i|byakti
+ବ୍ରାହ୍ମଣ|brahmin m.|b,ɾa,h,mɔ,ɳɔ|brāhmaṇa
+ବ୍ରାହ୍ମଣୀ|brahmin f.|b,ɾa,h,mɔ,ɳi|brāhmaṇi
+ବ୍ୟକ୍ତି|man (human being)|b,jɔ,k,t̪i|byakti
 ବ୍ୟବହାର||␣|
 ବ୍ୟବହୃତ||␣|
 ବ୍ୟାଙ୍କ୍||␣|
@@ -1306,22 +1306,22 @@ autoExpandExamples.or = `
 ଭଣ୍ଡାର||␣|
 ଭଦ୍ରକାଳୀ||␣|
 ଭରିବା||␣|
-ଭଲ ପାଇବା|to like, love|bʱɔ§lɔ§ §pa§i§ba|bhala pāibā
-ଭଲ|good|bʱɔ§lɔ|bhala
+ଭଲ ପାଇବା|to like, love|bʱɔ,lɔ, ,pa,i,ba|bhala pāibā
+ଭଲ|good|bʱɔ,lɔ|bhala
 ଭଳି||␣|
 ଭସାଣି||␣|
-ଭାଇ|brother|bʱa§i|bhāi
+ଭାଇ|brother|bʱa,i|bhāi
 ଭାଉଜ||␣|
-ଭାଗ କରିବା|to divide|bʱa§ɡɔ§ §kɔ§ɾi§ba|bhāga karibā
+ଭାଗ କରିବା|to divide|bʱa,ɡɔ, ,kɔ,ɾi,ba|bhāga karibā
 ଭାଙ୍ଗିବା||␣
 ଭାଞ୍ଜିବା||␣|
 ଭାତ||␣|
 ଭାତୁଆଣି||␣|
-ଭାବିବା|to think|bʱa§bi§ba|bhābibā
+ଭାବିବା|to think|bʱa,bi,ba|bhābibā
 ଭାର||␣
 ଭାରତ||␣
 ଭାରତୀୟ||␣|
-ଭାରି|heavy|bʱa§ɾi|bhāri
+ଭାରି|heavy|bʱa,ɾi|bhāri
 ଭାଲୁ||␣
 ଭାଳିବା||␣|
 ଭାଳେଣି||␣|
@@ -1329,16 +1329,16 @@ autoExpandExamples.or = `
 ଭାସିବା||␣|
 ଭିକ||␣|
 ଭିକାରି||␣|
-ଭିଜା|wet|bʱi§d͡ʒa|bhijā
-ଭିତରର|internal|bʱi§t̪ɔ§ɾɔ§ɾɔ|bhitarara
-ଭିତରେ|in|bʱi§t̪ɔ§ɾe|bhitare
+ଭିଜା|wet|bʱi,d͡ʒa|bhijā
+ଭିତରର|internal|bʱi,t̪ɔ,ɾɔ,ɾɔ|bhitarara
+ଭିତରେ|in|bʱi,t̪ɔ,ɾe|bhitare
 ଭିତର୍||␣
 ଭୁଅ||␣|
 ଭୁକିବା||␣|
 ଭୁବନ||␣|
-ଭୁବନେଶ୍ୱର|Bhubaneswar|bʱu§bɔ§n̪e§s§wɔ§ɾɔ|bhubaneśwara
+ଭୁବନେଶ୍ୱର|Bhubaneswar|bʱu,bɔ,n̪e,s,wɔ,ɾɔ|bhubaneśwara
 ଭୁଲ୍||␣|
-ଭୂମି|soil, earth|bʱu§mi|bhumi
+ଭୂମି|soil, earth|bʱu,mi|bhumi
 ଭୂମିକମ୍ପ||␣
 ଭେକଟା||␣|
 ଭେଡ଼||␣|
@@ -1352,7 +1352,7 @@ autoExpandExamples.or = `
 ମଇଁଷି||␣|
 ମଇଦା||␣|
 ମଇଦାନ||␣|
-ମଇଳା|dirty|mɔ§i§ɭa|maiḷā
+ମଇଳା|dirty|mɔ,i,ɭa|maiḷā
 ମକ୍ରୀ||␣
 ମଗର||␣
 ମଙ୍ଗଳବାର||␣
@@ -1360,22 +1360,22 @@ autoExpandExamples.or = `
 ମଝି||␣|
 ମଞ୍ଜ||␣|
 ମଞ୍ଜାରୀ||␣|
-ମଞ୍ଜି|seed|mɔ§n̪§d͡ʒi|mañji
+ମଞ୍ଜି|seed|mɔ,n̪,d͡ʒi|mañji
 ମଣିବା||␣|
-ମଣିଷ|man, human being|mɔ§ɳi§sɔ|maṇisha
+ମଣିଷ|man, human being|mɔ,ɳi,sɔ|maṇisha
 ମଣିହାରୀ||␣|
 ମଣ୍ଡ||␣|
 ମଣ୍ଡପ||␣
 ମଣ୍ଡଳ||␣|
 ମଣ୍ଡା||␣|
-ମତ୍ସ୍ଯ|fish (formal)|mɔ§t̪§s§d͡ʒɔ|matsja
+ମତ୍ସ୍ଯ|fish (formal)|mɔ,t̪,s,d͡ʒɔ|matsja
 ମଦତ୍||␣|
 ମଧୁର||␣
 ମଧୁରତା||␣|
 ମଧ୍ୟ||␣|
 ମଧ୍ୟରେ||␣|
 ମନ||␣|
-ମନୁଷ୍ୟ|man|mɔ§n̪u§s§jɔ|manushya
+ମନୁଷ୍ୟ|man|mɔ,n̪u,s,jɔ|manushya
 ମନ୍ଦିର||␣
 ମରଣ||␣
 ମରିବା||␣|
@@ -1391,12 +1391,12 @@ autoExpandExamples.or = `
 ମହାରାଜ||␣|
 ମହାଶୟ||␣|
 ମହାଶୟା||␣|
-ମହିଳା|woman|mɔ§hi§ɭa|mahiḷā
+ମହିଳା|woman|mɔ,hi,ɭa|mahiḷā
 ମହୁ||␣
 ମହୁମାଛି||␣
 ମା|mother|ma|mā
 ମାଁମାଁ||␣
-ମାଂସ|meat|mã§sɔ|māṁsa
+ମାଂସ|meat|mã,sɔ|māṁsa
 ମାଇକିନା||␣|
 ମାଇଲ୍||␣|
 ମାଈ||␣|
@@ -1405,26 +1405,26 @@ autoExpandExamples.or = `
 ମାଗଣ||␣|
 ମାଗିବା||␣|
 ମାଗୁଣି||␣|
-ମାଛ|fish|ma§t͡ʃʰɔ|mācha
-ମାଛି|fly|ma§t͡ʃʰi|māchi
-ମାଟି|soil, earth|ma§ʈi|māṭi
+ମାଛ|fish|ma,t͡ʃʰɔ|mācha
+ମାଛି|fly|ma,t͡ʃʰi|māchi
+ମାଟି|soil, earth|ma,ʈi|māṭi
 ମାଡ଼ିବା||␣|
 ମାଣିକ||␣|
 ମାଣିକ୍ୟ||␣|
 ମାଣ୍ଡୁଅ||␣|
-ମାତା|mother|ma§t̪a|mātā
+ମାତା|mother|ma,t̪a|mātā
 ମାତିବା||␣|
 ମାତୃଭୂମି||␣|
 ମାତ୍ର||␣|
 ମାତ୍ରା||␣|
 ମାଥ||␣|
 ମାନ||␣|
-ମାନବ|man|ma§n̪ɔ§bɔ|mānaba
+ମାନବ|man|ma,n̪ɔ,bɔ|mānaba
 ମାନେ||␣|
 ମାପିବା||␣|
 ମାପୁଣି||␣|
 ମାରି||␣
-ମାରିବା|to kill|ma§ɾi§ba|māribā
+ମାରିବା|to kill|ma,ɾi,ba|māribā
 ମାର୍ଚ୍ଚ||␣|
 ମାଷ୍ଟର||␣|
 ମାସ||␣
@@ -1440,7 +1440,7 @@ autoExpandExamples.or = `
 ମିହ||␣|
 ମୀନ||␣
 ମୁଁ|I|mũ|mũ
-ମୁଁହ|mouth|mũ§hɔ|mum̐hô
+ମୁଁହ|mouth|mũ,hɔ|mum̐hô
 ମୁକାମ୍||␣|
 ମୁକ୍ତି||␣|
 ମୁଖ||␣
@@ -1448,7 +1448,7 @@ autoExpandExamples.or = `
 ମୁଗୁର||␣|
 ମୁଛ||␣
 ମୁଠା||␣|
-ମୁଣ୍ଡ|head|mu§ɳ§ɖɔ|muṇḍa
+ମୁଣ୍ଡ|head|mu,ɳ,ɖɔ|muṇḍa
 ମୁଣ୍ଡାଇବା||␣|
 ମୁଣ୍ଡୁଳା||␣|
 ମୁଥ||␣
@@ -1461,45 +1461,45 @@ autoExpandExamples.or = `
 ମୂତ୍ର||␣|
 ମୂର୍ଖ||␣|
 ମୂର୍ଦ୍ଧନ୍ୟ||␣|
-ମୂଳ|root|mu§ɭɔ|muḷa
+ମୂଳ|root|mu,ɭɔ|muḷa
 ମୂଷା||␣|
-ମୃତ୍ୟୁ|death|mɾu§t̪§ju|mrutyu
-ମେଘ|cloud|me§ɡʱɔ|megha
+ମୃତ୍ୟୁ|death|mɾu,t̪,ju|mrutyu
+ମେଘ|cloud|me,ɡʱɔ|megha
 ମେଘନା||␣|
 ମେଷ||␣|
 ମୋ||␣|
 ମୋକା||␣|
 ମୋଟର||␣|
-ମୋଟା|fat|mo§ʈa|moṭā
+ମୋଟା|fat|mo,ʈa|moṭā
 ମୋତି||␣|
 ମୌ ମାଛି||␣|
 ମୟୂର||␣
-ଯକୃତ|liver|d͡ʒɔ§kɾu§t̪ɔ|jakruta
+ଯକୃତ|liver|d͡ʒɔ,kɾu,t̪ɔ|jakruta
 ଯଥେଷ୍ଟ||␣|
-ଯଦି|if|d͡ʒɔ§d̪i|jadi
-ଯନ୍ତ୍ର|machine|d͡ʒɔ§n̪§t̪§ɾɔ|jantra
+ଯଦି|if|d͡ʒɔ,d̪i|jadi
+ଯନ୍ତ୍ର|machine|d͡ʒɔ,n̪,t̪,ɾɔ|jantra
 ଯମ||␣|
 ଯାଏ||␣|
 ଯାକ||␣|
 ଯିବା||␣|
 ଯୁକ୍ତରାଜ୍ୟ||␣|
 ଯୁଗ||␣|
-ଯୁଦ୍ଧ କରିବା|to fight|d͡ʒu§d̪§d̪ʱɔ§ §kɔ§ɾi§ba|juddha karibā
-ଯୁଦ୍ଧ|war|d͡ʒu§d̪§d̪ʱɔ|juddha
+ଯୁଦ୍ଧ କରିବା|to fight|d͡ʒu,d̪,d̪ʱɔ, ,kɔ,ɾi,ba|juddha karibā
+ଯୁଦ୍ଧ|war|d͡ʒu,d̪,d̪ʱɔ|juddha
 ଯୁବକ||␣|
 ଯୁବତି||␣|
-ଯୁବା|woman|d͡ʒu§ba|jubā
+ଯୁବା|woman|d͡ʒu,ba|jubā
 ଯେ||␣|
 ଯୋଉ||␣|
 ଯୋଗ୍ୟ||␣|
 ର||
-ରକ୍ତ|blood|ɾɔ§k§t̪ɔ|rakta
+ରକ୍ତ|blood|ɾɔ,k,t̪ɔ|rakta
 ରକ୍ଷା||␣|
 ରଖାଇବା||␣|
 ରଖିବା||␣|
 ରଖୁଆଳ||␣|
-ରଙ୍ଗ|colour|ɾɔ§ŋ§ɡɔ|raṅga
-ରଞ୍ଜ୍|anger, grief|ɾɔ§n̪§d͡ʒ|rañj
+ରଙ୍ଗ|colour|ɾɔ,ŋ,ɡɔ|raṅga
+ରଞ୍ଜ୍|anger, grief|ɾɔ,n̪,d͡ʒ|rañj
 ରଦ୍ଦ୍||␣|
 ରବିବାର||␣
 ରମଜାନ୍||␣|
@@ -1514,21 +1514,21 @@ autoExpandExamples.or = `
 ରାଜମହିଷୀ||␣
 ରାଜା||␣
 ରାଜି||␣|
-ରାଜ୍ଞୀ|queen|ɾa§d͡ʒ§n̪i|rājñi
+ରାଜ୍ଞୀ|queen|ɾa,d͡ʒ,n̪i|rājñi
 ରାଜ୍ୟ||␣|
 ରାଣୀ||␣
-ରାତି|night|ɾa§t̪i|rāti
+ରାତି|night|ɾa,t̪i|rāti
 ରାନ୍ଧିବା||␣
 ରାମ||␣|
 ରାମାୟଣ||␣
-ରାମ୍ପୁଡ଼ିବା|to scratch|ɾa§m§pu§ɽi§ba|rāmpuṛibā
+ରାମ୍ପୁଡ଼ିବା|to scratch|ɾa,m,pu,ɽi,ba|rāmpuṛibā
 ରାଶି||␣|
-ରାସ୍ତା|road|ɾa§s§t̪a|rāstā
+ରାସ୍ତା|road|ɾa,s,t̪a|rāstā
 ରିପୋର୍ଟ||␣|
 ରୁ||␣|
 ରୁଦ୍ରାକ୍ଷ||␣|
 ରୁବଲ||␣|
-ରୁଷିଆ|Russia|ɾu§si§a|rushiā
+ରୁଷିଆ|Russia|ɾu,si,a|rushiā
 ରୁହାଇବା||␣|
 ରୂପା||␣|
 ରେ|at|ɾe|re
@@ -1546,38 +1546,38 @@ autoExpandExamples.or = `
 ଲଢ଼େଇବା||␣|
 ଲଣ୍ଡନ୍||␣|
 ଲଫାଫା||␣|
-ଲବଙ୍ଗ|clove|lɔ§bɔ§ŋ§ɡɔ|labaṅga
+ଲବଙ୍ଗ|clove|lɔ,bɔ,ŋ,ɡɔ|labaṅga
 ଲବ୍ଧ||␣|
-ଲମ୍ବା|long|lɔ§m§ba|lambā
+ଲମ୍ବା|long|lɔ,m,ba|lambā
 ଲହଡ଼ି||␣|
-ଲହୁ|blood|lɔ§hu|lahu
+ଲହୁ|blood|lɔ,hu|lahu
 ଲହୁଡ଼ା||␣|
 ଲାଇବ୍ରେରୀ||␣|
 ଲାଗିବା||␣|
-ଲାଞ୍ଜ|tail|la§n̪§d͡ʒɔ|lāñja
-ଲାଠି|stick|la§ʈʰi|lāṭhi
+ଲାଞ୍ଜ|tail|la,n̪,d͡ʒɔ|lāñja
+ଲାଠି|stick|la,ʈʰi|lāṭhi
 ଲାଭ||␣|
-ଲାଲ|red|la§lɔ|lāla
-ଲିଖିତ|written|li§kʰi§t̪ɔ|likhita|
+ଲାଲ|red|la,lɔ|lāla
+ଲିଖିତ|written|li,kʰi,t̪ɔ|likhita|
 ଲିଙ୍ଗ||␣
 ଲିପି||␣
 ଲିଭାଇବା||␣|
 ଲିଭିବା||␣|
 ଲୁଗା||␣|
 ଲୁଚିବା||␣
-ଲୁଣ|salt|lu§ɳɔ|luṇa
+ଲୁଣ|salt|lu,ɳɔ|luṇa
 ଲୁଣିଆ||␣|
 ଲୁହା||␣|
 ଲେଖ||␣|
-ଲେଖାଏଁ|in each case|le§kʰa§ẽ|lekhāẽ|
+ଲେଖାଏଁ|in each case|le,kʰa,ẽ|lekhāẽ|
 ଲେଖିବା||␣|
 ଲେଙ୍ଗେଡ଼ା||␣|
 ଲୋ||␣|
-ଲୋକ|man|lo§kɔ|loka
+ଲୋକ|man|lo,kɔ|loka
 ଲୋଟଣି||␣|
 ଲୋଟିବା||␣|
-ଲୋମ|hair|lo§mɔ|loma
-ଵିଷ୍ଣୁ|Vishnu|ʋi§s§ɳu|vishṇu
+ଲୋମ|hair|lo,mɔ|loma
+ଵିଷ୍ଣୁ|Vishnu|ʋi,s,ɳu|vishṇu
 ଶଉପ||␣|
 ଶଡ଼ିବା||␣|
 ଶଢ଼ା||␣|
@@ -1592,42 +1592,42 @@ autoExpandExamples.or = `
 ଶସ୍ତ୍ର||␣
 ଶହ||␣
 ଶାଖା||␣
-ଶାଗୁଆ|green|sa§ɡu§a|śāguā
+ଶାଗୁଆ|green|sa,ɡu,a|śāguā
 ଶାଗୁଣା||␣
 ଶାରୀ||␣
-ଶାର୍ଟ|shirt|sa§ɾ§ʈɔ|śārṭa
+ଶାର୍ଟ|shirt|sa,ɾ,ʈɔ|śārṭa
 ଶାଳିକା||␣|
 ଶାସନ||␣|
-ଶିକାର କରିବା|to hunt|si§ka§ɾɔ§ §kɔ§ɾi§ba|śikāra karibā
+ଶିକାର କରିବା|to hunt|si,ka,ɾɔ, ,kɔ,ɾi,ba|śikāra karibā
 ଶିକାର||␣
 ଶିକାରୀ||␣
-ଶିକ୍ଷକ|teacher|si§k§sɔ§kɔ|śikshaka
-ଶିକ୍ଷା ଦେବା|to teach|si§k§sa§ §d̪e§ba|śikshā debā
-ଶିକ୍ଷା|education|si§k§sa|śikshā
+ଶିକ୍ଷକ|teacher|si,k,sɔ,kɔ|śikshaka
+ଶିକ୍ଷା ଦେବା|to teach|si,k,sa, ,d̪e,ba|śikshā debā
+ଶିକ୍ଷା|education|si,k,sa|śikshā
 ଶିଖାଇବା||␣|
 ଶିଖିବା||␣|
-ଶିଙ୍ଗ|horn|si§ŋ§ɡɔ|śiṅga
+ଶିଙ୍ଗ|horn|si,ŋ,ɡɔ|śiṅga
 ଶିବ||␣
 ଶିର||␣
-ଶିଶୁ|child|si§su|śiśu
+ଶିଶୁ|child|si,su|śiśu
 ଶୀଘ୍ର||␣|
 ଶୀତ||␣
 ଶୀତଳ||␣
 ଶୁକ୍ର||␣|
 ଶୁକ୍ରବାର||␣
-ଶୁଖିଲା|dry|su§kʰi§la|śukhilā
-ଶୁଙ୍ଘିବା|to smell|su§ŋ§ɡʱi§ba|śuṅghibā
+ଶୁଖିଲା|dry|su,kʰi,la|śukhilā
+ଶୁଙ୍ଘିବା|to smell|su,ŋ,ɡʱi,ba|śuṅghibā
 ଶୁଣାଣି||␣|
-ଶୁଣିବା|to hear|su§ɳi§ba|śuṇiba
+ଶୁଣିବା|to hear|su,ɳi,ba|śuṇiba
 ଶୁଧାଇବା||␣|
-ଶୁନ୍ୟ|zero|su§n̪§jɔ|śunya
-ଶୁଷ୍କ|dry|su§s§kɔ|śushka
+ଶୁନ୍ୟ|zero|su,n̪,jɔ|śunya
+ଶୁଷ୍କ|dry|su,s,kɔ|śushka
 ଶୁଷ୍ଣ||␣|
 ଶୂନ୍ୟ||␣|
 ଶେଠ||␣|
 ଶେଣି||␣|
 ଶେଷ||␣|
-ଶୋଇବା|to sleep|so§i§ba|śoibā
+ଶୋଇବା|to sleep|so,i,ba|śoibā
 ଶୋଳ||␣
 ଶୋଷ||␣
 ଶ୍ରୀ||␣|
@@ -1638,15 +1638,15 @@ autoExpandExamples.or = `
 ଶ୍ୱଶୁର||␣|
 ଷ଼||
 ଷାଠିଏ||␣|
-ସଂଖ୍ୟା|number|sɔ̃§kʰ§ja|saṅkhyā
-ସଂସ୍କୃତ|Sanskrit|sɔ̃§s§kɾu§t̪ɔ|saṁskruta
+ସଂଖ୍ୟା|number|sɔ̃,kʰ,ja|saṅkhyā
+ସଂସ୍କୃତ|Sanskrit|sɔ̃,s,kɾu,t̪ɔ|saṁskruta
 ସକାଳ||␣|
 ସଖା||␣
 ସଙ୍ଗେ||␣|
 ସଜାଇବ||␣|
 ସଜାଡ଼ିବା||␣|
 ସଞ୍ଜ||␣|
-ସଡ଼କ|road|sɔ§ɽɔ§kɔ|saṛaka
+ସଡ଼କ|road|sɔ,ɽɔ,kɔ|saṛaka
 ସତଚାଳିଶ||␣|
 ସତର||␣
 ସତରଞ୍ଜ||␣|
@@ -1657,46 +1657,46 @@ autoExpandExamples.or = `
 ସତୁରି||␣|
 ସପ୍ତାହ||␣
 ସଫେଦ||␣|
-ସବୁ|all|sɔ§bu|sabu
-ସବୁଜ|green|sɔ§bu§d͡ʒɔ|sabuja
+ସବୁ|all|sɔ,bu|sabu
+ସବୁଜ|green|sɔ,bu,d͡ʒɔ|sabuja
 ସବୁଠି||␣|
 ସବୁଥିରେ||␣|
 ସବୁବେଳେ||␣|
 ସମସ୍ତ||␣|
-ସମୁଦ୍ର|sea|sɔ§mu§d̪§ɾɔ|samudra
+ସମୁଦ୍ର|sea|sɔ,mu,d̪,ɾɔ|samudra
 ସମୃଦ୍ଧ||␣|
 ସମୃଦ୍ଧି||␣|
 ସମ୍ପତ୍ତି||␣|
 ସମ୍ପ୍ରଦାନ||␣|
-ସମ୍ବନ୍ଧ|relationship|sɔ§m§bɔ§n̪§d̪ʱɔ|sambandha
-ସମ୍ବୋଧନ|invitation|sɔ§m§bo§d̪ʱɔ§n̪ɔ|sambodhana
+ସମ୍ବନ୍ଧ|relationship|sɔ,m,bɔ,n̪,d̪ʱɔ|sambandha
+ସମ୍ବୋଧନ|invitation|sɔ,m,bo,d̪ʱɔ,n̪ɔ|sambodhana
 ସରିବା||␣|
-ସର୍ବୋତ୍ତମ|the best|sɔ§ɾ§bo§t̪§t̪ɔ§mɔ|sarbottama
+ସର୍ବୋତ୍ତମ|the best|sɔ,ɾ,bo,t̪,t̪ɔ,mɔ|sarbottama
 ସହର||␣|
 ସହରିଆ||␣|
 ସହାୟତା||␣
 ସହି||␣|
 ସହିତ||␣|
 ସାଗର||␣
-ସାଙ୍ଗେ|with|sa§ŋ§ɡe|sāṅge
+ସାଙ୍ଗେ|with|sa,ŋ,ɡe|sāṅge
 ସାଢ଼େ||␣|
 ସାତ||␣
 ସାଦ||␣|
 ସାଧ||␣|
 ସାଧିବା||␣|
 ସାନ୍ତାଳ||␣|
-ସାପ|snake|sa§pɔ|sāpa
+ସାପ|snake|sa,pɔ|sāpa
 ସାରା||␣|
 ସାରିବା||␣|
 ସାହାଯ୍ୟ||␣|
 ସାହିତ୍ୟ||␣|
-ସିଂହ|lion|sĩ§hɔ|siṁha
+ସିଂହ|lion|sĩ,hɔ|siṁha
 ସିଗାରେଟ୍||␣|
-ସିତମ୍ବର|September|si§t̪ɔ§m§bɔ§ɾɔ|sitambara
-ସିଧା|straight|si§d̪ʱa|sidhā
+ସିତମ୍ବର|September|si,t̪ɔ,m,bɔ,ɾɔ|sitambara
+ସିଧା|straight|si,d̪ʱa|sidhā
 ସିନା||␣|
 ସିନେମା||␣|
-ସିଲାଇ କରିବା|to sew|si§la§i§ §kɔ§ɾi§ba|silāi karibā
+ସିଲାଇ କରିବା|to sew|si,la,i, ,kɔ,ɾi,ba|silāi karibā
 ସୁଇ||␣|
 ସୁଦ୍ଧା||␣|
 ସୁନା||␣
@@ -1704,34 +1704,34 @@ autoExpandExamples.or = `
 ସୁପରସ୍||␣|
 ସୂଚୀ||␣|
 ସୂତକାଶୌଚ||␣|
-ସୂର୍ଯ୍ୟ|sun|su§ɾ§d͡ʒ§jɔ|surjya
+ସୂର୍ଯ୍ୟ|sun|su,ɾ,d͡ʒ,jɔ|surjya
 ସେ|he, she, it|se|se
 ସେଉ||␣|
-ସେଓ|apple|se§o|seo
+ସେଓ|apple|se,o|seo
 ସେକିବା||␣|
-ସେଠାରେ|there|se§ʈʰa§ɾe|seṭhāre
+ସେଠାରେ|there|se,ʈʰa,ɾe|seṭhāre
 ସେନା||␣
-ସେମାନେ|they|se§ma§n̪e|semāne
+ସେମାନେ|they|se,ma,n̪e|semāne
 ସୋଜା||␣|
 ସୋମବାର||␣
 ସୋରିଷ||␣|
-ସ୍ତନ|breast|s§t̪ɔ§n̪ɔ|stana
-ସ୍ତ୍ରୀ|wife|s§t̪§ɾi|stri
-ସ୍ତ୍ରୈଣ|feminine|s§t§ɾɔi̯§ɳɔ|straina
+ସ୍ତନ|breast|s,t̪ɔ,n̪ɔ|stana
+ସ୍ତ୍ରୀ|wife|s,t̪,ɾi|stri
+ସ୍ତ୍ରୈଣ|feminine|s,t,ɾɔi̯,ɳɔ|straina
 ସ୍ପର୍ଶ||␣|
 ସ୍ଫୀତ||␣|
 ସ୍ଫୀତି||␣|
-ସ୍ୱପ୍ନ|dream|s§wɔ§p§n̪ɔ|swapna
+ସ୍ୱପ୍ନ|dream|s,wɔ,p,n̪ɔ|swapna
 ସ୍ୱପ୍ନାଇବା||␣|
 ସ୍ୱର||␣|
-ସ୍ୱର୍ଗ|heaven|s§wɔ§ɾ§ɡɔ|swarga
+ସ୍ୱର୍ଗ|heaven|s,wɔ,ɾ,ɡɔ|swarga
 ସ୍ୱାଦ||␣|
 ସ୍ୱାଧୀନ||␣|
 ସ୍ୱାଧୀନତା||␣|
-ସ୍ୱାମୀ|husband|s§wa§mi|swāmi
-ସ୍ୱୟଂ|itself|s§wɔ§jɔ̃|swayaṁ|
+ସ୍ୱାମୀ|husband|s,wa,mi|swāmi
+ସ୍ୱୟଂ|itself|s,wɔ,jɔ̃|swayaṁ|
 ହଁ||␣
-ହଂଗ୍|asafoetida|hɔ̃§ɡ|haṅg
+ହଂଗ୍|asafoetida|hɔ̃,ɡ|haṅg
 ହଇରାଣ||␣|
 ହଜାର||␣
 ହଠାତ୍||␣|
@@ -1742,15 +1742,15 @@ autoExpandExamples.or = `
 ହରିଣ||␣|
 ହଲ||␣|
 ହଳ||␣|
-ହଳଦିଆ|yellow|hɔ§ɭɔ§d̪i§a|haḷadiā
+ହଳଦିଆ|yellow|hɔ,ɭɔ,d̪i,a|haḷadiā
 ହଳନ୍ତ||␣|
 ହଳିଆ||␣|
 ହସ||␣|
-ହସିବା|to laugh|hɔ§si§ba|hasibā
+ହସିବା|to laugh|hɔ,si,ba|hasibā
 ହାଟ||␣|
 ହାଟୁଆ||␣|
-ହାଡ|bone|ha§ɖɔ|hāḍa
-ହାତ|hand|ha§t̪ɔ|hāta
+ହାଡ|bone|ha,ɖɔ|hāḍa
+ହାତ|hand|ha,t̪ɔ|hāta
 ହାତୀ||␣
 ହିଁ||␣|
 ହିଙ୍ଗୁ||␣
@@ -1759,22 +1759,22 @@ autoExpandExamples.or = `
 ହିନ୍ଦୁସ୍ତାନ||␣|
 ହିନ୍ଦୁସ୍ତାନୀ||␣|
 ହିନ୍ଦୁସ୍ଥାନ||␣|
-ହିମ|ice|hi§mɔ|hima
+ହିମ|ice|hi,mɔ|hima
 ହିମାଳୟ||␣|
 ହିରୁଆଁ||␣
 ହୁଏତ||␣|
 ହୁଣ୍ଡି||␣|
 ହୃତ୍ପିଣ୍ଡ||␣|
-ହୃଦୟ|heart|hɾu§d̪ɔ§jɔ|hrudaya
+ହୃଦୟ|heart|hɾu,d̪ɔ,jɔ|hrudaya
 ହେ||␣|
 ହେଙ୍ଗୁ||␣
-ହେତୁ|because|he§t̪u|hetu
+ହେତୁ|because|he,t̪u|hetu
 ହେବା||␣
 ହେମାଳ||␣|
 ହେଲେ||␣|
 ହୋ||␣|
 ହୋଲ||␣
-ହ୍ରଦ|lake|h§ɾɔ§d̪ɔ|hrada
+ହ୍ରଦ|lake|h,ɾɔ,d̪ɔ|hrada
 ହ୍ରସ୍ୱ||␣|
 
 
@@ -1786,22 +1786,22 @@ autoExpandExamples.or = `
 ଊତ୍ତୋଳନ|flag-hoisting||
 ଋତୁ|season||ṛutu
 ଐରାଵତ|elephant||
-ଓଡ଼ିଆ ଅକ୍ଷର|Odia script|o§ɽi§a§ §ɔ§kʰ§jɔ§rɔ
-ଅକ୍ଷର|character|ɔ§kʰ§jɔ§rɔ|akṣara
+ଓଡ଼ିଆ ଅକ୍ଷର|Odia script|o,ɽi,a, ,ɔ,kʰ,jɔ,rɔ
+ଅକ୍ଷର|character|ɔ,kʰ,jɔ,rɔ|akṣara
 ବୃକ୍ଷ|tree||brukṣô
 ଜଂଗଲ|forest||jôṃgôlô
 ଜଂତୁ|animal||jôṃtu
-ଅଂକ|ink|ɔŋ§kɔ
+ଅଂକ|ink|ɔŋ,kɔ
 ଧୁଆଁ|smoke||dhuam̐
-ଅଙ୍କ|ink|ɔ§ŋ§kɔ|
+ଅଙ୍କ|ink|ɔ,ŋ,kɔ|
 ଦ୍ୱିତୀୟୋଽଧ୍ୟାୟଃ|chapter 2||dwitīyo'dhyāyaḥ
-ପୁନଃପୁନଃ|over and over again|pu§nɔ§ppu§nɔ
-ଦୁଃଖ|sorrow|du§kkʰɔ
+ପୁନଃପୁନଃ|over and over again|pu,nɔ,ppu,nɔ
+ଦୁଃଖ|sorrow|du,kkʰɔ
 ଅଣଓସାରିଆ|narrow||ôṇôosaria
 ଅନ୍ଥଡ଼ା|dull (as a knife)||ônthôṛa
 ଅନ୍ୟାନ୍ୟ|other||ônyanyô
 ଆପଣମାନେ|you (2pl)||apôṇômane
-ଇ-ମେଲ୍|e-mail|i§-§me§l|i-mel
+ଇ-ମେଲ୍|e-mail|i,-,me,l|i-mel
 ଉକୁଣୀ|louse||ukuṇī
 ଏଠି|here||eṭhi
 କଣ|what||kôṇô
@@ -1820,7 +1820,7 @@ autoExpandExamples.or = `
 ଛୁରୀ ମାରିବା|to stab||churī mariba
 ଜମି ଯିବା|to freeze||jômi jiba
 ଜୋଗୁ|because||jogu
-ଡ୍ରପ୍-ଡାଉନ୍|drop-down|ɖ§rɔ§p§-§ɖa§u§n
+ଡ୍ରପ୍-ଡାଉନ୍|drop-down|ɖ,rɔ,p,-,ɖa,u,n
 ତାହା|that||taha
 ତୁମେମାନେ|you (2pl)||tumemane
 ଦଉଡି|rope||dôuḍi

@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -39,7 +39,7 @@ autoExpandExamples.hmd = `
 @ https://web-archive.southampton.ac.uk/miao/songs/TranslatedSongs/m101/m101tx.pdf
 
 𖽐𖼚𖽡𖽝𖾏 𖼊𖽡𖾐|earth|
-𖽐𖼚𖽡𖽝𖾏 𖼊𖽡𖾐|earth|›§ⁿt͡ɬi̯e¹§ §ti²
+𖽐𖼚𖽡𖽝𖾏 𖼊𖽡𖾐|earth|›,ⁿt͡ɬi̯e¹, ,ti²
 𖼡𖽻𖾐 𖽐𖼊𖽪𖾏|sky|
 
 
