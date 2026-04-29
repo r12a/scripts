@@ -254,7 +254,7 @@ if (document.getElementById('tabPlaceholder')) {
     <div id="bottomLineLinks">
     <span><a href="${ terms.orthographynotes }.html" target="_blank">Orthography</a></span>
 
-    <span><a href="block.html" target="_blank">Characters</a></span>
+    <span><a href="${ terms.language }-characters.html" target="_blank">Characters</a></span>
     
     <span><a href="../../pickers/${ terms.picker }/index.html" target="_blank">Workbench</a></span>
     
