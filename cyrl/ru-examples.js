@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -23,12 +23,12 @@ autoExpandExamples.ru = `
 
 @ wiktionary
 
-брат|brother|b§r§a§t
-брать|to take|b§r§a§tʲ§‹
-за́мок|castle|ˈz§a.§m§ə§k
-замо́к|lock|z§ə.§ˈm§o§k
-туш|flourish after a toast|t§u§ʂ
-тушь|india ink|t§u§ʂ§‹
+брат|brother|b,r,a,t
+брать|to take|b,r,a,tʲ,‹
+за́мок|castle|ˈz,a.,m,ə,k
+замо́к|lock|z,ə.,ˈm,o,k
+туш|flourish after a toast|t,u,ʂ
+тушь|india ink|t,u,ʂ,‹
 
 я|I (1sg)|ja
 ты|you (2sg)|tɨ
@@ -37,7 +37,7 @@ autoExpandExamples.ru = `
 вы|you (2pl)|vɨ
 они́|they (3pl)|ʌˈnʲi
 оне́|they (3pl)|
-э́то|this|ˈɛ§t§ə
+э́то|this|ˈɛ,t,ə
 сё|this|
 то|that|to
 здесь|here|zdʲesʲ
@@ -58,21 +58,21 @@ autoExpandExamples.ru = `
 немно́гие|few|nʲɪˈmnogʲɪjɪ
 ма́ло|few|ˈmaɫə
 друго́й|other|druˈgoj
-иной|other|ɪ.§ˈn§o§j|inój|ино́й|[..]|иной
-ино́й|other|ɪ.§ˈn§o§j|inój|иной|[..]|иной
-оди́н|one|ɐ.§ˈdʲ§i§n|odín|один|[..]|один
-один|one|ɐ.§ˈdʲ§i§n|odín|оди́н|[..]
+иной|other|ɪ.,ˈn,o,j|inój|ино́й|[..]|иной
+ино́й|other|ɪ.,ˈn,o,j|inój|иной|[..]|иной
+оди́н|one|ɐ.,ˈdʲ,i,n|odín|один|[..]|один
+один|one|ɐ.,ˈdʲ,i,n|odín|оди́н|[..]
 два|two|dva
 три|three|trʲi
 четы́ре|four|ʨɪˈtɨrʲɪ
-пять|five|pʲ§æ§tʲ§‹
-большо́й|big|b§ʌ§ˈlʲ§‹§ʂ§oj§‹
+пять|five|pʲ,æ,tʲ,‹
+большо́й|big|b,ʌ,ˈlʲ,‹,ʂ,oj,‹
 вели́кий|big|
 кру́пный|big|
 дли́нный|long|ˈdʲlʲinnɨj
 до́лгий|long||dólgij
-широ́кий|wide|ʂ§ɨ§ˈr§o§kʲ§ɪj§‹
-толстый|thick|ˈt§o§ɫ§s§t§ɨ§j|tólstyj|то́лстый|[..]
+широ́кий|wide|ʂ,ɨ,ˈr,o,kʲ,ɪj,‹
+толстый|thick|ˈt,o,ɫ,s,t,ɨ,j|tólstyj|то́лстый|[..]
 тяжёлый|heavy|tʲɪˈʐolɨj
 тя́жкий|heavy||tjážkij
 ма́ленький|small|ˈmalʲɪnʲkʲɪj
@@ -83,13 +83,13 @@ autoExpandExamples.ru = `
 то́нкий|thin|ˈtonkʲɪj
 же́нщина|woman|ˈʐenʲɕɕɪnə
 мужчи́на|man (adult male)|mʊˈɕɕinə
-челове́к|man (human being)|ʨ§ɪ§l§ʌ§ˈvʲ§e§k
+челове́к|man (human being)|ʨ,ɪ,l,ʌ,ˈvʲ,e,k
 ребёнок|child|rʲɪˈbʲonək
-дитя́|child|dʲ§ɪ§ˈtʲ§a
+дитя́|child|dʲ,ɪ,ˈtʲ,a
 жена́|wife|ʐɪˈna
 супру́га|wife|
-муж|husband|m§u§ʂ
-супру́г|husband|s§ʊ§ˈp§r§u§k
+муж|husband|m,u,ʂ
+супру́г|husband|s,ʊ,ˈp,r,u,k
 мать|mother|matʲ
 ма́ма|mother|
 ма́тушка|mother|
@@ -98,69 +98,69 @@ autoExpandExamples.ru = `
 ба́тюшка|father|
 зверь|animal|zvʲerʲ
 зверёк|animal|
-животное|animal|ʐ§ɨ§ˈv§o§t§n§ə§jə| živótnoje |живо́тное|[..]
-ры́ба|fish|ˈr§ɨ§b§ə
+животное|animal|ʐ,ɨ,ˈv,o,t,n,ə,jə| živótnoje |живо́тное|[..]
+ры́ба|fish|ˈr,ɨ,b,ə
 пти́ца|bird|ˈptʲiʦə
 соба́ка|dog|sʌˈbakə
 пёс|dog|pʲos
 вошь|louse|voʂ
-змея|snake|z§mʲ§ɪ§ˈja| zmejá |змея́|[..]
-червь|worm|ʨ§e§r§fʲ§‹
+змея|snake|z,mʲ,ɪ,ˈja| zmejá |змея́|[..]
+червь|worm|ʨ,e,r,fʲ,‹
 червя́к|worm|
-де́рево|tree|ˈdʲ§e§rʲ§ɪ§v§ə|dérevo
-дерево|tree|ˈdʲ§e§rʲ§ɪ§v§ə|dérevo
+де́рево|tree|ˈdʲ,e,rʲ,ɪ,v,ə|dérevo
+дерево|tree|ˈdʲ,e,rʲ,ɪ,v,ə|dérevo
 лес|forest|lʲes
-па́лка|stick|ˈp§ɑ§l§k§ə
+па́лка|stick|ˈp,ɑ,l,k,ə
 плод|fruit|plot
-фрукт|fruit|f§r§u§k§t
+фрукт|fruit|f,r,u,k,t
 се́мя|seed|ˈsʲemʲə
-лист|leaf|lʲ§i§s§t
+лист|leaf|lʲ,i,s,t
 ко́рень|root|ˈkorʲɪnʲ
 кора́|bark (of a tree)|kʌˈra
 цвето́к|flower|ʦvʲɪˈtok
-трава́|grass|t§r§ʌ§ˈv§a
+трава́|grass|t,r,ʌ,ˈv,a
 верёвка|rope|vʲɪˈrʲofkə
-бечёвка|twine, string|bʲ§ɪ§ˈt͡ɕ§ɵ§f§k§ə|bečóvka|
+бечёвка|twine, string|bʲ,ɪ,ˈt͡ɕ,ɵ,f,k,ə|bečóvka|
 ко́жа|skin|ˈkoʐə
 шку́ра|skin|ˈʂkurə
 мя́со|meat|ˈmʲasə
 кровь|blood|krofʲ
 кость|bone|kostʲ
-жир|fat (noun)|ˈʐ§ɨ§r
+жир|fat (noun)|ˈʐ,ɨ,r
 яйцо́|egg|jɪjˈʦo
 рог|horn|rok
 хвост|tail|xvost
-перо́|feather|pʲ§ɪ§ˈr§o
+перо́|feather|pʲ,ɪ,ˈr,o
 во́лос|hair|
 во́лосы|hair|ˈvoləsɨ
 голова́|head|gəlʌˈva
 глава́|head|
-ухо|ear|ˈu§x§ə|úxo|у́хо|[..]
-глаз|eye|g§l§a§s
+ухо|ear|ˈu,x,ə|úxo|у́хо|[..]
+глаз|eye|g,l,a,s
 о́ко|eye|
 нос|nose|nos
 рот|mouth|rot
-зуб|tooth|z§u§p
-язы́к|tongue (organ)|jɪ§ˈz§ɨ§k
-но́готь|fingernail|ˈn§o§g§ə§tʲ§‹
+зуб|tooth|z,u,p
+язы́к|tongue (organ)|jɪ,ˈz,ɨ,k
+но́готь|fingernail|ˈn,o,g,ə,tʲ,‹
 стопа́|foot|stʌˈpa
 нога́|leg, foot|nʌˈga
 коле́но|knee|kʌˈlʲenə
 рука́|hand|ruˈka
-крыло́|wing|k§r§ɨ§ˈl§o
+крыло́|wing|k,r,ɨ,ˈl,o
 живо́т|belly|ʐɨˈvot
 брю́хо|belly|
 кишки́|guts|kʲɪˈʂkʲi
 вну́тренности|guts|ˈvnutʲrʲɪnnəstʲɪ
-ше́я|neck|ˈʂ§e§jə
+ше́я|neck|ˈʂ,e,jə
 спина́|back|spʲɪˈna
 грудь|breast|grutʲ
-се́рдце|heart|ˈsʲ§e§r§t§ʦ§ɪ
+се́рдце|heart|ˈsʲ,e,r,t,ʦ,ɪ
 пе́чень|liver|ˈpʲeʨɪnʲ
 печёнка|liver|pʲɪˈt͡ɕɵnkə
 пить|to drink|pʲitʲ
 вы́пить|to drink|
-есть|to eat|je§sʲ§tʲ§‹
+есть|to eat|je,sʲ,tʲ,‹
 съесть|to eat|
 ку́шать|to eat|ˈkuʂatʲ
 ску́шать|to eat|
@@ -182,10 +182,10 @@ autoExpandExamples.ru = `
 услы́шать|to hear|
 знать|to know|znatʲ
 ве́дать|to know|
-ду́мать|to think|ˈd§u§m§a§tʲ§‹
+ду́мать|to think|ˈd,u,m,a,tʲ,‹
 мы́слить|to think|
-ню́хать|to smell|ˈnʲ§u§x§a§tʲ§‹
-чу́ять|to smell|ˈʨ§u§jæ§tʲ§‹
+ню́хать|to smell|ˈnʲ,u,x,a,tʲ,‹
+чу́ять|to smell|ˈʨ,u,jæ,tʲ,‹
 боя́ться|to fear|bʌˈjætʲsʲə
 спать|to sleep|spatʲ
 жить|to live|ʐɨtʲ
@@ -204,7 +204,7 @@ autoExpandExamples.ru = `
 разделя́ть|to split|rəzʲdʲɪˈlʲitʲ
 раздели́ть|to split|
 коло́ть|to stab|
-кольну́ть|to stab|k§ʌ§ˈlʲ§‹§n§u§tʲ§‹
+кольну́ть|to stab|k,ʌ,ˈlʲ,‹,n,u,tʲ,‹
 цара́пать|to scratch|ʦəˈrapətʲ
 поцара́пать|to scratch|
 копа́ть|to dig|kʌˈpatʲ
@@ -213,21 +213,21 @@ autoExpandExamples.ru = `
 плыть|to swim|pɫɨtʲ
 лета́ть|to fly|lʲɪˈtatʲ
 лете́ть|to fly|
-ходи́ть|to walk|x§ʌ§ˈdʲ§i§tʲ§‹
+ходи́ть|to walk|x,ʌ,ˈdʲ,i,tʲ,‹
 идти́|to walk|ɪˈtʲtʲi
 приходи́ть|to come|prʲɪxʌˈdʲitʲ
-прийти́|to come|p§rʲ§ɪ§j.§ˈtʲ§i|prijtí|прийти|[..]|прийти
-прийти|to come|p§rʲ§ɪ§j.§ˈtʲ§i|prijtí|прийти́|[..]|прийти
+прийти́|to come|p,rʲ,ɪ,j.,ˈtʲ,i|prijtí|прийти|[..]|прийти
+прийти|to come|p,rʲ,ɪ,j.,ˈtʲ,i|prijtí|прийти́|[..]|прийти
 лежа́ть|to lie (as in a bed)|lʲɪˈʐatʲ
-сиде́ть|to sit|sʲ§ɪ§ˈdʲ§e§tʲ§‹
+сиде́ть|to sit|sʲ,ɪ,ˈdʲ,e,tʲ,‹
 стоя́ть|to stand|stʌˈjætʲ
 враща́ть|to turn (intransitive)|vrʌˈɕɕatʲ
 верте́ть|to turn (intransitive)|vʲɪˈrtʲetʲ
 крути́ть|to turn (intransitive)|
 па́дать|to fall|ˈpadətʲ
 упа́сть|to fall|
-дава́ть|to give|d§ɐ§ˈv§a§tʲ§‹|davátʹ|дава́ть|[..]|давать
-давать|to give|d§ɐ§ˈv§a§tʲ§‹|davátʹ|дава́ть|[..]
+дава́ть|to give|d,ɐ,ˈv,a,tʲ,‹|davátʹ|дава́ть|[..]|давать
+давать|to give|d,ɐ,ˈv,a,tʲ,‹|davátʹ|дава́ть|[..]
 дать|to give|
 держа́ть|to hold|dʲɪˈrʐatʲ
 сжима́ть|to squeeze|ʑʑɨˈmatʲ
@@ -240,7 +240,7 @@ autoExpandExamples.ru = `
 умы́ть|to wash|
 вытира́ть|to wipe|vɨtʲɪˈratʲ
 вы́тереть|to wipe|
-тяну́ть|to pull|tʲ§ɪ§ˈn§u§tʲ§‹
+тяну́ть|to pull|tʲ,ɪ,ˈn,u,tʲ,‹
 тащи́ть|to pull|
 толка́ть|to push|tʌˈlkatʲ
 толкну́ть|to push|
@@ -248,7 +248,7 @@ autoExpandExamples.ru = `
 пихну́ть|to push|
 броса́ть|to throw|brʌˈsatʲ
 бро́сить|to throw|
-кида́ть|to throw|kʲ§ɪ§ˈd§a§tʲ§‹
+кида́ть|to throw|kʲ,ɪ,ˈd,a,tʲ,‹
 ки́нуть|to throw|
 вяза́ть|to tie|vʲɪˈzatʲ
 свя́зывать|to tie|ˈsvʲazɨvətʲ
@@ -261,10 +261,10 @@ autoExpandExamples.ru = `
 мо́лвить|to say|
 петь|to sing|pʲetʲ
 распева́ть|to sing|
-игра́ть|to play|ɪ§ˈg§r§a§tʲ§‹
-поиграть|to play|p§ə§ɪ§ˈɡ§r§a§tʲ§‹|poigrátʹ|поигра́ть|[..]
+игра́ть|to play|ɪ,ˈg,r,a,tʲ,‹
+поиграть|to play|p,ə,ɪ,ˈɡ,r,a,tʲ,‹|poigrátʹ|поигра́ть|[..]
 сыгра́ть|to play|
-течь|to flow|tʲ§e§ʨ§‹
+течь|to flow|tʲ,e,ʨ,‹
 замерза́ть|to freeze|
 замёрзнуть|to freeze|zəˈmʲorznutʲ
 ледене́ть|to freeze|
@@ -274,26 +274,26 @@ autoExpandExamples.ru = `
 опуха́ть|to swell|
 отека́ть|to swell|
 со́лнце|sun|ˈsonʦə
-луна́|moon|l§u§ˈn§a
-ме́сяц|moon|ˈmʲ§e§sʲ§ɪ§t͡s
+луна́|moon|l,u,ˈn,a
+ме́сяц|moon|ˈmʲ,e,sʲ,ɪ,t͡s
 звезда́|star|zvʲɪˈzda
-вода́|water|v§ʌ§ˈd§a
+вода́|water|v,ʌ,ˈd,a
 дождь|rain|doɕtʲ
-река́|river|rʲ§ɪ§ˈk§a
-озеро|lake|ˈo§zʲ§e§r§ə|transc|о́зеро|[..]
+река́|river|rʲ,ɪ,ˈk,a
+озеро|lake|ˈo,zʲ,e,r,ə|transc|о́зеро|[..]
 мо́ре|sea|ˈmorʲɪ
-соль|salt|s§o§lʲ§‹
+соль|salt|s,o,lʲ,‹
 ка́мень|stone|ˈkamʲɪnʲ
-песо́к|sand|pʲ§ɪ§ˈs§o§k
+песо́к|sand|pʲ,ɪ,ˈs,o,k
 пыль|dust|pɨlʲ
-земля́|earth|zʲ§ɪ§ˈm§lʲ§a
+земля́|earth|zʲ,ɪ,ˈm,lʲ,a
 о́блако|cloud|ˈobləkə
-ту́ча|cloud|ˈt§u§ʨ§ə
+ту́ча|cloud|ˈt,u,ʨ,ə
 тума́н|fog|tuˈman
-не́бо|sky|ˈnʲ§e§b§ə
-ве́тер|wind|ˈvʲ§e§tʲ§ɪ§r
-снег|snow|s§nʲ§e§k
-лёд|ice|lʲ§o§t
+не́бо|sky|ˈnʲ,e,b,ə
+ве́тер|wind|ˈvʲ,e,tʲ,ɪ,r
+снег|snow|s,nʲ,e,k
+лёд|ice|lʲ,o,t
 дым|smoke|dɨm
 ого́нь|fire|ʌˈgonʲ
 зола́|ash|zʌˈla
@@ -304,26 +304,26 @@ autoExpandExamples.ru = `
 сгоре́ть|to burn|
 доро́га|road|dʌˈrogə
 путь|road|putʲ
-гора́|mountain|g§ʌ§ˈr§a
-кра́сный|red|ˈk§r§a§s§n§ɨj§‹
+гора́|mountain|g,ʌ,ˈr,a
+кра́сный|red|ˈk,r,a,s,n,ɨj,‹
 зелёный|green|zʲɪˈlʲonɨj
 жёлтый|yellow|ˈʐoltɨj
-бе́лый|white|ˈbʲ§e§l§ɨj§‹
+бе́лый|white|ˈbʲ,e,l,ɨj,‹
 чёрный|black|ˈʨornɨj
-ночь|night|n§o§ʨ§‹
+ночь|night|n,o,ʨ,‹
 день|day|dʲenʲ
 год|year|got
 тёплый|warm|ˈtʲoplɨj
 холо́дный|cold|xʌˈlodnɨj
 студёный|cold|
 по́лный|full|ˈpolnɨj
-но́вый|new|ˈn§o§v§ɨj§‹
+но́вый|new|ˈn,o,v,ɨj,‹
 ста́рый|old|ˈstarɨj
-хоро́ший|good|x§ʌ§ˈr§o§ʂ§ɨj§‹
+хоро́ший|good|x,ʌ,ˈr,o,ʂ,ɨj,‹
 до́брый|good|ˈdobrɨj
 плохо́й|bad|plʌˈxoj
 злой|bad|zloj
-гнило́й|rotten|g§nʲ§ɪ§ˈl§oj§‹
+гнило́й|rotten|g,nʲ,ɪ,ˈl,oj,‹
 гря́зный|dirty|ˈgrʲaznɨj
 прямо́й|straight|prʲɪˈmoj
 кру́глый|round|ˈkruglɨj
@@ -351,62 +351,62 @@ autoExpandExamples.ru = `
 ко́ли|if|
 потому́ что|because|pətʌˈmu ʨtə
 и́бо|because|
-имя|name|ˈi§mʲ§ə|ímja|и́мя|[..]
-этиология|etiology|ɪ§tʲ§ɪ§ɐ§ˈl§o§ɡʲ§ɪ§jə|étiologiä|этиоло́гия|[..]
+имя|name|ˈi,mʲ,ə|ímja|и́мя|[..]
+этиология|etiology|ɪ,tʲ,ɪ,ɐ,ˈl,o,ɡʲ,ɪ,jə|étiologiä|этиоло́гия|[..]
 
-лю́ди|people|ˈlʲ§ʉ§dʲ§ɪ
-галлюцинация|hallucination|ɡ§ə§›§lʲ§ʊ§ts§ɨ§ˈn§a§ts§ɨ§jə
-хобби|hobby|ˈx§o§bʲ§(ː)§ɪ|xobbi|хо́бби|[..]
-мука́|flour|m§ʊ§ˈk§a
-эта́п|stage|ɛ§ˈt§a§p
-жест|gesture|ʐ§ɛ§s§t
+лю́ди|people|ˈlʲ,ʉ,dʲ,ɪ
+галлюцинация|hallucination|ɡ,ə,›,lʲ,ʊ,ts,ɨ,ˈn,a,ts,ɨ,jə
+хобби|hobby|ˈx,o,bʲ,(ː),ɪ|xobbi|хо́бби|[..]
+мука́|flour|m,ʊ,ˈk,a
+эта́п|stage|ɛ,ˈt,a,p
+жест|gesture|ʐ,ɛ,s,t
 цель|target|tselʲ
-юбка|skirt|ju§b§k§ə
-энергия|energy|ɛ.§ˈn§ɛ§r.§ɡʲ§ɪ§ɪ̯ə|ɛnɛ́rgija|эне́ргия|[..]
-фе́рмер|farmer|ˈfʲ§e§r§mʲ§ɪ§r
+юбка|skirt|ju,b,k,ə
+энергия|energy|ɛ.,ˈn,ɛ,r.,ɡʲ,ɪ,ɪ̯ə|ɛnɛ́rgija|эне́ргия|[..]
+фе́рмер|farmer|ˈfʲ,e,r,mʲ,ɪ,r
 пью|drink|pʲju
 бью|hit|bʲju
 твёрдый|hard|ˈtvʲɵrdɨɪ̯
 мягкий|soft|ˈmʲæxʲkʲɪɪ̯
-челюсть|jaw|ˈt͡ɕ§e§lʲ§ʉ§sʲ§tʲ§‹
-я́сень|ash|ˈjæ§sʲ§ɪ§nʲ§‹
+челюсть|jaw|ˈt͡ɕ,e,lʲ,ʉ,sʲ,tʲ,‹
+я́сень|ash|ˈjæ,sʲ,ɪ,nʲ,‹
 утюжить|iron|ʊˈtʲuʐɨtʲ
 ухаживать|to look after|ʊˈxaʐɨvətʲ
 неожиданный|unexpected|nʲɪɐˈʐɨdən(ː)ɨɪ̯
 мальчик|boy|ˈmalʲt͡ɕɪk
-утёс|rock, cliff, crag|ʊ§ˈtʲ§ɵ§s|utjós|утё́с|[..]
-щётка|brush|ˈɕɕ§ɵ§t§k§ə
+утёс|rock, cliff, crag|ʊ,ˈtʲ,ɵ,s|utjós|утё́с|[..]
+щётка|brush|ˈɕɕ,ɵ,t,k,ə
 ягнёнок|lamb|ɪ̯ɪˈɡnʲɵnək
-ге́ний|genius|ˈɡʲ§e§nʲ§ɪɪ§‹̯
-це́лый|whole|ˈt͡s§ɛ§ɫ§ɨɪ§‹̯
-цари́ца|queen|t͡s§ɐ§ˈrʲ§i§t͡s§ə
+ге́ний|genius|ˈɡʲ,e,nʲ,ɪɪ,‹̯
+це́лый|whole|ˈt͡s,ɛ,ɫ,ɨɪ,‹̯
+цари́ца|queen|t͡s,ɐ,ˈrʲ,i,t͡s,ə
 ча́сто|often|ˈt͡ɕastə
-ши́шка|(pine) cone|ˈʂ§ɨ§ʂ§k§ə
-шокола́д|chocolate|ʂ§ə§k§ɐ§ˈɫ§a§t
-шум|noise|ʂ§u§m
-щи|cabbage soup|ɕɕ§i
-жара́|heat|ʐ§ɐ§ˈr§a
-хи́мия|chemistry|ˈxʲ§i§mʲ§ɪ§ɪ̯ə
-объём|volume|ɐ§ˈbj§‹§ɵ§m
-подъе́зд|entrance, public stairway|p§ɐ§ˈd§‹§je§s§t|podʺjézd|подъезд|[..]|подъезд
-подъезд|entrance, public stairway|p§ɐ§ˈd§‹§je§s§t|podʺjézd|подъе́зд|[..]
-крестовина|crosspiece|k§rʲ§ɪ§s§t§ɐ§ˈvʲ§i§n§ə|krestovína|крестови́на|[..]
+ши́шка|(pine) cone|ˈʂ,ɨ,ʂ,k,ə
+шокола́д|chocolate|ʂ,ə,k,ɐ,ˈɫ,a,t
+шум|noise|ʂ,u,m
+щи|cabbage soup|ɕɕ,i
+жара́|heat|ʐ,ɐ,ˈr,a
+хи́мия|chemistry|ˈxʲ,i,mʲ,ɪ,ɪ̯ə
+объём|volume|ɐ,ˈbj,‹,ɵ,m
+подъе́зд|entrance, public stairway|p,ɐ,ˈd,‹,je,s,t|podʺjézd|подъезд|[..]|подъезд
+подъезд|entrance, public stairway|p,ɐ,ˈd,‹,je,s,t|podʺjézd|подъе́зд|[..]
+крестовина|crosspiece|k,rʲ,ɪ,s,t,ɐ,ˈvʲ,i,n,ə|krestovína|крестови́на|[..]
 бельэтаж|bel étage|bʲɪlʲɨˈtaʂ|belʹetáž|бельэта́ж|[..]
-аббатство|abbey|ɐ§ˈb§b§a§t͡§s§t§v§ə|abbátstvo|абба́тство|[..]
-агентство|agency, dealership, agency|ɐ§ˈɡ§ɛ§n§s§t§v§o|agénstvo|аге́нтство|[..]
-контрстратегия|counterstrategy|ˌk§o§n§t§r§s§t§r§ɐ§ˈtʲ§e§ɡʲ§ɪ§j§ə|kontrstratégija|контрстрате́гия|[..]
-субъект|subject, individual|s§ʊ§b§‹§ˈje§k§t|subekt|субъе́кт|[..]
-разъярить|to infuriate|r§ə§z§‹§jɪ§ˈrʲ§i§tʲ§‹|razʺjarítʹ|разъяри́ть|[..]
-вглядеться|to peer at|v§ɡ§lʲ§ɪ§ˈdʲ§e§t͡sː§‹§‹§ə|vgljadétʹsja|вгляде́ться|[..]
-взгляд|glance, look|v§z§ɡ§lʲ§a§t|vzgljad|взгля́д|[..]
-под вечер|towards evening|p§ɐ§d§‿§ˈvʲ§e§t͡ɕ§ɪ§r|pod véčer|под ве́чер|[..]
-агрессор|aggressor|ɐ§ˈɡ§rʲ§e§s§(ː)§ə§r|agréssor|агре́ссор|[..]
+аббатство|abbey|ɐ,ˈb,b,a,t͡,s,t,v,ə|abbátstvo|абба́тство|[..]
+агентство|agency, dealership, agency|ɐ,ˈɡ,ɛ,n,s,t,v,o|agénstvo|аге́нтство|[..]
+контрстратегия|counterstrategy|ˌk,o,n,t,r,s,t,r,ɐ,ˈtʲ,e,ɡʲ,ɪ,j,ə|kontrstratégija|контрстрате́гия|[..]
+субъект|subject, individual|s,ʊ,b,‹,ˈje,k,t|subekt|субъе́кт|[..]
+разъярить|to infuriate|r,ə,z,‹,jɪ,ˈrʲ,i,tʲ,‹|razʺjarítʹ|разъяри́ть|[..]
+вглядеться|to peer at|v,ɡ,lʲ,ɪ,ˈdʲ,e,t͡sː,‹,‹,ə|vgljadétʹsja|вгляде́ться|[..]
+взгляд|glance, look|v,z,ɡ,lʲ,a,t|vzgljad|взгля́д|[..]
+под вечер|towards evening|p,ɐ,d,‿,ˈvʲ,e,t͡ɕ,ɪ,r|pod véčer|под ве́чер|[..]
+агрессор|aggressor|ɐ,ˈɡ,rʲ,e,s,(ː),ə,r|agréssor|агре́ссор|[..]
 
 
 
 @ https://en.wikipedia.org/wiki/Russian_language
 
-русский язык|Russian language|ˈr§u§s§‹§kʲ§ɪ§j§ §j§ɪ§ˈz§ɨ§k|
+русский язык|Russian language|ˈr,u,s,‹,kʲ,ɪ,j, ,j,ɪ,ˈz,ɨ,k|
 
 
 
