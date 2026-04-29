@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -31,7 +31,7 @@ autoExpandExamples.ccp = `
 𑄇𑄧𑄙𑄗𑄪𑄛𑄴|vocabulary||kadhāthup|
 𑄇𑄧𑄣𑄨𑄇𑄖|Kolkata||kalikātā|
 𑄇𑄨𑄠𑄮𑄁|temple||kiẏoṅ|
-𑄈𑄧𑄢𑄴𑄉𑄧𑄌𑄴|rabbit, hare|hɔ§ɾ§ɡɔ§c|hôrgôc|
+𑄈𑄧𑄢𑄴𑄉𑄧𑄌𑄴|rabbit, hare|hɔ,ɾ,ɡɔ,c|hôrgôc|
 𑄉𑄧𑄋|river||gaṅā|
 𑄉𑄧𑄖𑄴|music||gat|
 𑄉𑄧𑄙|dam||gadhā|
@@ -43,12 +43,12 @@ autoExpandExamples.ccp = `
 𑄌𑄟𑄴|skin||cām|
 𑄌𑄧𑄉𑄧𑄘|squirrel||cagadā|
 𑄌𑄧𑄉𑄧𑄣|shell||cagalā|
-𑄍𑄮𑄣𑄉𑄧𑄢𑄴|match|so§la§ɡɔ§ɾ|solagôr|
+𑄍𑄮𑄣𑄉𑄧𑄢𑄴|match|so,la,ɡɔ,ɾ|solagôr|
 𑄎𑄧𑄘|shoe||jadā|
 𑄏𑄧𑄢𑄴|rain||jhar|
 𑄒𑄉𑄪𑄢𑄴|priest||ṭhāgur|
 𑄒𑄙𑄢𑄴|thunder||ṭādhār|
-𑄖𑄨𑄚𑄴|three|ti§n|tin|
+𑄖𑄨𑄚𑄴|three|ti,n|tin|
 𑄗𑄉|temple patron||thāgā|
 𑄗𑄣𑄴|plate||thāl|
 𑄗𑄧𑄟𑄴|pillar||tham|
@@ -130,7 +130,7 @@ autoExpandExamples.ccp = `
 𑄘𑄝|hookah|daːbaː|daba
 𑄙𑄚𑄴|paddy|dʰaːn|dhan
 𑄚𑄇𑄴|nose|naːk|nak
-𑄛𑄉𑄢𑄳𑄦|spade|faː§gaː§rʰaː§‹|pagarah
+𑄛𑄉𑄢𑄳𑄦|spade|faː,gaː,rʰaː,‹|pagarah
 𑄜𑄧𑄣𑄴|cucumber|fʰɔl|phal
 𑄝𑄝𑄳𑄦|father|baːbaːh|babah
 𑄞𑄖𑄴|rice|bʰaːt|bhat
@@ -147,24 +147,24 @@ autoExpandExamples.ccp = `
 𑄈𑄘𑄨|Chakma traditional dress|haːdi|khadi
 𑄉𑄌𑄴|tree||gach
 𑄊𑄖𑄴|bathing place||ghat
-𑄃𑄧𑄏𑄛𑄖𑄴|alphabet|o§d͡ʒʰaː§fa:§t|ajhāpāt
+𑄃𑄧𑄏𑄛𑄖𑄴|alphabet|o,d͡ʒʰaː,fa:,t|ajhāpāt
 
 
 
 
 @ Bivuti Chakma correspondence
-𑄞𑄌𑄴𑄳𑄦𑄪𑄢𑄨|bamboo shoot|ˈbʱʌ§t.t͡ʃʰʊ.§‹§ri
-𑄞𑄣𑄧𑄇𑄴𑄳𑄦𑄚𑄨|a lot|ˈbʰʌ.§lɒ§k.kʰʌ.§‹§nɪ
-𑄝𑄬𑄌𑄴𑄳𑄦𑄬𑄉|bamboo fence|be§t.ˈt͡ʃʰe§‹§gʌ
-𑄈𑄠𑄴|to eat|kʰʌ§j
-𑄖𑄬 𑄞𑄖𑄴 𑄈𑄠𑄴𑅁|she eats rice|te§ §bʱʌ§t§ §kʱʌ§j
-𑄃𑄧𑄠𑄧𑄚𑄴|Ayan (name)|ɒ§jɒ§n
+𑄞𑄌𑄴𑄳𑄦𑄪𑄢𑄨|bamboo shoot|ˈbʱʌ,t.t͡ʃʰʊ.,‹,ri
+𑄞𑄣𑄧𑄇𑄴𑄳𑄦𑄚𑄨|a lot|ˈbʰʌ.,lɒ,k.kʰʌ.,‹,nɪ
+𑄝𑄬𑄌𑄴𑄳𑄦𑄬𑄉|bamboo fence|be,t.ˈt͡ʃʰe,‹,gʌ
+𑄈𑄠𑄴|to eat|kʰʌ,j
+𑄖𑄬 𑄞𑄖𑄴 𑄈𑄠𑄴𑅁|she eats rice|te, ,bʱʌ,t, ,kʱʌ,j
+𑄃𑄧𑄠𑄧𑄚𑄴|Ayan (name)|ɒ,jɒ,n
 𑄃𑄧𑄠𑄧𑄚𑄴𑄌𑄋𑄴𑄟𑄳𑄦 𑄟𑄧 𑄞𑄬𑄭𑅁|Ayan Chakma is my brother|ɒjɒn t͡ʃʌk.mʰɑ: mɔ  bʱɛɪ
-𑄝𑄧𑄖𑄴𑄳𑄠|twisted|ˈbɔ§t.tæ
+𑄝𑄧𑄖𑄴𑄳𑄠|twisted|ˈbɔ,t.tæ
 𑄇𑄪𑄉𑄪𑄢𑄮 𑄣𑄬𑄌𑄴𑄝𑄧𑄖𑄴𑄳𑄠|the dog's tail is twisted|kʊ.ɡʊ.rɔ: let͡ʃ ˈbɔt.tæ
-𑄡𑄧𑄟𑄴𑄢𑄎|ghost|d͡ʒɒ§m.§ˈrʌ§zʌ
+𑄡𑄧𑄟𑄴𑄢𑄎|ghost|d͡ʒɒ,m.,ˈrʌ,zʌ
 𑄡𑄧𑄟𑄴𑄢𑄎  𑄃𑄬𑄏𑄬𑄢𑄴|the ghost comes|d͡ʒɒm.ˈrʌzʌ e.d͡ʒʱer
-𑄡𑄠𑄢𑄧𑄖𑄴|pilgrimage|zɪ§j.§rɒ§t
+𑄡𑄠𑄢𑄧𑄖𑄴|pilgrimage|zɪ,j.,rɒ,t
 𑄟𑄪𑄎𑄮𑄣𑄴𑄟𑄚𑄪𑄚𑄬 𑄡𑄠𑄢𑄧𑄖𑄴 𑄉𑄧𑄢𑄧𑄚𑄴|Muslims make pilgrimages|mʊˈd͡ʒɔ:l.mʌnʊne zɪj.rɒt gɒrɒn
 
 

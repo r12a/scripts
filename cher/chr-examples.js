@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -53,7 +53,7 @@ autoExpandExamples.chr = `
 ᎠᎨᎯ|||
 ᎠᎨᏴ|||
 ᎠᎩ-|||
-ᎠᎩᎠ|he's eating it|aà§kíʔ§a|akia
+ᎠᎩᎠ|he's eating it|aà,kíʔ,a|akia
 ᎠᎩᎳᎨᏂ|neck||agilageni|||
 ᎠᎩᎵᏲᎦ|||
 ᎠᎩᎾ|||
@@ -135,14 +135,14 @@ autoExpandExamples.chr = `
 ᎠᎵᏰᏑᎶ|||
 ᎠᎵᏰᏑᏍᏙ|||
 ᎠᎵᏰᏑᏍᏛᏍᎦ|||
-ᎠᎵᏲ|sock|àː.§li̋ː.§jo|aliyo
+ᎠᎵᏲ|sock|àː.,li̋ː.,jo|aliyo
 ᎠᎶᏍᎦ|||
 ᎠᎶᏕᎯᎭ|||
 ᎠᎷ|||
 ᎠᎷᎸᎥᏍᎦ|||
 ᎠᎸᏇᏂᏯ|||
 ᎠᎹ ᎠᏑᏴᏗ ᏫᏍᎩ|||
-ᎠᎹ|water/salt|a§ma§/aːma|ama|||
+ᎠᎹ|water/salt|a,ma,/aːma|ama|||
 ᎠᎹᎨᎢ|||
 ᎠᎹᏗᎧᏂᎬᎾᎬᎾ|||
 ᎠᎹᏢᏗᎢ|||
@@ -445,7 +445,7 @@ autoExpandExamples.chr = `
 ᎠᏫᏍᎦ|||
 ᎠᏫᏳᏍᏘ|||
 ᎠᏬᎭᎵ|||
-ᎠᏯ|I|a§ja|aya
+ᎠᏯ|I|a,ja|aya
 ᎠᏯᎠ|||
 ᎠᏯᎢ|||
 ᎠᏯᎦᏢ|||
@@ -501,7 +501,7 @@ autoExpandExamples.chr = `
 ᎡᎳᏗ|low, lower||eladi
 ᎡᎳᏗᏝ|||
 ᎡᎵᏏ|||
-ᎡᎶᎯ|earth, world|e.§lòː.§hi|elohi|
+ᎡᎶᎯ|earth, world|e.,lòː.,hi|elohi|
 ᎡᎶᎯᏃ|earth (as in soil)||elohino|||
 ᎡᎶᏆ|||
 ᎡᎺᏅ|||
@@ -545,7 +545,7 @@ autoExpandExamples.chr = `
 ᎢᏤᎢ|||
 ᎢᏤᎢᏳᏍᏗ ᎦᏙᎯ|||
 ᎢᏥ-|you (plural)||itsi-|||
-ᎢᏯ|pumpkin|ìː§ja|iya
+ᎢᏯ|pumpkin|ìː,ja|iya
 ᎢᏯᎦᏴᎵ|||
 ᎢᏯᏂ|||
 ᎢᏯᏔᏬᏍᏔᏅᎢ|||
@@ -568,7 +568,7 @@ autoExpandExamples.chr = `
 ᎣᏏᏳ|||
 ᎣᏓᎸ|||
 ᎣᏓᎸᎢ|mountain||odalvi|||
-ᎣᏝ|soap|òː§ɬa|otla
+ᎣᏝ|soap|òː,ɬa|otla
 ᎣᏣᎵᎮᎵᎦ|||
 ᎣᏪᏅᏒ|||
 ᎤᎦ|||
@@ -835,10 +835,10 @@ autoExpandExamples.chr = `
 ᎥᎾᏘ|||
 ᎥᏍᎩᎦ|||
 ᎥᏍᎩᎾ|||
-ᎥᏓᎵ|pond, lake|ə̃̀ː§tàː§li|vdali
+ᎥᏓᎵ|pond, lake|ə̃̀ː,tàː,li|vdali
 ᎥᏳᎩ|||
 ᎦᎦᎶᎢ|leg||gagaloi|||
-ᎦᎦᎹ|cucumber|kaá§ká§ma|gagama
+ᎦᎦᎹ|cucumber|kaá,ká,ma|gagama
 ᎦᎦᏪᏍᎦ|||
 ᎦᎧᎯᏯᎠ|||
 ᎦᎨᏓ|||
@@ -860,7 +860,7 @@ autoExpandExamples.chr = `
 ᎦᎵᎭ|||
 ᎦᎵᏅᏛᎢ|||
 ᎦᎵᏆᏚ|||
-ᎦᎵᏉᎩ|seven|ka§ɬ§kʷoː§ki|galiquogi|||
+ᎦᎵᏉᎩ|seven|ka,ɬ,kʷoː,ki|galiquogi|||
 ᎦᎵᏍᏙᏯ|||
 ᎦᎵᏦᎯᏓ|fat||galitsohida|||
 ᎦᎵᏦᏓᏗ|||
@@ -1013,7 +1013,7 @@ autoExpandExamples.chr = `
 ᎦᏳᎳ|||
 ᎦᏴᎱᎶ|||
 ᎦᏴᏐᎵ|nose||gayvsoli|||
-ᎧᎦᎵ|February|kʰaː§kaʔ§li|||
+ᎧᎦᎵ|February|kʰaː,kaʔ,li|||
 ᎧᎳᎩᏌ|||
 ᎧᎵ|full||kali|||
 ᎧᎵᏎᏥ|||
@@ -1080,9 +1080,9 @@ autoExpandExamples.chr = `
 ᎩᏍᏚᎳ|||
 ᎩᏔᏯ|||
 ᎩᏚᏩ|||
-ᎩᏟ|dog/strand of hair|kiː§ɬi§/kiːt͡ɬi|gitli|||
+ᎩᏟ|dog/strand of hair|kiː,ɬi,/kiːt͡ɬi|gitli|||
 ᎩᏳᎦ|||
-ᎪᎢ|oil, grease|kòʔ§i|goi
+ᎪᎢ|oil, grease|kòʔ,i|goi
 ᎪᎢᎯ|||
 ᎪᎦᏍᎦ|||
 ᎪᎦᏍᏗ|||
@@ -1096,7 +1096,7 @@ autoExpandExamples.chr = `
 ᎪᎯᏳᏗ|||
 ᎪᎰᏍᎦ|||
 ᎪᎲᎾᏗᎭ|||
-ᎪᎳ|winter/bone|kőː§la§/ kʰǒːla|gola
+ᎪᎳ|winter/bone|kőː,la,/ kʰǒːla|gola
 ᎪᎳᏅ|||
 ᎪᎴᎯ|||
 ᎪᎵᎦ|||
@@ -1150,16 +1150,16 @@ autoExpandExamples.chr = `
 ᎬᎯ|||
 ᎬᎵ|||
 ᎬᎵᎧ|||
-ᎬᎾ|turkey/I'm alive|kə̃́.§na§/kə̃̀ː.na|gvna
+ᎬᎾ|turkey/I'm alive|kə̃́.,na,/kə̃̀ː.na|gvna
 ᎬᎾ ᏧᏆᏙᏟ|||
 ᎬᎾᎨ ᏥᏍᏆ|||
 ᎬᎾᏬᏍᎦ|||
 ᎬᎾᏬᏗᎭ|||
-ᎬᎿ|he is alive|kə̃ː.§hn̥a|gvhna
+ᎬᎿ|he is alive|kə̃ː.,hn̥a|gvhna
 ᎬᎿᎨ|||
 ᎬᎿᎨᏍᏛ|||
 ᎬᏂ|||
-ᎬᏂᎭ|I am/(s)he is striking it|kə̃ː§ni§ha§/kə̃ːhn̥iha|gvniha
+ᎬᏂᎭ|I am/(s)he is striking it|kə̃ː,ni,ha,/kə̃ːhn̥iha|gvniha
 ᎬᏂᏍᎦ|||
 ᎬᏃᏌᏍᎦ|||
 ᎬᏃᏌᏍᏗ|||
@@ -1171,7 +1171,7 @@ autoExpandExamples.chr = `
 ᎬᏔᏍᎦ|||
 ᎬᏗ|||
 ᎬᏗᎭ|||
-ᎬᏙᎠ|it's hanging|k§tʰoːʔ§a|||
+ᎬᏙᎠ|it's hanging|k,tʰoːʔ,a|||
 ᎬᏙᏌᏗᎠ|||
 ᎬᏙᏗ|with (accompanying)||gvdodi|||
 ᎬᏛᎥᏍᎦ|||
@@ -1191,7 +1191,7 @@ autoExpandExamples.chr = `
 ᎭᏰᎵᏍᏓ|||
 Ꭾ|||
 Ꭿ|||
-ᎯᎠ|this|hi§ʔa|||
+ᎯᎠ|this|hi,ʔa|||
 ᎯᎩ|to eat||higi|||
 ᎯᎳ ᎢᏯᏂ|||
 ᎯᎳᎪ|how||hilago|||
@@ -1199,7 +1199,7 @@ autoExpandExamples.chr = `
 ᎯᎳᏳᎢ|||
 ᎯᎾ|this||hina|||
 ᎯᏍᎩ|five||hisgi|||
-ᎯᏴᏫᏯᏍ|Are you a Native American?|hi§jə̃ː§wiː§jaː§s|||
+ᎯᏴᏫᏯᏍ|Are you a Native American?|hi,jə̃ː,wiː,jaː,s|||
 ᎱᎱ|||
 ᎱᏳᎩ|||
 ᎲᎴᏊ|||
@@ -1259,7 +1259,7 @@ autoExpandExamples.chr = `
 ᏆᏄᎾᏍᏗᎢ|||
 ᏆᏅ|||
 ᏇᎳᎷᏍ|||
-ᏊᎵᎨᎵᎠ|Bulgaria|koː.§li.§ɡe.§li.§ʔa|quuligelia
+ᏊᎵᎨᎵᎠ|Bulgaria|koː.,li.,ɡe.,li.,ʔa|quuligelia
 ᏋᎩᎾ ᏩᏐ|||
 ᏌᎨᎢ|thin||sagei|||
 ᏌᎪᏂᎨᎢ|||
@@ -1274,7 +1274,7 @@ autoExpandExamples.chr = `
 ᏍᎦᏎᏅ|||
 ᏍᎩᎦᏚ|||
 ᏍᎩᎾ ᎤᎩᎸᏗ|||
-ᏍᎪᎯ|ten|s§koː§hi|sgohi|||
+ᏍᎪᎯ|ten|s,koː,hi|sgohi|||
 ᏍᎪᎯᏁᎢ|||
 ᏍᎪᎯᏥᏆ|||
 ᏍᎪᏯ ᎠᏁᏍᎩᎸᎥᏍᎩ|||
@@ -1314,7 +1314,7 @@ autoExpandExamples.chr = `
 ᏑᎾᏙᏓᏆᏍᏗ|||
 ᏑᏓᎵ|six||sudali|||
 ᏑᏕᏘᏴᏓ|year||sudetiyvda|||
-ᏑᏗ|fishhook|suh§ti|||
+ᏑᏗ|fishhook|suh,ti|||
 ᏒᎠᏱ|||
 ᏒᎦᏔ|||
 ᏒᎩ|||
@@ -1369,13 +1369,13 @@ autoExpandExamples.chr = `
 ᏓᏨᏍᏔᏍᎦ|||
 ᏓᏫᏍᎦ|||
 ᏓᏫᏍᎬᎯ|||
-ᏓᏬᎵ|mushroom|tà.§wóː.§li|dawoli
+ᏓᏬᎵ|mushroom|tà.,wóː.,li|dawoli
 ᏓᏴᎩᎠ|||
 ᏓᏴᏍᏉᎢ|||
 ᏔᎳ|||
 ᏔᎳᏚ|||
 ᏔᎵ|||
-ᏔᎵ|two|tʰaʔ.§li|tali|||
+ᏔᎵ|two|tʰaʔ.,li|tali|||
 ᏔᎵᏁ|||
 ᏔᎵᏁ ᎠᏛᏙᏗ|||
 ᏔᎵᏁ ᎢᎦ|||
@@ -1390,7 +1390,7 @@ autoExpandExamples.chr = `
 ᏔᏁᏆ|||
 ᏔᏂᏏ|||
 ᏔᏥᎩᏍᏔᏂ|||
-ᏔᏬᏗ|hawk|tʰà.§wőː.§ti|tawoti
+ᏔᏬᏗ|hawk|tʰà.,wőː.,ti|tawoti
 ᏔᏯ|||
 ᏕᎦᎵᏗ|||
 ᏕᎦᎶᏗ|||
@@ -1501,7 +1501,7 @@ autoExpandExamples.chr = `
 ᏛᎬᎾ|oyster||dvgvna
 ᏛᏗᏍᏗ|||
 ᏛᏰᏆ|||
-ᏜᎺᎭ|bat (mammal)|d͡ɮa§me§ha|dlameha
+ᏜᎺᎭ|bat (mammal)|d͡ɮa,me,ha|dlameha
 ᏜᏄᏏ|||
 Ꮭ ᎢᎸᎯᏳ|||
 Ꮭ ᎪᎱᏍᏗ|||
@@ -1518,7 +1518,7 @@ autoExpandExamples.chr = `
 ᏢᏕᎦ|||
 ᏢᏗᏍᏗ|||
 ᏢᏩᎵᎦ|||
-ᏣᎳᎩ|Cherokee|t͡sa.§lɑ.§ki|tsalagi
+ᏣᎳᎩ|Cherokee|t͡sa.,lɑ.,ki|tsalagi
 ᏣᎵᎫ|tree||tsaligu|||
 ᏣᏆᏂᏱ|||
 ᏣᏉᎳᏓᎩ|||
@@ -1551,7 +1551,7 @@ autoExpandExamples.chr = `
 ᏥᏲ|||
 ᏥᏳ|||
 ᏥᏳ ᎦᏃᎯᎵᏙᎯ|||
-ᏦᎢ|three|t͡soʔ§i|tsoi
+ᏦᎢ|three|t͡soʔ,i|tsoi
 ᏦᎢᏁ ᎢᎦ|||
 ᏦᎦᏚ|||
 ᏦᎨᏏ|||
@@ -1615,7 +1615,7 @@ autoExpandExamples.chr = `
 ᏩᏓᎬ|||
 ᏩᏗᎠ|||
 ᏩᏘᏰᎳ|||
-ᏩᏙ|thank you|wa§tõ|wado
+ᏩᏙ|thank you|wa,tõ|wado
 ᏩᏚᎵᏏ|||
 ᏩᏥ|||
 ᏩᏥᎳ||||
@@ -1647,57 +1647,57 @@ autoExpandExamples.chr = `
 ᏴᏫ ᎤᎾᏦᏙᏗ|||
 ᏴᏫ ᏧᎾᏍᏗᎢ|||
 ᏴᏫ|man (human being)||yvwi|||
-ᎪᎯ|today|kʰȍ§hi|
+ᎪᎯ|today|kʰȍ,hi|
 
 
-ᎭᏛᎦ|you did it/you hung it up|hà.§tə̃̏.§ka§/hatʰə̃̏ːka|hadvga
-ᏓᎵᏲᎯᎭ|he's putting on socks|tȁː§líː§jó§hì§ha|daliyohiha
-ᏓᎵᏲᏏᎭ|he's changing socks|tȁː§líː§jó§sì§ha|daliyosiha
+ᎭᏛᎦ|you did it/you hung it up|hà.,tə̃̏.,ka,/hatʰə̃̏ːka|hadvga
+ᏓᎵᏲᎯᎭ|he's putting on socks|tȁː,líː,jó,hì,ha|daliyohiha
+ᏓᎵᏲᏏᎭ|he's changing socks|tȁː,líː,jó,sì,ha|daliyosiha
 ᏧᏁᎳ|eight||tsunela|||
-ᏥᏃᏍᎦ|coal|tʰ͡ʃì§nò§s§ka|tsinosga
-ᏧᎦ|flea|tʰ͡ʃùh§ka|tsuka
-ᎠᏧᏣ|boy|a§tʰ͡ʃű§t͡ʒa|atsutsa
-ᏯᏙᏟ|narrow|j̥àh.§tʰő.§ɬi|yadotli
-ᎤᎦᎹ|soup|űː.§ká.§ma|ugama
-ᎧᎹᎹ|elephant/butterfly|kʰà.§màː.§ma|kamama
-ᏓᎹᎦ|horsefly|tàː.§má.§ka|damaga
-ᎨᎻᎵ|camel|kʰe̋ː.§mí.§li|gemili
+ᏥᏃᏍᎦ|coal|tʰ͡ʃì,nò,s,ka|tsinosga
+ᏧᎦ|flea|tʰ͡ʃùh,ka|tsuka
+ᎠᏧᏣ|boy|a,tʰ͡ʃű,t͡ʒa|atsutsa
+ᏯᏙᏟ|narrow|j̥àh.,tʰő.,ɬi|yadotli
+ᎤᎦᎹ|soup|űː.,ká.,ma|ugama
+ᎧᎹᎹ|elephant/butterfly|kʰà.,màː.,ma|kamama
+ᏓᎹᎦ|horsefly|tàː.,má.,ka|damaga
+ᎨᎻᎵ|camel|kʰe̋ː.,mí.,li|gemili
 
 
 
 @ unknown source
 
-ᏒᎧᏔ|apple|sə̃:§kʰ§ta|svkata|
-ᏩᏇᏅᏅᏒ|I went there|wȁ:.§kʷè:.§nə̃́:.§‹§sə̃|wakwenvsv|
-ᎦᏇᏅᏍᎦ|he's wrapping it|kàː.§kʰw̥è:.§nə̃̀:.§s§ka|gakwenvska|
-ᏍᏊᏅᎢ|fist|s§kʷè§n̥ə̃̋§ʔi|skwenvi|
-ᎠᏓ|wood/young animal|à§ta§/áʔta||
+ᏒᎧᏔ|apple|sə̃:,kʰ,ta|svkata|
+ᏩᏇᏅᏅᏒ|I went there|wȁ:.,kʷè:.,nə̃́:.,‹,sə̃|wakwenvsv|
+ᎦᏇᏅᏍᎦ|he's wrapping it|kàː.,kʰw̥è:.,nə̃̀:.,s,ka|gakwenvska|
+ᏍᏊᏅᎢ|fist|s,kʷè,n̥ə̃̋,ʔi|skwenvi|
+ᎠᏓ|wood/young animal|à,ta,/áʔta||
 
-ᏣᏁᎳ|eight|tʰ͡ʃà.§néː.§la|tsanela|
-ᎦᏥᏃᏍᏓ|straight|ka§tʰ͡ʃì§nő§s§ta|gatsinosta|
-ᎠᏨᏯ|male animal/rooster|a.§t͡sə̃̀.§ja§/a.tʰ͡ʃə̃̀.ja|atsvya
-ᏗᏨᏍᏗ|marriage|ti§tʰ͡ʃə̃́ː§s§ti|ditsvsdi|
-ᏯᏖᎾ|board|j̥àh§tʰě§na|yatena|
+ᏣᏁᎳ|eight|tʰ͡ʃà.,néː.,la|tsanela|
+ᎦᏥᏃᏍᏓ|straight|ka,tʰ͡ʃì,nő,s,ta|gatsinosta|
+ᎠᏨᏯ|male animal/rooster|a.,t͡sə̃̀.,ja,/a.tʰ͡ʃə̃̀.ja|atsvya
+ᏗᏨᏍᏗ|marriage|ti,tʰ͡ʃə̃́ː,s,ti|ditsvsdi|
+ᏯᏖᎾ|board|j̥àh,tʰě,na|yatena|
 
-ᏰᎦᎵ|quilt|j̥èh§kà§ɬi|yekatli|
-ᎠᎦᎾᏘ|he is licking it|ȁː.§kà.§na̋ː.§ti|aganadi|
-ᎠᎹᏴ|near the water|a.§mà.§jə̃̋ː|amayv|
-ᎠᎺᏉᎢ|ocean|a.§méː.§kʷő.§ʔi|a.me.kwo.i|
-ᏝᎺᎭ|bat|tlàː§mèː§ha|tla.me.ha|
-ᏔᎹᏟ|tomato|tʰà§màː§ɬi|ta.ma.tli|
-ᎣᎦᎳᎰᎹ|Oklahoma|òː.§kà.§làː.§hőː.§ma|ogalahoma|
-ᎣᎦ̱ᎳᎰᎹ|Oklahoma|òː§k§làː§hőː§ma|ogalahoma|
-ᎺᎵ|Mary|méː§li|me.li|
-ᎹᎩ|Maggie|ma̋ː.§ki|magi|
-ᎰᏩ|OK|hò.§wã|howa|
-ᏗᎦᏙᏗ|curtains|tì.§kà.§tó̥h.§tĩ|digadodi
-ᏥᎩᎵ|ghost|t͡s§ki.§li|tsikili||
+ᏰᎦᎵ|quilt|j̥èh,kà,ɬi|yekatli|
+ᎠᎦᎾᏘ|he is licking it|ȁː.,kà.,na̋ː.,ti|aganadi|
+ᎠᎹᏴ|near the water|a.,mà.,jə̃̋ː|amayv|
+ᎠᎺᏉᎢ|ocean|a.,méː.,kʷő.,ʔi|a.me.kwo.i|
+ᏝᎺᎭ|bat|tlàː,mèː,ha|tla.me.ha|
+ᏔᎹᏟ|tomato|tʰà,màː,ɬi|ta.ma.tli|
+ᎣᎦᎳᎰᎹ|Oklahoma|òː.,kà.,làː.,hőː.,ma|ogalahoma|
+ᎣᎦ̱ᎳᎰᎹ|Oklahoma|òː,k,làː,hőː,ma|ogalahoma|
+ᎺᎵ|Mary|méː,li|me.li|
+ᎹᎩ|Maggie|ma̋ː.,ki|magi|
+ᎰᏩ|OK|hò.,wã|howa|
+ᏗᎦᏙᏗ|curtains|tì.,kà.,tó̥h.,tĩ|digadodi
+ᏥᎩᎵ|ghost|t͡s,ki.,li|tsikili||
 
-ᎠᎨᏯ|woman|à.§kěː.§hj̥a|ageya|
-ᎤᏂᎷᏨ|they arrived|ȕː.§nì.§lúh.§tʰ͡ʃə̃|unilutsv|
+ᎠᎨᏯ|woman|à.,kěː.,hj̥a|ageya|
+ᎤᏂᎷᏨ|they arrived|ȕː.,nì.,lúh.,tʰ͡ʃə̃|unilutsv|
 
-ᎠᏟᎶ|he's measuring it|ȁː.§ɬìː.§lo|atliloa|
-ᎤᏍᏘ|baby|ùː§s§ti|usti|
+ᎠᏟᎶ|he's measuring it|ȁː.,ɬìː.,lo|atliloa|
+ᎤᏍᏘ|baby|ùː,s,ti|usti|
 
 
 
@@ -1706,7 +1706,7 @@ autoExpandExamples.chr = `
 
 
 @ https://en.wikipedia.org/wiki/Cherokee_language
-ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ|Cherokee language|t͡sa.§lɑ.§ki §ɡa§wó§ni§hi§s§ˈdî|tsalagi gawonihisdi
+ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ|Cherokee language|t͡sa.,lɑ.,ki ,ɡa,wó,ni,hi,s,ˈdî|tsalagi gawonihisdi
 
 
 

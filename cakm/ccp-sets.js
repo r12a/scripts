@@ -9,11 +9,11 @@
 // 🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉
 
 var collections = [
-{ symbol:'Ⓒ', desc:'Consonants', chars:'(𑄛|𑄝|𑄖|𑄘|𑄑|𑄓|𑄇|𑄉|𑄜|𑄞|𑄗|𑄙|𑄒|𑄔|𑄈|𑄊|𑄌|𑄍|𑄎|𑄏|𑅇|𑄥|𑄦|𑄟|𑄚|𑄕|𑄐|𑄋|𑄤|𑄢|𑄣|𑅄|𑄡|𑄠)' },
-{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(𑄨|𑄪|𑄩|𑄫|𑄬|𑄮|𑅆|𑄰|𑄧|𑅅|𑄭|𑄯)' },
-{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(𑄄|𑄅|𑄆|𑄃)' },
-{ symbol:'Ⓕ', desc:'Finals', chars:'(𑄀|𑄁|𑄂)' },
-{ symbol:'🅲', desc:'Latin consonants', chars:'(h|k|kʰ|ɡ|ɡʰ|ŋ|t͡ʃ|s|t͡ʃʰ|d͡ʒ|d͡ʒʰ|ɲ|ʈ|ʈʰ|ɖ|ɖʰ|ɳ|t|tʰ|d|dʰ|n|p|f|pʰ|fʰ|b|bʰ|m|j|z|r|ɽ|l|w|s|ʃ|lʰ|v)' },
-{ symbol:'ⓧ', desc:'Virama', chars:'(\u11133)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'[𑄛𑄝𑄖𑄘𑄑𑄓𑄇𑄉𑄜𑄞𑄗𑄙𑄒𑄔𑄈𑄊𑄌𑄍𑄎𑄏𑅇𑄥𑄦𑄟𑄚𑄕𑄐𑄋𑄤𑄢𑄣𑅄𑄡𑄠]' },
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'[𑄨𑄪𑄩𑄫𑄬𑄮𑅆𑄰𑄧𑅅𑄭𑄯]' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'[𑄄𑄅𑄆𑄃]' },
+{ symbol:'Ⓕ', desc:'Finals', chars:'[𑄀𑄁𑄂]' },
+{ symbol:'🅲', desc:'Latin consonants', chars:'[hkkʰɡɡʰŋt͡ʃst͡ʃʰd͡ʒd͡ʒʰɲʈʈʰɖɖʰɳttʰddʰnpfpʰfʰbbʰmjzrɽlwsʃlʰv]' },
+{ symbol:'ⓧ', desc:'Virama', chars:'[\u11133]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D]' },
 ]

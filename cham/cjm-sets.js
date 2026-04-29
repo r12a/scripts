@@ -9,13 +9,13 @@
 // 🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉
 
 var collections = [
-{ symbol:'Ⓒ', desc:'Consonants', chars:'(ꨆ|ꨇ|ꨈ|ꨉ|ꨊ|ꨋ|ꨌ|ꨍ|ꨎ|ꨏ|ꨐ|ꨑ|ꨒ|ꨓ|ꨔ|ꨕ|ꨖ|ꨗ|ꨘ|ꨙ|ꨚ|ꨛ|ꨜ|ꨝ|ꨞ|ꨟ|ꨠ|ꨡ|ꨢ|ꨣ|ꨤ|ꨥ|ꨦ|ꨧ|ꨨ)' },
-{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(ꨪ|ꨲ|ꨭ|ꨫ|ꨲꨩ|ꨭꨩ|ꨬ|ꨯ|ꨯꨩ|ꨮ|ꨱ|ꨯꨮ|ꨯꨮꨩ|ɔꨯꨱ|ꨩ|ꨰ|ꨮꨭ)' },
-{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(ꨀ|ꨁ|ꨂ|ꨃ|ꨄ|ꨅ)' },
-{ symbol:'Ⓕ', desc:'Finals', chars:'(ꩀ|ꩁ|ꩂ|ꩃ|ꩄ|ꩅ|ꩆ|ꩇ|ꩈ|ꩉ|ꩊ|ꩋ|ꩌ|ꩍ)' },
-{ symbol:'Ⓜ', desc:'Medials', chars:'(ꨳ|ꨴ|ꨵ|ꨶ)' },
-{ symbol:'Ⓝ', desc:'Nasals with ɨ', chars:'(ꨟ|ꨗ|ꨐ|ꨊ)' },
-{ symbol:'ⓝ', desc:'Nasals with a', chars:'(ꨠ|ꨘ|ꨑ|ꨋ)' },
+{ symbol:'Ⓒ', desc:'Consonants', chars:'[ꨆꨇꨈꨉꨊꨋꨌꨍꨎꨏꨐꨑꨒꨓꨔꨕꨖꨗꨘꨙꨚꨛꨜꨝꨞꨟꨠꨡꨢꨣꨤꨥꨦꨧꨨ]' },
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'[ꨪꨲꨭꨫꨲꨩꨭꨩꨬꨯꨯꨩꨮꨱꨯꨮꨯꨮꨩɔꨯꨱꨩꨰꨮꨭ]' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'[ꨀꨁꨂꨃꨄꨅ]' },
+{ symbol:'Ⓕ', desc:'Finals', chars:'[ꩀꩁꩂꩃꩄꩅꩆꩇꩈꩉꩊꩋꩌꩍ]' },
+{ symbol:'Ⓜ', desc:'Medials', chars:'[ꨳꨴꨵꨶ]' },
+{ symbol:'Ⓝ', desc:'Nasals with ɨ', chars:'[ꨟꨗꨐꨊ]' },
+{ symbol:'ⓝ', desc:'Nasals with a', chars:'[ꨠꨘꨑꨋ]' },
 
-{ symbol:'🆅', desc:'Latin vowels', chars:'(a|e|i|o|u|ɔ|ə|ɛ|ɨ|ɯ)' },
+{ symbol:'🆅', desc:'Latin vowels', chars:'[aeiouɔəɛɨɯ]' },
 ]
