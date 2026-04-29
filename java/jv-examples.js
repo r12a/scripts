@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -27,28 +27,28 @@ autoExpandExamples.jv = `
 @ https://en.wiktionary.org/wiki/Category:Javanese_terms_with_IPA_pronunciation
 
 
-ꦄꦂꦒ|Arga|ar.§ɡɔ|Arga|Arga|given name
-ꦄꦂꦗꦸꦤ|Arjuna|ar.§d͡ʒu.§nɔ|Arjuna|Arjuna|male name
-ꦄꦂꦪ|Arya|ar.§jɔ|Arya|Arya|name
-ꦄꦪꦸ|Ayu|ˈa§ju|ayu||personal name
+ꦄꦂꦒ|Arga|ar.,ɡɔ|Arga|Arga|given name
+ꦄꦂꦗꦸꦤ|Arjuna|ar.,d͡ʒu.,nɔ|Arjuna|Arjuna|male name
+ꦄꦂꦪ|Arya|ar.,jɔ|Arya|Arya|name
+ꦄꦪꦸ|Ayu|ˈa,ju|ayu||personal name
 ꦄꦫꦶꦱ꧀ꦠꦺꦴꦠꦼꦭꦼꦱ꧀|Aristotle|
 ꦄꦭ꧀ꦭꦃ|Allah||allah
 ꦆꦤ꧀ꦠꦼꦫꦏ꧀ꦱꦶ|interaction||interaksi
-ꦆꦤ꧀ꦢꦿ|Indra|i§n.§drɔ|Indra|Indra|Hindu god
-ꦉꦏ꧀ꦱ|to guard, watch over|rə§k.§sɔ|reksa|reksa
-ꦉꦕ|statue|rə.§t͡ʃɔ|reca|reca
-ꦉꦗ||␣|
-ꦉꦚ꧀ꦕꦁ|wide|rə§ɲ.§t͡ʃaŋ|rencang|rencang
+ꦆꦤ꧀ꦢꦿ|Indra|i,n.,drɔ|Indra|Indra|Hindu god
+ꦉꦏ꧀ꦱ|to guard, watch over|rə,k.,sɔ|reksa|reksa
+ꦉꦕ|statue|rə.,t͡ʃɔ|reca|reca
+ꦉꦗ|flourishing, prosperous|rə.,d͡ʒa|reja||/../
+ꦉꦚ꧀ꦕꦁ|wide|rə,ɲ.,t͡ʃaŋ|rencang|rencang
 ꦉꦠꦶ||␣|
 ꦉꦠ꧀ꦤ||␣|
 ꦉꦢꦶ||␣|
 ꦉꦩꦸꦏ꧀ꦗꦸꦁ||
 ꦉꦩꦸꦗꦸꦁ||
-ꦉꦱꦶ|hermit|rə.§si|resi
+ꦉꦱꦶ|hermit|rə.,si|resi
 ꦉꦱꦶꦏ꧀||␣|
 ꦉꦱ꧀ꦩꦶ||␣|
-ꦊꦁꦏꦫ|impossible, improbable|ləŋ.§ka.§ra|lengkara|lengkara
-ꦊꦉꦱ꧀||␣|
+ꦊꦁꦏꦫ|impossible, improbable|ləŋ.,ka.,ra|lengkara|lengkara
+ꦊꦉꦱ꧀|appropriate, correct|lə.,rə,s|||/../
 ꦊꦒꦮ||␣|
 ꦊꦒꦶ||␣|
 ꦊꦔ||␣|
@@ -59,36 +59,36 @@ autoExpandExamples.jv = `
 ꦊꦩꦤ꧀ꦠꦸꦤ꧀||␣|
 ꦊꦩꦫꦶ||␣|
 ꦊꦩꦸ||␣|
-ꦊꦩꦼꦱ꧀|pliant, supple|lə.§mə§s|lemes|lemes
+ꦊꦩꦼꦱ꧀|pliant, supple|lə.,mə,s|lemes|lemes
 ꦊꦩ꧀ꦥꦸꦁ||␣|
 ꦊꦩ꧀ꦧꦸ||␣
 ꦊꦭꦸꦲꦸꦂ||
-ꦊꦱ꧀ꦠꦫꦶ|eternal|lə§s.§ta.§ri|lestari
+ꦊꦱ꧀ꦠꦫꦶ|eternal|lə,s.,ta.,ri|lestari
 ꦏꦁꦩꦱ꧀||
 ꦏꦂꦠꦶ||␣|
 ꦏꦂꦤ||␣|
 ꦏꦂꦪ||␣|
 ꦏꦂꦱ||␣|
 ꦏꦊꦩ꧀||␣|
-ꦏꦏ||␣|
+ꦏꦏ|older brother; crow, raven|kɔ.kɔ|kaka||/../
 ꦏꦏꦁ||
 ꦏꦏꦏ꧀||
-ꦏꦏꦮꦶꦤ꧀||␣|
+ꦏꦏꦮꦶꦤ꧀|poem|ka.,ka.,wɪ,n|kakawin||/../
 ꦏꦏꦶꦄꦩꦺꦴꦁ|godfather||kaki among
 ꦏꦏꦸꦱ꧀||␣|
-ꦏꦔꦼꦤ꧀|desirous|ˈka.§ŋə§n|kangen|kangen
+ꦏꦔꦼꦤ꧀|desirous|ˈka.,ŋə,n|kangen|kangen
 ꦏꦕ|glass|␣|kaca
-ꦏꦕꦏ꧀|to speak|kaː§t͡ʃaː§ʔ|kacak|kacak||kacak
-ꦏꦕꦥꦸꦫꦶ||␣|
+ꦏꦕꦏ꧀|to speak|kaː,t͡ʃaː,ʔ|kacak|kacak||kacak
+ꦏꦕꦥꦸꦫꦶ|brick wall|ka.,t͡ʃa.,pu.,ri|kacapuri||/../
 ꦏꦕꦸꦁ||␣|
 ꦏꦕꦼꦥꦼꦠꦤ꧀||
 ꦏꦚ꧀ꦕ||␣
-ꦏꦚ꧀ꦕꦶꦁ|lock|ka§n.§t͡ʃɪŋ|kancing
+ꦏꦚ꧀ꦕꦶꦁ|lock|ka,n.,t͡ʃɪŋ|kancing
 ꦏꦛꦶꦭ꧀||␣|
 ꦏꦝꦸꦁ||␣|
 ꦏꦝꦺꦴ||␣|
 ꦏꦠꦶ||␣|
-ꦏꦠꦶꦩ꧀ꦧꦁ||␣|
+ꦏꦠꦶꦩ꧀ꦧꦁ|than|ka.,tɪ,m.,baŋ|katimbang||/../
 ꦏꦠꦸꦭ꧀||␣|
 ꦏꦠꦺꦭ||␣|
 ꦏꦠꦺꦱ꧀||␣|
@@ -96,15 +96,15 @@ autoExpandExamples.jv = `
 ꦏꦠꦿꦺꦴ||
 ꦏꦢꦶꦥꦠꦺꦤ꧀||␣|
 ꦏꦤꦱ꧀|pineapple||kanas
-ꦏꦤ꧀ꦛꦶ|by|ka§n§ʈi
+ꦏꦤ꧀ꦛꦶ|by|ka,n,ʈi
 ꦏꦤ꧀ꦛꦶꦭ꧀||␣|
 ꦏꦤ꧀ꦝꦁ||␣|
 ꦏꦤ꧀ꦝꦠ꧀||␣|
 ꦏꦤ꧀ꦝꦶꦭ꧀||␣|
 ꦏꦤ꧀ꦠꦺꦴꦂ|office||kantor
-ꦏꦥꦏ꧀|axe without handle|ˈka.§pa§k|kapak
+ꦏꦥꦏ꧀|axe without handle|ˈka.,pa,k|kapak
 ꦏꦥꦤꦺꦮꦺꦴꦤ꧀||␣|
-ꦏꦥꦭ꧀|large ship|ka.§pa§l|kapal
+ꦏꦥꦭ꧀|large ship|ka.,pa,l|kapal
 ꦏꦥꦿꦗꦸꦫꦶꦠꦤ꧀||␣|
 ꦏꦧꦂ||␣|
 ꦏꦧꦪꦤ꧀||␣|
@@ -121,7 +121,7 @@ autoExpandExamples.jv = `
 ꦏꦫꦏ꧀||␣|
 ꦏꦫꦗꦤ꧀||␣|
 ꦏꦫꦠꦺꦴꦤ꧀||␣|
-ꦏꦫꦤ|reason, cause (lit.)|kɔ.§ˈrɔ.§nɔ|karana
+ꦏꦫꦤ|reason, cause (lit.)|kɔ.,ˈrɔ.,nɔ|karana
 ꦏꦫꦸꦤ||␣|
 ꦏꦫꦺꦠ||␣|
 ꦏꦫꦺꦴ||␣|
@@ -133,7 +133,7 @@ autoExpandExamples.jv = `
 ꦏꦭꦸꦫꦲꦤ꧀||␣|
 ꦏꦭꦺꦤ꧀||␣|
 ꦏꦭꦺꦴꦁ||
-ꦏꦮꦕ|clean, clear|ka.§wɔ.§t͡ʃɔ|kawaca
+ꦏꦮꦕ|clean, clear|ka.,wɔ.,t͡ʃɔ|kawaca
 ꦏꦮꦤ꧀||␣|
 ꦏꦮꦱ|powerful||kawasa
 ꦏꦮꦸꦁ||
@@ -143,22 +143,22 @@ autoExpandExamples.jv = `
 ꦏꦱ꧀||␣|
 ꦏꦱ꧀ꦠꦮ||␣|
 ꦏꦱ꧀ꦠꦸꦫꦶ||␣|
-ꦏꦲꦶꦤ꧀|cloth|ˈkaː§iː§n|kain|kain||kain
+ꦏꦲꦶꦤ꧀|cloth|ˈkaː,iː,n|kain|kain||kain
 ꦏꦲꦸꦫꦶꦥꦤ꧀||␣|
 ꦏꦶꦛ||␣|
 ꦏꦶꦠ||␣|
 ꦏꦶꦢꦁ||␣|
 ꦏꦶꦢꦸꦁ||␣|
 ꦏꦶꦩꦶꦲ|chemistry||kimia
-ꦏꦶꦫꦶꦏ꧀|puppy|ki.§rɪ§ʔ|kirik
+ꦏꦶꦫꦶꦏ꧀|puppy|ki.,rɪ,ʔ|kirik
 ꦏꦶꦮ|left||kiwa
-ꦏꦶꦱ꧀ꦩ|land|kɪ§s.§mɔ|kisma
+ꦏꦶꦱ꧀ꦩ|land|kɪ,s.,mɔ|kisma
 ꦏꦸ||
 ꦏꦸꦏꦸꦂ||␣|
 ꦏꦸꦏꦸꦃ||
 ꦏꦸꦕꦶꦁ||
 ꦏꦸꦕꦸꦂ||␣|
-ꦏꦸꦛ|town|ku.§ʈa|
+ꦏꦸꦛ|town|ku.,ʈa|
 ꦏꦸꦢꦸ||␣|
 ꦏꦸꦤ||␣|
 ꦏꦸꦤ꧀ꦝ||␣|
@@ -171,7 +171,7 @@ autoExpandExamples.jv = `
 ꦏꦸꦩ꧀ꦧꦃ||␣|
 ꦏꦸꦫꦸꦁ||␣|
 ꦏꦸꦭ||␣|
-ꦏꦸꦭꦮꦂꦒ||␣
+ꦏꦸꦭꦮꦂꦒ|family|ku.,lɔ.,war.,ɡɔ|kulawarga||/../
 ꦏꦸꦭꦮꦫ꧀ꦒ||
 ꦏꦸꦮꦠ꧀||
 ꦏꦸꦮꦱ||
@@ -191,9 +191,9 @@ autoExpandExamples.jv = `
 ꦏꦺꦴꦫꦶꦥꦤ꧀||␣|
 ꦏꦺꦴꦮꦺ||␣|
 ꦏꦼꦂꦗ||␣|
-ꦏꦼꦂꦠ|peaceful|ker.§tɔ|kerta
+ꦏꦼꦂꦠ|peaceful|ker.,tɔ|kerta
 ꦏꦼꦂꦠꦱ꧀||␣|
-ꦏꦼꦂꦠꦶ|safe, orderly|kər.§ti|kerti
+ꦏꦼꦂꦠꦶ|safe, orderly|kər.,ti|kerti
 ꦏꦼꦂꦱ||␣|
 ꦏꦼꦗꦸ||␣|
 ꦏꦼꦚ꧀ꦕꦁ||␣|
@@ -212,7 +212,7 @@ autoExpandExamples.jv = `
 ꦏꦼꦤ꧀ꦝꦸꦫꦶ||␣|
 ꦏꦼꦥꦭ||␣|
 ꦏꦼꦥꦸꦠꦿꦺꦤ꧀||␣|
-ꦏꦼꦧꦏ꧀|full|kə.§ba§k|kebak
+ꦏꦼꦧꦏ꧀|full|kə.,ba,k|kebak
 ꦏꦼꦧꦪꦏ꧀||␣|
 ꦏꦼꦧꦺꦴ||
 ꦏꦼꦧꦿꦤꦁ||
@@ -227,10 +227,10 @@ autoExpandExamples.jv = `
 ꦏꦽꦠꦼꦒ꧀||␣|
 ꦏꦽꦱ꧀ꦤ||␣|
 ꦏꦿꦗꦤ꧀||␣|
-ꦏꦿꦠꦺꦴꦤ꧀|royal palace|ˈkra§tɔ§n|kraton|kraton
+ꦏꦿꦠꦺꦴꦤ꧀|royal palace|ˈkra,tɔ,n|kraton|kraton
 ꦏꦿꦤ||␣|
-ꦏꦿꦥꦾꦏ꧀|clatter, rattle|kra.§pjak|krapyak
-ꦏꦿꦩ|behaviour, politeness|krɔ§mɔ|krama|krama
+ꦏꦿꦥꦾꦏ꧀|clatter, rattle|kra.,pjak|krapyak
+ꦏꦿꦩ|behaviour, politeness|krɔ,mɔ|krama|krama
 ꦏꦿꦩꦱ꧀||
 ꦏꦿꦩꦲꦤ꧀ꦝꦥ꧀||␣|
 ꦏꦿꦮꦸ||␣|
@@ -240,10 +240,10 @@ autoExpandExamples.jv = `
 ꦏꦿꦺꦕꦺꦏ꧀||␣|
 ꦏꦿꦺꦠ||␣|
 ꦏꦿꦺꦠꦺꦏ꧀||␣|
-ꦏꦿꦺꦱ꧀ꦤ|child born with smooth black skin|ˈkrə§s§nɔ|Kresna|Kresna||Kresna
-ꦏꦿꦺꦴꦠꦺꦴ|ant egg|ˈkro.§to|kroto
+ꦏꦿꦺꦱ꧀ꦤ|child born with smooth black skin|ˈkrə,s,nɔ|Kresna|Kresna||Kresna
+ꦏꦿꦺꦴꦠꦺꦴ|ant egg|ˈkro.,to|kroto
 ꦏ꧀ꦫꦩ|politeness|krɔmɔ
-ꦏ꧀ꦭꦩ꧀ꦧꦶ|shirt|k§la§m§bi|klambi
+ꦏ꧀ꦭꦩ꧀ꦧꦶ|shirt|k,la,m,bi|klambi
 ꦏ꧀ꦭꦮꦸ||␣|
 ꦏ꧀ꦭꦺꦮꦺꦂ||␣|
 ꦏ꧀ꦭꦼꦥꦺꦴꦤ꧀||␣|
@@ -251,12 +251,12 @@ autoExpandExamples.jv = `
 ꦒꦁꦱꦭ꧀||␣|
 ꦒꦂꦮ||␣|
 ꦒꦒꦁ||␣|
-ꦒꦒꦤ|atmosphere|ɡa.§ɡɔ.§nɔ|gagana
+ꦒꦒꦤ|atmosphere|ɡa.,ɡɔ.,nɔ|gagana
 ꦒꦒꦱ꧀||␣|
 ꦒꦗꦃ|elephant|␣|gaja
 ꦒꦗꦶꦃ||␣|
 ꦒꦚꦁ||␣|
-ꦒꦚ꧀ꦗ|marijuana|ɡan.§d͡ʒɔ|ganja
+ꦒꦚ꧀ꦗ|marijuana|ɡan.,d͡ʒɔ|ganja
 ꦒꦤ||␣|
 ꦒꦤ꧀ꦝꦺꦏ꧀||␣|
 ꦒꦤ꧀ꦠꦶ||␣|
@@ -280,7 +280,7 @@ autoExpandExamples.jv = `
 ꦒꦺꦒꦺꦂ||␣|
 ꦒꦺꦥꦺꦁ||␣|
 ꦒꦺꦴꦫ||␣|
-ꦒꦺꦴꦫꦺꦁ|to fry|ˈɡo.§reŋ|gorèng|gorèng||gorèng
+ꦒꦺꦴꦫꦺꦁ|to fry|ˈɡo.,reŋ|gorèng|gorèng||gorèng
 ꦒꦼꦊꦩ꧀||␣|
 ꦒꦼꦒꦤ||␣|
 ꦒꦼꦒꦼꦂ||␣|
@@ -288,7 +288,7 @@ autoExpandExamples.jv = `
 ꦒꦼꦠꦶꦃ||␣
 ꦒꦼꦢꦁ||
 ꦒꦼꦣꦺ|big|
-ꦒꦼꦣꦺꦴꦁ|building|ɡə§ɖɔŋ|gedhong
+ꦒꦼꦣꦺꦴꦁ|building|ɡə,ɖɔŋ|gedhong
 ꦒꦼꦤꦶ||
 ꦒꦼꦤ꧀ꦝꦶꦱ꧀||␣|
 ꦒꦼꦫꦃ||␣|
@@ -300,7 +300,7 @@ autoExpandExamples.jv = `
 ꦒꦼꦭꦸꦠ꧀||␣|
 ꦒꦽꦲ||␣|
 ꦒꦿꦶꦪ||␣|
-ꦒꦿꦺꦗ|church|gre§d͡ʒa|gréja
+ꦒꦿꦺꦗ|church|gre,d͡ʒa|gréja
 ꦒꦿꦺꦤ꧀ꦝꦺꦭ꧀||␣|
 ꦒꦿꦺꦴꦗꦺꦴꦒꦤ꧀||
 ꦒ꧀ꦭꦝꦒ꧀||␣|
@@ -311,10 +311,10 @@ autoExpandExamples.jv = `
 ꦔꦥꦏ꧀||␣|
 ꦔꦥꦸꦫ||␣|
 ꦔꦧꦺꦲꦶ||␣|
-ꦔꦪꦺꦴꦒꦾꦏꦂꦠ|Yogyakarta|ŋa.§jo.§ɡjɔ.§kar.§tɔ|Ngayogyakarta
+ꦔꦪꦺꦴꦒꦾꦏꦂꦠ|Yogyakarta|ŋa.,jo.,ɡjɔ.,kar.,tɔ|Ngayogyakarta
 ꦔꦺꦤꦺ||␣|
 ꦔꦺꦭꦶꦁꦔꦶ|to consider||ngélingi
-ꦔꦺꦴꦏꦺꦴ|neutral register|ŋɔ§kɔ|ngoko
+ꦔꦺꦴꦏꦺꦴ|neutral register|ŋɔ,kɔ|ngoko
 ꦔꦽꦱ꧀ꦩꦺꦏꦏꦺ||␣|
 ꦕꦃꦪ||␣|
 ꦕꦏꦼꦥ꧀||␣|
@@ -354,12 +354,12 @@ autoExpandExamples.jv = `
 ꦕꦼꦏꦥ꧀||␣|
 ꦕꦼꦏꦼꦭ꧀||␣|
 ꦕꦼꦛ||␣|
-ꦕꦼꦝꦏ꧀|near|t͡ʃə.§ɖa§k|cedhak
+ꦕꦼꦝꦏ꧀|near|t͡ʃə.,ɖa,k|cedhak
 ꦕꦼꦥꦸꦫꦶ||␣|
 ꦕꦼꦩꦤꦶ||␣|
 ꦕꦼꦩꦫ||␣|
 ꦕꦼꦩꦼꦁ|black||cemeng
-ꦕꦼꦩꦼꦔꦚ꧀|dry rice paddy|ˈt͡ʃə.§mə.§ŋa§n|cemengan
+ꦕꦼꦩꦼꦔꦚ꧀|dry rice paddy|ˈt͡ʃə.,mə.,ŋa,n|cemengan
 ꦕꦼꦩꦼꦛꦶ||␣|
 ꦕꦿꦶꦠ||␣|
 ꦗꦏ꧀ꦱ||␣|
@@ -383,7 +383,7 @@ autoExpandExamples.jv = `
 ꦗꦮ|Java|␣|jawa
 ꦗꦮꦶ||␣|
 ꦗꦲꦺ|ginger||jahe
-ꦗ꦳ꦏꦠ꧀|alms giving|za§ka§t|zakat
+ꦗ꦳ꦏꦠ꧀|alms giving|za,ka,t|zakat
 ꦗꦶꦩꦠ꧀||␣|
 ꦗꦶꦮ||␣|
 ꦗꦸꦏꦸꦠ꧀||␣|
@@ -394,7 +394,7 @@ autoExpandExamples.jv = `
 ꦗꦸꦮꦢꦃ||␣|
 ꦗꦸꦮꦮꦸꦠ꧀||
 ꦗꦺꦴꦁ||␣|
-ꦗꦺꦴꦒꦺꦠ꧀|dance|ˈdʒo§ˈɡɛ§t|jogèt|jogèt||jogèt
+ꦗꦺꦴꦒꦺꦠ꧀|dance|ˈdʒo,ˈɡɛ,t|jogèt|jogèt||jogèt
 ꦗꦺꦴꦒ꧀ꦭꦺꦴ||␣|
 ꦗꦼꦤꦺ||␣|
 ꦗꦼꦤꦼꦁ||␣|
@@ -449,7 +449,7 @@ autoExpandExamples.jv = `
 ꦠꦫ||␣|
 ꦠꦭꦶ||
 ꦠꦱꦶꦏ꧀||
-ꦠꦶꦂꦠ|holy water|tir§tɔ
+ꦠꦶꦂꦠ|holy water|tir,tɔ
 ꦠꦶꦊꦩ꧀||␣
 ꦠꦶꦒ||␣|
 ꦠꦶꦠꦃ||␣|
@@ -465,7 +465,7 @@ autoExpandExamples.jv = `
 ꦠꦶꦪꦁ||␣|
 ꦠꦶꦮꦱ꧀||␣|
 ꦠꦶꦮꦶꦏꦿꦩ||␣|
-ꦠꦸꦁꦏꦱ꧀|message, instruction|tʊŋ§ka§s|tungkas|tungkas||tungkas
+ꦠꦸꦁꦏꦱ꧀|message, instruction|tʊŋ,ka,s|tungkas|tungkas||tungkas
 ꦠꦸꦏꦁ||␣|
 ꦠꦸꦒꦸ||␣|
 ꦠꦸꦒꦸꦂ||␣|
@@ -473,7 +473,7 @@ autoExpandExamples.jv = `
 ꦠꦸꦠꦸꦂ||␣|
 ꦠꦸꦠꦸꦥ꧀||␣|
 ꦠꦸꦤꦁ||␣|
-ꦠꦸꦤ꧀|desire|tʊ§n|tun|tun||tun
+ꦠꦸꦤ꧀|desire|tʊ,n|tun|tun||tun
 ꦠꦸꦤ꧀ꦝ||␣|
 ꦠꦸꦤ꧀ꦠꦱ꧀||␣|
 ꦠꦸꦤ꧀ꦠꦸꦤ꧀||␣|
@@ -504,7 +504,7 @@ autoExpandExamples.jv = `
 ꦠꦼꦩ꧀ꦧꦪ||␣|
 ꦠꦼꦩ꧀ꦧꦸꦁ||␣|
 ꦠꦼꦫꦁ||␣|
-ꦠꦼꦭꦠꦃ|area|ˈtə§laː§taːʰ|telatah|telatah||telatah
+ꦠꦼꦭꦠꦃ|area|ˈtə,laː,taːʰ|telatah|telatah||telatah
 ꦠꦼꦭꦸ||␣|
 ꦠꦽꦱ꧀ꦤ||
 ꦠꦿꦗꦸ||␣|
@@ -535,13 +535,13 @@ autoExpandExamples.jv = `
 ꦢꦶꦤ꧀ꦠꦼꦤ꧀||␣
 ꦢꦶꦥ||␣|
 ꦢꦶꦭꦠ꧀||␣|
-ꦢꦸꦂꦗꦤ|thief|dur.§d͡ʒɔ.§nɔ|durjana
+ꦢꦸꦂꦗꦤ|thief|dur.,d͡ʒɔ.,nɔ|durjana
 ꦢꦸꦏ||␣|
 ꦢꦸꦥ|incense||dupa
 ꦢꦸꦫꦸꦔꦤ꧀||
 ꦢꦸꦫꦺꦤ꧀||
 ꦢꦸꦮꦺ||␣|
-ꦢꦸꦱꦸꦤ꧀|village, countryside|dʊ.§sʊ§n|dusun|dusun||dusun
+ꦢꦸꦱꦸꦤ꧀|village, countryside|dʊ.,sʊ,n|dusun|dusun||dusun
 ꦢꦸꦱ꧀||␣|
 ꦢꦺꦤ꧀ꦠ||␣|
 ꦢꦺꦱ||␣|
@@ -555,9 +555,9 @@ autoExpandExamples.jv = `
 ꦢ꧀ꦭꦶꦩ||␣|
 ꦢ꧀ꦭꦸꦮꦁ||␣|
 ꦣꦸꦮꦶꦠ꧀|money||dhuwit
-ꦤꦂꦥ|king, monarch|nar§pɔ|narpa
+ꦤꦂꦥ|king, monarch|nar,pɔ|narpa
 ꦤꦒ||␣|
-ꦤꦒꦫ|capital city|na.§ɡɔ.§rɔ|nagara
+ꦤꦒꦫ|capital city|na.,ɡɔ.,rɔ|nagara
 ꦤꦒꦫꦶ-​ꦧꦁꦱ||
 ꦤꦤꦃ||␣|
 ꦤꦧꦶ||␣|
@@ -566,7 +566,7 @@ autoExpandExamples.jv = `
 ꦤꦭꦶꦏ||␣|
 ꦤꦱ꧀ꦠꦥ||␣|
 ꦤꦶꦠꦶ||␣|
-ꦤꦶꦠꦾ|always|ni.§tjɔ|nitya
+ꦤꦶꦠꦾ|always|ni.,tjɔ|nitya
 ꦤꦶꦪꦠ꧀||␣|
 ꦤꦸꦱꦤ꧀ꦠꦫ||
 ꦤꦺꦴꦩ꧀||␣|
@@ -578,7 +578,7 @@ autoExpandExamples.jv = `
 ꦥꦁꦫꦺꦃ||␣|
 ꦥꦁꦫꦺꦃꦥꦿꦗ||␣|
 ꦥꦏꦸ||␣|
-ꦥꦏꦼꦂꦠꦶ|nature, character|pa.§kər.§ti|pakerti
+ꦥꦏꦼꦂꦠꦶ|nature, character|pa.,kər.,ti|pakerti
 ꦥꦒꦼꦂ||␣|
 ꦥꦒꦼꦂꦱꦫꦶ||␣|
 ꦥꦒꦼꦭꦫꦤ꧀||␣|
@@ -615,14 +615,14 @@ autoExpandExamples.jv = `
 ꦥꦤ꧀ꦠꦸꦤ꧀||␣|
 ꦥꦤ꧀ꦠꦼꦱ꧀||␣|
 ꦥꦥꦠ꧀||
-ꦥꦩꦭꦶ|taboo|pa.§ma.§li|pamali
+ꦥꦩꦭꦶ|taboo|pa.,ma.,li|pamali
 ꦥꦩꦺꦂ||␣|
 ꦥꦩꦺꦴꦁ||␣|
 ꦥꦩꦺꦴꦂ||␣|
 ꦥꦫ||␣|
 ꦥꦫꦁ||␣|
-ꦥꦫꦩ|finest|pa.§rɔ.§mɔ|parama
-ꦥꦫꦩꦱꦱ꧀ꦠꦿ|grammar|pa.§rɔ.§mɔ.§sa§s.§trɔ|paramasastra
+ꦥꦫꦩ|finest|pa.,rɔ.,mɔ|parama
+ꦥꦫꦩꦱꦱ꧀ꦠꦿ|grammar|pa.,rɔ.,mɔ.,sa,s.,trɔ|paramasastra
 ꦥꦫꦱ꧀||␣|
 ꦥꦫꦶꦏ꧀ꦱ||␣|
 ꦥꦫꦶꦮꦫ||␣|
@@ -641,7 +641,7 @@ autoExpandExamples.jv = `
 ꦥꦱꦺꦴꦏꦤ꧀||␣|
 ꦥꦱ꧀ꦛꦶ||␣|
 ꦥꦱ꧀ꦠꦸꦂ||␣|
-ꦥ꦳ꦗꦂ|dawn|fa.§d͡ʒar|fajar
+ꦥ꦳ꦗꦂ|dawn|fa.,d͡ʒar|fajar
 ꦥꦶꦁꦒꦤ꧀||
 ꦥꦶꦂꦱ||␣|
 ꦥꦶꦠ||␣|
@@ -666,7 +666,7 @@ autoExpandExamples.jv = `
 ꦥꦸꦭꦶ||␣|
 ꦥꦸꦭꦸꦃ||␣|
 ꦥꦸꦭꦸꦠ꧀||␣|
-ꦥꦸꦭꦺꦴ|island|pu§lo
+ꦥꦸꦭꦺꦴ|island|pu,lo
 ꦥꦸꦱꦏ||␣|
 ꦥꦸꦱ꧀ꦠꦏ||␣|
 ꦥꦸꦲꦸꦤ꧀||␣|
@@ -689,12 +689,12 @@ autoExpandExamples.jv = `
 ꦥꦼꦛꦶ||␣|
 ꦥꦼꦝꦁ||␣|
 ꦥꦼꦠꦶꦱ꧀||␣|
-ꦥꦼꦠꦼꦁ|dark|pə§təŋ|peteng
+ꦥꦼꦠꦼꦁ|dark|pə,təŋ|peteng
 ꦥꦼꦠ꧀||␣|
 ꦥꦼꦢꦸꦤꦸꦁ||
-ꦥꦼꦤ꧀ꦛꦶꦭ꧀|nipple|pə§n§ʈe§l|penthil|penthil||penthil
+ꦥꦼꦤ꧀ꦛꦶꦭ꧀|nipple|pə,n,ʈe,l|penthil|penthil||penthil
 ꦥꦼꦤ꧀ꦝꦼꦩ꧀||␣|
-ꦥꦼꦤ꧀ꦠꦶꦭ꧀|fruit bud|pə§n§t̪e§l|pentil|pentil||pentil
+ꦥꦼꦤ꧀ꦠꦶꦭ꧀|fruit bud|pə,n,t̪e,l|pentil|pentil||pentil
 ꦥꦼꦤ꧀ꦣꦶꦣꦶꦏꦤ꧀|education, schooling|
 ꦥꦼꦥꦼꦠ꧀||␣|
 ꦥꦼꦫꦢꦔꦤ꧀||
@@ -727,7 +727,7 @@ autoExpandExamples.jv = `
 ꦧꦁ||␣|
 ꦧꦁꦱ||␣
 ꦧꦁꦱꦭ꧀||␣|
-ꦧꦉꦁ|together|ˈba§rəŋ|bareng
+ꦧꦉꦁ|together|ˈba,rəŋ|bareng
 ꦧꦏ||␣|
 ꦧꦏꦶ||␣|
 ꦧꦏꦸ||␣
@@ -736,7 +736,7 @@ autoExpandExamples.jv = `
 ꦧꦒꦸꦱ꧀||␣|
 ꦧꦒꦺꦴꦁ||␣|
 ꦧꦒꦺꦴꦔꦤ꧀||␣|
-ꦧꦒꦾ|happiness|ba§ɡjɔ|bagya
+ꦧꦒꦾ|happiness|ba,ɡjɔ|bagya
 ꦧꦕꦼꦩ꧀||␣|
 ꦧꦗꦁ||␣|
 ꦧꦗꦒ꧀||␣|
@@ -747,7 +747,7 @@ autoExpandExamples.jv = `
 ꦧꦚ꧀ꦕꦶ||␣|
 ꦧꦛꦁ||␣
 ꦧꦛꦶ||␣|
-ꦧꦛꦶꦏ꧀|batik clothing|ˈba.§ʈɪ§ʔ|bathik
+ꦧꦛꦶꦏ꧀|batik clothing|ˈba.,ʈɪ,ʔ|bathik
 ꦧꦠ||␣|
 ꦧꦠꦸ||␣|
 ꦧꦤꦱ꧀ꦥꦠꦶ||␣|
@@ -756,7 +756,7 @@ autoExpandExamples.jv = `
 ꦧꦤ꧀ꦢ||␣|
 ꦧꦤ꧀ꦢꦂ||␣|
 ꦧꦤ꧀ꦢꦼꦁ||
-ꦧꦤ꧀ꦣ|wealth (alt)|b̥ɔ§ɳ§ɖ̥ɔ|banḍa
+ꦧꦤ꧀ꦣ|wealth (alt)|b̥ɔ,ɳ,ɖ̥ɔ|banḍa
 ꦧꦥꦏ꧀||
 ꦧꦥꦏ꧀ꦏꦸꦮꦭꦺꦴꦤ꧀||
 ꦧꦧꦂ||␣|
@@ -777,7 +777,7 @@ autoExpandExamples.jv = `
 ꦧꦱꦸꦏꦶ||␣|
 ꦧꦲꦸ||␣|
 ꦧꦲꦸꦮꦂꦤ||␣|
-ꦧꦲꦸꦱꦱ꧀ꦠꦿ|dictionary|ba§u§sa§s§tra|bausastra
+ꦧꦲꦸꦱꦱ꧀ꦠꦿ|dictionary|ba,u,sa,s,tra|bausastra
 ꦧꦶꦁꦧꦶꦁ||
 ꦧꦶꦏꦏ꧀||
 ꦧꦶꦕꦫ||
@@ -843,8 +843,8 @@ autoExpandExamples.jv = `
 ꦧꦿꦸꦒ꧀||␣|
 ꦧꦿꦺꦮꦸ||␣|
 ꦧ꧀ꦊꦏꦺꦴꦏ꧀||
-ꦧ꧀ꦊꦢꦸꦒ꧀|dust|b§lə§d̪u§ɡ|bledug
-ꦧ꧀ꦊꦣꦸꦒ꧀|mud|b§lə§ɖu§ɡ|bledhug
+ꦧ꧀ꦊꦢꦸꦒ꧀|dust|b,lə,d̪u,ɡ|bledug
+ꦧ꧀ꦊꦣꦸꦒ꧀|mud|b,lə,ɖu,ɡ|bledhug
 ꦧ꧀ꦭꦸꦱꦸꦏ꧀||␣|
 ꦨꦶꦩ|Bima (name)||Bima
 ꦩꦁꦒ||␣|
@@ -876,7 +876,7 @@ autoExpandExamples.jv = `
 ꦩꦤ꧀ꦢꦭ||␣|
 ꦩꦤ꧀ꦢꦿ||␣|
 ꦩꦥꦒ꧀||
-ꦩꦧꦸꦫꦸ|hunting|ᵐ§bu§ru
+ꦩꦧꦸꦫꦸ|hunting|ᵐ,bu,ru
 ꦩꦩ꧀ꦥꦸ||␣|
 ꦩꦪꦁ||
 ꦩꦫ||␣|
@@ -894,7 +894,7 @@ autoExpandExamples.jv = `
 ꦩꦭꦶꦒꦺ||␣|
 ꦩꦮꦱ꧀||␣|
 ꦩꦱꦾꦫꦏꦠ꧀||
-ꦩꦲꦺꦴꦱ꧀|to read (polite)|ma§o§s|maos
+ꦩꦲꦺꦴꦱ꧀|to read (polite)|ma,o,s|maos
 ꦩꦶꦠꦿ||
 ꦩꦶꦤ꧀ꦠ||␣|
 ꦩꦸꦁ||␣|
@@ -927,7 +927,7 @@ autoExpandExamples.jv = `
 ꦪꦸꦱ꧀ꦠꦶꦱꦶ||␣|
 ꦪꦸꦱ꧀ꦮ||␣|
 ꦪꦺꦴꦒ||␣|
-ꦪꦺꦴꦒꦾ|fit, proper|jo.§ɡja|yogya
+ꦪꦺꦴꦒꦾ|fit, proper|jo.,ɡja|yogya
 ꦪꦺꦴꦩ꧀||␣|
 ꦪꦼꦏ꧀ꦠꦶ||␣|
 ꦪꦼꦏ꧀ꦱ||␣|
@@ -966,7 +966,7 @@ autoExpandExamples.jv = `
 ꦫꦶꦥ꧀ꦠ||␣|
 ꦫꦸꦁꦏꦢ꧀||␣|
 ꦫꦸꦔꦸ||␣|
-ꦫꦸꦗꦏ꧀|traditional salad|ˈɹʊ.§ˈdʒa§ʔ|rujak|rujak||rujak
+ꦫꦸꦗꦏ꧀|traditional salad|ˈɹʊ.,ˈdʒa,ʔ|rujak|rujak||rujak
 ꦫꦸꦢꦶꦫ||␣|
 ꦫꦸꦥ||␣|
 ꦫꦸꦩ꧀ꦥꦸꦠ꧀||
@@ -985,7 +985,7 @@ autoExpandExamples.jv = `
 ꦭꦏꦸ||␣|
 ꦭꦏꦺꦴꦤ꧀||␣|
 ꦭꦏ꧀ꦱꦤ||␣|
-ꦭꦔꦶꦠ꧀|sky, heaven|ˈlɑː§ŋɪ§t̚|langit|langit||langit
+ꦭꦔꦶꦠ꧀|sky, heaven|ˈlɑː,ŋɪ,t̚|langit|langit||langit
 ꦭꦠꦂ||␣|
 ꦭꦠꦲꦤ꧀ꦚꦚꦶ|singing practice||latihan nyanyi
 ꦭꦠꦸ||
@@ -1023,7 +1023,7 @@ autoExpandExamples.jv = `
 ꦭꦸꦱ꧀||␣|
 ꦭꦸꦲꦸꦂ||␣|
 ꦭꦺꦠꦺꦂ||
-ꦭꦺꦠꦿꦺꦏ꧀|weaving cloth|lɛ§trɛ§ʔ|letrek|letrek||letrek
+ꦭꦺꦠꦿꦺꦏ꧀|weaving cloth|lɛ,trɛ,ʔ|letrek|letrek||letrek
 ꦭꦺꦴꦁꦱꦺꦴꦂ||␣|
 ꦭꦺꦴꦗꦶ||␣|
 ꦭꦺꦴꦩ꧀ꦧꦺꦴꦏ꧀||
@@ -1091,7 +1091,7 @@ autoExpandExamples.jv = `
 ꦮꦶꦕꦏ꧀ꦱꦤ||␣|
 ꦮꦶꦕꦤ꧀ꦠꦼꦤ꧀||
 ꦮꦶꦕꦫ||
-ꦮꦶꦗꦪ|victory|wi.§d͡ʒɔ.§jɔ|wi.d͡ʒɔ.jɔ|wi.d͡ʒɔ.jɔ||wi.d͡ʒɔ.jɔ
+ꦮꦶꦗꦪ|victory|wi.,d͡ʒɔ.,jɔ|wi.d͡ʒɔ.jɔ|wi.d͡ʒɔ.jɔ||wi.d͡ʒɔ.jɔ
 ꦮꦶꦠ꧀||␣|
 ꦮꦶꦢꦢ||␣|
 ꦮꦶꦢꦾ||␣|
@@ -1106,7 +1106,7 @@ autoExpandExamples.jv = `
 ꦮꦸꦤꦶ||␣|
 ꦮꦸꦫꦸꦏ꧀||␣|
 ꦮꦸꦭꦤ꧀||
-ꦮꦸꦭꦸ|hair, fur|ˈwu.§lu|wulu|wulu||wulu
+ꦮꦸꦭꦸ|hair, fur|ˈwu.,lu|wulu|wulu||wulu
 ꦮꦺ||␣|
 ꦮꦺꦢꦁ||
 ꦮꦺꦤ꧀ꦠꦼꦤ꧀||␣|
@@ -1127,7 +1127,7 @@ autoExpandExamples.jv = `
 ꦮ꧀ꦭꦶꦫꦁ|sulfur||wlirang
 ꦱꦁꦒꦂ||␣|
 ꦱꦁꦒꦩ||␣|
-ꦱꦁꦒꦸꦭ꧀|female hair bun|saŋ.§ɡʊ§l|sanggul|sanggul||sanggul
+ꦱꦁꦒꦸꦭ꧀|female hair bun|saŋ.,ɡʊ,l|sanggul|sanggul||sanggul
 ꦱꦁꦱꦫ||␣|
 ꦱꦂꦪ||␣|
 ꦱꦂꦮ||␣|
@@ -1159,7 +1159,7 @@ autoExpandExamples.jv = `
 ꦱꦩꦶ||
 ꦱꦩꦸꦢꦿ||␣|
 ꦱꦩꦺꦴꦢꦿ||␣|
-ꦱꦩ꧀ꦥꦸꦤ꧀|already|sa§m§pu§n|sampun
+ꦱꦩ꧀ꦥꦸꦤ꧀|already|sa,m,pu,n|sampun
 ꦱꦩ꧀ꦥꦺꦪꦤ꧀||␣|
 ꦱꦫ||␣|
 ꦱꦫꦁ||␣|
@@ -1229,7 +1229,7 @@ autoExpandExamples.jv = `
 ꦱꦶꦱꦾ||
 ꦱꦶꦱ꧀ꦮ|student||siswa
 ꦱꦸ-||␣|
-ꦱꦸꦁꦒꦶ|to carry (on head/shoulder)|ˈsʊŋ§ɡiː|sunggi|sunggi||sunggi
+ꦱꦸꦁꦒꦶ|to carry (on head/shoulder)|ˈsʊŋ,ɡiː|sunggi|sunggi||sunggi
 ꦱꦸꦂ||␣|
 ꦱꦸꦂꦗꦤ꧀||␣|
 ꦱꦸꦏꦫ||␣|
@@ -1311,7 +1311,7 @@ autoExpandExamples.jv = `
 ꦱꦼꦏꦮꦤ꧀||␣|
 ꦱꦼꦏꦸꦗꦸꦂ||␣|
 ꦱꦼꦏꦺꦴꦗꦸꦂ||␣|
-ꦱꦼꦏꦺꦴꦭꦃ|school|sə§ˈko§lah|sekolah
+ꦱꦼꦏꦺꦴꦭꦃ|school|sə,ˈko,lah|sekolah
 ꦱꦼꦏ꧀ꦠꦶ||␣|
 ꦱꦼꦒ||␣|
 ꦱꦼꦒꦼꦂ||␣|
@@ -1349,7 +1349,7 @@ autoExpandExamples.jv = `
 ꦱꦼꦭꦱ꧇꧑꧙꧇ꦩꦉꦠ꧀꧇꧒꧐꧑꧓꧇|Tuesday, 19 March 2013||selasa 19 maret 2013
 ꦱꦼꦮꦶꦢꦏ꧀||␣|
 ꦱꦼꦮꦼꦭꦱ꧀||␣|
-ꦱꦽꦔꦺꦔꦺ|sun|srə.§ŋe.§ŋe|srengéngé|srengéngé||srengéngé
+ꦱꦽꦔꦺꦔꦺ|sun|srə.,ŋe.,ŋe|srengéngé|srengéngé||srengéngé
 ꦱꦾꦫ||␣|
 ꦱꦿꦁꦒ||
 ꦱꦿꦧꦶ||␣|
@@ -1397,16 +1397,16 @@ autoExpandExamples.jv = `
 ꦲꦏ꧀ꦠꦼ||␣|
 ꦲꦏ꧀ꦧꦂ||␣|
 ꦲꦏ꧀ꦱ||␣|
-ꦲꦏ꧀ꦱꦫ|letter|a§k§sa§ra|aksara
+ꦲꦏ꧀ꦱꦫ|letter|a,k,sa,ra|aksara
 ꦲꦒꦩ|religion||agama
 ꦲꦒꦼꦁ|big (polite)||ageng
 ꦲꦒ꧀ꦤꦶ||
 ꦲꦔꦤ꧀||␣|
 ꦲꦔꦶꦤ꧀|wind||angin
-ꦲꦔꦺꦭ꧀|difficult|ˈa§ŋɛ§l|angel
+ꦲꦔꦺꦭ꧀|difficult|ˈa,ŋɛ,l|angel
 ꦲꦔꦼꦠ꧀||␣|
 ꦲꦔꦼꦤ꧀||␣|
-ꦲꦕꦫ|programme|ˈa§t͡ʃa.§ra|acara
+ꦲꦕꦫ|programme|ˈa,t͡ʃa.,ra|acara
 ꦲꦕꦸꦁ||␣|
 ꦲꦗ||␣|
 ꦲꦗꦂ||␣|
@@ -1434,10 +1434,10 @@ autoExpandExamples.jv = `
 ꦲꦢꦺꦴꦤ꧀||␣|
 ꦲꦢꦼꦒꦤ꧀||␣|
 ꦲꦢꦼꦒ꧀||␣|
-ꦲꦢꦼꦒ꧀ꦲꦢꦼꦒ꧀|adeg-adeg|a.§də§k.§a.§də§k|adeg-adeg
+ꦲꦢꦼꦒ꧀ꦲꦢꦼꦒ꧀|adeg-adeg|a.,də,k.,a.,də,k|adeg-adeg
 ꦲꦢꦿꦶ||␣|
 ꦲꦤ||␣|
-ꦲꦤꦕꦫꦏ|alphabet|ha§na§t͡ɕa§ra§ka|hanacaraka
+ꦲꦤꦕꦫꦏ|alphabet|ha,na,t͡ɕa,ra,ka|hanacaraka
 ꦲꦤꦺꦴꦩ꧀||␣|
 ꦲꦤ꧀ꦛꦺꦏ꧀||␣|
 ꦲꦤ꧀ꦝ||␣|
@@ -1482,10 +1482,10 @@ autoExpandExamples.jv = `
 ꦲꦩ꧀ꦧꦼꦒ꧀||␣|
 ꦲꦩ꧀ꦧꦿꦤꦁ|turn fiery red|␣|ambranaŋ
 ꦲꦩ꧀ꦧꦿꦸꦏ꧀||␣|
-ꦲꦩ꧀ꦧ꧀ꦭꦱ꧀|gone, vanished|ˈa§m§b§la§s|amblas
-ꦲꦩ꧀ꦧ꧀ꦭꦼꦱ꧀|to sink below the surface|ˈa§m§b§lə§s|ambles
+ꦲꦩ꧀ꦧ꧀ꦭꦱ꧀|gone, vanished|ˈa,m,b,la,s|amblas
+ꦲꦩ꧀ꦧ꧀ꦭꦼꦱ꧀|to sink below the surface|ˈa,m,b,lə,s|ambles
 ꦲꦪꦤ꧀||
-ꦲꦪꦸ|graceful|ˈa§ju|ayu
+ꦲꦪꦸ|graceful|ˈa,ju|ayu
 ꦲꦪꦺꦴ||␣|
 ꦲꦪꦺꦴꦩ꧀||␣|
 ꦲꦪꦼꦂ||␣|
@@ -1498,7 +1498,7 @@ autoExpandExamples.jv = `
 ꦲꦭꦥ꧀||␣|
 ꦲꦭꦱ꧀||
 ꦲꦭꦶꦃ||␣|
-ꦲꦭꦶꦱ꧀|eyebrow|a.§li§s|alis|alis||alis
+ꦲꦭꦶꦱ꧀|eyebrow|a.,li,s|alis|alis||alis
 ꦲꦭꦸꦁ||␣|
 ꦲꦭꦸꦤ꧀||␣|
 ꦲꦭꦸꦩ꧀||␣|
@@ -1526,17 +1526,17 @@ autoExpandExamples.jv = `
 ꦲꦶꦁꦏꦁ||␣|
 ꦲꦶꦁꦒꦶꦭ꧀||␣|
 ꦲꦶꦏꦪꦠ꧀||␣|
-ꦲꦶꦏꦶ|this|i§ki|iki
+ꦲꦶꦏꦶ|this|i,ki|iki
 ꦲꦶꦒ||
 ꦲꦶꦒꦂ||␣|
 ꦲꦶꦗꦺꦴ||
 ꦲꦶꦚꦺꦴꦁ||␣|
 ꦲꦶꦠ||␣|
 ꦲꦶꦢꦼꦂ||␣|
-ꦲꦶꦢꦼꦥ꧀|eyelash|ˈɪ§də§p̚|idep
+ꦲꦶꦢꦼꦥ꧀|eyelash|ˈɪ,də,p̚|idep
 ꦲꦶꦤ꧀ꦠꦼꦂ||␣|
-ꦲꦶꦤ꧀ꦢꦃ|to hear, listen|ˈī§n.§dɑːh|indah|indah||indah
-ꦲꦶꦩ꧀ꦧ|brow|i§m.§ba|imba|imba||imba
+ꦲꦶꦤ꧀ꦢꦃ|to hear, listen|ˈī,n.,dɑːh|indah|indah||indah
+ꦲꦶꦩ꧀ꦧ|brow|i,m.,ba|imba|imba||imba
 ꦲꦶꦩ꧀ꦧꦁ||␣|
 ꦲꦶꦪꦤ꧀||
 ꦲꦶꦪꦸ||
@@ -1545,7 +1545,7 @@ autoExpandExamples.jv = `
 ꦲꦶꦱꦺꦴ||␣|
 ꦲꦸꦁꦏꦢ꧀||␣|
 ꦲꦸꦏꦫ||
-ꦲꦸꦒꦼꦂ|basis, basic rule|u.§ɡər|uger|uger||uger
+ꦲꦸꦒꦼꦂ|basis, basic rule|u.,ɡər|uger|uger||uger
 ꦲꦸꦗꦂ||␣|
 ꦲꦸꦗꦸꦂ||␣|
 ꦲꦸꦠꦮ||
@@ -1576,12 +1576,12 @@ autoExpandExamples.jv = `
 ꦲꦺꦥꦺꦴꦭꦸꦱꦶ||
 ꦲꦺꦩ꧀ꦧ||␣|
 ꦲꦺꦩ꧀ꦧꦺꦂ||␣|
-ꦲꦺꦭꦶꦁ|to remember|ˈe.§lɪŋ|éling|éling
+ꦲꦺꦭꦶꦁ|to remember|ˈe.,lɪŋ|éling|éling
 ꦲꦺꦱꦸꦏ꧀||␣|
-ꦲꦺꦱ꧀ꦠꦿꦶ|female|ɛ§s.§tri|èstri|èstri
+ꦲꦺꦱ꧀ꦠꦿꦶ|female|ɛ,s.,tri|èstri|èstri
 ꦲꦺꦴꦛꦏ꧀||␣|
 ꦲꦺꦴꦥꦺꦴꦂ||␣|
-ꦲꦺꦴꦧꦠ꧀|medecine, potion|o.§ba§t|obat|obat||obat
+ꦲꦺꦴꦧꦠ꧀|medecine, potion|o.,ba,t|obat|obat||obat
 ꦲꦺꦴꦪꦺꦴꦢ꧀||
 ꦲꦼꦂꦗꦸꦤ||␣|
 ꦲꦼꦂꦠꦶ||␣|
@@ -1602,10 +1602,10 @@ autoExpandExamples.jv = `
 
 @ unknown
 
-ꦩꦔꦤ꧀ꦱꦺꦴꦠꦺꦴ||ma§ŋa§n §so§to|magnan soto
-ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀|gentle|lə§mah §lə§m§bu§t|lemah lembut
+ꦩꦔꦤ꧀ꦱꦺꦴꦠꦺꦴ||ma,ŋa,n ,so,to|magnan soto
+ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀|gentle|lə,mah ,lə,m,bu,t|lemah lembut
 ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ|October|
-ꦲꦏ꧀ꦱꦫꦗꦮ|Javanese script|a§k§sa§ra §d͡ʒa§wa
+ꦲꦏ꧀ꦱꦫꦗꦮ|Javanese script|a,k,sa,ra ,d͡ʒa,wa
 ꦦꦑꦸꦨꦸꦮꦟ|Pakubuwana (name)||PaKuBuwaNa
 ꦫ꧈ꦩ꧈ꦯꦸꦭꦂꦠ|R. M. Sularta||r, m, Sularta
 ꦒꦫꦸꦣ||
