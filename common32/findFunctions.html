@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Function Call Analyzer</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; }
+    label { display: block; margin-top: 1rem; }
+    textarea { width: 100%; height: 200px; font-family: monospace; }
+    #results { margin-top: 1.5rem; }
+    .func { margin-top: 1.2rem; }
+    .calls, .calledby { margin-left: 1.5rem; color: #444; }
+    code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>JS Function Call Analyzer</h1>
+
+  <label for="fileInput">Choose a .js file (optional):</label>
+  <input type="file" id="fileInput" accept=".js">
+
+  <label for="textInput">Or paste JavaScript here:</label>
+  <textarea id="textInput" placeholder="Paste JavaScript code here..."></textarea>
+
+  <button id="analyzeBtn">Analyze</button>
+
+  <div id="results"></div>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const textInput = document.getElementById('textInput');
+    const analyzeBtn = document.getElementById('analyzeBtn');
+    const resultsDiv = document.getElementById('results');
+
+    // ------------------------------------------------------------
+    // Built‑in JS identifiers to exclude from Category 5
+    // ------------------------------------------------------------
+    const builtins = new Set([
+      "eval","isFinite","isNaN","parseFloat","parseInt",
+      "decodeURI","decodeURIComponent","encodeURI","encodeURIComponent",
+      "console","setTimeout","setInterval","clearTimeout","clearInterval",
+      "Math","JSON","Object","Function","Boolean","Symbol",
+      "Error","EvalError","RangeError","ReferenceError","SyntaxError",
+      "TypeError","URIError","Number","BigInt","String","Array","Map","Set",
+      "WeakMap","WeakSet","Date","RegExp","Promise","window","document",
+      "navigator","location","fetch","alert","confirm","prompt", "getElementById", "if", "createElement", "prepend", "forEach", "toString", "toUpperCase", "while", "querySelectorAll", "for", "trim", "split", "has", "typeof", "appendChild", "startsWith", "push", "sort", "includes", "join", "switch", "closest", "removeChild", "match", "getAttribute", "XMLHttpRequest"
+    ]);
+
+    analyzeBtn.addEventListener('click', () => {
+      const pasted = textInput.value.trim();
+
+      if (pasted) {
+        analyzeText(pasted);
+        return;
+      }
+
+      const file = fileInput.files[0];
+      if (!file) {
+        resultsDiv.innerHTML = "<p>Please paste code or choose a file.</p>";
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = () => analyzeText(reader.result);
+      reader.readAsText(file);
+    });
+
+    // ------------------------------------------------------------
+    // Extract function declarations: function name(
+    // ------------------------------------------------------------
+    function extractFunctionNames(text) {
+      const regex = /function\s+([A-Za-z_$][0-9A-Za-z_$]*)\s*\(/g;
+      const names = new Set();
+      let match;
+
+      while ((match = regex.exec(text)) !== null) {
+        names.add(match[1]);
+      }
+      return [...names];
+    }
+
+    // ------------------------------------------------------------
+    // Map ALL function calls (internal + external)
+    // ------------------------------------------------------------
+    function mapFunctionCalls(text, functionNames) {
+      const callMap = {};
+      const allCalled = new Set();
+
+      const anyCallRegex = /\b([A-Za-z_$][0-9A-Za-z_$]*)\s*\(/g;
+
+      for (const fn of functionNames) {
+        callMap[fn] = new Set();
+
+        const bodyRegex = new RegExp(
+          "function\\s+" + fn + "\\s*\\([^)]*\\)\\s*\\{([\\s\\S]*?)\\}",
+          "g"
+        );
+
+        let bodyMatch;
+        while ((bodyMatch = bodyRegex.exec(text)) !== null) {
+          const body = bodyMatch[1];
+
+          let callMatch;
+          while ((callMatch = anyCallRegex.exec(body)) !== null) {
+            const called = callMatch[1];
+            allCalled.add(called);
+            if (called !== fn) callMap[fn].add(called);
+          }
+        }
+      }
+
+      return { callMap, allCalled };
+    }
+
+    // ------------------------------------------------------------
+    // Build reverse mapping: who calls each function
+    // ------------------------------------------------------------
+    function invertCallMap(functionNames, callMap) {
+      const calledByMap = {};
+
+      // Initialize only for defined functions
+      for (const fn of functionNames) {
+        calledByMap[fn] = new Set();
+      }
+
+      // Add callers only if callee is defined
+      for (const caller of functionNames) {
+        for (const callee of callMap[caller]) {
+          if (functionNames.includes(callee)) {
+            calledByMap[callee].add(caller);
+          }
+        }
+      }
+
+      return calledByMap;
+    }
+
+    // ------------------------------------------------------------
+    // Main analysis pipeline
+    // ------------------------------------------------------------
+    function analyzeText(text) {
+      const functionNames = extractFunctionNames(text);
+
+      const { callMap, allCalled } = mapFunctionCalls(text, functionNames);
+
+      const calledByMap = invertCallMap(functionNames, callMap);
+
+      const externalFunctions = [...allCalled].filter(
+        fn => !functionNames.includes(fn) && !builtins.has(fn)
+      );
+
+      renderResults(functionNames, callMap, calledByMap, externalFunctions);
+    }
+
+    // ------------------------------------------------------------
+    // Render results (5 sections)
+    // ------------------------------------------------------------
+    function renderResults(functionNames, callMap, calledByMap, externalFunctions) {
+      if (functionNames.length === 0) {
+        resultsDiv.innerHTML = '<p>No function declarations found.</p>';
+        return;
+      }
+
+      // Section 4: X/Z functions
+      const xzFunctions = functionNames.filter(fn => /[XZ]$/.test(fn));
+
+      const remaining = functionNames.filter(fn => !xzFunctions.includes(fn));
+
+      const notCalledByOthers = remaining.filter(
+        fn => calledByMap[fn].size === 0
+      );
+
+      const isolated = notCalledByOthers.filter(
+        fn => callMap[fn].size === 0
+      );
+
+      const normal = remaining.filter(
+        fn => !notCalledByOthers.includes(fn) && !isolated.includes(fn)
+      );
+
+      let html = "";
+
+      // Section 1
+      html += `<h2>1. All other functions</h2>`;
+      html += `<p>${normal.length} function${normal.length !== 1 ? "s" : ""}</p>`;
+      if (normal.length === 0) html += `<p>(none)</p>`;
+      else normal.forEach(fn => html += renderFunctionBlock(fn, callMap, calledByMap));
+
+      // Section 2
+      const section2 = notCalledByOthers.filter(fn => !isolated.includes(fn));
+      html += `<h2>2. Functions not called by another function</h2>`;
+      html += `<p>${section2.length} function${section2.length !== 1 ? "s" : ""}</p>`;
+      if (section2.length === 0) html += `<p>(none)</p>`;
+      else section2.forEach(fn => html += renderFunctionBlock(fn, callMap, calledByMap));
+
+      // Section 3
+      html += `<h2>3. Functions not called by another function AND calling nobody</h2>`;
+      html += `<p>${isolated.length} function${isolated.length !== 1 ? "s" : ""}</p>`;
+      if (isolated.length === 0) html += `<p>(none)</p>`;
+      else isolated.forEach(fn => html += renderFunctionBlock(fn, callMap, calledByMap));
+
+      // Section 4
+      html += `<h2>4. Functions ending in X or Z</h2>`;
+      html += `<p>${xzFunctions.length} function${xzFunctions.length !== 1 ? "s" : ""}</p>`;
+      if (xzFunctions.length === 0) html += `<p>(none)</p>`;
+      else xzFunctions.forEach(fn => html += renderFunctionBlock(fn, callMap, calledByMap));
+
+      // Section 5
+      html += `<h2>5. Functions called but NOT defined in the input</h2>`;
+      html += `<p>${externalFunctions.length} function${externalFunctions.length !== 1 ? "s" : ""}</p>`;
+      if (externalFunctions.length === 0) html += `<p>(none)</p>`;
+      else externalFunctions.forEach(fn => {
+        html += `<div class="func"><code>${fn}</code></div>`;
+      });
+
+      resultsDiv.innerHTML = html;
+    }
+
+    function renderFunctionBlock(fn, callMap, calledByMap) {
+      return `
+        <div class="func"><code>${fn}</code><br>
+          <div class="calls">calls: ${
+            callMap[fn].size ? [...callMap[fn]].join(", ") : "<span style='color:#ddd'>(none)</span>"
+          }</div>
+          <div class="calledby">called by: ${
+            calledByMap[fn].size ? [...calledByMap[fn]].join(", ") : "<span style='color:#ddd'>(none)</span>"
+          }</div>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
