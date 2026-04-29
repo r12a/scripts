@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -24,23 +24,23 @@ autoExpandExamples.he = `
 
 @ wiktionary
 
- אֶבוֹלוּצִיוֹנִי|evolutionary|(ʔ)e§v§o§l§u§t͡s§ˈj§o§ni§‹|evolutsyóni|אבולוציוני|
- אַבּוּב|reed, flute|(ʔ)a§ˈb§u§v|abúv|אבוב|
- דֵּמוֹקְרַטְיָה|democracy|de§m§o§ˈk§ra§t§ja§‹|demokrátya|דמוקרטיה|
-דַּחְלִיל|scarecrow|da§χ§ˈli§‹§l|dakhlil|דחליל
- זַ׳רְגוֹן|jargon|ʒa§‹§r§ɡ§o§n|zhargón|ז׳רגון|
- ז׳רגון|jargon|ʒa§‹§r§ɡ§o§n|zhargón|זַ׳רְגוֹן|
- לְחַיִּים|a blessing, toast|le§χa§ˈji§‹§m|l'chayím|לחיים|
- נִשְׁבָּה|to be kidnapped|ni§ʃ§ˈba§‹|nishbá|נשבה|
- נִשְׁכַּח|to be forgotten|ni§ʃ§ˈka§χ|nishkákh|נשכח|
- סַמְכוּת|authority|sa§m§ˈχ§u§t|samkhút|סמכות|
- סַמְכוּתִי|authoritative|sa§m§χ§u§ˈti§‹|samkhutí|סמכותי|
- סַקְרָנוּת|curiosity|sa§k§ʁa§ˈn§u§t|sakranút|סקרנות|
- עִמָּנוּאֵל|Emmanuel|(ʔ)i.§ma.§n§u.§ˈ(ʔ)e§l|'imanu'él|עמנואל|
- פְּרוֹטֶקְצְיָה|nepotism|p§ʁ§o§ˈte§k.§ts§ja§‹|protéktzya|פרוטקציה|
+ אֶבוֹלוּצִיוֹנִי|evolutionary|(ʔ)e,v,o,l,u,t͡s,ˈj,o,ni,‹|evolutsyóni|אבולוציוני|
+ אַבּוּב|reed, flute|(ʔ)a,ˈb,u,v|abúv|אבוב|
+ דֵּמוֹקְרַטְיָה|democracy|de,m,o,ˈk,ra,t,ja,‹|demokrátya|דמוקרטיה|
+דַּחְלִיל|scarecrow|da,χ,ˈli,‹,l|dakhlil|דחליל
+ זַ׳רְגוֹן|jargon|ʒa,‹,r,ɡ,o,n|zhargón|ז׳רגון|
+ ז׳רגון|jargon|ʒa,‹,r,ɡ,o,n|zhargón|זַ׳רְגוֹן|
+ לְחַיִּים|a blessing, toast|le,χa,ˈji,‹,m|l'chayím|לחיים|
+ נִשְׁבָּה|to be kidnapped|ni,ʃ,ˈba,‹|nishbá|נשבה|
+ נִשְׁכַּח|to be forgotten|ni,ʃ,ˈka,χ|nishkákh|נשכח|
+ סַמְכוּת|authority|sa,m,ˈχ,u,t|samkhút|סמכות|
+ סַמְכוּתִי|authoritative|sa,m,χ,u,ˈti,‹|samkhutí|סמכותי|
+ סַקְרָנוּת|curiosity|sa,k,ʁa,ˈn,u,t|sakranút|סקרנות|
+ עִמָּנוּאֵל|Emmanuel|(ʔ)i.,ma.,n,u.,ˈ(ʔ)e,l|'imanu'él|עמנואל|
+ פְּרוֹטֶקְצְיָה|nepotism|p,ʁ,o,ˈte,k.,ts,ja,‹|protéktzya|פרוטקציה|
 הוא|Be!||hevé|הֱוֵא (rare)|
-בְּשָׁעָה טוֹבָה וּמֻצְלַחַת|in a good and successful time|be.§ʃa§ˈa§‹§ §t§o§ˈva§‹§ §u.§mu§ts§ˈla.§χa§t
-דּוֹקְטוֹר|doctor|ˈd§o§k§t§o§ʁ
+בְּשָׁעָה טוֹבָה וּמֻצְלַחַת|in a good and successful time|be.,ʃa,ˈa,‹, ,t,o,ˈva,‹, ,u.,mu,ts,ˈla.,χa,t
+דּוֹקְטוֹר|doctor|ˈd,o,k,t,o,ʁ
 ־אי||
 ־ון||
 ־ות||
@@ -54,142 +54,142 @@ autoExpandExamples.he = `
 ־צ׳יק||
 ־שהו||
 א.ג.נ.||
-אֱלֹהִים|the God of Israel|e§lo§ˈhi§‹§m|elohim|אלוהים|
-אֱלוֹהַּ|a god|e§ˈl§o.§a|elóah|אלוה|
-אֱלֹהַּ|a god|e§ˈlo.§a|elóah|אלוה|
-אֱמוּנָה|faith, belief|e§m§u§ˈna§‹|emuná|אמונה|
-אֲבִיָּה|Abijah|(ʔ)a§vi§ˈja§–|aviyá|אביה|
-אֲבִישָׁלוֹם|Absolom|(ʔ)a§vi§‹§ʃa§ˈl§o§m|avishalóm|אבישלום|
-אֲבֵדָה|loss|(ʔ)a§ve§ˈda§‹|avedá|אבדה|
-אֲבַגְתָא|Abagtha|(ʔ)a§va§ɡ§ˈta§‹|avagtá|אבגתא|
-אֲבַדּוֹן|destruction|(ʔ)a§.va§ˈd§o§n|avadón|אבדון|
-אֲבָהִי|paternal|(ʔ)a§va§ˈhi§‹|avahi|אבהי|
-אֲבוֹי|woe! alas!|(ʔ)a§ˈv§o§i|avóy|אבוי|
-אֲגַם|lake, pool|a§ˈɡa§m|agám|אגם|
-אֲדִישׁוּת|indifference|a§di§‹§ˈʃ§u§t|adishút|אדישות|
-אֲדָמָה|earth, soil|a§da§ˈma§‹|'adamá|אדמה
-אֲדֹנָי|Lord, God|a§do§ˈna§j|ăḏônāy|אדוני|
-אֲדוֹנָי|Lord, God|a§d§o§ˈna§j|ăḏônāy|אדוני|
-אֲחַשְׁוֵרוֹשׁ|Ahasuerus|(ʔ)a§χa§ʃ§ve§ˈʁ§o§ʃ|Akhashverósh|אחשורוש|
-אֲנִי לֹא מְדַבֵּר אַנְגְּלִית|I don't speak English|a§ni§‹§ §lo§‹§ §mɛ§da§bɛ§ʁ§ §a§ŋ§ɡ§li§‹§t|ani lo medaber anglit|אני לא מדבר אנגלית|
-אֲנִי|I|(ʔ)a§ˈni§‹|aní|אני|
-אֲנַחְנוּ|we|(ʔ)a§ˈna§χ§n§u|anákhnu|אנחנו|
-אֲפִלּוּ|even|a§fi§ˈl§u|afilú|אפילו|
-אֲרִיאֵל|Ariel|(ʔ)a§ʁi§‹§ˈ(ʔ)e§l|ari'él|אריאל|
-אֲרַם|Aram|(ʔ)a§ˈʁa§m|'arám|ארם|
-אֲרָרָט|Ararat|(ʔ)a§ʁa§ˈʁa§t|ararát|אררט|
-אֳרָנִים|pines|o§ʁa§ˈni§‹§m||אורנים 
-אורנים|pines|o§ʁa§ˈni§‹§m||אֳרָנִים 
+אֱלֹהִים|the God of Israel|e,lo,ˈhi,‹,m|elohim|אלוהים|
+אֱלוֹהַּ|a god|e,ˈl,o.,a|elóah|אלוה|
+אֱלֹהַּ|a god|e,ˈlo.,a|elóah|אלוה|
+אֱמוּנָה|faith, belief|e,m,u,ˈna,‹|emuná|אמונה|
+אֲבִיָּה|Abijah|(ʔ)a,vi,ˈja,–|aviyá|אביה|
+אֲבִישָׁלוֹם|Absolom|(ʔ)a,vi,‹,ʃa,ˈl,o,m|avishalóm|אבישלום|
+אֲבֵדָה|loss|(ʔ)a,ve,ˈda,‹|avedá|אבדה|
+אֲבַגְתָא|Abagtha|(ʔ)a,va,ɡ,ˈta,‹|avagtá|אבגתא|
+אֲבַדּוֹן|destruction|(ʔ)a,.va,ˈd,o,n|avadón|אבדון|
+אֲבָהִי|paternal|(ʔ)a,va,ˈhi,‹|avahi|אבהי|
+אֲבוֹי|woe! alas!|(ʔ)a,ˈv,o,i|avóy|אבוי|
+אֲגַם|lake, pool|a,ˈɡa,m|agám|אגם|
+אֲדִישׁוּת|indifference|a,di,‹,ˈʃ,u,t|adishút|אדישות|
+אֲדָמָה|earth, soil|a,da,ˈma,‹|'adamá|אדמה
+אֲדֹנָי|Lord, God|a,do,ˈna,j|ăḏônāy|אדוני|
+אֲדוֹנָי|Lord, God|a,d,o,ˈna,j|ăḏônāy|אדוני|
+אֲחַשְׁוֵרוֹשׁ|Ahasuerus|(ʔ)a,χa,ʃ,ve,ˈʁ,o,ʃ|Akhashverósh|אחשורוש|
+אֲנִי לֹא מְדַבֵּר אַנְגְּלִית|I don't speak English|a,ni,‹, ,lo,‹, ,mɛ,da,bɛ,ʁ, ,a,ŋ,ɡ,li,‹,t|ani lo medaber anglit|אני לא מדבר אנגלית|
+אֲנִי|I|(ʔ)a,ˈni,‹|aní|אני|
+אֲנַחְנוּ|we|(ʔ)a,ˈna,χ,n,u|anákhnu|אנחנו|
+אֲפִלּוּ|even|a,fi,ˈl,u|afilú|אפילו|
+אֲרִיאֵל|Ariel|(ʔ)a,ʁi,‹,ˈ(ʔ)e,l|ari'él|אריאל|
+אֲרַם|Aram|(ʔ)a,ˈʁa,m|'arám|ארם|
+אֲרָרָט|Ararat|(ʔ)a,ʁa,ˈʁa,t|ararát|אררט|
+אֳרָנִים|pines|o,ʁa,ˈni,‹,m||אורנים 
+אורנים|pines|o,ʁa,ˈni,‹,m||אֳרָנִים 
 אורן|pine tree||'óren|אֹרֶן
 אֹרֶן|pine tree||'óren|אורן
-אִבְחָה|brandishing a sword|(ʔ)i§v§ˈχa§‹|ivkhá|אבחה|
-אִבֵּד|to waste, lose|(ʔ)i§ˈbe§d|'ibéd|איבד|
-אִבּוּד|waste, loss|(ʔ)i§ˈb§u§d|ibúd|איבוד|
-אִגְרוּף|boxing|i§ɡ§ˈʁ§u§f|igrúf|איגרוף|
-אִזְמֵל|knife, scalpel|(ʔ)i§z§ˈme§l|izmel|אזמל|
-אִיֵּם|to threaten|i§ˈje§m|iyém|איים|
-אִיזֶבֶל|Jezebel|(ʔ)i§‹§ˈze§ve§l|'izével|איזבל|
-אִירָאן|Iran|i§‹§ˈʁa§‹§n|irán|איראן|
-אִישׁ|man, husband|(ʔ)i§‹§ʃ|'ish|איש|
-אִם|if, whether|i§m|im|אם|
-אִשָּׁה|woman, wife|(ʔ)i§ˈʃa§‹|'ishá|אשה|
-אֵיבוּס|manger|(ʔ)e§‹§ˈv§u§s|evús|אבוס|
-אֵבוּס|manger|(ʔ)e§ˈv§u§s|evús|אבוס|
-אֵזוֹר שֵׁרוּת|rest area|e§ˈz§o§ʁ§ §ʃe§ˈʁ§u§t|ezór sheirút|אזור שירות|
-אֵזוֹר|region, zone|e§ˈz§o§ʁ|ezór|אזור|
-אֵיבָה|hostility, hatred|e.§‹§ˈva§‹|eyvá|איבה|
-אֵיךְ|how|(ʔ)e§‹§χ|éykh|איך|
-אֵין|there is not|(ʔ)e§‹§n|ʾên|אין|
-אֵיפֹה|where?|e§‹§ˈfo§‹|efó|איפה|
-אֵל|God|ʔe§l|el|אל|
-אֵם|mother|ˈ(ʔ)e§m|em|אם
-אֵקוֹנוֹמִיקָה|bleach|e.§k§o§ˈn§o.§mi§‹§.ka§‹|ekonómika|אקונומיקה|
-אֶבֶן|stone, small rock|ˈe§ve§n|éven|אבן|
-אֶבוֹלוּצְיָה|evolution|(ʔ)e§v§o§ˈl§u§t͡s§ja§‹|evolútsya|אבולוציה|
-אֶגְזוֹז|exhaust pipe|e§ɡ§ˈz§o§z|egzóz|אגזוז|
-אֶגְרוֹף|fist|e§ɡ§ˈʁ§o§f|egróf|אגרוף|
-אֶחָד|one|(ʔ)e§ˈχa§d|'ekhád|אחד|
-אֶלָּא|but, except|e§ˈla§‹|elá|אלא|
-אֶנְטוֹמוֹלוֹגְיָה|entomology|ɛ§n§t§ɔ§m§ɔ§ˈl§ɔ§ɡ§ja§‹|entomológya|אנטומולוגיה|
-אֶנְצִיקְלוֹפֶּדְיָה|encyclopedia|ɛ§n§tsi§‹§k§l§ɔ§ˈpɛ§d§ja§‹|entsiklopédya|אנציקלופדיה|
-אֶסְתֵּר|Esther|e§s§ˈte§ʁ|estér|אסתר|
-אֶפְשַׁר|possible|e§f§ˈʃa§ʁ|efshár|אפשר|
-אֶפִּיקוֹרוֹס|heretic|e§pi§‹§k§o§ˈr§o§s|'epikorós|אפיקורוס|
-אֶצְבַּע|finger|(ʔ)e§t͡s§ˈba§(ʕ)|'etsbá'|אצבע|
-אֶרֶץ|country, land|ˈe§ʁe§t͡s|'éretz|ארץ|
-אַבְזָם|belt buckle|(ʔ)a§v§ˈza§m|avzám|אבזם|
-אַבְזָקָה|corrosion|(ʔ)a§v§za§ˈka§–|avzaká|אבזקה|
-אַבְטָחָה|protecting from danger|a§v§.ta§ˈxa§‹|avtakhá|אבטחה|
-אַבְנֵט|sash|(ʔ)a§v§ˈnɛ§t|avnet|אבנט|
-אַבְנֵטִים|sashes|a§v§nɛ§ti§‹§m|avnetim|אבנטים|
-אַבְרָהָם|Abraham|a§v.§ʁa§ˈha§m|avrahám|אברהם|
-אַבָּא|dad|ˈa§.ba§‹|ába|אבא
-אַבָּהוּת|fatherhood|(ʔ)a§ba§ˈh§u§t|'abahut|אבהות|
-אַבּוּבָן|oboist|(ʔ)a§b§u§ˈva§n|'abuván|אבובן|
-אַגָּן|basin, bowl|a§ˈɡa§n|agán|אגן|
-אַדְרִיכָל|architect|a§d§ʁi§‹§ˈχa§l|adrikhál|אדריכל|
-אַדִּיר|mighty, powerful|(ʔ)a§ˈdi§‹§ʁ|'adír|אדיר|
-אַהֲבָה|love, affection|a.§ha§ˈva§‹|ahavá|אהבה|
-אַהֲרֹן|Aaron|(ʔ)a.§ha.§ˈʁo§n|'aharón|אהרן|
+אִבְחָה|brandishing a sword|(ʔ)i,v,ˈχa,‹|ivkhá|אבחה|
+אִבֵּד|to waste, lose|(ʔ)i,ˈbe,d|'ibéd|איבד|
+אִבּוּד|waste, loss|(ʔ)i,ˈb,u,d|ibúd|איבוד|
+אִגְרוּף|boxing|i,ɡ,ˈʁ,u,f|igrúf|איגרוף|
+אִזְמֵל|knife, scalpel|(ʔ)i,z,ˈme,l|izmel|אזמל|
+אִיֵּם|to threaten|i,ˈje,m|iyém|איים|
+אִיזֶבֶל|Jezebel|(ʔ)i,‹,ˈze,ve,l|'izével|איזבל|
+אִירָאן|Iran|i,‹,ˈʁa,‹,n|irán|איראן|
+אִישׁ|man, husband|(ʔ)i,‹,ʃ|'ish|איש|
+אִם|if, whether|i,m|im|אם|
+אִשָּׁה|woman, wife|(ʔ)i,ˈʃa,‹|'ishá|אשה|
+אֵיבוּס|manger|(ʔ)e,‹,ˈv,u,s|evús|אבוס|
+אֵבוּס|manger|(ʔ)e,ˈv,u,s|evús|אבוס|
+אֵזוֹר שֵׁרוּת|rest area|e,ˈz,o,ʁ, ,ʃe,ˈʁ,u,t|ezór sheirút|אזור שירות|
+אֵזוֹר|region, zone|e,ˈz,o,ʁ|ezór|אזור|
+אֵיבָה|hostility, hatred|e.,‹,ˈva,‹|eyvá|איבה|
+אֵיךְ|how|(ʔ)e,‹,χ|éykh|איך|
+אֵין|there is not|(ʔ)e,‹,n|ʾên|אין|
+אֵיפֹה|where?|e,‹,ˈfo,‹|efó|איפה|
+אֵל|God|ʔe,l|el|אל|
+אֵם|mother|ˈ(ʔ)e,m|em|אם
+אֵקוֹנוֹמִיקָה|bleach|e.,k,o,ˈn,o.,mi,‹,.ka,‹|ekonómika|אקונומיקה|
+אֶבֶן|stone, small rock|ˈe,ve,n|éven|אבן|
+אֶבוֹלוּצְיָה|evolution|(ʔ)e,v,o,ˈl,u,t͡s,ja,‹|evolútsya|אבולוציה|
+אֶגְזוֹז|exhaust pipe|e,ɡ,ˈz,o,z|egzóz|אגזוז|
+אֶגְרוֹף|fist|e,ɡ,ˈʁ,o,f|egróf|אגרוף|
+אֶחָד|one|(ʔ)e,ˈχa,d|'ekhád|אחד|
+אֶלָּא|but, except|e,ˈla,‹|elá|אלא|
+אֶנְטוֹמוֹלוֹגְיָה|entomology|ɛ,n,t,ɔ,m,ɔ,ˈl,ɔ,ɡ,ja,‹|entomológya|אנטומולוגיה|
+אֶנְצִיקְלוֹפֶּדְיָה|encyclopedia|ɛ,n,tsi,‹,k,l,ɔ,ˈpɛ,d,ja,‹|entsiklopédya|אנציקלופדיה|
+אֶסְתֵּר|Esther|e,s,ˈte,ʁ|estér|אסתר|
+אֶפְשַׁר|possible|e,f,ˈʃa,ʁ|efshár|אפשר|
+אֶפִּיקוֹרוֹס|heretic|e,pi,‹,k,o,ˈr,o,s|'epikorós|אפיקורוס|
+אֶצְבַּע|finger|(ʔ)e,t͡s,ˈba,(ʕ)|'etsbá'|אצבע|
+אֶרֶץ|country, land|ˈe,ʁe,t͡s|'éretz|ארץ|
+אַבְזָם|belt buckle|(ʔ)a,v,ˈza,m|avzám|אבזם|
+אַבְזָקָה|corrosion|(ʔ)a,v,za,ˈka,–|avzaká|אבזקה|
+אַבְטָחָה|protecting from danger|a,v,.ta,ˈxa,‹|avtakhá|אבטחה|
+אַבְנֵט|sash|(ʔ)a,v,ˈnɛ,t|avnet|אבנט|
+אַבְנֵטִים|sashes|a,v,nɛ,ti,‹,m|avnetim|אבנטים|
+אַבְרָהָם|Abraham|a,v.,ʁa,ˈha,m|avrahám|אברהם|
+אַבָּא|dad|ˈa,.ba,‹|ába|אבא
+אַבָּהוּת|fatherhood|(ʔ)a,ba,ˈh,u,t|'abahut|אבהות|
+אַבּוּבָן|oboist|(ʔ)a,b,u,ˈva,n|'abuván|אבובן|
+אַגָּן|basin, bowl|a,ˈɡa,n|agán|אגן|
+אַדְרִיכָל|architect|a,d,ʁi,‹,ˈχa,l|adrikhál|אדריכל|
+אַדִּיר|mighty, powerful|(ʔ)a,ˈdi,‹,ʁ|'adír|אדיר|
+אַהֲבָה|love, affection|a.,ha,ˈva,‹|ahavá|אהבה|
+אַהֲרֹן|Aaron|(ʔ)a.,ha.,ˈʁo,n|'aharón|אהרן|
 אַוַונְטַה|boastful act||awanta|אוונטה
-אַזְהָרָה|warning|a§z.§ha§ˈra§‹|azhará|אזהרה|
-אַחְדוּת|unity|a§χ§ˈd§u§t|akhdút|אחדות|
-אַחְיָנִית|neice|ʔa§χ§ja§ˈni§‹§t|akhyanit|אחיינית|
-אַחֲרֵי|afterword|a.§χa§ˈʁe§‹|akharéi|אחרי|
-אַחֲרָיוּת|responsibility|a§χ.§ʁa§ˈj§u§t|akharayút|אחריות|
-אַחַת|one (f)|a§ˈχa§t|'akhát|אחת|
-אַטְמוֹסְפֶרָה|atmosphere|a§t§m§ɔ§s§fɛ§ʁa§‹|atmosfera|אטמוספירה|
-אַלְמְנַת קַשׁ|grass widow|ʔa§l§me§ˌna§t§ §ˈka§ʃ|'alm'nat kásh|אלמנת קש|
-אַלּוּף|major general|(ʔ)a§ˈl§u§f|alúf|אלוף|
-אַנְגְּלִיָּה|England|ˈʔa§ŋ§ɡ§li§ja§‹|ángliya|אנגליה|
-אַנְגְּלִית|English|a§n§ɡ§ˈli§‹§t|anglít|אנגלית
-אַסְטְרוֹפִיזִיקָה|astrophysics|a§s§t§ʁ§o§ˈfi§‹§zi§‹§ka§‹|astrofízika|אסטרופיזיקה|
-אַף פַּעַם|never|a§f§ §ˈpa§(ʔ)a§m|af pá'am|אף פעם|
-אַף|nose|ʔa§f|af|אף|
-אַרְבַּע|four (f)|a§ʁ§ˈba§–|'arbá|ארבע|
-אַרְבָּעָה|four|a§ʁ.§ba§ˈa§‹|'arba'á|ארבעה|
-אַרְכִיטֶקְטוּרָה|architecture|a§r§xi§‹§te§k§ˈt§u§ra§‹|arkhitektúra|ארכיטקטורה|
-אַרְמֶנִי|Armenian|a§r§ˈme.§ni§‹|arméni|ארמני|
-אַרְמֶנִית|Armenian woman|a§ʁ§ˈmɛ§ni§‹§t|arménit|ארמנית|
-אַרְמוֹן|palace|(ʔ)a§r§ˈm§o§n|'armón|ארמון|
-אַרְנָק|wallet|a§ʁ§ˈna§k|arnák|ארנק|
-אַשְׁמָה|blame, fault|a§ʃ§ˈma§‹|ashmá|אשמה|
-אַשְׁפָּה|rubbish|a§ʃ§ˈpa§‹|ashpá|אשפה|
-אַשּׁוּר|box tree|a.§ʃ§u§ʁ|ashúr|אשור|
-אַשּׁוּרִית|Assyrian language|a.§ʃ§u§ˈʁ§i§‹§t|'ashurit|אשורית|
-אַתָּה|you|(ʔ)a§ˈta§‹|atá|אתה|
-אָב|father, ancestor|(ʔ)a§v|áv|אב
-אָבְדָּנִי|suicidal|o§v§da§ˈni§‹|ov'daní|אובדני|
-אָבְדָן|ruin, destruction|(ʔ)o§v§ˈda§n|ovdán|אובדן|
-אָבִיב|spring|a§ˈvi§‹§v|aviv|אביב|
-אָבַד|be in despair|(ʔ)a§ˈva§d|avád|אבד|
-אָבָה|to be willing|(ʔ)a§ˈva§‹|ava|אבה|
+אַזְהָרָה|warning|a,z.,ha,ˈra,‹|azhará|אזהרה|
+אַחְדוּת|unity|a,χ,ˈd,u,t|akhdút|אחדות|
+אַחְיָנִית|neice|ʔa,χ,ja,ˈni,‹,t|akhyanit|אחיינית|
+אַחֲרֵי|afterword|a.,χa,ˈʁe,‹|akharéi|אחרי|
+אַחֲרָיוּת|responsibility|a,χ.,ʁa,ˈj,u,t|akharayút|אחריות|
+אַחַת|one (f)|a,ˈχa,t|'akhát|אחת|
+אַטְמוֹסְפֶרָה|atmosphere|a,t,m,ɔ,s,fɛ,ʁa,‹|atmosfera|אטמוספירה|
+אַלְמְנַת קַשׁ|grass widow|ʔa,l,me,ˌna,t, ,ˈka,ʃ|'alm'nat kásh|אלמנת קש|
+אַלּוּף|major general|(ʔ)a,ˈl,u,f|alúf|אלוף|
+אַנְגְּלִיָּה|England|ˈʔa,ŋ,ɡ,li,ja,‹|ángliya|אנגליה|
+אַנְגְּלִית|English|a,n,ɡ,ˈli,‹,t|anglít|אנגלית
+אַסְטְרוֹפִיזִיקָה|astrophysics|a,s,t,ʁ,o,ˈfi,‹,zi,‹,ka,‹|astrofízika|אסטרופיזיקה|
+אַף פַּעַם|never|a,f, ,ˈpa,(ʔ)a,m|af pá'am|אף פעם|
+אַף|nose|ʔa,f|af|אף|
+אַרְבַּע|four (f)|a,ʁ,ˈba,–|'arbá|ארבע|
+אַרְבָּעָה|four|a,ʁ.,ba,ˈa,‹|'arba'á|ארבעה|
+אַרְכִיטֶקְטוּרָה|architecture|a,r,xi,‹,te,k,ˈt,u,ra,‹|arkhitektúra|ארכיטקטורה|
+אַרְמֶנִי|Armenian|a,r,ˈme.,ni,‹|arméni|ארמני|
+אַרְמֶנִית|Armenian woman|a,ʁ,ˈmɛ,ni,‹,t|arménit|ארמנית|
+אַרְמוֹן|palace|(ʔ)a,r,ˈm,o,n|'armón|ארמון|
+אַרְנָק|wallet|a,ʁ,ˈna,k|arnák|ארנק|
+אַשְׁמָה|blame, fault|a,ʃ,ˈma,‹|ashmá|אשמה|
+אַשְׁפָּה|rubbish|a,ʃ,ˈpa,‹|ashpá|אשפה|
+אַשּׁוּר|box tree|a.,ʃ,u,ʁ|ashúr|אשור|
+אַשּׁוּרִית|Assyrian language|a.,ʃ,u,ˈʁ,i,‹,t|'ashurit|אשורית|
+אַתָּה|you|(ʔ)a,ˈta,‹|atá|אתה|
+אָב|father, ancestor|(ʔ)a,v|áv|אב
+אָבְדָּנִי|suicidal|o,v,da,ˈni,‹|ov'daní|אובדני|
+אָבְדָן|ruin, destruction|(ʔ)o,v,ˈda,n|ovdán|אובדן|
+אָבִיב|spring|a,ˈvi,‹,v|aviv|אביב|
+אָבַד|be in despair|(ʔ)a,ˈva,d|avád|אבד|
+אָבָה|to be willing|(ʔ)a,ˈva,‹|ava|אבה|
 אָבָק|dust||avák|מאבק
-אָבוֹת|fathers|(ʔ)a§ˈv§o§t|avót|אבות|
-אָבוּד|lost|ʔa§ˈv§u§d|avúd|אבוד|
-אָדָם|person|a§ˈda§m|adám|אדם|
-אָדֹם|red|a§ˈdo§m|'adóm|אדום|
-אָהַב|to love|(ʔ)a§ˈha§v|aháv|אהב|
-אָהַל|pitch a tent|a§ˈha§l|ahál|אהל|
-אָהוּב|beloved|(ʔ)a§ˈ(h)§u§v|ahúv|אהוב|
-אָח|brother|a§χ|'ákh|אח|
-אָחַז|to hold|a§ˈχa§z|'akház|אחז|
-אָחוֹת|sister|a§ˈχ§ɔ§t|akhót|אחות|
-אָכְלָה|food (biblical)|ʔo§χ§ˈla§‹|okhlá|אכלה|
-אָלֶף־בֵּית עִבְרִי|Hebrew alphabet|a§le§f§-§be§‹§t§ §i§v§ri§‹|
-אָמֵן|amen|a§ˈme§n|amén|אמן|
-אָמַד|evalute, estimate|(ʔ)a§ma§d|amád|אמד|
-אָמַר|to say|a§ˈma§ʁ|amár|אמר
+אָבוֹת|fathers|(ʔ)a,ˈv,o,t|avót|אבות|
+אָבוּד|lost|ʔa,ˈv,u,d|avúd|אבוד|
+אָדָם|person|a,ˈda,m|adám|אדם|
+אָדֹם|red|a,ˈdo,m|'adóm|אדום|
+אָהַב|to love|(ʔ)a,ˈha,v|aháv|אהב|
+אָהַל|pitch a tent|a,ˈha,l|ahál|אהל|
+אָהוּב|beloved|(ʔ)a,ˈ(h),u,v|ahúv|אהוב|
+אָח|brother|a,χ|'ákh|אח|
+אָחַז|to hold|a,ˈχa,z|'akház|אחז|
+אָחוֹת|sister|a,ˈχ,ɔ,t|akhót|אחות|
+אָכְלָה|food (biblical)|ʔo,χ,ˈla,‹|okhlá|אכלה|
+אָלֶף־בֵּית עִבְרִי|Hebrew alphabet|a,le,f,-,be,‹,t, ,i,v,ri,‹|
+אָמֵן|amen|a,ˈme,n|amén|אמן|
+אָמַד|evalute, estimate|(ʔ)a,ma,d|amád|אמד|
+אָמַר|to say|a,ˈma,ʁ|amár|אמר
 אָנָנָס|pineapple||ananás|אננס|x
-אָסוּר|forbidden|a§ˈs§u§ʁ|asúr|אסור|
-אָפַּרְטְהַיְד|apartheid|a§ˈpa§ʁ§t§ha§j§d|apárthayd|אפרטהייד|
-אָקוֹרְד|chord (music)|a§ˈk§o§ʁ§d|akord|אקורד|
-אָרַכְנוֹפוֹבְּיָה|arachnophobia|a§ʁa§χ§n§ɔ§ˈf§ɔ§b§ja§‹|arakhnofóbya|ארכנופוביה|
-אָרַר|to execrate|ʔa§ˈʁa§ʁ|arár|ארר|
-אָרוֹן|cupboard|a§ˈʁ§o§n|arón|ארון|
-אֹֽכֶל|food|ˈ(ʔ)o§χe§l|'ókhel|אוכל|
-אֹמֶץ|courage|ˈˀo§me§ts
-אֻמָּנוּת|craft, skill|(ʔ)u§ma§ˈn§u§t|umanút|אומנות|
+אָסוּר|forbidden|a,ˈs,u,ʁ|asúr|אסור|
+אָפַּרְטְהַיְד|apartheid|a,ˈpa,ʁ,t,ha,j,d|apárthayd|אפרטהייד|
+אָקוֹרְד|chord (music)|a,ˈk,o,ʁ,d|akord|אקורד|
+אָרַכְנוֹפוֹבְּיָה|arachnophobia|a,ʁa,χ,n,ɔ,ˈf,ɔ,b,ja,‹|arakhnofóbya|ארכנופוביה|
+אָרַר|to execrate|ʔa,ˈʁa,ʁ|arár|ארר|
+אָרוֹן|cupboard|a,ˈʁ,o,n|arón|ארון|
+אֹֽכֶל|food|ˈ(ʔ)o,χe,l|'ókhel|אוכל|
+אֹמֶץ|courage|ˈˀo,me,ts
+אֻמָּנוּת|craft, skill|(ʔ)u,ma,ˈn,u,t|umanút|אומנות|
 א־ב־ד||
 א־ב־ז־ר||
 א־ב־ח־ן||
@@ -207,57 +207,57 @@ autoExpandExamples.he = `
 א־ל־ם||
 א־ל־ת־ר||
 אב טיפוס||
-אב|father|(ʔ)a§v|áv|אָב
-אבא|dad|ˈa.§ba§‹|ába|אַבָּא
+אב|father|(ʔ)a,v|áv|אָב
+אבא|dad|ˈa.,ba,‹|ába|אַבָּא
 אבאיודאיה||
 אבב||
-אבגתא|Abagtha|(ʔ)a§va§ɡ§ˈta§‹|avagtá|אֲבַגְתָא
-אבד|be in despair|(ʔ)a§ˈva§d|avád|אָבַד
-אבדה|loss|(ʔ)a§ve§ˈda§‹|avedá|אֲבֵדָה
-אבדון|destruction|(ʔ)a§.va§ˈd§o§n|avadón|אֲבַדּוֹן
+אבגתא|Abagtha|(ʔ)a,va,ɡ,ˈta,‹|avagtá|אֲבַגְתָא
+אבד|be in despair|(ʔ)a,ˈva,d|avád|אָבַד
+אבדה|loss|(ʔ)a,ve,ˈda,‹|avedá|אֲבֵדָה
+אבדון|destruction|(ʔ)a,.va,ˈd,o,n|avadón|אֲבַדּוֹן
 אבדלה||
 אבדן||
-אבה|to be willing|(ʔ)a§ˈva§‹|ava|אָבָה
-אבהות|fatherhood|(ʔ)a§ba§ˈh§u§t|'abahut|אַבָּהוּת
-אבהי|paternal|(ʔ)a§va§ˈhi§‹|avahi|אֲבָהִי
+אבה|to be willing|(ʔ)a,ˈva,‹|ava|אָבָה
+אבהות|fatherhood|(ʔ)a,ba,ˈh,u,t|'abahut|אַבָּהוּת
+אבהי|paternal|(ʔ)a,va,ˈhi,‹|avahi|אֲבָהִי
 אבו דאבי||
-אבוב|reed, flute|(ʔ)a§ˈb§u§v|abúv| אַבּוּב
-אבובן|oboist|(ʔ)a§b§u§ˈva§n|'abuván|אַבּוּבָן
+אבוב|reed, flute|(ʔ)a,ˈb,u,v|abúv| אַבּוּב
+אבובן|oboist|(ʔ)a,b,u,ˈva,n|'abuván|אַבּוּבָן
 אבוג׳ה||
-אבוד|lost|ʔa§ˈv§u§d|avúd|אָבוּד
+אבוד|lost|ʔa,ˈv,u,d|avúd|אָבוּד
 אבוז||
-אבוי|woe! alas!|(ʔ)a§ˈv§o§i|avóy|אֲבוֹי
-אבולוציה|evolution|(ʔ)e§v§o§ˈl§u§t͡s§ja§‹|evolútsya|אֶבוֹלוּצְיָה
-אבולוציוני|evolutionary|(ʔ)e§v§o§l§u§t͡s§ˈj§o§ni§‹|evolutsyóni| אֶבוֹלוּצִיוֹנִי
-אבוס|manger|(ʔ)e§ˈv§u§s|evús|אֵבוּס, אֵיבוּס
+אבוי|woe! alas!|(ʔ)a,ˈv,o,i|avóy|אֲבוֹי
+אבולוציה|evolution|(ʔ)e,v,o,ˈl,u,t͡s,ja,‹|evolútsya|אֶבוֹלוּצְיָה
+אבולוציוני|evolutionary|(ʔ)e,v,o,l,u,t͡s,ˈj,o,ni,‹|evolutsyóni| אֶבוֹלוּצִיוֹנִי
+אבוס|manger|(ʔ)e,ˈv,u,s|evús|אֵבוּס, אֵיבוּס
 אבוקדו||
 אבוקה||
 אבות אכלו בוסר ושיני בנים תקהינה||
-אבות|fathers|(ʔ)a§ˈv§o§t|avót|אָבוֹת
-אבזם|belt buckle|(ʔ)a§v§ˈza§m|avzám|אַבְזָם
+אבות|fathers|(ʔ)a,ˈv,o,t|avót|אָבוֹת
+אבזם|belt buckle|(ʔ)a,v,ˈza,m|avzám|אַבְזָם
 אבזקא||
-אבזקה|corrosion|(ʔ)a§v§za§ˈka§‹|avzaká|אַבְזָקָה
+אבזקה|corrosion|(ʔ)a,v,za,ˈka,‹|avzaká|אַבְזָקָה
 אבזר||
-אבחה|brandishing a sword|(ʔ)i§v§ˈχa§‹|ivkhá|אִבְחָה
+אבחה|brandishing a sword|(ʔ)i,v,ˈχa,‹|ivkhá|אִבְחָה
 אבחזית||
 אבחן||
 אבחנה||
 אבטח||
-אבטחה|protecting from danger|a§v§.ta§ˈxa§‹|avtakhá|אַבְטָחָה
+אבטחה|protecting from danger|a,v,.ta,ˈxa,‹|avtakhá|אַבְטָחָה
 אבטיח||
 אבטלה||
 אבי העזרי||
 אבי||
-אביב|spring|a§ˈvi§‹§v|aviv|אָבִיב
+אביב|spring|a,ˈvi,‹,v|aviv|אָבִיב
 אביג'אן||
 אביגיל||
-אביה|Abijah|(ʔ)a§vi§ˈja§‹|aviyá|אֲבִיָּה
+אביה|Abijah|(ʔ)a,vi,ˈja,‹|aviyá|אֲבִיָּה
 אביונה||
 אביזר מין||
 אביזר||
 אביעזר||
 אביר||
-אבישלום|Absolom|(ʔ)a§vi§‹§ʃa§ˈl§o§m|avishalóm|אֲבִישָׁלוֹם
+אבישלום|Absolom|(ʔ)a,vi,‹,ʃa,ˈl,o,m|avishalóm|אֲבִישָׁלוֹם
 אביתר||
 אבך||
 אבל||
@@ -265,9 +265,9 @@ autoExpandExamples.he = `
 אבן הראשה||
 אבן יקרה||
 אבן משחזת||
-אבן|stone, small rock|ˈe§ve§n|éven|אֶבֶן
-אבנט|sash|(ʔ)a§v§ˈnɛ§t|avnet|אַבְנֵט
-אבנטים|sashes|a§v§nɛ§ti§‹§m|avnetim|אַבְנֵטִים
+אבן|stone, small rock|ˈe,ve,n|éven|אֶבֶן
+אבנט|sash|(ʔ)a,v,ˈnɛ,t|avnet|אַבְנֵט
+אבנטים|sashes|a,v,nɛ,ti,‹,m|avnetim|אַבְנֵטִים
 אבנית||
 אבנן||
 אבנר||
@@ -275,13 +275,13 @@ autoExpandExamples.he = `
 אבעבועה||
 אבעבועות רוח||
 אבץ||
-אבק|dust|a§ˈva§k|avák|אָבָק
+אבק|dust|a,ˈva,k|avák|אָבָק
 אבקה||
 אבקן||
 אבקת כביסה||
 אבר||
 אברה||
-אברהם|Abraham|a§v.§ʁa§ˈha§m|avrahám|אַבְרָהָם
+אברהם|Abraham|a,v.,ʁa,ˈha,m|avrahám|אַבְרָהָם
 אברם||
 אבשלום||
 אגב||
@@ -293,70 +293,70 @@ autoExpandExamples.he = `
 אגוז||
 אגוצנטרי||
 אגורה||
-אגזוז|exhaust pipe|e§ɡ§ˈz§o§z|egzóz|אֶגְזוֹז
-אגם|lake, pool|a§ˈɡa§m|agám|אֲגַם
+אגזוז|exhaust pipe|e,ɡ,ˈz,o,z|egzóz|אֶגְזוֹז
+אגם|lake, pool|a,ˈɡa,m|agám|אֲגַם
 אגן ים תיכון||
-אגן|basin, bowl|a§ˈɡa§n|agán|אַגָּן
+אגן|basin, bowl|a,ˈɡa,n|agán|אַגָּן
 אגס||
 אגר||
 אגרול||
 אגרוף תילנדי||
-אגרוף|fist|e§ɡ§ˈʁ§o§f|egróf|אֶגְרוֹף
+אגרוף|fist|e,ɡ,ˈʁ,o,f|egróf|אֶגְרוֹף
 אגרת חוב||
 אג׳נדה||
 אג״ח||
 אד||
 אדה״ר||
-אדום|red|a§ˈd§o§m|'adóm|אָדֹם
+אדום|red|a,ˈd,o,m|'adóm|אָדֹם
 אדון||
-אדוני|Lord, God|a§d§o§ˈna§j|ăḏônāy|אֲדוֹנָי / אֲדֹנָי
+אדוני|Lord, God|a,d,o,ˈna,j|ăḏônāy|אֲדוֹנָי / אֲדֹנָי
 אדיס אבבה||
-אדיר|mighty, powerful|(ʔ)a§ˈdi§‹§ʁ|'adír|אַדִּיר
-אדישות|indifference|a§di§‹§ˈʃ§u§t|adishút|אֲדִישׁוּת
+אדיר|mighty, powerful|(ʔ)a,ˈdi,‹,ʁ|'adír|אַדִּיר
+אדישות|indifference|a,di,‹,ˈʃ,u,t|adishút|אֲדִישׁוּת
 אדלשטיין||
-אדם|person|a§ˈda§m|adám|אָדָם
+אדם|person|a,ˈda,m|adám|אָדָם
 אדמדם||
-אדמה|earth, soil|a§da§ˈma§‹|'adamá|אֲדָמָה
+אדמה|earth, soil|a,da,ˈma,‹|'adamá|אֲדָמָה
 אדמת||
 אדן||
 אדני||
 אדר||
 אדרבא||
 אדרבה||
-אדריכל|architect|a§d§ʁi§‹§ˈχa§l|adrikhál|אַדְרִיכָל
+אדריכל|architect|a,d,ʁi,‹,ˈχa,l|adrikhál|אַדְרִיכָל
 אדריכלות||
 אדרמלך||
 אדרנלין||
 אדרת||
-אהב|to love|(ʔ)a§ˈha§v|aháv|אָהַב
-אהבה|love, affection|a.§ha§ˈva§‹|ahavá|אַהֲבָה
+אהב|to love|(ʔ)a,ˈha,v|aháv|אָהַב
+אהבה|love, affection|a.,ha,ˈva,‹|ahavá|אַהֲבָה
 אהד||
 אהדה||
-אהוב|beloved|(ʔ)a§ˈ(h)§u§v|ahúv|אָהוּב
+אהוב|beloved|(ʔ)a,ˈ(h),u,v|ahúv|אָהוּב
 אהובה||
 אהוד||
 אהוואז||
 אהיה אשר אהיה||
-אהל|pitch a tent|a§ˈha§l|ahál|אָהַל
+אהל|pitch a tent|a,ˈha,l|ahál|אָהַל
 אהלן||
 אהרוני||
-אהרן|Aaron|(ʔ)a.§ha.§ˈʁo§n|'aharón|אַהֲרֹן
+אהרן|Aaron|(ʔ)a.,ha.,ˈʁo,n|'aharón|אַהֲרֹן
 או||
-אוטווה|Ottawa|o§‹§ta§›§wa§‹|otawa|אוֹטָוָה
-אוֹטָוָה|Ottawa|o§‹§ta§›§wa§‹|otawa|אוטווה
-אוֹיֵב|enemy|o§‹§ˈje§v|oyév|אויב|
-אוֹסְטְרִיָה|Austria|ˈ(ʔ)§o§s§t§ʁi§ja§‹|ost'ria|אוסטריה|
-אוֹקְיָנוֹס|ocean|(ʔ)§o§k§ja§n§u§s|oqyanós|אוקיינוס|
-אוֹר|light|(ʔ)§o§ʁ|'ór|אור|
-אוֹרִיגָמִי|origami|›§ɔ§ʁi§‹§ɡa§mi§‹|origami|אוריגמי|
-אוֹת|sign, omen|(ʔ)§o§t|ot|אות|
-אוֹתְיוֹם|immediately|›§o§t§ˈj§o§m|otyóm|אותיום|
-אוּלַי|maybe|u§‹§ˈla§j|ulái|אולי|
-אוּנֶסכּ״וֹ|UNESCO|u§‹§ˈne§s.§k§–§o|UNÉSKO|אונסכ״ו|
-אוּרִי|Uri|u§‹§ˈʁi§‹|uri|אורי|
+אוטווה|Ottawa|o,‹,ta,›,wa,‹|otawa|אוֹטָוָה
+אוֹטָוָה|Ottawa|o,‹,ta,›,wa,‹|otawa|אוטווה
+אוֹיֵב|enemy|o,‹,ˈje,v|oyév|אויב|
+אוֹסְטְרִיָה|Austria|ˈ(ʔ),o,s,t,ʁi,ja,‹|ost'ria|אוסטריה|
+אוֹקְיָנוֹס|ocean|(ʔ),o,k,ja,n,u,s|oqyanós|אוקיינוס|
+אוֹר|light|(ʔ),o,ʁ|'ór|אור|
+אוֹרִיגָמִי|origami|›,ɔ,ʁi,‹,ɡa,mi,‹|origami|אוריגמי|
+אוֹת|sign, omen|(ʔ),o,t|ot|אות|
+אוֹתְיוֹם|immediately|›,o,t,ˈj,o,m|otyóm|אותיום|
+אוּלַי|maybe|u,‹,ˈla,j|ulái|אולי|
+אוּנֶסכּ״וֹ|UNESCO|u,‹,ˈne,s.,k,–,o|UNÉSKO|אונסכ״ו|
+אוּרִי|Uri|u,‹,ˈʁi,‹|uri|אורי|
 אוב||
-אובדן|ruin, destruction|(ʔ)§o§v§ˈda§n|ovdán|אָבְדָן
-אובדני|suicidal|–§o§v§da§ˈni§‹|ov'daní|אָבְדָּנִי
+אובדן|ruin, destruction|(ʔ),o,v,ˈda,n|ovdán|אָבְדָן
+אובדני|suicidal|–,o,v,da,ˈni,‹|ov'daní|אָבְדָּנִי
 אובזר||
 אובחן||
 אובטח||
@@ -377,16 +377,16 @@ autoExpandExamples.he = `
 אווז||
 אווזון||
 אוויל||
-אוויר|air|ˀa§ˈvi§‹§‹§r|avír|אֲוִיר
-אֲוִיר|air|ˀa§ˈvi§‹§‹§r|avír|אוויר||אוויר
+אוויר|air|ˀa,ˈvi,‹,‹,r|avír|אֲוִיר
+אֲוִיר|air|ˀa,ˈvi,‹,‹,r|avír|אוויר||אוויר
 אווירי||
 אוון||
-אוונטה|boastful act|a§wa§‹§n§ta§‹|awanta|אַוַונְטַה
+אוונטה|boastful act|a,wa,‹,n,ta,‹|awanta|אַוַונְטַה
 אוורר||
 אוושה||
 אוזבקית||
 אוזכר||
-אוזן|ear|–§ˈɔ§zɛ§n
+אוזן|ear|–,ˈɔ,zɛ,n
 אוח||
 אוחד||
 אוחיון||
@@ -400,20 +400,20 @@ autoExpandExamples.he = `
 אוטיזם||
 אוי ואבוי||
 אוי||
-אויב|enemy|o§‹§ˈje§v|oyév|אוֹיֵב
-אויר|air|ˀa§ˈvi§‹§r
+אויב|enemy|o,‹,ˈje,v|oyév|אוֹיֵב
+אויר|air|ˀa,ˈvi,‹,r
 אוירה||
 אוירודינמיקה||
 אוירון||
 אוית||
 אוכל נבלות||
-אוכל|food|ˈ(ʔ)§o§χe§l|'ókhel|אֹֽכֶל
+אוכל|food|ˈ(ʔ),o,χe,l|'ókhel|אֹֽכֶל
 אוכלוסין||
 אוכמניה||
 אוכף||
 אולורו||
 אולטימטיבי||
-אולי|maybe|u§‹§ˈla§j|ulái|אוּלַי
+אולי|maybe|u,‹,ˈla,j|ulái|אוּלַי
 אוליגרך||
 אוליגרכיה||
 אולימפי||
@@ -423,8 +423,8 @@ autoExpandExamples.he = `
 אומה||
 אומלל||
 אומן||
-אומנות|craft, skill|(ʔ)§u§ma§ˈn§u§t|umanút|אֻמָּנוּת
-אומץ|courage|ˈˀ§o§me§ts
+אומנות|craft, skill|(ʔ),u,ma,ˈn,u,t|umanút|אֻמָּנוּת
+אומץ|courage|ˈˀ,o,me,ts
 אומר||
 און||
 אוניברסיטה||
@@ -432,18 +432,18 @@ autoExpandExamples.he = `
 אונן||
 אוננות||
 אונס||
-אונסכ״ו|UNESCO|u§‹§ˈne§s.§k§–§o|UNÉSKO|אוּנֶסכּ״וֹ
+אונסכ״ו|UNESCO|u,‹,ˈne,s.,k,–,o|UNÉSKO|אוּנֶסכּ״וֹ
 אונ׳||
 אוסטרי||
-אוסטריה|Austria|ˈ(ʔ)§o§s§t§ʁi§ja§‹|ost'ria|אוֹסְטְרִיָה
+אוסטריה|Austria|ˈ(ʔ),o,s,t,ʁi,ja,‹|ost'ria|אוֹסְטְרִיָה
 אוסטרית||
 אוסטרלי||
 אוסטרליה||
 אוסטרלית||
 אוסלו||
 אוסף||
-אופה|baker|›§o§ˈfe§‹|'ofé|אוֹפֶה
-אוֹפֶה|baker|›§o§ˈfe§‹|'ofé|אופה
+אופה|baker|›,o,ˈfe,‹|'ofé|אוֹפֶה
+אוֹפֶה|baker|›,o,ˈfe,‹|'ofé|אופה
 אופוזיציה||
 אופוסום||
 אופטימי||
@@ -468,14 +468,14 @@ autoExpandExamples.he = `
 אוקטובר||
 אוקי||
 אוקיינוס הקרח הצפוני||
-אוקיינוס|ocean|(ʔ)§o§k§›§ja§n§u§s|oqyanós|אוֹקְיָנוֹס
+אוקיינוס|ocean|(ʔ),o,k,›,ja,n,u,s|oqyanós|אוֹקְיָנוֹס
 אוקינוס||
 אוקלידי||
 אוקראינה||
 אוקראינית||
 אור כשדים||
 אור נראה||
-אור|light|(ʔ)§o§ʁ|'ór|אוֹר
+אור|light|(ʔ),o,ʁ|'ór|אוֹר
 אוראניה||
 אורגזמה||
 אורגנו||
@@ -489,8 +489,8 @@ autoExpandExamples.he = `
 אורז|rice||órez|אֹרֶז
 אורח||
 אורחה||
-אורי|Uri|u§‹§ˈʁi§‹|uri|אוּרִי
-אוריגמי|origami|›§ɔ§ʁi§‹§ɡa§mi§‹|origami|אוֹרִיגָמִי
+אורי|Uri|u,‹,ˈʁi,‹|uri|אוּרִי
+אוריגמי|origami|›,ɔ,ʁi,‹,ɡa,mi,‹|origami|אוֹרִיגָמִי
 אוריה||
 אוריינות||
 אורית||
@@ -506,10 +506,10 @@ autoExpandExamples.he = `
 אורתודוקסי||
 אושפיזין||
 אושר||
-אות|sign, omen|(ʔ)§o§t|ot|אוֹת
+אות|sign, omen|(ʔ),o,t|ot|אוֹת
 אותה||
 אותו||
-אותיום|immediately|›§o§t§ˈj§o§m|otyóm|אוֹתְיוֹם
+אותיום|immediately|›,o,t,ˈj,o,m|otyóm|אוֹתְיוֹם
 אותנטי||
 אותר||
 אותת||
@@ -517,51 +517,51 @@ autoExpandExamples.he = `
 אז מה||
 אז||
 אזדרכת||
-אזהרה|warning|a§z.§ha§ˈra§‹|azhará|אַזְהָרָה
+אזהרה|warning|a,z.,ha,ˈra,‹|azhará|אַזְהָרָה
 אזוב||
-אזור שירות|rest area|e§ˈz§o§ʁ§ §ʃe§‹§ˈʁ§u§t|ezór sheirút|אֵזוֹר שֵׁרוּת
-אזור|region, zone|e§ˈz§o§ʁ|ezór|אֵזוֹר
+אזור שירות|rest area|e,ˈz,o,ʁ, ,ʃe,‹,ˈʁ,u,t|ezór sheirút|אֵזוֹר שֵׁרוּת
+אזור|region, zone|e,ˈz,o,ʁ|ezór|אֵזוֹר
 אזל||
 אזלת יד||
-אזמל|knife, scalpel|(ʔ)i§z§ˈme§l|izmel|אִזְמֵל
+אזמל|knife, scalpel|(ʔ)i,z,ˈme,l|izmel|אִזְמֵל
 אזמרגד||
 אזעקה||
 אזרבייג׳ן||
 אזרח||
 אזרחות||
 אזרחי||
-אח|brother|a§χ|'ákh|אָח
+אח|brother|a,χ|'ákh|אָח
 אחאי||
 אחד באפריל||
 אחד במאי||
 אחד עשר||
-אחד|one|(ʔ)e§ˈχa§d|'ekhád|אֶחָד
-אחדות|unity|a§χ§ˈd§u§t|akhdút|אַחְדוּת
+אחד|one|(ʔ)e,ˈχa,d|'ekhád|אֶחָד
+אחדות|unity|a,χ,ˈd,u,t|akhdút|אַחְדוּת
 אחדשה״ט||
 אחדש״ט||
 אחווה||
 אחוז||
-אחות|sister|a§ˈχ§ɔ§t|akhót|אָחוֹת
-אחז|to hold|a§ˈχa§z|'akház|אָחַז
+אחות|sister|a,ˈχ,ɔ,t|akhót|אָחוֹת
+אחז|to hold|a,ˈχa,z|'akház|אָחַז
 אחזקה||
 אחיין||
-אחיינית|neice|ʔa§χ§›§ja§ˈni§‹§t|akhyanit|אַחְיָנִית
+אחיינית|neice|ʔa,χ,›,ja,ˈni,‹,t|akhyanit|אַחְיָנִית
 אחינועם||
 אחלה||
 אחלמה||
 אחסן||
 אחר כך||
-אחר|other|a§ˈχa§ʁ|akhár
+אחר|other|a,ˈχa,ʁ|akhár
 אחר־כך||
 אחראי||
 אחרון||
 אחרי החגים||
-אחרי|afterword|a.§χa§ˈʁe§‹|akharéi|אַחֲרֵי
-אחריות|responsibility|a§χ.§ʁa§ˈj§u§t|akharayút|אַחֲרָיוּת
+אחרי|afterword|a.,χa,ˈʁe,‹|akharéi|אַחֲרֵי
+אחריות|responsibility|a,χ.,ʁa,ˈj,u,t|akharayút|אַחֲרָיוּת
 אחרית הימים||
 אחרת||
-אחשורוש|Ahasuerus|(ʔ)a§χa§ʃ§ve§ˈʁ§o§ʃ|Akhashverósh|אֲחַשְׁוֵרוֹשׁ
-אחת|one (f)|a§ˈχa§t|'akhát|אַחַת
+אחשורוש|Ahasuerus|(ʔ)a,χa,ʃ,ve,ˈʁ,o,ʃ|Akhashverósh|אֲחַשְׁוֵרוֹשׁ
+אחת|one (f)|a,ˈχa,t|'akhát|אַחַת
 אט אט||
 אט||
 אטום||
@@ -570,7 +570,7 @@ autoExpandExamples.he = `
 אטימולוגיה||
 אטליז||
 אטם||
-אטמוספירה|atmosphere|a§t§m§ɔ§s§fɛ§‹§ʁa§‹|atmosfera|אַטְמוֹסְפֶרָה
+אטמוספירה|atmosphere|a,t,m,ɔ,s,fɛ,‹,ʁa,‹|atmosfera|אַטְמוֹסְפֶרָה
 אטריה||
 אטרקטיבי||
 אי נוחות||
@@ -578,16 +578,16 @@ autoExpandExamples.he = `
 אי||
 אי־ודאות||
 אי־שוויון||
-איבד|to waste, lose|(ʔ)§i§ˈbe§d|'ibéd|אִבֵּד
-איבה|hostility, hatred|e.§‹§ˈva§‹|eyvá|אֵיבָה
-איבוד|waste, loss|(ʔ)§i§ˈb§u§d|ibúd|אִבּוּד
+איבד|to waste, lose|(ʔ),i,ˈbe,d|'ibéd|אִבֵּד
+איבה|hostility, hatred|e.,‹,ˈva,‹|eyvá|אֵיבָה
+איבוד|waste, loss|(ʔ),i,ˈb,u,d|ibúd|אִבּוּד
 איבול||
 איבזר||
 איבחון||
 איבטח||
 איבר||
 איגרוף תאילנדי||
-איגרוף|boxing|i§‹§ɡ§ˈʁ§u§f|igrúf|אִגְרוּף
+איגרוף|boxing|i,‹,ɡ,ˈʁ,u,f|igrúf|אִגְרוּף
 איגרת חוב||
 איגרת||
 אידה||
@@ -602,7 +602,7 @@ autoExpandExamples.he = `
 איום||
 איור||
 איו״ש||
-איזבל|Jezebel|(ʔ)i§‹§ˈze§ve§l|'izével|אִיזֶבֶל
+איזבל|Jezebel|(ʔ)i,‹,ˈze,ve,l|'izével|אִיזֶבֶל
 איזה||
 איזהו חכם? הלומד מכל אדם||
 איזו||
@@ -620,14 +620,14 @@ autoExpandExamples.he = `
 איידס||
 אייל||
 איילונית||
-איים|to threaten|i§›§ˈje§m|iyém|אִיֵּם
+איים|to threaten|i,›,ˈje,m|iyém|אִיֵּם
 איינשטיין||
 אייר||
 איית||
 איך אומרים ... באנגלית||
 איך מגיעים לשדה התעופה||
 איך מגיעים לתחנת הרכבת||
-איך|how|(ʔ)e§‹§χ|éykh|אֵיךְ
+איך|how|(ʔ)e,‹,χ|éykh|אֵיךְ
 איכבוד||
 איכה||
 איכות||
@@ -664,7 +664,7 @@ autoExpandExamples.he = `
 אין כל חדש תחת השמש||
 אין מצב||
 אין עשן בלי אש||
-אין|there is not|(ʔ)e§‹§n|ʾên|אֵין
+אין|there is not|(ʔ)e,‹,n|ʾên|אֵין
 אינדונזי||
 אינדונזיה||
 אינדונזית||
@@ -690,12 +690,12 @@ autoExpandExamples.he = `
 איסלנד||
 איסלנדי||
 איסלנדית||
-איפה|where?|e§‹§ˈfo§‹|efó|אֵיפֹה
+איפה|where?|e,‹,ˈfo,‹|efó|אֵיפֹה
 איפכא מסתברא||
 איפשהו||
 איקריוט||
 איקריוטי||
-איראן|Iran|i§‹§ˈʁa§‹§n|irán|אִירָאן
+איראן|Iran|i,‹,ˈʁa,‹,n|irán|אִירָאן
 איראני||
 אירו||
 אירוני||
@@ -708,8 +708,8 @@ autoExpandExamples.he = `
 איש עסקים||
 איש קש||
 איש שלג||
-איש|man, husband|(ʔ)i§‹§ʃ|'ish|אִישׁ
-אישה|wife, woman|i§‹§ʃˈa§‹||אִשָּׁה
+איש|man, husband|(ʔ)i,‹,ʃ|'ish|אִישׁ
+אישה|wife, woman|i,‹,ʃˈa,‹||אִשָּׁה
 אישון||
 אישי||
 אישיות||
@@ -723,16 +723,16 @@ autoExpandExamples.he = `
 אכזב||
 אכזבה||
 אכזרי||
-אכל|to eat|a§ˈχa§l|akhál|אָכַל
-אָכַל|to eat|a§ˈχa§l|akhál|אכל
-אכלה|food (biblical)|ʔo§χ§ˈla§‹|okhlá|אָכְלָה
+אכל|to eat|a,ˈχa,l|akhál|אָכַל
+אָכַל|to eat|a,ˈχa,l|akhál|אכל
+אכלה|food (biblical)|ʔo,χ,ˈla,‹|okhlá|אָכְלָה
 אכלס||
 אכפת||
 אל שדי||
 אל תסתכל בקנקן אלא במה שיש בו||
-אל|God|ʔe§l|el|אֵל
+אל|God|ʔe,l|el|אֵל
 אל־ריח||
-אלא|but, except|e§ˈla§‹|elá|אֶלָּא
+אלא|but, except|e,ˈla,‹|elá|אֶלָּא
 אלבום||
 אלבני||
 אלבניה||
@@ -741,18 +741,18 @@ autoExpandExamples.he = `
 אלגברה לינארית||
 אלג׳יר||
 אלג׳יריה||
-אלה|this|ˈɛ§lɛ§‹
+אלה|this|ˈɛ,lɛ,‹
 אלהים||
 אלו||
-אלוה|a god|e§ˈl§o.§a|elóah|אֱלֹהַּ, אֱלוֹהַּ
+אלוה|a god|e,ˈl,o.,a|elóah|אֱלֹהַּ, אֱלוֹהַּ
 אלוהות||
 אלוהי||
-אלוהים|the God of Israel|e§l§o§ˈhi§‹§m|elohim|אֱלֹהִים
+אלוהים|the God of Israel|e,l,o,ˈhi,‹,m|elohim|אֱלֹהִים
 אלול||
 אלומיניום||
 אלון||
 אלונקה||
-אלוף|major general|(ʔ)a§ˈl§u§f|alúf|אַלּוּף
+אלוף|major general|(ʔ)a,ˈl,u,f|alúf|אַלּוּף
 אלוקים||
 אלחוטי||
 אלטע זאכן||
@@ -783,7 +783,7 @@ autoExpandExamples.he = `
 אלמנה||
 אלמנות||
 אלמנט||
-אלמנת קש|grass widow|ʔa§l§me§ˌna§t§ §ˈka§ʃ|'alm'nat kásh|אַלְמְנַת קַשׁ‎
+אלמנת קש|grass widow|ʔa,l,me,ˌna,t, ,ˈka,ʃ|'alm'nat kásh|אַלְמְנַת קַשׁ‎
 אלסקה||
 אלעד||
 אלעזר||
@@ -805,20 +805,20 @@ autoExpandExamples.he = `
 אם ירצה השם||
 אם כבר אז כבר||
 אם קריאה||
-אם|mother|ˈ(ʔ)e§m|em|אֵם
+אם|mother|ˈ(ʔ)e,m|em|אֵם
 אםם||
 אמא||
 אמבולנס||
 אמבט||
 אמבטיה||
 אמברוסיה||
-אמד|evalute, estimate|(ʔ)a§ma§d|amád|אָמַד
+אמד|evalute, estimate|(ʔ)a,ma,d|amád|אָמַד
 אמה||
 אמהי||
 אמהרית||
 אמון||
 אמונה תפלה||
-אמונה|faith, belief|e§m§u§ˈna§‹|emuná|אֱמוּנָה
+אמונה|faith, belief|e,m,u,ˈna,‹|emuná|אֱמוּנָה
 אמוניום||
 אמוק||
 אמור||
@@ -827,7 +827,7 @@ autoExpandExamples.he = `
 אמירה||
 אמיתי||
 אמלל||
-אמן|amen|a§ˈme§n|amén|אָמֵן
+אמן|amen|a,ˈme,n|amén|אָמֵן
 אמנה||
 אמנון ותמר||
 אמנון||
@@ -840,9 +840,9 @@ autoExpandExamples.he = `
 אמפר||
 אמפרסנד||
 אמפתיה||
-אמץ|courage|ˈˀo§me§ts
+אמץ|courage|ˈˀo,me,ts
 אמצע||
-אמר|to say|a§ˈma§ʁ|amár|אָמַר
+אמר|to say|a,ˈma,ʁ|amár|אָמַר
 אמריציום||
 אמריקאי||
 אמריקאית||
@@ -860,8 +860,8 @@ autoExpandExamples.he = `
 אנאלי||
 אנגולה||
 אנגלי||
-אנגליה|England|ˈʔa§ŋ§ɡ§li§ja§‹|ángliya|אַנְגְּלִיָּה
-אנגלית|English|a§n§ɡ§ˈli§‹§t|anglít|אַנְגְּלִית|
+אנגליה|England|ˈʔa,ŋ,ɡ,li,ja,‹|ángliya|אַנְגְּלִיָּה
+אנגלית|English|a,n,ɡ,ˈli,‹,t|anglít|אַנְגְּלִית|
 אנגסטרום||
 אנדוסימביוזה||
 אנדורה||
@@ -876,8 +876,8 @@ autoExpandExamples.he = `
 אנושות||
 אנושי||
 אנזים||
-אנחנו|we|(ʔ)a§ˈna§χ§n§u|anákhnu|אֲנַחְנוּ
-אנטומולוגיה|entomology|ɛ§n§t§ɔ§m§ɔ§ˈl§ɔ§ɡ§ja§‹|entomológya|אֶנְטוֹמוֹלוֹגְיָה
+אנחנו|we|(ʔ)a,ˈna,χ,n,u|anákhnu|אֲנַחְנוּ
+אנטומולוגיה|entomology|ɛ,n,t,ɔ,m,ɔ,ˈl,ɔ,ɡ,ja,‹|entomológya|אֶנְטוֹמוֹלוֹגְיָה
 אנטי־||
 אנטיביוטיקה||
 אנטיפא||
@@ -891,7 +891,7 @@ autoExpandExamples.he = `
 אני זקוק למתורגמן||
 אני טבעוני||
 אני טבעונית||
-אני לא מדבר אנגלית|I don't speak English|a§ni§‹§ §lo§‹§ §mɛ§da§bɛ§ʁ§ §a§ŋ§ɡ§li§‹§t|ani lo medaber anglit|אֲנִי לֹא מְדַבֵּר אַנְגְּלִית‎
+אני לא מדבר אנגלית|I don't speak English|a,ni,‹, ,lo,‹, ,mɛ,da,bɛ,ʁ, ,a,ŋ,ɡ,li,‹,t|ani lo medaber anglit|אֲנִי לֹא מְדַבֵּר אַנְגְּלִית‎
 אני לא מדבר עברית||
 אני לא מדברת אנגלית||
 אני לא מדברת עברית||
@@ -906,7 +906,7 @@ autoExpandExamples.he = `
 אני צריכה מפה||
 אני רעב||
 אני רעבה||
-אני|I|(ʔ)a§ˈni§‹|aní|אֲנִי
+אני|I|(ʔ)a,ˈni,‹|aní|אֲנִי
 אני־עליון||
 אניה||
 אנימה||
@@ -916,7 +916,7 @@ autoExpandExamples.he = `
 אנליזה||
 אננס|pineapple||ananás|אָנָנָס
 אנס||
-אנציקלופדיה|encyclopedia|ɛ§n§tsi§‹§k§l§ɔ§ˈpɛ§d§ja§‹|entsiklopédya|אֶנְצִיקְלוֹפֶּדְיָה
+אנציקלופדיה|encyclopedia|ɛ,n,tsi,‹,k,l,ɔ,ˈpɛ,d,ja,‹|entsiklopédya|אֶנְצִיקְלוֹפֶּדְיָה
 אנקרה||
 אנרגיה||
 אנשובי||
@@ -925,14 +925,14 @@ autoExpandExamples.he = `
 אסא||
 אסון||
 אסונסיון||
-אסור|forbidden|a§ˈs§u§ʁ|asúr|אָסוּר
+אסור|forbidden|a,ˈs,u,ʁ|asúr|אָסוּר
 אסטוניה||
 אסטונית||
 אסטרואיד||
 אסטרונאוט||
 אסטרונום||
 אסטרונומיה||
-אסטרופיזיקה|astrophysics|a§s§t§ʁ§o§ˈfi§‹§zi§‹§ka§‹|astrofízika|אַסְטְרוֹפִיזִיקָה
+אסטרופיזיקה|astrophysics|a,s,t,ʁ,o,ˈfi,‹,zi,‹,ka,‹|astrofízika|אַסְטְרוֹפִיזִיקָה
 אסטרטגיה||
 אסיה||
 אסימפטוטה||
@@ -957,13 +957,13 @@ autoExpandExamples.he = `
 אספתא||
 אסר||
 אסרטיבי||
-אסתר|Esther|e§s§ˈte§ʁ|estér|אֶסְתֵּר
+אסתר|Esther|e,s,ˈte,ʁ|estér|אֶסְתֵּר
 אעפ״כ||
 אע״פ||
 אף על פי כן||
 אף על פי||
-אף פעם|never|a§f§ §ˈpa§(ʔ)a§m|af pá'am|אַף פַּעַם‎
-אף|nose|ʔa§f|af|אַף
+אף פעם|never|a,f, ,ˈpa,(ʔ)a,m|af pá'am|אַף פַּעַם‎
+אף|nose|ʔa,f|af|אַף
 אפגניסטן||
 אפה||
 אפוד מגן||
@@ -971,12 +971,12 @@ autoExpandExamples.he = `
 אפור||
 אפטשי||
 אפיה||
-אפילו|even|a§fi§‹§ˈl§u|afilú|אֲפִלּוּ
+אפילו|even|a,fi,‹,ˈl,u|afilú|אֲפִלּוּ
 אפיסטמולוגיה||
 אפיפיור||
 אפיק||
 אפיקומן||
-אפיקורוס|heretic|e§pi§‹§k§o§ˈr§o§s|'epikorós|אֶפִּיקוֹרוֹס
+אפיקורוס|heretic|e,pi,‹,k,o,ˈr,o,s|'epikorós|אֶפִּיקוֹרוֹס
 אפיקורס||
 אפלולי||
 אפליה||
@@ -988,10 +988,10 @@ autoExpandExamples.he = `
 אפקט החממה||
 אפקט||
 אפקטיבי||
-אפר|ash|ˈɛ§fɛ§ʁ
+אפר|ash|ˈɛ,fɛ,ʁ
 אפרוח||
 אפרופו||
-אפרטהייד|apartheid|a§ˈpa§ʁ§t§ha§›§j§d|apárthayd|אָפַּרְטְהַיְד
+אפרטהייד|apartheid|a,ˈpa,ʁ,t,ha,›,j,d|apárthayd|אָפַּרְטְהַיְד
 אפריל||
 אפרים||
 אפריקאי||
@@ -1003,13 +1003,13 @@ autoExpandExamples.he = `
 אפרפר||
 אפרת||
 אפשטיין||
-אפשר|possible|e§f§ˈʃa§ʁ|efshár|אֶפְשַׁר
+אפשר|possible|e,f,ˈʃa,ʁ|efshár|אֶפְשַׁר
 אפשרות||
 אפשרי||
 אפתיה||
-אפ׳חד|nobody|ˈ(ʔ)a§f§ˌ§xa§d|'afkhád|
+אפ׳חד|nobody|ˈ(ʔ)a,f,ˌ,xa,d|'afkhád|
 אץ||
-אצבע|finger|(ʔ)e§t͡s§ˈba§(ʕ)|'etsbá'|אֶצְבַּע
+אצבע|finger|(ʔ)e,t͡s,ˈba,(ʕ)|'etsbá'|אֶצְבַּע
 אצבעון||
 אצה||
 אצולה||
@@ -1023,8 +1023,8 @@ autoExpandExamples.he = `
 אקווריום||
 אקולוגי||
 אקולוגיה||
-אקונומיקה|bleach|e.§k§o§ˈn§o.§mi§‹§.ka§‹|ekonómika|אֵקוֹנוֹמִיקָה
-אקורד|chord (music)|a§ˈk§o§ʁ§d|akord|אָקוֹרְד
+אקונומיקה|bleach|e.,k,o,ˈn,o.,mi,‹,.ka,‹|ekonómika|אֵקוֹנוֹמִיקָה
+אקורד|chord (music)|a,ˈk,o,ʁ,d|akord|אָקוֹרְד
 אקלים||
 אקליפטוס||
 אקססורי||
@@ -1033,9 +1033,9 @@ autoExpandExamples.he = `
 ארב||
 ארבה||
 ארבייטמן||
-ארבע|four (f)|a§ʁ§ˈba§–|'arbá|אַרְבַּע
+ארבע|four (f)|a,ʁ,ˈba,–|'arbá|אַרְבַּע
 ארבעה עשר||
-ארבעה|four|a§ʁ.§ba§ˈa§‹|'arba'á|אַרְבָּעָה
+ארבעה|four|a,ʁ.,ba,ˈa,‹|'arba'á|אַרְבָּעָה
 ארבעים||
 ארבעת||
 ארגון||
@@ -1051,10 +1051,10 @@ autoExpandExamples.he = `
 ארוחת עשר||
 ארוחת צהריים||
 ארוטי||
-ארוך|long|a§ˈʁ§ɔ§χ|'arókh|אָרֹךְ
-אָרֹךְ|long|a§ˈʁɔ§χ|'arókh|ארוך
+ארוך|long|a,ˈʁ,ɔ,χ|'arókh|אָרֹךְ
+אָרֹךְ|long|a,ˈʁɔ,χ|'arókh|ארוך
 ארון ספרים||
-ארון|cupboard|a§ˈʁ§o§n|arón|אָרוֹן
+ארון|cupboard|a,ˈʁ,o,n|arón|אָרוֹן
 ארוס||
 ארוע||
 ארור||
@@ -1062,7 +1062,7 @@ autoExpandExamples.he = `
 ארח||
 ארטישוק||
 ארי||
-אריאל|Ariel|(ʔ)a§ʁi§‹§ˈ(ʔ)e§l|ari'él|אֲרִיאֵל
+אריאל|Ariel|(ʔ)a,ʁi,‹,ˈ(ʔ)e,l|ari'él|אֲרִיאֵל
 אריה||
 אריזה||
 אריח||
@@ -1071,35 +1071,35 @@ autoExpandExamples.he = `
 אריקה||
 ארך||
 ארכיון||
-ארכיטקטורה|architecture|a§r§xi§‹§te§k§ˈt§u§ra§‹|arkhitektúra|אַרְכִיטֶקְטוּרָה
+ארכיטקטורה|architecture|a,r,xi,‹,te,k,ˈt,u,ra,‹|arkhitektúra|אַרְכִיטֶקְטוּרָה
 ארכיפלג||
-ארכנופוביה|arachnophobia|a§ʁa§χ§n§ɔ§ˈf§ɔ§b§ja§‹|arakhnofóbya|אָרַכְנוֹפוֹבְּיָה
+ארכנופוביה|arachnophobia|a,ʁa,χ,n,ɔ,ˈf,ɔ,b,ja,‹|arakhnofóbya|אָרַכְנוֹפוֹבְּיָה
 ארם נהרים||
-ארם|Aram|(ʔ)a§ˈʁa§m|'arám|אֲרַם
-ארמון|palace|(ʔ)a§r§ˈm§o§n|'armón|אַרְמוֹן
+ארם|Aram|(ʔ)a,ˈʁa,m|'arám|אֲרַם
+ארמון|palace|(ʔ)a,r,ˈm,o,n|'armón|אַרְמוֹן
 ארמי||
 ארמית||
-ארמני|Armenian|a§r§ˈme.§ni§‹|arméni|אַרְמֶנִי
+ארמני|Armenian|a,r,ˈme.,ni,‹|arméni|אַרְמֶנִי
 ארמניה||
-ארמנית|Armenian woman|a§ʁ§ˈmɛ§ni§‹§t|arménit|אַרְמֶנִית
+ארמנית|Armenian woman|a,ʁ,ˈmɛ,ni,‹,t|arménit|אַרְמֶנִית
 ארנב||
-ארנק|wallet|a§ʁ§ˈna§k|arnák|אַרְנָק
+ארנק|wallet|a,ʁ,ˈna,k|arnák|אַרְנָק
 ארס||
 ארסן||
 ארץ ישראל||
-ארץ|country, land|ˈe§ʁe§t͡s|'éretz|אֶרֶץ
+ארץ|country, land|ˈe,ʁe,t͡s|'éretz|אֶרֶץ
 ארצות הברית||
 ארצי||
-ארר|to execrate|ʔa§ˈʁa§ʁ|arár|אָרַר
-אררט|Ararat|(ʔ)a§ʁa§ˈʁa§t|ararát|אֲרָרָט
+ארר|to execrate|ʔa,ˈʁa,ʁ|arár|אָרַר
+אררט|Ararat|(ʔ)a,ʁa,ˈʁa,t|ararát|אֲרָרָט
 ארשת||
-אש|fire|ˈɛ§ʃ|esh|אֵשׁ
-אֵשׁ|fire|ˈɛ§ʃ|esh|אש
+אש|fire|ˈɛ,ʃ|esh|אֵשׁ
+אֵשׁ|fire|ˈɛ,ʃ|esh|אש
 אשגבאט||
 אשדוד||
-אשה|woman, wife|(ʔ)i§ˈʃa§‹|'ishá|אִשָּׁה
-אשור|box tree|a.§ʃ§u§ʁ|ashúr|אַשּׁוּר
-אשורית|Assyrian language|a.§ʃ§u§ˈʁ§i§‹§t|'ashurit|אַשּׁוּרִית
+אשה|woman, wife|(ʔ)i,ˈʃa,‹|'ishá|אִשָּׁה
+אשור|box tree|a.,ʃ,u,ʁ|ashúr|אַשּׁוּר
+אשורית|Assyrian language|a.,ʃ,u,ˈʁ,i,‹,t|'ashurit|אַשּׁוּרִית
 אשחר||
 אשך||
 אשכול||
@@ -1111,12 +1111,12 @@ autoExpandExamples.he = `
 אשלגן||
 אשליה||
 אשם||
-אשמה|blame, fault|a§ʃ§ˈma§‹|ashmá|אַשְׁמָה
+אשמה|blame, fault|a,ʃ,ˈma,‹|ashmá|אַשְׁמָה
 אשמורת||
 אשמע||
 אשמרת||
 אשנב||
-אשפה|rubbish|a§ʃ§ˈpa§‹|ashpá|אַשְׁפָּה
+אשפה|rubbish|a,ʃ,ˈpa,‹|ashpá|אַשְׁפָּה
 אשקלון||
 אשר||
 אשראי||
@@ -1126,17 +1126,17 @@ autoExpandExamples.he = `
 אשת איש||
 אשתקד||
 אש״ף||
-את|you (sing f)|ˈa§t
+את|you (sing f)|ˈa,t
 אתאיזם||
 אתב״ש||
 אתגר||
-אתה|you|(ʔ)a§ˈta§‹|atá|אַתָּה
+אתה|you|(ʔ)a,ˈta,‹|atá|אַתָּה
 אתון||
 אתונה||
 אתוס||
 אתיופי||
 אתלט||
-אתם|you (pl)|a§ˈtɛ§m
+אתם|you (pl)|a,ˈtɛ,m
 אתמול||
 אתן||
 אתנול||
@@ -1147,66 +1147,66 @@ autoExpandExamples.he = `
 אתר||
 אתרוג||
 א״י||
-בְּבַקָּשָׁה|please|be.§va.§ka.§ˈʃa§‹|b'vakashá|בבקשה|
-בְּדִיּוּק|precisely|be.§di§ˈj§u§k|b'diyúk|בדיוק|
-בְּדֹלַח|crystal|ˈb§do§la§χ|bdólakh|בדולח|
-בְּהֵמָה|beast|be§he§ˈma§‹|behemá|בהמה
-בְּהֵמוֹת|behemoth|be§he§ˈm§o§t|behemót|בהמות|
-בְּהֶכְרֵחַ|of necessity|bə.§he§χ§ˈʁe.§aχ|b'hekhréakh|בהכרח|
-בְּכָל אֹפֶן|anyway(s)|be§ˈχo§l§ §ˈʔo.§fe§n|bekhol ófen|בכל אופן|
-בְּמוֹ|in, by means of|be§m§o|bemó|במו|
-בְּעָיָה|problem|be.§a§ˈja§‹|be'ayá|בעיה|
-בְּרֵאשִׁית|at first|b(e)§ʁe§‹§ˈʃi§‹§t|bereshit|בראשית|
-בְּרָזִים|taps, faucets|b§ʁa§ˈzi§‹§m|brazim|ברזים|
-בְּרָכָה|congratulation|b§ʁa§ˈχa§‹|b'rakhá|ברכה|
-בְּשֶׁל|because of|bə§ˈʃe§l|b'shél|בשל|
-בִּטֵּא|to pronounce|bi§ˈte§(ʔ)|bité|ביטא|
-בִּטּוּחַ|insurance|bi§ˈt§u§aχ|bitúakh|ביטוח|
-בִּי|in me|bi§‹
-בִּיג מֶק|Big Mac|bi§‹§ɡ§ §me§k|big mek|ביג מק|
-בִּינָה|understanding|bi§‹§ˈna§‹|biná|בינה|
-בִּמְהִירוּת|quickly, fast|bi§m.§(h)i§‹§ˈʁ§u§t|bim'hirút|במהירות|
-בִּמְקוֹם|instead of|bi§m§ˈk§o§m|bim'qóm|במקום|
-בִּנְיַן עִירִיָּה|town hall|bi§n§ˈja§n§ §ʔiː§‹§ri§jˈjaː§‹|binyán 'iriyá|בניין עירייה|
-בִּנְיָמִין|Benjamin|bi§n.§ja§ˈmi§‹§n|binyamín|בנימין|
-בִּנְיָן|building|bi§n§ˈja§n|binyán|בניין|
-בִּרְצִיפוּת|consecutively|bə.§rə.§tsi§‹§ˈf§u§t|bir'tsifút|ברציפות|
-בֵּיְגֶּל|bagel|ˈbe§j.§ɡe§l|béigel|בייגל|
-בֵּין|between|be§‹§n|bēn|בין|
-בֵּית חוֹלִים|hospital|ˈbe§iː§t§ §χ§o§ˈliː§‹§m|beit kholím|בית חולים|
-בֵּית־קוֹלְנוֹעַ|cinema|ˈbe§iː§t§ §k§o§l§ˈn§o.§a|beit kolnóa'|בית קולנוע|
-בֵּן אַחַר בֵּן|patrilineal descent|be§n§ §(ʔ)a§χa§ʁ§ §be§n|ben akhar ben|בן אחר בן|
-בֵּן|son|be§n|bén|בן|
-בֶּרֶז|tap, faucet|ˈbe§ʁe§z|bérez|ברז|
-בַּחוּץ|outside|ba§ˈx§u§t͡s|bakhúts|בחוץ|
-בַּיִת|house|ˈba§j§t|báyit|בית|
-בַּלְשָׁנוּת|linguistics|ba§l§ʃa§ˈn§u§t|balshanút|בלשנות|
-בַּלּוּט|acorn|ba§ˈl§u§t|balút|בלוט|
-בַּקְבּוּק|bottle|ba§k§ˈb§u§k|bakbúk|בקבוק|
-בַּר|outside, except|ba§r|bar|בר|
-בַּרְבּוּר|swan|ba§ʁ§ˈb§u§ʁ|barbúr|ברבור|
-בַּת|daughter|ba§t|bat|בת|
-בָּא עַל הֶחָתוּם|to undersign (formal)|ˌba§‹§ §a§l§ §ha§χa§ˈt§u§m|ba al hekhatúm|בא על החתום|
-בָּאוּלִינְגּ|bowling|ˈba§‹§w.§li§‹§ŋ§–|ba'uling|באולינג|
-בָּבְלִי|Babylonian|ba§v§ˈli§‹|bavlí|בבלי|
-בָּבֶל|Babylon|ba§ˈve§l|bavél|בבל|
-בָּגָ״ץ|the High Court of Justice|ba§ˈɡa§–§ts|bagats|בג״ץ|
+בְּבַקָּשָׁה|please|be.,va.,ka.,ˈʃa,‹|b'vakashá|בבקשה|
+בְּדִיּוּק|precisely|be.,di,ˈj,u,k|b'diyúk|בדיוק|
+בְּדֹלַח|crystal|ˈb,do,la,χ|bdólakh|בדולח|
+בְּהֵמָה|beast|be,he,ˈma,‹|behemá|בהמה
+בְּהֵמוֹת|behemoth|be,he,ˈm,o,t|behemót|בהמות|
+בְּהֶכְרֵחַ|of necessity|bə.,he,χ,ˈʁe.,aχ|b'hekhréakh|בהכרח|
+בְּכָל אֹפֶן|anyway(s)|be,ˈχo,l, ,ˈʔo.,fe,n|bekhol ófen|בכל אופן|
+בְּמוֹ|in, by means of|be,m,o|bemó|במו|
+בְּעָיָה|problem|be.,a,ˈja,‹|be'ayá|בעיה|
+בְּרֵאשִׁית|at first|b(e),ʁe,‹,ˈʃi,‹,t|bereshit|בראשית|
+בְּרָזִים|taps, faucets|b,ʁa,ˈzi,‹,m|brazim|ברזים|
+בְּרָכָה|congratulation|b,ʁa,ˈχa,‹|b'rakhá|ברכה|
+בְּשֶׁל|because of|bə,ˈʃe,l|b'shél|בשל|
+בִּטֵּא|to pronounce|bi,ˈte,(ʔ)|bité|ביטא|
+בִּטּוּחַ|insurance|bi,ˈt,u,aχ|bitúakh|ביטוח|
+בִּי|in me|bi,‹
+בִּיג מֶק|Big Mac|bi,‹,ɡ, ,me,k|big mek|ביג מק|
+בִּינָה|understanding|bi,‹,ˈna,‹|biná|בינה|
+בִּמְהִירוּת|quickly, fast|bi,m.,(h)i,‹,ˈʁ,u,t|bim'hirút|במהירות|
+בִּמְקוֹם|instead of|bi,m,ˈk,o,m|bim'qóm|במקום|
+בִּנְיַן עִירִיָּה|town hall|bi,n,ˈja,n, ,ʔiː,‹,ri,jˈjaː,‹|binyán 'iriyá|בניין עירייה|
+בִּנְיָמִין|Benjamin|bi,n.,ja,ˈmi,‹,n|binyamín|בנימין|
+בִּנְיָן|building|bi,n,ˈja,n|binyán|בניין|
+בִּרְצִיפוּת|consecutively|bə.,rə.,tsi,‹,ˈf,u,t|bir'tsifút|ברציפות|
+בֵּיְגֶּל|bagel|ˈbe,j.,ɡe,l|béigel|בייגל|
+בֵּין|between|be,‹,n|bēn|בין|
+בֵּית חוֹלִים|hospital|ˈbe,iː,t, ,χ,o,ˈliː,‹,m|beit kholím|בית חולים|
+בֵּית־קוֹלְנוֹעַ|cinema|ˈbe,iː,t, ,k,o,l,ˈn,o.,a|beit kolnóa'|בית קולנוע|
+בֵּן אַחַר בֵּן|patrilineal descent|be,n, ,(ʔ)a,χa,ʁ, ,be,n|ben akhar ben|בן אחר בן|
+בֵּן|son|be,n|bén|בן|
+בֶּרֶז|tap, faucet|ˈbe,ʁe,z|bérez|ברז|
+בַּחוּץ|outside|ba,ˈx,u,t͡s|bakhúts|בחוץ|
+בַּיִת|house|ˈba,j,t|báyit|בית|
+בַּלְשָׁנוּת|linguistics|ba,l,ʃa,ˈn,u,t|balshanút|בלשנות|
+בַּלּוּט|acorn|ba,ˈl,u,t|balút|בלוט|
+בַּקְבּוּק|bottle|ba,k,ˈb,u,k|bakbúk|בקבוק|
+בַּר|outside, except|ba,r|bar|בר|
+בַּרְבּוּר|swan|ba,ʁ,ˈb,u,ʁ|barbúr|ברבור|
+בַּת|daughter|ba,t|bat|בת|
+בָּא עַל הֶחָתוּם|to undersign (formal)|ˌba,‹, ,a,l, ,ha,χa,ˈt,u,m|ba al hekhatúm|בא על החתום|
+בָּאוּלִינְגּ|bowling|ˈba,‹,w.,li,‹,ŋ,–|ba'uling|באולינג|
+בָּבְלִי|Babylonian|ba,v,ˈli,‹|bavlí|בבלי|
+בָּבֶל|Babylon|ba,ˈve,l|bavél|בבל|
+בָּגָ״ץ|the High Court of Justice|ba,ˈɡa,–,ts|bagats|בג״ץ|
 בָּהִיר|light, bright||bahír|בהיר|x
-בָּחַר|to choose|ba§ˈχa§ʁ|bakhár|בחר|
-בָּחוּר|guy, boy|ba§ˈχ§u§r|bakhúr|בחור
-בָּטוּחַ|confident|ba§ˈt§u.§aχ|batúakh|בטוח|
-בָּנָה|to build|ba§ˈna§‹|baná|בנה|
-בָּצָל|onion|ba§ˈt͡sa§l|batsál|בצל|
-בָּקַע|to hatch, crack|ba§ˈka§–|baqá|בקע|
-בָּרוּךְ|blessed|ba§ˈʁ§u§χ|barúkh|ברוך|
-בָּרוּר|clear, evident|baˈ§ʁ§u§ʁ|barúr|ברור|
-בָּשָׂר|meat|ba§ˈsa§ʁ|basár|בשר|
-בֹּקֶר טוֹב|good morning|ˈbo§ke§ʁ§ §t§o§v|bóker tov|בוקר טוב|
-בֹּקֶר|morning, dawn|ˈbo.§ke§ʁ|bóker|בוקר|
-בּוֹרֵא עוֹלָם|demiurge|bɔ§‹§ʁɛ§‹§ §(ʔ)§ɔ§la§m|bore''olam|בורא עולם|
-בּז|beige|ˈbe§ʒ||בֵּז|x
-בּי|in me|bi§‹||בִּי
-ב־|at, in|ˈb(ə)§-|בְּ־
+בָּחַר|to choose|ba,ˈχa,ʁ|bakhár|בחר|
+בָּחוּר|guy, boy|ba,ˈχ,u,r|bakhúr|בחור
+בָּטוּחַ|confident|ba,ˈt,u.,aχ|batúakh|בטוח|
+בָּנָה|to build|ba,ˈna,‹|baná|בנה|
+בָּצָל|onion|ba,ˈt͡sa,l|batsál|בצל|
+בָּקַע|to hatch, crack|ba,ˈka,–|baqá|בקע|
+בָּרוּךְ|blessed|ba,ˈʁ,u,χ|barúkh|ברוך|
+בָּרוּר|clear, evident|baˈ,ʁ,u,ʁ|barúr|ברור|
+בָּשָׂר|meat|ba,ˈsa,ʁ|basár|בשר|
+בֹּקֶר טוֹב|good morning|ˈbo,ke,ʁ, ,t,o,v|bóker tov|בוקר טוב|
+בֹּקֶר|morning, dawn|ˈbo.,ke,ʁ|bóker|בוקר|
+בּוֹרֵא עוֹלָם|demiurge|bɔ,‹,ʁɛ,‹, ,(ʔ),ɔ,la,m|bore''olam|בורא עולם|
+בּז|beige|ˈbe,ʒ||בֵּז|x
+בּי|in me|bi,‹||בִּי
+ב־|at, in|ˈb(ə),-|בְּ־
 ב־ד־ל||
 ב־ה־ר||
 ב־ו־א||
@@ -1214,12 +1214,12 @@ autoExpandExamples.he = `
 ב־ו־ש||
 בא בימים||
 בא ל־||
-בא על החתום|to undersign (formal)|ˌba§‹§ §a§l§ §ha§χa§ˈt§u§m|ba al hekhatúm|בָּא עַל הֶחָתוּם
-בא|to come|ˈba§‹|ba|בָּא
-בָּא|to come|ˈba§‹|ba|בא
+בא על החתום|to undersign (formal)|ˌba,‹, ,a,l, ,ha,χa,ˈt,u,m|ba al hekhatúm|בָּא עַל הֶחָתוּם
+בא|to come|ˈba,‹|ba|בָּא
+בָּא|to come|ˈba,‹|ba|בא
 באג||
 באדן||
-באולינג|bowling|ˈba§‹§w.§li§‹§ŋ§–|ba'uling|בָּאוּלִינְגּ
+באולינג|bowling|ˈba,‹,w.,li,‹,ŋ,–|ba'uling|בָּאוּלִינְגּ
 באך||
 באמת||
 באס||
@@ -1231,9 +1231,9 @@ autoExpandExamples.he = `
 בבואה||
 בבון||
 בביטול||
-בבל|Babylon|ba§ˈve§l|bavél|בָּבֶל
-בבלי|Babylonian|ba§v§ˈli§‹|bavlí|בָּבְלִי
-בבקשה|please|be.§va.§ka.§ˈʃa§‹|b'vakashá|בְּבַקָּשָׁה‎
+בבל|Babylon|ba,ˈve,l|bavél|בָּבֶל
+בבלי|Babylonian|ba,v,ˈli,‹|bavlí|בָּבְלִי
+בבקשה|please|be.,va.,ka.,ˈʃa,‹|b'vakashá|בְּבַקָּשָׁה‎
 בג||
 בגד ים||
 בגד||
@@ -1241,21 +1241,21 @@ autoExpandExamples.he = `
 בגדול||
 בגט||
 בגלל ש־||
-בגלל|because|bi§ˈɡ§la§l|biglál|בִּגְלַל
-בִּגְלַל|because|bi§ˈɡ§la§l|biglál|בגלל
+בגלל|because|bi,ˈɡ,la,l|biglál|בִּגְלַל
+בִּגְלַל|because|bi,ˈɡ,la,l|biglál|בגלל
 בגרות||
 בגתן||
 בג״ד כפ״ת||
-בג״ץ|the High Court of Justice|ba§ˈɡa§–§ts|bagats|בָּגָ״ץ
+בג״ץ|the High Court of Justice|ba,ˈɡa,–,ts|bagats|בָּגָ״ץ
 בד||
 בדד||
 בדה||
 בדואי||
-בדולח|crystal|ˈb§d§o§la§χ|bdólakh|בְּדֹלַח
+בדולח|crystal|ˈb,d,o,la,χ|bdólakh|בְּדֹלַח
 בדחן||
 בדידות||
 בדיון||
-בדיוק|precisely|be.§di§ˈj§u§k|b'diyúk|בְּדִיּוּק
+בדיוק|precisely|be.,di,ˈj,u,k|b'diyúk|בְּדִיּוּק
 בדיחה||
 בדיל||
 בדיעבד||
@@ -1273,10 +1273,10 @@ autoExpandExamples.he = `
 בהיר|light, bright||bahír|בָּהִיר
 בהירה||
 בהירות||
-בהכרח|of necessity|bə.§he§χ§ˈʁe.§aχ|b'hekhréakh|בְּהֶכְרֵחַ
+בהכרח|of necessity|bə.,he,χ,ˈʁe.,aχ|b'hekhréakh|בְּהֶכְרֵחַ
 בהלה||
-בהמה|beast|be§he§ˈma§‹|behemá|בְּהֵמָה
-בהמות|behemoth|be§he§ˈm§o§t|behemót|בְּהֵמוֹת
+בהמה|beast|be,he,ˈma,‹|behemá|בְּהֵמָה
+בהמות|behemoth|be,he,ˈm,o,t|behemót|בְּהֵמוֹת
 בהמ״ז||
 בהצלחה||
 בהקיץ||
@@ -1318,12 +1318,12 @@ autoExpandExamples.he = `
 בועז||
 בוץ||
 בוקיצה||
-בוקר טוב|good morning|ˈb§o§ke§ʁ§ §t§o§v|bóker tov|בֹּקֶר טוֹב
-בוקר|morning, dawn|ˈb§o.§ke§ʁ|bóker|בֹּקֶר
+בוקר טוב|good morning|ˈb,o,ke,ʁ, ,t,o,v|bóker tov|בֹּקֶר טוֹב
+בוקר|morning, dawn|ˈb,o.,ke,ʁ|bóker|בֹּקֶר
 בוקרשט||
 בור מים||
 בור||
-בורא עולם|demiurge|bɔ§‹§ʁɛ§‹§ §(ʔ)§ɔ§la§m|bore''olam|בּוֹרֵא עוֹלָם‎
+בורא עולם|demiurge|bɔ,‹,ʁɛ,‹, ,(ʔ),ɔ,la,m|bore''olam|בּוֹרֵא עוֹלָם‎
 בורבון||
 בורג||
 בורות||
@@ -1331,7 +1331,7 @@ autoExpandExamples.he = `
 בורסה||
 בורקס||
 בוש||
-בוש־דו־רון|Bouches-du-Rhône|b§u§ʃ§–§d§u§–§ˈʁ§o§n|bush-du-ron|
+בוש־דו־רון|Bouches-du-Rhône|b,u,ʃ,–,d,u,–,ˈʁ,o,n|bush-du-ron|
 בושה||
 בושם||
 בז||
@@ -1342,8 +1342,8 @@ autoExpandExamples.he = `
 בזכות||
 בזלת||
 בזתא||
-בחוץ|outside|ba§ˈx§u§t͡s|bakhúts|בַּחוּץ
-בחור|guy, boy|ba§ˈχ§u§r|bakhúr|בָּחוּר
+בחוץ|outside|ba,ˈx,u,t͡s|bakhúts|בַּחוּץ
+בחור|guy, boy|ba,ˈχ,u,r|bakhúr|בָּחוּר
 בחורה||
 בחייך||
 בחילה||
@@ -1352,24 +1352,24 @@ autoExpandExamples.he = `
 בחירה||
 בחמלה||
 בחן||
-בחר|to choose|ba§ˈχa§ʁ|bakhár|בָּחַר
+בחר|to choose|ba,ˈχa,ʁ|bakhár|בָּחַר
 בחרות||
 בחריין||
 בחש||
-בטוח|confident|ba§ˈt§u.§aχ|batúakh|בָּטוּחַ
+בטוח|confident|ba,ˈt,u.,aχ|batúakh|בָּטוּחַ
 בטון||
 בטח||
 בטחון||
 בטטה||
 בטיחות||
 בטל||
-בטן|belly|ˈbɛ§tɛ§n|béten|בֶּטֶן
-בֶּטֶן|belly|ˈbɛ§tɛ§n|béten|בטן
+בטן|belly|ˈbɛ,tɛ,n|béten|בֶּטֶן
+בֶּטֶן|belly|ˈbɛ,tɛ,n|béten|בטן
 בטריה||
 בי||
 ביאס||
 ביאר||
-ביג מק|Big Mac|bi§‹§ɡ§ §me§k|big mek|בִּיג מֶק
+ביג מק|Big Mac|bi,‹,ɡ, ,me,k|big mek|בִּיג מֶק
 בידה||
 בידוד||
 בידח||
@@ -1388,8 +1388,8 @@ autoExpandExamples.he = `
 ביזון||
 ביחד||
 ביט||
-ביטא|to pronounce|bi§‹§ˈte§(ʔ)|bité|בִּטֵּא
-ביטוח|insurance|bi§‹§ˈt§u§aχ|bitúakh|בִּטּוּחַ
+ביטא|to pronounce|bi,‹,ˈte,(ʔ)|bité|בִּטֵּא
+ביטוח|insurance|bi,‹,ˈt,u,aχ|bitúakh|בִּטּוּחַ
 ביטוי||
 ביטול||
 ביטחון עצמי||
@@ -1398,7 +1398,7 @@ autoExpandExamples.he = `
 ביטחוני||
 ביטל||
 ביי||
-בייגל|bagel|ˈbe§›§j.§ɡe§l|béigel|בֵּיְגֶּל
+בייגל|bagel|ˈbe,›,j.,ɡe,l|béigel|בֵּיְגֶּל
 בייגלה||
 בייג׳ינג||
 בייחוד||
@@ -1416,12 +1416,12 @@ autoExpandExamples.he = `
 בין הפטיש והסדן||
 בין השאר||
 בין תחומי||
-בין|between|be§‹§n|bēn|בֵּין
+בין|between|be,‹,n|bēn|בֵּין
 בין־דורי||
 בין־ממשלתי||
 בין־תחומי||
 בינה מלאכותית||
-בינה|understanding|bi§‹§ˈna§‹|biná|בִּינָה
+בינה|understanding|bi,‹,ˈna,‹|biná|בִּינָה
 בינוני||
 בינלאומי||
 בינת||
@@ -1431,8 +1431,8 @@ autoExpandExamples.he = `
 ביסקסואלי||
 ביצה מקושקשת||
 ביצה מקשקשת||
-ביצה|egg|bɛ§‹§ˈt͡sa§‹|betzá|בֵּיצָה
-בֵּיצָה|egg|bɛ§‹§ˈt͡sa§‹|betzá|ביצה
+ביצה|egg|bɛ,‹,ˈt͡sa,‹|betzá|בֵּיצָה
+בֵּיצָה|egg|bɛ,‹,ˈt͡sa,‹|betzá|ביצה
 ביצייה||
 ביצים||
 ביצית||
@@ -1455,7 +1455,7 @@ autoExpandExamples.he = `
 בית הכרם||
 בית המקדש||
 בית הנבחרים||
-בית חולים|hospital|ˈbe§iː§t§ §χ§o§ˈliː§‹§m|beit kholím|בֵּית חוֹלִים
+בית חולים|hospital|ˈbe,iː,t, ,χ,o,ˈliː,‹,m|beit kholím|בֵּית חוֹלִים
 בית חרושת||
 בית כנסת||
 בית לחם||
@@ -1468,11 +1468,11 @@ autoExpandExamples.he = `
 בית עבוט||
 בית עולם||
 בית קברות||
-בית קולנוע|cinema|ˈbe§iː§t§ §k§o§l§ˈn§o.§a|beit kolnóa'|בֵּית־קוֹלְנוֹעַ
+בית קולנוע|cinema|ˈbe,iː,t, ,k,o,l,ˈn,o.,a|beit kolnóa'|בֵּית־קוֹלְנוֹעַ
 בית קפה||
 בית שחי||
 בית שמש||
-בית|house|ˈba§j§t|báyit|בַּיִת
+בית|house|ˈba,j,t|báyit|בַּיִת
 ביתא||
 בי״ח||
 בי״ס||
@@ -1485,7 +1485,7 @@ autoExpandExamples.he = `
 בכי||
 בכיין||
 בכיר||
-בכל אופן|anyway(s)|be§ˈχo§l§ §ˈʔ§o.§fe§n|bekhol ófen|בְּכָל אֹפֶן
+בכל אופן|anyway(s)|be,ˈχo,l, ,ˈʔ,o.,fe,n|bekhol ófen|בְּכָל אֹפֶן
 בכל זאת||
 בכלל||
 בכר||
@@ -1503,7 +1503,7 @@ autoExpandExamples.he = `
 בלה||
 בלהה||
 בלוג||
-בלוט|acorn|ba§ˈl§u§t|balút|בַּלּוּט
+בלוט|acorn|ba,ˈl,u,t|balút|בַּלּוּט
 בלוטה||
 בלוטת הערמונית||
 בלוטת יותרת המוח||
@@ -1522,32 +1522,32 @@ autoExpandExamples.he = `
 בלש||
 בלשון סגי נהור||
 בלשן||
-בלשנות|linguistics|ba§l§ʃa§ˈn§u§t|balshanút|בַּלְשָׁנוּת
+בלשנות|linguistics|ba,l,ʃa,ˈn,u,t|balshanút|בַּלְשָׁנוּת
 בלתי||
 במאי||
 במבוק||
 במדבר||
 במה||
-במהירות|quickly, fast|bi§m.§(h)i§‹§ˈʁ§u§t|bim'hirút|בִּמְהִירוּת
+במהירות|quickly, fast|bi,m.,(h)i,‹,ˈʁ,u,t|bim'hirút|בִּמְהִירוּת
 במהלך||
 במהרה||
 במו ידיו||
-במו|in, by means of|be§m§o|bemó|בְּמוֹ
+במו|in, by means of|be,m,o|bemó|בְּמוֹ
 במיוחד||
 במקו||
 במקום שאין אנשים השתדל להיות איש||
-במקום|instead of|bi§m§ˈk§o§m|bim'qóm|בִּמְקוֹם
+במקום|instead of|bi,m,ˈk,o,m|bim'qóm|בִּמְקוֹם
 במשך||
-בן אדם|man, human|ˈbɛ§n§ §a§ˈda§m|ben adám|בֶּן אָדָם
-בֶּן אָדָם|man, human|ˈbɛ§n§ §a§ˈda§m|ben adám|בן אדם
-בן אחר בן|patrilineal descent|be§n§ §(ʔ)a§χa§ʁ§ §be§n|ben akhar ben|בֵּן אַחַר בֵּן
+בן אדם|man, human|ˈbɛ,n, ,a,ˈda,m|ben adám|בֶּן אָדָם
+בֶּן אָדָם|man, human|ˈbɛ,n, ,a,ˈda,m|ben adám|בן אדם
+בן אחר בן|patrilineal descent|be,n, ,(ʔ)a,χa,ʁ, ,be,n|ben akhar ben|בֵּן אַחַר בֵּן
 בן דוד||
 בן זונה||
 בן ישראל||
 בן מלך||
 בן פורת יוסף||
 בן תרבות||
-בן|son|be§n|bén|בֵּן
+בן|son|be,n|bén|בֵּן
 בן־מלך||
 בן־תרבות||
 בנאדם||
@@ -1555,7 +1555,7 @@ autoExpandExamples.he = `
 בנאלי||
 בנגלדש||
 בנגקוק||
-בנה|to build|ba§ˈna§‹|baná|בָּנָה
+בנה|to build|ba,ˈna,‹|baná|בָּנָה
 בנוסף||
 בנזין||
 בנחת||
@@ -1564,9 +1564,9 @@ autoExpandExamples.he = `
 בני ישראל||
 בני־ישראל||
 בניגוד ל־||
-בניין עירייה|town hall|bi§n§›§ˈja§n§ §ʔiː§‹§ri§j§ˈjaː§‹|binyán 'iriyá|בִּנְיַן עִירִיָּה
-בניין|building|bi§n§›§ˈja§n|binyán|בִּנְיָן
-בנימין|Benjamin|bi§n.§ja§ˈmi§‹§n|binyamín|בִּנְיָמִין
+בניין עירייה|town hall|bi,n,›,ˈja,n, ,ʔiː,‹,ri,j,ˈjaː,‹|binyán 'iriyá|בִּנְיַן עִירִיָּה
+בניין|building|bi,n,›,ˈja,n|binyán|בִּנְיָן
+בנימין|Benjamin|bi,n.,ja,ˈmi,‹,n|binyamín|בִּנְיָמִין
 בנין||
 בננה||
 בנק דם||
@@ -1582,7 +1582,7 @@ autoExpandExamples.he = `
 בעוד||
 בעט||
 בעטן||
-בעיה|problem|be.§a§ˈja§‹|be'ayá|בְּעָיָה
+בעיה|problem|be.,a,ˈja,‹|be'ayá|בְּעָיָה
 בעיטה||
 בעייתי||
 בעיקר||
@@ -1593,8 +1593,8 @@ autoExpandExamples.he = `
 בעל חיים||
 בעל כורח||
 בעל תשובה||
-בעל|husband|ˈba§ʔa§l|bá'al|בַּעַל
-בַּעַל|husband|ˈba§ʔa§l|bá'al|בעל
+בעל|husband|ˈba,ʔa,l|bá'al|בַּעַל
+בַּעַל|husband|ˈba,ʔa,l|bá'al|בעל
 בעלה||
 בעלות||
 בעצם||
@@ -1608,19 +1608,19 @@ autoExpandExamples.he = `
 בפרהסיה||
 בץ||
 בצורת||
-בצל|onion|ba§ˈt͡sa§l|batsál|בָּצָל
+בצל|onion|ba,ˈt͡sa,l|batsál|בָּצָל
 בצפר||
 בצק עלים||
 בצק פריך||
 בצק שמרים||
 בצק||
 בצר||
-בקבוק|bottle|ba§k§ˈb§u§k|bakbúk|בַּקְבּוּק
+בקבוק|bottle|ba,k,ˈb,u,k|bakbúk|בַּקְבּוּק
 בקבק||
 בקול רם||
 בקטריולוגיה||
 בקיצור||
-בקע|to hatch, crack|ba§ˈka§–|baqá|בָּקַע
+בקע|to hatch, crack|ba,ˈka,–|baqá|בָּקַע
 בקעה||
 בקר||
 בקרוב||
@@ -1630,11 +1630,11 @@ autoExpandExamples.he = `
 בר מינן||
 בר מצוה||
 בר מצווה||
-בר|outside, except|ba§r|bar|בַּר
+בר|outside, except|ba,r|bar|בַּר
 ברא||
-בראשית|at first|b(e)§ʁe§‹§ˈʃi§‹§t|bereshit|בְּרֵאשִׁית‎
+בראשית|at first|b(e),ʁe,‹,ˈʃi,‹,t|bereshit|בְּרֵאשִׁית‎
 ברבדוס||
-ברבור|swan|ba§ʁ§ˈb§u§ʁ|barbúr|בַּרְבּוּר
+ברבור|swan|ba,ʁ,ˈb,u,ʁ|barbúr|בַּרְבּוּר
 ברבר||
 ברברי||
 ברד||
@@ -1647,18 +1647,18 @@ autoExpandExamples.he = `
 ברוך הבא||
 ברוך הוא וברוך שמו||
 ברוך השם||
-ברוך|blessed|ba§ˈʁ§u§χ|barúkh|בָּרוּךְ
+ברוך|blessed|ba,ˈʁ,u,χ|barúkh|בָּרוּךְ
 ברוכים הבאים||
 ברום||
 ברוניי||
 ברוקולי||
-ברור|clear, evident|baˈ§ʁ§u§ʁ|barúr|בָּרוּר
+ברור|clear, evident|baˈ,ʁ,u,ʁ|barúr|בָּרוּר
 ברוש||
-ברז|tap, faucet|ˈbe§ʁe§z|bérez|בֶּרֶז
+ברז|tap, faucet|ˈbe,ʁe,z|bérez|בֶּרֶז
 ברזיה||
 ברזיל||
 ברזיליה||
-ברזים|taps, faucets|b§ʁa§ˈzi§‹§m|brazim|בְּרָזִים
+ברזים|taps, faucets|b,ʁa,ˈzi,‹,m|brazim|בְּרָזִים
 ברזל||
 ברח||
 ברחש||
@@ -1678,17 +1678,17 @@ autoExpandExamples.he = `
 ברית המועצות||
 ברית מילה||
 ברית||
-ברך|knee|ˈbɛ§ʁɛ§χ|bérekh|בֶּרֶךְ
-בֶּרֶךְ|knee|ˈbɛ§ʁɛ§χ|bérekh|ברך
+ברך|knee|ˈbɛ,ʁɛ,χ|bérekh|בֶּרֶךְ
+בֶּרֶךְ|knee|ˈbɛ,ʁɛ,χ|bérekh|ברך
 ברכה אחרונה||
 ברכה ראשונה||
-ברכה|congratulation|b§ʁa§ˈχa§‹|b'rakhá|בְּרָכָה
+ברכה|congratulation|b,ʁa,ˈχa,‹|b'rakhá|בְּרָכָה
 ברכון||
 ברכת המזון||
 ברלין||
 ברם||
 ברמן||
-ברציפות|consecutively|bə.§rə.§tsi§‹§ˈf§u§t|bir'tsifút|בִּרְצִיפוּת
+ברציפות|consecutively|bə.,rə.,tsi,‹,ˈf,u,t|bir'tsifút|בִּרְצִיפוּת
 ברק||
 ברקזיט||
 ברקן||
@@ -1696,19 +1696,19 @@ autoExpandExamples.he = `
 ברר||
 בשביל||
 בשום אופן||
-בשל|because of|bə§ˈʃe§l|b'shél|בְּשֶׁל
+בשל|because of|bə,ˈʃe,l|b'shél|בְּשֶׁל
 בשלושה דברים אדם ניכר בכוסו בכיסו ובכעסו||
 בשלות||
-בשעטו״מ|in a good and successful time|be.§ʃa.§a§ˈt§u§–§m||abbr of בְּשָׁעָה טוֹבָה וּמֻצְלַחַת/be.ʃaˈa toˈva u.mutsˈla.χat
+בשעטו״מ|in a good and successful time|be.,ʃa.,a,ˈt,u,–,m||abbr of בְּשָׁעָה טוֹבָה וּמֻצְלַחַת/be.ʃaˈa toˈva u.mutsˈla.χat
 בשקורטוסטן||
 בשקירי||
 בשר בחלב||
 בשר לבן||
-בשר|meat|ba§ˈsa§ʁ|basár|בָּשָׂר
+בשר|meat|ba,ˈsa,ʁ|basár|בָּשָׂר
 בת דוד||
 בת ים||
 בת שבע||
-בת|daughter|ba§t|bat|בַּת
+בת|daughter|ba,t|bat|בַּת
 בת־קול||
 בתא||
 בתאבון||
@@ -1720,42 +1720,42 @@ autoExpandExamples.he = `
 ג'ובה||
 ג'וינט||
 גְּבֶרֶת|madam, lady||gvéret|גברת
-גְּבַרְבַר|'big' man|ɡ§va§ʁ§ˈva§ʁ|gvarvár|גברבר|
-גְּבוּל|boundary|ɡ§v§u§l|gvúl|גבול
-גְּלִידָה|ice cream|ɡ§li§‹§ˈda§‹|glidá|גלידה|
-גְּמַר טוֹב|yom kippur greeting|ɡ§ma§ʁ§ §t§o§v|g'már tov|גמר טוב  = May you be sealed in the book of life|
-גְּמָלִים|camels|ɡ§ma§ˈli§‹§m||גמלים
-גמלים|camels|ɡ§ma§ˈli§‹§m||גְּמָלִים
-גִּבְעָה|hill|ɡi§ˈv§a§‹|giv'á|גבעה|
-גִּזְבָּר|treasurer|ɡi§z§ˈba§ʁ|gizbár|גזבר|
-גִּיטָרָה|guitar|ɡi§‹§ˈta§ʁa§‹|gitára|גיטרה|
-גִּשּׁוּר|mediation|ɡi§ˈʃ§u§ʁ|gishúr|גישור|
-גִ׳ירָף|giraffe|dʒi§‹§‹§ˈʁa§f|jiraf|ג׳ירף|
-גִ׳ירָפָה|giraffe f|dʒi§‹§‹§ˈʁa§fa§‹|jiráfa|ג׳ירפה|
-גֶּפֶן|grapevine|ˈɡe§fe§n|géfen|גפן|
-גֶּרֶב|sock|ˈɡe§ʁe§v|gérev|גרב|
-גַּבְרִיאֵל|Gabriel|ɡa§v§ʁi§‹§ˈɛ§l|gavri'él|גבריאל
-גַּג|roof|ga§g||גג
-גג|roof|ga§g||גַּג
-גַּל־קוֹל|sound wave|ɡa§l§-§ˈk§o§l|gal-kól|גל־קול|
-גַּם|also|ga§m|gam|גם|
-גַּמְבָּה|bell pepper|ˈɡa§m§ba§‹|gámba|גמבה
-גַּן|garden|ɡa§n|gan|גן|
-גָּדוֹל|big, large|ɡa§ˈd§o̞§l|galól|גדול|
-גָּזַל|stole (v)|ɡa§ˈza§l|gazál|גזל|
-גָּלְיָת|Goliath|ɡo§l§ˈja§t|golyát|גולית|
-גָּמָל|camel|ɡa§ˈma§l|gamál|גמל|
-גָּנַב|to steal|ɡa§ˈna§v|ganáv|גנב|
-גָּרוֹן|throat|ɡa§ˈʁ§o§n|garón|גרון|
-גֹּדֶשׁ|congestion|ˈɡo§de§ʃ|gódesh|גודש|
+גְּבַרְבַר|'big' man|ɡ,va,ʁ,ˈva,ʁ|gvarvár|גברבר|
+גְּבוּל|boundary|ɡ,v,u,l|gvúl|גבול
+גְּלִידָה|ice cream|ɡ,li,‹,ˈda,‹|glidá|גלידה|
+גְּמַר טוֹב|yom kippur greeting|ɡ,ma,ʁ, ,t,o,v|g'már tov|גמר טוב  = May you be sealed in the book of life|
+גְּמָלִים|camels|ɡ,ma,ˈli,‹,m||גמלים
+גמלים|camels|ɡ,ma,ˈli,‹,m||גְּמָלִים
+גִּבְעָה|hill|ɡi,ˈv,a,‹|giv'á|גבעה|
+גִּזְבָּר|treasurer|ɡi,z,ˈba,ʁ|gizbár|גזבר|
+גִּיטָרָה|guitar|ɡi,‹,ˈta,ʁa,‹|gitára|גיטרה|
+גִּשּׁוּר|mediation|ɡi,ˈʃ,u,ʁ|gishúr|גישור|
+גִ׳ירָף|giraffe|dʒi,‹,‹,ˈʁa,f|jiraf|ג׳ירף|
+גִ׳ירָפָה|giraffe f|dʒi,‹,‹,ˈʁa,fa,‹|jiráfa|ג׳ירפה|
+גֶּפֶן|grapevine|ˈɡe,fe,n|géfen|גפן|
+גֶּרֶב|sock|ˈɡe,ʁe,v|gérev|גרב|
+גַּבְרִיאֵל|Gabriel|ɡa,v,ʁi,‹,ˈɛ,l|gavri'él|גבריאל
+גַּג|roof|ga,g||גג
+גג|roof|ga,g||גַּג
+גַּל־קוֹל|sound wave|ɡa,l,-,ˈk,o,l|gal-kól|גל־קול|
+גַּם|also|ga,m|gam|גם|
+גַּמְבָּה|bell pepper|ˈɡa,m,ba,‹|gámba|גמבה
+גַּן|garden|ɡa,n|gan|גן|
+גָּדוֹל|big, large|ɡa,ˈd,o̞,l|galól|גדול|
+גָּזַל|stole (v)|ɡa,ˈza,l|gazál|גזל|
+גָּלְיָת|Goliath|ɡo,l,ˈja,t|golyát|גולית|
+גָּמָל|camel|ɡa,ˈma,l|gamál|גמל|
+גָּנַב|to steal|ɡa,ˈna,v|ganáv|גנב|
+גָּרוֹן|throat|ɡa,ˈʁ,o,n|garón|גרון|
+גֹּדֶשׁ|congestion|ˈɡo,de,ʃ|gódesh|גודש|
 גּברת|Mrs.|||גְּבֶרֶת
-גּוֹזָל|chick|ɡ§o§ˈza§l|gozál|גוזל|
-גּוֹי|nation (biblical)|g§o§j|goi|גוי|
-גּוֹלָן|Golan (Heights)|ɡ§ɔ§ˈla§n|golán|גולן|
-גּוּף|body|g§u§f|guf|גוף|
-גּם|also|ga§m|gam|גַּם
-גּמלים|camels|ɡ§ma§ˈli§‹§m||גְּמָלִים
-גּ׳ירפה|giraffe|dʒi§‹§‹§ˈra§fa§‹||גִ׳ירָפָה
+גּוֹזָל|chick|ɡ,o,ˈza,l|gozál|גוזל|
+גּוֹי|nation (biblical)|g,o,j|goi|גוי|
+גּוֹלָן|Golan (Heights)|ɡ,ɔ,ˈla,n|golán|גולן|
+גּוּף|body|g,u,f|guf|גוף|
+גּם|also|ga,m|gam|גַּם
+גּמלים|camels|ɡ,ma,ˈli,‹,m||גְּמָלִים
+גּ׳ירפה|giraffe|dʒi,‹,‹,ˈra,fa,‹||גִ׳ירָפָה
 ג־ב־ה||
 ג־ב־ר||
 ג־ד־ל||
@@ -1773,12 +1773,12 @@ autoExpandExamples.he = `
 גאל||
 גאן||
 גאנה||
-גב|back|ˈɡa§v|gav|גַּב
-גַּב|back|ˈɡa§v|gav|גב
+גב|back|ˈɡa,v|gav|גַּב
+גַּב|back|ˈɡa,v|gav|גב
 גבאי||
 גבה||
 גבוה||
-גבול|boundary|ɡ§v§u§l|gvúl|גְּבוּל
+גבול|boundary|ɡ,v,u,l|gvúl|גְּבוּל
 גבור||
 גבות מחוברות||
 גבינה כחולה||
@@ -1788,14 +1788,14 @@ autoExpandExamples.he = `
 גביש||
 גבל||
 גבלית||
-גבעה|hill|ɡi§ˈv§a§‹|giv'á|גִּבְעָה
+גבעה|hill|ɡi,ˈv,a,‹|giv'á|גִּבְעָה
 גבעול||
 גבעתיים||
-גבר|man (male)|ˈɡɛ§vɛ§ʁ|géver|גֶּבֶר
-גֶּבֶר|man (male)|ˈɡɛ§vɛ§ʁ|géver|גבר
-גברבר|'big' man|ɡ§va§ʁ§ˈva§ʁ|gvarvár|גְּבַרְבַר
+גבר|man (male)|ˈɡɛ,vɛ,ʁ|géver|גֶּבֶר
+גֶּבֶר|man (male)|ˈɡɛ,vɛ,ʁ|géver|גבר
+גברבר|'big' man|ɡ,va,ʁ,ˈva,ʁ|gvarvár|גְּבַרְבַר
 גברי||
-גבריאל|Gabriel|ɡa§v§ʁi§‹§ˈɛ§l|gavri'él|גַּבְרִיאֵל
+גבריאל|Gabriel|ɡa,v,ʁi,‹,ˈɛ,l|gavri'él|גַּבְרִיאֵל
 גבריהו||
 גברת|madam, lady||gvéret|גְּבֶרֶת
 גברתי||
@@ -1805,7 +1805,7 @@ autoExpandExamples.he = `
 גד||
 גדא||
 גדה||
-גדול|big, large|ɡa§ˈd§o̞§l|galól|גָּדוֹל
+גדול|big, large|ɡa,ˈd,o̞,l|galól|גָּדוֹל
 גדות||
 גדי||
 גדיה||
@@ -1820,21 +1820,21 @@ autoExpandExamples.he = `
 גוגול||
 גוגל||
 גודל||
-גודש|congestion|ˈɡ§o§de§ʃ|gódesh|גֹּדֶשׁ
+גודש|congestion|ˈɡ,o,de,ʃ|gódesh|גֹּדֶשׁ
 גוואקמולי||
 גוויה||
 גווע||
-גוזל|chick|ɡ§o§ˈza§l|gozál|גּוֹזָל
+גוזל|chick|ɡ,o,ˈza,l|gozál|גּוֹזָל
 גוטפריד||
-גוי|nation (biblical)|g§o§j|goi|גּוֹי
+גוי|nation (biblical)|g,o,j|goi|גּוֹי
 גויה||
 גויס||
 גולגולת||
 גולדברג||
 גולה||
-גולית|Goliath|ɡ§o§l§ˈja§t|golyát|גָּלְיָת
+גולית|Goliath|ɡ,o,l,ˈja,t|golyát|גָּלְיָת
 גולם||
-גולן|Golan (Heights)|ɡ§ɔ§ˈla§n|golán|גּוֹלָן
+גולן|Golan (Heights)|ɡ,ɔ,ˈla,n|golán|גּוֹלָן
 גולף||
 גולש||
 גומה||
@@ -1842,7 +1842,7 @@ autoExpandExamples.he = `
 גומיה||
 גומץ||
 גוספל||
-גוף|body|g§u§f|guf|גּוּף
+גוף|body|g,u,f|guf|גּוּף
 גופה||
 גופיה||
 גופרית||
@@ -1862,9 +1862,9 @@ autoExpandExamples.he = `
 גושפנקא||
 גושפנקה||
 גז||
-גזבר|treasurer|ɡi§z§ˈba§ʁ|gizbár|גִּזְבָּר
+גזבר|treasurer|ɡi,z,ˈba,ʁ|gizbár|גִּזְבָּר
 גזוזטרה||
-גזל|stole (v)|ɡa§ˈza§l|gazál|גָּזַל
+גזל|stole (v)|ɡa,ˈza,l|gazál|גָּזַל
 גזע||
 גזענות||
 גזעני||
@@ -1890,7 +1890,7 @@ autoExpandExamples.he = `
 גיזרון||
 גיח||
 גיחון||
-גיטרה|guitar|ɡi§‹§ˈta§ʁa§‹|gitára|גִּיטָרָה
+גיטרה|guitar|ɡi,‹,ˈta,ʁa,‹|gitára|גִּיטָרָה
 גייס||
 גייר||
 גיל ההתבגרות||
@@ -1919,12 +1919,12 @@ autoExpandExamples.he = `
 גירסה||
 גירש||
 גישה||
-גישור|mediation|ɡi§‹§ˈʃ§u§ʁ|gishúr|גִּשּׁוּר
+גישור|mediation|ɡi,‹,ˈʃ,u,ʁ|gishúr|גִּשּׁוּר
 גישש||
 גל חום||
 גל קול||
 גל||
-גל־קול|sound wave|ɡa§l§-§ˈk§o§l|gal-kól|גַּל־קוֹל
+גל־קול|sound wave|ɡa,l,-,ˈk,o,l|gal-kól|גַּל־קוֹל
 גלאט כשר||
 גלגול||
 גלגל הצלה||
@@ -1942,7 +1942,7 @@ autoExpandExamples.he = `
 גלולה||
 גלות||
 גלח||
-גלידה|ice cream|ɡ§li§‹§ˈda§‹|glidá|גְּלִידָה
+גלידה|ice cream|ɡ,li,‹,ˈda,‹|glidá|גְּלִידָה
 גלידריה||
 גלידרייה||
 גליום||
@@ -1956,9 +1956,9 @@ autoExpandExamples.he = `
 גלשן שלג||
 גם אויל מחריש חכם יחשב||
 גם כן||
-גם|also|ga§m|gam|גַּם
+גם|also|ga,m|gam|גַּם
 גמא||
-גמבה|bell pepper|ˈɡa§m§ba§‹|gámba|גַּמְבָּה
+גמבה|bell pepper|ˈɡa,m,ba,‹|gámba|גַּמְבָּה
 גמגום||
 גמד||
 גמדות||
@@ -1967,16 +1967,16 @@ autoExpandExamples.he = `
 גמדת||
 גמור||
 גמילות חסדים||
-גמל|camel|ɡa§ˈma§l|gamál|גָּמָל
+גמל|camel|ɡa,ˈma,l|gamál|גָּמָל
 גמלת||
 גמר חתימה טובה||
-גמר טוב|yom kippur greeting|ɡ§ma§ʁ§ §t§o§v|g'már tov|גְּמַר טוֹב = May you be sealed in the book of life‎
+גמר טוב|yom kippur greeting|ɡ,ma,ʁ, ,t,o,v|g'már tov|גְּמַר טוֹב = May you be sealed in the book of life‎
 גמר||
 גן בוטני||
 גן ילדים||
 גן עדן||
-גן|garden|ɡa§n|gan|גַּן
-גנב|to steal|ɡa§ˈna§v|ganáv|גָּנַב
+גן|garden|ɡa,n|gan|גַּן
+גנב|to steal|ɡa,ˈna,v|ganáv|גָּנַב
 גנבה||
 גנוז||
 גנוסטי||
@@ -1992,10 +1992,10 @@ autoExpandExamples.he = `
 גס||
 גסטרונומי||
 געגוע||
-גפן|grapevine|ˈɡe§fe§n|géfen|גֶּפֶן
+גפן|grapevine|ˈɡe,fe,n|géfen|גֶּפֶן
 גפרור||
 גר||
-גרב|sock|ˈɡe§ʁe§v|gérev|גֶּרֶב
+גרב|sock|ˈɡe,ʁe,v|gérev|גֶּרֶב
 גרביון||
 גרגיר||
 גרה||
@@ -2003,7 +2003,7 @@ autoExpandExamples.he = `
 גרוזיה||
 גרוזינית||
 גרוטאה||
-גרון|throat|ɡa§ˈʁ§o§n|garón|גָּרוֹן
+גרון|throat|ɡa,ˈʁ,o,n|garón|גָּרוֹן
 גרוני||
 גרוע||
 גרוש||
@@ -2029,57 +2029,57 @@ autoExpandExamples.he = `
 גר״א||
 גשום||
 גשוש||
-גשם|rain|ˈɡɛ§ʃɛ§m|géshem|גֶּשֶׁם
-גֶּשֶׁם|rain|ˈɡɛ§ʃɛ§m|géshem|גשם
+גשם|rain|ˈɡɛ,ʃɛ,m|géshem|גֶּשֶׁם
+גֶּשֶׁם|rain|ˈɡɛ,ʃɛ,m|géshem|גשם
 גשמיות||
 גשר||
 גת||
 גתית||
 ג׳אנק פוד||
 ג׳בלאות||
-ג׳וּק|cockroach, bug|d͡ʒ§‹§u§k|júk|ג׳וק
-ג׳וק|cockroach, bug|d͡ʒ§‹§u§k|júk|ג׳וּק
+ג׳וּק|cockroach, bug|d͡ʒ,‹,u,k|júk|ג׳וק
+ג׳וק|cockroach, bug|d͡ʒ,‹,u,k|júk|ג׳וּק
 ג׳ז||
 ג׳יבריש||
 ג׳יהאד||
 ג׳ין||
 ג׳ינס||
-ג׳ירף|giraffe|dʒi§‹§‹§ˈʁa§f|jiraf|גִ׳ירָף
-ג׳ירפה|giraffe f|dʒi§‹§‹§ˈʁa§fa§‹|jiráfa|גִ׳ירָפָה
+ג׳ירף|giraffe|dʒi,‹,‹,ˈʁa,f|jiraf|גִ׳ירָף
+ג׳ירפה|giraffe f|dʒi,‹,‹,ˈʁa,fa,‹|jiráfa|גִ׳ירָפָה
 ג׳ל||
 ג׳מייקה||
 ג׳נוסיד||
 ג׳קוזי||
 ג׳קסון||
-דְּמָמָה|stillness, silence|d§ma§ˈma§‹|d'mamá|דממה|
-דְּמוּת|image|d§m§u§t|dmut|דמות|
-דְּרָקוֹן|dragon|d§ʁa§ˈk§o§n|d'rakón|דרקון|
-דִּיר|livestock pen|di§‹§ʁ|dir|דיר|
-דִּכּוּי|oppression|di§ˈk§u§j|dikúy|דיכוי|
-דִּמֵּם|to bleed|diˈ§mɛ§m|dimém|דימם|
-דֵּעָה|opinion|de§ˈ(ʔ)a§‹|de'á|דעה|
-דֶּבֶק|glue|ˈde.§ve§k|dévek|דבק|
-דֶּקֶל|palm tree, date|ˈde.§ke§l|dékel|דקל|
-דֶּרֶךְ|road|ˈde§ʁe§χ|dérekh|דרך|
-דֶּשֶׁא|grass|ˈde§ʃe§‹|déshe|דשא|
-דַּלֶּקֶת|inflammation|da§ˈle.§ke§t|daléket|דלקת|
-דַּעַת|mind|ˈda§ʔa§t|dá'at|דעת|
-דָּבָר|thing|da§ˈva§ʁ|davár|דבר|
-דָּג|fish|da§g|dág|דג|
-דָּגֵשׁ|dagesh|dä§ˈɡe̞§ʃ|dagésh|דגש|
+דְּמָמָה|stillness, silence|d,ma,ˈma,‹|d'mamá|דממה|
+דְּמוּת|image|d,m,u,t|dmut|דמות|
+דְּרָקוֹן|dragon|d,ʁa,ˈk,o,n|d'rakón|דרקון|
+דִּיר|livestock pen|di,‹,ʁ|dir|דיר|
+דִּכּוּי|oppression|di,ˈk,u,j|dikúy|דיכוי|
+דִּמֵּם|to bleed|diˈ,mɛ,m|dimém|דימם|
+דֵּעָה|opinion|de,ˈ(ʔ)a,‹|de'á|דעה|
+דֶּבֶק|glue|ˈde.,ve,k|dévek|דבק|
+דֶּקֶל|palm tree, date|ˈde.,ke,l|dékel|דקל|
+דֶּרֶךְ|road|ˈde,ʁe,χ|dérekh|דרך|
+דֶּשֶׁא|grass|ˈde,ʃe,‹|déshe|דשא|
+דַּלֶּקֶת|inflammation|da,ˈle.,ke,t|daléket|דלקת|
+דַּעַת|mind|ˈda,ʔa,t|dá'at|דעת|
+דָּבָר|thing|da,ˈva,ʁ|davár|דבר|
+דָּג|fish|da,g|dág|דג|
+דָּגֵשׁ|dagesh|dä,ˈɡe̞,ʃ|dagésh|דגש|
 דָּמִים|money, funds||damím|דמים
-דָּן|to discuss|da§n|dan|דן|
-דָּפַק|to knock|da§ˈfa§k|dafák|דפק|
-דָּת|religion|da§t|dat|דת|
-דֹּב נְמָלִים|ant eater|do§v§ §ne§ma§ˈli§‹§m|dov n'malím|דוב נמלים|
-דֹּב|bear|do§v|dov|דוב|
-דֻּבְדְּבָן|cherry|du§v§de§ˈva§n|duvd'van|דובדבן|
-דּוֹד|uncle|d§o§d|dod|דוד|
-דּוֹלָר|dollar|ˈd§o§la§r|dólar|דולר|
-דּוּד|boiler|d§o§d|dod|דוד
-דּוּחַ|report|ˈd§u.§aχ|dúakh|דוח|
-דּלק|fuel|ˈde§le§k||דֶּלֶק
-דֶּלֶק|fuel|ˈde§le§k||דּלק
+דָּן|to discuss|da,n|dan|דן|
+דָּפַק|to knock|da,ˈfa,k|dafák|דפק|
+דָּת|religion|da,t|dat|דת|
+דֹּב נְמָלִים|ant eater|do,v, ,ne,ma,ˈli,‹,m|dov n'malím|דוב נמלים|
+דֹּב|bear|do,v|dov|דוב|
+דֻּבְדְּבָן|cherry|du,v,de,ˈva,n|duvd'van|דובדבן|
+דּוֹד|uncle|d,o,d|dod|דוד|
+דּוֹלָר|dollar|ˈd,o,la,r|dólar|דולר|
+דּוּד|boiler|d,o,d|dod|דוד
+דּוּחַ|report|ˈd,u.,aχ|dúakh|דוח|
+דּלק|fuel|ˈde,le,k||דֶּלֶק
+דֶּלֶק|fuel|ˈde,le,k||דּלק
 ד־ר־ש||
 דאב||
 דאג||
@@ -2098,15 +2098,15 @@ autoExpandExamples.he = `
 דביק||
 דבלה||
 דבלין||
-דבק|glue|ˈde.§ve§k|dévek|דֶּבֶק
+דבק|glue|ˈde.,ve,k|dévek|דֶּבֶק
 דבר אחר||
-דבר|thing|da§ˈva§ʁ|davár|דָּבָר
+דבר|thing|da,ˈva,ʁ|davár|דָּבָר
 דברי הימים||
 דברי ימים||
 דברים בטלים||
 דברים||
 דבש||
-דג|fish|da§g|dág|דָּג
+דג|fish|da,g|dág|דָּג
 דגה||
 דגוש||
 דגל||
@@ -2115,7 +2115,7 @@ autoExpandExamples.he = `
 דגן||
 דגש חזק||
 דגש קל||
-דגש|dagesh|dä§ˈɡe̞§ʃ|dagésh|דָּגֵשׁ
+דגש|dagesh|dä,ˈɡe̞,ʃ|dagésh|דָּגֵשׁ
 דד||
 דהר||
 דו||
@@ -2126,22 +2126,22 @@ autoExpandExamples.he = `
 דואר זבל||
 דואר||
 דוא״ל||
-דוב נמלים|ant eater|d§o§v§ §ne§ma§ˈli§‹§m|dov n'malím|דֹּב נְמָלִים
-דוב|bear|d§o§v|dov|דֹּב
-דובאי|Dubai|d§u§ˈba§‹§j|dubay|
-דובדבן|cherry|d§u§v§de§ˈva§n|duvd'van|דֻּבְדְּבָן
+דוב נמלים|ant eater|d,o,v, ,ne,ma,ˈli,‹,m|dov n'malím|דֹּב נְמָלִים
+דוב|bear|d,o,v|dov|דֹּב
+דובאי|Dubai|d,u,ˈba,‹,j|dubay|
+דובדבן|cherry|d,u,v,de,ˈva,n|duvd'van|דֻּבְדְּבָן
 דובר||
 דוברה||
 דוגמא||
 דוגמה||
 דוד המלך||
-דוד|uncle|d§o§d|dod|דּוּד|
+דוד|uncle|d,o,d|dod|דּוּד|
 דודא||
 דודה||
 דודומה||
 דווקא||
 דוור||
-דוח|report|ˈd§u.§aχ|dúakh|דּוּחַ
+דוח|report|ˈd,u.,aχ|dúakh|דּוּחַ
 דוחה||
 דוחן||
 דוכא||
@@ -2152,7 +2152,7 @@ autoExpandExamples.he = `
 דול||
 דולב||
 דולפין||
-דולר|dollar|ˈd§o§la§r|dólar|דּוֹלָר
+דולר|dollar|ˈd,o,la,r|dólar|דּוֹלָר
 דונלד||
 דוס||
 דוסי||
@@ -2168,9 +2168,9 @@ autoExpandExamples.he = `
 דושנבה||
 דז׳ה וו|déjà vu||dezha-vú
 דחה||
-דחליל|scarecrow|da§χ§ˈli§‹§l|dakhlil|דַּחְלִיל
-דחף|to push|da§ˈχa§f|dakháf|דָּחַף
-דָּחַף|to push|da§ˈχa§f|dakháf|דחף
+דחליל|scarecrow|da,χ,ˈli,‹,l|dakhlil|דַּחְלִיל
+דחף|to push|da,ˈχa,f|dakháf|דָּחַף
+דָּחַף|to push|da,ˈχa,f|dakháf|דחף
 דחפור||
 די.ג׳יי||
 די||
@@ -2202,13 +2202,13 @@ autoExpandExamples.he = `
 דיכא||
 דיכאון||
 דיכדך||
-דיכוי|oppression|di§‹§ˈk§u§j|dikúy|דִּכּוּי
+דיכוי|oppression|di,‹,ˈk,u,j|dikúy|דִּכּוּי
 דילדו||
 דילל||
 דילמה||
 דימדומים||
 דימה||
-דימם|to bleed|diˈ§‹§mɛ§m|dimém|דִּמֵּם
+דימם|to bleed|diˈ,‹,mɛ,m|dimém|דִּמֵּם
 דין||
 דינר||
 דיסלקציה||
@@ -2222,7 +2222,7 @@ autoExpandExamples.he = `
 דיקטטורה||
 דיקלם||
 דיקן||
-דיר|livestock pen|di§‹§ʁ|dir|דִּיר
+דיר|livestock pen|di,‹,ʁ|dir|דִּיר
 דירה||
 דכא||
 דכדוך||
@@ -2235,56 +2235,56 @@ autoExpandExamples.he = `
 דליקה||
 דלעת||
 דלק||
-דלקת|inflammation|da§ˈle.§ke§t|daléket|דַּלֶּקֶת
+דלקת|inflammation|da,ˈle.,ke,t|daléket|דַּלֶּקֶת
 דלת||
 דלתא||
 דל״ת||
-דם|blood|ˈda§m|dam|דָּם
-דָּם|blood|ˈda§m|dam|דם
+דם|blood|ˈda,m|dam|דָּם
+דָּם|blood|ˈda,m|dam|דם
 דמה||
 דמוקרט||
 דמוקרטי||
-דמוקרטיה|democracy|de§m§o§ˈk§ra§t§ja§‹|demokrátya| דֵּמוֹקְרַטְיָה
+דמוקרטיה|democracy|de,m,o,ˈk,ra,t,ja,‹|demokrátya| דֵּמוֹקְרַטְיָה
 דמוקרטיזציה||
-דמות|image|d§m§u§t|dmut|דְּמוּת
+דמות|image|d,m,u,t|dmut|דְּמוּת
 דמיון||
 דמיין||
 דמים|money, funds||damím|דָּמִים
 דמין||
 דמם||
-דממה|stillness, silence|d§ma§ˈma§‹|d'mamá|דְּמָמָה
+דממה|stillness, silence|d,ma,ˈma,‹|d'mamá|דְּמָמָה
 דמע||
 דמעה||
 דמקה||
 דמשק||
-דן|to discuss|da§n|dan|דָּן
+דן|to discuss|da,n|dan|דָּן
 דנדרוכרונולוגיה||
 דניאל||
 דנית||
 דנמרק||
-דעה|opinion|de§ˈ(ʔ)a§‹|de'á|דֵּעָה
+דעה|opinion|de,ˈ(ʔ)a,‹|de'á|דֵּעָה
 דעך||
-דעת|mind|ˈda§ʔa§t|dá'at|דַּעַת
+דעת|mind|ˈda,ʔa,t|dá'at|דַּעַת
 דף||
 דפדפן||
 דפיברילטור||
 דפנה||
-דפק|to knock|da§ˈfa§k|dafák|דָּפַק
+דפק|to knock|da,ˈfa,k|dafák|דָּפַק
 דפרסיה||
 דפתר||
 דצמבר||
-דק|thin|ˈda§k|dak|דַּק
-דַּק|thin|ˈda§k|dak|דק
+דק|thin|ˈda,k|dak|דַּק
+דַּק|thin|ˈda,k|dak|דק
 דקאר||
 דקדוק||
 דקדוקי||
 דקה||
 דקות||
 דקירה||
-דקל|palm tree, date|ˈde.§ke§l|dékel|דֶּקֶל
+דקל|palm tree, date|ˈde.,ke,l|dékel|דֶּקֶל
 דקלום||
-דקר|to stab|da§ˈka§ʁ|dakár|דָּקַר
-דָּקַר|to stab|da§ˈka§ʁ|dakár|דקר
+דקר|to stab|da,ˈka,ʁ|dakár|דָּקַר
+דָּקַר|to stab|da,ˈka,ʁ|dakár|דקר
 דקת קשת||
 דק׳||
 דר||
@@ -2300,66 +2300,66 @@ autoExpandExamples.he = `
 דרור||
 דריווש||
 דרך ארץ||
-דרך|road|ˈde§ʁe§χ|dérekh|דֶּרֶךְ
+דרך|road|ˈde,ʁe,χ|dérekh|דֶּרֶךְ
 דרכון||
 דרמה||
 דרס||
 דרסטי||
-דרקון|dragon|d§ʁa§ˈk§o§n|d'rakón|דְּרָקוֹן
+דרקון|dragon|d,ʁa,ˈk,o,n|d'rakón|דְּרָקוֹן
 דרש||
 דש||
-דשא|grass|ˈde§ʃe§‹|déshe|דֶּשֶׁא
+דשא|grass|ˈde,ʃe,‹|déshe|דֶּשֶׁא
 דשן||
-דת|religion|da§t|dat|דָּת
+דת|religion|da,t|dat|דָּת
 דתי||
 דתל״ש||
 ד׳||
-ד׳ו אל-חיג׳ה|(Dhu al-Hijjah)|ð§‹§u§ §a§l§ §ħ§i§d͡ʒa§‹§–|ذو الحجة
+ד׳ו אל-חיג׳ה|(Dhu al-Hijjah)|ð,‹,u, ,a,l, ,ħ,i,d͡ʒa,‹,–|ذو الحجة
 ד״א||
-ד״ר|doctor|ˈdo§kto§ʁ|Dr.|abbreviation of דּוֹקְטוֹר‎
+ד״ר|doctor|ˈdo,kto,ʁ|Dr.|abbreviation of דּוֹקְטוֹר‎
 ד״ש||
 הֱוֵא|Be!||hevé|(rare) הוא
-הֲבָנָה|understanding|ha.§va§ˈna§‹|havaná|הבנה|
-הֲדַסָּה|Hadasa|ha.§da.§ˈsa§‹|hadasá|הדסה|
-הִזְדַּמְּנוּת|opportunity|hi§z.§da§m§ˈn§u§t|hizdam'nút|הזדמנות|
-הִזְכִּיר|to remind|(h)i§z§ˈki§‹§ʁ|hizkir|הזכיר|
-הִכָּה|to hit|hi§ˈka§‹|hiká|הכה
-הִסְבִּיר|to explain|hi§s§ˈbi§‹§r|bisbír|הסביר|
-הִסְתִּיר|to hide, conceal|(h)i§s§ˈt§i§‹§ʁ|histír|הסתיר|
-הִסְתַּתֵּר|to hide onself|(h)i§s§ta§ˈte§ʁ|histatér|הסתתר|
-הִפְגִּין|to protest|hi§f§ˈɡi§‹§n|hifgín|הפגין|
-הִפְשִׁיט|to undress|hi§f§ˈʃi§‹§t|hifshit|הפשיט|
-הִצְהִיר|to declare formally|(h)i§t͡s§ˈ(h)i§‹§ʁ|hitshir|הצהיר|
-הִצְטַחֵק|to chuckle|(h)i§t͡s§ta§ˈχɛ§k|hitstakhek|הצטחק|
-הִצְטָרְפוּת|joining|hi§ts.§ta§r§ˈf§u§t|hitztar'fút|הצטרפות|
-הִקְהִיל|to bring together|hi§k.§ˈhi§‹§l|hikhíl|הקהיל|
-הִקְשִׁיב|to listen|(h)i§k§ˈʃi§‹§v|hikshív|הקשיב|
-הִתְאַבְּדוּת|suicide|hi§t§(ʔ)a§b§ˈd§u§t|hit'abdút|התאבדות|
-הִתְאַבֵּד|to commit suicide|hi§t§(ʔ)a§ˈbe§d|hit'abéd|התאבד|
-הִתְאַגֵּד|to incorporate|hi§t§(ʔ)a§ˈɡe§d|hit'agéd|התאגד|
-הִתְכַּוֵּן|to mean, intend|hi§t.§ka§ˈve§n|hitkavén|התכוון|
-הִתְפַּשֵּׁט|to undress|hi§t§pa§ˈʃe§t|hitpashét|התפשט|
-הִתְקוֹמְמוּת|insurrection|hi§t§k§ɔ§mɛ§m§u§t|hitkomemut|התקוממות|
-הִתְרַפֵּא|to recuperate|(h)i§t§ʁa§ˈpe§‹|hitrapé|התרפא|
-הֵבִיא|to bring|he§ˈvi§‹§‹|hevi|הביא|
-הֵבִין|to understand|hɛ§ˈvi§‹§n|hevin|הבין|
-הֵד|echo|hɛ§d|héd|הד
-הֵם|those, they|ˈhɛ§m|hem
-הֶחְדִּיר|to insert|(h)ɛ§χ§ˈdi§‹§ʁ|hekhdir|החדיר|
-הֶחְזִיק|to hold, grab|he§χ§ˈzi§‹§k|hekhzik|החזיק|
-הֶלְחֵם|portmanteau|he§l§χe§m|helkhem|הלחם|
-הֶפֶךְ|the opposite|ˈhe§fe§χ|héfekh|הפך|
-הֶרְאָה|show|(h)ɛ§ʁ§ˈ(ʔ)a§‹|her'á|הראה|
-הַפְרָעָה|disturbance|(h)a§f§ra§ˈ(ʔ)a§‹|hafra'á|הפרעה|
-הַפַּעַם|this time|ha§pa§ʔa§m|hapáam|הפעם|
-הַר|mountain|ha§ʁ|har|הר|
-הַשְׁפָּעָה|influence|ha§ʃ.§pa§ˈ(ʔ)a§‹|hashpa'á|השפעה|
-הַשׁוֹאָה|the Holocaust|(h)a§ʃ§ɔ§(ʔ)ˈa§‹|ha-sho'á|השואה|
-הָאָרֶץ|Israel|ha§ˈ(ʔ)a§ʁe§t͡s|ha'árets|הארץ|
-הָיָה|to exist|(h)a§ˈja§‹|hayá|היה|
-הָלַךְ|to walk|ha§ˈla§χ|halákh|הלך
-הָעוֹלָם|the world|ha§ʕ§ɔ§ˈla§m|ha'olám|העולם|
-הֹדּוּ|India|ˈho.§d§u|hódu|הודו|
+הֲבָנָה|understanding|ha.,va,ˈna,‹|havaná|הבנה|
+הֲדַסָּה|Hadasa|ha.,da.,ˈsa,‹|hadasá|הדסה|
+הִזְדַּמְּנוּת|opportunity|hi,z.,da,m,ˈn,u,t|hizdam'nút|הזדמנות|
+הִזְכִּיר|to remind|(h)i,z,ˈki,‹,ʁ|hizkir|הזכיר|
+הִכָּה|to hit|hi,ˈka,‹|hiká|הכה
+הִסְבִּיר|to explain|hi,s,ˈbi,‹,r|bisbír|הסביר|
+הִסְתִּיר|to hide, conceal|(h)i,s,ˈt,i,‹,ʁ|histír|הסתיר|
+הִסְתַּתֵּר|to hide onself|(h)i,s,ta,ˈte,ʁ|histatér|הסתתר|
+הִפְגִּין|to protest|hi,f,ˈɡi,‹,n|hifgín|הפגין|
+הִפְשִׁיט|to undress|hi,f,ˈʃi,‹,t|hifshit|הפשיט|
+הִצְהִיר|to declare formally|(h)i,t͡s,ˈ(h)i,‹,ʁ|hitshir|הצהיר|
+הִצְטַחֵק|to chuckle|(h)i,t͡s,ta,ˈχɛ,k|hitstakhek|הצטחק|
+הִצְטָרְפוּת|joining|hi,ts.,ta,r,ˈf,u,t|hitztar'fút|הצטרפות|
+הִקְהִיל|to bring together|hi,k.,ˈhi,‹,l|hikhíl|הקהיל|
+הִקְשִׁיב|to listen|(h)i,k,ˈʃi,‹,v|hikshív|הקשיב|
+הִתְאַבְּדוּת|suicide|hi,t,(ʔ)a,b,ˈd,u,t|hit'abdút|התאבדות|
+הִתְאַבֵּד|to commit suicide|hi,t,(ʔ)a,ˈbe,d|hit'abéd|התאבד|
+הִתְאַגֵּד|to incorporate|hi,t,(ʔ)a,ˈɡe,d|hit'agéd|התאגד|
+הִתְכַּוֵּן|to mean, intend|hi,t.,ka,ˈve,n|hitkavén|התכוון|
+הִתְפַּשֵּׁט|to undress|hi,t,pa,ˈʃe,t|hitpashét|התפשט|
+הִתְקוֹמְמוּת|insurrection|hi,t,k,ɔ,mɛ,m,u,t|hitkomemut|התקוממות|
+הִתְרַפֵּא|to recuperate|(h)i,t,ʁa,ˈpe,‹|hitrapé|התרפא|
+הֵבִיא|to bring|he,ˈvi,‹,‹|hevi|הביא|
+הֵבִין|to understand|hɛ,ˈvi,‹,n|hevin|הבין|
+הֵד|echo|hɛ,d|héd|הד
+הֵם|those, they|ˈhɛ,m|hem
+הֶחְדִּיר|to insert|(h)ɛ,χ,ˈdi,‹,ʁ|hekhdir|החדיר|
+הֶחְזִיק|to hold, grab|he,χ,ˈzi,‹,k|hekhzik|החזיק|
+הֶלְחֵם|portmanteau|he,l,χe,m|helkhem|הלחם|
+הֶפֶךְ|the opposite|ˈhe,fe,χ|héfekh|הפך|
+הֶרְאָה|show|(h)ɛ,ʁ,ˈ(ʔ)a,‹|her'á|הראה|
+הַפְרָעָה|disturbance|(h)a,f,ra,ˈ(ʔ)a,‹|hafra'á|הפרעה|
+הַפַּעַם|this time|ha,pa,ʔa,m|hapáam|הפעם|
+הַר|mountain|ha,ʁ|har|הר|
+הַשְׁפָּעָה|influence|ha,ʃ.,pa,ˈ(ʔ)a,‹|hashpa'á|השפעה|
+הַשׁוֹאָה|the Holocaust|(h)a,ʃ,ɔ,(ʔ)ˈa,‹|ha-sho'á|השואה|
+הָאָרֶץ|Israel|ha,ˈ(ʔ)a,ʁe,t͡s|ha'árets|הארץ|
+הָיָה|to exist|(h)a,ˈja,‹|hayá|היה|
+הָלַךְ|to walk|ha,ˈla,χ|halákh|הלך
+הָעוֹלָם|the world|ha,ʕ,ɔ,ˈla,m|ha'olám|העולם|
+הֹדּוּ|India|ˈho.,d,u|hódu|הודו|
 ה־||
 ה־ל־ל||
 ה־ר־ס||
@@ -2383,7 +2383,7 @@ autoExpandExamples.he = `
 האקר||
 הארה||
 האריך||
-הארץ|Israel|ha§ˈ(ʔ)a§ʁe§t͡s|ha'árets|הָאָרֶץ
+הארץ|Israel|ha,ˈ(ʔ)a,ʁe,t͡s|ha'árets|הָאָרֶץ
 האשים||
 הב||
 הבא||
@@ -2395,17 +2395,17 @@ autoExpandExamples.he = `
 הבהרה||
 הבטחה||
 הבטיח||
-הביא|to bring|he§ˈvi§‹§‹|hevi|הֵבִיא
+הביא|to bring|he,ˈvi,‹,‹|hevi|הֵבִיא
 הביט||
 הביך||
-הבין|to understand|hɛ§ˈvi§‹§n|hevin|הֵבִין
+הבין|to understand|hɛ,ˈvi,‹,n|hevin|הֵבִין
 הביס||
 הביע כעס||
 הביתה||
 הבל הבלים||
 הבל||
 הבליע||
-הבנה|understanding|ha.§va§ˈna§‹|havaná|הֲבָנָה
+הבנה|understanding|ha.,va,ˈna,‹|havaná|הֲבָנָה
 הברה||
 הבריג||
 הבריח||
@@ -2440,7 +2440,7 @@ autoExpandExamples.he = `
 הגעה||
 הגר||
 הגשה||
-הד|echo|hɛ§d|héd|הֵד
+הד|echo|hɛ,d|héd|הֵד
 הדאיג||
 הדבקה||
 הדגים||
@@ -2455,7 +2455,7 @@ autoExpandExamples.he = `
 הדליק||
 הדלקה||
 הדס||
-הדסה|Hadasa|ha.§da.§ˈsa§‹|hadasá|הֲדַסָּה
+הדסה|Hadasa|ha.,da.,ˈsa,‹|hadasá|הֲדַסָּה
 הדפיס||
 הדקה ה־90||
 הדר||
@@ -2463,15 +2463,15 @@ autoExpandExamples.he = `
 הדרך לגיהנום רצופה כוונות טובות||
 הדרכה||
 ההיא||
-הוֹדָעָה|notice|(h)§o.§da§ˈ(ʔ)a§‹|hoda'á|הודעה|
-הוֹכָחָה|proof, confirmation|h§o.§χa§ˈħa§‹|hokhakhá|הוכחה|
-הוֹן|wealth, fortune|h§o§n|hon|הון
-הוֹעִיל|useful|h§o§ˈ(ʔ)i§‹§l|ho'il|הועיל|
-הוֹצִיא|to take out|h§o§ˈt͡s§i§‹§‹|hotsi|הוציא|
-הוֹרְדוֹס|Herod|ˈ(h)§o§r§d§o§s|hórdos|הורדוס|
-הוֹשֵׁעַ|Hosea|h§o.§ˈʃe.§a|hoshéa|הושע|
-הוּא|he|(h)§u§‹|hu|הוא
-הוא|he|(h)§u§‹|hu|הוּא
+הוֹדָעָה|notice|(h),o.,da,ˈ(ʔ)a,‹|hoda'á|הודעה|
+הוֹכָחָה|proof, confirmation|h,o.,χa,ˈħa,‹|hokhakhá|הוכחה|
+הוֹן|wealth, fortune|h,o,n|hon|הון
+הוֹעִיל|useful|h,o,ˈ(ʔ)i,‹,l|ho'il|הועיל|
+הוֹצִיא|to take out|h,o,ˈt͡s,i,‹,‹|hotsi|הוציא|
+הוֹרְדוֹס|Herod|ˈ(h),o,r,d,o,s|hórdos|הורדוס|
+הוֹשֵׁעַ|Hosea|h,o.,ˈʃe.,a|hoshéa|הושע|
+הוּא|he|(h),u,‹|hu|הוא
+הוא|he|(h),u,‹|hu|הוּא
 הואץ||
 הואר||
 הוביל||
@@ -2482,9 +2482,9 @@ autoExpandExamples.he = `
 הוגנב||
 הוד||
 הודה||
-הודו|India|ˈh§o.§d§u|hódu|הֹדּוּ
+הודו|India|ˈh,o.,d,u|hódu|הֹדּוּ
 הודיע||
-הודעה|notice|(h)§o.§da§ˈ(ʔ)a§‹|hoda'á|הוֹדָעָה
+הודעה|notice|(h),o.,da,ˈ(ʔ)a,‹|hoda'á|הוֹדָעָה
 הוה||
 הווה||
 הווריד||
@@ -2498,7 +2498,7 @@ autoExpandExamples.he = `
 הוי״ה||
 הוכה||
 הוכח||
-הוכחה|proof, confirmation|h§o.§χa§ˈħa§‹|hokhakhá|הוֹכָחָה
+הוכחה|proof, confirmation|h,o.,χa,ˈħa,‹|hokhakhá|הוֹכָחָה
 הוכיח בשלילה||
 הוכיח||
 הוכן||
@@ -2526,7 +2526,7 @@ autoExpandExamples.he = `
 הומניזם||
 הומניטרי||
 הון עתק||
-הון|wealth, fortune|h§o§n|hon|הוֹן
+הון|wealth, fortune|h,o,n|hon|הוֹן
 הונאה||
 הונג קונג||
 הונגריה||
@@ -2538,7 +2538,7 @@ autoExpandExamples.he = `
 הוסע||
 הוסף||
 הועבר||
-הועיל|useful|h§o§ˈ(ʔ)i§‹§l|ho'il|הוֹעִיל
+הועיל|useful|h,o,ˈ(ʔ)i,‹,l|ho'il|הוֹעִיל
 הופיע||
 הופל||
 הופמן||
@@ -2546,7 +2546,7 @@ autoExpandExamples.he = `
 הופשט||
 הופתע||
 הוצא||
-הוציא|to take out|h§o§ˈt͡s§i§‹§‹|hotsi|הוֹצִיא
+הוציא|to take out|h,o,ˈt͡s,i,‹,‹|hotsi|הוֹצִיא
 הוצל||
 הוצע||
 הוקי||
@@ -2556,7 +2556,7 @@ autoExpandExamples.he = `
 הוראה||
 הורגש||
 הורד||
-הורדוס|Herod|ˈ(h)§o§r§d§o§s|hórdos|הוֹרְדוֹס
+הורדוס|Herod|ˈ(h),o,r,d,o,s|hórdos|הוֹרְדוֹס
 הורה||
 הורוביץ||
 הוריד||
@@ -2571,7 +2571,7 @@ autoExpandExamples.he = `
 הושיע||
 הושלט||
 הושלם||
-הושע|Hosea|h§o.§ˈʃe.§a|hoshéa|הוֹשֵׁעַ
+הושע|Hosea|h,o.,ˈʃe.,a|hoshéa|הוֹשֵׁעַ
 הושעה||
 הושפע||
 הושתק||
@@ -2582,7 +2582,7 @@ autoExpandExamples.he = `
 הזדהה||
 הזדווגות||
 הזדיין||
-הזדמנות|opportunity|hi§z.§da§m§ˈn§u§t|hizdam'nút|הִזְדַּמְּנוּת
+הזדמנות|opportunity|hi,z.,da,m,ˈn,u,t|hizdam'nút|הִזְדַּמְּנוּת
 הזדעזע||
 הזדעזעות||
 הזדקן||
@@ -2594,7 +2594,7 @@ autoExpandExamples.he = `
 הזיז||
 הזיע||
 הזיק||
-הזכיר|to remind|(h)i§z§ˈki§‹§ʁ|hizkir|הִזְכִּיר
+הזכיר|to remind|(h)i,z,ˈki,‹,ʁ|hizkir|הִזְכִּיר
 הזמין||
 הזמנה||
 הזנחה||
@@ -2602,9 +2602,9 @@ autoExpandExamples.he = `
 הזריק||
 החביא||
 החג||
-החדיר|to insert|(h)ɛ§χ§ˈdi§‹§ʁ|hekhdir|הֶחְדִּיר
+החדיר|to insert|(h)ɛ,χ,ˈdi,‹,ʁ|hekhdir|הֶחְדִּיר
 החוצה||
-החזיק|to hold, grab|he§χ§ˈzi§‹§k|hekhzik|הֶחְזִיק
+החזיק|to hold, grab|he,χ,ˈzi,‹,k|hekhzik|הֶחְזִיק
 החזיר||
 החזר||
 החטיא||
@@ -2635,10 +2635,10 @@ autoExpandExamples.he = `
 הטרוסקסואלי||
 הטרוסקסואליות||
 הי טק||
-היא|that|ˈhi§‹§‹
+היא|that|ˈhi,‹,‹
 הידרדרות||
 הידרותרפיה||
-היה|to exist|(h)a§ˈja§‹|hayá|הָיָה
+היה|to exist|(h)a,ˈja,‹|hayá|הָיָה
 היהפוך כושי עורו||
 היווה||
 היום||
@@ -2679,7 +2679,7 @@ autoExpandExamples.he = `
 הישג||
 הי״ד||
 הכאיב||
-הכה|to hit|hi§ˈka§–|hiká|הִכָּה
+הכה|to hit|hi,ˈka,–|hiká|הִכָּה
 הכותל המערבי||
 הכחדה||
 הכחיש||
@@ -2716,13 +2716,13 @@ autoExpandExamples.he = `
 הלוואי||
 הלווה||
 הלחים||
-הלחם|portmanteau|he§l§χe§m|helkhem|הֶלְחֵם
+הלחם|portmanteau|he,l,χe,m|helkhem|הֶלְחֵם
 הליום||
 הליכה||
 הלילה||
 הלך לאיבוד||
 הלך לעולמו||
-הלך|to walk|ha§ˈla§χ|halákh|הָלַךְ
+הלך|to walk|ha,ˈla,χ|halákh|הָלַךְ
 הלכה||
 הלכנו||
 הלכתי||
@@ -2732,7 +2732,7 @@ autoExpandExamples.he = `
 הללוקה||
 הלם||
 הלסינקי||
-הם|those, they|ˈhɛ§m|hem
+הם|those, they|ˈhɛ,m|hem
 המבורגר||
 המדתא||
 המה||
@@ -2782,7 +2782,7 @@ autoExpandExamples.he = `
 הנמיך||
 הנצחה||
 הסב||
-הסביר|to explain|hi§s§ˈbi§‹§r|bisbír|הִסְבִּיר
+הסביר|to explain|hi,s,ˈbi,‹,r|bisbír|הִסְבִּיר
 הסבר||
 הסברה||
 הסגברה||
@@ -2806,22 +2806,22 @@ autoExpandExamples.he = `
 הסתגר||
 הסתדרות||
 הסתה||
-הסתובב|to turn|ˌhi§s.§t§o§ˈve§v|histovév|הִסְתּוֹבֵב
-הִסְתּוֹבֵב|to turn|ˌhi§s.§t§o§ˈve§v|histovév|הסתובב
+הסתובב|to turn|ˌhi,s.,t,o,ˈve,v|histovév|הִסְתּוֹבֵב
+הִסְתּוֹבֵב|to turn|ˌhi,s.,t,o,ˈve,v|histovév|הסתובב
 הסתיים||
-הסתיר|to hide, conceal|(h)i§s§ˈt§i§‹§ʁ|histír|הִסְתִּיר
+הסתיר|to hide, conceal|(h)i,s,ˈt,i,‹,ʁ|histír|הִסְתִּיר
 הסתכל||
 הסתעף||
 הסתערב||
 הסתפק||
-הסתתר|to hide onself|(h)i§s§ta§ˈte§ʁ|histatér|הִסְתַּתֵּר
+הסתתר|to hide onself|(h)i,s,ta,ˈte,ʁ|histatér|הִסְתַּתֵּר
 העביד||
 העביר||
 העברה||
 העדיף||
 העדר||
 העולם הבא||
-העולם|the world|ha§ʕ§ɔ§ˈla§m|ha'olám|הָעוֹלָם
+העולם|the world|ha,ʕ,ɔ,ˈla,m|ha'olám|הָעוֹלָם
 העז||
 העטיר||
 העיף||
@@ -2842,7 +2842,7 @@ autoExpandExamples.he = `
 העריץ||
 העתיק||
 העתקה||
-הפגין|to protest|hi§f§ˈɡi§‹§n|hifgín|הִפְגִּין
+הפגין|to protest|hi,f,ˈɡi,‹,n|hifgín|הִפְגִּין
 הפוך||
 הפחיד||
 הפחית||
@@ -2853,7 +2853,7 @@ autoExpandExamples.he = `
 הפיל||
 הפיליפינים||
 הפיץ||
-הפך|the opposite|ˈhe§fe§χ|héfekh|הֶפֶךְ
+הפך|the opposite|ˈhe,fe,χ|héfekh|הֶפֶךְ
 הפכה||
 הפלה||
 הפליא||
@@ -2869,7 +2869,7 @@ autoExpandExamples.he = `
 הפסקה||
 הפסקת אש||
 הפעיל||
-הפעם|this time|ha§pa§ʔa§m|hapáam|הַפַּעַם
+הפעם|this time|ha,pa,ʔa,m|hapáam|הַפַּעַם
 הפצה||
 הפציר||
 הפקיע||
@@ -2878,25 +2878,25 @@ autoExpandExamples.he = `
 הפריד||
 הפריע||
 הפריש||
-הפרעה|disturbance|(h)a§f§ra§ˈ(ʔ)a§‹|hafra'á|הַפְרָעָה
-הפשיט|to undress|hi§f§ˈʃi§‹§t|hifshit|הִפְשִׁיט
+הפרעה|disturbance|(h)a,f,ra,ˈ(ʔ)a,‹|hafra'á|הַפְרָעָה
+הפשיט|to undress|hi,f,ˈʃi,‹,t|hifshit|הִפְשִׁיט
 הפתיע||
 הפתעה||
 הצביע||
 הצגה||
 הצדה||
-הצהיר|to declare formally|(h)i§t͡s§ˈ(h)i§‹§ʁ|hitshir|הִצְהִיר
+הצהיר|to declare formally|(h)i,t͡s,ˈ(h)i,‹,ʁ|hitshir|הִצְהִיר
 הצהרה||
 הצחיק||
 הצטבר||
 הצטברח||
-הצטחק|to chuckle|(h)i§t͡s§ta§ˈχɛ§k|hitstakhek|הִצְטַחֵק
+הצטחק|to chuckle|(h)i,t͡s,ta,ˈχɛ,k|hitstakhek|הִצְטַחֵק
 הצטלם||
 הצטמק||
 הצטנן||
 הצטער||
 הצטרף||
-הצטרפות|joining|hi§ts.§ta§r§ˈf§u§t|hitztar'fút|הִצְטָרְפוּת
+הצטרפות|joining|hi,ts.,ta,r,ˈf,u,t|hitztar'fút|הִצְטָרְפוּת
 הציב||
 הציג||
 הציל||
@@ -2919,11 +2919,11 @@ autoExpandExamples.he = `
 הקדים||
 הקדיש||
 הקדמה||
-הקהיל|to bring together|hi§k.§ˈhi§‹§l|hikhíl|הִקְהִיל
+הקהיל|to bring together|hi,k.,ˈhi,‹,l|hikhíl|הִקְהִיל
 הקטין||
 הקטיר||
-הקיא|to vomit|ˈhɛ§ˈki§‹§‹|heki|הֵקִיא
-הֵקִיא|to vomit|ˈhɛ§ˈki§‹§‹|heki|הקיא
+הקיא|to vomit|ˈhɛ,ˈki,‹,‹|heki|הֵקִיא
+הֵקִיא|to vomit|ˈhɛ,ˈki,‹,‹|heki|הקיא
 הקים||
 הקיף||
 הקל||
@@ -2941,7 +2941,7 @@ autoExpandExamples.he = `
 הקריס||
 הקריש||
 הקש ששבר את גב הגמל||
-הקשיב|to listen|(h)i§k§ˈʃi§‹§v|hikshív|הִקְשִׁיב
+הקשיב|to listen|(h)i,k,ˈʃi,‹,v|hikshív|הִקְשִׁיב
 הק׳||
 הר האלהים||
 הר הבית||
@@ -2949,12 +2949,12 @@ autoExpandExamples.he = `
 הר סיני||
 הר שולחן||
 הר שלחן||
-הר|mountain|ha§ʁ|har|הַר
-הראה|show|(h)ɛ§ʁ§ˈ(ʔ)a§‹|her'á|הֶרְאָה
-הרבה|a lot|ha§ʁ§ˈbɛ§‹|harbé|הַרְבֵּה
-הַרְבֵּה|a lot|ha§ʁ§ˈbɛ§‹|harbé|הרבה
-הרג|to kill|ha§ˈʁa§ɡ|harág|הָרַג
-הָרַג|to kill|ha§ˈʁa§ɡ|harág|הרג
+הר|mountain|ha,ʁ|har|הַר
+הראה|show|(h)ɛ,ʁ,ˈ(ʔ)a,‹|her'á|הֶרְאָה
+הרבה|a lot|ha,ʁ,ˈbɛ,‹|harbé|הַרְבֵּה
+הַרְבֵּה|a lot|ha,ʁ,ˈbɛ,‹|harbé|הרבה
+הרג|to kill|ha,ˈʁa,ɡ|harág|הָרַג
+הָרַג|to kill|ha,ˈʁa,ɡ|harág|הרג
 הרגיז||
 הרגיע||
 הרגיש||
@@ -2969,8 +2969,8 @@ autoExpandExamples.he = `
 הרחמן||
 הרטיב||
 הרי||
-הריח|to smell|hɛ§ʁˈi§‹§aχ|heríakh|הֵרִיחַ
-הֵרִיחַ|to smell|hɛ§ʁˈi§‹§aχ|heríakh|הריח
+הריח|to smell|hɛ,ʁˈi,‹,aχ|heríakh|הֵרִיחַ
+הֵרִיחַ|to smell|hɛ,ʁˈi,‹,aχ|heríakh|הריח
 הרים||
 הריסה||
 הריק||
@@ -2993,7 +2993,7 @@ autoExpandExamples.he = `
 השבתה||
 השגיח||
 השהה||
-השואה|the Holocaust|(h)a§ʃ§ɔ§(ʔ)ˈa§‹|ha-sho'á|הַשׁוֹאָה
+השואה|the Holocaust|(h)a,ʃ,ɔ,(ʔ)ˈa,‹|ha-sho'á|הַשׁוֹאָה
 השוואה||
 השווה||
 השחיז||
@@ -3021,7 +3021,7 @@ autoExpandExamples.he = `
 השעה||
 השפיל||
 השפיע||
-השפעה|influence|ha§ʃ.§pa§ˈ(ʔ)a§‹|hashpa'á|הַשְׁפָּעָה
+השפעה|influence|ha,ʃ.,pa,ˈ(ʔ)a,‹|hashpa'á|הַשְׁפָּעָה
 השקה||
 השקיע||
 השקעה||
@@ -3050,11 +3050,11 @@ autoExpandExamples.he = `
 השתנה||
 השתפר||
 השתתף||
-התאבד|to commit suicide|hi§t§(ʔ)a§ˈbe§d|hit'abéd|הִתְאַבֵּד
-התאבדות|suicide|hi§t§(ʔ)a§b§ˈd§u§t|hit'abdút|הִתְאַבְּדוּת
+התאבד|to commit suicide|hi,t,(ʔ)a,ˈbe,d|hit'abéd|הִתְאַבֵּד
+התאבדות|suicide|hi,t,(ʔ)a,b,ˈd,u,t|hit'abdút|הִתְאַבְּדוּת
 התאבך||
 התאבל||
-התאגד|to incorporate|hi§t§(ʔ)a§ˈɡe§d|hit'agéd|הִתְאַגֵּד
+התאגד|to incorporate|hi,t,(ʔ)a,ˈɡe,d|hit'agéd|הִתְאַגֵּד
 התאגרף||
 התאדה||
 התאהב||
@@ -3123,7 +3123,7 @@ autoExpandExamples.he = `
 התיישב||
 התיר||
 התיש||
-התכוון|to mean, intend|hi§t.§ka§ˈve§‹§n|hitkavén|הִתְכַּוֵּן
+התכוון|to mean, intend|hi,t.,ka,ˈve,‹,n|hitkavén|הִתְכַּוֵּן
 התכונן||
 התכופף||
 התכנס||
@@ -3159,8 +3159,8 @@ autoExpandExamples.he = `
 התנכר||
 התנסה||
 התנער||
-התנפח|to swell|ˌhi§t.§na.§ˈfa§χ|hitnapéakh|הִתְנַפֵּחַ
-הִתְנַפֵּחַ|to swell|ˌhi§t.§na.§ˈfa§χ|hitnapéakh|התנפח
+התנפח|to swell|ˌhi,t.,na.,ˈfa,χ|hitnapéakh|הִתְנַפֵּחַ
+הִתְנַפֵּחַ|to swell|ˌhi,t.,na.,ˈfa,χ|hitnapéakh|התנפח
 התנפל||
 התנצל||
 התנצר||
@@ -3197,7 +3197,7 @@ autoExpandExamples.he = `
 התפרסם||
 התפרע||
 התפרק||
-התפשט|to undress|hi§t§pa§ˈʃe§t|hitpashét|הִתְפַּשֵּׁט
+התפשט|to undress|hi,t,pa,ˈʃe,t|hitpashét|הִתְפַּשֵּׁט
 התפתה||
 התפתח||
 התפתחות||
@@ -3208,7 +3208,7 @@ autoExpandExamples.he = `
 התקהל||
 התקהלות||
 התקומם||
-התקוממות|insurrection|hi§t§k§ɔ§mɛ§m§u§t|hitkomemut|הִתְקוֹמְמוּת
+התקוממות|insurrection|hi,t,k,ɔ,mɛ,m,u,t|hitkomemut|הִתְקוֹמְמוּת
 התקין||
 התקיף||
 התקלח||
@@ -3236,37 +3236,37 @@ autoExpandExamples.he = `
 התרוקן||
 התרחץ||
 התרחש||
-התרפא|to recuperate|(h)i§t§ʁa§ˈpe§‹|hitrapé|הִתְרַפֵּא
+התרפא|to recuperate|(h)i,t,ʁa,ˈpe,‹|hitrapé|הִתְרַפֵּא
 ה׳||
 ה״א||
 ה״מ||
 ו/או||
-וְכוּ׳|etc.|və§ˈχ§u.§lu|v'khu|וכו׳|
-וְרִיד|vein|v§ʁi§‹§d|v'rid|וריד|
-וִיסְקִי|whisky|ˈvi§‹§s§ki§‹|víski|ויסקי|
-וִיקִיפֶּדְיָה|Wikipedia|vi.§‹§ki§‹§ˈpe§d.§ja§‹|vikipédya|ויקיפדיה|
-וֵיילְס|Wales|we§‹§j§l§s|wéils|ויילס|
-וֵרוֹנָה|Verona|veˈ§r§o§n§a§‹|veróna|ורונה|
-וֶרֶד|rose|ˈvɛ§ʁɛ§d|véred|ורד|
-וַיִּקְרָא|Leviticus|va.§ji§k§ˈʁa§‹|vayikrá|ויקרא|
-וַשְׁתִּי‬|Vashti|va§ʃ.§ˈti§‹|vashtí|ושתי|
-וּבְכֵן|in that case|u§v§ˈχɛ§n|uvkhén|ובכן|
+וְכוּ׳|etc.|və,ˈχ,u.,lu|v'khu|וכו׳|
+וְרִיד|vein|v,ʁi,‹,d|v'rid|וריד|
+וִיסְקִי|whisky|ˈvi,‹,s,ki,‹|víski|ויסקי|
+וִיקִיפֶּדְיָה|Wikipedia|vi.,‹,ki,‹,ˈpe,d.,ja,‹|vikipédya|ויקיפדיה|
+וֵיילְס|Wales|we,‹,j,l,s|wéils|ויילס|
+וֵרוֹנָה|Verona|veˈ,r,o,n,a,‹|veróna|ורונה|
+וֶרֶד|rose|ˈvɛ,ʁɛ,d|véred|ורד|
+וַיִּקְרָא|Leviticus|va.,ji,k,ˈʁa,‹|vayikrá|ויקרא|
+וַשְׁתִּי‬|Vashti|va,ʃ.,ˈti,‹|vashtí|ושתי|
+וּבְכֵן|in that case|u,v,ˈχɛ,n|uvkhén|ובכן|
 ו־|and|və-
 ואגאדוגו||
 ואהבת לרעך כמוך||
 ואט||
 ואללה||
-ובכן|in that case|u§v§ˈχɛ§n|uvkhén|וּבְכֵן
+ובכן|in that case|u,v,ˈχɛ,n|uvkhén|וּבְכֵן
 ובלצ״ג||
 וגו'||
 ודאות||
 ודאי||
-וָו|hook|va§v||וו
-וו|hook|va§v||וָו
-ווֹק|wok|w§o§k|wok|ווק|
+וָו|hook|va,v||וו
+וו|hook|va,v||וָו
+ווֹק|wok|w,o,k|wok|ווק|
 וואו|Wow!||wáu
 וואחש||
-וואללה|Walla|ˈ›§wa§‹§›§la§‹
+וואללה|Walla|ˈ›,wa,‹,›,la,‹
 וודו||
 וודקה||
 ווילנא||
@@ -3274,7 +3274,7 @@ autoExpandExamples.he = `
 וולקני||
 ווסווסים||
 וופל||
-ווק|wok|w§o§k|wok|ווֹק
+ווק|wok|w,o,k|wok|ווֹק
 וורשה||
 וושינגטון די. סי.||
 וטו||
@@ -3285,23 +3285,23 @@ autoExpandExamples.he = `
 ויזתא||
 ויטמין||
 ויטנאם||
-ויילס|Wales|we§‹§j§l§s|wéils|וֵיילְס
+ויילס|Wales|we,‹,j,l,s|wéils|וֵיילְס
 ויינטיאן||
 ויכוח||
 וילון||
 וילנה||
 וינה||
-ויסקי|whisky|ˈvi§‹§s§ki§‹|víski|וִיסְקִי
+ויסקי|whisky|ˈvi,‹,s,ki,‹|víski|וִיסְקִי
 ויקי||
 ויקינג||
 ויקינגי||
-ויקיפדיה|Wikipedia|vi.§‹§ki§‹§ˈpe§d.§ja§‹|vikipédya|וִיקִיפֶּדְיָה
-ויקרא|Leviticus|va.§ji§k§ˈʁa§‹|vayikrá|וַיִּקְרָא
+ויקיפדיה|Wikipedia|vi.,‹,ki,‹,ˈpe,d.,ja,‹|vikipédya|וִיקִיפֶּדְיָה
+ויקרא|Leviticus|va.,ji,k,ˈʁa,‹|vayikrá|וַיִּקְרָא
 ויתר||
 וי״ו||
 וכדומה||
 וכד׳||
-וכו׳|etc.|və§ˈχ§u.§lu|v'khu|וְכוּ׳‎
+וכו׳|etc.|və,ˈχ,u.,lu|v'khu|וְכוּ׳‎
 וכן||
 ולינגטון||
 ונדיום||
@@ -3315,33 +3315,33 @@ autoExpandExamples.he = `
 ועדה||
 ופל||
 וקטור||
-ורד|rose|ˈvɛ§ʁɛ§d|véred|וֶרֶד
+ורד|rose|ˈvɛ,ʁɛ,d|véred|וֶרֶד
 ורדרד||
 ורוד||
-ורונה|Verona|veˈ§r§o§n§a§‹|veróna|וֵרוֹנָה
+ורונה|Verona|veˈ,r,o,n,a,‹|veróna|וֵרוֹנָה
 ורחץ||
 וריאציה||
-וריד|vein|v§ʁi§‹§d|v'rid|וְרִיד
+וריד|vein|v,ʁi,‹,d|v'rid|וְרִיד
 ורמיזא||
 ורמייזא||
-ושתי|Vashti|va§ʃ.§ˈti§‹|vashtí|וַשְׁתִּי‬
+ושתי|Vashti|va,ʃ.,ˈti,‹|vashtí|וַשְׁתִּי‬
 ותיק||
-ו׳יליאם|William|ˈw§‹§i§l§j§a§m|
+ו׳יליאם|William|ˈw,‹,i,l,j,a,m|
 ו״ו||
-זְבוּב|fly|z§v§u§v|zvuv|זבוב|
+זְבוּב|fly|z,v,u,v|zvuv|זבוב|
 זְכוּכִית|glass||z'khukhí‹t|זכוכית
-זְכוּת|a right|s§x§u§t|z'khút|זכות
-זְמַן|time|z§ma§n|zman|זמן
-זִהוּם|infection|ziˈ§h§u§m|zihum|זיהום
-זִמְזוּמִלָּה|buzzword|zi§m.§z§u.§mi§ˈla§‹|zimzumilá|זמזומילה|
-זֵעָה|sweat|ze§ˈ(ʕ)a§‹|ze'á|זיעה|
-זֶבְּרָה|zebra|ˈzɛ§b§ʁa§‹|zébra|זברה|
-זֶה|this|ze§‹|ze|זה
-זַן|breed, strain|za§n|zan|זן|
-זַ׳רְגוֹן|jargon|ʒa§‹§r§ɡ§o§n|zhargón| ז׳רגון
-זָהִיר|careful, cautious|za§ˈhi§‹§ʁ|zahír|זהיר|
-זָהָב|gold|za§ˈha§v|zaháv|זהב|
-זָכָר|man, male|za§ˈxa§ʁ|zachár|זכר|
+זְכוּת|a right|s,x,u,t|z'khút|זכות
+זְמַן|time|z,ma,n|zman|זמן
+זִהוּם|infection|ziˈ,h,u,m|zihum|זיהום
+זִמְזוּמִלָּה|buzzword|zi,m.,z,u.,mi,ˈla,‹|zimzumilá|זמזומילה|
+זֵעָה|sweat|ze,ˈ(ʕ)a,‹|ze'á|זיעה|
+זֶבְּרָה|zebra|ˈzɛ,b,ʁa,‹|zébra|זברה|
+זֶה|this|ze,‹|ze|זה
+זַן|breed, strain|za,n|zan|זן|
+זַ׳רְגוֹן|jargon|ʒa,‹,r,ɡ,o,n|zhargón| ז׳רגון
+זָהִיר|careful, cautious|za,ˈhi,‹,ʁ|zahír|זהיר|
+זָהָב|gold|za,ˈha,v|zaháv|זהב|
+זָכָר|man, male|za,ˈxa,ʁ|zachár|זכר|
 ז־ה־ר||
 ז־כ־ר||
 ז־מ־ן||
@@ -3353,13 +3353,13 @@ autoExpandExamples.he = `
 זאב־הים||
 זאבת||
 זאגרב||
-זאת|this|ˈzɔ§‹§t
+זאת|this|ˈzɔ,‹,t
 זב||
 זבדי||
-זבוב|fly|z§v§u§v|zvuv|זְבוּב
+זבוב|fly|z,v,u,v|zvuv|זְבוּב
 זבולון||
 זבל||
-זברה|zebra|ˈzɛ§b§ʁa§‹|zébra|זֶבְּרָה
+זברה|zebra|ˈzɛ,b,ʁa,‹|zébra|זֶבְּרָה
 זגג||
 זגוגית||
 זד||
@@ -3367,15 +3367,15 @@ autoExpandExamples.he = `
 זדון||
 זה סינית בשבילי||
 זה עתה||
-זה|this|ze§–|ze|זֶה
-זהב|gold|za§ˈha§v|zaháv|זָהָב
+זה|this|ze,–|ze|זֶה
+זהב|gold|za,ˈha,v|zaháv|זָהָב
 זהה||
 זהו||
 זהות||
-זהיר|careful, cautious|za§ˈhi§‹§ʁ|zahír|זָהִיר
+זהיר|careful, cautious|za,ˈhi,‹,ʁ|zahír|זָהִיר
 זהירות||
 זו||
-זוֹמְבִּי|zombie|ˈz§o§m§bi§‹|zómbi|זומבי|
+זוֹמְבִּי|zombie|ˈz,o,m,bi,‹|zómbi|זומבי|
 זואולוגיה||
 זוב||
 זוג||
@@ -3391,7 +3391,7 @@ autoExpandExamples.he = `
 זוית||
 זול||
 זולת||
-זומבי|zombie|ˈz§o§m§bi§‹|zómbi|זוֹמְבִּי
+זומבי|zombie|ˈz,o,m,bi,‹|zómbi|זוֹמְבִּי
 זונה||
 זועזע||
 זורם||
@@ -3401,7 +3401,7 @@ autoExpandExamples.he = `
 זיבה||
 זיהה||
 זיהוי||
-זיהום|infection|zi§‹ˈ§h§u§m|zihum|זִהוּם
+זיהום|infection|zi,‹ˈ,h,u,m|zihum|זִהוּם
 זיהם||
 זיו||
 זיוה||
@@ -3416,7 +3416,7 @@ autoExpandExamples.he = `
 זין||
 זינפנדל||
 זיע||
-זיעה|sweat|ze§‹§ˈ(ʕ)a§‹|ze'á|זֵעָה
+זיעה|sweat|ze,‹,ˈ(ʕ)a,‹|ze'á|זֵעָה
 זיף||
 זיקה||
 זיקוק||
@@ -3435,8 +3435,8 @@ autoExpandExamples.he = `
 זכוכית|glass||z'khukhít|זְכוּכִית
 זכור||
 זכות אדם||
-זכות|a right|s§x§u§t|z'khút|זְכוּת
-זכר|man, male|za§ˈxa§ʁ|zachár|זָכָר
+זכות|a right|s,x,u,t|z'khút|זְכוּת
+זכר|man, male|za,ˈxa,ʁ|zachár|זָכָר
 זכרון||
 זכרות||
 זכרי||
@@ -3444,7 +3444,7 @@ autoExpandExamples.he = `
 זכריהו||
 זכרי׳||
 זלפה||
-זמזומילה|buzzword|zi§m.§z§u.§mi§‹§ˈla§‹|zimzumilá|זִמְזוּמִלָּה
+זמזומילה|buzzword|zi,m.,z,u.,mi,‹,ˈla,‹|zimzumilá|זִמְזוּמִלָּה
 זמזם||
 זמין||
 זמינות||
@@ -3452,14 +3452,14 @@ autoExpandExamples.he = `
 זמם||
 זמן אמת||
 זמן קצר||
-זמן|time|z§ma§n|zman|זְמַן
+זמן|time|z,ma,n|zman|זְמַן
 זמני||
 זמר||
 זמריר||
-זן|breed, strain|za§n|zan|זַן
+זן|breed, strain|za,n|zan|זַן
 זנב סוס||
-זנב|tail|za§ˈna§v|zanáv|זָנָב
-זָנָב|tail|za§ˈna§v|zanáv|זנב
+זנב|tail|za,ˈna,v|zanáv|זָנָב
+זָנָב|tail|za,ˈna,v|zanáv|זנב
 זנגביל||
 זנה||
 זנות||
@@ -3493,75 +3493,75 @@ autoExpandExamples.he = `
 זריזות||
 זריחה||
 זריקה||
-זרם|to flow|za§ˈra§m|zarám|זָרַם
-זָרַם|to flow|za§ˈra§m|zarám|זרם
-זרע|seed|ˈzɛ§ʁa§–|zéra|זֶרַע
-זֶרַע|seed|ˈzɛ§ʁa§–|zéra|זרע
-זרק|to throw|za§ˈʁa§k|zarák|זָרַק
-זָרַק|to throw|za§ˈʁa§k|zarák|זרק
+זרם|to flow|za,ˈra,m|zarám|זָרַם
+זָרַם|to flow|za,ˈra,m|zarám|זרם
+זרע|seed|ˈzɛ,ʁa,–|zéra|זֶרַע
+זֶרַע|seed|ˈzɛ,ʁa,–|zéra|זרע
+זרק|to throw|za,ˈʁa,k|zarák|זָרַק
+זָרַק|to throw|za,ˈʁa,k|zarák|זרק
 זרש||
 זרתוסטרא||
 זתר||
-ז׳רגון|jargon|ʒa§‹§r§ɡ§o§n|zhargón| זַ׳רְגוֹן
+ז׳רגון|jargon|ʒa,‹,r,ɡ,o,n|zhargón| זַ׳רְגוֹן
 ז״ל||
 ח'רטום||
-חְנוּן|geek|ˈχ§n§u§n|khnún|חנון|
-חְנוּנִית|geek (f)|ˈχ§n§u§ni§‹§t|khnúnit|חנונית|
-חֲבָל עַל הַזְּמַן|exceptionally good|χa§ˈva§l§ §a§l§ §ha§ˈz§ma§n|χavál al hazmán|חבל על הזמן|
-חֲזִיר|pig|χa§ˈzi§‹§ʁ|khazír|חזיר|
-חֲלֻקָּה|distribution|ħa§lu§ˈqa§‹
-חֲלוֹם|dream|χa§ˈl§o§m|khalóm|חלום|
-חֲמִישִׁי|fifth|χa.§mi§‹§ˈʃi§‹|khamishí|חמישי|
-חֲמִישָּׁה|five|xa.§mi§‹§ˈʃa§‹|khamishá|חמישה|
-חֲנָיָה|parking|χa§na§ˈja§‹§‹|khanayá|חנייה|
-חֲנֻכִּיָּה|hanukkiah|χa.§nu.§ki§ˈja§‹|khanukiyá|חנוכייה|
-חֲנֻכָּה|Hanukka|χa.§nu§ˈka§‹|khanuká|חנוכה|
-חֲנוּת|store, shop|χa§ˈn§u§t|khanút|חנות|
-חֲפִירָה|to excavate|χa§fi§‹§ˈra§‹|khafirá|חפירה|
-חֲפַרְפֶּרֶת|mole|χa§fa§ʁ§ˈpe§ʁe§t|ḥafarpéret|חפרפרת|
-חֲצוֹת|midnight|χa§ˈt͡s§o§t|khatsót|חצות abbr of חצות הלילה χaˌt͡sot-haˈlajla|
-חֲצוֹת־הַלֵּיל|midnight (lit)|χa§ˌt͡s§o§t§-§ha§ˈlɛ§j§l|khatsót-haleyl|חצות הליל|
-חֲצוֹת־הַלַּיְלָה|midnight|χa§ˌt͡s§o§t§-§ha§ˈla§j§la§‹|khatsót-haláyla|חצות הלילה|
-חִבֵּל|to sabotage|χi§ˈbe§l|khibél|חיבל|
-חִטָּה|wheat|χi§ˈta§‹|khitá|חיטה|
-חִיֵּךְ|to smile|χi§ˈ(j)ɛ§χ|khiyékh|חייך|
-חִלָדוֹן|wheat rust|χi§la§ˈd§o§n|khiladón|חילדון|
-חֶבְרָתִי|social|χe§v.§ʁa.§ˈti§‹|khevratí|חברתי|
-חֶבְרוֹן|Hebron|χe§v§ˈʁ§o§n|khevrón|חברון|
-חֶבֶל|rope|ˈχe.§ve§l|khével|חבל|
-חֶדֶר|room|ˈχe.§de§ʁ|khéder|חדר|
-חֶסֶד|goodness|ˈχe§se§d|khésed|חסד|
-חֶרֶב|sword|ˈχe.§ʁe§v|khérev|חרב|
-חֶשְׁבּוֹן|mathematics|ħe§ʃ§ˈb§o§n|kheshbón|חשבון
-חַבְרוּתָא|fellowship|χa§v§ˈʁ§u§ta§‹|khavrúta|חברותא|
-חַוָּה|Eve|χa§ˈva§‹|khavá|חוה|
-חַיִּים|alive|χa§ˈji§‹§m|khayím|חיים|
-חַיָּה|animal|χa§ˈja§‹|khayá|חיה|
-חַיָּט|tailor|χa.§ja§t|khayat|חייט|
-חַלּוֹן|window|χa§ˈl§ɔ§n|khalón|חלון|
-חַם|hot|ˈχa§m|kham|חם
-חַמָּה|the sun|χa§ˈma§‹|khamá|חמה|
-חָבֵר|(male) friend|χa§ˈve§ʁ|khavér|חבר|
-חָבַשׁ|to wear (hat)|χa§ˈva§ʃ|khavásh|חבש|
-חָדָשׁ|new|χa§ˈda§ʃ|khadásh|חדש|
-חָחָחָ|hahaha, LOL|χa§χa§χa|chachacha|חחח|
-חָטִיף|snack|χa§ˈti§‹§f|khatíf|חטיף|
-חָטַף|to grab|χa§ˈta§f|chatáf|חטף|
-חָכָם|wise, smart|χa§ˈχa§m|khakhám|חכם|
-חָלַם|to dream|χa§ˈla§m|khalám|חלם|
-חָלָל|outer space|χa§ˈla§l|khalál|חלל|
-חָם|father-in-law|ˈχa§m|khám
-חָמֵץ|to leaven|χa§ˈme§ts|khaméts|חמץ|
-חָנָ״ג|PE|xa§ˈna§–§ɡ|khanág|חנ״ג abbr for חִנּוּךְ גּוּפָנִי khinúkh gufaní physical education
-חָסִיד|Hassid|χa§ˈsi§‹§d|ḥasíd|חסיד|
-חָסוֹן|strong|xa§ˈs§o§n|khasón|חסון|
-חָרַת|to engrave, carve|χa§ˈʁa§t|kharát|חרת|
-חָשַׁב|to think|χa§ˈʃa§v|khasháv|חשב|
-חָשׁוּב|important|χa§ˈʃ§u§v|khashúv|חשוב|
-חָתוּל|cat|χa§ˈt§u§l|khatúl|חתול|
-חֹרֶף|winter|ˈχo§ʁe§f|khóref|חורף|
-חֻלְצָה|shirt|χu§l§ˈtsa§‹|khultsá|חולצה|
-חֻמָּשׁ|a Chumash|χu§ˈma§ʃ|khumásh|חומש|
+חְנוּן|geek|ˈχ,n,u,n|khnún|חנון|
+חְנוּנִית|geek (f)|ˈχ,n,u,ni,‹,t|khnúnit|חנונית|
+חֲבָל עַל הַזְּמַן|exceptionally good|χa,ˈva,l, ,a,l, ,ha,ˈz,ma,n|χavál al hazmán|חבל על הזמן|
+חֲזִיר|pig|χa,ˈzi,‹,ʁ|khazír|חזיר|
+חֲלֻקָּה|distribution|ħa,lu,ˈqa,‹
+חֲלוֹם|dream|χa,ˈl,o,m|khalóm|חלום|
+חֲמִישִׁי|fifth|χa.,mi,‹,ˈʃi,‹|khamishí|חמישי|
+חֲמִישָּׁה|five|xa.,mi,‹,ˈʃa,‹|khamishá|חמישה|
+חֲנָיָה|parking|χa,na,ˈja,‹,‹|khanayá|חנייה|
+חֲנֻכִּיָּה|hanukkiah|χa.,nu.,ki,ˈja,‹|khanukiyá|חנוכייה|
+חֲנֻכָּה|Hanukka|χa.,nu,ˈka,‹|khanuká|חנוכה|
+חֲנוּת|store, shop|χa,ˈn,u,t|khanút|חנות|
+חֲפִירָה|to excavate|χa,fi,‹,ˈra,‹|khafirá|חפירה|
+חֲפַרְפֶּרֶת|mole|χa,fa,ʁ,ˈpe,ʁe,t|ḥafarpéret|חפרפרת|
+חֲצוֹת|midnight|χa,ˈt͡s,o,t|khatsót|חצות abbr of חצות הלילה χaˌt͡sot-haˈlajla|
+חֲצוֹת־הַלֵּיל|midnight (lit)|χa,ˌt͡s,o,t,-,ha,ˈlɛ,j,l|khatsót-haleyl|חצות הליל|
+חֲצוֹת־הַלַּיְלָה|midnight|χa,ˌt͡s,o,t,-,ha,ˈla,j,la,‹|khatsót-haláyla|חצות הלילה|
+חִבֵּל|to sabotage|χi,ˈbe,l|khibél|חיבל|
+חִטָּה|wheat|χi,ˈta,‹|khitá|חיטה|
+חִיֵּךְ|to smile|χi,ˈ(j)ɛ,χ|khiyékh|חייך|
+חִלָדוֹן|wheat rust|χi,la,ˈd,o,n|khiladón|חילדון|
+חֶבְרָתִי|social|χe,v.,ʁa.,ˈti,‹|khevratí|חברתי|
+חֶבְרוֹן|Hebron|χe,v,ˈʁ,o,n|khevrón|חברון|
+חֶבֶל|rope|ˈχe.,ve,l|khével|חבל|
+חֶדֶר|room|ˈχe.,de,ʁ|khéder|חדר|
+חֶסֶד|goodness|ˈχe,se,d|khésed|חסד|
+חֶרֶב|sword|ˈχe.,ʁe,v|khérev|חרב|
+חֶשְׁבּוֹן|mathematics|ħe,ʃ,ˈb,o,n|kheshbón|חשבון
+חַבְרוּתָא|fellowship|χa,v,ˈʁ,u,ta,‹|khavrúta|חברותא|
+חַוָּה|Eve|χa,ˈva,‹|khavá|חוה|
+חַיִּים|alive|χa,ˈji,‹,m|khayím|חיים|
+חַיָּה|animal|χa,ˈja,‹|khayá|חיה|
+חַיָּט|tailor|χa.,ja,t|khayat|חייט|
+חַלּוֹן|window|χa,ˈl,ɔ,n|khalón|חלון|
+חַם|hot|ˈχa,m|kham|חם
+חַמָּה|the sun|χa,ˈma,‹|khamá|חמה|
+חָבֵר|(male) friend|χa,ˈve,ʁ|khavér|חבר|
+חָבַשׁ|to wear (hat)|χa,ˈva,ʃ|khavásh|חבש|
+חָדָשׁ|new|χa,ˈda,ʃ|khadásh|חדש|
+חָחָחָ|hahaha, LOL|χa,χa,χa|chachacha|חחח|
+חָטִיף|snack|χa,ˈti,‹,f|khatíf|חטיף|
+חָטַף|to grab|χa,ˈta,f|chatáf|חטף|
+חָכָם|wise, smart|χa,ˈχa,m|khakhám|חכם|
+חָלַם|to dream|χa,ˈla,m|khalám|חלם|
+חָלָל|outer space|χa,ˈla,l|khalál|חלל|
+חָם|father-in-law|ˈχa,m|khám
+חָמֵץ|to leaven|χa,ˈme,ts|khaméts|חמץ|
+חָנָ״ג|PE|xa,ˈna,–,ɡ|khanág|חנ״ג abbr for חִנּוּךְ גּוּפָנִי khinúkh gufaní physical education
+חָסִיד|Hassid|χa,ˈsi,‹,d|ḥasíd|חסיד|
+חָסוֹן|strong|xa,ˈs,o,n|khasón|חסון|
+חָרַת|to engrave, carve|χa,ˈʁa,t|kharát|חרת|
+חָשַׁב|to think|χa,ˈʃa,v|khasháv|חשב|
+חָשׁוּב|important|χa,ˈʃ,u,v|khashúv|חשוב|
+חָתוּל|cat|χa,ˈt,u,l|khatúl|חתול|
+חֹרֶף|winter|ˈχo,ʁe,f|khóref|חורף|
+חֻלְצָה|shirt|χu,l,ˈtsa,‹|khultsá|חולצה|
+חֻמָּשׁ|a Chumash|χu,ˈma,ʃ|khumásh|חומש|
 ח־ב־ק||
 ח־ב־ר||
 ח־ז־ר||
@@ -3571,7 +3571,7 @@ autoExpandExamples.he = `
 ח־מ־ץ||
 ח־נ־ה||
 ח־ש־ב||
-חׇפְשִׁי|free|χo§f§ˈʃi§‹
+חׇפְשִׁי|free|χo,f,ˈʃi,‹
 חאג׳||
 חאלב||
 חבדניק||
@@ -3582,8 +3582,8 @@ autoExpandExamples.he = `
 חבילה||
 חבית||
 חביתה||
-חבל על הזמן|exceptionally good|χa§ˈva§l§ §a§l§ §ha§ˈz§ma§n|χavál al hazmán|חֲבָל עַל הַזְּמַן
-חבל|rope|ˈχe.§ve§l|khével|חֶבֶל
+חבל על הזמן|exceptionally good|χa,ˈva,l, ,a,l, ,ha,ˈz,ma,n|χavál al hazmán|חֲבָל עַל הַזְּמַן
+חבל|rope|ˈχe.,ve,l|khével|חֶבֶל
 חבלבל||
 חבלה||
 חבצלת||
@@ -3592,13 +3592,13 @@ autoExpandExamples.he = `
 חבר אוריינות||
 חבר המדינות||
 חבר כנסת||
-חבר|(male) friend|χa§ˈve§ʁ|khavér|חָבֵר
+חבר|(male) friend|χa,ˈve,ʁ|khavér|חָבֵר
 חברה||
-חברון|Hebron|χe§v§ˈʁ§o§n|khevrón|חֶבְרוֹן
+חברון|Hebron|χe,v,ˈʁ,o,n|khevrón|חֶבְרוֹן
 חברות||
-חברותא|fellowship|χa§v§ˈʁ§u§ta§‹|khavrúta|חַבְרוּתָא
-חברתי|social|χe§v.§ʁa.§ˈti§‹|khevratí|חֶבְרָתִי
-חבש|to wear (hat)|χa§ˈva§ʃ|khavásh|חָבַשׁ
+חברותא|fellowship|χa,v,ˈʁ,u,ta,‹|khavrúta|חַבְרוּתָא
+חברתי|social|χe,v.,ʁa.,ˈti,‹|khevratí|חֶבְרָתִי
+חבש|to wear (hat)|χa,ˈva,ʃ|khavásh|חָבַשׁ
 חב״ד||
 חב״דניק||
 חג האורים||
@@ -3622,8 +3622,8 @@ autoExpandExamples.he = `
 חד משמעי||
 חד עין||
 חד צדדי||
-חד|sharp|ˈχa§d|ḥad|חַד
-חַד|sharp|ˈχa§d|ḥad|חד
+חד|sharp|ˈχa,d|ḥad|חַד
+חַד|sharp|ˈχa,d|ḥad|חד
 חד־אופן||
 חדווה||
 חדירה||
@@ -3631,13 +3631,13 @@ autoExpandExamples.he = `
 חדקל||
 חדר מיון||
 חדר ניתוח||
-חדר|room|ˈχe.§de§ʁ|khéder|חֶדֶר
+חדר|room|ˈχe.,de,ʁ|khéder|חֶדֶר
 חדרה||
-חדש|new|χa§ˈda§ʃ|khadásh|חָדָשׁ
+חדש|new|χa,ˈda,ʃ|khadásh|חָדָשׁ
 חדשני||
-חוּגָה|dial|χ§u§ˈɡa§‹|khugá|חוגה|
-חוּם|brown|χ§u§m|khúm|חום|
-חוּ״ל|overseas|χ§u§–§l|Ḥu.L.|חו״ל abbrev of חוּץ לָאָרֶץ‎ ḥutz-la'áretz
+חוּגָה|dial|χ,u,ˈɡa,‹|khugá|חוגה|
+חוּם|brown|χ,u,m|khúm|חום|
+חוּ״ל|overseas|χ,u,–,l|Ḥu.L.|חו״ל abbrev of חוּץ לָאָרֶץ‎ ḥutz-la'áretz
 חוב||
 חובה||
 חובצה||
@@ -3645,12 +3645,12 @@ autoExpandExamples.he = `
 חוג הגדי||
 חוג הסרטן||
 חוג||
-חוגה|dial|χ§u§ˈɡa§‹|khugá|חוּגָה
+חוגה|dial|χ,u,ˈɡa,‹|khugá|חוּגָה
 חוגלה||
 חוד||
 חודש||
 חודשי||
-חוה|Eve|χa§ˈva§‹|khavá|חַוָּה
+חוה|Eve|χa,ˈva,‹|khavá|חַוָּה
 חווה||
 חוויאר||
 חוורון||
@@ -3665,8 +3665,8 @@ autoExpandExamples.he = `
 חוילה||
 חוכמה||
 חול המועד||
-חול|sand|ˈχ§ɔ§l|ḥol|חוֹל
-חוֹל|sand|ˈχ§ɔ§l|ḥol|חול
+חול|sand|ˈχ,ɔ,l|ḥol|חוֹל
+חוֹל|sand|ˈχ,ɔ,l|ḥol|חול
 חולד||
 חולדה||
 חולה||
@@ -3675,9 +3675,9 @@ autoExpandExamples.he = `
 חולל||
 חולם||
 חולני||
-חולצה|shirt|χ§u§l§ˈtsa§‹|khultsá|חֻלְצָה
+חולצה|shirt|χ,u,l,ˈtsa,‹|khultsá|חֻלְצָה
 חולשה||
-חום|brown|χ§u§m|khúm|חוּם
+חום|brown|χ,u,m|khúm|חוּם
 חומה||
 חומוס||
 חומט||
@@ -3686,7 +3686,7 @@ autoExpandExamples.he = `
 חומצה||
 חומצת לימון||
 חומר||
-חומש|a Chumash|χ§u§ˈma§ʃ|khumásh|חֻמָּשׁ
+חומש|a Chumash|χ,u,ˈma,ʃ|khumásh|חֻמָּשׁ
 חונך||
 חוסר אונים||
 חוסר||
@@ -3715,20 +3715,20 @@ autoExpandExamples.he = `
 חור תחת||
 חור||
 חורבן||
-חורף|winter|ˈχ§o§ʁe§f|khóref|חֹרֶף
+חורף|winter|ˈχ,o,ʁe,f|khóref|חֹרֶף
 חורש||
 חורשה||
 חוש||
 חושב||
 חושך||
 חותן||
-חו״ל|overseas|χ§u§–§l|Ḥu.L.|חוּ״ל abbrev of חוּץ לָאָרֶץ‎ ḥutz-la'áretz
+חו״ל|overseas|χ,u,–,l|Ḥu.L.|חוּ״ל abbrev of חוּץ לָאָרֶץ‎ ḥutz-la'áretz
 חו״ק||
 חזאי||
 חזה||
 חזון||
 חזזית||
-חזיר|pig|χa§ˈzi§‹§ʁ|khazír|חֲזִיר
+חזיר|pig|χa,ˈzi,‹,ʁ|khazír|חֲזִיר
 חזית||
 חזן||
 חזק||
@@ -3738,22 +3738,22 @@ autoExpandExamples.he = `
 חזר||
 חזרה||
 חז״ל||
-חחח|hahaha, LOL|χa§χa§χa|chachacha|חָחָחָ
+חחח|hahaha, LOL|χa,χa,χa|chachacha|חָחָחָ
 חטא||
 חטוף||
-חטיף|snack|χa§ˈti§‹§f|khatíf|חָטִיף
+חטיף|snack|χa,ˈti,‹,f|khatíf|חָטִיף
 חטף סגול||
 חטף פתח||
 חטף קמץ||
-חטף|to grab|χa§ˈta§f|chatáf|חָטַף
+חטף|to grab|χa,ˈta,f|chatáf|חָטַף
 חטר||
 חי וקיים||
-חי|to live|ˈχa§j|khay|חַי
-חַי|to live|ˈχa§j|khay|חי
+חי|to live|ˈχa,j|khay|חַי
+חַי|to live|ˈχa,j|khay|חי
 חיבה||
 חיבוק||
 חיבור||
-חיבל|to sabotage|χi§‹§ˈbe§l|khibél|חִבֵּל
+חיבל|to sabotage|χi,‹,ˈbe,l|khibél|חִבֵּל
 חיבק||
 חיבר||
 חיג׳אב||
@@ -3762,7 +3762,7 @@ autoExpandExamples.he = `
 חידק||
 חידקל||
 חידש||
-חיה|animal|χa§ˈja§‹|khayá|חַיָּה
+חיה|animal|χa,ˈja,‹|khayá|חַיָּה
 חיובי||
 חיווט||
 חיוור||
@@ -3770,21 +3770,21 @@ autoExpandExamples.he = `
 חיזק||
 חיזר||
 חיטא||
-חיטה|wheat|χi§‹§ˈta§‹|khitá|חִטָּה
+חיטה|wheat|χi,‹,ˈta,‹|khitá|חִטָּה
 חייב||
-חייט|tailor|χa.§›§ja§t|khayat|חַיָּט
-חייך|to smile|χi§›§ˈ(j)ɛ§χ|khiyékh|חִיֵּךְ
+חייט|tailor|χa.,›,ja,t|khayat|חַיָּט
+חייך|to smile|χi,›,ˈ(j)ɛ,χ|khiyékh|חִיֵּךְ
 חייכן||
 חייל||
 חיים פרטיים||
-חיים|alive|χa§ˈji§‹§m|khayím|חַיִּים
+חיים|alive|χa,ˈji,‹,m|khayím|חַיִּים
 חיישן||
 חיית מחמד||
 חיכה||
 חיל אוויר||
 חיל||
 חילבה||
-חילדון|wheat rust|χi§‹§la§ˈd§o§n|khiladón|חִלָדוֹן
+חילדון|wheat rust|χi,‹,la,ˈd,o,n|khiladón|חִלָדוֹן
 חילון||
 חילוני||
 חילל||
@@ -3820,7 +3820,7 @@ autoExpandExamples.he = `
 חיתן||
 חי״ת||
 חך||
-חכם|wise, smart|χa§ˈχa§m|khakhám|חָכָם
+חכם|wise, smart|χa,ˈχa,m|khakhám|חָכָם
 חכמה||
 חכמולוג||
 חל||
@@ -3833,12 +3833,12 @@ autoExpandExamples.he = `
 חלוה||
 חלווה||
 חלול||
-חלום|dream|χa§ˈl§o§m|khalóm|חֲלוֹם
+חלום|dream|χa,ˈl,o,m|khalóm|חֲלוֹם
 חלומות באספמיה||
-חלון|window|χa§ˈl§ɔ§n|khalón|חַלּוֹן
+חלון|window|χa,ˈl,ɔ,n|khalón|חַלּוֹן
 חלוץ||
 חלוק||
-חלוקה|distribution|ħa§lu§‹§ˈqa§‹|khaluká|חֲלֻקָּה
+חלוקה|distribution|ħa,lu,‹,ˈqa,‹|khaluká|חֲלֻקָּה
 חלזון||
 חלחולת||
 חלט||
@@ -3847,9 +3847,9 @@ autoExpandExamples.he = `
 חליל||
 חלילה||
 חליפה||
-חלל|outer space|χa§ˈla§l|khalál|חָלָל
+חלל|outer space|χa,ˈla,l|khalál|חָלָל
 חללית||
-חלם|to dream|χa§ˈla§m|khalám|חָלַם
+חלם|to dream|χa,ˈla,m|khalám|חָלַם
 חלמון||
 חלמונית||
 חלמיש||
@@ -3857,18 +3857,18 @@ autoExpandExamples.he = `
 חלס||
 חלף||
 חלק דיבור||
-חלק|smooth|χa§ˈla§k|khalák|חָלָק
-חָלָק|smooth|χa§ˈla§k|khalák|חלק
-חלקה|distribution|ħa§lu§ˈqa§‹
+חלק|smooth|χa,ˈla,k|khalák|חָלָק
+חָלָק|smooth|χa,ˈla,k|khalák|חלק
+חלקה|distribution|ħa,lu,ˈqa,‹
 חלקי||
 חלש||
 חלשה||
 חלשות||
-חם|hot|ˈχa§m|kham|חַם
+חם|hot|ˈχa,m|kham|חַם
 חמאה||
 חמאס||
 חמד||
-חמה|the sun|χa§ˈma§‹|khamá|חַמָּה
+חמה|the sun|χa,ˈma,‹|khamá|חַמָּה
 חמוד||
 חמוץ||
 חמור נושא ספרים||
@@ -3880,8 +3880,8 @@ autoExpandExamples.he = `
 חמין||
 חמיצה||
 חמישה עשר||
-חמישה|five|xa.§mi§‹§ˈʃa§‹|khamishá|חֲמִישָּׁה
-חמישי|fifth|χa.§mi§‹§ˈʃi§‹|khamishí|חֲמִישִׁי
+חמישה|five|xa.,mi,‹,ˈʃa,‹|khamishá|חֲמִישָּׁה
+חמישי|fifth|χa.,mi,‹,ˈʃi,‹|khamishí|חֲמִישִׁי
 חמישים||
 חמל||
 חמלה||
@@ -3890,29 +3890,29 @@ autoExpandExamples.he = `
 חמס||
 חמסה||
 חמסין||
-חמץ|to leaven|χa§ˈme§ts|khaméts|חָמֵץ
+חמץ|to leaven|χa,ˈme,ts|khaméts|חָמֵץ
 חמצה||
 חמצן||
 חמר||
 חמרמורת||
-חמש|five|χa§ˈmɛ§ʃ|khamésh|חָמֵשׁ
-חָמֵשׁ|five|χa§ˈmɛ§ʃ|khamésh|חמש
+חמש|five|χa,ˈmɛ,ʃ|khamésh|חָמֵשׁ
+חָמֵשׁ|five|χa,ˈmɛ,ʃ|khamésh|חמש
 חמשה||
 חמשת||
 חן||
 חנה||
 חנוך||
-חנוכה|Hanukka|χa.§n§u§ˈka§‹|khanuká|חֲנֻכָּה
+חנוכה|Hanukka|χa.,n,u,ˈka,‹|khanuká|חֲנֻכָּה
 חנוכיה||
-חנוכייה|hanukkiah|χa.§n§u.§ki§ˈ›§ja§‹|khanukiyá|חֲנֻכִּיָּה
-חנון|geek|ˈχ§n§u§n|khnún|חְנוּן
-חנונית|geek (f)|ˈχ§n§u§ni§‹§t|khnúnit|חְנוּנִית
+חנוכייה|hanukkiah|χa.,n,u.,ki,ˈ›,ja,‹|khanukiyá|חֲנֻכִּיָּה
+חנון|geek|ˈχ,n,u,n|khnún|חְנוּן
+חנונית|geek (f)|ˈχ,n,u,ni,‹,t|khnúnit|חְנוּנִית
 חנות משכונות||
 חנות ספרים||
-חנות|store, shop|χa§ˈn§u§t|khanút|חֲנוּת
+חנות|store, shop|χa,ˈn,u,t|khanút|חֲנוּת
 חנטריש||
 חניון||
-חנייה|parking|χa§na§ˈja§‹§‹|khanayá|חֲנָיָה
+חנייה|parking|χa,na,ˈja,‹,‹|khanayá|חֲנָיָה
 חנית||
 חנך||
 חנכה||
@@ -3920,13 +3920,13 @@ autoExpandExamples.he = `
 חנן||
 חנק||
 חנקן||
-חנ״ג|PE|xa§ˈna§–§ɡ|khanág|חָנָ״ג abbr for חִנּוּךְ גּוּפָנִי khinúkh gufaní physical education
+חנ״ג|PE|xa,ˈna,–,ɡ|khanág|חָנָ״ג abbr for חִנּוּךְ גּוּפָנִי khinúkh gufaní physical education
 חס||
-חסד|goodness|ˈχe§se§d|khésed|חֶסֶד
+חסד|goodness|ˈχe,se,d|khésed|חֶסֶד
 חסה||
 חסוי||
-חסון|strong|xa§ˈs§o§n|khasón|חָסוֹן
-חסיד|Hassid|χa§ˈsi§‹§d|ḥasíd|חָסִיד
+חסון|strong|xa,ˈs,o,n|khasón|חָסוֹן
+חסיד|Hassid|χa,ˈsi,‹,d|ḥasíd|חָסִיד
 חסידה||
 חסידות||
 חסידי||
@@ -3938,12 +3938,12 @@ autoExpandExamples.he = `
 חסרון||
 חפוי||
 חפיר||
-חפירה|to excavate|χa§fi§‹§ˈra§‹|khafirá|חֲפִירָה
+חפירה|to excavate|χa,fi,‹,ˈra,‹|khafirá|חֲפִירָה
 חפף||
 חפץ||
-חפר|to dig|χa§ˈfa§ʁ|khafár|חָפַר
-חָפַר|to dig|χa§ˈfa§ʁ|khafár|חפר
-חפרפרת|mole|χa§fa§ʁ§ˈpe§ʁe§t|ḥafarpéret|חֲפַרְפֶּרֶת
+חפר|to dig|χa,ˈfa,ʁ|khafár|חָפַר
+חָפַר|to dig|χa,ˈfa,ʁ|khafár|חפר
+חפרפרת|mole|χa,fa,ʁ,ˈpe,ʁe,t|ḥafarpéret|חֲפַרְפֶּרֶת
 חפשי||
 חפשית||
 חפת||
@@ -3952,9 +3952,9 @@ autoExpandExamples.he = `
 חצב||
 חצה||
 חצוצרה||
-חצות הליל|midnight (lit)|χa§ˌt͡s§o§t§-§ha§ˈlɛ§j§l|khatsót-haleyl|חֲצוֹת־הַלֵּיל‎
-חצות הלילה|midnight|χa§ˌt͡s§o§t§-§ha§ˈla§j§la§‹|khatsót-haláyla|חֲצוֹת־הַלַּיְלָה
-חצות|midnight|χa§ˈt͡s§o§t|khatsót|חֲצוֹת abbr of חצות הלילה χaˌt͡sot-haˈlajla
+חצות הליל|midnight (lit)|χa,ˌt͡s,o,t,-,ha,ˈlɛ,j,l|khatsót-haleyl|חֲצוֹת־הַלֵּיל‎
+חצות הלילה|midnight|χa,ˌt͡s,o,t,-,ha,ˈla,j,la,‹|khatsót-haláyla|חֲצוֹת־הַלַּיְלָה
+חצות|midnight|χa,ˈt͡s,o,t|khatsót|חֲצוֹת abbr of חצות הלילה χaˌt͡sot-haˈlajla
 חצי אי||
 חצי הלילה||
 חצי||
@@ -3971,7 +3971,7 @@ autoExpandExamples.he = `
 חקר הדגים||
 חקר||
 חרא||
-חרב|sword|ˈχe.§ʁe§v|khérev|חֶרֶב
+חרב|sword|ˈχe.,ʁe,v|khérev|חֶרֶב
 חרבה||
 חרבונא||
 חרדה||
@@ -4008,13 +4008,13 @@ autoExpandExamples.he = `
 חרש||
 חרשה||
 חרשף||
-חרת|to engrave, carve|χa§ˈʁa§t|kharát|חָרַת
+חרת|to engrave, carve|χa,ˈʁa,t|kharát|חָרַת
 חש||
-חשב|to think|χa§ˈʃa§v|khasháv|חָשַׁב
+חשב|to think|χa,ˈʃa,v|khasháv|חָשַׁב
 חשבון אינפיניטסימלי||
 חשבון דיפרנציאלי ואינטגרלי||
-חשבון|mathematics|ħe§ʃ§ˈb§o§n|kheshbón|חֶשְׁבּוֹן
-חשוב|important|χa§ˈʃ§u§v|khashúv|חָשׁוּב
+חשבון|mathematics|ħe,ʃ,ˈb,o,n|kheshbón|חֶשְׁבּוֹן
+חשוב|important|χa,ˈʃ,u,v|khashúv|חָשׁוּב
 חשוד||
 חשוון||
 חשיארש||
@@ -4035,29 +4035,29 @@ autoExpandExamples.he = `
 חת||
 חתוך||
 חתול נמרי||
-חתול|cat|χa§ˈt§u§l|khatúl|חָתוּל
+חתול|cat|χa,ˈt,u,l|khatúl|חָתוּל
 חתולה||
 חתונה||
 חתיך||
 חתיכה נעשית נבילה||
 חתיכה||
 חתימה||
-חתך|to cut|χa§ˈta§χ|khatákh|חֲתָךְ
-חֲתָךְ|to cut|χa§ˈta§χ|khatákh|חתך
+חתך|to cut|χa,ˈta,χ|khatákh|חֲתָךְ
+חֲתָךְ|to cut|χa,ˈta,χ|khatákh|חתך
 חתלתול||
 חתן||
 חתר||
 ח״כ||
 ח״ת||
-טְרָאוּמָה|trauma|ˈt§ʁa§‹§w.§ma§‹|tráuma|טראומה|
-טְרוֹל|troll|t§ʁ§o§l|t'ról|טרול|
-טִבְעִי|natural|ti§v.§ˈ(ʔ)i§‹|tiv'í|טבעי|
-טִלְפֵּן|to phone|ti§l§ˈfe§n|tilfén|טלפן|
-טִלְפֵן|to phone|ti§l§ˈfe§n|tilfén|טלפן|
-טֵלֵפוֹן|phone|ˈte§le§f§o§n|télefon|טלפון|
-טֶכְנוֹלוֹגִי|technological|te§χ.§n§o§ˈl§o.§ɡi§‹|tekhnológi|טכנולוגי|
-טֶרוֹרִיסְט|terrorist|te§ʁ§o§ˈʁi§‹§s§t|teroríst|טרוריסט|
-טַלִּית|prayer shawl|ta§ˈli§‹§t|talít|טלית|
+טְרָאוּמָה|trauma|ˈt,ʁa,‹,w.,ma,‹|tráuma|טראומה|
+טְרוֹל|troll|t,ʁ,o,l|t'ról|טרול|
+טִבְעִי|natural|ti,v.,ˈ(ʔ)i,‹|tiv'í|טבעי|
+טִלְפֵּן|to phone|ti,l,ˈfe,n|tilfén|טלפן|
+טִלְפֵן|to phone|ti,l,ˈfe,n|tilfén|טלפן|
+טֵלֵפוֹן|phone|ˈte,le,f,o,n|télefon|טלפון|
+טֶכְנוֹלוֹגִי|technological|te,χ.,n,o,ˈl,o.,ɡi,‹|tekhnológi|טכנולוגי|
+טֶרוֹרִיסְט|terrorist|te,ʁ,o,ˈʁi,‹,s,t|teroríst|טרוריסט|
+טַלִּית|prayer shawl|ta,ˈli,‹,t|talít|טלית|
 ט־ל־פ־ן||
 טאהש||
 טאלין||
@@ -4068,24 +4068,24 @@ autoExpandExamples.he = `
 טבע||
 טבעונות||
 טבעוני||
-טבעי|natural|ti§v.§ˈ(ʔ)i§‹|tiv'í|טִבְעִי
+טבעי|natural|ti,v.,ˈ(ʔ)i,‹|tiv'í|טִבְעִי
 טבעת||
 טבריה||
 טבת||
-טג׳יקי|Tajik|ta§d͡ʒi§‹§‹§‹ˈki§‹|tajiki|
-טג׳יקיסטן|Tajikistan|ta§d͡ʒi§‹§‹§ki§‹§s§ˈta§n|tajikistan|
+טג׳יקי|Tajik|ta,d͡ʒi,‹,‹,‹ˈki,‹|tajiki|
+טג׳יקיסטן|Tajikistan|ta,d͡ʒi,‹,‹,ki,‹,s,ˈta,n|tajikistan|
 טהדיג||
 טהור||
 טהראן||
 טהראני||
 טהרה||
 טו||
-טוֹב|goodness, fairness|t§o§v|tov|טוב
-טוֹרְסוֹ|torso|ˈt§ɔ§ʁ§s§ɔ|tórso|טורסו|
-טוֹרֵף|predator|t§o§ˈʁe§f|toréf|טורף|
+טוֹב|goodness, fairness|t,o,v|tov|טוב
+טוֹרְסוֹ|torso|ˈt,ɔ,ʁ,s,ɔ|tórso|טורסו|
+טוֹרֵף|predator|t,o,ˈʁe,f|toréf|טורף|
 טואטא||
 טוב ציפור אחת ביד משתיים על העץ||
-טוב|goodness, fairness|t§o§v|tov|טוֹב
+טוב|goodness, fairness|t,o,v|tov|טוֹב
 טובה||
 טוביה||
 טוגן||
@@ -4109,8 +4109,8 @@ autoExpandExamples.he = `
 טור||
 טורונטו||
 טורנדו||
-טורסו|torso|ˈt§ɔ§ʁ§s§ɔ|tórso|טוֹרְסוֹ
-טורף|predator|t§o§ˈʁe§f|toréf|טוֹרֵף
+טורסו|torso|ˈt,ɔ,ʁ,s,ɔ|tórso|טוֹרְסוֹ
+טורף|predator|t,o,ˈʁe,f|toréf|טוֹרֵף
 טורקי||
 טורקיה||
 טורקיז||
@@ -4159,7 +4159,7 @@ autoExpandExamples.he = `
 טית||
 טי״ת||
 טכיקרדיה||
-טכנולוגי|technological|te§χ.§n§o§ˈl§o.§ɡi§‹|tekhnológi|טֶכְנוֹלוֹגִי
+טכנולוגי|technological|te,χ.,n,o,ˈl,o.,ɡi,‹|tekhnológi|טֶכְנוֹלוֹגִי
 טכנולוגיה||
 טכני||
 טל||
@@ -4169,14 +4169,14 @@ autoExpandExamples.he = `
 טלוא||
 טלוויזיה||
 טלויזיה||
-טלית|prayer shawl|ta§ˈli§‹§t|talít|טַלִּית
+טלית|prayer shawl|ta,ˈli,‹,t|talít|טַלִּית
 טלנובלה||
 טלסקופ|telescope||teleskóp|טֶלֶסְקוֹפּ
 טֶלֶסְקוֹפּ|telescope||teleskóp|טלסקופ
 טלפון נייד||
 טלפון סלולרי||
-טלפון|phone|ˈte§le§f§o§n|télefon|טֵלֵפוֹן
-טלפן|to phone|ti§l§ˈfe§n|tilfén|טִלְפֵּן or טִלְפֵן
+טלפון|phone|ˈte,le,f,o,n|télefon|טֵלֵפוֹן
+טלפן|to phone|ti,l,ˈfe,n|tilfén|טִלְפֵּן or טִלְפֵן
 טלפתיה||
 טל׳||
 טמא||
@@ -4211,14 +4211,14 @@ autoExpandExamples.he = `
 טקילה||
 טקס||
 טקסט||
-טראומה|trauma|ˈt§ʁa§‹§w.§ma§‹|tráuma|טְרָאוּמָה
+טראומה|trauma|ˈt,ʁa,‹,w.,ma,‹|tráuma|טְרָאוּמָה
 טרגדיה||
 טרגי||
 טרוד||
-טרול|troll|t§ʁ§o§l|t'ról|טְרוֹל
+טרול|troll|t,ʁ,o,l|t'ról|טְרוֹל
 טרומפלדור||
 טרור||
-טרוריסט|terrorist|te§ʁ§o§ˈʁi§‹§s§t|teroríst|טֶרוֹרִיסְט
+טרוריסט|terrorist|te,ʁ,o,ˈʁi,‹,s,t|teroríst|טֶרוֹרִיסְט
 טרי||
 טריבונה||
 טרייה||
@@ -4241,50 +4241,50 @@ autoExpandExamples.he = `
 ט״ו בשבט||
 ט״ו||
 ט״ת||
-יְאֹר|river|je§ˈ(ʔ)o§ʁ|ye'ór|יאור|
-יְהוּדִי|jewish|je.§h§u§ˈdi§‹|y'hudí|יהודי|
-יְהוּדָה|Judah|je§h§u§ˈda§‹|y'hudá|יהודה|
-יְחִידָה|unit|jɛ§χi§‹§da§‹|y'khidá|יחידה|
-יְחֶזְקֵאל|Ezekiel|je§χe§s§ˈke§‹§l|Y'khezkél|יחזקאל|
-יְסוֹד|element|je§ˈs§o§d|yesód|יסוד|
-יְצִיאַת מִצְרַיִם‎ |the exodus from Egypt|je.§t͡si.§‹§ˈ(ʔ)a§t§ §mi§t͡s.§ˈʁa.§ji§m|y'tsi'át mitsráyim|יציאת מצרים|
-יְרִיחוֹ|Jericho|jɛ§ʁi§‹§ˈχ§o|y'rikhó|יריחו|
-יְרִיעָה|curtain|je§ʁi§‹§ˈʔa§‹|yeri'á|יריעה|
-יְרֻשָּׁה|legacy|jɛ§ʁu§ˈʃa§‹|yerushá|ירושה|
-יְרוּשָׁלַיִם|Jerusalem|je.§ʁ§u.§ʃa§ˈla§j§m|yerushaláyim|ירושלים|
-יְשִׁיבָה|meeting|je.§ʃi§‹§ˈva§‹|y'shivá|ישיבה|
-יְשַׁעְיָהוּ|Isaiah|je.§ʃa§(ʕ)§ˈja.§(h)§u|y'sha'yáhu|ישעיהו|
-יִבֵּא|to import|ji§ˈbe§‹|yibé|ייבא|
-יִצְחָק|Isaac|ji§t͡s§ˈχa§k|yitskhák|יצחק|
-יִצֵּא|to export|ji§ˈtse§‹|yitsé|ייצא|
-יִרְמְיָה|Jeremiah|ji§ʁ§m.§ˈja§‹|yirm'yá|ירמיה|
-יִשְׂרָאֵל|Israel|(j)i§s.§ʁa§ˈ(ʔ)e§l|yisra'él|ישראל|
-יֵצֶר|instinct|ˈje.§tse§ʁ|yétser|יצר|
-יֶדַע|knowledge|ˈje§da§–|yéda|ידע|
-יֶלֶד|boy|ˈje.§le§d|yéled|ילד|
-יַהֲדוּת|Judaism|ja§ha§ˈd§u§t|yahadút|יהדות|
+יְאֹר|river|je,ˈ(ʔ)o,ʁ|ye'ór|יאור|
+יְהוּדִי|jewish|je.,h,u,ˈdi,‹|y'hudí|יהודי|
+יְהוּדָה|Judah|je,h,u,ˈda,‹|y'hudá|יהודה|
+יְחִידָה|unit|jɛ,χi,‹,da,‹|y'khidá|יחידה|
+יְחֶזְקֵאל|Ezekiel|je,χe,s,ˈke,‹,l|Y'khezkél|יחזקאל|
+יְסוֹד|element|je,ˈs,o,d|yesód|יסוד|
+יְצִיאַת מִצְרַיִם‎ |the exodus from Egypt|je.,t͡si.,‹,ˈ(ʔ)a,t, ,mi,t͡s.,ˈʁa.,ji,m|y'tsi'át mitsráyim|יציאת מצרים|
+יְרִיחוֹ|Jericho|jɛ,ʁi,‹,ˈχ,o|y'rikhó|יריחו|
+יְרִיעָה|curtain|je,ʁi,‹,ˈʔa,‹|yeri'á|יריעה|
+יְרֻשָּׁה|legacy|jɛ,ʁu,ˈʃa,‹|yerushá|ירושה|
+יְרוּשָׁלַיִם|Jerusalem|je.,ʁ,u.,ʃa,ˈla,j,m|yerushaláyim|ירושלים|
+יְשִׁיבָה|meeting|je.,ʃi,‹,ˈva,‹|y'shivá|ישיבה|
+יְשַׁעְיָהוּ|Isaiah|je.,ʃa,(ʕ),ˈja.,(h),u|y'sha'yáhu|ישעיהו|
+יִבֵּא|to import|ji,ˈbe,‹|yibé|ייבא|
+יִצְחָק|Isaac|ji,t͡s,ˈχa,k|yitskhák|יצחק|
+יִצֵּא|to export|ji,ˈtse,‹|yitsé|ייצא|
+יִרְמְיָה|Jeremiah|ji,ʁ,m.,ˈja,‹|yirm'yá|ירמיה|
+יִשְׂרָאֵל|Israel|(j)i,s.,ʁa,ˈ(ʔ)e,l|yisra'él|ישראל|
+יֵצֶר|instinct|ˈje.,tse,ʁ|yétser|יצר|
+יֶדַע|knowledge|ˈje,da,–|yéda|ידע|
+יֶלֶד|boy|ˈje.,le,d|yéled|ילד|
+יַהֲדוּת|Judaism|ja,ha,ˈd,u,t|yahadút|יהדות|
 יַחְדָּו|together||yakhdáv|יחדיו
-יַיִן|wine|ˈja§(j)i§n|yáyin|יין|
-יַם סוּף|Red Sea|ja§m§ §ˈs§u§f|yam súf|ים סוף|
-יַנְקוּת|infancy|ja§n§k§u§t|yanqut|ינקות|
-יַעֲקֹב|Jacob|ja.§(ʔ)a.§ˈko§v|ya'akóv|יעקב|
-יַעַר|forest|ˈja§(ʕ)a§ʁ|yá'ar|יער|
-יָד|arm, hand|ja§d|yád|יד|
-יָדִיד|male friend|ja§ˈdi§‹§d|yadíd|ידיד|
-יָהּ|Jah (God)|ja§(h)|yah|יה|
-יָזִיז|Yaziz|ja§ˈzi§‹§z|yazíz|יזיז|
-יָכֹל|to be able to|ja§ˈχ§o§l|yakhól|יכול|
-יָם|sea|ˈja§m|yam|ים
-יָעֵל|ibex|ja§ɛ§l|ya'el|יעל|
-יָפֶה|beautiful|ja§ˈfe§‹|yafé|יפה|
-יָצָא|to go out|ja§ˈtsa§‹|yatsá|יצא|
-יָרֵחַ|moon|ja§ˈʁɛ§aχ|yaréakh|ירח|
-יָרֵךְ|thigh|ja§ʁɛ§χ|yarekh|ירך|
-יָרָה|to flow|ja§ˈʁa§‹|yará|ירה|
-יָרֹק|green|ja§ˈʁ§o§k|yarók|ירוק|
+יַיִן|wine|ˈja,(j)i,n|yáyin|יין|
+יַם סוּף|Red Sea|ja,m, ,ˈs,u,f|yam súf|ים סוף|
+יַנְקוּת|infancy|ja,n,k,u,t|yanqut|ינקות|
+יַעֲקֹב|Jacob|ja.,(ʔ)a.,ˈko,v|ya'akóv|יעקב|
+יַעַר|forest|ˈja,(ʕ)a,ʁ|yá'ar|יער|
+יָד|arm, hand|ja,d|yád|יד|
+יָדִיד|male friend|ja,ˈdi,‹,d|yadíd|ידיד|
+יָהּ|Jah (God)|ja,(h)|yah|יה|
+יָזִיז|Yaziz|ja,ˈzi,‹,z|yazíz|יזיז|
+יָכֹל|to be able to|ja,ˈχ,o,l|yakhól|יכול|
+יָם|sea|ˈja,m|yam|ים
+יָעֵל|ibex|ja,ɛ,l|ya'el|יעל|
+יָפֶה|beautiful|ja,ˈfe,‹|yafé|יפה|
+יָצָא|to go out|ja,ˈtsa,‹|yatsá|יצא|
+יָרֵחַ|moon|ja,ˈʁɛ,aχ|yaréakh|ירח|
+יָרֵךְ|thigh|ja,ʁɛ,χ|yarekh|ירך|
+יָרָה|to flow|ja,ˈʁa,‹|yará|ירה|
+יָרֹק|green|ja,ˈʁ,o,k|yarók|ירוק|
 יָשֵׁן|to sleep||yashén
-יָשַׁב|to sit|ja§ˈʃa§v|yasháv|ישב|
-יָשָׁן|old, to sleep|ja§ˈʃa§n||yashán
+יָשַׁב|to sit|ja,ˈʃa,v|yasháv|ישב|
+יָשָׁן|old, to sleep|ja,ˈʃa,n||yashán
 י־ב־ש||
 י־ד־ע||
 י־ח־ד||
@@ -4294,7 +4294,7 @@ autoExpandExamples.he = `
 יא||
 יאהדונהי||
 יאהדונה״י||
-יאור|river|je§ˈ(ʔ)§o§ʁ|ye'ór|יְאֹר
+יאור|river|je,ˈ(ʔ),o,ʁ|ye'ór|יְאֹר
 יאיר||
 יאכטה||
 יאכל||
@@ -4309,33 +4309,33 @@ autoExpandExamples.he = `
 יבם||
 יבמה||
 יבנה||
-יבש|dry|jaˈ§vɛ§ʃ|yavesh|יָבֵשׁ
-יָבֵשׁ|dry|ja§ˈvɛ§ʃ|yavesh|יבש
+יבש|dry|jaˈ,vɛ,ʃ|yavesh|יָבֵשׁ
+יָבֵשׁ|dry|ja,ˈvɛ,ʃ|yavesh|יבש
 יבשה||
 יבשת||
 יב״ל||
 יגואר||
 יגון||
-יד|arm, hand|ja§d|yád|יָד
+יד|arm, hand|ja,d|yád|יָד
 ידה||
-ידיד|male friend|ja§ˈdi§‹§d|yadíd|יָדִיד
+ידיד|male friend|ja,ˈdi,‹,d|yadíd|יָדִיד
 ידידות||
 ידידותי||
 ידיעה||
 ידית||
 ידני||
-ידע|knowledge|ˈje§da§–|yéda|יֶדַע
-יה|Jah (God)|ja§(h)|yah|יָהּ
+ידע|knowledge|ˈje,da,–|yéda|יֶדַע
+יה|Jah (God)|ja,(h)|yah|יָהּ
 יהב||
 יהדות אורתודוקסית||
 יהדות חרדית||
 יהדות קונסרבטיבית||
 יהדות רפורמית||
-יהדות|Judaism|ja§ha§ˈd§u§t|yahadút|יַהֲדוּת
+יהדות|Judaism|ja,ha,ˈd,u,t|yahadút|יַהֲדוּת
 יהודה ועוד לקרא||
 יהודה ושומרון||
-יהודה|Judah|je§h§u§ˈda§‹|y'hudá|יְהוּדָה
-יהודי|jewish|je.§h§u§ˈdi§‹|y'hudí|יְהוּדִי
+יהודה|Judah|je,h,u,ˈda,‹|y'hudá|יְהוּדָה
+יהודי|jewish|je.,h,u,ˈdi,‹|y'hudí|יְהוּדִי
 יהודיה||
 יהודיות||
 יהודית||
@@ -4346,17 +4346,17 @@ autoExpandExamples.he = `
 יהיר||
 יהירות||
 יהלום||
-יוֹחָנָן|John|ˈj§o.§χa.§na§n|yokhanán|יוחנן|
-יוֹם|day|j§o§m|yom|יום|
-יוֹמוּלֶדֶת|birthday|j§ɔ§m§u§ˈlɛ§dɛ§t|yomulédet|יומולדת|
-יוֹן|ion|j§o§n|yon|יון|
-יוֹנָה|dove, pigeon|j§o§ˈna§‹|yoná|יונה|
-יוֹסֵף|Joseph|j§o§ˈse§f|yoséf|יוסף|
-יוּבַל|tributary|j§u§ˈva§l|yuvál|יובל|
+יוֹחָנָן|John|ˈj,o.,χa.,na,n|yokhanán|יוחנן|
+יוֹם|day|j,o,m|yom|יום|
+יוֹמוּלֶדֶת|birthday|j,ɔ,m,u,ˈlɛ,dɛ,t|yomulédet|יומולדת|
+יוֹן|ion|j,o,n|yon|יון|
+יוֹנָה|dove, pigeon|j,o,ˈna,‹|yoná|יונה|
+יוֹסֵף|Joseph|j,o,ˈse,f|yoséf|יוסף|
+יוּבַל|tributary|j,u,ˈva,l|yuvál|יובל|
 יואב||
 יואל||
 יואן||
-יובל|tributary|j§u§ˈva§l|yuvál|יוּבַל
+יובל|tributary|j,u,ˈva,l|yuvál|יוּבַל
 יוגורט||
 יוד||
 יודע||
@@ -4365,7 +4365,7 @@ autoExpandExamples.he = `
 יוונית||
 יוזר||
 יוחאי||
-יוחנן|John|ˈj§o.§χa.§na§n|yokhanán|יוֹחָנָן
+יוחנן|John|ˈj,o.,χa.,na,n|yokhanán|יוֹחָנָן
 יוטיובר||
 יוכבד||
 יולי||
@@ -4386,14 +4386,14 @@ autoExpandExamples.he = `
 יום שישי||
 יום שלישי||
 יום שני||
-יום|day|j§o§m|yom|יוֹם
-יומולדת|birthday|j§ɔ§m§u§ˈlɛ§dɛ§t|yomulédet|יוֹמוּלֶדֶת
+יום|day|j,o,m|yom|יוֹם
+יומולדת|birthday|j,ɔ,m,u,ˈlɛ,dɛ,t|yomulédet|יוֹמוּלֶדֶת
 יומם ולילה||
 יומם||
 יומן||
 יומנעים||
-יון|ion|j§o§n|yon|יוֹן
-יונה|dove, pigeon|j§o§ˈna§‹|yoná|יוֹנָה
+יון|ion|j,o,n|yon|יוֹן
+יונה|dove, pigeon|j,o,ˈna,‹|yoná|יוֹנָה
 יונוספירה||
 יוני||
 יוניסקס||
@@ -4401,7 +4401,7 @@ autoExpandExamples.he = `
 יונק||
 יונתן||
 יוסי||
-יוסף|Joseph|j§o§ˈse§f|yoséf|יוֹסֵף
+יוסף|Joseph|j,o,ˈse,f|yoséf|יוֹסֵף
 יועל||
 יועמ״ש||
 יועץ||
@@ -4423,15 +4423,15 @@ autoExpandExamples.he = `
 יו״ט||
 יו״ר||
 יו״ש||
-יזיז|Yaziz|ja§ˈzi§‹§z|yazíz|יָזִיז
+יזיז|Yaziz|ja,ˈzi,‹,z|yazíz|יָזִיז
 יזם||
 יזמה||
 יזע||
 יחד||
 יחדיו|together||yakhdáv|יַחְדָּו
-יחזקאל|Ezekiel|je§χe§s§ˈke§‹§l|Y'khezkél|יְחֶזְקֵאל
+יחזקאל|Ezekiel|je,χe,s,ˈke,‹,l|Y'khezkél|יְחֶזְקֵאל
 יחיד||
-יחידה|unit|jɛ§χi§‹§da§‹|y'khidá|יְחִידָה
+יחידה|unit|jɛ,χi,‹,da,‹|y'khidá|יְחִידָה
 יחס אות לרעש||
 יחס||
 יחסה||
@@ -4441,7 +4441,7 @@ autoExpandExamples.he = `
 יחצן||
 יחצ״ן||
 יי||
-ייבא|to import|ji§‹§ˈbe§‹|yibé|יִבֵּא
+ייבא|to import|ji,‹,ˈbe,‹|yibé|יִבֵּא
 ייבם||
 ייבש||
 יידוע||
@@ -4452,13 +4452,13 @@ autoExpandExamples.he = `
 יין אדום||
 יין לבן||
 יין נסך||
-יין|wine|ˈja§(j)i§n|yáyin|יַיִן
+יין|wine|ˈja,(j)i,n|yáyin|יַיִן
 ייסד||
 ייסוד||
 ייעל||
 ייעץ||
 ייפוי כוח||
-ייצא|to export|ji§‹§ˈtse§‹|yitsé|יִצֵּא
+ייצא|to export|ji,‹,ˈtse,‹|yitsé|יִצֵּא
 ייצג||
 ייצר||
 יישוב||
@@ -4466,9 +4466,9 @@ autoExpandExamples.he = `
 יישומון||
 יישות||
 יישר כוח||
-יכול|to be able to|ja§ˈχ§o§l|yakhól|יָכֹל
+יכול|to be able to|ja,ˈχ,o,l|yakhól|יָכֹל
 יכולת||
-ילד|boy|ˈje.§le§d|yéled|יֶלֶד
+ילד|boy|ˈje.,le,d|yéled|יֶלֶד
 ילדה||
 ילדות||
 ילדותי||
@@ -4477,50 +4477,50 @@ autoExpandExamples.he = `
 ילידי||
 ילפת||
 ים המלח||
-ים סוף|Red Sea|ja§m§ §ˈs§u§f|yam súf|יַם סוּף
+ים סוף|Red Sea|ja,m, ,ˈs,u,f|yam súf|יַם סוּף
 ים תיכוני||
-ים|sea|ˈja§m|yam|יָם
+ים|sea|ˈja,m|yam|יָם
 ימאי||
 ימי הביניים||
 ימים נוראים||
-ימין|right|ˈja§mi§‹§n|yamin|יָמִין
-יָמִין|right|ˈja§mi§‹§n|yamin|ימין
+ימין|right|ˈja,mi,‹,n|yamin|יָמִין
+יָמִין|right|ˈja,mi,‹,n|yamin|ימין
 יממה||
 ינואר||
 ינק||
-ינקות|infancy|ja§n§k§u§t|yanqut|יַנְקוּת
+ינקות|infancy|ja,n,k,u,t|yanqut|יַנְקוּת
 ינשוף||
-יסוד|element|je§ˈs§o§d|yesód|יְסוֹד
+יסוד|element|je,ˈs,o,d|yesód|יְסוֹד
 יסמין||
 יעד||
 יעה||
 יעילות||
-יעל|ibex|ja§ɛ§l|ya'el|יָעֵל
+יעל|ibex|ja,ɛ,l|ya'el|יָעֵל
 יען||
 יעני||
-יעקב|Jacob|ja.§(ʔ)a.§ˈko§v|ya'akóv|יַעֲקֹב
-יער|forest|ˈja§(ʕ)a§ʁ|yá'ar|יַעַר
-יפה|beautiful|ja§ˈfe§‹|yafé|יָפֶה
+יעקב|Jacob|ja.,(ʔ)a.,ˈko,v|ya'akóv|יַעֲקֹב
+יער|forest|ˈja,(ʕ)a,ʁ|yá'ar|יַעַר
+יפה|beautiful|ja,ˈfe,‹|yafé|יָפֶה
 יפהפה||
 יפו||
 יפן||
 יפני||
 יפנית||
 יצא מהארון||
-יצא|to go out|ja§ˈtsa§‹|yatsá|יָצָא
+יצא|to go out|ja,ˈtsa,‹|yatsá|יָצָא
 יצוה||
 יצוק||
 יצור||
-יצחק|Isaac|ji§t͡s§ˈχa§k|yitskhák|יִצְחָק
+יצחק|Isaac|ji,t͡s,ˈχa,k|yitskhák|יִצְחָק
 יציאה||
 יציאת חירום||
-יציאת מצרים|the exodus from Egypt|je.§t͡si.§‹§ˈ(ʔ)a§t§ §mi§t͡s.§ˈʁa.§ji§m|y'tsi'át mitsráyim|יְצִיאַת מִצְרַיִם‎ 
+יציאת מצרים|the exodus from Egypt|je.,t͡si.,‹,ˈ(ʔ)a,t, ,mi,t͡s.,ˈʁa.,ji,m|y'tsi'át mitsráyim|יְצִיאַת מִצְרַיִם‎ 
 יציב||
 יציבות||
 יצק||
 יצר הטוב||
 יצר הרע||
-יצר|instinct|ˈje.§tse§ʁ|yétser|יֵצֶר
+יצר|instinct|ˈje.,tse,ʁ|yétser|יֵצֶר
 יצ״ו||
 יקום||
 יקוק||
@@ -4537,25 +4537,25 @@ autoExpandExamples.he = `
 ירד גשם||
 ירד||
 ירדן||
-ירה|to flow|ja§ˈʁa§‹|yará|יָרָה
+ירה|to flow|ja,ˈʁa,‹|yará|יָרָה
 ירוואן||
 ירוי||
-ירוק|green|ja§ˈʁ§o§k|yarók|יָרֹק
-ירושה|legacy|jɛ§ʁ§u§ˈʃa§‹|yerushá|יְרֻשָּׁה
-ירושלים|Jerusalem|je.§ʁ§u.§ʃa§ˈla§j§m|yerushaláyim|יְרוּשָׁלַיִם
+ירוק|green|ja,ˈʁ,o,k|yarók|יָרֹק
+ירושה|legacy|jɛ,ʁ,u,ˈʃa,‹|yerushá|יְרֻשָּׁה
+ירושלים|Jerusalem|je.,ʁ,u.,ʃa,ˈla,j,m|yerushaláyim|יְרוּשָׁלַיִם
 ירושלם||
 ירושלמי||
-ירח|moon|ja§ˈʁɛ§aχ|yaréakh|יָרֵחַ
+ירח|moon|ja,ˈʁɛ,aχ|yaréakh|יָרֵחַ
 ירחי||
 ירי||
 ירידה||
-יריחו|Jericho|jɛ§ʁi§‹§ˈχ§o|y'rikhó|יְרִיחוֹ
-יריעה|curtain|je§ʁi§‹§ˈʔa§‹|yeri'á|יְרִיעָה
-ירך|thigh|ja§ʁɛ§χ|yarekh|יָרֵךְ
-ירמיה|Jeremiah|ji§ʁ§m.§ˈja§‹|yirm'yá|יִרְמְיָה
+יריחו|Jericho|jɛ,ʁi,‹,ˈχ,o|y'rikhó|יְרִיחוֹ
+יריעה|curtain|je,ʁi,‹,ˈʔa,‹|yeri'á|יְרִיעָה
+ירך|thigh|ja,ʁɛ,χ|yarekh|יָרֵךְ
+ירמיה|Jeremiah|ji,ʁ,m.,ˈja,‹|yirm'yá|יִרְמְיָה
 ירמיהו||
-ירק|to spit|ja§ˈʁa§k|yarák|יָרַק
-יָרַק|to spit|ja§ˈʁa§k|yarák|ירק
+ירק|to spit|ja,ˈʁa,k|yarák|יָרַק
+יָרַק|to spit|ja,ˈʁa,k|yarák|ירק
 ירקון||
 ירקן||
 ירקרק||
@@ -4564,7 +4564,7 @@ autoExpandExamples.he = `
 יש ל־ ג׳וק בראש||
 יש לי שאלה||
 יש||
-ישב|to sit|ja§ˈʃa§v|yasháv|יָשַׁב
+ישב|to sit|ja,ˈʃa,v|yasháv|יָשַׁב
 ישבי||
 ישבים||
 ישבן||
@@ -4575,15 +4575,15 @@ autoExpandExamples.he = `
 ישות||
 ישחק||
 ישי||
-ישיבה|meeting|je.§ʃi§‹§ˈva§‹|y'shivá|יְשִׁיבָה
+ישיבה|meeting|je.,ʃi,‹,ˈva,‹|y'shivá|יְשִׁיבָה
 ישיר||
 ישמעאל||
 ישן נושן||
 ישן|old; to sleep||yashán|יָשָׁן, יָשֵׁן
-ישעיהו|Isaiah|je.§ʃa§(ʕ)§ˈja.§(h)§u|y'sha'yáhu|יְשַׁעְיָהוּ
-ישר|straight|ja§ˈʃa§ʁ|yashár|יָשָׁר
-יָשָׁר|straight|ja§ˈʃa§ʁ|yashár|ישר
-ישראל|Israel|(j)i§s.§ʁa§ˈ(ʔ)e§l|yisra'él|יִשְׂרָאֵל
+ישעיהו|Isaiah|je.,ʃa,(ʕ),ˈja.,(h),u|y'sha'yáhu|יְשַׁעְיָהוּ
+ישר|straight|ja,ˈʃa,ʁ|yashár|יָשָׁר
+יָשָׁר|straight|ja,ˈʃa,ʁ|yashár|ישר
+ישראל|Israel|(j)i,s.,ʁa,ˈ(ʔ)e,l|yisra'él|יִשְׂרָאֵל
 ישראלי||
 ישראלית||
 ישרה||
@@ -4597,48 +4597,48 @@ autoExpandExamples.he = `
 יתר||
 יתרון||
 י״ט||
-כְּאִלּוּ|as if|ke§ˈ(ʔ)i.§l§u|k'ilu|כאילו|
-כְּבָר|already|k§va§ʁ|k'vár|כבר|
-כְּדֵי|in order to|ke§ˈde§‹|k'de|כדי|
-כְּדַאי|suitable|ke§ˈda§‹§j|k'dái|כדאי|
-כְּלַבְלַב|puppy|k§la§v§ˈla§v|klavláv|כלבלב|
-כְּלָל|rule, norm|k§la§l|k'lál|כלל|
-כְּמוֹ|like|k§m§o|k'mó|כמו|
-כְּנֶסֶת|assembly|ˈk§ne§se§t|k'néset|כנסת|
-כְּנַעַן|Canaan|k(e)§ˈna§ʔa§n|k'ná'an|כנען|
-כְּרִיסְטְמַס|Christmas|ˈk§ʁi§‹§s§t.§ma§s|kristmas|כרית|
-כְּרוּב|cabbage|kə§ˈr§uː§v|k'rúv|כרוב|
-כְּתִיבָה|writing|k§ti§‹§ˈva§‹|ktivá|כתיבה|
-כְּתִיתָה|schnitzel|k§ti.§‹§ta§‹|ktitá|כתיתה|
-כְּתֻמִּים|oranges|kə§tu§mˈmi§‹§m||כתמים
-כִּוֵּן|to direct|ki§‹§ˈve§‹§n|kiven|כיוון|
-כִּי|because|ˈki§‹|ki|כי
-כִּמְעַט|almost|ki§m§ˈ(ʔ)a§t|kim'át|כמעט|
-כֵּן|yes|ke§n|kén|כן|
-כֶּפֶל|multiplication|ˈke.§fe§l|kéfel|כפל|
-כַּדּוּרְעָף|volleyball|ka§d§u§ˈʁ§a§f|kadur'áf|כדורעף|
+כְּאִלּוּ|as if|ke,ˈ(ʔ)i.,l,u|k'ilu|כאילו|
+כְּבָר|already|k,va,ʁ|k'vár|כבר|
+כְּדֵי|in order to|ke,ˈde,‹|k'de|כדי|
+כְּדַאי|suitable|ke,ˈda,‹,j|k'dái|כדאי|
+כְּלַבְלַב|puppy|k,la,v,ˈla,v|klavláv|כלבלב|
+כְּלָל|rule, norm|k,la,l|k'lál|כלל|
+כְּמוֹ|like|k,m,o|k'mó|כמו|
+כְּנֶסֶת|assembly|ˈk,ne,se,t|k'néset|כנסת|
+כְּנַעַן|Canaan|k(e),ˈna,ʔa,n|k'ná'an|כנען|
+כְּרִיסְטְמַס|Christmas|ˈk,ʁi,‹,s,t.,ma,s|kristmas|כרית|
+כְּרוּב|cabbage|kə,ˈr,uː,v|k'rúv|כרוב|
+כְּתִיבָה|writing|k,ti,‹,ˈva,‹|ktivá|כתיבה|
+כְּתִיתָה|schnitzel|k,ti.,‹,ta,‹|ktitá|כתיתה|
+כְּתֻמִּים|oranges|kə,tu,mˈmi,‹,m||כתמים
+כִּוֵּן|to direct|ki,‹,ˈve,‹,n|kiven|כיוון|
+כִּי|because|ˈki,‹|ki|כי
+כִּמְעַט|almost|ki,m,ˈ(ʔ)a,t|kim'át|כמעט|
+כֵּן|yes|ke,n|kén|כן|
+כֶּפֶל|multiplication|ˈke.,fe,l|kéfel|כפל|
+כַּדּוּרְעָף|volleyball|ka,d,u,ˈʁ,a,f|kadur'áf|כדורעף|
 כַּלְכָּלִי|economic||kalkalí|כלכלי
-כַּרְטִיס חִיּוּב מִיָּדִי|debit card|ka§ʁ§ˈtiː§‹§s§ §χi§jˈj§uː§v§ §mi§jjaː§ˈdiː§‹|kartís khiyúv miyadí|כרטיס חיוב מיידי|
-כַּרְפַּס|celery|ka§r§ˈpa§s|karpás|כרפס|
-כָּאן|here|ka§‹§n|kán|כאן|
-כָּבֵד|heavy, liver|ka§ˈvɛ§d|kavéd|כבד
-כָּבוֹד|honour|kaˈ§v§o§d|kavód|כבוד|
-כָּחֹל|blue|ka§ˈχ§ɔ§l|kakhól|כחול|
-כָּךְ|thus|ka§χ|kakh|כך|
-כָּכָה|thus|ˈka§χa§‹|kácha|ככה|
-כָּנָף|wing|ka§ˈna§f|kanáf|כנף
-כָּרַע|to kneel|ka§ˈʁa§(ʕ)|kará'|כרע|
-כָּרָגִיל|as usual|ka§ʁa§ˈɡi§‹§l|ka-ragil|כרגיל|
-כָּרָה|to mine|ka§ˈʁa§‹|kará|כרה|
-כָּתֵף|shoulder|ka§ˈte§f|katéf|כתף|
-כֹּה וָכֹה|here and there|ˈko§‹§ §va§ˈχo§‹|kó vakhó|כה וכה|
-כֹּה|thus (arch.)|ko§‹|ko|כה
-כֹּהֵן|priest|ko§ˈ(h)e§n|kohén|כוהן|
-כֹּחַ|strength|ˈko.§aχ|kóakh|כוח|
-כֹּל|all of, entirety|ˈko§l|kol|כל
-כּוֹתֵב|author (m)|k§o§ˈte§v|kotév|כותב|
-כּוּר|furnace|k§u§r|kur|כור|
-כּוּשׁ|Cush|k§u§ʃ|kúsh|כוש|
+כַּרְטִיס חִיּוּב מִיָּדִי|debit card|ka,ʁ,ˈtiː,‹,s, ,χi,jˈj,uː,v, ,mi,jjaː,ˈdiː,‹|kartís khiyúv miyadí|כרטיס חיוב מיידי|
+כַּרְפַּס|celery|ka,r,ˈpa,s|karpás|כרפס|
+כָּאן|here|ka,‹,n|kán|כאן|
+כָּבֵד|heavy, liver|ka,ˈvɛ,d|kavéd|כבד
+כָּבוֹד|honour|kaˈ,v,o,d|kavód|כבוד|
+כָּחֹל|blue|ka,ˈχ,ɔ,l|kakhól|כחול|
+כָּךְ|thus|ka,χ|kakh|כך|
+כָּכָה|thus|ˈka,χa,‹|kácha|ככה|
+כָּנָף|wing|ka,ˈna,f|kanáf|כנף
+כָּרַע|to kneel|ka,ˈʁa,(ʕ)|kará'|כרע|
+כָּרָגִיל|as usual|ka,ʁa,ˈɡi,‹,l|ka-ragil|כרגיל|
+כָּרָה|to mine|ka,ˈʁa,‹|kará|כרה|
+כָּתֵף|shoulder|ka,ˈte,f|katéf|כתף|
+כֹּה וָכֹה|here and there|ˈko,‹, ,va,ˈχo,‹|kó vakhó|כה וכה|
+כֹּה|thus (arch.)|ko,‹|ko|כה
+כֹּהֵן|priest|ko,ˈ(h)e,n|kohén|כוהן|
+כֹּחַ|strength|ˈko.,aχ|kóakh|כוח|
+כֹּל|all of, entirety|ˈko,l|kol|כל
+כּוֹתֵב|author (m)|k,o,ˈte,v|kotév|כותב|
+כּוּר|furnace|k,u,r|kur|כור|
+כּוּשׁ|Cush|k,u,ʃ|kúsh|כוש|
 כ־ו־ן||
 כ־נ־ס||
 כ־ס־ה||
@@ -4647,23 +4647,23 @@ autoExpandExamples.he = `
 כאב||
 כאוב||
 כאוטי||
-כאילו|as if|ke§ˈ(ʔ)i.§‹§l§u|k'ilu|כְּאִלּוּ
-כאן|here|ka§‹§n|kán|כָּאן
+כאילו|as if|ke,ˈ(ʔ)i.,‹,l,u|k'ilu|כְּאִלּוּ
+כאן|here|ka,‹,n|kán|כָּאן
 כאראג׳||
 כאשר||
 כבאי||
 כבאית||
-כבד|heavy, liver|ka§ˈvɛ§d|kavéd|כָּבֵד
-כבוד|honour|kaˈ§v§o§d|kavód|כָּבוֹד
+כבד|heavy, liver|ka,ˈvɛ,d|kavéd|כָּבֵד
+כבוד|honour|kaˈ,v,o,d|kavód|כָּבוֹד
 כבוש||
 כביכול||
 כביסה||
 כביש||
 כבל||
-כבר|already|k§va§ʁ|k'vár|כְּבָר
+כבר|already|k,va,ʁ|k'vár|כְּבָר
 כבש||
 כד||
-כדאי|suitable|ke§ˈda§‹§j|k'dái|כְּדַאי
+כדאי|suitable|ke,ˈda,‹,j|k'dái|כְּדַאי
 כדור הארץ||
 כדור סל||
 כדור פורח||
@@ -4673,10 +4673,10 @@ autoExpandExamples.he = `
 כדורגלן||
 כדורסל||
 כדורסלן||
-כדורעף|volleyball|ka§d§u§ˈʁ§a§f|kadur'áf|כַּדּוּרְעָף
-כדי|in order to|ke§ˈde§‹|k'de|כְּדֵי
-כה וכה|here and there|ˈko§‹§ §va§ˈχo§‹|kó vakhó|כֹּה וָכֹה
-כה|thus (arch.)|ko§‹|ko|כֹּה
+כדורעף|volleyball|ka,d,u,ˈʁ,a,f|kadur'áf|כַּדּוּרְעָף
+כדי|in order to|ke,ˈde,‹|k'de|כְּדֵי
+כה וכה|here and there|ˈko,‹, ,va,ˈχo,‹|kó vakhó|כֹּה וָכֹה
+כה|thus (arch.)|ko,‹|ko|כֹּה
 כהה||
 כהונה||
 כהן גדול||
@@ -4689,7 +4689,7 @@ autoExpandExamples.he = `
 כובע||
 כוהל||
 כוהן גדול||
-כוהן|priest|k§o§ˈ(h)e§n|kohén|כֹּהֵן
+כוהן|priest|k,o,ˈ(h)e,n|kohén|כֹּהֵן
 כוהנת||
 כווית סיטי||
 כווית||
@@ -4700,12 +4700,12 @@ autoExpandExamples.he = `
 כוזר||
 כוזרי||
 כוזרים||
-כוח|strength|ˈk§o.§aχ|kóakh|כֹּחַ
+כוח|strength|ˈk,o.,aχ|kóakh|כֹּחַ
 כוכב ים||
 כוכב לכת||
 כוכב שביט||
-כוכב|star|k§ɔ§ˈχa§v|kokháv|כּוֹכָב
-כּוֹכָב|star|k§ɔ§ˈχa§v|kokháv|כוכב
+כוכב|star|k,ɔ,ˈχa,v|kokháv|כּוֹכָב
+כּוֹכָב|star|k,ɔ,ˈχa,v|kokháv|כוכב
 כוכבית||
 כולה||
 כולו||
@@ -4723,7 +4723,7 @@ autoExpandExamples.he = `
 כוסמת||
 כופתה||
 כוץ||
-כור|furnace|k§u§r|kur|כּוּר
+כור|furnace|k,u,r|kur|כּוּר
 כורדיסטן||
 כורדית||
 כורח||
@@ -4732,9 +4732,9 @@ autoExpandExamples.he = `
 כורש||
 כורת עצים||
 כורת||
-כוש|Cush|k§u§ʃ|kúsh|כּוּשׁ
+כוש|Cush|k,u,ʃ|kúsh|כּוּשׁ
 כושי||
-כותב|author (m)|k§o§ˈte§v|kotév|כּוֹתֵב
+כותב|author (m)|k,o,ˈte,v|kotév|כּוֹתֵב
 כותונת||
 כותל||
 כותנה||
@@ -4742,12 +4742,12 @@ autoExpandExamples.he = `
 כזה||
 כזית||
 כח||
-כחול|blue|ka§ˈχ§ɔ§l|kakhól|כָּחֹל
+כחול|blue|ka,ˈχ,ɔ,l|kakhól|כָּחֹל
 כחלחל||
 כטב״ם||
 כטמ״ם||
 כי בתחבלות תעשה לך מלחמה||
-כי|because|ˈki§‹|ki|כִּי
+כי|because|ˈki,‹|ki|כִּי
 כיבד||
 כיבה||
 כיבוש||
@@ -4755,7 +4755,7 @@ autoExpandExamples.he = `
 כידון רובה||
 כידון||
 כיהן||
-כיוון|to direct|ki§‹§ˈve§‹§n|kiven|כִּוֵּן
+כיוון|to direct|ki,‹,ˈve,‹,n|kiven|כִּוֵּן
 כיור||
 כיזב||
 כיח||
@@ -4764,8 +4764,8 @@ autoExpandExamples.he = `
 כיכר||
 כילה||
 כימיה||
-כינה|louse|ki§‹§ˈna§‹|kiná|כִּנָּה
-כִּנָּה|louse|ki§ˈna§‹|kiná|כינה
+כינה|louse|ki,‹,ˈna,‹|kiná|כִּנָּה
+כִּנָּה|louse|ki,ˈna,‹|kiná|כינה
 כינוי חיבה||
 כינוי||
 כינור||
@@ -4775,7 +4775,7 @@ autoExpandExamples.he = `
 כיס||
 כיסא גלגלים||
 כיסא מלכות||
-כיסא|bag, purse|ki§‹§sɑ§ʔ||
+כיסא|bag, purse|ki,‹,sɑ,ʔ||
 כיסה||
 כיסוי||
 כיסופים||
@@ -4791,23 +4791,23 @@ autoExpandExamples.he = `
 כיתה||
 כיתר||
 כיתת יורים||
-כך|thus|ka§χ|kakh|כָּךְ
-ככה|thus|ˈka§χa§‹|kácha|כָּכָה
+כך|thus|ka,χ|kakh|כָּךְ
+ככה|thus|ˈka,χa,‹|kácha|כָּכָה
 ככה־ככה||
 ככר||
 כל הכבוד||
 כל כך||
 כל עוד||
 כל עיקר||
-כל|all of, entirety|ˈko§l|kol|כֹּל
+כל|all of, entirety|ˈko,l|kol|כֹּל
 כלא||
 כלב ים||
 כלב כנעני||
 כלב נהר||
-כלב|dog|ˈkɛ§lɛ§v|kélev|כֶּלֶב
-כֶּלֶב|dog|ˈkɛ§lɛ§v|kélev|כלב
+כלב|dog|ˈkɛ,lɛ,v|kélev|כֶּלֶב
+כֶּלֶב|dog|ˈkɛ,lɛ,v|kélev|כלב
 כלבה||
-כלבלב|puppy|k§la§v§ˈla§v|klavláv|כְּלַבְלַב
+כלבלב|puppy|k,la,v,ˈla,v|klavláv|כְּלַבְלַב
 כלבת||
 כלה||
 כלוא||
@@ -4834,20 +4834,20 @@ autoExpandExamples.he = `
 כלכלה||
 כלכלי|economic||kalkalí|כַּלְכָּלִי
 כלל הסנדוויץ׳||
-כלל|rule, norm|k§la§l|k'lál|כְּלָל
+כלל|rule, norm|k,la,l|k'lál|כְּלָל
 כלנית||
 כלשהו||
-כמה|how much|ˈka§ma§‹|káma|כַּמָּה
-כַּמָּה|how much|ˈka§ma§‹|káma|כמה
+כמה|how much|ˈka,ma,‹|káma|כַּמָּה
+כַּמָּה|how much|ˈka,ma,‹|káma|כמה
 כמו ג׳וקים מסוממים||
-כמו|like|k§m§o|k'mó|כְּמוֹ
+כמו|like|k,m,o|k'mó|כְּמוֹ
 כמובן||
 כמון||
 כמות||
-כמעט|almost|ki§m§ˈ(ʔ)a§t|kim'át|כִּמְעַט
+כמעט|almost|ki,m,ˈ(ʔ)a,t|kim'át|כִּמְעַט
 כמר||
 כמת||
-כן|yes|ke§n|kén|כֵּן
+כן|yes|ke,n|kén|כֵּן
 כנה||
 כנור||
 כניסה||
@@ -4855,11 +4855,11 @@ autoExpandExamples.he = `
 כנס||
 כנסיה||
 כנסייה||
-כנסת|assembly|ˈk§ne§se§t|k'néset|כְּנֶסֶת
-כנען|Canaan|k(e)§ˈna§ʔa§n|k'ná'an|כְּנַעַן
+כנסת|assembly|ˈk,ne,se,t|k'néset|כְּנֶסֶת
+כנען|Canaan|k(e),ˈna,ʔa,n|k'ná'an|כְּנַעַן
 כנעני||
 כנענית||
-כנף|wing|ka§ˈna§f|kanáf|כָּנָף
+כנף|wing|ka,ˈna,f|kanáf|כָּנָף
 כנר||
 כנראה||
 כנרת||
@@ -4890,7 +4890,7 @@ autoExpandExamples.he = `
 כפייתי||
 כפיר||
 כפית||
-כפל|multiplication|ˈke.§fe§l|kéfel|כֶּפֶל
+כפל|multiplication|ˈke.,fe,l|kéfel|כֶּפֶל
 כפף||
 כפפה||
 כפפת אגרוף||
@@ -4900,10 +4900,10 @@ autoExpandExamples.he = `
 כפרה||
 כפתור||
 כר||
-כרגיל|as usual|ka§ʁa§ˈɡi§‹§l|ka-ragil|כָּרָגִיל
+כרגיל|as usual|ka,ʁa,ˈɡi,‹,l|ka-ragil|כָּרָגִיל
 כרגע||
-כרה|to mine|ka§ˈʁa§‹|kará|כָּרָה
-כרוב|cabbage|kə§ˈr§uː§v|k'rúv|כְּרוּב
+כרה|to mine|ka,ˈʁa,‹|kará|כָּרָה
+כרוב|cabbage|kə,ˈr,uː,v|k'rúv|כְּרוּב
 כרובית||
 כרוון||
 כרוכית||
@@ -4912,14 +4912,14 @@ autoExpandExamples.he = `
 כרוני||
 כרטיס אשראי||
 כרטיס ברכה||
-כרטיס חיוב מיידי|debit card|ka§ʁ§ˈtiː§‹§s§ §χi§jˈj§uː§v§ §mi§j§jaː§ˈdiː§‹|kartís khiyúv miyadí|כַּרְטִיס חִיּוּב מִיָּדִי
+כרטיס חיוב מיידי|debit card|ka,ʁ,ˈtiː,‹,s, ,χi,jˈj,uː,v, ,mi,j,jaː,ˈdiː,‹|kartís khiyúv miyadí|כַּרְטִיס חִיּוּב מִיָּדִי
 כרטיס||
 כריך||
 כריכה||
 כריכייה||
 כריסטמס||
 כריש||
-כרית|Christmas|ˈk§ʁi§‹§s§t.§ma§s|kristmas|כְּרִיסְטְמַס
+כרית|Christmas|ˈk,ʁi,‹,s,t.,ma,s|kristmas|כְּרִיסְטְמַס
 כרך||
 כרכום||
 כרכס||
@@ -4927,8 +4927,8 @@ autoExpandExamples.he = `
 כרמאנשאה||
 כרמיאל||
 כרמל||
-כרע|to kneel|ka§ˈʁa§(ʕ)|kará'|כָּרַע
-כרפס|celery|ka§r§ˈpa§s|karpás|כַּרְפַּס
+כרע|to kneel|ka,ˈʁa,(ʕ)|kará'|כָּרַע
+כרפס|celery|ka,r,ˈpa,s|karpás|כַּרְפַּס
 כרשה||
 כרשנא||
 כרת||
@@ -4953,40 +4953,40 @@ autoExpandExamples.he = `
 כתיב חסר||
 כתיב מלא||
 כתיב||
-כתיבה|writing|k§ti§‹§ˈva§‹|ktivá|כְּתִיבָה
-כתיתה|schnitzel|k§ti.§‹§ta§‹|ktitá|כְּתִיתָה
+כתיבה|writing|k,ti,‹,ˈva,‹|ktivá|כְּתִיבָה
+כתיתה|schnitzel|k,ti.,‹,ta,‹|ktitá|כְּתִיתָה
 כתם||
-כתמים|oranges|kə§tu§mˈmi§‹§m||כְּתֻמִּים|
+כתמים|oranges|kə,tu,mˈmi,‹,m||כְּתֻמִּים|
 כתמתם||
 כתנת||
-כתף|shoulder|ka§ˈte§f|katéf|כָּתֵף
+כתף|shoulder|ka,ˈte,f|katéf|כָּתֵף
 כתר||
 כתש||
 כ״ג||
 כ״י||
 כ״ף||
-לִסְגֹּר|to close|li§z§ɡo§ʁ||לסגּר
-לְגַמְרֵי|completely|le§ˈɡa§m.§re§‹|legámre|לגמרי|
-לְהִתְרָאוֹת|goodbye|le§(h)i§t§ʁa§ˈ(ʔ)§o§t|l'hitra'ót|להתראות|
-לְיָד|near|le§ˈja§d|l'yád|ליד|
-לְכָאן|hither|lə§ˈχɑ§‹§n|lekhán|לכאן|
-לְפֹה|hither|le§ˈfo§‹|l'fó|לפה|
-לְשׁוֹנִי|linguistic|le.§ʃ§o§ˈni§‹|l'shoní|לשוני|
-לִגְוֺעַ|to agonise|li§ɡ§ˈvo.§a||לגוע
+לִסְגֹּר|to close|li,z,ɡo,ʁ||לסגּר
+לְגַמְרֵי|completely|le,ˈɡa,m.,re,‹|legámre|לגמרי|
+לְהִתְרָאוֹת|goodbye|le,(h)i,t,ʁa,ˈ(ʔ),o,t|l'hitra'ót|להתראות|
+לְיָד|near|le,ˈja,d|l'yád|ליד|
+לְכָאן|hither|lə,ˈχɑ,‹,n|lekhán|לכאן|
+לְפֹה|hither|le,ˈfo,‹|l'fó|לפה|
+לְשׁוֹנִי|linguistic|le.,ʃ,o,ˈni,‹|l'shoní|לשוני|
+לִגְוֺעַ|to agonise|li,ɡ,ˈvo.,a||לגוע
 לִכְלֵךְ|to make dirty||likhlékh|לכלך
-לִמֵּד|to teach|li§ˈmɛ§d|liméd|לימד
-לִקֵּק|to lick|li§ˈke§k|likék|ליקק|
-לֶחֶם|bread|ˈle§χe§m|lékhem|לחם|
-לַהֲקָה|band, pack, flock|la§(h)a§ˈka§‹|lahaká|להקה|
-לַיְלָה|night|ˈla§j.§la§‹|láyla|לילה
-לַעֲזָאזֵל|Damn! Hell!|la§ʔa§za§‹§ˈze§l|la'azazél|לעזאזל|
-לַ״י|Israeli lira|la§–§j|L.Y.|ל״י|
-לָגַם|to sip|la§ˈɡa§m|lagám|לגם|
-לָדִינוֹ|Ladino|la§ˈdi§‹§n§ɔ|ladíno|לדינו|
-לָמוּד|learned|la§ˈm§u§d|lamúd|למוד|
-לָקוֹחַ|client, customer|la§ˈk§o§ax|lakóakh|לקוח|
-לָשׁוֹן|language|la§ˈʃ§o§n|lashón|לשון|
-לֹא|no, not|lɔ§‹|lo|לא
+לִמֵּד|to teach|li,ˈmɛ,d|liméd|לימד
+לִקֵּק|to lick|li,ˈke,k|likék|ליקק|
+לֶחֶם|bread|ˈle,χe,m|lékhem|לחם|
+לַהֲקָה|band, pack, flock|la,(h)a,ˈka,‹|lahaká|להקה|
+לַיְלָה|night|ˈla,j.,la,‹|láyla|לילה
+לַעֲזָאזֵל|Damn! Hell!|la,ʔa,za,‹,ˈze,l|la'azazél|לעזאזל|
+לַ״י|Israeli lira|la,–,j|L.Y.|ל״י|
+לָגַם|to sip|la,ˈɡa,m|lagám|לגם|
+לָדִינוֹ|Ladino|la,ˈdi,‹,n,ɔ|ladíno|לדינו|
+לָמוּד|learned|la,ˈm,u,d|lamúd|למוד|
+לָקוֹחַ|client, customer|la,ˈk,o,ax|lakóakh|לקוח|
+לָשׁוֹן|language|la,ˈʃ,o,n|lashón|לשון|
+לֹא|no, not|lɔ,‹|lo|לא
 ל־ב־ש||
 ל־ח־ם||
 ל־מ־ד||
@@ -4995,7 +4995,7 @@ autoExpandExamples.he = `
 לא ברא השטן||
 לא מדבשך ולא מעקצך||
 לא ראינו אינה ראיה||
-לא|no, not|lɔ§‹|lo|לֹא
+לא|no, not|lɔ,‹|lo|לֹא
 לאה||
 לאובר||
 לאום||
@@ -5011,8 +5011,8 @@ autoExpandExamples.he = `
 לאמה||
 לאן||
 לאפה||
-לב|heart|ˈlɛ§v|lev|לֵב
-לֵב|heart|ˈlɛ§v|lev|לב
+לב|heart|ˈlɛ,v|lev|לֵב
+לֵב|heart|ˈlɛ,v|lev|לב
 לבב||
 לבד||
 לבור את הבר מן התבן||
@@ -5021,8 +5021,8 @@ autoExpandExamples.he = `
 לביאה||
 לביבה||
 לבלב||
-לבן|white|la§ˈva§n|laván|לָבָן
-לָבָן|white|la§ˈva§n|laván|לבן
+לבן|white|la,ˈva,n|laván|לָבָן
+לָבָן|white|la,ˈva,n|laván|לבן
 לבנבן||
 לבנה||
 לבנון||
@@ -5032,15 +5032,15 @@ autoExpandExamples.he = `
 לבריאות||
 לבש||
 לגבי||
-לגוע|to agonise|li§ɡ§ˈvo.§a||לִגְוֺעַ
+לגוע|to agonise|li,ɡ,ˈvo.,a||לִגְוֺעַ
 לגיטימי||
 לגיטימיות||
 לגיטימציה||
 לגליזציה||
-לגם|to sip|la§ˈɡa§m|lagám|לָגַם
-לגמרי|completely|le§ˈɡa§m.§re§‹|legámre|לְגַמְרֵי
+לגם|to sip|la,ˈɡa,m|lagám|לָגַם
+לגמרי|completely|le,ˈɡa,m.,re,‹|legámre|לְגַמְרֵי
 לדה||
-לדינו|Ladino|la§ˈdi§‹§n§ɔ|ladíno|לָדִינוֹ
+לדינו|Ladino|la,ˈdi,‹,n,ɔ|ladíno|לָדִינוֹ
 לה||
 להב||
 להבה||
@@ -5049,20 +5049,20 @@ autoExpandExamples.he = `
 להט״ב||
 להפך||
 להק||
-להקה|band, pack, flock|la§(h)a§ˈka§‹|lahaká|לַהֲקָה
+להקה|band, pack, flock|la,(h)a,ˈka,‹|lahaká|לַהֲקָה
 להקת עורבים||
-להתראות|goodbye|le§(h)i§t§ʁa§ˈ(ʔ)§o§t|l'hitra'ót|לְהִתְרָאוֹת
+להתראות|goodbye|le,(h)i,t,ʁa,ˈ(ʔ),o,t|l'hitra'ót|לְהִתְרָאוֹת
 לה״ו||
-לו|to him|l§o|לוֹ
-לוֹ|to him|l§o|לו
-לוֹבְּסְטֶר|lobster|ˈl§o§b.§s§te§ʁ|lóbster|לובסטר|
-לו|if|l§u|lu|לוּ
-לוּ|if|l§u|lu|לו|
+לו|to him|l,o|לוֹ
+לוֹ|to him|l,o|לו
+לוֹבְּסְטֶר|lobster|ˈl,o,b.,s,te,ʁ|lóbster|לובסטר|
+לו|if|l,u|lu|לוּ
+לוּ|if|l,u|lu|לו|
 לוב||
 לובי||
 לוביסטי||
 לובן||
-לובסטר|lobster|ˈl§o§b.§s§te§ʁ|lóbster|לוֹבְּסְטֶר
+לובסטר|lobster|ˈl,o,b.,s,te,ʁ|lóbster|לוֹבְּסְטֶר
 לוגו||
 לוד||
 לודז׳||
@@ -5099,29 +5099,29 @@ autoExpandExamples.he = `
 לח||
 לחות||
 לחי||
-לחיים|a blessing, toast|le§χa§ˈji§‹§m|l'chayím| לְחַיִּים
+לחיים|a blessing, toast|le,χa,ˈji,‹,m|l'chayím| לְחַיִּים
 לחימה||
 לחישה||
 לחלוטין||
 לחם משנה||
-לחם|bread|ˈle§χe§m|lékhem|לֶחֶם
+לחם|bread|ˈle,χe,m|lékhem|לֶחֶם
 לחמנייה||
 לחן||
 לחץ דם||
-לחץ|to squeeze|la§χˈa§t͡s|lákhats|לַחַץ
-לַחַץ|to squeeze|la§χˈa§t͡s|lákhats|לחץ
+לחץ|to squeeze|la,χˈa,t͡s|lákhats|לַחַץ
+לַחַץ|to squeeze|la,χˈa,t͡s|lákhats|לחץ
 לחש||
 לטאה||
 לטביה||
 לטוויה||
 לטינית||
-לי|to me|l§i|לִי
+לי|to me|l,i|לִי
 ליבב||
 ליבידו||
 ליבן||
 ליברציה||
 ליגה||
-ליד|near|le§ˈja§d|l'yád|לְיָד
+ליד|near|le,ˈja,d|l'yád|לְיָד
 לידה||
 ליובליאנה||
 ליווה||
@@ -5137,11 +5137,11 @@ autoExpandExamples.he = `
 ליל||
 לילה טוב||
 לילה לבן||
-לילה|night|ˈla§j.§la§‹|láyla|לַיְלָה
+לילה|night|ˈla,j.,la,‹|láyla|לַיְלָה
 לילי||
 לילית||
 לילך||
-לימד|to teach|li§‹§ˈmɛ§d|liméd|לִמֵּד
+לימד|to teach|li,‹,ˈmɛ,d|liméd|לִמֵּד
 לימה||
 לימוד||
 לימודים||
@@ -5158,12 +5158,12 @@ autoExpandExamples.he = `
 ליקוי חמה||
 ליקוי לבנה||
 ליקוי||
-ליקק|to lick|li§‹§ˈke§k|likék|לִקֵּק
+ליקק|to lick|li,‹,ˈke,k|likék|לִקֵּק
 לירה||
 לית ברירה||
 ליתוגרפיה||
 ליתיום||
-לכאן|hither|lə§ˈχɑ§‹§n|lekhán|לְכָאן
+לכאן|hither|lə,ˈχɑ,‹,n|lekhán|לְכָאן
 לכבוד||
 לכד||
 לכוד||
@@ -5179,7 +5179,7 @@ autoExpandExamples.he = `
 למה זה||
 למה||
 למואל||
-למוד|learned|la§ˈm§u§d|lamúd|לָמוּד
+למוד|learned|la,ˈm,u,d|lamúd|לָמוּד
 למור||
 למטה||
 למידה||
@@ -5191,7 +5191,7 @@ autoExpandExamples.he = `
 למ״ד||
 לן||
 לנתן||
-לסגּר|to close|li§z§ˈɡo§ʁ||לִסְגֹּר
+לסגּר|to close|li,z,ˈɡo,ʁ||לִסְגֹּר
 לסה״נ||
 לסטים||
 לסת||
@@ -5201,13 +5201,13 @@ autoExpandExamples.he = `
 לעולם||
 לעומת||
 לעז||
-לעזאזל|Damn! Hell!|la§ʔa§za§‹§ˈze§l|la'azazél|לַעֲזָאזֵל
+לעזאזל|Damn! Hell!|la,ʔa,za,‹,ˈze,l|la'azazél|לַעֲזָאזֵל
 לעיתים קרובות||
 לעיתים רחוקות||
 לעיתים||
 לעס||
 לעת עתה||
-לפה|hither|le§ˈfo§‹|l'fó|לְפֹה
+לפה|hither|le,ˈfo,‹|l'fó|לְפֹה
 לפחות||
 לפטופ|laptop||láptop|לָפְּטוֹפּ
 לָפְּטוֹפּ|laptop||láptop|לפטופ
@@ -5221,7 +5221,7 @@ autoExpandExamples.he = `
 לץ||
 לק||
 לקה||
-לקוח|client, customer|la§ˈk§o§ax|lakóakh|לָקוֹחַ
+לקוח|client, customer|la,ˈk,o,ax|lakóakh|לָקוֹחַ
 לקוני||
 לקח חלק||
 לקח||
@@ -5231,112 +5231,112 @@ autoExpandExamples.he = `
 לש||
 לשד||
 לשון הרע||
-לשון|language|la§ˈʃ§o§n|lashón|לָשׁוֹן
-לשוני|linguistic|le.§ʃ§o§ˈni§‹|l'shoní|לְשׁוֹנִי
+לשון|language|la,ˈʃ,o,n|lashón|לָשׁוֹן
+לשוני|linguistic|le.,ʃ,o,ˈni,‹|l'shoní|לְשׁוֹנִי
 לשונית||
 לשם||
 לשעבר||
 לתוך||
 לתת||
 ל״ג בעומר||
-ל״י|Israeli lira|la§–§j|L.Y.|לַ״י
+ל״י|Israeli lira|la,–,j|L.Y.|לַ״י
 מ"צ||
-מְאֹד|very, quite|me§ˈo§d|meód|מאוד|
-מְדִינַת יִשְׂרָאֵל|the State of Israel|me.§di.§‹§ˈna§t§ §ji§s.§ʁa.§ˈe§l|medinát yisra'él|מדינת ישראל|
-מְדִינָה|state|me.§di.§‹§ˈna§‹|m'diná|מדינה|
-מְטֹרָף|crazy, insane|me.§t̪o.§ʁaː§f|m'toráf|מטורף|
-מְלָכִים|kings|m§la.§ˈχi§‹§m|m'lakhim|מלכים|
-מְלָפְפוֹן|cucumber|me§ˌla.§fe§ˈf§o§n|m'laf'fon|מלפפון|
-מְנוֹרָה|menora, lamp|me.§n§o§ˈʁa§‹|m'norá|מנורה|
-מְנוּחָה|rest, calm|me.§n§u§ˈχa§‹|menukhá|מנוחה|
-מִגְדַּלּוֹר|lighthouse|mi§ɡ.§daː§lˈl§oː§ʁ|migdalór|מגדלור|
-מִזְחֶלֶת|sledge, sleigh|mi§z§ˈχe§le§t|mizhelet|מזחלת|
-מִזְרָקָה|fountain|mi§z§ʁa§ˈka§‹|mizraká|מזרקה|
-מִיכָאֵל|Michael|mi.§‹§χa§ˈ(ʔ)e§l|mikha'él|מיכאל|
-מִילֶנְיוּם|millenium|miː§‹§le§n§ˈj§uː§m|milényum|מילניום|
-מִין|species, gender|mi§‹§n|min|מין|
-מִיקְרוֹפוֹן|microphone|mi§‹§k§ʁ§ɔ§ˈf§ɔ§n|mikrofón|מיקרופון|
-מִישֶׁהוּ|somebody|ˈmi.§‹§ʃɛ.§(h)§u|míshehu|מישהו|
-מִלּוֹן|dictionary|mi§ˈl§ɔ§n|milón|מילון|
-מִנְיָן|quorum|mi§n§ˈja§n|minján|מניין|
-מִסְדְּרוֹן|foyer|mi§s.§də§ˈʁ§o§n|misderón|מסדרון|
-מִסְעָדָה|restaurant|mi§s.§ʔa§ˈda§‹|mis'adá|מסעדה|
-מִפְעָל|factory|mi§f§ˈʔa§l|mif'ál|מפעל|
-מִצְחָף|codex|mi§t͡s§ˈχa§f|mitskháf|מצחף|
-מִצְרַיִם|Egypt|mi§t͡s§ˈʁa§ji§m|mitsráyim|מצרים|
-מִרְשֶׁתֶת|the Internet|mi§r§ˈʃe§te§t|mirshétet|מרשתת|
-מִשְׁטָרָה|police|mi§ʃ§ta§ˈʁa§‹|mishtará|משטרה|
-מִשְׁכָּן|residence|mi§ʃ§ˈka§n|mishkán|משכן|
-מִשְׁפָּחָה|family|mi§ʃ§pa§ˈχa§‹|mishpakhá|משפחה|
-מִשְׁתָּלָה|plant nursery|mi§ʃ§ta§ˈla§‹|mishtalá|משתלה|
-מִשְׂחָק|game|mi§s§ˈχa§k|miskhák|משחק|
-מֵאוֹת|hundreds|me§ˈ(ʔ)§o§t|me'ót|מאות|
-מֵידָע|information|me§‹§da§–|מידע
-מֵיזָם|project|me§ɪ§ˈza§m|meizám|מיזם|
-מֵיתְרֵי־הַקּוֹל|vocal chords|mɛ§j§ta§ˌʁɛ§j§ §ha§ˈk§o§l|meyt'rèy-hakól|מיתרי הקול|
-מֶטָטְרוֹן|Metatron|me.§ta§t.§ˈʁ§o§n|metatrón|מטטרון|
-מֶלֶךְ|king|ˈme.§le§χ|mélekh|מלך|
-מֶקְסִיקוֹ|Mexico|mɛ§k§si§‹§k§ɔ|meksíko|מקסיקו|
-מֶתוֹדָה|method|me§t§ˈo§da§‹|metóda|מתודה|
-מַאֲרָב|ambush|ma.§(ʔ)a§ˈʁa§v|ma'aráv|מארב|
-מַבְרֵג|screwdriver|ma§v§ˈʁe§ɡ|mavrég|מברג|
-מַגָּ״ב|Israeli Border Police|ma§ˈɡa§–§v|M.Gv.|מג״ב abbr for מִשְׁמַר־הַגְּבוּל‎  mishmár-hag'vúl|
-מַדְפֶּסֶת|printer|ma§d§ˈpe§se§t|madpéset|מדפסת|
-מַדָּע|science|ma§ˈda§(ʕ)|madá|מדע|
-מַהְפֵּכָה|revolution|ma§ha§pe§ˈχa§‹|mahpekhá|מהפכה|
-מַהְפָּךְ|revolution|ma.§(h)a§ˈpa§χ|mahpákh|מהפך|
-מַהֵר|quickly, fast|ma§ˈ(h)e§ʁ|mahér|מהר|
-מַזְגָן|air conditioner|ma§z§ˈɡa§n|mazgán|מזגן|
-מַזְרֵק|syringe|ma§z§ˈʁe§k|mazrek|מזרק|
-מַזִּיק|pest|ma§ˈzi§‹§k|mazík|מזיק|
-מַזָּל|constellation; luck|ma§ˈza§l|mazál|מזל|
-מַחְצָבָה|quarry|ma§χ.§tsaː§va§‹|machtzavá|מחצבה|
-מַחְשְׁבוֹן|calculator|ma§χ§ʃe§ˈv§o§n|makhshevón|מחשבון|
-מַחְשֵׁב|computer|ma§χ§ˈʃe§v|makhshév|מחשב|
-מַחְשָׁבָה|thought|ma§χ.§ʃa.§ˈva§‹|makhshavá|מחשבה|
-מַחֲלָה|disease|ma§χa§ˈla§‹|makhalá|מחלה|
-מַחֲנֵה רִכּוּז|concentration camp|ma§χa§ˈne§‹§ §ʁi§ˈk§u§z|makhané rikúz|מחנה ריכוז|
-מַחַק|eraser|ˈma§χa§k|mákhak|מחק|
-מַלְאָךְ|angel|ma§l§ˈ(ʔ)a§χ|mal'ákh|מלאך|
-מַלְחִין|composer (music)|ma§l§ˈχi§‹§n|malkhín|מלחין|
-מַלְכָּה|queen|ma§l§ˈka§‹|malká|מלכה|
-מַמָּשׁ|really, truly|ma§ˈma§ʃ|mamásh|ממש|
-מַסֶּכֶת|series, set|ma§ˈse.§χe§t|masékhet|מסכת|
-מַעֲלִיב|offensive|ma.§ʔa§ˈli§‹§v|ma'alív|מעליב|
-מַעֲלָה|advantage|ma.§(ʕ)a§ˈla§‹|ma'alá|מעלה|
-מַעֲרֶכֶת־הַפְעָלָה|operating system|ma§ʕa§re§xe§t§–§ ha§f§ʕaː§laː§‹|ma'arékhet-haf'alá|מערכת הפעלה|
-מַעֲרָךְ|array (computing)|ma§ʔa§ˈʁa§χ|ma'arách|מערך|
-מַפְסִידָן|loser|ma§f§si§‹§ˈda§n|mafsidán|מפסידן|
-מַפְתֵּחַ|key|ma§f§ˈte§aχ|maftéakh|מפתח|
-מַר|bitter|ma§ʁ|mar|מר|
-מַרְבָד|carpet|ma§ʁ§ˈva§d|marvád|מרבד|
-מַרְגֵּמָה|mortar (weapon)|ma§ʁ§ɡe§ˈma§‹|margema|מרגמה|
-מַרְכּוֹל|supermarket|ma§ʁ§ˈk§o§l|markól|מרכול|
-מַרְפֵּק|elbow|ma§ʁ§ˈpɛ§k|marpék|מרפק|
-מַשְׁמָעוּתִי|meaningful|ma§ʃ.§ma.§(ʔ)§u.§ˈti§‹|mashma'utí|משמעותי|
-מַשֶּׁהוּ|something|ˈma§ʃɛ§ˌh§u|máshehu|משהו|
-מַשָּׂאִית|truck|ma§sa§ˈ(ʔ)i§‹§t|masa'ít|משאית|
-מַתִּתְיָהוּ|Matthew|ma.§ti§t§ˈja.§h§u|matityáhu|מתתיהו|
-מָאתַיִם|2 hundred|ma§‹§ˈta.§ji§m|matáyim|מאתיים|
-מָה|what|ˈma§‹|má|מה
-מָהִיר|fast, quick|ma§ˈ(h)i§‹§ʁ|mahír|מהיר|
-מָוֶת|death|ˈma§ve§t|mávet|מוות|
-מָחֳרָתַיִם|the day after tomorrow|mo§χ.§ʁa§ˈta.§ji§m|mokhoratáyim|מחרתיים|
-מָחָר|tomorrow|mɑ§χɑ§r|makhár|מחר|
-מָטָר|rain|ma§ˈta§ʁ|matár|מטר|
-מָלוֹן|hotel|ma§l§o§n|malón|מלון|
-מָלוּחַ|salty|ma§ˈl§u.§aχ|malúakh|מלוח|
-מָסָךְ|screen|ma§ˈsa§χ|masákh|מסך|
-מָצָא|to find|ma§ˈtsa§‹|matsá|מצא|
-מָקוֹם|station|ma§ˈk§o§m|makóm|מקום|
-מָרִיחוּאָנָה|marijuana|ma.§ʁi§‹§ˈχ§w§a.§na§‹|marikhu'ána|מריחואנה|
-מָשִׁיחַ|messiah|ma§ˈʃi§‹§aχ|mashíakh|משיח|
-מָשׂוֹשׂ|rejoicing|ma§ˈs§o§s|masós|משוש|
-מָתַי|when|ma§ˈta§j|matái|מתי|
-מֹחַ|mind, brain|ˈmo.§aχ|móakh|מוח|
-מֹשֶׁה|Moses|mo§ˈʃe§‹|moshé|משה|
-מֻשְׁלָם|perfect, flawless|mu§ʃ§ˈla§m|mushlám|מושלם|
-מֻשָּׂג|concept, idea|mu§ˈsa§ɡ|muság|מושג|
+מְאֹד|very, quite|me,ˈo,d|meód|מאוד|
+מְדִינַת יִשְׂרָאֵל|the State of Israel|me.,di.,‹,ˈna,t, ,ji,s.,ʁa.,ˈe,l|medinát yisra'él|מדינת ישראל|
+מְדִינָה|state|me.,di.,‹,ˈna,‹|m'diná|מדינה|
+מְטֹרָף|crazy, insane|me.,t̪o.,ʁaː,f|m'toráf|מטורף|
+מְלָכִים|kings|m,la.,ˈχi,‹,m|m'lakhim|מלכים|
+מְלָפְפוֹן|cucumber|me,ˌla.,fe,ˈf,o,n|m'laf'fon|מלפפון|
+מְנוֹרָה|menora, lamp|me.,n,o,ˈʁa,‹|m'norá|מנורה|
+מְנוּחָה|rest, calm|me.,n,u,ˈχa,‹|menukhá|מנוחה|
+מִגְדַּלּוֹר|lighthouse|mi,ɡ.,daː,lˈl,oː,ʁ|migdalór|מגדלור|
+מִזְחֶלֶת|sledge, sleigh|mi,z,ˈχe,le,t|mizhelet|מזחלת|
+מִזְרָקָה|fountain|mi,z,ʁa,ˈka,‹|mizraká|מזרקה|
+מִיכָאֵל|Michael|mi.,‹,χa,ˈ(ʔ)e,l|mikha'él|מיכאל|
+מִילֶנְיוּם|millenium|miː,‹,le,n,ˈj,uː,m|milényum|מילניום|
+מִין|species, gender|mi,‹,n|min|מין|
+מִיקְרוֹפוֹן|microphone|mi,‹,k,ʁ,ɔ,ˈf,ɔ,n|mikrofón|מיקרופון|
+מִישֶׁהוּ|somebody|ˈmi.,‹,ʃɛ.,(h),u|míshehu|מישהו|
+מִלּוֹן|dictionary|mi,ˈl,ɔ,n|milón|מילון|
+מִנְיָן|quorum|mi,n,ˈja,n|minján|מניין|
+מִסְדְּרוֹן|foyer|mi,s.,də,ˈʁ,o,n|misderón|מסדרון|
+מִסְעָדָה|restaurant|mi,s.,ʔa,ˈda,‹|mis'adá|מסעדה|
+מִפְעָל|factory|mi,f,ˈʔa,l|mif'ál|מפעל|
+מִצְחָף|codex|mi,t͡s,ˈχa,f|mitskháf|מצחף|
+מִצְרַיִם|Egypt|mi,t͡s,ˈʁa,ji,m|mitsráyim|מצרים|
+מִרְשֶׁתֶת|the Internet|mi,r,ˈʃe,te,t|mirshétet|מרשתת|
+מִשְׁטָרָה|police|mi,ʃ,ta,ˈʁa,‹|mishtará|משטרה|
+מִשְׁכָּן|residence|mi,ʃ,ˈka,n|mishkán|משכן|
+מִשְׁפָּחָה|family|mi,ʃ,pa,ˈχa,‹|mishpakhá|משפחה|
+מִשְׁתָּלָה|plant nursery|mi,ʃ,ta,ˈla,‹|mishtalá|משתלה|
+מִשְׂחָק|game|mi,s,ˈχa,k|miskhák|משחק|
+מֵאוֹת|hundreds|me,ˈ(ʔ),o,t|me'ót|מאות|
+מֵידָע|information|me,‹,da,–|מידע
+מֵיזָם|project|me,ɪ,ˈza,m|meizám|מיזם|
+מֵיתְרֵי־הַקּוֹל|vocal chords|mɛ,j,ta,ˌʁɛ,j, ,ha,ˈk,o,l|meyt'rèy-hakól|מיתרי הקול|
+מֶטָטְרוֹן|Metatron|me.,ta,t.,ˈʁ,o,n|metatrón|מטטרון|
+מֶלֶךְ|king|ˈme.,le,χ|mélekh|מלך|
+מֶקְסִיקוֹ|Mexico|mɛ,k,si,‹,k,ɔ|meksíko|מקסיקו|
+מֶתוֹדָה|method|me,t,ˈo,da,‹|metóda|מתודה|
+מַאֲרָב|ambush|ma.,(ʔ)a,ˈʁa,v|ma'aráv|מארב|
+מַבְרֵג|screwdriver|ma,v,ˈʁe,ɡ|mavrég|מברג|
+מַגָּ״ב|Israeli Border Police|ma,ˈɡa,–,v|M.Gv.|מג״ב abbr for מִשְׁמַר־הַגְּבוּל‎  mishmár-hag'vúl|
+מַדְפֶּסֶת|printer|ma,d,ˈpe,se,t|madpéset|מדפסת|
+מַדָּע|science|ma,ˈda,(ʕ)|madá|מדע|
+מַהְפֵּכָה|revolution|ma,ha,pe,ˈχa,‹|mahpekhá|מהפכה|
+מַהְפָּךְ|revolution|ma.,(h)a,ˈpa,χ|mahpákh|מהפך|
+מַהֵר|quickly, fast|ma,ˈ(h)e,ʁ|mahér|מהר|
+מַזְגָן|air conditioner|ma,z,ˈɡa,n|mazgán|מזגן|
+מַזְרֵק|syringe|ma,z,ˈʁe,k|mazrek|מזרק|
+מַזִּיק|pest|ma,ˈzi,‹,k|mazík|מזיק|
+מַזָּל|constellation; luck|ma,ˈza,l|mazál|מזל|
+מַחְצָבָה|quarry|ma,χ.,tsaː,va,‹|machtzavá|מחצבה|
+מַחְשְׁבוֹן|calculator|ma,χ,ʃe,ˈv,o,n|makhshevón|מחשבון|
+מַחְשֵׁב|computer|ma,χ,ˈʃe,v|makhshév|מחשב|
+מַחְשָׁבָה|thought|ma,χ.,ʃa.,ˈva,‹|makhshavá|מחשבה|
+מַחֲלָה|disease|ma,χa,ˈla,‹|makhalá|מחלה|
+מַחֲנֵה רִכּוּז|concentration camp|ma,χa,ˈne,‹, ,ʁi,ˈk,u,z|makhané rikúz|מחנה ריכוז|
+מַחַק|eraser|ˈma,χa,k|mákhak|מחק|
+מַלְאָךְ|angel|ma,l,ˈ(ʔ)a,χ|mal'ákh|מלאך|
+מַלְחִין|composer (music)|ma,l,ˈχi,‹,n|malkhín|מלחין|
+מַלְכָּה|queen|ma,l,ˈka,‹|malká|מלכה|
+מַמָּשׁ|really, truly|ma,ˈma,ʃ|mamásh|ממש|
+מַסֶּכֶת|series, set|ma,ˈse.,χe,t|masékhet|מסכת|
+מַעֲלִיב|offensive|ma.,ʔa,ˈli,‹,v|ma'alív|מעליב|
+מַעֲלָה|advantage|ma.,(ʕ)a,ˈla,‹|ma'alá|מעלה|
+מַעֲרֶכֶת־הַפְעָלָה|operating system|ma,ʕa,re,xe,t,–, ha,f,ʕaː,laː,‹|ma'arékhet-haf'alá|מערכת הפעלה|
+מַעֲרָךְ|array (computing)|ma,ʔa,ˈʁa,χ|ma'arách|מערך|
+מַפְסִידָן|loser|ma,f,si,‹,ˈda,n|mafsidán|מפסידן|
+מַפְתֵּחַ|key|ma,f,ˈte,aχ|maftéakh|מפתח|
+מַר|bitter|ma,ʁ|mar|מר|
+מַרְבָד|carpet|ma,ʁ,ˈva,d|marvád|מרבד|
+מַרְגֵּמָה|mortar (weapon)|ma,ʁ,ɡe,ˈma,‹|margema|מרגמה|
+מַרְכּוֹל|supermarket|ma,ʁ,ˈk,o,l|markól|מרכול|
+מַרְפֵּק|elbow|ma,ʁ,ˈpɛ,k|marpék|מרפק|
+מַשְׁמָעוּתִי|meaningful|ma,ʃ.,ma.,(ʔ),u.,ˈti,‹|mashma'utí|משמעותי|
+מַשֶּׁהוּ|something|ˈma,ʃɛ,ˌh,u|máshehu|משהו|
+מַשָּׂאִית|truck|ma,sa,ˈ(ʔ)i,‹,t|masa'ít|משאית|
+מַתִּתְיָהוּ|Matthew|ma.,ti,t,ˈja.,h,u|matityáhu|מתתיהו|
+מָאתַיִם|2 hundred|ma,‹,ˈta.,ji,m|matáyim|מאתיים|
+מָה|what|ˈma,‹|má|מה
+מָהִיר|fast, quick|ma,ˈ(h)i,‹,ʁ|mahír|מהיר|
+מָוֶת|death|ˈma,ve,t|mávet|מוות|
+מָחֳרָתַיִם|the day after tomorrow|mo,χ.,ʁa,ˈta.,ji,m|mokhoratáyim|מחרתיים|
+מָחָר|tomorrow|mɑ,χɑ,r|makhár|מחר|
+מָטָר|rain|ma,ˈta,ʁ|matár|מטר|
+מָלוֹן|hotel|ma,l,o,n|malón|מלון|
+מָלוּחַ|salty|ma,ˈl,u.,aχ|malúakh|מלוח|
+מָסָךְ|screen|ma,ˈsa,χ|masákh|מסך|
+מָצָא|to find|ma,ˈtsa,‹|matsá|מצא|
+מָקוֹם|station|ma,ˈk,o,m|makóm|מקום|
+מָרִיחוּאָנָה|marijuana|ma.,ʁi,‹,ˈχ,w,a.,na,‹|marikhu'ána|מריחואנה|
+מָשִׁיחַ|messiah|ma,ˈʃi,‹,aχ|mashíakh|משיח|
+מָשׂוֹשׂ|rejoicing|ma,ˈs,o,s|masós|משוש|
+מָתַי|when|ma,ˈta,j|matái|מתי|
+מֹחַ|mind, brain|ˈmo.,aχ|móakh|מוח|
+מֹשֶׁה|Moses|mo,ˈʃe,‹|moshé|משה|
+מֻשְׁלָם|perfect, flawless|mu,ʃ,ˈla,m|mushlám|מושלם|
+מֻשָּׂג|concept, idea|mu,ˈsa,ɡ|muság|מושג|
 מ־||
 מ־ז־ג||
 מ־ל־א||
@@ -5350,7 +5350,7 @@ autoExpandExamples.he = `
 מאדימי||
 מאה||
 מאהל||
-מאוד|very, quite|me§ˈo§‹§d|meód|מְאֹד
+מאוד|very, quite|me,ˈo,‹,d|meód|מְאֹד
 מאוהב||
 מאוורר||
 מאוחד||
@@ -5365,7 +5365,7 @@ autoExpandExamples.he = `
 מאורר||
 מאושכן||
 מאושר||
-מאות|hundreds|me§ˈ(ʔ)§o§t|me'ót|מֵאוֹת
+מאות|hundreds|me,ˈ(ʔ),o,t|me'ót|מֵאוֹת
 מאז||
 מאזכר||
 מאזניים||
@@ -5386,10 +5386,10 @@ autoExpandExamples.he = `
 מאפיה||
 מאפיין||
 מאפרה||
-מארב|ambush|ma.§(ʔ)a§ˈʁa§v|ma'aráv|מַאֲרָב
+מארב|ambush|ma.,(ʔ)a,ˈʁa,v|ma'aráv|מַאֲרָב
 מארס||
 מאת||
-מאתיים|2 hundred|ma§‹§ˈta.§ji§‹§m|matáyim|מָאתַיִם
+מאתיים|2 hundred|ma,‹,ˈta.,ji,‹,m|matáyim|מָאתַיִם
 מבגר||
 מבדק||
 מבוא||
@@ -5414,7 +5414,7 @@ autoExpandExamples.he = `
 מבצעי||
 מבצר||
 מבקר||
-מברג|screwdriver|ma§v§ˈʁe§ɡ|mavrég|מַבְרֵג
+מברג|screwdriver|ma,v,ˈʁe,ɡ|mavrég|מַבְרֵג
 מבריק||
 מברשת גילוח||
 מברשת שיניים||
@@ -5430,7 +5430,7 @@ autoExpandExamples.he = `
 מגד||
 מגדל בבל||
 מגדל||
-מגדלור|lighthouse|mi§ɡ.§daː§lˈl§oː§ʁ|migdalór|מִגְדַּלּוֹר
+מגדלור|lighthouse|mi,ɡ.,daː,lˈl,oː,ʁ|migdalór|מִגְדַּלּוֹר
 מגדר||
 מגהץ||
 מגוון||
@@ -5462,7 +5462,7 @@ autoExpandExamples.he = `
 מגרש||
 מגש||
 מג׳דרה||
-מג״ב|Israeli Border Police|ma§ˈɡa§–§v|M.Gv.|מַגָּ״ב abbr for מִשְׁמַר־הַגְּבוּל‎  mishmár-hag'vúl
+מג״ב|Israeli Border Police|ma,ˈɡa,–,v|M.Gv.|מַגָּ״ב abbr for מִשְׁמַר־הַגְּבוּל‎  mishmár-hag'vúl
 מדאיג||
 מדביר||
 מדבר||
@@ -5477,12 +5477,12 @@ autoExpandExamples.he = `
 מדחם||
 מדי||
 מדין||
-מדינה|state|me.§di.§‹§ˈna§‹|m'diná|מְדִינָה
+מדינה|state|me.,di.,‹,ˈna,‹|m'diná|מְדִינָה
 מדיני||
 מדיניות||
-מדינת ישראל|the State of Israel|me.§di.§‹§ˈna§t§ §ji§s.§ʁa.§ˈe§l|medinát yisra'él|מְדִינַת יִשְׂרָאֵל
+מדינת ישראל|the State of Israel|me.,di.,‹,ˈna,t, ,ji,s.,ʁa.,ˈe,l|medinát yisra'él|מְדִינַת יִשְׂרָאֵל
 מדלייה||
-מדע|science|ma§ˈda§(ʕ)|madá|מַדָּע
+מדע|science|ma,ˈda,(ʕ)|madá|מַדָּע
 מדעי המחשב||
 מדעי הרוח||
 מדעי||
@@ -5490,7 +5490,7 @@ autoExpandExamples.he = `
 מדף||
 מדפּסת|printer|mat'peset|מַדְפֶּסֶת
 מדפסת תלת־ממד||
-מדפסת|printer|ma§d§ˈpe§se§t|madpéset|מַדְפֶּסֶת
+מדפסת|printer|ma,d,ˈpe,se,t|madpéset|מַדְפֶּסֶת
 מדרגה||
 מדרגות||
 מדרון||
@@ -5515,7 +5515,7 @@ autoExpandExamples.he = `
 מה קורה||
 מה שזה לא יהיה||
 מה שלומך||
-מה|what|ˈma§‹|má
+מה|what|ˈma,‹|má
 מהגר||
 מהדר||
 מהו||
@@ -5523,17 +5523,17 @@ autoExpandExamples.he = `
 מהונדס גנטית||
 מהונדס||
 מהות||
-מהיר|fast, quick|ma§ˈ(h)i§‹§ʁ|mahír|מָהִיר
+מהיר|fast, quick|ma,ˈ(h)i,‹,ʁ|mahír|מָהִיר
 מהירות האור||
 מהירות||
 מהנדס||
-מהפך|revolution|ma.§(h)a§ˈpa§χ|mahpákh|מַהְפָּךְ
-מהפכה|revolution|ma§ha§pe§ˈχa§‹|mahpekhá|מַהְפֵּכָה
-מהר|quickly, fast|ma§ˈ(h)e§ʁ|mahér|מַהֵר
-מוֹעִיל|useful|m§o§ʔi§‹§l|mo'íl|מועיל
-מוּזִיקָה|music|ˈm§u§zi§‹§ka§‹|múzika|מוזיקה|
-מוּזָר|strange, odd|m§u§ˈza§ʁ|muzár|מוזר|
-מוּם|defect|m§u§m|múm|מום
+מהפך|revolution|ma.,(h)a,ˈpa,χ|mahpákh|מַהְפָּךְ
+מהפכה|revolution|ma,ha,pe,ˈχa,‹|mahpekhá|מַהְפֵּכָה
+מהר|quickly, fast|ma,ˈ(h)e,ʁ|mahér|מַהֵר
+מוֹעִיל|useful|m,o,ʔi,‹,l|mo'íl|מועיל
+מוּזִיקָה|music|ˈm,u,zi,‹,ka,‹|múzika|מוזיקה|
+מוּזָר|strange, odd|m,u,ˈza,ʁ|muzár|מוזר|
+מוּם|defect|m,u,m|múm|מום
 מואב||
 מואזין||
 מואר||
@@ -5556,14 +5556,14 @@ autoExpandExamples.he = `
 מודרני||
 מודרנית||
 מוהל||
-מוות|death|ˈma§›§ve§t|mávet|מָוֶת
+מוות|death|ˈma,›,ve,t|mávet|מָוֶת
 מוזג||
 מוזהב||
 מוזיאון||
 מוזיקאי||
-מוזיקה|music|ˈm§u§zi§‹§ka§‹|múzika|מוּזִיקָה
-מוזר|strange, odd|m§u§ˈza§ʁ|muzár|מוּזָר
-מוח|mind, brain|ˈm§o.§aχ|móakh|מֹחַ
+מוזיקה|music|ˈm,u,zi,‹,ka,‹|múzika|מוּזִיקָה
+מוזר|strange, odd|m,u,ˈza,ʁ|muzár|מוּזָר
+מוח|mind, brain|ˈm,o.,aχ|móakh|מֹחַ
 מוחיטו||
 מוחלט||
 מוחמד||
@@ -5582,7 +5582,7 @@ autoExpandExamples.he = `
 מולא||
 מולדובה||
 מולדת||
-מום|defect|m§u§m|múm|מוּם
+מום|defect|m,u,m|múm|מוּם
 מומחה||
 מומלץ||
 מונדיאל||
@@ -5606,7 +5606,7 @@ autoExpandExamples.he = `
 מועד||
 מועדון||
 מועדף||
-מועיל|useful|m§o§ʔi§‹§l|mo'íl|מוֹעִיל|
+מועיל|useful|m,o,ʔi,‹,l|mo'íl|מוֹעִיל|
 מועמד||
 מועצה אזורית||
 מועצה מקומית||
@@ -5636,9 +5636,9 @@ autoExpandExamples.he = `
 מורשה||
 מושב||
 מושבה||
-מושג|concept, idea|m§u§ˈsa§ɡ|muság|מֻשָּׂג
+מושג|concept, idea|m,u,ˈsa,ɡ|muság|מֻשָּׂג
 מושט||
-מושלם|perfect, flawless|m§u§ʃ§ˈla§m|mushlám|מֻשְׁלָם
+מושלם|perfect, flawless|m,u,ʃ,ˈla,m|mushlám|מֻשְׁלָם
 מושלמת||
 מות||
 מותג||
@@ -5650,7 +5650,7 @@ autoExpandExamples.he = `
 מזג אוויר||
 מזג אויר||
 מזג||
-מזגן|air conditioner|ma§z§ˈɡa§n|mazgán|מַזְגָן
+מזגן|air conditioner|ma,z,ˈɡa,n|mazgán|מַזְגָן
 מזוהם||
 מזוודה||
 מזווה||
@@ -5661,15 +5661,15 @@ autoExpandExamples.he = `
 מזועזע||
 מזוקן||
 מזח||
-מזחלת|sledge, sleigh|mi§z§ˈχe§le§t|mizhelet|מִזְחֶלֶת
+מזחלת|sledge, sleigh|mi,z,ˈχe,le,t|mizhelet|מִזְחֶלֶת
 מזיע||
-מזיק|pest|ma§ˈzi§‹§k|mazík|מַזִּיק
+מזיק|pest|ma,ˈzi,‹,k|mazík|מַזִּיק
 מזכיר||
 מזכירות||
 מזכרת||
 מזכ״ל||
 מזל טוב||
-מזל|constellation; luck|ma§ˈza§l|mazál|מַזָּל
+מזל|constellation; luck|ma,ˈza,l|mazál|מַזָּל
 מזלג||
 מזל״ט||
 מזמור||
@@ -5681,8 +5681,8 @@ autoExpandExamples.he = `
 מזרח||
 מזרחי||
 מזרן||
-מזרק|syringe|ma§z§ˈʁe§k|mazrek|מַזְרֵק
-מזרקה|fountain|mi§z§ʁa§ˈka§‹|mizraká|מִזְרָקָה
+מזרק|syringe|ma,z,ˈʁe,k|mazrek|מַזְרֵק
+מזרקה|fountain|mi,z,ʁa,ˈka,‹|mizraká|מִזְרָקָה
 מח עצם||
 מח||
 מחאה||
@@ -5717,7 +5717,7 @@ autoExpandExamples.he = `
 מחיר||
 מחית||
 מחלבה||
-מחלה|disease|ma§χa§ˈla§‹|makhalá|מַחֲלָה
+מחלה|disease|ma,χa,ˈla,‹|makhalá|מַחֲלָה
 מחלוקת||
 מחלף||
 מחלקה||
@@ -5725,7 +5725,7 @@ autoExpandExamples.he = `
 מחלת נפש||
 מחמד||
 מחמיר||
-מחנה ריכוז|concentration camp|ma§χa§ˈne§‹§ §ʁi§‹§ˈk§u§z|makhané rikúz|מַחֲנֵה רִכּוּז
+מחנה ריכוז|concentration camp|ma,χa,ˈne,‹, ,ʁi,‹,ˈk,u,z|makhané rikúz|מַחֲנֵה רִכּוּז
 מחנה||
 מחניים||
 מחסום||
@@ -5733,19 +5733,19 @@ autoExpandExamples.he = `
 מחסן||
 מחסנית||
 מחפר||
-מחצבה|quarry|ma§χ.§tsaː§va§‹|machtzavá|מַחְצָבָה
+מחצבה|quarry|ma,χ.,tsaː,va,‹|machtzavá|מַחְצָבָה
 מחצה||
 מחצלת||
-מחק|eraser|ˈma§χa§k|mákhak|מַחַק
+מחק|eraser|ˈma,χa,k|mákhak|מַחַק
 מחקר||
 מחר כך||
-מחר|tomorrow|mɑ§χɑ§r|makhár|מָחָר
+מחר|tomorrow|mɑ,χɑ,r|makhár|מָחָר
 מחרשה||
-מחרתיים|the day after tomorrow|mo§χ.§ʁa§ˈta.§›§ji§m|mokhoratáyim|מָחֳרָתַיִם
+מחרתיים|the day after tomorrow|mo,χ.,ʁa,ˈta.,›,ji,m|mokhoratáyim|מָחֳרָתַיִם
 מחשב לוח||
-מחשב|computer|ma§χ§ˈʃe§v|makhshév|מַחְשֵׁב
-מחשבה|thought|ma§χ.§ʃa.§ˈva§‹|makhshavá|מַחְשָׁבָה
-מחשבון|calculator|ma§χ§ʃe§ˈv§o§n|makhshevón|מַחְשְׁבוֹן
+מחשב|computer|ma,χ,ˈʃe,v|makhshév|מַחְשֵׁב
+מחשבה|thought|ma,χ.,ʃa.,ˈva,‹|makhshavá|מַחְשָׁבָה
+מחשבון|calculator|ma,χ,ʃe,ˈv,o,n|makhshevón|מַחְשְׁבוֹן
 מחשבות||
 מחתן||
 מחתרת||
@@ -5761,8 +5761,8 @@ autoExpandExamples.he = `
 מטוגן||
 מטוס||
 מטופל||
-מטורף|crazy, insane|me.§t̪o.§‹§ʁaː§f|m'toráf|מְטֹרָף
-מטטרון|Metatron|me.§ta§t.§ˈʁ§o§n|metatrón|מֶטָטְרוֹן
+מטורף|crazy, insane|me.,t̪o.,‹,ʁaː,f|m'toráf|מְטֹרָף
+מטטרון|Metatron|me.,ta,t.,ˈʁ,o,n|metatrón|מֶטָטְרוֹן
 מטלה||
 מטלית||
 מטמון||
@@ -5774,14 +5774,14 @@ autoExpandExamples.he = `
 מטקה||
 מטקות||
 מטר מטאורים||
-מטר|rain|ma§ˈta§ʁ|matár|מָטָר
+מטר|rain|ma,ˈta,ʁ|matár|מָטָר
 מטרה||
 מטריה||
 מטרייה||
 מט״ח||
 מי חמצן||
 מי שנכוה ברותחין נזהר בצוננין||
-מי|who|ˈmi§‹
+מי|who|ˈmi,‹
 מיאן||
 מיבש כביסה||
 מיבש שער||
@@ -5800,7 +5800,7 @@ autoExpandExamples.he = `
 מיזג||
 מיזוג||
 מיזוגיניה||
-מיזם|project|me§ɪ§ˈza§m|meizám|מֵיזָם
+מיזם|project|me,ɪ,ˈza,m|meizám|מֵיזָם
 מיטב||
 מיטה||
 מייבש כביסה||
@@ -5814,7 +5814,7 @@ autoExpandExamples.he = `
 מיינץ||
 מייסד||
 מייק||
-מיכאל|Michael|mi.§‹§χa§ˈ(ʔ)e§l|mikha'él|מִיכָאֵל
+מיכאל|Michael|mi.,‹,χa,ˈ(ʔ)e,l|mikha'él|מִיכָאֵל
 מיכה||
 מיכיה||
 מיכיהו||
@@ -5824,22 +5824,22 @@ autoExpandExamples.he = `
 מילה||
 מילואים||
 מילוי||
-מילון|dictionary|mi§‹§ˈl§ɔ§n|milón|מִלּוֹן
+מילון|dictionary|mi,‹,ˈl,ɔ,n|milón|מִלּוֹן
 מיליארד||
 מיליארדר||
 מיליון||
 מיליונר||
 מילנו||
-מילניום|millenium|miː§‹§le§n§ˈj§uː§m|milényum|מִילֶנְיוּם
-מים|water|ˈma§j§m|mayim|מַיִם
-מַיִם|water|ˈma§j§m|mayim|מים
+מילניום|millenium|miː,‹,le,n,ˈj,uː,m|milényum|מִילֶנְיוּם
+מים|water|ˈma,j,m|mayim|מַיִם
+מַיִם|water|ˈma,j,m|mayim|מים
 מימון||
 מימוש||
 מימי||
 מימן||
 מימש||
 מין אוראלי||
-מין|species, gender|mi§‹§n|min|מִין
+מין|species, gender|mi,‹,n|min|מִין
 מיני||
 מיניות||
 מינימלי||
@@ -5860,8 +5860,8 @@ autoExpandExamples.he = `
 מיקרוביאלי||
 מיקרוסקופ|microscope||mikroskop|מִיקְרוֹסְקוֹפּ
 מִיקְרוֹסְקוֹפּ|microscope||mikroskop|מיקרוסקופ
-מיקרופון|microphone|mi§‹§k§ʁ§ɔ§ˈf§ɔ§n|mikrofón|מִיקְרוֹפוֹן
-מישהו|somebody|ˈmi.§‹§ʃɛ.§(h)§u|míshehu|מִישֶׁהוּ
+מיקרופון|microphone|mi,‹,k,ʁ,ɔ,ˈf,ɔ,n|mikrofón|מִיקְרוֹפוֹן
+מישהו|somebody|ˈmi.,‹,ʃɛ.,(h),u|míshehu|מִישֶׁהוּ
 מישיגן||
 מישמש||
 מישרים||
@@ -5871,7 +5871,7 @@ autoExpandExamples.he = `
 מיתוס||
 מיתן||
 מיתר||
-מיתרי הקול|vocal chords|mɛ§j§ta§ˌʁɛ§j§ §ha§ˈk§o§l|meyt'rèy-hakól|מֵיתְרֵי־הַקּוֹל
+מיתרי הקול|vocal chords|mɛ,j,ta,ˌʁɛ,j, ,ha,ˈk,o,l|meyt'rèy-hakól|מֵיתְרֵי־הַקּוֹל
 מכאוב||
 מכאיב||
 מכבי||
@@ -5917,10 +5917,10 @@ autoExpandExamples.he = `
 מכתב||
 מכתש||
 מל||
-מלא|full|ma§ˈlɛ§‹|malé|מָלֵא
-מָלֵא|full|ma§ˈlɛ§‹|malé|מלא
+מלא|full|ma,ˈlɛ,‹|malé|מָלֵא
+מָלֵא|full|ma,ˈlɛ,‹|malé|מלא
 מלאך המוות||
-מלאך|angel|ma§l§ˈ(ʔ)a§χ|mal'ákh|מַלְאָךְ
+מלאך|angel|ma,l,ˈ(ʔ)a,χ|mal'ákh|מַלְאָךְ
 מלאכה||
 מלאכותי||
 מלאכי||
@@ -5929,16 +5929,16 @@ autoExpandExamples.he = `
 מלגה||
 מלגזה||
 מלה||
-מלוח|salty|ma§ˈl§u.§aχ|malúakh|מָלוּחַ
+מלוח|salty|ma,ˈl,u.,aχ|malúakh|מָלוּחַ
 מלוכה||
-מלוכלך|dirty|m§l§u§χ§ˈla§χ
-מלון|hotel|ma§l§o§n|malón|מָלוֹן
+מלוכלך|dirty|m,l,u,χ,ˈla,χ
+מלון|hotel|ma,l,o,n|malón|מָלוֹן
 מלזיה||
 מלח ים||
 מלח לימון||
-מלח|salt|ˈmɛ§la§χ
+מלח|salt|ˈmɛ,la,χ
 מלחייה||
-מלחין|composer (music)|ma§l§ˈχi§‹§n|malkhín|מַלְחִין
+מלחין|composer (music)|ma,l,ˈχi,‹,n|malkhín|מַלְחִין
 מלחמה||
 מלחמת אזרחים||
 מלחציים||
@@ -5947,18 +5947,18 @@ autoExpandExamples.he = `
 מלטזי||
 מליץ||
 מלית||
-מלך|king|ˈme.§le§χ|mélekh|מֶלֶךְ
-מלכה|queen|ma§l§ˈka§‹|malká|מַלְכָּה
+מלך|king|ˈme.,le,χ|mélekh|מֶלֶךְ
+מלכה|queen|ma,l,ˈka,‹|malká|מַלְכָּה
 מלכות||
 מלכותי||
 מלכי־צדק||
-מלכים|kings|m§la.§ˈχi§‹§m|m'lakhim|מְלָכִים
+מלכים|kings|m,la.,ˈχi,‹,m|m'lakhim|מְלָכִים
 מלכת אסתר||
 מלכתחילה||
 מלמד||
 מלעיל||
 מלפפון ים||
-מלפפון|cucumber|me§ˌla.§fe§ˈf§o§n|m'laf'fon|מְלָפְפוֹן
+מלפפון|cucumber|me,ˌla.,fe,ˈf,o,n|m'laf'fon|מְלָפְפוֹן
 מלצר||
 מלצרית||
 מלקחת||
@@ -5979,7 +5979,7 @@ autoExpandExamples.he = `
 ממלכה||
 ממציא||
 ממרח||
-ממש|really, truly|ma§ˈma§ʃ|mamásh|מַמָּשׁ
+ממש|really, truly|ma,ˈma,ʃ|mamásh|מַמָּשׁ
 ממשל||
 ממשלה||
 ממשלתי||
@@ -6003,19 +6003,19 @@ autoExpandExamples.he = `
 מנהל||
 מנהלת||
 מנהרה||
-מנוחה|rest, calm|me.§n§u§ˈχa§‹|menukhá|מְנוּחָה
+מנוחה|rest, calm|me.,n,u,ˈχa,‹|menukhá|מְנוּחָה
 מנוסה||
 מנוע חיפוש||
 מנוע||
 מנוקד||
 מנור||
-מנורה|menora, lamp|me.§n§o§ˈʁa§‹|m'norá|מְנוֹרָה
+מנורה|menora, lamp|me.,n,o,ˈʁa,‹|m'norá|מְנוֹרָה
 מנותק||
 מנזר||
 מנחה קטנה||
 מנחה||
 מנחם||
-מניין|quorum|mi§n§ˈja§‹§n|minján|מִנְיָן
+מניין|quorum|mi,n,ˈja,‹,n|minján|מִנְיָן
 מנילה||
 מנין||
 מניפה||
@@ -6032,7 +6032,7 @@ autoExpandExamples.he = `
 מסגד||
 מסגרת||
 מסדר||
-מסדרון|foyer|mi§s.§də§ˈʁ§o§n|misderón|מִסְדְּרוֹן
+מסדרון|foyer|mi,s.,də,ˈʁ,o,n|misderón|מִסְדְּרוֹן
 מסובך||
 מסוגל||
 מסוגלים||
@@ -6057,16 +6057,16 @@ autoExpandExamples.he = `
 מסיבת עיתונאים||
 מסילת ברזל||
 מסירה||
-מסך|screen|ma§ˈsa§χ|masákh|מָסָךְ
+מסך|screen|ma,ˈsa,χ|masákh|מָסָךְ
 מסכה||
 מסכן||
-מסכת|series, set|ma§ˈse.§χe§t|masékhet|מַסֶּכֶת
+מסכת|series, set|ma,ˈse.,χe,t|masékhet|מַסֶּכֶת
 מסלול||
 מסמר||
 מסנן||
 מסננת||
 מסע||
-מסעדה|restaurant|mi§s.§ʔa§ˈda§‹|mis'adá|מִסְעָדָה
+מסעדה|restaurant|mi,s.,ʔa,ˈda,‹|mis'adá|מִסְעָדָה
 מספיק||
 מספר מרוכב||
 מספר||
@@ -6109,10 +6109,10 @@ autoExpandExamples.he = `
 מעושה||
 מעות חטים||
 מעט מדי, מאוחר מדי||
-מעט|few|mɛ§ˈʔa§t
+מעט|few|mɛ,ˈʔa,t
 מעטפה||
 מעי||
-מעיים|guts|ˈmɛ§ʔa§›§j§m
+מעיים|guts|ˈmɛ,ʔa,›,j,m
 מעיין||
 מעיכה||
 מעיל||
@@ -6120,8 +6120,8 @@ autoExpandExamples.he = `
 מעין||
 מעך||
 מעל||
-מעלה|advantage|ma.§(ʕ)a§ˈla§‹|ma'alá|מַעֲלָה
-מעליב|offensive|ma.§ʔa§ˈli§‹§v|ma'alív|מַעֲלִיב
+מעלה|advantage|ma.,(ʕ)a,ˈla,‹|ma'alá|מַעֲלָה
+מעליב|offensive|ma.,ʔa,ˈli,‹,v|ma'alív|מַעֲלִיב
 מעלית||
 מעמד||
 מען||
@@ -6136,10 +6136,10 @@ autoExpandExamples.he = `
 מערה||
 מערוך||
 מעריב||
-מערך|array (computing)|ma§ʔa§ˈʁa§χ|ma'arách|מַעֲרָךְ
+מערך|array (computing)|ma,ʔa,ˈʁa,χ|ma'arách|מַעֲרָךְ
 מערכה||
 מערכון||
-מערכת הפעלה|operating system|ma§ʕa§re§xe§t§–§ ha§f§ʕaː§laː§‹|ma'arékhet-haf'alá|מַעֲרֶכֶת־הַפְעָלָה
+מערכת הפעלה|operating system|ma,ʕa,re,xe,t,–, ha,f,ʕaː,laː,‹|ma'arékhet-haf'alá|מַעֲרֶכֶת־הַפְעָלָה
 מערכת הרבייה||
 מערכת מבודדת||
 מערכת מידע||
@@ -6178,8 +6178,8 @@ autoExpandExamples.he = `
 מפלצת||
 מפלצתי||
 מפני||
-מפסידן|loser|ma§f§si§‹§ˈda§n|mafsidán|מַפְסִידָן
-מפעל|factory|mi§f§ˈʔa§l|mif'ál|מִפְעָל
+מפסידן|loser|ma,f,si,‹,ˈda,n|mafsidán|מַפְסִידָן
+מפעל|factory|mi,f,ˈʔa,l|mif'ál|מִפְעָל
 מפקד||
 מפקדה||
 מפרט||
@@ -6187,10 +6187,10 @@ autoExpandExamples.he = `
 מפרש||
 מפרשית||
 מפשעה||
-מפתח|key|ma§f§ˈte§aχ|maftéakh|מַפְתֵּחַ
+מפתח|key|ma,f,ˈte,aχ|maftéakh|מַפְתֵּחַ
 מפתן||
 מצא חן בעיני||
-מצא|to find|ma§ˈtsa§‹|matsá|מָצָא
+מצא|to find|ma,ˈtsa,‹|matsá|מָצָא
 מצב רוח||
 מצב||
 מצברוח||
@@ -6209,7 +6209,7 @@ autoExpandExamples.he = `
 מצות||
 מצח||
 מצחיק||
-מצחף|codex|mi§t͡s§ˈχa§f|mitskháf|מִצְחָף
+מצחף|codex|mi,t͡s,ˈχa,f|mitskháf|מִצְחָף
 מציאות||
 מציצה||
 מצליח||
@@ -6225,10 +6225,10 @@ autoExpandExamples.he = `
 מצפון||
 מצפן||
 מצפצחכצמטפמצפץ||
-מצץ|to suck|ma§ˈt͡sa§t͡s
+מצץ|to suck|ma,ˈt͡sa,t͡s
 מצקת||
 מצרי||
-מצרים|Egypt|mi§t͡s§ˈʁa§ji§m|mitsráyim|מִצְרַיִם
+מצרים|Egypt|mi,t͡s,ˈʁa,ji,m|mitsráyim|מִצְרַיִם
 מצרית||
 מצ״ב||
 מקביל||
@@ -6243,14 +6243,14 @@ autoExpandExamples.he = `
 מקווה||
 מקוון||
 מקולקל||
-מקום|station|ma§ˈk§o§m|makóm|מָקוֹם
+מקום|station|ma,ˈk,o,m|makóm|מָקוֹם
 מקומי||
 מקונן||
 מקור||
 מקורי||
 מקטורה||
 מקיף||
-מקל|stick|ma§ˈkɛ§l
+מקל|stick|ma,ˈkɛ,l
 מקלדת||
 מקלות אכילה||
 מקלחת||
@@ -6260,7 +6260,7 @@ autoExpandExamples.he = `
 מקסימלי||
 מקסימלית||
 מקסיקו סיטי||
-מקסיקו|Mexico|mɛ§k§si§‹§k§ɔ|meksíko|מֶקְסִיקוֹ
+מקסיקו|Mexico|mɛ,k,si,‹,k,ɔ|meksíko|מֶקְסִיקוֹ
 מקף||
 מקפיא||
 מקצוע||
@@ -6269,16 +6269,16 @@ autoExpandExamples.he = `
 מקרה||
 מקרי||
 מקרר||
-מר|bitter|ma§ʁ|mar|מַר
+מר|bitter|ma,ʁ|mar|מַר
 מרא||
 מראה||
 מראית עין||
 מראש||
 מרב||
-מרבד|carpet|ma§ʁ§ˈva§d|marvád|מַרְבָד
+מרבד|carpet|ma,ʁ,ˈva,d|marvád|מַרְבָד
 מרגיע||
 מרגל||
-מרגמה|mortar (weapon)|ma§ʁ§ɡe§ˈma§‹|margema|מַרְגֵּמָה
+מרגמה|mortar (weapon)|ma,ʁ,ɡe,ˈma,‹|margema|מַרְגֵּמָה
 מרד||
 מרדכי||
 מרדנות||
@@ -6301,14 +6301,14 @@ autoExpandExamples.he = `
 מרטינז||
 מריא||
 מריו||
-מריחואנה|marijuana|ma.§ʁi§‹§ˈχ§w§a.§na§‹|marikhu'ána|מָרִיחוּאָנָה
+מריחואנה|marijuana|ma.,ʁi,‹,ˈχ,w,a.,na,‹|marikhu'ána|מָרִיחוּאָנָה
 מרים||
 מריצה||
 מרירות||
 מרית||
 מרכב||
 מרכבה||
-מרכול|supermarket|ma§ʁ§ˈk§o§l|markól|מַרְכּוֹל
+מרכול|supermarket|ma,ʁ,ˈk,o,l|markól|מַרְכּוֹל
 מרכז||
 מרכזי||
 מרכיב||
@@ -6320,7 +6320,7 @@ autoExpandExamples.he = `
 מרפא||
 מרפאה||
 מרפסת||
-מרפק|elbow|ma§ʁ§ˈpɛ§k|marpék|מַרְפֵּק
+מרפק|elbow|ma,ʁ,ˈpɛ,k|marpék|מַרְפֵּק
 מרץ||
 מרצה||
 מרציפן||
@@ -6329,20 +6329,20 @@ autoExpandExamples.he = `
 מרקם||
 מרשים||
 מרשם||
-מרשתת|the Internet|mi§r§ˈʃe§te§t|mirshétet|מִרְשֶׁתֶת
+מרשתת|the Internet|mi,r,ˈʃe,te,t|mirshétet|מִרְשֶׁתֶת
 מרתון||
 מרתף||
 משא||
 משאבה||
-משאית|truck|ma§sa§ˈ(ʔ)i§‹§t|masa'ít|מַשָּׂאִית
+משאית|truck|ma,sa,ˈ(ʔ)i,‹,t|masa'ít|מַשָּׂאִית
 משב||
 משבר||
 משגיח רוחני||
 משה רבינו||
 משה רבנו||
-משה|Moses|mo§ˈʃe§‹|moshé|מֹשֶׁה
+משה|Moses|mo,ˈʃe,‹|moshé|מֹשֶׁה
 משהד||
-משהו|something|ˈma§ʃɛ§ˌh§u|máshehu|מַשֶּׁהוּ
+משהו|something|ˈma,ʃɛ,ˌh,u|máshehu|מַשֶּׁהוּ
 משוא פנים||
 משואה||
 משוגע||
@@ -6355,31 +6355,31 @@ autoExpandExamples.he = `
 משופע||
 משופץ||
 משורר||
-משוש|rejoicing|ma§ˈs§o§s|masós|מָשׂוֹשׂ
+משוש|rejoicing|ma,ˈs,o,s|masós|מָשׂוֹשׂ
 משושה||
 משותף||
 משח||
 משחה||
 משחק וידאו||
 משחק מחשב||
-משחק|game|mi§s§ˈχa§k|miskhák|מִשְׂחָק
+משחק|game|mi,s,ˈχa,k|miskhák|מִשְׂחָק
 משחת שיניים||
 משטח||
 משטר||
-משטרה|police|mi§ʃ§ta§ˈʁa§‹|mishtará|מִשְׁטָרָה
+משטרה|police|mi,ʃ,ta,ˈʁa,‹|mishtará|מִשְׁטָרָה
 משי||
 משיבון||
-משיח|messiah|ma§ˈʃi§‹§aχ|mashíakh|מָשִׁיחַ
+משיח|messiah|ma,ˈʃi,‹,aχ|mashíakh|מָשִׁיחַ
 משיי||
 משיכה||
 משיכיר||
 משימה||
 משיסה||
-משך|to pull|ma§ˈʃa§χ
+משך|to pull|ma,ˈʃa,χ
 משכב זכר||
 משכורת||
 משכן הכנסת||
-משכן|residence|mi§ʃ§ˈka§n|mishkán|מִשְׁכָּן
+משכן|residence|mi,ʃ,ˈka,n|mishkán|מִשְׁכָּן
 משכנע||
 משל||
 משלוח מנות||
@@ -6390,14 +6390,14 @@ autoExpandExamples.he = `
 משמין||
 משמע||
 משמעות||
-משמעותי|meaningful|ma§ʃ.§ma.§(ʔ)§u.§ˈti§‹|mashma'utí|מַשְׁמָעוּתִי
+משמעותי|meaningful|ma,ʃ.,ma.,(ʔ),u.,ˈti,‹|mashma'utí|מַשְׁמָעוּתִי
 משמעי||
 משמעת||
 משמרת||
 משמש||
 משנה||
 משעמם||
-משפחה|family|mi§ʃ§pa§ˈχa§‹|mishpakhá|מִשְׁפָּחָה
+משפחה|family|mi,ʃ,pa,ˈχa,‹|mishpakhá|מִשְׁפָּחָה
 משפחתי||
 משפט||
 משפטי||
@@ -6410,15 +6410,15 @@ autoExpandExamples.he = `
 משרוקית||
 משרת||
 משתה||
-משתלה|plant nursery|mi§ʃ§ta§ˈla§‹|mishtalá|מִשְׁתָּלָה
+משתלה|plant nursery|mi,ʃ,ta,ˈla,‹|mishtalá|מִשְׁתָּלָה
 משתמש||
 משתנה||
-מת|to die|ˈmɛ§t
+מת|to die|ˈmɛ,t
 מתאגרף||
 מתאר||
 מתג||
 מתגייס||
-מתודה|method|me§t§ˈo§da§‹|metóda|מֶתוֹדָה
+מתודה|method|me,t,ˈo,da,‹|metóda|מֶתוֹדָה
 מתוייר||
 מתויר||
 מתוך||
@@ -6431,7 +6431,7 @@ autoExpandExamples.he = `
 מתורגמן||
 מתח||
 מתחסד||
-מתי|when|ma§ˈta§j|matái|מָתַי
+מתי|when|ma,ˈta,j|matái|מָתַי
 מתים||
 מתימטיקה||
 מתינות||
@@ -6451,51 +6451,51 @@ autoExpandExamples.he = `
 מתקן||
 מתקפה||
 מתרגם||
-מתתיהו|Matthew|ma.§ti§t§ˈja.§h§u|matityáhu|מַתִּתְיָהוּ
+מתתיהו|Matthew|ma.,ti,t,ˈja.,h,u|matityáhu|מַתִּתְיָהוּ
 מ״ג||
 מ״י||
 מ״ם||
 מ״מ||
-נְבוּכַדְנֶאצַּר|Nebuchadnezzar|ne.§v§u.§χa§d.§nɛ§‹§ˈtsa§ʁ|n'vukhadnetsár|נבוכדנאצר|
-נְמָלִים|ants|ne§ma§ˈli§‹§m||נמלים
+נְבוּכַדְנֶאצַּר|Nebuchadnezzar|ne.,v,u.,χa,d.,nɛ,‹,ˈtsa,ʁ|n'vukhadnetsár|נבוכדנאצר|
+נְמָלִים|ants|ne,ma,ˈli,‹,m||נמלים
 נְצִיב||
-נְקֵבָה|female|ne§ke§ˈva§‹|nekevá|נקבה|
-נְשָׁמָה|breath|ne§ʃa§ˈma§‹|n'shamá|נשמה|
-נִגְמַר|to end|ni§ɡ§ˈma§ʁ|nigmár|נגמר|
-נִילוּס|Nile|ni§‹§l§u§s|nilus|נילוס|
-נִין|grandson|ni§‹§n||נין
-נִלְחַם|to wage war|ni§l§ˈχa§m|nilkhám|נלחם|
-נִמְלַט|to flee|ni§m§ˈla§t|nimlát|נמלט|
-נִמְצָא|to be found|ni§m§ˈt͡sa§‹|nimtsá|נמצא|
-נִפְשַׁט|to be removed (clothing)|ni§f§ˈʃa§t|nifshát|נפשט|
-נִרְטַב|to get wet|ni§ʁ§ˈta§v|nirtáv|נרטב|
-נִשְׁבַּע|to promise|ni§ʃ§ˈba§(ʕ)|nishbá|נשבע|
-נִשְׁבַּר|to break|ni§ʃ§ˈba§ʁ|nishbár|נשבר|
-נִשָּׂא|to be elevated|ni§ˈsa§‹|nisá|נישא|
-נִתְפַּס|to be caught|ni§t§ˈpa§s|nitpás|נתפס|
-נִתּוּחַ|surgery|ni§ˈt§u§aχ|nitúakh|ניתוח|
-נֶאֱבַד|to perish|ne§(ʔ)e§ˈva§d|ne'evád|נאבד|
-נֶאֱבַק|to fight|ne.§(ʔ)e§ˈva§k|ne'evák|נאבק|
-נֶגֶב|the Negev|ˈne§ɡe§v|négev|נגב|
-נֶכֶס|property|ˈnɛ§χɛ§s|nékhes|נכס|
-נַנָּס לָבָן|white dwarf|na§ˈna§s§ §la§ˈva§n|nanás laván|ננס לבן|
-נָאט״וֹ|NATO|ˈneɪ.§‹§t§–§o|nat"o|נאט״ו|
-נֵבֶל|harp|ˈne§ve§l||נבל||נבל
-נָבָל|bad guy, villain|ˈna§va§l||נבל||נבל
-נבל|bad guy, villain/harp|na§va§l/ˈne§ve§l|navál/nevel|נָבָל/נֵבֶל
-נָגַע|to touch|na§ˈɡa§–|nagá'|נגע|
-נָדָן|sheath|na§ˈda§n|nadán|נדן|
-נָהַג|to do sth out of habit|na§ˈha§ɡ|nahág|נהג|
-נָהָר|river|na§ˈha§ʁ|nahár|נהר|
-נָזִיר|Nazarite|na§ˈzi§‹§ʁ|nasír|נזיר|
-נָחָשׁ|snake|na§ˈχa§ʃ|nakhásh|נחש|
-נָטַל|to load|na§ˈta§l|natál|נטל|
-נָכוֹן|correct|na§ˈχ§ɔ§n|nakhón|נכון
-נָמֵל|seaport|na§ˈme§l|namél|נמל|
-נָעֳמִי|Naomi|no.§ʔo§ˈmi§‹|no'omi|נעמי|
+נְקֵבָה|female|ne,ke,ˈva,‹|nekevá|נקבה|
+נְשָׁמָה|breath|ne,ʃa,ˈma,‹|n'shamá|נשמה|
+נִגְמַר|to end|ni,ɡ,ˈma,ʁ|nigmár|נגמר|
+נִילוּס|Nile|ni,‹,l,u,s|nilus|נילוס|
+נִין|grandson|ni,‹,n||נין
+נִלְחַם|to wage war|ni,l,ˈχa,m|nilkhám|נלחם|
+נִמְלַט|to flee|ni,m,ˈla,t|nimlát|נמלט|
+נִמְצָא|to be found|ni,m,ˈt͡sa,‹|nimtsá|נמצא|
+נִפְשַׁט|to be removed (clothing)|ni,f,ˈʃa,t|nifshát|נפשט|
+נִרְטַב|to get wet|ni,ʁ,ˈta,v|nirtáv|נרטב|
+נִשְׁבַּע|to promise|ni,ʃ,ˈba,(ʕ)|nishbá|נשבע|
+נִשְׁבַּר|to break|ni,ʃ,ˈba,ʁ|nishbár|נשבר|
+נִשָּׂא|to be elevated|ni,ˈsa,‹|nisá|נישא|
+נִתְפַּס|to be caught|ni,t,ˈpa,s|nitpás|נתפס|
+נִתּוּחַ|surgery|ni,ˈt,u,aχ|nitúakh|ניתוח|
+נֶאֱבַד|to perish|ne,(ʔ)e,ˈva,d|ne'evád|נאבד|
+נֶאֱבַק|to fight|ne.,(ʔ)e,ˈva,k|ne'evák|נאבק|
+נֶגֶב|the Negev|ˈne,ɡe,v|négev|נגב|
+נֶכֶס|property|ˈnɛ,χɛ,s|nékhes|נכס|
+נַנָּס לָבָן|white dwarf|na,ˈna,s, ,la,ˈva,n|nanás laván|ננס לבן|
+נָאט״וֹ|NATO|ˈneɪ.,‹,t,–,o|nat"o|נאט״ו|
+נֵבֶל|harp|ˈne,ve,l||נבל||נבל
+נָבָל|bad guy, villain|ˈna,va,l||נבל||נבל
+נבל|bad guy, villain/harp|na,va,l/ˈne,ve,l|navál/nevel|נָבָל/נֵבֶל
+נָגַע|to touch|na,ˈɡa,–|nagá'|נגע|
+נָדָן|sheath|na,ˈda,n|nadán|נדן|
+נָהַג|to do sth out of habit|na,ˈha,ɡ|nahág|נהג|
+נָהָר|river|na,ˈha,ʁ|nahár|נהר|
+נָזִיר|Nazarite|na,ˈzi,‹,ʁ|nasír|נזיר|
+נָחָשׁ|snake|na,ˈχa,ʃ|nakhásh|נחש|
+נָטַל|to load|na,ˈta,l|natál|נטל|
+נָכוֹן|correct|na,ˈχ,ɔ,n|nakhón|נכון
+נָמֵל|seaport|na,ˈme,l|namél|נמל|
+נָעֳמִי|Naomi|no.,ʔo,ˈmi,‹|no'omi|נעמי|
 נָעִים|nice, pleasant||na'ím|נעים
-נָעַר|to bray|na§ˈ(ʔ)a§ʁ|na'ár|נער|
-נָשַׁב|to blow (wind)|na§ˈʃa§v|nashav|נשב|
+נָעַר|to bray|na,ˈ(ʔ)a,ʁ|na'ár|נער|
+נָשַׁב|to blow (wind)|na,ˈʃa,v|nashav|נשב|
 נ־ד־ב||
 נ־ד־ד||
 נ־ו־ח||
@@ -6503,8 +6503,8 @@ autoExpandExamples.he = `
 נ־כ־ר||
 נ־ש־ק||
 נא||
-נאבד|to perish|ne§(ʔ)e§ˈva§d|ne'evád|נֶאֱבַד
-נאבק|to fight|ne.§(ʔ)e§ˈva§k|ne'evák|נֶאֱבַק
+נאבד|to perish|ne,(ʔ)e,ˈva,d|ne'evád|נֶאֱבַד
+נאבק|to fight|ne.,(ʔ)e,ˈva,k|ne'evák|נֶאֱבַק
 נאגר||
 נאה||
 נאהב||
@@ -6512,7 +6512,7 @@ autoExpandExamples.he = `
 נאוה||
 נאור||
 נאחז||
-נאט״ו|NATO|ˈneɪ.§‹§t§–§o|nat"o|נָאט״וֹ
+נאט״ו|NATO|ˈneɪ.,‹,t,–,o|nat"o|נָאט״וֹ
 נאיבי||
 נאכל||
 נאכף||
@@ -6528,7 +6528,7 @@ autoExpandExamples.he = `
 נבואה||
 נבוב||
 נבוך||
-נבוכדנאצר|Nebuchadnezzar|ne.§v§u.§χa§d.§nɛ§‹§ˈtsa§ʁ|n'vukhadnetsár|נְבוּכַדְנֶאצַּר‬
+נבוכדנאצר|Nebuchadnezzar|ne.,v,u.,χa,d.,nɛ,‹,ˈtsa,ʁ|n'vukhadnetsár|נְבוּכַדְנֶאצַּר‬
 נבון||
 נבח||
 נבחר||
@@ -6541,7 +6541,7 @@ autoExpandExamples.he = `
 נבנה||
 נברא||
 נגאל||
-נגב|the Negev|ˈne§ɡe§v|négev|נֶגֶב
+נגב|the Negev|ˈne,ɡe,v|négev|נֶגֶב
 נגד||
 נגה||
 נגזרת||
@@ -6550,10 +6550,10 @@ autoExpandExamples.he = `
 נגיף||
 נגישות||
 נגלה||
-נגמר|to end|ni§ɡ§ˈma§ʁ|nigmár|נִגְמַר
+נגמר|to end|ni,ɡ,ˈma,ʁ|nigmár|נִגְמַר
 נגן||
 נגנב||
-נגע|to touch|na§ˈɡa§–|nagá'|נָגַע
+נגע|to touch|na,ˈɡa,–|nagá'|נָגַע
 נגר||
 נגרייה||
 נגרם||
@@ -6567,18 +6567,18 @@ autoExpandExamples.he = `
 נדיר||
 נדל||
 נדל״ן||
-נדן|sheath|na§ˈda§n|nadán|נָדָן
+נדן|sheath|na,ˈda,n|nadán|נָדָן
 נדקר||
 נדר||
 נדרס||
-נהג|to do sth out of habit|na§ˈha§ɡ|nahág|נָהַג
+נהג|to do sth out of habit|na,ˈha,ɡ|nahág|נָהַג
 נהגה||
 נהדר||
 נהוג||
 נהיגה||
 נהיה||
 נהנה||
-נהר|river|na§ˈha§ʁ|nahár|נָהָר
+נהר|river|na,ˈha,ʁ|nahár|נָהָר
 נהרג||
 נהרס||
 נו||
@@ -6614,11 +6614,11 @@ autoExpandExamples.he = `
 נועם||
 נוף||
 נופש||
-נוצה|feather|n§ɔ§ˈt͡sa§‹
+נוצה|feather|n,ɔ,ˈt͡sa,‹
 נוצר||
 נוצרי||
 נור||
-נורא|fire|n§u§rɑ§ʔ|nūrā’|
+נורא|fire|n,u,rɑ,ʔ|nūrā’|
 נוראי||
 נורה||
 נורווגיה||
@@ -6635,7 +6635,7 @@ autoExpandExamples.he = `
 נזהר||
 נזיד||
 נזיפה||
-נזיר|Nazarite|na§ˈzi§‹§ʁ|nasír|נָזִיר
+נזיר|Nazarite|na,ˈzi,‹,ʁ|nasír|נָזִיר
 נזכר||
 נזלת||
 נזף||
@@ -6657,7 +6657,7 @@ autoExpandExamples.he = `
 נחמן||
 נחקק||
 נחקר||
-נחש|snake|na§ˈχa§ʃ|nakhásh|נָחָשׁ
+נחש|snake|na,ˈχa,ʃ|nakhásh|נָחָשׁ
 נחשב||
 נחת||
 נח״ל||
@@ -6668,7 +6668,7 @@ autoExpandExamples.he = `
 נטייה||
 נטילה||
 נטילת ידיים||
-נטל|to load|na§ˈta§l|natál|נָטַל
+נטל|to load|na,ˈta,l|natál|נָטַל
 נטע||
 נטר||
 נטש||
@@ -6677,7 +6677,7 @@ autoExpandExamples.he = `
 ניאוף||
 ניב||
 ניבא||
-ניגב|to wipe|ni§‹§ˈɡɛ§v
+ניגב|to wipe|ni,‹,ˈɡɛ,v
 ניגון||
 ניגן||
 ניגש||
@@ -6704,9 +6704,9 @@ autoExpandExamples.he = `
 ניכור||
 ניכר||
 ניכש||
-נילוס|Nile|ni§‹§l§u§s|nilus|נִילוּס
+נילוס|Nile|ni,‹,l,u,s|nilus|נִילוּס
 נימול||
-נין|grandson|ni§‹§n||נִין|
+נין|grandson|ni,‹,n||נִין|
 נינג׳ה||
 ניסה||
 ניסוי||
@@ -6736,12 +6736,12 @@ autoExpandExamples.he = `
 ניקיון||
 ניקל||
 ניר ערך||
-נישא|to be elevated|ni§‹§ˈsa§‹|nisá|נִשָּׂא
+נישא|to be elevated|ni,‹,ˈsa,‹|nisá|נִשָּׂא
 נישה||
 נישואין||
 נישק||
 ניתאי||
-ניתוח|surgery|ni§‹§ˈt§u§aχ|nitúakh|נִתּוּחַ
+ניתוח|surgery|ni,‹,ˈt,u,aχ|nitúakh|נִתּוּחַ
 ניתן||
 ניתק||
 נכבה||
@@ -6749,7 +6749,7 @@ autoExpandExamples.he = `
 נכדה||
 נכה||
 נכווה||
-נכון|correct|na§ˈχ§ɔ§n|nakhón|נָכוֹן
+נכון|correct|na,ˈχ,ɔ,n|nakhón|נָכוֹן
 נכלא||
 נכלל||
 נכלם||
@@ -6757,13 +6757,13 @@ autoExpandExamples.he = `
 נכנס לתוקף||
 נכנס||
 נכנע||
-נכס|property|ˈnɛ§χɛ§s|nékhes|נֶכֶס
+נכס|property|ˈnɛ,χɛ,s|nékhes|נֶכֶס
 נכרי||
 נכרת||
 נכשל||
 נכתב||
 נלחם בטחנות רוח||
-נלחם|to wage war|ni§l§ˈχa§m|nilkhám|נִלְחַם
+נלחם|to wage war|ni,l,ˈχa,m|nilkhám|נִלְחַם
 נלקח||
 נם||
 נמאס||
@@ -6773,23 +6773,23 @@ autoExpandExamples.he = `
 נמייה||
 נמכר||
 נמל תעופה||
-נמל|seaport|na§ˈme§l|namél|נָמֵל
+נמל|seaport|na,ˈme,l|namél|נָמֵל
 נמלה||
-נמלט|to flee|ni§m§ˈla§t|nimlát|נִמְלַט
-נמלים|ants|ne§ma§ˈli§‹§m||נְמָלִים|
+נמלט|to flee|ni,m,ˈla,t|nimlát|נִמְלַט
+נמלים|ants|ne,ma,ˈli,‹,m||נְמָלִים|
 נמלך||
 נמנע||
 נמס||
-נמצא|to be found|ni§m§ˈt͡sa§‹|nimtsá|נִמְצָא
+נמצא|to be found|ni,m,ˈt͡sa,‹|nimtsá|נִמְצָא
 נמר||
 נמרה||
 נמרוד||
 נמש||
 נמשך||
-ננס לבן|white dwarf|na§ˈna§s§ §la§ˈva§n|nanás laván|נַנָּס לָבָן
+ננס לבן|white dwarf|na,ˈna,s, ,la,ˈva,n|nanás laván|נַנָּס לָבָן
 ננס||
 ננעל||
-נס|miracle|ˈne§s||נֵס
+נס|miracle|ˈne,s||נֵס
 נסגר||
 נסוך||
 נסורת||
@@ -6813,12 +6813,12 @@ autoExpandExamples.he = `
 נעלם||
 נעם||
 נעמה||
-נעמי|Naomi|no.§ʔo§ˈmi§‹|no'omi|נָעֳמִי
+נעמי|Naomi|no.,ʔo,ˈmi,‹|no'omi|נָעֳמִי
 נענע||
 נעץ||
 נעצר||
 נער פוסטר||
-נער|to bray|na§ˈ(ʔ)a§ʁ|na'ár|נָעַר
+נער|to bray|na,ˈ(ʔ)a,ʁ|na'ár|נָעַר
 נערה||
 נעשה||
 נפאל||
@@ -6828,19 +6828,19 @@ autoExpandExamples.he = `
 נפוח||
 נפוטיזם||
 נפוץ||
-נפח|to blow|na§ˈpa§χ
+נפח|to blow|na,ˈpa,χ
 נפט||
 נפטון||
 נפטר||
 נפיל||
 נפילה||
 נפל למשכב||
-נפל|to fall|na§ˈfa§l
+נפל|to fall|na,ˈfa,l
 נפלא||
 נפצע||
 נפרד||
 נפש||
-נפשט|to be removed (clothing)|ni§f§ˈʃa§t|nifshát|נִפְשַׁט
+נפשט|to be removed (clothing)|ni,f,ˈʃa,t|nifshát|נִפְשַׁט
 נפתלי||
 נץ אדום גב||
 נץ||
@@ -6854,7 +6854,7 @@ autoExpandExamples.he = `
 נצרת עילית||
 נצרת||
 נקב||
-נקבה|female|ne§ke§ˈva§‹|nekevá|נְקֵבָה
+נקבה|female|ne,ke,ˈva,‹|nekevá|נְקֵבָה
 נקבי||
 נקבע||
 נקבר||
@@ -6880,7 +6880,7 @@ autoExpandExamples.he = `
 נרגילה||
 נרגע||
 נרד||
-נרטב|to get wet|ni§ʁ§ˈta§v|nirtáv|נִרְטַב
+נרטב|to get wet|ni,ʁ,ˈta,v|nirtáv|נִרְטַב
 נרעש||
 נרצח||
 נרקיס||
@@ -6890,10 +6890,10 @@ autoExpandExamples.he = `
 נשא||
 נשאל||
 נשאר||
-נשב|to blow (wind)|na§ˈʃa§v|nashav|נָשַׁב
+נשב|to blow (wind)|na,ˈʃa,v|nashav|נָשַׁב
 נשבה|to be kidnapped|niʃˈba|nishbá| נִשְׁבָּה
-נשבע|to promise|ni§ʃ§ˈba§(ʕ)|nishbá|נִשְׁבַּע
-נשבר|to break|ni§ʃ§ˈba§ʁ|nishbár|נִשְׁבַּר
+נשבע|to promise|ni,ʃ,ˈba,(ʕ)|nishbá|נִשְׁבַּע
+נשבר|to break|ni,ʃ,ˈba,ʁ|nishbár|נִשְׁבַּר
 נשה||
 נשוא||
 נשואין||
@@ -6908,14 +6908,14 @@ autoExpandExamples.he = `
 נשימה||
 נשיפה||
 נשיקה||
-נשך|to bite|na§ˈʃa§χ
-נשכח|to be forgotten|ni§ʃ§ˈka§χ|nishkákh| נִשְׁכַּח
+נשך|to bite|na,ˈʃa,χ
+נשכח|to be forgotten|ni,ʃ,ˈka,χ|nishkákh| נִשְׁכַּח
 נשכר||
 נשל||
 נשלח||
 נשלט||
-נשם|to breathe|na§ˈʃa§m
-נשמה|breath|ne§ʃa§ˈma§‹|n'shamá|נְשָׁמָה
+נשם|to breathe|na,ˈʃa,m
+נשמה|breath|ne,ʃa,ˈma,‹|n'shamá|נְשָׁמָה
 נשמע||
 נשמר||
 נשף||
@@ -6927,33 +6927,33 @@ autoExpandExamples.he = `
 נתגרש||
 נתח||
 נתיב||
-נתן|to give|na§ˈta§n
+נתן|to give|na,ˈta,n
 נתניה||
 נתניהו||
-נתפס|to be caught|ni§t§ˈpa§s|nitpás|נִתְפַּס
+נתפס|to be caught|ni,t,ˈpa,s|nitpás|נִתְפַּס
 נתקל||
 נתרן||
-סְמִיכוּת|consistency|s§mi§‹§ˈχ§u§t|s'mikhút|סמיכות|
-סְנִיף|branch (org)|ˈs§ni§‹§f|sníf|סניף
-סניף|branch (org)|ˈs§ni§‹§f|sníf|סְנִיף
-סְעוּדָה|feast|se§ʔ§u§ˈda§‹|seudá|סעודה|
-סְפָרַדִּית|Spanish (lang)|s§fa§ʁa§ˈdi§‹§t|s'faradít|ספרדית|
-סְקוֹטְלַנְד|Scotland|ˈs§k§o§t§la§n§d|skótland|סקוטלנד|
-סְתָם|just, simply|s§ta§m|s'tám|סתם|
-סִבּוּךְ|complication|si§ˈb§u§χ|sibúkh|סיבוך|
-סִיּוּט|nightmare|si§‹§ˈu§t|siyút|סיוט|
-סִיר|pot, tub|si§‹§ʁ|sir|סיר|
-סִפְרִיָּה|library|si§f§ri§ˈja§‹|sifriyá|ספרייה|
-סִפֵּק|to provide|si§ˈpɛ§k|sipék|סיפק|
-סִפֵּר|to narrate|si§ˈpɛ§ʁ|sipér|סיפר|
-סִרְטוֹן|video|si§ʁ§ˈt§o§n|sirtón|סרטון|
-סֵדֶר|orderliness|ˈse.§de§r|séder|סדר|
-סֵמֶל|symbol, emblem|ˈsɛ§mɛ§l|sémel|סמל|
-סֶנְדְוִיץ׳|sandwich|ˈse̞§n§d§vi§‹§t͡ʃ|séndvich|סנדוויץ׳|
-סַבּוֹן|soap|sa§ˈb§o§n|sabón|סבון|
-סַדָּן|anvil|sa§ˈda§n|sadán|סדן|
-סָדִין|bedsheet|sa§ˈdi§‹§n|sadín|סדין|
-סֻנְכְרַן|to be synchronized|su§n§ˈχ§ra§n|sunkhrán|סונכרן|
+סְמִיכוּת|consistency|s,mi,‹,ˈχ,u,t|s'mikhút|סמיכות|
+סְנִיף|branch (org)|ˈs,ni,‹,f|sníf|סניף
+סניף|branch (org)|ˈs,ni,‹,f|sníf|סְנִיף
+סְעוּדָה|feast|se,ʔ,u,ˈda,‹|seudá|סעודה|
+סְפָרַדִּית|Spanish (lang)|s,fa,ʁa,ˈdi,‹,t|s'faradít|ספרדית|
+סְקוֹטְלַנְד|Scotland|ˈs,k,o,t,la,n,d|skótland|סקוטלנד|
+סְתָם|just, simply|s,ta,m|s'tám|סתם|
+סִבּוּךְ|complication|si,ˈb,u,χ|sibúkh|סיבוך|
+סִיּוּט|nightmare|si,‹,ˈu,t|siyút|סיוט|
+סִיר|pot, tub|si,‹,ʁ|sir|סיר|
+סִפְרִיָּה|library|si,f,ri,ˈja,‹|sifriyá|ספרייה|
+סִפֵּק|to provide|si,ˈpɛ,k|sipék|סיפק|
+סִפֵּר|to narrate|si,ˈpɛ,ʁ|sipér|סיפר|
+סִרְטוֹן|video|si,ʁ,ˈt,o,n|sirtón|סרטון|
+סֵדֶר|orderliness|ˈse.,de,r|séder|סדר|
+סֵמֶל|symbol, emblem|ˈsɛ,mɛ,l|sémel|סמל|
+סֶנְדְוִיץ׳|sandwich|ˈse̞,n,d,vi,‹,t͡ʃ|séndvich|סנדוויץ׳|
+סַבּוֹן|soap|sa,ˈb,o,n|sabón|סבון|
+סַדָּן|anvil|sa,ˈda,n|sadán|סדן|
+סָדִין|bedsheet|sa,ˈdi,‹,n|sadín|סדין|
+סֻנְכְרַן|to be synchronized|su,n,ˈχ,ra,n|sunkhrán|סונכרן|
 ס־ב־ך||
 ס־נ־כ־ר־ן||
 ס־ע־ד||
@@ -6968,7 +6968,7 @@ autoExpandExamples.he = `
 סבב||
 סבבה||
 סבה||
-סבון|soap|sa§ˈb§o§n|sabón|סַבּוֹן
+סבון|soap|sa,ˈb,o,n|sabón|סַבּוֹן
 סבור||
 סביבה||
 סביבון||
@@ -6993,22 +6993,22 @@ autoExpandExamples.he = `
 סגר||
 סדום||
 סדוק||
-סדין|bedsheet|sa§ˈdi§‹§n|sadín|סָדִין
+סדין|bedsheet|sa,ˈdi,‹,n|sadín|סָדִין
 סדם||
-סדן|anvil|sa§ˈda§n|sadán|סַדָּן
+סדן|anvil|sa,ˈda,n|sadán|סַדָּן
 סדנא||
 סדנה||
 סדק||
 סדר יום||
-סדר|orderliness|ˈse.§de§r|séder|סֵדֶר
+סדר|orderliness|ˈse.,de,r|séder|סֵדֶר
 סדרה||
 סהר||
 סה״כ||
-סוֹד|secret|s§ɔ§d|sod|סוד|
-סוֹף|end|ˈs§o§f|sóf|סוף
-סוֹפָ״שׁ|weekend|s§o§ˈfa§–§ʃ|sofá"sh|סופ״ש abbr for סוֹף שָׁבוּעַ‎ (sóf shavúa', “weekend”) 
-סוּס יָם|walrus|s§u§s§ §ˈja§m|sus yám|סוס ים|
-סוּס|horse|s§u§s|sus|סוס|
+סוֹד|secret|s,ɔ,d|sod|סוד|
+סוֹף|end|ˈs,o,f|sóf|סוף
+סוֹפָ״שׁ|weekend|s,o,ˈfa,–,ʃ|sofá"sh|סופ״ש abbr for סוֹף שָׁבוּעַ‎ (sóf shavúa', “weekend”) 
+סוּס יָם|walrus|s,u,s, ,ˈja,m|sus yám|סוס ים|
+סוּס|horse|s,u,s|sus|סוס|
 סוּף|reed, bulrush||súf|סוף
 סובותניק||
 סובייטי||
@@ -7018,7 +7018,7 @@ autoExpandExamples.he = `
 סוג של||
 סוג||
 סוגה||
-סוד|secret|s§ɔ§d|sod|סוֹד
+סוד|secret|s,ɔ,d|sod|סוֹד
 סודה לשתייה||
 סודי||
 סודיות||
@@ -7042,13 +7042,13 @@ autoExpandExamples.he = `
 סולקן||
 סומק||
 סוני||
-סונכרן|to be synchronized|s§u§n§ˈχ§ra§n|sunkhrán|סֻנְכְרַן
+סונכרן|to be synchronized|s,u,n,ˈχ,ra,n|sunkhrán|סֻנְכְרַן
 סוס טרויאני||
-סוס ים|walrus|s§u§s§ §ˈja§m|sus yám|סוּס יָם
-סוס|horse|s§u§s|sus|סוּס
+סוס ים|walrus|s,u,s, ,ˈja,m|sus yám|סוּס יָם
+סוס|horse|s,u,s|sus|סוּס
 סוף סוף||
 סוף שבוע||
-סוף|end|ˈs§o§f|sóf|סוּף
+סוף|end|ˈs,o,f|sóf|סוּף
 סופגניה||
 סופגנייה||
 סופגנית||
@@ -7061,7 +7061,7 @@ autoExpandExamples.he = `
 סופר־||
 סופרסטאר||
 סופרפוזיציה||
-סופ״ש|weekend|s§o§ˈfa§–§ʃ|sofá"sh|סוֹפָ״שׁ abbr for סוֹף שָׁבוּעַ‎ (sóf shavúa', “weekend”)
+סופ״ש|weekend|s,o,ˈfa,–,ʃ|sofá"sh|סוֹפָ״שׁ abbr for סוֹף שָׁבוּעַ‎ (sóf shavúa', “weekend”)
 סוציאליזם||
 סוציאליסטי||
 סוציו־אקונומי||
@@ -7091,7 +7091,7 @@ autoExpandExamples.he = `
 סיבה||
 סיבוב||
 סיבובי||
-סיבוך|complication|si§‹§ˈb§u§χ|sibúkh|סִבּוּךְ
+סיבוך|complication|si,‹,ˈb,u,χ|sibúkh|סִבּוּךְ
 סיביר||
 סיבית||
 סיבת מוות||
@@ -7105,7 +7105,7 @@ autoExpandExamples.he = `
 סידרה||
 סיווג||
 סיוון||
-סיוט|nightmare|si§‹§ˈu§t|siyút|סִיּוּט
+סיוט|nightmare|si,‹,ˈu,t|siyút|סִיּוּט
 סיום||
 סיים||
 סייע||
@@ -7133,7 +7133,7 @@ autoExpandExamples.he = `
 סיני||
 סינים||
 סינית||
-סינכרן|to synchronise|si§‹§n§ˈχ§re§n|sinkhrén|סִנְכְרֵן
+סינכרן|to synchronise|si,‹,n,ˈχ,re,n|sinkhrén|סִנְכְרֵן
 סינן||
 סינר||
 סינתטי||
@@ -7145,10 +7145,10 @@ autoExpandExamples.he = `
 סיפוח||
 סיפור||
 סיפח||
-סיפק|to provide|si§‹§ˈpɛ§k|sipék|סִפֵּק
-סיפר|to narrate|si§‹§ˈpɛ§ʁ|sipér|סִפֵּר
+סיפק|to provide|si,‹,ˈpɛ,k|sipék|סִפֵּק
+סיפר|to narrate|si,‹,ˈpɛ,ʁ|sipér|סִפֵּר
 סיקר||
-סיר|pot, tub|si§‹§ʁ|sir|סִיר
+סיר|pot, tub|si,‹,ʁ|sir|סִיר
 סיראי||
 סירב||
 סירה||
@@ -7164,7 +7164,7 @@ autoExpandExamples.he = `
 סכין גלוח||
 סכין יפני||
 סכין||
-סכך|branch-roofing|s§χa§χ||סְכָךְ
+סכך|branch-roofing|s,χa,χ||סְכָךְ
 סככה||
 סכל||
 סכמה||
@@ -7202,10 +7202,10 @@ autoExpandExamples.he = `
 סמי־||
 סמיך||
 סמיכה||
-סמיכות|consistency|s§mi§‹§ˈχ§u§t|s'mikhút|סְמִיכוּת
-סמכות|authority|sa§m§ˈχ§u§t|samkhút| סַמְכוּת
-סמכותי|authoritative|sa§m§χ§u§ˈti§‹|samkhutí| סַמְכוּתִי
-סמל|symbol, emblem|ˈsɛ§mɛ§l|sémel|סֵמֶל
+סמיכות|consistency|s,mi,‹,ˈχ,u,t|s'mikhút|סְמִיכוּת
+סמכות|authority|sa,m,ˈχ,u,t|samkhút| סַמְכוּת
+סמכותי|authoritative|sa,m,χ,u,ˈti,‹|samkhutí| סַמְכוּתִי
+סמל|symbol, emblem|ˈsɛ,mɛ,l|sémel|סֵמֶל
 סממן||
 סמס||
 סמסטר||
@@ -7214,7 +7214,7 @@ autoExpandExamples.he = `
 סנאטור||
 סנאי||
 סנגור||
-סנדוויץ׳|sandwich|ˈse̞§n§d§›§vi§‹§t͡ʃ§‹|séndvich|סֶנְדְוִיץ׳
+סנדוויץ׳|sandwich|ˈse̞,n,d,›,vi,‹,t͡ʃ,‹|séndvich|סֶנְדְוִיץ׳
 סנדל||
 סנדק||
 סנדרס||
@@ -7229,10 +7229,10 @@ autoExpandExamples.he = `
 סנטיאגו||
 סנטר||
 סנסקריט||
-סנפיר|fin, flipper|s§na§ˈpi§‹§ʁ|n'napír|סְנַפִּיר
-סְנַפִּיר|fin, flipper|s§na§ˈpi§‹§ʁ|n'napír|סנפיר
+סנפיר|fin, flipper|s,na,ˈpi,‹,ʁ|n'napír|סְנַפִּיר
+סְנַפִּיר|fin, flipper|s,na,ˈpi,‹,ʁ|n'napír|סנפיר
 סנקציה||
-סעודה|feast|se§ʔ§u§ˈda§‹|seudá|סְעוּדָה
+סעודה|feast|se,ʔ,u,ˈda,‹|seudá|סְעוּדָה
 סעודיה||
 סעיף||
 סערה||
@@ -7261,19 +7261,19 @@ autoExpandExamples.he = `
 ספר בראשית||
 ספר לימוד||
 ספר תורה||
-ספר|to count|sa§ˈfa§ʁ
+ספר|to count|sa,ˈfa,ʁ
 ספרד||
 ספרדי||
-ספרדית|Spanish (lang)|s§fa§ʁa§ˈdi§‹§t|s'faradít|סְפָרַדִּית
+ספרדית|Spanish (lang)|s,fa,ʁa,ˈdi,‹,t|s'faradít|סְפָרַדִּית
 ספרה||
 ספרון||
 ספרות||
 ספרותי||
 ספריה||
-ספרייה|library|si§f§ri§‹§ˈja§‹|sifriyá|סִפְרִיָּה
+ספרייה|library|si,f,ri,‹,ˈja,‹|sifriyá|סִפְרִיָּה
 ספרן||
 סצנה||
-סקוטלנד|Scotland|ˈs§k§o§t§la§n§d|skótland|סְקוֹטְלַנְד
+סקוטלנד|Scotland|ˈs,k,o,t,la,n,d|skótland|סְקוֹטְלַנְד
 סקיני ג׳ינס||
 סקנדיום||
 סקנדינבי||
@@ -7281,7 +7281,7 @@ autoExpandExamples.he = `
 סקסי||
 סקר||
 סקרן||
-סקרנות|curiosity|sa§k§ʁa§ˈn§u§t|sakranút| סַקְרָנוּת
+סקרנות|curiosity|sa,k,ʁa,ˈn,u,t|sakranút| סַקְרָנוּת
 סר||
 סרבו־קרואטית||
 סרביה||
@@ -7293,7 +7293,7 @@ autoExpandExamples.he = `
 סרט מגנטי||
 סרט תיעודי||
 סרט||
-סרטון|video|si§ʁ§ˈt§o§n|sirtón|סִרְטוֹן
+סרטון|video|si,ʁ,ˈt,o,n|sirtón|סִרְטוֹן
 סרטן הדם||
 סרטן ים||
 סרטן||
@@ -7306,58 +7306,58 @@ autoExpandExamples.he = `
 סתיו||
 סתירה||
 סתם יינם||
-סתם|just, simply|s§ta§m|s'tám|סְתָם
+סתם|just, simply|s,ta,m|s'tám|סְתָם
 סתמי||
 סתמיות||
 סתר||
 סת״ם||
 ס׳||
 ע'ין||
-עֲבוֹדָה|worship|a§v§o§ˈda§‹|avodá|עבודה|
-עֲדָשָׁה|lentil; lens|(ʔ)a§da§ˈʃa§‹|adashá|עדשה|
-עֲמֹרָה|Gomorrah|(ʔ)a§mo§ʁa§‹|'amorá|עמורה|
-עֲרָבִית|Arabic (lang)|a§ʁa§ˈvi§‹§t|'aravít|ערבית|
-עֲשָׂרָה|ten|(ʔ)a.§sa.§ˈʁa§‹|'asará|עשרה|
-עִבְרִית|Hebrew|i§v§ˈʁi§‹§t|'ivrít|עברית|
-עִבְרוּת|hebraization|ʔi§v§ˈʁ§u§t|'ívrut|עברות|
-עִדְכּוּן|update|i§d§ˈk§u§n|idkún|עדכון|
-עִוֵּר|blind|i§ˈvɛ§ʁ|'ivér|עיוור|
-עִיֵּף|to tire, exhaust|(ʕ)i§ˈje§f|'iyéf|עייף|
-עִיר|city|i§‹§ʁ|'ír|עיר
-עִם|with|ʕi§m|im
-עִפָּרוֹן|pencil|ʔi§pa§ˈʁ§o§n|'iparón|עיפרון|
-עֵדֶן|Eden, paradise|ˈ(ʕ)e§de§n|éden|עדן|
-עֵט|pen|(ʔ)e§t|et|עט|
-עֵץ|tree|e§t͡s|ʿēṣ/ʿetz|עץ|
-עֵשֶׂב|herb, weed|ˈ(ʔ)e§se§v|'ésev|עשב|
-עֵת|a time, period|(ʔ)e§t|et|עת|
-עֶבֶד|slave|ˈe§ve§d|'éved|עבד|
-עֶצֶם|bone|ˈe§t͡se§m|étsem|עצם|
-עֶרֶב|to guarantee|ˈe§ʁe§v|érev|ערב|
-עַדְלֹאיָדַע|Purim parade|a§d§lɔ§‹§ja§da§–|adloyada|עדלאידע
-עַזָּה|Gaza|(ʔ)a§ˈza§‹|'áza|עזה|
-עַיִן|eye|ˈa§ji§n|áyin|עין|
-עַכּוּז|buttocks|a§k§u§z|akuz|עכוז|
-עַל|on top of|a§l|al|על|
-עַלְמָה|Alma|a§l§ˈma§‹|'almá|עלמה|
-עַם|nation, people|a§m|am|עם
-עַצְלָן|sloth|a§t͡s§ˈla§n|atslán|עצלן|
-עַקְרָב|scorpion|a§k§ˈʁa§v|'akráv|עקרב|
-עַקְשָׁן|obstinate|(ʔ)a§k§ˈʃa§n|akshán|עקשן|
-עַרְמוֹן|chestnut|(ʕ)a§r§ˈm§o§n|'armón|ערמון|
-עַרְס|brute, thug|(ʔ)a§ʁ§s|ars|ערס|
-עָוֺן|iniquity|ʔa.§ˈvo§n|avón|עוון|
-עָזִיז|Aziz|(ʕ)a§ˈz§i§z|aziz|עזיז|
-עָלָה|to ascend, rise|(ʔ)a§ˈla§‹|alá|עלה|
-עָלוּב|miserable|ʕa§ˈl§u§v|'alúv|עלוב|
-עָמַד|to stand|(ʕ)a§ma§d|amád|עמד|
-עָנָן|cloud|(ʕ)a§ˈna§n|anán|ענן|
-עָף|to fly|a§f|af|עף|
-עָרֹם|naked|a§ˈʁu§‹§m|'aróm|ערום|
-עָשָׂה|to do, make|(ʔ)a§ˈsa§‹|asá|עשה|
-עָשׁ|moth|a§ʃ|ash|עש|
-עֹפֶר|young gazelle|ˈ(ʔ)o§fe§ʁ|ófer|עופר|
-עֹרֵב|raven, crow|(ʔ)o§ˈʁe§v|'orév|עורב|
+עֲבוֹדָה|worship|a,v,o,ˈda,‹|avodá|עבודה|
+עֲדָשָׁה|lentil; lens|(ʔ)a,da,ˈʃa,‹|adashá|עדשה|
+עֲמֹרָה|Gomorrah|(ʔ)a,mo,ʁa,‹|'amorá|עמורה|
+עֲרָבִית|Arabic (lang)|a,ʁa,ˈvi,‹,t|'aravít|ערבית|
+עֲשָׂרָה|ten|(ʔ)a.,sa.,ˈʁa,‹|'asará|עשרה|
+עִבְרִית|Hebrew|i,v,ˈʁi,‹,t|'ivrít|עברית|
+עִבְרוּת|hebraization|ʔi,v,ˈʁ,u,t|'ívrut|עברות|
+עִדְכּוּן|update|i,d,ˈk,u,n|idkún|עדכון|
+עִוֵּר|blind|i,ˈvɛ,ʁ|'ivér|עיוור|
+עִיֵּף|to tire, exhaust|(ʕ)i,ˈje,f|'iyéf|עייף|
+עִיר|city|i,‹,ʁ|'ír|עיר
+עִם|with|ʕi,m|im
+עִפָּרוֹן|pencil|ʔi,pa,ˈʁ,o,n|'iparón|עיפרון|
+עֵדֶן|Eden, paradise|ˈ(ʕ)e,de,n|éden|עדן|
+עֵט|pen|(ʔ)e,t|et|עט|
+עֵץ|tree|e,t͡s|ʿēṣ/ʿetz|עץ|
+עֵשֶׂב|herb, weed|ˈ(ʔ)e,se,v|'ésev|עשב|
+עֵת|a time, period|(ʔ)e,t|et|עת|
+עֶבֶד|slave|ˈe,ve,d|'éved|עבד|
+עֶצֶם|bone|ˈe,t͡se,m|étsem|עצם|
+עֶרֶב|to guarantee|ˈe,ʁe,v|érev|ערב|
+עַדְלֹאיָדַע|Purim parade|a,d,lɔ,‹,ja,da,–|adloyada|עדלאידע
+עַזָּה|Gaza|(ʔ)a,ˈza,‹|'áza|עזה|
+עַיִן|eye|ˈa,ji,n|áyin|עין|
+עַכּוּז|buttocks|a,k,u,z|akuz|עכוז|
+עַל|on top of|a,l|al|על|
+עַלְמָה|Alma|a,l,ˈma,‹|'almá|עלמה|
+עַם|nation, people|a,m|am|עם
+עַצְלָן|sloth|a,t͡s,ˈla,n|atslán|עצלן|
+עַקְרָב|scorpion|a,k,ˈʁa,v|'akráv|עקרב|
+עַקְשָׁן|obstinate|(ʔ)a,k,ˈʃa,n|akshán|עקשן|
+עַרְמוֹן|chestnut|(ʕ)a,r,ˈm,o,n|'armón|ערמון|
+עַרְס|brute, thug|(ʔ)a,ʁ,s|ars|ערס|
+עָוֺן|iniquity|ʔa.,ˈvo,n|avón|עוון|
+עָזִיז|Aziz|(ʕ)a,ˈz,i,z|aziz|עזיז|
+עָלָה|to ascend, rise|(ʔ)a,ˈla,‹|alá|עלה|
+עָלוּב|miserable|ʕa,ˈl,u,v|'alúv|עלוב|
+עָמַד|to stand|(ʕ)a,ma,d|amád|עמד|
+עָנָן|cloud|(ʕ)a,ˈna,n|anán|ענן|
+עָף|to fly|a,f|af|עף|
+עָרֹם|naked|a,ˈʁu,‹,m|'aróm|ערום|
+עָשָׂה|to do, make|(ʔ)a,ˈsa,‹|asá|עשה|
+עָשׁ|moth|a,ʃ|ash|עש|
+עֹפֶר|young gazelle|ˈ(ʔ)o,fe,ʁ|ófer|עופר|
+עֹרֵב|raven, crow|(ʔ)o,ˈʁe,v|'orév|עורב|
 ע־ב־ד||
 ע־ב־ר||
 ע־מ־ד||
@@ -7365,26 +7365,26 @@ autoExpandExamples.he = `
 ע־ש־ה||
 עאכ״ו||
 עב||
-עבד|slave|ˈe§ve§d|'éved|עֶבֶד
+עבד|slave|ˈe,ve,d|'éved|עֶבֶד
 עבדה||
 עבדות||
 עבדיה||
-עבה|thick|a§ˈvɛ§‹
+עבה|thick|a,ˈvɛ,‹
 עבודה זרה||
 עבודה שחורה||
-עבודה|worship|a§v§o§ˈda§‹|avodá|עֲבוֹדָה
+עבודה|worship|a,v,o,ˈda,‹|avodá|עֲבוֹדָה
 עבוט||
 עבור||
 עבות||
 עבירה||
 עבר||
 עברה||
-עברות|hebraization|ʔi§v§ˈʁ§u§t|'ívrut|עִבְרוּת
+עברות|hebraization|ʔi,v,ˈʁ,u,t|'ívrut|עִבְרוּת
 עברי||
 עבריין||
-עברית|Hebrew|i§v§ˈʁi§‹§t|'ivrít|עִבְרִית
+עברית|Hebrew|i,v,ˈʁi,‹,t|'ivrít|עִבְרִית
 עגבניה||
-עגול|round|a§ˈɡ§ɔ§l
+עגול|round|a,ˈɡ,ɔ,l
 עגור||
 עגורן||
 עגל||
@@ -7392,7 +7392,7 @@ autoExpandExamples.he = `
 עגן||
 עד כאן||
 עד עצם היום הזה||
-עד|until|ʕa§d||
+עד|until|ʕa,d||
 עדה||
 עדות||
 עדי||
@@ -7402,18 +7402,18 @@ autoExpandExamples.he = `
 עדינות||
 עדיף||
 עדיפות||
-עדכון|update|i§d§ˈk§u§n|idkún|עִדְכּוּן
-עדלאידע|Purim parade|a§d§lɔ§‹§ja§da§–|adloyada|עַדְלֹאיָדַע
+עדכון|update|i,d,ˈk,u,n|idkún|עִדְכּוּן
+עדלאידע|Purim parade|a,d,lɔ,‹,ja,da,–|adloyada|עַדְלֹאיָדַע
 עדלידע||
-עדן|Eden, paradise|ˈ(ʕ)e§de§n|éden|עֵדֶן
+עדן|Eden, paradise|ˈ(ʕ)e,de,n|éden|עֵדֶן
 עדנה||
 עדר||
-עדשה|lentil; lens|(ʔ)a§da§ˈʃa§‹|adashá|עֲדָשָׁה
-עוֹלָם|the world, Earth|›§o§ˈla§m|'olám|עולם|
-עוֹף|bird|›§o§f|of|עוף|
-עוֹר|skin|›§ɔ§ʁ|or|עור|
-עוּגִיָּה|cookie|›§u.§ɡi§ˈja§‹|ugiyá|עוגייה|
-עוּגָה|cake|(ʕ)§u§ˈɡa§‹|ugá|עוגה|
+עדשה|lentil; lens|(ʔ)a,da,ˈʃa,‹|adashá|עֲדָשָׁה
+עוֹלָם|the world, Earth|›,o,ˈla,m|'olám|עולם|
+עוֹף|bird|›,o,f|of|עוף|
+עוֹר|skin|›,ɔ,ʁ|or|עור|
+עוּגִיָּה|cookie|›,u.,ɡi,ˈja,‹|ugiyá|עוגייה|
+עוּגָה|cake|(ʕ),u,ˈɡa,‹|ugá|עוגה|
 עובד||
 עובדה מוגמרת||
 עובדה||
@@ -7421,23 +7421,23 @@ autoExpandExamples.he = `
 עובי||
 עובר אורח||
 עוגב||
-עוגה|cake|(ʕ)§u§ˈɡa§‹|ugá|עוּגָה
+עוגה|cake|(ʕ),u,ˈɡa,‹|ugá|עוּגָה
 עוגיה||
-עוגייה|cookie|›§u.§ɡi§‹§ˈja§‹|ugiyá|עוּגִיָּה
+עוגייה|cookie|›,u.,ɡi,‹,ˈja,‹|ugiyá|עוּגִיָּה
 עוגן||
 עוד מעט||
 עוד||
 עודד||
 עודף||
 עווית||
-עוון|iniquity|ʔa.§›§ˈvo§n|avón|עָוֺן
+עוון|iniquity|ʔa.,›,ˈvo,n|avón|עָוֺן
 עוז||
 עוזר||
 עויין||
 עוין||
 עוכר שמחה||
 עולה||
-עולם|the world, Earth|›§o§ˈla§m|'olám|עוֹלָם
+עולם|the world, Earth|›,o,ˈla,m|'olám|עוֹלָם
 עולמי||
 עולמית||
 עולש||
@@ -7451,14 +7451,14 @@ autoExpandExamples.he = `
 עוף דורס||
 עוף חול||
 עוף מפה||
-עוף|bird|›§o§f|of|עוֹף
-עופר|young gazelle|ˈ(ʔ)§o§fe§ʁ|ófer|עֹפֶר
+עוף|bird|›,o,f|of|עוֹף
+עופר|young gazelle|ˈ(ʔ),o,fe,ʁ|ófer|עֹפֶר
 עופרת||
 עוץ||
 עוצר||
 עוקץ||
-עור|skin|›§ɔ§ʁ|or|עוֹר
-עורב|raven, crow|(ʔ)o§‹§ˈʁe§v|'orév|עֹרֵב
+עור|skin|›,ɔ,ʁ|or|עוֹר
+עורב|raven, crow|(ʔ)o,‹,ˈʁe,v|'orév|עֹרֵב
 עורבני||
 עורך דין||
 עורך||
@@ -7473,16 +7473,16 @@ autoExpandExamples.he = `
 עז||
 עזאזל||
 עזב||
-עזה|Gaza|(ʔ)a§ˈza§‹|'áza|עַזָּה
+עזה|Gaza|(ʔ)a,ˈza,‹|'áza|עַזָּה
 עזוב||
 עזובה||
 עזז||
-עזיז|Aziz|(ʕ)a§ˈz§i§z|aziz|עָזִיז
+עזיז|Aziz|(ʕ)a,ˈz,i,z|aziz|עָזִיז
 עזר||
 עזרא||
 עזראל||
 עזרה||
-עט|pen|(ʔ)e§t|et|עֵט
+עט|pen|(ʔ)e,t|et|עֵט
 עטה||
 עטיפה||
 עטלף||
@@ -7494,7 +7494,7 @@ autoExpandExamples.he = `
 עיגל פינות||
 עיגל||
 עידן||
-עיוור|blind|i§‹§ˈvɛ§‹§ʁ|'ivér|עִוֵּר
+עיוור|blind|i,‹,ˈvɛ,‹,ʁ|'ivér|עִוֵּר
 עיט זהוב||
 עיט קירח אמריקאי||
 עיט קירח||
@@ -7508,24 +7508,24 @@ autoExpandExamples.he = `
 עיטם||
 עיטר||
 עיין||
-עייף|to tire, exhaust|(ʕ)i§‹§ˈje§f|'iyéf|עִיֵּף
+עייף|to tire, exhaust|(ʕ)i,‹,ˈje,f|'iyéf|עִיֵּף
 עיכב||
 עיכול||
 עילי||
 עילף||
 עין הרע||
-עין|eye|ˈa§ji§n|áyin|עַיִן
+עין|eye|ˈa,ji,n|áyin|עַיִן
 עיני||
 עיסקי||
 עיף||
-עיפרון|pencil|ʔi§‹§pa§ˈʁ§o§n|'iparón|עִפָּרוֹן
+עיפרון|pencil|ʔi,‹,pa,ˈʁ,o,n|'iparón|עִפָּרוֹן
 עיצב||
 עיצוב||
 עיצור||
 עיקר||
 עיקרון||
 עיקרי||
-עיר|city|i§‹§ʁ|'ír|עִיר
+עיר|city|i,‹,ʁ|'ír|עִיר
 עיראק||
 עיראקי||
 עיראקית||
@@ -7545,7 +7545,7 @@ autoExpandExamples.he = `
 עכביש||
 עכבר||
 עכו||
-עכוז|buttocks|a§k§u§z|akuz|עַכּוּז
+עכוז|buttocks|a,k,u,z|akuz|עַכּוּז
 עכו״ם||
 עכשווי||
 עכשווית||
@@ -7562,13 +7562,13 @@ autoExpandExamples.he = `
 על קרן הצבי||
 על ראש הגנב בוער הכובע||
 על רגל אחת||
-על|on top of|a§l|al|עַל
+על|on top of|a,l|al|עַל
 על־כן||
 על־משפחה||
 עלבון||
-עלה|leaf|a§ˈlɛ§‹
-עלה|to ascend, rise|(ʔ)a§ˈla§‹|alá|עָלָה
-עלוב|miserable|ʕa§ˈl§u§v|'alúv|עָלוּב
+עלה|leaf|a,ˈlɛ,‹
+עלה|to ascend, rise|(ʔ)a,ˈla,‹|alá|עָלָה
+עלוב|miserable|ʕa,ˈl,u,v|'alúv|עָלוּב
 עלווה||
 עלוקה||
 עלז||
@@ -7585,27 +7585,27 @@ autoExpandExamples.he = `
 עלילת דם||
 עליצות||
 עלם||
-עלמה|Alma|a§l§ˈma§‹|'almá|עַלְמָה
+עלמה|Alma|a,l,ˈma,‹|'almá|עַלְמָה
 עלק||
 עם הארץ||
 עם זאת||
-עם|nation|a§m|am|עַם
+עם|nation|a,m|am|עַם
 עמאן||
 עמבה||
-עמד|to stand|(ʕ)a§ma§d|amád|עָמַד
+עמד|to stand|(ʕ)a,ma,d|amád|עָמַד
 עמדה||
 עמוד בית||
 עמוד||
 עמון||
 עמוס||
 עמוק||
-עמורה|Gomorrah|(ʔ)a§m§o§ʁa§‹|'amorá|עֲמֹרָה
+עמורה|Gomorrah|(ʔ)a,m,o,ʁa,‹|'amorá|עֲמֹרָה
 עמידה||
 עמילן||
 עמית||
 עמל||
 עממי||
-עמנואל|Emmanuel|(ʔ)i.§ma.§n§u.§ˈ(ʔ)e§l|'imanu'él| עִמָּנוּאֵל
+עמנואל|Emmanuel|(ʔ)i.,ma.,n,u.,ˈ(ʔ)e,l|'imanu'él| עִמָּנוּאֵל
 עמק||
 עמר||
 עמרה||
@@ -7626,14 +7626,14 @@ autoExpandExamples.he = `
 עניין של זמן||
 עניין||
 ענין||
-ענן|cloud|(ʕ)a§ˈna§n|anán|עָנָן
+ענן|cloud|(ʕ)a,ˈna,n|anán|עָנָן
 ענף||
 ענק||
 ענקי||
 עסוק||
 עסיסי||
 עסק||
-עף|to fly|a§f|af|עָף
+עף|to fly|a,f|af|עָף
 עפיפון||
 עפעף||
 עפר||
@@ -7642,15 +7642,15 @@ autoExpandExamples.he = `
 עפרוני||
 עפרית||
 עץ או פלי||
-עץ|tree|e§t͡s|ʿēṣ/ʿetz|עֵץ
+עץ|tree|e,t͡s|ʿēṣ/ʿetz|עֵץ
 עצבון||
 עצבני||
 עצה||
 עצוב||
 עצום||
 עצור||
-עצלן|sloth|a§t͡s§ˈla§n|atslán|עַצְלָן
-עצם|bone|ˈe§t͡se§m|étsem|עֶצֶם
+עצלן|sloth|a,t͡s,ˈla,n|atslán|עַצְלָן
+עצם|bone|ˈe,t͡se,m|étsem|עֶצֶם
 עצמאות||
 עצר||
 עצרת||
@@ -7665,14 +7665,14 @@ autoExpandExamples.he = `
 עקף||
 עקץ||
 עקר||
-עקרב|scorpion|a§k§ˈʁa§v|'akráv|עַקְרָב
-עקשן|obstinate|(ʔ)a§k§ˈʃa§n|akshán|עַקְשָׁן
+עקרב|scorpion|a,k,ˈʁa,v|'akráv|עַקְרָב
+עקשן|obstinate|(ʔ)a,k,ˈʃa,n|akshán|עַקְשָׁן
 עקשנות||
 ער||
 ערב הסעודית||
 ערב חג המולד||
 ערב טוב||
-ערב|to guarantee|ˈe§ʁe§v|érev|עֶרֶב
+ערב|to guarantee|ˈe,ʁe,v|érev|עֶרֶב
 ערבב||
 ערבה||
 ערבון||
@@ -7680,13 +7680,13 @@ autoExpandExamples.he = `
 ערבי||
 ערביה||
 ערביים||
-ערבית|Arabic (lang)|a§ʁa§ˈvi§‹§t|'aravít|עֲרָבִית
+ערבית|Arabic (lang)|a,ʁa,ˈvi,‹,t|'aravít|עֲרָבִית
 ערג||
 ערוב||
 ערוה||
 ערווה||
 ערוך||
-ערום|naked|a§ˈʁu§‹§m|'aróm|עָרֹם
+ערום|naked|a,ˈʁu,‹,m|'aróm|עָרֹם
 ערוץ||
 עריכה||
 עריסה||
@@ -7694,29 +7694,29 @@ autoExpandExamples.he = `
 ערל||
 ערלה||
 ערם||
-ערמון|chestnut|(ʕ)a§r§ˈm§o§n|'armón|עַרְמוֹן
-ערס|brute, thug|(ʔ)a§ʁ§s|ars|עַרְס
+ערמון|chestnut|(ʕ)a,r,ˈm,o,n|'armón|עַרְמוֹן
+ערס|brute, thug|(ʔ)a,ʁ,s|ars|עַרְס
 ערסל||
 ערער||
 ערפד||
 ערפיח||
-ערפל|fog|a§ʁa§ˈfɛ§l
+ערפל|fog|a,ʁa,ˈfɛ,l
 ערק||
 ערש||
-עש|moth|a§ʃ|ash|עָשׁ
-עשב|herb, weed|ˈ(ʔ)e§se§v|'ésev|עֵשֶׂב
+עש|moth|a,ʃ|ash|עָשׁ
+עשב|herb, weed|ˈ(ʔ)e,se,v|'ésev|עֵשֶׂב
 עשה את שלו||
 עשה חיל||
 עשה כביסה||
-עשה|to do, make|(ʔ)a§ˈsa§‹|asá|עָשָׂה
+עשה|to do, make|(ʔ)a,ˈsa,‹|asá|עָשָׂה
 עשו||
 עשוי||
 עשור||
 עשיר||
 עשירי||
-עשן|smoke|a§ˈʃa§n
+עשן|smoke|a,ˈʃa,n
 עשר||
-עשרה|ten|(ʔ)a.§sa.§ˈʁa§‹|'asará|עֲשָׂרָה
+עשרה|ten|(ʔ)a.,sa.,ˈʁa,‹|'asará|עֲשָׂרָה
 עשרון||
 עשרות||
 עשרים||
@@ -7726,7 +7726,7 @@ autoExpandExamples.he = `
 עשתי עשר||
 עשתי||
 עש״ק||
-עת|a time, period|(ʔ)e§t|et|עֵת
+עת|a time, period|(ʔ)e,t|et|עֵת
 עתה||
 עתונאי||
 עתיד||
@@ -7739,49 +7739,49 @@ autoExpandExamples.he = `
 ע״פ||
 ע״ש||
 פ"נ||
-פְּלֶשֶׁת|Philistia|ˈp§le§ʃe§t|pléshet|פלשת|
-פְּלוֹנְטֶר|imbroglio|p§l§o§n§te§r|plónter|פלונטר|
-פְּסַנְתֵּר|piano|p§sa§n§ˈte§ʁ|p'santér|פסנתר|
-פְּקֻדָּה|order, command|p§ku§ˈda§‹||פקודה|
-פְּרִי|fruit|p§ʁi§‹|pri|פרי|
-פְּשִׁיטַת־רֶגֶל|bankruptcy|p§ʃi§‹§ta§t§-§ˈʁɛ§ɡɛ§l|pshitat-régel|פשיטת רגל|
-פִּטְמָה|nipple|pi§t§ma§‹|pitma|פטמה|
-פִּיצָה|pizza|ˈpi§‹§t͡sa§‹|pítsa|פיצה|
-פִּסֵּחַ|to jump, skip|pi§ˈse§aχ|piséakh|פיסח|
-פִּשֵּׁט|to simplify|pi§ˈʃɛ§t|pishét|פישט|
-פִּתְרוֹן|solution|pi§t§ˈʁ§o§n|pitrón|פתרון|
-פִיזִי|physical|ˈfi§‹§zi§‹|fízi|פיזי|
-פִיסְפֵס|to miss|fi§‹§s§fɛ§s|fisfés|פיספס
-פֵּאָה|wig|pe§ˈ(ʔ)a§‹|pe'á|פאה|
+פְּלֶשֶׁת|Philistia|ˈp,le,ʃe,t|pléshet|פלשת|
+פְּלוֹנְטֶר|imbroglio|p,l,o,n,te,r|plónter|פלונטר|
+פְּסַנְתֵּר|piano|p,sa,n,ˈte,ʁ|p'santér|פסנתר|
+פְּקֻדָּה|order, command|p,ku,ˈda,‹||פקודה|
+פְּרִי|fruit|p,ʁi,‹|pri|פרי|
+פְּשִׁיטַת־רֶגֶל|bankruptcy|p,ʃi,‹,ta,t,-,ˈʁɛ,ɡɛ,l|pshitat-régel|פשיטת רגל|
+פִּטְמָה|nipple|pi,t,ma,‹|pitma|פטמה|
+פִּיצָה|pizza|ˈpi,‹,t͡sa,‹|pítsa|פיצה|
+פִּסֵּחַ|to jump, skip|pi,ˈse,aχ|piséakh|פיסח|
+פִּשֵּׁט|to simplify|pi,ˈʃɛ,t|pishét|פישט|
+פִּתְרוֹן|solution|pi,t,ˈʁ,o,n|pitrón|פתרון|
+פִיזִי|physical|ˈfi,‹,zi,‹|fízi|פיזי|
+פִיסְפֵס|to miss|fi,‹,s,fɛ,s|fisfés|פיספס
+פֵּאָה|wig|pe,ˈ(ʔ)a,‹|pe'á|פאה|
 פֶּה|mouth||pe|פה
-פֶּטֶל|raspberry|ˈpe§te§l|pétel|פטל|
-פַּח אַשְׁפָּה‎ |rubbish bin|pa§χ.§ §ʔa§ˈʃ§pa§‹|pakh ashpá|פח אשפה|
-פַּח|snare, trap|pa§χ|pakh|פח|
-פַּחְדָן|coward|pa§χ§ˈda§n|pahdán|פחדן|
-פַּךְ|jar, jug|pa§χ|pákh|פך|
-פַּסְחָא|Easter|ˈpa§s§χa§‹|páskha|פסחא|
-פַּעַם|footstep|ˈpa.§(ʔ)a§m|pá'am|פעם|
-פַּרְסִית|Persian (lang)|pa§ʁ§ˈsi§‹§t|parsít|פרסית|
-פַּרְסָה|hoof, horseshoe|pa§r§ˈsa§‹|parsa|פרסה|
-פַּרְעֹה|paraoh|pa§ʁ.§ˈ(ʔ)o§‹|par'ó|פרעה|
-פַּשְׁטוּת|simplicity|pa§ʃ§ˈt§u§t|pashtút|פשטות|
-פַשְׁלָה|gaffe|ˈfa§ʃ§la§‹|fáshla|פשלה|
-פָּלֶשְׂתִּינָה|Palestine|pa§le§s§ˈti§‹§na§‹|palestína|פלשתינה|
-פָּנָס|lantern, torch|pa§ˈna§s|panás|פנס|
-פָּסַח|to pass over, skip|ˈpe.§sa§χ|pasákh|פסח|
-פָּקִיד|clerk|pa§ˈki§‹§d|pakid|פקיד|
-פָּרָדִיגְמָה|paradigm|pa§ʁa§di§‹§ɡ§ma§‹|paradigma|פרדיגמה|
-פָּרָה|cow|pa§ˈʁa§‹|pará|פרה|
-פָּשַׁט|to take off clothing|pa§ˈʃa§t|pashát|פשט|
+פֶּטֶל|raspberry|ˈpe,te,l|pétel|פטל|
+פַּח אַשְׁפָּה‎ |rubbish bin|pa,χ., ,ʔa,ˈʃ,pa,‹|pakh ashpá|פח אשפה|
+פַּח|snare, trap|pa,χ|pakh|פח|
+פַּחְדָן|coward|pa,χ,ˈda,n|pahdán|פחדן|
+פַּךְ|jar, jug|pa,χ|pákh|פך|
+פַּסְחָא|Easter|ˈpa,s,χa,‹|páskha|פסחא|
+פַּעַם|footstep|ˈpa.,(ʔ)a,m|pá'am|פעם|
+פַּרְסִית|Persian (lang)|pa,ʁ,ˈsi,‹,t|parsít|פרסית|
+פַּרְסָה|hoof, horseshoe|pa,r,ˈsa,‹|parsa|פרסה|
+פַּרְעֹה|paraoh|pa,ʁ.,ˈ(ʔ)o,‹|par'ó|פרעה|
+פַּשְׁטוּת|simplicity|pa,ʃ,ˈt,u,t|pashtút|פשטות|
+פַשְׁלָה|gaffe|ˈfa,ʃ,la,‹|fáshla|פשלה|
+פָּלֶשְׂתִּינָה|Palestine|pa,le,s,ˈti,‹,na,‹|palestína|פלשתינה|
+פָּנָס|lantern, torch|pa,ˈna,s|panás|פנס|
+פָּסַח|to pass over, skip|ˈpe.,sa,χ|pasákh|פסח|
+פָּקִיד|clerk|pa,ˈki,‹,d|pakid|פקיד|
+פָּרָדִיגְמָה|paradigm|pa,ʁa,di,‹,ɡ,ma,‹|paradigma|פרדיגמה|
+פָּרָה|cow|pa,ˈʁa,‹|pará|פרה|
+פָּשַׁט|to take off clothing|pa,ˈʃa,t|pashát|פשט|
 פָה|musical note FA||fa|פה
-פָלַסְטִין|Palestine|fa§la§s§ˈti§‹§n|falastin|פלסטין|
-פֹּה|here|ˈpɔ§–|pó|פה
-פּוֹפָּאי|Popeye|ˈp§o§pa§‹§j|pópay|פופאי|
-פּוֹפּוּלָרִי|popular|p§o.§p§u§ˈla.§ʁi§‹|populári|פופולרי|
-פּוּנְדָק|inn|p§u§n§ˈda§k|pundák|פונדק|
-פִּינְגְּוִין|penguin|ˈpi§‹§n§ɡ§wi§‹§n||פינגוין|
-פּינגּוין|penguin|ˈpi§‹§n§ɡ§wi§‹§n||פִּינְגְּוִין
-פינגוין|penguin|ˈpi§‹§n§ɡ§wi§‹§n||פִּינְגְּוִין
+פָלַסְטִין|Palestine|fa,la,s,ˈti,‹,n|falastin|פלסטין|
+פֹּה|here|ˈpɔ,–|pó|פה
+פּוֹפָּאי|Popeye|ˈp,o,pa,‹,j|pópay|פופאי|
+פּוֹפּוּלָרִי|popular|p,o.,p,u,ˈla.,ʁi,‹|populári|פופולרי|
+פּוּנְדָק|inn|p,u,n,ˈda,k|pundák|פונדק|
+פִּינְגְּוִין|penguin|ˈpi,‹,n,ɡ,wi,‹,n||פינגוין|
+פּינגּוין|penguin|ˈpi,‹,n,ɡ,wi,‹,n||פִּינְגְּוִין
+פינגוין|penguin|ˈpi,‹,n,ɡ,wi,‹,n||פִּינְגְּוִין
 פ־ו־ץ||
 פ־ח־ד||
 פ־ט־ר||
@@ -7789,7 +7789,7 @@ autoExpandExamples.he = `
 פ־צ־ע||
 פ־ש־ט||
 פ־ת־ח||
-פאה|wig|pe§ˈ(ʔ)a§‹|pe'á|פֵּאָה
+פאה|wig|pe,ˈ(ʔ)a,‹|pe'á|פֵּאָה
 פאי||
 פאלוס||
 פאלי||
@@ -7809,8 +7809,8 @@ autoExpandExamples.he = `
 פדה||
 פדיון||
 פדיחה||
-פה|here; mouth; musical note|ˈpɔ§–§/pe/fa||פֹּה#פֶּה#פָה
-פוֹלְקְלוֹר|folklore|f§o§l§ˈk§l§o§r|folklór|פולקלור|
+פה|here; mouth; musical note|ˈpɔ,–,/pe/fa||פֹּה#פֶּה#פָה
+פוֹלְקְלוֹר|folklore|f,o,l,ˈk,l,o,r|folklór|פולקלור|
 פוגעני||
 פוגרום||
 פודיאטר||
@@ -7836,17 +7836,17 @@ autoExpandExamples.he = `
 פולין||
 פולניה||
 פולנית||
-פולקלור|folklore|f§o§l§ˈk§l§o§r|folklór|פוֹלְקְלוֹר
+פולקלור|folklore|f,o,l,ˈk,l,o,r|folklór|פוֹלְקְלוֹר
 פונאפוטי||
-פונדק|inn|p§u§n§ˈda§k|pundák|פּוּנְדָק
+פונדק|inn|p,u,n,ˈda,k|pundák|פּוּנְדָק
 פונה||
 פונקציה||
 פוסה||
 פועל||
 פועלי כל העולם התאחדו||
 פועלת||
-פופאי|Popeye|ˈp§o§pa§‹§j|pópay|פּוֹפָּאי
-פופולרי|popular|p§o.§p§u§ˈla.§ʁi§‹|populári|פּוֹפּוּלָרִי
+פופאי|Popeye|ˈp,o,pa,‹,j|pópay|פּוֹפָּאי
+פופולרי|popular|p,o.,p,u,ˈla.,ʁi,‹|populári|פּוֹפּוּלָרִי
 פוצה||
 פוצץ||
 פור||
@@ -7867,10 +7867,10 @@ autoExpandExamples.he = `
 פות||
 פז||
 פזמון||
-פח אשפה|rubbish bin|pa§χ.§ §ʔa§ˈʃ§pa§‹|pakh ashpá|פַּח אַשְׁפָּה‎ 
-פח|snare, trap|pa§χ|pakh|פַּח
+פח אשפה|rubbish bin|pa,χ., ,ʔa,ˈʃ,pa,‹|pakh ashpá|פַּח אַשְׁפָּה‎ 
+פח|snare, trap|pa,χ|pakh|פַּח
 פחד|to fear|paˈχad
-פחדן|coward|pa§χ§ˈda§n|pahdán|פַּחְדָן
+פחדן|coward|pa,χ,ˈda,n|pahdán|פַּחְדָן
 פחות||
 פחם||
 פחמן||
@@ -7883,8 +7883,8 @@ autoExpandExamples.he = `
 פטיש||
 פטל אדום||
 פטל שחור||
-פטל|raspberry|ˈpe§te§l|pétel|פֶּטֶל
-פטמה|nipple|pi§t§ma§‹|pitma|פִּטְמָה
+פטל|raspberry|ˈpe,te,l|pétel|פֶּטֶל
+פטמה|nipple|pi,t,ma,‹|pitma|פִּטְמָה
 פטר||
 פטרוזיליה||
 פטרוסיאן||
@@ -7898,7 +7898,7 @@ autoExpandExamples.he = `
 פיהק||
 פיוט||
 פיונגיאנג||
-פיזי|physical|ˈfi§‹§zi§‹|fízi|פִיזִי
+פיזי|physical|ˈfi,‹,zi,‹|fízi|פִיזִי
 פיזיולוגיה||
 פיזיקאי||
 פיזיקה גרעינית||
@@ -7931,14 +7931,14 @@ autoExpandExamples.he = `
 פינקוושינג||
 פינקלברג||
 פינקלמן||
-פיסח|to jump, skip|pi§‹§ˈse§aχ|piséakh|פִּסֵּחַ
+פיסח|to jump, skip|pi,‹,ˈse,aχ|piséakh|פִּסֵּחַ
 פיסטוק||
 פיסי||
 פיסל||
-פיספס|to miss|fi§‹§s§fɛ§s|fisfés|פִיסְפֵס|
-פיצה|pizza|ˈpi§‹§t͡sa§‹|pítsa|פִּיצָה
+פיספס|to miss|fi,‹,s,fɛ,s|fisfés|פִיסְפֵס|
+פיצה|pizza|ˈpi,‹,t͡sa,‹|pítsa|פִּיצָה
 פיצוץ||
-פיצל|to split|pi§‹§ˈt͡se§l
+פיצל|to split|pi,‹,ˈt͡se,l
 פיקאצ'ו||
 פיקד||
 פיקוח נפש||
@@ -7953,12 +7953,12 @@ autoExpandExamples.he = `
 פירק||
 פישוט||
 פישון||
-פישט|to simplify|pi§‹§ˈʃɛ§t|pishét|פִּשֵּׁט
+פישט|to simplify|pi,‹,ˈʃɛ,t|pishét|פִּשֵּׁט
 פישל||
 פיתה||
 פיתוח||
 פיתח||
-פך|jar, jug|pa§χ|pákh|פַּךְ
+פך|jar, jug|pa,χ|pákh|פַּךְ
 פלא||
 פלאפון||
 פלאפל||
@@ -7970,7 +7970,7 @@ autoExpandExamples.he = `
 פלואור||
 פלוגיסטון||
 פלוטו||
-פלונטר|imbroglio|p§l§o§n§te§r|plónter|פְּלוֹנְטֶר
+פלונטר|imbroglio|p,l,o,n,te,r|plónter|פְּלוֹנְטֶר
 פלורידה||
 פלזמה||
 פלח||
@@ -7982,7 +7982,7 @@ autoExpandExamples.he = `
 פלישתי||
 פלך||
 פלמינגו||
-פלסטין|Palestine|fa§la§s§ˈti§‹§n|falastin|פָלַסְטִין
+פלסטין|Palestine|fa,la,s,ˈti,‹,n|falastin|פָלַסְטִין
 פלסטיני||
 פלסטיק||
 פלסטר||
@@ -7993,9 +7993,9 @@ autoExpandExamples.he = `
 פלצות||
 פלרמו||
 פלש||
-פלשת|Philistia|ˈp§le§ʃe§t|pléshet|פְּלֶשֶׁת
+פלשת|Philistia|ˈp,le,ʃe,t|pléshet|פְּלֶשֶׁת
 פלשתי||
-פלשתינה|Palestine|pa§le§s§ˈti§‹§na§‹|palestína|פָּלֶשְׂתִּינָה
+פלשתינה|Palestine|pa,le,s,ˈti,‹,na,‹|palestína|פָּלֶשְׂתִּינָה
 פמיניזם||
 פן||
 פנדה||
@@ -8009,7 +8009,7 @@ autoExpandExamples.he = `
 פנימה||
 פנינה||
 פניצילין||
-פנס|lantern, torch|pa§ˈna§s|panás|פָּנָס
+פנס|lantern, torch|pa,ˈna,s|panás|פָּנָס
 פנצ׳ר||
 פנקס||
 פס||
@@ -8018,8 +8018,8 @@ autoExpandExamples.he = `
 פסולת||
 פסוק||
 פסוקית||
-פסח|to pass over, skip|ˈpe.§sa§χ|pasákh|פָּסַח
-פסחא|Easter|ˈpa§s§χa§‹|páskha|פַּסְחָא
+פסח|to pass over, skip|ˈpe.,sa,χ|pasákh|פָּסַח
+פסחא|Easter|ˈpa,s,χa,‹|páskha|פַּסְחָא
 פסטו||
 פסיכולוג||
 פסיכולוגיה||
@@ -8029,7 +8029,7 @@ autoExpandExamples.he = `
 פסיק||
 פסל||
 פסלת||
-פסנתר|piano|p§sa§n§ˈte§ʁ|p'santér|פְּסַנְתֵּר
+פסנתר|piano|p,sa,n,ˈte,ʁ|p'santér|פְּסַנְתֵּר
 פסק||
 פסקה||
 פסקטריאניזם||
@@ -8041,7 +8041,7 @@ autoExpandExamples.he = `
 פעימה||
 פעל||
 פעם שלישית גלידה||
-פעם|footstep|ˈpa.§(ʔ)a§m|pá'am|פַּעַם
+פעם|footstep|ˈpa.,(ʔ)a,m|pá'am|פַּעַם
 פעמון||
 פעמיים נקודתיים||
 פפירוס||
@@ -8056,9 +8056,9 @@ autoExpandExamples.he = `
 פצצה אטומית||
 פצצה||
 פקד||
-פקודה|order, command|p§ku§‹§ˈda§‹||פְּקֻדָּה
+פקודה|order, command|p,ku,‹,ˈda,‹||פְּקֻדָּה
 פקח||
-פקיד|clerk|pa§ˈki§‹§d|pakid|פָּקִיד
+פקיד|clerk|pa,ˈki,‹,d|pakid|פָּקִיד
 פקיסטן||
 פקס||
 פקעת||
@@ -8073,11 +8073,11 @@ autoExpandExamples.he = `
 פרגית||
 פרד||
 פרדוקס||
-פרדיגמה|paradigm|pa§ʁa§di§‹§ɡ§ma§‹|paradigma|פָּרָדִיגְמָה
+פרדיגמה|paradigm|pa,ʁa,di,‹,ɡ,ma,‹|paradigma|פָּרָדִיגְמָה
 פרדס||
 פרד״ס||
 פרה פרה||
-פרה|cow|pa§ˈʁa§‹|pará|פָּרָה
+פרה|cow|pa,ˈʁa,‹|pará|פָּרָה
 פרהסיה||
 פרו־||
 פרואני||
@@ -8089,7 +8089,7 @@ autoExpandExamples.he = `
 פרווה||
 פרוזבול||
 פרוזדור||
-פרוטקציה|nepotism|p§ʁ§o§ˈte§k.§ts§ja§‹|protéktzya| פְּרוֹטֶקְצְיָה
+פרוטקציה|nepotism|p,ʁ,o,ˈte,k.,ts,ja,‹|protéktzya| פְּרוֹטֶקְצְיָה
 פרויקט||
 פרומקין||
 פרוסה||
@@ -8097,11 +8097,11 @@ autoExpandExamples.he = `
 פרופ׳||
 פרוקסיזמלי||
 פרושי||
-פרח|flower|ˈpɛ§ʁa§χ
+פרח|flower|ˈpɛ,ʁa,χ
 פרחה||
 פרט||
 פרטי||
-פרי|fruit|p§ʁi§‹|pri|פְּרִי
+פרי|fruit|p,ʁi,‹|pri|פְּרִי
 פריאפיזם||
 פריבילגיה||
 פריגיאה||
@@ -8117,13 +8117,13 @@ autoExpandExamples.he = `
 פרנסה||
 פרנקל||
 פרס||
-פרסה|hoof, horseshoe|pa§r§ˈsa§‹|parsa|פַּרְסָה
+פרסה|hoof, horseshoe|pa,r,ˈsa,‹|parsa|פַּרְסָה
 פרסומת||
 פרסי||
-פרסית|Persian (lang)|pa§ʁ§ˈsi§‹§t|parsít|פַּרְסִית
+פרסית|Persian (lang)|pa,ʁ,ˈsi,‹,t|parsít|פַּרְסִית
 פרסם||
 פרספקטיבה||
-פרעה|paraoh|pa§ʁ.§ˈ(ʔ)o§‹|par'ó|פַּרְעֹה
+פרעה|paraoh|pa,ʁ.,ˈ(ʔ)o,‹|par'ó|פַּרְעֹה
 פרעוני||
 פרעוש||
 פרפר||
@@ -8146,13 +8146,13 @@ autoExpandExamples.he = `
 פשוטו כמשמעו||
 פשוש||
 פשט את הרגל||
-פשט|to take off clothing|pa§ˈʃa§t|pashát|פָּשַׁט
+פשט|to take off clothing|pa,ˈʃa,t|pashát|פָּשַׁט
 פשטו||
-פשטות|simplicity|pa§ʃ§ˈt§u§t|pashtút|פַּשְׁטוּת
+פשטות|simplicity|pa,ʃ,ˈt,u,t|pashtút|פַּשְׁטוּת
 פשיזם||
-פשיטת רגל|bankruptcy|p§ʃi§‹§ta§t§-§ˈʁɛ§ɡɛ§l|pshitat-régel|פְּשִׁיטַת־רֶגֶל
+פשיטת רגל|bankruptcy|p,ʃi,‹,ta,t,-,ˈʁɛ,ɡɛ,l|pshitat-régel|פְּשִׁיטַת־רֶגֶל
 פשיעה||
-פשלה|gaffe|ˈfa§ʃ§la§‹|fáshla|פַשְׁלָה
+פשלה|gaffe|ˈfa,ʃ,la,‹|fáshla|פַשְׁלָה
 פשע מלחמה||
 פשע שנאה||
 פשע||
@@ -8176,35 +8176,35 @@ autoExpandExamples.he = `
 פתכה||
 פתק||
 פתר||
-פתרון|solution|pi§t§ˈʁ§o§n|pitrón|פִּתְרוֹן
+פתרון|solution|pi,t,ˈʁ,o,n|pitrón|פִּתְרוֹן
 פת״ח||
 פ׳||
 צ'יוואווה||
 צ'כית||
-צְדָקָה|charity|t͡s§da§ˈka§‹|ts'daká|צדקה|
-צִבְעוֹנִי|colourful|tsi§v§(ʔ)§o§ˈni§‹|tsiv'oní|צבעוני|
-צִי|navy|t͡si§‹|tsi|צי|
-צִיּוֹן|Zion|t͡si§ˈj§o̞§n|tsiyón|ציון|
-צִיץ|bud|t͡si§‹§t͡s|tzítz|ציץ
-צִפֳּרִים|birds|tsi§po§ˈʁi§‹§m||ציפורים
-ציפורים|birds|tsi§po§ˈʁi§‹§m||צִפֳּרִים
-צִפֹּרָה|Zipporah|t͡siˈ§p§o§ʁa§‹|tsipóra|צפורה|
-צִפּוֹר|bird|t͡si§ˈp§o§ʁ|tsipór|ציפור|
-צִ׳יק צָ׳ק|very quickly|ˈtʃi§‹§‹§k.§ §tʃa§‹§k|chik-chak|צ׳יק צ׳ק|
-צֶבַע|colour|ˈt͡se̞§vä§‹|tséva|צבע|
-צֶדֶק|justice|ˈt͡se.§de§k|tzédek|צדק|
-צֶמַח|plant|ˈt͡se.§ma§x|tsémakh|צמח|
-צֶ׳ק|cheque|tʃe§‹§k|chek|צ׳ק|
-צַוָּאר|neck|t͡sa§ˈva§‹§ʁ|tsavár|צוואר
-צַיָּד|hunter|tsa§ˈja§d|tsayád|צייד|
-צַעַר|sadness, sorry|tsaː§‹§ʁ|tsá'ar|צער|
-צָבָא|army|t͡sa§ˈva§‹|tsavá|צבא|
-צָהֳרַיִם|noon|t͡sa§(h)a§ˈʁa§ji§m|tsohoráyim|צהריים|
-צָהוּב|yellow|t͡sa§ˈh§ɔ§v||צהוב
-צָחַק|to laugh|t͡sa§ˈχa§k|tsakhák|צחק|
-צָפוֹן|north|tsa.§ˈf§o§n|tsafón|צפון|
-צָרִיךְ|in need of|t͡sa§ˈʁi§‹§χ|tsarikh|צריך|
-צָרַח|to scream|tsa§ˈʁa§χ|tsarákh|צרח|
+צְדָקָה|charity|t͡s,da,ˈka,‹|ts'daká|צדקה|
+צִבְעוֹנִי|colourful|tsi,v,(ʔ),o,ˈni,‹|tsiv'oní|צבעוני|
+צִי|navy|t͡si,‹|tsi|צי|
+צִיּוֹן|Zion|t͡si,ˈj,o̞,n|tsiyón|ציון|
+צִיץ|bud|t͡si,‹,t͡s|tzítz|ציץ
+צִפֳּרִים|birds|tsi,po,ˈʁi,‹,m||ציפורים
+ציפורים|birds|tsi,po,ˈʁi,‹,m||צִפֳּרִים
+צִפֹּרָה|Zipporah|t͡siˈ,p,o,ʁa,‹|tsipóra|צפורה|
+צִפּוֹר|bird|t͡si,ˈp,o,ʁ|tsipór|ציפור|
+צִ׳יק צָ׳ק|very quickly|ˈtʃi,‹,‹,k., ,tʃa,‹,k|chik-chak|צ׳יק צ׳ק|
+צֶבַע|colour|ˈt͡se̞,vä,‹|tséva|צבע|
+צֶדֶק|justice|ˈt͡se.,de,k|tzédek|צדק|
+צֶמַח|plant|ˈt͡se.,ma,x|tsémakh|צמח|
+צֶ׳ק|cheque|tʃe,‹,k|chek|צ׳ק|
+צַוָּאר|neck|t͡sa,ˈva,‹,ʁ|tsavár|צוואר
+צַיָּד|hunter|tsa,ˈja,d|tsayád|צייד|
+צַעַר|sadness, sorry|tsaː,‹,ʁ|tsá'ar|צער|
+צָבָא|army|t͡sa,ˈva,‹|tsavá|צבא|
+צָהֳרַיִם|noon|t͡sa,(h)a,ˈʁa,ji,m|tsohoráyim|צהריים|
+צָהוּב|yellow|t͡sa,ˈh,ɔ,v||צהוב
+צָחַק|to laugh|t͡sa,ˈχa,k|tsakhák|צחק|
+צָפוֹן|north|tsa.,ˈf,o,n|tsafón|צפון|
+צָרִיךְ|in need of|t͡sa,ˈʁi,‹,χ|tsarikh|צריך|
+צָרַח|to scream|tsa,ˈʁa,χ|tsarákh|צרח|
 צ־ד־ק||
 צ־ו־ה||
 צ־י־ן||
@@ -8213,31 +8213,31 @@ autoExpandExamples.he = `
 צאצא||
 צב||
 צבא הגנה לישראל||
-צבא|army|t͡sa§ˈva§‹|tsavá|צָבָא
+צבא|army|t͡sa,ˈva,‹|tsavá|צָבָא
 צבאי||
 צבאני||
 צבוע||
 צבי||
 צביעות||
 צבס||
-צבע|colour|ˈt͡se̞§vä§‹|tséva|צֶבַע
-צבעוני|colourful|tsi§v§(ʔ)§o§ˈni§‹|tsiv'oní|צִבְעוֹנִי
+צבע|colour|ˈt͡se̞,vä,‹|tséva|צֶבַע
+צבעוני|colourful|tsi,v,(ʔ),o,ˈni,‹|tsiv'oní|צִבְעוֹנִי
 צבר||
 צג||
-צד|to hunt|ˈt͡sa§d
+צד|to hunt|ˈt͡sa,d
 צדיק||
 צדף||
 צדק חברתי||
-צדק|justice|ˈt͡se.§de§k|tzédek|צֶדֶק
-צדקה|charity|t͡s§da§ˈka§‹|ts'daká|צְדָקָה
+צדק|justice|ˈt͡se.,de,k|tzédek|צֶדֶק
+צדקה|charity|t͡s,da,ˈka,‹|ts'daká|צְדָקָה
 צדקן||
 צדקת||
 צהבהב||
-צהוב|yellow|t͡sa§ˈh§ɔ§v||צָהוּב
+צהוב|yellow|t͡sa,ˈh,ɔ,v||צָהוּב
 צהלה||
 צהר||
 צהרון||
-צהריים|noon|t͡sa§(h)a§ˈʁa§ji§‹§m|tsohoráyim|צָהֳרַיִם
+צהריים|noon|t͡sa,(h)a,ˈʁa,ji,‹,m|tsohoráyim|צָהֳרַיִם
 צהרים טובים||
 צהרים||
 צה״ל||
@@ -8246,7 +8246,7 @@ autoExpandExamples.he = `
 צודק||
 צוה||
 צוואה||
-צוואר|neck|t͡sa§›§ˈva§‹§ʁ|tsavár|צַוָּאר
+צוואר|neck|t͡sa,›,ˈva,‹,ʁ|tsavár|צַוָּאר
 צווארון||
 צוות||
 צוטט||
@@ -8271,9 +8271,9 @@ autoExpandExamples.he = `
 צחור||
 צחיח||
 צחנה||
-צחק|to laugh|t͡sa§ˈχa§k|tsakhák|צָחַק
+צחק|to laugh|t͡sa,ˈχa,k|tsakhák|צָחַק
 צטט||
-צי|navy|t͡si§‹|tsi|צִי
+צי|navy|t͡si,‹|tsi|צִי
 ציבור||
 ציבורי||
 ציד||
@@ -8281,7 +8281,7 @@ autoExpandExamples.he = `
 ציווה||
 ציוויליזציה||
 ציוות||
-ציון|Zion|t͡si§ˈj§o̞§n|tsiyón|צִיּוֹן
+ציון|Zion|t͡si,ˈj,o̞,n|tsiyón|צִיּוֹן
 ציונות||
 ציוני||
 ציוץ||
@@ -8291,7 +8291,7 @@ autoExpandExamples.he = `
 ציטט||
 ציידת||
 ציין||
-צייר|hunter|tsa§›§ˈja§d|tsayád|צַיָּד
+צייר|hunter|tsa,›,ˈja,d|tsayád|צַיָּד
 צייתנות||
 צילום||
 צילם||
@@ -8303,11 +8303,11 @@ autoExpandExamples.he = `
 צינור||
 צינן||
 ציפה||
-ציפור|bird|t͡si§‹§ˈp§o§ʁ|tsipór|צִפּוֹר
+ציפור|bird|t͡si,‹,ˈp,o,ʁ|tsipór|צִפּוֹר
 ציפורה||
-ציפורן|fingernail|t͡si§‹§ˈp§ɔ§ʁɛ§n
+ציפורן|fingernail|t͡si,‹,ˈp,ɔ,ʁɛ,n
 ציפי||
-ציץ|bud|t͡si§‹§t͡s|tzítz|צִיץ|
+ציץ|bud|t͡si,‹,t͡s|tzítz|צִיץ|
 ציצי||
 ציצית||
 ציצת||
@@ -8342,7 +8342,7 @@ autoExpandExamples.he = `
 צמא||
 צמד||
 צמה||
-צמח|plant|ˈt͡se.§ma§x|tsémakh|צֶמַח
+צמח|plant|ˈt͡se.,ma,x|tsémakh|צֶמַח
 צמחונות||
 צמחוני||
 צמחייה||
@@ -8369,19 +8369,19 @@ autoExpandExamples.he = `
 צען||
 צעצוע||
 צעק||
-צער|sadness, sorry|tsaː§‹§ʁ|tsá'ar|צַעַר
+צער|sadness, sorry|tsaː,‹,ʁ|tsá'ar|צַעַר
 צע״ג||
-צף|to float|ˈt͡sa§f
+צף|to float|ˈt͡sa,f
 צפּחת||
 צפה||
 צפוי||
 צפון אירלנד||
 צפון אמריקני||
 צפון קוריאני||
-צפון|north|tsa.§ˈf§o§n|tsafón|צָפוֹן
+צפון|north|tsa.,ˈf,o,n|tsafón|צָפוֹן
 צפוני||
 צפוע||
-צפורה|Zipporah|t͡siˈ§p§o§ʁa§‹|tsipóra|צִפֹּרָה
+צפורה|Zipporah|t͡siˈ,p,o,ʁa,‹|tsipóra|צִפֹּרָה
 צפיפות||
 צפניה||
 צפנת פענח||
@@ -8395,16 +8395,16 @@ autoExpandExamples.he = `
 צץ||
 צר אופק||
 צר עין||
-צר|narrow|ˈt͡sa§ʁ
+צר|narrow|ˈt͡sa,ʁ
 צרה צרורה||
 צרה||
 צרוף לשון||
 צרור||
 צרות||
-צרח|to scream|tsa§ˈʁa§χ|tsarákh|צָרַח
+צרח|to scream|tsa,ˈʁa,χ|tsarákh|צָרַח
 צריום||
 צריח||
-צריך|in need of|t͡sa§ˈʁi§‹§χ|tsarikh|צָרִיךְ
+צריך|in need of|t͡sa,ˈʁi,‹,χ|tsarikh|צָרִיךְ
 צריכה||
 צריף||
 צרך||
@@ -8425,31 +8425,31 @@ autoExpandExamples.he = `
 צ׳ייסר||
 צ׳ילה||
 צ׳יפס||
-צ׳יק צ׳ק|very quickly|ˈtʃi§‹§‹§k.§ §tʃa§‹§k|chik-chak|צִ׳יק צָ׳ק
-צ׳ק|cheque|tʃe§‹§k|chek|צֶ׳ק
+צ׳יק צ׳ק|very quickly|ˈtʃi,‹,‹,k., ,tʃa,‹,k|chik-chak|צִ׳יק צָ׳ק
+צ׳ק|cheque|tʃe,‹,k|chek|צֶ׳ק
 קְווִידִיץ׳|Quidditch||kwidich|קווידיץ׳
-קְלִיד|piano key|k§li§‹§d|k'líd|קליד|
-קִטֵּר|to offer incense|ki.§ˈte§ʁ|kitér|קיטר|
-קֵן|nest|ke§n|ken|קן|
-קֶרַח|ice|ˈkɛ§ʁa§χ|kérakh|קרח|
-קֶשֶׁת|bow (weapon)|ˈkɛ§ʃɛ§t|késhet|קשת|
-קַיִן|Cain|ˈka.§ji§n|káyin|קין|
-קַיִץ|summer|ˈka§ji§ts|káyits|קיץ|
-קַל|lightweight|ka§l|kál|קל|
-קַנְיוֹן|shopping mall|ka§n§ˈj§o§n|kanyon|קניון|
-קַשׁ|straw|ka§ʃ|kash|קש|
-קָדַח|to have a fever|ka§ˈda§χ|kadákh|קדח|
-קָהִיר|Cairo|ka.§ˈhi§‹§ʁ|kahír|קהיר|
-קָהָל|audience|ka§ha§l|qāhāl|קהל|
-קָטַל|to kill|ka§ˈta§l|katál|קטל|
-קָטָן|little|ka§ˈta§n|katán|קטן|
-קָטֹן|to become small|ka§ˈto§n|katón|קטון|
-קָנָה|to buy|ka§ˈna§‹|kaná|קנה|
-קָרִיא|legible|ka§ˈʁi§‹§–|karí|קריא|
-קָרַע|to tear, rip|ka§ˈʁa§(ʕ)|kará'|קרע|
-קָרָא|to read|kaˈ§ʁa§(ʔ)|qaráʾ|קרא|
-קָרָה|to happen|ka§ˈʁa§‹|kará|קרה|
-קֻרְאָן|Qur'an|ku§ʁ§ˈ(ʔ)a§n|kur'án|קוראן|
+קְלִיד|piano key|k,li,‹,d|k'líd|קליד|
+קִטֵּר|to offer incense|ki.,ˈte,ʁ|kitér|קיטר|
+קֵן|nest|ke,n|ken|קן|
+קֶרַח|ice|ˈkɛ,ʁa,χ|kérakh|קרח|
+קֶשֶׁת|bow (weapon)|ˈkɛ,ʃɛ,t|késhet|קשת|
+קַיִן|Cain|ˈka.,ji,n|káyin|קין|
+קַיִץ|summer|ˈka,ji,ts|káyits|קיץ|
+קַל|lightweight|ka,l|kál|קל|
+קַנְיוֹן|shopping mall|ka,n,ˈj,o,n|kanyon|קניון|
+קַשׁ|straw|ka,ʃ|kash|קש|
+קָדַח|to have a fever|ka,ˈda,χ|kadákh|קדח|
+קָהִיר|Cairo|ka.,ˈhi,‹,ʁ|kahír|קהיר|
+קָהָל|audience|ka,ha,l|qāhāl|קהל|
+קָטַל|to kill|ka,ˈta,l|katál|קטל|
+קָטָן|little|ka,ˈta,n|katán|קטן|
+קָטֹן|to become small|ka,ˈto,n|katón|קטון|
+קָנָה|to buy|ka,ˈna,‹|kaná|קנה|
+קָרִיא|legible|ka,ˈʁi,‹,–|karí|קריא|
+קָרַע|to tear, rip|ka,ˈʁa,(ʕ)|kará'|קרע|
+קָרָא|to read|kaˈ,ʁa,(ʔ)|qaráʾ|קרא|
+קָרָה|to happen|ka,ˈʁa,‹|kará|קרה|
+קֻרְאָן|Qur'an|ku,ʁ,ˈ(ʔ)a,n|kur'án|קוראן|
 ק־ד־ם||
 ק־נ־ה||
 ק־ר־א||
@@ -8476,7 +8476,7 @@ autoExpandExamples.he = `
 קדום||
 קדוש||
 קדושה||
-קדח|to have a fever|ka§ˈda§χ|kadákh|קָדַח
+קדח|to have a fever|ka,ˈda,χ|kadákh|קָדַח
 קדחת||
 קדימה||
 קדיש||
@@ -8488,24 +8488,24 @@ autoExpandExamples.he = `
 קדר||
 קדש||
 קה||
-קהה|dull (as a knife)|kɛ§ˈhɛ§‹
+קהה|dull (as a knife)|kɛ,ˈhɛ,‹
 קהוה||
 קהילה||
-קהיר|Cairo|ka.§ˈhi§‹§ʁ|kahír|קָהִיר
-קהל|audience|ka§ha§l|qāhāl|קָהָל
+קהיר|Cairo|ka.,ˈhi,‹,ʁ|kahír|קָהִיר
+קהל|audience|ka,ha,l|qāhāl|קָהָל
 קהלת||
 קהת||
 קו רוחב||
 קו רקיע||
 קו||
-קוֹל צָף|swing vote|k§o§l§ §t͡sa§f|kot tsaf|קול צף|
-קוֹל קוֹרֵא|CFP|k§o§l§ §k§o§ˈrɛ§‹|kol koré|קול קורא|
-קוֹל|voice, sound|k§o§l|kol|קול
-קוֹלְנוֹעַ|film|k§o§l§ˈn§o.§a|kolnóa|קולנוע|
-קוֹלָנִי|vociferous|k§o§la§ˈni§‹|kolaní|קולני|
-קוֹמְבִּינָה|clever trick|k§o§m§ˈbi§‹§na§‹|kombína|קומבינה|
-קוּל|cool (sl.)|k§u§l|kul|קול
-קוּמְזִיץ|campfire|ˈk§u§m§zi§‹§t͡s|kumzits|קומזיץ|
+קוֹל צָף|swing vote|k,o,l, ,t͡sa,f|kot tsaf|קול צף|
+קוֹל קוֹרֵא|CFP|k,o,l, ,k,o,ˈrɛ,‹|kol koré|קול קורא|
+קוֹל|voice, sound|k,o,l|kol|קול
+קוֹלְנוֹעַ|film|k,o,l,ˈn,o.,a|kolnóa|קולנוע|
+קוֹלָנִי|vociferous|k,o,la,ˈni,‹|kolaní|קולני|
+קוֹמְבִּינָה|clever trick|k,o,m,ˈbi,‹,na,‹|kombína|קומבינה|
+קוּל|cool (sl.)|k,u,l|kul|קול
+קוּמְזִיץ|campfire|ˈk,u,m,zi,‹,t͡s|kumzits|קומזיץ|
 קואופרטיב||
 קואלה לומפור||
 קואלה||
@@ -8524,16 +8524,16 @@ autoExpandExamples.he = `
 קודם||
 קודש||
 קוה||
-קווה-קווה|cootie catcher|ˈk§wa§‹§‹§ §k§wa§‹§‹|kwa-kwa
+קווה-קווה|cootie catcher|ˈk,wa,‹,‹, ,k,wa,‹,‹|kwa-kwa
 קווידיץ׳|Quidditch||kwidich|קְווִידִיץ׳
 קוונט||
 קוטב||
 קוטבי||
 קוטג׳||
 קוטר||
-קול צף|swing vote|k§o§l§ §t͡sa§f|kot tsaf|קוֹל צָף
-קול קורא|CFP|k§o§l§ §k§o§ˈrɛ§‹|kol koré|קוֹל קוֹרֵא
-קול|voice, sound|k§o§l|kol|קוֹל
+קול צף|swing vote|k,o,l, ,t͡sa,f|kot tsaf|קוֹל צָף
+קול קורא|CFP|k,o,l, ,k,o,ˈrɛ,‹|kol koré|קוֹל קוֹרֵא
+קול|voice, sound|k,o,l|kol|קוֹל
 קולוניאליזם||
 קולונל||
 קולחוז||
@@ -8541,16 +8541,16 @@ autoExpandExamples.he = `
 קוליברי||
 קולמוס||
 קולן||
-קולנוע|film|k§o§l§ˈn§o.§a|kolnóa|קוֹלְנוֹעַ
+קולנוע|film|k,o,l,ˈn,o.,a|kolnóa|קוֹלְנוֹעַ
 קולנועי||
-קולני|vociferous|k§o§la§ˈni§‹|kolaní|קוֹלָנִי
+קולני|vociferous|k,o,la,ˈni,‹|kolaní|קוֹלָנִי
 קולקטיבי||
-קומבינה|clever trick|k§o§m§ˈbi§‹§na§‹|kombína|קוֹמְבִּינָה
+קומבינה|clever trick|k,o,m,ˈbi,‹,na,‹|kombína|קוֹמְבִּינָה
 קומה||
 קומולוס||
 קומוניזם||
 קומוניסט||
-קומזיץ|campfire|ˈk§u§m§zi§‹§t͡s|kumzits|קוּמְזִיץ
+קומזיץ|campfire|ˈk,u,m,zi,‹,t͡s|kumzits|קוּמְזִיץ
 קומי||
 קומיקאי||
 קומפקטי||
@@ -8590,7 +8590,7 @@ autoExpandExamples.he = `
 קור כלבים||
 קור||
 קורא||
-קוראן|Qur'an|ku§ʁ§ˈ(ʔ)a§n|kur'án|קֻרְאָן
+קוראן|Qur'an|ku,ʁ,ˈ(ʔ)a,n|kur'án|קֻרְאָן
 קורונה||
 קורח||
 קוריאה||
@@ -8602,21 +8602,21 @@ autoExpandExamples.he = `
 קו״ף||
 קזבלנקה||
 קח ולך||
-קט|tiny|ka§t|קָט
+קט|tiny|ka,t|קָט
 קטבוליזם||
 קטגור||
 קטגוריה||
-קטון|to become small|ka§ˈto§‹§n|katón|קָטֹן
+קטון|to become small|ka,ˈto,‹,n|katón|קָטֹן
 קטורת||
 קטילה||
 קטין||
 קטינה||
 קטיפה||
-קטל|to kill|ka§ˈta§l|katál|קָטַל
+קטל|to kill|ka,ˈta,l|katál|קָטַל
 קטלג||
 קטלוניה||
 קטלני||
-קטן|little|ka§ˈta§n|katán|קָטָן
+קטן|little|ka,ˈta,n|katán|קָטָן
 קטנטן||
 קטנית||
 קטנצ׳יק||
@@ -8647,7 +8647,7 @@ autoExpandExamples.he = `
 קיטלג||
 קיטנה||
 קיטע||
-קיטר|to offer incense|ki.§‹§ˈte§ʁ|kitér|קִטֵּר
+קיטר|to offer incense|ki.,‹,ˈte,ʁ|kitér|קִטֵּר
 קיטש||
 קיטשי||
 קייב||
@@ -8659,7 +8659,7 @@ autoExpandExamples.he = `
 קילקל||
 קימונו||
 קימפל||
-קין|Cain|ˈka.§ji§n|káyin|קַיִן
+קין|Cain|ˈka.,ji,n|káyin|קַיִן
 קינא||
 קינואה||
 קינוח||
@@ -8672,7 +8672,7 @@ autoExpandExamples.he = `
 קיפוד||
 קיפל||
 קיפץ||
-קיץ|summer|ˈka§ji§ts|káyits|קַיִץ
+קיץ|summer|ˈka,ji,ts|káyits|קַיִץ
 קיצוני||
 קיצוץ||
 קיצור דרך||
@@ -8687,7 +8687,7 @@ autoExpandExamples.he = `
 קישר||
 קל דעת||
 קל וחומר||
-קל|lightweight|ka§l|kál|קַל
+קל|lightweight|ka,l|kál|קַל
 קלאודיו||
 קלאוסטרופוביה||
 קלה||
@@ -8697,9 +8697,9 @@ autoExpandExamples.he = `
 קלט||
 קליבלנד||
 קליגרפיה||
-קליד|piano key|k§li§‹§d|k'líd|קְלִיד
+קליד|piano key|k,li,‹,d|k'líd|קְלִיד
 קליפ||
-קליפה|bark (tree)|k§li§‹§ˈpa§‹
+קליפה|bark (tree)|k,li,‹,ˈpa,‹
 קליק||
 קללה||
 קלמר||
@@ -8722,7 +8722,7 @@ autoExpandExamples.he = `
 קמץ||
 קמרון||
 קמ״ש||
-קן|nest|ke§n|ken|קֵן
+קן|nest|ke,n|ken|קֵן
 קנא||
 קנאה||
 קנאות||
@@ -8731,13 +8731,13 @@ autoExpandExamples.he = `
 קנברה||
 קנגורו||
 קנדה||
-קנה|to buy|ka§ˈna§‹|kaná|קָנָה
+קנה|to buy|ka,ˈna,‹|kaná|קָנָה
 קנוח||
 קנח||
 קנטינה||
 קניבל||
 קניה||
-קניון|shopping mall|ka§n§ˈj§o§n|kanyon|קַנְיוֹן
+קניון|shopping mall|ka,n,ˈj,o,n|kanyon|קַנְיוֹן
 קנייה||
 קניש||
 קנמון||
@@ -8753,7 +8753,7 @@ autoExpandExamples.he = `
 קערה||
 קערית||
 קערת פסח||
-קפא|to freeze|ka§ˈfa§‹
+קפא|to freeze|ka,ˈfa,‹
 קפה הפוך||
 קפה נמס||
 קפה קפוא||
@@ -8775,14 +8775,14 @@ autoExpandExamples.he = `
 קצף||
 קצפת||
 קצץ||
-קצר|short|ka§ˈt͡sa§ʁ
+קצר|short|ka,ˈt͡sa,ʁ
 קצרצר||
-קצת|some|ˈk§t͡sa§t
+קצת|some|ˈk,t͡sa,t
 קקאו||
 קקטוס||
 קק״ל||
-קר|cold|ˈka§ʁ
-קרא|to read|kaˈ§ʁa§(ʔ)|qaráʾ|קָרָא
+קר|cold|ˈka,ʁ
+קרא|to read|kaˈ,ʁa,(ʔ)|qaráʾ|קָרָא
 קראוטהאמר||
 קראטה||
 קראי||
@@ -8795,23 +8795,23 @@ autoExpandExamples.he = `
 קרבן||
 קרדיגן||
 קרדיט||
-קרה|to happen|ka§ˈʁa§‹|kará|קָרָה
+קרה|to happen|ka,ˈʁa,‹|kará|קָרָה
 קרוא||
 קרואטיה||
-קרוב|near|ka§ˈʁ§ɔ§v
+קרוב|near|ka,ˈʁ,ɔ,v
 קרובה||
 קרוון||
 קרום||
 קרון||
 קרוסלה||
 קרושה||
-קרח|ice|ˈkɛ§ʁa§χ|kérakh|קֶרַח
+קרח|ice|ˈkɛ,ʁa,χ|kérakh|קֶרַח
 קרחון ימי||
 קרחון||
 קרחי||
 קרטל||
 קרי לילה||
-קריא|legible|ka§ˈʁi§‹§–|karí|קָרִיא
+קריא|legible|ka,ˈʁi,‹,–|karí|קָרִיא
 קריאה||
 קריה||
 קריוקי||
@@ -8827,12 +8827,12 @@ autoExpandExamples.he = `
 קרירות||
 קרית טאהש||
 קרן רחוב||
-קרן|horn|ˈkɛ§ʁɛ§n
+קרן|horn|ˈkɛ,ʁɛ,n
 קרנף||
 קרס||
 קרסול||
 קרסל||
-קרע|to tear, rip|ka§ˈʁa§(ʕ)|kará'|קָרַע
+קרע|to tear, rip|ka,ˈʁa,(ʕ)|kará'|קָרַע
 קרפד||
 קרפדה||
 קרקס||
@@ -8842,7 +8842,7 @@ autoExpandExamples.he = `
 קרש חיתוך||
 קרש||
 קרת||
-קש|straw|ka§ʃ|kash|קַשׁ
+קש|straw|ka,ʃ|kash|קַשׁ
 קשב||
 קשה עורף||
 קשה||
@@ -8851,50 +8851,50 @@ autoExpandExamples.he = `
 קשיח||
 קשיטה||
 קשיש||
-קשישא|elder, ancestor|qa§ʃi§‹§ʃɑ§ʔ||
+קשישא|elder, ancestor|qa,ʃi,‹,ʃɑ,ʔ||
 קשישה||
 קשקוש||
-קשר|to tie|ka§ˈʃa§ʁ
+קשר|to tie|ka,ˈʃa,ʁ
 קשת ארוכה||
 קשת בענן||
-קשת|bow (weapon)|ˈkɛ§ʃɛ§t|késhet|קֶשֶׁת
+קשת|bow (weapon)|ˈkɛ,ʃɛ,t|késhet|קֶשֶׁת
 קתדרלה||
 ק״ש||
 ק״ת||
-רחוב|street|ʁɛ§ˈχ§o§v|rekhóv|רְחוֹב
-רח׳|street (abbr.)|ʁɛ§ˈχ§o§v|R'kh|רחוב|
-רְחוֹב|street|ʁɛ§ˈχ§o§v|rekhóv|רחוב||רחוב
-רִאשׁוֹן|first|ri§‹§ʃ§ɔ§n|rishón|ראשון
-רִבְקָה|Rebecca|ʁi§v§ˈka§‹|rivká|רבקה|
-רִבָּה|jam|ʁi.§ˈba§‹|ribá|ריבה|
-רִמּוֹן|pomegranate|ʁi§ˈm§o§n|rimón|רימון|
-רִפּוּד|padding|ri§ˈp§u§d|ripúd|ריפוד|
-רֵאָיוֹן|interview|re§ʔa§j§o§n|re'ayon|ריאיון
-רֵיחַ|odor, scent|ˈʁe.§‹§aχ|réakh|ריח|
-רֶגֶל|foot, leg|ˈʁe§ɡe§l|régel|רגל
-רֶגֶשׁ|emotion, feeling|ˈʁɛ§ɡɛ§ʃ|régesh|רגש|
-רֶכֶב|vehicle|ˈrɛ§χɛ§v|rékhev|רכב|
-רֶצֶפְּט|recipe|ʁe.§ˈt͡se§p§t|retzépt|רצפט|
-רַוָּק|bachelor|ra§w§ˈwaː§q|ravák|רווק|
-רַוָּקָה|bachelorette|ra§waː§ˈqaː§‹|ravaká|רווקה|
-רַךְ|soft|ʁa§χ|rakh|רך|
-רַע|evil, trouble|ʁa§–|ra|רע|
-רַעֲיוֹן|idea, concept|ʁa§(.a)§ˈj§o§n|ra'ayon|רעיון|
-רָבַץ|to crouch|ʁa§ˈva§t͡s|raváts|רבץ|
-רָדָה|to subjugate|ʁa§ˈda§‹|radá|רדה|
-רָחֵל|ewe|ʁa.§ˈχe§l|rakhél|רחל|
-רָחוֹק|far, distant|ʁa§ˈχ§ɔ§k|rakhók|רחוק|
-רָפָא|to heal, cure|ʁa§ˈfa§‹|rafá|רפא|
-רָפָאֵל|Raphael|ʁa§fa§ˈ(ʔ)e§l|rafa'el|רפאל|
-רָץ|to run|ʁa§t͡s|rats|רץ|
-רָצַח|to murder|ʁa§ˈt͡sa§χ|ratzákh|רצח|
-רָצָה|to want|ʁa§ˈtsa§‹|ratsá|רצה|
-רָקִיעַ|sky, heavens|ʁa§ˈki§‹§a|rakía|רקיע|
-רָקַע|to stomp|ra§ˈka§–|raká|רקע|
-רֹאשׁ הַשָּׁנָה|Jewish New Year|ˌʁo§‹§ʃ§ §ha§ʃa§ˈna§‹|rosh-hashaná|ראש השנה|
-רֹאשׁ|head|ʁɔ§‹§ʃ|rōš
-רֹמַח|spear|ˈʁɔ§ma§χ|rómakh|רומח|
-רֹק|saliva|ʁo§k|roq|רוק|
+רחוב|street|ʁɛ,ˈχ,o,v|rekhóv|רְחוֹב
+רח׳|street (abbr.)|ʁɛ,ˈχ,o,v|R'kh|רחוב|
+רְחוֹב|street|ʁɛ,ˈχ,o,v|rekhóv|רחוב||רחוב
+רִאשׁוֹן|first|ri,‹,ʃ,ɔ,n|rishón|ראשון
+רִבְקָה|Rebecca|ʁi,v,ˈka,‹|rivká|רבקה|
+רִבָּה|jam|ʁi.,ˈba,‹|ribá|ריבה|
+רִמּוֹן|pomegranate|ʁi,ˈm,o,n|rimón|רימון|
+רִפּוּד|padding|ri,ˈp,u,d|ripúd|ריפוד|
+רֵאָיוֹן|interview|re,ʔa,j,o,n|re'ayon|ריאיון
+רֵיחַ|odor, scent|ˈʁe.,‹,aχ|réakh|ריח|
+רֶגֶל|foot, leg|ˈʁe,ɡe,l|régel|רגל
+רֶגֶשׁ|emotion, feeling|ˈʁɛ,ɡɛ,ʃ|régesh|רגש|
+רֶכֶב|vehicle|ˈrɛ,χɛ,v|rékhev|רכב|
+רֶצֶפְּט|recipe|ʁe.,ˈt͡se,p,t|retzépt|רצפט|
+רַוָּק|bachelor|ra,w,ˈwaː,q|ravák|רווק|
+רַוָּקָה|bachelorette|ra,waː,ˈqaː,‹|ravaká|רווקה|
+רַךְ|soft|ʁa,χ|rakh|רך|
+רַע|evil, trouble|ʁa,–|ra|רע|
+רַעֲיוֹן|idea, concept|ʁa,(.a),ˈj,o,n|ra'ayon|רעיון|
+רָבַץ|to crouch|ʁa,ˈva,t͡s|raváts|רבץ|
+רָדָה|to subjugate|ʁa,ˈda,‹|radá|רדה|
+רָחֵל|ewe|ʁa.,ˈχe,l|rakhél|רחל|
+רָחוֹק|far, distant|ʁa,ˈχ,ɔ,k|rakhók|רחוק|
+רָפָא|to heal, cure|ʁa,ˈfa,‹|rafá|רפא|
+רָפָאֵל|Raphael|ʁa,fa,ˈ(ʔ)e,l|rafa'el|רפאל|
+רָץ|to run|ʁa,t͡s|rats|רץ|
+רָצַח|to murder|ʁa,ˈt͡sa,χ|ratzákh|רצח|
+רָצָה|to want|ʁa,ˈtsa,‹|ratsá|רצה|
+רָקִיעַ|sky, heavens|ʁa,ˈki,‹,a|rakía|רקיע|
+רָקַע|to stomp|ra,ˈka,–|raká|רקע|
+רֹאשׁ הַשָּׁנָה|Jewish New Year|ˌʁo,‹,ʃ, ,ha,ʃa,ˈna,‹|rosh-hashaná|ראש השנה|
+רֹאשׁ|head|ʁɔ,‹,ʃ|rōš
+רֹמַח|spear|ˈʁɔ,ma,χ|rómakh|רומח|
+רֹק|saliva|ʁo,k|roq|רוק|
 ר־א־ש||
 ר־ג־ע||
 ר־ו־ץ||
@@ -8902,25 +8902,25 @@ autoExpandExamples.he = `
 ר־ט־ב||
 ר־כ־ב||
 ר־ש־ם||
-ראה|to see|ʁa§ˈʔa§‹|ra'á|רָאָה
+ראה|to see|ʁa,ˈʔa,‹|ra'á|רָאָה
 ראובן||
 ראוי||
 ראות||
 ראי||
 ראיה||
-ראיון|interview|re§ʔa§j§ˈo§n|רֵאָיוֹן
+ראיון|interview|re,ʔa,j,ˈo,n|רֵאָיוֹן
 ראייה||
 ראם||
 ראקוניים||
 ראש הפין||
-ראש השנה|Jewish New Year|ˌʁo§‹§ʃ§ §ha§ʃa§ˈna§‹|rosh-hashaná|רֹאשׁ הַשָּׁנָה
+ראש השנה|Jewish New Year|ˌʁo,‹,ʃ, ,ha,ʃa,ˈna,‹|rosh-hashaná|רֹאשׁ הַשָּׁנָה
 ראש חודש||
 ראש ממשלה||
 ראש עיר||
 ראש עירייה||
-ראש|head; hemlock|ʁɔ§‹§ʃ|rosh|רֹאשׁ#רֹאשׁ
+ראש|head; hemlock|ʁɔ,‹,ʃ|rosh|רֹאשׁ#רֹאשׁ
 ראשון לציון||
-ראשון|first|ʁi§‹§ˈʃ§ɔ§n|rishón|רִאשׁוֹן
+ראשון|first|ʁi,‹,ˈʃ,ɔ,n|rishón|רִאשׁוֹן
 ראשונה||
 ראשוני||
 ראשות||
@@ -8947,18 +8947,18 @@ autoExpandExamples.he = `
 רבני||
 רבע||
 רבעון||
-רבץ|to crouch|ʁa§ˈva§t͡s|raváts|רָבַץ
-רבקה|Rebecca|ʁi§v§ˈka§‹|rivká|רִבְקָה
+רבץ|to crouch|ʁa,ˈva,t͡s|raváts|רָבַץ
+רבקה|Rebecca|ʁi,v,ˈka,‹|rivká|רִבְקָה
 רבשקה||
 רבש״ע||
 רגוע||
 רגיל||
 רגיש||
-רגל|foot, leg|ˈʁe§ɡe§l|régel|רֶגֶל
+רגל|foot, leg|ˈʁe,ɡe,l|régel|רֶגֶל
 רגע||
-רגש|emotion, feeling|ˈʁɛ§ɡɛ§ʃ|régesh|רֶגֶשׁ
+רגש|emotion, feeling|ˈʁɛ,ɡɛ,ʃ|régesh|רֶגֶשׁ
 רגשי||
-רדה|to subjugate|ʁa§ˈda§‹|radá|רָדָה
+רדה|to subjugate|ʁa,ˈda,‹|radá|רָדָה
 רדוד||
 רדום||
 רדיאטור||
@@ -8971,8 +8971,8 @@ autoExpandExamples.he = `
 רהוט||
 רהיט||
 רהיטות||
-רוֹמָנִית|Romanian (lang)|ʁ§ɔ§ma§ˈni§‹§t|romanít|רומנית|
-רוּחַ|wind, air|ˈʁ§u.§ax|rúakh|רוח|
+רוֹמָנִית|Romanian (lang)|ʁ,ɔ,ma,ˈni,‹,t|romanít|רומנית|
+רוּחַ|wind, air|ˈʁ,u.,ax|rúakh|רוח|
 רואה חשבון||
 רואה||
 רוב||
@@ -8986,8 +8986,8 @@ autoExpandExamples.he = `
 רודיום||
 רוהט||
 רוויה||
-רווק|bachelor|ra§w§ˈwaː§q|ravák|רַוָּק
-רווקה|bachelorette|ra§w.§waː§ˈqaː§‹|ravaká|רַוָּקָה
+רווק|bachelor|ra,w,ˈwaː,q|ravák|רַוָּק
+רווקה|bachelorette|ra,w.,waː,ˈqaː,‹|ravaká|רַוָּקָה
 רוזמרין||
 רוזנבלום||
 רוזנטל||
@@ -8995,7 +8995,7 @@ autoExpandExamples.he = `
 רוח הקדש||
 רוח קרב||
 רוח רפאים||
-רוח|wind, air|ˈʁ§u.§ax|rúakh|רוּחַ
+רוח|wind, air|ˈʁ,u.,ax|rúakh|רוּחַ
 רוחב||
 רוחה||
 רוחני||
@@ -9009,12 +9009,12 @@ autoExpandExamples.he = `
 רוכסן||
 רום||
 רומא||
-רומח|spear|ˈʁ§ɔ§ma§χ|rómakh|רֹמַח
+רומח|spear|ˈʁ,ɔ,ma,χ|rómakh|רֹמַח
 רומם||
 רומן||
 רומנוס||
 רומניה||
-רומנית|Romanian (lang)|ʁ§ɔ§ma§ˈni§‹§t|romanít|רוֹמָנִית
+רומנית|Romanian (lang)|ʁ,ɔ,ma,ˈni,‹,t|romanít|רוֹמָנִית
 רון||
 רונן||
 רוסי||
@@ -9028,7 +9028,7 @@ autoExpandExamples.he = `
 רופד||
 רוצות||||
 רוצים||||
-רוק|saliva|ʁ§o§k|roq|רֹק
+רוק|saliva|ʁ,o,k|roq|רֹק
 רוקה||
 רוקח||
 רוקחת||
@@ -9040,14 +9040,14 @@ autoExpandExamples.he = `
 רותם||
 רזה||
 רחב ידיים||
-רחב|wide|ʁa§ˈχa§v
+רחב|wide|ʁa,ˈχa,v
 רחבה||
 רחובות||
 רחום||
 רחוץ||
 רחוק מהעין, רחוק מהלב||
-רחוק|far, distant|ʁa§ˈχ§ɔ§k|rakhók|רָחוֹק
-רחל|ewe|ʁa.§ˈχe§l|rakhél|רָחֵל
+רחוק|far, distant|ʁa,ˈχ,ɔ,k|rakhók|רָחוֹק
+רחל|ewe|ʁa.,ˈχe,l|rakhél|רָחֵל
 רחם||
 רחמים||
 רחמנות||
@@ -9055,16 +9055,16 @@ autoExpandExamples.he = `
 רחץ||
 רחצה||
 רח׳|street (abbr.)||R'kh|רְחוֹב
-רטוב|wet|ʁa§ˈt§ɔ§v
+רטוב|wet|ʁa,ˈt,ɔ,v
 רטט||
 רטיבות||
 רטרואקטיבי||
 ריאד||
 ריאה||
-ריאיון|interview|re§‹§ʔa§j§o§n|re'ayon|רֵאָיוֹן
+ריאיון|interview|re,‹,ʔa,j,o,n|re'ayon|רֵאָיוֹן
 ריאליטי||
 ריב||
-ריבה|jam|ʁi.§‹§ˈba§‹|ribá|רִבָּה
+ריבה|jam|ʁi.,‹,ˈba,‹|ribá|רִבָּה
 ריבון||
 ריבוני||
 ריבוע||
@@ -9077,7 +9077,7 @@ autoExpandExamples.he = `
 ריהוט||
 ריהט||
 ריזלינג||
-ריח|odor, scent|ˈʁe.§‹§aχ|réakh|רֵיחַ
+ריח|odor, scent|ˈʁe.,‹,aχ|réakh|רֵיחַ
 ריחיים||
 ריחן||
 ריחף||
@@ -9087,17 +9087,17 @@ autoExpandExamples.he = `
 ריכוז||
 ריכז||
 רימה||
-רימון|pomegranate|ʁi§‹§ˈm§o§n|rimón|רִמּוֹן
+רימון|pomegranate|ʁi,‹,ˈm,o,n|rimón|רִמּוֹן
 רימונדה||
 רינה||
 ריס||
 ריסס||
 ריפא||
 ריפד||
-ריפוד|padding|ri§‹§ˈp§u§d|ripúd|רִפּוּד
+ריפוד|padding|ri,‹,ˈp,u,d|ripúd|רִפּוּד
 ריצד||
 ריצה||
-ריצ׳רץ׳|zip|ʁ§i§t͡ʃ§‹§ʁa§t͡ʃ§‹
+ריצ׳רץ׳|zip|ʁ,i,t͡ʃ,‹,ʁa,t͡ʃ,‹
 ריק||
 ריקבון||
 ריקוד||
@@ -9107,8 +9107,8 @@ autoExpandExamples.he = `
 רישיון||
 רישת||
 ריתך||
-רך|soft|ʁa§χ|rakh|רַךְ
-רכב|vehicle|ˈrɛ§χɛ§v|rékhev|רֶכֶב
+רך|soft|ʁa,χ|rakh|רַךְ
+רכב|vehicle|ˈrɛ,χɛ,v|rékhev|רֶכֶב
 רכבל||
 רכבת||
 רכוש||
@@ -9140,14 +9140,14 @@ autoExpandExamples.he = `
 רן||
 רסיס||
 רסק||
-רע|evil, trouble|ʁa§–|ra|רַע
+רע|evil, trouble|ʁa,–|ra|רַע
 רעב||
 רעד||
 רעה||
 רעואל||
 רעוע||
 רעידת אדמה||
-רעיון|idea, concept|ʁa§(.a)§ˈj§o§n|ra'ayon|רַעֲיוֹן
+רעיון|idea, concept|ʁa,(.a),ˈj,o,n|ra'ayon|רַעֲיוֹן
 רעל||
 רעם||
 רעמסס||
@@ -9159,8 +9159,8 @@ autoExpandExamples.he = `
 רעש||
 רעשן||
 רעשני||
-רפא|to heal, cure|ʁa§ˈfa§‹|rafá|רָפָא
-רפאל|Raphael|ʁa§fa§ˈ(ʔ)e§l|rafa'el|רָפָאֵל
+רפא|to heal, cure|ʁa,ˈfa,‹|rafá|רָפָא
+רפאל|Raphael|ʁa,fa,ˈ(ʔ)e,l|rafa'el|רָפָאֵל
 רפה||
 רפואה||
 רפואי||
@@ -9171,31 +9171,31 @@ autoExpandExamples.he = `
 רפי||
 רפסודה||
 רפת||
-רץ|to run|ʁa§t͡s|rats|רָץ
-רצה|to want|ʁa§ˈtsa§‹|ratsá|רָצָה
+רץ|to run|ʁa,t͡s|rats|רָץ
+רצה|to want|ʁa,ˈtsa,‹|ratsá|רָצָה
 רצוי||
 רצון טוב||
 רצון||
 רצועה||
 רצועת עזה||
 רצח עם||
-רצח|to murder|ʁa§ˈt͡sa§χ|ratzákh|רָצַח
+רצח|to murder|ʁa,ˈt͡sa,χ|ratzákh|רָצַח
 רציונל||
 רציני||
 רציף||
 רציתי||||
 רצפה||
-רצפט|recipe|ʁe.§ˈt͡se§p§t|retzépt|רֶצֶפְּט
+רצפט|recipe|ʁe.,ˈt͡se,p,t|retzépt|רֶצֶפְּט
 רק||
 רקד||
 רקדן||
 רקדנית||
-רקוב|rotten|ʁa§ˈk§u§v
+רקוב|rotten|ʁa,ˈk,u,v
 רקטה||
 רקטום||
 רקטלי||
-רקיע|sky, heavens|ʁa§ˈki§‹§a|rakía|רָקִיעַ
-רקע|to stomp|ra§ˈka§–|raká|רָקַע
+רקיע|sky, heavens|ʁa,ˈki,‹,a|rakía|רָקִיעַ
+רקע|to stomp|ra,ˈka,–|raká|רָקַע
 רקפת||
 רשב״י||
 רשות מחוקקת||
@@ -9218,87 +9218,87 @@ autoExpandExamples.he = `
 ר׳ג׳ר|Ghajar|
 ר״ח||
 ר״מ||
-שְׁאֵלָה|question|ʃe§(ʔ)e§ˈla§‹|sh'elá|שאלה|
-שְׁבוּעָה|oath|ʃ§v§u§ˈ(ʔ)a§‹|sh'vu'a|שבועה|
-שְׁחִיטָה|slaughter|ʃ§χi§‹§ˈta§‹|sh'khitá|שחיטה|
-שְׁכִינָה|dwelling, residing|ʃ§χi§‹§ˈna§‹|sh'khiná|שכינה|
-שְׁכוּנָה|neighbourhood|ʃ§χ§u§ˈna§‹|sh'khuná|שכונה|
-שְׁלֹמֹה|Solomon|ʃ§lo§ˈmo§‹|sh'lomó|שלמה|
-שְׁלוֹשָׁה|three|ʃ§l§o§ˈʃa§‹|sh'loshá|שלושה|
-שְׁמֵימִי|celestial|ʃ§me§j§ˈmi§‹|shmeymíy|שמימי|
-שְׁמוֹנָה|eight|ʃ§m§o.§ˈna§‹|sh'moná|שמונה|
-שְׁמוּאֵל|Samuel|ˈʃ§m§u.§e§l|sh'múel|שמואל|
-שְׁנִיצֶל|schnitzel|ˈʃ§ni§‹§t͡se§l|shnitsel|שניצל|
-שְׁנַיִם|two|ˈʃ§na§ji§m|sh'náyim|שניים|
-שְׁנַייִם|two|ˈʃ§na.§›§ji§m|sh'náyim|שניים|
-שְׁקִיעָה|sunset|ʃ§ki§‹§ˈ(ʕ)a§‹|shki'á|שקיעה
-שְׁקָלִים|shekels|sh§ˈka§li§‹§m|sh'kalím|שקלים
-שְׁרִיר|muscle|ʃ§ʁi§‹§ʁ|sh'rir|שריר|
-שְׂפָתַיִם|lips|s§fa§ˈta§ji§m|s'fatáyim|שפתיים|
-שֳׁרָשִׁים|roots|ʃo§ʁa§ˈʃi§‹§m
-שִׁבְעָה|seven|ʃi§v§ˈ(ʔ)a§‹|shiv'á|שבעה|
-שִׁבֹּלֶת|shibboleth|ʃi§ˈbo§le§t|shibólet|שיבולת|
-שִׁדּוּר חוֹזֵר|rerun (broadcasting)|ʃi§ˌd§u§ʁ§-§χ§o§ˈzɛ§ʁ|shidùr-khozér|שידור חוזר|
-שִׁדּוּר|broadcast|ʃi§ˈd§u§ʁ|shidúr|שידור|
-שִׁיר|song|ʃi§‹§ʁ|shir|שיר|
-שִׁישָּׁה|six|ʃi§‹§ˈʃa§‹|shishá|שישה|
-שִׁכְלוּל|improvement|ʃi§χ§ˈl§u§l|shikhlúl|שכלול|
-שִׁלְטוֹן|reign, rule|ʃi§l§ˈt§o§n|shiltón|שלטון|
-שִׁלְטוֹנִי|governmental|ʃi§l§t§o§ˈni§‹|shiltoní|שלטוני|
-שִׁפְשֵׁף|rub, chafe|ʃi§f§ˈʃe§f|shifshéf|שפשף|
-שִׁקֵּר|to lie|ʃi§ˈke§ʁ|shikér|שיקר|
-שִׂיחָה|conversation|si§‹§ˈχa§‹|sikhá|שיחה|
-שִׂנְאָה|hatred|si§n§ˈ(ʔ)a§‹|sin'á|שנאה|
-שֵׁם עֶצֶם|noun|ʃɛ§m§ §ˈɛ§tsɛ§m|she étsem|שם עצם|
-שֵׁם תּוֹאַר|adjective|ʃɛ§m§ §t§ɔ§(ʔ)a§ʁ|shem to'ar|שם תואר|
-שֵׁם|(given) name|ʃɛ§m|shém|שם
-שֵׁמַע|audio|ˈʃe§ma§–|shéma|שמע|
-שֵׁרוּת|service|ʃe§ˈʁ§u§t|sheirút|שירות|
-שֵׁשׁ|six (f)|ʃe§ʃ|shésh|שש|
-שֶׁבַע|seven|ˈʃe.§va§–|shéva|שבע|
-שֶׁדֶר|dispatch|ˈʃɛ§dɛ§ʁ|shéder|שדר|
-שֶׁטַח|territory|ˈʃɛ.§ta§χ|shétakh|שטח|
-שֶׁלֶג|snow|ˈʃe§le§ɡ|shéleg|שלג|
-שֶׁמֶן|oil|ˈʃe.§me§n|shémen|שמן|
-שֶׁמֶשׁ|sun|ˈʃe§me§ʃ|shémesh|שמש|
-שֶׁקֶל חָדָשׁ|new shekel|ˈʃɛ§kɛ§l§ §χa§ˈda§ʃ|shékel khadásh|שקל חדש
-שֶׁקֶל|shekel|ˈʃɛ§kɛ§l|shékel|שקל
-שֶׁקֶר|lie, falsehood|ˈʃe§ke§ʁ|shéker|שקר|
-שַׁבָּת|Sabbath|ʃa§ˈba§t|shabát|שבת|
-שַׁדְרָן|presenter|ʃa§d§ˈʁa§n|shadrán|שדרן|
-שַׁחְמָט|chess|ʃa§χ.§ˈma§t|shakhmát|שחמט|
-שַׁמֶּנֶת|cream|ʃa§ˈmɛ.§nɛ§t|shaménet|שמנת|
-שַׁקְרָן|liar|ʃa§k§ˈʁa§n|shakrán|שקרן|
-שַׂעֲרָה|hair|sa.§ʔa§ˈʁa§‹|sa'ará|שערה|
-שַׂק|sack|sa§k|sak|שק|
-שָׁאַל|to ask|ʃa§ʔa§l|sha'ál|שאל
-שָׁאוּל|borrowed|ʃa.§ˈ(ʔ)§u§l|sha'úl|שאול|
-שָׁבוּעַ|week|ʃa§ˈv§u§a(ʕ)|shavúa|שבוע|
-שָׁבוּר|broken|ʃa§ˈv§u§ʁ|shavúr|שבור|
-שָׁזַף|to tan|ʃa§ˈza§f|shazáf|שזף|
-שָׁט|to drift|ʃa§t|shat|שט|
-שָׁכַח|to forget|ʃa§ˈχa§χ|shakhákh|שכח|
-שָׁלַף|to pull out|ʃa§ˈla§f|shaláf|שלף|
-שָׁלוֹם עֲלֵיכֶם|Greetings!|ʃa§ˈl§o§m§ §a§le§‹§ˈχɛ§m|shalóm 'alekhém|שלום עליכם|
-שָׁלוֹם|peace|ʃa§ˈl§o§m|shalóm|שלום|
-שָׁלוּף|drawn (weapon)|ʃa§ˈl§u§f|shalúf|שלוף|
-שָׁם|to assess|ʃa§m|shám
-שָׁמַיִם|sky|ʃa§ˈma§ji§m|shamámayin|שמים|
-שָׁנָה|year; to repeat|ʃa§ˈna§‹|shaná|שנה
-שָׁעָה|hour|ʃa§ˈ(ʔ)a§‹|sha'á|שעה|
-שָׁפְכָה|urethra|ʃɔ§f§ˈχa§‹|shofkhá|שופכה|
-שָׁרָב|heat wave|ʃa§ˈʁa§v|sharáv|שרב|
-שָׁרָךְ|fern|ʃa§ˈʁa§χ|sharákh|שרך|
-שָׁתַל|to plant|ʃa§ˈta§l|shatál|שתל|
-שָׁתָה|to drink|ʃa§ˈta§‹|shatá|שתה|
-שָׂדֶה|field|sa§ˈde§‹|sadé|שדה|
-שָׂחַק|to laugh|sa§ˈχa§k|sakháq|שחק|
-שָׂם|to put, turn on|sa§m|sám
-שָׂנֵא|to hate|sa§ˈne§‹|sané|שנא|
-שָׂפָם|mustache|sa§ˈfa§m|safám|שפם|
-שֹׁבֶל|trail, wake|ʃo§ˈve§l|shovél|שובל|
-שֹׁחַד|bribe|ˈʃo§xa§d|shókhad|שוחד|
-שֹׁרֶשׁ|root|ˈʃo§ʁɛ§ʃ|shoresh|שורש|
+שְׁאֵלָה|question|ʃe,(ʔ)e,ˈla,‹|sh'elá|שאלה|
+שְׁבוּעָה|oath|ʃ,v,u,ˈ(ʔ)a,‹|sh'vu'a|שבועה|
+שְׁחִיטָה|slaughter|ʃ,χi,‹,ˈta,‹|sh'khitá|שחיטה|
+שְׁכִינָה|dwelling, residing|ʃ,χi,‹,ˈna,‹|sh'khiná|שכינה|
+שְׁכוּנָה|neighbourhood|ʃ,χ,u,ˈna,‹|sh'khuná|שכונה|
+שְׁלֹמֹה|Solomon|ʃ,lo,ˈmo,‹|sh'lomó|שלמה|
+שְׁלוֹשָׁה|three|ʃ,l,o,ˈʃa,‹|sh'loshá|שלושה|
+שְׁמֵימִי|celestial|ʃ,me,j,ˈmi,‹|shmeymíy|שמימי|
+שְׁמוֹנָה|eight|ʃ,m,o.,ˈna,‹|sh'moná|שמונה|
+שְׁמוּאֵל|Samuel|ˈʃ,m,u.,e,l|sh'múel|שמואל|
+שְׁנִיצֶל|schnitzel|ˈʃ,ni,‹,t͡se,l|shnitsel|שניצל|
+שְׁנַיִם|two|ˈʃ,na,ji,m|sh'náyim|שניים|
+שְׁנַייִם|two|ˈʃ,na.,›,ji,m|sh'náyim|שניים|
+שְׁקִיעָה|sunset|ʃ,ki,‹,ˈ(ʕ)a,‹|shki'á|שקיעה
+שְׁקָלִים|shekels|sh,ˈka,li,‹,m|sh'kalím|שקלים
+שְׁרִיר|muscle|ʃ,ʁi,‹,ʁ|sh'rir|שריר|
+שְׂפָתַיִם|lips|s,fa,ˈta,ji,m|s'fatáyim|שפתיים|
+שֳׁרָשִׁים|roots|ʃo,ʁa,ˈʃi,‹,m
+שִׁבְעָה|seven|ʃi,v,ˈ(ʔ)a,‹|shiv'á|שבעה|
+שִׁבֹּלֶת|shibboleth|ʃi,ˈbo,le,t|shibólet|שיבולת|
+שִׁדּוּר חוֹזֵר|rerun (broadcasting)|ʃi,ˌd,u,ʁ,-,χ,o,ˈzɛ,ʁ|shidùr-khozér|שידור חוזר|
+שִׁדּוּר|broadcast|ʃi,ˈd,u,ʁ|shidúr|שידור|
+שִׁיר|song|ʃi,‹,ʁ|shir|שיר|
+שִׁישָּׁה|six|ʃi,‹,ˈʃa,‹|shishá|שישה|
+שִׁכְלוּל|improvement|ʃi,χ,ˈl,u,l|shikhlúl|שכלול|
+שִׁלְטוֹן|reign, rule|ʃi,l,ˈt,o,n|shiltón|שלטון|
+שִׁלְטוֹנִי|governmental|ʃi,l,t,o,ˈni,‹|shiltoní|שלטוני|
+שִׁפְשֵׁף|rub, chafe|ʃi,f,ˈʃe,f|shifshéf|שפשף|
+שִׁקֵּר|to lie|ʃi,ˈke,ʁ|shikér|שיקר|
+שִׂיחָה|conversation|si,‹,ˈχa,‹|sikhá|שיחה|
+שִׂנְאָה|hatred|si,n,ˈ(ʔ)a,‹|sin'á|שנאה|
+שֵׁם עֶצֶם|noun|ʃɛ,m, ,ˈɛ,tsɛ,m|she étsem|שם עצם|
+שֵׁם תּוֹאַר|adjective|ʃɛ,m, ,t,ɔ,(ʔ)a,ʁ|shem to'ar|שם תואר|
+שֵׁם|(given) name|ʃɛ,m|shém|שם
+שֵׁמַע|audio|ˈʃe,ma,–|shéma|שמע|
+שֵׁרוּת|service|ʃe,ˈʁ,u,t|sheirút|שירות|
+שֵׁשׁ|six (f)|ʃe,ʃ|shésh|שש|
+שֶׁבַע|seven|ˈʃe.,va,–|shéva|שבע|
+שֶׁדֶר|dispatch|ˈʃɛ,dɛ,ʁ|shéder|שדר|
+שֶׁטַח|territory|ˈʃɛ.,ta,χ|shétakh|שטח|
+שֶׁלֶג|snow|ˈʃe,le,ɡ|shéleg|שלג|
+שֶׁמֶן|oil|ˈʃe.,me,n|shémen|שמן|
+שֶׁמֶשׁ|sun|ˈʃe,me,ʃ|shémesh|שמש|
+שֶׁקֶל חָדָשׁ|new shekel|ˈʃɛ,kɛ,l, ,χa,ˈda,ʃ|shékel khadásh|שקל חדש
+שֶׁקֶל|shekel|ˈʃɛ,kɛ,l|shékel|שקל
+שֶׁקֶר|lie, falsehood|ˈʃe,ke,ʁ|shéker|שקר|
+שַׁבָּת|Sabbath|ʃa,ˈba,t|shabát|שבת|
+שַׁדְרָן|presenter|ʃa,d,ˈʁa,n|shadrán|שדרן|
+שַׁחְמָט|chess|ʃa,χ.,ˈma,t|shakhmát|שחמט|
+שַׁמֶּנֶת|cream|ʃa,ˈmɛ.,nɛ,t|shaménet|שמנת|
+שַׁקְרָן|liar|ʃa,k,ˈʁa,n|shakrán|שקרן|
+שַׂעֲרָה|hair|sa.,ʔa,ˈʁa,‹|sa'ará|שערה|
+שַׂק|sack|sa,k|sak|שק|
+שָׁאַל|to ask|ʃa,ʔa,l|sha'ál|שאל
+שָׁאוּל|borrowed|ʃa.,ˈ(ʔ),u,l|sha'úl|שאול|
+שָׁבוּעַ|week|ʃa,ˈv,u,a(ʕ)|shavúa|שבוע|
+שָׁבוּר|broken|ʃa,ˈv,u,ʁ|shavúr|שבור|
+שָׁזַף|to tan|ʃa,ˈza,f|shazáf|שזף|
+שָׁט|to drift|ʃa,t|shat|שט|
+שָׁכַח|to forget|ʃa,ˈχa,χ|shakhákh|שכח|
+שָׁלַף|to pull out|ʃa,ˈla,f|shaláf|שלף|
+שָׁלוֹם עֲלֵיכֶם|Greetings!|ʃa,ˈl,o,m, ,a,le,‹,ˈχɛ,m|shalóm 'alekhém|שלום עליכם|
+שָׁלוֹם|peace|ʃa,ˈl,o,m|shalóm|שלום|
+שָׁלוּף|drawn (weapon)|ʃa,ˈl,u,f|shalúf|שלוף|
+שָׁם|to assess|ʃa,m|shám
+שָׁמַיִם|sky|ʃa,ˈma,ji,m|shamámayin|שמים|
+שָׁנָה|year; to repeat|ʃa,ˈna,‹|shaná|שנה
+שָׁעָה|hour|ʃa,ˈ(ʔ)a,‹|sha'á|שעה|
+שָׁפְכָה|urethra|ʃɔ,f,ˈχa,‹|shofkhá|שופכה|
+שָׁרָב|heat wave|ʃa,ˈʁa,v|sharáv|שרב|
+שָׁרָךְ|fern|ʃa,ˈʁa,χ|sharákh|שרך|
+שָׁתַל|to plant|ʃa,ˈta,l|shatál|שתל|
+שָׁתָה|to drink|ʃa,ˈta,‹|shatá|שתה|
+שָׂדֶה|field|sa,ˈde,‹|sadé|שדה|
+שָׂחַק|to laugh|sa,ˈχa,k|sakháq|שחק|
+שָׂם|to put, turn on|sa,m|sám
+שָׂנֵא|to hate|sa,ˈne,‹|sané|שנא|
+שָׂפָם|mustache|sa,ˈfa,m|safám|שפם|
+שֹׁבֶל|trail, wake|ʃo,ˈve,l|shovél|שובל|
+שֹׁחַד|bribe|ˈʃo,xa,d|shókhad|שוחד|
+שֹׁרֶשׁ|root|ˈʃo,ʁɛ,ʃ|shoresh|שורש|
 ש־ב־ע||
 ש־ב־ת||
 ש־ו־ט||
@@ -9310,20 +9310,20 @@ autoExpandExamples.he = `
 ש־מ־ר־ט־ף||
 ש־ר־ש||
 ש־ת־ן||
-שׁוֹפְכָן|ureter|ʃ§ɔ§f§ˈχa§n|shofkhán|שופכן|
-שׁוֹפּ|shop|ʃ§o§p|shop|שופ
-שׁוֹקוֹלָד|chocolate|ʃ§o§k§o§ˈla§d|shokolád|שוקולד|
+שׁוֹפְכָן|ureter|ʃ,ɔ,f,ˈχa,n|shofkhán|שופכן|
+שׁוֹפּ|shop|ʃ,o,p|shop|שופ
+שׁוֹקוֹלָד|chocolate|ʃ,o,k,o,ˈla,d|shokolád|שוקולד|
 שׁוּב|again|ʃuv|shúv|שוב|
 שׁוּף|smooth, polished||shúf|שוף
-שׁוׄבֶרֶת קֶרַח|icebreaker|ʃ§o§ˈvɛ§ʁɛ§t§ §ˈkɛ§ʁa§χ|shovéret kérakh|שוברת קרח|
+שׁוׄבֶרֶת קֶרַח|icebreaker|ʃ,o,ˈvɛ,ʁɛ,t, ,ˈkɛ,ʁa,χ|shovéret kérakh|שוברת קרח|
 שׁעונים|watches||ʃoː'nim|שְׁעוֹנִים
-שׂוֹנֵא|hater, enemy|s§o§ˈne§‹|soné|שונא|
-שאול|borrowed|ʃa.§ˈ(ʔ)§u§l|sha'úl|שָׁאוּל
+שׂוֹנֵא|hater, enemy|s,o,ˈne,‹|soné|שונא|
+שאול|borrowed|ʃa.,ˈ(ʔ),u,l|sha'úl|שָׁאוּל
 שאיבת שומן||
 שאל את עצמו||
 שאל בני ונען||
-שאל|to ask|ʃa§ʔa§l|sha'ál|שָׁאַל
-שאלה|question|ʃe§(ʔ)e§ˈla§‹|sh'elá|שְׁאֵלָה
+שאל|to ask|ʃa,ʔa,l|sha'ál|שָׁאַל
+שאלה|question|ʃe,(ʔ)e,ˈla,‹|sh'elá|שְׁאֵלָה
 שאנגחאי||
 שאף||
 שאר||
@@ -9335,12 +9335,12 @@ autoExpandExamples.he = `
 שבה||
 שבוי||
 שבוע טוב||
-שבוע|week|ʃa§ˈv§u§a(ʕ)|shavúa|שָׁבוּעַ
-שבועה|oath|ʃ§v§u§ˈ(ʔ)a§‹|sh'vu'a|שְׁבוּעָה
+שבוע|week|ʃa,ˈv,u,a(ʕ)|shavúa|שָׁבוּעַ
+שבועה|oath|ʃ,v,u,ˈ(ʔ)a,‹|sh'vu'a|שְׁבוּעָה
 שבועון||
 שבועות||
 שבור לב||
-שבור|broken|ʃa§ˈv§u§ʁ|shavúr|שָׁבוּר
+שבור|broken|ʃa,ˈv,u,ʁ|shavúr|שָׁבוּר
 שבח||
 שבט||
 שבטבט||
@@ -9357,9 +9357,9 @@ autoExpandExamples.he = `
 שבלול||
 שבלת||
 שבע ברכות||
-שבע|seven|ˈʃe.§va§–|shéva|שֶׁבַע
+שבע|seven|ˈʃe.,va,–|shéva|שֶׁבַע
 שבעה עשר||
-שבעה|seven|ʃi§v§ˈ(ʔ)a§‹|shiv'á|שִׁבְעָה
+שבעה|seven|ʃi,v,ˈ(ʔ)a,‹|shiv'á|שִׁבְעָה
 שבעים||
 שבעת המינים||
 שבעת פלאי תבל||
@@ -9369,7 +9369,7 @@ autoExpandExamples.he = `
 שבר||
 שברים||
 שבת שלום||
-שבת|Sabbath|ʃa§ˈba§t|shabát|שַׁבָּת
+שבת|Sabbath|ʃa,ˈba,t|shabát|שַׁבָּת
 שבתאי||
 שבתון||
 שגוי||
@@ -9379,16 +9379,16 @@ autoExpandExamples.he = `
 שגרה||
 שגריר||
 שגרירות||
-שד|breast|ˈʃa§d
+שד|breast|ˈʃa,d
 שדה לבן||
 שדה תעופה||
-שדה|field|sa§ˈde§‹|sadé|שָׂדֶה
+שדה|field|sa,ˈde,‹|sadé|שָׂדֶה
 שדי||
 שדכן||
-שדר|dispatch|ˈʃɛ§dɛ§ʁ|shéder|שֶׁדֶר
+שדר|dispatch|ˈʃɛ,dɛ,ʁ|shéder|שֶׁדֶר
 שדרה||
 שדרות||
-שדרן|presenter|ʃa§d§ˈʁa§n|shadrán|שַׁדְרָן
+שדרן|presenter|ʃa,d,ˈʁa,n|shadrán|שַׁדְרָן
 שד׳||
 שה||
 שהד||
@@ -9396,12 +9396,12 @@ autoExpandExamples.he = `
 שהם||
 שואב אבק||
 שואה||
-שוב|again|ʃ§u§v|shúv|שׁוּב
+שוב|again|ʃ,u,v|shúv|שׁוּב
 שובבות||
 שוביניזם||
-שובל|trail, wake|ʃ§o§ˈve§l|shovél|שֹׁבֶל
+שובל|trail, wake|ʃ,o,ˈve,l|shovél|שֹׁבֶל
 שוברות קרח||||
-שוברת קרח|icebreaker|ʃ§o§ˈvɛ§ʁɛ§t§ §ˈkɛ§ʁa§χ|shovéret kérakh|שׁוׄבֶרֶת קֶרַח‎
+שוברת קרח|icebreaker|ʃ,o,ˈvɛ,ʁɛ,t, ,ˈkɛ,ʁa,χ|shovéret kérakh|שׁוׄבֶרֶת קֶרַח‎
 שוד||
 שודד ים||
 שודד||
@@ -9410,7 +9410,7 @@ autoExpandExamples.he = `
 שוודיה||
 שווה||
 שווייץ||
-שוחד|bribe|ˈʃ§o§xa§d|shókhad|שֹׁחַד
+שוחד|bribe|ˈʃ,o,xa,d|shókhad|שֹׁחַד
 שוחח||
 שוחט||
 שוחרר||
@@ -9426,31 +9426,31 @@ autoExpandExamples.he = `
 שולמן||
 שום דבר||
 שום||
-שומן|fat (noun)|ʃ§u§ˈma§n
+שומן|fat (noun)|ʃ,u,ˈma,n
 שומר ראש||
 שומר שבת||
 שומר||
 שומרון||
 שומרוני||
 שומשום||
-שונא|hater, enemy|s§o§ˈne§‹|soné|שׂוֹנֵא
+שונא|hater, enemy|s,o,ˈne,‹|soné|שׂוֹנֵא
 שונה||
 שוני||
 שועל||
 שוף|smooth, polished||shúf|שׁוּף
-שופ|shop|ʃ§o§p|shop|שׁוֹפּ
+שופ|shop|ʃ,o,p|shop|שׁוֹפּ
 שופט||
 שופטים||
-שופכה|urethra|ʃ§ɔ§f§ˈχa§‹|shofkhá|שָׁפְכָה
-שופכן|ureter|ʃ§ɔ§f§ˈχa§n|shofkhán|שׁוֹפְכָן
+שופכה|urethra|ʃ,ɔ,f,ˈχa,‹|shofkhá|שָׁפְכָה
+שופכן|ureter|ʃ,ɔ,f,ˈχa,n|shofkhán|שׁוֹפְכָן
 שופר||
 שוק שחור||
 שוק||
-שוקולד|chocolate|ʃ§o§k§o§ˈla§d|shokolád|שׁוֹקוֹלָד
+שוקולד|chocolate|ʃ,o,k,o,ˈla,d|shokolád|שׁוֹקוֹלָד
 שור||
 שורה||
 שורוק||
-שורש|root|ˈʃ§o§ʁɛ§ʃ|shoresh|שֹׁרֶשׁ
+שורש|root|ˈʃ,o,ʁɛ,ʃ|shoresh|שֹׁרֶשׁ
 שורשי||
 שורשיות||
 שורת הדין||
@@ -9461,24 +9461,24 @@ autoExpandExamples.he = `
 שו״ב||
 שזיף||
 שזף עין||
-שזף|to tan|ʃa§ˈza§f|shazáf|שָׁזַף
-שחה|to swim|sa§ˈχa§‹
+שזף|to tan|ʃa,ˈza,f|shazáf|שָׁזַף
+שחה|to swim|sa,ˈχa,‹
 שחוט||
 שחום||
-שחור|black|ʃa§ˈχ§ɔ§ʁ
+שחור|black|ʃa,ˈχ,ɔ,ʁ
 שחזור||
 שחט||
 שחיה||
-שחיטה|slaughter|ʃ§χi§‹§ˈta§‹|sh'khitá|שְׁחִיטָה
+שחיטה|slaughter|ʃ,χi,‹,ˈta,‹|sh'khitá|שְׁחִיטָה
 שחיין||
 שחין||
 שחיתות||
 שחלה||
 שחמחם||
-שחמט|chess|ʃa§χ.§ˈma§t|shakhmát|שַׁחְמָט
+שחמט|chess|ʃa,χ.,ˈma,t|shakhmát|שַׁחְמָט
 שחף||
 שחפת||
-שחק|to laugh|sa§ˈχa§k|sakháq|שָׂחַק
+שחק|to laugh|sa,ˈχa,k|sakháq|שָׂחַק
 שחקים||
 שחקן||
 שחקנית||
@@ -9488,10 +9488,10 @@ autoExpandExamples.he = `
 שחרית||
 שחרר||
 שחת||
-שט|to drift|ʃa§t|shat|שָׁט
+שט|to drift|ʃa,t|shat|שָׁט
 שטויות||
 שטוף||
-שטח|territory|ˈʃɛ.§ta§χ|shétakh|שֶׁטַח
+שטח|territory|ˈʃɛ.,ta,χ|shétakh|שֶׁטַח
 שטיח אדום||
 שטיח||
 שטיינברג||
@@ -9499,14 +9499,14 @@ autoExpandExamples.he = `
 שטינקר||
 שטיפת מוח||
 שטן||
-שטף|to wash|ʃa§ˈta§f
+שטף|to wash|ʃa,ˈta,f
 שטפון||
 שטר||
 שטרודל||
 שי||
 שיא||
 שיבולת שועל||
-שיבולת|shibboleth|ʃi§‹§ˈb§o§le§t|shibólet|שִׁבֹּלֶת
+שיבולת|shibboleth|ʃi,‹,ˈb,o,le,t|shibólet|שִׁבֹּלֶת
 שיבח||
 שיבט||
 שיבלת||
@@ -9515,8 +9515,8 @@ autoExpandExamples.he = `
 שיגר||
 שידה||
 שידוך||
-שידור חוזר|rerun (broadcasting)|ʃi§‹§ˌd§u§ʁ§-§χ§o§ˈzɛ§ʁ|shidùr-khozér|שִׁדּוּר חוֹזֵר
-שידור|broadcast|ʃi§‹§ˈd§u§ʁ|shidúr|שִׁדּוּר
+שידור חוזר|rerun (broadcasting)|ʃi,‹,ˌd,u,ʁ,-,χ,o,ˈzɛ,ʁ|shidùr-khozér|שִׁדּוּר חוֹזֵר
+שידור|broadcast|ʃi,‹,ˈd,u,ʁ|shidúr|שִׁדּוּר
 שידל||
 שידר||
 שידרוג||
@@ -9525,7 +9525,7 @@ autoExpandExamples.he = `
 שיווק||
 שיח||
 שיחד||
-שיחה|conversation|si§‹§ˈχa§‹|sikhá|שִׂיחָה
+שיחה|conversation|si,‹,ˈχa,‹|sikhá|שִׂיחָה
 שיחק||
 שיטה||
 שיטח||
@@ -9566,16 +9566,16 @@ autoExpandExamples.he = `
 שיפור||
 שיפר||
 שיקמה||
-שיקר|to lie|ʃi§‹§ˈke§ʁ|shikér|שִׁקֵּר
+שיקר|to lie|ʃi,‹,ˈke,ʁ|shikér|שִׁקֵּר
 שיר ערש||
-שיר|song|ʃi§‹§ʁ|shir|שִׁיר
+שיר|song|ʃi,‹,ʁ|shir|שִׁיר
 שיראז||
 שירה||
-שירות|service|ʃe§‹§ˈʁ§u§t|sheirút|שֵׁרוּת
+שירות|service|ʃe,‹,ˈʁ,u,t|sheirút|שֵׁרוּת
 שירותים||
 שירת||
 שישה עשר||
-שישה|six|ʃi§‹§ˈʃa§‹|shishá|שִׁישָּׁה
+שישה|six|ʃi,‹,ˈʃa,‹|shishá|שִׁישָּׁה
 שישי||
 שישים||
 שישק||
@@ -9584,16 +9584,16 @@ autoExpandExamples.he = `
 שיתוק מוחי||
 שיתף||
 שיתק||
-שכב|to lie down|ʃa§ˈχa§v|shakháv|שָׁכַב
+שכב|to lie down|ʃa,ˈχa,v|shakháv|שָׁכַב
 שכבה||
 שכווי||
-שכונה|neighbourhood|ʃ§χ§u§ˈna§‹|sh'khuná|שְׁכוּנָה
-שכח|to forget|ʃa§ˈχa§χ|shakhákh|שָׁכַח
+שכונה|neighbourhood|ʃ,χ,u,ˈna,‹|sh'khuná|שְׁכוּנָה
+שכח|to forget|ʃa,ˈχa,χ|shakhákh|שָׁכַח
 שכחן||
 שכין||
-שכינה|dwelling, residing|ʃ§χi§‹§ˈna§‹|sh'khiná|שְׁכִינָה
+שכינה|dwelling, residing|ʃ,χi,‹,ˈna,‹|sh'khiná|שְׁכִינָה
 שכל||
-שכלול|improvement|ʃi§χ§ˈl§u§l|shikhlúl|שִׁכְלוּל
+שכלול|improvement|ʃi,χ,ˈl,u,l|shikhlúl|שִׁכְלוּל
 שכלתנות||
 שכם||
 שכן||
@@ -9603,7 +9603,7 @@ autoExpandExamples.he = `
 של||
 של־||
 שלב||
-שלג|snow|ˈʃe§le§ɡ|shéleg|שֶׁלֶג
+שלג|snow|ˈʃe,le,ɡ|shéleg|שֶׁלֶג
 שלגיה||
 שלד||
 שלדג||
@@ -9611,22 +9611,22 @@ autoExpandExamples.he = `
 שלו||
 שלווה||
 שלולית||
-שלום עליכם|Greetings!|ʃa§ˈl§o§m§ §a§le§‹§ˈχɛ§m|shalóm 'alekhém|שָׁלוֹם עֲלֵיכֶם
-שלום|peace|ʃa§ˈl§o§m|shalóm|שָׁלוֹם
+שלום עליכם|Greetings!|ʃa,ˈl,o,m, ,a,le,‹,ˈχɛ,m|shalóm 'alekhém|שָׁלוֹם עֲלֵיכֶם
+שלום|peace|ʃa,ˈl,o,m|shalóm|שָׁלוֹם
 שלומיאל||
-שלוף|drawn (weapon)|ʃa§ˈl§u§f|shalúf|שָׁלוּף
+שלוף|drawn (weapon)|ʃa,ˈl,u,f|shalúf|שָׁלוּף
 שלוק||
-שלוש|three|ʃa§ˈl§ɔ§ʃ
+שלוש|three|ʃa,ˈl,ɔ,ʃ
 שלושה עשר||
-שלושה|three|ʃ§l§o§ˈʃa§‹|sh'loshá|שְׁלוֹשָׁה
+שלושה|three|ʃ,l,o,ˈʃa,‹|sh'loshá|שְׁלוֹשָׁה
 שלושים||
 שלושת||
 שלח||
 שלחן||
 שלט רחוק||
 שלט||
-שלטון|reign, rule|ʃi§l§ˈt§o§n|shiltón|שִׁלְטוֹן
-שלטוני|governmental|ʃi§l§t§o§ˈni§‹|shiltoní|שִׁלְטוֹנִי
+שלטון|reign, rule|ʃi,l,ˈt,o,n|shiltón|שִׁלְטוֹן
+שלטוני|governmental|ʃi,l,t,o,ˈni,‹|shiltoní|שִׁלְטוֹנִי
 שליח||
 שליחה||
 שליט||
@@ -9637,9 +9637,9 @@ autoExpandExamples.he = `
 שלישייה||
 שלך||
 שלם||
-שלמה|Solomon|ʃ§lo§ˈmo§‹|sh'lomó|שְׁלֹמֹה
+שלמה|Solomon|ʃ,lo,ˈmo,‹|sh'lomó|שְׁלֹמֹה
 שלמות||
-שלף|to pull out|ʃa§ˈla§f|shaláf|שָׁלַף
+שלף|to pull out|ʃa,ˈla,f|shaláf|שָׁלַף
 שלפוחית||
 שלש||
 שלשה||
@@ -9654,19 +9654,19 @@ autoExpandExamples.he = `
 שם משפחה||
 שם משתמש||
 שם עט||
-שם עצם|noun|ʃɛ§m§ §ˈɛ§tsɛ§m|she étsem|שֵׁם עֶצֶם
+שם עצם|noun|ʃɛ,m, ,ˈɛ,tsɛ,m|she étsem|שֵׁם עֶצֶם
 שם פעולה||
 שם פרטי||
-שם תואר|adjective|ʃɛ§m§ §t§ɔ§(ʔ)a§ʁ|shem to'ar|שֵׁם תּוֹאַר‎ 
-שם|name|ʃɛ§m|shém|שֵׁם
-שמאל|left|ˈs§mɔ§‹§l|s'mól|שְׂמֹאל
+שם תואר|adjective|ʃɛ,m, ,t,ɔ,(ʔ)a,ʁ|shem to'ar|שֵׁם תּוֹאַר‎ 
+שם|name|ʃɛ,m|shém|שֵׁם
+שמאל|left|ˈs,mɔ,‹,l|s'mól|שְׂמֹאל
 שמאלי||
 שמאלני||
 שמה||
-שמואל|Samuel|ˈʃ§m§u.§e§l|sh'múel|שְׁמוּאֵל
+שמואל|Samuel|ˈʃ,m,u.,e,l|sh'múel|שְׁמוּאֵל
 שמונה עשר||
 שמונה עשרה||
-שמונה|eight|ʃ§m§o.§ˈna§‹|sh'moná|שְׁמוֹנָה
+שמונה|eight|ʃ,m,o.,ˈna,‹|sh'moná|שְׁמוֹנָה
 שמונים||
 שמונת||
 שמועה רחוקה||
@@ -9681,8 +9681,8 @@ autoExpandExamples.he = `
 שמיטה||
 שמיים||
 שמיכה||
-שמים|sky|ʃa§ˈma§ji§m|shamámayin|שָׁמַיִם
-שמימי|celestial|ʃ§me§j§ˈmi§‹|shmeymíy|שְׁמֵימִי
+שמים|sky|ʃa,ˈma,ji,m|shamámayin|שָׁמַיִם
+שמימי|celestial|ʃ,me,j,ˈmi,‹|shmeymíy|שְׁמֵימִי
 שמיני עצרת||
 שמיני||
 שמיר||
@@ -9691,10 +9691,10 @@ autoExpandExamples.he = `
 שמלה||
 שממה||
 שממית||
-שמן|oil|ˈʃe.§me§n|shémen|שֶׁמֶן
+שמן|oil|ˈʃe.,me,n|shémen|שֶׁמֶן
 שמנמן||
-שמנת|cream|ʃa§ˈmɛ.§nɛ§t|shaménet|שַׁמֶּנֶת
-שמע|audio|ˈʃe§ma§–|shéma|שֵׁמַע
+שמנת|cream|ʃa,ˈmɛ.,nɛ,t|shaménet|שַׁמֶּנֶת
+שמע|audio|ˈʃe,ma,–|shéma|שֵׁמַע
 שמעון||
 שמעי||
 שמעיה||
@@ -9707,7 +9707,7 @@ autoExpandExamples.he = `
 שמרים||
 שמרית||
 שמרן||
-שמש|sun|ˈʃe§me§ʃ|shémesh|שֶׁמֶשׁ
+שמש|sun|ˈʃe,me,ʃ|shémesh|שֶׁמֶשׁ
 שמשה||
 שמשום||
 שמשון||
@@ -9715,12 +9715,12 @@ autoExpandExamples.he = `
 שן בינה||
 שן|tooth|ˈʃɛn
 שנ"צ||
-שנא|to hate|sa§ˈne§‹|sané|שָׂנֵא
-שנאה|hatred|si§n§ˈ(ʔ)a§‹|sin'á|שִׂנְאָה
+שנא|to hate|sa,ˈne,‹|sané|שָׂנֵא
+שנאה|hatred|si,n,ˈ(ʔ)a,‹|sin'á|שִׂנְאָה
 שנאי||
 שנבוב||
 שנה טובה||
-שנה|year; to repeat|ʃa§ˈna§‹|shaná|שָׁנָה
+שנה|year; to repeat|ʃa,ˈna,‹|shaná|שָׁנָה
 שנהב||
 שנוא||
 שנוי||
@@ -9729,10 +9729,10 @@ autoExpandExamples.he = `
 שניה||
 שניוני||
 שנייה||
-שניים|two|ˈʃ§na.§›§ji§m|sh'náyim|שְׁנַייִם
+שניים|two|ˈʃ,na.,›,ji,m|sh'náyim|שְׁנַייִם
 שנים עשר||
-שנים|two|ˈʃ§na§ji§m
-שניצל|schnitzel|ˈʃ§ni§‹§t͡se§l|shnitsel|שְׁנִיצֶל
+שנים|two|ˈʃ,na,ji,m
+שניצל|schnitzel|ˈʃ,ni,‹,t͡se,l|shnitsel|שְׁנִיצֶל
 שנער||
 שנקל||
 שנת אור||
@@ -9741,7 +9741,7 @@ autoExpandExamples.he = `
 שסק||
 שעבוד||
 שעבר||
-שעה|hour|ʃa§ˈ(ʔ)a§‹|sha'á|שָׁעָה
+שעה|hour|ʃa,ˈ(ʔ)a,‹|sha'á|שָׁעָה
 שעווה||
 שעון מעורר||
 שעון שמש||
@@ -9755,7 +9755,7 @@ autoExpandExamples.he = `
 שער הרחמים||
 שער מתרומם||
 שער||
-שערה|hair|sa.§ʔa§ˈʁa§‹|sa'ará|שַׂעֲרָה
+שערה|hair|sa.,ʔa,ˈʁa,‹|sa'ará|שַׂעֲרָה
 שערורייה||
 שערוריתי||
 שערות סבתא||
@@ -9772,45 +9772,45 @@ autoExpandExamples.he = `
 שפך||
 שפכה||
 שפלה||
-שפם|mustache|sa§ˈfa§m|safám|שָׂפָם
+שפם|mustache|sa,ˈfa,m|safám|שָׂפָם
 שפמנון||
 שפן||
 שפע||
 שפעת||
-שפשף|rub, chafe|ʃi§f§ˈʃe§f|shifshéf|שִׁפְשֵׁף
+שפשף|rub, chafe|ʃi,f,ˈʃe,f|shifshéf|שִׁפְשֵׁף
 שפת אם||
 שפת תכנות||
 שפתון||
 שפתיים גדולות||
 שפתיים קטנות||
-שפתיים|lips|s§fa§ˈta§›§ji§m|s'fatáyim|שְׂפָתַיִם
+שפתיים|lips|s,fa,ˈta,›,ji,m|s'fatáyim|שְׂפָתַיִם
 שק האשכים||
 שק לי בתחת||
 שק שינה||
-שק|sack|sa§k|sak|שַׂק
+שק|sack|sa,k|sak|שַׂק
 שקד||
 שקול||
 שקוף||
 שקט||
 שקים||||
-שקיעה|sunset|ʃ§ki§‹§ˈ(ʕ)a§‹|shki'á|שְׁקִיעָה
+שקיעה|sunset|ʃ,ki,‹,ˈ(ʕ)a,‹|shki'á|שְׁקִיעָה
 שקיפות||
 שקיק||
 שקית||
-שקל חדש|new shekel|ˈʃɛ§kɛ§l§ §χa§ˈda§ʃ|shékel khadásh|שֶׁקֶל חָדָשׁ
-שקל|shekel|ˈʃɛ§kɛ§l|shékel|שֶׁקֶל
-שקלים|shekels|sh§ˈka§li§‹§m|sh'kalím|שְׁקָלִים
+שקל חדש|new shekel|ˈʃɛ,kɛ,l, ,χa,ˈda,ʃ|shékel khadásh|שֶׁקֶל חָדָשׁ
+שקל|shekel|ˈʃɛ,kɛ,l|shékel|שֶׁקֶל
+שקלים|shekels|sh,ˈka,li,‹,m|sh'kalím|שְׁקָלִים
 שקמה||
 שקנאי||
 שקע||
 שקף||
-שקר|lie, falsehood|ˈʃe§ke§ʁ|shéker|שֶׁקֶר
+שקר|lie, falsehood|ˈʃe,ke,ʁ|shéker|שֶׁקֶר
 שקרי||
-שקרן|liar|ʃa§k§ˈʁa§n|shakrán|שַׁקְרָן
+שקרן|liar|ʃa,k,ˈʁa,n|shakrán|שַׁקְרָן
 שקשוקה||
 שר חוץ||
-שר|to sing|ˈʃa§ʁ
-שרב|heat wave|ʃa§ˈʁa§v|sharáv|שָׁרָב
+שר|to sing|ˈʃa,ʁ
+שרב|heat wave|ʃa,ˈʁa,v|sharáv|שָׁרָב
 שרבי||
 שרביט||
 שרד||
@@ -9818,18 +9818,18 @@ autoExpandExamples.he = `
 שרה||
 שרוול||
 שרותים||
-שרט|to scratch|sa§ˈʁa§t
+שרט|to scratch|sa,ˈʁa,t
 שרי||
 שריד||
 שריון||
 שריפה||
 שריקה||
-שריר|muscle|ʃ§ʁi§‹§ʁ|sh'rir|שְׁרִיר
+שריר|muscle|ʃ,ʁi,‹,ʁ|sh'rir|שְׁרִיר
 שרירי||
 שרית||
-שרך|fern|ʃa§ˈʁa§χ|sharákh|שָׁרָךְ
+שרך|fern|ʃa,ˈʁa,χ|sharákh|שָׁרָךְ
 שרמוטה||
-שרף|to burn|sa§ˈʁa§f
+שרף|to burn|sa,ˈʁa,f
 שרפה||
 שרפרף||
 שרפשטיין||
@@ -9840,73 +9840,73 @@ autoExpandExamples.he = `
 שרשרת||
 שרת||
 שש בש||
-שש|six (f)|ʃe§ʃ|shésh|שֵׁשׁ
+שש|six (f)|ʃe,ʃ|shésh|שֵׁשׁ
 ששה||
 ששון||
 ששת||
 שת||
-שתה|to drink|ʃa§ˈta§‹|shatá|שָׁתָה
+שתה|to drink|ʃa,ˈta,‹|shatá|שָׁתָה
 שתייה||
-שתיים|two|ˈʃ§ta§›§j§m
-שתל|to plant|ʃa§ˈta§l|shatál|שָׁתַל
+שתיים|two|ˈʃ,ta,›,j,m
+שתל|to plant|ʃa,ˈta,l|shatál|שָׁתַל
 שתלטן||
 שתן||
 שתק||
 שתר||
-ש״ח|new shekel|ʃa§–§χ|shákh
+ש״ח|new shekel|ʃa,–,χ|shákh
 ש״ס||
 ש״ץ||
-תְּאוֹם|twin|tĕ§ˈʔ§o§m|t'óm|תאום|
-תְּזוּזָה|a movement|d͡z§‹§u§ˈza§‹|t'zuzá|תזוזה|
-תְּמָנוּן|octopus|t§ma§ˈn§u§n|tmanún|תמנון|
-תְּמוּנָה|photo|t§m§u§ˈna§‹|tmuná|תמונה|
-תְּפִירָה|sewing|t§fi§‹§ˈʁa§‹|t'firá|תפירה|
-תְּרוּעָה|shout, cry|tə§r§uː§ˈʕaː§‹|t'ru'á|תרועה|
-תְּרוּפָה|medecine|t§ʁ§u§ˈfa§‹|t'rufá|תרופה|
-תְּשׁוּבָה|answer|t§ʃ§u§ˈva§‹|t'shuvá|תשובה|
-תְּשׂוּאָה|yield, return|t͡s§‹§u§ˈa§‹|tsu'á|תשואה|
-תִּינוֹק|baby|ti§‹§ˈn§o§k|tinok|תינוק|
-תִּמְסָח|crocodile|ti§m§ˈsa§χ|timsákh|תמסח|
-תִּפְאֶרֶת|beauty, glory|ti§ˈf§e§ʁe§t|tif'éret|תפארת|
-תִּקּוּנְצִ'יק|handyman|ti§ˈk§u§n.§tʃi§‹§‹§k|tikúnčik|תיקונצ׳יק|
-תִּשְׁעָה|nine|ti§ʃ.§ˈ(ʔ)a§‹|tish'á|תשעה|
-תל־אביב|Tel Aviv|te§l§ §(ʔ)a.§ˈvi§‹§v|tel 'aviv|תֵּל־אָבִיב|
-תֵּל־אָבִיב|Tel Aviv|te§l§ §(ʔ)a.§ˈvi§‹§v|tel 'aviv|תל אביב|
-תֶּלֶם|furrow|ˈte§le§m|télem|תלם|
-תַּחַת|below|ˈta.§χa§t|tákhat|תחת|
-תַּיָּרוּת|tourism|ta§ja§ˈʁ§u§t|tayarút|תיירות|
-תַּן|jackal|ˈta§n|תן
-תַּפְקִיד|function, role|ta§f§ˈki§‹§d|tafqid|תפקיד|
-תַּפּוּז|orange|ta§ˈp§u§z|tapúz|תפוז|
-תַּפּוּחַ|apple|ta§ˈp§u§aχ|tapúax|תפוח|
-תַּצְלִיל|chord (music)|ta§t͡s§ˈli§‹§l|tatzlil|תצליל|
-תַּשְׁדִּיר|commercial|ta§ʃ§ˈdi§‹§ʁ|tashdír|תשדיר|
-תַּשְׁדִּיר־שֵׁרוּת|public service announcement|ta§ʃ§ˌdi§‹§ʁ§-§ʃɛ§ˈʁ§u§t|tashdìr-sherút|תשדיר שירות|
-תָּא|cell|ta§‹|ta|תא|
-תָּבַע|to demand|ta§ˈva§(ʕ)|tavá'|תבע|
-תָּכְנִית|program|to§χ§ˈni§‹§t
-תָּכְנִיתָן|programmer|to§χ§ni§‹§ˈta§n|tokhnithán|תוכניתן|
-תָּלוּי|hanging, suspended|ta§ˈl§u§j|talúi|תלוי|
-תָּפַר|to sew|ta§ˈfa§r|tafár|תפר|
-תֹּאַר|epithet|ˈto.§a§ʁ||תאר
-תֹּהוּ|desolation|ˈt§o.§(h)§u|tóhu|תוהו|
-תֹּאַר|epithet|ˈto.§a§ʁ||תאר
-תּוֹדָה רַבָּה‎|thank you|t§o§ˈda§‹§ §ʁa§ˈba§‹|todá rabá|תודה רבה|
-תּוֹלַעַת|worm|t§o§ˈla§(ʔ)a§t|tolá'at|תולעת|
-תּוֹעֵבָה|abomination|t§o§(ʔ)e§ˈva§‹|to'evá|תועבה|
-תּוֹרָה|Torah|t§o§ˈʁa§‹|torá|תורה|
-תּוּת|strawberry|t§u§t|tut|תות|
+תְּאוֹם|twin|tĕ,ˈʔ,o,m|t'óm|תאום|
+תְּזוּזָה|a movement|d͡z,‹,u,ˈza,‹|t'zuzá|תזוזה|
+תְּמָנוּן|octopus|t,ma,ˈn,u,n|tmanún|תמנון|
+תְּמוּנָה|photo|t,m,u,ˈna,‹|tmuná|תמונה|
+תְּפִירָה|sewing|t,fi,‹,ˈʁa,‹|t'firá|תפירה|
+תְּרוּעָה|shout, cry|tə,r,uː,ˈʕaː,‹|t'ru'á|תרועה|
+תְּרוּפָה|medecine|t,ʁ,u,ˈfa,‹|t'rufá|תרופה|
+תְּשׁוּבָה|answer|t,ʃ,u,ˈva,‹|t'shuvá|תשובה|
+תְּשׂוּאָה|yield, return|t͡s,‹,u,ˈa,‹|tsu'á|תשואה|
+תִּינוֹק|baby|ti,‹,ˈn,o,k|tinok|תינוק|
+תִּמְסָח|crocodile|ti,m,ˈsa,χ|timsákh|תמסח|
+תִּפְאֶרֶת|beauty, glory|ti,ˈf,e,ʁe,t|tif'éret|תפארת|
+תִּקּוּנְצִ'יק|handyman|ti,ˈk,u,n.,tʃi,‹,‹,k|tikúnčik|תיקונצ׳יק|
+תִּשְׁעָה|nine|ti,ʃ.,ˈ(ʔ)a,‹|tish'á|תשעה|
+תל־אביב|Tel Aviv|te,l, ,(ʔ)a.,ˈvi,‹,v|tel 'aviv|תֵּל־אָבִיב|
+תֵּל־אָבִיב|Tel Aviv|te,l, ,(ʔ)a.,ˈvi,‹,v|tel 'aviv|תל אביב|
+תֶּלֶם|furrow|ˈte,le,m|télem|תלם|
+תַּחַת|below|ˈta.,χa,t|tákhat|תחת|
+תַּיָּרוּת|tourism|ta,ja,ˈʁ,u,t|tayarút|תיירות|
+תַּן|jackal|ˈta,n|תן
+תַּפְקִיד|function, role|ta,f,ˈki,‹,d|tafqid|תפקיד|
+תַּפּוּז|orange|ta,ˈp,u,z|tapúz|תפוז|
+תַּפּוּחַ|apple|ta,ˈp,u,aχ|tapúax|תפוח|
+תַּצְלִיל|chord (music)|ta,t͡s,ˈli,‹,l|tatzlil|תצליל|
+תַּשְׁדִּיר|commercial|ta,ʃ,ˈdi,‹,ʁ|tashdír|תשדיר|
+תַּשְׁדִּיר־שֵׁרוּת|public service announcement|ta,ʃ,ˌdi,‹,ʁ,-,ʃɛ,ˈʁ,u,t|tashdìr-sherút|תשדיר שירות|
+תָּא|cell|ta,‹|ta|תא|
+תָּבַע|to demand|ta,ˈva,(ʕ)|tavá'|תבע|
+תָּכְנִית|program|to,χ,ˈni,‹,t
+תָּכְנִיתָן|programmer|to,χ,ni,‹,ˈta,n|tokhnithán|תוכניתן|
+תָּלוּי|hanging, suspended|ta,ˈl,u,j|talúi|תלוי|
+תָּפַר|to sew|ta,ˈfa,r|tafár|תפר|
+תֹּאַר|epithet|ˈto.,a,ʁ||תאר
+תֹּהוּ|desolation|ˈt,o.,(h),u|tóhu|תוהו|
+תֹּאַר|epithet|ˈto.,a,ʁ||תאר
+תּוֹדָה רַבָּה‎|thank you|t,o,ˈda,‹, ,ʁa,ˈba,‹|todá rabá|תודה רבה|
+תּוֹלַעַת|worm|t,o,ˈla,(ʔ)a,t|tolá'at|תולעת|
+תּוֹעֵבָה|abomination|t,o,(ʔ)e,ˈva,‹|to'evá|תועבה|
+תּוֹרָה|Torah|t,o,ˈʁa,‹|torá|תורה|
+תּוּת|strawberry|t,u,t|tut|תות|
 תּעבד|you will work||taː'vod|תַּעֲבֹד
-תּשוּקה|passion|›§t͡ʃ§u§ˈka§‹|תְּשׁוּקָה
+תּשוּקה|passion|›,t͡ʃ,u,ˈka,‹|תְּשׁוּקָה
 ת־ר־ג־ם||
 תא גז||
 תא גזים||
 תא דם לבן||
-תא|cell|ta§‹|ta|תָּא
+תא|cell|ta,‹|ta|תָּא
 תאגיד||
 תאו||
 תאווה||
-תאום|twin|tĕ§ˈʔ§o§m|t'óm|תְּאוֹם
+תאום|twin|tĕ,ˈʔ,o,m|t'óm|תְּאוֹם
 תאומים||
 תאונה||
 תאוצה||
@@ -9919,7 +9919,7 @@ autoExpandExamples.he = `
 תאית||
 תאנה||
 תאר הפעל||
-תאר|epithet|ˈto.§a§ʁ||תֹּאַר|
+תאר|epithet|ˈto.,a,ʁ||תֹּאַר|
 תאריך פג תוקף||
 תאריך||
 תבאנה||
@@ -9929,7 +9929,7 @@ autoExpandExamples.he = `
 תבלין||
 תבן||
 תבנית||
-תבע|to demand|ta§ˈva§(ʕ)|tavá'|תָּבַע
+תבע|to demand|ta,ˈva,(ʕ)|tavá'|תָּבַע
 תבריז||
 תבשיל||
 תג||
@@ -9955,11 +9955,11 @@ autoExpandExamples.he = `
 תובע||
 תוגה||
 תוגרמה||
-תודה רבה|thank you|t§o§ˈda§‹§ §ʁa§ˈba§‹|todá rabá|תּוֹדָה רַבָּה‎
+תודה רבה|thank you|t,o,ˈda,‹, ,ʁa,ˈba,‹|todá rabá|תּוֹדָה רַבָּה‎
 תודה||
 תודעה||
 תוהו ובוהו||
-תוהו|desolation|ˈt§o.§(h)§u|tóhu|תֹּהוּ
+תוהו|desolation|ˈt,o.,(h),u|tóhu|תֹּהוּ
 תוה״ק||
 תווית יידוע||
 תווית||
@@ -9970,18 +9970,18 @@ autoExpandExamples.he = `
 תוכן||
 תוכנה||
 תוכנית||
-תוכניתן|programmer|t§o§χ§ni§‹§ˈta§n|tokhnithán|תָּכְנִיתָן
+תוכניתן|programmer|t,o,χ,ni,‹,ˈta,n|tokhnithán|תָּכְנִיתָן
 תולדה||
 תוליום||
 תולע||
-תולעת|worm|t§o§ˈla§(ʔ)a§t|tolá'at|תּוֹלַעַת
+תולעת|worm|t,o,ˈla,(ʔ)a,t|tolá'at|תּוֹלַעַת
 תום||
 תומי||
 תומ״י||
 תוניס||
 תוסכל||
 תוספת||
-תועבה|abomination|t§o§(ʔ)e§ˈva§‹|to'evá|תּוֹעֵבָה
+תועבה|abomination|t,o,(ʔ)e,ˈva,‹|to'evá|תּוֹעֵבָה
 תועד||
 תועלת||
 תוף||
@@ -9991,7 +9991,7 @@ autoExpandExamples.he = `
 תוקפנות||
 תור||
 תורגמן||
-תורה|Torah|t§o§ˈʁa§‹|torá|תּוֹרָה
+תורה|Torah|t,o,ˈʁa,‹|torá|תּוֹרָה
 תוריום||
 תורכי||
 תורכיה||
@@ -10004,9 +10004,9 @@ autoExpandExamples.he = `
 תושב||
 תושלב״ע||
 תות שדה||
-תות|strawberry|t§u§t|tut|תּוּת
+תות|strawberry|t,u,t|tut|תּוּת
 תותח||
-תזוזה|a movement|d͡z§‹§u§ˈza§‹|t'zuzá|תְּזוּזָה
+תזוזה|a movement|d͡z,‹,u,ˈza,‹|t'zuzá|תְּזוּזָה
 תזונה||
 תזונתי||
 תזו״מ||
@@ -10035,7 +10035,7 @@ autoExpandExamples.he = `
 תחפושת||
 תחפיף||
 תחרות||
-תחת|below|ˈta.§χa§t|tákhat|תַּחַת
+תחת|below|ˈta.,χa,t|tákhat|תַּחַת
 תחתון||
 תחתונים||
 תחתית||
@@ -10048,7 +10048,7 @@ autoExpandExamples.he = `
 תיבת פנדורה||
 תיון||
 תייר||
-תיירות|tourism|ta§ja§ˈʁ§u§t|tayarút|תַּיָּרוּת
+תיירות|tourism|ta,ja,ˈʁ,u,t|tayarút|תַּיָּרוּת
 תיירותי||
 תיכון||
 תיכוני||
@@ -10061,7 +10061,7 @@ autoExpandExamples.he = `
 תימן||
 תימני||
 תינוק שנשבה||
-תינוק|baby|ti§‹§ˈn§o§k|tinok|תִּינוֹק
+תינוק|baby|ti,‹,ˈn,o,k|tinok|תִּינוֹק
 תינוקת||
 תיעב||
 תיעד||
@@ -10069,7 +10069,7 @@ autoExpandExamples.he = `
 תיק גב||
 תיק||
 תיקו||
-תיקונצ׳יק|handyman|ti§‹§ˈk§u§n.§tʃi§‹§‹§k|tikúnčik|תִּקּוּנְצִ'יק
+תיקונצ׳יק|handyman|ti,‹,ˈk,u,n.,tʃi,‹,‹,k|tikúnčik|תִּקּוּנְצִ'יק
 תיקן||
 תירבות||
 תירגל||
@@ -10088,15 +10088,15 @@ autoExpandExamples.he = `
 תכנן||
 תכף||
 תכשיט||
-תל אביב|Tel Aviv|te§l§ §(ʔ)a.§ˈvi§‹§v|tel 'aviv|תֵּל־אָבִיב
+תל אביב|Tel Aviv|te,l, ,(ʔ)a.,ˈvi,‹,v|tel 'aviv|תֵּל־אָבִיב
 תל||
 תלה||
-תלוי|hanging, suspended|ta§ˈl§u§j|talúi|תָּלוּי
+תלוי|hanging, suspended|ta,ˈl,u,j|talúi|תָּלוּי
 תלונה||
 תלות||
 תלי||
 תליום||
-תלם|furrow|ˈte§le§m|télem|תֶּלֶם
+תלם|furrow|ˈte,le,m|télem|תֶּלֶם
 תלמוד בבלי||
 תלמוד ירושלמי||
 תלמוד תורה||
@@ -10114,7 +10114,7 @@ autoExpandExamples.he = `
 תמה||
 תמהון||
 תמוז||
-תמונה|photo|t§m§u§ˈna§‹|tmuná|תְּמוּנָה
+תמונה|photo|t,m,u,ˈna,‹|tmuná|תְּמוּנָה
 תמורה||
 תמותה||
 תמיד||
@@ -10123,15 +10123,15 @@ autoExpandExamples.he = `
 תמים||
 תמימות||
 תמך||
-תמנון|octopus|t§ma§ˈn§u§n|tmanún|תְּמָנוּן
-תמסח|crocodile|ti§m§ˈsa§χ|timsákh|תִּמְסָח
+תמנון|octopus|t,ma,ˈn,u,n|tmanún|תְּמָנוּן
+תמסח|crocodile|ti,m,ˈsa,χ|timsákh|תִּמְסָח
 תמצית||
 תמר||
 תמרוק||
 תמרור||
 תמרורים||
 תמריץ||
-תן|jackal|ˈta§n|תַּן
+תן|jackal|ˈta,n|תַּן
 תנא||
 תנאי||
 תנודה||
@@ -10170,26 +10170,26 @@ autoExpandExamples.he = `
 תעשה||
 תעשיין||
 תעתיק||
-תפארת|beauty, glory|ti§ˈf§e§ʁe§t|tif'éret|תִּפְאֶרֶת
-תפוז|orange|ta§ˈp§u§z|tapúz|תַּפּוּז
+תפארת|beauty, glory|ti,ˈf,e,ʁe,t|tif'éret|תִּפְאֶרֶת
+תפוז|orange|ta,ˈp,u,z|tapúz|תַּפּוּז
 תפוח אדמה||
 תפוח עץ||
-תפוח|apple|ta§ˈp§u§aχ|tapúax|תַּפּוּחַ
+תפוח|apple|ta,ˈp,u,aχ|tapúax|תַּפּוּחַ
 תפוס||
 תפילה||
 תפילין||
 תפיסה||
-תפירה|sewing|t§fi§‹§ˈʁa§‹|t'firá|תְּפִירָה
+תפירה|sewing|t,fi,‹,ˈʁa,‹|t'firá|תְּפִירָה
 תפישה||
 תפל||
 תפס||
 תפקד||
-תפקיד|function, role|ta§f§ˈki§‹§d|tafqid|תַּפְקִיד
-תפר|to sew|ta§ˈfa§r|tafár|תָּפַר
+תפקיד|function, role|ta,f,ˈki,‹,d|tafqid|תַּפְקִיד
+תפר|to sew|ta,ˈfa,r|tafár|תָּפַר
 תפרחת||
 תפריט||
 תצלום||
-תצליל|chord (music)|ta§t͡s§ˈli§‹§l|tatzlil|תַּצְלִיל
+תצליל|chord (music)|ta,t͡s,ˈli,‹,l|tatzlil|תַּצְלִיל
 תצפית||
 תקדים||
 תקוה||
@@ -10220,9 +10220,9 @@ autoExpandExamples.he = `
 תרגמן||
 תרד||
 תרדמה||
-תרועה|shout, cry|tə§r§uː§ˈʕaː§‹|t'ru'á|תְּרוּעָה
+תרועה|shout, cry|tə,r,uː,ˈʕaː,‹|t'ru'á|תְּרוּעָה
 תרועות||||
-תרופה|medecine|t§ʁ§u§ˈfa§‹|t'rufá|תְּרוּפָה
+תרופה|medecine|t,ʁ,u,ˈfa,‹|t'rufá|תְּרוּפָה
 תרח||
 תריס||
 תריסר||
@@ -10233,11 +10233,11 @@ autoExpandExamples.he = `
 תרפים||
 תרש||
 תשבץ||
-תשדיר שירות|public service announcement|ta§ʃ§ˌdi§‹§ʁ§-§ʃɛ§‹§ˈʁ§u§t|tashdìr-sherút|תַּשְׁדִּיר־שֵׁרוּת
-תשדיר|commercial|ta§ʃ§ˈdi§‹§ʁ|tashdír|תַּשְׁדִּיר
-תשואה|yield, return|t͡s§‹§u§ˈa§‹|tsu'á|תְּשׂוּאָה
+תשדיר שירות|public service announcement|ta,ʃ,ˌdi,‹,ʁ,-,ʃɛ,‹,ˈʁ,u,t|tashdìr-sherút|תַּשְׁדִּיר־שֵׁרוּת
+תשדיר|commercial|ta,ʃ,ˈdi,‹,ʁ|tashdír|תַּשְׁדִּיר
+תשואה|yield, return|t͡s,‹,u,ˈa,‹|tsu'á|תְּשׂוּאָה
 תשואות||
-תשובה|answer|t§ʃ§u§ˈva§‹|t'shuvá|תְּשׁוּבָה
+תשובה|answer|t,ʃ,u,ˈva,‹|t'shuvá|תְּשׁוּבָה
 תשומה||
 תשומת לב||
 תשוקה||
@@ -10248,7 +10248,7 @@ autoExpandExamples.he = `
 תשע||
 תשעה באב||
 תשעה עשר||
-תשעה|nine|ti§ʃ.§ˈ(ʔ)a§‹|tish'á|תִּשְׁעָה
+תשעה|nine|ti,ʃ.,ˈ(ʔ)a,‹|tish'á|תִּשְׁעָה
 תשעים||
 תשעת||
 תשר||

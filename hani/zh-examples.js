@@ -18,7 +18,7 @@ use – for a CCS that doesn't produce sound
 
 
 autoExpandExamples.zh = `
-nihau|dummy|
+你好|hello|nihau||
 
 
 
