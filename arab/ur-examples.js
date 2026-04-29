@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -26,31 +26,31 @@ autoExpandExamples.ur = `
 
 
 آ جانا||␣||
-آؤ|come|ɑː§o
+آؤ|come|ɑː,o
 آئرلینڈ||␣||
 آئس لینڈ||␣||
 آئس کریم||␣||
 آئی||␣||
-آئین|constitution|ɑː.§–§iː§n
+آئین|constitution|ɑː.,–,iː,n
 آئینہ||␣||
 آئیوری کوسٹ||␣||
-آب حیات|aqua vitae|ɑː§b.eː.§ɦə.§j§ɑː§t̪
+آب حیات|aqua vitae|ɑː,b.eː.,ɦə.,j,ɑː,t̪
 آب زمزم||␣||
-آب و ہوا|weather, climate|ɑː§b‿§oː‿§ɦə.§ʋ§ɑː
-آب|now|ɑː§b
+آب و ہوا|weather, climate|ɑː,b‿,oː‿,ɦə.,ʋ,ɑː
+آب|now|ɑː,b
 آباد||␣||
 آبادانی||␣||
-آبادی|population|ɑː.§b§ɑː.§d̪§iː
+آبادی|population|ɑː.,b,ɑː.,d̪,iː
 آبدوز||␣||
-آبشار|waterfall|ɑː§b.§ʃ§ɑː§ɾ
+آبشار|waterfall|ɑː,b.,ʃ,ɑː,ɾ
 آبنائے||␣||
 آبچین||␣||
-آبی|blue, watery|ɑː.§b§iː
-آتش|fire, flame|ɑː.§t̪ɪ§ʃ|ātiś|آتَش
-آتما|soul, ghost|ɑː§t̪.§m§ɑː
+آبی|blue, watery|ɑː.,b,iː
+آتش|fire, flame|ɑː.,t̪ɪ,ʃ|ātiś|آتَش
+آتما|soul, ghost|ɑː,t̪.,m,ɑː
 آتنکوادی||␣||
 آج کل||␣||
-آج|today|ɑː§ʤ
+آج|today|ɑː,ʤ
 آخرت||␣||
 آخری||␣||
 آخن||␣||
@@ -58,22 +58,22 @@ autoExpandExamples.ur = `
 آداب||␣||
 آدر||␣||
 آدرنیہ||␣||
-آدم خور|cannibal, man eater|ɑː.§d̪ə§m‿§x§oː§ɾ
+آدم خور|cannibal, man eater|ɑː.,d̪ə,m‿,x,oː,ɾ
 آدم ذات||␣||
 آدم||␣||
-آدمی|human being, man|ɑː§d̪.§m§iː
-آدهنك|modern, contemporary|ɑː.§d̪ʱʊ.§‹§nɪ§k
-آدھا|half|ɑː.§d̪ʱ§‹§ɑː
+آدمی|human being, man|ɑː,d̪.,m,iː
+آدهنك|modern, contemporary|ɑː.,d̪ʱʊ.,‹,nɪ,k
+آدھا|half|ɑː.,d̪ʱ,‹,ɑː
 آدھنک||␣||
 آدھی رات||␣||
 آذر||␣||
-آذربائجان|Azerbaijan|ɑː.§zə§ɾ.§b§ɑː.§ɪ.§d͡ʒ§ɑː§n
+آذربائجان|Azerbaijan|ɑː.,zə,ɾ.,b,ɑː.,ɪ.,d͡ʒ,ɑː,n
 آذربائیجان||␣||
 آرام دینا||␣||
 آرام کرنا||␣||
-آرام|relaxation|ɑː§ɾ§ɑː§m|ārām|آرَام
+آرام|relaxation|ɑː,ɾ,ɑː,m|ārām|آرَام
 آربل||␣||
-آرزو|wish, desire|ɑː§ɾ.§z§uː
+آرزو|wish, desire|ɑː,ɾ.,z,uː
 آرمبھ کرنا||␣||
 آرمبھ||␣||
 آرمی||␣||
@@ -86,7 +86,7 @@ autoExpandExamples.ur = `
 آزاد جموں و کشمیر||␣||
 آزاد کشمیر||␣||
 آزاد||␣||
-آزادئ مذہب|freedom of religion|ɑː§z§ɑː§d§iː ɛ§ §mə§z§hə§b
+آزادئ مذہب|freedom of religion|ɑː,z,ɑː,d,iː ɛ, ,mə,z,hə,b
 آزادی|freedom, independence|ɑː.zɑː.d̪iː
 آزادیاں||␣||
 آزادیوں||␣||
@@ -181,7 +181,7 @@ autoExpandExamples.ur = `
 آوشيکتا|necessity, need|ɑː.ʋəʃ.jək.t̪ɑː
 آٹا||␣||
 آٹھ||␣||
-آٹھواں|eighth|ɑː§ʈʰ.§‹§ʋ§ɑ̃ː§‹§ / ɑːʈʰ.wɑ̃ː
+آٹھواں|eighth|ɑː,ʈʰ.,‹,ʋ,ɑ̃ː,‹, / ɑːʈʰ.wɑ̃ː
 آپ کا نام کیا ہے||␣||
 آپ کا|your|ɑːp.kɑː
 آپ کو||␣||
@@ -214,7 +214,7 @@ autoExpandExamples.ur = `
 اب تب||␣||
 اب تک||␣||
 اب سے||␣||
-اب|now|ə§b||اَب
+اب|now|ə,b||اَب
 ابا||␣||
 ابابیل|swallow|ə.bɑː.biːl| abābīl |اَبابِیْل
 اباضی||␣||
@@ -251,7 +251,7 @@ autoExpandExamples.ur = `
 ابهار|emergence|ʊ.bʱɑːɾ
 ابو ظہبی||␣||
 ابو|father, dad|əb.buː
-ابٹن|ointment|ʊ§b.§ʈə§n||اُبْٹَنْ
+ابٹن|ointment|ʊ,b.,ʈə,n||اُبْٹَنْ
 ابکائی||␣||
 ابھار||␣||
 ابھال||␣||
@@ -259,7 +259,7 @@ autoExpandExamples.ur = `
 ابھرا ہوا||␣||
 ابھرتا||␣||
 ابھرواں تختی||␣||
-ابھشیک|annointing, inauguration|ə.§bʱɪ.§‹§ʂ§eː§k| abhiṣek |اَبِھشیک
+ابھشیک|annointing, inauguration|ə.,bʱɪ.,‹,ʂ,eː,k| abhiṣek |اَبِھشیک
 ابھلاش||␣||
 ابھمان||␣||
 ابھی||␣||
@@ -269,7 +269,7 @@ autoExpandExamples.ur = `
 اتاق||␣||
 اتالیق||␣||
 اتحاد ہونا||␣||
-اتحاد|unity, coalition|ɪ.§t̪t̪ɪ.§ɦ§ɑː§d̪| ittihād |اِتِّحاد
+اتحاد|unity, coalition|ɪ.,t̪t̪ɪ.,ɦ,ɑː,d̪| ittihād |اِتِّحاد
 اتحادی|allied, coalition|ɪt̪.t̪ɪ.ɦɑː.d̪iː
 اتر پردیش|Uttar Pradesh|ʊt̪.t̪əɾ‿pɾə.d̪eːʃ
 اتر کھنڈ||␣||
@@ -280,7 +280,7 @@ autoExpandExamples.ur = `
 اتم||␣||
 اتمام||␣||
 اتمک||␣||
-اتنا|so much|ɪ§t§n§ɑː|itnā|اِتْنَا
+اتنا|so much|ɪ,t,n,ɑː|itnā|اِتْنَا
 اتوار|Sunday|ɪt̪.ʋɑːɾ|itvār|اِتْوار
 اتکا||␣||
 اتھان|surge, consciousness|ʊt̪.t̪ʰɑːn||اُتّھان
@@ -325,7 +325,7 @@ autoExpandExamples.ur = `
 احشا||␣||
 احمد آباد||␣||
 احمد پور شرقیہ||␣||
-احمد|Ahmed|ɛ§h§ma§d||اَحمد
+احمد|Ahmed|ɛ,h,ma,d||اَحمد
 احمق|asinine|əɦ.məq
 احوال||␣||
 احیا||␣||
@@ -381,7 +381,7 @@ autoExpandExamples.ur = `
 ارادوں||␣||
 ارادہ||␣||
 ارادے||␣||
-ارب|billion|ə.§ɾə§b||اَرَب|अरब
+ارب|billion|ə.,ɾə,b||اَرَب|अरब
 ارتداد||␣||
 ارتعاش دینا||␣||
 ارتعاش|tremor, vibration|ɪɾ.t̪eː.ɑːʃ
@@ -392,7 +392,7 @@ autoExpandExamples.ur = `
 ارد گرد||␣||
 اردلی||␣||
 اردن||␣||
-اردو|Urdu|ʊ§ɾ.§d̪§uː||اُردو
+اردو|Urdu|ʊ,ɾ.,d̪,uː||اُردو
 اردوئے معلی||␣||
 ارز||␣||
 ارسطو|Aristotle|ə.ɾəs.t̪uː||اَرَسطُو
@@ -439,7 +439,7 @@ autoExpandExamples.ur = `
 اسطورہ||␣||
 اسطوری||␣||
 اسلام آباد|Islamabad|ɪs.lɑː.mɑː.bɑːd̪
-اسلام|Islam|ɪ§s§l§ɑː§m
+اسلام|Islam|ɪ,s,l,ɑː,m
 اسلامی جمہوریہ پاکستان||␣||
 اسلامی||␣||
 اسلحہ||␣||
@@ -505,8 +505,8 @@ autoExpandExamples.ur = `
 اعتماد||␣||
 اعضا||␣||
 اعظم||␣||
-اعلی|paramount, highest|a§–§l§ɑː||اعلیٰ
-اعلیٰ|paramount, highest|a§–§l§ɑː||اعلی
+اعلی|paramount, highest|a,–,l,ɑː||اعلیٰ
+اعلیٰ|paramount, highest|a,–,l,ɑː||اعلی
 اغوا||␣||
 افراد||␣||
 افریقہ||␣||
@@ -539,10 +539,10 @@ autoExpandExamples.ur = `
 الجزائر||␣||
 الحاق||␣||
 الزام||␣||
-السلام علیکم|greetings|a§–§ssa§l§ɑː§m§ §a§la§i§ku§m
+السلام علیکم|greetings|a,–,ssa,l,ɑː,m, ,a,la,i,ku,m
 الف||␣||
 الفاظ||␣||
-القرآن|the Qur'an|a§l§ku§r§ɑː§n
+القرآن|the Qur'an|a,l,ku,r,ɑː,n
 اللہ اکبر||␣||
 اللہ حافظ||␣||
 اللہ قلی||␣||
@@ -648,10 +648,10 @@ autoExpandExamples.ur = `
 اندیشہ||␣||
 اندیشے||␣||
 اندیکھا|unseen, invisible|ən.d̪eː.kʰɑː
-انسان|human|ɪ§n§s§ɑː§n|insān|اِنسَان
+انسان|human|ɪ,n,s,ɑː,n|insān|اِنسَان
 انسانی||␣||
 انسانیت||␣||
-انش|part, portion|ə§n§ʃ
+انش|part, portion|ə,n,ʃ
 انشاءاللہ|God willing|ɪnʃallaː
 انشاءﷲ|God willing|ɪnʃallaː
 انصاف||␣||
@@ -668,7 +668,7 @@ autoExpandExamples.ur = `
 انٹارکٹکا||␣||
 انپم|unequalled|ə.nʊ.pəm
 انچل||␣||
-انڈا|egg|ə§ɳ.§ɖ§ɑː|aṇḍā|اَنْڈا
+انڈا|egg|ə,ɳ.,ɖ,ɑː|aṇḍā|اَنْڈا
 انڈو||␣||
 انڈونیشیا||␣||
 انڈوں||␣||
@@ -678,9 +678,9 @@ autoExpandExamples.ur = `
 انکار||␣||
 انکل||␣||
 انگریز||␣||
-انگریزی|English|ə̃§ŋ.§ɡ§ɾ§eː.§z§iː
+انگریزی|English|ə̃,ŋ.,ɡ,ɾ,eː.,z,iː
 انگلستان|England|ɪŋ.ɡlɪs.t̪ɑːn
-انگلی|finger|ʊ§ŋ.§ɡ§l§iː
+انگلی|finger|ʊ,ŋ.,ɡ,l,iː
 انگلینڈ||␣||
 انگور|grape|ən.ɡuːɾ
 انگوری|grape wine|əŋ.ɡuː.ɾiː
@@ -700,12 +700,12 @@ autoExpandExamples.ur = `
 اودا|purple|uː.d̪ɑː
 اودبلاؤ|otter|uːd̪.bɪ.lɑː.oː
 اودھی||␣||
-اور|and|ɔː§‹§r||اَور
+اور|and|ɔː,‹,r||اَور
 اورماڑا||␣||
 اورنگ||␣||
 اورنگزیب||␣||
 اوروں||␣||
-اوس|dew|oː§‹§s
+اوس|dew|oː,‹,s
 اوساکا||␣||
 اوستہ محمد||␣||
 اوسطا|on average|ɔːs.t̪ən
@@ -719,52 +719,52 @@ autoExpandExamples.ur = `
 اولین ترجیح||␣||
 اونٹ|camel|ũːʈ
 اونٹوں||␣||
-اونچا|tall|›§ũ§‹§t͡ʃ§ɑː
+اونچا|tall|›,ũ,‹,t͡ʃ,ɑː
 اونچائی||␣||
 اونگھ||␣||
-اوٗپَر|above|uː§‹§pa§r||اوپر
+اوٗپَر|above|uː,‹,pa,r||اوپر
 اوپر والا||␣||
-اوپر|above|uː§‹§pə§r||اوٗپر / اُوپر
+اوپر|above|uː,‹,pə,r||اوٗپر / اُوپر
 اوڈیشہ||␣||
 اوڑی||␣||
 اوکاش||␣||
 اوکاڑہ||␣||
 اوکھی||␣||
-اوہ|oh no!|›§uː§ɦ
+اوہ|oh no!|›,uː,ɦ
 اویغور||␣||
 اویغورستان||␣||
-اَب|now|ə§b||اب
+اَب|now|ə,b||اب
 اَبابِیْل|swallow|ə.bɑː.biːl| abābīl |ابابیل
-اَبِھشیک|annointing, inauguration|ə.§bʱɪ.§‹§ʂ§eː§k| abhiṣek |ابھشیک
+اَبِھشیک|annointing, inauguration|ə.,bʱɪ.,‹,ʂ,eː,k| abhiṣek |ابھشیک
 اَجْگَر|python|əd͡ʒ.ɡəɾ||اجگر
-اَحمد|Ahmed|ɛ§h§ma§d||احمد
+اَحمد|Ahmed|ɛ,h,ma,d||احمد
 اَخّاہ|aha|ə.xxɑː||اخاہ
-اَرَب|billion|ə.§ɾə§b||ارب|अरब|ارب
+اَرَب|billion|ə.,ɾə,b||ارب|अरब|ارب
 اَرَسطُو|Aristotle|ə.ɾəs.t̪uː||ارسطو
 اَللہ|Allah|əl.lɑːɦ||اللہ
-اَنْڈَا|egg|ə§ɳ.§ɖɑː§‹|aṇḍā|انڈا
-اَور|and|ɔː§‹§r||اور
-اَیسَا|such a|ɛː§‹§sɑː§‹||ایسا
-اُبْٹَنْ|ointment|ʊ§b.§ʈə§n||ابٹن
+اَنْڈَا|egg|ə,ɳ.,ɖɑː,‹|aṇḍā|انڈا
+اَور|and|ɔː,‹,r||اور
+اَیسَا|such a|ɛː,‹,sɑː,‹||ایسا
+اُبْٹَنْ|ointment|ʊ,b.,ʈə,n||ابٹن
 اُتّھان|surge, consciousness|ʊt̪.t̪ʰɑːn||اتھان
 اُجالْنا|enlighten|ʊ.d͡ʒɑːl.nɑː||اجالنا
 اُدَاس|sad, gloomy|ʊ.d̪ɑːs||اداس
-اُردو|Urdu|ʊ§ɾ.§d̪§uː||اردو
-اُوپَر|above|uː§‹§pa§r||اوپر
-اُڑنَا|to fly|ʊ§ɽ.§nɑː§‹§||اڑنا
-اِتِّحاد|unity, coalition|ɪ.§t̪t̪ɪ.§ɦ§ɑː§d̪| ittihād |اتحاد
+اُردو|Urdu|ʊ,ɾ.,d̪,uː||اردو
+اُوپَر|above|uː,‹,pa,r||اوپر
+اُڑنَا|to fly|ʊ,ɽ.,nɑː,‹,||اڑنا
+اِتِّحاد|unity, coalition|ɪ.,t̪t̪ɪ.,ɦ,ɑː,d̪| ittihād |اتحاد
 اِتِّصال|juncture|ɪt̪.t̪ɪ.sɑːl|ittisāl|اتصال
 اِتِّفاق|unity, coincidence|ɪt̪.t̪ɪ.fɑːq|ittifāq|اتفاق
-اِتْنَا|so much|ɪ§t§n§ɑː|itnā|اتنا
+اِتْنَا|so much|ɪ,t,n,ɑː|itnā|اتنا
 اِتْوار|Sunday|ɪt̪.ʋɑːɾ|itvār|اتوار
 اِسْم|name|ɪsm||اسم
 اِشارَہ|sign, signal|ɪ.ʃɑː.ɾɑː||اشارہ
 اِشْتِمالِیَت|communism|ɪʃ.t̪e.mɑː.lɪ.jət̪||اشتمالیت
 اِضافَہ|increase, addition|ɪ.zɑː.fə||اضافہ
-اِنسَان|human|ɪ§n§sɑː§‹§n|insān|انسان
+اِنسَان|human|ɪ,n,sɑː,‹,n|insān|انسان
 اِنْتِہاپَسَنْد|extremist|ɪn.t̪e.ɦɑː.pə.sənd̪||انتہاپسند
-اِیمان|belief, faith|iː§‹.§m§ɑː§n||ایمان
-اِینٹ|brick|iː§‹§n§ʈ||اینٹ
+اِیمان|belief, faith|iː,‹.,m,ɑː,n||ایمان
+اِینٹ|brick|iː,‹,n,ʈ||اینٹ
 اٹاری||␣||
 اٹاچی||␣||
 اٹک||␣||
@@ -799,9 +799,9 @@ autoExpandExamples.ur = `
 اچھے||␣||
 اڑان||␣||
 اڑانا||␣||
-اڑنا|to fly|ʊ§ɽ.§n§ɑː§||اُڑنَا
+اڑنا|to fly|ʊ,ɽ.,n,ɑː,||اُڑنَا
 اڑیوا|riches, wealth|ə.ɽeː.ʋɑː
-اژدہا|dragon, python|ə§ʒ.§d̪ə.§ɦ§ɑː
+اژدہا|dragon, python|ə,ʒ.,d̪ə.,ɦ,ɑː
 اژدہو||␣||
 اژدہوں||␣||
 اژدہے||␣||
@@ -837,7 +837,7 @@ autoExpandExamples.ur = `
 اگن||␣||
 اگنا||␣||
 اگنی||␣||
-اہل|people|a§h§l
+اہل|people|a,h,l
 ایالت||␣||
 ایبٹ آباد||␣||
 ایت|10,000|ə.jʊt̪
@@ -847,22 +847,22 @@ autoExpandExamples.ur = `
 ایران||␣||
 ایرانی|Iranian|iː.ɾɑː.niː
 ایزد||␣||
-ایسا|such a|ɛː§‹§s§ɑː||اَیسا
+ایسا|such a|ɛː,‹,s,ɑː||اَیسا
 ایسٹر||␣||
 ایشور|god, master|iːʃ.ʋəɾ
 ایف ایم|FM (radio)|eːf‿eːm
 ایلچی||␣||
-ایمان|belief, faith|iː§‹.§m§ɑː§n||اِیمان
+ایمان|belief, faith|iː,‹.,m,ɑː,n||اِیمان
 ایماندار|faithful, honest|iː.mɑːn.d̪ɑːɾ
 ایمانوں||␣||
 اینٹ ورپ||␣||
-اینٹ|brick|iː§‹§n§ʈ||اِینٹ
+اینٹ|brick|iː,‹,n,ʈ||اِینٹ
 اینٹوں||␣||
 اینٹیں||␣||
 ایوان|hall, palace, chamber|ɛː.ʋɑːn
 ایوب||␣||
 ایڈنبرا||␣||
-ایک|one|›§eː§k
+ایک|one|›,eː,k
 اے||␣||
 بائبل||␣||
 بائیسکل||␣||
@@ -886,7 +886,7 @@ autoExpandExamples.ur = `
 بار||␣||
 بارات||␣||
 باراں||␣||
-بارش|rain|b§ɑː.§ɾɪ§ʃ
+بارش|rain|b,ɑː.,ɾɪ,ʃ
 بارشوں||␣||
 بارشیں||␣||
 بارکھان||␣||
@@ -902,7 +902,7 @@ autoExpandExamples.ur = `
 باسن||␣||
 باشندہ|resident|bɑː.ʃən.d̪ɑː/bɑː.ʃɪn.d̪ɑː
 باعث||␣||
-باغ|garden|b§ɑː§ɣ||بَاغ
+باغ|garden|b,ɑː,ɣ||بَاغ
 باغوں||␣||
 باغی||␣||
 باغیچہ||␣||
@@ -914,7 +914,7 @@ autoExpandExamples.ur = `
 بالفرض||␣||
 بالفعل||␣||
 بالم||␣||
-بالکل|quite, absolutely|bɪ§–§l.§kʊ§l
+بالکل|quite, absolutely|bɪ,–,l.,kʊ,l
 باندھنا||␣||
 بانس||␣||
 بانسری||␣||
@@ -951,7 +951,7 @@ autoExpandExamples.ur = `
 بجلیاں||␣||
 بجلیوں||␣||
 بجنا||␣||
-بجے|PM|ba§d͡ʒ§e
+بجے|PM|ba,d͡ʒ,e
 بحال||␣||
 بحث||␣||
 بحر الکاہل||␣||
@@ -998,8 +998,8 @@ autoExpandExamples.ur = `
 برازیل||␣||
 براعظم||␣||
 براعظمی||␣||
-براہ راست|directly|bə§r§ɑː§ɦ ɛ§ §r§ɑː§s§t||براہِ راست बराह-ए-रास्त
-براہِ راست|directly|bə§r§ɑː§ɦ ɛ§ §r§ɑː§s§t||براہ راست बराह-ए-रास्त||براہ راست
+براہ راست|directly|bə,r,ɑː,ɦ ɛ, ,r,ɑː,s,t||براہِ راست बराह-ए-रास्त
+براہِ راست|directly|bə,r,ɑː,ɦ ɛ, ,r,ɑː,s,t||براہ راست बराह-ए-रास्त||براہ راست
 براۂ راست|directly|bərɑːɦ ɛ rɑːst
 برباد||␣||
 برتاؤ||␣||
@@ -1038,7 +1038,7 @@ autoExpandExamples.ur = `
 برکت||␣||
 برکتوں||␣||
 برکتیں||␣||
-برکها|rain, showers|bə§ɾ.§kʰ§‹§ɑː
+برکها|rain, showers|bə,ɾ.,kʰ,‹,ɑː
 برکھا||␣||
 برگزیدہ||␣||
 برہا||␣||
@@ -1064,11 +1064,11 @@ autoExpandExamples.ur = `
 بسیار||␣||
 بشیر||␣||
 بضاعت||␣||
-بطخ|duck|bə§t̪.t̪ə§x||بَطَّخ
+بطخ|duck|bə,t̪.t̪ə,x||بَطَّخ
 بظاہر|seemingly|bə.zɑː.ɦɪɾ
 بعث||␣||
 بعثت||␣||
-بعد|after|bɑː§‹§d||بَعد
+بعد|after|bɑː,‹,d||بَعد
 بعلبک||␣||
 بغاوت||␣||
 بغاوتوں||␣||
@@ -1178,9 +1178,9 @@ autoExpandExamples.ur = `
 بوڑھوں||␣||
 بوڑھی||␣||
 بوڑھے||␣||
-بَاغ|garden|bɑː§‹§ɣ||باغ
-بَطَّخ|duck|bə§t̪.t̪ə§x||بطخ
-بَعد|after|bɑː§‹§d||بعد
+بَاغ|garden|bɑː,‹,ɣ||باغ
+بَطَّخ|duck|bə,t̪.t̪ə,x||بطخ
+بَعد|after|bɑː,‹,d||بعد
 بَچّہ|child|bətt͡ʃʰɑː||بچہ
 بَکَّم|kite|bək.kəm||بکم
 بٹن||␣||
@@ -1198,7 +1198,7 @@ autoExpandExamples.ur = `
 بچی||␣||
 بچے||␣||
 بڑا دن||␣||
-بڑا|big, important|bə.§ɽ§ɑː|baṛā|बड़ा
+بڑا|big, important|bə.,ɽ,ɑː|baṛā|बड़ा
 بڑھاپا||␣||
 بڑھنا||␣||
 بڑی حے||␣||
@@ -1229,7 +1229,7 @@ autoExpandExamples.ur = `
 بھارت||␣||
 بھارتی||␣||
 بھاروپیہ|Indo=European|bʱɑː.ɾoː.pɪ.jɑː
-بھاری|heavy|bʱ§‹§ɑː.§ɾ§iː
+بھاری|heavy|bʱ,‹,ɑː.,ɾ,iː
 بھاشا|language, speech, dialect|bʱɑː.ʂɑː
 بھاشن||␣||
 بھاشنوں||␣||
@@ -1315,7 +1315,7 @@ autoExpandExamples.ur = `
 بہاریں||␣||
 بہاول پور||␣||
 بہاولنگر||␣||
-بہت|many|bə§ˈhʊ§t̪
+بہت|many|bə,ˈhʊ,t̪
 بہتان||␣||
 بہتانوں||␣||
 بہتر||␣||
@@ -1385,7 +1385,7 @@ autoExpandExamples.ur = `
 بیویاں||␣||
 بیویو||␣||
 بیویوں||␣||
-بیٹا|son|b§e§ʈ§ɑː
+بیٹا|son|b,e,ʈ,ɑː
 بیٹو||␣||
 بیٹوں||␣||
 بیٹھنا||␣||
@@ -1395,7 +1395,7 @@ autoExpandExamples.ur = `
 بیٹیو||␣||
 بیٹیوں||␣||
 بیٹے||␣||
-بیچ|middle, centre|b§iː§t͡ʃ
+بیچ|middle, centre|b,iː,t͡ʃ
 بیچنا||␣||
 بیکر||␣||
 بیگ||␣||
@@ -1541,7 +1541,7 @@ autoExpandExamples.ur = `
 تغافل||␣||
 تغییر||␣||
 تفاح||␣||
-تفصیل|detail|t̪ə§f.§s§iː§l
+تفصیل|detail|t̪ə,f.,s,iː,l
 تفصیلوں||␣||
 تفصیلیں||␣||
 تفنگ||␣||
@@ -1581,7 +1581,7 @@ autoExpandExamples.ur = `
 تمھیں||␣||
 تمہارا||␣||
 تمہیں||␣||
-تمیز|manners, respect|t̪ə.§m§iː§z||تَمِیْز
+تمیز|manners, respect|t̪ə.,m,iː,z||تَمِیْز
 تن|body|t̪ən
 تنازع|conflict, struggle|t̪ə.nɑː.zoː(ʔ)
 تنبولی||␣||
@@ -1598,23 +1598,23 @@ autoExpandExamples.ur = `
 تو نے||␣||
 تو||␣||
 توبہ|repentance, recantation|t̪ɔː.bɑː/t̪ə.ʊ.bɑː
-توجُّہ|attention|ta§va§d͡ʒːɔ§h||توجہ
-توجہ|attention|ta§va§d͡ʒːɔ§h||توجُّہ
+توجُّہ|attention|ta,va,d͡ʒːɔ,h||توجہ
+توجہ|attention|ta,va,d͡ʒːɔ,h||توجُّہ
 توحید||␣||
 توحیدیت|monotheism|t̪ɔː.ɦiː.d̪ɪ.jət̪
 تودہ||␣||
 توران||␣||
-توقع|hope|ta§va§qqo§‹||تَوَقُّع
+توقع|hope|ta,va,qqo,‹||تَوَقُّع
 تولد||␣||
 تولیہ|towel|t̪ɔː.lɪ.jə/t̪oː.lɪ.jə
 تولیے||␣||
 توپ||␣||
-توچا|skin|t̪§ʋə.§t͡ʃ§ɑː
+توچا|skin|t̪,ʋə.,t͡ʃ,ɑː
 توڑنا||␣||
 توہین||␣||
-تَمِیْز|manners, respect|t̪ə.§m§iː§z||تمیز
-تَوَقُّع|hope|ta§va§qqo§‹||توقع
-تِین|three|tiː§‹§n||تین
+تَمِیْز|manners, respect|t̪ə.,m,iː,z||تمیز
+تَوَقُّع|hope|ta,va,qqo,‹||توقع
+تِین|three|tiː,‹,n||تین
 تْرُٹِی|loss, error|t̪ɾʊ.ʈiː||ترٹی
 تڑت||␣||
 تکبر||␣||
@@ -1632,7 +1632,7 @@ autoExpandExamples.ur = `
 تھنہ منڈی||␣||
 تھوڑا||␣||
 تھوک|spit, saliva|t̪ʰuːk
-تھوکنا|to spit|t̪ʰ§‹§uː§k.§n§ɑː
+تھوکنا|to spit|t̪ʰ,‹,uː,k.,n,ɑː
 تھکنا||␣||
 تھی||␣||
 تھے||␣||
@@ -1650,7 +1650,7 @@ autoExpandExamples.ur = `
 تہواروں||␣||
 تہہ خانہ||␣||
 تہہ||␣||
-تیئیس|twenty-three|t§e§–§iː§s
+تیئیس|twenty-three|t,e,–,iː,s
 تیار||␣||
 تیاری||␣||
 تیاگ|sacrifice|t̪jɑːɡ
@@ -1670,9 +1670,9 @@ autoExpandExamples.ur = `
 تیل||␣||
 تیمور||␣||
 تین تلوار||␣||
-تین|three|t§iː§n||تِین
+تین|three|t,iː,n||تِین
 تیکھا|pungent, spicy|t̪iː.kʰɑː
-ثابت|constant, static|s§ɑː.§bɪ§t̪|sābit|साबित
+ثابت|constant, static|s,ɑː.,bɪ,t̪|sābit|साबित
 ثانیہ||␣||
 ثبوت|evidence, proof|sə.buːt̪
 ثروت|wealth, affluence|səɾ.ʋət̪
@@ -1681,10 +1681,10 @@ autoExpandExamples.ur = `
 ثم||␣||
 ثواب||␣||
 ثورہ||␣||
-جاؤں|I may go|ʤ§ɑː§ũː§‹
+جاؤں|I may go|ʤ,ɑː,ũː,‹
 جائداد||␣||
 جائزہ||␣||
-جائپھل|nutmeg|d͡ʒ§ɑː.§ɪ.§pʰə§‹§l
+جائپھل|nutmeg|d͡ʒ,ɑː.,ɪ.,pʰə,‹,l
 جائیدادوں||␣||
 جائیدادیں||␣||
 جادو|magic, enchantment|d͡ʒɑː.d̪uː
@@ -1701,7 +1701,7 @@ autoExpandExamples.ur = `
 جانا||␣||
 جاننا|to know|d͡ʒɑːn.nɑː
 جانو||␣||
-جانور|animal|d͡ʒ§ɑː§n.§ʋə§ɾ
+جانور|animal|d͡ʒ,ɑː,n.,ʋə,ɾ
 جانوں||␣||
 جان٘چْنا|to investigate|d͡ʒɑːn.t͡ʃnɑː||جانچنا
 جانچنا|to investigate|d͡ʒɑːn.t͡ʃnɑː||جان٘چْنا
@@ -1725,7 +1725,7 @@ autoExpandExamples.ur = `
 جج||␣||
 جدا|to separate|d͡ʒʊ.d̪ɑː
 جدید|new, recent|d͡ʒə.d̪iːd̪
-جذبہ|emotion|d͡ʒə§z§b§ɑː
+جذبہ|emotion|d͡ʒə,z,b,ɑː
 جرأت|courage|d͡ʒʊɾ.ɾət̪
 جراثیم||␣||
 جراح||␣||
@@ -1806,7 +1806,7 @@ autoExpandExamples.ur = `
 جنگل|jungle|d͡ʒəŋ.ɡəl||جَنْگَل / جَن٘گَل
 جنگلا||␣||
 جنگی||␣||
-جنیئو|(Hindu) janeu|d͡ʒə.§n§eː.§–§uː||جَنییُٔو
+جنیئو|(Hindu) janeu|d͡ʒə.,n,eː.,–,uː||جَنییُٔو
 جو||␣||
 جوا||␣||
 جواب|answer, reply|d͡ʒə.ʋɑːb
@@ -1840,8 +1840,8 @@ autoExpandExamples.ur = `
 جَنَّتِی|heavenly, pious|d͡ʒə.nːə.t̪iː||جنتی
 جَنْگَل|jungle|d͡ʒəŋ.ɡəl||جنگل
 جَن٘گَل|jungle|d͡ʒəŋ.ɡəl||جنگل
-جَنییُٔو|(Hindu) janeu|d͡ʒə.§n§eː.§–§uː||جنیئو
-جَیسا|as|ʤɛ§‹§s§ɑː||جیسا
+جَنییُٔو|(Hindu) janeu|d͡ʒə.,n,eː.,–,uː||جنیئو
+جَیسا|as|ʤɛ,‹,s,ɑː||جیسا
 جٹا||␣||
 جٹھانی||␣||
 جٹھانیاں||␣||
@@ -1872,7 +1872,7 @@ autoExpandExamples.ur = `
 جھوٹوں||␣||
 جھوٹھ||␣||
 جھگڑا||␣||
-جھیل|lake|d͡ʒʱ§‹§iː§l
+جھیل|lake|d͡ʒʱ,‹,iː,l
 جھیلمی||␣||
 جہاد||␣||
 جہاز||␣||
@@ -1894,7 +1894,7 @@ autoExpandExamples.ur = `
 جیبیں||␣||
 جیت||␣||
 جیرا||␣||
-جیسا|as|ʤɛ§‹§s§ɑː||جَیسا
+جیسا|as|ʤɛ,‹,s,ɑː||جَیسا
 جیسس کرائسٹ||␣||
 جیش|army|d͡ʒæːʃ
 جیل||␣||
@@ -1902,7 +1902,7 @@ autoExpandExamples.ur = `
 جینا||␣||
 جیوتی|light, lustre|d͡ʒjoː.t̪iː
 جیومیٹری||␣||
-جیون|life, existence|d͡ʒ§iː.§ʋə§n
+جیون|life, existence|d͡ʒ,iː.,ʋə,n
 جیونی||␣||
 جیٹھ||␣||
 جیٹھانی||␣||
@@ -1926,7 +1926,7 @@ autoExpandExamples.ur = `
 حامی||␣||
 حامیو||␣||
 حامیوں||␣||
-حاکم|governer|h§ɑː§kɪ§m||حَاکِم
+حاکم|governer|h,ɑː,kɪ,m||حَاکِم
 حب||␣||
 حبش|Ethiopia|ɦə.bəʃ
 حبشہ||␣||
@@ -1963,7 +1963,7 @@ autoExpandExamples.ur = `
 حقہ||␣||
 حقیقت||␣||
 حقے||␣||
-حلال|halal|ɦə.§l§ɑː§l
+حلال|halal|ɦə.,l,ɑː,l
 حلب||␣||
 حلقہ|circle, ring|ɦəl.qə
 حلم||␣||
@@ -1987,7 +1987,7 @@ autoExpandExamples.ur = `
 حوض||␣||
 حول||␣||
 حویلی||␣||
-حَاکِم|governer|h§ɑː§kɪ§m||حاکم
+حَاکِم|governer|h,ɑː,kɪ,m||حاکم
 حکایت||␣||
 حکم||␣||
 حکومت ہند||␣||
@@ -1995,7 +1995,7 @@ autoExpandExamples.ur = `
 حکیم||␣||
 حیا||␣||
 حیات|life|ɦə.jɑːt̪
-حیاتیات|biology|ɦə.§j§ɑː.§t̪ɪ.§j§ɑː§t̪
+حیاتیات|biology|ɦə.,j,ɑː.,t̪ɪ.,j,ɑː,t̪
 حیاتین||␣||
 حیدر آباد||␣||
 حیران||␣||
@@ -2042,7 +2042,7 @@ autoExpandExamples.ur = `
 خانقاہ||␣||
 خانوزئی||␣||
 خانپور||␣||
-خانہ|place, box|x§ɑː.§n§ɑː
+خانہ|place, box|x,ɑː.,n,ɑː
 خانیت||␣||
 خانیوال||␣||
 خاکسار|humble|xɑːk.sɑːɾ
@@ -2097,7 +2097,7 @@ autoExpandExamples.ur = `
 خطروں||␣||
 خطرہ||␣||
 خطرے||␣||
-خطوط|letters|xʊ§t§uː§t||خُطُوط
+خطوط|letters|xʊ,t,uː,t||خُطُوط
 خطہ||␣||
 خطیب||␣||
 خطیر||␣||
@@ -2122,7 +2122,7 @@ autoExpandExamples.ur = `
 خنزیروں||␣||
 خنزیریں||␣||
 خواب گاہ|bedroom, dormitory|xʋɑːb‿ɡɑːɦ/xɑːb‿ɡɑːɦ
-خواب|dream|x§–§ɑː§b§ / xʋɑːb
+خواب|dream|x,–,ɑː,b, / xʋɑːb
 خوابوں||␣||
 خواتین و حضرات||␣||
 خواتین|ladies|xə.wɑː.t̪iːn
@@ -2130,13 +2130,13 @@ autoExpandExamples.ur = `
 خواہ مخواہ||␣||
 خواہ||␣||
 خواہر||␣||
-خواہش|wish, desire|x§–§ɑː.§ɦɪ§ʃ§/xʋɑː.ɦɪʃ
+خواہش|wish, desire|x,–,ɑː.,ɦɪ,ʃ,/xʋɑː.ɦɪʃ
 خواہشوں||␣||
 خواہشیں||␣||
 خوب||␣||
 خوبانی|apricot|xuː.bɑː.niː
 خوبصورت|beautiful|xuːb.suː.ɾət̪
-خود|self|x§ʊ§d||خُود
+خود|self|x,ʊ,d||خُود
 خودمختاری|self-government|xʊd̪.mʊx.t̪ɑː.ɾiː
 خودکش||␣||
 خودکشی کرنا||␣||
@@ -2146,7 +2146,7 @@ autoExpandExamples.ur = `
 خوش آمدید||␣||
 خوش خبری||␣||
 خوش گوار||␣||
-خوش|happy|x§ʊ§ʃ||خُوش
+خوش|happy|x,ʊ,ʃ||خُوش
 خوشاب||␣||
 خوشبو||␣||
 خوشبودار||␣||
@@ -2155,14 +2155,14 @@ autoExpandExamples.ur = `
 خوفناک||␣||
 خول||␣||
 خون کا بدلہ خون||␣||
-خون|blood|x§uː§n
+خون|blood|x,uː,n
 خوک||␣||
 خوں||␣||
 خيرپور||␣||
 خَوف|fear|xɔːf||خوف
-خُطُوط|letters|xʊ§t§uː§t||خطوط
-خُود|self|x§ʊ§d||خود
-خُوش|happy|x§ʊ§ʃ||خوش
+خُطُوط|letters|xʊ,t,uː,t||خطوط
+خُود|self|x,ʊ,d||خود
+خُوش|happy|x,ʊ,ʃ||خوش
 خچر||␣||
 خیابان||␣||
 خیاط||␣||
@@ -2188,7 +2188,7 @@ autoExpandExamples.ur = `
 دار الحکومت||␣||
 دار پر کھینچنا||␣||
 دار||␣||
-دارالحکومت|capital|d§ɑː§rʊ§–§l§hʊ§k§uː§ma§t
+دارالحکومت|capital|d,ɑː,rʊ,–,l,hʊ,k,uː,ma,t
 داردر|poverty, indigence|d̪ɑː.ɾɪd̪.ɾᵊ||دارِدْر
 دارو||␣||
 دارِدْر|poverty, indigence|d̪ɑː.ɾɪd̪.ɾᵊ||داردر
@@ -2207,12 +2207,12 @@ autoExpandExamples.ur = `
 دامادو||␣||
 دامادوں||␣||
 دامن||␣||
-دانت|tooth, tusk|d̪§ɑ̃ː§‹§t̪| dā̃t/dānt|دان٘ت/دانْت दाँत /दांत
+دانت|tooth, tusk|d̪,ɑ̃ː,‹,t̪| dā̃t/dānt|دان٘ت/دانْت दाँत /दांत
 دانتی||␣||
 دانش گاہ|college|d̪ɑː.nɪʃ.ɡɑːɦ
-دانش|knowledge, science|d̪§ɑː.§nɪ§ʃ
-دانْت|tooth|d̪§ɑ̃ː§‹§t̪|dānt|दांत||دانت
-دان٘ت|tooth|d̪§ɑ̃ː§‹§t̪|dā̃t|दाँत||دانت
+دانش|knowledge, science|d̪,ɑː.,nɪ,ʃ
+دانْت|tooth|d̪,ɑ̃ː,‹,t̪|dānt|दांत||دانت
+دان٘ت|tooth|d̪,ɑ̃ː,‹,t̪|dā̃t|दाँत||دانت
 داڑم||␣||
 داہنا||␣||
 دایاں|right (side)|d̪ɑː.jɑ̃ː
@@ -2228,7 +2228,7 @@ autoExpandExamples.ur = `
 دربار||␣||
 درجات||␣||
 درجہ||␣||
-درجۂ حرارت|temperature|də§r§d͡ʒa §ɛ§ §hə§r§ɑː§rə§t
+درجۂ حرارت|temperature|də,r,d͡ʒa ,ɛ, ,hə,r,ɑː,rə,t
 درخت|tree|d̪ə.ɾəxt̪
 درخش||␣||
 درخواست||␣||
@@ -2286,8 +2286,8 @@ autoExpandExamples.ur = `
 دعوت||␣||
 دعوتوں||␣||
 دعوتیں||␣||
-دعوی|law suit, claim|da§–§v§ɑː||دعویٰ
-دعویٰ|law suit, claim|da§–§v§ɑː||دعوی
+دعوی|law suit, claim|da,–,v,ɑː||دعویٰ
+دعویٰ|law suit, claim|da,–,v,ɑː||دعوی
 دغا باز||␣||
 دفاع||␣||
 دفتر||␣||
@@ -2317,7 +2317,7 @@ autoExpandExamples.ur = `
 دموں||␣||
 دمہ||␣||
 دمے||␣||
-دن|day|dɪ§n||دِن
+دن|day|dɪ,n||دِن
 دنداسہ||␣||
 دنوں||␣||
 دنڈ||␣||
@@ -2326,7 +2326,7 @@ autoExpandExamples.ur = `
 دنیائیں||␣||
 دنیاوی||␣||
 دنیور||␣||
-دو|two|d̪§oː
+دو|two|d̪,oː
 دوائی||␣||
 دوات||␣||
 دواتیں||␣||
@@ -2366,7 +2366,7 @@ autoExpandExamples.ur = `
 دوگنا||␣||
 دوں گا|I will give|d̪ũː‿ɡɑː
 دوں گی||␣||
-دِن|day|dɪ§n||دن
+دِن|day|dɪ,n||دن
 دژ||␣||
 دژم||␣||
 دکان دار||␣||
@@ -2404,7 +2404,7 @@ autoExpandExamples.ur = `
 دھواں|smoke|d̪ʱuː.ɑ̃ː
 دھوج|flag, banner|d̪ʱʋəd͡ʒ
 دھوسر|grey|d̪ʱuː.sər
-دھول|dust|d̪ʱ§‹§uː§l
+دھول|dust|d̪ʱ,‹,uː,l
 دھونا|gum, resin|d̪ʱuː.nɑː
 دھونے والی مشین||␣||
 دھوپ|sunshine|d̪ʱuːp
@@ -2474,7 +2474,7 @@ autoExpandExamples.ur = `
 ذو الحجہ||␣||
 ذوالکفل||␣||
 ذوق||␣||
-ذکاء|intelligence|za§k§aː§–
+ذکاء|intelligence|za,k,aː,–
 ذکر الہی||␣||
 ذکر خیر||␣||
 ذکر||␣||
@@ -2493,7 +2493,7 @@ autoExpandExamples.ur = `
 راج شاہی|monarchy|ɾɑːd͡ʒ.ʃɑː.ɦiː
 راج نیتی||␣||
 راج|royalty, reign|ɾɑːd͡ʒ
-راجا|king, sovereign|ɾ§ɑː.§d͡ʒ§ɑː
+راجا|king, sovereign|ɾ,ɑː.,d͡ʒ,ɑː
 راجبھاشا||␣||
 راجدھانی||␣||
 راجستھان||␣||
@@ -2502,7 +2502,7 @@ autoExpandExamples.ur = `
 راجن پور||␣||
 راجنیہ||␣||
 راجوری||␣||
-راجہ|king, sovereign|ɾ§ɑː.§d͡ʒ§ɑː
+راجہ|king, sovereign|ɾ,ɑː.,d͡ʒ,ɑː
 راجیہ سبھا||␣||
 راحت||␣||
 راحتو||␣||
@@ -2601,7 +2601,7 @@ autoExpandExamples.ur = `
 رنگولی||␣||
 رنگوں||␣||
 رنگپور||␣||
-روئے زمین|the surface of the ground|r§uː§ɛ§‹§ §za§m§iː§n
+روئے زمین|the surface of the ground|r,uː,ɛ,‹, ,za,m,iː,n
 روان||␣||
 روانئ خون||␣||
 روانڈا|Rwanda|ɾə.ʋɑːɳ.ɖɑː
@@ -2643,17 +2643,17 @@ autoExpandExamples.ur = `
 روی||␣||
 رویئہ||␣||
 رویہ||␣||
-رَہنا|to live, remain|rɛ§h§n§ɑː||رہنا||رہنا
+رَہنا|to live, remain|rɛ,h,n,ɑː||رہنا||رہنا
 رڑک||␣||
 رکاوٹ||␣||
-رکت|red|ɾə§k§t̪
+رکت|red|ɾə,k,t̪
 رکشا بندھن||␣||
 رکشا|protection, safety|ɾək.ʂɑː
 رکعت||␣||
 رگوید||␣||
 رہائش||␣||
 رہبر||␣||
-رہنا|to live, remain|rɛ§h§n§ɑː||رَہنا
+رہنا|to live, remain|rɛ,h,n,ɑː||رَہنا
 ریاست||␣||
 ریاستہا||␣||
 ریاض||␣||
@@ -2719,7 +2719,7 @@ autoExpandExamples.ur = `
 زندان||␣||
 زندانو||␣||
 زندانوں||␣||
-زندگی|life|zɪ§n.§d̪ə.§ɡ§iː
+زندگی|life|zɪ,n.,d̪ə.,ɡ,iː
 زندگیاں||␣||
 زندگیو||␣||
 زندگیوں||␣||
@@ -2790,7 +2790,7 @@ autoExpandExamples.ur = `
 سانسوں||␣||
 سانسیں||␣||
 سانولا|dark, sooty|sɑ̃ːʋ.lɑː
-سانپ|snake|s§ɑ̃ː§‹§p
+سانپ|snake|s,ɑ̃ː,‹,p
 ساودھان||␣||
 ساون||␣||
 ساڑی|sari|sɑː.ɽiː
@@ -2800,12 +2800,12 @@ autoExpandExamples.ur = `
 ساہتیہ||␣||
 ساہیوال||␣||
 سایہ دار||␣||
-سایہ|shadow|s§ɑː§j§ɑː
+سایہ|shadow|s,ɑː,j,ɑː
 سب||␣||
 سبحان اللہ||␣||
 سبد|basket|sə.bʊd̪
 سبز||␣||
-سبزی|vegetable|sə§b.§z§iː
+سبزی|vegetable|sə,b.,z,iː
 سبزیاں||␣||
 سبزیوں||␣||
 سبق||␣||
@@ -2817,18 +2817,18 @@ autoExpandExamples.ur = `
 ستاروں||␣||
 ستارہ||␣||
 ستارے||␣||
-ستر|seventy|sa§tta§r|sattar|سَتَّر
+ستر|seventy|sa,tta,r|sattar|سَتَّر
 سترہ||␣||
 ستم||␣||
 ستون||␣||
-ستّر|seventy|sa§tta§r|sattar|ستر||ستر
+ستّر|seventy|sa,tta,r|sattar|ستر||ستر
 سجدو||␣||
 سجدوں||␣||
 سجدہ||␣||
 سجدے||␣||
 سحر||␣||
 سحری||␣||
-سخت|hard|sa§x§t||سَخْت
+سخت|hard|sa,x,t||سَخْت
 سخی||␣||
 سدابہار|evergreen|sə.d̪ɑː.bə.ɦɑːɾ
 سدن||␣||
@@ -2836,7 +2836,7 @@ autoExpandExamples.ur = `
 سدھارک||␣||
 سر قلم ہونا||␣||
 سر کشی||␣||
-سر|head|sə§ɾ||سَر
+سر|head|sə,ɾ||سَر
 سرائیکی||␣||
 سراب|mirage, apparition|sə.ɾɑːb
 سراسر||␣||
@@ -2881,7 +2881,7 @@ autoExpandExamples.ur = `
 سریع||␣||
 سزا|punishment, penalty|sə.zɑː
 سسا||␣||
-سست|lazy|sʊ§s§t||سُست
+سست|lazy|sʊ,s,t||سُست
 سستا||␣||
 سستی|laziness, sloth|sʊs.t̪iː
 سسر||␣||
@@ -2889,7 +2889,7 @@ autoExpandExamples.ur = `
 سسروں||␣||
 سسری||␣||
 سطح||␣||
-سعآدت|fortunate|sə§ʔ§ɑː§də§t§ / sɑːdət
+سعآدت|fortunate|sə,ʔ,ɑː,də,t, / sɑːdət
 سعودی عرب||␣||
 سغدی||␣||
 سفارت خانہ||␣||
@@ -2901,7 +2901,7 @@ autoExpandExamples.ur = `
 سفر|travel, trip|sə.fəɾ
 سفرو||␣||
 سفروں||␣||
-سفید|white|sə.§f§eː§d̪
+سفید|white|sə.,f,eː,d̪
 سفیر||␣||
 سلاح|weapon, arms|sɪ.lɑː
 سلاد||␣||
@@ -2997,7 +2997,7 @@ autoExpandExamples.ur = `
 سوالو||␣||
 سوالوں||␣||
 سوانگ|imitation, disguise|sʋɑːŋɡ
-سواگت|welcome|s§ʋ§ɑː.§ɡə§t̪
+سواگت|welcome|s,ʋ,ɑː.,ɡə,t̪
 سوتا||␣||
 سوتن||␣||
 سوتنو||␣||
@@ -3009,7 +3009,7 @@ autoExpandExamples.ur = `
 سوجنا||␣||
 سودا||␣||
 سوراب||␣||
-سورج|sun|s§uː.§ɾə§d͡ʒ
+سورج|sun|s,uː.,ɾə,d͡ʒ
 سورجو||␣||
 سورجوں||␣||
 سورن کوٹ||␣||
@@ -3034,10 +3034,10 @@ autoExpandExamples.ur = `
 سویرا||␣||
 سویٹزرلینڈ||␣||
 سویڈن||␣||
-سَخْت|hard|sa§x§t||سخت
-سَر|head|sə§ɾ||سر
-سُست|lazy|sʊ§s§t||سست
-سِینہ|breast|s§iː§n§ɑː||سینہ
+سَخْت|hard|sa,x,t||سخت
+سَر|head|sə,ɾ||سر
+سُست|lazy|sʊ,s,t||سست
+سِینہ|breast|s,iː,n,ɑː||سینہ
 سپارو||␣||
 سپاروں||␣||
 سپارہ||␣||
@@ -3057,7 +3057,7 @@ autoExpandExamples.ur = `
 سچی||␣||
 سچے||␣||
 سڑا||␣||
-سڑک|road|sə.§ɽə§k
+سڑک|road|sə.,ɽə,k
 سکا||␣||
 سکنا|to be able to|sək.nɑː
 سکندر آباد||␣||
@@ -3106,13 +3106,13 @@ autoExpandExamples.ur = `
 سینچنا||␣||
 سینکڑا|hundred|sɛːŋ.kə.ɽɑː/sɛːŋ.kɽɑː
 سینگ|horn (anatomy)|siːŋɡ
-سینہ|breast|s§iː§n§ɑː||سِینہ
+سینہ|breast|s,iː,n,ɑː||سِینہ
 سینیٹر|senator|siː.neː.ʈəɾ
 سینے||␣||
 سیٹھا||␣||
 سیڑھی||␣||
 سیکھنا|to learn|siːkʰ.nɑː
-سے|by, with, to|s§eː
+سے|by, with, to|s,eː
 شاباش||␣||
 شاخ||␣||
 شاد||␣||
@@ -3161,7 +3161,7 @@ autoExpandExamples.ur = `
 شترو|enemy, adversary|ʃət̪.ɾuː
 شتک||␣||
 شجر||␣||
-شخص|person, individual|ʃə§x§s
+شخص|person, individual|ʃə,x,s
 شدت||␣||
 شراب|alcoholic drink|ʃə.ɾɑːb
 شرارت||␣||
@@ -3187,10 +3187,10 @@ autoExpandExamples.ur = `
 شریک سفر||␣||
 ششن||␣||
 ششک||␣||
-شعر|verse|ʃ§eː§ɾ|śer|شِعر शेर
+شعر|verse|ʃ,eː,ɾ|śer|شِعر शेर
 شعرا||␣||
 شعلوں||␣||
-شعلہ|flame|ʃoː§‹§l§ɑː|śu'la|شُعلہ
+شعلہ|flame|ʃoː,‹,l,ɑː|śu'la|شُعلہ
 شعلے||␣||
 شعور||␣||
 شعیب||␣||
@@ -3214,20 +3214,20 @@ autoExpandExamples.ur = `
 شناختی کارڈ||␣||
 شنتانو||␣||
 شوربا||␣||
-شوق|keenness, interest|ʃ§ɔ§q||شَوق
+شوق|keenness, interest|ʃ,ɔ,q||شَوق
 شوپیاں||␣||
 شوہر||␣||
 شيخوپورہ||␣||
-شَوق|keenness, interest|ʃɔ§‹§q||شوق
-شَکتی|power, strength|ʃə§k.§t̪§iː |śaktī|شکتیशक्ति||شکتی
-شُعلہ|flame|ʃoː§‹§l§ɑː|śu'la|شعلہ||شعلہ
-شُہرت|fame|ʃɔ§h§rə§t||شہرت
-شِعر|verse|ʃeː§‹§ɾ|śer|شعرशेर|| شعر
+شَوق|keenness, interest|ʃɔ,‹,q||شوق
+شَکتی|power, strength|ʃə,k.,t̪,iː |śaktī|شکتیशक्ति||شکتی
+شُعلہ|flame|ʃoː,‹,l,ɑː|śu'la|شعلہ||شعلہ
+شُہرت|fame|ʃɔ,h,rə,t||شہرت
+شِعر|verse|ʃeː,‹,ɾ|śer|شعرशेर|| شعر
 شکار گاہ||␣||
 شکار||␣||
 شکارپور||␣||
 شکایت||␣||
-شکتی|power, strength|ʃə§k.§t̪§iː| śaktī|شَکتی शक्ति
+شکتی|power, strength|ʃə,k.,t̪,iː| śaktī|شَکتی शक्ति
 شکر||␣||
 شکریہ|thanks, thank you|ʃʊk.ɾɪ.jɑː
 شکووں||␣||
@@ -3246,7 +3246,7 @@ autoExpandExamples.ur = `
 شہداد کوٹ||␣||
 شہر سبز||␣||
 شہر|city, town|ʃɛ.ɦɛɾ
-شہرت|fame|ʃɔ§h§rə§t||شُہرت
+شہرت|fame|ʃɔ,h,rə,t||شُہرت
 شہرتوں||␣||
 شہرتیں||␣||
 شہروز||␣||
@@ -3262,14 +3262,14 @@ autoExpandExamples.ur = `
 شہیدوں||␣||
 شیخ||␣||
 شیدا||␣||
-شیر پنجاب|Lion of the Punjab|ʃ§e§r ɛ§ §pə§n§ʤ§ɑː§b||شیرِ پنجاب
-شیر|lion, tiger; milk|ʃ§eː§ɾ
-شیرِ پنجاب|Lion of the Punjab|ʃ§e§r ɛ§ §pə§n§ʤ§ɑː§b||شیر پنجاب
+شیر پنجاب|Lion of the Punjab|ʃ,e,r ɛ, ,pə,n,ʤ,ɑː,b||شیرِ پنجاب
+شیر|lion, tiger; milk|ʃ,eː,ɾ
+شیرِ پنجاب|Lion of the Punjab|ʃ,e,r ɛ, ,pə,n,ʤ,ɑː,b||شیر پنجاب
 شیریں||␣||
 شیش ناگ||␣||
 شیشو||␣||
 شیشوں||␣||
-شیشہ|glass, mirror|ʃ§iː.§ʃ§ɑː
+شیشہ|glass, mirror|ʃ,iː.,ʃ,ɑː
 شیشے||␣||
 شیطان||␣||
 شیفیلڈ||␣||
@@ -3278,8 +3278,8 @@ autoExpandExamples.ur = `
 شے||␣||
 صائب|to the point, well-aimed|sɑː.ɪb||صایِٔب
 صابر|patient, forbearing|sɑː.bɪɾ
-صابن|soap|s§ɑː§bʊ§n||صابُن
-صابُن|soap|s§ɑː§bʊ§n||صابن
+صابن|soap|s,ɑː,bʊ,n||صابُن
+صابُن|soap|s,ɑː,bʊ,n||صابن
 صاحب|sir, mister|sɑː.ɦɪb
 صادق آباد||␣||
 صارف|user (computing)|sɑː.ɾɪf
@@ -3301,7 +3301,7 @@ autoExpandExamples.ur = `
 صحن||␣||
 صحیح|right, correct, accurate|sə.ɦiː
 صدا||␣||
-صدائے بلند|a high voice|sa§d§ɑː §–§ɛ§ §bu§la§n§d
+صدائے بلند|a high voice|sa,d,ɑː ,–,ɛ, ,bu,la,n,d
 صداقت||␣||
 صدر مملکت|president|sə.d̪əɾ.eː.mʊm.lɪ.kət̪
 صدر||␣||
@@ -3317,7 +3317,7 @@ autoExpandExamples.ur = `
 صفائی||␣||
 صفحو||␣||
 صفحوں||␣||
-صفحہ|page|sə§f.§ɦ§ɑː§ / sə.fɑː
+صفحہ|page|sə,f.,ɦ,ɑː, / sə.fɑː
 صفحۂ اول||␣||
 صفحۂ اول‎|home page|səf.ɦə.e.əʋːəl||صَفْحَۂ اَوَّل‎
 صفحے||␣||
@@ -3345,7 +3345,7 @@ autoExpandExamples.ur = `
 صَفْحَۂ اَوَّل‎|home page|səf.ɦə.e.əʋːəl||صفحۂ اول‎
 ضابطہ||␣||
 ضبط||␣||
-ضد|stubbornness|zɪ§d||ضِد
+ضد|stubbornness|zɪ,d||ضِد
 ضدی||␣||
 ضرر||␣||
 ضرور|surely, definitely|zə.ɾuːɾ
@@ -3362,8 +3362,8 @@ autoExpandExamples.ur = `
 ضمنی انتخابات||␣||
 ضمیر||␣||
 ضمیمہ||␣||
-ضِد|stubbornness|zɪ§d||ضد
-ضیاء|light|z§i§aː§–
+ضِد|stubbornness|zɪ,d||ضد
+ضیاء|light|z,i,aː,–
 ضیافت||␣||
 طاعون||␣||
 طاق رات||␣||
@@ -3372,9 +3372,9 @@ autoExpandExamples.ur = `
 طاقتور||␣||
 طاقتوں||␣||
 طاقتیں||␣||
-طالب علم|student (seeker of knowledge)|t§ɑː§lɪ§b ɛ§ §ɪ§l§m||طالبِ علم
+طالب علم|student (seeker of knowledge)|t,ɑː,lɪ,b ɛ, ,ɪ,l,m||طالبِ علم
 طالبان||␣||
-طالبِ علم|student (seeker of knowledge)|t§ɑː§lɪ§b ɛ§ §ɪ§l§m||طالب علم
+طالبِ علم|student (seeker of knowledge)|t,ɑː,lɪ,b ɛ, ,ɪ,l,m||طالب علم
 طبق||␣||
 طبلہ|tabla, drum|t̪əb.lə.ᵊ
 طبی||␣||
@@ -3406,7 +3406,7 @@ autoExpandExamples.ur = `
 طلوع||␣||
 طوائف||␣||
 طوبی||␣||
-طور|hill, mount|t̪§uː§ɾ
+طور|hill, mount|t̪,uː,ɾ
 طوفان|storm, flood|t̪uː.fɑːn
 طول و عرض||␣||
 طیاروں||␣||
@@ -3417,19 +3417,19 @@ autoExpandExamples.ur = `
 طیران گاہ||␣||
 طے||␣||
 ظالم||␣||
-ظاہر|apparent|z§ɑː§ɦɪ§r||ظَاہِر
+ظاہر|apparent|z,ɑː,ɦɪ,r||ظَاہِر
 ظرف||␣||
 ظفر||␣||
 ظلم و ستم||␣||
 ظلم||␣||
-ظَاہِر|apparent|z§ɑː§ɦɪ§r||ظاہر
+ظَاہِر|apparent|z,ɑː,ɦɪ,r||ظاہر
 ظہرانہ||␣||
 عائلہ||␣||
 عائلی||␣||
 عابد||␣||
 عابدہ||␣||
 عاجزی||␣||
-عادت|habit|–§ɑː§da§t
+عادت|habit|–,ɑː,da,t
 عارف والا||␣||
 عاشق||␣||
 عاصی||␣||
@@ -3460,7 +3460,7 @@ autoExpandExamples.ur = `
 عدم||␣||
 عذاب||␣||
 عراق||␣||
-عرب|Arab|ə§rə§b|arab| عَرَب
+عرب|Arab|ə,rə,b|arab| عَرَب
 عربستان||␣||
 عربی||␣||
 عرش||␣||
@@ -3493,7 +3493,7 @@ autoExpandExamples.ur = `
 علامتوں||␣||
 علامتیں||␣||
 علم بردار||␣||
-علم|knowledge, literature|ɪ§l§m||عِلْم
+علم|knowledge, literature|ɪ,l,m||عِلْم
 علما||␣||
 علمی||␣||
 علمیات|epistemology|ɪl.mɪ.jɑːt̪
@@ -3516,7 +3516,7 @@ autoExpandExamples.ur = `
 عموما|generally, usually|ɑː.muː.mən
 عمومی||␣||
 عنابی|maroon|ʊn.nɑː.biː/ə.nɑː.biː
-عنب|grape|ɪ.§neː§b
+عنب|grape|ɪ.,neː,b
 عنصر||␣||
 عنوان||␣||
 عوام|public, masses|ə.ʋɑːm
@@ -3524,8 +3524,8 @@ autoExpandExamples.ur = `
 عورتو||␣||
 عورتوں||␣||
 عورتیں||␣||
-عَرَب|Arab|ə§rə§b|arab|عرب||عرب
-عِلْم|knowledge, literature|ɪ§l§m||علم
+عَرَب|Arab|ə,rə,b|arab|عرب||عرب
+عِلْم|knowledge, literature|ɪ,l,m||علم
 عکرشہ||␣||
 عکس||␣||
 عہد||␣||
@@ -3542,7 +3542,7 @@ autoExpandExamples.ur = `
 عیسؑیٰ|Christ, upon him be peace!|isaː salejsallam||عیسؑی
 عیسائی||␣||
 عیسائیت||␣||
-عیسوی|Christian Era|–§iː§s§v§iː
+عیسوی|Christian Era|–,iː,s,v,iː
 عیسی مسیح|Jesus Christ|iː.sɑː‿mə.siːɦ||عیسیٰ مسیح
 عیسی|Jesus|iː.sɑː||عیسیٰ
 عیسیٰ مسیح|Jesus Christ|iː.sɑː‿mə.siːɦ||عیسی مسیح
@@ -3576,7 +3576,7 @@ autoExpandExamples.ur = `
 غش||␣||
 غضب||␣||
 غفلت||␣||
-غلام|slave|ɣʊ§l§ɑː§m||غُلام
+غلام|slave|ɣʊ,l,ɑː,m||غُلام
 غلامو||␣||
 غلاموں||␣||
 غلط سمجھنا|to misunderstand|ɣə.lət̪‿sə.məd͡ʒʱ.nɑː
@@ -3596,12 +3596,12 @@ autoExpandExamples.ur = `
 غنودگیاں||␣||
 غنودگیوں||␣||
 غنودہ||␣||
-غنچہ|flower bud|ɣʊ§n.§t͡ʃ§ɑː
+غنچہ|flower bud|ɣʊ,n.,t͡ʃ,ɑː
 غنڈہ||␣||
 غنہ|nasal|ɣʊn.nə
 غور||␣||
 غوٹہ||␣||
-غُلام|slave|ɣʊ§l§ɑː§m||غلام
+غُلام|slave|ɣʊ,l,ɑː,m||غلام
 غُنّایِٔیّت|nasalisation|ɣʊn.nɑː.iː.jət̪||غنائیت
 غٹر غوں||␣||
 غژماں||␣||
@@ -3722,11 +3722,11 @@ autoExpandExamples.ur = `
 فہرستو||␣||
 فہرستوں||␣||
 فہرستیں||␣||
-فی الحال|at present|f§i§ §–§l§h§ɑː§l
+فی الحال|at present|f,i, ,–,l,h,ɑː,l
 فیروزوالہ||␣||
 فیروزہ||␣||
 فیروزی|turquoise, teal|feː.ɾoː.ziː
-فیصد|percent|f§iː.§sə§d̪
+فیصد|percent|f,iː.,sə,d̪
 فیصل آباد||␣||
 فیصل||␣||
 فیصلہ||␣||
@@ -3751,7 +3751,7 @@ autoExpandExamples.ur = `
 قاضی||␣||
 قاعدو||␣||
 قاعدوں||␣||
-قاعدہ|law, rule|q§ɑː.§ɪ.§d̪ɑː§–||قیَاعِدَہ
+قاعدہ|law, rule|q,ɑː.,ɪ.,d̪ɑː,–||قیَاعِدَہ
 قاعدے||␣||
 قافلو||␣||
 قافلوں||␣||
@@ -3776,7 +3776,7 @@ autoExpandExamples.ur = `
 قبرص||␣||
 قبض||␣||
 قبضوں||␣||
-قبضہ|occupation|qə§b.§zə§–
+قبضہ|occupation|qə,b.,zə,–
 قبل||␣||
 قبلتین||␣||
 قبول کرنا|to accept|qʊ.buːl‿kəɾ.nɑː
@@ -3828,10 +3828,10 @@ autoExpandExamples.ur = `
 قضیب||␣||
 قطار||␣||
 قطب||␣||
-قطرۂ آب|drop of water|qa§t§ra §ɛ§ §ɑː§b
+قطرۂ آب|drop of water|qa,t,ra ,ɛ, ,ɑː,b
 قطعا||␣||
 قطعی||␣||
-ققنس|phoenix|qə§q.§nʊ§s
+ققنس|phoenix|qə,q.,nʊ,s
 ققنوس||␣||
 قلات||␣||
 قلب||␣||
@@ -3839,10 +3839,10 @@ autoExpandExamples.ur = `
 قلعوں||␣||
 قلعہ سیف اللہ||␣||
 قلعہ عبداللہ||␣||
-قلعہ|fort, castle|qɪ.§l§ɑː§–
+قلعہ|fort, castle|qɪ.,l,ɑː,–
 قلعے||␣||
 قلفی||␣||
-قلم|pen|qə§lə§m
+قلم|pen|qə,lə,m
 قلندر||␣||
 قلو پطرہ||␣||
 قلی||␣||
@@ -3874,12 +3874,12 @@ autoExpandExamples.ur = `
 قیمتی|valuable, precious|qiː.mə.t̪iː
 قیمہ|ground meat|qiː.mɑː
 قینچی|scissors|qɛ̃ː.t͡ʃiː||قَین٘چی
-قیَاعِدَہ|law, rule|q§ɑː.§ɪ.§d̪ɑː§–|قاعدہ
+قیَاعِدَہ|law, rule|q,ɑː.,ɪ.,d̪ɑː,–|قاعدہ
 قے کرنا||␣||
 قے||␣||
 كشی||␣||
 لائبریری||␣||
-لائن|queue|l§ɑː§–§ɪn
+لائن|queue|l,ɑː,–,ɪn
 لائٹر||␣||
 لاج||␣||
 لاجورد||␣||
@@ -3890,7 +3890,7 @@ autoExpandExamples.ur = `
 لاشعاع||␣||
 لاطینی||␣||
 لافانی||␣||
-لال|red|l§ɑː§l
+لال|red|l,ɑː,l
 لالٹین||␣||
 لالہ||␣||
 لامتناہی|infinite, endless|lɑː.mʊ.t̪ə.nɑː.ɦiː
@@ -3929,14 +3929,14 @@ autoExpandExamples.ur = `
 لطیفہ||␣||
 لعب||␣||
 لعنت ہو||␣||
-لغت|dictionary|lʊ.§ɣə§t̪
+لغت|dictionary|lʊ.,ɣə,t̪
 لغو||␣||
 لغوی||␣||
 لفافو||␣||
 لفافوں||␣||
 لفافہ||␣||
 لفافے||␣||
-لفظ|word, term|lə§f§z||لَفْظ
+لفظ|word, term|lə,f,z||لَفْظ
 لفنگا||␣||
 لقب||␣||
 لقمان||␣||
@@ -3964,24 +3964,24 @@ autoExpandExamples.ur = `
 لوٹے||␣||
 لوک سبھا||␣||
 لوک شاہی|democracy|loːk.ʃɑː.ɦiː
-لوگ|people|l§o§g
+لوگ|people|l,o,g
 لوگو||␣||
 لوگوں||␣||
 لوہا||␣||
 لوہار||␣||
 لوہوں||␣||
 لوہے||␣||
-لَفْظ|word, term|lə§f§z||لفظ
-لَڑْکی|girl|lə§ɽ§k§iː|laṛkī|لَڑْکی लड़की||لڑکی
-لِکھنَا|to write|lɪ§kʰ§‹§nɑː§‹||لکھنا
-لِہٰذا|therefore|lɛ.§ɦɑː.§z§ɑː|lihāzā|لہذا||لہذا
+لَفْظ|word, term|lə,f,z||لفظ
+لَڑْکی|girl|lə,ɽ,k,iː|laṛkī|لَڑْکی लड़की||لڑکی
+لِکھنَا|to write|lɪ,kʰ,‹,nɑː,‹||لکھنا
+لِہٰذا|therefore|lɛ.,ɦɑː.,z,ɑː|lihāzā|لہذا||لہذا
 لڑائی||␣||
 لڑنا||␣||
 لڑکا|boy|ləɽ.kɑː
-لڑکی|girl|lə§ɽ.§k§iː|laṛkī|لَڑْکی लड़की
-لڑکیاں|girls|la§ɽ§k§iː§ɑ̃ː§‹
-لڑکیوں کا|of the girls|la§ɽ§k§iː§õ§‹§ §k§ɑː
-لڑکے|boys|lə§ɽ§k§e
+لڑکی|girl|lə,ɽ.,k,iː|laṛkī|لَڑْکی लड़की
+لڑکیاں|girls|la,ɽ,k,iː,ɑ̃ː,‹
+لڑکیوں کا|of the girls|la,ɽ,k,iː,õ,‹, ,k,ɑː
+لڑکے|boys|lə,ɽ,k,e
 لڑھکنا||␣||
 لکشادیپ||␣||
 لکشمی||␣||
@@ -3989,13 +3989,13 @@ autoExpandExamples.ur = `
 لکڑی||␣||
 لکھائی||␣||
 لکھنؤ||␣||
-لکھنا|to write|lɪ§kʰ§‹§n§ɑː||لِکھنَا
+لکھنا|to write|lɪ,kʰ,‹,n,ɑː||لِکھنَا
 لکھنوی||␣||
 لگام||␣||
 لگانا|to put, spread|lə.ɡɑː.nɑː
 لگے||␣||
 لہجہ||␣||
-لہذا|therefore|lɛ.§ɦɑː.§z§ɑː|lihāzā|لِہٰذا
+لہذا|therefore|lɛ.,ɦɑː.,z,ɑː|lihāzā|لِہٰذا
 لہرانا||␣||
 لہسن|garlic|ləɦ.sʊn
 لہنگا||␣||
@@ -4007,7 +4007,7 @@ autoExpandExamples.ur = `
 لیلۃ القدر||␣||
 لیلی||␣||
 لیموں||␣||
-لینا|to take|l§eː.§n§ɑː
+لینا|to take|l,eː.,n,ɑː
 لیون||␣||
 لیوں||␣||
 لیٹنا|to lie down, yield|leːʈ.nɑː
@@ -4053,7 +4053,7 @@ autoExpandExamples.ur = `
 مانچسٹر||␣||
 مانگ||␣||
 مانگنا||␣||
-ماں|mother|m§ãː§‹§
+ماں|mother|m,ãː,‹,
 ماہ||␣||
 ماہانہ||␣||
 ماہر|skilled, proficient|mɑː.ɦɪɾ
@@ -4082,8 +4082,8 @@ autoExpandExamples.ur = `
 متکلم||␣||
 متھرا||␣||
 مثال||␣||
-مثلا|for example|mə§sə§l§ən||مثلاً
-مثلاً|for example|mə§sə§l§ən||مثلا
+مثلا|for example|mə,sə,l,ən||مثلاً
+مثلاً|for example|mə,sə,l,ən||مثلا
 مجبور||␣||
 مجرم|criminal|mʊd͡ʒ.ɾɪm
 مجمع||␣||
@@ -4124,7 +4124,7 @@ autoExpandExamples.ur = `
 محمد|Muhammad|mʊ.ɦəm.məd̪
 محمدی||␣||
 محنت کرنا||␣||
-محنت|effort|mə§ɦ.§nə§t̪§ /meːɦ.nət̪||||x
+محنت|effort|mə,ɦ.,nə,t̪, /meːɦ.nət̪||||x
 محنتو||␣||
 محنتوں||␣||
 محنتیں||␣||
@@ -4215,7 +4215,7 @@ autoExpandExamples.ur = `
 مستقر||␣||
 مستقل||␣||
 مستونگ||␣||
-مسجد|mosque|mə§s.§d͡ʒɪ§d̪
+مسجد|mosque|mə,s.,d͡ʒɪ,d̪
 مسجدوں||␣||
 مسجدیں||␣||
 مسقط||␣||
@@ -4301,11 +4301,11 @@ autoExpandExamples.ur = `
 معاش||␣||
 معاشرہ|society|mʊ.(ʔ)ɑː.ʃɪ.ɾɑː
 معاصر||␣||
-معاف|forgiven|mʊ§ʔ§ɑː§f§ / mɑːf||||x
+معاف|forgiven|mʊ,ʔ,ɑː,f, / mɑːf||||x
 معافی||␣||
 معافیاں||␣||
 معافیوں||␣||
-معاملہ|matter, issue|mʊ.§›§ɑː§m.§l§ɑː§ / mɑːm.lɑː
+معاملہ|matter, issue|mʊ.,›,ɑː,m.,l,ɑː, / mɑːm.lɑː
 معاہدو||␣||
 معاہدوں||␣||
 معاہدہ||␣||
@@ -4356,7 +4356,7 @@ autoExpandExamples.ur = `
 مقبول||␣||
 مقبولیت||␣||
 مقتل||␣||
-مقدار|amount, quantity|mɪ§q.§d̪§ɑː§ɾ
+مقدار|amount, quantity|mɪ,q.,d̪,ɑː,ɾ
 مقدسہ||␣||
 مقدونی||␣||
 مقروض||␣||
@@ -4435,7 +4435,7 @@ autoExpandExamples.ur = `
 منع||␣||
 منقبت||␣||
 منقطع||␣||
-منٹ|minute|mɪ.§nə§ʈ
+منٹ|minute|mɪ.,nə,ʈ
 منڈا||␣||
 منڈی بہاؤالدین||␣||
 منکر||␣||
@@ -4467,7 +4467,7 @@ autoExpandExamples.ur = `
 مورمن||␣||
 موز||␣||
 موزمبیق||␣||
-موسم|season|m§ɔː.§sə§m
+موسم|season|m,ɔː.,sə,m
 موسمبی||␣||
 موسموں||␣||
 موسوم||␣||
@@ -4498,9 +4498,9 @@ autoExpandExamples.ur = `
 مویشی||␣||
 مَدِّ نَظَر|bear in mind|məd̪d̪.eː.nə.zəɾ||مد نظر
 مَقبُوض|occupied, seized|məq.buːz||مقبوض
-مَکّہ|Mecca|mə§kk§ɑː|Makkā|مکہ
-مِہربانی|kindness|mɛ§h§r§b§ɑː§n§iː||مہربانی
-مٹانا|erase, delete|mɪ.§ʈ§ɑː.§n§ɑː
+مَکّہ|Mecca|mə,kk,ɑː|Makkā|مکہ
+مِہربانی|kindness|mɛ,h,r,b,ɑː,n,iː||مہربانی
+مٹانا|erase, delete|mɪ.,ʈ,ɑː.,n,ɑː
 مٹاپا||␣||
 مٹاپوں||␣||
 مٹاپے||␣||
@@ -4511,7 +4511,7 @@ autoExpandExamples.ur = `
 مٹھی||␣||
 مچھ||␣||
 مچھر||␣||
-مچھلی|fish|mə§t͡ʃʰ.§‹§l§iː
+مچھلی|fish|mə,t͡ʃʰ.,‹,l,iː
 مژگانی||␣||
 مکان||␣||
 مکتب||␣||
@@ -4526,7 +4526,7 @@ autoExpandExamples.ur = `
 مکھیاں||␣||
 مکھیو||␣||
 مکھیوں||␣||
-مکہ|Mecca|mə§kk§ɑː|Makkā|مَکّہ
+مکہ|Mecca|mə,kk,ɑː|Makkā|مَکّہ
 مگرمچھ||␣||
 مہا||␣||
 مہابھارت|Mahabharata|mə.ɦɑː.bʱɑː.ɾət̪
@@ -4543,7 +4543,7 @@ autoExpandExamples.ur = `
 مہر||␣||
 مہران||␣||
 مہربان||␣||
-مہربانی|kindness|mɛ§h§r§b§ɑː§n§iː||مِہربانی
+مہربانی|kindness|mɛ,h,r,b,ɑː,n,iː||مِہربانی
 مہرہ||␣||
 مہلت||␣||
 مہلتوں||␣||
@@ -4611,7 +4611,7 @@ autoExpandExamples.ur = `
 نااہل قرار دینا||␣||
 ناتن||␣||
 ناتی||␣||
-ناخدا|sailor|n§ɑː.§xʊ.§d̪§ɑː
+ناخدا|sailor|n,ɑː.,xʊ.,d̪,ɑː
 ناخن||␣||
 نادار||␣||
 نادان|naive, foolish|nɑː.d̪ɑːn
@@ -4660,7 +4660,7 @@ autoExpandExamples.ur = `
 ناچ نہ جانے آنگن ٹیڑھا||␣||
 ناچ||␣||
 ناچنا||␣||
-ناک|nose|n§ɑː§k
+ناک|nose|n,ɑː,k
 ناکام||␣||
 ناکہ||␣||
 ناگ||␣||
@@ -4669,7 +4669,7 @@ autoExpandExamples.ur = `
 ناہر||␣||
 نایاب||␣||
 نباتیات|botany|nə.bɑː.t̪ɪ.jɑːt̪
-نبض|pulse, heartbeat|nə§b§z
+نبض|pulse, heartbeat|nə,b,z
 نبھانا||␣||
 نتیجتا|consequently, as a result|nə.t̪iː.d͡ʒə.t̪ən||نَتِیجَتاً
 نتیجہ||␣||
@@ -4700,14 +4700,14 @@ autoExpandExamples.ur = `
 نرگس شہلا||␣||
 نرگس||␣||
 نزاکت||␣||
-نزدیک|near|nə§z§d§iː§k
+نزدیک|near|nə,z,d,iː,k
 نزدیکی||␣||
 نزہت||␣||
 نس||␣||
 نسا||␣||
 نسائیت||␣||
 نسبتا|comparatively|nɪs.bə.t̪ən||نِسْبَتاً
-نستعلیق|nastaliq|nə§s.§t̪§ɑː.§l§iː§q
+نستعلیق|nastaliq|nə,s.,t̪,ɑː.,l,iː,q
 نسخ||␣||
 نسخہ||␣||
 نسل کشی||␣||
@@ -4719,7 +4719,7 @@ autoExpandExamples.ur = `
 نشریات|broadcasting|nəʃ.ɾɪ.jɑːt̪
 نشریہ|broadcast|nəʃ.ɾɪjːə
 نشست||␣||
-نشور|resurrection|nʊ.§ʃ§uː§ɾ
+نشور|resurrection|nʊ.,ʃ,uː,ɾ
 نشچت||␣||
 نشہ باز||␣||
 نشہ ٹوٹنا||␣||
@@ -4746,7 +4746,7 @@ autoExpandExamples.ur = `
 نظم||␣||
 نظموں||␣||
 نظمیں||␣||
-نظیف|clean, pure|nə.§z§iː§f
+نظیف|clean, pure|nə.,z,iː,f
 نعت||␣||
 نعرہ||␣||
 نعم البدل||␣||
@@ -4779,7 +4779,7 @@ autoExpandExamples.ur = `
 نمستے|greetings!|nə.məs.t̪eː
 نمونہ||␣||
 نمک||␣||
-نمکین|salty|nə§m.§k§iː§n
+نمکین|salty|nə,m.,k,iː,n
 نمی||␣||
 نن||␣||
 نند||␣||
@@ -4792,7 +4792,7 @@ autoExpandExamples.ur = `
 ننگا|naked|nə̃ŋ.ɡɑː
 ننھا||␣||
 نو آبادی||␣||
-نو|nine|n§ɔː||نَو
+نو|nine|n,ɔː||نَو
 نوآبادیاتی||␣||
 نوابشاہ||␣||
 نواسو||␣||
@@ -4809,7 +4809,7 @@ autoExpandExamples.ur = `
 نوشکی||␣||
 نوشہرہ||␣||
 نوشی||␣||
-نومبر|November|nə§və§m§bə§r
+نومبر|November|nə,və,m,bə,r
 نوواں|ninth|nə̯u.ʋɑ̃ː
 نوکر شاہی||␣||
 نوکر||␣||
@@ -4821,7 +4821,7 @@ autoExpandExamples.ur = `
 نویسندہ||␣||
 نيت||␣||
 نَتِیجَتاً|consequently, as a result|nə.t̪iː.d͡ʒə.t̪ən||نتیجتا
-نَو|nine|nɔː§‹||نو
+نَو|nine|nɔː,‹||نو
 نِسْبَتاً|comparatively|nɪs.bə.t̪ən||نسبتا
 نپولین||␣||
 نچوڑنا||␣||
@@ -4836,16 +4836,16 @@ autoExpandExamples.ur = `
 نگاہیں||␣||
 نگر||␣||
 نگرانی||␣||
-نہ|no|n§ə
+نہ|no|n,ə
 نہاد||␣||
-نہایت|remarkable|nɪ.§h§ɑː.§jə§t̪
+نہایت|remarkable|nɪ.,h,ɑː.,jə,t̪
 نہتا||␣||
 نہتی||␣||
 نہتے||␣||
 نہضت||␣||
-نہیں|no, not|nə.§ɦ§ĩː§‹
+نہیں|no, not|nə.,ɦ,ĩː,‹
 نیا سال مبارک||␣||
-نیا|new|nə.§j§ɑː
+نیا|new|nə.,j,ɑː
 نیتن یاہو||␣||
 نیر||␣||
 نیز||␣||
@@ -4869,7 +4869,7 @@ autoExpandExamples.ur = `
 وائی فائی|wifi|ʋɑː.iː.fɑː.iː
 وابستگی||␣||
 واجب القتل||␣||
-واحد|single|ʋ§ɑː.§ɦɪ§d̪
+واحد|single|ʋ,ɑː.,ɦɪ,d̪
 وادی||␣||
 وادیٔ سندھ کی تہذیب||␣||
 وار|assault|ʋɑːɾ
@@ -4880,14 +4880,14 @@ autoExpandExamples.ur = `
 واسع||␣||
 واسی||␣||
 واشک||␣||
-واضح|clear|v§ɑː§zɛ§h||واضِح
-واضِح|clear|v§ɑː§zɛ§h||واضح
-واقع|situated|v§ɑː§qe§‹||واقِع
+واضح|clear|v,ɑː,zɛ,h||واضِح
+واضِح|clear|v,ɑː,zɛ,h||واضح
+واقع|situated|v,ɑː,qe,‹||واقِع
 واقعات||␣||
 واقعہ||␣||
 واقف||␣||
-واقِع|situated|v§ɑː§qe§‹||واقع
-والد|father|ʋ§aː§lɪ§d
+واقِع|situated|v,ɑː,qe,‹||واقع
+والد|father|ʋ,aː,lɪ,d
 والدہ||␣||
 والدین||␣||
 وامن||␣||
@@ -4907,7 +4907,7 @@ autoExpandExamples.ur = `
 ودھان||␣||
 ودھوا||␣||
 ودیارتھی||␣||
-ورت|vow|v§rə§t
+ورت|vow|v,rə,t
 ورزش خانہ||␣||
 ورزش|sport, exercise|ʋəɾ.zɪʃ
 ورودھ||␣||
@@ -4922,7 +4922,7 @@ autoExpandExamples.ur = `
 وزیر خارجہ||␣||
 وزیر دفاع||␣||
 وزیر|minister|ʋə.ziːɾ
-وستو|item|ʋə§s§tu§‹||وَستُو
+وستو|item|ʋə,s,tu,‹||وَستُو
 وسنت||␣||
 وشنو|Vishnu|ʋɪʃ.nuː
 وصال|embrace|ʋɪ.sɑːl
@@ -4961,12 +4961,12 @@ autoExpandExamples.ur = `
 ونشج||␣||
 وواد||␣||
 وواہ||␣||
-وَستُو|item|ʋə§s§tu§‹||وستو
+وَستُو|item|ʋə,s,tu,‹||وستو
 وچن|promise|ʋə.t͡ʃən
 وڈھ||␣||
 وکھیات||␣||
 وگیان||␣||
-وہ|that, he, she, it|ʋ§oː|vo|वो or वह
+وہ|that, he, she, it|ʋ,oː|vo|वो or वह
 وہاڑی||␣||
 وہاں|there|ʋə.ɦɑ̃ː
 وہم||␣||
@@ -4984,8 +4984,8 @@ autoExpandExamples.ur = `
 وے||␣||
 ٹائٹ||␣||
 ٹالنا||␣||
-ٹان٘گ|leg|t§ãː§‹§g| ṭāṅg |ٹان٘گ  टांग||ٹانگ
-ٹانگ|leg|t§ãː§‹§g|ṭāṅg|ٹان٘گ  टांग
+ٹان٘گ|leg|t,ãː,‹,g| ṭāṅg |ٹان٘گ  टांग||ٹانگ
+ٹانگ|leg|t,ãː,‹,g|ṭāṅg|ٹان٘گ  टांग
 ٹانگائل ضلع||␣||
 ٹانگوں||␣||
 ٹانگیں||␣||
@@ -5003,13 +5003,13 @@ autoExpandExamples.ur = `
 ٹوٹنا||␣||
 ٹوٹی||␣||
 ٹوٹے||␣||
-ٹوپی|hat|ʈ§oː§p§iː
+ٹوپی|hat|ʈ,oː,p,iː
 ٹٹی||␣||
 ٹکر|collision, crash|ʈək.kəɾ
 ٹکراو|collision, bump|ʈək.ɾɑːʋ
 ٹکٹ||␣||
 ٹھرکی||␣||
-ٹھنڈا|cold|ʈʰə§‹§n.§ɖ§ɑː
+ٹھنڈا|cold|ʈʰə,‹,n.,ɖ,ɑː
 ٹھنگنا||␣||
 ٹھوس|solid, substantial|ʈʰoːs
 ٹھوڑی||␣||
@@ -5030,10 +5030,10 @@ autoExpandExamples.ur = `
 ٹیچروں||␣||
 ٹیکسلا||␣||
 ٹیکسی||␣||
-پ	ان|dish|pə§k§w§ɑː§n
+پ	ان|dish|pə,k,w,ɑː,n
 پا خانہ|toilet|pɑː.xɑː.nɑː
-پاؤُں|foot|p§ɑ̃ː.§ũː§‹|pāū̃|پاؤں||پاؤں
-پاؤں|foot|p§ɑ̃ː.§ũː§‹|pāū̃|پاؤُں
+پاؤُں|foot|p,ɑ̃ː.,ũː,‹|pāū̃|پاؤں||پاؤں
+پاؤں|foot|p,ɑ̃ː.,ũː,‹|pāū̃|پاؤُں
 پائخانہ||␣||
 پائپ||␣||
 پاخانہ||␣||
@@ -5060,7 +5060,7 @@ autoExpandExamples.ur = `
 پانچواں|fifth|pɑ̃ːt͡ʃ.ʋɑ̃ː
 پانڈو||␣||
 پانہ||␣||
-پانی|water|p§ɑː.§n§iː||پَانِی
+پانی|water|p,ɑː.,n,iː||پَانِی
 پاٹھک||␣||
 پاپ||␣||
 پاک روح||␣||
@@ -5203,7 +5203,7 @@ autoExpandExamples.ur = `
 پوجنا||␣||
 پوجک||␣||
 پور||␣||
-پورا|absolutely|p§uː§r§ɑː||پوٗرا / پورا
+پورا|absolutely|p,uː,r,ɑː||پوٗرا / پورا
 پوربی||␣||
 پوست||␣||
 پوشاک||␣||
@@ -5214,10 +5214,10 @@ autoExpandExamples.ur = `
 پون|wind|pə.ʋən
 پونچھ||␣||
 پونچھنا||␣||
-پوٗرَا|absolutely|p§uː§rɑː§‹||پورا
+پوٗرَا|absolutely|p,uː,rɑː,‹||پورا
 پوپ||␣||
 پوچھنا||␣||
-پُورَا|absolutely|puː§‹§rɑː§‹||پورا
+پُورَا|absolutely|puː,‹,rɑː,‹||پورا
 پٹاخا||␣||
 پٹل|roof, thatch|pə.ʈəl
 پٹواری||␣||
@@ -5243,7 +5243,7 @@ autoExpandExamples.ur = `
 پکار||␣||
 پکارنا||␣||
 پکنا||␣||
-پکوان|food dish|pə§k§w§ɑː§n
+پکوان|food dish|pə,k,w,ɑː,n
 پکڑنا||␣||
 پگار||␣||
 پھانسی||␣||
@@ -5253,7 +5253,7 @@ autoExpandExamples.ur = `
 پھدی||␣||
 پھرنا||␣||
 پھریرے||␣||
-پھل|fruit|pʰə§‹§l
+پھل|fruit|pʰə,‹,l
 پھلنا||␣||
 پھول|flower, blossom|pʰuːl
 پھولو||␣||
@@ -5264,7 +5264,7 @@ autoExpandExamples.ur = `
 پھیلاو|dissemination, spread|pʰɛː.lɑːʋ
 پھینکنا||␣||
 پہ||␣||
-پہاڑ|mountain|pə.§ɦ§ɑː§ɽ
+پہاڑ|mountain|pə.,ɦ,ɑː,ɽ
 پہلا|first|pəɦ.lɑː
 پہلوان|wrestler|pəɦ.lwən
 پہلی||␣||
@@ -5283,7 +5283,7 @@ autoExpandExamples.ur = `
 پیاس|thirst|pjɑːs
 پیاسا||␣||
 پیتل||␣||
-پیج|solemn declaration|p§ɛː§d͡ʒ
+پیج|solemn declaration|p,ɛː,d͡ʒ
 پیدا||␣||
 پیدائش||␣||
 پیر||␣||
@@ -5316,7 +5316,7 @@ autoExpandExamples.ur = `
 چادر||␣||
 چار مغز||␣||
 چار مینار||␣||
-چار|four|t͡ʃ§ɑː§ɾ
+چار|four|t͡ʃ,ɑː,ɾ
 چارسدہ||␣||
 چاشت||␣||
 چاشنی|syrup|t͡ʃɑːʃ.niː
@@ -5341,14 +5341,14 @@ autoExpandExamples.ur = `
 چاہتیں||␣||
 چاہنا||␣||
 چاہے||␣||
-چای|tea|t͡ʃ§ɑː§j
-چاۓ|tea|t͡ʃ§ɑː.§–§eː
+چای|tea|t͡ʃ,ɑː,j
+چاۓ|tea|t͡ʃ,ɑː.,–,eː
 چتا||␣||
 چتاؤ||␣||
 چتاؤں||␣||
 چتائیں||␣||
 چتکان||␣||
-چراغ|lamp, light|t͡ʃɪ.§ɾ§ɑː§ɣ
+چراغ|lamp, light|t͡ʃɪ.,ɾ,ɑː,ɣ
 چراک||␣||
 چربی|grease, lard|t͡ʃəɾ.biː
 چرخہ||␣||
@@ -5374,7 +5374,7 @@ autoExpandExamples.ur = `
 چلنا||␣||
 چلون||␣||
 چلچتر|movie|t͡ʃəl.t͡ʃɪt̪.ɾə
-چلیے|come on|ʧa§l§iː§e
+چلیے|come on|ʧa,l,iː,e
 چماٹ||␣||
 چمبیلی||␣||
 چمن||␣||
@@ -5468,7 +5468,7 @@ autoExpandExamples.ur = `
 چھونا|to touch, feel|t͡ʃʰuː.nɑː
 چھونگ چھنگ||␣||
 چھوٹ|escape|t͡ʃʰuːʈ
-چھوٹا|small, little|t͡ʃʰ§‹§oː.§ʈ§ɑː|choṭā|छोटा
+چھوٹا|small, little|t͡ʃʰ,‹,oː.,ʈ,ɑː|choṭā|छोटा
 چھوٹنا||␣||
 چھوڑ دینا||␣||
 چھٹا|unrestrained|t͡ʃʰʊʈ.ʈɑː
@@ -5492,7 +5492,7 @@ autoExpandExamples.ur = `
 چہرہ||␣||
 چیخ||␣||
 چیرنا||␣||
-چیز|thing, object|t͡ʃ§iː§z
+چیز|thing, object|t͡ʃ,iː,z
 چیزو||␣||
 چیزوں||␣||
 چیزیں||␣||
@@ -5526,7 +5526,7 @@ autoExpandExamples.ur = `
 ڈنڈا||␣||
 ڈنکرک||␣||
 ڈنکی||␣||
-ڈوری|rope, cord|ɖ§oː.§ɾ§iː
+ڈوری|rope, cord|ɖ,oː.,ɾ,iː
 ڈونگا||␣||
 ڈوور||␣||
 ڈچ||␣||
@@ -5542,9 +5542,9 @@ autoExpandExamples.ur = `
 ڈھول||␣||
 ڈھولک||␣||
 ڈھونڈنا||␣||
-ڈھونڈھ|seeking, search|ɖʱ§‹§uː§ɳ§ɖʱ§‹
+ڈھونڈھ|seeking, search|ɖʱ,‹,uː,ɳ,ɖʱ,‹
 ڈھيٹ||␣||
-ڈھيٹھ|impudent|ɖʱ§‹§iː§ʈʰ§‹
+ڈھيٹھ|impudent|ɖʱ,‹,iː,ʈʰ,‹
 ڈھکن||␣||
 ڈھینچوں||␣||
 ڈہرکی||␣||
@@ -5559,12 +5559,12 @@ autoExpandExamples.ur = `
 ڈیٹابیس||␣||
 ڈیٹھ||␣||
 ژالہ باری||␣||
-ژالہ|hail, dew|ʒ§ɑː.§lə§–
+ژالہ|hail, dew|ʒ,ɑː.,lə,–
 ژوب||␣||
 ژیان||␣||
 ژیاں||␣||
-کئی|several|k§a§iː
-کا|of|k§ɑː
+کئی|several|k,a,iː
+کا|of|k,ɑː
 کائنات||␣||
 کائناتو||␣||
 کائناتوں||␣||
@@ -5616,9 +5616,9 @@ autoExpandExamples.ur = `
 کبھو||␣||
 کبھی||␣||
 کبیر||␣||
-کتا|dog|kʊ§t̪.t̪§ɑː||کُتّا
+کتا|dog|kʊ,t̪.t̪,ɑː||کُتّا
 کتاب مقدس|Bible|kɪ.t̪ɑːb.eː.mʊ.qəd̪.d̪əs||کتابِ مقدس
-کتاب|book|kɪ.§t̪§ɑː§b
+کتاب|book|kɪ.,t̪,ɑː,b
 کتابِ مقدس|Bible|kɪ.t̪ɑːb.eː.mʊ.qəd̪.d̪əs||کتاب مقدس
 کتب خانہ|library, bookstore|kʊ.t̪ʊb.xɑː.nɑː
 کتراپی|wherever|kʊt̪.ɾɑː.piː
@@ -5655,7 +5655,7 @@ autoExpandExamples.ur = `
 کرو کشیتر||␣||
 کرو||␣||
 کروانا||␣||
-کروں|I may do|ka§r§ũː§‹§
+کروں|I may do|ka,r,ũː,‹,
 کرکٹ||␣||
 کری|elephant|kə.ɾiː
 کریم||␣||
@@ -5678,7 +5678,7 @@ autoExpandExamples.ur = `
 کشیدگی|tension, stress|kə.ʃiːd̪.ɡiː
 کعبہ|Kaaba|kɑː.bɑː
 کفارہ||␣||
-کل|yesterday|ka§l
+کل|yesterday|ka,l
 کلا کار||␣||
 کلائی||␣||
 کلائیاں||␣||
@@ -5716,12 +5716,12 @@ autoExpandExamples.ur = `
 کمرے||␣||
 کمزور||␣||
 کمزوری||␣||
-کمل|lotus, lily|kə.§mə§l
+کمل|lotus, lily|kə.,mə,l
 کملا||␣||
 کملائی||␣||
-کمپ|trembling, shaking|kə§m§p
-کمپت|trembling, shaking|kə§m.§pɪ§t̪
-کمپن|vibration, shaking|kə§m.§pə§n
+کمپ|trembling, shaking|kə,m,p
+کمپت|trembling, shaking|kə,m.,pɪ,t̪
+کمپن|vibration, shaking|kə,m.,pə,n
 کمپیوٹر||␣||
 کمھلانا||␣||
 کمھڑا||␣||
@@ -5753,11 +5753,11 @@ autoExpandExamples.ur = `
 کنیز||␣||
 کنیسہ||␣||
 کهان|mine, quarry|kʰɑːn
-کو|on|k§oː
-کوئلہ|coal|k§o§ɪ§l§ɑː
+کو|on|k,oː
+کوئلہ|coal|k,o,ɪ,l,ɑː
 کوئٹہ||␣||
 کوئی مسئلہ نہیں||␣||
-کوئی|someone|k§o§–§iː
+کوئی|someone|k,o,–,iː
 کوا||␣||
 کوت دیواغ||␣||
 کوتا|poetry, poem|kə.ʋɪ.t̪ɑː
@@ -5787,13 +5787,13 @@ autoExpandExamples.ur = `
 کویت||␣||
 کوے||␣||
 کَان٘پْنَا|to tremble|kɑ̃ːp.nɑː||کانپنا
-کَہنا|to say, speak|kɛ§ɦ§n§ɑː|kahnā|کہنا
-کَیسَا|how|kɛː§‹§sɑː§‹||کیسا
-کُتّا|dog|kʊ§t̪.t̪§ɑː||کتا
+کَہنا|to say, speak|kɛ,ɦ,n,ɑː|kahnā|کہنا
+کَیسَا|how|kɛː,‹,sɑː,‹||کیسا
+کُتّا|dog|kʊ,t̪.t̪,ɑː||کتا
 کٹھل||␣||
 کٹھور||␣||
 کٹی|waist|kə.ʈiː
-کپاس|cotton|kə.§p§ɑː§s
+کپاس|cotton|kə.,p,ɑː,s
 کپاسی||␣||
 کپتان||␣||
 کپوت||␣||
@@ -5813,13 +5813,13 @@ autoExpandExamples.ur = `
 کھاتے||␣||
 کھاد||␣||
 کھان||␣||
-کھانا|to eat|kʰ§‹§ɑː.§n§ɑː
+کھانا|to eat|kʰ,‹,ɑː.,n,ɑː
 کھانگ||␣||
 کھانی|mine|kʰɑː.niː
 کھاگ||␣||
 کھجلی|itch|kʰʊd͡ʒ.liː/kʰə.d͡ʒʊ.liː
 کھجور|date (fruit)|kʰə.d̪͡ʒʊːɾ
-کھدیوت|firefly|kʰə§‹§d̪.§j§oː§t̪
+کھدیوت|firefly|kʰə,‹,d̪.,j,oː,t̪
 کھر||␣||
 کھرجو||␣||
 کھرنا||␣||
@@ -5860,13 +5860,13 @@ autoExpandExamples.ur = `
 کھیلا||␣||
 کھیلنا||␣||
 کھینچنا||␣||
-کہ|that|k§eː|kih/ke|कि
+کہ|that|k,eː|kih/ke|कि
 کہانی|story|kə.ɦɑː.niː
 کہاوت|proverb|kə.ɦɑː.ʋət̪
 کہاں|where|kəhɑːn
 کہر||␣||
 کہرا|thick fog|kʊɦ.ɾɑː
-کہنا|to say, speak|kɛ§ɦ§n§ɑː|kahnā|کَہنا
+کہنا|to say, speak|kɛ,ɦ,n,ɑː|kahnā|کَہنا
 کہنی||␣||
 کہکشاؤں||␣||
 کہکشائیں||␣||
@@ -5875,11 +5875,11 @@ autoExpandExamples.ur = `
 کی طرف||␣||
 کی||␣||
 کیا حال ہے||␣||
-کیا|question marker|k§j§ɑː
+کیا|question marker|k,j,ɑː
 کیاری||␣||
 کیتھولک||␣||
 کیرلا||␣||
-کیسا|how|k§ɛː§s§ɑː||کَیسَا
+کیسا|how|k,ɛː,s,ɑː||کَیسَا
 کیسے||␣||
 کیش||␣||
 کیف||␣||
@@ -5889,7 +5889,7 @@ autoExpandExamples.ur = `
 کیلکولیٹر||␣||
 کیلی||␣||
 کیلے||␣||
-کیمرہ|camera|k§ɛː§m.§ɾ§ɑː
+کیمرہ|camera|k,ɛː,m.,ɾ,ɑː
 کیمیا|chemistry|kiː.mɪ.jɑː
 کیمیائی||␣||
 کینسر||␣||
@@ -5909,15 +5909,15 @@ autoExpandExamples.ur = `
 کے بنا|without|keː‿bɪ.nɑː
 کے ساتھ||␣||
 کے||␣||
-گئے|they went|ga§–§e
-گاؤں|village, hamlet|ɡ§ɑː.§õː§‹|gāõ|گَاؤں
-گائے|cow|ɡ§ɑː.§–§eː
+گئے|they went|ga,–,e
+گاؤں|village, hamlet|ɡ,ɑː.,õː,‹|gāõ|گَاؤں
+گائے|cow|ɡ,ɑː.,–,eː
 گاتر|limb|ɡɑːt̪.ɾᵊ
 گاجر||␣||
-گاری|car|gɑː§‹§riː§‹||گَارِی
+گاری|car|gɑː,‹,riː,‹||گَارِی
 گال||␣||
 گالی||␣||
-گام|step|g§ɑː§m
+گام|step|g,ɑː,m
 گان||␣||
 گانا|song|ɡɑː.nɑː
 گانجا||␣||
@@ -5929,7 +5929,7 @@ autoExpandExamples.ur = `
 گانڈو||␣||
 گانے||␣||
 گاو||␣||
-گاڑھا|thick|ɡ§ɑː.§ɽʱ§‹§ɑː
+گاڑھا|thick|ɡ,ɑː.,ɽʱ,‹,ɑː
 گاڑی|car|ɡɑː.ɽiː
 گاہے بہ گاہے|from time to time|ɡɑː.ɦeː‿bə‿.ɡɑː.ɦeː
 گایک||␣||
@@ -5937,7 +5937,7 @@ autoExpandExamples.ur = `
 گج||␣||
 گجر ماشکئی||␣||
 گجرا||␣||
-گجرات|Gujarat|ɡʊ.§d͡ʒə.§ɾ§ɑː§t̪
+گجرات|Gujarat|ɡʊ.,d͡ʒə.,ɾ,ɑː,t̪
 گجراتی||␣||
 گجروں||␣||
 گجرے||␣||
@@ -5961,8 +5961,8 @@ autoExpandExamples.ur = `
 گربھ پات||␣||
 گرج||␣||
 گرجا||␣||
-گرجنا|to thunder|ɡə.§ɾə§d͡ʒ.§n§ɑː
-گردن|neck|ɡə§ɾ.§d̪ə§n
+گرجنا|to thunder|ɡə.,ɾə,d͡ʒ.,n,ɑː
+گردن|neck|ɡə,ɾ.,d̪ə,n
 گردنوں||␣||
 گردنیں||␣||
 گردوارہ||␣||
@@ -5981,7 +5981,7 @@ autoExpandExamples.ur = `
 گرنتھ||␣||
 گرو||␣||
 گروہ||␣||
-گرڈ|eagle|ɡə.§ɾʊ§ɖ
+گرڈ|eagle|ɡə.,ɾʊ,ɖ
 گرہن||␣||
 گزارش||␣||
 گزارہ||␣||
@@ -5991,10 +5991,10 @@ autoExpandExamples.ur = `
 گشتیوں||␣||
 گفتار||␣||
 گفتگو||␣||
-گل|rose|gu§l
+گل|rose|gu,l
 گلاب||␣||
 گلابی|pink|ɡʊ.lɑː.biː
-گلاس|glass|gi§l§ɑː§s
+گلاس|glass|gi,l,ɑː,s
 گلال||␣||
 گلانی||␣||
 گلستان||␣||
@@ -6023,7 +6023,7 @@ autoExpandExamples.ur = `
 گنبد||␣||
 گنبذ||␣||
 گنبھیر||␣||
-گنت|mathematics|ɡə.§nɪ.§t̪ə
+گنت|mathematics|ɡə.,nɪ.,t̪ə
 گنتی|counting|ɡɪn.t̪iː
 گنجا||␣||
 گندمی||␣||
@@ -6033,7 +6033,7 @@ autoExpandExamples.ur = `
 گنگا جل||␣||
 گنگا||␣||
 گنی||␣||
-گنیش|Ganesha|ɡə.§ɳ§eː§ʃ
+گنیش|Ganesha|ɡə.,ɳ,eː,ʃ
 گوا||␣||
 گوادر||␣||
 گوبھی||␣||
@@ -6053,8 +6053,8 @@ autoExpandExamples.ur = `
 گولی||␣||
 گوٹھ||␣||
 گوگرد|sulfur|ɡoː.ɡɪɾd̪
-گَاؤں|village, hamlet|ɡ§ɑː.§õː§‹|gāõ|گاؤں||گاؤں
-گَارِی|car|gɑː§‹§riː§‹||گاری||گاری
+گَاؤں|village, hamlet|ɡ,ɑː.,õː,‹|gāõ|گاؤں||گاؤں
+گَارِی|car|gɑː,‹,riː,‹||گاری||گاری
 گِدّھ|vulture|ɡɪd̪d̪ʱ||گدھ
 گٹار||␣||
 گٹھری||␣||
@@ -6063,8 +6063,8 @@ autoExpandExamples.ur = `
 گڑ||␣||
 گڑھ||␣||
 گڑیا||␣||
-گگن|sky|ɡə.§ɡə§n
-گھاس|grass|ɡʱ§‹§aː§s
+گگن|sky|ɡə.,ɡə,n
+گھاس|grass|ɡʱ,‹,aː,s
 گھام||␣||
 گھانا||␣||
 گھاو|wound|ɡʱɑːʋ
@@ -6118,7 +6118,7 @@ autoExpandExamples.ur = `
 گینڈا||␣||
 گیہوں|wheat|ɡeː.ɦũː
 گے|gay|ɡeː
-ھاں|yes|ɦ§ɑ̃ː§‹
+ھاں|yes|ɦ,ɑ̃ː,‹
 ہاتھ میں صفائی ہونا||␣||
 ہاتھ|hand|ɦɑːt̪ʰ
 ہاتھوں||␣||
@@ -6131,13 +6131,13 @@ autoExpandExamples.ur = `
 ہانڈیاں||␣||
 ہانڈیو||␣||
 ہانڈیوں||␣||
-ہانک|call aloud|ɦ§ɑ̃ː§‹§k||ہَان٘ک
+ہانک|call aloud|ɦ,ɑ̃ː,‹,k||ہَان٘ک
 ہانکنا|to bawl|ɦɑːŋ.knɑː
 ہانگ کانگ||␣||
 ہانیہ||␣||
 ہاٹ||␣||
 ہاں جی||␣||
-ہاں|yes|ɦ§ɑ̃ː§‹
+ہاں|yes|ɦ,ɑ̃ː,‹
 ہتھیار|weapon|ɦə.t̪ʰɪ.jɑːɾ
 ہتھیلی|palm|ɦə.t̪ʰeː.liː
 ہتھیلیاں||␣||
@@ -6197,7 +6197,7 @@ autoExpandExamples.ur = `
 ہمجنسیت||␣||
 ہمسفر||␣||
 ہمنوائی|compatibility|ɦəm‿nə.ʋɑː.iː
-ہمیشگی|eternity|ɦə.§m§eː§ʃ.§ɡ§iː
+ہمیشگی|eternity|ɦə.,m,eː,ʃ.,ɡ,iː
 ہمیشہ||␣||
 ہمیں||␣||
 ہند کی||␣||
@@ -6205,7 +6205,7 @@ autoExpandExamples.ur = `
 ہندسوں||␣||
 ہندسہ||␣||
 ہندسے||␣||
-ہندو|Hindu|hɪ§n§d§uː||ہِنْدوٗ / ہِنْدُو
+ہندو|Hindu|hɪ,n,d,uː||ہِنْدوٗ / ہِنْدُو
 ہندوتوا||␣||
 ہندوستان||␣||
 ہندوستانی|Indian person|ɦɪn.d̪ʊs.t̪ɑː.niː
@@ -6250,19 +6250,19 @@ autoExpandExamples.ur = `
 ہونٹھ|lip|ɦõːʈʰ
 ہوٹل|hotel|ɦoː.ʈəl
 ہوں||␣||
-ہَان٘ک|call aloud|ɦɑ̃ː§‹§‹§k||ہانک
-ہَے|is|hɛː§‹|hai|ہے
-ہِنْدوٗ|Hindu|hɪ§n§d§uː||ہندو
-ہِنْدُو|Hindu|hɪ§n§duː§‹||ہندو
+ہَان٘ک|call aloud|ɦɑ̃ː,‹,‹,k||ہانک
+ہَے|is|hɛː,‹|hai|ہے
+ہِنْدوٗ|Hindu|hɪ,n,d,uː||ہندو
+ہِنْدُو|Hindu|hɪ,n,duː,‹||ہندو
 ہِکَّا|hiccup|ɦɪk.kɑː||ہکا
 ہٹا کٹا|robust, sturdy|ɦəʈ.ʈɑː.kəʈ.ʈɑː
 ہچکنا||␣||
 ہچکی|hiccup|ɦɪt͡ʃ.kiː
-ہڈی|bone|ɦə§ɖ.ɖ§iː
+ہڈی|bone|ɦə,ɖ.ɖ,iː
 ہڑبڑاہٹ||␣||
 ہکا|hiccup|ɦɪk.kɑː||ہِکَّا
 ہی||␣||
-ہیئت|astronomy|h§ɛː§ə§t
+ہیئت|astronomy|h,ɛː,ə,t
 ہیجڑا||␣||
 ہیر||␣||
 ہیرا||␣||
@@ -6271,7 +6271,7 @@ autoExpandExamples.ur = `
 ہینسنا||␣||
 ہیک|hiccup|ɦiːk
 ہیں||␣||
-ہے|is|h§ɛː|hai|ہَے
+ہے|is|h,ɛː|hai|ہَے
 یا|oh!|jɑː
 یات||␣||
 یاتری||␣||
@@ -6280,7 +6280,7 @@ autoExpandExamples.ur = `
 یادو||␣||
 یادوں||␣||
 یادیں||␣||
-یار|pal, friend|j§ɑː§ɾ
+یار|pal, friend|j,ɑː,ɾ
 یاسمین||␣||
 یاقوت||␣||
 یال||␣||
@@ -6300,8 +6300,8 @@ autoExpandExamples.ur = `
 یعقوب||␣||
 یعنی||␣||
 یقین||␣||
-یقینا|indeed, certainly|jə.§q§iː.§nə§n||یقیناً यक़ीनन
-یقیناً|indeed, certainly|jə.§q§iː.§nə§n||یقینا यक़ीनन||یقینا
+یقینا|indeed, certainly|jə.,q,iː.,nə,n||یقیناً यक़ीनन
+یقیناً|indeed, certainly|jə.,q,iː.,nə,n||یقینا यक़ीनन||یقینا
 یقیں||␣||
 یلغار||␣||
 یلغارو||␣||
@@ -6348,13 +6348,13 @@ autoExpandExamples.ur = `
 یہودیت||␣||
 یہودیہ||␣||
 ۲٬۵۲۴٫۲۳|2,524.23
-اُردُو حُرُوفِ تَہَجِّی|Urdu alphabet|u§r§d§uː§ §ɦu§r§uː§f ɛ§ §tə§ɦɛ§d͡ʒ§iː||اردو حروف تہجی
+اُردُو حُرُوفِ تَہَجِّی|Urdu alphabet|u,r,d,uː, ,ɦu,r,uː,f ɛ, ,tə,ɦɛ,d͡ʒ,iː||اردو حروف تہجی
 اردو حروف تہجی|Urdu alphabet|urduː ɦuruːf ɛ təɦɛd͡ʒiː||اُردُو حُرُوفِ تَہَجِّی
 
 
 
 
-کہہ|say|kɛ§ɦ§–||||x
+کہہ|say|kɛ,ɦ,–||||x
 اُردُو|Urdu language|ˈʊɾduː|urdū
 
 

@@ -6,13 +6,13 @@
 
 
 var collections = [
-{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(َ|ُ|ٚ|ِ|ٕ|ٖ|ٟ|ٓ|ٔ|ٗ)' },
-{ symbol:'Ⓥ', desc:'Independent vowels', chars:'(آ|أ|إ|ا|ٲ|ۄ|ؤ|ۂ|ے)' },
-{ symbol:'Ⓒ', desc:'All consonants', chars:'(ؠ|ب|ت|ج|د|ر|ز|س|ش|ل|م|ن|و|ٹ|پ|چ|ڈ|ژ|ک|گ|ں|ھ|ہ|ی|ط|ق|خ|غ|ع|ف|ذ|ث|ص|ض|ظ|ح|ڑ)' },
-{ symbol:'🅒', desc:'Consonants without vowels', chars:'(ؠ|ب|ت|ج|د|ر|ز|س|ش|ل|م|ن|ٹ|پ|چ|ڈ|ژ|ک|گ|ں|ھ|ہ|ط|ق|خ|غ|ع|ف|ذ|ث|ص|ض|ظ|ح|ڑ)' },
-{ symbol:'Ⓑ', desc:'Basic consonants', chars:'(ؠ|ب|ت|ج|د|ر|ز|س|ش|ل|م|ن|و|ٹ|پ|چ|ڈ|ژ|ک|گ|ں|ھ|ہ|ی)' },
-{ symbol:'Ⓔ', desc:'Extended consonants', chars:'(ط|ق|خ|غ|ع|ف|ذ|ث|ص|ض|ظ|ح|ڑ)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
-{ symbol:'🆅', desc:'Virama', chars:'(\u094D)' },
-{ symbol:'🅲', desc:'IPA consonants', chars:'(ŋ|k|kʰ|ɡ|ɡʱ|ŋ|t͡ʃ|t͡ʃʰ|d͡ʒ|ɟʰ|n|ʈ|ʈʰ|ɖ|ɖʱ|ɳ|t|tʰ|d|dʱ|p|pʰ|b|bʱ|m|j|r|l|v|w|ʃ|ʂ|s|h|z)' },
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'[َُِٕٖٟٚٓٔٗ]' },
+{ symbol:'Ⓥ', desc:'Independent vowels', chars:'[آأإاٲۄؤۂے]' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'[ؠبتجدرزسشلمنوٹپچڈژکگںھہیطقخغعفذثصضظحڑ]' },
+{ symbol:'🅒', desc:'Consonants without vowels', chars:'[ؠبتجدرزسشلمنٹپچڈژکگںھہطقخغعفذثصضظحڑ]' },
+{ symbol:'Ⓑ', desc:'Basic consonants', chars:'[ؠبتجدرزسشلمنوٹپچڈژکگںھہی]' },
+{ symbol:'Ⓔ', desc:'Extended consonants', chars:'[طقخغعفذثصضظحڑ]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D\u2067\u202B\u2066\u202A\u2068\u2069\u202C\u200F\u200E\u061C\u034F]' },
+{ symbol:'🆅', desc:'Virama', chars:'[\u094D]' },
+{ symbol:'🅲', desc:'IPA consonants', chars:'[ŋkkʰɡɡʱŋt͡ʃt͡ʃʰd͡ʒɟʰnʈʈʰɖɖʱɳttʰddʱppʰbbʱmjrlvwʃʂshz]' },
 ]

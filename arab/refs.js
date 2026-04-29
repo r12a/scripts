@@ -29,6 +29,7 @@ reflist = {
 "authors": "Bernard Comrie",
 "title":"The World's Major Languages",
 "isbn":"978-1138184824",
+"url":"#refs",
 "lang": new Set(['ha','ff','ps']),
 },
 
@@ -285,12 +286,10 @@ reflist = {
 
 "u": {
 "authors": "Unicode Consortium",
-"title":"The Unicode Standard, Version 13.0",
-"sub":"Chapter 9.2: Middle East-I, Arabic",
-"pages":"365-389",
-"isbn":"978-1-936213-16-0",
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf",
-"lang": new Set(['ar','pes','ha','ks','ur']),
+"title":"The Unicode Standard, Version 17.0",
+"sub":"Chapter 9.2: West Asia-I, Arabic",
+"url":"https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-9/#G20596",
+"lang": new Set(['ar','pes','ha','ks','ur','ckb']),
 "reviewed":true
 },
 

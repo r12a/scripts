@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -26,10 +26,10 @@ autoExpandExamples.ar = `
 
 
 
- أَرْز|cedar|ʔa§r§z|ʾarz|أرز
+ أَرْز|cedar|ʔa,r,z|ʾarz|أرز
 *روز||␣|
 ||␣|
-آب|August|ʔaː§b|ʾāb
+آب|August|ʔaː,b|ʾāb
 آبد||
 آبلة||␣|
 آبيس||␣
@@ -37,7 +37,7 @@ autoExpandExamples.ar = `
 آتشيوت||␣
 آتون||␣
 آتى||␣|
-آثار|effects|ʔaː.§θaː§‹§r
+آثار|effects|ʔaː.,θaː,‹,r
 آثر||␣|
 آجر||␣|
 آح||␣|
@@ -121,11 +121,11 @@ autoExpandExamples.ar = `
 آنث||␣|
 آنذاك||␣|
 آنس||␣|
-آنسة|young woman|ʔaː§.ni§.sa§–|ʔānisa|آنِسَة
+آنسة|young woman|ʔaː,.ni,.sa,–|ʔānisa|آنِسَة
 آنك||␣
 آنى||␣|
 آني||␣
-آنِسَة|young woman|ʔaː§.ni§.sa§–|ʔānisa|آنسة
+آنِسَة|young woman|ʔaː,.ni,.sa,–|ʔānisa|آنسة
 آه||␣|
 آهات||␣|
 آوى||␣|
@@ -234,7 +234,7 @@ autoExpandExamples.ar = `
 أبى إلا||␣|
 أبى||␣|
 أبيدجان||␣
-أبيض|white|ʔa§b.§ja§dˤ|ʾabyaḍ|أَبْيَض
+أبيض|white|ʔa,b.,ja,dˤ|ʾabyaḍ|أَبْيَض
 أبيل||␣|
 أتاح||␣
 أتان||␣|
@@ -333,7 +333,7 @@ autoExpandExamples.ar = `
 أجهض||␣
 أجهل||␣|
 أجود||␣|
-أجور|wages|ʔu.§d͡ʒ§uː§r|ʾujūr|أُجُور‎
+أجور|wages|ʔu.,d͡ʒ,uː,r|ʾujūr|أُجُور‎
 أجوف||␣
 أجيال||
 أجير||␣|
@@ -417,7 +417,7 @@ autoExpandExamples.ar = `
 أخصب||␣|
 أخصر||␣|
 أخصى||␣|
-أخضر|green|ʔa§x.§dˤa§r|ʾaḵḍar|أَخْضَر
+أخضر|green|ʔa,x.,dˤa,r|ʾaḵḍar|أَخْضَر
 أخضع||␣|
 أخضل||␣|
 أخطأ||␣
@@ -518,7 +518,7 @@ autoExpandExamples.ar = `
 أذن الفيل||␣|
 أذن القط||␣|
 أذن في مالطا||␣|
-أذن|ear|ʔʊ.§ðʊ§n|ʾuḏun|أُذُن#أُذْن
+أذن|ear|ʔʊ.,ðʊ,n|ʾuḏun|أُذُن#أُذْن
 أذنب||␣|
 أذهب||␣|
 أذوى||␣|
@@ -570,7 +570,7 @@ autoExpandExamples.ar = `
 أردني||␣
 أردواز||␣|
 أردى||␣|
-أرز|cedar|ʔa§r§z|ʾarz| أَرْز
+أرز|cedar|ʔa,r,z|ʾarz| أَرْز
 أرزة||␣|
 أرسب||␣|
 أرستقراطي||␣|
@@ -593,7 +593,7 @@ autoExpandExamples.ar = `
 أرشيف||␣|
 أرصفة||
 أرض إسرائيل||␣|
-أرض|earth|ʔa§r§dˤ|ʾarḍ|أَرْض
+أرض|earth|ʔa,r,dˤ|ʾarḍ|أَرْض
 أرضة||␣
 أرضع||␣|
 أرضى||␣|
@@ -805,7 +805,7 @@ autoExpandExamples.ar = `
 أشجر||␣|
 أشجع||␣|
 أشحب||␣|
-أشخص|to dispatch|ʔa§ʃ.§xa.§sˤa|ʾašḵaṣa|أَشْخَصَ
+أشخص|to dispatch|ʔa,ʃ.,xa.,sˤa|ʾašḵaṣa|أَشْخَصَ
 أشد||␣|
 أشرب||␣|
 أشرس||␣|
@@ -1110,7 +1110,7 @@ autoExpandExamples.ar = `
 أفظع||␣|
 أفعل التفضيل||␣|
 أفعل||␣|
-أفعى|snake|ʔa§f.§ʕan§–|ʾafʿan|أَفْعًى
+أفعى|snake|ʔa,f.,ʕan,–|ʾafʿan|أَفْعًى
 أفغان||␣|
 أفغانستان||␣
 أفغاني||␣
@@ -1198,7 +1198,7 @@ autoExpandExamples.ar = `
 أكب||␣
 أكبر||␣|
 أكتب||␣|
-أكتوبر|October|o§k.§toː§‹§bɪ§r|(ʔ)o̞kto̞ːbar|أُكتُوبَر
+أكتوبر|October|o,k.,toː,‹,bɪ,r|(ʔ)o̞kto̞ːbar|أُكتُوبَر
 أكثر||␣|
 أكثرية||␣
 أكد||␣|
@@ -1316,7 +1316,7 @@ autoExpandExamples.ar = `
 أما||␣
 أمات||␣|
 أماذا||␣|
-أمازيغ|Berbers|ʔa.§maː§‹.§ziː§‹§ɣ|ʾamāzīḡ|أَمَازِيغ
+أمازيغ|Berbers|ʔa.,maː,‹.,ziː,‹,ɣ|ʾamāzīḡ|أَمَازِيغ
 أمازيغي||␣
 أمازيغية||␣
 أماع||␣|
@@ -1398,7 +1398,7 @@ autoExpandExamples.ar = `
 أنا عربي||␣|
 أنا عربية||␣|
 أنا لا أتكلم العربية||␣
-أنا|I|ˈʔa.§n§a|ʾana|أَنَا
+أنا|I|ˈʔa.,n,a|ʾana|أَنَا
 أناء||␣|
 أناب||␣|
 أناة||␣|
@@ -1427,7 +1427,7 @@ autoExpandExamples.ar = `
 أنبوش||␣|
 أنبيق||␣
 أنة||␣|
-أنت المدير|you are the manager|ʔa§n§ta§ §–§l.§mu.§diː§‹§r|’anta al mudīr|أَنْتَ اَلْمُدِير
+أنت المدير|you are the manager|ʔa,n,ta, ,–,l.,mu.,diː,‹,r|’anta al mudīr|أَنْتَ اَلْمُدِير
 أنت|you (2sg)|ʔan.ta|ʾanta|أَنْتَ#أَنْتِ
 أنتاركتيكا||␣|
 أنتج||␣
@@ -1509,7 +1509,7 @@ autoExpandExamples.ar = `
 أنقليس||␣|
 أنقى||␣|
 أنكح||␣|
-أنكر|denial|ʔa§n.§ka.§ra|ʾankara|أَنْكَرَ
+أنكر|denial|ʔa,n.,ka.,ra|ʾankara|أَنْكَرَ
 أنما||␣
 أنمش||␣|
 أنمص||␣|
@@ -1575,10 +1575,10 @@ autoExpandExamples.ar = `
 أوبريت||␣|
 أوتاوا||␣
 أوتر||␣|
-أوتوبيس|bus|–§o.§t§o.§b§iː§s|
+أوتوبيس|bus|–,o.,t,o.,b,iː,s|
 أوتوستراد||␣|
 أوتوماتيكي||␣
-أوتيل|hotel|oː§‹.§t§eː§l|ʔōtēl|أُوتِيل
+أوتيل|hotel|oː,‹.,t,eː,l|ʔōtēl|أُوتِيل
 أوثر||␣|
 أوج||␣
 أوجب||␣|
@@ -1614,7 +1614,7 @@ autoExpandExamples.ar = `
 أورنكزيب||␣|
 أوروبا الشرقية||␣|
 أوروبا الغربية||␣|
-أوروبا|Europe|ʔ§uː.§r§u§b.b§aː|ʾūrubbā|أُورُوبَّا
+أوروبا|Europe|ʔ,uː.,r,u,b.b,aː|ʾūrubbā|أُورُوبَّا
 أوروبة||␣|
 أوروبي||␣
 أوروغواي||␣
@@ -1662,7 +1662,7 @@ autoExpandExamples.ar = `
 أوكلاهوما||␣
 أوكيناوا||␣
 أول أمس||␣|
-أول|first|ʔa§w.wa§l|ʾawwal|أَوَّل
+أول|first|ʔa,w.wa,l|ʾawwal|أَوَّل
 أولئك||␣
 أولا وأخيرا||␣|
 أولا||␣|
@@ -1733,39 +1733,39 @@ autoExpandExamples.ar = `
 أيون||␣
 أَب|father|ʔab|ʾab|أب
 أَبُونَا||␣|
-أَبْيَض|white|ʔa§b.§ja§dˤ|ʾabyaḍ|أبيض
+أَبْيَض|white|ʔa,b.,ja,dˤ|ʾabyaḍ|أبيض
 أَحْمَر|red|ʔaħ.mar|ʾaḥmar|أحمر
 أَخَذَ|to hold|ʔa.xa.ða|ʾaḵaḏa|أخذ
-أَخْضَر|green|ʔa§x.§dˤa§r|ʾaḵḍar|أخضر||أخضر
+أَخْضَر|green|ʔa,x.,dˤa,r|ʾaḵḍar|أخضر||أخضر
 أَرْبَع|four|ʔar.baʕ|ʾarbaʿ|أربع
 أَرْبَعَة|four|ʔar.ba.ʕa|ʾarbaʿa|أربعة
-أَرْض|earth|ʔa§r§dˤ|ʾarḍ|أرض
+أَرْض|earth|ʔa,r,dˤ|ʾarḍ|أرض
 أَسْوَد|black|ʔas.wad|ʾaswad|أسود
-أَشْخَصَ|to dispatch|ʔa§ʃ.§xa.§sˤa|ʾašḵaṣa|أشخص
+أَشْخَصَ|to dispatch|ʔa,ʃ.,xa.,sˤa|ʾašḵaṣa|أشخص
 أَصْفَر|yellow|ʔasˤ.far|ʾaṣfar|أصفر
 أَعْطَى|to give|ʔaʕ.tˤaː|ʾaʿṭā|أعطى
-أَفْعًى|snake|ʔa§f.§ʕan§–|ʾafʿan|أفعى
+أَفْعًى|snake|ʔa,f.,ʕan,–|ʾafʿan|أفعى
 أَكَلَ|to eat|ʔa.ka.la|ʾakala|أكل
-أَمَازِيغ|Berbers|ʔa.§maː§‹.§ziː§‹§ɣ|ʾamāzīḡ|أمازيغ
+أَمَازِيغ|Berbers|ʔa.,maː,‹.,ziː,‹,ɣ|ʾamāzīḡ|أمازيغ
 أَمْعَاء|guts|ʔamʕaːʔ|ʾamʿāʾ|أمعاء
 أَنَا|I|ˈʔana|ʾana|أنا
-أَنْتَ اَلْمُدِير|you are the manager|ʔa§n§ta§ §–§l.§mu.§diː§‹§r|’anta al mudīr|أنت المدير
+أَنْتَ اَلْمُدِير|you are the manager|ʔa,n,ta, ,–,l.,mu.,diː,‹,r|’anta al mudīr|أنت المدير
 أَنْتَ|you (2sg)|ʔan.ta|ʾanta|أنت
 أَنْتُمَا|you (2pl)|ʾantumā|ʾantumā|أنتما
 أَنْتُنَّ|you (2pl)|ʔan.tu.maː|ʾantunna|أنتن
 أَنْتِ|you (2sg)|ʔan.ti|ʾanti|أنت
 أَنْف|nose|ʔanf|ʾanf|أنف
-أَنْكَرَ|denial|ʔa§n.§ka.§ra|ʾankara|أنكر
-أَوَّل|first|ʔa§w.wa§l|ʾawwal|أول||أول
+أَنْكَرَ|denial|ʔa,n.,ka.,ra|ʾankara|أنكر
+أَوَّل|first|ʔa,w.wa,l|ʾawwal|أول||أول
 أَوْلَاد|boys|ʔawlaːd|ʾawlād|أولاد
 أَيْن|where|ʔaj.na|ʾayna|أين
-أُجُور‎|wages|ʔu.§d͡ʒ§uː§r|ʾujūr|أجور
-أُذُن|ear|ʔʊ.§ðʊ§n|ʾuḏun|أذن
+أُجُور‎|wages|ʔu.,d͡ʒ,uː,r|ʾujūr|أجور
+أُذُن|ear|ʔʊ.,ðʊ,n|ʾuḏun|أذن
 أُذْن|ear|ʔʊðn|ʾuḏn|أذن
-أُكتُوبَر|October|o§k.§toː§‹§bɪ§r|(ʔ)o̞kto̞ːbar|أكتوبر
+أُكتُوبَر|October|o,k.,toː,‹,bɪ,r|(ʔ)o̞kto̞ːbar|أكتوبر
 أُمّ|mother|ʔumm|ʾumm|أم
-أُوتِيل|hotel|oː§‹.§t§eː§l|ʔōtēl|أوتيل
-أُورُوبَّا|Europe|ʔ§uː.§r§u§b.b§aː|ʾūrubbā|أوروبا||أوروبا
+أُوتِيل|hotel|oː,‹.,t,eː,l|ʔōtēl|أوتيل
+أُورُوبَّا|Europe|ʔ,uː.,r,u,b.b,aː|ʾūrubbā|أوروبا||أوروبا
 أُولِمْبِيّ|Olympics|ʔuː.lim.bijj|ʾolimbiyy|أولمبي
 أڭادير||␣|
 ؤ||␣|
@@ -1905,7 +1905,7 @@ autoExpandExamples.ar = `
 إخلاص||␣|
 إخلال||␣|
 إخمار||␣|
-إدارة|administration|ʔɪ.§d§aː.§ra§ʰ|ʾidāra|إِدَارَة
+إدارة|administration|ʔɪ.,d,aː.,ra,ʰ|ʾidāra|إِدَارَة
 إداري||␣|
 إدبار||␣|
 إدحي||␣|
@@ -1920,7 +1920,7 @@ autoExpandExamples.ar = `
 إدهاش||␣
 إذ||␣
 إذا ما||␣|
-إذا|if|ʔi.§ð§aː|ʾiḏā|إِذَا
+إذا|if|ʔi.,ð,aː|ʾiḏā|إِذَا
 إذاعة||␣
 إذاك||␣|
 إذخر||␣
@@ -2417,7 +2417,7 @@ autoExpandExamples.ar = `
 إيفاء||␣|
 إيقاظ||␣|
 إيقاع||␣
-إيقاف|parking|iː§‹.§q§aː§f|ʾīqāf|إِيقَاف
+إيقاف|parking|iː,‹.,q,aː,f|ʾīqāf|إِيقَاف
 إيقان||␣|
 إيكال||␣|
 إيكيدنيا||␣|
@@ -2436,11 +2436,11 @@ autoExpandExamples.ar = `
 إيناس||␣|
 إيهام||␣|
 إيوان||␣|
-إِدَارَة|administration|ʔɪ.§d§aː.§ra§ʰ|ʾidāra|إدارة
-إِذَا|if|ʔi.§ð§aː|ʾiḏā|إذا||إذا
+إِدَارَة|administration|ʔɪ.,d,aː.,ra,ʰ|ʾidāra|إدارة
+إِذَا|if|ʔi.,ð,aː|ʾiḏā|إذا||إذا
 إِنْ|if|ʔin|ʾin|إن
 إِنْسَان|man (human being)|ʔin.saːn|ʾinsān|إنسان
-إِيقَاف|parking|iː§‹.§q§aː§f|ʾīqāf|إيقاف
+إِيقَاف|parking|iː,‹.,q,aː,f|ʾīqāf|إيقاف
 ائتال||␣|
 ائتب||␣|
 ائتج||␣|
@@ -2488,7 +2488,7 @@ autoExpandExamples.ar = `
 ابتلع||␣|
 ابتلى||␣
 ابتناء||␣
-ابتنى|to build, construct|i§b.§ta.§naː§‹|ibtanā|اِبْتَنَى
+ابتنى|to build, construct|i,b.,ta.,naː,‹|ibtanā|اِبْتَنَى
 ابتهاج||␣
 ابتهال||␣
 ابتهج||␣
@@ -2571,7 +2571,7 @@ autoExpandExamples.ar = `
 اثنان وثلاثون||␣|
 اثنان وخمسون||␣|
 اثنان وعشرون||␣|
-اثنان|two|ʔi§θ.§n§aː§n|iṯnān|اِثْنَان
+اثنان|two|ʔi,θ.,n,aː,n|iṯnān|اِثْنَان
 اثنتان||␣|
 اثنتين||␣|
 اثنونى||␣|
@@ -2616,7 +2616,7 @@ autoExpandExamples.ar = `
 اجلعداد||␣|
 اجلنفاع||␣|
 اجلنفع||␣|
-احتاج|to need|i§ħ.§t§aː.§d͡ʒa|iḥtāja|اِحْتَاجَ
+احتاج|to need|i,ħ.,t,aː.,d͡ʒa|iḥtāja|اِحْتَاجَ
 احتار||␣|
 احتاز||␣
 احتاط||␣|
@@ -2724,7 +2724,7 @@ autoExpandExamples.ar = `
 اختصام||␣|
 اختصر||␣
 اختصم||␣|
-اختط|to outline|i§x.§ta§tˤ.tˤa|iḵtaṭṭa|اِخْتَطَّ
+اختط|to outline|i,x.,ta,tˤ.tˤa|iḵtaṭṭa|اِخْتَطَّ
 اختطاف||␣
 اختطف||␣
 اختطى||␣|
@@ -3396,7 +3396,7 @@ autoExpandExamples.ar = `
 اسم فاعل||␣|
 اسم معنى||␣|
 اسم مفعول||␣|
-اسم|name|ɪ§s§m|ism|اِسْم
+اسم|name|ɪ,s,m|ism|اِسْم
 اسمر||␣|
 اسمع||␣|
 اسمي||␣|
@@ -3417,7 +3417,7 @@ autoExpandExamples.ar = `
 اشتراكي||␣|
 اشتراكية ديمقراطية||␣|
 اشتراكية||␣|
-اشترط|to stipulate|i§ʃ.§ta.§ra.§tˤa|ištaraṭa|اِشْتَرَطَ
+اشترط|to stipulate|i,ʃ.,ta.,ra.,tˤa|ištaraṭa|اِشْتَرَطَ
 اشترع||␣|
 اشترف||␣|
 اشترك||␣|
@@ -3714,7 +3714,7 @@ autoExpandExamples.ar = `
 ال||␣
 الآب||␣|
 الآخرة||␣
-الآن|now|a§l.§ʔaː.§na|al-ʾāna|اَلْآنَ
+الآن|now|a,l.,ʔaː.,na|al-ʾāna|اَلْآنَ
 الأبجدية الصوتية الدولية||␣|
 الأبناء||␣|
 الأحامرة||␣|
@@ -3987,7 +3987,7 @@ autoExpandExamples.ar = `
 العراق العجمي||␣|
 العراق العربي||␣|
 العراق||␣
-العربية|Arabic|a§l.§ʕa.§ra.§bi§j.ja§–|al-ʿarabiyya|العَرَبِيَّة
+العربية|Arabic|a,l.,ʕa.,ra.,bi,j.ja,–|al-ʿarabiyya|العَرَبِيَّة
 العزى||␣
 العسكريان||␣|
 العصور الوسطى||␣
@@ -4001,7 +4001,7 @@ autoExpandExamples.ar = `
 العيد الكبير||␣
 العين بالعين||␣|
 العيون||␣|
-العَرَبِيَّة|Arabic|a§l.§ʕa.§ra.§bi§j.ja§–|al-ʿarabiyya|العربية
+العَرَبِيَّة|Arabic|a,l.,ʕa.,ra.,bi,j.ja,–|al-ʿarabiyya|العربية
 الغابون||␣
 الغانج||␣|
 الغاية تبرر الوسيلة||␣|
@@ -4074,7 +4074,7 @@ autoExpandExamples.ar = `
 اللهم||␣
 الليلة||␣|
 اللُّغَة الْعَرَبِيَّة الْفُصْحَى|the Arabic language|al.lu.ɣa‿l.ʕa.ra.bij.ja‿l.fusˤ.ħaː|al-luḡa(t) al-ʿarabiyya(t) al-fuṣḥā|اللغة العربية الفصحى
-اللّٰه|Allah|ʔa§ɫ.§ˈɫaː§h|allāh|اللّٰه
+اللّٰه|Allah|ʔa,ɫ.,ˈɫaː,h|allāh|اللّٰه
 المار ذكره||␣|
 الماضي||␣|
 المثنى||␣|
@@ -4094,7 +4094,7 @@ autoExpandExamples.ar = `
 المخا||␣|
 المخلص||␣|
 المدائن||␣|
-المدير|the manager|a§l.§mu.§diː§‹§r|al mudīr|اَلْمُدِير
+المدير|the manager|a,l.,mu.,diː,‹,r|al mudīr|اَلْمُدِير
 المدينة المنورة||␣|
 المدينة||␣|
 المرء||
@@ -4210,7 +4210,7 @@ autoExpandExamples.ar = `
 انتأى||␣|
 انتاب||␣|
 انتار||␣|
-انتباه|caution|i§n.§ti.§ba§‹§h|intibāh|اِنْتِبَاه
+انتباه|caution|i,n.,ti.,ba,‹,h|intibāh|اِنْتِبَاه
 انتبه||␣
 انتثر||␣|
 انتجب||␣|
@@ -4520,18 +4520,18 @@ autoExpandExamples.ar = `
 اهتمام||␣|
 اهرورق||␣|
 اوكرانيا||␣|
-اَلْآنَ|now|a§l.§ʔaː.§na|al-ʾāna|الآن
-اَلْمُدِير|the manager|a§l.§mu.§diː§‹§r|’al mudīr|المدير
-اِبْتَنَى|to build, construct|i§b.§ta.§naː§‹|ibtanā|ابتنى
-اِثْنَان|two|ʔi§θ.§n§aː§n|iṯnān|اثنان||اثنان
+اَلْآنَ|now|a,l.,ʔaː.,na|al-ʾāna|الآن
+اَلْمُدِير|the manager|a,l.,mu.,diː,‹,r|’al mudīr|المدير
+اِبْتَنَى|to build, construct|i,b.,ta.,naː,‹|ibtanā|ابتنى
+اِثْنَان|two|ʔi,θ.,n,aː,n|iṯnān|اثنان||اثنان
 اِثْنَتَان|two|ʔiθ.na.taːn|iṯnatān
-اِحْتَاجَ|to need|i§ħ.§t§aː.§d͡ʒa|iḥtāja|احتاج||احتاج
-اِخْتَطَّ|to outline|i§x.§ta§tˤ.tˤa|iḵtaṭṭa|اختط
-اِسْم|name|ɪ§s§m|ism|اسم
-اِشْتَرَطَ|to stipulate|i§ʃ.§ta.§ra.§tˤa|ištaraṭa|اشترط
+اِحْتَاجَ|to need|i,ħ.,t,aː.,d͡ʒa|iḥtāja|احتاج||احتاج
+اِخْتَطَّ|to outline|i,x.,ta,tˤ.tˤa|iḵtaṭṭa|اختط
+اِسْم|name|ɪ,s,m|ism|اسم
+اِشْتَرَطَ|to stipulate|i,ʃ.,ta.,ra.,tˤa|ištaraṭa|اشترط
 اِمْرَأَة|woman|im.ra.ʔa|imraʾa|امرأة
 اِنْتَفَخَ|to swell|in.ta.fa.xa|intafaḵa|انتفخ
-اِنْتِبَاه|caution|i§n.§ti.§ba§‹§h|intibāh|انتباه
+اِنْتِبَاه|caution|i,n.,ti.,ba,‹,h|intibāh|انتباه
 ب|in, with|bi|bi|بِ
 بأس||␣
 بأساء||␣|
@@ -4601,7 +4601,7 @@ autoExpandExamples.ar = `
 بارونية||␣|
 بارى||␣|
 باريز||␣|
-باريس|Paris|paː§‹.§riː§‹§s|bārīs|بَارِيس
+باريس|Paris|paː,‹.,riː,‹,s|bārīs|بَارِيس
 باريسي||␣|
 باريوم||␣|
 باز||␣
@@ -4646,7 +4646,7 @@ autoExpandExamples.ar = `
 باقلى||␣
 باك||␣|
 باكر||␣|
-باكستان|Pakistan|paː§‹.§ki.§ˈs§taː§‹§n|bākistān|بَاكِسْتَان
+باكستان|Pakistan|paː,‹.,ki.,ˈs,taː,‹,n|bākistān|بَاكِسْتَان
 باكستاني||␣
 باكو||␣
 باكورة||␣|
@@ -4987,7 +4987,7 @@ autoExpandExamples.ar = `
 بسباس||␣
 بسباسة||␣
 بسبايج||␣
-بسبب|because|bi.§sa.§ba.§bi|bisababi|بِسَبَبِ
+بسبب|because|bi.,sa.,ba.,bi|bisababi|بِسَبَبِ
 بستان||␣
 بستاني||␣|
 بستانية||␣|
@@ -5284,7 +5284,7 @@ autoExpandExamples.ar = `
 بمناسبة||␣|
 بموجب||␣|
 بن||␣
-بناء|builder|ba§n.naː§‹§ʔ|bannāʾ|بَنَّاء
+بناء|builder|ba,n.naː,‹,ʔ|bannāʾ|بَنَّاء
 بنان||␣
 بناية||␣
 بنايوس||␣|
@@ -5314,7 +5314,7 @@ autoExpandExamples.ar = `
 بنش||␣|
 بنصر||␣|
 بنطال||␣
-بنطلون|trousers|ba§n.§t̴a.§loː§‹§n|banṭalōn|بَنْطَلُون
+بنطلون|trousers|ba,n.,t̴a.,loː,‹,n|banṭalōn|بَنْطَلُون
 بنغالي||␣|
 بنغالية||␣|
 بنغلاديش||␣
@@ -5452,7 +5452,7 @@ autoExpandExamples.ar = `
 بيبسي||␣|
 بيت المقدس||␣
 بيت لحم||␣
-بيت|house|ba§j§t|bayt|بَيْت
+بيت|house|ba,j,t|bayt|بَيْت
 بيتزا||␣|
 بيجادق||␣|
 بيجادي||␣|
@@ -5526,7 +5526,7 @@ autoExpandExamples.ar = `
 بيولوجي||␣|
 بَاءَ|to come back|baː.ʔa|bāʾa|باء
 بَارِد|cold|baː.rid|bārid|بارد
-بَارِيس|Paris|paː§‹.§riː§‹§s|bārīs|باريس
+بَارِيس|Paris|paː,‹.,riː,‹,s|bārīs|باريس
 بَاكِسْتَان|Pakistan|pakistaːn|bākistān|باكستان
 بَحْر|sea|baħr|baḥr|بحر
 بَصَقَ|to spit|ba.sˤa.qa|baṣaqa|بصق
@@ -5534,14 +5534,14 @@ autoExpandExamples.ar = `
 بَعِيد|far|ba.ʕiːd|baʿīd|بعيد
 بَعْض|some|baʕdˤ|baʿḍ|بعض
 بَعْل|husband|baʕl|baʿl|بعل
-بَنَّاء|builder|ba§n.naː§‹§ʔ|bannāʾ|بناء
-بَنْطَلُون|trousers|ba§n.§t̴a.§loː§‹§n|banṭalōn|بنطلون
+بَنَّاء|builder|ba,n.naː,‹,ʔ|bannāʾ|بناء
+بَنْطَلُون|trousers|ba,n.,t̴a.,loː,‹,n|banṭalōn|بنطلون
 بَيْت|house|bajt|bayt|بيت
 بَيْضَاء|white|baj.dˤaːʔ|bayḍāʾ|بيضاء
 بَيْضَة|egg|baj.dˤa|bayḍa|بيضة
 بُحَيْرَة|lake|bu.ħaj.ra|buḥayra|بحيرة
 بِ|in, with|bi|bi|ب
-بِسَبَبِ|because|bi.§sa.§ba.§bi|bisababi|بسبب||بسبب
+بِسَبَبِ|because|bi.,sa.,ba.,bi|bisababi|بسبب||بسبب
 ة||␣|
 ت||␣|
 تآج||␣|
@@ -5641,7 +5641,7 @@ autoExpandExamples.ar = `
 تارة||␣
 تاروت||␣|
 تاريخ الميلاد||␣|
-تاريخ|history|tɑː§‹.§riː§‹§x|tārīḵ|تَارِيخ
+تاريخ|history|tɑː,‹.,riː,‹,x|tārīḵ|تَارِيخ
 تاريخا||␣|
 تاريخي||␣|
 تاريخيا||␣|
@@ -5859,7 +5859,7 @@ autoExpandExamples.ar = `
 تجويز||␣|
 تجويف||␣|
 تجييب||␣|
-تجّار|traders|tu§d͡ʒ.d͡ʒaː§‹§r
+تجّار|traders|tu,d͡ʒ.d͡ʒaː,‹,r
 تحاب||␣|
 تحابب||␣|
 تحاج||␣|
@@ -7023,7 +7023,7 @@ autoExpandExamples.ar = `
 تلقيب||␣|
 تلقيح||␣|
 تلقين||␣|
-تلك|that|tɪ§l.§ka|tilka|تِلْكَ
+تلك|that|tɪ,l.,ka|tilka|تِلْكَ
 تلم||␣
 تلمسان||␣|
 تلمود||␣|
@@ -7172,7 +7172,7 @@ autoExpandExamples.ar = `
 تناول||␣|
 تناوم||␣
 تنبأ||␣|
-تنبؤ|forecast|ta§na§bbu§ʔ|tanabbuʾ|تَنَبُّؤ
+تنبؤ|forecast|ta,na,bbu,ʔ|tanabbuʾ|تَنَبُّؤ
 تنبل||␣|
 تنبه||␣|
 تنبول||␣
@@ -7474,11 +7474,11 @@ autoExpandExamples.ar = `
 تَارِيخ|history|tɑːriːx|tārīḵ|تاريخ
 تَدَفَّقَ|to flow|ta.daf.fa.qa|tadaffaqa|تدفق
 تَقَيَّأَ|to vomit|ta.qaj.ja.ʔa|taqayyaʾa|تقيأ
-تَنَبُّؤ|forecast|ta§na§bbu§ʔ|tanabbuʾ|تنبؤ
+تَنَبُّؤ|forecast|ta,na,bbu,ʔ|tanabbuʾ|تنبؤ
 تَنَفَّسَ|to breathe|ta.naf.fa.sa|tanaffasa|تنفس
-تِلْكَ|that|tɪ§l.§ka|tilka|تلك
+تِلْكَ|that|tɪ,l.,ka|tilka|تلك
 تِيكَ|that|tiː.ka|tīka|تيك
-ثآليل|warts|θa.§ʔaː.§l§iː§l|ṯaʔālīl|ثَآلِيل
+ثآليل|warts|θa.,ʔaː.,l,iː,l|ṯaʔālīl|ثَآلِيل
 ثأر||␣|
 ثؤلول||␣
 ثؤور||␣|
@@ -7550,7 +7550,7 @@ autoExpandExamples.ar = `
 ثلاثاء||␣|
 ثلاثة عشر||␣|
 ثلاثة وعشرون||␣|
-ثلاثة|three|θa.§l§aː.§θa§–|ṯalāṯa|ثَلَاثَة
+ثلاثة|three|θa.,l,aː.,θa,–|ṯalāṯa|ثَلَاثَة
 ثلاثمئة||␣|
 ثلاثون||␣
 ثلاثي||␣|
@@ -7559,11 +7559,11 @@ autoExpandExamples.ar = `
 ثلة||␣
 ثلث||␣|
 ثلثمائة||␣|
-ثلج|snow|θa§l§d͡ʒ|ṯalj|ثَلْج
+ثلج|snow|θa,l,d͡ʒ|ṯalj|ثَلْج
 ثلجم||␣|
 ثلم|dull (as a knife)|θa.mil|ṯalim|ثَلِم
 ثم ماذا||␣|
-ثم|there|θa§m.ma|ṯamma|ثَمَّ
+ثم|there|θa,m.ma|ṯamma|ثَمَّ
 ثمالة||␣|
 ثمام||␣|
 ثمان||␣
@@ -7608,14 +7608,14 @@ autoExpandExamples.ar = `
 ثيل||␣|
 ثيودوسيوس||␣|
 ثيوقراطي||␣
-ثَآلِيل|warts|θa.§ʔaː.§l§iː§l|ṯaʔālīl|ثآليل
+ثَآلِيل|warts|θa.,ʔaː.,l,iː,l|ṯaʔālīl|ثآليل
 ثَقِيل|heavy|θa.qiːl|ṯaqīl|ثقيل
-ثَلَاثَة|three|θa.§l§aː.§θa§–|ṯalāṯa|ثلاثة
+ثَلَاثَة|three|θa.,l,aː.,θa,–|ṯalāṯa|ثلاثة
 ثَلِم|dull (as a knife)|θa.mil|ṯalim|ثلم
-ثَلْج|snow|θa§l§d͡ʒ|ṯalj|ثلج
-ثَمَّ|there|θa§m.ma|ṯamma|ثم
+ثَلْج|snow|θa,l,d͡ʒ|ṯalj|ثلج
+ثَمَّ|there|θa,m.ma|ṯamma|ثم
 ثُعْبَان|snake|θuʕ.baːn|ṯuʿbān|ثعبان
-جأش|disorder, tumult|d͡ʒa§ʔ§ʃ|jaʾš|جَأْش
+جأش|disorder, tumult|d͡ʒa,ʔ,ʃ|jaʾš|جَأْش
 جؤوز||␣|
 جاء|to come|d͡ʒaː.ʔa|jāʾa|جَاءَ
 جائح||␣|
@@ -7716,7 +7716,7 @@ autoExpandExamples.ar = `
 جبل عرفة||␣|
 جبل فارو||␣|
 جبل نار||␣|
-جبل|mountain|d͡ʒa.§ba§l|jabal|جَبَل
+جبل|mountain|d͡ʒa.,ba,l|jabal|جَبَل
 جبلي||␣|
 جبن||␣
 جبناء||
@@ -7837,7 +7837,7 @@ autoExpandExamples.ar = `
 جرينادا||␣|
 جرينلاند||␣|
 جز||␣
-جزء|portion|d͡ʒu§z§ʔ|juzʾ|جُزْء
+جزء|portion|d͡ʒu,z,ʔ|juzʾ|جُزْء
 جزئي||␣
 جزاء||␣
 جزائري||␣
@@ -8061,7 +8061,7 @@ autoExpandExamples.ar = `
 جنائي||␣
 جناب||␣|
 جنابة||␣|
-جناح|wing|d͡ʒa.§n§aː§ħ|janāḥ|جَنَاح
+جناح|wing|d͡ʒa.,n,aː,ħ|janāḥ|جَنَاح
 جناحيات||␣|
 جنارك||␣|
 جنازة||␣
@@ -8096,7 +8096,7 @@ autoExpandExamples.ar = `
 جنى||␣
 جني||␣|
 جنية||␣|
-جنيف|Geneva|d͡ʒɪ.§neː§‹§v|jinīf|جِنِيف
+جنيف|Geneva|d͡ʒɪ.,neː,‹,v|jinīf|جِنِيف
 جنين||␣
 جنيناتي||␣|
 جنينة||␣
@@ -8199,21 +8199,21 @@ autoExpandExamples.ar = `
 جيمس||␣|
 جين||␣
 جينز||␣
-جَأْش|disorder, tumult|d͡ʒa§ʔ§ʃ|jaʾš|جأش
+جَأْش|disorder, tumult|d͡ʒa,ʔ,ʃ|jaʾš|جأش
 جَاءَ|to come|d͡ʒaː.ʔa|jāʾa|جاء
 جَافّ|dry|d͡ʒaːff|jāff|جاف
-جَبَل|mountain|d͡ʒa.§ba§l|jabal|جبل
+جَبَل|mountain|d͡ʒa.,ba,l|jabal|جبل
 جَدِيد|new|d͡ʒa.diːd|jadīd|جديد
 جَذْر|root|d͡ʒaðr|jaḏr|جذر||جذر
 جَرَّ|to pull|d͡ʒar.ra|jarra|جر
 جَلَسَ|to sit|d͡ʒa.la.sa|jalasa|جلس
 جَلِيد|ice|d͡ʒa.liːd|jalīd|جليد
 جَمَدَ|to freeze|d͡ʒa.ma.da|jamada|جمد
-جَنَاح|wing|d͡ʒa.§n§aː§ħ|janāḥ|جناح
-جُزْء|portion|d͡ʒu§z§ʔ|juzʾ|جزء
+جَنَاح|wing|d͡ʒa.,n,aː,ħ|janāḥ|جناح
+جُزْء|portion|d͡ʒu,z,ʔ|juzʾ|جزء
 جِذْر|root|d͡ʒiðr|jiḏr|جذر
 جِلْد|skin|d͡ʒild|jild|جلد
-جِنِيف|Geneva|d͡ʒɪ.§neː§‹§v|jinīf|جنيف
+جِنِيف|Geneva|d͡ʒɪ.,neː,‹,v|jinīf|جنيف
 حؤول||␣|
 حاء||␣
 حائر||␣|
@@ -8352,7 +8352,7 @@ autoExpandExamples.ar = `
 حتام||␣
 حتحور||␣|
 حتما||␣
-حتى|until|ħa§t.taː§‹||حَتَّى
+حتى|until|ħa,t.taː,‹||حَتَّى
 حث||␣|
 حثالة||␣|
 حج||␣
@@ -8363,7 +8363,7 @@ autoExpandExamples.ar = `
 حجب||␣|
 حجة||␣
 حجر صحي||␣|
-حجر|stone|ħa.§d͡ʒa§r|ḥajar|حَجَر
+حجر|stone|ħa.,d͡ʒa,r|ḥajar|حَجَر
 حجران||␣|
 حجرة ورقة مقص||␣|
 حجرة||␣
@@ -8537,7 +8537,7 @@ autoExpandExamples.ar = `
 حشم||␣|
 حشمة||␣|
 حشوان||␣|
-حشيش|grass|ħa.§ʃ§iː§ʃ|ḥašīš|حَشِيش
+حشيش|grass|ħa.,ʃ,iː,ʃ|ḥašīš|حَشِيش
 حشيشة الدود||␣
 حشيشة الملاك||␣
 حشيشة||␣|
@@ -8764,7 +8764,7 @@ autoExpandExamples.ar = `
 حنجرة||␣
 حنجري||␣
 حندقوق||␣
-حنش|snake|ħa.§na§ʃ|ḥanaš|حَنَش
+حنش|snake|ħa.,na,ʃ|ḥanaš|حَنَش
 حنطبة||␣|
 حنطة سوداء||␣|
 حنطة||␣
@@ -8797,7 +8797,7 @@ autoExpandExamples.ar = `
 حواية||␣|
 حوب||␣
 حوة||␣|
-حوت|fish|ħ§uː§t|ḥūt|حُوت
+حوت|fish|ħ,uː,t|ḥūt|حُوت
 حوجلة||␣
 حوذان||␣
 حور||␣|
@@ -8870,19 +8870,19 @@ autoExpandExamples.ar = `
 حيي||␣|
 حَادّ|sharp (as a knife)|ħaːdd|ḥādd|حاد
 حَبْل|rope|ħabl|ḥabl|حبل
-حَتَّى|until|ħa§t.taː§‹||حتى
-حَجَر|stone|ħa.§d͡ʒa§r|ḥajar|حجر||حجر
-حَدِيث|new|ħa.§d§iː§θ|ḥadīṯ
+حَتَّى|until|ħa,t.taː,‹||حتى
+حَجَر|stone|ħa.,d͡ʒa,r|ḥajar|حجر||حجر
+حَدِيث|new|ħa.,d,iː,θ|ḥadīṯ
 حَرَقَ|to burn|ħa.ra.qa|ḥaraqa|حرق
-حَشِيش|grass|ħa.§ʃ§iː§ʃ|ḥašīš|حشيش||حشيش
+حَشِيش|grass|ħa.,ʃ,iː,ʃ|ḥašīš|حشيش||حشيش
 حَفَرَ|to dig|ħa.fa.ra|ḥafara|حفر
 حَكَّ|to rub|ħak.ka|ḥakka|حك
 حَمْرَاء|red|ħam.raːʔ|ḥamrāʾ|حمراء
-حَنَش|snake|ħa.§na§ʃ|ḥanaš|حنش
+حَنَش|snake|ħa.,na,ʃ|ḥanaš|حنش
 حَيَوَان|animal|ħa.ja.waːn|ḥayawān|حيوان
 حَيَّة|snake|ħaj.ja|ḥayya|حية
 حَيْثُ|because|ħaj.θu|ḥayṯu|حيث
-حُوت|fish|ħ§uː§t|ḥūt|حوت
+حُوت|fish|ħ,uː,t|ḥūt|حوت
 خ||␣|
 خؤون||␣|
 خاء||␣
@@ -9134,7 +9134,7 @@ autoExpandExamples.ar = `
 خضب||␣|
 خضخض||␣
 خضد||␣|
-خضراء|green|xa§dˤ.§raː§‹§ʔ|ḵaḍrāʾ|خَضْرَاء
+خضراء|green|xa,dˤ.,raː,‹,ʔ|ḵaḍrāʾ|خَضْرَاء
 خضرة||␣|
 خضع||␣|
 خضل||␣|
@@ -9202,7 +9202,7 @@ autoExpandExamples.ar = `
 خلافة||␣
 خلاق||␣|
 خلاقة||␣|
-خلال|through|xɪ.§l§aː.§la|ḵilāla|خِلَالَ
+خلال|through|xɪ.,l,aː.,la|ḵilāla|خِلَالَ
 خلالئذ||␣|
 خلالة||␣|
 خلالذاك||␣|
@@ -9304,7 +9304,7 @@ autoExpandExamples.ar = `
 خوارزمية||␣|
 خواف||␣|
 خوان||␣|
-خوخ|peach|xa§w§x|ḵawḵ|خَوْخ
+خوخ|peach|xa,w,x|ḵawḵ|خَوْخ
 خوخة||␣
 خوذة||␣
 خور||␣
@@ -9353,12 +9353,12 @@ autoExpandExamples.ar = `
 خَاطَ|to sew|xaː.tˤa|ḵāṭa|خاط
 خَافَ|to fear|xaː.fa|ḵāfa|خاف
 خَدَشَ|to scratch|xa.da.ʃa|ḵadaša|خدش
-خَضْرَاء|green|xa§dˤ.§raː§‹§ʔ|ḵaḍrāʾ|خضراء
+خَضْرَاء|green|xa,dˤ.,raː,‹,ʔ|ḵaḍrāʾ|خضراء
 خَمْس|five|xams|ḵams|خمس
 خَمْسَة|five|xam.sa|ḵamsa|خمسة
-خَوْخ|peach|xa§w§x|ḵawḵ|خوخ
+خَوْخ|peach|xa,w,x|ḵawḵ|خوخ
 خَيَّطَ|to sew|xaj.ja.tˤa|ḵayyaṭa|خيط
-خِلَالَ|through|xɪ.§l§aː.§la|ḵilāla|خلال
+خِلَالَ|through|xɪ.,l,aː.,la|ḵilāla|خلال
 د.ك.||␣|
 دأب||␣|
 داء الشريان التاجي||␣
@@ -9737,7 +9737,7 @@ autoExpandExamples.ar = `
 دوخة||␣
 دود||␣|
 دودة فراشة||␣|
-دودة|worm|duː§‹.§da§–|dūda|دُودَة
+دودة|worm|duː,‹.,da,–|dūda|دُودَة
 دور||␣|
 دوران||␣|
 دورة مياه||␣
@@ -9817,12 +9817,12 @@ autoExpandExamples.ar = `
 ديمقراطية||␣|
 ديمومة||␣
 دين||␣
-دينار|dinar|d§iː.§n§aː§r|dīnār|دِينَار
+دينار|dinar|d,iː.,n,aː,r|dīnār|دِينَار
 ديناصور||␣|
 ديناميكا||␣
 ديني||␣|
 ديو||␣|
-ديوان|poetry.|d§iː.§w§aː§n|dīwān|دِيوَان
+ديوان|poetry.|d,iː.,w,aː,n|dīwān|دِيوَان
 ديوث||␣|
 دَارَ|to turn|daː.ra|dāra|دار
 دَافِئ|warm|daː.fiʔ|dāfiʾ|دافئ
@@ -9831,9 +9831,9 @@ autoExpandExamples.ar = `
 دُخَان|smoke|du.xaːn|duḵān|دخان
 دُخَّان|smoke|du.xxaːn|duḵḵān|دخان
 دُهْن|fat (n.)|duhn|duhn|دهن
-دُودَة|worm|duː§‹.§da§–|dūda|دودة
-دِينَار|dinar|d§iː.§n§aː§r|dīnār|دينار
-دِيوَان|poetry.|d§iː.§w§aː§n|dīwān|ديوان
+دُودَة|worm|duː,‹.,da,–|dūda|دودة
+دِينَار|dinar|d,iː.,n,aː,r|dīnār|دينار
+دِيوَان|poetry.|d,iː.,w,aː,n|dīwān|ديوان
 ذ||␣|
 ذؤابة||␣|
 ذئب رمادي||␣|
@@ -9847,7 +9847,7 @@ autoExpandExamples.ar = `
 ذات||␣|
 ذاتي||␣|
 ذاتيا||␣|
-ذاتية|identity|ð§aː.§t§iː.ja§–||ذَاتِيَّة
+ذاتية|identity|ð,aː.,t,iː.ja,–||ذَاتِيَّة
 ذاد||␣|
 ذاق||␣
 ذاك|that|ðaː.ka|ḏāka|ذَاكَ
@@ -9902,7 +9902,7 @@ autoExpandExamples.ar = `
 ذلالة||␣|
 ذلة||␣|
 ذلقي||␣|
-ذلك|that|ðaː.§li.§ka|ḏālika|ذٰلِكَ
+ذلك|that|ðaː.,li.,ka|ḏālika|ذٰلِكَ
 ذلل||␣
 ذليل||␣
 ذم||␣|
@@ -9915,7 +9915,7 @@ autoExpandExamples.ar = `
 ذهاب||␣|
 ذهابا وإيابا||␣|
 ذهب أدراج الرياح||␣|
-ذهب|gold|ða.§ha§b|ḏahab|ذَهَب
+ذهب|gold|ða.,ha,b|ḏahab|ذَهَب
 ذهبي||␣|
 ذهل||␣|
 ذهن||␣
@@ -9935,11 +9935,11 @@ autoExpandExamples.ar = `
 ذوق||␣
 ذي||␣|
 ذيل||␣
-ذَاتِيَّة|identity|ð§aː.§t§iː.ja§–||ذاتية
+ذَاتِيَّة|identity|ð,aː.,t,iː.ja,–||ذاتية
 ذَاكَ|that|ðaː.ka|ḏāka|ذاك
 ذَنَب|tail|ðanb|ḏanab|ذنب
-ذَهَب|gold|ða.§ha§b|ḏahab|ذهب
-ذٰلِكَ|that|ðaː.§li.§ka|ḏālika|ذلك
+ذَهَب|gold|ða.,ha,b|ḏahab|ذهب
+ذٰلِكَ|that|ðaː.,li.,ka|ḏālika|ذلك
 ر.س.||␣|
 رأس السنة الجديدة||␣|
 رأس السنة||␣
@@ -9952,7 +9952,7 @@ autoExpandExamples.ar = `
 رأف||␣|
 رأفة||␣|
 رأل||␣
-رأى|to see|ra.§ʔaː§‹|raʾā|رَأَى
+رأى|to see|ra.,ʔaː,‹|raʾā|رَأَى
 رأي||␣
 رأية||␣|
 رؤوس أموال||
@@ -9969,7 +9969,7 @@ autoExpandExamples.ar = `
 رئيس حكومة||␣|
 رئيس دولة||␣
 رئيس وزراء||␣|
-رئيس|President|ra.§ʔ§iː§s|raʾīs|رَئِيس
+رئيس|President|ra.,ʔ,iː,s|raʾīs|رَئِيس
 رئيسي||␣
 راء||␣
 راءى||␣
@@ -10127,7 +10127,7 @@ autoExpandExamples.ar = `
 رجفة||␣
 رجل الحمام||␣
 رجل القنطور||␣|
-رجل|man/leg|ra.§d͡ʒu§l§/rid͡ʒl|rajul/rijl|رَجُل/رِجْل
+رجل|man/leg|ra.,d͡ʒu,l,/rid͡ʒl|rajul/rijl|رَجُل/رِجْل
 رجلة||␣
 رجم||␣|
 رجمة||␣
@@ -10222,7 +10222,7 @@ autoExpandExamples.ar = `
 رسمل||␣|
 رسملة||␣|
 رسمي||␣|
-رسميا|officially|ra§s.§miː.§jan§–||رَسْمِيًا
+رسميا|officially|ra,s.,miː.,jan,–||رَسْمِيًا
 رسمية||␣|
 رسن||␣|
 رسوب||␣|
@@ -10367,7 +10367,7 @@ autoExpandExamples.ar = `
 ركاب||␣|
 ركاز||␣|
 ركب||␣|
-ركبة|knee|ru§k.§ba§–|rukba|رُكْبَة
+ركبة|knee|ru,k.,ba,–|rukba|رُكْبَة
 ركز||␣|
 ركض||␣
 ركع||␣
@@ -10521,7 +10521,7 @@ autoExpandExamples.ar = `
 ريثما||␣|
 ريح شمسية||␣|
 ريح نجمية||␣|
-ريح|wind|r§iː§ħ|rīḥ|رِيح
+ريح|wind|r,iː,ħ|rīḥ|رِيح
 ريحان||␣
 ريحانة||␣|
 ريش||␣
@@ -10536,12 +10536,12 @@ autoExpandExamples.ar = `
 رين||␣|
 ريو دي جانيرو||␣|
 ريوند||␣
-رَأَى|to see|ra.§ʔaː§‹|raʾā|رأى
-رَئِيس|President|ra.§ʔ§iː§s|raʾīs|رئيس
+رَأَى|to see|ra.,ʔaː,‹|raʾā|رأى
+رَئِيس|President|ra.,ʔ,iː,s|raʾīs|رئيس
 رَبَطَ|to tie|ra.ba.tˤa|rabaṭa|ربط
-رَجُل|man|ra.§d͡ʒu§l|rajul|رجل||رجل
+رَجُل|man|ra.,d͡ʒu,l|rajul|رجل||رجل
 رَحْب|wide|raħb|raḥb|رحب
-رَسْمِيًا|officially|ra§s.§miː.§jan§–||رسميا
+رَسْمِيًا|officially|ra,s.,miː.,jan,–||رسميا
 رَطْب|wet|ratˤb|raṭb|رطب
 رَقَبَة|neck|ra.qa.ba|raqaba|رقبة
 رَقَدَ|to lie (as in a bed)|ra.qa.da|raqada|رقد
@@ -10549,9 +10549,9 @@ autoExpandExamples.ar = `
 رَمَاد|ash|ra.maːd|ramād|رماد
 رَمَى|to throw|ra.maː|ramā|رمى
 رَمْل|sand|raml|raml|رمل
-رُكْبَة|knee|ru§k.§ba§–|rukba|ركبة
+رُكْبَة|knee|ru,k.,ba,–|rukba|ركبة
 رِجْل|leg|rid͡ʒl|rijl|رجل||رجل
-رِيح|wind|r§iː§ħ|rīḥ|ريح
+رِيح|wind|r,iː,ħ|rīḥ|ريح
 رِيشَة|feather|riː.ʃa|rīša|ريشة
 ز||␣|
 زأر||␣
@@ -10565,7 +10565,7 @@ autoExpandExamples.ar = `
 زاؤوق||␣
 زائد||␣|
 زائدة||␣|
-زائر|visitor|z§aː.§ʔɪ§r|zāʔir|زَائِر
+زائر|visitor|z,aː.,ʔɪ,r|zāʔir|زَائِر
 زائف||␣
 زائل||␣|
 زابوق||␣|
@@ -10665,7 +10665,7 @@ autoExpandExamples.ar = `
 زرزر||␣
 زرزور||␣|
 زرشك||␣
-زرع|seed|za§r§ʕ|zarʿ|زَرْع
+زرع|seed|za,r,ʕ|zarʿ|زَرْع
 زرق||␣|
 زرقة||␣|
 زرقطونا||␣
@@ -10811,9 +10811,9 @@ autoExpandExamples.ar = `
 زوارة||␣|
 زوال||␣|
 زوان||␣
-زوج|husband|za§w§d͡ʒ|zawj|زَوْج
+زوج|husband|za,w,d͡ʒ|zawj|زَوْج
 زوجان||␣|
-زوجة|wife|za§w.§d͡ʒa|zawja|زَوْجَة
+زوجة|wife|za,w.,d͡ʒa|zawja|زَوْجَة
 زوجي||␣
 زود||␣
 زور||␣|
@@ -10833,7 +10833,7 @@ autoExpandExamples.ar = `
 زياد||␣
 زيادة||␣|
 زيار||␣
-زيارة|visit|zɪ.§j§aː.§ra§–|ziyāra|زِيَارَة
+زيارة|visit|zɪ.,j,aː.,ra,–|ziyāra|زِيَارَة
 زيت||␣
 زيتون||␣|
 زيتي||␣|
@@ -10854,17 +10854,17 @@ autoExpandExamples.ar = `
 زينب||␣
 زينة||␣|
 زينون||␣|
-زَائِر|visitor|z§aː.§ʔɪ§r|zāʔir|زائر||زائر
+زَائِر|visitor|z,aː.,ʔɪ,r|zāʔir|زائر||زائر
 زَرِّيعَة|seed|zar.riː.ʕa|zarrīʿa|زريعة
-زَرْع|seed|za§r§ʕ|zarʿ|زرع
+زَرْع|seed|za,r,ʕ|zarʿ|زرع
 زَهْرَة|flower|zah.ra|zahra|زهرة
-زَوْج|husband|za§w§d͡ʒ|zawj|زوج
-زَوْجَة|wife|za§w.§d͡ʒa|zawja|زوجة
-زِيَارَة|visit|zɪ.§j§aː.§ra§–|ziyāra|زيارة
+زَوْج|husband|za,w,d͡ʒ|zawj|زوج
+زَوْجَة|wife|za,w.,d͡ʒa|zawja|زوجة
+زِيَارَة|visit|zɪ.,j,aː.,ra,–|ziyāra|زيارة
 سآل||␣|
 سأف||␣|
-سأل|to question|sa.§ʔa.§la|saʾala|سَأَلَ
-سؤال|question|su.§ʔ§aː§l|suʾāl|سُؤَال
+سأل|to question|sa.,ʔa.,la|saʾala|سَأَلَ
+سؤال|question|su.,ʔ,aː,l|suʾāl|سُؤَال
 سؤدد||␣
 سئال||␣|
 سئم||␣
@@ -10932,7 +10932,7 @@ autoExpandExamples.ar = `
 سافر||␣|
 سافل||␣|
 ساق الحمام||␣
-ساق|leg|saː§‹§q|sāq|سَاق
+ساق|leg|saː,‹,q|sāq|سَاق
 ساقة||␣|
 ساقط||␣|
 ساقطة||␣|
@@ -11288,7 +11288,7 @@ autoExpandExamples.ar = `
 سكر||␣
 سكران||␣
 سكرة||␣|
-سكرتير|secretary|sɪ.§k§rɪ.§teː§‹§r|sikritīr|سِكْرِتِير
+سكرتير|secretary|sɪ.,k,rɪ.,teː,‹,r|sikritīr|سِكْرِتِير
 سكرجة||␣
 سكري||␣|
 سكسكة||␣
@@ -11417,7 +11417,7 @@ autoExpandExamples.ar = `
 سمعة||␣|
 سمعي||␣
 سمفوطن||␣|
-سمك|fish|sa.§ma§k|samak|سَمَك
+سمك|fish|sa.,ma,k|samak|سَمَك
 سمكة||␣
 سمكي||␣|
 سمم||␣|
@@ -11465,7 +11465,7 @@ autoExpandExamples.ar = `
 سنبوق||␣|
 سنبوك||␣|
 سنة ضوئية||␣|
-سنة|year|sa.§na§ʰ|sana|سَنَة
+سنة|year|sa.,na,ʰ|sana|سَنَة
 سنت||␣
 سنتئذ||␣|
 سنتذاك||␣|
@@ -11697,7 +11697,7 @@ autoExpandExamples.ar = `
 سيارة أجرة||␣
 سيارة إسعاف||␣|
 سيارة مفخخة||␣|
-سيارة|car|sa.§jaː§‹.§ra§–|sayyāra|سَيَّارَة
+سيارة|car|sa.,jaː,‹.,ra,–|sayyāra|سَيَّارَة
 سياسة||␣
 سياسي||␣|
 سياسية||␣|
@@ -11751,21 +11751,21 @@ autoExpandExamples.ar = `
 سيوان||␣|
 سيول||␣|
 سيولة||␣|
-سَأَلَ|to question|sa.§ʔa.§la|saʾala|سأل
-سَاق|leg|saː§‹§q|sāq|ساق
+سَأَلَ|to question|sa.,ʔa.,la|saʾala|سأل
+سَاق|leg|saː,‹,q|sāq|ساق
 سَبَحَ|to swim|sa.ba.ħa|sabaḥa|سبح
 سَحَابَة|cloud|sa.ħaː.ba|saḥāba|سحابة
 سَقَطَ|to fall|sa.qa.tˤa|saqaṭa|سقط
 سَمَاء|sky|sa.maːʔ|samāʾ|سماء
-سَمَك|fish|sa.§ma§k|samak|سمك
+سَمَك|fish|sa.,ma,k|samak|سمك
 سَمِعَ|to hear|sa.mi.ʕa|samiʿa|سمع
 سَمِيك|thick|sa.miːk|samīk|سميك
-سَنَة|year|sa.§na§ʰ|sana|سنة
+سَنَة|year|sa.,na,ʰ|sana|سنة
 سَوْدَاء|black|saw.daːʔ|sawdāʾ|سوداء
-سَيَّارَة|car|sa.§jaː§‹.§ra§–|sayyāra|سيارة
+سَيَّارَة|car|sa.,jaː,‹.,ra,–|sayyāra|سيارة
 سَيِّئ|bad|saj.jiʔ|sayyiʾ|سيئ
-سُؤَال|question|su.§ʔ§aː§l|suʾāl|سؤال
-سِكْرِتِير|secretary|sɪ.§k§rɪ.§teː§‹§r|sikritīr|سكرتير
+سُؤَال|question|su.,ʔ,aː,l|suʾāl|سؤال
+سِكْرِتِير|secretary|sɪ.,k,rɪ.,teː,‹,r|sikritīr|سكرتير
 سِنّ|tooth|sinn|sinn|سن
 شأن||␣|
 شؤبوب||␣
@@ -11896,7 +11896,7 @@ autoExpandExamples.ar = `
 شبيبة||␣|
 شبين||␣|
 شبينة||␣|
-شبيه|similar|ʃa.§biː§‹§h|šabīh|شَبِيه
+شبيه|similar|ʃa.,biː,‹,h|šabīh|شَبِيه
 شت||␣|
 شتا||␣|
 شتاء||␣
@@ -11983,7 +11983,7 @@ autoExpandExamples.ar = `
 شراع||␣
 شرافة||␣|
 شراك||␣|
-شرب|to drink|ʃa.§ri.§ba|šariba|شَرِبَ
+شرب|to drink|ʃa.,ri.,ba|šariba|شَرِبَ
 شربة||␣
 شربوش||␣
 شربين||␣|
@@ -12197,7 +12197,7 @@ autoExpandExamples.ar = `
 شماع||␣|
 شمال أفريقيا||␣|
 شمال إفريقيا||␣
-شمال|left|ʃi.§maː§‹§l|šimāl|شِمَال
+شمال|left|ʃi.,maː,‹,l|šimāl|شِمَال
 شمالي||␣
 شمام||␣
 شمبانزي||␣|
@@ -12210,7 +12210,7 @@ autoExpandExamples.ar = `
 شمرة||␣|
 شمروخ||␣
 شمس النسيم||␣
-شمس|sun|ʃa§m§s|šams|شَمْس
+شمس|sun|ʃa,m,s|šams|شَمْس
 شمسي||␣
 شمسية||␣
 شمشاد||␣
@@ -12308,7 +12308,7 @@ autoExpandExamples.ar = `
 شوهاء||
 شوى||␣
 شي||␣
-شيء|thing|ʃa§j§ʔ|šayʾ|شَيْء
+شيء|thing|ʃa,j,ʔ|šayʾ|شَيْء
 شيار||␣|
 شياف||␣
 شيب||␣|
@@ -12358,16 +12358,16 @@ autoExpandExamples.ar = `
 شيوع||␣|
 شيوعي||␣|
 شيوعية||␣|
-شَبِيه|similar|ʃa.§biː§‹§h|šabīh|شبيه
+شَبِيه|similar|ʃa.,biː,‹,h|šabīh|شبيه
 شَجَرَة|tree|ʃa.d͡ʒa.ra|šajara|شجرة
-شَرِبَ|to drink|ʃa.§ri.§ba|šariba|شرب||شرب
+شَرِبَ|to drink|ʃa.,ri.,ba|šariba|شرب||شرب
 شَعَر|hair|ʃa.ʕar|šaʿar|شعر
 شَعْر|hair|ʃaʕr|šaʿr|شعر
 شَقَّ|to split|ʃaq.qa|šaqqa|شق
 شَمَّ|to smell|ʃam.ma|šamma|شم
-شَمْس|sun|ʃa§m§s|šams|شمس
-شَيْء|thing|ʃa§j§ʔ|šayʾ|شيء||شيء
-شِمَال|left|ʃi.§maː§‹§l|šimāl|شمال
+شَمْس|sun|ʃa,m,s|šams|شمس
+شَيْء|thing|ʃa,j,ʔ|šayʾ|شيء||شيء
+شِمَال|left|ʃi.,maː,‹,l|šimāl|شمال
 ص. ب.||␣|
 صأصأ||␣
 صأكة||␣
@@ -12376,7 +12376,7 @@ autoExpandExamples.ar = `
 صأى||␣
 صؤاب||␣
 صؤابة||␣
-صؤل|to be enraged (about a camel)|sˤa.§ʔu.§la|ṣaʔula|صَؤُلَ
+صؤل|to be enraged (about a camel)|sˤa.,ʔu.,la|ṣaʔula|صَؤُلَ
 صؤول||␣
 صئب||␣
 صئك||␣
@@ -12513,7 +12513,7 @@ autoExpandExamples.ar = `
 صحى||␣
 صحي||␣
 صحيح|correct|sˤa.ħiːħ|ṣaḥīḥ|صَحِيح
-صحيفة|newspaper|sˤa.§ħ§iː.§fa§ʰ|ṣaḥīfa|صَحِيفَة
+صحيفة|newspaper|sˤa.,ħ,iː.,fa,ʰ|ṣaḥīfa|صَحِيفَة
 صخ||␣
 صخب||␣|
 صخة||␣
@@ -12600,7 +12600,7 @@ autoExpandExamples.ar = `
 صغار||
 صغر||␣
 صغو||␣|
-صغير|small|sˤa.§ɣiː§‹§r|ṣaḡīr|صَغِير
+صغير|small|sˤa.,ɣiː,‹,r|ṣaḡīr|صَغِير
 صغيرة||␣|
 صف||␣
 صفا||␣
@@ -12792,12 +12792,12 @@ autoExpandExamples.ar = `
 صينية||␣|
 صيهب||␣
 صيهد||␣|
-صَؤُلَ |to be enraged (about a camel)|sˤa.§ʔu.§la|ṣaʔula|صؤل||صؤل
+صَؤُلَ |to be enraged (about a camel)|sˤa.,ʔu.,la|ṣaʔula|صؤل||صؤل
 صَادَ|to hunt|sˤaː.da|ṣāda|صاد
 صَحِيح|correct|sˤa.ħiːħ|ṣaḥīḥ|صحيح
-صَحِيفَة|newspaper|sˤa.§ħ§iː.§fa§ʰ|ṣaḥīfa|صحيفة
+صَحِيفَة|newspaper|sˤa.,ħ,iː.,fa,ʰ|ṣaḥīfa|صحيفة
 صَدْر|breast|sˤadr|ṣadr|صدر
-صَغِير|small|sˤa.§ɣiː§‹§r|ṣaḡīr|صغير
+صَغِير|small|sˤa.,ɣiː,‹,r|ṣaḡīr|صغير
 صَفْرَاء|yellow|sˤaf.raːʔ|ṣafrāʾ|صفراء
 ضآلة||␣|
 ضأن||␣
@@ -12826,7 +12826,7 @@ autoExpandExamples.ar = `
 ضاهى||␣|
 ضايق||␣
 ضب||␣
-ضباب|fog|dˤa.§b§aː§b|ḍabāb|ضَبَاب
+ضباب|fog|dˤa.,b,aː,b|ḍabāb|ضَبَاب
 ضبب||␣|
 ضبة||␣|
 ضبط||␣
@@ -12897,7 +12897,7 @@ autoExpandExamples.ar = `
 ضم||␣|
 ضماد||␣|
 ضمادة||␣|
-ضمان|guarantee|dˤa.§maː§‹§n|ḍamān|ضَمَان
+ضمان|guarantee|dˤa.,maː,‹,n|ḍamān|ضَمَان
 ضمة||␣
 ضمخ||␣
 ضمد||␣|
@@ -12927,10 +12927,10 @@ autoExpandExamples.ar = `
 ضيف||␣|
 ضيق|narrow|dˤaj.jiq|ḍayyiq|ضَيِّق
 ضيون||␣
-ضَبَاب|fog|dˤa.§b§aː§b|ḍabāb|ضباب
+ضَبَاب|fog|dˤa.,b,aː,b|ḍabāb|ضباب
 ضَحِكَ|to laugh|dˤa.ħi.ka|ḍaḥika|ضحك
 ضَرَبَ|to hit|dˤa.ra.ba|ḍaraba|ضرب
-ضَمَان|guarantee|dˤa.§maː§‹§n|ḍamān|ضمان
+ضَمَان|guarantee|dˤa.,maː,‹,n|ḍamān|ضمان
 ضَيِّق|narrow|dˤaj.jiq|ḍayyiq|ضيق
 طأطأ||␣
 طئة||␣|
@@ -13089,7 +13089,7 @@ autoExpandExamples.ar = `
 طريدة||␣|
 طريف||␣|
 طريفة||␣|
-طريق|road|tˤa.§riː§‹§q|ṭarīq|طَرِيق
+طريق|road|tˤa.,riː,‹,q|ṭarīq|طَرِيق
 طريقة||␣
 طسوج||␣|
 طشقند||␣
@@ -13110,7 +13110,7 @@ autoExpandExamples.ar = `
 طفحة||␣|
 طفطفة||␣|
 طفق||␣|
-طفل|child|tˤi§f§l|ṭifl|طِفْل
+طفل|child|tˤi,f,l|ṭifl|طِفْل
 طفو||␣|
 طفوء||␣|
 طفوؤ||␣|
@@ -13247,12 +13247,12 @@ autoExpandExamples.ar = `
 طَائِر|bird|tˤaːʔir|ṭāʾir|طائر
 طَاحَ|to fall|tˤaː.ħa|ṭāḥa|طاح
 طَارَ|to fly|tˤaː.ra|ṭāra|طار
-طَرِيق|road|tˤa.§riː§‹§q|ṭarīq|طريق
+طَرِيق|road|tˤa.,riː,‹,q|ṭarīq|طريق
 طَعَنَ|to stab|tˤa.ʕa.na|ṭaʿana|طعن
 طَفَا|to float|tˤa.faː|ṭafā|طفا
 طَوِيل|long|tˤa.wiːl|ṭawīl|طويل
 طَيِّب|good|tˤaj.jib|ṭayyib|طيب
-طِفْل|child|tˤi§f§l|ṭifl|طفل
+طِفْل|child|tˤi,f,l|ṭifl|طفل
 ظأر||␣|
 ظئر||␣|
 ظاء||␣
@@ -13275,11 +13275,11 @@ autoExpandExamples.ar = `
 ظفر|fingernail|ðˤufr|ẓufr|ظُفْر
 ظل تمام||␣
 ظل||␣|
-ظلام|darkness|ðˤa.§laː§‹§m|ẓalām|ظَلَام
+ظلام|darkness|ðˤa.,laː,‹,m|ẓalām|ظَلَام
 ظلف||␣
 ظلل||␣|
 ظلم||␣|
-ظلمة|darkness|ðˤʊ§l.§ma§ʰ|ẓulma|ظُلْمَة
+ظلمة|darkness|ðˤʊ,l.,ma,ʰ|ẓulma|ظُلْمَة
 ظلول||␣|
 ظليل||␣|
 ظليم||␣
@@ -13298,10 +13298,10 @@ autoExpandExamples.ar = `
 ظهير||␣|
 ظهيرة||␣|
 ظيان||␣
-ظَلَام|darkness|ðˤa.§laː§‹§m|ẓalām|ظلام
+ظَلَام|darkness|ðˤa.,laː,‹,m|ẓalām|ظلام
 ظَهْر|back|ðˤahr|ẓahr|ظهر
 ظُفْر|fingernail|ðˤufr|ẓufr|ظفر
-ظُلْمَة|darkness|ðˤʊ§l.§ma§ʰ|ẓulma|ظلمة
+ظُلْمَة|darkness|ðˤʊ,l.,ma,ʰ|ẓulma|ظلمة
 عائب||␣|
 عائد||␣|
 عائدة||␣|
@@ -13327,7 +13327,7 @@ autoExpandExamples.ar = `
 عاد||␣
 عادات||
 عادة سرية||␣|
-عادة|usually|ʕaː§‹.§da.§tan|ʿādatan|عَادَةً
+عادة|usually|ʕaː,‹.,da.,tan|ʿādatan|عَادَةً
 عادل||␣|
 عادم||␣|
 عادى||␣|
@@ -13384,7 +13384,7 @@ autoExpandExamples.ar = `
 عالمي||␣
 عالمية||␣|
 عالي||␣
-عام|year/to swim|ʕ§aː§m§/ʕaː.ma|ʿām/ʿāma|عَام/عَامَ
+عام|year/to swim|ʕ,aː,m,/ʕaː.ma|ʿām/ʿāma|عَام/عَامَ
 عامئذ||␣|
 عامة||␣|
 عامذاك||␣|
@@ -13780,7 +13780,7 @@ autoExpandExamples.ar = `
 عظم قذالي||␣|
 عظم وتدي||␣|
 عظم وجنيعظمة||␣|
-عظم|bone|ʕa§ðˤ§m|ʿaẓm|عَظْم
+عظم|bone|ʕa,ðˤ,m|ʿaẓm|عَظْم
 عظمى||
 عظمي||␣|
 عظميات||␣|
@@ -13899,7 +13899,7 @@ autoExpandExamples.ar = `
 على بينة||␣|
 على حسب||␣|
 على وشك||␣
-على|over|ʕa§laː§‹|ʿalā|عَلَى
+على|over|ʕa,laː,‹|ʿalā|عَلَى
 علي بابا||␣|
 علي علعل||␣|
 علي||␣
@@ -13932,10 +13932,10 @@ autoExpandExamples.ar = `
 عمدا||␣|
 عمدة||␣
 عمر نصف||␣
-عمر|Omar|ʕʊ.§ma§r|ʿumar|عُمَر
+عمر|Omar|ʕʊ.,ma,r|ʿumar|عُمَر
 عمران||␣|
 عمرة||␣
-عمرو|Amr|ʕa§m§r§–|ʿamr|عَمْرو
+عمرو|Amr|ʕa,m,r,–|ʿamr|عَمْرو
 عمروسة||␣
 عمق||␣|
 عمل||␣
@@ -14037,7 +14037,7 @@ autoExpandExamples.ar = `
 عوان||␣|
 عوج||␣
 عود الصليب||␣|
-عود|return|ʕa§w§d|ʿawd|عَوْد
+عود|return|ʕa,w,d|ʿawd|عَوْد
 عودة||␣
 عوذ||␣|
 عور||␣|
@@ -14083,28 +14083,28 @@ autoExpandExamples.ar = `
 عيلة||␣
 عيلولة||␣|
 عين الرضا عن كل عيب كليلة||␣|
-عين|eye|ʕa§j§n|ʿayn|عَيْن
+عين|eye|ʕa,j,n|ʿayn|عَيْن
 عينا||␣|
 عينة||␣|
 عيني||␣
-عَادَةً|usually|ʕaː§‹.§da.§tan|ʿādatan|عادة
+عَادَةً|usually|ʕaː,‹.,da.,tan|ʿādatan|عادة
 عَاشَ|to live|ʕaː.ʃa|ʿāša|عاش
-عَام|year|ʕ§aː§m|ʿām|عام||عام
-عَامَ|to float, swim|ʕ§aː.§ma|ʿāma|عام||عام
+عَام|year|ʕ,aː,m|ʿām|عام||عام
+عَامَ|to float, swim|ʕ,aː.,ma|ʿāma|عام||عام
 عَتِيق|old|ʕa.tiːq|ʿatīq|عتيق
 عَدَّ|to count|ʕad.da|ʿadda|عد
 عَرَفَ|to know|ʕa.ra.fa|ʿarafa|عرف
 عَصًا|stick|ʕa.sˤan|ʿaṣan|عصا
 عَصَرَ|to squeeze|ʔa.sˤa.ra|ʿaṣara|عصر
 عَضَّ|to bite|ʕadˤ.dˤa|ʿaḍḍa|عض
-عَظْم|bone|ʕa§ðˤ§m|ʿaẓm|عظم
-عَلَى|over|ʕa§laː§‹|ʿalā|على
-عَمْرو|Amr|ʕa§m§r§–|ʿamr|عمرو
+عَظْم|bone|ʕa,ðˤ,m|ʿaẓm|عظم
+عَلَى|over|ʕa,laː,‹|ʿalā|على
+عَمْرو|Amr|ʕa,m,r,–|ʿamr|عمرو
 عَنَانَة|cloud|ʕa.naː.na|ʿanāna|عنانة
-عَوْد|return|ʕa§w§d|ʿawd|عود
-عَيْن|eye|ʕa§j§n|ʿayn|عين
+عَوْد|return|ʕa,w,d|ʿawd|عود
+عَيْن|eye|ʕa,j,n|ʿayn|عين
 عُصْفُور|bird|ʕusˤ.fuːr|ʿuṣfūr|عصفور
-عُمَر|Omar|ʕʊ.§ma§r|ʿumar|عمر
+عُمَر|Omar|ʕʊ.,ma,r|ʿumar|عمر
 عِنْدَ|at|ʕin.da|ʿinda|عند
 غ||
 غائب||␣|
@@ -14114,7 +14114,7 @@ autoExpandExamples.ar = `
 غائم||␣|
 غائي||␣|
 غاب||␣
-غابة|forest|ɣaː§‹.§ba§–|ḡāba|غَابَة
+غابة|forest|ɣaː,‹.,ba,–|ḡāba|غَابَة
 غابورون||␣|
 غابوي||␣
 غابي||␣
@@ -14437,7 +14437,7 @@ autoExpandExamples.ar = `
 غيهب||␣|
 غيور||
 غيورفأر||␣|
-غَابَة|forest|ɣaː§‹.§ba§–|ḡāba|غابة
+غَابَة|forest|ɣaː,‹.,ba,–|ḡāba|غابة
 غَسَلَ|to wash|ɣa.sa.la|ḡasala|غسل
 غَمَامَة|cloud|ɣa.maː.ma|ḡamāma|غمامة
 غَنَّى|to sing|ɣan.naː|ḡannā|غنى
@@ -14823,7 +14823,7 @@ autoExpandExamples.ar = `
 فقوس الحمار||
 فقوس||
 فقوسة||
-فقيد|lost|fa.§qiː§‹§d|faqīd|فَقِيد
+فقيد|lost|fa.,qiː,‹,d|faqīd|فَقِيد
 فقير||
 فقيه||
 فك||
@@ -14857,7 +14857,7 @@ autoExpandExamples.ar = `
 فنان||
 فنجان||
 فنجنكشت||
-فندق|hotel|ˈfʊ§n.§dʊ§q|funduq|فُنْدُق
+فندق|hotel|ˈfʊ,n.,dʊ,q|funduq|فُنْدُق
 فنزويلا||
 فنطاس||
 فنلندا||
@@ -14873,7 +14873,7 @@ autoExpandExamples.ar = `
 فودنج||
 فوذنج||
 فور||
-فورا|immediately|fa§w.§ran§–||fawran|فَوْرًا
+فورا|immediately|fa,w.,ran,–||fawran|فَوْرًا
 فوري||
 فوز||
 فوشي||
@@ -14887,7 +14887,7 @@ autoExpandExamples.ar = `
 فولاذ||
 فولت||
 في البين||
-في|in|fiː§‹|fī|فِي
+في|in|fiː,‹|fī|فِي
 فيء||
 فيتق||
 فيتنام||
@@ -14898,7 +14898,7 @@ autoExpandExamples.ar = `
 فيديو||
 فيروز||
 فيروزي||
-فيروس|virus|v§i.§r§u§s
+فيروس|virus|v,i.,r,u,s
 فيزياء نووية||
 فيقن||␣|
 فيكونت||␣|
@@ -14926,12 +14926,12 @@ autoExpandExamples.ar = `
 فيينا||␣|
 فيينتيان||␣|
 فَاكِهَة|fruit|faː.ki.ha|fākiha|فاكهة
-فَقِيد|lost|fa.§qiː§‹§d|faqīd|فقيد
+فَقِيد|lost|fa.,qiː,‹,d|faqīd|فقيد
 فَكَرَ|to think|fa.ka.ra|fakara|فكر
 فَم|mouth|fam|fam|فم
-فَوْرًا|immediately|fa§w.§ran§–|fawran|فورا
-فُنْدُق|hotel|ˈfʊ§n.§dʊ§q|funduq|فندق
-فِي|in|fiː§‹|fī|في
+فَوْرًا|immediately|fa,w.,ran,–|fawran|فورا
+فُنْدُق|hotel|ˈfʊ,n.,dʊ,q|funduq|فندق
+فِي|in|fiː,‹|fī|في
 ق. م.||␣|
 قاء||␣
 قائد||␣
@@ -15129,7 +15129,7 @@ autoExpandExamples.ar = `
 قذال||␣|
 قذالي||␣|
 قذة||␣
-قذر|dirty|qa.§ði§r|qaḏir|قَذِر
+قذر|dirty|qa.,ði,r|qaḏir|قَذِر
 قذف||␣|
 قذى||␣|
 قذيفة موجهة||␣|
@@ -15137,9 +15137,9 @@ autoExpandExamples.ar = `
 قر||␣|
 قرآن||␣|
 قرآني|Qur'anic|qur.ʔaː.nijj|qurʔāniyy|قُرْآنِيّ
-قرأ|to read|qa.§ra§ʔ|qaraʾa|قَرَأَ
+قرأ|to read|qa.,ra,ʔ|qaraʾa|قَرَأَ
 قرا||␣|
-قراءة|reading|qi§r§aː§ʔa§–|qirāʾa|قِرَاءَة
+قراءة|reading|qi,r,aː,ʔa,–|qirāʾa|قِرَاءَة
 قرابة||␣
 قراح||␣|
 قراد||␣
@@ -15169,7 +15169,7 @@ autoExpandExamples.ar = `
 قرشب||␣|
 قرشبة||␣|
 قرشي||␣|
-قرص|disk|qu§r§sˤ|qurṣ|قُرْص
+قرص|disk|qu,r,sˤ|qurṣ|قُرْص
 قرصان||␣
 قرصة||␣
 قرصعنة||␣
@@ -15316,7 +15316,7 @@ autoExpandExamples.ar = `
 قصي||␣
 قصيبة||␣
 قصيدة||␣|
-قصير|short|qa.§sˤiː§‹§r|qaṣīr|قَصِير
+قصير|short|qa.,sˤiː,‹,r|qaṣīr|قَصِير
 قصيرة||␣|
 قصيل||␣
 قضاء||␣|
@@ -15404,7 +15404,7 @@ autoExpandExamples.ar = `
 قلاع||␣|
 قلام||␣
 قلاووز||␣
-قلاووظ|screw, bolt|qa.§laː§‹.§wuː§‹§ðˤ|qalāwūẓ|قَلَاوُوظ
+قلاووظ|screw, bolt|qa.,laː,‹.,wuː,‹,ðˤ|qalāwūẓ|قَلَاوُوظ
 قلاية||␣
 قلب العقرب||␣|
 قلب مكاني||␣|
@@ -15436,7 +15436,7 @@ autoExpandExamples.ar = `
 قلندرية||␣|
 قلنسوة||␣
 قلو||␣|
-قلوب|hearts|qu.§luː§‹§b|qulūb|قُلُوب
+قلوب|hearts|qu.,luː,‹,b|qulūb|قُلُوب
 قلوص||␣|
 قلوي||␣
 قلى||␣|
@@ -15596,7 +15596,7 @@ autoExpandExamples.ar = `
 قيصري||␣|
 قيصوم||␣
 قيطون||␣
-قيظ|midsummer|qa§j§ðˤ|qayẓ|قَيْظ
+قيظ|midsummer|qa,j,ðˤ|qayẓ|قَيْظ
 قيقب||␣
 قيل وقال||␣
 قيلولة||␣
@@ -15611,23 +15611,23 @@ autoExpandExamples.ar = `
 قَالَ|to say|qaː.la|qāla|قال
 قَتَلَ|to kill|qa.ta.la|qatala|قتل
 قَدِيم|old|qa.diːm|qadīm|قديم
-قَذِر|dirty|qa.§ði§r|qaḏir|قذر
-قَرَأَ|to read|qa.§ra§ʔ|qaraʾa|قرأ
+قَذِر|dirty|qa.,ði,r|qaḏir|قذر
+قَرَأَ|to read|qa.,ra,ʔ|qaraʾa|قرأ
 قَرِيب|near|qa.riːb|qarīb|قريب
 قَرْن|horn|qarn|qarn|قرن
-قَصِير|short|qa.§sˤiː§‹§r|qaṣīr|قصير
+قَصِير|short|qa.,sˤiː,‹,r|qaṣīr|قصير
 قَطَعَ|to cut|qa.tˤa.ʕa|qaṭaʿa|قطع
-قَلَاوُوظ|screw, bolt|qa.§laː§‹.§wuː§‹§ðˤ|qalāwūẓ|قلاووظ
+قَلَاوُوظ|screw, bolt|qa.,laː,‹.,wuː,‹,ðˤ|qalāwūẓ|قلاووظ
 قَلِيل|few|qa.liːl|qalīl|قليل
 قَلِيلًا|a little|qaliːlan|qa.liː.lan|قليلا
 قَلْب|heart|qalb|qalb|قلب
 قَمَر|moon|qa.mar|qamar|قمر
 قَمْل|louse|qaml|qaml|قمل
-قَيْظ|midsummer|qa§j§ðˤ|qayẓ|قيظ
+قَيْظ|midsummer|qa,j,ðˤ|qayẓ|قيظ
 قُرْآنِيّ|Qur'anic|qur.ʔaː.nijj|qurʔāniyy|قرآني||قرآني
-قُرْص|disk|qu§r§sˤ|qurṣ|قرص
+قُرْص|disk|qu,r,sˤ|qurṣ|قرص
 قُلُوب|hearts|quluːb|qulūb|قلوب
-قِرَاءَة|reading|qi§r§aː§ʔa§–|qirāʾa|قراءة||قراءة
+قِرَاءَة|reading|qi,r,aː,ʔa,–|qirāʾa|قراءة||قراءة
 قِلْف|bark (of a tree)|qilf|qilf|قلف
 كآبة||␣|
 كأب||␣
@@ -15747,7 +15747,7 @@ autoExpandExamples.ar = `
 كبكب||␣
 كبل||␣
 كبوسين||␣|
-كبير|big|ka.§b§iː§r|kabīr|كَبِير
+كبير|big|ka.,b,iː,r|kabīr|كَبِير
 كبيرة||␣
 كبيس||␣
 كبيكج||␣
@@ -15759,8 +15759,8 @@ autoExpandExamples.ar = `
 كتان||␣
 كتب||␣
 كتبة||␣|
-كتبوا|they wrote|kæ.§tæ.§buː§‹§–||كَتَبُوا
-كتبوها||kæ.§tæ.§b§uː§h§aː||كَتَبُوهَا
+كتبوا|they wrote|kæ.,tæ.,buː,‹,–||كَتَبُوا
+كتبوها||kæ.,tæ.,b,uː,h,aː||كَتَبُوهَا
 كتبي||␣|
 كتشينة||␣|
 كتف||␣|
@@ -15780,7 +15780,7 @@ autoExpandExamples.ar = `
 كثرما||␣|
 كثف||␣|
 كثيب||␣
-كثير|many|ka.§θ§iː§r|kaṯīr|كَثِير
+كثير|many|ka.,θ,iː,r|kaṯīr|كَثِير
 كثيرا||␣
 كثيراء||␣
 كثيف||␣
@@ -16091,7 +16091,7 @@ autoExpandExamples.ar = `
 كناية||␣
 كنباث||␣
 كنبار||␣|
-كنة|wing|ku§n.na§–|kunna|كُنّة
+كنة|wing|ku,n.na,–|kunna|كُنّة
 كنتاكي||␣|
 كنثة||␣|
 كندا||␣
@@ -16238,7 +16238,7 @@ autoExpandExamples.ar = `
 كيشيناو||␣|
 كيشينيف||␣|
 كيف حالك||␣
-كيف|how|ka§j.§fa|kayfa|كَيْفَ
+كيف|how|ka,j.,fa|kayfa|كَيْفَ
 كيفما||␣|
 كيفية||␣|
 كيك||␣|
@@ -16265,16 +16265,16 @@ autoExpandExamples.ar = `
 كيول||␣
 كييف||␣|
 كَبِد|liver|ka.bid|kabid|كبد
-كَبِير|big|ka.§b§iː§r|kabīr|كبير
-كَتَبُوا|they wrote|kæ.§tæ.§buː§‹§–||كتبوا
-كَتَبُوهَا||kæ.§tæ.§b§uː§h§aː||كتبوها||كتبوها
-كَثِير|many|ka.§θ§iː§r|kaṯīr|كثير
+كَبِير|big|ka.,b,iː,r|kabīr|كبير
+كَتَبُوا|they wrote|kæ.,tæ.,buː,‹,–||كتبوا
+كَتَبُوهَا||kæ.,tæ.,b,uː,h,aː||كتبوها||كتبوها
+كَثِير|many|ka.,θ,iː,r|kaṯīr|كثير
 كَلِيل|dull (as a knife)|ka.liːl|kalīl|كليل
 كَلْب|dog|kalb|kalb|كلب
 كَوْكَب|star|kaw.kab|kawkab|كوكب
-كَيْفَ|how|ka§j.§fa|kayfa|كيف
+كَيْفَ|how|ka,j.,fa|kayfa|كيف
 كُلّ|all|kull|kull|كل
-كُنّة|wing|ku§n.na§–|kunna|كنة||كنة
+كُنّة|wing|ku,n.na,–|kunna|كنة||كنة
 لأجل عين ألف عين تكرم||␣|
 لأجل||␣|
 لأك||␣
@@ -16436,7 +16436,7 @@ autoExpandExamples.ar = `
 لحظي||␣|
 لحق||␣
 لحلاح||␣
-لحم|meat|la§ħ§m|laḥm|لَحْم
+لحم|meat|la,ħ,m|laḥm|لَحْم
 لحمة||␣|
 لحن||␣|
 لحوج||␣
@@ -16495,7 +16495,7 @@ autoExpandExamples.ar = `
 لظي||␣|
 لعاب||␣|
 لعب على الجبلين||␣|
-لعب|to play|la.§ʕi.§ba|laʿiba|لَعِبَ
+لعب|to play|la.,ʕi.,ba|laʿiba|لَعِبَ
 لعبة||␣
 لعق||␣|
 لعقة||␣|
@@ -16677,7 +16677,7 @@ autoExpandExamples.ar = `
 ليلة القدر||␣|
 ليلة الميلاد||␣|
 ليلة سعيدة وأحلام لذيذة||␣
-ليلة|a night, soiree|la§j.§la§–|layla|لَيْلَة
+ليلة|a night, soiree|la,j.,la,–|layla|لَيْلَة
 ليلتئذ||␣|
 ليلتذاك||␣
 ليلك||␣
@@ -16693,13 +16693,13 @@ autoExpandExamples.ar = `
 لينة||␣|
 لينينية||␣
 لَا|no, not|laː|lā|لا
-لَحْم|meat|la§ħ§m|laḥm|لحم
-لَعِبَ|to play|la.§ʕi.§ba|laʿiba|لعب
+لَحْم|meat|la,ħ,m|laḥm|لحم
+لَعِبَ|to play|la.,ʕi.,ba|laʿiba|لعب
 لَمْ|not|lam|lam|لم
 لَنْ|not|lan|lan|لن
 لَوْ|if|law|law|لو
 لَيْل|nighttime|lajl|layl|ليل
-لَيْلَة|a night, soiree|la§j.§la§–|layla|ليلة
+لَيْلَة|a night, soiree|la,j.,la,–|layla|ليلة
 لُبّ|heart|lu|lubb|لب
 لِأَنَّ|because|li.ʔan.na|liʾanna|لأن
 لِسَان|tongue (organ)|li.saːn|lisān|لسان
@@ -16724,7 +16724,7 @@ autoExpandExamples.ar = `
 مألوف||␣|
 مأمأة||␣|
 مأمن||␣|
-مأمور|public official|ma§ʔ.§muː§‹§r|maʾmūr|مَأْمُور
+مأمور|public official|ma,ʔ.,muː,‹,r|maʾmūr|مَأْمُور
 مأمورية||␣|
 مأموم||␣|
 مأمون||␣|
@@ -16751,7 +16751,7 @@ autoExpandExamples.ar = `
 مؤقتا||␣|
 مؤلف||␣
 مؤلم||␣|
-مؤمن|believer|mu§ʔ.§mi§n|muʾmin|مُؤْمِن
+مؤمن|believer|mu,ʔ.,mi,n|muʾmin|مُؤْمِن
 مؤمنشاهي||␣|
 مؤنث||␣
 مؤنس||␣|
@@ -16775,7 +16775,7 @@ autoExpandExamples.ar = `
 ما ل||␣|
 ما هذا||␣
 ما وراء النهر||␣|
-ما ٱسمك|What's your name?|maː§‹§ §–§s§mu§ka||مَا ٱسْمُكَ
+ما ٱسمك|What's your name?|maː,‹, ,–,s,mu,ka||مَا ٱسْمُكَ
 ما|what|maː|mā|مَا
 ماء جافيل||␣|
 ماء شرب||␣
@@ -17137,7 +17137,7 @@ autoExpandExamples.ar = `
 متول||␣|
 متولد||␣|
 متى ما||␣|
-متى|when|ma.§t§aː|matā|مَتَى
+متى|when|ma.,t,aː|matā|مَتَى
 متيم||␣|
 متين||␣
 مثابة||␣
@@ -17527,8 +17527,8 @@ autoExpandExamples.ar = `
 مدرب||␣|
 مدرة||␣|
 مدرس||␣|
-مدرسة|school|ma.§d§ra.§sa§–|madrasa|مَدْرَسَة
-مدرستنا|our school|ma.§d§ra.§sa§t-§naː§‹||مَدْرَسَتْنَا
+مدرسة|school|ma.,d,ra.,sa,–|madrasa|مَدْرَسَة
+مدرستنا|our school|ma.,d,ra.,sa,t-,naː,‹||مَدْرَسَتْنَا
 مدرع||␣|
 مدرك||␣
 مدريد||␣|
@@ -17562,7 +17562,7 @@ autoExpandExamples.ar = `
 مدي||␣|
 مدية||␣|
 مديح||␣|
-مدير|manager|mu.§diː§‹§r|mudīr|مُدِير
+مدير|manager|mu.,diː,‹,r|mudīr|مُدِير
 مديرة||␣
 مديرية||␣|
 مدين||␣|
@@ -17605,7 +17605,7 @@ autoExpandExamples.ar = `
 مرء||␣|
 مرآة||␣
 مرأب||␣
-مرأة|woman|ma§r.§ʔa§–|marʾa|مَرْأَة
+مرأة|woman|ma,r.,ʔa,–|marʾa|مَرْأَة
 مرؤوس||␣|
 مرئي||␣|
 مراء||␣|
@@ -17765,7 +17765,7 @@ autoExpandExamples.ar = `
 مرهق||␣|
 مرهم||␣|
 مرهوب||␣|
-مرو|pebble|ma§r§w|marw|مَرْو
+مرو|pebble|ma,r,w|marw|مَرْو
 مروءة||␣|
 مروان||␣|
 مروحة||␣
@@ -17839,7 +17839,7 @@ autoExpandExamples.ar = `
 مزين||␣|
 مس||␣|
 مسألة||␣|
-مسؤول|official, functionary|ma§s.§ʔ§uː§l|masʾūl|مَسْؤُول
+مسؤول|official, functionary|ma,s.,ʔ,uː,l|masʾūl|مَسْؤُول
 مسؤولية||␣|
 مسئول||␣|
 مساء الخير||␣
@@ -18167,7 +18167,7 @@ autoExpandExamples.ar = `
 مشوق||␣|
 مشوه||␣
 مشوي||␣
-مشى|to walk|ma.§ʃ§aː|mašā|مَشَى
+مشى|to walk|ma.,ʃ,aː|mašā|مَشَى
 مشي||␣|
 مشيئة||␣|
 مشية||␣|
@@ -18326,7 +18326,7 @@ autoExpandExamples.ar = `
 مطحثا||␣|
 مطحنة||␣
 مطحون||␣|
-مطر|rain|ma.§tˤa§r|maṭar|مَطَر
+مطر|rain|ma.,tˤa,r|maṭar|مَطَر
 مطران||␣|
 مطراني||␣|
 مطرانية||␣|
@@ -18515,7 +18515,7 @@ autoExpandExamples.ar = `
 معمول||␣|
 معنوي||␣
 معنويات||␣|
-معنى|meaning, concept (formal)|ma§ʕ.§naː§‹|maʿnan|مَعْنًى
+معنى|meaning, concept (formal)|ma,ʕ.,naː,‹|maʿnan|مَعْنًى
 معهد||␣
 معهود||␣|
 معوض||␣|
@@ -18726,7 +18726,7 @@ autoExpandExamples.ar = `
 مقشدة||␣
 مقشرة||␣
 مقص أظافر||␣|
-مقص|scissors|mi.§qa§ssˤ|miqaṣṣ|مِقَصّ
+مقص|scissors|mi.,qa,ssˤ|miqaṣṣ|مِقَصّ
 مقصد||␣|
 مقصر||␣
 مقصف||␣
@@ -18787,7 +18787,7 @@ autoExpandExamples.ar = `
 مكة المكرمة||␣|
 مكة||␣
 مكتئب||␣|
-مكتب|desk, office|ma§k.§ta§b|maktab|مَكْتَب
+مكتب|desk, office|ma,k.,ta,b|maktab|مَكْتَب
 مكتبة||␣
 مكتسب||␣|
 مكتوب||␣|
@@ -18872,7 +18872,7 @@ autoExpandExamples.ar = `
 ملتقط||␣|
 ملتقى||␣|
 ملجأ||␣
-ملح|salt|mi§l§ħ|milḥ|مِلْح
+ملح|salt|mi,l,ħ|milḥ|مِلْح
 ملحة||␣|
 ملحد||␣|
 ملحس||␣|
@@ -18925,7 +18925,7 @@ autoExpandExamples.ar = `
 ملون||␣|
 ملى||␣|
 ملي||␣|
-مليء|full|ma§l§iː§ʔ|malīʾ|مَلِيء
+مليء|full|ma,l,iː,ʔ|malīʾ|مَلِيء
 مليار||␣
 مليح||␣|
 مليق||␣|
@@ -18949,7 +18949,7 @@ autoExpandExamples.ar = `
 ممتع||␣|
 ممتلئ|full|mum.ta.liʔ|mumtaliʾ|مُمْتَلِئ
 ممتلكات||␣
-ممثل|representative|mu.§ma§θ.θi§l|mumaṯṯil|مُمَثِّلْ
+ممثل|representative|mu.,ma,θ.θi,l|mumaṯṯil|مُمَثِّلْ
 ممثلة||␣|
 ممحاة||␣|
 ممحوق||␣
@@ -19086,7 +19086,7 @@ autoExpandExamples.ar = `
 مندل||␣|
 مندوب||␣|
 منديل||␣
-منذ|since|mʊ§n.§ðʊ|munḏu|مُنْذُ
+منذ|since|mʊ,n.,ðʊ|munḏu|مُنْذُ
 منذئذ||␣|
 منذاك||␣|
 منذر||␣|
@@ -19449,46 +19449,46 @@ autoExpandExamples.ar = `
 ميوعة||␣|
 ميول||␣|
 ميويزج||␣
-مَأْمُور|public official|ma§ʔ.§muː§‹§r|maʾmūr|مأمور
-مَا ٱسْمُكَ|What's your name?|maː§‹§ §–§s§mu§ka||ما ٱسمك
+مَأْمُور|public official|ma,ʔ.,muː,‹,r|maʾmūr|مأمور
+مَا ٱسْمُكَ|What's your name?|maː,‹, ,–,s,mu,ka||ما ٱسمك
 مَا|what|maː|mā|ما
 مَاء|water|maːʔ|māʾ|ماء
 مَاتَ|to die|maː.ta|māta|مات
 مَاذَا|what|maː.ðaː|māḏā|ماذا
-مَتَى|when|ma.§t§aː|matā|متى
+مَتَى|when|ma.,t,aː|matā|متى
 مَحَا|to wipe|ma.ħaː|maḥā|محا
-مَدْرَسَة|school|ma.§d§ra.§sa§–|madrasa|مدرسة
-مَدْرَسَتْنَا|our school|ma.§d§ra.§sa§t-§naː§‹||مدرستنا
-مَرْأَة|woman|ma§r.§ʔa§–|marʾa|مرأة
-مَرْو|pebble|ma§r§w|marw|مرو
+مَدْرَسَة|school|ma.,d,ra.,sa,–|madrasa|مدرسة
+مَدْرَسَتْنَا|our school|ma.,d,ra.,sa,t-,naː,‹||مدرستنا
+مَرْأَة|woman|ma,r.,ʔa,–|marʾa|مرأة
+مَرْو|pebble|ma,r,w|marw|مرو
 مَسَحَ|to wipe|ma.sa.ħa|masaḥa|مسح
-مَسْؤُول|official, functionary|ma§s.§ʔ§uː§l|masʾūl|مسؤول
-مَشَى|to walk|ma.§ʃ§aː|mašā|مشى
+مَسْؤُول|official, functionary|ma,s.,ʔ,uː,l|masʾūl|مسؤول
+مَشَى|to walk|ma.,ʃ,aː|mašā|مشى
 مَصَّ|to suck|masˤ.sˤa|maṣṣa|مص
-مَطَر|rain|ma.§tˤa§r|maṭar|مطر
+مَطَر|rain|ma.,tˤa,r|maṭar|مطر
 مَعَ|with|ma.ʕa|maʿa|مع
-مَعْنًى|meaning, concept (formal)|ma§ʕ.§naː§‹|maʿnan|معنى
-مَكْتَب|desk, office|ma§k.§ta§b|maktab|مكتب
-مَلِيء|full|ma§l§iː§ʔ|malīʾ|مليء
+مَعْنًى|meaning, concept (formal)|ma,ʕ.,naː,‹|maʿnan|معنى
+مَكْتَب|desk, office|ma,k.,ta,b|maktab|مكتب
+مَلِيء|full|ma,l,iː,ʔ|malīʾ|مليء
 مَنْ|who|man|man|من
-مُؤْمِن|believer|mu§ʔ.§mi§n|muʾmin|مؤمن
+مُؤْمِن|believer|mu,ʔ.,mi,n|muʾmin|مؤمن
 مُتَعَفِّن|rotten|mu.ta.ʕaf.fin|mutaʿaffin|متعفن
-مُدِير|manager|mu.§diː§‹§r|mudīr|مدير
+مُدِير|manager|mu.,diː,‹,r|mudīr|مدير
 مُسْتَدِير|round|mus.ta.diːr|mustadīr|مستدير
 مُسْتَشْفًى|hospital|mus.taʃ.fan|mustašfan|مستشفى
 مُسْتَقِيم|straight|mus.ta.qiːm|mustaqīm|مستقيم
-مُمَثِّلْ|representative|mu.§ma§θ.θi§l|mumaṯṯil|ممثل
+مُمَثِّلْ|representative|mu.,ma,θ.θi,l|mumaṯṯil|ممثل
 مُمْتَلِئ|full|mum.ta.liʔ|mumtaliʾ|ممتلئ
-مُنْذُ|since|mʊ§n.§ðʊ|munḏu|منذ
-مِقَصّ|scissors|mi.§qa§ssˤ|miqaṣṣ|مقص
-مِلْح|salt|mi§l§ħ|milḥ|ملح
+مُنْذُ|since|mʊ,n.,ðʊ|munḏu|منذ
+مِقَصّ|scissors|mi.,qa,ssˤ|miqaṣṣ|مقص
+مِلْح|salt|mi,l,ħ|milḥ|ملح
 نأى||␣
 نؤوم||␣|
 نا||␣|
 ناء||␣|
 نائب||␣|
 نائل||␣|
-نائم|asleep|naː§‹.§ʔɪ§m|nāʾim|نَائِم
+نائم|asleep|naː,‹.,ʔɪ,m|nāʾim|نَائِم
 ناب||␣|
 نابت||␣|
 نابذ||␣|
@@ -19610,7 +19610,7 @@ autoExpandExamples.ar = `
 ناول||␣|
 ناووس||␣
 ناوى||␣|
-ناي|a kind of flute|naː§‹§j|nāy|نَاي
+ناي|a kind of flute|naː,‹,j|nāy|نَاي
 نايف||␣|
 نبآء||
 نبأ||␣
@@ -19689,7 +19689,7 @@ autoExpandExamples.ar = `
 نجل||␣|
 نجليات||␣|
 نجم الشمال||␣|
-نجم|star|na§d͡ʒ§m|najm|نَجْم
+نجم|star|na,d͡ʒ,m|najm|نَجْم
 نجمة||␣|
 نجو||␣|
 نجوم||␣|
@@ -19712,7 +19712,7 @@ autoExpandExamples.ar = `
 نحلة||␣
 نحميا||␣|
 نحن|we (1pl)|naħ.nu|naḥnu|نَحْنُ
-نحو|toward|na§ħ.§wa|naḥwa|نَحْوَ
+نحو|toward|na,ħ.,wa|naḥwa|نَحْوَ
 نحوسة||␣|
 نحول||␣|
 نحوي||␣|
@@ -19803,7 +19803,7 @@ autoExpandExamples.ar = `
 نسب||␣|
 نسبة||␣|
 نسبوية||␣
-نسبي|relative (adj)|ni§s.§bi§jj|nisbiyy|نِسْبِيّ
+نسبي|relative (adj)|ni,s.,bi,jj|nisbiyy|نِسْبِيّ
 نسبيا||␣
 نستعليق||␣
 نسج||␣|
@@ -19968,7 +19968,7 @@ autoExpandExamples.ar = `
 نفاج||␣|
 نفاخة||␣
 نفاد||␣
-نفاذ|breakthrough|na.§f§aː§ð|nafāḏ|نَفَاذ
+نفاذ|breakthrough|na.,f,aː,ð|nafāḏ|نَفَاذ
 نفار||␣|
 نفاس||␣|
 نفاسة||␣|
@@ -20043,7 +20043,7 @@ autoExpandExamples.ar = `
 نقل||␣|
 نقلا||␣|
 نقم||␣|
-نقود|money|nʊ.§q§uː§d|nuqūd|نُقُود
+نقود|money|nʊ.,q,uː,d|nuqūd|نُقُود
 نقوع||␣|
 نقى||␣|
 نقي||␣|
@@ -20094,7 +20094,7 @@ autoExpandExamples.ar = `
 نمي||␣|
 نمية||␣|
 نميمة||␣|
-نهائي|final|ni.§h§aː.§ʔ§iː|nihāʾiyy|نِهَائِيّ
+نهائي|final|ni.,h,aː.,ʔ,iː|nihāʾiyy|نِهَائِيّ
 نهار||␣|
 نهارئذ||␣|
 نهارذاك||␣|
@@ -20211,21 +20211,21 @@ autoExpandExamples.ar = `
 نيون||␣|
 نيوهامشير||␣|
 نيويورك||␣
-نَائِم|asleep|naː§‹.§ʔɪ§m|nāʾim|نائم
+نَائِم|asleep|naː,‹.,ʔɪ,m|nāʾim|نائم
 نَار|fire|naːr|nār|نار
 نَاعِم|smooth|naː.ʕim|nāʿim|ناعم
 نَامَ|to sleep|naː.ma|nāma|نام
-نَاي|a kind of flute|naː§‹§j|nāy|ناي
-نَجْم|star|na§d͡ʒ§m|najm|نجم
+نَاي|a kind of flute|naː,‹,j|nāy|ناي
+نَجْم|star|na,d͡ʒ,m|najm|نجم
 نَحْنُ|we (1pl)|naħ.nu|naḥnu|نحن
-نَحْوَ|toward|na§ħ.§wa|naḥwa|نحو
-نَفَاذ|breakthrough|na.§f§aː§ð|nafāḏ|نفاذ
+نَحْوَ|toward|na,ħ.,wa|naḥwa|نحو
+نَفَاذ|breakthrough|na.,f,aː,ð|nafāḏ|نفاذ
 نَفَخَ|to blow|na.fa.xa|nafaḵa|نفخ
 نَهَر|river|na.har|nahar|نهر
 نَهْر|river|na.hr|nahr|نهر
-نُقُود|money|nʊ.§q§uː§d|nuqūd|نقود
-نِسْبِيّ|relative (adj)|ni§s.§bi§jj|nisbiyy|نسبي
-نِهَائِيّ|final|ni.§h§aː.§ʔ§iː|nihāʾiyy|نهائي
+نُقُود|money|nʊ.,q,uː,d|nuqūd|نقود
+نِسْبِيّ|relative (adj)|ni,s.,bi,jj|nisbiyy|نسبي
+نِهَائِيّ|final|ni.,h,aː.,ʔ,iː|nihāʾiyy|نهائي
 هؤلاء||
 ها||␣
 هاء||␣
@@ -20334,7 +20334,7 @@ autoExpandExamples.ar = `
 هدية||␣
 هدير||␣|
 هديل||␣|
-هذا|this|haː.§ðaː§‹|hāḏā|هٰذَا
+هذا|this|haː.,ðaː,‹|hāḏā|هٰذَا
 هذاك||␣|
 هذب||␣
 هذر||␣
@@ -20457,9 +20457,9 @@ autoExpandExamples.ar = `
 هن|they (3pl)|hu.maː|hunna|هُنَّ
 هنأ||␣|
 هنئ||␣|
-هنا|here|hu.§naː§‹|hunā|هُنَا
+هنا|here|hu.,naː,‹|hunā|هُنَا
 هنادة||␣|
-هناك|there|hʊ.§naː§‹.§ka|hunāka|هُنَاكَ
+هناك|there|hʊ.,naː,‹.,ka|hunāka|هُنَاكَ
 هنالك|there|hu.naː.li.ka|hunālika|هُنَالِكَ
 هند||␣|
 هندام||␣|
@@ -20542,14 +20542,14 @@ autoExpandExamples.ar = `
 هيولي||␣|
 هُمَا|they (3pl)|humā||هما
 هُمْ|they (3pl)|humm|humm|هم
-هُنَا|here|hu.§naː§‹|hunā|هنا
+هُنَا|here|hu.,naː,‹|hunā|هنا
 هُنَاكَ|there|hu.naː.ka|hunāka|هناك||هناك
 هُنَالِكَ|there|hu.naː.li.ka|hunālika|هنالك||هنالك
 هُنَّ|they (3pl)|hu.maː|hunna|هن
 هُوَ|he, she, it (3sg)|hu.wa|huwa|هو
 هِنْغَارِيّ|Hungarian|hin.ɣaː.rijj|hinḡāriyy|هنغاري
 هِيَ|he, she, it (3sg)|hi.ja|hiya|هي
-هٰذَا|this|haː.§ðaː§‹|hāḏā|هذا
+هٰذَا|this|haː.,ðaː,‹|hāḏā|هذا
 هٰذِهِ|this|haː.ði.hi|hāḏihi|هذه
 هٰذِي|this|hāḏī||هذي
 و|and|wa|wa|وَ
@@ -20576,7 +20576,7 @@ autoExpandExamples.ar = `
 واحد وخمسون||␣|
 واحد وعشرون||␣
 واحد|one|waː.ħid|wāḥid|وَاحِد
-واحدة|one|w§aː.§ħi.§da§–|wāḥida|وَاحِدَة
+واحدة|one|w,aː.,ħi.,da,–|wāḥida|وَاحِدَة
 واد||␣
 وادي الحجارة||␣|
 وادي السلام||␣|
@@ -20592,7 +20592,7 @@ autoExpandExamples.ar = `
 واسط||␣|
 واسطة||␣|
 واسطي||␣|
-واسع|wide|waː§‹.§si§ʕ|wāsiʿ|وَاسِع
+واسع|wide|waː,‹.,si,ʕ|wāsiʿ|وَاسِع
 واسى||␣|
 واشنطن العاصمة||␣|
 واشنطن||␣
@@ -20758,7 +20758,7 @@ autoExpandExamples.ar = `
 وزر||␣|
 وزراء||
 وزع||␣
-وزغ|gecko|wa.§za§ɣ|wa.zaɣ|وَزَغ
+وزغ|gecko|wa.,za,ɣ|wa.zaɣ|وَزَغ
 وزغة||␣
 وزن||␣|
 وزنة||␣
@@ -20769,7 +20769,7 @@ autoExpandExamples.ar = `
 وسادة||␣|
 وسام||␣
 وسامة||␣|
-وسخ|dirty|wa.§si§x|wasiḵ|وَسِخ
+وسخ|dirty|wa.,si,x|wasiḵ|وَسِخ
 وسد||␣
 وسط البلد||␣|
 وسط||␣
@@ -20909,7 +20909,7 @@ autoExpandExamples.ar = `
 ولايات ميكرونيسيا المتحدة||␣|
 ولاية||␣
 ولبة||␣|
-ولد|boy|wa.§la§d|wa.lad|وَلَد
+ولد|boy|wa.,la,d|wa.lad|وَلَد
 ولع||␣|
 ولكن||␣
 ولو||␣
@@ -20956,20 +20956,20 @@ autoExpandExamples.ar = `
 ويني الدبدوبيأجوج||␣|
 وَ|and|wa|wa|و
 وَاحِد|one|waː.ħid|wāḥid|واحد
-وَاحِدَة|one|w§aː.§ħi.§da§–|wāḥida|واحدة
-وَاسِع|wide|waː§‹.§si§ʕ|wāsiʿ|واسع
+وَاحِدَة|one|w,aː.,ħi.,da,–|wāḥida|واحدة
+وَاسِع|wide|waː,‹.,si,ʕ|wāsiʿ|واسع
 وَثَنِيّ|idolatrous|wa.θa.nijj|waṯaniyy|وثني
 وَرَقَة|leaf|wa.ra.qa|waraqa|ورقة
 وَرِمَ|to swell|wa.ri.ma|warima|ورم
-وَزَغ|gecko|wa.§za§ɣ|wa.zaɣ|وزغ
-وَسِخ|dirty|wa.§si§x|wasiḵ|وسخ
+وَزَغ|gecko|wa.,za,ɣ|wa.zaɣ|وزغ
+وَسِخ|dirty|wa.,si,x|wasiḵ|وسخ
 وَقَعَ|to fall|wa.qa.ʕa|waqaʿa|وقع
 وَقَفَ|to stand|wa.qa.fa|waqafa|وقف
-وَلَد|boy|wa.§la§d|wa.lad|ولد
+وَلَد|boy|wa.,la,d|wa.lad|ولد
 يأجوج ومأجوج||␣|
 يأجوج||
 يأس||␣|
-يؤثر|prefer|ju.§ʔa.§θθi§r||يُؤَثِّر
+يؤثر|prefer|ju.,ʔa.,θθi,r||يُؤَثِّر
 يؤيؤ||␣
 يئس||␣|
 يا جميل||␣
@@ -20979,8 +20979,8 @@ autoExpandExamples.ar = `
 ياالله||␣
 يابان||␣|
 ياباني||␣|
-يابانية|Japanese|j§aː.§b§aː.§n§iː.§ja||يَابَانِية
-يابس|dry|j§aː.§bi§s|yābis|يَابِس
+يابانية|Japanese|j,aː.,b,aː.,n,iː.,ja||يَابَانِية
+يابس|dry|j,aː.,bi,s|yābis|يَابِس
 يابسة||␣|
 يادى||␣|
 يارا||␣|
@@ -21026,7 +21026,7 @@ autoExpandExamples.ar = `
 يرقة||␣
 يريفان||␣|
 يزيد||␣|
-يسار|left|ja.§s§aː§r|yasār|يَسَار
+يسار|left|ja.,s,aː,r|yasār|يَسَار
 يساري||␣|
 يسر||␣|
 يسروع||␣
@@ -21060,12 +21060,12 @@ autoExpandExamples.ar = `
 يلنجج||␣|
 يلنجوج||␣|
 يلنجيج||␣|
-يم|sea|ja§mm|yamm|يَمّ
+يم|sea|ja,mm|yamm|يَمّ
 يمام||␣
 يمم||␣|
 يمن||␣|
 يمني||␣|
-يمين|right|ja.§miː§‹§n|yamīn|يَمِين
+يمين|right|ja.,miː,‹,n|yamīn|يَمِين
 يميني||␣|
 ين||␣|
 يناير||␣
@@ -21110,7 +21110,7 @@ autoExpandExamples.ar = `
 يوم الغفران||␣
 يوم القيامة||␣|
 يوم الكفارة||␣
-يوم|day|ja§w§m|yawm|يَوْم
+يوم|day|ja,w,m|yawm|يَوْم
 يومئذ||␣|
 يوما||␣|
 يومذاك||␣|
@@ -21124,33 +21124,33 @@ autoExpandExamples.ar = `
 يونيه||␣|
 يونيو||␣
 يويو||␣|
-يَابَانِية|Japanese|j§aː.§b§aː.§n§iː.§ja||يابانية
-يَابِس|dry|j§aː.§bi§s|yābis|يابس
+يَابَانِية|Japanese|j,aː.,b,aː.,n,iː.,ja||يابانية
+يَابِس|dry|j,aː.,bi,s|yābis|يابس
 يَد|hand|jad|yad|يد
-يَسَار|left|ja.§s§aː§r|yasār|يسار
-يَمِين|right|ja.§miː§‹§n|yamīn|يمين
-يَمّ|sea|ja§mm|yamm|يم
-يَوْم|day|ja§w§m|yawm|يوم
-يُؤَثِّر|prefer|ju.§ʔa.§θθi§r||يؤثر||يؤثر
-پاريس|Paris|paː§‹.§riː§‹§s|pārīs|پَارِيس
-پَارِيس|Paris|paː§‹.§riː§‹§s|pārīs|پاريس
-چاكارتا|Jakarta|d͡ʒaː§‹.§kaː§‹§r.§ta§–||چَاكَارْتَا
-چَاكَارْتَا|Jakarta|d͡ʒaː§‹.§kaː§‹§r.§ta§–||چاكارتا
-ڤيينا|Vienna|vi.§jeː§‹.§na§–
+يَسَار|left|ja.,s,aː,r|yasār|يسار
+يَمِين|right|ja.,miː,‹,n|yamīn|يمين
+يَمّ|sea|ja,mm|yamm|يم
+يَوْم|day|ja,w,m|yawm|يوم
+يُؤَثِّر|prefer|ju.,ʔa.,θθi,r||يؤثر||يؤثر
+پاريس|Paris|paː,‹.,riː,‹,s|pārīs|پَارِيس
+پَارِيس|Paris|paː,‹.,riː,‹,s|pārīs|پاريس
+چاكارتا|Jakarta|d͡ʒaː,‹.,kaː,‹,r.,ta,–||چَاكَارْتَا
+چَاكَارْتَا|Jakarta|d͡ʒaː,‹.,kaː,‹,r.,ta,–||چاكارتا
+ڤيينا|Vienna|vi.,jeː,‹.,na,–
 ڨالمة||␣|
 ڨفصة||␣|
 
 
-قَدَم|foot|qa.§da§m|qadam|قدم
-قدم|foot|qa.§da§m|qadam|قَدَم
+قَدَم|foot|qa.,da,m|qadam|قدم
+قدم|foot|qa.,da,m|qadam|قَدَم
 رَأْس|head|raʔs|raʾs|رأس
 رأس|head|raʔs|raʾs|رَأْس
-رُؤُوس|heads|ru.§ʔ§uː§s|ruʾūs|رؤوس
-رؤوس|heads|ru.§ʔ§uː§s|ruʾūs|رُؤُوس
+رُؤُوس|heads|ru.,ʔ,uː,s|ruʾūs|رؤوس
+رؤوس|heads|ru.,ʔ,uː,s|ruʾūs|رُؤُوس
 
-السلام علیکم|greetings|a§s.§sa.§lɑː§‹§m§ §ʕa.§la§j.§ku§m
-القرآن|the Qurʼan|a§l.§qu§r.§ˈʔaː§n
-طلبه|Tulba|t̴u§l.§bæ§–
+السلام علیکم|greetings|a,s.,sa.,lɑː,‹,m, ,ʕa.,la,j.,ku,m
+القرآن|the Qurʼan|a,l.,qu,r.,ˈʔaː,n
+طلبه|Tulba|t̴u,l.,bæ,–
 
 
 

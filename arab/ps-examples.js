@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -38,7 +38,7 @@ autoExpandExamples.ps = `
 آبکند|||||
 آجر|||||
 آر||␣|||
-آره|original, real|ɑ§r§a|āra|آره|
+آره|original, real|ɑ,r,a|āra|آره|
 آس|||||
 آلمان|||||
 آم|||||
@@ -51,15 +51,15 @@ autoExpandExamples.ps = `
 آهوری|||||
 آواز|||||
 آيات|verse of the Qur'an|ɑjɑt̪|āyāt|آيات|
-آيرلنډ|Ireland|ɑ§j§r§ˈlə§n§ɖ|āyrlə́nḍ|آيرلنډ|
-ابادول|to populate|a.§b§ɑ.§d̪a§ˈwə§l|abādawə́l||
+آيرلنډ|Ireland|ɑ,j,r,ˈlə,n,ɖ|āyrlə́nḍ|آيرلنډ|
+ابادول|to populate|a.,b,ɑ.,d̪a,ˈwə,l|abādawə́l||
 اباسين|Indus||abasín|||اباسین
 ابدی|||||
 اتل||␣|||
-اتلس|eighteen|a.§t̪ə.§la§s|atəlas||
+اتلس|eighteen|a.,t̪ə.,la,s|atəlas||
 اتله||␣|||
 اته||␣|||
-اتيا|eighty|a.§t̪§j§ɑ|atyā||
+اتيا|eighty|a.,t̪,j,ɑ|atyā||
 اتڼ||␣|||
 اجازه|||||
 احتلام|||||
@@ -73,7 +73,7 @@ autoExpandExamples.ps = `
 اخښی||␣|||
 ادعا|claim||iddi‵ā||
 اذان|||||
-ارزان|cheap|a§r.§z§ɑ§n|||
+ارزان|cheap|a,r.,z,ɑ,n|||
 ارزانه||␣|||
 ارزښت||␣|||
 ارمان||␣|||
@@ -85,12 +85,12 @@ autoExpandExamples.ps = `
 استول||␣|||
 استوگنه|||||
 اسد|||||
-اسلام|Islam|ɪ§s.§l§ɑ§m|islām|اِسلام|
+اسلام|Islam|ɪ,s.,l,ɑ,m|islām|اِسلام|
 اسلامي|||||
 اسمان||␣|||
 اسماني||␣|||
 اسټراليا||␣|||
-اسپانيا|Spain|ɑ§s§p.§ɑ§n.§j§ɑ|aspānyā||
+اسپانيا|Spain|ɑ,s,p.,ɑ,n.,j,ɑ|aspānyā||
 اسپه||␣|||
 اسکيمو||␣|||
 اعلان|announcement||i‵lān||
@@ -99,7 +99,7 @@ autoExpandExamples.ps = `
 اغوندم||␣|||
 اغږل||␣|||
 اغږم||␣|||
-افغان|Afghan|a§f§ɣ§ɑ§n|afǧān||
+افغان|Afghan|a,f,ɣ,ɑ,n|afǧān||
 افغانستان||␣|||
 افق|||||
 اقتصادي|||||
@@ -111,7 +111,7 @@ autoExpandExamples.ps = `
 المانی||␣|||
 الو|||||
 الوبالو||␣|||
-الوتل|to fly|a§l§ˈwə§ˈtə§l|alwətəl||
+الوتل|to fly|a,l,ˈwə,ˈtə,l|alwətəl||
 الوتکه||␣|||
 الوزم||␣|||
 الوچه|||||
@@ -151,7 +151,7 @@ autoExpandExamples.ps = `
 اوبازي||␣|||
 اوباسم||␣|||
 اوبال|||||
-اوبدل|to weave|›§o§b.§ˈd̪ə§l|obdә́l||
+اوبدل|to weave|›,o,b.,ˈd̪ə,l|obdә́l||
 اوبسپی|||||
 اوبه||␣|||
 اوبوس|||||
@@ -165,23 +165,23 @@ autoExpandExamples.ps = `
 اورلوبه||␣|||
 اورم||␣|||
 اورنګزېب|||||
-اورول|to hear|a§w.§ra.§ˈwə§l|awrawə́l||
+اورول|to hear|a,w.,ra.,ˈwə,l|awrawə́l||
 اوريګامي||␣|||
 اورښت|||||
-اورګاډی|train|›§o§r.§ɡ§ɑ.§ɖ§aɪ|orgāḍay||
+اورګاډی|train|›,o,r.,ɡ,ɑ.,ɖ,aɪ|orgāḍay||
 اورېدل||␣|||
 اورېدونکی||␣|||
 اوز|||||
 اوسم||␣|||
-اوسېدل|to live, reside|›§o§s§e§ˈdə§l|osedə́l||
+اوسېدل|to live, reside|›,o,s,e,ˈdə,l|osedə́l||
 اوسېدونکی||␣|||
 اوسېدونکې||␣|||
 اوش||␣|||
 اوشه||␣|||
 اولس||␣|||
 اوم||␣|||
-اومامي|umami|›§u.§m§ɑ.§m§i|umāmi|اُومامي|
-اوولس|seventeen|›§u§ˈwə§l§a§s|uwə́las||
+اومامي|umami|›,u.,m,ɑ.,m,i|umāmi|اُومامي|
+اوولس|seventeen|›,u,ˈwə,l,a,s|uwə́las||
 اووه||␣|||
 اويا||␣|||
 اويم||␣|||
@@ -196,23 +196,23 @@ autoExpandExamples.ps = `
 اوېجه|||||
 ايران|||||
 ايستل||␣|||
-ايسلنډ|Iceland|a§i§s§ˈlə§ŋ§ɖ|ayslə́nḍ||
-ايغلو|igloo|›§i§ɣ.§l§u|íğlu||
+ايسلنډ|Iceland|a,i,s,ˈlə,ŋ,ɖ|ayslə́nḍ||
+ايغلو|igloo|›,i,ɣ.,l,u|íğlu||
 اينو||␣|||
 اپريدی||␣|||
-اپيم|opium|a.§p§i§m|apim||
+اپيم|opium|a.,p,i,m|apim||
 اپين||␣|||
 اچول||␣|||
-اړخ|side|a§ɺ̢§x|aṛx||
+اړخ|side|a,ɺ̢,x|aṛx||
 اړول||␣|||
 اړين||␣|||
 اکوړ|||||
 اګل||␣|||
 ايالت|district, province||iyālát|||ایالت
 اېخ|kneeling command for camel|ex|ex||
-اېسټونيا|Estonia|›§e§s§ˈʈ§o§n§j§ɑ|esṭónyā||
-اېموجي|emoji|›§e.§m§o.§d͡ʒ§i|emoji||
-اېکوادور|Ecuador|›§e§k§w§ɑ§ˈd§o§r|ekwādór||
+اېسټونيا|Estonia|›,e,s,ˈʈ,o,n,j,ɑ|esṭónyā||
+اېموجي|emoji|›,e.,m,o.,d͡ʒ,i|emoji||
+اېکوادور|Ecuador|›,e,k,w,ɑ,ˈd,o,r|ekwādór||
 بابا||␣|||
 باد||␣|||
 بادام||␣|||
@@ -228,8 +228,8 @@ autoExpandExamples.ps = `
 بالښت||␣|||
 بام||␣|||
 بانجڼ|||||
-باندې|upon, above|ˈb§ɑ§n§d§e|bā́nde||
-بايلل|to lose|b§ɑ§i.§ˈlə§l|bāylə́l||
+باندې|upon, above|ˈb,ɑ,n,d,e|bā́nde||
+بايلل|to lose|b,ɑ,i.,ˈlə,l|bāylə́l||
 باچا||␣|||
 باڼه||␣|||
 بته||␣|||
@@ -237,7 +237,7 @@ autoExpandExamples.ps = `
 بحر|sea||bahr||
 بخمل|||||
 بخښل||␣|||
-بخښنه|sorry|ba§x.§ʂə.§n§a|bëx̌ëna||bax.xə.na
+بخښنه|sorry|ba,x.,ʂə.,n,a|bëx̌ëna||bax.xə.na
 بد||␣|||
 بدخواه|||||
 بدسترګی||␣|||
@@ -250,19 +250,19 @@ autoExpandExamples.ps = `
 بدپوری||␣|||
 بدړ|||||
 بدکار|||||
-برابر|even, equal|ba§r§ɑ§ˈba§r|barābár|برابر|
-بَرابَر|even, equal|ba§r§ɑ§ˈba§r|barābár|برابر|
+برابر|even, equal|ba,r,ɑ,ˈba,r|barābár|برابر|
+بَرابَر|even, equal|ba,r,ɑ,ˈba,r|barābár|برابر|
 براونه|||||
-برايي|last night|bə§ˈr§ɑ§ˈj§i|bərāyi||
+برايي|last night|bə,ˈr,ɑ,ˈj,i|bərāyi||
 بربر|||||
 بربنډ||␣|||
 برتانيه||␣|||
-برج|tower|b§ra§d͡ʒ|braj||
+برج|tower|b,ra,d͡ʒ|braj||
 برخه|||||
 برداشت|||||
 برده|||||
 برطانيه||␣|||
-برغټ|mountain cat|bə§r§ˈɣə§ʈ|bərğə́ṭ||
+برغټ|mountain cat|bə,r,ˈɣə,ʈ|bərğə́ṭ||
 بريتانيا||␣|||
 بريد|||||
 برړه|||||
@@ -279,15 +279,15 @@ autoExpandExamples.ps = `
 بغور||␣|||
 بل ځل||␣|||
 بل||␣|||
-بلا|monster|bə§ˈl§ɑ|bəlā́|
+بلا|monster|bə,ˈl,ɑ|bəlā́|
 بلبل|nightingale||bulbul|بلبل|
 بلغارستان||␣|||
 بلغاريا||␣|||
-بلغاريه|Bulgaria|ba§l§ɣ§ɑ§r§j§a|balǧāryá||
+بلغاريه|Bulgaria|ba,l,ɣ,ɑ,r,j,a|balǧāryá||
 بلل||␣|||
 بلوک||␣|||
 بن||␣|||
-بنج|trade|ba§n§d͡ʒ|banj||
+بنج|trade|ba,n,d͡ʒ|banj||
 بنده||␣|||
 بندول||␣|||
 بندي||␣|||
@@ -311,17 +311,17 @@ autoExpandExamples.ps = `
 بيايم||␣|||
 بيزو||␣|||
 بيول||␣|||
-بييی|zebra|b§i.§j§aɪ|biyay||
+بييی|zebra|b,i.,j,aɪ|biyay||
 بيژکۍ||␣|||
 بڅرکی||␣|||
-بچ|border, edge|ba§t͡ʃ|bač||
+بچ|border, edge|ba,t͡ʃ|bač||
 بچه|||||
 بډال|||||
-بړستن|blanket|b§ɺ˞ə§s§tə§n|bṛëstën|بْړسْتن|
+بړستن|blanket|b,ɺ˞ə,s,tə,n|bṛëstën|بْړسْتن|
 بښنه||␣|||
-بکاڼه|chinaberry|ba§k§ɑ§ɳ§a|bakâṇ||
+بکاڼه|chinaberry|ba,k,ɑ,ɳ,a|bakâṇ||
 بګړۍ|||||
-بڼ|garden, orchard|ba§ɳ|baṇ||
+بڼ|garden, orchard|ba,ɳ|baṇ||
 بڼهار||␣|||
 بڼوال||␣|||
 بڼکه|||||
@@ -341,10 +341,10 @@ autoExpandExamples.ps = `
 بېله|||||
 بېړۍ||␣|||
 تاسو||␣|||
-تاسې|you|ˈt§ɑ§s§e|tāse||
+تاسې|you|ˈt,ɑ,s,e|tāse||
 تانوکی||␣|||
 تانۀ||␣|||
-تاو|heat|t§ɑ§w|tâw||
+تاو|heat|t,ɑ,w|tâw||
 تاوول||␣|||
 تخت|||||
 ترش|||||
@@ -358,9 +358,9 @@ autoExpandExamples.ps = `
 تندولی|||||
 تنور||␣|||
 ته||␣|||
-توت|mulberry|t̪§u§t̪|tut|توت|
+توت|mulberry|t̪,u,t̪|tut|توت|
 توتي||␣|||
-تود|hot, warm|t̪§o§d̪|tod||
+تود|hot, warm|t̪,o,d̪|tod||
 توده||␣|||
 تودوخي||␣|||
 تور||␣|||
@@ -370,17 +370,17 @@ autoExpandExamples.ps = `
 تويول||␣|||
 توپان||␣|||
 تيپي||␣|||
-تړل|to tie|t̪ə§ˈɻə§l|taṙë́l||
+تړل|to tie|t̪ə,ˈɻə,l|taṙë́l||
 تڼۍ||␣|||
 تۀ||␣|||
 تياره|darkness, night||tyārë|||تیاره
-تېروتل|to be mistaken|t̪§e§r.§wa.§ˈt̪ə§l|terwatël||
+تېروتل|to be mistaken|t̪,e,r.,wa.,ˈt̪ə,l|terwatël||
 تېروتنه||␣|||
-تېرۀ|sharp|t̪§e§r§ə|terë||
+تېرۀ|sharp|t̪,e,r,ə|terë||
 ثانيه|second (time)||||
 جادوګر|||||
 جاروکښ||␣|||
-جام|cup, goblet|d͡ʒ§ɑ§m|jâm||
+جام|cup, goblet|d͡ʒ,ɑ,m|jâm||
 جراح|surgeon||||
 جرګه|||||
 جست|||||
@@ -393,10 +393,10 @@ autoExpandExamples.ps = `
 جنګيالی||␣|||
 جنۍ||␣|||
 جهاز|||||
-جوړ|built, repaired|dʒ§o§ɻ|joṛ||
+جوړ|built, repaired|dʒ,o,ɻ|joṛ||
 جوړول||␣|||
 جږګی||␣|||
-جکړ|storm|d͡ʒa.§ka§ɽ|jakaṛ||
+جکړ|storm|d͡ʒa.,ka,ɽ|jakaṛ||
 جګ||␣|||
 جګتيا||␣|||
 جګړن||␣|||
@@ -411,13 +411,13 @@ autoExpandExamples.ps = `
 حوض|reservoir|||حَوض|
 حکومت|||||
 خارخ|itch||xārax||
-خام|raw, unripe|x§a§m|xâm||
+خام|raw, unripe|x,a,m|xâm||
 خاوره|||||
 خبره|||||
 خت||␣|||
-ختل|to climb|xa.§ˈt̪ə§l|xatә́l||
+ختل|to climb|xa.,ˈt̪ə,l|xatә́l||
 ختيځ||␣|||
-خدای|God|xu§d§ɑ§j|xwdây||
+خدای|God|xu,d,ɑ,j|xwdây||
 خشونت|||||
 خفگان|||||
 خلافت|||||
@@ -472,13 +472,13 @@ autoExpandExamples.ps = `
 دروغ||␣|||
 درول||␣|||
 درولم||␣|||
-دروند|heavy|d̪§r§u§ŋ§d̪|drund||
+دروند|heavy|d̪,r,u,ŋ,d̪|drund||
 دري|||||
 درکول||␣|||
 درې||␣|||
 درېدل||␣|||
 درېږم||␣|||
-دعوه|claim|d̪§ɑ§w§a|dâwa||
+دعوه|claim|d̪,ɑ,w,a|dâwa||
 دغه||␣|||
 دفاع|defense||difā́ҁ||
 دقيقه|||||
@@ -495,7 +495,7 @@ autoExpandExamples.ps = `
 دوولس||␣|||
 دويم ځل||␣|||
 دويم||␣|||
-دوی|law|d̪§u§i̯|dūy||
+دوی|law|d̪,u,i̯|dūy||
 ديارلس||␣|||
 دپاره||␣|||
 دړ||␣|||
@@ -503,23 +503,23 @@ autoExpandExamples.ps = `
 دښت|||||
 دی||␣|||
 دې||␣|||
-دېرش|thirty|d̪§e§r§ʃ|derš||
+دېرش|thirty|d̪,e,r,ʃ|derš||
 دېو||␣|||
-دېګ|pot, cauldron|d̪§e§ɡ|deg||
+دېګ|pot, cauldron|d̪,e,ɡ|deg||
 دېګلی||␣|||
-ذکر|remembrance|zɪ§kə§r|zikr||
+ذکر|remembrance|zɪ,kə,r|zikr||
 را||␣|||
 راتلل||␣|||
 راسې||␣|||
 راغه|||||
-راهيسې|since|r§a§h§i§s§e|râhise|||راهیسې
+راهيسې|since|r,a,h,i,s,e|râhise|||راهیسې
 راوستل||␣|||
 راولم||␣|||
 راوړل||␣|||
 راکول||␣|||
-رحم|mercy|ra§ˈhə§m|rëhëm||
+رحم|mercy|ra,ˈhə,m|rëhëm||
 رديف|||||
-رسنۍ|media|rə§sə§n§ai|rësënai||
+رسنۍ|media|rə,sə,n,ai|rësënai||
 رم|||||
 رنډۍ||␣|||
 رنګ||␣|||
@@ -532,13 +532,13 @@ autoExpandExamples.ps = `
 روغتيا||␣|||
 رول||␣|||
 رڼا||␣|||
-رېبز|broom|r§e§bə§z|rebëz|رېبز|
+رېبز|broom|r,e,bə,z|rebëz|رېبز|
 زامبه||␣|||
 زاګرېب||␣|||
 زاڼه||␣|||
 زباتل||␣|||
 زبر|||||
-زبرځواک|superpower|zə§bə§r §d͡z§w§ɑ§k|zëbërźwâk||
+زبرځواک|superpower|zə,bə,r ,d͡z,w,ɑ,k|zëbërźwâk||
 زبرګ||␣|||
 زده کول||␣|||
 زده||␣|||
@@ -551,14 +551,14 @@ autoExpandExamples.ps = `
 زلیخا||␣|||
 زما||␣|||
 زمرد|||||
-زمری|lion|z§ma.§ˈr§aɪ|zmaráy||
+زمری|lion|z,ma.,ˈr,aɪ|zmaráy||
 زمرۍ||␣|||
 زمونږ||␣|||
 زموږ||␣|||
 زنه||␣|||
 زه||␣|||
-زهٔ|I|z§ə|zë||alternative spelling
-زوی|son|z§o§ɪ|zoy||
+زهٔ|I|z,ə|zë||alternative spelling
+زوی|son|z,o,ɪ|zoy||
 زړه||␣|||
 زړهور||␣|||
 زڼکی||␣|||
@@ -577,16 +577,16 @@ autoExpandExamples.ps = `
 ساړه||␣|||
 ستا||␣|||
 ستاسو||␣|||
-ستاسې|your|ˈs§t§ɑ§s§e|stāse||
+ستاسې|your|ˈs,t,ɑ,s,e|stāse||
 ستايل||␣|||
-ستر|large|s§tə§r|stër||
+ستر|large|s,tə,r|stër||
 سترګه||␣|||
 سترګې په لار کول||␣|||
 ستن|||||
 ستورڅک||␣|||
 ستوری||␣|||
 ستړی کول||␣|||
-سخی|calf|s§x§aɪ|sxay||
+سخی|calf|s,x,aɪ|sxay||
 سرباز|||||
 سردار|||||
 سرطان|||||
@@ -598,13 +598,13 @@ autoExpandExamples.ps = `
 سرينده|||||
 سرک|||||
 سرکار|||||
-سرېښ|neighbouring|s§r§e§ʂ|srex̌||srex/sreʃ
+سرېښ|neighbouring|s,r,e,ʂ|srex̌||srex/sreʃ
 سسپار|||||
 سل||␣|||
 سلهټ|||||
 سم||␣|||
 سمندر||␣|||
-سنډا|buffalo|sa§n.§ˈɖ§ɑ|sanḍâ||
+سنډا|buffalo|sa,n.,ˈɖ,ɑ|sanḍâ||
 سهم|||||
 سور|red|sur|sur||
 سورلنډی||␣|||
@@ -612,14 +612,14 @@ autoExpandExamples.ps = `
 سوماليا||␣|||
 سومر||␣|||
 سوټک||␣|||
-سوړ|cold|s§o§ɻ|soṛ||
+سوړ|cold|s,o,ɻ|soṛ||
 سوۍ|rabbit||saway||
 سياست|||||
 سياسي|||||
 سيلۍ||␣|||
 سيمه||␣|||
 سيند||␣|||
-سټک|sledgehammer|sa.§ʈa§k|saṭak||
+سټک|sledgehammer|sa.,ʈa,k|saṭak||
 سپانده|||||
 سپره||␣|||
 سپلمۍ|||||
@@ -632,10 +632,10 @@ autoExpandExamples.ps = `
 سپېلني||␣|||
 سړه||␣|||
 سړوبی|||||
-سړی|man, husband|sa.§ˈɺ̢§aɪ|saṛáy||Afghan orthography
-سړے|man, husband|sa.§ˈɺ̢§aɪ|saṛáy||Peshawar orthography
+سړی|man, husband|sa.,ˈɺ̢,aɪ|saṛáy||Afghan orthography
+سړے|man, husband|sa.,ˈɺ̢,aɪ|saṛáy||Peshawar orthography
 سږمه|||||
-سږى|lung|sə.§ˈʐ§aɪ|sëǵay||sə.ˈɡaɪ/sə.ˈʒaɪ
+سږى|lung|sə.,ˈʐ,aɪ|sëǵay||sə.ˈɡaɪ/sə.ˈʒaɪ
 سکاره|||||
 سکالو||␣|||
 سکروټه|||||
@@ -649,7 +649,7 @@ autoExpandExamples.ps = `
 شبنم|||||
 شرم||␣|||
 شرمښ||␣|||
-شروع|beginning|ʃʊː§r§ʊː§–|šoro||
+شروع|beginning|ʃʊː,r,ʊː,–|šoro||
 شريعت|sharia||||
 شرکت|company, society||širkát||
 شغال||␣|||
@@ -669,15 +669,15 @@ autoExpandExamples.ps = `
 شپاړس||␣|||
 شپه|||||
 شپږ||␣|||
-شپېته|sixty|ʃ§peˈ§t§ə|špetë||
-شډل|impolite|ʃə§ˈɖə§l|šaḍal||
+شپېته|sixty|ʃ,peˈ,t,ə|špetë||
+شډل|impolite|ʃə,ˈɖə,l|šaḍal||
 شکر|||||
 شګه|||||
 صحن|||||
 صدمه|||||
 صفحه|page||safha||
 صورت|||||
-طالب|student|t̪§ɑ§lɪ§b|tālib|طالب|
+طالب|student|t̪,ɑ,lɪ,b|tālib|طالب|
 طالبان|||||
 عاشق|lover||āšíq||
 عداوت|hostility||adāvát||
@@ -686,7 +686,7 @@ autoExpandExamples.ps = `
 غالۍ||␣|||
 غاړی||␣|||
 غاښ||␣|||
-غبرګاوی|feedback|ɣ§ba§r§ɡ§ɑ§w§ai|ğbargāwai||
+غبرګاوی|feedback|ɣ,ba,r,ɡ,ɑ,w,ai|ğbargāwai||
 غر||␣|||
 غرڅنی||␣|||
 غصب|||||
@@ -694,12 +694,12 @@ autoExpandExamples.ps = `
 غضب|||||
 غل||␣|||
 غلا||␣|||
-غلط|wrong|ɣa.§la§ˈt̪|ǧalat||
+غلط|wrong|ɣa.,la,ˈt̪|ǧalat||
 غم||␣|||
 غمجن||␣|||
 غمی||␣|||
 غندل||␣|||
-غنم|wheat|ɣa.§nə§m|ǧanëm||
+غنم|wheat|ɣa.,nə,m|ǧanëm||
 غو||␣|||
 غوا||␣|||
 غواړم||␣|||
@@ -712,19 +712,19 @@ autoExpandExamples.ps = `
 غونډاری||␣|||
 غونډۍ|||||
 غوول||␣|||
-غويی|ox, bull|ɣ§wa.§ˈj§aɪ|ǧwayáy||
+غويی|ox, bull|ɣ,wa.,ˈj,aɪ|ǧwayáy||
 غوړي||␣|||
 غوږ نيول||␣|||
-غوږ|ear|ɣ§wa§ʐ|ǧwaǵ||ɣwaɡ/ɣwaʒ
+غوږ|ear|ɣ,wa,ʐ|ǧwaǵ||ɣwaɡ/ɣwaʒ
 غوښتل||␣|||
 غوښه||␣|||
-غويي|oxen, bulls|ɣ§wə§ˈj§i|ǧwayi|||غویي
+غويي|oxen, bulls|ɣ,wə,ˈj,i|ǧwayi|||غویي
 غيم||␣|||
 غيڼ||␣|||
 غټ||␣|||
 غټاغټ|||||
 غپا||␣|||
-غپل|to bark|ɣa.§ˈpə§l|ǧapә́l||
+غپل|to bark|ɣa.,ˈpə,l|ǧapә́l||
 غپول||␣|||
 غپېدل||␣|||
 غړومبل||␣|||
@@ -733,8 +733,8 @@ autoExpandExamples.ps = `
 غښتل||␣|||
 غڼه||␣|||
 غېږ||␣|||
-فرانس|France|f§r§ɑ§ŋ§s|frāns||
-فرانسه|France|ɸ§r.§ɑ§n.§s§a|frānsa||
+فرانس|France|f,r,ɑ,ŋ,s|frāns||
+فرانسه|France|ɸ,r.,ɑ,n.,s,a|frānsa||
 فردوس||␣|||
 فرش|||||
 فعلا|now, currently||fe'alan||
@@ -747,7 +747,7 @@ autoExpandExamples.ps = `
 قد|||||
 قدرت|power, might||ḳudrát||
 قطب|||||
-قطر|Qatar|ˈqa§tə§r|qatër||
+قطر|Qatar|ˈqa,tə,r|qatër||
 قهوه|||||
 قونسل|||||
 قيماغ|||||
@@ -762,7 +762,7 @@ autoExpandExamples.ps = `
 لاس||␣|||
 لاسليک|||||
 لامبل||␣|||
-لامبو|swimming|l§ɑ§m§ˈb§o|lâmbo|لامبو|
+لامبو|swimming|l,ɑ,m,ˈb,o|lâmbo|لامبو|
 لامپه|||||
 لرغونپوهنه||␣|||
 لرل||␣|||
@@ -772,13 +772,13 @@ autoExpandExamples.ps = `
 لشه||␣|||
 لغړ|||||
 لم|||||
-لمانځل|to celebrate|l§m§ɑ§n.§d͡zə§l|lmânźël||
+لمانځل|to celebrate|l,m,ɑ,n.,d͡zə,l|lmânźël||
 لمبړ|||||
 لمر تندره||␣|||
 لمر||␣|||
 لمريز غونډال||␣|||
-لمريز|solar|l§ma§r.§i§z|lmaríz||
-لمسول|to instigate|lə§mˈ§səˈ§wə§l|ləmsəwəl||
+لمريز|solar|l,ma,r.,i,z|lmaríz||
+لمسول|to instigate|lə,mˈ,səˈ,wə,l|ləmsəwəl||
 لمسی||␣|||
 لمن||␣|||
 لمونځ||␣|||
@@ -800,8 +800,8 @@ autoExpandExamples.ps = `
 لوړ||␣|||
 لوړل||␣|||
 لوښي||␣|||
-لوی|big, large|l§o§i|loy||Afghan orthography
-لوے|big, large|l§o§i|loy||Peshawar orthography
+لوی|big, large|l,o,i|loy||Afghan orthography
+لوے|big, large|l,o,i|loy||Peshawar orthography
 لوېديځ||␣|||
 ليدل||␣|||
 ليکوال||␣|||
@@ -815,14 +815,14 @@ autoExpandExamples.ps = `
 لېور||␣|||
 لېونی||␣|||
 لېونۍ||␣|||
-لېوۀ|wolf|l§e§ˈw§ə|lewë||
+لېوۀ|wolf|l,e,ˈw,ə|lewë||
 لېږل||␣|||
 مالک||␣|||
-مالګه|salt|ˈm§ɑ§l§ɡ§a|||
+مالګه|salt|ˈm,ɑ,l,ɡ,a|||
 ماما||␣|||
 مانګر||␣|||
 ماهی|||||
-ماښام|evening|mɑ§ˈʂ§ɑ§m|māx̌ā́m||
+ماښام|evening|mɑ,ˈʂ,ɑ,m|māx̌ā́m||
 ماڼو||␣|||
 ماڼۍ||␣|||
 مثل|similarity||misl||
@@ -838,20 +838,20 @@ autoExpandExamples.ps = `
 محاصره|||||
 محافظ|watchman||muhāfíz||
 محمد|||||
-مخوېينه|prediction|mə§x.§w§e.§jə.§ˈn§a|mëxweyëna||
+مخوېينه|prediction|mə,x.,w,e.,jə.,ˈn,a|mëxweyëna||
 مدافع|defender||mudāfí||
 مدح|praise||madh||
 مدرس|||||
-مذهب|religion|ma§z§ˈha§b|mazhab||
+مذهب|religion|ma,z,ˈha,b|mazhab||
 مرخېړی||␣|||
 مرد|||||
 مردم|||||
 مرسته|||||
 مرستونی||␣|||
-مرغ|bodybuilding weight|m§ra§ɣ|mrağ||
+مرغ|bodybuilding weight|m,ra,ɣ|mrağ||
 مرغه||␣|||
 مرغړی||␣|||
-مرغۀ|bird|mə§r.§ˈɣ§ə|mërǧë||
+مرغۀ|bird|mə,r.,ˈɣ,ə|mërǧë||
 مرلۍ|||||
 مريه|||||
 مرکز|||||
@@ -862,9 +862,9 @@ autoExpandExamples.ps = `
 مشرانوجرګه||␣|||
 مشعل|torch||maš'ál|مَشْعَل|
 مشغول|||||
-مصر|Egypt|mɪ§s§ɾ|misr||
+مصر|Egypt|mɪ,s,ɾ|misr||
 معجزه|miracle||mu'jizá|مُعْجِزَه|
-معدن|mineral|m§ɑ§d̪ə§n|mâdën||
+معدن|mineral|m,ɑ,d̪ə,n|mâdën||
 مفهوم|sense, concept||mafhúm||
 مقاله|||||
 مقناطيس|||||
@@ -878,18 +878,18 @@ autoExpandExamples.ps = `
 ملګرې||␣|||
 من|||||
 منل||␣|||
-مننه|thank you|mə§ˈnɘ.§n§ə|manëna||
+مننه|thank you|mə,ˈnɘ.,n,ə|manëna||
 منو||␣|||
 مني||␣|||
 منټ||␣|||
 منځ||␣|||
 منځنی||␣|||
-منډه|a run|mə§n§ˈɖ§a|mënḍa||
+منډه|a run|mə,n,ˈɖ,a|mënḍa||
 منګر||␣|||
 مو|||||
 موج|||||
 مور||␣|||
-موسيقي|music|m§u§ˈs§i§ˈq§i|musiqi||
+موسيقي|music|m,u,ˈs,i,ˈq,i|musiqi||
 موقف|||||
 موندل||␣|||
 مونږ||␣|||
@@ -912,27 +912,27 @@ autoExpandExamples.ps = `
 مړکونه|||||
 مړۍ||␣|||
 مړې||␣|||
-مګر|but, however|mə.§ˈɡə§r|magar||
-مگر|but, however|mə.§ˈɡə§r|magar||
-مياشت|month|mi§j§ɑ§ʃ§t|miâšt|||میاشت
-ميرزا|clerk, scribe|m§i§r§ˈz§ɑ|mírzâ|||میرزا
+مګر|but, however|mə.,ˈɡə,r|magar||
+مگر|but, however|mə.,ˈɡə,r|magar||
+مياشت|month|mi,j,ɑ,ʃ,t|miâšt|||میاشت
+ميرزا|clerk, scribe|m,i,r,ˈz,ɑ|mírzâ|||میرزا
 مې||␣|||
 مېترو|||||
 مېتود|||||
 مېجی||␣|||
 مېخ||␣|||
 مېز|||||
-مېشت|settled|m§e§ʃ§t̪|mešt||
+مېشت|settled|m,e,ʃ,t̪|mešt||
 مېشتول|||||
 مېشيکو||␣|||
 مېشکوړ||␣|||
-مېلمه|guest|m§e§l§ˈm§a|melma||
+مېلمه|guest|m,e,l,ˈm,a|melma||
 مېله||␣|||
 مېلوه||␣|||
-مېچن|handmill|m§e.§ˈt͡ʃə§n|mečën||
+مېچن|handmill|m,e.,ˈt͡ʃə,n|mečën||
 مېړګی||␣|||
-مېړۀ|husband|m§e§ˈɻ§ə|meṛë||
-مېښه|buffalo|m§e.§ˈʂ§a|mex̌a||me.ˈxa/me.ˈʃa
+مېړۀ|husband|m,e,ˈɻ,ə|meṛë||
+مېښه|buffalo|m,e.,ˈʂ,a|mex̌a||me.ˈxa/me.ˈʃa
 نا||␣|||
 نارنجي||␣|||
 نارينه|||||
@@ -942,7 +942,7 @@ autoExpandExamples.ps = `
 نبي||␣|||
 نتيجه|||||
 نثر|||||
-نجلۍ|girl|n§d͡ʒə§ˈl§əi|njëlëy||
+نجلۍ|girl|n,d͡ʒə,ˈl,əi|njëlëy||
 نرکاشه||␣|||
 نرګس|||||
 نزدې||␣|||
@@ -950,11 +950,11 @@ autoExpandExamples.ps = `
 نسخه|||||
 نسل|||||
 نسواري||␣|||
-نشت|nought, zero|nə§ʃ§t̪|nëšt||
+نشت|nought, zero|nə,ʃ,t̪|nëšt||
 نطفه||␣|||
 نغد|||||
 نقطه|||||
-نمونځ|prayer|ⁿ§m§u§ŋ§d͡z|nmunź||
+نمونځ|prayer|ⁿ,m,u,ŋ,d͡z|nmunź||
 ننوتل|||||
 ننګ||␣|||
 نه||␣|||
@@ -964,29 +964,29 @@ autoExpandExamples.ps = `
 نوملړ||␣|||
 نوي||␣|||
 نوکغوڅی||␣|||
-نوی کال|New Year|ˈnə§w§ai§ §k§ɑ§l|nëway kāl||
-نوی|new|ˈnə§w§ai|nëway||
+نوی کال|New Year|ˈnə,w,ai, ,k,ɑ,l|nëway kāl||
+نوی|new|ˈnə,w,ai|nëway||
 نيا||␣|||
 نياو||␣|||
 نيلي||␣|||
 نيمبو||␣|||
-نيوکه|objection|n§i§ˈwə§ˈk§a|niwëka||
+نيوکه|objection|n,i,ˈwə,ˈk,a|niwëka||
 نړيواله غږيزه ابېڅې||␣|||
-نړۍ|world|nə§ˈɽ§əi|nëṛëy||
+نړۍ|world|nə,ˈɽ,əi|nëṛëy||
 نږدې||␣|||
 نژدې||␣|||
 نښتر||␣|||
 نښه|||||
 نګاه|||||
 نیغ|||||
-هدف|goal|ha§də§f|hëdëf||
+هدف|goal|ha,də,f|hëdëf||
 هديه|||||
 هر||␣|||
 هسک||␣|||
 هغه||␣|||
 هغوی|||||
 هلته||␣|||
-هلک|boy|ha§ˈlə§k|halëk||
+هلک|boy|ha,ˈlə,k|halëk||
 هماليۀ||␣|||
 همیشه|||||
 همېل||␣|||
@@ -1000,12 +1000,12 @@ autoExpandExamples.ps = `
 هيله||␣|||
 هيلۍ|||||
 هڅه||␣|||
-هڅکه|motivation|ˈha§t͡s.§k§a|háśka||
-هګۍ|egg|hə§ɡ§əi|hagë́y||
+هڅکه|motivation|ˈha,t͡s.,k,a|háśka||
+هګۍ|egg|hə,ɡ,əi|hagë́y||
 هېر||␣|||
 هېلۍ||␣|||
 هېواد||␣|||
-وئ|ouch!|w§əi|wëy||
+وئ|ouch!|w,əi|wëy||
 واورتون||␣|||
 واوره||␣|||
 واټ||␣|||
@@ -1078,19 +1078,19 @@ autoExpandExamples.ps = `
 يما پاچا||␣|||
 يهک|yak|jhak|yhak||
 يو||␣|||
-يوم|spade|j§u§m|yûm||
-يونی|traveller|j§u§n§ai̯|yúnay||
+يوم|spade|j,u,m|yûm||
+يونی|traveller|j,u,n,ai̯|yúnay||
 يوولس||␣|||
 يږ|||||
 يګانه|||||
 يې||␣|||
 ټاپو||␣|||
 ټبر||␣|||
-ټماټر|tomato|ʈa§m§ɑ§ʈə§r|ṭamāṭә́r||
+ټماټر|tomato|ʈa,m,ɑ,ʈə,r|ṭamāṭә́r||
 ټنډه||␣|||
 ټولنه|||||
 ټوپکی||␣|||
-ټوکر|cloth, fabric|ʈ§u§ˈkə§r|ṭukә́r||
+ټوکر|cloth, fabric|ʈ,u,ˈkə,r|ṭukә́r||
 ټوکه||␣|||
 ټوکي||␣|||
 ټينګ||␣|||
@@ -1099,8 +1099,8 @@ autoExpandExamples.ps = `
 پارسه||␣|||
 پارسیوان||␣|||
 پامدور||␣|||
-پايله|result|p§ɑ§i.§l§a|||
-پايول|to continue|p§ɑ§ˈya§ˈwə§l|pâyawál||
+پايله|result|p,ɑ,i.,l,a|||
+پايول|to continue|p,ɑ,ˈya,ˈwə,l|pâyawál||
 پاړو||␣|||
 پاکستان||␣|||
 پاڼه||␣|||
@@ -1124,7 +1124,7 @@ autoExpandExamples.ps = `
 پسته|||||
 پسرلی||␣|||
 پسه|||||
-پسهٔ|sheep|ˈp§s§ə|psə||
+پسهٔ|sheep|ˈp,s,ə|psə||
 پسونی|||||
 پسې||␣|||
 پشۍ||␣|||
@@ -1165,10 +1165,10 @@ autoExpandExamples.ps = `
 پوښتنه||␣|||
 پيسې||␣|||
 پيشو||␣|||
-پيل|start; elephant|p§i§l|pil|||پیل
+پيل|start; elephant|p,i,l|pil|||پیل
 پړانګ||␣|||
 پړسوب||␣|||
-پښتنه|Pashtun|pa§ʂ.§t̪a.§n§a|pax̌tana||
+پښتنه|Pashtun|pa,ʂ.,t̪a.,n,a|pax̌tana||
 پښتو|Pashto language|pəxˈt̪o|pax̌to||
 پښتون||␣|||
 پښه||␣|||
@@ -1179,12 +1179,12 @@ autoExpandExamples.ps = `
 پېزه|||||
 پېچ|||||
 پېړۍ||␣|||
-پېژندل|to know|p§e§ʒa§n§ˈd̪ə§l|pežandël||
+پېژندل|to know|p,e,ʒa,n,ˈd̪ə,l|pežandël||
 پېښور||␣|||
 ځار||␣|||
 ځان||␣|||
-ځای|place|d͡z§ɑ§i̯|źây||Afghan orthography
-ځاے|place|d͡z§ɑ§i̯|źây||Peshawwar orthography
+ځای|place|d͡z,ɑ,i̯|źây||Afghan orthography
+ځاے|place|d͡z,ɑ,i̯|źây||Peshawwar orthography
 ځغستل||␣|||
 ځغلم||␣|||
 ځغلول||␣|||
@@ -1194,7 +1194,7 @@ autoExpandExamples.ps = `
 ځمکه|||||
 ځمکپوهنه||␣|||
 ځنډ||␣|||
-ځنګل|jungle|d͡zə§ŋ§ɡə§l|źëngël|ځٙنْګٙل|
+ځنګل|jungle|d͡zə,ŋ,ɡə,l|źëngël|ځٙنْګٙل|
 ځوان||␣|||
 ځواک||␣|||
 ځيرک||␣|||
@@ -1202,7 +1202,7 @@ autoExpandExamples.ps = `
 ځکه چې||␣|||
 ځکه||␣|||
 ځی||␣|||
-ځيږ|rough, coarse|z§i§ʐ|ziǵ|||ځیږ
+ځيږ|rough, coarse|z,i,ʐ|ziǵ|||ځیږ
 ځې||␣|||
 ځېل||␣|||
 څادر||␣|||
@@ -1220,7 +1220,7 @@ autoExpandExamples.ps = `
 څلور||␣|||
 څلوېښت||␣|||
 څنډه||␣|||
-څنګ|side|t͡sa§n§ɡ|śang||
+څنګ|side|t͡sa,n,ɡ|śang||
 څنګل||␣|||
 څنګه||␣|||
 څوارلس||␣|||
@@ -1239,9 +1239,9 @@ autoExpandExamples.ps = `
 څېړل|||||
 څېړنه||␣|||
 چا کره ځې||␣|||
-چاينک|teapot|t͡ʃ§ɑ§i§ˈnə§k|čâinëk||
+چاينک|teapot|t͡ʃ,ɑ,i,ˈnə,k|čâinëk||
 چاکلېټ||␣|||
-چای|tea|t͡ʃ§ɑ§i|čây||
+چای|tea|t͡ʃ,ɑ,i|čây||
 چتر|||||
 چراغ|||||
 چرګ|||||
@@ -1253,7 +1253,7 @@ autoExpandExamples.ps = `
 چوكره|||||
 چوپړ||␣|||
 چوڼيا||␣|||
-چيچل|to bite, sting|t͡ʃ§i§ˈt͡ʃə§l|čičël||
+چيچل|to bite, sting|t͡ʃ,i,ˈt͡ʃə,l|čičël||
 چڼاس|||||
 ډانډ||␣|||
 ډاډ|||||
@@ -1264,7 +1264,7 @@ autoExpandExamples.ps = `
 ډز||␣|||
 ډله||␣|||
 ډنبره|||||
-ډنډ|pool, pond|ɖa§n§ɖ|ḍanḍ||
+ډنډ|pool, pond|ɖa,n,ɖ|ḍanḍ||
 ډنګر||␣|||
 ډول||␣|||
 ډولي||␣|||
@@ -1275,10 +1275,10 @@ autoExpandExamples.ps = `
 ډګه||␣|||
 ډېر||␣|||
 ړومبی||␣|||
-ړوند|blind|ɽ§u§n§d|ṛund||
+ړوند|blind|ɽ,u,n,d|ṛund||
 ږغېدل||␣|||
-ږمنځ|comb|ʐ§m̩ə§ŋ§d͡z|ǵmënźl|ږْمنْځ|Peshawar ɡəˈmənz
-ږيره|beard|ˈʐ§i§r§a|ǵíra||ˈɡira/ˈʒira
+ږمنځ|comb|ʐ,m̩ə,ŋ,d͡z|ǵmënźl|ږْمنْځ|Peshawar ɡəˈmənz
+ږيره|beard|ˈʐ,i,r,a|ǵíra||ˈɡira/ˈʒira
 ژامه||␣|||
 ژباړل||␣|||
 ژبه||␣|||
@@ -1295,11 +1295,11 @@ autoExpandExamples.ps = `
 ژونکه||␣|||
 ژوپوهنه||␣|||
 ژګاګ||␣|||
-ژېړ|yellow|ʒ§e§ɻ|žeṛ||
+ژېړ|yellow|ʒ,e,ɻ|žeṛ||
 ښار||␣|||
 ښارو||␣|||
 ښاغلی||␣|||
-ښامار|dragon|ʂ§ɑ.§ˈm§ɑ§r|x̌âmâr||xɑ.ˈmɑr/ʃɑ.ˈmɑr
+ښامار|dragon|ʂ,ɑ.,ˈm,ɑ,r|x̌âmâr||xɑ.ˈmɑr/ʃɑ.ˈmɑr
 ښايي||␣|||
 ښه||␣|||
 ښون|||||
@@ -1345,7 +1345,7 @@ autoExpandExamples.ps = `
 کلی||␣|||
 کند|||||
 کندهار||␣|||
-کنوه|quinoa|kɪ§n.§w§a|kinwa||
+کنوه|quinoa|kɪ,n.,w,a|kinwa||
 کنګال||␣|||
 که||␣|||
 کوب|||||
@@ -1373,8 +1373,8 @@ autoExpandExamples.ps = `
 کړ||␣|||
 کړه||␣|||
 کښت|||||
-کښې|in|k§ʂ§e|kx̌e||kxe/kʃe
-کینخي|purple|k§i.§na.§x§i|kinaxi||
+کښې|in|k,ʂ,e|kx̌e||kxe/kʃe
+کینخي|purple|k,i.,na.,x,i|kinaxi||
 کې||␣|||
 کېدل||␣|||
 کېدې شي||␣|||
@@ -1383,7 +1383,7 @@ autoExpandExamples.ps = `
 ګام||␣|||
 ګاډی||␣|||
 ګاڼه||␣|||
-ګبين|honey|ɡa.§ˈb§i§n|gabin||
+ګبين|honey|ɡa.,ˈb,i,n|gabin||
 ګران||␣|||
 ګرانه|||||
 ګرد||␣|||
@@ -1396,7 +1396,7 @@ autoExpandExamples.ps = `
 ګلابي||␣|||
 ګنده||␣|||
 ګنډل||␣|||
-ګهيځ|morning|ɡə§h§i§d͡z|gahiź||
+ګهيځ|morning|ɡə,h,i,d͡z|gahiź||
 ګودر||␣|||
 ګورل||␣|||
 ګورم||␣|||
@@ -1411,7 +1411,7 @@ autoExpandExamples.ps = `
 ګړدود||␣|||
 ګړندی||␣|||
 ګڼ||␣|||
-ګڼل|to consider|ɡa.§ɳə§l|gaṇël||
+ګڼل|to consider|ɡa.,ɳə,l|gaṇël||
 ګېنډی||␣|||
 ګېډه||␣|||
 
@@ -1419,9 +1419,9 @@ autoExpandExamples.ps = `
 
 
 @ https://en.wikipedia.org/wiki/Pashto_alphabet
-اصلاح|correction|i§s§ˈl§ɑ§–|iṣlāḥ
-بويں|smell|b§u§ĩ§‹||
-يئ|you are|j§əi
+اصلاح|correction|i,s,ˈl,ɑ,–|iṣlāḥ
+بويں|smell|b,u,ĩ,‹||
+يئ|you are|j,əi
 آيسلينډ|Iceland||Iceliand
 لاسلیک|signature||lāslik||Afghan spelling
 لاس‌لیک|signature||lāslik||Peshawar spelling
@@ -1434,9 +1434,9 @@ autoExpandExamples.ps = `
 
 
 @ https://en.wikipedia.org/wiki/Pashto#Phonology
-غرمه|noon|ɣa§r§ˈm§a|ğarmá||
-ماسپښين|afternoon|m§ɑ§s.§pa§ˈʂ§i§n|māspasx̌ín|
-ماسختن|late evening|m§ɑ§s.§xʊ§ˈta§n|māsxután|
+غرمه|noon|ɣa,r,ˈm,a|ğarmá||
+ماسپښين|afternoon|m,ɑ,s.,pa,ˈʂ,i,n|māspasx̌ín|
+ماسختن|late evening|m,ɑ,s.,xʊ,ˈta,n|māsxután|
 
 
 

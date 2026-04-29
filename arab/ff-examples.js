@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -39,8 +39,8 @@ autoExpandExamples.ff = `
 غِتٜ|eyes||gite
 ڢَکَتْ!|true!||fakat!
 تٛ|if||to
-مِثَالُ|example|mi§saː§‹§lu|mithaalu
-مِسَالُ|example|mi§saː§‹§lu|mithaalu
+مِثَالُ|example|mi,saː,‹,lu|mithaalu
+مِسَالُ|example|mi,saː,‹,lu|mithaalu
 جِݠَّاغٛ|to come down||jippaago
 يٜجِّتُغٛ|to forget||yejjitugo
 ندِيَمْجِ|waters||ndiyamji
@@ -191,7 +191,7 @@ autoExpandExamples.ff = `
 ڢُو|all||fuu
 
 
-ڢُلْڢُلْدٜ|Fulfulde language|fʊlfʊlde|
+ڢُلْڢُلْدٜ|Fulfulde language|fʊ,l,fʊ,l,de|
 
 
 

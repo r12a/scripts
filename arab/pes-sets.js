@@ -6,10 +6,10 @@
 
 
 var collections = [
-{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(ً|ٌ|ٍ|َ|ُ|ِ|ٓ)' },
-{ symbol:'Ⓒ', desc:'All consonants', chars:'(ء|آ|أ|ؤ|ا|ب|ت|ث|ج|ح|خ|د|ذ|ر|ز|س|ش|ص|ض|ط|ظ|ع|غ|ف|ق|ل|م|ن|ه|و|پ|چ|ژ|ک|گ|ی)' },
-{ symbol:'ⓒ', desc:'Non-vowels', chars:'(ء|ب|ت|ث|ج|ح|خ|د|ذ|ر|ز|س|ش|ص|ض|ط|ظ|ع|غ|ف|ق|ل|م|ن|ه|پ|چ|ژ|ک|گ)' },
-{ symbol:'🅲', desc:'Latin consonants', chars:'(b|d|d͡ʒ|f|h|j|k|l|m|n|p|r|s|t|t͡ʃʒ|v|w|x|z|ɡ|ɢ|ɣ|ʃ|ʔ)' },
-{ symbol:'🆅', desc:'Latin vowels', chars:'(ɒː|æ|e|o|ɛ|u|iː)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'[ًٌٍَُِٓ]' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'[ءآأؤابتثجحخدذرزسشصضطظعغفقلمنهوپچژکگی]' },
+{ symbol:'ⓒ', desc:'Non-vowels', chars:'[ءبتثجحخدذرزسشصضطظعغفقلمنهپچژکگ]' },
+{ symbol:'🅲', desc:'Latin consonants', chars:'[bdd͡ʒfhjklmnprstt͡ʃʒvwxzɡɢɣʃʔ]' },
+{ symbol:'🆅', desc:'Latin vowels', chars:'[ɒːæeoɛuiː]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D\u2067\u202B\u2066\u202A\u2068\u2069\u202C\u200F\u200E\u061C\u034F]' },
 ]

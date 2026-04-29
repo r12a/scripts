@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -75,7 +75,7 @@ autoExpandExamples.ug = `
 ئازاپ||␣|
 ئازوت||␣|
 ئاسان||␣|
-ئاسايىش|tranquil|ʔ§ɑ§s§ɑ§j§i§ʃ|asayish
+ئاسايىش|tranquil|ʔ,ɑ,s,ɑ,j,i,ʃ|asayish
 ئاستا|slowly, lightly||asta
 ئاستاتىن||␣|
 ئاسفالت||␣|
@@ -116,12 +116,12 @@ autoExpandExamples.ug = `
 ئالاقاغا||
 ئالاقىلىك|interconnected||alaqilik
 ئالاقىچى||
-ئالاقە|connection|ʔ§ɑ§l§ɑ§q§ɛ|alaqe
+ئالاقە|connection|ʔ,ɑ,l,ɑ,q,ɛ|alaqe
 ئالاڭ||␣|
 ئالبانىيە||
-ئالتىنچى|sixth|›§ɑ§l§t§i§n§t͡ʃ§i|altinchi
+ئالتىنچى|sixth|›,ɑ,l,t,i,n,t͡ʃ,i|altinchi
 ئالتۇن||
-ئالتە|six|›§ɑ§l§t§ɛ|alte|also ɑltæ, altɛ, altæ
+ئالتە|six|›,ɑ,l,t,ɛ|alte|also ɑltæ, altɛ, altæ
 ئالجىرىيە||
 ئالد||
 ئالدىراش||
@@ -158,7 +158,7 @@ autoExpandExamples.ug = `
 ئاي||␣
 ئاياز||␣|
 ئاياغ|foot, shoe||ayagh
-ئاياق|foot, leg|ʔ§ɑ§j§ɑ§q|ayaq
+ئاياق|foot, leg|ʔ,ɑ,j,ɑ,q|ayaq
 ئايال||
 ئايران||␣|
 ئايرودروم||
@@ -178,7 +178,7 @@ autoExpandExamples.ug = `
 ئاپرېل||␣|
 ئاپىرىن||␣|
 ئاپىيەت||␣|
-ئاپەت|disaster, tragedy|ʔ§ɑ§p§ɛ§t|apet
+ئاپەت|disaster, tragedy|ʔ,ɑ,p,ɛ,t|apet
 ئاچ||
 ئاچا||␣|
 ئاچقۇچ|key||achquch
@@ -190,7 +190,7 @@ autoExpandExamples.ug = `
 ئاھاڭ||␣|
 ئاۋات||
 ئاۋارە||␣|
-ئاۋاز|sound, noise|ʔ§ɑ§w§ɑ§z|awaz
+ئاۋاز|sound, noise|ʔ,ɑ,w,ɑ,z|awaz
 ئاۋام||␣|
 ئاۋسترالىيە||
 ئاۋستىرىيە||
@@ -205,7 +205,7 @@ autoExpandExamples.ug = `
 ئوتتۇز||␣
 ئوتخور||
 ئوتلام||
-ئوتۇن|firewood|ʔ§o§t§u§n|otun
+ئوتۇن|firewood|ʔ,o,t,u,n|otun
 ئوخشاش|same, similar||oxshash
 ئوخشىتىش||
 ئوخشىماق||␣
@@ -253,7 +253,7 @@ autoExpandExamples.ug = `
 ئىجات||␣|
 ئىجتىمائىي||␣
 ئىجرا|implementation||ijra
-ئىرادە|willpower|ʔ§i§r§ɑ§d§ɛ|irade
+ئىرادە|willpower|ʔ,i,r,ɑ,d,ɛ|irade
 ئىرق||␣|
 ئىرىدىي||␣|
 ئىزاھ||␣|
@@ -267,7 +267,7 @@ autoExpandExamples.ug = `
 ئىستەك||␣|
 ئىسراپ||␣|
 ئىسسىق||
-ئىسلام|Islam|›§i§s§l§a§m
+ئىسلام|Islam|›,i,s,l,a,m
 ئىسلاند||␣|
 ئىسىم||
 ئىسيان||␣|
@@ -299,7 +299,7 @@ autoExpandExamples.ug = `
 ئىقلىم||␣|
 ئىككى||␣
 ئىككىنچى||␣
-ئىلاج|way, means|ʔ§i§l§ɑ§d͡ʒ|ilaj
+ئىلاج|way, means|ʔ,i,l,ɑ,d͡ʒ|ilaj
 ئىلاھ||␣|
 ئىلتىپات||␣|
 ئىلىم||␣|
@@ -344,13 +344,13 @@ autoExpandExamples.ug = `
 ئۆشكە||␣|
 ئۆكتەبر||␣|
 ئۆكۈز||␣|
-ئۆلمەك|to die|›§œ§l§m§æ§k̚|ölmek|[œlmɛk̚], [œlmæx], [œlmɛx
+ئۆلمەك|to die|›,œ,l,m,æ,k̚|ölmek|[œlmɛk̚], [œlmæx], [œlmɛx
 ئۆلۈم||␣|
 ئۆي||␣
 ئۆيلەر||␣|
 ئۆيمۇئۆي|from door to door||öymu'öy
 ئۆپكە ياللۇغى||
-ئۆپكە|lung|ʔ§ø§p§k§ɛ|öpke
+ئۆپكە|lung|ʔ,ø,p,k,ɛ|öpke
 ئۆچ||␣|
 ئۆچكە||␣|
 ئۆگەنمەك||
@@ -360,7 +360,7 @@ autoExpandExamples.ug = `
 ئۇجرەت||␣|
 ئۇخلىماق||
 ئۇد||␣|
-ئۇرپ|convention, habit|ʔ§u§r§p|urp
+ئۇرپ|convention, habit|ʔ,u,r,p|urp
 ئۇرۇش||␣
 ئۇرۇق||␣|
 ئۇزاق||
@@ -375,7 +375,7 @@ autoExpandExamples.ug = `
 ئۇقتۇرۇش||
 ئۇلار||␣
 ئۇلغايماق||
-ئۇلۇغ|great, chieftain|ʔ§u§l§u§ʁ|ulugh
+ئۇلۇغ|great, chieftain|ʔ,u,l,u,ʁ|ulugh
 ئۇمۇرتقا||␣|
 ئۇن||␣|
 ئۇنسۇر||␣|
@@ -398,7 +398,7 @@ autoExpandExamples.ug = `
 ئۈ||␣
 ئۈرۈمچى||
 ئۈزمەك|to break, cut off||üzmek
-ئۈزۈك|finger ring|ʔ§y§z§y§k|üzük
+ئۈزۈك|finger ring|ʔ,y,z,y,k|üzük
 ئۈزۈم||␣
 ئۈزەڭگە||␣|
 ئۈستىدە||
@@ -423,7 +423,7 @@ autoExpandExamples.ug = `
 ئېشەك||
 ئېغىر||␣|
 ئېغىرلىق||␣|
-ئېغىز|mouth|ʔ§e§ʁ§i§z|ëghiz
+ئېغىز|mouth|ʔ,e,ʁ,i,z|ëghiz
 ئېغىل||␣|
 ئېكران||␣|
 ئېكىن||␣|
@@ -432,7 +432,7 @@ autoExpandExamples.ug = `
 ئېلىپ||␣|
 ئېلىپبە||␣|
 ئېلېمېنت||␣|
-ئېنقىلاب|revolution|ʔ§e§n§q§i§l§ɑ§b|ënqilab
+ئېنقىلاب|revolution|ʔ,e,n,q,i,l,ɑ,b|ënqilab
 ئېنىق||
 ئېنىقلىماق||
 ئېنېرگىيە||␣|
@@ -450,7 +450,7 @@ autoExpandExamples.ug = `
 ئەبۇ-||
 ئەبۇبەكرى||
 ئەتمەك||
-ئەتىۋار|value, worth|ʔ§ɛ§t§i§w§ɑ§r|etiwar
+ئەتىۋار|value, worth|ʔ,ɛ,t,i,w,ɑ,r|etiwar
 ئەتە|tomorrow||ete
 ئەدەبىيات||
 ئەر||
@@ -508,7 +508,7 @@ autoExpandExamples.ug = `
 باش||
 باشاق||␣|
 باشقا||
-باشلئانگۇچ|beginning|b§ɑ§ʃ§l§›§ɑ§n§ʁ§u§t͡ʃ|||x
+باشلئانگۇچ|beginning|b,ɑ,ʃ,l,›,ɑ,n,ʁ,u,t͡ʃ|||x
 باشلانغۇچ||
 باشلىماق||
 باغ||
@@ -521,9 +521,9 @@ autoExpandExamples.ug = `
 بالكون||␣|
 بالىمان||
 بالېت||␣|
-بانا|excuse|b§a§n§a|bana
-بانان|banana|b§a§n§a§n|banan
-بانداژ|bandage|b§ɑ§n§d§ɑ§ʒ|bandazh
+بانا|excuse|b,a,n,a|bana
+بانان|banana|b,a,n,a,n|banan
+بانداژ|bandage|b,ɑ,n,d,ɑ,ʒ|bandazh
 بايان||
 بايراق||␣
 بايرام||␣
@@ -579,8 +579,8 @@ autoExpandExamples.ug = `
 بىلەن||␣
 بىنا||
 بىچارە||
-بىڭگۇر|popsicle|b§i§ŋ§ɡ§u§r|binggur
-بۆرەك|kidney|b§ø§r§ɛ§k|börek
+بىڭگۇر|popsicle|b,i,ŋ,ɡ,u,r|binggur
+بۆرەك|kidney|b,ø,r,ɛ,k|börek
 بۆشۈك||␣|
 بۆك||␣|
 بۆھران||␣|
@@ -589,14 +589,14 @@ autoExpandExamples.ug = `
 بۇتپەرەس||␣|
 بۇدجېت||␣|
 بۇرادەر||␣|
-بۇرژۇئا|bourgeois|b§u§r§ʒ§u§ʔ§ɑ|burzhu'a
+بۇرژۇئا|bourgeois|b,u,r,ʒ,u,ʔ,ɑ|burzhu'a
 بۇرژۇئازىيە||␣|
 بۇرۇت||␣|
-بۇرۇن|nose|b§u§r§u§n|burun
+بۇرۇن|nose|b,u,r,u,n|burun
 بۇغ||␣|
 بۇقا||␣
 بۇلاق||␣
-بۇلبۇل|lark|b§u§l§b§u§l|bulbul
+بۇلبۇل|lark|b,u,l,b,u,l|bulbul
 بۇلجۇڭ||␣|
 بۇلغارىيە||␣
 بۇلۇت||␣|
@@ -607,7 +607,7 @@ autoExpandExamples.ug = `
 بۈيۈك||␣|
 بۈگۈن||
 بېركلىي||␣|
-بېرىللىي|beyllium|b§e§f§i§l§l§i§j|bërilliy
+بېرىللىي|beyllium|b,e,f,i,l,l,i,j|bërilliy
 بېسىلماق||
 بېسىم||
 بېغىر||␣|
@@ -617,13 +617,13 @@ autoExpandExamples.ug = `
 بېلىقچى||␣|
 بېلگىيە||
 بېلەت||␣|
-بېنزىن|gasoline|b§e§n§z§i§n|bënzin
+بېنزىن|gasoline|b,e,n,z,i,n|bënzin
 بېگېموت||␣|
 بەت-||
 بەت||
 بەتقىلىق||
 بەخت||
-بەختىيار|lucky|b§ɛ§χ§t§i§j§ɑ§r|bextiyar
+بەختىيار|lucky|b,ɛ,χ,t,i,j,ɑ,r|bextiyar
 بەخش||␣|
 بەدەل||␣|
 بەدەن||␣|
@@ -631,7 +631,7 @@ autoExpandExamples.ug = `
 بەرمەك||␣
 بەرەڭگە||
 بەز||␣|
-بەسەي|bok choy|b§ɛ§s§ɛ§j|besey
+بەسەي|bok choy|b,ɛ,s,ɛ,j|besey
 بەش||␣
 بەشىنچى||␣
 بەك||␣
@@ -706,7 +706,7 @@ autoExpandExamples.ug = `
 تىنچلىق||
 تىياتىرخانا||
 تىيىن||␣
-تۆت|warm, hot|t§ø§t̚|töt
+تۆت|warm, hot|t,ø,t̚|töt
 تۆتىنچى||␣
 تۆش||␣|
 تۆلەم||
@@ -785,8 +785,8 @@ autoExpandExamples.ug = `
 جامائەت||␣|
 جان||
 جانلىق||
-جاڭيۇ|soy sauce|d͡ʒ§ɑ§ŋ§j§u|jangyu
-جاۋاب|answer|d͡ʒ§ɑ§ˈw§ɑ§p̚|jawab
+جاڭيۇ|soy sauce|d͡ʒ,ɑ,ŋ,j,u|jangyu
+جاۋاب|answer|d͡ʒ,ɑ,ˈw,ɑ,p̚|jawab
 جاۋاپ||␣|
 جىبۇتى||
 جىسىم||
@@ -796,7 +796,7 @@ autoExpandExamples.ug = `
 جىھاد||
 جۇدا||␣|
 جۇمھۇرىيەت||
-جۇڭگو|China|d͡ʒ§u§ŋ§ɡ§o|junggo
+جۇڭگو|China|d͡ʒ,u,ŋ,ɡ,o|junggo
 جۈملە||
 جۈمە||␣
 جۈپ||
@@ -818,7 +818,7 @@ autoExpandExamples.ug = `
 خانا||
 خاپا||
 خوتۇن||
-خوتەن|Khotan|x§o§t§æ§n|||x
+خوتەن|Khotan|x,o,t,æ,n|||x
 خوجايىن||
 خوراز||␣|
 خورۋاتىيە||␣
@@ -835,7 +835,7 @@ autoExpandExamples.ug = `
 خۇرسەن||
 خۇشال||
 خۇشپۇراق||
-خېچىر|mule|χ§e§t͡ʃ§i§r|xëchir
+خېچىر|mule|χ,e,t͡ʃ,i,r|xëchir
 خەتتاتلىق||
 خەلق||
 خەلقئارا||
@@ -848,7 +848,7 @@ autoExpandExamples.ug = `
 دائىم||
 دادا||␣
 داستان||␣|
-داشۈئې|university|d§ɑ§ʃ§y§ʔ§e|dashü'ë
+داشۈئې|university|d,ɑ,ʃ,y,ʔ,e|dashü'ë
 دانىيە||
 دانە||␣
 داپ||
@@ -867,7 +867,7 @@ autoExpandExamples.ug = `
 دومبىرا||␣|
 دوپپا||
 دىخان||
-دىن|religion|d§i§n|din
+دىن|religion|d,i,n|din
 دىنسىزلىق||
 دىنىي||
 دۆلەت||
@@ -884,7 +884,7 @@ autoExpandExamples.ug = `
 دېرىزە||
 دېكابر||␣|
 دېمەك||
-دېڭىز|sea|d§e§ŋ§i§z|dëngiz
+دېڭىز|sea|d,e,ŋ,i,z|dëngiz
 دېھقان||
 دەرد||
 دەرس||
@@ -938,11 +938,11 @@ autoExpandExamples.ug = `
 زېھىن|mind, intellect||zëhin
 زەئىپ||␣|
 زەربە||␣|
-زەررە|particle, speck|z§ɛ§r§r§ɛ|zerre
+زەررە|particle, speck|z,ɛ,r,r,ɛ|zerre
 زەرەر||␣|
 زەكەر||
 زەمبىرەك||␣|
-زەنجىر|chain|z§ɛ§n§d͡ʒ§i§r|zenjir
+زەنجىر|chain|z,ɛ,n,d͡ʒ,i,r|zenjir
 زەنجىۋىل||␣|
 زەيتۇن||
 زەھەر||
@@ -1011,7 +1011,7 @@ autoExpandExamples.ug = `
 سۈت||␣
 سۈرئەت||
 سۈزۈك||
-سۈلھ|peace|s§y§l§h|sülh
+سۈلھ|peace|s,y,l,h|sülh
 سۈمۈرمەك||␣
 سۈيدۈك||␣|
 سۈپەت||
@@ -1020,7 +1020,7 @@ autoExpandExamples.ug = `
 سېغىزخان||␣|
 سېلىشتۇرماق||
 سېمىز||␣|
-سېمىزئوت|common purslane|s§e§m§i§z§ʔ§o§t|sëmiz'ot
+سېمىزئوت|common purslane|s,e,m,i,z,ʔ,o,t|sëmiz'ot
 سېنتەبر||␣|
 سەرخۇش||␣|
 سەكسەن||␣
@@ -1045,7 +1045,7 @@ autoExpandExamples.ug = `
 شامان||␣|
 شاپتۇل||␣
 شاگىرت||
-شاھ|shah|ʃ§ɑ§h|shah
+شاھ|shah|ʃ,ɑ,h|shah
 شوخل||
 شوخلا||
 شوپۇر||␣
@@ -1055,7 +1055,7 @@ autoExpandExamples.ug = `
 شىمالىي||
 شىنجاڭ ئۇيغۇر ئاپتونوم رايونى||␣
 شىنجاڭ||␣
-شياڭگاڭ|Hong Kong|ʃ§j§ɑ§ŋ§ɡ§ɑ§ŋ|shyanggang
+شياڭگاڭ|Hong Kong|ʃ,j,ɑ,ŋ,ɡ,ɑ,ŋ|shyanggang
 شۆھرەت||␣|
 شۇ||
 شۇنداق||
@@ -1083,7 +1083,7 @@ autoExpandExamples.ug = `
 غاز||
 غازى||␣|
 غالىپ||␣|
-غايىپ|invisible|ʁ§ɑ§j§i§p|ghayip
+غايىپ|invisible|ʁ,ɑ,j,i,p|ghayip
 غايە||␣|
 غايەت||␣|
 غاپىل||␣|
@@ -1185,7 +1185,7 @@ autoExpandExamples.ug = `
 ـۈڭ||
 ـۈڭلار||
 فاشىست||␣|
-فرانسىيە|France|f§r§ɑ§n§s§i§j§ɛ|fransiye
+فرانسىيە|France|f,r,ɑ,n,s,i,j,ɛ|fransiye
 فىلىپپىن||
 فىنلاندىيە||
 فېۋرال||␣
@@ -1233,7 +1233,7 @@ autoExpandExamples.ug = `
 قايتماق||
 قايتىپ|to return||qaytip
 قايران||
-قايسى|which|ˈq§ɑ§j§s§i|qaysi
+قايسى|which|ˈq,ɑ,j,s,i|qaysi
 قايغۇ||␣|
 قايماق||␣|
 قاپقاق||␣|
@@ -1315,7 +1315,7 @@ autoExpandExamples.ug = `
 قۇللۇق||
 قۇلۇن||␣|
 قۇم||␣
-قۇمچاق|tadpole|q§u§m§t͡ʃ§ɑ§q|qumchaq
+قۇمچاق|tadpole|q,u,m,t͡ʃ,ɑ,q|qumchaq
 قۇنىيە||
 قۇيرۇق||␣|
 قۇچاق||␣|
@@ -1348,7 +1348,7 @@ autoExpandExamples.ug = `
 قەلەم||␣
 قەلەي||␣|
 قەمەر||␣|
-قەندىل|chandelier|q§ɛ§n§d§i§l|qendil
+قەندىل|chandelier|q,ɛ,n,d,i,l|qendil
 قەيسەر||␣|
 قەيەر||
 قەپەز||␣|
@@ -1360,9 +1360,9 @@ autoExpandExamples.ug = `
 كائىنات||␣|
 كابىل||␣|
 كابىنېت||␣|
-كاتالوگ|catalogue|k§ɑ§t§ɑ§l§o§ɡ|katalog
+كاتالوگ|catalogue|k,ɑ,t,ɑ,l,o,ɡ|katalog
 كاتالىزاتور||␣|
-كاتولىك|Catholic|k§ɑ§t§o§l§i§k|katolik
+كاتولىك|Catholic|k,ɑ,t,o,l,i,k|katolik
 كاتىپ||␣|
 كاتېگورىيە||␣|
 كادمىي||␣|
@@ -1385,7 +1385,7 @@ autoExpandExamples.ug = `
 كانادا||
 كاپىر||␣|
 كاپۇستا||␣|
-كاھىن|priest|k§ɑ§h§i§n|kahin
+كاھىن|priest|k,ɑ,h,i,n|kahin
 كاۋاك||
 كاۋاپ||␣
 كاۋچۇك||␣|
@@ -1430,10 +1430,10 @@ autoExpandExamples.ug = `
 كىنوخانا||
 كىنىشكا||
 كىيمەك||␣|
-كىيىك|deer|k§i§j§i§k|kiyik
+كىيىك|deer|k,i,j,i,k|kiyik
 كىيىم||
 كىپىنەك||
-كىپەك|dandruff|k§i§p§ɛ§k|kipek
+كىپەك|dandruff|k,i,p,ɛ,k|kipek
 كىچىك||␣
 كيۇرىي||␣|
 كۆت||␣|
@@ -1444,11 +1444,11 @@ autoExpandExamples.ug = `
 كۆرۈنمەك||
 كۆرۈپ||
 كۆز||␣
-كۆزگۈ|mirror|k§ø§z§ɡ§y|közgü
+كۆزگۈ|mirror|k,ø,z,ɡ,y|közgü
 كۆزەتكۈچى||
 كۆك||
 كۆكتات||
-كۆكس|udder|k§ø§k§s|köks
+كۆكس|udder|k,ø,k,s|köks
 كۆكۈچ||
 كۆل||␣
 كۆلەڭگە||
@@ -1565,14 +1565,14 @@ autoExpandExamples.ug = `
 لەھجە||␣|
 لەھزە||␣|
 لەھەت||␣|
-مائارىپ|education|m§ɑ§ʔ§ɑ§r§i§p|ma'aripمائاش||␣|
+مائارىپ|education|m,ɑ,ʔ,ɑ,r,i,p|ma'aripمائاش||␣|
 مائاۋىن||␣|
 ماتكا||␣|
 ماتور||␣|
 ماتېماتىكا||␣|
 ماتەم||␣|
 ماجال||␣|
-ماددا|matter|m§a§d§d§a|madda
+ماددا|matter|m,a,d,d,a|madda
 مارافون||␣|
 ماراكەش||␣|
 مارال||␣|
@@ -1618,7 +1618,7 @@ autoExpandExamples.ug = `
 مونچاق||␣|
 موڭغۇلىيە||␣|
 موگۇ||
-مىخ|nail|m§i§χ|mix
+مىخ|nail|m,i,χ|mix
 مىراس||␣
 مىزان||␣|
 مىس||␣|
@@ -1635,7 +1635,7 @@ autoExpandExamples.ug = `
 مىلتىق||
 مىللەت||␣|
 مىللەتلەر||
-مىليارد|billion|m§i§l§j§ɑ§r§t|milyard
+مىليارد|billion|m,i,l,j,ɑ,r,t|milyard
 مىلياردېر||
 مىليون||␣
 مىنا||␣|
@@ -1646,7 +1646,7 @@ autoExpandExamples.ug = `
 مىنۇت||␣|
 مىنۇس||␣|
 مىنېرال||␣|
-مىڭ|thousand|m§i§ŋ|ming
+مىڭ|thousand|m,i,ŋ|ming
 مىڭە||
 مۆتىدىل||
 مۆجىزە||␣|
@@ -1709,7 +1709,7 @@ autoExpandExamples.ug = `
 مۇناسىۋەت||␣
 مۇنتىزىم||␣|
 مۇنداق||
-مۇنەججىم|astrologer|m§u§n§ɛ§d͡ʒ§d͡ʒ§i§m|munejjim
+مۇنەججىم|astrologer|m,u,n,ɛ,d͡ʒ,d͡ʒ,i,m|munejjim
 مۇيەسسەر||␣|
 مۇپتىلا||␣|
 مۇھاسىرە||␣|
@@ -1721,7 +1721,7 @@ autoExpandExamples.ug = `
 مۇھەررىر||
 مۇۋازىنەت||␣|
 مۇۋاپىق||␣|
-مۇۋەققەت|temporary|m§u§w§ɛ§q§q§ɛ§t|muweqqet
+مۇۋەققەت|temporary|m,u,w,ɛ,q,q,ɛ,t|muweqqet
 مۇۋەپپەق||␣
 مۇۋەپپەقىيەت||␣|
 مۈشكۈل||␣|
@@ -1766,7 +1766,7 @@ autoExpandExamples.ug = `
 مەززىلىك|tasty||mezzilik
 مەزلۇم||␣|
 مەزھەپ||␣|
-مەسئۇل|responsible|m§ɛ§s§ʔ§u§l|mes'ul
+مەسئۇل|responsible|m,ɛ,s,ʔ,u,l|mes'ul
 مەست||
 مەسخىرە||␣|
 مەسلىھەت||␣|
@@ -1776,7 +1776,7 @@ autoExpandExamples.ug = `
 مەسۇم||␣|
 مەشغۇل||␣|
 مەشىق||
-مەشھۇر|famous|m§ɛ§ʃ§h§u§r|meshhur
+مەشھۇر|famous|m,ɛ,ʃ,h,u,r|meshhur
 مەغرۇر||␣|
 مەغلۇپ||␣|
 مەقئەت||␣|
@@ -1818,7 +1818,7 @@ autoExpandExamples.ug = `
 نائىنساپ||␣|
 نائىپ||␣|
 نائۇستا||␣|
-نائۈمىت|hopeless|n§ɑ§ʔ§y§m§i§t|na'ümit
+نائۈمىت|hopeless|n,ɑ,ʔ,y,m,i,t|na'ümit
 نائۈمىد||
 ناترىي||␣|
 ناتسىست||␣|
@@ -1862,7 +1862,7 @@ autoExpandExamples.ug = `
 نوپۇس||␣|
 نىجات||␣|
 نىجىس||␣|
-نىزام|regulation, rule|n§i§z§a§m|nizam
+نىزام|regulation, rule|n,i,z,a,m|nizam
 نىسبەت||␣|
 نىسبەتەن||
 نىسپىي||␣|
@@ -1881,12 +1881,12 @@ autoExpandExamples.ug = `
 نۇر||␣|
 نۇرانى||␣|
 نۇرغۇن||
-نۇسخە|example|n§u§s§χ§ɛ|nusxe
+نۇسخە|example|n,u,s,χ,ɛ|nusxe
 نۇسرەت||␣|
 نۇقسان||␣|
 نېرۋا||␣|
 نېسىپ||␣|
-نېفىت|petrol|n§e§f§i§t|nëfit
+نېفىت|petrol|n,e,f,i,t|nëfit
 نېمىدېگەن||
 نېمىس||
 نېمىسچە||
@@ -1957,7 +1957,7 @@ autoExpandExamples.ug = `
 ياقۇت||␣|
 ياكور||␣|
 يالاڭ||␣|
-يالاڭئاياق|barefoot|j§ɑ§l§ɑ§ŋ§ʔ§ɑ§j§ɑ§q|yalang'ayaq
+يالاڭئاياق|barefoot|j,ɑ,l,ɑ,ŋ,ʔ,ɑ,j,ɑ,q|yalang'ayaq
 يالغان||␣
 يالىڭاچ||
 يالپۇز||␣|
@@ -2049,11 +2049,11 @@ autoExpandExamples.ug = `
 يېپىلماق||
 يېڭى تىپتىكى تاجسىمان ۋىرۇسلۇق ئۆپكە ياللۇغى||
 يېڭى||
-يېڭىسار|Yengisar|y§e§ŋ§i§s§a§r
+يېڭىسار|Yengisar|y,e,ŋ,i,s,a,r
 يېڭىلىق||␣|
 يېۋروپىي||␣|
 يەتتىنچى||␣
-يەتتە|seven|j§ɛ§t§t§ɛ|yette
+يەتتە|seven|j,ɛ,t,t,ɛ|yette
 يەتمىش||␣
 يەر تەۋرەش||
 يەر||
@@ -2082,16 +2082,16 @@ autoExpandExamples.ug = `
 پاراشوت||␣|
 پاراشوك||␣|
 پاراكەندە||␣|
-پاراگىراپ|paragraph|p§ɑ§r§ɑ§ɡ§i§r§ɑ§p|paragirap
+پاراگىراپ|paragraph|p,ɑ,r,ɑ,ɡ,i,r,ɑ,p|paragirap
 پاراۋوز||␣|
 پارتىيە||
 پارىژ|Paris||parizh
 پاسكىنا||
-پاسپورت|passport|p§a§s§p§o§r§t|posport
+پاسپورت|passport|p,a,s,p,o,r,t|posport
 پاشا||
 پاشائاي||
 پاقا||␣|
-پاك-پاكىز|very clean, pure|p§ɑ§k§§p§ɑ§k§ɪ§z|pak-pakiz
+پاك-پاكىز|very clean, pure|p,ɑ,k,,p,ɑ,k,ɪ,z|pak-pakiz
 پاك||␣
 پاكىت||␣
 پاكىز||␣
@@ -2100,7 +2100,7 @@ autoExpandExamples.ug = `
 پايتەخت||␣|
 پايدا||␣|
 پاھىشە||␣|
-پروفېسسور|professor|p§r§o§p§e§s§s§o§r|profëssor
+پروفېسسور|professor|p,r,o,p,e,s,s,o,r|profëssor
 پروپاگاندا||
 پورتۇگالىيە||
 پوزىتسىيە||
@@ -2135,7 +2135,7 @@ autoExpandExamples.ug = `
 پەسىل||
 پەقەت||
 پەلتو||␣|
-پەلسەپە|philosophy|p§ɛ§l§s§ɛ§p§ɛ|pelsepe
+پەلسەپە|philosophy|p,ɛ,l,s,ɛ,p,ɛ|pelsepe
 پەمىدۇر||
 پەن||␣|
 پەنجاب||␣|
@@ -2156,7 +2156,7 @@ autoExpandExamples.ug = `
 چاي||␣
 چايان||␣|
 چايدان||
-چاچ|hair| t͡ʃ§ɑ§t͡ʃ|chach
+چاچ|hair| t͡ʃ,ɑ,t͡ʃ|chach
 چوت||
 چوشقا||
 چوققىسى||
@@ -2181,13 +2181,13 @@ autoExpandExamples.ug = `
 چۈشۈرمەك||
 چۈشەنمەك||
 چېخ جۇمھۇرىيەتى||
-چېركاۋ|church|t͡ʃ§e§r§k§ɑ§w|chërkaw
-چېچەك|flower|t͡ʃ§e§ˈt͡ʃ§æ§k̚|chëchek
+چېركاۋ|church|t͡ʃ,e,r,k,ɑ,w|chërkaw
+چېچەك|flower|t͡ʃ,e,ˈt͡ʃ,æ,k̚|chëchek
 چېگرا||
 ژارگون||␣|
 ژاندارما||␣|
 ژانىر||␣|
-ژۇرنال|journal, magazine|ʒ§u§r§n§ɑ§l|zhurnal
+ژۇرنال|journal, magazine|ʒ,u,r,n,ɑ,l|zhurnal
 ژېڭۋېي||␣|
 گاباردىن||␣|
 گادولىنىي||␣|
@@ -2222,7 +2222,7 @@ autoExpandExamples.ug = `
 گۈلخانا||␣|
 گۈللەر||␣|
 گۈلىستان||␣|
-گۈڭگۈرت|sulphur|ɡ§y§ŋ§ɡ§y§r§t|günggürt
+گۈڭگۈرت|sulphur|ɡ,y,ŋ,ɡ,y,r,t|günggürt
 گېرمانىي||␣|
 گېرمانىيە||
 گېزىت||␣
@@ -2239,7 +2239,7 @@ autoExpandExamples.ug = `
 ھاياتلىق||
 ھاياجان||
 ھايۋان||
-ھاۋا|weather|h§ɑ§w§ɑ|hawa
+ھاۋا|weather|h,ɑ,w,ɑ|hawa
 ھاۋز||␣|
 ھوقۇق||
 ھويلىمۇھويلا||
@@ -2287,7 +2287,7 @@ autoExpandExamples.ug = `
 ۋاكسىنا||␣|
 ۋاپا||␣|
 ۋاپات||
-ۋاھە|oasis|w§ɑ§h§ɛ|wahe
+ۋاھە|oasis|w,ɑ,h,ɛ|wahe
 ۋوتكا||
 ۋىتامىن|vitamin||witamin
 ۋىجدان||

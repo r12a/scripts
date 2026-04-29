@@ -6,8 +6,8 @@
 
 
 var collections = [
-{ symbol:'ⓥ', desc:'Dependent vowels', chars:'(َ|ُ|ِ|ٗ)' },
-{ symbol:'Ⓒ', desc:'All consonants', chars:'(ب|ت|ث|ج|ح|خ|د|ذ|ر|ز|س|ش|ص|ض|ط|ظ|ع|غ|ف|ق|ل|م|ن|و|ٹ|ٻ|پ|ڄ|چ|ڈ|ڑ|ژ|ک|گ|ڳ|ں|ھ|ہ|ی|ݙ|ݨ)' },
-{ symbol:'ⓒ', desc:'Non-vowels', chars:'(ب|ت|ث|ج|ح|خ|د|ذ|ر|ز|س|ش|ص|ض|ط|ظ|ع|غ|ف|ق|ل|م|ن|ٹ|ٻ|پ|ڄ|چ|ڈ|ڑ|ژ|ک|گ|ڳ|ں|ھ|ہ|ݙ|)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
+{ symbol:'ⓥ', desc:'Dependent vowels', chars:'[َُِٗ]' },
+{ symbol:'Ⓒ', desc:'All consonants', chars:'[بتثجحخدذرزسشصضطظعغفقلمنوٹٻپڄچڈڑژکگڳںھہیݙݨ]' },
+{ symbol:'ⓒ', desc:'Non-vowels', chars:'[بتثجحخدذرزسشصضطظعغفقلمنٹٻپڄچڈڑژکگڳںھہݙ]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D\u2067\u202B\u2066\u202A\u2068\u2069\u202C\u200F\u200E\u061C\u034F]' },
 ]
