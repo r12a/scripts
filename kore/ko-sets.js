@@ -9,13 +9,13 @@
 // 🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉
 
 var collections = [
-{ symbol:'🅞', desc:'Onsets', chars:'(ᄇ|ᄈ|ᄑ|ᄃ|ᄄ|ᄐ|ᄌ|ᄍ|ᄎ|ᄀ|ᄁ|ᄏ|ᄉ|ᄊ|ᄒ|ᄆ|ᄂ|ᄋ|ᄅ)' },
-{ symbol:'🅒', desc:'Codas', chars:'(ᆸ|ᆹ|ᇁ|ᆮ|ᇀ|ᆽ|ᆾ|ᆨ|ᆩ|ᆪ|ᆿ|ᆺ|ᆻ|ᇂ|ᆷ|ᆫ|ᆬ|ᆭ|ᆼ|ᆯ|ᆰ|ᆱ|ᆲ|ᆳ|ᆴ|ᆵ|ᆶ)' },
-{ symbol:'🅥', desc:'Vowels', chars:'(ᅵ|ᅳ|ᅮ|ᅦ|ᅩ|ᅢ|ᅥ|ᅡ|ᅲ|ᅨ|ᅭ|ᅤ|ᅧ|ᅣ|ᅴ|ᅱ|ᅰ|ᅬ|ᅫ|ᅯ|ᅪ)' },
+{ symbol:'🅞', desc:'Onsets', chars:'[ᄇᄈᄑᄃᄄᄐᄌᄍᄎᄀᄁᄏᄉᄊᄒᄆᄂᄋᄅ]' },
+{ symbol:'🅒', desc:'Codas', chars:'[ᆸᆹᇁᆮᇀᆽᆾᆨᆩᆪᆿᆺᆻᇂᆷᆫᆬᆭᆼᆯᆰᆱᆲᆳᆴᆵᆶ]' },
+{ symbol:'🅥', desc:'Vowels', chars:'[ᅵᅳᅮᅦᅩᅢᅥᅡᅲᅨᅭᅤᅧᅣᅴᅱᅰᅬᅫᅯᅪ]' },
 
-{ symbol:'ⓞ', desc:'Tense onsets', chars:'(ᄈ|ᄄ|ᄍ|ᄁ|ᄊ)' },
-{ symbol:'ⓥ', desc:'Horizontal vowels', chars:'(ᅳ|ᅮ|ᅩ|ᅲ|ᅭ|ᅴ|ᅱ|ᅰ|ᅬ|ᅫ|ᅯ|ᅪ)' },
-{ symbol:'Ⓥ', desc:'Vertical vowels', chars:'(ᅵ|ᅦ|ᅢ|ᅥ|ᅡ|ᅨ|ᅤ|ᅧ|ᅣ)' },
+{ symbol:'ⓞ', desc:'Tense onsets', chars:'[ᄈᄄᄍᄁᄊ]' },
+{ symbol:'ⓥ', desc:'Horizontal vowels', chars:'[ᅳᅮᅩᅲᅭᅴᅱᅰᅬᅫᅯᅪ]' },
+{ symbol:'Ⓥ', desc:'Vertical vowels', chars:'[ᅵᅦᅢᅥᅡᅨᅤᅧᅣ]' },
 
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D\u2067\u202B\u2066\u202A\u2068\u2069\u202C\u200F\u200E\u061C\u034F]' },
 ]

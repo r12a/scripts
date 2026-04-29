@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -20,35 +20,35 @@ native | meaning | IPA① | transcription | other transcriptions② | notes | wi
 
 autoExpandExamples.bap = `
 
-𖵄𖵤𖵝𖵒 𖵝𖵨|Kirat Rai|k§i§ra§t§ §r§aɪ
+𖵄𖵤𖵝𖵒 𖵝𖵨|Kirat Rai|k,i,ra,t, ,r,aɪ
 
 
 @ https://www.unicode.org/L2/L2022/22043r-kirat-rai.pdf
 
-𖵢𖵦|blood|h§ɨ
-𖵗𖵦|snake|p§ɨ
-𖵊𖵪𖵁𖵟𖵣|bird|t͡s§aũ§‹§w§aː
-𖵛𖵣𖵀𖵄𖵩𖵞𖵧𖵖|tomorrow|m§aː§ŋ§k§o§l§e§n
-𖵛𖵣𖵀𖵠𖵣𖵟𖵣|bless|m§aː§n§s§aː§w§aː
-𖵗𖵀𖵉𖵣𖵜𖵧𖵒|panchayat|pa§ɲ§t͡s§aː§j§e§t
-𖵜𖵣𖵠𖵣𖵁𖵟𖵣|curse|j§aː§‹§s§ãː§w§aː
-𖵊𖵧𖵁𖵃𖵤𖵟𖵣|brother|t͡sʰ§ẽ§‹§›§i§w§aː
-𖵉𖵣𖵂𖵟𖵣|water|t͡s§aː§ʔ§w§aː
-𖵉𖵣𖵃𖵫𖵟𖵣|water|t͡s§aː§ʔ§‹§w§aː
-𖵃𖵣𖵂𖵟𖵣|oil|›§aː§ʔ§w§aː
-𖵃𖵣𖵃𖵫𖵟𖵣|oil|›§aː§ʔ§‹§w§aː
-𖵛𖵣𖵂𖵟𖵣|blackbird|m§aː§ʔ§w§a
-𖵛𖵣𖵃𖵫𖵟𖵣|blackbird|m§aː§ʔ§‹§w§a
-𖵚𖵬𖵜𖵣𖵄𖵫𖵠𖵤𖵖|vaccine|bʰ§‹§j§aː§k§‹§s§i§n
-𖵢𖵬𖵜𖵣𖵖𖵤|there|h§‹§j§aː§n§i
-𖵢𖵬𖵜𖵥𖵖𖵤|down|h§‹§j§u§n§i
-𖵛𖵬𖵢𖵥𖵛𖵣|quarrel|m§‹§h§u§m§aː
-𖵠𖵥𖵅𖵫𖵅𖵤𖵛|Sikkim|s§u§k§‹§kʰ§i§m
-𖵃𖵈𖵫𖵄𖵣|me|a§ŋ§‹§k§aː
-𖵅𖵣𖵎𖵫𖵛𖵣|to go|kʰ§aː§ʈ§‹§m§aː
+𖵢𖵦|blood|h,ɨ
+𖵗𖵦|snake|p,ɨ
+𖵊𖵪𖵁𖵟𖵣|bird|t͡s,aũ,‹,w,aː
+𖵛𖵣𖵀𖵄𖵩𖵞𖵧𖵖|tomorrow|m,aː,ŋ,k,o,l,e,n
+𖵛𖵣𖵀𖵠𖵣𖵟𖵣|bless|m,aː,n,s,aː,w,aː
+𖵗𖵀𖵉𖵣𖵜𖵧𖵒|panchayat|pa,ɲ,t͡s,aː,j,e,t
+𖵜𖵣𖵠𖵣𖵁𖵟𖵣|curse|j,aː,‹,s,ãː,w,aː
+𖵊𖵧𖵁𖵃𖵤𖵟𖵣|brother|t͡sʰ,ẽ,‹,›,i,w,aː
+𖵉𖵣𖵂𖵟𖵣|water|t͡s,aː,ʔ,w,aː
+𖵉𖵣𖵃𖵫𖵟𖵣|water|t͡s,aː,ʔ,‹,w,aː
+𖵃𖵣𖵂𖵟𖵣|oil|›,aː,ʔ,w,aː
+𖵃𖵣𖵃𖵫𖵟𖵣|oil|›,aː,ʔ,‹,w,aː
+𖵛𖵣𖵂𖵟𖵣|blackbird|m,aː,ʔ,w,a
+𖵛𖵣𖵃𖵫𖵟𖵣|blackbird|m,aː,ʔ,‹,w,a
+𖵚𖵬𖵜𖵣𖵄𖵫𖵠𖵤𖵖|vaccine|bʰ,‹,j,aː,k,‹,s,i,n
+𖵢𖵬𖵜𖵣𖵖𖵤|there|h,‹,j,aː,n,i
+𖵢𖵬𖵜𖵥𖵖𖵤|down|h,‹,j,u,n,i
+𖵛𖵬𖵢𖵥𖵛𖵣|quarrel|m,‹,h,u,m,aː
+𖵠𖵥𖵅𖵫𖵅𖵤𖵛|Sikkim|s,u,k,‹,kʰ,i,m
+𖵃𖵈𖵫𖵄𖵣|me|a,ŋ,‹,k,aː
+𖵅𖵣𖵎𖵫𖵛𖵣|to go|kʰ,aː,ʈ,‹,m,aː
 𖵐𖵭|Dr. (doctor)|
-𖵐𖵭𖵋𖵭𖵗𖵤𖵭|DGP (Dir. Gen of police)|di§–§d͡zi§–§p§i§–
-𖵠𖵣𖵜𖵣-𖵙𖵥𖵈|turban|s§aː§j§aː§-§b§u§ŋ
+𖵐𖵭𖵋𖵭𖵗𖵤𖵭|DGP (Dir. Gen of police)|di,–,d͡zi,–,p,i,–
+𖵠𖵣𖵜𖵣-𖵙𖵥𖵈|turban|s,aː,j,aː,-,b,u,ŋ
 
 
 
