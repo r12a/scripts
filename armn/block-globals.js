@@ -1,5 +1,5 @@
 
-window.version = 'v28'
+window.version = 'v32'
 window.scriptName = 'Armenian'
 window.ghDirectory = 'armenian'
 window.blockDirectory = 'armenian'
