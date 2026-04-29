@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -59,8 +59,8 @@ autoExpandExamples.mid = `
 ࡉࡀࡄࡅࡃࡉࡋࡀࡏࡉࡋ|Judea||yahwdyla'yl
 ࡉࡅࡔࡀࡌࡉࡍ|Yoshamin||Yōšamin
 ࡊࡀࡄࡍࡀ|Jewish priest||kahna
-ࡊࡋࡀࡕࡀ|three|k§l̥§ɔː.§θ§ɔ|klɔ̄ṯɔ
-ࡋࡉࡁ࡛ࡀ|heart|ˈl§ɛ§bb§ɔ|lib˖ā
+ࡊࡋࡀࡕࡀ|three|k,l̥,ɔː.,θ,ɔ|klɔ̄ṯɔ
+ࡋࡉࡁ࡛ࡀ|heart|ˈl,ɛ,bb,ɔ|lib˖ā
 ࡌࡀࡋࡊࡀ ࡖࡍࡄࡅࡓࡀ|King of Light||malka d-nhura
 ࡌࡀࡋࡊࡀ|king||malka
 ࡌࡀࡍࡀ ࡓࡁࡀ|Great Mind||mana rba
@@ -99,118 +99,118 @@ autoExpandExamples.mid = `
 
 
 @ https://www.youtube.com/watch?v=Mg-v6M3bqsk transcriptions by myself
-ࡉࡀࡄࡓࡀ|month|j§e§h§r§a
-ࡔࡉࡃࡕࡀ|year|ʃ§ɛ§tt§aː
-ࡔࡉ࡚ࡃࡕࡀ|year|ʃ§ɛ§tt§aː
-ࡏࡕࡌࡀࡋ|yesterday|e§θ§m§a§l
-ࡀࡌࡀࡉ|today|aː§m§a§j
-ࡑࡅࡁࡀࡄ|morning|s§o§b§aː§h
-ࡒࡀࡌࡉࡕ|noon|q§a§m§e§θ
-ࡐࡀࡉࡍ|evening|p§e§i§n
-ࡔࡀࡐࡋࡉࡀ|second (time)|ʃ§aː§p§l§iː
-ࡔࡉࡕࡀ|hour|ʃ§iː§θ§aː
-ࡔࡉࡕ࡙ࡀ|hour|ʃ§iː§θ§aː
-ࡔࡀࡉࡉࡀ|hours|ʃ§aː§iː§‹§‹
-ࡉࡅࡌࡀ|day|j§o§m§aː
-ࡉࡅ࡚ࡌࡀ|day|j§o§m§aː
-ࡔࡅࡁࡀࡉࡕࡀ|week|ʃ§o§w§e§j§θ§aː
-ࡋࡀࡄࡌࡀࡋ|two days ago|l§a§h§m§a§l
-ࡀࡐࡀࡉࡍ|tonight|aː§p§ei§‹§n
-ࡐࡉࡓࡔࡀ|tomorrow|p§e§r§ʃ§aː
-ࡓࡅࡌࡀࡄࡉࡓ|the day after tomorrow|r§o§m§æ§h§e§r
-ࡑࡅࡁࡀࡄ|morning|sˤ§o§b§aː§h
-ࡑࡅࡁࡀ࡚ࡄ|morning|sˤ§o§b§aː§h
-ࡁࡀࡕࡀࡓ ࡒࡀࡌࡅࡕ|afternoon|b§aː§θ§a§r§ §q§a§m§e§θ
-ࡋࡉࡋࡉࡀ|night|l§ɛ§l§j§a
-ࡄࡀࡁࡔࡀࡁࡀ|Sunday|h§ɛ§v§ʃ§a§bb§a
-ࡕࡓࡉࡍ ࡄࡀࡁࡔࡀࡁࡀ|Monday|ət§r§ei§n§ §h§ɛ§v§ʃ§a§bb§aː
-ࡕࡋࡀࡕࡀ ࡄࡀࡁࡔࡀࡁࡀ|Tuesday|əθ§l§aː§θ§aː§ §h§ɛ§v§ʃ§a§bb§aː
-ࡀࡓࡁࡀ ࡄࡀࡁࡔࡀࡁࡀ|Wednesday|a§r§b§aː§ §h§ɛ§v§ʃ§a§bb§aː
-ࡄࡀࡌࡔࡀ ࡄࡀࡁࡔࡀࡁࡀ|Thursday|h§a§m§ʃ§aː§ §h§ɛ§v§ʃ§a§bb§aː
-ࡄࡉࡁࡉࡋ ࡆࡉࡅࡀ|Thursday|h§iː§w§ɛ§l§ §z§iː§v§aː
-ࡏࡅࡓࡅࡐࡕࡀ|Friday|›§o§r§ɒ§f§t§aː
-ࡔࡀࡐࡕࡀ|Saturday|ʃ§a§f§t§aː
-ࡔࡀࡐ࡙ࡕࡀ|Saturday|ʃ§a§f§t§aː
-ࡀࡎࡅࡕࡀ ࡍࡉࡄࡅࡉࡋࡉࡊ|hello (to male)|a§s§uː§θ§a§ §n§ɛ§h§v§iː§l§ɛ§χ
-ࡊࡉࡌࡀ ࡀࡊࡕࡉࡊ|how are you? (to female)|k§e§m§a§ §ɛ§χ§t§ɛ§χ
-ࡊࡉࡌࡀ ࡀࡊࡕࡉࡊ|how are you? (to female)|k§e§m§a§ §ɛ§χ§t§ɛ§χ
+ࡉࡀࡄࡓࡀ|month|j,e,h,r,a
+ࡔࡉࡃࡕࡀ|year|ʃ,ɛ,tt,aː
+ࡔࡉ࡚ࡃࡕࡀ|year|ʃ,ɛ,tt,aː
+ࡏࡕࡌࡀࡋ|yesterday|e,θ,m,a,l
+ࡀࡌࡀࡉ|today|aː,m,a,j
+ࡑࡅࡁࡀࡄ|morning|s,o,b,aː,h
+ࡒࡀࡌࡉࡕ|noon|q,a,m,e,θ
+ࡐࡀࡉࡍ|evening|p,e,i,n
+ࡔࡀࡐࡋࡉࡀ|second (time)|ʃ,aː,p,l,iː
+ࡔࡉࡕࡀ|hour|ʃ,iː,θ,aː
+ࡔࡉࡕ࡙ࡀ|hour|ʃ,iː,θ,aː
+ࡔࡀࡉࡉࡀ|hours|ʃ,aː,iː,‹,‹
+ࡉࡅࡌࡀ|day|j,o,m,aː
+ࡉࡅ࡚ࡌࡀ|day|j,o,m,aː
+ࡔࡅࡁࡀࡉࡕࡀ|week|ʃ,o,w,e,j,θ,aː
+ࡋࡀࡄࡌࡀࡋ|two days ago|l,a,h,m,a,l
+ࡀࡐࡀࡉࡍ|tonight|aː,p,ei,‹,n
+ࡐࡉࡓࡔࡀ|tomorrow|p,e,r,ʃ,aː
+ࡓࡅࡌࡀࡄࡉࡓ|the day after tomorrow|r,o,m,æ,h,e,r
+ࡑࡅࡁࡀࡄ|morning|sˤ,o,b,aː,h
+ࡑࡅࡁࡀ࡚ࡄ|morning|sˤ,o,b,aː,h
+ࡁࡀࡕࡀࡓ ࡒࡀࡌࡅࡕ|afternoon|b,aː,θ,a,r, ,q,a,m,e,θ
+ࡋࡉࡋࡉࡀ|night|l,ɛ,l,j,a
+ࡄࡀࡁࡔࡀࡁࡀ|Sunday|h,ɛ,v,ʃ,a,bb,a
+ࡕࡓࡉࡍ ࡄࡀࡁࡔࡀࡁࡀ|Monday|ət,r,ei,n, ,h,ɛ,v,ʃ,a,bb,aː
+ࡕࡋࡀࡕࡀ ࡄࡀࡁࡔࡀࡁࡀ|Tuesday|əθ,l,aː,θ,aː, ,h,ɛ,v,ʃ,a,bb,aː
+ࡀࡓࡁࡀ ࡄࡀࡁࡔࡀࡁࡀ|Wednesday|a,r,b,aː, ,h,ɛ,v,ʃ,a,bb,aː
+ࡄࡀࡌࡔࡀ ࡄࡀࡁࡔࡀࡁࡀ|Thursday|h,a,m,ʃ,aː, ,h,ɛ,v,ʃ,a,bb,aː
+ࡄࡉࡁࡉࡋ ࡆࡉࡅࡀ|Thursday|h,iː,w,ɛ,l, ,z,iː,v,aː
+ࡏࡅࡓࡅࡐࡕࡀ|Friday|›,o,r,ɒ,f,t,aː
+ࡔࡀࡐࡕࡀ|Saturday|ʃ,a,f,t,aː
+ࡔࡀࡐ࡙ࡕࡀ|Saturday|ʃ,a,f,t,aː
+ࡀࡎࡅࡕࡀ ࡍࡉࡄࡅࡉࡋࡉࡊ|hello (to male)|a,s,uː,θ,a, ,n,ɛ,h,v,iː,l,ɛ,χ
+ࡊࡉࡌࡀ ࡀࡊࡕࡉࡊ|how are you? (to female)|k,e,m,a, ,ɛ,χ,t,ɛ,χ
+ࡊࡉࡌࡀ ࡀࡊࡕࡉࡊ|how are you? (to female)|k,e,m,a, ,ɛ,χ,t,ɛ,χ
 
 
 
 
 
 @ ?
-ࡂࡀࡐࡀ|feather|ˈɡ§æ§pp§ɔ|gāpā
-ࡖࡍࡐࡀࡒࡕ|who left you|di§n§p§a§q§t
-ࡖࡎࡉࡍࡀ|of hatred|di§s§i§n§a
+ࡂࡀࡐࡀ|feather|ˈɡ,æ,pp,ɔ|gāpā
+ࡖࡍࡐࡀࡒࡕ|who left you|di,n,p,a,q,t
+ࡖࡎࡉࡍࡀ|of hatred|di,s,i,n,a
 ࡗ|when, as, like|kədi
 
 
 
 @ Haberl
-ࡑࡅࡐࡓࡀ|bird|sˤ§o§p§r§ɔ †|ˈṣoprā
-ࡑࡅࡐ࡙ࡓࡀ|yellow|sˤ§o§f§r§ɔ †|ˈṣop̄rā
+ࡑࡅࡐࡓࡀ|bird|sˤ,o,p,r,ɔ †|ˈṣoprā
+ࡑࡅࡐ࡙ࡓࡀ|yellow|sˤ,o,f,r,ɔ †|ˈṣop̄rā
 ṣəḇyi|he baptized him|ˈsˤɛv.ji|ṣəḇyi
-ࡒࡀࡁࡉࡃ|he will do|ˈq§ɒː.§v§ɛ§d †|qāḇed
+ࡒࡀࡁࡉࡃ|he will do|ˈq,ɒː.,v,ɛ,d †|qāḇed
 láhriḇi|he hasn't destroyed it|læh.rɪ.vi|láhriḇi
 əḇud|do! (f.s.)|ə.wod|əḇud
 qəmahreḇāt|you will destroy|qə.mah.rɛ.wɔt|qəmahreḇāt
 aṯṯon|they brought|aθ.θon|aṯṯon
 atton|you (pl)|at.ton|atton
 ehdā|one|ɛh.dɔ|ehdā
-ࡈࡀࡁ|good|tˤ§ɔ§ʊ †|ṭāḇ
+ࡈࡀࡁ|good|tˤ,ɔ,ʊ †|ṭāḇ
 baṭluḵtā|misfortune|bat.lʊχ.tɔ|bɑṭluḵtā
-ࡎࡀࡒࡀࡕ|she went up|ˈs§ɔː§q§ɑ§t †|sāqɑt
+ࡎࡀࡒࡀࡕ|she went up|ˈs,ɔː,q,ɑ,t †|sāqɑt
 qāzi|he goes|qɒː.zi|ˈqāzi
 ṣəḇyi|he baptized him|ˈsˤɛv.jɪ|ṣəḇyi
-ࡍࡅࡃࡀ|earthquake|ˈn§oː.§d§ɔ †|nodā
-ࡏࡉࡍࡂࡋࡉࡆࡉࡀ|English|›§i§ŋ.§g§l§ɪ.§ˈz§i§– †|inglizi
+ࡍࡅࡃࡀ|earthquake|ˈn,oː.,d,ɔ †|nodā
+ࡏࡉࡍࡂࡋࡉࡆࡉࡀ|English|›,i,ŋ.,g,l,ɪ.,ˈz,i,– †|inglizi
 ʿabdalla|Abdallah|ʕab.ˈdɑɫ.ɫa|ʿabdalla
-ࡓࡀࡁࡀ|great|ˈr§æ§b.b§ɔ †|rabbā
-ࡂࡅࡁࡓࡀ|man|ˈg§æ§v.§r§ɔ †|gaḇrā
+ࡓࡀࡁࡀ|great|ˈr,æ,b.b,ɔ †|rabbā
+ࡂࡅࡁࡓࡀ|man|ˈg,æ,v.,r,ɔ †|gaḇrā
 barra|outside|ˈbar.ra|barra
 ešmi|his name|ˈɛʃ.mi|ešmi
 eččā|nine|ˈɛt͡ʃ.t͡ʃɔ|eččā
-ࡔࡉࡍ|ninety|t͡ʃ§i§n †|čin
-ࡔ࡙ࡉࡍ|ninety|t͡ʃ§i§n †|čin
+ࡔࡉࡍ|ninety|t͡ʃ,i,n †|čin
+ࡔ࡙ࡉࡍ|ninety|t͡ʃ,i,n †|čin
 čemmā|nine hundred|ˈt͡ʃɛm.mɔ
 gač|gypsum|gæt͡ʃ|gač
-ࡔࡉࡄࡉࡋ|child|ˈd͡ʒ§iː.§h§ɛ§l †|jihel
+ࡔࡉࡄࡉࡋ|child|ˈd͡ʒ,iː.,h,ɛ,l †|jihel
 mujur|how|mʌ.ˈd͡ʒuɹ|mujur
 pərā|money|pɛ.ˈrɔː|pərā
-ࡁoࡁo|door|ˈw§ɔː.§w§ɔ †|ḇāḇā
-ࡊࡀࡓࡎࡉࡀ|his stomach|ˈk§a§ɹ.§s§i§– †|karsi
-ࡁࡀࡓࡀ|outside|ˈb§a§r.r§a †|barra
-ࡌࡉࡑࡓࡀ|boundary|ˈm§ɪ§s.§r§ɒ †|miṣrā
-ࡀࡄࡀ|this|ˈɔː.§h§ɔ †|āhā
-ࡀࡋࡐࡀ|one thousand|ˈæ§l.§f§ɔ †|alp̄ā
-ࡏࡉࡄࡋࡅ|they have|›§ˈɛ§h.§l§u †|ehlu
-ࡏࡉࡍࡀ|eye|ˈiː.§n§ɔ †|inā
+ࡁoࡁo|door|ˈw,ɔː.,w,ɔ †|ḇāḇā
+ࡊࡀࡓࡎࡉࡀ|his stomach|ˈk,a,ɹ.,s,i,– †|karsi
+ࡁࡀࡓࡀ|outside|ˈb,a,r.r,a †|barra
+ࡌࡉࡑࡓࡀ|boundary|ˈm,ɪ,s.,r,ɒ †|miṣrā
+ࡀࡄࡀ|this|ˈɔː.,h,ɔ †|āhā
+ࡀࡋࡐࡀ|one thousand|ˈæ,l.,f,ɔ †|alp̄ā
+ࡏࡉࡄࡋࡅ|they have|›,ˈɛ,h.,l,u †|ehlu
+ࡏࡉࡍࡀ|eye|ˈiː.,n,ɔ †|inā
 
 
 
 
 @ Haberl Swadesh list
-ࡊࡀࡊࡅࡀ|star|ˈk§o§χ§w§ɔ †|kakua
-ࡊࡀࡊ࡙ࡅࡀ|star|ˈk§o§χ§w§ɔ †|kakua
-ࡄࡀࡔࡉࡔ|grass|ħ§a§ˈʃ§i§ʃ †|hašiš
-ࡄ࡙ࡀࡔࡉࡔ|grass|ħ§a§ˈʃ§i§ʃ †|hašiš
-ࡂࡀࡑࡍࡀ|stick|ˈʁ§ʊ§sˤ§n§ɔ †|gasna
-ࡂ࡙ࡀࡑࡍࡀ|stick|ˈʁ§ʊ§sˤ§n§ɔ †|gasna
+ࡊࡀࡊࡅࡀ|star|ˈk,o,χ,w,ɔ †|kakua
+ࡊࡀࡊ࡙ࡅࡀ|star|ˈk,o,χ,w,ɔ †|kakua
+ࡄࡀࡔࡉࡔ|grass|ħ,a,ˈʃ,i,ʃ †|hašiš
+ࡄ࡙ࡀࡔࡉࡔ|grass|ħ,a,ˈʃ,i,ʃ †|hašiš
+ࡂࡀࡑࡍࡀ|stick|ˈʁ,ʊ,sˤ,n,ɔ †|gasna
+ࡂ࡙ࡀࡑࡍࡀ|stick|ˈʁ,ʊ,sˤ,n,ɔ †|gasna
 
 
 
 @ Everson
-ࡓࡁ࡛ࡀ|great|ˈræ§b.b§ɔ|rabbā
-ࡀࡊࡀ|there is|ɛ§k.k§a|ekka
-ࡀࡊ࡛ࡀ|there is|ɛ§k.k§a|ekka
-ࡔࡉࡍࡀ|tooth|ʃ§ɛ§nn§a|šenna
-ࡔࡉࡍ࡛ࡀ|tooth|ʃ§ɛ§nn§a|šenna
+ࡓࡁ࡛ࡀ|great|ˈræ,b.b,ɔ|rabbā
+ࡀࡊࡀ|there is|ɛ,k.k,a|ekka
+ࡀࡊ࡛ࡀ|there is|ɛ,k.k,a|ekka
+ࡔࡉࡍࡀ|tooth|ʃ,ɛ,nn,a|šenna
+ࡔࡉࡍ࡛ࡀ|tooth|ʃ,ɛ,nn,a|šenna
 
 
 @ https://en.wiktionary.org/w/index.php?title=Category:Mandaic_terms_with_IPA_pronunciation
 
-ࡊࡀࡅࡊࡀ|peach|x§a§w§x§a|ḵawḵā
+ࡊࡀࡅࡊࡀ|peach|x,a,w,x,a|ḵawḵā
 
 
 

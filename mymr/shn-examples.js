@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -81,7 +81,7 @@ autoExpandExamples.shn = `
 တေႃႉသူင်ႇ|transport|tɔː˦˨ˀ.sʰoŋ˩|
 တဵမ်ထူၼ်ႈ||␣||
 တြႃး|law, justice|traː˥|
-တွင်|banana leaf|tɔ§ŋ˨˦
+တွင်|banana leaf|tɔ,ŋ˨˦
 တွင်းလၢၼ်း|circular pedestal tray|tɔŋ˥.laːn˥|
 တွင်ႇသူႇ||␣||
 တွင်ႇဢူႇ||␣||
@@ -133,7 +133,7 @@ autoExpandExamples.shn = `
 ထူဝ်ႇၼဝ်ႈ||␣||
 ထူး||␣|
 ထူၺ်း||␣||
-ထူၺ်ႈၸႂ်|to breathe|tʰo§j˧˧˨.§t͡ɕaɰ˨˦
+ထူၺ်ႈၸႂ်|to breathe|tʰo,j˧˧˨.,t͡ɕaɰ˨˦
 ထေး||␣||
 ထေႃးပၢတ်ႈ||␣|
 ထေႃးပၼႃႇ||␣||
@@ -292,7 +292,7 @@ autoExpandExamples.shn = `
 မၢတ်ႉၶျ်||␣||
 မၢမ်ႇ||␣||
 မၢဝ်း||␣||
-မၢၵ်ႇ|fruit|maː§k̚˩
+မၢၵ်ႇ|fruit|maː,k̚˩
 မၢၵ်ႇမူင်ႈ||␣|
 မၢၵ်ႇယၢၼ်းတီး||␣||
 မၢၵ်ႇလၼ်း||␣||
@@ -641,7 +641,7 @@ autoExpandExamples.shn = `
 ဝီႉၺဵၼ်ႇ|soul, spirit|wiː˦˨ˀ.ɲen˩|
 ဝီႉၼႄး|Vinaya|wiː˦˨ˀ.nɛː˥|
 ဝုတ်ႉထူႉ||␣|
-ဝုၼ်ႇၵျီးၶျုၵ်ႈ|prime minister|wu§n˩.§d͡ʒiː˥.§t͡ʃu§k̚˧˧˨|
+ဝုၼ်ႇၵျီးၶျုၵ်ႈ|prime minister|wu,n˩.,d͡ʒiː˥.,t͡ʃu,k̚˧˧˨|
 ဝူတ်ႈသမ်ႇ||␣||
 ဝူၺ်ႇ||␣||
 ဝူၼ်ႉ|to think|won˦˨
@@ -715,11 +715,11 @@ autoExpandExamples.shn = `
 သုင်းမႃႉ||␣||
 သုင်ႇၺႃႉ||␣||
 သုမ်းၶၢဝ်းယၢမ်း|waste time|sʰum˥.kʰaːw˥.jaːm˥|
-သုၵ်ႈ|to wash|sʰu§ʔ˧˧˨
+သုၵ်ႈ|to wash|sʰu,ʔ˧˧˨
 သုၵ်ႉၶႃႉ||␣||
 သူ|you|sʰu˨˦
 သူင်ႇ|to send|sʰoŋ˩|
-သူင်ႇဢွၵ်ႇ|export|sʰo§ŋ˩.§ʔɔ§k̚˩|sùung ʼàuk
+သူင်ႇဢွၵ်ႇ|export|sʰo,ŋ˩.,ʔɔ,k̚˩|sùung ʼàuk
 သူတ်ႉ|to drink|sʰot˦˨
 သူပ်း|mouth|sʰop˥
 သူမ်ႈ||␣||
@@ -793,7 +793,7 @@ autoExpandExamples.shn = `
 ဢတႂၢင်းဝုၼ်ႇ||␣||
 ဢတႂၢၵ်ႈ||␣||
 ဢပုင်ႇၺႃႉ||␣||
-ဢပုမ်ႇ|story, tale|ʔa˧˧˨.§pu§m˩|
+ဢပုမ်ႇ|story, tale|ʔa˧˧˨.,pu,m˩|
 ဢမင်ႇၵလႃႇ||␣||
 ဢမိင်ႉ|order, command|ʔa˨˦.miŋ˦˨ˀ|
 ဢမူး||␣||
@@ -835,7 +835,7 @@ autoExpandExamples.shn = `
 ဢူး||␣||
 ဢူးတၢၼ်း||␣||
 ဢူၺ်းလီ|ally|ʔoj˥.liː˨˦|
-ဢူၺ်းၵေႃႉ|friend|ʔo§j˥.§kɔː˦˨ˀ|
+ဢူၺ်းၵေႃႉ|friend|ʔo,j˥.,kɔː˦˨ˀ|
 ဢေႃးၵုတ်ႉ||␣||
 ဢေႃးၵၢတ်ႉ||␣||
 ဢေႃႇၸတြေးလီးယိူဝ်း||␣||
@@ -847,7 +847,7 @@ autoExpandExamples.shn = `
 ဢဵတ်ႇ||␣|
 ဢဵၵ်ႉထီႉ||␣||
 ဢွင်ႇ||␣||
-ဢွၵ်းဢေႃ|brain|ʔɔ§k̚˥.§ʔɔː˨˦|ʼáuk ʼǎu
+ဢွၵ်းဢေႃ|brain|ʔɔ,k̚˥.,ʔɔː˨˦|ʼáuk ʼǎu
 ဢွၵ်ႇတူဝ်ႇပိူဝ်||␣||
 ဢွၵ်ႇထူဝ်ႇပႃႇ||␣||
 ဢွႆႈ|sugarcane|ʔɔj˧˧˨|ʼāui|
@@ -856,7 +856,7 @@ autoExpandExamples.shn = `
 ဢၢင်ႇ|basin, sink|ʔaːŋ˩|
 ဢၢပ်ႇ||␣||
 ဢၢမ်း||␣||
-ဢၢၼ်ႇ|to count|ʔaː§n˩
+ဢၢၼ်ႇ|to count|ʔaː,n˩
 ဢၢႆ|smoke|ʔaaj˨˦
 ဢၵတီႉ||␣||
 ဢၵူႉသလႃႉ||␣||
@@ -898,7 +898,7 @@ autoExpandExamples.shn = `
 ၵတိ||␣||
 ၵတိမၼ်ႈ||␣||
 ၵတိသတ်ႉၸႃႇ||␣||
-ၵတ်း|cold|ka§t̚˥
+ၵတ်း|cold|ka,t̚˥
 ၵတ်းယဵၼ်||␣||
 ၵတ်းလၢင်ႈ||␣||
 ၵတ်းသၼ်ႇၵတ်းၼၢဝ်||␣||
@@ -962,7 +962,7 @@ autoExpandExamples.shn = `
 ၵမ်ႉၵေႃႇ||␣||
 ၵမ်ႉၸွႆႈ||␣||
 ၵမ်ႉၽူႈၵမ်ႉၵၢၼ်||␣||
-ၵရမ်ႇ|gram|ka˨˦.§ra§m˩|kǎ ràm|
+ၵရမ်ႇ|gram|ka˨˦.,ra,m˩|kǎ ràm|
 ၵရဝေႇ||␣||
 ၵရိယႃႇ||␣||
 ၵရုၼႃႇ||␣||
@@ -1056,7 +1056,7 @@ autoExpandExamples.shn = `
 ၵိူဝ်းၽီ||␣||
 ၵိူဝ်ၸဵမ်း||␣||
 ၵိူဝ်ႉတူၺ်း||␣||
-ၵိူၺ်း|friendly|kɤ§j˥|kóei|
+ၵိူၺ်း|friendly|kɤ,j˥|kóei|
 ၵိူၼ်ႇ||␣||
 ၵိၵ်ႈ||␣||
 ၵိၼ်|to eat|kin˨˦
@@ -1142,7 +1142,7 @@ autoExpandExamples.shn = `
 ၵုၼ်||␣||
 ၵုၼ်ယွၼ်ႇ||␣||
 ၵုၼ်သၢႆး||␣||
-ၵုၼ်ဢေးသျႃး|Asia|ku§n˨˦.§ʔeː˥.§ʃaː˥||
+ၵုၼ်ဢေးသျႃး|Asia|ku,n˨˦.,ʔeː˥.,ʃaː˥||
 ၵုၼ်း||␣||
 ၵုၼ်ၽင်ႇၼမ်ႉ||␣||
 ၵုၼ်ႁၢတ်ႇသၢႆး||␣||
@@ -2147,7 +2147,7 @@ autoExpandExamples.shn = `
 ၶူၵ်ႉလဵၵ်း||␣||
 ၶူၵ်ႉၼမ်ႉ||␣||
 ၶူၵ်ႉၼမ်ႉၽိတ်ႉ||␣||
-ၶူၼ်|hair, feather|kʰo§n˨˦
+ၶူၼ်|hair, feather|kʰo,n˨˦
 ၶူႈလင်|nose|kʰu˧˧˨ laŋ˨˦
 ၶေးၶေး||␣||
 ၶေႃး|neck|kʰɔ˥
@@ -2397,7 +2397,7 @@ autoExpandExamples.shn = `
 ၸဵင်ႇလႅမ်||␣|
 ၸဵင်ႇဝၢတ်ႈ||␣|
 ၸဵင်ႇၶိုင်ႈ||␣|
-ၸဵတ်း|seven|t͡ɕe§t̚˥|
+ၸဵတ်း|seven|t͡ɕe,t̚˥|
 ၸဵတ်းသိပ်း|||
 ၸဵတ်ႈပူဝ်ႇ||␣||
 ၸဵတ်ႉ|to wipe|t͡ɕet˦˨
@@ -2425,14 +2425,14 @@ autoExpandExamples.shn = `
 ၸႃႉ|bad|t͡ɕaa˦˨
 ၺိတ်ႈ||␣||
 ၺူဝ်ႇ|brown|ɲoː˩|
-ၺွင်ႇ|banyan|ɲɔ§ŋ˩|
+ၺွင်ႇ|banyan|ɲɔ,ŋ˩|
 ၺွင်ႇပေႃးထီႉ|bohdi tree|ɲɔŋ˩.pɔː˥.tʰiː˦˨ˀ|
 ၺၢမ်း||␣||
 ၺၢမ်ႉ||␣||
 ၼင်|skin|naŋ˨˦
 ၼင်ႈ|to sit|naŋ˧˧˨
 ၼမ်ၼမ်|many|nam˨˦ nam˨˦
-ၼမ်ႉ|water|na§m˦˨
+ၼမ်ႉ|water|na,m˦˨
 ၼမ်ႉမၼ်း||␣|
 ၼမ်ႉၶူင်း||␣||
 ၼမ်ႉၶေႃႉ||␣||
@@ -2485,7 +2485,7 @@ autoExpandExamples.shn = `
 ၽတ်း||␣||
 ၽဝႃႇ||␣||
 ၽိင်း||␣||
-ၽိဝ်ၼင်|skin|pʰi§w˨˦.§na§ŋ˨˦|phǐo nǎng
+ၽိဝ်ၼင်|skin|pʰi,w˨˦.,na,ŋ˨˦|phǐo nǎng
 ၽိုင်ႈ|bee|pʰɯŋ˧˧˨|
 ၽိုၼ်ႉ||␣||
 ၽိူဝ်ႉ||␣||
@@ -2500,7 +2500,7 @@ autoExpandExamples.shn = `
 ၽူမ်|hair|pʰom˨˦
 ၽူဝ်|husband|pʰo˨˦
 ၽူး|to float|pʰu˥
-ၽူၼ်|rain|pʰo§n˨˦
+ၽူၼ်|rain|pʰo,n˨˦
 ၽူႈ||␣||
 ၽူႈတၢင်တူဝ်||␣||
 ၽူႈတႅမ်ႈ||␣||
@@ -2539,15 +2539,15 @@ autoExpandExamples.shn = `
 ၾူၼ်|rain|fon˨˦|
 ၾႅပ်ႇဝႃႇရီႇ||␣||
 ၾႆး|fire|faj˥|
-ၾႆးၾႃႉ|electricity|faj˥.§faː˦˨ˀ|
-ႀမတႃႉ|president (country)|θa˨˦.§ma˨˦.§taː˦˨ˀ|
+ၾႆးၾႃႉ|electricity|faj˥.,faː˦˨ˀ|
+ႀမတႃႉ|president (country)|θa˨˦.,ma˨˦.,taː˦˨ˀ|
 ႀမႃႉဝႃႇယမႃႉ||␣||
 ႀရၽူႇ|crown|θa˨˦.ra˨˦.pʰuː˩|
 ႀီႇႁူဝ်ႇ||␣||
 ႀူဝ်း|sheep|θoː˥|
 ႀၼၢပ်ႈၶႃး|thanakha|θa˨˦.naːp̚˧˧˨.kʰaː˥|
 ႁင်းသႃႇ||␣|
-ႁတရႃႉ|heart|ha˨˦.§ta˨˦.§raː˦˨ˀ|
+ႁတရႃႉ|heart|ha˨˦.,ta˨˦.,raː˦˨ˀ|
 ႁမ်းလိၵ်ႈ||␣||
 ႁဝ်|louse (body, head)|haw˨˦
 ႁဝ်း|we/us (general)|haw˥

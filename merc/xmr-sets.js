@@ -9,7 +9,7 @@
 // 🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉
 
 var collections = [
-{ symbol:'Ⓥ', desc:'Vowels', chars:'(𐦢|𐦡|𐦣|𐦠)' },
-{ symbol:'Ⓒ', desc:'Simple consonants', chars:'(𐦧|𐦦|𐦴|𐦷|𐦲|𐦳|𐦯|𐦰|𐦭|𐦮|𐦨|𐦩|𐦥|𐦫|𐦬|𐦤)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
+{ symbol:'Ⓥ', desc:'Vowels', chars:'[𐦢𐦡𐦣𐦠]' },
+{ symbol:'Ⓒ', desc:'Simple consonants', chars:'[𐦧𐦦𐦴𐦷𐦲𐦳𐦯𐦰𐦭𐦮𐦨𐦩𐦥𐦫𐦬𐦤]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D\u2067\u202B\u2066\u202A\u2068\u2069\u202C\u200F\u200E\u061C\u034F]' },
 ]

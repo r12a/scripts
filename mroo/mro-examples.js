@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -26,15 +26,15 @@ autoExpandExamples.mro = `
 
 @ https://www.unicode.org/L2/L2009/09097r-n3589r-mro.pdf
 
-𖩌𖩑𖩗|village|k§o§w
-𖩄𖩑𖩁𖩌𖩑|owl|b§o§ŋ§k§o
-𖩙𖩑|gold|k§o
-𖩎𖩆𖩁|go|m§a§ŋ
-𖩔𖩎𖩑|fool|ʃ§m§o
-𖩃𖩊𖩏|cat|m§i§n
-𖩋𖩃𖩊|rice|t͡s§m§i|cmi
-𖩍𖩝𖩁|boat|l§ɔ§ŋ
-𖩈𖩍𖩆|spoon|kʰ§l§a|khla
+𖩌𖩑𖩗|village|k,o,w
+𖩄𖩑𖩁𖩌𖩑|owl|b,o,ŋ,k,o
+𖩙𖩑|gold|k,o
+𖩎𖩆𖩁|go|m,a,ŋ
+𖩔𖩎𖩑|fool|ʃ,m,o
+𖩃𖩊𖩏|cat|m,i,n
+𖩋𖩃𖩊|rice|t͡s,m,i|cmi
+𖩍𖩝𖩁|boat|l,ɔ,ŋ
+𖩈𖩍𖩆|spoon|kʰ,l,a|khla
 𖩛𖩆𖩃𖩖|moon||lamä
 𖩉𖩆𖩊-𖩌𖩆𖩏|stir curry||hai-kan
 𖩜-𖩌𖩆𖩏|stir curry||hai-kan
@@ -48,7 +48,7 @@ autoExpandExamples.mro = `
 𖩞|quote||tɛk
 
 
-𖩃𖩓𖩑|Mro language|m§r§u|
+𖩃𖩓𖩑|Mro language|m,r,u|
 
 
 

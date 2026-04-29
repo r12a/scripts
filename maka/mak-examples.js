@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -69,13 +69,13 @@ autoExpandExamples.mak = `
 |||annang|||annang
 |||anne|||anne
 |||anngarruʼ|||anngarruʼ
-𑻱𑻭𑻳𑻨𑻳|here|an§ˈrin§ni|anrinni|ᨕᨑᨗᨊᨗ||anrinni
+𑻱𑻭𑻳𑻨𑻳|here|an,ˈrin,ni|anrinni|ᨕᨑᨗᨊᨗ||anrinni
 |||anriʼbaʼ|||anriʼbaʼ
 |||anrong|||anrong
 |||anrong bosi|||anrong bosi
 |||anrong bulaeng|||anrong bulaeng
 |||anrong lima|||anrong lima
-𑻱𑻦𑻴|that|ˈan§tu|antu|ᨕᨈᨘ||antu
+𑻱𑻦𑻴|that|ˈan,tu|antu|ᨕᨈᨘ||antu
 |||antureng|||antureng
 |||Apariliʼ|||Apariliʼ
 |||apokàʼ|||apokàʼ
@@ -85,7 +85,7 @@ autoExpandExamples.mak = `
 |||areng|||areng
 |||ari|||ari
 |||ase|||ase
-𑻱𑻰𑻮𑻴𑻱𑻭|to wear trousers|as§sa§ˈlu§a§raʔ|assaluaraʼ|ᨕᨔᨒᨘᨕᨑ||assaluaraʼ
+𑻱𑻰𑻮𑻴𑻱𑻭|to wear trousers|as,sa,ˈlu,a,raʔ|assaluaraʼ|ᨕᨔᨒᨘᨕᨑ||assaluaraʼ
 |||assi|||assi
 |||assombalaʼ|||assombalaʼ
 |||assongoʼ|||assongoʼ
@@ -101,7 +101,7 @@ autoExpandExamples.mak = `
 |||au|||au
 |||-aʼ|||-aʼ
 |||aʼ-|||aʼ-
-𑻱𑻱𑻡𑻥|fulfill religious duties|aʔ§a§ˈɡa§ma|aʼagama|ᨕᨕᨁᨆ|aʔ.a.ˈɡa.ma|aʼagama
+𑻱𑻱𑻡𑻥|fulfill religious duties|aʔ,a,ˈɡa,ma|aʼagama|ᨕᨕᨁᨆ|aʔ.a.ˈɡa.ma|aʼagama
 |||aʼba|||aʼba
 |||aʼbabeleʼ|||aʼbabeleʼ
 |||aʼbarrasaʼ|||aʼbarrasaʼ
@@ -109,7 +109,7 @@ autoExpandExamples.mak = `
 |||aʼjeʼneʼ|||aʼjeʼneʼ
 |||aʼjidàng|||aʼjidàng
 |||aʼluʼ|||aʼluʼ
-𑻱𑻥𑻭|dried up|aʔ§ˈma§ra|aʼmara|ᨕᨆᨑ||aʼmara
+𑻱𑻥𑻭|dried up|aʔ,ˈma,ra|aʼmara|ᨕᨆᨑ||aʼmara
 |||aʼmasaʼ|||aʼmasaʼ
 |||aʼrappungang|||aʼrappungang
 |||aʼrekeng|||aʼrekeng
@@ -120,15 +120,15 @@ autoExpandExamples.mak = `
 |||ba'nusu'|||ba'nusu'
 |||ba'ra'|||ba'ra'
 |||babeleʼ|||babeleʼ
-𑻤𑻱𑻳𑻨𑻵|woman, wife|ba§ˈi§nɛ|baine||ᨅᨕᨗᨊᨙ|baine
+𑻤𑻱𑻳𑻨𑻵|woman, wife|ba,ˈi,nɛ|baine||ᨅᨕᨗᨊᨙ|baine
 |||baju|||baju
 |||bala|||bala
 |||bala-bala|||bala-bala
 |||balaki|||balaki
-𑻤𑻮𑻮|greedy|ba§ˈla§la|balala||ɓa.ˈla.la|balala
+𑻤𑻮𑻮|greedy|ba,ˈla,la|balala||ɓa.ˈla.la|balala
 |||balampoaʼ|||balampoaʼ
-𑻤𑻮|swamp, marsh|ˈba§laŋ|balang|ᨅᨒ|ˈɓa.lãŋ|balang
-𑻤𑻮𑻱𑻶|mouse, rat|ba§ˈla§ɔ|balao|ᨅᨒᨕᨚ||balao
+𑻤𑻮|swamp, marsh|ˈba,laŋ|balang|ᨅᨒ|ˈɓa.lãŋ|balang
+𑻤𑻮𑻱𑻶|mouse, rat|ba,ˈla,ɔ|balao|ᨅᨒᨕᨚ||balao
 |||balasiteng|||balasiteng
 |||balasitèng|||balasitèng
 |||balatung|||balatung
@@ -154,7 +154,7 @@ autoExpandExamples.mak = `
 |||banngi|||banngi
 |||banyaʼ|||banyaʼ
 |||bapeleʼ|||bapeleʼ
-𑻤𑻭𑻤|page|ba§ˈram§baŋ|barambang|ᨅᨑᨅ|ba.ˈrãm.bãŋ|barambang
+𑻤𑻭𑻤|page|ba,ˈram,baŋ|barambang|ᨅᨑᨅ|ba.ˈrãm.bãŋ|barambang
 |||baraʼ|||baraʼ
 |||baraʼ-baraʼ|||baraʼ-baraʼ
 |||bari'basa'|||bari'basa'
@@ -164,21 +164,21 @@ autoExpandExamples.mak = `
 |||bassikoeʼ|||bassikoeʼ
 |||bassikoiʼ|||bassikoiʼ
 |||bassoro'|||bassoro'
-𑻤𑻦𑻭|deity|baˈ§ta§ra|batara|ᨅᨈᨑ|ɓa.ˈt̪ʰa.ra|batara
+𑻤𑻦𑻭|deity|baˈ,ta,ra|batara|ᨅᨈᨑ|ɓa.ˈt̪ʰa.ra|batara
 |||bataraʼ|||bataraʼ
 |||battalaʼ|||battalaʼ
 |||battang|||battang
 |||bauʼ|||bauʼ
 |||bawa|||bawa
-𑻤𑻯𑻳|pig|ˈba§wi|bawi|ᨅᨓᨗ||bawi
-𑻤𑻬𑻱𑻶|egg|ba§ˈjao|bayao|ᨅᨐᨕᨚ|ɓaˈja.ɔ|bayao
+𑻤𑻯𑻳|pig|ˈba,wi|bawi|ᨅᨓᨗ||bawi
+𑻤𑻬𑻱𑻶|egg|ba,ˈjao|bayao|ᨅᨐᨕᨚ|ɓaˈja.ɔ|bayao
 |||bayao rarokeng|||bayao rarokeng
-𑻤𑻤𑻳|shell|ˈbaʔ§biʔ|baʼbiʼ|ᨅᨅᨗ|ˈɓaʔ.ɓiʔ|baʼbiʼ
+𑻤𑻤𑻳|shell|ˈbaʔ,biʔ|baʼbiʼ|ᨅᨅᨗ|ˈɓaʔ.ɓiʔ|baʼbiʼ
 |||baʼdoʼ|||baʼdoʼ
 |||bebe|||bebe
 |||bedeng|||bedeng
 |||bele'|||bele'
-𑻤𑻵𑻮|far|ˈbel.§la|bella|ᨅᨙᨒ||bella
+𑻤𑻵𑻮|far|ˈbel.,la|bella|ᨅᨙᨒ||bella
 |||belèʼ|||belèʼ
 |||bembe|||bembe
 |||bensìng|||bensìng
@@ -198,7 +198,7 @@ autoExpandExamples.mak = `
 |||biralle|||biralle
 |||biroang|||biroang
 |||biru|||biru
-𑻤𑻳𑻰𑻵|oar, paddle|ˈbi§sɛ|bise|ᨅᨗᨔᨙ||bise
+𑻤𑻳𑻰𑻵|oar, paddle|ˈbi,sɛ|bise|ᨅᨗᨔᨙ||bise
 |||biseang|||biseang
 |||bissikoeʼ|||bissikoeʼ
 |||bissikoiʼ|||bissikoiʼ
@@ -208,7 +208,7 @@ autoExpandExamples.mak = `
 |||bo'bo'|||bo'bo'
 |||bo'dong|||bo'dong
 |||bo'dong-bo'dong|||bo'dong-bo'dong
-𑻤𑻶𑻧𑻶|short|ˈbo§do|bodo|ᨅᨚᨉᨚ|ˈbɔdɔ|bodo
+𑻤𑻶𑻧𑻶|short|ˈbo,do|bodo|ᨅᨚᨉᨚ|ˈbɔdɔ|bodo
 |||boko lima|||boko lima
 |||bolang-bolang|||bolang-bolang
 |||bongga|||bongga
@@ -218,21 +218,21 @@ autoExpandExamples.mak = `
 |||boong|||boong
 |||bottoʼ|||bottoʼ
 |||bowong|||bowong
-𑻤𑻶𑻬|to return|ˈbo§ja|boya|ᨅᨚᨐ||boya
+𑻤𑻶𑻬|to return|ˈbo,ja|boya|ᨅᨚᨐ||boya
 |||bu|||bu
 |||Bugisiʼ|||Bugisiʼ
 |||bujung|||bujung
 |||bukkuleng|||bukkuleng
 |||buku|||buku
 |||buku barambang|||buku barambang
-𑻤𑻴𑻮𑻱𑻵|gold|bu§ˈla§eŋ|bulaeng|ᨅᨘᨒᨕᨙ|ɓu.ˈla.ẽŋ|bulaeng
+𑻤𑻴𑻮𑻱𑻵|gold|bu,ˈla,eŋ|bulaeng|ᨅᨘᨒᨕᨙ|ɓu.ˈla.ẽŋ|bulaeng
 |||bulaeng tau|||bulaeng tau
 |||bulang|||bulang
 |||bulepeseʼ|||bulepeseʼ
-𑻤𑻴𑻮𑻶|bamboo|ˈbu§lo|bulo|ᨅᨘᨒᨚ|ˈbulɔ|bulo
+𑻤𑻴𑻮𑻶|bamboo|ˈbu,lo|bulo|ᨅᨘᨒᨚ|ˈbulɔ|bulo
 |||bunga|||bunga
 |||bungko|||bungko
-𑻤𑻴𑻢𑻴|well|ˈbu§ŋuŋ|bungung|ᨅᨘᨂᨘ|ˈɓu.ŋũŋ|bungung
+𑻤𑻴𑻢𑻴|well|ˈbu,ŋuŋ|bungung|ᨅᨘᨂᨘ|ˈɓu.ŋũŋ|bungung
 |||bura'ne|||bura'ne
 |||burasaʼ|||burasaʼ
 |||buto|||buto
@@ -243,7 +243,7 @@ autoExpandExamples.mak = `
 |||buyang|||buyang
 |||bérasa'|||bérasa'
 |||ca'di|||ca'di
-𑻩𑻩|house gecko|ˈcac§caʔ|caccaʼ|ᨌᨌ|ˈcçac.cçaʔ|caccaʼ
+𑻩𑻩|house gecko|ˈcac,caʔ|caccaʼ|ᨌᨌ|ˈcçac.cçaʔ|caccaʼ
 |||calle-calle|||calle-calle
 |||cammiʼ|||cammiʼ
 |||carammeng|||carammeng
@@ -253,10 +253,10 @@ autoExpandExamples.mak = `
 |||ceraʼ|||ceraʼ
 |||cidu'|||cidu'
 |||cikali|||cikali
-𑻩𑻳𑻨𑻳|to see|ˈci§niʔ|ciniʼ|ᨌᨗᨊᨗ||ciniʼ
+𑻩𑻳𑻨𑻳|to see|ˈci,niʔ|ciniʼ|ᨌᨗᨊᨗ||ciniʼ
 |||cipuru'|||cipuru'
 |||coba|||coba
-𑻩𑻶𑻠𑻶|to hide|ˈcɔk§kɔ|cokko|ᨌᨚᨀᨚ||cokko
+𑻩𑻶𑻠𑻶|to hide|ˈcɔk,kɔ|cokko|ᨌᨚᨀᨚ||cokko
 |||colo'|||colo'
 |||coʼmoʼ|||coʼmoʼ
 |||cumi'|||cumi'
@@ -274,14 +274,14 @@ autoExpandExamples.mak = `
 |||dompalaʼ|||dompalaʼ
 |||eja|||eja
 |||eloroʼ|||eloroʼ
-𑻱𑻵𑻣|armpit|ˈe§pa|epa|ᨕᨙᨄ||epa
-𑻱𑻵𑻭|to bring|ˈe§raŋ|erang|ᨕᨙᨑ||erang
+𑻱𑻵𑻣|armpit|ˈe,pa|epa|ᨕᨙᨄ||epa
+𑻱𑻵𑻭|to bring|ˈe,raŋ|erang|ᨕᨙᨑ||erang
 |||ero'|||ero'
 |||gammaraʼ|||gammaraʼ
 |||gampang|||gampang
 |||gana|||gana
 |||gandengang terèng|||gandengang terèng
-𑻡𑻢|vegetable|ˈɡa§ŋaŋ|gangang|ᨁᨂ|ˈɡa.ŋãŋ|gangang
+𑻡𑻢|vegetable|ˈɡa,ŋaŋ|gangang|ᨁᨂ|ˈɡa.ŋãŋ|gangang
 |||gappa|||gappa
 |||garagaji|||garagaji
 |||garring|||garring
@@ -309,21 +309,21 @@ autoExpandExamples.mak = `
 |||iloroʼ|||iloroʼ
 |||ina|||ina
 |||ingkong|||ingkong
-𑻱𑻳𑻭|debt|ˈin§raŋ|inrang|ᨕᨗᨑ||inrang
+𑻱𑻳𑻭|debt|ˈin,raŋ|inrang|ᨕᨗᨑ||inrang
 |||inro|||inro
 |||inro-inro|||inro-inro
 |||inruʼ|||inruʼ
 |||inung|||inung
-𑻱𑻳𑻰𑻵|to know|ˈis§seŋ|isseng|ᨕᨗᨔᨙ||isseng
+𑻱𑻳𑻰𑻵|to know|ˈis,seŋ|isseng|ᨕᨗᨔᨙ||isseng
 |||jaguru'|||jaguru'
-𑻪𑻱𑻳|many, a lot|ˈɟa§i|jai|ᨍᨕᨗ|ˈɟʝa.i|jai
+𑻪𑻱𑻳|many, a lot|ˈɟa,i|jai|ᨍᨕᨗ|ˈɟʝa.i|jai
 |||Jakattaraʼ|||Jakattaraʼ
 |||jakkala'|||jakkala'
-𑻪𑻥|to work on something|ˈɟa§ma|jama|ᨍᨆ||jama
-𑻪𑻥|work, task|ɟaˈ§maŋ|jamang|ᨍᨆ||jamang
+𑻪𑻥|to work on something|ˈɟa,ma|jama|ᨍᨆ||jama
+𑻪𑻥|work, task|ɟaˈ,maŋ|jamang|ᨍᨆ||jamang
 |||jambatang|||jambatang
 |||jangang|||jangang
-𑻪𑻠|comb|ˈɟaŋ§ka|jangka|ᨍᨀ||jangka
+𑻪𑻠|comb|ˈɟaŋ,ka|jangka|ᨍᨀ||jangka
 |||janna|||janna
 |||jannang|||jannang
 |||Januari|||Januari
@@ -352,7 +352,7 @@ autoExpandExamples.mak = `
 |||kalasaʼ|||kalasaʼ
 |||kalaumang|||kalaumang
 |||kalaʼbirang|||kalaʼbirang
-𑻠𑻮𑻵|body|ˈka§le|kale|ᨀᨒᨙ|ˈkalɛ|kale
+𑻠𑻮𑻵|body|ˈka,le|kale|ᨀᨒᨙ|ˈkalɛ|kale
 |||kalereʼ|||kalereʼ
 |||kalimataʼ|||kalimataʼ
 |||kalimbuki|||kalimbuki
@@ -364,11 +364,11 @@ autoExpandExamples.mak = `
 |||kalomang|||kalomang
 |||kalotori|||kalotori
 |||kalotoroʼ|||kalotoroʼ
-𑻠𑻮𑻴𑻱𑻭|ant|ka§lu§ˈa§ra|kaluara|ᨀᨒᨘᨕᨑ|kʰa.lu.ˈa.ra|kaluara
+𑻠𑻮𑻴𑻱𑻭|ant|ka,lu,ˈa,ra|kaluara|ᨀᨒᨘᨕᨑ|kʰa.lu.ˈa.ra|kaluara
 |||kaluatereʼ|||kaluatereʼ
 |||kaluku|||kaluku
 |||kalumpang|||kalumpang
-𑻠𑻮𑻰|class|ka§ˈla§saʔ|kalàsaʼ|ᨀᨒᨔ|kʰa.ˈla.saʔ|kalàsaʼ
+𑻠𑻮𑻰|class|ka,ˈla,saʔ|kalàsaʼ|ᨀᨒᨔ|kʰa.ˈla.saʔ|kalàsaʼ
 |||kalèreʼ|||kalèreʼ
 |||kalùruʼ|||kalùruʼ
 |||kamallakkang|||kamallakkang
@@ -405,8 +405,8 @@ autoExpandExamples.mak = `
 |||karàcisiʼ|||karàcisiʼ
 |||karàng|||karàng
 |||kasaraʼ|||kasaraʼ
-𑻠𑻰|cash|ˈka§saʔ|kasaʼ|ᨀᨔ|ˈkʰa.saʔ|kasaʼ
-𑻠𑻰𑻳𑻱|taste, flavour|ka§ˈsi§aʔ|kasiaʼ|ᨀᨔᨗᨕ|kʰa.ˈsi.aʔ|kasiaʼ
+𑻠𑻰|cash|ˈka,saʔ|kasaʼ|ᨀᨔ|ˈkʰa.saʔ|kasaʼ
+𑻠𑻰𑻳𑻱|taste, flavour|ka,ˈsi,aʔ|kasiaʼ|ᨀᨔᨗᨕ|kʰa.ˈsi.aʔ|kasiaʼ
 |||kaso|||kaso
 |||kasomberang|||kasomberang
 |||kassi'|||kassi'
@@ -414,21 +414,21 @@ autoExpandExamples.mak = `
 |||katimbang|||katimbang
 |||katinting|||katinting
 |||katte|||katte
-𑻠𑻱𑻴|you|ˈka§.u|kau|ᨀᨕᨘ||kau
+𑻠𑻱𑻴|you|ˈka,.u|kau|ᨀᨕᨘ||kau
 |||kawe-kawe|||kawe-kawe
-𑻠𑻬𑻴|wood|ka§ju|kayu|ᨀᨐᨘ||kayu
+𑻠𑻬𑻴|wood|ka,ju|kayu|ᨀᨐᨘ||kayu
 |||kayu lasuna|||kayu lasuna
-𑻠𑻪𑻮|expensive|ˈkaʔ§ɟa§laʔ|kaʼjalaʼ|ᨀᨍᨒ|ˈkʰaʔ.ɟʝa.laʔ|kaʼjalaʼ
+𑻠𑻪𑻮|expensive|ˈkaʔ,ɟa,laʔ|kaʼjalaʼ|ᨀᨍᨒ|ˈkʰaʔ.ɟʝa.laʔ|kaʼjalaʼ
 |||kaʼmuru|||kaʼmuru
 |||kea|||kea
 |||kebo'|||kebo'
-𑻠𑻵𑻠𑻵|to dig|ˈke§ke|keke|ᨀᨙᨀᨙ|ˈkɛkɛ|keke
+𑻠𑻵𑻠𑻵|to dig|ˈke,ke|keke|ᨀᨙᨀᨙ|ˈkɛkɛ|keke
 |||keʼbuʼ|||keʼbuʼ
 |||keʼdeʼ|||keʼdeʼ
 |||keʼnang|||keʼnang
 |||-ki'|||-ki'
 |||ki-|||ki-
-𑻠𑻳𑻧𑻶|tail|ˈki§doŋ|kidong|ᨀᨗᨉᨚ|ˈkʰi.dõŋ|kidong
+𑻠𑻳𑻧𑻶|tail|ˈki,doŋ|kidong|ᨀᨗᨉᨚ|ˈkʰi.dõŋ|kidong
 |||kioʼ|||kioʼ
 |||-ko|||-ko
 |||koi|||koi
@@ -448,10 +448,10 @@ autoExpandExamples.mak = `
 |||kulicca|||kulicca
 |||kulipasaʼ|||kulipasaʼ
 |||kullu-kullu|||kullu-kullu
-𑻠𑻴𑻦𑻴|lazy|ˈkut§tu|kuttu|ᨀᨘᨈᨘ|ˈkʰut̪.t̪ʰu|kuttu
+𑻠𑻴𑻦𑻴|lazy|ˈkut,tu|kuttu|ᨀᨘᨈᨘ|ˈkʰut̪.t̪ʰu|kuttu
 |||kutu|||kutu
 |||la'bu|||la'bu
-𑻮𑻩𑻳|drawer|ˈla§ci|laci|ᨒᨌᨗ|ˈla.cçi|laci
+𑻮𑻩𑻳|drawer|ˈla,ci|laci|ᨒᨌᨗ|ˈla.cçi|laci
 |||lada|||lada
 |||lada capaʼ|||lada capaʼ
 |||lada marica|||lada marica
@@ -462,7 +462,7 @@ autoExpandExamples.mak = `
 |||lambusuʼ|||lambusuʼ
 |||lammoroʼ|||lammoroʼ
 |||lampa|||lampa
-𑻮𑻥𑻴|to plant|ˈla§muŋ|lamung|ᨒᨆᨘ||lamung
+𑻮𑻥𑻴|to plant|ˈla,muŋ|lamung|ᨒᨆᨘ||lamung
 |||lamungang|||lamungang
 |||langi'|||langi'
 |||lannga|||lannga
@@ -470,9 +470,9 @@ autoExpandExamples.mak = `
 |||lantang|||lantang
 |||laporoʼ|||laporoʼ
 |||lapòroʼ|||lapòroʼ
-𑻮𑻭𑻶|angry|ˈlar§rɔ|larro|ᨒᨑᨚ||larro
+𑻮𑻭𑻶|angry|ˈlar,rɔ|larro|ᨒᨑᨚ||larro
 |||laso|||laso
-𑻮𑻰𑻴𑻨|onion, leek|la.§ˈsu.§na|lasuna|ᨒᨔᨘᨊ||lasuna
+𑻮𑻰𑻴𑻨|onion, leek|la.,ˈsu.,na|lasuna|ᨒᨔᨘᨊ||lasuna
 |||lasuna eja|||lasuna eja
 |||lasuna keboʼ|||lasuna keboʼ
 |||lasuna romang|||lasuna romang
@@ -492,7 +492,7 @@ autoExpandExamples.mak = `
 |||leng|||leng
 |||lepa-lepa|||lepa-lepa
 |||letterèi|||letterèi
-𑻮𑻵𑻤|already|ˈleʔ§baʔ|leʼbaʼ|ᨒᨙᨅ||leʼbaʼ
+𑻮𑻵𑻤|already|ˈleʔ,baʔ|leʼbaʼ|ᨒᨙᨅ||leʼbaʼ
 |||lila|||lila
 |||lima|||lima
 |||limonada|||limonada
@@ -508,7 +508,7 @@ autoExpandExamples.mak = `
 |||lolo|||lolo
 |||lommoroʼ|||lommoroʼ
 |||lomo-lomo|||lomo-lomo
-𑻮𑻶𑻣𑻶|big, large|ˈlɔm§pɔ|lompo|ᨒᨚᨄᨚ||lompo
+𑻮𑻶𑻣𑻶|big, large|ˈlɔm,pɔ|lompo|ᨒᨚᨄᨚ||lompo
 |||londeng|||londeng
 |||lontaraʼ|||lontaraʼ
 |||lu'lu'|||lu'lu'
@@ -523,7 +523,7 @@ autoExpandExamples.mak = `
 |||mandike|||mandike
 |||-mang|||-mang
 |||mange|||mange
-𑻥𑻢𑻵|to leave, depart|ˈmaŋ§ɡe|mangge|ᨆᨂᨙ|ˈmã.ŋɛ̃|mangge
+𑻥𑻢𑻵|to leave, depart|ˈmaŋ,ɡe|mangge|ᨆᨂᨙ|ˈmã.ŋɛ̃|mangge
 |||Mangkasara|||Mangkasara
 |||Mangkasaraʼ|||Mangkasaraʼ
 |||manteleʼ|||manteleʼ
@@ -534,10 +534,10 @@ autoExpandExamples.mak = `
 |||mata|||mata
 |||mata allo|||mata allo
 |||Mei|||Mei
-𑻥𑻵𑻤𑻭|day after tomorrow|ˈmem§ba§raʔ|membara'|ᨆᨙᨅᨑ||membara'
+𑻥𑻵𑻤𑻭|day after tomorrow|ˈmem,ba,raʔ|membara'|ᨆᨙᨅᨑ||membara'
 |||meong|||meong
 |||-mi|||-mi
-𑻥𑻳𑻱𑻶|cat|ˈmi§oŋ|miong|ᨆᨗᨕᨚ|ˈmĩ.õŋ|miong
+𑻥𑻳𑻱𑻶|cat|ˈmi,oŋ|miong|ᨆᨗᨕᨚ|ˈmĩ.õŋ|miong
 |||-mo|||-mo
 |||moncong|||moncong
 |||moncong bulo|||moncong bulo
@@ -547,14 +547,14 @@ autoExpandExamples.mak = `
 |||nangka|||nangka
 |||naung|||naung
 |||ngai|||ngai
-𑻨𑻳𑻱|there is|ˈni§aʔ|niaʼ|ᨊᨗᨕ|ˈnĩ.ãʔ|niaʼ
-𑻨𑻳𑻣𑻳𑻰𑻳|thin|ˈni§pi§siʔ|nipisiʼ|ᨊᨗᨄᨗᨔᨗ|ˈnĩ.pʰi.siʔ|nipisiʼ
+𑻨𑻳𑻱|there is|ˈni,aʔ|niaʼ|ᨊᨗᨕ|ˈnĩ.ãʔ|niaʼ
+𑻨𑻳𑻣𑻳𑻰𑻳|thin|ˈni,pi,siʔ|nipisiʼ|ᨊᨗᨄᨗᨔᨗ|ˈnĩ.pʰi.siʔ|nipisiʼ
 |||Nopembereʼ|||Nopembereʼ
 |||-nu|||-nu
 |||nu-|||nu-
 |||nyila|||nyila
-𑻫𑻴𑻫|meatball|ˈɲuʔ§ɲaŋ|nyuʼnyang|ᨎᨘᨎ|ˈɲuʔ.ɲãŋ|nyuʼnyang
-𑻱𑻶𑻠𑻮|difficult, laborious|ˈo§ka§laʔ|okalaʼ|ᨕᨚᨀᨒ|ˈo.kʰa.laʔ|okalaʼ
+𑻫𑻴𑻫|meatball|ˈɲuʔ,ɲaŋ|nyuʼnyang|ᨎᨘᨎ|ˈɲuʔ.ɲãŋ|nyuʼnyang
+𑻱𑻶𑻠𑻮|difficult, laborious|ˈo,ka,laʔ|okalaʼ|ᨕᨚᨀᨒ|ˈo.kʰa.laʔ|okalaʼ
 |||olo'|||olo'
 |||olo'-olo'|||olo'-olo'
 |||ondang|||ondang
@@ -577,7 +577,7 @@ autoExpandExamples.mak = `
 |||padalleʼ|||padalleʼ
 |||padewakang|||padewakang
 |||paduakang|||paduakang
-𑻣𑻱𑻵𑻦𑻵|to erect|pa§ˈen§teŋ|paenteng|ᨄᨕᨙᨈᨙ||paenteng
+𑻣𑻱𑻵𑻦𑻵|to erect|pa,ˈen,teŋ|paenteng|ᨄᨕᨙᨈᨙ||paenteng
 |||painro|||painro
 |||paja|||paja
 |||pakarruʼ|||pakarruʼ
@@ -588,7 +588,7 @@ autoExpandExamples.mak = `
 |||palloʼ|||palloʼ
 |||pallu|||pallu
 |||palu'lu'|||palu'lu'
-𑻣𑻥𑻪|wok|pam§ˈma§ɟaʔ|pammaja'|ᨄᨆᨍ||pammaja'
+𑻣𑻥𑻪|wok|pam,ˈma,ɟaʔ|pammaja'|ᨄᨆᨍ||pammaja'
 |||paN- -ang|||paN- -ang
 |||panggang|||panggang
 |||panjaguru'|||panjaguru'
@@ -597,8 +597,8 @@ autoExpandExamples.mak = `
 |||panngissengang|||panngissengang
 |||panngo-panngo|||panngo-panngo
 |||panraʼ|||panraʼ
-𑻣𑻫𑻴|sea turtle|ˈpaɲ§ɲu|panynyu|ᨄᨎᨘ||panynyu
-𑻣𑻣𑻳𑻠𑻦𑻴|message|pap§pi§ˈka§tu|pappikatu|ᨄᨄᨗᨀᨈᨘ||pappikatu
+𑻣𑻫𑻴|sea turtle|ˈpaɲ,ɲu|panynyu|ᨄᨎᨘ||panynyu
+𑻣𑻣𑻳𑻠𑻦𑻴|message|pap,pi,ˈka,tu|pappikatu|ᨄᨄᨗᨀᨈᨘ||pappikatu
 |||pappontoang|||pappontoang
 |||parang|||parang
 |||Paranggi|||Paranggi
@@ -628,7 +628,7 @@ autoExpandExamples.mak = `
 |||pelleng|||pelleng
 |||penisiʼ|||penisiʼ
 |||peo'|||peo'
-𑻣𑻵𑻣𑻵|mute, dumb|ˈpe§pe|pepe|ᨄᨙᨄᨙ|ˈpʰɛ.pʰɛ|pepe
+𑻣𑻵𑻣𑻵|mute, dumb|ˈpe,pe|pepe|ᨄᨙᨄᨙ|ˈpʰɛ.pʰɛ|pepe
 |||pepeʼ|||pepeʼ
 |||pera|||pera
 |||perei|||perei
@@ -668,29 +668,29 @@ autoExpandExamples.mak = `
 |||putu kambing|||putu kambing
 |||ra'masa'|||ra'masa'
 |||rakaʼ|||rakaʼ
-𑻭𑻤𑻴𑻦|rambutang|ram§ˈbu§taŋ|rambutang|ᨑᨅᨘᨈ|ram.ˈbu.tãŋ|rambutang
+𑻭𑻤𑻴𑻦|rambutang|ram,ˈbu,taŋ|rambutang|ᨑᨅᨘᨈ|ram.ˈbu.tãŋ|rambutang
 |||rangko|||rangko
 |||rannu|||rannu
-𑻭𑻦𑻰|mess|ˈran§ta§saʔ|rantasaʼ|ᨑᨈᨔ|ˈran.t̪ʰa.saʔ|rantasaʼ
+𑻭𑻦𑻰|mess|ˈran,ta,saʔ|rantasaʼ|ᨑᨈᨔ|ˈran.t̪ʰa.saʔ|rantasaʼ
 |||rappa|||rappa
 |||rappo|||rappo
 |||rappo ciduʼ|||rappo ciduʼ
 |||rappung|||rappung
-𑻭𑻭|blood|ˈra.§ra|rara|ᨑᨑ||rara
-𑻭𑻭|light, ray|ˈra.§raŋ|rarang|ᨑᨑ||rarang
+𑻭𑻭|blood|ˈra.,ra|rara|ᨑᨑ||rara
+𑻭𑻭|light, ray|ˈra.,raŋ|rarang|ᨑᨑ||rarang
 |||rarokeng|||rarokeng
-𑻭𑻰|smell, odor|ˈra§sa|rasa|ᨑᨔ||rasa
+𑻭𑻰|smell, odor|ˈra,sa|rasa|ᨑᨔ||rasa
 |||rassi|||rassi
 |||rate|||rate
-𑻭𑻦𑻴|ruler, monarch|ˈra§tu|ratu|ᨑᨈᨘ|ˈra.t̪ʰu|ratu
+𑻭𑻦𑻴|ruler, monarch|ˈra,tu|ratu|ᨑᨈᨘ|ˈra.t̪ʰu|ratu
 |||raung|||raung
 |||rawa|||rawa
 |||raya|||raya
-𑻭𑻵𑻠𑻵|sum, calculation|ˈre§keŋ|rekeng|ᨑᨙᨀᨙ|ˈre.kʰẽŋ|rekeng
+𑻭𑻵𑻠𑻵|sum, calculation|ˈre,keŋ|rekeng|ᨑᨙᨀᨙ|ˈre.kʰẽŋ|rekeng
 |||reppe'|||reppe'
 |||ri|||ri
-𑻭𑻳𑻱𑻵|there is|ˈri§eŋ|rieng|ᨑᨗᨕᨙ||rieng
-𑻭𑻳𑻢|light (weight)|ˈri§ŋaŋ|ringang|ᨑᨗᨂ|ˈri.ŋãŋ|ringang
+𑻭𑻳𑻱𑻵|there is|ˈri,eŋ|rieng|ᨑᨗᨕᨙ||rieng
+𑻭𑻳𑻢|light (weight)|ˈri,ŋaŋ|ringang|ᨑᨗᨂ|ˈri.ŋãŋ|ringang
 |||rinra|||rinra
 |||rinring|||rinring
 |||riwa|||riwa
@@ -706,7 +706,7 @@ autoExpandExamples.mak = `
 |||rupia|||rupia
 |||rupiah|||rupiah
 |||rupiya|||rupiya
-𑻰𑻤𑻴|soap|ˈsa§buŋ|sabung|ᨔᨅᨘ||sabung
+𑻰𑻤𑻴|soap|ˈsa,buŋ|sabung|ᨔᨅᨘ||sabung
 |||sagantuju|||sagantuju
 |||salangga|||salangga
 |||salapang|||salapang
@@ -721,7 +721,7 @@ autoExpandExamples.mak = `
 |||sampo|||sampo
 |||sampo pinruang|||sampo pinruang
 |||sampo sikali|||sampo sikali
-𑻰𑻣𑻴|cousin|ˈsam§pu|sampu|ᨔᨄᨘ|ˈsampʰu|sampu
+𑻰𑻣𑻴|cousin|ˈsam,pu|sampu|ᨔᨄᨘ|ˈsampʰu|sampu
 |||sampu pinngappaʼ|||sampu pinngappaʼ
 |||sampu pinruang|||sampu pinruang
 |||sampu pintallung|||sampu pintallung
@@ -739,13 +739,13 @@ autoExpandExamples.mak = `
 |||saʼra|||saʼra
 |||saʼraʼ|||saʼraʼ
 |||se're|||se're
-𑻰𑻵𑻧𑻵|again|se§ˈdeŋ|sedeng|ᨔᨙᨉᨙ||sedeng
+𑻰𑻵𑻧𑻵|again|se,ˈdeŋ|sedeng|ᨔᨙᨉᨙ||sedeng
 |||sekkeʼ|||sekkeʼ
 |||si'ru'|||si'ru'
 |||sibilanngang|||sibilanngang
 |||sikali|||sikali
 |||sikaʼdeʼ|||sikaʼdeʼ
-𑻰𑻳𑻠𑻵𑻧𑻵|little, a few|si§ˈkeʔ§deʔ|sikeʼdeʼ|ᨔᨗᨀᨙᨉᨙ|si.ˈkʰeʔ.ɗeʔ|sikeʼdeʼ
+𑻰𑻳𑻠𑻵𑻧𑻵|little, a few|si,ˈkeʔ,deʔ|sikeʼdeʼ|ᨔᨗᨀᨙᨉᨙ|si.ˈkʰeʔ.ɗeʔ|sikeʼdeʼ
 |||sikkiri'|||sikkiri'
 |||sikuyu|||sikuyu
 |||Silayara'|||Silayara'
@@ -777,7 +777,7 @@ autoExpandExamples.mak = `
 |||ta'bangka|||ta'bangka
 |||ta'bu|||ta'bu
 |||ta'do'do'|||ta'do'do'
-𑻦𑻡𑻮𑻱𑻵|tomato|ta§ɡa§ˈla§e|tagalae|ᨈᨁᨒᨕᨙ|t̪ʰa.ɡa.ˈla.e|tagalae
+𑻦𑻡𑻮𑻱𑻵|tomato|ta,ɡa,ˈla,e|tagalae|ᨈᨁᨒᨕᨙ|t̪ʰa.ɡa.ˈla.e|tagalae
 |||tagalai|||tagalai
 |||tai|||tai
 |||tai bassi|||tai bassi
@@ -791,7 +791,7 @@ autoExpandExamples.mak = `
 |||talipòng|||talipòng
 |||tallu|||tallu
 |||Tambaru|||Tambaru
-𑻦𑻥𑻦𑻵|Indian ash tree|taˈm§ma§te|tammate|ᨈᨆᨈᨙ|t̪ʰam.ˈma.te|tammate
+𑻦𑻥𑻦𑻵|Indian ash tree|taˈm,ma,te|tammate|ᨈᨆᨈᨙ|t̪ʰam.ˈma.te|tammate
 |||tamparang|||tamparang
 |||tampiling|||tampiling
 |||tana|||tana
@@ -814,7 +814,7 @@ autoExpandExamples.mak = `
 |||taʼgalaʼ|||taʼgalaʼ
 |||taʼmisiʼ|||taʼmisiʼ
 |||te'ne|||te'ne
-𑻦𑻵𑻧𑻶|water buffalo|ˈte§doŋ|tedong|ᨈᨙᨉᨚ||tedong
+𑻦𑻵𑻧𑻶|water buffalo|ˈte,doŋ|tedong|ᨈᨙᨉᨚ||tedong
 |||telang|||telang
 |||telepisi|||telepisi
 |||tena|||tena
@@ -846,21 +846,21 @@ autoExpandExamples.mak = `
 |||tuʼguruʼ|||tuʼguruʼ
 |||uang|||uang
 |||ularaʼ|||ularaʼ
-𑻱𑻴𑻮𑻴|head|ˈu§lu|ulu|ᨕᨘᨒᨘ||ulu
+𑻱𑻴𑻮𑻴|head|ˈu,lu|ulu|ᨕᨘᨒᨘ||ulu
 |||ulu barambang|||ulu barambang
 |||unti|||unti
 |||uring|||uring
 |||uwuʼ|||uwuʼ
 |||uʼ|||uʼ
 |||uʼrangi|||uʼrangi
-𑻯𑻭|north|ˈwa§raʔ|waraʼ|ᨓᨑ||waraʼ
+𑻯𑻭|north|ˈwa,raʔ|waraʼ|ᨓᨑ||waraʼ
 
 
 
 @ wikipedia
-𑻱𑻴𑻠𑻳𑻭𑻳𑻪𑻢𑻪𑻢|Makasar|u§ki§riʔ ja§ŋaŋ-§ja§ŋaŋ|ukiri′ jangang-jangang|
-𑻤𑻰𑻥𑻠𑻰𑻭|Makassarese language|ɓa§sa §mãŋ§ˈkʰa§sa§raʔ|basa mangkasara′|
-𑻱𑻶𑻭𑻰|heavy|ˈo.§ra.§saʔ|órasaʼ|
+𑻱𑻴𑻠𑻳𑻭𑻳𑻪𑻢𑻪𑻢|Makasar|u,ki,riʔ ja,ŋaŋ-,ja,ŋaŋ|ukiri′ jangang-jangang|
+𑻤𑻰𑻥𑻠𑻰𑻭|Makassarese language|ɓa,sa ,mãŋ,ˈkʰa,sa,raʔ|basa mangkasara′|
+𑻱𑻶𑻭𑻰|heavy|ˈo.,ra.,saʔ|órasaʼ|
 
 `
 
