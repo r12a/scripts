@@ -1,5 +1,5 @@
 
-window.version = 'v29'
+window.version = 'v32'
 window.scriptName = 'Adlam'
 window.ghDirectory = 'adlam'
 window.blockDirectory = 'adlam'
