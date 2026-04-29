@@ -2,7 +2,7 @@
 native | meaning | IPA① | transcription | other transcriptions② | notes | wiktionary③
 
 
-① separate each text unit (consonant+combining_mark(s)) with §, separate phonetic syllables with .
+① separate each text unit (consonant+combining_mark(s)) with ,, separate phonetic syllables with .
    use ‹ and › for a sound that spans 2 text units
    use – for a text unit that doesn't produce sound
    syllable boundary markers go inside previous unit, and emphasis markers begin emphasised unit
@@ -39,7 +39,7 @@ autoExpandExamples.egy = `
 ꜣꜥꜥwj||||||ꜣꜥꜥwj
 ꜣꜥꜥbw||||||ꜣꜥꜥbw
 ꜣꜥꜥnj||||||ꜣꜥꜥnj
-𓄿𓂝𓐰𓂝𓏏𓏌|jar, container|ɑ§ʔɑː§§ɑː§t§|A-a:a-t-W24|ꜣꜥꜥt||ꜣꜥꜥt
+𓄿𓂝𓐰𓂝𓏏𓏌|jar, container|ɑ,ʔɑː,,ɑː,t,|A-a:a-t-W24|ꜣꜥꜥt||ꜣꜥꜥt
 ꜣꜥw||||||ꜣꜥw
 ꜣꜥbt||||||ꜣꜥbt
 ꜣꜥfj||||||ꜣꜥfj
@@ -569,7 +569,7 @@ j.||||||j.
 j.nḏ ḥr||||||j.nḏ ḥr
 j.ḫm-wrḏ||||||j.ḫm-wrḏ
 j.ḫm-sk||||||j.ḫm-sk
-𓇋𓊄𓇉𓈎𓂡𓐰𓏥|easy prey|i§zi §ha§q§§§|i-O35-HA-q-D40:Z2 |||j.zj ḥꜣq
+𓇋𓊄𓇉𓈎𓂡𓐰𓏥|easy prey|i,zi ,ha,q,,,|i-O35-HA-q-D40:Z2 |||j.zj ḥꜣq
 -y||||||-y
 yꜣ||||||yꜣ
 yꜥqb-hr||||||yꜥqb-hr
@@ -863,7 +863,7 @@ wsjr-ḥp||||||wsjr-ḥp
 wspjsyns||||||wspjsyns
 wsn||||||wsn
 wsr||||||wsr
-𓄊𓋴𓂋𓅱𓀜𓏥|might, power|wɛ§sɛ§r§uː§|wsr-s-r-w-A24-Z2|||wsrw
+𓄊𓋴𓂋𓅱𓀜𓏥|might, power|wɛ,sɛ,r,uː,|wsr-s-r-w-A24-Z2|||wsrw
 wsr-mꜣꜥt-rꜥ||||||wsr-mꜣꜥt-rꜥ
 wsr-mnṯw||||||wsr-mnṯw
 wsr-kꜣ-rꜥ||||||wsr-kꜣ-rꜥ
@@ -1352,7 +1352,7 @@ mṯn||||||mṯn
 md||||||md
 m-dj||||||m-dj
 m-dyt||||||m-dyt
-𓌃𓂧𓅱𓀁|spoken word|mɛ§d§uː§|md-d-w-A2|mdw||mdw
+𓌃𓂧𓅱𓀁|spoken word|mɛ,d,uː,|md-d-w-A2|mdw||mdw
 mdwj||||||mdwj
 mdw-jꜣw||||||mdw-jꜣw
 mdw n š||||||mdw n š
@@ -1818,7 +1818,7 @@ hd||||||hd
 ḥwnt||||||ḥwnt
 ḥwrw||||||ḥwrw
 ḥwrwnꜣ||||||ḥwrwnꜣ
-𓉗𓏏𓐰𓉐|mansion, palace|huː§t§|Hwt-t:pr|ḥwt||ḥwt
+𓉗𓏏𓐰𓉐|mansion, palace|huː,t,|Hwt-t:pr|ḥwt||ḥwt
 ḥwt-jbṯt||||||ḥwt-jbṯt
 ḥwt-ꜥꜣt||||||ḥwt-ꜥꜣt
 ḥwt-wꜥrt||||||ḥwt-wꜥrt
@@ -2060,8 +2060,8 @@ hd||||||hd
 ḫnms||||||ḫnms
 ḫnmt||||||ḫnmt
 ḫnr||||||ḫnr
-𓍕𓐰𓏏𓐱𓉐|prison|xɛnrɛ§§t§|U31:t*pr|||ḫnrt
-𓐍𓋔𓂋𓐰𓏏𓐱𓏏𓀐|criminality|xɛ§n§rɛ§§tɛ§§t|x-N-r:t*t-A14|||ḫnrtt
+𓍕𓐰𓏏𓐱𓉐|prison|xɛnrɛ,,t,|U31:t*pr|||ḫnrt
+𓐍𓋔𓂋𓐰𓏏𓐱𓏏𓀐|criminality|xɛ,n,rɛ,,tɛ,,t|x-N-r:t*t-A14|||ḫnrtt
 ḫnz||||||ḫnz
 ḫnsw||||||ḫnsw
 ḫnt||||||ḫnt
@@ -2478,7 +2478,7 @@ skt||||||skt
 sgnn||||||sgnn
 sgr||||||sgr
 st||||||st
-𓋴𓏏𓐰𓍔𓊮|to set on fire|sɛ§tɑ§|s-t:U30-Q7|||stꜣ
+𓋴𓏏𓐰𓍔𓊮|to set on fire|sɛ,tɑ,|s-t:U30-Q7|||stꜣ
 stj||||||stj
 st-jb||||||st-jb
 st-jb-rꜥ||||||st-jb-rꜥ

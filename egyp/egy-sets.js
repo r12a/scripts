@@ -9,7 +9,7 @@
 // 🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉
 
 var collections = [
-{ symbol:'Ⓜ', desc:'MDC controls', chars:'(𓍹|𓍺|<|>|:|*|-|!)' },
-{ symbol:'Ⓤ', desc:'Unicode controls', chars:'(𓐰|𓐱|𓐲|𓐳|𓐴|𓐵|𓐶|𓐷|𓐸|𓐹|𓐺|𓐻|𓐼|𓐽|𓐾|𓐿|𓑀|𓑁|𓑂|𓑃|𓑄|𓑅|𓑆|𓑇|𓑈|𓑉|𓑊|𓑋|𓑌|𓑍|𓑎|𓑏|𓑐|𓑑|𓑒|𓑓|𓑔|𓑕)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D|2067|202B|2066|202A|2068|2069|202C|200F|200E|061C|034F)' },
+{ symbol:'Ⓜ', desc:'MDC controls', chars:'[𓍹𓍺<>:*-!]' },
+{ symbol:'Ⓤ', desc:'Unicode controls', chars:'[𓐰𓐱𓐲𓐳𓐴𓐵𓐶𓐷𓐸𓐹𓐺𓐻𓐼𓐽𓐾𓐿𓑀𓑁𓑂𓑃𓑄𓑅𓑆𓑇𓑈𓑉𓑊𓑋𓑌𓑍𓑎𓑏𓑐𓑑𓑒𓑓𓑔𓑕]' },
+{ symbol:'⊙', desc:'Invisibles', chars:'[\u200C\u200D\u2067\u202B\u2066\u202A\u2068\u2069\u202C\u200F\u200E\u061C\u034F]' },
 ]
