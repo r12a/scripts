@@ -6,7 +6,7 @@
 
 
 window.autoExpandExamples = {}
-// this will contain the vocab information stored in xxx-examples.js for all languages
+// this will contain the terms information stored in xxx-examples.js for all languages
 // it has to be declared before that page is loaded, so that the .langFilter item can be attached
 var egList = {}
 
@@ -32,7 +32,7 @@ function addExamples (langFilter) {
     langFilter, class name used to select blocks to add examples to
     
     [GLOBALS]
-    autoExpandExamples, obj, set above, then populated under .<langFiler> in xx-examples.js; holds all vocab
+    autoExpandExamples, obj, set above, then populated under .<langFiler> in xx-examples.js; holds all terms
     
     [CLASSES]
     The calling element can have class names with the following meanings:
@@ -44,7 +44,7 @@ function addExamples (langFilter) {
     
     [LOCALS]
     egArray, array, built from autoExpandExamples
-    egList, object, list of vocab filtered out by langFilter with native word as key
+    egList, object, list of terms filtered out by langFilter with native word as key
     selector, a selector for searching for letter blocks
     nodes, node array, example nodes to expand
     out, str, the generated markup
@@ -210,7 +210,7 @@ function addExamplesX (langFilter) {
     langFilter, class name used to select blocks to add examples to
     
     [GLOBALS]
-    autoExpandExamples, obj, set above, then populated under .<langFiler> in xx-examples.js; holds all vocab
+    autoExpandExamples, obj, set above, then populated under .<langFiler> in xx-examples.js; holds all terms
     
     [CLASSES]
     The calling element can have class names with the following meanings:
@@ -222,7 +222,7 @@ function addExamplesX (langFilter) {
     
     [LOCALS]
     egArray, array, built from autoExpandExamples
-    egList, object, list of vocab filtered out by langFilter with native word as key
+    egList, object, list of terms filtered out by langFilter with native word as key
     selector, a selector for searching for letter blocks
     nodes, node array, example nodes to expand
     out, str, the generated markup
@@ -529,7 +529,7 @@ function makeExampleArticleDetails (chars, clang, base, target, panel, list, tra
         out += `</p>`
         }
     
-    // add a link to the _vocab page
+    // add a link to the _terms page
     if (typeof window.languageName === 'undefined') var fragid = ''
     else fragid = '#'+window.languageName
 
@@ -580,8 +580,8 @@ function makeExampleArticleDetails (chars, clang, base, target, panel, list, tra
 
 
     // draw the glosses
-    if (location.toString().includes('picker')) var iconURL = '../../scripts/common30/icons/copytiny.svg'
-    else iconURL = '../common30/icons/copytiny.svg'
+    if (location.toString().includes('picker')) var iconURL = '../../scripts/img/icons/copytiny.svg'
+    else iconURL = '../img/icons/copytiny.svg'
     gloss = '<div class="multilineGlossedText">'
     for (t=-1;t<graphemes.length;t++) {
         if (t===-1) {

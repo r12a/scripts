@@ -179,7 +179,7 @@ function showCharDetails (ch) {
     out += ` • <a href="../${ blockDirectoryName }/character.html?q=${ ch }#${ langTag }" target="_blank">Other uses</a>`
     out += ` • <a href="../../uniview/index.html?char=${ hex }" target="_blank">UniView</a>`
     out += ` • <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Picker</a>`
-    out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ ch }" target="terms">Term list</a>`
+    out += ` • <a href="../${ orthogFilePath }_terms.html?q=${ ch }" target="terms">Term list</a>`
     out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }&charlist=${ ch }" target="_blank">Character usage</a>`
     div.innerHTML = out
     charBlock.appendChild(div)
@@ -808,10 +808,10 @@ function getCharList () {
 
 
 function getFindStr (hex) {
-// return a value for the Find box
+    // return a value for the Find box
 
-    if (hex.length === 1) hex = hex.codePointAt(0).toString(16)
-    while(hex.length<4) hex='0'+hex
+    if (hex.length < 4) hex = hex.codePointAt(0).toString(16)
+    while (hex.length < 4) hex = '0'+hex
     return '#char'+hex.toUpperCase()
     }
 
@@ -847,6 +847,9 @@ function toggleImages () {
 
 
 
+
+
+
 function makeXXCharacterPage () {
     //console.log('makeXXCharacterPage()')
     // write the data to the page
@@ -878,12 +881,20 @@ function makeXXCharacterPage () {
       
         
         
-        <h1>${ languageName } (${ orthogName }) db</h1>\n
-        <p class="intro">Shows data in the database for this orthography.</p>
+        <h1>${ languageName } (${ orthogName }) character details</h1>\n
+        
+        <p class="intro">Shows character data in the database for this orthography. Characters are listed in order of Unicode codepoints.</p>
+        
+        <p class="intro" style="margin-block-end:8em;"><label>Search for a character or code point: 
+        <input type="text" id="findInputinIntro" 
+            placeholder="..." 
+            style="width: 8em; text-align: center; border: 1px solid #ccc; border-radius:.5em; height:2em; margin-inline:1rem;" 
+            onchange="document.location = getFindStr(this.value)"></label></p>
+        
         <dialog id="copyNotice">Copied !</dialog>
         
         <nav id="top">
-            <img src="../common29/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()">
+            <img src="../img/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()">
             <br>
             <a href="#site-navigation"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."></a>
             <br>
@@ -1010,7 +1021,7 @@ function showNameDetails (chars, clang, base, target, panel, list, translit, ipa
 
 
     // draw the glosses
-    iconURL = '../common29/icons/copytiny.svg'
+    iconURL = '../img/icons/copytiny.svg'
     gloss = '<div class="multilineGlossedText">'
     for (t=-1;t<graphemes.length;t++) {
         if (t===-1) {
@@ -1086,11 +1097,11 @@ function showNameDetails (chars, clang, base, target, panel, list, translit, ipa
     if (typeof window.languageName === 'undefined') var fragid = ''
     else fragid = '#'+window.languageName
 
-    // figure out where to find the url for the _vocab page
+    // figure out where to find the url for the _terms page
     var url
     if (typeof template !== 'undefined' && typeof template.vocablocation === 'string')  url = `../../scripts/${ template.vocablocation }.html`
     
-    else url = `${ window.langTag }_vocab`
+    else url = `${ window.langTag }_terms`
     
     if (typeof window.removeVowels === 'function') chars = removeVowels(chars)
 

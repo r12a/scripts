@@ -101,7 +101,7 @@ for (var line in spreadsheetRows) {
 
 // build the tab markup
 if (document.getElementById('tabPlaceholder')) {
-    document.getElementById('tabPlaceholder').innerHTML =
+    let tabPlaceholder = 
     `
     <div id="tabs">
     <h2 id="list_tab" onClick="switchTabTo(this.id)">List</h2>
@@ -179,7 +179,7 @@ if (document.getElementById('tabPlaceholder')) {
     <p>Frequency of individual characters across all the entries.</p>
     <p style="font-style: italic; font-size: 80%;">Total sample size: <span id="totalFreq">–</span> characters. &nbsp;&nbsp; Unique characters: <span id="uniqueChars">-</span>. &nbsp;&nbsp; Averaged: <span id="averaged">-</span> &nbsp; <img src="../../shared/images/help.png" alt="[?]" id="averagedHelp"></p>
     <table id="freqout"></table>
-    <p style="font-size: 80%;">Show the following characters only: <input id="freqFilter" type="text" 
+    <p style="font-size: 80%; margin-block-end:3rem;">Show the following characters only: <input id="freqFilter" type="text" 
         onchange="filterFrequency(this.value)">
     <button onclick="   filterFrequency(documentGetElementById('freqFilter').value)">GO</button>
     <button onclick="resetFilter()">RESET</button></p>
@@ -198,7 +198,7 @@ if (document.getElementById('tabPlaceholder')) {
     
     <p>For many terms, adjacent columns provide meanings and IPA and other transcriptions (and sometimes notes). This is a work in progress.</p>
     
-    <p>In the <span class="kw">Find</span> tab, many items indicate that they have IPA transcriptions in Wiktionary using <span class="kw">\u2423</span> in the <span class="kw">IPA</span> column. Click on the <img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;height:.5em;"> icon to open the relevant Wiktionary page. The <span class="kw">transcription</span> column for these entries is likely to have an auto-generated, greyed out transliteration of the term, to help locate useful items.</p>
+    <p>In the <span class="kw">Find</span> tab, many items indicate that they have IPA transcriptions in Wiktionary using <span class="kw">\u2423</span> in the <span class="kw">IPA</span> column. Click on the <img src="../img/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;height:.5em;"> icon to open the relevant Wiktionary page. The <span class="kw">transcription</span> column for these entries is likely to have an auto-generated, greyed out transliteration of the term, to help locate useful items.</p>
 
     <p>Clicking on a term opens a panel that decomposes it into <i class="kw">base+combining_mark(s)</i> units, and annotates them with a Latin transliteration and, where available, an IPA transcription. The characters are also listed, one by one, with their Unicode names. You can dismiss the panel by clicking on X, or by hitting the ESC key.</p>
         
@@ -223,19 +223,19 @@ if (document.getElementById('tabPlaceholder')) {
     
     <h2>Icons</h2>
     
-    <p><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;"> appears alongside terms that have a <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page" target="_blank">Wiktionary</a> page. Click on the icon to open that page. (In some lists, some of these currently give false positives. These will eventually be removed.)</p>
+    <p><img src="../img/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition" style="float: none;"> appears alongside terms that have a <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page" target="_blank">Wiktionary</a> page. Click on the icon to open that page. (In some lists, some of these currently give false positives. These will eventually be removed.)</p>
 
-    <p><img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme"> next to a term copies the term to the clipboard. In the Find tab's right-hand column this icon copies some markup code to the clipboard that allows you to insert the term with any transcriptions into an HTML page.</p>
+    <p><img src="../img/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme"> next to a term copies the term to the clipboard. In the Find tab's right-hand column this icon copies some markup code to the clipboard that allows you to insert the term with any transcriptions into an HTML page.</p>
     
     <h2>URL parameters</h2>
-    <p>You can create a link that will automatically search for something using <code class="kw">?q=xxx</code> (where xxx represents one or more characters). For example, <a href="https://r12a.github.io/scripts/mlym/ml_vocab.html?q=്" target="_blank">find words using the chandrakkala in the Malayalam database</a>.</p>
+    <p>You can create a link that will automatically search for something using <code class="kw">?q=xxx</code> (where xxx represents one or more characters). For example, <a href="https://r12a.github.io/scripts/mlym/ml_terms.html?q=്" target="_blank">find words using the chandrakkala in the Malayalam database</a>.</p>
     
     <p>If you add <code class="kw">&ipa</code> after the <code class="kw">q</code> parameter, the app will show only those items that have an ipa transcription.</p>
     
     <p>It is also possible to indicate which column should be searched, using the <code class="kw">&col</code> parameter. The values to use are <strong>0</strong> for terms, <strong>1</strong> for meanings, <strong>2</strong> for IPA, and <strong>3</strong> for transcriptions.</p>
     
-    <p>For example, the following URL will search the Tamil term list for the letter ɖ in the IPA column, and only show results for which there's an entry in the IPA column:<br>
-    <a href="https://r12a.github.io/scripts/taml/ta_vocab.html?q=%C9%96&ipa&col=2" target="_blank"><code class="kw">r12a.github.io/scripts/taml/ta_vocab.html?q=%C9%96&ipa&col=2</code></a></p>
+    <p style="margin-block-end:3rem;">For example, the following URL will search the Tamil term list for the letter ɖ in the IPA column, and only show results for which there's an entry in the IPA column:<br>
+    <a href="https://r12a.github.io/scripts/taml/ta_terms.html?q=%C9%96&ipa&col=2" target="_blank"><code class="kw">r12a.github.io/scripts/taml/ta_terms.html?q=%C9%96&ipa&col=2</code></a></p>
     </div>
 
 
@@ -243,12 +243,27 @@ if (document.getElementById('tabPlaceholder')) {
     <!-- add licence & links -->
 
     <div class="smallprint" style="position:fixed; bottom:0; right: 0;">
-    <span><a href="${ terms.orthographynotes }.html" target="_blank">Orthography notes</a></span>
-    <span><a href="../../pickers/${ terms.picker }/index.html" target="_blank">${ terms.title } workbench</a></span><span id="version">
+    <span id="version">
     Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
     </span>
     </div>
+    </div>
+
+
+    
+    <div id="bottomLineLinks">
+    <span><a href="${ terms.orthographynotes }.html" target="_blank">Orthography</a></span>
+
+    <span><a href="block.html" target="_blank">Characters</a></span>
+    
+    <span><a href="../../pickers/${ terms.picker }/index.html" target="_blank">Workbench</a></span>
+    
+    <span><a href="../../app-charuse/index.html?language=${ terms.language }" target="_blank">Usage</a></span>
+    
+    <span><a href="../../scripts/links.html?iso=${ terms.picker.split('-')[0] }" target="_blank">Links</a></span>
+    </div>
     `
+    document.getElementById('tabPlaceholder').innerHTML = tabPlaceholder
     }
 
 
@@ -402,12 +417,12 @@ function printAll () {
         out += `<span onclick="showNameDetails('${ termToLookUp }', '${ terms.language }', 'mong', '', panel, '', '', '${ fields[IPAraw].trim() }')" class="term">${ fields[TERM] }</span>`
         
         // add copy icon
-        out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ fields[TERM].trim() }')">`
+        out += `<img src="../img/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ fields[TERM].trim() }')">`
 
         // add a link icon if there's a Wiktionary entry
         if (source.includes('wiktionary')) {
-            if (fields[WIKI] && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
-            else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../common29/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
+            if (fields[WIKI] && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../img/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
+            else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }" onclick="document.getElementById('w${ fields[TERM] }').textContent='✓';"><img src="../img/icons/showPanel.svg" class="showPanel" alt="Show in Wiktionary" title="Show in Wiktionary"></a>`
             }
 
 
@@ -424,7 +439,7 @@ function printAll () {
         if (terms.thereAreNotes) {
             if (fields[NOTES].match('§')) {
                 var noteParts = fields[NOTES].split('§')
-                var xrefs =  `<a href="${ terms.language }_vocab?q=${ noteParts[1].replace(/,\s*/g,'|') }">${ noteParts[1] }</a>`
+                var xrefs =  `<a href="${ terms.language }_terms?q=${ noteParts[1].replace(/,\s*/g,'|') }">${ noteParts[1] }</a>`
                 out += `<td class="noteCol">${ noteParts[0]+xrefs+noteParts[noteParts.length-1] }</td>`
                 }
             else out += '<td class="noteCol">'+fields[NOTES]+'</td>'
@@ -537,7 +552,7 @@ function findWords (reg) {
         out += `<span onclick="showNameDetails('${ termToLookUp }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw].trim() }')" class="term">${ itemArray[TERM] }</span>`
         
         // Add a small copy icon to copy the term to the clipboard
-        out += `<img src="../common29/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ itemArray[TERM].trim() }')">`
+        out += `<img src="../img/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ itemArray[TERM].trim() }')">`
 
         // If this entry has a Wiktionary source, add a link icon that opens the combined window
         if (source) {
@@ -550,7 +565,7 @@ function findWords (reg) {
                         '${ terms.wiktionaryLink }',
                         '${ terms.picker }'
                       )">
-                        <img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition">
+                        <img src="../img/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition">
                         </span>
                         `
             // Otherwise, fall back to using the term itself as the Wiktionary lookup string
@@ -561,7 +576,7 @@ function findWords (reg) {
                         '${ terms.wiktionaryLink }',
                         '${ terms.picker }'
                       )">
-                        <img src="../common29/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition">
+                        <img src="../img/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition">
                         </span>
                         `
         }
@@ -590,7 +605,7 @@ function findWords (reg) {
         // If this is an abjad entry with vowelled alternatives (marked by #), turn them into links
         if (itemArray[TRANS].match('#')) {
             var link = itemArray[TRANS].replace(/#/g, '|')
-            out += `<td class="tr"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
+            out += `<td class="tr"><a href="${ terms.language }_terms?q=${ link }">${ link }</a></td>`
         }
         // If we generated a transcription, show it in grey
         else if (generatedTranscription !== '') out += `<td class="tr" style="color:#ccc;"> ${ generatedTranscription }</td>`
@@ -605,13 +620,13 @@ function findWords (reg) {
             // If notes contain §, treat the part after it as cross‑references and link them
             if (itemArray[NOTES].match('§')) {
                 var noteParts = itemArray[NOTES].split('§')
-                var xrefs = `<a href="${ terms.language }_vocab?q=${ noteParts[1].replace(/,\s*/g, '|') }">${ noteParts[1] }</a>`
+                var xrefs = `<a href="${ terms.language }_terms?q=${ noteParts[1].replace(/,\s*/g, '|') }">${ noteParts[1] }</a>`
                 out += `<td class="noteCol">${ noteParts[0] + xrefs + noteParts[noteParts.length - 1] }</td>`
             }
             // Older variant: # marks cross‑references
             else if (itemArray[NOTES].match('#')) {
                 var link = itemArray[NOTES].replace(/#/g, '|')
-                out += `<td class="noteCol"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
+                out += `<td class="noteCol"><a href="${ terms.language }_terms?q=${ link }">${ link }</a></td>`
             }
             // Plain notes with no special markup
             else out += `<td class="noteCol"> ${ itemArray[NOTES] }</td>`
@@ -636,7 +651,7 @@ function findWords (reg) {
             markup += `&lt;/span&gt;`
             
             // Copy icon to copy the markup snippet
-            out += `<td class="markupCol"><img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
+            out += `<td class="markupCol"><img src="../img/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
         }
         else {
             // Local / non‑GitHub version: simpler example markup
@@ -648,7 +663,7 @@ function findWords (reg) {
             markup += `>${ itemArray[TERM].trim() }</span>`
            
             out += `<td class="markupCol">`
-            out += `<img src="../common29/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
+            out += `<img src="../img/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
             out += `</td>`
         }
 

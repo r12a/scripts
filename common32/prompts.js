@@ -158,7 +158,7 @@ function showOrthoLinks (node, script, langName, lang, orthog, indic) {
         
 	out = `
     <div id="orthoLinkSwitch" onmouseover="document.getElementById('orthoLinkPopup').style.display='block'"  
-    onmouseout="document.getElementById('orthoLinkPopup').style.display='none'"><img src="../common/icons/transfer.png" alt="External links">
+    onmouseout="document.getElementById('orthoLinkPopup').style.display='none'"><img src="../img/icons/transfer.png" alt="External links">
 
     <div id="orthoLinkPopup">
     <ul>`
@@ -234,7 +234,7 @@ function makeIndexIntro (node) {
 
     out += `<div style="border:1px solid chocolate; border-radius:1em; padding:.5rem; white-space: nowrap;" onmouseover="document.getElementById('orthoLinkPopup').style.display='block'"  
     onmouseout="document.getElementById('orthoLinkPopup').style.display='none'">`
-	out += `<div id="orthoLinkSwitch"><img src="../common30/icons/transfer.svg" style="height:2rem;" alt="External links">
+	out += `<div id="orthoLinkSwitch"><img src="../img/icons/transfer.svg" style="height:2rem;" alt="External links">
 
     <div id="orthoLinkPopup">
     <ul>`
@@ -311,11 +311,11 @@ function addPageIntro (script, orthogName, iso, picker, page) {
 `
 
 if (window.location.href.includes('block')) out += `
-        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on <span class="ex" style="font-size:1em;">coloured examples</span> to reveal detailed compositional information. If your browser supports it, your cursor will change to look like <img src="../common30/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on <span class="ex" style="font-size:1em;">coloured examples</span> to reveal detailed compositional information. If your browser supports it, your cursor will change to look like <img src="../img/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
 `
 
 else out += `
-        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on the following to reveal detailed information and examples for each character: <strong>(a)</strong> <span class="ex" style="font-size:1em;">coloured characters</span> in examples and lists; <strong>(b)</strong> <span style="color:teal;">link text</span> on character names. If your browser supports it, your cursor will change to look like <img src="../common30/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on the following to reveal detailed information and examples for each character: <strong>(a)</strong> <span class="ex" style="font-size:1em;">coloured characters</span> in examples and lists; <strong>(b)</strong> <span style="color:teal;">link text</span> on character names. If your browser supports it, your cursor will change to look like <img src="../img/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.</p>
 `
 */
 
@@ -344,7 +344,7 @@ out += `
         <summary class="instructions">Conventions and features for this page</a></summary>
 
 		<div style="line-height:1.4; font-style:italic; font-size:.9rem;">
-        <p><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on the following to reveal detailed information and examples for each character: <strong>(a) <span class="ex" style="font-size:1em;">coloured characters</span></strong> in examples and lists; <strong>(b) <span style="color:teal;">link text on character names</span></strong>. If your browser supports it, your cursor will change to look like <img src="../common30/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.<br><br>
+        <p><strong style="font-size:100%;">This is an interactive document.</strong> Click/tap on the following to reveal detailed information and examples for each character: <strong>(a) <span class="ex" style="font-size:1em;">coloured characters</span></strong> in examples and lists; <strong>(b) <span style="color:teal;">link text on character names</span></strong>. If your browser supports it, your cursor will change to look like <img src="../img/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items.<br><br>
         Clicking on a coloured character also produces a coloured bar at the bottom of the page with links to places in the page that refer to that character. The character is highlighted in each of those places. This can be dismissed by clicking on the X in the coloured bar.<br><br>
         Clicking on phonological transcriptions produces a pop up that lists the symbols used, describes them, and links to detailed descriptions of each in Wikipedia. The pop up can be closed by hitting the ESC key.</p>
 
@@ -354,7 +354,7 @@ out += `
 if (window.location.href.includes('block')) out += `
         <p><span class="leadin">Character names.</span> The names of characters in codepoint markup drop the initial ${ script.toUpperCase() } label (purely to reduce the length of the examples). In other places the full name can be found.</p>
 
-        <p><span class="leadin">Fonts.</span> The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common30/showImages.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon to toggle the large characters between font glyphs and graphics.</p>
+        <p><span class="leadin">Fonts.</span> The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../img/showImages.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon to toggle the large characters between font glyphs and graphics.</p>
 
         <p><span class="leadin">Navigation.</span> The <img src="../../shared/images/up.png" alt="Toggle images" style="vertical-align: middle; height:1rem;"> icon takes you to the top of the page.</p>
 `
@@ -552,7 +552,7 @@ function addUsageAdvice (script, iso, picker) {
 
         <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:90%;">Phonological transcriptions</strong> should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
 
-        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) <span class="ex">coloured characters</span> in examples and lists. If your browsers supports it, your cursor will change to look like <img src="../common30/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items. (b) <span style="color:teal;">link text</span> on character names. You can show details as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.</p>
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:100%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) <span class="ex">coloured characters</span> in examples and lists. If your browsers supports it, your cursor will change to look like <img src="../img/icons/info_cursor.png" alt="" style="height:1rem;"> as you hover over these items. (b) <span style="color:teal;">link text</span> on character names. You can show details as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.</p>
 
         <!--p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) characters in boxes with coloured backgrounds, (b) <span style="color:teal;">link text</span> on character names. (You can make this happen as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.) The same information also appears in the companion document, <a href="block.html" target="_blank" class="linkHighlightx">${ orthogName } character notes</a>. In addition, you can click/tap on <span class="ex">coloured examples</span> and on figures to see a list of the characters they contain.</p-->
 

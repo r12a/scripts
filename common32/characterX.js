@@ -124,7 +124,7 @@ function showCharDetails (ch) {
     out += 'Find in: '
     out += `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Orthography notes</a>`
     out += ` • <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Picker</a>`
-    out += ` • <a href="../${ orthogFilePath }_vocab.html?q=${ ch }" target="_blank">Term list</a>`
+    out += ` • <a href="../${ orthogFilePath }_terms.html?q=${ ch }" target="_blank">Term list</a>`
     out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }" target="_blank">Character usage</a>`
     div.innerHTML = out
    // div.innerHTML = `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Find in orthography notes.</a> •
