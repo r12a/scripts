@@ -395,6 +395,20 @@ out += `
         
         
         <dialog id="copyNotice">Copied !</dialog>
+        
+        
+        <div id="bottomLineLinks">
+        <span><a href="${ window.langTag }-characters.html" target="_blank">Characters</a></span>
+
+        <span><a href="../../pickers/${ window.pickerDir }/index.html" target="_blank">Workbench</a></span>
+
+        <span><a href="${ window.langTag }_terms.html" target="_blank">Terms</a></span>
+
+        <span><a href="../../app-charuse/index.html?language=${ window.langTag }" target="_blank">Usage</a></span>
+
+        <span><a href="../../scripts/links.html?iso=${ window.scriptSummaryTableName }" target="_blank">Links</a></span>
+        </div>
+
         `
     
     if (script !== '') {
