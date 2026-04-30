@@ -178,7 +178,7 @@ function showCharDetails (ch) {
     out += `<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank" title="Click on the character name, then one of the links on the orange space at the bottom of the page.">Orthography</a>`
     out += ` • <a href="../${ blockDirectoryName }/character.html?q=${ ch }#${ langTag }" target="_blank">Other uses</a>`
     out += ` • <a href="../../uniview/index.html?char=${ hex }" target="_blank">UniView</a>`
-    out += ` • <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Picker</a>`
+    out += ` • <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Workbench</a>`
     out += ` • <a href="../${ orthogFilePath }_terms.html?q=${ ch }" target="terms">Term list</a>`
     out += ` • <a href="../../app-charuse/index.html?language=${ charUsageBCP }&charlist=${ ch }" target="_blank">Character usage</a>`
     div.innerHTML = out
@@ -1090,7 +1090,7 @@ function showNameDetails (chars, clang, base, target, panel, list, translit, ipa
     out += `<button onclick="openExportWindow('../../scripts/apps/graphemes/index.html?gc=${ chars }')">Graphemes</button> \u00A0 `
 	
     if (window.pickerDir) {
-        out += `<button onclick="openExportWindow('../../pickers/${ window.pickerDir }/index.html?text=${ chars }')">Character App</button> \u00A0 `
+        out += `<button onclick="openExportWindow('../../pickers/${ window.pickerDir }/index.html?text=${ chars }')">Workbench</button> \u00A0 `
 	   }
 
     // add a link to the _vocab page
