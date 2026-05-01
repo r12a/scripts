@@ -900,6 +900,19 @@ function makeXXCharacterPage () {
             <br>
             <input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onchange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }">
             </nav>
+        
+        
+        <div id="bottomLineLinks">
+        <span><a href="${ window.langTag }.html" target="_blank">Orthography</a></span>
+
+        <span><a href="../../pickers/${ window.pickerDir }/index.html" target="_blank">Workbench</a></span>
+
+        <span><a href="${ window.langTag }_terms.html" target="_blank">Terms</a></span>
+
+        <span><a href="../../app-charuse/index.html?language=${ window.langTag }" target="_blank">Usage</a></span>
+
+        <span><a href="../../scripts/links.html?iso=${ window.scriptSummaryTableName }" target="_blank">Links</a></span>
+        </div>
         `
         
     document.querySelector('title').textContent = `${ langTag } db dump (${ orthogName })`
