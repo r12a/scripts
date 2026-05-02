@@ -45,7 +45,7 @@ defList={
 
 "shapingpositioning": 'Here, we use the term ‘shaping’ to refer to any user-visible alterations to standard glyph shapes, whereas ‘positioning’ refers to the placement of glyphs relative to other glyphs. ‘Context-sensitive’ changes to shaping and positioning arise from the need to adapt to the context where glyphs are used.',
 
-"standalonevowel": '<a class="termref" target="_blank" href="../glossary/index.html#standalone">Standalone vowels</a> are vowel sounds that are not preceded by a consonant sound, or are preceded by only a glottal stop. They may appear at the beginning of a word or in the middle of a word after a preceding vowel.',
+"standalonevowel": '<a class="termref" target="_blank" href="../glossary/index.html#standalone">Standalone vowels</a> are vowel sounds that are not preceded by a consonant sound, or are preceded by only a glottal stop. They may appear at the beginning of a word or in the middle of a word after a preceding vowel. Other terms that refer to the same thing include zero-onset vowel, or onsetless syllable.',
 
 "orthographicsyllable": 'The term <a class="termref" target="_blank" href="../glossary/index.html#orthographicsyllable">orthographic syllable</a> is not clearly defined in the Unicode Standard. In the orthography notes on this site we define it to mean a typographic unit that includes more than one grapheme cluster. This is commonly the case for Brahmi-derived scripts, such as for Devanagari conjuncts, or Balinese stacks.  Orthographic syllables do not correspond to phonetic syllables.',
 
