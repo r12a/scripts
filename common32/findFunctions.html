@@ -9,8 +9,9 @@
     textarea { width: 100%; height: 200px; font-family: monospace; }
     #results { margin-top: 1.5rem; }
     .func { margin-top: 1.2rem; }
-    .calls, .calledby { margin-left: 1.5rem; color: #444; }
+    .calls, .calledby { margin-left: 1.5rem; color: #444; margin-block:.5em; }
     code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 3px; }
+    em { font-style: normal; color: tan; }
   </style>
 </head>
 <body>
@@ -293,10 +294,10 @@
   function renderFunctionBlock(fn, callMap, calledByMap) {
     return `
       <div class="func"><code>${fn}</code><br>
-        <div class="calls">calls: ${
+        <div class="calls"><em>calls:</em> ${
           callMap[fn].size ? [...callMap[fn]].join(", ") : "<span style='color:#ddd'>(none)</span>"
         }</div>
-        <div class="calledby">called by: ${
+        <div class="calledby"><em>called by:</em> ${
           calledByMap[fn].size ? [...calledByMap[fn]].join(", ") : "<span style='color:#ddd'>(none)</span>"
         }</div>
       </div>
