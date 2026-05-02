@@ -49,7 +49,7 @@ autoExpandExamples.ckb = `
 ئاسۆ||␣|
 ئاسۆی ڕووداو||␣|
 ئاسۆیی||␣|
-ئاشت||␣|
+ئاشت|reconciled, at peace|ʔ,aː,ʃ,t|aşt||/../
 ئاشتی|peace|ʔ,aː,ʃ,t,iː|aştî
 ئافراندن||␣|
 ئافرەت|woman|ʔ,aː,f,ɾ,a,t|afret
@@ -59,7 +59,7 @@ autoExpandExamples.ckb = `
 ئاو||
 ئاواز||␣|
 ئاور||
-ئاوریشم||␣|
+ئاوریشم|silk|ʔ,aː,u̯,ɾ,iː,ʃə,m|awrîşim||/../
 ئاوس||␣|
 ئاوسی||␣|
 ئاوی||␣
@@ -169,7 +169,7 @@ autoExpandExamples.ckb = `
 برۆ||␣|
 بریا||␣|
 بزن||␣
-بزنمژ||␣|
+بزنمژ|monitor lizard|bə,zə,n,mə,ʒ|bizinmij||/../
 بست||␣|
 بلیمەت||␣|
 بنێشت||␣|
@@ -234,7 +234,7 @@ autoExpandExamples.ckb = `
 بەڕوو|acorn|b,a,r,uː,‹|berrû
 بەژن برند||␣|
 بەژن کورت||␣|
-بەژن||␣|
+بەژن|height, stature|b,æ,ˈʒɪ,n|bezhin||/../
 بەڵێن||␣|
 بەھار||␣
 تات||␣|
@@ -306,7 +306,7 @@ autoExpandExamples.ckb = `
 جێژنە||␣|
 جەبر||␣|
 جەرگ||␣|
-جەژن|festive holiday|␣|cejn
+جەژن|festive holiday|d͡ʒ,a,ʒ,n|cejn||/../
 حەلەب||␣|
 حەوت|seven|ħ,a,w,t|ḧewt
 حەڤدە|seventeen|ħ,a,v,d,a|ḧevde
@@ -501,7 +501,7 @@ autoExpandExamples.ckb = `
 سپاس|thanks|s,p,aː,s|spas
 سپڵ||␣|
 سپی||␣
-سپیدار|white poplar|s,p,iː,d,aː,ɾ|spîdar
+سپیدار|white poplar|s,p,iː,d,aː,ɾ|spîdar||/../
 سپە||␣|
 سپەر||␣|
 سڕ|numb|sə,r|serr
@@ -811,7 +811,7 @@ autoExpandExamples.ckb = `
 پایز||␣
 پاییز||␣|
 پرتەقاڵی|orange|pə,ɾ,t,a,q,aː,ɫ,iː|pirteqałî
-پرد||␣
+پرد|bridge|pə,ɾ,d|pird||/../
 پرسین||␣|
 پرچ||␣|
 پزیشک||␣|
@@ -825,7 +825,7 @@ autoExpandExamples.ckb = `
 پووڵ||
 پژمین||␣|
 پژمە||␣|
-پڵنگ||␣|
+پڵنگ|leopard|pə,ɫə,ŋ,ɡ|pilling||/../
 پۆشین||␣|
 پۆڵا||␣|
 پیارە||␣|
@@ -958,7 +958,7 @@ autoExpandExamples.ckb = `
 ژاڵە||␣|
 ژریژ||␣|
 ژماردن||␣|
-ژمارە||␣|
+ژمارە|number|ʒ,m,aː,ɾ,a|jmare||/../
 ژن|woman, wife|ʒə,n|jin
 ژوان|appointment|ʒ,w,aː,n|jwan
 ژووان||
@@ -1023,7 +1023,7 @@ autoExpandExamples.ckb = `
 کوڵاندن||␣|
 کوێر||␣|
 کچ||
-کڕێوە||␣|
+کڕێوە|blizzard|kə,r,e̞ː,w,a|kirrêwe||/../
 کڵاو||␣|
 کڵێسا||␣|
 کۆر||␣|
