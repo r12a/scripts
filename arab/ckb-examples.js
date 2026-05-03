@@ -366,7 +366,7 @@ autoExpandExamples.ckb = `
 داپیر||␣|
 داک||␣|
 دایک||␣|
-ددان||␣|
+ددان|tooth|d,d,aː,n|ddan||/../
 ددانێشە||␣|
 در||␣|
 دراو||␣|
@@ -560,7 +560,7 @@ autoExpandExamples.ckb = `
 شێر|lion|ʃ,e̞ː,ɾ|şêr
 شێو||␣|
 شەش|six|ʃ,a,ʃ|şeş
-شەممە||␣|
+شەممە|Saturday|ʃ,a,m,m,a|şemme||/../
 شەو|night|ˈʃəw|şew
 شەوە||␣|
 شەپۆل||␣|
@@ -935,7 +935,7 @@ autoExpandExamples.ckb = `
 ڕۆژاوا||␣|
 ڕۆژنامە|newspaper|r,oː,ʒ,n,aː,m,a|řojname
 ڕۆژوو||␣|
-ڕۆژژمێر||␣|
+ڕۆژژمێر|calendar|r,o̞ː,ʒ,ʒə,m,e̞ː,ɾ|rojjimêr||/../
 ڕۆژھەڵات||␣|
 ڕۆژی||␣|
 ڕێز||␣|
@@ -965,7 +965,7 @@ autoExpandExamples.ckb = `
 ژووشک||␣|
 ژیان||␣|
 ژیر||␣|
-ژینناسی||␣|
+ژینناسی|biology|ʒ,iː,n,n,aː,s,iː|jînnasî||/../
 ژێ||␣|
 ژەم||␣|
 ژەندن||␣|
