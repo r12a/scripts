@@ -148,7 +148,7 @@ if (document.getElementById('tabPlaceholder')) {
     <select id="searchCol" style="margin-inline:.5em;border: 1px solid tan;
     height: 2rem;
     border-radius: 10px;
-">
+    ">
     <option value="all">All</option>
     <option value="0">Terms</option>
     <option value="1">Meanings</option>
@@ -183,8 +183,7 @@ if (document.getElementById('tabPlaceholder')) {
         onchange="filterFrequency(this.value)">
     <button onclick="   filterFrequency(documentGetElementById('freqFilter').value)">GO</button>
     <button onclick="resetFilter()">RESET</button></p>
-
-</div>
+    </div>
     
 
     <div id="help_tab_area">
@@ -216,7 +215,8 @@ if (document.getElementById('tabPlaceholder')) {
     <li><samp>[aeiou]{2}</samp> → terms containing two vowels in a row</li>
     <li><samp>^.{1,3}$</samp> → terms of length 1–3</li>
     <li><samp>.*foo.*bar</samp> → terms containing “foo” then “bar”</li>
-    <li><samp>([пбтдкгцчшщфвсзжхмнрлй])&#x005C;1</samp> → terms containing a doubled letter</li>
+    <li><samp>([Ⓒ])&#x005C;1</samp> → terms containing a doubled letter</li>
+    <li><samp>(Ⓒ)(?!\\1)(Ⓒ)</samp> → two consonants that are not the same</li>
     </ul>
     
     <p>The <samp>Sets</samp> pulldown presents you with shortcuts, tailored to the language of the term base, which provide significant help for certain types of search. The tokens represent one of a named set of characters. For example, <samp>ⒸⓋⓋ</samp> will typically search for any consonant followed by any 2 vowels, and <samp>ⓋxⒸ</samp> may reveal a word-medial, syllable-final use of x. Just click on the token to insert it into the search field.</p>
@@ -470,8 +470,47 @@ function switchTabTo (tab) {
 
 
 
+function highlightMatches(text, regex) {
+    if (!text) return text;
+
+    // Do not highlight if the pattern is exactly "."
+    if (regex.source === "." && regex.flags === "u") return text;
+
+    // Avoid infinite loops on zero-length matches
+    if (regex.source === "" || regex.test("")) return text;
+
+    // Ensure global matching
+    const globalRegex = new RegExp(regex.source, regex.flags.includes("g") ? regex.flags : regex.flags + "g");
+
+    return text.replace(globalRegex, match => {
+        // If match begins with a combining mark, prefix dotted circle
+        if (/^\p{M}/u.test(match)) {
+            return `<mark>\u25CC${match}</mark>`;
+        }
+        return `<mark>${match}</mark>`;
+    });
+}
+
+
+
+
 
 function findWords (reg) { 
+
+// 1. Expand custom symbols FIRST
+for (set = 0; set < collections.length; set++) {
+    findme = new RegExp(collections[set].symbol, 'g')
+    reg = reg.replace(findme, collections[set].chars)
+}
+
+// 2. Now safely replace unescaped $
+reg = reg.replace(/(?<!\\)\$/g, '(?=\\P{L}|$)')
+
+// 3. Build the regex
+var regex = new RegExp(reg, "u")
+
+
+/*
     // If the search pattern is empty, do nothing
     if (reg === '') return
     
@@ -479,118 +518,117 @@ function findWords (reg) {
     reg = reg.replace(/(?<!\\)\$/g, '(?=\\P{L}|$)')
     
     // Expand any custom collection symbols in the pattern into their full character sets
-    // `collections` comes from the xx-sets.js file and maps a symbol to a set of chars
     for (set = 0; set < collections.length; set++) {
         findme = new RegExp(collections[set].symbol, 'g')
         reg = reg.replace(findme, collections[set].chars)
-        }
+    }
 
     // Build the main regex from the (possibly expanded) search pattern
     var regex = new RegExp(reg, "u")
+*/
 
     // Which column of the word list to search in (or 'all')
     var searchCol = document.getElementById('searchCol').value
 
-    // `result` will hold matching lines from the word list (with optional source marker)
     result = []
-    // `source` tracks whether the current block of entries comes from Wiktionary
     var source = ''
 
     // Iterate over all lines in the loaded word list
     for (var i = 0; i < window.wordList.length; i++) {
     
-        // Lines starting with " @" are source headers, not entries
         if (window.wordList[i].startsWith(' @')) {
-            // If the header mentions Wiktionary, mark subsequent entries with ‣
             if (window.wordList[i].includes('wiktionary')) source = '‣'
             else source = ''
             continue
-            }
+        }
         
-        // If a specific column is selected, only search that column
         if (searchCol !== 'all') {
             colsToSearch = window.wordList[i].split('|')
-            // If the chosen column matches the regex, store the whole line plus source marker
             if (colsToSearch[searchCol].match(regex)) result.push(window.wordList[i] + source)
-            }
-        // Otherwise, search the entire line
-        else if (window.wordList[i].match(regex)) result.push(window.wordList[i] + source)
         }
+        else if (window.wordList[i].match(regex)) result.push(window.wordList[i] + source)
+    }
 
-    // Sort results by the term (compareByWord is defined elsewhere)
     result.sort(compareByWord)
     
-    // Show how many matches were found
     document.getElementById('found').innerHTML = result.length
 
-    // `out` will accumulate the HTML table rows for all matches
     var out = ''
     var itemArray
     
-    // Build one table row per result
     for (let i = 0; i < result.length; i++) {
-        // If this result has a Wiktionary source marker, remember it
+
         if (result[i].includes('‣')) source = '‣'
         else source = ''
     	
-        // Split the line into its fields (TERM, IPA, meaning, etc.)
         itemArray = result[i].split('|')
+
+        // --- Capture RAW values BEFORE highlighting ---
+        const rawTERM     = itemArray[TERM]
+        const rawIPA      = itemArray[IPA]
+        const rawTRANS    = itemArray[TRANS]
+        const rawMEANING  = itemArray[MEANING]
+        const rawEQUIV    = itemArray[EQUIV]
+        const rawNOTES    = itemArray[NOTES]
+
+        // --- Apply highlighting ONLY to visible table cells ---
+        itemArray[TERM]     = highlightMatches(itemArray[TERM], regex)
+        itemArray[MEANING]  = highlightMatches(itemArray[MEANING], regex)
+        itemArray[IPA]      = highlightMatches(itemArray[IPA], regex)
+        itemArray[TRANS]    = highlightMatches(itemArray[TRANS], regex)
+        itemArray[EQUIV]    = highlightMatches(itemArray[EQUIV], regex)
+        itemArray[NOTES]    = highlightMatches(itemArray[NOTES], regex)
 
         out += '<tr>'
         
-        // First column: a tick cell that will be marked when the Wiktionary link is used
-        out += `<td id="w${ itemArray[TERM].trim() }" class="tickCol"></td>`
+        // Tick column — MUST use raw text
+        out += `<td id="w${ rawTERM.trim() }" class="tickCol"></td>`
 
-        // Second column: the term itself, styled according to the language settings
+        // Term column
         out += `<td class="termCol" lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
 
-        // Prepare the term for lookup: lowercase and replace ASCII apostrophe with modifier letter apostrophe
-        // to avoid breaking the onclick JavaScript
-        termToLookUp = itemArray[TERM].trim().toLocaleLowerCase().replace(/'/, 'ʼ')
+        // Prepare lookup term — MUST use raw text
+        termToLookUp = rawTERM.trim().toLocaleLowerCase().replace(/'/, 'ʼ')
 
-        // The visible term: clicking it calls showNameDetails to open the side panel
+        // Visible term — highlighted
         out += `<span onclick="showNameDetails('${ termToLookUp }', '${ terms.language }', 'mong', '', panel, '', '', '${ itemArray[IPAraw].trim() }')" class="term">${ itemArray[TERM] }</span>`
         
-        // Add a small copy icon to copy the term to the clipboard
-        out += `<img src="../img/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ itemArray[TERM].trim() }')">`
+        // Copy icon — MUST use raw text
+        out += `<img src="../img/icons/copytiny.svg" alt="copy" title="Copy to clipboard" class="copyme" onclick="copyMsg('${ rawTERM.trim() }')">`
 
-        // If this entry has a Wiktionary source, add a link icon that opens the combined window
+        // Wiktionary link — MUST use raw text
         if (source) {
-            // If there is a dedicated Wiktionary headword (WIKI field), use that
             if (itemArray[WIKI] && itemArray[WIKI].trim() !== 'x') 
                 out += `<span class="imageA" style="cursor:pointer;"
-                      onclick="document.getElementById('w${ itemArray[TERM].trim() }').textContent='✓';
+                      onclick="document.getElementById('w${ rawTERM.trim() }').textContent='✓';
                         openCombinedWindowForTerm(
                         '${ itemArray[WIKI].trim() }',
                         '${ terms.wiktionaryLink }',
                         '${ terms.picker }'
                       )">
                         <img src="../img/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition">
-                        </span>
-                        `
-            // Otherwise, fall back to using the term itself as the Wiktionary lookup string
-            else out +=  `<span class="imageA" style="cursor:pointer;"
-                      onclick="document.getElementById('w${ itemArray[TERM].trim() }').textContent='✓';
+                        </span>`
+            else 
+                out += `<span class="imageA" style="cursor:pointer;"
+                      onclick="document.getElementById('w${ rawTERM.trim() }').textContent='✓';
                         openCombinedWindowForTerm(
-                        '${ itemArray[TERM].trim() }',
+                        '${ rawTERM.trim() }',
                         '${ terms.wiktionaryLink }',
                         '${ terms.picker }'
                       )">
                         <img src="../img/icons/showPanel.svg" class="showPanel" alt="Explode" title="Show composition">
-                        </span>
-                        `
+                        </span>`
         }
 
         out += '</td>'
         
-        // Third column: meaning/gloss
+        // Meaning column — highlighted
         out += '<td>' + itemArray[MEANING] + '</td>'
 
-        // Prepare a generated transcription if IPA is marked as " ␣ " (auto‑transliteration placeholder)
-        generatedTranscription = '' // if IPA has ␣ generate & store a transcription
-        if (itemArray[IPA] === ' ␣ ') { 
-            var termChars = [...itemArray[TERM]]
-            // Skip first and last character (often delimiters or markers)
+        // Generated transcription — MUST use rawTERM
+        generatedTranscription = ''
+        if (rawIPA === ' ␣ ') { 
+            var termChars = [...rawTERM]
             for (t = 1; t < termChars.length - 1; t++) {
                 if (termChars[t] === ' ') generatedTranscription += ' '
                 else if (termChars[t] === '-') generatedTranscription += '-'
@@ -598,69 +636,57 @@ function findWords (reg) {
             }
         }
 
-        // Fourth column: IPA (or placeholder)
+        // IPA column — highlighted
         out += '<td class="tr ipaCol">' + itemArray[IPA] + '</td>'
 
-        // Fifth column: transcription (TRANS) or generated transcription, with special handling for abjads
-        // If this is an abjad entry with vowelled alternatives (marked by #), turn them into links
-        if (itemArray[TRANS].match('#')) {
-            var link = itemArray[TRANS].replace(/#/g, '|')
+        // Transcription column — highlighted
+        if (rawTRANS.match('#')) {
+            var link = rawTRANS.replace(/#/g, '|')
             out += `<td class="tr"><a href="${ terms.language }_terms?q=${ link }">${ link }</a></td>`
         }
-        // If we generated a transcription, show it in grey
         else if (generatedTranscription !== '') out += `<td class="tr" style="color:#ccc;"> ${ generatedTranscription }</td>`
-        // Otherwise, just show the stored transcription
         else out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
 
-        // Sixth column: equivalent/translation
+        // Equivalent column — highlighted
         out += '<td class="tr">' + itemArray[EQUIV] + '</td>'
 
-        // Optional notes column, if this language has notes
+        // Notes column — highlighted
         if (terms.thereAreNotes) {
-            // If notes contain §, treat the part after it as cross‑references and link them
-            if (itemArray[NOTES].match('§')) {
-                var noteParts = itemArray[NOTES].split('§')
+            if (rawNOTES.match('§')) {
+                var noteParts = rawNOTES.split('§')
                 var xrefs = `<a href="${ terms.language }_terms?q=${ noteParts[1].replace(/,\s*/g, '|') }">${ noteParts[1] }</a>`
                 out += `<td class="noteCol">${ noteParts[0] + xrefs + noteParts[noteParts.length - 1] }</td>`
             }
-            // Older variant: # marks cross‑references
-            else if (itemArray[NOTES].match('#')) {
-                var link = itemArray[NOTES].replace(/#/g, '|')
+            else if (rawNOTES.match('#')) {
+                var link = rawNOTES.replace(/#/g, '|')
                 out += `<td class="noteCol"><a href="${ terms.language }_terms?q=${ link }">${ link }</a></td>`
             }
-            // Plain notes with no special markup
-            else out += `<td class="noteCol"> ${ itemArray[NOTES] }</td>`
+            else out += `<td class="noteCol">${ itemArray[NOTES] }</td>`
         }
 
-        // Add a markup column for server‑based use (GitHub‑hosted version)
+        // Markup column — MUST use raw values
         if (location.hostname === 'r12a.github.io') {
             markup = ''
-            // Build escaped HTML snippet for charExample markup
             markup += `&lt;span class=&quot;charExample&quot; translate=&quot;no&quot;&gt;`
-            markup += `&lt;bdi class=&quot;ex`
-            markup += `&quot; lang=&quot;${ terms.language }&quot;`
+            markup += `&lt;bdi class=&quot;ex&quot; lang=&quot;${ terms.language }&quot;`
             if (terms.direction !== '') markup += ` dir=&quot;${ terms.direction }&quot;`
-            markup += `&gt;${ itemArray[TERM].trim() }&lt;/bdi&gt;`
+            markup += `&gt;${ rawTERM.trim() }&lt;/bdi&gt;`
             
-            if (itemArray[IPA].trim()) markup += `&lt;bdi class=&quot;ipa&quot;&gt;${ itemArray[IPA].trim() }&lt;/bdi&gt;`
-             
-            if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') markup += `&lt;bdi class=&quot;transc&quot;&gt;${ itemArray[IPA].trim() }&lt;/bdi&gt;`
-             
-            if (itemArray[MEANING].trim()) markup += `&lt;bdi class=&quot;meaning&quot;&gt;${ itemArray[MEANING].trim() }&lt;/bdi&gt;`
+            if (rawIPA.trim()) markup += `&lt;bdi class=&quot;ipa&quot;&gt;${ rawIPA.trim() }&lt;/bdi&gt;`
+            if (rawIPA.trim() == '' && rawTRANS.trim() != '') markup += `&lt;bdi class=&quot;transc&quot;&gt;${ rawTRANS.trim() }&lt;/bdi&gt;`
+            if (rawMEANING.trim()) markup += `&lt;bdi class=&quot;meaning&quot;&gt;${ rawMEANING.trim() }&lt;/bdi&gt;`
            
             markup += `&lt;/span&gt;`
             
-            // Copy icon to copy the markup snippet
             out += `<td class="markupCol"><img src="../img/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
         }
         else {
-            // Local / non‑GitHub version: simpler example markup
             markup = ''
             markup += `<span class=&quot;eg`
-            if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') markup += ' transc'
+            if (rawIPA.trim() == '' && rawTRANS.trim() != '') markup += ' transc'
             markup += `&quot; lang=&quot;${ terms.language }&quot;`
             if (terms.direction !== '') markup += ` dir=&quot;${ terms.direction }&quot;`
-            markup += `>${ itemArray[TERM].trim() }</span>`
+            markup += `>${ rawTERM.trim() }</span>`
            
             out += `<td class="markupCol">`
             out += `<img src="../img/icons/copytiny.svg" alt="copy" class="copyme" onclick="copyMsg('${ markup }')"></td>`
@@ -670,9 +696,12 @@ function findWords (reg) {
         out += '</tr>\n'
     }
 
-    // Return the full HTML string for all result rows
     return out
 }
+
+
+
+
 
 
 
@@ -815,26 +844,6 @@ console.log('set',uniqueSet.size)
 	duplicatesMsg(`${ entries.length - uniqueSet.size } duplicates.`)
 	}
 
-
-
-function checkForDuplicatesX () {
-	// highlights duplicate entries
-	
-	var entries = document.querySelectorAll('.term')
-	
-	uniqueSet = new Set()
-
-	for (i=0;i<entries.length;i++) {
-		if (uniqueSet.has(entries[i].textContent)) {
-			entries[i].style.backgroundColor = 'yellow'
-			entries[i].textContent += ' §'
-			}
-		else uniqueSet.add(entries[i].textContent)
-		}
-console.log('entries', entries.length)
-console.log('set',uniqueSet.size)
-	duplicatesMsg(`${ entries.length - uniqueSet.size } duplicates.`)
-	}
 
 
 
