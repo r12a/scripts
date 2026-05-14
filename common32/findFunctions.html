@@ -9,9 +9,14 @@
     textarea { width: 100%; height: 200px; font-family: monospace; }
     #results { margin-top: 1.5rem; }
     .func { margin-top: 1.2rem; }
-    .calls, .calledby { margin-left: 1.5rem; color: #444; margin-block:.5em; }
+    .calldata { display: flex; flex-direction: row-reverse; margin-block-end: 2rem; }
+    .calls, .calledby { margin-left: 1.5rem; color: #444; margin-block:.5em;  flex: 0 0 45%;	/* no grow, no shrink, fixed 40% width */
+	box-sizing: border-box; }
     code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 3px; }
     em { font-style: normal; color: tan; }
+    .file { font-style: italic; color: tan; font-size: 80%; margin-inline-start: 2rem; }
+    .htmlfunction { margin-block: .5rem; }
+    .htmlfunction em { font-size: 90%; margin-inline-start: 2rem; }
   </style>
 </head>
 <body>
@@ -23,286 +28,538 @@
 <label for="textInput">Or paste JavaScript or HTML here:</label>
 <textarea id="textInput" placeholder="Paste JavaScript code or HTML containing &lt;script&gt; tags here..."></textarea>
 
-  <button id="analyzeBtn">Analyze</button>
+<button id="analyzeBtn">Analyze</button>
 
-  <div id="results"></div>
+
+<div id="results"></div>
+
 
 <script>
-  const fileInput = document.getElementById('fileInput')
-  const textInput = document.getElementById('textInput')
-  const analyzeBtn = document.getElementById('analyzeBtn')
-  const resultsDiv = document.getElementById('results')
+const fileInput = document.getElementById('fileInput')
+const textInput = document.getElementById('textInput')
+const analyzeBtn = document.getElementById('analyzeBtn')
+const resultsDiv = document.getElementById('results')
 
-  const builtins = new Set([
-    "eval","isFinite","isNaN","parseFloat","parseInt",
-    "decodeURI","decodeURIComponent","encodeURI","encodeURIComponent",
-    "console","setTimeout","setInterval","clearTimeout","clearInterval",
-    "Math","JSON","Object","Function","Boolean","Symbol",
-    "Error","EvalError","RangeError","ReferenceError","SyntaxError",
-    "TypeError","URIError","Number","BigInt","String","Array","Map","Set",
-    "WeakMap","WeakSet","Date","RegExp","Promise","window","document",
-    "navigator","location","fetch","alert","confirm","prompt",
-    "getElementById","if","createElement","prepend","forEach","toString",
-    "toUpperCase","while","querySelectorAll","for","trim","split","has",
-    "typeof","appendChild","startsWith","push","sort","includes","join",
-    "switch","closest","removeChild","match","getAttribute",
-    "XMLHttpRequest","log","base","function","contains","querySelector",
-    "replace","open","focus","transcription","set","writeText",
-    "charCodeAt","normalize","codePointAt","execCommand"
-  ])
+const functionOrigins = {}
 
-  analyzeBtn.addEventListener('click', () => {
-    const pasted = textInput.value.trim()
+analyzeBtn.addEventListener('click', () => {
+  const pasted = textInput.value.trim()
 
-    if (pasted) {
-      analyzeText(pasted)
+  if (pasted) {
+    recordFunctionOrigins(pasted, "(pasted input)")
+    analyzeText(pasted)
+    return
+  }
+
+  const file = fileInput.files[0]
+  if (!file) {
+    resultsDiv.innerHTML = "<p>Please paste code or choose a file.</p>"
+    return
+  }
+
+  const reader = new FileReader()
+  reader.onload = () => handleFile(file.name, reader.result)
+  reader.readAsText(file)
+})
+
+async function handleFile(filename, text) {
+  if (filename.endsWith(".html") || filename.endsWith(".htm")) {
+    const combined = await extractScriptsFromHTML(text, filename)
+    if (!combined.trim()) {
+      resultsDiv.innerHTML = "<p>No &lt;script&gt; content found in HTML file.</p>"
       return
     }
-
-    const file = fileInput.files[0]
-    if (!file) {
-      resultsDiv.innerHTML = "<p>Please paste code or choose a file.</p>"
-      return
-    }
-
-    const reader = new FileReader()
-    reader.onload = () => handleFile(file.name, reader.result)
-    reader.readAsText(file)
-  })
-
-  async function handleFile(filename, text) {
-    if (filename.endsWith(".html") || filename.endsWith(".htm")) {
-      const extracted = await extractScriptsFromHTML(text)
-
-      if (!extracted.trim()) {
-        resultsDiv.innerHTML = "<p>No &lt;script&gt; content found in HTML file.</p>"
-        return
-      }
-
-      analyzeText(extracted)
-    } else {
-      analyzeText(text)
-    }
+    analyzeText(combined)
+  } else {
+    recordFunctionOrigins(text, filename)
+    analyzeText(text)
   }
+}
 
-  async function extractScriptsFromHTML(html) {
-    const parser = new DOMParser()
-    const doc = parser.parseFromString(html, "text/html")
-    const scripts = [...doc.querySelectorAll("script")]
-
-    let combined = ""
-
-    for (const s of scripts) {
-      if (s.textContent && s.textContent.trim()) {
-        combined += "\n\n" + s.textContent
-        continue
-      }
-
-      const src = s.getAttribute("src")
-      if (src) {
-        try {
-          const absoluteURL = new URL(src, location.href).href
-          const response = await fetch(absoluteURL)
-          const js = await response.text()
-          combined += "\n\n" + js
-        } catch (err) {
-          combined += `\n\n// Failed to load external script: ${src}\n`
-        }
-      }
-    }
-
-    return combined
+function recordFunctionOrigins(text, filename) {
+  const regex = new RegExp("function\\s+([A-Za-z_$][0-9A-Za-z_$]*)\\s*\\(", "g")
+  let match
+  while ((match = regex.exec(text)) !== null) {
+    const fn = match[1]
+    if (!functionOrigins[fn]) functionOrigins[fn] = new Set()
+    functionOrigins[fn].add(filename)
   }
+}
 
-  function extractFunctionNames(text) {
-    const regex = /function\s+([A-Za-z_$][0-9A-Za-z_$]*)\s*\(/g
-    const names = new Set()
-    let match
+async function extractScriptsFromHTML(html, htmlFilename) {
+  const parser = new DOMParser()
+  const doc = parser.parseFromString(html, "text/html")
+  const scripts = [...doc.querySelectorAll("script")]
 
-    while ((match = regex.exec(text)) !== null) {
-      names.add(match[1])
+  let combined = ""
+
+  for (const s of scripts) {
+    if (s.textContent && s.textContent.trim()) {
+      const js = s.textContent
+      recordFunctionOrigins(js, htmlFilename)
+      combined += "\n\n" + js
+      continue
     }
 
-    return [...names]
-  }
+    const src = s.getAttribute("src")
+    if (src) {
+      try {
+        const absoluteURL = new URL(src, location.href).href
+        const response = await fetch(absoluteURL)
+        const js = await response.text()
 
-  /*function mapFunctionCalls(text, functionNames) {
-    const callMap = {}
-    const allCalled = new Set()
+        const path = new URL(src, location.href).pathname
+        const jsName = path.split("/").pop() || src
 
-    const callRegex = /(?:\.|^|\b)([A-Za-z_$][0-9A-Za-z_$]*)\s*\(/g
-
-    for (const fn of functionNames) {
-      callMap[fn] = new Set()
-
-      const bodyRegex = new RegExp(
-        "function\\s+" + fn + "\\s*\\([^)]*\\)\\s*\\{([\\s\\S]*?)\\}",
-        "g"
-      )
-
-      let bodyMatch
-      while ((bodyMatch = bodyRegex.exec(text)) !== null) {
-        const body = bodyMatch[1]
-
-        let callMatch
-        while ((callMatch = callRegex.exec(body)) !== null) {
-          const called = callMatch[1]
-
-          if (called !== fn && functionNames.includes(called)) {
-            callMap[fn].add(called)
-            allCalled.add(called)
-          }
-        }
-      }
-    }
-
-    return { callMap, allCalled }
-  }*/
-  
-  function mapFunctionCalls(text, functionNames) {
-  const callMap = {}
-  const allCalled = new Set()
-
-  const callRegex = /([A-Za-z_$][0-9A-Za-z_$]*)\(/g
-
-  for (const fn of functionNames) {
-    callMap[fn] = new Set()
-
-    // Find the start of the function
-    const defRegex = new RegExp(
-      "function\\s+" + fn + "\\s*\\([^)]*\\)\\s*\\{",
-      "g"
-    )
-
-    let defMatch
-    while ((defMatch = defRegex.exec(text)) !== null) {
-      let i = defRegex.lastIndex   // position after the opening brace
-      let depth = 1
-
-      // Walk forward until the matching closing brace
-      while (i < text.length && depth > 0) {
-        if (text[i] === "{") depth++
-        else if (text[i] === "}") depth--
-        i++
-      }
-
-      const body = text.slice(defRegex.lastIndex, i - 1)
-
-      // Now extract calls inside the body
-      let callMatch
-      while ((callMatch = callRegex.exec(body)) !== null) {
-        const called = callMatch[1]
-
-        if (called !== fn && functionNames.includes(called)) {
-          callMap[fn].add(called)
-          allCalled.add(called)
-        }
+        recordFunctionOrigins(js, jsName)
+        combined += "\n\n" + js
+      } catch (err) {
+        combined += `\n\n// Failed to load external script: ${src}\n`
       }
     }
   }
 
-  return { callMap, allCalled }
+  return combined
+}
+
+function extractFunctionNames(text) {
+  const regex = new RegExp("function\\s+([A-Za-z_$][0-9A-Za-z_$]*)\\s*\\(", "g")
+  const names = new Set()
+  let match
+  while ((match = regex.exec(text)) !== null) names.add(match[1])
+  return [...names]
+}
+
+function stripComments(code) {
+  return code
+    .replace(/\/\/[^\n]*/g, "")
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+}
+
+function extractFunctionBody(text, startIndex) {
+  let i = startIndex
+  let depth = 1
+
+  let inSingle = false
+  let inDouble = false
+  let inTemplate = false
+  let inRegex = false
+  let inLineComment = false
+  let inBlockComment = false
+
+  while (i < text.length && depth > 0) {
+    const ch = text[i]
+    const next = text[i + 1]
+
+    if (!inSingle && !inDouble && !inTemplate && !inRegex && !inBlockComment && ch === "/" && next === "/") {
+      inLineComment = true
+      i += 2
+      continue
+    }
+    if (inLineComment) {
+      if (ch === "\n") inLineComment = false
+      i++
+      continue
+    }
+
+    if (!inSingle && !inDouble && !inTemplate && !inRegex && !inLineComment && ch === "/" && next === "*") {
+      inBlockComment = true
+      i += 2
+      continue
+    }
+    if (inBlockComment) {
+      if (ch === "*" && next === "/") {
+        inBlockComment = false
+        i += 2
+      } else i++
+      continue
+    }
+
+    if ((inSingle || inDouble || inTemplate || inRegex) && ch === "\\") {
+      i += 2
+      continue
+    }
+
+    if (!inSingle && !inDouble && !inRegex && ch === "`") {
+      inTemplate = !inTemplate
+      i++
+      continue
+    }
+
+    if (!inDouble && !inTemplate && !inRegex && ch === "'") {
+      inSingle = !inSingle
+      i++
+      continue
+    }
+
+    if (!inSingle && !inTemplate && !inRegex && ch === '"') {
+      inDouble = !inDouble
+      i++
+      continue
+    }
+
+    if (!inSingle && !inDouble && !inTemplate && ch === "/" && next !== "/" && next !== "*") {
+      inRegex = !inRegex
+      i++
+      continue
+    }
+
+    if (!inSingle && !inDouble && !inTemplate && !inRegex && !inLineComment && !inBlockComment) {
+      if (ch === "{") depth++
+      else if (ch === "}") depth--
+    }
+
+    i++
+  }
+
+  return text.slice(startIndex, i - 1)
 }
 
 
-  function invertCallMap(functionNames, callMap) {
-    const calledByMap = {}
 
-    for (const fn of functionNames) {
-      calledByMap[fn] = new Set()
+
+function mapFunctionCalls(text, functionNames) {
+  const callMap = {}
+  const calledBy = {}
+
+  functionNames.forEach(fn => {
+    callMap[fn] = new Set()
+    calledBy[fn] = new Set()
+  })
+
+  functionNames.forEach(fn => {
+    const defRegex = new RegExp("function\\s+" + fn + "\\s*\\([^)]*\\)\\s*\\{", "g")
+    let lastStart = null
+    let match
+    while ((match = defRegex.exec(text)) !== null) lastStart = defRegex.lastIndex
+    if (lastStart === null) return
+
+    const body = extractFunctionBody(text, lastStart)
+    const clean = stripComments(body)
+
+    const callees = scanCallsOutsideStrings(clean, functionNames)
+    callees.forEach(other => {
+      callMap[fn].add(other)
+      calledBy[other].add(fn)
+    })
+  })
+
+  return { callMap, calledBy }
+}
+
+
+
+
+
+function scanCallsOutsideStrings(code, functionNames) {
+  const callees = new Set()
+  const nameSet = new Set(functionNames)
+
+  let i = 0
+  let inSingle = false
+  let inDouble = false
+  let inTemplate = false
+  let inRegex = false
+
+  while (i < code.length) {
+    const ch = code[i]
+    const next = code[i + 1]
+
+    if ((inSingle || inDouble || inTemplate || inRegex) && ch === "\\") {
+      i += 2
+      continue
     }
 
-    for (const caller of functionNames) {
-      for (const callee of callMap[caller]) {
-        calledByMap[callee].add(caller)
+    if (!inDouble && !inTemplate && !inRegex && ch === "'" ) {
+      inSingle = !inSingle
+      i++
+      continue
+    }
+
+    if (!inSingle && !inTemplate && !inRegex && ch === '"') {
+      inDouble = !inDouble
+      i++
+      continue
+    }
+
+    if (!inSingle && !inDouble && !inRegex && ch === "`") {
+      inTemplate = !inTemplate
+      i++
+      continue
+    }
+
+    if (!inSingle && !inDouble && !inTemplate && ch === "/" && next !== "/" && next !== "*") {
+      inRegex = !inRegex
+      i++
+      continue
+    }
+
+    if (!inSingle && !inDouble && !inTemplate && !inRegex) {
+      if (/[A-Za-z_$]/.test(ch)) {
+        let j = i
+        while (j < code.length && /[A-Za-z0-9_$]/.test(code[j])) j++
+        const name = code.slice(i, j)
+        if (nameSet.has(name)) {
+          let k = j
+          while (k < code.length && (code[k] === " " || code[k] === "\t")) k++
+          if (code[k] === "(") {
+            callees.add(name)
+          }
+        }
+        i = j
+        continue
       }
     }
 
-    return calledByMap
+    i++
   }
 
-  function analyzeText(text) {
-    const functionNames = extractFunctionNames(text)
+  return callees
+}
 
-    const { callMap, allCalled } = mapFunctionCalls(text, functionNames)
 
-    const calledByMap = invertCallMap(functionNames, callMap)
 
-    const externalFunctions = [...allCalled].filter(
-      fn => !functionNames.includes(fn) && !builtins.has(fn)
-    )
 
-    renderResults(functionNames, callMap, calledByMap, externalFunctions)
-  }
 
-  function renderResults(functionNames, callMap, calledByMap, externalFunctions) {
-    if (functionNames.length === 0) {
-      resultsDiv.innerHTML = '<p>No function declarations found.</p>'
-      return
+function findEventTriggered(text, functionNames) {
+  const eventTriggered = {}
+  functionNames.forEach(fn => eventTriggered[fn] = new Set())
+
+  functionNames.forEach(parent => {
+    const defRegex = new RegExp("function\\s+" + parent + "\\s*\\([^)]*\\)\\s*\\{", "g")
+    let lastStart = null
+    let match
+    while ((match = defRegex.exec(text)) !== null) lastStart = defRegex.lastIndex
+    if (lastStart === null) return
+
+    const body = extractFunctionBody(text, lastStart)
+    const clean = stripComments(body)
+
+    // Extract ALL string literals, including template literals
+    const strings = extractStringLiterals(clean)
+
+    strings.forEach(str => {
+      const lower = str.toLowerCase()
+
+      functionNames.forEach(fn => {
+        const name = fn.toLowerCase()
+
+        // Detect HTML event handlers inside strings
+        if (
+          lower.includes(name + "(") ||
+          lower.includes('onclick="' + name + '(') ||
+          lower.includes("onclick='" + name + "(") ||
+          lower.includes("onchange=\"" + name + "(") ||
+          lower.includes("onchange='" + name + "(")
+        ) {
+          eventTriggered[fn].add(parent)
+        }
+      })
+    })
+  })
+
+  return eventTriggered
+}
+
+
+
+function extractStringLiterals(code) {
+  const strings = []
+  let i = 0
+  let inSingle = false
+  let inDouble = false
+  let inTemplate = false
+  let current = ""
+  let quoteChar = null
+
+  while (i < code.length) {
+    const ch = code[i]
+
+    if ((inSingle || inDouble || inTemplate) && ch === "\\") {
+      current += code.slice(i, i + 2)
+      i += 2
+      continue
     }
 
-    const xzFunctions = functionNames.filter(fn => /[XZ]$/.test(fn))
-    const remaining = functionNames.filter(fn => !xzFunctions.includes(fn))
+    if (!inDouble && !inTemplate && ch === "'" ) {
+      if (inSingle) {
+        inSingle = false
+        strings.push(current)
+        current = ""
+        quoteChar = null
+      } else if (!inSingle && !inDouble && !inTemplate) {
+        inSingle = true
+        quoteChar = "'"
+      }
+      i++
+      continue
+    }
 
-    const notCalledByOthers = remaining.filter(
-      fn => calledByMap[fn].size === 0
-    )
+    if (!inSingle && !inTemplate && ch === '"') {
+      if (inDouble) {
+        inDouble = false
+        strings.push(current)
+        current = ""
+        quoteChar = null
+      } else if (!inSingle && !inDouble && !inTemplate) {
+        inDouble = true
+        quoteChar = '"'
+      }
+      i++
+      continue
+    }
 
-    const isolated = notCalledByOthers.filter(
-      fn => callMap[fn].size === 0
-    )
+    if (!inSingle && !inDouble && ch === "`") {
+      if (inTemplate) {
+        inTemplate = false
+        strings.push(current)
+        current = ""
+        quoteChar = null
+      } else if (!inSingle && !inDouble && !inTemplate) {
+        inTemplate = true
+        quoteChar = "`"
+      }
+      i++
+      continue
+    }
 
-    const normal = remaining.filter(
-      fn => !notCalledByOthers.includes(fn) && !isolated.includes(fn)
-    )
+    if (inSingle || inDouble || inTemplate) {
+      current += ch
+      i++
+      continue
+    }
 
-    let html = ""
-
-    html += `<h2>0. Functions defined in this file</h2>`
-    const declaredFunctions = [...functionNames].sort((a, b) => a.localeCompare(b))
-    html += `<p>${declaredFunctions.length} function${declaredFunctions.length !== 1 ? "s" : ""}</p>`
-    declaredFunctions.forEach(fn => {
-      html += `<div class="func"><code>${fn}</code></div>`
-    })
-
-    html += `<h2>1. All other functions</h2>`
-    html += `<p>${normal.length} function${normal.length !== 1 ? "s" : ""}</p>`
-    normal.forEach(fn => html += renderFunctionBlock(fn, callMap, calledByMap))
-
-    const section2 = notCalledByOthers.filter(fn => !isolated.includes(fn))
-    html += `<h2>2. Functions not called by another function</h2>`
-    html += `<p>${section2.length} function${section2.length !== 1 ? "s" : ""}</p>`
-    section2.forEach(fn => html += renderFunctionBlock(fn, callMap, calledByMap))
-
-    html += `<h2>3. Functions not called by another function AND calling nobody</h2>`
-    html += `<p>${isolated.length} function${isolated.length !== 1 ? "s" : ""}</p>`
-    isolated.forEach(fn => html += renderFunctionBlock(fn, callMap, calledByMap))
-
-    html += `<h2>4. Functions ending in X or Z</h2>`
-    html += `<p>${xzFunctions.length} function${xzFunctions.length !== 1 ? "s" : ""}</p>`
-    xzFunctions.forEach(fn => html += renderFunctionBlock(fn, callMap, calledByMap))
-
-    html += `<h2>5. Functions called but NOT defined in the input</h2>`
-    html += `<p>${externalFunctions.length} function${externalFunctions.length !== 1 ? "s" : ""}</p>`
-    externalFunctions.forEach(fn => {
-      html += `<div class="func"><code>${fn}</code></div>`
-    })
-
-    resultsDiv.innerHTML = html
+    i++
   }
 
-  function renderFunctionBlock(fn, callMap, calledByMap) {
-    return `
-      <div class="func"><code>${fn}</code><br>
-        <div class="calls"><em>calls:</em> ${
-          callMap[fn].size ? [...callMap[fn]].join(", ") : "<span style='color:#ddd'>(none)</span>"
-        }</div>
-        <div class="calledby"><em>called by:</em> ${
-          calledByMap[fn].size ? [...calledByMap[fn]].join(", ") : "<span style='color:#ddd'>(none)</span>"
-        }</div>
+  return strings
+}
+
+
+
+
+function analyzeText(text) {
+  const functionNames = extractFunctionNames(text)
+  const { callMap, calledBy } = mapFunctionCalls(text, functionNames)
+  const eventTriggered = findEventTriggered(text, functionNames)
+
+  renderResults(functionNames, callMap, calledBy, eventTriggered)
+}
+
+
+
+
+function renderResultsX(functionNames, callMap, calledBy, eventTriggered) {
+  let html = ""
+
+  // 0. Functions defined
+  html += `<details open>
+    <summary><b>0. Functions defined in this input (${functionNames.length})</b></summary>`
+  functionNames.sort().forEach(fn => {
+    const files = functionOrigins[fn] ? [...functionOrigins[fn]].join(", ") : "?"
+    html += `<div><code>${fn}</code> <span style="color:#888">${files}</span></div>`
+  })
+  html += `</details>`
+
+
+  // 1. Functions and what they call / who calls them
+  html += `<details>
+    <summary><b>1. Functions and what they call / who calls them</b></summary>`
+  functionNames.sort().forEach(fn => {
+    html += `<div style="margin-top:8px"><code>${fn}</code><br>`
+    html += `<span style="margin-left:20px"><em>calls:</em> ${
+      callMap[fn].size ? [...callMap[fn]].join(", ") : "<span style='color:#ccc'>(none)</span>"
+    }</span><br>`
+    html += `<span style="margin-left:20px"><em>called by:</em> ${
+      calledBy[fn].size ? [...calledBy[fn]].join(", ") : "<span style='color:#ccc'>(none)</span>"
+    }</span></div>`
+  })
+  html += `</details>`
+
+
+  // 2. Functions ending in X or Z
+  const xz = functionNames.filter(fn => /[XZ]$/.test(fn))
+  html += `<details>
+    <summary><b>2. Functions ending in X or Z (${xz.length})</b></summary>`
+  xz.forEach(fn => html += `<div><code>${fn}</code></div>`)
+  html += `</details>`
+
+
+  // 3. Functions triggered by HTML events
+  const eventFns = functionNames.filter(fn => eventTriggered[fn].size > 0)
+  html += `<details>
+    <summary><b>3. Functions triggered by HTML events (${eventFns.length})</b></summary>`
+  eventFns.forEach(fn => {
+    html += `<div><code>${fn}</code> <em>triggered by:</em> ${
+      [...eventTriggered[fn]].join(", ")
+    }</div>`
+  })
+  html += `</details>`
+
+  resultsDiv.innerHTML = html
+}
+
+
+function renderResults(functionNames, callMap, calledBy, eventTriggered) {
+  let html = ""
+
+  // 1. Functions and what they call / who calls them
+  html += `<details open>
+    <summary><b>1. Functions and what they call / who calls them (${functionNames.length})</b></summary>`
+
+  functionNames.sort().forEach(fn => {
+    const origins = functionOrigins[fn]
+      ? [...functionOrigins[fn]].join(", ")
+      : "(unknown source)"
+
+    html += `<div style="margin-top:8px">
+      <code>${fn}</code>
+      <span class="file">${origins}</span><br>
+
+      <div class="calldata">
+      <span class="calls"><em>calls:</em> ${
+        callMap[fn].size
+          ? [...callMap[fn]].join(", ")
+          : "<span style='color:#ccc'>(none)</span>"
+      }</span><br>
+
+      <span class="calledby"><em>called by:</em> ${
+        calledBy[fn].size
+          ? [...calledBy[fn]].join(", ")
+          : "<span style='color:#ccc'>(none)</span>"
+      }</span>
       </div>
-    `
-  }
+    </div>`
+  })
+
+  html += `</details>`
+
+
+  // 2. Functions ending in X or Z
+  const xz = functionNames.filter(fn => /[XZ]$/.test(fn))
+  html += `<details>
+    <summary><b>2. Functions ending in X or Z (${xz.length})</b></summary>`
+  xz.forEach(fn => html += `<div><code>${fn}</code></div>`)
+  html += `</details>`
+
+
+  // 3. Functions triggered by HTML events
+  const eventFns = functionNames.filter(fn => eventTriggered[fn].size > 0)
+  html += `<details>
+    <summary><b>3. Functions triggered by HTML events (${eventFns.length})</b></summary>`
+  eventFns.forEach(fn => {
+    html += `<div class="htmlfunction"><code>${fn}</code> <em>triggered by:</em> ${
+      [...eventTriggered[fn]].join(", ")
+    }</div>`
+  })
+  html += `</details>`
+
+  resultsDiv.innerHTML = html
+}
+
 </script>
+
+
+
 </body>
 </html>
