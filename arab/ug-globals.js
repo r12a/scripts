@@ -14,7 +14,7 @@ scriptSummaryTableName='arabl'  // id used for langs record in xx-langdata.js; u
 charUsageBCP='ug'  // bcp tag to find the orthography in the charuse app; used in makeIndexIntro only
 orthogName = 'Arabic' // natural language name for the orthography; used only in makeIndexIntro
 languageName = 'Uighur' // natural language name of language; used in various places, esp block
-scriptIsIndic = true  // true if there are indic syllabic categories; used only in makeIndexIntro
+scriptIsIndic = false  // true if there are indic syllabic categories; used only in makeIndexIntro
 
 
 defaultSize = '24px'  // used by block.html to set size of font, including in font mgt panel
