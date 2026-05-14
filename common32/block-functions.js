@@ -6,6 +6,17 @@
 
 debug = false
 marks = new Set()
+autoTranslitArray = {}
+
+
+
+function addExamples (language) {
+    expandEgMarkup(language)
+    }
+
+function makeFootnoteIndex () {
+    
+    }
 
 
 function setMarks (languageName) {
@@ -21,7 +32,7 @@ function setMarks (languageName) {
 
 
 
-function expandCharMarkup () {
+function expandChMarkup () {
     if (traceSet.has('expandCharMarkup') || traceSet.has('all')) console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
      // convert char markup to .codepoint spans (has to be done before the indexing)
      // the .ch and .hx classes should only be used for characters in the
@@ -323,7 +334,7 @@ function initialise (base, ghDirectory, detailsfileList, version) {
     
     // free up memory from large objects
 	desc = ''
-	autoExpandExamples = {}
+	//autoExpandExamples = {}
     cl = ''
 
 	// create list of characters under "About this page"
@@ -1341,6 +1352,23 @@ function getNotesList (charList) {
 
 
 
+function wrapToneLettersInBdi() {
+    // Select all elements with class "ipa"
+    const ipaElements = document.querySelectorAll('.ipa')
+
+    // Regex for one or more tone letter characters or glottal superscript
+    const toneSeq = /[\u02E5-\u02E9\u02C0]+/g
+
+    ipaElements.forEach(el => {
+        // If this element already contains a <bdi>, skip it entirely
+        if (el.querySelector('bdi')) return
+
+        // Replace each sequence with a <bdi> wrapper
+        el.innerHTML = el.innerHTML.replace(toneSeq, match => {
+            return `<bdi>${match}</bdi>`
+            })
+        })
+    }
 
 
 

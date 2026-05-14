@@ -4,7 +4,10 @@ if (typeof traceSet === 'undefined') traceSet = new Set([])
 
 // GLOBALS   -  see also the manifest file under /shared
 index = {}  // holds information needed to build index; used by makeIndexObject, makeMarkupForSection
-window.spreadsheetRows = {}
+window.spreadsheetRows = {}  // holds spreadsheet info for each character in an object, with the character as the key
+window.autoTranslitArray = {} // used to store transliterations; used for glossed text, eg. in panel
+window.marks = new Set()  // stores combining marks found in the spreadsheet
+
 
 //window.addEventListener('DOMContentLoaded', includeHTML)
 //window.addEventListener('onload', createtoc(3))
@@ -17,13 +20,49 @@ access = {
     }
 
 
-function addPageFeatures () {
-     //console.log('Globals(','blockDirectoryName:',window.blockDirectoryName, 'langTag:',window.langTag, 'scriptSummaryTableName:',window.scriptSummaryTableName, 'orthogFilePath:',window.orthogFilePath,')')
+
+
+
+function addPageFeatures () {     
+    console.log(`addPageFeatures() 
+    Expand and add markup.
+    Called by ${ getCallerName() }.`)
     
     
     // pull in any shared HTML code
     //includeHTML()
+
     
+    // create the spreadsheetRows global variable - this holds spreadsheet info for each 
+    // character in an object, with the character as the key
+    if (typeof window.spreadsheet !== 'undefined') {
+        const lines = window.spreadsheet.split('\n')
+
+        for (let line of lines) {
+            if (! line.trim()) continue
+
+            const items = line.split('\t')
+            const key = items[0]
+
+            if (! key) continue
+
+            window.spreadsheetRows[key] = ['0']
+
+            for (let i = 1; i < items.length; i++)
+                window.spreadsheetRows[key].push(items[i])
+            }
+
+        // Explicitly free memory used by the large TSV string
+        window.spreadsheet = ''
+        }
+    else
+        alert('Spreadsheet undefined. [addPageFeatures]')
+
+
+    makeCharDataObj() // DO WE NEED THIS? WHY NOT JUST LOOK AT SPREADSHEET ROWS?
+    setMarks()
+
+
     
     // add invisible headings to basicV and consonantSummary
     const vsection = document.getElementById("basicV")
@@ -64,50 +103,50 @@ function addPageFeatures () {
     //console.log(access.fontsize,document.getElementById('accessFontsize').value)
 
 
-	doHeadersFooters(window.orthogFilePath) // links at page top/bottom
+	// create links at page top/bottom
+    doHeadersFooters(window.orthogFilePath)
     
-    makeIndexIntro(document.getElementById('index_intro')) // write page intro
-    
-    
-    // create the spreadsheetRows global variable
-    if (typeof window.spreadsheet !== 'undefined') {
-        const temp = window.spreadsheet.split('\n')
-        spreadsheet = ''
-        for (var x=0; x<temp.length; x++) {
-            if (temp[x].trim() == '') continue
-            var items = temp[x].split('\t')
-            if (items[0] === '') continue
+    // Add the introduction for the Index
+    makeIndexIntro(document.getElementById('index_intro')) 
 
-            window.spreadsheetRows[items[0]] = ['0']
-            for (let i=1;i<items.length;i++) window.spreadsheetRows[items[0]].push(items[i])
-            }
-        //console.log(spreadsheetRows) 
-		}
-    else alert("Spreadsheet undefined. [makeTables]")
+	// Create side panel
+	const features = document.getElementById('features')
+	if (features) features.innerHTML = makeSidePanel()
+    
+    copyIntroInfo()  // Copy from brief summary to top of various sections
+    addResources()   // Make the Online Resources section
 
-    
-    
-    makeTables(langTag)  // Create the lists of characterBoxes
-    
-    makeSequenceTables() // Converts simple markup for breakdown tables full tables
+	// more page setup
+	createtoc(3)
+	removeEditorNotes()
+	addDefinitions()
+	setContentPrompts()
+	setFindIPA()
+	setTranslitToggle()
 
-    expandCharMarkup() // Expand spans with ch classes to full character markup
-    
-    //addExamples(langTag)  // Convert all .eg items to full markup. (egcode.js)
-    
-    initialiseShowNames(document, blockDirectoryName, '') // Add onclick function to all .ex elements to display in panel
+	// create TOC panel
+	const body = document.body
+	const tocPanel = document.createElement('div')
+	tocPanel.id = 'tocPanel'
+	tocPanel.style.display = 'none'
+	body.appendChild(tocPanel)
+	createtocPanel(4)
+
+    // expand references
+	if (typeof reflist !== 'undefined') createReferences(window.langTag)
 
 
-    // create translit data in autoTranslitArray
-    makeAutoTranslitArray (langTag)
 
-    //console.log('scriptSummaryTableName',scriptSummaryTableName)
-    initialiseSummary (window.blockDirectoryName, window.langTag, window.scriptSummaryTableName, window.orthogFilePath)
-    //autoTransliterate(langTag)
-    checkParameters()
+    // create translit data in autoTranslitArray, used to create glossed text
+    makeAutoTranslitArray(window.langTag)  // defined in transliterate.js
     
-        
-    addExamples(langTag)  // Convert all .eg items to full markup. (egcode.js)
+    expandCharacterBoxes(langTag)  // Create the lists of characterBoxes
+    
+    makeBreakdownTables() // Converts simple markup for breakdown tables full tables
+
+    expandChMarkup() // Expand spans with ch classes to full character markup
+
+    expandEgMarkup(langTag)  // Convert all .eg items to full markup. (egcode.js)
 
     // autogenerate the index
     makeIndexObject()
@@ -119,35 +158,14 @@ function addPageFeatures () {
     makeMarkupForSection('index_other')
     window.index = {}
     
-    makeCharDataObj()
-    pointToSummaryPages()
+    pointToSummaryPages()  // Make links for bidi/linebreak (using index)
     
-    marks = new Set()
-    setMarks()
-    
-    // empty large global variables
-    window.fontDB = []
-    defList = []
-    fontInfo = {}
-    
-    
-    copyIntroInfo()
-    
-    addResources()
-    addCharacterLists()
+
+    addCharacterLists()  // Make character lists in right column
 
     
     // create dialog popup window (displays details after clicking on code point names)
-    var node = document.querySelector('header')
-    dialog = document.createElement('dialog')
-    dialog.open = false
-    dialog.id = 'dialogBox'
-    node.appendChild(dialog)
-    dialog = document.createElement('dialog')
-    dialog.open = false
-    dialog.id = 'ipaDialogBox'
-    node.appendChild(dialog)
-    document.querySelector("body").addEventListener('keydown', closeDialogEsc)
+    makePopupDialogs ()
     
     
     // set event trigger on all .ipa elements - opens description box on click
@@ -162,10 +180,8 @@ function addPageFeatures () {
     summaryNodes = document.querySelectorAll('.figureSub summary')
     for (i=0;i<summaryNodes.length;i++) summaryNodes[i].onclick = function(){ this.parentNode.querySelector('bdi').click() }
     
-    // show all sections to be added
+    // hide all sections to be added
     summaryNodes = document.querySelectorAll('.sectionAside details')
-    //for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = true
-    //for (i=0;i<summaryNodes.length;i++) if (summaryNodes[i].parentNode.parentNode.id !== 'page') summaryNodes[i].open = true
     for (i=0;i<summaryNodes.length;i++) summaryNodes[i].open = false
     
     // lighten colour of any tone letters in examples
@@ -194,7 +210,37 @@ function addPageFeatures () {
             }
         })
     // end of set popovers
+    
+    
+    
+    // empty large global variables
+    window.fontDB = []
+    defList = []
+    fontInfo = {}
+  
+    checkParameters()
     }
+
+
+
+
+function makePopupDialogs () {
+	// create dialog popup windows (#dialogBox + #ipaDialogBox)
+
+	const header = document.querySelector('header')
+	if (!header) return
+
+	const dialogBox = document.createElement('dialog')
+	dialogBox.id = 'dialogBox'
+	header.appendChild(dialogBox)
+
+	const ipaDialogBox = document.createElement('dialog')
+	ipaDialogBox.id = 'ipaDialogBox'
+	header.appendChild(ipaDialogBox)
+
+	document.body.addEventListener('keydown', closeDialogEsc)
+}
+
 
 
 
@@ -265,8 +311,8 @@ function addUsageHistory () {
 
 
 
-function expandCharMarkup () {
-    // console.log('expandCharMarkup() Convert char markup to .codepoint spans (has to be done before the indexing)')
+function expandChMarkup () {
+    // console.log('expandChMarkup() Convert char markup to .codepoint spans (has to be done before the indexing)')
     // Purpose: convert .hex/.hx (hex codepoint lists) and .ch (literal characters)
     // into <span class="codepoint"> markup containing glyph(s) and Unicode name(s).
     // This must run before any indexing that depends on .codepoint spans.
@@ -363,7 +409,7 @@ function expandCharMarkup () {
 
             // If missing in DB or token invalid, append visible marker and continue.
             if (missing) {
-                unicodeNames += `<span style="color:red">${ ch } NOT IN DB! (expandCharMarkup)</span>`
+                unicodeNames += `<span style="color:red">${ ch } NOT IN DB! (expandChMarkup)</span>`
                 unicodeChars += ch
                 console.error(`%cNot in DB: ${ ch }`, 'color:red;font-weight:bold;')
                 return
@@ -463,259 +509,9 @@ function expandCharMarkup () {
         // Render and replace the original element
         el.outerHTML = renderTokens(tokens, flags, language)
         })
-    }
-
-
-
-function expandCharMarkupZ () {
-    // Entry log for debugging when the function runs.
-    // Purpose: convert character markup (.hex, .hx, .ch) into rendered
-    // <span class="codepoint"> elements that include a visible glyph
-    // (character, image, or SVG) and a Unicode name link for indexing.
-    // This must run before any indexing code that relies on .codepoint spans.
-    console.log('expandCharMarkup() Convert char markup to .codepoint spans (has to be done before the indexing)')
     
-    // High-level notes:
-    // - .hx/.hex elements contain one or more hex codepoints separated by spaces.
-    // - .ch elements contain one or more literal characters.
-    // - Supported modifier classes (applied to the source element) control output:
-    //     split     -> insert " + " between successive items and break BDI wrappers
-    //     svg       -> render item as an SVG image sourced from the corpus
-    //     img       -> render item as a PNG image (large folder)
-    //     init/medi/fina -> add ZERO WIDTH JOINER (ZWJ) to form positional cursive shapes
-    //     skip      -> insert ZWJ after a diacritic (used to visually separate mark + base)
-    //     circle    -> prepend dotted circle (U+25CC) before combining marks
-    //     coda      -> append dotted circle after the item (used for closed syllables)
-    //     noname    -> suppress rendering of the Unicode name link
-    //     noindex   -> mark output with noindex class to exclude from index
-    //     uncommon  -> mark <bdi> with class="uncommon" for styling
-    //
-    // - The function consults `spreadsheetRows` and `cols` (global data) to look up
-    //   character metadata such as Unicode names. If a character is not found in the
-    //   database, an error marker is inserted.
-    //
-    // - Generated markup:
-    //   <span class="codepoint[ noindex]">
-    //     <bdi [class="uncommon"] lang="{lang}">[glyphs and markers]</bdi>
-    //     <a href="javascript:void(0)"><span class="uname">Unicode Name(s)</span></a>
-    //   </span>
-    //
-    // Globals used by this function:
-    // - spreadsheetRows: mapping from character to row data (contains ucsName)
-    // - cols: mapping of column names to numeric indices (cols['ucsName'])
-    // - getScriptGroup(dec, boolean): utility that returns script block name for images
-    // - window.langTag: default language tag for generated <bdi>
-    // - window.hideBlockName: optional pattern to remove block names from name output
-    // - blockDirection: used to optionally set dir="rtl" on output (if needed)
-
-     // local state variables used across both .hx and .ch processing loops
-     var charMarkup, unicodeNames, unicodeChars, charlist, split, svg, img, hex, ch, block, initial, medial, final, circle, noname, coda, noindex, uncommon
-     
-     // Short behavioural notes for the flags:
-     // - split: places " + " between items and breaks BDI wrappers
-     // - init/medi/fina: add ZWJ for cursive joining (initial/medial/final positional forms)
-     // - skip: insert ZWJ after a diacritic to separate it from the following consonant
-     // - circle: prepend dotted circle (◌) before the item (typical for combining marks)
-     // - coda: append dotted circle after the item (used to show closed syllables)
-     // - noname: do not produce the Unicode name link
-     
-   
-    // -------------------------
-    // Process .hx and .hex elements
-    // -------------------------
-    // These elements contain hexadecimal code points (e.g. "0915 093F") separated by spaces.
-    charMarkup = document.querySelectorAll('.hex, .hx')
-    for (i=0;i<charMarkup.length;i++) {
-        // Read modifier classes and set boolean/attribute flags used later when generating output.
-        // Use ternary style assignment to ensure variables are boolean or string as expected.
-        charMarkup[i].classList.contains('split')? split=true: split=false
-        charMarkup[i].classList.contains('svg')? svg=true: svg=false
-        charMarkup[i].classList.contains('img')? img=true: img=false
-        charMarkup[i].classList.contains('init')? initial=true: initial=false
-        charMarkup[i].classList.contains('medi')? medial=true: medial=false
-        charMarkup[i].classList.contains('fina')? final=true: final=false
-        charMarkup[i].classList.contains('skip')? skipDiacritic=true: skipDiacritic=false
-        charMarkup[i].classList.contains('circle')? circle=true: circle=false
-        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
-        charMarkup[i].classList.contains('noname')? noname=true: noname=false
-        charMarkup[i].classList.contains('noindex')? noindex=' noindex': noindex=''
-        charMarkup[i].classList.contains('uncommon')? uncommon=' class="uncommon"': uncommon=''
-
-        // Determine language for generated <bdi>. If the source element has no lang,
-        // fall back to the global window.langTag.
-        if (charMarkup[i].lang === '') var language = window.langTag
-        else language = charMarkup[i].lang
-        
-        // Split the text content into hex code tokens (space separated).
-        charlist = charMarkup[i].textContent.trim().split(' ')
-        // If the element was empty or had only whitespace, skip it.
-        if (charlist[0] === '') continue
-        unicodeNames = ''
-        unicodeChars = ''
-
-        out = ''
-        // For medial/final positional markers we add a ZWJ to the glyph sequence.
-        // Note: Some renderers (Safari) require an actual space before/after the ZWJ for expected
-        // visual behaviour; the original code comments note this.
-        if (final || medial) unicodeChars += '\u200D' // ZERO WIDTH JOINER
-        // If circle flag is set, prepend dotted circle (U+25CC) before the glyphs.
-        if (circle) unicodeChars = '\u25CC' + unicodeChars
-        // Iterate through each hex code in the token list and build glyph + name strings.
-        for (c=0;c<charlist.length;c++) {
-            hex = charlist[c]
-            dec = parseInt(hex,16)
-            // Validate the hex token parsed to a number.
-            if (Number.isNaN(dec)) { 
-                console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandCharMarkup)', 'color:' + 'red' + ';font-weight:bold;')
-                continue
-            }
-            // Convert codepoint to JS string (may be surrogate pair for > U+FFFF).
-            ch = String.fromCodePoint(dec)
-
-            // Look up character metadata in the spreadsheetRows database.
-            if (! spreadsheetRows[ch]) {
-                // If not found, highlight as missing and append raw character to glyph output.
-                unicodeNames += `<span style="color:red">${ ch } NOT IN DB! (expandCharMarkup)</span>`
-                unicodeChars += ch
-                console.error(`%cNot in DB: ${ ch }`, 'color:red;font-weight:bold;')
-                continue
-            }
-            
-            // For name display, if this hex is not the dotted circle sentinel 25CC,
-            // append a " + " separator between multiple names.
-            if (hex !== '25CC') {
-                if (c > 0) unicodeNames += ' + '
-                // spreadsheetRows[ch][cols['ucsName']] expected to contain the canonical name.
-                // Remove any colon inserted in the name with replace.
-                unicodeNames += spreadsheetRows[ch][cols['ucsName']].replace(/:/,'')
-            }
-         
-            // If split is requested, break BDI wrappers and insert a " + " between items.
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi ${ uncommon } lang="${ language }">`
-            // Render glyph as SVG or PNG image if requested, otherwise emit numeric character reference.
-            if (svg) {
-                block = getScriptGroup(dec, false)
-                unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ ch }" style="height:2rem;">`
-            }
-            else if (img) {
-                block = getScriptGroup(dec, false)
-                unicodeChars += `<img src="../../c/${ block }/large/${ hex }.png" alt="${ ch }" style="height:2rem;">`
-            }
-            else unicodeChars += `&#x${ hex };` // numeric character reference (hex)
-            // If skipDiacritic is set and this is the first token, insert a ZWJ after it.
-            if (skipDiacritic && c == 0) unicodeChars += '&#x200D;'
-        }
-            
-        // If initial or medial forms were requested, append a trailing ZWJ and space.
-        if (initial || medial) unicodeChars += '\u200D '
-
-        // Build the final markup. Wrap glyph(s) in a <bdi> for isolation with optional class.
-        out += `<span class="codepoint${ noindex }" translate="no"><bdi ${ uncommon } lang="${ language }"`
-        // If images are used, remove any extra margin for a tighter layout.
-        if (img || svg) out += ' style="margin:0;" '
-        out += `>${ unicodeChars }${ coda }</bdi>`
-        // If noname was not specified, append the Unicode name link for UX/indexing.
-        if (noname) {}
-        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
-        
-        // Optionally remove or mask block names in the generated name string if
-        // window.hideBlockName contains a regex/string to remove.
-        if (window.hideBlockName) {
-            let re = new RegExp(window.hideBlockName, 'g')
-            charMarkup[i].outerHTML = out.replace(re,'')
-        }
-        else charMarkup[i].outerHTML = out
+    setOnclicks()
     }
-
-
-
-
-    // -------------------------
-    // Process .ch elements (literal characters)
-    // -------------------------
-    // These elements contain literal characters; iterate over each code point in the text.
-    charMarkup = document.querySelectorAll('.ch')
-    for (i=0;i<charMarkup.length;i++) {
-        // Read modifier classes into flags as above.
-        charMarkup[i].classList.contains('split')? split=true: split=false
-        charMarkup[i].classList.contains('svg')? svg=true: svg=false
-        charMarkup[i].classList.contains('img')? img=true: img=false
-        charMarkup[i].classList.contains('init')? initial=true: initial=false
-        charMarkup[i].classList.contains('medi')? medial=true: medial=false
-        charMarkup[i].classList.contains('fina')? final=true: final=false
-        charMarkup[i].classList.contains('circle')? circle=true: circle=false
-        charMarkup[i].classList.contains('coda')? coda='◌': coda=''
-        charMarkup[i].classList.contains('noname')? noname=true: noname=false
-        charMarkup[i].classList.contains('noindex')? noindex=' noindex': noindex=''
-        charMarkup[i].classList.contains('uncommon')? uncommon=' class="uncommon"': uncommon=''
-        
-        // Language selection for the output BDI.
-        if (charMarkup[i].lang === '') var language = window.langTag
-        else language = charMarkup[i].lang
-
-        // Spread the element text into an array of characters, but be mindful:
-        // Using [...str] correctly iterates by Unicode code points (handles surrogate pairs).
-        charlist = [... charMarkup[i].textContent]
-        unicodeNames = ''
-        unicodeChars = ''
-        
-        out = ''
-        // For final/medial positionalization, prepend a space then a ZWJ to the glyphs.
-        if (final || medial) unicodeChars += ' \u200D'
-        // Walk each character (code point) in the source element.
-        for (c=0;c<charlist.length;c++) {
-            dec = charlist[c].codePointAt(0)
-            hex = dec.toString(16).toUpperCase()
-            // Ensure hex is at least 4 digits for consistent resource lookups (e.g. file names).
-            while (hex.length < 4) hex = '0'+hex
-
-            // If the character is not in the spreadsheetRows DB, mark it and continue.
-            if (! spreadsheetRows[charlist[c]]) {
-                unicodeChars += charlist[c]
-                unicodeNames += `<span style="color:red"> ${ charlist[c] } NOT IN DB!</span> `
-                continue
-            }
-            
-            // Append " + " separator between multiple names.
-            if (c > 0) unicodeNames += ' + '
-            unicodeNames += spreadsheetRows[charlist[c]][cols['ucsName']].replace(/:/,'')
-
-            // If split is set, inject closures/openings of BDI wrappers and a " + " separator.
-            if (split && c > 0) unicodeChars += `</bdi> + <bdi ${ uncommon } lang="${ language }">`
-            
-            // Render either SVG/PNG image or the literal character depending on flags.
-            if (svg) {
-                block = getScriptGroup(dec, false)
-                unicodeChars += `<img src="../../c/${ block }/${ hex }.svg" alt="${ charlist[c] }" style="height:2rem;">`
-            }
-            else if (img) {
-                block = getScriptGroup(dec, false)
-                unicodeChars += `<img src="../../c/${ block }/large/${ hex }.png" alt="${ charlist[c] }" style="height:2rem;">`
-            }
-            else unicodeChars += charlist[c]
-        }
-            
-        // If initial/medial forms requested, append trailing ZWJ + space.
-        if (initial || medial) unicodeChars += '\u200D '
-        // If circle flag set, prepend dotted circle to the glyph string (for combining marks).
-        if (circle) unicodeChars = '\u25CC' + unicodeChars
-
-        // Compose the final output span similar to the .hx processing above.
-        out += `<span class="codepoint${ noindex }" translate="no"><bdi ${ uncommon } lang="${ language }"`
-        if (blockDirection === 'rtl') out += ` dir="rtl"`
-        if (img || svg) out += ' style="margin:0;" '
-        out += `>${ unicodeChars }${ coda }</bdi>`
-        if (noname) {}
-        else out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a></span>`
-        
-        // Apply optional block name hiding; then replace the source element with generated HTML.
-        if (window.hideBlockName) {
-            let re = new RegExp(window.hideBlockName, 'g')
-            charMarkup[i].outerHTML = out.replace(re,'')
-        }
-        else charMarkup[i].outerHTML = out
-    }
-}
 
 
 
@@ -744,29 +540,6 @@ function closeTOC (e) {
 
 
 
-function initialiseSummary (blockDirectory, lang, tableName, orthogNotesFile) {
-    if (traceSet.has('initialiseSummary') || traceSet.has('all')) console.log('initialiseSummary(',blockDirectory, lang, tableName, orthogNotesFile,')')
-    
-    if (document.getElementById('features')) document.getElementById('features').innerHTML = makeSidePanel()
-    createtoc(3)
-	removeEditorNotes()
-	addDefinitions()
-	//if (typeof(contentPrompts) !== 'undefined') setContentPrompts()
-	setContentPrompts()
-	setFindIPA()  // Make ipa characters in sounds charts indicate locations they are used
-	setupBlockLinks() // Set target attribute for links that point to characters in the block page
-	setTranslitToggle()  // Add checkboxes and links to the fixed position selector
-	setCharOnclicks() // All links with target=c should open descriptions in the panel
-	if (typeof reflist !== 'undefined') createReferences(lang)
-    
-    var body = document.querySelector('body')
-    var tocPanel = document.createElement('div')
-    tocPanel.id = 'tocPanel'
-    tocPanel.style.display = 'none'
-    body.appendChild(tocPanel)
-    createtocPanel(4)
-    }
-
 
 
 function initialiseIndex () {
@@ -779,33 +552,33 @@ function initialiseIndex () {
 
 
 function setMarks () {
-    // sets the global variable marks as a set containing all combining marks in the spreadsheet
-    for (var char in spreadsheetRows) {
-        if (spreadsheetRows[char][1] === 'key') continue
-        if (typeof spreadsheetRows[char][cols['class']] === 'undefined') console.log('%c' + 'Error! General category not found in setMarks() for '+spreadsheetRows[char], 'color:' + 'red' + ';font-weight:bold;')
+	// console.log(`setMarks()
+    //Set the global variable marks as a set containing all combining marks in the spreadsheet.`)
 
-        if (spreadsheetRows[char][cols['class']].startsWith('M')) window.marks.add(char)
+	for (const key in spreadsheetRows) {
+		const row = spreadsheetRows[key]
+		if (!row) continue
+
+		// skip header rows
+		if (row[1] === 'key') continue
+
+		const gc = row[cols.class]
+		if (typeof gc === 'undefined') {
+			console.log('%cError! General category not found in setMarks() for ' + key, 'color:red;font-weight:bold')
+			continue
+		  }
+
+		// add combining marks: Mn, Mc, Me
+		if (gc.startsWith('M')) window.marks.add(key)
         }
-    return
     }
 
 
 
-function setCharOnclicks () {
-	// all links with target=c should open descriptions in the panel
-    if (traceSet.has('setCharOnclicks') || traceSet.has('all')) console.log('setCharOnclicks(',') All links with target=c should open descriptions in the panel')
-
-	var links = document.querySelectorAll('.codepoint a, .codepoint code')
-	for (i=0;i<links.length;i++) {
-        links[i].onclick = showCharDetailsInPanel
-        links[i].href = 'javascript:void(0)'
-        links[i].target = ''
-        }
-	}
 
 function setupBlockLinks () {
 	// set target attribute for links that point to characters in the block page
-    if (traceSet.has('setupBlockLinks') || traceSet.has('all')) console.log('setupBlockLinks(',') Set target attribute for links that point to characters in the block page')
+    console.log('setupBlockLinks(',') Set target attribute for links that point to characters in the block page')
     
 	var links = document.querySelectorAll('.codepoint a, .codepoint code')
 	for (var i=0;i<links.length;i++) if (links[i].target != null) links[i].target = 'c'
@@ -835,410 +608,6 @@ function setFindIPA () { // test extension to map stuff
 
 
 
-
-
-function shareCodeLinks (charList, script, charApp) {
-    // provides some of the repetitive code for listAllIndexCharacters
-    
-    charList = charList.replace(/%/g,'%25')
-    
-    out = `<td class="indexShareLinks" style="position:relative;" 
-    onmouseover="this.lastChild.style.display='block'" 
-    onmouseout="this.lastChild.style.display='none'"><img src="../img/icons/transfer.svg" alt="Send characters." title="Send characters." class="ulink" style="height: 1.2rem;">
-    <div class="popup" style="position: absolute; right: 0px; display: none;">
-        <div><a href="../../app-analysestring/index.html?chars=`+charList+`" target="_blank">Analyse string</a></div>
-        <div><a href="../../scripts/apps/listcategories/index.html?chars=`+charList+`" target="_blank">General Category</a></div>
-        <div><a href="../../uniview/index.html?charlist=`+charList+`" target="_blank">Show characters in UniView</a></div>
-        <div><a href="../../app-listcharacters/index.html?chars=`+charList+`" target="_blank">List characters by block</a></div>
-        <div><a href="../../scripts/fontlist/index.html?script=`+script+`&amp;text=`+charList+`" target="_blank">Send to Font lister</a></div>
-        <div><a target="_blank" href="../../pickers/`+charApp+`/index.html?showFonts=true&amp;text=`+charList+`">Show in character workbench</a></div></td>`
-    return out
-}
-
-
-
-
-
-
-
-function listAllIndexCharacters (scriptISO, pickerName) {
-    // creates the showStats table
-    
-    var out = '<table>'
-    var list
-    
-    
-    // find all the characters in the index sorted by common, rare, and not used
-    allPageChars = [...allchars]
-
-    // get a list of all (unique) characters in the index, ignore if not a single codepoint
-    allIndexChars = []
-    var indexNodes = document.getElementById('index').querySelectorAll('.listItem')
-    for (i=0;i<indexNodes.length;i++) {
-        if ([...indexNodes[i].textContent].length === 1) allIndexChars.push(indexNodes[i].textContent)
-        }
-    var uniqueSet = new Set(allIndexChars)
-    allIndexChars = [...uniqueSet].sort()
-    if (indexNodes.length !== [...uniqueSet].length) console.log('NOTE: Index contains ',indexNodes.length,' items, but only ',[...uniqueSet].length,' unique characters.')
-
-
-
-    
-    // get a list of all Index characters used by the orthography & all ascii characters
-    mainIndexArray = []
-    asciiIndexArray = []
-    unusedIndexArray = []
-    tbcIndexArray = []
-
-    for (i=0;i<indexNodes.length;i++) {
-        // gather not used, obsolete, archaic, & deprecated
-        if (indexNodes[i].parentNode.classList.contains('index_notused') || indexNodes[i].parentNode.classList.contains('index_unused') || indexNodes[i].parentNode.classList.contains('index_obsolete') || indexNodes[i].parentNode.classList.contains('index_archaic') || indexNodes[i].parentNode.classList.contains('index_deprecated'))
-            unusedIndexArray.push(indexNodes[i].textContent) 
-
-        // gather to be investigated
-        else if (indexNodes[i].parentNode.classList.contains('index_tbc'))
-            tbcIndexArray.push(indexNodes[i].textContent)
-        
-        else if ([...indexNodes[i].textContent].length === 1) {
-            if (indexNodes[i].textContent.codePointAt(0) < 129) {
-                asciiIndexArray.push(indexNodes[i].textContent)
-                mainIndexArray.push(indexNodes[i].textContent)
-                }
-            else mainIndexArray.push(indexNodes[i].textContent)
-            }
-            
-        }
-    
-    
-            var uniqueSet = new Set(mainIndexArray)
-    mainIndexArray = [...uniqueSet].sort()
-    
-            var uniqueSet = new Set(asciiIndexArray)
-    asciiIndexArray = [...uniqueSet].sort()
-    
-            var uniqueSet = new Set(unusedIndexArray)
-    unusedIndexArray = [...uniqueSet].sort()
-    
-            var uniqueSet = new Set(tbcIndexArray)
-    tbcIndexArray = [...uniqueSet].sort()
-
-
-
-            var charlist = listCharsInSpreadsheet('all')
-    allSpreadsheetChars = [...charlist].sort()
-            var charlistused = listCharsInSpreadsheet('allused')
-    usedSpreadsheetChars = [...charlistused].sort()
-            var charlistunused = listCharsInSpreadsheet('unused')
-    unusedSpreadsheetChars = [...charlistunused].sort()
-            var charlisttbc = listCharsInSpreadsheet('possibles')
-    tbcSpreadsheetChars = [...charlisttbc].sort()
-
-
-
-    // page/index diff
-    pageYesSpreadsheetNo = ''
-    for (var t=0;t<[...allPageChars].length; t++) {
-        if (! allSpreadsheetChars.includes(allPageChars[t])) pageYesSpreadsheetNo += allPageChars[t]
-        }
-    pageYesIndexNo = ''
-    for (var t=0;t<[...allPageChars].length; t++) {
-        if (! allIndexChars.includes(allPageChars[t])) pageYesIndexNo += allPageChars[t]
-        }
-    pageNoIndexYes = ''
-    for (var t=0;t<allIndexChars.length; t++) {
-        if (! allPageChars.includes(allIndexChars[t])) pageNoIndexYes += allIndexChars[t]
-        }
-
-
-
-
-    // get block file entries
-    var blockChars = []
-    for (ch in charDetails) blockChars.push(ch)
-    //console.log('block chars', blockChars)
-
-
-
-
-
-
-     /*   SPREADSHEET   */   
-    
-    
-    // get information about the spreadsheet
-
-    out += '<tr><th></th><th colspan="2" style="text-align:start">Spreadsheet db</th></tr>'
-
-    out += `<tr><th>All</th><td id="allSpreadsheetList" style="word-break:break-all;">${ allSpreadsheetChars.join('') }</td><td id="allSpreadsheetListTotal">${ allSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('allSpreadsheetList').textContent)"></td>${ shareCodeLinks(allSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
-
-    out += `<tr><th>Used</th><td id="usedSpreadsheetList" style="word-break:break-all;">${ usedSpreadsheetChars.join('') }</td><td id="usedSpreadsheetListTotal">${ usedSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('usedSpreadsheetList').textContent)"></td>${ shareCodeLinks(usedSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
-
-    out += `<tr><th>Unused</th><td id="ssCharListUsed" style="word-break:break-all;">${ unusedSpreadsheetChars.join('') }</td><td id="ssCharListUsedTotal">${ unusedSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(unusedSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
-
-    out += `<tr><th>Investigate</th><td id="ssCharListUsed" style="word-break:break-all;">${ tbcSpreadsheetChars.join('') }</td><td id="ssCharListUsedTotal">${ tbcSpreadsheetChars.length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('ssCharListUsed').textContent)"></td>${ shareCodeLinks(tbcSpreadsheetChars.join(''),scriptISO,pickerName) }</tr>`
-
-
-    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
-
-
-
-
-
-    /* ACTION TO TAKE */
-
-    out += '<tr><th></th><th colspan="2" style="text-align:start">Actions to take for new characters</th></tr>'
-
-
-    // what's in the page but not in the spreadsheet
-    out += `<tr><th>In page.<br>Add to db.</th>
-    <td id="pageExtrasDB" style="word-break:break-all;">${ pageYesSpreadsheetNo.replace(/ |\u25CC/g,'') }</td>
-    <td id="pageExtrasDBTotal">${ [...pageYesSpreadsheetNo.replace(/ |\u25CC/g,'')].length }</td>
-    <td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('pageExtrasDB').textContent)">
-    </td>${ shareCodeLinks(pageYesSpreadsheetNo.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
-
-
-    // what's in the spreadsheet but not in the index    
-    result = ''
-    for (var t=0;t<usedSpreadsheetChars.length; t++) {
-        if (! mainIndexArray.includes(usedSpreadsheetChars[t])) result += usedSpreadsheetChars[t]
-        }
-    out += `<tr><th>In db.<br>Add to index</th><td id="spreadsheetExtras" style="word-break:break-all;">${ result.replace(/ |\u25CC/g,'') }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ |\u25CC/g,'')].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
-
-
-    // what's in the spreadsheet but not in the xx-details file    
-    result = ''
-    for (var t=0;t<usedSpreadsheetChars.length; t++) {
-        if (! blockChars.includes(usedSpreadsheetChars[t])) result += usedSpreadsheetChars[t]
-        }
-    out += `<tr><th>Add to xx&#x2011;details</th><td id="detailsNeeds" style="word-break:break-all;">${ result.replace(/ |\u25CC/g,'') }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ |\u25CC/g,'')].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('detailsNeeds').textContent)"></td>${ shareCodeLinks(result.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
-    //out += `<tr><th></th><td colspan="2" style="text-align:start"><a target="_blank" href="../_tools/generate_details_page_stubs.html?q=${ result }">Details creator</a></td></tr>`
-    
-    
-    
-    
-
-    out += `<tr><th>In page.<br>Add to index</th><td id="pageExtras" style="word-break:break-all;">${ pageYesIndexNo.replace(/ |\u25CC/g,'') }</td><td id="pageExtrasTotal">${ [...pageYesIndexNo.replace(/ |\u25CC/g,'')].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('pageExtras').textContent)"></td>${ shareCodeLinks(pageYesIndexNo.replace(/ |\u25CC/g,''),scriptISO,pickerName) }</tr>`
-
-
-    // find out what's in the unused spreadsheet but not in the unused index    
-    /*
-    result = ''
-    for (var t=0;t<unusedSpreadsheetChars.length; t++) {
-        if (! unusedIndexArray.includes(unusedSpreadsheetChars[t])) result += unusedSpreadsheetChars[t]
-        }
-    out += `<tr><th>Unused ssheet extras</th><td id="spreadsheetExtras" style="word-break:break-all;">${ result }</td><td id="spreadsheetExtrasTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('spreadsheetExtras').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
-
-
-    // find out what's in the unused index but not in the unused spreadsheet
-    result = ''
-    for (var t=0;t<unusedIndexArray.length; t++) {
-        if (! unusedSpreadsheetChars.includes(unusedIndexArray[t])) result += unusedIndexArray[t]
-        }
-    out += `<tr><th>Unused index extras</th><td id="indexSurplus" style="word-break:break-all;">${ result }</td><td id="indexSurplusTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('indexSurplus').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
-    */
-
-
-
-    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
-
-    out += `<tr><th>Add new characters to character workbench</th><td style="text-align:start"><a target="_blank" href="../../pickers/${ pickerDir }/index.html">Workbench</a></td></tr>`
-    
-    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
-
-    
-    out += '<tr><th></th><th colspan="2" style="text-align:start">&nbsp;</th></tr>'
-
-
-
-
-    /*   CHARACTER USE   */
-    
-    
-    var langdata = 'Update the following in xx-langdata.js: '
-    
-    if (typeof langs[charUsageBCP] === 'undefined') alert("Can't create entry for character use because there's no Character Usage entry yet.")
-
-    // create entry for character use
-    usedNonASCII = ''
-    out += `<tr><th>Update Character usage</th><td id="cUsage" style="word-break:break-all;"    >`
-    result = listCharsInSpreadsheet('letters').join('')
-    out += `letter:"${ result }", `
-    if (langs[charUsageBCP].letter && result !== langs[charUsageBCP].letter) langdata += 'letter '
-    usedNonASCII += result
-    result = listCharsInSpreadsheet('auxletters').join('')
-    if (result !== '') out += `letteraux:"${ result }", `
-    if (langs[charUsageBCP].letteraux && result !== langs[charUsageBCP].letteraux) langdata += 'letteraux '
-    usedNonASCII += result
-
-    result = listCharsInSpreadsheet('marks').join('')
-    out += `mark:"${ result }", `
-    if (langs[charUsageBCP].mark && result !== langs[charUsageBCP].mark) langdata += 'mark '
-    usedNonASCII += result
-    result = listCharsInSpreadsheet('auxmarks').join('')
-    if (result !== '') out += `markaux:"${ result }", `
-    if (langs[charUsageBCP].markaux && result !== langs[charUsageBCP].markaux) langdata += 'markaux '
-    usedNonASCII += result
-
-    result = listCharsInSpreadsheet('numbers').join('')
-    out += `number:"${ result }", `
-    if (langs[charUsageBCP].numbers && result !== langs[charUsageBCP].numbers) langdata += 'numbers '
-    usedNonASCII += result
-    result = listCharsInSpreadsheet('auxnumbers').join('')
-    if (result !== '') out += `numberaux:"${ result }", `
-    if (langs[charUsageBCP].numbersaux && result !== langs[charUsageBCP].numbersaux) langdata += 'numbersaux '
-    usedNonASCII += result
-
-    result = listCharsInSpreadsheet('punctuation').join('')
-    out += `punctuation:"${ result }", `
-    if (langs[charUsageBCP].punctuation && result !== langs[charUsageBCP].punctuation) langdata += 'punctuation '
-    usedNonASCII += result
-    result = listCharsInSpreadsheet('auxpunctuation').join('')
-    if (result !== '') out += `punctuationaux:"${ result }", `
-    if (langs[charUsageBCP].punctuationaux && result !== langs[charUsageBCP].punctuationaux) langdata += 'punctuationaux '
-    usedNonASCII += result
-
-    result = listCharsInSpreadsheet('symbols').join('')
-    out += `symbol:"${ result }", `
-    if (langs[charUsageBCP].symbol && result !== langs[charUsageBCP].symbol) langdata += 'symbol '
-    usedNonASCII += result
-    result = listCharsInSpreadsheet('auxsymbols').join('')
-    if (result !== '') out += `symbolaux:"${ result }", `
-    if (langs[charUsageBCP].symbolaux && result !== langs[charUsageBCP].symbolaux) langdata += 'symbolaux '
-    usedNonASCII += result
-
-    result = listCharsInSpreadsheet('other').join('')
-    out += `other:"${ result }", `
-    //if (langs[charUsageBCP].other && result !== langs[charUsageBCP].other) langdata += 'other '
-    result = listCharsInSpreadsheet('auxother').join('')
-    if (result !== '') out += `otheraux:"${ result }", `
-    //if (langs[charUsageBCP].auxother && result !== langs[charUsageBCP].auxother) langdata += 'auxother '
-
-    result = listCharsInSpreadsheet('possibles').join('')
-    out += `aux:"${ result }", `
-    //if (langs[charUsageBCP].other && result !== langs[charUsageBCP].other) langdata += 'other '
-
-    out += `\n</td>
-        <!--<td id="ssCharListTotal">${ result.length }</td>-->
-        <td id="ssCharListTotal" style="border:0;">&nbsp;</td>
-        <td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('cUsage').textContent)"></td>${ shareCodeLinks(usedNonASCII,scriptISO,pickerName) }</tr>`    
-    
-    
-    if (langdata !== 'Update the following in xx-langdata.js: ') out += `<tr><th></th><th colspan="2" style="text-align:start; color:red;">${ langdata }</th></tr>`
-    else out += `<tr><th></th><th colspan="2" style="text-align:start">${ langTag }-langdata.js matches!</th></tr>`
-    
-    // out += `<tr><th></th><th colspan="2" style="text-align:start">Also update xx-langdata.js</th></tr>`
-
-
-    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
-
-
-
-    // create entry for character use
-    /*out += '<tr><th colspan="3">Possible additions from the spreadsheet</th></tr>'
-    result = listCharsInSpreadsheet('possibles').join('')
-    out += `<tr><th>TBC</th><td id="toInvestigate" style="word-break:break-all;">${ result }</td><td id="toInvestigateTotal">${ result.length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('toInvestigate').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`*/
-
-    out += `</table>`
-    out += `<details><summary>More details</summary>`
-    out += `<table style="margin-inline-start:7.5%; margin-inline-end:32%;">`
-
-
-
-
-    
-    //   BLOCK PAGE   
-    
-    
-    
-    out += '<tr><th></th><th colspan="2" style="text-align:start">&nbsp;</th></tr>'
-
-    out += '<tr><th></th><th colspan="2" style="text-align:start">Block details</th></tr>'
-
-
-
-    // show unique characters in the xx-details.html file
-    out += `<tr><th>All</th><td id="allPageList" style="word-break:break-all;">${ blockChars.join('') }</td><td id="allPageListTotal">${ blockChars.length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allPageList').textContent)"></td>${ shareCodeLinks(blockChars.join(''),scriptISO,pickerName) }</tr>`
-    
-
-
-
-    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
-
-
-
-
-
-
-    
-    //   THIS PAGE   
-    // find out what's in the index but not in the spreadsheet
-    result = ''
-    for (var t=0;t<mainIndexArray.length; t++) {
-        if (! usedSpreadsheetChars.includes(mainIndexArray[t])) result += mainIndexArray[t]
-        }
-    out += `<tr><th>Used index extras</th><td id="indexSurplus" style="word-break:break-all;">${ result }</td><td id="indexSurplusTotal">${ [...result.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('indexSurplus').textContent)"></td>${ shareCodeLinks(result,scriptISO,pickerName) }</tr>`
-
-
-
-
-    
-    out += '<tr><th></th><th colspan="2" style="text-align:start">&nbsp;</th></tr>'
-
-    out += '<tr><th></th><th colspan="2" style="text-align:start">This page</th></tr>'
-
-    // show unique characters in .codepoint or .listItem throughout the page
-    // the list allchars is assembled as a string elsewhere - convert to an array for supp chars
-    out += `<tr><th>All</th><td id="allPageList" style="word-break:break-all;">${ allPageChars.join('') }</td><td id="allPageListTotal">${ allPageChars.length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allPageList').textContent)"></td>${ shareCodeLinks(allPageChars.join(''),scriptISO,pickerName) }</tr>`
-    
-
-
-
-    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
-
-
-
-
-    //   INDEX   
-
-    out += '<tr><th></th><th colspan="2" style="text-align:start">Index</th></tr>'
-    
-    
-    // show all index characters
-    out += `<tr><th>All</th><td id="allIndexList" style="word-break:break-all;">${ allIndexChars.join('') }</td><td id="allIndexListTotal">${ allIndexChars.length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('allIndexList').textContent)"></td>${ shareCodeLinks(allIndexChars.join(''),scriptISO,pickerName) }</tr>`
-    
-    
-    // all index items
-    out += `<tr><th>Used</th><td id="usedIndexList" style="word-break:break-all;">${ mainIndexArray.join('') }</td><td id="usedIndexListTotal">${ [...mainIndexArray].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('usedIndexList').textContent)"></td>${ shareCodeLinks(mainIndexArray.join(''),scriptISO,pickerName) }</tr>`
-    
-    // unused items in index
-    out += `<tr><th>Unused</th><td id="asciiIndexList" style="word-break:break-all;">${ unusedIndexArray.join('') }</td><td id="asciiIndexListTotal">${ [...unusedIndexArray].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('asciiIndexList').textContent)"></td>${ shareCodeLinks(unusedIndexArray.join(''),scriptISO,pickerName) }</tr>`
-    
-    // to be investigated items in index
-    out += `<tr><th>TBC</th><td id="asciiIndexList" style="word-break:break-all;">${ tbcIndexArray.join('') }</td><td id="tbcIndexListTotal">${ [...tbcIndexArray].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1rem;" onclick="navigator.clipboard.writeText(document.getElementById('asciiIndexList').textContent)"></td>${ shareCodeLinks(tbcIndexArray.join(''),scriptISO,pickerName) }</tr>`
-
-
-
-
-
-    // what's in the page but not in the index
-    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
-
-    out += '<tr><th></th><th colspan="2" style="text-align:start">Page &amp; Index differences</th></tr>'
-
-    out += `<tr><th>Page extras</th><td id="pageExtras" style="word-break:break-all;">${ pageYesIndexNo }</td><td id="pageExtrasTotal">${ [...pageYesIndexNo.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('pageExtras').textContent)"></td>${ shareCodeLinks(pageYesIndexNo,scriptISO,pickerName) }</tr>`
-
-    
-    out += `<tr><th>Index extras</th><td id="indexExtras" style="word-break:break-all;">${ pageNoIndexYes }</td><td id="indexExtrasTotal">${ [...pageNoIndexYes.replace(/ /g,'')].length }</td><td class="indexShareLinks"><img src="../img/icons/copytiny.svg" alt="Copy" style="height:1.2rem;" onclick="navigator.clipboard.writeText(document.getElementById('indexExtras').textContent)"></td>${ shareCodeLinks(pageNoIndexYes,scriptISO,pickerName) }</tr>`
- 
-    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
-
-
-    out += `</table></details>`
-    out += `</tr>`
-
-
-	document.getElementById('charCountList').innerHTML = out
-    }
 
 
 
@@ -1406,30 +775,36 @@ function listCharsInSpreadsheet (howmuch) {
 
 
 
-
-
-
-
-function getOrthographyList (type, location, spaced=false) {
+function getOrthographyList (type, location, spaced = false) {
+	// harvest characters from rendered index lists
     // this is a modified version of runCharCount, adapted to harvest characters after the 
     // page has been rendered, and used by the links in the Basic Summary section on click
     // it requires the presence of #index
-	var charlists, out
-	if (document.getElementById('index') == null) {
-        alert('No #index element (in getOrthographyList)')
-        return
-        }
-    else charlists = document.querySelectorAll('#index '+type+' .listItem')
-    var chars = ''
-	for (let i=0;i<charlists.length;i++) chars += charlists[i].textContent
-    var charlistArray = [...chars]
-	const uniqueSet = new Set(charlistArray)
-	var uniqueArray = [...uniqueSet]
-	
-    if (spaced) out = uniqueArray.toString().replace(/,/g,' ')
-	else out = uniqueArray.toString().replace(/,/g,'')
-    return out
-	}
+
+	const indexEl = document.getElementById('index')
+	if (!indexEl) {
+		alert('No #index element (in getOrthographyList).')
+		return ''
+	    }
+
+	// collect all list items under the requested selector
+	const items = indexEl.querySelectorAll(type + ' .listItem')
+	if (!items.length) return ''
+
+	// build a string of all characters
+	let chars = ''
+	for (let i = 0; i < items.length; i++) chars += items[i].textContent
+
+	// dedupe while preserving order
+	const unique = [...new Set([...chars])]
+
+	// output formatting
+	return spaced
+		? unique.join(' ')
+		: unique.join('')
+}
+
+
 
 
 
@@ -1438,12 +813,30 @@ function getOrthographyList (type, location, spaced=false) {
 
 
 function pointToSummaryPages () {
-    // create links for various anchors such as line-breaking properties etc
-    
-    if (document.getElementById('showLinebreaks')) document.getElementById('showLinebreaks').href = '../apps/listlinebreak/index.html?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))
+	console.log(`>>> pointToSummaryPages()
+    Create links for various anchors such as line-breaking properties etc.
+    Called by ${ getCallerName() }.`)
 
-    if (document.getElementById('showBidiClass')) document.getElementById('showBidiClass').href = '../apps/listbidi/index.html?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))
-	}
+	const charList =
+		getOrthographyList('.characterBox', 'index', true) +
+		getOrthographyList('.auxiliaryBox', 'index', true)
+
+	const encoded = encodeURI(charList)
+
+	const showLinebreaks = document.getElementById('showLinebreaks')
+	if (showLinebreaks)
+		showLinebreaks.href = '../apps/listlinebreak/index.html?chars=' + encoded
+
+	const showBidiClass = document.getElementById('showBidiClass')
+	if (showBidiClass)
+		showBidiClass.href = '../apps/listbidi/index.html?chars=' + encoded
+    }
+
+
+
+
+
+
 
 
 
@@ -1453,40 +846,64 @@ function pointToSummaryPages () {
 
 
 function doHeadersFooters (orthogNotesFile) {
-    if (traceSet.has('doHeadersFooters') || traceSet.has('all')) console.log('doHeadersFooters(',orthogNotesFile,') Add links to top of document')
-	// adds links to top of document
-	// orthogNotesFile is of the form arabic/arb or arabic/ur
+    // console.log('doHeadersFooters(',orthogNotesFile,') Add links to top and bottom of document')
+    // orthogNotesFile is set in xx-globals.js and looks like "arab/arb"
 
-	if (document.getElementById('versionTop') === null) return
-	
+	const topEl = document.getElementById('versionTop')
+	const bottomEl = document.getElementById('version')
 
-	//parse the orthogNotesFile
-	var filename = ''
-	var directory = ''
-	var path = orthogNotesFile.split('/')
-	directory = path[0]
-	if (path.length === 1) {
-		filename = path[0]
-		}
-	else {
-		filename = path[1]
-		}
-		
+	if (! topEl) {
+		alert('Element #versionTop not found in doHeadersFooters')
+		return
+	   }
 
-	var out = '&bull; recent changes <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'" title="Show commits for scripts/'+directory+'.">'+directory+'</a>'
-	if (path.length > 1) out += '/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'/'+filename+'.html" title="Show commits for scripts/'+filename+'.">'+filename+'</a>'
-	
-	out += ' &bull; leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=['+orthogNotesFile.replace(/index/,'')+']%20%20BRIEF_TITLE_GOES_HERE&body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2F'+orthogNotesFile+'%0A%0A" title="Leave a comment.">comment</a>'
-	
-	document.getElementById('versionTop').innerHTML = out
-	
-	
-	out = ''
-	out += 'See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'">recent changes</a>. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5B'+orthogNotesFile+'%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2F'+directory+'%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>'
-	
-	
-	document.getElementById('version').innerHTML = out
-	}
+	if (! bottomEl) {
+		alert('Element #version not found in doHeadersFooters')
+		return
+	   }
+
+	// Validate orthogNotesFile format
+	if (! orthogNotesFile.includes('/')) {
+		alert('Global variable orthogNotesFile must contain two parts (in doHeadersFooters)')
+		return
+	   }
+
+	// Extract directory + filename once
+	const [directory, filename] = orthogNotesFile.split('/')
+
+	// Build top‑of‑page links
+	let out = `
+&bull; recent changes 
+<a target="_blank"
+	href="https://github.com/r12a/scripts/commits/gh-pages"
+	title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank"
+	href="https://github.com/r12a/scripts/commits/gh-pages/${directory}"
+	title="Show commits for scripts/${directory}.">${directory}</a>/<a target="_blank"
+	href="https://github.com/r12a/scripts/commits/gh-pages/${directory}/${filename}.html"
+	title="Show commits for scripts/${directory}/${filename}.">${filename}</a>
+
+&bull; leave a 
+<a target="_blank"
+	href="https://github.com/r12a/scripts/issues/new?title=[${orthogNotesFile}]%20%20BRIEF_TITLE_GOES_HERE&body=Source%3A%20https%3A%2F%2Fr12a.github.io%2Fscripts%2F${orthogNotesFile}.html%0A%0A"
+	title="Leave a comment.">comment</a>
+`.trim()
+
+	topEl.innerHTML = out
+
+	// Build footer links
+	out = `
+See <a target="_blank"
+	href="https://github.com/r12a/scripts/commits/gh-pages/${directory}">recent changes</a>.
+&nbsp;&bull;&nbsp;
+Make a <a target="_blank"
+	href="https://github.com/r12a/scripts/issues/new?title=%5B${orthogNotesFile}%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2F${directory}%2F%0A%0A">comment</a>.
+&nbsp;&bull;&nbsp;
+Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC‑By</a>
+© <a href="mailto:r12a@w3.org">r12a</a>.
+`.trim()
+
+	bottomEl.innerHTML = out
+}
 
 
 
@@ -2078,19 +1495,6 @@ function makeSidePanel () {
 
 
 
-function makeTables (lang) {
-    // console.log('makeTables(',lang,') Create the lists of characters in yellow, etc. boxes')
-
-    let tables, node, chars, info, showLast, out, char, indexline
-    
-    tables = document.querySelectorAll('.auto')
-
-	// for each figure in the document...
-    for (let t=0;t<tables.length;t++) {
-        replaceStuff(tables[t])
-        }
-    }
-
 
 
 function getStatus (token) {
@@ -2116,11 +1520,30 @@ function getStatus (token) {
 
 
 
-function replaceStuff (node) {  // Copilot optimised
-   // console.log('>>> replaceStuff( ',node,')')
-  // Build character boxes and replace source node content with generated HTML.
-  // Behaviour preserved from original: handles .index context, dataset flags,
-  // optional images/fonts, IPA/latin/meaning display, status, links, and codepoints.
+
+function expandCharacterBoxes (lang) {
+    console.log(`>>> expandCharacterBoxes(${ lang })
+    Create the lists of characters in yellow, etc. boxes.
+    Called by ${ getCallerName() }.`)
+
+	const tableNodeList = document.querySelectorAll('.auto')
+
+	for (let tableNode of tableNodeList)
+		buildCharacterBox(tableNode)
+    
+    setOnclicks()
+    }
+
+
+
+
+
+
+function buildCharacterBox (node) {
+    console.log(`>>> buildCharacterBox( ${ node })\n\t
+    Build character boxes and replace source node content with generated HTML.
+    Called by ${ getCallerName() }.`)
+    // optional images/fonts, IPA/latin/meaning display, status, links, and codepoints.
 
   // Quick guards
   if (!node) return
@@ -2140,7 +1563,7 @@ function replaceStuff (node) {  // Copilot optimised
   // Index line detection
   const indexline = hasClass(node, 'indexline')
 
-  // Split the source characters by comma exactly as original did
+  // Split the source characters by comma
   // Keep original empty items where present; trim not used to preserve spaces
   const chars = node.textContent.split(',')
 
@@ -2209,26 +1632,19 @@ function replaceStuff (node) {  // Copilot optimised
   out += `<div class="listAllOptions" style="">`
   // Summary / listAll block: count visible items (ignore plain spaces)
   const visibleCount = chars.reduce((acc, x) => acc + (x === ' ' ? 0 : 1), 0)
-  out += `<div class="listAll" onClick="listAllCL(this, '${ window.langTag }')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>`
+  out += `<div class="listAll" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>`
   out += (visibleCount === 2) ? 'both' : (visibleCount > 2 ? visibleCount : '')
   out += `</div>`
 
-  // Show unique components
-  /*if (showUnique) {
-    out += `<div class="listAll" onclick="listAllCL(this, '${ window.langTag }', 'unique')" title="Show all unique items in this list."><span style="cursor:pointer; font-size:1.2em; color: chocolate;">#</span> ${ countUniqueChars(chars) }</div>`
-    }*/
 
   if (showUnique) {
-    out += `<div class="listAll" style="line-height:1; margin-block:.5rem;" onclick="listAllCL(this, '${ window.langTag }', 'unique')" title="Show all unique items in this list."><span style="cursor:pointer; font-size:1.8em; color: chocolate;">\u29C8</span><br>${ countUniqueChars(chars) }</div>`
+    out += `<div class="listAll showUnique" style="line-height:1; margin-block:.5rem;" title="Show all unique items in this list."><span style="cursor:pointer; font-size:1.8em; color: chocolate;">\u29C8</span><br>${ countUniqueChars(chars) }</div>`
     }
 
-  /*if (showUnique) {
-    out += `<div class="listAll" style="line-height:1; margin-block:.5rem;" onclick="listAllCL(this, '${ window.langTag }', 'unique')" title="Show all unique items in this list.">Unique<br>${ countUniqueChars(chars) }</div>`
-    }*/
 
   // Expansion control if allowed
   if (!noexpansion) {
-    out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; /*margin-inline-end:1rem;*/"></div>`
+    out += `<div class="expandAll" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; /*margin-inline-end:1rem;*/"></div>`
     }
 
   out += `</div>` // ends listAllOptions
@@ -2325,7 +1741,7 @@ function replaceStuff (node) {  // Copilot optimised
         if (ignoreset.has(charList[z])) continue
         const dec = charList[z].codePointAt(0)
         const hex = normaliseHex(dec)
-        out += `<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">${ hex }</span>`
+        out += `<span class="listUnumCP">${ hex }</span>`
         if (charList.length > 1 && z < charList.length - 1) out += '<br/>'
         }
       out += '</span>'
@@ -2362,6 +1778,8 @@ function replaceStuff (node) {  // Copilot optimised
   out += `</div>`
   node.innerHTML = out
   }
+
+
 
 
 function countUniqueChars(chars) {
@@ -2432,38 +1850,37 @@ function showUniqueCharsPopover(uniqueCharsString) {
 
 
 
-function listAllCL (node, lang, unique) {
-    const itemlist = node.closest('figure').querySelectorAll('.listItem')
-    const ipalist = node.closest('figure').querySelectorAll('.listIPA')
-    const direction = node.closest('figure').dataset.dir ? ' dir="rtl"' : ''
-    let out = ''
-    let ipa = ''
 
-    // Build the raw string
-    for (let i = 0; i < itemlist.length; i++) {
-        out += itemlist[i].textContent + ' '
-        }
+function unumToPanel (evt) {
+    console.log(`>>> unumToPanel(evt)
+    Gather data from hex numbers below a listItem and send it/them to displayCharacterList.
+    Called by ${ getCallerName() }.`)
 
-    // Remove unwanted characters
-    out = out.replace(/-/g, '')
-    out = out.replace(/•/g, '')
+    node = evt.target.closest('.listUnum')
+    lang = window.langTag
 
-    // If 'unique' is defined, convert 'out' to a space-separated list of unique characters
-    if (unique) {
-        out = out.replace(/\u25CC/g, '')
-        const chars = [...out]                  // split into characters
-        const uniqueChars = [...new Set(chars)] // remove duplicates
-            .filter(ch => ch.trim() !== '')     // remove spaces/newlines
+    // gather the nodes from across the listItem hex numbers
+	const itemNodeList = node.querySelectorAll('.listUnumCP')
+    const rawItemArray = Array.from(itemNodeList, node => String.fromCodePoint(parseInt(node.textContent, 16)))
+    
+    let itemArray = []
+    let ipaArray = [node.closest('.listPair').querySelector('.listIPA').textContent]
 
-        out = uniqueChars.join(' ')
-        }
-    else { // create a list of IPA equivalents
-        for (let i = 0; i < ipalist.length; i++) {
-            ipa += ipalist[i].textContent + ','
-            }
-        }
+    itemArray = rawItemArray
+    //const ipaNodeList = figure.querySelectorAll('.listIPA')
+    //ipaArray = Array.from(ipaNodeList, node => node.textContent)
 
-    showCLNameDetails(out, lang, window.blockDirectory, 'c', document.getElementById('panel'), 'list', '',ipa, direction)
+    const transcriptionsArray = itemArray.map(g => transliteratePanel(g, lang))
+
+    const direction = ''
+
+	listCharactersInPanel(
+		itemArray,
+		ipaArray,
+        transcriptionsArray,
+		lang,
+		direction
+        )
     }
 
 
@@ -2471,749 +1888,245 @@ function listAllCL (node, lang, unique) {
 
 
 
-function showCLNameDetails (chars, clang, base, target, panel, list, translit, ipa, direction) {
-    console.log('showNameDetails (',chars, clang, base, target, panel, list, translit, ipa,')\n\tGet the list of characters for an example and display their names')
+
+function characterBoxToPanel (evt) {
+    console.log(`>>> characterBoxToPanel(evt),
+    Gather data from a character box and send it to displayCharacterList.
+    Called by ${ getCallerName() }.`)
     
-    // called by onclick created by shownames_setOnclick & shownames_setImgOnclick & listAll
-    // chars (string), alt text of example
-    // clang (string), lang attribute value of example img
-    // base (string), path for link to character detail
-    // target (string), name of the window to display results in, usually 'c' or ''; given the latter, link goes to same window
-    // list (string), if not null, indicates that spaces and nbsp should be ignored
-    // local out charArray chardiv charimg thename thelink hex dec blockname blockfile c
+    node = evt.target.closest('.listAll')
+    if (node === null) return
+    console.log(evt.target)
+    console.log('***NODE', node)
+    lang = window.langTag
+    //unique = node.classList.contains('showUnique')
+    let unique = false
+    if (node.classList.contains('showUnique')) unique = true
+    
+	const figure = node.closest('figure')
+	if (!figure) return  // shortcut the function when topping up newly generated data
+
+    // gather the nodes from across the characterBox
+	const itemNodeList = figure.querySelectorAll('.listItem')
+    const rawItemArray = Array.from(itemNodeList, node => node.textContent)
+    
+    let itemArray = []
+    let ipaArray = []
+
+    if (unique) {
+        const chars = rawItemArray.join('')
+            .replace(/◌/g,'') // merge all items & remove dotted circles
+        const charArray = [...chars]            // split into characters
+        itemArray = [...new Set(charArray)]     // remove duplicates
+            .filter(ch => ch.trim() !== '')     // remove spaces/newlines
+        }
+    else {
+        itemArray = rawItemArray
+        const ipaNodeList = figure.querySelectorAll('.listIPA')
+        ipaArray = Array.from(ipaNodeList, node => node.textContent)
+        }
+
+    const transcriptionsArray = itemArray.map(g => transliteratePanel(g, lang))
+
+    const direction = figure.dataset.dir ? ' dir="rtl"' : ''
+
+	listCharactersInPanel(
+		itemArray,
+		ipaArray,
+        transcriptionsArray,
+		lang,
+		direction
+        )
+    }
+
+
+
+
+
+
+function listCharactersInPanel (itemArray, ipaArray, transcriptionsArray, clang, direction) {
+    console.log('>> listCharactersInPanel (\n\titemArray=',itemArray, '\n\tipaArray=',ipaArray, '\n\ttranscriptionsArray=',transcriptionsArray,'\n\tclang=', clang,'\n\t)\n\tCreate a panel at bottom-right and add glosses, character lists, & buttons.')
+
+    // called by onclick characterBoxToPanel, created by setCharacterBoxOnclicks
+    // itemArray, native text for listItems
+    // ipaArray, ipa items, if any, for each itemArray item
+    // transcriptionsArray, transcriptions for each item
+    // clang (string), lang attribute value of listItems
     // global charData pickerDir
-    // calls getScriptGroup
 
-    // to show per-grapheme ipa the ipa transcriptions should have , as grapheme separator (and syllables should be separated by '.'). Unpronounced segments are represented by – (en hyphen).  Monosyllabic words don't need any extra stuff.
-    // កន្ត្រៃ|scissors|kɑː,n.,t,raj,–
+    // to show per-grapheme ipa there needs to be a data-ipa attribute
 
-    // locals
-    var dir, characterList, graphemes, ptr, transcriptions, gloss, charArray
-	var chardiv, charimg, thename, thelink, hex, dec, blockname, blockfile
-
-
-	// check whether the calling page has set a base and target window: if not base, point to UniView
-	if(typeof base === 'undefined' || base === '') { base = '../../uniview/index.html?char=' }
-	if(typeof target === 'undefined') { target = 'c' }
-	if(typeof list === 'undefined') { list = null }
-	if(typeof translit === 'undefined') { translit = '' }
-	  
-	// clear and show the panel
-	panel.innerHTML = ''
-	panel.style.display = 'block'
-    dir = ''
-    if (typeof window.direction === 'string') dir = window.direction
-    else if (typeof template !== 'undefined' && typeof template.direction === 'string') dir = template.direction
+    const base = window.blockDirectory
+    const target = 'c'
+    const panel = document.getElementById('panel')
     
-    
+    let chars = itemArray.join(' ')  // eventually remove this...
+
+	document.getElementById('panel').innerHTML = ''
+	document.getElementById('panel').style.display = 'block'
+
+
+
+
 	let out = '<div id="ruby">'
-	
-    // get any IPA data provided - should be pre-separated for graphemes by ,
-    if (typeof ipa === 'string' && ipa !== '') ipa = ipa.split(',')
-    else ipa = false
-    
-    
-	// add the example to the panel as a title
-    //characterList = [...chars]
-    graphemes = chars.split(' ')
-    /*ptr = -1
-    for (var c=0;c<characterList.length;c++) {
-        if (window.marks && window.marks.has(characterList[c]) && c !== 0) graphemes[ptr] += characterList[c]
-        else {
-            ptr++
-            graphemes[ptr] = characterList[c]
-            }
-        }*/
 
-    transcriptions = []
-    for (var t=0;t<graphemes.length;t++) {
-        transcriptions[t] = transliteratePanel(graphemes[t], clang)
-        }
-    
-    console.log('graphemes: ',graphemes)
-    console.log('transcriptions: ',transcriptions)
-    console.log('ipa: ',ipa)
+	console.log('*** graphemes:', itemArray)
+	console.log('*** transcriptions:', transcriptionsArray)
+	console.log('*** ipa:', ipaArray)
 
+	// Gloss block
+	const iconURL = '../img/icons/copytiny.svg'
+	let gloss = '<div class="multilineGlossedText">'
 
-    // draw the glosses
-    iconURL = '../img/icons/copytiny.svg'
-    gloss = '<div class="multilineGlossedText">'
-    for (t=-1;t<graphemes.length;t++) {
-        if (t===-1) {
-            gloss += `<div class="stack"><span class="rt translitGloss" lang="und-fonipa" title="Transliteration of the text."><img src="${ iconURL }" class="copyIcon" onclick="copyPanelText('.translitGloss')" title="Copy the transliteration." alt="Copy transliteration"></span><span class="rb"><img src="${ iconURL }" onclick="copyPanelText('.rb')" class="copyIcon" title="Copy the text." alt="Copy text"></span>`
-            if (ipa !== false) {
-                if (ipa[t+1]) gloss += `<span class="rt IPAGloss" lang="und-fonipa" title="IPA transcription of the text."><img class="copyIcon" src="${ iconURL }" onclick="copyPanelText('.IPAGloss')" title="Copy the IPA transcription." alt="Copy IPA"></span>`
-                else gloss += `<span class="rt">&nbsp;</span>`
-                }
-            gloss += `</div>`
-            }
-        else {
-            gloss += ` <div class="stack"><span class="rt translitGloss" lang="und-fonipa">${ transcriptions[t] }</span><span class="rb"${ direction }>${ graphemes[t] }</span>`
-            if (ipa !== false) {
-                if (ipa[t]) gloss += `<span class="rt IPAGloss" lang="und-fonipa">${ ipa[t] }</span>`
-                else gloss += `<span class="rt">&nbsp;</span>`
-                }
-            gloss += `</div>`
-            }
-        }
-    gloss += '</div>'
+	for (let t = -1; t < itemArray.length; t++) {
+		if (t === -1) {
+			gloss += `<div class="stack">
+				<span class="rt translitGloss" lang="und-fonipa" title="Transliteration of the text.">
+					<img src="${ iconURL }" class="copyIcon" onclick="copyPanelText('.translitGloss')" title="Copy the transliteration." alt="Copy transliteration">
+				</span>
+				<span class="rb">
+					<img src="${ iconURL }" onclick="copyPanelText('.rb')" class="copyIcon" title="Copy the text." alt="Copy text">
+				</span>`
 
-	//out += `<div dir="${ dir }" class="ex" lang="${ clang }" id="title">${ gloss }</div>`
-    // removing the alternating direction so that IPA reads better
-	//out += `<div dir="${ window.blockDirection }" class="ex" lang="${ clang }" id="title">${ gloss }</div>`
-	out += `<div dir="ltr" class="glossContainer" lang="${ clang }" id="title">${ gloss }</div>`
-    
-        
-    
-    // add instructions line
-	out += '<p id="advice" style="line-height:1;">Glossed lines are transliteration/text/IPA.<br>Click on character names below for detailed information.</p>'
-	
-	// create a list of characters
-	if (list) chars = chars.replace(/ /g,'').replace(/\u00A0/g,'') // remove spaces if list
-    charArray = [...chars]
-    
-    if (traceSet.has('showNameDetails')) console.log('charArray: ',charArray)
+			if (ipaArray.length > 0)
+				gloss += ipaArray[0] ? `<span class="rt IPAGloss" lang="und-fonipa"><img class="copyIcon" src="${ iconURL }" onclick="copyPanelText('.IPAGloss')" title="Copy IPA" alt="Copy IPA"></span>` : `<span class="rt">&nbsp;</span>`
 
-    out += '<div id="listOfCharacters">'
-	for (var c=0; c<charArray.length; c++) { 
-        dec = charArray[c].codePointAt(0)
-        hex = dec.toString(16)
-        while (hex.length < 4) { hex = '0'+hex }
-        hex = hex.toUpperCase()
- 
-        //if (traceSet.has('showNameDetails')) console.log('charData: ',charData)
-        //if (traceSet.has('showNameDetails')) console.log('charArray[c]: ',charArray[c])
-
-		if (charData[charArray[c]]) {
-            blockname = getScriptGroup(dec, false)
-            blockfile = getScriptGroup(dec, true)
-            //console.log(dec,blockfile)
-            isInBlock = spreadsheetRows[charArray[c]]?true:false
-            //isInBlock = spreadsheetRows[charArray[c]]?spreadsheetRows[charArray[c]][cols['block']]:''
-
-            out += '<div class="panelCharacter">'
-			//if (blockfile) {
-			if (isInBlock) {
-				//out += `<a target="${ target }" href="`
-                // undoing this change which put characters in the list because imgs are needed in order to make the list to copy to clipboard
-                // out += `<span style="display:inline-block; font-size:1.5rem; min-width: 2rem;">${ charArray[c] }</span>`
-                
-                // copy character to clipboard
-                out += `<img title="Copy U+${ hex } ${ charData[charArray[c]] } to clipboard." onclick="copyCharToClipboard('U+${ hex } ${ charData[charArray[c]] }');" 
-                src="../../pickers/shared29/images/toprow/copytiny.svg" 
-                style="float:right; height: 1rem; border:0; border-radius:unset; margin-inline:.4em;" alt="Copy" 
-                onmouseover="showMenuText(this.title,'tan');" onmouseout="hideMenuText()">`
-                
-                // copy character name to clipboard
-                out += `<img title="Copy ${ charArray[c] } to clipboard." onclick="copyCharToClipboard('${ charArray[c] }');" 
-                src="../../pickers/shared29/images/toprow/copytiny.svg" 
-                style="float:right; height: 1rem; border:0; border-radius:unset;" alt="Copy" 
-                onmouseover="showMenuText(this.title,'tan');" onmouseout="hideMenuText()">`
-                
-                out += `<img class="pcImg" src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }" style="height:2rem;">`
-                
-                // FOR ORTHOGRAPHY NOTES
-                if (document.querySelector('.useBlockExamples')) {
-                    out += `<a href="javascript:void(0)" onclick="showCharDetailsInPanel(event)"> U+${ hex } ${ charData[charArray[c]] }</a>`
-                    }
-                
-                // FOR TERMS LISTS
-                else if (document.querySelector('.termListApp')) {
-                    out += `<a target="c" href="../../scripts/${ blockfile }/${ terms.language }-characters.html#char${ hex }"> U+${ hex } ${ charData[charArray[c]] }</a>`
-                    console.log('blockfile',terms.language )
-                    }
-
-                // FOR PICKERS
-                /*else if (location.toString().includes('picker')) {
-                    out += `<a target="c" href="../../scripts/${ blockfile }/${ factoryDefaults.language }-characters.html#char${ hex }"> U+${ hex } ${ charData[charArray[c]] }</a>`
-                    console.log('blockfile',factoryDefaults.language )
-                    }*/
-
-                else if (location.toString().includes('picker')) {
-                    out += `<a href="javascript:void(0);"
-                        onclick="
-                            document.getElementById('notesDisplayIframe').style.display = 'block'; 
-                            document.getElementById('notesDisplayIframe').src = '../../scripts/${ blockfile }/character.html?q=${ charArray[c] }&amp;showX#${ factoryDefaults.language }';
-                            "
-                        > U+${ hex } ${ charData[charArray[c]] }</a>`
-                    console.log('blockfile',factoryDefaults.language )
-                    }
-
-                else {
-                    out += `<a target="c" href="`
-                    //if (base === '../../uniview/index.html?char=') out += base+hex
-                    //else out += '../../scripts/'+blockfile+'/block.html#char'+hex useBlockExamples
-                    out += '../../scripts/'+blockfile+'/block.html#char'+hex
-                    out += '">'
-                    //out += '<img src="'+'../../c/'+blockname+"/"+hex+'.png'+'" alt="'+charArray[c]+'">'
-                    out += ' U+'+hex + ' '+charData[charArray[c]]
-                    out += '</a>\n'
-                    }
-				}
-			else {
-				out += '<img src="'+'../../c/'+blockname+"/large/"+hex+'.png'+'" alt="'+charArray[c]+'" style="height:2rem;">'
-				out += ' U+'+hex+' '+charData[charArray[c]]+'\n'
-				}
-			}
+			gloss += `</div>`
+		    }
 		else {
-			//out += `<a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/Basic_Latin/005F.png" alt="U+${ hex }"> U+${ hex } No data for this character</a>`
-			out += `<div class="panelCharacter"><a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }"> U+${ hex } No data for this character</a></div>`
-			}
-		out += '</div>'
-		}
-	out += '</div>'
-	
-    
-	// write out the bottom line
-	out += '<p style="text-align:left; margin-block-start: 1em; line-height:2rem;" id="panelSharingLine">'
-    //out += '<button onclick="document.getElementById(\'panelShare\').style.display=\'block\'">Export</button> \u00A0 '
-    out += '<button onclick="copyPanelList()" style="cursor:copy;">Copy list</button> \u00A0 '
-	
-    out += `<button onclick="openExportWindow('../../app-analysestring/index.html?chars=${ chars }')">Details</button> \u00A0 `
-	
-    out += `<button onclick="openExportWindow('../../uniview/index.html?charlist=${ chars }')">UniView</button> \u00A0 `
-	
-    out += `<button onclick="openExportWindow('../../scripts/apps/graphemes/index.html?gc=${ chars }')">Graphemes</button> \u00A0 `
-	
-    if (window.pickerDir) {
-        out += `<button onclick="openExportWindow('../../pickers/${ window.pickerDir }/index.html?text=${ chars }')">Character workbench</button> \u00A0 `
+			gloss += `<div class="stack">
+				<span class="rt translitGloss" lang="und-fonipa">${ transcriptionsArray[t] }</span>
+				<span class="rb">${ itemArray[t] }</span>`
+
+			if (ipaArray.length > 0)
+				gloss += ipaArray[t] ? `<span class="rt IPAGloss" lang="und-fonipa">${ ipaArray[t] }</span>` : `<span class="rt">&nbsp;</span>`
+
+			gloss += `</div>`
+		    }
 	   }
-
-    // add a link to the _terms page
-    if (typeof window.languageName === 'undefined') var fragid = ''
-    else fragid = '#'+window.languageName
-
-    // figure out where to find the url for the _terms page
-    var url
-    if (typeof template !== 'undefined' && typeof template.vocablocation === 'string')  url = `../../scripts/${ template.vocablocation }.html`
+	gloss += '</div>'
     
-    else url = `${ window.langTag }_terms`
-    
-    if (typeof window.removeVowels === 'function') chars = removeVowels(chars)
+	out += `<div dir="ltr" class="glossContainer" lang="${ clang }" id="title">${ gloss }</div>`
 
-    out += `<button onclick="openExportWindow('${ url }.html?q=${ chars }')">Terms</button> \u00A0 `
-	
-	
-	// add a close button
-	out += '<p id="character_panel_close_button" '
-	out += ' onclick="document.getElementById(\'panel\').style.display = \'none\'"'
-	out += '>X</p>'
+
+
+	out += '<p id="advice" style="line-height:1;">Glossed lines are transliteration/text/IPA.<br>Click on character names below for detailed information.</p>'
+    
+    
+
+
+	// Character list
+	chars = chars.replace(/[ \u00A0]/g, '')
+
+	const charArray = [...chars]
+
+	out += '<div id="listOfCharacters">'
+
+	for (let ch of charArray) {
+		const dec = ch.codePointAt(0)
+		let hex = dec.toString(16).toUpperCase().padStart(4, '0')
+
+		if (charData[ch]) {
+			const blockname = getScriptGroup(dec, false)
+			const blockfile = getScriptGroup(dec, true)
+			const isInBlock = spreadsheetRows[ch] ? true : false
+
+            if (ch === '◌') { continue }
+            //if (ch === '◌') { out += `<hr>`; continue }
+            
+			out += '<div class="panelCharacter">'
+
+			if (isInBlock) {
+				out += `<img title="Copy U+${ hex } ${ charData[ch] } to clipboard."
+                    onclick="copyCharToClipboard('U+${ hex } ${ charData[ch] }')"
+                    src="../img/icons/copytiny.svg"
+                    style="float:right; height:1.2rem; margin-inline:.4em; border-radius:0; border:0;"
+                    alt="Copy">`
+				out += `<img title="Copy ${ ch } to clipboard."
+                    onclick="copyCharToClipboard('${ ch }')"
+                    src="../img/icons/copytiny.svg"
+                    style="float:right; height:1.2rem; margin-inline:.4em; border-radius:0; border:0;"
+                    alt="Copy">`
+				out += `<img class="pcImg"
+                    src="../../c/${ blockname }/large/${ hex }.png"
+                    alt="${ ch }"
+                    style="height:2rem;">`
+
+                //if (ch === '◌') out += `Placeholder for consonant`
+                /*else*/ out += `<a href="${ clang }-characters.html#char${ hex }" target="characters"> U+${ hex } ${ charData[ch] }</a>`
+                //else out += `<a href="javascript:void(0)" onclick="showCharDetailsInPanel(event)"> U+${ hex } ${ charData[ch] }</a>`
+			    }
+			else {
+				out += `<img src="../../c/${ blockname }/large/${ hex }.png" alt="${ ch }" style="height:2rem;">`
+				out += ` U+${ hex } ${ charData[ch] }`
+			}
+			out += '</div>'
+		}
+		else {
+			out += `<div class="panelCharacter"><a target="c" href="../../uniview/index.html?charlist=${ ch }&char=${ hex }"><img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ ch }"> U+${ hex } No data for this character</a></div>`
+		}
+	}
+
+	out += '</div>'
+
+	// Bottom buttons
+	out += '<p style="text-align:left; margin-block-start:1em; line-height:2rem;" id="panelSharingLine">'
+	out += '<button onclick="copyPanelList()" style="cursor:copy;">Copy list</button> \u00A0 '
+	out += `<button onclick="openExportWindow('../../app-analysestring/index.html?chars=${ chars.replace(/\u25CC/g,'') }')">Details</button> \u00A0 `
+	out += `<button onclick="openExportWindow('../../uniview/index.html?charlist=${ chars.replace(/\u25CC/g,'') }')">UniView</button> \u00A0 `
+	/*out += `<button onclick="openExportWindow('../../scripts/apps/graphemes/index.html?gc=${ chars.replace(/\u25CC/g,'') }')">Graphemes</button> \u00A0 `
+
+	let url = `${ window.langTag }_terms`
+	if (typeof window.removeVowels === 'function')
+		chars = removeVowels(chars)
+
+	out += `<button onclick="openExportWindow('${ url }.html?q=${ chars.replace(/\u25CC/g,'.') }')">Terms</button> \u00A0 `*/
+
+	out += '<p id="character_panel_close_button" onclick="document.getElementById(\'panel\').style.display=\'none\'">X</p>'
+
 	panel.innerHTML = out
+}
+
+
+
+
+
+function openExportWindow (url) {
+	var shareWindow = window.open(url, 'analyse') 
+	shareWindow.focus()
 	}
 
 
 
+function transliteratePanel (str, lang) {
+    // transliterate the rb tags in the panel
+    //console.log('>> transliteratePanel(',str,lang,')\n\tAutoTranslitArray',lang, autoTranslitArray[lang])
 
+    // exit if this isn't a full orthography page
+    if (typeof autoTranslitArray === 'undefined') return
 
+    var strArray = [...str]
+    str = ''
 
-function replaceStuffZ (node) {  // Copilot optimised
-  // Build character boxes and replace source node content with generated HTML.
-  // Behaviour preserved from original: handles .index context, dataset flags,
-  // optional images/fonts, IPA/latin/meaning display, status, links, and codepoints.
+    var exclusions = new Set(['(',')','[',']','.',' '])
 
-  // Quick guards
-  if (!node) return
-
-  // Helper: boolean class/dataset checks
-  const hasClass = (el, name) => el.classList.contains(name)
-  const ds = node.dataset || {}
-
-  // Context detection: where the rendered list appears (affects order)
-  const context = node.closest('.soundSummary') ? 'soundSummary'
-    : node.closest('.sectionCharacterList') ? 'sectionCharacterList'
-    : null
-
-  // Index line detection
-  const indexline = hasClass(node, 'indexline')
-
-  // Split the source characters by comma exactly as original did
-  // Keep original empty items where present; trim not used to preserve spaces
-  const chars = node.textContent.split(',')
-
-  // Build ignore set from data-ignore (comma separated)
-  const ignoreset = new Set((ds.ignore || '').split(',').filter(Boolean))
-
-  // Optional font style
-  const fontAttr = ds.font ? ` style="font-family: ${ ds.font }"` : ''
-
-  // Determine which info columns to show (default behaviour preserved)
-  let info = ''
-  if (typeof ds.ipa === 'undefined' && typeof ds.latin === 'undefined' && typeof ds.cols === 'undefined') {
-    info = 'ipa'
-  }
-  if (typeof ds.cols !== 'undefined') info += ds.cols
-
-  // Flags from classes / dataset
-  const noexpansion = hasClass(node, 'noexpansion')
-  const showLast = ds.select === 'last'
-  const showFirst = !showLast && !!ds.select
-  const ipaplusClass = hasClass(node, 'ipaplus')
-
-  // Parse datasets into arrays where applicable (preserve index alignment)
-  const notes = (ds.notes ? ds.notes.split(',') : [])
-  let extra = (ds.extra ? ds.extra.split(',') : [])
-  const extraLang = extra.length ? extra[extra.length - 1] : ''
-  if (extra.length) extra = extra.slice(0, -1)
-  const ipa = (ds.ipa ? ds.ipa.split(',') : [])
-  const latin = (ds.latin ? ds.latin.split(',') : [])
-  const links = (ds.links ? ds.links.split(',') : [])
-  const highlights = (ds.highlight ? ds.highlight.split(',') : [])
-  const dirn = ds.dir ? ` dir="${ ds.dir }"` : ''
-
-  // Helper: safe lookup of spreadsheetRows and cols with graceful fallback
-  const sheet = window.spreadsheetRows || {}
-  const cols = window.cols || {}
-
-  // Precompute whether status column should be shown (scan characters)
-  let showStatus = false
-  for (let c = 0; c < chars.length; c++) {
-    const ch = chars[c]
-    if (sheet[ch] && cols.status !== undefined && sheet[ch][cols.status]) {
-        if (String(sheet[ch][cols.status]).trim() !== '') { showStatus = true; break }
+    // fudge because in notes autoTranslitArray has a language level which is not present in pickers
+    if (autoTranslitArray[lang]) {
+        for (i=0;i<strArray.length;i++) {
+            if (autoTranslitArray[lang][strArray[i]]) str += autoTranslitArray[lang][strArray[i]]
+            else if (strArray[i] === ' ') str += ''
+            else str += '–'
+            }
         }
+    else {
+        for (i=0;i<strArray.length;i++) {
+            if (autoTranslitArray[strArray[i]]) str += autoTranslitArray[strArray[i]]
+            else str += ''
+            }
+        }
+
+    return str.trim()
     }
-
-  // Helper: return status HTML (delegates to global getStatus if present)
-  const getStatusHtml = (ch) => {
-    if (sheet[ch] && cols.status !== undefined && sheet[ch][cols.status]) {
-        return (typeof window.getStatus === 'function') ? window.getStatus(sheet[ch][cols.status]) : sheet[ch][cols.status]
-        }
-    return '&nbsp;'
-    }
-
-  // Helper: normalise hex string for codepoint filenames (4+ uppercase)
-  const normaliseHex = (dec) => {
-    let h = dec.toString(16).toUpperCase()
-    while (h.length < 4) h = '0' + h
-    return h
-    }
-
-  // Start composing output
-  let out = ''
-
-  // Summary / listAll block: count visible items (ignore plain spaces)
-  const visibleCount = chars.reduce((acc, x) => acc + (x === ' ' ? 0 : 1), 0)
-  out += `<div class="listAll" onClick="listAll(this, '${ window.langTag }')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>`
-  out += (visibleCount === 2) ? 'both' : (visibleCount > 2 ? visibleCount : '')
-  out += `</div>`
-
-  // Expansion control if allowed
-  if (!noexpansion) {
-    out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; margin-inline-end:1rem;"></div>`
-    }
-
-  // listArray container
-  out += `<div class="listArray">`
-
-  // Loop through each source entry and build a listPair
-  for (let i = 0; i < chars.length; i++) {
-    // Determine the effective character for lookups depending on showFirst/showLast
-    const raw = chars[i]
-    // Convert U+2423 placeholder to comma as original did
-    const src = (raw === '\u2423') ? ',' : raw
-
-    // Determine char used for DB lookups; if showLast/showFirst, split codepoints
-    let charForLookup = src
-    if (showLast || showFirst) {
-        const splitList = [...src]
-        charForLookup = showLast ? (splitList[1] || splitList[0] || '') : (splitList[0] || '')
-        }
-
-    // Build index id only if inside #index element (preserve behaviour)
-    const indexId = node.closest('#index') ? ` id="index${ src }"` : ''
-
-    // Start listPair wrapper
-    out += `<div class="listPair"${ indexId }>`
-
-    // Build primary glyph span with optional highlight, font, lang, dir and title
-    const highlightClass = highlights[i] ? ' highlight' : ''
-    const langAttr = ds.lang ? ` lang="${ ds.lang }"` : ` lang="${ window.langTag }"`
-    const title = (sheet[src] && cols.ucsName !== undefined) ? sheet[src][cols.ucsName] : ''
-    out += `<span class="listItem${ highlightClass }"${ fontAttr }${ dirn }${ langAttr } title="${ title }">${ src }</span>`
-
-    // Extra second-row characters (preserve alignment)
-    if (extra.length > 0) {
-        out += extra[i] ? `<span class="listExtra" lang="${ extraLang }">${ extra[i] }</span>` : `<span>&nbsp;</span>`
-        }
-
-    // Status column if required
-    if (showStatus) {
-        const statusHtml = getStatusHtml(charForLookup)
-        out += `<span class="listItemType">${ statusHtml }</span>`
-        }
-
-    // IPA handling:
-    // - If explicit ipa dataset provided, use those values
-    // - Else if info includes ipa, try to build from spreadsheet (including ipaplus)
-    let listIPAHtml = ''
-    if (ipa.length > 0) listIPAHtml = ipa[i] ? `<span class="listIPA">${ ipa[i] }</span>` : ' '
-    else if (info.includes('ipa')) {
-        // ipaplus support: append spreadsheet ipaPlus if class ipaplus present
-        let ipaplus = ''
-        if (ipaplusClass && sheet[charForLookup] && cols.ipaPlus !== undefined && sheet[charForLookup][cols.ipaPlus]) ipaplus = String(sheet[charForLookup][cols.ipaPlus]).toLowerCase()
-        // ipaLoc may contain multiple parts separated by spaces; append ipaplus between parts
-        let ipaLoc = '&nbsp;'
-        if (sheet[charForLookup] && cols.ipaLoc !== undefined && sheet[charForLookup][cols.ipaLoc]) {
-            const parts = String(sheet[charForLookup][cols.ipaLoc]).toLowerCase().split(' ')
-            ipaLoc = parts.map(p => p + ipaplus).join(' ').trim()
-            }
-        listIPAHtml = ipaLoc === '&nbsp;' ? '<span>&nbsp;</span>' : `<span class="listIPA">${ ipaLoc }</span>`
-        }
-
-    // Order glyph + IPA reversed for soundSummary context
-    if (context === 'soundSummary') out += listIPAHtml + '' // filled in below
-    // Append IPA (deferred to after list item ordering logic below)
-
-    // Latin transcription (explicit dataset takes precedence)
-    if (latin.length > 0) out += latin[i] ? `<span class="listLatin">${ latin[i] }</span>` : '&nbsp;'
-    else if (info.includes('latin')) {
-        const trans = (sheet[charForLookup] && cols.transcription !== undefined) ? sheet[charForLookup][cols.transcription] : '&nbsp;'
-        out += `<span class="listLatin">${ trans }</span>`
-        }
-
-    // Meaning / gloss (info-driven) and notes dataset
-    if (info.includes('meaning')) {
-        const meaning = (sheet[charForLookup] && cols.meaning !== undefined) ? sheet[charForLookup][cols.meaning] : '&nbsp;'
-        out += `<span class="listMeaning">${ meaning }</span>`
-        }
-    if (notes.length > 0) out += notes[i] ? `<span class="listMeaning">${ notes[i] }</span>` : `<span class="listMeaning">&nbsp;</span>`
-
-    // Code point values block (skipped for space or when class noCodePoints present)
-    if (!hasClass(node, 'noCodePoints') && src !== ' ') {
-      out += '<span class="listUnum">'
-      const charList = [...src] // iterate code points correctly
-      for (let z = 0; z < charList.length; z++) {
-        if (ignoreset.has(charList[z])) continue
-        const dec = charList[z].codePointAt(0)
-        const hex = normaliseHex(dec)
-        out += `<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">${ hex }</span>`
-        if (charList.length > 1 && z < charList.length - 1) out += '<br/>'
-        }
-      out += '</span>'
-      }
-
-    // Links block (preserve indexline wrapping and arrow symbol)
-    if (links.length > 0) {
-      if (links[i]) {
-        const linkList = links[i].split(' ').filter(Boolean)
-        if (indexline) out += '<div class="index_details">'
-        const uname = (sheet[charForLookup] && cols.ucsName !== undefined) ? String(sheet[charForLookup][cols.ucsName]).replace(/U\+[^:]+: /,'') : 'NAME UNKNOWN'
-        if (indexline) out += `<span class="index_uname">${ uname }</span>`
-        out += `<span class="links">`
-        linkList.forEach(l => { out += `<a href="${ l }">\u2193</a>` })
-        out += `</span>`
-        if (indexline) out += `</div>`
-        }
-      else out += '<span>&nbsp;</span>'
-      }
-
-    // Now insert IPA/html in correct position if not already added for soundSummary
-    //if (context === 'soundSummary') out += listIPAHtml + `<span class="listItemType"></span>` // maintain spacing/structure
-    //else out += listIPAHtml
-
-    // Insert IPA and glyph in the correct order, only once
-    if (context === 'soundSummary') out += listIPAHtml + listItemHtml /* primary glyph/html already built earlier as listItemHtml */
-    else out += listItemHtml + listIPAHtml
-
-    // Close listPair
-    out += `</div>`
-    }
-
-  // Close listArray and write output back into node
-  out += `</div>`
-  node.innerHTML = out
-  }
-
-
-
-
-
-function replaceStuffX (node) {
-    //console.log('>>> replaceStuff( ', node, ')  Build the characterboxes')
-
-    var showLast = false
-    var showFirst = false
-    var noexpansion = false
-    var nolist = false
-    var ipaplus = ''
-    
-    // check the context in which the table is rendered
-    var context = null
-    if (node.closest('.soundSummary')) context = 'soundSummary'
-    if (node.closest('.sectionCharacterList')) context = 'sectionCharacterList'
-
-    // check whether this is an index line
-    if (node.classList.contains('indexline')) var indexline = true
-    else indexline = false
-
-    // populate the chars array with characters & gather additional info
-    chars = node.textContent.split(',')
-    
-    // create a set of ignorable characters from data-ignore
-    var ignoreset = new Set([])
-    if (node.dataset.ignore) {
-        ignorables = node.dataset.ignore.split(',')
-        for (g=0;g<ignorables.length;g++) {
-            ignoreset.add(ignorables[g])
-            }
-        }
-    
-    // find whether a specific font should be used
-    var font = ''
-    if (node.dataset.font) {
-        font = ` style="font-family: ${ node.dataset.font }"`
-        }
-
-    // figure out whether or not to show ipa
-    var info = ''
-    if (typeof node.dataset.ipa === 'undefined' && typeof node.dataset.latin === 'undefined' && typeof node.dataset.cols === 'undefined') {
-        var info = 'ipa'
-        }
-    if (typeof node.dataset.cols !== 'undefined') info += node.dataset.cols
-    
-    
-    
-    
-    if (node.className.includes('noexpansion')) noexpansion = true // don't show the curved arrow
-    if (node.dataset.select && node.dataset.select == 'last') showLast = true
-    else if (node.dataset.select) showFirst = true
-
-    if (node.dataset.notes) {
-        var notes = node.dataset.notes.split(',')
-        }
-    else notes = []
-    if (node.dataset.extra) {
-        var extra = node.dataset.extra.split(',')
-        var extraLang = extra.pop()
-        }
-    else extra = []
-    if (node.dataset.ipa) {
-        ipa = node.dataset.ipa.split(',')
-        }
-    else ipa = []
-    if (node.dataset.latin) {
-        latin = node.dataset.latin.split(',')
-        }
-    else latin = []
-    if (node.dataset.links) {
-        var links = node.dataset.links.split(',')
-        }
-    else links = []
-    if (node.dataset.highlight) {
-        var highlights = node.dataset.highlight.split(',')
-        }
-    else highlights = []
-    if (node.dataset.dir) {
-        var dirn = ` dir="${ node.dataset.dir }"`
-        }
-    else dirn = ''
-    var out = ''
-
-    // make the summary count link
-    if (! nolist) {
-        var length = chars.length
-        for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
-        out += '<div class="listAll" onClick="listAll(this, \''+window.langTag+'\')" style="line-height:1;" title="Create a list of the items in the right column."><img src="../../shared/images/listitems.svg" style="height:.7rem; margin-inline-end:.1rem;"><br>'
-        if (length === 2) out += 'both'
-        else if (length > 2) out += length
-        out += '</div>'
-        }
-    if (! noexpansion) {
-        out += `<div class="listAll" onclick="showAllCharDetails(this)" title="Expand details for the whole list of characters." style="cursor:pointer;"><img src="../../shared/images/showdetails.svg" style="height:2rem; margin-inline-end:1rem;"></span> `
-        out += '</div>'
-        }
-        
-
-    // find out whether this table includes status information
-    var showStatus = false
-    for (c=0;c<chars.length;c++) {
-        if (window.spreadsheetRows[chars[c]] && window.spreadsheetRows[chars[c]][cols.status] && window.spreadsheetRows[chars[c]][cols.status] !== '') showStatus = true
-        }
-
-
-
-
-
-    // start building the listArray
-    var listItem, listIPA
-    
-    out += `<div class="listArray">`
-
-    // for each item ...
-    for (let i=0;i<chars.length;i++) { 
-        if (showLast || showFirst) {
-            var charList = [... chars[i]]
-            if (showLast) char = charList[1]
-            else char = charList[0]
-            }
-        else char = chars[i]
-        
-        // convert � to comma
-        //console.log('CHARS[i]',chars[i])
-        //if (chars[i] === '\u2423') console.log('FOUND IT')
-        if (chars[i] === '\u2423') chars[i] = ','
-        //console.log(chars[i])
-        
-        // create an id attribute for the listPairs in the index
-        if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
-        else indexId = ''
-        out += `<div class="listPair"${ indexId }>`
- 
-        listItem = ''
-        
-        // capture the listItem markup and add highlight class and special lang if appropriate
-        listItem += `<span class="listItem`
-        if (highlights[i]) listItem += ` highlight`
-        listItem += `" ${ font }`
-        if (node.dataset.lang) listItem += ` lang="${ node.dataset.lang }"`
-        else listItem += ` lang="${ window.langTag }"`
-        
-        // get the uname for the title
-        var title = ''
-        if (window.spreadsheetRows[chars[i]] && window.spreadsheetRows[chars[i]][cols.ucsName] ) title = window.spreadsheetRows[chars[i]][cols.ucsName]
-
-        listItem += `${ dirn } title="${ title }">${ chars[i] }</span>`
-
-        // leave a blank where a space is used
-        //if (chars[i] === ' ') {
-        //    listItem += '&nbsp;</span></div>'
-        //    continue
-        //    }
-
-        // print any second row of characters
-        if (extra.length > 0) {
-            if (extra[i]) listItem += '<span class="listExtra" lang="'+extraLang+'">'+extra[i]+'</span>'
-            else listItem += '<span>&nbsp;</span>'
-            }
-
-        // status line, if needed
-        if (showStatus) {
-            var status = '&nbsp;'
-            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.status]) {
-                status = getStatus(window.spreadsheetRows[char][cols.status])
-                }
-            listItem += `<span class="listItemType">${ status }</span>`
-            }
-
-
-
-        listIPA = ''
-
- 
-        if (ipa.length > 0) {
-            if (ipa[i]) listIPA += '<span class="listIPA">'+ipa[i]+'</span>'
-            else listIPA += ' '
-            }
-
-        // if the ipaplus class is set, get the ipa+ value (if there is one)
-        else if (info.includes('ipa')) {
-            ipaplus = ''
-            if (node.className.includes('ipaplus')) {
-                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaPlus]) ipaplus = window.spreadsheetRows[char][cols.ipaPlus].toLowerCase()
-                }
-
-            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) {
-                ch = window.spreadsheetRows[char][cols.ipaLoc].toLowerCase()
-                chs = ch.split(' ')
-                ch = ''
-                for (x=0;x<chs.length;x++) {
-                    ch += chs[x]+ipaplus+' '
-                    }
-                }
-            else ch = '&nbsp;'
-            if (ch === '&nbsp;') listIPA += '<span>&nbsp;</span>'
-            else listIPA += '<span class="listIPA">'+ch.replace(/ /g,' ').trim()+'</span>'
-            }
-
-        
-        // reverse the vertical order of IPA and glyph for sound summaries
-        if (context === "soundSummary") out +=  listIPA + listItem
-        else out += listItem + listIPA
-
-        if (latin.length > 0) {
-            // console.log('LATIN',latin)
-            if (latin[i]) out += '<span class="listLatin">'+latin[i]+'</span>'
-            else out += '&nbsp;'
-            }
-
-       else if (info.includes('latin')) {
-            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription]) ch = window.spreadsheetRows[char][cols.transcription]
-            else ch = '&nbsp;'
-            out += '<span class="listLatin">'+ch+'</span>'
-            }
-
-       if (info.includes('meaning')) {
-            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.meaning]) ch = window.spreadsheetRows[char][cols.meaning]
-            else ch = '&nbsp;'
-            out += '<span class="listMeaning">'+ch+'</span>'
-            }
-
-        if (notes.length > 0) {
-            if (notes[i]) ch = notes[i]
-            else ch = '&nbsp;'
-            out += '<span class="listMeaning">'+ch+'</span>'
-            }
-
-
-        // print the code point values
-        if (node.className.includes('noCodePoints')) {} // do nothing
-        else if (chars[i] === ' ') {} // do nothing
-        else {
-            out += '<span class="listUnum">'
-            charList = [... chars[i]]
-            for (let z=0;z<charList.length;z++) {
-                if (ignoreset.has(charList[z])) continue // ignore hex for this character
-                var hex = charList[z].codePointAt(0)
-
-                hex = hex.toString(16).toUpperCase()
-                while (hex.length < 4) hex = '0'+hex
-
-                out += '<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">'+hex+'</span>'
-                if (charList.length>1 && z<charList.length-1) out += '<br/>'
-                }
-                out += '</span>'
-                }
-
-
-        // add any links
-        if (links.length > 0) {
-            if (links[i]) {
-                var linkList = links[i].split(' ')
-                if (indexline) out += '<div class="index_details">'
-                if (window.spreadsheetRows[char]) var uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
-                else uname = "NAME UNKNOWN"
-                if (indexline) out += '<span class="index_uname">'+uname+'</span>'
-                out += `<span class="links">`
-                for (let l=0;l<linkList.length;l++) {
-                    //out += '<a href="'+linkList[l]+'">↓</a>'
-                    out += '<a href="'+linkList[l]+'">\u2193</a>'
-                    }
-                out += '</span>'
-                if (indexline) out += '</div>'
-                }
-            else out += '<span>&nbsp;</span>'
-            }
-
-
-
-        out += '</div>'
-        }
-    out += '</div>'
-
-    node.innerHTML = out
-    }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3394,387 +2307,62 @@ function makeIndexLine(node) {   // Optimised by CoPilot
 
 
 
-function initialiseShowNames (node, base, target) {
-    // console.log('initialiseShowNames(',node, base, target,')\nAdd onclick function to all .ex elements to display in panel')
-    // function will display character by character names for example in the panel
-    // base (string), path for link to character detail
-
-    // this extends the function in show_codepoints.js to add support for listItems
-
-    // locals
-    var e, examples
-
-	// check whether the calling page has set a base and target window
-	if(typeof base === 'undefined') base = ''
-	if(typeof target === 'undefined') target = ''
-	
-    // collect list of nodes with .ex class & add onclick function
-	examples = node.querySelectorAll('.ex')
-	for (e=0;e<examples.length;e++) {
-		if (examples[e].nodeName.toLowerCase() == 'img') {
-			shownames_setImgOnclick(examples[e], base, target)
-			}
-		else { shownames_setOnclick(examples[e], base, target) }
-		}
-	
-    // this is the new stuff
-	var listItems = document.querySelectorAll(".listItem")
-	for (let i=0;i<listItems.length;i++) {
-		listItems[i].addEventListener('click', showCharDetailsEvent)
-		listItems[i].addEventListener('click', makeFootnoteIndex)
-		listItems[i].addEventListener('mouseover', showCharDetailsEvent)
-		}
-	
-	var lists = document.querySelectorAll(".exlist")
-	for (let i=0;i<lists.length;i++) lists[i].addEventListener('click', showCharDetailsEvent)
-	}
 
 
 
+function showAllCharDetails (evt) {
+	console.log(`showAllCharDetails (${ evt })
+    Open an article that displays character notes details for all items in a characterBox.
+    Called by ${ (new Error().stack.split('\n')[2] || '').trim() }`)
 
+	if (typeof charDetails === 'undefined') return   // charDetails is defined in xx-details.js
 
+	const node = evt.target
+	const figure = node.closest('figure')
+	if (!figure) return
 
+	// collect all characters in this figure
+	const items = figure.querySelectorAll('.listItem')
+	let chars = ''
+	for (let i = 0; i < items.length; i++) chars += items[i].textContent
+    chars = chars.replace(/◌/g,'')
 
+	// dedupe while preserving order
+	const unique = [...new Set([...chars])]
+	const charList = unique.join('')
 
-
-
-function showCharDetailsForCased (evt) {
-    // opens a panel to display character notes details
-        
-	if (typeof charDetails === 'undefined') return
+    // get the insertion point
+	let insertPoint = figure.querySelector('.listArray')
     
-    summaryTable = evt.target.closest('.cased')
+    // close any existing article
+    const ptr = insertPoint.nextElementSibling
+    if (ptr !== null && ptr.tagName.toLowerCase() === 'article') ptr.remove()
+
+
+    // create the article element & table outer
+    const articleNode = document.createElement('article')
+    articleNode.title = charList
+
+	const tableNode = document.createElement('table')
+	tableNode.className = 'panel'
     
-    if (summaryTable === null) return
-	
+	tableNode.innerHTML = makeCharArticleList(charList.replace(/[◌-]/g,''), window.langTag)
     
-    // if there's already an article displayed, remove it
-    if (summaryTable.nextElementSibling && summaryTable.nextElementSibling.tagName === 'ARTICLE') {
-        // if clicking on the same item, remove the article
-        if (summaryTable.nextElementSibling.querySelector('.ex').textContent === evt.target.textContent) {
-            summaryTable.nextElementSibling.remove()
-            return
-            }
-        else summaryTable.nextElementSibling.remove()
-        }
-	
-    // make a new article
-	var newArticle = document.createElement('article')
-	var table = document.createElement('table')
-	table.className = 'charDetails'
-	table.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
-    newArticle.appendChild(table)
-    
-    // append the new article after the summary table
-    summaryTable.after(newArticle)
-	
-	expandCharMarkup()
-	addExamples(evt.target.lang)
-	convertTranscriptionData(evt.target)
+	articleNode.appendChild(tableNode)
+    insertPoint.after(articleNode)
+
+
+
+	// post‑processing
+	expandChMarkup()
+	expandEgMarkup(window.langTag)
 	setFootnoteRefs()
-    var links = table.querySelectorAll('.codepoint a, .codepoint code')
-	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table, window.blockDirectoryName, 'c')
-    
-    // set event trigger on all .ipa elements - opens description box on click
-    var ipaNodes = document.querySelectorAll(".ipa")
-    console.log('ipaNodes',ipaNodes.length)
-    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
+	wrapToneLettersInBdi()
+
+    setOnclicks()
     }
 
 
-
-
-function showCharDetailsForSummary (evt) {
-    // opens a panel to display character notes details
-        
-	if (typeof charDetails === 'undefined') return
-    
-    summaryTable = evt.target.closest('.soundSummary')
-    
-    if (summaryTable === null) return
-	
-    
-    // if there's already an article displayed, remove it
-    if (summaryTable.nextElementSibling.tagName === 'ARTICLE') {
-        // if clicking on the same item, remove the article
-        if (summaryTable.nextElementSibling.querySelector('.ex').textContent === evt.target.textContent) {
-            summaryTable.nextElementSibling.remove()
-            return
-            }
-        else summaryTable.nextElementSibling.remove()
-        }
-	
-    // make a new article
-	var newArticle = document.createElement('article')
-	var table = document.createElement('table')
-	table.className = 'charDetails'
-	table.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
-    newArticle.appendChild(table)
-    
-    // append the new article after the summary table
-    summaryTable.after(newArticle)
-	
-	expandCharMarkup()
-	addExamples(evt.target.lang)
-	convertTranscriptionData(evt.target)
-	setFootnoteRefs()
-    var links = table.querySelectorAll('.codepoint a, .codepoint code')
-	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table, window.blockDirectoryName, 'c')
-    
-    // set event trigger on all .ipa elements - opens description box on click
-    var ipaNodes = document.querySelectorAll(".ipa")
-    console.log('ipaNodes',ipaNodes.length)
-    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
-    }
-
-
-
-
-
-
-
-
-
-
-function showCharDetailsEvent (evt) {
-    // opens a panel to display character notes details
-    console.log('showCharDetailsEvent ('+evt+')')
-	//if (evt.target.closest('.noexpansion')) return
-    
-	if (typeof charDetails === 'undefined') return
-    
-    // don't show details for section character lists in right margin
-    if (evt.target.closest('.sectionCharacterList')) return 
-
-	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
-    
-    if (evt.target.closest('.soundSummary')) { showCharDetailsForSummary(evt); return }
-	
-    if (evt.target.closest('.cased')) { showCharDetailsForCased(evt); return }
-	
-    // remove any dotted circles
-    const searchStr = evt.target.textContent.replace(/◌/g,'')
-    
-    // find out whether there's already something being displayed
-	detailsTable = evt.target.closest('figure').querySelector('table')
-    displayedItem = ''
-    displayedItems = []
-    if (detailsTable !== null) displayedItems = detailsTable.querySelectorAll('th .ex')
-    for (i=0;i<displayedItems.length;i++) displayedItem += displayedItems[i].textContent
-    
-    // if clicked item and detailsTable are about the same thing, just close detailsTable
-    if (displayedItem && displayedItem === searchStr) { 
-        detailsTable.parentNode.removeChild(detailsTable)
-        return
-        }
-    
-    // clear any existing detailsTable
-	if (detailsTable !== null) detailsTable.parentNode.removeChild(detailsTable)
-	console.log('hello')
-    // make a new detailsTable
-	var detailsTable = document.createElement('table')
-	detailsTable.className = 'charDetails'
-	detailsTable.innerHTML = makeDetails(searchStr, evt.target.lang)
-    
-	evt.target.parentNode.parentNode.parentNode.appendChild(detailsTable)
-	
-    console.log(evt.target.parentNode.parentNode.parentNode)
-    
-	expandCharMarkup()
-	addExamples(evt.target.lang)
-	convertTranscriptionData(evt.target)
-	setFootnoteRefs()
-    wrapToneLettersInBdi()
-    var links = detailsTable.querySelectorAll('.codepoint a, .codepoint code')
-	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(detailsTable, window.blockDirectoryName, 'c')
-    
-    // set event trigger on all .ipa elements - opens description box on click
-    var ipaNodes = document.querySelectorAll(".ipa")
-    console.log('ipaNodes',ipaNodes.length)
-    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
-    
-    }
-
-
-
-
-
-
-
-
-
-
-function showCharDetailsEventX (evt) {
-    // opens a panel to display character notes details
-    
-	//if (evt.target.closest('.noexpansion')) return
-    
-	if (typeof charDetails === 'undefined') return
-    
-    // don't show details for section character lists in right margin
-    if (evt.target.closest('.sectionCharacterList')) return 
-
-	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
-    
-    if (evt.target.closest('.soundSummary')) { showCharDetailsForSummary(evt); return }
-	
-    if (evt.target.closest('.cased')) { showCharDetailsForCased(evt); return }
-	
-    // find out whether there's already something being displayed
-	detailsTable = evt.target.closest('figure').querySelector('table')
-    displayedItem = ''
-    displayedItems = []
-    if (detailsTable !== null) displayedItems = detailsTable.querySelectorAll('th .ex')
-    for (i=0;i<displayedItems.length;i++) displayedItem += displayedItems[i].textContent
-    
-    // if clicked item and detailsTable are about the same thing, just close detailsTable
-    if (displayedItem && displayedItem === evt.target.textContent) { 
-        detailsTable.parentNode.removeChild(detailsTable)
-        return
-        }
-    
-    // clear any existing detailsTable
-	if (detailsTable !== null) detailsTable.parentNode.removeChild(detailsTable)
-	
-    // make a new detailsTable
-	var detailsTable = document.createElement('table')
-	detailsTable.className = 'charDetails'
-	detailsTable.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
-    
-	evt.target.parentNode.parentNode.parentNode.appendChild(detailsTable)
-	
-	expandCharMarkup()
-	addExamples(evt.target.lang)
-	convertTranscriptionData(evt.target)
-	setFootnoteRefs()
-    var links = detailsTable.querySelectorAll('.codepoint a, .codepoint code')
-	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(detailsTable, window.blockDirectoryName, 'c')
-    
-    // set event trigger on all .ipa elements - opens description box on click
-    var ipaNodes = document.querySelectorAll(".ipa")
-    console.log('ipaNodes',ipaNodes.length)
-    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-function showAllCharDetails (node) {
-    // opens a panel to display character notes details
-    
-	if (typeof charDetails === 'undefined') return
-
-    figure = node.closest('figure')
-    displayedItem = ''
-    if (figure === null) return
- 	
-	table = figure.querySelector('table')
-   
-    var itemlist=figure.querySelectorAll('.listItem')
-    var characters = ''
-    for (i=0;i<itemlist.length;i++) characters += itemlist[i].textContent
-    
-    const uniqueSet = new Set([...characters])
-    var uniqueArray = [...uniqueSet]
-
-    var charList = uniqueArray.join('')
-    
-	table = figure.querySelector('table')
-    displayedItem = ''
-    if (table !== null) displayedItem = table.querySelector('.ex')
-    if (displayedItem) displayedItem = displayedItem.textContent
-    
-    // if clicked item and table are about the same thing, just close table
-    if (displayedItem && displayedItem === charList) { 
-        console.log("found",displayedItem)
-        table.parentNode.removeChild(table)
-        return
-        }
-    
-    // clear any existing table
-	if (table !== null) table.parentNode.removeChild(table)
-	
-	var table = document.createElement('table')
-	table.className = 'charDetails'
-	table.innerHTML = makeDetails(charList, window.langTag)
-	figure.appendChild(table)
-	
-	expandCharMarkup()
-	addExamples(window.langTag)
-	//convertTranscriptionData(evt.target)
-	setFootnoteRefs()
-    var links = table.querySelectorAll('.codepoint a, .codepoint code')
-	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table, window.blockDirectoryName, 'c')
-    }
-
-
-
-
-
-
-
-
-
-
-function showtext (sourceName) {
-	// when text is highlighted in the freeText area, display the character list
-	text=getSelected()
-	if (text.focusOffset > text.anchorOffset) {
-		var start = text.anchorOffset
-		var end = text.focusOffset
-		}
-	else {
-		var start = text.focusOffset
-		var end = text.anchorOffset
-		}
-	var highlight = text.focusNode.nodeValue.substr(start, end-start)
-	var source = document.getElementById(sourceName)
-	showNameDetails(highlight, source.lang, source.dataset.base, source.dataset.target, document.getElementById('panel') )
-	}
-
-
-
-
-function getSelected() {
-	if (window.getSelection) return window.getSelection()
-	else if (document.getSelection) return document.getSelection()
-	else {
-		var selection = document.selection && document.selection.createRange()
-		if (selection.text) return selection.text
-		return false
-		}
-	return false
-	}
-
-
-
-
-function toggleTranscription (type, show) { 
-    // shows/hides a line of transcriptions in the listPairs
-    // type: string, name of the class of the items to toggle
-    // show: boolean, checkbox unchecked gives false
-    var trans = document.querySelectorAll('.'+type)
-    console.log('translen for ', type, 'is', trans.length)
-    if (trans.length === 0) return
-
-    for (let i=0; i<trans.length; i++) {
-        if (show) trans[i].style.display = 'block'
-        else trans[i].style.display = 'none'
-        }
-    }
 
 
 
@@ -4465,106 +3053,6 @@ function makeIndexObject () { // copilot optimised
 
 
 
-function makeIndexObjectX () { // copilot optimised
-  // collect characters temporarily
-  const charArray = []
-
-  // select nodes once
-  const chars = document.querySelectorAll('.codepoint, .listItem')
-
-  // iterate with indexed for to avoid creating iterators for every loop
-  for (let i=0, len=chars.length; i<len; i++) {
-    const node = chars[i]
-
-    // skip empty text nodes quickly
-    const text = node.textContent && node.textContent.trim()
-    if (!text) {
-        continue
-        }
-
-    // skip nodes explicitly excluded via .noindex anywhere up the tree
-    if (node.closest('.noindex')) continue
-
-    // grab the first child's text (preserve original behaviour)
-    const first = node.firstChild
-    if (!first) {
-      console.log('No content found for', node.parentNode && node.parentNode.textContent)
-      continue
-    }
-    const cell = first.textContent
-
-    // find enclosing section id; use closest('section') for clarity and robustness
-    const sectionEl = node.closest('section')
-    const section = sectionEl ? sectionEl.id : ''
-
-    // ignore index/map sections as before
-    if (!section || section.includes('index_') || section.includes('_map') || section.includes('map_')) continue
-
-    // determine status only for list items
-    let status = ''
-    if (node.classList.contains('listItem')) {
-      const listHead = node.parentNode && node.parentNode.parentNode && node.parentNode.parentNode.parentNode
-      if (listHead) {
-        if (listHead.classList.contains('otherBox')) status = 'other'
-        else if (listHead.classList.contains('characterBox') || listHead.classList.contains('mainBox')) status = 'character'
-        else if (listHead.classList.contains('auxiliaryBox') || listHead.classList.contains('auxBox')) status = 'auxiliary'
-        else if (listHead.classList.contains('deprecatedBox')) status = 'deprecated'
-        else if (listHead.classList.contains('archaicBox')) status = 'archaic'
-      }
-    }
-
-    // expand cell string into characters and push compact objects
-    for (const ch of [...cell]) {
-      const obj = { codepoint: ch, section }
-      if (status) obj.status = status
-      charArray.push(obj)
-    }
-  }
-
-  // build index in place. assume `index` is a global or outer-scope object
-  // use let/const to avoid implicit globals
-  if (typeof index === 'undefined') window.index = {} // create if missing
-  const idx = index
-
-  // accumulate characters for sorting
-  window.allchars = ''
-
-  // iterate charArray once and build index entries
-  for (let j=0, L=charArray.length; j<L; j++) {
-    const entry = charArray[j]
-    const c = entry.codepoint
-    const secTag = '#' + entry.section
-
-    // if entry exists and already lists this section, update status if provided
-    if (idx[c] && idx[c].section.includes(entry.section)) {
-      if (entry.status) idx[c].status = entry.status
-      continue
-    }
-
-    // if entry exists but section is new, append
-    if (idx[c]) {
-      idx[c].section += ' ' + secTag
-      if (entry.status) idx[c].status = entry.status
-    } else {
-      // new entry
-      idx[c] = { section: secTag }
-      if (entry.status) idx[c].status = entry.status
-      allchars += c
-    }
-  }
-
-  // produce sorted allchars string
-  allchars = [...allchars].sort().join('')
-  // optional: store or return allchars if needed
-  return { index: idx, allchars }
-}
-
-
-
-
-
-
-
 
 // reworked to add indexline
 function makeMarkup () {
@@ -4663,39 +3151,50 @@ function makeMarkupForSection(sectionName) {  // copilot optimised
 
 
 
-
-
-
-
 function checkParameters () {
-    // check for parameters and take appropriate action
-    var parameters = location.search.split('&')
-    parameters[0] = parameters[0].substring(1)
-    for (var p=0;p<parameters.length;p++) {  
-        var pairs = parameters[p].split('=')
-        
-        // open index and jump to character location
-        if (pairs[0] === 'index') { if (pairs[1]) {
-            indexSections = document.getElementById('index').querySelectorAll('details')
-            console.log('indexSections',indexSections.length)
-            for (i=0;i<indexSections.length;i++) indexSections[i].open = true
-            //document.getElementById('index_details').open = true
-            document.location = '#index'+pairs[1]
-            } }
-        
-        // open index without jumping to character location
-        if (pairs[0] === 'showIndex') {
-            indexSections = document.getElementById('index').querySelectorAll('details')
-            for (i=0;i<indexSections.length;i++) indexSections[i].open = true
-            }
-        
-        // turn off mouseover reveal of list boxes
-        if (pairs[0] === 'nomouseover') {
-            document.getElementById('showDetailOnMouseover').checked = false
-            console.log('Detail on mouseover is off.')
-            }
+    console.log(`checkParameters()
+    Check for parameters and take appropriate action: open index; jump to char in index`)
+	// parse ?a=b&c=d into { a: "b", c: "d" }
+	const raw = location.search
+	if (!raw || raw.length < 2) return
+
+	const params = raw.substring(1).split('&')
+	const indexEl = document.getElementById('index')
+
+	for (let p = 0; p < params.length; p++) {
+		const [key, value] = params[p].split('=')
+
+		// open index and jump to character
+		if (key === 'index' && value) {
+			if (indexEl) {
+				const sections = indexEl.querySelectorAll('details')
+				for (let i = 0; i < sections.length; i++) sections[i].open = true
+			}
+			document.location = '#index' + value
+			continue
+		}
+
+		// open index without jumping
+		if (key === 'showIndex') {
+			if (indexEl) {
+				const sections = indexEl.querySelectorAll('details')
+				for (let i = 0; i < sections.length; i++) sections[i].open = true
+			}
+			continue
+		}
+
+		// disable mouseover reveal
+		/*if (key === 'nomouseover') {
+			const box = document.getElementById('showDetailOnMouseover')
+			if (box) box.checked = false
+			console.log('Detail on mouseover is off.')
+			continue
+            }*/
         }
     }
+
+
+
 
 
 
@@ -4814,53 +3313,6 @@ function copyIntroInfo () {
 
 
 
-function copyIntroInfoX () {
-    // console.log('copyIntroInfo()\n\tCopy paragraphs from the brief summary to the top of various sections')
-    
-    // do the vowels
-    if (document.getElementById('vowel_description')) {
-        var out = ''
-        var paras = document.querySelectorAll('.addToVowels')
-        // console.log("Copying",paras.length,"paragraphs to Vowel section.")
-        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
-        if (document.getElementById('vowel_mappings')) out += `<aside class="instructions" style="margin:4rem;">The summary table just below gives a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.</aside>`
-        if (out !== '') document.getElementById('vowel_description').innerHTML = out
-        }
-    
-    // do the consonants
-    if (document.getElementById('consonant_description')) {
-        var out = ''
-        var paras = document.querySelectorAll('.addToConsonants')
-        // console.log("Copying",paras.length,"paragraphs to Consonant section.")
-        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
-        if (document.getElementById('consonant_mappings')) out += `<aside class="instructions" style="margin:4rem;">The summary table just below gives a rough idea of how sounds map to characters. Detailed information about usage and context is given in the table at the end of the section. Click on the IPA labels in the table below to jump to that information for a given sound. Between the two tables, you will find descriptions of the characters and how they are used. For detailed information about a specific character, click on the character or its Unicode name.</aside>`
-        if (out !== '') document.getElementById('consonant_description').innerHTML = out
-        }
-
-    
-    // do novowel
-    if (document.getElementById('novowel_description')) {
-        var out = ''
-        var paras = document.querySelectorAll('.addToNovowel')
-        // console.log("Copying",paras.length,"paragraphs to Novowel section.")
-        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
-        if (out !== '') document.getElementById('novowel_description').innerHTML = out
-        }
-
-    
-    // do diacritics
-    if (document.getElementById('diacritic_description')) {
-        var out = ''
-        var paras = document.querySelectorAll('.addToDiacritics')
-        // console.log("Copying",paras.length,"paragraphs to Diacritics section.")
-        for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
-        if (out !== '') document.getElementById('diacritic_description').innerHTML = out
-        }
-    }
-
-
-
-
 
 
 
@@ -4952,24 +3404,30 @@ function createtocPanel (maxlevel) {
 
 
 function addResources () {
-    // Adds information from xx-examples to the section Online resources
-    
-    if (typeof termLists === 'undefined') return
-    
-    var section = document.getElementById('online_samples')
-    if (section === null) return
-    
-    var out = `<h2>Online resources</h2>
+	// Adds information from xx-examples to the section Online resources
 
-<ol>\n`
-    for (i=0;i<termLists.length;i++) {
-        if (typeof termLists[i].notes == 'undefined') termLists[i].notes = '    '
-        out += `<li><a href="${ termLists[i].url }" target="_blank">${ termLists[i].title }</a> &nbsp;&nbsp; ${ termLists[i].notes }\n`
-        }
-    out += `</ol>`
-    
-    document.getElementById('online_samples').innerHTML = out
+	if (typeof termLists === 'undefined') return
+
+	const section = document.getElementById('online_samples')
+	if (!section) return
+
+	let out = `<h2>Online resources</h2>\n<ol>\n`
+
+	for (let i = 0; i < termLists.length; i++) {
+		const item = termLists[i]
+		const url = item.url || ''
+		const title = item.title || ''
+		const notes = item.notes || ' '
+
+		out += `<li><a href="${ url }" target="_blank">${ title }</a> &nbsp;&nbsp; ${ notes }\n`
+	   }
+
+	out += `</ol>`
+
+	section.innerHTML = out
     }
+
+
 
 
 
@@ -4977,29 +3435,44 @@ function addResources () {
 
 
 function addCharacterLists () {
-    // console.log('>>> addCharacterLists()')
-    // adds the lists of characters in selected sections to the right hand column
+    console.log(`>>> addCharacterLists()
+    Add the lists of characters in selected sections to the right hand column.
+    Called by ${ getCallerName() }.`)
 
-    if (document.getElementById('vowels') && document.getElementById('vowels').querySelector('aside') !== null) listSectionCharacters('vowels')
-    if (document.getElementById('vocalics') && document.getElementById('vocalics').querySelector('aside') !== null) listSectionCharacters('vocalics')
-    if (document.getElementById('consonants') && document.getElementById('consonants').querySelector('aside') !== null)listSectionCharacters('consonants')
-    if (document.getElementById('novowel') && document.getElementById('novowel').querySelector('aside') !== null)listSectionCharacters('novowel')
-    if (document.getElementById('symbols') && document.getElementById('symbols').querySelector('aside') !== null)listSectionCharacters('symbols')
-    if (document.getElementById('numbers') && document.getElementById('numbers').querySelector('aside') !== null)listSectionCharacters('numbers')
-    if (document.getElementById('inline') && document.getElementById('inline').querySelector('aside') !== null)listSectionCharacters('inline')
-    
-    listItems = document.querySelectorAll('.sectionCharacterList .listItem')
-    // console.log('listitems',listItems)
-	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', makeFootnoteIndex)
+	const sections = [
+		'vowels',
+		'vocalics',
+		'consonants',
+		'novowel',
+		'symbols',
+		'numbers',
+		'inline'
+	    ]
+
+	for (const id of sections) {
+		const el = document.getElementById(id)
+		if (!el) continue
+
+		const aside = el.querySelector('aside')
+		if (!aside) continue
+
+		listSectionCharacters(id)
+	    }
+
+	const listItems = document.querySelectorAll('.sectionCharacterList .listItem')
+	for (let i = 0; i < listItems.length; i++)
+		listItems[i].addEventListener('click', makeFootnoteIndex)
     }
 
 
 
 
 
-function listSectionCharacters (section) {  // documented by Copilot
+
+
+function listSectionCharacters (section) {
 	// Collect all inline glyph sources in the given section:
-	// - .listItem elements (primary glyph spans created by replaceStuff)
+	// - .listItem elements (primary glyph spans created by buildCharacterBox)
 	// - <bdi> inside .codepoint (the visual glyph container)
 	// We'll use these to build a unique sorted list of characters used in the section.
 
@@ -5084,10 +3557,10 @@ function listSectionCharacters (section) {  // documented by Copilot
 	`
 
 	for (const [title, chars] of Object.entries(titleMap)) {
-		// Join the group's characters with commas to create a figure suitable for replaceStuff()
+		// Join the group's characters with commas to create a figure suitable for buildCharacterBox()
 		let charList = chars.join(',')
-        charList = charList.replace(',,,',',\u2423,') // shield replaceStuff from ,,,
-        charList = charList.replace(',,','\u2423,') // shield replaceStuff from ,,
+        charList = charList.replace(',,,',',\u2423,') // shield buildCharacterBox from ,,,
+        charList = charList.replace(',,','\u2423,') // shield buildCharacterBox from ,,
         if (charList !== ',') out += `<div style="font-size:80%;">${title}</div><figure class="characterBox auto noexpansion small" data-cols="">${charList}</figure>`
 	    }
 
@@ -5103,89 +3576,15 @@ function listSectionCharacters (section) {  // documented by Copilot
 	//document.getElementById(section).querySelector('aside').innerHTML += out
 	document.getElementById(section).querySelector('aside').innerHTML = out + document.getElementById(section).querySelector('aside').innerHTML
 
-	// After inserting figures, call replaceStuff on each figure so they are rendered
+	// After inserting figures, call buildCharacterBox on each figure so they are rendered
 	figures = document.getElementById(section).querySelector('aside').querySelectorAll('figure')
-	for (f=0;f<figures.length;f++) replaceStuff(figures[f])
+	for (f=0;f<figures.length;f++) buildCharacterBox(figures[f])
 
 	// Add a short triage link using the concatenation of characters (remove commas for URL)
 	//document.getElementById(section).querySelector('aside').innerHTML += `<p class="instructions" style="text-align:end;"><a href="../apps/listcategories/index.html?chars=${ charList.replace(/,/g,'') }" target="_blank">Triage by General Category</a></p>`
-    }
-
-
-
-function listSectionCharactersX (section) {
-    //console.log('>>> listSectionCharacters(',section,')  Produce lists of characters used in a section, sorted by index titles.)
-
-    charElems = document.getElementById(section).querySelectorAll('.listItem, .codepoint bdi')
-    charList = ''
-    for (i=0;i<charElems.length;i++) {
-        if (charElems[i].className === 'listItem' && ! charElems[i].closest('figure').classList.contains('noindex'))  charList += charElems[i].textContent
-        else if (charElems[i].closest('.codepoint') && charElems[i].closest('.codepoint').classList !== null && ! charElems[i].closest('.codepoint').classList.contains('noindex')) {
-            if (charElems[i].querySelector('img')) charList += charElems[i].querySelector('img').alt
-            else charList += charElems[i].textContent
-            }
-        }
-    charList = charList.replace(/\u25CC/g,'')
-    charList = charList.replace(/\u200D/g,'')
-    charList = charList.replace(/\u0020/g,'')
-    charList = charList.replace(/\u00A0/g,'')
-    charList = charList.replace(/\u24D8/g,'')
-
-    // take care of , masquerading as ?
-    charList = charList.replace(/,/g,'\u2423')
-        
-    charArray = [... charList]
-    uniqueSet = new Set(charArray)
-    charArray = [...uniqueSet]
-    charArray.sort()
-    charList = charArray.join(',')    
     
-    chartList = new Set(charList)
-
-    indexListItems = document.getElementById('index').querySelectorAll('.listItem')
-
-    inputLines = []
-    for (i=0;i<indexListItems.length;i++) {
-        if (chartList.has(indexListItems[i].textContent)) {
-            title = indexListItems[i].textContent+' '+indexListItems[i].closest('section').querySelector('h3,h4').textContent
-            inputLines.push(title)
-            }
-        }
-   
-    // Group characters by title
-    const titleMap = {}
-
-    inputLines.forEach(line => {
-      const [char, ...titleParts] = line.split(' ')
-      const title = titleParts.join(' ')
-      if (!titleMap[title]) {
-        titleMap[title] = []
-        }
-        titleMap[title].push(char)
-        })
-
-    // Generate HTML markup
-    out = `
-    <div class="sectionCharacterList">
-    <p>Characters described in this section</p>
-    `
-    
-    for (const [title, chars] of Object.entries(titleMap)) {
-      const charList = chars.join(',')
-      out += `<div style="font-size:80%;">${title}</div><figure class="characterBox auto noexpansion small" data-cols="">${charList}</figure>`
+    setOnclicks()
     }
-
-    out += `
-    </div>
-    `
-    document.getElementById(section).querySelector('aside').innerHTML += out
-
-    figures = document.getElementById(section).querySelector('aside').querySelectorAll('figure')
-    for (f=0;f<figures.length;f++) replaceStuff(figures[f])
-    
-    document.getElementById(section).querySelector('aside').innerHTML += `<p class="instructions" style="text-align:end;"><a href="../apps/listcategories/index.html?chars=${ charList.replace(/,/g,'') }" target="_blank">Triage by General Category</a></p>`
-    }
-
 
 
 
@@ -5201,294 +3600,8 @@ function listSectionCharactersX (section) {
 /* SHOW TRANSCRIPTIONS INLINE, RATHER THAN IN POPUP PANEL */
 
 
-function showCharDetailsInline (chars, clang, base, target, panel, list, translit, ipa, node) {
-    // open an article window after an example and fill it with character details
-    
-	if (typeof charDetails === 'undefined') return
-
-    // get the insertion point
-    if (node.closest('figure')) insertPoint = node.closest('figure')
-    else insertPoint = node.closest('p, table, div, li, figure')
-
-    // create the article element & table outer
-    var panel = document.createElement('article') 
-	var table = document.createElement('table')
-	table.className = 'panel'
-	table.innerHTML = makeExampleArticleDetails(chars, clang, base, target, panel, list, translit, ipa, node)
-	panel.appendChild(table)
-    insertPoint.after(panel)
-	
-	expandCharMarkup()
-	addExamples(clang)
-	//convertTranscriptionData(evt.target)
-	setFootnoteRefs()
-    var links = table.querySelectorAll('.codepoint a, .codepoint code')
-	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table, window.blockDirectoryName, 'c')
-    
-    // set event trigger on all .ipa elements - opens description box on click
-    var ipaNodes = document.querySelectorAll(".ipa")
-    for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
-	return false
-	}
 
 
-
-function makeExampleArticleDetails (chars, clang, base, target, panel, list, translit, ipa) {
-    //console.log('makeExampleArticleDetails (chars=',chars, 'clang=',clang, 'base=',base, 'target=', target, 'panel=',panel, 'list=',list, 'translit=',translit, 'ipa=',ipa,')\n\tDisplay characters in an example (like in the panel)')
-    // called by showCharDetailsInline
-    // chars (string), alt text of example
-    // clang (string), lang attribute value of example img
-    // base (string), path for link to character detail
-    // target (string), name of the window to display results in, usually 'c' or ''; given the latter, link goes to same window
-    // list (string), if not null, indicates that spaces and nbsp should be ignored
-    // local out charArray chardiv charimg thename thelink hex dec blockname blockfile c
-    // global charData pickerDir
-    // calls getScriptGroup
-
-    // to show per-grapheme ipa the ipa transcriptions should have � as grapheme separator (and syllables should be separated by '.'). Unpronounced segments are represented by � (en hyphen).  Monosyllabic words don't need any extra stuff.
-
-    var dir, characterList, graphemes, ptr, transcriptions, gloss, charArray, out
-	var chardiv, charimg, thename, thelink, hex, dec, blockname, blockfile
-
-	// check whether the calling page has set a base and target window: if not base, point to UniView
-	if(typeof base === 'undefined' || base === '') { base = '../../uniview/index.html?char=' }
-	if(typeof target === 'undefined') { target = 'c' }
-	if(typeof list === 'undefined') { list = null }
-	if(typeof translit === 'undefined') { translit = '' }
-	  
-	// clear and show the panel
-	/*panel.innerHTML = ''
-	panel.style.display = 'block'*/
-    dir = ''
-    if (typeof window.direction === 'string') dir = window.direction
-    else if (typeof template !== 'undefined' && typeof template.direction === 'string') dir = template.direction
-    
-    
-    
-    out = '<tr>'
-    
-    
-    out += `<th class="cdChar" onclick="this.closest('article').remove()"><span class="exCharClose">X</span></th>`
-    
-    
-    // add the links
-    out += `<td class="cData">`
-    out += `<p class="notesLink">`
-    
-    out += `<a href="javascript:void(0)" onclick="copyPanelList(); return false;" style="cursor:copy;">Copy list</a>`
-    out += `<br>`
-    
-    out += `<a href="javascript:void(0)" onclick="openExportWindow('../../app-analysestring/index.html?chars=${ chars }'); return false;">Details</a>`
-    out += `<br>`
-    
-    out += `<a href="javascript:void(0)" onclick="openExportWindow('../../uniview/index.html?charlist=${ chars }')">UniView</a>`
-    out += `<br>`
-    
-    out += `<a href="javascript:void(0)" onclick="openExportWindow('../../scripts/apps/graphemes/index.html?gc=${ chars }')">Graphemes</a>`
-    out += `<br>`
-
-    if (window.pickerDir) {
-        out += `<a href="javascript:void(0)" onclick="openExportWindow('../../pickers/${ window.pickerDir }/index.html?text=${ chars }')">Character App</a>`
-        out += `<br>`
-        }
-    
-    // add a link to the _terms page
-    if (typeof window.languageName === 'undefined') var fragid = ''
-    else fragid = '#'+window.languageName
-
-    // figure out where to find the url for the _terms page
-    var url
-    if (typeof template !== 'undefined' && typeof template.vocablocation === 'string')  url = `../../scripts/${ template.vocablocation }.html`
-    
-    else url = `${ window.langTag }_terms`
-    
-    if (typeof window.removeVowels === 'function') chars = removeVowels(chars)
-
-    out += `<a href="javascript:void(0)" onclick="openExportWindow('${ url }.html?q=${ chars }')">Term list</a>`
-    out += `<br>`
-
-    out += `</p>`
-
-
-
-    // make the character gloss
-	out += '<div id="ruby">'
-	
-    // get any IPA data provided - should be pre-separated for graphemes by �
-    if (typeof ipa === 'string' && ipa !== '') ipa = ipa.split(',')
-    else ipa = false
-    
-	// add the example to the panel as a title
-    characterList = [...chars]
-    graphemes = []
-    ptr = -1
-    for (var c=0;c<characterList.length;c++) {
-        if (window.marks && window.marks.has(characterList[c]) && c !== 0) graphemes[ptr] += characterList[c]
-        else {
-            ptr++
-            graphemes[ptr] = characterList[c]
-            }
-        }
-
-    transcriptions = []
-    for (var t=0;t<graphemes.length;t++) {
-        transcriptions[t] = transliteratePanel(graphemes[t], clang)
-        }
-    
-    if (traceSet.has('showNameDetails')) {
-        console.log('graphemes: ',graphemes)
-        console.log('transcriptions: ',transcriptions)
-        console.log('ipa: ',ipa)
-        }
-
-
-    // draw the glosses
-    if (location.toString().includes('picker')) var iconURL = '../../scripts/img/icons/copytiny.svg'
-    else iconURL = '../img/icons/copytiny.svg'
-    gloss = '<div class="multilineGlossedText">'
-    for (t=-1;t<graphemes.length;t++) {
-        if (t===-1) {
-            gloss += `<div class="stack"><span class="rt translitGloss" lang="und-fonipa" title="Transliteration of the text."><img src="${ iconURL }" class="copyIcon" onclick="copyExamplePanelText(this, '.translitGloss')" title="Copy the transliteration." alt="Copy transliteration"></span><span class="rb"><img src="${ iconURL }" onclick="copyExamplePanelText(this, '.rb')" class="copyIcon" title="Copy the text." alt="Copy text"></span>`
-            if (ipa !== false) {
-                if (ipa[t+1]) gloss += `<span class="rt IPAGloss" lang="und-fonipa" title="IPA transcription of the text."><img class="copyIcon" src="${ iconURL }" onclick="copyExamplePanelText(this, '.IPAGloss')" title="Copy the IPA transcription." alt="Copy IPA"></span>`
-                else gloss += `<span class="rt">&nbsp;</span>`
-                }
-            gloss += `</div>`
-            }
-        else {
-            gloss += ` <div class="stack"><span class="rt translitGloss" lang="und-fonipa">${ transcriptions[t] }</span><span class="rb">${ graphemes[t] }</span>`
-            if (ipa !== false) {
-                if (ipa[t]) gloss += `<span class="rt IPAGloss" lang="und-fonipa">${ ipa[t] }</span>`
-                else gloss += `<span class="rt">&nbsp;</span>`
-                }
-            gloss += `</div>`
-            }
-        }
-    gloss += '</div>'
-
-	//out += `<div dir="${ dir }" class="ex" lang="${ clang }" id="title">${ gloss }</div>`
-    // removing the alternating direction so that IPA reads better
-	//out += `<div dir="${ window.blockDirection }" class="ex" lang="${ clang }" id="title">${ gloss }</div>`
-	out += `<div dir="ltr" class="glossContainer" lang="${ clang }" id="title">${ gloss }</div>`
-    
-        
-    
-    // add instructions line
-	out += '<p class="advice" style="line-height:1;">Glossed lines are transliteration/text/IPA.<br>Click on character names below for detailed information.</p>'
-	
-	// create a list of characters
-	if (list) chars = chars.replace(/ /g,'').replace(/\u00A0/g,'') // remove spaces if list
-    charArray = [...chars]
-    
-    if (traceSet.has('showNameDetails')) console.log('charArray: ',charArray)
-
-    out += '<div id="listOfCharacters">'
-	for (var c=0; c<charArray.length; c++) { 
-        dec = charArray[c].codePointAt(0)
-        hex = dec.toString(16)
-        while (hex.length < 4) { hex = '0'+hex }
-        hex = hex.toUpperCase()
- 
-        //if (traceSet.has('showNameDetails')) console.log('charData: ',charData)
-        //if (traceSet.has('showNameDetails')) console.log('charArray[c]: ',charArray[c])
-
-		if (charData[charArray[c]]) {
-            blockname = getScriptGroup(dec, false)
-            blockfile = getScriptGroup(dec, true)
-            //console.log(dec,blockfile)
-            isInBlock = spreadsheetRows[charArray[c]]?true:false
-            //isInBlock = spreadsheetRows[charArray[c]]?spreadsheetRows[charArray[c]][cols['block']]:''
-
-            out += '<div class="panelCharacter">'
-			//if (blockfile) {
-			if (isInBlock) {
-				//out += `<a target="${ target }" href="`
-                // undoing this change which put characters in the list because imgs are needed in order to make the list to copy to clipboard
-                // out += `<span style="display:inline-block; font-size:1.5rem; min-width: 2rem;">${ charArray[c] }</span>`
-                out += `<img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }" style="height:2rem;">`
-                
-                // FOR ORTHOGRAPHY NOTES
-                if (document.querySelector('.useBlockExamples')) {
-                    out += `<a href="javascript:void(0)" onclick="showCharDetailsInPanel(event)"> U+${ hex } ${ charData[charArray[c]] }</a>`
-                    //out += `<a href="javascript:void(0)" onclick="showCharDetailsInPanel('${ charArray[c] }', '${ clang }', '','','','','', '${ ipa }', this)"> U+${ hex } ${ charData[charArray[c]] }</a>`
-                    }
-   //(chars, clang, base, target, panel, list, translit, ipa, node)             
-                // FOR TERMS LISTS
-                else if (document.querySelector('.termListApp')) {
-                    out += `<a target="c" href="../../scripts/${ blockfile }/${ terms.language }-characters.html#char${ hex }"> U+${ hex } ${ charData[charArray[c]] }</a>`
-                    console.log('blockfile',terms.language )
-                    }
-
-                else {
-                    out += `<a target="c" href="`
-                    //if (base === '../../uniview/index.html?char=') out += base+hex
-                    //else out += '../../scripts/'+blockfile+'/block.html#char'+hex useBlockExamples
-                    out += '../../scripts/'+blockfile+'/block.html#char'+hex
-                    out += '">'
-                    //out += '<img src="'+'../../c/'+blockname+"/"+hex+'.png'+'" alt="'+charArray[c]+'">'
-                    out += ' U+'+hex + ' '+charData[charArray[c]]
-                    out += '</a>\n'
-                    }
-				}
-			else {
-				out += '<img src="'+'../../c/'+blockname+"/large/"+hex+'.png'+'" alt="'+charArray[c]+'" style="height:2rem;">'
-				out += ' U+'+hex+' '+charData[charArray[c]]+'\n'
-				}
-			}
-		else {
-			//out += `<a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/Basic_Latin/005F.png" alt="U+${ hex }"> U+${ hex } No data for this character</a>`
-			out += `<div class="panelCharacter"><a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }"> U+${ hex } No data for this character</a></div>`
-			}
-		out += '</div>'
-		}
-	out += '</div>'
-
-    out += `</td>`
-    out += `<tr>`
-    
-    return out
-	}
-
-
-
-
-
-
-function makeArticleDetails (chars) {
-    // console.log('makeDetails(', 'chars:'+chars, ')\n\tAdd  details for character(s) below a block.\n\tGLOBALS notesLangtag:'+window.notesLangtag, 'blockDirectoryName:'+window.blockDirectoryName)
-    
-    // global charDetails spreadsheetRows cols
-    // local out charArray i lang dir
-
-    if (typeof charDetails === 'undefined') return
-
-    var out = ''
-    var charArray = [... chars]
-    var lang = window.notesLangtag
-    var dir = window.blockDirectoryName
-
-    for (var i=0;i<charArray.length;i++) {
-        if (spreadsheetRows[charArray[i]]) {
-            // make title to side
-            out += `<tr><th class="cdChar" onclick="this.closest('article').remove()"><span class="ex" lang="${ lang }" onclick="copyCharToClipboard('${ charArray[i] }');">${ charArray[i] }</span><br><span class="cdCharClose">X</span></th>`
-            
-            // add the full details
-            out += '<td class="cdData">'
-            out += printDetails(charArray[i])
-            out += '</td></tr>'
-            }
-        }
-
-    return out
-    }
-
-
-
-
-function closeArticle (node) {
-    node.parentNode.remove()
-    }
 
 function copyExamplePanelText (node, type) {
 console.log(node)
@@ -5513,39 +3626,42 @@ function closeArticle (node) {
 
 
 
+function makeBreakdownTables () {
+	// Converts simple markup to tables showing sequences of characters
 
-function makeSequenceTables () {
-    // Converts simple markup to tables showing sequences of characters
-    var tables, out, trs, chars, notes, types, prefixes, font
+	const tables = document.querySelectorAll('.sequenceTable')
 
-    tables = document.querySelectorAll('.sequenceTable')
+	for (let table of tables) {
+		let out = ''
+		const rows = table.querySelectorAll('tr')
 
-    for (t=0;t<tables.length;t++) {
-        out = ''
-        trs = tables[t].querySelectorAll('tr')
-        for (i=0;i<trs.length;i++) {
-            chars = trs[i].querySelector('td').textContent.split(',')
-            notes = trs[i].dataset.notes.split(',')
-            types = trs[i].dataset.type.split(',')
-            prefixes = trs[i].dataset.prefix.split(',')
-            if (trs[i].dataset.font) font = ` style="font-family: '${ trs[i].dataset.font }'"`
-            else font = ''
+		for (let row of rows) {
+			const chars = row.querySelector('td').textContent.split(',')
+			const notes = row.dataset.notes.split(',')
+			const types = row.dataset.type.split(',')
+			const prefixes = row.dataset.prefix.split(',')
+			const font = row.dataset.font ? ` style="font-family: '${ row.dataset.font }'"` : ''
 
-            out += `<tr>`
-            for (c=0;c<chars.length;c++) {
-                switch (chars[c]) {
-                    case '\u200C': chars[c] = `<img src="../../c/General_Punctuation/large/200C.png" alt="ZWNJ" style="height:1em;">`;break
-                    case '\u200D': chars[c] = `<img src="../../c/General_Punctuation/large/200D.png" alt="ZWJ" style="height:1em;">`
-                    }
-                out += `<td>${ prefixes[c] }</td>`
-                out += `<td><bdi class="ex" lang="${ window.langTag }" onclick="showCharDetailsInPanel(event)" ${ font }>${ chars[c] }</bdi><span class="${ types[c] }">${ notes[c] }</span></td>`
-                }
-            out += `</tr>`
-            }
-        tables[t].innerHTML = out
-        }
-    }
+			out += `<tr>`
 
+			for (let i=0;i<chars.length;i++) {
+				let ch = chars[i]
+
+				if (ch === '\u200C')
+					ch = `<img src="../../c/General_Punctuation/large/200C.png" alt="ZWNJ" style="height:1em;">`
+				else if (ch === '\u200D')
+					ch = `<img src="../../c/General_Punctuation/large/200D.png" alt="ZWJ" style="height:1em;">`
+
+				out += `<td>${ prefixes[i] }</td>`
+				out += `<td><bdi class="ex" lang="${ window.langTag }" onclick="showCharDetailsInPanel(event)"${ font }>${ ch }</bdi><span class="${ types[i] }">${ notes[i] }</span></td>`
+			}
+
+			out += `</tr>`
+		}
+
+		table.innerHTML = out
+	}
+}
 
 
 
@@ -5597,70 +3713,15 @@ function showUpperCaseRows () {
 
 
 
-function includeHTMLX() {
-    // pull external HTML into a location with a data-include attribute
-    // the attribute points to the file with the HTML to be included
-    
-  document.querySelectorAll('[data-include]').forEach(el => {
-    const file = el.getAttribute('data-include')
-    fetch(file)
-      .then(response => {
-        if (!response.ok) throw new Error(`Include not found: ${file}`)
-        return response.text()
-      })
-      .then(html => {
-        el.innerHTML = html
-      })
-      .catch(err => {
-        el.innerHTML = `<p style="color:red;">${err.message}</p>`
-      })
-  })
-}
-
-
-
-function includeHTMLX() {
-  document.querySelectorAll('[data-include]').forEach(el => {
-    const file = el.getAttribute('data-include');
-
-    fetch(file, { mode: 'no-cors' })
-      .then(response => response.text())
-      .then(html => el.innerHTML = html)
-      .catch(err => {
-        console.warn('Include failed:', file, err);
-      })
-  })
-}
 
 
 
 
-function includeHTMLX() {
+function includeHTML() {  // NOT CURRENTLY IN USE
     // pull external HTML into a location with a data-include attribute
     // the attribute points to the file with the HTML to be included
     // uses XMLHttpRequest instead of fetch, so that local files work
     
-  document.querySelectorAll('[data-include]').forEach(el => {
-    const file = el.getAttribute('data-include')
-    const xhr = new XMLHttpRequest()
-
-    xhr.onload = () => {
-      el.innerHTML = xhr.responseText
-      }
-
-    xhr.onerror = () => {
-      console.warn('Include failed:', file)
-      }
-
-    xhr.open('GET', file, true)
-    xhr.send()
-    })
-  }
-
-
-
-
-function includeHTML() {
   document.querySelectorAll('[data-include]').forEach((el, i) => {
     const file = el.getAttribute('data-include');
     const iframe = document.createElement('iframe');
@@ -5676,4 +3737,36 @@ function includeHTML() {
     document.body.appendChild(iframe);
   });
 }
+
+
+
+
+
+
+function getScriptGroup (charNum, blockfile) {
+	// find the name of the script group for the character in charNum
+	// codepoint: dec codepoint value
+    // blockfile: boolean, determines whether to return the group name or block file name
+	// returns: if blockfile not set, the Unicode block name, with spaces converted to _
+    //          if blockfile set, the name of the block file under scripts
+	//          or, if neither is found, ''
+    // global scriptGroups
+	
+	if(typeof blockfile === 'undefined') { blockfile = false }
+    if (blockfile) var field = 3
+    else field = 2
+    
+    // find the script group
+	if (charNum < 128) return scriptGroups[1][field].replace(/ /g,'_')
+	var i=1
+	while ( i<scriptGroups.length && charNum > scriptGroups[i][1] ) { i++ }
+    
+    // figure out what to return
+	if ( i == scriptGroups.length ) return ''
+	else { 
+        if (blockfile && scriptGroups[i][field]) return scriptGroups[i][field]
+        else if (blockfile) return ''
+		else return scriptGroups[i][field].replace(/ /g,'_')
+		}
+	}
 

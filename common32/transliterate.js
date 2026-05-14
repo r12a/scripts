@@ -3,36 +3,44 @@
 // call this from the end of the document, but first read in the file that contains the (language specific) autoTranslitArray variable
 
 
-var autoTranslitArray = {}
 var errmsg = ''
 
 
+
+
 function makeAutoTranslitArray (lang) {
-	// creates an array of correlated items that will be used by the transliteration control
-	// takes the data from the spreadsheet
-	if (traceSet.has('makeAutoTranslitArray')) console.log('>>> makeAutoTranslitArray(',lang,')')
-	if (traceSet.has('makeAutoTranslitArray')) console.log('SPREADSHEETROWS', spreadsheetRows)
-	if (traceSet.has('makeAutoTranslitArray')) console.log('COLS', cols.transLoc)
-    
-    autoTranslitArray[lang] = {}
+	console.log(`>>> makeAutoTranslitArray( ${ lang })
+    Create autoTranslitArray[xx], used for glosses.`)
+	//console.log('SPREADSHEETROWS', spreadsheetRows)
+	//console.log('COLS', cols.transLoc)
 
-    // suck out the relevant data into the chars array
-    for (var line in spreadsheetRows) {
-		if (line.length === 1 && spreadsheetRows[line][cols.transLoc] === '') {
-            errmsg = `Empty translit column in spreadsheet for ${ spreadsheetRows[line][cols.ucsName] }`
-            //console.log('Empty translit column in makeAutoTranslitArray for ',spreadsheetRows[line][cols.ucsName])
-            console.warn('%c'+errmsg, 'color:orange;font-weight:bold;')
-            continue		
-			}
+	autoTranslitArray[lang] = {}
 
-        // create entry for the item
-        if (autoTranslitArray[lang][line]) console.log('Unexpected duplicate in makeTransliterationArray: ',line)
-        else autoTranslitArray[lang][line] = spreadsheetRows[line][cols.transLoc]
-		}
-    if (traceSet.has('makeAutoTranslitArray')) console.log('<<< AUTOTRANSLITARRAY',autoTranslitArray[lang])
-	}
+	for (const key in spreadsheetRows) {
+        // skip multi‑character keys (categories, sequences, etc.)
+		if (key.length !== 1) continue
 
+		const row = spreadsheetRows[key]
+		if (!row) continue
 
+		const translit = row[cols.transLoc]
+
+		// warn if transliteration column is empty
+		if (!translit || translit.trim() === '') {
+            errmsg = `Empty translit column in spreadsheet for ${ key }`
+            console.warn('%c' + errmsg, 'color:orange;font-weight:bold')
+            continue
+            }
+
+		// detect duplicates
+		if (autoTranslitArray[lang][key])
+			console.log('Unexpected duplicate in makeAutoTranslitArray:', key)
+		else
+            autoTranslitArray[lang][key] = translit
+            }
+
+	//console.log('<<< AUTOTRANSLITARRAY', autoTranslitArray[lang])
+    }
 
 
 function transliterate (str) {

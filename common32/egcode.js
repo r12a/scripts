@@ -1,8 +1,7 @@
-/* jshint strict: false */
+﻿/* jshint strict: false */
 /* globals autoExpandExamples, egList */
 
 
-//if (typeof traceSet === 'undefined') traceSet = new Set([])
 
 
 window.autoExpandExamples = {}
@@ -11,8 +10,89 @@ window.autoExpandExamples = {}
 var egList = {}
 
 
-function addExamples (langFilter) {
-    // console.log('addExamples(',langFilter,')\n\tConvert all .eg items to full markup.')
+
+
+
+
+
+function showCharacterDetails (evt) {
+	console.log(`showCharacterDetails (${ evt })
+    Open an article to display character notes details.
+    Called by ${ getCallerName() }.`)
+	//if (evt.target.closest('.noexpansion')) return
+    
+	if (typeof charDetails === 'undefined') return   // charDetails is defined in xx-details.js
+    
+    // don't show details for section character lists in right margin
+    if (evt.target.closest('.sectionCharacterList')) return 
+    
+    // get the character(s)
+    if (evt.target.closest('.soundSummary') || evt.target.closest('.listItem')) chars = evt.target.textContent
+    else {
+        const codepointLocn = evt.target.closest('.codepoint')
+        const imageLocn = codepointLocn.querySelector('img') ? codepointLocn.querySelector('img') : null
+        if (imageLocn) chars = imageLocn.alt.trim()
+        else chars = codepointLocn.querySelector('bdi').textContent.trim()
+        }
+    console.log('**** chars',chars)
+    
+    // decide whether to replace existing details or add to them (for listItems)
+    const replaceLast = evt.target.closest('.listArray') ? true : false
+    
+    // get the insertion point
+    let insertPoint = ''
+    if (evt.target.closest('.soundSummary')) insertPoint = evt.target.closest('.soundSummary') // summary tables
+    else if (evt.target.closest('.listArray')) insertPoint = evt.target.closest('.listArray') // characterboxes
+    else if (evt.target.closest('.cased')) insertPoint = evt.target.closest('.cased')
+    else if (evt.target.closest('p.glyphs')) insertPoint = evt.target.closest('p.glyphs') // map tables
+    else insertPoint = evt.target.closest('p, table, div, li')
+    console.log('#### insertPoint', insertPoint)
+    console.log('**** insertPoint:',insertPoint.tagName, typeof insertPoint.tagName, insertPoint.title)
+
+    // if this article is already open, close it
+    const ptr = insertPoint.nextElementSibling
+    //console.log('**** ptr:',ptr.tagName, typeof ptr.tagName, ptr.title)
+    if (ptr !== null && ptr.tagName.toLowerCase() === 'article' && ptr.title.trim() === chars) {
+        ptr.remove()
+        return
+        }
+    if (replaceLast && ptr !== null && ptr.tagName.toLowerCase() === 'article') {
+        ptr.remove()
+        }
+
+
+    // create the article element & table outer
+    const articleNode = document.createElement('article')
+    articleNode.title = chars
+
+	const tableNode = document.createElement('table')
+	tableNode.className = 'panel'
+    
+	tableNode.innerHTML = makeCharArticleList(chars.replace(/[◌-]/g,''), window.langTag)
+    
+	articleNode.appendChild(tableNode)
+    insertPoint.after(articleNode)
+
+    // post-processing
+	expandChMarkup()
+	expandEgMarkup(window.langTag)
+	setFootnoteRefs()
+	wrapToneLettersInBdi()
+    
+    setOnclicks()
+
+	return false
+    }
+
+
+
+
+
+
+function expandEgMarkup (langFilter) {
+    console.log(`>>> expandEgMarkup(${ langFilter })
+    Convert all .eg items to full markup.
+    Called by ${ getCallerName() }.`)
     /*  read the data into egList, in which each record has
 	example, meaning, transcription?, alt?, narrow transcription, wiktionary
 	alt is generally a vowelled form for abjads, an alternative spelling, or alternative script
@@ -54,315 +134,165 @@ function addExamples (langFilter) {
     temp, temptemp
     */
     
-	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
 
+    // this removes the requirement to provide lang attr with eg markup
+    // by defaulting to langTag set in xx-globals
+	if (typeof langFilter === 'undefined') langFilter = window.langTag
+
+    // ensure data exists
     if (typeof autoExpandExamples[langFilter] === 'undefined') {
-        console.log('%c' + 'autoExpandExamples[langFilter] fails for '+langFilter+'  (addExamples). Check the language setting on the link element.', 'color:' + 'red' + ';font-weight:bold;')
+		console.log('%cautoExpandExamples missing for '+langFilter+'  (expandEgMarkup). Check the language setting on the link element.', 'color:red;font-weight:bold')
+        alert('See error in console.log.')
         return
         }
-    var egArray = autoExpandExamples[langFilter].split("\n")
 
-    for (var i=0;i<egArray.length;i++) {
-		if (egArray[i] == '') continue
-		var temp = egArray[i].split('|')
-		egList[temp[0]] = egArray[i]
-		}
 
-    // find the nodes that correspond to the language in langFilter
-	var selector = '.eg[lang='+langFilter+']'
-	var nodes = document.querySelectorAll(selector)
-	// console.log(nodes.length,' example nodes to expand')
+    // BUILD LOOKUP TABLE
+    // get lines from the xx-terms.js file
+    const egArray = autoExpandExamples[langFilter].split('\n')
+    
+    // get list of terms with native word as key
+    const egList = {}
+	for (let line of egArray) {
+        if (!line) continue
+        const [term] = line.split('|')
+        egList[term] = line
+        }
+
+
+
+    // FIND EG NODES
+	const selector = `.eg[lang=${ langFilter }]`
+    const exampleNodeList = document.querySelectorAll(selector)
+	// console.log(exampleNodeList.length,' example nodes to expand')
+    
+    // example of raw data: 
+    // 𑻣𑻵𑻣𑻵|mute, dumb|ˈpe,pe|pepe|ᨄᨙᨄᨙ|ˈpʰɛ.pʰɛ|pepe
+    // term|meaning|ipa|transcription|altTranscription|notes|sAlt
+    const NATIVE = 0
+    const MEANING = 1
+    const IPA = 2
+	const TRANSCRIPTION = 3
+    const ALT = 4
+	const NOTES = 5
+    const WALT = 6
+
 	
-	for (var n=0;n<nodes.length;n++) {
-		//console.log('Looking for ',nodes[n].textContent)
-		//console.log('Language is ',nodes[n].lang)
-        
+    for (let node of exampleNodeList) {
         // example of raw data: 
         // 𑻣𑻵𑻣𑻵|mute, dumb|ˈpe,pe|pepe|ᨄᨙᨄᨙ|ˈpʰɛ.pʰɛ|pepe
         // term|meaning|ipa|transcription|alt|narrow transc/notes|source
 
-		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
-			temp = egList[nodes[n].textContent].split('|')
-            
-            // console.log('addExamples:',egList[nodes[n].textContent])
-            // get the available data
-            var termdata = egList[nodes[n].textContent].replace(/␣/g,'').split('|')
-            var term = termdata[0]
-            var meaning = termdata[1]
-            var ipa = termdata[2]
-            var transc = termdata[3]
-            var notes = termdata[4]
-            var alt = termdata[4]
-            var narrow = termdata[5]
-            
-            // choose the source pointer field depending on whether alt has been used
-            var source
-            if (termdata.length == 7) source = termdata[6]
-            else source = termdata[5]
-            
-            // console.log('term',term,'meaning',meaning,'ipa',ipa,'transc', transc,'notes',notes,'source',source)
-            
-            if (ipa) var cleanIPA = ipa.replace(/,/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
-            else cleanIPA = ''
-            if (nodes[n].classList.contains('transc')) var forceTranscription = true
-            else forceTranscription = false
-            
-            // figure out which items to show
-            //if (nodes[n].classList.contains('transc')) var forceTranscription = true
-            
-            
-            // start the charExample element
-			var out = '<span class="charExample'
-			if (nodes[n].classList.contains('inline')) out += ' inline'
-            out += '"'
-			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-			out += ' translate="no">'
-			
-			// add the .ex element, with onclick
-			out += `<bdi class="ex`
-            if (nodes[n].classList.contains('vertical')) out += ' vertical'
-            out += `" lang="${ nodes[n].lang }"`
-			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'       
-            
-            out += `  onclick="showCharDetailsInline('${ term }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }', this)"`
-			out += '>'
-			out += term
-			out += '</bdi>'
-            
-            //console.log('CLASSLIST',nodes[n].classList)
-            
-            // add an alternate transcription if requested
-            if (nodes[n].classList.contains('alt')) {
-                out += ` &nbsp;≡&nbsp; <bdi class="ex`
-                if (nodes[n].classList.contains('vertical')) out += ' vertical'
-                out += `" lang="${ nodes[n].lang }"`
-                if (nodes[n].dir === 'rtl') out += ' dir="rtl"'            
-                out += `  onclick="showCharDetailsInline('${ alt }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }', this)"`
-                out += '>'
-                out += alt
-                out += '</bdi>'
-                }
-                
-			
-            // bail if there is a nometadata class name
-            // this is used principally for maps with non-pointed examples
-            if (nodes[n].classList.contains('short')) {
-                out += '</span>'
-                nodes[n].outerHTML = out
-                continue
-                }
-            
-            
-            // if no other classes, then assume just ipa or transc if there's no ipa
-            if (! nodes[n].classList.contains('ipa') &&! nodes[n].classList.contains('transc') && ! nodes[n].classList.contains('narrow') && ! nodes[n].classList.contains('meaning')) {
-                if (ipa) out += ' <bdi class="ipa">'+cleanIPA+'</bdi>'
-                else if (transc) {
-                    out += ' <bdi class="transc"'
-                    if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-                    out += `>${ transc }</bdi>`
-                    }
-                out += ` <bdi class="meaning">${ meaning }</bdi>`
-                }
-            
-            // otherwise, output only the items for which a class name exists
-            else {
-            
-                // add the ipa, if the .ipa attribute is set
-                if (nodes[n].classList.contains('ipa')) out += ' <bdi class="ipa">'+cleanIPA+'</bdi>'
+		const term = node.textContent
+		if (!egList[term]) continue
 
-                 // add a transcription, if the .transc attribute is set
-                if (nodes[n].classList.contains('transc')) {
-                    out += ' <bdi class="transc"'
-                    if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-                    out += `>${ transc }</bdi>`
-                    }
-
-                // add the narrow phonetic transcription, if available
-                if (nodes[n].classList.contains('narrow')) out += ` <bdi class="ipa narrow">${ narrow }</bdi>`
-
-                // add the meaning, if available
-                if (nodes[n].classList.contains('meaning')) out += ` <bdi class="meaning">${ meaning }</bdi>`
-                }
-			
-			out += '</span>'
-			
-			nodes[n].outerHTML = out
-			}
-		}
-    if (! typeof showTransliterations === 'undefined') showTransliterations( document.getElementById('translitToggleCheckbox').checked )
-	egArray = []
-	//egList = {}
-	}
-
-
-function addExamplesX (langFilter) {
-    // console.log('addExamples(',langFilter,')\n\tConvert all .eg items to full markup.')
-/*  read the data into egList, in which each record has
-	example, meaning, transcription?, notes?, alt?
-	alt is generally a vowelled form for abjads or an alternative spelling
-    
-    latest modifications have the following effect:
-    if .transc is set (and there's a transcription) only the transcription will be output (no IPA)
-    otherwise, if there's IPA that will be output
-    if there's no IPA and no .transc, then the transcription will be output
-    there is no longer any transliteration output
-    
-    langFilter, class name used to select blocks to add examples to
-    
-    [GLOBALS]
-    autoExpandExamples, obj, set above, then populated under .<langFiler> in xx-examples.js; holds all terms
-    
-    [CLASSES]
-    The calling element can have class names with the following meanings:
-    inline      don't make into a separate, large text block
-    transc      used to force display of the transcription rather than the IPA
-    alt         displays the IPA/transcription with the special transcription (eg. vowelled version or other orthography than Latin)
-    narrow      displays the narrow IPA if there is one in the penultimate field
-    vertical    applies a vertical writing mode, eg. for Mongolian
-    
-    [LOCALS]
-    egArray, array, built from autoExpandExamples
-    egList, object, list of terms filtered out by langFilter with native word as key
-    selector, a selector for searching for letter blocks
-    nodes, node array, example nodes to expand
-    out, str, the generated markup
-    ipa, str, an IPA value
-    transcription, str, a transcription value
-    i, n, counters
-    temp, temptemp
-    */
-    
-	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
-
-    if (typeof autoExpandExamples[langFilter] === 'undefined') {
-        console.log('%c' + 'autoExpandExamples[langFilter] fails for '+langFilter+'  (addExamples). Check the language setting on the link element.', 'color:' + 'red' + ';font-weight:bold;')
-        return
-        }
-    var egArray = autoExpandExamples[langFilter].split("\n")
-
-    for (var i=0;i<egArray.length;i++) {
-		if (egArray[i] == '') continue
-		var temp = egArray[i].split('|')
-		egList[temp[0]] = egArray[i]
-		}
-
-    // find the nodes that correspond to the language in langFilter
-	var selector = '.eg[lang='+langFilter+']'
-	var nodes = document.querySelectorAll(selector)
-	// console.log(nodes.length,' example nodes to expand')
-	
-	for (var n=0;n<nodes.length;n++) {
-		//console.log('Looking for ',nodes[n].textContent)
-		//console.log('Language is ',nodes[n].lang)
+		// remove ipa indicators
+        const raw = egList[term].replace(/␣/g, '')
         
-        // example of raw data: 
-        // τέσσερα|four|ˈt,e,s,e,r,a|téssera|notes|x
-        // term|meaning|ipa|transcription|notes|source
+        // get the available data
+		const termdata = raw.split('|')
+		const meaning = termdata[MEANING] || ''
+		const ipa = termdata[IPA] || ''
+		const transc = termdata[TRANSCRIPTION] || ''
+		const alt = termdata[ALT] || ''
+		const narrow = termdata[NOTES] || ''
+        // choose the source pointer field depending on whether alt has been used
+		const source = termdata.length === 7 ? termdata[WALT] : termdata[NOTES]
 
-		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
-			temp = egList[nodes[n].textContent].split('|')
-            
-            // console.log('addExamples:',egList[nodes[n].textContent])
-            // get the available data
-            var termdata = egList[nodes[n].textContent].replace(/␣/g,'').split('|')
-            var term = termdata[0]
-            var meaning = termdata[1]
-            var ipa = termdata[2]
-            var transc = termdata[3]
-            var notes = termdata[4]
-            var alt = termdata[4]
-            var narrow = termdata[5]
-            
-            // choose the source pointer field depending on whether alt has been used
-            var source
-            if (termdata.length == 7) source = termdata[6]
-            else source = termdata[5]
-            
-            // console.log('term',term,'meaning',meaning,'ipa',ipa,'transc', transc,'notes',notes,'source',source)
-            
-            if (ipa) var cleanIPA = ipa.replace(/,/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
-            else cleanIPA = ''
-            if (nodes[n].classList.contains('transc')) var forceTranscription = true
-            else forceTranscription = false
-            
-            // start the charExample element
-			var out = '<span class="charExample'
-			if (nodes[n].classList.contains('inline')) out += ' inline'
-            out += '"'
-			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-			out += ' translate="no">'
-			
-			// add the .ex element, with onclick
-			out += `<bdi class="ex`
-            if (nodes[n].classList.contains('vertical')) out += ' vertical'
-            out += `" lang="${ nodes[n].lang }"`
-			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'            
-			//if (temp[2]) ipaBreakdown = temp[2]
-            //else ipaBreakdown = ''
-            //out += `  onclick="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipa }')"`
-            // LATEST out += `  onclick="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }')"`
-            //out += `  onmouseover="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }')"`
-       
-            
-            //out += `  onmouseover="showNameDetails('${ term }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }')"`
-            out += `  onclick="showCharDetailsInline('${ term }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }', this)"`
-			out += '>'
-			out += term
-			out += '</bdi>'
-            
-            // add an alternate transcription if requested
-            if (nodes[n].classList.contains('alt')) {
-                out += ` &nbsp;≡&nbsp; <bdi class="ex`
-                if (nodes[n].classList.contains('vertical')) out += ' vertical'
-                out += `" lang="${ nodes[n].lang }"`
-                if (nodes[n].dir === 'rtl') out += ' dir="rtl"'            
-                out += `  onclick="showCharDetailsInline('${ alt }', '${ nodes[n].lang }', window.blockDir, '', document.getElementById('panel'), '', '', '${ ipa }', this)"`
-                out += '>'
-                out += alt
-                out += '</bdi>'
-                }
-                
-			
-            // bail if there is a nometadata class name
-            // this is used principally for maps with non-pointed examples
-            if (nodes[n].classList.contains('short')) {
-                out += '</span>'
-                nodes[n].outerHTML = out
-                continue
-                }
-            
-			// add a transcription, if the .transc attribute is set
-            if (forceTranscription) {
-                if (transc) {
-                    out += ' <bdi class="transc"'
-                    if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-                    out += `>${ transc }</bdi>`
-                    }
-                }
-            // ipa if available, otherwise look for transcription, unless .transc already set
-			else if (ipa) out += ' <bdi class="ipa">'+cleanIPA+'</bdi>'
+
+
+		const nodeClassList = node.classList
+		const nodeLang = node.lang
+		const nodeDir = node.dir
+
+		const wantsIPA = nodeClassList.contains('ipa')
+		const wantsTransc = nodeClassList.contains('transc')
+		const wantsNarrow = nodeClassList.contains('narrow')
+		const wantsMeaning = nodeClassList.contains('meaning')
+		const wantsInline = nodeClassList.contains('inline')
+		const wantsAlt = nodeClassList.contains('alt')
+		const wantsVertical = nodeClassList.contains('vertical')
+		const wantsShort = nodeClassList.contains('short')
+
+		const noExplicitFields = !wantsIPA && !wantsTransc && !wantsNarrow && !wantsMeaning
+
+		const cleanIPA = ipa
+			.replace(/,/g, '')
+			.replace(/–/g, '')
+			.replace(/‹/g, '')
+			.replace(/›/g, '')
+    
+        //const onclickText = `  onclick="showCharDetailsInline('${ term }', '${ nodeLang }', '${ ipa }', this)"`
+
+		// build wrapper
+		let out = `<span class="charExample${ wantsInline ? ' inline' : '' }" translate="no"`
+		if (nodeDir === 'rtl') out += ' dir="rtl"'
+		out += '>'
+
+		// main example
+		out += `<bdi class="ex${ wantsVertical ? ' vertical' : '' }" lang="${ nodeLang }" data-ipa="${ ipa }"`
+		if (nodeDir === 'rtl') out += ' dir="rtl"'
+		out += '>'
+		out += term
+		out += '</bdi>'
+
+
+		// alternate form
+		if (wantsAlt && alt) {
+            out += ` &nbsp;≡&nbsp; <bdi class="ex${ wantsVertical ? ' vertical' : '' }" lang="${ nodeLang }" data-ipa="${ ipa }"`
+            if (nodeDir === 'rtl') out += ' dir="rtl"'
+            out += '>'
+            out += alt
+            out += '</bdi>'
+            }
+
+        // short mode: no metadata
+        if (wantsShort) {
+            out += '</span>'
+            node.outerHTML = out
+            continue
+            }
+
+        // default behaviour: IPA or transc + meaning
+        if (noExplicitFields) {
+            if (ipa) out += ` <bdi class="ipa">${ cleanIPA }</bdi>`
             else if (transc) {
-                out += ' <bdi class="transc"'
-                if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
+                out += ` <bdi class="transc"`
+                if (nodeDir === 'rtl') out += ' dir="rtl"'
                 out += `>${ transc }</bdi>`
                 }
-            
-            // add a narrow phonetic transcription if requested & available
-            if (nodes[n].classList.contains('narrow')) {
-                out += ` <bdi class="ipa narrow">${ narrow }</bdi>`
+            if (meaning) out += ` <bdi class="meaning">${ meaning }</bdi>`
+            out += '</span>'
+            node.outerHTML = out
+            continue
+            }
+
+		// explicit field selection
+        else {
+            if (wantsIPA) out += ` <bdi class="ipa">${ cleanIPA }</bdi>`
+
+            if (wantsTransc) {
+                out += ` <bdi class="transc"`
+                if (nodeDir === 'rtl') out += ' dir="rtl"'
+                out += `>${ transc }</bdi>`
                 }
 
-			// meaning
-			if (meaning) out += ' <bdi class="meaning">'+meaning+'</bdi>'
-			
-			out += '</span>'
-			
-			nodes[n].outerHTML = out
-			}
-		}
-    if (! typeof showTransliterations === 'undefined') showTransliterations( document.getElementById('translitToggleCheckbox').checked )
-	egArray = []
-	//egList = {}
+            if (wantsNarrow) out += ` <bdi class="ipa narrow">${ narrow }</bdi>`
+
+            if (wantsMeaning && meaning)
+                out += ` <bdi class="meaning">${ meaning }</bdi>`
+
+            out += '</span>'
+            node.outerHTML = out
+            }
+        }
+
+    setOnclicks()
+    
+    
+    // update transliterations if needed  DO WE NEED THIS ??
+    if (typeof showTransliterations !== 'undefined')
+    showTransliterations(document.getElementById('translitToggleCheckbox').checked)
 	}
 
 
@@ -370,104 +300,51 @@ function addExamplesX (langFilter) {
 
 
 
-//<span class="charExample" translate="no"><span class="ex" lang="ta">கேடு</span> <span class="trans">kēʈu</span> <span class="ipa">keːɖʉ</span> <span class="meaning">destruction</span></span>
 
-
-/* SHOW TRANSCRIPTIONS INLINE, RATHER THAN IN POPUP PANEL */
-
-
-/*function showCharDetailsInline (chars, clang, base, target, panel, list, translit, ipa, node) {
+function makeExampleArticle (evt) {   // chars, clang, ipa, node
     // open an article window after an example and fill it with character details
-    
-	if (typeof charDetails === 'undefined') return
+    //console.log(`showCharDetailsInline (\n\tchars ${ chars }\n\tclang ${ clang }\n\tipa ${ ipa }\n\tnode ${ node } )`)
+    console.log(`makeExampleArticle ( ${ evt }\ )\n\tOpen an article window after an example and fill it with character details`)
+
+	if (typeof charDetails === 'undefined') return  // PROBABLY DON'T NEED THIS
+
+    const node = evt.target
+    const clang = evt.target.lang
+    const ipa = evt.target.dataset.ipa
+    const chars = evt.target.textContent
 
     // get the insertion point
+    //if (node.closest('figure')) insertPoint = node.closest('figure')
+    //else 
     insertPoint = node.closest('p, table, div, li')
-
-
-
+    console.log('*** Insertpoint', insertPoint)
+    
     // if this article is already open, close it
-    console.log('insertPoint',insertPoint,'next',insertPoint.nextElementSibling)
-    ptr = insertPoint.nextElementSibling
-    //console.log('tagname',ptr.tagName, 'title',ptr.title)
+    const ptr = insertPoint.nextElementSibling
     if (ptr !== null && ptr.tagName === 'ARTICLE' && ptr.title === chars) {
         ptr.remove()
         return
         }
 
-
     // create the article element & table outer
-    var panel = document.createElement('article')
-    panel.title = chars
-	var table = document.createElement('table')
-	table.className = 'panel'
-	table.innerHTML = makeExampleArticleDetails(chars, clang, base, target, panel, list, translit, ipa, node)
-	panel.appendChild(table)
-    insertPoint.after(panel)
-	
-	expandCharMarkup()
-	addExamples(clang)
-	//convertTranscriptionData(evt.target)
-	setFootnoteRefs()
-    var links = table.querySelectorAll('.codepoint a, .codepoint code')
-	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table, window.blockDirectoryName, 'c')
+    const articleNode = document.createElement('article')
+    articleNode.title = chars
     
-    // set event trigger on all .ipa elements - opens description box on click
-    if (document.querySelector('.useBlockExamples')) {
-        var ipaNodes = document.querySelectorAll(".ipa")
-        for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
-        }
-        
-	return false
-	}
-*/
-
-function showCharDetailsInline (chars, clang, base, target, panel, list, translit, ipa, node) {
-    // open an article window after an example and fill it with character details
-    //console.log(`showCharDetailsInline ( ${ chars }, ${ clang }, ${ base }, ${ target }, ${ panel }, ${ list }, ${ translit }, ${ ipa }, ${ node } )`)
-
-	if (typeof charDetails === 'undefined') return
-
-    // get the insertion point
-    if (node.closest('figure')) insertPoint = node.closest('figure')
-    else insertPoint = node.closest('p, table, div, li')
-
-
-
-    // if this article is already open, close it
-    //console.log('insertPoint',insertPoint,'next',insertPoint.nextElementSibling)
-    ptr = insertPoint.nextElementSibling
-    //console.log('tagname',ptr.tagName, 'title',ptr.title)
-    if (ptr !== null && ptr.tagName === 'ARTICLE' && ptr.title === chars) {
-        ptr.remove()
-        return
-        }
-
-
-    // create the article element & table outer
-    var panel = document.createElement('article')
-    panel.title = chars
-	var table = document.createElement('table')
-	table.className = 'panel'
-	table.innerHTML = makeExampleArticleDetails(chars, clang, base, target, panel, list, translit, ipa, node)
-	panel.appendChild(table)
-    insertPoint.after(panel)
-	
-	expandCharMarkup()
-	addExamples(clang)
-	//convertTranscriptionData(evt.target)
-	setFootnoteRefs()
-    var links = table.querySelectorAll('.codepoint a, .codepoint code')
-	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table, window.blockDirectoryName, 'c')
+	const tableNode = document.createElement('table')
+	tableNode.className = 'panel'
     
-    // set event trigger on all .ipa elements - opens description box on click
-    if (document.querySelector('.useBlockExamples')) {
-        var ipaNodes = document.querySelectorAll(".ipa")
-        for (i=0;i<ipaNodes.length;i++) ipaNodes[i].onclick = showIPAPhoneEvt
-        }
-        
+	tableNode.innerHTML = makeExampleArticleDetails(chars, ipa, clang)
+    
+	articleNode.appendChild(tableNode)
+    insertPoint.after(articleNode)
+	
+    // post-processing
+	expandChMarkup()
+	expandEgMarkup(clang)
+	setFootnoteRefs()
+    
+    setOnclicks()
+    
 	return false
 	}
 
@@ -475,40 +352,31 @@ function showCharDetailsInline (chars, clang, base, target, panel, list, transli
 
 
 
-function makeExampleArticleDetails (chars, clang, base, target, panel, list, translit, ipa) {
+
+
+
+
+function makeExampleArticleDetails (chars, ipa, clang) {
+    console.log(`>> makeExampleArticleDetails(\n\tchars ${ chars }\n\tclang ${ clang }\n\tipa ${ ipa })\n\tDisplay characters in an example in an article`)
     // called from showCharDetailsInline to build internal details of an article
-    
-    // new version uses spreadsheetRows, rather than charData
+    // an 'article' is something displayed after an example to give details of composition
     
     //console.log('makeExampleArticleDetails (chars=',chars, 'clang=',clang, 'base=',base, 'target=', target, 'panel=',panel, 'list=',list, 'translit=',translit, 'ipa=',ipa,')\n\tDisplay characters in an example (like in the panel)')
     // chars (string), alt text of example
     // clang (string), lang attribute value of example img
-    // base (string), path for link to character detail
-    // target (string), name of the window to display results in, usually 'c' or ''; given the latter, link goes to same window
-    // list (string), if not null, indicates that spaces and nbsp should be ignored
-    // local out charArray chardiv charimg thename thelink hex dec blockname blockfile c
     // global charData pickerDir
-    // calls getScriptGroup
 
-    // to show per-grapheme ipa the ipa transcriptions should have ï¿½ as grapheme separator (and syllables should be separated by '.'). Unpronounced segments are represented by ï¿½ (en hyphen).  Monosyllabic words don't need any extra stuff.
+    // to show per-grapheme ipa the ipa transcriptions should have a comma as grapheme separator (and syllables should be separated by '.'). Unpronounced segments are represented by – (en dash).  Monosyllabic words don't need any extra stuff.
 
-    var characterList, graphemes, ptr, transcriptions, gloss, charArray, out
-	var chardiv, charimg, thename, thelink, hex, dec, blockname, blockfile
-
-	// check whether the calling page has set a base and target window: if not base, point to UniView
-	if(typeof base === 'undefined' || base === '') { base = '../../uniview/index.html?char=' }
-	if(typeof target === 'undefined') { target = 'c' }
-	if(typeof list === 'undefined') { list = null }
-	if(typeof translit === 'undefined') { translit = '' }
 	  
     
-    out = '<tr>'
+    let out = '<tr>'
     
-    
+    // close button
     out += `<th class="cdChar" onclick="this.closest('article').remove()"><span class="exCharClose">X</span></th>`
     
     
-    // add the links
+    // left column links
     out += `<td class="cData">`
     out += `<div class="notesLink">`
     
@@ -523,24 +391,11 @@ function makeExampleArticleDetails (chars, clang, base, target, panel, list, tra
     
     out += `<p><a href="javascript:void(0)" onclick="openExportWindow('../../scripts/apps/graphemes/index.html?gc=${ chars }')">Graphemes</a>`
     out += `</p>`
-
-    if (window.pickerDir) {
-        out += `<p><a href="javascript:void(0)" onclick="openExportWindow('../../pickers/${ window.pickerDir }/index.html?text=${ chars }')">Workbench</a>`
-        out += `</p>`
-        }
     
     // add a link to the _terms page
-    if (typeof window.languageName === 'undefined') var fragid = ''
-    else fragid = '#'+window.languageName
-
-    // figure out where to find the url for the _terms page
-    var url
-    if (typeof template !== 'undefined' && typeof template.vocablocation === 'string')  url = `../../scripts/${ template.vocablocation }.html`
-    
-    else url = `${ window.langTag }_terms`
-    
+    //const fragid = '#'+window.languageName
+    const url = `${ window.langTag }_terms`
     if (typeof window.removeVowels === 'function') chars = removeVowels(chars)
-
     out += `<p><a href="javascript:void(0)" onclick="openExportWindow('${ url }.html?q=${ chars }')">Term list</a>`
     out += `</p>`
 
@@ -548,54 +403,58 @@ function makeExampleArticleDetails (chars, clang, base, target, panel, list, tra
 
 
 
-    // make the character gloss
-	out += '<div id="ruby">'
-	
-    // get any IPA data provided - should be pre-separated for graphemes by ï¿½
-    if (typeof ipa === 'string' && ipa !== '') ipa = ipa.split(',')
-    else ipa = false
+    // put graphemes and ipa into graphemeArray and ipaArray
+    // IPA data - should be pre-separated for graphemes by commas
+    if (typeof ipa === 'string' && ipa !== '') ipaArray = ipa.split(',')
+    else ipaArray = []
     
 	// add the example to the panel as a title
-    characterList = [...chars]
-    graphemes = []
-    ptr = -1
-    for (var c=0;c<characterList.length;c++) {
-        if (window.marks && window.marks.has(characterList[c]) && c !== 0) graphemes[ptr] += characterList[c]
+    const charArray = [...chars]
+    const graphemeArray = []
+    let ptr = -1
+    
+    // segment the example text - use window.marks rather than regex because
+    // we may be dealing with scripts not yet in Unicode or not known by JS
+    for (var c=0;c<charArray.length;c++) {
+        const ch = charArray[c]
+        if (window.marks && window.marks.has(ch) && c !== 0) graphemeArray[ptr] += ch
         else {
             ptr++
-            graphemes[ptr] = characterList[c]
+            graphemeArray[ptr] = ch
             }
         }
 
-    transcriptions = []
-    for (var t=0;t<graphemes.length;t++) {
-        transcriptions[t] = transliteratePanel(graphemes[t], clang)
-        }
+    // transliteration
+	const transcriptionArray = graphemeArray.map(g => transliteratePanel(g, clang))
+
+        console.log('graphemeArray: ',graphemeArray)
+        console.log('transcriptionArray: ',transcriptionArray)
+        console.log('ipaArray: ',ipaArray)
+
+
+
+
+    // make the character gloss
+	out += '<div id="ruby">'
     
-    if (traceSet.has('showNameDetails')) {
-        console.log('graphemes: ',graphemes)
-        console.log('transcriptions: ',transcriptions)
-        console.log('ipa: ',ipa)
-        }
-
-
     // draw the glosses
-    if (location.toString().includes('picker')) var iconURL = '../../scripts/img/icons/copytiny.svg'
-    else iconURL = '../img/icons/copytiny.svg'
-    gloss = '<div class="multilineGlossedText">'
-    for (t=-1;t<graphemes.length;t++) {
+    iconURL = '../img/icons/copytiny.svg'
+    
+    let gloss = '<div class="multilineGlossedText">'
+    
+    for (t=-1;t<graphemeArray.length;t++) {
         if (t===-1) {
             gloss += `<div class="stack"><span class="rt translitGloss" lang="und-fonipa" title="Transliteration of the text."><img src="${ iconURL }" class="copyIcon" onclick="copyExamplePanelText(this, '.translitGloss')" title="Copy the transliteration." alt="Copy transliteration"></span><span class="rb"><img src="${ iconURL }" onclick="copyExamplePanelText(this, '.rb')" class="copyIcon" title="Copy the text." alt="Copy text"></span>`
-            if (ipa !== false) {
-                if (ipa[t+1]) gloss += `<span class="rt IPAGloss" lang="und-fonipa" title="IPA transcription of the text."><img class="copyIcon" src="${ iconURL }" onclick="copyExamplePanelText(this, '.IPAGloss')" title="Copy the IPA transcription." alt="Copy IPA"></span>`
+            if (ipaArray.length > 0) {
+                if (ipaArray[t+1]) gloss += `<span class="rt IPAGloss" lang="und-fonipa" title="IPA transcription of the text."><img class="copyIcon" src="${ iconURL }" onclick="copyExamplePanelText(this, '.IPAGloss')" title="Copy the IPA transcription." alt="Copy IPA"></span>`
                 else gloss += `<span class="rt">&nbsp;</span>`
                 }
             gloss += `</div>`
             }
         else {
-            gloss += ` <div class="stack"><span class="rt translitGloss" lang="und-fonipa">${ transcriptions[t] }</span><span class="rb">${ graphemes[t] }</span>`
-            if (ipa !== false) {
-                if (ipa[t]) gloss += `<span class="rt IPAGloss" lang="und-fonipa">${ ipa[t] }</span>`
+            gloss += ` <div class="stack"><span class="rt translitGloss" lang="und-fonipa">${ transcriptionArray[t] }</span><span class="rb">${ graphemeArray[t] }</span>`
+            if (ipaArray.length > 0) {
+                if (ipaArray[t]) gloss += `<span class="rt IPAGloss" lang="und-fonipa">${ ipaArray[t] }</span>`
                 else gloss += `<span class="rt">&nbsp;</span>`
                 }
             gloss += `</div>`
@@ -606,52 +465,37 @@ function makeExampleArticleDetails (chars, clang, base, target, panel, list, tra
 	out += `<div dir="ltr" class="glossContainer" lang="${ clang }" id="title">${ gloss }</div>`
 
 
-	// create a list of characters
-	if (list) chars = chars.replace(/ /g,'').replace(/\u00A0/g,'') // remove spaces if list
-    charArray = [...chars]
-    
-    // console.log('charArray: ',charArray)
 
+
+    // make list of characters
     out += '<div id="listOfCharacters">'
-	for (var c=0; c<charArray.length; c++) { 
-        dec = charArray[c].codePointAt(0)
-        hex = dec.toString(16)
-        while (hex.length < 4) { hex = '0'+hex }
-        hex = hex.toUpperCase()
- 
-		if (spreadsheetRows[charArray[c]]) {            
-            blockname = getScriptGroup(dec, false)
-            blockfile = getScriptGroup(dec, true)
-            //console.log(dec,blockfile)
-            isInBlock = spreadsheetRows[charArray[c]]?true:false
-            //isInBlock = spreadsheetRows[charArray[c]]?spreadsheetRows[charArray[c]][cols['block']]:''
+    
+	for (let ch of charArray) {
+		const dec = ch.codePointAt(0)
+		let hex = dec.toString(16).toUpperCase().padStart(4, '0')
 
-            out += '<div class="panelCharacter">'
-			if (isInBlock) {
-                out += `<img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }" style="height:2rem;">`
-                
-                // FOR ORTHOGRAPHY NOTES
-                if (document.querySelector('.useBlockExamples')) {
-                    out += `<a href="javascript:void(0)" onclick="showCharDetailsInPanel(event)"> ${ spreadsheetRows[charArray[c]][cols['ucsName']] }</a>`
-                    }
+		out += '<div class="panelCharacter">'
 
-                else {
-                    out += `<a href="#char${ hex }"> ${ spreadsheetRows[charArray[c]][cols['ucsName']] }</a>\n`
-                    }
-				}
-			else {
-				out += '<img src="'+'../../c/'+blockname+"/large/"+hex+'.png'+'" alt="'+charArray[c]+'" style="height:2rem;">'
-				out += ' '+spreadsheetRows[charArray[c]][cols['ucsName']]+'\n'
-				}
-			}
-        else if (window.detailsfileList) { // ie FOR BLOCK PAGES
-            out += `<div class="panelCharacter"><img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }" style="height:2rem;"> <a href="#char${ hex }"> U+${ hex } ${ charData[charArray[c]]}</a></div>\n`
+        if (spreadsheetRows[ch]) {
+            out += `<span class="ch img">${ ch }</span>`
+            /*const blockname = getScriptGroup(dec, false)
+            const blockfile = getScriptGroup(dec, true)
+            const isInBlock = spreadsheetRows[ch] ? true : false
+
+            out += `<img src="../../c/${ blockname }/large/${ hex }.png" alt="${ ch }" style="height:2rem;">`
+
+            out += `<a href="javascript:void(0)" onclick="showCharDetailsInPanel(event)"> ${ spreadsheetRows[ch][cols['ucsName']] }</a>`*/
             }
 		else {
-			out += `<div class="panelCharacter"><a target="c" href="../../uniview/index.html?charlist=${ charArray[c] }&char=${ hex }"><img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ charArray[c] }"> U+${ hex } No data. Open in UniView.</a></div>`
-			}
+            out += `<a target="c" href="../../uniview/index.html?charlist=${ ch }&char=${ hex }">
+                <img src="../../c/${ getScriptGroup(dec, false) }/large/${ hex }.png" alt="${ ch }">
+                U+${ hex } No data. Open in UniView.
+                </a>`
+            }
+
 		out += '</div>'
-		}
+    	}
+
 	out += '</div>'
 
 
@@ -672,65 +516,6 @@ function makeExampleArticleDetails (chars, clang, base, target, panel, list, tra
 
 
 
-
-
-
-
-function makeArticleDetails (chars) {
-    if (traceSet.has('makeDetails')) console.log('makeDetails(', 'chars:'+chars, ')\n\tAdd  details for character(s) below a block.\n\tGLOBALS notesLangtag:'+window.notesLangtag, 'blockDirectoryName:'+window.blockDirectoryName)
-    
-    // global charDetails spreadsheetRows cols
-    // local out charArray i lang dir
-
-    if (typeof charDetails === 'undefined') return
-
-    var out = ''
-    var charArray = [... chars]
-    var lang = window.notesLangtag
-    var dir = window.blockDirectoryName
-
-    for (var i=0;i<charArray.length;i++) {
-        if (spreadsheetRows[charArray[i]]) {
-            // make title to side
-            out += `<tr><th class="cdChar" onclick="this.closest('article').remove()"><span class="ex" lang="${ lang }">${ charArray[i] }</span><br><span class="cdCharClose">X</span></th>`
-            
-            // add the full details
-            out += '<td class="cdData">'
-            out += printDetails(charArray[i])
-            out += '</td></tr>'
-            }
-        }
-
-    return out
-    }
-
-
-
-
-function closeArticle (node) {
-    node.parentNode.remove()
-    }
-
-function copyExamplePanelText (node, type) {
-console.log(node)
-    var text = node.closest('.glossContainer').querySelectorAll(type)
-    var out = ''
-    for (var i=0;i<text.length;i++) out += text[i].textContent
-    if (type === '.IPAGloss') out = out.replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
-    navigator.clipboard.writeText(out)
-    
-    document.getElementById('copyNotice').style.display = 'block';
-      setTimeout(() => {
-        document.getElementById('copyNotice').style.display = 'none'
-      }, '500')
-	}
-
-
-
-
-function closeArticle (node) {
-    node.parentNode.remove()
-    }
 
 
 
@@ -793,14 +578,13 @@ function showCharDetailsInPanel (evt) {
 	panel.appendChild(table)
     insertPoint.after(panel)
 	
-	expandCharMarkup()
-	addExamples(lang)
+	expandChMarkup()
+	expandEgMarkup(lang)
 	//convertTranscriptionData(evt.target)
     wrapToneLettersInBdi()
 	setFootnoteRefs()
     var links = table.querySelectorAll('.codepoint a, .codepoint code')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table, window.blockDirectoryName, 'c')
     
     // set event trigger on all .ipa elements - opens description box on click
     ipaNodes = document.querySelectorAll(".ipa")
@@ -815,33 +599,239 @@ function showCharDetailsInPanel (evt) {
 
 
 
-function makeArticleDetails (chars) {
-    // console.log('makeDetails(', 'chars:'+chars, ')\n\tAdd  details for character(s) below a block.\n\tGLOBALS notesLangtag:'+window.notesLangtag, 'blockDirectoryName:'+window.blockDirectoryName)
+
+
+
+function makeCharArticleList (chars, lang) {
+    console.log(`>>> makeArticleDetails(chars: ${ chars })
+    Add  details for character(s) below a block.`)
+
+	if (typeof window.charDetails === 'undefined') // charDetails is defined in xx-details.js
+		return ''
+
+	const charArray = [...chars]
+	const dir = window.blockDirectoryName // not used.  useful ?
     
-    // global charDetails spreadsheetRows cols
-    // local out charArray i lang dir
+	let out = ''
+	for (let ch of charArray) {
+		const row = window.spreadsheetRows[ch]
+		if (!row) continue
 
-    if (typeof charDetails === 'undefined') return
+		out += `<tr>
+			<th class="cdChar" onclick="this.closest('article').remove()">
+				<span class="ex" lang="${ lang }">${ ch }</span><br>
+				<span class="cdCharClose">X</span>
+			</th>
+			<td class="cdData">${ markupForCharDetails(ch, lang) }</td>
+		</tr>`
+	}
 
-    var out = ''
-    var charArray = [... chars]
-    var lang = window.notesLangtag
-    var dir = window.blockDirectoryName
+	return out
+    }
 
-    for (var i=0;i<charArray.length;i++) {
-        if (spreadsheetRows[charArray[i]]) {
-            // make title to side
-            out += `<tr><th class="cdChar" onclick="this.closest('article').remove()"><span class="ex" lang="${ lang }">${ charArray[i] }</span><br><span class="cdCharClose">X</span></th>`
-            
-            // add the full details
-            out += '<td class="cdData">'
-            out += printDetails(charArray[i])
-            out += '</td></tr>'
+
+
+
+
+
+function markupForCharDetails (char, lang) {
+    console.log(`>>> markupForCharDetails( char: ${ char })
+    Get character details for a single character in an article.`)
+
+	if (typeof charDetails === 'undefined') return ''
+
+	const directory = window.blockDirectoryName // ????
+	const row = window.spreadsheetRows[char]
+	if (!row) return ''
+
+    const hex = char.codePointAt(0).toString(16).toUpperCase()
+
+	let out = ''
+
+	// OUT‑POINTING LINKS     
+    // Uniview
+    out += `<p class="notesLink"><a target="_blank" href="../../uniview/index.html?codepoints=${ hex }&char=${ hex }">UniView</a>`
+    
+    // properties
+    out += `<br><a target="_blank" href="https://util.unicode.org/UnicodeJsps/character.jsp?a=${ hex }">Properties</a>`
+
+    // character notes files
+    if (lang) out += `<br><a target="_blank" href="../../scripts/${ directory }/${ lang }-characters.html#char${ hex }">Notes</a>`
+
+    // terms list
+    if (window.autoExpandExamples[window.langTag]) out += `<br><a target="terms" href="${ window.langTag }_terms.html?q=${ char }">Terms</a>`
+
+    // character usage app
+    if (window.autoExpandExamples[window.langTag]) out += `<br><a target="_blank" href="../../app-charuse/index.html?language=${ window.charUsageBCP }&charlist=${ char }">Usage</a>`
+    out += '</p>'
+
+
+
+
+	// HEADER
+	out += `<p class="cdHeader">
+		<span class="uname cdTitle">${ row[cols.ucsName] }</span>`
+
+	if (row[cols.nameLoc] && row[cols.nameLoc] !== '0')
+		out += ` &nbsp; <span class="transliteratedname trans">${ row[cols.nameLoc] }</span>`
+
+	out += '<br>'
+
+	// BASIC DETAILS
+	out += '<span class="cdBasics">'
+	if (row[cols.typeLoc]) out += `<span class="charType">${ row[cols.typeLoc] }</span>`
+	if (row[cols.statusLoc]) out += ` &nbsp; <span class="usageType">(${ row[cols.statusLoc] })</span>`
+	if (row[cols.ipaLoc]) out += ` &nbsp; <span class="charIPA ipa">${ row[cols.ipaLoc] }</span>`
+	if (row[cols.class]) out += ` &nbsp; <span class="charGC">${ row[cols.class] }</span>`
+	out += '</span><br>'
+
+	// DECOMPOSITION
+	const nfd = char.normalize('NFD')
+	const nfc = char.normalize('NFC')
+	if (nfd !== char) {
+		out += `<span class="decomposition">Decomposes to <span class="ch">${ nfd }</span>.`
+		if (nfd === nfc)
+			out += '<br><strong>The NFC normalised form of this character is the decomposed sequence!</strong>'
+		out += '</span><br>'
+	    }
+
+	// CORRESPONDENCES (helper)
+    const addPair = (colIndex, cls, label) => {
+        if (colIndex > 0 && row[colIndex]) {
+            out += `<span class="${ cls }">${ label } ${ makeCharacterLink(row[colIndex], lang, dir) }</span><br>`
             }
         }
 
-    return out
+    addPair(cols.ivowel, 'vowelPairing', 'The corresponding independent vowel is')
+    addPair(cols.dvowel, 'vowelPairing', 'The corresponding dependent vowel is')
+    addPair(cols.uc, 'charUppercase', 'Uppercase is')
+    addPair(cols.lc, 'charLowercase', 'Lowercase is')
+    addPair(cols.subj, 'subjPair', 'Subjoined form is')
+    addPair(cols.fform, 'subjPair', 'Non-subjoined form is')
+    addPair(cols.htone, 'tonePairing', 'High class equivalent is')
+    addPair(cols.ltone, 'tonePairing', 'Low class equivalent is')
+
+	out += '</p>'
+
+	// DETAILS FROM xx-details.js
+	if (charDetails[char]) out += charDetails[char]
+
+	// ONSET / FINAL
+	out += '<p>'
+    addPair(cols.onset, 'syllPairing', 'Onset equivalent is')
+    addPair(cols.finals, 'syllPairing', 'Syllable-final equivalent is')
+	out += '</p>'
+
+	return out
+}
+
+
+
+function getCallerName () {
+	const stack = new Error().stack.split('\n')
+
+	for (let line of stack) {
+		// skip this function and console.log
+		if (line.includes('getCallerName') || line.includes('console')) continue
+
+		// Chrome
+		let m = line.match(/at\s+([^\s(]+)/)
+		if (m) return m[1]
+
+		// Firefox
+		m = line.match(/^([^\@]+)/)
+		if (m) return m[1].trim()
+	}
+
+	return ''
+}
+
+
+
+
+
+
+
+function setOnclicks () {
+    console.log(`>>> setOnclicks()
+    Add onclicks to all generated content.
+    Called by ${ getCallerName() }.`)
+
+    // CHARACTER BOX ONCLICKS
+	let cpNodeList = document.querySelectorAll('.listItem')
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', showCharacterDetails)
+        cpNode.dataset.bound = '1'
+        }
+
+	cpNodeList = document.querySelectorAll('.showUnique') // do this before general .listAll
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', characterBoxToPanel)
+        cpNode.dataset.bound = '1'
+        }
+
+	cpNodeList = document.querySelectorAll('.listAll')
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', characterBoxToPanel)
+        cpNode.dataset.bound = '1'
+        }
+
+	cpNodeList = document.querySelectorAll('.expandAll')
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', showAllCharDetails)
+        cpNode.dataset.bound = '1'
+        }
+
+	cpNodeList = document.querySelectorAll('.listUnumCP')
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', unumToPanel)
+        cpNode.dataset.bound = '1'
+        }
+
+    // CODEPOINT ONCLICKS
+
+	cpNodeList = document.querySelectorAll('.codepoint .uname')
+    
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', showCharacterDetails)
+        cpNode.dataset.bound = '1'
+        }
+
+	cpNodeList = document.querySelectorAll('.codepoint bdi')
+    
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', makeFootnoteIndex)
+        cpNode.dataset.bound = '1'
+        }
+
+    // EXAMPLE ONCLICKS
+
+	cpNodeList = document.querySelectorAll('.charExample .ex')
+    
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', makeExampleArticle)
+        cpNode.dataset.bound = '1'
+        }
     }
+
+
+
 
 
 

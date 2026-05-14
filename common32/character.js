@@ -15,8 +15,8 @@ parameters[0] = parameters[0].substring(1)
 for (var p=0;p<parameters.length;p++) {
 	pairs = parameters[p].split('=')
 	if (pairs[0] == 'q' && pairs[1]) ch = decodeURIComponent(pairs[1])
-	if (pairs[0] == 'showX') showX = true
-    else showX = false
+	if (pairs[0] == 'showX') window.showX = true
+    else window.showX = false
 	}
 
 
@@ -24,9 +24,168 @@ for (var p=0;p<parameters.length;p++) {
 
 
 
-
 function showCharDetails (ch) {
-    console.log('showCharDetails(',ch,')',ch.charCodeAt(0).toString(16))
+	console.log(`>>> showCharDetails(${ ch })
+	Show the database data for a given character.
+	Called by ${ getCallerName() }.`)
+
+	if (typeof charDetails === 'undefined') return  // charDetails is defined in xx-details.js
+
+	// ensure single character
+	const chars = [...ch]
+	if (chars.length > 1) {
+		ch = chars[0]
+		console.log(`${ ch } reduced to the first character, only.`)
+	    }
+
+	if (!charDetails[ch]) {
+		console.log('charDetails is undefined for', ch, ch.codePointAt(0).toString(16))
+		return
+	    }
+
+	if (!spreadsheetRows[ch]) {
+		console.log('spreadsheetRows doesn’t have', ch)
+		return
+	    }
+
+	// --- Create main block ---
+	const charBlock = document.createElement('div')
+	charBlock.className = 'character'
+	charBlock.title = ch
+
+	// --- Optional close button (iframe mode) ---
+	if (window.showX) {
+		const closeBtn = document.createElement('div')
+		closeBtn.id = 'closeIframe'
+		closeBtn.textContent = 'X'
+		closeBtn.title = 'Close this window'
+		closeBtn.style.position = 'fixed'
+		closeBtn.style.bottom = '1rem'
+		closeBtn.style.left = '1rem'
+		closeBtn.style.fontSize = '2rem'
+		closeBtn.style.color = '#ccc'
+		closeBtn.style.cursor = 'pointer'
+		closeBtn.style.width = '3rem'
+		closeBtn.style.background = 'seashell'
+		closeBtn.style.textAlign = 'center'
+		closeBtn.style.borderRadius = '.8rem'
+		closeBtn.onclick = () => window.parent.postMessage('closeIframe', '*')
+		charBlock.appendChild(closeBtn)
+	    }
+
+	// --- Current character display ---
+	const current = document.createElement('div')
+	current.lang = langTag
+	current.className = 'currentCharacter'
+
+	const shape = spreadsheetRows[ch][cols['shape']]
+	if (cols['shape'] !== 0 && shape) {
+		if (shape === '4') current.textContent = `${ ch } ${ ch }${ ch }${ ch }`
+		else if (shape === '2') current.textContent = `${ ch } \u200D${ ch }`
+		else current.textContent = shape
+	    }
+	else current.textContent = ch
+
+	charBlock.appendChild(current)
+
+	// --- Title (language name) ---
+	const h2 = document.createElement('h2')
+	h2.id = langTag
+	h2.textContent = languageName
+	charBlock.appendChild(h2)
+
+	// --- Unicode name ---
+	const uniName = document.createElement('p')
+	uniName.className = 'unicodeName'
+	uniName.onclick = copyToClipboard
+	uniName.textContent = spreadsheetRows[ch][cols['ucsName']]
+	charBlock.appendChild(uniName)
+
+	// --- Basic info block ---
+	const basic = document.createElement('p')
+	basic.className = 'basicInfo'
+
+	const addSpan = (cls, title, value, lang) => {
+		if (!value) return
+		const span = document.createElement('span')
+		span.className = cls
+		if (title) span.title = title
+		if (lang) span.lang = lang
+		span.innerHTML = value
+		basic.appendChild(span)
+	    }
+
+	addSpan('typeLoc', null, spreadsheetRows[ch][cols['typeLoc']])
+	addSpan('name', null, spreadsheetRows[ch][cols['nameLoc']])
+	addSpan('nnameLoc', null, spreadsheetRows[ch][cols['nnameLoc']], langTag)
+	addSpan('class', 'Unicode general category.', spreadsheetRows[ch][cols['class']])
+	addSpan('transLoc', 'Transliteration used in these documents.', spreadsheetRows[ch][cols['transLoc']])
+
+	charBlock.appendChild(basic)
+
+	// --- Details table ---
+	const details = document.createElement('div')
+	details.className = 'charDetails'
+	details.innerHTML = makeDetails(ch, langTag)
+	charBlock.appendChild(details)
+
+	// --- Hex code ---
+	let hex = ch.codePointAt(0).toString(16).toUpperCase()
+	while (hex.length < 4) hex = '0' + hex
+
+	// --- Links block ---
+	const links = document.createElement('div')
+	links.className = 'orthogFilePath'
+
+	links.innerHTML = `
+		Find in:
+		<a href="../${ orthogFilePath }.html?showIndex#index${ ch }" target="_blank">Orthography</a>
+		• <a href="../${ blockDirectoryName }/character.html?q=${ ch }#${ langTag }" target="_blank">Other uses</a>
+		• <a href="../../uniview/index.html?char=${ hex }" target="_blank">UniView</a>
+		• <a href="../../pickers/${ pickerDir }/index.html?text=${ ch }" target="_blank">Workbench</a>
+		• <a href="../${ orthogFilePath }_terms.html?q=${ ch }" target="terms">Term list</a>
+		• <a href="../../app-charuse/index.html?language=${ charUsageBCP }&charlist=${ ch }" target="_blank">Character usage</a>
+	    `
+
+	charBlock.appendChild(links)
+
+	// --- Insert into page ---
+	document.getElementById('output').appendChild(charBlock)
+
+	// --- Post‑processing ---
+	expandChMarkup()
+	if (autoExpandExamples[langTag]) expandEgMarkup(langTag)
+	convertTranscriptionData(blockLangtag)
+
+	// --- Expand .characterShape elements ---
+	const shapes = document.querySelectorAll('.characterShape')
+	if (cols['shape']) {
+		for (let i = 0; i < shapes.length; i++) {
+			const c = shapes[i].textContent
+			const shapeVal = spreadsheetRows[c] && spreadsheetRows[c][cols['shape']]
+			if (shapeVal) {
+				if (shapeVal === '4') shapes[i].innerHTML = `${ c } ${ c }${ c }${ c }`
+				else if (shapeVal === '2') shapes[i].innerHTML = `${ c } ${ c }${ c }`
+				else shapes[i].innerHTML = shapeVal
+			}
+			shapes[i].className = 'charShape'
+			shapes[i].lang = langTag
+            }
+        }
+    
+    
+    setOnclicks()
+    }
+
+
+
+
+function showCharDetailsX (ch) {
+    console.log(`>>> showCharDetails(${ ch }),
+    Show the database data for a given character.
+    Called by ${ getCallerName() }.`)
+    
+    console.log('showCharDetails(',ch,')')//,ch.charCodeAt(0).toString(16))
     // creates a heading and a div for a given orthography
     // window.charDetails is the code from xx-details
     
@@ -65,7 +224,7 @@ function showCharDetails (ch) {
     charBlock.title = ch
     
     // add a close button only if showX is in the parameter set
-    if (showX) {
+    if (window.showX) {
         showXDiv = document.createElement('div')
         showXDiv.id = 'closeIframe'
         showXDiv.textContent = 'X'
@@ -188,8 +347,8 @@ function showCharDetails (ch) {
 
 
 
-    expandCharMarkup()
-	if (typeof autoExpandExamples[langTag] !== 'undefined') addExamples(langTag)
+    expandChMarkup()
+	if (typeof autoExpandExamples[langTag] !== 'undefined') expandEgMarkup(langTag)
 	convertTranscriptionData(blockLangtag)
     
     
@@ -231,52 +390,112 @@ function copyToClipboard(evt) {
 
 
 function makeDetails (chars) {
+	// Add details for character(s) below a chart.
+	// GLOBALS: charDetails, spreadsheetRows, notesLangtag, blockDirectoryName
+	// If making changes here, also update makePanelDetail()
+
+	if (typeof charDetails === 'undefined') return ''
+
+	let out = ''
+	const charArray = [...chars]   // safe for supplementary chars
+	const lang = window.notesLangtag
+	const dir = window.blockDirectoryName
+
+	for (const ch of charArray) {
+		if (spreadsheetRows[ch]) out += printDetails(ch)
+	    }
+
+	return out
+    }
+
+
+
+function makeDetailsX (chars) {
     // Add  details for character(s) below a chart.
     // GLOBALS notesLangtag
     // blockDirectoryName
     // IF MAKING CHANGES HERE, MAKE THEM ALSO IN makePanelDetail FUNCTION
     
-    // global charDetails spreadsheetRows cols
-    var out, charArray, i, lang, dir
-
     if (typeof charDetails === 'undefined') return
 
-    var out = ''
-    var charArray = [... chars]
-    var lang = window.notesLangtag
-    var dir = window.blockDirectoryName
+    let out = ''
+    const charArray = [... chars]
+    const lang = window.notesLangtag
+    const dir = window.blockDirectoryName
 
-    for (var i=0;i<charArray.length;i++) {
-        if (spreadsheetRows[charArray[i]]) {
-            // make title to side
-            //out += `<tr><th class="cdChar" onclick="this.parentNode.parentNode.parentNode.style.display='none'"><span class="ex" lang="${ lang }">${ charArray[i] }</span><br><span class="cdCharClose">x</span></th>`
-            
-            // add the full details
-            //out += '<td class="cdData">'
+    //for (let i=0;i<charArray.length;i++)
+    //    if (spreadsheetRows[charArray[i]]) out += printDetails(charArray[i])
+    for (let ch of charArray)
+        if (spreadsheetRows[ch]) out += printDetails(ch)
 
-            out += printDetails(charArray[i])
-            //out += '</td></tr>'
+    return out
+    }
+
+
+
+function printDetails (char) {
+	// Print the meat of a details panel.
+	// GLOBALS: notesLangtag, blockDirectoryName, spreadsheetRows, cols, charDetails
+
+	if (!spreadsheetRows[char]) return ''
+
+	let out = ''
+
+	// --- Decomposition ---
+	const nfd = char.normalize('NFD')
+	if (nfd !== char) {
+		out += `<p class="decomposition">Decomposes to <span class="ch">${ nfd }</span>.`
+		if (nfd === char.normalize('NFC'))
+			out += `<br><strong>The NFC normalised form of this character is the decomposed sequence!</strong>`
+		out += `</p>`
+	    }
+
+	// Helper for simple pairings
+	const addPair = (col, cls, label) => {
+		if (cols[col] > 0) {
+			const val = spreadsheetRows[char][cols[col]]
+			if (val) out += `<p class="${ cls }">${ label } <span class="ch">${ val }</span></p>`
             }
         }
-    //out += '</table>'
-    return out
+
+	// --- Vowel correspondences ---
+	addPair('ivowel', 'vowelPairing', 'The corresponding independent vowel is')
+	addPair('dvowel', 'vowelPairing', 'The corresponding dependent vowel is')
+
+	// --- Upper/lowercase ---
+	addPair('uc', 'charUppercase', 'Uppercase is')
+	addPair('lc', 'charLowercase', 'Lowercase is')
+
+	// --- Subjoined forms ---
+	addPair('subj', 'subjPair', 'Subjoined form is')
+	addPair('fform', 'subjPair', 'Non-subjoined form is')
+
+	// --- Tone correspondences ---
+	addPair('htone', 'tonePairing', 'High class equivalent is')
+	addPair('ltone', 'tonePairing', 'Low class equivalent is')
+
+	// --- Details from xx-details.js ---
+	if (charDetails[char]) out += charDetails[char]
+
+	// --- Onset/final correspondences ---
+	addPair('onset', 'syllPairing', 'Onset equivalent is')
+	addPair('finals', 'syllPairing', 'Syllable-final equivalent is')
+
+	return out
     }
 
 
 
 
 
-
-
-
-function printDetails (char) {
+function printDetailsX (char) {
     // Print the meat of a details panel.
     // GLOBALS notesLangtag, blockDirectoryName
     // this is called bymakeDetails 
     // char, the character
-    var lang = window.notesLangtag
-    var dir = window.blockDirectoryName
-    var out = ''
+    const lang = window.notesLangtag
+    const dir = window.blockDirectoryName
+    let out = ''
 
 
     // add information about correspondences
@@ -417,7 +636,7 @@ function setMarks (languageName) {
 
 
 
-function expandCharMarkup () {
+function expandChMarkup () {
     // console.log('expandCharMarkup(',') Convert char markup to .codepoint spans (has to be done before the indexing)')
      // convert char markup to .codepoint spans (has to be done before the indexing)
      // the .ch and .hx classes should only be used for characters in the
@@ -452,7 +671,7 @@ function expandCharMarkup () {
             hex = charlist[c]
             dec = parseInt(hex,16)
             if (Number.isNaN(dec)) { 
-                console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandCharMarkup)', 'color:' + 'red' + ';font-weight:bold;')
+                console.log('%c' + 'Error! The link text "'+charMarkup[i].textContent+'" is not a number!. (expandChMarkup)', 'color:' + 'red' + ';font-weight:bold;')
                 continue
                 }
             ch = String.fromCodePoint(dec)
@@ -846,20 +1065,160 @@ function toggleImages () {
 
 
 
-
-
-
-
 function makeXXCharacterPage () {
-    //console.log('makeXXCharacterPage()')
-    // write the data to the page
-    // specificList is a specific list of characters (rather than the whole db); this is provided by a parameter
-    var panel, specificList
+	console.log(`>>> makeXXCharacterPage()
+	Create a database dump page.
+	Called by xx-characters.html.`)
+
+	// --- Parse ?q=abc parameter into a unique character list ---
+	let specificList = ''
+	const params = new URLSearchParams(location.search)
+
+	if (params.has('q')) {
+		const raw = decodeURIComponent(params.get('q'))
+		specificList = [...new Set([...raw])]
+	    }
+
+	// --- Build header HTML ---
+	const header = document.querySelector('header')
+	header.innerHTML = `
+		<div id="site-navigation"><img id="bp_picture" alt=" " src="../../shared/images/world.gif"></div>
+
+		<div id="boilerplate">
+			<div id="topbar"><a href="/">r12a</a> &gt;&gt; docs</div>
+			<div id="sitelinks" class="noprint">
+				<a href="/scripts">scripts</a>&nbsp;
+				<a href="/doclist">docs</a>&nbsp;
+				<a href="/applist">apps</a>&nbsp;
+				<a href="/maplist">maps</a>&nbsp;
+				<a href="/blog/">blog</a>&nbsp;
+				<a href="/photos">photos</a>&nbsp;&nbsp;
+			</div>
+		</div>
+
+		<h1>${ languageName } (${ orthogName }) character details</h1>
+
+		<p class="intro">Shows character data in the database for this orthography. Characters are listed in order of Unicode codepoints.</p>
+
+		<p class="intro" style="margin-block-end:8em;">
+			<label>Search for a character or code point:
+				<input type="text" id="findInputinIntro"
+					placeholder="..."
+					style="width:8em; text-align:center; border:1px solid #ccc; border-radius:.5em; height:2em; margin-inline:1rem;"
+					onchange="document.location = getFindStr(this.value)">
+			</label>
+		</p>
+
+		<dialog id="copyNotice">Copied !</dialog>
+
+		<nav id="top">
+			<img src="../img/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"><br>
+			<a href="#site-navigation"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."></a><br>
+			<input type="text" id="findInput" placeholder="Find..." style="width:4em; text-align:center;"
+				onchange="if (this.value) document.location = getFindStr(this.value)">
+		</nav>
+
+		<div id="bottomLineLinks">
+			<span><a href="${ window.langTag }.html" target="_blank">Orthography</a></span>
+			<span><a href="../../pickers/${ window.pickerDir }/index.html" target="_blank">Workbench</a></span>
+			<span><a href="${ window.langTag }_terms.html" target="_blank">Terms</a></span>
+			<span><a href="../../app-charuse/index.html?language=${ window.langTag }" target="_blank">Usage</a></span>
+			<span><a href="../../scripts/links.html?iso=${ window.scriptSummaryTableName }" target="_blank">Links</a></span>
+		</div>
+	    `
+
+	document.querySelector('title').textContent = `${ langTag } db dump (${ orthogName })`
+
+	// --- Optional panel (kept for compatibility) ---
+	const panel = document.createElement('div')
+	panel.id = 'panel'
+	panel.style.display = 'none'
+	header.appendChild(panel)
+
+	// --- Load spreadsheet + marks ---
+	parseSpreadsheet(spreadsheet)
+	setMarks(languageName)
+
+	// --- Determine character list ---
+	let charList = specificList.length ? specificList.join('') : getCharList()
+	console.log('charList:', charList)
+
+	let charArray = [...charList].sort()
+	console.log('sorted charArray:', charArray)
+
+	// --- Render each character block ---
+	for (let item = 0; item < charArray.length; item++) showCharDetails(charArray[item])
+
+	// --- Replace character headers with large glyph + hex ---
+	const cChars = document.querySelectorAll('.character')
+	for (let c = 0; c < cChars.length; c++) {
+		const cChar = cChars[c].title
+		const titleNode = cChars[c].querySelector('h2')
+
+		let hex = cChar.codePointAt(0).toString(16).toUpperCase()
+		while (hex.length < 4) hex = '0' + hex
+
+		titleNode.innerHTML = `
+			<bdi class="largeChar"
+				onclick="navigator.clipboard.writeText(this.textContent);
+				document.getElementById('copyNotice').style.display='block';
+				setTimeout(() => { document.getElementById('copyNotice').style.display='none' }, 500)">
+				${ cChar }
+			</bdi>
+			<span class="largeHex" onclick="document.location = getFindStr('${ hex }')">${ hex }</span>
+		    `
+
+		titleNode.id = 'char' + hex
+		titleNode.style.fontSize = '3rem'
+	    }
+
+	// --- Add stats (only for full DB) ---
+	if (specificList.length === 0) {
+		const stats = findCharactersInDB().split('§')
+		const div = document.createElement('div')
+		div.id = 'stats'
+		div.dir = 'ltr'
+		div.style.color = '#ccc'
+
+		const [allChars, toInvestigate, unused] = stats
+
+		div.innerHTML = `
+			Characters in the database:
+			<bdi onclick="navigator.clipboard.writeText(this.textContent); copyNotice.showModal(); setTimeout(() => copyNotice.close(), 500)">
+				${ allChars }
+			</bdi>
+			&nbsp;<bdi>(${ [...allChars].length })</bdi><br>
+
+			To be investigated:
+			<bdi onclick="navigator.clipboard.writeText(this.textContent); copyNotice.showModal(); setTimeout(() => copyNotice.close(), 500)">
+				${ toInvestigate }
+			</bdi>
+			&nbsp;<bdi>(${ [...toInvestigate].length })</bdi><br>
+
+			Not used:
+			<bdi onclick="navigator.clipboard.writeText(this.textContent); copyNotice.showModal(); setTimeout(() => copyNotice.close(), 500)">
+				${ unused }
+			</bdi>
+			&nbsp;<bdi>(${ [...unused].length })</bdi>
+		    `
+
+		document.querySelector('#output').appendChild(div)
+        }
+    }
+
+
+
+
+function makeXXCharacterPageX () {
+    console.log(`>>> makeXXCharacterPage(),
+    Create a database dump page.
+    Called by xx-characters.html.`)
     
-    specificList = ''
-    // check for q parameter containing a list of characters
-    // set list var to those characters
-    parameters = location.search.split('&');
+    // specificList is a specific list of characters (rather than the whole db); this is provided by a parameter    
+    let specificList = ''
+    // check for q parameter containing a list of characters, eg. q=abc
+    // set specificList var to those characters
+    parameters = location.search.split('&')
     parameters[0] = parameters[0].substring(1)
     for (var p=0;p<parameters.length;p++) {
         pairs = parameters[p].split('=')
@@ -916,9 +1275,9 @@ function makeXXCharacterPage () {
         `
         
     document.querySelector('title').textContent = `${ langTag } db dump (${ orthogName })`
-    //document.querySelector('header').style.fontSize = '2rem'
-    
-    // create a panel
+
+
+    // create a panel    GET RID OF THIS?  IT'S NOT USED AFAIK
     panel = document.createElement('div')
     panel.id = 'panel'
     panel.style.display = 'none'
@@ -931,10 +1290,15 @@ function makeXXCharacterPage () {
     if (specificList.length > 0) charList = specificList.join('')
     else charList = getCharList()
     console.log('charList:',charList)
-    charArray = [... charList]
-    charArray = charArray.sort()
+    
+    let charArray = [... charList].sort()
+    //charArray = charArray.sort()
     console.log('sorted charArray:',charArray)
+    
+    
     for (item=0;item<charArray.length;item++) showCharDetails(charArray[item])
+    
+    
     /*
     cChars = document.querySelectorAll('.currentCharacter')
     for (c=0;c<cChars.length;c++) { 
@@ -948,7 +1312,7 @@ function makeXXCharacterPage () {
         titleNode.style.fontSize = '3rem'
         }
         */
-    cChars = document.querySelectorAll('.character')
+    const cChars = document.querySelectorAll('.character')
     for (c=0;c<cChars.length;c++) { 
         cChar = cChars[c].title
         titleNode = cChars[c].querySelector('h2')
@@ -1197,3 +1561,178 @@ function findCharactersInDB () {
     
     return out
 }
+
+
+
+
+
+function setCharExampleOnclicks () {
+    console.log(`>>> setCharExampleOnclicks()\n\tFind all .charExample markup and add onclicks.`)
+    // run after span.ch etc has been expanded
+
+	const cpNodeList = document.querySelectorAll('.charExample .ex')
+    
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', makeExampleArticle)
+        cpNode.dataset.bound = '1'
+        }
+    }
+
+
+function makeFootnoteIndex () {}  // MAY NEED TO COPY THE ORIGINAL HERE
+
+
+
+
+
+
+function setOnclicks () {
+    console.log(`>>> setOnclicks()
+    Add onclicks to all generated content.
+    Called by ${ getCallerName() }.`)
+
+    // CHARACTER BOX ONCLICKS
+	let cpNodeList = document.querySelectorAll('.listItem')
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', showCharDetails)
+        cpNode.dataset.bound = '1'
+        }
+
+	cpNodeList = document.querySelectorAll('.showUnique') // do this before general .listAll
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', characterBoxToPanel)
+        cpNode.dataset.bound = '1'
+        }
+
+	cpNodeList = document.querySelectorAll('.listAll')
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', characterBoxToPanel)
+        cpNode.dataset.bound = '1'
+        }
+
+	cpNodeList = document.querySelectorAll('.expandAll')
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', showAllCharDetails)
+        cpNode.dataset.bound = '1'
+        }
+
+	cpNodeList = document.querySelectorAll('.listUnumCP')
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', unumToPanel)
+        cpNode.dataset.bound = '1'
+        }
+
+    // CODEPOINT ONCLICKS
+    cpNodeList = document.querySelectorAll('.codepoint .uname')
+
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', function (evt) {
+            evt.preventDefault()      // stop the anchor from navigating
+            evt.stopPropagation()     // optional: stops bubbling if needed
+
+            showCharacterDetails(evt)
+            })
+
+        cpNode.dataset.bound = '1'
+        }
+
+
+/*	cpNodeList = document.querySelectorAll('.codepoint .uname')
+    
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', showCharacterDetails)
+        cpNode.dataset.bound = '1'
+        }*/
+
+
+/*    cpNodeList = document.querySelectorAll('.codepoint .uname')
+
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', function () {
+            const codepoint = this.closest('.codepoint')
+
+            let ch = ''
+
+            // 1. If there is an <img>, use its alt attribute
+            const img = codepoint.querySelector('img')
+            if (img && img.alt) {
+                ch = img.alt
+                }
+
+            // 2. Otherwise fall back to the <bdi> textContent
+            else {
+                const bdi = codepoint.querySelector('bdi')
+                if (bdi) ch = bdi.textContent.trim()
+                }
+
+            // 3. Only call if we actually found something
+            if (ch) showCharDetails(ch)
+            })
+
+        cpNode.dataset.bound = '1'
+        }
+*/
+
+
+
+	cpNodeList = document.querySelectorAll('.codepoint bdi')
+    
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', makeFootnoteIndex)
+        cpNode.dataset.bound = '1'
+        }
+
+    // EXAMPLE ONCLICKS
+
+	cpNodeList = document.querySelectorAll('.charExample .ex')
+    
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', makeExampleArticle)
+        cpNode.dataset.bound = '1'
+        }
+    }
+
+
+
+
+
+function wrapToneLettersInBdi() {
+    // Select all elements with class "ipa"
+    const ipaElements = document.querySelectorAll('.ipa')
+
+    // Regex for one or more tone letter characters or glottal superscript
+    const toneSeq = /[\u02E5-\u02E9\u02C0]+/g
+
+    ipaElements.forEach(el => {
+        // If this element already contains a <bdi>, skip it entirely
+        if (el.querySelector('bdi')) return
+
+        // Replace each sequence with a <bdi> wrapper
+        el.innerHTML = el.innerHTML.replace(toneSeq, match => {
+            return `<bdi>${match}</bdi>`
+            })
+        })
+    }
+
