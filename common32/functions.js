@@ -3712,6 +3712,39 @@ function copyPanelText (type) {
 
 
 
+function copyPanelList () {
+    console.log(`copyPanelList()
+    Copy a list of characters in a panel to the clipboard.
+    `)
+
+	const container = document.getElementById('listOfCharacters')
+	if (!container) return
+
+	const lines = container.querySelectorAll('.panelCharacter')
+	const imgs = container.querySelectorAll('.pcImg')
+
+	let out = ''
+
+	for (let i = 0; i < lines.length; i++) {
+		const img = imgs[i]
+		const line = lines[i]
+
+		if (!img || !line) continue
+
+		out += img.alt + ' ' + line.textContent.trim() + '\n'
+	    }
+
+	navigator.clipboard.writeText(out)
+
+	const notice = document.getElementById('copyNotice')
+	notice.style.display = 'block'
+	setTimeout(() => notice.style.display = 'none', 500)
+    }
+
+
+
+
+
 
 
 
