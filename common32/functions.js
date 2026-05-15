@@ -2071,16 +2071,20 @@ function listCharactersInPanel (itemArray, ipaArray, transcriptionsArray, clang,
 
 	// Bottom buttons
 	out += '<p style="text-align:left; margin-block-start:1em; line-height:2rem;" id="panelSharingLine">'
+    
 	out += '<button onclick="copyPanelList()" style="cursor:copy;">Copy list</button> \u00A0 '
-	out += `<button onclick="openExportWindow('../../app-analysestring/index.html?chars=${ chars.replace(/\u25CC/g,'') }')">Details</button> \u00A0 `
+	
+    out += `<button onclick="openExportWindow('../../app-analysestring/index.html?chars=${ chars.replace(/\u25CC/g,'') }')">Details</button> \u00A0 `
+    
 	out += `<button onclick="openExportWindow('../../uniview/index.html?charlist=${ chars.replace(/\u25CC/g,'') }')">UniView</button> \u00A0 `
-	/*out += `<button onclick="openExportWindow('../../scripts/apps/graphemes/index.html?gc=${ chars.replace(/\u25CC/g,'') }')">Graphemes</button> \u00A0 `
+	
+    out += `<button onclick="openExportWindow('../../pickers/${ pickerDir }/index.html?text=${ chars.replace(/\u25CC/g,'.') }')">Workbench</button> \u00A0 `
 
 	let url = `${ window.langTag }_terms`
 	if (typeof window.removeVowels === 'function')
 		chars = removeVowels(chars)
 
-	out += `<button onclick="openExportWindow('${ url }.html?q=${ chars.replace(/\u25CC/g,'.') }')">Terms</button> \u00A0 `*/
+	out += `<button onclick="openExportWindow('${ url }.html?q=${ chars.replace(/\u25CC/g,'.') }')">Terms</button> \u00A0 `
 
 	out += '<p id="character_panel_close_button" onclick="document.getElementById(\'panel\').style.display=\'none\'">X</p>'
 
