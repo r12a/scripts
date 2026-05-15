@@ -3671,11 +3671,49 @@ function makeBreakdownTables () {
 
 
 function copyCharToClipboard (textToCopy) {
-	// copy an item in List Characters to the clipboard
+    console.log(`copyCharToClipboard(textToCopy)
+    Copy an item to the clipboard.
+    `)
     navigator.clipboard.writeText(textToCopy)
     document.getElementById('copyNotice').style.display = 'block'
     setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')
 	}
+
+
+
+
+
+function copyPanelText (type) {
+    console.log(`copyPanelText(type:${ type })
+    Copy a 'ruby' item to the clipboard.
+    `)
+
+	const ruby = document.getElementById('ruby')
+	if (!ruby) return
+
+	const nodes = ruby.querySelectorAll(type)
+	let out = ''
+
+	for (const node of nodes) {
+		out += node.textContent
+		if (type === '.IPAGloss') out += ' '
+	    }
+
+	if (type === '.IPAGloss')
+		out = out.replace(/[–‹›]/g, '')
+    
+	navigator.clipboard.writeText(out.trim())
+
+	const notice = document.getElementById('copyNotice')
+	notice.style.display = 'block'
+	setTimeout(() => notice.style.display = 'none', 500)
+    }
+
+
+
+
+
+
 
 function showMenuText () {} // dummies so we can use the same code as for pickers
 function hideMenuText () {}
