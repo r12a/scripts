@@ -3755,9 +3755,11 @@ function hideMenuText () {}
 
 
 
+
+
 function wrapToneLettersInBdi() {
     // Select all elements with class "ipa"
-    const ipaElements = document.querySelectorAll('.ipa')
+    const ipaElements = document.querySelectorAll('.ipa, .IPAGloss')
 
     // Regex for one or more tone letter characters or glottal superscript
     const toneSeq = /[\u02E5-\u02E9\u02C0]+/g

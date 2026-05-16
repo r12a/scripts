@@ -342,12 +342,12 @@ function makeExampleArticle (evt) {   // chars, clang, ipa, node
 	expandChMarkup()
 	expandEgMarkup(clang)
 	setFootnoteRefs()
+    wrapToneLettersInBdi()
     
     setOnclicks()
     
 	return false
 	}
-
 
 
 
