@@ -18,6 +18,9 @@ function makeFootnoteIndex () {
     
     }
 
+function expandCharMarkup () {
+    expandChMarkup()
+    }
 
 function setMarks (languageName) {
     // sets the global variable marks as a set containing all combining marks in the spreadsheet
