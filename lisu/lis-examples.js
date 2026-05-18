@@ -24,11 +24,11 @@ autoExpandExamples.lis = `
 
 @ wiktionary
 
-ꓑꓺ ꓦꓯꓹ|bamboo rat|pā, ,h,æ̌̃,‹
+ꓑꓺ ꓦꓯꓹ|bamboo rat|pa,˦˦.,h,ɛ̃,˧˥|pɑ̱ h̃æ̌|pā hæ̌̃|/../
 ꓔꓲꓹ|to dye|t,ǐ,‹
 ꓞꓽ ꓐꓳꓺ|salt|tsʰà,‹ ,b,o,‹
 ꓠꓴꓻ|you|n,u,‹
-ꓚꓳ-ꓗꓴꓷꓼ|China|t͡ɕ,o˦˦.,k,u,ə˧˩|tʃo-kù̱ɤ
+ꓚꓳ-ꓗꓴꓷꓼ|China|t͡ɕ,o˧˧.,,k,u,ə,˧˩|tʃo-kù̱ɤ
 ꓐꓵꓺ|to owe|by̠³³|by̱
 ꓒꓵꓽ|pumpkin|pʰ,y˧˩|pʰỳ
 ꓡꓲ-ꓢꓴ|Lisu language|l,i,,s,u|li̱-su̱
@@ -49,12 +49,12 @@ autoExpandExamples.lis = `
 ꓠꓲꓹ ꓟꓺ|abdomen|n,ǐ,‹, ,mɑ̄,‹|ni2-ma3
 ꓠꓬꓲꓹ ꓔꓸ|to dwell|ɲ,‹,ǐ,‹, ,tɑ́,‹|nyi2-ta1
 ꓨʼꓲꓻ|house|ɦ,›,ḭ̃,‹||h'i4
-ꓒꓰꓽ ꓷꓻ|to appear|pʰ,è,‹, ,ə̰,‹|hpye5-rghe4
+ꓒꓰꓽ ꓷꓻ|to appear|pʰ,e,˩, ,ə,˨˨|hpye5-rghe4|pʰè ə̰
 ꓐꓴꓽ ꓡꓴꓻ|butterfly|b,ù,‹, ,l,ṵ,‹|bu5 lu4
 ꓑꓶꓸ|to dare|p,ɯ́,‹|prgh1
-ꓑꓽ ꓡꓰꓹ|scythe|pà,‹, ,l,ě,‹|pa5 lye2
+ꓑꓽ ꓡꓰꓹ|scythe|pa,˩, ,l,e,˦˥ˀ|pa5 lye2|pà lě||x
 ꓙꓲꓽ|to sew|d͡ʑ,ì,‹||ji6
-ꓣꓼ ꓟꓶʼꓻ ꓨꓪ|to marry|ʒa,‹,᷆ ,m,ɯ̰̃,‹,‹, ,ɦ,wa|ra5 mrghʼ4 hwa3
+ꓣꓼ ꓟꓶʼꓻ ꓨꓪ|to marry|ʒa,˧˩ˀ, ,m,ɯ̃,‹,˨˨, ,ɦ,wa˧˧|ra5 mrghʼ4 hwa3|ʒa᷆ mɯ̰̃ ɦwa
 ꓩꓴꓹ ꓣꓼ|idol|f,ǔ,‹, ,ʒa᷆,‹||fu2 ra5
 ꓵ|to count|ʔỹ||üʼ3
 
@@ -77,26 +77,26 @@ autoExpandExamples.lis = `
 ꓡꓯꓽ ꓒꓯꓹ|hand|l,ɛ̀,‹, ,pʰ,ɛ̌,‹||lá2 hpá2
 ꓪꓴꓸ ꓓꓴ|head|w,ú,‹, ,d,u||wu1 dü3
 ꓡ ꓛꓱ|tongue|la, ,t͡ɕʰ,ø||la3 hchē3
-ꓗꓶꓸ ꓝꓲꓸ|neck|k,ɯ́,‹, ,t͡s,í,‹||krgh1 tsē3
+ꓗꓶꓸ ꓝꓲꓸ|neck|k,ɯ,˥˥, ,t͡s,i,˥˥|krgh1 tsē3|kɯ́ t͡sí
 ꓠꓲꓹ M|heart|n,ǐ,‹, ,ma||ni2 ma3
 ꓟꓶꓽ ꓡꓶꓹ|lips|m,ɯ̀,‹, ,l,ɯ̌,‹||mrgh5 lrge2
 ꓦꓲꓼ ꓟ|belly|h,i᷆,‹, ,ma||hʼi6 hchi6
-ꓐꓵꓼ ꓟꓴ|lung|b,y᷆,‹, ,m,u|
+ꓐꓵꓼ ꓟꓴ|lung|b,y,˧˩ˀ, ,m,u˧˧||by᷆ mu|
 ꓮꓸ ꓬꓲꓼ|elder brother|ʔɑ́,‹, ,j,i᷆,‹||a1 yi6
-ꓠꓬꓲ ꓤꓽ|younger brother|ɲ,‹,i, ,zà,‹||nyi3 ra5
+ꓠꓬꓲ ꓤꓽ|younger brother|ɲ,‹,i, ,za,˩|nyi3 ra5|ɲi zà
 ꓢꓲꓽ|blood|s,ì,‹||si5
 ꓤꓽ ꓟꓶꓼ|daughter|zà,‹, ,m,ɯ᷆,‹||á1 mi5
 ꓢꓲꓹ ꓜꓲ|tree|s,ǐ,‹, ,d͡z,i||si2 zhi3
 ꓕꓳꓽ ꓜꓲ|pine tree|tʰ,ò,‹, ,d͡z,i
 ꓟꓺ ꓓ|bamboo|m,ā,‹, ,da||ma4 da4
-ꓘꓪꓽ ꓢꓱ|garlic|kʰ,wà,‹, ,s,ø||khwa5 sye4
+ꓘꓪꓽ ꓢꓱ|garlic|kʰ,wa,˩, ,s,ø|khwa5 sye4|kʰwà sø
 ꓢ ꓡꓽ|cotton|sa, ,là,‹||sa3 la5
 ꓢꓲꓹ ꓢꓶꓽ|fruit|s,ǐ,‹, ,s,ɯ̀,‹||sï2 sï5
-ꓮꓸ ꓭꓸ|chicken|ʔɑ́̃,‹, ,ɣá,‹
+ꓮꓸ ꓭꓸ|chicken|ʔɑ̃,˥˥, ,ɣa,˥˥||ʔɑ́̃ ɣá
 ꓯꓹ|duck|ʔɛ̌̃,‹||áʼ2
 ꓳ|goose|ʔõ||awʼ3
 ꓕꓳꓼ ꓡ|rabbit|tʰ,o,‹,᷆ ,la||htaw5 la4
-ꓥꓪꓸ|fish|ŋwá||ngwa1
+ꓥꓪꓸ|fish|ŋ,wa,˥˥|ngwa1|ŋwá|
 ꓪꓴꓸ ꓖꓳꓽ ꓡꓳ|pillow|w,ú,‹, ,ɡ,ò,‹, ,l,o||wu1 gaw6 law3
 
 
@@ -104,8 +104,8 @@ autoExpandExamples.lis = `
 
 @ Unicode Lisu proposal http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3317.pdf
 
-ꓠꓴ ꓙꓰꓻˍ ꓥꓳꓻ|you will go|n,u, ,d͡ʑ,ḛ,‹,à, ,ŋ,o̰,‹
-ꓖꓳꓻ ꓡꓱꓻ ꓮˍ ꓟꓲ|but|ɡ,o̰,‹, ,l,ø̰,‹, ,ŋɑ,᷆à, ,m,i
+ꓠꓴ ꓙꓰꓻˍ ꓥꓳꓻ|you will go|n,u˧˧, ,d͡ʑ,e,˨˨,a˩, ,ŋ,o,˨˨||nu d͡ʑḛà ŋo̰
+ꓖꓳꓻ ꓡꓱꓻ ꓮˍ ꓟꓲ|but|ɡ,o,˨˨, ,l,ø,˨˨, ,ŋɑ˧˩ˀ,a˩, ,m,i˧˧||ɡo̰ lø̰ ŋɑ᷆à mi
 
 
 @ https://live.bible.is/bible/LISTCM/MAT/17?audio_type=audio  Pronunciation manually added
@@ -115,7 +115,7 @@ autoExpandExamples.lis = `
 
 @ https://en.wikipedia.org/wiki/Fraser_script
 
-ꓡꓬꓮꓳ ꓩꓷꓠ|jelly|l,i̯,ɛ,w, ,f,ə,n||凉粉
+ꓡꓬꓮꓳ ꓩꓷꓠ|jelly|l,i̯,ɛ,w˧˧, ,f,ə,n˧˧||凉粉 li̯ɛw fən
 
 
 
