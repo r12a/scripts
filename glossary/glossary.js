@@ -47,7 +47,7 @@ defList={
 
 "standalonevowel": '<a class="termref" target="_blank" href="../glossary/index.html#standalone">Standalone vowels</a> are vowel sounds that are not preceded by a consonant sound, or are preceded by only a glottal stop. They may appear at the beginning of a word or in the middle of a word after a preceding vowel. Other terms that refer to the same thing include zero-onset vowel, or onsetless syllable.',
 
-"zeroonsetvowel": `<a class="termref" target="_blank" href="../glossary/index.html#standalone">Zero-onset vowels</a> are vowel sounds that are not preceded by a consonant sound, or are preceded by only a glottal stop. They may appear at the beginning of a word or in the middle of a word after a preceding vowel. (In some pages we may refer to these as 'standalone' vowels.)`,
+"zeroonsetvowel": `<a class="termref" target="_blank" href="../glossary/index.html#standalone">Zero-onset vowels</a> are vowel sounds that are not preceded by a consonant sound, or are preceded by only a glottal stop. They may appear at the beginning of a word or in the middle of a word after a preceding vowel.`,
 
 "orthographicsyllable": 'The term <a class="termref" target="_blank" href="../glossary/index.html#orthographicsyllable">orthographic syllable</a> is not clearly defined in the Unicode Standard. In the orthography notes on this site we define it to mean a typographic unit that includes more than one grapheme cluster. This is commonly the case for Brahmi-derived scripts, such as for Devanagari conjuncts, or Balinese stacks.  Orthographic syllables do not correspond to phonetic syllables.',
 
