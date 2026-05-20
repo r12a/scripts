@@ -91,7 +91,7 @@ autoExpandExamples.fuf = `
 𞤧𞤢𞤦𞤵|because|sabu
 𞤧𞤢𞤳𞤫|warehouse|s,a.,k,e|sake
 𞤧𞤢𞤳𞥆𞤫|leather worker|s,a,k.k,e|sakke
-𞤧𞤢𞥄𞥋𞤭|hour|saːʔi|saa’i
+𞤧𞤢𞥄𞥋𞤭|hour|s,ãː,‹,ʔi|saa’i
 𞤧𞤫𞤺𞤫𞤲𞤫|fingernail|seɡene|segene
 𞤧𞤫𞥅𞤣𞤢|few|seːda|seeda
 𞤧𞤭𞤳𞥆𞤵𞤣𞤫⹁‏ 𞤥𞤭𞤶𞥆𞤢𞥄𞤣𞤫|think|sikkude,‏ midd͡ʒaːde|sikkude,‏ mijjaade
@@ -294,7 +294,7 @@ autoExpandExamples.fuf = `
 𞤧𞤫𞤸𞤪𞤫|cliff|seːre|seere
 𞤷𞤫𞤸𞤫|cliffs|t͡ʃehe|cehe
 𞤰𞤢𞤸𞤪𞤫|scorpion|yaare
-𞤶𞤢𞤸𞤫scorpions|d͡ʒahe
+𞤶𞤢𞤸𞤫|scorpions|d͡ʒahe
 𞤧𞤭𞤺𞤢𞤲𞤣𞤫|syllable|siɡande|sigande
 𞤷𞤭𞤺𞤢𞤲𞤯𞤫|syllables|t͡ʃiɡanɗe|ciganɗe
 𞤩𞤫𞤴𞤲𞤺𞤵|spouse|ɓ,e,j,›,ᵑɡ,u|ɓeynɡu
