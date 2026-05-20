@@ -9,16 +9,17 @@ var errmsg = ''
 
 
 function makeAutoTranslitArray (lang) {
-	console.log(`>>> makeAutoTranslitArray( ${ lang })
-    Create autoTranslitArray[xx], used for glosses.`)
+	/*console.log(`>>> makeAutoTranslitArray( ${ lang })
+    Create autoTranslitArray[xx], used for glosses.`)*/
 	//console.log('SPREADSHEETROWS', spreadsheetRows)
-	//console.log('COLS', cols.transLoc)
 
 	autoTranslitArray[lang] = {}
 
 	for (const key in spreadsheetRows) {
-        // skip multi‑character keys (categories, sequences, etc.)
-		if (key.length !== 1) continue
+		// skip multi‑character keys (categories, sequences, etc.)
+		const cpLen = Array.from(key).length
+
+		if (cpLen !== 1) continue
 
 		const row = spreadsheetRows[key]
 		if (!row) continue
@@ -26,21 +27,26 @@ function makeAutoTranslitArray (lang) {
 		const translit = row[cols.transLoc]
 
 		// warn if transliteration column is empty
-		if (!translit || translit.trim() === '') {
-            errmsg = `Empty translit column in spreadsheet for ${ key }`
-            console.warn('%c' + errmsg, 'color:orange;font-weight:bold')
-            continue
-            }
+        if (!translit || translit.trim() === '') {
+			errmsg = `Empty translit column in spreadsheet for ${ key }`
+			console.warn('%c' + errmsg, 'color:orange;font-weight:bold')
+			continue
+		    }
 
 		// detect duplicates
-		if (autoTranslitArray[lang][key])
+        if (autoTranslitArray[lang][key])
 			console.log('Unexpected duplicate in makeAutoTranslitArray:', key)
 		else
-            autoTranslitArray[lang][key] = translit
-            }
+			autoTranslitArray[lang][key] = translit
+	    }
 
 	//console.log('<<< AUTOTRANSLITARRAY', autoTranslitArray[lang])
     }
+
+
+
+
+
 
 
 function transliterate (str) {
