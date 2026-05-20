@@ -436,7 +436,7 @@ autoExpandExamples.mn = `
 ᠺᠢᠨᠣ᠋|theatre (archaic form)|k,i,n,o|ḳinɔ¹
 ᠺᠣᠹᠧ|coffee|kʰ,ɔˑ.,f,eˑ|kofe|кофе
 ᠻᠠᠷᠲ᠋|card|k,a,r,t,–||карт
-ᠾᠧᠵᠢᠩ|Hejing (Chinese county)|
+ᠾᠧᠵᠢᠩ|Hejing (Chinese county)||hēǰing
 ᡀᠠᠰᠠ|Lhasa|ˈɬʰ,a,s,–||Лхас
 
 
