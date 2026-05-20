@@ -375,25 +375,25 @@ function expandChMarkup () {
     // Helper: language for output <bdi> (element.lang or global default)
     function getLanguage(el) {
         return (el.lang && el.lang !== '') ? el.lang : window.langTag
-    }
+        }
 
     // Helper: return HTML for a single codepoint depending on flags (svg/img/text)
     function glyphHtmlForCodepoint(dec, hex, ch, flags) {
         if (flags.svg) {
             const block = getScriptGroup(dec, false)
             return `<img src="../../c/${ block }/${ hex }.svg" alt="${ ch }" style="height:2rem;">`
-        }
+            }
         if (flags.img) {
             const block = getScriptGroup(dec, false)
             return `<img src="../../c/${ block }/large/${ hex }.png" alt="${ ch }" style="height:2rem;">`
-        }
+            }
         return `&#x${ hex };`
-    }
+        }
 
     // Helper: escape optional class attributes for <bdi>
     function bdiUncommonAttr(flags) {
         return flags.uncommon ? ' class="uncommon"' : ''
-    }
+        }
 
     // Shared renderer for both .hx/.hex and .ch elements.
     // tokens: array of items where each token is {dec, hex, ch} (dec may be null for missing/invalid)
@@ -1945,7 +1945,14 @@ function characterBoxToPanel (evt) {
 
 
 function listCharactersInPanel (itemArray, ipaArray, transcriptionsArray, clang, direction) {
-    console.log('>> listCharactersInPanel (\n\titemArray=',itemArray, '\n\tipaArray=',ipaArray, '\n\ttranscriptionsArray=',transcriptionsArray,'\n\tclang=', clang,'\n\t)\n\tCreate a panel at bottom-right and add glosses, character lists, & buttons.')
+    console.log(`>> listCharactersInPanel (
+    itemArray=${ itemArray }
+    ipaArray=${ ipaArray}
+    transcriptionsArray=${ transcriptionsArray }
+    clang=${ clang })
+    Create a panel at bottom-right and add glosses, character lists, & buttons.'
+    Called by ${ getCallerName() }.`)
+    
 
     // called by onclick characterBoxToPanel, created by setCharacterBoxOnclicks
     // itemArray, native text for listItems
@@ -2104,7 +2111,9 @@ function openExportWindow (url) {
 
 function transliteratePanel (str, lang) {
     // transliterate the rb tags in the panel
-    //console.log('>> transliteratePanel(',str,lang,')\n\tAutoTranslitArray',lang, autoTranslitArray[lang])
+    console.log(`>>> transliteratePanel(str=${ str } lang=${ lang })
+    AutoTranslitArray[lang]=${ autoTranslitArray[lang] }
+    Called by ${ (new Error().stack.split('\n')[2] || '').trim() }`)
 
     // exit if this isn't a full orthography page
     if (typeof autoTranslitArray === 'undefined') return
@@ -2129,6 +2138,7 @@ function transliteratePanel (str, lang) {
             }
         }
 
+    console.log(`<<< ${ str.trim() }`)
     return str.trim()
     }
 
