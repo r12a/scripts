@@ -698,7 +698,7 @@ function markupForCharDetails (char, lang) {
 	// CORRESPONDENCES (helper)
     const addPair = (colIndex, cls, label) => {
         if (colIndex > 0 && row[colIndex]) {
-            out += `<span class="${ cls }">${ label } ${ makeCharacterLink(row[colIndex], lang, dir) }</span><br>`
+            out += `<span class="${ cls }">${ label } ${ makeCharacterLink(row[colIndex], lang, directory) }</span><br>`
             }
         }
 
