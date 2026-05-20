@@ -131,29 +131,6 @@ autoExpandExamples.lis = `
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 `
 
 
-// The collections array is new and needs to be propagated throughout all orthographies.
-// It provides sets that can be used for searching text in term lists and in pickers.
-// Keys are drawn from the following set of characters: ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ
-// ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ⊙
-
-var collections = [
-{ symbol:'Ⓥ', desc:'Vowels', chars:'(ꓲ|ꓵ|ꓶ|ꓴ|ꓰ|ꓱ|ꓷ|ꓳ|ꓯ|ꓮ)' },
-{ symbol:'Ⓒ', desc:'All consonants', chars:'(ꓑ|ꓐ|ꓒ|ꓔ|ꓓ|ꓕ|ꓗ|ꓖ|ꓘ|ꓝ|ꓜ|ꓞ|ꓚ|ꓙ|ꓛ|ꓩ|ꓢ|ꓤ|ꓣ|ꓫ|ꓬ|ꓧ|ꓭ|ꓦ|ꓨ|ꓟ|ꓠ|ꓥ|ꓪ|ꓡ)' },
-{ symbol:'Ⓣ', desc:'Tones', chars:'(ꓸ|ꓹ|ꓺ|ꓻ|ꓼ|ꓽ)' },
-{ symbol:'⊙', desc:'Invisibles', chars:'(\u200C|\u200D)' },
-]

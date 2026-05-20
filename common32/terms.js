@@ -215,7 +215,7 @@ if (document.getElementById('tabPlaceholder')) {
     <li><samp>[aeiou]{2}</samp> → terms containing two vowels in a row</li>
     <li><samp>^.{1,3}$</samp> → terms of length 1–3</li>
     <li><samp>.*foo.*bar</samp> → terms containing “foo” then “bar”</li>
-    <li><samp>([Ⓒ])&#x005C;1</samp> → terms containing a doubled letter</li>
+    <li><samp>(Ⓒ)&#x005C;1</samp> → terms containing a doubled letter</li>
     <li><samp>(Ⓒ)(?!\\1)(Ⓒ)</samp> → two consonants that are not the same</li>
     </ul>
     
