@@ -757,8 +757,20 @@ function setOnclicks () {
     Add onclicks to all generated content.
     Called by ${ getCallerName() }.`)
 
+
+    // SHAPING ONCLICKS
+	let cpNodeList = document.querySelectorAll('.shaping bdi')
+    console.log('SHAPING', cpNodeList)
+    for (let cpNode of cpNodeList) {
+        if (cpNode.dataset.bound) continue
+
+        cpNode.addEventListener('click', shapingToPanel)
+        cpNode.dataset.bound = '1'
+        }
+
+
     // CHARACTER BOX ONCLICKS
-	let cpNodeList = document.querySelectorAll('.listItem')
+	cpNodeList = document.querySelectorAll('.listItem')
     for (let cpNode of cpNodeList) {
         if (cpNode.dataset.bound) continue
 
@@ -801,7 +813,6 @@ function setOnclicks () {
     // CODEPOINT ONCLICKS
 
 	cpNodeList = document.querySelectorAll('.codepoint .uname')
-    
     for (let cpNode of cpNodeList) {
         if (cpNode.dataset.bound) continue
 
@@ -810,7 +821,6 @@ function setOnclicks () {
         }
 
 	cpNodeList = document.querySelectorAll('.codepoint bdi')
-    
     for (let cpNode of cpNodeList) {
         if (cpNode.dataset.bound) continue
 
@@ -821,7 +831,6 @@ function setOnclicks () {
     // EXAMPLE ONCLICKS
 
 	cpNodeList = document.querySelectorAll('.charExample .ex')
-    
     for (let cpNode of cpNodeList) {
         if (cpNode.dataset.bound) continue
 

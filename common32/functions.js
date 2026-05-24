@@ -1851,6 +1851,43 @@ function showUniqueCharsPopover(uniqueCharsString) {
 
 
 
+function shapingToPanel (evt) {
+    console.log(`>>> shapingToPanel(evt)
+    Gather data from uppercase or shaped characters and send it/them to displayCharacterList.
+    Called by ${ getCallerName() }.`)
+
+    node = evt.target.closest('.shaping')
+    lang = window.langTag
+
+    // gather the nodes from across the listItem hex numbers
+    const itemNodeList = node.querySelectorAll('bdi')
+    const rawItemArray = Array.from(itemNodeList, node => node.textContent)
+
+    // strip U+200D everywhere
+    const itemArray = rawItemArray.map(s => s.replace(/[\u200D\u25CC\u0640]/g, ''))
+
+    const ipaNode = node.closest('.mapItem').querySelector('.ipa')
+    let ipaArray = ipaNode === null ? [''] : [ipaNode.textContent]
+
+    const transcriptionsArray = itemArray.map(g => transliteratePanel(g, lang))
+
+    const direction = ''
+
+	listCharactersInPanel(
+		itemArray,
+		ipaArray,
+        transcriptionsArray,
+		lang,
+		direction
+        )
+    }
+
+
+
+
+
+
+
 function unumToPanel (evt) {
     console.log(`>>> unumToPanel(evt)
     Gather data from hex numbers below a listItem and send it/them to displayCharacterList.
