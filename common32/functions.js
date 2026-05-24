@@ -1850,7 +1850,6 @@ function showUniqueCharsPopover(uniqueCharsString) {
 
 
 
-
 function shapingToPanel (evt) {
     console.log(`>>> shapingToPanel(evt)
     Gather data from uppercase or shaped characters and send it/them to displayCharacterList.
@@ -1863,24 +1862,34 @@ function shapingToPanel (evt) {
     const itemNodeList = node.querySelectorAll('bdi')
     const rawItemArray = Array.from(itemNodeList, node => node.textContent)
 
-    // strip U+200D everywhere
-    const itemArray = rawItemArray.map(s => s.replace(/[\u200D\u25CC\u0640]/g, ''))
+    // strip U+200D, U+25CC, U+0640 everywhere
+    const strippedArray = rawItemArray.map(s => s.replace(/[\u200D\u25CC\u0640]/g, ''))
 
-    const ipaNode = node.closest('.mapItem').querySelector('.ipa')
-    let ipaArray = ipaNode === null ? [''] : [ipaNode.textContent]
+    // split into individual Unicode characters, flatten, and dedupe
+    const charList = []
+    for (const s of strippedArray) {
+        for (const ch of [...s]) {
+            if (ch !== '') charList.push(ch)
+            }
+        }
+    const itemArray = [...new Set(charList)]
+
+    // IPA is always empty
+    const ipaArray = ['']
 
     const transcriptionsArray = itemArray.map(g => transliteratePanel(g, lang))
 
     const direction = ''
 
-	listCharactersInPanel(
-		itemArray,
-		ipaArray,
+    listCharactersInPanel(
+        itemArray,
+        ipaArray,
         transcriptionsArray,
-		lang,
-		direction
+        lang,
+        direction
         )
     }
+
 
 
 
