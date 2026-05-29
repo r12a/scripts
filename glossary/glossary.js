@@ -64,4 +64,7 @@ defList={
 "vowelsign": 'A <a class="termref" target="_blank" href="../glossary/index.html#vowelsign">vowel sign</a> is attached to a consonant base to express a following vowel sound.   Sometimes vowel signs have multiple parts, which are displayed on different sides of the base consonant or cluster. They are known as <span class="name">\'matras\'</span> in Sanskrit.',
 
 "wordboundary": 'The concept of \'word\' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.',
+
+"zeroonsetvowel": '<a class="termref" target="_blank" href="../glossary/index.html#zeroonsetvowel">Zero-onset vowels</a> are vowel sounds that are not preceded by a consonant sound, or are preceded by only a glottal stop. They may appear at the beginning of a word or in the middle of a word after a preceding vowel.',
+
 }
