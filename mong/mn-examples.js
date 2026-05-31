@@ -418,6 +418,7 @@ autoExpandExamples.mn = `
 ᠵᠠᠭᠤᠬᠤ|to bite|t͡sʊːx|zuukh|зуух
 ᠵᠠᠮ|road|ˈt͡s,a,m|zam|зам
 ᠵᠠᠷᠢᠮ ᠳᠠᠭᠠᠨ|sometimes|t͡s,a,r,ʲə,m,–,t,–,–,a,–|||заримдаа
+ᠵᠠᠷᠢᠮ᠎ᠳᠠᠭᠠᠨ|sometimes|t͡s,a,r,ʲə,m,–,t,–,–,a,–|||заримдаа|ᠵᠠᠷᠢᠮ ᠳᠠᠭᠠᠨ
 ᠵᠠᠷᠯᠢᠭ|order||ǰarlig
 ᠵᠡᠭᠡᠷᠡ|gazelle|t͡seːr||зээр
 ᠵᠢᠭᠠᠬᠤ|teach|t͡saːx||заах
