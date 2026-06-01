@@ -10,6 +10,7 @@ window.autoExpandExamples = {}
 var egList = {}
 
 
+if (typeof trace === 'undefined') trace = false
 
 
 
