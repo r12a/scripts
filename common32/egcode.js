@@ -16,10 +16,7 @@ var egList = {}
 
 
 function showCharacterDetails (evt) {
-	console.log(`showCharacterDetails (${ evt })
-    Open an article to display character notes details.
-    Called by ${ getCallerName() }.`)
-	//if (evt.target.closest('.noexpansion')) return
+	if (trace) var start = traceHere( 'showCharacterDetails', `Open an article to display character notes details`, arguments)
     
 	if (typeof charDetails === 'undefined') return   // charDetails is defined in xx-details.js
     
@@ -34,7 +31,7 @@ function showCharacterDetails (evt) {
         if (imageLocn) chars = imageLocn.alt.trim()
         else chars = codepointLocn.querySelector('bdi').textContent.trim()
         }
-    console.log('**** chars',chars)
+    //console.log('**** chars',chars)
     
     // decide whether to replace existing details or add to them (for listItems)
     const replaceLast = evt.target.closest('.listArray') ? true : false
@@ -46,8 +43,8 @@ function showCharacterDetails (evt) {
     else if (evt.target.closest('.cased')) insertPoint = evt.target.closest('.cased')
     else if (evt.target.closest('p.glyphs')) insertPoint = evt.target.closest('p.glyphs') // map tables
     else insertPoint = evt.target.closest('p, table, div, li')
-    console.log('#### insertPoint', insertPoint)
-    console.log('**** insertPoint:',insertPoint.tagName, typeof insertPoint.tagName, insertPoint.title)
+    //console.log('#### insertPoint', insertPoint)
+    //console.log('**** insertPoint:',insertPoint.tagName, typeof insertPoint.tagName, insertPoint.title)
 
     // if this article is already open, close it
     const ptr = insertPoint.nextElementSibling
@@ -81,7 +78,8 @@ function showCharacterDetails (evt) {
     
     setOnclicks()
 
-	return false
+	if (start) return traceReturn('showCharacterDetails', start, false)
+	else return false
     }
 
 
@@ -90,10 +88,9 @@ function showCharacterDetails (evt) {
 
 
 function expandEgMarkup (langFilter) {
-    console.log(`>>> expandEgMarkup(${ langFilter })
-    Convert all .eg items to full markup.
-    Called by ${ getCallerName() }.`)
-    /*  read the data into egList, in which each record has
+	if (trace) var start = traceHere( 'expandEgMarkup', `Convert all .eg items to full markup.`, arguments)
+
+/*  read the data into egList, in which each record has
 	example, meaning, transcription?, alt?, narrow transcription, wiktionary
 	alt is generally a vowelled form for abjads, an alternative spelling, or alternative script
     
@@ -293,6 +290,8 @@ function expandEgMarkup (langFilter) {
     // update transliterations if needed  DO WE NEED THIS ??
     if (typeof showTransliterations !== 'undefined')
     showTransliterations(document.getElementById('translitToggleCheckbox').checked)
+
+	if (start) return traceReturn('expandEgMarkup', start, null)
 	}
 
 
@@ -302,9 +301,10 @@ function expandEgMarkup (langFilter) {
 
 
 function makeExampleArticle (evt) {   // chars, clang, ipa, node
+	if (trace) var start = traceHere( 'makeExampleArticle', `Open an article window after an example and fill it with character details.`, arguments)
     // open an article window after an example and fill it with character details
     //console.log(`showCharDetailsInline (\n\tchars ${ chars }\n\tclang ${ clang }\n\tipa ${ ipa }\n\tnode ${ node } )`)
-    console.log(`makeExampleArticle ( ${ evt }\ )\n\tOpen an article window after an example and fill it with character details`)
+    /*console.log(`makeExampleArticle ( ${ evt }\ )\n\tOpen an article window after an example and fill it with character details`)*/
 
 	if (typeof charDetails === 'undefined') return  // PROBABLY DON'T NEED THIS
 
@@ -346,7 +346,8 @@ function makeExampleArticle (evt) {   // chars, clang, ipa, node
     
     setOnclicks()
     
-	return false
+	if (start) return traceReturn('functionName', start, false)
+	else return false
 	}
 
 
@@ -357,7 +358,8 @@ function makeExampleArticle (evt) {   // chars, clang, ipa, node
 
 
 function makeExampleArticleDetails (chars, ipa, clang) {
-    console.log(`>> makeExampleArticleDetails(\n\tchars ${ chars }\n\tclang ${ clang }\n\tipa ${ ipa })\n\tDisplay characters in an example in an article`)
+	if (trace) var start = traceHere( 'makeExampleArticleDetails', `Display characters in an example in an article.`, arguments)
+    
     // called from showCharDetailsInline to build internal details of an article
     // an 'article' is something displayed after an example to give details of composition
     
@@ -505,7 +507,9 @@ function makeExampleArticleDetails (chars, ipa, clang) {
     out += `</td>`
     out += `<tr>`
     
-    return out
+    //return out
+    if (trace) return traceReturn('makeExampleArticleDetails', start, out)
+    else return out
 	}
 
 
@@ -526,7 +530,7 @@ function makeExampleArticleDetails (chars, ipa, clang) {
 
 function showCharDetailsInPanel (evt) {
 	var lang, chars, insetPoint, panel, table, ipaNodes
-    console.log(`showCharDetailsInPanel (${evt }) (in egcode.js)`)
+    /*console.log(`showCharDetailsInPanel (${evt }) (in egcode.js)`)*/
     
 	if (typeof charDetails === 'undefined') return
 
@@ -603,8 +607,7 @@ function showCharDetailsInPanel (evt) {
 
 
 function makeCharArticleList (chars, lang) {
-    console.log(`>>> makeArticleDetails(chars: ${ chars })
-    Add  details for character(s) below a block.`)
+	if (trace) var start = traceHere( 'makeCharArticleList', `Add  details for character(s) below a block.`, arguments)
 
 	if (typeof window.charDetails === 'undefined') // charDetails is defined in xx-details.js
 		return ''
@@ -626,7 +629,8 @@ function makeCharArticleList (chars, lang) {
 		</tr>`
 	}
 
-	return out
+	if (start) return traceReturn('functionName', start, out)
+	else return out
     }
 
 
@@ -635,8 +639,7 @@ function makeCharArticleList (chars, lang) {
 
 
 function markupForCharDetails (char, lang) {
-    console.log(`>>> markupForCharDetails( char: ${ char })
-    Get character details for a single character in an article.`)
+	if (trace) var start = traceHere( 'markupForCharDetails', `Get character details for a single character in an article.`, arguments)
 
 	if (typeof charDetails === 'undefined') return ''
 
@@ -722,7 +725,8 @@ function markupForCharDetails (char, lang) {
     addPair(cols.finals, 'syllPairing', 'Syllable-final equivalent is')
 	out += '</p>'
 
-	return out
+	if (start) return traceReturn('markupForCharDetails', start, out)
+	else return out
 }
 
 
@@ -753,14 +757,12 @@ function getCallerName () {
 
 
 function setOnclicks () {
-    console.log(`>>> setOnclicks()
-    Add onclicks to all generated content.
-    Called by ${ getCallerName() }.`)
+	if (trace) { var start = traceHere( 'setOnclicks', `Add onclicks to all generated content.`, arguments) }
 
 
     // SHAPING ONCLICKS
 	let cpNodeList = document.querySelectorAll('.shaping bdi')
-    console.log('SHAPING', cpNodeList)
+    //console.log('SHAPING', cpNodeList)
     for (let cpNode of cpNodeList) {
         if (cpNode.dataset.bound) continue
 
@@ -837,6 +839,8 @@ function setOnclicks () {
         cpNode.addEventListener('click', makeExampleArticle)
         cpNode.dataset.bound = '1'
         }
+    
+    if (trace) { return traceReturn('setOnclicks', start, null) }
     }
 
 

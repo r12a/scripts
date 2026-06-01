@@ -23,11 +23,8 @@ access = {
 
 
 
-function addPageFeatures () {     
-    console.log(`addPageFeatures() 
-    Expand and add markup.
-    Called by ${ getCallerName() }.`)
-    
+function addPageFeatures () {
+    if (trace) var start = traceHere( 'addPageFeatures', 'Expand and add markup', arguments)    
     
     // pull in any shared HTML code
     //includeHTML()
@@ -219,7 +216,12 @@ function addPageFeatures () {
     fontInfo = {}
   
     checkParameters()
+    
+    console.log('FINISHED')
+    if (start) return traceReturn('addPageFeatures', start, null)
     }
+
+
 
 
 
@@ -239,7 +241,7 @@ function makePopupDialogs () {
 	header.appendChild(ipaDialogBox)
 
 	document.body.addEventListener('keydown', closeDialogEsc)
-}
+    }
 
 
 
@@ -312,7 +314,8 @@ function addUsageHistory () {
 
 
 function expandChMarkup () {
-    // console.log('expandChMarkup() Convert char markup to .codepoint spans (has to be done before the indexing)')
+    if (trace) var start = traceHere( 'expandChMarkup', 'Convert char markup to .codepoint spans (has to be done before the indexing)', arguments)
+
     // Purpose: convert .hex/.hx (hex codepoint lists) and .ch (literal characters)
     // into <span class="codepoint"> markup containing glyph(s) and Unicode name(s).
     // This must run before any indexing that depends on .codepoint spans.
@@ -331,6 +334,7 @@ function expandChMarkup () {
     //     coda      -> append dotted circle after the item (used for closed syllables)
     //     noname    -> suppress rendering of the Unicode name link
     //     noindex   -> mark output with noindex class to exclude from index
+    //     nolist    -> exclude from list of characters in side panel
     //     uncommon  -> mark <bdi> with class="uncommon" for styling
     //
     // - The function consults `spreadsheetRows` and `cols` (global data) to look up
@@ -368,6 +372,7 @@ function expandChMarkup () {
             coda: el.classList.contains('coda'),
             noname: el.classList.contains('noname'),
             noindex: el.classList.contains('noindex'),
+            nolist: el.classList.contains('nolist'),
             uncommon: el.classList.contains('uncommon')
         }
     }
@@ -439,8 +444,9 @@ function expandChMarkup () {
 
         // Final composed markup for this element
         const noindexClass = flags.noindex ? ' noindex' : ''
+        const nolistClass = flags.nolist ? ' nolist' : ''
         const bdiAttr = `${ bdiUncommonAttr(flags) } lang="${ language }"`
-        let out = `<span class="codepoint${ noindexClass }" translate="no"><bdi ${ bdiAttr }`
+        let out = `<span class="codepoint${ noindexClass }${ nolistClass }" translate="no"><bdi ${ bdiAttr }`
         if (flags.img || flags.svg) out += ' style="margin:0;"'
         out += `>${ unicodeChars }${ codaStr }</bdi>`
         if (!flags.noname) out += `<a href="javascript:void(0)"><span class="uname">${ unicodeNames }</span></a>`
@@ -511,6 +517,7 @@ function expandChMarkup () {
         })
     
     setOnclicks()
+    if (start) return traceReturn('expandChMarkup', start, null)
     }
 
 
@@ -547,13 +554,12 @@ function initialiseIndex () {
     // add fragids for legacy URLs to all links to orthography descriptions
     olinks = document.querySelectorAll('#olinks a')
     for (i=0;i<olinks.length;i++) olinks[i].href += window.location.hash
-
     }
 
 
+
 function setMarks () {
-	// console.log(`setMarks()
-    //Set the global variable marks as a set containing all combining marks in the spreadsheet.`)
+	if (trace) var start = traceHere( 'setMarks', `Set the global variable marks as a set containing all combining marks in the spreadsheet.`, arguments)
 
 	for (const key in spreadsheetRows) {
 		const row = spreadsheetRows[key]
@@ -571,6 +577,8 @@ function setMarks () {
 		// add combining marks: Mn, Mc, Me
 		if (gc.startsWith('M')) window.marks.add(key)
         }
+
+	if (start) return traceReturn('setMarks', start, null)
     }
 
 
@@ -578,7 +586,7 @@ function setMarks () {
 
 function setupBlockLinks () {
 	// set target attribute for links that point to characters in the block page
-    console.log('setupBlockLinks(',') Set target attribute for links that point to characters in the block page')
+    //console.log('setupBlockLinks(',') Set target attribute for links that point to characters in the block page')
     
 	var links = document.querySelectorAll('.codepoint a, .codepoint code')
 	for (var i=0;i<links.length;i++) if (links[i].target != null) links[i].target = 'c'
@@ -589,9 +597,7 @@ function setupBlockLinks () {
 
 
 function setFindIPA () { // test extension to map stuff
-	// makes ipa characters in sounds charts indicate locations they are used
-    // and also sets up codepoint elements
-    if (traceSet.has('setFindIPA') || traceSet.has('all')) console.log('setFindIPA(',') Make ipa characters in sounds charts indicate locations they are used')
+	if (trace) var start = traceHere( 'setFindIPA', `Make ipa characters in sounds charts indicate locations they are used, and also sets up codepoint elements.`, arguments)
 
 	var listItems = document.querySelectorAll('.codepoint span, .codepoint bdi')
 	for (var i=0;i<listItems.length;i++) {
@@ -604,8 +610,9 @@ function setFindIPA () { // test extension to map stuff
 	for (i=0;i<listItems.length;i++) listItems[i].click = findIPA
 	var listItems = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone')
 	for (i=0;i<listItems.length;i++) listItems[i].click = findIPA
+    
+	if (start) return traceReturn('setFindIPA', start, null)
 	}
-
 
 
 
@@ -626,6 +633,8 @@ function setFindIPA () { // test extension to map stuff
 
 
 function listCharsInSpreadsheet (howmuch) {
+	if (trace) var start = traceHere( 'listCharsInSpreadsheet', `Provide a list of characters in the spreadsheet, sorted by category.`, arguments)
+
     // provide a list of characters in the spreadsheet, sorted by category
     var all = []
     var allused = []
@@ -764,7 +773,8 @@ function listCharsInSpreadsheet (howmuch) {
             }
         }
    
-    return selection
+	if (start) return traceReturn('listCharsInSpreadsheet', start, selection)
+    else return selection
     }
 
 
@@ -813,9 +823,9 @@ function getOrthographyList (type, location, spaced = false) {
 
 
 function pointToSummaryPages () {
-	console.log(`>>> pointToSummaryPages()
+	/*console.log(`>>> pointToSummaryPages()
     Create links for various anchors such as line-breaking properties etc.
-    Called by ${ getCallerName() }.`)
+    Called by ${ getCallerName() }.`)*/
 
 	const charList =
 		getOrthographyList('.characterBox', 'index', true) +
@@ -846,7 +856,7 @@ function pointToSummaryPages () {
 
 
 function doHeadersFooters (orthogNotesFile) {
-    // console.log('doHeadersFooters(',orthogNotesFile,') Add links to top and bottom of document')
+	if (trace) var start = traceHere( 'doHeadersFooters', `Add links to top and bottom of document.`, arguments)
     // orthogNotesFile is set in xx-globals.js and looks like "arab/arb"
 
 	const topEl = document.getElementById('versionTop')
@@ -903,7 +913,9 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CCâ€
 `.trim()
 
 	bottomEl.innerHTML = out
-}
+
+	if (start) return traceReturn('doHeadersFooters', start, null)
+    }
 
 
 
@@ -932,6 +944,7 @@ function removeEditorNotes () {
 
 
 function makeSidePanel () {
+	if (trace) var start = traceHere( 'makeSidePanel', `Make side panel.`, arguments)
     // console.log('>> makeSidePanel()')
     
 	if (typeof langs === 'undefined') return
@@ -1481,7 +1494,8 @@ function makeSidePanel () {
 	
 	//langs = {}
 	
-	return out
+	if (start) return traceReturn('makeSidePanel', start, null)
+	else return out
 	}
 
 
@@ -1522,16 +1536,14 @@ function getStatus (token) {
 
 
 function expandCharacterBoxes (lang) {
-    console.log(`>>> expandCharacterBoxes(${ lang })
-    Create the lists of characters in yellow, etc. boxes.
-    Called by ${ getCallerName() }.`)
+	if (trace) var start = traceHere('expandCharacterBoxes','Create the lists of characters in yellow, etc. boxes.',arguments)
 
 	const tableNodeList = document.querySelectorAll('.auto')
 
-	for (let tableNode of tableNodeList)
-		buildCharacterBox(tableNode)
+	for (let tableNode of tableNodeList) buildCharacterBox(tableNode)
     
     setOnclicks()
+    if (start) return traceReturn('buildCharacterBox', start, null)
     }
 
 
@@ -1539,10 +1551,14 @@ function expandCharacterBoxes (lang) {
 
 
 
+
 function buildCharacterBox (node) {
-    console.log(`>>> buildCharacterBox( ${ node })\n\t
+
+	if (trace) var start = traceHere('buildCharacterBox','Build character boxes and replace source node content with generated HTML.',arguments)
+
+    /*console.log(`>>> buildCharacterBox( ${ node.textContent })\n\t
     Build character boxes and replace source node content with generated HTML.
-    Called by ${ getCallerName() }.`)
+    Called by ${ getCallerName() }.`)*/
     // optional images/fonts, IPA/latin/meaning display, status, links, and codepoints.
 
   // Quick guards
@@ -1777,7 +1793,11 @@ function buildCharacterBox (node) {
   // Close listArray and write output back into node
   out += `</div>`
   node.innerHTML = out
+  
+  if (start) return traceReturn('buildCharacterBox', start, null)
   }
+
+
 
 
 
@@ -1851,9 +1871,7 @@ function showUniqueCharsPopover(uniqueCharsString) {
 
 
 function shapingToPanel (evt) {
-    console.log(`>>> shapingToPanel(evt)
-    Gather data from uppercase or shaped characters and send it/them to displayCharacterList.
-    Called by ${ getCallerName() }.`)
+	if (trace) var start = traceHere( 'shapingToPanel', `Gather data from uppercase or shaped characters and send it/them to displayCharacterList.`, arguments)
 
     node = evt.target.closest('.shaping')
     lang = window.langTag
@@ -1888,6 +1906,8 @@ function shapingToPanel (evt) {
         lang,
         direction
         )
+
+	if (start) return traceReturn('shapingToPanel', start, null)
     }
 
 
@@ -1898,9 +1918,10 @@ function shapingToPanel (evt) {
 
 
 function unumToPanel (evt) {
-    console.log(`>>> unumToPanel(evt)
+	if (trace) var start = traceHere( 'unumToPanel', `Gather data from hex numbers below a listItem and send it/them to displayCharacterList.`, arguments)
+    /*console.log(`>>> unumToPanel(evt)
     Gather data from hex numbers below a listItem and send it/them to displayCharacterList.
-    Called by ${ getCallerName() }.`)
+    Called by ${ getCallerName() }.`)*/
 
     node = evt.target.closest('.listUnum')
     lang = window.langTag
@@ -1927,6 +1948,8 @@ function unumToPanel (evt) {
 		lang,
 		direction
         )
+
+	if (start) return traceReturn('unumToPanel', start, null)
     }
 
 
@@ -1936,14 +1959,14 @@ function unumToPanel (evt) {
 
 
 function characterBoxToPanel (evt) {
-    console.log(`>>> characterBoxToPanel(evt),
-    Gather data from a character box and send it to displayCharacterList.
-    Called by ${ getCallerName() }.`)
+	if (trace) var start = traceHere( 'characterBoxToPanel', `Gather data from a character box and send it to displayCharacterList.`, arguments)
     
     node = evt.target.closest('.listAll')
     if (node === null) return
-    console.log(evt.target)
-    console.log('***NODE', node)
+    
+    if (trace) console.log('***EVT TARGET', evt.target)
+    if (trace) console.log('***NODE', node)
+    
     lang = window.langTag
     //unique = node.classList.contains('showUnique')
     let unique = false
@@ -1983,6 +2006,8 @@ function characterBoxToPanel (evt) {
 		lang,
 		direction
         )
+
+	if (start) return traceReturn('characterBoxToPanel', start, null)
     }
 
 
@@ -1991,13 +2016,14 @@ function characterBoxToPanel (evt) {
 
 
 function listCharactersInPanel (itemArray, ipaArray, transcriptionsArray, clang, direction) {
-    console.log(`>> listCharactersInPanel (
+	if (trace) var start = traceHere( 'listCharactersInPanel', `Create a panel at bottom-right and add glosses, character lists, & buttons.`, arguments)
+    /*console.log(`>> listCharactersInPanel (
     itemArray=${ itemArray }
     ipaArray=${ ipaArray}
     transcriptionsArray=${ transcriptionsArray }
     clang=${ clang })
     Create a panel at bottom-right and add glosses, character lists, & buttons.'
-    Called by ${ getCallerName() }.`)
+    Called by ${ getCallerName() }.`)*/
     
 
     // called by onclick characterBoxToPanel, created by setCharacterBoxOnclicks
@@ -2142,7 +2168,9 @@ function listCharactersInPanel (itemArray, ipaArray, transcriptionsArray, clang,
 	out += '<p id="character_panel_close_button" onclick="document.getElementById(\'panel\').style.display=\'none\'">X</p>'
 
 	panel.innerHTML = out
-}
+
+	if (start) return traceReturn('listCharactersInPanel', start, null)
+    }
 
 
 
@@ -2156,10 +2184,11 @@ function openExportWindow (url) {
 
 
 function transliteratePanel (str, lang) {
+	if (trace) var start = traceHere( 'transliteratePanel', `Transliterate the rb tags in the panel`, arguments)
     // transliterate the rb tags in the panel
-    console.log(`>>> transliteratePanel(str=${ str } lang=${ lang })
+    /*console.log(`>>> transliteratePanel(str=${ str } lang=${ lang })
     AutoTranslitArray[lang]=${ autoTranslitArray[lang] }
-    Called by ${ (new Error().stack.split('\n')[2] || '').trim() }`)
+    Called by ${ (new Error().stack.split('\n')[2] || '').trim() }`)*/
 
     // exit if this isn't a full orthography page
     if (typeof autoTranslitArray === 'undefined') return
@@ -2184,8 +2213,8 @@ function transliteratePanel (str, lang) {
             }
         }
 
-    console.log(`<<< ${ str.trim() }`)
-    return str.trim()
+	if (start) return traceReturn('transliteratePanel', start, str.trim())
+    else return str.trim()
     }
 
 
@@ -2217,10 +2246,11 @@ function getStatusForIndex (token) {
 
 
 
-function makeIndexLine(node) {   // Optimised by CoPilot
-    // console.log(`>>> makeIndexLine(`, node, ').   Creates the markup for a given characterBox in the index.')
+function makeIndexLine(node) {
+	if (trace) var start = traceHere( 'makeIndexLine', `Creates the markup for a given characterBox in the index`, arguments)
+    //if (trace) console.log("***NODE", node)
     // node is the characterBox figure
-    
+
     // Guard: require a node with textContent
     if (!node || !node.textContent) {
         node && (node.innerHTML = '')
@@ -2356,6 +2386,8 @@ function makeIndexLine(node) {   // Optimised by CoPilot
     // close listArray and set innerHTML once
     outParts.push('</div>')
     node.innerHTML = outParts.join('')
+
+	if (start) return traceReturn('makeIndexLine', start, null)
     }
 
 
@@ -2371,9 +2403,7 @@ function makeIndexLine(node) {   // Optimised by CoPilot
 
 
 function showAllCharDetails (evt) {
-	console.log(`showAllCharDetails (${ evt })
-    Open an article that displays character notes details for all items in a characterBox.
-    Called by ${ (new Error().stack.split('\n')[2] || '').trim() }`)
+	if (trace) var start = traceHere( 'showAllCharDetails', `Open an article that displays character notes details for all items in a characterBox.`, arguments)
 
 	if (typeof charDetails === 'undefined') return   // charDetails is defined in xx-details.js
 
@@ -2420,6 +2450,8 @@ function showAllCharDetails (evt) {
 	wrapToneLettersInBdi()
 
     setOnclicks()
+
+	if (start) return traceReturn('showAllCharDetails', start, null)
     }
 
 
@@ -2619,10 +2651,7 @@ function makeSafeRegex (str) {
 
 
 function makeFootnoteIndex (charVal) {
-    // console.log('makeFootnoteIndex(','charVal='+this.textContent,')')
-	// when you click on a character in a .listItem or .codepoint this
-    // creates a set of links at the bottom of the page to other locations
-    // where that character is mentioned; it also highlights those instances
+	if (trace) var start = traceHere( 'makeFootnoteIndex', `When you click on a character in a .listItem or .codepoint this creates a set of links at the bottom of the page to other locations where that character is mentioned; it also highlights those instances`, arguments)
 
 	// create a regex of the character(s) being looked up
     var incomingValue, itemToFind
@@ -2706,7 +2735,9 @@ function makeFootnoteIndex (charVal) {
 		if (counter > 0) alert(counter+' matches found: &nbsp; '+leanLinks+'.')
 		else alert('No matches found.')
 		}
-	}
+
+	if (start) return traceReturn('makeFootnoteIndex', start, null)
+    }
 
 
 
@@ -2816,8 +2847,7 @@ function showIPAPhoneEvt (evt) {
 
 
 function setTranslitToggle () {
-    if (traceSet.has('setTranslitToggle') || traceSet.has('all')) console.log('setTranslitToggle(',') Add checkboxes and links to the fixed position selector')
-	// adds checkboxes and links to the fixed position selector
+	if (trace) var start = traceHere( 'setTranslitToggle', `Add checkboxes and links to the fixed position selector`, arguments)
 	
 	var checkboxList = document.getElementById('showTranscriptions')
 	if (checkboxList === null) {
@@ -2966,7 +2996,9 @@ function setTranslitToggle () {
 
 	checkboxList.appendChild(div)
     checkboxList.style.display = 'none'
-	}
+
+	if (start) return traceReturn('setTranslitToggle', start, null)
+    }
 
 
 
@@ -3140,7 +3172,7 @@ function makeMarkup () {
 
 
 function makeMarkupForSection(sectionName) {  // copilot optimised
-    //console.log(`>>> makeMarkupForSection(',sectionName,')   Convert the index's characterBox lists to markup.`)
+	if (trace) var start = traceHere( 'makeMarkupForSection', `Convert the index's characterBox lists to markup.`, arguments)
     // sectionName is the id of a section in the index
     // global: index, contains the mappings of character to section
     
@@ -3161,7 +3193,7 @@ function makeMarkupForSection(sectionName) {  // copilot optimised
     // process each figure once
     for (const fig of figures) {
         // read text content once and guard empty/whitespace-only figures
-        const raw = (fig.textContent || '').trim()
+        const raw = (fig.textContent || '')//.trim()
         if (!raw) {
             fig.dataset.links = ''
             makeIndexLine(fig) // preserve existing behaviour for empty figures
@@ -3170,6 +3202,7 @@ function makeMarkupForSection(sectionName) {  // copilot optimised
 
         // split by comma, trim each token and drop empty tokens
         const tokens = raw.split(',').map(s => s.trim()).filter(Boolean)
+        // to trim just ascii space const tokens = raw.split(',').map(s => s.replace(/^[ ]+|[ ]+$/g, '')).filter(Boolean)
 
         // accumulate section strings and record characters not found in index
         const outSections = []
@@ -3201,7 +3234,11 @@ function makeMarkupForSection(sectionName) {  // copilot optimised
         }
 
     // return useful results for testing or further processing
-    return {
+    if (start) return traceReturn('makeMarkupForSection', start, {
+        index: idx,
+        figuresProcessed: figures.length
+        })
+    else return {
         index: idx,
         figuresProcessed: figures.length
         }
@@ -3212,8 +3249,9 @@ function makeMarkupForSection(sectionName) {  // copilot optimised
 
 
 function checkParameters () {
-    console.log(`checkParameters()
-    Check for parameters and take appropriate action: open index; jump to char in index`)
+	if (trace) var start = traceHere( 'checkParameters', `description`, arguments)
+    /*console.log(`checkParameters()
+    Check for parameters and take appropriate action: open index; jump to char in index`)*/
 	// parse ?a=b&c=d into { a: "b", c: "d" }
 	const raw = location.search
 	if (!raw || raw.length < 2) return
@@ -3251,6 +3289,8 @@ function checkParameters () {
 			continue
             }*/
         }
+
+	if (start) return traceReturn('checkParameters', start, null)
     }
 
 
@@ -3268,14 +3308,15 @@ function checkParameters () {
 
 
 function makeCharDataObj () {
-    // create a charData array - (this removes reliance on the all-names.js file)
-    // global, spreadsheetRows
+	if (trace) var start = traceHere( 'makeCharDataObj', 'Create a charData array - (this removes reliance on the all-names.js file)', arguments)
     
     window.charData = {}
     
     for (var c in spreadsheetRows) {
         charData[c] = spreadsheetRows[c][cols['ucsName']].replace(/U\+[^:]+: /,'')
         }
+
+    if (start) return traceReturn('makeCharDataObj', start, null)
     }
 
 
@@ -3283,7 +3324,7 @@ function makeCharDataObj () {
 
 
 function copyIntroInfo () {
-    //console.log('copyIntroInfo()\n\tCopy paragraphs from the brief summary to the top of various sections')
+	if (trace) var start = traceHere( 'copyIntroInfo', `Copy paragraphs from the brief summary to the top of various sections.`, arguments)
     
     basicFeatures = document.getElementById('type')
     if (!basicFeatures) return
@@ -3364,6 +3405,8 @@ function copyIntroInfo () {
         for (var i=0;i<paras.length;i++) out += paras[i].outerHTML
         if (out !== '') document.getElementById('diacritic_description').innerHTML = out
         }
+
+	if (start) return traceReturn('copyIntroInfo', start, null)
     }
 
 
@@ -3464,7 +3507,7 @@ function createtocPanel (maxlevel) {
 
 
 function addResources () {
-	// Adds information from xx-examples to the section Online resources
+	if (trace) var start = traceHere( 'addResources', `Adds information from xx-examples to the section Online resources.`, arguments)
 
 	if (typeof termLists === 'undefined') return
 
@@ -3485,6 +3528,8 @@ function addResources () {
 	out += `</ol>`
 
 	section.innerHTML = out
+
+	if (start) return traceReturn('addResources', start, null)
     }
 
 
@@ -3495,9 +3540,7 @@ function addResources () {
 
 
 function addCharacterLists () {
-    console.log(`>>> addCharacterLists()
-    Add the lists of characters in selected sections to the right hand column.
-    Called by ${ getCallerName() }.`)
+	if (trace) var start = traceHere( 'addCharacterLists', `Add the lists of characters in selected sections to the right hand column.`, arguments)
 
 	const sections = [
 		'vowels',
@@ -3522,6 +3565,8 @@ function addCharacterLists () {
 	const listItems = document.querySelectorAll('.sectionCharacterList .listItem')
 	for (let i = 0; i < listItems.length; i++)
 		listItems[i].addEventListener('click', makeFootnoteIndex)
+
+	if (start) return traceReturn('addCharacterLists', start, null)
     }
 
 
@@ -3531,7 +3576,7 @@ function addCharacterLists () {
 
 
 function listSectionCharacters (section) {
-	// Collect all inline glyph sources in the given section:
+	if (trace) var start = traceHere( 'listSectionCharacters', `Collect all inline glyph sources in the given section.`, arguments)
 	// - .listItem elements (primary glyph spans created by buildCharacterBox)
 	// - <bdi> inside .codepoint (the visual glyph container)
 	// We'll use these to build a unique sorted list of characters used in the section.
@@ -3541,12 +3586,17 @@ function listSectionCharacters (section) {
 	// Aggregate raw character text from the collected elements
 	charList = ''
 	for (i=0;i<charElems.length;i++) {
-		// If this is a .listItem and it is not inside a figure marked noindex, use its textContent
-		if (charElems[i].className === 'listItem' && ! charElems[i].closest('figure').classList.contains('noindex'))  charList += charElems[i].textContent
+		// If this is a .listItem and it is not inside a figure with class noindex or nolist, use its textContent
+		if (charElems[i].className === 'listItem'
+            && ! charElems[i].closest('figure').classList.contains('noindex')
+            && ! charElems[i].closest('figure').classList.contains('nolist'))  charList += charElems[i].textContent
 		// Otherwise, if the current element is inside a .codepoint and that .codepoint is not noindex,
 		// prefer any embedded <img alt="â€¦"> text (SVG/PNG alt) so images contribute the character,
 		// otherwise use the element's textContent.
-		else if (charElems[i].closest('.codepoint') && charElems[i].closest('.codepoint').classList !== null && ! charElems[i].closest('.codepoint').classList.contains('noindex')) {
+		else if (charElems[i].closest('.codepoint') 
+            && charElems[i].closest('.codepoint').classList !== null 
+            && ! charElems[i].closest('.codepoint').classList.contains('noindex')
+            && ! charElems[i].closest('.codepoint').classList.contains('nolist')) {
 			if (charElems[i].querySelector('img')) charList += charElems[i].querySelector('img').alt
 			else charList += charElems[i].textContent
 		    }
@@ -3644,6 +3694,8 @@ function listSectionCharacters (section) {
 	//document.getElementById(section).querySelector('aside').innerHTML += `<p class="instructions" style="text-align:end;"><a href="../apps/listcategories/index.html?chars=${ charList.replace(/,/g,'') }" target="_blank">Triage by General Category</a></p>`
     
     setOnclicks()
+
+	if (start) return traceReturn('listSectionCharacters', start, null)
     }
 
 
@@ -3664,7 +3716,7 @@ function listSectionCharacters (section) {
 
 
 function copyExamplePanelText (node, type) {
-console.log(node)
+	if (trace) var start = traceHere( 'copyExamplePanelText', `description`, arguments)
     var text = node.closest('.glossContainer').querySelectorAll(type)
     var out = ''
     for (var i=0;i<text.length;i++) out += text[i].textContent
@@ -3675,6 +3727,8 @@ console.log(node)
       setTimeout(() => {
         document.getElementById('copyNotice').style.display = 'none'
       }, '500')
+
+	if (start) return traceReturn('copyExamplePanelText', start, null)
 	}
 
 
@@ -3720,16 +3774,16 @@ function makeBreakdownTables () {
 		}
 
 		table.innerHTML = out
-	}
-}
+	   }
+    }
 
 
 
 
 function copyCharToClipboard (textToCopy) {
-    console.log(`copyCharToClipboard(textToCopy)
+    /*console.log(`copyCharToClipboard(textToCopy)
     Copy an item to the clipboard.
-    `)
+    `)*/
     navigator.clipboard.writeText(textToCopy)
     document.getElementById('copyNotice').style.display = 'block'
     setTimeout(() => { document.getElementById('copyNotice').style.display = 'none' }, '500')
@@ -3740,9 +3794,9 @@ function copyCharToClipboard (textToCopy) {
 
 
 function copyPanelText (type) {
-    console.log(`copyPanelText(type:${ type })
+    /*console.log(`copyPanelText(type:${ type })
     Copy a 'ruby' item to the clipboard.
-    `)
+    `)*/
 
 	const ruby = document.getElementById('ruby')
 	if (!ruby) return
@@ -3769,9 +3823,9 @@ function copyPanelText (type) {
 
 
 function copyPanelList () {
-    console.log(`copyPanelList()
+    /*console.log(`copyPanelList()
     Copy a list of characters in a panel to the clipboard.
-    `)
+    `)*/
 
 	const container = document.getElementById('listOfCharacters')
 	if (!container) return
@@ -3902,4 +3956,40 @@ function getScriptGroup (charNum, blockfile) {
 		else return scriptGroups[i][field].replace(/ /g,'_')
 		}
 	}
+
+
+
+
+
+
+function makeCharacterLink (cp, lang, direction) {
+	if (trace) var start = traceHere( 'makeCharacterLink', `Returns markup with information about cp.`, arguments)
+	// cp: a unicode character, or sequence of unicode characters
+	// lang: the BCP47 language tag for the context
+	// direction: either rtl or ltr or ''
+    // LATEST VERSION collapses multiple chars at start
+
+    var chars = [...cp]
+
+    var out = '<span class="codepoint" translate="no">'
+    out += `<bdi lang="${ lang }" onclick="makeFootnoteIndex('${ cp }')">${ cp }</bdi>`
+    
+    var hex = cp.codePointAt(0).toString(16).toUpperCase()
+    while (hex.length < 4) hex = '0'+hex 
+
+    console.log('looking for',cp, 'with length',cp.length)
+    if (spreadsheetRows[cp]) out += ` [<a href="javascript:void(0)" target="c"><span class="uname">${ spreadsheetRows[cp][cols['ucsName']] }</span></a>]`
+	else out += ' [Character(s) not found in database.]'
+
+    out += '</span> '
+	
+	if (start) return traceReturn('makeCharacterLink', start, out.trim())
+	else return out.trim()
+	}
+
+
+
+
+
+
 
