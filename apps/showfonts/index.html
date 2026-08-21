@@ -78,6 +78,8 @@
   
   <p style="font-size:70%;">Note: Text will only render in the right font if that font is on your system. For WebKit browsers, only preinstalled fonts will render. • Any font list item that begins with 'title:' will be treated as a subtitle.</p>
   
+  <p style="font-size:70%;">For best results, install the Adobe NotDef font. This will make it clear when a font is not on your system by falling back to tofu rather than another font.</p>
+  
   <p><button onClick="snapshot()">Snapshot to URL</button></p>
 </div>
 
@@ -115,8 +117,8 @@ function renderOutput() {
     else {
         const div = document.createElement("div")
         div.className = "line"
-        div.textContent = text
-        div.style.fontFamily = font
+        div.innerHTML = text
+        div.style.fontFamily = `"${ font }", "Adobe NotDef"`
         if (extraCSS) div.style.cssText += ";" + extraCSS
         out.appendChild(div)
 
