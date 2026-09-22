@@ -3229,6 +3229,25 @@ usedfor:"",
 
 
 
+jurc:{ script:"Jurchen", code:"Jurc", name:"", type:"syllabary", 
+dates:"1120 – 16thC", start:"1120", end:"1500", current_usage:"", 
+status: "",
+origin:"East Asia",
+info:{ wikipedia:"Jurchen_script", omniglot:"jurchen" }, 
+local: [	],
+charts: [ ["Jurchen", "18E00"] ],
+layout:[	],
+scriptNotes: [["", ""]],
+charNotesList:[""],
+terms: [[""]],
+pickers: [[""]],
+orthoChart: false,
+ssHistory: "jurc-unicode",
+chapters: "",
+htmlchapter: "18/#G59286",
+usedfor:"Jurchen [juc]",
+},
+
 
 
 
