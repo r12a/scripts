@@ -414,7 +414,7 @@ out += `
 
         <span><a href="../../app-charuse/index.html?language=${ window.langTag }" target="_blank">Usage</a></span>
 
-        <span><a href="../../scripts/links.html?iso=${ window.scriptSummaryTableName }" target="_blank">Links</a></span>
+        <span><a href="../../scripts/links.html?iso=${ window.scriptTag }" target="_blank">Links</a></span>
         </div>
 
         `
